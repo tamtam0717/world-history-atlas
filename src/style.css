@@ -75,12 +75,19 @@ svg.map:active {
 }
 .overlords path {
   fill: none;
-  stroke-width: 3px;
-  stroke-dasharray: 7 4;
+  stroke: var(--overlord);
+  stroke-width: 2.6px;
+  stroke-dasharray: 8 4;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
-  opacity: 0.75;
+  opacity: 0.9;
+}
+/* 宗主権（オスマン帝国・ロシアなど）は帝国の枠と見分けられるよう細い点線にする */
+.overlords path:not([data-overlord="hre"]):not([data-overlord="rhine_confederation"]):not([data-overlord="german_confederation"]) {
+  stroke: #4c5a3a;
+  stroke-width: 1.8px;
+  stroke-dasharray: 2 3;
 }
 .highlight {
   fill: rgba(255, 255, 255, 0.18);

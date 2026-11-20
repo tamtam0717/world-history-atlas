@@ -215,7 +215,7 @@ export class AtlasMap {
       .data(ovData)
       .join("path")
       .attr("d", (d) => this.path(d.geo) ?? "")
-      .attr("stroke", (d) => polities[d.o].color ?? "#7a2e2e");
+      .attr("data-overlord", (d) => polities[d.o].id);
 
     this.renderLabels(fillData.filter((d) => d.g.owner >= 0));
     this.renderHighlight();
