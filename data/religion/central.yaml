@@ -478,14 +478,14 @@
   name: スイスの混在地域（改革派が多い：トゥールガウ・アールガウ・グラールス・グラウビュンデン）
   select:
     adm1: ["CHE/Thurgau", "CHE/Glarus", "CHE/Graubünden"]
-    regions: [swiss_aargau_rel]
+    regions: [rel_part_aargau]
   timeline:
     - from: 1648
       main: reformed
       minor: catholic
       note: グラールスとグラウビュンデンは村ごとに宗派を選んだ。トゥールガウ・アールガウ（バーデン伯領・自由領）はカトリックの共同支配地が混じる。
 
-- id: swiss_aargau_rel
+- id: rel_part_aargau
   name: アールガウ（フリックタールを除く）
   select:
     adm1: ["CHE/Aargau"]
