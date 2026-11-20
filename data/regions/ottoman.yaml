@@ -1,0 +1,1488 @@
+# 担当 E：バルカン・オスマン・中東の地域と所属の変遷（1648–1815 試作）
+# 大きな地域でおおまかに書き、小さな地域で例外を上書きする（小さい地域が優先）。
+# 小さな地域も 1648 年から書き始めているので、その期間は大きな地域より常に優先される。
+
+# ================================================================ 基本：オスマン帝国の本土
+- id: ottoman_core
+  name: オスマン帝国の本土（バルカン・アナトリア・東地中海・イラク）
+  select:
+    iso: [BIH, SRB, XKX, MNE, ALB, MKD, GRC, BGR, TUR, CYP, SYR, LBN, ISR, JOR, IRQ]
+    pieces: [118-Gaza_Strip, 124-No_Man_s_Land, 126-Sanafir_Tiran_Is, 129-West_Bank]
+  timeline:
+    - from: 1648
+      owner: ottoman
+
+# ================================================================ ルーマニア・モルドバ
+- id: wallachia_proper
+  name: ワラキア（大ワラキア＝ムンテニア）
+  select:
+    adm1: [ROU/ARGES, ROU/BUCURESTI, ROU/BUZAU, ROU/CALARASI, ROU/DAMBOVITA, ROU/GIURGIU, ROU/IALOMITA, ROU/ILFOV, ROU/PRAHOVA, ROU/TELEORMAN]
+  timeline:
+    - from: 1648
+      owner: wallachia
+      overlord: ottoman
+  note: ジュルジュ、トゥルヌの周辺はオスマン帝国の直轄地（ラヤ）だが、ピースより小さいので省略。
+
+- id: braila
+  name: ブライラ（オスマン帝国の直轄地）
+  select:
+    adm1: [ROU/BRAILA]
+  timeline:
+    - from: 1648
+      owner: ottoman
+  note: ブライラは1540–1829年オスマン帝国の直轄地（ラヤ）。県の全域が直轄地だったわけではない（近似）。
+  source: "https://en.wikipedia.org/wiki/Brăila"
+
+- id: oltenia
+  name: 小ワラキア（オルテニア）
+  select:
+    adm1: [ROU/DOLJ, ROU/GORJ, ROU/MEHEDINTI, ROU/OLT, ROU/VALCEA]
+  timeline:
+    - from: 1648
+      owner: wallachia
+      overlord: ottoman
+    - from: 1718
+      owner: habsburg
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+    - from: 1739
+      owner: wallachia
+      overlord: ottoman
+      cause: ベオグラード条約
+      source: "https://ja.wikipedia.org/wiki/ベオグラード条約"
+
+- id: moldavia_ro
+  name: モルダヴィア（プルート川以西）
+  select:
+    adm1: [ROU/BACAU, ROU/BOTOSANI, ROU/GALATI, ROU/IASI, ROU/NEAMT, ROU/VASLUI, ROU/VRANCEA]
+  timeline:
+    - from: 1648
+      owner: moldavia
+      overlord: ottoman
+
+- id: bukovina_ro
+  name: ブコヴィナ（南部）
+  select:
+    adm1: [ROU/SUCEAVA]
+  timeline:
+    - from: 1648
+      owner: moldavia
+      overlord: ottoman
+    - from: 1775
+      owner: habsburg
+      cause: コンスタンティノープル協定（ブコヴィナのオーストリアへの割譲）
+      source: "https://ja.wikipedia.org/wiki/ブコヴィナ"
+  note: 現スチャヴァ県は南ブコヴィナと旧モルダヴィア領の一部からなる。面積の大きいブコヴィナ側に合わせた。
+
+- id: dobruja_ro
+  name: ドブルジャ（北部）
+  select:
+    adm1: [ROU/CONSTANTA, ROU/TULCEA]
+  timeline:
+    - from: 1648
+      owner: ottoman
+
+- id: bessarabia
+  name: ベッサラビア（プルート・ドニエストル間の中部・北部）
+  select:
+    iso: [MDA]
+    exclude: [MDA-Transnistria]
+  timeline:
+    - from: 1648
+      owner: moldavia
+      overlord: ottoman
+    - from: 1812
+      owner: russia
+      cause: ブカレスト条約
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1812年)"
+
+- id: budjak_bender
+  name: ブジャク・ベンデル（オスマン帝国の直轄地）
+  select:
+    pieces: [MDA-Bender, MDA-Causeni, MDA-Stefan_Voda, MDA-Basarabeasca, MDA-Taraclia, MDA-Gagauzia]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1812
+      owner: russia
+      cause: ブカレスト条約
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1812年)"
+  note: ベンデル（ティギナ）は1538年からオスマン帝国の直轄地。南部のブジャクにはクリミア＝ハン国に属するノガイ・タタール（ブジャク・オルダ）が遊牧した。境界は近似（要確認）。
+
+- id: transnistria
+  name: ドニエストル川左岸（イェディサン西部）
+  select:
+    pieces: [MDA-Transnistria]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1792
+      owner: russia
+      cause: ヤッシー条約
+      source: "https://ja.wikipedia.org/wiki/ヤッシー条約"
+  note: 北部（ルィブニツァ・カメンカ）はポーランド領（ブラツワフ県）で1793年にロシア領。面積の大きい南部（オスマン帝国のオズィ州、ノガイ・タタールのイェディサン）に合わせた。
+
+- id: transylvania_ro
+  name: トランシルヴァニア
+  select:
+    adm1: [ROU/ALBA, ROU/BISTRITA-NASAUD, ROU/BRASOV, ROU/CLUJ, ROU/COVASNA, ROU/HARGHITA, ROU/HUNEDOARA, ROU/MURES, ROU/SIBIU, ROU/SALAJ, ROU/MARAMURES]
+  timeline:
+    - from: 1648
+      owner: transylvania
+      overlord: ottoman
+    - from: 1687
+      owner: transylvania
+      overlord: habsburg
+      certainty: uncertain
+      cause: ブラージュ条約（ハプスブルク軍の駐留）
+      source: "https://en.wikipedia.org/wiki/Principality_of_Transylvania_(1570–1711)"
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+  note: 1691年のレオポルト勅書でハプスブルク家の支配下に入り、1699年のカルロヴィッツ条約でオスマン帝国が承認した。サラージュ・マラムレシュ（パルティウムの一部）もトランシルヴァニア公の領域に含めた。
+
+- id: satu_mare
+  name: サトゥ・マーレ（サトマール）
+  select:
+    adm1: [ROU/SATU MARE]
+  timeline:
+    - from: 1648
+      owner: transylvania
+      overlord: ottoman
+    - from: 1649
+      owner: habsburg
+      cause: リンツ条約の規定によりハンガリー王国へ返還（ラーコーツィ・ジェルジ1世の死去）
+      source: "https://en.wikipedia.org/wiki/Peace_of_Linz"
+  note: リンツ条約（1645）でサトマール県・サボルチ県はラーコーツィ・ジェルジ1世一代限りの領地とされ、1648年の死去後に返還された（返還の年は要確認）。
+
+- id: bihor
+  name: ビホル（ナジヴァーラド＝オラデア）
+  select:
+    adm1: [ROU/BIHOR]
+  timeline:
+    - from: 1648
+      owner: transylvania
+      overlord: ottoman
+    - from: 1660
+      owner: ottoman
+      cause: オスマン軍がナジヴァーラドを占領（ヴァーラド州の設置。1664年ヴァシュヴァール条約で確認）
+      source: "https://en.wikipedia.org/wiki/Siege_of_Várad_(1660)"
+    - from: 1692
+      owner: habsburg
+      certainty: occupied
+      cause: ハプスブルク軍がナジヴァーラドを奪回
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+
+- id: arad
+  name: アラド
+  select:
+    adm1: [ROU/ARAD]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: uncertain
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約（ムレシュ川以北）
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+  note: 1648年時点で北東部のイネウ（ボロシュイェネー）はトランシルヴァニア公領（1658年にオスマン領）。面積の大きいムレシュ川以北に合わせて1699年に切り替えた（南岸は1718年まで オスマン領）。
+
+- id: banat_ro
+  name: バナト（ティミショアラ）
+  select:
+    adm1: [ROU/TIMIS]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1718
+      owner: habsburg
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+
+- id: lugoj_caransebes
+  name: ルゴジ・カランセベシュのバナト（カラシュ＝セヴェリン）
+  select:
+    adm1: [ROU/CARAS-SEVERIN]
+  timeline:
+    - from: 1648
+      owner: transylvania
+      overlord: ottoman
+    - from: 1658
+      owner: ottoman
+      cause: トランシルヴァニア公がルゴジ・カランセベシュをオスマン帝国に割譲
+      source: "https://en.wikipedia.org/wiki/Banate_of_Lugos_and_Karánsebes"
+    - from: 1718
+      owner: habsburg
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+
+# ================================================================ セルビア・ヴォイヴォディナ
+- id: backa
+  name: バーチカ（バチュカ）・西スレム
+  select:
+    adm1: [SRB/North Backa District, SRB/West Backa District, SRB/South Backa District]
+    pieces: [SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Kanjiza_Municipality, SRB-Sid_Municipality, SRB-Irig_Municipality, SRB-Indjija_Municipality]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+  note: ハプスブルク軍は1687年ごろまでにバーチカを制圧していた。スレム（シルミア）の境界はスランカメン〜モロヴィチの線で、ピース単位の近似（要確認）。
+
+- id: east_syrmia
+  name: 東スレム（ゼムン寄り）
+  select:
+    pieces: [SRB-Sremska_Mitrovica_City, SRB-Ruma_Municipality, SRB-Pecinci_Municipality, SRB-Stara_Pazova_Municipality]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1718
+      owner: habsburg
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+  note: カルロヴィッツ条約後もスレム東南部はオスマン領に残った（境界は近似。要確認）。
+
+- id: banat_rs
+  name: バナト（セルビア側）
+  select:
+    adm1: [SRB/Central Banat District, SRB/South Banat District, SRB/North Banat District]
+    exclude: [SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Kanjiza_Municipality]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1718
+      owner: habsburg
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+
+- id: belgrade_pashalik
+  name: ベオグラード州（北セルビア）
+  select:
+    adm1: [SRB/Belgrade, SRB/Macva District, SRB/Kolubara District, SRB/Sumadija District, SRB/Pomoravlje District, SRB/Podunavlje District, SRB/Branicevo District, SRB/Bor District, SRB/Moravica District]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1718
+      owner: habsburg
+      cause: パッサロヴィッツ条約（セルビア王国としてオーストリア領）
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+    - from: 1739
+      owner: ottoman
+      cause: ベオグラード条約
+      source: "https://ja.wikipedia.org/wiki/ベオグラード条約"
+    - from: 1805
+      owner: serbia
+      overlord: ottoman
+      certainty: uncertain
+      cause: 第一次セルビア蜂起（蜂起勢力が州の大半を制圧）
+      source: "https://ja.wikipedia.org/wiki/第一次セルビア蜂起"
+    - from: 1813
+      owner: ottoman
+      cause: 第一次セルビア蜂起の鎮圧
+    - from: 1815
+      owner: serbia
+      overlord: ottoman
+      certainty: uncertain
+      cause: 第二次セルビア蜂起（オスマン帝国と自治を交渉）
+      source: "https://ja.wikipedia.org/wiki/第二次セルビア蜂起"
+  note: 1718–1739年のオーストリア領セルビア、1804–1813年の蜂起勢力の支配地域は、どちらも南の境界が西モラヴァ川付近で、ピース単位では近似（要確認）。1789–1791年のオーストリア軍の占領は描かない。
+
+# ================================================================ ボスニア・モンテネグロ
+- id: bosnian_posavina
+  name: ボスニア北辺（サヴァ川沿い）
+  select:
+    pieces: [BIH-Posavina_Canton, BIH-Brcko_District]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1718
+      owner: habsburg
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+    - from: 1739
+      owner: ottoman
+      cause: ベオグラード条約
+      source: "https://ja.wikipedia.org/wiki/ベオグラード条約"
+  note: パッサロヴィッツ条約でサヴァ川南岸の細長い地帯がオーストリア領となった（範囲は近似）。
+
+- id: old_montenegro
+  name: 旧モンテネグロ（ツェティニェ）
+  select:
+    pieces: [MNE-Cetinje_Municipality]
+  timeline:
+    - from: 1648
+      owner: montenegro
+      overlord: ottoman
+      certainty: uncertain
+    - from: 1796
+      owner: montenegro
+      cause: クルシの戦い（事実上の独立）
+      source: "https://en.wikipedia.org/wiki/Battle_of_Krusi"
+  note: オスマン帝国の宗主権は名目的で、事実上は自立していた。1796年以降は宗主権を外して表示（オスマン帝国が独立を認めたのは1878年）。
+
+- id: brda
+  name: ブルダ（ビェロパヴリチ）
+  select:
+    pieces: [MNE-Danilovgrad_Municipality]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+    - from: 1796
+      owner: montenegro
+      cause: クルシの戦い（ブルダの諸部族がモンテネグロに加わる）
+      source: "https://en.wikipedia.org/wiki/Battle_of_Krusi"
+
+- id: venetian_albania
+  name: ヴェネツィア領アルバニア（コトル湾・ブドヴァ）
+  select:
+    pieces: [MNE-Kotor_Municipality, MNE-Tivat_Municipality, MNE-Budva_Municipality]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: cisalpine
+      cause: プレスブルク条約でナポレオンのイタリア王国へ（1806–1807年はロシア軍が占領）
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1813
+      owner: montenegro
+      certainty: occupied
+      cause: モンテネグロ軍とイギリス艦隊がコトル湾を占領
+    - from: 1814
+      owner: habsburg
+      cause: オーストリアへの引き渡し（ウィーン議定書で確定）
+  note: 1805–1813年は担当 D のダルマチア（cisalpine → illyria）と同じ扱い。
+
+- id: herceg_novi
+  name: ヘルツェグ・ノヴィ（カステルヌオーヴォ）
+  select:
+    pieces: [MNE-Herceg_Novi_Municipality]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1687
+      owner: venice
+      certainty: occupied
+      cause: ヴェネツィア軍が占領（モレア戦争）
+    - from: 1699
+      owner: venice
+      cause: カルロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: cisalpine
+      cause: プレスブルク条約でナポレオンのイタリア王国へ
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1813
+      owner: montenegro
+      certainty: occupied
+      cause: モンテネグロ軍とイギリス艦隊がコトル湾を占領
+    - from: 1814
+      owner: habsburg
+      cause: オーストリアへの引き渡し（ウィーン議定書で確定）
+
+# ================================================================ ギリシア：ヴェネツィア領と諸島
+- id: crete
+  name: クレタ島
+  select:
+    adm1: [GRC/Crete]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: occupied
+      cause: クレタ戦争（1645–1669）でオスマン軍が島の大半を占領
+    - from: 1669
+      owner: ottoman
+      cause: カンディア開城（クレタ戦争の終結）
+      source: "https://ja.wikipedia.org/wiki/クレタ戦争_(1645年-1669年)"
+  note: 1645–1648年にオスマン軍がハニア・レティムノなど島の大半を征服した。ヴェネツィアが保っていたカンディア（イラクリオン）は別の地域で表す。スダ・スピナロンガ・グランヴサの小要塞は1715年までヴェネツィア領だが、ピースより小さいので省略。
+
+- id: candia
+  name: カンディア（イラクリオン）
+  select:
+    pieces: [GRC-Heraklion]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1669
+      owner: ottoman
+      cause: カンディア開城（クレタ戦争の終結）
+      source: "https://ja.wikipedia.org/wiki/クレタ戦争_(1645年-1669年)"
+
+- id: morea
+  name: モレア（ペロポネソス半島）
+  select:
+    adm2: [GRC/Peloponnisoy]
+    pieces: [GRC-Aigialeia, GRC-Andravida_Kyllini, GRC-Andritsaina_Krestena, GRC-Erymanthos, GRC-Ilida, GRC-Kalavryta, GRC-Olympia, GRC-Patras, GRC-Pineios, GRC-Pyrgos, GRC-West_Achaea, GRC-Troizinia_Methana, GRC-Aegina, GRC-Poros]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1687
+      owner: venice
+      certainty: occupied
+      cause: モレア戦争でヴェネツィア軍（モロジーニ）がペロポネソスを征服
+      source: "https://ja.wikipedia.org/wiki/モレア戦争"
+    - from: 1699
+      owner: venice
+      cause: カルロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1715
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン帝国がモレアを奪回（第七次オスマン・ヴェネツィア戦争）
+      source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1714–1718)"
+    - from: 1718
+      owner: ottoman
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+  note: アイギナ島もヴェネツィア領モレア王国の一部（1687–1715）。
+
+- id: tinos
+  name: ティノス島
+  select:
+    pieces: [GRC-Tinos]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1715
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍がティノス島を占領
+    - from: 1718
+      owner: ottoman
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+  source: "https://en.wikipedia.org/wiki/Tinos"
+
+
+- id: ionian_british_1809
+  name: イオニア諸島南部（ザキントス・ケファロニア・イタキ・キシラ）
+  select:
+    pieces: [GRC-Cephalonia, GRC-Ithaca, GRC-Zakynthos, GRC-Kythira]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: france
+      cause: カンポ・フォルミオ条約
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1799
+      owner: russia
+      certainty: occupied
+      cause: ロシア・オスマン連合艦隊がイオニア諸島を占領
+    - from: 1800
+      owner: septinsular
+      overlord: ottoman
+      cause: コンスタンティノープル条約（七島連邦共和国の成立）
+      source: "https://ja.wikipedia.org/wiki/七島連邦共和国"
+    - from: 1807
+      owner: france
+      cause: ティルジット条約
+      source: "https://ja.wikipedia.org/wiki/ティルジット条約"
+    - from: 1809
+      owner: britain
+      certainty: occupied
+      cause: イギリス軍がザキントス・ケファロニア・イタキ・キシラを占領
+      source: "https://en.wikipedia.org/wiki/Adriatic_campaign_of_1807–1814"
+    - from: 1815
+      owner: ionian_islands
+      overlord: britain
+      cause: パリ条約（イオニア諸島合衆国、イギリスの保護国）
+      source: "https://en.wikipedia.org/wiki/United_States_of_the_Ionian_Islands"
+
+- id: corfu_paxos
+  name: ケルキラ（コルフ）島・パクシ島
+  select:
+    pieces: [GRC-Corfu, GRC-Paxos]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: france
+      cause: カンポ・フォルミオ条約
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1799
+      owner: russia
+      certainty: occupied
+      cause: ロシア・オスマン連合艦隊がケルキラを攻略
+      source: "https://en.wikipedia.org/wiki/Siege_of_Corfu_(1798–1799)"
+    - from: 1800
+      owner: septinsular
+      overlord: ottoman
+      cause: コンスタンティノープル条約（七島連邦共和国の成立）
+      source: "https://ja.wikipedia.org/wiki/七島連邦共和国"
+    - from: 1807
+      owner: france
+      cause: ティルジット条約
+      source: "https://ja.wikipedia.org/wiki/ティルジット条約"
+    - from: 1814
+      owner: britain
+      certainty: occupied
+      cause: フランス軍がケルキラをイギリスに明け渡す
+    - from: 1815
+      owner: ionian_islands
+      overlord: britain
+      cause: パリ条約（イオニア諸島合衆国、イギリスの保護国）
+      source: "https://en.wikipedia.org/wiki/United_States_of_the_Ionian_Islands"
+
+- id: lefkada
+  name: レフカダ（サンタ・マウラ）島
+  select:
+    pieces: [GRC-Lefkada]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1684
+      owner: venice
+      certainty: occupied
+      cause: ヴェネツィア軍がサンタ・マウラを占領（モレア戦争）
+      source: "https://ja.wikipedia.org/wiki/モレア戦争"
+    - from: 1699
+      owner: venice
+      cause: カルロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1797
+      owner: france
+      cause: カンポ・フォルミオ条約
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1799
+      owner: russia
+      certainty: occupied
+      cause: ロシア・オスマン連合艦隊がイオニア諸島を占領
+    - from: 1800
+      owner: septinsular
+      overlord: ottoman
+      cause: コンスタンティノープル条約（七島連邦共和国の成立）
+      source: "https://ja.wikipedia.org/wiki/七島連邦共和国"
+    - from: 1807
+      owner: france
+      cause: ティルジット条約
+      source: "https://ja.wikipedia.org/wiki/ティルジット条約"
+    - from: 1810
+      owner: britain
+      certainty: occupied
+      cause: イギリス軍がレフカダを占領
+    - from: 1815
+      owner: ionian_islands
+      overlord: britain
+      cause: パリ条約（イオニア諸島合衆国、イギリスの保護国）
+      source: "https://en.wikipedia.org/wiki/United_States_of_the_Ionian_Islands"
+
+- id: parga
+  name: パルガ
+  select:
+    pieces: [GRC-Parga]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: france
+      cause: カンポ・フォルミオ条約
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1800
+      owner: ottoman
+      certainty: nominal
+      cause: コンスタンティノープル条約（オスマン帝国の宗主権のもとで自治）
+    - from: 1807
+      owner: france
+      cause: ティルジット条約
+    - from: 1814
+      owner: britain
+      certainty: occupied
+      cause: 住民がフランス軍を追い、イギリスの保護を求める
+  note: 1819年にイギリスがヤニナのアリー・パシャに売却した。
+  source: "https://en.wikipedia.org/wiki/Parga"
+
+- id: preveza
+  name: プレヴェザ
+  select:
+    pieces: [GRC-Preveza]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1684
+      owner: venice
+      certainty: occupied
+      cause: ヴェネツィア軍がプレヴェザを占領（モレア戦争）
+    - from: 1699
+      owner: ottoman
+      cause: カルロヴィッツ条約（要塞を破壊してオスマン帝国に返還）
+    - from: 1717
+      owner: venice
+      certainty: occupied
+      cause: ヴェネツィア軍がプレヴェザを占領
+    - from: 1718
+      owner: venice
+      cause: パッサロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+    - from: 1797
+      owner: france
+      cause: カンポ・フォルミオ条約
+    - from: 1798
+      owner: ottoman
+      cause: ヤニナのアリー・パシャがプレヴェザを攻略（ニコポリスの戦い）
+      source: "https://en.wikipedia.org/wiki/Battle_of_Nicopolis_(1798)"
+  source: "https://en.wikipedia.org/wiki/Preveza"
+
+- id: vonitsa
+  name: ヴォニツァ
+  select:
+    pieces: [GRC-Aktio_Vonitsa]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1684
+      owner: venice
+      certainty: occupied
+      cause: ヴェネツィア軍がヴォニツァを占領（モレア戦争）
+    - from: 1699
+      owner: venice
+      cause: カルロヴィッツ条約
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1797
+      owner: france
+      cause: カンポ・フォルミオ条約
+    - from: 1798
+      owner: ottoman
+      cause: ヤニナのアリー・パシャがヴォニツァを攻略
+  source: "https://en.wikipedia.org/wiki/Vonitsa"
+
+# ================================================================ イストリア（係争地の小ピース）
+- id: dragonja
+  name: ドラゴニャ川河口（イストリア北西）
+  select:
+    pieces: [115-Dragonja]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: cisalpine
+      cause: プレスブルク条約でナポレオンのイタリア王国へ
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: スロベニア・クロアチア間の係争地の小さなピース。旧ヴェネツィア領イストリア。担当 D の venetian_istria_si と同じ変遷にした。
+
+# ================================================================ レバント・イラク
+- id: mount_lebanon
+  name: レバノン山地
+  select:
+    pieces: [LBN-Mont_Liban, LBN-Keserwan_Jbeil]
+  timeline:
+    - from: 1648
+      owner: lebanon_emirate
+      overlord: ottoman
+  note: ドルーズ派のシューフ地方とマロン派のケセルワン地方。首長国の範囲は時期によって変わる（近似）。
+
+- id: galilee
+  name: ガリラヤ（アッコ周辺）
+  select:
+    pieces: [ISR-Northern_District, ISR-Haifa]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1750
+      owner: zahir_umar
+      overlord: ottoman
+      certainty: uncertain
+      cause: ザーヒル・アルウマルがアッコを拠点に自立
+      source: "https://en.wikipedia.org/wiki/Zahir_al-Umar"
+    - from: 1775
+      owner: ottoman
+      cause: ザーヒル・アルウマルの敗死（ジャッザール・パシャがアッコの州総督に）
+  note: ザーヒルは1730年代からガリラヤで勢力を広げ、1750年ごろアッコに移った。
+
+- id: basra
+  name: バスラ
+  select:
+    pieces: [IRQ-Al_Basrah]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1776
+      owner: persia
+      certainty: occupied
+      cause: ザンド朝のサーデク・ハンがバスラを占領
+      source: "https://en.wikipedia.org/wiki/Siege_of_Basra_(1775–76)"
+    - from: 1779
+      owner: ottoman
+      cause: カリーム・ハン・ザンドの死でザンド軍が撤退
+  note: 1704年（または1747年）からバグダード・バスラはマムルーク出身のパシャが世襲的に治め、半ば自立した（1831年まで）。
+
+# ================================================================ カフカース
+- id: armenia_erivan
+  name: エレバン・ハン国（アルメニア中部）とイグドゥル
+  select:
+    pieces: [ARM-Aragatsotn, ARM-Ararat, ARM-Armavir, ARM-Gegharkunik, ARM-Kotayk, ARM-Yerevan, ARM-Vayots_Dzor, TUR-I_d_r]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1724
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍がエレバンを占領
+    - from: 1727
+      owner: ottoman
+      cause: ハマダーン条約（アフガンのアシュラフがオスマン帝国の征服地を承認）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Hamedan"
+    - from: 1735
+      owner: persia
+      cause: ナーディルがエレバン・ガンジャ・ティフリスを奪回
+      source: "https://en.wikipedia.org/wiki/Ottoman–Persian_War_(1730–1735)"
+    - from: 1748
+      owner: persia
+      certainty: nominal
+      cause: ナーディル・シャーの死後、エレバン・ハン国が半ば自立
+    - from: 1795
+      owner: persia
+      cause: アーガー・モハンマド・ハーンのカフカース遠征
+  note: イグドゥル（スルマル）はエレバン・ハン国の一部で、1828年のトルコマンチャーイ条約までペルシア領。
+
+- id: nakhchivan
+  name: ナヒチェヴァン
+  select:
+    pieces: [AZE-Nakhchivan_Autonomous_Republic]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1724
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍が占領
+    - from: 1727
+      owner: ottoman
+      cause: ハマダーン条約
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Hamedan"
+    - from: 1735
+      owner: persia
+      cause: ナーディルが奪回
+    - from: 1748
+      owner: persia
+      certainty: nominal
+      cause: ナーディル・シャーの死後、ナヒチェヴァン・ハン国が半ば自立
+    - from: 1795
+      owner: persia
+      cause: アーガー・モハンマド・ハーンのカフカース遠征
+
+- id: east_transcaucasia
+  name: アゼルバイジャン北部（シルヴァン・カラバフ・ガンジャ）とザンゲズール・シュラゲル
+  select:
+    pieces: [AZE-Contiguous_Azerbaijan, ARM-Syunik, ARM-Shirak]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1725
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍がシルヴァン・ガンジャに進出
+    - from: 1727
+      owner: ottoman
+      cause: ハマダーン条約
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Hamedan"
+    - from: 1735
+      owner: persia
+      cause: ナーディルが奪回（ガンジャ条約でロシアもバクー・デルベントを返還）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ganja"
+    - from: 1748
+      owner: persia
+      certainty: nominal
+      cause: ナーディル・シャーの死後、諸ハン国（カラバフ、シェキ、シルヴァン、クバ、バクーなど）が自立
+    - from: 1805
+      owner: russia
+      certainty: occupied
+      cause: ロシアがガンジャ（1804）を攻略し、カラバフ・シェキ・シルヴァンの諸ハンと臣従条約（クレクチャイ条約など）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Kurekchay"
+    - from: 1813
+      owner: russia
+      cause: グリスタン条約
+      source: "https://ja.wikipedia.org/wiki/ゴレスターン条約"
+  note: AZE のピースは国全体で1つなので、南部のタリシュ・ハン国（1813年までペルシア側）やロシアが1722–1735年に占領したバクー・デルベントの沿岸は表せない。1795年のアーガー・モハンマド・ハーンの遠征による支配は一時的なので描かない。
+
+- id: kartli
+  name: カルトリ（ジョージア東部）
+  select:
+    pieces: [GEO-Shida_Kartli, GEO-Kvemo_Kartli, GEO-Mtskheta_Mtianeti, GEO-Tbilisi, ARM-Lori, ARM-Tavush]
+  timeline:
+    - from: 1648
+      owner: kartli_kakheti
+      overlord: persia
+    - from: 1723
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍がティフリスを占領
+    - from: 1727
+      owner: ottoman
+      cause: ハマダーン条約
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Hamedan"
+    - from: 1735
+      owner: persia
+      cause: ナーディルがティフリスを奪回（ペルシアの直接支配）
+    - from: 1744
+      owner: kartli_kakheti
+      overlord: persia
+      cause: ナーディル・シャーがテイムラズ2世をカルトリ王に任命
+    - from: 1748
+      owner: kartli_kakheti
+      cause: ナーディル・シャーの死（事実上の独立）
+    - from: 1783
+      owner: kartli_kakheti
+      overlord: russia
+      cause: ゲオルギエフスク条約（ロシアの保護国）
+      source: "https://ja.wikipedia.org/wiki/ゲオルギエフスク条約"
+    - from: 1801
+      owner: russia
+      cause: ロシアがカルトリ・カヘティ王国を併合
+      source: "https://ja.wikipedia.org/wiki/カルトリ・カヘティ王国"
+  note: ロリ・タヴシュ（現アルメニア北部）はカルトリ王に属したボルチャロ・カザフ・シャムシャディルの地として、カルトリに含めた（近似）。
+
+- id: kakheti_r
+  name: カヘティ（ジョージア東端）
+  select:
+    pieces: [GEO-Kakheti]
+  timeline:
+    - from: 1648
+      owner: kakheti
+      overlord: persia
+      certainty: uncertain
+    - from: 1723
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍の侵入
+    - from: 1727
+      owner: ottoman
+      certainty: uncertain
+      cause: ハマダーン条約
+    - from: 1735
+      owner: persia
+      cause: ナーディルが奪回
+    - from: 1744
+      owner: kakheti
+      overlord: persia
+      cause: ナーディル・シャーがエレクレ2世をカヘティ王に任命
+    - from: 1748
+      owner: kakheti
+      cause: ナーディル・シャーの死（事実上の独立）
+    - from: 1762
+      owner: kartli_kakheti
+      cause: カルトリとカヘティの統合（エレクレ2世）
+    - from: 1783
+      owner: kartli_kakheti
+      overlord: russia
+      cause: ゲオルギエフスク条約（ロシアの保護国）
+      source: "https://ja.wikipedia.org/wiki/ゲオルギエフスク条約"
+    - from: 1801
+      owner: russia
+      cause: ロシアがカルトリ・カヘティ王国を併合
+  note: 1648年にカヘティ王テイムラズ1世が追われ、以後カルトリ王やペルシア総督が治めた時期がある（要確認）。
+
+- id: imereti_r
+  name: イメレティ・ラチャ
+  select:
+    pieces: [GEO-Imereti, GEO-Racha_Lechkhumi_and_Kvemo_Svaneti]
+  timeline:
+    - from: 1648
+      owner: imereti
+      overlord: ottoman
+    - from: 1804
+      owner: imereti
+      overlord: russia
+      cause: エラズナウリ協定（ロシアの保護国）
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Imereti"
+    - from: 1810
+      owner: russia
+      cause: ロシアがイメレティ王国を併合
+  note: レチフミはミングレリアとイメレティの係争地。
+
+- id: mingrelia_r
+  name: ミングレリア（サメグレロ）
+  select:
+    pieces: [GEO-Samegrelo_Zemo_Svaneti]
+  timeline:
+    - from: 1648
+      owner: mingrelia
+      overlord: ottoman
+      certainty: uncertain
+    - from: 1803
+      owner: mingrelia
+      overlord: russia
+      cause: ミングレリア公がロシアの保護下に入る
+      source: "https://en.wikipedia.org/wiki/Principality_of_Mingrelia"
+
+- id: guria_r
+  name: グリア
+  select:
+    pieces: [GEO-Guria]
+  timeline:
+    - from: 1648
+      owner: guria
+      overlord: ottoman
+      certainty: uncertain
+    - from: 1810
+      owner: guria
+      overlord: russia
+      cause: グリア公がロシアの保護下に入る
+      source: "https://en.wikipedia.org/wiki/Principality_of_Guria"
+
+- id: abkhazia_r
+  name: アブハジア
+  select:
+    pieces: [GEO-Abkhazia]
+  timeline:
+    - from: 1648
+      owner: abkhazia
+      overlord: ottoman
+      certainty: uncertain
+    - from: 1810
+      owner: abkhazia
+      overlord: russia
+      cause: アブハジア公がロシアの保護下に入る
+      source: "https://en.wikipedia.org/wiki/Principality_of_Abkhazia"
+
+- id: samtskhe_adjara
+  name: サムツヘ（アハルツィヘ）・アジャリア
+  select:
+    pieces: [GEO-Samtskhe_Javakheti, GEO-Adjara]
+  timeline:
+    - from: 1648
+      owner: ottoman
+  note: オスマン帝国のチルドゥル州（アハルツィヘ・パシャ領）。アハルツィヘは1829年、アジャリアは1878年にロシア領。
+
+# ================================================================ イラン
+- id: iran
+  name: イラン本土
+  select:
+    iso: [IRN]
+  timeline:
+    - from: 1648
+      owner: persia
+  note: 1747–1751年の内乱期は、細かい勢力の割拠を描かず persia のままとした。
+
+- id: iran_west_1724
+  name: イラン西部（ハマダーン・ケルマーンシャー・ロレスターン・クルディスターン）
+  select:
+    pieces: [IRN-Hamadan, IRN-Kermanshah, IRN-Kurdistan, IRN-Lorestan, IRN-Ilam, IRN-West_Azerbaijan]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1724
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍がケルマーンシャー・ハマダーンを占領
+      source: "https://en.wikipedia.org/wiki/Ottoman–Hotaki_War_(1726–1727)"
+    - from: 1727
+      owner: ottoman
+      cause: ハマダーン条約
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Hamedan"
+    - from: 1730
+      owner: persia
+      cause: ナーディルがハマダーン・ケルマーンシャー・タブリーズを奪回
+      source: "https://en.wikipedia.org/wiki/Ottoman–Persian_War_(1730–1735)"
+
+- id: iran_azerbaijan_1725
+  name: イラン領アゼルバイジャン東部（タブリーズ・アルダビール・ザンジャーン）
+  select:
+    pieces: [IRN-East_Azerbaijan, IRN-Ardabil, IRN-Zanjan]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1725
+      owner: ottoman
+      certainty: occupied
+      cause: オスマン軍がタブリーズを占領
+    - from: 1727
+      owner: ottoman
+      cause: ハマダーン条約
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Hamedan"
+    - from: 1730
+      owner: persia
+      cause: ナーディルがタブリーズを奪回
+      source: "https://en.wikipedia.org/wiki/Ottoman–Persian_War_(1730–1735)"
+    - from: 1751
+      owner: persia
+      certainty: uncertain
+      cause: ナーディル・シャーの死後の争奪（アーザード・ハン、ザンド朝、ガージャール族）
+    - from: 1763
+      owner: persia
+      cause: カリーム・ハン・ザンドがアゼルバイジャンを平定
+
+- id: iran_central_afghan
+  name: イラン中部・南部（イスファハーン・ファールス・ケルマーン）
+  select:
+    pieces: [IRN-Isfahan, IRN-Fars, IRN-Kerman, IRN-Yazd, IRN-Qom, IRN-Markazi, IRN-Kohgiluyeh_and_Boyer_Ahmad, IRN-Chaharmahal_and_Bakhtiari, IRN-Bushehr, IRN-Tehran, IRN-Alborz]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1722
+      owner: hotaki
+      cause: アフガン軍がイスファハーンを占領（サファヴィー朝の事実上の崩壊）
+      source: "https://ja.wikipedia.org/wiki/ホータキー朝"
+    - from: 1729
+      owner: persia
+      cause: ナーディルがアフガン軍を破りイスファハーンを奪回
+      source: "https://en.wikipedia.org/wiki/Battle_of_Damghan_(1729)"
+  note: アフガン（ホータキー朝）の支配範囲は時期によって変わり、境界は近似（要確認）。テヘラン・アルボルズは1786年からガージャール族の都（qajar_north は別の地域で上書き）。
+
+- id: iran_north_qajar
+  name: イラン北部（マーザンダラーン・ゴレスターン・ギーラーン・テヘラン周辺）
+  select:
+    pieces: [IRN-Mazandaran, IRN-Mazandaran_2, IRN-Golestan, IRN-Semnan, IRN-Qazvin]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1780
+      owner: qajar_north
+      cause: カリーム・ハン・ザンドの死後、アーガー・モハンマド・ハーンが北部で挙兵
+      source: "https://ja.wikipedia.org/wiki/ガージャール朝"
+    - from: 1794
+      owner: persia
+      cause: ガージャール朝の統一（ザンド朝の滅亡）
+  note: 1780–1793年の両勢力の境界はめまぐるしく変わった（近似）。
+
+- id: tehran_qajar
+  name: テヘラン・アルボルズ
+  select:
+    pieces: [IRN-Tehran, IRN-Alborz]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1722
+      owner: hotaki
+      certainty: uncertain
+      cause: アフガン軍の支配
+    - from: 1729
+      owner: persia
+      cause: ナーディルがアフガン軍を破る
+    - from: 1785
+      owner: qajar_north
+      cause: アーガー・モハンマド・ハーンがテヘランを占領（1786年から都）
+      source: "https://ja.wikipedia.org/wiki/テヘラン"
+    - from: 1794
+      owner: persia
+      cause: ガージャール朝の統一（ザンド朝の滅亡）
+
+- id: gilan
+  name: ギーラーン
+  select:
+    pieces: [IRN-Gilan]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1723
+      owner: russia
+      certainty: occupied
+      cause: ペテルブルク条約（タフマースブ2世がカスピ海南岸をロシアに割譲。実際に占領したのはギーラーン）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Saint_Petersburg_(1723)"
+    - from: 1732
+      owner: persia
+      cause: ラシュト条約（ロシアがギーラーンを返還）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Resht"
+    - from: 1780
+      owner: qajar_north
+      cause: アーガー・モハンマド・ハーンの北部支配
+    - from: 1794
+      owner: persia
+      cause: ガージャール朝の統一（ザンド朝の滅亡）
+
+- id: khorasan
+  name: ホラーサーン
+  select:
+    pieces: [IRN-Razavi_Khorasan, IRN-North_Khorasan, IRN-South_Khorasan]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1750
+      owner: afsharid_khorasan
+      overlord: durrani
+      cause: シャー・ロフがホラーサーンだけを保つ（ドゥッラーニー朝の保護下）
+      source: "https://ja.wikipedia.org/wiki/アフシャール朝"
+    - from: 1796
+      owner: persia
+      cause: アーガー・モハンマド・ハーンがマシュハドを占領（アフシャール朝の滅亡）
+  note: 1796年以後もホラーサーンの諸侯は半ば自立していた（1803年ごろガージャール朝が平定）。
+
+- id: sistan_baluchestan
+  name: スィースターン・バルーチスターン
+  select:
+    pieces: [IRN-Sistan_and_Baluchestan]
+  timeline:
+    - from: 1648
+      owner: persia
+      certainty: nominal
+    - from: 1748
+      owner: durrani
+      certainty: nominal
+      cause: ナーディル・シャーの死後、スィースターンがドゥッラーニー朝の勢力下に
+  note: 南部のバルーチスターンはバローチ諸部族やカラート・ハン国の勢力圏で、支配は名目的（要確認）。
+
+# ================================================================ アフガニスタン西部・パキスタン西部
+- id: herat
+  name: ヘラート
+  select:
+    adm1: [AFG/Herat]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1717
+      owner: herat_abdali
+      cause: アブダーリー族がヘラートで自立
+      source: "https://en.wikipedia.org/wiki/Abdali_Afghans"
+    - from: 1732
+      owner: persia
+      cause: ナーディルがヘラートを攻略
+    - from: 1750
+      owner: durrani
+      cause: アフマド・シャー・ドゥッラーニーがヘラートを攻略
+      source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"
+
+- id: farah_nimruz
+  name: ファラー・ニームルーズ（スィースターン東部）
+  select:
+    adm1: [AFG/Farah, AFG/Nimruz]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1715
+      owner: hotaki
+      certainty: uncertain
+      cause: カンダハールのギルザイ族（ホータキー朝）の自立
+      source: "https://ja.wikipedia.org/wiki/ホータキー朝"
+    - from: 1738
+      owner: persia
+      cause: ナーディルがカンダハールを攻略
+    - from: 1747
+      owner: durrani
+      cause: ドゥッラーニー朝の成立
+      source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"
+
+- id: makran_chagai
+  name: チャガイ・ケチ（バローチスターン西部）
+  select:
+    pieces: [PAK-Chagai, PAK-Kech]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+    - from: 1666
+      owner: kalat
+      certainty: uncertain
+      cause: カラート・ハン国の成立
+      source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
+  note: バローチ諸部族の地。カラート・ハン国の支配の範囲・時期は要確認。
+
+- id: gwadar
+  name: グワーダル
+  select:
+    pieces: [PAK-Gwadar]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+    - from: 1666
+      owner: kalat
+      certainty: uncertain
+      cause: カラート・ハン国の成立
+    - from: 1784
+      owner: oman
+      cause: カラートのハンがグワーダルをオマーンのスルターン・ビン・アフマドに与える
+      source: "https://en.wikipedia.org/wiki/Gwadar"
+  note: グワーダルの港はオマーン領（1958年まで）。ピースはグワーダル県全体なので過大（近似）。
+
+# ================================================================ 中央アジア
+- id: khorezm
+  name: ホラズム（ヒヴァ周辺・ダショグズ）
+  select:
+    adm1: [UZB/Xorazm Region, TKM/Dasoguz]
+    pieces: [UZB-Beruniy, UZB-Turtkul, UZB-Ellikkala, UZB-Amudarya, UZB-Nukus, UZB-Nukus_city, UZB-Khojeyli, UZB-Shumanay, UZB-Kanlikul]
+  timeline:
+    - from: 1648
+      owner: khiva
+    - from: 1740
+      owner: khiva
+      overlord: persia
+      cause: ナーディル・シャーがヒヴァを征服
+      source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"
+    - from: 1747
+      owner: khiva
+      cause: ナーディル・シャーの死
+
+- id: aral_delta
+  name: アム川デルタ北部（カラカルパク）
+  select:
+    pieces: [UZB-Muynak, UZB-Kungrad, UZB-Chimbay, UZB-Kegeyli, UZB-Takhtakupir, UZB-Karauzyak, UZB-Uchkuduk]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+    - from: 1811
+      owner: khiva
+      cause: ヒヴァ・ハン国がカラカルパクを服属させる
+  note: カラカルパクやアラル・ウズベク（コングラト）の地。カザフ・ヒヴァの間で帰属が揺れた（要確認）。
+
+- id: lebap
+  name: アム川中流（チャルジョウ）
+  select:
+    adm1: [TKM/Lebap]
+  timeline:
+    - from: 1648
+      owner: bukhara
+    - from: 1740
+      owner: bukhara
+      overlord: persia
+      cause: ナーディル・シャーがブハラを服属させる
+    - from: 1747
+      owner: bukhara
+      cause: ナーディル・シャーの死
+
+- id: merv
+  name: メルヴ
+  select:
+    adm1: [TKM/Mary]
+  timeline:
+    - from: 1648
+      owner: persia
+      certainty: uncertain
+    - from: 1748
+      owner: null
+      certainty: uncertain
+      cause: ナーディル・シャーの死後、ガージャール系のバイラム・アリー・ハンらが自立
+    - from: 1785
+      owner: bukhara
+      cause: ブハラのシャー・ムラードがメルヴを征服
+      source: "https://en.wikipedia.org/wiki/Merv"
+
+- id: turkmen
+  name: トルクメン諸部族の地（アハル・バルカン）
+  select:
+    adm1: [TKM/Ahai, TKM/Balkan]
+  timeline:
+    - from: 1648
+      owner: null
+  note: テケ、ヨムートなどトルクメン諸部族の遊牧地。ヒヴァやペルシアが一時的に支配を及ぼした。
+
+- id: kazakh_west
+  name: カザフスタン西部
+  select:
+    iso: [KAZ]
+  timeline:
+    - from: 1648
+      owner: kazakh
+      certainty: uncertain
+    - from: 1731
+      owner: kazakh
+      overlord: russia
+      certainty: uncertain
+      cause: 小ジュズのアブルハイル・ハンがロシアの臣籍に入る
+      source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"
+  note: ヴォルガ・ウラル間（西カザフスタン州・アティラウ州の西部）は1771年までカルムイクの遊牧地。ウラル川沿いのウラリスク（ヤイク・コサック）はロシアの拠点。ピースが大きすぎるので一括した（近似）。
+
+# ================================================================ アラビア半島・ペルシア湾
+- id: najd_riyadh
+  name: ナジュド南部（リヤド・ディルイーヤ）
+  select:
+    pieces: [SAU-Riyadh_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+    - from: 1744
+      owner: saudi
+      certainty: uncertain
+      cause: ディルイーヤの盟約（第一次サウード王国の始まり）
+      source: "https://ja.wikipedia.org/wiki/第一次サウード王国"
+    - from: 1773
+      owner: saudi
+      cause: サウード家がリヤドを征服
+  note: 1744年以前のナジュドは小さなオアシス首長国の割拠（どの国にも属さない）。
+
+- id: qassim
+  name: カスィーム
+  select:
+    pieces: [SAU-Al_Qassim_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+    - from: 1782
+      owner: saudi
+      cause: サウード家がカスィームを服属させる
+  note: 服属の年は要確認。
+
+- id: jabal_shammar
+  name: ジャバル・シャンマル（ハーイル）・ジャウフ
+  select:
+    pieces: [SAU-Hayel_Region, SAU-Al_Jawf_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+    - from: 1790
+      owner: saudi
+      certainty: uncertain
+      cause: サウード家の北方への拡大
+  note: 服属の年は要確認。
+
+- id: arabia_north_desert
+  name: アラビア北部の砂漠（北部国境州）
+  select:
+    pieces: [SAU-Northern_Borders_Region]
+  timeline:
+    - from: 1648
+      owner: null
+  note: ベドウィンの遊牧地。
+
+- id: hijaz_medina
+  name: ヒジャーズ北部（メディナ）
+  select:
+    pieces: [SAU-Al_Madinah_Region]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+    - from: 1805
+      owner: saudi
+      cause: サウード王国がメディナを占領
+      source: "https://ja.wikipedia.org/wiki/第一次サウード王国"
+    - from: 1812
+      owner: ottoman
+      cause: エジプトのムハンマド・アリーの軍がメディナを奪回
+      source: "https://en.wikipedia.org/wiki/Ottoman–Wahhabi_war"
+  note: ヒジャーズはオスマン帝国の宗主権のもとでメッカのシャリーフが治めた（nominal）。メッカ（範囲外）は1803年・1806年にサウード王国が占領し、1813年に奪回された。
+
+- id: tabuk
+  name: ヒジャーズ北端（タブーク）
+  select:
+    pieces: [SAU-Tabuk_Region]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+  note: 巡礼路の要塞を除けばベドウィンの地。
+
+- id: al_hasa
+  name: ハサー（アラビア半島東部）
+  select:
+    pieces: [SAU-Eastern_Region]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+    - from: 1670
+      owner: banu_khalid
+      cause: バニー・ハーリド族がオスマン帝国の守備隊を追う
+      source: "https://en.wikipedia.org/wiki/Emirate_of_Bani_Khalid"
+    - from: 1795
+      owner: saudi
+      cause: サウード王国がハサーを征服
+      source: "https://ja.wikipedia.org/wiki/第一次サウード王国"
+
+- id: kuwait_r
+  name: クウェート
+  select:
+    iso: [KWT]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+    - from: 1670
+      owner: banu_khalid
+      cause: バニー・ハーリド族の支配
+    - from: 1752
+      owner: kuwait
+      cause: ウトゥーブ族のサバーフ家が首長となる
+      source: "https://ja.wikipedia.org/wiki/クウェートの歴史"
+  note: ウトゥーブ族の定住は1716年ごろ。サバーフ家の首長の始まりは1752年とされる（要確認）。
+
+- id: bahrain_r
+  name: バーレーン
+  select:
+    iso: [BHR]
+  timeline:
+    - from: 1648
+      owner: persia
+    - from: 1783
+      owner: bahrain
+      cause: ハリーファ家がバーレーンを征服
+      source: "https://ja.wikipedia.org/wiki/バーレーンの歴史"
+  note: 1717–1738年ごろはオマーンや在地アラブの支配も入り混じる（要確認）。
+
+- id: qatar_r
+  name: カタル
+  select:
+    iso: [QAT]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+    - from: 1670
+      owner: banu_khalid
+      certainty: uncertain
+      cause: バニー・ハーリド族の支配
+    - from: 1783
+      owner: bahrain
+      certainty: uncertain
+      cause: ズバーラのハリーファ家がバーレーンを得る（カタル北部も勢力下）
+  note: ドーハ周辺は在地部族の地で、帰属はあいまい（要確認）。
+
+- id: trucial_north
+  name: ペルシア湾南岸北部（シャルジャ・ラアス・アル＝ハイマ）
+  select:
+    pieces: [ARE-Ras_al_Khaimah, ARE-Sharjah, ARE-Ajman, ARE-Umm_al_Quwain]
+  timeline:
+    - from: 1648
+      owner: oman
+      certainty: uncertain
+    - from: 1727
+      owner: qawasim
+      certainty: uncertain
+      cause: カワーシムの台頭
+      source: "https://en.wikipedia.org/wiki/Al_Qasimi"
+  note: 年代は要確認。
+
+- id: trucial_west
+  name: ペルシア湾南岸西部（アブダビ・ドバイ）
+  select:
+    pieces: [ARE-Abu_Dhabi, ARE-Dubai]
+  timeline:
+    - from: 1648
+      owner: null
+  note: バニー・ヤース族の地。1761年にアブダビの町が築かれた。
+
+- id: oman_north
+  name: オマーン北部（ムサンダム半島・フジャイラ）
+  select:
+    iso: [OMN]
+    pieces: [ARE-Fujairah]
+  timeline:
+    - from: 1648
+      owner: oman
+  note: ムサンダム半島は1650年ごろまでポルトガルの影響下（要確認）。
