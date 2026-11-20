@@ -1,0 +1,484 @@
+# 担当 A（西欧・北アフリカ）の政体（1648–1815 試作）
+# 範囲：FRA ESP PRT AND MCO GBR IRL ISL GRL MAR DZA TUN LBY EGY ESH MRT MLI
+
+# ---------------------------------------------------------------- フランス
+- id: france
+  name: フランス王国
+  names:
+    - {from: 1792, to: 1803, name: フランス共和国（第一共和政）}
+    - {from: 1804, to: 1813, name: フランス帝国（第一帝政）}
+  short: フランス
+  color: "#9db7e0"
+  kind: 王国
+  rulers:
+    - name: ルイ14世
+      title: フランス王
+      from: 1643
+      to: 1715
+      note: 幼少期は母后アンヌ・ドートリッシュが摂政、宰相マザランが実権を握った（1661年まで）。
+      source: "ja.wikipedia: ルイ14世 (フランス王)"
+    - name: ルイ15世
+      title: フランス王
+      from: 1715
+      to: 1774
+      note: 1723年までオルレアン公フィリップが摂政。
+      source: "ja.wikipedia: ルイ15世 (フランス王)"
+    - name: ルイ16世
+      title: フランス王（1791年からは「フランス人の王」）
+      from: 1774
+      to: 1792
+      source: "ja.wikipedia: ルイ16世"
+    - name: 国民公会
+      title: 共和国の議会（執行権は公安委員会など）
+      from: 1792
+      to: 1795
+      source: "ja.wikipedia: 国民公会"
+    - name: 総裁政府
+      title: 5人の総裁による執行府
+      from: 1795
+      to: 1799
+      source: "ja.wikipedia: 総裁政府"
+    - name: ナポレオン・ボナパルト
+      title: 第一統領
+      from: 1799
+      to: 1804
+      source: "ja.wikipedia: 統領政府"
+    - name: ナポレオン1世
+      title: フランス皇帝
+      from: 1804
+      to: 1814
+      source: "ja.wikipedia: ナポレオン・ボナパルト"
+    - name: ナポレオン1世（百日天下）
+      title: フランス皇帝
+      from: 1815
+      to: 1815
+      source: "ja.wikipedia: 百日天下"
+    - name: ルイ18世
+      title: フランス王
+      from: 1814
+      to: 1824
+      note: 1815年3〜7月の百日天下の間はヘントに亡命。
+      source: "ja.wikipedia: ルイ18世"
+  periods:
+    - from: 1648
+      to: 1660
+      text: 幼いルイ14世のもと、宰相マザランが政治を行う。貴族と高等法院がフロンドの乱（1648–53）を起こすが鎮圧され、王権が強まる。スペインとの戦争は1659年のピレネー条約まで続く。
+    - from: 1661
+      to: 1715
+      text: ルイ14世の親政。「朕は国家なり」と言われる絶対王政の最盛期で、コルベールの重商主義政策とヴェルサイユ宮殿の造営が進む。自然国境（ライン・アルプス・ピレネー）をめざす侵略戦争をくり返し、北東部の国境を押し広げた。
+    - from: 1715
+      to: 1788
+      text: ルイ15世・16世の時代。ポーランド継承戦争の結果ロレーヌ獲得が決まる（1766年に併合）。七年戦争でカナダやインドの植民地を失い、アメリカ独立戦争への参戦も重なって財政が悪化する。啓蒙思想が広まる。
+    - from: 1789
+      to: 1799
+      text: フランス革命。1792年に王政が廃止されて第一共和政となり、ジャコバン派の恐怖政治、総裁政府と続く。革命戦争でサヴォイア・ニース・南ネーデルラント・ライン左岸を併合した。
+    - from: 1799
+      to: 1814
+      text: ナポレオンの統領政府と第一帝政。ナポレオン法典を制定し、大陸の大半を支配下や同盟下に置くが、1812年のロシア遠征の失敗から崩れる。
+    - from: 1814
+      to: 1815
+      text: ブルボン朝の復古。ナポレオンの百日天下をはさみ、ルイ18世が王位に戻る。国境はおおむね1792年の状態に戻された。
+  source: "ja.wikipedia: フランス王国"
+
+- id: lorraine
+  name: ロレーヌ公国
+  short: ロレーヌ
+  color: "#e9dc8f"
+  kind: 公国
+  rulers:
+    - name: シャルル4世
+      title: ロレーヌ公
+      from: 1625
+      to: 1675
+      note: 公国の大半は1633–61年と1670年以降フランス軍に占領され、公はほとんどの期間亡命・転戦していた。1654–59年はスペインに幽閉。
+      source: "ja.wikipedia: シャルル4世 (ロレーヌ公)"
+    - name: シャルル5世
+      title: ロレーヌ公（名目上。フランス占領下で亡命中）
+      from: 1675
+      to: 1690
+      note: 皇帝軍の将軍として第二次ウィーン包囲の救援やハンガリー奪回で活躍した。
+      source: "ja.wikipedia: シャルル5世 (ロレーヌ公)"
+    - name: レオポール
+      title: ロレーヌ公
+      from: 1690
+      to: 1729
+      note: 1697年のライスワイク条約で公国を回復（1698年に帰国）。
+      source: "ja.wikipedia: レオポール (ロレーヌ公)"
+    - name: フランソワ3世
+      title: ロレーヌ公
+      from: 1729
+      to: 1737
+      note: マリア・テレジアと結婚し、ロレーヌと引きかえにトスカーナ大公となった。のちの皇帝フランツ1世。
+      source: "ja.wikipedia: フランツ1世 (神聖ローマ皇帝)"
+    - name: スタニスワフ・レシチニスキ
+      title: ロレーヌ公（前ポーランド王）
+      from: 1737
+      to: 1766
+      note: ルイ15世の義父。統治の実権はフランスが送った官吏が握り、その死とともにロレーヌはフランスに併合された。
+      source: "ja.wikipedia: スタニスワフ・レシチニスキ"
+  periods:
+    - from: 1648
+      to: 1697
+      text: 神聖ローマ帝国の西端にある公国。フランスとハプスブルク家のはざまにあり、公国は長くフランス軍に占領された（1633–61年、1670–97年）。
+    - from: 1698
+      to: 1737
+      text: ライスワイク条約で独立を回復し、レオポール公のもとで復興する。
+    - from: 1737
+      to: 1766
+      text: ポーランド継承戦争の講和で、前ポーランド王スタニスワフに一代限りで与えられた。実質はフランスの管理下にあり、その死後フランスに併合された。
+  source: "ja.wikipedia: ロレーヌ公国"
+
+- id: strasbourg
+  name: 帝国自由都市ストラスブール（シュトラスブルク）
+  short: ストラスブール
+  color: "#e7c4a3"
+  kind: 帝国自由都市
+  periods:
+    - from: 1648
+      to: 1681
+      text: ウェストファリア条約でアルザスの大半がフランス領となった後も、帝国自由都市として残った。1681年、ルイ14世の軍に包囲されて降伏し、フランスに併合された。
+  source: "ja.wikipedia: ストラスブール"
+
+- id: monaco
+  name: モナコ公国
+  short: モナコ
+  color: "#e8a0a0"
+  kind: 公国
+  rulers:
+    - {name: オノレ2世, title: モナコ公, from: 1604, to: 1662, source: "ja.wikipedia: オノレ2世 (モナコ公)"}
+    - {name: ルイ1世, title: モナコ公, from: 1662, to: 1701, source: "ja.wikipedia: ルイ1世 (モナコ公)"}
+    - {name: アントワーヌ1世, title: モナコ公, from: 1701, to: 1731, source: "ja.wikipedia: アントワーヌ1世 (モナコ公)"}
+    - {name: ルイーズ＝イポリット, title: モナコ女公, from: 1731, to: 1731, source: "ja.wikipedia: ルイーズ・イポリット (モナコ女公)"}
+    - {name: ジャック1世, title: モナコ公, from: 1731, to: 1733, source: "ja.wikipedia: ジャック1世 (モナコ公)"}
+    - {name: オノレ3世, title: モナコ公, from: 1733, to: 1793, note: 1793年にフランスに併合されて位を失った（1795年没）。, source: "ja.wikipedia: オノレ3世 (モナコ公)"}
+    - {name: オノレ4世, title: モナコ公, from: 1814, to: 1819, source: "ja.wikipedia: オノレ4世 (モナコ公)"}
+  periods:
+    - from: 1648
+      to: 1792
+      text: グリマルディ家の小公国。1641年からフランスの保護下にある。
+    - from: 1793
+      to: 1813
+      text: フランス革命でフランスに併合された。
+    - from: 1814
+      to: 1815
+      text: 公国が復活。1815年のウィーン会議の結果、サルデーニャ王国の保護下に移った。
+  source: "ja.wikipedia: モナコ"
+
+- id: andorra
+  name: アンドラ
+  color: "#d7a9cc"
+  kind: 共同公国
+  note: フランス王（もとフォワ伯の権利を継承）とスペインのウルジェル司教が共同の君主（共同大公）。革命期のフランスは1793年に共同君主の地位を放棄し、1806年にナポレオンが復活させた。
+  periods:
+    - from: 1648
+      to: 1815
+      text: ピレネー山中の小国。フランス王とウルジェル司教を共同の君主とし、自治を保った。
+  source: "ja.wikipedia: アンドラ"
+
+- id: corsica
+  name: コルシカ独立政府（パオリ政権）
+  short: コルシカ
+  color: "#b5d8cf"
+  kind: 共和国
+  rulers:
+    - name: パスクワーレ・パオリ
+      title: 国民総督
+      from: 1755
+      to: 1769
+      source: "ja.wikipedia: パスカル・パオリ"
+  periods:
+    - from: 1755
+      to: 1768
+      text: ジェノヴァの支配に反抗したコルシカ人が、パオリのもとで独立政府と憲法を持った。ジェノヴァは沿岸の要塞都市だけを保ち、1768年に島の権利をフランスに譲った。
+  note: 沿岸の要塞都市（バスティア・カルヴィ・アジャクシオなど）はジェノヴァ、のちフランス軍が保持していた。
+  source: "ja.wikipedia: コルシカ共和国"
+
+# ---------------------------------------------------------------- イベリア半島
+- id: spain
+  name: スペイン王国
+  short: スペイン
+  color: "#f2c08a"
+  kind: 王国
+  rulers:
+    - {name: フェリペ4世, title: スペイン王, from: 1621, to: 1665, source: "ja.wikipedia: フェリペ4世 (スペイン王)"}
+    - {name: カルロス2世, title: スペイン王, from: 1665, to: 1700, note: スペイン・ハプスブルク家最後の王。幼少期は母后マリアナが摂政。, source: "ja.wikipedia: カルロス2世 (スペイン王)"}
+    - {name: フェリペ5世, title: スペイン王, from: 1700, to: 1724, note: ルイ14世の孫。スペイン・ブルボン朝の祖。継承戦争中（1705–14）はカール大公（カルロス3世を称する）がカタルーニャなどを支配した。, source: "ja.wikipedia: フェリペ5世 (スペイン王)"}
+    - {name: ルイス1世, title: スペイン王, from: 1724, to: 1724, source: "ja.wikipedia: ルイス1世 (スペイン王)"}
+    - {name: フェリペ5世（復位）, title: スペイン王, from: 1724, to: 1746, source: "ja.wikipedia: フェリペ5世 (スペイン王)"}
+    - {name: フェルナンド6世, title: スペイン王, from: 1746, to: 1759, source: "ja.wikipedia: フェルナンド6世 (スペイン王)"}
+    - {name: カルロス3世, title: スペイン王, from: 1759, to: 1788, note: 啓蒙専制君主。それまでナポリ・シチリア王。, source: "ja.wikipedia: カルロス3世 (スペイン王)"}
+    - {name: カルロス4世, title: スペイン王, from: 1788, to: 1808, note: 寵臣ゴドイが実権を握った。, source: "ja.wikipedia: カルロス4世 (スペイン王)"}
+    - {name: フェルナンド7世, title: スペイン王, from: 1808, to: 1808, note: 1808年3月に即位したが、5月にバイヨンヌでナポレオンに退位させられた。, source: "ja.wikipedia: フェルナンド7世 (スペイン王)"}
+    - {name: ホセ1世（ジョゼフ・ボナパルト）, title: スペイン王（ナポレオンの兄）, from: 1808, to: 1813, note: 反乱側はフェルナンド7世を正統の王とし、中央評議会・摂政会議とカディス議会が抵抗を指導した。, source: "ja.wikipedia: ジョゼフ・ボナパルト"}
+    - {name: フェルナンド7世（復位）, title: スペイン王, from: 1813, to: 1833, note: 1813年12月のヴァランセ条約で王位を回復し、1814年3月に帰国。カディス憲法を廃止した。, source: "ja.wikipedia: フェルナンド7世 (スペイン王)"}
+  periods:
+    - from: 1648
+      to: 1700
+      text: 「黄金世紀」が終わり、国力が衰える。カタルーニャ（1640–52）とポルトガル（1640–68）の反乱、フランスとの戦争で領土を失う。病弱なカルロス2世に子がなく、王位継承が全ヨーロッパの問題になった。
+    - from: 1700
+      to: 1714
+      text: スペイン継承戦争。ブルボン家のフェリペ5世が王位を守るが、ユトレヒト条約などでネーデルラント・イタリアの領土とジブラルタル・ミノルカを失う。
+    - from: 1715
+      to: 1788
+      text: ブルボン朝のもとで、新組織王令（ヌエバ・プランタ王令）によりアラゴン諸王国の自治を廃して中央集権化を進める。カルロス3世が啓蒙改革を行った。
+    - from: 1808
+      to: 1813
+      text: ナポレオンが兄ジョゼフを王に立て、各地の民衆蜂起とイギリス軍の介入で半島戦争となる。1812年、抵抗派のカディス議会が自由主義的なカディス憲法を制定した。
+    - from: 1814
+      to: 1815
+      text: フェルナンド7世が復位して絶対王政に戻り、カディス憲法を廃止した。中南米の植民地では独立運動が広がる。
+  source: "ja.wikipedia: スペイン・ハプスブルク朝"
+
+- id: portugal
+  name: ポルトガル王国
+  short: ポルトガル
+  color: "#a9d6a0"
+  kind: 王国
+  rulers:
+    - {name: ジョアン4世, title: ポルトガル王, from: 1640, to: 1656, note: 1640年の再独立（スペインからの離脱）で即位したブラガンサ朝の祖。, source: "ja.wikipedia: ジョアン4世 (ポルトガル王)"}
+    - {name: アフォンソ6世, title: ポルトガル王, from: 1656, to: 1683, note: 1667年に実権を奪われ、弟ペドロが1668年から摂政となった。, source: "ja.wikipedia: アフォンソ6世 (ポルトガル王)"}
+    - {name: ペドロ2世, title: ポルトガル王（1668–83年は摂政）, from: 1683, to: 1706, source: "ja.wikipedia: ペドロ2世 (ポルトガル王)"}
+    - {name: ジョアン5世, title: ポルトガル王, from: 1706, to: 1750, source: "ja.wikipedia: ジョアン5世 (ポルトガル王)"}
+    - {name: ジョゼ1世, title: ポルトガル王, from: 1750, to: 1777, note: 宰相ポンバル侯が実権を握った。, source: "ja.wikipedia: ジョゼ1世 (ポルトガル王)"}
+    - {name: マリア1世, title: ポルトガル女王, from: 1777, to: 1816, note: 1792年ごろから精神を病み、王子ジョアンが政治を代行（1799年に正式に摂政）。, source: "ja.wikipedia: マリア1世 (ポルトガル女王)"}
+    - {name: ペドロ3世, title: ポルトガル王（マリア1世の夫・共同統治者）, from: 1777, to: 1786, source: "ja.wikipedia: ペドロ3世 (ポルトガル王)"}
+    - {name: ジョアン（のちジョアン6世）, title: 摂政王太子, from: 1799, to: 1816, note: 1807年のフランス軍侵入を前に、王室とともにブラジルのリオデジャネイロへ移った。, source: "ja.wikipedia: ジョアン6世 (ポルトガル王)"}
+  periods:
+    - from: 1648
+      to: 1668
+      text: 1640年にスペインから再独立し、ブラガンサ朝のもとで独立戦争を続ける。1668年のリスボン条約でスペインが独立を承認した。
+    - from: 1669
+      to: 1755
+      text: イギリスとの同盟を軸にする（1703年メシュエン条約）。ブラジルの金がジョアン5世の豪華な宮廷を支えた。
+    - from: 1755
+      to: 1777
+      text: リスボン大地震の後、宰相ポンバル侯が首都を再建し、イエズス会の追放など啓蒙改革を進めた。
+    - from: 1807
+      to: 1815
+      text: ナポレオン軍の侵入を受け、王室はブラジルに移る。イギリス軍（ウェリントン）とともにフランス軍を撃退した（半島戦争）。
+  source: "ja.wikipedia: ブラガンサ王朝"
+
+# ---------------------------------------------------------------- ブリテン諸島
+- id: britain
+  name: イングランド王国
+  names:
+    - {from: 1649, to: 1659, name: イングランド共和国（コモンウェルス）}
+    - {from: 1707, to: 1800, name: グレートブリテン王国}
+    - {from: 1801, name: グレートブリテン及びアイルランド連合王国}
+  short: イギリス
+  color: "#eba2a2"
+  kind: 王国
+  rulers:
+    - {name: チャールズ1世, title: イングランド王, from: 1625, to: 1649, note: 1649年1月に処刑された。, source: "ja.wikipedia: チャールズ1世 (イングランド王)"}
+    - {name: オリヴァー・クロムウェル, title: 護国卿, from: 1653, to: 1658, note: 1649–53年は議会（ランプ議会）と国務会議が統治したが、軍の指導者クロムウェルが実権を握っていた。, source: "ja.wikipedia: オリバー・クロムウェル"}
+    - {name: リチャード・クロムウェル, title: 護国卿, from: 1658, to: 1659, source: "ja.wikipedia: リチャード・クロムウェル"}
+    - {name: チャールズ2世, title: イングランド王, from: 1660, to: 1685, source: "ja.wikipedia: チャールズ2世 (イングランド王)"}
+    - {name: ジェームズ2世, title: イングランド王, from: 1685, to: 1688, note: 名誉革命でフランスへ亡命。, source: "ja.wikipedia: ジェームズ2世 (イングランド王)"}
+    - {name: ウィリアム3世, title: イングランド王, from: 1689, to: 1702, note: オランダ総督（オラニエ公ウィレム3世）を兼ねる。, source: "ja.wikipedia: ウィリアム3世 (イングランド王)"}
+    - {name: メアリ2世, title: イングランド女王（ウィリアム3世と共同統治）, from: 1689, to: 1694, source: "ja.wikipedia: メアリー2世 (イングランド女王)"}
+    - {name: アン, title: イングランド女王→グレートブリテン女王（1707年〜）, from: 1702, to: 1714, source: "ja.wikipedia: アン (イギリス女王)"}
+    - {name: ジョージ1世, title: グレートブリテン王（ハノーファー選帝侯を兼ねる）, from: 1714, to: 1727, source: "ja.wikipedia: ジョージ1世 (イギリス王)"}
+    - {name: ジョージ2世, title: グレートブリテン王（ハノーファー選帝侯を兼ねる）, from: 1727, to: 1760, source: "ja.wikipedia: ジョージ2世 (イギリス王)"}
+    - {name: ジョージ3世, title: グレートブリテン王→連合王国の王（ハノーファー選帝侯・王を兼ねる）, from: 1760, to: 1820, note: 1811年から王太子ジョージ（のちのジョージ4世）が摂政。, source: "ja.wikipedia: ジョージ3世 (イギリス王)"}
+  periods:
+    - from: 1648
+      to: 1660
+      text: ピューリタン革命。1649年にチャールズ1世を処刑して共和政となり、クロムウェルがアイルランドとスコットランドを征服、1653年から護国卿として独裁した。
+    - from: 1660
+      to: 1688
+      text: 王政復古。チャールズ2世・ジェームズ2世のカトリック寄りの政治に議会が反発し、トーリ・ホイッグの二党が生まれた。
+    - from: 1689
+      to: 1714
+      text: 名誉革命で立憲王政が確立。ルイ14世のフランスと戦い（ファルツ戦争・スペイン継承戦争）、1707年にスコットランドと合同してグレートブリテン王国となった。
+    - from: 1714
+      to: 1760
+      text: ハノーヴァー朝のもとで、ウォルポール内閣以来の責任内閣制（議院内閣制）が発達。ジャコバイトの反乱（1715年、1745年）を鎮めた。
+    - from: 1760
+      to: 1815
+      text: 七年戦争で植民地帝国の優位を確立する一方、アメリカ独立戦争で13植民地を失う。産業革命が進む。対仏大同盟の中心としてフランス革命・ナポレオンと戦い、1801年にアイルランドを合同した。
+  source: "ja.wikipedia: イングランド王国"
+
+- id: scotland
+  name: スコットランド王国
+  short: スコットランド
+  color: "#c7b5e3"
+  kind: 王国
+  rulers:
+    - {name: チャールズ1世, title: スコットランド王, from: 1625, to: 1649, source: "ja.wikipedia: チャールズ1世 (イングランド王)"}
+    - {name: チャールズ2世, title: スコットランド王, from: 1649, to: 1651, note: 1649年にスコットランドで王と宣言され1651年に戴冠したが、クロムウェルに敗れて亡命。, source: "ja.wikipedia: チャールズ2世 (イングランド王)"}
+    - {name: チャールズ2世（王政復古）, title: スコットランド王, from: 1660, to: 1685, source: "ja.wikipedia: チャールズ2世 (イングランド王)"}
+    - {name: ジェームズ7世（イングランド王ジェームズ2世）, title: スコットランド王, from: 1685, to: 1688, source: "ja.wikipedia: ジェームズ2世 (イングランド王)"}
+    - {name: ウィリアム2世（イングランド王ウィリアム3世）, title: スコットランド王, from: 1689, to: 1702, source: "ja.wikipedia: ウィリアム3世 (イングランド王)"}
+    - {name: メアリ2世, title: スコットランド女王, from: 1689, to: 1694, source: "ja.wikipedia: メアリー2世 (イングランド女王)"}
+    - {name: アン, title: スコットランド女王, from: 1702, to: 1707, source: "ja.wikipedia: アン (イギリス女王)"}
+  periods:
+    - from: 1648
+      to: 1651
+      text: イングランドと同じ王を持つ別の王国（同君連合）。チャールズ1世の処刑後、その子チャールズ2世を王に立ててイングランド共和国と戦った。
+    - from: 1652
+      to: 1659
+      text: クロムウェルに征服され、イングランド共和国に統合された。
+    - from: 1660
+      to: 1706
+      text: 王政復古で王国が復活。名誉革命後、長老派教会が国教となる。1707年の合同法でイングランドと合同した。
+  source: "ja.wikipedia: スコットランド王国"
+
+- id: ireland
+  name: アイルランド王国
+  short: アイルランド
+  color: "#b9dfa8"
+  kind: 王国
+  rulers:
+    - {name: チャールズ1世, title: アイルランド王, from: 1625, to: 1649, source: "ja.wikipedia: チャールズ1世 (イングランド王)"}
+    - {name: チャールズ2世, title: アイルランド王, from: 1660, to: 1685, source: "ja.wikipedia: チャールズ2世 (イングランド王)"}
+    - {name: ジェームズ2世, title: アイルランド王, from: 1685, to: 1690, note: 名誉革命後もアイルランドに拠って戦ったが、1690年のボイン川の戦いで敗れた。, source: "ja.wikipedia: ジェームズ2世 (イングランド王)"}
+    - {name: ウィリアム3世, title: アイルランド王, from: 1689, to: 1702, source: "ja.wikipedia: ウィリアム3世 (イングランド王)"}
+    - {name: メアリ2世, title: アイルランド女王, from: 1689, to: 1694, source: "ja.wikipedia: メアリー2世 (イングランド女王)"}
+    - {name: アン, title: アイルランド女王, from: 1702, to: 1714, source: "ja.wikipedia: アン (イギリス女王)"}
+    - {name: ジョージ1世, title: アイルランド王, from: 1714, to: 1727, source: "ja.wikipedia: ジョージ1世 (イギリス王)"}
+    - {name: ジョージ2世, title: アイルランド王, from: 1727, to: 1760, source: "ja.wikipedia: ジョージ2世 (イギリス王)"}
+    - {name: ジョージ3世, title: アイルランド王, from: 1760, to: 1800, source: "ja.wikipedia: ジョージ3世 (イギリス王)"}
+  periods:
+    - from: 1648
+      to: 1651
+      text: カトリック同盟（キルケニー連合）が自治を行っていたが、1649年からクロムウェルの遠征軍に征服された。
+    - from: 1652
+      to: 1659
+      text: イングランド共和国に統合され、カトリック地主の土地が大規模に没収された。
+    - from: 1660
+      to: 1800
+      text: イングランド（イギリス）王を君主とする別の王国だが、実際にはイギリスに従属し、プロテスタント地主が支配した。1798年の反乱の後、1801年にイギリスに合同された。
+  source: "ja.wikipedia: アイルランド王国"
+
+# ---------------------------------------------------------------- 北アフリカ
+- id: morocco
+  name: モロッコ
+  names:
+    - {to: 1667, name: モロッコ（サアド朝末期・分裂期）}
+    - {from: 1668, name: モロッコ（アラウィー朝）}
+  short: モロッコ
+  color: "#e0c48e"
+  kind: スルタン国
+  rulers:
+    - {name: ムハンマド・アッシャイフ・アッサギール, title: サアド朝スルタン（マラケシュ）, from: 1636, to: 1655, source: "ja.wikipedia: サアド朝", note: 在位年は要確認。}
+    - {name: アフマド・アルアッバース, title: サアド朝スルタン（マラケシュ）, from: 1655, to: 1659, note: 暗殺され、サアド朝は断絶した。在位年は要確認。, source: "ja.wikipedia: サアド朝"}
+    - {name: ムーレイ・ムハンマド, title: アラウィー家の首長（タフィラルト）, from: 1636, to: 1664, source: "ja.wikipedia: アラウィー朝", note: 要確認。}
+    - {name: ムーレイ・ラシード, title: アラウィー朝スルタン, from: 1664, to: 1672, note: 1666年にフェズ、1668年ごろマラケシュを取ってモロッコを統一した。, source: "ja.wikipedia: アラウィー朝"}
+    - {name: ムーレイ・イスマーイール, title: アラウィー朝スルタン, from: 1672, to: 1727, note: 黒人奴隷兵の常備軍を組織し、メクネスに首都を置いた。, source: "ja.wikipedia: ムーレイ・イスマーイール"}
+    - {name: アフマド・アッザハビー, title: アラウィー朝スルタン, from: 1727, to: 1729, note: 1728年に一時アブドゥルマリクに位を奪われた。, source: "ja.wikipedia: アラウィー朝"}
+    - {name: アブドゥッラー, title: アラウィー朝スルタン, from: 1729, to: 1757, note: 黒人奴隷兵の擁立・廃位により何度も退位と復位をくり返した（その間、兄弟のアリー、ムハンマド2世、ムスタディーらが一時即位）。要確認。, source: "ja.wikipedia: アラウィー朝"}
+    - {name: ムハンマド3世（シーディー・ムハンマド）, title: アラウィー朝スルタン, from: 1757, to: 1790, note: 1769年にポルトガルからマザガンを奪回。1777年にアメリカ合衆国を承認した最初期の国となった。, source: "ja.wikipedia: ムハンマド3世 (モロッコ)"}
+    - {name: ヤズィード, title: アラウィー朝スルタン, from: 1790, to: 1792, source: "ja.wikipedia: アラウィー朝"}
+    - {name: スライマーン, title: アラウィー朝スルタン, from: 1792, to: 1822, source: "ja.wikipedia: アラウィー朝"}
+  periods:
+    - from: 1648
+      to: 1667
+      text: サアド朝が衰え、国内は分裂。北部・中部はディラーのザーウィヤ（宗教団体）、南東のタフィラルトはアラウィー家が支配した。
+    - from: 1668
+      to: 1727
+      text: アラウィー朝がモロッコを統一。ムーレイ・イスマーイールの長い治世のもと、タンジールなどヨーロッパ人の拠点を次々に奪回した。オスマン帝国には属さない独立国。
+    - from: 1728
+      to: 1757
+      text: 奴隷兵の軍団が君主を擁立・廃位し、内乱が続いた。
+    - from: 1757
+      to: 1815
+      text: ムハンマド3世が国を立て直し、ヨーロッパ諸国と通商条約を結んだ。
+  source: "ja.wikipedia: モロッコの歴史"
+
+- id: algiers
+  name: アルジェ（アルジェリア）
+  short: アルジェ
+  color: "#cfdc9a"
+  kind: 太守領（オスマン帝国の摂政領）
+  rulers:
+    - {name: ババ・アリー・シャウシュ, title: デイ, from: 1710, to: 1718, note: オスマン帝国が送るパシャを追放し、デイがパシャを兼ねる体制にした。, source: "en.wikipedia: Baba Ali Chaouch"}
+    - {name: ムハンマド・ブン・ハサン, title: デイ, from: 1718, to: 1724, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: クルド・アブディ, title: デイ, from: 1724, to: 1732, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: ババ・イブラーヒーム, title: デイ, from: 1732, to: 1745, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: イブラーヒーム・キュチュク, title: デイ, from: 1745, to: 1748, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: ムハンマド・ブン・バキル, title: デイ, from: 1748, to: 1754, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: ババ・アリー・ブー・セバア, title: デイ, from: 1754, to: 1766, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: ムハンマド・ブン・ウスマーン, title: デイ, from: 1766, to: 1791, source: "en.wikipedia: Mohamed ben-Osman", note: 1775年のスペイン軍のアルジェ攻撃を撃退した。}
+    - {name: ババ・ハサン, title: デイ, from: 1791, to: 1798, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: ムスタファ, title: デイ, from: 1798, to: 1805, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: アフマド, title: デイ, from: 1805, to: 1808, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: アリー・アッラッサール, title: デイ, from: 1808, to: 1809, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: ハーッジ・アリー, title: デイ, from: 1809, to: 1815, source: "en.wikipedia: List of Ottoman governors of Algiers", note: 要確認。}
+    - {name: ウマル・アガ, title: デイ, from: 1815, to: 1817, note: 1815年は短期間にムハンマド・ハズナジーをはさむ。要確認。, source: "en.wikipedia: List of Ottoman governors of Algiers"}
+  note: 1659年まではオスマン帝国が任命するパシャ、1659–71年はイェニチェリ軍団の長（アガ）、1671年からは選挙で選ばれるデイが統治した。1710年以前の統治者は頻繁に交代したため省略。
+  periods:
+    - from: 1648
+      to: 1709
+      text: オスマン帝国の宗主権のもとにある「摂政領」。実権はイェニチェリ軍団と海賊（バルバリア私掠船）の船長たちが握り、統治者がしばしば交代した。
+    - from: 1710
+      to: 1815
+      text: デイがパシャを兼ねて、オスマン帝国からほぼ独立した。地中海の私掠と、ヨーロッパ諸国からの貢納金が財源。1708年に奪ったオランをスペインに奪い返されたが（1732年）、1792年に回復した。
+  source: "ja.wikipedia: オスマン帝国領アルジェリア"
+
+- id: tunis
+  name: チュニス（チュニジア）
+  short: チュニス
+  color: "#ebb2a3"
+  kind: ベイ領（オスマン帝国の摂政領）
+  rulers:
+    - {name: ハンムーダ・パシャ, title: ベイ（ムラード朝）, from: 1631, to: 1666, source: "en.wikipedia: Muradid dynasty", note: 在位年は要確認。}
+    - {name: ムラード2世, title: ベイ（ムラード朝）, from: 1666, to: 1675, source: "en.wikipedia: Muradid dynasty", note: 要確認。}
+    - {name: ムハンマド・ベイ, title: ベイ（ムラード朝）, from: 1675, to: 1696, note: 兄弟アリーとの内戦をはさむ。要確認。, source: "en.wikipedia: Muradid dynasty"}
+    - {name: ラマダーン・ベイ, title: ベイ（ムラード朝）, from: 1696, to: 1699, source: "en.wikipedia: Muradid dynasty", note: 要確認。}
+    - {name: ムラード3世, title: ベイ（ムラード朝）, from: 1699, to: 1702, source: "en.wikipedia: Muradid dynasty", note: 要確認。}
+    - {name: イブラーヒーム・シャリーフ, title: ベイ, from: 1702, to: 1705, source: "en.wikipedia: Ibrahim Sharif", note: 要確認。}
+    - {name: フサイン・ブン・アリー, title: ベイ（フサイン朝の祖）, from: 1705, to: 1735, source: "ja.wikipedia: フサイン朝"}
+    - {name: アリー・パシャ（アリー1世）, title: ベイ, from: 1735, to: 1756, note: 叔父フサインから位を奪った。, source: "ja.wikipedia: フサイン朝"}
+    - {name: ムハンマド・ラシード, title: ベイ, from: 1756, to: 1759, source: "ja.wikipedia: フサイン朝"}
+    - {name: アリー2世, title: ベイ, from: 1759, to: 1782, source: "ja.wikipedia: フサイン朝"}
+    - {name: ハンムーダ・パシャ, title: ベイ, from: 1782, to: 1814, source: "ja.wikipedia: フサイン朝"}
+    - {name: ウスマーン, title: ベイ, from: 1814, to: 1814, source: "ja.wikipedia: フサイン朝"}
+    - {name: マフムード, title: ベイ, from: 1814, to: 1824, source: "ja.wikipedia: フサイン朝"}
+  periods:
+    - from: 1648
+      to: 1704
+      text: オスマン帝国の宗主権のもとで、ムラード朝のベイが世襲で実権を握った。
+    - from: 1705
+      to: 1815
+      text: フサイン朝が成立し、オスマン帝国からほぼ独立した。隣のアルジェとはしばしば戦い、1756年にはアルジェ軍にチュニスを占領されて貢納を課された。
+  source: "ja.wikipedia: フサイン朝"
+
+- id: tripoli
+  name: トリポリ（リビア）
+  short: トリポリ
+  color: "#dccaa8"
+  kind: 摂政領（オスマン帝国）
+  rulers:
+    - {name: アフメト・カラマンリー, title: パシャ（カラマンリー朝の祖）, from: 1711, to: 1745, source: "en.wikipedia: Karamanli dynasty"}
+    - {name: メフメト・カラマンリー, title: パシャ, from: 1745, to: 1754, source: "en.wikipedia: Karamanli dynasty"}
+    - {name: アリー1世・カラマンリー, title: パシャ, from: 1754, to: 1793, source: "en.wikipedia: Karamanli dynasty"}
+    - {name: アリー・ブルグル, title: パシャ（簒奪者）, from: 1793, to: 1795, note: オスマン帝国の承認を得てトリポリを奪ったが、追われた。, source: "en.wikipedia: Karamanli dynasty"}
+    - {name: ユースフ・カラマンリー, title: パシャ, from: 1795, to: 1832, note: 1795年は短期間、兄アフメト（ハーミト）が在位。アメリカ合衆国と第一次バーバリ戦争（1801–05）を戦った。, source: "en.wikipedia: Yusuf Karamanli"}
+  note: 1711年以前はオスマン帝国が任命するパシャやデイが統治した（頻繁に交代したため省略）。
+  periods:
+    - from: 1648
+      to: 1710
+      text: オスマン帝国のトリポリ州（摂政領）。イェニチェリの軍人と私掠船の船長たちが実権を握った。
+    - from: 1711
+      to: 1815
+      text: カラマンリー朝が世襲のパシャとなり、オスマン帝国の宗主権のもとでほぼ独立した。私掠と貢納金で富み、アメリカ合衆国と戦った（第一次バーバリ戦争）。
+  source: "ja.wikipedia: カラマンリー朝"
+
+- id: egypt
+  name: エジプト（ムハンマド・アリー朝）
+  short: エジプト
+  color: "#d9d29a"
+  kind: 総督領（オスマン帝国）
+  rulers:
+    - name: ムハンマド・アリー
+      title: エジプト総督（パシャ）
+      from: 1805
+      to: 1848
+      note: 1811年にマムルークを虐殺して権力を固め、近代化政策を進めた。
+      source: "ja.wikipedia: ムハンマド・アリー"
+  periods:
+    - from: 1805
+      to: 1815
+      text: アルバニア人の軍人ムハンマド・アリーがエジプト総督となり、オスマン帝国の宗主権のもとで事実上自立した。
+  note: 1805年以前のエジプトはオスマン帝国（ottoman）の州として描く。実際にはマムルークのベイたちが実権を握っていた。
+  source: "ja.wikipedia: ムハンマド・アリー朝"

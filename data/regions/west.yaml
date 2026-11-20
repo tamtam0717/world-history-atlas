@@ -1,0 +1,780 @@
+# 担当 A（西欧・北アフリカ）の地域と所属の変遷（1648–1815 試作）
+# 大きな地域（現代の国全体など）でおおまかに書き、小さな地域で例外を上書きする。
+
+# ================================================================ フランス
+- id: france_kingdom
+  name: フランス王国（本土）
+  select:
+    iso: [FRA]
+  timeline:
+    - from: 1648
+      owner: france
+      note: ここで上書きしない地域（三司教領メッス・トゥール・ヴェルダン、上アルザスなどを含む）はフランス領。
+      source: "ja.wikipedia: フランス王国"
+
+- id: upper_alsace
+  name: 上アルザス（ズントガウ）
+  select:
+    pieces: [FRA-Altkirch, FRA-Thann, FRA-Mulhouse, FRA-Belfort]
+  timeline:
+    - from: 1648
+      owner: france
+      cause: ウェストファリア条約（ハプスブルク家のアルザス領をフランスに割譲）
+      note: 都市ミュルーズはスイス盟約者団の同盟都市として1798年まで独立していた（ピースが粗いため描かない）。
+      source: "ja.wikipedia: ヴェストファーレン条約"
+
+- id: lower_alsace
+  name: 下アルザスとデカポリス（十帝国都市）
+  select:
+    pieces: [FRA-Haguenau, FRA-Molsheim, FRA-Saverne, FRA-Selestat, FRA-Colmar]
+  timeline:
+    - from: 1648
+      owner: france
+      overlord: hre
+      certainty: nominal
+      cause: ウェストファリア条約（デカポリスの守護権などをフランスが得る）
+      note: ウェストファリア条約の規定はあいまいで、ストラスブール司教領・ハーナウ＝リヒテンベルク伯領・十帝国都市などは帝国諸邦として残った。
+      source: "ja.wikipedia: デカポリス (アルザス)"
+    - from: 1680
+      owner: france
+      cause: 再統合（レユニオン）政策による併合（1697年ライスワイク条約で確認）
+      note: デカポリスの諸都市は1673年に占領され、1679–81年の「再統合」で下アルザスの帝国諸邦は一括してフランス主権下に置かれた。
+      source: "ja.wikipedia: 再統合政策"
+
+- id: strasbourg_city
+  name: ストラスブール
+  select:
+    pieces: [FRA-Strasbourg]
+  timeline:
+    - from: 1648
+      owner: strasbourg
+      overlord: hre
+    - from: 1681
+      owner: france
+      cause: ルイ14世によるストラスブール併合
+      source: "ja.wikipedia: ストラスブール"
+
+- id: montbeliard
+  name: モンベリアール伯領
+  select:
+    pieces: [FRA-Montbeliard]
+  timeline:
+    - from: 1648
+      owner: wurttemberg
+      overlord: hre
+      note: ヴュルテンベルク公家の分家・本家が領有。
+      source: "ja.wikipedia: モンベリアール"
+    - from: 1793
+      owner: france
+      cause: フランスによる併合
+      source: "ja.wikipedia: モンベリアール"
+
+- id: franche_comte
+  name: フランシュ＝コンテ（ブルゴーニュ伯領）
+  select:
+    pieces: [FRA-Besancon, FRA-Pontarlier, FRA-Dole, FRA-Lons_le_Saunier, FRA-Saint_Claude, FRA-Vesoul, FRA-Lure]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      note: ブザンソンは1654年まで帝国自由都市（ピースが粗いため描かない）。
+      source: "ja.wikipedia: フランシュ＝コンテ"
+    - from: 1678
+      owner: france
+      cause: ナイメーヘンの和約
+      source: "ja.wikipedia: ナイメーヘンの和約"
+
+- id: lorraine_duchy
+  name: ロレーヌ公国
+  select:
+    pieces: [FRA-Nancy, FRA-Luneville, FRA-Epinal, FRA-Saint_Die_des_Vosges, FRA-Neufchateau, FRA-Sarreguemines, FRA-Forbach, FRA-Commercy, FRA-Val_de_Briey, FRA-Sarrebourg]
+  timeline:
+    - from: 1648
+      owner: france
+      overlord: hre
+      certainty: occupied
+      note: 1633年からフランス軍が占領。
+      source: "ja.wikipedia: ロレーヌ公国"
+    - from: 1661
+      owner: lorraine
+      overlord: hre
+      cause: ヴァンセンヌ条約（ロレーヌ公シャルル4世の復帰）
+      source: "ja.wikipedia: ロレーヌ公国"
+    - from: 1670
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: フランス軍の再占領
+      source: "ja.wikipedia: ロレーヌ公国"
+    - from: 1697
+      owner: lorraine
+      overlord: hre
+      cause: ライスワイク条約（レオポール公の復帰）
+      source: "ja.wikipedia: レイスウェイク条約"
+    - from: 1766
+      owner: france
+      cause: スタニスワフ・レシチニスキの死去によるフランス併合（1738年ウィーン条約の取り決め）
+      source: "ja.wikipedia: ロレーヌ公国"
+  note: ヴァル＝ド＝ブリエのロンウィ（ルクセンブルク領→1678年フランス）やザール地方の小領などはピースが粗いため描かない。
+
+- id: sarrebourg
+  name: サールブール（フランスへの軍用道路）
+  select:
+    pieces: [FRA-Sarrebourg]
+  timeline:
+    - from: 1661
+      owner: france
+      cause: ヴァンセンヌ条約（ロレーヌ公がアルザスへの通路をフランスに割譲）
+      note: 1648–60年はロレーヌ公国と同じ扱い（フランス占領下）。
+      source: "ja.wikipedia: ロレーヌ公国"
+
+- id: barrois
+  name: バール公領（バロワ・ムーヴァン）
+  select:
+    pieces: [FRA-Bar_le_Duc]
+  timeline:
+    - from: 1648
+      owner: france
+      certainty: occupied
+      note: バール公領のうちムーズ川以西はフランス王の封土（帝国外）。ロレーヌ公が領有。
+      source: "ja.wikipedia: バール公国"
+    - from: 1661
+      owner: lorraine
+      cause: ヴァンセンヌ条約
+    - from: 1670
+      owner: france
+      certainty: occupied
+      cause: フランス軍の再占領
+    - from: 1697
+      owner: lorraine
+      cause: ライスワイク条約
+    - from: 1766
+      owner: france
+      cause: スタニスワフ・レシチニスキの死去によるフランス併合
+
+- id: thionville
+  name: ティオンヴィル（ルクセンブルク公領の南部）
+  select:
+    pieces: [FRA-Thionville]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      source: "ja.wikipedia: ティオンヴィル"
+    - from: 1659
+      owner: france
+      cause: ピレネー条約
+      source: "ja.wikipedia: ピレネー条約"
+
+- id: roussillon
+  name: ルシヨンとセルダーニュ北部
+  select:
+    pieces: [FRA-Perpignan, FRA-Ceret, FRA-Prades]
+  timeline:
+    - from: 1648
+      owner: france
+      certainty: occupied
+      note: カタルーニャの反乱以来、1642年からフランスが占領（法的にはスペイン領）。
+      source: "ja.wikipedia: ルシヨン"
+    - from: 1659
+      owner: france
+      cause: ピレネー条約
+      source: "ja.wikipedia: ピレネー条約"
+
+- id: artois_south
+  name: アルトワ（アラス・ベテューヌ・ランス）
+  select:
+    pieces: [FRA-Arras, FRA-Bethune, FRA-Lens]
+  timeline:
+    - from: 1648
+      owner: france
+      certainty: occupied
+      overlord: hre
+      note: アラスは1640年にフランスが占領（法的にはスペイン領ネーデルラント＝ブルグント・クライス）。
+      source: "ja.wikipedia: アルトワ"
+    - from: 1659
+      owner: france
+      cause: ピレネー条約
+      source: "ja.wikipedia: ピレネー条約"
+
+- id: saint_omer
+  name: サントメール（アルトワ北部）
+  select:
+    pieces: [FRA-Saint_Omer]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      source: "ja.wikipedia: サントメール"
+    - from: 1678
+      owner: france
+      cause: ナイメーヘンの和約
+      source: "ja.wikipedia: ナイメーヘンの和約"
+
+- id: dunkirk
+  name: ダンケルクと海沿いフランドル
+  select:
+    pieces: [FRA-Dunkerque]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      note: ダンケルクは1646–52年にフランスが一時占領。
+      source: "ja.wikipedia: ダンケルク"
+    - from: 1658
+      owner: britain
+      cause: 砂丘の戦い（英仏連合軍がスペインに勝利し、ダンケルクがイングランド領に）
+      note: ピレネー条約（1659）で確認。グラヴリーヌは1659年、ベルグは1668年、カッセル・バイユールなど内陸部は1678年にフランス領となったが、このピースはダンケルクで代表させる。
+      source: "ja.wikipedia: 砂丘の戦い"
+    - from: 1662
+      owner: france
+      cause: チャールズ2世がダンケルクをフランスに売却
+      source: "ja.wikipedia: ダンケルク"
+
+- id: walloon_flanders
+  name: ワロン・フランドル（リール・ドゥエー）
+  select:
+    pieces: [FRA-Lille, FRA-Douai]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      source: "ja.wikipedia: フランス領フランドル"
+    - from: 1668
+      owner: france
+      cause: アーヘンの和約（南ネーデルラント継承戦争）
+      source: "ja.wikipedia: アーヘンの和約_(1668年)"
+
+- id: hainaut_west
+  name: エノー南部（アヴェーヌ・ル・ケノワ・ランドルシー）
+  select:
+    pieces: [FRA-Avesnes_sur_Helpe]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      source: "ja.wikipedia: エノー"
+    - from: 1659
+      owner: france
+      cause: ピレネー条約
+      note: モブージュは1678年にフランス領。
+      source: "ja.wikipedia: ピレネー条約"
+
+- id: cambresis_valenciennes
+  name: カンブレジとヴァランシエンヌ
+  select:
+    pieces: [FRA-Cambrai, FRA-Valenciennes]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      note: カンブレー大司教領（カンブレジ）は形式上は帝国諸邦だが、スペインが保護・支配していた。
+      source: "ja.wikipedia: カンブレー"
+    - from: 1678
+      owner: france
+      cause: ナイメーヘンの和約
+      source: "ja.wikipedia: ナイメーヘンの和約"
+
+- id: avignon_comtat
+  name: アヴィニョンとヴネッサン伯領（教皇領）
+  select:
+    pieces: [FRA-Avignon, FRA-Carpentras]
+  timeline:
+    - from: 1648
+      owner: papal_states
+      note: フランスは教皇との対立の際に一時占領した（1663–64、1688–89、1768–74年）。オランジュ公国（ナッサウ家、1713年ユトレヒト条約でフランス領）はピースが粗いため描かない。
+      source: "ja.wikipedia: ヴネッサン伯領"
+    - from: 1791
+      owner: france
+      cause: 憲法制定国民議会によるアヴィニョンとヴネッサン伯領の併合
+      source: "ja.wikipedia: アヴィニョン"
+
+- id: savoy_duchy
+  name: サヴォイア公国（サヴォワ）
+  select:
+    pieces: [FRA-Annecy, FRA-Bonneville, FRA-Saint_Julien_en_Genevois, FRA-Thonon_les_Bains, FRA-Albertville, FRA-Chambery, FRA-Saint_Jean_de_Maurienne]
+  timeline:
+    - from: 1648
+      owner: savoy
+      overlord: hre
+      source: "ja.wikipedia: サヴォイア公国"
+    - from: 1792
+      owner: france
+      cause: 国民公会によるサヴォワ併合（1796年パリ条約でサルデーニャ王が承認）
+      source: "ja.wikipedia: モン＝ブラン県"
+    - from: 1814
+      owner: savoy
+      cause: 第1次パリ条約
+      note: シャンベリとアヌシーの周辺は1814年の条約ではフランスに残された（別の地域で上書き）。
+      source: "ja.wikipedia: パリ条約_(1814年)"
+
+- id: savoy_1814_french
+  name: シャンベリとアヌシー（1814年にフランスに残った部分）
+  select:
+    pieces: [FRA-Chambery, FRA-Annecy]
+  timeline:
+    - from: 1814
+      owner: france
+      cause: 第1次パリ条約（シャンベリ・アヌシーの周辺はフランスに残る）
+      source: "ja.wikipedia: パリ条約_(1814年)"
+    - from: 1815
+      owner: savoy
+      cause: 第2次パリ条約（百日天下の後、サルデーニャ王国に返還）
+      source: "ja.wikipedia: パリ条約_(1815年)"
+
+- id: nice_county
+  name: ニース伯領
+  select:
+    pieces: [FRA-Nice]
+  timeline:
+    - from: 1648
+      owner: savoy
+      source: "ja.wikipedia: ニース伯国"
+    - from: 1793
+      owner: france
+      cause: 国民公会によるニース併合（アルプ＝マリティーム県）
+      source: "ja.wikipedia: ニース伯国"
+    - from: 1814
+      owner: savoy
+      cause: 第1次パリ条約
+      source: "ja.wikipedia: パリ条約_(1814年)"
+
+- id: barcelonnette
+  name: バルスロネット渓谷
+  select:
+    pieces: [FRA-Barcelonnette]
+  timeline:
+    - from: 1648
+      owner: savoy
+      source: "ja.wikipedia: バルスロネット"
+    - from: 1713
+      owner: france
+      cause: ユトレヒト条約（アルプスの渓谷の交換）
+      source: "ja.wikipedia: ユトレヒト条約"
+
+- id: monaco
+  name: モナコ
+  select:
+    iso: [MCO]
+  timeline:
+    - from: 1648
+      owner: monaco
+      overlord: france
+      note: 1641年のペロンヌ条約以来、フランスの保護下。
+      source: "ja.wikipedia: モナコ"
+    - from: 1793
+      owner: france
+      cause: フランスによる併合
+      source: "ja.wikipedia: モナコ"
+    - from: 1814
+      owner: monaco
+      overlord: france
+      cause: 第1次パリ条約で公国が復活
+      source: "ja.wikipedia: モナコ"
+    - from: 1815
+      owner: monaco
+      overlord: savoy
+      cause: ウィーン会議（サルデーニャ王国の保護下へ）
+      source: "ja.wikipedia: モナコ"
+
+- id: corsica
+  name: コルシカ島
+  select:
+    pieces: [FRA-Ajaccio, FRA-Sartene, FRA-Bastia, FRA-Calvi, FRA-Corte]
+  timeline:
+    - from: 1648
+      owner: genoa
+      source: "ja.wikipedia: コルシカ島"
+    - from: 1755
+      owner: corsica
+      certainty: uncertain
+      cause: パオリのもとでコルシカ独立政府が成立（ジェノヴァは沿岸の都市を保持）
+      source: "ja.wikipedia: コルシカ共和国"
+    - from: 1768
+      owner: france
+      cause: ヴェルサイユ条約（ジェノヴァがコルシカをフランスに譲渡。1769年ポンテ・ノヴの戦いで征服完了）
+      source: "ja.wikipedia: ヴェルサイユ条約_(1768年)"
+    - from: 1794
+      owner: britain
+      cause: イギリス国王を君主とするコルシカ王国（アングロ＝コルシカ王国）の成立
+      note: 名目上は別の王国で、副王がイギリスから送られた。
+      source: "ja.wikipedia: コルシカ王国_(1794年-1796年)"
+    - from: 1796
+      owner: france
+      cause: イギリス軍の撤退とフランスの再占領
+      source: "ja.wikipedia: コルシカ島"
+
+- id: andorra
+  name: アンドラ
+  select:
+    iso: [AND]
+  timeline:
+    - from: 1648
+      owner: andorra
+      source: "ja.wikipedia: アンドラ"
+
+# ================================================================ イベリア半島
+- id: spain_kingdom
+  name: スペイン王国（本土）
+  select:
+    iso: [ESP]
+  timeline:
+    - from: 1648
+      owner: spain
+      note: バレアレス諸島のメノルカ島はイギリス領の時期がある（1708–56、1763–82、1798–1802）が、ピースがマヨルカ島と一体のため描かない。ジブラルタル（1713年イギリス領）とオリベンサ（1801年までポルトガル領）もピースが粗く描かない。
+      source: "ja.wikipedia: スペイン"
+
+- id: catalonia_ne
+  name: カタルーニャ東部（バルセロナ・ジローナ）
+  select:
+    pieces: [ESP-Barcelona, ESP-Girona]
+  timeline:
+    - from: 1648
+      owner: france
+      certainty: occupied
+      note: 1640年のカタルーニャの反乱（収穫人戦争）以来、カタルーニャはフランス王を伯として迎え、フランス軍が駐留した。
+      source: "ja.wikipedia: 収穫人戦争"
+    - from: 1652
+      owner: spain
+      cause: バルセロナの降伏（カタルーニャの反乱の終結）
+      source: "ja.wikipedia: 収穫人戦争"
+    - from: 1705
+      owner: spain
+      certainty: uncertain
+      cause: カール大公（カルロス3世を称する）派の支配
+      note: スペイン継承戦争中、カタルーニャはハプスブルク家のカール大公を王として支持した。
+      source: "ja.wikipedia: スペイン継承戦争"
+    - from: 1714
+      owner: spain
+      cause: バルセロナ陥落（フェリペ5世の支配の回復）
+      source: "ja.wikipedia: バルセロナ包囲戦_(1713年-1714年)"
+    - from: 1812
+      owner: france
+      certainty: occupied
+      cause: ナポレオンによるカタルーニャのフランス併合（4つの県に分割）
+      source: "ja.wikipedia: 半島戦争"
+    - from: 1814
+      owner: spain
+      cause: フランス軍の撤退
+      source: "ja.wikipedia: 半島戦争"
+
+- id: catalonia_sw
+  name: カタルーニャ西部（リェイダ・タラゴナ）
+  select:
+    pieces: [ESP-Lleida, ESP-Tarragona]
+  timeline:
+    - from: 1648
+      owner: spain
+      note: リェイダとタラゴナは反乱中もスペイン王の軍が保持した。
+      source: "ja.wikipedia: 収穫人戦争"
+    - from: 1705
+      owner: spain
+      certainty: uncertain
+      cause: カール大公（カルロス3世を称する）派の支配
+      source: "ja.wikipedia: スペイン継承戦争"
+    - from: 1714
+      owner: spain
+      cause: バルセロナ陥落（フェリペ5世の支配の回復）
+      note: リェイダは1707年にブルボン軍が奪回。
+      source: "ja.wikipedia: スペイン継承戦争"
+    - from: 1812
+      owner: france
+      certainty: occupied
+      cause: ナポレオンによるカタルーニャのフランス併合（4つの県に分割）
+      source: "ja.wikipedia: 半島戦争"
+    - from: 1814
+      owner: spain
+      cause: フランス軍の撤退
+      source: "ja.wikipedia: 半島戦争"
+
+- id: portugal_kingdom
+  name: ポルトガル王国
+  select:
+    iso: [PRT]
+  timeline:
+    - from: 1648
+      owner: portugal
+      note: 1640年に再独立。スペインの承認は1668年のリスボン条約。ナポレオン期のフランス軍の占領（1807–08、1810–11）は一時的なため描かない。
+      source: "ja.wikipedia: ポルトガル王政復古戦争"
+
+# ================================================================ ブリテン諸島・北大西洋
+- id: england_wales
+  name: イングランドとウェールズ
+  select:
+    adm1: ["GBR/England", "GBR/Wales"]
+    pieces: [GBR-Isles_of_Scilly]
+  timeline:
+    - from: 1648
+      owner: britain
+      source: "ja.wikipedia: イングランド王国"
+
+- id: scotland
+  name: スコットランド
+  select:
+    adm1: ["GBR/Scotland"]
+  timeline:
+    - from: 1648
+      owner: scotland
+      source: "ja.wikipedia: スコットランド王国"
+    - from: 1652
+      owner: britain
+      cause: クロムウェルによる征服とイングランド共和国への統合
+      source: "ja.wikipedia: 三王国戦争"
+    - from: 1660
+      owner: scotland
+      cause: 王政復古（スコットランド王国の復活）
+      source: "ja.wikipedia: 王政復古_(イングランド)"
+    - from: 1707
+      owner: britain
+      cause: 合同法（グレートブリテン王国の成立）
+      source: "ja.wikipedia: 合同法_(1707年)"
+
+- id: ireland
+  name: アイルランド
+  select:
+    iso: [IRL]
+    adm1: ["GBR/Northern Ireland"]
+  timeline:
+    - from: 1648
+      owner: ireland
+      note: 1642–49年はカトリック同盟（キルケニー連合）が島の大半を支配していた。
+      source: "ja.wikipedia: アイルランド同盟戦争"
+    - from: 1652
+      owner: britain
+      cause: クロムウェルのアイルランド征服とイングランド共和国への統合
+      source: "ja.wikipedia: クロムウェルのアイルランド侵略"
+    - from: 1660
+      owner: ireland
+      cause: 王政復古（アイルランド王国の復活）
+      source: "ja.wikipedia: アイルランド王国"
+    - from: 1801
+      owner: britain
+      cause: 合同法（グレートブリテン及びアイルランド連合王国の成立）
+      source: "ja.wikipedia: 合同法_(1800年)"
+
+- id: iceland
+  name: アイスランド
+  select:
+    iso: [ISL]
+  timeline:
+    - from: 1648
+      owner: denmark
+      source: "ja.wikipedia: アイスランドの歴史"
+
+- id: east_greenland
+  name: 東グリーンランド
+  select:
+    iso: [GRL]
+  timeline:
+    - from: 1648
+      owner: null
+      note: デンマーク＝ノルウェーの植民は1721年から西岸で始まった。東岸は19世紀末まで植民されていない。
+      source: "ja.wikipedia: グリーンランドの歴史"
+
+# ================================================================ モロッコ
+- id: morocco
+  name: モロッコ
+  select:
+    iso: [MAR]
+  timeline:
+    - from: 1648
+      owner: morocco
+      certainty: uncertain
+      note: サアド朝の衰退で国内は分裂（ディラーのザーウィヤ、アラウィー家、各地の勢力）。
+      source: "ja.wikipedia: サアド朝"
+    - from: 1668
+      owner: morocco
+      cause: アラウィー朝ムーレイ・ラシードによる統一
+      source: "ja.wikipedia: アラウィー朝"
+
+- id: tangier
+  name: タンジール
+  select:
+    pieces: [MAR-Prefecture_of_Tangier_Assilah]
+  timeline:
+    - from: 1648
+      owner: portugal
+      source: "ja.wikipedia: タンジェ"
+    - from: 1661
+      owner: britain
+      cause: キャサリン・オブ・ブラガンザの持参金としてイングランドに譲渡
+      source: "ja.wikipedia: タンジェ"
+    - from: 1684
+      owner: morocco
+      cause: イングランドの撤退
+      note: ピースにはアシラ（スペイン領、1691年にモロッコが奪回）も含まれる。
+      source: "ja.wikipedia: タンジェ"
+
+- id: morocco_south_nominal
+  name: スース南部・ヌーン川流域（ゲルミーム）
+  select:
+    pieces: [MAR-Guelmim_Province, MAR-Province_de_Tan_Tan, MAR-Assa_Zag_Province]
+  timeline:
+    - from: 1648
+      owner: morocco
+      certainty: nominal
+      note: テクナなどの部族が半独立しており、スルタンの支配は名目的。
+      source: "ja.wikipedia: モロッコの歴史"
+
+- id: western_sahara
+  name: 西サハラと内陸の砂漠（部族地域）
+  select:
+    iso: [ESH, MRT, MLI]
+    pieces: [MAR-Tarfaya_Province, MAR-Province_d_Es_Semara, MAR-Oued_Ed_Dahab_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 遊牧部族の地域で、国家の支配は及んでいない。
+      source: "ja.wikipedia: 西サハラ"
+
+# ================================================================ アルジェ・チュニス・トリポリ
+- id: algiers_regency
+  name: アルジェ摂政領
+  select:
+    iso: [DZA]
+  timeline:
+    - from: 1648
+      owner: algiers
+      overlord: ottoman
+      source: "ja.wikipedia: オスマン帝国領アルジェリア"
+
+- id: oran
+  name: オラン
+  select:
+    pieces: [DZA-Tamanghasset]
+  note: ピース ID と名前は誤っているが、位置（経度 -0.68、緯度 35.53）と面積から現在のオラン県にあたる。
+  timeline:
+    - from: 1648
+      owner: spain
+      source: "ja.wikipedia: オラン"
+    - from: 1708
+      owner: algiers
+      overlord: ottoman
+      cause: アルジェのベイがオランを攻略
+      source: "ja.wikipedia: オラン"
+    - from: 1732
+      owner: spain
+      cause: スペインのオラン再征服
+      source: "ja.wikipedia: オラン"
+    - from: 1792
+      owner: algiers
+      overlord: ottoman
+      cause: 1790年の大地震の後、スペインが条約（1791年）によりオランを放棄
+      source: "ja.wikipedia: オラン"
+
+- id: algeria_saharan_nominal
+  name: アルジェリアのオアシス地帯（ムザブ・スーフ・ワルグラなど）
+  select:
+    pieces: [DZA-Laghouat, DZA-Ghardaia, DZA-El_Oued, DZA-Ouargla, DZA-El_Bayadh]
+  timeline:
+    - from: 1648
+      owner: algiers
+      overlord: ottoman
+      certainty: nominal
+      note: オアシスの諸勢力（ムザブなど）が貢納するだけで、支配は名目的。
+      source: "ja.wikipedia: オスマン帝国領アルジェリア"
+
+- id: algeria_deep_sahara
+  name: アルジェリア南部の砂漠（トゥアト・ホガールなど）
+  select:
+    pieces: [DZA-Adrar, DZA-Tamanghasset_2, DZA-Illizi, DZA-Tindouf, DZA-Bechar]
+  timeline:
+    - from: 1648
+      owner: null
+      note: トゥアレグなどの遊牧部族の地域。トゥアトのオアシスはモロッコのスルタンに名目的に従うこともあった。
+      source: "ja.wikipedia: サハラ砂漠"
+
+- id: tunis_regency
+  name: チュニス
+  select:
+    iso: [TUN]
+  timeline:
+    - from: 1648
+      owner: tunis
+      overlord: ottoman
+      source: "ja.wikipedia: オスマン帝国領チュニジア"
+
+- id: tripoli_regency
+  name: トリポリ摂政領（トリポリタニアとキレナイカ）
+  select:
+    iso: [LBY]
+  timeline:
+    - from: 1648
+      owner: tripoli
+      overlord: ottoman
+      source: "ja.wikipedia: オスマン帝国領トリポリタニア"
+
+- id: libya_interior_nominal
+  name: フェザーンとリビアの内陸
+  select:
+    pieces: [LBY-Murzuq, LBY-Sabha, LBY-Wadi_al_Hayaa, LBY-Ash_Shati, LBY-Ghat, LBY-Al_Jufrah, LBY-Ghadamis, LBY-Mizdah, LBY-Ajdabiya]
+  timeline:
+    - from: 1648
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      note: フェザーンはアウラード・ムハンマド朝の支配地で、トリポリに貢納していた。
+      source: "en.wikipedia: Awlad Muhammad dynasty"
+
+- id: kufra
+  name: クフラ（リビア南東の砂漠）
+  select:
+    pieces: [LBY-Al_Kufrah]
+  timeline:
+    - from: 1648
+      owner: null
+      source: "ja.wikipedia: クフラ"
+
+# ================================================================ エジプト
+- id: egypt
+  name: エジプト
+  select:
+    iso: [EGY]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      note: オスマン帝国の州。実権はしだいにマムルークのベイたちが握った。
+      source: "ja.wikipedia: オスマン帝国領エジプト"
+    - from: 1798
+      owner: france
+      certainty: occupied
+      cause: ナポレオンのエジプト遠征
+      source: "ja.wikipedia: エジプト・シリア戦役"
+    - from: 1801
+      owner: ottoman
+      cause: フランス軍の降伏と撤退
+      source: "ja.wikipedia: エジプト・シリア戦役"
+    - from: 1805
+      owner: egypt
+      overlord: ottoman
+      cause: ムハンマド・アリーがエジプト総督に就任
+      source: "ja.wikipedia: ムハンマド・アリー朝"
+
+- id: egypt_western_desert
+  name: エジプト西部の砂漠（シーワなど）
+  select:
+    pieces: [EGY-Matrouh_Governorate]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+      note: シーワ・オアシスは1820年にムハンマド・アリーが征服するまで半独立。
+      source: "ja.wikipedia: シーワ・オアシス"
+    - from: 1805
+      owner: egypt
+      overlord: ottoman
+      certainty: nominal
+      cause: ムハンマド・アリーがエジプト総督に就任
+      source: "ja.wikipedia: ムハンマド・アリー朝"
+
+- id: tunisia_south_nominal
+  name: チュニジア南部の砂漠（タタウィーン）
+  select:
+    pieces: [TUN-Tataouine]
+  timeline:
+    - from: 1648
+      owner: tunis
+      overlord: ottoman
+      certainty: nominal
+      note: 遊牧部族の地域で、ベイの支配は名目的。
+      source: "ja.wikipedia: オスマン帝国領チュニジア"

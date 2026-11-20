@@ -128,6 +128,16 @@ async function main() {
   $("#zoom-out").addEventListener("click", () => map.zoomBy(1 / 1.6));
   $("#zoom-reset").addEventListener("click", () => map.resetZoom());
 
+  // URL のハッシュを手で書き換えたとき（チャットからのリンクなど）にも追従する
+  window.addEventListener("hashchange", () => {
+    const h = new URLSearchParams(location.hash.slice(1));
+    const y = Number(h.get("y"));
+    const p = h.get("p");
+    if (Number.isFinite(y) && y >= minYear && y <= maxYear) state.year = y;
+    state.polity = p && idx.polityById.has(p) ? p : null;
+    update();
+  });
+
   update();
   (window as unknown as { __atlas: unknown }).__atlas = map;
   document.body.classList.add("ready");

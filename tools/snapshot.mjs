@@ -56,6 +56,8 @@ page.on("pageerror", (e) => console.error("pageerror:", e.message));
 for (const y of years) {
   const hash = new URLSearchParams({ y: String(y) });
   if (polity) hash.set("p", polity);
+  // ハッシュだけの変更では再読み込みされないので、一度空ページを挟む
+  await page.goto("about:blank");
   await page.goto(`${base}${debug ? "?debug=pieces" : ""}#${hash}`);
   await page.waitForSelector("body.ready", { timeout: 30000 });
   if (zoomArg) {
