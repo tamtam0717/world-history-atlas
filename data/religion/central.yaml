@@ -1,0 +1,746 @@
+# 宗教（宗派）の分布：神聖ローマ帝国（ドイツ）・低地諸国・スイス・イタリア・ハプスブルク領（1648–1815）
+# 形式は docs/religion-format.md。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# ドイツは「ルター派」を下地にして、カトリック・改革派・混在の地域を小さい地域で上書きする。
+# ウェストファリア条約（1648）は1624年を「基準年」として各領邦の宗派を固定し、改革派（カルヴァン派）も公認した。
+
+# ======== ドイツ ========
+- id: rel_germany_base
+  name: ドイツ（下地：ルター派の地域）
+  select:
+    iso: [DEU]
+  timeline:
+    - from: 1648
+      main: lutheran
+      note: 北ドイツ・中部ドイツの大部分（ザクセン、ブランデンブルク、メクレンブルク、ハノーファー、ヴュルテンベルクなど）はルター派。
+      source: "https://ja.wikipedia.org/wiki/ヴェストファーレン条約"
+
+# ---- 北ドイツ・ヴェストファーレン・ニーダーライン ----
+- id: rel_anhalt
+  name: アンハルト
+  select:
+    regions: [anhalt_lands]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: アンハルト諸侯は1596年以来改革派。ツェルプスト系はルター派に戻った。
+
+- id: rel_bremen_city
+  name: ブレーメン市
+  select:
+    regions: [bremen_city]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: lutheran
+      note: 市は改革派。大聖堂（スウェーデン領ブレーメン公国の管轄）はルター派の拠点。
+
+- id: rel_east_frisia_west
+  name: 東フリースラント西部（エムデン・レーア）
+  select:
+    pieces: [DEU-Emden_Kreisfreie_Stadt, DEU-Leer, DEU-Leer_2]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: lutheran
+      note: エムデンは「北のジュネーヴ」と呼ばれた改革派の中心。東部（アウリッヒ）はルター派。
+
+- id: rel_bentheim
+  name: ベントハイム
+  select:
+    regions: [bentheim]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: 伯家が1588年に改革派を導入。
+
+- id: rel_lippe
+  name: リッペ
+  select:
+    regions: [lippe_lands]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: 1605年に改革派へ移行（レムゴー市はルター派）。
+
+- id: rel_catholic_northwest
+  name: ヴェストファーレン・ニーダーラインのカトリック地域
+  select:
+    regions: [emsland_meppen, oldenburg_munster, munster_east, munster_borken, munster_coesfeld, munster_steinfurt, paderborn_lands, vest_recklinghausen, duchy_westphalia, julich_left, cologne_left, cologne_city_area, eichsfeld]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ミュンスター・パーダーボルン・ケルンなどの司教領とユーリヒ公領はカトリック。アイヒスフェルト（マインツ領）も同じ。
+
+- id: rel_osnabruck
+  name: オスナブリュック
+  select:
+    regions: [osnabruck_lands]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: ウェストファリア条約で、カトリックの司教とルター派（ブラウンシュヴァイク＝リューネブルク家）の司教が交互に統治すると決められた。市はルター派が多く、農村は両派が混在する。
+
+- id: rel_hildesheim
+  name: ヒルデスハイム
+  select:
+    regions: [hildesheim_lands]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: カトリックの司教領だが、「大司教区」の部分と市はルター派が多い。
+
+- id: rel_kleve_left
+  name: クレーヴェ（ライン左岸）・ヘルダーン周辺
+  select:
+    regions: [kleve_left]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: プロイセン領だが、農村の多くはカトリック。都市には改革派が多い。
+
+- id: rel_lower_rhine_reformed
+  name: ニーダーラインの改革派地域（ヴェーゼル・デュースブルク・メールス・クレーフェルト）
+  select:
+    regions: [kleve_right, moers_krefeld]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: ヴェーゼル・デュースブルク・メールス（オラニエ家領）などは改革派。クレーフェルトにはメノー派も多い。
+
+- id: rel_essen
+  name: エッセン
+  select:
+    regions: [essen]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: 女子修道院領はカトリック、エッセン市はルター派。（多数派の判定は要確認）
+
+- id: rel_berg_catholic
+  name: ベルク公領のカトリック地域（デュッセルドルフ・ライン沿い）
+  select:
+    pieces: [DEU-Dusseldorf_Kreisfreie_Stadt, DEU-Leverkusen_Kreisfreie_Stadt, DEU-Rhein_Sieg_Kreis, DEU-Rheinisch_Bergischer_Kreis, DEU-Mettmann]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: ライン沿いはカトリック。メットマンなど丘陵部には改革派・ルター派が混じる。
+
+- id: rel_berg_protestant
+  name: ベルク地方の工業地帯（エルバーフェルト・ゾーリンゲン・レムシャイト）
+  select:
+    pieces: [DEU-Wuppertal_Kreisfreie_Stadt, DEU-Solingen_Kreisfreie_Stadt, DEU-Remscheid_Kreisfreie_Stadt, DEU-Mulheim_an_der_Ruhr_Kreisfreie_Stadt]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: lutheran
+      note: エルバーフェルト・バルメン（現ヴッパータール）は改革派、レムシャイト・ゾーリンゲンにはルター派も多い。カトリック君主のもとでも信仰は保たれた。
+
+- id: rel_oberberg
+  name: オーバーベルク（ギンボルン・ホムブルク）
+  select:
+    pieces: [DEU-Oberbergischer_Kreis]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: reformed
+
+- id: rel_siegen
+  name: ジーゲン・ヴィトゲンシュタイン
+  select:
+    regions: [siegen]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: ナッサウ＝ジーゲン・ヴィトゲンシュタインは改革派。カトリック系の分家（1623–1743）が再カトリック化を試みたが、住民の多数は改革派のまま。
+
+# ---- 中部ドイツ・テューリンゲン ----
+- id: rel_erfurt
+  name: エアフルト
+  select:
+    regions: [erfurt]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: マインツ大司教領だが、市民の多数はルター派。
+
+# ---- ヘッセン・ナッサウ・ヴェッテラウ ----
+- id: rel_hesse_kassel
+  name: ヘッセン＝カッセル本領
+  select:
+    regions: [hesse_kassel_core]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: 方伯モーリッツが1605年に改革派を導入（「第二の宗教改革」）。南のヘッセン＝ダルムシュタットはルター派のまま。
+
+- id: rel_hanau_wetterau
+  name: ハーナウ・ヴェッテラウ・イーゼンブルク
+  select:
+    regions: [hanau, wetterau, isenburg]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: lutheran
+      note: ハーナウ＝ミュンツェンベルク、ゾルムス、イーゼンブルクなどヴェッテラウの伯たちは改革派。ルター派の町（フリートベルクなど）も混じる。
+
+- id: rel_dillenburg
+  name: ナッサウ＝ディレンブルク
+  select:
+    regions: [dillenburg]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: ナッサウ＝ディレンブルク（オラニエ家の本家筋）は改革派の拠点。ヘルボルン大学。
+
+- id: rel_wied_sayn
+  name: ヴィート・ザイン（ノイヴィート・アルテンキルヒェン）
+  select:
+    regions: [neuwied, altenkirchen]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: ヴィート伯・ザイン伯は改革派。ノイヴィートは諸宗派の移住を認めた寛容の町。
+
+- id: rel_nassau_lutheran
+  name: ナッサウ（タウヌス）
+  select:
+    pieces: [DEU-Wiesbaden_Kreisfreie_Stadt, DEU-Hochtaunuskreis]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: ナッサウ＝ウージンゲン・イトシュタインはルター派、ヘッセン＝ホムブルクは改革派、ケーニヒシュタイン（マインツ領）はカトリック。
+
+- id: rel_nassau_mixed_catholic
+  name: リンブルク・ラインガウ（トリーア・マインツ領と混在）
+  select:
+    pieces: [DEU-Limburg_Weilburg, DEU-Rheingau_Taunus_Kreis]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: リンブルク（トリーア領）・ラインガウ（マインツ領）はカトリック、ヴァイルブルク・イトシュタイン（ナッサウ領）はルター派。
+
+- id: rel_rhein_lahn
+  name: 下カッツェンエルンボーゲン・ディーツ
+  select:
+    regions: [rhein_lahn]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: ヘッセン領の下カッツェンエルンボーゲンはルター派、ディーツ（ナッサウ＝オラニエ）は改革派。トリーア領の村はカトリック。
+
+- id: rel_mainz_trier_catholic
+  name: マインツ・トリーア・フルダなど聖界諸侯領（中部）
+  select:
+    regions: [main_taunus, westerwald, fulda, bergstrasse, aschaffenburg, miltenberg, trier_core, bitburg, ahrweiler, mainz_left, merzig_st_wendel, saarlouis]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: マインツ・トリーア両大司教領とフルダ修道院領はカトリック。ベルクシュトラーセはプファルツからマインツに戻され（1650）、再カトリック化された。
+
+# ---- プファルツ・ライン左岸 ----
+- id: rel_palatinate
+  name: プファルツ選帝侯領（ハイデルベルク・マンハイム・ライン左岸）
+  select:
+    regions: [kurpfalz_right, mosbach, kurpfalz_left, alzey, hunsruck_nahe]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: ハイデルベルク信仰問答（1563）の地で、改革派の中心。ウェストファリア条約で選帝侯カール・ルートヴィヒが復帰し、改革派も回復。
+    - from: 1685
+      main: reformed
+      minor: catholic
+      note: カトリックのノイブルク家が選帝侯を継ぎ、カトリックを優遇する。ライスワイク条約（1697）の「宗教条項」でフランス占領中のカトリック化が認められ、1705年の宗教宣言で教会財産が分けられる。
+      source: "https://de.wikipedia.org/wiki/Pfälzische_Kirchenteilung"
+
+- id: rel_zweibrucken
+  name: プファルツ＝ツヴァイブリュッケン
+  select:
+    regions: [zweibrucken]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: lutheran
+      note: ツヴァイブリュッケン公は改革派。ルター派の村も多い。
+
+- id: rel_palatinate_free_cities
+  name: ライン左岸の帝国都市（ヴォルムス・シュパイアー・ランダウ）
+  select:
+    regions: [worms_city, speyer_city, landau]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: 市民の多数はルター派。司教座（ヴォルムス・シュパイアー）や修道院のカトリックが共存する。
+
+# ---- フランケン ----
+- id: rel_franconia_catholic
+  name: フランケンの司教領（バンベルク・ヴュルツブルク・アイヒシュテット）
+  select:
+    regions: [bamberg, wurzburg, eichstatt]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 司教領はカトリック（ヴュルツブルクのユリウス・エヒターによる対抗宗教改革）。騎士領の村にはルター派が混じる。
+
+- id: rel_main_tauber
+  name: タウバー川流域（メルゲントハイム・ヴェルトハイム）
+  select:
+    regions: [main_tauber]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: ドイツ騎士団のメルゲントハイムやマインツ領はカトリック、ヴェルトハイム伯領はルター派。
+
+# ---- バイエルン・シュヴァーベン ----
+- id: rel_bavaria
+  name: バイエルンとその周辺のカトリック地域
+  select:
+    regions: [bavaria_core, upper_palatinate, neuburg, passau_city, passau_abteiland, berchtesgaden, werdenfels, augsburg_bishopric, unterallgau, burgau]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: バイエルン公（選帝侯）は対抗宗教改革の中心。オーバープファルツは1620年代に再カトリック化された。
+
+- id: rel_regensburg_city
+  name: 帝国都市レーゲンスブルク
+  select:
+    regions: [regensburg_city]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: 帝国議会の開かれた都市。市民はルター派、司教座と帝国修道院はカトリック。
+
+- id: rel_augsburg_city
+  name: 帝国都市アウクスブルク
+  select:
+    regions: [augsburg_city]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: ウェストファリア条約で両宗派同権（パリテート）とされた。18世紀には人口の約6割がカトリック。（比率は要確認）
+
+- id: rel_swabian_free_cities
+  name: シュヴァーベンのルター派帝国都市（メミンゲン・カウフボイレン・ケンプテン）
+  select:
+    regions: [swabian_imperial_cities_bav]
+    pieces: [DEU-Kempten_Allgau_Kreisfreie_Stadt]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: 帝国都市はルター派。ケンプテンは帝国都市（ルター派）と修道院侯領（カトリック）が隣り合う。
+
+- id: rel_allgau_catholic
+  name: ケンプテン修道院侯領（オーバーアルゴイ）
+  select:
+    pieces: [DEU-Oberallgau]
+  timeline:
+    - from: 1648
+      main: catholic
+
+- id: rel_oettingen
+  name: リース地方（エッティンゲン・ネルトリンゲン）
+  select:
+    regions: [oettingen]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: エッティンゲン＝ヴァラーシュタインはカトリック、エッティンゲン＝エッティンゲンと帝国都市ネルトリンゲンはルター派。
+
+- id: rel_lindau
+  name: リンダウ・西アルゴイ
+  select:
+    regions: [lindau]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: 帝国都市リンダウはルター派、周辺の前方オーストリア領はカトリック。
+
+- id: rel_upper_swabia
+  name: オーバーシュヴァーベンと前方オーストリア
+  select:
+    regions: [upper_swabia, bodensee, rottweil, hohenzollern_sigmaringen, breisgau, freiburg_city, ortenau, furstenberg, baden_baden]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 修道院領・前方オーストリア・ホーエンツォレルン・フュルステンベルク・バーデン＝バーデンはカトリック。ビーベラッハは両宗派同権の帝国都市。
+
+- id: rel_ellwangen
+  name: エルヴァンゲンとオストアルプ
+  select:
+    regions: [ellwangen]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: エルヴァンゲン修道院領と帝国都市シュヴェービッシュ・グミュントはカトリック、アーレンなどはルター派。
+
+- id: rel_ulm
+  name: 帝国都市ウルムとその領域
+  select:
+    regions: [ulm]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: ウルムの領域はルター派。ドナウ川沿いの周辺にはカトリックの修道院領が多い。
+
+# ======== 低地諸国 ========
+- id: rel_dutch_republic
+  name: オランダ（北部・中部）
+  select:
+    iso: [NLD]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: 改革派が公認の教会。カトリックは公の礼拝を禁じられたが「隠れ教会」で信仰を続け、人口の約3分の1を占める。メノー派・ルター派・ユダヤ教徒も多い。
+      source: "https://ja.wikipedia.org/wiki/オランダ改革派教会"
+    - from: 1796
+      main: reformed
+      minor: catholic
+      note: バタヴィア共和国で政教分離が定められ、カトリックも平等になる。
+
+- id: rel_dutch_north
+  name: オランダ北部（フリースラント・フローニンゲン・ドレンテ・ゼーラント）
+  select:
+    adm1: ["NLD/Fryslân", "NLD/Groningen", "NLD/Drenthe", "NLD/Zeeland"]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: 改革派が大多数。
+
+- id: rel_dutch_generality
+  name: 北ブラバントとリンブルフ（国家連合直轄領など）
+  select:
+    adm1: ["NLD/Noord-Brabant", "NLD/Limburg"]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 国家連合直轄領（ヘネラリテイツランデン）として改革派の役人が治めたが、住民の大多数はカトリック。
+
+- id: rel_zeeland_flanders
+  name: ゼーラント・フランデレン
+  select:
+    regions: [zeeland_flanders]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: 西部は改革派、東部はカトリックが多い。
+
+- id: rel_southern_netherlands
+  name: 南ネーデルラント・リエージュ・ルクセンブルク
+  select:
+    iso: [BEL, LUX]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: スペイン（1714年からオーストリア）領の南ネーデルラントは対抗宗教改革の拠点で、ほぼすべてカトリック。
+
+# ======== スイス ========
+- id: rel_swiss_reformed
+  name: スイスの改革派諸邦（チューリヒ・ベルン・バーゼル・シャフハウゼンなど）
+  select:
+    iso: [CHE]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: チューリヒ（ツヴィングリ）・ジュネーヴ（カルヴァン）を中心に、都市邦は改革派。
+
+- id: rel_swiss_catholic
+  name: スイスのカトリック諸邦（中央スイス・フリブール・ゾロトゥルン・ヴァレーなど）
+  select:
+    adm1: ["CHE/Luzern", "CHE/Uri", "CHE/Schwyz", "CHE/Obwalden", "CHE/Nidwalden", "CHE/Zug", "CHE/Fribourg", "CHE/Solothurn", "CHE/Ticino", "CHE/Valais", "CHE/Appenzell Innerrhoden", "CHE/Jura"]
+    regions: [fricktal, basel_bishopric_imperial]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 中央スイスの原初邦とフリブール・ゾロトゥルンはカトリック。ヴァレー、ティチーノ（共同支配地）、バーゼル司教領北部、フリックタール（オーストリア領）も同じ。
+
+- id: rel_swiss_mixed_reformed
+  name: スイスの混在地域（改革派が多い：トゥールガウ・アールガウ・グラールス・グラウビュンデン）
+  select:
+    adm1: ["CHE/Thurgau", "CHE/Glarus", "CHE/Graubünden"]
+    regions: [rel_part_aargau]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: グラールスとグラウビュンデンは村ごとに宗派を選んだ。トゥールガウ・アールガウ（バーデン伯領・自由領）はカトリックの共同支配地が混じる。
+
+- id: rel_part_aargau
+  name: アールガウ（フリックタールを除く）
+  select:
+    adm1: ["CHE/Aargau"]
+    exclude_regions: [fricktal]
+
+- id: rel_st_gallen
+  name: ザンクト・ガレン
+  select:
+    adm1: ["CHE/St. Gallen"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: ザンクト・ガレン修道院領はカトリック、ザンクト・ガレン市とトッゲンブルクは改革派。
+
+- id: rel_liechtenstein
+  name: リヒテンシュタイン
+  select:
+    iso: [LIE]
+  timeline:
+    - from: 1648
+      main: catholic
+
+# ======== イタリア ========
+- id: rel_italy
+  name: イタリア
+  select:
+    iso: [ITA, SMR, VAT, MLT, "115"]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 全域がカトリック。ピエモンテのアルプスの谷にワルドー派（改革派系）、ヴェネツィア・リヴォルノ・ローマなどにユダヤ教徒のゲットーがある。
+
+# ======== ハプスブルク家の世襲領 ========
+- id: rel_austria
+  name: オーストリア・ボヘミア・モラヴィア
+  select:
+    iso: [AUT, CZE]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 白山の戦い（1620）以後の再カトリック化で、プロテスタントは国外に追われるか「隠れプロテスタント」になった。
+    - from: 1781
+      main: catholic
+      note: ヨーゼフ2世の寛容令で、ルター派・改革派・正教徒の礼拝が認められる。届け出たプロテスタントはボヘミア・モラヴィアで数％、オーストリアの一部（上オーストリア・ケルンテン）でやや多い。
+      source: "https://ja.wikipedia.org/wiki/寛容令"
+
+- id: rel_salzburg_pongau
+  name: ザルツブルク大司教領の山地（ポンガウ）
+  select:
+    pieces: [AUT-Sankt_Johann_im_Pongau]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: 山地の農民に隠れプロテスタントが多い。（比率は要確認）
+    - from: 1732
+      main: catholic
+      note: 大司教フィルミアンの追放令（1731）で、約2万人のプロテスタントがプロイセン（東プロイセン）などへ移住した。
+      source: "https://ja.wikipedia.org/wiki/ザルツブルクのプロテスタント追放"
+
+- id: rel_burgenland_protestant
+  name: 西ハンガリー南部（オーバーヴァルト）
+  select:
+    pieces: [AUT-Oberwart]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: オーバーヴァルトなどにルター派・改革派の村が多い。（要確認）
+
+- id: rel_teschen
+  name: テッシェン公国（チェシン・ビェルスコ・カルヴィナー）
+  select:
+    regions: [austrian_silesia]
+    pieces: [CZE-Karvina]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: テッシェンには多くのルター派が残り、アルトランシュテット協約（1707）で「恩寵教会」（テッシェンのイエス教会、1709）が建てられた。
+      source: "https://ja.wikipedia.org/wiki/アルトランシュテット条約"
+
+# ======== スロヴェニア・クロアチア ========
+- id: rel_slovenia_croatia
+  name: スロヴェニアとクロアチア
+  select:
+    iso: [SVN, HRV]
+  timeline:
+    - from: 1648
+      main: catholic
+
+- id: rel_prekmurje
+  name: プレクムリェ
+  select:
+    regions: [prekmurje]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: スロヴェニア人のルター派が多い地域。（比率は要確認）
+
+- id: rel_military_frontier_croatia
+  name: クロアチアの軍政国境地帯（カルロヴァツ・コルドゥン・バニヤ・ビロゴラ）
+  select:
+    regions: [croatia_south_hr, banija_hr, bilogora_moslavina]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: orthodox
+      note: オスマン帝国から逃れたセルビア人（ヴラフ人）の正教徒が軍政国境地帯の兵士として入植した。
+
+- id: rel_slavonia
+  name: スラヴォニア
+  select:
+    regions: [slavonia_hr]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: sunni
+      note: オスマン帝国の支配下で、町にはムスリム、農村にはカトリック（ショクツィ）と正教徒が住む。
+    - from: 1699
+      main: catholic
+      minor: orthodox
+      note: カルロヴィッツ条約でハプスブルク領に。ムスリムは去り、セルビア人の正教徒（特に東部・軍政国境地帯）が増える。
+
+- id: rel_lika
+  name: リカ・クルバヴァ
+  select:
+    regions: [lika_hr]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: オスマン帝国のリカ県。ムスリムが多い。（要確認）
+    - from: 1689
+      main: catholic
+      minor: orthodox
+      note: 1689年のハプスブルク軍による奪回でムスリムは去り、カトリックのブニェヴツィと正教徒のセルビア人が入植した。正教徒の比率は高い。（多数派の判定は要確認）
+
+- id: rel_dalmatia_inland
+  name: ダルマチア内陸（ザゴラ・クニン・シニ）
+  select:
+    regions: [dalmatia_new_hr]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: sunni
+      note: オスマン帝国のクリス県。町にムスリムが住む。（要確認）
+    - from: 1699
+      main: catholic
+      minor: orthodox
+      note: ヴェネツィア領になり、ムスリムは去る。クニン周辺には正教徒（セルビア人）が多い。
+
+- id: rel_dalmatia_imotski
+  name: イモツキ・ヴルゴラツ
+  select:
+    regions: [dalmatia_newest_hr]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: sunni
+    - from: 1718
+      main: catholic
+      note: パッサロヴィッツ条約でヴェネツィア領に。
+
+# ======== ハンガリー王国 ========
+- id: rel_hungary
+  name: ハンガリー（西部・北部のカトリック地域）
+  select:
+    iso: [HUN]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: 17世紀前半にはプロテスタント（特に改革派）が多数だったが、パーズマーニらの対抗宗教改革で西部の貴族からカトリックに戻っていく。（17世紀半ばの比率は要確認）
+    - from: 1700
+      main: catholic
+      note: ラーコーツィの反乱（1703–11）後、カトリックの優位が固まる。
+
+- id: rel_hungary_west_lutheran
+  name: 西ハンガリー（ショプロン・ヴァシュ）
+  select:
+    adm1: ["HUN/Gy?r-Moson-Sopron", "HUN/Vas"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: ショプロンなどのドイツ人都市とその周辺にルター派が多い。
+
+- id: rel_hungary_transdanubia_mixed
+  name: ドナウ以西の混在地域（ヴェスプレーム・コマーロム・ショモジ・トルナ・バラニャ）
+  select:
+    adm1: ["HUN/Veszprém", "HUN/Komárom-Esztergom", "HUN/Somogy", "HUN/Tolna", "HUN/Baranya"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: パーパ・コマーロムや南部のオルマーンシャーグに改革派が多い。18世紀にはドイツ人カトリック（ドナウ・シュヴァーベン人）が入植した。
+
+- id: rel_hungary_between_rivers
+  name: ドナウ・ティサ川間（ペスト・ケチケメート・クンシャーグ）
+  select:
+    adm1: ["HUN/Pest", "HUN/Bács-Kiskun", "HUN/Csongrád-Csanád", "HUN/Nógrád"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: ケチケメート・ツェグレード・クンシャーグなどの農業都市は改革派。ノーグラードにはスロヴァキア人のルター派も多い。
+
+- id: rel_hungary_east_reformed
+  name: ハンガリー東部（ティサ川以東の改革派地域）
+  select:
+    adm1: ["HUN/Hajdú-Bihar", "HUN/Szabolcs-Szatmár-Bereg", "HUN/Borsod-Abaúj-Zemplén", "HUN/Békés", "HUN/Jász-Nagykun-Szolnok"]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: デブレツェン（「カルヴァン派のローマ」）・シャーロシュパタクを中心に、ティサ川以東は改革派が多数。北東部ではルシン人のギリシア・カトリック（ユニエイト、1646年のウジホロド合同）も多い。
+      source: "https://ja.wikipedia.org/wiki/デブレツェン"
+
+- id: rel_heves
+  name: ヘヴェシュ（エゲル）
+  select:
+    adm1: ["HUN/Heves"]
+  timeline:
+    - from: 1648
+      main: catholic
+
+# ---- 上部ハンガリー（スロヴァキア） ----
+- id: rel_slovakia
+  name: 上部ハンガリー西部（現スロヴァキア西部）
+  select:
+    iso: [SVK]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 対抗宗教改革の中心（トルナヴァ大学）。
+
+- id: rel_slovakia_lutheran_mixed
+  name: 上部ハンガリー中部・北部（ルター派の多い地域）
+  select:
+    adm1: ["SVK/Region of ?ilina", "SVK/Region of Tren?ín", "SVK/Region of Banská Bystrica"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: 鉱山都市（バンスカー・シュチャヴニツァなど）とリプトウ・トゥリェツなどにルター派のスロヴァキア人・ドイツ人が多い。
+
+- id: rel_slovakia_east
+  name: 上部ハンガリー東部（プレショウ・カッシャ）
+  select:
+    adm1: ["SVK/Region of Pre?ov", "SVK/Region of Ko?ice"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: ルシン人・スロヴァキア人のギリシア・カトリック（ユニエイト、ウジホロド合同1646）とローマ・カトリックが多数。シュピシュのドイツ人都市はルター派、南部のハンガリー人は改革派。

@@ -1,0 +1,517 @@
+# 宗教（宗派）の分布：北欧・バルト・ポーランド＝リトアニア・ロシア・ウクライナ・北カフカス（1648–1815）
+# 形式は docs/religion-format.md。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# 東方典礼カトリック（ユニエイト。ブレスト合同1596）はカトリックに含め、note に書く。
+
+# ======== 北欧・バルト ========
+- id: rel_nordic
+  name: 北欧（デンマーク・ノルウェー・スウェーデン・フィンランド）
+  select:
+    iso: [DNK, NOR, SWE, FIN]
+  timeline:
+    - from: 1648
+      main: lutheran
+      note: ルター派の国教会。北部のサーミ人への伝道は17〜18世紀に進む。
+
+- id: rel_baltic_lutheran
+  name: エストニア・リヴォニア・クールラント
+  select:
+    iso: [EST, LVA]
+  timeline:
+    - from: 1648
+      main: lutheran
+      note: ドイツ人の領主・都市市民と、エストニア人・ラトヴィア人の農民はルター派。1710年以降のロシア支配でもルター派の教会は維持された。
+
+- id: rel_latgale
+  name: ポーランド領リヴォニア（ラトガレ）
+  select:
+    regions: [latgale]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ポーランド＝リトアニア領のため、対抗宗教改革でカトリックが根付いた。ロシアからの古儀式派の移住者も多い。
+
+- id: rel_lithuania
+  name: リトアニア
+  select:
+    iso: [LTU]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: リトアニア人はカトリック。ヴィリニュスはユダヤ教の中心地の一つ（「北のエルサレム」）。
+
+- id: rel_memel_prussia
+  name: プロイセン公国（東プロイセン）とメーメル
+  select:
+    regions: [memel, ducal_prussia]
+  timeline:
+    - from: 1648
+      main: lutheran
+      note: 1525年に世俗化した最初のルター派の国。南部のマズーリ人（ポーランド語を話す）もルター派。1732年にはザルツブルクを追われたプロテスタントが入植した。
+
+# ======== ポーランド ========
+- id: rel_poland
+  name: ポーランド（王冠領）
+  select:
+    iso: [POL]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: カトリックが多数。ワルシャワ連盟協約（1573）の宗教寛容はしだいに後退し、1658年にはアリウス派（ポーランド兄弟団）が追放された。ユダヤ教徒の人口も多い。
+
+- id: rel_pomerania
+  name: ポンメルン・ノイマルク
+  select:
+    regions: [pom_br, pom_sw, goleniow, lusatia]
+  timeline:
+    - from: 1648
+      main: lutheran
+
+- id: rel_lauenburg_butow
+  name: ラウエンブルク・ビュートウ
+  select:
+    regions: [lauenburg]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: カシューブ人のカトリックが混じる。
+
+- id: rel_royal_prussia
+  name: 王領プロイセン（ポメレリア・ヴァルミア）
+  select:
+    regions: [royal_prussia, kulm]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: カシューブ人・ポーランド人の農村とヴァルミア司教領はカトリック。
+
+- id: rel_vistula_delta
+  name: ヴィスワ川デルタとエルビング
+  select:
+    pieces: [POL-Elbl_g, POL-powiat_elbl_ski, POL-powiat_malborski, POL-powiat_nowodworski]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: エルビング市とマリエンブルクの低地（ヴェルダー）はドイツ人のルター派とメノー派が多い。
+
+- id: rel_danzig_thorn
+  name: ダンツィヒ・トルン
+  select:
+    regions: [danzig, torun]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: ドイツ系市民のルター派都市。トルンでは1724年に宗派対立から「トルンの流血事件」が起きた。
+
+- id: rel_netze
+  name: ネッツェ地区
+  select:
+    regions: [netze]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: ドイツ人入植者のルター派が多い。1772年のプロイセン併合後さらに増える。
+
+- id: rel_greater_poland_west
+  name: 大ポーランド西部（レシュノ・フラウシュタット・メーゼリッツ）
+  select:
+    pieces: [POL-Leszno, POL-powiat_leszczy_ski, POL-powiat_wschowski, POL-powiat_mi_dzyrzecki, POL-powiat_nowotomyski, POL-powiat_wolszty_ski, POL-powiat_rawicki]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: レシュノはボヘミア兄弟団（コメニウス）の中心で、ドイツ人のルター派の町も多い。
+
+- id: rel_lower_silesia
+  name: 下シュレジエン
+  select:
+    pieces: [POL-Jelenia_Gora, POL-Legnica, POL-Wa_brzych, POL-Wroc_aw, POL-Zielona_Gora, POL-powiat_aga_ski, POL-powiat_redzki, POL-powiat_widnicki, POL-powiat_wiebodzi_ski, POL-powiat_boles_awiecki, POL-powiat_dzier_oniowski, POL-powiat_g_ogowski, POL-powiat_gorowski, POL-powiat_jaworski, POL-powiat_jeleniogorski, POL-powiat_kamiennogorski, POL-powiat_legnicki, POL-powiat_lubi_ski, POL-powiat_lwowecki, POL-powiat_milicki, POL-powiat_nowosolski, POL-powiat_o_awski, POL-powiat_ole_nicki, POL-powiat_polkowicki, POL-powiat_strzeli_ski, POL-powiat_trzebnicki, POL-powiat_wa_brzyski, POL-powiat_wo_owski, POL-powiat_wroc_awski, POL-powiat_z_otoryjski, POL-powiat_zielonogorski, POL-powiat_brzeski, POL-powiat_namys_owski, POL-powiat_kluczborski]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: ハプスブルク家の再カトリック化にもかかわらず、住民の多くはルター派。ウェストファリア条約で認められた3つの「平和教会」と、ピャスト家の諸公国（ブリーク・リーグニッツ・オェルス）がその拠り所。
+      source: "https://ja.wikipedia.org/wiki/平和教会"
+    - from: 1707
+      main: lutheran
+      minor: catholic
+      note: アルトランシュテット協約で教会が返還され、「恩寵教会」6つが許される。1742年のプロイセン領化後は信仰の自由が保障された。
+
+# ======== ベラルーシ・ウクライナ西部 ========
+- id: rel_belarus
+  name: ベラルーシ（東部・中部）
+  select:
+    iso: [BLR]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: catholic
+      note: ルーシ人の農民は正教徒とユニエイト（ブレスト合同1596）に分かれる。貴族はカトリックに改宗していく。
+      source: "https://ja.wikipedia.org/wiki/ブレスト合同"
+    - from: 1700
+      main: catholic
+      minor: orthodox
+      note: 18世紀にはユニエイト（東方典礼カトリック）がベラルーシの農民の多数派になる。1772年以後のロシア領でもユニエイト教会は1839年まで存続した。（時期は要確認）
+
+- id: rel_belarus_west
+  name: ベラルーシ西部（グロドノ・ブレスト）
+  select:
+    adm1: ["BLR/Grodno", "BLR/Brest"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: orthodox
+      note: ローマ・カトリック（ポーランド人・リトアニア人）とユニエイトのルーシ人が多い。ブレストはブレスト合同の地。
+
+- id: rel_lith_1793
+  name: ベラルーシ中部・ウクライナ北西部（1793年ロシア領）
+  select:
+    regions: [lith_1793]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: catholic
+    - from: 1700
+      main: catholic
+      minor: orthodox
+      note: ユニエイトが広がる（ルーツク主教区の合同は1702年）。（時期は要確認）
+    - from: 1795
+      main: orthodox
+      minor: catholic
+      note: 第2次分割でロシア領になると、エカチェリーナ2世の政策で多くのユニエイトの村が正教会に移された（1794–96年）。
+      source: "https://ja.wikipedia.org/wiki/ウクライナ東方カトリック教会"
+
+- id: rel_volhynia_west
+  name: ヴォルィーニ西部
+  select:
+    regions: [volhynia_w]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: catholic
+    - from: 1702
+      main: catholic
+      minor: orthodox
+      note: ルーツク主教区がユニエイトに加わる（1702）。（要確認）
+    - from: 1796
+      main: orthodox
+      minor: catholic
+      note: 第3次分割でロシア領になり、ユニエイトの多くが正教会に移された。
+
+- id: rel_right_bank
+  name: ドニエプル右岸（キエフ県・ブラーツラフ県・ポドリア東部）
+  select:
+    regions: [r_north, r_south, podolia_e]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: コサックの反乱（フメリニツキーの乱）で正教徒の地となる。ポーランド人の貴族とユダヤ教徒も多い。
+    - from: 1720
+      main: catholic
+      minor: orthodox
+      note: ポーランド領に戻った右岸ではユニエイトが広がり、18世紀半ばには多数派になる。正教徒の反発は1768年のコリーイウシチナ（ハイダマキの反乱）に至る。（時期と比率は要確認）
+    - from: 1795
+      main: orthodox
+      minor: catholic
+      note: ロシア領になり、ユニエイトの大部分が正教会に移された（1794–96年）。
+
+- id: rel_galicia_east
+  name: ガリツィア東部・ポドリア西部（ルテニア）
+  select:
+    regions: [galicia_ua, tarnopol_rut, tarnopol_pod, podolia_w]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: catholic
+      note: ルーシ人（ウクライナ人）は正教徒が多い。都市にはポーランド人のカトリック、アルメニア人、ユダヤ教徒が住む。
+    - from: 1700
+      main: catholic
+      minor: orthodox
+      note: プシェミシル（1691）・リヴィウ（1700）・ルーツク（1702）の主教区がユニエイトに加わり、ルーシ人の多くがギリシア・カトリック（東方典礼カトリック）になる。
+      source: "https://ja.wikipedia.org/wiki/ウクライナ東方カトリック教会"
+
+- id: rel_zakarpattia
+  name: ザカルパッチャ
+  select:
+    regions: [zakarpattia]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: ルシン人はウジホロド合同（1646）でユニエイトに。ハンガリー人は改革派が多い。
+
+# ======== ウクライナ東部・南部 ========
+- id: rel_ukraine
+  name: ウクライナ（左岸・スロボダ・ザポロージャ・ブコヴィナ）
+  select:
+    iso: [UKR, MDA]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: コサックの地とモルダヴィア・ブコヴィナは正教。キエフ府主教座は1686年にモスクワ総主教のもとに移った。
+
+- id: rel_crimea
+  name: クリミア＝ハン国
+  select:
+    regions: [crimea]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: クリミア・タタール人はスンナ派（ハナフィー派）。
+    - from: 1783
+      main: sunni
+      minor: orthodox
+      note: ロシアに併合され、タタール人の一部がオスマン帝国へ移住し、ロシア人などが入植する。（比率は要確認）
+
+- id: rel_crimea_south
+  name: クリミア南岸（ケフェ・スダク・バラクラヴァ）
+  select:
+    regions: [kefe]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: 南岸の山地にはギリシア系の正教徒（旧ゴート人を含む）とアルメニア人が住む。1778年、彼らの多くはロシアによってアゾフ海北岸（マリウポリなど）へ移された。
+    - from: 1779
+      main: sunni
+      note: キリスト教徒の移住（1778）後。
+
+- id: rel_kerch
+  name: ケルチ
+  select:
+    regions: [kerch]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1774
+      main: orthodox
+      note: キュチュク・カイナルジャ条約でロシア領となり、要塞の町になる。
+
+- id: rel_nogai_west
+  name: 黒海北岸の草原（イェディサン・ドニエストル左岸）
+  select:
+    regions: [yedisan, transnistria]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ノガイ人（スンナ派）の遊牧地。
+    - from: 1792
+      main: orthodox
+      note: ヤッシー条約でロシア領。ノガイ人は去り、オデッサ（1794年建設）などにロシア人・ウクライナ人・ブルガリア人などが入植する。
+
+- id: rel_nogai_1774
+  name: ドニエプル・南ブグ間の草原
+  select:
+    regions: [nogai_1774]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1774
+      main: orthodox
+      note: ロシア領になり、「新ロシア」として植民が進む（ヘルソン建設は1778年）。
+
+- id: rel_nogai_taurida
+  name: タヴリア北部（ノガイ草原）
+  select:
+    regions: [nogai_taurida]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1783
+      main: sunni
+      minor: orthodox
+      note: ロシアに併合され、入植が始まる。ノガイ人はモロチナ川周辺に定住させられた（1790年代）。メノー派のドイツ人も入植する（1804–）。（比率は要確認）
+
+- id: rel_budjak
+  name: ブジャク（南ベッサラビア）とベンデル
+  select:
+    regions: [budjak, budjak_bender]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: ブジャク・タタール（ノガイ人）の遊牧地と、ベンデル・アッケルマンなどのオスマン帝国の要塞都市。
+    - from: 1812
+      main: orthodox
+      note: ノガイ人は1807年までに去り、ブカレスト条約（1812）でロシア領に。ブルガリア人・ガガウズ人などが入植する。
+
+# ======== ロシア ========
+- id: rel_russia
+  name: ロシア
+  select:
+    iso: [RUS]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ロシア正教会。ニコンの典礼改革（1650年代）に反対した古儀式派（分離派）は正教会から分かれ、北部・ヴォルガ・ドンなどに多い。
+      source: "https://ja.wikipedia.org/wiki/古儀式派"
+
+- id: rel_ingria
+  name: イングリア（インゲルマンランド）
+  select:
+    regions: [ingria, ingria_south]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: orthodox
+      note: スウェーデン領。正教徒のイジョラ人・ヴォート人の多くはロシアへ去り、フィンランド人（ルター派）が入植した。
+    - from: 1703
+      main: orthodox
+      minor: lutheran
+      note: ペテルブルクの建設（1703）とロシアへの併合で、ロシア人が増える。首都にはドイツ人・フィンランド人のルター派の教会も多い。
+
+- id: rel_kexholm
+  name: ヴィボルグ・ケクスホルム（カレリア地峡とラドガ湖北岸）
+  select:
+    regions: [kexholm_vyborg]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: orthodox
+      note: スウェーデンのルター派化政策で、正教徒のカレリア人の多くはロシア側へ移住した（17世紀）。
+
+- id: rel_volga_tatar
+  name: カザン・タタール（タタールスタン）とバシキール
+  select:
+    adm1: ["RUS/Tatarstan", "RUS/Bashkortostan"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: ヴォルガ・タタール人とバシキール人はスンナ派。カザンなどの都市にはロシア人の正教徒が多い。18世紀半ばには強制改宗が試みられ、エカチェリーナ2世の寛容勅令（1773）で緩和された。
+      source: "https://ja.wikipedia.org/wiki/ヴォルガ・タタール人"
+
+- id: rel_middle_volga_pagan
+  name: マリ・ウドムルト・チュヴァシ
+  select:
+    adm1: ["RUS/Mari El", "RUS/Udmurtia", "RUS/Chuvashia"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: orthodox
+      note: マリ人・ウドムルト人・チュヴァシ人の多くは伝統的な信仰を保つ。
+    - from: 1745
+      main: orthodox
+      minor: other
+      note: 「新受洗者局」（1740–64）による集団洗礼で名目上は正教徒になるが、伝統的な信仰も根強く残る。マリ人では伝統信仰がとくに強い。（要確認）
+
+- id: rel_volga_mixed
+  name: ヴォルガ中流・下流の混在地域（シンビルスク・アストラハン）
+  select:
+    adm1: ["RUS/Ulyanovsk Oblast", "RUS/Astrakhan Oblast"]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: タタール人・ノガイ人のスンナ派の村が多い。アストラハン周辺にはカルムイクの遊牧民（仏教）も来る。
+
+- id: rel_south_urals
+  name: 南ウラル（オレンブルク・チェリャビンスク）
+  select:
+    adm1: ["RUS/Orenburg Oblast", "RUS/Chelyabinsk Oblast"]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: バシキール人・カザフ人の遊牧地。
+    - from: 1735
+      main: orthodox
+      minor: sunni
+      note: オレンブルク遠征（1734–）で要塞線が築かれ、コサックとロシア人の農民が入植する。（比率は要確認）
+
+- id: rel_siberia_north
+  name: ロシア北東部の先住民の地（ネネツ・ハンティ＝マンシ）
+  select:
+    adm1: ["RUS/Nenets Autonomous Okrug", "RUS/Khanty-Mansiysk Autonomous Okrug ? Ugra"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: orthodox
+      note: ネネツ人・ハンティ人・マンシ人のシャーマニズム。ハンティ・マンシは1710年代に府主教フィロフェイの伝道で名目上洗礼を受けた。
+
+- id: rel_kalmyk
+  name: カルムイク
+  select:
+    regions: [kalmyk]
+  timeline:
+    - from: 1648
+      main: other
+      note: カルムイク人はチベット仏教。1771年に大部分がジュンガリアへ去ったが、ヴォルガ西岸の一部は残った。
+
+# ======== 北カフカス ========
+- id: rel_north_caucasus_muslim
+  name: 北カフカスのムスリム地域（チェルケス・カバルダ・チェチェン・ダゲスタン）
+  select:
+    regions: [circassia, anapa, kabarda, chechnya, dagestan, dagestan_coast, nogai_kuma]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ダゲスタンは古くからスンナ派（シャーフィイー派）。チェルケス人・カバルダ人・チェチェン人のイスラーム化は16〜18世紀に進み、伝統的な信仰やキリスト教の名残も残る。
+
+- id: rel_derbent
+  name: デルベント
+  select:
+    regions: [derbent]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: サファヴィー朝以来のシーア派の町。周辺の山地はスンナ派。
+
+- id: rel_ossetia
+  name: オセチア
+  select:
+    regions: [ossetia]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: オセット人の多くは名目上キリスト教徒（伝統的な信仰と混ざる）。ディゴル地方の貴族などはムスリム。1740年代からロシアの伝道団が活動する。（要確認）
+
+- id: rel_kizlyar
+  name: テレク川下流（キズリャル）
+  select:
+    regions: [kizlyar]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: テレク・コサック（古儀式派が多い）の地。ノガイ人・クムク人も住む。キズリャルにはアルメニア人も多い。
+
+- id: rel_kuban
+  name: クバン川右岸・北カフカスの草原
+  select:
+    regions: [kuban]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ノガイ人の遊牧地。
+    - from: 1793
+      main: orthodox
+      minor: sunni
+      note: 黒海コサック（旧ザポロージャ・コサック）がクバン右岸に移住する（1792–93）。（比率は要確認）
+
+- id: rel_taman
+  name: タマン半島
+  select:
+    regions: [taman]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1792
+      main: orthodox
+      note: 黒海コサックが上陸・入植する（1792）。
+
+- id: rel_azov
+  name: アゾフ（ドン川河口）
+  select:
+    regions: [azov]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: オスマン帝国の要塞アザク。周辺はノガイ人の遊牧地。
+    - from: 1739
+      main: orthodox
+      note: ロシア領に（ベオグラード条約で要塞は撤去）。その後、ドン・コサックとロシア人の地となる。

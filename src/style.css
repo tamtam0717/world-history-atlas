@@ -549,3 +549,545 @@ body.debug #debug-info {
   pointer-events: none;
   z-index: 6;
 }
+
+/* ---- MapLibre の地図 ---- */
+#map > .map {
+  position: absolute;
+  inset: 0;
+  background: #eef2f3;
+}
+.maplibregl-canvas {
+  outline: none;
+}
+.tooltip {
+  z-index: 6;
+}
+.milestone {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  min-height: 16px;
+  line-height: 1.4;
+}
+.milestone span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.milestone .ms-next {
+  text-align: right;
+}
+.milestone .ms-here {
+  flex: 0 1 auto;
+  color: var(--accent);
+  font-weight: 600;
+  text-align: center;
+}
+.yearbar button:disabled {
+  opacity: 0.35;
+}
+
+/* ---- 検索（F キー／虫眼鏡ボタン） ---- */
+.zoom-buttons .search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  margin-top: 6px;
+}
+.search {
+  position: absolute;
+  top: 48px;
+  left: 58px;
+  width: min(420px, calc(100% - 70px));
+  z-index: 8;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+.search[hidden] {
+  display: none;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 4px 0 10px;
+  color: var(--muted);
+}
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 16px; /* iOS で入力時に拡大されないよう 16px 以上 */
+  padding: 10px 0;
+  color: var(--ink);
+}
+.search-box input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-close {
+  border: none;
+  background: none;
+  font-size: 20px;
+  line-height: 1;
+  padding: 6px 8px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: min(360px, 50vh);
+  overflow-y: auto;
+  border-top: 1px solid var(--line);
+}
+.search-results:empty {
+  display: none;
+}
+.search-results li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 12px;
+  font-size: 14px;
+}
+.search-item {
+  cursor: pointer;
+}
+.search-item.active,
+.search-item:hover {
+  background: #efe8da;
+}
+.search-name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.search-sub {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-tag {
+  margin-left: auto;
+  flex: none;
+  font-size: 10.5px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 6px;
+  white-space: nowrap;
+}
+.search-item.k-polity .search-tag {
+  color: var(--accent);
+  border-color: #e3c6bd;
+}
+.search-msg {
+  color: var(--muted);
+  font-size: 13px !important;
+}
+.search-pulse {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+.search-pulse span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-sizing: border-box;
+  pointer-events: none;
+  animation: search-pulse 1.1s ease-out 3;
+}
+@keyframes search-pulse {
+  from {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* ---- キーボードショートカットの一覧（? キー） ---- */
+.help-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(251, 249, 244, 0.92);
+  color: var(--muted);
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 4;
+}
+@media (hover: none) {
+  .help-btn {
+    display: none;
+  }
+}
+.help {
+  position: absolute;
+  top: 48px;
+  right: 12px;
+  width: min(740px, calc(100% - 24px));
+  max-height: calc(100% - 70px);
+  overflow-y: auto;
+  z-index: 9;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+  padding: 10px 14px 12px;
+  font-size: 12.5px;
+}
+.help[hidden] {
+  display: none;
+}
+.help-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.help-close {
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.help-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 18px;
+}
+@media (max-width: 560px) {
+  .help-cols {
+    grid-template-columns: 1fr;
+  }
+}
+.help dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 10px;
+  margin: 0;
+  align-items: baseline;
+}
+.help dt {
+  white-space: nowrap;
+}
+.help dd {
+  margin: 0;
+  color: var(--ink);
+}
+.help .help-sec {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+}
+.help .help-sec + dd {
+  display: none;
+}
+.help kbd {
+  display: inline-block;
+  min-width: 1.5em;
+  text-align: center;
+  font-family: var(--font);
+  font-size: 11px;
+  padding: 0 4px;
+  margin: 0 1px;
+  border: 1px solid #cfc6b5;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* ---- ショートカットの一言・比較表示 ---- */
+.key-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 44px;
+  transform: translateX(-50%);
+  background: rgba(30, 26, 22, 0.86);
+  color: #fff;
+  font-size: 12.5px;
+  padding: 5px 14px;
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.key-hint.show {
+  opacity: 1;
+}
+.compare-badge {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 6;
+  white-space: nowrap;
+}
+.compare-badge[hidden] {
+  display: none;
+}
+@media (max-width: 799px) {
+  .search {
+    left: 56px;
+    right: 10px;
+    width: auto;
+  }
+  .key-hint {
+    bottom: 160px;
+  }
+}
+
+/* ---- 地図の種類（政治／宗教） ---- */
+.layer-switch {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  margin-left: -4px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  width: 42px;
+  background: rgba(251, 249, 244, 0.92);
+}
+.zoom-buttons .layer-switch button {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.zoom-buttons .layer-switch button + button {
+  border-top: 1px solid var(--line);
+}
+.zoom-buttons .layer-switch button.active {
+  background: #5b4a38;
+  color: #fff;
+}
+body[data-layer="religion"] .legend {
+  display: none;
+}
+
+/* ---- 宗教の凡例 ---- */
+.rel-legend {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  z-index: 4;
+  font-size: 11.5px;
+  color: var(--ink);
+  background: rgba(251, 249, 244, 0.92);
+  border: 1px solid var(--line);
+  padding: 6px 10px 6px;
+  border-radius: 8px;
+  max-width: 300px;
+}
+.rel-legend[hidden] {
+  display: none;
+}
+.rel-legend .rl-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: none;
+  padding: 0 0 3px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+}
+.rel-legend .rl-caret::before {
+  content: "▾";
+  font-size: 10px;
+  color: var(--muted);
+}
+.rel-legend.collapsed .rl-caret::before {
+  content: "▸";
+}
+.rel-legend.collapsed ul {
+  display: none;
+}
+.rel-legend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 3px 12px;
+}
+.rel-legend li {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.rel-legend li.rl-hatch {
+  grid-column: 1 / -1;
+  white-space: normal;
+  color: var(--muted);
+}
+.rel-legend i {
+  flex: none;
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  margin-right: 5px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.rel-legend i.rl-nodata {
+  background: #e2e0dc;
+}
+@media (max-width: 799px) {
+  .rel-legend {
+    left: auto;
+    right: 10px;
+    bottom: auto;
+    top: 48px;
+    font-size: 10.5px;
+    padding: 4px 8px;
+    max-width: 210px;
+  }
+  .rel-legend ul {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+/* ---- 宗教のカード（パネル） ---- */
+.rel-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.rel-minor {
+  margin-left: 6px;
+  color: var(--muted);
+}
+.rel-now {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  margin: 4px 0 8px;
+}
+.rel-now dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+.rel-now dd {
+  margin: 0;
+}
+.rel-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rel-timeline li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+.rel-timeline li.now {
+  font-weight: 600;
+}
+.rel-timeline .years {
+  display: inline-block;
+  min-width: 46px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.rel-timeline .note {
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 46px;
+}
+
+/* ---- 押すとその年へ移動する年 ---- */
+a.ylink {
+  color: inherit;
+  text-decoration: underline dotted rgba(122, 114, 102, 0.7);
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+a.ylink:hover {
+  color: var(--accent);
+  text-decoration-style: solid;
+}
+@media (max-width: 799px) {
+  .rel-legend {
+    max-width: 230px;
+  }
+  .rel-legend ul {
+    grid-template-columns: repeat(2, auto);
+    gap: 1px 8px;
+  }
+  .rel-legend i {
+    width: 12px;
+    height: 9px;
+    margin-right: 3px;
+  }
+  .rel-legend .rl-long {
+    display: none;
+  }
+}
+@media (max-width: 799px) {
+  .rel-legend {
+    width: 228px;
+    max-width: calc(100% - 70px);
+    font-size: 10px;
+    line-height: 1.25;
+  }
+  .rel-legend ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px 6px;
+  }
+  .rel-legend li {
+    white-space: normal;
+    align-items: flex-start;
+  }
+  .rel-legend li i {
+    margin-top: 1px;
+  }
+}

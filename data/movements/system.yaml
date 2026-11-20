@@ -1,0 +1,325 @@
+# 潮流：経済・政治の体制や考え方（1648–1815）。形式は docs/movements-format.md
+- id: absolutism
+  name: 絶対王政
+  kind: system
+  curve:
+    - [1648, 0.8]
+    - [1661, 0.9]
+    - [1700, 1.0]
+    - [1750, 0.8]
+    - [1789, 0.6]
+    - [1800, 0.3]
+    - [1815, 0.4]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1648, 0.6], [1661, 0.9], [1685, 1.0], [1715, 0.9], [1770, 0.8], [1789, 0.5], [1792, 0]]
+    - where: {polities: [spain, portugal]}
+      curve: [[1648, 0.7], [1714, 0.9], [1780, 0.8], [1808, 0.4], [1815, 0.6]]
+    - where: {polities: [denmark, norway]}
+      curve: [[1660, 0.9], [1700, 1.0], [1784, 0.7], [1815, 0.6]]
+    - where: {polities: [sweden]}
+      curve: [[1680, 0.8], [1718, 0.8], [1720, 0.1], [1772, 0.1], [1789, 0.7], [1809, 0.2]]
+    - where: {polities: [habsburg, prussia, bavaria, saxony]}
+      curve: [[1648, 0.4], [1700, 0.7], [1740, 0.7], [1815, 0.6]]
+    - where: {polities: [russia]}
+      curve: [[1648, 0.6], [1700, 0.9], [1815, 0.9]]
+  people: [ルイ14世, コルベール, ボシュエ, ホッブズ]
+  works: [『リヴァイアサン』]
+  events: [ルイ14世の親政はじまる, ヴェルサイユへの宮廷移転, デンマークの絶対王政, 新組織王令（ヌエバ・プランタ王令）, ルイ16世の処刑]
+  text: 国王が官僚制と常備軍を支えに、議会や貴族の制約を受けずに統治する体制。王権神授説がその理論となり、「朕は国家なり」のルイ14世のフランスが典型とされる。
+  source: "https://ja.wikipedia.org/wiki/絶対王政"
+
+- id: mercantilism
+  name: 重商主義
+  kind: system
+  curve:
+    - [1648, 0.8]
+    - [1665, 1.0]
+    - [1720, 0.9]
+    - [1776, 0.6]
+    - [1815, 0.4]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1648, 0.5], [1665, 1.0], [1700, 0.9], [1760, 0.7], [1789, 0.4]]
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1648, 0.6], [1651, 0.9], [1700, 1.0], [1776, 0.7], [1815, 0.5]]
+    - where: {polities: [netherlands]}
+      curve: [[1648, 0.9], [1700, 0.7], [1760, 0.4]]
+    - where: {polities: [spain, portugal]}
+      curve: [[1648, 0.6], [1720, 0.7], [1780, 0.6]]
+    - where: {polities: [prussia, habsburg, sweden, russia, denmark]}
+      curve: [[1660, 0.3], [1700, 0.6], [1750, 0.8], [1790, 0.5]]
+  people: [コルベール, トマス・マン]
+  works: []
+  events: [航海法, 第1次英蘭戦争, 第2次英蘭戦争]
+  text: 国家が貿易を管理して輸出を増やし、金銀をため込むことで国を富ませようとする経済政策。フランスのコルベールの保護政策やイギリスの航海法が代表で、植民地をめぐる争いを激しくした。
+  source: "https://ja.wikipedia.org/wiki/重商主義"
+
+- id: parliamentary_politics
+  name: 議会政治（イギリス）
+  kind: system
+  curve:
+    - [1648, 0.4]
+    - [1689, 0.7]
+    - [1721, 0.9]
+    - [1789, 0.9]
+    - [1815, 1.0]
+  spread:
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1648, 0.5], [1660, 0.4], [1689, 0.8], [1721, 1.0], [1815, 1.0]]
+    - where: {polities: [netherlands]}
+      curve: [[1648, 0.7], [1700, 0.6], [1787, 0.4], [1795, 0.2]]
+    - where: {polities: [sweden]}
+      curve: [[1719, 0.6], [1740, 0.8], [1772, 0.2], [1809, 0.6]]
+    - where: {polities: [poland_lithuania]}
+      curve: [[1648, 0.6], [1700, 0.4], [1764, 0.4], [1791, 0.8], [1795, 0]]
+    - where: {polities: [norway]}
+      curve: [[1814, 0.7], [1815, 0.7]]
+  people: [ウィリアム3世, ウォルポール, ピット（小）]
+  works: [権利の章典]
+  events: [王政復古, 名誉革命, グレートブリテン王国の成立, ハノーヴァー朝の始まり, ウォルポール内閣の成立, ノルウェー憲法とスウェーデンとの同君連合]
+  text: 名誉革命と権利の章典によって議会主権が確立したイギリスの政治体制。「王は君臨すれども統治せず」とされ、ウォルポールのもとで内閣が議会に責任を負う責任内閣制が始まった。
+  source: "https://ja.wikipedia.org/wiki/議院内閣制"
+
+- id: enlightened_absolutism
+  name: 啓蒙専制主義
+  kind: system
+  curve:
+    - [1730, 0.1]
+    - [1740, 0.5]
+    - [1770, 1.0]
+    - [1790, 0.6]
+    - [1800, 0.2]
+  spread:
+    - where: {polities: [prussia]}
+      center: true
+      curve: [[1740, 0.8], [1763, 1.0], [1786, 0.8], [1797, 0.3]]
+    - where: {polities: [habsburg]}
+      curve: [[1740, 0.3], [1765, 0.7], [1781, 1.0], [1790, 0.5], [1800, 0.2]]
+    - where: {polities: [russia]}
+      curve: [[1762, 0.6], [1775, 0.8], [1790, 0.4], [1801, 0.4], [1810, 0.3]]
+    - where: {polities: [tuscany]}
+      curve: [[1765, 0.6], [1786, 1.0], [1790, 0.4]]
+    - where: {polities: [portugal]}
+      curve: [[1750, 0.8], [1770, 0.9], [1777, 0.2]]
+    - where: {polities: [spain, naples]}
+      curve: [[1759, 0.6], [1780, 0.7], [1790, 0.3]]
+    - where: {polities: [sweden, denmark]}
+      curve: [[1770, 0.6], [1785, 0.6], [1795, 0.3]]
+    - where: {polities: [baden]}
+      curve: [[1750, 0.4], [1783, 0.7], [1800, 0.4]]
+  people: [フリードリヒ2世（大王）, マリア・テレジア, ヨーゼフ2世, エカチェリーナ2世, ポンバル, レオポルト（トスカーナ大公）]
+  works: [「君主は国家第一の僕」]
+  events: [ヨーゼフ2世の即位と共同統治, 宗教寛容令と農奴解放令, 一般学校令, トスカーナで死刑廃止, ポルトガルのイエズス会追放, エカチェリーナ2世の即位, サンスーシ宮殿の建設はじまる]
+  text: 啓蒙思想を取り入れた君主が、上からの近代化として宗教寛容・教育・法制・産業育成などの改革を進めた統治。ただし君主権そのものは手放さず、貴族の抵抗で挫折した改革も多い。
+  source: "https://ja.wikipedia.org/wiki/啓蒙専制君主"
+
+- id: second_serfdom
+  name: 農場領主制（再版農奴制）
+  kind: system
+  curve:
+    - [1648, 0.9]
+    - [1700, 1.0]
+    - [1770, 0.9]
+    - [1800, 0.8]
+    - [1815, 0.7]
+  spread:
+    - where: {polities: [poland_lithuania]}
+      center: true
+      curve: [[1648, 1.0], [1790, 1.0], [1795, 0]]
+    - where: {polities: [prussia]}
+      curve: [[1648, 0.9], [1780, 0.9], [1807, 0.6], [1815, 0.4]]
+    - where: {polities: [mecklenburg, mecklenburg_strelitz]}
+      curve: [[1648, 0.9], [1815, 0.9]]
+    - where: {polities: [habsburg]}
+      curve: [[1648, 0.9], [1770, 0.8], [1781, 0.5], [1815, 0.5]]
+    - where: {polities: [russia]}
+      curve: [[1649, 0.9], [1700, 1.0], [1815, 1.0]]
+    - where: {polities: [denmark]}
+      curve: [[1660, 0.7], [1733, 0.9], [1788, 0.3], [1800, 0.1]]
+    - where: {polities: [warsaw]}
+      curve: [[1807, 0.5], [1815, 0.5]]
+  people: []
+  works: []
+  events: [ズボリウ条約・ロシアの会議法典, プガチョフの乱, 宗教寛容令と農奴解放令, シュタインの十月勅令（農民解放）]
+  text: エルベ川以東の東ヨーロッパで、西欧向けの穀物輸出のために領主（ユンカーなど）が直営地を広げ、農民を賦役で縛った体制。西欧とは逆に農民の不自由が強まり、19世紀初めの農民解放まで続いた。
+  source: "https://ja.wikipedia.org/wiki/再版農奴制"
+
+- id: atlantic_slave_trade
+  name: 大西洋奴隷貿易と三角貿易
+  kind: system
+  curve:
+    - [1648, 0.4]
+    - [1700, 0.7]
+    - [1750, 0.9]
+    - [1790, 1.0]
+    - [1807, 0.7]
+    - [1815, 0.5]
+  spread:
+    - where: {polities: [portugal]}
+      curve: [[1648, 0.8], [1750, 0.9], [1815, 0.8]]
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1660, 0.4], [1713, 0.8], [1760, 1.0], [1790, 1.0], [1807, 0], [1815, 0]]
+    - where: {polities: [france]}
+      curve: [[1670, 0.3], [1740, 0.8], [1789, 0.9], [1794, 0.2], [1802, 0.5], [1815, 0.4]]
+    - where: {polities: [netherlands]}
+      curve: [[1648, 0.7], [1700, 0.6], [1780, 0.4], [1795, 0.2]]
+    - where: {polities: [spain]}
+      curve: [[1648, 0.3], [1750, 0.4], [1815, 0.5]]
+    - where: {polities: [denmark]}
+      curve: [[1680, 0.3], [1760, 0.4], [1792, 0.3], [1803, 0]]
+  people: [ウィルバーフォース]
+  works: []
+  events: [ユトレヒト条約, アミアンの和約]
+  text: ヨーロッパの武器・雑貨をアフリカへ、アフリカの黒人奴隷をアメリカ大陸へ、アメリカの砂糖・綿花・タバコをヨーロッパへ運ぶ三角貿易。ユトレヒト条約でイギリスがアシエント（奴隷供給契約）を得て最大の担い手となり、その富は産業革命の資本にもなった。1807年にイギリスは奴隷貿易を廃止した。
+  source: "https://ja.wikipedia.org/wiki/大西洋奴隷貿易"
+
+- id: agricultural_revolution
+  name: 農業革命
+  kind: system
+  curve:
+    - [1700, 0.1]
+    - [1730, 0.4]
+    - [1760, 0.7]
+    - [1800, 1.0]
+    - [1815, 0.9]
+  spread:
+    - where: {polities: [netherlands]}
+      curve: [[1648, 0.4], [1700, 0.5], [1760, 0.4]]
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1700, 0.2], [1730, 0.5], [1760, 0.8], [1800, 1.0], [1815, 1.0]]
+    - where: {regions: [scotland]}
+      curve: [[1700, 0.1], [1720, 0.3]]
+    - where: {polities: [france, denmark, prussia]}
+      curve: [[1760, 0.1], [1790, 0.3], [1815, 0.4]]
+  people: [ジェスロ・タル, タウンゼンド, アーサー・ヤング]
+  works: []
+  events: []
+  text: カブやクローバーを組み込んだノーフォーク農法（四輪作）や第2次囲い込みによって、イギリスの農業生産が大きく伸びた変化。増えた人口と土地を失った農民が、工業化を支える労働力になった。
+  source: "https://ja.wikipedia.org/wiki/農業革命"
+
+- id: industrial_revolution
+  name: 産業革命（初期）
+  kind: system
+  curve:
+    - [1760, 0.1]
+    - [1785, 0.4]
+    - [1800, 0.6]
+    - [1815, 0.8]
+  spread:
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1760, 0.2], [1769, 0.4], [1785, 0.7], [1800, 0.9], [1815, 1.0]]
+    - where: {regions: [southern_netherlands]}
+      curve: [[1795, 0.1], [1805, 0.3], [1815, 0.4]]
+    - where: {polities: [france]}
+      curve: [[1790, 0.1], [1806, 0.2], [1815, 0.2]]
+    - where: {polities: [saxony, berg]}
+      curve: [[1800, 0.1], [1815, 0.2]]
+  people: [ジョン・ケイ, ハーグリーヴズ, アークライト, ワット, カートライト]
+  works: [飛び杼, ジェニー紡績機, 水力紡績機, 蒸気機関, 力織機]
+  events: [ワットの蒸気機関の特許, 大陸封鎖令]
+  text: 綿工業での機械の発明と、ワットの改良した蒸気機関による動力革命から、イギリスで始まった生産と社会の大変化。工場制機械工業が生まれ、イギリスは「世界の工場」への道を歩みはじめた。
+  source: "https://ja.wikipedia.org/wiki/産業革命"
+
+- id: russian_westernization
+  name: ロシアの西欧化
+  kind: system
+  curve:
+    - [1689, 0.1]
+    - [1697, 0.5]
+    - [1712, 1.0]
+    - [1725, 0.8]
+    - [1762, 0.8]
+    - [1790, 0.9]
+    - [1815, 0.7]
+  spread:
+    - where: {polities: [russia]}
+      center: true
+      curve: [[1689, 0.2], [1703, 0.8], [1712, 1.0], [1730, 0.6], [1762, 0.8], [1790, 0.9], [1815, 0.7]]
+    - where: {regions: [ingria, estonia, livonia_lv]}
+      curve: [[1703, 0.6], [1721, 1.0], [1815, 0.9]]
+  people: [ピョートル1世（大帝）, エカチェリーナ2世]
+  works: [サンクト・ペテルブルク, エルミタージュ]
+  events: [ピョートル1世の即位, ピョートル1世の大使節団, サンクト・ペテルブルクの建設, ニスタット条約, エカチェリーナ2世の即位]
+  text: ピョートル1世が西欧を自ら視察したうえで進めた近代化。軍制・官僚制・服装まで西欧式に改め、バルト海に面した新都ペテルブルクを「西欧への窓」とした。エカチェリーナ2世も啓蒙思想を取り入れてこれを引き継いだ。
+  source: "https://ja.wikipedia.org/wiki/ピョートル1世"
+
+- id: tulip_era
+  name: チューリップ時代
+  kind: system
+  curve:
+    - [1715, 0.1]
+    - [1718, 0.6]
+    - [1725, 1.0]
+    - [1730, 0.6]
+    - [1732, 0.1]
+  spread:
+    - where: {polities: [ottoman]}
+      center: true
+      curve: [[1715, 0.1], [1718, 0.6], [1725, 1.0], [1730, 0.7], [1732, 0.1]]
+  people: [アフメト3世, イブラヒム・パシャ（ネヴシェヒルリ）, イブラヒム・ミュテフェリカ]
+  works: [イスタンブルの印刷所（イスラーム世界初の活字印刷所）]
+  events: [パッサロヴィッツ条約, チューリップ時代の始まり, パトロナ・ハリルの乱]
+  text: アフメト3世のもとで平和が続き、オスマン帝国の宮廷がフランス文化を取り入れて離宮やチューリップの栽培など優雅な生活を楽しんだ時代。印刷所の設立など西欧化の第一歩となったが、民衆の反乱で終わった。
+  source: "https://ja.wikipedia.org/wiki/チューリップ時代"
+
+- id: ottoman_reform
+  name: オスマン帝国の西欧式改革（ニザーム・ジェディード）
+  kind: system
+  curve:
+    - [1774, 0.1]
+    - [1789, 0.4]
+    - [1797, 0.9]
+    - [1807, 0.2]
+    - [1815, 0.2]
+  spread:
+    - where: {polities: [ottoman]}
+      center: true
+      curve: [[1774, 0.2], [1793, 0.8], [1800, 1.0], [1807, 0.2], [1815, 0.2]]
+    - where: {polities: [egypt]}
+      curve: [[1805, 0.3], [1811, 0.7], [1815, 0.8]]
+  people: [セリム3世, ムハンマド・アリー]
+  works: []
+  events: [セリム3世の新軍（ニザーム・ジェディード）, セリム3世の廃位, ムハンマド・アリーがエジプト総督に]
+  text: ロシアとの戦争に敗れたオスマン帝国で、セリム3世が西欧式の新軍を創設して進めた改革。イェニチェリの反乱で挫折したが、エジプトのムハンマド・アリーの改革や19世紀のタンジマートにつながった。
+  source: "https://ja.wikipedia.org/wiki/ニザーム・ジェディード"
+
+- id: revolutionary_ideals
+  name: 市民革命の理念（自由・平等・国民主権）
+  kind: system
+  curve:
+    - [1775, 0.2]
+    - [1789, 0.8]
+    - [1794, 1.0]
+    - [1804, 0.7]
+    - [1815, 0.5]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1787, 0.2], [1789, 0.9], [1793, 1.0], [1799, 0.7], [1804, 0.6], [1815, 0.5]]
+    - where: {polities: [netherlands]}
+      curve: [[1780, 0.4], [1787, 0.6], [1795, 0.8], [1806, 0.4]]
+    - where: {polities: [cisalpine, ligurian_republic, roman_republic]}
+      curve: [[1796, 0.6], [1798, 0.9], [1802, 0.5]]
+    - where: {polities: [switzerland]}
+      curve: [[1797, 0.5], [1798, 0.9], [1803, 0.5]]
+    - where: {polities: [poland_lithuania]}
+      curve: [[1788, 0.4], [1791, 0.8], [1795, 0]]
+    - where: {polities: [spain]}
+      curve: [[1808, 0.3], [1812, 0.8], [1814, 0.2]]
+    - where: {polities: [rhine_confederation, westphalia_kingdom]}
+      curve: [[1806, 0.4], [1808, 0.6], [1813, 0.2]]
+    - where: {polities: [britain, ireland]}
+      curve: [[1789, 0.3], [1798, 0.5], [1800, 0.2]]
+  people: [ラ・ファイエット, シエイエス, ロベスピエール, ナポレオン・ボナパルト, トマス・ペイン]
+  works: [アメリカ独立宣言, 人権宣言（人間および市民の権利の宣言）, 『第三身分とは何か』, 『コモン・センス』]
+  events: [アメリカ独立戦争はじまる, フランス革命はじまる, 5月3日憲法, バタヴィア共和国の成立, ヘルヴェティア共和国の成立, チザルピーナ共和国とリグリア共和国の成立, ナポレオン法典（フランス民法典）, カディス憲法]
+  text: アメリカ独立とフランス革命が掲げた、自由・平等・人民（国民）主権・法の前の平等の理念。革命戦争とナポレオンの支配によって、封建的特権の廃止や憲法・民法典の形で周辺諸国にも広まった。
+  source: "https://ja.wikipedia.org/wiki/市民革命"

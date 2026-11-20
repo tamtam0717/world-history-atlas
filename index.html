@@ -15,9 +15,57 @@
           <button id="zoom-in" aria-label="拡大">＋</button>
           <button id="zoom-out" aria-label="縮小">－</button>
           <button id="zoom-reset" aria-label="全体を表示">⤢</button>
-          <button id="modern-btn" class="modern-btn" aria-label="押している間、現代の国境を表示（キーボードは C）" title="押している間、現代の国境を表示（C キー）">現代</button>
+          <button id="search-btn" class="search-btn" aria-label="国名・地名で検索（F）" title="国名・地名で検索（F）"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12.6 12.6 17 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+          <div id="layer-switch" class="layer-switch" role="radiogroup" aria-label="地図の種類"></div>
+          <button id="modern-btn" class="modern-btn" aria-pressed="false" aria-label="現代の国境に切り替え（C キーを押している間は逆の表示）" title="現代の国境に切り替え（C キーを押している間は逆の表示）">現代</button>
         </div>
         <div id="modern-badge" class="modern-badge" hidden>現代の国境</div>
+        <div id="rel-legend" class="rel-legend" hidden></div>
+        <div id="compare-badge" class="compare-badge" hidden></div>
+        <div id="search" class="search" role="search" hidden>
+          <div class="search-box">
+            <svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12.6 12.6 17 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <input id="search-input" type="search" placeholder="国名・地名（日本語／英語）" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" aria-label="国名・地名で検索" />
+            <button class="search-close" aria-label="閉じる">×</button>
+          </div>
+          <ul class="search-results" role="listbox"></ul>
+        </div>
+        <button id="help-btn" class="help-btn" aria-label="キーボードショートカット（?）" title="キーボードショートカット（?）">?</button>
+        <div id="help" class="help" role="dialog" aria-label="キーボードショートカット" hidden>
+          <div class="help-head">キーボードショートカット<button class="help-close" aria-label="閉じる">×</button></div>
+          <div class="help-cols">
+            <dl>
+              <dt class="help-sec">年</dt><dd></dd>
+              <dt><kbd>⌥</kbd>/<kbd>Alt</kbd> + <kbd>←</kbd><kbd>→</kbd></dt><dd>1年戻る／進む（+<kbd>Shift</kbd> で10年）</dd>
+              <dt><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>←</kbd><kbd>→</kbd></dt><dd>前／次の節目へ</dd>
+              <dt><kbd>[</kbd> <kbd>]</kbd></dt><dd>前／次の重要な出来事の年へ</dd>
+              <dt><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>↑</kbd><kbd>↓</kbd></dt><dd>最初／最後の年（<kbd>Home</kbd> <kbd>End</kbd> も可）</dd>
+              <dt><kbd>0</kbd>〜<kbd>9</kbd></dt><dd>年を入力（<kbd>Enter</kbd> で移動）</dd>
+              <dt><kbd>Space</kbd></dt><dd>自動再生／停止</dd>
+              <dt><kbd>B</kbd>（押している間）</dt><dd>1つ前の節目の地図を表示</dd>
+              <dt class="help-sec">表示</dt><dd></dd>
+              <dt><kbd>C</kbd>（押している間）</dt><dd>現代の国境と切り替え</dd>
+              <dt><kbd>M</kbd></dt><dd>現代の国境の表示を切り替え</dd>
+              <dt><kbd>R</kbd></dt><dd>宗教の分布と切り替え（長押しすると離したときに戻る）</dd>
+              <dt><kbd>L</kbd></dt><dd>地名の表示／非表示</dd>
+            </dl>
+            <dl>
+              <dt class="help-sec">地図</dt><dd></dd>
+              <dt><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd></dt><dd>地図を動かす（+<kbd>Shift</kbd> で大きく）</dd>
+              <dt><kbd>+</kbd> <kbd>-</kbd></dt><dd>拡大／縮小</dd>
+              <dt><kbd>W</kbd></dt><dd>地球全体</dd>
+              <dt><kbd>E</kbd></dt><dd>ヨーロッパ</dd>
+              <dt><kbd>N</kbd><kbd>A</kbd> / <kbd>A</kbd><kbd>F</kbd> / <kbd>A</kbd><kbd>S</kbd></dt><dd>北米／アフリカ／アジア（続けて押す）</dd>
+              <dt><kbd>G</kbd></dt><dd>選択中の国へ移動</dd>
+              <dt class="help-sec">その他</dt><dd></dd>
+              <dt><kbd>F</kbd></dt><dd>国名・地名で検索</dd>
+              <dt><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>[</kbd> <kbd>]</kbd></dt><dd>戻る／進む（年・国・表示の移動の履歴）</dd>
+              <dt><kbd>U</kbd></dt><dd>今の年・国の URL をコピー</dd>
+              <dt><kbd>Esc</kbd></dt><dd>閉じる／選択を解除</dd>
+              <dt><kbd>?</kbd></dt><dd>この一覧</dd>
+            </dl>
+          </div>
+        </div>
         <div class="legend">
           <span><i class="lg-overlord"></i>神聖ローマ帝国などの外枠</span>
           <span><i class="lg-uncertain"></i>不確実</span>
@@ -30,20 +78,22 @@
         <div id="sheet-handle" aria-label="パネルの高さを変える"><span></span></div>
         <div class="controls">
           <div class="yearbar">
-            <button id="prev10" aria-label="10年戻る">«</button>
+            <button id="prev10" aria-label="前の節目へ">«</button>
             <button id="prev" aria-label="1年戻る">‹</button>
             <label class="year-box"><input id="year" type="number" inputmode="numeric" aria-label="年" /><span>年</span></label>
             <button id="next" aria-label="1年進む">›</button>
-            <button id="next10" aria-label="10年進む">»</button>
+            <button id="next10" aria-label="次の節目へ">»</button>
             <button id="play" aria-label="再生">▶</button>
           </div>
           <input id="slider" type="range" step="1" aria-label="年のスライダー" />
+          <div id="milestone" class="milestone"></div>
         </div>
         <div class="panel-body">
           <section id="polity" class="card" hidden></section>
           <section id="events"></section>
           <footer class="credits">
             境界データ：geoBoundaries（CC BY 4.0）、BKG（dl-de/by-2-0）、ISTAT（CC BY 3.0）、IGN-F（Etalab 2.0）。
+            都市（現代）：Natural Earth。地図表示：MapLibre GL。画像：Wikipedia／ウィキメディア・コモンズ。
             国境は現代の行政区画を組み合わせた近似です。
           </footer>
         </div>

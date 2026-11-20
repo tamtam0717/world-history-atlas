@@ -40,4 +40,5 @@ tools/build_pieces.sh    # public/data/pieces.topo.json と data/generated/piece
 ## データの出典・ライセンス
 
 - 境界：[geoBoundaries](https://www.geoboundaries.org/)（CC BY 4.0）。ドイツ：BKG（dl-de/by-2-0）、イタリア：ISTAT（CC BY 3.0）、フランス：IGN-F（Etalab 2.0）、ベルギー・ギリシャ：CC0
+- 川・湖：[Natural Earth](https://www.naturalearthdata.com/)（パブリックドメイン）の 10m 川・湖データ（rivers_lake_centerlines・rivers_europe・lakes・lakes_europe）。`tools/build_rivers.py` で `public/data/rivers.json`・`lakes.json` を生成
 - 照合用（データには取り込まない）：[aourednik/historical-basemaps](https://github.com/aourednik/historical-basemaps)（GPL-3.0）

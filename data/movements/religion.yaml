@@ -1,0 +1,147 @@
+# 潮流：宗教運動（1648–1815）。形式は docs/movements-format.md
+- id: baroque_catholicism
+  name: 対抗宗教改革（バロック・カトリシズム）
+  kind: religion
+  curve:
+    - [1648, 0.9]
+    - [1690, 0.8]
+    - [1730, 0.6]
+    - [1773, 0.3]
+    - [1815, 0.2]
+  spread:
+    - where: {polities: [papal_states]}
+      center: true
+      curve: [[1648, 1.0], [1700, 0.8], [1773, 0.4], [1815, 0.3]]
+    - where: {polities: [spain, portugal, naples]}
+      curve: [[1648, 1.0], [1720, 0.8], [1767, 0.4], [1808, 0.3]]
+    - where: {polities: [habsburg, bavaria, salzburg]}
+      curve: [[1648, 0.9], [1700, 0.9], [1731, 0.8], [1765, 0.5], [1781, 0.2]]
+    - where: {polities: [poland_lithuania]}
+      curve: [[1648, 0.8], [1720, 0.9], [1770, 0.5]]
+    - where: {polities: [france]}
+      curve: [[1648, 0.7], [1685, 0.9], [1715, 0.6], [1764, 0.3]]
+  people: [ルイ14世, レオポルト1世]
+  works: []
+  events: [ナントの勅令の廃止, ザルツブルクのプロテスタント追放, ポルトガルのイエズス会追放, イエズス会の解散]
+  text: 宗教改革に対抗してカトリック教会が勢力を立て直した動き。イエズス会の教育と布教、壮麗なバロック教会を通じて、南欧・オーストリア・ポーランドなどでカトリック信仰を強めたが、18世紀後半にはイエズス会の解散で勢いを失った。
+  source: "https://ja.wikipedia.org/wiki/対抗宗教改革"
+
+- id: jansenism
+  name: ジャンセニスム
+  kind: religion
+  curve:
+    - [1648, 0.6]
+    - [1660, 0.8]
+    - [1713, 0.7]
+    - [1760, 0.5]
+    - [1790, 0.2]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1648, 0.7], [1660, 0.9], [1710, 0.7], [1730, 0.7], [1764, 0.6], [1790, 0.2]]
+    - where: {polities: [netherlands]}
+      curve: [[1700, 0.3], [1723, 0.5], [1790, 0.3]]
+    - where: {regions: [southern_netherlands]}
+      curve: [[1648, 0.6], [1700, 0.4], [1750, 0.2]]
+    - where: {polities: [tuscany, habsburg]}
+      curve: [[1760, 0.2], [1786, 0.5], [1795, 0.1]]
+  people: [ジャンセン, パスカル, アルノー]
+  works: [『パンセ』, 『プロヴァンシアル』]
+  events: []
+  text: 人間の救いは神の恩寵のみによると厳しく説いたカトリック内部の運動。ポール・ロワイヤル修道院を拠点にイエズス会と対立し、ルイ14世や教皇から弾圧された。
+  source: "https://ja.wikipedia.org/wiki/ジャンセニスム"
+
+- id: pietism
+  name: 敬虔主義
+  kind: religion
+  curve:
+    - [1670, 0.2]
+    - [1690, 0.6]
+    - [1720, 1.0]
+    - [1760, 0.6]
+    - [1815, 0.4]
+  spread:
+    - where: {polities: [frankfurt]}
+      curve: [[1670, 0.6], [1686, 0.5], [1720, 0.3]]
+    - where: {polities: [prussia]}
+      center: true
+      curve: [[1690, 0.5], [1713, 1.0], [1740, 0.7], [1786, 0.4], [1815, 0.4]]
+    - where: {polities: [saxony]}
+      curve: [[1680, 0.4], [1722, 0.8], [1760, 0.5], [1815, 0.4]]
+    - where: {polities: [wurttemberg]}
+      curve: [[1700, 0.4], [1740, 0.8], [1815, 0.7]]
+    - where: {polities: [denmark, norway, sweden]}
+      curve: [[1700, 0.2], [1735, 0.7], [1760, 0.5], [1815, 0.4]]
+    - where: {polities: [netherlands, switzerland]}
+      curve: [[1690, 0.3], [1730, 0.4], [1780, 0.3]]
+  people: [シュペーナー, フランケ, ツィンツェンドルフ]
+  works: [『敬虔なる願望』]
+  events: [兵隊王フリードリヒ・ヴィルヘルム1世の即位]
+  text: 形式化したルター派の教会に対して、個人の内面的な信仰と実践的な愛の行いを重んじた運動。ハレ大学を拠点にプロイセンで国家と結びつき、ヘルンフート兄弟団（ツィンツェンドルフ）も生まれた。
+  source: "https://ja.wikipedia.org/wiki/敬虔主義"
+
+- id: methodism
+  name: メソジスト（信仰復興運動）
+  kind: religion
+  curve:
+    - [1730, 0.1]
+    - [1739, 0.5]
+    - [1770, 0.9]
+    - [1791, 1.0]
+    - [1815, 0.9]
+  spread:
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1730, 0.2], [1739, 0.6], [1770, 0.9], [1791, 1.0], [1815, 1.0]]
+    - where: {regions: [ireland]}
+      curve: [[1747, 0.2], [1780, 0.4], [1815, 0.4]]
+  people: [ジョン・ウェスレー, チャールズ・ウェスレー, ホイットフィールド]
+  works: []
+  events: []
+  text: ウェスレー兄弟がイギリス国教会の中で始めた信仰復興運動。野外説教で産業化の進む地方の民衆や労働者に広まり、のちに国教会から独立した。北アメリカの「大覚醒」とも呼応した。
+  source: "https://ja.wikipedia.org/wiki/メソジスト"
+
+- id: hasidism
+  name: ハシディズム
+  kind: religion
+  curve:
+    - [1736, 0.1]
+    - [1760, 0.4]
+    - [1790, 0.8]
+    - [1815, 1.0]
+  spread:
+    - where: {regions: [podolia_w, podolia_e]}
+      center: true
+      curve: [[1736, 0.2], [1760, 0.6], [1790, 0.9], [1815, 1.0]]
+    - where: {regions: [volhynia_w, galicia_ua, galicia_pl, r_north, r_south]}
+      curve: [[1750, 0.2], [1772, 0.6], [1800, 0.9], [1815, 0.9]]
+    - where: {regions: [blr_1772, lith_1793, lithuania]}
+      curve: [[1770, 0.2], [1790, 0.5], [1815, 0.6]]
+  people: [バアル・シェム・トーヴ, マギッドのドヴ・ベール]
+  works: []
+  events: []
+  text: ポーランド・リトアニアの東部（現在のウクライナ）のユダヤ人社会で生まれた神秘主義的な信仰復興運動。学問よりも喜びに満ちた祈りと敬虔さを重んじ、東欧のユダヤ人に急速に広まった。
+  source: "https://ja.wikipedia.org/wiki/ハシディズム"
+
+- id: wahhabism
+  name: ワッハーブ派
+  kind: religion
+  curve:
+    - [1740, 0.1]
+    - [1744, 0.4]
+    - [1790, 0.7]
+    - [1805, 1.0]
+    - [1815, 0.6]
+  spread:
+    - where: {polities: [saudi]}
+      center: true
+      curve: [[1744, 0.5], [1773, 0.8], [1805, 1.0], [1815, 0.8]]
+    - where: {regions: [najd_riyadh, qassim]}
+      curve: [[1744, 0.4], [1780, 0.8], [1815, 0.8]]
+    - where: {regions: [hijaz_medina]}
+      curve: [[1802, 0.4], [1806, 0.9], [1812, 0.4], [1815, 0.2]]
+  people: [イブン・アブドゥル・ワッハーブ, ムハンマド・イブン・サウード]
+  works: []
+  events: [ディルイーヤの盟約（第一次サウード王国）, サウード王国のメッカ占領, エジプト軍のヒジャーズ奪回]
+  text: 聖者崇拝などを退け、コーランとムハンマドの教えへの回帰を説いたイスラームの改革運動。サウード家と結んでアラビア半島に第一次サウード王国を建て、メッカ・メディナを占領した。
+  source: "https://ja.wikipedia.org/wiki/ワッハーブ派"

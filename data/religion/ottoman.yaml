@@ -1,0 +1,790 @@
+# 宗教（宗派）の分布：オスマン帝国（バルカン・アナトリア・東地中海・イラク）、アラビア、ペルシア、南カフカス、中央アジア（1648–1815）
+# 形式は docs/religion-format.md。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# オスマン帝国では宗教ごとの共同体（ミッレト）が自治を認められ、キリスト教徒・ユダヤ教徒は人頭税（ジズヤ）を払って信仰を保った。
+
+# ======== バルカン ========
+- id: rel_serbia
+  name: セルビア
+  select:
+    iso: [SRB]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: セルビア人は正教徒（ペーチ総主教座。1766年に廃止され、コンスタンティノープル総主教座の管轄に）。町にはトルコ人・改宗者のムスリムが住む。
+
+- id: rel_vojvodina
+  name: ヴォイヴォディナ（バーチカ・バナト・スレム）
+  select:
+    regions: [backa, banat_rs, east_syrmia]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: オスマン帝国の支配下で、セルビア人の正教徒が多い。
+    - from: 1720
+      main: orthodox
+      minor: catholic
+      note: セルビア人の大移住（1690、総主教アルセニエ3世）で正教徒が増え、カルロヴツィが府主教座になる。18世紀にはハンガリー人・ドイツ人（ドナウ・シュヴァーベン人）・ブニェヴツィのカトリックが入植する。
+      source: "https://ja.wikipedia.org/wiki/セルビア人の大移住"
+
+- id: rel_sandzak
+  name: ラシュカ・ズラティボル（ノヴィ・パザル県）
+  select:
+    adm1: ["SRB/Raska District", "SRB/Zlatibor District"]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: ノヴィ・パザルなどにムスリム（スラヴ系の改宗者）が多い。
+
+- id: rel_south_serbia
+  name: 南セルビア（トプリツァ・ヤブラニツァ・プチニャ）
+  select:
+    adm1: ["SRB/Toplica District", "SRB/Jablanica District", "SRB/Pcinja District"]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+    - from: 1690
+      main: sunni
+      minor: orthodox
+      note: セルビア人の大移住（1690）の後、アルバニア人のムスリムが移り住み、多数派になったとされる。（要確認）
+
+- id: rel_kosovo
+  name: コソヴォ
+  select:
+    iso: [XKX]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: ペーチ総主教座のある正教の中心地。アルバニア人のイスラーム改宗が進む。（比率は要確認）
+    - from: 1690
+      main: sunni
+      minor: orthodox
+      note: 大トルコ戦争でハプスブルク軍に協力したセルビア人の多くが北へ移住し（1690）、アルバニア人（多くはムスリム）が増える。（要確認）
+      source: "https://ja.wikipedia.org/wiki/セルビア人の大移住"
+
+- id: rel_montenegro
+  name: モンテネグロ
+  select:
+    iso: [MNE]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ツェティニェの主教（ヴラディカ）が政治と宗教の長を兼ねる。ペトロヴィチ＝ニェゴシュ家（1696–）。
+
+- id: rel_montenegro_muslim
+  name: モンテネグロ東部・南部のムスリム地域（プラヴ・グシニェ・ロジャイェ・バール・ウルツィニ）
+  select:
+    pieces: [MNE-Plav_Municipality, MNE-Gusinje_Municipality, MNE-Ro_aje_Municipality, MNE-Petnjica_Municipality, MNE-Bar_Municipality, MNE-Ulcinj_Municipality]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: アルバニア人・スラヴ系のムスリムが多い。バールとウルツィニにはアルバニア人のカトリックも住む。
+
+- id: rel_montenegro_mixed
+  name: モンテネグロの混在地域（ポドゴリツァ・ビイェロ・ポリェ・プリェヴリャ）
+  select:
+    pieces: [MNE-Podgorica_Municipality, MNE-Bijelo_Polje_Municipality, MNE-Pljevlja_Municipality]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: オスマン帝国の町（ポドゴリツァ・プリェヴリャ）にムスリムが多い。
+
+- id: rel_bay_of_kotor
+  name: コトル湾・ブドヴァ（ヴェネツィア領アルバニア）
+  select:
+    regions: [venetian_albania]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: orthodox
+      note: 海沿いの町はカトリック、山側の村は正教徒が多い。
+
+- id: rel_herceg_novi
+  name: ヘルツェグ・ノヴィ
+  select:
+    regions: [herceg_novi]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: オスマン帝国の要塞都市カステルヌオーヴォ。
+    - from: 1687
+      main: orthodox
+      minor: catholic
+      note: ヴェネツィアが占領し、ムスリムは去る。正教徒（セルビア人）が多く入植する。
+
+- id: rel_bosnia
+  name: ボスニア（中部・北西部）
+  select:
+    iso: [BIH]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: 15〜17世紀に住民の多くがイスラームに改宗した（ボシュニャク人）。正教徒（セルビア人）とカトリック（フランシスコ会が保護したクロアチア人）も多い。
+      source: "https://ja.wikipedia.org/wiki/ボシュニャク人"
+
+- id: rel_bosnia_catholic_central
+  name: 中部ボスニアのカトリック地域（ラシュヴァ・フォイニツァ）・ゼニツァ
+  select:
+    pieces: [BIH-Central_Bosnia_Canton, BIH-Zenica_Doboj_Canton, BIH-Herzegovina_Neretva_Canton]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: catholic
+      note: フォイニツァ・クレシェヴォなどのフランシスコ会修道院の周辺にカトリックが多い。モスタルはムスリムの町。
+
+- id: rel_herzegovina_west
+  name: 西ヘルツェゴヴィナ・リヴノ・ポサヴィナ
+  select:
+    pieces: [BIH-West_Herzegovina_Canton, BIH-Canton_10, BIH-Posavina_Canton]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: sunni
+      note: クロアチア人のカトリックが多い。
+
+- id: rel_bosnia_serb
+  name: ボスニア東部・北部とヘルツェゴヴィナ東部（現スルプスカ共和国）
+  select:
+    pieces: [BIH-Republika_Srpska]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: 農村には正教徒のセルビア人が多く、バニャ・ルカなどの町はムスリムが多い。（多数派の判定は要確認）
+
+- id: rel_albania
+  name: アルバニア中部
+  select:
+    iso: [ALB]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: 17世紀にイスラームへの改宗が急速に進み、アルバニア人の多数がムスリムになる。ベクタシュ教団も広まる。（17世紀半ばの比率は要確認）
+
+- id: rel_albania_north
+  name: アルバニア北部（シュコドラ・コソヴォ寄りの山地）
+  select:
+    adm1: ["ALB/Shkodër", "ALB/Kukës", "ALB/Dibër"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: catholic
+      note: シュコドラ周辺の山地にはカトリックの部族が多い。
+
+- id: rel_albania_mirdita
+  name: レジャ・ミルディタ
+  select:
+    adm1: ["ALB/Lezhë"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: sunni
+      note: ミルディタ地方はカトリックの部族の地。
+
+- id: rel_albania_south
+  name: アルバニア南部（ギロカストラ・コルチャ）
+  select:
+    adm1: ["ALB/Gjirokastër", "ALB/Korçë"]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: 正教徒が多い（ヴォスコポヤは18世紀の正教文化の中心）。町と一部の村はムスリム。
+
+- id: rel_macedonia
+  name: マケドニア（現北マケドニア）
+  select:
+    iso: [MKD]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: スラヴ人の正教徒が多数（オフリド大主教座。1767年に廃止）。トルコ人（ユルック）と改宗者のムスリムが町と東部・西部に多い。
+
+- id: rel_polog
+  name: ポログ（テトヴォ・ゴスティヴァル）
+  select:
+    adm1: ["MKD/Polog"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: アルバニア人のムスリムが多い。（時期は要確認）
+
+- id: rel_bulgaria
+  name: ブルガリア（北西部・中部）
+  select:
+    iso: [BGR]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ブルガリア人は正教徒（コンスタンティノープル総主教座の管轄。オフリド大主教座の廃止は1767年）。ニコポル周辺などにパウロ派系のカトリックの村もある。
+
+- id: rel_bulgaria_mixed
+  name: ブルガリア南部・東部の混在地域（トラキア平原・ドナウ沿い）
+  select:
+    pieces: [BGR-Plovdiv, BGR-Pazardzhik, BGR-Stara_Zagora, BGR-Sliven, BGR-Yambol, BGR-Burgas, BGR-Blagoevgrad, BGR-Sofia_City, BGR-Vidin]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: トルコ人の入植者と町のムスリムが多い。ロドピ山地西部・ピリン山地にはブルガリア語を話すムスリム（ポマク）も住む。
+
+- id: rel_bulgaria_muslim
+  name: ブルガリア北東部（デリオルマン）・ロドピ山地東部
+  select:
+    pieces: [BGR-Shumen, BGR-Razgrad, BGR-Targovishte, BGR-Silistra, BGR-Dobrich, BGR-Varna, BGR-Ruse, BGR-Kardzhali, BGR-Haskovo, BGR-Smolyan]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: デリオルマン（北東部）とロドピ山地東部はトルコ人が多い。ロドピ中部（スモリャン）はポマク（ブルガリア語を話すムスリム）の地。（多数派の判定は要確認）
+
+# ---- ギリシア ----
+- id: rel_greece
+  name: ギリシア
+  select:
+    iso: [GRC]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ギリシア人は正教徒（コンスタンティノープル総主教座）。アトス山は正教の修道院の中心。
+
+- id: rel_greece_north
+  name: マケドニア・テッサリア・エピルス（ギリシア北部）
+  select:
+    adm2: ["GRC/Kentrikis Makedonias", "GRC/Dytikis Makedonias", "GRC/Thessalias", "GRC/Ipeiroy"]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: トルコ人の入植者（テッサリアのコニャル人など）と改宗者のムスリムが多い。テッサロニキは住民の過半数がユダヤ教徒（セファルディム）の町。
+
+- id: rel_thrace_west
+  name: 西トラキア・東マケドニア（クサンティ・コモティニ・ドラマ・エヴロス）
+  select:
+    adm2: ["GRC/Anatolikis Makedonias kai Thr*"]
+    exclude: [GRC-Thassou, GRC-Samothrakis]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: トルコ人とポマクのムスリムが多い。（多数派の判定は要確認）
+
+- id: rel_crete
+  name: クレタ島
+  select:
+    regions: [crete, candia]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ヴェネツィア領の時代から住民は正教徒（支配層はカトリック）。オスマン帝国との戦争（1645–69）中。
+    - from: 1669
+      main: orthodox
+      minor: sunni
+      note: オスマン帝国の征服後、改宗者を中心にムスリムが増え、18世紀には人口の3〜4割に達したとされる。（要確認）
+
+- id: rel_cyclades_catholic
+  name: シロス島
+  select:
+    pieces: [GRC-Syros]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: orthodox
+      note: ラテン帝国・ヴェネツィア支配の名残で、カトリックの住民が多い（フランスの保護下）。
+
+- id: rel_tinos
+  name: ティノス島
+  select:
+    pieces: [GRC-Tinos]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: catholic
+      note: 1715年までヴェネツィア領。カトリックの住民が多い。
+
+# ======== ドナウ二公国・トランシルヴァニア・バナト ========
+- id: rel_romania
+  name: ワラキア・モルダヴィア
+  select:
+    iso: [ROU]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ルーマニア人は正教徒。
+
+- id: rel_dobruja
+  name: ドブルジャ
+  select:
+    regions: [dobruja_ro]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: タタール人・トルコ人のムスリムが多く、ルーマニア人・ブルガリア人・ギリシア人も住む。北部のドナウ・デルタには古儀式派のロシア人（リポヴァン人）が逃れてくる。
+
+- id: rel_transylvania_romanian
+  name: トランシルヴァニアのルーマニア人地域
+  select:
+    pieces: [ROU-HUNEDOARA, ROU-SALAJ, ROU-MARAMURES, ROU-CLUJ, ROU-BIHOR, ROU-BISTRITA_NASAUD]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: reformed
+      note: 農民の多くはルーマニア人の正教徒。領主・都市はハンガリー人で、改革派が多い（クルジュ＝コロジュヴァールにはユニテリアンも多い）。トランシルヴァニア侯国は1568年のトルダ勅令以来、カトリック・ルター派・改革派・ユニテリアンの4宗派を公認した。
+      source: "https://ja.wikipedia.org/wiki/トルダ勅令"
+    - from: 1701
+      main: orthodox
+      minor: catholic
+      note: アルバ・ユリア合同（1698–1701）で、ルーマニア人の一部がギリシア・カトリック（ユニエイト）になる。正教徒の抵抗も強く（1760年代のソフロニエの運動）、両派が並ぶ。（比率は要確認）
+
+- id: rel_alba_blaj
+  name: アルバ（ブラジ）
+  select:
+    pieces: [ROU-ALBA]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: reformed
+    - from: 1701
+      main: catholic
+      minor: orthodox
+      note: ブラジがルーマニア人のギリシア・カトリック（ユニエイト）教会の中心になる（1737–）。（多数派の判定は要確認）
+
+- id: rel_transylvania_saxon
+  name: トランシルヴァニアのザクセン人地域（シビウ・ブラショフ）
+  select:
+    pieces: [ROU-SIBIU, ROU-BRASOV]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: orthodox
+      note: ドイツ系のザクセン人はルター派。周辺の村にはルーマニア人の正教徒が多い。（多数派の判定は要確認）
+
+- id: rel_szekely_reformed
+  name: セーケイ地方（ハーロムセーク・マロシュセーク）
+  select:
+    pieces: [ROU-COVASNA, ROU-MURES]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: セーケイ人（ハンガリー系）の改革派が多い。マロシュヴァーシャールヘイには改革派の学院がある。ウドヴァルヘイ周辺にはユニテリアンも多い。
+
+- id: rel_szekely_catholic
+  name: チーク（ハルギタ）
+  select:
+    pieces: [ROU-HARGHITA]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: チーク地方のセーケイ人はカトリックを守った（シュムレウ・チュクの巡礼地）。ウドヴァルヘイにはユニテリアンと改革派も多い。
+
+- id: rel_partium
+  name: サトゥ・マーレ（サトマール）
+  select:
+    pieces: [ROU-SATU_MARE]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: orthodox
+      note: ハンガリー人の改革派とルーマニア人の正教徒（のちユニエイト）が混在。1712年からはドイツ人カトリック（サトマール・シュヴァーベン人）が入植した。（多数派の判定は要確認）
+
+- id: rel_banat_ro
+  name: バナト（ティミショアラ・アラド）
+  select:
+    regions: [banat_ro, arad]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ルーマニア人・セルビア人の正教徒が多い。オスマン帝国の町にはムスリムが住む。
+    - from: 1720
+      main: orthodox
+      minor: catholic
+      note: ハプスブルク領バナトでドイツ人カトリック（ドナウ・シュヴァーベン人）の大規模な入植が行われる（1720年代〜1780年代）。
+      source: "https://ja.wikipedia.org/wiki/ドナウ・シュヴァーベン人"
+
+# ======== アナトリア・キプロス ========
+- id: rel_anatolia
+  name: アナトリア
+  select:
+    iso: [TUR]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: トルコ人のスンナ派（ハナフィー派）が多数。各地の町にギリシア人（正教）・アルメニア人（アルメニア使徒教会）・ユダヤ教徒の共同体がある。中部・東部にはアレヴィー（クズルバシュ）の村も多い。
+
+- id: rel_istanbul_thrace
+  name: イスタンブル・東トラキア・海峡地帯
+  select:
+    pieces: [TUR-stanbul, TUR-Edirne, TUR-K_rklareli, TUR-Tekirda, TUR-Canakkale]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: イスタンブルは住民の4割ほどがキリスト教徒（ギリシア人・アルメニア人）とユダヤ教徒。コンスタンティノープル総主教座（フェネル）とアルメニア総主教座がある。
+
+- id: rel_pontus
+  name: 黒海東部沿岸（トラブゾン・ギュミュシュハネ）
+  select:
+    pieces: [TUR-Trabzon, TUR-Gumu_hane]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: ポントス・ギリシア人の正教徒が多い（ギュミュシュハネの鉱山など）。改宗者や隠れキリスト教徒もいる。
+
+- id: rel_armenian_highlands
+  name: アナトリア東部（アルメニア人の多い地域）
+  select:
+    pieces: [TUR-Van, TUR-Bitlis, TUR-Mu, TUR-Erzurum, TUR-Kars, TUR-A_r, TUR-Elaz, TUR-Diyarbak_r, TUR-Sivas, TUR-Kahramanmara, TUR-Adana]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: oriental
+      note: トルコ人・クルド人のスンナ派と、アルメニア人（アルメニア使徒教会）が混在する。ヴァン・ムシュ・ビトリスではアルメニア人の割合が高い。キリキア（アダナ・マラシュの山地）にはシス（コザン）のカトリコス座がある。
+
+- id: rel_assyrian
+  name: ハッカリ・トゥル・アブディン（アッシリア人の地）
+  select:
+    pieces: [TUR-Hakkari, TUR-Mardin, TUR-rnak]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: oriental
+      note: ハッカリの山地には東方教会（ネストリウス派）、マルディン・トゥル・アブディンにはシリア正教会のアッシリア人が多い。クルド人はスンナ派、ヤズィーディー教徒もいる。
+
+- id: rel_dersim
+  name: デルスィム（トゥンジェリ）
+  select:
+    pieces: [TUR-Tunceli]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: oriental
+      note: クルド人のアレヴィー（クズルバシュ。シーア派系として塗る）が多い。アルメニア人の村もある。（要確認）
+
+- id: rel_cyprus
+  name: キプロス
+  select:
+    iso: [CYP]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: オスマン帝国の征服（1571）後、正教会（キプロス独立正教会）が復活し、トルコ人の入植者と改宗者のムスリムが人口の2〜3割を占める。
+
+# ======== シリア・レバノン・パレスチナ・ヨルダン ========
+- id: rel_levant
+  name: シリア・パレスチナ・ヨルダン
+  select:
+    iso: [SYR, ISR, JOR, LBN, "118", "124", "126", "129"]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: アラブ人のスンナ派が多数。各地の町に正教徒・ギリシア・カトリック（メルキト、1724年分離）・シリア正教会・アルメニア人、エルサレム・サフェドなどにユダヤ教徒が住む。
+
+- id: rel_alawite
+  name: シリア沿岸の山地（ラタキア・タルトゥース）
+  select:
+    pieces: [SYR-Lattakia, SYR-Tartous]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: アラウィー派（ヌサイリー。シーア派系として塗る）の山地。沿岸の町はスンナ派で、正教徒も多い。
+
+- id: rel_jabal_druze
+  name: ハウラーン山地（ジャバル・ドゥルーズ）
+  select:
+    pieces: [SYR-As_Sweida]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: 遊牧民と少数の村落。
+    - from: 1711
+      main: other
+      minor: sunni
+      note: アイン・ダーラの戦い（1711）の後、レバノン山地からドゥルーズ派が移住し、のちの「ドゥルーズ山地」となる。（時期と比率は要確認）
+
+- id: rel_mount_lebanon_maronite
+  name: レバノン山地北部（ケセルワン・ジュベイル）と北レバノン
+  select:
+    pieces: [LBN-Keserwan_Jbeil, LBN-Liban_Nord]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: shia
+      note: マロン派（ローマと合同したカトリック）の地。ケセルワンには17世紀まで十二イマーム派が多かった。北レバノンのトリポリはスンナ派、クーラは正教徒。
+
+- id: rel_mount_lebanon_druze
+  name: レバノン山地南部（シューフ・メトン）
+  select:
+    pieces: [LBN-Mont_Liban]
+  timeline:
+    - from: 1648
+      main: other
+      minor: catholic
+      note: ドゥルーズ派（その他）の地。ドゥルーズ派の領主（マアン家、のちシハーブ家）のもとでマロン派の農民が南へ移住し、18世紀には混在が進む。
+      source: "https://ja.wikipedia.org/wiki/ドゥルーズ派"
+
+- id: rel_lebanon_shia
+  name: ジャバル・アーミル（南レバノン）とベカー高原
+  select:
+    pieces: [LBN-Liban_Sud, LBN-Nabatiye, LBN-Baalbek_Hermel, LBN-Beqaa]
+  timeline:
+    - from: 1648
+      main: shia
+      note: 十二イマーム派（シーア派）の古い中心地で、サファヴィー朝にも多くの学者を送った。ベカー高原のザハレにはギリシア・カトリックが多い。
+
+- id: rel_beirut
+  name: ベイルート・アッカール
+  select:
+    pieces: [LBN-Beyrouth, LBN-Aakkar]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: スンナ派の町。正教徒も多い。
+
+# ======== イラク ========
+- id: rel_iraq
+  name: イラク
+  select:
+    iso: [IRQ]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: アラブ人・クルド人のスンナ派が多い。北部にはヤズィーディー教徒、ユダヤ教徒の大きな共同体（バグダード）もある。
+
+- id: rel_iraq_north_christian
+  name: モースル・ドホーク
+  select:
+    pieces: [IRQ-Ninawa, IRQ-Dohuk]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: oriental
+      note: ニネヴェ平原と北部の山地に東方教会（アッシリア人。一部は1681年以後カルデア・カトリックに）とシリア正教会の信徒が多い。シンジャールなどにはヤズィーディー教徒が住む。
+
+- id: rel_iraq_shrines
+  name: ナジャフ・カルバラー・ヒッラ
+  select:
+    pieces: [IRQ-An_Najaf, IRQ-Karbala, IRQ-Babil]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: シーア派の聖地（アリーとフサインの廟）。18世紀にはイランから多くの学者が移り住む。
+
+- id: rel_iraq_south
+  name: イラク中部・南部（バグダード・バスラ・湿原地帯）
+  select:
+    pieces: [IRQ-Baghdad, IRQ-Diyala, IRQ-Wasit, IRQ-Al_Qadisiyah, IRQ-Maysan, IRQ-Dhi_Qar, IRQ-Al_Muthanna, IRQ-Al_Basrah]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: shia
+      note: 南部のアラブ部族のシーア派への改宗は18世紀から進み、19世紀にシーア派が多数になる。バスラにはシーア派が多い。湿原にはマンダ教徒もいる。（比率は要確認）
+
+# ======== アラビア半島 ========
+- id: rel_arabia
+  name: アラビア半島北部・東部
+  select:
+    iso: [SAU, KWT, QAT, ARE, OMN, BHR]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: アラブ人のスンナ派。
+    - from: 1744
+      main: sunni
+      note: ナジュドでムハンマド・イブン・アブドゥルワッハーブとサウード家が盟約を結び（1744）、ワッハーブ派の運動が広がる。
+      source: "https://ja.wikipedia.org/wiki/ワッハーブ派"
+
+- id: rel_hasa_bahrain
+  name: ハサー・カティーフ・バーレーン
+  select:
+    regions: [al_hasa, bahrain_r]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: オアシスの農民はシーア派（バハールナ）が多い。支配者のバヌー・ハーリド族、ハリーファ家（1783–）はスンナ派。
+
+- id: rel_oman_north
+  name: オマーン北部（ムサンダム・マハダ）
+  select:
+    regions: [oman_north]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ムサンダム半島のシフーフ族はスンナ派。オマーンの内陸部（範囲外）はイバード派が多数。
+
+# ======== ペルシア ========
+- id: rel_iran
+  name: イラン
+  select:
+    iso: [IRN]
+  timeline:
+    - from: 1648
+      main: shia
+      note: サファヴィー朝（1501–）が十二イマーム派を国教とし、住民の多くが改宗した。イスファハーンの新ジュルファにアルメニア人、ヤズドとケルマーンにゾロアスター教徒が住む。
+      source: "https://ja.wikipedia.org/wiki/十二イマーム派"
+
+- id: rel_iran_kurdistan
+  name: イラン領クルディスターン
+  select:
+    pieces: [IRN-Kurdistan]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: クルド人のスンナ派（シャーフィイー派）。
+
+- id: rel_iran_west_azerbaijan
+  name: ウルミヤ湖西岸（西アゼルバイジャン）
+  select:
+    pieces: [IRN-West_Azerbaijan]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: アゼルバイジャン人（シーア派）・クルド人（スンナ派）と、ウルミヤ周辺のアッシリア人・アルメニア人が住む。
+
+- id: rel_iran_frontier_sunni
+  name: イランの辺境のスンナ派地域（バルーチスターン）
+  select:
+    pieces: [IRN-Sistan_and_Baluchestan]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: shia
+      note: バローチ人はスンナ派。北のスィースターンはシーア派。
+
+- id: rel_iran_frontier_mixed
+  name: ゴレスターン・ホルモズガーン
+  select:
+    pieces: [IRN-Golestan, IRN-Hormozgan]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: ゴレスターンのトルクメン人、ホルモズガーン沿岸のアラブ人・バローチ人などはスンナ派。
+
+# ======== 南カフカス ========
+- id: rel_georgia
+  name: ジョージア（カルトリ・カヘティ・イメレティ・ミングレリア・グリア）
+  select:
+    iso: [GEO]
+  timeline:
+    - from: 1648
+      main: orthodox
+      note: ジョージア正教会。東部（カルトリ・カヘティ）はサファヴィー朝の宗主権下で、王族の一部は形式的にイスラームに改宗した。
+
+- id: rel_tbilisi
+  name: トビリシ
+  select:
+    pieces: [GEO-Tbilisi]
+  timeline:
+    - from: 1648
+      main: oriental
+      minor: orthodox
+      note: 商人・職人の多くはアルメニア人（アルメニア使徒教会）で、19世紀初めには住民の過半を占めた。（比率は要確認）
+
+- id: rel_kvemo_kartli
+  name: クヴェモ・カルトリ（ボルチャロ）
+  select:
+    pieces: [GEO-Kvemo_Kartli]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: shia
+      note: ボルチャロのトルコ系遊牧民（シーア派）が多い。（比率は要確認）
+
+- id: rel_samtskhe_adjara
+  name: サムツヘ（アハルツィヘ）・アジャリア
+  select:
+    regions: [samtskhe_adjara]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: オスマン帝国のチュルドゥル州。アタベク家は1625年にイスラームに改宗した。
+    - from: 1700
+      main: sunni
+      minor: orthodox
+      note: 17〜18世紀にジョージア人のイスラーム化が進む。アハルツィヘにはアルメニア人も多い。（時期は要確認）
+
+- id: rel_abkhazia
+  name: アブハジア
+  select:
+    regions: [abkhazia_r]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: キリスト教は伝統的な信仰と混ざっている。
+    - from: 1750
+      main: sunni
+      minor: orthodox
+      note: オスマン帝国の影響で、シェルヴァシゼ家の公と住民の一部がイスラームに改宗する。公ケレシュベイはイスラーム、その子ギオルギは1808年に正教に改宗してロシアの保護を受けた。（比率は要確認）
+
+- id: rel_erivan
+  name: エレバン・ハン国・ナヒチェヴァン
+  select:
+    regions: [armenia_erivan, nakhchivan]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: oriental
+      note: サファヴィー朝のアルメニア人強制移住（1604–05）の後、トルコ系の遊牧民（シーア派）とクルド人が増え、ムスリムが多数になった。アルメニア人はエチミアジン（カトリコス座）周辺などに残る。アルメニア人の多数派化はロシア併合（1828）後の移住による。
+      source: "https://ja.wikipedia.org/wiki/エリヴァン・ハン国"
+
+- id: rel_armenian_highland_villages
+  name: シュニク（ザンゲズール）・シラク・ロリ・タヴシュ
+  select:
+    pieces: [ARM-Syunik, ARM-Shirak, ARM-Lori, ARM-Tavush]
+  timeline:
+    - from: 1648
+      main: oriental
+      minor: shia
+      note: アルメニア人のメリク（小領主）たちの山地。ムスリムの遊牧民も住む。ロリにはジョージア人も多い。
+
+- id: rel_azerbaijan
+  name: アゼルバイジャン北部（シルヴァン・カラバフ・ガンジャ・シェキ）
+  select:
+    regions: [east_transcaucasia]
+    exclude: [ARM-Syunik, ARM-Shirak]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: シーア派が多数。北部（シェキ・クバ・シルヴァン北部）にはスンナ派が多い。山岳カラバフにはアルメニア人のメリク領がある。
+
+# ======== 中央アジア・アフガニスタン・パキスタン ========
+- id: rel_central_asia
+  name: 中央アジア（カザフ・トルクメン・ホラズム）・アフガニスタン西部・バローチスターン
+  select:
+    iso: [KAZ, TKM, UZB, AFG, PAK]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スンナ派（ハナフィー派）。カザフ人・トルクメン人の遊牧社会では伝統的な信仰も残る。
+
+- id: rel_herat
+  name: ヘラート
+  select:
+    regions: [herat]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: shia
+      note: サファヴィー朝の州都で、シーア派の住民も多い。（比率は要確認）
