@@ -77,7 +77,7 @@
   - 独立レビュー：完了（docs/review/）。重要度 A・B の指摘は反映済み。反映しなかったものと理由は docs/review/fixes.md。
   - ピースの改良：ロシア西部13州を郡単位に、メノルカ島を分離、フルビェシュフ郡の壊れた形を修正（tools/pieces_config.json の adm2_within / split / clip）。全7,453ピース。
 - 田村さんの決定（2026-11-20）：1815年のプファルツ・ラインヘッセンは暫定統治（斜線）のまま／出来事は約340件すべて残す／Pages 公開はレビュー指摘の修正が終わってから（その時点で手順を案内する）。
-- GitHub Pages：ワークフローは用意済み。リポジトリの public 化と Pages の Source 設定（GitHub Actions）は田村さん待ち。
+- GitHub Pages：公開済み（https://tamtam0717.github.io/world-history-atlas/ ）。main に取り込むと自動でデプロイされる。田村さんの了承があれば、Claude がプルリクエストを作ってマージまで行ってよい（2026-11-20）。
 
 ## 想定ロードマップ
 1. 骨組みを作る
