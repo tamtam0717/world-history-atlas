@@ -1,0 +1,32 @@
+- id: rel_test_de
+  name: テスト・ドイツ
+  select: {iso: [DEU]}
+  timeline:
+    - {from: 1648, main: lutheran, minor: catholic, note: テスト}
+- id: rel_test_bav
+  name: テスト・バイエルン
+  select: {regions: [bavaria_core]}
+  timeline:
+    - {from: 1648, main: catholic}
+- id: rel_test_fr
+  name: テスト・フランス
+  select: {iso: [FRA]}
+  timeline:
+    - {from: 1648, main: catholic, minor: reformed, note: ユグノーが多い}
+    - {from: 1685, main: catholic, note: ナントの王令廃止}
+- id: rel_test_tr
+  name: テスト・バルカン
+  select: {iso: [GRC, BGR, SRB, ROU]}
+  timeline:
+    - {from: 1648, main: orthodox, minor: sunni}
+- id: rel_test_tur
+  name: テスト・トルコ
+  select: {iso: [TUR]}
+  timeline:
+    - {from: 1648, main: sunni}
+- id: rel_test_bad
+  name: 悪い例
+  select: {regions: [nosuch]}
+  timeline:
+    - {from: 1700, main: foo}
+    - {from: 1690, main: catholic}

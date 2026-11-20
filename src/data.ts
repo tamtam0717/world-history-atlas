@@ -101,6 +101,36 @@ export interface ModernCity {
   capital: boolean;
 }
 
+// ---- 宗教（docs/religion-format.md） ----
+
+export interface ReligionKind {
+  id: string;
+  name: string;
+  color: string;
+}
+
+export interface ReligionEntry extends Sourced {
+  from: number;
+  main: string;
+  minor?: string | null;
+  note?: string;
+}
+
+export interface ReligionRegion {
+  id: string;
+  name: string;
+  timeline: ReligionEntry[];
+}
+
+/** [開始年, main の index, minor の index（なければ -1）, 宗教の地域 index] */
+export type ReligionState = [number, number, number, number];
+
+export interface Religion {
+  kinds: ReligionKind[];
+  regions: ReligionRegion[];
+  pieceTimelines: ReligionState[][];
+}
+
 export interface Atlas {
   range: [number, number];
   certainty: string[];
@@ -113,6 +143,8 @@ export interface Atlas {
   milestones: Milestone[];
   cities: City[];
   citiesModern: ModernCity[];
+  /** 宗教の分布（古い atlas.json にはない） */
+  religion?: Religion;
 }
 
 export class AtlasIndex {
@@ -128,19 +160,35 @@ export class AtlasIndex {
 
   /** その年のピースの状態（データがなければ null） */
   pieceState(piece: number, year: number): PieceState | null {
-    const tl = this.atlas.pieceTimelines[piece];
-    if (!tl || tl.length === 0) return null;
-    let lo = 0;
-    let hi = tl.length - 1;
-    let ans = -1;
-    while (lo <= hi) {
-      const mid = (lo + hi) >> 1;
-      if (tl[mid][0] <= year) {
-        ans = mid;
-        lo = mid + 1;
-      } else hi = mid - 1;
+    return stateAt(this.atlas.pieceTimelines[piece], year);
+  }
+
+  /** その年のピースの宗教（データがなければ null） */
+  religionState(piece: number, year: number): ReligionState | null {
+    return stateAt(this.atlas.religion?.pieceTimelines[piece], year);
+  }
+
+  /** 指定した年に始まる宗教分布の変化（宗教の地域の timeline で、その年に始まる2つ目以降の項目） */
+  religionChangesIn(year: number): { region: ReligionRegion; prev: ReligionEntry; cur: ReligionEntry }[] {
+    const out: { region: ReligionRegion; prev: ReligionEntry; cur: ReligionEntry }[] = [];
+    for (const r of this.atlas.religion?.regions ?? []) {
+      const i = r.timeline.findIndex((e) => e.from === year);
+      if (i > 0) out.push({ region: r, prev: r.timeline[i - 1], cur: r.timeline[i] });
     }
-    return ans < 0 ? null : tl[ans];
+    return out;
+  }
+
+  /** 宗教の種類 */
+  religionKind(id: string | null | undefined): ReligionKind | undefined {
+    return id ? this.atlas.religion?.kinds.find((k) => k.id === id) : undefined;
+  }
+
+  /** 宗教の地域の、その年の記述 */
+  religionEntry(region: number, year: number): ReligionEntry | null {
+    const r = this.atlas.religion?.regions[region];
+    let cur: ReligionEntry | null = null;
+    for (const e of r?.timeline ?? []) if (e.from <= year) cur = e;
+    return cur;
   }
 
   /** その年に当てはまる names の項目 */
@@ -235,4 +283,20 @@ export function cityName(c: City, year: number): string {
     if ((n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity)) return n.name;
   }
   return c.name;
+}
+
+/** 年の昇順の [開始年, ...] の並びから、その年に有効なものを二分探索で探す */
+function stateAt<T extends number[]>(tl: T[] | undefined, year: number): T | null {
+  if (!tl || tl.length === 0) return null;
+  let lo = 0;
+  let hi = tl.length - 1;
+  let ans = -1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (tl[mid][0] <= year) {
+      ans = mid;
+      lo = mid + 1;
+    } else hi = mid - 1;
+  }
+  return ans < 0 ? null : tl[ans];
 }

@@ -56,3 +56,10 @@ religion: {
   pieceTimelines: [[開始年, main の index, minor の index（なければ -1）, 地域 index], ...]  // ピースごと
 }
 ```
+
+## 確認のしかた
+
+- `npm run data` で検証される。main / minor が `_kinds.yaml` にない ID、timeline が年の昇順でない、未定義の地域を参照している、などは警告になる。
+- ファイル名が `_` で始まるもの（`_kinds.yaml`）は地域として読まない。
+- 宗教データのないピースを数える：`node tools/build_data.mjs --religion-missing 1650,1750,1800`（`--iso DEU,AUT` で国を絞れる）。
+- 同じ ID の地域が宗教にも政治にもあるときは、`regions:` では宗教の地域が優先される。

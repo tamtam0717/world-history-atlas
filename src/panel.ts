@@ -1,6 +1,7 @@
 // 右パネル（スマホでは下からのシート）の中身：その年の出来事・国境の変化・選んだ国の情報
 
-import { AtlasIndex, sourcesOf, type BorderChange, type HistEvent, type Polity, type Ruler } from "./data";
+import { AtlasIndex, sourcesOf, type BorderChange, type HistEvent, type Polity, type ReligionEntry, type Ruler } from "./data";
+import type { ReligionPick } from "./map";
 import { hydrateImages, imageSlot, refKey, wikiRefs, type WikiRef } from "./images";
 
 const esc = (s: unknown) =>
@@ -58,15 +59,37 @@ export class Panel {
     </li>`;
   }
 
-  renderYear(year: number) {
+  /** 宗教の種類の名前（色の見本つき） */
+  private relKind(id: string | null | undefined) {
+    const k = this.idx.religionKind(id);
+    if (!k) return esc(id ?? "");
+    return `<span class="rel-kind"><span class="swatch" style="background:${esc(k.color)}"></span>${esc(k.name)}</span>`;
+  }
+
+  private relSummary(e: ReligionEntry) {
+    return `${this.relKind(e.main)}${e.minor ? `<span class="rel-minor">＋${this.relKind(e.minor)}</span>` : ""}`;
+  }
+
+  renderYear(year: number, opts: { religion?: boolean } = {}) {
     const events = this.idx.eventsIn(year).sort((a, b) => (a.importance ?? 2) - (b.importance ?? 2));
     const changes = this.idx.borderChangesIn(year);
+    const relChanges = opts.religion ? this.idx.religionChangesIn(year) : [];
     let html = `<h2>${year}年の出来事</h2>`;
     if (events.length) html += `<ul class="events">${events.map((e) => this.eventLine(e, year)).join("")}</ul>`;
+    if (relChanges.length) {
+      html += `<h3>宗教分布の変化</h3><ul class="changes">${relChanges
+        .map(
+          (c) =>
+            `<li class="change"><b>${esc(c.region.name)}</b>：${this.relSummary(c.prev)} → ${this.relSummary(c.cur)}${
+              c.cur.note ? ` <span class="cause">${esc(c.cur.note)}</span>` : ""
+            }</li>`,
+        )
+        .join("")}</ul>`;
+    }
     if (changes.length) {
       html += `<h3>国境の変化</h3><ul class="changes">${changes.map((c) => this.changeLine(c, year)).join("")}</ul>`;
     }
-    if (!events.length && !changes.length) {
+    if (!events.length && !changes.length && !relChanges.length) {
       html += `<p class="empty">この年に登録された出来事はありません。</p>`;
       const recent = this.idx.atlas.events.filter((e) => e.year < year && e.year >= year - 10).slice(-4).reverse();
       if (recent.length) {
@@ -77,6 +100,44 @@ export class Panel {
     }
     this.eventsEl.innerHTML = html;
     hydrateImages(this.eventsEl);
+  }
+
+  /** 宗教表示でクリックした地域の説明（pick が null なら閉じる） */
+  renderReligion(pick: ReligionPick | null, year: number) {
+    if (!pick) {
+      this.polityEl.hidden = true;
+      this.polityEl.innerHTML = "";
+      return;
+    }
+    this.polityEl.hidden = false;
+    const r = pick.region >= 0 ? this.idx.atlas.religion?.regions[pick.region] : undefined;
+    const cur = r ? this.idx.religionEntry(pick.region, year) : null;
+    let html = `<div class="card-head">
+        <span class="swatch big" style="background:${esc(this.idx.religionKind(cur?.main)?.color ?? "#e2e0dc")}"></span>
+        <div><h2>${esc(r?.name ?? pick.place)}</h2>
+        <div class="meta">宗教の分布${r ? ` ・ ${esc(pick.place)}付近` : ""}</div></div>
+        <button class="close" data-close aria-label="閉じる">×</button>
+      </div>`;
+    if (!r || !cur) {
+      html += `<p class="empty">${year}年の宗教データはまだありません（作成中）。</p>`;
+    } else {
+      html += `<h3>${year}年</h3>
+        <dl class="rel-now"><dt>多数派</dt><dd>${this.relKind(cur.main)}</dd>${
+          cur.minor ? `<dt>少数派</dt><dd>${this.relKind(cur.minor)}</dd>` : ""
+        }</dl>`;
+      if (cur.note) html += `<p class="period">${esc(cur.note)}</p>`;
+      if (r.timeline.length > 1) {
+        html += `<h3>変遷</h3><ul class="rel-timeline">${r.timeline
+          .map(
+            (e) =>
+              `<li class="${e === cur ? "now" : ""}"><span class="years">${e.from}–</span>${this.relSummary(e)}${
+                e.note ? `<div class="note">${esc(e.note)}</div>` : ""
+              }</li>`,
+          )
+          .join("")}</ul>`;
+      }
+    }
+    this.polityEl.innerHTML = html;
   }
 
   renderPolity(id: string | null, year: number, overlord: { id: string; partial: boolean } | null) {
