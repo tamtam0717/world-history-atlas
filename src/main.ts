@@ -1,7 +1,7 @@
 import "./style.css";
 import type { Topology } from "topojson-specification";
 import { AtlasIndex, type Atlas } from "./data";
-import { AtlasMap } from "./map";
+import { AtlasMap, stripeColor, type MapLayer, type ReligionPick } from "./map";
 import { Panel } from "./panel";
 import { Search } from "./search";
 import { setupSheet } from "./sheet";
@@ -18,11 +18,18 @@ async function main() {
   const idx = new AtlasIndex(atlas);
   const [minYear, maxYear] = atlas.range;
 
-  const state = { year: minYear, polity: null as string | null };
+  const state = {
+    year: minYear,
+    polity: null as string | null,
+    layer: "political" as MapLayer,
+    /** 宗教表示でクリックした場所 */
+    relPick: null as ReligionPick | null,
+  };
   const hash = new URLSearchParams(location.hash.slice(1));
   const hy = Number(hash.get("y"));
   if (Number.isFinite(hy) && hy >= minYear && hy <= maxYear) state.year = hy;
   if (hash.get("p") && idx.polityById.has(hash.get("p")!)) state.polity = hash.get("p");
+  if (hash.get("l") === "religion") state.layer = "religion";
 
   const yearInput = $<HTMLInputElement>("#year");
   const slider = $<HTMLInputElement>("#slider");
@@ -36,6 +43,11 @@ async function main() {
 
   const map = new AtlasMap($("#map"), topo, idx, {
     onSelect: (id) => selectPolity(id, false),
+    onReligion: (pick) => {
+      state.relPick = pick;
+      updateUi();
+      if (pick) sheet.reveal();
+    },
     onPiece: (p) => {
       if (p) $("#debug-info").textContent = `${p.id}\t${p.name}\t${p.adm1 ?? ""}\t${p.adm2 ?? ""}`;
     },
@@ -52,14 +64,24 @@ async function main() {
   const panel = new Panel($("#polity"), $("#events"), idx, (id) => selectPolity(id, true));
 
   function update() {
+    map.render(state.year);
+    updateUi();
+  }
+
+  /** 地図以外（パネル・凡例・URL）を今の状態に合わせる */
+  function updateUi() {
     yearInput.value = String(state.year);
     slider.value = String(state.year);
-    map.render(state.year);
+    const rel = state.layer === "religion";
     map.setSelected(state.polity);
-    panel.renderYear(state.year);
-    panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null);
+    map.setReligionSelected(rel && state.relPick ? state.relPick.region : -1);
+    panel.renderYear(state.year, { religion: rel });
+    if (rel) panel.renderReligion(state.relPick, state.year);
+    else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null);
+    renderLegend();
     const h = new URLSearchParams({ y: String(state.year) });
     if (state.polity) h.set("p", state.polity);
+    if (rel) h.set("l", "religion");
     history.replaceState(null, "", `#${h}`);
     document.title = `${state.year}年 ― ヨーロッパ歴史地図`;
     updateMilestones();
@@ -76,6 +98,13 @@ async function main() {
   }
 
   function selectPolity(id: string | null, focus: boolean) {
+    // 宗教表示中にパネルの × を押したときは、宗教の地域の選択を解除する
+    if (!id && state.layer === "religion" && state.relPick) {
+      state.relPick = null;
+      updateUi();
+      return;
+    }
+    if (id && state.layer !== "political") setLayer("political", false);
     state.polity = id;
     update();
     if (id) {
@@ -185,6 +214,68 @@ async function main() {
     applyModern();
   });
 
+  // ---- 地図の種類（政治／宗教）。言語などを足すときは LAYERS に項目を増やし、map.ts の MapLayer に足す ----
+  const LAYERS: { id: MapLayer; label: string; title: string }[] = [
+    { id: "political", label: "政治", title: "国ごとの塗り分け" },
+    { id: "religion", label: "宗教", title: "宗教の分布（R キー）" },
+  ];
+  const layerSwitch = $("#layer-switch");
+  for (const l of LAYERS) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.dataset.layer = l.id;
+    b.textContent = l.label;
+    b.title = l.title;
+    b.setAttribute("role", "radio");
+    b.addEventListener("click", () => setLayer(l.id));
+    layerSwitch.appendChild(b);
+  }
+  function setLayer(l: MapLayer, refresh = true) {
+    if (l === state.layer && refresh) return;
+    state.layer = l;
+    if (l !== "religion") state.relPick = null;
+    map.setLayer(l);
+    syncLayerButtons();
+    if (refresh) updateUi();
+  }
+  function syncLayerButtons() {
+    for (const b of layerSwitch.querySelectorAll<HTMLButtonElement>("button")) {
+      const on = b.dataset.layer === state.layer;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-checked", String(on));
+    }
+    document.body.dataset.layer = state.layer;
+    modernBtn.title =
+      state.layer === "religion"
+        ? "重ねる国境を現代のものに切り替え（C キーを押している間は逆の表示）"
+        : "現代の国境に切り替え（C キーを押している間は逆の表示）";
+  }
+
+  // 宗教の凡例（その年の地図に出ている種類だけ）
+  const relLegend = $("#rel-legend");
+  let legendKey = "";
+  relLegend.addEventListener("click", (e) => {
+    if ((e.target as Element).closest(".rl-toggle")) relLegend.classList.toggle("collapsed");
+  });
+  function renderLegend() {
+    const rel = state.layer === "religion";
+    relLegend.hidden = !rel;
+    if (!rel) return;
+    const kinds = atlas.religion?.kinds ?? [];
+    const shown = map.religionKindsShown();
+    const key = JSON.stringify(shown);
+    if (key === legendKey) return;
+    legendKey = key;
+    const items = shown.kinds
+      .map((i) => `<li><i style="background:${kinds[i].color}"></i>${kinds[i].name}</li>`)
+      .join("");
+    const hatchSample = kinds.length
+      ? `<li class="rl-hatch"><i style="background:repeating-linear-gradient(135deg, ${stripeColor(kinds[0].color)} 0 2px, #f1efe9 2px 6px)"></i>斜線＝少数派も多い地域（斜線の色が少数派）</li>`
+      : "";
+    relLegend.innerHTML = `<button type="button" class="rl-toggle" aria-label="凡例を開く／閉じる">宗教<span class="rl-caret"></span></button>
+      <ul>${items}${shown.minors ? hatchSample : ""}${shown.nodata ? `<li><i class="rl-nodata"></i>データ作成中</li>` : ""}</ul>`;
+  }
+
   // ---- 検索とキーボードショートカット ----
   const search = new Search($("#search"), {
     map,
@@ -222,6 +313,10 @@ async function main() {
       yearInput.value = digit;
     },
     toggleModern: () => modernBtn.click(),
+    toggleReligion: () => {
+      setLayer(state.layer === "religion" ? "political" : "religion");
+      toast(state.layer === "religion" ? "宗教の分布（R で戻す）" : "政治の地図");
+    },
     compare: (on) => {
       if (on) {
         const target = prevMs()?.year ?? state.year - 1;
@@ -257,6 +352,11 @@ async function main() {
       else fallback();
     },
     deselect: () => {
+      if (state.layer === "religion" && state.relPick) {
+        state.relPick = null;
+        updateUi();
+        return true;
+      }
       if (!state.polity) return false;
       selectPolity(null, false);
       return true;
@@ -270,13 +370,21 @@ async function main() {
     const p = h.get("p");
     if (Number.isFinite(y) && y >= minYear && y <= maxYear) state.year = y;
     state.polity = p && idx.polityById.has(p) ? p : null;
+    const l = h.get("l") === "religion" ? "religion" : "political";
+    if (l !== state.layer) setLayer(l, false);
     update();
   });
 
+  if (state.layer !== "political") {
+    const l = state.layer;
+    state.layer = "political";
+    setLayer(l, false);
+  } else syncLayerButtons();
   update();
   (window as unknown as { __atlas: unknown }).__atlas = map;
   await map.ready;
   document.body.classList.add("ready");
+  void map.loadWater(base);
 }
 
 main().catch((e) => {

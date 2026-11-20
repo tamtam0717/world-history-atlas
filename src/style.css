@@ -874,3 +874,172 @@ body.debug #debug-info {
     bottom: 160px;
   }
 }
+
+/* ---- 地図の種類（政治／宗教） ---- */
+.layer-switch {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  margin-left: -4px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  width: 42px;
+  background: rgba(251, 249, 244, 0.92);
+}
+.zoom-buttons .layer-switch button {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.zoom-buttons .layer-switch button + button {
+  border-top: 1px solid var(--line);
+}
+.zoom-buttons .layer-switch button.active {
+  background: #5b4a38;
+  color: #fff;
+}
+body[data-layer="religion"] .legend {
+  display: none;
+}
+
+/* ---- 宗教の凡例 ---- */
+.rel-legend {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  z-index: 4;
+  font-size: 11.5px;
+  color: var(--ink);
+  background: rgba(251, 249, 244, 0.92);
+  border: 1px solid var(--line);
+  padding: 6px 10px 6px;
+  border-radius: 8px;
+  max-width: 300px;
+}
+.rel-legend[hidden] {
+  display: none;
+}
+.rel-legend .rl-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: none;
+  padding: 0 0 3px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+}
+.rel-legend .rl-caret::before {
+  content: "▾";
+  font-size: 10px;
+  color: var(--muted);
+}
+.rel-legend.collapsed .rl-caret::before {
+  content: "▸";
+}
+.rel-legend.collapsed ul {
+  display: none;
+}
+.rel-legend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 3px 12px;
+}
+.rel-legend li {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.rel-legend li.rl-hatch {
+  grid-column: 1 / -1;
+  white-space: normal;
+  color: var(--muted);
+}
+.rel-legend i {
+  flex: none;
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  margin-right: 5px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.rel-legend i.rl-nodata {
+  background: #e2e0dc;
+}
+@media (max-width: 799px) {
+  .rel-legend {
+    left: auto;
+    right: 10px;
+    bottom: auto;
+    top: 48px;
+    font-size: 10.5px;
+    padding: 4px 8px;
+    max-width: 210px;
+  }
+  .rel-legend ul {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+/* ---- 宗教のカード（パネル） ---- */
+.rel-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.rel-minor {
+  margin-left: 6px;
+  color: var(--muted);
+}
+.rel-now {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  margin: 4px 0 8px;
+}
+.rel-now dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+.rel-now dd {
+  margin: 0;
+}
+.rel-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rel-timeline li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+.rel-timeline li.now {
+  font-weight: 600;
+}
+.rel-timeline .years {
+  display: inline-block;
+  min-width: 46px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.rel-timeline .note {
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 46px;
+}

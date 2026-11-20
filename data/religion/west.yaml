@@ -1,0 +1,221 @@
+# 宗教（宗派）の分布：西ヨーロッパ・北アフリカ（1648–1815）
+# 形式は docs/religion-format.md。main = 住民の多数派、minor = 2〜3割以上の少数派。
+
+# ---- フランス ----
+- id: rel_france
+  name: フランス
+  select:
+    iso: [FRA, MCO, AND]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: カトリックが圧倒的多数。プロテスタント（ユグノー）は全人口の5％ほどで、南部・西部に集中する。
+
+- id: rel_france_huguenot_core
+  name: セヴェンヌ・ヴィヴァレ（ユグノーの中心地）
+  select:
+    adm2: ["FRA/Gard", "FRA/Ardèche"]
+    pieces: [FRA-Florac_Trois_Rivieres, FRA-Die]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: ナントの王令（1598）のもとで改革派（ユグノー）が公認されている。セヴェンヌ山地・ニーム・ヴィヴァレでは住民の多くが改革派。
+    - from: 1685
+      main: catholic
+      minor: reformed
+      note: フォンテーヌブローの王令（ナントの王令廃止）で改革派は禁止されるが、この地方では信徒が地下（「荒野の教会」）で信仰を続け、カミザールの反乱（1702–04）も起こる。
+      source: "https://ja.wikipedia.org/wiki/フォンテーヌブローの勅令"
+    - from: 1787
+      main: catholic
+      minor: reformed
+      note: ヴェルサイユの寛容令でプロテスタントの戸籍が認められ、1789年の人権宣言で信教の自由が保障される。
+
+- id: rel_france_huguenot_west_south
+  name: ユグノーの多い地方（ポワトゥー・サントンジュ・カストル・モントーバン・ベアルン）
+  select:
+    pieces: [FRA-Niort, FRA-La_Rochelle, FRA-Saint_Jean_d_Angely, FRA-Castres, FRA-Montauban, FRA-Pau, FRA-Pamiers, FRA-Nyons]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: ユグノーの町や村が多い地方。ラ・ロシェルは1628年の陥落で勢力を失ったが、周辺の改革派は多い。（地方の範囲は大まかな目安。要確認）
+    - from: 1685
+      main: catholic
+      note: ナントの王令廃止（1685）。竜騎兵による強制改宗（ドラゴナード）と国外亡命で、改革派は表向き消える（ポワトゥーなどに地下の信徒は残る）。
+      source: "https://ja.wikipedia.org/wiki/フォンテーヌブローの勅令"
+
+- id: rel_alsace_lutheran
+  name: ストラスブールと下アルザスのルター派地域
+  select:
+    pieces: [FRA-Strasbourg]
+  timeline:
+    - from: 1648
+      main: lutheran
+      minor: catholic
+      note: ストラスブールは宗教改革以来ルター派の都市。1681年のフランス併合後も信仰は認められ、カトリックが増えていく。
+    - from: 1681
+      main: lutheran
+      minor: catholic
+      note: フランス併合で大聖堂はカトリックに戻されるが、市民の多数はルター派のまま。
+
+- id: rel_alsace_mixed
+  name: アルザスの混在地域（ハーゲナウ・ザヴェルヌ・コルマール）
+  select:
+    pieces: [FRA-Haguenau, FRA-Saverne, FRA-Colmar]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: lutheran
+      note: ハーナウ＝リヒテンベルク伯領、コルマール市、ミュンスター渓谷、ヴュルテンベルク領リクヴィールなどにルター派が多い。
+
+- id: rel_mulhouse
+  name: ミュールーズ周辺
+  select:
+    pieces: [FRA-Mulhouse]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: ミュールーズ共和国（1798年までスイスの同盟者）は改革派の都市。周辺のズントガウはカトリック。
+
+- id: rel_montbeliard
+  name: モンベリアール
+  select:
+    pieces: [FRA-Montbeliard]
+  timeline:
+    - from: 1648
+      main: lutheran
+      note: ヴュルテンベルク家の伯領で、ルター派。1793年にフランスに併合された後もルター派が多い。
+
+# ---- イベリア半島・イタリア以外の南欧の小国 ----
+- id: rel_iberia
+  name: スペインとポルトガル
+  select:
+    iso: [ESP, PRT]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: モリスコの追放（1609–14）以後、住民はほぼすべてカトリック。異端審問が続く。
+
+# ---- ブリテン諸島 ----
+- id: rel_england_wales
+  name: イングランドとウェールズ
+  select:
+    regions: [england_wales]
+  timeline:
+    - from: 1648
+      main: anglican
+      note: ピューリタン革命期（1649–60）は国教会の主教制が廃止され、長老派・独立派が力を持つ。
+    - from: 1660
+      main: anglican
+      note: 王政復古で国教会が復活。非国教徒（ピューリタン系）とカトリックは審査法（1673）などで公職から締め出される。1689年の寛容法で非国教徒の礼拝は認められる。
+      source: "https://ja.wikipedia.org/wiki/寛容法"
+
+- id: rel_scotland
+  name: スコットランド
+  select:
+    regions: [scotland]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: 長老派（改革派）のスコットランド教会が多数。ハイランドの一部と西部の島々にカトリック、北東部に主教制派（監督派）が残る。
+    - from: 1690
+      main: reformed
+      note: 名誉革命後、スコットランド教会は長老制に確定する。
+
+- id: rel_ireland
+  name: アイルランド
+  select:
+    regions: [ireland]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 住民の大多数はカトリック。支配層はアイルランド国教会（イギリス国教会系）。クロムウェルの征服（1649–53）後、土地の多くがプロテスタントに移る。18世紀には刑罰法でカトリックの権利が制限される。
+
+- id: rel_ulster_east
+  name: アルスター東部（アントリム・ダウン北部）
+  select:
+    pieces: [GBR-Antrim_and_Newtownabbey, GBR-Ards_and_North_Down, GBR-Belfast, GBR-Lisburn_and_Castlereagh, GBR-Mid_and_East_Antrim, GBR-Causeway_Coast_and_Glens]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: reformed
+      note: アルスター植民（1609–）でスコットランド系の長老派（改革派）が入植している。
+    - from: 1690
+      main: reformed
+      minor: catholic
+      note: 1690年代にスコットランドから大規模な移住があり、長老派が多数になる。（時期は要確認）
+
+- id: rel_ulster_west
+  name: アルスター西部・南部（デリー・ティロン・アーマー・ファーマナ・ダウン南部）
+  select:
+    pieces: [GBR-Derry_City_and_Strabane, GBR-Mid_Ulster, GBR-Fermanagh_and_Omagh, GBR-Armagh_City_Banbridge_and_Craigavon, GBR-Newry_Mourne_and_Down]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: anglican
+      note: アルスター植民で入植したイングランド系の国教会信徒とスコットランド系の長老派が、カトリックの住民と混在する。
+
+- id: rel_dublin
+  name: ダブリン市
+  select:
+    pieces: [IRL-NORTH_INNER_CITY_LEA_7, IRL-SOUTH_EAST_INNER_CITY_LEA_5, IRL-PEMBROKE_LEA_5, IRL-CABRA_GLASNEVIN_LEA_7, IRL-KIMMAGE_RATHMINES_LEA_6]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: anglican
+    - from: 1660
+      main: anglican
+      minor: catholic
+      note: 王政復古から18世紀半ばまで、ダブリン市内はプロテスタント（国教会）が多数。（要確認）
+    - from: 1780
+      main: catholic
+      minor: anglican
+      note: 農村からの移住で、18世紀後半にはカトリックが再び多数になる。（要確認）
+
+# ---- 北大西洋 ----
+- id: rel_iceland
+  name: アイスランド
+  select:
+    regions: [iceland]
+  timeline:
+    - from: 1648
+      main: lutheran
+
+- id: rel_greenland
+  name: 東グリーンランド
+  select:
+    regions: [east_greenland]
+  timeline:
+    - from: 1648
+      main: other
+      note: イヌイットの伝統的な信仰。西岸では1721年からハンス・エーゲデのルター派の伝道が始まる。
+
+# ---- 北アフリカ ----
+- id: rel_maghreb
+  name: マグリブ（モロッコ・アルジェリア・チュニジア・リビア）と西サハラ
+  select:
+    iso: [MAR, DZA, TUN, LBY, ESH, MRT, MLI]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スンナ派（マーリク派）。各地にユダヤ教徒の共同体がある。ムザブ（アルジェリア）とジェルバ島（チュニジア）にはイバード派が住む。
+
+- id: rel_ceuta_presidios
+  name: オラン
+  select:
+    regions: [oran]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スペインの要塞都市（1708–32年はアルジェ領）。後背地の住民はムスリム。
+
+- id: rel_egypt
+  name: エジプト
+  select:
+    iso: [EGY]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スンナ派が多数。コプト教会（東方諸教会）の信徒が人口の1割前後いる。
