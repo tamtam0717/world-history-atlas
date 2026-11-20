@@ -1,0 +1,20 @@
+{
+  "_comment": "ピース（地図の最小区画）の作り方の設定。bbox は [西, 南, 東, 北]（経度・緯度）。",
+  "bbox": [-25, 27, 52, 72],
+  "default_level": "ADM2",
+  "cgaz_level": {
+    "ROU": "ADM1", "CYP": "ADM1", "LVA": "ADM1", "TUR": "ADM1", "MLT": "ADM1",
+    "KWT": "ADM1", "EGY": "ADM1", "BGR": "ADM1", "RUS": "ADM1", "ARM": "ADM1",
+    "AZE": "ADM1", "GEO": "ADM1", "KAZ": "ADM1", "IRN": "ADM1", "IRQ": "ADM1",
+    "SYR": "ADM1", "SAU": "ADM1", "JOR": "ADM1", "LBN": "ADM1", "ISR": "ADM1",
+    "TUN": "ADM1", "LUX": "ADM1", "SMR": "ADM1", "MCO": "ADM1", "AND": "ADM1",
+    "LIE": "ADM1", "ISL": "ADM1"
+  },
+  "fine": {
+    "DEU": {"path": "gb/DEU_ADM3.geojson", "source": "geoBoundaries DEU ADM3 (BKG, dl-de/by-2-0)"},
+    "ITA": {"path": "gb/ITA_ADM3.geojson", "source": "geoBoundaries ITA ADM3 (ISTAT, CC BY 3.0)"},
+    "FRA": {"path": "gb/FRA_ADM3.geojson", "source": "geoBoundaries FRA ADM3 (IGN-F, Etalab 2.0)"},
+    "BEL": {"path": "gb/BEL_ADM3.geojson", "source": "geoBoundaries BEL ADM3 (CC0)"},
+    "GRC": {"path": "gb/GRC_ADM3.geojson", "source": "geoBoundaries GRC ADM3 (CC0)"}
+  }
+}
