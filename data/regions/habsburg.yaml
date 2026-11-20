@@ -1,0 +1,868 @@
+# 担当 D（ハプスブルク領）の地域と所属の変遷
+# ピースの範囲：AUT CZE SVK HUN SVN HRV
+#
+# 年の決まり（この担当で採ったもの）
+# - 大トルコ戦争でのハンガリー・スラヴォニア・リカなどの回復は、実効支配（ブダ奪回1686など）ではなく
+#   カルロヴィッツ条約（1699）で切り替える。ダルマチア内陸の一部（イモツキ・ヴルゴラツ）はパッサロヴィッツ条約（1718）。
+# - ナポレオン期は条約年：プレスブルク条約（1805）、シェーンブルン条約（1809）、パリ条約（1810、フランス→バイエルン）、
+#   第1次パリ条約（1814）でイリリア・チロルなどがオーストリアに戻る。ラグーザはウィーン議定書（1815）。
+# - 1815年はドイツ連邦（german_confederation）。オーストリアのうち旧帝国領（オーストリア諸邦・ボヘミア王冠領など）だけを入れ、
+#   ハンガリー・クロアチア・ダルマチアは入れない。
+# - 軍政国境地帯（クロアチア・スラヴォニア国境地帯）はハプスブルク直轄の軍管区だが、地図では habsburg のまま。
+
+# ===================== オーストリア（AUT） =====================
+
+- id: austria_core
+  name: オーストリア諸邦（下・上オーストリア、シュタイアーマルク、ケルンテン）
+  select:
+    adm1: ["AUT/Niederösterreich", "AUT/Wien", "AUT/Oberösterreich", "AUT/Steiermark", "AUT/Kärnten"]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立（ウィーン議定書）
+      source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
+
+- id: innviertel
+  name: インフィアテル
+  select:
+    pieces: [AUT-Braunau_am_Inn, AUT-Ried_im_Innkreis, AUT-Scharding]
+  timeline:
+    - from: 1648
+      owner: bavaria
+      overlord: hre
+    - from: 1779
+      owner: habsburg
+      overlord: hre
+      cause: テシェン条約（バイエルン継承戦争の講和）でバイエルンからオーストリアへ
+      source: "https://ja.wikipedia.org/wiki/テシェン条約"
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1810
+      owner: bavaria
+      overlord: rhine_confederation
+      cause: シェーンブルン条約（1809）でナポレオンに割譲され、パリ条約（1810）でバイエルンへ
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Schönbrunn"
+    - from: 1813
+      owner: bavaria
+      cause: バイエルンがライン同盟を離脱（リート条約）
+    - from: 1815
+      owner: bavaria
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: 1816年のミュンヘン条約でオーストリアに戻る（データ範囲外）。
+
+- id: hausruck_west
+  name: ハウスルックフィアテル西部
+  select:
+    pieces: [AUT-Vocklabruck]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1810
+      owner: bavaria
+      overlord: rhine_confederation
+      cause: シェーンブルン条約（1809）・パリ条約（1810）でバイエルンへ
+      source: "https://en.wikipedia.org/wiki/Hausruckviertel"
+    - from: 1813
+      owner: bavaria
+      cause: バイエルンがライン同盟を離脱（リート条約）
+    - from: 1815
+      owner: bavaria
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: 割譲されたのはハウスルックフィアテルの西半分。ピースの粒度の都合でフェックラブルック郡だけを充てた（要確認）。1816年にオーストリアへ戻る。
+
+- id: upper_carinthia
+  name: 上ケルンテン（フィラッハ周辺）
+  select:
+    pieces: [AUT-Villach_Stadt, AUT-Villach_Land, AUT-Spittal_an_der_Drau, AUT-Hermagor]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスへ割譲（イリリア州）
+      source: "https://ja.wikipedia.org/wiki/イリュリア州"
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: >-
+    フィラッハはバンベルク司教領の飛び地で、1759年にマリア・テレジアが買い取った（ヴォルフスベルクなどラヴァント谷も同じ）。
+    ただし1535年以降はオーストリアのケルンテン公の領邦高権の下にあったので、地図ではオーストリアとして描く。
+
+- id: tyrol_vorarlberg
+  name: チロル・フォアアールベルク
+  select:
+    adm1: ["AUT/Tirol", "AUT/Vorarlberg"]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1805
+      owner: bavaria
+      overlord: hre
+      cause: プレスブルク条約でバイエルンへ割譲
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1806
+      owner: bavaria
+      overlord: rhine_confederation
+      cause: ライン同盟の結成
+    - from: 1813
+      owner: bavaria
+      cause: バイエルンがライン同盟を離脱（リート条約）
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約・バイエルンとの協定でオーストリアに復帰
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: 1809年にアンドレアス・ホーファーらがバイエルン・フランスの支配に対して蜂起した（チロル蜂起）。フォアアールベルクのホーエンエムス伯領（1765年までの独立した帝国諸邦）は小さいので省略。
+
+- id: east_tyrol
+  name: 東チロル（リエンツ）
+  select:
+    pieces: [AUT-Lienz]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1805
+      owner: bavaria
+      overlord: hre
+      cause: プレスブルク条約でバイエルンへ割譲
+    - from: 1806
+      owner: bavaria
+      overlord: rhine_confederation
+      cause: ライン同盟の結成
+    - from: 1810
+      owner: illyria
+      overlord: france
+      cause: パリ条約（フランス・バイエルン間）でイリリア州へ
+      source: "https://en.wikipedia.org/wiki/East_Tyrol"
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+
+- id: salzburg_at
+  name: ザルツブルク
+  select:
+    adm1: ["AUT/Salzburg"]
+  timeline:
+    - from: 1648
+      owner: salzburg
+      overlord: hre
+    - from: 1803
+      owner: salzburg
+      overlord: hre
+      cause: 帝国代表者会議主要決議で世俗化され、ザルツブルク選帝侯領となる
+      source: "https://ja.wikipedia.org/wiki/帝国代表者会議主要決議"
+    - from: 1805
+      owner: habsburg
+      overlord: hre
+      cause: プレスブルク条約でオーストリアに併合
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1810
+      owner: bavaria
+      overlord: rhine_confederation
+      cause: シェーンブルン条約（1809）でナポレオンに割譲され、パリ条約（1810）でバイエルンへ
+    - from: 1813
+      owner: bavaria
+      cause: バイエルンがライン同盟を離脱（リート条約）
+    - from: 1815
+      owner: bavaria
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: >-
+    1816年のミュンヘン条約でオーストリアに戻る（ただしルペルティウィンケルなど西部はバイエルンに残る）。
+    チロルのツィラー谷・ブリクセン谷の一部も大司教領だったが、ピースの粒度の都合で省略。
+
+- id: burgenland
+  name: ブルゲンラント（西ハンガリー）
+  select:
+    adm1: ["AUT/Burgenland"]
+  timeline:
+    - from: 1648
+      owner: habsburg
+  note: 1921年までハンガリー王国の一部（帝国の外）。エステルハージ家などハンガリー大貴族の所領が多い。
+
+# ===================== チェコ（CZE） =====================
+
+- id: moravia
+  name: モラヴィア
+  select:
+    adm1: ["CZE/Jihomoravský kraj", "CZE/Zlínský kraj", "CZE/Olomoucký kraj"]
+    pieces: [CZE-Jihlava, CZE-T_ebi, CZE-ar_nad_Sazavou, CZE-Novy_Ji_in, CZE-Ostrava_City]
+    exclude: [CZE-Jesenik]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: ボヘミア王冠領の一つ（モラヴィア辺境伯領）。
+
+- id: silesia_cz
+  name: オーストリア領シュレージエン（トロッパウ・テッシェン）
+  select:
+    pieces: [CZE-Opava, CZE-Bruntal, CZE-Jesenik, CZE-Karvina, CZE-Frydek_Mistek]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: >-
+    1742年のシュレジエン割譲の後もオーストリアに残った部分（トロッパウ・イェーゲルンドルフの南部、テッシェン公領、ナイセ侯領の南部）。
+    オパヴァ郡の北東部（フルチーン地方）は1742年にプロイセン領となったが、ピースの小さい側なので地図ではオーストリアとして描く。
+  source: "https://ja.wikipedia.org/wiki/オーストリア領シレジア"
+
+- id: bohemia
+  name: ボヘミア
+  select:
+    iso: [CZE]
+    exclude_regions: [moravia, silesia_cz]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: ボヘミア王国はボヘミア王冠領の中心で、ボヘミア王は帝国の選帝侯の一人。ヘプ（エーガー）地方を含む。
+
+# ===================== スロヴァキア（SVK）＝上部ハンガリー =====================
+
+- id: upper_hungary
+  name: 上部ハンガリー（現スロヴァキア）
+  select:
+    iso: [SVK]
+  timeline:
+    - from: 1648
+      owner: habsburg
+  note: ハンガリー王国の一部（帝国の外）。オスマン帝国に首都ブダを奪われていた時期（1536–1783）はプレスブルク（ブラチスラヴァ）がハンガリーの首都・戴冠の地だった。
+
+- id: thokoly_sk
+  name: 上部ハンガリー東部（カッシャ・エペリェシュ）
+  select:
+    adm1: ["SVK/Region of Ko?ice", "SVK/Region of Pre?ov"]
+  timeline:
+    - from: 1648
+      owner: habsburg
+    - from: 1682
+      owner: thokoly
+      overlord: ottoman
+      certainty: uncertain
+      cause: テケリ・イムレがオスマン帝国の後ろ盾で上部ハンガリー公となる
+      source: "https://en.wikipedia.org/wiki/Principality_of_Upper_Hungary"
+    - from: 1685
+      owner: habsburg
+      cause: テケリの失脚と皇帝軍によるカッシャ（コシツェ）などの奪回
+  note: テケリ・イムレの支配範囲は戦況で大きく変わった。1682–1684年の範囲はおおよそ（要確認）。
+
+- id: nove_zamky
+  name: エルシェクウーイヴァール（ノヴェー・ザームキ）
+  select:
+    pieces: [SVK-District_of_Nova_Zkmky]
+  timeline:
+    - from: 1648
+      owner: habsburg
+    - from: 1664
+      owner: ottoman
+      cause: 要塞が1663年にオスマン軍に陥落し、ヴァシュヴァール条約でオスマン領（ウイヴァル州）となる
+      source: "https://en.wikipedia.org/wiki/Peace_of_Vasvár"
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約（要塞は1685年に皇帝軍が奪回）
+  note: ドナウ河畔のパールカーニ（シュトゥーロヴォ）は1683年までオスマン領だったが、ピースの小さい側なので省略。
+
+- id: lubovna
+  name: スピシュの質入れ都市（スタラー・ルボヴニャ）
+  select:
+    pieces: [SVK-District_of_Stark_Lubovna]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+      cause: 1412年からポーランドに質入れされていたスピシュ（ツィプス）13都市とルボヴニャ城領
+    - from: 1772
+      owner: habsburg
+      cause: 第1回ポーランド分割（1769年にオーストリアが占領・編入）
+      source: "https://en.wikipedia.org/wiki/Spiš"
+  note: 質入れされた都市はスピシュ地方に点在する（ポプラト・スピシュスカー・ノヴァー・ヴェスなど）。ピースの粒度の都合で、ルボヴニャ城とポドリネツを含むスタラー・ルボヴニャ郡だけを充てた。
+
+# ===================== ハンガリー（HUN） =====================
+
+- id: hungary_hu
+  name: 王領ハンガリー
+  select:
+    iso: [HUN]
+  timeline:
+    - from: 1648
+      owner: habsburg
+  note: >-
+    ハンガリー王国（帝国の外）。1648年時点ではトランスダヌビア西部と北部だけがハプスブルク家の王領ハンガリーで、
+    中部・南部はオスマン領、東部はトランシルヴァニア公国の勢力下にあった（下の地域で上書き）。
+
+- id: ottoman_hungary_hu
+  name: オスマン領ハンガリー（ブダ州など）
+  select:
+    adm1: ["HUN/Pest", "HUN/Fejér", "HUN/Tolna", "HUN/Baranya", "HUN/Somogy", "HUN/Bács-Kiskun",
+           "HUN/Csongrád-Csanád", "HUN/Békés", "HUN/Jász-Nagykun-Szolnok", "HUN/Heves"]
+    pieces: [HUN-Esztergom, HUN-Nagykanizsa, HUN-Paszto, HUN-Batonyterenye,
+             HUN-Mez_kovesd, HUN-Mez_csat, HUN-Tiszaujvaros]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約（ブダは1686年、ペーチは1686年、セーケシュフェヘールヴァールは1688年に皇帝軍が奪回）
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+  note: >-
+    オスマン帝国のブダ州・テメシュヴァル州・エーリ（エゲル）州・カニジャ州など。エステルゴムは1683年、カニジャは1690年に奪回。
+    王領との境界付近の村々は双方に税を納めることが多く、境界ははっきりしない。
+
+- id: szabolcs_szatmar
+  name: サボルチ・サトマール
+  select:
+    adm1: ["HUN/Szabolcs-Szatmár-Bereg"]
+  timeline:
+    - from: 1648
+      owner: transylvania
+      overlord: ottoman
+      certainty: uncertain
+      cause: リンツ条約（1645）でラーコーツィ家に終身で与えられた
+      source: "https://en.wikipedia.org/wiki/Peace_of_Linz"
+    - from: 1660
+      owner: habsburg
+      certainty: uncertain
+      cause: ラーコーツィ・ジェルジ2世の死でハンガリー王（ハプスブルク家）に返還
+    - from: 1682
+      owner: thokoly
+      overlord: ottoman
+      certainty: uncertain
+      cause: テケリ・イムレが上部ハンガリー公となる
+    - from: 1685
+      owner: habsburg
+      cause: テケリの失脚と皇帝軍による回復
+  note: パルティウム（トランシルヴァニア公の支配したハンガリー東部）の一部。1648–1660年の帰属は要確認。
+
+- id: bihar_hajdu
+  name: ビハール・ハイドゥー地方（デブレツェン）
+  select:
+    adm1: ["HUN/Hajdú-Bihar"]
+  timeline:
+    - from: 1648
+      owner: transylvania
+      overlord: ottoman
+      certainty: uncertain
+      cause: パルティウムの一部としてトランシルヴァニア公の支配下
+    - from: 1660
+      owner: ottoman
+      certainty: uncertain
+      cause: ヴァーラド（オラデア）の陥落でオスマン帝国のヴァーラド州となる
+      source: "https://en.wikipedia.org/wiki/Siege_of_Várad_(1660)"
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約（ヴァーラドは1692年に皇帝軍が奪回）
+  note: デブレツェンは実際には三者（オスマン・トランシルヴァニア・ハプスブルク）に税を納めて自治を保った町。ハイドゥー（ハイドゥク）の町々はボチカイが定住させた傭兵の町。
+
+- id: thokoly_hu
+  name: ボルショド・アバウーイ・ゼンプレーン
+  select:
+    adm1: ["HUN/Borsod-Abaúj-Zemplén"]
+    exclude: [HUN-Mez_kovesd, HUN-Mez_csat, HUN-Tiszaujvaros]
+  timeline:
+    - from: 1648
+      owner: habsburg
+    - from: 1682
+      owner: thokoly
+      overlord: ottoman
+      certainty: uncertain
+      cause: テケリ・イムレがオスマン帝国の後ろ盾で上部ハンガリー公となる
+    - from: 1685
+      owner: habsburg
+      cause: テケリの失脚と皇帝軍による回復
+  note: 南部（メゼーケヴェシュド周辺）はオスマン領ハンガリー（エーリ州）に含めた。
+
+# ===================== スロヴェニア（SVN） =====================
+
+- id: prekmurje
+  name: プレクムリェ（ハンガリー領）
+  select:
+    pieces: [SVN-Murska_Sobota, SVN-Lendava, SVN-Beltinci, SVN-Cankova, SVN-Crencovci, SVN-Dobrovnik,
+             SVN-Gornji_Petrovci, SVN-Grad, SVN-Hodoj, SVN-Kobilje, SVN-Kuzma, SVN-Moravske_Toplice,
+             SVN-Odranci, SVN-Puconci, SVN-Rogaoovci, SVN-Kalovci, SVN-Tigina, SVN-Turnicce,
+             SVN-Velika_Polana, SVN-Razkrirje]
+  timeline:
+    - from: 1648
+      owner: habsburg
+  note: ムーラ川の東は1919年までハンガリー王国のヴァシュ県・ザラ県の一部（帝国の外）。
+
+- id: carniola
+  name: カルニオラ（クライン）
+  select:
+    pieces: [SVN-Ljubljana, SVN-Brezovica, SVN-Ig, SVN-Ikofljica, SVN-Dol_pri_Ljubljani, SVN-Medvode,
+             SVN-Vodice, SVN-Komenda, SVN-Mengel, SVN-Trzin, SVN-Domcale, SVN-Lukovica, SVN-Moravce,
+             SVN-Kamnik, SVN-Cerklje_na_Gorenjskem, SVN-Vencur, SVN-Kranj, SVN-Naklo, SVN-Preddvor,
+             SVN-Trsic, SVN-Tirovnica, SVN-Radovljica, SVN-Bled, SVN-Bohinj, SVN-Gorje, SVN-Jesenice,
+             SVN-Kranjska_Gora, SVN-Mkofja_Loka, SVN-Gorenja_vas_Poljane, SVN-Gelezniki, SVN-Siri,
+             SVN-Idrija, SVN-Logatec, SVN-Vrhnika, SVN-Borovnica, SVN-Log_Dragomer, SVN-Horjul,
+             SVN-Dobrova_Polhov_Gradec, SVN-Cerknica, SVN-Bloke, SVN-Loska_Dolina, SVN-Postojna,
+             SVN-Pivka, SVN-Ilirska_Bistrica, SVN-Vipava, SVN-Divaca, SVN-Senana, SVN-Hrpelje_Kozina,
+             SVN-Grosuplje, SVN-Ivancna_Gorica, SVN-Dobrepolje, SVN-Velike_La, SVN-Ribnica,
+             SVN-Sodracica, SVN-Loski_Potok, SVN-Kocevje, SVN-Kostel, SVN-Osilnica, SVN-Suremberk,
+             SVN-Dolenjske_Toplice, SVN-Straca, SVN-Novo_mesto, SVN-Mirna_Pec, SVN-Smarjepke_Toplice,
+             SVN-Centjernej, SVN-Ckocjan, SVN-Kostanjevica_na_Krki, SVN-Krcko, SVN-Trebnje, SVN-Mirna,
+             SVN-Sentrupert, SVN-Mokronog_Trebelno, SVN-Crnomelj, SVN-Metlika, SVN-Semic, SVN-Litija,
+             SVN-Rmartno_pri_Litiji, SVN-Zagorje_ob_Savi, SVN-Radece]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスへ割譲（イリリア州。首都ライバッハ）
+      source: "https://ja.wikipedia.org/wiki/イリュリア州"
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: >-
+    ハプスブルク家の世襲領（内オーストリア）の一つ、カルニオラ公領。シュコフィア・ロカ周辺はフライジング司教、ブレッド周辺はブリクセン司教の所領（1803年まで）だったが、
+    カルニオラの領邦高権の下にあったのでオーストリアとして描く。カルスト地方の一部（セジャナなど）はゴリツィア伯領・トリエステ領に属した。
+
+- id: gorizia_si
+  name: ゴリツィア伯領（ゲルツ）
+  select:
+    pieces: [SVN-Nova_Gorica, SVN-Brda, SVN-Kanal, SVN-Tolmin, SVN-Kobarid, SVN-Bovec,
+             SVN-Miren_Kostanjevica, SVN-Nempeter_Vrtojba, SVN-Rence_Vogrsko, SVN-Ajdovtcina,
+             SVN-Komen, SVN-Cerkno]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスへ割譲（イリリア州）
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: 中心のゴリツィア市は現イタリア（担当 C）。
+
+- id: venetian_istria_si
+  name: ヴェネツィア領イストリア（コペル・ピラン）
+  select:
+    pieces: [SVN-Koper_Capodistria, SVN-Izola_Isola, SVN-Piran_Pirano, SVN-Ankaran_Ancarano]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約でヴェネツィア共和国が消滅し、オーストリア領に
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: italy_kingdom
+      cause: プレスブルク条約でナポレオンのイタリア王国へ
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: 1815年にドイツ連邦に含まれたかは要確認（旧ヴェネツィア領イストリアは含めていない）。
+
+- id: lower_styria
+  name: 南シュタイアーマルク・南ケルンテン
+  select:
+    iso: [SVN]
+    exclude_regions: [prekmurje, carniola, gorizia_si, venetian_istria_si]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: マリボル・ツェリェ・プトゥイなど（シュタイアーマルク公領の南部）と、メジャ谷・ドラヴォグラード（ケルンテン公領）。1809年もオーストリアに残った。
+
+# ===================== クロアチア（HRV） =====================
+
+- id: croatia_hr
+  name: クロアチア・スラヴォニア王国（ザグレブ周辺）
+  select:
+    iso: [HRV]
+  timeline:
+    - from: 1648
+      owner: habsburg
+  note: >-
+    ハンガリー王冠に属するクロアチア王国（帝国の外）。1648年にハプスブルク家の手にあったのはザグレブ・ヴァラジュディン・カルロヴァツ周辺の「残りの残り」と呼ばれた地域だけで、
+    オスマン帝国との境界にはウィーンが直轄する軍政国境地帯（ヴァラジュディン総督領・カルロヴァツ総督領など）が置かれた。メジムリェは1848年までハンガリーのザラ県に属した。
+
+- id: slavonia_hr
+  name: スラヴォニア
+  select:
+    adm1: ["HRV/Osijek-Baranja", "HRV/Vukovar-Syrmia", "HRV/Brod-Posavina", "HRV/Po?ega-Slavonia", "HRV/Virovitica-Podravina"]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約（オシエクは1687年、ポジェガは1688年に皇帝軍が奪回）
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+  note: オスマン帝国のポジェガ県・ペチュ県など。回復後、サヴァ川沿いはスラヴォニア軍政国境地帯となった。東スレム（現セルビア）は担当 E。
+
+- id: bilogora_moslavina
+  name: ビロゴラ・モスラヴィナ（旧境界地帯）
+  select:
+    pieces: [HRV-Grad_Daruvar, HRV-Grad_Grubi_no_Polje, HRV-Grad_Gare_nica, HRV-Op_ina_ulovac,
+             HRV-Op_ina_De_anovac, HRV-Op_ina_Sira, HRV-Op_ina_Hercegovac, HRV-Op_ina_Kon_anica,
+             HRV-Op_ina_Veliki_Gr_evac, HRV-Op_ina_Veliki_Pisanica, HRV-Op_ina_Velika_Trnovitica,
+             HRV-Op_ina_androvac, HRV-Op_ina_Nova_Ra_a, HRV-Op_ina_Severin, HRV-Op_ina_Veliko_Trojstvo,
+             HRV-Grad_Kutina, HRV-Grad_Popova_a, HRV-Grad_Novska, HRV-Op_ina_Lipovljani,
+             HRV-Op_ina_Velika_Ludina, HRV-Op_ina_Jasenovac]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: uncertain
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約
+  note: 17世紀にはオスマン帝国とハプスブルク家の間の荒廃した境界地帯で、境界ははっきりしない（要確認）。ビェロヴァルの町は1756年に軍政国境地帯の拠点として建設された。
+
+- id: croatia_south_hr
+  name: サヴァ川以南のクロアチア（カルロヴァツ・ゴルスキ・コタル）
+  select:
+    adm1: ["HRV/Karlovac"]
+    pieces: [HRV-Grad_Jastrebarsko, HRV-Grad_Samobor, HRV-Grad_Sveta_Nedelja, HRV-Op_ina_Stupnik,
+             HRV-Grad_Velika_Gorica, HRV-Op_ina_Klin_a_Sela, HRV-Op_ina_Kra_i, HRV-Op_ina_umberak,
+             HRV-Op_ina_Pisarovina, HRV-Op_ina_Pokupsko, HRV-Op_ina_Kravarsko, HRV-Op_ina_Orle,
+             HRV-Grad_Sisak, HRV-Op_ina_Lekenik, HRV-Grad_Petrinja,
+             HRV-Grad_abar, HRV-Grad_Bakar, HRV-Grad_Crikvenica, HRV-Grad_Delnice, HRV-Grad_Kraljevica,
+             HRV-Grad_Novi_Vinodolski, HRV-Grad_Vrbovsko, HRV-Op_ina_avle, HRV-Op_ina_Brod_Moravice,
+             HRV-Op_ina_Fu_ine, HRV-Op_ina_Jelenje, HRV-Op_ina_Kostrena, HRV-Op_ina_Lokve,
+             HRV-Op_ina_Mrkopalj, HRV-Op_ina_Ravna_Gora, HRV-Op_ina_Skrad, HRV-Op_ina_Vinodolska_op_ina,
+             HRV-Grad_Senj, HRV-Grad_Oto_ac, HRV-Op_ina_Brinje, HRV-Op_ina_Karlobag]
+  timeline:
+    - from: 1648
+      owner: habsburg
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でサヴァ川以南のクロアチア（文民クロアチアと軍政国境地帯）がフランスへ（イリリア州）
+      source: "https://en.wikipedia.org/wiki/Illyrian_Provinces"
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: カルロヴァツ軍政国境地帯とサヴァ川以南の文民クロアチア。ゴルスキ・コタルとヴィノドルはズリンスキ家・フランコパン家の所領だった（1671年に没収）。
+
+- id: lika_hr
+  name: リカ・クルバヴァ
+  select:
+    pieces: [HRV-Grad_Gospi, HRV-Op_ina_Peru_i, HRV-Op_ina_Lovinac, HRV-Op_ina_Udbina,
+             HRV-Op_ina_Plitvi_ka_Jezera, HRV-Op_ina_Donji_Lapac, HRV-Op_ina_Vrhovine, HRV-Op_ina_Gra_ac]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約（リカは1689年に解放）
+      source: "https://en.wikipedia.org/wiki/Lika"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスへ（イリリア州）
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: オスマン帝国のリカ県。回復後はカルロヴァツ軍政国境地帯に編入された。
+
+- id: banija_hr
+  name: バニヤ（クパ川とウナ川の間）
+  select:
+    pieces: [HRV-Grad_Glina, HRV-Op_ina_Dvor, HRV-Grad_Hrvatska_Kostajnica, HRV-Op_ina_Donji_Kukuzari,
+             HRV-Op_ina_Majur, HRV-Op_ina_Sunja, HRV-Op_ina_Hvratska_Dubica, HRV-Op_ina_Topusko,
+             HRV-Op_ina_Gvozd]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: uncertain
+    - from: 1699
+      owner: habsburg
+      cause: カルロヴィッツ条約でウナ川が境界となる
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスへ（イリリア州）
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: 回復後はバン（クロアチア総督）の軍政国境地帯となった。1648年時点の境界はクパ川付近だが、ペトリニャ（1595年奪回）などハプスブルク側の拠点もあった（要確認）。
+
+- id: rijeka_hr
+  name: フィウメ（リエカ）
+  select:
+    pieces: [HRV-Grad_Rijeka]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1776
+      owner: habsburg
+      cause: マリア・テレジアがフィウメをクロアチア（1779年からハンガリー王国の分離体）に編入
+      source: "https://en.wikipedia.org/wiki/Corpus_separatum_(Fiume)"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスへ（イリリア州）
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: もとは内オーストリアに属する帝国領。1719年にカール6世が自由港とした。
+
+- id: austrian_istria_hr
+  name: オーストリア領イストリア（パジン伯領）・カスタヴ
+  select:
+    pieces: [HRV-Grad_Pazin, HRV-Op_ina_Cerovlje, HRV-Op_ina_Gra_i_e, HRV-Op_ina_Pi_an, HRV-Op_ina_Kr_an,
+             HRV-Op_ina_Sveti_Petar_u_umi, HRV-Op_ina_Tinjan, HRV-Op_ina_Lupoglav, HRV-Op_ina_minj,
+             HRV-Grad_Kastav, HRV-Grad_Opatija, HRV-Op_ina_Lovran, HRV-Op_ina_Mo_eni_ka_Draga,
+             HRV-Op_ina_Matulji, HRV-Op_ina_Klana, HRV-Op_ina_Vi_kovo]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスへ（イリリア州）
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: イストリア内陸のパジン（ミッテルブルク）伯領と、東岸のカスタヴ・ヴォロスコ・モシュチェニツェなど。境界はおおよそ（要確認）。
+
+- id: venetian_istria_hr
+  name: ヴェネツィア領イストリア
+  select:
+    adm1: ["HRV/Istria"]
+    exclude_regions: [austrian_istria_hr]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約でヴェネツィア共和国が消滅し、オーストリア領に
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: italy_kingdom
+      cause: プレスブルク条約でナポレオンのイタリア王国へ
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: プーラ・ポレチ・ロヴィニ・ブイェ・ブゼト・ラビンなど。
+
+- id: venetian_dalmatia_hr
+  name: ヴェネツィア領ダルマチア（沿岸・島々）
+  select:
+    pieces: [HRV-Otok_Krk, HRV-Op_ina_Malinska_Duba_nica, HRV-Op_ina_Omi_alj, HRV-Otok_Cres, HRV-Otok_Losinj,
+             HRV-Grad_Rab, HRV-Op_ina_Lopar, HRV-Grad_Novalja,
+             HRV-Grad_Zadar, HRV-Grad_Nin, HRV-Grad_Biograd_na_Moru, HRV-Grad_Pag, HRV-Op_ina_Kolan,
+             HRV-Op_ina_Povljana, HRV-Op_ina_Preko, HRV-Op_ina_Kali, HRV-Op_ina_Kukljica, HRV-Op_ina_Sali,
+             HRV-Op_ina_Pa_man, HRV-Op_ina_Tkon, HRV-Op_ina_Vir, HRV-Op_ina_Bibinje, HRV-Op_ina_Suko_an,
+             HRV-Op_ina_Sveti_Filip_i_Jakov, HRV-Op_ina_Pako_tane, HRV-Op_ina_Privlaka, HRV-Op_ina_Vrsi,
+             HRV-Op_ina_Posedarje, HRV-Op_ina_Ra_anac, HRV-Op_ina_Novigrad, HRV-Op_ina_Starigrad,
+             HRV-Grad_ibenik, HRV-Grad_Vodice, HRV-Op_ina_Bilice, HRV-Op_ina_Primo_ten, HRV-Op_ina_Rogoznica,
+             HRV-Opicina_Pirovac, HRV-Opicina_Muter_Kornati, HRV-Otok_Kornat,
+             HRV-Grad_Split, HRV-Grad_Ka_tela, HRV-Grad_Trogir, HRV-Op_ina_Okrug, HRV-Op_ina_Seget,
+             HRV-Op_ina_Marina, HRV-Grad_Solin, HRV-Op_ina_Podstrana, HRV-Op_ina_Dugi_Rat, HRV-Grad_Omi,
+             HRV-Op_ina_Klis, HRV-Grad_Supetar, HRV-Op_ina_Bol, HRV-Op_ina_Milna, HRV-Op_ina_Nere_i_a,
+             HRV-Op_ina_Postira, HRV-Op_ina_Pu_i_a, HRV-Op_ina_Selca, HRV-Op_ina_Sutivan,
+             HRV-Grad_Hvar, HRV-Grad_Stari_Grad, HRV-Op_ina_Jelsa, HRV-Op_ina_Su_uraj, HRV-Grad_Vis,
+             HRV-Grad_Komi_a, HRV-Op_ina_olta,
+             HRV-Grad_Kor_ula, HRV-Op_ina_Blato, HRV-Op_ina_Smokvica, HRV-Op_ina_Vela_Luka, HRV-Op_ina_Lumbarda]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約でヴェネツィア共和国が消滅し、オーストリア領に
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: italy_kingdom
+      cause: プレスブルク条約でナポレオンのイタリア王国へ
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰（ウィーン会議で確認）
+  note: >-
+    15世紀以来の「旧領土（アクイスト・ヴェッキオ）」。クリス要塞は1648年3月にヴェネツィアが奪い、カンディア戦争後も保持した。
+    クヴァルネル諸島（クルク・ツレス・ロシニ・ラブ）を含む。ノヴィグラード・スタリグラードなど本土側の境界付近はおおよそ（要確認）。
+
+- id: dalmatia_new_hr
+  name: ダルマチア内陸（新領土）
+  select:
+    pieces: [HRV-Grad_Benkovac, HRV-Grad_Obrovac, HRV-Op_ina_Jasenice, HRV-Op_ina_Zemunik_Donji,
+             HRV-Op_ina_Poli_nik, HRV-Op_ina_kabrnja, HRV-Op_ina_Galovac, HRV-Op_ina_Pola_a,
+             HRV-Grad_Knin, HRV-Grad_Drni, HRV-Grad_Skradin, HRV-Op_ina_Biskupija, HRV-Op_ina_Civljane,
+             HRV-Op_ina_Ervenik, HRV-Op_ina_Kijevo, HRV-Op_ina_Kistanje, HRV-Op_ina_Promina, HRV-Op_ina_Ru_i,
+             HRV-Op_ina_Une_i,
+             HRV-Grad_Sinj, HRV-Grad_Trilj, HRV-Grad_Vrlika, HRV-Op_ina_Dicmo, HRV-Op_ina_Dugopolje,
+             HRV-Op_ina_Hrvace, HRV-Op_ina_Otok, HRV-Op_ina_Mu, HRV-Op_ina_Le_evica, HRV-Op_ina_Prgomet,
+             HRV-Op_ina_Primorski_Dolac, HRV-Op_ina_estanovac, HRV-Op_ina_Zadvarje,
+             HRV-Grad_Makarska, HRV-Op_ina_Ba_ka_Voda, HRV-Op_ina_Brela, HRV-Op_ina_Tu_epi,
+             HRV-Op_ina_Podgora, HRV-Op_ina_Gradac,
+             HRV-Grad_Opuzen, HRV-Grad_Metkovi, HRV-Grad_Plo_e, HRV-Op_ina_Kula_Norinska,
+             HRV-Op_ina_Slivno, HRV-Op_ina_Za_ablje, HRV-Op_ina_Pojezerje]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1699
+      owner: venice
+      cause: カルロヴィッツ条約でヴェネツィアへ（「新領土」アクイスト・ヌオーヴォ。クニン・シニ・マカルスカ沿岸・ネレトヴァ河口など）
+      source: "https://en.wikipedia.org/wiki/Venetian_Dalmatia"
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約でオーストリア領に
+    - from: 1805
+      owner: italy_kingdom
+      cause: プレスブルク条約でナポレオンのイタリア王国へ
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+  note: 多くはモレア戦争（1684–1699）中にヴェネツィアが占領した。マカルスカ沿岸は1646年にもヴェネツィアの保護下に入ったことがある。
+
+- id: dalmatia_newest_hr
+  name: イモツキ・ヴルゴラツ（最新領土）
+  select:
+    pieces: [HRV-Grad_Imotski, HRV-Op_ina_Podbablje, HRV-Op_ina_Prolo_ac, HRV-Op_ina_Lokvi_i_i,
+             HRV-Op_ina_Runovi_i, HRV-Op_ina_Zmijavci, HRV-Op_ina_Lovre, HRV-Op_ina_Cista_Provo,
+             HRV-Op_ina_Zagvozd, HRV-Grad_Vrgorac]
+  timeline:
+    - from: 1648
+      owner: ottoman
+    - from: 1718
+      owner: venice
+      cause: パッサロヴィッツ条約でヴェネツィアへ（「最新領土」アクイスト・ヌオヴィッシモ）
+      source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約でオーストリア領に
+    - from: 1805
+      owner: italy_kingdom
+      cause: プレスブルク条約でナポレオンのイタリア王国へ
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約でオーストリアに復帰
+
+- id: ragusa_hr
+  name: ラグーザ（ドゥブロヴニク）
+  select:
+    pieces: [HRV-Grad_Dubrovnik, HRV-Op_ina_upa_dubrova_ka, HRV-Op_ina_Dubrova_ko_primorje, HRV-Op_ina_Konavle,
+             HRV-Op_ina_Ston, HRV-Op_ina_Janjina, HRV-Op_ina_Orebi, HRV-Op_ina_Trpanj,
+             HRV-Op_ina_Lastovo, HRV-Op_ina_Mljet]
+  timeline:
+    - from: 1648
+      owner: ragusa
+    - from: 1806
+      owner: france
+      certainty: occupied
+      cause: フランス軍がラグーザを占領（共和国は名目上存続）
+      source: "https://ja.wikipedia.org/wiki/ラグーサ共和国"
+    - from: 1808
+      owner: italy_kingdom
+      cause: マルモンが共和国を廃止し、イタリア王国に併合
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: イリリア州に編入
+    - from: 1815
+      owner: habsburg
+      cause: ウィーン議定書でオーストリア領に（1814年からオーストリア軍が占領）
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+  note: 政体 ragusa は担当 E が定義。オスマン帝国に貢納していたが、事実上は独立の商業共和国。ペリェシャツ半島・ラストヴォ島・ムリェト島を含む。
