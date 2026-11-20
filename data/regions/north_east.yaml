@@ -46,6 +46,24 @@
       cause: "キール条約でデンマークがノルウェーを放棄。独立宣言の後、11月にスウェーデンと同君連合"
       source: "https://ja.wikipedia.org/wiki/キール条約"
 
+- id: finnmark_inner
+  name: フィンマルク内陸（カウトケイノ・カラショーク）
+  select:
+    pieces: [NOR-Guovdageaidnu_sme_1, NOR-Kara_johka_sme_1]
+  timeline:
+    - from: 1648
+      owner: denmark
+      certainty: uncertain
+      note: "内陸のサーミ人の地域。デンマーク＝ノルウェーとスウェーデンが共同で課税し、国境は未画定"
+    - from: 1751
+      owner: denmark
+      cause: "ストレムスタード条約でノルウェーとスウェーデンの国境が画定"
+      source: "https://ja.wikipedia.org/wiki/ストレムスタード条約"
+    - from: 1814
+      owner: norway
+      cause: "キール条約・スウェーデンとの同君連合"
+      source: "https://ja.wikipedia.org/wiki/キール条約"
+
 - id: trondelag
   name: トロンデラーグ（トロンハイム）
   select:
@@ -1444,14 +1462,8 @@
       UKR-Podilsk, UKR-Rozdilna, UKR-Shyriaieve, UKR-Velyks_Mykhailivka, UKR-Veselynove, UKR-Vradiivka, UKR-Zakharivka]
   timeline:
     - from: 1648
-      owner: nogai
-      overlord: crimea
-      certainty: uncertain
-      note: "イェディサン（ノガイ人の遊牧地）。オチャキウはオスマン帝国の要塞"
-    - from: 1774
       owner: ottoman
-      cause: "キュチュク・カイナルジ条約後もオスマン帝国領にとどまる"
-      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+      note: "イェディサン。オスマン帝国のオチャキウ（オズィ）州で、ノガイ人が遊牧する"
     - from: 1792
       owner: russia
       cause: "ヤッシー条約でドニエストル川以東がロシア領に"

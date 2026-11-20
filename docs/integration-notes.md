@@ -57,3 +57,11 @@
 - ツヴァイブリュッケン 1697–1718 owner sweden
 - 色：bavaria と france が近い。hesse_darmstadt・frankfurt_gd・聖界領の紫系どうしが近い
 - 地域ファイルは tools/gen_regions_germany_south.py（作業用スクリプト）で生成したもの
+
+## F（北欧・東欧）から
+- ホティン（UKR）1713 オスマン直轄→1812 ロシア。E の bessarabia（モルドバ北部・ブリチェニ周辺）は 1812 まで moldavia → 揃えるか検討
+- イェディサン（F）は E の transnistria に合わせ ottoman→1792 russia。ブジャク 1812
+- 北シュレースヴィヒ（DNK）は denmark のみ（ゴットルプ家の持ち分なし）。BN の schleswig_gottorp との見え方
+- ザカルパッチャは habsburg のみ。ラーコーツィ家所領（〜1711）を transylvania で描くか D のスロバキア東部と統一
+- ポーランド立憲王国・フィンランド大公国は独自の政体 + overlord russia
+- 分割線の郡の振り分け（1772/1793/1795、1809 タルノポリ）は要確認。地域は tools/gen_regions_north_east.py で生成
