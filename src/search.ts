@@ -74,6 +74,8 @@ export interface SearchDeps {
   idx: AtlasIndex;
   year(): number;
   selectPolity(id: string): void;
+  /** 候補を選んで移動する直前（履歴に積むため） */
+  beforeJump?(): void;
 }
 
 export class Search {
@@ -312,6 +314,7 @@ export class Search {
     const it = this.results[i];
     if (!it) return;
     this.close();
+    this.deps.beforeJump?.();
     it.go();
   }
 }

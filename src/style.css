@@ -1043,3 +1043,15 @@ body[data-layer="religion"] .legend {
   color: var(--muted);
   margin-left: 46px;
 }
+
+/* ---- 押すとその年へ移動する年 ---- */
+a.ylink {
+  color: inherit;
+  text-decoration: underline dotted rgba(122, 114, 102, 0.7);
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+a.ylink:hover {
+  color: var(--accent);
+  text-decoration-style: solid;
+}

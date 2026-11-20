@@ -31,6 +31,24 @@ async function main() {
   if (hash.get("p") && idx.polityById.has(hash.get("p")!)) state.polity = hash.get("p");
   if (hash.get("l") === "religion") state.layer = "religion";
 
+  // ---- 履歴（戻る／進む） ----
+  // 年のジャンプ・国の選択・表示の切り替えなどの「移動」を history.pushState で積む。
+  // 1年送り・スライダー・自動再生は、最後の変化から STEP_MS 以内なら1件にまとめる（置き換える）。
+  // 各項目の state には地図の位置も入れておき（動かし終えるたびに更新）、戻ったときに復元する。
+  type Nav = "push" | "step" | "replace";
+  interface HistState {
+    y: number;
+    p: string | null;
+    l: MapLayer;
+    m: boolean;
+    rp: ReligionPick | null;
+    view?: { lon: number; lat: number; zoom: number };
+  }
+  const STEP_MS = 1000;
+  let nextNav: Nav = "replace";
+  let lastStepAt = 0;
+  let restoring = false;
+
   const yearInput = $<HTMLInputElement>("#year");
   const slider = $<HTMLInputElement>("#slider");
   for (const el of [yearInput, slider]) {
@@ -45,6 +63,7 @@ async function main() {
     onSelect: (id) => selectPolity(id, false),
     onReligion: (pick) => {
       state.relPick = pick;
+      markPush();
       updateUi();
       if (pick) sheet.reveal();
     },
@@ -61,7 +80,13 @@ async function main() {
     document.body.classList.add("debug");
   }
 
-  const panel = new Panel($("#polity"), $("#events"), idx, (id) => selectPolity(id, true));
+  const panel = new Panel(
+    $("#polity"),
+    $("#events"),
+    idx,
+    (id) => selectPolity(id, true),
+    (y) => setYear(y),
+  );
 
   function update() {
     map.render(state.year);
@@ -79,21 +104,47 @@ async function main() {
     if (rel) panel.renderReligion(state.relPick, state.year);
     else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null);
     renderLegend();
-    const h = new URLSearchParams({ y: String(state.year) });
-    if (state.polity) h.set("p", state.polity);
-    if (rel) h.set("l", "religion");
-    history.replaceState(null, "", `#${h}`);
+    writeHistory();
     document.title = `${state.year}年 ― ヨーロッパ歴史地図`;
     updateMilestones();
   }
 
-  function setYear(y: number) {
+  function currentHash() {
+    const h = new URLSearchParams({ y: String(state.year) });
+    if (state.polity) h.set("p", state.polity);
+    if (state.layer === "religion") h.set("l", "religion");
+    if (modernBase) h.set("m", "1");
+    return `#${h}`;
+  }
+  function histState(): HistState {
+    return { y: state.year, p: state.polity, l: state.layer, m: modernBase, rp: state.relPick, view: map.getView() };
+  }
+  /** 今の状態を履歴に書く（nextNav に従って積む／置き換える） */
+  function writeHistory(nav: Nav = nextNav) {
+    nextNav = "replace";
+    if (restoring) nav = "replace";
+    const now = performance.now();
+    if (nav === "step") {
+      nav = now - lastStepAt < STEP_MS ? "replace" : "push";
+      lastStepAt = now;
+    } else if (nav === "push") lastStepAt = 0;
+    const url = currentHash();
+    if (nav === "push" && url !== location.hash) history.pushState(histState(), "", url);
+    else history.replaceState(histState(), "", url);
+  }
+  /** 移動の前に呼ぶ：次の更新を新しい履歴として積む */
+  const markPush = () => {
+    nextNav = "push";
+  };
+
+  function setYear(y: number, nav: Nav = "push") {
     y = Math.round(Math.min(maxYear, Math.max(minYear, y)));
     if (!Number.isFinite(y) || y === state.year) {
       yearInput.value = String(state.year);
       return;
     }
     state.year = y;
+    nextNav = nav;
     update();
   }
 
@@ -101,11 +152,13 @@ async function main() {
     // 宗教表示中にパネルの × を押したときは、宗教の地域の選択を解除する
     if (!id && state.layer === "religion" && state.relPick) {
       state.relPick = null;
+      markPush();
       updateUi();
       return;
     }
     if (id && state.layer !== "political") setLayer("political", false);
     state.polity = id;
+    if (nextNav === "replace") markPush();
     update();
     if (id) {
       sheet.reveal();
@@ -114,7 +167,7 @@ async function main() {
   }
 
   // ---- 年の操作 ----
-  const step = (d: number) => () => setYear(state.year + d);
+  const step = (d: number) => () => setYear(state.year + d, "step");
   $("#prev").addEventListener("click", step(-1));
   $("#next").addEventListener("click", step(1));
   // «» は前後の「節目」へジャンプ
@@ -153,7 +206,7 @@ async function main() {
     }
   });
   yearInput.addEventListener("focus", () => yearInput.select());
-  slider.addEventListener("input", () => setYear(Number(slider.value)));
+  slider.addEventListener("input", () => setYear(Number(slider.value), "step"));
 
   let timer = 0;
   const playBtn = $<HTMLButtonElement>("#play");
@@ -170,7 +223,7 @@ async function main() {
     playBtn.setAttribute("aria-label", "停止");
     timer = window.setInterval(() => {
       if (state.year >= maxYear) return stop();
-      setYear(state.year + 1);
+      setYear(state.year + 1, "step");
     }, 450);
   });
 
@@ -194,6 +247,7 @@ async function main() {
   modernBtn.addEventListener("click", () => {
     modernBase = !modernBase;
     applyModern();
+    writeHistory("push");
   });
   document.addEventListener("keydown", (e) => {
     if (e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
@@ -236,7 +290,10 @@ async function main() {
     if (l !== "religion") state.relPick = null;
     map.setLayer(l);
     syncLayerButtons();
-    if (refresh) updateUi();
+    if (refresh) {
+      markPush();
+      updateUi();
+    }
   }
   function syncLayerButtons() {
     for (const b of layerSwitch.querySelectorAll<HTMLButtonElement>("button")) {
@@ -283,8 +340,10 @@ async function main() {
     year: () => state.year,
     selectPolity: (id) => {
       if (modernBase) modernBtn.click(); // 現代の国境の表示中は、その時代の地図に戻してから選ぶ
+      nextNav = "replace"; // beforeJump で積んだ項目に書く
       selectPolity(id, true);
     },
+    beforeJump: () => writeHistory("push"),
   });
   $("#search-btn").addEventListener("click", () => search.toggle());
 
@@ -297,7 +356,7 @@ async function main() {
   setupShortcuts({
     map,
     search,
-    stepYear: (d) => setYear(state.year + d),
+    stepYear: (d) => setYear(state.year + d, Math.abs(d) === 1 ? "step" : "push"),
     milestone: (dir) => {
       const m = dir < 0 ? prevMs() : nextMs();
       if (m) setYear(m.year);
@@ -322,14 +381,14 @@ async function main() {
         const target = prevMs()?.year ?? state.year - 1;
         if (target < minYear) return;
         compareFrom = state.year;
-        setYear(target);
+        setYear(target, "replace");
         compareBadge.textContent = `${target}年の地図（B を離すと ${compareFrom}年に戻る）`;
         compareBadge.hidden = false;
       } else if (compareFrom !== null) {
         const y = compareFrom;
         compareFrom = null;
         compareBadge.hidden = true;
-        setYear(y);
+        setYear(y, "replace");
       }
     },
     focusSelected: () => {
@@ -354,6 +413,7 @@ async function main() {
     deselect: () => {
       if (state.layer === "religion" && state.relPick) {
         state.relPick = null;
+        markPush();
         updateUi();
         return true;
       }
@@ -363,17 +423,49 @@ async function main() {
     },
   });
 
-  // URL のハッシュを手で書き換えたとき（チャットからのリンクなど）にも追従する
-  window.addEventListener("hashchange", () => {
+  // 戻る／進む（ブラウザのボタン・スワイプ・⌘[ ⌘]）と、URL のハッシュを手で書き換えたとき（チャットからのリンクなど）
+  function restore(s: HistState) {
+    restoring = true;
+    try {
+      if (Number.isFinite(s.y) && s.y >= minYear && s.y <= maxYear) state.year = s.y;
+      state.polity = s.p && idx.polityById.has(s.p) ? s.p : null;
+      if (s.l !== state.layer) setLayer(s.l, false);
+      state.relPick = s.l === "religion" ? (s.rp ?? null) : null;
+      if (s.m !== modernBase) {
+        modernBase = s.m;
+        applyModern();
+      }
+      if (s.view) map.setView(s.view);
+      update();
+    } finally {
+      restoring = false;
+    }
+  }
+  const stateFromHash = (): HistState => {
     const h = new URLSearchParams(location.hash.slice(1));
     const y = Number(h.get("y"));
-    const p = h.get("p");
-    if (Number.isFinite(y) && y >= minYear && y <= maxYear) state.year = y;
-    state.polity = p && idx.polityById.has(p) ? p : null;
-    const l = h.get("l") === "religion" ? "religion" : "political";
-    if (l !== state.layer) setLayer(l, false);
-    update();
+    return {
+      y: h.has("y") && Number.isFinite(y) ? y : state.year,
+      p: h.get("p"),
+      l: h.get("l") === "religion" ? "religion" : "political",
+      m: h.get("m") === "1",
+      rp: null,
+    };
+  };
+  window.addEventListener("popstate", (e) => {
+    stop();
+    restore((e.state as HistState | null) ?? stateFromHash());
   });
+  // 地図を動かし終えたら、今の履歴項目の位置を更新する（戻ったときにその位置へ戻れるように）
+  map.onMoveEnd(() => {
+    if (restoring) return;
+    const s = history.state as HistState | null;
+    if (s) history.replaceState({ ...s, view: map.getView() }, "", location.href);
+  });
+  if (hash.get("m") === "1") {
+    modernBase = true;
+    applyModern();
+  }
 
   if (state.layer !== "political") {
     const l = state.layer;

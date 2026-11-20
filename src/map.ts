@@ -135,7 +135,7 @@ export class AtlasMap {
     });
 
     this.map.on("click", (e) => {
-      const f = this.map.queryRenderedFeatures(e.point, { layers: ["fill"] })[0];
+      const f = this.map.queryRenderedFeatures(e.point, { layers: [this.layer === "religion" ? "rel-fill" : "fill"] })[0];
       const i = f ? Number(f.id) : -1;
       if (this.debug) this.cb.onPiece?.(i >= 0 ? this.geoms[i].properties! : null);
       if (this.layer === "religion") {
@@ -176,7 +176,7 @@ export class AtlasMap {
     }
     // 宗教の少数派の斜線（宗教の種類ごとに1枚）
     (this.idx.atlas.religion?.kinds ?? []).forEach((k, i) => {
-      map.addImage(`rhatch-${i}`, hatchImage(stripeColor(k.color), 6, 0.3), { pixelRatio: 2 });
+      map.addImage(`rhatch-${i}`, hatchImage(stripeColor(k.color), 8, 0.32), { pixelRatio: 2 });
     });
 
     // ピース（塗りは feature-state "c"、現代版の色は属性 mcolor）
@@ -191,6 +191,8 @@ export class AtlasMap {
     for (const id of ["borders", "overlords", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes"]) {
       map.addSource(id, { type: "geojson", data: EMPTY });
     }
+    // 川の名前用：細かく曲がる線のままだと線に沿った文字が置けないので、強めに単純化した別のソースを使う
+    map.addSource("rivers-lbl", { type: "geojson", data: EMPTY, tolerance: 8 });
     map.addSource("modern-borders", { type: "geojson", data: this.modernBorders() });
     map.addSource("modern-labels", { type: "geojson", data: this.modernLabels() });
     map.addSource("modern-cities", { type: "geojson", data: this.modernCities() });
@@ -363,7 +365,7 @@ export class AtlasMap {
     map.addLayer({
       id: "rivers-label",
       type: "symbol",
-      source: "rivers",
+      source: "rivers-lbl",
       filter: this.riverFilter(0, 1.2),
       layout: {
         "symbol-placement": "line",
@@ -372,7 +374,7 @@ export class AtlasMap {
         "text-size": ["interpolate", ["linear"], ["zoom"], 3, 10, 7, 12.5],
         "text-letter-spacing": 0.1,
         "symbol-spacing": 320,
-        "text-max-angle": 30,
+        "text-max-angle": 60,
         "symbol-sort-key": ["get", "rank"],
       },
       paint: { "text-color": "#4a7894", "text-halo-color": "rgba(255,255,255,.75)", "text-halo-width": 1.2 },
@@ -598,6 +600,7 @@ export class AtlasMap {
   setLayer(layer: MapLayer) {
     if (layer === this.layer) return;
     this.layer = layer;
+    this.tooltip.style.display = "none";
     if (!this.loaded) {
       this.ready.then(() => {
         if (this.year) this.render(this.year);
@@ -607,6 +610,21 @@ export class AtlasMap {
     }
     if (this.year) this.render(this.year);
     this.applyModern();
+  }
+
+  /** 地図を動かし終えたとき（ドラッグ・拡大・移動のアニメーションの終わり） */
+  onMoveEnd(cb: () => void) {
+    this.map.on("moveend", cb);
+  }
+
+  /** 地図の位置（中心・拡大率）。履歴で戻るときに使う */
+  getView(): { lon: number; lat: number; zoom: number } {
+    const c = this.map.getCenter();
+    return { lon: c.lng, lat: c.lat, zoom: this.map.getZoom() };
+  }
+
+  setView(v: { lon: number; lat: number; zoom: number }) {
+    this.map.jumpTo({ center: [v.lon, v.lat], zoom: v.zoom });
   }
 
   get currentLayer(): MapLayer {
@@ -769,7 +787,7 @@ export class AtlasMap {
     set(["labels", "cities-label"], !on && lb);
     set(["seas", "rivers-label", "lakes-label"], lb);
     // 宗教表示では、国境と国名を薄くして宗教の塗り分けを主役にする
-    this.map.setPaintProperty("borders", "line-opacity", rel ? 0.4 : 0.85);
+    this.map.setPaintProperty("borders", "line-opacity", rel ? 0.35 : 0.85);
     this.map.setPaintProperty("borders", "line-color", rel ? "#2e2822" : "#4a4038");
     this.map.setPaintProperty("modern-borders", "line-opacity", rel ? 0.45 : 1);
     for (const l of ["labels", "modern-labels"]) {
@@ -993,7 +1011,10 @@ export class AtlasMap {
         .catch(() => null);
     const [rivers, lakes] = await Promise.all([get("rivers.json"), get("lakes.json")]);
     if (lakes) this.setData("lakes", lakes);
-    if (rivers) this.setData("rivers", rivers);
+    if (rivers) {
+      this.setData("rivers", rivers);
+      this.setData("rivers-lbl", rivers);
+    }
   }
 
   setDebug(on: boolean) {
@@ -1110,6 +1131,6 @@ function hatchImage(color: string, size: number, weight = 0.25): ImageData {
 export function stripeColor(hex: string): string {
   const m = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(hex);
   if (!m) return hex;
-  const [r, g, b] = [m[1], m[2], m[3]].map((v) => Math.round(parseInt(v, 16) * 0.78));
+  const [r, g, b] = [m[1], m[2], m[3]].map((v) => Math.round(parseInt(v, 16) * 0.85));
   return `rgb(${r},${g},${b})`;
 }

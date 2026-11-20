@@ -7,7 +7,13 @@ import { hydrateImages, imageSlot, refKey, wikiRefs, type WikiRef } from "./imag
 const esc = (s: unknown) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
-const yearRange = (from: number, to?: number) => (to == null ? `${from}–` : from === to ? `${from}` : `${from}–${to}`);
+/** 押すとその年へ移動する年 */
+const yl = (y: number | string) => `<a href="#" class="ylink" data-year="${esc(y)}">${esc(y)}</a>`;
+const yearRange = (from: number, to?: number) => (to == null ? `${yl(from)}–` : from === to ? yl(from) : `${yl(from)}–${yl(to)}`);
+/** 文章中の4桁の年（「1620年」「1756–63」の 1756 など）を、押せる年にする。text はエスケープ済みのもの */
+const linkYears = (html: string) =>
+  html.replace(/(?<![\d.,，])(1[0-9]{3}|20[0-9]{2})(?=年|[–\-−〜~）)、。,，\s]|$)/g, (m) => yl(m));
+const escY = (s: unknown) => linkYears(esc(s));
 
 export class Panel {
   constructor(
@@ -15,9 +21,16 @@ export class Panel {
     private eventsEl: HTMLElement,
     private idx: AtlasIndex,
     private onPolity: (id: string | null) => void,
+    private onYear: (year: number) => void = () => {},
   ) {
     for (const el of [polityEl, eventsEl]) {
       el.addEventListener("click", (e) => {
+        const y = (e.target as Element).closest("[data-year]");
+        if (y) {
+          e.preventDefault();
+          this.onYear(Number(y.getAttribute("data-year")));
+          return;
+        }
         const t = (e.target as Element).closest("[data-polity]");
         if (t) {
           e.preventDefault();
@@ -37,7 +50,7 @@ export class Panel {
   }
 
   private changeLine(c: BorderChange, year: number) {
-    const note = c.cur.cause ? `<span class="cause">${esc(c.cur.cause)}</span>` : "";
+    const note = c.cur.cause ? `<span class="cause">${escY(c.cur.cause)}</span>` : "";
     const ov =
       c.prev.owner === c.cur.owner && c.prev.overlord !== c.cur.overlord
         ? `（上位：${this.link(c.prev.overlord, year)} → ${this.link(c.cur.overlord, year)}）`
@@ -47,13 +60,13 @@ export class Panel {
   }
 
   private eventLine(e: HistEvent, year: number) {
-    const date = e.date && String(e.date).length > 4 ? `<span class="date">${esc(formatDate(String(e.date)))}</span>` : "";
+    const date = e.date && String(e.date).length > 4 ? `<span class="date"><a href="#" class="ylink" data-year="${e.year}">${esc(formatDate(String(e.date)))}</a></span>` : "";
     const ps = (e.polities ?? []).map((p) => this.link(p, year)).join(" ");
     const imp = e.importance ?? 2;
     const img = imp <= 2 ? imageSlot(wikiRefs(e.source), imp === 1 ? "event-wide" : "event", e.title) : "";
     return `<li class="event imp${imp}">${img}
       <div class="ev-title">${date}${esc(e.title)}</div>
-      ${e.text ? `<div class="ev-text">${esc(e.text)}</div>` : ""}
+      ${e.text ? `<div class="ev-text">${escY(e.text)}</div>` : ""}
       ${ps ? `<div class="ev-polities">${ps}</div>` : ""}
       ${srcList(e)}
     </li>`;
@@ -81,7 +94,7 @@ export class Panel {
         .map(
           (c) =>
             `<li class="change"><b>${esc(c.region.name)}</b>：${this.relSummary(c.prev)} → ${this.relSummary(c.cur)}${
-              c.cur.note ? ` <span class="cause">${esc(c.cur.note)}</span>` : ""
+              c.cur.note ? ` <span class="cause">${escY(c.cur.note)}</span>` : ""
             }</li>`,
         )
         .join("")}</ul>`;
@@ -94,7 +107,7 @@ export class Panel {
       const recent = this.idx.atlas.events.filter((e) => e.year < year && e.year >= year - 10).slice(-4).reverse();
       if (recent.length) {
         html += `<h3>直近の出来事</h3><ul class="events recent">${recent
-          .map((e) => `<li class="event"><div class="ev-title"><span class="date">${e.year}</span>${esc(e.title)}</div></li>`)
+          .map((e) => `<li class="event"><div class="ev-title"><span class="date">${yl(e.year)}</span>${esc(e.title)}</div></li>`)
           .join("")}</ul>`;
       }
     }
@@ -125,13 +138,13 @@ export class Panel {
         <dl class="rel-now"><dt>多数派</dt><dd>${this.relKind(cur.main)}</dd>${
           cur.minor ? `<dt>少数派</dt><dd>${this.relKind(cur.minor)}</dd>` : ""
         }</dl>`;
-      if (cur.note) html += `<p class="period">${esc(cur.note)}</p>`;
+      if (cur.note) html += `<p class="period">${escY(cur.note)}</p>`;
       if (r.timeline.length > 1) {
         html += `<h3>変遷</h3><ul class="rel-timeline">${r.timeline
           .map(
             (e) =>
-              `<li class="${e === cur ? "now" : ""}"><span class="years">${e.from}–</span>${this.relSummary(e)}${
-                e.note ? `<div class="note">${esc(e.note)}</div>` : ""
+              `<li class="${e === cur ? "now" : ""}"><span class="years">${yl(e.from)}–</span>${this.relSummary(e)}${
+                e.note ? `<div class="note">${escY(e.note)}</div>` : ""
               }</li>`,
           )
           .join("")}</ul>`;
@@ -167,20 +180,20 @@ export class Panel {
             (r) =>
               `<li class="ruler">${imageSlot(portraitRefs(p, r), "portrait", baseName(r.name))}<div class="r-body"><b>${esc(r.name)}</b>${
                 r.title ? `<span class="title">${esc(r.title)}</span>` : ""
-              }<span class="years">${yearRange(r.from, r.to)}</span>${r.note ? `<div class="note">${esc(r.note)}</div>` : ""}${srcList(r)}</div></li>`,
+              }<span class="years">${yearRange(r.from, r.to)}</span>${r.note ? `<div class="note">${escY(r.note)}</div>` : ""}${srcList(r)}</div></li>`,
           )
           .join("")}</ul>`
       : `<p class="empty">データ未登録</p>`;
     html += `<h3>情勢</h3>`;
     html += periods.length
-      ? periods.map((x) => `<p class="period"><span class="years">${yearRange(x.from, x.to)}</span>${esc(x.text)}${srcList(x)}</p>`).join("")
+      ? periods.map((x) => `<p class="period"><span class="years">${yearRange(x.from, x.to)}</span>${escY(x.text)}${srcList(x)}</p>`).join("")
       : `<p class="empty">データ未登録</p>`;
     if (events.length || changes.length) {
       html += `<h3>${year}年の出来事</h3><ul class="events">${events.map((e) => this.eventLine(e, year)).join("")}${changes
         .map((c) => this.changeLine(c, year))
         .join("")}</ul>`;
     }
-    if (p.note) html += `<p class="note">${esc(p.note)}</p>`;
+    if (p.note) html += `<p class="note">${escY(p.note)}</p>`;
     html += srcList(p);
     this.polityEl.innerHTML = html;
     hydrateImages(this.polityEl);

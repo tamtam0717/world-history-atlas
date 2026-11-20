@@ -181,6 +181,17 @@ export function setupShortcuts(a: ShortcutActions) {
       return;
     }
 
+    // ⌘[ / ⌘]（Ctrl+[ / Ctrl+]）：戻る／進む（ブラウザの戻る・進むと同じ履歴）
+    if ((e.ctrlKey || e.metaKey) && !e.altKey && (k === "[" || k === "]")) {
+      clearPending();
+      if (!e.repeat) {
+        if (k === "[") history.back();
+        else history.forward();
+      }
+      e.preventDefault();
+      return;
+    }
+
     if (e.ctrlKey || e.metaKey || e.altKey) return;
 
     // 記号・数字（キーボード配列の違いを考えて e.key で見る）
