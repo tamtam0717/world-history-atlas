@@ -10,3 +10,4 @@ npx mapshaper -i .cache/pieces_raw.geojson snap -clean \
   -simplify 6% weighted keep-shapes -clean \
   -rename-layers pieces \
   -o public/data/pieces.topo.json format=topojson quantization=200000 id-field=id
+node tools/pieces_index.mjs

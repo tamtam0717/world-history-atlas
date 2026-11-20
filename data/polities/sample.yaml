@@ -1,0 +1,28 @@
+# 動作確認用の仮データ（あとで本データに置き換える）
+- id: hre
+  name: 神聖ローマ帝国
+  color: "#7a2e2e"
+  kind: 帝国（上位の枠）
+- id: habsburg
+  name: オーストリア（ハプスブルク君主国）
+  short: オーストリア
+  color: "#e8d27a"
+  kind: 君主国
+  rulers:
+    - {name: フェルディナント3世, title: 神聖ローマ皇帝, from: 1637, to: 1657}
+    - {name: レオポルト1世, title: 神聖ローマ皇帝, from: 1658, to: 1705}
+    - {name: マリア・テレジア, title: オーストリア大公・ハンガリー女王・ボヘミア女王, from: 1740, to: 1780}
+- id: prussia
+  name: プロイセン王国
+  names:
+    - {to: 1700, name: ブランデンブルク＝プロイセン}
+  short: プロイセン
+  color: "#8fa6c4"
+  rulers:
+    - {name: フリードリヒ2世（大王）, title: プロイセン王, from: 1740, to: 1786}
+  periods:
+    - {from: 1740, to: 1763, text: シュレジエンをめぐってオーストリアと三度戦う（オーストリア継承戦争・七年戦争）。}
+- id: france
+  name: フランス王国
+  short: フランス
+  color: "#a9c4e0"

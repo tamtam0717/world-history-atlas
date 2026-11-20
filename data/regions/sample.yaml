@@ -1,0 +1,29 @@
+# 動作確認用の仮データ
+- id: silesia
+  name: シュレジエン
+  select:
+    adm1: ["POL/Opole Voivodeship", "POL/Lower Silesian Voivodeship"]
+  timeline:
+    - {from: 1648, owner: habsburg, overlord: hre}
+    - {from: 1742, owner: prussia, overlord: hre, cause: ベルリン条約}
+    - {from: 1806, owner: prussia}
+- id: brandenburg
+  name: ブランデンブルク
+  select:
+    adm1: ["DEU/Brandenburg", "DEU/Berlin"]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre}
+    - {from: 1806, owner: prussia}
+- id: austria
+  name: オーストリア
+  select:
+    iso: [AUT]
+  timeline:
+    - {from: 1648, owner: habsburg, overlord: hre}
+    - {from: 1806, owner: habsburg}
+- id: france
+  name: フランス
+  select:
+    iso: [FRA]
+  timeline:
+    - {from: 1648, owner: france}

@@ -80,6 +80,7 @@ def main():
     g = g[g.to_crs("EPSG:3035").area > 2e5]
 
     # ID を付ける（同名は重心の西→東順で _2, _3 ...）
+    g["shapeName"] = g["shapeName"].fillna("").astype(str).replace("", "unnamed")
     g["cx"] = g.geometry.representative_point().x
     g = g.sort_values(["iso", "shapeName", "cx"]).reset_index(drop=True)
     seen = defaultdict(int)
@@ -95,7 +96,13 @@ def main():
     j = gpd.sjoin(pts, a1, how="left", predicate="within")
     j = j[~j.index.duplicated()]
     g["adm1"] = j["adm1"].where(j["a1iso"] == g["iso"]).fillna("")
-    g = g.rename(columns={"shapeName": "name"})[["id", "name", "iso", "adm1", "src", "geometry"]]
+    # 細かいデータを使った国では、CGAZ ADM2（例：ドイツの県、フランスの県、イタリアの州）を adm2 として付ける
+    a2 = adm2[adm2.shapeGroup.isin(list(cfg["fine"].keys()))][["shapeName", "shapeGroup", "geometry"]]
+    a2 = a2.rename(columns={"shapeName": "adm2", "shapeGroup": "a2iso"})
+    j2 = gpd.sjoin(pts, a2, how="left", predicate="within")
+    j2 = j2[~j2.index.duplicated()]
+    g["adm2"] = j2["adm2"].where(j2["a2iso"] == g["iso"]).fillna("")
+    g = g.rename(columns={"shapeName": "name"})[["id", "name", "iso", "adm1", "adm2", "src", "geometry"]]
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     g.to_file(OUT, driver="GeoJSON", engine="pyogrio")
