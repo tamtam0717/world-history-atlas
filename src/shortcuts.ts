@@ -17,6 +17,8 @@ export interface ShortcutActions {
   togglePlay(): void;
   startYearInput(digit: string): void;
   toggleModern(): void;
+  /** 宗教の分布の表示を切り替える */
+  toggleReligion(): void;
   compare(on: boolean): void;
   focusSelected(): void;
   copyUrl(): void;
@@ -121,6 +123,14 @@ export function setupShortcuts(a: ShortcutActions) {
     a.map.zoomBy(f);
   };
 
+  // R：押すと宗教表示を切り替え。長押し（HOLD_MS 以上）したときは、離すと元に戻す
+  const HOLD_MS = 450;
+  let rDownAt = 0;
+  const endReligionHold = () => {
+    if (rDownAt && performance.now() - rDownAt >= HOLD_MS) a.toggleReligion();
+    rDownAt = 0;
+  };
+
   let comparing = false;
   const endCompare = () => {
     if (!comparing) return;
@@ -214,7 +224,7 @@ export function setupShortcuts(a: ShortcutActions) {
       }
     }
     pending = "";
-    if (repeat) return l === "B"; // 押しっぱなしの繰り返しは無視（B は押している間の表示なので既定動作だけ止める）
+    if (repeat) return l === "B" || l === "R"; // 押しっぱなしの繰り返しは無視（B・R は押している間の表示なので既定動作だけ止める）
     if (PREFIXES.has(l)) {
       pending = l;
       pendingAt = now;
@@ -240,6 +250,12 @@ export function setupShortcuts(a: ShortcutActions) {
           a.compare(true);
         }
         return true;
+      case "R":
+        if (!rDownAt) {
+          rDownAt = performance.now();
+          a.toggleReligion();
+        }
+        return true;
       case "G":
         a.focusSelected();
         return true;
@@ -263,10 +279,12 @@ export function setupShortcuts(a: ShortcutActions) {
     // Mac では Command を押している間、他のキーの keyup が来ないことがあるので念のため
     if (e.key === "Meta" || e.key === "Alt" || e.key === "Control") stopPan();
     if (e.code === "KeyB" || e.key === "b" || e.key === "B") endCompare();
+    if (e.code === "KeyR" || e.key === "r" || e.key === "R") endReligionHold();
   });
   window.addEventListener("blur", () => {
     stopPan();
     endCompare();
+    endReligionHold();
     clearPending();
   });
 }
