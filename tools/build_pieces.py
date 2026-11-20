@@ -82,6 +82,8 @@ def main():
 
     g = gpd.GeoDataFrame(pd.concat(parts, ignore_index=True), crs="EPSG:4326")
     g = apply_splits(g, cfg.get("split", []))
+    for spec in cfg.get("clip", []):
+        g = apply_clip(g, spec)
     g["geometry"] = g.geometry.make_valid().intersection(clip)
     g = g[~g.geometry.is_empty & g.geometry.notna()]
     g = g[g.geometry.geom_type.isin(["Polygon", "MultiPolygon", "GeometryCollection"])]
@@ -145,6 +147,41 @@ def apply_splits(g, specs):
             g.at[idx, "geometry"] = MultiPolygon(polys)
     if rows:
         g = gpd.GeoDataFrame(pd.concat([g, gpd.GeoDataFrame(rows, crs=g.crs)], ignore_index=True), crs=g.crs)
+    return g
+
+
+def apply_clip(g, spec, cell=0.1):
+    """壊れたピースを bbox で切り取り、はみ出した部分は小さな格子に分けて、
+    それぞれ境界を最も長く共有する隣のピースに吸収させる（穴をあけないため）"""
+    import numpy as np
+
+    m = (g.iso == spec["iso"]) & (g.shapeName == spec["name"])
+    idxs = list(g[m].index)
+    bb = box(*spec["bbox"])
+    for idx in idxs:
+        geom = g.at[idx, "geometry"]
+        rest = geom.difference(bb)
+        g.at[idx, "geometry"] = geom.intersection(bb)
+        if rest.is_empty:
+            continue
+        x0, y0, x1, y1 = rest.bounds
+        others = g.drop(index=idx)
+        sidx = others.sindex
+        for x in np.arange(x0, x1, cell):
+            for y in np.arange(y0, y1, cell):
+                chunk = rest.intersection(box(x, y, x + cell, y + cell))
+                if chunk.is_empty or chunk.area < 1e-9:
+                    continue
+                ring = chunk.buffer(1e-5)
+                best, best_len = None, 0.0
+                for j in sidx.query(ring):
+                    oi = others.index[j]
+                    l = ring.intersection(g.at[oi, "geometry"].boundary).length
+                    if l > best_len:
+                        best, best_len = oi, l
+                if best is None:
+                    best = others.index[int(np.argmin(others.geometry.distance(chunk).values))]
+                g.at[best, "geometry"] = unary_union([g.at[best, "geometry"], chunk])
     return g
 
 
