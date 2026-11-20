@@ -1,0 +1,1212 @@
+# 担当 C（低地諸国・スイス・イタリア）の地域と所属の変遷（1648–1815 試作）
+# 範囲：NLD BEL LUX CHE LIE ITA SMR VAT MLT
+# 重なりの決まり：その年に記述のある地域のうち、いちばん小さい地域が優先される。
+
+# ================================================================ オランダ（北ネーデルラント）
+
+- id: nl_republic
+  name: オランダ（七州と国家連合直轄領）
+  select:
+    iso: [NLD]
+  timeline:
+    - from: 1648
+      owner: netherlands
+      cause: ウェストファリア条約（ミュンスター条約）で独立を承認
+      source: "https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)"
+    - from: 1810
+      owner: france
+      cause: ホラント王国のフランス帝国への併合
+      source: "https://ja.wikipedia.org/wiki/ホラント王国"
+    - from: 1813
+      owner: netherlands
+      cause: フランス支配からの解放・ウィレム1世の帰国
+      source: "https://ja.wikipedia.org/wiki/ネーデルラント連合王国"
+  note: >-
+    国家連合直轄領（ヘネラリテイト・ランデン：北ブラバント、ゼーラント・フランデレン、リンブルフの一部）を含む。
+    クーレンボルフ・ベルフ伯領・ラーフェンステインなど小さな帝国領の飛び地は省略。
+
+- id: zeeland_flanders
+  name: ゼーラント・フランデレン（国家連合直轄領）
+  select:
+    pieces: [NLD-Sluis, NLD-Terneuzen, NLD-Hulst]
+  timeline:
+    - from: 1648
+      owner: netherlands
+    - from: 1795
+      owner: france
+      cause: ハーグ条約（バタヴィア共和国がフランスに割譲）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_The_Hague_(1795)"
+    - from: 1814
+      owner: netherlands
+      cause: パリ条約（第1次）
+
+# --- 現代のオランダ領リンブルフ（歴史的には分裂していた）
+- id: nl_limburg
+  name: 上ヘルレ（オーバークワルティール）とマース川流域
+  select:
+    adm1: ["NLD/Limburg"]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+    - from: 1714
+      owner: habsburg
+      overlord: hre
+      cause: ラシュタット条約（スペイン領ネーデルラントがオーストリア領に）
+      source: "https://ja.wikipedia.org/wiki/ラシュタット条約"
+    - from: 1795
+      owner: france
+      cause: フランスへの併合（ムーズ＝アンフェリウール県。1797年カンポ・フォルミオ条約で承認）
+    - from: 1814
+      owner: netherlands
+      certainty: uncertain
+      cause: パリ条約（第1次）。連合国の暫定統治下
+      note: 1814年には連合国の暫定統治下にあり、帰属はウィーン会議で確定した。
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書
+  note: ローアモント・ウェールトなど。下位の地域でオランダ・プロイセン・ユーリヒ・リエージュの部分を上書きする。
+
+- id: maastricht
+  name: マーストリヒト
+  select:
+    pieces: [NLD-Maastricht]
+  timeline:
+    - from: 1648
+      owner: netherlands
+      certainty: uncertain
+      note: オランダ（国家連合）とリエージュ司教の共同統治。1673–1678年にはフランス軍が占領した。
+      source: "https://en.wikipedia.org/wiki/Maastricht#History"
+    - from: 1795
+      owner: france
+      cause: ハーグ条約・フランスへの併合
+    - from: 1814
+      owner: netherlands
+      cause: パリ条約（第1次）
+
+- id: overmaas
+  name: マース川東岸の諸地方（ファルケンブルフなど）
+  select:
+    pieces: [NLD-Eijsden_Margraten, NLD-Valkenburg_aan_de_Geul, NLD-Meerssen, NLD-Heerlen, NLD-Voerendaal,
+      NLD-Beekdaelen, NLD-Brunssum, NLD-Gulpen_Wittem, NLD-Vaals, NLD-Simpelveld, NLD-Beek, NLD-Stein]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      certainty: uncertain
+      note: ミュンスター条約後もオランダとスペインが帰属を争った。
+    - from: 1661
+      owner: netherlands
+      cause: 分割条約（オーフェルマース分割。ファルケンブルフなどの大部分がオランダ領に）
+      note: 境界は入り組んでおり、ピースの粒度では大まかな表現。要確認
+      source: "https://en.wikipedia.org/wiki/Partition_Treaty_(1661)"
+    - from: 1795
+      owner: france
+      cause: ハーグ条約・フランスへの併合
+    - from: 1814
+      owner: netherlands
+      cause: パリ条約（第1次）
+
+- id: julich_nl
+  name: シッタルト・スステレン（ユーリヒ公国の飛び地）
+  select:
+    pieces: [NLD-Sittard_Geleen, NLD-Echt_Susteren]
+  timeline:
+    - from: 1648
+      owner: palatinate_neuburg
+      overlord: hre
+      note: ユーリヒ公国（プファルツ＝ノイブルク家。1685年からプファルツ選帝侯家）の一部。要確認
+    - from: 1685
+      owner: palatinate
+      overlord: hre
+      cause: ノイブルク公がプファルツ選帝侯位を継承（ドイツ側のユーリヒ公領と同じ扱い）
+    - from: 1777
+      owner: bavaria
+      overlord: hre
+      cause: プファルツ選帝侯カール・テオドールがバイエルンを相続
+    - from: 1795
+      owner: france
+      cause: フランスへの併合
+    - from: 1814
+      owner: netherlands
+      certainty: uncertain
+      cause: パリ条約（第1次）。連合国の暫定統治下
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書
+
+- id: upper_guelders_dutch
+  name: フェンロー・モンフォールト（1713年からオランダ領上ヘルレ）
+  select:
+    pieces: [NLD-Venlo, NLD-Roerdalen, NLD-Maasgouw]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+    - from: 1713
+      owner: netherlands
+      cause: ユトレヒト条約（上ヘルレの分割。1715年の防壁条約で確定）
+      source: "https://en.wikipedia.org/wiki/Upper_Guelders"
+    - from: 1795
+      owner: france
+      cause: ハーグ条約・フランスへの併合
+    - from: 1814
+      owner: netherlands
+      certainty: uncertain
+      cause: パリ条約（第1次）。連合国の暫定統治下
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書
+
+- id: upper_guelders_prussian
+  name: ケッセル・フェンライ（1713年からプロイセン領上ヘルレ）
+  select:
+    pieces: [NLD-Horst_aan_de_Maas, NLD-Peel_en_Maas, NLD-Venray, NLD-Bergen_L, NLD-Mook_en_Middelaar]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+    - from: 1713
+      owner: prussia
+      overlord: hre
+      cause: ユトレヒト条約（上ヘルレの分割）
+      note: フェンライ・ベルヘンの帰属は要確認
+      source: "https://en.wikipedia.org/wiki/Upper_Guelders"
+    - from: 1794
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: フランス革命軍がクレーフェ・上ヘルレのプロイセン領を占領（1795年バーゼル条約の秘密条項で割譲を容認）
+    - from: 1801
+      owner: france
+      cause: リュネヴィル条約でライン左岸とともにフランス領に確定
+    - from: 1814
+      owner: netherlands
+      certainty: uncertain
+      cause: パリ条約（第1次）。連合国の暫定統治下
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書
+
+- id: gennep
+  name: ヘネップ（クレーフェ公国の一部）
+  select:
+    pieces: [NLD-Gennep]
+  timeline:
+    - from: 1648
+      owner: prussia
+      overlord: hre
+      note: クレーフェ公国とともにブランデンブルク選帝侯（ホーエンツォレルン家）の領地。
+    - from: 1794
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: フランス革命軍がクレーフェ・上ヘルレのプロイセン領を占領（1795年バーゼル条約の秘密条項で割譲を容認）
+    - from: 1801
+      owner: france
+      cause: リュネヴィル条約でライン左岸とともにフランス領に確定
+    - from: 1814
+      owner: netherlands
+      certainty: uncertain
+      cause: パリ条約（第1次）。連合国の暫定統治下
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書
+
+# ================================================================ 南ネーデルラント（ベルギー）・リエージュ・ルクセンブルク
+
+- id: southern_netherlands
+  name: 南ネーデルラント（スペイン領→オーストリア領）
+  select:
+    iso: [BEL]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+      note: ブルグント・クライスとして帝国に属する。
+    - from: 1714
+      owner: habsburg
+      overlord: hre
+      cause: ユトレヒト条約（1713）・ラシュタット条約（1714）でオーストリア領に
+      source: "https://ja.wikipedia.org/wiki/ラシュタット条約"
+    - from: 1795
+      owner: france
+      cause: フランスへの併合（1797年カンポ・フォルミオ条約でオーストリアが承認）
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1814
+      owner: netherlands
+      certainty: uncertain
+      cause: パリ条約（第1次）・ロンドン八か条議定書（オランダとの合同を決定）
+      note: 1814年には連合国の暫定統治下にあり（8月からオラニエ公が総督）、合同はウィーン会議で確定した。
+      source: "https://en.wikipedia.org/wiki/Eight_Articles_of_London"
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書（ネーデルラント連合王国の成立）
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: liege_region
+  name: リエージュ司教領
+  select:
+    pieces: [BEL-Liege, BEL-Huy, BEL-Waremme, BEL-Verviers, BEL-Hasselt, BEL-Tongres, BEL-Maaseik,
+      BEL-Dinant, BEL-Philippeville, NLD-Leudal]
+  timeline:
+    - from: 1648
+      owner: liege
+      overlord: hre
+      note: >-
+        ローン伯領（現リンブルフ州）・フランシモン・ホールン伯領（NLD-Leudal）を含む。
+        ヴェルヴィエのピースは東部にリンブルフ公国（スペイン領）・スタヴロ＝マルメディ修道院領・ルクセンブルク公国の一部を含む。
+        フィリップヴィル周辺は1659年からフランスの飛び地（フィリップヴィル・マリアンブール）。いずれもピースの粒度では表せない。
+    - from: 1795
+      owner: france
+      cause: フランスへの併合
+    - from: 1814
+      owner: netherlands
+      certainty: uncertain
+      cause: パリ条約（第1次）・ロンドン八か条議定書
+      note: 1814年には連合国の暫定統治下にあり、帰属はウィーン会議で確定した。
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書（ネーデルラント連合王国の成立）
+  source: "https://ja.wikipedia.org/wiki/リエージュ司教領"
+
+- id: tournai_furnes
+  name: トゥルネー・フュルヌ（1668年からフランス領）
+  select:
+    pieces: [BEL-Tournai, BEL-Furnes]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+    - from: 1668
+      owner: france
+      cause: アーヘンの和約（南ネーデルラント継承戦争）
+      source: "https://ja.wikipedia.org/wiki/アーヘンの和約_(1668年)"
+    - from: 1714
+      owner: habsburg
+      overlord: hre
+      cause: ユトレヒト条約でフランスが返還（1715年の防壁条約でオーストリアへ引き渡し）
+      source: "https://en.wikipedia.org/wiki/Barrier_Treaty"
+    - from: 1795
+      owner: france
+      cause: フランスへの併合
+    - from: 1814
+      owner: netherlands
+      cause: パリ条約（第1次）・ロンドン八か条議定書
+
+- id: ypres
+  name: イーペル（1678年からフランス領）
+  select:
+    pieces: [BEL-Ypres]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+    - from: 1678
+      owner: france
+      cause: ナイメーヘンの和約
+      source: "https://ja.wikipedia.org/wiki/ナイメーヘンの和約"
+    - from: 1714
+      owner: habsburg
+      overlord: hre
+      cause: ユトレヒト条約でフランスが返還（1715年の防壁条約でオーストリアへ引き渡し）
+    - from: 1795
+      owner: france
+      cause: フランスへの併合
+    - from: 1814
+      owner: netherlands
+      cause: パリ条約（第1次）・ロンドン八か条議定書
+
+- id: aachen_1668_returned
+  name: コルトレイク・アウデナールデ・アト（1668–1678年フランス領）
+  select:
+    pieces: [BEL-Courtrai, BEL-Audenarde, BEL-Ath]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+    - from: 1668
+      owner: france
+      cause: アーヘンの和約（南ネーデルラント継承戦争）
+      source: "https://ja.wikipedia.org/wiki/アーヘンの和約_(1668年)"
+    - from: 1678
+      owner: spain
+      overlord: hre
+      cause: ナイメーヘンの和約でスペインに返還
+      source: "https://ja.wikipedia.org/wiki/ナイメーヘンの和約"
+    - from: 1714
+      owner: habsburg
+      overlord: hre
+      cause: ユトレヒト条約（1713）・ラシュタット条約（1714）でオーストリア領に
+    - from: 1795
+      owner: france
+      cause: フランスへの併合
+    - from: 1814
+      owner: netherlands
+      cause: パリ条約（第1次）・ロンドン八か条議定書
+  note: シャルルロワ・バンシュも1668–1678年にフランス領だったが、町とその周辺だけでピースの大半を占めないため描かない。
+
+- id: luxembourg
+  name: ルクセンブルク公国
+  select:
+    iso: [LUX]
+    adm2: ["BEL/Luxemburg"]
+  timeline:
+    - from: 1648
+      owner: spain
+      overlord: hre
+    - from: 1684
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: ルクセンブルク攻略・レーゲンスブルクの休戦条約（20年間の領有を認める）
+      source: "https://en.wikipedia.org/wiki/Truce_of_Ratisbon"
+    - from: 1697
+      owner: spain
+      overlord: hre
+      cause: ライスワイク条約でスペインに返還
+      source: "https://ja.wikipedia.org/wiki/レイスウェイク条約"
+    - from: 1714
+      owner: habsburg
+      overlord: hre
+      cause: ユトレヒト条約・ラシュタット条約でオーストリア領に
+    - from: 1795
+      owner: france
+      cause: ルクセンブルク要塞の降伏（6月）とフランスへの併合（森林県）
+    - from: 1814
+      owner: prussia
+      certainty: occupied
+      cause: パリ条約（第1次）でフランスが放棄。連合国（プロイセン）の暫定統治下
+    - from: 1815
+      owner: netherlands
+      overlord: german_confederation
+      cause: ウィーン議定書でルクセンブルク大公国となり、オランダ王が大公を兼ねる（ドイツ連邦に加盟）
+      source: "https://ja.wikipedia.org/wiki/ルクセンブルク大公国"
+  note: 現ベルギーのリュクサンブール州は1839年までルクセンブルク大公国の一部。ブイヨン公国（リエージュ領→1678年からフランスの保護下）は省略。
+
+# ================================================================ スイスとその周辺
+
+- id: swiss_confederacy
+  name: スイス（13邦と共同支配地）
+  select:
+    iso: [CHE]
+  timeline:
+    - from: 1648
+      owner: switzerland
+      cause: ウェストファリア条約で帝国からの独立を承認
+      source: "https://ja.wikipedia.org/wiki/ヴェストファーレン条約"
+  note: >-
+    ティチーノ・トゥールガウ・アールガウ東部などの共同支配地、ザンクト・ガレン修道院領・ビール（ビエンヌ）などの同盟邦を含む。
+    1798年からヘルヴェティア共和国、1803年から調停法によるスイス連邦（名前は政体の names で切り替え）。
+    タラスプ（オーストリア領の飛び地）・ラジュンスなどの小さな領地は省略。
+
+- id: graubunden_region
+  name: グラウビュンデン（三同盟）
+  select:
+    adm1: ["CHE/Graubünden"]
+  timeline:
+    - from: 1648
+      owner: graubunden
+      note: スイス盟約者団の同盟邦。
+    - from: 1799
+      owner: switzerland
+      cause: ヘルヴェティア共和国への編入（レティア州。1803年からグラウビュンデン州）
+      source: "https://en.wikipedia.org/wiki/Three_Leagues"
+
+- id: valais_region
+  name: ヴァレー
+  select:
+    adm1: ["CHE/Valais"]
+  timeline:
+    - from: 1648
+      owner: valais
+      note: スイス盟約者団の同盟邦。下ヴァレー（モンテー・サン＝モーリスなど）は上ヴァレーの従属地。
+    - from: 1798
+      owner: switzerland
+      cause: ヘルヴェティア共和国への編入
+    - from: 1802
+      owner: valais
+      cause: ロダニア共和国として分離・独立（フランスの保護下）
+      source: "https://en.wikipedia.org/wiki/Rhodanic_Republic"
+    - from: 1810
+      owner: france
+      cause: フランスへの併合（シンプロン県）
+    - from: 1814
+      owner: valais
+      cause: フランス軍の撤退と独立の回復
+    - from: 1815
+      owner: switzerland
+      cause: ウィーン会議・スイスへの加盟
+
+- id: geneva_region
+  name: ジュネーヴ
+  select:
+    pieces: [CHE-Geneve]
+  timeline:
+    - from: 1648
+      owner: geneva
+      note: スイス盟約者団の同盟邦。
+    - from: 1798
+      owner: france
+      cause: フランスへの併合（レマン県）
+      source: "https://en.wikipedia.org/wiki/Republic_of_Geneva"
+    - from: 1813
+      owner: geneva
+      cause: フランス軍の撤退と共和国の復活（12月31日）
+    - from: 1815
+      owner: switzerland
+      cause: ウィーン会議・スイスへの加盟
+
+- id: neuchatel_region
+  name: ヌーシャテル
+  select:
+    adm1: ["CHE/Neuchâtel"]
+  timeline:
+    - from: 1648
+      owner: neuchatel
+      note: スイス盟約者団の同盟邦。1707年からプロイセン王が君主。
+    - from: 1815
+      owner: switzerland
+      cause: ウィーン会議・スイスへの加盟（プロイセン王の公国でもあり続けた）
+      source: "https://en.wikipedia.org/wiki/Principality_of_Neuchâtel"
+
+- id: basel_bishopric_imperial
+  name: バーゼル司教領（帝国に属する北部）
+  select:
+    pieces: [CHE-Porrentruy, CHE-Delemont, CHE-Les_Franches_Montagnes, CHE-Laufen, CHE-Arlesheim]
+  timeline:
+    - from: 1648
+      owner: basel_bishopric
+      overlord: hre
+    - from: 1793
+      owner: france
+      cause: フランスへの併合（ラウラキア共和国を経てモン＝テリブル県）
+      source: "https://en.wikipedia.org/wiki/Rauracian_Republic"
+    - from: 1815
+      owner: switzerland
+      cause: ウィーン会議でベルン州（アルレスハイムはバーゼル州）に編入
+
+- id: basel_bishopric_swiss
+  name: バーゼル司教領南部とビール（スイスの同盟者）
+  select:
+    pieces: [CHE-Moutier, CHE-Courtelary, CHE-La_Neuveville, CHE-Biel]
+  timeline:
+    - from: 1648
+      owner: basel_bishopric
+      note: 司教領のうちスイス盟約者団と同盟していた南部（エルゲル・ムーティエ＝グランヴァル・ラ・ヌーヴヴィル）。ビールは司教の主権下の自治都市で、スイスの同盟邦。
+    - from: 1797
+      owner: france
+      cause: フランスへの併合（1797年12月、ビールは1798年2月）
+    - from: 1815
+      owner: switzerland
+      cause: ウィーン会議でベルン州に編入
+
+- id: fricktal
+  name: フリックタール（前方オーストリア）
+  select:
+    pieces: [CHE-Rheinfelden, CHE-Laufenburg]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+      note: 前方オーストリア（ハプスブルク家の西南ドイツ領）の一部。
+    - from: 1802
+      owner: switzerland
+      cause: リュネヴィル条約（1801）でフランスに割譲され、ヘルヴェティア共和国へ（フリックタール州。1803年からアールガウ州）
+      source: "https://en.wikipedia.org/wiki/Fricktal"
+
+- id: liechtenstein_region
+  name: リヒテンシュタイン
+  select:
+    iso: [LIE]
+  timeline:
+    - from: 1648
+      owner: liechtenstein
+      overlord: hre
+    - from: 1806
+      owner: liechtenstein
+      overlord: rhine_confederation
+      cause: ライン同盟への加盟
+    - from: 1813
+      owner: liechtenstein
+      cause: ライン同盟の崩壊
+    - from: 1815
+      owner: liechtenstein
+      overlord: german_confederation
+      cause: ドイツ連邦への加盟
+
+# ================================================================ 北イタリア
+
+- id: piedmont
+  name: ピエモンテ・アオスタ
+  select:
+    pieces: [ITA-Torino, ITA-Cuneo, ITA-Asti, ITA-Biella, ITA-Vercelli, ITA-Aosta]
+  timeline:
+    - from: 1648
+      owner: savoy
+    - from: 1798
+      owner: france
+      certainty: occupied
+      cause: 国王カルロ・エマヌエーレ4世がピエモンテを放棄してサルデーニャ島へ（12月）
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
+      note: スヴォーロフのロシア軍とオーストリア軍が占領した。サルデーニャ王は復帰できなかった。
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: france
+      certainty: occupied
+      cause: マレンゴの戦い（6月）でフランスが再占領
+    - from: 1802
+      owner: france
+      cause: フランスへの併合
+      source: "https://en.wikipedia.org/wiki/Piedmont#History"
+    - from: 1814
+      owner: savoy
+      cause: パリ条約（第1次）でサルデーニャ王に返還
+  note: アスティ南部・トリーノ（トリノ）など一部はモンフェッラート（マントヴァ公領、1708年からサヴォイア領）だった。
+
+- id: alessandria
+  name: アレッサンドリア・モンフェッラート
+  select:
+    pieces: [ITA-Alessandria]
+  timeline:
+    - from: 1648
+      owner: mantua
+      note: >-
+        ピースはモンフェッラート公国（カザーレ・アックイ。マントヴァ公領）、ミラノ公国のアレッサンドリア・トルトーナ、
+        ジェノヴァ領のノーヴィ・オヴァーダにまたがる。最大のモンフェッラートで代表させる。要確認
+    - from: 1708
+      owner: savoy
+      cause: モンフェッラートとアレッサンドリア・ヴァレンツァが皇帝からサヴォイア公に与えられる（1713年ユトレヒト条約で確認）
+      note: トルトーナは1738年にサヴォイア領。
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Montferrat"
+    - from: 1798
+      owner: france
+      certainty: occupied
+      cause: ピエモンテのフランス軍占領
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
+    - from: 1800
+      owner: france
+      certainty: occupied
+      cause: マレンゴの戦い（6月）でフランスが再占領
+    - from: 1802
+      owner: france
+      cause: フランスへの併合（マレンゴ県）
+    - from: 1814
+      owner: savoy
+      cause: パリ条約（第1次）
+
+- id: lombardy
+  name: ミラノ公国（ロンバルディア）
+  select:
+    pieces: [ITA-Milano, ITA-Monza_e_della_Brianza, ITA-Lodi, ITA-Como, ITA-Lecco, ITA-Varese, ITA-Cremona,
+      ITA-Pavia, ITA-Novara, ITA-Verbano_Cusio_Ossola]
+  timeline:
+    - from: 1648
+      owner: spain
+    - from: 1707
+      owner: habsburg
+      certainty: occupied
+      cause: トリノの戦い（1706）後、ミラノ協定でフランス軍が撤退し、オーストリアが支配
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Milan"
+    - from: 1714
+      owner: habsburg
+      cause: ラシュタット条約
+      source: "https://ja.wikipedia.org/wiki/ラシュタット条約"
+    - from: 1796
+      owner: cisalpine
+      cause: ナポレオンのイタリア遠征（ロディの戦い）とトランスパダーナ共和国の成立
+      source: "https://ja.wikipedia.org/wiki/チザルピーナ共和国"
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
+    - from: 1814
+      owner: habsburg
+      cause: イタリア王国の崩壊とオーストリアの復帰（1815年からロンバルド＝ヴェネト王国）
+      source: "https://ja.wikipedia.org/wiki/ロンバルド＝ヴェネト王国"
+  note: クレモナのピースのうちクレーマ周辺はヴェネツィア領だった。
+
+- id: novara
+  name: ノヴァーラ
+  select:
+    pieces: [ITA-Novara]
+  timeline:
+    - from: 1738
+      owner: savoy
+      cause: ウィーン条約（ポーランド継承戦争の講和。ノヴァーラとトルトーナをサルデーニャ王に）
+      source: "https://ja.wikipedia.org/wiki/ウィーン条約_(1738年)"
+    - from: 1798
+      owner: france
+      certainty: occupied
+      cause: ピエモンテのフランス軍占領
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い後、チザルピーナ共和国に編入（アゴーニャ県。1801年リュネヴィル条約）
+    - from: 1814
+      owner: savoy
+      cause: パリ条約（第1次）
+  note: 1738年より前は lombardy の記述（ミラノ公国）を使う。
+
+- id: ossola_lomellina
+  name: オッソラ・ロメッリーナ・オルトレポー（1743年からサヴォイア領）
+  select:
+    pieces: [ITA-Verbano_Cusio_Ossola, ITA-Pavia]
+  timeline:
+    - from: 1743
+      owner: savoy
+      cause: ヴォルムス条約（オーストリア継承戦争。1748年アーヘンの和約で確認）
+      note: パヴィーアのピースのうちロメッリーナは1707年にサヴォイア領。パヴィーア市周辺はオーストリア領のまま。
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Worms_(1743)"
+    - from: 1798
+      owner: france
+      certainty: occupied
+      cause: ピエモンテのフランス軍占領
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い後、チザルピーナ共和国に編入（1801年リュネヴィル条約）
+      note: オルトレポー（ヴォゲーラ）はフランスのマレンゴ県に入った。要確認
+    - from: 1814
+      owner: savoy
+      cause: パリ条約（第1次）
+
+- id: mantua_region
+  name: マントヴァ
+  select:
+    pieces: [ITA-Mantova]
+  timeline:
+    - from: 1648
+      owner: mantua
+    - from: 1708
+      owner: habsburg
+      cause: 皇帝がマントヴァ公の領地を没収（スペイン継承戦争でフランス側についたため）
+      source: "https://ja.wikipedia.org/wiki/マントヴァ公国"
+    - from: 1797
+      owner: cisalpine
+      cause: マントヴァ要塞の降伏（2月）とチザルピーナ共和国への編入
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（7月、マントヴァ要塞が降伏）
+      note: マレンゴの戦い（1800年）の後も、マントヴァ要塞は1801年までオーストリア軍が保持した。
+      source: "https://en.wikipedia.org/wiki/Siege_of_Mantua_(1799)"
+    - from: 1801
+      owner: cisalpine
+      cause: リュネヴィル条約（2月）。マントヴァ要塞がフランスに明け渡され、チザルピーナ共和国に復帰
+    - from: 1814
+      owner: habsburg
+      cause: イタリア王国の崩壊とオーストリアの復帰
+
+- id: venetian_lombardy
+  name: ベルガモ・ブレシア（ヴェネツィア本土領の西部）
+  select:
+    pieces: [ITA-Bergamo, ITA-Brescia]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: cisalpine
+      cause: ヴェネツィア共和国の崩壊とチザルピーナ共和国への編入（カンポ・フォルミオ条約）
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
+    - from: 1814
+      owner: habsburg
+      cause: イタリア王国の崩壊とオーストリアの復帰
+
+- id: venetia
+  name: ヴェネト・フリウリ（ヴェネツィア本土領の東部）
+  select:
+    pieces: [ITA-Venezia, ITA-Padova, ITA-Treviso, ITA-Vicenza, ITA-Verona, ITA-Belluno, ITA-Udine, ITA-Pordenone]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約（アディジェ川以東とヴェネツィア市がオーストリア領に）
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: cisalpine
+      cause: プレスブルク条約でイタリア王国に割譲
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1814
+      owner: habsburg
+      cause: イタリア王国の崩壊とオーストリアの復帰（1815年からロンバルド＝ヴェネト王国）
+  note: ヴェローナのピースはアディジェ川で分かれ、1797–1805年は西岸（ガルダ湖南岸・ヴィッラフランカ）がチザルピーナ共和国領。ウーディネのピースの東端（アクイレイア周辺など）はオーストリア領だった。
+
+- id: polesine
+  name: ポレージネ（ロヴィーゴ）
+  select:
+    pieces: [ITA-Rovigo]
+  timeline:
+    - from: 1648
+      owner: venice
+    - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約（第6条。境界はアディジェ川・カスタニャーロ運河・ポー川で、ロヴィーゴを含む北東側がオーストリア領に）
+      note: ポー川沿いの南の細い帯だけがチザルピーナ共和国領になった。
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
+      owner: cisalpine
+      cause: プレスブルク条約でイタリア王国に割譲
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1814
+      owner: habsburg
+      cause: イタリア王国の崩壊とオーストリアの復帰
+
+- id: valtellina
+  name: ヴァルテッリーナ・キアヴェンナ・ボルミオ
+  select:
+    pieces: [ITA-Sondrio]
+  timeline:
+    - from: 1648
+      owner: graubunden
+      note: グラウビュンデン（三同盟）の従属地（1512年から。1639年のミラノ協約で回復）。
+      source: "https://en.wikipedia.org/wiki/Valtellina"
+    - from: 1797
+      owner: cisalpine
+      cause: チザルピーナ共和国への編入
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
+    - from: 1814
+      owner: habsburg
+      cause: イタリア王国の崩壊。ウィーン会議でオーストリア領に
+
+- id: trentino
+  name: トレント司教領（トレンティーノ）
+  select:
+    pieces: [ITA-Trento]
+  timeline:
+    - from: 1648
+      owner: trent
+      overlord: hre
+      note: ロヴェレートなど一部はチロル伯領（ハプスブルク家）。
+    - from: 1803
+      owner: habsburg
+      overlord: hre
+      cause: 帝国代表者会議主要決議で世俗化され、オーストリア（チロル）に併合
+    - from: 1805
+      owner: bavaria
+      overlord: hre
+      cause: プレスブルク条約でチロルとともにバイエルン領に
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1806
+      owner: bavaria
+      overlord: rhine_confederation
+      cause: ライン同盟の結成
+    - from: 1810
+      owner: cisalpine
+      cause: パリ条約（1810年2月、フランス・バイエルン間）でイタリア王国に（アルト・アディジェ県）
+      source: "https://en.wikipedia.org/wiki/Alto_Adige_(department)"
+    - from: 1814
+      owner: habsburg
+      cause: イタリア王国の崩壊とオーストリアの復帰
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+
+- id: south_tyrol
+  name: 南チロル（チロル伯領・ブリクセン司教領）
+  select:
+    pieces: [ITA-Bolzano]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+      note: チロル伯領（ハプスブルク家）が大部分。ブリクセン司教領とその周辺はピースの粒度では表せない。
+    - from: 1805
+      owner: bavaria
+      overlord: hre
+      cause: プレスブルク条約でチロルがバイエルン領に
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
+    - from: 1806
+      owner: bavaria
+      overlord: rhine_confederation
+      cause: ライン同盟の結成
+      note: 1809年にホーファーの指導でチロル民衆が反乱。1810年にボーツェン（ボルツァーノ）周辺はイタリア王国に移ったが、ピースの大半（メラーノ・ブリクセン・プスタータールなど）はバイエルン領（東部はイリリア州）のまま。
+    - from: 1813
+      owner: bavaria
+      cause: ライン同盟の崩壊
+    - from: 1814
+      owner: habsburg
+      cause: オーストリアへの返還（1814年のパリ条約・オーストリアとバイエルンの協定）
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+
+- id: gorizia_trieste
+  name: ゴリツィア・トリエステ
+  select:
+    pieces: [ITA-Gorizia, ITA-Trieste]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+      note: オーストリア・クライスに属する。トリエステは1719年から自由港。
+    - from: 1806
+      owner: habsburg
+      cause: 神聖ローマ帝国の解体
+    - from: 1809
+      owner: illyria
+      overlord: france
+      cause: シェーンブルン条約でフランスに割譲（イリリア州）
+      source: "https://ja.wikipedia.org/wiki/イリュリア州"
+    - from: 1814
+      owner: habsburg
+      cause: パリ条約（第1次）でオーストリアに返還（1813年からオーストリア軍が占領）
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+
+- id: liguria
+  name: リグリア（ジェノヴァ共和国）
+  select:
+    pieces: [ITA-Genova, ITA-Savona, ITA-La_Spezia, ITA-Imperia]
+  timeline:
+    - from: 1648
+      owner: genoa
+      note: オネーリア（インペリア）などはサヴォイア領の飛び地。
+    - from: 1797
+      owner: ligurian_republic
+      cause: ナポレオンの介入による政変とリグリア共和国の成立
+      source: "https://ja.wikipedia.org/wiki/リグリア共和国"
+    - from: 1805
+      owner: france
+      cause: フランス帝国への併合
+    - from: 1814
+      owner: genoa
+      cause: ジェノヴァ共和国の復活宣言（4月。イギリス軍の占領下）
+      certainty: uncertain
+    - from: 1815
+      owner: savoy
+      cause: ウィーン議定書でサルデーニャ王国に併合
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: modena_region
+  name: モデナ・レッジョ
+  select:
+    pieces: [ITA-Modena, ITA-Reggio_nell_Emilia]
+  timeline:
+    - from: 1648
+      owner: modena
+    - from: 1796
+      owner: cispadane
+      cause: ナポレオン軍の占領とチスパダーナ共和国の成立（12月）
+      source: "https://ja.wikipedia.org/wiki/チスパダーナ共和国"
+    - from: 1797
+      owner: cisalpine
+      cause: チザルピーナ共和国への合流
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
+    - from: 1814
+      owner: modena
+      cause: フランチェスコ4世の復帰
+  note: ミランドラ（1710年にモデナが購入）・グアスタッラ（1746年までゴンザーガ家）は省略。
+
+- id: parma_region
+  name: パルマ・ピアチェンツァ
+  select:
+    pieces: [ITA-Parma, ITA-Piacenza]
+  timeline:
+    - from: 1648
+      owner: parma
+    - from: 1735
+      owner: habsburg
+      cause: ポーランド継承戦争の講和（ウィーン予備条約。1738年ウィーン条約で確定）
+      source: "https://ja.wikipedia.org/wiki/ウィーン条約_(1738年)"
+    - from: 1748
+      owner: parma
+      cause: アーヘンの和約でブルボン家のフィリッポに
+      source: "https://ja.wikipedia.org/wiki/アーヘンの和約_(1748年)"
+    - from: 1802
+      owner: france
+      cause: フェルディナンド公の死とフランスの接収（1801年アランフエス条約。1808年に正式に併合）
+    - from: 1814
+      owner: parma
+      cause: フォンテーヌブロー条約（1814）でマリー・ルイーズに（1815年ウィーン議定書で確認）
+  note: ボッビオ周辺（ピアチェンツァ西部の一部）は1743年からサヴォイア領。
+
+- id: legations
+  name: ボローニャ・フェラーラ（教皇特使領）
+  select:
+    pieces: [ITA-Bologna, ITA-Ferrara]
+  timeline:
+    - from: 1648
+      owner: papal_states
+    - from: 1796
+      owner: cispadane
+      cause: ナポレオン軍の占領とチスパダーナ共和国の成立（1797年トレンティーノ条約で教皇が割譲）
+    - from: 1797
+      owner: cisalpine
+      cause: チザルピーナ共和国への合流
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
+      note: フェラーラ要塞は1801年1月のトレヴィーゾ休戦までオーストリア軍が保持した。
+    - from: 1814
+      owner: habsburg
+      certainty: occupied
+      cause: イタリア王国の崩壊。オーストリアの暫定統治
+    - from: 1815
+      owner: papal_states
+      cause: ウィーン議定書で教皇に返還
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: romagna
+  name: ロマーニャ
+  select:
+    pieces: [ITA-Ravenna, ITA-Forli_Cesena, ITA-Rimini]
+  timeline:
+    - from: 1648
+      owner: papal_states
+    - from: 1797
+      owner: cisalpine
+      cause: トレンティーノ条約で教皇が割譲し、チザルピーナ共和国に編入
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Tolentino"
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
+    - from: 1814
+      owner: habsburg
+      certainty: occupied
+      cause: イタリア王国の崩壊。オーストリアの暫定統治
+    - from: 1815
+      owner: papal_states
+      cause: ウィーン議定書で教皇に返還
+
+- id: marche
+  name: マルケ
+  select:
+    pieces: [ITA-Ancona, ITA-Macerata, ITA-Pesaro_e_Urbino, ITA-Fermo, ITA-Ascoli_Piceno]
+  timeline:
+    - from: 1648
+      owner: papal_states
+    - from: 1798
+      owner: roman_republic
+      cause: ローマ共和国の成立（アンコーナ共和国を合併）
+      source: "https://en.wikipedia.org/wiki/Roman_Republic_(1798–1799)"
+    - from: 1799
+      owner: papal_states
+      certainty: uncertain
+      cause: ローマ共和国の崩壊（オーストリア軍・ナポリ軍の占領。教皇は空位）
+    - from: 1800
+      owner: papal_states
+      cause: ピウス7世の選出と教皇領の復活
+    - from: 1808
+      owner: cisalpine
+      cause: イタリア王国への併合
+    - from: 1814
+      owner: naples_bonaparte
+      certainty: occupied
+      cause: ナポリ王ミュラの軍が占領
+    - from: 1815
+      owner: papal_states
+      cause: ウィーン議定書で教皇に返還
+
+- id: rome_umbria
+  name: ラツィオ・ウンブリア（ローマ周辺）
+  select:
+    pieces: [ITA-Roma, ITA-Viterbo, ITA-Rieti, ITA-Latina, ITA-Frosinone, ITA-Perugia, ITA-Terni, VAT-Vatican_City]
+  timeline:
+    - from: 1648
+      owner: papal_states
+      note: ラティーナ南部（フォンディ・ガエータ）、フロジノーネ東部（ソーラ・カッシーノ）、リエーティ東部はナポリ王国領。ピースの大半を占めないため描かない。
+    - from: 1798
+      owner: roman_republic
+      cause: フランス軍のローマ占領とローマ共和国の成立（2月）
+      source: "https://en.wikipedia.org/wiki/Roman_Republic_(1798–1799)"
+    - from: 1799
+      owner: papal_states
+      certainty: uncertain
+      cause: ローマ共和国の崩壊（ナポリ軍の占領。教皇は空位）
+    - from: 1800
+      owner: papal_states
+      cause: ピウス7世のローマ帰還
+    - from: 1809
+      owner: france
+      cause: フランス帝国への併合（ティーブル県・トラジメーヌ県）
+      source: "https://ja.wikipedia.org/wiki/教皇領"
+    - from: 1814
+      owner: papal_states
+      cause: ピウス7世のローマ帰還
+
+- id: tuscany_region
+  name: トスカーナ
+  select:
+    pieces: [ITA-Firenze, ITA-Prato, ITA-Pistoia, ITA-Pisa, ITA-Livorno, ITA-Arezzo, ITA-Siena, ITA-Grosseto, ITA-Massa_Carrara]
+  timeline:
+    - from: 1648
+      owner: tuscany
+      note: >-
+        グロッセートの沿岸の要塞群（スタート・デイ・プレシディ：スペイン領→1707オーストリア→1735ナポリ）、
+        リヴォルノのピースのうちピオンビーノ公国とエルバ島の一部は省略。
+        マッサ・カッラーラのピースは、大部分がルニジャーナ（ポントレーモリ・フィヴィッツァーノなどのトスカーナ領と、マラスピーナ家の小さな帝国封土）で、
+        南西の海沿いのマッサ＝カッラーラ公国（チーボ＝マラスピーナ家。1790年からエステ家のマリア・ベアトリーチェ。1797年チザルピーナ、1806年エリザ・ボナパルト領、1814年マリア・ベアトリーチェ復帰）はピースの一部（約2割）なので、面積の大きいトスカーナ領で代表させる。
+    - from: 1801
+      owner: etruria
+      cause: リュネヴィル条約・アランフエス条約でエトルリア王国に
+      source: "https://ja.wikipedia.org/wiki/エトルリア王国"
+    - from: 1807
+      owner: france
+      cause: フォンテーヌブロー条約（1807）でエトルリア王国が廃止され、フランスに併合（1808年に県を設置）
+    - from: 1814
+      owner: tuscany
+      cause: フェルディナンド3世の復位
+  note: 1814–1815年、エルバ島は退位したナポレオンの公国だった。
+
+- id: lucca_region
+  name: ルッカ
+  select:
+    pieces: [ITA-Lucca]
+  timeline:
+    - from: 1648
+      owner: lucca
+      note: >-
+        ガルファニャーナ（北部の山地）はモデナ公領、ヴェルシリア（ピエトラサンタ）はトスカーナ領。
+        1799–1800年にはフランス軍・オーストリア軍が交互に占領し、1801年に民主政の共和国（フランスの衛星国）、
+        1805年にエリザ・ボナパルトの公国、1815年にウィーン議定書でブルボン家のマリア・ルイーザの公国となった（名前は政体の names で切り替え）。
+
+- id: san_marino_region
+  name: サンマリノ
+  select:
+    iso: [SMR]
+  timeline:
+    - from: 1648
+      owner: san_marino
+
+# ================================================================ 南イタリア・島々
+
+- id: naples_mainland
+  name: ナポリ王国（南イタリア本土）
+  select:
+    adm2: ["ITA/Campania", "ITA/Abruzzo", "ITA/Molise", "ITA/Puglia", "ITA/Basilicata", "ITA/Calabria"]
+  timeline:
+    - from: 1648
+      owner: spain
+      note: スペイン王の副王領。ベネヴェント市とポンテコルヴォは教皇領の飛び地（ピースの粒度では表せない）。
+    - from: 1707
+      owner: habsburg
+      certainty: occupied
+      cause: スペイン継承戦争でオーストリア軍が占領
+    - from: 1714
+      owner: habsburg
+      cause: ラシュタット条約
+      source: "https://ja.wikipedia.org/wiki/ラシュタット条約"
+    - from: 1735
+      owner: naples
+      cause: ポーランド継承戦争でスペイン王子カルロが征服（1734年）し、ウィーン予備条約で承認（1738年ウィーン条約で確定）
+      source: "https://ja.wikipedia.org/wiki/ナポリ王国"
+    - from: 1806
+      owner: naples_bonaparte
+      cause: フランス軍の侵入とジョゼフ・ボナパルトの即位
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Naples_(Napoleonic)"
+    - from: 1815
+      owner: naples
+      cause: ミュラの敗北（トレンティーノの戦い）とフェルディナンド4世の復位
+  note: 1799年1月から6月まではパルテノペア共和国（フランスの衛星国）が成立したが、年末時点ではブルボン家が復帰していた。
+
+- id: sicily
+  name: シチリア
+  select:
+    adm2: ["ITA/Sicilia"]
+  timeline:
+    - from: 1648
+      owner: spain
+      note: スペイン王の副王領。
+    - from: 1713
+      owner: savoy
+      cause: ユトレヒト条約でサヴォイア公に（シチリア王国）
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1720
+      owner: habsburg
+      cause: ハーグ条約（サルデーニャと交換）。1718–1720年はスペイン軍が一時占領
+      source: "https://ja.wikipedia.org/wiki/ハーグ条約_(1720年)"
+    - from: 1735
+      owner: naples
+      cause: ポーランド継承戦争でカルロが征服し、ナポリと同君連合に（1738年ウィーン条約で確定）
+  note: 1806–1815年はブルボン家の王がイギリス海軍に守られてパレルモに逃れた。
+
+- id: sardinia
+  name: サルデーニャ
+  select:
+    adm2: ["ITA/Sardegna"]
+  timeline:
+    - from: 1648
+      owner: spain
+    - from: 1708
+      owner: habsburg
+      certainty: occupied
+      cause: スペイン継承戦争でイギリス艦隊が占領し、オーストリアのカール大公（カルロス3世）の支配下に
+    - from: 1714
+      owner: habsburg
+      cause: ユトレヒト条約・ラシュタット条約
+    - from: 1720
+      owner: savoy
+      cause: ハーグ条約でサヴォイア公に（シチリアと交換。サルデーニャ王国）。1717–1720年はスペイン軍が一時占領
+      source: "https://ja.wikipedia.org/wiki/ハーグ条約_(1720年)"
+
+- id: malta_region
+  name: マルタ
+  select:
+    iso: [MLT]
+  timeline:
+    - from: 1648
+      owner: malta
+    - from: 1798
+      owner: france
+      cause: エジプト遠征途中のナポレオンが占領
+      source: "https://en.wikipedia.org/wiki/French_occupation_of_Malta"
+    - from: 1800
+      owner: britain
+      certainty: occupied
+      cause: フランス軍の降伏とイギリスの保護
+    - from: 1814
+      owner: britain
+      cause: パリ条約（第1次）でイギリス領に

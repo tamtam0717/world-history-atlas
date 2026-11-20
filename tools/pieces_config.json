@@ -1,0 +1,111 @@
+{
+  "_comment": "ピース（地図の最小区画）の作り方の設定。bbox は [西, 南, 東, 北]（経度・緯度）。",
+  "bbox": [
+    -25,
+    25,
+    62,
+    72
+  ],
+  "default_level": "ADM2",
+  "cgaz_level": {
+    "ROU": "ADM1",
+    "CYP": "ADM1",
+    "LVA": "ADM1",
+    "TUR": "ADM1",
+    "MLT": "ADM1",
+    "KWT": "ADM1",
+    "EGY": "ADM1",
+    "BGR": "ADM1",
+    "RUS": "ADM1",
+    "ARM": "ADM1",
+    "AZE": "ADM1",
+    "GEO": "ADM1",
+    "KAZ": "ADM1",
+    "IRN": "ADM1",
+    "IRQ": "ADM1",
+    "SYR": "ADM1",
+    "SAU": "ADM1",
+    "JOR": "ADM1",
+    "LBN": "ADM1",
+    "ISR": "ADM1",
+    "TUN": "ADM1",
+    "LUX": "ADM1",
+    "SMR": "ADM1",
+    "MCO": "ADM1",
+    "AND": "ADM1",
+    "LIE": "ADM1",
+    "ISL": "ADM1"
+  },
+  "fine": {
+    "DEU": {
+      "path": "gb/DEU_ADM3.geojson",
+      "source": "geoBoundaries DEU ADM3 (BKG, dl-de/by-2-0)"
+    },
+    "ITA": {
+      "path": "gb/ITA_ADM3.geojson",
+      "source": "geoBoundaries ITA ADM3 (ISTAT, CC BY 3.0)"
+    },
+    "FRA": {
+      "path": "gb/FRA_ADM3.geojson",
+      "source": "geoBoundaries FRA ADM3 (IGN-F, Etalab 2.0)"
+    },
+    "BEL": {
+      "path": "gb/BEL_ADM3.geojson",
+      "source": "geoBoundaries BEL ADM3 (CC0)"
+    },
+    "GRC": {
+      "path": "gb/GRC_ADM3.geojson",
+      "source": "geoBoundaries GRC ADM3 (CC0)"
+    }
+  },
+  "adm2_within": {
+    "RUS": [
+      "Leningrad oblast",
+      "Republic of Karelia",
+      "Krasnodar Krai",
+      "Adygea",
+      "Pskov Oblast",
+      "Novgorod Oblast",
+      "Smolensk Oblast",
+      "Bryansk Oblast",
+      "Kursk Oblast",
+      "Belgorod Oblast",
+      "Voronezh Oblast",
+      "Rostov Oblast",
+      "Dagestan"
+    ]
+  },
+  "split": [
+    {
+      "iso": "ESP",
+      "name": "Balears, Illes",
+      "parts": [
+        {
+          "suffix": "Menorca",
+          "bbox": [
+            3.75,
+            39.75,
+            4.4,
+            40.15
+          ]
+        }
+      ]
+    }
+  ],
+  "_comment_adm2_within": "ADM1 を基本にする国で、一部の州だけ ADM2 に細分する（例：ロシア西部の国境地帯）",
+  "_comment_split": "1つのピースを島などの部分に分ける。bbox（西,南,東,北）に重心が入る部分を新しいピース（元ID_suffix）にし、残りは元の ID のまま",
+  "clip": [
+    {
+      "iso": "POL",
+      "name": "powiat hrubieszowski",
+      "bbox": [
+        23.4,
+        50.35,
+        24.3,
+        51.1
+      ],
+      "_why": "CGAZ の元データで、南へ細長い帯（スリバー）がのびているため"
+    }
+  ],
+  "_comment_clip": "元データの形が壊れているピースを bbox で切り取る（はみ出した部分は捨てる）"
+}

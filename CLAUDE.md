@@ -40,11 +40,44 @@
    - 重要な区切りでは、作業に関わっていない別のエージェントにデータをチェックさせる。
 6. **出典**：所属変更イベントや君主のデータには、できるだけ出典（条約名・参照ページなど）を持たせる。
 
-## 未決事項（新セッションで最初に確認する）
-1. 開始年：西ローマ滅亡の476年／カール大帝の800年／1000年頃のどれか
-2. 終了年：現代（2000年代）まで含めるか
-3. 試作期間：方式を確かめるために、まず狭い期間で作る。Claude からの提案は **1648〜1815（ウェストファリア条約〜ウィーン会議）**
-4. 公開先：GitHub Pages（このリポジトリを public にする必要あり）か、claude.ai Artifact か
+## 範囲と公開先（2026-11-20 決定）
+- **最終的な対象期間：476年（西ローマ滅亡）〜現代**。データ形式は最初から476年〜現代を扱える設計にする。
+  - 初期中世は国境があいまいな地域が多い。このため所属データには「不確実」「名目的な支配」などの区別を持たせ、ピース方式と合わない地域も表現できるようにしておく。
+- **試作期間：1648〜1815（ウェストファリア条約〜ウィーン会議）**。
+- **公開先：GitHub Pages**。リポジトリを public にする作業は田村さんが行う（準備ができたら Claude から依頼する）。
+
+## 技術的な方針メモ（Claude の判断。必要なら変更してよい）
+- ピースは Natural Earth の admin-1 だけでは粗い（例：ドイツは16州しかない）。このため、ドイツ・イタリア・低地諸国などは、さらに細かい区画（geoBoundaries の admin-2 など、ライセンスが CC-BY 系のもの）で補う。地図を描く前に最初に検証するのはここ。
+- 神聖ローマ帝国の領邦は、主要な20〜30程度に絞る。残りは「その他の帝国諸邦」にまとめる。
+- 表記は日本語。高校世界史の教科書の表記に寄せる。
+
+## リポジトリの構成（2026-11-20 時点）
+
+- `src/`：画面（Vite + TypeScript、d3-geo・topojson-client。SVG で描画）
+  - `map.ts` 地図（ピースを所属で結合して描く、ラベル、ズーム、デバッグ表示）
+  - `panel.ts` 右パネル（出来事・国境の変化・国の情報）、`sheet.ts` スマホの下シート
+- `data/`：手で書くデータ（YAML）。形式は `docs/data-format.md`
+- `public/data/`：`pieces.topo.json`（ピース地図。tools/build_pieces.sh で生成し commit 済み）、`atlas.json`（npm run data で生成。commit しない）
+- `tools/`：ピースの生成、データの検証、historical-basemaps との照合（compare_hb.py）、地図の画像書き出し（snapshot.mjs）
+- `docs/`：データ形式、政体 ID の割り当て、データ作成エージェントへの共通の指示
+- GitHub Pages：`.github/workflows/pages.yml`（main への push でデプロイ）
+
+## 環境のメモ（クラウドセッション）
+
+- Python の地理系ライブラリは `/home/user/venv`（geopandas, shapely, pyogrio）。新しいセッションでは
+  `python3 -m venv /home/user/venv && /home/user/venv/bin/pip install geopandas pyogrio shapely pyarrow` で作り直す。
+- ネットワーク：raw.githubusercontent.com と media.githubusercontent.com（geoBoundaries）、npm は使える。Wikipedia・naciscdn.org・geoboundaries.org は bash からは使えない。
+- Playwright と Chromium は入っている（tools/snapshot.mjs で使う）。
+
+## 進捗（2026-11-20 時点）
+
+- ロードマップ 1〜2：完了（骨組み・データ形式）。
+- ロードマップ 3：1648–1815 の試作データを、7担当（地域別のエージェント）で作成済み。全7,074ピースに所属あり。政体166、地域444、出来事約340。
+  - 担当間の整合：完了（docs/integration-notes.md の「整合の結果」）。
+  - 独立レビュー：完了（docs/review/）。重要度 A・B の指摘は反映済み。反映しなかったものと理由は docs/review/fixes.md。
+  - ピースの改良：ロシア西部13州を郡単位に、メノルカ島を分離、フルビェシュフ郡の壊れた形を修正（tools/pieces_config.json の adm2_within / split / clip）。全7,453ピース。
+- 田村さんの決定（2026-11-20）：1815年のプファルツ・ラインヘッセンは暫定統治（斜線）のまま／出来事は約340件すべて残す／Pages 公開はレビュー指摘の修正が終わってから（その時点で手順を案内する）。
+- GitHub Pages：ワークフローは用意済み。リポジトリの public 化と Pages の Source 設定（GitHub Actions）は田村さん待ち。
 
 ## 想定ロードマップ
 1. 骨組みを作る

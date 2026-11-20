@@ -1,0 +1,1018 @@
+# 北ドイツの地域と所属の変遷（担当 BN）。1648–1815 試作。
+# ピースは現代の郡（Kreis）。歴史的な境界をまたぐ郡は、面積の大きい側の領邦に入れている（note に記載）。
+# 共通の年の扱い：
+#   1806 神聖ローマ帝国の解体 → overlord なし（ライン同盟加盟国は rhine_confederation）
+#   1813 ライプツィヒの戦いの後、ヴェストファーレン王国・ベルク大公国が崩壊、ライン同盟も解体 → overlord なし
+#   1815 ドイツ連邦 → overlord: german_confederation
+
+# ================================================================ シュレースヴィヒ＝ホルシュタイン
+
+- id: schleswig_royal_de
+  name: シュレースヴィヒ（王領・フレンスブルク）
+  select:
+    pieces: [DEU-Flensburg_Kreisfreie_Stadt, DEU-Flensburg_Kreisfreie_Stadt_2]
+  timeline:
+    - from: 1648
+      owner: denmark
+      source: "https://ja.wikipedia.org/wiki/シュレースヴィヒ公国"
+  note: シュレースヴィヒ公領は神聖ローマ帝国の外（デンマーク王の封）。
+
+- id: schleswig_gottorp
+  name: シュレースヴィヒ（ゴットルプ家領）
+  select:
+    pieces: [DEU-Nordfriesland, DEU-Schleswig_Flensburg, DEU-Schleswig_Flensburg_2, DEU-Rendsburg_Eckernforde_2]
+  timeline:
+    - from: 1648
+      owner: holstein_gottorp
+    - from: 1713
+      owner: denmark
+      certainty: occupied
+      cause: 大北方戦争でデンマークがゴットルプ家のシュレースヴィヒ領を占領
+    - from: 1720
+      owner: denmark
+      cause: フレデリクスボー条約（ゴットルプ家のシュレースヴィヒ領をデンマークに併合）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Frederiksborg"
+  note: >-
+    実際にはシュレースヴィヒ南部・西部（フーズム、アイダーシュテット、ゴットルフ周辺）にゴットルプ家領と王領が入り組んでいた。
+    郡単位では表せないため、ゴットルプ家領が大きい郡をまとめてゴットルプ家領とした（簡略化）。
+
+- id: holstein_royal
+  name: ホルシュタイン（王領）
+  select:
+    pieces: [DEU-Steinburg, DEU-Steinburg_2, DEU-Pinneberg, DEU-Pinneberg_2, DEU-Segeberg, DEU-Dithmarschen, DEU-Dithmarschen_2, DEU-Rendsburg_Eckernforde, DEU-Plon]
+  timeline:
+    - from: 1648
+      owner: denmark
+      overlord: hre
+    - from: 1806
+      owner: denmark
+      cause: 神聖ローマ帝国の解体（デンマークがホルシュタインを編入）
+    - from: 1815
+      owner: denmark
+      overlord: german_confederation
+      cause: ドイツ連邦の成立（ホルシュタインは連邦に加盟）
+  note: >-
+    ホルシュタインはデンマーク王が帝国諸侯として治めた。北ディトマルシェンはゴットルプ家領、プレーンは分家ホルシュタイン＝プレーン公領（1761年に王領）だが、まとめて王領とした。
+    レンツブルク＝エッケルンフェルデ郡はアイダー川の北（シュレースヴィヒ側）も含むが、面積の大きいホルシュタイン側に入れた。
+
+- id: holstein_gottorp_lands
+  name: ホルシュタイン（ゴットルプ家領）
+  select:
+    pieces: [DEU-Kiel_Kreisfreie_Stadt, DEU-Kiel_Kreisfreie_Stadt_2, DEU-Neumunster_Kreisfreie_Stadt, DEU-Ostholstein, DEU-Ostholstein_2, DEU-Stormarn]
+  timeline:
+    - from: 1648
+      owner: holstein_gottorp
+      overlord: hre
+    - from: 1773
+      owner: denmark
+      overlord: hre
+      cause: ツァールスコエ・セロー条約（ゴットルプ家がホルシュタインの持ち分をオルデンブルクと交換）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Tsarskoye_Selo_(1773)"
+    - from: 1806
+      owner: denmark
+      cause: 神聖ローマ帝国の解体（デンマークがホルシュタインを編入）
+    - from: 1815
+      owner: denmark
+      overlord: german_confederation
+      cause: ドイツ連邦の成立
+  note: >-
+    オストホルシュタイン郡のうちオイティン周辺はリューベック司教領（司教はゴットルプ家の出身。1803年にオルデンブルク領のリューベック侯領）だが、郡全体をゴットルプ家領とした（簡略化）。
+
+- id: lauenburg_elbe
+  name: ラウエンブルク
+  select:
+    pieces: [DEU-Herzogtum_Lauenburg]
+  timeline:
+    - from: 1648
+      owner: saxe_lauenburg
+      overlord: hre
+    - from: 1689
+      owner: celle
+      overlord: hre
+      cause: ザクセン＝ラウエンブルク家の断絶（ツェレ公が占有。皇帝の承認は1728年）
+    - from: 1705
+      owner: hanover
+      overlord: hre
+      cause: リューネブルク（ツェレ）系の断絶でハノーファーに統合
+    - from: 1803
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: フランスがハノーファーを占領（アルトレンブルク協定）
+    - from: 1806
+      owner: france
+      certainty: occupied
+      cause: 神聖ローマ帝国の解体
+    - from: 1810
+      owner: france
+      cause: フランスが北西ドイツを併合
+    - from: 1813
+      owner: hanover
+      cause: フランス軍の撤退
+    - from: 1815
+      owner: denmark
+      overlord: german_confederation
+      cause: ウィーン会議（ハノーファーからプロイセンを経てデンマークへ。引き渡しは1816年）
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Lauenburg"
+
+- id: lubeck_city
+  name: リューベック
+  select:
+    pieces: [DEU-Lubeck_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: lubeck, overlord: hre}
+    - {from: 1806, owner: lubeck, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: lubeck, cause: フランス軍の撤退}
+    - {from: 1815, owner: lubeck, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: hamburg_city
+  name: ハンブルク
+  select:
+    adm1: ["DEU/Hamburg"]
+  timeline:
+    - {from: 1648, owner: hamburg, overlord: hre}
+    - {from: 1806, owner: hamburg, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1814, owner: hamburg, cause: フランス軍の撤退（ダヴー軍は1814年5月まで籠城）}
+    - {from: 1815, owner: hamburg, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: 現代のハンブルク市域には、当時デンマーク領のアルトナ、ハノーファー領のハールブルクなども含まれるが、市全体をハンブルクとした。
+
+# ================================================================ メクレンブルク＝フォアポンメルン
+
+- id: mecklenburg_schwerin_lands
+  name: メクレンブルク（シュヴェリーン）
+  select:
+    pieces: [DEU-Nordwestmecklenburg, DEU-Schwerin_Kreisfreie_Stadt, DEU-Ludwigslust_Parchim]
+  timeline:
+    - {from: 1648, owner: mecklenburg, overlord: hre}
+    - {from: 1806, owner: mecklenburg, cause: 神聖ローマ帝国の解体}
+    - {from: 1808, owner: mecklenburg, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: mecklenburg, cause: ライン同盟から離脱}
+    - {from: 1815, owner: mecklenburg, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    ノルトヴェストメクレンブルク郡には、スウェーデン領ヴィスマール（1648–1803。1803年にメクレンブルクへ質入れ）と、
+    メクレンブルク＝シュトレーリッツ領ラッツェブルク侯領（1701–）が含まれるが、郡単位では表せない。
+
+- id: mecklenburg_gustrow_lands
+  name: メクレンブルク（ギュストロー・ロストック）
+  select:
+    pieces: [DEU-Landkreis_Rostock, DEU-Rostock_Kreisfreie_Stadt, DEU-Rostock_Kreisfreie_Stadt_2]
+  timeline:
+    - {from: 1648, owner: mecklenburg_gustrow, overlord: hre}
+    - {from: 1695, owner: mecklenburg, overlord: hre, cause: ギュストロー系の断絶}
+    - {from: 1806, owner: mecklenburg, cause: 神聖ローマ帝国の解体}
+    - {from: 1808, owner: mecklenburg, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: mecklenburg, cause: ライン同盟から離脱}
+    - {from: 1815, owner: mecklenburg, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: mecklenburg_stargard
+  name: メクレンブルク（シュタルガルト）
+  select:
+    pieces: [DEU-Mecklenburgische_Seenplatte]
+  timeline:
+    - {from: 1648, owner: mecklenburg_gustrow, overlord: hre}
+    - from: 1695
+      owner: mecklenburg
+      overlord: hre
+      certainty: uncertain
+      cause: ギュストロー系の断絶（継承をめぐりシュヴェリーン系とシュトレーリッツ系が争う）
+    - from: 1701
+      owner: mecklenburg_strelitz
+      overlord: hre
+      cause: ハンブルク協定（メクレンブルク＝シュトレーリッツ公国の成立）
+      source: "https://de.wikipedia.org/wiki/Hamburger_Vergleich"
+    - {from: 1806, owner: mecklenburg_strelitz, cause: 神聖ローマ帝国の解体}
+    - {from: 1808, owner: mecklenburg_strelitz, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: mecklenburg_strelitz, cause: ライン同盟から離脱}
+    - {from: 1815, owner: mecklenburg_strelitz, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    メクレンブルク湖水地方郡はシュタルガルト地方（シュトレーリッツ）のほか、ヴァーレン・マルヒン（シュヴェリーン）、
+    デミン（ポンメルン。1648–1720スウェーデン領、以後プロイセン領）を含む。最も大きいシュトレーリッツ領として扱った。
+
+- id: swedish_pomerania_north
+  name: スウェーデン領ポンメルン（ペーネ川以北・リューゲン）
+  select:
+    pieces: [DEU-Vorpommern_Rugen, DEU-Vorpommern_Rugen_2]
+  timeline:
+    - from: 1648
+      owner: sweden
+      overlord: hre
+      cause: ウェストファリア条約
+      source: "https://ja.wikipedia.org/wiki/スウェーデン領ポメラニア"
+    - from: 1806
+      owner: sweden
+      cause: 神聖ローマ帝国の解体（スウェーデン本国に編入）
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: ウィーン会議（1814年キール条約でデンマークに譲られたのち、プロイセンへ）
+  note: >-
+    1807–1810年と1812–1813年はフランス軍が占領したが、表示していない。1814年のキール条約でデンマークに割譲されたが、
+    引き渡されないまま1815年にプロイセン領となった。グライフスヴァルトとヴォルガストもペーネ川以北で1815年までスウェーデン領だが、
+    郡（フォアポンメルン＝グライフスヴァルト郡）の大半がペーネ川以南のため、南側の扱いになっている。
+
+- id: swedish_pomerania_south
+  name: ポンメルン（ペーネ川以南・ウーゼドム）
+  select:
+    pieces: [DEU-Vorpommern_Greifswald, DEU-Vorpommern_Greifswald_2]
+  timeline:
+    - from: 1648
+      owner: sweden
+      overlord: hre
+      cause: ウェストファリア条約
+    - from: 1720
+      owner: prussia
+      overlord: hre
+      cause: ストックホルム条約（ペーネ川以南とウーゼドム・ヴォリン島、シュテッティンをプロイセンへ）
+      source: "https://ja.wikipedia.org/wiki/ストックホルム条約_(1720年)"
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: 1675–1679年はブランデンブルク軍が占領したが（サン＝ジェルマン条約で返還）、表示していない。
+
+# ================================================================ ブランデンブルク・ベルリン
+
+- id: brandenburg_core
+  name: ブランデンブルク辺境伯領
+  select:
+    adm1: ["DEU/Berlin", "DEU/Brandenburg"]
+    exclude: [DEU-Cottbus_Kreisfreie_Stadt, DEU-Dahme_Spreewald, DEU-Elbe_Elster, DEU-Oberspreewald_Lausitz, DEU-Spree_Neie]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    テルトー＝フレーミング郡のユーターボーク、ポツダム＝ミッテルマルク郡のベルツィヒはザクセン領だったが、郡の大半がブランデンブルクのためブランデンブルクとした。
+
+- id: cottbus
+  name: コトブス
+  select:
+    pieces: [DEU-Cottbus_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: saxony, overlord: rhine_confederation, cause: ティルジット条約（コトブス郡をザクセンへ）}
+    - {from: 1813, owner: saxony, cause: ライン同盟の解体}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議}
+  note: コトブスは下ラウジッツの中にあるブランデンブルクの飛び地（1462年から）。
+
+- id: lower_lusatia
+  name: 下ラウジッツ・ザクセン選帝侯領北東部
+  select:
+    pieces: [DEU-Dahme_Spreewald, DEU-Elbe_Elster, DEU-Oberspreewald_Lausitz, DEU-Spree_Neie]
+  timeline:
+    - from: 1648
+      owner: saxony
+      overlord: hre
+      source: "https://ja.wikipedia.org/wiki/ラウジッツ"
+    - {from: 1806, owner: saxony, overlord: rhine_confederation, cause: ポーゼン条約（ザクセン王国の成立とライン同盟加盟）}
+    - {from: 1813, owner: saxony, cause: ライン同盟の解体}
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: ウィーン会議（ザクセンの北半分をプロイセンへ）
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+  note: >-
+    下ラウジッツは1635年のプラハ条約からザクセン領（ボヘミア王冠の封）。エルベ＝エルスター郡は選帝侯領の本領（ヘルツベルク・リーベンヴェルダ）。
+    ダーメ＝シュプレーヴァルト郡北部（ケーニヒス・ヴスターハウゼン）とシュプレー＝ナイセ郡のコトブス周辺はブランデンブルク領だが、郡の大半に合わせた。
+
+# ================================================================ ザクセン
+
+- id: saxony_core
+  name: ザクセン（マイセン・ライプツィヒ・エルツ山地・上ラウジッツ南部）
+  select:
+    adm1: ["DEU/Sachsen"]
+    exclude: [DEU-Nordsachsen, DEU-Gorlitz]
+  timeline:
+    - {from: 1648, owner: saxony, overlord: hre}
+    - {from: 1806, owner: saxony, overlord: rhine_confederation, cause: ポーゼン条約（ザクセン王国の成立とライン同盟加盟）}
+    - {from: 1813, owner: saxony, cause: ライン同盟の解体}
+    - {from: 1815, owner: saxony, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    バウツェン郡は上ラウジッツ（1635年からザクセン領）。北部のホイヤースヴェルダは1815年にプロイセン領となるが、郡の大半はザクセンに残った。
+    フォークトラント郡にはロイス家の領地も少し含まれる。
+
+- id: saxony_north_1815
+  name: ザクセン北部（トルガウ・ヴィッテンベルク・上ラウジッツ北部）
+  select:
+    pieces: [DEU-Nordsachsen, DEU-Wittenberg, DEU-Gorlitz]
+  timeline:
+    - {from: 1648, owner: saxony, overlord: hre}
+    - {from: 1806, owner: saxony, overlord: rhine_confederation, cause: ポーゼン条約（ザクセン王国の成立とライン同盟加盟）}
+    - {from: 1813, owner: saxony, cause: ライン同盟の解体}
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: ウィーン会議（ザクセンの北半分をプロイセンへ）
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+  note: >-
+    ゲルリッツ郡は南部（ツィッタウ・レーバウ）がザクセンに残ったが、北部（ゲルリッツ・ニースキー）がより広いためプロイセン側とした。
+    ノルトザクセン郡も南部のオシャッツはザクセンに残った。
+
+- id: saxony_thuringia
+  name: ザクセン領テューリンゲン（メルゼブルク・ヴァイセンフェルス・ザンガーハウゼンなど）
+  select:
+    pieces: [DEU-Burgenlandkreis, DEU-Saalekreis, DEU-Mansfeld_Sudharz, DEU-Sommerda, DEU-Unstrut_Hainich_Kreis, DEU-Suhl_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: saxony, overlord: hre}
+    - {from: 1806, owner: saxony, overlord: rhine_confederation, cause: ポーゼン条約（ザクセン王国の成立とライン同盟加盟）}
+    - {from: 1813, owner: saxony, cause: ライン同盟の解体}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（ザクセンの北半分をプロイセンへ）}
+  note: >-
+    1656–1746年ごろはザクセン＝ヴァイセンフェルス、メルゼブルク、ツァイツの分家公領（選帝侯の宗主権の下）があったが、ザクセンにまとめた。
+    ウンストルト＝ハイニッヒ郡の帝国都市ミュールハウゼン（1802/03年プロイセン、1807年ヴェストファーレン王国）は郡単位では表せない。
+    マンスフェルト伯領は1780年にザクセンとプロイセン（マグデブルク）の間で分けられた。ウンストルート＝ハイニッヒ郡の帝国自由都市ミュールハウゼン
+    （1802/03年プロイセン、1807年ヴェストファーレン王国）は郡単位で表せない。ズール（ヘンネベルクのザクセン領）は1815年にプロイセンへ。
+
+# ================================================================ テューリンゲン
+
+- id: saxon_duchies_lands
+  name: ザクセン諸公国（エルネスティン系）
+  select:
+    pieces: [DEU-Gotha, DEU-Wartburgkreis, DEU-Eisenach_Kreisfreie_Stadt, DEU-Weimar_Kreisfreie_Stadt, DEU-Weimarer_Land, DEU-Jena_Kreisfreie_Stadt, DEU-Saale_Holzland_Kreis, DEU-Altenburger_Land, DEU-Schmalkalden_Meiningen, DEU-Hildburghausen, DEU-Sonneberg]
+  timeline:
+    - {from: 1648, owner: saxon_duchies, overlord: hre}
+    - {from: 1806, owner: saxon_duchies, overlord: rhine_confederation, cause: ライン同盟に加盟（1806年12月）}
+    - {from: 1813, owner: saxon_duchies, cause: ライン同盟の解体}
+    - {from: 1815, owner: saxon_duchies, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    シュマルカルデン＝マイニンゲン郡のシュマルカルデン周辺はヘッセン＝カッセル領、ヒルトブルクハウゼン郡のシュロイジンゲンはザクセン選帝侯領、
+    ヴァルトブルク郡のファッハはフルダ・ヘッセン領だが、郡の大半に合わせた。
+
+- id: reuss_lands
+  name: ロイス
+  select:
+    pieces: [DEU-Gera_Kreisfreie_Stadt, DEU-Greiz, DEU-Saale_Orla_Kreis]
+  timeline:
+    - {from: 1648, owner: reuss, overlord: hre}
+    - {from: 1806, owner: reuss, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: reuss, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: reuss, cause: ライン同盟の解体}
+    - {from: 1815, owner: reuss, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: ザーレ＝オルラ郡にはザクセン諸公国のペースネック、ザクセン選帝侯領のノイシュタット（1815年ヴァイマルへ）も含まれる。
+
+- id: schwarzburg_lands
+  name: シュヴァルツブルク
+  select:
+    pieces: [DEU-Kyffhauserkreis, DEU-Saalfeld_Rudolstadt, DEU-Ilm_Kreis]
+  timeline:
+    - {from: 1648, owner: schwarzburg, overlord: hre}
+    - {from: 1806, owner: schwarzburg, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: schwarzburg, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: schwarzburg, cause: ライン同盟の解体}
+    - {from: 1815, owner: schwarzburg, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: キフホイザー郡のアルテルン、ザールフェルト（ザクセン諸公国）、イルメナウ（ヴァイマル）も含まれるが、郡の大半に合わせた。
+
+- id: erfurt
+  name: エアフルト
+  select:
+    pieces: [DEU-Erfurt_Kreisfreie_Stadt]
+  timeline:
+    - from: 1648
+      owner: mainz
+      overlord: hre
+      certainty: nominal
+      note: マインツ大司教の支配下にあるとされたが、市は事実上自立していた。
+    - from: 1664
+      owner: mainz
+      overlord: hre
+      cause: マインツ大司教が（フランス軍の助けで）エアフルトを制圧
+      source: "https://de.wikipedia.org/wiki/Erfurt"
+    - {from: 1803, owner: prussia, overlord: hre, cause: 帝国代表者会議主要決議（1802年に占領）}
+    - from: 1806
+      owner: france
+      certainty: occupied
+      cause: イエナの戦いの後、フランスが占領（「エアフルト侯領」としてナポレオンの直轄地に）
+    - {from: 1814, owner: prussia, cause: フランス軍の降伏（1814年5月）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: eichsfeld
+  name: アイヒスフェルト
+  select:
+    pieces: [DEU-Eichsfeld]
+  timeline:
+    - {from: 1648, owner: mainz, overlord: hre}
+    - {from: 1803, owner: prussia, overlord: hre, cause: 帝国代表者会議主要決議（1802年に占領）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
+    - {from: 1813, owner: prussia, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: 上アイヒスフェルト。下アイヒスフェルト（ドゥーダーシュタット、現ゲッティンゲン郡）は1815年にハノーファー領。
+
+- id: nordhausen_hohnstein
+  name: ホーンシュタイン・ノルトハウゼン
+  select:
+    pieces: [DEU-Nordhausen]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre, cause: ウェストファリア条約（ホーンシュタイン伯領をブランデンブルクへ）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
+    - {from: 1813, owner: prussia, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    ホーンシュタイン伯領（ローラ・クレッテンベルク）は1649–1699年ザイン＝ヴィトゲンシュタイン伯に封として与えられていた。
+    帝国自由都市ノルトハウゼンは1802/03年にプロイセン領。要確認：伯領の扱い。
+
+# ================================================================ ザクセン＝アンハルト
+
+- id: altmark_halberstadt
+  name: アルトマルク・ハルバーシュタット
+  select:
+    pieces: [DEU-Altmarkkreis_Salzwedel, DEU-Stendal, DEU-Harz]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre, cause: ウェストファリア条約（ハルバーシュタット司教領をブランデンブルクへ）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（エルベ川以西をヴェストファーレン王国へ）}
+    - {from: 1813, owner: prussia, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: ハルツ郡にはクヴェードリンブルク帝国修道院（1698年からブランデンブルクが保護権）、シュトルベルク＝ヴェルニゲローデ伯領（ブランデンブルクの宗主権下）を含む。
+
+- id: magdeburg_west
+  name: マグデブルク（エルベ川以西）・ハレ
+  select:
+    pieces: [DEU-Magdeburg_Kreisfreie_Stadt, DEU-Borde, DEU-Salzlandkreis, DEU-Halle_Saale_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: magdeburg, overlord: hre}
+    - from: 1680
+      owner: prussia
+      overlord: hre
+      cause: 管理者アウグストの死去（ウェストファリア条約の取り決めにより、マグデブルク公領としてブランデンブルクへ）
+      source: "https://ja.wikipedia.org/wiki/マクデブルク大司教領"
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（エルベ川以西をヴェストファーレン王国へ）}
+    - {from: 1813, owner: prussia, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: ザルツラント郡のベルンブルク周辺はアンハルト＝ベルンブルク、アッシャースレーベンはハルバーシュタット領だが、郡の大半に合わせた。
+
+- id: jerichow
+  name: イェリホー（マグデブルクのエルベ川以東）
+  select:
+    pieces: [DEU-Jerichower_Land]
+  timeline:
+    - {from: 1648, owner: magdeburg, overlord: hre}
+    - {from: 1680, owner: prussia, overlord: hre, cause: 管理者アウグストの死去（マグデブルク公領としてブランデンブルクへ）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: anhalt_lands
+  name: アンハルト
+  select:
+    pieces: [DEU-Anhalt_Bitterfeld, DEU-Dessau_Rolau_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: anhalt, overlord: hre}
+    - {from: 1806, owner: anhalt, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: anhalt, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: anhalt, cause: ライン同盟の解体}
+    - {from: 1815, owner: anhalt, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: アンハルト＝ビターフェルト郡のビターフェルト周辺はザクセン領だが、ケーテン・ツェルプストが大きいためアンハルトとした。
+
+# ================================================================ ニーダーザクセン（ヴェルフ家の諸領）
+
+- id: calenberg
+  name: カレンベルク（ハノーファー周辺）
+  select:
+    pieces: [DEU-Region_Hannover, DEU-Hameln_Pyrmont]
+  timeline:
+    - {from: 1648, owner: hanover, overlord: hre}
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領（アルトレンブルク協定）}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体（この年プロイセンが一時併合したが、イエナの戦いの後ふたたびフランスが占領）}
+    - {from: 1810, owner: westphalia_kingdom, overlord: rhine_confederation, cause: パリ条約（ハノーファーの残りをヴェストファーレン王国へ）}
+    - {from: 1813, owner: hanover, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: ハーメルン＝ピルモント郡のピルモントはヴァルデック領。
+
+- id: gottingen_grubenhagen
+  name: ゲッティンゲン・グルーベンハーゲン
+  select:
+    pieces: [DEU-Gottingen, DEU-Northeim]
+  timeline:
+    - {from: 1648, owner: hanover, overlord: hre}
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領（アルトレンブルク協定）}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ヴェストファーレン王国の成立}
+    - {from: 1813, owner: hanover, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    グルーベンハーゲン侯領は1665年までリューネブルク（ツェレ）系の領地だったが、簡略化してハノーファーとした。
+    ゲッティンゲン郡のドゥーダーシュタット周辺（下アイヒスフェルト）は1802年までマインツ領。
+
+- id: hoya
+  name: ホーヤ（ニーンブルク）
+  select:
+    pieces: [DEU-Nienburg_Weser]
+  timeline:
+    - {from: 1648, owner: hanover, overlord: hre}
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合（ヴェーザー河口県）}
+    - {from: 1813, owner: hanover, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: 1810年1月にいったんヴェストファーレン王国に編入され、12月にフランスに併合された（年末時点の状態で表示）。
+
+- id: diepholz
+  name: ディープホルツ・ホーヤ西部
+  select:
+    pieces: [DEU-Diepholz]
+  timeline:
+    - {from: 1648, owner: celle, overlord: hre}
+    - {from: 1705, owner: hanover, overlord: hre, cause: リューネブルク（ツェレ）系の断絶でハノーファーに統合}
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: hanover, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: lueneburg_north
+  name: リューネブルク北部（リューネブルク・ウルツェン・ダンネンベルク）
+  select:
+    pieces: [DEU-Luneburg_Landkreis, DEU-Harburg, DEU-Luchow_Dannenberg, DEU-Uelzen, DEU-Heidekreis]
+  timeline:
+    - {from: 1648, owner: celle, overlord: hre}
+    - {from: 1705, owner: hanover, overlord: hre, cause: リューネブルク（ツェレ）系の断絶でハノーファーに統合}
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合（エルベ河口県）}
+    - {from: 1813, owner: hanover, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    1810–1813年のフランスとヴェストファーレン王国の境界は、郡単位では正確に表せない。ウルツェン郡・ハイデ郡（ゾルタウ）は境界付近で、
+    要確認（ヴェストファーレン王国に残った部分がある可能性）。
+
+- id: lueneburg_south
+  name: リューネブルク南部（ツェレ・ギフホルン）
+  select:
+    pieces: [DEU-Celle, DEU-Gifhorn]
+  timeline:
+    - {from: 1648, owner: celle, overlord: hre}
+    - {from: 1705, owner: hanover, overlord: hre, cause: リューネブルク（ツェレ）系の断絶でハノーファーに統合}
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: westphalia_kingdom, overlord: rhine_confederation, cause: パリ条約（ハノーファーの残りをヴェストファーレン王国へ）}
+    - {from: 1813, owner: hanover, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: bremen_verden
+  name: ブレーメン＝フェルデン
+  select:
+    pieces: [DEU-Stade, DEU-Stade_2, DEU-Cuxhaven, DEU-Rotenburg_Wumme, DEU-Osterholz, DEU-Verden, DEU-Bremerhaven_Kreisfreie_Stadt, DEU-Bremerhaven_Kreisfreie_Stadt_2]
+  timeline:
+    - from: 1648
+      owner: sweden
+      overlord: hre
+      cause: ウェストファリア条約（ブレーメン大司教領・フェルデン司教領をスウェーデンへ）
+      source: "https://de.wikipedia.org/wiki/Herzogtümer_Bremen_und_Verden"
+    - from: 1712
+      owner: denmark
+      overlord: hre
+      certainty: occupied
+      cause: 大北方戦争でデンマークが占領
+    - from: 1715
+      owner: hanover
+      overlord: hre
+      cause: デンマークがハノーファーに売却（1719年ストックホルム条約でスウェーデンが割譲を承認）
+      source: "https://ja.wikipedia.org/wiki/ストックホルム条約_(1719年)"
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: hanover, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    クックスハーフェン郡のハーデルン地方はザクセン＝ラウエンブルクの飛び地（1689年からツェレ／ハノーファー）、
+    リッツェビュッテル（現クックスハーフェン市）はハンブルク領だが、郡の大半に合わせた。
+
+- id: bremen_city
+  name: ブレーメン
+  select:
+    pieces: [DEU-Bremen_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: bremen, overlord: hre}
+    - {from: 1806, owner: bremen, cause: 神聖ローマ帝国の解体}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: bremen, cause: フランス軍の撤退}
+    - {from: 1815, owner: bremen, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: brunswick_lands
+  name: ブラウンシュヴァイク＝ヴォルフェンビュッテル
+  select:
+    pieces: [DEU-Braunschweig_Kreisfreie_Stadt, DEU-Wolfenbuttel, DEU-Helmstedt, DEU-Wolfsburg_Kreisfreie_Stadt, DEU-Goslar, DEU-Holzminden]
+  timeline:
+    - {from: 1648, owner: brunswick, overlord: hre}
+    - {from: 1806, owner: france, certainty: occupied, cause: フランス軍の占領（10月。公はイエナ・アウエルシュタットの戦いで致命傷を負い死去）}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
+    - {from: 1813, owner: brunswick, cause: ヴェストファーレン王国の崩壊（公が帰国）}
+    - {from: 1815, owner: brunswick, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    ゴスラー郡の帝国自由都市ゴスラー（1802/03年プロイセン、1815年ハノーファー）とクラウスタール（ハノーファー）、
+    ヴォルフスブルク市のファラースレーベン（リューネブルク）は郡単位では表せない。
+
+- id: hildesheim_lands
+  name: ヒルデスハイム
+  select:
+    pieces: [DEU-Hildesheim, DEU-Peine, DEU-Salzgitter_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: hildesheim, overlord: hre}
+    - {from: 1803, owner: prussia, overlord: hre, cause: 帝国代表者会議主要決議（1802年に占領）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
+    - from: 1813
+      owner: hanover
+      cause: ヴェストファーレン王国の崩壊（ライヒェンバッハ条約でプロイセンはハノーファーへの譲渡を約束）
+      note: 要確認：1813–1815年の実際の管理者（ハノーファーの接収時期）。
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ウィーン会議（ヒルデスハイムをハノーファーへ）}
+
+- id: schaumburg
+  name: シャウムブルク
+  select:
+    pieces: [DEU-Schaumburg]
+  timeline:
+    - {from: 1648, owner: schaumburg_lippe, overlord: hre, cause: ウェストファリア条約（シャウムブルク伯領の分割を確認）}
+    - {from: 1806, owner: schaumburg_lippe, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: schaumburg_lippe, overlord: rhine_confederation, cause: ライン同盟に加盟（侯国に昇格）}
+    - {from: 1813, owner: schaumburg_lippe, cause: ライン同盟の解体}
+    - {from: 1815, owner: schaumburg_lippe, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    シャウムブルク郡は、ヘッセン＝カッセル領シャウムブルク（リンテルン。1807–1813年はヴェストファーレン王国）と、独立した小国シャウムブルク＝リッペ伯領（ビュッケブルク。1807年ライン同盟、1815年ドイツ連邦）がほぼ半分ずつ。
+    ヘッセン＝カッセルは周辺に大きな領土を持つので、ここでは独立した領邦のシャウムブルク＝リッペで代表させた。
+
+- id: osnabruck_lands
+  name: オスナブリュック
+  select:
+    pieces: [DEU-Osnabruck_Kreisfreie_Stadt, DEU-Osnabruck_Landkreis]
+  timeline:
+    - {from: 1648, owner: osnabruck, overlord: hre}
+    - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: 帝国代表者会議主要決議でハノーファー領となるが、同年フランスが占領}
+    - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ヴェストファーレン王国の成立}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合（上エムス県）}
+    - {from: 1813, owner: hanover, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: bentheim
+  name: ベントハイム
+  select:
+    pieces: [DEU-Grafschaft_Bentheim]
+  timeline:
+    - {from: 1648, owner: other_hre, overlord: hre}
+    - {from: 1753, owner: hanover, overlord: hre, cause: ベントハイム伯がハノーファーに伯領を抵当に入れる}
+    - {from: 1804, owner: other_hre, overlord: hre, cause: 抵当期間の終了（ベントハイム＝シュタインフルト伯に返還）}
+    - {from: 1806, owner: berg, overlord: rhine_confederation, cause: ライン同盟規約（ベルク大公国に陪臣化）}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: hanover, certainty: uncertain, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ウィーン会議（ハノーファー主権下に）}
+  note: ベントハイム伯領。要確認：1804年の返還の年。
+
+- id: emsland_meppen
+  name: エムスラント（メッペン）
+  select:
+    pieces: [DEU-Emsland]
+  timeline:
+    - {from: 1648, owner: munster, overlord: hre}
+    - {from: 1803, owner: arenberg, overlord: hre, cause: 帝国代表者会議主要決議（アーレンベルク公へ）}
+    - {from: 1806, owner: arenberg, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: hanover, certainty: uncertain, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ウィーン会議（ハノーファー主権下に）}
+  note: >-
+    郡の南部はリンゲン伯領（オラニエ家領→1702年プロイセン→1807年ベルク→1810年フランス→1815年ハノーファー）だが、
+    北部のミュンスター司教領（ニーダーシュティフト）が大きいためそちらに合わせた。
+
+- id: oldenburg_lands
+  name: オルデンブルク・デルメンホルスト
+  select:
+    pieces: [DEU-Ammerland, DEU-Oldenburg_Oldenburg_Kreisfreie_Stadt, DEU-Oldenburg_Landkreis, DEU-Delmenhorst_Kreisfreie_Stadt, DEU-Wesermarsch, DEU-Wilhelmshaven_Kreisfreie_Stadt, DEU-Wilhelmshaven_Kreisfreie_Stadt_2]
+  timeline:
+    - {from: 1648, owner: oldenburg, overlord: hre}
+    - from: 1667
+      owner: denmark
+      overlord: hre
+      cause: アントン・ギュンター伯の死去（デンマーク王が継承）
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Oldenburg"
+    - from: 1773
+      owner: oldenburg
+      overlord: hre
+      cause: ツァールスコエ・セロー条約（ゴットルプ家の若い系統へ。1774年公国）
+      source: "https://ja.wikipedia.org/wiki/オルデンブルク公国"
+    - {from: 1806, owner: oldenburg, cause: 神聖ローマ帝国の解体}
+    - {from: 1808, owner: oldenburg, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: oldenburg, cause: フランス軍の撤退}
+    - {from: 1815, owner: oldenburg, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: オルデンブルク郡のヴィルデスハウゼンは1648–1700年スウェーデン領、1700–1803年ハノーファー領。
+
+- id: jever
+  name: ヤーファー
+  select:
+    pieces: [DEU-Friesland_DE]
+  timeline:
+    - {from: 1648, owner: oldenburg, overlord: hre}
+    - {from: 1667, owner: anhalt, overlord: hre, cause: アントン・ギュンター伯の死去（ヤーファーはアンハルト＝ツェルプスト家へ）}
+    - {from: 1793, owner: russia, overlord: hre, cause: アンハルト＝ツェルプスト家の断絶（ロシアのエカチェリーナ2世が相続）}
+    - {from: 1806, owner: russia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: netherlands, cause: ティルジット条約（ホラント王国へ）}
+    - {from: 1810, owner: france, cause: フランスがホラント王国を併合}
+    - {from: 1813, owner: russia, certainty: nominal, cause: フランス軍の撤退（ロシア領に戻り、オルデンブルクが管理。1818年オルデンブルク領）}
+  note: フリースラント郡のうち南部のファーレル周辺はオルデンブルク領だが、北部のヤーファー領主領が大きいためそちらに合わせた。
+
+- id: oldenburg_munster
+  name: オルデンブルク・ミュンスターラント（フェヒタ・クロッペンブルク）
+  select:
+    pieces: [DEU-Vechta, DEU-Cloppenburg]
+  timeline:
+    - {from: 1648, owner: munster, overlord: hre}
+    - {from: 1803, owner: oldenburg, overlord: hre, cause: 帝国代表者会議主要決議（オルデンブルクへ）}
+    - {from: 1806, owner: oldenburg, cause: 神聖ローマ帝国の解体}
+    - {from: 1808, owner: oldenburg, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: oldenburg, cause: フランス軍の撤退}
+    - {from: 1815, owner: oldenburg, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: east_frisia_lands
+  name: 東フリースラント
+  select:
+    pieces: [DEU-Aurich, DEU-Emden_Kreisfreie_Stadt, DEU-Leer, DEU-Leer_2, DEU-Wittmund]
+  timeline:
+    - {from: 1648, owner: east_frisia, overlord: hre}
+    - from: 1744
+      owner: prussia
+      overlord: hre
+      cause: ツィルクセナ家の断絶（プロイセンが継承）
+      source: "https://de.wikipedia.org/wiki/Ostfriesland"
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: netherlands, cause: ティルジット条約（フォンテーヌブロー条約でホラント王国へ）}
+    - {from: 1810, owner: france, cause: フランスがホラント王国を併合}
+    - {from: 1813, owner: prussia, cause: フランス軍の撤退}
+    - {from: 1815, owner: hanover, overlord: german_confederation, cause: ウィーン会議（東フリースラントをハノーファーへ）}
+
+# ================================================================ ノルトライン＝ヴェストファーレン
+
+- id: kleve_left
+  name: クレーヴェ（ライン左岸）
+  select:
+    pieces: [DEU-Kleve]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre, cause: ユーリヒ＝クレーヴェ継承問題（1614年クサンテン条約・1666年クレーヴェ条約）}
+    - {from: 1794, owner: france, overlord: hre, certainty: occupied, cause: フランス革命軍がライン左岸を占領}
+    - {from: 1801, owner: france, cause: リュネヴィル条約（ライン左岸をフランスへ）}
+    - {from: 1814, owner: prussia, certainty: occupied, cause: フランス軍の撤退（連合国の総督府が管理）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（ライン州としてプロイセンへ）}
+  note: クレーヴェ郡の南部（ゲルデルン）は上ゲルデルン（1713年からプロイセン領）。
+
+- id: moers_krefeld
+  name: メールス・クレーフェルト
+  select:
+    pieces: [DEU-Krefeld_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: other_hre, overlord: hre, note: オラニエ家領メールス伯領}
+    - {from: 1702, owner: prussia, overlord: hre, cause: オラニエ公ウィレム3世の遺領をプロイセンが継承}
+    - {from: 1794, owner: france, overlord: hre, certainty: occupied, cause: フランス革命軍がライン左岸を占領}
+    - {from: 1801, owner: france, cause: リュネヴィル条約（ライン左岸をフランスへ）}
+    - {from: 1814, owner: prussia, certainty: occupied, cause: フランス軍の撤退（連合国の総督府が管理）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議}
+  note: ユルディンゲンはケルン選帝侯領。メールス伯領の中心（メールス市）は現ヴェーゼル郡にある。
+
+- id: kleve_right
+  name: クレーヴェ（ライン右岸）・デュースブルク
+  select:
+    pieces: [DEU-Wesel, DEU-Duisburg_Kreisfreie_Stadt, DEU-Oberhausen_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre}
+    - {from: 1806, owner: berg, overlord: rhine_confederation, cause: プロイセンがナポレオンにクレーヴェ右岸を譲渡（ベルク大公国へ）}
+    - {from: 1813, owner: prussia, cause: ベルク大公国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    ヴェーゼル郡の左岸部分（メールス・ラインベルク・クサンテン）は、メールス伯領・ケルン選帝侯領・クレーヴェ公領が入り組む。
+    要塞都市ヴェーゼルは1808年にフランスに併合された。
+
+- id: mark
+  name: マルク伯領
+  select:
+    pieces: [DEU-Bochum_Kreisfreie_Stadt, DEU-Ennepe_Ruhr_Kreis, DEU-Hagen_Kreisfreie_Stadt, DEU-Hamm_Kreisfreie_Stadt, DEU-Herne_Kreisfreie_Stadt, DEU-Markischer_Kreis, DEU-Unna]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre, cause: ユーリヒ＝クレーヴェ継承問題（1614年クサンテン条約・1666年クレーヴェ条約）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: france, certainty: occupied, cause: ティルジット条約（エルベ川以西を放棄）}
+    - {from: 1808, owner: berg, overlord: rhine_confederation, cause: ベルク大公国に編入}
+    - {from: 1813, owner: prussia, cause: ベルク大公国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: dortmund
+  name: ドルトムント
+  select:
+    pieces: [DEU-Dortmund_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: other_hre, overlord: hre, note: 帝国自由都市ドルトムント}
+    - {from: 1803, owner: nassau_orange, overlord: hre, cause: 帝国代表者会議主要決議（ナッサウ＝オラニエ＝フルダ侯領に）}
+    - {from: 1806, owner: france, certainty: occupied, cause: フランスが占領（オラニエ家がライン同盟加盟を拒否）}
+    - {from: 1808, owner: berg, overlord: rhine_confederation, cause: ベルク大公国に編入}
+    - {from: 1813, owner: prussia, cause: ベルク大公国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議}
+
+- id: essen
+  name: エッセン
+  select:
+    pieces: [DEU-Essen_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: other_hre, overlord: hre, note: エッセン帝国修道院（女子修道院長が領主）}
+    - {from: 1803, owner: prussia, overlord: hre, cause: 帝国代表者会議主要決議（1802年に占領）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: france, certainty: occupied, cause: ティルジット条約（エルベ川以西を放棄）}
+    - {from: 1808, owner: berg, overlord: rhine_confederation, cause: ベルク大公国に編入}
+    - {from: 1813, owner: prussia, cause: ベルク大公国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+
+- id: berg_duchy
+  name: ベルク公領
+  select:
+    pieces: [DEU-Dusseldorf_Kreisfreie_Stadt, DEU-Mettmann, DEU-Solingen_Kreisfreie_Stadt, DEU-Remscheid_Kreisfreie_Stadt, DEU-Wuppertal_Kreisfreie_Stadt, DEU-Leverkusen_Kreisfreie_Stadt, DEU-Rheinisch_Bergischer_Kreis, DEU-Oberbergischer_Kreis, DEU-Rhein_Sieg_Kreis, DEU-Mulheim_an_der_Ruhr_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: palatinate_neuburg, overlord: hre, cause: ユーリヒ＝クレーヴェ継承問題（1614年クサンテン条約・1666年クレーヴェ条約）}
+    - {from: 1685, owner: palatinate, overlord: hre, cause: ノイブルク公がプファルツ選帝侯位を継承}
+    - {from: 1777, owner: bavaria, overlord: hre, cause: プファルツ選帝侯カール・テオドールがバイエルンを相続}
+    - {from: 1806, owner: berg, overlord: rhine_confederation, cause: バイエルンがベルクをナポレオンに譲渡（ベルク大公国の成立）}
+    - {from: 1813, owner: prussia, certainty: occupied, cause: ベルク大公国の崩壊（連合国の総督府が管理）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（プロイセンへ）}
+  note: >-
+    ユーリヒ＝ベルク公国（首都デュッセルドルフ）は、プファルツ＝ノイブルク家の領地で、1685年からプファルツ選帝侯、1777年からバイエルン選帝侯と同君だったため、その色で表示している。
+    ライン＝ジーク郡の左岸部分（ラインバッハ・メッケンハイム）はケルン選帝侯領。オーバーベルク郡のギンボルン、ホムブルクは小さな伯領。
+
+- id: julich_left
+  name: ユーリヒ公領（ライン左岸）・アーヘン
+  select:
+    pieces: [DEU-Duren, DEU-Heinsberg, DEU-Monchengladbach_Kreisfreie_Stadt, DEU-Viersen, DEU-Euskirchen, DEU-Stadteregion_Aachen]
+  timeline:
+    - {from: 1648, owner: palatinate_neuburg, overlord: hre, cause: ユーリヒ＝クレーヴェ継承問題（1614年クサンテン条約・1666年クレーヴェ条約）}
+    - {from: 1685, owner: palatinate, overlord: hre, cause: ノイブルク公がプファルツ選帝侯位を継承}
+    - {from: 1777, owner: bavaria, overlord: hre, cause: プファルツ選帝侯カール・テオドールがバイエルンを相続}
+    - {from: 1794, owner: france, overlord: hre, certainty: occupied, cause: フランス革命軍がライン左岸を占領}
+    - {from: 1801, owner: france, cause: リュネヴィル条約（ライン左岸をフランスへ）}
+    - {from: 1814, owner: prussia, certainty: occupied, cause: フランス軍の撤退（連合国の総督府が管理）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（ライン州としてプロイセンへ）}
+  note: >-
+    アーヘン都市圏の帝国自由都市アーヘン、ハインスベルク郡・フィールゼン郡の上ゲルデルン（スペイン→1713年オーストリア／プロイセン）、
+    ケンペン（ケルン選帝侯領）、オイスキルヒェン郡のケルン領ツュルピヒやブランケンハイム伯領などは郡単位では表せない。
+
+- id: cologne_left
+  name: ケルン選帝侯領（ボン・ノイス）
+  select:
+    pieces: [DEU-Bonn_Kreisfreie_Stadt, DEU-Rhein_Erft_Kreis, DEU-Rhein_Kreis_Neuss]
+  timeline:
+    - {from: 1648, owner: cologne, overlord: hre}
+    - {from: 1794, owner: france, overlord: hre, certainty: occupied, cause: フランス革命軍がライン左岸を占領}
+    - {from: 1801, owner: france, cause: リュネヴィル条約（ライン左岸をフランスへ）}
+    - {from: 1814, owner: prussia, certainty: occupied, cause: フランス軍の撤退（連合国の総督府が管理）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（ライン州としてプロイセンへ）}
+  note: ライン＝エルフト郡のベルクハイム、ライン郡ノイスのグレーヴェンブロイヒはユーリヒ公領。
+
+- id: cologne_city_area
+  name: ケルン市
+  select:
+    pieces: [DEU-Koln_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: cologne_city, overlord: hre}
+    - {from: 1794, owner: france, overlord: hre, certainty: occupied, cause: フランス革命軍がライン左岸を占領}
+    - {from: 1801, owner: france, cause: リュネヴィル条約（ライン左岸をフランスへ）}
+    - {from: 1814, owner: prussia, certainty: occupied, cause: フランス軍の撤退（連合国の総督府が管理）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（ライン州としてプロイセンへ）}
+  note: 現代のケルン市域にはライン右岸のドイツ（ベルク領）なども含まれる。
+
+- id: vest_recklinghausen
+  name: レックリングハウゼン
+  select:
+    pieces: [DEU-Recklinghausen, DEU-Bottrop_Kreisfreie_Stadt, DEU-Gelsenkirchen_Kreisfreie_Stadt]
+  timeline:
+    - {from: 1648, owner: cologne, overlord: hre}
+    - {from: 1803, owner: arenberg, overlord: hre, cause: 帝国代表者会議主要決議（アーレンベルク公へ）}
+    - {from: 1806, owner: arenberg, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1810, owner: berg, overlord: rhine_confederation, certainty: uncertain, cause: アーレンベルク公領の解体（南部をベルクへ。正式には1811年）}
+    - {from: 1813, owner: prussia, certainty: occupied, cause: ベルク大公国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議}
+  note: ゲルゼンキルヒェン市の南部はマルク伯領（プロイセン）。
+
+- id: duchy_westphalia
+  name: ヴェストファーレン公領（ザウアーラント）
+  select:
+    pieces: [DEU-Hochsauerlandkreis, DEU-Olpe, DEU-Soest]
+  timeline:
+    - {from: 1648, owner: cologne, overlord: hre}
+    - {from: 1803, owner: hesse_darmstadt, overlord: hre, cause: 帝国代表者会議主要決議（ヘッセン＝ダルムシュタットへ。1802年に占領）}
+    - {from: 1806, owner: hesse_darmstadt, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: hesse_darmstadt, cause: ライン同盟の解体}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（プロイセンへ。引き渡しは1816年）}
+  note: ゾースト郡のゾースト市とその周辺（ゾースター・ベルデ）、リップシュタットはマルク伯領（プロイセン）だが、郡の大半はケルン領ヴェストファーレン公領。
+
+- id: siegen
+  name: ジーゲン・ヴィトゲンシュタイン
+  select:
+    pieces: [DEU-Siegen_Wittgenstein]
+  timeline:
+    - {from: 1648, owner: nassau_orange, overlord: hre, note: ナッサウ＝ジーゲン侯領（1743年からナッサウ＝オラニエ家に統合）}
+    - {from: 1806, owner: berg, overlord: rhine_confederation, cause: ナポレオンがオラニエ家のドイツ領を没収（ジーゲンをベルク大公国へ）}
+    - {from: 1813, owner: nassau_orange, cause: ベルク大公国の崩壊（オラニエ公ウィレムの家領として復帰）}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（オラニエ家からプロイセンへ）}
+  note: 郡の北部はザイン＝ヴィトゲンシュタイン伯領（1806年にヘッセン＝ダルムシュタットに陪臣化）。1813–1815年はオラニエ公（のちのネーデルラント王ウィレム1世）の家領。
+
+- id: munster_east
+  name: ミュンスター（東部）
+  select:
+    pieces: [DEU-Munster_Kreisfreie_Stadt, DEU-Warendorf]
+  timeline:
+    - {from: 1648, owner: munster, overlord: hre}
+    - {from: 1803, owner: prussia, overlord: hre, cause: 帝国代表者会議主要決議（1802年に占領）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: france, certainty: occupied, cause: ティルジット条約（エルベ川以西を放棄）}
+    - {from: 1808, owner: berg, overlord: rhine_confederation, cause: ベルク大公国に編入}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合（リッペ県）}
+    - {from: 1813, owner: prussia, cause: フランス軍の撤退}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: 要確認：1810年末の境界。ヴァーレンドルフ郡の一部はベルク大公国に残った可能性がある。
+
+- id: munster_borken
+  name: ミュンスター（西部・ボホルト）
+  select:
+    pieces: [DEU-Borken]
+  timeline:
+    - {from: 1648, owner: munster, overlord: hre}
+    - {from: 1803, owner: salm, overlord: hre, cause: 帝国代表者会議主要決議（ザルム侯国へ）}
+    - {from: 1806, owner: salm, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: prussia, certainty: occupied, cause: フランス軍の撤退}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議}
+
+- id: munster_coesfeld
+  name: ミュンスター（コースフェルト・デュルメン）
+  select:
+    pieces: [DEU-Coesfeld]
+  timeline:
+    - {from: 1648, owner: munster, overlord: hre}
+    - {from: 1803, owner: salm, overlord: hre, cause: 帝国代表者会議主要決議（ザルム＝ホルストマル伯、クロイ公などへ）}
+    - {from: 1806, owner: berg, overlord: rhine_confederation, cause: ライン同盟規約（ベルク大公国に陪臣化）}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: prussia, certainty: occupied, cause: フランス軍の撤退}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議}
+  note: 要確認：デュルメン（クロイ公領）は1806年にアーレンベルクに陪臣化された。
+
+- id: munster_steinfurt
+  name: ミュンスター北部・シュタインフルト
+  select:
+    pieces: [DEU-Steinfurt]
+  timeline:
+    - {from: 1648, owner: munster, overlord: hre}
+    - {from: 1803, owner: other_hre, overlord: hre, cause: 帝国代表者会議主要決議（ルーツ＝コルスヴァーレム家のライナ＝ヴォルベック侯領などへ）}
+    - {from: 1806, owner: berg, overlord: rhine_confederation, cause: ライン同盟規約（ベルク大公国に陪臣化）}
+    - {from: 1810, owner: france, cause: フランスが北西ドイツを併合}
+    - {from: 1813, owner: prussia, certainty: occupied, cause: フランス軍の撤退}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議}
+  note: >-
+    シュタインフルト郡は、ミュンスター司教領のほか、シュタインフルト伯領（ベントハイム家）、テクレンブルク伯領（1707年プロイセン）、
+    上リンゲン（イッベンビューレン。1702年プロイセン）を含む。プロイセン領部分は郡単位では表せない。
+
+- id: paderborn_lands
+  name: パーダーボルン・コルファイ
+  select:
+    pieces: [DEU-Paderborn, DEU-Hoxter]
+  timeline:
+    - {from: 1648, owner: paderborn, overlord: hre}
+    - {from: 1803, owner: prussia, overlord: hre, cause: 帝国代表者会議主要決議（1802年に占領）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
+    - {from: 1813, owner: prussia, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: ヘクスター郡のコルファイ帝国修道院（1803年ナッサウ＝オラニエ家、1807年ヴェストファーレン王国）は郡単位では表せない。
+
+- id: ravensberg
+  name: ラーヴェンスベルク
+  select:
+    pieces: [DEU-Bielefeld_Kreisfreie_Stadt, DEU-Gutersloh, DEU-Herford]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre, cause: ユーリヒ＝クレーヴェ継承問題（1614年クサンテン条約・1666年クレーヴェ条約）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
+    - {from: 1813, owner: prussia, cause: ヴェストファーレン王国の崩壊}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: >-
+    ギュータースロー郡はラーヴェンスベルクのほか、レーダ（ベントハイム＝テクレンブルク家）、リートベルク伯領、
+    ヴィーデンブリュック（オスナブリュック司教領）などが入り組む。
+
+- id: minden
+  name: ミンデン
+  select:
+    pieces: [DEU-Minden_Lubbecke]
+  timeline:
+    - {from: 1648, owner: prussia, overlord: hre, cause: ウェストファリア条約（ミンデン司教領をブランデンブルクへ）}
+    - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
+    - {from: 1810, owner: france, certainty: uncertain, cause: フランスが北西ドイツを併合（ミンデンの北部・西部）}
+    - {from: 1813, owner: prussia, cause: フランス軍の撤退}
+    - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
+  note: 1811年からの仏・ヴェストファーレン国境はミンデンのあたりを通り、郡の北部（リュベッケなど）がフランス領、南東部はヴェストファーレン王国に残った。要確認。
+
+- id: lippe_lands
+  name: リッペ
+  select:
+    pieces: [DEU-Lippe]
+  timeline:
+    - {from: 1648, owner: lippe, overlord: hre}
+    - {from: 1806, owner: lippe, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: lippe, overlord: rhine_confederation, cause: ライン同盟に加盟}
+    - {from: 1813, owner: lippe, cause: ライン同盟の解体}
+    - {from: 1815, owner: lippe, overlord: german_confederation, cause: ドイツ連邦の成立}

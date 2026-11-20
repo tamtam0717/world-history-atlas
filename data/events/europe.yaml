@@ -1,0 +1,327 @@
+# ヨーロッパ全体に関わる主な出来事（1648–1815）
+# 地域ごとの出来事は events/<担当>.yaml に書く。ここにあるものは重複して書かない。
+
+- year: 1648
+  date: "1648-10-24"
+  title: ウェストファリア条約
+  text: 三十年戦争が終結。スイスとオランダの独立が正式に認められ、帝国諸侯はほぼ完全な領邦主権を得た。フランスはアルザスの大半を、スウェーデンは西ポンメルンなどを獲得。
+  polities: [hre, france, sweden, habsburg, netherlands, switzerland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ヴェストファーレン条約"
+- year: 1659
+  date: "1659-11-07"
+  title: ピレネー条約
+  text: フランス・スペイン戦争が終結。フランスはルシヨンとアルトワなどを獲得し、ルイ14世とスペイン王女マリー＝テレーズの結婚が決まった。
+  polities: [france, spain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ピレネー条約"
+- year: 1660
+  title: オリヴァ条約・コペンハーゲン条約
+  text: 北方戦争（第一次）が終結。スウェーデンのバルト海支配が頂点に達し、プロイセン公国の主権が確認された。
+  polities: [sweden, poland_lithuania, denmark, prussia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/オリヴァ条約"
+- year: 1667
+  title: 南ネーデルラント継承戦争（フランドル戦争）はじまる
+  text: ルイ14世が王妃の継承権を口実にスペイン領ネーデルラントへ侵攻。
+  polities: [france, spain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ネーデルラント継承戦争"
+- year: 1668
+  date: "1668-05-02"
+  title: アーヘンの和約
+  text: 南ネーデルラント継承戦争が終結。フランスはリールなどフランドルの諸都市を獲得。
+  polities: [france, spain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アーヘンの和約_(1668年)"
+- year: 1672
+  title: オランダ戦争はじまる
+  text: フランスがオランダに侵攻。オランダはオラニエ公ウィレム3世のもとで抵抗。
+  polities: [france, netherlands]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/オランダ侵略戦争"
+- year: 1678
+  title: ナイメーヘンの和約
+  text: オランダ戦争が終結。フランスはスペインからフランシュ＝コンテとフランドルの一部を獲得。
+  polities: [france, netherlands, spain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ナイメーヘンの和約"
+- year: 1683
+  title: 第二次ウィーン包囲
+  text: オスマン帝国軍がウィーンを包囲するが、ポーランド王ヤン3世ソビェスキらの救援軍に敗れる。以後、オスマン帝国は守勢に転じる。
+  polities: [ottoman, habsburg, poland_lithuania]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第二次ウィーン包囲"
+- year: 1688
+  title: ファルツ戦争（大同盟戦争）はじまる
+  text: ルイ14世がプファルツの継承権を主張して侵攻。イギリス・オランダ・神聖ローマ帝国などがアウクスブルク同盟でこれに対抗。
+  polities: [france, palatinate, hre, netherlands, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/大同盟戦争"
+- year: 1688
+  title: 名誉革命
+  text: イングランドでジェームズ2世が追放され、翌年ウィリアム3世とメアリ2世が即位。権利の章典が出された。
+  polities: [britain, netherlands]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/名誉革命"
+- year: 1697
+  title: ライスワイク条約
+  text: ファルツ戦争が終結。フランスはストラスブールを確保したが、ロレーヌ公国と、ライン右岸の占領地（フライブルク・ブライザッハなど）を返還。
+  polities: [france, hre, netherlands, britain, spain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/レイスウェイク条約"
+- year: 1699
+  date: "1699-01-26"
+  title: カルロヴィッツ条約
+  text: 大トルコ戦争が終結。オスマン帝国はハンガリーとトランシルヴァニアの大半をオーストリアに、ポドリアをポーランドに、ペロポネソス半島をヴェネツィアに割譲。オスマン帝国が初めて大規模に領土を失った。
+  polities: [ottoman, habsburg, poland_lithuania, venice, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+- year: 1700
+  title: 北方戦争（大北方戦争）はじまる
+  text: ロシア・デンマーク・ザクセン＝ポーランドがスウェーデンに宣戦。ピョートル1世とカール12世が争う。
+  polities: [sweden, russia, denmark, poland_lithuania, saxony]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/大北方戦争"
+- year: 1701
+  title: スペイン継承戦争はじまる
+  text: スペイン王カルロス2世の死後、ルイ14世の孫フェリペ5世の即位をめぐり、フランス・スペインと、イギリス・オランダ・オーストリアなどが戦う。
+  polities: [spain, france, britain, netherlands, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/スペイン継承戦争"
+- year: 1701
+  date: "1701-01-18"
+  title: プロイセン王国の成立
+  text: ブランデンブルク選帝侯フリードリヒ3世が、ケーニヒスベルクで「プロイセンにおける王」フリードリヒ1世として戴冠。
+  polities: [prussia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/プロイセン王国"
+- year: 1707
+  date: "1707-05-01"
+  title: グレートブリテン王国の成立
+  text: イングランドとスコットランドが合同し、グレートブリテン王国となる。
+  polities: [britain, scotland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/合同法_(1707年)"
+- year: 1709
+  date: "1709-07-08"
+  title: ポルタヴァの戦い
+  text: ロシアがスウェーデンに大勝。カール12世はオスマン帝国へ逃れ、北方の覇権はロシアに移り始める。
+  polities: [russia, sweden]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ポルタヴァの戦い"
+- year: 1713
+  title: ユトレヒト条約
+  text: スペイン継承戦争が（主に）終結。フェリペ5世のスペイン王位が認められる一方、フランスとスペインの合同は禁じられた。イギリスはジブラルタル・ミノルカなどを獲得。サヴォイア公はシチリアと王位を得た。
+  polities: [spain, france, britain, netherlands, savoy, portugal, prussia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+- year: 1714
+  title: ラシュタット条約
+  text: オーストリアとフランスが講和。オーストリアはスペイン領ネーデルラント・ミラノ・ナポリ・サルデーニャを獲得。
+  polities: [habsburg, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ラシュタット条約"
+- year: 1714
+  title: ハノーヴァー朝の始まり
+  text: ハノーファー選帝侯ゲオルク・ルートヴィヒがジョージ1世としてイギリス王に即位。イギリスとハノーファーの同君連合が始まる。
+  polities: [britain, hanover]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ハノーヴァー朝"
+- year: 1718
+  title: パッサロヴィッツ条約
+  text: オーストリアはオスマン帝国からバナト、北セルビア（ベオグラードを含む）、小ワラキアを獲得。ヴェネツィアはペロポネソス半島を失った。
+  polities: [habsburg, ottoman, venice]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/パッサロヴィッツ条約"
+- year: 1720
+  title: サヴォイアとオーストリアの交換
+  text: ハーグ条約により、サヴォイア公はシチリアをオーストリアに渡し、代わりにサルデーニャを得た（サルデーニャ王国）。
+  polities: [savoy, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ハーグ条約_(1720年)"
+- year: 1721
+  date: "1721-09-10"
+  title: ニスタット条約
+  text: 大北方戦争が終結。ロシアはスウェーデンからリヴォニア・エストニア・イングリアなどを獲得し、ピョートル1世は皇帝（インペラートル）の称号を名乗る。
+  polities: [russia, sweden]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ニスタット条約"
+- year: 1733
+  title: ポーランド継承戦争はじまる
+  text: ポーランド王位をめぐり、フランスが推すスタニスワフ・レシチニスキと、ロシア・オーストリアが推すアウグスト3世が争う。
+  polities: [poland_lithuania, france, russia, habsburg, saxony]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ポーランド継承戦争"
+- year: 1738
+  title: ウィーン条約（ポーランド継承戦争の講和）
+  text: アウグスト3世のポーランド王位が確定。ロレーヌはスタニスワフに与えられ、その死後フランス領になることが決まった。ナポリとシチリアはスペイン・ブルボン家のカルロスに、トスカーナはロレーヌ公フランツに渡った。
+  polities: [france, habsburg, poland_lithuania, naples, tuscany, spain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ウィーン条約_(1738年)"
+- year: 1739
+  title: ベオグラード条約
+  text: オーストリアはパッサロヴィッツ条約で得た北セルビアと小ワラキアをオスマン帝国に返還。
+  polities: [habsburg, ottoman, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ベオグラード条約"
+- year: 1740
+  title: オーストリア継承戦争はじまる
+  text: マリア・テレジアの家督相続に対し、プロイセンのフリードリヒ2世がシュレジエンに侵攻。バイエルン・フランスなども加わる。
+  polities: [habsburg, prussia, bavaria, france, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/オーストリア継承戦争"
+- year: 1748
+  title: アーヘンの和約
+  text: オーストリア継承戦争が終結。マリア・テレジアの相続が認められ、プロイセンのシュレジエン領有が確認された。イタリアでは、スペイン・ブルボン家のフィリッポがパルマ・ピアチェンツァ公となり（ブルボン＝パルマ家）、サルデーニャ王国がヴィジェーヴァノ・オルトレポーなどを得た。
+  polities: [habsburg, prussia, france, britain, spain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アーヘンの和約_(1748年)"
+- year: 1756
+  title: 外交革命と七年戦争
+  text: 長年の宿敵だったオーストリアとフランスが同盟。プロイセンがザクセンに侵攻し、七年戦争が始まる。イギリスとフランスは植民地でも戦う。
+  polities: [prussia, habsburg, france, britain, russia, sweden, saxony]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/七年戦争"
+- year: 1763
+  title: フベルトゥスブルク条約・パリ条約
+  text: 七年戦争が終結。プロイセンのシュレジエン領有が最終的に確定。パリ条約でイギリスはカナダなどを獲得し、植民地帝国の優位を固めた。
+  polities: [prussia, habsburg, saxony, britain, france, spain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/フベルトゥスブルク条約"
+- year: 1772
+  title: 第1回ポーランド分割
+  text: ロシア・プロイセン・オーストリアがポーランドの領土の約3割を分割。
+  polities: [poland_lithuania, russia, prussia, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+- year: 1774
+  title: キュチュク・カイナルジ条約
+  text: 露土戦争が終結。クリミア＝ハン国がオスマン帝国から独立し、ロシアは黒海北岸に足場を得た。
+  polities: [russia, ottoman, crimea]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+- year: 1783
+  title: ロシアのクリミア併合
+  text: エカチェリーナ2世がクリミア＝ハン国を併合。
+  polities: [russia, crimea, ottoman]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ロシアによるクリミア併合_(1783年)"
+- year: 1789
+  date: "1789-07-14"
+  title: フランス革命はじまる
+  text: パリ民衆がバスティーユ牢獄を襲撃。8月には人権宣言が出された。
+  polities: [france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/フランス革命"
+- year: 1792
+  title: フランス革命戦争はじまる・第一共和政
+  text: フランスがオーストリアに宣戦。9月に王政が廃止され、第一共和政が成立。
+  polities: [france, habsburg, prussia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/フランス革命戦争"
+- year: 1793
+  title: 第2回ポーランド分割
+  text: ロシアとプロイセンがポーランドの領土をさらに分割。
+  polities: [poland_lithuania, russia, prussia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+- year: 1793
+  date: "1793-01-21"
+  title: ルイ16世の処刑
+  text: 国王ルイ16世が処刑され、イギリスなどが第一回対仏大同盟を結成。
+  polities: [france, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ルイ16世"
+- year: 1795
+  title: 第3回ポーランド分割
+  text: ロシア・プロイセン・オーストリアが残りの領土を分割し、ポーランド＝リトアニア共和国は消滅。
+  polities: [poland_lithuania, russia, prussia, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+- year: 1797
+  date: "1797-10-17"
+  title: カンポ・フォルミオ条約
+  text: ナポレオンのイタリア遠征の結果、オーストリアは南ネーデルラントを放棄し、ヴェネツィア共和国の本土などを得た。ヴェネツィア共和国は消滅。
+  polities: [france, habsburg, venice]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+- year: 1799
+  title: ブリュメール18日のクーデタ
+  text: ナポレオンが総裁政府を倒し、統領政府を樹立して第一統領となる。
+  polities: [france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ブリュメールのクーデター"
+- year: 1801
+  title: リュネヴィル条約
+  text: オーストリアがフランスと講和し、ライン川左岸のフランス領有を認めた。
+  polities: [france, habsburg, hre]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/リュネヴィルの和約"
+- year: 1803
+  title: 帝国代表者会議主要決議
+  text: ライン左岸を失った諸侯への補償として、聖界諸侯領と大半の帝国都市が廃止され、世俗諸侯に分配された。
+  polities: [hre, prussia, bavaria, other_hre]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/帝国代表者会議主要決議"
+- year: 1804
+  title: ナポレオンの皇帝即位・オーストリア帝国の成立
+  text: ナポレオンがフランス皇帝ナポレオン1世となる。これに対抗してフランツ2世はオーストリア皇帝フランツ1世を名乗った。
+  polities: [france, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ナポレオン・ボナパルト"
+- year: 1805
+  title: トラファルガーの海戦・アウステルリッツの三帝会戦
+  text: イギリス海軍がフランス・スペイン艦隊を破る一方、陸ではナポレオンがオーストリア・ロシア軍に大勝。プレスブルク条約でオーストリアはヴェネツィアやチロルを失った。
+  polities: [france, britain, spain, habsburg, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アウステルリッツの戦い"
+- year: 1806
+  title: ライン同盟の結成と神聖ローマ帝国の解体
+  text: 南西ドイツ諸邦がナポレオンを保護者とするライン同盟を結成して帝国を離脱。フランツ2世は帝冠を放棄し、神聖ローマ帝国は消滅した。
+  polities: [hre, rhine_confederation, france, habsburg, bavaria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ライン同盟"
+- year: 1806
+  title: 大陸封鎖令
+  text: ナポレオンがベルリン勅令を出し、ヨーロッパ大陸諸国にイギリスとの通商を禁じた。
+  polities: [france, britain, prussia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/大陸封鎖令"
+- year: 1807
+  title: ティルジット条約
+  text: プロイセンは領土の約半分を失い、エルベ川以西にはヴェストファーレン王国、旧ポーランド領にはワルシャワ公国がつくられた。
+  polities: [france, prussia, russia, warsaw]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+- year: 1808
+  title: スペイン反乱（半島戦争）
+  text: ナポレオンが兄ジョゼフをスペイン王に立てたことに対し、スペイン各地で民衆が蜂起。イギリス軍も加わって長期戦となる。
+  polities: [spain, france, britain, portugal]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/半島戦争"
+- year: 1812
+  title: ナポレオンのロシア遠征
+  text: 大陸軍がモスクワまで進むが、冬の撤退で壊滅的な打撃を受ける。
+  polities: [france, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ロシア戦役"
+- year: 1813
+  date: "1813-10"
+  title: ライプツィヒの戦い（諸国民戦争）
+  text: プロイセン・ロシア・オーストリア・スウェーデンの連合軍がナポレオンに大勝。ライン同盟は崩壊した。
+  polities: [france, prussia, russia, habsburg, sweden, saxony]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ライプツィヒの戦い"
+- year: 1814
+  title: ナポレオンの退位とウィーン会議の開会
+  text: 連合軍がパリに入城し、ナポレオンはエルバ島へ流された。ルイ18世が即位し、戦後処理のためウィーン会議が開かれた。
+  polities: [france, habsburg, prussia, russia, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ウィーン会議"
+- year: 1815
+  title: ウィーン議定書・ワーテルローの戦い
+  text: ウィーン議定書でヨーロッパの国境が再編された（ドイツ連邦、ネーデルラント連合王国、ポーランド立憲王国など）。百日天下のナポレオンはワーテルローで敗れ、セントヘレナ島へ流された。
+  polities: [france, habsburg, prussia, russia, britain, netherlands, german_confederation]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ウィーン議定書"

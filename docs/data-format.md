@@ -1,0 +1,160 @@
+# データ形式
+
+地図のデータは `data/` 以下の YAML ファイルで書く。`npm run data`（= `node tools/build_data.mjs`）で検証し、`public/data/atlas.json` にまとめる。
+
+```
+data/
+  meta.yaml            表示する年の範囲
+  generated/pieces.tsv ピースの一覧（自動生成。手で編集しない）
+  polities/*.yaml      政体（国）
+  regions/*.yaml       地域（ピースの集まり）と、その所属の変遷
+  events/*.yaml        出来事
+```
+
+## 年の決まり
+
+- **地図の「Y年」は、Y年の年末（12月31日）時点の状態**を表す。
+  - 例：1648年10月のウェストファリア条約による割譲は、1648年の地図から反映する。
+  - 例：1742年6月のブレスラウ条約（7月のベルリン条約で確定）でシュレジエンがプロイセン領 → `from: 1742`。
+- 戦争中の一時的な占領は原則として描かない。正式な割譲・併合（条約など）の年で切り替える。
+  - 例外：何年も続き、地図の理解に必要な占領は `certainty: occupied` で描いてよい（例：ナポレオン戦争期の占領地）。
+
+## ピース
+
+`data/generated/pieces.tsv` に全ピースがある（タブ区切り）。
+
+| 列 | 内容 |
+|---|---|
+| id | ピース ID（例：`DEU-Goerlitz`、`POL-powiat_opolski`）。データからはこれで参照する |
+| name | 現代の行政区画名（一部、文字化けで `?` になっているものがある） |
+| iso | 現代の国コード |
+| adm1 | 現代の第1級行政区（州・地方など）。CGAZ の名前 |
+| adm2 | ドイツ・フランス・イタリア・ベルギー・ギリシャのみ：一段上の区画（ドイツの行政管区、フランスの県、イタリアの州など） |
+| lon, lat | 重心（経度・緯度） |
+| area_km2 | 面積 |
+
+ピースの粒度は国によって違う。ドイツは郡（約420）、フランスは郡（arrondissement、約320）、イタリアは県（107）、ポーランドは郡（powiat、約380）など。
+ロシア・トルコ・中東などは州単位で粗い。
+
+探し方の例：
+
+```bash
+grep -P '\tDEU\t' data/generated/pieces.tsv | grep -i 'Sachsen'      # ドイツのザクセン関連
+awk -F'\t' '$3=="POL" && $4 ~ /Opole/' data/generated/pieces.tsv     # ポーランドのオポーレ県
+awk -F'\t' '$3=="DEU" && $6>9 && $6<10.5 && $7>50 && $7<51' data/generated/pieces.tsv  # 経度・緯度で絞る
+```
+
+## 政体（data/polities/*.yaml）
+
+```yaml
+- id: prussia                     # 英小文字とアンダースコア。全体で一意
+  name: プロイセン王国              # 標準の名前（日本の高校世界史の表記に寄せる）
+  names:                          # 時期によって名前が変わる場合（範囲外は name / short / kind を使う）
+    - {to: 1700, name: ブランデンブルク＝プロイセン, short: ブランデンブルク, kind: 選帝侯領}
+    # short（地図ラベル）と kind（種別）も時期ごとに書ける。
+    # ラベルは「時期別の short → 政体の short → 時期別の name → name」の順に使う。
+    # 政体に short があるときに時期で変えたいなら、時期別の short を書くこと
+  short: プロイセン                 # 地図上のラベル（省略時は名前）
+  color: "#7d93b8"                # 塗りの色。隣国と区別できる淡めの色
+  kind: 王国                       # 種別（王国、公国、選帝侯領、共和国、司教領、帝国 など）
+  rulers:                         # 君主（在位の年。from/to とも、その年を含む）
+    - name: フリードリヒ2世（大王）
+      title: プロイセン王
+      from: 1740
+      to: 1786
+      source: "https://ja.wikipedia.org/wiki/フリードリヒ2世_(プロイセン王)"
+  periods:                        # 情勢（その期間に地図を見る人に伝えたいこと。1〜3文）
+    - from: 1740
+      to: 1763
+      text: シュレジエンをめぐりオーストリアと戦う（オーストリア継承戦争・七年戦争）。
+  note: 補足（任意）
+  source: 出典（任意。文字列または文字列のリスト）
+```
+
+- 君主は、その政体の実際の統治者を書く。同君連合（例：ハノーファー選帝侯＝イギリス王）では両方の政体に書く。
+- 摂政など重要な実権者は `note` に書く。
+- 共和国は元首（総督・ドージェ・統領など）を書いてよい。書けない場合は省略してよい。
+
+## 地域と所属の変遷（data/regions/*.yaml）
+
+地域は「ピースの集まり」と「その所属の変遷（timeline）」をまとめたもの。
+
+```yaml
+- id: silesia
+  name: シュレジエン
+  select:                             # ピースの選び方（すべて和集合。最後に exclude を引く）
+    adm1: ["POL/Opole Voivodeship", "POL/Lower Silesian Voivodeship"]   # 「国コード/adm1名」
+    adm2: ["DEU/Dresden"]             # 「国コード/adm2名」（ドイツなど、細かい国のみ）
+    iso: [LIE]                        # 現代の国全体
+    pieces: [CZE-Opava, CZE-Jesenik]  # ピース ID を直接
+    regions: [upper_lusatia]          # ほかの地域の中身を取り込む
+    exclude: [POL-powiat_kluczborski] # ピースを除く
+    exclude_regions: [glatz]          # ほかの地域の中身を除く
+  timeline:                           # 年の昇順。各項目は次の項目の前年まで有効
+    - from: 1648
+      owner: habsburg                 # その地域を実際に支配する政体
+      overlord: hre                   # 上位の枠（神聖ローマ帝国、オスマン帝国の宗主権など）。なければ省略
+    - from: 1742
+      owner: prussia
+      overlord: hre
+      cause: ベルリン条約              # 変化の理由（右パネルの「国境の変化」に出る）
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1742年)"
+    - from: 1806
+      owner: prussia                  # 帝国解体で overlord がなくなった
+      cause: 神聖ローマ帝国の解体
+```
+
+### 重なりの決まり
+
+- 1つのピースが複数の地域に含まれてよい。**その年に有効な記述を持つ地域のうち、いちばん小さい（ピース数が少ない）地域が優先**される。
+  - これを使うと「大きな地域でおおまかに書き、小さな地域で例外を上書きする」書き方ができる。
+  - 例：`silesia`（1742年にプロイセンへ）の中で、`austrian_silesia`（テッシェン・トロッパウなど）だけ1742年以降もオーストリアのまま、と書ける。
+- timeline のない地域は、ほかの地域から `regions:` で取り込むための「部品」として使える。
+
+### owner と overlord
+
+- **owner**：実際の支配者（政体 ID）。`null` なら「どの国にも属さない（部族地域など）」。
+- **overlord**：上位の枠。地図では owner の色の上に、overlord の外枠（破線）が描かれる。
+  - 神聖ローマ帝国の領邦 → `overlord: hre`
+  - オスマン帝国の付庸国（ワラキア、モルダヴィア、クリミア＝ハン国など）→ `overlord: ottoman`
+  - ポーランドの封土（クールラント公国、1657年までのプロイセン公国）→ `overlord: poland_lithuania`
+  - ライン同盟（1806–1813）→ `overlord: rhine_confederation`、ドイツ連邦（1815–）→ `overlord: german_confederation`
+- 同じ君主の別の領地（例：ブランデンブルク選帝侯領とプロイセン公国）は、同じ owner にまとめてよい。帝国の内側か外側かは overlord で区別する。
+
+### certainty（確からしさ。省略時は certain）
+
+| 値 | 意味 | 表示 |
+|---|---|---|
+| certain | 確か | 普通の塗り |
+| uncertain | 境界・帰属がはっきりしない、または説が分かれる | 斜線 |
+| nominal | 名目的な支配（実効支配が弱い） | 白い斜線 |
+| occupied | 軍事占領（正式な割譲前） | 赤い斜線 |
+
+## 出来事（data/events/*.yaml）
+
+```yaml
+- year: 1740
+  date: "1740-12-16"            # 任意。"1740-12" や "1740-12-16"
+  title: プロイセンがシュレジエンに侵攻
+  text: オーストリア継承戦争の始まり。   # 任意。1〜2文
+  polities: [prussia, habsburg]  # 関係する政体（国をクリックしたときに、その国の出来事として出る）
+  importance: 1                  # 1 = 最重要（教科書の太字級）、2 = 重要、3 = 補足
+  source: "https://ja.wikipedia.org/wiki/オーストリア継承戦争"
+```
+
+## 出典
+
+- 条約名、Wikipedia の記事（URL か「ja.wikipedia: 記事名」）、書籍名などを `source` に書く。
+- 記憶だけで書いて確かめられていない項目は、`note` に「要確認」と書いておく。
+
+## 検証の道具
+
+```bash
+npm run data                                   # 検証して atlas.json を作る（警告を確認）
+node tools/build_data.mjs --missing 1648,1700,1789,1815 --iso DEU   # データのないピースを一覧
+~/venv/bin/python tools/compare_hb.py 1700 --iso DEU   # historical-basemaps と照合（照合のみ。取り込み禁止）
+node tools/snapshot.mjs 1648 1700 1789 --zoom 10,51,3  # 地図を PNG に書き出す（.cache/snapshots/）
+node tools/snapshot.mjs 1700 --debug --zoom 10,51,4    # ピース境界つき
+```
+
+`compare_hb.py` の照合先は historical-basemaps のスナップショット（1600, 1650, 1700, 1715, 1783, 1800, 1815, 1880年）。粗いデータなので、食い違いはあくまで「確認のきっかけ」として扱う。

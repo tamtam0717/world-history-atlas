@@ -1,0 +1,1736 @@
+# F 北欧・東欧（DNK NOR SWE FIN EST LVA LTU POL BLR UKR RUS）の地域と所属の変遷（1648–1815）
+# ピースは担当範囲のものだけを選ぶ。大きな地域（国全体）を小さな地域で上書きしている所がある（重なりの決まり）。
+
+- id: denmark_dk
+  name: デンマーク本土
+  select:
+    iso: [DNK]
+  timeline:
+    - from: 1648
+      owner: denmark
+
+- id: schleswig_dk
+  name: 北シュレースヴィヒ
+  select:
+    pieces: [DNK-Aabenraa, DNK-Haderslev, DNK-Snderborg, DNK-Tnder]
+  timeline:
+    - from: 1648
+      owner: denmark
+      note: "シュレースヴィヒ公国（帝国外）。1713/1720年まではゴットルプ家の持ち分が散在（地図では省略）"
+
+- id: bornholm
+  name: ボーンホルム島
+  select:
+    pieces: [DNK-Bornholm]
+  timeline:
+    - from: 1648
+      owner: denmark
+    - from: 1658
+      owner: sweden
+      cause: "ロスキレ条約でスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ロスキレ条約"
+    - from: 1660
+      owner: denmark
+      cause: "島民の反乱を受け、コペンハーゲン条約でデンマークに返還"
+      source: "https://ja.wikipedia.org/wiki/コペンハーゲン条約_(1660年)"
+
+- id: norway
+  name: ノルウェー
+  select:
+    iso: [NOR]
+  timeline:
+    - from: 1648
+      owner: denmark
+    - from: 1814
+      owner: norway
+      cause: "キール条約でデンマークがノルウェーを放棄。独立宣言の後、11月にスウェーデンと同君連合"
+      source: "https://ja.wikipedia.org/wiki/キール条約"
+
+- id: finnmark_inner
+  name: フィンマルク内陸（カウトケイノ・カラショーク）
+  select:
+    pieces: [NOR-Guovdageaidnu_sme_1, NOR-Kara_johka_sme_1]
+  timeline:
+    - from: 1648
+      owner: denmark
+      certainty: uncertain
+      note: "内陸のサーミ人の地域。デンマーク＝ノルウェーとスウェーデンが共同で課税し、国境は未画定"
+    - from: 1751
+      owner: denmark
+      cause: "ストレムスタード条約でノルウェーとスウェーデンの国境が画定"
+      source: "https://ja.wikipedia.org/wiki/ストレムスタード条約"
+    - from: 1814
+      owner: norway
+      cause: "キール条約・スウェーデンとの同君連合"
+      source: "https://ja.wikipedia.org/wiki/キール条約"
+
+- id: trondelag
+  name: トロンデラーグ（トロンハイム）
+  select:
+    pieces: [NOR-Afjord_nor, NOR-Agdenes_nor, NOR-Bjugn_nor, NOR-Flatanger_nor, NOR-Fosnes_nor, NOR-Frosta_nor, NOR-Frya_nor,
+      NOR-Grong_nor, NOR-Halsa_nor, NOR-Hemne_nor, NOR-Hitra_nor, NOR-Holtalen_nor, NOR-Hylandet_nor, NOR-Indery_nor,
+      NOR-Klbu_nor, NOR-Leka_nor, NOR-Leksvik_nor, NOR-Levanger_nor, NOR-Lierne_nor, NOR-Malvik_nor, NOR-Malvik_nor_2,
+      NOR-Malvik_nor_3, NOR-Meldal_nor, NOR-Melhus_nor, NOR-Meraker_nor, NOR-Midtre_Gauldal_nor, NOR-Namdalseid_nor,
+      NOR-Namsos_nor, NOR-Namsskogan_nor, NOR-Nry_nor, NOR-Oppdal_nor, NOR-Orkdal_nor, NOR-Osen_nor, NOR-Overhalla_nor,
+      NOR-Raarvihke_sma_1, NOR-Rennebu_nor, NOR-Rindal_nor, NOR-Rissa_nor, NOR-Roan_nor, NOR-Rros_nor, NOR-Selbu_nor,
+      NOR-Skaun_nor, NOR-Snaase_sma_1, NOR-Snillfjord_nor, NOR-Steinkjer_nor, NOR-Stjrdal_nor, NOR-Trondheim_nor,
+      NOR-Tydal_nor, NOR-Verdal_nor, NOR-Verran_nor, NOR-Vikna_nor, NOR-rland_nor]
+  timeline:
+    - from: 1648
+      owner: denmark
+    - from: 1658
+      owner: sweden
+      cause: "ロスキレ条約でスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ロスキレ条約"
+    - from: 1660
+      owner: denmark
+      cause: "コペンハーゲン条約でデンマーク＝ノルウェーに返還"
+      source: "https://ja.wikipedia.org/wiki/コペンハーゲン条約_(1660年)"
+    - from: 1814
+      owner: norway
+      cause: "キール条約・スウェーデンとの同君連合"
+      source: "https://ja.wikipedia.org/wiki/キール条約"
+
+- id: sweden
+  name: スウェーデン本土
+  note: "ゴットランド・イェムトランド・ヘリエダーレンは1645年ブレムセブルー条約でスウェーデン領"
+  select:
+    iso: [SWE]
+  timeline:
+    - from: 1648
+      owner: sweden
+
+- id: halland
+  name: ハッランド
+  select:
+    pieces: [SWE-Falkenberg, SWE-Halmstad, SWE-Hylte, SWE-Kungsbacka, SWE-Laholm, SWE-Varberg]
+  timeline:
+    - from: 1648
+      owner: sweden
+      note: "1645年ブレムセブルー条約で30年間の担保としてスウェーデンが占有"
+    - from: 1658
+      owner: sweden
+      cause: "ロスキレ条約でハッランドが正式にスウェーデン領に"
+      source: "https://ja.wikipedia.org/wiki/ロスキレ条約"
+
+- id: scania
+  name: スコーネ・ブレーキンゲ
+  select:
+    pieces: [SWE-Angelholm, SWE-Astorp, SWE-Bastad, SWE-Bjuv, SWE-Bromolla, SWE-Burlov, SWE-Eslov, SWE-Hassleholm, SWE-Helsingborg,
+      SWE-Hoganas, SWE-Hoor, SWE-Horby, SWE-Karlshamn, SWE-Karlskrona, SWE-Kavlinge, SWE-Klippan, SWE-Kristianstad,
+      SWE-Landskrona, SWE-Lomma, SWE-Lund, SWE-Malmo, SWE-Olofstrom, SWE-Orkelljunga, SWE-Osby, SWE-Ostra_Goinge,
+      SWE-Perstorp, SWE-Ronneby, SWE-Simrishamn, SWE-Sjobo, SWE-Skurup, SWE-Solvesborg, SWE-Staffanstorp, SWE-Svalov,
+      SWE-Svedala, SWE-Tomelilla, SWE-Trelleborg, SWE-Vellinge, SWE-Ystad]
+  timeline:
+    - from: 1648
+      owner: denmark
+    - from: 1658
+      owner: sweden
+      cause: "ロスキレ条約でスコーネ・ブレーキンゲがスウェーデン領に"
+      source: "https://ja.wikipedia.org/wiki/ロスキレ条約"
+
+- id: bohuslan
+  name: ボーヒュースレーン
+  select:
+    pieces: [SWE-Kungalv, SWE-Lysekil, SWE-Munkedal, SWE-Ockero, SWE-Orust, SWE-Sotenas, SWE-Stenungsund, SWE-Stromstad,
+      SWE-Tanum, SWE-Tjorn, SWE-Uddevalla]
+  timeline:
+    - from: 1648
+      owner: denmark
+    - from: 1658
+      owner: sweden
+      cause: "ロスキレ条約でボーヒュースレーンがスウェーデン領に"
+      source: "https://ja.wikipedia.org/wiki/ロスキレ条約"
+
+- id: finland
+  name: フィンランド
+  select:
+    iso: [FIN]
+  timeline:
+    - from: 1648
+      owner: sweden
+    - from: 1809
+      owner: finland
+      overlord: russia
+      cause: "フレデリクスハムンの和約でフィンランドがロシアに割譲され、フィンランド大公国となる"
+      source: "https://ja.wikipedia.org/wiki/フレデリクスハムンの和約"
+
+- id: old_finland
+  name: 旧フィンランド（キュミ川以東）
+  note: "1721年ニスタット条約でロシア領となったヴィープリ（ヴィボルグ）地方は現ロシア領で、地域 kexholm_vyborg として別に描く。コウヴォラ地方（キュミ川の両岸）とサヴォンリンナ地方（一部のみ割譲）は、面積の大きい側の判断が難しく要確認"
+  select:
+    pieces: [FIN-Imatran_seutukunta, FIN-Kotkan_Haminan_seutukunta, FIN-Kouvolan_seutukunta, FIN-Lappeenrannan_seutukunta,
+      FIN-Savonlinnan_seutukunta]
+  timeline:
+    - from: 1648
+      owner: sweden
+    - from: 1743
+      owner: russia
+      cause: "オーボ条約でキュミ川以東をロシアに割譲"
+      source: "https://ja.wikipedia.org/wiki/オーボ条約"
+    - from: 1812
+      owner: finland
+      overlord: russia
+      cause: "「旧フィンランド」がフィンランド大公国に編入される"
+      source: "https://ja.wikipedia.org/wiki/フィンランド大公国"
+
+- id: estonia
+  name: エストニア・北リヴォニア
+  note: "1561年以来のスウェーデン領エストニア、1629年以来のスウェーデン領リヴォニア、1645年以来のエーゼル島"
+  select:
+    iso: [EST]
+  timeline:
+    - from: 1648
+      owner: sweden
+    - from: 1710
+      owner: russia
+      certainty: occupied
+      cause: "リガ・レヴァルの降伏で、ロシア軍がエストニア・リヴォニアを占領"
+      source: "https://ja.wikipedia.org/wiki/大北方戦争"
+    - from: 1721
+      owner: russia
+      cause: "ニスタット条約でロシアに割譲"
+      source: "https://ja.wikipedia.org/wiki/ニスタット条約"
+
+- id: livonia_lv
+  name: リヴォニア（ヴィゼメ）
+  select:
+    pieces: [LVA-Al_ksnes_novads, LVA-C_su_novads, LVA-Gulbenes_novads, LVA-Limba_u_novads, LVA-Madonas_novads, LVA-Ogres_novads,
+      LVA-R_ga, LVA-Ropa_u_novads, LVA-Salaspils_novads, LVA-Saulkrastu_novads, LVA-Siguldas_novads, LVA-Smiltenes_novads,
+      LVA-Valkas_novads, LVA-Valmieras_novads, LVA-da_u_novads]
+  timeline:
+    - from: 1648
+      owner: sweden
+    - from: 1710
+      owner: russia
+      certainty: occupied
+      cause: "リガ・レヴァルの降伏で、ロシア軍がエストニア・リヴォニアを占領"
+      source: "https://ja.wikipedia.org/wiki/大北方戦争"
+    - from: 1721
+      owner: russia
+      cause: "ニスタット条約でロシアに割譲"
+      source: "https://ja.wikipedia.org/wiki/ニスタット条約"
+
+- id: latgale
+  name: ポーランド領リヴォニア（ラトガレ）
+  select:
+    pieces: [LVA-Aug_daugavas_novads, LVA-Balvu_novads, LVA-Daugavpils, LVA-Kr_slavas_novads, LVA-L_v_nu_novads, LVA-Ludzas_novads,
+      LVA-Prei_u_novads, LVA-R_zeknes, LVA-R_zeknes_novads, LVA-Varak_nu_novads]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: russia
+      cause: "第1回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: courland
+  name: クールラント・ゼムガレ
+  note: "ピルテン地方（ポーランド直轄）は省略"
+  select:
+    pieces: [LVA-Aizkraukles_novads, LVA-Bauskas_novads, LVA-Dienvidkurzemes_novads, LVA-Dobeles_novads, LVA-J_kabpils_novads,
+      LVA-J_rmalas, LVA-Jelgavas, LVA-Jelgavas_novads, LVA-Kuld_gas_novads, LVA-Liep_jas, LVA-M_rupes_novads,
+      LVA-Olaines_novads, LVA-Saldus_novads, LVA-Talsu_novads, LVA-Tukuma_novads, LVA-Ventspils, LVA-Ventspils_novads,
+      LVA-ekavas_novads]
+  timeline:
+    - from: 1648
+      owner: courland
+      overlord: poland_lithuania
+    - from: 1795
+      owner: russia
+      cause: "第3回ポーランド分割でクールラント公国がロシアに併合"
+      source: "https://ja.wikipedia.org/wiki/クールラント公国"
+
+- id: memel
+  name: メーメル地方（クライペダ）
+  select:
+    pieces: [LTU-Klaip_da_City_Municipality, LTU-Klaip_da_District_Municipality, LTU-Neringos_savivaldyb, LTU-Pag_gi_savivaldyb,
+      LTU-ilut_District_Municipality]
+  timeline:
+    - from: 1648
+      owner: prussia
+      overlord: poland_lithuania
+      note: "プロイセン公国（ポーランド王の封土。帝国外）"
+    - from: 1657
+      owner: prussia
+      cause: "ヴェーラウ条約でプロイセン公国がポーランドの宗主権から離れる"
+      source: "https://ja.wikipedia.org/wiki/ヴェーラウ条約"
+
+- id: lithuania
+  name: リトアニア大公国（1795年ロシア領部分）
+  select:
+    pieces: [BLR-Ashmyany, BLR-Astravyets, BLR-Baranovichy, BLR-Braslaw, BLR-Brest, BLR-Byaroza, BLR-Byerastavitsa,
+      BLR-Drahichyn, BLR-Dzyatlava, BLR-Grodno, BLR-Ivanava, BLR-Ivatsevichy, BLR-Iwye, BLR-Kamenets, BLR-Karelichy,
+      BLR-Kobryn, BLR-Lida, BLR-Lyakhavichy, BLR-Malaryta, BLR-Masty, BLR-Novogrudok, BLR-Pastavy, BLR-Pruzhany,
+      BLR-Shchuchyn, BLR-Slonim, BLR-Smarhon, BLR-Stowbtsy, BLR-Svislach, BLR-Valozhyn, BLR-Vawkavysk, BLR-Voranava,
+      BLR-Zel_va, BLR-Zhabinka, LTU-Akmen_s_rajono_savivaldyb, LTU-Anyk_i_rajono_savivaldyb, LTU-Bir_rajono_savivaldyb,
+      LTU-Bir_tonas_Municipality, LTU-Druskinink_savivaldyb, LTU-Elektr_nai_Municipality, LTU-Ignalinos_rajono_savivaldyb,
+      LTU-Jonavos_rajono_savivaldyb, LTU-Joni_kio_rajono_savivaldyb, LTU-Jurbarko_rajono_savivaldyb, LTU-K_daini_rajono_savivaldyb,
+      LTU-Kai_iadori_rajono_savivaldyb, LTU-Kaunas_District_Municipality, LTU-Kauno_miesto_savivaldyb, LTU-Kelm_s_rajono_savivaldyb,
+      LTU-Kretinga_District_Municipality, LTU-Kupi_kio_rajono_savivaldyb, LTU-Ma_eiki_rajono_savivaldyb, LTU-Mol_t_rajono_savivaldyb,
+      LTU-Pakruojo_rajono_savivaldyb, LTU-Palangos_miesto_savivaldyb, LTU-Panev_io_miesto_savivaldyb, LTU-Panev_io_rajono_savivaldyb,
+      LTU-Pasvalio_rajono_savivaldyb, LTU-Plung_s_rajono_savivaldyb, LTU-Radvili_kio_rajono_savivaldyb, LTU-Raseini_rajono_savivaldyb,
+      LTU-Rietavo_savivaldyb, LTU-Roki_kio_rajono_savivaldyb, LTU-Skuodo_rajono_savivaldyb, LTU-Taurag_s_rajono_savivaldyb,
+      LTU-Tel_i_rajono_savivaldyb, LTU-Trak_rajono_savivaldyb, LTU-Ukmerg_s_rajono_savivaldyb, LTU-Utenos_rajono_savivaldyb,
+      LTU-Var_nos_rajono_savivaldyb, LTU-Vilniaus_rajono_savivaldyb, LTU-Vilnius_city_municipality, LTU-Visagino_savivaldyb,
+      LTU-Zaras_rajono_savivaldyb, LTU-al_inink_rajono_savivaldyb, LTU-iauli_miesto_savivaldyb, LTU-iauli_rajono_savivaldyb,
+      LTU-ilal_s_rajono_savivaldyb, LTU-irvint_rajono_savivaldyb, LTU-ven_ioni_rajono_savivaldyb]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1795
+      owner: russia
+      cause: "第3回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: suvalkija
+  name: ネマン川以西（スヴァルキヤ）
+  select:
+    pieces: [LTU-Alytaus_miesto_savivaldyb, LTU-Alytus_District_Municipality, LTU-Kalvarija_Municipality, LTU-Kazl_R_dos_savivaldyb,
+      LTU-Lazdij_rajono_savivaldyb, LTU-Marijampol_Municipality, LTU-Prienai_District_Municipality, LTU-Vilkavi_kis_District_Municipality,
+      LTU-aki_rajono_savivaldyb]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1795
+      owner: prussia
+      cause: "第3回ポーランド分割（新東プロイセン）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: warsaw
+      cause: "ティルジット条約でワルシャワ公国が成立"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1815
+      owner: congress_poland
+      overlord: russia
+      cause: "ウィーン議定書でポーランド立憲王国に"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: pom_sw
+  name: スウェーデン領ポンメルン（オーデル河口）
+  select:
+    pieces: [POL-Szczecin, POL-powiat_policki, POL-winouj_cie]
+  timeline:
+    - from: 1648
+      owner: sweden
+      overlord: hre
+      cause: "ウェストファリア条約"
+      source: "https://ja.wikipedia.org/wiki/ヴェストファーレン条約"
+      note: "スウェーデン領ポンメルン"
+    - from: 1720
+      owner: prussia
+      overlord: hre
+      cause: "ストックホルム条約でシュテッティンとペーネ川以南をプロイセンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ストックホルム条約_(1720年)"
+    - from: 1806
+      owner: prussia
+      cause: "神聖ローマ帝国の解体"
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: "ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: goleniow
+  name: ゴルノウ（オーデル東岸）
+  select:
+    pieces: [POL-powiat_goleniowski]
+  timeline:
+    - from: 1648
+      owner: sweden
+      overlord: hre
+      note: "オーデル川東岸の帯状地（シュテッティン国境条約 1653）"
+    - from: 1679
+      owner: prussia
+      overlord: hre
+      certainty: uncertain
+      cause: "サン＝ジェルマン条約でオーデル東岸の帯状地をブランデンブルクに（ゴルノウは質入れ）"
+      source: "https://ja.wikipedia.org/wiki/サン＝ジェルマン＝アン＝レー条約_(1679年)"
+    - from: 1693
+      owner: sweden
+      overlord: hre
+      cause: "スウェーデンがゴルノウを請け戻す"
+    - from: 1720
+      owner: prussia
+      overlord: hre
+      cause: "ストックホルム条約でシュテッティンとともにプロイセンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ストックホルム条約_(1720年)"
+    - from: 1806
+      owner: prussia
+      cause: "神聖ローマ帝国の解体"
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: "ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: pom_br
+  name: ヒンターポンメルン・ノイマルク
+  select:
+    pieces: [POL-Colberg_County, POL-Gorzow_Wielkopolski, POL-Koszalin, POL-S_upsk, POL-powiat_bia_ogardzki, POL-powiat_choszcze_ski,
+      POL-powiat_drawski, POL-powiat_gorzowski, POL-powiat_gryfi_ski, POL-powiat_gryficki, POL-powiat_kamie_ski,
+      POL-powiat_koszali_ski, POL-powiat_kro_nie_ski, POL-powiat_my_liborski, POL-powiat_obeski, POL-powiat_pyrzycki,
+      POL-powiat_s_awie_ski, POL-powiat_s_ubicki, POL-powiat_s_upski, POL-powiat_stargardzki, POL-powiat_strzelecko_drezdenecki,
+      POL-powiat_sul_ci_ski, POL-powiat_szczecinecki, POL-powiat_widwi_ski]
+  timeline:
+    - from: 1648
+      owner: prussia
+      overlord: hre
+      note: "ヒンターポンメルン・ノイマルク（ブランデンブルク）"
+    - from: 1806
+      owner: prussia
+      cause: "神聖ローマ帝国の解体"
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: "ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: lauenburg
+  name: ラウエンブルク・ビュートウ
+  select:
+    pieces: [POL-powiat_bytowski, POL-powiat_l_borski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+      note: "ラウエンブルク・ビュートウ（ポメルン公家の封土）"
+    - from: 1657
+      owner: prussia
+      overlord: poland_lithuania
+      cause: "ブロンベルク条約でポーランド王の封土としてブランデンブルクに与えられる"
+      source: "https://ja.wikipedia.org/wiki/ブロンベルク条約"
+    - from: 1772
+      owner: prussia
+      cause: "第1回ポーランド分割でポーランドの宗主権がなくなる"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: royal_prussia
+  name: 王領プロイセン（ポメレリア・ヴァルミア）
+  select:
+    pieces: [POL-Elbl_g, POL-Gdynia, POL-Grudzi_dz, POL-Olsztyn, POL-Sopot, POL-powiat_braniewski, POL-powiat_chojnicki,
+      POL-powiat_cz_uchowski, POL-powiat_elbl_ski, POL-powiat_gda_ski, POL-powiat_grudzi_dzki, POL-powiat_kartuski,
+      POL-powiat_ko_cierski, POL-powiat_lidzbarski, POL-powiat_malborski, POL-powiat_nowodworski, POL-powiat_nowomiejski,
+      POL-powiat_olszty_ski, POL-powiat_pucki, POL-powiat_starogardzki, POL-powiat_sztumski, POL-powiat_tczewski,
+      POL-powiat_tucholski, POL-powiat_wejherowski, POL-powiat_wiecki]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+      note: "王領プロイセン"
+    - from: 1772
+      owner: prussia
+      cause: "第1回ポーランド分割（西プロイセン）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: kulm
+  name: ヘウムノ地方
+  select:
+    pieces: [POL-powiat_brodnicki, POL-powiat_che_mi_ski, POL-powiat_toru_ski, POL-powiat_w_brzeski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+      note: "王領プロイセン（ヘウムノ地方）"
+    - from: 1772
+      owner: prussia
+      cause: "第1回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: warsaw
+      cause: "ティルジット条約でワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1815
+      owner: prussia
+      cause: "ウィーン議定書でプロイセンに返還"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: danzig
+  name: ダンツィヒ（グダンスク）
+  select:
+    pieces: [POL-Gda_sk]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+      note: "ダンツィヒ（王領プロイセンの自治都市）"
+    - from: 1793
+      owner: prussia
+      cause: "第2回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: danzig
+      cause: "ティルジット条約でダンツィヒ自由市となる（フランスの保護下）"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1814
+      owner: prussia
+      cause: "ナポレオン軍の降伏後、プロイセン領に（1815年ウィーン議定書で確定）"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: torun
+  name: トルン
+  select:
+    pieces: [POL-Toru]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+      note: "トルン（王領プロイセンの都市）"
+    - from: 1793
+      owner: prussia
+      cause: "第2回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: warsaw
+      cause: "ティルジット条約"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1815
+      owner: prussia
+      cause: "ウィーン議定書"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: ducal_prussia
+  name: プロイセン公国（東プロイセン）
+  select:
+    pieces: [POL-powiat_bartoszycki, POL-powiat_dzia_dowski, POL-powiat_e_cki, POL-powiat_gi_ycki, POL-powiat_go_dapski,
+      POL-powiat_i_awski, POL-powiat_k_trzy_ski, POL-powiat_kwidzy_ski, POL-powiat_mr_gowski, POL-powiat_nidzicki,
+      POL-powiat_olecki, POL-powiat_ostrodzki, POL-powiat_piski, POL-powiat_szczycie_ski, POL-powiat_w_gorzewski,
+      RUS-Kaliningrad]
+  timeline:
+    - from: 1648
+      owner: prussia
+      overlord: poland_lithuania
+      note: "プロイセン公国（ポーランド王の封土。帝国外）"
+    - from: 1657
+      owner: prussia
+      cause: "ヴェーラウ条約でプロイセン公国がポーランドの宗主権から離れる"
+      source: "https://ja.wikipedia.org/wiki/ヴェーラウ条約"
+
+- id: netze
+  name: ネッツェ地区
+  select:
+    pieces: [POL-Bydgoszcz, POL-powiat_bydgoski, POL-powiat_czarnkowsko_trzcianecki, POL-powiat_inowroc_awski, POL-powiat_nakielski,
+      POL-powiat_pilski, POL-powiat_s_pole_ski, POL-powiat_wa_ecki, POL-powiat_z_otowski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: prussia
+      cause: "第1回ポーランド分割（ネッツェ地区）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: warsaw
+      cause: "ティルジット条約でワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1815
+      owner: prussia
+      cause: "ウィーン議定書でポズナン大公国としてプロイセン領に"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: sp_posen
+  name: 大ポーランド西部（1815年ポズナン大公国）
+  select:
+    pieces: [POL-Leszno, POL-Pozna, POL-powiat_chodzieski, POL-powiat_gnie_nie_ski, POL-powiat_gosty_ski, POL-powiat_grodziski,
+      POL-powiat_jaroci_ski, POL-powiat_k_pi_ski, POL-powiat_ko_cia_ski, POL-powiat_krotoszy_ski, POL-powiat_leszczy_ski,
+      POL-powiat_mi_dzychodzki, POL-powiat_mi_dzyrzecki, POL-powiat_mogile_ski, POL-powiat_ni_ski, POL-powiat_nowotomyski,
+      POL-powiat_obornicki, POL-powiat_ostrowski, POL-powiat_ostrzeszowski, POL-powiat_pleszewski, POL-powiat_pozna_ski,
+      POL-powiat_rawicki, POL-powiat_redzki_2, POL-powiat_remski, POL-powiat_szamotulski, POL-powiat_w_growiecki,
+      POL-powiat_wolszty_ski, POL-powiat_wrzesi_ski, POL-powiat_wschowski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1793
+      owner: prussia
+      cause: "第2回ポーランド分割（南プロイセン）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: warsaw
+      cause: "ティルジット条約でワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1815
+      owner: prussia
+      cause: "ウィーン議定書でポズナン大公国としてプロイセン領に"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: sp_congress
+  name: 大ポーランド東部・クヤヴィ・ウッチ・プウォツク
+  note: "1793年と1795年の境界（プウォツク・マゾフシェ間）は要確認"
+  select:
+    pieces: [POL-Cz_stochowa, POL-Kalisz, POL-Konin, POL-Kutno_County, POL-Lipno_County, POL-P_ock, POL-Piotrkow_Trybunalski,
+      POL-Skierniewice, POL-W_oc_awek, POL-od, POL-powiat_aleksandrowski, POL-powiat_aski, POL-powiat_be_chatowski,
+      POL-powiat_brzezi_ski, POL-powiat_cz_stochowski, POL-powiat_czycki, POL-powiat_golubsko_dobrzy_ski, POL-powiat_gostyni_ski,
+      POL-powiat_k_obucki, POL-powiat_kaliski, POL-powiat_kolski, POL-powiat_koni_ski, POL-powiat_m_awski, POL-powiat_odzki_wschodni,
+      POL-powiat_owicki, POL-powiat_p_ocki, POL-powiat_pabianicki, POL-powiat_paj_cza_ski, POL-powiat_piotrkowski,
+      POL-powiat_podd_bicki, POL-powiat_radomszcza_ski, POL-powiat_radziejowski, POL-powiat_rawski, POL-powiat_rypi_ski,
+      POL-powiat_s_upecki, POL-powiat_sieradzki, POL-powiat_sierpecki, POL-powiat_skierniewicki, POL-powiat_sochaczewski,
+      POL-powiat_tomaszowski, POL-powiat_turecki, POL-powiat_uromi_ski, POL-powiat_w_oc_awski, POL-powiat_wielu_ski,
+      POL-powiat_wieruszowski, POL-powiat_zdu_skowolski, POL-powiat_zgierski, POL-yrardow_County]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1793
+      owner: prussia
+      cause: "第2回ポーランド分割（南プロイセン）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: warsaw
+      cause: "ティルジット条約でワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1815
+      owner: congress_poland
+      overlord: russia
+      cause: "ウィーン議定書でポーランド立憲王国に"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: p3_congress
+  name: マゾフシェ北部・ポドラシェ北部・新シュレジエン
+  select:
+    pieces: [POL-D_browa_Gornicza, POL-Grodzisk_Mazowiecki_County, POL-Ostro_ka, POL-Sosnowiec, POL-Suwa_ki, POL-Warszawa,
+      POL-om_a, POL-powiat_augustowski, POL-powiat_b_dzi_ski, POL-powiat_ciechanowski, POL-powiat_grajewski,
+      POL-powiat_grojecki, POL-powiat_kolne_ski, POL-powiat_legionowski, POL-powiat_makowski, POL-powiat_myszkowski,
+      POL-powiat_nowodworski_2, POL-powiat_om_y_ski, POL-powiat_ostro_cki, POL-powiat_ostrowski_2, POL-powiat_p_o_ski,
+      POL-powiat_piaseczy_ski, POL-powiat_pruszkowski, POL-powiat_przasnyski, POL-powiat_pu_tuski, POL-powiat_sejne_ski,
+      POL-powiat_suwalski, POL-powiat_warszawski_zachodni, POL-powiat_wysokomazowiecki, POL-powiat_wyszkowski,
+      POL-powiat_zambrowski, POL-powiat_zawiercia_ski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1795
+      owner: prussia
+      cause: "第3回ポーランド分割（新東プロイセン・新シュレジエン）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: warsaw
+      cause: "ティルジット条約でワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+    - from: 1815
+      owner: congress_poland
+      overlord: russia
+      cause: "ウィーン議定書でポーランド立憲王国に"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: bialystok
+  name: ビャウィストク地区
+  select:
+    pieces: [POL-Bia_ystok, POL-powiat_bia_ostocki, POL-powiat_bielski, POL-powiat_hajnowski, POL-powiat_moniecki, POL-powiat_siemiatycki,
+      POL-powiat_sokolski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1795
+      owner: prussia
+      cause: "第3回ポーランド分割（新東プロイセン）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1807
+      owner: russia
+      cause: "ティルジット条約でビャウィストク地区がロシアに"
+      source: "https://ja.wikipedia.org/wiki/ティルジットの和約"
+
+- id: wg_congress
+  name: 西ガリツィア（ルブリン・ラドム・キェルツェ）
+  select:
+    pieces: [POL-Bia_a_Podlaska, POL-Che_m, POL-Kielce, POL-Lublin, POL-Radom, POL-Siedlce, POL-Siedlce_County, POL-powiat_bia_obrzeski,
+      POL-powiat_bialski, POL-powiat_buski, POL-powiat_che_mski, POL-powiat_czy_ski, POL-powiat_garwoli_ski,
+      POL-powiat_j_drzejowski, POL-powiat_kazimierski, POL-powiat_kielecki, POL-powiat_konecki, POL-powiat_kozienicki,
+      POL-powiat_kra_nicki, POL-powiat_krasnostawski, POL-powiat_lipski, POL-powiat_lubartowski, POL-powiat_lubelski,
+      POL-powiat_mi_ski, POL-powiat_miechowski, POL-powiat_olkuski, POL-powiat_opatowski, POL-powiat_opoczy_ski,
+      POL-powiat_opolski_2, POL-powiat_osicki, POL-powiat_ostrowiecki, POL-powiat_otwocki, POL-powiat_parczewski,
+      POL-powiat_pi_czowski, POL-powiat_proszowicki, POL-powiat_przysuski, POL-powiat_pu_awski, POL-powiat_radomski,
+      POL-powiat_radzy_ski, POL-powiat_rycki, POL-powiat_sandomierski, POL-powiat_skar_yski, POL-powiat_soko_owski,
+      POL-powiat_starachowicki, POL-powiat_staszowski, POL-powiat_szyd_owiecki, POL-powiat_ukowski, POL-powiat_w_growski,
+      POL-powiat_w_odawski, POL-powiat_w_oszczowski, POL-powiat_widnicki_2, POL-powiat_wo_omi_ski, POL-powiat_zwole_ski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1795
+      owner: habsburg
+      cause: "第3回ポーランド分割（西ガリツィア）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1809
+      owner: warsaw
+      cause: "シェーンブルン条約で西ガリツィアがワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/シェーンブルンの和約"
+    - from: 1815
+      owner: congress_poland
+      overlord: russia
+      cause: "ウィーン議定書でポーランド立憲王国に"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: krakow
+  name: クラクフ
+  select:
+    pieces: [POL-Jaworzno, POL-Krakow, POL-powiat_chrzanowski, POL-powiat_krakowski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1795
+      owner: habsburg
+      cause: "第3回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1809
+      owner: warsaw
+      cause: "シェーンブルン条約でワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/シェーンブルンの和約"
+    - from: 1815
+      owner: krakow
+      cause: "ウィーン議定書でクラクフ自由市となる（ロシア・プロイセン・オーストリアの保護下）"
+      source: "https://ja.wikipedia.org/wiki/クラクフ自由市"
+
+- id: zamosc
+  name: ザモシチ地区
+  select:
+    pieces: [POL-Zamo, POL-powiat_bi_gorajski, POL-powiat_hrubieszowski, POL-powiat_janowski, POL-powiat_tomaszowski_2,
+      POL-powiat_zamojski]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1809
+      owner: warsaw
+      cause: "シェーンブルン条約でザモシチ地区がワルシャワ公国に"
+      source: "https://ja.wikipedia.org/wiki/シェーンブルンの和約"
+    - from: 1815
+      owner: congress_poland
+      overlord: russia
+      cause: "ウィーン議定書でポーランド立憲王国に"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: wieliczka
+  name: ヴィエリチカ（ヴィスワ川南岸のクラクフ近郊）
+  note: "ポドグジェ（クラクフ市の対岸）は現在のクラクフ市のピースに含まれるため描けない"
+  select:
+    pieces: [POL-powiat_wielicki]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1809
+      owner: warsaw
+      cause: "シェーンブルン条約でクラクフとともにワルシャワ公国に（ヴィエリチカの塩坑は共同管理）"
+      source: "https://ja.wikipedia.org/wiki/シェーンブルンの和約"
+    - from: 1815
+      owner: habsburg
+      cause: "ウィーン議定書でオーストリアに返還"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: galicia_pl
+  name: ガリツィア西部（小ポーランド南部）
+  select:
+    pieces: [POL-Krosno, POL-Nowy_S_cz, POL-Przemy_l, POL-Rzeszow, POL-Tarnobrzeg, POL-Tarnow, POL-powiat_a_cucki, POL-powiat_bieszczadzki,
+      POL-powiat_boche_ski, POL-powiat_brzeski_2, POL-powiat_brzozowski, POL-powiat_d_bicki, POL-powiat_d_browski,
+      POL-powiat_gorlicki, POL-powiat_jaros_awski, POL-powiat_jasielski, POL-powiat_kolbuszowski, POL-powiat_kro_nie_ski_2,
+      POL-powiat_le_ajski, POL-powiat_leski, POL-powiat_limanowski, POL-powiat_lubaczowski, POL-powiat_mielecki,
+      POL-powiat_my_lenicki, POL-powiat_ni_a_ski, POL-powiat_nowos_decki, POL-powiat_nowotarski, POL-powiat_o_wi_cimski,
+      POL-powiat_przemyski, POL-powiat_przeworski, POL-powiat_ropczycko_s_dziszowski, POL-powiat_rzeszowski,
+      POL-powiat_sanocki, POL-powiat_stalowowolski, POL-powiat_strzy_owski, POL-powiat_suski, POL-powiat_tarnobrzeski,
+      POL-powiat_tarnowski, POL-powiat_tatrza_ski, POL-powiat_wadowicki, POL-powiat_wielicki, POL-powiat_ywiecki]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア・ロドメリア王国）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: silesia_pl
+  name: シュレジエン（ポーランド部分）
+  note: "グラーツ伯領（クウォツコ）を含む。シュヴィーブス（1686–1695 ブランデンブルク）は省略"
+  select:
+    pieces: [POL-Bytom, POL-Chorzow, POL-Gliwice, POL-Gliwice_County, POL-Jastrz_bie_Zdroj, POL-Jelenia_Gora, POL-Katowice,
+      POL-Legnica, POL-Mys_owice, POL-Opole, POL-Piekary_l_skie, POL-Raciborz_County, POL-Ruda_l_ska, POL-Rybnik,
+      POL-Siemianowice_l_skie, POL-Tarnowskie_Gory_County, POL-Tychy, POL-Wa_brzych, POL-Wodzis_aw_County, POL-Wroc_aw,
+      POL-Zabrze, POL-Zielona_Gora, POL-ory, POL-powiat_aga_ski, POL-powiat_bieru_sko_l_dzi_ski, POL-powiat_boles_awiecki,
+      POL-powiat_brzeski, POL-powiat_dzier_oniowski, POL-powiat_g_ogowski, POL-powiat_g_ubczycki, POL-powiat_gorowski,
+      POL-powiat_jaworski, POL-powiat_jeleniogorski, POL-powiat_k_dzierzy_sko_kozielski, POL-powiat_k_odzki,
+      POL-powiat_kamiennogorski, POL-powiat_kluczborski, POL-powiat_krapkowicki, POL-powiat_legnicki, POL-powiat_lubi_ski,
+      POL-powiat_lubliniecki, POL-powiat_lwowecki, POL-powiat_miko_owski, POL-powiat_milicki, POL-powiat_namys_owski,
+      POL-powiat_nowosolski, POL-powiat_nyski, POL-powiat_o_awski, POL-powiat_ole_nicki, POL-powiat_oleski, POL-powiat_opolski,
+      POL-powiat_polkowicki, POL-powiat_prudnicki, POL-powiat_pszczy_ski, POL-powiat_redzki, POL-powiat_rybnicki,
+      POL-powiat_strzelecki, POL-powiat_strzeli_ski, POL-powiat_trzebnicki, POL-powiat_wa_brzyski, POL-powiat_widnicki,
+      POL-powiat_wiebodzi_ski, POL-powiat_wo_owski, POL-powiat_wroc_awski, POL-powiat_z_bkowicki, POL-powiat_z_otoryjski,
+      POL-powiat_zielonogorski, POL-wi_toch_owice]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+    - from: 1742
+      owner: prussia
+      overlord: hre
+      cause: "ブレスラウ条約・ベルリン条約でシュレジエンの大半がプロイセン領に"
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1742年)"
+    - from: 1806
+      owner: prussia
+      cause: "神聖ローマ帝国の解体"
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: "ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: austrian_silesia
+  name: テッシェン（オーストリア領シュレジエン）
+  select:
+    pieces: [POL-Bielsko_Bia_a, POL-Bielsko_County, POL-powiat_cieszy_ski]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      overlord: hre
+      note: "テッシェン公国（1742年以後もオーストリア領シュレジエン）"
+    - from: 1806
+      owner: habsburg
+      cause: "神聖ローマ帝国の解体"
+    - from: 1815
+      owner: habsburg
+      overlord: german_confederation
+      cause: "ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: lusatia
+  name: ラウジッツ（ポーランド部分）
+  select:
+    pieces: [POL-powiat_arski, POL-powiat_luba_ski, POL-powiat_zgorzelecki]
+  timeline:
+    - from: 1648
+      owner: saxony
+      overlord: hre
+      note: "ラウジッツ（1635年以来ザクセン選帝侯領）"
+    - from: 1806
+      owner: saxony
+      overlord: rhine_confederation
+      cause: "ザクセンがライン同盟に加盟（王国に昇格）"
+      source: "https://ja.wikipedia.org/wiki/ライン同盟"
+    - from: 1813
+      owner: saxony
+      cause: "ライプツィヒの戦いの後、ライン同盟が崩壊"
+    - from: 1815
+      owner: prussia
+      overlord: german_confederation
+      cause: "ウィーン議定書でラウジッツの大部分をプロイセンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: ingria
+  name: イングリア（インゲルマンランド）
+  note: "ストルボヴォ条約（1617）でスウェーデン領となったイングリア（イヴァンゴロド・ヤマ・コポリエ・ノーテボリ）。ヴォルホフ川より東（チフヴィン・ラドガ）はロシアに残った。"
+  select:
+    pieces: [RUS-Gatchinsky_District, RUS-Jaama_District, RUS-Kaarosta_District, RUS-Korotka_District, RUS-Sosnovy_Bor,
+      RUS-Tusina_District, RUS-Volosovsky_District, RUS-Vsevolozhsky_District, RUS-Saint_Petersburg]
+  timeline:
+    - from: 1648
+      owner: sweden
+      note: "イングリア（ストルボヴォ条約 1617 以来のスウェーデン領）"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+    - from: 1703
+      owner: russia
+      certainty: occupied
+      cause: "ロシア軍がノーテボリ（1702）とニェンスカンス（1703）を攻略し、ネヴァ河口にサンクト・ペテルブルクを建設"
+      source: "https://ja.wikipedia.org/wiki/サンクトペテルブルク"
+    - from: 1721
+      owner: russia
+      cause: "ニスタット条約でイングリアをロシアに割譲"
+      source: "https://ja.wikipedia.org/wiki/ニスタット条約"
+
+- id: ingria_south
+  name: イングリア南部（ルガ川流域）
+  note: "スウェーデン領イングリアとロシア（ノヴゴロド・グドフ）の境界は、現在の郡（ルガ郡・スランツィ郡）とは合わない。近似（要確認）"
+  select:
+    pieces: [RUS-Laukaa_District, RUS-Slantsevsky_District]
+  timeline:
+    - from: 1648
+      owner: sweden
+      certainty: uncertain
+    - from: 1703
+      owner: russia
+      certainty: occupied
+      cause: "大北方戦争でロシア軍がイングリアを占領"
+    - from: 1721
+      owner: russia
+      cause: "ニスタット条約でイングリアをロシアに割譲"
+      source: "https://ja.wikipedia.org/wiki/ニスタット条約"
+
+- id: kexholm_vyborg
+  name: ヴィボルグ・ケクスホルム（カレリア地峡とラドガ湖北岸）
+  note: "ヴィボルグ県（スウェーデン本来の領土）と、ストルボヴォ条約（1617）で得たケクスホルム県（ラドガ湖の西岸・北岸）。ニスタット条約でロシア領となり、1812年に「旧フィンランド」としてフィンランド大公国に編入された（南の境界はセストラ川）。"
+  select:
+    pieces: [RUS-Vyborgsky_District, RUS-Kakisalmi_District, RUS-Lahdenpohja_District, RUS-Sortavala_District,
+      RUS-Pitkaranta_District, RUS-Suojarvi_District]
+  timeline:
+    - from: 1648
+      owner: sweden
+    - from: 1710
+      owner: russia
+      certainty: occupied
+      cause: "ロシア軍がヴィボルグとケクスホルムを攻略"
+      source: "https://ja.wikipedia.org/wiki/大北方戦争"
+    - from: 1721
+      owner: russia
+      cause: "ニスタット条約でヴィボルグとケクスホルムをロシアに割譲"
+      source: "https://ja.wikipedia.org/wiki/ニスタット条約"
+    - from: 1812
+      owner: finland
+      overlord: russia
+      cause: "「旧フィンランド」（ヴィボルグ県）がフィンランド大公国に編入される"
+      source: "https://ja.wikipedia.org/wiki/フィンランド大公国"
+
+- id: smolensk
+  name: スモレンスク
+  note: "デウリノ休戦（1618）でポーランドに割譲されたスモレンスク地方。東部（ヴャジマ・グジャツク・スィチョフカ）はロシアに残った。ヴェリジ・ヒスラヴィチ・シュミャチは1772年までポーランド領（blr_1772）。"
+  select:
+    pieces: [RUS-Smolensk, RUS-Smolensky_District, RUS-x_25, RUS-Demidovsky_District, RUS-Dorogobuzhsky_District,
+      RUS-Dukhovshchinsky_District, RUS-Glinkovsky_District, RUS-Kardymovsky_District, RUS-Kholm_Zhirkovsky,
+      RUS-Krasninsky_District, RUS-Monastyrshchinsky_District, RUS-Pochinkovsky_District, RUS-Roslavlsky_District,
+      RUS-Rudnyansky_District, RUS-Safonovsky_District, RUS-Yartsevsky_District, RUS-Yelninsky_District,
+      RUS-Yershichsky_District]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1654
+      owner: russia
+      certainty: occupied
+      cause: "ロシア・ポーランド戦争でロシア軍がスモレンスクを攻略"
+      source: "https://ja.wikipedia.org/wiki/ロシア・ポーランド戦争_(1654年-1667年)"
+    - from: 1667
+      owner: russia
+      cause: "アンドルソヴォ条約でスモレンスクをロシアに割譲（1686年の永遠平和条約で確定）"
+      source: "https://ja.wikipedia.org/wiki/アンドルソヴォ条約"
+
+- id: russia
+  name: ロシア本土
+  note: "ブリャンスク州西部（スタロドゥーブ連隊の地）は left_bank に入れた。トルプチェフスクは1654年以降ロシア領なので、1648–1653年もロシアとして近似。ヴォルホフ川以東のレニングラード州（チフヴィン・ラドガ）はストルボヴォ条約でロシアに返還された地域"
+  select:
+    pieces: [RUS-Arkhangelsk_Oblast, RUS-Astrakhan_Oblast, RUS-Bashkortostan, RUS-x_17, RUS-Belgorodsky_District, RUS-Borisovsky_District, RUS-Chernyansky_District, RUS-Grayvoronsky_District, RUS-Gubkinsky_Urban_Okrug, RUS-Ivnyansky_District, RUS-Korochansky_District, RUS-Krasnensky_District, RUS-Krasnogvardeysky_District, RUS-Krasnoyaruzhsky_District, RUS-Novooskolsky_District, RUS-Prokhorovsky_District, RUS-Rakityansky_District, RUS-Shebekinsky_District, RUS-Starooskolsky_Urban_Okrug, RUS-Valuysky_District, RUS-Volokonovsky_District, RUS-Yakovlevsky_District, RUS-x_9, RUS-Brasovsky_District, RUS-Bryansk, RUS-Bryansky_District, RUS-Dubrovsky_District, RUS-Dyatkovsky_District, RUS-Karachevsky_District, RUS-Kletnyansky_District, RUS-Komarichsky_District, RUS-Navlinsky_District, RUS-Rognedinsky_District, RUS-Seltso, RUS-Sevsky_District, RUS-Suzemsky_District, RUS-Trubchevsky_District, RUS-Vygonichsky_District, RUS-Zhiryatinsky_District, RUS-Zhukovsky_District, RUS-Boksitogorsky_District, RUS-Kirishsky_District, RUS-Koskenala_District, RUS-Lotinapelto_District,
+      RUS-Olhava_District, RUS-Tihvina_District,
+      RUS-Gagarinsky_District, RUS-Novoduginsky_District, RUS-Sychyovsky_District, RUS-Tyomkinsky_District,
+      RUS-Ugransky_District, RUS-Vyazemsky_District,
+      RUS-Chuvashia, RUS-Ivanovo_Oblast, RUS-Kaluga_Oblast, RUS-Khanty_Mansiysk_Autonomous_Okrug_Ugra, RUS-Kirov_Oblast,
+      RUS-Komi_Republic, RUS-Kostroma_Oblast, RUS-x_26, RUS-Belovsky_District, RUS-Bolshesoldatsky_District, RUS-Cheremisinovsky_District, RUS-Dmitriyevsky_District, RUS-Fatezhsky_District, RUS-Glushkovsky_District, RUS-Gorshechensky_District, RUS-Kastorensky_District, RUS-Khomutovsky_District, RUS-Konyshyovsky_District, RUS-Korenevsky_District, RUS-Kurchatov, RUS-Kurchatovsky_District, RUS-Kursk, RUS-Kursky_District, RUS-Lgov, RUS-Lgovsky_District, RUS-Manturovsky_District, RUS-Medvensky_District, RUS-Oboyansky_District, RUS-Oktyabrsky_District, RUS-Ponyrovsky_District, RUS-Pristensky_District, RUS-Rylsky_District, RUS-Shchigrovsky_District, RUS-Shchigry, RUS-Solntsevsky_District, RUS-Sovetsky_District, RUS-Sudzhansky_District, RUS-Timsky_District, RUS-Zheleznogorsky_District, RUS-Zolotukhinsky_District, RUS-Lipetsk_Oblast, RUS-Mari_El, RUS-Moscow,
+      RUS-Moscow_Oblast, RUS-Murmansk_Oblast, RUS-Nenets_Autonomous_Okrug, RUS-Nizhny_Novgorod_Oblast, RUS-Batetsky_District, RUS-Borovichsky_District, RUS-Chudovsky_District, RUS-Demyansky_District, RUS-Kholmsky_District, RUS-Khvoyninsky_District, RUS-Krestetsky_District, RUS-Lyubytinsky_District, RUS-Malovishersky_District, RUS-Maryovsky_District, RUS-Moshenskoy_District, RUS-Novgorodsky_District, RUS-Okulovsky_District, RUS-Parfinsky_District, RUS-Pestovsky_District, RUS-Poddorsky_District, RUS-Shimsky_District, RUS-Soletsky_District, RUS-Starorussky_District, RUS-Valdaysky_District, RUS-Veliky_Novgorod, RUS-Volotovsky_District,
+      RUS-Oryol_Oblast, RUS-Penza_Oblast, RUS-Perm_Krai, RUS-Bezhanitsky_District, RUS-Dedovichsky_District, RUS-Dnovsky_District, RUS-Gdovsky_District, RUS-Krasnogorodsky_District, RUS-Kunyinsky_District, RUS-Loknyansky_District, RUS-Novorzhevsky_District, RUS-Novosokolnichesky_District, RUS-Opochetsky_District, RUS-Ostrovsky_District, RUS-Palkinsky_District, RUS-Pechorsky_District, RUS-Plyussky_District, RUS-Porkhovsky_District, RUS-Pskov, RUS-Pskovsky_District, RUS-Pushkinogorsky_District, RUS-Pustoshkinsky_District, RUS-Pytalovsky_District, RUS-Strugo_Krasnensky_District, RUS-Velikiye_Luki, RUS-Velikoluksky_District, RUS-Aunus_District, RUS-Kalevala_District, RUS-Kemsky_District, RUS-Kontupohja_District, RUS-Kostamus_City_District, RUS-Louhi_District, RUS-Medvezhyegorsky_District, RUS-Mujejarvi_District, RUS-Petroskoi_District, RUS-Praasa_District, RUS-Puutoisten_District, RUS-Segezhsky_District, RUS-Sorokka_District, RUS-Aanisenranta_District, RUS-Republic_of_Mordovia,
+      RUS-Ryazan_Oblast, RUS-Samara_Oblast, RUS-Saratov_Oblast, RUS-Sverdlovsk_Oblast, RUS-Tambov_Oblast, RUS-Tatarstan,
+      RUS-Tula_Oblast, RUS-Tver_Oblast, RUS-Udmurtia, RUS-Ulyanovsk_Oblast, RUS-Vladimir_Oblast, RUS-Volgograd_Oblast,
+      RUS-Vologda_Oblast, RUS-x_28, RUS-x_40, RUS-Anninsky_District, RUS-Bobrovsky_District, RUS-Borisoglebsky_District, RUS-Buturlinovsky_District, RUS-Ertilsky_District, RUS-Gribanovsky_District, RUS-Kashirsky_District, RUS-Khokholsky_District, RUS-Liskinsky_District, RUS-Nizhnedevitsky_District, RUS-Novousmansky_District, RUS-Ostrogozhsky_District, RUS-Paninsky_District, RUS-Povorinsky_District, RUS-Ramonsky_District, RUS-Repyovsky_District, RUS-Semiluksky_District, RUS-Talovsky_District, RUS-Ternovsky_District, RUS-Verkhnekhavsky_District, RUS-Voronezh, RUS-Yaroslavl_Oblast]
+  timeline:
+    - from: 1648
+      owner: russia
+
+- id: russia_steppe
+  name: 南ウラル（オレンブルク）
+  select:
+    pieces: [RUS-Chelyabinsk_Oblast, RUS-Kurgan_Oblast, RUS-Orenburg_Oblast]
+  timeline:
+    - from: 1648
+      owner: russia
+      certainty: uncertain
+      note: "バシキール人・カザフ人の遊牧地。ロシアの支配は名目的"
+    - from: 1735
+      owner: russia
+      cause: "オレンブルク遠征。要塞線の建設でロシアの支配が固まる"
+      source: "https://ja.wikipedia.org/wiki/オレンブルク"
+
+- id: don
+  name: ドン・コサック軍の地
+  select:
+    pieces: [RUS-x, RUS-x_2, RUS-x_3, RUS-x_4, RUS-x_5, RUS-x_6, RUS-x_10, RUS-x_13, RUS-x_16, RUS-x_29, RUS-x_30, RUS-x_31, RUS-x_32, RUS-x_36, RUS-x_37, RUS-x_38, RUS-x_42, RUS-x_43, RUS-Aksaysky_District, RUS-Azov, RUS-Azovsky_District, RUS-Bagayevsky_District, RUS-Bataysk, RUS-Belokalitvinsky_District, RUS-Bokovsky_District, RUS-Chertkovsky_District, RUS-Kagalnitsky_District, RUS-Kamensky_District_2, RUS-Konstantinovsky_District, RUS-Krasnosulinsky_District, RUS-Kuybyshevsky_District, RUS-Matveyevo_Kurgansky_District, RUS-Millerovsky_District, RUS-Milyutinsky_District, RUS-Morozovsky_District, RUS-Myasnikovsky_District, RUS-Neklinovsky_District, RUS-Novocherkassk, RUS-Oblivsky_District, RUS-Oktyabrsky_District_2, RUS-Peschanokopsky_District, RUS-Remontnensky_District, RUS-Rodionovo_Nesvetaysky_District, RUS-Rostov_on_Don, RUS-Shakhty_City_District, RUS-Sovetsky_District_2, RUS-Taganrog_City_District, RUS-Tatsinsky_District, RUS-Tsimlyansky_District, RUS-Verkhnedonskoy_District, RUS-Vesyolovsky_District, RUS-Volgodonsk, RUS-Zavetinsky_District, RUS-Zernogradsky_District, UKR-Amvrosiivka, UKR-Antratsyt, UKR-Dovzhansk, UKR-Lutuhyne, UKR-Shakhtarsk, UKR-Sorokyne,
+      UKR-Stanytsia_Luhanska]
+  timeline:
+    - from: 1648
+      owner: don_cossacks
+      overlord: russia
+      certainty: uncertain
+      note: "ドン・コサック軍の土地。アゾフはオスマン帝国の要塞（1696–1711 ロシア、1739/1774 ロシア）"
+
+- id: azov
+  name: アゾフ（ドン川河口）・タガンログ
+  select:
+    pieces: [RUS-Azov, RUS-Azovsky_District, RUS-Taganrog_City_District]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      note: "オスマン帝国のアザク（アゾフ）要塞"
+    - from: 1696
+      owner: russia
+      certainty: occupied
+      cause: "ピョートル1世のアゾフ遠征でアゾフを占領（1698年にタガンログを建設）"
+      source: "https://ja.wikipedia.org/wiki/アゾフ遠征"
+    - from: 1700
+      owner: russia
+      cause: "コンスタンティノープル条約でアゾフがロシア領に"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1700)"
+    - from: 1711
+      owner: ottoman
+      cause: "プルート条約でアゾフをオスマン帝国に返還（タガンログは破壊）"
+      source: "https://ja.wikipedia.org/wiki/プルート条約"
+    - from: 1736
+      owner: russia
+      certainty: occupied
+      cause: "露土戦争（1735–39）でロシア軍がアゾフを攻略"
+    - from: 1739
+      owner: russia
+      certainty: uncertain
+      cause: "ベオグラード条約でアゾフはロシア領となるが、要塞は取り壊され非武装地帯とされる"
+      source: "https://ja.wikipedia.org/wiki/ベオグラード条約"
+    - from: 1774
+      owner: russia
+      cause: "キュチュク・カイナルジ条約でアゾフとその周辺のロシア領を確認"
+      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+
+- id: slavo_serbia
+  name: スラヴャノ・セルビア
+  select:
+    pieces: [UKR-Perevalsk, UKR-Popasna, UKR-Slovianoserbsk]
+  timeline:
+    - from: 1648
+      owner: don_cossacks
+      overlord: russia
+      certainty: uncertain
+    - from: 1753
+      owner: russia
+      cause: "スラヴャノ・セルビア（軍事入植地）の設置"
+      source: "https://ja.wikipedia.org/wiki/スラヴャノ・セルビア"
+
+- id: kuban
+  name: クバン川右岸・北カフカスの草原
+  note: "1783年にロシアが併合したのはクバン川の右岸（北岸）まで。左岸（南岸）はチェルケス人の地（circassia）。クバン川の流れをまたぐ郡（ノヴォクバンスク・ウスペンスコエ）は右岸側に含めた"
+  select:
+    pieces: [RUS-x_14, RUS-x_33, RUS-x_41, RUS-Beloglinsky_District, RUS-Bryukhovetsky_District, RUS-Dinskoy_District, RUS-Gulkevichsky_District, RUS-Kalininsky_District, RUS-Kanevskoy_District, RUS-Kavkazsky_District, RUS-Korenovsky_District, RUS-Krasnoarmeysky_District, RUS-Krasnodar_Municipality, RUS-Krylovsky_District, RUS-Kushchovsky_District, RUS-Leningradsky_District, RUS-Novokubansky_District, RUS-Pavlovsky_District, RUS-Primorsko_Akhtarsky_District, RUS-Slavyansky_District, RUS-Starominsky_District, RUS-Tbilissky_District, RUS-Tikhoretsky_District, RUS-Timashyovsky_District, RUS-Uspensky_District, RUS-Ust_Labinsky_District, RUS-Vyselkovsky_District, RUS-Yeysky_District, RUS-Stavropol_Krai]
+  timeline:
+    - from: 1648
+      owner: nogai
+      overlord: crimea
+      certainty: uncertain
+      note: "クバンのノガイ人（クリミア＝ハン国の支配下）"
+    - from: 1783
+      owner: russia
+      certainty: uncertain
+      cause: "クリミア併合とともにクバン川右岸をロシアが併合（クバン川がチェルケスとの境界に）"
+      source: "https://ja.wikipedia.org/wiki/ロシアによるクリミア併合_(1783年)"
+    - from: 1792
+      owner: russia
+      cause: "黒海コサック軍の入植"
+      source: "https://ja.wikipedia.org/wiki/黒海コサック軍"
+
+- id: taman
+  name: タマン半島（テムリュク）
+  select:
+    pieces: [RUS-Temryuksky_District]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: uncertain
+      note: "タマン・テムリュクのオスマン帝国の要塞（カッファ州）。周辺はノガイ人の遊牧地。要確認"
+    - from: 1774
+      owner: crimea
+      cause: "キュチュク・カイナルジ条約で独立したクリミア＝ハン国の領土に"
+      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+    - from: 1783
+      owner: russia
+      cause: "ロシアのクリミア併合（タマン半島を含む）"
+      source: "https://ja.wikipedia.org/wiki/ロシアによるクリミア併合_(1783年)"
+
+- id: anapa
+  name: アナパ
+  select:
+    pieces: [RUS-Anapa_Urban_Okrug]
+  timeline:
+    - from: 1648
+      owner: circassia
+      certainty: uncertain
+      note: "チェルケス人（ナトゥハイ族）の地"
+    - from: 1781
+      owner: ottoman
+      cause: "オスマン帝国がアナパ要塞を建設（1829年のアドリアノープル条約までオスマン領）"
+      source: "https://en.wikipedia.org/wiki/Anapa"
+
+- id: circassia
+  name: チェルケス（クバン川左岸・黒海東岸）
+  note: "黒海沿岸のノヴォロシースク（スジュク・カレ）などにはオスマン帝国の要塞もあった"
+  select:
+    pieces: [RUS-x_15, RUS-x_24, RUS-x_27, RUS-Abinsky_District, RUS-Apsheronsky_District, RUS-Belorechensky_District, RUS-Krymsky_District, RUS-Kurganinsky_District, RUS-Labinsky_District, RUS-Mostovsky_District, RUS-Otradnensky_District, RUS-Resort_Town_of_Sochi_municipal_formation, RUS-Seversky_District, RUS-Tuapsinsky_District,
+      RUS-x_11, RUS-x_18, RUS-Giaginsky_District, RUS-Koshekhablsky_District, RUS-Krasnogvardeysky_District_2, RUS-Maykopsky_District, RUS-Shovgenovsky_District, RUS-Takhtamukaysky_District, RUS-Teuchezhsky_District, RUS-Karachay_Cherkessia]
+  timeline:
+    - from: 1648
+      owner: circassia
+      certainty: uncertain
+      note: "チェルケス人の諸部族。オスマン帝国・クリミアが名目上の宗主権を主張"
+
+- id: kabarda
+  name: カバルダ
+  select:
+    pieces: [RUS-Kabardino_Balkaria]
+  timeline:
+    - from: 1648
+      owner: kabarda
+      certainty: uncertain
+    - from: 1774
+      owner: kabarda
+      overlord: russia
+      certainty: nominal
+      cause: "キュチュク・カイナルジ条約でカバルダのロシア帰属をオスマン帝国が承認"
+      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+
+- id: ossetia
+  name: オセチア
+  select:
+    pieces: [RUS-North_Ossetia_Alania]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: "オセット人の諸共同体"
+    - from: 1784
+      owner: russia
+      certainty: uncertain
+      cause: "ウラジカフカス要塞の建設"
+      source: "https://ja.wikipedia.org/wiki/ウラジカフカス"
+
+- id: chechnya
+  name: チェチェン・イングーシ
+  select:
+    pieces: [RUS-Chechnya, RUS-Ingushetia]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: "チェチェン人・イングーシ人の諸共同体（国家なし）"
+
+- id: dagestan
+  name: ダゲスタン（山地）
+  select:
+    pieces: [RUS-x_19, RUS-x_20, RUS-x_21, RUS-Agulsky_District, RUS-Akhtynsky_District, RUS-Akhvakhsky_District, RUS-Akushinsky_District, RUS-Babayurtovsky_District, RUS-Botlikhsky_District, RUS-Buynaksky_District, RUS-Charodinsky_District, RUS-Dakhadayevsky_District, RUS-Dokuzparinsky_District, RUS-Gergebilsky_District, RUS-Gumbetovsky_District, RUS-Gunibsky_District, RUS-Kaytagsky_District, RUS-Kazbekovsky_District, RUS-Khasavyurtovsky_District, RUS-Khivsky_District, RUS-Khunzakhsky_District, RUS-Kizilyurtovsky_District, RUS-Kulinsky_District, RUS-Kurakhsky_District, RUS-Laksky_District, RUS-Levashinsky_District, RUS-Novolaksky_District, RUS-Rutulsky_District, RUS-Sergokalinsky_District, RUS-Shamilsky_District, RUS-Suleyman_Stalsky_District, RUS-Tabasaransky_District, RUS-Tlyaratinsky_District, RUS-Tsumadinsky_District, RUS-Tsuntinsky_District, RUS-Untsukulsky_District]
+  timeline:
+    - from: 1648
+      owner: persia
+      certainty: nominal
+      note: "ダゲスタンの諸侯国。ペルシアが名目上の宗主権"
+    - from: 1813
+      owner: russia
+      certainty: uncertain
+      cause: "ゴレスターン条約でダゲスタンがロシア領に"
+      source: "https://ja.wikipedia.org/wiki/ゴレスターン条約"
+
+- id: dagestan_coast
+  name: ダゲスタン沿岸（タルキ・カイタグ）
+  select:
+    pieces: [RUS-Magaramkentsky_District, RUS-Kayakentsky_District, RUS-x_23, RUS-Karabudakhkentsky_District, RUS-x_22, RUS-Makhachkala_Urban_Okrug, RUS-Kumtorkalinsky_District]
+  timeline:
+    - from: 1648
+      owner: persia
+      certainty: nominal
+      note: "タルキのシャムハル国・カイタグなどの諸侯国。ペルシアが名目上の宗主権"
+    - from: 1722
+      owner: russia
+      certainty: occupied
+      cause: "ピョートル1世のペルシア遠征でカスピ海西岸を占領（1723年ペテルブルク条約でペルシアが割譲を約束）"
+      source: "https://en.wikipedia.org/wiki/Russo-Persian_War_(1722–1723)"
+    - from: 1735
+      owner: persia
+      certainty: nominal
+      cause: "ガンジャ条約でデルベント・バクーをペルシアに返還"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ganja"
+    - from: 1813
+      owner: russia
+      certainty: uncertain
+      cause: "ゴレスターン条約でダゲスタンがロシア領に"
+      source: "https://ja.wikipedia.org/wiki/ゴレスターン条約"
+
+- id: derbent
+  name: デルベント
+  select:
+    pieces: [RUS-urban_okrug_of_Derbent, RUS-Derbentsky_District, RUS-Dagestanskiye_Ogni]
+  timeline:
+    - from: 1648
+      owner: persia
+      note: "デルベント・ハン国（ペルシアの属領）"
+    - from: 1722
+      owner: russia
+      certainty: occupied
+      cause: "ピョートル1世のペルシア遠征でカスピ海西岸を占領（1723年ペテルブルク条約でペルシアが割譲を約束）"
+      source: "https://en.wikipedia.org/wiki/Russo-Persian_War_(1722–1723)"
+    - from: 1735
+      owner: persia
+      cause: "ガンジャ条約でデルベント・バクーをペルシアに返還"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ganja"
+    - from: 1806
+      owner: russia
+      certainty: occupied
+      cause: "ロシア軍がデルベントを占領"
+      source: "https://en.wikipedia.org/wiki/Derbent_Khanate"
+    - from: 1813
+      owner: russia
+      cause: "ゴレスターン条約でデルベントがロシア領に"
+      source: "https://ja.wikipedia.org/wiki/ゴレスターン条約"
+
+- id: kizlyar
+  name: テレク川下流（テルキ・キズリャル）
+  select:
+    pieces: [RUS-Kizlyarsky_District, RUS-Tarumovsky_District, RUS-x_12]
+  timeline:
+    - from: 1648
+      owner: russia
+      certainty: uncertain
+      note: "テレク川下流のロシアの要塞都市テルキと、グレベン・コサック、ノガイ人の地"
+    - from: 1735
+      owner: russia
+      cause: "キズリャル要塞の建設（カフカース線の拠点）"
+      source: "https://en.wikipedia.org/wiki/Kizlyar"
+
+- id: nogai_kuma
+  name: クマ川下流の草原（ノガイ草原）
+  select:
+    pieces: [RUS-Nogaysky_District, RUS-x_7]
+  timeline:
+    - from: 1648
+      owner: nogai
+      overlord: russia
+      certainty: uncertain
+      note: "ノガイ人の遊牧地（カルムイク・ロシアの影響下）"
+
+- id: kalmyk
+  name: カルムイク
+  select:
+    pieces: [RUS-Kalmykia]
+  timeline:
+    - from: 1648
+      owner: kalmyk
+      overlord: russia
+      certainty: uncertain
+    - from: 1771
+      owner: russia
+      cause: "カルムイクの大半が中央アジアへ移動し、ハン国は廃止される"
+      source: "https://ja.wikipedia.org/wiki/カルムイク・ハン国"
+
+- id: blr_1772
+  name: ベラルーシ東部（1772年ロシア領）
+  select:
+    pieces: [BLR-Beshankovichy, BLR-Buda_Kashalyova, BLR-Byalynichy, BLR-Bykhaw, BLR-Chachersk, BLR-Chavusy, BLR-Cherykaw,
+      BLR-Dobrush, BLR-Dubrowna, BLR-Gomel, BLR-Haradok, BLR-Horki, BLR-Karma, BLR-Kastsyukovichy, BLR-Khotsimsk,
+      BLR-Klimavichy, BLR-Krasnapolle, BLR-Kruhlaye, BLR-Krychaw, BLR-Liozna, BLR-Mogilev, BLR-Mstsislaw, BLR-Orsha,
+      BLR-Polotsk, BLR-Rahachow, BLR-Rasony, BLR-Shklow, BLR-Shumilina, BLR-Slawharad, BLR-Syanno, BLR-Talachyn,
+      BLR-Verkhnyadzvinsk, BLR-Vietka, BLR-Vitebsk,
+      RUS-Nevelsky_District, RUS-Sebezhsky_District, RUS-Usvyatsky_District, RUS-Velizhsky_District,
+      RUS-Khislavichsky_District, RUS-Shumyachsky_District]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: russia
+      cause: "第1回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: lith_1793
+  name: ベラルーシ中部・ウクライナ北西部（1793年ロシア領）
+  note: "1793年の境界（ドルヤ〜ピンスク〜ズブルチ川）はピースの重心で振り分けた。要確認"
+  select:
+    pieces: [BLR-Akciabrski, BLR-Asipovichy, BLR-Babruysk, BLR-Barysaw, BLR-Brahin, BLR-Byerazino, BLR-Chashniki, BLR-Chervyen,
+      BLR-Dokshytsy, BLR-Dzyarzhynsk, BLR-Hantsavichy, BLR-Hlusk, BLR-Hlybokaye, BLR-Kalinkavichy, BLR-Kapyl,
+      BLR-Khoiniki, BLR-Kirawsk, BLR-Kletsk, BLR-Klichaw, BLR-Krupki, BLR-Lahoysk, BLR-Loyew, BLR-Luninets, BLR-Lyelchytsy,
+      BLR-Lyepyel, BLR-Lyuban, BLR-Maladzyechna, BLR-Mazyr, BLR-Minsk, BLR-Minsk_City, BLR-Miory, BLR-Myadzyel,
+      BLR-Naroulia, BLR-Nyasvizh, BLR-Pinsk, BLR-Puchavi_y, BLR-Pyetrykaw, BLR-Rechytsa, BLR-Salihorsk, BLR-Sharkawshchyna,
+      BLR-Slutsk, BLR-Smalyavichy, BLR-Staryya_Darohi, BLR-Stolin, BLR-Svietlahorsk, BLR-Ushachy, BLR-Uzda, BLR-Vileyka,
+      BLR-Yel_sk, BLR-Zhlobin, BLR-Zhytkavichy, UKR-Berezne, UKR-Bilohiria, UKR-Dubrovytsia, UKR-Hoshcha, UKR-Iziaslav,
+      UKR-Korets, UKR-Kostopil, UKR-Krasyliv, UKR-Ostroh, UKR-Polonne, UKR-Rivne, UKR-Rokytne, UKR-Sarny, UKR-Shepetika,
+      UKR-Slavuta, UKR-Stara_Syniava, UKR-Starokostiantyniv, UKR-Teofipol, UKR-Zdolbuniv]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1793
+      owner: russia
+      cause: "第2回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: volhynia_w
+  name: ヴォルィーニ西部（1795年ロシア領）
+  select:
+    pieces: [UKR-Demydivka, UKR-Dubno, UKR-Horokhiv, UKR-Ivanychi, UKR-Kamin_Kashyrskyi, UKR-Kivertsi, UKR-Kovel, UKR-Kremenets,
+      UKR-Lanivtsi, UKR-Liubeshiv, UKR-Liuboml, UKR-Lokachi, UKR-Lutsk, UKR-Manevychi, UKR-Mlyniv, UKR-Radyvyliv,
+      UKR-Ratne, UKR-Rozhyshche, UKR-Shatsk, UKR-Shumsk, UKR-Stara_Vyzhivka, UKR-Turiisk, UKR-Volodymyr, UKR-Volodymyrets,
+      UKR-Zarichne]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1795
+      owner: russia
+      cause: "第3回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: zakarpattia
+  name: ザカルパッチャ（ハンガリー北東部）
+  select:
+    pieces: [UKR-Berehove, UKR-Irshava, UKR-Khust, UKR-Mizhhiria, UKR-Mukachevo, UKR-Perechyn, UKR-Rakhiv, UKR-Svaliava,
+      UKR-Tiachiv, UKR-Uzhhorod, UKR-Velykyy_Bereznyi, UKR-Volovets, UKR-Vynohradiv]
+  timeline:
+    - from: 1648
+      owner: habsburg
+      note: "ハンガリー王国（帝国外）。ムカチェヴォなど東部は1711年までラーコーツィ家の所領"
+    - from: 1682
+      owner: thokoly
+      overlord: ottoman
+      certainty: uncertain
+      cause: "テケリ・イムレがオスマン帝国の後ろ盾で上部ハンガリー公となる（ムカチェヴォ城が拠点。スロバキア東部・ハンガリー北東部と同じ扱い）"
+    - from: 1685
+      owner: habsburg
+      cause: "テケリの失脚と皇帝軍による回復（ムカチェヴォ城は1688年に開城）"
+
+- id: bukovina
+  name: ブコヴィナ
+  select:
+    pieces: [UKR-Hlyboka, UKR-Kitsman, UKR-Putyla, UKR-Storozhynets, UKR-Vyzhnytsia, UKR-Zastavna]
+  timeline:
+    - from: 1648
+      owner: moldavia
+      overlord: ottoman
+    - from: 1775
+      owner: habsburg
+      cause: "オーストリアがブコヴィナを獲得"
+      source: "https://ja.wikipedia.org/wiki/ブコヴィナ"
+
+- id: hertsa
+  name: ヘルツァ
+  select:
+    pieces: [UKR-Hertsa]
+  timeline:
+    - from: 1648
+      owner: moldavia
+      overlord: ottoman
+
+- id: hotin
+  name: ホティン地方
+  select:
+    pieces: [UKR-Kelmentsi, UKR-Khotyn, UKR-Novoselytsia, UKR-Sokyriany]
+  timeline:
+    - from: 1648
+      owner: moldavia
+      overlord: ottoman
+    - from: 1713
+      owner: ottoman
+      cause: "ホティン要塞周辺がオスマン帝国の直轄地（ライア）となる"
+      source: "https://ja.wikipedia.org/wiki/ホティン"
+    - from: 1812
+      owner: russia
+      cause: "ブカレスト条約でベッサラビアがロシア領に"
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1812年)"
+
+- id: budjak
+  name: ブジャク（南ベッサラビア）
+  select:
+    pieces: [UKR-Artsyi, UKR-Bilhorod_Dnistrovskyi, UKR-Bolhrad, UKR-Izmali, UKR-Kiliia, UKR-Reni, UKR-Sarata, UKR-Tarutyne,
+      UKR-Tatarbunary]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      note: "ブジャク（アッケルマン・イズマイルなどオスマン帝国の要塞とノガイ人の遊牧地）"
+    - from: 1812
+      owner: russia
+      cause: "ブカレスト条約でベッサラビアがロシア領に"
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1812年)"
+
+- id: crimea
+  name: クリミア半島
+  select:
+    pieces: [UKR-Bakhchysarai, UKR-Bilohirsk, UKR-Chornomorske, UKR-Dzhankoy, UKR-Krasnohvardiiske, UKR-Krasnoperekopsk,
+      UKR-Nyzhniohirskyi, UKR-Pervomaiske, UKR-Rozdolne, UKR-Saky, UKR-Simferopol, UKR-Sovietsky]
+  timeline:
+    - from: 1648
+      owner: crimea
+      overlord: ottoman
+    - from: 1774
+      owner: crimea
+      cause: "キュチュク・カイナルジ条約でオスマン帝国から独立"
+      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+    - from: 1783
+      owner: russia
+      cause: "ロシアのクリミア併合"
+      source: "https://ja.wikipedia.org/wiki/ロシアによるクリミア併合_(1783年)"
+
+- id: kefe
+  name: クリミア南岸（オスマン帝国直轄地）
+  select:
+    pieces: [UKR-Balakavaskyi, UKR-Kirovske, UKR-Leninskyi, UKR-Nakhimovskyi]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      note: "オスマン帝国の直轄地（カッファ州。南岸の港と要塞）"
+    - from: 1774
+      owner: crimea
+      cause: "キュチュク・カイナルジ条約で独立したクリミア＝ハン国の領土に"
+      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+    - from: 1783
+      owner: russia
+      cause: "ロシアのクリミア併合"
+      source: "https://ja.wikipedia.org/wiki/ロシアによるクリミア併合_(1783年)"
+
+- id: kerch
+  name: ケルチ
+  select:
+    pieces: [UKR-Lenine]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      note: "ケルチ・イェニカレ（オスマン帝国の直轄地）"
+    - from: 1774
+      owner: russia
+      cause: "キュチュク・カイナルジ条約でケルチとイェニカレがロシア領に"
+      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+
+- id: galicia_ua
+  name: ガリツィア東部（ルテニア）
+  select:
+    pieces: [UKR-Berezhany, UKR-Bohorodchany, UKR-Brody, UKR-Busk, UKR-Dolyna, UKR-Drohobych, UKR-Halych, UKR-Horodenka,
+      UKR-Horodok, UKR-Kalush, UKR-Kamianka_Buzka, UKR-Kolomyia, UKR-Kosiv, UKR-Kozova, UKR-Monastyryska, UKR-Mostyska,
+      UKR-Mykolaiv, UKR-Nadvirna, UKR-Peremyshliany, UKR-Pidhaitsi, UKR-Pustomyty, UKR-Radekhiv, UKR-Rohatyn,
+      UKR-Rozhniativ, UKR-Sambir, UKR-Skole, UKR-Sniatyn, UKR-Sokal, UKR-Staryi_Sambir, UKR-Stryi, UKR-Tlumach,
+      UKR-Turka, UKR-Tysmenytsia, UKR-Verkhovyna, UKR-Yavoriv, UKR-Zboriv, UKR-Zhovkva, UKR-Zhydachiv, UKR-Zolochiv]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア・ロドメリア王国）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: tarnopol_rut
+  name: タルノポリ地方（北部）
+  select:
+    pieces: [UKR-Pidvolochysk, UKR-Ternopil, UKR-Zbarazh]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア・ロドメリア王国）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1809
+      owner: russia
+      cause: "シェーンブルン条約でタルノポリ地区がロシアに"
+      source: "https://ja.wikipedia.org/wiki/シェーンブルンの和約"
+    - from: 1815
+      owner: habsburg
+      cause: "ウィーン議定書でオーストリアに返還"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: tarnopol_pod
+  name: ポドリア西部（タルノポリ地方南部）
+  select:
+    pieces: [UKR-Borschiv, UKR-Chortkiv, UKR-Husiatyn, UKR-Terebovlia]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1672
+      owner: ottoman
+      cause: "ブチャチ条約でポドリアがオスマン帝国領に"
+      source: "https://ja.wikipedia.org/wiki/ブチャチ条約"
+    - from: 1699
+      owner: poland_lithuania
+      cause: "カルロヴィッツ条約でポドリアがポーランドに返還"
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1809
+      owner: russia
+      cause: "シェーンブルン条約でタルノポリ地区がロシアに"
+      source: "https://ja.wikipedia.org/wiki/シェーンブルンの和約"
+    - from: 1815
+      owner: habsburg
+      cause: "ウィーン議定書でオーストリアに返還"
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+- id: podolia_w
+  name: ポドリア西部（ドニエストル沿い）
+  select:
+    pieces: [UKR-Buchach, UKR-Zalishchyky]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1672
+      owner: ottoman
+      cause: "ブチャチ条約でポドリアがオスマン帝国領に"
+      source: "https://ja.wikipedia.org/wiki/ブチャチ条約"
+    - from: 1699
+      owner: poland_lithuania
+      cause: "カルロヴィッツ条約でポドリアがポーランドに返還"
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: podolia_e
+  name: ポドリア東部（カミャネツ）
+  select:
+    pieces: [UKR-Bar, UKR-Chemerivtsi, UKR-Derazhnia, UKR-Dunaivti, UKR-Horodok_2, UKR-Kamianets_Podilskyi, UKR-Khmelnytskyi,
+      UKR-Letychiv, UKR-Murovani_Kurylivtsi, UKR-Nova_Ushytsia, UKR-Vinkivtsi, UKR-Volochysk, UKR-Yarmolyntsi]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1672
+      owner: ottoman
+      cause: "ブチャチ条約でポドリアがオスマン帝国領に（カミャネツ州）"
+      source: "https://ja.wikipedia.org/wiki/ブチャチ条約"
+    - from: 1699
+      owner: poland_lithuania
+      cause: "カルロヴィッツ条約でポーランドに返還"
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1793
+      owner: russia
+      cause: "第2回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: r_north
+  name: キエフ県北部・ポリーシャ
+  select:
+    pieces: [UKR-Andrushivka, UKR-Baranivka, UKR-Berdychiv, UKR-Borodianka, UKR-Brusyliv, UKR-Cherniakhiv, UKR-Chudniv,
+      UKR-Ivankiv, UKR-Khoroshiv, UKR-Korosten, UKR-Korostyshiv, UKR-Liubar, UKR-Luhyny, UKR-Makariv, UKR-Malyn,
+      UKR-Narodychi, UKR-Olevsk, UKR-Ovruch, UKR-Poliske, UKR-Popilnia, UKR-Pulyny, UKR-Radomyshl, UKR-Romaniv,
+      UKR-Ruzhyn, UKR-Yemilchyne, UKR-Zhytomyr, UKR-Zviahel]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+      certainty: uncertain
+      note: "フメリニツキーの乱以後、コサックとポーランドの戦場"
+    - from: 1667
+      owner: poland_lithuania
+      cause: "アンドルソヴォ条約でドニエプル右岸はポーランド領に"
+      source: "https://ja.wikipedia.org/wiki/アンドルソヴォ条約"
+    - from: 1793
+      owner: russia
+      cause: "第2回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: r_south
+  name: ドニエプル右岸（キエフ県南部・ブラーツラフ県）
+  select:
+    pieces: [UKR-Bershad, UKR-Bila_Tserkva, UKR-Blahovishchenske, UKR-Bohuslav, UKR-Chechelnyk, UKR-Cherkasy, UKR-Chernivtsi,
+      UKR-Chyhyryn, UKR-Fastiv, UKR-Haisyn, UKR-Haivoron, UKR-Holovanivsk, UKR-Horodysche, UKR-Illintsi, UKR-Kaharlyk,
+      UKR-Kalynivka, UKR-Kamianka, UKR-Kaniv, UKR-Katerynopil, UKR-Khmilnyk, UKR-Khrystynivka, UKR-Korsun_Shevchenkivskyi,
+      UKR-Koziatyn, UKR-Kryzhopil, UKR-Lityn, UKR-Lypovets, UKR-Lysianka, UKR-Mankivka, UKR-Mohyliv_Podilskyi,
+      UKR-Monastyrysche, UKR-Myronivka, UKR-Nemyriv, UKR-Novoarkhanhelsk, UKR-Orativ, UKR-Pishchanka, UKR-Pohrebyshche,
+      UKR-Rokytne_2, UKR-Savran, UKR-Sharhorod, UKR-Shpola, UKR-Skvyra, UKR-Smila, UKR-Stavyshche, UKR-Talne,
+      UKR-Tarashcha, UKR-Teplyk, UKR-Tetiiv, UKR-Tomashpil, UKR-Trostianets, UKR-Tulchyn, UKR-Tyvriv, UKR-Uman,
+      UKR-Vilshanka, UKR-Vinnytsia, UKR-Volodarka, UKR-Yampil, UKR-Zhashkiv, UKR-Zhmerynka, UKR-Zvenyhorodka]
+  timeline:
+    - from: 1648
+      owner: cossack_hetmanate
+      certainty: uncertain
+      cause: "フメリニツキーの乱"
+      source: "https://ja.wikipedia.org/wiki/フメリニツキーの乱"
+    - from: 1649
+      owner: cossack_hetmanate
+      overlord: poland_lithuania
+      cause: "ズボリウ条約でキエフ・ブラーツラフ・チェルニーヒウ県のコサック自治を承認"
+      source: "https://ja.wikipedia.org/wiki/ズボリウ条約"
+    - from: 1654
+      owner: cossack_hetmanate
+      overlord: russia
+      certainty: uncertain
+      cause: "ペレヤスラフ協定でロシアの保護下に"
+      source: "https://ja.wikipedia.org/wiki/ペレヤスラフ会議"
+    - from: 1667
+      owner: poland_lithuania
+      certainty: uncertain
+      cause: "アンドルソヴォ条約でドニエプル右岸はポーランド領とされる"
+      source: "https://ja.wikipedia.org/wiki/アンドルソヴォ条約"
+    - from: 1669
+      owner: right_bank_hetmanate
+      overlord: ottoman
+      certainty: uncertain
+      cause: "ドロシェンコがオスマン帝国の宗主権を受け入れる"
+      source: "https://ja.wikipedia.org/wiki/ペトロ・ドロシェンコ"
+    - from: 1676
+      owner: ottoman
+      certainty: uncertain
+      cause: "ジュラウノ条約。右岸の大部分がオスマン帝国の支配下に（荒廃期）"
+      source: "https://ja.wikipedia.org/wiki/ジュラウノ条約"
+    - from: 1686
+      owner: poland_lithuania
+      certainty: uncertain
+      cause: "永遠平和条約。キエフ以南は無人の緩衝地帯とされる"
+      source: "https://ja.wikipedia.org/wiki/永遠平和条約_(1686年)"
+    - from: 1699
+      owner: poland_lithuania
+      cause: "カルロヴィッツ条約でポーランドの右岸支配が確定"
+      source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
+    - from: 1793
+      owner: russia
+      cause: "第2回ポーランド分割"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+
+- id: left_bank
+  name: ドニエプル左岸（ヘトマン国家）
+  note: "キエフ市とその周辺（1686年以後ロシア領）を含む。ブリャンスク州西部（スタロドゥーブ・ポチェプ・ムグリン・ノヴォズィプコフなど）は、スタロドゥーブ連隊の地として含めた（1648年まではポーランド領チェルニーヒウ県）"
+  select:
+    pieces: [UKR-Bakhmach, UKR-Baryshivka, UKR-Bobrovytsia, UKR-Boryspil, UKR-Borzna, UKR-Brovary, UKR-Chernihiv, UKR-Chornobai,
+      UKR-Chornukhy, UKR-Chutove, UKR-Drabiv, UKR-Dykanka, UKR-Hadiach, UKR-Hlobyne, UKR-Hlukhiv, UKR-Horodnia,
+      UKR-Hrebinka, UKR-Ichnia, UKR-Karlivka, UKR-Khorol, UKR-Kobeliaky, UKR-Konotop, UKR-Koriukivka, UKR-Korop,
+      UKR-Kotelva, UKR-Kozelets, UKR-Kozelshchyna, UKR-Kremenchuk, UKR-Krolevets, UKR-Kulykivka, UKR-Kyiv, UKR-Kyiv_Sviatoshyn,
+      UKR-Lokhvytsia, UKR-Lubny, UKR-Lypova_Dolyna, UKR-Mahdalynivka, UKR-Mashivka, UKR-Mena, UKR-Myrhorod, UKR-Nedryhailiv,
+      UKR-Nizhyn, UKR-Nosivka, UKR-Novhorod_Siverskyi, UKR-Novi_Sanzhary, UKR-Obukhiv, UKR-Orzhytsia, UKR-Pereiaslav_Khmelnytskyi,
+      UKR-Poltava, UKR-Pryluky, UKR-Pyriatyn, UKR-Reshetylivka, UKR-Ripky, UKR-Romny, UKR-Semenivka, UKR-Semenivka_2,
+      UKR-Seredyna_Buda, UKR-Shostka, UKR-Shyshaky, UKR-Snovsk, UKR-Sosnytsia, UKR-Sribne, UKR-Talalaivka, UKR-Tsarychanka,
+      UKR-Varva, UKR-Vasylkiv, UKR-Velyka_Bahachka, UKR-Vyshhorod, UKR-Yahotyn, UKR-Yampil_2, UKR-Yurivka, UKR-Zghurivka,
+      UKR-Zinkiv, UKR-Zolotonosha,
+      RUS-Starodubsky_District, RUS-Starodub, RUS-Pogarsky_District, RUS-Pochepsky_District, RUS-Unechsky_District, RUS-Mglinsky_District, RUS-Surazhsky_District, RUS-Klintsovsky_District, RUS-x_8, RUS-Klimovsky_District, RUS-Novozybkovsky_District, RUS-Novozybkov, RUS-Zlynkovsky_District, RUS-Gordeyevsky_District, RUS-Krasnogorsky_District]
+  timeline:
+    - from: 1648
+      owner: cossack_hetmanate
+      certainty: uncertain
+      cause: "フメリニツキーの乱"
+      source: "https://ja.wikipedia.org/wiki/フメリニツキーの乱"
+    - from: 1649
+      owner: cossack_hetmanate
+      overlord: poland_lithuania
+      cause: "ズボリウ条約でコサックの自治を承認"
+      source: "https://ja.wikipedia.org/wiki/ズボリウ条約"
+    - from: 1654
+      owner: cossack_hetmanate
+      overlord: russia
+      cause: "ペレヤスラフ協定でロシアの保護下に"
+      source: "https://ja.wikipedia.org/wiki/ペレヤスラフ会議"
+    - from: 1764
+      owner: russia
+      cause: "ヘトマン制の廃止（小ロシア参議会の統治）"
+      source: "https://ja.wikipedia.org/wiki/ヘーチマン国家"
+
+- id: sloboda
+  name: スロボダ・ウクライナ
+  select:
+    pieces: [UKR-Bakhmut, UKR-Balakliia, UKR-Barvinkove, UKR-Bilokurakyne, UKR-Bilopillia, UKR-Bilovodsk, UKR-Blyzniuky,
+      UKR-Bohodukhiv, UKR-Borova, UKR-Buryn, UKR-Chuhuiv, UKR-Derhachi, UKR-Dvorichna, UKR-Izium, UKR-Kehychivka,
+      UKR-Kharkiv, UKR-Kolomak, UKR-Krasnohrad, UKR-Krasnokutsk, UKR-Krasnopillia, UKR-Kreminna, UKR-Kupiansk,
+      UKR-Lebedyn, UKR-Lozova, UKR-Lyman_2, UKR-Markivka, UKR-Milove, UKR-Nova_Vodolaha, UKR-Novoaidar, UKR-Novopskov,
+      UKR-Okhtyrka, UKR-Pechenihy, UKR-Pervomaiskyi, UKR-Putyvl, UKR-Sakhnovshchyna, UKR-Shevchenkove, UKR-Sloviansk,
+      UKR-Starobilsk, UKR-Sumy, UKR-Svatove, UKR-Troitske, UKR-Trostianets_2, UKR-Valky, UKR-Velyka_Pysarivka,
+      UKR-Velykyi_Burluk, UKR-Vovchansk, UKR-Zachepylivka, UKR-Zmiiv, UKR-Zolochiv_2,
+      RUS-Kantemirovsky_District, RUS-Bogucharsky_District, RUS-Rossoshansky_District, RUS-Petropavlovsky_District, RUS-Verkhnemamonsky_District, RUS-Olkhovatsky_District, RUS-x_35, RUS-x_34, RUS-Pavlovsky_District_2, RUS-Vorobyovsky_District, RUS-Kamensky_District, RUS-Rovensky_District, RUS-Veydelevsky_District, RUS-x_39]
+  timeline:
+    - from: 1648
+      owner: russia
+      certainty: uncertain
+      note: "「荒野」への入植が進む時期"
+    - from: 1654
+      owner: russia
+      cause: "スロボダ・ウクライナ（ハルキウ建設）へのコサックの入植"
+      source: "https://ja.wikipedia.org/wiki/スロボダ・ウクライナ"
+
+- id: sich
+  name: ザポロージャ・コサックの地
+  select:
+    pieces: [UKR-Apostolove, UKR-Arbuzynka, UKR-Bashtanka, UKR-Bereznehuvate, UKR-Bobrynets, UKR-Boikivske, UKR-Bratske,
+      UKR-Dnipro, UKR-Dobropillia, UKR-Dobrovelychkivka, UKR-Dolynska, UKR-Huliaipole, UKR-Kamianka_Dniprovska,
+      UKR-Kazanka, UKR-Kompaniivka, UKR-Kostiantynivka, UKR-Kropyvnytskyi, UKR-Krynychky, UKR-Kryvyi_Rih, UKR-Manhush,
+      UKR-Marinka, UKR-Mezhova, UKR-Nikolske, UKR-Nikopol, UKR-Nova_Odesa, UKR-Novhorodka, UKR-Novoazovsk, UKR-Novomoskovsk,
+      UKR-Novomykolaivka, UKR-Novoukrainka, UKR-Novyi_Buh, UKR-Oleksandrivka_2, UKR-Orikhiv, UKR-Pavlohrad, UKR-Pervomaisk,
+      UKR-Petropavlivka, UKR-Petrove, UKR-Petrykivka, UKR-Piatykhatky, UKR-Pokrovsk, UKR-Pokrovske, UKR-Polohy,
+      UKR-Shyroke, UKR-Sofiyivka, UKR-Solone, UKR-Starobesheve, UKR-Synelnykove, UKR-Tomakivka, UKR-Ustynivka,
+      UKR-Vasylivka, UKR-Vasylkivka, UKR-Velyka_Novosilka, UKR-Verkhnodniprovsk, UKR-Vilniansk, UKR-Volnovakha,
+      UKR-Voznesensk, UKR-Yasynuvata, UKR-Yelanets, UKR-Zaporizhia]
+  timeline:
+    - from: 1648
+      owner: zaporozhian_sich
+      certainty: uncertain
+      note: "「荒野」。境界ははっきりしない"
+    - from: 1654
+      owner: zaporozhian_sich
+      overlord: russia
+      certainty: uncertain
+      cause: "ペレヤスラフ協定"
+      source: "https://ja.wikipedia.org/wiki/ペレヤスラフ会議"
+    - from: 1711
+      owner: zaporozhian_sich
+      overlord: crimea
+      certainty: uncertain
+      cause: "マゼパの反乱後、シーチはクリミア＝ハンの保護下へ（オレシキのシーチ）"
+      source: "https://ja.wikipedia.org/wiki/ザポロージャ・シーチ"
+    - from: 1734
+      owner: zaporozhian_sich
+      overlord: russia
+      certainty: uncertain
+      cause: "シーチがロシアの保護下に戻る（新シーチ）"
+      source: "https://ja.wikipedia.org/wiki/ザポロージャ・シーチ"
+    - from: 1775
+      owner: russia
+      cause: "ロシアがザポロージャ・シーチを廃止し、新ロシア県に編入"
+      source: "https://ja.wikipedia.org/wiki/ザポロージャ・シーチ"
+
+- id: new_serbia
+  name: 新セルビア（エリサヴェトグラード）
+  select:
+    pieces: [UKR-Mala_Vyska, UKR-Novomyrhorod, UKR-Oleksandriia, UKR-Oleksandrivka, UKR-Onufriivka, UKR-Svitlovodsk,
+      UKR-Znamianka]
+  timeline:
+    - from: 1648
+      owner: zaporozhian_sich
+      certainty: uncertain
+      note: "「荒野」。境界ははっきりしない"
+    - from: 1654
+      owner: zaporozhian_sich
+      overlord: russia
+      certainty: uncertain
+      cause: "ペレヤスラフ協定"
+      source: "https://ja.wikipedia.org/wiki/ペレヤスラフ会議"
+    - from: 1711
+      owner: zaporozhian_sich
+      overlord: crimea
+      certainty: uncertain
+      cause: "マゼパの反乱後、シーチはクリミア＝ハンの保護下へ（オレシキのシーチ）"
+      source: "https://ja.wikipedia.org/wiki/ザポロージャ・シーチ"
+    - from: 1734
+      owner: zaporozhian_sich
+      overlord: russia
+      certainty: uncertain
+      cause: "シーチがロシアの保護下に戻る（新シーチ）"
+      source: "https://ja.wikipedia.org/wiki/ザポロージャ・シーチ"
+    - from: 1752
+      owner: russia
+      cause: "新セルビア（セルビア人などの軍事入植地）の設置"
+      source: "https://ja.wikipedia.org/wiki/新セルビア"
+
+- id: nogai_taurida
+  name: タヴリア北部（ノガイ草原）
+  select:
+    pieces: [UKR-Berdiansk, UKR-Bilmak, UKR-Chaplynka, UKR-Chernihivka, UKR-Henichesk, UKR-Holo_Prystan, UKR-Hornostaivka,
+      UKR-Ivanivka_2, UKR-Kakhovka, UKR-Kalanchak, UKR-Melitopol, UKR-Mykhailivka, UKR-Novotroitske, UKR-Nyzhni_Sirohozy,
+      UKR-Oleshky, UKR-Pryazovske, UKR-Prymorsk, UKR-Skadovsk, UKR-Tokmak, UKR-Velyka_Bilozerka, UKR-Velyka_Lepetkya,
+      UKR-Verkhniy_Rohackyk, UKR-Vesele, UKR-Yakymivka]
+  timeline:
+    - from: 1648
+      owner: nogai
+      overlord: crimea
+      certainty: uncertain
+      note: "ノガイ人の遊牧地（クリミア＝ハン国の支配下）"
+    - from: 1783
+      owner: russia
+      cause: "ロシアのクリミア併合"
+      source: "https://ja.wikipedia.org/wiki/ロシアによるクリミア併合_(1783年)"
+
+- id: nogai_1774
+  name: ドニエプル・南ブグ間の草原
+  select:
+    pieces: [UKR-Beryslav, UKR-Bilozerka, UKR-Novovorontsovka, UKR-Rozivka, UKR-Snihurivka, UKR-Velyka_Oleksandrivka,
+      UKR-Vitovka, UKR-Vysokopillia]
+  timeline:
+    - from: 1648
+      owner: nogai
+      overlord: crimea
+      certainty: uncertain
+      note: "ノガイ人の遊牧地（クリミア＝ハン国の支配下）"
+    - from: 1774
+      owner: russia
+      cause: "キュチュク・カイナルジ条約でドニエプル・南ブグ間とアゾフ海北岸がロシア領に"
+      source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+
+- id: yedisan
+  name: イェディサン（ドニエストル・南ブグ間）
+  select:
+    pieces: [UKR-Ananiv, UKR-Balta, UKR-Berezanka, UKR-Berezivka, UKR-Biliaivka, UKR-Domanivka, UKR-Ivanivka, UKR-Kodyma,
+      UKR-Kryve_Ozero, UKR-Liubashhivka, UKR-Lyman, UKR-Mykolaiv_2, UKR-Mykolaivka, UKR-Ochakiv, UKR-Okny, UKR-Ovidiopol,
+      UKR-Podilsk, UKR-Rozdilna, UKR-Shyriaieve, UKR-Velyks_Mykhailivka, UKR-Veselynove, UKR-Vradiivka, UKR-Zakharivka]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      note: "イェディサン。オスマン帝国のオチャキウ（オズィ）州で、ノガイ人が遊牧する"
+    - from: 1792
+      owner: russia
+      cause: "ヤッシー条約でドニエストル川以東がロシア領に"
+      source: "https://ja.wikipedia.org/wiki/ヤッシー条約"
