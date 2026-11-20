@@ -5,7 +5,8 @@ import { select, type Selection } from "d3-selection";
 import "d3-transition";
 import { zoom, zoomIdentity, type ZoomBehavior, type ZoomTransform } from "d3-zoom";
 import polylabel from "polylabel";
-import { feature, merge, mesh } from "topojson-client";
+import { feature, merge, mesh, neighbors } from "topojson-client";
+import { assignColors, modernName } from "./modern";
 import type { GeometryCollection, Polygon, MultiPolygon, Topology } from "topojson-specification";
 import type { Feature as GeoFeature, MultiPolygon as GeoMultiPolygon } from "geojson";
 import { AtlasIndex, fallbackColor } from "./data";
@@ -49,6 +50,11 @@ export class AtlasMap {
   private overlords: Selection<SVGGElement, unknown, null, undefined>;
   private highlight: Selection<SVGPathElement, unknown, null, undefined>;
   private labelLayer: Selection<SVGGElement, unknown, null, undefined>;
+  /** 現代の国境の層（押している間だけ表示） */
+  private modernLayer: Selection<SVGGElement, unknown, null, undefined>;
+  private modernLabels: Label[] = [];
+  private modernBuilt = false;
+  private modernOn = false;
   private debugLayer: Selection<SVGGElement, unknown, null, undefined>;
   private tooltip: HTMLDivElement;
   private zoomer: ZoomBehavior<SVGSVGElement, unknown>;
@@ -101,6 +107,7 @@ export class AtlasMap {
     this.highlight = this.root.append("path").attr("class", "highlight");
     this.debugLayer = this.root.append("g").attr("class", "debug");
     this.labelLayer = this.root.append("g").attr("class", "labels");
+    this.modernLayer = this.root.append("g").attr("class", "modern").style("display", "none");
 
     this.tooltip = document.createElement("div");
     this.tooltip.className = "tooltip";
@@ -161,6 +168,8 @@ export class AtlasMap {
     this.ptopo = projectTopology(this.topo, (p) => this.projection(p));
     this.cache.clear();
     this.meshCache.clear();
+    this.modernBuilt = false;
+    if (this.modernOn) this.buildModern();
     if (this.year) this.render(this.year);
   }
 
@@ -289,9 +298,74 @@ export class AtlasMap {
     this.updateLabels();
   }
 
+  /** 現代の国境の表示を切り替える（C キーやボタンを押している間 on） */
+  setModern(on: boolean) {
+    if (on === this.modernOn) return;
+    this.modernOn = on;
+    if (on && !this.modernBuilt) this.buildModern();
+    this.modernLayer.style("display", on ? "" : "none");
+    this.labelLayer.style("display", on ? "none" : "");
+    this.highlight.style("display", on ? "none" : "");
+    this.overlords.style("display", on ? "none" : "");
+    this.hatches.style("display", on ? "none" : "");
+    this.updateLabels();
+  }
+
+  /** ピースを現代の国（iso）ごとに結合して描く。初めて押したときに一度だけ作る */
+  private buildModern() {
+    const geoms = (this.ptopo.objects.pieces as GeometryCollection).geometries;
+    const byIso = new Map<string, number[]>();
+    this.geoms.forEach((g, i) => {
+      const iso = g.properties!.iso;
+      if (!byIso.has(iso)) byIso.set(iso, []);
+      byIso.get(iso)!.push(i);
+    });
+    // 国どうしの隣接関係（色分け用）
+    const nb = neighbors(geoms as never);
+    const adj = new Map<string, Set<string>>();
+    nb.forEach((list, i) => {
+      const a = this.geoms[i].properties!.iso;
+      for (const j of list) {
+        const b = this.geoms[j].properties!.iso;
+        if (a === b) continue;
+        if (!adj.has(a)) adj.set(a, new Set());
+        adj.get(a)!.add(b);
+      }
+    });
+    const colors = assignColors([...byIso.keys()], adj);
+    const data = [...byIso.entries()].map(([iso, ps]) => ({ iso, m: this.merged(`modern${iso}`, ps) }));
+    this.modernLayer.selectAll("*").remove();
+    this.modernLayer
+      .append("g")
+      .selectAll("path")
+      .data(data)
+      .join("path")
+      .attr("class", "modern-fill")
+      .attr("d", (d) => d.m.d)
+      .attr("fill", (d) => colors.get(d.iso)!);
+    const isoOf = new Map(geoms.map((g, i) => [g, this.geoms[i].properties!.iso]));
+    const borders = mesh(this.ptopo, this.ptopo.objects.pieces as never, (a, b) => a === b || isoOf.get(a as never) !== isoOf.get(b as never));
+    this.modernLayer.append("path").attr("class", "modern-borders").attr("d", this.path(borders) ?? "");
+    const labelData = data.filter((d) => d.m.label).map((d) => ({ name: modernName(d.iso), ...d.m.label! }));
+    const sel = this.modernLayer
+      .append("g")
+      .attr("class", "labels")
+      .selectAll("text")
+      .data(labelData)
+      .join("text")
+      .attr("x", (d) => d.x)
+      .attr("y", (d) => d.y)
+      .text((d) => d.name);
+    this.modernLabels = [];
+    sel.each((d, i, nodes) => {
+      this.modernLabels.push({ el: nodes[i] as SVGTextElement, x: d.x, y: d.y, area: d.area, width: [...d.name].length });
+    });
+    this.modernBuilt = true;
+  }
+
   private updateLabels() {
     const k = this.transform.k;
-    for (const l of this.labels) {
+    for (const l of this.modernOn ? this.modernLabels : this.labels) {
       const side = Math.sqrt(l.area) * k; // 画面上での塊の大きさの目安（px）
       const size = Math.max(10, Math.min(20, side / 7));
       const fits = side > size * Math.max(2.2, l.width * 0.85);
