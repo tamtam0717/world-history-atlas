@@ -549,3 +549,43 @@ body.debug #debug-info {
   pointer-events: none;
   z-index: 6;
 }
+
+/* ---- MapLibre の地図 ---- */
+#map > .map {
+  position: absolute;
+  inset: 0;
+  background: #eef2f3;
+}
+.maplibregl-canvas {
+  outline: none;
+}
+.tooltip {
+  z-index: 6;
+}
+.milestone {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  min-height: 16px;
+  line-height: 1.4;
+}
+.milestone span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.milestone .ms-next {
+  text-align: right;
+}
+.milestone .ms-here {
+  flex: 0 1 auto;
+  color: var(--accent);
+  font-weight: 600;
+  text-align: center;
+}
+.yearbar button:disabled {
+  opacity: 0.35;
+}

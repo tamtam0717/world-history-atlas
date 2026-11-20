@@ -118,7 +118,12 @@ export class Panel {
   }
 }
 
-function srcList(x: { source?: string | string[] }) {
+// 出典は画面には出さない（データには残し、画像の取得に使う）
+function srcList(_x: { source?: string | string[] }) {
+  return "";
+}
+
+export function srcListVisible(x: { source?: string | string[] }) {
   const s = sourcesOf(x);
   if (!s.length) return "";
   return `<div class="src">出典：${s.map((v) => (/^https?:\/\//.test(v) ? `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(shortUrl(v))}</a>` : esc(v))).join("、")}</div>`;

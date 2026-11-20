@@ -42,8 +42,10 @@ async function main() {
   const syncInset = () => map.setBottomInset(mobile.matches ? 150 : 0);
   mobile.addEventListener("change", syncInset);
   syncInset();
-  map.debug = new URLSearchParams(location.search).get("debug") === "pieces";
-  if (map.debug) document.body.classList.add("debug");
+  if (new URLSearchParams(location.search).get("debug") === "pieces") {
+    map.setDebug(true);
+    document.body.classList.add("debug");
+  }
 
   const panel = new Panel($("#polity"), $("#events"), idx, (id) => selectPolity(id, true));
 
@@ -58,6 +60,7 @@ async function main() {
     if (state.polity) h.set("p", state.polity);
     history.replaceState(null, "", `#${h}`);
     document.title = `${state.year}年 ― ヨーロッパ歴史地図`;
+    updateMilestones();
   }
 
   function setYear(y: number) {
@@ -83,8 +86,31 @@ async function main() {
   const step = (d: number) => () => setYear(state.year + d);
   $("#prev").addEventListener("click", step(-1));
   $("#next").addEventListener("click", step(1));
-  $("#prev10").addEventListener("click", step(-10));
-  $("#next10").addEventListener("click", step(10));
+  // «» は前後の「節目」へジャンプ
+  const milestones = atlas.milestones ?? [];
+  const prevMs = () => [...milestones].reverse().find((m) => m.year < state.year);
+  const nextMs = () => milestones.find((m) => m.year > state.year);
+  $("#prev10").addEventListener("click", () => {
+    const m = prevMs();
+    if (m) setYear(m.year);
+  });
+  $("#next10").addEventListener("click", () => {
+    const m = nextMs();
+    if (m) setYear(m.year);
+  });
+  const msLabel = $("#milestone");
+  function updateMilestones() {
+    const p = prevMs();
+    const n = nextMs();
+    const here = milestones.find((m) => m.year === state.year);
+    msLabel.innerHTML = [
+      p ? `<span class="ms-prev">« ${p.year} ${p.title}</span>` : "<span></span>",
+      here ? `<span class="ms-here">${here.title}</span>` : "",
+      n ? `<span class="ms-next">${n.year} ${n.title} »</span>` : "<span></span>",
+    ].join("");
+    $<HTMLButtonElement>("#prev10").disabled = !p;
+    $<HTMLButtonElement>("#next10").disabled = !n;
+  }
   yearInput.addEventListener("change", () => setYear(Number(yearInput.value)));
   yearInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -128,32 +154,41 @@ async function main() {
   $("#zoom-out").addEventListener("click", () => map.zoomBy(1 / 1.6));
   $("#zoom-reset").addEventListener("click", () => map.resetZoom());
 
-  // ---- 押している間だけ「現代の国境」を表示（C キー／「現代」ボタン） ----
+  // ---- 現代の国境との切り替え ----
+  // 「現代」ボタン：押すたびに切り替え。C キー：押している間だけ、今の表示と逆にする
   const badge = $("#modern-badge");
   const modernBtn = $<HTMLButtonElement>("#modern-btn");
-  const setModern = (on: boolean) => {
+  let modernBase = false; // ボタンで選んでいる表示
+  let cHeld = false;
+  const applyModern = () => {
+    const on = modernBase !== cHeld;
     map.setModern(on);
     badge.hidden = !on;
-    modernBtn.classList.toggle("active", on);
+    modernBtn.classList.toggle("active", modernBase);
+    modernBtn.setAttribute("aria-pressed", String(modernBase));
   };
+  modernBtn.addEventListener("click", () => {
+    modernBase = !modernBase;
+    applyModern();
+  });
   document.addEventListener("keydown", (e) => {
     if (e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
     if ((e.target as Element).matches("input, textarea")) return;
-    if (e.key === "c" || e.key === "C") setModern(true);
+    if (e.key === "c" || e.key === "C") {
+      cHeld = true;
+      applyModern();
+    }
   });
   document.addEventListener("keyup", (e) => {
-    if (e.key === "c" || e.key === "C") setModern(false);
+    if (e.key === "c" || e.key === "C") {
+      cHeld = false;
+      applyModern();
+    }
   });
-  window.addEventListener("blur", () => setModern(false));
-  modernBtn.addEventListener("pointerdown", (e) => {
-    e.preventDefault();
-    modernBtn.setPointerCapture(e.pointerId);
-    setModern(true);
+  window.addEventListener("blur", () => {
+    cHeld = false;
+    applyModern();
   });
-  for (const ev of ["pointerup", "pointercancel", "lostpointercapture"]) {
-    modernBtn.addEventListener(ev, () => setModern(false));
-  }
-  modernBtn.addEventListener("contextmenu", (e) => e.preventDefault());
 
   // URL のハッシュを手で書き換えたとき（チャットからのリンクなど）にも追従する
   window.addEventListener("hashchange", () => {
@@ -167,6 +202,7 @@ async function main() {
 
   update();
   (window as unknown as { __atlas: unknown }).__atlas = map;
+  await map.ready;
   document.body.classList.add("ready");
 }
 

@@ -200,6 +200,23 @@ events.sort((a, b) => a.year - b.year || String(a.date ?? "").localeCompare(Stri
 // ---- 出力 ----
 const strip = ({ _file, ...rest }) => rest;
 const meta = YAML.parse(fs.readFileSync(path.join(DATA, "meta.yaml"), "utf8"));
+
+// ---- 海の名前・節目・都市 ----
+const readYaml = (f) => (fs.existsSync(path.join(DATA, f)) ? YAML.parse(fs.readFileSync(path.join(DATA, f), "utf8")) ?? [] : []);
+const seas = readYaml("seas.yaml");
+const milestones = readYaml("milestones.yaml").sort((a, b) => a.year - b.year);
+const cities = readYaml("cities.yaml");
+{
+  const seen = new Set();
+  for (const c of cities) {
+    if (seen.has(c.id)) warn(`cities.yaml: 都市 ID の重複 "${c.id}"`);
+    seen.add(c.id);
+    if (typeof c.lon !== "number" || typeof c.lat !== "number") warn(`cities.yaml: ${c.id} の座標がありません`);
+    for (const k of c.capital ?? []) checkPolity(k.polity, `cities.yaml の ${c.id}`);
+  }
+}
+const modernCitiesFile = path.join(DATA, "generated", "cities_modern.json");
+const citiesModern = fs.existsSync(modernCitiesFile) ? JSON.parse(fs.readFileSync(modernCitiesFile, "utf8")) : [];
 const atlas = {
   generated: new Date().toISOString(),
   range: meta.range,
@@ -209,6 +226,10 @@ const atlas = {
   regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, timeline: r.timeline })),
   pieceTimelines,
   events: events.map(strip),
+  seas,
+  milestones,
+  cities,
+  citiesModern,
 };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(atlas));

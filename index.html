@@ -15,7 +15,7 @@
           <button id="zoom-in" aria-label="拡大">＋</button>
           <button id="zoom-out" aria-label="縮小">－</button>
           <button id="zoom-reset" aria-label="全体を表示">⤢</button>
-          <button id="modern-btn" class="modern-btn" aria-label="押している間、現代の国境を表示（キーボードは C）" title="押している間、現代の国境を表示（C キー）">現代</button>
+          <button id="modern-btn" class="modern-btn" aria-pressed="false" aria-label="現代の国境に切り替え（C キーを押している間は逆の表示）" title="現代の国境に切り替え（C キーを押している間は逆の表示）">現代</button>
         </div>
         <div id="modern-badge" class="modern-badge" hidden>現代の国境</div>
         <div class="legend">
@@ -30,20 +30,22 @@
         <div id="sheet-handle" aria-label="パネルの高さを変える"><span></span></div>
         <div class="controls">
           <div class="yearbar">
-            <button id="prev10" aria-label="10年戻る">«</button>
+            <button id="prev10" aria-label="前の節目へ">«</button>
             <button id="prev" aria-label="1年戻る">‹</button>
             <label class="year-box"><input id="year" type="number" inputmode="numeric" aria-label="年" /><span>年</span></label>
             <button id="next" aria-label="1年進む">›</button>
-            <button id="next10" aria-label="10年進む">»</button>
+            <button id="next10" aria-label="次の節目へ">»</button>
             <button id="play" aria-label="再生">▶</button>
           </div>
           <input id="slider" type="range" step="1" aria-label="年のスライダー" />
+          <div id="milestone" class="milestone"></div>
         </div>
         <div class="panel-body">
           <section id="polity" class="card" hidden></section>
           <section id="events"></section>
           <footer class="credits">
             境界データ：geoBoundaries（CC BY 4.0）、BKG（dl-de/by-2-0）、ISTAT（CC BY 3.0）、IGN-F（Etalab 2.0）。
+            都市（現代）：Natural Earth。地図表示：MapLibre GL。画像：Wikipedia／ウィキメディア・コモンズ。
             国境は現代の行政区画を組み合わせた近似です。
           </footer>
         </div>

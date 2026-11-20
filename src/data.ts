@@ -67,6 +67,38 @@ export interface HistEvent extends Sourced {
 /** [開始年, 所属政体 index, 上位政体 index, 確からしさ index, 地域 index] */
 export type PieceState = [number, number, number, number, number];
 
+export interface Sea {
+  name: string;
+  kind: "ocean" | "sea" | "gulf" | "strait";
+  lon: number;
+  lat: number;
+}
+
+export interface Milestone {
+  year: number;
+  title: string;
+}
+
+export interface City {
+  id: string;
+  name: string;
+  modern?: string;
+  names?: Named[];
+  lon: number;
+  lat: number;
+  founded?: number;
+  pop?: Record<string, number>;
+  capital?: { polity: string; from?: number; to?: number }[];
+}
+
+export interface ModernCity {
+  name: string;
+  lon: number;
+  lat: number;
+  pop: number;
+  capital: boolean;
+}
+
 export interface Atlas {
   range: [number, number];
   certainty: string[];
@@ -75,6 +107,10 @@ export interface Atlas {
   regions: Region[];
   pieceTimelines: PieceState[][];
   events: HistEvent[];
+  seas: Sea[];
+  milestones: Milestone[];
+  cities: City[];
+  citiesModern: ModernCity[];
 }
 
 export class AtlasIndex {
@@ -167,4 +203,34 @@ export function fallbackColor(id: string): string {
   let h = 0;
   for (const c of id) h = (h * 31 + c.charCodeAt(0)) >>> 0;
   return `hsl(${h % 360} 38% 72%)`;
+}
+
+/** 都市の、その年の推定人口（推計のある年の間を線形補間。範囲外は端の値） */
+export function cityPop(c: City, year: number): number {
+  const pts = Object.entries(c.pop ?? {})
+    .map(([y, v]) => [Number(y), v] as [number, number])
+    .sort((a, b) => a[0] - b[0]);
+  if (!pts.length) return 0;
+  if (year <= pts[0][0]) return pts[0][1];
+  for (let i = 1; i < pts.length; i++) {
+    const [y1, v1] = pts[i];
+    const [y0, v0] = pts[i - 1];
+    if (year <= y1) return v0 + ((v1 - v0) * (year - y0)) / (y1 - y0);
+  }
+  return pts[pts.length - 1][1];
+}
+
+/** その年に首都としている政体（あれば） */
+export function cityCapitalOf(c: City, year: number): string | null {
+  for (const k of c.capital ?? []) {
+    if ((k.from ?? -Infinity) <= year && year <= (k.to ?? Infinity)) return k.polity;
+  }
+  return null;
+}
+
+export function cityName(c: City, year: number): string {
+  for (const n of c.names ?? []) {
+    if ((n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity)) return n.name;
+  }
+  return c.name;
 }
