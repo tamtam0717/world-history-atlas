@@ -7,7 +7,8 @@
 | 担当 | 定義ファイル | 現代の国（ピースの担当範囲） |
 |---|---|---|
 | A 西欧・北アフリカ | `data/polities/west.yaml`, `data/regions/west.yaml`, `data/events/west.yaml` | FRA ESP PRT AND MCO GBR IRL ISL GRL MAR DZA TUN LBY EGY ESH MRT MLI |
-| B ドイツ | `data/polities/germany.yaml`, `data/regions/germany.yaml`, `data/events/germany.yaml` | DEU |
+| BN 北ドイツ | `data/polities/germany_north.yaml` ほか同名 | DEU のうち adm1 が Schleswig-Holstein, Hamburg, Niedersachsen, Bremen, Mecklenburg-Vorpommern, Brandenburg, Berlin, Sachsen-Anhalt, Sachsen, Thüringen, Nordrhein-Westfalen |
+| BS 南ドイツ | `data/polities/germany_south.yaml` ほか同名 | DEU のうち adm1 が Hessen, Rheinland-Pfalz, Saarland, Baden-Württemberg, Bayern |
 | C 低地諸国・スイス・イタリア | `data/polities/italy_lowcountries.yaml` ほか同名 | NLD BEL LUX CHE LIE ITA SMR VAT MLT |
 | D ハプスブルク領 | `data/polities/habsburg.yaml` ほか同名 | AUT CZE SVK HUN SVN HRV |
 | E バルカン・オスマン・中東 | `data/polities/ottoman.yaml` ほか同名 | BIH SRB XKX MNE ALB MKD GRC BGR ROU MDA TUR CYP SYR LBN ISR JOR IRQ SAU KWT BHR QAT ARE OMN GEO ARM AZE IRN AFG PAK TKM UZB KAZ と数字コード（係争地） |
@@ -24,13 +25,15 @@
 | `scotland` | スコットランド王国（〜1706） | A |
 | `ireland` | アイルランド王国（〜1800） | A |
 | `morocco` `algiers` `tunis` `tripoli` | モロッコ、アルジェ、チュニス、トリポリ | A |
-| `hre` | 神聖ローマ帝国（overlord としてだけ使う枠。〜1806） | B |
-| `prussia` | ブランデンブルク＝プロイセン→プロイセン王国 | B |
-| `bavaria` `saxony` `palatinate` `hanover` | バイエルン、ザクセン、プファルツ、ハノーファー（ブラウンシュヴァイク＝リューネブルク） | B |
-| `cologne` `mainz` `trier` | ケルン・マインツ・トリーア選帝侯領（大司教領） | B |
-| `other_hre` | その他の帝国諸邦（細かい領邦をまとめたもの） | B |
-| `rhine_confederation` | ライン同盟（overlord。1806–1813） | B |
-| `german_confederation` | ドイツ連邦（overlord。1815–） | B |
+| `hre` | 神聖ローマ帝国（overlord としてだけ使う枠。〜1806） | BS |
+| `prussia` | ブランデンブルク＝プロイセン→プロイセン王国 | BN |
+| `saxony` `hanover` `mecklenburg` `brunswick` `munster` `westphalia_kingdom` `berg` | ザクセン、ハノーファー（ブラウンシュヴァイク＝リューネブルク）、メクレンブルク、ブラウンシュヴァイク＝ヴォルフェンビュッテル、ミュンスター司教領、ヴェストファーレン王国、ベルク大公国 | BN |
+| `bavaria` `palatinate` `wurttemberg` `baden` `hesse_kassel` `hesse_darmstadt` | バイエルン、プファルツ、ヴュルテンベルク、バーデン、ヘッセン＝カッセル、ヘッセン＝ダルムシュタット | BS |
+| `cologne` | ケルン選帝侯領（大司教領。本領はライン左岸＝現NRW・RP） | BN |
+| `mainz` `trier` | マインツ・トリーア選帝侯領（大司教領） | BS |
+| `other_hre` | その他の帝国諸邦（細かい領邦をまとめたもの） | BS |
+| `rhine_confederation` | ライン同盟（overlord。1806–1813） | BS |
+| `german_confederation` | ドイツ連邦（overlord。1815–） | BS |
 | `netherlands` | ネーデルラント連邦共和国→バタヴィア共和国→ホラント王国→ネーデルラント連合王国（names で切り替え） | C |
 | `switzerland` | スイス（盟約者団→ヘルヴェティア共和国→スイス連邦） | C |
 | `savoy` | サヴォイア公国→サルデーニャ王国（1720〜） | C |
@@ -54,7 +57,7 @@
 
 担当範囲は「現代の国」で分けているので、歴史的な地域が担当をまたぐことがある。
 
-- 例：シュレジエン（現ポーランド＝F、現チェコ＝D、現ドイツ＝B）、ポメラニア（ドイツ＝B、ポーランド＝F）、東プロイセン（ポーランド・ロシア＝F）、チロル（オーストリア＝D、イタリア＝C）、モルダヴィア（ルーマニア・モルドバ＝E、ウクライナ＝F）。
+- 例：シュレジエン（現ポーランド＝F、現チェコ＝D、現ドイツ＝BN）、ポメラニア（ドイツ＝BN、ポーランド＝F）、東プロイセン（ポーランド・ロシア＝F）、チロル（オーストリア＝D、イタリア＝C）、モルダヴィア（ルーマニア・モルドバ＝E、ウクライナ＝F）。
 - **それぞれの担当は、自分の範囲のピースだけを select に入れる。** 同じ歴史的地域でも、地域 ID を担当ごとに分ける（例：`silesia_pl`（F）、`silesia_cz`（D）、`silesia_de`（B））。
 - 変遷（timeline）は担当どうしで矛盾しないように、条約と年を一般的な通説に合わせる。
 
