@@ -1,0 +1,180 @@
+/* Wikipedia から取ってきた画像（肖像・国旗・出来事の絵）とライトボックス。
+   取得前・失敗時は場所を取らない（.pending は大きさ 0）。 */
+
+.wimg {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+.wimg.pending {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  vertical-align: top;
+}
+.wimg.ok {
+  display: block;
+  cursor: zoom-in;
+  overflow: hidden;
+  background: #ece6da;
+  border: 1px solid var(--line, #ddd5c6);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  -webkit-tap-highlight-color: transparent;
+}
+.wimg.ok:focus-visible {
+  outline: 2px solid var(--accent, #8a3b2a);
+  outline-offset: 2px;
+}
+.wimg.ok img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wimg.fade-in {
+  animation: wimg-fade 0.25s ease;
+}
+@keyframes wimg-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* ---- 君主の肖像 ---- */
+.rulers li.ruler {
+  display: flex;
+  align-items: flex-start;
+}
+.rulers li.ruler .r-body {
+  flex: 1;
+  min-width: 0;
+}
+.wimg-portrait.ok {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 1px 10px 2px 0;
+}
+.wimg-portrait.ok img {
+  object-position: 50% 18%;
+}
+
+/* ---- 政体の国旗・紋章 ---- */
+.wimg-emblem.ok {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 52px;
+  margin-top: 10px;
+  border-radius: 6px;
+  background: #fff;
+}
+.wimg-emblem.ok img {
+  object-fit: contain;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+/* ---- 出来事の絵 ---- */
+.events li.event {
+  display: flow-root;
+}
+/* 重要度 1：幅いっぱい、高さを抑える */
+.wimg-event-wide.ok {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  margin: 2px 0 6px;
+}
+.wimg-event-wide.ok img {
+  object-position: 50% 30%;
+}
+/* 重要度 2：右側に小さく */
+.wimg-event.ok {
+  float: right;
+  width: 84px;
+  height: 64px;
+  border-radius: 6px;
+  margin: 3px 0 4px 10px;
+}
+@media (max-width: 799px) {
+  .wimg-event-wide.ok {
+    height: 132px;
+  }
+  .wimg-event.ok {
+    width: 76px;
+    height: 58px;
+  }
+}
+
+/* ---- ライトボックス ---- */
+.wlightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px calc(24px + env(safe-area-inset-bottom));
+  background: rgba(20, 16, 12, 0.86);
+  animation: wimg-fade 0.18s ease;
+}
+.wlightbox[hidden] {
+  display: none;
+}
+.wlightbox figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0;
+}
+.wlightbox img {
+  display: block;
+  max-width: min(92vw, 1100px);
+  max-height: calc(100dvh - 140px);
+  object-fit: contain;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+}
+.wlightbox figcaption {
+  margin-top: 10px;
+  color: #eee6d8;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+}
+.wlightbox .wl-title {
+  display: block;
+}
+.wlightbox .wl-credit {
+  display: block;
+  font-size: 11px;
+  color: #b9ae9c;
+}
+.wlightbox .wl-credit a {
+  color: #d9cdb8;
+}
+.wlightbox .wl-close {
+  position: absolute;
+  top: calc(8px + env(safe-area-inset-top));
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 24px;
+  line-height: 40px;
+  cursor: pointer;
+}
+html.wlightbox-open {
+  overflow: hidden;
+}
