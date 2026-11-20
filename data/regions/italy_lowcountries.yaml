@@ -113,9 +113,17 @@
     pieces: [NLD-Sittard_Geleen, NLD-Echt_Susteren]
   timeline:
     - from: 1648
-      owner: palatinate
+      owner: palatinate_neuburg
       overlord: hre
       note: ユーリヒ公国（プファルツ＝ノイブルク家。1685年からプファルツ選帝侯家）の一部。要確認
+    - from: 1685
+      owner: palatinate
+      overlord: hre
+      cause: ノイブルク公がプファルツ選帝侯位を継承（ドイツ側のユーリヒ公領と同じ扱い）
+    - from: 1777
+      owner: bavaria
+      overlord: hre
+      cause: プファルツ選帝侯カール・テオドールがバイエルンを相続
     - from: 1795
       owner: france
       cause: フランスへの併合
@@ -164,9 +172,14 @@
       cause: ユトレヒト条約（上ヘルレの分割）
       note: フェンライ・ベルヘンの帰属は要確認
       source: "https://en.wikipedia.org/wiki/Upper_Guelders"
-    - from: 1795
+    - from: 1794
       owner: france
-      cause: フランスの占領・併合（1795年バーゼル条約の秘密条項、1801年リュネヴィル条約で確定）
+      overlord: hre
+      certainty: occupied
+      cause: フランス革命軍がクレーフェ・上ヘルレのプロイセン領を占領（1795年バーゼル条約の秘密条項で割譲を容認）
+    - from: 1801
+      owner: france
+      cause: リュネヴィル条約でライン左岸とともにフランス領に確定
     - from: 1814
       owner: netherlands
       certainty: uncertain
@@ -184,9 +197,14 @@
       owner: prussia
       overlord: hre
       note: クレーフェ公国とともにブランデンブルク選帝侯（ホーエンツォレルン家）の領地。
-    - from: 1795
+    - from: 1794
       owner: france
-      cause: フランスの占領・併合（1795年バーゼル条約の秘密条項、1801年リュネヴィル条約で確定）
+      overlord: hre
+      certainty: occupied
+      cause: フランス革命軍がクレーフェ・上ヘルレのプロイセン領を占領（1795年バーゼル条約の秘密条項で割譲を容認）
+    - from: 1801
+      owner: france
+      cause: リュネヴィル条約でライン左岸とともにフランス領に確定
     - from: 1814
       owner: netherlands
       certainty: uncertain
@@ -328,6 +346,8 @@
       overlord: hre
     - from: 1684
       owner: france
+      overlord: hre
+      certainty: occupied
       cause: ルクセンブルク攻略・レーゲンスブルクの休戦条約（20年間の領有を認める）
       source: "https://en.wikipedia.org/wiki/Truce_of_Ratisbon"
     - from: 1697
@@ -784,6 +804,7 @@
       cause: 神聖ローマ帝国の解体
     - from: 1809
       owner: illyria
+      overlord: france
       cause: シェーンブルン条約でフランスに割譲（イリリア州）
       source: "https://ja.wikipedia.org/wiki/イリュリア州"
     - from: 1814
