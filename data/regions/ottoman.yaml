@@ -21,7 +21,7 @@
     - from: 1648
       owner: wallachia
       overlord: ottoman
-  note: ジュルジュ、トゥルヌの周辺はオスマン帝国の直轄地（ラヤ）だが、ピースより小さいので省略。
+  note: ジュルジュとトゥルヌ（トゥルヌ・マグレレ）の要塞とその周辺は、ブライラと同じく1829年までオスマン帝国の直轄地（ラヤ）だったが、県全体をオスマン領にすると過大になるので描かない。
 
 - id: braila
   name: ブライラ（オスマン帝国の直轄地）
@@ -72,7 +72,7 @@
       owner: habsburg
       cause: コンスタンティノープル協定（ブコヴィナのオーストリアへの割譲）
       source: "https://ja.wikipedia.org/wiki/ブコヴィナ"
-  note: 現スチャヴァ県は南ブコヴィナと旧モルダヴィア領の一部からなる。面積の大きいブコヴィナ側に合わせた。
+  note: 現スチャヴァ県は南ブコヴィナと旧モルダヴィア領の一部からなる。面積の大きいブコヴィナ側に合わせたので、1775年以降、県の南部（ファルティチェニ周辺など、モルダヴィアに残った地域）までオーストリア領に見える（ピースの粒度による近似）。
 
 - id: dobruja_ro
   name: ドブルジャ（北部）
@@ -130,11 +130,16 @@
     - from: 1648
       owner: transylvania
       overlord: ottoman
+    - from: 1691
+      owner: habsburg
+      certainty: occupied
+      cause: レオポルト勅書でトランシルヴァニアがハプスブルク家の支配下に入る（ハプスブルク軍は1687年から駐留）
+      source: "https://en.wikipedia.org/wiki/Diploma_Leopoldinum"
     - from: 1699
       owner: habsburg
       cause: カルロヴィッツ条約
       source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
-  note: 1687年のブラージュ条約からハプスブルク軍が駐留し、1691年のレオポルト勅書でハプスブルク家の支配下に入り、1699年のカルロヴィッツ条約でオスマン帝国が承認した。地図では「条約の年で切り替える」決まりに従い、1698年まで公国（オスマン宗主権）として描く。サラージュ・マラムレシュ（パルティウムの一部）もトランシルヴァニア公の領域に含めた。
+  note: 1687年のブラージュ条約からハプスブルク軍が駐留し、1691年のレオポルト勅書でハプスブルク家の支配下に入り、1699年のカルロヴィッツ条約でオスマン帝国が承認した。ハンガリー・モレアの再征服と揃えて、1691–1698年は占領（occupied）として描く。サラージュ・マラムレシュ（パルティウムの一部）もトランシルヴァニア公の領域に含めた。
 
 - id: satu_mare
   name: サトゥ・マーレ（サトマール）
@@ -171,6 +176,10 @@
       owner: ottoman
       cause: オスマン軍がナジヴァーラドを占領（ヴァーラド州の設置。1664年ヴァシュヴァール条約で確認）
       source: "https://en.wikipedia.org/wiki/Siege_of_Várad_(1660)"
+    - from: 1692
+      owner: habsburg
+      certainty: occupied
+      cause: ハプスブルク軍がナジヴァーラドを奪回
     - from: 1699
       owner: habsburg
       cause: カルロヴィッツ条約
@@ -184,6 +193,10 @@
     - from: 1648
       owner: ottoman
       certainty: uncertain
+    - from: 1688
+      owner: habsburg
+      certainty: occupied
+      cause: 大トルコ戦争でハプスブルク軍がアラド・リポヴァ方面を制圧（年は要確認）
     - from: 1699
       owner: habsburg
       cause: カルロヴィッツ条約（ムレシュ川以北）
@@ -228,11 +241,16 @@
   timeline:
     - from: 1648
       owner: ottoman
+    - from: 1687
+      owner: habsburg
+      certainty: occupied
+      cause: 第二次モハーチの戦いの後、ハプスブルク軍がバーチカ・スレム西部を制圧
+      source: "https://en.wikipedia.org/wiki/Battle_of_Mohács_(1687)"
     - from: 1699
       owner: habsburg
       cause: カルロヴィッツ条約
       source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
-  note: ハプスブルク軍は1687年ごろまでにバーチカを制圧していた。スレム（シルミア）の境界はスランカメン〜モロヴィチの線で、ピース単位の近似（要確認）。
+  note: ハプスブルク軍は1687年ごろまでにバーチカを制圧していた（1687–1698年は占領として描く）。スレム（シルミア）の境界はスランカメン〜モロヴィチの線で、ピース単位の近似（要確認）。
 
 - id: east_syrmia
   name: 東スレム（ゼムン寄り）
@@ -275,11 +293,11 @@
       owner: ottoman
       cause: ベオグラード条約
       source: "https://ja.wikipedia.org/wiki/ベオグラード条約"
-    - from: 1805
+    - from: 1804
       owner: serbia
       overlord: ottoman
       certainty: uncertain
-      cause: 第一次セルビア蜂起（蜂起勢力が州の大半を制圧）
+      cause: 第一次セルビア蜂起（1804年2月に始まり、年内にダヒヤを倒して州の大半を制圧）
       source: "https://ja.wikipedia.org/wiki/第一次セルビア蜂起"
     - from: 1813
       owner: ottoman
@@ -323,7 +341,22 @@
       owner: montenegro
       cause: クルシの戦い（事実上の独立）
       source: "https://en.wikipedia.org/wiki/Battle_of_Krusi"
-  note: オスマン帝国の宗主権は名目的で、事実上は自立していた。1796年以降は宗主権を外して表示（オスマン帝国が独立を認めたのは1878年）。
+  note: オスマン帝国の宗主権は名目的で、事実上は自立していた。1796年以降は宗主権を外して表示（オスマン帝国が独立を認めたのは1878年）。旧モンテネグロの「4つのナヒヤ」のうち、ツルムニツァはバール市北部、リイェシャニはポドゴリツァ市西部にまたがるが、ピースの粒度の都合でツェティニェ市だけで描く。
+
+- id: podgorica_brda
+  name: ブルダ東部・ゼタ（ピペリ・クチ・ポドゴリツァ）
+  select:
+    pieces: [MNE-Podgorica_Municipality]
+  timeline:
+    - from: 1648
+      owner: ottoman
+      certainty: nominal
+    - from: 1796
+      owner: montenegro
+      certainty: uncertain
+      cause: クルシの戦いの後、ピペリなどブルダの諸部族がモンテネグロに加わる
+      source: "https://en.wikipedia.org/wiki/Battle_of_Krusi"
+  note: 現在のポドゴリツァ市は、旧モンテネグロのリイェシャニ・ナヒヤ、ブルダのピペリ・クチ、ゼタ平野を含む。ポドゴリツァの町、スプージュ、ゼタ平野は1878年までオスマン領で、クチの帰属も揺れたため、1796年以降は「不確実」として描く。
 
 - id: brda
   name: ブルダ（ビェロパヴリチ）
@@ -825,7 +858,7 @@
       owner: russia
       cause: グリスタン条約
       source: "https://ja.wikipedia.org/wiki/ゴレスターン条約"
-  note: AZE のピースは国全体で1つなので、南部のタリシュ・ハン国（1813年までペルシア側）やロシアが1722–1735年に占領したバクー・デルベントの沿岸は表せない。1795年のアーガー・モハンマド・ハーンの遠征による支配は一時的なので描かない。
+  note: AZE のピースは国全体で1つなので、南部のタリシュ・ハン国（1813年までペルシア側）やロシアが1722–1735年に占領したバクーの沿岸は表せない（デルベントとダゲスタン沿岸は north_east.yaml の derbent・dagestan_coast で描く）。1795年のアーガー・モハンマド・ハーンの遠征による支配は一時的なので描かない。
 
 - id: kartli
   name: カルトリ（ジョージア東部）
