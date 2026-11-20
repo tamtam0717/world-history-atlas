@@ -154,10 +154,10 @@ function largeUrl(s: Summary): string {
   const th = s.thumbnail?.source ?? "";
   const orig = s.originalimage;
   const W = 1280;
-  if (orig?.source && (!orig.width || orig.width <= W || /\.svg$/i.test(orig.source))) return orig.source;
+  if (!orig?.source) return th;
+  if (!orig.width || orig.width <= W || /\.svg$/i.test(orig.source)) return orig.source;
   const m = th.match(/^(.*\/)(\d+)px-([^/]+)$/);
-  if (m) return `${m[1]}${W}px-${m[3]}`;
-  return orig?.source ?? th;
+  return m ? `${m[1]}${W}px-${m[3]}` : orig.source;
 }
 
 /** refs を順に試し、画像のある最初の記事を返す */
@@ -195,10 +195,19 @@ export function imageSlot(refs: WikiRef[], kind: ImageKind, alt = ""): string {
   return `<span class="${cls} pending" data-wimg="${escAttr(data)}" data-alt="${escAttr(alt)}"></span>`;
 }
 
+/** サムネイル URL の幅を指定の幅に差し替える（元画像より大きくはしない） */
+function sizedThumb(img: WikiImage, px: number): string {
+  const m = img.thumb.match(/^(.*\/)(\d+)px-([^/]+)$/);
+  if (!m || +m[2] >= px || (img.width && img.width < px)) return img.thumb;
+  return `${m[1]}${px}px-${m[3]}`;
+}
+
 function filled(cls: string, img: WikiImage, alt: string) {
+  // 幅いっぱいの絵は高解像度の画面でぼやけないよう大きめのサムネイルを使う
+  const src = cls.includes("wimg-event-wide") ? sizedThumb(img, 640) : img.thumb;
   return `<button type="button" class="${cls} ok" data-large="${escAttr(img.large)}" data-page="${escAttr(img.pageUrl)}" data-title="${escAttr(
     img.pageTitle,
-  )}" aria-label="${escAttr(alt || img.pageTitle)}の画像を拡大"><img src="${escAttr(img.thumb)}" alt="${escAttr(alt || img.pageTitle)}" decoding="async"></button>`;
+  )}" aria-label="${escAttr(alt || img.pageTitle)}の画像を拡大"><img src="${escAttr(src)}" alt="${escAttr(alt || img.pageTitle)}" decoding="async"></button>`;
 }
 
 let observer: IntersectionObserver | null = null;
@@ -271,7 +280,7 @@ async function load(el: HTMLElement) {
     resolved.set(data, null);
     el.remove();
   };
-  pre.src = img.thumb;
+  pre.src = el.classList.contains("wimg-event-wide") ? sizedThumb(img, 640) : img.thumb;
 }
 
 // ---------------------------------------------------------------------------

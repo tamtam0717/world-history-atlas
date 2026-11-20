@@ -520,11 +520,28 @@ export class AtlasMap {
 
   private applyModern() {
     const on = this.modernOn;
+    const lb = this.labelsOn;
     const set = (layers: string[], v: boolean) => {
       for (const l of layers) this.map.setLayoutProperty(l, "visibility", v ? "visible" : "none");
     };
-    set(["modern-fill", "modern-seam", "modern-borders", "modern-labels", "modern-cities-dot", "modern-cities-label"], on);
-    set(["fill", "seam", "hatch", "borders", "frames", "suzerain", "highlight", "labels", "cities-dot", "cities-label"], !on);
+    set(["modern-fill", "modern-seam", "modern-borders", "modern-cities-dot"], on);
+    set(["modern-labels", "modern-cities-label"], on && lb);
+    set(["fill", "seam", "hatch", "borders", "frames", "suzerain", "highlight", "cities-dot"], !on);
+    set(["labels", "cities-label"], !on && lb);
+    set(["seas"], lb);
+  }
+
+  private labelsOn = true;
+
+  /** 国名・都市名・海の名前を表示するかどうか（L キー） */
+  setLabels(on: boolean) {
+    this.labelsOn = on;
+    if (this.loaded) this.applyModern();
+    else this.ready.then(() => this.applyModern());
+  }
+
+  get labelsVisible() {
+    return this.labelsOn;
   }
 
   get isModern() {

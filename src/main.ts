@@ -3,7 +3,9 @@ import type { Topology } from "topojson-specification";
 import { AtlasIndex, type Atlas } from "./data";
 import { AtlasMap } from "./map";
 import { Panel } from "./panel";
+import { Search } from "./search";
 import { setupSheet } from "./sheet";
+import { setupShortcuts, toast } from "./shortcuts";
 
 const $ = <T extends HTMLElement>(sel: string) => document.querySelector(sel) as T;
 
@@ -116,6 +118,9 @@ async function main() {
     if (e.key === "Enter") {
       setYear(Number(yearInput.value));
       yearInput.blur();
+    } else if (e.key === "Escape") {
+      yearInput.value = String(state.year);
+      yearInput.blur();
     }
   });
   yearInput.addEventListener("focus", () => yearInput.select());
@@ -138,16 +143,6 @@ async function main() {
       if (state.year >= maxYear) return stop();
       setYear(state.year + 1);
     }, 450);
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if ((e.target as Element).matches("input, textarea")) return;
-    const d = e.shiftKey ? 10 : 1;
-    if (e.key === "ArrowLeft") setYear(state.year - d);
-    else if (e.key === "ArrowRight") setYear(state.year + d);
-    else if (e.key === "Escape") selectPolity(null, false);
-    else return;
-    e.preventDefault();
   });
 
   $("#zoom-in").addEventListener("click", () => map.zoomBy(1.6));
@@ -188,6 +183,84 @@ async function main() {
   window.addEventListener("blur", () => {
     cHeld = false;
     applyModern();
+  });
+
+  // ---- 検索とキーボードショートカット ----
+  const search = new Search($("#search"), {
+    map,
+    idx,
+    year: () => state.year,
+    selectPolity: (id) => {
+      if (modernBase) modernBtn.click(); // 現代の国境の表示中は、その時代の地図に戻してから選ぶ
+      selectPolity(id, true);
+    },
+  });
+  $("#search-btn").addEventListener("click", () => search.toggle());
+
+  // 重要度1の出来事がある年（[ ] で移動）
+  const majorYears = [...new Set(atlas.events.filter((e) => e.importance === 1).map((e) => e.year))].sort((a, b) => a - b);
+  // B を押している間だけ、1つ前の節目の年を表示する
+  const compareBadge = $("#compare-badge");
+  let compareFrom: number | null = null;
+
+  setupShortcuts({
+    map,
+    search,
+    stepYear: (d) => setYear(state.year + d),
+    milestone: (dir) => {
+      const m = dir < 0 ? prevMs() : nextMs();
+      if (m) setYear(m.year);
+    },
+    majorEvent: (dir) => {
+      const y = dir < 0 ? [...majorYears].reverse().find((v) => v < state.year) : majorYears.find((v) => v > state.year);
+      if (y !== undefined) setYear(y);
+    },
+    edgeYear: (w) => setYear(w === "first" ? minYear : maxYear),
+    togglePlay: () => playBtn.click(),
+    startYearInput: (digit) => {
+      yearInput.focus();
+      yearInput.value = digit;
+    },
+    toggleModern: () => modernBtn.click(),
+    compare: (on) => {
+      if (on) {
+        const target = prevMs()?.year ?? state.year - 1;
+        if (target < minYear) return;
+        compareFrom = state.year;
+        setYear(target);
+        compareBadge.textContent = `${target}年の地図（B を離すと ${compareFrom}年に戻る）`;
+        compareBadge.hidden = false;
+      } else if (compareFrom !== null) {
+        const y = compareFrom;
+        compareFrom = null;
+        compareBadge.hidden = true;
+        setYear(y);
+      }
+    },
+    focusSelected: () => {
+      if (state.polity) map.focus(state.polity);
+    },
+    copyUrl: () => {
+      const url = location.href;
+      const done = () => toast("URLをコピーしました");
+      const fallback = () => {
+        const ta = document.createElement("textarea");
+        ta.value = url;
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand("copy");
+        ta.remove();
+        if (ok) done();
+        else toast("コピーできませんでした");
+      };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, fallback);
+      else fallback();
+    },
+    deselect: () => {
+      if (!state.polity) return false;
+      selectPolity(null, false);
+      return true;
+    },
   });
 
   // URL のハッシュを手で書き換えたとき（チャットからのリンクなど）にも追従する
