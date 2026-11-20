@@ -102,14 +102,12 @@ svg.map:active {
   pointer-events: none;
   vector-effect: non-scaling-stroke;
 }
-.debug path {
-  fill: transparent;
+g.debug path {
+  fill: none;
+  pointer-events: none;
   stroke: rgba(0, 0, 0, 0.35);
   stroke-width: 0.4px;
   vector-effect: non-scaling-stroke;
-}
-.debug path:hover {
-  fill: rgba(255, 255, 0, 0.5);
 }
 #debug-info {
   display: none;

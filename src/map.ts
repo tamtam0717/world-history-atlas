@@ -1,13 +1,13 @@
 // 地図の描画：ピースを年ごとの所属で塗り分け、同じ国のピースを結合して描く
 
-import { geoAzimuthalEqualArea, geoPath, type GeoPermissibleObjects } from "d3-geo";
+import { geoAzimuthalEqualArea, geoBounds, geoContains, geoPath, type GeoPermissibleObjects } from "d3-geo";
 import { select, type Selection } from "d3-selection";
 import "d3-transition";
 import { zoom, zoomIdentity, type ZoomBehavior, type ZoomTransform } from "d3-zoom";
 import polylabel from "polylabel";
-import { merge, mesh } from "topojson-client";
+import { feature, merge, mesh } from "topojson-client";
 import type { GeometryCollection, Polygon, MultiPolygon, Topology } from "topojson-specification";
-import type { MultiPolygon as GeoMultiPolygon } from "geojson";
+import type { Feature as GeoFeature, MultiPolygon as GeoMultiPolygon } from "geojson";
 import { AtlasIndex, fallbackColor } from "./data";
 
 type PieceProps = { id: string; name: string; iso: string; adm1?: string; adm2?: string };
@@ -319,6 +319,13 @@ export class AtlasMap {
     return a >= 0 && b >= 0 && c <= this.width && d <= this.height;
   }
 
+  /** 経度・緯度を中心に k 倍へ拡大（確認用ツールから使う） */
+  zoomTo(lon: number, lat: number, k: number) {
+    const [x, y] = this.projection([lon, lat]) ?? [0, 0];
+    const t = zoomIdentity.translate(this.width / 2, this.height / 2).scale(k).translate(-x, -y);
+    this.svg.transition().duration(0).call(this.zoomer.transform as never, t);
+  }
+
   setBottomInset(px: number) {
     if (px === this.bottomInset) return;
     this.bottomInset = px;
@@ -353,25 +360,34 @@ export class AtlasMap {
     this.tooltip.style.top = `${e.clientY - r.top + 14}px`;
   }
 
+  private pieceFeatures: { f: GeoFeature; b: [[number, number], [number, number]] }[] | null = null;
+
+  /** マウス位置にあるピース（デバッグ表示用。投影を逆算して点の内外判定をする） */
   private pieceAt(e: MouseEvent): PieceProps | null {
-    const t = e.target as Element;
-    const i = t.getAttribute("data-piece");
-    return i == null ? null : this.geoms[+i].properties!;
+    const r = this.container.getBoundingClientRect();
+    const [x, y] = this.transform.invert([e.clientX - r.left, e.clientY - r.top]);
+    const lonlat = this.projection.invert?.([x, y]);
+    if (!lonlat) return null;
+    if (!this.pieceFeatures) {
+      const fc = feature(this.topo, this.topo.objects.pieces) as unknown as { features: GeoFeature[] };
+      this.pieceFeatures = fc.features.map((f) => ({ f, b: geoBounds(f) }));
+    }
+    const [lon, lat] = lonlat;
+    for (const { f, b } of this.pieceFeatures) {
+      if (lon < b[0][0] || lon > b[1][0] || lat < b[0][1] || lat > b[1][1]) continue;
+      if (geoContains(f, lonlat)) return f.properties as PieceProps;
+    }
+    return null;
   }
 
   // ---- デバッグ表示（?debug=pieces）：ピースの境界を全部描き、ピースの ID を確認できるようにする ----
   private renderDebug() {
-    const feats = this.geoms.map((g, i) => ({ i, d: this.path(merge(this.topo, [g] as never)) ?? "" }));
+    const all = mesh(this.topo, this.topo.objects.pieces as never);
     this.debugLayer
-      .selectAll<SVGPathElement, (typeof feats)[number]>("path")
-      .data(feats)
+      .selectAll<SVGPathElement, number>("path")
+      .data([0])
       .join("path")
-      .attr("d", (d) => d.d)
-      .attr("data-piece", (d) => d.i)
-      .attr("data-owner", (d) => {
-        const o = this.ownerOf[d.i];
-        return o < 0 ? "-1" : this.idx.atlas.polities[o].id;
-      });
+      .attr("d", this.path(all) ?? "");
   }
 }
 

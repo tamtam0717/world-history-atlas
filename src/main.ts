@@ -129,6 +129,7 @@ async function main() {
   $("#zoom-reset").addEventListener("click", () => map.resetZoom());
 
   update();
+  (window as unknown as { __atlas: unknown }).__atlas = map;
   document.body.classList.add("ready");
 }
 
