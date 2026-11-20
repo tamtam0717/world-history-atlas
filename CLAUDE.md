@@ -69,6 +69,14 @@
 - ネットワーク：raw.githubusercontent.com と media.githubusercontent.com（geoBoundaries）、npm は使える。Wikipedia・naciscdn.org・geoboundaries.org は bash からは使えない。
 - Playwright と Chromium は入っている（tools/snapshot.mjs で使う）。
 
+## 進捗（2026-11-20 時点）
+
+- ロードマップ 1〜2：完了（骨組み・データ形式）。
+- ロードマップ 3：1648–1815 の試作データを、7担当（地域別のエージェント）で作成済み。全7,074ピースに所属あり。政体166、地域444、出来事約340。
+  - 担当間の整合：完了（docs/integration-notes.md の「整合の結果」）。
+  - 独立レビュー：実施中／結果は docs/review/ に置く。指摘の反映がまだなら、次はそれを行う。
+- GitHub Pages：ワークフローは用意済み。リポジトリの public 化と Pages の Source 設定（GitHub Actions）は田村さん待ち。
+
 ## 想定ロードマップ
 1. 骨組みを作る
    - 静的サイト（ビルド後は Pages で配信できる形）
