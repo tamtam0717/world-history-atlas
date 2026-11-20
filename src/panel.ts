@@ -91,7 +91,7 @@ export class Panel {
     let html = `<div class="card-head">
         <span class="swatch big" style="background:${esc(p.color ?? "#ccc")}"></span>
         <div><h2>${esc(this.idx.polityName(p, year))}</h2>
-        <div class="meta">${[p.kind, overlord ? `${overlord.partial ? "一部が" : ""}${this.link(overlord.id, year)}に所属` : ""].filter(Boolean).join(" ・ ")}</div></div>
+        <div class="meta">${[this.idx.kindAt(p, year), overlord ? `${overlord.partial ? "一部が" : ""}${this.link(overlord.id, year)}に所属` : ""].filter(Boolean).join(" ・ ")}</div></div>
         <button class="close" data-close aria-label="閉じる">×</button>
       </div>`;
     html += `<h3>君主</h3>`;

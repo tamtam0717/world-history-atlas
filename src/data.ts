@@ -8,6 +8,10 @@ export interface Named {
   from?: number;
   to?: number;
   name: string;
+  /** その時期の地図ラベル（省略時は name） */
+  short?: string;
+  /** その時期の種別（省略時は政体の kind） */
+  kind?: string;
 }
 
 export interface Ruler extends Sourced {
@@ -101,15 +105,23 @@ export class AtlasIndex {
     return ans < 0 ? null : tl[ans];
   }
 
-  polityName(p: Polity, year: number): string {
-    for (const n of p.names ?? []) {
-      if ((n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity)) return n.name;
-    }
-    return p.name;
+  /** その年に当てはまる names の項目 */
+  private nameEntry(p: Polity, year: number): Named | undefined {
+    return (p.names ?? []).find((n) => (n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity));
   }
 
+  polityName(p: Polity, year: number): string {
+    return this.nameEntry(p, year)?.name ?? p.name;
+  }
+
+  /** 地図ラベル。時期別の short → 政体の short → 時期別の name → 政体の name の順 */
   shortName(p: Polity, year: number): string {
-    return p.short ?? this.polityName(p, year);
+    const n = this.nameEntry(p, year);
+    return n?.short ?? p.short ?? n?.name ?? p.name;
+  }
+
+  kindAt(p: Polity, year: number): string | undefined {
+    return this.nameEntry(p, year)?.kind ?? p.kind;
   }
 
   rulersAt(p: Polity, year: number): Ruler[] {

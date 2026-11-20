@@ -62,6 +62,16 @@ def main():
         if len(base) == 0:
             base = adm1[adm1.shapeGroup == iso]
             lvl = "ADM1"
+        if iso in cfg.get("adm2_within", {}):
+            names = set(cfg["adm2_within"][iso])
+            a1c = adm1[adm1.shapeGroup == iso]
+            keep = a1c[~a1c.shapeName.isin(names)]
+            a2c = adm2[adm2.shapeGroup == iso]
+            pts = gpd.GeoDataFrame(a2c[["shapeName"]], geometry=a2c.geometry.representative_point(), crs=a2c.crs)
+            inside = gpd.sjoin(pts, a1c[a1c.shapeName.isin(names)][["geometry"]], predicate="within")
+            sub = a2c.loc[sorted(set(inside.index))]
+            base = pd.concat([keep, sub])
+            lvl = "ADM1+ADM2"
         if iso in cfg["fine"]:
             parts.append(build_fine(iso, cfg["fine"][iso], base))
         else:
@@ -71,6 +81,7 @@ def main():
             parts.append(b)
 
     g = gpd.GeoDataFrame(pd.concat(parts, ignore_index=True), crs="EPSG:4326")
+    g = apply_splits(g, cfg.get("split", []))
     g["geometry"] = g.geometry.make_valid().intersection(clip)
     g = g[~g.geometry.is_empty & g.geometry.notna()]
     g = g[g.geometry.geom_type.isin(["Polygon", "MultiPolygon", "GeometryCollection"])]
@@ -109,6 +120,32 @@ def main():
     counts = g.groupby("iso").size().sort_values(ascending=False)
     print(f"pieces: {len(g)}", file=sys.stderr)
     print(counts.head(40).to_string(), file=sys.stderr)
+
+
+def apply_splits(g, specs):
+    """島などを別ピースに分ける。分けた部分の名前は「元の名前 + suffix」になる"""
+    from shapely.geometry import MultiPolygon, box as sbox
+
+    rows = []
+    for spec in specs:
+        m = (g.iso == spec["iso"]) & (g.shapeName == spec["name"])
+        for idx in g[m].index:
+            geom = g.at[idx, "geometry"]
+            polys = list(getattr(geom, "geoms", [geom]))
+            for part in spec["parts"]:
+                bb = sbox(*part["bbox"])
+                taken = [p for p in polys if bb.contains(p.representative_point())]
+                if not taken:
+                    continue
+                polys = [p for p in polys if p not in taken]
+                r = g.loc[idx].copy()
+                r["shapeName"] = f'{spec["name"]} {part["suffix"]}'
+                r["geometry"] = MultiPolygon(taken)
+                rows.append(r)
+            g.at[idx, "geometry"] = MultiPolygon(polys)
+    if rows:
+        g = gpd.GeoDataFrame(pd.concat([g, gpd.GeoDataFrame(rows, crs=g.crs)], ignore_index=True), crs=g.crs)
+    return g
 
 
 def polys_only(geom):
