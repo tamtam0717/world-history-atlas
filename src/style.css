@@ -508,3 +508,44 @@ body.debug #debug-info {
     visibility: hidden;
   }
 }
+
+/* ---- 現代の国境（押している間だけ表示） ---- */
+.modern-fill {
+  stroke: none;
+  pointer-events: none;
+}
+.modern-borders {
+  fill: none;
+  stroke: #3b3530;
+  stroke-width: 1.1px;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+.zoom-buttons .modern-btn {
+  width: 42px;
+  margin-left: -4px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 6px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+.zoom-buttons .modern-btn.active {
+  background: #3b3530;
+  color: #fff;
+}
+.modern-badge {
+  position: absolute;
+  top: 48px;
+  left: 62px;
+  background: #3b3530;
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 6;
+}

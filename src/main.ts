@@ -128,6 +128,33 @@ async function main() {
   $("#zoom-out").addEventListener("click", () => map.zoomBy(1 / 1.6));
   $("#zoom-reset").addEventListener("click", () => map.resetZoom());
 
+  // ---- 押している間だけ「現代の国境」を表示（C キー／「現代」ボタン） ----
+  const badge = $("#modern-badge");
+  const modernBtn = $<HTMLButtonElement>("#modern-btn");
+  const setModern = (on: boolean) => {
+    map.setModern(on);
+    badge.hidden = !on;
+    modernBtn.classList.toggle("active", on);
+  };
+  document.addEventListener("keydown", (e) => {
+    if (e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
+    if ((e.target as Element).matches("input, textarea")) return;
+    if (e.key === "c" || e.key === "C") setModern(true);
+  });
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "c" || e.key === "C") setModern(false);
+  });
+  window.addEventListener("blur", () => setModern(false));
+  modernBtn.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    modernBtn.setPointerCapture(e.pointerId);
+    setModern(true);
+  });
+  for (const ev of ["pointerup", "pointercancel", "lostpointercapture"]) {
+    modernBtn.addEventListener(ev, () => setModern(false));
+  }
+  modernBtn.addEventListener("contextmenu", (e) => e.preventDefault());
+
   // URL のハッシュを手で書き換えたとき（チャットからのリンクなど）にも追従する
   window.addEventListener("hashchange", () => {
     const h = new URLSearchParams(location.hash.slice(1));
