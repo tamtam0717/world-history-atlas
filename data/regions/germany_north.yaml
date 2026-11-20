@@ -320,6 +320,7 @@
     - {from: 1815, owner: prussia, overlord: german_confederation, cause: ウィーン会議（ザクセンの北半分をプロイセンへ）}
   note: >-
     1656–1746年ごろはザクセン＝ヴァイセンフェルス、メルゼブルク、ツァイツの分家公領（選帝侯の宗主権の下）があったが、ザクセンにまとめた。
+    ウンストルト＝ハイニッヒ郡の帝国都市ミュールハウゼン（1802/03年プロイセン、1807年ヴェストファーレン王国）は郡単位では表せない。
     マンスフェルト伯領は1780年にザクセンとプロイセン（マグデブルク）の間で分けられた。ウンストルート＝ハイニッヒ郡の帝国自由都市ミュールハウゼン
     （1802/03年プロイセン、1807年ヴェストファーレン王国）は郡単位で表せない。ズール（ヘンネベルクのザクセン領）は1815年にプロイセンへ。
 
@@ -596,7 +597,7 @@
     pieces: [DEU-Braunschweig_Kreisfreie_Stadt, DEU-Wolfenbuttel, DEU-Helmstedt, DEU-Wolfsburg_Kreisfreie_Stadt, DEU-Goslar, DEU-Holzminden]
   timeline:
     - {from: 1648, owner: brunswick, overlord: hre}
-    - {from: 1806, owner: brunswick, cause: 神聖ローマ帝国の解体}
+    - {from: 1806, owner: france, certainty: occupied, cause: フランス軍の占領（10月。公はイエナ・アウエルシュタットの戦いで致命傷を負い死去）}
     - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}
     - {from: 1813, owner: brunswick, cause: ヴェストファーレン王国の崩壊（公が帰国）}
     - {from: 1815, owner: brunswick, overlord: german_confederation, cause: ドイツ連邦の成立}
@@ -624,14 +625,14 @@
   select:
     pieces: [DEU-Schaumburg]
   timeline:
-    - {from: 1648, owner: hesse_kassel, overlord: hre, cause: ウェストファリア条約（シャウムブルク伯領の分割）}
-    - {from: 1806, owner: hesse_kassel, cause: 神聖ローマ帝国の解体}
-    - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ヴェストファーレン王国の成立}
-    - {from: 1813, owner: hesse_kassel, cause: ヴェストファーレン王国の崩壊}
-    - {from: 1815, owner: hesse_kassel, overlord: german_confederation, cause: ドイツ連邦の成立}
+    - {from: 1648, owner: schaumburg_lippe, overlord: hre, cause: ウェストファリア条約（シャウムブルク伯領の分割を確認）}
+    - {from: 1806, owner: schaumburg_lippe, cause: 神聖ローマ帝国の解体}
+    - {from: 1807, owner: schaumburg_lippe, overlord: rhine_confederation, cause: ライン同盟に加盟（侯国に昇格）}
+    - {from: 1813, owner: schaumburg_lippe, cause: ライン同盟の解体}
+    - {from: 1815, owner: schaumburg_lippe, overlord: german_confederation, cause: ドイツ連邦の成立}
   note: >-
-    シャウムブルク郡は、ヘッセン＝カッセル領シャウムブルク（リンテルン）と、独立した小国シャウムブルク＝リッペ伯領（ビュッケブルク。1807年ライン同盟、1815年ドイツ連邦）がほぼ半分ずつ。
-    ヘッセン＝カッセル側として表示した。
+    シャウムブルク郡は、ヘッセン＝カッセル領シャウムブルク（リンテルン。1807–1813年はヴェストファーレン王国）と、独立した小国シャウムブルク＝リッペ伯領（ビュッケブルク。1807年ライン同盟、1815年ドイツ連邦）がほぼ半分ずつ。
+    ヘッセン＝カッセルは周辺に大きな領土を持つので、ここでは独立した領邦のシャウムブルク＝リッペで代表させた。
 
 - id: osnabruck_lands
   name: オスナブリュック

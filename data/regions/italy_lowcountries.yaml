@@ -235,8 +235,14 @@
       source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
     - from: 1814
       owner: netherlands
+      certainty: uncertain
       cause: パリ条約（第1次）・ロンドン八か条議定書（オランダとの合同を決定）
+      note: 1814年には連合国の暫定統治下にあり（8月からオラニエ公が総督）、合同はウィーン会議で確定した。
       source: "https://en.wikipedia.org/wiki/Eight_Articles_of_London"
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書（ネーデルラント連合王国の成立）
+      source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
 
 - id: liege_region
   name: リエージュ司教領
@@ -256,7 +262,12 @@
       cause: フランスへの併合
     - from: 1814
       owner: netherlands
+      certainty: uncertain
       cause: パリ条約（第1次）・ロンドン八か条議定書
+      note: 1814年には連合国の暫定統治下にあり、帰属はウィーン会議で確定した。
+    - from: 1815
+      owner: netherlands
+      cause: ウィーン議定書（ネーデルラント連合王国の成立）
   source: "https://ja.wikipedia.org/wiki/リエージュ司教領"
 
 - id: tournai_furnes
@@ -537,7 +548,16 @@
       owner: france
       certainty: occupied
       cause: 国王カルロ・エマヌエーレ4世がピエモンテを放棄してサルデーニャ島へ（12月）
-      note: 1799–1800年にはオーストリア・ロシア軍が占領した。
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
+      note: スヴォーロフのロシア軍とオーストリア軍が占領した。サルデーニャ王は復帰できなかった。
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: france
+      certainty: occupied
+      cause: マレンゴの戦い（6月）でフランスが再占領
     - from: 1802
       owner: france
       cause: フランスへの併合
@@ -566,6 +586,14 @@
       owner: france
       certainty: occupied
       cause: ピエモンテのフランス軍占領
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
+    - from: 1800
+      owner: france
+      certainty: occupied
+      cause: マレンゴの戦い（6月）でフランスが再占領
     - from: 1802
       owner: france
       cause: フランスへの併合（マレンゴ県）
@@ -594,6 +622,14 @@
       owner: cisalpine
       cause: ナポレオンのイタリア遠征（ロディの戦い）とトランスパダーナ共和国の成立
       source: "https://ja.wikipedia.org/wiki/チザルピーナ共和国"
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
     - from: 1814
       owner: habsburg
       cause: イタリア王国の崩壊とオーストリアの復帰（1815年からロンバルド＝ヴェネト王国）
@@ -613,6 +649,10 @@
       owner: france
       certainty: occupied
       cause: ピエモンテのフランス軍占領
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
     - from: 1800
       owner: cisalpine
       cause: マレンゴの戦い後、チザルピーナ共和国に編入（アゴーニャ県。1801年リュネヴィル条約）
@@ -635,6 +675,10 @@
       owner: france
       certainty: occupied
       cause: ピエモンテのフランス軍占領
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）
     - from: 1800
       owner: cisalpine
       cause: マレンゴの戦い後、チザルピーナ共和国に編入（1801年リュネヴィル条約）
@@ -657,6 +701,15 @@
     - from: 1797
       owner: cisalpine
       cause: マントヴァ要塞の降伏（2月）とチザルピーナ共和国への編入
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（7月、マントヴァ要塞が降伏）
+      note: マレンゴの戦い（1800年）の後も、マントヴァ要塞は1801年までオーストリア軍が保持した。
+      source: "https://en.wikipedia.org/wiki/Siege_of_Mantua_(1799)"
+    - from: 1801
+      owner: cisalpine
+      cause: リュネヴィル条約（2月）。マントヴァ要塞がフランスに明け渡され、チザルピーナ共和国に復帰
     - from: 1814
       owner: habsburg
       cause: イタリア王国の崩壊とオーストリアの復帰
@@ -671,6 +724,14 @@
     - from: 1797
       owner: cisalpine
       cause: ヴェネツィア共和国の崩壊とチザルピーナ共和国への編入（カンポ・フォルミオ条約）
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
     - from: 1814
       owner: habsburg
       cause: イタリア王国の崩壊とオーストリアの復帰
@@ -703,9 +764,14 @@
     - from: 1648
       owner: venice
     - from: 1797
+      owner: habsburg
+      cause: カンポ・フォルミオ条約（第6条。境界はアディジェ川・カスタニャーロ運河・ポー川で、ロヴィーゴを含む北東側がオーストリア領に）
+      note: ポー川沿いの南の細い帯だけがチザルピーナ共和国領になった。
+      source: "https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約"
+    - from: 1805
       owner: cisalpine
-      cause: カンポ・フォルミオ条約（アディジェ川以南はチザルピーナ共和国に）
-      note: 要確認
+      cause: プレスブルク条約でイタリア王国に割譲
+      source: "https://ja.wikipedia.org/wiki/プレスブルクの和約"
     - from: 1814
       owner: habsburg
       cause: イタリア王国の崩壊とオーストリアの復帰
@@ -722,6 +788,14 @@
     - from: 1797
       owner: cisalpine
       cause: チザルピーナ共和国への編入
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
     - from: 1814
       owner: habsburg
       cause: イタリア王国の崩壊。ウィーン会議でオーストリア領に
@@ -816,7 +890,7 @@
       cause: ドイツ連邦の成立
 
 - id: liguria
-  name: リグーリア（ジェノヴァ共和国）
+  name: リグリア（ジェノヴァ共和国）
   select:
     pieces: [ITA-Genova, ITA-Savona, ITA-La_Spezia, ITA-Imperia]
   timeline:
@@ -853,6 +927,14 @@
     - from: 1797
       owner: cisalpine
       cause: チザルピーナ共和国への合流
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
     - from: 1814
       owner: modena
       cause: フランチェスコ4世の復帰
@@ -894,6 +976,15 @@
     - from: 1797
       owner: cisalpine
       cause: チザルピーナ共和国への合流
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
+      note: フェラーラ要塞は1801年1月のトレヴィーゾ休戦までオーストリア軍が保持した。
     - from: 1814
       owner: habsburg
       certainty: occupied
@@ -914,6 +1005,14 @@
       owner: cisalpine
       cause: トレンティーノ条約で教皇が割譲し、チザルピーナ共和国に編入
       source: "https://en.wikipedia.org/wiki/Treaty_of_Tolentino"
+    - from: 1799
+      owner: habsburg
+      certainty: occupied
+      cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）
+      source: "https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799"
+    - from: 1800
+      owner: cisalpine
+      cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活
     - from: 1814
       owner: habsburg
       certainty: occupied
@@ -987,7 +1086,9 @@
       owner: tuscany
       note: >-
         グロッセートの沿岸の要塞群（スタート・デイ・プレシディ：スペイン領→1707オーストリア→1735ナポリ）、
-        リヴォルノのピースのうちピオンビーノ公国とエルバ島の一部、マッサ・カッラーラのマッサ公国（チーボ＝マラスピーナ家）は省略。
+        リヴォルノのピースのうちピオンビーノ公国とエルバ島の一部は省略。
+        マッサ・カッラーラのピースは、大部分がルニジャーナ（ポントレーモリ・フィヴィッツァーノなどのトスカーナ領と、マラスピーナ家の小さな帝国封土）で、
+        南西の海沿いのマッサ＝カッラーラ公国（チーボ＝マラスピーナ家。1790年からエステ家のマリア・ベアトリーチェ。1797年チザルピーナ、1806年エリザ・ボナパルト領、1814年マリア・ベアトリーチェ復帰）はピースの一部（約2割）なので、面積の大きいトスカーナ領で代表させる。
     - from: 1801
       owner: etruria
       cause: リュネヴィル条約・アランフエス条約でエトルリア王国に

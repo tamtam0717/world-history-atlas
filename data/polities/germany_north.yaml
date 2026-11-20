@@ -8,7 +8,7 @@
 - id: prussia
   name: プロイセン王国
   names:
-    - {to: 1700, name: ブランデンブルク＝プロイセン}
+    - {to: 1700, name: ブランデンブルク＝プロイセン, short: ブランデンブルク, kind: 選帝侯国（プロイセン公国と同君連合）}
   short: プロイセン
   color: "#8fa3bf"
   kind: 王国
@@ -69,10 +69,10 @@
 - id: saxony
   name: ザクセン王国
   names:
-    - {to: 1805, name: ザクセン選帝侯国}
+    - {to: 1805, name: ザクセン選帝侯国, kind: 選帝侯国}
   short: ザクセン
   color: "#9fcf9a"
-  kind: 選帝侯国（1806年から王国）
+  kind: 王国
   rulers:
     - name: ヨハン・ゲオルク1世
       title: ザクセン選帝侯
@@ -131,12 +131,12 @@
 - id: hanover
   name: ハノーファー
   names:
-    - {to: 1691, name: カレンベルク侯領（ブラウンシュヴァイク＝リューネブルク）}
-    - {from: 1692, to: 1813, name: ハノーファー選帝侯国（ブラウンシュヴァイク＝リューネブルク）}
-    - {from: 1814, name: ハノーファー王国}
+    - {to: 1691, name: カレンベルク侯領（ブラウンシュヴァイク＝リューネブルク）, kind: 侯領}
+    - {from: 1692, to: 1813, name: ハノーファー選帝侯国（ブラウンシュヴァイク＝リューネブルク）, kind: 選帝侯国}
+    - {from: 1814, name: ハノーファー王国, kind: 王国}
   short: ハノーファー
   color: "#e6b8a2"
-  kind: 侯領→選帝侯国→王国
+  kind: 選帝侯国
   rulers:
     - name: クリスティアン・ルートヴィヒ
       title: カレンベルク侯
@@ -188,7 +188,7 @@
 - id: celle
   name: リューネブルク侯領（ツェレ）
   short: リューネブルク
-  color: "#ecc9a8"
+  color: "#cbd9a6"
   kind: 侯領
   rulers:
     - name: フリードリヒ
@@ -212,10 +212,10 @@
 - id: mecklenburg
   name: メクレンブルク＝シュヴェリーン公国
   names:
-    - {from: 1815, name: メクレンブルク＝シュヴェリーン大公国}
+    - {from: 1815, name: メクレンブルク＝シュヴェリーン大公国, kind: 大公国}
   short: メクレンブルク
   color: "#a8d0d8"
-  kind: 公国（1815年から大公国）
+  kind: 公国
   rulers:
     - name: アドルフ・フリードリヒ1世
       title: メクレンブルク＝シュヴェリーン公
@@ -277,10 +277,10 @@
 - id: mecklenburg_strelitz
   name: メクレンブルク＝シュトレーリッツ公国
   names:
-    - {from: 1815, name: メクレンブルク＝シュトレーリッツ大公国}
+    - {from: 1815, name: メクレンブルク＝シュトレーリッツ大公国, kind: 大公国}
   short: シュトレーリッツ
   color: "#86c0bb"
-  kind: 公国（1815年から大公国）
+  kind: 公国
   rulers:
     - name: アドルフ・フリードリヒ2世
       title: メクレンブルク＝シュトレーリッツ公
@@ -371,10 +371,10 @@
 - id: oldenburg
   name: オルデンブルク公国
   names:
-    - {to: 1773, name: オルデンブルク伯領}
+    - {to: 1773, name: オルデンブルク伯領, kind: 伯領}
   short: オルデンブルク
   color: "#9ec9b8"
-  kind: 伯領→公国（1774年）
+  kind: 公国
   rulers:
     - name: アントン・ギュンター
       title: オルデンブルク伯
@@ -742,7 +742,7 @@
 - id: westphalia_kingdom
   name: ヴェストファーレン王国
   short: ヴェストファーレン
-  color: "#b6c7f0"
+  color: "#8ecbb9"
   kind: 王国（ナポレオンの衛星国）
   rulers:
     - name: ジェローム・ボナパルト
@@ -839,15 +839,31 @@
 - id: lippe
   name: リッペ侯国
   names:
-    - {to: 1788, name: リッペ伯領}
+    - {to: 1788, name: リッペ伯領, kind: 伯領}
   short: リッペ
   color: "#f0d8a0"
-  kind: 伯領→侯国（1789年）
+  kind: 侯国
   periods:
     - from: 1648
       to: 1815
       text: トイトブルクの森のふもと、首都デトモルトの小領邦。1789年に侯国となり、1807年ライン同盟、1815年ドイツ連邦に加わった。
   source: "https://de.wikipedia.org/wiki/Lippe_(Land)"
+
+- id: schaumburg_lippe
+  name: シャウムブルク＝リッペ伯領
+  names:
+    - {from: 1807, name: シャウムブルク＝リッペ侯国, kind: 侯国}
+  short: シャウムブルク＝リッペ
+  color: "#e3a9c4"
+  kind: 伯領
+  periods:
+    - from: 1648
+      to: 1806
+      text: シャウムブルク伯家の断絶後、1647年の分割で伯領の北半分（ビュッケブルク・シュタットハーゲン）をリッペ家の分家が得て成立した小領邦（南半分のリンテルン周辺はヘッセン＝カッセル領）。18世紀のヴィルヘルム伯は軍事の改革者として知られる。
+    - from: 1807
+      to: 1815
+      text: 1807年に侯国となってライン同盟に加わり、ヴェストファーレン王国には併合されずに独立を保った。1815年にドイツ連邦の加盟国となった。
+  source: "https://de.wikipedia.org/wiki/Schaumburg-Lippe"
 
 - id: east_frisia
   name: 東フリースラント

@@ -421,8 +421,53 @@
   timeline:
     - from: 1648
       owner: spain
-      note: バレアレス諸島のメノルカ島はイギリス領の時期がある（1708–56、1763–82、1798–1802）が、ピースがマヨルカ島と一体のため描かない。ジブラルタル（1713年イギリス領）とオリベンサ（1801年までポルトガル領）もピースが粗く描かない。
+      note: メノルカ島は別の地域（menorca）で描く。ジブラルタル（1713年イギリス領）とオリベンサ（1801年までポルトガル領）はピースが粗く描かない。
       source: "ja.wikipedia: スペイン"
+
+- id: menorca
+  name: メノルカ島（ミノルカ）
+  select:
+    pieces: [ESP-Balears_Illes_Menorca]
+  timeline:
+    - from: 1648
+      owner: spain
+    - from: 1708
+      owner: britain
+      certainty: occupied
+      cause: スペイン継承戦争でイギリス軍が占領（9月）
+      source: "https://en.wikipedia.org/wiki/History_of_Menorca"
+    - from: 1713
+      owner: britain
+      cause: ユトレヒト条約でイギリス領に
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1756
+      owner: france
+      certainty: occupied
+      cause: 七年戦争の初めにフランス軍が占領（ミノルカ島の戦い）
+      source: "https://en.wikipedia.org/wiki/Siege_of_Fort_St_Philip_(1756)"
+    - from: 1763
+      owner: britain
+      cause: パリ条約（1763）でイギリスに返還
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1782
+      owner: spain
+      certainty: occupied
+      cause: アメリカ独立戦争中にスペイン・フランス軍が奪回（2月）
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Minorca_(1781)"
+    - from: 1783
+      owner: spain
+      cause: ヴェルサイユ条約（1783）でスペイン領に
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
+    - from: 1798
+      owner: britain
+      certainty: occupied
+      cause: フランス革命戦争中にイギリス軍が占領（11月）
+      source: "https://en.wikipedia.org/wiki/Capture_of_Minorca_(1798)"
+    - from: 1802
+      owner: spain
+      cause: アミアンの和約でスペインに返還
+      source: "https://ja.wikipedia.org/wiki/アミアンの和約"
+  note: イギリス領の時代は、マオー（マオン）の港が地中海艦隊の基地だった。
 
 - id: catalonia_ne
   name: カタルーニャ東部（バルセロナ・ジローナ）

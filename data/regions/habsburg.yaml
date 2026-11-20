@@ -245,7 +245,7 @@
   note: ボヘミア王冠領の一つ（モラヴィア辺境伯領）。
 
 - id: silesia_cz
-  name: オーストリア領シュレージエン（トロッパウ・テッシェン）
+  name: オーストリア領シュレジエン（トロッパウ・テッシェン）
   select:
     pieces: [CZE-Opava, CZE-Bruntal, CZE-Jesenik, CZE-Karvina, CZE-Frydek_Mistek]
   timeline:
@@ -364,9 +364,15 @@
   timeline:
     - from: 1648
       owner: ottoman
+    - from: 1686
+      owner: habsburg
+      certainty: occupied
+      cause: ブダ奪回（9月）。大トルコ戦争で皇帝軍がハンガリー中部を占領
+      note: ブダ・ペーチ・セゲドは1686年、エゲルは1687年、セーケシュフェヘールヴァールは1688年、カニジャは1690年、ジュラは1695年に奪回。ピースの粒度では1686年にまとめて切り替える。
+      source: "https://ja.wikipedia.org/wiki/ブダ包囲戦_(1686年)"
     - from: 1699
       owner: habsburg
-      cause: カルロヴィッツ条約（ブダは1686年、ペーチは1686年、セーケシュフェヘールヴァールは1688年に皇帝軍が奪回）
+      cause: カルロヴィッツ条約でハンガリーの割譲が確定
       source: "https://ja.wikipedia.org/wiki/カルロヴィッツ条約"
   note: >-
     オスマン帝国のブダ州・テメシュヴァル州・エーリ（エゲル）州・カニジャ州など。エステルゴムは1683年、カニジャは1690年に奪回。
@@ -412,6 +418,11 @@
       certainty: uncertain
       cause: ヴァーラド（オラデア）の陥落でオスマン帝国のヴァーラド州となる
       source: "https://en.wikipedia.org/wiki/Siege_of_Várad_(1660)"
+    - from: 1686
+      owner: habsburg
+      certainty: occupied
+      cause: 大トルコ戦争で皇帝軍がデブレツェンに進駐
+      note: ヴァーラド（オラデア）の要塞は1692年に皇帝軍が奪回。
     - from: 1699
       owner: habsburg
       cause: カルロヴィッツ条約（ヴァーラドは1692年に皇帝軍が奪回）
