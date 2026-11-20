@@ -17,3 +17,13 @@
 - BS：インフィアテル・ザルツブルクのバイエルン期の overlord（1806 rhine_confederation、1813 なし、1815 german_confederation）。テシェン条約（1779）のイベント重複。ベルヒテスガーデン 1810
 - F：lubovna（スピシュの質入れ都市）1772 poland_lithuania→habsburg。ポーランド側のスピシュ・オラヴァと合わせる
 - 1815 年のザルツブルク・インフィアテルはバイエルン（返還は1816）
+
+## E（バルカン・オスマン・中東）から
+- トランシルヴァニア 1687–1698：E は「owner transylvania、overlord habsburg、uncertain」。D の案（1698 まで overlord ottoman）と食い違う → どちらかに統一（E の 1687 項目を消せば D に合う）
+- コトル湾・ドラゴニャ（115）：1805 cisalpine、1809 illyria、1814 habsburg（D に合わせ済み）
+- ラグーザ：D 側で overlord ottoman が付いていない（貢納関係の扱いを統一）
+- ボスニア北辺（ポサヴィナ・ブルチコ）1718–1739 habsburg → HRV 側スラヴォニアと整合確認
+- トランスニストリア 1791 まで ottoman、1792 russia。ウクライナ側のイェディサン・ブジャクの owner（ottoman か crimea か）を F と統一
+- ベッサラビア 1812 russia、ホティン 1713 からオスマン直轄
+- ジョージア諸国（イメレティ 1804 保護国→1810 併合、ミングレリア 1803、グリア・アブハジア 1810）と RUS 側の北カフカース
+- エジプト（A）とヒジャーズ奪回の扱い、サウード王国の色（桃色）
