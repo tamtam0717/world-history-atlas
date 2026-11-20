@@ -16,7 +16,13 @@ type PieceGeom = (Polygon<PieceProps> | MultiPolygon<PieceProps>) & { id?: strin
 interface Group {
   owner: number; // 政体 index（-1 = データなし）
   certainty: number;
-  pieces: PieceGeom[];
+  pieces: number[]; // ピース番号
+}
+
+interface Merged {
+  d: string;
+  geo: GeoMultiPolygon;
+  label: { x: number; y: number; area: number } | null;
 }
 
 interface Label {
@@ -48,7 +54,12 @@ export class AtlasMap {
   private zoomer: ZoomBehavior<SVGSVGElement, unknown>;
   private transform: ZoomTransform = zoomIdentity;
   private projection = geoAzimuthalEqualArea().rotate([-13, -50]);
-  private path = geoPath(this.projection);
+  /** 投影済み（画面座標）のトポロジー。年が変わるたびに投影し直さなくて済むよう、リサイズ時に一度だけ作る */
+  private ptopo!: Topology;
+  private path = geoPath().digits(1);
+  /** 同じピースの組み合わせの結合結果は年をまたいで使い回す */
+  private cache = new Map<string, Merged>();
+  private meshCache = new Map<string, string>();
   private geoms: PieceGeom[];
   private atlasIdx: number[]; // topo のピース番号 → atlas のピース番号
   private ownerOf: Int32Array;
@@ -147,6 +158,9 @@ export class AtlasMap {
       [-w * 0.5, -h * 0.5],
       [w * 1.5, h * 1.5],
     ]);
+    this.ptopo = projectTopology(this.topo, (p) => this.projection(p));
+    this.cache.clear();
+    this.meshCache.clear();
     if (this.year) this.render(this.year);
   }
 
@@ -163,21 +177,17 @@ export class AtlasMap {
       const key = `${owner}|${cert}`;
       let g = groups.get(key);
       if (!g) groups.set(key, (g = { owner, certainty: cert, pieces: [] }));
-      g.pieces.push(this.geoms[i]);
+      g.pieces.push(i);
     }
 
-    const topo = this.topo;
     const polities = idx.atlas.polities;
-    const fillData = [...groups.values()].map((g) => ({
-      g,
-      geo: merge(topo, g.pieces as never) as GeoMultiPolygon,
-    }));
+    const fillData = [...groups.entries()].map(([key, g]) => ({ g, m: this.merged(key, g.pieces) }));
 
     this.fills
       .selectAll<SVGPathElement, (typeof fillData)[number]>("path")
       .data(fillData)
       .join("path")
-      .attr("d", (d) => this.path(d.geo) ?? "")
+      .attr("d", (d) => d.m.d)
       .attr("fill", (d) => (d.g.owner < 0 ? NODATA : polities[d.g.owner].color ?? fallbackColor(polities[d.g.owner].id)))
       .attr("data-owner", (d) => (d.g.owner < 0 ? "-1" : polities[d.g.owner].id));
 
@@ -186,35 +196,38 @@ export class AtlasMap {
       .selectAll<SVGPathElement, (typeof fillData)[number]>("path")
       .data(fillData.filter((d) => d.g.certainty > 0 && d.g.owner >= 0))
       .join("path")
-      .attr("d", (d) => this.path(d.geo) ?? "")
+      .attr("d", (d) => d.m.d)
       .attr("fill", (d) => `url(#hatch-${certNames[d.g.certainty]})`)
       .attr("data-owner", (d) => polities[d.g.owner].id);
 
     // 国境線：所属の違うピースの間と、海岸線
     const own = this.ownerOf;
-    const pos = new Map(this.geoms.map((g, i) => [g, i]));
-    const ownerOfGeom = (g: unknown) => own[pos.get(g as PieceGeom)!];
-    const obj = topo.objects.pieces;
-    const borders = mesh(topo, obj as never, (a, b) => a === b || ownerOfGeom(a) !== ownerOfGeom(b));
-    this.borders.attr("d", this.path(borders) ?? "");
+    const meshKey = hashInts(own);
+    let bd = this.meshCache.get(meshKey);
+    if (bd == null) {
+      const pos = new Map((this.ptopo.objects.pieces as GeometryCollection).geometries.map((g, i) => [g, i]));
+      const ownerOfGeom = (g: unknown) => own[pos.get(g as never)!];
+      const borders = mesh(this.ptopo, this.ptopo.objects.pieces as never, (a, b) => a === b || ownerOfGeom(a) !== ownerOfGeom(b));
+      bd = this.path(borders) ?? "";
+      if (this.meshCache.size > 300) this.meshCache.clear();
+      this.meshCache.set(meshKey, bd);
+    }
+    this.borders.attr("d", bd);
 
     // 上位政体（神聖ローマ帝国など）の外枠
-    const ovGroups = new Map<number, PieceGeom[]>();
+    const ovGroups = new Map<number, number[]>();
     for (let i = 0; i < this.geoms.length; i++) {
       const o = this.ovOf[i];
       if (o < 0) continue;
       if (!ovGroups.has(o)) ovGroups.set(o, []);
-      ovGroups.get(o)!.push(this.geoms[i]);
+      ovGroups.get(o)!.push(i);
     }
-    const ovData = [...ovGroups.entries()].map(([o, ps]) => ({
-      o,
-      geo: merge(topo, ps as never) as GeoMultiPolygon,
-    }));
+    const ovData = [...ovGroups.entries()].map(([o, ps]) => ({ o, m: this.merged(`ov${o}`, ps, false) }));
     this.overlords
       .selectAll<SVGPathElement, (typeof ovData)[number]>("path")
       .data(ovData)
       .join("path")
-      .attr("d", (d) => this.path(d.geo) ?? "")
+      .attr("d", (d) => d.m.d)
       .attr("data-overlord", (d) => polities[d.o].id);
 
     this.renderLabels(fillData.filter((d) => d.g.owner >= 0));
@@ -222,22 +235,45 @@ export class AtlasMap {
     if (this.debug) this.renderDebug();
   }
 
-  private renderLabels(fillData: { g: Group; geo: GeoMultiPolygon }[]) {
-    // 同じ政体が確からしさ別に分かれている場合もあるので政体ごとにまとめ、最大の塊にラベルを置く
-    const best = new Map<number, { poly: number[][][]; area: number }>();
-    for (const d of fillData) {
-      for (const poly of d.geo.coordinates) {
-        const projected = poly.map((ring) => ring.map((c) => this.projection(c as [number, number]) ?? [0, 0]));
-        const a = Math.abs(ringArea(projected[0]));
-        const cur = best.get(d.g.owner);
-        if (!cur || a > cur.area) best.set(d.g.owner, { poly: projected, area: a });
+  /** ピースの集まりを結合した結果（パス文字列とラベル位置）。同じ集まりはキャッシュから返す */
+  private merged(prefix: string, pieces: number[], withLabel = true): Merged {
+    const key = `${prefix}|${pieces.length}|${hashInts(pieces)}`;
+    let m = this.cache.get(key);
+    if (m) return m;
+    const geoms = (this.ptopo.objects.pieces as GeometryCollection).geometries;
+    const geo = merge(this.ptopo, pieces.map((i) => geoms[i]) as never) as GeoMultiPolygon;
+    let label: Merged["label"] = null;
+    if (withLabel) {
+      let best: number[][][] | null = null;
+      let area = 0;
+      for (const poly of geo.coordinates) {
+        const a = Math.abs(ringArea(poly[0]));
+        if (a > area) [best, area] = [poly, a];
       }
+      if (best) {
+        const p = polylabel(best as [number, number][][], 1);
+        label = { x: p[0], y: p[1], area };
+      }
+    }
+    m = { d: this.path(geo) ?? "", geo, label };
+    if (this.cache.size > 3000) this.cache.clear();
+    this.cache.set(key, m);
+    return m;
+  }
+
+  private renderLabels(fillData: { g: Group; m: Merged }[]) {
+    // 同じ政体が確からしさ別に分かれている場合もあるので政体ごとにまとめ、最大の塊にラベルを置く
+    const best = new Map<number, { x: number; y: number; area: number }>();
+    for (const d of fillData) {
+      const l = d.m.label;
+      if (!l) continue;
+      const cur = best.get(d.g.owner);
+      if (!cur || l.area > cur.area) best.set(d.g.owner, l);
     }
     const polities = this.idx.atlas.polities;
     const data = [...best.entries()].map(([owner, b]) => {
-      const p = polylabel(b.poly as [number, number][][], 1);
       const name = this.idx.shortName(polities[owner], this.year);
-      return { owner, name, x: p[0], y: p[1], area: b.area };
+      return { owner, name, x: b.x, y: b.y, area: b.area };
     });
     const sel = this.labelLayer
       .selectAll<SVGTextElement, (typeof data)[number]>("text")
@@ -275,8 +311,9 @@ export class AtlasMap {
       this.highlight.attr("d", null);
       return;
     }
-    const ps = this.geoms.filter((_, j) => this.ownerOf[j] === i);
-    this.highlight.attr("d", ps.length ? this.path(merge(this.topo, ps as never)) ?? "" : null);
+    const pg = (this.ptopo.objects.pieces as GeometryCollection).geometries;
+    const ps = pg.filter((_, j) => this.ownerOf[j] === i);
+    this.highlight.attr("d", ps.length ? this.path(merge(this.ptopo, ps as never)) ?? "" : null);
   }
 
   /** その政体の領域の上位政体（いちばん多いもの）。一部だけが属していれば partial = true */
@@ -300,9 +337,10 @@ export class AtlasMap {
   /** 選んだ政体が画面に入るように寄せる */
   focus(id: string) {
     const i = this.idx.polityIndex.get(id);
-    const ps = this.geoms.filter((_, j) => this.ownerOf[j] === i);
+    const pg = (this.ptopo.objects.pieces as GeometryCollection).geometries;
+    const ps = pg.filter((_, j) => this.ownerOf[j] === i);
     if (!ps.length) return;
-    const [[x0, y0], [x1, y1]] = this.path.bounds(merge(this.topo, ps as never));
+    const [[x0, y0], [x1, y1]] = this.path.bounds(merge(this.ptopo, ps as never));
     const k = Math.min(8, 0.8 / Math.max((x1 - x0) / this.width, (y1 - y0) / this.height));
     if (k < this.transform.k * 1.05 && this.inView(x0, y0, x1, y1)) return;
     const t = zoomIdentity
@@ -382,13 +420,47 @@ export class AtlasMap {
 
   // ---- デバッグ表示（?debug=pieces）：ピースの境界を全部描き、ピースの ID を確認できるようにする ----
   private renderDebug() {
-    const all = mesh(this.topo, this.topo.objects.pieces as never);
+    const all = mesh(this.ptopo, this.ptopo.objects.pieces as never);
     this.debugLayer
       .selectAll<SVGPathElement, number>("path")
       .data([0])
       .join("path")
       .attr("d", this.path(all) ?? "");
   }
+}
+
+/** 整数の並びの簡易ハッシュ（FNV-1a を2本） */
+function hashInts(a: ArrayLike<number>): string {
+  let h1 = 0x811c9dc5;
+  let h2 = 0x01000193;
+  for (let i = 0; i < a.length; i++) {
+    const v = a[i] + 2;
+    h1 = Math.imul(h1 ^ v, 16777619);
+    h2 = Math.imul(h2 ^ (v * 31 + i), 2246822519);
+  }
+  return (h1 >>> 0).toString(36) + (h2 >>> 0).toString(36);
+}
+
+/** トポロジーの全座標を投影し、量子化を外した平面座標のトポロジーを作る */
+function projectTopology(topo: Topology, project: (p: [number, number]) => [number, number] | null): Topology {
+  const tf = topo.transform;
+  const arcs = topo.arcs.map((arc) => {
+    let x = 0;
+    let y = 0;
+    return arc.map((pt) => {
+      let lon = pt[0];
+      let lat = pt[1];
+      if (tf) {
+        x += pt[0];
+        y += pt[1];
+        lon = x * tf.scale[0] + tf.translate[0];
+        lat = y * tf.scale[1] + tf.translate[1];
+      }
+      const q = project([lon, lat]) ?? [0, 0];
+      return [Math.round(q[0] * 10) / 10, Math.round(q[1] * 10) / 10];
+    });
+  });
+  return { type: "Topology", objects: topo.objects, arcs } as Topology;
 }
 
 function ringArea(ring: number[][]) {
