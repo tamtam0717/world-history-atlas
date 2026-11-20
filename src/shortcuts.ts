@@ -17,8 +17,8 @@ export interface ShortcutActions {
   togglePlay(): void;
   startYearInput(digit: string): void;
   toggleModern(): void;
-  /** 宗教の分布の表示を切り替える */
-  toggleReligion(): void;
+  /** 宗教の分布の表示を切り替える（revert：長押しを離したので元に戻す） */
+  toggleReligion(revert?: boolean): void;
   compare(on: boolean): void;
   focusSelected(): void;
   copyUrl(): void;
@@ -127,7 +127,7 @@ export function setupShortcuts(a: ShortcutActions) {
   const HOLD_MS = 450;
   let rDownAt = 0;
   const endReligionHold = () => {
-    if (rDownAt && performance.now() - rDownAt >= HOLD_MS) a.toggleReligion();
+    if (rDownAt && performance.now() - rDownAt >= HOLD_MS) a.toggleReligion(true);
     rDownAt = 0;
   };
 

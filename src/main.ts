@@ -44,9 +44,11 @@ async function main() {
     rp: ReligionPick | null;
     view?: { lon: number; lat: number; zoom: number };
   }
-  const STEP_MS = 1000;
+  const STEP_MS = 1200;
   let nextNav: Nav = "replace";
   let lastStepAt = 0;
+  /** 次の更新では URL が変わらなくても積む（宗教の地域の選択など、URL に出ない移動） */
+  let nextForce = false;
   let restoring = false;
 
   const yearInput = $<HTMLInputElement>("#year");
@@ -64,8 +66,13 @@ async function main() {
     onReligion: (pick) => {
       state.relPick = pick;
       markPush();
+      nextForce = true;
       updateUi();
-      if (pick) sheet.reveal();
+      if (pick) {
+        sheet.reveal();
+        // スマホでは凡例が地図を広く覆うので、場所を選んだら畳む
+        if (matchMedia("(max-width: 799px)").matches) $("#rel-legend").classList.add("collapsed");
+      }
     },
     onPiece: (p) => {
       if (p) $("#debug-info").textContent = `${p.id}\t${p.name}\t${p.adm1 ?? ""}\t${p.adm2 ?? ""}`;
@@ -120,8 +127,9 @@ async function main() {
     return { y: state.year, p: state.polity, l: state.layer, m: modernBase, rp: state.relPick, view: map.getView() };
   }
   /** 今の状態を履歴に書く（nextNav に従って積む／置き換える） */
-  function writeHistory(nav: Nav = nextNav) {
+  function writeHistory(nav: Nav = nextNav, force = nextForce) {
     nextNav = "replace";
+    nextForce = false;
     if (restoring) nav = "replace";
     const now = performance.now();
     if (nav === "step") {
@@ -129,7 +137,7 @@ async function main() {
       lastStepAt = now;
     } else if (nav === "push") lastStepAt = 0;
     const url = currentHash();
-    if (nav === "push" && url !== location.hash) history.pushState(histState(), "", url);
+    if (nav === "push" && (force || url !== location.hash)) history.pushState(histState(), "", url);
     else history.replaceState(histState(), "", url);
   }
   /** 移動の前に呼ぶ：次の更新を新しい履歴として積む */
@@ -327,7 +335,7 @@ async function main() {
       .map((i) => `<li><i style="background:${kinds[i].color}"></i>${kinds[i].name}</li>`)
       .join("");
     const hatchSample = kinds.length
-      ? `<li class="rl-hatch"><i style="background:repeating-linear-gradient(135deg, ${stripeColor(kinds[0].color)} 0 2px, #f1efe9 2px 6px)"></i>斜線＝少数派も多い地域（斜線の色が少数派）</li>`
+      ? `<li class="rl-hatch"><i style="background:repeating-linear-gradient(135deg, ${stripeColor(kinds[0].color)} 0 2px, #f1efe9 2px 6px)"></i>斜線＝少数派も多い地域<span class="rl-long">（斜線の色が少数派）</span></li>`
       : "";
     relLegend.innerHTML = `<button type="button" class="rl-toggle" aria-label="凡例を開く／閉じる">宗教<span class="rl-caret"></span></button>
       <ul>${items}${shown.minors ? hatchSample : ""}${shown.nodata ? `<li><i class="rl-nodata"></i>データ作成中</li>` : ""}</ul>`;
@@ -343,7 +351,7 @@ async function main() {
       nextNav = "replace"; // beforeJump で積んだ項目に書く
       selectPolity(id, true);
     },
-    beforeJump: () => writeHistory("push"),
+    beforeJump: () => writeHistory("push", true),
   });
   $("#search-btn").addEventListener("click", () => search.toggle());
 
@@ -372,7 +380,12 @@ async function main() {
       yearInput.value = digit;
     },
     toggleModern: () => modernBtn.click(),
-    toggleReligion: () => {
+    toggleReligion: (revert) => {
+      // 長押しを離したときは、押したときに積んだ履歴を1つ戻して元の表示にする
+      if (revert && (history.state as HistState | null)?.l === state.layer) {
+        history.back();
+        return;
+      }
       setLayer(state.layer === "religion" ? "political" : "religion");
       toast(state.layer === "religion" ? "宗教の分布（R で戻す）" : "政治の地図");
     },
