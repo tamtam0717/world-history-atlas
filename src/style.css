@@ -702,6 +702,12 @@ body.debug #debug-info {
 .search-pulse {
   width: 18px;
   height: 18px;
+  pointer-events: none;
+}
+.search-pulse span {
+  display: block;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   border: 3px solid var(--accent);
   box-sizing: border-box;
@@ -743,7 +749,7 @@ body.debug #debug-info {
   position: absolute;
   top: 48px;
   right: 12px;
-  width: min(640px, calc(100% - 24px));
+  width: min(740px, calc(100% - 24px));
   max-height: calc(100% - 70px);
   overflow-y: auto;
   z-index: 9;

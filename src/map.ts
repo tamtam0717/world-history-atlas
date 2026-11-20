@@ -684,8 +684,10 @@ export class AtlasMap {
 
   /** 検索で選んだ場所に、しばらく目印を出す */
   pulse(lon: number, lat: number) {
+    // MapLibre は目印の要素そのものの transform で位置を決めるので、動きは内側の要素につける
     const el = document.createElement("div");
     el.className = "search-pulse";
+    el.appendChild(document.createElement("span"));
     const m = new maplibregl.Marker({ element: el }).setLngLat([lon, lat]).addTo(this.map);
     setTimeout(() => m.remove(), 3500);
   }
