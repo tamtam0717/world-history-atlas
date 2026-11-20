@@ -51,6 +51,24 @@
 - 神聖ローマ帝国の領邦は、主要な20〜30程度に絞る。残りは「その他の帝国諸邦」にまとめる。
 - 表記は日本語。高校世界史の教科書の表記に寄せる。
 
+## リポジトリの構成（2026-11-20 時点）
+
+- `src/`：画面（Vite + TypeScript、d3-geo・topojson-client。SVG で描画）
+  - `map.ts` 地図（ピースを所属で結合して描く、ラベル、ズーム、デバッグ表示）
+  - `panel.ts` 右パネル（出来事・国境の変化・国の情報）、`sheet.ts` スマホの下シート
+- `data/`：手で書くデータ（YAML）。形式は `docs/data-format.md`
+- `public/data/`：`pieces.topo.json`（ピース地図。tools/build_pieces.sh で生成し commit 済み）、`atlas.json`（npm run data で生成。commit しない）
+- `tools/`：ピースの生成、データの検証、historical-basemaps との照合（compare_hb.py）、地図の画像書き出し（snapshot.mjs）
+- `docs/`：データ形式、政体 ID の割り当て、データ作成エージェントへの共通の指示
+- GitHub Pages：`.github/workflows/pages.yml`（main への push でデプロイ）
+
+## 環境のメモ（クラウドセッション）
+
+- Python の地理系ライブラリは `/home/user/venv`（geopandas, shapely, pyogrio）。新しいセッションでは
+  `python3 -m venv /home/user/venv && /home/user/venv/bin/pip install geopandas pyogrio shapely pyarrow` で作り直す。
+- ネットワーク：raw.githubusercontent.com と media.githubusercontent.com（geoBoundaries）、npm は使える。Wikipedia・naciscdn.org・geoboundaries.org は bash からは使えない。
+- Playwright と Chromium は入っている（tools/snapshot.mjs で使う）。
+
 ## 想定ロードマップ
 1. 骨組みを作る
    - 静的サイト（ビルド後は Pages で配信できる形）
