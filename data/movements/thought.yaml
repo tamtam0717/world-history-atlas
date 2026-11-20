@@ -1,0 +1,257 @@
+# 潮流：思想・学問（1648–1815）。形式は docs/movements-format.md
+- id: scientific_revolution
+  name: 科学革命
+  kind: thought
+  curve:
+    - [1648, 0.7]
+    - [1687, 1.0]
+    - [1720, 0.8]
+    - [1760, 0.4]
+    - [1800, 0.2]
+  spread:
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1648, 0.6], [1662, 0.9], [1687, 1.0], [1727, 0.8], [1780, 0.4]]
+    - where: {polities: [netherlands]}
+      curve: [[1648, 0.8], [1680, 0.8], [1720, 0.5], [1760, 0.2]]
+    - where: {polities: [france]}
+      curve: [[1648, 0.6], [1666, 0.8], [1700, 0.7], [1750, 0.5], [1790, 0.3]]
+    - where: {polities: [tuscany]}
+      curve: [[1648, 0.6], [1667, 0.5], [1700, 0.2]]
+    - where: {polities: [saxony, prussia, hanover]}
+      curve: [[1670, 0.2], [1700, 0.5], [1740, 0.4], [1780, 0.2]]
+  people: [ニュートン, ボイル, ホイヘンス, ライプニッツ, フック, レーウェンフック]
+  works: [『プリンキピア（自然哲学の数学的諸原理）』, 『光学』]
+  events: []
+  text: 観察と実験、数学による自然の説明が広まり、ニュートンの万有引力の法則で頂点に達した。ロンドンの王立協会やパリの科学アカデミーが設立され、近代科学の土台が築かれた。
+  source: "https://ja.wikipedia.org/wiki/科学革命"
+
+- id: continental_rationalism
+  name: 大陸合理論
+  kind: thought
+  curve:
+    - [1648, 0.8]
+    - [1670, 0.9]
+    - [1714, 0.7]
+    - [1760, 0.4]
+    - [1790, 0.1]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1648, 0.9], [1700, 0.6], [1750, 0.3]]
+    - where: {polities: [netherlands]}
+      curve: [[1648, 0.7], [1677, 0.8], [1720, 0.3]]
+    - where: {polities: [hanover, saxony, prussia]}
+      curve: [[1670, 0.3], [1700, 0.7], [1740, 0.8], [1781, 0.3]]
+  people: [デカルト, スピノザ, ライプニッツ, パスカル, ヴォルフ]
+  works: [『方法序説』, 『エチカ』, 『単子論（モナドロジー）』, 『パンセ』]
+  events: []
+  text: 理性によって確実な真理を演繹的に導こうとする哲学。デカルトに始まり、オランダのスピノザ、ドイツのライプニッツへと受け継がれた。
+  source: "https://ja.wikipedia.org/wiki/大陸合理主義"
+
+- id: british_empiricism
+  name: イギリス経験論
+  kind: thought
+  curve:
+    - [1648, 0.4]
+    - [1690, 0.9]
+    - [1740, 1.0]
+    - [1776, 0.7]
+    - [1815, 0.3]
+  spread:
+    - where: {polities: [britain], regions: [scotland]}
+      center: true
+      curve: [[1648, 0.5], [1690, 1.0], [1740, 1.0], [1780, 0.7], [1815, 0.4]]
+    - where: {polities: [france]}
+      curve: [[1720, 0.3], [1750, 0.6], [1789, 0.4]]
+    - where: {polities: [netherlands]}
+      curve: [[1680, 0.4], [1700, 0.4], [1750, 0.2]]
+  people: [ロック, バークリー, ヒューム, ホッブズ]
+  works: [『人間知性論』, 『人間本性論』]
+  events: [名誉革命]
+  text: 知識はすべて経験から得られると考える哲学。ロックからバークリー、ヒュームへと続き、ヒュームの懐疑はカントに大きな影響を与えた。
+  source: "https://ja.wikipedia.org/wiki/イギリス経験論"
+
+- id: natural_law
+  name: 自然法思想
+  kind: thought
+  curve:
+    - [1648, 0.6]
+    - [1672, 0.8]
+    - [1720, 0.8]
+    - [1776, 0.9]
+    - [1815, 0.5]
+  spread:
+    - where: {polities: [netherlands]}
+      center: true
+      curve: [[1648, 0.8], [1700, 0.6], [1760, 0.3]]
+    - where: {polities: [sweden, prussia, saxony]}
+      curve: [[1660, 0.4], [1672, 0.8], [1720, 0.7], [1794, 0.6], [1815, 0.3]]
+    - where: {polities: [habsburg]}
+      curve: [[1740, 0.2], [1780, 0.6], [1811, 0.6]]
+    - where: {polities: [britain]}
+      curve: [[1650, 0.5], [1690, 0.8], [1776, 0.7]]
+    - where: {polities: [france]}
+      curve: [[1700, 0.3], [1789, 0.9], [1804, 0.7]]
+  people: [グロティウス, プーフェンドルフ, トマジウス, ヴォルフ]
+  works: [『戦争と平和の法』, 『自然法と国際法』]
+  events: [ウェストファリア条約, ナポレオン法典（フランス民法典）]
+  text: 国家や時代をこえて通用する理性にもとづく法があるとする思想。「国際法の父」グロティウス以後、国際法・近代の法典編纂や人権宣言の理念を支えた。
+  source: "https://ja.wikipedia.org/wiki/自然法"
+
+- id: social_contract
+  name: 社会契約説
+  kind: thought
+  curve:
+    - [1651, 0.3]
+    - [1690, 0.6]
+    - [1762, 0.9]
+    - [1789, 1.0]
+    - [1815, 0.5]
+  spread:
+    - where: {polities: [britain]}
+      center: true
+      curve: [[1651, 0.5], [1689, 1.0], [1720, 0.7], [1800, 0.5]]
+    - where: {polities: [france]}
+      center: true
+      curve: [[1700, 0.2], [1762, 0.8], [1789, 1.0], [1795, 0.8], [1815, 0.4]]
+    - where: {polities: [geneva]}
+      curve: [[1762, 0.7], [1790, 0.6]]
+    - where: {polities: [poland_lithuania, netherlands]}
+      curve: [[1780, 0.3], [1791, 0.6], [1795, 0.3]]
+  people: [ホッブズ, ロック, ルソー]
+  works: [『リヴァイアサン』, 『統治二論（市民政府二論）』, 『社会契約論』]
+  events: [名誉革命, アメリカ独立戦争はじまる, フランス革命はじまる, 5月3日憲法]
+  text: 国家は自由・平等な個人どうしの契約によってつくられると考える政治思想。ロックの抵抗権はアメリカ独立宣言に、ルソーの人民主権はフランス革命に影響した。
+  source: "https://ja.wikipedia.org/wiki/社会契約"
+
+- id: enlightenment
+  name: 啓蒙思想
+  kind: thought
+  curve:
+    - [1680, 0.1]
+    - [1720, 0.5]
+    - [1750, 1.0]
+    - [1789, 0.8]
+    - [1815, 0.3]
+  spread:
+    - where: {polities: [britain, netherlands]}
+      curve: [[1680, 0.4], [1720, 0.8], [1790, 0.6], [1815, 0.3]]
+    - where: {polities: [france]}
+      center: true
+      curve: [[1700, 0.3], [1740, 1.0], [1789, 1.0], [1800, 0.5]]
+    - where: {regions: [scotland]}
+      curve: [[1730, 0.4], [1760, 0.9], [1800, 0.5]]
+    - where: {polities: [prussia, saxony, hanover]}
+      curve: [[1720, 0.3], [1750, 0.7], [1784, 0.9], [1806, 0.4]]
+    - where: {polities: [habsburg, tuscany, naples]}
+      curve: [[1740, 0.2], [1765, 0.6], [1785, 0.8], [1800, 0.3]]
+    - where: {polities: [russia, sweden, denmark]}
+      curve: [[1740, 0.1], [1765, 0.5], [1790, 0.4], [1815, 0.2]]
+    - where: {polities: [spain, portugal]}
+      curve: [[1750, 0.2], [1770, 0.4], [1808, 0.3]]
+  people: [ヴォルテール, モンテスキュー, ルソー, ディドロ, ダランベール, カント]
+  works: [『法の精神』, 『哲学書簡』, 『百科全書』, 『社会契約論』]
+  events: [フランス革命はじまる, 宗教寛容令と農奴解放令, トスカーナで死刑廃止]
+  text: 理性の光で偏見や迷信を打破し、社会を進歩させようとする思想運動。フランスのフィロゾーフを中心に、サロンや『百科全書』を通じてヨーロッパ中に広まった。
+  source: "https://ja.wikipedia.org/wiki/啓蒙思想"
+
+- id: physiocracy
+  name: 重農主義
+  kind: thought
+  curve:
+    - [1750, 0.1]
+    - [1758, 0.6]
+    - [1770, 1.0]
+    - [1776, 0.7]
+    - [1800, 0.2]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1750, 0.2], [1758, 0.7], [1770, 1.0], [1776, 0.8], [1790, 0.3]]
+    - where: {polities: [baden, tuscany]}
+      curve: [[1765, 0.3], [1775, 0.6], [1790, 0.3]]
+    - where: {polities: [poland_lithuania, sweden]}
+      curve: [[1765, 0.2], [1775, 0.4], [1790, 0.2]]
+  people: [ケネー, テュルゴー, ミラボー（父）]
+  works: [『経済表』]
+  events: []
+  text: 富の源泉は農業にあると考え、重商主義の保護・統制に反対して「なすに任せよ（レッセ・フェール）」を唱えたフランスの経済思想。テュルゴーの財政改革に生かされた。
+  source: "https://ja.wikipedia.org/wiki/重農主義"
+
+- id: classical_economics
+  name: 古典派経済学
+  kind: thought
+  curve:
+    - [1760, 0.1]
+    - [1776, 0.6]
+    - [1800, 0.8]
+    - [1815, 1.0]
+  spread:
+    - where: {polities: [britain], regions: [scotland]}
+      center: true
+      curve: [[1760, 0.2], [1776, 0.8], [1800, 0.9], [1815, 1.0]]
+    - where: {polities: [france]}
+      curve: [[1790, 0.2], [1803, 0.5], [1815, 0.6]]
+    - where: {polities: [prussia]}
+      curve: [[1790, 0.2], [1807, 0.5], [1815, 0.5]]
+  people: [アダム・スミス, マルサス, リカード, セー]
+  works: [『諸国民の富（国富論）』, 『人口論』]
+  events: [シュタインの十月勅令（農民解放）]
+  text: アダム・スミスが『諸国民の富』で、分業と自由な市場競争が富を増やすと説いたことに始まる経済学。重商主義を批判し、自由貿易の理論的な支えとなった。
+  source: "https://ja.wikipedia.org/wiki/古典派経済学"
+
+- id: german_idealism
+  name: ドイツ観念論
+  kind: thought
+  curve:
+    - [1770, 0.1]
+    - [1781, 0.5]
+    - [1800, 0.9]
+    - [1815, 1.0]
+  spread:
+    - where: {polities: [prussia]}
+      center: true
+      curve: [[1770, 0.2], [1781, 0.7], [1800, 0.8], [1810, 1.0], [1815, 1.0]]
+    - where: {polities: [saxon_duchies]}
+      curve: [[1785, 0.3], [1795, 0.9], [1806, 0.8], [1815, 0.5]]
+    - where: {polities: [bavaria, wurttemberg]}
+      curve: [[1790, 0.2], [1805, 0.6], [1815, 0.6]]
+  people: [カント, フィヒテ, シェリング, ヘーゲル]
+  works: [『純粋理性批判』, 『実践理性批判』, 『精神現象学』]
+  events: [フィヒテ「ドイツ国民に告ぐ」, ベルリン大学の創設]
+  text: カントが経験論と合理論を総合した批判哲学に始まり、フィヒテ・シェリング・ヘーゲルへと続いたドイツの哲学。人間の自由と精神を中心にすえた。
+  source: "https://ja.wikipedia.org/wiki/ドイツ観念論"
+
+- id: nationalism
+  name: ナショナリズムの芽生え
+  kind: thought
+  curve:
+    - [1770, 0.1]
+    - [1792, 0.4]
+    - [1806, 0.6]
+    - [1813, 1.0]
+    - [1815, 0.8]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1789, 0.3], [1792, 0.9], [1800, 0.8], [1815, 0.6]]
+    - where: {polities: [spain]}
+      curve: [[1800, 0.1], [1808, 0.9], [1812, 1.0], [1815, 0.6]]
+    - where: {polities: [prussia]}
+      curve: [[1790, 0.1], [1807, 0.6], [1813, 1.0], [1815, 0.8]]
+    - where: {polities: [poland_lithuania, warsaw]}
+      curve: [[1791, 0.5], [1794, 0.9], [1807, 0.8], [1815, 0.6]]
+    - where: {polities: [habsburg]}
+      curve: [[1805, 0.2], [1809, 0.6], [1815, 0.4]]
+    - where: {polities: [russia]}
+      curve: [[1810, 0.2], [1812, 0.8], [1815, 0.5]]
+    - where: {polities: [serbia]}
+      curve: [[1804, 0.5], [1813, 0.6], [1815, 0.8]]
+    - where: {regions: [ireland]}
+      curve: [[1790, 0.3], [1798, 0.8], [1815, 0.4]]
+  people: [ヘルダー, フィヒテ, コシチュシコ, シュタイン]
+  works: [フィヒテ「ドイツ国民に告ぐ」]
+  events: [フランス革命戦争はじまる・第一共和政, コシチュシコの蜂起, スペイン反乱（半島戦争）, フィヒテ「ドイツ国民に告ぐ」, チロル蜂起, プロイセンの対仏宣戦（解放戦争）, ライプツィヒの戦い（諸国民戦争）, 第一次セルビア蜂起]
+  text: 言語や文化を共有する「国民」が国家の主人公であるという考え方。フランス革命の国民軍がその力を示し、ナポレオンの支配への抵抗の中で各地に広がった。
+  source: "https://ja.wikipedia.org/wiki/ナショナリズム"

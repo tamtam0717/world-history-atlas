@@ -1,0 +1,205 @@
+# 潮流：芸術様式（1648–1815）。形式は docs/movements-format.md
+- id: baroque
+  name: バロック
+  kind: art
+  curve:
+    - [1648, 0.9]
+    - [1680, 1.0]
+    - [1720, 0.8]
+    - [1750, 0.4]
+    - [1780, 0.1]
+  spread:
+    - where: {polities: [papal_states]}
+      center: true
+      curve: [[1648, 1.0], [1680, 1.0], [1720, 0.6], [1760, 0.2]]
+    - where: {polities: [spain, portugal, naples]}
+      curve: [[1648, 0.9], [1690, 0.9], [1740, 0.6], [1770, 0.2]]
+    - where: {polities: [france]}
+      curve: [[1648, 0.6], [1682, 0.9], [1715, 0.6], [1730, 0.2]]
+    - where: {polities: [habsburg, bavaria, salzburg, wurzburg, bamberg]}
+      curve: [[1648, 0.4], [1690, 0.8], [1720, 1.0], [1750, 0.6], [1780, 0.2]]
+    - where: {polities: [saxony, prussia, hanover]}
+      curve: [[1670, 0.3], [1710, 0.8], [1740, 0.6], [1760, 0.2]]
+    - where: {polities: [netherlands, britain]}
+      curve: [[1648, 0.7], [1700, 0.6], [1730, 0.3]]
+    - where: {polities: [poland_lithuania, russia]}
+      curve: [[1660, 0.3], [1700, 0.6], [1750, 0.7], [1770, 0.3]]
+  people: [ベルニーニ, ルーベンス, レンブラント, ベラスケス, バッハ, ヘンデル]
+  works: [サン・ピエトロ大聖堂の広場, ヴェルサイユ宮殿, 『夜警』, 『ラス・メニーナス』, 『マタイ受難曲』]
+  events: [ヴェルサイユへの宮廷移転, プファルツ選帝侯がマンハイムへ遷都・ヴュルツブルクのレジデンツ着工]
+  text: 豪華で躍動的、劇的な明暗を特徴とする芸術様式。反宗教改革のカトリック教会や絶対王政の宮廷が権威を示すために好み、建築・絵画・音楽に広がった。
+  source: "https://ja.wikipedia.org/wiki/バロック"
+
+- id: french_classicism
+  name: フランス古典主義
+  kind: art
+  curve:
+    - [1648, 0.6]
+    - [1665, 1.0]
+    - [1690, 0.8]
+    - [1720, 0.4]
+    - [1760, 0.1]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1648, 0.7], [1665, 1.0], [1690, 0.9], [1715, 0.5], [1750, 0.2]]
+    - where: {polities: [britain]}
+      curve: [[1660, 0.3], [1700, 0.5], [1740, 0.3]]
+    - where: {polities: [prussia, saxony, sweden]}
+      curve: [[1680, 0.2], [1720, 0.4], [1760, 0.2]]
+  people: [コルネイユ, ラシーヌ, モリエール, ラ・フォンテーヌ, プッサン]
+  works: [『ル・シッド』, 『フェードル』, 『人間ぎらい』, 『寓話』]
+  events: [ルイ14世の親政はじまる]
+  text: 古代ギリシア・ローマを模範とし、調和・均整・理性を重んじたルイ14世時代の文学・芸術。悲劇のコルネイユ・ラシーヌ、喜劇のモリエールが代表。
+  source: "https://ja.wikipedia.org/wiki/古典主義"
+
+- id: rococo
+  name: ロココ
+  kind: art
+  curve:
+    - [1715, 0.2]
+    - [1735, 0.8]
+    - [1750, 1.0]
+    - [1770, 0.5]
+    - [1790, 0.1]
+  spread:
+    - where: {polities: [france]}
+      center: true
+      curve: [[1715, 0.4], [1735, 1.0], [1755, 0.9], [1770, 0.4], [1785, 0.1]]
+    - where: {polities: [prussia, saxony, bavaria, wurzburg, palatinate]}
+      curve: [[1725, 0.3], [1745, 1.0], [1765, 0.7], [1785, 0.2]]
+    - where: {polities: [habsburg]}
+      curve: [[1730, 0.3], [1750, 0.8], [1775, 0.4]]
+    - where: {polities: [russia]}
+      curve: [[1740, 0.2], [1755, 0.7], [1770, 0.4], [1790, 0.1]]
+    - where: {polities: [venice]}
+      curve: [[1720, 0.4], [1750, 0.8], [1780, 0.3]]
+  people: [ワトー, ブーシェ, フラゴナール, ティエポロ]
+  works: [サンスーシ宮殿, 『シテール島への巡礼』, 『ぶらんこ』]
+  events: [サンスーシ宮殿の建設はじまる, マイセン磁器の誕生]
+  text: バロックのあとに流行した、優美で繊細な装飾の様式。貴族のサロン文化と結びつき、曲線と淡い色彩が好まれた。プロイセンのサンスーシ宮殿が代表的。
+  source: "https://ja.wikipedia.org/wiki/ロココ"
+
+- id: classical_music
+  name: 古典派音楽
+  kind: art
+  curve:
+    - [1740, 0.1]
+    - [1760, 0.5]
+    - [1785, 1.0]
+    - [1805, 0.9]
+    - [1815, 0.7]
+  spread:
+    - where: {polities: [habsburg]}
+      center: true
+      curve: [[1745, 0.3], [1770, 0.7], [1785, 1.0], [1810, 0.9], [1815, 0.8]]
+    - where: {polities: [salzburg]}
+      curve: [[1760, 0.4], [1775, 0.8], [1781, 0.5]]
+    - where: {polities: [palatinate, prussia]}
+      curve: [[1745, 0.4], [1765, 0.7], [1790, 0.4]]
+    - where: {polities: [britain]}
+      curve: [[1765, 0.3], [1791, 0.7], [1800, 0.4]]
+    - where: {polities: [france, naples]}
+      curve: [[1750, 0.3], [1780, 0.5], [1800, 0.3]]
+  people: [ハイドン, モーツァルト, ベートーヴェン, グルック]
+  works: [『フィガロの結婚』, 『魔笛』, 交響曲第3番「英雄」, 交響曲第5番「運命」]
+  events: []
+  text: 均整のとれた形式と明快な旋律を特徴とする音楽。ソナタ形式や交響曲・弦楽四重奏が確立し、ウィーンを中心にハイドン・モーツァルト・ベートーヴェンが活躍した。
+  source: "https://ja.wikipedia.org/wiki/古典派音楽"
+
+- id: neoclassicism
+  name: 新古典主義
+  kind: art
+  curve:
+    - [1750, 0.1]
+    - [1770, 0.5]
+    - [1790, 0.9]
+    - [1806, 1.0]
+    - [1815, 0.8]
+  spread:
+    - where: {polities: [papal_states]}
+      curve: [[1750, 0.4], [1765, 0.7], [1790, 0.6], [1815, 0.4]]
+    - where: {polities: [france]}
+      center: true
+      curve: [[1760, 0.2], [1785, 0.8], [1800, 1.0], [1815, 0.8]]
+    - where: {polities: [britain]}
+      curve: [[1755, 0.3], [1780, 0.7], [1810, 0.6]]
+    - where: {polities: [prussia, bavaria]}
+      curve: [[1770, 0.2], [1791, 0.7], [1815, 0.8]]
+    - where: {polities: [russia]}
+      curve: [[1765, 0.3], [1790, 0.7], [1815, 0.8]]
+    - where: {polities: [cisalpine, naples_bonaparte, etruria]}
+      curve: [[1797, 0.5], [1805, 0.8], [1814, 0.6]]
+  people: [ダヴィド, アングル, カノーヴァ, ヴィンケルマン]
+  works: [『ホラティウス兄弟の誓い』, 『ナポレオンの戴冠式』, ブランデンブルク門, エトワール凱旋門]
+  events: [ナポレオンの皇帝即位・オーストリア帝国の成立]
+  text: ポンペイ遺跡の発掘などで古代への関心が高まるなか、ロココの軽さに反発して、古代ギリシア・ローマの厳かで均整のとれた美を復活させようとした様式。フランス革命やナポレオンの権威を表現した。
+  source: "https://ja.wikipedia.org/wiki/新古典主義"
+
+- id: sturm_und_drang
+  name: シュトゥルム・ウント・ドラング（疾風怒濤）
+  kind: art
+  curve:
+    - [1765, 0.1]
+    - [1774, 1.0]
+    - [1782, 0.7]
+    - [1790, 0.1]
+  spread:
+    - where: {polities: [frankfurt, saxon_duchies]}
+      center: true
+      curve: [[1767, 0.3], [1774, 1.0], [1780, 0.6], [1788, 0.1]]
+    - where: {polities: [wurttemberg, palatinate]}
+      curve: [[1775, 0.3], [1781, 0.9], [1786, 0.3]]
+    - where: {polities: [prussia, hanover]}
+      curve: [[1770, 0.2], [1776, 0.5], [1785, 0.1]]
+  people: [ゲーテ, シラー, ヘルダー, クリンガー]
+  works: [『若きウェルテルの悩み』, 『群盗』]
+  events: [シラーの『群盗』初演とヴュルテンベルクからの逃亡, ゲーテがフランクフルトで誕生]
+  text: 啓蒙の理性偏重に反発し、感情・自然・天才の自由を重んじたドイツの文学運動。若いゲーテやシラーが担い、ロマン主義の先駆けとなった。
+  source: "https://ja.wikipedia.org/wiki/シュトゥルム・ウント・ドラング"
+
+- id: weimar_classicism
+  name: ドイツ古典主義（ヴァイマル古典主義）
+  kind: art
+  curve:
+    - [1786, 0.2]
+    - [1794, 0.8]
+    - [1805, 1.0]
+    - [1815, 0.6]
+  spread:
+    - where: {polities: [saxon_duchies]}
+      center: true
+      curve: [[1786, 0.3], [1794, 0.9], [1805, 1.0], [1815, 0.7]]
+    - where: {polities: [prussia, saxony, wurttemberg]}
+      curve: [[1790, 0.2], [1800, 0.5], [1815, 0.4]]
+  people: [ゲーテ, シラー]
+  works: [『ファウスト（第1部）』, 『ヴィルヘルム・テル』, 『ヴィルヘルム・マイスターの修業時代』]
+  events: []
+  text: ゲーテとシラーがヴァイマルで協力し、古代の調和と人間性の完成を理想として生み出した文学。ドイツ語文学を世界的な水準に高めた。
+  source: "https://ja.wikipedia.org/wiki/ヴァイマル古典主義"
+
+- id: romanticism
+  name: ロマン主義
+  kind: art
+  curve:
+    - [1790, 0.1]
+    - [1798, 0.4]
+    - [1808, 0.7]
+    - [1815, 0.9]
+  spread:
+    - where: {polities: [prussia, saxony, saxon_duchies]}
+      center: true
+      curve: [[1795, 0.3], [1798, 0.8], [1808, 0.9], [1815, 1.0]]
+    - where: {polities: [britain]}
+      curve: [[1790, 0.3], [1798, 0.8], [1815, 1.0]]
+    - where: {polities: [france]}
+      curve: [[1800, 0.3], [1810, 0.5], [1815, 0.6]]
+    - where: {polities: [habsburg, bavaria, baden]}
+      curve: [[1800, 0.2], [1808, 0.5], [1815, 0.7]]
+    - where: {polities: [denmark, sweden, russia]}
+      curve: [[1800, 0.2], [1815, 0.5]]
+  people: [ノヴァーリス, シュレーゲル兄弟, グリム兄弟, ワーズワース, バイロン, シャトーブリアン, フリードリヒ（画家）]
+  works: [『抒情歌謡集』, 『グリム童話集』, 『雲海の上の旅人』]
+  events: []
+  text: 理性や古典の規範よりも、感情・個性・想像力、そして中世や民族の伝統を重んじた芸術思潮。ドイツとイギリスで始まり、19世紀のヨーロッパ全体に広がった。
+  source: "https://ja.wikipedia.org/wiki/ロマン主義"
