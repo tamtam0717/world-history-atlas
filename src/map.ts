@@ -97,7 +97,7 @@ export class AtlasMap {
       fadeDuration: 0,
     });
     this.map.touchZoomRotate.disableRotation();
-    this.map.keyboard.disable(); // ←→ は年の操作に使う
+    this.map.keyboard.disable(); // キー操作は shortcuts.ts で扱う
 
     this.ready = new Promise((resolve) => {
       this.map.on("load", () => {
@@ -600,6 +600,79 @@ export class AtlasMap {
     this.map.jumpTo({ center: [lon, lat], zoom: this.baseZoom + Math.log2(k) });
   }
 
+  /** 画面上で (dx, dy) ピクセルだけ動かす。duration 0 なら即座に */
+  panBy(dx: number, dy: number, duration = 250) {
+    this.map.panBy([dx, dy], { duration, easing: duration ? undefined : (t) => t });
+  }
+
+  /** 地図の表示部分の大きさ（ピクセル） */
+  viewSize(): { width: number; height: number } {
+    const c = this.map.getContainer();
+    return { width: c.clientWidth, height: c.clientHeight - this.bottomInset };
+  }
+
+  /** 経度・緯度へ移動する。zoom を省略したときは今の拡大率のまま（ただし minZoom より引いていれば寄せる） */
+  flyTo(lon: number, lat: number, zoom?: number, minZoom = 0) {
+    const z = zoom ?? Math.max(this.map.getZoom(), minZoom);
+    this.map.flyTo({ center: [lon, lat], zoom: z, duration: 900, essential: true });
+  }
+
+  /** 範囲 [西, 南, 東, 北] が収まるように寄せる */
+  fitBox(b: [number, number, number, number], maxZoom = 7) {
+    this.map.fitBounds(
+      [
+        [b[0], b[1]],
+        [b[2], b[3]],
+      ],
+      { padding: 40, maxZoom, duration: 900, essential: true },
+    );
+  }
+
+  /** 地域へ移動する（W：地球全体、E：ヨーロッパ、NA・AF・AS：北米・アフリカ・アジア） */
+  flyToRegion(region: "world" | "europe" | "na" | "af" | "as") {
+    if (region === "world") {
+      const c = this.map.getCenter();
+      this.map.flyTo({ center: [c.lng, Math.max(-30, Math.min(30, c.lat))], zoom: this.map.getMinZoom(), duration: 900, essential: true });
+      return;
+    }
+    const boxes: Record<string, [number, number, number, number]> = {
+      europe: [EUROPE[0][0], EUROPE[0][1], EUROPE[1][0], EUROPE[1][1]],
+      na: [-128, 14, -60, 58],
+      af: [-18, -35, 52, 37],
+      as: [40, 0, 145, 60],
+    };
+    this.fitBox(boxes[region]);
+  }
+
+  /** 現代の国（ピースの iso）の範囲。ピースがなければ null */
+  modernBox(iso: string): [number, number, number, number] | null {
+    const ps: number[] = [];
+    this.geoms.forEach((g, i) => {
+      if (g.properties!.iso === iso) ps.push(i);
+    });
+    return ps.length ? bbox(this.merged(`modern${iso}`, ps).geo) : null;
+  }
+
+  /** 現代の国（ピースの iso）の一覧 */
+  modernIsos(): string[] {
+    return [...new Set(this.geoms.map((g) => g.properties!.iso))];
+  }
+
+  /** いま地図に出ている（いずれかのピースを持つ）政体の ID */
+  politiesOnMap(): string[] {
+    const set = new Set<number>();
+    for (const o of this.ownerOf) if (o >= 0) set.add(o);
+    return [...set].map((o) => this.idx.atlas.polities[o].id);
+  }
+
+  /** 検索で選んだ場所に、しばらく目印を出す */
+  pulse(lon: number, lat: number) {
+    const el = document.createElement("div");
+    el.className = "search-pulse";
+    const m = new maplibregl.Marker({ element: el }).setLngLat([lon, lat]).addTo(this.map);
+    setTimeout(() => m.remove(), 3500);
+  }
+
   setBottomInset(px: number) {
     if (px === this.bottomInset) return;
     this.bottomInset = px;
@@ -690,7 +763,8 @@ function cityFeature(name: string, lon: number, lat: number, pop: number, capita
     properties: {
       name,
       capital,
-      minz: capital ? Math.min(minz, 3.4) : minz,
+      // 大きな国の首都は早めに出す。小さな領邦の首都は、人口なりの拡大率より少し早めに出す程度にする
+      minz: capital ? (pop >= 40000 ? Math.min(minz, 3.4) : minz - 0.7) : minz,
       r: capital ? r + 0.8 : r,
       rank: -(pop + (capital ? 1e7 : 0)),
     },

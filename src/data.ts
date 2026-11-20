@@ -93,6 +93,8 @@ export interface City {
 
 export interface ModernCity {
   name: string;
+  /** 英語名（検索用） */
+  en?: string;
   lon: number;
   lat: number;
   pop: number;
