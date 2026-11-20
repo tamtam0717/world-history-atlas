@@ -11,6 +11,13 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "data");
 const OUT = path.join(ROOT, "public", "data", "atlas.json");
 const strict = process.argv.includes("--strict");
+const argVal = (name) => {
+  const i = process.argv.indexOf(name);
+  return i < 0 ? null : process.argv[i + 1];
+};
+// --missing 1648,1700 [--iso DEU,AUT] : 指定した年にデータのないピースを一覧する
+const missingYears = argVal("--missing")?.split(",").map(Number) ?? null;
+const missingIso = argVal("--iso")?.split(",") ?? null;
 
 const warnings = [];
 const warn = (msg) => warnings.push(msg);
@@ -21,7 +28,14 @@ function loadDir(dir) {
   const out = [];
   for (const f of fs.readdirSync(full).sort()) {
     if (!/\.ya?ml$/.test(f)) continue;
-    const docs = YAML.parse(fs.readFileSync(path.join(full, f), "utf8")) ?? [];
+    let docs;
+    try {
+      docs = YAML.parse(fs.readFileSync(path.join(full, f), "utf8")) ?? [];
+    } catch (e) {
+      // 書きかけのファイルがあっても他のデータは確認できるように、読み飛ばして警告にする
+      warn(`${dir}/${f}: YAML の書式エラーのため読み飛ばしました: ${String(e.message).split("\n")[0]}`);
+      continue;
+    }
     if (!Array.isArray(docs)) throw new Error(`${dir}/${f}: 先頭はリスト（- で始まる項目）にしてください`);
     for (const d of docs) out.push({ ...d, _file: `${dir}/${f}` });
   }
@@ -35,7 +49,13 @@ const pieces = tsv.map((l) => Object.fromEntries(l.split("\t").map((v, i) => [he
 const pieceIndex = new Map(pieces.map((p, i) => [p.id, i]));
 const byIso = new Map();
 const byAdm1 = new Map();
+const byAdm2 = new Map();
 for (const [i, p] of pieces.entries()) {
+  if (p.adm2) {
+    const k2 = `${p.iso}/${p.adm2}`;
+    if (!byAdm2.has(k2)) byAdm2.set(k2, []);
+    byAdm2.get(k2).push(i);
+  }
   if (!byIso.has(p.iso)) byIso.set(p.iso, []);
   byIso.get(p.iso).push(i);
   const k = `${p.iso}/${p.adm1}`;
@@ -87,6 +107,11 @@ function resolveRegion(id, where) {
   for (const k of sel.adm1 ?? []) {
     const l = byAdm1.get(k);
     if (!l) warn(`${where2}: 該当のない adm1 "${k}"`);
+    for (const i of l ?? []) set.add(i);
+  }
+  for (const k of sel.adm2 ?? []) {
+    const l = byAdm2.get(k);
+    if (!l) warn(`${where2}: 該当のない adm2 "${k}"`);
     for (const i of l ?? []) set.add(i);
   }
   for (const pid of sel.pieces ?? []) {
@@ -193,4 +218,20 @@ console.log(
   `政体 ${polities.length} / 地域 ${regions.length}（変遷あり ${timelineRegions.length}） / 出来事 ${events.length} / ピース ${covered}/${pieces.length} にデータあり`,
 );
 for (const w of warnings) console.warn("警告: " + w);
+if (missingYears) {
+  for (const y of missingYears) {
+    const miss = pieces.filter((p, i) => {
+      if (missingIso && !missingIso.includes(p.iso)) return false;
+      return !pieceTimelines[i].some((s) => s[0] <= y);
+    });
+    console.log(`\n${y}年にデータのないピース: ${miss.length}`);
+    const byGroup = new Map();
+    for (const p of miss) {
+      const k = `${p.iso}/${p.adm1}`;
+      if (!byGroup.has(k)) byGroup.set(k, []);
+      byGroup.get(k).push(p.id);
+    }
+    for (const [k, ids] of byGroup) console.log(`  ${k}（${ids.length}）: ${ids.slice(0, 12).join(" ")}${ids.length > 12 ? " …" : ""}`);
+  }
+}
 if (strict && warnings.length) process.exit(1);
