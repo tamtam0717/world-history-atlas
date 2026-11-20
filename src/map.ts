@@ -619,7 +619,7 @@ export class AtlasMap {
 
   /** 画面上で (dx, dy) ピクセルだけ動かす。duration 0 なら即座に */
   panBy(dx: number, dy: number, duration = 250) {
-    this.map.panBy([dx, dy], { duration, easing: duration ? undefined : (t) => t });
+    this.map.panBy([dx, dy], duration ? { duration } : { duration: 0, animate: false });
   }
 
   /** 地図の表示部分の大きさ（ピクセル） */

@@ -141,7 +141,7 @@ export function setupShortcuts(a: ShortcutActions) {
       return;
     }
 
-    // 矢印キー：修飾キーなし → パン、Option(Alt) → 1年（Shift で10年）、Command/Ctrl → 節目
+    // 矢印キー：修飾キーなし → パン、Option(Alt) → 1年（Shift で10年）、Command/Ctrl → ←→ 節目・↑↓ 最初／最後の年
     if (k in ARROWS) {
       clearPending();
       const horiz = k === "ArrowLeft" || k === "ArrowRight";
@@ -150,8 +150,12 @@ export function setupShortcuts(a: ShortcutActions) {
         if (!horiz) return;
         a.stepYear(dir * (e.shiftKey ? 10 : 1));
       } else if ((e.ctrlKey || e.metaKey) && !e.altKey) {
-        if (!horiz) return;
-        if (!e.repeat) a.milestone(dir);
+        if (e.repeat) {
+          e.preventDefault();
+          return;
+        }
+        if (horiz) a.milestone(dir);
+        else a.edgeYear(k === "ArrowUp" ? "first" : "last"); // Mac の「先頭／末尾へ」に合わせる
       } else if (!e.ctrlKey && !e.metaKey) {
         const f = e.shiftKey ? 2 : 1;
         if (!held.has(k)) {

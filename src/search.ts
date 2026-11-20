@@ -33,7 +33,7 @@ interface Item {
 
 /**
  * 検索用の正規化：全角半角・大文字小文字・アクセント記号・ひらがな／カタカナの違いを吸収し、
- * 中黒・空白・長音などの記号を取り除く。ヴァ行はバ行に寄せる。
+ * 中黒・空白などの記号を取り除く。ヴァ行はバ行に寄せる（長音の有無は matchScore で吸収）。
  */
 export function normalize(s: string): string {
   let t = s
@@ -50,7 +50,23 @@ export function normalize(s: string): string {
     .replace(/ゔ/g, "ぶ")
     .replace(/ぢ/g, "じ")
     .replace(/づ/g, "ず");
-  return t.replace(/[\s・･ー\-‐－–—'’`.,()（）「」『』〔〕［］[\]]/g, "");
+  return t.replace(/[\s・･\-‐－–—'’`.,()（）「」『』〔〕［］[\]]/g, "");
+}
+
+/** 長音（ー）も無視した、ゆるい比較用 */
+const loose = (s: string) => s.replace(/[ー〜~]/g, "");
+
+/** 一致度：0 完全一致、1 前方一致、2 部分一致（長音を無視して一致したときは +0.5）。一致しなければ 9 */
+function matchScore(key: string, q: string, lq: string): number {
+  if (key === q) return 0;
+  if (key.startsWith(q)) return 1;
+  if (key.includes(q)) return 2;
+  const lk = loose(key);
+  if (!lq) return 9;
+  if (lk === lq) return 0.5;
+  if (lk.startsWith(lq)) return 1.5;
+  if (lk.includes(lq)) return 2.5;
+  return 9;
 }
 
 export interface SearchDeps {
@@ -237,11 +253,12 @@ export class Search {
       this.render(this.input.value ? "" : "国名・地名を入力（日本語／英語）");
       return;
     }
+    const lq = loose(q);
     const scored: { it: Item; s: number }[] = [];
     for (const it of this.items) {
       let best = 9;
       for (const k of it.keys) {
-        const s = k === q ? 0 : k.startsWith(q) ? 1 : k.includes(q) ? 2 : 9;
+        const s = matchScore(k, q, lq);
         if (s < best) best = s;
       }
       if (best < 9) scored.push({ it, s: best });
