@@ -382,3 +382,54 @@ docs/review/sa_southeast_asia.md の指摘への対応。重要度 A・B はす�
 - `npm run data`：警告なし（政体 463 / 地域 1604 / 出来事 1910）。
 - `--missing 1648,1788,1797,1801,1821,1841,1945,1946,1950,1979,1980,2022,2023,2025 --iso MMR,THA,LAO,KHM,VNM,IDN,MYS,SGP,BRN,PHL,TLS`：すべて 0。
 - `node tools/snapshot.mjs … --out .cache/snapshots/fix_sea/<main|shan|mar|java|mal>`：ベトナム北部 1979（国境の斜線が消えた）、シャン州 2022・2023（2023 年から北部に斜線）、ニューギニア 1955（斜線なし）、ジャワ・スマトラ 1945・1946（バンドン・パレンバンの占領）を目視した。
+
+## 南・東南アジア 分布・都市・潮流
+
+docs/review/sa_distributions.md の指摘への対応。重要度 B はすべて、C は妥当なものを直した。A（ヨーロッパの潮流が植民地で光る）は、別の担当が仕組み（spread の本国限定・exclude_regions）ごと直している。
+
+### 直したもの（宗教）
+- **[B] パンジャーブ東部**：`rel_hoshiarpur`（1648 hindu/sunni → 1947 hindu/sikh）と `rel_ludhiana`（1648 sunni/hindu → 1765 sunni/sikh → 1881 sikh/sunni → 1947 sikh/hindu）を作った。
+- **[B] リアーシー**：`rel_jammu_hindu` から外し、`rel_reasi`（1648 sunni/hindu → 1947 hindu/sunni）にした。
+- **[B] クアラルンプール**：`rel_kuala_lumpur`（1870 chinese_folk/sunni → 2000 sunni/chinese_folk）を作った。スランゴールの 1980 年はそのまま。言語も `lang_kuala_lumpur`（chinese/malay → 2000 malay/chinese）。
+- **[B] ラブアン**：`rel_sabah` から外し、`rel_brunei`（sunni）に入れた（言語の `lang_labuan_brunei` と同じ扱い）。
+- **[B] コーカン**：`rel_wa` から外し、`rel_kokang`（chinese_folk/theravada）にした。
+- **[B] パラワン・ミンドロ**：宗教を 1648 other/catholic → 1900 catholic/other → 1950 catholic、言語は `lang_mindoro_palawan_interior`（1648 philippine_other/tagalog → 1950 tagalog/philippine_other。マリンドゥケは tagalog のまま）。
+- **[B] メコン・デルタ**：1760 を theravada/vietnamese_folk（言語 khmer/vietnamese）、1850 で入れ替え（少数派の斜線は 1900 まで）。デルタ東部（ヴィンロン・ベンチェ・ドンタップ）は `rel_mekong_delta_east`・`lang_mekong_delta_east` に分けて 1760 からベトナム人が多数。
+- **[B] トバ・バタク**：1880 other/lutheran → 1900 lutheran/other → 1910 lutheran。
+- **[B] 西カリマンタン内陸**：カプアス・フルとムラウィを `rel_kalbar_upper`（1960 から sunni/catholic）に分けた。
+- **[B] 中部・東カリマンタン**：宗教と言語の食い違い（ムスリムの多くは移住者、改宗したダヤク人はバンジャル人・マレー人を名のる例が多い）を note で説明した。
+- **[B] シンカワン**：`rel_singkawang_city`（1770 から chinese_folk/sunni）を作った。サンバス・ムンパワ・ポンティアナックは今のまま。
+- **[C] ラームプル**：1648 hindu/sunni → 1750（ローヒラ族の移住）sunni/hindu。
+- **[C] 色**：ベトナムの民間信仰を #f7c9d9 に明るくし、中国の民間信仰・大乗仏教と見分けやすくした。
+
+### 直したもの（言語）
+- **[B] ジャカルタ**：1960 sundanese/javanese（1961 年の国勢調査の数字を note に）、1980 から javanese/malay。
+- **[B] チャンディーガル**：1953 から hindustani/punjabi。
+- **[B] ラングーン**：`lang_yangon`（市の4ピース）で 1880–1941 年に minor: tamil（インド系の諸言語を代表させる、と note に書いた）。
+- **[B] カラチ・ハイデラバード（シンド）**：ムハージルの切り替えを宗教と同じ 1947 年にした。
+- **[B] 色**：dayak を #9fcf7a（黄緑）にしてマレー語・モロと区別した。タイ・カダイ系は明るさの差を広げた（lao #f8e8a8、shan #ecc24e、zhuang_tai #c4a748）。
+- **[C] 色**：tb_northeast を #9a3f68 に暗くし、チベット語と区別した。
+- **[C] キンナウル**：`lang_kinnaur` に分けて tb_northeast/hindustani にした（ラーホール・スピティは1ピースなのでチベット語のまま、note に説明）。
+- **[C] ガドチロリ・マンドラ・ディンドリ**：ガドチロリは marathi/gondi、マンドラ・ディンドリは hindustani/gondi にした。
+- **[C] note の追加**：イサーン（ラーオ人の大規模な移住は 18 世紀後半から）、ヴィエンチャンのベトナム人（`lang_laos`）、マレー半島西海岸のインド人（`rel_selangor`・`lang_selangor`）。
+
+### 直したもの（都市）
+- **[B] マラーターの都**：ラーイガド（1674–1688）・ジンジー（1689–1697）・サターラ（1708–1727）を加えた。プネー（1728–1817）は「王の都はサターラのまま、実権を握ったペーシュワーの本拠」と note に書いた（同じ政体の都が2つ並ばないよう、サターラは 1727 年まで）。
+- **[B] マカッサル**：ゴワの都を 1668 年まで（ソンバ・オプの陥落は 1669 年 6 月と note）。
+- **[C] 年の細部**：昭南の名前を 1944 年まで、ヤンゴンの首都を 2004 年まで・ネピドーを 2005 年から、バンテンの都を 1812 年まで、ハイデラバードの都を 1947 年まで（政治の地域は 1948 年からインド）、マイソールを 1799 年から、カラチの note を「1959 年まで」に。コンバウン朝の初期の都シュエボー（1752–1759）・サガイン（1760–1764）を加えた。
+
+### 直したもの（潮流）
+- **[B] フィリピン革命**：モロの地域・コルディリェラ・ミンダナオ内陸を 0.9 の一覧から外し、別の spread で最大 0.2 にした。
+- **[B] シク教の展開**：`polities: [sikh_empire]` の spread を 0.3 に下げた（パンジャーブ本体の spread はそのまま）。
+- **[B] 共産主義**（system.yaml）：インドネシア（1955 0.6、1965 0.8、1966 0）、マラヤ共産党の武装闘争（1948–60）、フクバラハップ（中部ルソン、1946–54）、ケーララ（1957–）、西ベンガル（1977–2011）、ネパールのマオイスト（1996–）を加えた。events に「九・三〇事件」を加えた。
+- **[C] バクティ運動**：1648 年の強さを 0.8 → 0.6 に（マハーラーシュトラの中心はそのまま）。
+- **[C] シク教**：名前を「シク教の展開」にした（カールサー〈1699〉は text に書いてある）。id は `sikhism_khalsa` のまま。
+
+### 直さなかったもの
+- **[C] 東ベンガルの 1648 年・マラプラム・ムルシダーバードの 1648 年・パンジャーブの 1765 年**：確信度が低く、裏づけが取れないのでそのまま。
+- **[C] ベトナム民族運動の日本での光**：発信地ではない弱い光（0.4–0.5）なので残した。
+- **要確認**（サラワク 1980、チン州 1966、東ティモール 1980、マウンテン州の聖公会）：確信度が低いので変えていない。
+
+### 確認
+- `npm run data`：警告なし（宗教 地域 580、言語 地域 741、潮流 123）。
+- `node tools/snapshot.mjs … --out .cache/snapshots/fix_sa_dist/<rel_pj|rel_borneo|lang_borneo|lang_sea>`：パンジャーブ 1940（ホシヤールプル・ルディヤーナー）、ボルネオ 1980・2025（ダヤクとマレーの色の区別）、インドシナ 1900（ラオスとベトナム西北部の境）を目視した。

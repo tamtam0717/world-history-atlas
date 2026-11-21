@@ -1,7 +1,7 @@
 # 潮流：南アジア・東南アジア（1648–2025）。形式は docs/movements-format.md
 # spread の書き方：
 # - 独立後の国は政体（india・pakistan・indonesia など）で書く。
-# - 植民地の時代は、政体（britain・netherlands・france）で書くと本国や他の植民地まで光るので、政治の地域（data/regions の
+# - 植民地の時代は、政体（britain・netherlands・france）で書くと既定では本国だけが光り、include_colonies: true では他の植民地まで光るので、政治の地域（data/regions の
 #   india_*.yaml・mainland_sea.yaml・maritime_sea.yaml）の ID の一覧で書く。一覧は YAML のアンカーで一度だけ書き、ほかの項目では参照する
 #   （&british_india・&bengal・&punjab・&maharashtra・&hindustan・&vietnam_regions・&indies・&java・&philippine_regions・&burma_regions）。
 #   2026-11-21 の時点の地域 ID。地域 ID が変わったら、ここも直す（npm run data で「未定義の地域」の警告が出る）。
@@ -11,9 +11,9 @@
   name: バクティ運動（ヒンドゥー教の信愛の運動）
   kind: religion
   curve:
-    - [1648, 0.8]
-    - [1700, 0.6]
-    - [1750, 0.5]
+    - [1648, 0.6]
+    - [1700, 0.5]
+    - [1750, 0.45]
     - [1800, 0.4]
     - [1850, 0.3]
     - [1900, 0.25]
@@ -26,10 +26,10 @@
       curve: [[1648, 1.0], [1700, 0.7], [1800, 0.5], [1900, 0.4], [2025, 0.3]]
     - where:
         regions: &hindustan [delhi, up_saharanpur, up_meerut, up_agra, up_lower_doab, up_rohilkhand, up_rampur, up_awadh, up_gorakhpur, up_allahabad, up_benares, up_bundelkhand, up_jhansi, bihar, purnea]
-      curve: [[1648, 0.8], [1700, 0.6], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
+      curve: [[1648, 0.6], [1700, 0.5], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
     - where:
         regions: &bengal [wb_central, wb_north, kolkata, twenty_four_parganas, burdwan_midnapore, east_bengal]
-      curve: [[1648, 0.8], [1700, 0.6], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
+      curve: [[1648, 0.6], [1700, 0.5], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
     - where: {regions: [upper_assam, tinsukia, middle_assam, darrang, kamrup, manipur_valley]}
       curve: [[1648, 0.6], [1720, 0.8], [1800, 0.5], [1900, 0.3], [2025, 0.2]]
   people: [トゥカーラーム, トゥルシーダース, チャイタニヤ, カビール, ミーラーバーイー, シャンカラデーヴァ]
@@ -39,7 +39,7 @@
   source: "https://ja.wikipedia.org/wiki/バクティ"
 
 - id: sikhism_khalsa
-  name: シク教の展開（カールサー）
+  name: シク教の展開
   kind: religion
   curve:
     - [1648, 0.4]
@@ -63,8 +63,9 @@
     - where: {regions: [pb_majha, pb_doaba, pb_kapurthala, pb_cis_sutlej, pb_phulkian]}
       center: true
       curve: [[1947, 0.8], [1966, 0.9], [1984, 1.0], [1995, 0.7], [2025, 0.6]]
+    # シク王国の領土のうち、カシミール・ペシャーワル・ムルターンなど住民のほとんどがムスリムの所は弱く光らせるだけ（支配は政治の地図で見える）。
     - where: {polities: [sikh_empire]}
-      curve: [[1799, 1.0], [1849, 1.0]]
+      curve: [[1799, 0.3], [1849, 0.3]]
   people: [グル＝ナーナク, グル＝テーグ＝バハードゥル, グル＝ゴービンド＝シング, ランジート＝シング]
   works: [『グル・グラント・サーヒブ』]
   events: [グル・ゴービンド・シングがカールサーを結成, ランジート・シングがラホールを取る, 黄金寺院事件とインディラ・ガンディーの暗殺]
@@ -357,8 +358,12 @@
       center: true
       curve: [[1872, 0.4], [1887, 0.7], [1896, 1.0], [1899, 1.0], [1902, 0.6], [1910, 0.3], [1935, 0.4], [1946, 0.3], [1960, 0]]
     - where:
-        regions: &philippine_regions [manila, central_luzon, calabarzon, ilocos, cagayan, batanes, cordillera, bicol, mindoro, mindoro_west, palawan, western_visayas, central_visayas, eastern_visayas, north_mindanao, mindanao_interior, zamboanga, zamboanga_sibugay, lanao_norte, lanao_sur, maguindanao, south_mindanao, davao, basilan, sulu]
+        regions: &philippine_regions [manila, central_luzon, calabarzon, ilocos, cagayan, batanes, bicol, mindoro, mindoro_west, palawan, western_visayas, central_visayas, eastern_visayas, north_mindanao, zamboanga, zamboanga_sibugay]
       curve: [[1880, 0.2], [1896, 0.6], [1898, 0.9], [1899, 0.9], [1902, 0.4], [1910, 0.2], [1935, 0.3], [1946, 0.2], [1960, 0]]
+    # 革命と共和国はルソン・ビサヤの低地のキリスト教徒の運動で、モロの地域（スールーはアメリカとベイツ協定〈1899〉を結んだ）・
+    # コルディリェラの山地・ミンダナオ内陸にはほとんど及ばなかった。
+    - where: {regions: [cordillera, mindanao_interior, lanao_norte, lanao_sur, maguindanao, south_mindanao, davao, basilan, sulu]}
+      curve: [[1896, 0.1], [1898, 0.2], [1902, 0.1], [1935, 0.2], [1946, 0.1], [1960, 0]]
   people: [ホセ＝リサール, ボニファシオ, アギナルド, マビニ]
   works: [『ノリ・メ・タンヘレ』（リサール）, 『エル・フィリブステリスモ』（リサール）]
   events: [ホセ＝リサールの『ノリ・メ・タンヘレ』, フィリピン革命の始まり, アギナルドの独立宣言]

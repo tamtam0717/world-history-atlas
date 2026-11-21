@@ -506,9 +506,13 @@ body.debug #debug-info {
   #sheet-handle {
     display: flex;
     justify-content: center;
-    padding: 8px 0 2px;
+    padding: 10px 0 8px;
+    margin-bottom: -6px;
     cursor: grab;
     touch-action: none;
+  }
+  #panel .panel-body {
+    overscroll-behavior: contain;
   }
   #sheet-handle span {
     width: 40px;
