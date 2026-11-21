@@ -86,6 +86,8 @@ awk -F'\t' '$3=="DEU" && $6>9 && $6<10.5 && $7>50 && $7<51' data/generated/piece
 ```yaml
 - id: silesia
   name: シュレジエン
+  names:                              # 任意。時期で名前を変える（右パネルの「国境の変化」の見出し）。範囲外は name
+    - {from: 1945, name: シロンスク（ポーランド南西部）}   # 例。from・to は省略可（その年を含む）
   select:                             # ピースの選び方（すべて和集合。最後に exclude を引く）
     adm1: ["POL/Opole Voivodeship", "POL/Lower Silesian Voivodeship"]   # 「国コード/adm1名」
     adm2: ["DEU/Dresden"]             # 「国コード/adm2名」（ドイツなど、細かい国のみ）
