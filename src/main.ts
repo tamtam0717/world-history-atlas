@@ -267,7 +267,7 @@ async function main() {
     const center = here
       ? `<span class="ms-here" title="${tip(here)}">${pol ? '<i class="ms-dot"></i>' : ""}${terrMark(here)}${esc(here.title)}</span>`
       : pol
-        ? `<span class="ms-who" title="${esc(idx.shortName(pol, state.year))}を選んでいる間は、« » でこの国の節目へ移ります"><i class="ms-dot"></i>${esc(idx.shortName(pol, state.year))}の節目</span>`
+        ? `<span class="ms-who" title="${esc(idx.shortName(pol, state.year))}を選んでいる間は、« » でこの国の節目へ移ります"><i class="ms-dot"></i>${esc(idx.shortName(pol, state.year))}<span class="ms-who-long">の節目</span></span>`
         : "";
     msLabel.innerHTML = [
       p ? `<span class="ms-prev" title="${tip(p)}">« ${p.year} ${terrMark(p)}${esc(p.title)}</span>` : "<span></span>",
@@ -359,9 +359,9 @@ async function main() {
 
   // ---- 地図の種類（政治／宗教／言語）。分布を足すときは LAYERS に項目を増やし、map.ts の MapLayer・data.ts の DistKey に足す ----
   const LAYERS: { id: MapLayer; label: string; title: string }[] = [
-    { id: "political", label: "政治", title: "国ごとの塗り分け" },
+    { id: "political", label: "政治", title: "国ごとの塗り分け（P キー）" },
     { id: "religion", label: "宗教", title: "宗教の分布（R キー）" },
-    { id: "language", label: "言語", title: "言語（民族）の分布（Y キー）" },
+    { id: "language", label: "言語", title: "言語（民族）の分布（L キー）" },
   ];
   const layerSwitch = $("#layer-switch");
   for (const l of LAYERS) {
@@ -513,19 +513,22 @@ async function main() {
     toggleModern: () => modernBtn.click(),
     toggleLayer: (layer, revert) => {
       // 長押しを離したときは、押したときに積んだ履歴を1つ戻して元の表示にする
-      if (revert && (history.state as HistState | null)?.l === state.layer) {
-        history.back();
-        return;
+      if (revert) {
+        if ((history.state as HistState | null)?.l === state.layer) history.back();
+        return true;
       }
+      const before = state.layer;
       setLayer(state.layer === layer ? "political" : layer);
-      const keyOf = { religion: "R", language: "Y" } as const;
+      if (state.layer === before) return false;
+      const keyOf = { religion: "R", language: "L" } as const;
       toast(
         state.layer === "religion"
           ? `宗教の分布（${keyOf.religion} で戻す）`
           : state.layer === "language"
             ? `言語（民族）の分布（${keyOf.language} で戻す）`
-            : "政治の地図",
+            : "政治の地図（P）",
       );
+      return true;
     },
     toggleBand: () => {
       band.setCollapsed(!band.collapsed);

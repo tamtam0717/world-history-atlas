@@ -1,4 +1,4 @@
-# ヨーロッパ全体に関わる主な出来事（1648–1914）
+# ヨーロッパ全体に関わる主な出来事（1648–2025）
 # 地域ごとの出来事は events/<担当>.yaml に書く。ここにあるものは重複して書かない。
 
 - year: 1648
@@ -793,3 +793,681 @@
   polities: [german_empire, france, britain, russia]
   importance: 2
   source: "https://ja.wikipedia.org/wiki/第一次マルヌ会戦"
+
+# ---- 1914–2025（全体担当） ----
+- year: 1916
+  date: "1916-02-21"
+  title: ヴェルダンの戦いとソンムの戦い
+  text: 西部戦線で、ドイツ軍がフランスのヴェルダン要塞を攻め（2〜12月）、イギリス・フランス軍がソンム川で大攻勢をかけた（7〜11月）。どちらも数十万人の死傷者を出しながら戦線はほとんど動かず、戦車・毒ガス・飛行機などの新兵器が使われる総力戦となった。
+  polities: [german_empire, france, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ヴェルダンの戦い"
+- year: 1916
+  date: "1916-05-16"
+  title: サイクス・ピコ協定
+  text: イギリス・フランス・ロシアが、戦後のオスマン帝国の領土（シリア・イラク・パレスチナなど）の分け方を秘密に取り決めた。アラブ人に独立を約束したフサイン＝マクマホン協定（1915年）や、パレスチナにユダヤ人の「民族的郷土」をつくることを支持したバルフォア宣言（1917年）と矛盾し、のちの中東問題の原因となった。
+  polities: [britain, france, russia, ottoman]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/サイクス・ピコ協定"
+- year: 1917
+  date: "1917-02-01"
+  title: 無制限潜水艦作戦とアメリカの参戦
+  text: ドイツは、イギリスへの海上輸送を断つため、中立国の船も警告なしに潜水艦で攻撃する作戦を始めた。これをきっかけに、アメリカ合衆国が4月にドイツに宣戦した。
+  polities: [german_empire, usa, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/無制限潜水艦作戦"
+- year: 1917
+  date: "1917-03"
+  title: ロシア二月革命（三月革命）
+  text: 戦争による食料不足から首都ペトログラードで民衆の暴動と兵士の反乱が起こり、皇帝ニコライ2世が退位してロマノフ朝が倒れた。臨時政府が成立したが戦争を続け、労働者・兵士のソヴィエト（評議会）との二重権力となった。ロシア暦では2月の出来事。
+  polities: [russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ロシア革命"
+- year: 1917
+  date: "1917-11-07"
+  title: ロシア十月革命（十一月革命）
+  text: レーニンの率いるボリシェヴィキが武装蜂起して臨時政府を倒し、ソヴィエト政権を樹立した。「平和に関する布告」で無併合・無賠償・民族自決による講和を呼びかけ、「土地に関する布告」で地主の土地を没収した。ロシア暦では10月の出来事。 その後、赤軍と白軍の内戦（1918〜1922年ごろ）や、イギリス・フランス・日本・アメリカなどの干渉戦争が続いた。
+  polities: [russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/十月革命"
+- year: 1918
+  date: "1918-01-08"
+  title: ウィルソンの十四か条
+  text: アメリカ大統領ウィルソンが、秘密外交の廃止、海洋の自由、軍備縮小、民族自決（東欧の諸民族の独立や自治）、国際平和機構の設立などを講和の原則として示した。
+  polities: [usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/十四か条の平和原則"
+- year: 1918
+  date: "1918-03-03"
+  title: ブレスト＝リトフスク条約
+  text: ソヴィエト政権がドイツなど同盟国と単独で講和し、ポーランド・バルト地方・フィンランド・ウクライナなどへの権利を放棄した。この条約は11月のドイツの敗戦で無効となった。
+  polities: [russia, german_empire, habsburg, ottoman, bulgaria, ukraine]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ブレスト＝リトフスク条約"
+- year: 1918
+  date: "1918-10"
+  title: 東欧の諸国の独立とオーストリア＝ハンガリーの解体
+  text: 敗戦が近づくと、オーストリア＝ハンガリーの諸民族が次々に独立を宣言した。チェコスロヴァキア（10月28日）、セルブ＝クロアート＝スロヴェーン王国（12月）、ポーランド（11月11日）が成立し、オーストリアとハンガリーもそれぞれ共和国となった。ハプスブルク家の支配は終わった。
+  polities: [habsburg, czechoslovakia, poland, yugoslavia, austria, hungary]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/オーストリア＝ハンガリー帝国の解体"
+- year: 1918
+  date: "1918-11-11"
+  title: ドイツの休戦協定と第一次世界大戦の終結
+  text: キール軍港の水兵の反乱から始まったドイツ革命で皇帝ヴィルヘルム2世がオランダへ亡命し、共和国が宣言された（11月9日）。新政府はコンピエーニュの森で連合国と休戦協定を結び、4年余りの戦争が終わった。ブルガリア（9月）、オスマン帝国（10月）、オーストリア＝ハンガリー（11月3日）はすでに降伏していた。戦死者は約1000万人にのぼり、続いて流行したスペイン風邪（インフルエンザ）でも多数が死亡した。
+  polities: [german_empire, germany, france, britain, usa, italy, habsburg, ottoman, bulgaria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第一次世界大戦の休戦"
+- year: 1919
+  date: "1919-01-18"
+  title: パリ講和会議
+  text: 第一次世界大戦の講和会議がパリで開かれた。アメリカ（ウィルソン）・イギリス（ロイド・ジョージ）・フランス（クレマンソー）が主導し、民族自決はヨーロッパ（主に東欧）にだけ適用された。敗戦国とソヴィエト・ロシアは招かれなかった。
+  polities: [france, britain, usa, italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/パリ講和会議"
+- year: 1919
+  date: "1919-06-28"
+  title: ヴェルサイユ条約
+  text: 連合国とドイツの講和条約。ドイツはすべての植民地を失い、アルザス・ロレーヌをフランスに、ポーランド回廊などをポーランドに割譲し、ダンツィヒは国際連盟管理の自由市、ザールは15年間国際連盟の管理となった。軍備は厳しく制限され、ラインラントは非武装化され、巨額の賠償金が課された。ヴェルサイユ体制の中心となった。
+  polities: [germany, france, britain, usa, italy, poland, belgium, denmark]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ヴェルサイユ条約"
+- year: 1919
+  date: "1919-09-10"
+  title: サン＝ジェルマン条約などの講和条約（ヴェルサイユ体制）
+  text: 連合国はオーストリアとサン＝ジェルマン条約（1919年9月）を結んでハプスブルク帝国の解体とドイツとの合併の禁止を定め、ブルガリアとヌイイ条約（11月）、ハンガリーとトリアノン条約（1920年）、オスマン帝国とセーヴル条約（1920年。のちトルコはローザンヌ条約で改めさせた）を結んだ。ヴェルサイユ条約とあわせ、ヨーロッパの新しい国際秩序をヴェルサイユ体制という。
+  polities: [austria, hungary, bulgaria, ottoman, italy, czechoslovakia, yugoslavia, romania, greece]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/サン＝ジェルマン条約"
+- year: 1919
+  date: "1919-03"
+  title: コミンテルン（第3インターナショナル）の結成
+  text: レーニンらが各国の共産党の国際組織をモスクワで結成し、世界革命をめざした。各国の社会主義運動は、議会を通じた改革をめざす社会民主主義と、共産党に分かれた。
+  polities: [russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/コミンテルン"
+- year: 1920
+  date: "1920-01-10"
+  title: 国際連盟の発足
+  text: ウィルソンの提唱による初めての国際平和機構が、ジュネーヴを本部として発足した。しかしアメリカは上院の反対で加盟せず、ドイツ（1926年加盟）とソヴィエト・ロシア（1934年加盟）も当初は除かれ、侵略に対しては経済制裁しかできなかった。
+  polities: [britain, france, italy, switzerland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/国際連盟"
+- year: 1922
+  date: "1922-10-28"
+  title: ローマ進軍とムッソリーニ政権の成立
+  text: ムッソリーニの率いるファシスト党が黒シャツ隊を率いてローマへ進む示威行動を行い、国王ヴィットーリオ・エマヌエーレ3世はムッソリーニを首相に任命した。1926年ごろまでに一党独裁体制がつくられた。
+  polities: [italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ローマ進軍"
+- year: 1922
+  date: "1922-12-30"
+  title: ソヴィエト社会主義共和国連邦の成立
+  text: ロシア・ウクライナ・ベラルーシ（白ロシア）・ザカフカースの各ソヴィエト共和国が連合して、ソヴィエト連邦が成立した。内戦後の経済を立て直すため、1921年から一部で市場経済を認める新経済政策（ネップ）がとられていた。
+  polities: [soviet_union, russia, ukraine, belarus]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ソビエト連邦"
+- year: 1923
+  date: "1923-01-11"
+  title: ルール占領とドイツのインフレーション
+  text: 賠償金の支払いが遅れたことを理由に、フランスとベルギーがドイツの工業地帯ルールを占領した。ドイツは住民の消極的抵抗で応じたが、紙幣の増発で物価が1兆倍にもなる激しいインフレーションが起こった。シュトレーゼマン政府の新紙幣（レンテンマルク）で収まり、1924年のドーズ案でアメリカ資本がドイツに貸し付けられると、ドイツの賠償金がイギリス・フランスの対米戦債の返済にまわる資金の循環ができ、ヨーロッパは「相対的安定期」に入った。
+  polities: [france, belgium, germany, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ルール占領"
+- year: 1925
+  date: "1925-12-01"
+  title: ロカルノ条約
+  text: ドイツが、フランス・ベルギーとの国境の現状維持とラインラントの非武装を認める条約をイギリス・イタリアの保証のもとで結び、翌年国際連盟に加盟した（シュトレーゼマンとブリアン）。1928年には戦争の放棄を約束する不戦条約（ケロッグ＝ブリアン条約）も結ばれ、国際協調の時代となった。
+  polities: [germany, france, belgium, britain, italy, usa]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ロカルノ条約"
+- year: 1929
+  date: "1929-10-24"
+  title: 世界恐慌
+  text: ニューヨーク株式市場の株価の大暴落（暗黒の木曜日）をきっかけに、アメリカの資本がヨーロッパから引きあげられ、恐慌は世界に広がった。ドイツやオーストリアでは銀行が倒れ、失業者があふれた。イギリス（1932年のオタワ会議）やフランスは本国と植民地で囲いこむブロック経済をつくり、植民地の少ないドイツ・イタリア・日本は対外膨張へ向かった。ソ連は計画経済（五か年計画）のため影響が小さかった。
+  polities: [usa, germany, austria, britain, france, italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/世界恐慌"
+- year: 1933
+  date: "1933-01-30"
+  title: ヒトラー政権の成立
+  text: 恐慌で支持をのばしたナチ党（国民社会主義ドイツ労働者党）のヒトラーが首相に任命された。国会議事堂放火事件を口実に共産党を弾圧し、全権委任法（3月）で議会から立法権を奪い、一党独裁を打ち立てた。10月には国際連盟から脱退した。1934年、大統領の地位もあわせて「総統」となった。
+  polities: [germany]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ナチス・ドイツ"
+- year: 1935
+  date: "1935-03-16"
+  title: ドイツの再軍備とラインラント進駐
+  text: ドイツがヴェルサイユ条約の軍備制限を破棄して徴兵制を復活させ（1935年3月）、翌1936年3月にはロカルノ条約を破って非武装地帯のラインラントに軍を進めた。イギリス・フランスは対抗措置をとらなかった。1935年1月にはザール地方が住民投票でドイツに復帰し、9月にはユダヤ人の公民権を奪うニュルンベルク法が定められた。
+  polities: [germany, france, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ドイツ再軍備宣言"
+- year: 1935
+  date: "1935-10-03"
+  title: イタリアのエチオピア侵攻
+  text: イタリアがエチオピアに侵攻し、翌年併合した。国際連盟は初めて経済制裁を決めたが、石油が対象外で効果がなく、連盟の無力さが明らかになった。孤立したイタリアはドイツに近づき（1936年のベルリン＝ローマ枢軸）、1937年には日本・ドイツとの防共協定に加わって「枢軸国」の陣営ができた。
+  polities: [italy]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+- year: 1936
+  date: "1936-07-17"
+  title: スペイン内戦
+  text: 人民戦線政府に対して、フランコ将軍らの軍部が反乱を起こした（〜1939年）。ドイツ・イタリアが反乱軍を、ソ連と各国の義勇兵（国際旅団）が政府側を助けたが、イギリス・フランスは不干渉政策をとった。1937年のドイツ空軍によるゲルニカ爆撃はピカソの絵で知られる。1939年、反乱軍が勝利し、フランコの独裁が始まった。
+  polities: [spain, germany, italy, soviet_union, france, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+- year: 1938
+  date: "1938-09-29"
+  title: ミュンヘン会談
+  text: 1938年3月にオーストリアを併合したドイツは、チェコスロヴァキアにドイツ系住民の多いズデーテン地方の割譲を要求した。イギリス（ネヴィル・チェンバレン）・フランス（ダラディエ）・イタリアの首脳とヒトラーがミュンヘンで会談し、チェコスロヴァキア抜きでこれを認めた（宥和政策）。しかしドイツは1939年3月にチェコを保護領とし、スロヴァキアを保護国として独立させ、チェコスロヴァキアは解体された。英仏は宥和政策をやめ、ポーランドの安全を保障した。
+  polities: [germany, austria, czechoslovakia, slovakia, britain, france, italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ミュンヘン協定"
+- year: 1939
+  date: "1939-08-23"
+  title: 独ソ不可侵条約
+  text: 対立していたドイツとソ連が不可侵条約を結び、世界を驚かせた。秘密議定書で、ポーランドの分割と、バルト三国・フィンランド・ベッサラビアをソ連の勢力圏とすることが取り決められていた。
+  polities: [germany, soviet_union, poland, estonia, latvia, lithuania, finland, romania]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/独ソ不可侵条約"
+- year: 1939
+  date: "1939-09-01"
+  title: 第二次世界大戦はじまる（ドイツのポーランド侵攻）
+  text: ドイツがポーランドに侵攻し、イギリスとフランスがドイツに宣戦した。9月17日にはソ連も東からポーランドに侵攻し、ポーランドはドイツとソ連に分割された。
+  polities: [germany, poland, britain, france, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第二次世界大戦"
+- year: 1940
+  date: "1940-04-09"
+  title: ドイツの北欧・西欧侵攻
+  text: ドイツはデンマーク・ノルウェーを占領し（4月）、5月にはオランダ・ベルギー・ルクセンブルクを経てフランスに侵攻した。イギリス・フランス軍はダンケルクから撤退し、6月14日にパリが占領された。イタリアもドイツ側で参戦した。
+  polities: [germany, denmark, norway, netherlands, belgium, luxembourg, france, britain, italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ナチス・ドイツのフランス侵攻"
+- year: 1940
+  date: "1940-06-22"
+  title: フランスの降伏とヴィシー政府
+  text: フランスはドイツと休戦協定を結び、北部と大西洋岸はドイツの占領地とされ、南部にはペタンを首班とするヴィシー政府がつくられた。ド・ゴールはロンドンで「自由フランス」をつくり、抗戦を呼びかけた。各地でレジスタンス（抵抗運動）が起こった。
+  polities: [france, vichy_france, germany, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+- year: 1940
+  date: "1940-07-10"
+  title: バトル・オブ・ブリテン
+  text: ドイツ空軍がイギリス本土への上陸に備えて大規模な空襲を行ったが、チャーチル首相のもとでイギリス空軍がレーダーなどを使って防ぎ、ドイツは上陸作戦を延期した。
+  polities: [britain, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/バトル・オブ・ブリテン"
+- year: 1941
+  date: "1941-04-06"
+  title: ドイツのバルカン侵攻
+  text: ドイツ・イタリアなどがユーゴスラヴィアとギリシアに侵攻して占領した。ユーゴスラヴィアは分割され、クロアチア独立国がつくられた。ユーゴスラヴィアではティトーの率いるパルチザンが抵抗を続けた。ハンガリー・ルーマニア・ブルガリアは枢軸国側についた。
+  polities: [germany, italy, yugoslavia, greece, hungary, bulgaria, croatia_ndh]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ユーゴスラビア侵攻"
+- year: 1941
+  date: "1941-06-22"
+  title: 独ソ戦はじまる
+  text: ドイツが不可侵条約を破り、約300万人の兵力でソ連に侵攻した（バルバロッサ作戦）。ドイツ軍はレニングラードを包囲し、モスクワに迫ったが、冬の寒さとソ連軍の反撃で止められた。占領地では住民の虐殺や略奪が行われた。
+  polities: [germany, soviet_union, finland, romania, hungary, italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/独ソ戦"
+- year: 1941
+  date: "1941-08-14"
+  title: 大西洋憲章
+  text: アメリカのフランクリン・ローズヴェルト大統領とイギリスのチャーチル首相が大西洋上で会談し、領土不拡大、民族自決、国際協力、新しい安全保障の仕組みなど戦後の原則を発表した。のちの国際連合の基礎となった。
+  polities: [usa, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/大西洋憲章"
+- year: 1941
+  date: "1941-12-08"
+  title: 太平洋戦争とアメリカの参戦
+  text: 日本がハワイの真珠湾を攻撃し、アメリカ・イギリスと戦争に入った。ドイツ・イタリアもアメリカに宣戦し、戦争はヨーロッパとアジア・太平洋を結ぶ世界大戦となった。
+  polities: [usa, britain, germany, italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/太平洋戦争"
+- year: 1942
+  date: "1942-01-20"
+  title: ホロコースト（ユダヤ人の大量虐殺）
+  text: ナチス・ドイツは、占領地のユダヤ人を銃殺部隊で殺害し（1941年〜）、ヴァンゼー会議（1942年1月）でヨーロッパのユダヤ人の組織的な絶滅（「最終的解決」）を決めた。アウシュヴィッツ＝ビルケナウなどの絶滅収容所で、約600万人のユダヤ人が殺害された。ロマ（ジプシー）や障がい者、政治犯なども犠牲になった。
+  polities: [germany, poland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ホロコースト"
+- year: 1942
+  date: "1942-11"
+  title: スターリングラードの戦いとエル・アラメインの戦い
+  text: 北アフリカのエル・アラメインでイギリス軍がドイツ・イタリア軍を破り（11月）、ヴォルガ川のスターリングラードではソ連軍がドイツ軍を包囲して1943年2月に降伏させた。これらを境に、枢軸国は守勢に転じた。 1943年7月には連合軍がシチリア島に上陸してムッソリーニが失脚し、9月にイタリアは降伏した（ドイツ軍は北・中部イタリアを占領し、ムッソリーニのイタリア社会共和国をつくらせた）。
+  polities: [soviet_union, germany, britain, italy, romania, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/スターリングラード攻防戦"
+- year: 1944
+  date: "1944-06-06"
+  title: ノルマンディー上陸作戦
+  text: アイゼンハワーの指揮する連合軍がフランスのノルマンディーに上陸した。8月25日にパリが解放され、ド・ゴールの臨時政府が成立した。東からはソ連軍がドイツ軍を押し返し、東欧に進んだ。
+  polities: [usa, britain, france, germany]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ノルマンディー上陸作戦"
+- year: 1945
+  date: "1945-02-04"
+  title: ヤルタ会談
+  text: ローズヴェルト・チャーチル・スターリンがクリミア半島のヤルタで会談し、ドイツの分割占領、ポーランドの国境、国際連合の設立、ソ連の対日参戦（秘密協定）などを決めた。戦後の東欧ではソ連の影響力が強まることになった。
+  polities: [usa, britain, soviet_union, germany, poland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ヤルタ会談"
+- year: 1945
+  date: "1945-05-08"
+  title: ドイツの無条件降伏
+  text: ソ連軍がベルリンを包囲するなかでヒトラーが自殺し（4月30日）、ドイツは無条件降伏した。ヨーロッパの戦争は終わり、ドイツとオーストリアはアメリカ・イギリス・フランス・ソ連の4か国に分割占領された。
+  polities: [germany, soviet_union, usa, britain, france, austria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ドイツの降伏"
+- year: 1945
+  date: "1945-07-17"
+  title: ポツダム会談とポーランドの西方移動
+  text: アメリカ（トルーマン）・イギリス（チャーチル、のちアトリー）・ソ連（スターリン）が、ドイツの非ナチ化・非軍事化・民主化、オーデル＝ナイセ線以東のドイツ領のポーランドへの移管（東プロイセン北部はソ連領）を決めた。ポーランドは東部をソ連に譲り、国全体が西へ移った。東欧から1000万人をこえるドイツ人が追放・移住させられた。
+  polities: [usa, britain, soviet_union, germany, poland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ポツダム会談"
+- year: 1945
+  date: "1945-08-15"
+  title: 日本の降伏と第二次世界大戦の終結
+  text: アメリカが広島・長崎に原子爆弾を投下し、ソ連が対日参戦したのち、日本がポツダム宣言を受け入れて降伏した（9月2日調印）。第二次世界大戦の死者は5000万人をこえ、その半分以上は民間人だった。
+  polities: [usa, soviet_union, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/日本の降伏"
+- year: 1945
+  date: "1945-10-24"
+  title: 国際連合の発足
+  text: サンフランシスコ会議で採択された国際連合憲章にもとづき、51か国で国際連合が発足した。アメリカ・イギリス・フランス・ソ連・中国が拒否権をもつ安全保障理事会の常任理事国となり、侵略に対しては軍事的な制裁もできるようになった。11月からはニュルンベルク国際軍事裁判でナチスの指導者が裁かれた。
+  polities: [usa, britain, france, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/国際連合"
+- year: 1946
+  date: "1946-03-05"
+  title: 「鉄のカーテン」演説
+  text: イギリスの前首相チャーチルがアメリカで演説し、「バルト海のシュテッティンからアドリア海のトリエステまで、大陸を横切って鉄のカーテンが降ろされた」と、ソ連による東欧の支配を批判した。
+  polities: [britain, soviet_union, usa]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/鉄のカーテン"
+- year: 1947
+  date: "1947-03-12"
+  title: トルーマン・ドクトリン
+  text: アメリカ大統領トルーマンが、共産主義の拡大を防ぐ「封じ込め政策」を宣言し、内戦中のギリシアと、ソ連の圧力を受けるトルコへの援助を決めた。冷戦の始まりとされる。
+  polities: [usa, greece, turkey, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/トルーマン・ドクトリン"
+- year: 1947
+  date: "1947-06-05"
+  title: マーシャル・プラン
+  text: アメリカの国務長官マーシャルが、ヨーロッパの経済復興を援助する計画（ヨーロッパ経済復興援助計画）を発表した。西欧諸国は受け入れたが、ソ連と東欧諸国は拒否し、9月に各国共産党の情報交換機関コミンフォルムをつくった。 1948年2月にはチェコスロヴァキアで共産党が政権を独占し、東欧はソ連型の人民民主主義の国々となった。
+  polities: [usa, britain, france, italy, west_germany, soviet_union, czechoslovakia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/マーシャル・プラン"
+- year: 1947
+  date: "1947-02-10"
+  title: パリ講和条約
+  text: 連合国とイタリア・ルーマニア・ハンガリー・ブルガリア・フィンランドの講和条約。イタリアは植民地とイストリアなどを失い、トリエステは自由地域とされた。ルーマニアは北トランシルヴァニアを回復したが、ベッサラビアをソ連に譲った。
+  polities: [italy, romania, hungary, bulgaria, finland, soviet_union, yugoslavia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/パリ条約_(1947年)"
+- year: 1948
+  date: "1948-06-24"
+  title: ベルリン封鎖
+  text: 西側占領地区での通貨改革に反発したソ連が、西ベルリンへの陸上の交通をすべて封鎖した。アメリカ・イギリスは飛行機で食料や燃料を運び続け（ベルリン空輸）、ソ連は1949年5月に封鎖を解いた。
+  polities: [soviet_union, usa, britain, france, germany]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ベルリン封鎖"
+- year: 1948
+  date: "1948-05-14"
+  title: イスラエルの建国と第1次中東戦争
+  text: イギリスの委任統治が終わり、国連のパレスチナ分割案（1947年）にもとづいてイスラエルが独立を宣言した。これに反対するアラブ諸国との戦争となり、イスラエルが勝って分割案より広い地域を支配した。数十万人のパレスチナ・アラブ人が難民となった。
+  polities: [israel, britain, egypt, syria, jordan, iraq, lebanon]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第一次中東戦争"
+- year: 1949
+  date: "1949-04-04"
+  title: 北大西洋条約機構（NATO）の結成
+  text: アメリカ・カナダと西欧諸国が、ソ連に対抗する集団防衛の同盟をつくった。最初の加盟国は12か国（アメリカ・カナダ・イギリス・フランス・イタリア・ベネルクス三国・デンマーク・ノルウェー・アイスランド・ポルトガル）。1952年にギリシア・トルコ、1955年に西ドイツが加盟した。1月には東側の経済協力機構コメコン（経済相互援助会議）がつくられていた。
+  polities: [usa, britain, france, italy, belgium, netherlands, luxembourg, denmark, norway, iceland, portugal, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/北大西洋条約機構"
+- year: 1949
+  date: "1949-05-23"
+  title: ドイツの東西分断
+  text: 西側の占領地区にドイツ連邦共和国（西ドイツ、首都ボン、首相アデナウアー）が、10月にはソ連占領地区にドイツ民主共和国（東ドイツ、首都ベルリン）が成立した。この年、ソ連は原子爆弾の実験に成功し、中国では中華人民共和国が成立した。
+  polities: [west_germany, east_germany, soviet_union, usa, britain, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
+- year: 1952
+  date: "1952-07-23"
+  title: ヨーロッパ石炭鉄鋼共同体（ECSC）の発足
+  text: フランス外相シューマンの提案（1950年、シューマン・プラン）により、フランス・西ドイツ・イタリア・ベネルクス三国の6か国が、戦争に欠かせない石炭と鉄鋼を共同で管理する機関をつくった。独仏の和解と、ヨーロッパ統合の出発点となった。
+  polities: [france, west_germany, italy, belgium, netherlands, luxembourg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/欧州石炭鉄鋼共同体"
+- year: 1955
+  date: "1955-05-14"
+  title: ワルシャワ条約機構の結成
+  text: 西ドイツの再軍備とNATO加盟に対抗して、ソ連と東欧7か国（ポーランド・東ドイツ・チェコスロヴァキア・ハンガリー・ルーマニア・ブルガリア・アルバニア）が軍事同盟をつくった。同月、オーストリアは永世中立を約束して主権を回復した（オーストリア国家条約）。7月にはジュネーヴ4巨頭会談が開かれた。
+  polities: [soviet_union, poland, east_germany, czechoslovakia, hungary, romania, bulgaria, albania, west_germany, austria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ワルシャワ条約機構"
+- year: 1956
+  date: "1956-02-25"
+  title: スターリン批判
+  text: 1953年のスターリンの死後、ソ連共産党第20回大会で、フルシチョフ第一書記がスターリンの個人崇拝と大量粛清を批判した。平和共存の方針も示され、東欧の人々に改革への期待を与えた。6月にはポーランドのポズナンで暴動が起こった。
+  polities: [soviet_union, poland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/スターリン批判"
+- year: 1956
+  date: "1956-10-23"
+  title: ハンガリー動乱（ハンガリー事件）
+  text: ブダペストで自由化を求める大規模なデモが起こり、首相ナジ・イムレはワルシャワ条約機構からの脱退と中立を宣言したが、ソ連軍が介入して鎮圧した。多数の死者が出て、約20万人が国外へ逃れた。ナジは1958年に処刑された。
+  polities: [hungary, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ハンガリー動乱"
+- year: 1956
+  date: "1956-10-29"
+  title: スエズ戦争（第2次中東戦争）
+  text: エジプトのナセル大統領がスエズ運河の国有化を宣言すると、イギリス・フランス・イスラエルが出兵した。アメリカとソ連が強く反対し、国連の決議で3国は撤退した。イギリス・フランスの国際的な地位が低下したことを示した。
+  polities: [egypt, britain, france, israel, usa, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第二次中東戦争"
+- year: 1957
+  date: "1957-03-25"
+  title: ローマ条約（EEC・EURATOMの設立）
+  text: ECSCの6か国が、関税をなくし共通の市場をつくるヨーロッパ経済共同体（EEC）と、原子力を共同で開発するヨーロッパ原子力共同体（EURATOM）の設立条約を結んだ（1958年発足）。イギリスはこれに対抗し、1960年に北欧諸国などとヨーロッパ自由貿易連合（EFTA）をつくった。10月にはソ連が世界初の人工衛星スプートニク1号を打ち上げた。
+  polities: [france, west_germany, italy, belgium, netherlands, luxembourg, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ローマ条約"
+- year: 1960
+  title: 「アフリカの年」と植民地の独立
+  text: この年、アフリカで17か国が独立し、国連では植民地独立付与宣言が採択された。1962年にはアルジェリアが、8年にわたる独立戦争の末にフランスから独立した。アルジェリア問題をめぐる危機のなかで、フランスでは1958年にド・ゴールの第五共和政が始まっていた。
+  polities: [france, britain, belgium, algeria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アフリカの年"
+- year: 1961
+  date: "1961-08-13"
+  title: ベルリンの壁の建設
+  text: 西ベルリンを通って西側へ逃げる人があとを絶たないため、東ドイツが西ベルリンのまわりを有刺鉄線で囲み、のちにコンクリートの壁を築いた。壁は冷戦と東西分断の象徴となった。
+  polities: [east_germany, west_germany, soviet_union, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ベルリンの壁"
+- year: 1962
+  date: "1962-10-14"
+  title: キューバ危機
+  text: ソ連がキューバに核ミサイルの基地を建設していることが分かり、アメリカ（ケネディ大統領）が海上封鎖でその撤去を求めた。核戦争の寸前までいったが、ソ連（フルシチョフ）が基地の撤去に応じた。翌年、米英ソが部分的核実験禁止条約を結び、米ソの首脳を結ぶ直通電話（ホットライン）がひかれた。
+  polities: [usa, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/キューバ危機"
+- year: 1967
+  date: "1967-07-01"
+  title: ヨーロッパ共同体（EC）の発足
+  text: ECSC・EEC・EURATOMの3つの共同体の機関が統合され、ヨーロッパ共同体（EC）となった。1968年には域内の関税が完全に撤廃された（関税同盟）。
+  polities: [france, west_germany, italy, belgium, netherlands, luxembourg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/欧州諸共同体"
+- year: 1968
+  date: "1968-05"
+  title: 五月危機（五月革命）と1968年の学生運動
+  text: パリの学生の運動から、大規模なゼネストに広がり、ド・ゴール政権を揺るがした。ベトナム戦争への反対や、大学・社会の権威への批判は、西ドイツ・イタリア・アメリカ・日本などでも同じころに高まった。
+  polities: [france, west_germany, italy]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/五月危機"
+- year: 1968
+  date: "1968-08-20"
+  title: 「プラハの春」とワルシャワ条約機構軍の介入
+  text: チェコスロヴァキアで共産党第一書記ドプチェクが「人間の顔をした社会主義」をかかげて言論の自由などの改革を進めたが、ソ連などワルシャワ条約機構の5か国の軍が侵攻して改革を押しつぶした。ソ連は、社会主義全体の利益のためには一国の主権は制限されるとする「ブレジネフ・ドクトリン」でこれを正当化した。
+  polities: [czechoslovakia, soviet_union, poland, east_germany, hungary, bulgaria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/プラハの春"
+- year: 1970
+  date: "1970-08-12"
+  title: 西ドイツの東方外交
+  text: 西ドイツのブラント首相（社会民主党）が、ソ連（モスクワ条約）・ポーランド（ワルシャワ条約、12月）とオーデル＝ナイセ線を事実上認める条約を結んだ。1972年には東西ドイツ基本条約で互いを認め、1973年に両国は国連に同時加盟した。
+  polities: [west_germany, east_germany, soviet_union, poland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/東方外交"
+- year: 1972
+  date: "1972-05-26"
+  title: デタント（緊張緩和）と戦略兵器制限交渉（SALT I）
+  text: アメリカのニクソン大統領がモスクワを訪れ、米ソが戦略核兵器の数を制限する条約（SALT I）と弾道弾迎撃ミサイル（ABM）制限条約を結んだ。1960年代後半から1970年代にかけて、東西の緊張は和らいだ（デタント）。
+  polities: [usa, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/戦略兵器制限交渉"
+- year: 1973
+  date: "1973-01-01"
+  title: 拡大EC（イギリス・アイルランド・デンマークの加盟）
+  text: イギリス・アイルランド・デンマークがECに加盟し、加盟国は9か国となった。のちにギリシア（1981年）、スペイン・ポルトガル（1986年）が加わり、12か国となった。
+  polities: [britain, ireland, denmark, france, west_germany, italy]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/欧州諸共同体"
+- year: 1973
+  date: "1973-10"
+  title: 第4次中東戦争と石油危機
+  text: エジプト・シリアがイスラエルを攻撃した。アラブの産油国はイスラエルを支持する国への石油の輸出を制限し、石油輸出国機構（OPEC）は原油価格を大幅に引き上げた。西欧の戦後の高度経済成長は終わり、不況と物価上昇が同時に進むスタグフレーションに苦しんだ。1975年からは先進国首脳会議（サミット）が開かれるようになった。
+  polities: [egypt, syria, israel, britain, france, west_germany, italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/オイルショック"
+- year: 1974
+  date: "1974-04-25"
+  title: 南欧の民主化（ポルトガル・ギリシア・スペイン）
+  text: ポルトガルで軍の青年将校が独裁体制を倒し（カーネーション革命）、アフリカの植民地も独立した。同じ年、ギリシアでは軍事政権が倒れ、スペインでは1975年にフランコが死去して、国王フアン・カルロス1世のもとで民主化が進んだ。
+  polities: [portugal, greece, spain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/カーネーション革命"
+- year: 1975
+  date: "1975-08-01"
+  title: 全欧安全保障協力会議（CSCE）とヘルシンキ宣言
+  text: アルバニアを除く全ヨーロッパの国とアメリカ・カナダの首脳がヘルシンキに集まり、国境の不可侵、紛争の平和的解決、人権の尊重などを定めた最終文書（ヘルシンキ宣言）に調印した。東欧の人権運動の支えとなった。1995年に全欧安全保障協力機構（OSCE）となった。
+  polities: [finland, soviet_union, usa, west_germany, east_germany, britain, france, poland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/全欧安全保障協力会議"
+- year: 1979
+  date: "1979-12-24"
+  title: ソ連のアフガニスタン侵攻と新冷戦
+  text: ソ連が社会主義政権を支えるためにアフガニスタンに侵攻し（〜1989年）、デタントは終わった。西側の多くの国は1980年のモスクワ・オリンピックをボイコットし、ソ連の中距離核ミサイル配備に対抗してNATOも西欧への配備を決めた（新冷戦）。この年、イギリスではサッチャーが首相となり、6月にはヨーロッパ議会の初の直接選挙が行われた。
+  polities: [soviet_union, usa, britain, west_germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アフガニスタン紛争_(1978年-1989年)"
+- year: 1980
+  date: "1980-09"
+  title: ポーランドの「連帯」
+  text: グダニスクの造船所のストライキから、ワレサを議長とする自主管理労働組合「連帯」が生まれ、1000万人近くが加わった。1981年12月に戒厳令がしかれて非合法とされたが、運動は続いた。ポーランド出身のローマ教皇ヨハネ・パウロ2世（1978年即位）も人々を励ました。
+  polities: [poland, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/独立自主管理労働組合「連帯」"
+- year: 1985
+  date: "1985-03-11"
+  title: ゴルバチョフの登場とペレストロイカ
+  text: ソ連共産党書記長となったゴルバチョフが、経済の立て直し（ペレストロイカ）、情報公開（グラスノスチ）、「新思考外交」を進めた。1986年のチェルノブイリ原子力発電所の事故は、情報公開の必要を示した。1987年には米ソが中距離核戦力（INF）全廃条約を結んだ。
+  polities: [soviet_union, usa, ukraine]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ペレストロイカ"
+- year: 1986
+  date: "1986-04-26"
+  title: チェルノブイリ原子力発電所事故
+  text: ソ連のウクライナ共和国にあるチェルノブイリ原子力発電所で原子炉が爆発し、放射性物質がヨーロッパの広い範囲に広がった。周辺の住民は避難させられ、ソ連政府の情報公開の遅れが批判された。
+  polities: [soviet_union, ukraine, belarus]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/チェルノブイリ原子力発電所事故"
+- year: 1989
+  title: 東欧革命
+  text: ソ連が東欧への干渉をやめる方針を示すなかで、東欧の共産党政権が次々に倒れた。ポーランドでは自由選挙で「連帯」が圧勝し（6月）、ハンガリーはオーストリアとの国境を開いた。チェコスロヴァキアでは無血の「ビロード革命」でハヴェルが大統領となり、ブルガリアでも指導者が交代した。ルーマニアでは流血の革命でチャウシェスク大統領が処刑された。
+  polities: [poland, hungary, czechoslovakia, east_germany, bulgaria, romania, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/東欧革命"
+- year: 1989
+  date: "1989-11-09"
+  title: ベルリンの壁の崩壊
+  text: 市民の大規模なデモと国外への脱出に押された東ドイツ政府が、国境の通行を認め、ベルリンの壁が開かれた。翌月、ゴルバチョフとアメリカのブッシュ（父）大統領がマルタ島で会談し、冷戦の終結を宣言した（マルタ会談）。
+  polities: [east_germany, west_germany, soviet_union, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ベルリンの壁崩壊"
+- year: 1990
+  date: "1990-10-03"
+  title: ドイツの統一
+  text: 東ドイツの5つの州が西ドイツに加わる形で、ドイツが統一された（首相コール）。統一の前に、米英仏ソと東西ドイツの「2プラス4条約」でオーデル＝ナイセ線が最終的な国境と確認された。11月にはCSCEのパリ憲章が調印され、ヨーロッパの分断は終わった。
+  polities: [germany, west_germany, east_germany, soviet_union, usa, britain, france, poland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
+- year: 1991
+  date: "1991-01-17"
+  title: 湾岸戦争
+  text: 1990年8月にクウェートに侵攻したイラクに対し、国連の決議にもとづき、アメリカを中心とする多国籍軍（イギリス・フランスなども参加）がイラクを攻撃し、クウェートを解放した。
+  polities: [iraq, kuwait, usa, britain, france, saudi_arabia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/湾岸戦争"
+- year: 1991
+  date: "1991-06-25"
+  title: ユーゴスラヴィア紛争の始まり（スロヴェニア・クロアチアの独立）
+  text: スロヴェニアとクロアチアが独立を宣言し、連邦軍やセルビア人勢力との戦闘が始まった。スロヴェニアは短期間で独立を確保したが、クロアチアでは1995年まで戦闘が続いた。9月にはマケドニアも独立を宣言した。
+  polities: [yugoslavia, slovenia, croatia, serbia, north_macedonia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ユーゴスラビア紛争"
+- year: 1991
+  date: "1991-08-19"
+  title: ソ連の八月クーデタとバルト三国の独立
+  text: ゴルバチョフの改革に反対する共産党の保守派がクーデタを起こしたが、ロシア共和国のエリツィン大統領と市民の抵抗で3日で失敗した。共産党は解散し、9月にソ連はエストニア・ラトヴィア・リトアニアの独立を認めた。
+  polities: [soviet_union, russia, estonia, latvia, lithuania]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ソ連8月クーデター"
+- year: 1991
+  date: "1991-12-25"
+  title: ソ連の解体と独立国家共同体（CIS）
+  text: ロシア・ウクライナ・ベラルーシの首脳がソ連の消滅と独立国家共同体（CIS）の結成を決め（12月8日）、ほかの共和国も加わった。12月25日にゴルバチョフが大統領を辞任し、ソ連は解体して15の共和国が独立国となった。ソ連の地位はロシア連邦が引き継いだ。
+  polities: [soviet_union, russia, ukraine, belarus, moldova, georgia, armenia, azerbaijan, estonia, latvia, lithuania]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ソビエト連邦の崩壊"
+- year: 1992
+  date: "1992-02-07"
+  title: マーストリヒト条約（ヨーロッパ連合条約）
+  text: ECの12か国が、経済・通貨の統合に加えて、共通の外交・安全保障政策や司法・内務の協力を進めるヨーロッパ連合（EU）をつくる条約に調印した（1993年11月発効）。加盟国の国民には「ヨーロッパ市民権」が与えられた。
+  polities: [france, germany, italy, britain, spain, netherlands, belgium, luxembourg, denmark, ireland, portugal, greece]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/マーストリヒト条約"
+- year: 1992
+  date: "1992-04"
+  title: ボスニア紛争
+  text: ボスニア・ヘルツェゴヴィナの独立をめぐり、ボシュニャク人（ムスリム）・セルビア人・クロアチア人の勢力が戦った（〜1995年）。サライェヴォは約4年間包囲され、各地で「民族浄化」と呼ばれる追放や虐殺が行われた。1995年7月のスレブレニツァでは、ボシュニャク人の男性約8000人がセルビア人勢力に殺害された。NATOの空爆を経て、1995年12月のデイトン合意で戦争は終わった。
+  polities: [bosnia, yugoslavia, serbia, croatia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ボスニア・ヘルツェゴビナ紛争"
+- year: 1993
+  date: "1993-01-01"
+  title: チェコとスロヴァキアの分離
+  text: 話し合いにより、チェコスロヴァキアがチェコ共和国とスロヴァキア共和国に平和的に分かれた（「ビロード離婚」）。同じ日、ECの市場統合が完成した。
+  polities: [czechoslovakia, czech_republic, slovakia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/チェコスロバキアの解体"
+- year: 1999
+  date: "1999-01-01"
+  title: 共通通貨ユーロの導入
+  text: EUの11か国が共通通貨ユーロを導入し、通貨政策はヨーロッパ中央銀行（ECB、フランクフルト）にゆだねられた。2002年1月からユーロの紙幣・硬貨が使われ始めた。イギリス・デンマーク・スウェーデンは参加しなかった。
+  polities: [germany, france, italy, spain, netherlands, belgium, luxembourg, austria, finland, ireland, portugal]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ユーロ"
+- year: 1999
+  date: "1999-03-24"
+  title: コソヴォ紛争とNATOの空爆
+  text: セルビアのコソヴォ自治州で、独立を求めるアルバニア系住民とセルビア治安部隊との紛争が激しくなり、NATOが国連の決議なしにユーゴスラヴィア連邦を空爆した（3〜6月）。コソヴォは国連の暫定統治下に置かれ、2008年に独立を宣言した（セルビアやロシアなどは承認していない）。2006年にはモンテネグロも独立し、旧ユーゴスラヴィア連邦は完全に解体していた。この年、ポーランド・チェコ・ハンガリーがNATOに加盟した。
+  polities: [yugoslavia, serbia, kosovo, albania, poland, czech_republic, hungary, montenegro]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/コソボ紛争"
+- year: 2001
+  date: "2001-09-11"
+  title: アメリカ同時多発テロ事件
+  text: イスラーム過激派組織アル＝カーイダが旅客機を乗っ取り、ニューヨークの世界貿易センタービルなどに突入させた。NATOは初めて集団防衛の条項を発動し、アメリカ・イギリスなどはアフガニスタンを攻撃した。2003年のイラク戦争では、参戦したイギリスなどと、反対したフランス・ドイツでヨーロッパが割れた。
+  polities: [usa, britain, france, germany]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アメリカ同時多発テロ事件"
+- year: 2004
+  date: "2004-05-01"
+  title: EUの東方拡大
+  text: ポーランド・チェコ・スロヴァキア・ハンガリー・スロヴェニア・エストニア・ラトヴィア・リトアニアの旧社会主義国と、マルタ・キプロスの10か国がEUに加盟し、25か国となった（1995年にはオーストリア・フィンランド・スウェーデンが加盟していた）。2007年にルーマニア・ブルガリア、2013年にクロアチアが加わった。同じ2004年には、バルト三国などもNATOに加盟した。
+  polities: [poland, czech_republic, slovakia, hungary, slovenia, estonia, latvia, lithuania, cyprus, romania, bulgaria, austria, finland, sweden, croatia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/2004年の欧州連合拡大"
+- year: 2008
+  date: "2008-08-08"
+  title: ロシア＝ジョージア戦争
+  text: ジョージア（グルジア）が分離独立派の支配する南オセチアに軍を進めると、ロシアが大規模に介入してジョージア軍を破った。ロシアは南オセチアとアブハジアの「独立」を承認した。
+  polities: [russia, georgia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/南オセチア紛争_(2008年)"
+- year: 2008
+  date: "2008-09-15"
+  title: リーマン・ショック（世界金融危機）
+  text: アメリカの大手投資銀行リーマン・ブラザーズの破綻をきっかけに、世界的な金融危機が起こった。ヨーロッパでも銀行が経営危機に陥り、各国は公的資金を投入した。この危機から、主要20か国・地域（G20）の首脳会議が開かれるようになった。
+  polities: [usa, britain, germany, france, ireland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/リーマン・ショック"
+- year: 2010
+  date: "2010-05"
+  title: ユーロ危機（ギリシア債務危機）
+  text: ギリシアが財政赤字を隠していたことが分かり（2009年）、国債の価格が暴落した。アイルランド・ポルトガル・スペイン・キプロスなどにも危機が広がり、EUと国際通貨基金（IMF）が支援する代わりに厳しい緊縮財政を求めた。南欧では失業が増え、ドイツなど北の国との対立が深まった。
+  polities: [greece, ireland, portugal, spain, italy, cyprus, germany]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/欧州ソブリン危機"
+- year: 2011
+  date: "2011-01"
+  title: 「アラブの春」とシリア内戦
+  text: チュニジアの民衆の抗議（ジャスミン革命）から、エジプト・リビアなどアラブ諸国で長期の独裁政権が倒れた。リビアではNATOが介入した。シリアでは政府が反政府運動を武力で弾圧して内戦となり（2011年〜）、数百万人の難民が国外へ逃れた。
+  polities: [tunisia, egypt, libya, syria, france, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アラブの春"
+- year: 2014
+  date: "2014-02"
+  title: ウクライナ危機（ロシアのクリミア併合）
+  text: ウクライナでEUとの連合協定の調印見送りに抗議する運動（ユーロマイダン）が広がり、親ロシア派のヤヌコーヴィチ大統領が国外へ逃れた。ロシアは軍を使ってクリミア半島を支配し、住民投票を経て併合を宣言した（3月）。国連総会は住民投票を無効とする決議を採択し、欧米はロシアに経済制裁を科した。東部のドンバス地方では、ロシアが支援する武装勢力とウクライナ軍との戦闘が続いた。
+  polities: [ukraine, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/2014年ウクライナ騒乱"
+- year: 2015
+  title: ヨーロッパ難民危機
+  text: シリア内戦などから逃れた人々が、トルコからギリシアへ、またバルカン半島を通って西欧・北欧をめざし、この年だけで100万人をこえる難民・移民がEUに入った。ドイツ（メルケル首相）は多くを受け入れたが、受け入れの分担をめぐってEU内で対立が起こり、移民に反対する政党が各国で支持をのばした。
+  polities: [germany, greece, hungary, turkey, syria, sweden, austria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/2015年欧州難民危機"
+- year: 2016
+  date: "2016-06-23"
+  title: イギリスの国民投票でEU離脱が決まる
+  text: イギリスでEUからの離脱の是非を問う国民投票が行われ、離脱が約52％で多数を占めた。離脱の条件をめぐって国内の対立が長く続いた。
+  polities: [britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/イギリスの欧州連合離脱"
+- year: 2020
+  date: "2020-01-31"
+  title: イギリスのEU離脱（ブレグジット）
+  text: イギリスがEUから正式に離脱した。加盟国が離脱したのは初めてで、EUは27か国となった。移行期間は2020年末に終わり、北アイルランドの国境の扱いが大きな課題となった。
+  polities: [britain, ireland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/イギリスの欧州連合離脱"
+- year: 2020
+  date: "2020-03"
+  title: 新型コロナウイルス感染症（COVID-19）の世界的流行
+  text: 前年に中国で確認された感染症が世界に広がり、世界保健機関（WHO）はパンデミック（世界的流行）と表明した。イタリア・スペインなどで多くの死者が出て、ヨーロッパ各国は都市の封鎖（ロックダウン）や国境の閉鎖を行った。EUは共同で借り入れて復興基金をつくった。
+  polities: [italy, spain, france, britain, germany]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/新型コロナウイルス感染症の世界的流行_(2019年-)"
+- year: 2022
+  date: "2022-02-24"
+  title: ロシアのウクライナ侵攻
+  text: ロシアがウクライナへの全面的な軍事侵攻を始めた。首都キーウの攻略には失敗したが、東部・南部の一部を占領し、9月には4つの州の「併合」を宣言した（国際的には認められていない）。国連総会はロシアの撤退を求める決議を採択し、欧米は制裁とウクライナへの軍事支援を行った。数百万人のウクライナ人が国外へ避難した。日本政府はこの年から首都の表記を「キエフ」から「キーウ」に改めた。
+  polities: [russia, ukraine, belarus, poland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/2022年ロシアのウクライナ侵攻"
+- year: 2023
+  date: "2023-04-04"
+  title: フィンランドとスウェーデンのNATO加盟
+  text: ロシアのウクライナ侵攻を受け、長く軍事的に中立だったフィンランド（2023年）とスウェーデン（2024年）がNATOに加盟した。加盟国は32か国となった。
+  polities: [finland, sweden, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/北大西洋条約機構の拡大"
+- year: 2023
+  date: "2023-10-07"
+  title: ハマースのイスラエル攻撃とガザ戦争
+  text: パレスチナのガザ地区を支配するイスラーム組織ハマースがイスラエルを攻撃し、約1200人が殺害され、200人以上が人質となった。イスラエルはガザ地区への大規模な軍事作戦で応じ、ガザ保健当局によれば数万人が死亡し、住民の大半が家を追われた。ヨーロッパ諸国の対応は分かれた。
+  polities: [israel, egypt, lebanon]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/2023年パレスチナ・イスラエル戦争"

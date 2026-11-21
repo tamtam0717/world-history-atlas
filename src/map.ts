@@ -1309,7 +1309,7 @@ export class AtlasMap {
 
   private labelsOn = true;
 
-  /** 国名・都市名・海の名前を表示するかどうか（L キー） */
+  /** 国名・都市名・海の名前を表示するかどうか（H キー） */
   setLabels(on: boolean) {
     this.labelsOn = on;
     if (this.loaded) this.applyModern();

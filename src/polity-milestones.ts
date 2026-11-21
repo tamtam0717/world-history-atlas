@@ -162,10 +162,10 @@ export class PolityMilestones {
         .map(([k]) => name(k, y0 + y))
         .filter(Boolean);
       const detail = `${title}（${Math.round(sum).toLocaleString()} km²${who.length ? `、${verb === "gain" ? "←" : "→"}${who.join("・")}` : ""}）`;
-      return { title, detail };
+      return { title, detail, others: others.map(([k]) => atlas.polities[k].id) };
     };
 
-    const byYear = new Map<number, { terr?: PolityMilestone; events: HistEvent[]; name?: string }>();
+    const byYear = new Map<number, { terr?: PolityMilestone; others?: string[]; events: HistEvent[]; name?: string }>();
     const slot = (year: number) => {
       let s = byYear.get(year);
       if (!s) byYear.set(year, (s = { events: [] }));
@@ -197,7 +197,9 @@ export class PolityMilestones {
       // 増減の両方があるときは、大きい方をラベルにする
       const main = dg && dl ? (g >= l ? dg : dl) : (dg ?? dl)!;
       const detail = [dg, dl].filter((d) => d && d !== main).map((d) => d!.detail);
-      slot(year).terr = { year, title: main.title, detail: [main.detail, ...detail], kind: main === dg ? "gain" : "loss" };
+      const sl = slot(year);
+      sl.terr = { year, title: main.title, detail: [main.detail, ...detail], kind: main === dg ? "gain" : "loss" };
+      sl.others = [...(dg?.others ?? []), ...(dl?.others ?? [])];
     }
     // 範囲の最初の年にまだない国：最初に現れた年（上で拾えなかったとき）
     if (total[0] === 0) {
@@ -229,8 +231,15 @@ export class PolityMilestones {
     // 年ごとに1つにまとめる。ラベルは 領土 → 出来事 → 国名 の順で選ぶ（出来事は関わる国の少ないものを優先）
     const out: PolityMilestone[] = [];
     for (const [year, s] of byYear) {
+      // 条約・分割・併合の出来事と、（領土が変わった年は）相手国が多く関わる出来事を先にする
+      const others = new Set(s.others ?? []);
+      const score = (e: HistEvent) =>
+        (e.polities ?? []).filter((x) => others.has(x)).length + (/条約|議定書|和約|分割|併合/.test(e.title) ? 2 : 0);
       const evSorted = [...s.events].sort(
-        (a, b) => (a.importance ?? 3) - (b.importance ?? 3) || (a.polities?.length ?? 0) - (b.polities?.length ?? 0),
+        (a, b) =>
+          (a.importance ?? 3) - (b.importance ?? 3) ||
+          score(b) - score(a) ||
+          (a.polities?.length ?? 0) - (b.polities?.length ?? 0),
       );
       const evTitles = evSorted.map((e) => e.title);
       if (s.terr) {

@@ -18,8 +18,11 @@ export interface ShortcutActions {
   togglePlay(): void;
   startYearInput(digit: string): void;
   toggleModern(): void;
-  /** 宗教・言語の分布の表示を切り替える（revert：長押しを離したので元に戻す） */
-  toggleLayer(layer: DistKey, revert?: boolean): void;
+  /**
+   * 地図の種類を切り替える（P：政治へ、R・L：宗教・言語と政治を切り替え）。revert：長押しを離したので元に戻す。
+   * 表示が変わらなかったとき（政治の表示中に P など）は false を返す（長押しを離しても戻さない）
+   */
+  toggleLayer(layer: LayerKey, revert?: boolean): boolean;
   /** 潮流の年表（スライダーの下の帯）を開く／閉じる */
   toggleBand(): void;
   compare(on: boolean): void;
@@ -29,6 +32,7 @@ export interface ShortcutActions {
   deselect(): boolean;
 }
 
+type LayerKey = DistKey | "political";
 type Region = "world" | "europe" | "na" | "af" | "as";
 const COMBOS: Record<string, Region> = { NA: "na", AF: "af", AS: "as" };
 const PREFIXES = new Set(["N", "A"]);
@@ -126,12 +130,15 @@ export function setupShortcuts(a: ShortcutActions) {
     a.map.zoomBy(f);
   };
 
-  // R：宗教、Y：言語の表示を切り替え。長押し（HOLD_MS 以上）したときは、離すと元に戻す
+  // P：政治、R：宗教、L：言語（民族）の表示へ切り替え（R・L はもう一度押すと政治に戻る）。
+  // 長押し（HOLD_MS 以上）したときは、離すと元の表示に戻す
   const HOLD_MS = 450;
-  const LAYER_KEYS: Record<string, DistKey> = { R: "religion", Y: "language" };
+  const LAYER_KEYS: Record<string, LayerKey> = { P: "political", R: "religion", L: "language" };
   const downAt: Record<string, number> = {};
+  /** 押したときに表示が変わったか（変わらなければ、離しても戻さない） */
+  const changed: Record<string, boolean> = {};
   const endLayerHold = (l: string) => {
-    if (downAt[l] && performance.now() - downAt[l] >= HOLD_MS) a.toggleLayer(LAYER_KEYS[l], true);
+    if (downAt[l] && changed[l] && performance.now() - downAt[l] >= HOLD_MS) a.toggleLayer(LAYER_KEYS[l], true);
     downAt[l] = 0;
   };
 
@@ -239,7 +246,7 @@ export function setupShortcuts(a: ShortcutActions) {
       }
     }
     pending = "";
-    if (repeat) return l === "B" || l in LAYER_KEYS; // 押しっぱなしの繰り返しは無視（B・R は押している間の表示なので既定動作だけ止める）
+    if (repeat) return l === "B" || l in LAYER_KEYS; // 押しっぱなしの繰り返しは無視（B・P・R・L は押している間の表示なので既定動作だけ止める）
     if (PREFIXES.has(l)) {
       pending = l;
       pendingAt = now;
@@ -265,11 +272,12 @@ export function setupShortcuts(a: ShortcutActions) {
           a.compare(true);
         }
         return true;
+      case "P":
       case "R":
-      case "Y":
+      case "L":
         if (!downAt[l]) {
           downAt[l] = performance.now();
-          a.toggleLayer(LAYER_KEYS[l]);
+          changed[l] = a.toggleLayer(LAYER_KEYS[l]);
         }
         return true;
       case "T":
@@ -278,9 +286,9 @@ export function setupShortcuts(a: ShortcutActions) {
       case "G":
         a.focusSelected();
         return true;
-      case "L":
+      case "H":
         a.map.setLabels(!a.map.labelsVisible);
-        toast(a.map.labelsVisible ? "地名を表示" : "地名を非表示（L で戻す）");
+        toast(a.map.labelsVisible ? "地名を表示" : "地名を非表示（H で戻す）");
         return true;
       case "U":
         a.copyUrl();

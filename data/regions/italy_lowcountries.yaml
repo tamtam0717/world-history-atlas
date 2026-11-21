@@ -21,9 +21,151 @@
       owner: netherlands
       cause: フランス支配からの解放・ウィレム1世の帰国
       source: "https://ja.wikipedia.org/wiki/ネーデルラント連合王国"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放とドイツ軍の降伏（1945年5月）"
   note: >-
     国家連合直轄領（ヘネラリテイト・ランデン：北ブラバント、ゼーラント・フランデレン、リンブルフの一部）を含む。
     クーレンボルフ・ベルフ伯領・ラーフェンステインなど小さな帝国領の飛び地は省略。
+
+- id: nl_south_1944
+  name: オランダ南部（1944年に解放）
+  select:
+    pieces: [NLD-Borsele, NLD-Goes, NLD-Kapelle, NLD-Reimerswaal, NLD-Middelburg, NLD-Vlissingen, NLD-Veere, NLD-Noord_Beveland, NLD-Tholen, NLD-s_Hertogenbosch, NLD-Alphen_Chaam, NLD-Asten, NLD-Baarle_Nassau, NLD-Bergeijk, NLD-Bergen_op_Zoom, NLD-Bernheze, NLD-Best, NLD-Bladel, NLD-Boekel, NLD-Boxtel, NLD-Breda, NLD-Cranendonck, NLD-Deurne, NLD-Dongen, NLD-Drimmelen, NLD-Eersel, NLD-Eindhoven, NLD-Etten_Leur, NLD-Geertruidenberg, NLD-Geldrop_Mierlo, NLD-Gemert_Bakel, NLD-Gilze_en_Rijen, NLD-Goirle, NLD-Halderberge, NLD-Heeze_Leende, NLD-Helmond, NLD-Heusden, NLD-Hilvarenbeek, NLD-Laarbeek, NLD-Land_van_Cuijk, NLD-Loon_op_Zand, NLD-Maashorst, NLD-Meierijstad, NLD-Moerdijk, NLD-Nuenen_Gerwen_en_Nederwetten, NLD-Oirschot, NLD-Oisterwijk, NLD-Oosterhout, NLD-Oss, NLD-Reusel_De_Mierden, NLD-Roosendaal, NLD-Rucphen, NLD-Sint_Michielsgestel, NLD-Someren, NLD-Son_en_Breugel, NLD-Steenbergen, NLD-Tilburg, NLD-Valkenswaard, NLD-Veldhoven, NLD-Vught, NLD-Waalre, NLD-Waalwijk, NLD-Woensdrecht, NLD-Zundert, NLD-Nijmegen, NLD-Berg_en_Dal, NLD-Heumen, NLD-Wijchen, NLD-Beuningen, NLD-Druten, NLD-West_Maas_en_Waal, NLD-Overbetuwe, NLD-Lingewaard]
+  timeline:
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
+  note: "1944年末に連合軍が解放していた所（ゼーラント（スハウウェン＝ダイフェラントを除く）、北ブラバント（アルテナを除く）、ナイメーヘン周辺と「島」（ベトゥウェ東部））。マーケット・ガーデン作戦（9月）とスヘルデ川河口の戦い（10–11月）による。"
+
+- id: haarlemmermeer
+  name: ハールレマーメール（1852年まで湖）
+  select:
+    pieces: [NLD-Haarlemmermeer]
+  timeline:
+    - from: 1648
+      owner: water
+      cause: "干拓前のハールレム湖（ハールレマーメール）"
+      source: "https://en.wikipedia.org/wiki/Haarlemmermeer"
+    - from: 1852
+      owner: netherlands
+      cause: "蒸気ポンプによる干拓が完了（1849–1852年）"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放とドイツ軍の降伏（1945年5月）"
+  note: "ピースの大部分が湖を干拓した土地。"
+
+- id: zuidplas
+  name: ザウトプラス（1840年まで湖）
+  select:
+    pieces: [NLD-Zuidplas]
+  timeline:
+    - from: 1648
+      owner: water
+      cause: "泥炭の採掘でできた湖（ザウトプラス）"
+      source: "https://en.wikipedia.org/wiki/Zuidplaspolder"
+    - from: 1840
+      owner: netherlands
+      cause: "ザウトプラス干拓地の完成（1839–1840年）"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放とドイツ軍の降伏（1945年5月）"
+  note: "ピースの約3分の2がザウトプラス干拓地。北部・東部の古い村（モールドレヒトなど）も海の色になる。"
+
+- id: wieringermeer
+  name: ヴィーリンゲルメール（1930年まで海）
+  select:
+    pieces: [NLD-Hollands_Kroon]
+  timeline:
+    - from: 1648
+      owner: water
+      cause: "ゾイデル海（干拓前）"
+      source: "https://en.wikipedia.org/wiki/Zuiderzee_Works"
+    - from: 1930
+      owner: netherlands
+      cause: "ゾイデル海干拓事業の最初の干拓地ヴィーリンゲルメールが完成"
+      source: "https://en.wikipedia.org/wiki/Wieringermeer"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放とドイツ軍の降伏（1945年5月）"
+  note: "ピースの過半がヴィーリンゲルメール干拓地。ヴィーリンゲン島・アンナ・パウローナなど古い土地も含むが、面積の大きい側に合わせる。1945年4月にドイツ軍が堤防を爆破して水没させたが、年末までに排水された。"
+
+- id: noordoostpolder
+  name: 北東ポルダー（1942年まで海）
+  select:
+    pieces: [NLD-Noordoostpolder]
+  timeline:
+    - from: 1648
+      owner: water
+      cause: "ゾイデル海（1932年の締切大堤防の完成後はアイセル湖）"
+      source: "https://en.wikipedia.org/wiki/Zuiderzee_Works"
+    - from: 1942
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "北東ポルダーの干拓が完成（ドイツ占領下）"
+      source: "https://en.wikipedia.org/wiki/Noordoostpolder"
+    - from: 1945
+      owner: netherlands
+      cause: "ドイツ軍の降伏（1945年5月）"
+
+- id: flevoland_east
+  name: 東フレヴォラント（1957年まで湖）
+  select:
+    pieces: [NLD-Dronten, NLD-Lelystad]
+  timeline:
+    - from: 1648
+      owner: water
+      cause: "ゾイデル海（1932年からアイセル湖）"
+      source: "https://en.wikipedia.org/wiki/Zuiderzee_Works"
+    - from: 1957
+      owner: netherlands
+      cause: "東フレヴォラント干拓地が完成"
+      source: "https://en.wikipedia.org/wiki/Flevopolder"
+
+- id: flevoland_south
+  name: 南フレヴォラント（1968年まで湖）
+  select:
+    pieces: [NLD-Zeewolde, NLD-Almere]
+  timeline:
+    - from: 1648
+      owner: water
+      cause: "ゾイデル海（1932年からアイセル湖）"
+      source: "https://en.wikipedia.org/wiki/Zuiderzee_Works"
+    - from: 1968
+      owner: netherlands
+      cause: "南フレヴォラント干拓地が完成（1986年にフレヴォラント州）"
+      source: "https://en.wikipedia.org/wiki/Flevopolder"
 
 - id: zeeland_flanders
   name: ゼーラント・フランデレン（国家連合直轄領）
@@ -39,6 +181,15 @@
     - from: 1814
       owner: netherlands
       cause: パリ条約（第1次）
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
 
 # --- 現代のオランダ領リンブルフ（歴史的には分裂していた）
 - id: nl_limburg
@@ -79,7 +230,31 @@
       owner: netherlands
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約でリンブルフはオランダの一州と確認）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
   note: ローアモント・ウェールトなど。下位の地域でオランダ・プロイセン・ユーリヒ・リエージュの部分を上書きする。1830年以降の変遷は下位の地域にも同じものを書いている。
+
+- id: roermond_1944
+  name: ルールモント・ベーセル（1945年に解放）
+  select:
+    pieces: [NLD-Roermond, NLD-Beesel]
+  timeline:
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放（1945年3月）"
 
 - id: maastricht
   name: マーストリヒト
@@ -97,6 +272,15 @@
     - from: 1814
       owner: netherlands
       cause: パリ条約（第1次）
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
   note: マーストリヒトの町はベルギー独立革命（1830–1839）の間もオランダ軍が守り、1839–1866年もリンブルフ公国のうちドイツ連邦に入らなかった。
 
 - id: overmaas
@@ -135,6 +319,15 @@
       owner: netherlands
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約でリンブルフはオランダの一州と確認）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
 
 - id: julich_nl
   name: シッタルト・スステレン（ユーリヒ公国の飛び地）
@@ -177,6 +370,30 @@
       owner: netherlands
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約でリンブルフはオランダの一州と確認）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
+
+- id: echt_susteren_1944
+  name: エヒト＝ススタレン（1945年に解放）
+  select:
+    pieces: [NLD-Echt_Susteren]
+  timeline:
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放（1945年1月、ブラックコック作戦）"
 
 - id: upper_guelders_dutch
   name: フェンロー・モンフォールト（1713年からオランダ領上ヘルレ）
@@ -214,6 +431,16 @@
       owner: netherlands
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約でリンブルフはオランダの一州と確認）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放（1945年1〜3月）"
+      note: "マースハウ（ピースの西部）は1944年秋に解放された所もあるが、フェンロー・ルールダーレンに合わせて1945年とした。要確認。"
 
 - id: upper_guelders_prussian
   name: ケッセル・フェンライ（1713年からプロイセン領上ヘルレ）
@@ -258,6 +485,30 @@
       owner: netherlands
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約でリンブルフはオランダの一州と確認）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
+
+- id: bergen_l_1944
+  name: ベルヘン（リンブルフ。1945年に解放）
+  select:
+    pieces: [NLD-Bergen_L]
+  timeline:
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放（1945年3月）"
 
 - id: gennep
   name: ヘネップ（クレーフェ公国の一部）
@@ -297,6 +548,15 @@
       owner: netherlands
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約でリンブルフはオランダの一州と確認）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1945
+      owner: netherlands
+      cause: "連合軍による解放（1945年2月、ヴェリタブル作戦）"
 
 - id: horn_leudal
   name: ホールン・ハールン（1815年からオランダ領リンブルフ）
@@ -317,6 +577,15 @@
       owner: netherlands
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約でリンブルフはオランダの一州と確認）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "オランダ"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands"
+    - from: 1944
+      owner: netherlands
+      cause: "連合軍による解放（1944年9〜11月。南部）"
   note: 1815年まではリエージュ司教領（ホールン伯領）の記述（liege_region）を使う。
 
 # ================================================================ 南ネーデルラント（ベルギー）・リエージュ・ルクセンブルク
@@ -354,6 +623,25 @@
       cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）
       note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。
       source: "https://ja.wikipedia.org/wiki/ベルギー独立革命"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I"
+    - from: 1918
+      owner: belgium
+      cause: "第一次世界大戦の休戦（11月）でドイツ軍が撤退"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II"
+    - from: 1944
+      owner: belgium
+      cause: "連合軍による解放（9月）"
+      note: "12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。"
 
 - id: liege_region
   name: リエージュ司教領
@@ -386,6 +674,30 @@
       note: >-
         ヴェルヴィエのピースの東部（オイペン・マルメディ・ザンクト・フィート。ピースの約半分）は、1815年のウィーン議定書でプロイセン領となり、1920年にベルギー領になった。
         ピースの粒度では表せないため、西部（ヴェルヴィエ・スパ・スタヴロ）に合わせてオランダ・ベルギー領として描く。
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I"
+    - from: 1918
+      owner: belgium
+      cause: "第一次世界大戦の休戦（11月）でドイツ軍が撤退"
+    - from: 1920
+      owner: belgium
+      cause: "ヴェルサイユ条約（1920年発効）でオイペン・マルメディがドイツからベルギーへ（ヴェルヴィエのピースの東部）"
+      note: "オイペン・マルメディ（ピースの約半分）は1815–1919年はプロイセン（ドイツ）領だったが、ピースの粒度では表せないためベルギー領として描いている。1940–1944年はドイツが併合した。"
+      source: "https://en.wikipedia.org/wiki/Eupen-Malmedy"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II"
+    - from: 1944
+      owner: belgium
+      cause: "連合軍による解放（9月）"
+      note: "12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。"
   source: "https://ja.wikipedia.org/wiki/リエージュ司教領"
 
 - id: tournai_furnes
@@ -416,6 +728,45 @@
       cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）
       note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。
       source: "https://ja.wikipedia.org/wiki/ベルギー独立革命"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I"
+    - from: 1918
+      owner: belgium
+      cause: "第一次世界大戦の休戦（11月）でドイツ軍が撤退"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II"
+    - from: 1944
+      owner: belgium
+      cause: "連合軍による解放（9月）"
+      note: "12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。"
+
+- id: furnes_1914
+  name: フールネ（第一次世界大戦で占領を免れた地域）
+  select:
+    pieces: [BEL-Furnes]
+  timeline:
+    - from: 1914
+      owner: belgium
+      cause: "イーゼル川の戦い（10月）で前線が止まり、イーゼル川の西のベルギー領は占領を免れた（国王アルベール1世が軍とともにとどまった）"
+      source: "https://en.wikipedia.org/wiki/Battle_of_the_Yser"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II"
+    - from: 1944
+      owner: belgium
+      cause: "連合軍による解放（9月）"
+      note: "12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。"
 
 - id: ypres
   name: イーペル（1678年からフランス領）
@@ -444,6 +795,21 @@
       cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）
       note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。
       source: "https://ja.wikipedia.org/wiki/ベルギー独立革命"
+    - from: 1914
+      owner: belgium
+      cause: "イーペル周辺は第一次世界大戦中も連合軍が守った（イーペル突出部）"
+      note: "ピースの東部（パッシェンデール・メッセンなど）は前線の東でドイツ軍の占領下にあった。"
+      source: "https://en.wikipedia.org/wiki/Ypres_Salient"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II"
+    - from: 1944
+      owner: belgium
+      cause: "連合軍による解放（9月）"
+      note: "12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。"
 
 - id: aachen_1668_returned
   name: コルトレイク・アウデナールデ・アト（1668–1678年フランス領）
@@ -477,6 +843,25 @@
       cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）
       note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。
       source: "https://ja.wikipedia.org/wiki/ベルギー独立革命"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I"
+    - from: 1918
+      owner: belgium
+      cause: "第一次世界大戦の休戦（11月）でドイツ軍が撤退"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II"
+    - from: 1944
+      owner: belgium
+      cause: "連合軍による解放（9月）"
+      note: "12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。"
   note: シャルルロワ・バンシュも1668–1678年にフランス領だったが、町とその周辺だけでピースの大半を占めないため描かない。
 
 - id: luxembourg
@@ -524,6 +909,25 @@
       owner: belgium
       cause: ロンドン条約（1839）でルクセンブルクを分割し、西のフランス語圏がベルギー領（リュクサンブール州）に
       source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1839)"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I"
+    - from: 1918
+      owner: belgium
+      cause: "第一次世界大戦の休戦（11月）でドイツ軍が撤退"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ベルギー"
+      cause: "第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II"
+    - from: 1944
+      owner: belgium
+      cause: "連合軍による解放（9月）"
+      note: "12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。"
   note: 現ベルギーのリュクサンブール州は1839年までルクセンブルク大公国の一部。ブイヨン公国（リエージュ領→1678年からフランスの保護下）は省略。1830年以降の現ルクセンブルクの部分は lux_grand_duchy で上書きする。
 
 - id: lux_grand_duchy
@@ -545,6 +949,26 @@
       owner: luxembourg
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約で永世中立国に）
       source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1867)"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      label: "ルクセンブルク"
+      cause: "第一次世界大戦でドイツ軍が中立を破って占領（8月。大公と政府は国内にとどまった）"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Luxembourg_during_World_War_I"
+    - from: 1918
+      owner: luxembourg
+      cause: "第一次世界大戦の休戦でドイツ軍が撤退"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ルクセンブルク"
+      cause: "第二次世界大戦でドイツ軍が占領（5月）。女大公シャルロットと政府はロンドンに亡命"
+      note: "ドイツは1942年に事実上の併合を宣言し、徴兵も行ったが、国際的には認められていないため占領として描く。"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Luxembourg_during_World_War_II"
+    - from: 1944
+      owner: luxembourg
+      cause: "連合軍による解放（9月）"
+      note: "12月のアルデンヌ攻勢で北部が一時ドイツ軍に奪われたが、短期間のため描かない。"
   note: 1842年からドイツ関税同盟に加盟（1918年まで）。1890年にオランダとの同君連合が終わった（大公はナッサウ＝ヴァイルブルク家に）。1914年8月からドイツ軍が占領した（地図では描かない）。
 
 - id: lux_fortress
@@ -561,6 +985,26 @@
       owner: luxembourg
       cause: 普墺戦争の後、プラハ条約でドイツ連邦が解体（1867年のロンドン条約で要塞は取り壊され、プロイセン軍が撤退）
       source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1867)"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      label: "ルクセンブルク"
+      cause: "第一次世界大戦でドイツ軍が中立を破って占領（8月。大公と政府は国内にとどまった）"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Luxembourg_during_World_War_I"
+    - from: 1918
+      owner: luxembourg
+      cause: "第一次世界大戦の休戦でドイツ軍が撤退"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      label: "ルクセンブルク"
+      cause: "第二次世界大戦でドイツ軍が占領（5月）。女大公シャルロットと政府はロンドンに亡命"
+      note: "ドイツは1942年に事実上の併合を宣言し、徴兵も行ったが、国際的には認められていないため占領として描く。"
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_Luxembourg_during_World_War_II"
+    - from: 1944
+      owner: luxembourg
+      cause: "連合軍による解放（9月）"
+      note: "12月のアルデンヌ攻勢で北部が一時ドイツ軍に奪われたが、短期間のため描かない。"
 
 # ================================================================ スイスとその周辺
 
@@ -751,6 +1195,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: アスティ南部・トリーノ（トリノ）など一部はモンフェッラート（マントヴァ公領、1708年からサヴォイア領）だった。
 
 - id: alessandria
@@ -790,6 +1242,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: lombardy
   name: ミラノ公国（ロンバルディア）
@@ -832,6 +1292,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: クレモナのピースのうちクレーマ周辺はヴェネツィア領だった。
 
 - id: novara
@@ -861,6 +1329,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: 1738年より前は lombardy の記述（ミラノ公国）を使う。
 
 - id: ossola_lomellina
@@ -892,6 +1368,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: mantua_region
   name: マントヴァ
@@ -923,6 +1407,14 @@
       owner: italy
       cause: 普墺戦争（第3次イタリア独立戦争）。ウィーン条約でオーストリアがヴェネトとマントヴァをフランス経由でイタリアに譲り、住民投票で併合
       source: "https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: 1859年のチューリヒ条約で、マントヴァ県の西部（アーゾラ・ボッツォロ・ヴィアダーナなど）はロンバルディアとともにサルデーニャ王国に移ったが、マントヴァ要塞と東部・ポー川南岸はオーストリア領に残った。ピースはマントヴァの町に合わせてオーストリア領として描く。
 
 - id: venetian_lombardy
@@ -954,6 +1446,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: venetia
   name: ヴェネト・フリウリ（ヴェネツィア本土領の東部）
@@ -977,7 +1477,45 @@
       owner: italy
       cause: 普墺戦争（第3次イタリア独立戦争）。ウィーン条約でオーストリアがヴェネトとマントヴァをフランス経由でイタリアに譲り、住民投票で併合
       source: "https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: ヴェローナのピースはアディジェ川で分かれ、1797–1805年は西岸（ガルダ湖南岸・ヴィッラフランカ）がチザルピーナ共和国領。ウーディネのピースの東端（アクイレイア周辺など）はオーストリア領だった。
+
+- id: belluno_ozav
+  name: ベッルーノ（アルプス前地作戦地域）
+  select:
+    pieces: [ITA-Belluno]
+  timeline:
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      label: "アルプス前地作戦地域"
+      cause: "イタリアの降伏後、ドイツが「アルプス前地作戦地域」として直接統治"
+      source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Alpine_Foothills"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
+
+- id: friuli_ozak
+  name: フリウリ（アドリア海沿岸作戦地域）
+  select:
+    pieces: [ITA-Udine, ITA-Pordenone]
+  timeline:
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      label: "アドリア海沿岸作戦地域"
+      cause: "イタリアの降伏後、ドイツが「アドリア海沿岸作戦地域」として直接統治"
+      source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: venice_lagoon
   name: ヴェネツィア（1848–1849年 サン・マルコ共和国）
@@ -997,6 +1535,14 @@
       owner: italy
       cause: 普墺戦争（第3次イタリア独立戦争）。ウィーン条約でオーストリアがヴェネトとマントヴァをフランス経由でイタリアに譲り、住民投票で併合
       source: "https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: 1848年より前は venetia の記述を使う。
 
 - id: polesine
@@ -1022,6 +1568,14 @@
       owner: italy
       cause: 普墺戦争（第3次イタリア独立戦争）。ウィーン条約でオーストリアがヴェネトとマントヴァをフランス経由でイタリアに譲り、住民投票で併合
       source: "https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: valtellina
   name: ヴァルテッリーナ・キアヴェンナ・ボルミオ
@@ -1054,6 +1608,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: trentino
   name: トレント司教領（トレンティーノ）
@@ -1092,6 +1654,24 @@
       owner: habsburg
       cause: 普墺戦争の敗北とプラハ条約でドイツ連邦が解体（トレンティーノ・南チロル・トリエステなどはオーストリア領に残る）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1918
+      owner: italy
+      certainty: occupied
+      cause: "第一次世界大戦の休戦（ヴィラ・ジュスティ休戦協定、11月）でイタリア軍が占領"
+      source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"
+    - from: 1919
+      owner: italy
+      cause: "サン＝ジェルマン条約でオーストリアがイタリアに割譲（1920年に正式に併合）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Saint-Germain-en-Laye_(1919)"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      label: "アルプス前地作戦地域"
+      cause: "イタリアの降伏後、ドイツが「アルプス前地作戦地域」として直接統治（イタリア社会共和国から切り離した）"
+      source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Alpine_Foothills"
+    - from: 1945
+      owner: italy
+      cause: "ドイツ軍の降伏（1945年5月）"
 
 - id: south_tyrol
   name: 南チロル（チロル伯領・ブリクセン司教領）
@@ -1126,6 +1706,25 @@
       owner: habsburg
       cause: 普墺戦争の敗北とプラハ条約でドイツ連邦が解体（トレンティーノ・南チロル・トリエステなどはオーストリア領に残る）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1918
+      owner: italy
+      certainty: occupied
+      cause: "第一次世界大戦の休戦（ヴィラ・ジュスティ休戦協定、11月）でイタリア軍がブレンナー峠まで占領"
+      source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"
+    - from: 1919
+      owner: italy
+      cause: "サン＝ジェルマン条約でオーストリアがイタリアに割譲（ドイツ語住民の多い南チロルも含む。1920年に正式に併合）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Saint-Germain-en-Laye_(1919)"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      label: "アルプス前地作戦地域"
+      cause: "イタリアの降伏後、ドイツが「アルプス前地作戦地域」として直接統治"
+      source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Alpine_Foothills"
+    - from: 1945
+      owner: italy
+      cause: "ドイツ軍の降伏（1945年5月）。1946年のグルーバー＝デ・ガスペリ協定で、ドイツ語住民の自治を約束してイタリア領にとどまった"
+      source: "https://en.wikipedia.org/wiki/Gruber–De_Gasperi_Agreement"
 
 - id: gorizia_trieste
   name: ゴリツィア・トリエステ
@@ -1155,6 +1754,47 @@
       owner: habsburg
       cause: 普墺戦争の敗北とプラハ条約でドイツ連邦が解体（トレンティーノ・南チロル・トリエステなどはオーストリア領に残る）
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1918
+      owner: italy
+      certainty: occupied
+      cause: "第一次世界大戦の休戦（11月）でイタリア軍が占領"
+      source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"
+    - from: 1919
+      owner: italy
+      cause: "サン＝ジェルマン条約でオーストリアがイタリアに割譲（1920年のラパッロ条約でユーゴスラヴィアとの国境を確定）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Saint-Germain-en-Laye_(1919)"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      label: "アドリア海沿岸作戦地域"
+      cause: "イタリアの降伏後、ドイツが「アドリア海沿岸作戦地域」として直接統治"
+      source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"
+    - from: 1945
+      owner: britain
+      certainty: occupied
+      label: "英米軍政（ヴェネツィア・ジュリアA地区）"
+      cause: "5月にユーゴスラヴィアのパルチザンが占領（約40日）。6月のベオグラード協定で、モーガン線の西（A地区）が英米軍の軍政下に置かれた"
+      note: "軍政は英米の共同。ここでは britain の色で描く。"
+      source: "https://en.wikipedia.org/wiki/Morgan_Line"
+    - from: 1947
+      owner: italy
+      cause: "パリ講和条約でゴリツィア市を含む西部がイタリア領に（東部はユーゴスラヴィア領）"
+      source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"
+
+- id: trieste_ftt
+  name: トリエステ（1947–1954年 トリエステ自由地域）
+  select:
+    pieces: [ITA-Trieste]
+  timeline:
+    - from: 1947
+      owner: trieste_free_territory
+      cause: "パリ講和条約でトリエステ自由地域が成立（国際連合の保障。A地区は英米軍、B地区はユーゴスラヴィア軍の軍政）"
+      note: "ピースは自由地域のA地区（トリエステ市と周辺）にほぼ当たる。B地区（イストリア北西部）はクロアチア・スロヴェニアのピース。"
+      source: "https://en.wikipedia.org/wiki/Free_Territory_of_Trieste"
+    - from: 1954
+      owner: italy
+      cause: "ロンドン覚書（10月）でA地区がイタリアの、B地区がユーゴスラヴィアの施政下に（1975年のオージモ条約で国境を確定）"
+      source: "https://en.wikipedia.org/wiki/Free_Territory_of_Trieste"
 
 - id: liguria
   name: リグリア（ジェノヴァ共和国）
@@ -1183,6 +1823,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: modena_region
   name: モデナ・レッジョ
@@ -1222,6 +1870,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: ミランドラ（1710年にモデナが購入）・グアスタッラ（1746年までゴンザーガ家）は省略。
 
 - id: parma_region
@@ -1258,6 +1914,14 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
   note: ボッビオ周辺（ピアチェンツァ西部の一部）は1743年からサヴォイア領。
 
 - id: legations
@@ -1303,6 +1967,15 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃で解放（1945年4月）"
+      note: "ボローニャのピースの南部（アペニン山脈）は1944年秋に連合軍が占領していたが、ピースの大部分に合わせて1945年とした。"
 
 - id: romagna
   name: ロマーニャ
@@ -1343,6 +2016,16 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1944
+      owner: italy
+      cause: "連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる"
+      note: "1944年末の前線（ゴシック線を破った後のセニオ川の線）はラヴェンナのピースの西部を通り、ルーゴなどはドイツ軍側に残った（1945年4月に解放）。"
+      source: "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
 
 - id: marche
   name: マルケ
@@ -1380,6 +2063,15 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1944
+      owner: italy
+      cause: "連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる"
+      source: "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
 
 - id: rome_umbria
   name: ラツィオ・ウンブリア（ローマ周辺）
@@ -1411,6 +2103,16 @@
       owner: italy
       cause: 普仏戦争でローマのフランス守備隊が引き上げた後、イタリア軍がローマを占領（9月20日、ピア門の突破）。住民投票（10月）で併合し、1871年に首都をローマへ
       source: "https://ja.wikipedia.org/wiki/ローマ占領"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1944
+      owner: italy
+      cause: "連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる"
+      note: "1943年末の前線（グスタフ線）はガリリャーノ川・カッシーノを通り、ラティーナ・フロジノーネはドイツ軍側にあった。ローマはドイツ軍が占領し、1944年6月4日に解放された。"
+      source: "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
 
 - id: umbria_sabina
   name: ウンブリアとサビーナ（1860年にイタリアへ）
@@ -1425,6 +2127,15 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1944
+      owner: italy
+      cause: "連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる"
+      source: "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
   note: 1860年より前は rome_umbria の記述（教皇領）を使う。
 
 - id: vatican
@@ -1438,6 +2149,10 @@
       cause: ローマ占領。教皇はヴァチカン宮殿にとどまってイタリアを認めず（ローマ問題）。1871年の教皇保障法でイタリアは宮殿の不可侵を認めた
       note: 法的にはイタリア領として扱われたが、教皇が実際に住み、主権を主張し続けた。1929年のラテラノ条約でヴァチカン市国となる。
       source: "https://ja.wikipedia.org/wiki/ローマ問題"
+    - from: 1929
+      owner: vatican_city
+      cause: "ラテラノ条約でイタリアがヴァチカン市国の主権を認めた（ローマ問題の解決）"
+      source: "https://ja.wikipedia.org/wiki/ラテラノ条約"
   note: 1870年より前は rome_umbria の記述（教皇領）を使う。
 
 - id: tuscany_region
@@ -1475,6 +2190,16 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1944
+      owner: italy
+      cause: "連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる"
+      note: "マッサ・カッラーラは massa_lunigiana の記述を使う。"
+      source: "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
   note: 1814–1815年、エルバ島は退位したナポレオンの公国だった。
 
 - id: lucca_region
@@ -1505,6 +2230,16 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1944
+      owner: italy
+      cause: "連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる"
+      note: "ガルファニャーナ北部は1944年末もドイツ軍側（ゴシック線）に残った。"
+      source: "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
 
 - id: massa_lunigiana
   name: マッサ・カッラーラとルニジャーナ（1847年以降）
@@ -1532,6 +2267,15 @@
       owner: italy
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1945
+      owner: italy
+      cause: "連合軍の総攻撃で解放（1945年4月）"
+      note: "ゴシック線の西端。1944年末はマッサ以北がドイツ軍側に残った。"
 
 - id: san_marino_region
   name: サンマリノ
@@ -1580,6 +2324,22 @@
       cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）
       source: "https://ja.wikipedia.org/wiki/イタリア王国"
   note: 1799年1月から6月まではパルテノペア共和国（フランスの衛星国）が成立したが、年末時点ではブルボン家が復帰していた。
+
+- id: abruzzo_north_1943
+  name: アブルッツォ北部（1943年末にドイツ軍側）
+  select:
+    pieces: [ITA-L_Aquila, ITA-Teramo, ITA-Pescara]
+  timeline:
+    - from: 1943
+      owner: italian_social_republic
+      overlord: germany
+      cause: "イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立"
+      source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - from: 1944
+      owner: italy
+      cause: "連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる"
+      source: "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
+  note: "1943年末の前線（グスタフ線）はサングロ川からオルトーナを通った。キエーティはピースの南部が連合軍側に入ったため、naples_mainland（イタリア王国）のままにした。"
 
 - id: sicily
   name: シチリア
@@ -1678,3 +2438,7 @@
     - from: 1814
       owner: britain
       cause: パリ条約（第1次）でイギリス領に
+    - from: 1964
+      owner: malta
+      cause: "イギリスから独立（9月21日。イギリス連邦の王国）"
+      source: "https://en.wikipedia.org/wiki/Malta_Independence_Act_1964"
