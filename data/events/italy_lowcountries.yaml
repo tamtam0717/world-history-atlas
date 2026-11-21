@@ -1,4 +1,4 @@
-# 担当 C（低地諸国・スイス・イタリア）の出来事（1648–1815 試作）
+# 担当 C（低地諸国・スイス・イタリア）の出来事（1648–2025）
 # europe.yaml にあるもの（ウェストファリア条約、ユトレヒト条約、カンポ・フォルミオ条約など）は重複して書かない。
 
 # ---------------------------------------------------------------- 低地諸国
@@ -615,3 +615,402 @@
   polities: [italy, habsburg, german_empire]
   importance: 3
   source: "https://en.wikipedia.org/wiki/Italy_in_World_War_I"
+
+# ================================================================ 1915–2025
+
+# ---------------------------------------------------------------- 第一次世界大戦と戦間期
+- year: 1915
+  date: "1915-05-23"
+  title: イタリアの参戦（ロンドン秘密条約）
+  text: 4月のロンドン秘密条約で、南チロル・トリエステ・イストリア・ダルマツィアの一部などを約束されたイタリアは、三国同盟を離れてオーストリアに宣戦した。イゾンツォ川の前線で12回の攻勢を重ねたが、ほとんど進めなかった。
+  polities: [italy, habsburg, britain, france]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1915)"
+- year: 1915
+  date: "1915-04-22"
+  title: 第2次イーペルの戦い（初めての大規模な毒ガス攻撃）
+  text: ドイツ軍がイーペル北方で塩素ガスを使い、連合軍の前線に穴を開けた。イーペル周辺は大戦を通じて最大の激戦地の一つとなり、1917年のパッシェンデールの戦いでも多くの兵士が死んだ。
+  polities: [belgium, german_empire, britain, france]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Second_Battle_of_Ypres"
+- year: 1917
+  date: "1917-10-24"
+  title: カポレットの戦い
+  text: ドイツ軍の支援を受けたオーストリア軍がイゾンツォ川の前線を破り、イタリア軍はピアーヴェ川まで退いた。フリウリとヴェネト東部が1918年まで占領された。
+  polities: [italy, habsburg, german_empire]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Battle_of_Caporetto"
+- year: 1918
+  date: "1918-11-03"
+  title: ヴィットリオ・ヴェネトの戦いとヴィラ・ジュスティ休戦協定
+  text: イタリア軍の攻勢でオーストリア＝ハンガリー軍が崩れ、11月3日にパドヴァ近くのヴィラ・ジュスティで休戦協定が結ばれた。イタリア軍はトレント・トリエステ・ブレンナー峠まで進んだ。
+  polities: [italy, habsburg]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Battle_of_Vittorio_Veneto"
+- year: 1918
+  date: "1918-11-12"
+  title: スイスのゼネスト
+  text: 物価高と食料不足の中、労働組合が全国でゼネストを行い、政府は軍を出して3日で終わらせた。翌年、要求の一つだった比例代表制の選挙が実現した。
+  polities: [switzerland]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Swiss_general_strike_of_1918"
+- year: 1919
+  date: "1919-09-12"
+  title: ダヌンツィオのフィウメ占領
+  text: パリ講和会議でフィウメ（現リエカ）が得られないことに怒った詩人ダヌンツィオが、義勇兵を率いてフィウメを占領し、1920年末まで支配した。「不完全な勝利」への不満とファシズムの台頭を象徴する事件。フィウメは1924年のローマ条約でイタリアに併合された。
+  polities: [italy]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Italian_Regency_of_Carnaro"
+- year: 1920
+  title: オイペン・マルメディがベルギー領に
+  text: ヴェルサイユ条約により、ドイツ語住民の多いオイペン・マルメディがドイツからベルギーへ移った。住民の意思を問う手続きは、反対者が公開の名簿に署名する形で行われ、批判された。
+  polities: [belgium, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Eupen-Malmedy"
+- year: 1920
+  date: "1920-09"
+  title: 北イタリアの工場占拠
+  text: トリノ・ミラノなどの金属工場で、労働者約40万人が工場を占拠した（「赤い2年間」の頂点）。革命を恐れた地主・資本家や中産階級が、ムッソリーニのファシスト党の暴力的な行動隊を支持するようになった。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Biennio_Rosso"
+- year: 1921
+  title: ベルギー・ルクセンブルク経済同盟
+  text: ドイツ関税同盟を離れたルクセンブルクが、ベルギーと関税・通貨の同盟を結んだ。のちのベネルクスの土台となった。
+  polities: [belgium, luxembourg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Belgium–Luxembourg_Economic_Union"
+- year: 1924
+  date: "1924-06-10"
+  title: マッテオッティ殺害事件
+  text: 選挙でのファシストの暴力と不正を議会で告発した社会党の議員マッテオッティが、ファシストに誘拐・殺害された。野党は議会を退席して抗議したが（アヴェンティーノ連合）、ムッソリーニは1925年1月に責任を認めたうえで独裁に乗り出した。
+  polities: [italy]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Giacomo_Matteotti"
+- year: 1929
+  date: "1929-02-11"
+  title: ラテラノ条約（ヴァチカン市国の成立）
+  text: ムッソリーニ政府と教皇庁がラテラノ条約を結び、教皇の主権のもとにヴァチカン市国を認め、カトリックを国教とした。1870年以来のローマ問題が解決した。
+  polities: [italy, vatican_city]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ラテラノ条約"
+- year: 1932
+  date: "1932-05-28"
+  title: 締切大堤防の完成（ゾイデル海からアイセル湖へ）
+  text: 全長約32kmの堤防でゾイデル海が北海から切り離され、淡水のアイセル湖となった。高潮の被害を防ぎ、干拓地を広げるゾイデル海干拓事業の中心。
+  polities: [netherlands]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Afsluitdijk"
+- year: 1939
+  date: "1939-04-07"
+  title: イタリアのアルバニア併合
+  text: イタリア軍がアルバニアに上陸してゾグ王を追い、国王ヴィットーリオ・エマヌエーレ3世がアルバニア王を兼ねる同君連合とした。
+  polities: [italy, albania]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Italian_invasion_of_Albania"
+
+# ---------------------------------------------------------------- 第二次世界大戦
+- year: 1940
+  date: "1940-06-10"
+  title: イタリアの参戦
+  text: フランスの敗北が近づくと、ムッソリーニはイギリス・フランスに宣戦した。しかしアルプスの戦線、北アフリカ、ギリシア（1940年10月侵攻）で苦戦し、ドイツの援助に頼るようになった。
+  polities: [italy, france, britain, germany]
+  importance: 1
+  source: "https://en.wikipedia.org/wiki/Italian_entry_into_World_War_II"
+- year: 1940
+  date: "1940-05-14"
+  title: ロッテルダム爆撃とオランダの降伏
+  text: ドイツ空軍がロッテルダムの中心部を爆撃し、さらにユトレヒトなどへの爆撃を予告されたオランダ軍は5月15日に降伏した。女王ウィルヘルミナと政府はロンドンに亡命した。
+  polities: [netherlands, germany]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Rotterdam_Blitz"
+- year: 1940
+  date: "1940-05-28"
+  title: ベルギーの降伏（国王レオポルド3世）
+  text: 18日間の戦いの後、国王レオポルド3世は政府の反対を押し切って降伏し、捕虜として国内にとどまった。この決断が戦後の「国王問題」につながった。
+  polities: [belgium, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Battle_of_Belgium"
+- year: 1941
+  date: "1941-02-25"
+  title: アムステルダムの2月ストライキ
+  text: ユダヤ人の一斉逮捕に抗議して、アムステルダムの労働者がストライキを行った。占領下のヨーロッパで、ユダヤ人迫害に対する最初の大規模な抗議行動とされる。
+  polities: [netherlands, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/February_strike"
+- year: 1942
+  title: マルタの包囲戦
+  text: 地中海の航路を押さえるイギリスの要塞マルタを、イタリア・ドイツの空軍が激しく爆撃した（1940–1942年）。島民の抵抗をたたえ、イギリス国王ジョージ6世は1942年4月、島全体にジョージ十字勲章を贈った。
+  polities: [britain, italy, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Siege_of_Malta_(World_War_II)"
+- year: 1942
+  date: "1942-08-31"
+  title: ルクセンブルクの事実上の併合とゼネスト
+  text: ドイツが住民の徴兵を発表すると、ルクセンブルク各地でストライキが起こった。ドイツは戒厳令を敷き、参加者を処刑した。
+  polities: [luxembourg, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/1942_general_strike_in_Luxembourg"
+- year: 1943
+  date: "1943-07-25"
+  title: 連合軍のシチリア上陸とムッソリーニの失脚
+  text: 7月10日に米英軍がシチリアに上陸した。7月24–25日のファシズム大評議会でムッソリーニの不信任が決議され、国王はムッソリーニを解任・逮捕させてバドリオを首相に任命した。
+  polities: [italy, britain, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/連合軍のシチリア島上陸"
+- year: 1943
+  date: "1943-09-08"
+  title: イタリアの無条件降伏とドイツ軍の北・中部占領
+  text: 9月3日に結んだ休戦協定（カッシビレ休戦協定）が8日に発表されると、ドイツ軍がローマを含む北・中部を占領し、イタリア軍を武装解除した。国王と政府は南のブリンディジに逃れ、10月にドイツに宣戦した。
+  polities: [italy, germany, italian_social_republic]
+  importance: 1
+  source: "https://en.wikipedia.org/wiki/Armistice_of_Cassibile"
+- year: 1943
+  date: "1943-09-23"
+  title: イタリア社会共和国（サロ政権）の成立
+  text: ドイツの空挺部隊に救出されたムッソリーニが、ドイツ占領下の北イタリアに政権を立てた。イタリアは南の王国政府と北の社会共和国に分かれ、パルチザンのレジスタンスと内戦が広がった。
+  polities: [italian_social_republic, germany, italy]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+- year: 1944
+  date: "1944-05-18"
+  title: モンテ・カッシーノの戦い
+  text: ローマへの道をふさぐドイツ軍のグスタフ線をめぐり、1944年1月から5月まで連合軍が4回の攻撃を重ねた。歴史ある修道院が爆撃で破壊された。ポーランド軍が最後に修道院を占領した。
+  polities: [italy, germany, britain, usa]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Battle_of_Monte_Cassino"
+- year: 1944
+  date: "1944-03-24"
+  title: アルデアティーネ洞窟の虐殺
+  text: ローマでのパルチザンの攻撃への報復として、ドイツ親衛隊が市民・政治犯など335人をローマ郊外の洞窟で殺害した。
+  polities: [italy, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Ardeatine_massacre"
+- year: 1944
+  date: "1944-06-04"
+  title: ローマの解放
+  text: アンツィオに上陸した部隊とグスタフ線を破った部隊が合流し、連合軍がローマに入った。国王は皇太子ウンベルトを王国総代理とし、反ファシスト諸政党のボノーミ内閣が成立した。
+  polities: [italy, germany, usa, britain]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Battle_of_Rome"
+- year: 1944
+  date: "1944-08-04"
+  title: アンネ・フランクの逮捕
+  text: アムステルダムの隠れ家に2年余り隠れていたユダヤ人のフランク家が密告で逮捕され、強制収容所に送られた。アンネは1945年にベルゲン＝ベルゼン収容所で死亡し、残された日記が戦後に出版された。
+  polities: [netherlands, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アンネ・フランク"
+- year: 1944
+  date: "1944-09-17"
+  title: マーケット・ガーデン作戦
+  text: 連合軍が空挺部隊でオランダの橋を奪い、一気にドイツへ進もうとした作戦。ナイメーヘンまでは進んだが、アルンヘムの橋を確保できずに失敗し、北部の解放は1945年まで遅れた。
+  polities: [netherlands, germany, britain, usa]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Operation_Market_Garden"
+- year: 1944
+  date: "1944-12-16"
+  title: アルデンヌ攻勢（バルジの戦い）
+  text: ドイツ軍がベルギー・ルクセンブルクのアルデンヌで最後の大反撃を行い、バストーニュなどを包囲した。1945年1月までに押し返され、ドイツ軍は西部戦線の予備兵力を失った。
+  polities: [belgium, luxembourg, germany, usa]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Battle_of_the_Bulge"
+- year: 1945
+  title: オランダの「飢餓の冬」
+  text: 1944–1945年の冬、ドイツ軍の封鎖と寒さのため、まだ占領されていた西部の都市で食料と燃料が尽き、約2万人が餓死した。
+  polities: [netherlands, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Dutch_famine_of_1944–1945"
+- year: 1945
+  date: "1945-04-25"
+  title: 北イタリアの解放とムッソリーニの処刑
+  text: 連合軍の総攻撃に合わせて国民解放委員会が全国蜂起を呼びかけ（4月25日、現在の解放記念日）、ミラノ・トリノ・ジェノヴァなどをパルチザンが解放した。スイスへ逃れようとしたムッソリーニは4月28日にパルチザンに処刑された。
+  polities: [italy, italian_social_republic, germany]
+  importance: 1
+  source: "https://en.wikipedia.org/wiki/Liberation_Day_(Italy)"
+
+# ---------------------------------------------------------------- 戦後
+- year: 1944
+  date: "1944-09-05"
+  title: ベネルクス関税同盟の協定
+  text: ロンドンの亡命政府どうしで、ベルギー・ルクセンブルクとオランダが関税同盟を結ぶ協定に署名した（1948年発効）。戦後のヨーロッパ統合の先がけとなった。
+  polities: [belgium, netherlands, luxembourg]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Benelux"
+- year: 1946
+  date: "1946-06-02"
+  title: イタリアの国民投票で共和政に
+  text: 女性が初めて投票した国民投票で、共和政が約54%で王政を上回った（南部は王政支持が多かった）。国王ウンベルト2世は亡命し、1948年1月に共和国憲法が施行された。
+  polities: [italy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/1946年イタリアの国民投票"
+- year: 1949
+  date: "1949-12-27"
+  title: オランダがインドネシアの独立を承認
+  text: 1945年に独立を宣言したインドネシア共和国と戦った（オランダは「警察行動」と呼んだ）が、国際的な非難を受け、ハーグ円卓会議の協定で主権を移した。
+  polities: [netherlands]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/インドネシア独立戦争"
+- year: 1950
+  title: ベルギーの国王問題
+  text: レオポルド3世の復帰を問う国民投票で、フランデレンは賛成、ワロンとブリュッセルは反対が多く、国が割れた。国王が帰国するとワロンでストライキと暴動が起こり、1951年に国王は息子ボードゥアンに譲位した。
+  polities: [belgium]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Royal_Question"
+- year: 1953
+  date: "1953-02-01"
+  title: 北海大洪水
+  text: 高潮でゼーラント・南ホラントなどの堤防が決壊し、オランダで約1800人が死亡した。これをきっかけに、河口を巨大な堤防と防潮水門で守るデルタ計画が進められた（1997年に完成）。
+  polities: [netherlands, belgium, britain]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/North_Sea_flood_of_1953"
+- year: 1954
+  date: "1954-10-05"
+  title: ロンドン覚書（トリエステ問題の解決）
+  text: トリエステ自由地域のうちA地区（トリエステ市）をイタリアが、B地区をユーゴスラヴィアが治めることで合意した。国境は1975年のオージモ条約で確定した。
+  polities: [italy, yugoslavia, trieste_free_territory, britain, usa]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Free_Territory_of_Trieste"
+- year: 1956
+  date: "1956-08-08"
+  title: マルシネルの炭鉱事故
+  text: ベルギーのシャルルロワ近くの炭鉱で火災が起こり、262人が死亡した。犠牲者の半数以上は戦後の協定でベルギーに来ていたイタリア人の移民労働者だった。
+  polities: [belgium, italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Bois_du_Cazier"
+- year: 1960
+  date: "1960-06-30"
+  title: ベルギー領コンゴの独立
+  text: 独立運動の高まりを受けてベルギーは急いで独立を認めたが、直後に軍の反乱とカタンガ州の分離などのコンゴ動乱が起こった。
+  polities: [belgium]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+- year: 1962
+  date: "1962-10-11"
+  title: 第2ヴァチカン公会議
+  text: 教皇ヨハネ23世が開いた公会議（1962–1965年）。各国語でのミサ、ほかのキリスト教会や諸宗教との対話など、カトリック教会の現代化を決めた。
+  polities: [vatican_city]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第2バチカン公会議"
+- year: 1964
+  date: "1964-09-21"
+  title: マルタの独立
+  text: イギリスの植民地だったマルタが、イギリス連邦内の王国として独立した。1974年に共和国となり、1979年にイギリス軍の基地が撤退した。
+  polities: [malta_state, britain]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Malta_Independence_Act_1964"
+- year: 1969
+  date: "1969-12-12"
+  title: フォンターナ広場爆破事件（「鉛の時代」の始まり）
+  text: ミラノの銀行で爆弾が爆発し17人が死亡した。極右のテロだったが当初は無政府主義者が疑われた。以後1980年代初めまで、極左・極右のテロが続いた。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Piazza_Fontana_bombing"
+- year: 1971
+  date: "1971-02-07"
+  title: スイスで女性参政権
+  text: 男性だけの国民投票で、連邦レベルの女性参政権が認められた。ヨーロッパでもっとも遅い国の一つで、最後のアッペンツェル・インナーローデン準州が認めたのは1990年（連邦裁判所の判決による）。
+  polities: [switzerland]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Women%27s_suffrage_in_Switzerland"
+- year: 1978
+  date: "1978-05-09"
+  title: モーロ元首相の誘拐・殺害
+  text: キリスト教民主党と共産党の協力（歴史的妥協）を進めていたモーロが、極左の「赤い旅団」に誘拐され、55日後に遺体で見つかった。
+  polities: [italy]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Kidnapping_and_murder_of_Aldo_Moro"
+- year: 1978
+  date: "1978-10-16"
+  title: ヨハネ・パウロ2世の即位
+  text: ポーランドのクラクフ大司教ヴォイティワが、455年ぶりのイタリア人以外の教皇に選ばれた。1979年に祖国を訪れ、「連帯」運動と東欧の民主化を精神的に後押しした。
+  polities: [vatican_city, poland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ヨハネ・パウロ2世_(ローマ教皇)"
+- year: 1979
+  title: スイスでジュラ州が成立
+  text: フランス語を話すカトリックの北ジュラが、ドイツ語・プロテスタント中心のベルン州から分かれ、26番目の州（準州を含む）となった。1815年のウィーン会議でベルンに編入されて以来の分離運動の結果。
+  polities: [switzerland]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Canton_of_Jura"
+- year: 1985
+  date: "1985-06-14"
+  title: シェンゲン協定
+  text: ルクセンブルクの国境の町シェンゲンで、ベネルクス3国・西ドイツ・フランスが国境での検問の廃止に合意した（1995年に実施）。
+  polities: [luxembourg, belgium, netherlands, west_germany, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/シェンゲン協定"
+- year: 1986
+  title: フレヴォラント州の成立
+  text: 東・南フレヴォラントと北東ポルダーの干拓地が、オランダの12番目の州となった。州都レリスタットは干拓地につくられた新しい町。
+  polities: [netherlands]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Flevoland"
+- year: 1992
+  date: "1992-02-17"
+  title: 「清い手」作戦（タンジェントーポリ）
+  text: ミラノの検察が始めた汚職捜査が政界全体に広がり、キリスト教民主党・社会党など戦後の主要政党が解体した。同じ年、マフィアと戦った判事ファルコーネとボルセリーノが相次いで爆殺された。
+  polities: [italy]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Mani_pulite"
+- year: 1993
+  title: ベルギーが連邦国家に
+  text: 憲法改正で、フランデレン・ワロン・ブリュッセル首都の3地域と、オランダ語・フランス語・ドイツ語の3つの言語共同体からなる連邦国家となった。言語の対立を地域ごとの自治で解消する試み。
+  polities: [belgium]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Communities,_regions_and_language_areas_of_Belgium"
+- year: 1994
+  date: "1994-05-10"
+  title: ベルルスコーニ政権の成立
+  text: メディア企業の経営者ベルルスコーニが新党フォルツァ・イタリアを作り、総選挙に勝って首相となった。以後約20年、イタリア政治の中心人物となった。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Silvio_Berlusconi"
+- year: 2002
+  date: "2002-09-10"
+  title: スイスの国際連合加盟
+  text: 国民投票で加盟が認められた。1986年の国民投票では否決されていた。
+  polities: [switzerland]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Switzerland_and_the_United_Nations"
+- year: 2004
+  date: "2004-05-01"
+  title: マルタのEU加盟
+  text: EUの東方拡大でキプロスや中・東欧の8か国とともに加盟した。2008年にユーロを導入した。
+  polities: [malta_state]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Malta_in_the_European_Union"
+- year: 2013
+  date: "2013-03-13"
+  title: 教皇フランシスコの選出
+  text: ベネディクト16世の生前退位（約600年ぶり）を受けて、アルゼンチン出身のベルゴリオ枢機卿が初めての南北アメリカ出身の教皇に選ばれた。
+  polities: [vatican_city]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/フランシスコ_(ローマ教皇)"
+- year: 2016
+  date: "2016-03-22"
+  title: ブリュッセル連続テロ事件
+  text: ブリュッセルの空港と地下鉄駅で過激派組織ISの支持者による自爆テロが起こり、32人が死亡した。前年のパリ同時多発テロと同じグループによるもの。
+  polities: [belgium]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/2016_Brussels_bombings"
+- year: 2020
+  date: "2020-03-09"
+  title: イタリアの全国封鎖（新型コロナウイルス）
+  text: 北イタリアのロンバルディアを中心に感染が急拡大し、イタリアはヨーロッパで初めて全国の外出制限（ロックダウン）を行った。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Italy"
+- year: 2022
+  date: "2022-10-22"
+  title: メローニ政権の成立
+  text: 右派政党「イタリアの同胞」を率いるメローニが、イタリア初の女性首相となった。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Meloni_government"
+- year: 2025
+  date: "2025-05-08"
+  title: 教皇レオ14世の選出
+  text: 4月に死去したフランシスコの後を継ぎ、アメリカ合衆国出身のプレヴォスト枢機卿が初めてのアメリカ合衆国出身の教皇に選ばれた。
+  polities: [vatican_city]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/レオ14世_(ローマ教皇)"
