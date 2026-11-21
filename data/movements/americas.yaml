@@ -4,7 +4,7 @@
 # - 植民地の時代は、政体（britain・spain など）で書くと本国（ヨーロッパ）だけが光るので、現代の国・州のピース（iso・adm1）で書く
 #   （年や所属に関係なく光る。docs/movements-format.md の「iso・adm1」）。一覧は YAML のアンカーで一度だけ書き、ほかでは参照する：
 #   &thirteen（13 植民地の範囲。メインはマサチューセッツの一部、ヴァーモントは 1777 年からの独立の州なので含める）、
-#   &usa_north（北部の自由州）、&spanish_america（スペイン領アメリカの本土と大アンティル諸島）。
+#   &usa_north（北部の自由州のうち 13 植民地の範囲。中西部は入植の年から別に書く）、&spanish_america（スペイン領アメリカの本土と大アンティル諸島）。
 
 - id: great_awakening
   name: 大覚醒（信仰復興運動）
@@ -85,10 +85,16 @@
     - where: {polities: [britain]}
       center: true
       curve: [[1770, 0.2], [1787, 0.7], [1807, 1.0], [1833, 1.0], [1838, 0.6], [1860, 0.3]]
-    - where:
-        adm1: &usa_north ["USA/Massachusetts", "USA/Connecticut", "USA/Rhode Island", "USA/New Hampshire", "USA/Maine", "USA/Vermont", "USA/New York", "USA/New Jersey", "USA/Pennsylvania", "USA/Ohio", "USA/Indiana", "USA/Illinois", "USA/Michigan", "USA/Wisconsin", "USA/Iowa", "USA/Minnesota"]
+    - where:   # 13 植民地の北部（独立期に奴隷制を段階的に廃止した州。ペンシルヴェニア 1780 〜ニュージャージー 1804）
+        adm1: &usa_north ["USA/Massachusetts", "USA/Connecticut", "USA/Rhode Island", "USA/New Hampshire", "USA/Maine", "USA/Vermont", "USA/New York", "USA/New Jersey", "USA/Pennsylvania"]
       center: true
       curve: [[1775, 0.3], [1780, 0.5], [1804, 0.5], [1831, 0.8], [1852, 1.0], [1865, 1.0], [1870, 0.4], [1890, 0.1]]
+    - where:   # 旧北西部の自由州（入植が進んだ 1820 年ごろから）
+        adm1: ["USA/Ohio", "USA/Indiana", "USA/Illinois", "USA/Michigan"]
+      curve: [[1819, 0], [1820, 0.3], [1831, 0.7], [1852, 1.0], [1865, 1.0], [1870, 0.4], [1890, 0.1]]
+    - where:   # 中西部の北の自由州（州になった 1840 年代から）
+        adm1: ["USA/Wisconsin", "USA/Iowa", "USA/Minnesota"]
+      curve: [[1845, 0], [1846, 0.4], [1852, 0.9], [1865, 1.0], [1870, 0.4], [1890, 0.1]]
     - where: {polities: [usa]}
       curve: [[1830, 0.3], [1850, 0.5], [1863, 0.9], [1865, 1.0], [1870, 0.4], [1890, 0.1]]
     - where: {polities: [france]}
@@ -163,6 +169,7 @@
     - [1826, 0.8]
     - [1840, 0.3]
     - [1898, 0.2]
+    - [1902, 0.2]
   spread:
     - where: {iso: [HTI]}
       center: true
@@ -238,7 +245,7 @@
       curve: [[1820, 0.3], [1830, 0.8], [1850, 0.9], [1880, 0.7], [1910, 0.5], [1935, 0.5], [1960, 0.4], [1990, 0.1]]
     - where: {polities: [guatemala, el_salvador, honduras, nicaragua, haiti, dominican_republic, cuba]}
       curve: [[1840, 0.5], [1880, 0.8], [1930, 0.9], [1960, 0.7], [1979, 0.4], [1990, 0.1]]
-  people: [フアン・マヌエル・デ・ロサス, アントニオ・ロペス・デ・サンタ・アナ, ホセ・アントニオ・パエス, ポルフィリオ・ディアス, ラファエル・カレーラ, ラファエル・トルヒーヨ, アナスタシオ・ソモサ, ドミンゴ・サルミエント]
+  people: [フアン・マヌエル・デ・ロサス, アントニオ・ロペス・デ・サンタ・アナ, ホセ・アントニオ・パエス, ポルフィリオ・ディアス, ラファエル・カレーラ, ラファエル・トルヒーヨ, アナスタシオ・ソモサ, ドミンゴ・サルミエント（批判者）]
   works: [『ファクンド──文明と野蛮』（サルミエント、1845）]
   events: []
   text: 独立戦争の後、中央政府の力が弱いラテンアメリカ諸国では、私兵と地方の有力者のネットワークを率いる軍人の首領（カウディーリョ）が実権をにぎり、クーデタと内戦が繰り返された。アルゼンチンのロサス、メキシコのサンタ・アナ、ベネズエラのパエスらが代表。19 世紀後半には、ディアス（メキシコ）のように「秩序と進歩」を掲げて外国資本を呼びこむ長期の独裁も生まれ、20 世紀にはトルヒーヨ（ドミニカ）・ソモサ（ニカラグア）などの独裁が続いた。
@@ -314,7 +321,7 @@
   source: "https://ja.wikipedia.org/wiki/メキシコ壁画運動"
 
 - id: indigenismo
-  name: インディヘニスモ（先住民主義）
+  name: インディヘニスモと先住民運動
   kind: thought
   curve:
     - [1910, 0.2]
