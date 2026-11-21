@@ -44,7 +44,8 @@ export interface TimelineEntry extends Sourced {
   from: number;
   owner?: string | null;
   overlord?: string | null;
-  certainty?: string;
+  /** 確からしさ：certain（省略時）/ uncertain / nominal / occupied / indirect（間接統治。持ち主の色を薄く塗る） */
+  certainty?: "certain" | "uncertain" | "nominal" | "occupied" | "indirect";
   cause?: string;
   note?: string;
   /**

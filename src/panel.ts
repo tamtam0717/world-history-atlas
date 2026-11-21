@@ -333,7 +333,12 @@ export class Panel {
     this.polityEl.innerHTML = html;
   }
 
-  renderPolity(id: string | null, year: number, overlord: { id: string; partial: boolean } | null) {
+  renderPolity(
+    id: string | null,
+    year: number,
+    overlord: { id: string; partial: boolean } | null,
+    indirect: { names: string[]; all: boolean } | null = null,
+  ) {
     const p = id ? this.idx.polityById.get(id) : undefined;
     if (!p) {
       this.polityEl.hidden = true;
@@ -349,7 +354,17 @@ export class Panel {
     let html = `<div class="card-head">
         <span class="swatch big" style="background:${esc(p.color ?? "#ccc")}"></span>
         <div><h2>${esc(this.idx.polityName(p, year))}</h2>
-        <div class="meta">${[this.idx.kindAt(p, year), overlord ? `${overlord.partial ? "一部が" : ""}${this.link(overlord.id, year)}に所属` : ""].filter(Boolean).join(" ・ ")}</div></div>
+        <div class="meta">${[
+          this.idx.kindAt(p, year),
+          overlord ? `${overlord.partial ? "一部が" : ""}${this.link(overlord.id, year)}に所属` : "",
+          indirect?.all ? "間接統治" : "",
+        ]
+          .filter(Boolean)
+          .join(" ・ ")}</div>${
+          indirect && !indirect.all
+            ? `<div class="meta indirect" title="地図では、その国の色を薄くして塗っている地域">間接統治：${indirect.names.slice(0, 5).map(esc).join("・") || "一部の地域"}${indirect.names.length > 5 ? " など" : ""}</div>`
+            : ""
+        }</div>
         ${imageSlot(wikiRefs(p.source), "emblem", this.idx.polityName(p, year))}
         <button class="close" data-close aria-label="閉じる">×</button>
       </div>`;
