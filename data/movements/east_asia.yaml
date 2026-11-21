@@ -1,0 +1,472 @@
+# 潮流：東アジア（1648–2025）。形式は docs/movements-format.md
+# spread はふつう政体で書く（qing・roc・prc・japan・joseon など）。ただし政体で書くと、その年の領域全体（藩部・植民地を含む）が光る。
+# - 清の学問・改革（考証学・洋務運動・変法運動など）は、藩部（モンゴル・チベット・新疆・青海）や台湾を光らせないよう、
+#   中国本土と満洲の政治の地域（data/regions/china.yaml）を regions で書く。一覧は考証学の項目で &china_proper として一度だけ書き、
+#   ほかの項目では *china_proper で参照する（YAML のアンカー。同じファイルの中でだけ使える）。
+#   一覧は、2026-11-21 の時点で中国本土・満洲のピースを持つ政治の地域から、チベット系の地域（アバ・カンゼ・甘南・迪慶）を除いたもの。
+#   data/regions/china.yaml の地域 ID を変えたら、ここも直す（npm run data で「未定義の地域」の警告が出る）。
+# - 日本の国内の運動（文明開化・大正デモクラシーなど）は、植民地（台湾・朝鮮・樺太）を光らせないよう、
+#   日本本土の政治の地域（japan_main・hokkaido・okinawa）を regions で書く。
+
+- id: kaozheng
+  name: 考証学
+  kind: thought
+  curve:
+    - [1648, 0.4]
+    - [1700, 0.5]
+    - [1740, 0.8]
+    - [1770, 1.0]
+    - [1800, 0.9]
+    - [1830, 0.5]
+    - [1860, 0.2]
+    - [1880, 0.0]
+  spread:
+    - where:
+        regions: &china_proper [
+                cn_anhui_anqing, cn_anhui_chaohu, cn_anhui_chizhou, cn_anhui_fuyang, cn_anhui_luan, cn_anhui_maanshan, cn_anhui_xuancheng,
+                cn_beijing_beijing, cn_fujian_fuzhou_fujian, cn_fujian_longyan, cn_fujian_nanping, cn_fujian_quanzhou, cn_fujian_xiamen,
+                cn_gansu_dingxi, cn_gansu_jiayuguan, cn_gansu_jinchang, cn_gansu_pingliang, cn_gansu_qingyang, cn_guangdong_chaozhou,
+                cn_guangdong_dongguan, cn_guangdong_heyuan, cn_guangdong_qingyuan, cn_guangdong_zhanjiang_urban, cn_guangxi_baise,
+                cn_guangxi_chongzuo, cn_guangxi_fangchenggang, cn_guangxi_guigang, cn_guangxi_wuzhou, cn_guizhou_anshun,
+                cn_guizhou_qiandongnan, cn_hainan, cn_hebei_baoding, cn_hebei_cangzhou, cn_hebei_chengde, cn_hebei_handan,
+                cn_hebei_qinhuangdao, cn_hebei_zhangjiakou, cn_heilongjiang_daqing, cn_heilongjiang_daxinganling, cn_heilongjiang_qiqihaer,
+                cn_henan_anyang, cn_henan_hebi, cn_henan_luohe, cn_henan_nanyang, cn_henan_puyang, cn_henan_xinyang, cn_hubei_enshi,
+                cn_hubei_ezhou, cn_hubei_jingmen, cn_hubei_jingzhou, cn_hubei_shennongjia, cn_hubei_xiangfan, cn_hubei_xianning,
+                cn_hunan_changde, cn_hunan_changsha, cn_hunan_chenzhou, cn_hunan_huaihua, cn_hunan_yueyang, cn_jiangsu_changzhou,
+                cn_jiangsu_huaiyin, cn_jiangsu_lianyungang, cn_jiangsu_nanjing, cn_jiangsu_nantong, cn_jiangsu_suzhou_jiangsu,
+                cn_jiangsu_xuzhou, cn_jiangsu_yangzhou, cn_jiangsu_zhenjiang, cn_jiangxi_fuzhou_jiangxi, cn_jiangxi_ganzhou,
+                cn_jiangxi_jiujiang, cn_jiangxi_nanchang, cn_jiangxi_pingxiang, cn_jilin_baicheng, cn_jilin_changchun, cn_jilin_liaoyuan,
+                cn_liaoning_anshan, cn_liaoning_benxi, cn_liaoning_chaoyang, cn_liaoning_dalian_urban, cn_liaoning_fuxin,
+                cn_liaoning_huludao, cn_ningxia_guyuan, cn_ningxia_shizuishan, cn_shaanxi_ankang, cn_shaanxi_weinan, cn_shaanxi_yanan,
+                cn_shaanxi_yulin_shaanxi, cn_shandong_binzhou, cn_shandong_dezhou, cn_shandong_linyi, cn_shandong_qingdao,
+                cn_shandong_qingdao_urban, cn_shandong_weihai_urban, cn_shanxi_changzhi, cn_shanxi_datong, cn_shanxi_jinzhong,
+                cn_shanxi_linfen, cn_shanxi_taiyuan, cn_shanxi_xinzhou, cn_shanxi_yuncheng, cn_sichuan_bazhong, cn_sichuan_chengdu,
+                cn_sichuan_liangshan, cn_yunnan_baoshan, cn_yunnan_chuxiong, cn_yunnan_dali, cn_yunnan_dehong, cn_yunnan_honghe,
+                cn_yunnan_xishuangbanna, cn_zhejiang_hangzhou, cn_zhejiang_huzhou, cn_zhejiang_jinhua, cn_zhejiang_lishui,
+                cn_zhejiang_ningbo, cn_zhejiang_shaoxing, cn_zhejiang_wenzhou, cn_zhejiang_zhoushan]
+      center: true
+      curve: [[1648, 0.4], [1700, 0.5], [1740, 0.8], [1770, 1.0], [1800, 0.9], [1830, 0.5], [1860, 0.2], [1880, 0.0]]
+    - where: {polities: [joseon]}
+      curve: [[1760, 0.2], [1800, 0.4], [1840, 0.3], [1870, 0.0]]
+    - where: {regions: [japan_main]}
+      curve: [[1780, 0.1], [1800, 0.3], [1830, 0.2], [1870, 0.0]]
+  people: [顧炎武, 黄宗羲, 閻若璩, 戴震, 銭大昕, 段玉裁]
+  works: [『日知録』, 『明夷待訪録』, 『四庫全書』]
+  events: []
+  text: 明末清初の顧炎武・黄宗羲らに始まり、清の乾隆・嘉慶期（乾嘉の学）に最盛期を迎えた学問。経書の文字や音・制度を、古い文献にもとづいて実証的に研究した。文字の獄で政治批判が難しくなった時代に、学者は考証に向かったともいわれる。
+  source: "https://ja.wikipedia.org/wiki/考証学"
+
+- id: silhak
+  name: 実学（朝鮮）
+  kind: thought
+  curve:
+    - [1660, 0.2]
+    - [1720, 0.4]
+    - [1760, 0.7]
+    - [1790, 1.0]
+    - [1818, 0.7]
+    - [1850, 0.3]
+    - [1880, 0.0]
+  spread:
+    - where: {polities: [joseon]}
+      center: true
+      curve: [[1660, 0.2], [1720, 0.4], [1760, 0.7], [1790, 1.0], [1818, 0.7], [1850, 0.3], [1880, 0.0]]
+  people: [柳馨遠, 李瀷, 朴趾源, 朴斉家, 丁若鏞]
+  works: [『磻渓随録』, 『熱河日記』, 『北学議』, 『牧民心書』]
+  events: [英祖の蕩平策]
+  text: 朱子学の空論を批判し、土地制度・農業・商工業など現実の社会に役立つ学問を求めた朝鮮の学派。清の進んだ文物に学ぼうとする北学派（朴趾源・朴斉家）も生まれ、英祖・正祖の時代に最盛期を迎えた。丁若鏞はその集大成とされる。
+  source: "https://ja.wikipedia.org/wiki/実学"
+
+- id: kokugaku
+  name: 国学
+  kind: thought
+  curve:
+    - [1690, 0.1]
+    - [1730, 0.3]
+    - [1765, 0.6]
+    - [1798, 1.0]
+    - [1830, 0.9]
+    - [1860, 0.8]
+    - [1870, 0.5]
+    - [1890, 0.1]
+  spread:
+    - where: {polities: [japan]}
+      center: true
+      curve: [[1690, 0.1], [1730, 0.3], [1765, 0.6], [1798, 1.0], [1830, 0.9], [1860, 0.8], [1870, 0.5], [1890, 0.1]]
+  people: [契沖, 荷田春満, 賀茂真淵, 本居宣長, 平田篤胤]
+  works: [『古事記伝』, 『国意考』]
+  events: []
+  text: 『古事記』『万葉集』などの古典を研究し、儒教や仏教が伝わる前の日本古来の精神（古道）を明らかにしようとした学問。本居宣長が大成し、平田篤胤の復古神道は幕末の尊王思想に大きな影響を与えた。
+  source: "https://ja.wikipedia.org/wiki/国学"
+
+- id: rangaku
+  name: 蘭学
+  kind: thought
+  curve:
+    - [1720, 0.1]
+    - [1774, 0.5]
+    - [1800, 0.7]
+    - [1838, 1.0]
+    - [1855, 0.8]
+    - [1865, 0.4]
+    - [1875, 0.0]
+  spread:
+    - where: {polities: [japan]}
+      center: true
+      curve: [[1720, 0.1], [1774, 0.5], [1800, 0.7], [1838, 1.0], [1855, 0.8], [1865, 0.4], [1875, 0.0]]
+  people: [青木昆陽, 前野良沢, 杉田玄白, 平賀源内, 伊能忠敬, シーボルト, 緒方洪庵, 高野長英, 渡辺崋山]
+  works: [『解体新書』, 『蘭学事始』, 「大日本沿海輿地全図」]
+  events: [『解体新書』の刊行]
+  text: 長崎のオランダ商館を通じて、オランダ語の書物から西洋の医学・天文学・地理学などを学んだ学問。徳川吉宗が漢訳洋書の輸入制限を緩め（1720）、杉田玄白らの『解体新書』（1774）で広まった。蛮社の獄（1839）などの弾圧も受けたが、開国後は英学・洋学に引き継がれた。
+  source: "https://ja.wikipedia.org/wiki/蘭学"
+
+- id: sonno_joi
+  name: 尊王攘夷運動
+  kind: system
+  curve:
+    - [1825, 0.1]
+    - [1853, 0.4]
+    - [1858, 0.7]
+    - [1863, 1.0]
+    - [1864, 0.8]
+    - [1866, 0.5]
+    - [1868, 0.3]
+    - [1872, 0.0]
+  spread:
+    - where: {polities: [japan]}
+      center: true
+      curve: [[1825, 0.1], [1853, 0.4], [1858, 0.7], [1863, 1.0], [1864, 0.8], [1866, 0.5], [1868, 0.3], [1872, 0.0]]
+  people: [会沢正志斎, 藤田東湖, 吉田松陰, 久坂玄瑞, 高杉晋作, 武市半平太]
+  works: [『新論』]
+  events: [ペリーの来航, 日米修好通商条約, 桜田門外の変, 四国艦隊下関砲撃事件, 薩長同盟]
+  text: 天皇を尊び（尊王）、外国を打ち払う（攘夷）ことを唱えた幕末の運動。水戸学から生まれ、不平等条約の調印をきっかけに長州藩などの志士の運動となった。薩英戦争・四国艦隊の下関砲撃で攘夷が不可能とわかると、倒幕へと向かった。
+  source: "https://ja.wikipedia.org/wiki/尊王攘夷"
+
+- id: wijeong_cheoksa
+  name: 衛正斥邪（朝鮮）
+  kind: thought
+  curve:
+    - [1801, 0.2]
+    - [1860, 0.4]
+    - [1866, 0.8]
+    - [1871, 1.0]
+    - [1881, 0.9]
+    - [1895, 0.7]
+    - [1907, 0.6]
+    - [1910, 0.2]
+    - [1915, 0.0]
+  spread:
+    - where: {polities: [joseon]}
+      center: true
+      curve: [[1801, 0.2], [1860, 0.4], [1866, 0.8], [1871, 1.0], [1881, 0.9], [1895, 0.7], [1907, 0.6], [1910, 0.2], [1915, 0.0]]
+  people: [李恒老, 崔益鉉, 柳麟錫, 興宣大院君]
+  works: []
+  events: [大院君の執政と攘夷, ハーグ密使事件と義兵闘争]
+  text: 正しい学（朱子学）を守り、邪な教え（キリスト教と西洋の文物）を退けようとした朝鮮の儒学者の思想。大院君の攘夷政策を支え、開国（1876）の後は開化政策に反対し、日本の侵略に抗する義兵闘争の思想的な支えとなった。
+  source: "https://ja.wikipedia.org/wiki/衛正斥邪"
+
+- id: donghak
+  name: 東学（天道教）
+  kind: religion
+  curve:
+    - [1860, 0.3]
+    - [1864, 0.2]
+    - [1880, 0.4]
+    - [1892, 0.7]
+    - [1894, 1.0]
+    - [1895, 0.4]
+    - [1905, 0.5]
+    - [1919, 0.7]
+    - [1930, 0.4]
+    - [1945, 0.2]
+    - [1960, 0.1]
+    - [1980, 0.0]
+  spread:
+    - where: {regions: [korea]}
+      center: true
+      curve: [[1860, 0.3], [1864, 0.2], [1880, 0.4], [1892, 0.7], [1894, 1.0], [1895, 0.4], [1905, 0.5], [1919, 0.7], [1930, 0.4], [1945, 0.2], [1960, 0.1], [1980, 0.0]]
+  people: [崔済愚, 崔時亨, 全琫準, 孫秉熙]
+  works: [『東経大全』]
+  events: [東学の創始, 甲午農民戦争と日清戦争, 三・一独立運動]
+  text: 1860年に崔済愚が、西学（キリスト教）に対抗して儒・仏・道と民間信仰をあわせて開いた宗教。「人すなわち天」（人乃天）を説いて農民に広まった。崔済愚は1864年に処刑されたが、1894年には全琫準らの東学の農民が蜂起し（甲午農民戦争）、日清戦争のきっかけとなった。1905年に孫秉熙が天道教と改め、三・一独立運動（1919）では指導者が独立宣言に署名した。
+  source: "https://ja.wikipedia.org/wiki/東学"
+
+- id: self_strengthening
+  name: 洋務運動
+  kind: system
+  curve:
+    - [1860, 0.2]
+    - [1865, 0.6]
+    - [1875, 0.9]
+    - [1885, 1.0]
+    - [1894, 0.8]
+    - [1895, 0.2]
+    - [1900, 0.0]
+  spread:
+    - where: {regions: *china_proper}
+      center: true
+      curve: [[1860, 0.2], [1865, 0.6], [1875, 0.9], [1885, 1.0], [1894, 0.8], [1895, 0.2], [1900, 0.0]]
+  people: [恭親王, 曽国藩, 李鴻章, 左宗棠, 張之洞]
+  works: []
+  events: [総理衙門の設置と洋務運動, 清仏戦争, 甲午農民戦争と日清戦争]
+  text: アロー戦争と太平天国の後、曽国藩・李鴻章ら漢人官僚が進めた近代化。「中体西用」（中国の伝統を本体とし、西洋の技術を用いる）を掲げ、兵器工場・造船所・鉄道・紡績工場を作り、北洋艦隊を整えた。政治制度は改めず、日清戦争の敗北で限界が明らかになった。
+  source: "https://ja.wikipedia.org/wiki/洋務運動"
+
+- id: bunmei_kaika
+  name: 文明開化
+  kind: thought
+  curve:
+    - [1866, 0.2]
+    - [1871, 0.7]
+    - [1875, 1.0]
+    - [1885, 0.8]
+    - [1890, 0.4]
+    - [1900, 0.1]
+    - [1905, 0.0]
+  spread:
+    - where: {regions: [japan_main, hokkaido]}   # 沖縄県（1879–）では旧慣温存策がとられたので含めない
+      center: true
+      curve: [[1866, 0.2], [1871, 0.7], [1875, 1.0], [1885, 0.8], [1890, 0.4], [1900, 0.1], [1905, 0.0]]
+  people: [福沢諭吉, 中村正直, 森有礼, 西周, 加藤弘之]
+  works: [『西洋事情』, 『学問のすゝめ』, 『文明論之概略』, 『明六雑誌』]
+  events: [廃藩置県と岩倉使節団, 徴兵令・地租改正・明治六年の政変]
+  text: 明治初期、西洋の思想・制度・生活様式を積極的に取り入れた風潮。太陽暦・郵便・鉄道・学制が始まり、ざんぎり頭・洋服・牛鍋が広まった。明六社の福沢諭吉らが啓蒙思想を説いた。1880年代の鹿鳴館の欧化政策で頂点に達し、反動として国粋主義も生まれた。
+  source: "https://ja.wikipedia.org/wiki/文明開化"
+
+- id: jiyu_minken
+  name: 自由民権運動
+  kind: system
+  curve:
+    - [1874, 0.4]
+    - [1878, 0.6]
+    - [1881, 1.0]
+    - [1884, 0.7]
+    - [1887, 0.6]
+    - [1890, 0.3]
+    - [1895, 0.0]
+  spread:
+    - where: {polities: [japan]}
+      center: true
+      curve: [[1874, 0.4], [1878, 0.6], [1881, 1.0], [1884, 0.7], [1887, 0.6], [1890, 0.3], [1895, 0.0]]
+  people: [板垣退助, 大隈重信, 植木枝盛, 中江兆民, 河野広中]
+  works: [民撰議院設立建白書, 『民約訳解』, 「東洋大日本国国憲按」]
+  events: [西南戦争, 大日本帝国憲法の発布]
+  text: 1874年の民撰議院設立の建白書に始まり、国会の開設・憲法の制定・地租の軽減などを求めた運動。国会期成同盟の請願の高まりで、政府は1881年に国会開設の勅諭を出し、自由党・立憲改進党が生まれた。秩父事件など激化事件で衰えたが、1890年の帝国議会の開設につながった。
+  source: "https://ja.wikipedia.org/wiki/自由民権運動"
+
+- id: korean_enlightenment
+  name: 開化思想・愛国啓蒙運動（朝鮮）
+  kind: thought
+  curve:
+    - [1876, 0.2]
+    - [1884, 0.6]
+    - [1894, 0.8]
+    - [1897, 1.0]
+    - [1905, 0.8]
+    - [1910, 0.3]
+    - [1920, 0.0]
+  spread:
+    - where: {polities: [joseon]}
+      center: true
+      curve: [[1876, 0.2], [1884, 0.6], [1894, 0.8], [1897, 1.0], [1905, 0.8], [1910, 0.3], [1920, 0.0]]
+  people: [金玉均, 朴泳孝, 兪吉濬, 徐載弼, 安昌浩]
+  works: [『西遊見聞』, 『独立新聞』]
+  events: [甲申政変, 甲午農民戦争と日清戦争, 大韓帝国の成立]
+  text: 日本の明治維新に学んで朝鮮の近代化を目ざした思想と運動。金玉均らの急進開化派は甲申政変（1884）を起こして失敗し、甲午改革（1894–95）で制度の改革が進んだ。独立協会（1896）は自主独立と民権を説き、保護国化の後は教育・言論で国力を養う愛国啓蒙運動となった。
+  source: "https://ja.wikipedia.org/wiki/開化派"
+
+- id: reform_movement_1898
+  name: 変法運動（変法自強）
+  kind: system
+  curve:
+    - [1895, 0.4]
+    - [1898, 1.0]
+    - [1899, 0.4]
+    - [1902, 0.4]
+    - [1906, 0.5]
+    - [1911, 0.2]
+    - [1913, 0.0]
+  spread:
+    - where: {regions: *china_proper}
+      center: true
+      curve: [[1895, 0.4], [1898, 1.0], [1899, 0.4], [1902, 0.4], [1906, 0.5], [1911, 0.2], [1913, 0.0]]
+  people: [康有為, 梁啓超, 譚嗣同, 光緒帝]
+  works: [『孔子改制考』, 『大同書』, 『新民叢報』]
+  events: [戊戌の変法と戊戌の政変, 科挙の廃止と中国同盟会, 憲法大綱の発表と光緒帝・西太后の死]
+  text: 日清戦争の敗北の後、康有為・梁啓超らが明治維新にならって、政治制度を改めて立憲君主制をめざした運動。1898年に光緒帝が戊戌の変法を行ったが、西太后ら保守派のクーデタ（戊戌の政変）で百日あまりで挫折した。康有為・梁啓超は日本に亡命した。義和団事件の後、清は光緒新政で科挙の廃止（1905）や憲法大綱の発布（1908）を行った。
+  source: "https://ja.wikipedia.org/wiki/変法自強運動"
+
+- id: three_principles
+  name: 三民主義（中国の革命運動）
+  kind: system
+  curve:
+    - [1894, 0.1]
+    - [1905, 0.4]
+    - [1911, 0.8]
+    - [1919, 0.6]
+    - [1924, 0.9]
+    - [1928, 1.0]
+    - [1937, 0.9]
+    - [1949, 0.6]
+    - [1987, 0.5]
+    - [2000, 0.3]
+    - [2025, 0.2]
+  spread:
+    - where: {regions: *china_proper}
+      curve: [[1894, 0.1], [1905, 0.4], [1911, 0.8], [1912, 0.0]]
+    - where: {polities: [roc]}
+      center: true
+      curve: [[1912, 0.8], [1919, 0.6], [1924, 0.8], [1928, 1.0], [1937, 0.9], [1949, 0.8], [1987, 0.6], [2000, 0.3], [2025, 0.2]]
+    - where: {polities: [canton_government]}
+      center: true
+      curve: [[1917, 0.7], [1924, 1.0], [1927, 1.0]]
+    - where: {regions: [japan_main]}
+      curve: [[1897, 0.1], [1905, 0.3], [1911, 0.15], [1915, 0.0]]
+  people: [孫文, 黄興, 宋教仁, 汪兆銘, 蔣介石]
+  works: [『三民主義』, 『建国方略』]
+  events: [科挙の廃止と中国同盟会, 辛亥革命, 中華民国の成立と清の滅亡, 中国国民党の結成, 第1次国共合作, 北伐の開始, 張作霖爆殺事件と北伐の完了]
+  text: 孫文が唱えた民族主義・民権主義・民生主義。1905年に東京で中国同盟会を結成し、辛亥革命（1911）で清を倒した。孫文は中国国民党を改組して「連ソ・容共・扶助工農」を掲げ（1924）、その死後、蔣介石の国民政府が北伐で中国を統一して三民主義を国是とした。1949年以後は台湾の中華民国に受け継がれた。
+  source: "https://ja.wikipedia.org/wiki/三民主義"
+
+- id: taisho_democracy
+  name: 大正デモクラシー
+  kind: system
+  curve:
+    - [1905, 0.2]
+    - [1913, 0.6]
+    - [1918, 0.8]
+    - [1925, 1.0]
+    - [1929, 0.7]
+    - [1932, 0.3]
+    - [1936, 0.1]
+    - [1940, 0.0]
+  spread:
+    - where: {regions: [japan_main, hokkaido, okinawa]}
+      center: true
+      curve: [[1905, 0.2], [1913, 0.6], [1918, 0.8], [1925, 1.0], [1929, 0.7], [1932, 0.3], [1936, 0.1], [1940, 0.0]]
+  people: [吉野作造, 美濃部達吉, 原敬, 尾崎行雄, 平塚らいてう, 加藤高明]
+  works: [民本主義（吉野作造）, 天皇機関説（美濃部達吉）, 『青鞜』]
+  events: [シベリア出兵と米騒動, 普通選挙法と治安維持法・日ソ基本条約]
+  text: 日露戦争後から大正期にかけて広まった、民主主義・自由主義の風潮。第一次護憲運動（1913）、米騒動の後の原敬の本格的な政党内閣（1918）、男子普通選挙法（1925）と「憲政の常道」の政党政治が実現した。労働運動・女性運動・部落解放運動（全国水平社）も起こった。五・一五事件（1932）で政党内閣は終わった。
+  source: "https://ja.wikipedia.org/wiki/大正デモクラシー"
+
+- id: new_culture_movement
+  name: 新文化運動・五・四運動
+  kind: thought
+  curve:
+    - [1915, 0.4]
+    - [1917, 0.7]
+    - [1919, 1.0]
+    - [1921, 0.8]
+    - [1925, 0.6]
+    - [1930, 0.4]
+    - [1937, 0.2]
+    - [1945, 0.0]
+  spread:
+    - where: {polities: [roc]}
+      center: true
+      curve: [[1915, 0.4], [1917, 0.7], [1919, 1.0], [1921, 0.8], [1925, 0.6], [1930, 0.4], [1937, 0.2], [1945, 0.0]]
+    - where: {polities: [canton_government]}
+      curve: [[1919, 0.6], [1925, 0.6], [1927, 0.4]]
+  people: [陳独秀, 胡適, 魯迅, 李大釗, 蔡元培]
+  works: [『新青年』, 『狂人日記』, 『阿Q正伝』]
+  events: [新文化運動の始まり, 五・四運動, 中国共産党の結成]
+  text: 『新青年』（1915）を中心に、儒教道徳を批判し「民主と科学」を掲げた思想・文学の革新運動。口語で書く白話文学（文学革命）が生まれた。1919年、パリ講和会議で山東の旧ドイツ権益の返還が認められないと、北京の学生の抗議から全国に広がる五・四運動が起こり、中国共産党の結成（1921）にもつながった。
+  source: "https://ja.wikipedia.org/wiki/五四運動"
+
+- id: maoism
+  name: 毛沢東思想と中国の社会主義（大躍進・文化大革命）
+  kind: system
+  curve:
+    - [1927, 0.1]
+    - [1935, 0.3]
+    - [1945, 0.5]
+    - [1949, 0.8]
+    - [1958, 0.9]
+    - [1966, 1.0]
+    - [1971, 0.9]
+    - [1976, 0.7]
+    - [1978, 0.3]
+    - [1985, 0.1]
+    - [1990, 0.0]
+  spread:
+    - where: {polities: [chinese_soviet]}
+      center: true
+      curve: [[1931, 0.6], [1937, 0.8], [1945, 1.0], [1949, 1.0]]
+    - where: {polities: [prc]}
+      center: true
+      curve: [[1949, 0.8], [1953, 0.8], [1958, 0.9], [1962, 0.7], [1966, 1.0], [1971, 0.9], [1976, 0.7], [1978, 0.3], [1985, 0.1], [1990, 0.0]]
+  people: [毛沢東, 周恩来, 劉少奇, 林彪, 江青, 紅衛兵]
+  works: [『毛主席語録』, 『新民主主義論』]
+  events: [中国共産党の結成, 長征, 中華人民共和国の成立, 大躍進と人民公社, プロレタリア文化大革命, 周恩来・毛沢東の死と四人組の逮捕]
+  text: 農民を主力とする革命と農村の根拠地を重んじた毛沢東の思想と、それにもとづく中華人民共和国の社会主義建設。土地改革・第1次五か年計画の後、大躍進政策（1958–60）と人民公社化で数千万人の餓死者を出した。1966年からの文化大革命では紅衛兵が「走資派」とされた劉少奇・鄧小平らを攻撃し、伝統文化が破壊され、社会は大混乱した。毛沢東の死と四人組の逮捕（1976）で終わった。
+  source: "https://ja.wikipedia.org/wiki/文化大革命"
+
+- id: juche
+  name: 主体思想（北朝鮮）
+  kind: system
+  curve:
+    - [1955, 0.2]
+    - [1967, 0.7]
+    - [1972, 1.0]
+    - [1994, 0.9]
+    - [2025, 0.8]
+  spread:
+    - where: {polities: [north_korea]}
+      center: true
+      curve: [[1955, 0.2], [1967, 0.7], [1972, 1.0], [1994, 0.9], [2025, 0.8]]
+  people: [金日成, 金正日, 金正恩]
+  works: []
+  events: [大韓民国・朝鮮民主主義人民共和国の成立, 北朝鮮の核実験]
+  text: 中ソ対立の中で金日成が唱えた、政治の自主・経済の自立・国防の自衛を掲げる北朝鮮の指導理念。1972年の憲法で国家の指導思想とされ、指導者への絶対的な忠誠と結びついて、金日成・金正日・金正恩の三代の世襲体制を支えた。1990年代以後は「先軍政治」や核開発も進めた。
+  source: "https://ja.wikipedia.org/wiki/主体思想"
+
+- id: east_asian_growth
+  name: 高度経済成長・アジアNIEs（開発独裁）
+  kind: system
+  curve:
+    - [1955, 0.3]
+    - [1960, 0.6]
+    - [1968, 1.0]
+    - [1973, 0.9]
+    - [1985, 0.9]
+    - [1991, 0.7]
+    - [1997, 0.4]
+    - [2005, 0.2]
+    - [2015, 0.0]
+  spread:
+    - where: {polities: [japan]}
+      center: true
+      curve: [[1955, 0.6], [1960, 0.9], [1968, 1.0], [1973, 0.8], [1974, 0.5], [1986, 0.6], [1991, 0.3], [1995, 0.0]]
+    - where: {polities: [south_korea]}
+      curve: [[1962, 0.3], [1970, 0.8], [1980, 0.9], [1988, 1.0], [1997, 0.5], [2005, 0.2], [2015, 0.0]]
+    - where: {polities: [roc]}
+      curve: [[1960, 0.3], [1970, 0.8], [1980, 0.9], [1990, 0.8], [2000, 0.4], [2010, 0.0]]
+    - where: {regions: [cn_hong_kong_hong_kong_special_administrative_region, cn_hong_kong_hong_kong_special_administrative_region_hong_kong_island, cn_hong_kong_hong_kong_special_administrative_region_kowloon]}
+      curve: [[1955, 0.3], [1965, 0.7], [1975, 0.9], [1990, 0.9], [1997, 0.5], [2005, 0.2], [2015, 0.0]]   # 香港（シンガポールは東南アジアのデータを作るときに足す）
+  people: [池田勇人, 田中角栄, 朴正煕, 蔣経国, リー・クアンユー]
+  works: [国民所得倍増計画]
+  events: [東京オリンピックと東海道新幹線, 日韓基本条約, 石油危機と高度経済成長の終わり, プラザ合意, アジア通貨危機]
+  text: 日本は1955年ごろから1973年の石油危機まで年平均10％近い経済成長を続け、世界第2位の経済大国になった。続いて韓国（「漢江の奇跡」）・台湾・香港・シンガポールがアジアNIEs（新興工業経済地域）として輸出主導の工業化を進めた。韓国・台湾では、経済成長を優先して政治の自由を制限する開発独裁の体制がとられ、1980年代後半に民主化した。
+  source: "https://ja.wikipedia.org/wiki/高度経済成長"
+
+- id: reform_and_opening
+  name: 改革開放
+  kind: system
+  curve:
+    - [1978, 0.4]
+    - [1984, 0.7]
+    - [1989, 0.6]
+    - [1992, 1.0]
+    - [2001, 1.0]
+    - [2012, 0.7]
+    - [2025, 0.5]
+  spread:
+    - where: {polities: [prc]}
+      center: true
+      curve: [[1978, 0.4], [1984, 0.7], [1989, 0.6], [1992, 1.0], [2001, 1.0], [2012, 0.7], [2025, 0.5]]
+  people: [鄧小平, 胡耀邦, 趙紫陽, 江沢民, 朱鎔基]
+  works: [南巡講話]
+  events: [改革・開放政策の始まり, 天安門事件, 南巡講話と社会主義市場経済, 中国の世界貿易機関（WTO）加盟, 「一帯一路」構想]
+  text: 文化大革命の後、鄧小平の指導で始まった経済改革と対外開放。人民公社を解体して農家の生産請負制を導入し、深圳などに経済特区を設けて外国資本を招いた。天安門事件（1989）で政治の民主化は抑えられたが、南巡講話（1992）で「社会主義市場経済」が掲げられ、WTO 加盟（2001）を経て中国は「世界の工場」となり、2010年に GDP で世界第2位になった。
+  source: "https://ja.wikipedia.org/wiki/改革開放"

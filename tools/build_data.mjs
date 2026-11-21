@@ -159,7 +159,8 @@ function resolveRegion(id, where) {
 }
 for (const r of regions) resolveRegion(r.id, r._file);
 
-const CERTAINTY = ["certain", "uncertain", "nominal", "occupied"];
+// 末尾に足していく（atlas.json のピースの状態は、この配列の番号で持つ）
+const CERTAINTY = ["certain", "uncertain", "nominal", "occupied", "indirect"];
 for (const r of regions) {
   let prev = -Infinity;
   for (const e of r.timeline ?? []) {

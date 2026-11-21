@@ -48,6 +48,16 @@ export function secularFade(s: number): number {
   return 0.85 * (1 - Math.pow(1 - x, 1.6));
 }
 /**
+ * 間接統治（certainty: indirect。清の藩部など）の地域は、持ち主の色をこの割合だけ残して地の色 SECULAR_GROUND に寄せる。
+ * 「同じ国だが支配がゆるい」ことを、斜線ではなく色の薄さで見せる
+ */
+const INDIRECT_KEEP = 0.5;
+export function indirectColor(color: string): string {
+  return mix(color, SECULAR_GROUND, INDIRECT_KEEP);
+}
+/** 斜線で描く確からしさ（indirect は斜線を使わず、色の薄さで見せる） */
+const HATCHED_CERT = new Set(["uncertain", "nominal", "occupied"]);
+/**
  * 歴史データがまだ1つもない地域（ヨーロッパ以外など）は、現代の国の色をこの色に寄せて淡く・彩度を落として塗る。
  * 「現代の国境で仮に塗ってある（歴史の地図は準備中）」と、ひと目でわかるようにする
  */
@@ -107,6 +117,8 @@ export class AtlasMap {
   private atlasIdx: number[]; // topo のピース番号 → atlas のピース番号
   private ownerOf: Int32Array;
   private ovOf: Int32Array;
+  /** ピースごとの確からしさ（atlas.certainty の番号） */
+  private certOf: Int32Array;
   private colorOf: (string | null | undefined)[];
   private cache = new Map<string, Merged>();
   private meshCache = new Map<string, FeatureCollection>();
@@ -148,6 +160,7 @@ export class AtlasMap {
     this.ownerOf = new Int32Array(n).fill(-2);
     this.ovOf = new Int32Array(n);
     this.colorOf = new Array(n).fill(undefined);
+    this.certOf = new Int32Array(n);
     this.relMain = new Int32Array(n).fill(-2);
     this.relRegion = new Int32Array(n).fill(-1);
     this.relColorOf = new Array(n).fill(undefined);
@@ -752,14 +765,16 @@ export class AtlasMap {
     if (!this.loaded) return;
     const idx = this.idx;
     const polities = idx.atlas.polities;
-    const certOf = new Int32Array(this.geoms.length);
+    const certOf = this.certOf;
+    const indirect = idx.atlas.certainty.indexOf("indirect");
     for (let i = 0; i < this.geoms.length; i++) {
       const s = this.atlasIdx[i] >= 0 ? idx.pieceState(this.atlasIdx[i], year) : null;
       const owner = s ? s[1] : -1;
       certOf[i] = s ? s[3] : 0;
       this.ownerOf[i] = owner;
       this.ovOf[i] = s ? s[2] : -1;
-      const color = owner >= 0 ? (polities[owner].color ?? fallbackColor(polities[owner].id)) : null;
+      let color = owner >= 0 ? (polities[owner].color ?? fallbackColor(polities[owner].id)) : null;
+      if (color && certOf[i] === indirect) color = indirectColor(color);
       if (color !== this.colorOf[i]) {
         this.map.setFeatureState({ source: "pieces", id: i }, { c: color });
         this.colorOf[i] = color;
@@ -773,14 +788,16 @@ export class AtlasMap {
       for (const i of u.pieces) subOf[i] = k;
     });
 
-    // 所属と確からしさの同じピースのまとまり（保護国などの区画は分けておき、国名ラベルを置かない）
+    // 所属と確からしさの同じピースのまとまり（保護国などの区画は分けておき、国名ラベルを置かない）。
+    // 間接統治（indirect）は斜線を描かないので、持ち主の直轄地と同じまとまりにする（国名ラベル・外形が1つの国になる）
     const groups = new Map<string, { owner: number; cert: number; sub: boolean; pieces: number[] }>();
     for (let i = 0; i < this.geoms.length; i++) {
       const owner = this.ownerOf[i];
       const sub = subOf[i] >= 0;
-      const key = `${owner}|${certOf[i]}${sub ? "|s" : ""}`;
+      const cert = certOf[i] === indirect ? 0 : certOf[i];
+      const key = `${owner}|${cert}${sub ? "|s" : ""}`;
       let g = groups.get(key);
-      if (!g) groups.set(key, (g = { owner, cert: certOf[i], sub, pieces: [] }));
+      if (!g) groups.set(key, (g = { owner, cert, sub, pieces: [] }));
       g.pieces.push(i);
     }
 
@@ -792,7 +809,7 @@ export class AtlasMap {
     for (const [key, g] of groups) {
       if (g.owner < 0) continue;
       const m = this.merged(key, g.pieces);
-      if (g.cert > 0) hatch.push({ type: "Feature", properties: { pat: `hatch-${certNames[g.cert]}` }, geometry: m.geo });
+      if (HATCHED_CERT.has(certNames[g.cert])) hatch.push({ type: "Feature", properties: { pat: `hatch-${certNames[g.cert]}` }, geometry: m.geo });
       if (g.sub) continue;
       let list = polys.get(g.owner);
       if (!list) polys.set(g.owner, (list = []));
@@ -1530,6 +1547,52 @@ export class AtlasMap {
     this.setData("highlight", geo ? { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geo }] } : EMPTY);
   }
 
+  /** そのピースが今の年に間接統治（certainty: indirect）か */
+  private isIndirect(i: number): boolean {
+    return this.ownerOf[i] >= 0 && this.idx.atlas.certainty[this.certOf[i]] === "indirect";
+  }
+
+  /** そのピースの、今の年に効いている地域の名前 */
+  private regionOf(i: number): string {
+    const a = this.atlasIdx[i];
+    const s = a >= 0 ? this.idx.pieceState(a, this.year) : null;
+    const r = s ? this.idx.atlas.regions[s[4]] : undefined;
+    return r ? this.idx.regionName(r, this.year) : "";
+  }
+
+  /**
+   * その政体の、今の年に間接統治（藩部など）の地域の名前（広い順）。
+   * all = true なら、その政体の全体が間接統治
+   */
+  indirectOf(id: string): { names: string[]; all: boolean } | null {
+    const o = this.idx.polityIndex.get(id);
+    if (o === undefined) return null;
+    const count = new Map<string, number>();
+    let total = 0;
+    let n = 0;
+    for (let i = 0; i < this.geoms.length; i++) {
+      if (this.ownerOf[i] !== o) continue;
+      total++;
+      if (!this.isIndirect(i)) continue;
+      n++;
+      const r = this.regionOf(i);
+      if (r) count.set(r, (count.get(r) ?? 0) + 1);
+    }
+    if (!n) return null;
+    return { names: [...count.entries()].sort((a, b) => b[1] - a[1]).map((e) => e[0]), all: n === total };
+  }
+
+  /** 間接統治の地域が、今の年の地図に（onScreen なら画面に見えている範囲に）あるか */
+  indirectShown(onScreen = false): boolean {
+    if (!this.loaded || isDist(this.layer) || this.modernOn) return false;
+    if (onScreen) {
+      for (const f of this.map.queryRenderedFeatures({ layers: ["fill"] })) if (this.isIndirect(Number(f.id))) return true;
+      return false;
+    }
+    for (let i = 0; i < this.geoms.length; i++) if (this.isIndirect(i)) return true;
+    return false;
+  }
+
   /** その政体の領域の上位政体（いちばん多いもの）。一部だけが属していれば partial = true */
   overlordOf(id: string): { id: string; partial: boolean } | null {
     const i = this.idx.polityIndex.get(id);
@@ -1702,7 +1765,13 @@ export class AtlasMap {
       const i = Number(f.id);
       if (isDist(this.layer)) text = this.religionHoverText(i);
       else if (this.modernOn) text = modernName(this.geoms[i].properties!.iso);
-      else if (this.ownerOf[i] >= 0) text = this.idx.polityName(this.idx.atlas.polities[this.ownerOf[i]], this.year);
+      else if (this.ownerOf[i] >= 0) {
+        text = this.idx.polityName(this.idx.atlas.polities[this.ownerOf[i]], this.year);
+        if (this.isIndirect(i)) {
+          const r = this.regionOf(i);
+          text += `\n${r ? `${r}：` : ""}間接統治`;
+        }
+      }
       else if (this.pending[i]) text = `${modernName(this.geoms[i].properties!.iso)}（現代の国境）\nこの地域の歴史の地図は準備中`;
       if (this.debug) {
         const p = this.geoms[i].properties!;

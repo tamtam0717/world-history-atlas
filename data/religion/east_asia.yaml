@@ -1,0 +1,1033 @@
+# 宗教の分布：東アジア（中国・台湾・日本・朝鮮・モンゴル）とシベリア・極東（1648–2025）
+# 形式は docs/religion-format.md（「東アジア」の節に塗り分けの方針）。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# 東アジアの宗教は重層的なので、中国の漢人は chinese_folk（儒・仏・道の民間信仰）、日本の和人は shinbutsu（神道・仏教）、
+# 朝鮮は confucian（儒教）で塗る。言語（data/language/east_asia.yaml）と切り替えの年をそろえている。
+
+# ======== 中国 ========
+- id: rel_china
+  name: 中国本土
+  select:
+    iso: [CHN]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      note: 漢人の信仰は、祖先祭祀（儒教）・仏教・道教と、関帝・媽祖などの民間の神々の信仰が混ざり合ったもの。科挙で朱子学が正統の学問とされた。イエズス会の宣教（マテオ＝リッチ以来）でカトリックの信者もいたが、少数。
+      source: "https://ja.wikipedia.org/wiki/中国の宗教"
+    - from: 1724
+      main: chinese_folk
+      note: 典礼問題をきっかけに、雍正帝がキリスト教の布教を禁止した（1724）。回族（中国語を話すムスリム）は全国の都市や西北・雲南に住む。
+      source: "https://ja.wikipedia.org/wiki/典礼問題"
+    - from: 1851
+      main: chinese_folk
+      note: 洪秀全の上帝会（キリスト教の影響を受けた宗教結社）が太平天国を建てた（1851–64）。北京条約（1860）でキリスト教の布教が公認され、各地で教案（反キリスト教の事件）が起こり、義和団事件（1900）に至った。
+      source: "https://ja.wikipedia.org/wiki/太平天国"
+    - from: 1949
+      main: chinese_folk
+      note: 中華人民共和国の成立。宗教は国家の管理下に置かれ、文化大革命（1966–76）では寺院・教会・モスクの多くが破壊・閉鎖された。改革開放の後、信仰の活動は一部回復した。現在のキリスト教徒は人口の数％とされる（地図は伝統的な帰属。世俗化は secular.yaml）。
+      source: "https://ja.wikipedia.org/wiki/中華人民共和国の宗教"
+
+# ---- チベット仏教の地域（チベット・青海・四川西部・甘粛南部・雲南北西部） ----
+- id: rel_tibet
+  name: チベット（ウ・ツァン、カム、アムド）
+  select:
+    adm1: ["CHN/Tibet Autonomous Region"]
+    pieces: [CHN-Yushu, CHN-Guoluo, CHN-Huangnan, CHN-Hainanzhou, CHN-Haibei, CHN-Ganzi, CHN-Aba, CHN-Gannan, CHN-Diqing]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: ダライ・ラマ5世（1642 年にグシ・ハンの支援でチベットの政権を握る）の下でゲルク派が優勢。ラサのポタラ宮は 1645 年に建設が始まる。アムド（青海）・カム（四川西部）も同じチベット仏教圏。
+      source: "https://ja.wikipedia.org/wiki/チベット仏教"
+    - from: 1959
+      main: tibetan_buddhism
+      note: 1959 年のチベット蜂起の後、ダライ・ラマ14世がインドに亡命した。文化大革命で多くの寺院が破壊された。1980 年代から寺院の再建が進んだが、宗教活動への規制は続いている。
+      source: "https://ja.wikipedia.org/wiki/1959年のチベット蜂起"
+- id: rel_haibei
+  name: 青海北部（海北）
+  select:
+    pieces: [CHN-Haibei]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: チベット人とモンゴル人（ホシュート部）の牧地
+    - from: 1960
+      main: chinese_folk
+      minor: tibetan_buddhism
+      secular: 0.4
+      note: 漢人の移住で漢人が最大になる。回族も多い（イスラーム）。世俗化は中国本土（sec_china）と同じ値にしている。
+    - from: 1966
+      main: chinese_folk
+      minor: tibetan_buddhism
+      secular: 0.7
+    - from: 1978
+      main: chinese_folk
+      minor: tibetan_buddhism
+      secular: 0.55
+    - from: 2000
+      main: chinese_folk
+      minor: tibetan_buddhism
+      secular: 0.5
+- id: rel_haixi
+  name: 青海のツァイダム盆地（海西・ゴルムド）
+  select:
+    pieces: [CHN-Haixi, CHN-Geermu]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: ホシュート部などのモンゴル人とチベット人の牧地
+    - from: 1960
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 1950 年代から、青蔵公路の起点となったゴルムドの建設や油田・塩湖の開発で漢人が移り住み、多数派になった。
+- id: rel_xining
+  name: 西寧と湟水の谷（西寧・海東）
+  select:
+    pieces: [CHN-Xining, CHN-Haidong]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      minor: sunni
+      note: 漢人・回族・サラール人（ムスリム）・土族（モンゴル系）・チベット人が混住する。ゲルク派の開祖ツォンカパの生地に建つタール寺（クンブム）がある。
+      source: "https://ja.wikipedia.org/wiki/タール寺"
+- id: rel_linxia
+  name: 甘粛の臨夏（河州）
+  select:
+    pieces: [CHN-Linxia]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: chinese_folk
+      note: 回族・東郷族・保安族・サラール人などのムスリムが多く、「中国の小メッカ」と呼ばれる。スーフィー教団（門宦）の中心地。
+      source: "https://ja.wikipedia.org/wiki/臨夏回族自治州"
+- id: rel_ningxia
+  name: 寧夏
+  select:
+    adm1: ["CHN/Ningxia Ningxia Hui Autonomous Region"]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      minor: sunni
+      note: 回族（ムスリム）が人口の3分の1ほど。南部（固原・呉忠）に多い。陝西・甘粛の回民蜂起（1862–77）の後、回族は寧夏南部・甘粛に移された。
+      source: "https://ja.wikipedia.org/wiki/回民蜂起"
+
+# ---- 新疆 ----
+- id: rel_tarim
+  name: タリム盆地（東トルキスタン南部：カシュガル・ホータン・アクス・トゥルファン）
+  select:
+    pieces: [CHN-Kashi, CHN-Hetian, CHN-Akesu, CHN-Kezileisu, CHN-Tulufan, CHN-Hami, CHN-Bayinguoleng]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: オアシス都市のテュルク系ムスリム（のちのウイグル人）。カシュガル・ホージャ家（ナクシュバンディー教団）が宗教と政治の権威をもった。
+      source: "https://ja.wikipedia.org/wiki/ホージャ家"
+- id: rel_akesu
+  name: アクス
+  select:
+    pieces: [CHN-Akesu]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1980
+      main: sunni
+      minor: chinese_folk
+      note: 新疆生産建設兵団などの移住で漢人が人口の3割近くになる。
+- id: rel_hami
+  name: ハミ（クムル）
+  select:
+    pieces: [CHN-Hami]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ハミ王家（ウイグル人の王侯）が清に早くから服属した。
+    - from: 1960
+      main: chinese_folk
+      minor: sunni
+      note: 鉄道（蘭新線）の開通と移住で、漢人が多数になる。
+- id: rel_bayingol
+  name: バインゴリン（コルラ・カラシャール）
+  select:
+    pieces: [CHN-Bayinguoleng]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1771
+      main: sunni
+      minor: tibetan_buddhism
+      note: ヴォルガ川流域から帰還したトルグート部（モンゴル系、チベット仏教）がユルドゥズの草原に移された（1771）。
+      source: "https://ja.wikipedia.org/wiki/トルグート"
+    - from: 1970
+      main: chinese_folk
+      minor: sunni
+      note: 兵団と石油開発で漢人が多数になる。
+- id: rel_dzungaria
+  name: ジュンガリア（イリ・タルバガタイ・アルタイ・ボルタラ）
+  select:
+    pieces: [CHN-Yili, CHN-Tacheng, CHN-Aletai, CHN-Boertala]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: オイラト（ジュンガル部など）の遊牧地。オイラトはチベット仏教（ゲルク派）を信仰した。
+    - from: 1760
+      main: sunni
+      note: 清の乾隆帝がジュンガルを滅ぼし（1755–58）、オイラトの人口は戦争と天然痘で激減した。イリにはタリム盆地からタランチ（ウイグル人の農民）が移され、19 世紀にはカザフ人の遊牧民が入った。シベ・満洲・ソロン（エヴェンキ）・チャハルの駐屯兵も置かれた。（タルバガタイ・アルタイ・ボルタラは下の地域で別に塗る）
+      source: "https://ja.wikipedia.org/wiki/ジュンガル"
+- id: rel_ili
+  name: イリ
+  select:
+    pieces: [CHN-Yili]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: ジュンガル（オイラト）の本拠地
+    - from: 1760
+      main: sunni
+      note: ジュンガルの滅亡の後、タランチ（ウイグル人の農民）が移され、19 世紀にはカザフ人の遊牧民が入った。満洲・シベ・ソロン・チャハルの駐屯兵も置かれた。
+    - from: 1970
+      main: chinese_folk
+      minor: sunni
+      note: 新疆生産建設兵団の入植で漢人が最大になる。
+- id: rel_tacheng
+  name: タルバガタイ（塔城）
+  select:
+    pieces: [CHN-Tacheng]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: オイラト（ジュンガル部・ドルベト部）の遊牧地
+    - from: 1771
+      main: tibetan_buddhism
+      minor: sunni
+      note: 清はジュンガル平定の後、カザフ人には季節の放牧しか認めず、1771 年にヴォルガ川流域から帰還したトルグート部・ホシュート部（モンゴル系、チベット仏教）をタルバガタイ（ホボクサル）に住まわせた。
+      source: "https://ja.wikipedia.org/wiki/トルグート"
+    - from: 1880
+      main: sunni
+      minor: tibetan_buddhism
+      note: 1860〜80 年代にロシア領からカザフ人（ムスリム）が大量に移り住み、多数派になった。
+    - from: 1970
+      main: chinese_folk
+      minor: sunni
+      note: 兵団の入植で漢人が多数になる。
+- id: rel_altay
+  name: アルタイ（新疆北端）
+  select:
+    pieces: [CHN-Aletai]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: オイラトとアルタイ・ウリャンハイ（モンゴル系の仏教徒）の牧地。1919 年まではホブド（モンゴル）の管轄だった。
+    - from: 1771
+      main: tibetan_buddhism
+      minor: sunni
+      note: アルタイ・ウリャンハイの地に、カザフ人が季節の放牧で入るようになる。
+    - from: 1870
+      main: sunni
+      minor: tibetan_buddhism
+      note: 19 世紀後半、ケレイ部などのカザフ人（ムスリム）が移り住み、多数派になった（隣のバヤン・ウルギーと同じ時期）。
+    - from: 1970
+      main: sunni
+      minor: chinese_folk
+      note: カザフ人が半数を占め、漢人が4割ほどになる。
+- id: rel_bortala
+  name: ボルタラ
+  select:
+    pieces: [CHN-Boertala]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: オイラトの遊牧地
+    - from: 1760
+      main: tibetan_buddhism
+      minor: sunni
+      note: 清はチャハル部のモンゴル人（チベット仏教）を駐屯させた。カザフ人も遊牧した。のちのボルタラ・モンゴル自治州（1954）のもと。
+      source: "https://ja.wikipedia.org/wiki/ボルタラ・モンゴル自治州"
+    - from: 1970
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 兵団の入植で漢人が多数になる。モンゴル人・カザフ人がそれに次ぐ。
+- id: rel_urumqi
+  name: ウルムチ（迪化）・昌吉
+  select:
+    pieces: [CHN-Wulumuqi, CHN-Changji]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: オイラトの遊牧地
+    - from: 1760
+      main: chinese_folk
+      minor: sunni
+      note: 清がジュンガル平定後に迪化（ウルムチ）を建設し、漢人・回族の農民と商人が移り住んだ。
+      source: "https://ja.wikipedia.org/wiki/ウルムチ市"
+- id: rel_shihezi_karamay
+  name: 石河子・カラマイ
+  select:
+    pieces: [CHN-Shihezi, CHN-Kelamayi]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+    - from: 1760
+      main: sunni
+      note: カザフ人・モンゴル人の牧地
+    - from: 1958
+      main: chinese_folk
+      note: 新疆生産建設兵団の町（石河子）と油田の町（カラマイ、1955 年に油田発見）が建設され、漢人の町になった。
+
+# ---- 内モンゴル ----
+- id: rel_inner_mongolia
+  name: 内モンゴル
+  select:
+    adm1: ["CHN/Inner Mongolia Autonomous Region"]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: 16 世紀末のアルタン・ハーン以来、モンゴル人はチベット仏教（ゲルク派）を信仰した。フフホト（帰化城）には多くの寺院がある。
+      source: "https://ja.wikipedia.org/wiki/フフホト市"
+- id: rel_im_south
+  name: 内モンゴル南部（フフホト・包頭・ウランチャブ・赤峰）
+  select:
+    pieces: [CHN-Huhehaote, CHN-Baotou, CHN-Wulanchabu, CHN-Chifeng]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+    - from: 1800
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 18 世紀から、山西・河北・山東の漢人の農民が長城を越えて移住した（「走西口」）。
+      source: "https://ja.wikipedia.org/wiki/走西口"
+    - from: 1950
+      main: chinese_folk
+      note: 漢人が9割前後になる
+- id: rel_im_hetao
+  name: 内モンゴル西部の河套（バヤンノール）
+  select:
+    pieces: [CHN-Bayannaoer]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+    - from: 1900
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 19 世紀後半から黄河の灌漑で開墾が進み、漢人の村が広がった。
+    - from: 1950
+      main: chinese_folk
+- id: rel_im_ordos_horqin
+  name: オルドス・ホルチン（鄂爾多斯・烏海・通遼）
+  select:
+    pieces: [CHN-Eerduosi, CHN-Wuhai, CHN-Tongliao]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+    - from: 1930
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 清末の「移民実辺」（1902 年からモンゴルの牧地の開墾を公認）で漢人の移住が急増した。
+      source: "https://ja.wikipedia.org/wiki/移民実辺"
+- id: rel_im_northeast
+  name: 内モンゴル東部（興安・フルンボイル）
+  select:
+    pieces: [CHN-Xingan, CHN-Hulunbeier]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: フルンボイルにはバルガ・モンゴル人のほか、ダウール人・エヴェンキ人（シャーマニズム）もいる。
+    - from: 1950
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 中華人民共和国の成立後、農場・林業・鉱山の開発で漢人が多数になる。
+- id: rel_im_steppe
+  name: 内モンゴル中部・西部の草原（シリンゴル・アラシャン）
+  select:
+    pieces: [CHN-Xilinguole, CHN-Alashan]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+    - from: 1970
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 文化大革命期の生産建設兵団や鉱山・都市の開発で、漢人が多数になる。
+
+# ---- 満洲（中国東北） ----
+- id: rel_liaodong
+  name: 遼東（盛京）
+  select:
+    adm1: ["CHN/Liaoning Province"]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      note: 清の入関（1644）で満洲人の多くが北京に移り、遼東は人口が減った。1653 年の遼東招民開墾令で山東などから漢人を招いた。満洲人はシャーマニズム（堂子の祭り）も保った。
+      source: "https://ja.wikipedia.org/wiki/盛京"
+- id: rel_west_liaoning
+  name: 熱河・遼西のモンゴル（承徳・朝陽・阜新）
+  select:
+    pieces: [CHN-Chengde, CHN-Chaoyang, CHN-Fuxin]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: ハラチン部・トゥメト部などのモンゴル人の牧地。承徳の避暑山荘（1703–）の周りには、チベット仏教の寺院（外八廟）が建てられた。
+    - from: 1800
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 漢人の農民の移住が進む（熱河の開発）
+    - from: 1950
+      main: chinese_folk
+- id: rel_jilin
+  name: 吉林（中部・南部）
+  select:
+    pieces: [CHN-Changchun, CHN-Jilin, CHN-Siping, CHN-Liaoyuan, CHN-Tonghua, CHN-Baishan]
+  timeline:
+    - from: 1648
+      main: other
+      note: 満洲人・ツングース系の人々（シャーマニズム）。清は柳条辺牆で満洲を囲い、漢人の移住を制限した（封禁政策）。
+      source: "https://ja.wikipedia.org/wiki/柳条辺牆"
+    - from: 1880
+      main: chinese_folk
+      note: 19 世紀後半に封禁が緩められ、山東・河北から大量の漢人が移住した（「闖関東」）。
+      source: "https://ja.wikipedia.org/wiki/闖関東"
+- id: rel_jilin_west
+  name: 吉林西部（白城・松原）
+  select:
+    pieces: [CHN-Baicheng, CHN-Songyuan]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: ホルチン部・ゴルロス部のモンゴル人の牧地
+    - from: 1910
+      main: chinese_folk
+      minor: tibetan_buddhism
+      note: 清末の開墾で漢人が多数になる
+    - from: 1950
+      main: chinese_folk
+- id: rel_yanbian
+  name: 延辺（間島）
+  select:
+    pieces: [CHN-Yanbian]
+  timeline:
+    - from: 1648
+      main: other
+      note: 清の封禁地で、人口はわずか
+    - from: 1900
+      main: confucian
+      minor: chinese_folk
+      note: 1860 年代末の飢饉の後、朝鮮北部から朝鮮人の農民が豆満江を越えて移り住み、多数派になった（間島）。キリスト教（長老派）の信者も多かった。
+      source: "https://ja.wikipedia.org/wiki/間島"
+    - from: 1970
+      main: chinese_folk
+      minor: confucian
+      note: 漢人の移住で、朝鮮族は人口の半分を割った（現在は3割ほど）。
+- id: rel_heilongjiang
+  name: 黒龍江
+  select:
+    adm1: ["CHN/Heilongjiang Province"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ダウール人・エヴェンキ人（ソロン）・ナナイ人（ホジェン）など、シャーマニズムを信仰する人々の地。1650 年代にロシアのコサックがアムール川に進出した。
+    - from: 1900
+      main: chinese_folk
+      note: 東清鉄道（1903 年開通）の建設と漢人の移住で、漢人が多数になる。
+- id: rel_harbin
+  name: ハルビン
+  select:
+    pieces: [CHN-Haerbin]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1900
+      main: chinese_folk
+      minor: orthodox
+      note: 東清鉄道の拠点として 1898 年にロシアが建設した町。ロシア革命後は亡命ロシア人も集まり、1920 年代にはロシア人が人口の大きな部分を占めた（聖ソフィア大聖堂など）。
+      source: "https://ja.wikipedia.org/wiki/ハルビン市"
+    - from: 1950
+      main: chinese_folk
+      note: ロシア人の多くはソ連・第三国へ去った。
+- id: rel_heilongjiang_north
+  name: 大興安嶺・黒河
+  select:
+    pieces: [CHN-Daxinganling, CHN-Heihe]
+  timeline:
+    - from: 1648
+      main: other
+      note: オロチョン人・エヴェンキ人の狩猟地
+    - from: 1930
+      main: chinese_folk
+
+# ---- 西南の少数民族 ----
+- id: rel_dai
+  name: 雲南のタイ族（シーサンパンナ）
+  select:
+    pieces: [CHN-Xishuangbanna]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: タイ・ルー人の王国（シプソンパンナー）。上座部仏教を信仰し、清の土司として間接統治された。ハニ人なども住む。
+      source: "https://ja.wikipedia.org/wiki/シーサンパンナ・タイ族自治州"
+    - from: 1970
+      main: theravada
+      minor: chinese_folk
+      note: 国営農場（ゴム園）の建設で漢人が移住した。
+- id: rel_dehong
+  name: 徳宏
+  select:
+    pieces: [CHN-Dehong]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: タイ・ヌア人の土司（ムンマオなど）の地。上座部仏教。山地のジンポー人（カチン人）はアニミズム、のちキリスト教。
+    - from: 1970
+      main: chinese_folk
+      minor: theravada
+      note: 漢人の移住で漢人が最大になる。
+- id: rel_panzhihua
+  name: 攀枝花
+  select:
+    pieces: [CHN-Panzhihua]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      minor: other
+      note: 谷の漢人の農民と、山地のイ族（祖先崇拝とビモの信仰）
+    - from: 1965
+      main: chinese_folk
+      note: 三線建設の鉄鋼都市として 1965 年に建設された
+- id: rel_yi_lisu
+  name: 涼山・怒江（イ族・リス族の地）
+  select:
+    pieces: [CHN-Liangshan, CHN-Nujiang]
+  timeline:
+    - from: 1648
+      main: other
+      minor: chinese_folk
+      note: イ族の祖先崇拝とビモ（祭司）の信仰、リス族のアニミズム。怒江のリス族には 20 世紀前半からプロテスタントが広まった。
+      source: "https://ja.wikipedia.org/wiki/涼山イ族自治州"
+- id: rel_miao_dong
+  name: 黔東南（ミャオ族・トン族の地）
+  select:
+    pieces: [CHN-Qiandongnan]
+  timeline:
+    - from: 1648
+      main: other
+      minor: chinese_folk
+      note: ミャオ族・トン族の祖先崇拝・アニミズム。雍正帝の改土帰流（1726–）とミャオ族の反乱（1735、1795、1855–72）が続いた。
+      source: "https://ja.wikipedia.org/wiki/改土帰流"
+
+# ======== 台湾 ========
+- id: rel_taiwan
+  name: 台湾（山地・東部）
+  select:
+    iso: [TWN]
+  timeline:
+    - from: 1648
+      main: other
+      note: 台湾原住民（オーストロネシア系）のアニミズム・祖霊信仰。オランダ（1624–62）は台南周辺のシラヤ族に改革派の布教をし、ローマ字で聖書を訳した。
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+- id: rel_taiwan_islands
+  name: 澎湖・金門・馬祖
+  select:
+    pieces: [TWN-Penghu, TWN-Kinmen, TWN-Matsu_Islands]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      note: 福建の漢人の島。媽祖の信仰が厚い。
+- id: rel_tw_southwest
+  name: 台湾南西部（台南・高雄）
+  select:
+    pieces: [TWN-Tainan, TWN-Kaohsiung]
+  timeline:
+    - from: 1648
+      main: other
+      minor: chinese_folk
+      note: オランダの拠点ゼーランディア城（台南）の周辺に、福建からの漢人の移住者が集まり始めた。
+    - from: 1662
+      main: chinese_folk
+      minor: other
+      note: 鄭成功がオランダを追い、数万の将兵と家族が渡った。
+      source: "https://ja.wikipedia.org/wiki/鄭氏政権"
+    - from: 1720
+      main: chinese_folk
+- id: rel_tw_west
+  name: 台湾西部の平野（嘉義・彰化・雲林・屏東）
+  select:
+    pieces: [TWN-Chiayi, TWN-Chiayi_County, TWN-Changhua_County, TWN-Yunlin_County, TWN-Pingtung_County]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1720
+      main: chinese_folk
+      minor: other
+      note: 清の領有（1684）後、海禁の緩みとともに福建・広東の漢人が西部の平野を開墾した。平埔族（平地の原住民）はしだいに漢人と同化した。
+      source: "https://ja.wikipedia.org/wiki/平埔族"
+    - from: 1800
+      main: chinese_folk
+- id: rel_tw_north
+  name: 台湾北部・中部（台北・桃園・新竹・苗栗・台中）
+  select:
+    pieces: [TWN-Taipei, TWN-New_Taipei, TWN-Keelung, TWN-Taoyuan, TWN-Hsinchu, TWN-Hsinchu_County, TWN-Miaoli_County, TWN-Taichung]
+  timeline:
+    - from: 1648
+      main: other
+      note: スペイン（1626–42）が基隆・淡水に拠点を置き、カトリックを布教した。
+    - from: 1760
+      main: chinese_folk
+      minor: other
+      note: 18 世紀に台北盆地・桃園・新竹の開墾が進む。客家は丘陵地（桃園・新竹・苗栗）に多い。
+    - from: 1820
+      main: chinese_folk
+- id: rel_tw_yilan
+  name: 宜蘭
+  select:
+    pieces: [TWN-Yilan_County]
+  timeline:
+    - from: 1648
+      main: other
+      note: クバラン族の地
+    - from: 1810
+      main: chinese_folk
+      minor: other
+      note: 呉沙の開墾（1796–）の後、清が噶瑪蘭庁を置いた（1812）。
+      source: "https://ja.wikipedia.org/wiki/宜蘭県"
+    - from: 1860
+      main: chinese_folk
+- id: rel_tw_nantou
+  name: 南投（台湾中部の山地）
+  select:
+    pieces: [TWN-Nantou_County]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1880
+      main: chinese_folk
+      minor: other
+      note: 埔里盆地などへの漢人の入植が進み、清末の「開山撫番」（1874–）で山地への道が開かれた。
+- id: rel_tw_east
+  name: 台湾東部（花蓮・台東）
+  select:
+    pieces: [TWN-Hualien_County, TWN-Taitung_County]
+  timeline:
+    - from: 1648
+      main: other
+      note: アミ族・タロコ族・プユマ族・ブヌン族などの地
+    - from: 1950
+      main: chinese_folk
+      minor: other
+      note: 日本統治期の日本人移民村と、戦後の西部からの漢人・外省人の移住で漢人が多数になる。原住民の多くは戦後キリスト教（長老派・カトリック）を受け入れた。
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+
+# ======== 日本 ========
+- id: rel_japan
+  name: 日本
+  select:
+    iso: [JPN]
+  timeline:
+    - from: 1648
+      main: shinbutsu
+      note: 神仏習合。江戸幕府はキリスト教を禁じ（島原・天草一揆の後、1639 年にポルトガル船の来航を禁止）、寺請制度ですべての人を寺の檀家にした。長崎の浦上・五島などに潜伏キリシタンが残った。
+      source: "https://ja.wikipedia.org/wiki/寺請制度"
+    - from: 1868
+      main: shinbutsu
+      note: 明治政府の神仏分離令（1868）で廃仏毀釈が起こり、神社は国家の祭祀とされた（国家神道）。1873 年にキリスト教の禁止の高札が撤去された。住民の多くは神社と寺の両方に関わり続けた。
+      source: "https://ja.wikipedia.org/wiki/神仏分離"
+    - from: 1945
+      main: shinbutsu
+      note: GHQ の神道指令（1945）で国家神道が廃止され、日本国憲法で政教分離が定められた。戦後は創価学会などの新宗教が広がる。信仰を持つと答える人は少ないが、初詣・墓参り・葬式などの行事は広く続く（世俗化は secular.yaml）。
+      source: "https://ja.wikipedia.org/wiki/神道指令"
+- id: rel_hokkaido
+  name: 蝦夷地・北海道
+  select:
+    pieces: [JPN-Hokkaido]
+  timeline:
+    - from: 1648
+      main: other
+      minor: shinbutsu
+      note: アイヌの信仰（カムイ、イオマンテ）。南端の和人地（松前藩）には和人の寺社がある。
+      source: "https://ja.wikipedia.org/wiki/アイヌ"
+    - from: 1869
+      main: shinbutsu
+      minor: other
+      note: 蝦夷地を北海道と改め、開拓使を置いた（1869）。屯田兵や移民の入植が始まる。
+      source: "https://ja.wikipedia.org/wiki/開拓使"
+    - from: 1890
+      main: shinbutsu
+      note: 和人の人口が急増し、アイヌは人口の数％になった。北海道旧土人保護法（1899）で同化政策がとられた。
+- id: rel_okinawa
+  name: 琉球・沖縄
+  select:
+    pieces: [JPN-Okinawa_Prefecture]
+  timeline:
+    - from: 1648
+      main: other
+      note: 琉球の信仰は、御嶽（うたき）の祭りと、聞得大君を頂点とするノロ（神女）の祭祀、祖先崇拝が中心。仏教は王府・士族の間に広まった程度。中国風の清明祭や風水も取り入れた。
+      source: "https://ja.wikipedia.org/wiki/琉球神道"
+    - from: 1879
+      main: other
+      minor: shinbutsu
+      note: 琉球処分（1879）で沖縄県となり、神社の建立など同化政策が進んだ。祖先崇拝と御嶽の信仰は今も根強い。
+      source: "https://ja.wikipedia.org/wiki/琉球処分"
+
+# ======== 朝鮮 ========
+- id: rel_korea
+  name: 朝鮮
+  select:
+    iso: [KOR, PRK]
+  timeline:
+    - from: 1648
+      main: confucian
+      note: 朝鮮王朝は朱子学（儒教）を国教とし、仏教を抑えた（崇儒抑仏）。両班は祖先祭祀（茶礼・祭祀）を重んじ、民衆の間では巫俗（ムーダン、シャーマニズム）と仏教も信じられた。
+      source: "https://ja.wikipedia.org/wiki/朝鮮の儒教"
+    - from: 1784
+      main: confucian
+      note: 李承薫が北京で洗礼を受けて帰国し、カトリックの信者の集まりが生まれた（1784）。辛酉迫害（1801）・丙寅迫害（1866）などで多くの信者が処刑された。1860 年に崔済愚が東学を開いた。
+      source: "https://ja.wikipedia.org/wiki/東学"
+    - from: 1910
+      main: confucian
+      note: 日本の植民地支配の下で神社参拝が強制された（1930 年代）。プロテスタント（長老派・メソジスト）は北部で特に広まり、平壌は「東洋のエルサレム」と呼ばれた。三・一独立運動（1919）では天道教・キリスト教・仏教の指導者が独立宣言に署名した。
+      source: "https://ja.wikipedia.org/wiki/三・一運動"
+    - from: 1948
+      main: confucian
+      note: 北朝鮮では宗教が弾圧され、キリスト教徒の多くが南へ逃れた。韓国では朝鮮戦争の後、キリスト教が急速に広まった。
+- id: rel_skorea_west
+  name: 韓国の首都圏・湖南（ソウル・京畿・仁川・全羅道）
+  select:
+    pieces: [KOR-Seoul, KOR-Gyeonggi, KOR-Incheon, KOR-North_Jeolla, KOR-South_Jeolla, KOR-Gwangju]
+  timeline:
+    - from: 1648
+      main: confucian
+    - from: 1985
+      main: reformed
+      minor: mahayana
+      note: 1960〜80 年代の都市化とともにプロテスタント（長老派が最大。ほかにメソジストなど。地図では改革派の色）が急速に広まり、カトリックも増えた。首都圏・全羅道ではキリスト教徒が仏教徒より多い。住民の半数前後は無宗教。
+      source: "https://ja.wikipedia.org/wiki/韓国の宗教"
+- id: rel_skorea_east
+  name: 韓国の嶺南・済州（釜山・大邱・慶尚道など）
+  select:
+    pieces: [KOR-Busan, KOR-Daegu, KOR-Ulsan, KOR-North_Gyeongsang, KOR-South_Gyeongsang, KOR-Jeju]
+  timeline:
+    - from: 1648
+      main: confucian
+      note: 慶尚道（嶺南）は朱子学の学者（李滉など）を多く出した地域。
+    - from: 1985
+      main: mahayana
+      minor: reformed
+      note: 仏教（曹渓宗など）が最大の宗教。プロテスタントも多い。住民の半数前後は無宗教。済州島は巫俗（シャーマニズム）の伝統も強い。
+      source: "https://ja.wikipedia.org/wiki/韓国の宗教"
+
+- id: rel_skorea_central
+  name: 韓国の中部（忠清道・大田・世宗・江原道）
+  select:
+    pieces: [KOR-North_Chungcheong, KOR-South_Chungcheong, KOR-Daejeon, KOR-Sejong, KOR-Gangwon]
+  timeline:
+    - from: 1648
+      main: confucian
+    - from: 1985
+      main: mahayana
+      minor: reformed
+      note: 仏教（曹渓宗など）が最大の宗教。プロテスタントも多い。住民の半数前後は無宗教。
+    - from: 2015
+      main: reformed
+      minor: mahayana
+      note: 2005→2015 年に仏教徒が大きく減り、2015 年の国勢調査では大田・忠清南道・世宗などでプロテスタントが仏教を上回った（忠清北道・江原道はほぼ拮抗）。仏教が最大なのは慶尚道（釜山・大邱・蔚山を含む）と済州。
+      source: "https://ja.wikipedia.org/wiki/韓国の宗教"
+
+# ======== モンゴル ========
+- id: rel_mongolia
+  name: モンゴル（外モンゴル）
+  select:
+    iso: [MNG]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: ハルハ・モンゴルの活仏ジェブツンダンバ・ホトクト1世（ザナバザル）が仏教を広めた。シャーマニズムも残る。
+      source: "https://ja.wikipedia.org/wiki/ザナバザル"
+    - from: 1937
+      main: tibetan_buddhism
+      note: 1937–39 年、チョイバルサンの政権がソ連の指示で僧院の大部分を破壊し、ラマ僧の多くを処刑・還俗させた。
+      source: "https://ja.wikipedia.org/wiki/モンゴルにおける大粛清"
+    - from: 1990
+      main: tibetan_buddhism
+      note: 民主化の後、ガンダン寺などで仏教の復興が進む。
+- id: rel_bayan_olgii
+  name: バヤン・ウルギー（モンゴル西端）
+  select:
+    pieces: [MNG-Bayan_Olgii]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: オイラト・ウリャンハイの牧地
+    - from: 1870
+      main: sunni
+      note: 19 世紀後半からカザフ人（ムスリム）が移り住み、多数派になった。
+      source: "https://ja.wikipedia.org/wiki/バヤン・ウルギー県"
+
+# ======== シベリア・極東（ロシア） ========
+- id: rel_sib_tyumen
+  name: 西シベリア（チュメニ・トボリスク）
+  select:
+    pieces: [RUS-Tyumen_Oblast]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: シビル・ハン国（1582 年にイェルマークが攻略）のシベリア・タタール人はムスリム。トボリスク（1587）はロシアのシベリア支配の中心。
+      source: "https://ja.wikipedia.org/wiki/シビル・ハン国"
+    - from: 1700
+      main: orthodox
+      minor: sunni
+      note: ロシア人の農民の移住が進む
+    - from: 1800
+      main: orthodox
+- id: rel_sib_steppe
+  name: 西シベリア南部（オムスク・ノヴォシビルスク）
+  select:
+    pieces: [RUS-Omsk_Oblast, RUS-Novosibirsk_Oblast]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: シベリア・タタール人・バラバ・タタール人（イスラームとシャーマニズム）と、カザフ人の牧地。
+    - from: 1760
+      main: orthodox
+      note: オムスク（1716）など要塞線の建設と、ロシア人の農民の入植。ノヴォシビルスクはシベリア鉄道のオビ川の橋の町として 1893 年に生まれた。
+- id: rel_sib_tomsk_krasnoyarsk
+  name: トムスク・クラスノヤルスク
+  select:
+    pieces: [RUS-Tomsk_Oblast, RUS-Krasnoyarsk_Krai]
+  timeline:
+    - from: 1648
+      main: other
+      minor: orthodox
+      note: セリクプ人・ケット人・エヴェンキ人などのシャーマニズム。トムスク（1604）・クラスノヤルスク（1628）はロシアの砦。
+    - from: 1700
+      main: orthodox
+      note: 南部の農耕地帯にロシア人が多数になる。北部のエヴェンキ人・ネネツ人などは名目的な正教化とシャーマニズム。
+- id: rel_sib_kuznetsk_altai
+  name: クズネツク・アルタイ地方（ケメロヴォ・アルタイ地方）
+  select:
+    pieces: [RUS-Kemerovo_Oblast, RUS-Altai_Krai]
+  timeline:
+    - from: 1648
+      main: other
+      note: ショル人・テレウト人などのシャーマニズム。ジュンガルの影響下にあった。
+    - from: 1760
+      main: orthodox
+      note: バルナウルの銀山（1730 年代〜）と農民の入植。
+- id: rel_sib_altai_rep
+  name: アルタイ山地（アルタイ共和国）
+  select:
+    pieces: [RUS-Altai_Republic]
+  timeline:
+    - from: 1648
+      main: other
+      note: アルタイ人のシャーマニズム。ジュンガルに服属し、1756 年にロシアに服属した。
+    - from: 1900
+      main: orthodox
+      minor: other
+      note: ロシア人の移住で多数派が逆転する。アルタイ人の間では 1904 年にブルハン教（白い信仰）が起こった。
+      source: "https://en.wikipedia.org/wiki/Burkhanism"
+- id: rel_sib_khakassia
+  name: ハカス（ミヌシンスク盆地）
+  select:
+    pieces: [RUS-Khakassia]
+  timeline:
+    - from: 1648
+      main: other
+      note: エニセイ・キルギス（ハカス人の祖先）のシャーマニズム
+    - from: 1850
+      main: orthodox
+      note: ロシア人の入植で多数派が逆転する。ハカス人も名目的に正教に改宗した。
+- id: rel_sib_tuva
+  name: トゥヴァ（ウリャンハイ）
+  select:
+    pieces: [RUS-Tuva]
+  timeline:
+    - from: 1648
+      main: other
+      note: トゥヴァ人のシャーマニズム
+    - from: 1760
+      main: tibetan_buddhism
+      minor: other
+      note: 清の支配下でチベット仏教が広まり、シャーマニズムと並存した。
+    - from: 1944
+      main: tibetan_buddhism
+      minor: orthodox
+      note: トゥヴァ人民共和国がソ連に編入された。ロシア人が人口の3〜4割を占める。仏教の僧院は 1930 年代に閉鎖された。
+    - from: 1995
+      main: tibetan_buddhism
+      note: ソ連解体の後、ロシア人の多くが去り、仏教とシャーマニズムが復興した。
+- id: rel_sib_irkutsk
+  name: イルクーツク
+  select:
+    pieces: [RUS-Irkutsk_Oblast]
+  timeline:
+    - from: 1648
+      main: other
+      note: バイカル湖西岸のブリヤート人・エヴェンキ人のシャーマニズム
+    - from: 1760
+      main: orthodox
+      note: イルクーツク（1661）は東シベリアの中心となり、ロシア人が多数になる。
+- id: rel_sib_buryatia
+  name: ブリヤート（バイカル湖東岸）
+  select:
+    pieces: [RUS-Buryatia]
+  timeline:
+    - from: 1648
+      main: other
+      note: ブリヤート人のシャーマニズム
+    - from: 1741
+      main: tibetan_buddhism
+      note: モンゴルからチベット仏教が伝わり、1741 年にロシアがラマ僧を公認した。のち仏教の長（パンディト・ハンボ・ラマ）が置かれた。
+      source: "https://ja.wikipedia.org/wiki/ブリヤート人"
+    - from: 1900
+      main: orthodox
+      minor: tibetan_buddhism
+      note: ロシア人の入植とシベリア鉄道で多数派が逆転する。1930 年代に僧院（ダツァン）は閉鎖され、1946 年にイヴォルギンスキー・ダツァンだけが再開された。
+- id: rel_sib_transbaikal
+  name: ザバイカル（チタ・ネルチンスク）
+  select:
+    pieces: [RUS-Zabaykalsky_Krai]
+  timeline:
+    - from: 1648
+      main: other
+      note: ブリヤート人・エヴェンキ人（ハムニガン）のシャーマニズム
+    - from: 1741
+      main: orthodox
+      minor: tibetan_buddhism
+      note: ネルチンスク（1654）の銀山とコサックの入植でロシア人が多数になる。アガのブリヤート人には仏教が広まった。
+    - from: 1900
+      main: orthodox
+- id: rel_sib_sakha
+  name: ヤクーチア（サハ）
+  select:
+    pieces: [RUS-Sakha_Republic]
+  timeline:
+    - from: 1648
+      main: other
+      note: ヤクート人（サハ人）・エヴェン人のシャーマニズム。ヤクーツクは 1632 年の砦。
+    - from: 1800
+      main: orthodox
+      minor: other
+      note: 18 世紀にヤクート人の大部分が正教の洗礼を受けたが、シャーマニズムとの習合が続いた。
+    - from: 1900
+      main: orthodox
+- id: rel_far_east
+  name: アムール・沿海州・ハバロフスク・ユダヤ自治州
+  select:
+    pieces: [RUS-Amur_Oblast, RUS-Primorsky_Krai, RUS-Khabarovsk_Krai, RUS-Jewish_Autonomous_Oblast]
+  timeline:
+    - from: 1648
+      main: other
+      note: ダウール人・エヴェンキ人・ナナイ人・ウデヘ人・ニヴフ人などのシャーマニズム。ネルチンスク条約（1689）で清の領域とされたが、統治はほとんど及ばなかった。
+    - from: 1890
+      main: orthodox
+      note: アイグン条約（1858）・北京条約（1860）でロシア領となり、ロシア人・ウクライナ人の農民が入植した。沿海州には朝鮮人・中国人も多かった（朝鮮人は 1937 年に中央アジアへ強制移住）。ユダヤ自治州（1934）にはユダヤ人が移住したが、人口の2割を超えることはなかった。
+      source: "https://ja.wikipedia.org/wiki/沿海州"
+- id: rel_sib_magadan
+  name: マガダン
+  select:
+    pieces: [RUS-Magadan_Oblast]
+  timeline:
+    - from: 1648
+      main: other
+      note: コリャーク人・エヴェン人のシャーマニズム。
+    - from: 1935
+      main: orthodox
+      minor: other
+      note: マガダン（1929）を拠点にダリストロイ（強制収容所による金鉱開発）が始まり、移住者・囚人の町になった。
+      source: "https://ja.wikipedia.org/wiki/ダリストロイ"
+    - from: 1950
+      main: orthodox
+- id: rel_sib_chukotka
+  name: チュクチ
+  select:
+    pieces: [RUS-Chukotka_Autonomous_Okrug]
+  timeline:
+    - from: 1648
+      main: other
+      note: チュクチ人・エスキモー（ユピック）のシャーマニズム。チュクチ人は 18 世紀にロシアの遠征を退けた。
+    - from: 1950
+      main: orthodox
+      minor: other
+      note: 鉱山開発で移住者（ロシア人など）が多数になる。ソ連解体の後に人口が大きく減り、チュクチ人が再び3割近くになった。
+- id: rel_sib_kamchatka
+  name: カムチャツカ
+  select:
+    pieces: [RUS-Kamchatka_Krai]
+  timeline:
+    - from: 1648
+      main: other
+      note: イテリメン人・コリャーク人のシャーマニズム
+    - from: 1750
+      main: orthodox
+      minor: other
+      note: ロシアの征服（1697–）と天然痘でイテリメン人の人口が激減した。1740 年代にイテリメン人の多くが洗礼を受けた。ペトロパヴロフスク（1740）はベーリングの探検の基地。
+- id: rel_sib_yamal
+  name: ヤマル・ネネツ
+  select:
+    pieces: [RUS-Yamalo_Nenets_Autonomous_Okrug]
+  timeline:
+    - from: 1648
+      main: other
+      note: ネネツ人・ハンティ人のトナカイ遊牧とシャーマニズム
+    - from: 1975
+      main: orthodox
+      minor: other
+      note: 天然ガス田の開発で移住者が多数になる。
+- id: rel_sakhalin_north
+  name: 北サハリン
+  select:
+    pieces: [RUS-Sakhalin_Oblast]
+  timeline:
+    - from: 1648
+      main: other
+      note: ニヴフ人・ウイルタ人のシャーマニズム
+    - from: 1880
+      main: orthodox
+      note: ロシアの流刑植民地（チェーホフ『サハリン島』1893）となり、ロシア人が多数になる。
+      source: "https://ja.wikipedia.org/wiki/サハリン"
+- id: rel_sakhalin_south
+  name: 南サハリン（樺太）
+  select:
+    pieces: [RUS-Sakhalin_Oblast_South]
+  timeline:
+    - from: 1648
+      main: other
+      note: 樺太アイヌ・ニヴフ人・ウイルタ人の地。松前藩の交易所があった。
+    - from: 1907
+      main: shinbutsu
+      note: ポーツマス条約（1905）で北緯50度以南が日本領（樺太）となり、日本人の移民が多数になった。
+      source: "https://ja.wikipedia.org/wiki/樺太"
+    - from: 1947
+      main: orthodox
+      note: ソ連が占領し（1945）、日本人は 1946–49 年に引き揚げた。朝鮮人の一部は取り残された。
+- id: rel_kurils_north
+  name: 北千島
+  select:
+    pieces: [RUS-Sakhalin_Oblast_North_Kurils]
+  timeline:
+    - from: 1648
+      main: other
+      note: 千島アイヌの地
+    - from: 1760
+      main: orthodox
+      note: ロシアの毛皮商人とともに、千島アイヌの多くが正教の洗礼を受けた。
+    - from: 1885
+      main: shinbutsu
+      note: 樺太・千島交換条約（1875）で日本領となり、千島アイヌは色丹島に移された（1884）。日本人の漁業者が住んだ。
+      source: "https://ja.wikipedia.org/wiki/樺太・千島交換条約"
+    - from: 1946
+      main: orthodox
+- id: rel_kurils_south
+  name: 南千島（国後・択捉・色丹・歯舞）
+  select:
+    pieces: [RUS-Sakhalin_Oblast_South_Kurils]
+  timeline:
+    - from: 1648
+      main: other
+      note: アイヌの地。クナシリ・メナシの戦い（1789）の後、幕府が直轄した（1799）。
+    - from: 1800
+      main: other
+      minor: shinbutsu
+      note: 高田屋嘉兵衛が択捉に漁場を開き（1799–1800）、場所請負制の漁場に和人が入ったが、多くは季節の出稼ぎだった。定住する住民の多くはアイヌで、漁場の労働に使われた。
+      source: "https://ja.wikipedia.org/wiki/クナシリ・メナシの戦い"
+    - from: 1870
+      main: shinbutsu
+      note: 明治の開拓使の下で和人の漁業者が定住し、多数になる。
+    - from: 1947
+      main: orthodox
+      note: ソ連が占領し（1945）、日本人の住民は 1947–49 年に引き揚げた。日本は返還を求めている（北方領土問題）。
+      source: "https://ja.wikipedia.org/wiki/北方領土問題"

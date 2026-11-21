@@ -131,7 +131,7 @@ async function main() {
     map.flashRegions("political", null);
     panel.renderYear(state.year, { dist, movement: state.movement });
     if (dist) panel.renderReligion(state.relPick, state.year, dist);
-    else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null);
+    else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null, state.polity ? map.indirectOf(state.polity) : null);
     band.render(state.year, state.movement);
     renderLegend();
     map.whenIdle(renderLegend);
@@ -329,6 +329,7 @@ async function main() {
   const applyModern = () => {
     const on = modernBase !== cHeld;
     map.setModern(on);
+    renderLegend();
     badge.hidden = !on;
     modernBtn.classList.toggle("active", modernBase);
     modernBtn.setAttribute("aria-pressed", String(modernBase));
@@ -423,6 +424,7 @@ async function main() {
     }
   });
   function renderLegend() {
+    $("#lg-indirect").hidden = !map.indirectShown(true);
     const dist = isDist(state.layer) ? (state.layer as DistKey) : null;
     relLegend.hidden = !dist;
     if (!dist) return;
@@ -470,7 +472,7 @@ async function main() {
     relLegend.innerHTML = `${toggle("言語（民族）")}<div class="rl-fams">${famHtml || `<div class="rl-empty">データ作成中</div>`}</div>${notes ? `<ul class="rl-notes">${notes}</ul>` : ""}`;
   }
   map.onMoveEnd(() => {
-    if (isDist(state.layer)) renderLegend();
+    renderLegend();
   });
 
   // ---- 検索とキーボードショートカット ----
@@ -649,6 +651,8 @@ async function main() {
   (window as unknown as { __polityMs: unknown }).__polityMs = polityMs; // 確認用（国の節目の一覧）
   await map.ready;
   document.body.classList.add("ready");
+  // 国の情報の「上位の政体」「間接統治」は地図の所属から求めるので、最初の描画が終わってから出し直す
+  if (state.polity && !isDist(state.layer)) panel.renderPolity(state.polity, state.year, map.overlordOf(state.polity), map.indirectOf(state.polity));
   void map.loadWater(base);
 }
 

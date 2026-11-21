@@ -205,6 +205,13 @@ body.debug #debug-info {
   border-radius: 0 !important;
   vertical-align: 3px !important;
 }
+/* 間接統治：同じ国の色の、濃い（直轄地）→薄い（間接統治）の2色 */
+.lg-indirect {
+  background: linear-gradient(90deg, #d9a66b 0 50%, #e8cfae 50%);
+}
+.legend span[hidden] {
+  display: none;
+}
 .lg-uncertain {
   background: repeating-linear-gradient(45deg, #c9b99a 0 2px, #e8dcc4 2px 5px);
 }
