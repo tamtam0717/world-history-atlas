@@ -257,9 +257,16 @@
   timeline:
     - from: 1648
       owner: "portugal"
+      certainty: "nominal"
       label: "ポルトガル領ブラジル"
-      note: "ベレン（1616年建設）がアマゾン川河口の拠点。1835–40年にはカバナージェンの反乱が起こった"
+      note: "ベレン（1616年建設）がアマゾン川河口の拠点。ポルトガルが実際に治めたのは河口と下流の砦・伝道村だけで、内陸は先住民の地だった。1835–40年にはカバナージェンの反乱が起こった"
       source: "https://ja.wikipedia.org/wiki/ベレン"
+    - from: 1751
+      owner: "portugal"
+      label: "ポルトガル領ブラジル（グラン・パラ・マラニョン州）"
+      cause: "グラン・パラ・マラニョン州が置かれて州都がベレンに移り、ポンバルの改革で川沿いの伝道村が町に改められる"
+      note: "広いピースのうち、実際に治めたのはアマゾン川と支流沿いの町と村。地図では川沿いの支配の広がりを目安に濃く塗った"
+      source: "https://en.wikipedia.org/wiki/State_of_Gr%C3%A3o-Par%C3%A1_and_Maranh%C3%A3o"
     - from: 1815
       owner: "portugal"
       label: "ブラジル王国"
@@ -430,22 +437,11 @@
       label: "チャルカス（ラ・プラタ副王領）"
       cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
       source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
-    - from: 1810
-      owner: "united_provinces_rio_plata"
-      certainty: "nominal"
-      label: "アルト・ペルー（ブエノスアイレスの軍）"
-      cause: "ブエノスアイレスの北部軍がスイパチャの戦いに勝ち、上ペルーが五月革命の政府に従う（11月）"
-      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
-    - from: 1811
-      owner: "spain"
-      certainty: "nominal"
-      label: "チャルカス（ペルー副王領の軍の支配）"
-      cause: "ワキの戦いでブエノスアイレス軍が敗れ、ペルー副王の軍が上ペルーを取り戻す（6月）"
     - from: 1825
       owner: "bolivia"
       certainty: "nominal"
       cause: "ボリビアの独立"
-      note: "1867年のアヤクチョ条約でボリビア領とされたが、19世紀後半からゴムを採るブラジル人が多く入った。ペルーも一部を主張した"
+      note: "独立戦争期（1810–24年）も、上ペルーの奥地なので、ブエノスアイレスの軍の進出（1810年）は描かずスペインの名目的な支配のままとした。1867年のアヤクチョ条約でボリビア領とされたが、19世紀後半からゴムを採るブラジル人が多く入った。ペルーも一部を主張した"
     - from: 1836
       owner: "peru_bolivia"
       certainty: "nominal"
@@ -1099,21 +1095,30 @@
   timeline:
     - from: 1648
       owner: "spain"
+      certainty: "nominal"
       label: "ペルー副王領"
-      note: "サラド川より南のパンパは19世紀前半まで先住民の地（このピースにはエントレ・リオス州も含まれる）"
+      note: "スペインが治めたのはブエノスアイレス市の周りとラ・プラタ川沿いだけで、サラド川より南のパンパは19世紀前半まで先住民の地だった（このピースにはエントレ・リオス州も含まれる）。ブエノスアイレス市は別のピース"
     - from: 1776
       owner: "spain"
+      certainty: "nominal"
       label: "リオ・デ・ラ・プラタ副王領"
       cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
       source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
     - from: 1810
       owner: "united_provinces_rio_plata"
+      certainty: "nominal"
       cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
       source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
     - from: 1831
       owner: "argentina"
+      certainty: "nominal"
       cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
       source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+    - from: 1833
+      owner: "argentina"
+      cause: "ロサスの砂漠遠征（1833–34年）で、ブエノスアイレス州の南のパンパに支配が広がる"
+      note: "州の南西の端は1879年の砂漠の征服まで先住民の地だった"
+      source: "https://en.wikipedia.org/wiki/Rosas%27_Desert_Campaign"
     - from: 1852
       owner: "buenos_aires_state"
       cause: "ブエノスアイレス州が9月の革命でアルゼンチン連合から離れる"

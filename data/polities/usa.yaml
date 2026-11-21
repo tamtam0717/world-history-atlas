@@ -1,7 +1,7 @@
 # A1 アメリカ合衆国（アラスカを除く）の政体（1648–2025）
 # usa（アメリカ合衆国）は data/polities/west.yaml にある（A1 が 1913 年以前の大統領・情勢・names を書き足した）。
 # 他の担当が参照しうる ID：csa・texas・iroquois・cherokee・creek・choctaw・chickasaw・seminole・lakota・comanche・hawaii・vermont_republic・franklin
-# アパッチ（apache）は A3 の定義を使う。
+# アパッチ（apache）は mexico_caribbean.yaml の定義を使う。
 
 - id: csa
   name: アメリカ連合国（南部連合）
@@ -38,7 +38,7 @@
 - id: vermont_republic
   name: ヴァーモント共和国
   short: ヴァーモント
-  color: "#b9d4a2"
+  color: "#a8dcb4"
   kind: 共和国
   rulers:
     - {name: トマス・チッテンデン, title: 知事, from: 1778, to: 1789, source: "https://en.wikipedia.org/wiki/Thomas_Chittenden"}
@@ -53,7 +53,7 @@
 - id: franklin
   name: フランクリン国
   short: フランクリン
-  color: "#cdbf9c"
+  color: "#cce1c1"
   kind: 自称の州（連邦に認められなかった）
   rulers:
     - {name: ジョン・セヴィア, title: 知事, from: 1785, to: 1788, source: "https://en.wikipedia.org/wiki/John_Sevier"}
@@ -115,7 +115,7 @@
 - id: cherokee
   name: チェロキー
   short: チェロキー
-  color: "#b6a3cf"
+  color: "#c3a6e0"
   kind: 先住民の部族（1827年から立憲制のチェロキー・ネーション）
   rulers:
     - {name: ジョン・ロス, title: 首長（プリンシパル・チーフ）, from: 1828, to: 1866, note: 強制移住に反対して最高裁判所に訴えた。移住後もインディアン準州で首長を続けた, source: "https://en.wikipedia.org/wiki/John_Ross_(Cherokee_chief)"}
@@ -146,7 +146,7 @@
 - id: choctaw
   name: チョクトー
   short: チョクトー
-  color: "#b8c98a"
+  color: "#dce892"
   kind: 先住民の部族
   periods:
     - from: 1648
@@ -160,7 +160,7 @@
 - id: chickasaw
   name: チカソー
   short: チカソー
-  color: "#c7a77f"
+  color: "#dbc3b3"
   kind: 先住民の部族
   periods:
     - from: 1648
@@ -174,7 +174,7 @@
 - id: seminole
   name: セミノール
   short: セミノール
-  color: "#9cc79a"
+  color: "#81cf96"
   kind: 先住民の部族
   periods:
     - from: 1750
@@ -188,7 +188,7 @@
 - id: lakota
   name: スー（ラコタ・ダコタ）
   short: スー
-  color: "#c09078"
+  color: "#e99367"
   kind: 先住民の部族連合
   rulers:
     - {name: レッド・クラウド, title: オグララ・ラコタの指導者, from: 1866, to: 1868, note: レッド・クラウド戦争に勝ち、ララミー砦条約（1868年）を結ばせた, source: "https://ja.wikipedia.org/wiki/レッド・クラウド"}
@@ -209,7 +209,7 @@
 - id: comanche
   name: コマンチ
   short: コマンチ
-  color: "#a99ad0"
+  color: "#9e8ac7"
   kind: 先住民の部族
   rulers:
     - {name: クアナ・パーカー, title: クアハディ・コマンチの指導者, from: 1870, to: 1875, note: 1875年に降伏し、のち保留地の首長として知られた, source: "https://en.wikipedia.org/wiki/Quanah_Parker"}

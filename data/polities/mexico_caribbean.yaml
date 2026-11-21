@@ -1,7 +1,7 @@
 # A3 メキシコ・中米・カリブ（MEX・GTM・BLZ・HND・SLV・NIC・CRI・PAN・カリブ海の島々）の政体（1648–2025）
 # 他の担当が参照しうる ID：mexico・second_mexican_empire・apache・central_america・guatemala・panama・cuba・haiti・dominican_republic
 # スペイン（spain）・イギリス（britain）・フランス（france）・オランダ（netherlands）・デンマーク（denmark）・スウェーデン（sweden）・
-# クールラント（courland）・スコットランド（scotland）・アメリカ（usa）・グラン・コロンビア（gran_colombia）・コロンビア（colombia）は他の担当の政体を使う。
+# クールラント（courland）・スコットランド（scotland）・アメリカ（usa）・大コロンビア（gran_colombia）・コロンビア（colombia）は他の担当の政体を使う。
 # 植民地の時期は宗主国の色＋label（地域ごとの植民地名）。元首は独立後の実権者（大統領。独裁者が傀儡の大統領を立てた時期は実権者）を書く。
 # 元首の出典は主に Wikipedia の一覧（各国の大統領の一覧）。
 
@@ -93,7 +93,7 @@
   names:
     - {to: 1863, name: メキシコ帝国（摂政政府）, short: メキシコ帝国, kind: 帝国（フランスの干渉で成立）}
   short: メキシコ帝国
-  color: "#d8b07a"
+  color: "#e1a570"
   kind: 帝国（フランスの干渉で成立）
   rulers:
     - {name: フアン・アルモンテら（摂政団）, title: 摂政, from: 1863, to: 1864, source: "https://en.wikipedia.org/wiki/Juan_Almonte"}
@@ -135,20 +135,20 @@
 - id: apache
   name: アパッチ
   short: アパッチ
-  color: "#d2a87e"
+  color: "#f4bcaf"
   kind: 先住民の諸集団
   periods:
     - from: 1648
       to: 1886
       text: アメリカ南西部（今のアリゾナ・ニューメキシコ・テキサス西部）からメキシコ北部（チワワ・ソノラ）にかけての山地と乾燥地帯（アパチェリア）に住んだ先住民。スペインの北辺の要塞線（プレシディオ）やメキシコの村々を襲撃し、スペイン・メキシコ・アメリカに長く抵抗した。1886年にジェロニモが降伏した。
-  note: メキシコの州のピースは大きく、アパッチの勢力圏はその一部でしかないので、A3 の地図ではメキシコ北部の州はスペイン・メキシコの色（植民地期は uncertain）で塗り、この政体は使っていない。アメリカ合衆国側のピースで使うかどうかは A1 の判断。
+  note: 地図では、1700年ごろから合衆国側のトランス・ペコス（テキサス西部）・ニューメキシコ南部・アリゾナ南東部（アパチェリア）をこの色で塗る（地域ごとに1843–81年にメキシコ・合衆国の支配に移る。ジェロニモの降伏は1886年）。メキシコの州のピースは大きく、アパッチの勢力圏はその一部でしかないので、メキシコ北部（チワワ・ソノラ・コアウイラ）はスペイン・メキシコの色（植民地期の一部は uncertain）で塗る。
   source: "https://ja.wikipedia.org/wiki/アパッチ族"
 
 # ===== 中米 =====
 - id: itza
   name: イツァ王国（ペテン・イツァ）
   short: イツァ
-  color: "#cfa98a"
+  color: "#d59590"
   kind: マヤ人の王国
   rulers:
     - {name: カン・エク（アハウ・カン・エク）, title: 王, from: 1648, to: 1697, note: 王名カン・エクは代々の称号。1697年に都ノフペテンがスペイン軍に落とされた, source: "https://en.wikipedia.org/wiki/Nojpetén"}
@@ -161,7 +161,7 @@
 - id: miskito
   name: ミスキート王国（モスキート王国）
   short: ミスキート
-  color: "#bca07a"
+  color: "#c79e8a"
   kind: 先住民の王国（イギリスの保護下）
   rulers:
     - {name: ジェレミー1世, title: ミスキート王, from: 1655, to: 1687, note: ジャマイカのイギリス人に認められた最初の王とされる, source: "https://en.wikipedia.org/wiki/Mosquito_Coast"}
@@ -200,7 +200,7 @@
 - id: los_altos
   name: ロス・アルトス国
   short: ロス・アルトス
-  color: "#a6d8de"
+  color: "#e3d0a6"
   kind: 中米連邦の州（分離した高地の国）
   periods:
     - from: 1838
@@ -303,7 +303,7 @@
 - id: honduras
   name: ホンジュラス共和国
   short: ホンジュラス
-  color: "#b7bde6"
+  color: "#99a7e1"
   kind: 共和国
   home_iso: [HND]
   rulers:
@@ -422,7 +422,7 @@
     - from: 1978
       to: 2025
       text: 1977年の新パナマ運河条約で、1979年に運河地帯が廃止され、1999年末に運河が返還された。1989年にアメリカ軍が侵攻してノリエガ政権を倒した。
-  note: 1821–1903 年のパナマはグラン・コロンビア（gran_colombia）・コロンビア（colombia）の一部（A4 の政体）。1840–41年のイスモ自由国はこの ID の names で表す。主な元首のみ。
+  note: 1821–1903 年のパナマは大コロンビア（gran_colombia）・コロンビア（colombia）の一部（A4 の政体）。1840–41年のイスモ自由国はこの ID の names で表す。主な元首のみ。
   source: "https://ja.wikipedia.org/wiki/パナマの歴史"
 
 - id: belize
@@ -449,7 +449,7 @@
 - id: cuba
   name: キューバ共和国
   short: キューバ
-  color: "#e8c97a"
+  color: "#e9b567"
   kind: 共和国
   names:
     - {from: 1961, name: キューバ共和国, short: キューバ, kind: 社会主義国（キューバ共産党の一党制）}
@@ -548,7 +548,7 @@
   names:
     - {from: 1811, name: ハイチ王国, short: ハイチ王国, kind: 王国}
   short: ハイチ国（北）
-  color: "#a2d3b3"
+  color: "#a8e6c1"
   kind: 国家（北部）
   rulers:
     - {name: アンリ・クリストフ（アンリ1世）, title: 大統領・国王, from: 1807, to: 1820, note: 1811年に王となり、サン・スーシ宮殿とラ・フェリエール城塞を築いた。1820年に反乱の中で自殺し、北部は共和国に併合された, source: "https://ja.wikipedia.org/wiki/アンリ・クリストフ"}
@@ -567,7 +567,7 @@
   kind: 共和国
   home_iso: [DOM]
   rulers:
-    - {name: ホセ・ヌニェス・デ・カセレス, title: 大統領, from: 1821, to: 1822, note: 1821年12月に独立を宣言し、グラン・コロンビアへの加入をめざしたが、翌年2月にハイチ軍に併合された, source: "https://en.wikipedia.org/wiki/José_Núñez_de_Cáceres"}
+    - {name: ホセ・ヌニェス・デ・カセレス, title: 大統領, from: 1821, to: 1822, note: 1821年12月に独立を宣言し、大コロンビアへの加入をめざしたが、翌年2月にハイチ軍に併合された, source: "https://en.wikipedia.org/wiki/José_Núñez_de_Cáceres"}
     - {name: ペドロ・サンタナ, title: 大統領, from: 1844, to: 1848, note: 独立の英雄ドゥアルテを追放して大統領となった, source: "https://en.wikipedia.org/wiki/Pedro_Santana"}
     - {name: ブエナベントゥーラ・バエス, title: 大統領, from: 1849, to: 1853, source: "https://en.wikipedia.org/wiki/Buenaventura_Báez"}
     - {name: ペドロ・サンタナ, title: 大統領, from: 1853, to: 1856, source: "https://en.wikipedia.org/wiki/Pedro_Santana"}
