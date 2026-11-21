@@ -407,9 +407,10 @@ export class AtlasMap {
         layout: { visibility: vis(on), "circle-sort-key": ["get", "rank"] },
         paint: {
           "circle-radius": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["get", "r"], 0.7], 7, ["*", ["get", "r"], 1.3]],
-          "circle-color": ["case", ["get", "capital"], "#1d1a16", "#fbf9f4"],
-          "circle-stroke-color": "#1d1a16",
-          "circle-stroke-width": ["case", ["get", "capital"], 1.6, 1.1],
+          // 都市は白丸。首都は白丸に赤いリング
+          "circle-color": "#ffffff",
+          "circle-stroke-color": ["case", ["get", "capital"], "#c0392b", "#3a332c"],
+          "circle-stroke-width": ["case", ["get", "capital"], 2, 1],
         },
       });
       map.addLayer({
@@ -435,7 +436,12 @@ export class AtlasMap {
           "text-justify": "auto",
           "symbol-sort-key": ["get", "rank"],
         },
-        paint: { "text-color": "#2b2620", "text-halo-color": "rgba(255,255,255,.85)", "text-halo-width": 1.2 },
+        // 都市名は「前景」：詰めた字間・はっきりした色と白いふち。首都はやや赤みのある色
+        paint: {
+          "text-color": ["case", ["get", "capital"], "#6e1f17", "#1d1a16"],
+          "text-halo-color": "rgba(255,255,255,.95)",
+          "text-halo-width": 1.5,
+        },
       });
     }
 
@@ -455,11 +461,18 @@ export class AtlasMap {
           "text-font": FONT,
           "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["get", "s"], 11], 5, ["*", ["get", "s"], 16], 8, ["*", ["get", "s"], 21]],
           "text-max-width": 30,
-          "text-letter-spacing": 0.05,
+          // 国名は「背景」：字間を広げ、半透明でやわらかく
+          "text-letter-spacing": 0.3,
           "symbol-sort-key": ["get", "rank"],
           "text-padding": 3,
         },
-        paint: { "text-color": "#231f1a", "text-halo-color": "rgba(255,255,255,.75)", "text-halo-width": 1.6 },
+        paint: {
+          "text-color": "#3d3128",
+          "text-opacity": 0.62,
+          "text-halo-color": "rgba(255,255,255,.45)",
+          "text-halo-width": 1.2,
+          "text-halo-blur": 0.8,
+        },
       });
     }
   }
@@ -791,8 +804,8 @@ export class AtlasMap {
     this.map.setPaintProperty("borders", "line-color", rel ? "#2e2822" : "#4a4038");
     this.map.setPaintProperty("modern-borders", "line-opacity", rel ? 0.45 : 1);
     for (const l of ["labels", "modern-labels"]) {
-      this.map.setPaintProperty(l, "text-opacity", rel ? 0.5 : 1);
-      this.map.setPaintProperty(l, "text-halo-color", rel ? "rgba(255,255,255,.4)" : "rgba(255,255,255,.75)");
+      this.map.setPaintProperty(l, "text-opacity", rel ? 0.4 : 0.62);
+      this.map.setPaintProperty(l, "text-halo-color", rel ? "rgba(255,255,255,.3)" : "rgba(255,255,255,.45)");
     }
   }
 
@@ -1080,7 +1093,7 @@ function cityFeature(name: string, lon: number, lat: number, pop: number, capita
       capital,
       // 大きな国の首都は早めに出す。小さな領邦の首都は、人口なりの拡大率より少し早めに出す程度にする
       minz: capital ? (pop >= 40000 ? Math.min(minz, 3.4) : minz - 0.7) : minz,
-      r: capital ? r + 0.8 : r,
+      r: capital ? r * 0.9 : r * 0.8,
       rank: -(pop + (capital ? 1e7 : 0)),
     },
     geometry: { type: "Point", coordinates: [lon, lat] },
