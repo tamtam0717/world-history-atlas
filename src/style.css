@@ -192,6 +192,19 @@ body.debug #debug-info {
 .lg-overlord {
   border: 2px dashed var(--overlord);
 }
+/* 宗主権：宗主国（ここではオスマン帝国の緑）の帯が、内側へぼけていく */
+.lg-suzerain {
+  background: #e8a86e;
+  box-shadow: inset 0 0 2px 1.5px #7fa86f;
+  outline: 1px solid #5d7f52;
+  outline-offset: -1px;
+}
+.lg-sub {
+  height: 0 !important;
+  border-top: 1.5px dashed rgba(74, 64, 56, 0.7);
+  border-radius: 0 !important;
+  vertical-align: 3px !important;
+}
 .lg-uncertain {
   background: repeating-linear-gradient(45deg, #c9b99a 0 2px, #e8dcc4 2px 5px);
 }
@@ -1101,20 +1114,53 @@ body[data-layer="language"] .legend {
   max-height: calc(100% - 120px);
   overflow-y: auto;
 }
+/* 言語：語族の見出しを2段に並べ、押した語族だけ言語の一覧を開く（地図を大きく隠さない） */
+.rel-legend[data-dist="language"] {
+  max-width: 280px;
+  max-height: min(46vh, 380px);
+  overflow-y: auto;
+}
 .rel-legend .rl-fams {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  gap: 2px 10px;
+}
+.rel-legend .rl-fam.open {
+  grid-column: 1 / -1;
+  background: rgba(91, 74, 56, 0.06);
+  border-radius: 5px;
+  padding: 1px 4px 3px;
+  margin: 1px -4px;
 }
 .rel-legend .rl-fam-head {
   display: flex;
   align-items: center;
-  font-weight: 700;
+  width: 100%;
+  border: 0;
+  background: none;
+  padding: 1px 0;
+  font: inherit;
   font-size: 11px;
+  font-weight: 600;
   color: #4a4038;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+}
+.rel-legend .rl-fam-head:hover {
+  color: var(--ink);
+}
+.rel-legend .rl-fam.open .rl-fam-head {
+  font-weight: 700;
 }
 .rel-legend .rl-fam-head i {
   width: 22px;
+}
+.rel-legend .rl-fam-head .rl-n {
+  margin-left: 4px;
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--muted);
 }
 .rel-legend .rl-fam ul {
   padding-left: 12px;
@@ -1127,19 +1173,24 @@ body[data-layer="language"] .legend {
 .rel-legend .rl-empty {
   color: var(--muted);
 }
-/* 畳んだとき：語族の見出しだけを横に並べる（色の見本で語族が分かる） */
+/* 畳んだとき：題だけ */
 .rel-legend[data-dist="language"].collapsed .rl-fams {
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2px 8px;
-}
-.rel-legend[data-dist="language"].collapsed .rl-fam-head {
-  font-weight: 500;
-  font-size: 10.5px;
+  display: none;
 }
 @media (max-width: 799px) {
   .rel-legend[data-dist="language"] {
     max-height: calc(100% - 230px);
+    max-width: 250px;
+  }
+  .rel-legend .rl-fams {
+    gap: 1px 6px;
+  }
+  .rel-legend .rl-fam-head {
+    font-size: 10px;
+  }
+  .rel-legend .rl-fam-head i {
+    width: 14px;
+    margin-right: 3px;
   }
   .rel-legend .rl-fam ul {
     padding-left: 6px;
@@ -1458,5 +1509,8 @@ body[data-layer="language"] .legend {
   line-height: 1.6;
 }
 .mv-band.none {
+  display: none;
+}
+.rel-legend[data-dist="language"] .rl-long {
   display: none;
 }

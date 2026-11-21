@@ -583,7 +583,7 @@ export class AtlasMap {
       layout: {
         "text-field": ["format", ["get", "name"], {}, "\n", {}, ["get", "note"], { "font-scale": 0.72 }],
         "text-font": FONT,
-        "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["get", "s"], 11], 5, ["*", ["get", "s"], 14.5], 8, ["*", ["get", "s"], 18]],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["max", 1, ["get", "s"]], 10.5], 5, ["*", ["max", 1, ["get", "s"]], 13.5], 8, ["*", ["max", 1, ["get", "s"]], 17]],
         "text-max-width": 30,
         "text-letter-spacing": 0.15,
         "text-line-height": 1.15,
@@ -636,11 +636,11 @@ export class AtlasMap {
     if (!this.loaded) return;
     const idx = this.idx;
     const polities = idx.atlas.polities;
-    const groups = new Map<string, { owner: number; cert: number; pieces: number[] }>();
+    const certOf = new Int32Array(this.geoms.length);
     for (let i = 0; i < this.geoms.length; i++) {
       const s = this.atlasIdx[i] >= 0 ? idx.pieceState(this.atlasIdx[i], year) : null;
       const owner = s ? s[1] : -1;
-      const cert = s ? s[3] : 0;
+      certOf[i] = s ? s[3] : 0;
       this.ownerOf[i] = owner;
       this.ovOf[i] = s ? s[2] : -1;
       const color = owner >= 0 ? (polities[owner].color ?? fallbackColor(polities[owner].id)) : null;
@@ -648,9 +648,23 @@ export class AtlasMap {
         this.map.setFeatureState({ source: "pieces", id: i }, { c: color });
         this.colorOf[i] = color;
       }
-      const key = `${owner}|${cert}`;
+    }
+
+    // 保護国・植民地の区画（副ラベルを出すまとまり）
+    const subs = this.subUnits(year);
+    const subOf = new Int32Array(this.geoms.length).fill(-1);
+    subs.forEach((u, k) => {
+      for (const i of u.pieces) subOf[i] = k;
+    });
+
+    // 所属と確からしさの同じピースのまとまり（保護国などの区画は分けておき、国名ラベルを置かない）
+    const groups = new Map<string, { owner: number; cert: number; sub: boolean; pieces: number[] }>();
+    for (let i = 0; i < this.geoms.length; i++) {
+      const owner = this.ownerOf[i];
+      const sub = subOf[i] >= 0;
+      const key = `${owner}|${certOf[i]}${sub ? "|s" : ""}`;
       let g = groups.get(key);
-      if (!g) groups.set(key, (g = { owner, cert, pieces: [] }));
+      if (!g) groups.set(key, (g = { owner, cert: certOf[i], sub, pieces: [] }));
       g.pieces.push(i);
     }
 
@@ -663,6 +677,7 @@ export class AtlasMap {
       if (g.owner < 0) continue;
       const m = this.merged(key, g.pieces);
       if (g.cert > 0) hatch.push({ type: "Feature", properties: { pat: `hatch-${certNames[g.cert]}` }, geometry: m.geo });
+      if (g.sub) continue;
       let list = polys.get(g.owner);
       if (!list) polys.set(g.owner, (list = []));
       polyAreas(m).forEach((area, k) => list.push({ m, k, area }));
@@ -690,11 +705,8 @@ export class AtlasMap {
     this.setData("labels", { type: "FeatureCollection", features: labels });
 
     // 保護国・植民地の副ラベルと、その範囲の境界
-    const subs = this.subUnits(year);
-    const subOf = new Int32Array(this.geoms.length).fill(-1);
     const sublabels: Feature[] = [];
-    subs.forEach((u, k) => {
-      for (const i of u.pieces) subOf[i] = k;
+    subs.forEach((u) => {
       const l = this.merged(`sub${u.owner}|${u.name}`, u.pieces).label;
       if (l) sublabels.push(labelFeature(u.name, l, { note: u.note, scale: 0.9, chars: Math.max([...u.name].length, [...u.note].length * 0.72) }));
     });
@@ -1262,6 +1274,7 @@ export class AtlasMap {
       this.map.setPaintProperty(l, "text-opacity", rel ? 0.4 : 0.62);
       this.map.setPaintProperty(l, "text-halo-color", rel ? "rgba(255,255,255,.3)" : "rgba(255,255,255,.45)");
     }
+    this.map.setPaintProperty("sublabels", "text-opacity", rel ? 0.45 : 0.72);
   }
 
   private labelsOn = true;

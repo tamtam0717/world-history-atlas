@@ -339,13 +339,16 @@ async function main() {
     b.addEventListener("click", () => setLayer(l.id));
     layerSwitch.appendChild(b);
   }
+  /** 言語の凡例で開いている語族（一度に1つだけ。null なら語族の見出しだけ） */
+  let openFam: string | null = null;
   function setLayer(l: MapLayer, refresh = true) {
     if (l === state.layer && refresh) return;
     if (l !== state.layer) state.relPick = null;
     state.layer = l;
     map.setLayer(l);
-    // 言語は種類が多いので、スマホでは凡例を語族の見出しだけに畳んでおく
+    // 言語は種類が多いので、スマホでは凡例を畳んでおく（PC でも語族の見出しだけを出す）
     if (l === "language" && mobile.matches) relLegend.classList.add("collapsed");
+    openFam = null;
     legendKey = "";
     syncLayerButtons();
     if (refresh) {
@@ -370,9 +373,18 @@ async function main() {
   const relLegend = $("#rel-legend");
   let legendKey = "";
   relLegend.addEventListener("click", (e) => {
-    if ((e.target as Element).closest(".rl-toggle")) {
+    const t = e.target as Element;
+    if (t.closest(".rl-toggle")) {
       relLegend.classList.toggle("collapsed");
       legendKey = "";
+      renderLegend();
+      return;
+    }
+    const fam = t.closest<HTMLElement>(".rl-fam-head")?.dataset.fam;
+    if (fam !== undefined) {
+      openFam = openFam === fam ? null : fam;
+      legendKey = "";
+      renderLegend();
     }
   });
   function renderLegend() {
@@ -381,7 +393,7 @@ async function main() {
     if (!dist) return;
     const kinds = idx.dist(dist)?.kinds ?? [];
     const shown = map.religionKindsShown(true);
-    const key = dist + JSON.stringify(shown) + relLegend.classList.contains("collapsed");
+    const key = dist + JSON.stringify(shown) + relLegend.classList.contains("collapsed") + openFam;
     if (key === legendKey) return;
     legendKey = key;
     relLegend.dataset.dist = dist;
@@ -396,7 +408,9 @@ async function main() {
       relLegend.innerHTML = `${toggle("宗教")}<ul>${shown.kinds.map(item).join("")}${notes}</ul>`;
       return;
     }
-    // 言語：語族ごとにまとめる（語族の見出しの色見本は、その語族の言語の色を並べたグラデーション）
+    // 言語：語族ごとにまとめる（語族の見出しの色見本は、その語族の言語の色を並べたグラデーション）。
+    // 言語は種類が多く、全部を並べると地図を大きく隠すので、ふだんは語族の見出しだけを段組みで並べ、
+    // 見出しを押した語族だけ言語の一覧を開く
     const fams = new Map<string, number[]>();
     for (const i of shown.kinds) {
       const f = kinds[i].family ?? "その他";
@@ -407,7 +421,9 @@ async function main() {
       .map(([f, is]) => {
         const cs = is.map((i) => kinds[i].color);
         const grad = cs.length > 1 ? `linear-gradient(90deg, ${cs.join(", ")})` : cs[0];
-        return `<div class="rl-fam"><div class="rl-fam-head"><i style="background:${grad}"></i>${f}</div><ul>${is.map(item).join("")}</ul></div>`;
+        const open = openFam === f;
+        const head = `<button type="button" class="rl-fam-head" data-fam="${f}" aria-expanded="${open}"><i style="background:${grad}"></i>${f}<span class="rl-n">${is.length}</span></button>`;
+        return `<div class="rl-fam${open ? " open" : ""}">${head}${open ? `<ul>${is.map(item).join("")}</ul>` : ""}</div>`;
       })
       .join("");
     relLegend.innerHTML = `${toggle("言語（民族）")}<div class="rl-fams">${famHtml || `<div class="rl-empty">データ作成中</div>`}</div>${notes ? `<ul class="rl-notes">${notes}</ul>` : ""}`;
