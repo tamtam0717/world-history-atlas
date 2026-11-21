@@ -926,7 +926,7 @@ export class AtlasMap {
   private historicCities(year: number): FeatureCollection {
     const features: Feature[] = [];
     for (const c of this.idx.atlas.cities ?? []) {
-      if (c.founded && year < c.founded) continue;
+      if ((c.founded && year < c.founded) || (c.until && year > c.until)) continue;
       features.push(cityFeature(cityName(c, year), c.lon, c.lat, cityPop(c, year), !!cityCapitalOf(c, year)));
     }
     return { type: "FeatureCollection", features };

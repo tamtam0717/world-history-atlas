@@ -87,6 +87,8 @@ export interface City {
   lon: number;
   lat: number;
   founded?: number;
+  /** この年の後は表示しない（合併などで消えた都市） */
+  until?: number;
   pop?: Record<string, number>;
   capital?: { polity: string; from?: number; to?: number }[];
 }

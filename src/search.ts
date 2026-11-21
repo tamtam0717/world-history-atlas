@@ -197,7 +197,7 @@ export class Search {
     // その時代の都市
     const histCities: { name: string; lon: number; lat: number }[] = [];
     for (const c of idx.atlas.cities ?? []) {
-      if (c.founded && year < c.founded) continue;
+      if ((c.founded && year < c.founded) || (c.until && year > c.until)) continue;
       const name = cityName(c, year);
       histCities.push({ name, lon: c.lon, lat: c.lat });
       const others = [c.name, c.modern, ...(c.names ?? []).map((n) => n.name)].filter((n) => n && n !== name);

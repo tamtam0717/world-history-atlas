@@ -1,4 +1,4 @@
-# 担当 E：バルカン・オスマン・中東の地域と所属の変遷（1648–1815 試作）
+# 担当 E：バルカン・オスマン・中東の地域と所属の変遷（1648–1914）
 # 大きな地域でおおまかに書き、小さな地域で例外を上書きする（小さい地域が優先）。
 # 小さな地域も 1648 年から書き始めているので、その期間は大きな地域より常に優先される。
 
@@ -1766,10 +1766,15 @@
       cause: サウード王国がメディナを占領
       source: "https://ja.wikipedia.org/wiki/第一次サウード王国"
     - from: 1812
-      owner: ottoman
+      owner: egypt
+      overlord: ottoman
       cause: エジプトのムハンマド・アリーの軍がメディナを奪回
       source: "https://en.wikipedia.org/wiki/Ottoman–Wahhabi_war"
-  note: ヒジャーズはオスマン帝国の宗主権のもとでメッカのシャリーフが治めた（nominal）。メッカ（範囲外）は1803年・1806年にサウード王国が占領し、1813年に奪回された。
+    - from: 1840
+      owner: ottoman
+      cause: ロンドン条約（1840）でエジプト軍がヒジャーズから撤退し、オスマン帝国の直轄に戻る
+      source: "https://ja.wikipedia.org/wiki/ロンドン条約_(1840年)"
+  note: ヒジャーズはオスマン帝国の宗主権のもとでメッカのシャリーフが治めた（nominal）。1812–1840年はエジプト（ムハンマド・アリー）の軍政下。1908年にヒジャーズ鉄道がメディナまで通じた。メッカ（範囲外）は1803年・1806年にサウード王国が占領し、1813年に奪回された。
 
 - id: tabuk
   name: ヒジャーズ北端（タブーク）
@@ -1942,3 +1947,683 @@
     - from: 1648
       owner: oman
   note: ムサンダム半島は1650年ごろまでポルトガルの影響下（要確認）。
+
+# ================================================================ 1815–1914 に加えた地域
+# 以下の地域は変化の年から書き始める（それより前は、上の大きな地域の記述が使われる）。
+
+# ---------------------------------------------------------------- ルーマニア・モルドバ
+- id: bessarabia_1856
+  name: 南ベッサラビア（カフル・カンテミール・タラクリア）
+  select:
+    pieces: [MDA-Cahul, MDA-Cantemir, MDA-Taraclia]
+  timeline:
+    - from: 1856
+      owner: moldavia
+      overlord: ottoman
+      cause: クリミア戦争後のパリ条約で、ロシアが南ベッサラビアをモルダヴィアに割譲
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1856年)"
+    - from: 1859
+      owner: romania
+      overlord: ottoman
+      cause: モルダヴィアとワラキアが同じ君主（クザ）を選び、連合公国（ルーマニア）となる
+      source: "https://ja.wikipedia.org/wiki/アレクサンドル・ヨアン・クザ"
+    - from: 1878
+      owner: russia
+      cause: ベルリン条約で南ベッサラビアがロシアに戻る（ルーマニアは代わりに北ドブルジャを得る）
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: 担当 F の budjak_1856（ウクライナ側）と同じ変遷。1856年の境界はカフル付近からトラヤヌスの土塁沿いにボルフラドの北を通った。カンテミール・タラクリアは境界をまたぐので近似（要確認）。ガガウジア（コムラト）はロシア側に残したとした。
+
+# ---------------------------------------------------------------- ブルガリア
+- id: bulgaria_principality
+  name: ブルガリア公国の本土（バルカン山脈の北・ソフィア・キュステンディル）
+  select:
+    pieces: [BGR-Vidin, BGR-Montana, BGR-Vratsa, BGR-Pleven, BGR-Lovech, BGR-Gabrovo, BGR-Veliko_Tarnovo, BGR-Ruse, BGR-Razgrad,
+      BGR-Targovishte, BGR-Shumen, BGR-Varna, BGR-Sofia, BGR-Sofia_City, BGR-Pernik, BGR-Kyustendil,
+      SRB-Dimitrovgrad_Municipality, SRB-Bosilegrad_Municipality]
+  timeline:
+    - from: 1878
+      owner: bulgaria
+      overlord: ottoman
+      cause: ベルリン条約でオスマン帝国の宗主権のもとにブルガリア公国が成立
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+    - from: 1908
+      owner: bulgaria
+      cause: ブルガリアが独立を宣言し、王国（ツァール国）となる
+      source: "https://ja.wikipedia.org/wiki/ブルガリア王国"
+  note: ツァリブロド（現ディミトロフグラード）とボシレグラードは1919年までブルガリア領（現セルビア）。
+
+- id: south_dobruja
+  name: 南ドブルジャ（シリストラ・ドブリチ）
+  select:
+    pieces: [BGR-Silistra, BGR-Dobrich]
+  timeline:
+    - from: 1878
+      owner: bulgaria
+      overlord: ottoman
+      cause: ベルリン条約でブルガリア公国の一部となる
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+    - from: 1908
+      owner: bulgaria
+      cause: ブルガリアが独立を宣言
+      source: "https://ja.wikipedia.org/wiki/ブルガリア王国"
+    - from: 1913
+      owner: romania
+      cause: 第二次バルカン戦争後のブカレスト条約で南ドブルジャがルーマニア領に
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+  note: 1878年にシリストラの町はブルガリア、その東の一部はルーマニアに分けられた（1880年に国境画定）。ピース単位では近似。
+
+- id: eastern_rumelia_r
+  name: 東ルメリ（トラキア北部：プロヴディフ・スタラ・ザゴラ・ブルガス）
+  select:
+    pieces: [BGR-Plovdiv, BGR-Pazardzhik, BGR-Stara_Zagora, BGR-Sliven, BGR-Yambol, BGR-Burgas, BGR-Haskovo]
+  timeline:
+    - from: 1878
+      owner: eastern_rumelia
+      overlord: ottoman
+      cause: ベルリン条約でオスマン帝国の自治州「東ルメリ」が置かれる
+      source: "https://ja.wikipedia.org/wiki/東ルメリ自治州"
+    - from: 1885
+      owner: bulgaria
+      overlord: ottoman
+      cause: プロヴディフの蜂起で東ルメリがブルガリアに統合される（1886年のトプハネ協定でブルガリア公が総督を兼ねる）
+      source: "https://ja.wikipedia.org/wiki/ブルガリア統一"
+    - from: 1908
+      owner: bulgaria
+      cause: ブルガリアが独立を宣言
+      source: "https://ja.wikipedia.org/wiki/ブルガリア王国"
+  note: ハスコヴォ州南東のスヴィレングラード（ムスタファ・パシャ）、ブルガス州南部のストランジャ山地（マルコ・タルノヴォ）、パザルジク州のロドピ山地の一部は1912年までオスマン領。ピース単位では近似。
+
+- id: rhodopes_pirin
+  name: ロドピ山地・ピリン地方（カルジャリ・スモリャン・ブラゴエヴグラト）
+  select:
+    pieces: [BGR-Kardzhali, BGR-Smolyan, BGR-Blagoevgrad]
+  timeline:
+    - from: 1912
+      owner: bulgaria
+      certainty: occupied
+      cause: 第一次バルカン戦争でブルガリア軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: bulgaria
+      cause: ロンドン条約・ブカレスト条約でブルガリア領に（ピリン・マケドニア）
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+
+# ---------------------------------------------------------------- セルビア
+- id: serbia_1830
+  name: セルビア西部（ウジツェ・クラリェヴォ）
+  select:
+    pieces: [SRB-Uzice_City, SRB-Kosjeric_Municipality, SRB-Bajina_Basta_Municipality, SRB-Kraljevo_City, SRB-Vrnjacka_Banja_Municipality]
+  timeline:
+    - from: 1830
+      owner: serbia
+      overlord: ottoman
+      cause: ハッティ・シェリフでセルビア公国の自治が認められる
+      source: "https://ja.wikipedia.org/wiki/セルビア公国"
+    - from: 1878
+      owner: serbia
+      cause: ベルリン条約でセルビアの独立が承認される
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: 1815年の地図では範囲に含めていない（ベオグラード州の南西部。近似）。ウジツェの要塞のオスマン軍は1862年に撤退した。
+
+- id: serbia_1833
+  name: セルビアの6つのナヒヤ（ザイェチャル・クルシェヴァツ・アレクシナツなど）
+  select:
+    adm1: [SRB/Zajecar District, SRB/Rasina District]
+    pieces: [SRB-Raska_Municipality, SRB-Aleksinac_Municipality, SRB-Razanj_Municipality, SRB-Pozega_Municipality, SRB-Arilje_Municipality, SRB-Cajetina_Municipality]
+  timeline:
+    - from: 1833
+      owner: serbia
+      overlord: ottoman
+      cause: 1833年のハッティ・シェリフで、第一次蜂起の範囲だった南東の6つのナヒヤ（郡）がセルビア公国に加えられる
+      source: "https://en.wikipedia.org/wiki/Principality_of_Serbia"
+    - from: 1878
+      owner: serbia
+      cause: ベルリン条約でセルビアの独立が承認される
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: 6つのナヒヤはクライナ（ネゴティン）、ツルナ・レカ（ザイェチャル）、バニャ、パラチン、クルシェヴァツ、スタリ・ヴラフなど。ネゴティン・パラチンは既存の belgrade_pashalik に含まれているので、そちらは1815年からセルビアに見える（近似）。
+
+- id: serbia_1878
+  name: ニシュ・ピロト・トプリツァ・ヴラニェ
+  select:
+    adm1: [SRB/Toplica District, SRB/Jablanica District]
+    pieces: [SRB-Nis_City, SRB-Doljevac_Municipality, SRB-Gadzin_Han_Municipality, SRB-Merosina_Municipality, SRB-Svrljig_Municipality,
+      SRB-Pirot_Municipality, SRB-Bela_Palanka_Municipality, SRB-Babusnica_Municipality,
+      SRB-Vranje_City, SRB-Surdulica_Municipality, SRB-Vladicin_Han_Municipality, SRB-Trgoviste_Municipality]
+  timeline:
+    - from: 1878
+      owner: serbia
+      cause: ベルリン条約で独立とともにニシュ・ピロト・ヴラニェなどがセルビア領に
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: トルゴヴィシュテは境界にまたがる（要確認）。
+
+- id: serbia_1912
+  name: サンジャク（ノヴィ・パザル）西部・コソヴォ・プレシェヴォ
+  select:
+    iso: [XKX]
+    pieces: [SRB-Bujanovac_Municipality, SRB-Presevo_Municipality, SRB-Novi_Pazar_City, SRB-Tutin_Municipality, SRB-Sjenica_Municipality,
+      SRB-Nova_Varos_Municipality, SRB-Priboj_Municipality, SRB-Prijepolje_Municipality]
+    exclude_regions: [metohija_mne]
+  timeline:
+    - from: 1912
+      owner: serbia
+      certainty: occupied
+      cause: 第一次バルカン戦争でセルビア軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: serbia
+      cause: ロンドン条約・ブカレスト条約でセルビア領に（サンジャクはモンテネグロとの協定で分割）
+      source: "https://ja.wikipedia.org/wiki/ロンドン条約_(1913年)"
+  note: ノヴィ・パザルのサンジャクには1879–1908年、ベルリン条約にもとづいてオーストリア＝ハンガリー軍が駐屯した（プリエポリェ・プリボイ・プリェヴリャ。行政はオスマン帝国）。
+
+- id: metohija_mne
+  name: メトヒヤ西部（ペーチ・ジャコヴィツァ）
+  select:
+    pieces: [XKX-Municipality_of_Peja, XKX-Municipality_of_Istog, XKX-Municipality_of_Klina, XKX-Municipality_of_Decan, XKX-Municipality_of_Junik, XKX-Municipality_of_Gjakova]
+  timeline:
+    - from: 1912
+      owner: montenegro
+      certainty: occupied
+      cause: 第一次バルカン戦争でモンテネグロ軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: montenegro
+      cause: ロンドン条約でモンテネグロ領に
+      source: "https://ja.wikipedia.org/wiki/ロンドン条約_(1913年)"
+  note: クリナ・イストクの境界は近似（要確認）。
+
+# ---------------------------------------------------------------- モンテネグロ
+- id: mne_1859
+  name: ドロブニャク・ヴァソイェヴィチ上流（シャヴニク・ジャブリャク・アンドリイェヴィツァ）
+  select:
+    pieces: [MNE-avnik_Municipality, MNE-abljak_Municipality, MNE-Andrijevica_Municipality]
+  timeline:
+    - from: 1859
+      owner: montenegro
+      certainty: uncertain
+      cause: グラホヴァツの戦い（1858）ののち、列強の委員会がモンテネグロの国境を画定
+      source: "https://en.wikipedia.org/wiki/Battle_of_Grahovac"
+    - from: 1878
+      owner: montenegro
+      cause: ベルリン条約で国境が確定
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: ドロブニャク・ウスコツィ・ヴァソイェヴィチ上流の諸部族は1850年代までにモンテネグロに加わっていた。年と範囲は要確認。
+
+- id: mne_1878
+  name: ニクシッチ・ピヴァ・コラシン・バール
+  select:
+    pieces: [MNE-Nik_i_Municipality, MNE-Plu_ine_Municipality, MNE-Kola_in_Municipality, MNE-Mojkovac_Municipality, MNE-Bar_Municipality]
+  timeline:
+    - from: 1878
+      owner: montenegro
+      cause: ベルリン条約でニクシッチ・コラシン・バール（アンティヴァリ）などがモンテネグロ領に
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: グラホヴォ（ニクシッチ市の西部）は1858年からモンテネグロ領。モイコヴァツは1878年の国境にまたがる（要確認）。
+
+- id: ulcinj
+  name: ウルツィニ（ドゥルチーニョ）
+  select:
+    pieces: [MNE-Ulcinj_Municipality]
+  timeline:
+    - from: 1880
+      owner: montenegro
+      cause: ベルリン条約で認められたプラヴ・グシニェの代わりに、列強の艦隊示威のもとでウルツィニがモンテネグロに引き渡される
+      source: "https://en.wikipedia.org/wiki/Ulcinj"
+
+- id: mne_1912
+  name: サンジャク東部・プラヴ・グシニェ（プリェヴリャ・ビイェロ・ポリェ・ベラネ）
+  select:
+    pieces: [MNE-Pljevlja_Municipality, MNE-Bijelo_Polje_Municipality, MNE-Berane_Municipality, MNE-Ro_aje_Municipality, MNE-Petnjica_Municipality,
+      MNE-Plav_Municipality, MNE-Gusinje_Municipality]
+  timeline:
+    - from: 1912
+      owner: montenegro
+      certainty: occupied
+      cause: 第一次バルカン戦争でモンテネグロ軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: montenegro
+      cause: ロンドン条約とセルビアとの協定でモンテネグロ領に
+      source: "https://ja.wikipedia.org/wiki/ロンドン条約_(1913年)"
+  note: プラヴ・グシニェは1878年のベルリン条約でモンテネグロ領とされたが、プリズレン連盟のアルバニア人が抵抗して引き渡されなかった（代わりに1880年にウルツィニ）。
+
+# ---------------------------------------------------------------- ボスニア・ヘルツェゴヴィナ
+- id: bosnia_herzegovina
+  name: ボスニア・ヘルツェゴヴィナ
+  select:
+    iso: [BIH]
+  timeline:
+    - from: 1878
+      owner: habsburg
+      certainty: occupied
+      cause: ベルリン条約でオーストリア＝ハンガリーがボスニア・ヘルツェゴヴィナを占領し、行政権を得る（主権はオスマン帝国に残る）
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+    - from: 1908
+      owner: habsburg
+      cause: オーストリア＝ハンガリーがボスニア・ヘルツェゴヴィナを併合
+      source: "https://ja.wikipedia.org/wiki/ボスニア危機"
+  note: 1878–1908年はオーストリア＝ハンガリーの占領（行政は共通財務省の管轄）で、名目上の主権はオスマン帝国にあった。年は担当 D（habsburg）と合わせる。1875年のヘルツェゴヴィナ蜂起が東方危機の始まり。
+
+# ---------------------------------------------------------------- 北マケドニア
+- id: vardar_macedonia
+  name: ヴァルダル・マケドニア（スコピエ・ビトラ・オフリド）
+  select:
+    iso: [MKD]
+  timeline:
+    - from: 1912
+      owner: serbia
+      certainty: occupied
+      cause: 第一次バルカン戦争でセルビア軍が占領（クマノヴォの戦い・ビトラの戦い）
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: serbia
+      cause: 第二次バルカン戦争後のブカレスト条約でセルビア領に
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+  note: マケドニアはブルガリア・セルビア・ギリシアが争った地域（「マケドニア問題」）。1903年にイリンデン蜂起が起きた。
+
+- id: strumica
+  name: ストルミツァ地方
+  select:
+    pieces: [MKD-Strumitsa, MKD-Novo_Selo, MKD-Bosilovo, MKD-Vasilevo]
+  timeline:
+    - from: 1912
+      owner: bulgaria
+      certainty: occupied
+      cause: 第一次バルカン戦争でブルガリア軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: bulgaria
+      cause: ブカレスト条約でストルミツァはブルガリア領に残る（1919年にセルブ＝クロアート＝スロヴェーン王国へ）
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+  note: ブルガリア領ストルミツァの範囲（ラドヴィシュなど）は要確認。
+
+# ---------------------------------------------------------------- アルバニア
+- id: albania_r
+  name: アルバニア
+  select:
+    iso: [ALB]
+  timeline:
+    - from: 1912
+      owner: albania
+      certainty: uncertain
+      cause: ヴロラでアルバニアの独立が宣言される（各地はバルカン同盟軍が占領）
+      source: "https://ja.wikipedia.org/wiki/アルバニア独立宣言"
+    - from: 1913
+      owner: albania
+      cause: ロンドン大使会議で列強がアルバニアの独立を認める（国境はフィレンツェ議定書で画定）
+      source: "https://ja.wikipedia.org/wiki/アルバニア公国"
+    - from: 1914
+      owner: albania
+      certainty: uncertain
+      cause: ヴィード公の出国と内乱（中部はエサド・パシャ、北部は諸部族が割拠）
+      source: "https://ja.wikipedia.org/wiki/アルバニア公国"
+
+- id: albania_serb_1912
+  name: アルバニア中部・北東部（ドゥラス・ティラナ・エルバサン・ディブラ・クケス）
+  select:
+    pieces: [ALB-Durres, ALB-Tirane, ALB-Kavaje, ALB-Kruje, ALB-Kurbin, ALB-Lezhe, ALB-Mat, ALB-Mirdite, ALB-Elbasan, ALB-Peqin,
+      ALB-Librazhd, ALB-Diber, ALB-Bulqize, ALB-Kukes, ALB-Has, ALB-Tropoje]
+  timeline:
+    - from: 1912
+      owner: serbia
+      certainty: occupied
+      cause: 第一次バルカン戦争でセルビア軍がドゥラスまで進む
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: albania
+      cause: ロンドン大使会議で列強がアルバニアの独立を認める（セルビア軍は1913年10月に撤退）
+      source: "https://ja.wikipedia.org/wiki/アルバニア公国"
+    - from: 1914
+      owner: albania
+      certainty: uncertain
+      cause: ヴィード公の出国と内乱（中部はエサド・パシャ、北部は諸部族が割拠）
+      source: "https://ja.wikipedia.org/wiki/アルバニア公国"
+
+- id: albania_shkoder
+  name: シュコドラ（スクタリ）周辺
+  select:
+    pieces: [ALB-Shkoder, ALB-Malesi_e_Madhe, ALB-Puke]
+  timeline:
+    - from: 1912
+      owner: ottoman
+      cause: モンテネグロ軍がシュコドラを包囲（1913年4月に開城）
+    - from: 1913
+      owner: albania
+      cause: 列強の艦隊示威でモンテネグロ軍が撤退し、アルバニア領に
+      source: "https://en.wikipedia.org/wiki/Siege_of_Scutari_(1912–1913)"
+    - from: 1914
+      owner: albania
+      certainty: uncertain
+      cause: ヴィード公の出国と内乱（中部はエサド・パシャ、北部は諸部族が割拠）
+      source: "https://ja.wikipedia.org/wiki/アルバニア公国"
+
+- id: northern_epirus
+  name: 北イピロス（ジロカストラ・コルチャ・サランダ）
+  select:
+    pieces: [ALB-Gjirokaster, ALB-Permet, ALB-Tepelene, ALB-Delvine, ALB-Sarande, ALB-Kolonje, ALB-Devoll, ALB-Kucove_2, ALB-Pogradec]
+  timeline:
+    - from: 1912
+      owner: greece
+      certainty: occupied
+      cause: 第一次バルカン戦争でギリシア軍が占領（コルチャは1912年12月）
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: albania
+      cause: フィレンツェ議定書でアルバニア領と決まる
+      source: "https://en.wikipedia.org/wiki/Protocol_of_Florence"
+    - from: 1914
+      owner: greece
+      certainty: occupied
+      cause: 北イピロス自治共和国の宣言（コルフ議定書）ののち、大戦の勃発でギリシア軍が再び進駐（1914年10月）
+      source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Northern_Epirus"
+  note: ジロカストラ・デルヴィナの攻略は1913年初め。ポグラデツの扱いは要確認。
+
+- id: vlore
+  name: ヴロラ（ヴァローナ）
+  select:
+    pieces: [ALB-Vlore]
+  timeline:
+    - from: 1912
+      owner: albania
+      cause: ヴロラでアルバニアの独立が宣言される（臨時政府の所在地）
+      source: "https://ja.wikipedia.org/wiki/アルバニア独立宣言"
+    - from: 1914
+      owner: italy
+      certainty: occupied
+      cause: イタリアがサザン島（10月）とヴロラ（12月）を占領
+      source: "https://en.wikipedia.org/wiki/Vlora"
+
+# ---------------------------------------------------------------- ギリシア
+- id: greece_1830
+  name: ギリシア王国の本土（ペロポネソス・中部ギリシア・エヴィア・キクラデス諸島）
+  select:
+    adm2: [GRC/Peloponnisoy, GRC/Dytikis Elladas, GRC/Attikis, GRC/Stereas Elladas]
+    pieces: [GRC-Amorgos, GRC-Anafi, GRC-Andros, GRC-Antiparos, GRC-Folegandros, GRC-Iiton, GRC-Kea, GRC-Kimolos, GRC-Kithnos, GRC-Mikonos,
+      GRC-Milos, GRC-Naxos_and_Lesser_Cyclades, GRC-Paros, GRC-Santorini, GRC-Serifos, GRC-Sifnos, GRC-Sikinos, GRC-Syros,
+      GRC-Skiathos, GRC-Skopelos, GRC-Alonnisos]
+    exclude: [GRC-Domokos]
+  timeline:
+    - from: 1821
+      owner: greece
+      certainty: uncertain
+      cause: ギリシア独立戦争（臨時政府の支配。1825–1827年にはエジプト軍・オスマン軍が多くを奪回）
+      source: "https://ja.wikipedia.org/wiki/ギリシャ独立戦争"
+    - from: 1830
+      owner: greece
+      cause: ロンドン議定書でギリシアの独立が認められる（国境は1832年のコンスタンティノープル条約でアルタ＝ヴォロス線に確定）
+      source: "https://ja.wikipedia.org/wiki/ロンドン議定書_(1830年)"
+  note: 1830年2月のロンドン議定書の国境はアケロオス川〜スペルヒオス川の線で、アカルナニア西部やラミア周辺は1832年の条約で加わったが、地図では1830年にまとめた。独立戦争中（1821–1829）は「不確実」として描く。
+
+- id: thessaly_arta_1881
+  name: テッサリアとアルタ地方
+  select:
+    adm2: [GRC/Thessalias]
+    pieces: [GRC-Domokos, GRC-Arta, GRC-Nikolaos_Skoufas, GRC-Georgios_Karaiskakis, GRC-Central_Tzoumerka]
+    exclude: [GRC-Skiathos, GRC-Skopelos, GRC-Alonnisos, GRC-Elassona]
+  timeline:
+    - from: 1881
+      owner: greece
+      cause: ベルリン会議後のコンスタンティノープル協定で、テッサリアとアルタ地方がギリシア領に
+      source: "https://en.wikipedia.org/wiki/Convention_of_Constantinople_(1881)"
+  note: 1897年の希土戦争でオスマン軍がテッサリアを一時占領したが、講和で国境の小さな修正だけで戻された。テンピ（テンペ谷）の北の国境は近似。
+
+- id: epirus_1913
+  name: イピロス南部（ヨアニナ・テスプロティア）
+  select:
+    adm2: [GRC/Ipeiroy]
+    exclude: [GRC-Arta, GRC-Nikolaos_Skoufas, GRC-Georgios_Karaiskakis, GRC-Central_Tzoumerka, GRC-Parga, GRC-Preveza]
+  timeline:
+    - from: 1913
+      owner: greece
+      cause: ビザニの戦いでヨアニナが開城（1913年3月）し、ロンドン条約・ブカレスト条約でギリシア領に
+      source: "https://ja.wikipedia.org/wiki/ロンドン条約_(1913年)"
+  note: 1912年末の時点ではヨアニナはまだオスマン軍が守っていたので、占領は描かない。
+
+- id: macedonia_gr_1912
+  name: マケドニア中部・西部（テッサロニキ・ハルキディキ・コザニ・フロリナ）とタソス・アトス
+  select:
+    adm2: [GRC/Kentrikis Makedonias, GRC/Dytikis Makedonias, GRC/Agion Oros]
+    pieces: [GRC-Elassona, GRC-Thassou, GRC-Samothrakis]
+    exclude_regions: [macedonia_bg_1912]
+  timeline:
+    - from: 1912
+      owner: greece
+      certainty: occupied
+      cause: 第一次バルカン戦争でギリシア軍が占領（テッサロニキは1912年11月）
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: greece
+      cause: ロンドン条約・ブカレスト条約でギリシア領に
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+  note: アトス山の修道院自治国も1912年にギリシア軍が入った。
+
+- id: macedonia_bg_1912
+  name: マケドニア東部（セレス・ドラマ・カヴァラ・キルキス）
+  select:
+    pieces: [GRC-Serres, GRC-Amphipolis, GRC-Emmanouil_Pappas, GRC-Irakleia, GRC-Nea_Zichni, GRC-Sintiki, GRC-Visaltia, GRC-Kilkis,
+      GRC-Dramas, GRC-Doxatou, GRC-Kato_Nevrokopiou, GRC-Paranestiou, GRC-Prosotsanis, GRC-Kavalas, GRC-Nestou, GRC-Pangeou]
+  timeline:
+    - from: 1912
+      owner: bulgaria
+      certainty: occupied
+      cause: 第一次バルカン戦争でブルガリア軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: greece
+      cause: 第二次バルカン戦争でギリシア軍が奪い（キルキスの戦い）、ブカレスト条約でギリシア領に
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+
+- id: western_thrace
+  name: 西トラキア（クサンティ・コモティニ・アレクサンドルーポリ）
+  select:
+    pieces: [GRC-Xanthis, GRC-Avdiron, GRC-Topirou, GRC-Mykis, GRC-Iasmou, GRC-Komotinis, GRC-Maronias_Sapon, GRC-Arrianon,
+      GRC-Alexandroupolis, GRC-Soufliou]
+  timeline:
+    - from: 1912
+      owner: bulgaria
+      certainty: occupied
+      cause: 第一次バルカン戦争でブルガリア軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: bulgaria
+      cause: ブカレスト条約でブルガリア領に（デデアガチ＝アレクサンドルーポリでエーゲ海に出る。1919–1920年にギリシア領）
+      source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+
+- id: evros_north
+  name: エヴロス北部（ディディモティホ・オレスティアダ）
+  select:
+    pieces: [GRC-Didymoteichou, GRC-Orestiadas]
+  timeline:
+    - from: 1912
+      owner: bulgaria
+      certainty: occupied
+      cause: 第一次バルカン戦争でブルガリア軍が占領
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: ottoman
+      cause: 第二次バルカン戦争でオスマン軍がエディルネとともに奪回し、コンスタンティノープル条約でオスマン領に
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1913)"
+  note: ディディモティホは1915年のブルガリア・オスマン協定でブルガリアに譲られた。
+
+- id: north_aegean
+  name: 北エーゲ海の島々（レスボス・ヒオス・リムノス・イカリア）
+  select:
+    pieces: [GRC-Lesbos, GRC-Chios, GRC-Lemnos, GRC-Agios_Efstratios, GRC-Psara, GRC-Oinousses, GRC-Ikaria, GRC-Fournoi_Korseon]
+  timeline:
+    - from: 1912
+      owner: greece
+      certainty: occupied
+      cause: 第一次バルカン戦争でギリシア海軍が占領（ヒオスの守備隊の降伏は1913年1月）
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1914
+      owner: greece
+      cause: ロンドン条約で処分を委ねられた列強が、エーゲ海の島々をギリシア領と決める（1914年2月。オスマン帝国は1923年まで認めない）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1913)"
+  note: イカリア島は1912年7月に自由国を宣言し、11月にギリシアと統合された。インブロス・テネドス（現トルコ）はオスマン領に戻された。
+
+- id: samos_r
+  name: サモス島
+  select:
+    pieces: [GRC-Samos]
+  timeline:
+    - from: 1821
+      owner: greece
+      certainty: uncertain
+      cause: サモスがギリシア独立戦争に加わる
+      source: "https://en.wikipedia.org/wiki/Samos"
+    - from: 1830
+      owner: ottoman
+      certainty: uncertain
+      cause: ロンドン議定書でサモスはギリシアから外される（島民は抵抗を続ける）
+    - from: 1834
+      owner: samos
+      overlord: ottoman
+      cause: 列強の保障のもとでサモス公国が成立
+      source: "https://en.wikipedia.org/wiki/Principality_of_Samos"
+    - from: 1913
+      owner: greece
+      cause: サモスの議会がギリシアとの統合を宣言し（1912年11月）、1913年3月にギリシア軍が上陸
+      source: "https://en.wikipedia.org/wiki/Principality_of_Samos"
+
+- id: dodecanese
+  name: ドデカネス諸島（ロドス・コス・カリムノス）
+  select:
+    pieces: [GRC-Agathonisi, GRC-Astypalaia, GRC-Halki, GRC-Kalymnos, GRC-Karpathos, GRC-Kasos, GRC-Kos, GRC-Leipsoi, GRC-Leros,
+      GRC-Nisyros, GRC-Patmos, GRC-Rhodes, GRC-Symi, GRC-Tilos]
+  timeline:
+    - from: 1912
+      owner: italy
+      certainty: occupied
+      cause: イタリア＝トルコ戦争でイタリアが占領（ウシー条約ではリビアからのオスマン軍撤退後に返すとされたが、返されなかった）
+      source: "https://ja.wikipedia.org/wiki/イタリア＝トルコ戦争"
+  note: イタリアの領有が正式に認められたのは1923年のローザンヌ条約。カステロリゾ島（ロドス島のピースに含まれる）は1921年までオスマン領・フランス占領。
+
+# ---------------------------------------------------------------- トルコ（東トラキア・東部）
+- id: kirklareli_1912
+  name: クルクラーレリ（東トラキア北部）
+  select:
+    pieces: [TUR-K_rklareli]
+  timeline:
+    - from: 1912
+      owner: bulgaria
+      certainty: occupied
+      cause: 第一次バルカン戦争でブルガリア軍が占領（クルク・キリセの戦い）
+      source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+    - from: 1913
+      owner: ottoman
+      cause: 第二次バルカン戦争でオスマン軍が奪回し、コンスタンティノープル条約で確定
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1913)"
+  note: エディルネはブルガリア軍に包囲され1913年3月に開城したが、7月にオスマン軍が奪回した（年末の状態で描くので、変化なし）。
+
+- id: kars_batumi
+  name: カルス・アルダハン・アルトヴィン
+  select:
+    pieces: [TUR-Kars, TUR-Ardahan, TUR-Artvin]
+  timeline:
+    - from: 1878
+      owner: russia
+      cause: ベルリン条約でカルス・アルダハン・バトゥミがロシア領に
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: ロシアはカルス州・バトゥミ州を置いた（1918・1921年にトルコへ戻る）。
+
+- id: samtskhe
+  name: サムツヘ・ジャヴァヘティ（アハルツィヘ・アハルカラキ）
+  select:
+    pieces: [GEO-Samtskhe_Javakheti]
+  timeline:
+    - from: 1829
+      owner: russia
+      cause: アドリアノープル条約でアハルツィヘ・アハルカラキがロシア領に
+      source: "https://ja.wikipedia.org/wiki/アドリアノープル条約"
+
+# ---------------------------------------------------------------- キプロス・シリア
+- id: cyprus
+  name: キプロス島
+  select:
+    iso: [CYP]
+  timeline:
+    - from: 1878
+      owner: britain
+      overlord: ottoman
+      cause: キプロス協定でイギリスが行政権を得る（主権はオスマン帝国に残る）
+      source: "https://ja.wikipedia.org/wiki/キプロスの歴史"
+    - from: 1914
+      owner: britain
+      cause: オスマン帝国の参戦に対してイギリスがキプロスを併合（1914年11月）
+      source: "https://ja.wikipedia.org/wiki/キプロスの歴史"
+
+- id: egyptian_syria
+  name: シリア・パレスチナ・アダナ（エジプトの支配地）
+  select:
+    iso: [SYR, LBN, ISR]
+    pieces: [118-Gaza_Strip, 129-West_Bank, JOR-Irbid, JOR-Ajloun, JOR-Jerash, JOR-Balqa, JOR-Amman, JOR-Zarqa, JOR-Madaba, JOR-Mafraq,
+      TUR-Adana, TUR-Mersin, TUR-Osmaniye, TUR-Hatay, TUR-Gaziantep, TUR-Kilis, TUR-Kahramanmara]
+  timeline:
+    - from: 1832
+      owner: egypt
+      certainty: occupied
+      cause: 第1次エジプト＝トルコ戦争でエジプト軍（イブラーヒーム・パシャ）がシリアを占領
+      source: "https://ja.wikipedia.org/wiki/エジプト・トルコ戦争"
+    - from: 1833
+      owner: egypt
+      overlord: ottoman
+      cause: キュタヒヤ条約でシリアとアダナがムハンマド・アリーに委ねられる
+      source: "https://en.wikipedia.org/wiki/Convention_of_Kütahya"
+    - from: 1840
+      owner: ottoman
+      cause: ロンドン条約（1840）とイギリス・オーストリア艦隊の出兵で、エジプト軍がシリアから撤退
+      source: "https://ja.wikipedia.org/wiki/ロンドン条約_(1840年)"
+  note: レバノン山地（mount_lebanon）はシハーブ家の首長国のまま（エジプトに協力）。ヨルダン南部・シリア東部の砂漠の支配は名目的。
+
+# ---------------------------------------------------------------- 中央アジア
+- id: amu_right_bank
+  name: アム川右岸（カラカルパク東部）
+  select:
+    pieces: [UZB-Beruniy, UZB-Turtkul, UZB-Ellikkala, UZB-Amudarya, UZB-Nukus, UZB-Nukus_city, UZB-Chimbay, UZB-Kegeyli, UZB-Takhtakupir,
+      UZB-Karauzyak, UZB-Uchkuduk]
+  timeline:
+    - from: 1873
+      owner: russia
+      cause: ガンデミアン条約でヒヴァ・ハン国がアム川右岸をロシアに割譲（アム・ダリヤ管区）
+      source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"
+
+- id: ahal
+  name: アハル・オアシス（テケ・トルクメン）
+  select:
+    adm1: [TKM/Ahai]
+  timeline:
+    - from: 1881
+      owner: russia
+      cause: ギョクテペの戦いでテケ・トルクメンが敗れ、アハル＝ホラーサーン条約でロシアとペルシアの国境が定まる
+      source: "https://en.wikipedia.org/wiki/Battle_of_Geok_Tepe_(1881)"
+  note: テジェン・サラフスの東部は1884年ごろロシア領（近似）。
+
+- id: balkan_tkm
+  name: カスピ海東岸（クラスノヴォツク・バルカン）
+  select:
+    adm1: [TKM/Balkan]
+  timeline:
+    - from: 1869
+      owner: russia
+      certainty: uncertain
+      cause: ロシアがクラスノヴォツク（現トルクメンバシ）を築く
+      source: "https://en.wikipedia.org/wiki/Türkmenbaşy"
+    - from: 1881
+      owner: russia
+      cause: ザカスピ州の設置とアハル＝ホラーサーン条約
+      source: "https://en.wikipedia.org/wiki/Transcaspian_Oblast"
+
+- id: kyzylorda
+  name: シル川下流（アク・メチェト＝クズロルダ）
+  select:
+    pieces: [KAZ-Kyzylorda_Region]
+  timeline:
+    - from: 1820
+      owner: kokand
+      certainty: uncertain
+      cause: コーカンド・ハン国がシル川下流に進出し、アク・メチェトの要塞を築く
+      source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"
+      note: 年は要確認（要塞は1817年ごろ）。下流のアラル海寄りはヒヴァとカザフの勢力圏。
+    - from: 1853
+      owner: russia
+      cause: ペロフスキーがアク・メチェトを攻略（ペロフスク）
+      source: "https://en.wikipedia.org/wiki/Kyzylorda"
