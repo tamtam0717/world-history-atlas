@@ -31,6 +31,8 @@ async function main() {
     relPick: null as ReligionPick | null,
     /** 選んでいる潮流（地図に広がりを重ねる） */
     movement: null as string | null,
+    /** 国のない土地（所属なし・データ未整備）をクリックしたときのピース（地図のピース番号。URL には出さない） */
+    blank: null as number | null,
   };
   const LAYER_IDS: MapLayer[] = ["political", "religion", "language"];
   const parseLayer = (v: string | null): MapLayer => (LAYER_IDS.includes(v as MapLayer) ? (v as MapLayer) : "political");
@@ -74,6 +76,10 @@ async function main() {
 
   const map = new AtlasMap($("#map"), topo, idx, {
     onSelect: (id) => selectPolity(id, false),
+    onBlank: (piece) => {
+      selectPolity(null, false, piece);
+      sheet.reveal();
+    },
     onReligion: (pick) => {
       state.relPick = pick;
       markPush();
@@ -139,6 +145,7 @@ async function main() {
     map.flashRegions("political", null);
     panel.renderYear(state.year, { dist, movement: state.movement });
     if (dist) panel.renderReligion(state.relPick, state.year, dist);
+    else if (!state.polity && state.blank != null) panel.renderBlank(map.blankInfo(state.blank), state.year);
     else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null, state.polity ? map.indirectOf(state.polity) : null);
     band.render(state.year, state.movement);
     renderLegend();
@@ -189,7 +196,8 @@ async function main() {
     update();
   }
 
-  function selectPolity(id: string | null, focus: boolean) {
+  function selectPolity(id: string | null, focus: boolean, blank: number | null = null) {
+    state.blank = blank;
     // 宗教・言語の表示中にパネルの × を押したときは、その地域の選択を解除する
     if (!id && isDist(state.layer) && state.relPick) {
       state.relPick = null;
@@ -432,7 +440,11 @@ async function main() {
     }
   });
   function renderLegend() {
-    $("#lg-indirect").hidden = !map.indirectShown(true);
+    const lg = map.legendShown();
+    $("#lg-indirect").hidden = !lg.indirect;
+    $("#lg-unowned").hidden = !lg.unowned;
+    $("#lg-nodata").hidden = !lg.nodata;
+    $("#lg-pending").hidden = !lg.pending;
     const dist = isDist(state.layer) ? (state.layer as DistKey) : null;
     relLegend.hidden = !dist;
     if (!dist) return;
@@ -609,6 +621,7 @@ async function main() {
     try {
       if (Number.isFinite(s.y) && s.y >= minYear && s.y <= maxYear) state.year = s.y;
       state.polity = s.p && idx.polityById.has(s.p) ? s.p : null;
+      state.blank = null;
       if (s.l !== state.layer) setLayer(s.l, false);
       state.relPick = isDist(s.l) ? (s.rp ?? null) : null;
       state.movement = s.mv && idx.movement(s.mv) ? s.mv : null;

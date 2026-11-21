@@ -35,6 +35,14 @@ interface SubUnit {
 
 const SEA = "#cfdde3";
 const NODATA = "#e6e2d8";
+/**
+ * 所属なし（owner: null。先住民の地・無人の地など、データとして「どの国にも属さない」と決めた所）。
+ * データ未整備の灰色 NODATA とはっきり違うよう、ごく薄い草色の上に細かい点を散らして「誰の国でもない野の土地」に見せる
+ */
+const UNOWNED = "#edf0e3";
+const UNOWNED_DOT = "rgba(92,122,70,.75)";
+/** ピースの所属の番兵：その年のデータがない（未整備）。所属なしは -1 */
+const OWNER_NODATA = -3;
 /** 宗教表示で、データのないピースの色 */
 const REL_NODATA = "#e2e0dc";
 /** 世俗化した地域の色を寄せる「地の色」（データのない灰色 REL_NODATA より明るく白に近い） */
@@ -57,6 +65,8 @@ export function indirectColor(color: string): string {
 }
 /** 斜線で描く確からしさ（indirect は斜線を使わず、色の薄さで見せる） */
 const HATCHED_CERT = new Set(["uncertain", "nominal", "occupied"]);
+/** 出来事の関係国が「画面の中にまとまった領土を持つ」とみなす、画面に映る陸地に占める割合 */
+const HOLD_SHARE = 0.03;
 /**
  * 歴史データがまだ1つもない地域（ヨーロッパ以外など）は、現代の国の色をこの色に寄せて淡く・彩度を落として塗る。
  * 「現代の国境で仮に塗ってある（歴史の地図は準備中）」と、ひと目でわかるようにする
@@ -101,9 +111,31 @@ export interface ReligionPick {
   piece?: number;
 }
 
+/** 国のない土地の説明（地図のクリック・パネル用） */
+export interface BlankInfo {
+  /** unowned：所属なし（データで「どの国にも属さない」と決めた所）／nodata：データ未整備／pending：歴史データ準備中（現代の国境で表示） */
+  kind: "unowned" | "nodata" | "pending";
+  /** ピース（現代の行政区画）の名前と、現代の国名 */
+  place: string;
+  modern: string;
+  region?: string;
+  note?: string;
+  cause?: string;
+  /** 今の状態になった年 */
+  since?: number;
+  next?: { year: number; owner: string | null };
+}
+
+export interface ViewProbe {
+  at(lon: number, lat: number): { inView: boolean; dist: number };
+  holds(polities: string[], box?: readonly number[] | null): boolean;
+}
+
 export interface MapCallbacks {
   onSelect(polityId: string | null): void;
   onPiece?(piece: PieceProps | null): void;
+  /** どの国にも属さない土地・データ未整備の土地のクリック（ピースの番号。説明は blankInfo で引く） */
+  onBlank?(piece: number): void;
   /** 分布（宗教・言語）の表示のときのクリック（何もない所なら null） */
   onReligion?(pick: ReligionPick | null): void;
 }
@@ -212,7 +244,8 @@ export class AtlasMap {
         return;
       }
       const o = i >= 0 ? this.ownerOf[i] : -1;
-      this.cb.onSelect(o >= 0 ? this.idx.atlas.polities[o].id : null);
+      if (o >= 0 || i < 0 || this.modernOn || !this.cb.onBlank) this.cb.onSelect(o >= 0 ? this.idx.atlas.polities[o].id : null);
+      else this.cb.onBlank(i); // 所属なし・データ未整備の土地：その説明を出す
     });
     this.map.on("mousemove", (e) => this.hover(e.point, e.originalEvent));
     this.map.on("mouseout", () => (this.tooltip.style.display = "none"));
@@ -243,6 +276,7 @@ export class AtlasMap {
     ] as const) {
       map.addImage(`hatch-${name}`, hatchImage(color, size), { pixelRatio: 2 });
     }
+    map.addImage("dots-unowned", dotImage(UNOWNED_DOT, 6), { pixelRatio: 2 });
     // 宗教・言語の少数派の斜線（種類ごとに1枚）
     for (const key of ["religion", "language"] as const) {
       (this.idx.dist(key)?.kinds ?? []).forEach((k, i) => {
@@ -295,6 +329,13 @@ export class AtlasMap {
       type: "line",
       source: "pieces",
       paint: { "line-color": ["coalesce", ["feature-state", "c"], ["get", "pc"]], "line-width": 0.8 },
+    });
+    // 所属なしの点描（feature-state "u" のピースだけ見せる）
+    map.addLayer({
+      id: "unowned-dots",
+      type: "fill",
+      source: "pieces",
+      paint: { "fill-pattern": "dots-unowned", "fill-opacity": ["case", ["boolean", ["feature-state", "u"], false], 1, 0] },
     });
     map.addLayer({
       id: "modern-fill",
@@ -769,14 +810,15 @@ export class AtlasMap {
     const indirect = idx.atlas.certainty.indexOf("indirect");
     for (let i = 0; i < this.geoms.length; i++) {
       const s = this.atlasIdx[i] >= 0 ? idx.pieceState(this.atlasIdx[i], year) : null;
-      const owner = s ? s[1] : -1;
+      // 所属なし（その年のデータで owner: null）は -1、データ未整備（その年の記述がない）は OWNER_NODATA
+      const owner = s ? s[1] : OWNER_NODATA;
       certOf[i] = s ? s[3] : 0;
       this.ownerOf[i] = owner;
       this.ovOf[i] = s ? s[2] : -1;
-      let color = owner >= 0 ? (polities[owner].color ?? fallbackColor(polities[owner].id)) : null;
-      if (color && certOf[i] === indirect) color = indirectColor(color);
+      let color = owner >= 0 ? (polities[owner].color ?? fallbackColor(polities[owner].id)) : owner === -1 ? UNOWNED : null;
+      if (color && owner >= 0 && certOf[i] === indirect) color = indirectColor(color);
       if (color !== this.colorOf[i]) {
-        this.map.setFeatureState({ source: "pieces", id: i }, { c: color });
+        this.map.setFeatureState({ source: "pieces", id: i }, { c: color, u: owner === -1 });
         this.colorOf[i] = color;
       }
     }
@@ -1137,12 +1179,13 @@ export class AtlasMap {
   }
 
   /**
-   * 地図に映っているかを調べる関数（地図の準備前は null）。
+   * 地図に映っているかを調べる道具（地図の準備前は null）。
    * visibleBottom：地図の上端から、見えている部分の下端までのピクセル（省略時は下のシートの最小の高さを除いた範囲）。
-   * 返す関数は、点が画面に映っているか、と画面の中心からの角距離（度）を返す。
-   * 地球儀の裏側（地平線の向こう）は除く。
+   * - at(経度, 緯度)：点が画面に映っているか、と画面の中心からの角距離（度）。地球儀の裏側（地平線の向こう）は除く。
+   * - holds(政体 ID の列, 範囲)：それらの政体が、その年に画面の中にまとまった領土を持っているか。
+   *   範囲 [西, 南, 東, 北] を渡すと、その中のピースだけを数える（植民地が映っているだけで本国の出来事を「範囲内」にしないため）。
    */
-  viewProbe(visibleBottom?: number): ((lon: number, lat: number) => { inView: boolean; dist: number }) | null {
+  viewProbe(visibleBottom?: number): ViewProbe | null {
     if (!this.loaded) return null;
     const c = this.map.getCenter();
     const { width } = this.viewSize();
@@ -1151,18 +1194,93 @@ export class AtlasMap {
     const rad = Math.PI / 180;
     const lat0 = c.lat * rad;
     const lon0 = c.lng * rad;
-    return (lon, lat) => {
+    const distOf = (lon: number, lat: number) => {
       const la = lat * rad;
       const cosd = Math.sin(lat0) * Math.sin(la) + Math.cos(lat0) * Math.cos(la) * Math.cos(lon * rad - lon0);
-      const dist = Math.acos(Math.max(-1, Math.min(1, cosd))) / rad;
+      return Math.acos(Math.max(-1, Math.min(1, cosd))) / rad;
+    };
+    const at = (lon: number, lat: number) => {
+      const dist = distOf(lon, lat);
       if (dist > 85) return { inView: false, dist };
       const p = this.map.project([lon, lat]);
       if (p.x < 0 || p.x > width || p.y < 0 || p.y > height) return { inView: false, dist };
-      // 地球儀の地平線の向こうの点も画面内に投影されるので、画面の点から逆に求めた経緯度と比べて除く
+      // 地球儀の地平線の向こうの点も画面内に投影されるので、画面の点から逆に求めた経緯度と比べて除く（中心に近い点は確かめない）
+      if (dist < 60) return { inView: true, dist };
       const back = this.map.unproject(p);
       const near = Math.abs(back.lat - lat) < 0.5 && Math.abs((((back.lng - lon + 540) % 360) - 180)) < 0.5;
       return { inView: near, dist };
     };
+    // 画面に描かれているピースごとに、画面に入っている面積の見積もり（ピースの外接矩形の 3×3 の点のうち画面内の割合 × 面積）
+    let owned: Map<number, { lon: number; lat: number; a: number }[]> | null = null;
+    let total = 0;
+    const survey = () => {
+      owned = new Map();
+      const layer = isDist(this.layer) ? "rel-fill" : this.modernOn ? "modern-fill" : "fill";
+      const seen = new Set<number>();
+      for (const f of this.map.queryRenderedFeatures([[0, 0], [width, height]], { layers: [layer] })) seen.add(Number(f.id));
+      for (const i of seen) {
+        const m = this.pieceMetrics(i);
+        if (!m) continue;
+        const [w, so, e, n, area] = m;
+        let hit = 0;
+        for (const fx of [0.1, 0.5, 0.9]) for (const fy of [0.1, 0.5, 0.9]) if (at(w + (e - w) * fx, so + (n - so) * fy).inView) hit++;
+        if (!hit) continue;
+        const a = (area * hit) / 9;
+        total += a;
+        const o = this.ownerOf[i];
+        if (o < 0) continue;
+        let list = owned.get(o);
+        if (!list) owned.set(o, (list = []));
+        list.push({ lon: (w + e) / 2, lat: (so + n) / 2, a });
+      }
+    };
+    const holds = (polities: string[], box?: readonly number[] | null) => {
+      if (!owned) survey();
+      if (!total) return false;
+      let a = 0;
+      for (const id of polities) {
+        const o = this.idx.polityIndex.get(id);
+        if (o === undefined) continue;
+        for (const p of owned!.get(o) ?? []) {
+          if (box && !(p.lon >= box[0] && p.lon <= box[2] && p.lat >= box[1] && p.lat <= box[3])) continue;
+          a += p.a;
+        }
+      }
+      // 画面に映っている陸地の 3% 以上（小さな国は首都などの代表点で判定される）
+      return a >= total * HOLD_SHARE;
+    };
+    return { at, holds };
+  }
+
+  /** ピースの外接矩形と面積（km²）。[西, 南, 東, 北, 面積]（初めて使うときに計算する） */
+  private metrics: (Float64Array | null | undefined)[] = [];
+  private pieceMetrics(i: number): Float64Array | null {
+    let m = this.metrics[i];
+    if (m !== undefined) return m;
+    m = null;
+    const f = feature(this.topo, this.geoms[i] as never) as unknown as Feature;
+    const g = f.geometry;
+    const polys = g?.type === "Polygon" ? [g.coordinates] : g?.type === "MultiPolygon" ? g.coordinates : [];
+    let w = Infinity, so = Infinity, e = -Infinity, n = -Infinity, area = 0;
+    for (const poly of polys) {
+      for (const [x, y] of poly[0]) {
+        if (x < w) w = x;
+        if (x > e) e = x;
+        if (y < so) so = y;
+        if (y > n) n = y;
+      }
+      area += Math.abs(ringAreaKm2(poly[0]));
+    }
+    if (Number.isFinite(w)) {
+      // 日付変更線をまたぐピース（外接矩形が経度で半周を超える）は、中心の1点だけにする
+      if (e - w > 180) {
+        const cx = (polys[0][0][0][0] as number) ?? w;
+        w = e = cx;
+      }
+      m = Float64Array.of(w, so, e, n, Math.max(1, area));
+    }
+    this.metrics[i] = m;
+    return m;
   }
 
   setView(v: { lon: number; lat: number; zoom: number }) {
@@ -1530,7 +1648,7 @@ export class AtlasMap {
     // 塗り：宗教表示なら宗教、そうでなければ現代／その時代
     set(["rel-fill", "rel-seam", "rel-hatch", "rel-borders"], rel);
     set(["modern-fill", "modern-seam"], on && !rel);
-    set(["fill", "seam", "hatch"], !on && !rel);
+    set(["fill", "seam", "unowned-dots", "hatch"], !on && !rel);
     // 線・ラベル：宗教表示でも、重ねる国境は現代／その時代を切り替えられる
     set(["modern-borders", "modern-cities-dot"], on);
     set(["modern-labels", "modern-cities-label"], on && lb);
@@ -1605,6 +1723,37 @@ export class AtlasMap {
     return this.ownerOf[i] >= 0 && this.idx.atlas.certainty[this.certOf[i]] === "indirect";
   }
 
+  /**
+   * 国のない土地の説明（所属なし・データ未整備・歴史データ準備中）。そのピースが今の年に国に属していれば null。
+   * next：次に所属が変わる年と、そのときの持ち主（未整備なら、データが始まる年）
+   */
+  blankInfo(i: number): BlankInfo | null {
+    if (i < 0 || i >= this.geoms.length) return null;
+    const o = this.ownerOf[i];
+    if (o >= 0) return null;
+    const p = this.geoms[i].properties!;
+    const a = this.atlasIdx[i];
+    const tl = a >= 0 ? this.idx.atlas.pieceTimelines[a] : [];
+    const kind: BlankInfo["kind"] = this.pending[i] ? "pending" : o === -1 ? "unowned" : "nodata";
+    const info: BlankInfo = { kind, place: p.name, modern: modernName(p.iso) };
+    const s = a >= 0 ? this.idx.pieceState(a, this.year) : null;
+    if (s) {
+      const r = this.idx.atlas.regions[s[4]];
+      if (r) {
+        info.region = this.idx.regionName(r, this.year);
+        let cur: TimelineEntry | undefined;
+        for (const e of r.timeline) if (e.from <= this.year) cur = e;
+        if (cur?.note) info.note = cur.note;
+        if (cur?.cause) info.cause = cur.cause;
+      }
+    }
+    const nx = tl.find((x) => x[0] > this.year && x[1] !== o);
+    if (nx) info.next = { year: nx[0], owner: nx[1] >= 0 ? this.idx.atlas.polities[nx[1]].id : null };
+    const pv = [...tl].reverse().find((x) => x[0] <= this.year);
+    if (pv) info.since = pv[0];
+    return info;
+  }
+
   /** そのピースの、今の年に効いている地域の名前 */
   private regionOf(i: number): string {
     const a = this.atlasIdx[i];
@@ -1635,15 +1784,23 @@ export class AtlasMap {
     return { names: [...count.entries()].sort((a, b) => b[1] - a[1]).map((e) => e[0]), all: n === total };
   }
 
-  /** 間接統治の地域が、今の年の地図に（onScreen なら画面に見えている範囲に）あるか */
-  indirectShown(onScreen = false): boolean {
-    if (!this.loaded || isDist(this.layer) || this.modernOn) return false;
-    if (onScreen) {
-      for (const f of this.map.queryRenderedFeatures({ layers: ["fill"] })) if (this.isIndirect(Number(f.id))) return true;
-      return false;
+  /**
+   * 政治の地図の凡例に出す項目：画面に見えているピースに、間接統治・所属なし・データ未整備・歴史データ準備中があるか。
+   * （分布の表示・現代の国境の表示のときはどれも false）
+   */
+  legendShown(): { indirect: boolean; unowned: boolean; nodata: boolean; pending: boolean } {
+    const r = { indirect: false, unowned: false, nodata: false, pending: false };
+    if (!this.loaded || isDist(this.layer) || this.modernOn) return r;
+    const { width, height } = this.viewSize();
+    for (const f of this.map.queryRenderedFeatures([[0, 0], [width, height]], { layers: ["fill"] })) {
+      const i = Number(f.id);
+      const o = this.ownerOf[i];
+      if (this.pending[i]) r.pending = true;
+      else if (o === -1) r.unowned = true;
+      else if (o === OWNER_NODATA) r.nodata = true;
+      else if (this.isIndirect(i)) r.indirect = true;
     }
-    for (let i = 0; i < this.geoms.length; i++) if (this.isIndirect(i)) return true;
-    return false;
+    return r;
   }
 
   /** その政体の領域の上位政体（いちばん多いもの）。一部だけが属していれば partial = true */
@@ -1826,6 +1983,10 @@ export class AtlasMap {
         }
       }
       else if (this.pending[i]) text = `${modernName(this.geoms[i].properties!.iso)}（現代の国境）\nこの地域の歴史の地図は準備中`;
+      else if (this.ownerOf[i] === -1) {
+        const r = this.regionOf(i);
+        text = `所属なし（どの国にも属さない土地）${r ? `\n${r}` : ""}`;
+      } else if (this.ownerOf[i] === OWNER_NODATA) text = `データ未整備\n${this.geoms[i].properties!.name}（${this.year}年の所属はまだ調べていません）`;
       if (this.debug) {
         const p = this.geoms[i].properties!;
         text = `${text ? text + "\n" : ""}${p.id}（${p.name}）`;
@@ -2111,6 +2272,25 @@ function hashInts(a: ArrayLike<number>): string {
     h2 = Math.imul(h2 ^ (v * 31 + i), 2246822519);
   }
   return (h1 >>> 0).toString(36) + (h2 >>> 0).toString(36);
+}
+
+/** 点描の模様（所属なし）。行ごとに半分ずらした点を並べ、野原のような細かい粒に見せる */
+function dotImage(color: string, size: number): ImageData {
+  const px = size * 2;
+  const c = document.createElement("canvas");
+  c.width = c.height = px;
+  const g = c.getContext("2d")!;
+  g.fillStyle = color;
+  const r = px * 0.11;
+  for (const [x, y] of [
+    [px * 0.25, px * 0.25],
+    [px * 0.75, px * 0.75],
+  ]) {
+    g.beginPath();
+    g.arc(x, y, r, 0, Math.PI * 2);
+    g.fill();
+  }
+  return g.getImageData(0, 0, px, px);
 }
 
 function hatchImage(color: string, size: number, weight = 0.25): ImageData {
