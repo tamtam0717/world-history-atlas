@@ -1,9 +1,10 @@
 import "./style.css";
 import type { Topology } from "topojson-specification";
-import { AtlasIndex, curveAt, type Atlas, type DistKey } from "./data";
+import { AtlasIndex, curveAt, fallbackColor, type Atlas, type DistKey } from "./data";
 import { AtlasMap, isDist, stripeColor, type MapLayer, type ReligionPick } from "./map";
 import { MovementBand } from "./movements";
 import { Panel } from "./panel";
+import { PolityMilestones } from "./polity-milestones";
 import { Search } from "./search";
 import { setupSheet } from "./sheet";
 import { setupShortcuts, toast } from "./shortcuts";
@@ -224,10 +225,23 @@ async function main() {
   const step = (d: number) => () => setYear(state.year + d, "step");
   $("#prev").addEventListener("click", step(-1));
   $("#next").addEventListener("click", step(1));
-  // «» は前後の「節目」へジャンプ
+  // «» は前後の「節目」へジャンプ。国を選んでいる間は、その国の節目（領土の大きな変化・重要な出来事・国名の変化）へ
   const milestones = atlas.milestones ?? [];
-  const prevMs = () => [...milestones].reverse().find((m) => m.year < state.year);
-  const nextMs = () => milestones.find((m) => m.year > state.year);
+  const polityMs = new PolityMilestones(topo, idx, [minYear, maxYear]);
+  type Ms = { year: number; title: string; detail?: string[]; terr?: string };
+  /** 領土の増減の印（▲ 拡大・▼ 縮小。現れた／消えた年は ◆／◇） */
+  const terrMark = (m: Ms) =>
+    m.terr ? `<i class="ms-terr ms-${m.terr}">${{ gain: "▲", loss: "▼", appear: "◆", vanish: "◇" }[m.terr] ?? ""}</i>` : "";
+  /** 今使う節目の一覧と、国の節目なら国の ID */
+  const currentMs = (): { list: Ms[]; polity: string | null } => {
+    if (state.polity) {
+      const list = polityMs.get(state.polity);
+      if (list.length) return { list, polity: state.polity };
+    }
+    return { list: milestones, polity: null };
+  };
+  const prevMs = () => [...currentMs().list].reverse().find((m) => m.year < state.year);
+  const nextMs = () => currentMs().list.find((m) => m.year > state.year);
   $("#prev10").addEventListener("click", () => {
     const m = prevMs();
     if (m) setYear(m.year);
@@ -237,17 +251,38 @@ async function main() {
     if (m) setYear(m.year);
   });
   const msLabel = $("#milestone");
+  const esc = (t: string) => t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
   function updateMilestones() {
+    const { list, polity } = currentMs();
     const p = prevMs();
     const n = nextMs();
-    const here = milestones.find((m) => m.year === state.year);
+    const here = list.find((m) => m.year === state.year);
+    const pol = polity ? idx.polityById.get(polity)! : null;
+    const controls = msLabel.closest<HTMLElement>(".controls") ?? msLabel.parentElement!;
+    // 国の節目のときは、国の色の印（ラベルの丸・« » の縁取り）と国名の札で、全体の節目と見分けられるようにする
+    controls.classList.toggle("ms-polity", !!pol);
+    if (pol) controls.style.setProperty("--ms-color", pol.color ?? fallbackColor(pol.id));
+    else controls.style.removeProperty("--ms-color");
+    const tip = (m: Ms) => esc([`${m.year} ${m.title}`, ...(m.detail ?? [])].join("\n"));
+    const center = here
+      ? `<span class="ms-here" title="${tip(here)}">${pol ? '<i class="ms-dot"></i>' : ""}${terrMark(here)}${esc(here.title)}</span>`
+      : pol
+        ? `<span class="ms-who" title="${esc(idx.shortName(pol, state.year))}を選んでいる間は、« » でこの国の節目へ移ります"><i class="ms-dot"></i>${esc(idx.shortName(pol, state.year))}の節目</span>`
+        : "";
     msLabel.innerHTML = [
-      p ? `<span class="ms-prev">« ${p.year} ${p.title}</span>` : "<span></span>",
-      here ? `<span class="ms-here">${here.title}</span>` : "",
-      n ? `<span class="ms-next">${n.year} ${n.title} »</span>` : "<span></span>",
+      p ? `<span class="ms-prev" title="${tip(p)}">« ${p.year} ${terrMark(p)}${esc(p.title)}</span>` : "<span></span>",
+      center,
+      n ? `<span class="ms-next" title="${tip(n)}">${n.year} ${terrMark(n)}${esc(n.title)} »</span>` : "<span></span>",
     ].join("");
-    $<HTMLButtonElement>("#prev10").disabled = !p;
-    $<HTMLButtonElement>("#next10").disabled = !n;
+    const name = pol ? idx.shortName(pol, state.year) : "";
+    const pb = $<HTMLButtonElement>("#prev10");
+    const nb = $<HTMLButtonElement>("#next10");
+    pb.disabled = !p;
+    nb.disabled = !n;
+    pb.setAttribute("aria-label", pol ? `${name}の前の節目へ` : "前の節目へ");
+    nb.setAttribute("aria-label", pol ? `${name}の次の節目へ` : "次の節目へ");
+    pb.title = p ? `${p.year} ${p.title}` : "";
+    nb.title = n ? `${n.year} ${n.title}` : "";
   }
   yearInput.addEventListener("change", () => setYear(Number(yearInput.value)));
   yearInput.addEventListener("keydown", (e) => {
@@ -602,6 +637,7 @@ async function main() {
   } else syncLayerButtons();
   update();
   (window as unknown as { __atlas: unknown }).__atlas = map;
+  (window as unknown as { __polityMs: unknown }).__polityMs = polityMs; // 確認用（国の節目の一覧）
   await map.ready;
   document.body.classList.add("ready");
   void map.loadWater(base);

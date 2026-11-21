@@ -599,6 +599,50 @@ body.debug #debug-info {
   font-weight: 600;
   text-align: center;
 }
+/* 国を選んでいる間の節目（その国の節目）：国の色の丸と、« » の縁取り */
+.milestone .ms-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px 1px 0;
+  border-radius: 50%;
+  background: var(--ms-color);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35) inset;
+  vertical-align: middle;
+}
+.milestone .ms-terr {
+  font-style: normal;
+  font-size: 9px;
+  margin-right: 2px;
+  vertical-align: 1px;
+}
+.milestone .ms-gain,
+.milestone .ms-appear {
+  color: #2f7a3a;
+}
+.milestone .ms-loss,
+.milestone .ms-vanish {
+  color: #a23a2a;
+}
+.milestone .ms-who {
+  flex: 0 1 auto;
+  color: var(--ink);
+  font-weight: 600;
+  text-align: center;
+}
+.ms-polity .milestone {
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--ms-color) 28%, transparent) 50%, transparent);
+  border-radius: 4px;
+}
+.ms-polity .milestone .ms-prev,
+.ms-polity .milestone .ms-next {
+  color: color-mix(in srgb, var(--ms-color) 35%, var(--ink));
+}
+.ms-polity #prev10:not(:disabled),
+.ms-polity #next10:not(:disabled) {
+  box-shadow: 0 0 0 2px var(--ms-color) inset;
+  background: color-mix(in srgb, var(--ms-color) 25%, var(--panel));
+}
 .yearbar button:disabled {
   opacity: 0.35;
 }
