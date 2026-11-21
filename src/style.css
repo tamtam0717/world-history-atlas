@@ -1030,7 +1030,8 @@ body[data-layer="religion"] .legend {
   display: flex;
   align-items: center;
 }
-.rel-legend li.rl-hatch {
+.rel-legend li.rl-hatch,
+.rel-legend li.rl-secular {
   grid-column: 1 / -1;
   white-space: normal;
   color: var(--muted);
@@ -1075,6 +1076,29 @@ body[data-layer="religion"] .legend {
 .rel-minor {
   margin-left: 6px;
   color: var(--muted);
+}
+/* 世俗化：宗派の色→地の色の帯に、いまの割合の印 */
+.rel-secular {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.rel-secular .bar {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.rel-secular .mark {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 12px;
+  margin-left: -1px;
+  background: var(--ink);
+  border-radius: 1px;
 }
 .rel-now {
   display: grid;

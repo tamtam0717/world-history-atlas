@@ -1,7 +1,7 @@
 import "./style.css";
 import type { Topology } from "topojson-specification";
 import { AtlasIndex, curveAt, fallbackColor, type Atlas, type DistKey } from "./data";
-import { AtlasMap, isDist, stripeColor, type MapLayer, type ReligionPick } from "./map";
+import { AtlasMap, isDist, secularColor, stripeColor, type MapLayer, type ReligionPick } from "./map";
 import { MovementBand } from "./movements";
 import { Panel } from "./panel";
 import { PolityMilestones } from "./polity-milestones";
@@ -436,7 +436,13 @@ async function main() {
     const hatchSample = kinds.length
       ? `<li class="rl-hatch"><i style="background:repeating-linear-gradient(135deg, ${stripeColor(kinds[0].color)} 0 2px, #f1efe9 2px 6px)"></i>斜線＝少数派も多い地域<span class="rl-long">（斜線の色が少数派）</span></li>`
       : "";
-    const notes = `${shown.minors ? hatchSample : ""}${shown.nodata ? `<li><i class="rl-nodata"></i>データ作成中</li>` : ""}${shown.pending ? `<li><i class="rl-pending"></i>現代の国境（データ準備中）</li>` : ""}`;
+    // 世俗化：同じ宗派の色の、濃い→薄いのグラデーションで「薄い色＝信仰が弱まった」を見せる
+    const secKind = kinds[shown.kinds[0] ?? 0];
+    const secularSample =
+      dist === "religion" && shown.secular && secKind
+        ? `<li class="rl-secular"><i style="background:linear-gradient(90deg, ${secKind.color}, ${secularColor(secKind.color, 0.7)})"></i>薄い色＝世俗化（宗教離れ）</li>`
+        : "";
+    const notes = `${shown.minors ? hatchSample : ""}${secularSample}${shown.nodata ? `<li><i class="rl-nodata"></i>データ作成中</li>` : ""}${shown.pending ? `<li><i class="rl-pending"></i>現代の国境（データ準備中）</li>` : ""}`;
     const toggle = (label: string) =>
       `<button type="button" class="rl-toggle" aria-label="凡例を開く／閉じる">${label}<span class="rl-caret"></span></button>`;
     if (dist === "religion") {

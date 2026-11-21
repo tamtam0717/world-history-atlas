@@ -37,6 +37,16 @@ const SEA = "#cfdde3";
 const NODATA = "#e6e2d8";
 /** 宗教表示で、データのないピースの色 */
 const REL_NODATA = "#e2e0dc";
+/** 世俗化した地域の色を寄せる「地の色」（データのない灰色 REL_NODATA より明るく白に近い） */
+export const SECULAR_GROUND = "#f7f5f0";
+/**
+ * 世俗化の割合 s（0〜1）→ 色を地の色に寄せる割合（0〜0.85）。
+ * 線形だと 0.2〜0.4 の違いが見えにくいので、はじめに大きく効く曲線にする（s = 1 でもわずかに色は残す）
+ */
+export function secularFade(s: number): number {
+  const x = Math.max(0, Math.min(1, s));
+  return 0.85 * (1 - Math.pow(1 - x, 1.6));
+}
 /**
  * 歴史データがまだ1つもない地域（ヨーロッパ以外など）は、現代の国の色をこの色に寄せて淡く・彩度を落として塗る。
  * 「現代の国境で仮に塗ってある（歴史の地図は準備中）」と、ひと目でわかるようにする
@@ -77,6 +87,8 @@ export interface ReligionPick {
   region: number;
   /** 現代の地名（ピース名） */
   place: string;
+  /** クリックしたピース（atlas.json のピースの番号）。世俗化の割合などピースごとの値を引くのに使う */
+  piece?: number;
 }
 
 export interface MapCallbacks {
@@ -183,7 +195,7 @@ export class AtlasMap {
       const i = f ? Number(f.id) : -1;
       if (this.debug) this.cb.onPiece?.(i >= 0 ? this.geoms[i].properties! : null);
       if (isDist(this.layer)) {
-        this.cb.onReligion?.(i >= 0 ? { region: this.relRegion[i], place: this.geoms[i].properties!.name } : null);
+        this.cb.onReligion?.(i >= 0 ? { region: this.relRegion[i], place: this.geoms[i].properties!.name, piece: this.atlasIdx[i] >= 0 ? this.atlasIdx[i] : undefined } : null);
         return;
       }
       const o = i >= 0 ? this.ownerOf[i] : -1;
@@ -306,7 +318,7 @@ export class AtlasMap {
       type: "fill",
       source: "rel-hatch",
       layout: { visibility: "none" },
-      paint: { "fill-pattern": ["get", "pat"] },
+      paint: { "fill-pattern": ["get", "pat"], "fill-opacity": ["coalesce", ["get", "op"], 1] },
     });
     // 湖と川（塗りより上、国境線より下）。データは地図の初回表示の後に読み込む（loadWater）
     map.addLayer({ id: "lakes", type: "fill", source: "lakes", paint: { "fill-color": SEA } });
@@ -1030,13 +1042,15 @@ export class AtlasMap {
       const main = s ? s[1] : -1;
       this.relMain[i] = main;
       this.relRegion[i] = s ? s[3] : -1;
-      const color = main >= 0 ? kinds[main].color : null;
+      // 世俗化した地域は、宗派の色を地の色に寄せて薄くする
+      const sec = s && s[4] ? s[4] : 0;
+      const color = main >= 0 ? secularColor(kinds[main].color, sec) : null;
       if (color !== this.relColorOf[i]) {
         this.map.setFeatureState({ source: "pieces", id: i }, { r: color });
         this.relColorOf[i] = color;
       }
       if (s && s[2] >= 0) {
-        const k = `${s[2]}`;
+        const k = `${s[2]}:${Math.round(sec * 10)}`;
         let g = groups.get(k);
         if (!g) groups.set(k, (g = []));
         g.push(i);
@@ -1044,8 +1058,11 @@ export class AtlasMap {
     }
     // 少数派の斜線（同じ minor のピースを結合）
     const hatch: Feature[] = [];
-    for (const [minor, ps] of groups) {
-      hatch.push({ type: "Feature", properties: { pat: `${key}-hatch-${minor}` }, geometry: this.merged(`${key}h${minor}`, ps).geo });
+    for (const [k, ps] of groups) {
+      const [minor, sec10] = k.split(":");
+      // 斜線も、世俗化の度合いに合わせて薄くする
+      const op = 1 - secularFade(Number(sec10) / 10);
+      hatch.push({ type: "Feature", properties: { pat: `${key}-hatch-${minor}`, op }, geometry: this.merged(`${key}h${k}`, ps).geo });
     }
     this.setData("rel-hatch", { type: "FeatureCollection", features: hatch });
 
@@ -1114,12 +1131,13 @@ export class AtlasMap {
    * いま分布の表示で描いている種類（凡例用。データのないピースがあれば nodata = true）。
    * onScreen なら、画面に見えているピースだけを数える（地図の準備前は全体）
    */
-  religionKindsShown(onScreen = false): { kinds: number[]; minors: boolean; nodata: boolean; pending: boolean } {
+  religionKindsShown(onScreen = false): { kinds: number[]; minors: boolean; nodata: boolean; pending: boolean; secular: boolean } {
     const key: DistKey = isDist(this.layer) ? this.layer : "religion";
     const set = new Set<number>();
     let nodata = false;
     let pending = false;
     let minors = false;
+    let secular = false;
     let visible: Iterable<number> | null = null;
     if (onScreen && this.loaded) {
       const seen = new Set<number>();
@@ -1135,12 +1153,13 @@ export class AtlasMap {
         continue;
       }
       set.add(s[1]);
+      if (s[4] && s[4] >= 0.2) secular = true;
       if (s[2] >= 0) {
         minors = true;
         set.add(s[2]); // minor にしか出てこない種類も凡例に入れる
       }
     }
-    return { kinds: [...set].sort((a, b) => a - b), minors, nodata, pending };
+    return { kinds: [...set].sort((a, b) => a - b), minors, nodata, pending, secular };
   }
 
   /** 宗教表示で選んでいる地域（枠で強調する）。-1 で解除 */
@@ -1708,7 +1727,9 @@ export class AtlasMap {
     if (!e) return `${DIST_LABEL[key]}データ未整備`;
     const d = this.idx.dist(key)!;
     const nm = (id: string | null | undefined) => d.kinds.find((k) => k.id === id)?.name ?? id ?? "";
-    return `${d.regions[r].name}：${nm(e.main)}${e.minor ? `（${nm(e.minor)}も多い）` : ""}`;
+    const s = key === "religion" && this.atlasIdx[i] >= 0 ? this.idx.distState(key, this.atlasIdx[i], this.year)?.[4] : 0;
+    const sec = s ? `・宗教離れ${secularText(s)}` : "";
+    return `${d.regions[r].name}：${nm(e.main)}${e.minor ? `（${nm(e.minor)}も多い）` : ""}${sec}`;
   }
 
   /** 川と湖を読み込む（地図の初回表示の後に呼ぶ） */
@@ -1987,6 +2008,17 @@ function hatchImage(color: string, size: number, weight = 0.25): ImageData {
 }
 
 /** 少数派の斜線の色：凡例の色を少し濃くして、淡い塗りの上でも見えるようにする */
+/** 世俗化の割合 s の地域で、宗派の色 color をどこまで薄くして塗るか */
+export function secularColor(color: string, s: number): string {
+  return s > 0 ? mix(color, SECULAR_GROUND, 1 - secularFade(s)) : color;
+}
+
+/** 世俗化の割合を「約6割」のような言い方にする */
+export function secularText(s: number): string {
+  if (s < 0.1) return "わずか";
+  return `約${Math.round(s * 10)}割`;
+}
+
 export function stripeColor(hex: string): string {
   const m = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(hex);
   if (!m) return hex;

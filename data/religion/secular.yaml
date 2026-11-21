@@ -1,0 +1,555 @@
+# 世俗化（無宗教・宗教離れ）の割合の目安（docs/religion-format.md の「世俗化」）
+#
+# ここに書く地域は「世俗化だけの地域」：timeline の項目に main を書かず secular だけを書く。
+# 多数派（main / minor）の判定には使わず、地図では下の宗派の色を secular に応じて薄くする。
+# 値は 0〜1 の大まかな目安（0.5 なら住民の半分程度が無宗教・宗教離れ）。統計・調査の数字をそのまま写すのではなく、
+# 「信仰がどのくらい弱まったか」を地図で見せるための目安として丸めている。
+# 重なったときは小さい地域が優先（secular: 0 と書けば、外側の大きい地域の値を打ち消せる）。
+# 各項目の値は次の項目の年まで続くので、元に戻るときは項目を足して値を下げる。
+
+# ---- ソ連（1922 年の成立以後。無神論の宣伝と教会の弾圧で、1930 年代に急速に進む） ----
+- id: sec_russia
+  name: ロシア（ソ連・ロシア連邦）
+  select:
+    iso: [RUS]
+  timeline:
+    - from: 1922
+      secular: 0.15
+      note: ソ連の成立。教会財産の没収と聖職者の弾圧が始まる
+    - from: 1930
+      secular: 0.4
+      note: 農業集団化と「戦闘的無神論者同盟」の運動で、教会の多くが閉鎖される
+    - from: 1937
+      secular: 0.5
+      note: 大粛清で聖職者の多くが処刑・投獄される（1937年の国勢調査でも、なお住民の過半が信者と答えた）
+      source: "https://ja.wikipedia.org/wiki/ソビエト連邦における宗教"
+    - from: 1943
+      secular: 0.45
+      note: 独ソ戦の中でスターリンが正教会と和解し、総主教座が復活する
+    - from: 1959
+      secular: 0.6
+      note: フルシチョフの反宗教運動で、再び多くの教会が閉鎖される
+    - from: 1988
+      secular: 0.45
+      note: ルーシの洗礼千年祭。ペレストロイカの中で教会の活動が認められる
+    - from: 1991
+      secular: 0.3
+      note: ソ連の解体。正教会の復興が進むが、信仰を実践する人は少ない
+- id: sec_russia_muslim
+  name: ロシアのムスリム地域（タタールスタン・バシコルトスタン・北カフカス）
+  select:
+    adm1: ["RUS/Tatarstan", "RUS/Bashkortostan", "RUS/Dagestan", "RUS/Chechnya", "RUS/Ingushetia", "RUS/Kabardino-Balkaria", "RUS/Karachay-Cherkessia"]
+  timeline:
+    - from: 1922
+      secular: 0.1
+    - from: 1930
+      secular: 0.3
+      note: モスクとマドラサの多くが閉鎖される
+    - from: 1959
+      secular: 0.4
+    - from: 1991
+      secular: 0.15
+      note: ソ連の解体後、モスクの再建とイスラームの復興が進む
+- id: sec_kaliningrad
+  name: カリーニングラード（旧東プロイセン北部）
+  select:
+    adm1: ["RUS/Kaliningrad"]
+  timeline:
+    - from: 1922
+      secular: 0.05
+      note: 1945年まではドイツ領（東プロイセン）
+    - from: 1947
+      secular: 0.6
+      note: ドイツ人が追放され、ソ連各地からの移住者の町になる
+    - from: 1991
+      secular: 0.4
+- id: sec_karelian_isthmus
+  name: カレリア地峡とラドガ湖北岸（1940年までフィンランド領）
+  select:
+    regions: [rel_kexholm]
+  timeline:
+    - from: 1922
+      secular: 0
+      note: フィンランド領（ルター派）
+    - from: 1945
+      secular: 0.55
+      note: フィンランド人が退去し、ソ連の住民に入れ替わる
+    - from: 1991
+      secular: 0.3
+- id: sec_ukraine
+  name: ウクライナ（ソ連時代からのソ連領）
+  select:
+    iso: [UKR]
+  timeline:
+    - from: 1922
+      secular: 0.1
+    - from: 1930
+      secular: 0.35
+      note: 集団化と飢饉（ホロドモール）の中で、教会が閉鎖される
+    - from: 1959
+      secular: 0.45
+    - from: 1991
+      secular: 0.2
+      note: 独立。正教会・ギリシア＝カトリック教会が復興する
+- id: sec_ukraine_west
+  name: ウクライナ西部（ガリツィア・ヴォルィーニ・ザカルパッチャ・ブコヴィナ）
+  select:
+    adm1: ["UKR/Lviv Oblast", "UKR/Ternopil Oblast", "UKR/Ivano-Frankivsk Oblast", "UKR/Volyn Oblast", "UKR/Rivne Oblast", "UKR/Zakarpattia Oblast", "UKR/Chernivtsi Oblast"]
+  timeline:
+    - from: 1922
+      secular: 0
+      note: 両大戦間はポーランド・チェコスロヴァキア・ルーマニア領
+    - from: 1946
+      secular: 0.15
+      note: ソ連がギリシア＝カトリック教会を廃止し正教会に合同させる（地下教会として残る）
+    - from: 1959
+      secular: 0.25
+    - from: 1991
+      secular: 0.05
+      note: ギリシア＝カトリック教会が公認され、信仰が強く復活する
+- id: sec_belarus
+  name: ベラルーシ
+  select:
+    iso: [BLR]
+  timeline:
+    - from: 1922
+      secular: 0.1
+    - from: 1930
+      secular: 0.35
+    - from: 1959
+      secular: 0.5
+    - from: 1991
+      secular: 0.3
+- id: sec_belarus_west
+  name: ベラルーシ西部（両大戦間はポーランド領）
+  select:
+    adm1: ["BLR/Brest", "BLR/Grodno"]
+  timeline:
+    - from: 1922
+      secular: 0
+    - from: 1945
+      secular: 0.25
+    - from: 1959
+      secular: 0.4
+    - from: 1991
+      secular: 0.2
+- id: sec_moldova
+  name: モルドヴァ（ベッサラビア）
+  select:
+    iso: [MDA]
+  timeline:
+    - from: 1945
+      secular: 0.3
+      note: ソ連領に戻る（1940年に併合、1944年に再占領）
+    - from: 1959
+      secular: 0.45
+    - from: 1991
+      secular: 0.1
+- id: sec_estonia
+  name: エストニア
+  select:
+    iso: [EST]
+  timeline:
+    - from: 1925
+      secular: 0.1
+      note: 独立後、国家と教会が分離される
+    - from: 1945
+      secular: 0.4
+      note: ソ連に併合される
+    - from: 1959
+      secular: 0.6
+    - from: 1975
+      secular: 0.7
+      note: 教会の堅信礼に代わり、世俗の「成人式」が広まる
+    - from: 2000
+      secular: 0.75
+      note: ヨーロッパでもっとも宗教離れの進んだ国の一つ
+- id: sec_latvia
+  name: ラトヴィア
+  select:
+    iso: [LVA]
+  timeline:
+    - from: 1945
+      secular: 0.3
+    - from: 1959
+      secular: 0.5
+    - from: 1991
+      secular: 0.35
+- id: sec_lithuania
+  name: リトアニア
+  select:
+    iso: [LTU]
+  timeline:
+    - from: 1945
+      secular: 0.15
+      note: カトリック教会はソ連時代も地下出版などで抵抗を続ける
+    - from: 1959
+      secular: 0.3
+    - from: 1991
+      secular: 0.1
+- id: sec_caucasus_christian
+  name: ジョージア・アルメニア
+  select:
+    iso: [GEO, ARM]
+  timeline:
+    - from: 1922
+      secular: 0.1
+    - from: 1930
+      secular: 0.35
+    - from: 1959
+      secular: 0.45
+    - from: 1991
+      secular: 0.15
+    - from: 2005
+      secular: 0.05
+      note: 独立後、教会が民族の象徴として強く復活する
+- id: sec_azerbaijan
+  name: アゼルバイジャン
+  select:
+    iso: [AZE]
+  timeline:
+    - from: 1922
+      secular: 0.1
+    - from: 1930
+      secular: 0.35
+    - from: 1959
+      secular: 0.5
+    - from: 1991
+      secular: 0.35
+      note: 独立後も世俗的な国家と社会が続く
+- id: sec_central_asia
+  name: 中央アジア（カザフ・ウズベク・トルクメン・キルギス・タジク）
+  select:
+    iso: [KAZ, UZB, TKM, KGZ, TJK]
+  timeline:
+    - from: 1925
+      secular: 0.1
+    - from: 1930
+      secular: 0.3
+      note: モスクの閉鎖、女性のヴェールを取らせる運動（フジュム）
+    - from: 1959
+      secular: 0.4
+    - from: 1991
+      secular: 0.15
+
+# ---- 東欧の共産圏（1945〜50 年ごろから 1989 年まで） ----
+- id: sec_czech
+  name: チェコ（ボヘミア・モラヴィア）
+  select:
+    iso: [CZE]
+  timeline:
+    - from: 1920
+      secular: 0.1
+      note: 独立後、「ローマから離れよ」の運動でカトリック教会を離れる人が増える（1921年に無宗教が約7%）
+    - from: 1950
+      secular: 0.4
+      note: 共産党政権が修道院を解散し、聖職者を国家の管理下に置く
+    - from: 1960
+      secular: 0.6
+    - from: 1990
+      secular: 0.65
+      note: ビロード革命後も宗教は回復しない
+    - from: 2010
+      secular: 0.75
+      note: 国勢調査で、信仰する宗教を答える人は2割ほど
+- id: sec_slovakia
+  name: スロヴァキア
+  select:
+    iso: [SVK]
+  timeline:
+    - from: 1950
+      secular: 0.15
+    - from: 1960
+      secular: 0.3
+    - from: 1990
+      secular: 0.15
+      note: カトリックの信仰が強く残り、体制転換後に復活する
+    - from: 2010
+      secular: 0.2
+- id: sec_east_germany
+  name: 旧東ドイツ（ベルリンを含む）
+  select:
+    adm1: ["DEU/Berlin", "DEU/Brandenburg", "DEU/Mecklenburg-Vorpommern", "DEU/Sachsen", "DEU/Sachsen-Anhalt", "DEU/Thüringen"]
+  timeline:
+    - from: 1920
+      secular: 0.1
+      note: ベルリン・ザクセンなど労働者の多い地域で、教会を離れる人が増える
+    - from: 1950
+      secular: 0.2
+    - from: 1960
+      secular: 0.45
+      note: 堅信礼に代わる「青年式（ユーゲントヴァイエ）」が広まり、教会を離れる人が急増する
+    - from: 1970
+      secular: 0.6
+    - from: 1990
+      secular: 0.7
+      note: ドイツ統一。教会に属さない人が住民の多数のまま
+    - from: 2010
+      secular: 0.75
+- id: sec_poland
+  name: ポーランド
+  select:
+    iso: [POL]
+  timeline:
+    - from: 1950
+      secular: 0.05
+      note: 共産党政権下でもカトリック教会が強い力を保つ
+    - from: 2010
+      secular: 0.1
+    - from: 2020
+      secular: 0.15
+      note: 若い世代を中心に宗教離れが進む
+- id: sec_hungary
+  name: ハンガリー
+  select:
+    iso: [HUN]
+  timeline:
+    - from: 1950
+      secular: 0.2
+      note: 修道会の解散。ミンドセンティ枢機卿の投獄（1949）
+    - from: 1960
+      secular: 0.4
+    - from: 1980
+      secular: 0.5
+    - from: 1990
+      secular: 0.4
+- id: sec_romania
+  name: ルーマニア
+  select:
+    iso: [ROU]
+  timeline:
+    - from: 1948
+      secular: 0.1
+      note: ギリシア＝カトリック教会が廃止される。正教会は体制のもとで存続する
+    - from: 1960
+      secular: 0.2
+    - from: 1990
+      secular: 0.03
+      note: 体制転換後、ヨーロッパでもっとも信仰の篤い国の一つになる
+- id: sec_bulgaria
+  name: ブルガリア
+  select:
+    iso: [BGR]
+  timeline:
+    - from: 1946
+      secular: 0.15
+    - from: 1960
+      secular: 0.4
+    - from: 1980
+      secular: 0.5
+    - from: 1990
+      secular: 0.3
+- id: sec_croatia
+  name: クロアチア
+  select:
+    iso: [HRV]
+  timeline:
+    - from: 1946
+      secular: 0.1
+    - from: 1960
+      secular: 0.25
+    - from: 1990
+      secular: 0.1
+      note: 独立とともにカトリックが民族の象徴として復活する
+- id: sec_slovenia
+  name: スロヴェニア
+  select:
+    iso: [SVN]
+  timeline:
+    - from: 1946
+      secular: 0.15
+    - from: 1960
+      secular: 0.3
+    - from: 1990
+      secular: 0.25
+    - from: 2010
+      secular: 0.3
+- id: sec_yugoslavia_other
+  name: セルビア・ボスニア・モンテネグロ・北マケドニア・コソヴォ
+  select:
+    iso: [SRB, BIH, MNE, MKD, XKX]
+  timeline:
+    - from: 1946
+      secular: 0.15
+      note: ユーゴスラヴィア共産党政権。宗教教育の禁止、教会・モスクの財産の没収
+    - from: 1960
+      secular: 0.35
+    - from: 1990
+      secular: 0.1
+      note: ユーゴスラヴィアの解体の中で、宗教が民族の目印として復活する
+- id: sec_albania
+  name: アルバニア
+  select:
+    iso: [ALB]
+  timeline:
+    - from: 1946
+      secular: 0.15
+      note: ホジャの共産党政権
+    - from: 1967
+      secular: 0.6
+      note: 世界初の「無神国家」を宣言し、教会・モスクをすべて閉鎖する（宗教活動そのものが禁止）
+      source: "https://ja.wikipedia.org/wiki/アルバニアにおける宗教"
+    - from: 1990
+      secular: 0.2
+      note: 宗教活動が再び認められる
+    - from: 2010
+      secular: 0.15
+
+# ---- トルコ（ケマル・アタテュルクの世俗主義） ----
+- id: sec_turkey
+  name: トルコ
+  select:
+    iso: [TUR]
+  timeline:
+    - from: 1924
+      secular: 0.2
+      note: カリフ制の廃止（1924）、修道場の閉鎖、アラビア文字の廃止（1928）、憲法からイスラームを国教とする条文を削除（1928）。国家の世俗化で、民衆の信仰は根強く残る
+    - from: 1950
+      secular: 0.1
+      note: 民主党政権でアラビア語のアザーンが復活するなど、宗教への規制がゆるむ
+    - from: 1985
+      secular: 0.05
+
+# ---- 西欧（1960〜70 年代以後の世俗化） ----
+- id: sec_france
+  name: フランス
+  select:
+    iso: [FRA, MCO, AND]
+  timeline:
+    - from: 1905
+      secular: 0.1
+      note: 政教分離法。教会と国家が分離される（ライシテ）
+      source: "https://ja.wikipedia.org/wiki/政教分離法_(フランス)"
+    - from: 1970
+      secular: 0.2
+      note: 1968年の五月危機の後、ミサに通う人が急減する
+    - from: 1990
+      secular: 0.3
+    - from: 2000
+      secular: 0.4
+    - from: 2015
+      secular: 0.45
+- id: sec_netherlands
+  name: オランダ
+  select:
+    iso: [NLD]
+  timeline:
+    - from: 1930
+      secular: 0.15
+      note: 国勢調査で無宗教が約14%（ヨーロッパでは早くから多い）
+    - from: 1960
+      secular: 0.2
+    - from: 1970
+      secular: 0.3
+      note: 「柱状化」（宗派ごとの政党・学校・新聞）が崩れ始める
+    - from: 1990
+      secular: 0.5
+    - from: 2015
+      secular: 0.55
+- id: sec_belgium_lux
+  name: ベルギー・ルクセンブルク
+  select:
+    iso: [BEL, LUX]
+  timeline:
+    - from: 1970
+      secular: 0.15
+    - from: 1990
+      secular: 0.3
+    - from: 2010
+      secular: 0.35
+- id: sec_britain
+  name: イギリス
+  select:
+    iso: [GBR]
+  timeline:
+    - from: 1970
+      secular: 0.15
+    - from: 1990
+      secular: 0.3
+    - from: 2010
+      secular: 0.45
+    - from: 2020
+      secular: 0.5
+      note: 国勢調査で「無宗教」が約37%（イングランド・ウェールズ、2021）
+- id: sec_ireland
+  name: アイルランド
+  select:
+    iso: [IRL]
+  timeline:
+    - from: 1990
+      secular: 0.05
+    - from: 2010
+      secular: 0.1
+      note: 聖職者による虐待の問題が明るみに出て、教会の権威が揺らぐ
+    - from: 2020
+      secular: 0.15
+- id: sec_nordic
+  name: 北欧（スウェーデン・デンマーク・ノルウェー）
+  select:
+    iso: [SWE, DNK, NOR]
+  timeline:
+    - from: 1970
+      secular: 0.25
+      note: 国教会の会員は多いが、礼拝に通う人はごく少ない
+    - from: 1990
+      secular: 0.4
+    - from: 2010
+      secular: 0.5
+- id: sec_finland_iceland
+  name: フィンランド・アイスランド
+  select:
+    iso: [FIN, ISL]
+  timeline:
+    - from: 1970
+      secular: 0.15
+    - from: 1990
+      secular: 0.25
+    - from: 2010
+      secular: 0.35
+- id: sec_west_germany
+  name: ドイツ（旧西ドイツ）
+  select:
+    iso: [DEU]
+  timeline:
+    - from: 1970
+      secular: 0.15
+    - from: 1990
+      secular: 0.25
+    - from: 2010
+      secular: 0.35
+- id: sec_austria_swiss
+  name: オーストリア・スイス
+  select:
+    iso: [AUT, CHE, LIE]
+  timeline:
+    - from: 1970
+      secular: 0.1
+    - from: 1990
+      secular: 0.2
+    - from: 2010
+      secular: 0.3
+- id: sec_spain
+  name: スペイン
+  select:
+    iso: [ESP]
+  timeline:
+    - from: 1978
+      secular: 0.1
+      note: フランコの死後、新憲法でカトリックが国教でなくなる
+    - from: 1990
+      secular: 0.2
+    - from: 2010
+      secular: 0.3
+    - from: 2020
+      secular: 0.35
+- id: sec_portugal_italy
+  name: ポルトガル・イタリア
+  select:
+    iso: [PRT, ITA, SMR]
+  timeline:
+    - from: 1975
+      secular: 0.1
+    - from: 2000
+      secular: 0.15
+    - from: 2015
+      secular: 0.2
