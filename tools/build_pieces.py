@@ -4,12 +4,20 @@
   - geoBoundaries CGAZ ADM1 / ADM2（国境が全世界で整合済み）
   - 一部の国だけ、より細かい geoBoundaries の国別データ（pieces_config.json の "fine"）
 
+範囲:
+  - pieces_config.json の bbox（ヨーロッパと周辺）の中は、国ごとの設定（ADM2・細かいデータ・
+    adm2_within・split・clip）で細かく作る（zone=eu）。bbox の端で切られる区画も、形は切らずに全体を使う。
+  - bbox の外（全世界）は CGAZ ADM1 を基本にする（zone=world）。bbox にかかる国で ADM2 を使う国は、
+    範囲外の ADM2 を親の ADM1 ごとにまとめる。
+
 出力:
   - .cache/pieces_raw.geojson（簡略化前）。この後 mapshaper で位相を整理・簡略化して
     public/data/pieces.topo.json を作る（tools/build_pieces.sh）。
 
 ピースの ID は「国コード-名前のスラッグ」。所属データがこの ID を参照するので、
 一度決めた ID は変えないこと（変える場合は data/ 側も一括で書き換える）。
+zone=eu の ID は、全世界に広げる前と同じ手順（bbox で切った形の重心で同名を並べる）で決める。
+zone=world の ID は、zone=eu の ID と重ならないように後から付ける。
 """
 
 import json
@@ -38,10 +46,31 @@ def slug(s: str) -> str:
     return s or "x"
 
 
-def read_cgaz(level: str, bbox) -> gpd.GeoDataFrame:
+def read_cgaz(level: str, bbox=None) -> gpd.GeoDataFrame:
     g = gpd.read_file(SRC / "cgaz" / f"geoBoundariesCGAZ_{level}.shp", bbox=bbox, engine="pyogrio")
     g["level"] = level
     return g
+
+
+def country_base(iso, cfg, adm1, adm2):
+    """国のピースの元になる区画（設定の行政レベル）。行ごとに level（ADM1/ADM2）を持つ"""
+    lvl = cfg["cgaz_level"].get(iso, cfg["default_level"])
+    base = (adm1 if lvl == "ADM1" else adm2)
+    base = base[base.shapeGroup == iso]
+    if len(base) == 0:
+        base = adm1[adm1.shapeGroup == iso]
+        lvl = "ADM1"
+    if iso in cfg.get("adm2_within", {}):
+        names = set(cfg["adm2_within"][iso])
+        a1c = adm1[adm1.shapeGroup == iso]
+        keep = a1c[~a1c.shapeName.isin(names)]
+        a2c = adm2[adm2.shapeGroup == iso]
+        pts = gpd.GeoDataFrame(a2c[["shapeName"]], geometry=a2c.geometry.representative_point(), crs=a2c.crs)
+        inside = gpd.sjoin(pts, a1c[a1c.shapeName.isin(names)][["geometry"]], predicate="within")
+        sub = a2c.loc[sorted(set(inside.index))]
+        base = pd.concat([keep, sub])
+        lvl = "ADM1+ADM2"
+    return base, lvl
 
 
 def main():
@@ -50,32 +79,20 @@ def main():
     clip = box(w, s, e, n)
     bbox = (w, s, e, n)
 
+    # ---- 範囲内（zone=eu）：全世界に広げる前と同じ手順。ID もここで決める ----
     adm1 = read_cgaz("ADM1", bbox)
     adm2 = read_cgaz("ADM2", bbox)
     countries = sorted(set(adm1.shapeGroup) | set(adm2.shapeGroup))
 
     parts = []
+    used = set()  # 範囲内のピースに使った CGAZ の区画（shapeID）
     for iso in countries:
-        lvl = cfg["cgaz_level"].get(iso, cfg["default_level"])
-        base = (adm1 if lvl == "ADM1" else adm2)
-        base = base[base.shapeGroup == iso]
-        if len(base) == 0:
-            base = adm1[adm1.shapeGroup == iso]
-            lvl = "ADM1"
-        if iso in cfg.get("adm2_within", {}):
-            names = set(cfg["adm2_within"][iso])
-            a1c = adm1[adm1.shapeGroup == iso]
-            keep = a1c[~a1c.shapeName.isin(names)]
-            a2c = adm2[adm2.shapeGroup == iso]
-            pts = gpd.GeoDataFrame(a2c[["shapeName"]], geometry=a2c.geometry.representative_point(), crs=a2c.crs)
-            inside = gpd.sjoin(pts, a1c[a1c.shapeName.isin(names)][["geometry"]], predicate="within")
-            sub = a2c.loc[sorted(set(inside.index))]
-            base = pd.concat([keep, sub])
-            lvl = "ADM1+ADM2"
+        base, lvl = country_base(iso, cfg, adm1, adm2)
         if iso in cfg["fine"]:
             parts.append(build_fine(iso, cfg["fine"][iso], base))
+            used |= set(base.shapeID)
         else:
-            b = base[["shapeName", "geometry"]].copy()
+            b = base[["shapeName", "shapeID", "geometry"]].copy()
             b["iso"] = iso
             b["src"] = f"geoBoundaries CGAZ {lvl}"
             parts.append(b)
@@ -84,15 +101,18 @@ def main():
     g = apply_splits(g, cfg.get("split", []))
     for spec in cfg.get("clip", []):
         g = apply_clip(g, spec)
-    g["geometry"] = g.geometry.make_valid().intersection(clip)
+    g["geometry"] = g.geometry.make_valid()
+    g["full"] = g.geometry  # bbox で切る前の形（地図にはこちらを使う）
+    g["geometry"] = g.geometry.intersection(clip)
     g = g[~g.geometry.is_empty & g.geometry.notna()]
     g = g[g.geometry.geom_type.isin(["Polygon", "MultiPolygon", "GeometryCollection"])]
     g["geometry"] = g.geometry.apply(polys_only)
     g = g[~g.geometry.is_empty]
-    # 面積が極端に小さい断片（bbox の端など）は捨てる
+    # 面積が極端に小さい断片（bbox の端など）は捨てる（その区画は範囲外のピースになる）
     g = g[g.to_crs("EPSG:3035").area > 2e5]
+    used |= set(g.shapeID.dropna())
 
-    # ID を付ける（同名は重心の西→東順で _2, _3 ...）
+    # ID を付ける（同名は bbox で切った形の重心の西→東順で _2, _3 ...）
     g["shapeName"] = g["shapeName"].fillna("").astype(str).replace("", "unnamed")
     g["cx"] = g.geometry.representative_point().x
     g = g.sort_values(["iso", "shapeName", "cx"]).reset_index(drop=True)
@@ -115,13 +135,78 @@ def main():
     j2 = gpd.sjoin(pts, a2, how="left", predicate="within")
     j2 = j2[~j2.index.duplicated()]
     g["adm2"] = j2["adm2"].where(j2["a2iso"] == g["iso"]).fillna("")
-    g = g.rename(columns={"shapeName": "name"})[["id", "name", "iso", "adm1", "adm2", "src", "geometry"]]
+    g["geometry"] = g["full"].apply(polys_only)
+    g = g.rename(columns={"shapeName": "name"})
+    g["zone"] = "eu"
+    g = g[["id", "name", "iso", "adm1", "adm2", "src", "zone", "geometry"]]
+    inner_countries = set(g.iso)
+
+    # ---- 範囲外（zone=world） ----
+    world = build_world(cfg, inner_countries, used, set(g.id))
+    g = gpd.GeoDataFrame(pd.concat([g, world], ignore_index=True), crs="EPSG:4326")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     g.to_file(OUT, driver="GeoJSON", engine="pyogrio")
+    print(f"pieces: {len(g)}（範囲内 {int((g.zone == 'eu').sum())}、範囲外 {int((g.zone == 'world').sum())}）", file=sys.stderr)
     counts = g.groupby("iso").size().sort_values(ascending=False)
-    print(f"pieces: {len(g)}", file=sys.stderr)
     print(counts.head(40).to_string(), file=sys.stderr)
+
+
+def build_world(cfg, inner_countries, used, taken):
+    """bbox の外のピース。範囲内のピースに使っていない CGAZ の区画から作る"""
+    adm1 = read_cgaz("ADM1")
+    adm2 = read_cgaz("ADM2")
+    adm1["geometry"] = adm1.geometry.make_valid()
+    rows = []
+    for iso in sorted(set(adm1.shapeGroup) | set(adm2.shapeGroup)):
+        if iso in inner_countries:
+            base, lvl = country_base(iso, cfg, adm1, adm2)
+        else:
+            base = adm1[adm1.shapeGroup == iso]
+            lvl = "ADM1"
+            if len(base) == 0:
+                base, lvl = adm2[adm2.shapeGroup == iso], "ADM2"
+        rest = base[~base.shapeID.isin(used)]
+        if len(rest) == 0:
+            continue
+        r1 = rest[rest.level == "ADM1"]
+        r2 = rest[rest.level == "ADM2"]
+        for t in r1.itertuples():
+            rows.append({"name": t.shapeName, "iso": iso, "adm1": t.shapeName, "src": "geoBoundaries CGAZ ADM1", "geometry": t.geometry})
+        if len(r2):
+            # ADM2 を使う国の範囲外の部分は、親の ADM1 ごとにまとめる（範囲外は粗くてよいので）
+            a1c = adm1[adm1.shapeGroup == iso][["shapeName", "geometry"]].rename(columns={"shapeName": "parent"})
+            pts = gpd.GeoDataFrame(r2[["shapeName"]], geometry=r2.geometry.representative_point(), crs=r2.crs)
+            j = gpd.sjoin(pts, a1c, how="left", predicate="within")
+            j = j[~j.index.duplicated()]
+            parent = j["parent"].fillna(r2["shapeName"])
+            single = iso not in inner_countries
+            for pname, grp in r2.groupby(parent):
+                geom = unary_union(grp.geometry.make_valid().values)
+                rows.append({"name": pname, "iso": iso, "adm1": "" if single else pname,
+                             "src": "geoBoundaries CGAZ ADM2（ADM1 ごとに結合）", "geometry": geom})
+    w = gpd.GeoDataFrame(rows, geometry="geometry", crs="EPSG:4326")
+    w["geometry"] = w.geometry.apply(polys_only)
+    w = w[~w.geometry.is_empty]
+    w["name"] = w["name"].fillna("").astype(str).replace("", "unnamed")
+    w["cx"] = w.geometry.representative_point().x
+    w = w.sort_values(["iso", "name", "cx"]).reset_index(drop=True)
+    ids = []
+    taken = set(taken)
+    for iso, name in zip(w.iso, w.name):
+        base_id = f"{iso}-{slug(name)}"
+        pid, k = base_id, 1
+        while pid in taken:
+            k += 1
+            pid = f"{base_id}_{k}"
+        taken.add(pid)
+        ids.append(pid)
+    w["id"] = ids
+    # adm1 が空のもの（ADM1 がない国）は名前を入れておく
+    w["adm1"] = w["adm1"].where(w["adm1"] != "", w["name"])
+    w["adm2"] = ""
+    w["zone"] = "world"
+    return w[["id", "name", "iso", "adm1", "adm2", "src", "zone", "geometry"]]
 
 
 def apply_splits(g, specs):
