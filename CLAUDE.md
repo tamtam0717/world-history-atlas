@@ -69,7 +69,7 @@
 ## 環境のメモ（クラウドセッション）
 
 - Python の地理系ライブラリは `/home/user/venv`（geopandas, shapely, pyogrio）。新しいセッションでは
-  `python3 -m venv /home/user/venv && /home/user/venv/bin/pip install geopandas pyogrio shapely pyarrow` で作り直す。
+  `python3 -m venv /home/user/venv && /home/user/venv/bin/pip install geopandas pyogrio shapely pyarrow pypinyin` で作り直す。
 - ネットワーク：raw.githubusercontent.com と media.githubusercontent.com（geoBoundaries）、npm は使える。Wikipedia・naciscdn.org・geoboundaries.org は bash からは使えない。
 - Playwright と Chromium は入っている（tools/snapshot.mjs で使う）。
 
@@ -90,6 +90,7 @@
   - 方針：枢軸国の戦後無効になった併合・保護領は occupied（斜線＋副ラベル）、ソ連のバルト・ポーランド東部は斜線なし、クリミア2014・2022以降は occupied、第一次大戦の占領は開始年から描く。
   - 言語は「民族」で塗る（田村さん決定）。宗教の世俗化は色を薄くして見せる（data/religion/secular.yaml の secular）。
   - 題名は「世界歴史地図」。全世界のピース（9,555）があり、データのない地域は現代の国境で淡く表示。
+  - 東アジアの準備（2026-11-21）：中国を地級（約340）に細分（tools/chn_pieces.py、pieces_config.json の chn）。CGAZ の中国は海岸が欠けている（遼東半島の先端・浦東・香港島など）ので Natural Earth で補った。租借地用に CHN-Dalian_urban（関東州）・CHN-Qingdao_urban（膠州湾）・CHN-Weihai_urban（威海衛）・CHN-Zhanjiang_urban（広州湾）、香港は _Hong_Kong_Island・_Kowloon と残り（新界、元の ID）。サハリンは RUS-Sakhalin_Oblast（北）・_South（北緯50度以南）・_North_Kurils・_South_Kurils（CGAZ にない南千島を Natural Earth で補う）。全9,870ピース。
 - 次の作業：全世界のデータ。東アジア（中国・日本・朝鮮）→ 南・東南アジア → 南北アメリカ → アフリカ → オセアニア（田村さん了承済み）。
   - ピースの分割が必要な既知の場所：ナゴルノ・カラバフ（アゼルバイジャンを郡単位に）、オイペン・マルメディ、ブリガ・テンダ、ザール、ベルリン東西、ニコシア。
 - 田村さんの決定（2026-11-20）：1815年のプファルツ・ラインヘッセンは暫定統治（斜線）のまま／出来事は約340件すべて残す／Pages 公開はレビュー指摘の修正が終わってから（その時点で手順を案内する）。

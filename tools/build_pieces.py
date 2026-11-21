@@ -7,7 +7,8 @@
 範囲:
   - pieces_config.json の bbox（ヨーロッパと周辺）の中は、国ごとの設定（ADM2・細かいデータ・
     adm2_within・split・clip）で細かく作る（zone=eu）。bbox の端で切られる区画も、形は切らずに全体を使う。
-  - bbox の外（全世界）は CGAZ ADM1 を基本にする（zone=world）。bbox にかかる国で ADM2 を使う国は、
+  - bbox の外（全世界）は CGAZ ADM1 を基本にする（zone=world）。中国は地級単位（tools/chn_pieces.py、
+    pieces_config.json の "chn"）。CGAZ に欠けている区画は Natural Earth で補う（"add_from_ne"）。bbox にかかる国で ADM2 を使う国は、
     範囲外の ADM2 を親の ADM1 ごとにまとめる。
 
 出力:
@@ -159,6 +160,12 @@ def build_world(cfg, inner_countries, used, taken, clip):
     adm1["geometry"] = adm1.geometry.make_valid()
     rows = []
     for iso in sorted(set(adm1.shapeGroup) | set(adm2.shapeGroup)):
+        if iso == "CHN" and "chn" in cfg:
+            # 中国は地級（地区・市）単位。専用の処理（tools/chn_pieces.py）
+            from chn_pieces import build_chn
+
+            rows.extend(build_chn(cfg, adm1, adm2).to_dict("records"))
+            continue
         if iso in inner_countries:
             base, lvl = country_base(iso, cfg, adm1, adm2)
         else:
@@ -186,6 +193,13 @@ def build_world(cfg, inner_countries, used, taken, clip):
                 rows.append({"name": pname, "iso": iso, "adm1": "" if single else pname,
                              "src": "geoBoundaries CGAZ ADM2（ADM1 ごとに結合）", "geometry": geom})
     w = gpd.GeoDataFrame(rows, geometry="geometry", crs="EPSG:4326")
+    w["adm2"] = w["adm2"].fillna("") if "adm2" in w else ""
+    for spec in cfg.get("add_from_ne", []):
+        w = add_from_ne(w, spec, adm1)
+    # 島などを別ピースに分ける（範囲内と同じ設定。範囲外のピースに当たるものだけが効く）
+    w = w.rename(columns={"name": "shapeName"})
+    w = apply_splits(w, cfg.get("split", []))
+    w = w.rename(columns={"shapeName": "name"})
     # 南極点のまわり（南緯 85 度より南）は、地図（Web メルカトルの範囲外）で形が崩れるので切り落とす
     w["geometry"] = w.geometry.make_valid().intersection(box(-180, -85, 180, 90))
     w["geometry"] = w.geometry.apply(polys_only)
@@ -208,7 +222,6 @@ def build_world(cfg, inner_countries, used, taken, clip):
     w["id"] = ids
     # adm1 が空のもの（ADM1 がない国）は名前を入れておく
     w["adm1"] = w["adm1"].where(w["adm1"] != "", w["name"])
-    w["adm2"] = ""
     w["zone"] = "world"
     return w[["id", "name", "iso", "adm1", "adm2", "src", "zone", "geometry"]]
 
@@ -225,10 +238,18 @@ def apply_splits(g, specs):
             polys = list(getattr(geom, "geoms", [geom]))
             for part in spec["parts"]:
                 bb = sbox(*part["bbox"])
-                taken = [p for p in polys if bb.contains(p.representative_point())]
-                if not taken:
-                    continue
-                polys = [p for p in polys if p not in taken]
+                if part.get("cut"):
+                    # bbox で切り取る（陸続きの部分を線で分ける）
+                    cur = MultiPolygon(polys)
+                    taken = [p for p in poly_list(cur.intersection(bb)) if p.area > 1e-9]
+                    if not taken:
+                        continue
+                    polys = poly_list(cur.difference(bb))
+                else:
+                    taken = [p for p in polys if bb.contains(p.representative_point())]
+                    if not taken:
+                        continue
+                    polys = [p for p in polys if p not in taken]
                 r = g.loc[idx].copy()
                 r["shapeName"] = f'{spec["name"]} {part["suffix"]}'
                 r["geometry"] = MultiPolygon(taken)
@@ -237,6 +258,25 @@ def apply_splits(g, specs):
     if rows:
         g = gpd.GeoDataFrame(pd.concat([g, gpd.GeoDataFrame(rows, crs=g.crs)], ignore_index=True), crs=g.crs)
     return g
+
+
+def add_from_ne(w, spec, adm1):
+    """CGAZ に欠けている区画（係争地など）を Natural Earth admin-1 から補い、既存のピースに足す。
+    bbox に代表点が入る Natural Earth の多角形のうち、CGAZ のどの区画とも重ならない部分を使う"""
+    ne = gpd.read_file(SRC / "ne_admin1.geojson", bbox=tuple(spec["bbox"]), engine="pyogrio")
+    ne = ne[ne.adm0_a3 == spec["ne_adm0"]]
+    bb = box(*spec["bbox"])
+    polys = []
+    for gm in ne.geometry.make_valid():
+        polys += [p for p in getattr(polys_only(gm), "geoms", [gm]) if bb.contains(p.representative_point())]
+    if not polys:
+        return w
+    cg = adm1[adm1.intersects(bb)]
+    extra = polys_only(unary_union(polys).difference(unary_union(cg.geometry.make_valid().values)))
+    m = (w.iso == spec["iso"]) & (w.name == spec["name"])
+    for idx in w[m].index:
+        w.at[idx, "geometry"] = polys_only(unary_union([w.at[idx, "geometry"], extra]))
+    return w
 
 
 def apply_clip(g, spec, cell=0.1):
@@ -272,6 +312,12 @@ def apply_clip(g, spec, cell=0.1):
                     best = others.index[int(np.argmin(others.geometry.distance(chunk).values))]
                 g.at[best, "geometry"] = unary_union([g.at[best, "geometry"], chunk])
     return g
+
+
+def poly_list(geom):
+    """形を Polygon のリストにする"""
+    g = polys_only(geom)
+    return [p for p in getattr(g, "geoms", [g]) if not p.is_empty]
 
 
 def polys_only(geom):
