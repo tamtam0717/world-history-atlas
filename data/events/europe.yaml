@@ -1,4 +1,4 @@
-# ヨーロッパ全体に関わる主な出来事（1648–1815）
+# ヨーロッパ全体に関わる主な出来事（1648–1914）
 # 地域ごとの出来事は events/<担当>.yaml に書く。ここにあるものは重複して書かない。
 
 - year: 1648
@@ -325,3 +325,471 @@
   polities: [france, habsburg, prussia, russia, britain, netherlands, german_confederation]
   importance: 1
   source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+
+# ---- 1815–1914 ----
+- year: 1815
+  date: "1815-09-26"
+  title: 神聖同盟と四国同盟
+  text: ロシア皇帝アレクサンドル1世の提唱で、キリスト教の精神による君主の連帯をうたう神聖同盟が結ばれた（イギリス・教皇・オスマン帝国は不参加）。11月にはイギリス・ロシア・オーストリア・プロイセンが四国同盟を結び、ウィーン体制を支えた。
+  polities: [russia, habsburg, prussia, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/神聖同盟"
+- year: 1818
+  title: アーヘン会議（五国同盟）
+  text: 連合軍のフランス占領が終わり、フランスが列強の協調に加わって五国同盟となった。列強が会議で国際問題を処理する「会議体制」の始まり。
+  polities: [france, britain, russia, habsburg, prussia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/アーヘン会議"
+- year: 1820
+  title: 南ヨーロッパの立憲革命と列強の干渉
+  text: スペイン・ナポリ・ポルトガル・ピエモンテで、憲法を求める軍人や自由主義者の革命が起きた。トロッパウ・ライバッハ会議の決定でオーストリア軍がナポリとピエモンテの革命を、1823年にはフランス軍がスペインの革命を鎮圧した。
+  polities: [spain, naples, portugal, savoy, habsburg, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/トロッパウ会議"
+- year: 1821
+  title: ギリシア独立戦争はじまる
+  text: ギリシア人がオスマン帝国に対して蜂起した。バイロンら西欧の知識人が支援に加わり（フィルヘレニズム）、ヨーロッパの世論を動かした。
+  polities: [ottoman, egypt, greece, russia, britain, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ギリシャ独立戦争"
+- year: 1823
+  date: "1823-12-02"
+  title: モンロー宣言とラテンアメリカ諸国の独立
+  text: スペイン・ポルトガルの植民地だった中南米で独立があいついだ。アメリカ合衆国のモンロー大統領はヨーロッパとアメリカ大陸の相互不干渉を宣言し、イギリスも市場の確保のため独立を支持して、ウィーン体制の干渉は新大陸には及ばなかった。
+  polities: [spain, portugal, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/モンロー主義"
+- year: 1825
+  date: "1825-09-27"
+  title: ストックトン・ダーリントン鉄道の開通
+  text: スティーヴンソンの蒸気機関車が走る世界初の公共鉄道。1830年のリヴァプール・マンチェスター鉄道の開通から、各国で鉄道建設が本格化した。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ストックトン・アンド・ダーリントン鉄道"
+- year: 1827
+  date: "1827-10-20"
+  title: ナヴァリノの海戦
+  text: イギリス・フランス・ロシアの連合艦隊が、オスマン帝国・エジプトの艦隊を撃破した。ギリシアの独立が決定的になった。
+  polities: [britain, france, russia, ottoman, egypt]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ナヴァリノの海戦"
+- year: 1830
+  date: "1830-02-03"
+  title: ロンドン議定書（ギリシアの独立承認）
+  text: イギリス・フランス・ロシアがギリシアの独立を決め、前年のアドリアノープル条約で敗れたオスマン帝国もこれを認めた。ウィーン体制のもとで、民族の独立が初めて認められた例となった。
+  polities: [greece, ottoman, britain, france, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ロンドン議定書_(1830年)"
+- year: 1830
+  date: "1830-07"
+  title: 七月革命
+  text: パリの民衆が蜂起してシャルル10世を追放し、ルイ＝フィリップが即位した（七月王政）。その影響でベルギーが独立し、ポーランド・イタリア・ドイツでも蜂起が起きて、ウィーン体制が揺らいだ。
+  polities: [france, belgium, netherlands, congress_poland, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/フランス7月革命"
+- year: 1831
+  title: 第1次エジプト＝トルコ戦争
+  text: エジプト総督ムハンマド・アリーがシリアの領有を求めてオスマン帝国と戦い、シリアを得た。ロシアは1833年のウンキャル・スケレッシ条約で海峡での優位を得て、イギリスが警戒を強めた（東方問題）。
+  polities: [egypt, ottoman, russia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/エジプト・トルコ戦争"
+- year: 1833
+  title: イギリス帝国の奴隷制廃止
+  text: 奴隷制度廃止法により、イギリスの植民地の奴隷制が廃止された（1834年施行）。フランスは1848年に奴隷制を廃止した。
+  polities: [britain, france]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833"
+- year: 1840
+  title: ロンドン条約（第2次エジプト＝トルコ戦争の処理）
+  text: イギリス・ロシア・オーストリア・プロイセンがオスマン帝国を支え、ムハンマド・アリーはシリアを返還してエジプトの世襲支配だけを認められた。フランスは孤立した。翌1841年の五国海峡協定で、平時の外国軍艦のボスフォラス・ダーダネルス海峡通過が禁じられた。
+  polities: [ottoman, egypt, britain, russia, habsburg, prussia, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ロンドン条約_(1840年)"
+- year: 1840
+  title: アヘン戦争
+  text: イギリスが清と戦い、1842年の南京条約で香港を得て5港を開かせた。ヨーロッパ列強によるアジア進出の転機となった。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アヘン戦争"
+- year: 1846
+  title: イギリスの穀物法廃止
+  text: 産業資本家を中心とする反穀物法同盟（コブデン・ブライト）の運動で、地主を守る穀物法が廃止された。1849年には航海法も廃止され、イギリスは自由貿易の時代に入った。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/穀物法"
+- year: 1848
+  date: "1848-02"
+  title: 1848年革命（諸国民の春）
+  text: パリの二月革命で七月王政が倒れ、第二共和政が成立した。3月にはウィーンとベルリンでも革命（三月革命）が起きてメッテルニヒが失脚し、ハンガリー・ボヘミア・イタリア・ドイツで民族運動と自由主義の運動が高まった。ウィーン体制は崩壊した。
+  polities: [france, habsburg, prussia, german_confederation, savoy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/1848年革命"
+- year: 1848
+  date: "1848-02"
+  title: 『共産党宣言』
+  text: マルクスとエンゲルスが共産主義者同盟の綱領として発表した。「万国の労働者よ、団結せよ」で結ばれ、のちの社会主義運動に大きな影響を与えた。
+  polities: [britain, prussia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/共産党宣言"
+- year: 1849
+  title: 1848年革命の終わり
+  text: フランクフルト国民議会のドイツ統一案はプロイセン王に拒まれ、ハンガリーの独立運動はロシア軍の介入で鎮圧され、ローマ共和国もフランス軍に倒された。各地で保守派が勢力を取り戻した。
+  polities: [prussia, habsburg, russia, france, papal_states, german_confederation]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/1848年革命"
+- year: 1851
+  date: "1851-05-01"
+  title: ロンドン万国博覧会
+  text: ロンドンのハイドパークに建てられた鉄とガラスの「水晶宮」で、世界初の万国博覧会が開かれた。「世界の工場」イギリスの工業力を示した。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ロンドン万国博覧会_(1851年)"
+- year: 1853
+  title: クリミア戦争はじまる
+  text: 聖地管理権の問題などから、南下を図るロシアがオスマン帝国と開戦した。翌年イギリス・フランスがオスマン側で参戦し、1855年にはサルデーニャも加わった。セヴァストーポリの攻防が続き、ナイチンゲールの看護活動でも知られる。
+  polities: [russia, ottoman, britain, france, savoy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/クリミア戦争"
+- year: 1856
+  date: "1856-03-30"
+  title: パリ条約（クリミア戦争の講和）
+  text: 黒海が中立化され、ロシアは南ベッサラビアをモルダヴィアに返し、ドナウ川の航行は自由化された。ロシアの南下は阻止され、ウィーン体制以来の列強の協調は崩れた。
+  polities: [russia, ottoman, britain, france, savoy, habsburg, prussia, moldavia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/パリ条約_(1856年)"
+- year: 1857
+  title: インド大反乱
+  text: 東インド会社のインド人傭兵（シパーヒー）の反乱が北インドに広がった。鎮圧後の1858年にムガル帝国は滅び、東インド会社は解散してインドはイギリス政府の直接統治となった。
+  polities: [britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/インド大反乱"
+- year: 1859
+  title: イタリア統一戦争
+  text: サルデーニャ王国が、プロンビエールの密約で結んだナポレオン3世のフランスと組んでオーストリアと戦い、ロンバルディアを得た。翌1860年、中部イタリアがサルデーニャに併合され、ガリバルディが両シチリア王国を征服してサルデーニャ王に献じた。
+  polities: [savoy, france, habsburg, naples]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/イタリア統一戦争"
+- year: 1859
+  date: "1859-11-24"
+  title: ダーウィン『種の起源』
+  text: 自然選択による生物の進化を論じた。キリスト教の世界観をゆるがし、社会進化論など思想にも大きな影響を与えた。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/種の起源"
+- year: 1860
+  date: "1860-01-23"
+  title: 英仏通商条約（コブデン＝シュヴァリエ条約）
+  text: イギリスとフランスが関税を大幅に引き下げた。これを手本に各国が通商条約を結び、1870年代までヨーロッパに自由貿易が広がった。
+  polities: [britain, france]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Cobden–Chevalier_Treaty"
+- year: 1861
+  date: "1861-03-17"
+  title: イタリア王国の成立
+  text: サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア王を名のった。ヴェネツィアとローマ（教皇領）はまだ含まれていなかった。
+  polities: [italy, savoy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/イタリア王国"
+- year: 1863
+  title: 赤十字国際委員会の創設
+  text: ソルフェリーノの戦いの惨状を見たデュナンの提唱で、ジュネーヴに設立された。翌1864年にはジュネーヴ条約で戦時の傷病兵と救護者の保護が定められた。
+  polities: [switzerland]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/赤十字国際委員会"
+- year: 1864
+  date: "1864-09-28"
+  title: 第1インターナショナル（国際労働者協会）
+  text: ロンドンで各国の労働者・社会主義者が結成した初の国際組織。マルクスが中心となったが、バクーニンらアナーキストとの対立やパリ＝コミューン後の弾圧で、1876年に解散した。
+  polities: [britain, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/国際労働者協会"
+- year: 1866
+  title: 普墺戦争（プロイセン＝オーストリア戦争）
+  text: ビスマルクのプロイセンが、7月のケーニヒグレーツ（サドワ）の戦いでモルトケの指揮のもとオーストリアに大勝した。プラハ条約でドイツ連邦は解体し、オーストリアはドイツ統一から除かれた。イタリアはプロイセン側で戦い、ヴェネツィアを得た。
+  polities: [prussia, habsburg, german_confederation, italy, hanover, saxony, bavaria]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/普墺戦争"
+- year: 1869
+  date: "1869-11-17"
+  title: スエズ運河の開通
+  text: フランス人レセップスがエジプトの協力で建設した。ヨーロッパとアジアの航路が大幅に短くなり、地中海の戦略的な価値が高まった。
+  polities: [egypt, france, britain, ottoman]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/スエズ運河"
+- year: 1870
+  date: "1870-07-19"
+  title: プロイセン＝フランス戦争（普仏戦争）はじまる
+  text: スペイン王位継承問題とエムス電報事件をきっかけに、フランスがプロイセンに宣戦した。南ドイツ諸国もプロイセン側で戦い、9月のセダンの戦いでナポレオン3世が捕らえられて第二帝政は崩壊した。
+  polities: [france, prussia, north_german_confederation, bavaria, wurttemberg, baden]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/普仏戦争"
+- year: 1870
+  date: "1870-09-20"
+  title: ローマ併合（イタリア統一の完成）
+  text: 普仏戦争でフランスの守備隊が去ったローマをイタリア軍が占領し、教皇領は消滅した。翌年ローマが首都となった。教皇は「ヴァティカンの囚人」を名のって抗議した（ローマ問題）。
+  polities: [italy, papal_states, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ローマ問題"
+- year: 1871
+  date: "1871-01-18"
+  title: ドイツ帝国の成立
+  text: パリ包囲中のヴェルサイユ宮殿鏡の間で、プロイセン王ヴィルヘルム1世がドイツ皇帝に即位した。南ドイツ諸国も加わり、オーストリアを除くドイツの統一（小ドイツ主義）が実現した。宰相はビスマルク。
+  polities: [german_empire, prussia, bavaria, wurttemberg, baden, saxony, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+- year: 1871
+  date: "1871-05-10"
+  title: フランクフルト講和条約
+  text: 普仏戦争の講和。フランスはアルザスとロレーヌの一部をドイツに割譲し、50億フランの賠償金を負った。フランスに対ドイツの復讐心が残り、ビスマルクはフランスを孤立させる外交を進めた。
+  polities: [german_empire, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/フランクフルト講和条約"
+- year: 1871
+  date: "1871-03-13"
+  title: ロンドン会議（黒海の中立化の破棄）
+  text: 普仏戦争中にロシアが黒海中立化条項の破棄を宣言し、列強はこれを認めた。ロシアは再び黒海に艦隊を置けるようになった。
+  polities: [russia, britain, ottoman, german_empire]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1871)"
+- year: 1873
+  title: 三帝同盟
+  text: ドイツ・オーストリア＝ハンガリー・ロシアの3皇帝が協調を約した。フランスを孤立させるビスマルク外交の柱だったが、バルカンでのオーストリアとロシアの対立で揺らいだ。
+  polities: [german_empire, habsburg, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/三帝同盟"
+- year: 1873
+  date: "1873-05"
+  title: 大不況のはじまり
+  text: ウィーンの株式市場の暴落から、ヨーロッパとアメリカに長い不況（1873〜1896年ごろ）が広がった。各国は保護関税に転じ、企業の集中と海外市場の獲得競争が進んだ。
+  polities: [habsburg, german_empire, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/1873年恐慌"
+- year: 1875
+  title: イギリスのスエズ運河会社株買収
+  text: ディズレーリ首相が、財政難のエジプトからスエズ運河会社の株を買い取った。インドへの道を確保するイギリスの帝国政策を象徴する出来事。
+  polities: [britain, egypt]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ベンジャミン・ディズレーリ"
+- year: 1877
+  title: ロシア＝トルコ戦争（露土戦争）
+  text: ボスニア・ヘルツェゴヴィナとブルガリアの蜂起をきっかけに、汎スラヴ主義をかかげるロシアがオスマン帝国と開戦した。ルーマニア・セルビア・モンテネグロもロシア側で戦った。
+  polities: [russia, ottoman, romania, serbia, montenegro]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/露土戦争_(1877年)"
+- year: 1877
+  title: インド帝国の成立
+  text: ヴィクトリア女王がインド皇帝を兼ねた。イギリス帝国主義の象徴。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/イギリス領インド帝国"
+- year: 1878
+  date: "1878-03-03"
+  title: サン＝ステファノ条約
+  text: 露土戦争の講和。ルーマニア・セルビア・モンテネグロが独立し、ロシアの保護下に大ブルガリアが自治国としてつくられることになった。ロシアの勢力拡大にイギリスとオーストリアが強く反対した。
+  polities: [russia, ottoman, bulgaria, romania, serbia, montenegro]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/サン・ステファノ条約"
+- year: 1878
+  date: "1878-07-13"
+  title: ベルリン会議（ベルリン条約）
+  text: ビスマルクが「誠実な仲介人」として列強の会議を主催し、サン＝ステファノ条約を改めた。ルーマニア・セルビア・モンテネグロの独立は認められたが、ブルガリアは縮小されてオスマン帝国の宗主権下の自治公国となった。オーストリアはボスニア・ヘルツェゴヴィナの行政権を、イギリスはキプロスを得た。ロシアの南下はまた阻まれた。
+  polities: [german_empire, russia, ottoman, britain, habsburg, bulgaria, romania, serbia, montenegro, greece]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1878年)"
+- year: 1879
+  date: "1879-10-07"
+  title: 独墺同盟
+  text: ベルリン会議後にロシアとの関係が冷えたドイツのビスマルクが、オーストリア＝ハンガリーの外相アンドラーシと、ロシアを仮想敵とする秘密の防御同盟を結んだ。1882年にイタリアが加わって三国同盟となり、1918年まで続いた。
+  polities: [german_empire, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/独墺同盟"
+- year: 1882
+  date: "1882-05-20"
+  title: 三国同盟
+  text: 1881年にフランスがチュニジアを保護国としたことに反発したイタリアが、ドイツ・オーストリア＝ハンガリーと同盟を結んだ。ビスマルク体制の中心となった。
+  polities: [german_empire, habsburg, italy, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/三国同盟_(1882年)"
+- year: 1884
+  date: "1884-11-15"
+  title: ベルリン会議（アフリカ分割）
+  text: ビスマルクの主催で、コンゴ問題をめぐり列強が会議を開いた（〜1885年）。「先に実効支配した国が領有する」原則（先占権）が確認され、列強のアフリカ分割が一気に進んだ。
+  polities: [german_empire, britain, france, belgium, portugal]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+- year: 1887
+  date: "1887-06-18"
+  title: 再保障条約
+  text: 三帝同盟がブルガリア問題で行きづまったため、ビスマルクがロシアと秘密に結んだ条約。フランスとロシアが組むのを防ぐ、ビスマルク外交の最後の柱だった。
+  polities: [german_empire, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/独露再保障条約"
+- year: 1889
+  date: "1889-07-14"
+  title: 第2インターナショナル
+  text: フランス革命100周年のパリで、各国の社会主義政党が結成した国際組織。ドイツ社会民主党が中心となり、メーデーを決めた。第一次世界大戦で各国の党が自国の戦争を支持して崩壊した。
+  polities: [france, german_empire]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第二インターナショナル"
+- year: 1889
+  title: パリ万国博覧会（エッフェル塔）
+  text: フランス革命100周年を記念する万博で、鉄骨のエッフェル塔が建てられた。
+  polities: [france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/パリ万国博覧会_(1889年)"
+- year: 1890
+  date: "1890-03-20"
+  title: ビスマルクの辞任と「新航路」
+  text: 若い皇帝ヴィルヘルム2世と対立したビスマルクが辞任した。ドイツは再保障条約の更新を拒み（「新航路」）、やがて「世界政策」と呼ばれる積極的な対外膨張に乗り出した。
+  polities: [german_empire, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/オットー・フォン・ビスマルク"
+- year: 1891
+  title: シベリア鉄道の建設はじまる
+  text: フランスからの借款にも支えられて建設が始まり、1904年にほぼ全線がつながった。ロシアの極東進出を支えた。
+  polities: [russia, france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/シベリア鉄道"
+- year: 1894
+  date: "1894-01-04"
+  title: 露仏同盟
+  text: 1891年の政治協定に続き、軍事協定が発効した。孤立していたフランスと、ドイツに見放されたロシアが結び、ドイツは東西から挟まれる形になった。フランスの資本がロシアの工業化を支えた。
+  polities: [france, russia, german_empire]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/露仏同盟"
+- year: 1896
+  date: "1896-04-06"
+  title: 第1回近代オリンピック（アテネ）
+  text: フランスのクーベルタンの提唱で、古代オリンピックの地アテネで開かれた。
+  polities: [greece, france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/1896年アテネオリンピック"
+- year: 1897
+  date: "1897-08-29"
+  title: 第1回シオニスト会議
+  text: ドレフュス事件に衝撃を受けたヘルツルの呼びかけで、スイスのバーゼルで開かれた。パレスチナにユダヤ人の「民族的郷土」をつくることを目標とした。
+  polities: [switzerland, ottoman]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/First_Zionist_Congress"
+- year: 1898
+  title: ドイツの艦隊法（建艦競争のはじまり）
+  text: ティルピッツの主導で大海軍の建設が始まった。イギリスはこれを脅威と見て、1906年の新型戦艦ドレッドノートの建造などで対抗し、英独の建艦競争が激しくなった。
+  polities: [german_empire, britain]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/German_Naval_Laws"
+- year: 1898
+  date: "1898-09"
+  title: ファショダ事件
+  text: アフリカ縦断政策のイギリスと横断政策のフランスの軍が、スーダンのファショダで衝突寸前となった。フランスが譲歩して解決し、両国の接近（英仏協商）のきっかけとなった。
+  polities: [britain, france, egypt]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ファショダ事件"
+- year: 1899
+  title: ハーグ万国平和会議
+  text: ロシア皇帝ニコライ2世の提唱でオランダのハーグに26か国が集まり、国際紛争の平和的処理と戦争の規則（ハーグ陸戦条約）を定め、常設仲裁裁判所を設けた。1907年に第2回が開かれた。
+  polities: [russia, netherlands]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ハーグ平和会議"
+- year: 1899
+  title: 南アフリカ戦争（ボーア戦争）
+  text: イギリスがトランスヴァール・オレンジ自由国のボーア人と戦った（〜1902年）。苦戦と国際的な批判から、イギリスは「光栄ある孤立」を見直した。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+- year: 1900
+  title: 義和団戦争と8か国の共同出兵
+  text: 「扶清滅洋」をかかげる義和団が北京の公使館を包囲し、日本・ロシア・イギリス・フランス・ドイツ・アメリカ・イタリア・オーストリアが出兵した。列強の中国進出が強まった。
+  polities: [britain, russia, france, german_empire, italy, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/義和団の乱"
+- year: 1902
+  date: "1902-01-30"
+  title: 日英同盟
+  text: ロシアの極東進出に備え、イギリスが日本と同盟を結んだ。イギリスは「光栄ある孤立」を捨てた。
+  polities: [britain, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/日英同盟"
+- year: 1904
+  date: "1904-04-08"
+  title: 英仏協商
+  text: イギリスのエジプト、フランスのモロッコでの優越を互いに認め合い、長年の植民地対立を解消した。ドイツに対抗する協力関係の始まり。
+  polities: [britain, france, egypt, morocco, german_empire]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/英仏協商"
+- year: 1904
+  date: "1904-02"
+  title: 日露戦争
+  text: 満洲・朝鮮をめぐって日本とロシアが戦った（〜1905年）。敗れたロシアでは1905年に革命（第1次ロシア革命）が起き、ロシアはバルカン方面への進出に目を向け直した。
+  polities: [russia, britain, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/日露戦争"
+- year: 1905
+  date: "1905-03-31"
+  title: 第1次モロッコ事件（タンジール事件）
+  text: ヴィルヘルム2世がモロッコのタンジールを訪れ、フランスのモロッコ進出に反対した。翌1906年のアルヘシラス会議ではイギリスなどがフランスを支持し、ドイツは孤立した。
+  polities: [german_empire, france, morocco, britain, spain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第一次モロッコ事件"
+- year: 1907
+  date: "1907-08-31"
+  title: 英露協商（三国協商の成立）
+  text: イラン・アフガニスタン・チベットでの勢力範囲を決め、イギリスとロシアが和解した。露仏同盟・英仏協商と合わせて三国協商となり、ドイツ中心の三国同盟と向かい合った。
+  polities: [britain, russia, persia, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/英露協商"
+- year: 1908
+  date: "1908-10"
+  title: ボスニア・ヘルツェゴヴィナ併合（ボスニア危機）とブルガリアの独立
+  text: 青年トルコ革命の混乱に乗じて、オーストリア＝ハンガリーがボスニア・ヘルツェゴヴィナを併合し、ブルガリアが完全独立を宣言した。セルビアとロシアは強く反発したが、ドイツの圧力で認めざるをえず、バルカンは「ヨーロッパの火薬庫」と呼ばれるようになった。
+  polities: [habsburg, ottoman, bulgaria, serbia, russia, german_empire]
+  importance: 1
+  source: "https://en.wikipedia.org/wiki/Bosnian_crisis"
+- year: 1911
+  date: "1911-07-01"
+  title: 第2次モロッコ事件（アガディール事件）
+  text: ドイツが砲艦をモロッコのアガディールに派遣してフランスに圧力をかけたが、イギリスがフランスを強く支持し、ドイツはコンゴの一部と引きかえにフランスのモロッコ支配を認めた。1912年、モロッコはフランスの保護国となった。
+  polities: [german_empire, france, morocco, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第二次モロッコ事件"
+- year: 1911
+  date: "1911-09-29"
+  title: イタリア＝トルコ戦争
+  text: イタリアがオスマン帝国と戦い、1912年のウシー条約（第1次ローザンヌ条約）でリビア（トリポリ・キレナイカ）を得て、ドデカネス諸島も占領した。オスマン帝国の弱さが明らかになり、バルカン戦争の引き金となった。
+  polities: [italy, ottoman]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/伊土戦争"
+- year: 1912
+  date: "1912-10"
+  title: 第1次バルカン戦争
+  text: ロシアの後押しで結ばれたバルカン同盟（セルビア・ブルガリア・ギリシア・モンテネグロ）がオスマン帝国と戦い、勝利した。1913年5月のロンドン条約で、オスマン帝国はイスタンブル周辺を除くヨーロッパ領のほぼすべてを失い、アルバニアの独立が認められた。
+  polities: [serbia, bulgaria, greece, montenegro, ottoman, albania, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第一次バルカン戦争"
+- year: 1913
+  date: "1913-08-10"
+  title: 第2次バルカン戦争とブカレスト条約
+  text: マケドニアの分け方に不満なブルガリアがセルビア・ギリシアを攻撃したが、ルーマニア・オスマン帝国も参戦して敗れた。ブカレスト条約でマケドニアは主にセルビアとギリシアに分けられ、ルーマニアは南ドブルジャを得た。敗れたブルガリアはドイツ・オーストリアに近づいた。
+  polities: [bulgaria, serbia, greece, romania, ottoman, montenegro]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第二次バルカン戦争"
+- year: 1914
+  date: "1914-06-28"
+  title: サライェヴォ事件
+  text: オーストリア＝ハンガリーの帝位継承者フランツ・フェルディナント夫妻が、ボスニアの州都サライェヴォでセルビア人の青年に暗殺された。
+  polities: [habsburg, serbia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/サラエボ事件"
+- year: 1914
+  date: "1914-07-28"
+  title: 第一次世界大戦はじまる
+  text: オーストリア＝ハンガリーがセルビアに宣戦し、同盟関係を通じてロシア・ドイツ・フランス・イギリスが次々に参戦した。ドイツが中立国ベルギーに侵攻したことがイギリスの参戦の理由となった。オスマン帝国は11月にドイツ側（同盟国）で参戦した。
+  polities: [habsburg, serbia, russia, german_empire, france, britain, belgium, montenegro, ottoman]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第一次世界大戦"
+- year: 1914
+  date: "1914-09"
+  title: マルヌの戦いとタンネンベルクの戦い
+  text: 西部戦線では、パリに迫ったドイツ軍がマルヌ川でフランス・イギリス軍に止められ、短期決戦の計画（シュリーフェン・プラン）は失敗して塹壕戦に入った。東部戦線では、ドイツ軍がタンネンベルクでロシア軍を破った。
+  polities: [german_empire, france, britain, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第一次マルヌ会戦"

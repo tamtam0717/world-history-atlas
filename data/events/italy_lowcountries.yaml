@@ -267,3 +267,351 @@
   polities: [habsburg, savoy, genoa]
   importance: 2
   source: "https://ja.wikipedia.org/wiki/ロンバルド＝ヴェネト王国"
+
+# ================================================================ 1816–1914（範囲の拡大）
+# europe.yaml にあるもの（七月革命、1848年革命、イタリア統一戦争、イタリア王国の成立、ローマ併合、普墺戦争、
+# 赤十字国際委員会、三国同盟、イタリア＝トルコ戦争など）と、germany_north.yaml のルクセンブルク危機は重複して書かない。
+
+# ---------------------------------------------------------------- 低地諸国
+- year: 1830
+  date: "1830-08-25"
+  title: ブリュッセルの蜂起（ベルギー独立革命）
+  text: ブリュッセルの劇場でのオペラ『ポルティチの唖娘』の上演をきっかけに暴動が起こり、オランダ支配への反乱に広がった。9月の市街戦でオランダ軍を退け、10月4日に臨時政府が独立を宣言した。
+  polities: [belgium, netherlands]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ベルギー独立革命"
+- year: 1831
+  date: "1831-07-21"
+  title: ベルギー憲法とレオポルド1世の即位
+  text: 国民会議が、国民主権・議会制・言論の自由を定めた当時もっとも自由主義的な憲法を制定し、ザクセン＝コーブルク家のレオポルドを国王に迎えた。
+  polities: [belgium, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/レオポルド1世_(ベルギー王)"
+- year: 1831
+  date: "1831-08"
+  title: 十日間戦役
+  text: オランダ軍がベルギーに攻め込んで勝ったが、フランス軍の介入で撤退した。翌1832年、フランス軍がアントウェルペンの城塞を包囲してオランダ守備隊を降伏させた。
+  polities: [netherlands, belgium, france]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Ten_Days'_Campaign"
+- year: 1830
+  title: ジャワで強制栽培制度が始まる
+  text: オランダ領東インドの総督ファン・デン・ボスが、農民にコーヒー・サトウキビ・藍などの輸出作物を栽培させて安く買い上げる制度を始めた。オランダ本国の財政を立て直したが、住民は飢饉に苦しんだ。
+  polities: [netherlands]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/強制栽培制度"
+- year: 1835
+  date: "1835-05-05"
+  title: ブリュッセル–メヘレン間の鉄道開通
+  text: ヨーロッパ大陸で最初の蒸気機関車による旅客鉄道の一つ。ベルギーは国の事業として鉄道網を整え、大陸でいち早く工業化した。
+  polities: [belgium]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Brussels–Mechelen_railway"
+- year: 1839
+  date: "1839-04-19"
+  title: ロンドン条約（ベルギーの独立承認と永世中立）
+  text: オランダがついにベルギーの独立を承認し、列強がベルギーの永世中立を保障した。リンブルフとルクセンブルクは東西に分けられた。1914年、ドイツはこの条約を「紙切れ」と呼んで中立を破った。
+  polities: [belgium, netherlands, luxembourg, britain, france, prussia, habsburg, russia]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1839)"
+- year: 1842
+  title: ルクセンブルクがドイツ関税同盟に加盟
+  text: 政治的にはオランダ王の大公国でありながら、経済ではドイツと結びついた。関税同盟への加盟は1918年まで続いた。
+  polities: [luxembourg, prussia]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Zollverein"
+- year: 1848
+  title: オランダの憲法改正（トルベッケ憲法）
+  text: 1848年革命の波を恐れた国王ウィレム2世が、自由主義者トルベッケの起草した憲法改正を認めた。大臣が議会に責任を負う議院内閣制となった。
+  polities: [netherlands]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Johan_Rudolph_Thorbecke"
+- year: 1860
+  title: 小説『マックス・ハーフェラール』
+  text: 元植民地官吏ムルタトゥーリが、ジャワの強制栽培制度の下での住民の苦しみを告発した小説。植民地政策の見直しのきっかけとなった。
+  polities: [netherlands]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Max_Havelaar"
+- year: 1873
+  title: アチェ戦争
+  text: オランダがスマトラ島北部のアチェ王国に攻め込み、30年以上にわたる激しい抵抗にあった（1904年ごろまで）。
+  polities: [netherlands]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/アチェ戦争"
+- year: 1890
+  date: "1890-11-23"
+  title: オランダとルクセンブルクの同君連合の終わり
+  text: ウィレム3世が死去し、娘ウィルヘルミナがオランダ女王となった。女性の相続を認めないルクセンブルクでは、ナッサウ家の家門協約によりナッサウ＝ヴァイルブルク家のアドルフが大公となった。
+  polities: [netherlands, luxembourg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Adolphe,_Grand_Duke_of_Luxembourg"
+- year: 1908
+  title: ベルギー領コンゴの成立
+  text: 国王レオポルド2世の私有地だったコンゴ自由国で、ゴム採取のための強制労働と残虐な刑罰が国際的に非難され、ベルギー政府の植民地に移された。
+  polities: [belgium]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+- year: 1914
+  date: "1914-08-04"
+  title: ドイツ軍のベルギー侵攻
+  text: ドイツ軍がフランスを北から攻めるため（シュリーフェン計画）中立国ベルギーに侵入し、リエージュの要塞を落とし、ルーヴァンの町と大学図書館を焼いた。ベルギー軍は国王アルベール1世のもとイーゼル川の線で踏みとどまった。同じ8月にルクセンブルクも占領された。
+  polities: [belgium, german_empire, luxembourg, britain]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/German_invasion_of_Belgium_(1914)"
+
+# ---------------------------------------------------------------- スイス
+- year: 1847
+  date: "1847-11"
+  title: 分離同盟戦争（ゾンダーブント戦争）
+  text: イエズス会の招致などで対立した保守的なカトリック7州の分離同盟（ゾンダーブント）を、デュフール将軍の連邦軍が1か月足らずで破った。スイス最後の内戦。
+  polities: [switzerland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/分離同盟戦争"
+- year: 1848
+  date: "1848-09-12"
+  title: スイス連邦憲法と連邦国家の成立
+  text: ゆるやかな国家連合から、二院制の議会と連邦参事会（内閣）をもつ連邦国家に変わった。首都（連邦都市）はベルン。
+  polities: [switzerland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/スイス連邦憲法"
+- year: 1857
+  title: ヌーシャテル事件の解決
+  text: 1856年、ヌーシャテルの王党派がプロイセン王の支配を回復しようと反乱を起こして失敗し、プロイセンとスイスが戦争寸前となった。ナポレオン3世の仲介によるパリ条約で、プロイセン王がヌーシャテルの権利を放棄した。
+  polities: [switzerland, neuchatel, prussia]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Neuchâtel_Crisis"
+- year: 1874
+  title: スイス連邦憲法の全面改正
+  text: 連邦の権限を強め、法律に対する国民投票（レファレンダム）を導入した。1891年には国民発議（イニシアティヴ）も加わり、直接民主制の国となった。
+  polities: [switzerland]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Swiss_Federal_Constitution"
+- year: 1882
+  title: ゴッタルド鉄道トンネルの開通
+  text: アルプスを南北に貫く約15kmの鉄道トンネル。ドイツ・イタリアも建設費を出し、北海と地中海を結ぶ鉄道の幹線となった。
+  polities: [switzerland, italy, german_empire]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Gotthard_Rail_Tunnel"
+
+# ---------------------------------------------------------------- イタリア（統一まで）
+- year: 1831
+  title: 中部イタリアの革命
+  text: 七月革命に刺激され、モデナ・パルマ・教皇領のボローニャなどでカルボナリが蜂起し、臨時政府を立てたが、オーストリア軍に鎮圧された。
+  polities: [modena, parma, papal_states, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Revolutions_of_1830#Italy"
+- year: 1831
+  title: マッツィーニが「青年イタリア」を結成
+  text: 亡命先のマルセイユで、共和政による統一イタリアをめざす秘密結社「青年イタリア」をつくった。カルボナリに代わって統一運動（リソルジメント）の中心となったが、各地の蜂起はいずれも失敗した。
+  polities: [savoy, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/青年イタリア"
+- year: 1848
+  date: "1848-01-12"
+  title: パレルモ蜂起（シチリア革命）
+  text: シチリアの首都パレルモで、ナポリのブルボン家の支配に対する蜂起が起こり、シチリアは独立を宣言した。ヨーロッパ各地の1848年革命の先がけとなった。1849年5月に鎮圧された。
+  polities: [sicily_1848, naples]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Sicilian_revolution_of_1848"
+- year: 1848
+  date: "1848-03"
+  title: ミラノの五日間とヴェネツィアの蜂起
+  text: ウィーンの三月革命の知らせを受け、ミラノ市民が5日間の市街戦でラデツキーのオーストリア軍を追い出した。ヴェネツィアではマニンがサン・マルコ共和国を宣言した。
+  polities: [habsburg, san_marco_republic]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ミラノの五日間"
+- year: 1848
+  date: "1848-03-23"
+  title: 第1次イタリア独立戦争
+  text: 3月に憲法（アルベルト憲章）を定めたサルデーニャ王カルロ・アルベルトが、ミラノの蜂起に応えてオーストリアに宣戦した。教皇・ナポリ・トスカーナの軍も一時加わったが、7月のクストーツァの戦いで敗れ、休戦した。
+  polities: [savoy, habsburg, papal_states, naples, tuscany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第一次イタリア独立戦争"
+- year: 1849
+  date: "1849-02-09"
+  title: ローマ共和国
+  text: 教皇ピウス9世がローマを逃れた後、マッツィーニらが共和国を宣言した。ガリバルディが防衛を指揮したが、教皇の要請に応じたフランス軍（ルイ・ナポレオン）の攻撃で7月に倒れた。
+  polities: [papal_states, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ローマ共和国_(19世紀)"
+- year: 1849
+  date: "1849-03-23"
+  title: ノヴァーラの戦いとカルロ・アルベルトの退位
+  text: サルデーニャ王国はオーストリアとの戦争を再開したが、ノヴァーラで大敗した。カルロ・アルベルトは退位し、子のヴィットーリオ・エマヌエーレ2世が即位した。新王はアルベルト憲章を守り続けた。
+  polities: [savoy, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Battle_of_Novara_(1849)"
+- year: 1849
+  date: "1849-08-22"
+  title: ヴェネツィアの降伏
+  text: オーストリア軍の包囲・砲撃とコレラに耐えたサン・マルコ共和国が降伏し、イタリアの1848年革命は終わった。
+  polities: [san_marco_republic, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Republic_of_San_Marco"
+- year: 1852
+  date: "1852-11-04"
+  title: カヴールがサルデーニャ王国の首相に
+  text: 自由主義の貴族カヴールが首相となり、鉄道・銀行・自由貿易で国を近代化し、外交でイタリア統一を進めた。1855年にクリミア戦争に参戦し、列強の支持を求めた。
+  polities: [savoy]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/カミッロ・カヴール"
+- year: 1858
+  date: "1858-07-21"
+  title: プロンビエールの密約
+  text: カヴールとナポレオン3世が、フランスの温泉地プロンビエールでひそかに会い、オーストリアとの戦争でフランスがサルデーニャを助けるかわりに、サヴォイアとニースをフランスに譲ることを約束した。
+  polities: [savoy, france]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Plombières_Agreement"
+- year: 1859
+  date: "1859-07-11"
+  title: ヴィラフランカの休戦
+  text: マジェンタ・ソルフェリーノの戦いで勝ったナポレオン3世が、サルデーニャに相談せずオーストリアと休戦し、ロンバルディアだけをサルデーニャに与えてヴェネトをオーストリアに残した。怒ったカヴールは一時首相を辞めた。ソルフェリーノの戦場の惨状を見たデュナンは、のちに赤十字を提唱した。
+  polities: [savoy, france, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Armistice_of_Villafranca"
+- year: 1860
+  date: "1860-03"
+  title: 中部イタリアの併合とサヴォイア・ニースの割譲
+  text: トスカーナ・モデナ・パルマ・ロマーニャで住民投票が行われ、サルデーニャ王国への併合が決まった。その代償として、トリノ条約でサヴォイアとニースをフランスに譲った。ニース生まれのガリバルディは激しく怒った。
+  polities: [savoy, tuscany, modena, parma, papal_states, france]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Treaty_of_Turin_(1860)"
+- year: 1860
+  date: "1860-05-11"
+  title: ガリバルディの千人隊（赤シャツ隊）
+  text: ガリバルディが義勇兵約1000人を率いてシチリアのマルサーラに上陸し、島を征服した。9月にはナポリに入り、両シチリア王国を倒した。
+  polities: [naples, savoy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/千人隊"
+- year: 1860
+  date: "1860-09-18"
+  title: カステルフィダルドの戦い
+  text: ガリバルディがローマに進むのを防ぐため、サルデーニャ軍が教皇領に入り、教皇軍を破った。マルケとウンブリアが住民投票でサルデーニャ王国に併合された。
+  polities: [savoy, papal_states]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Battle_of_Castelfidardo"
+- year: 1860
+  date: "1860-10-26"
+  title: テアーノの会見
+  text: ガリバルディがテアーノでヴィットーリオ・エマヌエーレ2世を「イタリア王」と呼んで迎え、征服した南イタリアを国王に献じた。ガリバルディは何の報酬も求めずカプレーラ島に引退した。
+  polities: [savoy, naples]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Meeting_of_Teano"
+- year: 1861
+  date: "1861-06-06"
+  title: カヴールの死
+  text: イタリア王国の成立からわずか3か月後、初代首相カヴールが急死した。ローマとヴェネツィアの問題は後継者に残された。
+  polities: [italy]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/カミッロ・カヴール"
+
+# ---------------------------------------------------------------- イタリア王国
+- year: 1861
+  title: 南イタリアの「山賊」の反乱
+  text: 旧両シチリア王国の農村で、ブルボン家を支持する元兵士や農民の武装反乱が広がり、イタリア政府は大軍を送って1860年代半ばまで鎮圧に追われた。南北の溝（南部問題）の始まりとなった。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Brigandage_in_Southern_Italy_after_1861"
+- year: 1862
+  date: "1862-08-29"
+  title: アスプロモンテ事件
+  text: 「ローマか死か」を掲げてローマへ進もうとしたガリバルディの義勇軍を、フランスとの関係を気づかったイタリア政府の軍がカラブリアのアスプロモンテで止め、ガリバルディは負傷して捕らえられた。
+  polities: [italy, papal_states]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Battle_of_Aspromonte"
+- year: 1864
+  date: "1864-09-15"
+  title: 九月協定と首都のフィレンツェ移転
+  text: イタリアがローマを攻めないと約束するかわりに、フランスはローマの守備隊を引き上げることにした。イタリアは首都をトリノからフィレンツェに移した（1865年）。
+  polities: [italy, france, papal_states]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/September_Convention"
+- year: 1866
+  date: "1866-10"
+  title: ヴェネトの併合
+  text: 普墺戦争でイタリアはクストーツァ（陸）・リッサ沖（海）で敗れたが、プロイセンの勝利によって、オーストリアはヴェネトをフランスを通じてイタリアに譲った。住民投票で併合が決まった。トレンティーノとトリエステはオーストリアに残った（「未回収のイタリア」）。
+  polities: [italy, habsburg, france]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)"
+- year: 1867
+  date: "1867-11-03"
+  title: メンターナの戦い
+  text: ガリバルディが再びローマをめざしたが、教皇軍と、もどってきたフランス軍にメンターナで敗れた。
+  polities: [papal_states, france, italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Battle_of_Mentana"
+- year: 1869
+  date: "1869-12-08"
+  title: 第1ヴァチカン公会議
+  text: 教皇ピウス9世が開いた公会議で、教皇の不可謬（信仰と道徳についての教皇の決定は誤らない）が定められた。普仏戦争の始まりで1870年に中断した。
+  polities: [papal_states]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/第1バチカン公会議"
+- year: 1871
+  date: "1871-05-13"
+  title: 教皇保障法とローマへの遷都
+  text: イタリアは首都をローマに移し、教皇の身分の不可侵とヴァチカン宮殿などの使用を認める教皇保障法を定めた。教皇ピウス9世はこれを拒み、「ヴァチカンの囚人」として対立を続けた。
+  polities: [italy, papal_states]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ローマ問題"
+- year: 1885
+  date: "1885-02"
+  title: イタリアがマッサワを占領（エリトリア植民地へ）
+  text: 紅海沿岸の港マッサワを占領し、1890年にエリトリア植民地とした。ソマリアの沿岸にも進出した。
+  polities: [italy]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+- year: 1891
+  date: "1891-05-15"
+  title: 回勅「レールム・ノヴァールム」
+  text: 教皇レオ13世が、社会主義を退けつつ、労働者の権利と貧困の問題に取り組むよう求めた回勅。カトリック社会運動の出発点となった。
+  polities: [papal_states]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Rerum_novarum"
+- year: 1893
+  title: シチリアのファッシ運動
+  text: シチリアの農民・鉱山労働者が「ファッシ（団結）」と呼ばれる組合をつくって地代や賃金の改善を求めたが、クリスピ首相が戒厳令を出して弾圧した。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Fasci_Siciliani"
+- year: 1896
+  date: "1896-03-01"
+  title: アドワの戦い
+  text: エチオピアを保護国にしようとしたイタリア軍が、皇帝メネリク2世のエチオピア軍に大敗した。アフリカの国がヨーロッパの軍を破った戦いとして知られ、クリスピ首相は退陣した。
+  polities: [italy]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アドワの戦い"
+- year: 1898
+  date: "1898-05"
+  title: ミラノの暴動の鎮圧
+  text: パンの値上がりに抗議するミラノの民衆に、バーヴァ・ベッカリス将軍の軍が大砲を撃ち、多数の死者が出た。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Bava_Beccaris_massacre"
+- year: 1900
+  date: "1900-07-29"
+  title: ウンベルト1世の暗殺
+  text: ミラノの暴動の弾圧への報復として、無政府主義者がモンツァで国王ウンベルト1世を暗殺した。ヴィットーリオ・エマヌエーレ3世が即位し、ジョリッティの自由主義的な改革の時代（ジョリッティ時代）が始まった。
+  polities: [italy]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ウンベルト1世"
+- year: 1908
+  date: "1908-12-28"
+  title: メッシーナ地震
+  text: シチリアのメッシーナとカラブリアのレッジョを大地震と津波が襲い、8万人前後が死亡した。ヨーロッパ史上最悪の地震災害の一つ。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/1908_Messina_earthquake"
+- year: 1912
+  title: イタリアで男子普通選挙に近い選挙法
+  text: ジョリッティ内閣が、30歳以上（兵役を終えた者は21歳以上）のほぼすべての男子に選挙権を与えた。有権者は約300万人から約850万人に増えた。
+  polities: [italy]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/1913_Italian_general_election"
+- year: 1914
+  date: "1914-08-02"
+  title: イタリアの中立宣言
+  text: 三国同盟は防衛のための同盟で、オーストリアの開戦は攻撃にあたるとして、イタリアは中立を宣言した。翌1915年、ロンドン秘密条約で「未回収のイタリア」を約束されて連合国側で参戦することになる。
+  polities: [italy, habsburg, german_empire]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Italy_in_World_War_I"

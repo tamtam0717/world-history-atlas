@@ -1,4 +1,4 @@
-# 北ドイツの政体（担当 BN）。1648–1815 試作。
+# 北ドイツの政体（担当 BN）。1648–1914。
 # 範囲：現代ドイツのうち シュレースヴィヒ＝ホルシュタイン、ハンブルク、ニーダーザクセン、ブレーメン、
 # メクレンブルク＝フォアポンメルン、ブランデンブルク、ベルリン、ザクセン＝アンハルト、ザクセン、テューリンゲン、
 # ノルトライン＝ヴェストファーレン。
@@ -9,6 +9,7 @@
   name: プロイセン王国
   names:
     - {to: 1700, name: ブランデンブルク＝プロイセン, short: ブランデンブルク, kind: 選帝侯国（プロイセン公国と同君連合）}
+    - {from: 1871, name: プロイセン王国, kind: 王国（ドイツ帝国の構成国）}
   short: プロイセン
   color: "#8fa3bf"
   kind: 王国
@@ -43,6 +44,29 @@
       from: 1797
       to: 1840
       source: "https://ja.wikipedia.org/wiki/フリードリヒ・ヴィルヘルム3世_(プロイセン王)"
+    - name: フリードリヒ・ヴィルヘルム4世
+      title: プロイセン王
+      from: 1840
+      to: 1861
+      note: 1858年から病気のため弟ヴィルヘルム（のちのヴィルヘルム1世）が摂政。
+      source: "https://ja.wikipedia.org/wiki/フリードリヒ・ヴィルヘルム4世_(プロイセン王)"
+    - name: ヴィルヘルム1世
+      title: プロイセン王、1867年から北ドイツ連邦主席、1871年からドイツ皇帝
+      from: 1861
+      to: 1888
+      note: 1862年にビスマルクを首相に任命した。
+      source: "https://ja.wikipedia.org/wiki/ヴィルヘルム1世_(ドイツ皇帝)"
+    - name: フリードリヒ3世
+      title: プロイセン王・ドイツ皇帝
+      from: 1888
+      to: 1888
+      note: 在位99日で病死。自由主義的とされた。
+      source: "https://ja.wikipedia.org/wiki/フリードリヒ3世_(ドイツ皇帝)"
+    - name: ヴィルヘルム2世
+      title: プロイセン王・ドイツ皇帝
+      from: 1888
+      to: 1918
+      source: "https://ja.wikipedia.org/wiki/ヴィルヘルム2世_(ドイツ皇帝)"
   periods:
     - from: 1648
       to: 1688
@@ -62,6 +86,18 @@
     - from: 1813
       to: 1815
       text: 解放戦争でナポレオンと戦う。ウィーン会議でザクセンの北半分、ヴェストファーレン、ラインラント、スウェーデン領ポンメルンを得て、国土が東西二つに分かれた大国となる。
+    - from: 1816
+      to: 1847
+      text: ウィーン体制のもとで改革は止まり、約束された憲法は作られなかった。一方で1834年のドイツ関税同盟を主導して経済面でドイツをまとめ、ルール・シュレジエン・ベルリンを中心に工業化と鉄道建設が始まる。
+    - from: 1848
+      to: 1861
+      text: 1848年の三月革命でベルリンに市街戦が起こる。国王は年末に欽定憲法を出し、1849年に三級選挙法を定めた。フランクフルト国民議会が贈った帝冠は拒否し、1850年のオルミュッツ協定でオーストリアに屈した。
+    - from: 1862
+      to: 1870
+      text: 軍制改革をめぐる議会との対立（憲法紛争）の中で首相となったビスマルクが「鉄と血」による統一を進める。デンマーク戦争（1864）・普墺戦争（1866）に勝ってハノーファーなどを併合し、北ドイツ連邦を作った。
+    - from: 1871
+      to: 1914
+      text: ドイツ帝国の中心の構成国。国王がドイツ皇帝を兼ね、首相は多くの場合帝国宰相を兼ねた。帝国の国土と人口の約5分の3を占め、三級選挙法のもとでユンカー（地主貴族）と軍の力が強かった。
   source:
     - "https://ja.wikipedia.org/wiki/プロイセン王国"
     - "https://ja.wikipedia.org/wiki/ブランデンブルク＝プロイセン"
@@ -70,6 +106,7 @@
   name: ザクセン王国
   names:
     - {to: 1805, name: ザクセン選帝侯国, kind: 選帝侯国}
+    - {from: 1871, name: ザクセン王国, kind: 王国（ドイツ帝国の構成国）}
   short: ザクセン
   color: "#9fcf9a"
   kind: 王国
@@ -114,6 +151,39 @@
       from: 1763
       to: 1827
       source: "https://ja.wikipedia.org/wiki/フリードリヒ・アウグスト1世_(ザクセン王)"
+    - name: アントン
+      title: ザクセン王
+      from: 1827
+      to: 1836
+      note: 1830年の騒乱の後、甥フリードリヒ・アウグストが共同統治者となった。
+      source: "https://en.wikipedia.org/wiki/Anthony,_King_of_Saxony"
+    - name: フリードリヒ・アウグスト2世
+      title: ザクセン王
+      from: 1836
+      to: 1854
+      source: "https://en.wikipedia.org/wiki/Frederick_Augustus_II_of_Saxony"
+    - name: ヨハン
+      title: ザクセン王
+      from: 1854
+      to: 1873
+      note: ダンテ『神曲』の翻訳者としても知られる。
+      source: "https://en.wikipedia.org/wiki/John,_King_of_Saxony"
+    - name: アルベルト
+      title: ザクセン王
+      from: 1873
+      to: 1902
+      note: 普仏戦争でザクセン軍を率いた。
+      source: "https://en.wikipedia.org/wiki/Albert,_King_of_Saxony"
+    - name: ゲオルク
+      title: ザクセン王
+      from: 1902
+      to: 1904
+      source: "https://en.wikipedia.org/wiki/George,_King_of_Saxony"
+    - name: フリードリヒ・アウグスト3世
+      title: ザクセン王
+      from: 1904
+      to: 1918
+      source: "https://en.wikipedia.org/wiki/Frederick_Augustus_III_of_Saxony"
   periods:
     - from: 1648
       to: 1693
@@ -130,6 +200,15 @@
     - from: 1814
       to: 1815
       text: ウィーン会議で処分が争われ（ザクセン＝ポーランド問題）、国土の北半分（下ラウジッツ・上ラウジッツ北部・ヴィッテンベルクなど）をプロイセンに割譲した。
+    - from: 1816
+      to: 1847
+      text: 国土の北半分を失ったが、ライプツィヒの見本市と繊維・機械工業でドイツで最も早く工業化が進んだ地域の一つ。1830年の騒乱の後、1831年に憲法を定めた。1839年にライプツィヒ＝ドレスデン鉄道が開通。
+    - from: 1848
+      to: 1866
+      text: 1849年のドレスデン五月蜂起（作曲家ワーグナーも参加）をプロイセン軍の助けで鎮圧した。首相ボイストのもとで中小国をまとめてプロイセンに対抗し、1866年の普墺戦争ではオーストリア側で戦って敗れた。
+    - from: 1867
+      to: 1914
+      text: 領土を減らされずに北ドイツ連邦、1871年からドイツ帝国の構成国となる。工業化が進み、社会民主党の支持が強い「赤いザクセン」と呼ばれた。
   source: "https://ja.wikipedia.org/wiki/ザクセン選帝侯領"
 
 - id: hanover
@@ -177,6 +256,28 @@
       from: 1760
       to: 1820
       source: "https://ja.wikipedia.org/wiki/ジョージ3世_(イギリス王)"
+    - name: ゲオルク4世（イギリス王ジョージ4世）
+      title: ハノーファー王・イギリス王
+      from: 1820
+      to: 1830
+      source: "https://ja.wikipedia.org/wiki/ジョージ4世_(イギリス王)"
+    - name: ヴィルヘルム（イギリス王ウィリアム4世）
+      title: ハノーファー王・イギリス王
+      from: 1830
+      to: 1837
+      source: "https://ja.wikipedia.org/wiki/ウィリアム4世_(イギリス王)"
+    - name: エルンスト・アウグスト
+      title: ハノーファー王
+      from: 1837
+      to: 1851
+      note: ウィリアム4世の弟（カンバーランド公）。女性が継げないハノーファーの継承法により即位し、イギリスとの同君連合が終わった。
+      source: "https://en.wikipedia.org/wiki/Ernest_Augustus,_King_of_Hanover"
+    - name: ゲオルク5世
+      title: ハノーファー王
+      from: 1851
+      to: 1866
+      note: 盲目の王。1866年に国を失い、オーストリアに亡命した。
+      source: "https://en.wikipedia.org/wiki/George_V_of_Hanover"
   periods:
     - from: 1648
       to: 1704
@@ -190,6 +291,12 @@
     - from: 1814
       to: 1815
       text: 王国に昇格。ウィーン会議で東フリースラント・ヒルデスハイム・ゴスラー・リンゲン・メッペンなどを得て、ラウエンブルクを手放す。
+    - from: 1816
+      to: 1836
+      text: イギリス王が国王を兼ね、ハノーファーでは副王（ケンブリッジ公アドルフス）が統治した。1833年に国家基本法（憲法）を定めた。
+    - from: 1837
+      to: 1866
+      text: エルンスト・アウグストの即位でイギリスとの同君連合が終わる。王は憲法を廃止し、抗議したゲッティンゲン大学の7教授を追放した。1866年の普墺戦争でオーストリア側につき、ランゲンザルツァで降伏してプロイセンに併合された。
   note: イギリス王を兼ねた選帝侯はロンドンに住み、ハノーファーは枢密院が統治した。
   source: "https://ja.wikipedia.org/wiki/ハノーファー選帝侯領"
 
@@ -222,7 +329,8 @@
 - id: mecklenburg
   name: メクレンブルク＝シュヴェリーン公国
   names:
-    - {from: 1815, name: メクレンブルク＝シュヴェリーン大公国, kind: 大公国}
+    - {from: 1815, to: 1870, name: メクレンブルク＝シュヴェリーン大公国, kind: 大公国}
+    - {from: 1871, name: メクレンブルク＝シュヴェリーン大公国, kind: 大公国（ドイツ帝国の構成国）}
   short: メクレンブルク
   color: "#a8d0d8"
   kind: 公国
@@ -263,6 +371,27 @@
       from: 1785
       to: 1837
       source: "https://en.wikipedia.org/wiki/Frederick_Francis_I,_Grand_Duke_of_Mecklenburg-Schwerin"
+    - name: パウル・フリードリヒ
+      title: メクレンブルク＝シュヴェリーン大公
+      from: 1837
+      to: 1842
+      source: "https://en.wikipedia.org/wiki/Paul_Frederick,_Grand_Duke_of_Mecklenburg-Schwerin"
+    - name: フリードリヒ・フランツ2世
+      title: メクレンブルク＝シュヴェリーン大公
+      from: 1842
+      to: 1883
+      source: "https://en.wikipedia.org/wiki/Frederick_Francis_II,_Grand_Duke_of_Mecklenburg-Schwerin"
+    - name: フリードリヒ・フランツ3世
+      title: メクレンブルク＝シュヴェリーン大公
+      from: 1883
+      to: 1897
+      source: "https://en.wikipedia.org/wiki/Frederick_Francis_III,_Grand_Duke_of_Mecklenburg-Schwerin"
+    - name: フリードリヒ・フランツ4世
+      title: メクレンブルク＝シュヴェリーン大公
+      from: 1897
+      to: 1918
+      note: 1901年まで叔父ヨハン・アルブレヒトが摂政。
+      source: "https://en.wikipedia.org/wiki/Frederick_Francis_IV,_Grand_Duke_of_Mecklenburg-Schwerin"
   periods:
     - from: 1648
       to: 1700
@@ -273,6 +402,12 @@
     - from: 1786
       to: 1815
       text: 1803年にヴィスマールをスウェーデンから質として取り戻す。1808年にライン同盟に加わり、1813年に最初に離脱した。1815年に大公国となる。
+    - from: 1816
+      to: 1866
+      text: 大土地所有の騎士身分が強い農業国で、1755年の身分制の体制が続いた。1848年の革命で一度憲法ができたが、1850年に取り消された。農民の多くがアメリカへ移住した。
+    - from: 1867
+      to: 1914
+      text: 北ドイツ連邦、1871年からドイツ帝国の構成国。ドイツの諸邦で唯一、帝政の終わり（1918年）まで近代的な憲法を持たなかった。
   source: "https://ja.wikipedia.org/wiki/メクレンブルク＝シュヴェリーン公国"
 
 - id: mecklenburg_gustrow
@@ -295,7 +430,8 @@
 - id: mecklenburg_strelitz
   name: メクレンブルク＝シュトレーリッツ公国
   names:
-    - {from: 1815, name: メクレンブルク＝シュトレーリッツ大公国, kind: 大公国}
+    - {from: 1815, to: 1870, name: メクレンブルク＝シュトレーリッツ大公国, kind: 大公国}
+    - {from: 1871, name: メクレンブルク＝シュトレーリッツ大公国, kind: 大公国（ドイツ帝国の構成国）}
   short: シュトレーリッツ
   color: "#86c0bb"
   kind: 公国
@@ -320,16 +456,40 @@
       from: 1794
       to: 1816
       source: "https://en.wikipedia.org/wiki/Charles_II,_Grand_Duke_of_Mecklenburg-Strelitz"
+    - name: ゲオルク
+      title: メクレンブルク＝シュトレーリッツ大公
+      from: 1816
+      to: 1860
+      source: "https://en.wikipedia.org/wiki/George,_Grand_Duke_of_Mecklenburg-Strelitz"
+    - name: フリードリヒ・ヴィルヘルム
+      title: メクレンブルク＝シュトレーリッツ大公
+      from: 1860
+      to: 1904
+      source: "https://en.wikipedia.org/wiki/Frederick_William,_Grand_Duke_of_Mecklenburg-Strelitz"
+    - name: アドルフ・フリードリヒ5世
+      title: メクレンブルク＝シュトレーリッツ大公
+      from: 1904
+      to: 1914
+      source: "https://en.wikipedia.org/wiki/Adolphus_Frederick_V,_Grand_Duke_of_Mecklenburg-Strelitz"
+    - name: アドルフ・フリードリヒ6世
+      title: メクレンブルク＝シュトレーリッツ大公
+      from: 1914
+      to: 1918
+      source: "https://en.wikipedia.org/wiki/Adolphus_Frederick_VI,_Grand_Duke_of_Mecklenburg-Strelitz"
   periods:
     - from: 1701
       to: 1815
       text: 1701年のハンブルク協定で成立。シュタルガルト地方（ノイシュトレーリッツ・ノイブランデンブルク）と、飛び地のラッツェブルク侯領からなる。イギリス王ジョージ3世の妃シャーロット、プロイセン王妃ルイーゼはこの家の出身。
+    - from: 1816
+      to: 1914
+      text: シュヴェリーンと共通の身分制の体制のまま、憲法を持たない小さな農業国として続いた。1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。
   source: "https://ja.wikipedia.org/wiki/メクレンブルク＝シュトレーリッツ公国"
 
 - id: brunswick
   name: ブラウンシュヴァイク＝ヴォルフェンビュッテル公国
   names:
-    - {from: 1813, name: ブラウンシュヴァイク公国}
+    - {from: 1813, to: 1870, name: ブラウンシュヴァイク公国}
+    - {from: 1871, name: ブラウンシュヴァイク公国, kind: 公国（ドイツ帝国の構成国）}
   short: ブラウンシュヴァイク
   color: "#e8d690"
   kind: 公国
@@ -388,6 +548,29 @@
       to: 1830
       note: 未成年のため、イギリス摂政王太子（のちのジョージ4世）が後見した。
       source: "https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Brunswick"
+    - name: ヴィルヘルム
+      title: ブラウンシュヴァイク公
+      from: 1830
+      to: 1884
+      note: 兄カール2世の追放後、1830年に統治を始め、1831年に正式に公となった。
+      source: "https://en.wikipedia.org/wiki/William,_Duke_of_Brunswick"
+    - name: アルブレヒト（プロイセン王子）
+      title: ブラウンシュヴァイク摂政
+      from: 1885
+      to: 1906
+      note: ヴェルフ家の継承者（ハノーファー家のカンバーランド公）がプロイセンによるハノーファー併合を認めなかったため、摂政が置かれた。
+      source: "https://en.wikipedia.org/wiki/Prince_Albert_of_Prussia_(1837–1906)"
+    - name: ヨハン・アルブレヒト（メクレンブルク公）
+      title: ブラウンシュヴァイク摂政
+      from: 1907
+      to: 1913
+      source: "https://en.wikipedia.org/wiki/Duke_John_Albert_of_Mecklenburg"
+    - name: エルンスト・アウグスト
+      title: ブラウンシュヴァイク公
+      from: 1913
+      to: 1918
+      note: ハノーファー王家の出身。ヴィルヘルム2世の娘ヴィクトリア・ルイーゼと結婚して即位した。
+      source: "https://en.wikipedia.org/wiki/Ernest_Augustus,_Duke_of_Brunswick"
   periods:
     - from: 1648
       to: 1753
@@ -398,12 +581,20 @@
     - from: 1807
       to: 1813
       text: ヴェストファーレン王国に併合される。1813年末に公が帰国して復活した。
+    - from: 1816
+      to: 1866
+      text: 1830年に専制的なカール2世が民衆に城を焼かれて追放され、弟ヴィルヘルムのもとで1832年に憲法が定められた。
+    - from: 1867
+      to: 1914
+      text: 北ドイツ連邦、1871年からドイツ帝国の構成国。1884年にヴィルヘルム公が死去してブラウンシュヴァイク家が断絶すると、継承者のハノーファー家とプロイセンが対立し、1913年まで摂政が治めた。
   source: "https://ja.wikipedia.org/wiki/ブラウンシュヴァイク＝ヴォルフェンビュッテル侯領"
 
 - id: oldenburg
   name: オルデンブルク公国
   names:
     - {to: 1773, name: オルデンブルク伯領, kind: 伯領}
+    - {from: 1829, to: 1870, name: オルデンブルク大公国, kind: 大公国}
+    - {from: 1871, name: オルデンブルク大公国, kind: 大公国（ドイツ帝国の構成国）}
   short: オルデンブルク
   color: "#9ec9b8"
   kind: 公国
@@ -424,6 +615,27 @@
       to: 1823
       note: 精神の病のため、従兄弟のペーター・フリードリヒ・ルートヴィヒが摂政として実際に統治した。
       source: "https://en.wikipedia.org/wiki/Peter_Frederick_William,_Duke_of_Oldenburg"
+    - name: ペーター・フリードリヒ・ルートヴィヒ
+      title: オルデンブルク公（大公の称号は使わず）
+      from: 1823
+      to: 1829
+      note: 1785年から摂政として実際に統治していた。
+      source: "https://en.wikipedia.org/wiki/Peter_I,_Grand_Duke_of_Oldenburg"
+    - name: パウル・フリードリヒ・アウグスト
+      title: オルデンブルク大公
+      from: 1829
+      to: 1853
+      source: "https://en.wikipedia.org/wiki/Augustus,_Grand_Duke_of_Oldenburg"
+    - name: ニコラウス・フリードリヒ・ペーター
+      title: オルデンブルク大公
+      from: 1853
+      to: 1900
+      source: "https://en.wikipedia.org/wiki/Peter_II,_Grand_Duke_of_Oldenburg"
+    - name: フリードリヒ・アウグスト2世
+      title: オルデンブルク大公
+      from: 1900
+      to: 1918
+      source: "https://en.wikipedia.org/wiki/Frederick_Augustus_II,_Grand_Duke_of_Oldenburg"
   periods:
     - from: 1648
       to: 1667
@@ -434,6 +646,12 @@
     - from: 1773
       to: 1815
       text: 交換条約でホルシュタイン＝ゴットルプ家の若い系統に渡され、1774年に公国となる。1803年にミュンスター司教領の北部（フェヒタ・クロッペンブルク）を得る。1808年ライン同盟に加わったが、1810年末にフランスに併合された。
+    - from: 1816
+      to: 1866
+      text: ウィーン会議で大公国とされ（称号の使用は1829年から）、1818年にヤーファーを得た。飛び地としてリューベック侯領（オイティン）とビルケンフェルト侯領を持つ。1849年に憲法を定め、1853年のヤーデ条約で軍港用地をプロイセンに売った。
+    - from: 1867
+      to: 1914
+      text: 北ドイツ連邦、1871年からドイツ帝国の構成国。
   source: "https://ja.wikipedia.org/wiki/オルデンブルク公国"
 
 - id: holstein_gottorp
@@ -870,9 +1088,35 @@
 
 - id: anhalt
   name: アンハルト諸侯国
+  names:
+    - {from: 1863, to: 1870, name: アンハルト公国, kind: 公国}
+    - {from: 1871, name: アンハルト公国, kind: 公国（ドイツ帝国の構成国）}
   short: アンハルト
   color: "#f2c6c6"
   kind: 侯国（複数の系統）
+  rulers:
+    - {name: レオポルト3世フリードリヒ・フランツ, title: アンハルト＝デッサウ侯（1807年から公）, from: 1751, to: 1817, source: "https://en.wikipedia.org/wiki/Leopold_III,_Duke_of_Anhalt-Dessau"}
+    - {name: アレクシウス・フリードリヒ・クリスティアン, title: アンハルト＝ベルンブルク侯（1806年から公）, from: 1796, to: 1834, source: "https://en.wikipedia.org/wiki/Alexius_Frederick_Christian,_Duke_of_Anhalt-Bernburg"}
+    - {name: ルートヴィヒ・アウグスト, title: アンハルト＝ケーテン公, from: 1812, to: 1818, note: 幼少のため、デッサウ公レオポルト3世が後見した。, source: "https://en.wikipedia.org/wiki/Anhalt-Köthen"}
+    - {name: レオポルト4世フリードリヒ, title: アンハルト＝デッサウ公, from: 1817, to: 1862, source: "https://en.wikipedia.org/wiki/Leopold_IV,_Duke_of_Anhalt"}
+    - {name: フェルディナント・フリードリヒ, title: アンハルト＝ケーテン公, from: 1818, to: 1830, source: "https://en.wikipedia.org/wiki/Anhalt-Köthen"}
+    - {name: ハインリヒ, title: アンハルト＝ケーテン公, from: 1830, to: 1847, note: 1847年の死でケーテン系が絶え、デッサウ公が相続した（アンハルト＝デッサウ＝ケーテン）。, source: "https://en.wikipedia.org/wiki/Anhalt-Köthen"}
+    - {name: アレクサンダー・カール, title: アンハルト＝ベルンブルク公, from: 1834, to: 1863, note: 1863年の死でベルンブルク系が絶え、アンハルトはデッサウ公のもとに統一された。, source: "https://en.wikipedia.org/wiki/Anhalt-Bernburg"}
+    - name: レオポルト4世フリードリヒ
+      title: アンハルト＝デッサウ公（1817–）、1863年からアンハルト公
+      from: 1863
+      to: 1871
+      source: "https://en.wikipedia.org/wiki/Leopold_IV,_Duke_of_Anhalt"
+    - name: フリードリヒ1世
+      title: アンハルト公
+      from: 1871
+      to: 1904
+      source: "https://en.wikipedia.org/wiki/Frederick_I,_Duke_of_Anhalt"
+    - name: フリードリヒ2世
+      title: アンハルト公
+      from: 1904
+      to: 1918
+      source: "https://en.wikipedia.org/wiki/Frederick_II,_Duke_of_Anhalt"
   periods:
     - from: 1648
       to: 1806
@@ -880,14 +1124,41 @@
     - from: 1807
       to: 1815
       text: 1807年にライン同盟に加わり、各系統が公国となる。1815年ドイツ連邦に加盟。
-  note: 系統ごとの君主は省略。地図ではアンハルト諸系統をまとめて表示している。
+    - from: 1816
+      to: 1862
+      text: アンハルト＝デッサウ、ケーテン、ベルンブルクの3公国が並ぶ。1847年にケーテン系、1863年にベルンブルク系が断絶し、デッサウ系が相続した。
+    - from: 1863
+      to: 1914
+      text: 1863年にアンハルト公国として統一。1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。
+  note: 地図ではアンハルト諸系統をまとめて表示している。君主欄は1863年の統一まで、デッサウ・ケーテン・ベルンブルクの各系統の公を並べている（ツェルプスト系は1793年に断絶）。
   source: "https://ja.wikipedia.org/wiki/アンハルト"
 
 - id: saxon_duchies
   name: ザクセン諸公国
+  names:
+    - {from: 1871, name: ザクセン諸公国, kind: 大公国・公国（ドイツ帝国の構成国）}
   short: ザクセン諸公国
   color: "#c3e3b5"
   kind: 公国（エルネスティン系の諸家）
+  rulers:
+    - {name: カール・アウグスト, title: ザクセン＝ヴァイマル＝アイゼナハ公（1815年から大公）, from: 1758, to: 1828, note: ゲーテを宰相に招いた。, source: "https://en.wikipedia.org/wiki/Charles_Augustus,_Grand_Duke_of_Saxe-Weimar-Eisenach"}
+    - {name: フリードリヒ, title: ザクセン＝ヒルトブルクハウゼン公（1826年からザクセン＝アルテンブルク公）, from: 1780, to: 1834, source: "https://en.wikipedia.org/wiki/Frederick,_Duke_of_Saxe-Altenburg"}
+    - {name: ベルンハルト2世, title: ザクセン＝マイニンゲン公, from: 1803, to: 1866, note: 1866年、オーストリア側についたためプロイセンに退位させられた。, source: "https://en.wikipedia.org/wiki/Bernhard_II,_Duke_of_Saxe-Meiningen"}
+    - {name: アウグスト, title: ザクセン＝ゴータ＝アルテンブルク公, from: 1804, to: 1822, source: "https://en.wikipedia.org/wiki/Saxe-Gotha-Altenburg"}
+    - {name: エルンスト1世, title: ザクセン＝コーブルク＝ザールフェルト公（1826年からザクセン＝コーブルク＝ゴータ公）, from: 1806, to: 1844, note: 弟がベルギー王レオポルド1世、次男がヴィクトリア女王の夫アルバート。, source: "https://en.wikipedia.org/wiki/Ernest_I,_Duke_of_Saxe-Coburg_and_Gotha"}
+    - {name: フリードリヒ4世, title: ザクセン＝ゴータ＝アルテンブルク公, from: 1822, to: 1825, note: 1825年の死でゴータ家が絶え、1826年に諸公国が再編された。, source: "https://en.wikipedia.org/wiki/Saxe-Gotha-Altenburg"}
+    - {name: カール・フリードリヒ, title: ザクセン＝ヴァイマル＝アイゼナハ大公, from: 1828, to: 1853, source: "https://en.wikipedia.org/wiki/Charles_Frederick,_Grand_Duke_of_Saxe-Weimar-Eisenach"}
+    - {name: ヨーゼフ, title: ザクセン＝アルテンブルク公, from: 1834, to: 1848, source: "https://en.wikipedia.org/wiki/Joseph,_Duke_of_Saxe-Altenburg"}
+    - {name: エルンスト2世, title: ザクセン＝コーブルク＝ゴータ公, from: 1844, to: 1893, source: "https://en.wikipedia.org/wiki/Ernst_II,_Duke_of_Saxe-Coburg_and_Gotha"}
+    - {name: ゲオルク, title: ザクセン＝アルテンブルク公, from: 1848, to: 1853, source: "https://en.wikipedia.org/wiki/Georg,_Duke_of_Saxe-Altenburg"}
+    - {name: カール・アレクサンダー, title: ザクセン＝ヴァイマル＝アイゼナハ大公, from: 1853, to: 1901, source: "https://en.wikipedia.org/wiki/Charles_Alexander,_Grand_Duke_of_Saxe-Weimar-Eisenach"}
+    - {name: エルンスト1世, title: ザクセン＝アルテンブルク公, from: 1853, to: 1908, source: "https://en.wikipedia.org/wiki/Ernst_I,_Duke_of_Saxe-Altenburg"}
+    - {name: ゲオルク2世, title: ザクセン＝マイニンゲン公, from: 1866, to: 1914, note: 宮廷劇団（マイニンゲン劇団）で知られる。, source: "https://en.wikipedia.org/wiki/Georg_II,_Duke_of_Saxe-Meiningen"}
+    - {name: アルフレート, title: ザクセン＝コーブルク＝ゴータ公, from: 1893, to: 1900, note: ヴィクトリア女王の次男（エディンバラ公）。, source: "https://en.wikipedia.org/wiki/Alfred,_Duke_of_Saxe-Coburg_and_Gotha"}
+    - {name: カール・エドゥアルト, title: ザクセン＝コーブルク＝ゴータ公, from: 1900, to: 1918, source: "https://en.wikipedia.org/wiki/Charles_Edward,_Duke_of_Saxe-Coburg_and_Gotha"}
+    - {name: ヴィルヘルム・エルンスト, title: ザクセン＝ヴァイマル＝アイゼナハ大公, from: 1901, to: 1918, source: "https://en.wikipedia.org/wiki/William_Ernest,_Grand_Duke_of_Saxe-Weimar-Eisenach"}
+    - {name: エルンスト2世, title: ザクセン＝アルテンブルク公, from: 1908, to: 1918, source: "https://en.wikipedia.org/wiki/Ernst_II,_Duke_of_Saxe-Altenburg"}
+    - {name: ベルンハルト3世, title: ザクセン＝マイニンゲン公, from: 1914, to: 1918, source: "https://en.wikipedia.org/wiki/Bernhard_III,_Duke_of_Saxe-Meiningen"}
   periods:
     - from: 1648
       to: 1805
@@ -895,51 +1166,103 @@
     - from: 1806
       to: 1815
       text: 1806年末にライン同盟に加わる。1815年にザクセン＝ヴァイマル＝アイゼナハは大公国となり、ドイツ連邦に加盟した。
-  note: 公国ごとの君主は省略。地図では諸公国をまとめて表示している。主な人物：ザクセン＝ヴァイマル公（1815年から大公）カール・アウグスト（在位1758–1828）。
+    - from: 1816
+      to: 1866
+      text: ザクセン＝ヴァイマル＝アイゼナハ大公国は1816年にドイツで最も早い憲法の一つを定め、1817年には学生のヴァルトブルク祭が開かれた。1826年にゴータ家の断絶で再編され、ヴァイマル、コーブルク＝ゴータ、マイニンゲン、アルテンブルクの4国となる。コーブルク家からはベルギー王レオポルド1世やヴィクトリア女王の夫アルバートが出た。
+    - from: 1867
+      to: 1914
+      text: 1866年の普墺戦争でオーストリア側についたマイニンゲン公は退位させられた。各国は北ドイツ連邦、1871年からドイツ帝国の構成国となった。イエナではツァイスの光学工業が育った。
+  note: 地図では諸公国をまとめて表示している。君主欄は1815年以降の各公国（ヴァイマル、ゴータ＝アルテンブルク、コーブルク、マイニンゲン、ヒルトブルクハウゼン→アルテンブルク）の君主。1815年より前の各家の君主は省略。
   source: "https://ja.wikipedia.org/wiki/ザクセン公国"
 
 - id: reuss
   name: ロイス諸侯領
+  names:
+    - {from: 1871, name: ロイス侯国（兄系・弟系）, kind: 侯国（ドイツ帝国の構成国）}
   short: ロイス
   color: "#e6d2b0"
   kind: 伯領→侯国
+  rulers:
+    - {name: ハインリヒ13世, title: ロイス兄系（グライツ）侯, from: 1800, to: 1817, source: "https://en.wikipedia.org/wiki/Principality_of_Reuss-Greiz"}
+    - {name: ハインリヒ42世, title: ロイス＝シュライツ侯（弟系）, from: 1784, to: 1818, source: "https://en.wikipedia.org/wiki/Reuss-Schleiz"}
+    - {name: ハインリヒ19世, title: ロイス兄系（グライツ）侯, from: 1817, to: 1836, source: "https://en.wikipedia.org/wiki/Principality_of_Reuss-Greiz"}
+    - {name: ハインリヒ62世, title: ロイス＝シュライツ侯（1848年から弟系全体の侯）, from: 1818, to: 1854, source: "https://en.wikipedia.org/wiki/Reuss-Schleiz"}
+    - {name: ハインリヒ72世, title: ロイス＝ローベンシュタイン＝エーバースドルフ侯（弟系）, from: 1822, to: 1848, note: 1848年の革命で退位し、領地はシュライツ系に統合された。, source: "https://en.wikipedia.org/wiki/Heinrich_LXXII,_Prince_Reuss_of_Lobenstein_and_Ebersdorf"}
+    - {name: ハインリヒ20世, title: ロイス兄系（グライツ）侯, from: 1836, to: 1859, source: "https://en.wikipedia.org/wiki/Principality_of_Reuss-Greiz"}
+    - {name: ハインリヒ67世, title: ロイス弟系侯, from: 1854, to: 1867, source: "https://en.wikipedia.org/wiki/Principality_of_Reuss-Gera"}
+    - {name: ハインリヒ22世, title: ロイス兄系（グライツ）侯, from: 1859, to: 1902, note: 1866年にオーストリア側についた。, source: "https://en.wikipedia.org/wiki/Heinrich_XXII,_Prince_Reuss_of_Greiz"}
+    - {name: ハインリヒ14世, title: ロイス弟系侯, from: 1867, to: 1913, source: "https://en.wikipedia.org/wiki/Principality_of_Reuss-Gera"}
+    - {name: ハインリヒ24世, title: ロイス兄系（グライツ）侯, from: 1902, to: 1918, note: 統治能力がなく、弟系の侯（ハインリヒ14世、1913年からハインリヒ27世）が摂政を務めた。, source: "https://en.wikipedia.org/wiki/Heinrich_XXIV,_Prince_Reuss_of_Greiz"}
+    - {name: ハインリヒ27世, title: ロイス弟系侯, from: 1913, to: 1918, source: "https://en.wikipedia.org/wiki/Principality_of_Reuss-Gera"}
   periods:
     - from: 1648
       to: 1815
       text: テューリンゲン東部（ゲーラ・グライツ・シュライツ）の小領邦。男子が全員「ハインリヒ」と名乗ることで知られる。兄系（グライツ）は1778年、弟系は1806年に侯国となる。1807年ライン同盟加盟。
+    - from: 1816
+      to: 1914
+      text: 兄系（グライツ）と弟系（ゲーラ・シュライツ。1848年に統合）の2侯国。1866年に兄系はオーストリア側につき、プロイセンに占領された。1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。
   source: "https://de.wikipedia.org/wiki/Reuß_(Adelsgeschlecht)"
 
 - id: schwarzburg
   name: シュヴァルツブルク諸侯領
+  names:
+    - {from: 1871, name: シュヴァルツブルク侯国（2系統）, kind: 侯国（ドイツ帝国の構成国）}
   short: シュヴァルツブルク
   color: "#d6c2a0"
   kind: 伯領→侯国
+  rulers:
+    - {name: ギュンター・フリードリヒ・カール1世, title: シュヴァルツブルク＝ゾンダースハウゼン侯, from: 1794, to: 1835, source: "https://en.wikipedia.org/wiki/Schwarzburg-Sondershausen"}
+    - {name: フリードリヒ・ギュンター, title: シュヴァルツブルク＝ルードルシュタット侯, from: 1807, to: 1867, source: "https://en.wikipedia.org/wiki/Schwarzburg-Rudolstadt"}
+    - {name: ギュンター・フリードリヒ・カール2世, title: シュヴァルツブルク＝ゾンダースハウゼン侯, from: 1835, to: 1880, source: "https://en.wikipedia.org/wiki/Schwarzburg-Sondershausen"}
+    - {name: アルベルト, title: シュヴァルツブルク＝ルードルシュタット侯, from: 1867, to: 1869, source: "https://en.wikipedia.org/wiki/Schwarzburg-Rudolstadt"}
+    - {name: ゲオルク・アルベルト, title: シュヴァルツブルク＝ルードルシュタット侯, from: 1869, to: 1890, source: "https://en.wikipedia.org/wiki/Schwarzburg-Rudolstadt"}
+    - {name: カール・ギュンター, title: シュヴァルツブルク＝ゾンダースハウゼン侯, from: 1880, to: 1909, source: "https://en.wikipedia.org/wiki/Schwarzburg-Sondershausen"}
+    - {name: ギュンター・ヴィクトル, title: シュヴァルツブルク＝ルードルシュタット侯（1909年からゾンダースハウゼン侯を兼ねる）, from: 1890, to: 1918, source: "https://en.wikipedia.org/wiki/Günther_Victor,_Prince_of_Schwarzburg"}
   periods:
     - from: 1648
       to: 1815
       text: テューリンゲン中部のシュヴァルツブルク＝ルードルシュタットとシュヴァルツブルク＝ゾンダースハウゼンの二つの系統。ともに18世紀に侯国となり、1807年ライン同盟に加わった。
+    - from: 1816
+      to: 1914
+      text: ルードルシュタットとゾンダースハウゼンの2侯国。1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。
   source: "https://de.wikipedia.org/wiki/Schwarzburg_(Adelsgeschlecht)"
 
 - id: lippe
   name: リッペ侯国
   names:
     - {to: 1788, name: リッペ伯領, kind: 伯領}
+    - {from: 1871, name: リッペ侯国, kind: 侯国（ドイツ帝国の構成国）}
   short: リッペ
   color: "#f0d8a0"
   kind: 侯国
+  rulers:
+    - {name: レオポルト2世, title: リッペ侯, from: 1802, to: 1851, note: 1820年まで母パウリーネが摂政。, source: "https://en.wikipedia.org/wiki/Leopold_II,_Prince_of_Lippe"}
+    - {name: レオポルト3世, title: リッペ侯, from: 1851, to: 1875, source: "https://en.wikipedia.org/wiki/Leopold_III,_Prince_of_Lippe"}
+    - {name: ヴォルデマール, title: リッペ侯, from: 1875, to: 1895, source: "https://en.wikipedia.org/wiki/Woldemar,_Prince_of_Lippe"}
+    - {name: アレクサンダー, title: リッペ侯, from: 1895, to: 1905, note: 統治能力がなく摂政が置かれ、摂政の地位をめぐってシャウムブルク＝リッペ家とリッペ＝ビースターフェルト家が争った（リッペ継承争い）。, source: "https://en.wikipedia.org/wiki/Alexander,_Prince_of_Lippe"}
+    - {name: レオポルト4世, title: リッペ侯, from: 1905, to: 1918, note: リッペ＝ビースターフェルト家。1904年から摂政。, source: "https://en.wikipedia.org/wiki/Leopold_IV,_Prince_of_Lippe"}
   periods:
     - from: 1648
       to: 1815
       text: トイトブルクの森のふもと、首都デトモルトの小領邦。1789年に侯国となり、1807年ライン同盟、1815年ドイツ連邦に加わった。
+    - from: 1816
+      to: 1914
+      text: 1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。1895年に侯家が絶えると、継承をめぐって分家どうしが争い（リッペ継承争い）、1905年の裁定で決着した。
   source: "https://de.wikipedia.org/wiki/Lippe_(Land)"
 
 - id: schaumburg_lippe
   name: シャウムブルク＝リッペ伯領
   names:
     - {from: 1807, name: シャウムブルク＝リッペ侯国, kind: 侯国}
+    - {from: 1871, name: シャウムブルク＝リッペ侯国, kind: 侯国（ドイツ帝国の構成国）}
   short: シャウムブルク＝リッペ
   color: "#e3a9c4"
   kind: 伯領
+  rulers:
+    - {name: ゲオルク・ヴィルヘルム, title: シャウムブルク＝リッペ伯（1807年から侯）, from: 1787, to: 1860, source: "https://en.wikipedia.org/wiki/George_William,_Prince_of_Schaumburg-Lippe"}
+    - {name: アドルフ1世ゲオルク, title: シャウムブルク＝リッペ侯, from: 1860, to: 1893, source: "https://en.wikipedia.org/wiki/Adolf_I,_Prince_of_Schaumburg-Lippe"}
+    - {name: ゲオルク, title: シャウムブルク＝リッペ侯, from: 1893, to: 1911, source: "https://en.wikipedia.org/wiki/George,_Prince_of_Schaumburg-Lippe"}
+    - {name: アドルフ2世, title: シャウムブルク＝リッペ侯, from: 1911, to: 1918, source: "https://en.wikipedia.org/wiki/Adolf_II,_Prince_of_Schaumburg-Lippe"}
   periods:
     - from: 1648
       to: 1806
@@ -947,6 +1270,9 @@
     - from: 1807
       to: 1815
       text: 1807年に侯国となってライン同盟に加わり、ヴェストファーレン王国には併合されずに独立を保った。1815年にドイツ連邦の加盟国となった。
+    - from: 1816
+      to: 1914
+      text: ドイツ連邦の中でも最も小さい国の一つ。1866年にプロイセン側につき、1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。
   source: "https://de.wikipedia.org/wiki/Schaumburg-Lippe"
 
 - id: east_frisia
@@ -995,6 +1321,9 @@
 
 - id: hamburg
   name: 自由都市ハンブルク
+  names:
+    - {from: 1815, to: 1870, name: 自由ハンザ都市ハンブルク, kind: 自由都市}
+    - {from: 1871, name: 自由ハンザ都市ハンブルク, kind: 自由都市（ドイツ帝国の構成国）}
   short: ハンブルク
   color: "#d7807a"
   kind: 帝国自由都市（共和国）
@@ -1005,10 +1334,19 @@
     - from: 1806
       to: 1815
       text: 1806年からフランス軍が占領し、1810年末にフランスに併合された。1814年に解放され、1815年ドイツ連邦の自由都市となる。
+    - from: 1816
+      to: 1866
+      text: 1842年の大火で市の中心部の約4分の1が焼けた。大西洋航路の海運会社（ハパグ、1847年創立）が生まれ、移民の出港地となる。
+    - from: 1867
+      to: 1914
+      text: 北ドイツ連邦、1871年からドイツ帝国の構成国。1888年にドイツの関税領域に加わり、倉庫街（シュパイヒャーシュタット）と自由港が作られた。1892年にコレラが大流行した。ドイツ最大、ヨーロッパ有数の港となる。
   source: "https://ja.wikipedia.org/wiki/ハンブルク"
 
 - id: bremen
   name: 自由都市ブレーメン
+  names:
+    - {from: 1815, to: 1870, name: 自由ハンザ都市ブレーメン, kind: 自由都市}
+    - {from: 1871, name: 自由ハンザ都市ブレーメン, kind: 自由都市（ドイツ帝国の構成国）}
   short: ブレーメン
   color: "#cf8f6f"
   kind: 帝国自由都市（共和国）
@@ -1016,10 +1354,16 @@
     - from: 1648
       to: 1815
       text: ヴェーザー川の商業都市。周囲のスウェーデン領ブレーメン公領と帝国都市の地位をめぐって争った（1666年ハーベンハウゼン条約）。1810年末にフランスに併合され、1813年に解放された。
+    - from: 1816
+      to: 1914
+      text: 1827年にヴェーザー川の河口にブレーマーハーフェンを築き、北ドイツ・ロイド（1857年創立）の本拠としてアメリカへの移民の主な出港地となった。1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。
   source: "https://ja.wikipedia.org/wiki/ブレーメン"
 
 - id: lubeck
   name: 自由都市リューベック
+  names:
+    - {from: 1815, to: 1870, name: 自由ハンザ都市リューベック, kind: 自由都市}
+    - {from: 1871, name: 自由ハンザ都市リューベック, kind: 自由都市（ドイツ帝国の構成国）}
   short: リューベック
   color: "#c97a8f"
   kind: 帝国自由都市（共和国）
@@ -1027,6 +1371,9 @@
     - from: 1648
       to: 1815
       text: かつてのハンザ同盟の盟主。1806年にフランス軍に占領され、1810年末にフランスに併合された。1813年に解放された。
+    - from: 1816
+      to: 1914
+      text: ハンブルク・ブレーメンとともに自由都市として残った。1867年に北ドイツ連邦、1871年からドイツ帝国の構成国。トーマス・マンの『ブッデンブローク家の人々』（1901年）はこの町の商家を描いた。
   source: "https://ja.wikipedia.org/wiki/リューベック"
 
 - id: cologne_city
@@ -1039,3 +1386,70 @@
       to: 1794
       text: ライン川沿いの大都市。ケルン大司教の居城はボンにあり、市は大司教から独立した帝国自由都市だった。1794年にフランスに占領された。
   source: "https://ja.wikipedia.org/wiki/ケルン"
+
+# ---------------------------------------------------------------- ドイツ統一（1867–）
+
+- id: north_german_confederation
+  name: 北ドイツ連邦
+  short: 北ドイツ連邦
+  color: "#b9bfcc"
+  kind: 連邦国家
+  note: >-
+    overlord（外枠）としてだけ使う枠。マイン川以北の22の邦（プロイセン、ザクセン、メクレンブルク、テューリンゲン諸国、ハンザ3都市など。
+    ヘッセン大公国はマイン川以北の上ヘッセンだけ）からなる連邦国家。プロイセン王が連邦主席（Bundespräsidium）、
+    ビスマルクが連邦宰相を務めた。1871年1月1日にドイツ帝国（憲法上は「ドイツ国」）に移行した。
+  rulers:
+    - name: ヴィルヘルム1世
+      title: プロイセン王・北ドイツ連邦主席
+      from: 1867
+      to: 1870
+      note: 連邦宰相はビスマルク（1867–1871）。
+      source: "https://ja.wikipedia.org/wiki/ヴィルヘルム1世_(ドイツ皇帝)"
+  periods:
+    - from: 1867
+      to: 1870
+      text: 普墺戦争の勝利の後、プロイセンを中心にマイン川以北の諸国が作った連邦国家。男子普通選挙で選ばれる議会（帝国議会の前身）を持つ。バイエルン・ヴュルテンベルク・バーデン・ヘッセンの南ドイツ4国とは攻守同盟と関税議会で結ばれ、普仏戦争の中でドイツ帝国へと発展した。
+  source:
+    - "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - "https://en.wikipedia.org/wiki/North_German_Confederation"
+
+- id: german_empire
+  name: ドイツ帝国
+  short: ドイツ帝国
+  color: "#a7abc0"
+  kind: 帝国（連邦国家）
+  note: >-
+    1871年1月18日、ヴェルサイユ宮殿鏡の間でプロイセン王ヴィルヘルム1世がドイツ皇帝として即位して成立した。
+    4つの王国（プロイセン・バイエルン・ザクセン・ヴュルテンベルク）、6つの大公国、5つの公国、7つの侯国、3つの自由都市と
+    帝国直轄領エルザス＝ロートリンゲンからなる連邦国家で、地図では1色で塗る。構成国の君主・情勢はそれぞれの政体に残している。
+    帝国宰相：ビスマルク（1871–1890）、カプリヴィ（1890–1894）、ホーエンローエ（1894–1900）、ビューロー（1900–1909）、ベートマン・ホルヴェーク（1909–1917）。
+  rulers:
+    - name: ヴィルヘルム1世
+      title: ドイツ皇帝・プロイセン王
+      from: 1871
+      to: 1888
+      source: "https://ja.wikipedia.org/wiki/ヴィルヘルム1世_(ドイツ皇帝)"
+    - name: フリードリヒ3世
+      title: ドイツ皇帝・プロイセン王
+      from: 1888
+      to: 1888
+      note: 喉頭がんのため在位99日で死去。1888年は「三皇帝の年」と呼ばれる。
+      source: "https://ja.wikipedia.org/wiki/フリードリヒ3世_(ドイツ皇帝)"
+    - name: ヴィルヘルム2世
+      title: ドイツ皇帝・プロイセン王
+      from: 1888
+      to: 1918
+      source: "https://ja.wikipedia.org/wiki/ヴィルヘルム2世_(ドイツ皇帝)"
+  periods:
+    - from: 1871
+      to: 1878
+      text: 宰相ビスマルクのもとで国内の統合を進める。カトリック教会と対立した文化闘争を起こし、国民自由党と協力して通貨・法制度を統一した。帝国議会は男子普通選挙で選ばれた。
+    - from: 1879
+      to: 1890
+      text: 保護関税に転じ、社会主義者鎮圧法で社会主義運動を抑える一方、世界初の社会保険制度を作った（「アメとムチ」）。外交では三帝同盟・三国同盟・再保障条約でフランスを孤立させ、1884年からアフリカ・太平洋に植民地を得た。
+    - from: 1890
+      to: 1914
+      text: ヴィルヘルム2世がビスマルクを辞めさせ、「世界政策」に転じる。再保障条約を更新せず露仏同盟を招き、大艦隊の建造でイギリスとも対立した。重化学工業でイギリスを追い抜き、社会民主党は1912年に帝国議会の第一党となった。1914年に第一次世界大戦が始まる。
+  source:
+    - "https://ja.wikipedia.org/wiki/ドイツ帝国"
+    - "https://en.wikipedia.org/wiki/German_Empire"

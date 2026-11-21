@@ -54,11 +54,22 @@
   name: ドイツ連邦
   color: "#d6cfa8"
   kind: 国家連合
-  note: overlord（外枠）としてだけ使う枠。ウィーン会議で1815年に成立。オーストリアが議長国で、連邦議会はフランクフルトに置かれた。プロイセン・オーストリアは旧帝国領の部分だけが加盟。
+  note: overlord（外枠）としてだけ使う枠。ウィーン会議で1815年に成立し、1866年の普墺戦争で解体。オーストリアが議長国で、連邦議会はフランクフルトに置かれた。プロイセン・オーストリアは旧帝国領の部分だけが加盟。君主欄は議長国の君主（1848–49年は帝国摂政）。
+  rulers:
+    - {name: フランツ1世, title: オーストリア皇帝（連邦議会の議長国）, from: 1815, to: 1835, note: 神聖ローマ皇帝としてはフランツ2世。, source: "https://ja.wikipedia.org/wiki/フランツ2世_(神聖ローマ皇帝)"}
+    - {name: フェルディナント1世, title: オーストリア皇帝（連邦議会の議長国）, from: 1835, to: 1848, note: 実権は宰相メッテルニヒにあった。, source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(オーストリア皇帝)"}
+    - {name: ヨハン大公, title: 帝国摂政（フランクフルト国民議会が置いた臨時中央権力）, from: 1848, to: 1849, note: 1848年6月に国民議会が選出。連邦議会は権限を臨時中央権力に移した。1849年12月に辞任し、連邦議会の再開（1850–51年）までは、オーストリアとプロイセンの代表による「連邦中央委員会」が権限を引き継いだ。, source: "https://en.wikipedia.org/wiki/Archduke_John_of_Austria"}
+    - {name: フランツ・ヨーゼフ1世, title: オーストリア皇帝（連邦議会の議長国）, from: 1850, to: 1866, note: 連邦議会は1850–51年に再開された。, source: "https://ja.wikipedia.org/wiki/フランツ・ヨーゼフ1世"}
   periods:
     - from: 1815
-      to: 1815
-      text: 約40の君主国と自由都市（発足時は34の君主国と4つの自由都市）からなる国家連合として発足。旧神聖ローマ帝国の範囲をほぼ引き継いだ。
+      to: 1847
+      text: オーストリア宰相メッテルニヒのもとで、自由主義と国民統一の運動を抑えこんだ（1819年のカールスバート決議による大学・出版の取り締まり）。経済面ではプロイセン主導のドイツ関税同盟（1834）が広がった。
+    - from: 1848
+      to: 1850
+      text: 三月革命。フランクフルトのパウロ教会で国民議会が開かれ、統一と憲法が議論された（大ドイツ主義と小ドイツ主義）。プロイセン王が帝冠を拒んで挫折し、連邦は復活した。
+    - from: 1851
+      to: 1866
+      text: オーストリアとプロイセンが主導権を争った。シュレースヴィヒ・ホルシュタインの処理をめぐって対立が深まり、1866年の普墺戦争（ドイツ戦争）で連邦は解体した。
   source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
 
 - id: other_hre
@@ -95,6 +106,11 @@
     - {name: マクシミリアン3世ヨーゼフ, title: バイエルン選帝侯, from: 1745, to: 1777, source: "https://en.wikipedia.org/wiki/Maximilian_III_Joseph,_Elector_of_Bavaria"}
     - {name: カール・テオドール, title: プファルツ＝バイエルン選帝侯, from: 1777, to: 1799, note: プファルツ選帝侯（1742–）がバイエルンを相続。, source: "https://en.wikipedia.org/wiki/Charles_Theodore,_Elector_of_Bavaria"}
     - {name: マクシミリアン4世ヨーゼフ（国王マクシミリアン1世）, title: バイエルン選帝侯→バイエルン王（1806–）, from: 1799, to: 1825, note: 宰相モンジュラが改革を主導。, source: "https://ja.wikipedia.org/wiki/マクシミリアン1世_(バイエルン王)"}
+    - {name: ルートヴィヒ1世, title: バイエルン王, from: 1825, to: 1848, note: 1848年、ローラ・モンテス事件と三月革命の中で退位。, source: "https://ja.wikipedia.org/wiki/ルートヴィヒ1世_(バイエルン王)"}
+    - {name: マクシミリアン2世, title: バイエルン王, from: 1848, to: 1864, source: "https://ja.wikipedia.org/wiki/マクシミリアン2世_(バイエルン王)"}
+    - {name: ルートヴィヒ2世, title: バイエルン王, from: 1864, to: 1886, note: 1886年に統治不能として廃位され、直後に急死。, source: "https://ja.wikipedia.org/wiki/ルートヴィヒ2世_(バイエルン王)"}
+    - {name: オットー1世, title: バイエルン王, from: 1886, to: 1913, note: 精神の病のため、叔父ルイトポルト（1886–1912）とその子ルートヴィヒ（1912–13）が摂政として統治した。, source: "https://ja.wikipedia.org/wiki/オットー1世_(バイエルン王)"}
+    - {name: ルートヴィヒ3世, title: バイエルン王, from: 1913, to: 1918, note: 1912–13年は摂政。1918年のドイツ革命で退位。, source: "https://ja.wikipedia.org/wiki/ルートヴィヒ3世_(バイエルン王)"}
   periods:
     - from: 1648
       to: 1700
@@ -117,6 +133,18 @@
     - from: 1800
       to: 1815
       text: ナポレオンと結んでフランケン・シュヴァーベンの聖界領・帝国都市を獲得し、1806年に王国となった。1813年のリート条約で連合国側に転じ、王国の領土を保った。
+    - from: 1816
+      to: 1847
+      text: 1818年に憲法を制定（南ドイツの立憲君主国）。ルートヴィヒ1世はミュンヘンを芸術の都として整え、1835年にはニュルンベルク–フュルト間にドイツ最初の鉄道が開通した。王子オットーは1832年にギリシア王となった。
+    - from: 1848
+      to: 1865
+      text: 三月革命の中でルートヴィヒ1世が退位。マクシミリアン2世は学問を保護し、オーストリアとプロイセンの間で中小国をまとめる「第三のドイツ」の立場をとった。
+    - from: 1866
+      to: 1870
+      text: ルートヴィヒ2世の治世。普墺戦争でオーストリア側について敗れ、プロイセンと秘密の攻守同盟を結んだ。1870年の普仏戦争ではプロイセン側で参戦し、11月の条約でドイツ帝国への加盟を決めた。
+    - from: 1871
+      to: 1914
+      text: ドイツ帝国の構成国。軍隊（平時の指揮権）・郵便・鉄道などに独自の権限（留保権）を保った。ルートヴィヒ2世がノイシュヴァンシュタイン城などの築城に没頭した後、1886年から摂政ルイトポルトの時代が続いた。
   source:
     - "https://ja.wikipedia.org/wiki/バイエルン選帝侯領"
     - "https://ja.wikipedia.org/wiki/バイエルン王国"
@@ -209,6 +237,9 @@
     - {name: ルートヴィヒ・オイゲン, title: ヴュルテンベルク公, from: 1793, to: 1795, source: "https://en.wikipedia.org/wiki/Louis_Eugene,_Duke_of_Württemberg"}
     - {name: フリードリヒ・オイゲン, title: ヴュルテンベルク公, from: 1795, to: 1797, source: "https://en.wikipedia.org/wiki/Frederick_II_Eugene,_Duke_of_Württemberg"}
     - {name: フリードリヒ1世, title: ヴュルテンベルク公→選帝侯（1803）→国王（1806）, from: 1797, to: 1816, source: "https://ja.wikipedia.org/wiki/フリードリヒ1世_(ヴュルテンベルク王)"}
+    - {name: ヴィルヘルム1世, title: ヴュルテンベルク王, from: 1816, to: 1864, note: 1819年に憲法を制定。, source: "https://ja.wikipedia.org/wiki/ヴィルヘルム1世_(ヴュルテンベルク王)"}
+    - {name: カール1世, title: ヴュルテンベルク王, from: 1864, to: 1891, source: "https://ja.wikipedia.org/wiki/カール1世_(ヴュルテンベルク王)"}
+    - {name: ヴィルヘルム2世, title: ヴュルテンベルク王, from: 1891, to: 1918, note: 1918年のドイツ革命で退位。, source: "https://ja.wikipedia.org/wiki/ヴィルヘルム2世_(ヴュルテンベルク王)"}
   periods:
     - from: 1648
       to: 1732
@@ -219,6 +250,15 @@
     - from: 1797
       to: 1815
       text: フリードリヒ1世がナポレオンと結び、帝国都市・修道院領・前方オーストリア領を併合して領土をほぼ倍にした。1806年に王国となり、1813年に連合国側に転じた。
+    - from: 1816
+      to: 1863
+      text: ヴィルヘルム1世が1819年に国王と議会の合意による憲法を定めた。飢饉（1816–17）の後、農業改革や農業学校（ホーエンハイム）の設立に努めた。
+    - from: 1864
+      to: 1870
+      text: 普墺戦争でオーストリア側について敗れ、プロイセンと攻守同盟を結んだ。1870年の普仏戦争に参戦し、ドイツ帝国に加わった。
+    - from: 1871
+      to: 1914
+      text: ドイツ帝国の構成国。独自の軍・郵便・鉄道を保った。シュトゥットガルト周辺でダイムラー、ボッシュなどの機械・自動車工業が発達した。
   source:
     - "https://ja.wikipedia.org/wiki/ヴュルテンベルク公国"
     - "https://ja.wikipedia.org/wiki/ヴュルテンベルク王国"
@@ -239,6 +279,11 @@
     - {name: カール3世ヴィルヘルム, title: バーデン＝ドゥルラハ辺境伯, from: 1709, to: 1738, note: 1715年にカールスルーエを建設。, source: "https://en.wikipedia.org/wiki/Charles_III_William,_Margrave_of_Baden-Durlach"}
     - {name: カール・フリードリヒ, title: 辺境伯→選帝侯（1803）→大公（1806）, from: 1738, to: 1811, note: 1771年にバーデン＝バーデンを相続して全バーデンを統一。啓蒙専制君主として知られる。, source: "https://en.wikipedia.org/wiki/Charles_Frederick,_Grand_Duke_of_Baden"}
     - {name: カール, title: バーデン大公, from: 1811, to: 1818, source: "https://en.wikipedia.org/wiki/Charles,_Grand_Duke_of_Baden"}
+    - {name: ルートヴィヒ1世, title: バーデン大公, from: 1818, to: 1830, source: "https://en.wikipedia.org/wiki/Louis_I,_Grand_Duke_of_Baden"}
+    - {name: レオポルト, title: バーデン大公, from: 1830, to: 1852, note: 1849年の革命で一時国外に逃れた。, source: "https://en.wikipedia.org/wiki/Leopold,_Grand_Duke_of_Baden"}
+    - {name: ルートヴィヒ2世, title: バーデン大公, from: 1852, to: 1856, note: 病のため弟フリードリヒが摂政。名目上は1858年の死まで大公。, source: "https://en.wikipedia.org/wiki/Louis_II,_Grand_Duke_of_Baden"}
+    - {name: フリードリヒ1世, title: バーデン大公, from: 1856, to: 1907, note: 1852年から摂政、1856年に大公の称号をとる。妃はヴィルヘルム1世の娘ルイーゼ。, source: "https://en.wikipedia.org/wiki/Frederick_I,_Grand_Duke_of_Baden"}
+    - {name: フリードリヒ2世, title: バーデン大公, from: 1907, to: 1918, note: 1918年のドイツ革命で退位。, source: "https://en.wikipedia.org/wiki/Frederick_II,_Grand_Duke_of_Baden"}
   periods:
     - from: 1648
       to: 1770
@@ -249,6 +294,18 @@
     - from: 1803
       to: 1815
       text: ナポレオンと結んで右岸プファルツ（ハイデルベルク・マンハイム）、司教領、前方オーストリア（ブライスガウ）などを獲得し、領土は4倍以上になった。1806年に大公国。
+    - from: 1816
+      to: 1847
+      text: 1818年に南ドイツで最も自由主義的といわれる憲法を制定。議会では自由主義者（ロテック、ヴェルカーら）が活躍した。
+    - from: 1848
+      to: 1849
+      text: 三月革命の中心地の一つ。1848年4月にヘッカーらが共和政を求めて蜂起し、1849年5月の革命で大公が国外に逃れた。プロイセン軍が鎮圧し、7月にラシュタット要塞が降伏した。
+    - from: 1850
+      to: 1870
+      text: フリードリヒ1世のもとで自由主義の改革を進め、南ドイツで最も親プロイセンの国となった。1870年の普仏戦争に参戦し、北ドイツ連邦との条約でドイツ帝国に加わった。
+    - from: 1871
+      to: 1914
+      text: ドイツ帝国の構成国。大公フリードリヒ1世は皇帝ヴィルヘルム1世の娘婿で、帝国の成立に協力した。
   source:
     - "https://ja.wikipedia.org/wiki/バーデン辺境伯領"
     - "https://ja.wikipedia.org/wiki/バーデン大公国"
@@ -285,6 +342,8 @@
     - {name: ヴィルヘルム8世, title: ヘッセン＝カッセル方伯, from: 1751, to: 1760, source: "https://en.wikipedia.org/wiki/William_VIII,_Landgrave_of_Hesse-Kassel"}
     - {name: フリードリヒ2世, title: ヘッセン＝カッセル方伯, from: 1760, to: 1785, note: アメリカ独立戦争にイギリスの傭兵として兵を貸し出した。, source: "https://en.wikipedia.org/wiki/Frederick_II,_Landgrave_of_Hesse-Kassel"}
     - {name: ヴィルヘルム9世（選帝侯ヴィルヘルム1世）, title: 方伯→ヘッセン選帝侯（1803）, from: 1785, to: 1821, note: 1806–1813年は亡命。, source: "https://en.wikipedia.org/wiki/William_I,_Elector_of_Hesse"}
+    - {name: ヴィルヘルム2世, title: ヘッセン選帝侯, from: 1821, to: 1847, note: 1831年から子のフリードリヒ・ヴィルヘルムが共同統治者として実権を持った。, source: "https://en.wikipedia.org/wiki/William_II,_Elector_of_Hesse"}
+    - {name: フリードリヒ・ヴィルヘルム, title: ヘッセン選帝侯, from: 1847, to: 1866, note: 1866年にプロイセンに捕らえられ、国を失った（退位はしなかった）。, source: "https://en.wikipedia.org/wiki/Frederick_William,_Elector_of_Hesse"}
   periods:
     - from: 1648
       to: 1735
@@ -295,6 +354,12 @@
     - from: 1806
       to: 1813
       text: プロイセン側に立ったためナポレオンに占領され、本領はヴェストファーレン王国、ハーナウはフランクフルト大公国に編入された。1813年に選帝侯が復帰。
+    - from: 1814
+      to: 1830
+      text: 復帰した選帝侯ヴィルヘルム1世はナポレオン期の改革を取り消し、旧体制を復活させた（兵士のおさげ髪まで元に戻させたといわれる）。
+    - from: 1831
+      to: 1866
+      text: 1830年の騒乱を受けて1831年に憲法を制定したが、選帝侯と宰相ハッセンプフルークは議会と対立し続けた。1850年の憲法紛争はプロイセンとオーストリアの対立（オルミュッツ協定）に発展した。1866年、普墺戦争でオーストリア側につき、プロイセンに併合された。
   source:
     - "https://ja.wikipedia.org/wiki/ヘッセン＝カッセル方伯領"
     - "https://ja.wikipedia.org/wiki/ヘッセン選帝侯国"
@@ -315,6 +380,10 @@
     - {name: ルートヴィヒ8世, title: ヘッセン＝ダルムシュタット方伯, from: 1739, to: 1768, source: "https://en.wikipedia.org/wiki/Louis_VIII,_Landgrave_of_Hesse-Darmstadt"}
     - {name: ルートヴィヒ9世, title: ヘッセン＝ダルムシュタット方伯, from: 1768, to: 1790, note: ピルマゼンスに住み、兵隊王として知られた。, source: "https://en.wikipedia.org/wiki/Louis_IX,_Landgrave_of_Hesse-Darmstadt"}
     - {name: ルートヴィヒ10世（大公ルートヴィヒ1世）, title: 方伯→ヘッセン大公（1806）, from: 1790, to: 1830, source: "https://en.wikipedia.org/wiki/Louis_I,_Grand_Duke_of_Hesse"}
+    - {name: ルートヴィヒ2世, title: ヘッセン大公, from: 1830, to: 1848, source: "https://en.wikipedia.org/wiki/Louis_II,_Grand_Duke_of_Hesse"}
+    - {name: ルートヴィヒ3世, title: ヘッセン大公, from: 1848, to: 1877, note: 宰相ダルヴィク（1850–71）が実権を握った。, source: "https://en.wikipedia.org/wiki/Louis_III,_Grand_Duke_of_Hesse"}
+    - {name: ルートヴィヒ4世, title: ヘッセン大公, from: 1877, to: 1892, note: 妃はイギリスのヴィクトリア女王の娘アリス。, source: "https://en.wikipedia.org/wiki/Louis_IV,_Grand_Duke_of_Hesse"}
+    - {name: エルンスト・ルートヴィヒ, title: ヘッセン大公, from: 1892, to: 1918, note: 妹アリックスはロシア皇帝ニコライ2世の皇后。1918年のドイツ革命で廃位。, source: "https://en.wikipedia.org/wiki/Ernest_Louis,_Grand_Duke_of_Hesse"}
   periods:
     - from: 1648
       to: 1735
@@ -325,6 +394,15 @@
     - from: 1803
       to: 1815
       text: 帝国代表者会議主要決議でマインツ領の一部やヴェストファーレン公領を獲得。1806年にライン同盟に加わって大公国となり、周辺の伯領などを陪臣化した。1816年にライン左岸のラインヘッセン（マインツ・ヴォルムス）を得る。
+    - from: 1816
+      to: 1847
+      text: 1816年にライン左岸のラインヘッセン（マインツ・ヴォルムス）を得た。1820年に憲法を制定し、1828年にはプロイセンと関税同盟を結んで、のちのドイツ関税同盟の先がけとなった。
+    - from: 1848
+      to: 1870
+      text: 宰相ダルヴィクが反プロイセン政策をとり、1866年の普墺戦争でオーストリア側について敗れた。ヘッセン＝ホンブルクなどをプロイセンに譲り、マイン川以北のオーバーヘッセン州だけが北ドイツ連邦に加わった（南部は加わらない、二つに分かれた状態）。
+    - from: 1871
+      to: 1914
+      text: ドイツ帝国の構成国。エルンスト・ルートヴィヒ大公は芸術を保護し、ダルムシュタットのマティルデンヘーエに芸術家村（1899）を開いてユーゲントシュティールの中心とした。
   source:
     - "https://ja.wikipedia.org/wiki/ヘッセン＝ダルムシュタット方伯領"
     - "https://ja.wikipedia.org/wiki/ヘッセン大公国"
@@ -339,6 +417,8 @@
   note: ナッサウ＝ヴァイルブルク、ナッサウ＝ウージンゲン、ナッサウ＝ザールブリュッケンなどヴァルラム系ナッサウ家の諸領をまとめたもの。1806年に統合されてナッサウ公国となった（首都はヴァイルブルク／ヴィースバーデン近郊ビープリヒ）。
   rulers:
     - {name: フリードリヒ・アウグスト（ナッサウ＝ウージンゲン）, title: ナッサウ公, from: 1806, to: 1816, note: ナッサウ＝ヴァイルブルク侯フリードリヒ・ヴィルヘルムと共同統治。1805年以前は家系ごとに君主が分かれるため省略。, source: "https://en.wikipedia.org/wiki/Frederick_Augustus,_Duke_of_Nassau"}
+    - {name: ヴィルヘルム, title: ナッサウ公, from: 1816, to: 1839, note: 1816年にナッサウ＝ヴァイルブルク系のもとで両系の領地を統合。, source: "https://en.wikipedia.org/wiki/William,_Duke_of_Nassau"}
+    - {name: アドルフ, title: ナッサウ公, from: 1839, to: 1866, note: 1866年に国を失い、1890年にルクセンブルク大公となった。, source: "https://ja.wikipedia.org/wiki/アドルフ_(ルクセンブルク大公)"}
   periods:
     - from: 1648
       to: 1802
@@ -346,6 +426,9 @@
     - from: 1803
       to: 1815
       text: 帝国代表者会議主要決議でマインツ・トリーア両大司教領の右岸部分を得て領土を拡大。1806年にライン同盟に加わりナッサウ公国となった。
+    - from: 1816
+      to: 1866
+      text: 1814年にドイツで最初期の憲法を制定。首都ヴィースバーデンは温泉保養地として栄えた。1866年の普墺戦争でオーストリア側につき、プロイセンに併合された（ヘッセン＝ナッサウ州）。
   source:
     - "https://de.wikipedia.org/wiki/Herzogtum_Nassau"
     - "https://ja.wikipedia.org/wiki/ナッサウ公国"
@@ -372,10 +455,17 @@
   color: "#cfd9b0"
   kind: 侯国
   note: 1712年からヴァルデック侯国。ピルモント（ニーダーザクセン）も領有。1807年ライン同盟、1815年ドイツ連邦に加盟。
+  rulers:
+    - {name: ゲオルク2世, title: ヴァルデック＝ピルモント侯, from: 1813, to: 1845, source: "https://en.wikipedia.org/wiki/George_II,_Prince_of_Waldeck_and_Pyrmont"}
+    - {name: ゲオルク・ヴィクトル, title: ヴァルデック＝ピルモント侯, from: 1845, to: 1893, note: 娘エマはオランダ王妃（ウィルヘルミナ女王の母）。, source: "https://en.wikipedia.org/wiki/George_Victor,_Prince_of_Waldeck_and_Pyrmont"}
+    - {name: フリードリヒ, title: ヴァルデック＝ピルモント侯, from: 1893, to: 1918, note: 1918年のドイツ革命で退位。, source: "https://en.wikipedia.org/wiki/Friedrich,_Prince_of_Waldeck_and_Pyrmont"}
   periods:
     - from: 1648
       to: 1815
       text: アロルゼンを首都とするヘッセン北西部の小侯国。ヘッセン＝カッセルと同じく傭兵の供給で知られた。
+    - from: 1816
+      to: 1914
+      text: ドイツ連邦の小国。財政難のため1867年の加盟条約（1868年発効）で行政をプロイセンに委ねたが、侯国としては存続し、北ドイツ連邦・ドイツ帝国の構成国となった。
   source: "https://de.wikipedia.org/wiki/Waldeck_(Land)"
 
 - id: hohenzollern
@@ -384,6 +474,10 @@
   color: "#c2c9d6"
   kind: 侯国
   note: シュヴァーベンに残ったホーエンツォレルン家のカトリック系の分家（プロイセン王家の本家筋）。ヘヒンゲン系とジグマリンゲン系の2侯国があり、この地図ではジグマリンゲン侯国の中心部だけを示す。1806年のライン同盟加盟で独立を保ち、1815年ドイツ連邦の加盟国となった（1850年にプロイセン領）。
+  rulers:
+    - {name: アントン・アロイス, title: ホーエンツォレルン＝ジグマリンゲン侯, from: 1785, to: 1831, source: "https://en.wikipedia.org/wiki/Anton_Aloys,_Prince_of_Hohenzollern-Sigmaringen"}
+    - {name: カール, title: ホーエンツォレルン＝ジグマリンゲン侯, from: 1831, to: 1848, source: "https://en.wikipedia.org/wiki/Charles,_Prince_of_Hohenzollern-Sigmaringen"}
+    - {name: カール・アントン, title: ホーエンツォレルン＝ジグマリンゲン侯, from: 1848, to: 1849, note: 1849年に領国をプロイセン王に譲った。のちプロイセン首相（1858–62）。, source: "https://en.wikipedia.org/wiki/Karl_Anton,_Prince_of_Hohenzollern"}
   periods:
     - from: 1648
       to: 1805
@@ -391,6 +485,9 @@
     - from: 1806
       to: 1815
       text: ナポレオンの妃ジョゼフィーヌと縁のある侯妃の働きかけもあってライン同盟に加わり、周辺の小領を併合して独立を保った。
+    - from: 1816
+      to: 1849
+      text: ドイツ連邦の小国（ジグマリンゲン・ヘヒンゲンの2侯国）。1848年の革命の騒乱を受け、両侯は1849年に領国をプロイセン王に譲り、1850年からプロイセンのホーエンツォレルン諸邦となった。カール・アントンの子カロルは1866年にルーマニア公となり、レオポルトのスペイン王位への立候補（1870）は普仏戦争のきっかけとなった。
   source: "https://de.wikipedia.org/wiki/Fürstentum_Hohenzollern-Sigmaringen"
 
 - id: ansbach
@@ -464,6 +561,9 @@
     - from: 1813
       to: 1815
       text: ナポレオン体制の崩壊で独立を回復し、ウィーン会議で自由都市となった。
+    - from: 1816
+      to: 1866
+      text: ドイツ連邦議会の所在地。ロスチャイルド家などの銀行が集まる金融の中心だった。1848–49年にはパウロ教会でフランクフルト国民議会が開かれた。1866年の普墺戦争の後、プロイセンに併合され、重い賠償金を課された。
   source: "https://ja.wikipedia.org/wiki/フランクフルト自由都市"
 
 - id: frankfurt_gd

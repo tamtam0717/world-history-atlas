@@ -4,6 +4,7 @@
 // 先頭の文字を押してから 1 秒以内に次の文字を押すと 2 文字のショートカットになり、
 // それ以外のキーを押したときは先頭の文字を忘れて、そのキー本来の動作をする（例：A → C は C の動作）。
 
+import type { DistKey } from "./data";
 import type { AtlasMap } from "./map";
 import type { Search } from "./search";
 
@@ -17,8 +18,10 @@ export interface ShortcutActions {
   togglePlay(): void;
   startYearInput(digit: string): void;
   toggleModern(): void;
-  /** 宗教の分布の表示を切り替える（revert：長押しを離したので元に戻す） */
-  toggleReligion(revert?: boolean): void;
+  /** 宗教・言語の分布の表示を切り替える（revert：長押しを離したので元に戻す） */
+  toggleLayer(layer: DistKey, revert?: boolean): void;
+  /** 潮流の年表（スライダーの下の帯）を開く／閉じる */
+  toggleBand(): void;
   compare(on: boolean): void;
   focusSelected(): void;
   copyUrl(): void;
@@ -123,12 +126,13 @@ export function setupShortcuts(a: ShortcutActions) {
     a.map.zoomBy(f);
   };
 
-  // R：押すと宗教表示を切り替え。長押し（HOLD_MS 以上）したときは、離すと元に戻す
+  // R：宗教、Y：言語の表示を切り替え。長押し（HOLD_MS 以上）したときは、離すと元に戻す
   const HOLD_MS = 450;
-  let rDownAt = 0;
-  const endReligionHold = () => {
-    if (rDownAt && performance.now() - rDownAt >= HOLD_MS) a.toggleReligion(true);
-    rDownAt = 0;
+  const LAYER_KEYS: Record<string, DistKey> = { R: "religion", Y: "language" };
+  const downAt: Record<string, number> = {};
+  const endLayerHold = (l: string) => {
+    if (downAt[l] && performance.now() - downAt[l] >= HOLD_MS) a.toggleLayer(LAYER_KEYS[l], true);
+    downAt[l] = 0;
   };
 
   let comparing = false;
@@ -235,7 +239,7 @@ export function setupShortcuts(a: ShortcutActions) {
       }
     }
     pending = "";
-    if (repeat) return l === "B" || l === "R"; // 押しっぱなしの繰り返しは無視（B・R は押している間の表示なので既定動作だけ止める）
+    if (repeat) return l === "B" || l in LAYER_KEYS; // 押しっぱなしの繰り返しは無視（B・R は押している間の表示なので既定動作だけ止める）
     if (PREFIXES.has(l)) {
       pending = l;
       pendingAt = now;
@@ -262,10 +266,14 @@ export function setupShortcuts(a: ShortcutActions) {
         }
         return true;
       case "R":
-        if (!rDownAt) {
-          rDownAt = performance.now();
-          a.toggleReligion();
+      case "Y":
+        if (!downAt[l]) {
+          downAt[l] = performance.now();
+          a.toggleLayer(LAYER_KEYS[l]);
         }
+        return true;
+      case "T":
+        a.toggleBand();
         return true;
       case "G":
         a.focusSelected();
@@ -290,12 +298,12 @@ export function setupShortcuts(a: ShortcutActions) {
     // Mac では Command を押している間、他のキーの keyup が来ないことがあるので念のため
     if (e.key === "Meta" || e.key === "Alt" || e.key === "Control") stopPan();
     if (e.code === "KeyB" || e.key === "b" || e.key === "B") endCompare();
-    if (e.code === "KeyR" || e.key === "r" || e.key === "R") endReligionHold();
+    for (const l of Object.keys(LAYER_KEYS)) if (e.code === `Key${l}` || e.key.toUpperCase() === l) endLayerHold(l);
   });
   window.addEventListener("blur", () => {
     stopPan();
     endCompare();
-    endReligionHold();
+    for (const l of Object.keys(LAYER_KEYS)) endLayerHold(l);
     clearPending();
   });
 }

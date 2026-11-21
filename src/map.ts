@@ -9,7 +9,7 @@ import polylabel from "polylabel";
 import { feature, merge, mesh, neighbors } from "topojson-client";
 import type { GeometryCollection, MultiPolygon, Polygon, Topology } from "topojson-specification";
 import type { Feature, FeatureCollection, Geometry, MultiPolygon as GeoMultiPolygon } from "geojson";
-import { AtlasIndex, cityCapitalOf, cityName, cityPop, fallbackColor, type ReligionEntry } from "./data";
+import { AtlasIndex, cityCapitalOf, cityName, cityPop, curveAt, fallbackColor, type DistKey, type Movement, type ReligionEntry, type TimelineEntry } from "./data";
 import { assignColors, modernName } from "./modern";
 
 type PieceProps = { id: string; name: string; iso: string; adm1?: string; adm2?: string };
@@ -19,6 +19,18 @@ interface Merged {
   geo: GeoMultiPolygon;
   /** ラベルを置く点と、塊の面積（km²） */
   label: { lon: number; lat: number; area: number } | null;
+  /** 多角形ごとの面積（km²）と、ラベルの点（必要になったときに計算する） */
+  areas?: number[];
+  plabels?: Map<number, NonNullable<Merged["label"]>>;
+}
+
+/** 保護国・植民地の副ラベルの区画（同じ owner の中で、元の国ごとのまとまり） */
+interface SubUnit {
+  owner: number;
+  name: string;
+  /** 2行目（「フランスの保護下」など） */
+  note: string;
+  pieces: number[];
 }
 
 const SEA = "#cfdde3";
@@ -34,15 +46,25 @@ const EMPTY: FeatureCollection = { type: "FeatureCollection", features: [] };
 const FONT = ["Noto Sans Medium"];
 const FONT_REGULAR = ["Noto Sans Regular"];
 const LOCAL_FONT = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Meiryo", sans-serif';
-/** 帝国の枠として描く上位政体（それ以外の overlord は宗主権として細い点線） */
-const EMPIRE_FRAMES = new Set(["hre", "rhine_confederation", "german_confederation"]);
+/** 帝国の枠として描く上位政体（それ以外の overlord は宗主権として、宗主国の色の帯で描く） */
+const EMPIRE_FRAMES = new Set(["hre", "rhine_confederation", "german_confederation", "north_german_confederation", "hungary_crown"]);
 
-/** 地図の主題（塗り分けの種類）。言語などを足すときはここに増やす */
-export type MapLayer = "political" | "religion";
+/** 地図の主題（塗り分けの種類）。分布（宗教・言語）を足すときは DistKey にも足す */
+export type MapLayer = "political" | DistKey;
+export const isDist = (l: MapLayer): l is DistKey => l === "religion" || l === "language";
+const DIST_LABEL: Record<DistKey, string> = { religion: "宗教", language: "言語" };
 
-/** 宗教表示でクリックした場所の情報 */
+/** 潮流の種類ごとの色（地図の光・パネルの丸・年表の帯で共通） */
+export const MOVEMENT_COLORS: Record<string, string> = {
+  thought: "#2f6fd0",
+  art: "#c93a7c",
+  religion: "#d08a10",
+  system: "#1f9a6a",
+};
+
+/** 分布（宗教・言語）の表示でクリックした場所の情報 */
 export interface ReligionPick {
-  /** 宗教の地域の番号（atlas.religion.regions）。データがなければ -1 */
+  /** 分布の地域の番号（atlas.religion.regions / atlas.language.regions）。データがなければ -1 */
   region: number;
   /** 現代の地名（ピース名） */
   place: string;
@@ -51,7 +73,7 @@ export interface ReligionPick {
 export interface MapCallbacks {
   onSelect(polityId: string | null): void;
   onPiece?(piece: PieceProps | null): void;
-  /** 宗教表示のときのクリック（何もない所なら null） */
+  /** 分布（宗教・言語）の表示のときのクリック（何もない所なら null） */
   onReligion?(pick: ReligionPick | null): void;
 }
 
@@ -77,6 +99,9 @@ export class AtlasMap {
   private relRegion: Int32Array;
   private relColorOf: (string | null | undefined)[];
   private relSelected = -1;
+  /** 地図上で広がりを見せている潮流 */
+  private movement: Movement | null = null;
+  private mvTimer = 0;
   private baseZoom = 3;
   debug = false;
   bottomInset = 0;
@@ -127,6 +152,7 @@ export class AtlasMap {
     this.ready = new Promise((resolve) => {
       this.map.on("load", () => {
         this.setup();
+        this.setupZoomFilters();
         this.loaded = true;
         this.baseZoom = this.map.getZoom();
         if (this.year) this.render(this.year);
@@ -135,10 +161,10 @@ export class AtlasMap {
     });
 
     this.map.on("click", (e) => {
-      const f = this.map.queryRenderedFeatures(e.point, { layers: [this.layer === "religion" ? "rel-fill" : "fill"] })[0];
+      const f = this.map.queryRenderedFeatures(e.point, { layers: [isDist(this.layer) ? "rel-fill" : "fill"] })[0];
       const i = f ? Number(f.id) : -1;
       if (this.debug) this.cb.onPiece?.(i >= 0 ? this.geoms[i].properties! : null);
-      if (this.layer === "religion") {
+      if (isDist(this.layer)) {
         this.cb.onReligion?.(i >= 0 ? { region: this.relRegion[i], place: this.geoms[i].properties!.name } : null);
         return;
       }
@@ -174,10 +200,12 @@ export class AtlasMap {
     ] as const) {
       map.addImage(`hatch-${name}`, hatchImage(color, size), { pixelRatio: 2 });
     }
-    // 宗教の少数派の斜線（宗教の種類ごとに1枚）
-    (this.idx.atlas.religion?.kinds ?? []).forEach((k, i) => {
-      map.addImage(`rhatch-${i}`, hatchImage(stripeColor(k.color), 8, 0.32), { pixelRatio: 2 });
-    });
+    // 宗教・言語の少数派の斜線（種類ごとに1枚）
+    for (const key of ["religion", "language"] as const) {
+      (this.idx.dist(key)?.kinds ?? []).forEach((k, i) => {
+        map.addImage(`${key}-hatch-${i}`, hatchImage(stripeColor(k.color), 8, 0.32), { pixelRatio: 2 });
+      });
+    }
 
     // ピース（塗りは feature-state "c"、現代版の色は属性 mcolor）
     const fc = feature(this.topo, this.topo.objects.pieces as GeometryCollection<PieceProps>) as unknown as FeatureCollection;
@@ -188,7 +216,7 @@ export class AtlasMap {
       f.properties = { pid: p.id, name: p.name, iso: p.iso, mcolor: mcolors.get(p.iso) };
     });
     map.addSource("pieces", { type: "geojson", data: fc });
-    for (const id of ["borders", "overlords", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes"]) {
+    for (const id of ["borders", "overlords", "suz", "subunits", "sublabels", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes", "mv", "flash"]) {
       map.addSource(id, { type: "geojson", data: EMPTY });
     }
     // 川の名前用：細かく曲がる線のままだと線に沿った文字が置けないので、強めに単純化した別のソースを使う
@@ -277,6 +305,22 @@ export class AtlasMap {
         ],
       },
     });
+    // 宗主権：宗主国の色の帯。宗主権下の国の境界の内側に沿って、外側ほど濃く内側へぼかした帯を描く。
+    // 「宗主国の色に縁取られている＝その傘の下にある」と見えるようにする（輪は内側が右になる向きにそろえてある）
+    const bandW = (k: number) => ["interpolate", ["exponential", 1.4], ["zoom"], 2, 5 * k, 5, 10 * k, 8, 20 * k];
+    map.addLayer({
+      id: "suz-band",
+      type: "line",
+      source: "suz",
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": ["get", "color"],
+        "line-opacity": 0.85,
+        "line-width": bandW(1) as never,
+        "line-offset": bandW(0.5) as never,
+        "line-blur": bandW(0.85) as never,
+      },
+    });
     map.addLayer({
       id: "debug",
       type: "line",
@@ -306,6 +350,19 @@ export class AtlasMap {
         "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.5, 6, 1.1, 9, 1.6],
       },
     });
+    // 保護国・植民地など、同じ国の色の中の「元の国」の境界（細い破線）
+    map.addLayer({
+      id: "subunit-borders",
+      type: "line",
+      source: "subunits",
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": "#4a4038",
+        "line-opacity": 0.6,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.5, 6, 1, 9, 1.4],
+        "line-dasharray": [3, 2],
+      },
+    });
     map.addLayer({
       id: "modern-borders",
       type: "line",
@@ -326,15 +383,16 @@ export class AtlasMap {
         "line-dasharray": [3, 1.6],
       },
     });
+    // 宗主権下の国の境界：帯の外べりに、宗主国の濃い色の細い線
     map.addLayer({
       id: "suzerain",
       type: "line",
-      source: "overlords",
-      filter: ["==", ["get", "kind"], "suzerain"],
+      source: "suz",
+      layout: { "line-join": "round" },
       paint: {
-        "line-color": "#4c5a3a",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1, 6, 2],
-        "line-dasharray": [1, 1.6],
+        "line-color": ["get", "edge"],
+        "line-opacity": 0.9,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.8, 6, 1.6],
       },
     });
     map.addLayer({
@@ -342,6 +400,78 @@ export class AtlasMap {
       type: "line",
       source: "highlight",
       paint: { "line-color": "#1d1a16", "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1.6, 6, 3] },
+    });
+
+    // パネルの変化の行で指した地域群（マウスを乗せる／押す）
+    map.addLayer({
+      id: "flash-fill",
+      type: "fill",
+      source: "flash",
+      paint: { "fill-color": "#c0392b", "fill-opacity": 0.28 },
+    });
+    map.addLayer({
+      id: "flash-line",
+      type: "line",
+      source: "flash",
+      layout: { "line-join": "round" },
+      paint: { "line-color": "#8a1f12", "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1.5, 6, 3] },
+    });
+
+    // 潮流の広がり：地図全体を薄いベールで沈め、盛んな地域を種類の色で光らせる。
+    // 勢い（lvl 0〜1）が強いほど濃く、光のにじみ（ぼかした太い線）も広く明るい。発信地（center）はさらに強く光らせる
+    map.addLayer({
+      id: "mv-veil",
+      type: "fill",
+      source: "pieces",
+      layout: { visibility: "none" },
+      paint: { "fill-color": "#f7f4ee", "fill-opacity": 0.5 },
+    }, "lakes");
+    map.addLayer({
+      id: "mv-fill",
+      type: "fill",
+      source: "mv",
+      paint: {
+        "fill-color": ["get", "color"],
+        "fill-opacity": ["interpolate", ["linear"], ["get", "lvl"], 0, 0.05, 1, 0.6],
+      },
+    });
+    map.addLayer({
+      id: "mv-glow",
+      type: "line",
+      source: "mv",
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": ["get", "color"],
+        "line-opacity": ["interpolate", ["linear"], ["get", "lvl"], 0, 0.1, 1, 0.75],
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, ["+", 2, ["*", 10, ["get", "lvl"]]], 7, ["+", 6, ["*", 26, ["get", "lvl"]]]],
+        "line-blur": ["interpolate", ["linear"], ["zoom"], 2, ["+", 2, ["*", 8, ["get", "lvl"]]], 7, ["+", 6, ["*", 22, ["get", "lvl"]]]],
+      },
+    });
+    map.addLayer({
+      id: "mv-core",
+      type: "line",
+      source: "mv",
+      filter: ["get", "center"],
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": "#fffbe8",
+        "line-opacity": 0.9,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1.2, 7, 2.5],
+        "line-blur": 0.6,
+      },
+    });
+    map.addLayer({
+      id: "mv-center-glow",
+      type: "line",
+      source: "mv",
+      filter: ["get", "center"],
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": ["get", "color"],
+        "line-opacity": 0.8,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 10, 7, 34],
+        "line-blur": ["interpolate", ["linear"], ["zoom"], 2, 9, 7, 30],
+      },
     });
 
     // 海・海峡の名前
@@ -445,6 +575,31 @@ export class AtlasMap {
       });
     }
 
+    // 保護国・植民地の名前（宗主国の色の中に、国名より小さく。2行目に「○○の保護下」）
+    map.addLayer({
+      id: "sublabels",
+      type: "symbol",
+      source: "sublabels",
+      filter: [">=", ["zoom"], ["get", "minz"]],
+      layout: {
+        "text-field": ["format", ["get", "name"], {}, "\n", {}, ["get", "note"], { "font-scale": 0.72 }],
+        "text-font": FONT,
+        "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["max", 1, ["get", "s"]], 10.5], 5, ["*", ["max", 1, ["get", "s"]], 13.5], 8, ["*", ["max", 1, ["get", "s"]], 17]],
+        "text-max-width": 30,
+        "text-letter-spacing": 0.15,
+        "text-line-height": 1.15,
+        "symbol-sort-key": ["get", "rank"],
+        "text-padding": 2,
+      },
+      paint: {
+        "text-color": "#3d3128",
+        "text-opacity": 0.72,
+        "text-halo-color": "rgba(255,255,255,.55)",
+        "text-halo-width": 1.1,
+        "text-halo-blur": 0.6,
+      },
+    });
+
     // 国名ラベル（その時代版と現代版）
     for (const [src, on] of [
       ["labels", true],
@@ -463,6 +618,9 @@ export class AtlasMap {
           "text-max-width": 30,
           // 国名は「背景」：字間を広げ、半透明でやわらかく
           "text-letter-spacing": 0.3,
+          // 国名は「背景」なので、都市名などとぶつかっても消さない（都市名の配置にも影響させない）
+          "text-allow-overlap": true,
+          "text-ignore-placement": true,
           "symbol-sort-key": ["get", "rank"],
           "text-padding": 3,
         },
@@ -477,16 +635,42 @@ export class AtlasMap {
     }
   }
 
+  /**
+   * MapLibre はレイヤーの filter の ["zoom"] をタイルの整数の拡大率で評価するため、
+   * 「拡大率 3.2 から出す」のような細かい出し分けが効かない（3.9 でも 3 として扱われる）。
+   * そこで ["zoom"] を含む filter を覚えておき、拡大率が変わるたびに今の拡大率の数値へ置き換える。
+   */
+  private zoomFilters = new Map<string, unknown>();
+  private lastFilterZoom = NaN;
+  private setupZoomFilters() {
+    const hasZoom = (x: unknown): boolean =>
+      Array.isArray(x) ? (x.length === 1 && x[0] === "zoom") || x.some(hasZoom) : false;
+    for (const l of this.map.getStyle().layers) {
+      const f = this.map.getFilter(l.id);
+      if (f && hasZoom(f)) this.zoomFilters.set(l.id, f);
+    }
+    const apply = () => {
+      const z = Math.round(this.map.getZoom() * 10) / 10;
+      if (z === this.lastFilterZoom) return;
+      this.lastFilterZoom = z;
+      const sub = (x: unknown): unknown =>
+        Array.isArray(x) ? (x.length === 1 && x[0] === "zoom" ? z : x.map(sub)) : x;
+      for (const [id, f] of this.zoomFilters) this.map.setFilter(id, sub(f) as never);
+    };
+    this.map.on("zoom", apply);
+    apply();
+  }
+
   render(year: number) {
     this.year = year;
     if (!this.loaded) return;
     const idx = this.idx;
     const polities = idx.atlas.polities;
-    const groups = new Map<string, { owner: number; cert: number; pieces: number[] }>();
+    const certOf = new Int32Array(this.geoms.length);
     for (let i = 0; i < this.geoms.length; i++) {
       const s = this.atlasIdx[i] >= 0 ? idx.pieceState(this.atlasIdx[i], year) : null;
       const owner = s ? s[1] : -1;
-      const cert = s ? s[3] : 0;
+      certOf[i] = s ? s[3] : 0;
       this.ownerOf[i] = owner;
       this.ovOf[i] = s ? s[2] : -1;
       const color = owner >= 0 ? (polities[owner].color ?? fallbackColor(polities[owner].id)) : null;
@@ -494,27 +678,86 @@ export class AtlasMap {
         this.map.setFeatureState({ source: "pieces", id: i }, { c: color });
         this.colorOf[i] = color;
       }
-      const key = `${owner}|${cert}`;
+    }
+
+    // 保護国・植民地の区画（副ラベルを出すまとまり）
+    const subs = this.subUnits(year);
+    const subOf = new Int32Array(this.geoms.length).fill(-1);
+    subs.forEach((u, k) => {
+      for (const i of u.pieces) subOf[i] = k;
+    });
+
+    // 所属と確からしさの同じピースのまとまり（保護国などの区画は分けておき、国名ラベルを置かない）
+    const groups = new Map<string, { owner: number; cert: number; sub: boolean; pieces: number[] }>();
+    for (let i = 0; i < this.geoms.length; i++) {
+      const owner = this.ownerOf[i];
+      const sub = subOf[i] >= 0;
+      const key = `${owner}|${certOf[i]}${sub ? "|s" : ""}`;
       let g = groups.get(key);
-      if (!g) groups.set(key, (g = { owner, cert, pieces: [] }));
+      if (!g) groups.set(key, (g = { owner, cert: certOf[i], sub, pieces: [] }));
       g.pieces.push(i);
     }
 
     // 斜線（不確実・名目的・占領）と、国名ラベルの位置
     const certNames = idx.atlas.certainty;
     const hatch: Feature[] = [];
-    const labelBest = new Map<number, NonNullable<Merged["label"]>>();
+    // 政体ごとの多角形（どの結合結果の何番目か）
+    const polys = new Map<number, { m: Merged; k: number; area: number }[]>();
     for (const [key, g] of groups) {
       if (g.owner < 0) continue;
       const m = this.merged(key, g.pieces);
       if (g.cert > 0) hatch.push({ type: "Feature", properties: { pat: `hatch-${certNames[g.cert]}` }, geometry: m.geo });
-      const cur = labelBest.get(g.owner);
-      if (m.label && (!cur || m.label.area > cur.area)) labelBest.set(g.owner, m.label);
+      if (g.sub) continue;
+      let list = polys.get(g.owner);
+      if (!list) polys.set(g.owner, (list = []));
+      polyAreas(m).forEach((area, k) => list.push({ m, k, area }));
     }
     this.setData("hatch", { type: "FeatureCollection", features: hatch });
+    // 国名は首都のある塊に置く（植民地のほうが広い国でも、本国に名前が出るように）。
+    // 首都のない塊のほうが広ければ、そこにも同じ名前を出す
+    const capitals = this.capitalPoints(year);
     const labels: Feature[] = [];
-    for (const [owner, l] of labelBest) labels.push(labelFeature(idx.shortName(polities[owner], year), l));
+    for (const [owner, list] of polys) {
+      const name = idx.shortName(polities[owner], year);
+      let big = list[0];
+      for (const p of list) if (p.area > big.area) big = p;
+      const cap = capitals.get(owner);
+      let home = big;
+      if (cap) {
+        const c = list.find((p) => p.area >= big.area * 0.03 && inRing(cap, p.m.geo.coordinates[p.k][0]));
+        if (c) home = c;
+      }
+      for (const p of home === big ? [big] : [home, big]) {
+        const l = polyLabelOf(p.m, p.k);
+        if (l) labels.push(labelFeature(name, l));
+      }
+    }
     this.setData("labels", { type: "FeatureCollection", features: labels });
+
+    // 保護国・植民地の副ラベルと、その範囲の境界
+    const sublabels: Feature[] = [];
+    subs.forEach((u) => {
+      const l = this.merged(`sub${u.owner}|${u.name}`, u.pieces).label;
+      if (l) sublabels.push(labelFeature(u.name, l, { note: u.note, scale: 0.9, chars: Math.max([...u.name].length, [...u.note].length * 0.72) }));
+    });
+    this.setData("sublabels", { type: "FeatureCollection", features: sublabels });
+    const subKey = "sub" + hashInts(subOf) + hashInts(this.ownerOf);
+    let sb = this.meshCache.get(subKey);
+    if (!sb) {
+      sb = EMPTY;
+      if (subs.length) {
+        const pos = this.posMap();
+        const own = this.ownerOf;
+        const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => {
+          const i = pos.get(a)!;
+          const j = pos.get(b)!;
+          return a !== b && own[i] === own[j] && subOf[i] !== subOf[j];
+        });
+        sb = { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geom as Geometry }] };
+      }
+      this.meshCache.set(subKey, sb);
+    }
+    this.setData("subunits", sb);
 
     // 国境線（所属の違うピースの間と、海岸線）
     const own = this.ownerOf;
@@ -534,14 +777,14 @@ export class AtlasMap {
     let ov = this.meshCache.get(ovKey);
     if (!ov) {
       const pos = this.posMap();
-      const ovs = new Set(Array.from(this.ovOf).filter((o) => o >= 0));
+      const ovs = new Set(Array.from(this.ovOf).filter((o) => o >= 0 && EMPIRE_FRAMES.has(polities[o].id)));
       const features: Feature[] = [];
       for (const o of ovs) {
         const is = (g: unknown) => this.ovOf[pos.get(g)!] === o;
         const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => (a === b ? is(a) : is(a) !== is(b)));
         features.push({
           type: "Feature",
-          properties: { kind: EMPIRE_FRAMES.has(polities[o].id) ? "empire" : "suzerain" },
+          properties: { kind: "empire" },
           geometry: geom as Geometry,
         });
       }
@@ -550,11 +793,130 @@ export class AtlasMap {
     }
     this.setData("overlords", ov);
 
+    // 宗主権：宗主権下の国（owner と overlord の組）ごとの塊。帯は輪の内側に描く
+    const suzGroups = new Map<string, { o: number; owner: number; pieces: number[] }>();
+    for (let i = 0; i < this.geoms.length; i++) {
+      const o = this.ovOf[i];
+      if (o < 0 || EMPIRE_FRAMES.has(polities[o].id) || this.ownerOf[i] < 0) continue;
+      const k = `${o}|${this.ownerOf[i]}`;
+      let g = suzGroups.get(k);
+      if (!g) suzGroups.set(k, (g = { o, owner: this.ownerOf[i], pieces: [] }));
+      g.pieces.push(i);
+    }
+    const suz: Feature[] = [];
+    for (const [k, g] of suzGroups) {
+      const color = polities[g.o].color ?? fallbackColor(polities[g.o].id);
+      const m = this.merged(`suz${k}`, g.pieces);
+      suz.push({
+        type: "Feature",
+        properties: { color: shade(color, 0.82), edge: shade(color, 0.55) },
+        geometry: inwardRings(m),
+      });
+    }
+    this.setData("suz", { type: "FeatureCollection", features: suz });
+
     this.setData("cities", this.historicCities(year));
     this.map.setFilter("rivers", this.riverFilter(year));
     this.map.setFilter("rivers-label", this.riverFilter(year, 1.2));
-    if (this.layer === "religion") this.renderReligion(year);
+    if (isDist(this.layer)) this.renderReligion(year);
+    this.renderMovement();
     this.renderHighlight();
+  }
+
+  /** その年の首都の位置（政体 index → [経度, 緯度]）。首都が複数あれば人口の多いほう */
+  private capitalPoints(year: number): Map<number, [number, number]> {
+    const out = new Map<number, [number, number]>();
+    const best = new Map<number, number>();
+    for (const c of this.idx.atlas.cities ?? []) {
+      const pid = cityCapitalOf(c, year);
+      if (!pid) continue;
+      const i = this.idx.polityIndex.get(pid);
+      if (i === undefined) continue;
+      const pop = cityPop(c, year);
+      if ((best.get(i) ?? -1) >= pop) continue;
+      best.set(i, pop);
+      out.set(i, [c.lon, c.lat]);
+    }
+    return out;
+  }
+
+  private subCache = new Map<number, SubUnit[]>();
+  /**
+   * 保護国・植民地の副ラベルの区画。宗主国の色で塗る保護国（チュニジア・モロッコ・エジプトなど）の名前を
+   * 地図に残すため、データから次のように自動で求める。
+   * - ピースごとに、今の owner になる前の owner（元の国）をたどる
+   * - 同じ owner・同じ元の国のピースを1つのまとまりにする。元の国がもう地図にほとんど残っていないこと
+   *   （残りのピースがまとまりより少ない）と、owner の全体ではないこと
+   * - そのうち、効いている地域の記述（地域名・cause・note）に「（owner の名前）…保護」とあるピースが
+   *   4分の1以上あるものだけを出す（ふつうの併合・割譲は出さない）
+   * - 地域の timeline の項目に label があれば、それを優先する（空文字なら出さない）
+   */
+  private subUnits(year: number): SubUnit[] {
+    const hit = this.subCache.get(year);
+    if (hit) return hit;
+    const idx = this.idx;
+    const polities = idx.atlas.polities;
+    const regions = idx.atlas.regions;
+    const n = this.geoms.length;
+    const count = new Map<number, number>();
+    for (let i = 0; i < n; i++) if (this.ownerOf[i] >= 0) count.set(this.ownerOf[i], (count.get(this.ownerOf[i]) ?? 0) + 1);
+    const entryOf = (r: number) => {
+      let cur: TimelineEntry | null = null;
+      for (const e of regions[r]?.timeline ?? []) if (e.from <= year) cur = e;
+      return cur;
+    };
+    const auto = new Map<string, { owner: number; pred: number; pieces: number[]; prot: number; occ: number }>();
+    const explicit = new Map<string, SubUnit>();
+    const reCache = new Map<number, RegExp>();
+    for (let i = 0; i < n; i++) {
+      const a = this.atlasIdx[i];
+      const owner = this.ownerOf[i];
+      if (a < 0 || owner < 0) continue;
+      const tl = idx.atlas.pieceTimelines[a];
+      const s = idx.pieceState(a, year)!;
+      const e = entryOf(s[4]);
+      const ownerShort = idx.shortName(polities[owner], year);
+      if (e?.label !== undefined) {
+        if (!e.label) continue;
+        const k = `${owner}|${e.label}`;
+        let u = explicit.get(k);
+        if (!u) explicit.set(k, (u = { owner, name: e.label, note: `${ownerShort}の保護下`, pieces: [] }));
+        u.pieces.push(i);
+        continue;
+      }
+      let pred = -1;
+      for (let j = tl.indexOf(s) - 1; j >= 0; j--) {
+        const o = tl[j][1];
+        if (o >= 0 && o !== owner) {
+          pred = o;
+          break;
+        }
+      }
+      if (pred < 0) continue;
+      const k = `${owner}|${pred}`;
+      let g = auto.get(k);
+      if (!g) auto.set(k, (g = { owner, pred, pieces: [], prot: 0, occ: 0 }));
+      g.pieces.push(i);
+      let re = reCache.get(owner);
+      if (!re) reCache.set(owner, (re = new RegExp(`${escapeRe([...ownerShort].slice(0, 3).join(""))}[^。、]{0,14}保護`)));
+      if (re.test(`${regions[s[4]]?.name ?? ""} ${e?.cause ?? ""} ${e?.note ?? ""}`)) g.prot++;
+      if (idx.atlas.certainty[s[3]] === "occupied") g.occ++;
+    }
+    const out: SubUnit[] = [...explicit.values()];
+    for (const g of auto.values()) {
+      const len = g.pieces.length;
+      if (g.prot * 4 < len || (count.get(g.pred) ?? 0) >= len || count.get(g.owner) === len) continue;
+      const ownerShort = idx.shortName(polities[g.owner], year);
+      out.push({
+        owner: g.owner,
+        name: idx.shortName(polities[g.pred], year),
+        note: `${ownerShort}の${g.occ * 2 > len ? "占領下" : "保護下"}`,
+        pieces: g.pieces,
+      });
+    }
+    if (this.subCache.size > 400) this.subCache.clear();
+    this.subCache.set(year, out);
+    return out;
   }
 
   /** 川の表示条件：拡大率が minz（+ extra）以上で、運河は開通年（from）以降 */
@@ -566,13 +928,13 @@ export class AtlasMap {
     ] as maplibregl.FilterSpecification;
   }
 
-  // ---- 宗教表示 ----
+  // ---- 分布（宗教・言語）の表示 ----
   private renderReligion(year: number) {
-    const rel = this.idx.atlas.religion;
-    const kinds = rel?.kinds ?? [];
+    const key = this.layer as DistKey;
+    const kinds = this.idx.dist(key)?.kinds ?? [];
     const groups = new Map<string, number[]>();
     for (let i = 0; i < this.geoms.length; i++) {
-      const s = this.atlasIdx[i] >= 0 ? this.idx.religionState(this.atlasIdx[i], year) : null;
+      const s = this.atlasIdx[i] >= 0 ? this.idx.distState(key, this.atlasIdx[i], year) : null;
       const main = s ? s[1] : -1;
       this.relMain[i] = main;
       this.relRegion[i] = s ? s[3] : -1;
@@ -582,37 +944,38 @@ export class AtlasMap {
         this.relColorOf[i] = color;
       }
       if (s && s[2] >= 0) {
-        const key = `${s[2]}`;
-        let g = groups.get(key);
-        if (!g) groups.set(key, (g = []));
+        const k = `${s[2]}`;
+        let g = groups.get(k);
+        if (!g) groups.set(k, (g = []));
         g.push(i);
       }
     }
     // 少数派の斜線（同じ minor のピースを結合）
     const hatch: Feature[] = [];
     for (const [minor, ps] of groups) {
-      hatch.push({ type: "Feature", properties: { pat: `rhatch-${minor}` }, geometry: this.merged(`relh${minor}`, ps).geo });
+      hatch.push({ type: "Feature", properties: { pat: `${key}-hatch-${minor}` }, geometry: this.merged(`${key}h${minor}`, ps).geo });
     }
     this.setData("rel-hatch", { type: "FeatureCollection", features: hatch });
 
-    // 宗教の境界（main の違うピースの間と、海岸線）
+    // 宗教・言語の境界（main の違うピースの間と、海岸線）
     const own = this.relMain;
-    const key = "rel" + hashInts(own);
-    let bd = this.meshCache.get(key);
+    const mkey = key + hashInts(own);
+    let bd = this.meshCache.get(mkey);
     if (!bd) {
       const pos = this.posMap();
       const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => a === b || own[pos.get(a)!] !== own[pos.get(b)!]);
       bd = { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geom as Geometry }] };
       if (this.meshCache.size > 300) this.meshCache.clear();
-      this.meshCache.set(key, bd);
+      this.meshCache.set(mkey, bd);
     }
     this.setData("rel-borders", bd);
   }
 
-  /** 地図の主題（政治／宗教）を切り替える */
+  /** 地図の主題（政治／宗教／言語）を切り替える */
   setLayer(layer: MapLayer) {
     if (layer === this.layer) return;
     this.layer = layer;
+    this.relSelected = -1;
     this.tooltip.style.display = "none";
     if (!this.loaded) {
       this.ready.then(() => {
@@ -623,6 +986,17 @@ export class AtlasMap {
     }
     if (this.year) this.render(this.year);
     this.applyModern();
+  }
+
+  private idleWaiting = new Set<() => void>();
+  /** 次に地図の描画が落ち着いたとき（同じ関数は1回だけ） */
+  whenIdle(cb: () => void) {
+    if (!this.loaded || this.idleWaiting.has(cb)) return;
+    this.idleWaiting.add(cb);
+    this.map.once("idle", () => {
+      this.idleWaiting.delete(cb);
+      cb();
+    });
   }
 
   /** 地図を動かし終えたとき（ドラッグ・拡大・移動のアニメーションの終わり） */
@@ -644,13 +1018,24 @@ export class AtlasMap {
     return this.layer;
   }
 
-  /** いま宗教表示で描いている main の種類（凡例用。データのないピースがあれば nodata = true） */
-  religionKindsShown(): { kinds: number[]; minors: boolean; nodata: boolean } {
+  /**
+   * いま分布の表示で描いている種類（凡例用。データのないピースがあれば nodata = true）。
+   * onScreen なら、画面に見えているピースだけを数える（地図の準備前は全体）
+   */
+  religionKindsShown(onScreen = false): { kinds: number[]; minors: boolean; nodata: boolean } {
+    const key: DistKey = isDist(this.layer) ? this.layer : "religion";
     const set = new Set<number>();
     let nodata = false;
     let minors = false;
-    for (let i = 0; i < this.geoms.length; i++) {
-      const s = this.atlasIdx[i] >= 0 ? this.idx.religionState(this.atlasIdx[i], this.year) : null;
+    let visible: Iterable<number> | null = null;
+    if (onScreen && this.loaded) {
+      const seen = new Set<number>();
+      for (const f of this.map.queryRenderedFeatures({ layers: ["rel-fill"] })) seen.add(Number(f.id));
+      if (seen.size) visible = seen;
+    }
+    const all = visible ?? this.geoms.keys();
+    for (const i of all) {
+      const s = this.atlasIdx[i] >= 0 ? this.idx.distState(key, this.atlasIdx[i], this.year) : null;
       if (!s || s[1] < 0) {
         nodata = true;
         continue;
@@ -670,9 +1055,120 @@ export class AtlasMap {
     this.renderHighlight();
   }
 
-  /** 宗教の地域の、その年の記述 */
+  /** 分布の地域の、その年の記述 */
   religionEntry(region: number): ReligionEntry | null {
-    return this.idx.religionEntry(region, this.year);
+    return isDist(this.layer) ? this.idx.distEntry(this.layer, region, this.year) : null;
+  }
+
+  /** パネルの変化の行で指した地域群を強調する（その年に、その地域の記述が効いているピース）。null で解除 */
+  flashRegions(kind: MapLayer, regions: number[] | null) {
+    if (!this.loaded) return;
+    if (!regions || !regions.length) {
+      this.setData("flash", EMPTY);
+      return;
+    }
+    const set = new Set(regions);
+    const ps: number[] = [];
+    for (let i = 0; i < this.geoms.length; i++) {
+      const a = this.atlasIdx[i];
+      if (a < 0) continue;
+      const st = kind === "political" ? this.idx.pieceState(a, this.year) : this.idx.distState(kind, a, this.year);
+      const r = st ? (st as number[])[kind === "political" ? 4 : 3] : -1;
+      if (set.has(r)) ps.push(i);
+    }
+    this.setData(
+      "flash",
+      ps.length ? { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: this.merged(`fl${kind}`, ps).geo }] } : EMPTY,
+    );
+  }
+
+  // ---- 潮流の広がり ----
+  /** 地図上で広がりを見せる潮流（null で解除） */
+  setMovement(m: Movement | null) {
+    if (m === this.movement) return;
+    this.movement = m;
+    if (this.loaded) this.renderMovement();
+    else this.ready.then(() => this.renderMovement());
+  }
+
+  private renderMovement() {
+    if (!this.loaded) return;
+    const m = this.movement;
+    const on = !!m;
+    for (const l of ["mv-veil", "mv-fill", "mv-glow", "mv-core", "mv-center-glow"]) {
+      this.map.setLayoutProperty(l, "visibility", on ? "visible" : "none");
+    }
+    clearInterval(this.mvTimer);
+    this.mvTimer = 0;
+    if (!m) {
+      this.setData("mv", EMPTY);
+      return;
+    }
+    const year = this.year;
+    const n = this.geoms.length;
+    const level = new Float32Array(n);
+    const center = new Uint8Array(n);
+    const regionPieces = this.idx.atlas.movementRegions ?? {};
+    const topoOf = this.topoIndexOfAtlas();
+    for (const sp of m.spread) {
+      const v = curveAt(sp.curve, year);
+      if (v <= 0) continue;
+      const pol = new Set(sp.polities.map((id) => this.idx.polityIndex.get(id)));
+      const apply = (i: number) => {
+        if (v > level[i]) level[i] = v;
+        if (sp.center) center[i] = 1;
+      };
+      if (pol.size) for (let i = 0; i < n; i++) if (pol.has(this.ownerOf[i])) apply(i);
+      for (const r of sp.regions) for (const a of regionPieces[r] ?? []) {
+        const i = topoOf[a];
+        if (i >= 0) apply(i);
+      }
+    }
+    // 勢いを 6 段階にまとめ、同じ段階・発信地かどうかの同じピースを結合する
+    const groups = new Map<string, number[]>();
+    for (let i = 0; i < n; i++) {
+      if (level[i] <= 0) continue;
+      const lvl = Math.max(1, Math.round(level[i] * 6));
+      const k = `${lvl}|${center[i]}`;
+      let g = groups.get(k);
+      if (!g) groups.set(k, (g = []));
+      g.push(i);
+    }
+    const color = MOVEMENT_COLORS[m.kind] ?? "#777";
+    const features: Feature[] = [];
+    for (const [k, ps] of groups) {
+      const [lvl, c] = k.split("|").map(Number);
+      features.push({
+        type: "Feature",
+        properties: { lvl: lvl / 6, center: c === 1, color },
+        geometry: this.merged(`mv${k}`, ps).geo,
+      });
+    }
+    // 弱いものから描いて、強いものを上に重ねる
+    features.sort((a, b) => (a.properties!.lvl as number) - (b.properties!.lvl as number));
+    this.setData("mv", { type: "FeatureCollection", features });
+    // 発信地は、ゆっくり明滅させる（脈打つ光）
+    if (features.some((f) => f.properties!.center)) {
+      const t0 = performance.now();
+      this.mvTimer = window.setInterval(() => {
+        if (document.hidden) return;
+        const ph = (Math.sin(((performance.now() - t0) / 1600) * Math.PI * 2) + 1) / 2;
+        this.map.setPaintProperty("mv-center-glow", "line-opacity", 0.45 + 0.45 * ph);
+      }, 90);
+    }
+  }
+
+  private topoOfAtlasCache: Int32Array | null = null;
+  /** atlas のピース番号 → topo のピース番号 */
+  private topoIndexOfAtlas(): Int32Array {
+    if (!this.topoOfAtlasCache) {
+      const a = new Int32Array(this.idx.atlas.pieceIds.length).fill(-1);
+      this.atlasIdx.forEach((ai, ti) => {
+        if (ai >= 0) a[ai] = ti;
+      });
+      this.topoOfAtlasCache = a;
+    }
+    return this.topoOfAtlasCache;
   }
 
   private posMapCache: Map<unknown, number> | null = null;
@@ -704,9 +1200,10 @@ export class AtlasMap {
   private historicCities(year: number): FeatureCollection {
     const features: Feature[] = [];
     for (const c of this.idx.atlas.cities ?? []) {
-      if (c.founded && year < c.founded) continue;
+      if ((c.founded && year < c.founded) || (c.until && year > c.until)) continue;
       features.push(cityFeature(cityName(c, year), c.lon, c.lat, cityPop(c, year), !!cityCapitalOf(c, year)));
     }
+    declutterCities(features);
     return { type: "FeatureCollection", features };
   }
 
@@ -784,7 +1281,7 @@ export class AtlasMap {
   private applyModern() {
     const on = this.modernOn;
     const lb = this.labelsOn;
-    const rel = this.layer === "religion";
+    const rel = isDist(this.layer);
     const set = (layers: string[], v: boolean) => {
       for (const l of layers) this.map.setLayoutProperty(l, "visibility", v ? "visible" : "none");
     };
@@ -796,8 +1293,8 @@ export class AtlasMap {
     set(["modern-borders", "modern-cities-dot"], on);
     set(["modern-labels", "modern-cities-label"], on && lb);
     set(["borders", "cities-dot", "highlight"], !on || rel);
-    set(["frames", "suzerain"], !on && !rel);
-    set(["labels", "cities-label"], !on && lb);
+    set(["frames", "suz-band", "suzerain", "subunit-borders"], !on && !rel);
+    set(["labels", "cities-label", "sublabels"], !on && lb);
     set(["seas", "rivers-label", "lakes-label"], lb);
     // 宗教表示では、国境と国名を薄くして宗教の塗り分けを主役にする
     this.map.setPaintProperty("borders", "line-opacity", rel ? 0.35 : 0.85);
@@ -807,6 +1304,7 @@ export class AtlasMap {
       this.map.setPaintProperty(l, "text-opacity", rel ? 0.4 : 0.62);
       this.map.setPaintProperty(l, "text-halo-color", rel ? "rgba(255,255,255,.3)" : "rgba(255,255,255,.45)");
     }
+    this.map.setPaintProperty("sublabels", "text-opacity", rel ? 0.45 : 0.72);
   }
 
   private labelsOn = true;
@@ -842,11 +1340,11 @@ export class AtlasMap {
   private renderHighlight() {
     if (!this.loaded) return;
     let geo: GeoMultiPolygon | null = null;
-    if (this.layer === "religion") {
+    if (isDist(this.layer)) {
       const r = this.relSelected;
       const ps: number[] = [];
       if (r >= 0) for (let j = 0; j < this.geoms.length; j++) if (this.relRegion[j] === r) ps.push(j);
-      geo = ps.length ? this.merged(`relsel${r}`, ps).geo : null;
+      geo = ps.length ? this.merged(`${this.layer}sel${r}`, ps).geo : null;
     } else geo = this.selected ? this.polityGeo(this.selected) : null;
     this.setData("highlight", geo ? { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geo }] } : EMPTY);
   }
@@ -984,11 +1482,11 @@ export class AtlasMap {
 
   private hover(point: maplibregl.Point, ev: MouseEvent) {
     if (!this.loaded || (ev as PointerEvent).pointerType === "touch" || matchMedia("(hover: none)").matches) return;
-    const f = this.map.queryRenderedFeatures(point, { layers: [this.layer === "religion" ? "rel-fill" : this.modernOn ? "modern-fill" : "fill"] })[0];
+    const f = this.map.queryRenderedFeatures(point, { layers: [isDist(this.layer) ? "rel-fill" : this.modernOn ? "modern-fill" : "fill"] })[0];
     let text = "";
     if (f) {
       const i = Number(f.id);
-      if (this.layer === "religion") text = this.religionHoverText(i);
+      if (isDist(this.layer)) text = this.religionHoverText(i);
       else if (this.modernOn) text = modernName(this.geoms[i].properties!.iso);
       else if (this.ownerOf[i] >= 0) text = this.idx.polityName(this.idx.atlas.polities[this.ownerOf[i]], this.year);
       if (this.debug) {
@@ -1007,12 +1505,13 @@ export class AtlasMap {
   }
 
   private religionHoverText(i: number): string {
+    const key = this.layer as DistKey;
     const r = this.relRegion[i];
-    const e = r >= 0 ? this.idx.religionEntry(r, this.year) : null;
-    if (!e) return "宗教データ未整備";
-    const kinds = this.idx.atlas.religion!.kinds;
-    const nm = (id: string | null | undefined) => kinds.find((k) => k.id === id)?.name ?? id ?? "";
-    return `${this.idx.atlas.religion!.regions[r].name}：${nm(e.main)}${e.minor ? `（${nm(e.minor)}も多い）` : ""}`;
+    const e = r >= 0 ? this.idx.distEntry(key, r, this.year) : null;
+    if (!e) return `${DIST_LABEL[key]}データ未整備`;
+    const d = this.idx.dist(key)!;
+    const nm = (id: string | null | undefined) => d.kinds.find((k) => k.id === id)?.name ?? id ?? "";
+    return `${d.regions[r].name}：${nm(e.main)}${e.minor ? `（${nm(e.minor)}も多い）` : ""}`;
   }
 
   /** 川と湖を読み込む（地図の初回表示の後に呼ぶ） */
@@ -1068,17 +1567,89 @@ function ringAreaKm2(ring: number[][]) {
   return (s / 2) * KM_PER_DEG * KM_PER_DEG;
 }
 
-/** 国名ラベル。面積から文字の大きさ（s）と、文字が塊に収まる拡大率（minz）を決める */
-function labelFeature(name: string, l: NonNullable<Merged["label"]>): Feature {
+/** 結合結果の多角形ごとの面積（km²） */
+function polyAreas(m: Merged): number[] {
+  if (!m.areas) m.areas = m.geo.coordinates.map((poly) => Math.abs(ringAreaKm2(poly[0])));
+  return m.areas;
+}
+
+/** 結合結果の k 番目の多角形のラベルの点 */
+function polyLabelOf(m: Merged, k: number): Merged["label"] {
+  if (!m.plabels) m.plabels = new Map();
+  let l = m.plabels.get(k);
+  if (!l) {
+    const one = labelPoint({ type: "MultiPolygon", coordinates: [m.geo.coordinates[k]] });
+    if (!one) return null;
+    m.plabels.set(k, (l = one));
+  }
+  return l;
+}
+
+/** 点が輪の内側にあるか（経度・緯度の平面で判定） */
+function inRing([x, y]: [number, number], ring: number[][]): boolean {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i];
+    const [xj, yj] = ring[j];
+    if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
+const inwardCache = new WeakMap<Merged, GeoMultiPolygon>();
+/**
+ * 輪の向きを「内側が進む向きの右」にそろえた多角形（外周は反時計回り、穴は時計回り）。
+ * MapLibre の line-offset（正の値で右へずらす）で、帯を境界の内側に描くために使う
+ */
+function inwardRings(m: Merged): GeoMultiPolygon {
+  let g = inwardCache.get(m);
+  if (!g) {
+    const signed = (r: number[][]) => {
+      let s = 0;
+      for (let i = 0, n = r.length; i < n; i++) {
+        const [x1, y1] = r[i];
+        const [x2, y2] = r[(i + 1) % n];
+        s += x1 * y2 - x2 * y1;
+      }
+      return s;
+    };
+    g = {
+      type: "MultiPolygon",
+      coordinates: m.geo.coordinates.map((poly) =>
+        poly.map((ring, k) => ((signed(ring) > 0) === (k === 0) ? ring : [...ring].reverse())),
+      ),
+    };
+    inwardCache.set(m, g);
+  }
+  return g;
+}
+
+/** 色を暗く（f < 1）する */
+function shade(color: string, f: number): string {
+  const m = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(color);
+  if (!m) return color;
+  const [r, g, b] = [m[1], m[2], m[3]].map((v) => Math.round(parseInt(v, 16) * f));
+  return `rgb(${r},${g},${b})`;
+}
+
+function escapeRe(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * 国名ラベル。面積から文字の大きさ（s）と、文字が塊に収まる拡大率（minz）を決める。
+ * opt.scale で文字を小さめに（副ラベル）、opt.chars で幅の見積もりに使う文字数を変える
+ */
+function labelFeature(name: string, l: NonNullable<Merged["label"]>, opt: { note?: string; scale?: number; chars?: number } = {}): Feature {
   const side = Math.sqrt(l.area); // km
-  const s = Math.max(0.85, Math.min(1.8, side / 400));
-  const chars = Math.max(2, [...name].length);
+  const s = Math.max(0.85, Math.min(1.8, side / 400)) * (opt.scale ?? 1);
+  const chars = Math.max(2, opt.chars ?? [...name].length);
   // 拡大率 z で 1px ≒ 40075·cos(緯度) / (512·2^z) km。文字列の幅（px）≒ 文字数 × 13·s
   const kmPx = (40075 * Math.cos((l.lat * Math.PI) / 180)) / 512;
   const minz = Math.log2((chars * 15 * s * 1.0 * kmPx) / side);
   return {
     type: "Feature",
-    properties: { name, s, minz: Math.max(0, minz), rank: -l.area },
+    properties: { name, note: opt.note ?? "", s, minz: Math.max(0, minz), rank: -l.area },
     geometry: { type: "Point", coordinates: [l.lon, l.lat] },
   };
 }
@@ -1091,6 +1662,7 @@ function cityFeature(name: string, lon: number, lat: number, pop: number, capita
     properties: {
       name,
       capital,
+      pop,
       // 大きな国の首都は早めに出す。小さな領邦の首都は、人口なりの拡大率より少し早めに出す程度にする
       minz: capital ? (pop >= 40000 ? Math.min(minz, 3.4) : minz - 0.7) : minz,
       r: capital ? r * 0.9 : r * 0.8,
@@ -1098,6 +1670,37 @@ function cityFeature(name: string, lon: number, lat: number, pop: number, capita
     },
     geometry: { type: "Point", coordinates: [lon, lat] },
   };
+}
+
+/**
+ * 近すぎる都市（例：1871 年のパリとヴェルサイユ）の重なりを防ぐ。2つの都市の点が画面上で
+ * CITY_GAP px より近くなる拡大率では、重要度の低いほう（人口、首都は4倍で比べる）を出さない
+ * （minz を引き上げる）。都市名どうしの重なりは MapLibre が隠すが、点と名前の重なりは防げないため
+ */
+const CITY_GAP = 30;
+function declutterCities(features: Feature[]) {
+  const pts = features.map((f) => {
+    const [lon, lat] = (f.geometry as { coordinates: number[] }).coordinates;
+    const p = f.properties!;
+    return { lon, lat, p, imp: p.pop * (p.capital ? 4 : 1) };
+  });
+  pts.sort((a, b) => b.imp - a.imp);
+  for (let j = 1; j < pts.length; j++) {
+    const b = pts[j];
+    const k = Math.cos((b.lat * Math.PI) / 180);
+    for (let i = 0; i < j; i++) {
+      const a = pts[i];
+      const dLat = a.lat - b.lat;
+      if (Math.abs(dLat) > 1.5) continue;
+      const dLon = (a.lon - b.lon) * k;
+      if (Math.abs(dLon) > 1.5) continue;
+      const km = Math.max(0.5, Math.hypot(dLon, dLat) * KM_PER_DEG);
+      // 拡大率 z で 1px ≒ 40075·cos(緯度) / (512·2^z) km
+      const z = Math.log2((CITY_GAP * 40075 * k) / (512 * km));
+      // 重要なほうが z より手前の拡大率で出るときだけ、重なる範囲で隠す
+      if (a.p.minz < z && z > b.p.minz) b.p.minz = z;
+    }
+  }
 }
 
 function bbox(geo: GeoMultiPolygon): [number, number, number, number] {

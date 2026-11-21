@@ -1,4 +1,4 @@
-# 担当 E：バルカン・オスマン・中東の政体（1648–1815 試作）
+# 担当 E：バルカン・オスマン・中東の政体（1648–1914）
 
 # ---------------------------------------------------------------- オスマン帝国
 - id: ottoman
@@ -29,7 +29,12 @@
     - {name: アブデュルハミト1世, title: スルタン, from: 1774, to: 1789, source: "https://ja.wikipedia.org/wiki/アブデュルハミト1世"}
     - {name: セリム3世, title: スルタン, from: 1789, to: 1807, source: "https://ja.wikipedia.org/wiki/セリム3世"}
     - {name: ムスタファ4世, title: スルタン, from: 1807, to: 1808, source: "https://ja.wikipedia.org/wiki/ムスタファ4世"}
-    - {name: マフムト2世, title: スルタン, from: 1808, to: 1839, source: "https://ja.wikipedia.org/wiki/マフムト2世"}
+    - {name: マフムト2世, title: スルタン, from: 1808, to: 1839, note: 1826年にイェニチェリを廃止した。, source: "https://ja.wikipedia.org/wiki/マフムト2世"}
+    - {name: アブデュルメジト1世, title: スルタン, from: 1839, to: 1861, note: ギュルハネ勅令（1839）でタンジマートを始めた。, source: "https://ja.wikipedia.org/wiki/アブデュルメジト1世"}
+    - {name: アブデュルアズィズ, title: スルタン, from: 1861, to: 1876, source: "https://ja.wikipedia.org/wiki/アブデュルアズィズ"}
+    - {name: ムラト5世, title: スルタン, from: 1876, to: 1876, note: 精神の病を理由に3か月で廃位。, source: "https://ja.wikipedia.org/wiki/ムラト5世"}
+    - {name: アブデュルハミト2世, title: スルタン, from: 1876, to: 1909, note: 1876年にミドハト憲法を発布したが、1878年に議会を停止して専制を行った。, source: "https://ja.wikipedia.org/wiki/アブデュルハミト2世"}
+    - {name: メフメト5世, title: スルタン, from: 1909, to: 1918, note: 実権は「統一と進歩委員会」（青年トルコ人）が握った。, source: "https://ja.wikipedia.org/wiki/メフメト5世"}
   periods:
     - from: 1648
       to: 1683
@@ -46,6 +51,18 @@
     - from: 1789
       to: 1815
       text: セリム3世が西洋式の新軍（ニザーム・ジェディード）を創設するが、イェニチェリの反乱で廃位された（1807）。ボナパルトのエジプト遠征、セルビア蜂起、ヤニナのアリー・パシャやエジプトのムハンマド・アリーの自立など、帝国の統合は揺らいだ。
+    - from: 1816
+      to: 1838
+      text: ギリシア独立戦争（1821–1829）に敗れてギリシアの独立を認め、セルビアに自治を与えた。マフムト2世はイェニチェリを廃止して（1826）軍を西洋化したが、エジプトのムハンマド・アリーにシリアを奪われた（1833）。
+    - from: 1839
+      to: 1875
+      text: ギュルハネ勅令（1839）と改革勅令（1856）による近代化改革（タンジマート）。列強の支援でエジプトからシリアを取り戻し、クリミア戦争ではロシアに勝ったが、外国からの借款が膨らみ、1875年に財政が破綻した。
+    - from: 1876
+      to: 1907
+      text: ミドハト憲法（1876）を発布したが、露土戦争（1877–1878）に敗れ、ベルリン条約でバルカンの大半を失った。アブデュルハミト2世は議会を停止し、パン＝イスラーム主義を掲げて専制を行った。キプロス（1878）・エジプト（1882）はイギリスの手に移った。
+    - from: 1908
+      to: 1914
+      text: 青年トルコ人革命（1908）で憲法が復活したが、その混乱の中でブルガリアの独立とボスニアの併合を許した。イタリア＝トルコ戦争（1911–1912）でリビアとドデカネス諸島を、バルカン戦争（1912–1913）でヨーロッパ領の大半を失い、1914年にドイツ側で第一次世界大戦に加わった。
   source: "https://ja.wikipedia.org/wiki/オスマン帝国"
 
 # ---------------------------------------------------------------- ドナウ二公国
@@ -103,6 +120,14 @@
     - {name: アレクサンドル・スツ, title: ワラキア公, from: 1802, to: 1802}
     - {name: コンスタンティン・イプシランティ, title: ワラキア公, from: 1802, to: 1806, note: 1806–1812年はロシア軍が占領, source: "https://en.wikipedia.org/wiki/Constantine_Ypsilantis"}
     - {name: ヨアン・カラジャ, title: ワラキア公, from: 1812, to: 1818, source: "https://en.wikipedia.org/wiki/John_Caradja"}
+    - {name: アレクサンドル・スツ, title: ワラキア公, from: 1818, to: 1821, note: 1821年1月に在位中に死去。同年トゥドル・ヴラディミレスクの蜂起。, source: "https://en.wikipedia.org/wiki/Alexandros_Soutzos"}
+    - {name: グリゴレ4世ギカ, title: ワラキア公, from: 1822, to: 1828, note: ファナリオティス時代の後、最初の在地出身の公。, source: "https://en.wikipedia.org/wiki/Grigore_IV_Ghica"}
+    - {name: ロシア軍の占領（全権代表パーレン、ジェルトゥーヒン）, title: ロシアの全権代表, from: 1828, to: 1829, note: 露土戦争（1828–1829）でロシア軍が両公国を占領した。1829年11月からキセリョフ。, source: "https://en.wikipedia.org/wiki/Pavel_Kiselyov"}
+    - {name: パーヴェル・キセリョフ, title: ロシア軍政長官（全権代表）, from: 1829, to: 1834, note: 1828–1834年はロシア軍が占領。組織規程（1831年）を施行した。, source: "https://en.wikipedia.org/wiki/Pavel_Kiselyov"}
+    - {name: アレクサンドル2世ギカ, title: ワラキア公, from: 1834, to: 1842, source: "https://en.wikipedia.org/wiki/Alexandru_II_Ghica"}
+    - {name: ゲオルゲ・ビベスク, title: ワラキア公, from: 1842, to: 1848, note: 1848年革命で退位。, source: "https://en.wikipedia.org/wiki/Gheorghe_Bibescu"}
+    - {name: バルブ・シュティルベイ, title: ワラキア公, from: 1849, to: 1856, note: 1853–1854年はクリミア戦争でロシア軍が占領し、一時退去。, source: "https://en.wikipedia.org/wiki/Barbu_Dimitrie_Știrbei"}
+    - {name: アレクサンドル2世ギカ（代理）, title: カイマカム（公の代理）, from: 1856, to: 1858, source: "https://en.wikipedia.org/wiki/Alexandru_II_Ghica"}
   periods:
     - from: 1648
       to: 1715
@@ -110,6 +135,15 @@
     - from: 1716
       to: 1815
       text: オスマン帝国がファナリオティス（イスタンブルのギリシア系有力者）を公に任命する時代。露土戦争のたびにロシア軍やオーストリア軍に占領された。小ワラキア（オルテニア）は1718–1739年オーストリア領。
+    - from: 1816
+      to: 1828
+      text: 1821年のトゥドル・ヴラディミレスクの蜂起とギリシア独立戦争ののち、ファナリオティスの任命は終わり、在地の大貴族から公が選ばれるようになった。
+    - from: 1829
+      to: 1852
+      text: アドリアノープル条約（1829）でオスマン帝国の宗主権のもとロシアの保護下に入り、ブライラ・ジュルジュなどドナウ左岸の要塞も返された。ロシアの定めた組織規程（1831）のもとで近代的な行政が整えられた。1848年には革命が起きたが、オスマン・ロシア両軍に鎮圧された。
+    - from: 1853
+      to: 1858
+      text: クリミア戦争でロシア軍、のちオーストリア軍に占領された。パリ条約（1856）でロシアの保護は終わり、列強の共同保障のもとに置かれた。パリ協定（1858）を経て、1859年にモルダヴィアと同じ公を選んで合同した（→ルーマニア）。
   source: "https://ja.wikipedia.org/wiki/ワラキア"
 
 - id: moldavia
@@ -173,6 +207,14 @@
     - {name: アレクサンドル・ムルジ（再任）, title: モルダヴィア公, from: 1802, to: 1806, source: "https://en.wikipedia.org/wiki/Alexander_Mourouzis"}
     - {name: スカルラト・カリマキ, title: モルダヴィア公, from: 1806, to: 1806, note: 1806–1812年はロシア軍が占領, source: "https://en.wikipedia.org/wiki/Scarlat_Callimachi"}
     - {name: スカルラト・カリマキ（再任）, title: モルダヴィア公, from: 1812, to: 1819, source: "https://en.wikipedia.org/wiki/Scarlat_Callimachi"}
+    - {name: ミハイル・スツ, title: モルダヴィア公, from: 1819, to: 1821, note: フィリキ・エテリアに通じ、イプシランティの蜂起とともに逃亡した。, source: "https://en.wikipedia.org/wiki/Michael_Soutzos"}
+    - {name: ヨニツァ・サンドゥ・ストゥルザ, title: モルダヴィア公, from: 1822, to: 1828, source: "https://en.wikipedia.org/wiki/Ioan_Sturdza"}
+    - {name: ロシア軍の占領（全権代表パーレン、ジェルトゥーヒン）, title: ロシアの全権代表, from: 1828, to: 1829, note: 露土戦争（1828–1829）でロシア軍が両公国を占領した。1829年11月からキセリョフ。, source: "https://en.wikipedia.org/wiki/Pavel_Kiselyov"}
+    - {name: パーヴェル・キセリョフ, title: ロシア軍政長官（全権代表）, from: 1829, to: 1834, note: 1828–1834年はロシア軍が占領。, source: "https://en.wikipedia.org/wiki/Pavel_Kiselyov"}
+    - {name: ミハイル・ストゥルザ, title: モルダヴィア公, from: 1834, to: 1849, source: "https://en.wikipedia.org/wiki/Mihail_Sturdza"}
+    - {name: グリゴレ・アレクサンドル・ギカ, title: モルダヴィア公, from: 1849, to: 1856, note: 1853–1854年はロシア軍の占領で一時退去。, source: "https://en.wikipedia.org/wiki/Grigore_Alexandru_Ghica"}
+    - {name: テオドル・バルシュ, title: カイマカム（公の代理）, from: 1856, to: 1857, source: "https://en.wikipedia.org/wiki/Teodor_Balș"}
+    - {name: ニコラエ・ヴォゴリデ, title: カイマカム（公の代理）, from: 1857, to: 1858, note: 合同に反対する選挙の不正で問題となった。, source: "https://en.wikipedia.org/wiki/Nicolae_Vogoride"}
   periods:
     - from: 1648
       to: 1710
@@ -183,6 +225,12 @@
     - from: 1774
       to: 1815
       text: 1775年に北部のブコヴィナをオーストリアに奪われ、1812年のブカレスト条約でプルート川以東（ベッサラビア）をロシアに割譲した。
+    - from: 1816
+      to: 1852
+      text: 1821年にアレクサンドロス・イプシランティがヤシで蜂起（ギリシア独立戦争の始まり）。ファナリオティス時代が終わり、アドリアノープル条約（1829）でロシアの保護下に入って組織規程のもとで治められた。
+    - from: 1853
+      to: 1858
+      text: クリミア戦争後のパリ条約（1856）で、ロシアから南ベッサラビア（カフル・ボルフラド・イズマイル）を取り戻した。1859年にワラキアと同じ公クザを選んで合同した（→ルーマニア）。
   source: "https://ja.wikipedia.org/wiki/モルダヴィア"
 
 # ---------------------------------------------------------------- アドリア海沿岸・バルカン
@@ -206,10 +254,14 @@
 
 - id: montenegro
   name: モンテネグロ（主教公国）
+  names:
+    - {to: 1851, name: モンテネグロ（主教公国）, kind: 主教公国}
+    - {from: 1852, to: 1909, name: モンテネグロ公国, kind: 公国}
+    - {from: 1910, name: モンテネグロ王国, kind: 王国}
   short: モンテネグロ
   color: "#cf9fa8"
   kind: 主教公国
-  note: ツェティニェの府主教（ヴラディカ）が政治的な指導者を兼ねた。オスマン帝国の宗主権は名目的で、山地の部族社会として事実上自立していた。1697年からペトロヴィチ＝ニェゴシュ家が府主教位を世襲（叔父から甥へ）。1659–1673年ごろと1690年代の府主教は資料によって異なる（要確認）。
+  note: ツェティニェの府主教（ヴラディカ）が政治的な指導者を兼ねた。オスマン帝国の宗主権は名目的で、山地の部族社会として事実上自立していた。1697年からペトロヴィチ＝ニェゴシュ家が府主教位を世襲（叔父から甥へ）。1852年にダニーロ1世が府主教位を捨てて世俗の公となった。独立が国際的に認められたのは1878年のベルリン条約。1659–1673年ごろと1690年代の府主教は資料によって異なる（要確認）。
   rulers:
     - {name: マルダリイェ, title: ツェティニェ府主教, from: 1640, to: 1659, note: 要確認}
     - {name: ルヴィム2世ボリェヴィチ, title: ツェティニェ府主教, from: 1673, to: 1685, note: 要確認}
@@ -221,6 +273,9 @@
     - {name: シュチェパン・マリ（小ステファン）, title: 統治者（ロシア皇帝ピョートル3世を自称）, from: 1767, to: 1773, source: "https://en.wikipedia.org/wiki/Šćepan_Mali"}
     - {name: アルセニイェ・プラメナツ, title: ツェティニェ府主教, from: 1781, to: 1784, source: "https://en.wikipedia.org/wiki/Arsenije_Plamenac"}
     - {name: ペタル1世（ペトロヴィチ＝ニェゴシュ）, title: ツェティニェ府主教, from: 1784, to: 1830, source: "https://en.wikipedia.org/wiki/Petar_I_Petrović-Njegoš"}
+    - {name: ペタル2世（ペトロヴィチ＝ニェゴシュ）, title: ツェティニェ府主教, from: 1830, to: 1851, note: 叙事詩『山の花環』の作者。元老院を設けて中央の統治を整えた。, source: "https://en.wikipedia.org/wiki/Petar_II_Petrović-Njegoš"}
+    - {name: ダニーロ1世, title: モンテネグロ公, from: 1852, to: 1860, note: 府主教位を捨てて世俗の公となった。1860年に暗殺。, source: "https://en.wikipedia.org/wiki/Danilo_I,_Prince_of_Montenegro"}
+    - {name: ニコラ1世, title: モンテネグロ公（1910年から国王）, from: 1860, to: 1918, source: "https://ja.wikipedia.org/wiki/ニコラ1世_(モンテネグロ王)"}
   periods:
     - from: 1648
       to: 1795
@@ -228,27 +283,57 @@
     - from: 1796
       to: 1815
       text: ペタル1世がクルシの戦い（1796）でスクタリのパシャを破り、北東の山地（ブルダ）を加えて事実上独立した。1813–1814年にはコトル湾を一時占領した。
+    - from: 1816
+      to: 1851
+      text: ペタル2世ニェゴシュのもとで元老院や税制が整えられ、部族社会から国家への歩みが始まった。オスマン帝国とは国境の山地で小競り合いが続いた。
+    - from: 1852
+      to: 1877
+      text: ダニーロ1世が世俗の公国とした。グラホヴァツの戦い（1858）でオスマン軍を破り、列強の仲介で国境が定められた（1859）。ニコラ1世はロシアと結び、1876年にセルビアとともにオスマン帝国と戦った。
+    - from: 1878
+      to: 1914
+      text: ベルリン条約で独立が認められ、ニクシッチ・ポドゴリツァ・バールを得て領土が倍以上になり、海への出口を得た（ウルツィニは1880年）。1910年に王国となり、バルカン戦争でサンジャク東部とメトヒヤ（ペーチ・ジャコヴィツァ）を得た。
   source: "https://en.wikipedia.org/wiki/Prince-Bishopric_of_Montenegro"
 
 - id: serbia
-  name: セルビア（蜂起勢力）
+  name: セルビア公国
   names:
-    - {to: 1813, name: セルビア（第一次セルビア蜂起）}
-    - {from: 1814, name: セルビア（第二次セルビア蜂起）}
+    - {to: 1813, name: セルビア（第一次セルビア蜂起）, kind: 蜂起政権（オスマン帝国の宗主権下）}
+    - {from: 1814, to: 1816, name: セルビア（第二次セルビア蜂起）, kind: 蜂起政権（オスマン帝国の宗主権下）}
+    - {from: 1817, to: 1877, name: セルビア公国, kind: 自治公国（オスマン帝国の宗主権下）}
+    - {from: 1878, to: 1881, name: セルビア公国, kind: 公国}
+    - {from: 1882, name: セルビア王国, kind: 王国}
   short: セルビア
-  color: "#8fb2d9"
-  kind: 蜂起政権（オスマン帝国の宗主権下）
+  color: "#e0a676"
+  kind: 公国
+  note: 1830年のハッティ・シェリフで自治と公位の世襲が認められ、1833年に南東の6つのナヒヤ（郡）を加えた。ベオグラードなどの要塞にはオスマン軍が1867年まで残った。オブレノヴィチ家とカラジョルジェヴィチ家が公位を争った。
   rulers:
     - {name: カラジョルジェ（黒ジョルジェ）, title: 蜂起の最高指導者, from: 1804, to: 1813, source: "https://ja.wikipedia.org/wiki/カラジョルジェ・ペトロヴィチ"}
-    - {name: ミロシュ・オブレノヴィチ, title: 蜂起の指導者（のちセルビア公）, from: 1815, to: 1839, source: "https://ja.wikipedia.org/wiki/ミロシュ・オブレノヴィチ"}
+    - {name: ミロシュ・オブレノヴィチ, title: 蜂起の指導者→セルビア公（1817）, from: 1815, to: 1839, note: 1817年にカラジョルジェを暗殺させ、公となった。, source: "https://ja.wikipedia.org/wiki/ミロシュ・オブレノヴィチ"}
+    - {name: ミラン・オブレノヴィチ2世, title: セルビア公, from: 1839, to: 1839, note: 病のため在位1か月で死去。, source: "https://en.wikipedia.org/wiki/Milan_Obrenović_II,_Prince_of_Serbia"}
+    - {name: ミハイロ・オブレノヴィチ3世, title: セルビア公, from: 1839, to: 1842, source: "https://ja.wikipedia.org/wiki/ミハイロ・オブレノヴィチ3世"}
+    - {name: アレクサンダル・カラジョルジェヴィチ, title: セルビア公, from: 1842, to: 1858, source: "https://en.wikipedia.org/wiki/Alexander_Karađorđević,_Prince_of_Serbia"}
+    - {name: ミロシュ・オブレノヴィチ（再任）, title: セルビア公, from: 1858, to: 1860, source: "https://ja.wikipedia.org/wiki/ミロシュ・オブレノヴィチ"}
+    - {name: ミハイロ・オブレノヴィチ3世（再任）, title: セルビア公, from: 1860, to: 1868, note: 1867年にオスマン軍の要塞からの撤退を実現。1868年に暗殺。, source: "https://ja.wikipedia.org/wiki/ミハイロ・オブレノヴィチ3世"}
+    - {name: ミラン・オブレノヴィチ4世（ミラン1世）, title: セルビア公（1882年から国王）, from: 1868, to: 1889, source: "https://ja.wikipedia.org/wiki/ミラン1世_(セルビア王)"}
+    - {name: アレクサンダル・オブレノヴィチ, title: セルビア王, from: 1889, to: 1903, note: 1903年の軍人のクーデタで王妃とともに殺された（オブレノヴィチ朝の断絶）。, source: "https://ja.wikipedia.org/wiki/アレクサンダル1世_(セルビア王)"}
+    - {name: ペータル1世（カラジョルジェヴィチ）, title: セルビア王, from: 1903, to: 1921, source: "https://ja.wikipedia.org/wiki/ペータル1世_(セルビア王)"}
   periods:
     - from: 1804
       to: 1813
       text: ベオグラード州のイェニチェリの暴政に対してセルビア人が蜂起（第一次セルビア蜂起）。ロシアの支援を受けてベオグラードを押さえたが、ブカレスト条約（1812）でロシアが手を引き、1813年に鎮圧された。
     - from: 1815
-      to: 1815
-      text: ミロシュ・オブレノヴィチが第二次セルビア蜂起を起こし、オスマン帝国と交渉して自治を得る道を開いた（自治公国の承認は1817–1830年）。
-  source: "https://ja.wikipedia.org/wiki/セルビア革命"
+      to: 1829
+      text: ミロシュ・オブレノヴィチが第二次セルビア蜂起を起こし、オスマン帝国と交渉して自治を得た（1817年に公となる）。アッケルマン条約（1826）・アドリアノープル条約（1829）でロシアが自治を保障した。
+    - from: 1830
+      to: 1877
+      text: ハッティ・シェリフ（1830）でオスマン帝国の宗主権のもとの自治公国として認められた。公位はオブレノヴィチ家とカラジョルジェヴィチ家の間で揺れたが、ミハイロ公のもとでオスマン軍の要塞からの撤退（1867）を実現した。
+    - from: 1878
+      to: 1902
+      text: ベルリン条約で独立が認められ、ニシュ・ピロト・ヴラニェを得た。1882年に王国となったが、ミラン王はオーストリア＝ハンガリーに頼り、ブルガリアとの戦争（1885）には敗れた。
+    - from: 1903
+      to: 1914
+      text: クーデタでカラジョルジェヴィチ家のペータル1世が王となり、ロシアに近づいた。オーストリア＝ハンガリーとの「豚戦争」（1906–1911）、ボスニア併合（1908）で対立が深まった。バルカン戦争でコソヴォとマケドニアを得て領土を倍近くに広げた。
+  source: "https://ja.wikipedia.org/wiki/セルビア公国"
 
 - id: septinsular
   name: 七島連邦共和国
@@ -268,9 +353,158 @@
   kind: イギリスの保護国
   periods:
     - from: 1815
-      to: 1815
-      text: パリ条約（1815年11月）でイギリスの保護国となった（1864年にギリシアへ編入）。
+      to: 1863
+      text: パリ条約（1815年11月）でイギリスの保護国となった。イギリスの高等弁務官が実権を握り、ギリシアとの統合を求める運動が強まった。1864年にロンドン条約でギリシアへ編入された。
   source: "https://en.wikipedia.org/wiki/United_States_of_the_Ionian_Islands"
+
+# ---------------------------------------------------------------- 1815–1914 のバルカン諸国
+- id: greece
+  name: ギリシア王国
+  names:
+    - {to: 1831, name: ギリシア（臨時政府）, kind: 共和政の臨時政府}
+    - {from: 1832, name: ギリシア王国, kind: 王国}
+  short: ギリシア
+  color: "#86bde3"
+  kind: 王国
+  note: 1821年に独立戦争が始まり、1822年のエピダウロス国民議会で臨時政府ができた。1830年のロンドン議定書で独立が認められ、1832年のロンドン会議でバイエルン王子オットーが国王に選ばれ、コンスタンティノープル条約で国境（アルタ＝ヴォロス線）が定まった。以後「大ギリシア主義（メガリ・イデア）」を掲げて領土を広げた。
+  rulers:
+    - {name: アレクサンドロス・マヴロコルダトス, title: 臨時政府の行政府議長, from: 1822, to: 1823, source: "https://en.wikipedia.org/wiki/Alexandros_Mavrokordatos"}
+    - {name: ペトロス・マヴロミハリス, title: 臨時政府の行政府議長, from: 1823, to: 1823, source: "https://en.wikipedia.org/wiki/Petros_Mavromichalis"}
+    - {name: ゲオルギオス・クンドゥリオティス, title: 臨時政府の行政府議長, from: 1823, to: 1826, source: "https://en.wikipedia.org/wiki/Georgios_Kountouriotis"}
+    - {name: アンドレアス・ザイミス, title: 臨時政府の統治委員会議長, from: 1826, to: 1827, source: "https://en.wikipedia.org/wiki/Andreas_Zaimis"}
+    - {name: イオアニス・カポディストリアス, title: ギリシア総督（大統領）, from: 1828, to: 1831, note: 1827年に選出、1828年1月に着任。1831年に暗殺された。, source: "https://ja.wikipedia.org/wiki/イオアニス・カポディストリアス"}
+    - {name: アヴグスティノス・カポディストリアス, title: 臨時政府の首班, from: 1831, to: 1832, source: "https://en.wikipedia.org/wiki/Augustinos_Kapodistrias"}
+    - {name: オソン1世（オットー）, title: ギリシア王, from: 1832, to: 1862, note: バイエルン王ルートヴィヒ1世の子。1835年まで摂政団が統治。1843年の無血革命で憲法を認めた。1862年の反乱で退位。, source: "https://ja.wikipedia.org/wiki/オソン1世"}
+    - {name: ゲオルギオス1世, title: ギリシア王, from: 1863, to: 1913, note: デンマーク王子。イギリスはイオニア諸島を贈って即位を後押しした。1913年にテッサロニキで暗殺。, source: "https://ja.wikipedia.org/wiki/ゲオルギオス1世"}
+    - {name: コンスタンディノス1世, title: ギリシア王, from: 1913, to: 1917, source: "https://ja.wikipedia.org/wiki/コンスタンティノス1世"}
+  periods:
+    - from: 1821
+      to: 1829
+      text: ペロポネソスとエーゲ海の島々で独立戦争が起こった。エジプトのイブラーヒーム・パシャの軍に押し返されたが（1825–1827）、ナヴァリノの海戦（1827）で英仏露の艦隊が勝ち、独立への道が開けた。
+    - from: 1830
+      to: 1862
+      text: ロンドン議定書（1830）で独立国となり、バイエルン出身のオソン1世が王となった。首都はナフプリオから1834年にアテネへ。国境の外に多くのギリシア人が残り、「メガリ・イデア」（大ギリシア主義）が国の目標となった。
+    - from: 1863
+      to: 1896
+      text: ゲオルギオス1世が即位し、イギリスからイオニア諸島を得た（1864）。ベルリン会議後の交渉でテッサリアとアルタ地方を得た（1881）。トリクピス首相のもとで鉄道やコリントス運河がつくられたが、1893年に財政が破綻した。
+    - from: 1897
+      to: 1914
+      text: クレタをめぐるオスマン帝国との戦争（1897）に敗れた。1909年の軍人の蜂起の後、クレタ出身のヴェニゼロスが首相となって改革を進め、バルカン戦争（1912–1913）でマケドニア南部・イピロス・クレタ・エーゲ海の島々を得て、領土と人口をほぼ倍にした。
+  source: "https://ja.wikipedia.org/wiki/ギリシャ王国"
+
+- id: romania
+  name: ルーマニア
+  names:
+    - {to: 1861, name: モルダヴィア・ワラキア連合公国, short: 連合公国, kind: 公国（オスマン帝国の宗主権下）}
+    - {from: 1862, to: 1877, name: ルーマニア公国, kind: 公国（オスマン帝国の宗主権下）}
+    - {from: 1878, to: 1880, name: ルーマニア公国, kind: 公国}
+    - {from: 1881, name: ルーマニア王国, kind: 王国}
+  short: ルーマニア
+  color: "#c2aee0"
+  kind: 王国
+  note: 1859年にモルダヴィアとワラキアがともにクザを公に選び、1862年に政府と議会を一つにしてルーマニアと名のった。首都はブカレスト。1878年のベルリン条約で独立が認められ、南ベッサラビアをロシアに返す代わりに北ドブルジャを得た。
+  rulers:
+    - {name: アレクサンドル・ヨアン・クザ, title: 連合公国の公, from: 1859, to: 1866, note: 修道院領の没収や農地改革を進めたが、クーデタで退位させられた。, source: "https://ja.wikipedia.org/wiki/アレクサンドル・ヨアン・クザ"}
+    - {name: カロル1世, title: ルーマニア公（1881年から国王）, from: 1866, to: 1914, note: プロイセン王家の分家ホーエンツォレルン＝ジグマリンゲン家の出身。, source: "https://ja.wikipedia.org/wiki/カロル1世"}
+    - {name: フェルディナンド1世, title: ルーマニア王, from: 1914, to: 1927, source: "https://ja.wikipedia.org/wiki/フェルディナンド1世_(ルーマニア王)"}
+  periods:
+    - from: 1859
+      to: 1877
+      text: クザのもとで二公国が合同し、近代国家の制度が整えられた。1866年に外国の王家からカロルを迎え、同年の憲法で立憲君主制となった。
+    - from: 1878
+      to: 1906
+      text: 露土戦争でロシアとともに戦い（プレヴェン包囲）、ベルリン条約で独立が認められた。1881年に王国となり、穀物と石油の輸出で経済が伸びた。1883年に三国同盟と秘密の同盟を結んだ。
+    - from: 1907
+      to: 1914
+      text: 1907年に大規模な農民反乱が起こり、軍が鎮圧した。第二次バルカン戦争（1913）でブルガリアに出兵し、ブカレスト条約で南ドブルジャを得た。トランシルヴァニアのルーマニア人の問題でオーストリア＝ハンガリーとの関係は冷え、1914年の大戦では中立を宣言した。
+  source: "https://ja.wikipedia.org/wiki/ルーマニア王国"
+
+- id: bulgaria
+  name: ブルガリア
+  names:
+    - {to: 1877, name: ブルガリア（オスマン帝国領）, short: ブルガリア, kind: オスマン帝国の州（ドナウ州など）。公国の成立は1878年}
+    - {from: 1878, to: 1907, name: ブルガリア公国, kind: 公国（オスマン帝国の宗主権下）}
+    - {from: 1908, name: ブルガリア王国, kind: 王国（ツァール）}
+  short: ブルガリア
+  color: "#e3a3a8"
+  kind: 公国
+  note: 1878年のサン＝ステファノ条約で大ブルガリアが約束されたが、ベルリン条約でバルカン山脈の北とソフィア周辺だけの公国（オスマン帝国の宗主権下）とされた。1885年に東ルメリを事実上併合し（1886年のトプハネ協定でブルガリア公が東ルメリ総督を兼ねる）、1908年に独立を宣言して王国（ツァール国）となった。
+  rulers:
+    - {name: ロシアの臨時統治（ドンドゥコフ＝コルサコフ）, title: ロシアの帝国全権委員, from: 1878, to: 1878, note: 1879年4月のタルノヴォ憲法制定とブルガリア公の選出まで。, source: "https://en.wikipedia.org/wiki/Alexander_Dondukov-Korsakov"}
+    - {name: アレクサンドル1世（バッテンベルク）, title: ブルガリア公, from: 1879, to: 1886, note: ロシアの支持を失い、1886年のクーデタののち退位。, source: "https://ja.wikipedia.org/wiki/アレクサンダル1世_(ブルガリア公)"}
+    - {name: フェルディナンド1世, title: ブルガリア公（1908年からツァール）, from: 1887, to: 1918, note: ザクセン＝コーブルク＝ゴータ家の出身。1887–1894年はスタンボロフ首相が実権を握った。, source: "https://ja.wikipedia.org/wiki/フェルディナンド1世_(ブルガリア王)"}
+  periods:
+    - from: 1878
+      to: 1885
+      text: ベルリン条約で、ロシアの支援のもと自治公国として出発した（首都ソフィア、1879年のタルノヴォ憲法）。南の東ルメリはオスマン帝国の自治州として切り離された。
+    - from: 1885
+      to: 1907
+      text: 東ルメリの統合（1885）に反発したセルビアの侵攻をスリヴニツァの戦いで退けた。ロシアと対立しながらフェルディナンド公とスタンボロフ首相のもとで国づくりを進め、マケドニアの獲得をめざした（1903年イリンデン蜂起）。
+    - from: 1908
+      to: 1914
+      text: 青年トルコ人革命の混乱をついて独立を宣言し、王国となった。第一次バルカン戦争でトラキアに進んだが、マケドニアの分け方をめぐってセルビア・ギリシアと戦った第二次バルカン戦争（1913）に敗れ、南ドブルジャを失った（西トラキアは保った）。
+  source: "https://ja.wikipedia.org/wiki/ブルガリア公国"
+
+- id: eastern_rumelia
+  name: 東ルメリ自治州
+  short: 東ルメリ
+  color: "#d8e3a4"
+  kind: 自治州（オスマン帝国内）
+  note: ベルリン条約でバルカン山脈の南に置かれた、キリスト教徒の総督が治めるオスマン帝国の自治州。州都プロヴディフ。1885年のプロヴディフの蜂起でブルガリアに統合された。
+  rulers:
+    - {name: ロシアの臨時統治, title: ロシア軍の占領行政, from: 1878, to: 1878, note: 1879年5月にロシア軍が撤退し、最初の総督が着任した。, source: "https://ja.wikipedia.org/wiki/東ルメリ自治州"}
+    - {name: アレコ・ボゴリディ, title: 東ルメリ総督, from: 1879, to: 1884, source: "https://en.wikipedia.org/wiki/Alexander_Bogoridi"}
+    - {name: ガヴリル・クラステヴィチ, title: 東ルメリ総督, from: 1884, to: 1885, source: "https://en.wikipedia.org/wiki/Gavril_Krastevich"}
+  periods:
+    - from: 1878
+      to: 1885
+      text: 住民の多くはブルガリア人で、ブルガリア公国との統合を求める運動が続き、1885年9月にプロヴディフで無血の蜂起が起きて統合が宣言された。
+  source: "https://ja.wikipedia.org/wiki/東ルメリ自治州"
+
+- id: albania
+  name: アルバニア公国
+  names:
+    - {to: 1913, name: アルバニア（臨時政府）, kind: 臨時政府}
+    - {from: 1914, name: アルバニア公国, kind: 公国}
+  short: アルバニア
+  color: "#a99bd6"
+  kind: 公国
+  note: 1912年11月28日にヴロラでイスマイル・ケマルが独立を宣言した。列強はロンドン大使会議（1913）で独立を認め、国境はフィレンツェ議定書（1913年12月）などで定められた。コソヴォやチャメリア（イピロス南部）のアルバニア人は国境の外に残った。
+  rulers:
+    - {name: イスマイル・ケマル（ヴロラ）, title: 臨時政府の首班, from: 1912, to: 1914, source: "https://en.wikipedia.org/wiki/Ismail_Qemali"}
+    - {name: ヴィルヘルム（ヴィード公）, title: アルバニア公, from: 1914, to: 1914, note: 列強が選んだドイツの貴族。1914年3月に着いたが、農民の反乱と大戦の勃発で9月に国を去った（退位はしていない）。, source: "https://en.wikipedia.org/wiki/William,_Prince_of_Albania"}
+  periods:
+    - from: 1912
+      to: 1914
+      text: 第一次バルカン戦争のさなかに独立を宣言したが、領土の大半はセルビア・モンテネグロ・ギリシアの軍に占領されていた。列強が独立を認めて公国としたが、1914年には南部（北イピロス）でギリシア系住民が自治を宣言し、大戦が始まるとギリシア軍とイタリア軍（ヴロラ）が再び進駐した。
+  source: "https://ja.wikipedia.org/wiki/アルバニア公国"
+
+- id: samos
+  name: サモス公国
+  short: サモス
+  color: "#b8d8e8"
+  kind: 自治公国（オスマン帝国に貢納）
+  rulers:
+    - {name: ステファノス・ヴォゴリディス, title: サモス公, from: 1834, to: 1850, note: イスタンブルに住み、島は代理（カイマカム）が治めた。, source: "https://en.wikipedia.org/wiki/Principality_of_Samos"}
+    - {name: アレクサンドロス・カラテオドリス, title: サモス公, from: 1885, to: 1895, note: 1850–1885年、1895–1907年の歴代の公は省略（要確認）。, source: "https://en.wikipedia.org/wiki/Principality_of_Samos"}
+    - {name: アンドレアス・コパシス, title: サモス公, from: 1907, to: 1912, note: 1912年3月に暗殺され、同年11月に島の議会がギリシアとの統合を宣言した（ソフーリスの臨時政府）。, source: "https://en.wikipedia.org/wiki/Principality_of_Samos"}
+  note: 独立戦争に加わったサモス島は1830年にギリシアから外され、1834年に列強の保障のもとでオスマン帝国に貢納する自治公国となった。公はスルタンが任命するキリスト教徒（多くはファナリオティス）。1912年にギリシアとの統合を宣言し、1913年にギリシア領となった。
+  source: "https://en.wikipedia.org/wiki/Principality_of_Samos"
+
+- id: crete_state
+  name: クレタ自治国
+  short: クレタ
+  color: "#9fd3cf"
+  kind: 自治国（オスマン帝国の宗主権下、列強の保護）
+  note: 1897年のクレタの反乱と希土戦争の後、イギリス・フランス・ロシア・イタリアの4国がオスマン軍を撤退させ、1898年にオスマン帝国の宗主権のもとの自治国とした。
+  rulers:
+    - {name: ゲオルギオス王子, title: 高等弁務官, from: 1898, to: 1906, note: ギリシア王ゲオルギオス1世の子。ヴェニゼロスと対立して辞任。, source: "https://en.wikipedia.org/wiki/Prince_George_of_Greece_and_Denmark"}
+    - {name: アレクサンドロス・ザイミス, title: 高等弁務官, from: 1906, to: 1911, source: "https://en.wikipedia.org/wiki/Alexandros_Zaimis"}
+  periods:
+    - from: 1898
+      to: 1913
+      text: 自治国の議会はギリシアとの統合（エノシス）を何度も宣言した（1908年など）。1913年のロンドン条約でオスマン帝国が権利を放棄し、同年12月にギリシアに統合された。
+  source: "https://en.wikipedia.org/wiki/Cretan_State"
 
 # ---------------------------------------------------------------- 東地中海の半自立勢力
 - id: lebanon_emirate
@@ -286,8 +520,34 @@
     - {name: ムルヒム（シハーブ家）, title: アミール, from: 1732, to: 1753, source: "https://en.wikipedia.org/wiki/Mulhim_Shihab"}
     - {name: マンスール／アフマド（シハーブ家）, title: アミール, from: 1753, to: 1770, note: 要確認}
     - {name: ユースフ（シハーブ家）, title: アミール, from: 1770, to: 1789, source: "https://en.wikipedia.org/wiki/Yusuf_Shihab"}
-    - {name: バシール2世（シハーブ家）, title: アミール, from: 1789, to: 1840, note: 途中で何度か一時退位, source: "https://en.wikipedia.org/wiki/Bashir_Shihab_II"}
+    - {name: バシール2世（シハーブ家）, title: アミール, from: 1789, to: 1840, note: 途中で何度か一時退位。エジプトのムハンマド・アリーと結んだため、1840年に列強の介入で追放された。, source: "https://en.wikipedia.org/wiki/Bashir_Shihab_II"}
+    - {name: バシール3世（シハーブ家）, title: アミール, from: 1840, to: 1842, source: "https://en.wikipedia.org/wiki/Bashir_Shihab_III"}
+  periods:
+    - from: 1832
+      to: 1842
+      text: バシール2世はエジプトのシリア支配（1832–1840）に協力したが、エジプト軍の撤退とともに追放された。後継のバシール3世も1842年に廃され、首長国は終わった（以後、マロン派とドルーズ派の二重カイマカム制）。
   source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Emirate"
+
+- id: lebanon_mutasarrifate
+  name: レバノン山地自治県（ムタサッリフ領）
+  short: レバノン山地
+  color: "#c6e2b5"
+  kind: 自治県（オスマン帝国内、列強の保障）
+  note: 1860年のマロン派とドルーズ派の衝突（ダマスクスでもキリスト教徒が虐殺された）にフランスが出兵したのち、1861年の規約（レグルマン）でオスマン帝国内の自治県とされた。総督（ムタサッリフ）はレバノン出身でないカトリック教徒のオスマン臣民から選ばれた。
+  rulers:
+    - {name: ダーウード・パシャ, title: ムタサッリフ（総督）, from: 1861, to: 1868, note: アルメニア系カトリック。, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+    - {name: フランコ・パシャ, title: ムタサッリフ, from: 1868, to: 1873, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+    - {name: ルステム・パシャ, title: ムタサッリフ, from: 1873, to: 1883, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+    - {name: ワーサ・パシャ, title: ムタサッリフ, from: 1883, to: 1892, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+    - {name: ナウム・パシャ, title: ムタサッリフ, from: 1892, to: 1902, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+    - {name: ムザッフェル・パシャ, title: ムタサッリフ, from: 1902, to: 1907, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+    - {name: ユースフ・フランコ・パシャ, title: ムタサッリフ, from: 1907, to: 1912, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+    - {name: オハンネス・パシャ, title: ムタサッリフ, from: 1912, to: 1915, source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"}
+  periods:
+    - from: 1861
+      to: 1914
+      text: 列強の保障のもとで比較的安定した自治が続き、ベイルートを中心に絹業や教育（アメリカ・フランス系の大学）が栄えた。人口の流出（南北アメリカへの移民）も多かった。
+  source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"
 
 - id: zahir_umar
   name: ザーヒル・アルウマルの政権（ガリラヤ）
@@ -309,11 +569,11 @@
     - {to: 1735, name: サファヴィー朝, short: サファヴィー朝, kind: 王朝国家（シャー）}
     - {from: 1736, to: 1750, name: アフシャール朝, short: アフシャール朝, kind: 王朝国家（シャー）}
     - {from: 1751, to: 1793, name: ザンド朝, short: ザンド朝, kind: 王朝国家（ワキール）}
-    - {from: 1794, name: ガージャール朝, short: ガージャール朝, kind: 王朝国家（シャー）}
+    - {from: 1794, name: カージャール朝, short: カージャール朝, kind: 王朝国家（シャー）}
   short: ペルシア
   color: "#e7bd8f"
   kind: 王朝国家（シャー）
-  note: 1747年のナーディル・シャー暗殺後は分裂。1751年ごろからカリーム・ハン・ザンドがシーラーズを拠点に西部・南部を支配した（ザンド朝）。ホラーサーンはナーディルの孫シャー・ロフが保持（地図では afsharid_khorasan）。カリーム・ハンの死後、北部ではガージャール族のアーガー・モハンマド・ハーンが台頭し（地図では qajar_north）、1794年にザンド朝を滅ぼした。
+  note: 1747年のナーディル・シャー暗殺後は分裂。1751年ごろからカリーム・ハン・ザンドがシーラーズを拠点に西部・南部を支配した（ザンド朝）。ホラーサーンはナーディルの孫シャー・ロフが保持（地図では afsharid_khorasan）。カリーム・ハンの死後、北部ではカージャール族のアーガー・モハンマド・ハーンが台頭し（地図では qajar_north）、1794年にザンド朝を滅ぼした。
   rulers:
     - {name: アッバース2世, title: シャー（サファヴィー朝）, from: 1642, to: 1666, source: "https://ja.wikipedia.org/wiki/アッバース2世"}
     - {name: スライマーン1世（サフィー2世）, title: シャー（サファヴィー朝）, from: 1666, to: 1694, source: "https://ja.wikipedia.org/wiki/スライマーン1世"}
@@ -330,8 +590,13 @@
     - {name: アリー・モラード・ハン, title: ザンド朝の君主, from: 1782, to: 1785, source: "https://en.wikipedia.org/wiki/Ali-Morad_Khan_Zand"}
     - {name: ジャアファル・ハン, title: ザンド朝の君主, from: 1785, to: 1789, source: "https://en.wikipedia.org/wiki/Jafar_Khan_Zand"}
     - {name: ロトフ・アリー・ハン, title: ザンド朝の君主, from: 1789, to: 1794, source: "https://en.wikipedia.org/wiki/Lotf_Ali_Khan"}
-    - {name: アーガー・モハンマド・ハーン, title: シャー（ガージャール朝）, from: 1794, to: 1797, note: 1794年にザンド朝を滅ぼしてイランを統一し、1796年に正式に戴冠。それ以前は qajar_north（ガージャール族）を参照。, source: "https://ja.wikipedia.org/wiki/アーガー・モハンマド・シャー"}
-    - {name: ファトフ・アリー・シャー, title: シャー（ガージャール朝）, from: 1797, to: 1834, source: "https://ja.wikipedia.org/wiki/ファトフ・アリー・シャー"}
+    - {name: アーガー・モハンマド・ハーン, title: シャー（カージャール朝）, from: 1794, to: 1797, note: 1794年にザンド朝を滅ぼしてイランを統一し、1796年に正式に戴冠。それ以前は qajar_north（カージャール族）を参照。, source: "https://ja.wikipedia.org/wiki/アーガー・モハンマド・シャー"}
+    - {name: ファトフ・アリー・シャー, title: シャー（カージャール朝）, from: 1797, to: 1834, source: "https://ja.wikipedia.org/wiki/ファトフ・アリー・シャー"}
+    - {name: モハンマド・シャー, title: シャー（カージャール朝）, from: 1834, to: 1848, source: "https://ja.wikipedia.org/wiki/モハンマド・シャー"}
+    - {name: ナーセロッディーン・シャー, title: シャー（カージャール朝）, from: 1848, to: 1896, note: 宰相アミール・キャビールの改革（1848–1851）。1896年に暗殺された。, source: "https://ja.wikipedia.org/wiki/ナーセロッディーン・シャー"}
+    - {name: モザッファロッディーン・シャー, title: シャー（カージャール朝）, from: 1896, to: 1907, note: 1906年に憲法と議会を認めた。, source: "https://ja.wikipedia.org/wiki/モザッファロッディーン・シャー"}
+    - {name: モハンマド・アリー・シャー, title: シャー（カージャール朝）, from: 1907, to: 1909, note: 1908年に議会を砲撃して解散したが、立憲派に追われて退位。, source: "https://ja.wikipedia.org/wiki/モハンマド・アリー・シャー"}
+    - {name: アフマド・シャー, title: シャー（カージャール朝）, from: 1909, to: 1925, note: 即位時11歳。, source: "https://ja.wikipedia.org/wiki/アフマド・シャー"}
   periods:
     - from: 1648
       to: 1721
@@ -347,11 +612,20 @@
       text: カリーム・ハン・ザンドがシーラーズを都に西部・南部を治め、比較的平穏な時代となった。
     - from: 1779
       to: 1793
-      text: カリーム・ハンの死後、ザンド朝では王位をめぐる内紛が続いた。北部ではガージャール族のアーガー・モハンマド・ハーンが台頭し、ザンド朝の最後の君主ロトフ・アリー・ハンを追いつめた。
+      text: カリーム・ハンの死後、ザンド朝では王位をめぐる内紛が続いた。北部ではカージャール族のアーガー・モハンマド・ハーンが台頭し、ザンド朝の最後の君主ロトフ・アリー・ハンを追いつめた。
     - from: 1794
       to: 1815
-      text: アーガー・モハンマド・ハーンがザンド朝を倒してイランを統一し、テヘランを都とした（ガージャール朝）。ファトフ・アリー・シャーはロシアとの戦争に敗れ、グリスタン条約（1813）でカフカースの大半を失った。
-  source: "https://ja.wikipedia.org/wiki/サファヴィー朝"
+      text: アーガー・モハンマド・ハーンがザンド朝を倒してイランを統一し、テヘランを都とした（カージャール朝）。ファトフ・アリー・シャーはロシアとの戦争に敗れ、グリスタン条約（1813）でカフカースの大半を失った。
+    - from: 1816
+      to: 1847
+      text: 第二次イラン＝ロシア戦争に敗れ、トルコマンチャーイ条約（1828）でエレバン・ナヒチェヴァンを失い、治外法権と低関税を認めた。ヘラートの奪回をめざしたが（1837–1838年の包囲）、イギリスの干渉で果たせなかった。
+    - from: 1848
+      to: 1895
+      text: ナーセロッディーン・シャーの長い治世。バーブ教徒の反乱（1848–1852）を鎮圧した。ヘラートを占領したが英国＝イラン戦争に敗れ、パリ条約（1857）でアフガニスタンへの権利を捨てた。ロシア・イギリスに利権を次々と与え、タバコ・ボイコット運動（1891–1892）で利権の撤回に追い込まれた。
+    - from: 1896
+      to: 1914
+      text: イラン立憲革命（1905–1911）で議会と憲法（1906）ができたが、英露協商（1907）で北部はロシア、南東部はイギリスの勢力圏に分けられ、1911年にはロシア軍の介入で議会が閉鎖された。1908年に南西部で石油が見つかった。
+  source: "https://ja.wikipedia.org/wiki/ガージャール朝"
 
 - id: hotaki
   name: ホータキー朝（アフガン）
@@ -383,13 +657,13 @@
   source: "https://ja.wikipedia.org/wiki/アフシャール朝"
 
 - id: qajar_north
-  name: ガージャール族（アーガー・モハンマド・ハーン）
-  short: ガージャール
+  name: カージャール族（アーガー・モハンマド・ハーン）
+  short: カージャール
   color: "#e9a98b"
   kind: 部族政権
-  note: 1794年にザンド朝を滅ぼしてイランを統一し、地図では以後 persia（ガージャール朝）として表示する。
+  note: 1794年にザンド朝を滅ぼしてイランを統一し、地図では以後 persia（カージャール朝）として表示する。
   rulers:
-    - {name: アーガー・モハンマド・ハーン, title: ガージャール族の長（1789年から王を称する）, from: 1779, to: 1794, note: 1794年以降は persia（ガージャール朝）の君主として表示。, source: "https://en.wikipedia.org/wiki/Agha_Mohammad_Khan_Qajar"}
+    - {name: アーガー・モハンマド・ハーン, title: カージャール族の長（1789年から王を称する）, from: 1779, to: 1794, note: 1794年以降は persia（カージャール朝）の君主として表示。, source: "https://en.wikipedia.org/wiki/Agha_Mohammad_Khan_Qajar"}
   periods:
     - from: 1779
       to: 1793
@@ -418,22 +692,73 @@
     - {name: ザマーン・シャー, title: シャー, from: 1793, to: 1801, source: "https://en.wikipedia.org/wiki/Zaman_Shah_Durrani"}
     - {name: マフムード・シャー, title: シャー, from: 1801, to: 1803, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
     - {name: シュジャー・シャー, title: シャー, from: 1803, to: 1809, source: "https://en.wikipedia.org/wiki/Shah_Shuja_Durrani"}
-    - {name: マフムード・シャー（再任）, title: シャー, from: 1809, to: 1818, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
+    - {name: マフムード・シャー（再任）, title: シャー, from: 1809, to: 1818, note: 1818年に宰相ファトフ・ハーン（バーラクザイ家）を殺したことで王国は分裂し、以後ヘラートだけを保った（herat）。, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
   periods:
     - from: 1747
       to: 1772
       text: ナーディル・シャーの部将だったアフマド・シャーがカンダハールで即位し、アフガニスタンの基礎を築いた。インドにもたびたび遠征した。
     - from: 1773
       to: 1815
-      text: 首都をカーブルに移したが、ティムール・シャーの死後は王子たちの争いで弱体化した。ヘラートは王族が治める半ば独立の地となった。
+      text: 首都をカーブルに移したが、ティムール・シャーの死後は王子たちの争いで弱体化した。ヘラートは王族が治める半ば独立の地となった。1818年に王国は分裂し、カーブル・カンダハールはバーラクザイ家の兄弟の手に移った。
   source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"
+
+- id: herat
+  name: ヘラート侯国
+  short: ヘラート
+  color: "#cdb790"
+  kind: 侯国
+  note: ドゥッラーニー朝の分裂後、サドーザイ家のマフムード・シャー、カームラーン・シャーがヘラートを保った。1842年からは宰相ヤール・モハンマド・ハーンの一族が治め、ペルシアとアフガニスタンが奪い合った。
+  rulers:
+    - {name: マフムード・シャー, title: シャー, from: 1818, to: 1829, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
+    - {name: カームラーン・シャー, title: シャー, from: 1829, to: 1842, note: 1837–1838年のペルシア軍の包囲に耐えた。, source: "https://en.wikipedia.org/wiki/Kamran_Shah_Durrani"}
+    - {name: ヤール・モハンマド・ハーン, title: 宰相・支配者, from: 1842, to: 1851, source: "https://en.wikipedia.org/wiki/Yar_Mohammad_Khan_Alakozai"}
+    - {name: サイード・モハンマド・ハーン, title: 支配者, from: 1851, to: 1855, note: 要確認}
+    - {name: スルターン・アフマド・ハーン, title: 支配者（ペルシアの保護下）, from: 1857, to: 1863, note: 1855–1857年はペルシアの介入で支配者がめまぐるしく替わった（要確認）。, source: "https://en.wikipedia.org/wiki/Sultan_Ahmad_Khan"}
+  periods:
+    - from: 1818
+      to: 1862
+      text: ペルシアはヘラートの奪回をめざして1837–1838年と1856年に攻めたが、イギリスが軍事介入して阻んだ（パリ条約、1857）。1863年にドースト・モハンマドが攻め落とし、アフガニスタンに統合された。
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Herat"
+
+- id: afghanistan
+  name: アフガニスタン（バーラクザイ朝）
+  short: アフガニスタン
+  color: "#d5c2a0"
+  kind: 王国（アミール）
+  note: 1818年以後、バーラクザイ家の兄弟がカーブル・カンダハールなどを分けて治めた。ドースト・モハンマドが1826年にカーブルを押さえ、1834年からアミールを称した。地図の範囲はアフガニスタン西部（ファラー・ニームルーズ・ヘラート）だけ。1879年のガンダマク条約から外交はイギリスが握った（保護国）。
+  rulers:
+    - {name: ドースト・モハンマド・ハーン, title: カーブルのアミール, from: 1826, to: 1839, source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
+    - {name: シュジャー・シャー, title: シャー（イギリスが擁立）, from: 1839, to: 1842, note: 第一次アフガン戦争でイギリスが復位させたが、1842年に殺された。, source: "https://en.wikipedia.org/wiki/Shah_Shuja_Durrani"}
+    - {name: ドースト・モハンマド・ハーン（再任）, title: アミール, from: 1842, to: 1863, note: 1855年にカンダハール、1863年にヘラートを併合した。, source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
+    - {name: シール・アリー・ハーン, title: アミール, from: 1863, to: 1866, source: "https://en.wikipedia.org/wiki/Sher_Ali_Khan"}
+    - {name: モハンマド・アフザル・ハーン, title: アミール, from: 1866, to: 1867, source: "https://en.wikipedia.org/wiki/Mohammad_Afzal_Khan"}
+    - {name: モハンマド・アアザム・ハーン, title: アミール, from: 1867, to: 1868, source: "https://en.wikipedia.org/wiki/Mohammad_Azam_Khan"}
+    - {name: シール・アリー・ハーン（再任）, title: アミール, from: 1868, to: 1879, source: "https://en.wikipedia.org/wiki/Sher_Ali_Khan"}
+    - {name: モハンマド・ヤアクーブ・ハーン, title: アミール, from: 1879, to: 1879, note: ガンダマク条約を結んだ。, source: "https://en.wikipedia.org/wiki/Mohammad_Yaqub_Khan"}
+    - {name: アブドゥッラフマーン・ハーン, title: アミール, from: 1880, to: 1901, note: 「鉄のアミール」。デュアランド・ライン（1893）を認めた。, source: "https://ja.wikipedia.org/wiki/アブドゥッラフマーン・ハーン"}
+    - {name: ハビーブッラー・ハーン, title: アミール, from: 1901, to: 1919, source: "https://en.wikipedia.org/wiki/Habibullah_Khan"}
+  periods:
+    - from: 1826
+      to: 1878
+      text: ドースト・モハンマドが国を立て直したが、ロシアの南下をおそれたイギリスが侵攻した（第一次アフガン戦争、1838–1842）。イギリス軍は大敗して撤退し、ドースト・モハンマドが復位してカンダハール・ヘラートを統合した。
+    - from: 1879
+      to: 1914
+      text: 第二次アフガン戦争（1878–1880）ののち、ガンダマク条約で外交をイギリスに委ねる保護国となった。英露の緩衝国として国境が定められ（パンジデ事件1885、デュアランド・ライン1893）、アブドゥッラフマーンが中央集権化を進めた。
+  source: "https://ja.wikipedia.org/wiki/バーラクザイ朝"
 
 - id: kalat
   name: カラート・ハン国
   short: カラート
   color: "#cbbf9b"
   kind: ハン国
-  note: バローチスターンのハン国。ナーディル・シャー、のちドゥッラーニー朝に臣従したが、1758年のカラート条約で事実上自立した。地図の範囲はごく一部（要確認）。
+  rulers:
+    - {name: マフムード・ハン1世, title: カラートのハン, from: 1794, to: 1817, note: 要確認。, source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {name: ミフラーブ・ハン2世, title: カラートのハン, from: 1817, to: 1839, note: 第1次アフガン戦争中の1839年、イギリス軍のカラート攻撃で戦死した。, source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {name: シャー・ナワーズ・ハン, title: カラートのハン（イギリスが擁立）, from: 1839, to: 1840, source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {name: ナスィール・ハン2世, title: カラートのハン, from: 1840, to: 1857, source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {name: フダーダード・ハン, title: カラートのハン, from: 1857, to: 1893, note: 1863–1864年に一時廃位された。1876年のマストゥング条約でイギリスの保護下に入った。1893年に退位させられた。, source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {name: マフムード・ハン2世, title: カラートのハン, from: 1893, to: 1931, source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+  note: バローチスターンのハン国。ナーディル・シャー、のちドゥッラーニー朝に臣従したが、1758年のカラート条約で事実上自立した。1876年のマストゥング条約でイギリスの保護下に入った（バローチスターン管区）。地図の範囲はごく一部（要確認）。
   source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
 
 # ---------------------------------------------------------------- 中央アジア
@@ -443,6 +768,15 @@
   color: "#a9c3e1"
   kind: ハン国
   note: 1740–1747年はナーディル・シャーに服属。18世紀後半からウズベクのコングラト部のイナクが実権を握り、1804年に正式にハンとなった（コングラト朝）。
+  rulers:
+    - {name: エルトゥゼル, title: ハン（コングラト朝）, from: 1804, to: 1806, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    - {name: ムハンマド・ラヒーム・ハン1世, title: ハン, from: 1806, to: 1825, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    - {name: アッラー・クリ・ハン, title: ハン, from: 1825, to: 1842, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    - {name: ラヒーム・クリ・ハン, title: ハン, from: 1842, to: 1845, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    - {name: ムハンマド・アミーン・ハン, title: ハン, from: 1845, to: 1855, note: 1855年、トルクメンとの戦いで戦死。その後1856年まで短い在位のハンが続いた（要確認）。, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    - {name: サイイド・ムハンマド・ハン, title: ハン, from: 1856, to: 1864, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    - {name: ムハンマド・ラヒーム・ハン2世, title: ハン（1873年からロシアの保護国）, from: 1864, to: 1910, note: 1873年にロシア軍にヒヴァを落とされ、ガンデミアン条約を結んだ。, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    - {name: イスファンディヤール・ハン, title: ハン, from: 1910, to: 1918, source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
   periods:
     - from: 1648
       to: 1739
@@ -450,6 +784,12 @@
     - from: 1740
       to: 1815
       text: ナーディル・シャーに征服されたのち（1740）、内紛が続いた。1804年にコングラト朝が成立し、アラル海南岸のカラカルパクなどへ勢力を広げた。
+    - from: 1816
+      to: 1872
+      text: ムハンマド・ラヒーム・ハン（1806–1825）らのもとで、トルクメン諸部族やメルヴに勢力を広げた。1839–1840年のロシアのペロフスキー遠征は冬の草原で失敗した。
+    - from: 1873
+      to: 1914
+      text: 1873年にロシア軍に首都を落とされ、ガンデミアン条約でアム川右岸をロシアに割譲し、ロシアの保護国となった。
   source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"
 
 - id: bukhara
@@ -460,6 +800,13 @@
   color: "#e2b2a1"
   kind: ハン国
   note: 1599–1747年はジャーン朝（アストラハン朝）、1747年（実質）／1785年（アミール称号）からマンギト朝。地図の範囲は西端（アム川中流・メルヴ）だけ。
+  rulers:
+    - {name: シャー・ムラード, title: アミール（マンギト朝）, from: 1785, to: 1800, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {name: ハイダル, title: アミール, from: 1800, to: 1826, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {name: ナスルッラー, title: アミール, from: 1827, to: 1860, note: 1826–1827年は兄弟の短い在位（フサイン、ウマル）。1842年にイギリスの使節ストッダートとコノリーを処刑し、同年コーカンドを一時征服した。, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {name: ムザッファル, title: アミール（1868年からロシアの保護国）, from: 1860, to: 1885, note: 1868年にサマルカンドを失い、ロシアの保護下に入った。, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {name: アブドゥルアハド, title: アミール, from: 1885, to: 1910, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {name: アーリム・ハン, title: アミール, from: 1910, to: 1920, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
   periods:
     - from: 1648
       to: 1739
@@ -467,7 +814,34 @@
     - from: 1740
       to: 1815
       text: ナーディル・シャーに服属したのち、マンギト部が実権を握った（マンギト朝）。シャー・ムラード（1785–1800）がアミールを称し、1785年ごろメルヴを奪った。
+    - from: 1816
+      to: 1867
+      text: ナスルッラー（1827–1860）がコーカンドと争った。メルヴは1820年代からヒヴァ、のちトルクメンの手に移った。
+    - from: 1868
+      to: 1914
+      text: ロシア軍にサマルカンドを奪われ（1868）、ロシアの保護国となった。
   source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"
+
+- id: kokand
+  name: コーカンド・ハン国
+  short: コーカンド
+  color: "#c9d6a0"
+  kind: ハン国
+  rulers:
+    - {name: ウマル・ハン, title: ハン, from: 1810, to: 1822, source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
+    - {name: ムハンマド・アリー（マダリ・ハン）, title: ハン, from: 1822, to: 1842, note: 1842年にブハラのナスルッラーに攻められて殺された。, source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
+    - {name: シール・アリー・ハン, title: ハン, from: 1842, to: 1845, source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
+    - {name: フダーヤール・ハン, title: ハン, from: 1845, to: 1875, note: 1858–1865年は廃位と復位をくり返した（その間のハンはマッラー・ハン、シャー・ムラード、サイイド・スルタンなど。実権者はアリム・クリ。要確認）。1875年の反乱でロシア領に逃れた。, source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
+    - {name: ナスルッディーン・ハン, title: ハン, from: 1875, to: 1876, note: 1876年2月、ハン国はロシアに併合されフェルガナ州となった。, source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
+  periods:
+    - from: 1816
+      to: 1852
+      text: フェルガナ盆地からシル川流域・タシケントに勢力を広げ、シル川下流にアク・メチェトなどの要塞を築いた。1842年にはブハラに一時征服された。
+    - from: 1853
+      to: 1876
+      text: 1853年にロシアにアク・メチェトを奪われ、1865年にはタシケントを失った。1875年の反乱をきっかけにロシア軍が侵攻し、1876年にハン国は併合された（フェルガナ州）。
+  note: フェルガナ盆地を本拠とするウズベクのハン国。19世紀前半にシル川中流・下流に勢力を広げ、1817年ごろアク・メチェト（現クズロルダ）に要塞を築いた。1853年にロシアがアク・メチェトを落とし、1876年にハン国はロシアに併合された。地図の範囲はシル川下流（クズロルダ）だけ。
+  source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"
 
 - id: kazakh
   name: カザフ＝ハン国（小ジュズ）
@@ -482,6 +856,9 @@
     - from: 1731
       to: 1815
       text: 小ジュズはロシアの保護を求めた。ロシアはオレンブルク（1743）などの要塞線を築いて草原に進出した。1801年にはヴォルガ・ウラル間にブケイ・オルダが置かれた。
+    - from: 1816
+      to: 1847
+      text: ロシアは中ジュズ（1822）・小ジュズ（1824）のハン位を廃止して直接統治に移った。ケネサル・カスモフの反乱（1837–1847）を最後に、カザフ草原はロシアの支配下に入った。
   source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"
 
 # ---------------------------------------------------------------- カフカース
@@ -543,7 +920,7 @@
   short: ミングレリア
   color: "#c3d8a1"
   kind: 公国
-  note: ジョージア西部、黒海沿岸の公国（ダディアニ家）。1803年にロシアの保護国となった。
+  note: ジョージア西部、黒海沿岸の公国（ダディアニ家）。1803年にロシアの保護国となり、1857年にロシアの直接統治に移され、1867年に公国は廃止された。
   source: "https://en.wikipedia.org/wiki/Principality_of_Mingrelia"
 
 - id: guria
@@ -551,7 +928,7 @@
   short: グリア
   color: "#a9c9b9"
   kind: 公国
-  note: ジョージア西南部の小公国（グリエリ家）。1810年にロシアの保護国となった。
+  note: ジョージア西南部の小公国（グリエリ家）。1810年にロシアの保護国となり、1829年に併合された。
   source: "https://en.wikipedia.org/wiki/Principality_of_Guria"
 
 - id: abkhazia
@@ -559,21 +936,37 @@
   short: アブハジア
   color: "#a0b9ca"
   kind: 公国（オスマン帝国の宗主権下）
-  note: シェルヴァシゼ（チャチバ）家の公国。1810年にロシアの保護国となった。
+  note: シェルヴァシゼ（チャチバ）家の公国。1810年にロシアの保護国となり、1864年に併合された。その後、多くのムスリム住民がオスマン帝国へ移住（追放）された。
   source: "https://en.wikipedia.org/wiki/Principality_of_Abkhazia"
 
 # ---------------------------------------------------------------- アラビア半島
 - id: saudi
   name: 第一次サウード王国
+  names:
+    - {to: 1818, name: 第一次サウード王国}
+    - {from: 1819, to: 1891, name: 第二次サウード王国（ナジュド首長国）}
+    - {from: 1892, to: 1901, name: サウード家（クウェートに亡命）, kind: 亡命中の家門}
+    - {from: 1902, name: リヤド首長国（第三次サウード王国）}
   short: サウード王国
   color: "#d9a6c0"
   kind: 首長国（ワッハーブ派）
-  note: ディルイーヤ首長国、ワッハーブ王国とも呼ばれる。1818年にエジプトのムハンマド・アリーの軍に滅ぼされた。
+  note: ディルイーヤ首長国、ワッハーブ王国とも呼ばれる。1818年にエジプトのムハンマド・アリーの軍に滅ぼされたが、1824年にトゥルキーがリヤドを都に再興した（第二次サウード王国）。1891年にラシード家に敗れて一族はクウェートに逃れ、1902年にアブドゥルアズィーズ（イブン・サウード）がリヤドを奪回した（のちのサウジアラビア王国）。
   rulers:
     - {name: ムハンマド・イブン・サウード, title: ディルイーヤのアミール, from: 1726, to: 1765, note: 1744年にイブン・アブドゥルワッハーブと盟約を結んだ。, source: "https://en.wikipedia.org/wiki/Muhammad_bin_Saud"}
     - {name: アブドゥルアズィーズ1世, title: アミール, from: 1765, to: 1803, source: "https://en.wikipedia.org/wiki/Abdulaziz_bin_Muhammad_Al_Saud"}
     - {name: サウード1世（サウード大王）, title: アミール, from: 1803, to: 1814}
-    - {name: アブドゥッラー1世, title: アミール, from: 1814, to: 1818, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Saud"}
+    - {name: アブドゥッラー1世, title: アミール, from: 1814, to: 1818, note: 1818年にディルイーヤが落ち、イスタンブルで処刑された。, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Saud"}
+    - {name: トゥルキー・イブン・アブドゥッラー, title: ナジュドのイマーム, from: 1824, to: 1834, note: 1824年にリヤドを奪回し都とした。暗殺された。, source: "https://en.wikipedia.org/wiki/Turki_bin_Abdullah_Al_Saud"}
+    - {name: ファイサル・イブン・トゥルキー, title: イマーム, from: 1834, to: 1838, note: エジプト軍に捕らえられた。, source: "https://en.wikipedia.org/wiki/Faisal_bin_Turki_Al_Saud"}
+    - {name: ハーリド・イブン・サウード, title: イマーム（エジプトが擁立）, from: 1838, to: 1841, source: "https://en.wikipedia.org/wiki/Khalid_bin_Saud_Al_Saud"}
+    - {name: アブドゥッラー・イブン・スナイヤーン, title: イマーム, from: 1841, to: 1843, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Thunayan_Al_Saud"}
+    - {name: ファイサル・イブン・トゥルキー（再任）, title: イマーム, from: 1843, to: 1865, source: "https://en.wikipedia.org/wiki/Faisal_bin_Turki_Al_Saud"}
+    - {name: アブドゥッラー・イブン・ファイサル, title: イマーム, from: 1865, to: 1871, note: 1871–1889年は弟サウードらと王位を争い、何度も入れ替わった（要確認）。, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Faisal_Al_Saud"}
+    - {name: サウード・イブン・ファイサル, title: イマーム, from: 1871, to: 1875, source: "https://en.wikipedia.org/wiki/Saud_bin_Faisal_bin_Turki_Al_Saud"}
+    - {name: アブドゥッラフマーン・イブン・ファイサル, title: イマーム, from: 1875, to: 1876, note: サウードの死後に短く在位し、兄アブドゥッラーに譲った。, source: "https://en.wikipedia.org/wiki/Abdul_Rahman_bin_Faisal_Al_Saud"}
+    - {name: アブドゥッラー・イブン・ファイサル（再任）, title: イマーム, from: 1876, to: 1889, note: 晩年はラシード家の保護下にあった。}
+    - {name: アブドゥッラフマーン・イブン・ファイサル, title: イマーム, from: 1889, to: 1891, note: ムライダの戦い（1891）でラシード家に敗れてクウェートへ逃れた。, source: "https://en.wikipedia.org/wiki/Abdul_Rahman_bin_Faisal_Al_Saud"}
+    - {name: アブドゥルアズィーズ（イブン・サウード）, title: リヤドのアミール（のちサウジアラビア国王）, from: 1902, to: 1953, source: "https://ja.wikipedia.org/wiki/アブドゥルアズィーズ・イブン・サウード"}
   periods:
     - from: 1744
       to: 1786
@@ -584,7 +977,42 @@
     - from: 1811
       to: 1815
       text: オスマン帝国の命を受けたエジプトのムハンマド・アリーの軍がヒジャーズを奪回した（メディナ1812、メッカ1813）。
+    - from: 1816
+      to: 1823
+      text: イブラーヒーム・パシャのエジプト軍がナジュドに攻め込み、1818年に都ディルイーヤを破壊した（第一次サウード王国の滅亡）。
+    - from: 1824
+      to: 1891
+      text: トゥルキーがリヤドを都にサウード家の国を再興し（第二次サウード王国）、ハサーまで勢力を戻した。1838–1843年には再びエジプト軍が進駐した。1865年以後は王族の争いで弱まり、1871年にハサーをオスマン帝国に奪われ、1891年にジャバル・シャンマルのラシード家に滅ぼされた。
+    - from: 1902
+      to: 1914
+      text: クウェートに亡命していたイブン・サウードがリヤドを奪回し、ラシード家からカスィームを奪い（1906）、1913年にはハサーからオスマン軍を追った。
   source: "https://ja.wikipedia.org/wiki/第一次サウード王国"
+
+- id: rashidi
+  name: ラシード朝（ジャバル・シャンマル首長国）
+  short: ラシード朝
+  color: "#c9b38f"
+  kind: 首長国（オスマン帝国と結ぶ）
+  note: ハーイルを都とするシャンマル族のラシード家の首長国。初めはサウード家に臣従したが自立し、オスマン帝国と結んで1891年にサウード家を倒し、ナジュドの大半を支配した。1921年にイブン・サウードに滅ぼされた。
+  rulers:
+    - {name: アブドゥッラー・イブン・ラシード, title: アミール, from: 1836, to: 1848, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Rashid"}
+    - {name: タラール・イブン・アブドゥッラー, title: アミール, from: 1848, to: 1868, source: "https://en.wikipedia.org/wiki/Talal_bin_Abdullah_Al_Rashid"}
+    - {name: ミトアブ1世, title: アミール, from: 1868, to: 1869}
+    - {name: バンダル, title: アミール, from: 1869, to: 1869}
+    - {name: ムハンマド・イブン・ラシード, title: アミール, from: 1869, to: 1897, note: 1891年にムライダの戦いでサウード家を破った。, source: "https://en.wikipedia.org/wiki/Muhammad_bin_Abdullah_Al_Rashid"}
+    - {name: アブドゥルアズィーズ・イブン・ミトアブ, title: アミール, from: 1897, to: 1906, note: 1906年にイブン・サウードとの戦いで戦死。, source: "https://en.wikipedia.org/wiki/Abdulaziz_bin_Mutaib_Al_Rashid"}
+    - {name: ミトアブ2世, title: アミール, from: 1906, to: 1907}
+    - {name: スルターン・イブン・ハンムード, title: アミール, from: 1907, to: 1908}
+    - {name: サウード・イブン・ハンムード, title: アミール, from: 1908, to: 1910}
+    - {name: サウード・イブン・アブドゥルアズィーズ, title: アミール, from: 1910, to: 1920, note: 幼少のため摂政が統治。}
+  periods:
+    - from: 1836
+      to: 1890
+      text: アブドゥッラー・イブン・ラシードがハーイルで首長となり、北アラビアの隊商路と遊牧民を押さえて力をつけた。
+    - from: 1891
+      to: 1914
+      text: ムハンマド・イブン・ラシードがサウード家を倒してリヤドまで支配した（ナジュドの最大勢力）。オスマン帝国の支援を受けたが、1902年以後イブン・サウードに押し返された。
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Jabal_Shammar"
 
 - id: banu_khalid
   name: バニー・ハーリド首長国（ハサー）
@@ -606,6 +1034,17 @@
     - {name: サバーフ1世, title: 首長, from: 1752, to: 1762, source: "https://en.wikipedia.org/wiki/Sabah_I_bin_Jaber"}
     - {name: アブドゥッラー1世, title: 首長, from: 1762, to: 1814, source: "https://en.wikipedia.org/wiki/Abdullah_I_Al-Sabah"}
     - {name: ジャービル1世, title: 首長, from: 1814, to: 1859, source: "https://en.wikipedia.org/wiki/Jaber_I_Al-Sabah"}
+    - {name: サバーフ2世, title: 首長, from: 1859, to: 1866, source: "https://en.wikipedia.org/wiki/Sabah_II_Al-Sabah"}
+    - {name: アブドゥッラー2世, title: 首長, from: 1866, to: 1892, note: 1871年にオスマン帝国のバスラ州の郡長（カイマカム）の称号を受けた。, source: "https://en.wikipedia.org/wiki/Abdullah_II_Al-Sabah"}
+    - {name: ムハンマド, title: 首長, from: 1892, to: 1896, source: "https://en.wikipedia.org/wiki/Muhammad_bin_Sabah_Al-Sabah"}
+    - {name: ムバーラク（大ムバーラク）, title: 首長, from: 1896, to: 1915, note: 兄弟を殺して位につき、1899年にイギリスと秘密協定を結んで保護下に入った。, source: "https://en.wikipedia.org/wiki/Mubarak_Al-Sabah"}
+  periods:
+    - from: 1871
+      to: 1898
+      text: オスマン帝国のミドハト・パシャのハサー遠征に協力し、名目上オスマン帝国のバスラ州に属した。
+    - from: 1899
+      to: 1914
+      text: ドイツのバグダード鉄道の終点となることを警戒したイギリスと協定を結び、事実上イギリスの保護国となった。
   source: "https://ja.wikipedia.org/wiki/クウェートの歴史"
 
 - id: bahrain
@@ -613,7 +1052,14 @@
   short: バーレーン
   color: "#e9b9a1"
   kind: 首長国
-  note: 1783年にカタル北部のズバーラを拠点とするハリーファ家がペルシア側の勢力からバーレーンを奪った。
+  rulers:
+    - {name: サルマーン・イブン・アフマドとアブドゥッラー・イブン・アフマド, title: 首長（共同統治）, from: 1796, to: 1825, note: 要確認。, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Bahrain"}
+    - {name: ハリーファ・イブン・サルマーンとアブドゥッラー・イブン・アフマド, title: 首長（共同統治）, from: 1825, to: 1834, note: 要確認。, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Bahrain"}
+    - {name: アブドゥッラー・イブン・アフマド, title: 首長, from: 1834, to: 1843, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Bahrain"}
+    - {name: ムハンマド・イブン・ハリーファ, title: 首長, from: 1843, to: 1868, note: 1867年にカタルを攻めたことからイギリスに追われた。, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Bahrain"}
+    - {name: アリー・イブン・ハリーファ, title: 首長, from: 1868, to: 1869, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Bahrain"}
+    - {name: イーサー・イブン・アリー, title: 首長, from: 1869, to: 1932, note: 1880年・1892年の協定で外交をイギリスに委ねた。, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Bahrain"}
+  note: 1783年にカタル北部のズバーラを拠点とするハリーファ家がペルシア側の勢力からバーレーンを奪った。1820年の一般講和条約、1861年の「恒久平和友好条約」、1880年・1892年の協定でイギリスの保護下に入った。
   source: "https://ja.wikipedia.org/wiki/バーレーンの歴史"
 
 - id: oman
@@ -624,7 +1070,15 @@
   short: オマーン
   color: "#c48d8d"
   kind: イマーム国
-  note: 1650年にマスカットからポルトガルを追い、インド洋西部の海上勢力となった。1749年からブーサイード朝。1784年にバローチスターンのグワーダルを得た。
+  rulers:
+    - {name: サイイド・サイード（サイード・イブン・スルターン）, title: スルタン（ブーサイード朝）, from: 1806, to: 1856, note: 1830年代からザンジバルに住み、東アフリカの丁子（クローブ）栽培と奴隷・象牙交易で栄えた。, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Oman"}
+    - {name: トゥワイニー・イブン・サイード, title: スルタン（マスカット）, from: 1856, to: 1866, note: 弟マージドがザンジバルを継ぎ、1861年のカニング裁定で両国は分かれた。, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Oman"}
+    - {name: サーリム・イブン・トゥワイニー, title: スルタン, from: 1866, to: 1868, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Oman"}
+    - {name: アッザーン・イブン・カイス, title: イマーム, from: 1868, to: 1871, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Oman"}
+    - {name: トゥルキー・イブン・サイード, title: スルタン, from: 1871, to: 1888, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Oman"}
+    - {name: ファイサル・イブン・トゥルキー, title: スルタン, from: 1888, to: 1913, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Oman"}
+    - {name: タイムール・イブン・ファイサル, title: スルタン, from: 1913, to: 1932, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Oman"}
+  note: 1650年にマスカットからポルトガルを追い、インド洋西部の海上勢力となった。1749年からブーサイード朝。1784年にバローチスターンのグワーダルを得た。サイイド・サイード（1806–1856）は東アフリカのザンジバルに都を移したが、その死後ザンジバルは別の国となった（1861年）。19世紀後半にはイギリスの影響が強まった（1891年の協定）。
   source: "https://ja.wikipedia.org/wiki/オマーンの歴史"
 
 - id: qawasim
@@ -632,5 +1086,25 @@
   short: カワーシム
   color: "#b3a3c3"
   kind: 部族首長国
-  note: ペルシア湾南岸の海上勢力。イギリスは「海賊海岸」と呼び、1809年と1819年に攻撃した。
+  note: ペルシア湾南岸の海上勢力。イギリスは「海賊海岸」と呼び、1809年と1819年に攻撃した。1820年の一般講和条約の後は、地図では trucial_states（休戦海岸の首長国）として表示する。
   source: "https://en.wikipedia.org/wiki/Al_Qasimi"
+
+- id: trucial_states
+  name: 休戦海岸の首長国（トルーシャル・ステーツ）
+  short: 休戦海岸
+  color: "#b3a3c3"
+  kind: 首長国群（イギリスの保護下）
+  note: シャルジャ・ラアス・アル＝ハイマ（カワーシム家）、アブダビ（ナヒヤーン家）、ドバイ（マクトゥーム家、1833年にアブダビから分かれる）などの首長国。1820年の一般講和条約、1853年の恒久海上休戦条約を結び、1892年の排他的協定でイギリスの保護国となった（現在のアラブ首長国連邦）。
+  source: "https://en.wikipedia.org/wiki/Trucial_States"
+
+- id: qatar
+  name: カタル（サーニー家）
+  short: カタル
+  color: "#e3c47d"
+  kind: 首長国
+  note: ドーハのサーニー家の首長国。1868年にイギリスがムハンマド・イブン・サーニーと協定を結び、バーレーンのハリーファ家から切り離した。1871年からオスマン帝国の守備隊が置かれ、名目上はハサー県に属した（1913年の英土協定でオスマン帝国は権利を放棄）。
+  rulers:
+    - {name: ムハンマド・イブン・サーニー, title: 首長, from: 1851, to: 1878, source: "https://en.wikipedia.org/wiki/Mohammed_bin_Thani"}
+    - {name: ジャースィム・イブン・ムハンマド, title: 首長, from: 1878, to: 1913, note: 1893年のワジバの戦いでオスマン軍を破った。, source: "https://en.wikipedia.org/wiki/Jassim_bin_Mohammed_Al_Thani"}
+    - {name: アブドゥッラー・イブン・ジャースィム, title: 首長, from: 1913, to: 1949, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Jassim_Al_Thani"}
+  source: "https://ja.wikipedia.org/wiki/カタールの歴史"

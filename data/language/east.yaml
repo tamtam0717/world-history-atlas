@@ -1,0 +1,1380 @@
+# 言語（民族）の分布：ポーランド・ベラルーシ・ウクライナ・モルドヴァ・ロシア西部・北カフカス・カスピ海東岸（1648–1914）
+# 形式は docs/language-format.md。main = 住民（特に農村の民衆）の多数派の言語、minor = 2〜3割以上の少数派。
+# ユダヤ人（イディッシュ語）は、ポーランド＝リトアニアとロシアの「ユダヤ人定住区域（パレ）」の町では住民の3〜6割を占めたが、
+# 農村を含めた地域全体では1〜2割のため、大きな都市のピースだけ minor にして、ほかは note に書く。
+# カシューブ語・シロンスク方言・マズーリ方言はポーランド語に、ルシン語（レムコ・ボイコ・フツル）はウクライナ語に、
+# カレリア語・ヴェプス語・イングリア語はフィンランド語に、ノガイ語・クムク語・カラチャイ＝バルカル語は tatar（その他のテュルク系）に含める。
+
+# ======== ポーランド（現在の国境の内側） ========
+- id: lang_poland_base
+  name: ポーランド（下地：ポーランド語）
+  select:
+    iso: [POL]
+  timeline:
+    - from: 1648
+      main: polish
+      note: 町にはユダヤ人（イディッシュ語）が多く、住民の3〜5割を占める町も多い。シュラフタ（貴族）・農民ともにポーランド語。
+      source: "https://ja.wikipedia.org/wiki/ポーランドのユダヤ人の歴史"
+
+- id: lang_pl_west_german
+  name: ポンメルン・ノイマルク・下シュレジエン（ドイツ語の地域）
+  select:
+    adm1: ["POL/West Pomeranian Voivodeship", "POL/Lubusz Voivodeship", "POL/Lower Silesian Voivodeship"]
+    pieces: [POL-S_upsk, POL-powiat_s_upski, POL-powiat_l_borski, POL-powiat_bytowski, POL-powiat_cz_uchowski, POL-powiat_malborski, POL-powiat_nowodworski, POL-Sopot, POL-powiat_sztumski, POL-powiat_kwidzy_ski, POL-Elbl_g, POL-powiat_elbl_ski, POL-powiat_braniewski, POL-powiat_lidzbarski, POL-powiat_bartoszycki, POL-powiat_k_trzy_ski, POL-powiat_w_gorzewski, POL-powiat_go_dapski, POL-powiat_brzeski, POL-powiat_nyski, POL-powiat_namys_owski, POL-powiat_prudnicki, POL-powiat_pilski, POL-powiat_z_otowski]
+  timeline:
+    - from: 1648
+      main: german
+      note: 中世の東方植民以来、ドイツ語が多数の地域（シュレジエンはハプスブルク家領、1742年からプロイセン領。ポンメルン・ノイマルクはブランデンブルク＝プロイセン領）。
+      source: "https://ja.wikipedia.org/wiki/東方植民"
+
+- id: lang_pl_west_mixed
+  name: ドイツ語圏の東の縁（ポーランド語の少数派がいる地域）
+  select:
+    pieces: [POL-powiat_milicki, POL-powiat_ole_nicki, POL-powiat_bytowski, POL-powiat_l_borski, POL-powiat_cz_uchowski, POL-powiat_sztumski, POL-powiat_kwidzy_ski, POL-powiat_czarnkowsko_trzcianecki, POL-powiat_mi_dzychodzki, POL-powiat_nowotomyski]
+  timeline:
+    - from: 1648
+      main: german
+      minor: polish
+      note: ビュートウ・ラウエンブルク（ポンメルン東端）にはカシューブ人、ミリチュ・オレシニツァ（下シュレジエン北東）とシュトゥーム・マリーエンヴェルダー（ポメザニア）にはポーランド語の農民がいた。ヴァルテ川・ネッツェ川流域には17〜18世紀にドイツ系の「ホーレンダー」（オランダ式の開拓農民）が入植した。要確認
+
+- id: lang_danzig
+  name: ダンツィヒ（グダンスク）
+  select:
+    pieces: [POL-Gda_sk]
+  timeline:
+    - from: 1648
+      main: german
+      minor: polish
+      note: ポーランド王国の自由都市だが、市民の言葉はドイツ語。1793年プロイセン領。
+
+- id: lang_kashubia
+  name: カシューブ（ポメレリア北部）
+  select:
+    pieces: [POL-powiat_kartuski, POL-powiat_ko_cierski, POL-powiat_pucki, POL-powiat_wejherowski, POL-Gdynia, POL-powiat_gda_ski]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+      note: カシューブ語（ここではポーランド語に含める）の農村。町と沿岸にはドイツ語の住民。1772年の第1次ポーランド分割でプロイセン領。
+      source: "https://ja.wikipedia.org/wiki/カシューブ人"
+
+- id: lang_royal_prussia_pl
+  name: ポメレリア南部・ヘウムノ地方（王領プロイセン）
+  select:
+    pieces: [POL-powiat_chojnicki, POL-powiat_starogardzki, POL-powiat_tczewski, POL-powiat_tucholski, POL-powiat_wiecki, POL-powiat_che_mi_ski, POL-powiat_grudzi_dzki, POL-powiat_w_brzeski, POL-powiat_brodnicki, POL-powiat_toru_ski, POL-powiat_bydgoski, POL-powiat_nakielski, POL-powiat_s_pole_ski, POL-powiat_golubsko_dobrzy_ski, POL-powiat_nowomiejski, POL-powiat_chodzieski, POL-powiat_wolszty_ski]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+      note: 農村はポーランド語。町とヴィスワ川の低地（メノー派のオランダ系入植者）にはドイツ語の住民。1772・1793年にプロイセン領。ビスマルクの文化闘争とドイツ語化政策、1886年からのプロイセン植民委員会によるドイツ人農民の入植。
+
+- id: lang_pl_prussian_towns
+  name: ブロンベルク・トルン・グラウデンツ・オルシュティン市（ドイツ語の都市）
+  select:
+    pieces: [POL-Bydgoszcz, POL-Toru, POL-Grudzi_dz, POL-Olsztyn, POL-Leszno]
+  timeline:
+    - from: 1648
+      main: german
+      minor: polish
+      note: トルン・グラウデンツは王領プロイセンのドイツ語の都市。レシュノ（リッサ）はボヘミア兄弟団などのプロテスタントの亡命者が作った町。ブロンベルクは1772年以降にドイツ語の都市になる。要確認
+
+- id: lang_posen_city
+  name: ポズナン（ポーゼン）市
+  select:
+    pieces: [POL-Pozna]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+      note: ポーゼン大公国の首都。官吏・軍人・商人にドイツ人が多い（1910年でドイツ人約4割）。
+
+- id: lang_posen_west
+  name: 大ポーランド西部（ポーゼン州）
+  select:
+    regions: [sp_posen]
+    exclude: [POL-Pozna, POL-Leszno, POL-powiat_czarnkowsko_trzcianecki, POL-powiat_mi_dzychodzki, POL-powiat_nowotomyski, POL-powiat_wolszty_ski, POL-powiat_chodzieski, POL-powiat_pilski, POL-powiat_z_otowski]
+  timeline:
+    - from: 1648
+      main: polish
+    - from: 1800
+      main: polish
+      minor: german
+      note: 1793年の第2次分割でプロイセン領。プロイセンの官吏・入植者が増える。
+
+- id: lang_warmia
+  name: ヴァルミア南部（エルムラント）
+  select:
+    pieces: [POL-powiat_olszty_ski]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+      note: ヴァルミア司教領（1772年までポーランド王国に属する）の南部はカトリックのポーランド語の農民。北部はドイツ語。
+
+- id: lang_masuria
+  name: マズーリ（東プロイセン南部）
+  select:
+    pieces: [POL-powiat_szczycie_ski, POL-powiat_nidzicki, POL-powiat_dzia_dowski, POL-powiat_piski, POL-powiat_e_cki, POL-powiat_mr_gowski]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+      note: マズーリ人はポーランド語のマズーリ方言を話すルター派の農民で、プロイセン公国の臣民。ドイツ人としての意識を持つ者が多かった。学校でのドイツ語化が進む。1910年の調査でも、オルテルスブルク（シュチトノ）・ヨハニスブルク（ピシュ）などではマズーリ語の話者が多数。
+      source: "https://ja.wikipedia.org/wiki/マズーリ人"
+
+- id: lang_masuria_north
+  name: マズーリ北部・オーバーラント（ギジツコ・オレツコ・オストルダ・イワヴァ）
+  select:
+    pieces: [POL-powiat_gi_ycki, POL-powiat_olecki, POL-powiat_ostrodzki, POL-powiat_i_awski]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+    - from: 1880
+      main: german
+      minor: polish
+      note: 19世紀後半にドイツ語化が進み、ドイツ語が多数になる。要確認
+
+- id: lang_upper_silesia
+  name: 上シュレジエン（オーバーシュレジエン）
+  select:
+    adm1: ["POL/Opole Voivodeship"]
+    pieces: [POL-Bytom, POL-Chorzow, POL-Gliwice, POL-Gliwice_County, POL-Jastrz_bie_Zdroj, POL-Katowice, POL-Mys_owice, POL-Piekary_l_skie, POL-Raciborz_County, POL-Ruda_l_ska, POL-Rybnik, POL-Siemianowice_l_skie, POL-Tarnowskie_Gory_County, POL-Tychy, POL-Wodzis_aw_County, POL-Zabrze, POL-ory, POL-wi_toch_owice, POL-powiat_bieru_sko_l_dzi_ski, POL-powiat_lubliniecki, POL-powiat_miko_owski, POL-powiat_pszczy_ski, POL-powiat_rybnicki]
+    exclude: [POL-powiat_brzeski, POL-powiat_nyski, POL-powiat_namys_owski, POL-powiat_prudnicki]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+      note: 農村はポーランド語のシロンスク方言（カトリック）。町と貴族はドイツ語。1742年からプロイセン領（プシチナ周辺の一部はオーストリア領のまま）。炭鉱・製鉄の大工業地帯になり、ドイツ語の都市が急成長する。1910年の調査では、上シュレジエン（オッペルン県）の約6割がポーランド語を母語とした。
+      source: "https://ja.wikipedia.org/wiki/上シレジア"
+
+- id: lang_upper_silesia_towns
+  name: 上シュレジエンの工業都市・オッペルン市・グウプチツェ
+  select:
+    pieces: [POL-Gliwice, POL-Bytom, POL-Katowice, POL-Zabrze, POL-Opole]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+    - from: 1850
+      main: german
+      minor: polish
+      note: 工業化した都市はドイツ語が多数（周辺から来た労働者はポーランド語）。
+
+- id: lang_glubczyce
+  name: グウプチツェ（レオプシュッツ）
+  select:
+    pieces: [POL-powiat_g_ubczycki]
+  timeline:
+    - from: 1648
+      main: german
+      minor: czech
+      note: 南部はモラヴィア方言（チェコ語系）の村。
+
+- id: lang_teschen_pl
+  name: チェシン・シロンスク（ポーランド側）
+  select:
+    pieces: [POL-powiat_cieszy_ski, POL-Bielsko_County]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: german
+      note: オーストリア領シュレジエンのテッシェン公国。農民はポーランド語のシロンスク方言で、ルター派も多い。
+
+- id: lang_bielsko
+  name: ビェルスコ（ビーリッツ）
+  select:
+    pieces: [POL-Bielsko_Bia_a]
+  timeline:
+    - from: 1648
+      main: german
+      minor: polish
+      note: ドイツ語の「言語の島」の繊維工業の町。
+
+- id: lang_pl_jewish_cities
+  name: ワルシャワ・ウッチ・ルブリン・クラクフ・ビャウィストク（ユダヤ人の多い大都市）
+  select:
+    pieces: [POL-Warszawa, POL-od, POL-Krakow, POL-Radom, POL-Tarnow, POL-Rzeszow, POL-Przemy_l, POL-Che_m, POL-Kielce, POL-Cz_stochowa]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+      note: ユダヤ人が住民の3〜4割を占める都市（1897年の調査で、ワルシャワ約34%、ウッチ約31%、ラドム約39%）。最大の集団はポーランド人。ウッチは1820年代からの繊維工業の町で、ドイツ人（約2割）も多い。ガリツィア（オーストリア領）の国勢調査はイディッシュ語を言語として数えず、ユダヤ人の多くがポーランド語・ドイツ語の話者として数えられた。
+      source: "https://ja.wikipedia.org/wiki/ウッチ"
+
+- id: lang_bialystok
+  name: ビャウィストク
+  select:
+    pieces: [POL-Bia_ystok]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+      note: ブラニツキ家の所領の町。
+    - from: 1850
+      main: yiddish
+      note: 1807年ロシア領。19世紀に毛織物工業の町として急成長し、ユダヤ人が住民の多数になった（1897年の調査で、イディッシュ語約63%、ポーランド語約17%、ロシア語約10%、ドイツ語約7%）。2番目の集団が2割に届かないので minor は付けない。切り替えの年は19世紀半ばの目安。
+
+- id: lang_lublin
+  name: ルブリン
+  select:
+    pieces: [POL-Lublin]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+      note: ユダヤ人の自治機関「四地方評議会」の開かれた町。ユダヤ人の学問の中心の一つ。
+    - from: 1850
+      main: yiddish
+      minor: polish
+      note: 19世紀にユダヤ人が住民の最大の集団になる（1897年の調査で、ユダヤ人約半数、ポーランド人約4割、残りはロシア人の官吏・軍人）。切り替えの年は19世紀半ばの目安。要確認
+
+- id: lang_siedlce
+  name: シェドルツェ
+  select:
+    pieces: [POL-Siedlce]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+    - from: 1880
+      main: yiddish
+      minor: polish
+      note: シェドルツェ県の県都（1867–）。1897年の調査でユダヤ人が住民の約半数を占め、ポーランド人とロシア人の守備隊がそれに次ぐ。要確認
+
+- id: lang_podlachia_east
+  name: ポドラシェ東部（ベラルーシ語の村の多い地域）
+  select:
+    pieces: [POL-powiat_hajnowski, POL-powiat_bielski]
+  timeline:
+    - from: 1648
+      main: belarusian
+      minor: polish
+      note: 正教徒（1596年以降はユニエイトも）のベラルーシ語・ウクライナ語系の方言の農村。
+
+- id: lang_podlachia_mixed
+  name: ポドラシェ中部（ポーランド語とベラルーシ語の混在）
+  select:
+    pieces: [POL-powiat_siemiatycki, POL-powiat_sokolski, POL-powiat_bia_ostocki]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: belarusian
+
+- id: lang_sejny
+  name: セイニ・スヴァウキ（リトアニア語の村のある地域）
+  select:
+    pieces: [POL-powiat_sejne_ski, POL-powiat_suwalski]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: lithuanian
+      note: セイニ・プニスク周辺はリトアニア語の村。要確認（セイニ郡の北部はリトアニア語が多数）
+
+- id: lang_chelm_land
+  name: ヘウム地方（ザブジェ。ウクライナ語の村の多い地域）
+  select:
+    pieces: [POL-powiat_hrubieszowski, POL-powiat_che_mski, POL-powiat_w_odawski]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: polish
+      note: ユニエイト（東方典礼カトリック）のルテニア人（ウクライナ語）の農村。
+    - from: 1850
+      main: polish
+      minor: ukrainian
+      note: ポーランド語化が進む。1875年にロシア政府がユニエイト教会を廃止し、正教への改宗を強制した。1912年に「ヘウム県」が分けられる。要確認（フルビェシュフ郡は20世紀初めでもウクライナ語が多い）
+
+- id: lang_podlachia_south
+  name: 南ポドラシェ・ルブリン東部（ポーランド語とウクライナ語の混在）
+  select:
+    pieces: [POL-powiat_bialski, POL-Bia_a_Podlaska, POL-powiat_tomaszowski_2, POL-powiat_parczewski]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: ukrainian
+
+- id: lang_przemysl_east
+  name: プシェミシル・ルバチュフ・サンの谷（ガリツィアの言語境界）
+  select:
+    pieces: [POL-powiat_przemyski, POL-powiat_lubaczowski, POL-powiat_leski]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: polish
+      note: サン川の東はルテニア人（ウクライナ語）の農村、町と貴族はポーランド語。1772年からオーストリア領ガリツィア。
+
+- id: lang_bieszczady
+  name: ビェシュチャディ（ボイコ人の山地）
+  select:
+    pieces: [POL-powiat_bieszczadzki]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      note: ボイコ人（ルテニア人の山地の一派）の村。
+
+- id: lang_lemko
+  name: ベスキディ山地西部（レムコ人の地域）
+  select:
+    pieces: [POL-powiat_sanocki, POL-powiat_jaros_awski, POL-powiat_gorlicki, POL-powiat_nowos_decki, POL-powiat_kro_nie_ski_2]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: ukrainian
+      note: カルパティア山地の南の縁にレムコ人（ルテニア人の一派）の村が続く。サノク・ヤロスワフはポーランド語とウクライナ語の混在地域。
+
+# ======== ベラルーシ ========
+- id: lang_belarus
+  name: ベラルーシ（白ルテニア）
+  select:
+    iso: [BLR]
+  timeline:
+    - from: 1648
+      main: belarusian
+      note: 農民はベラルーシ語（当時は「ルテニア語」）。貴族（シュラフタ）はポーランド語化していた。町と小都市（シュテットル）にはユダヤ人が多い。1696年、リトアニア大公国の公用語がルテニア語からポーランド語に替わる。
+    - from: 1800
+      main: belarusian
+      note: ポーランド分割（1772・1793・1795）でロシア領。農民はベラルーシ語のままで、貴族と町の上層はポーランド語、町と小都市にはユダヤ人が多い。ロシア語はまだ官吏と軍人の言葉。
+    - from: 1863
+      main: belarusian
+      minor: russian
+      note: 1863年の1月蜂起の後、ロシア化政策が強まり（ポーランド語の学校・出版の禁止、ユニエイトの正教への編入は1839年）、官吏・学校・都市の言葉としてロシア語が広がる。1897年の調査でもベラルーシ語を母語とする者は、ミンスク・ヴィテプスク・モギリョフ・グロドノの4県で多数派。ユダヤ人は町の住民の5〜6割。minor のロシア語は主に都市と官吏。
+
+- id: lang_belarus_west
+  name: ベラルーシ西部（グロドノ地方。カトリックの住民の多い地域）
+  select:
+    adm1: ["BLR/Grodno"]
+  timeline:
+    - from: 1648
+      main: belarusian
+      minor: polish
+      note: カトリックの農民が多く、のちにポーランド人としての意識を持つ者が増える。
+
+- id: lang_polesia
+  name: ポリーシャ（ブレスト地方）
+  select:
+    adm1: ["BLR/Brest"]
+  timeline:
+    - from: 1648
+      main: belarusian
+      minor: ukrainian
+      note: 西ポリーシャの方言はベラルーシ語とウクライナ語の中間。
+
+- id: lang_minsk_city
+  name: ミンスク市
+  select:
+    pieces: [BLR-Minsk_City]
+  timeline:
+    - from: 1648
+      main: belarusian
+      minor: polish
+    - from: 1850
+      main: yiddish
+      minor: russian
+      note: 19世紀にはユダヤ人が住民の最大の集団（1897年の調査で、イディッシュ語約51%、ロシア語約25%、ポーランド語約11%、ベラルーシ語約9%）。ロシア語は官吏・軍人と、ベラルーシ人・ポーランド人の一部が話す。切り替えの年は19世紀半ばの目安。
+
+# ======== ウクライナ ========
+- id: lang_ukraine_base
+  name: ウクライナ（下地：ウクライナ語）
+  select:
+    iso: [UKR]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      note: 農民とコサックはウクライナ語（当時は「ルテニア語」「小ロシア語」）。右岸（ドニエプル川の西）の貴族はポーランド語。町にはユダヤ人が多い。1648年はフメリニツキーの乱の年。1863年のヴァルーエフ指令、1876年のエムス法で、ロシア帝国内のウクライナ語の出版が制限される。都市ではロシア語が広がる。
+      source: "https://ja.wikipedia.org/wiki/フメリニツキーの乱"
+
+- id: lang_galicia_ua
+  name: 東ガリツィア・ヴォルィーニ西部（ポーランド語の少数派のいる地域）
+  select:
+    adm1: ["UKR/Lviv Oblast", "UKR/Ternopil Oblast", "UKR/Ivano-Frankivsk Oblast"]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: polish
+      note: ルテニア人（ユニエイト）の農民、ポーランド語の貴族・町人、町のユダヤ人。リヴィウ（ルヴフ／レンベルク）はポーランド語とユダヤ人の都市。1772年からオーストリア領ガリツィア。
+      source: "https://ja.wikipedia.org/wiki/ガリツィア・ロドメリア王国"
+
+- id: lang_steppe_nogai
+  name: 黒海北岸の草原（イェディサン・ノガイ草原）
+  select:
+    regions: [yedisan, nogai_1774, nogai_taurida]
+  timeline:
+    - from: 1648
+      main: tatar
+      note: クリミア＝ハン国に属するノガイ人の遊牧地。ザポロージャ・コサックの越冬地や漁場が点在する。
+    - from: 1780
+      main: ukrainian
+      minor: tatar
+      note: キュチュク・カイナルジャ条約（1774）、クリミア併合（1783）、ヤシ条約（1792）でロシア領「新ロシア」になり、ノガイ人の多くは移住させられた。ウクライナ人・ロシア人の農民、ドイツ人・ブルガリア人・セルビア人などの入植者が入る。
+      source: "https://ja.wikipedia.org/wiki/ノヴォロシア"
+    - from: 1800
+      main: ukrainian
+      minor: russian
+      note: 都市（オデッサ1794年創建、ヘルソン、ニコラエフ）はロシア語。ドイツ人入植地（モロチナ川のメノー派など）、ブルガリア人の村も多い。
+
+- id: lang_molochna
+  name: モロチナ川流域・アゾフ海北岸（ノガイ人の再定住地）
+  select:
+    pieces: [UKR-Melitopol, UKR-Tokmak, UKR-Berdiansk, UKR-Prymorsk, UKR-Pryazovske, UKR-Yakymivka, UKR-Chernihivka, UKR-Bilmak]
+  timeline:
+    - from: 1648
+      main: tatar
+    - from: 1790
+      main: tatar
+      minor: ukrainian
+      note: ロシア政府はノガイ人をモロチナ川流域に定住させた。同じころドイツ人メノー派（1804–）、ブルガリア人の入植地も作られる。
+    - from: 1860
+      main: ukrainian
+      minor: russian
+      note: クリミア戦争の後（1856–62）、ノガイ人のほぼ全員がオスマン帝国へ移住した。要確認（ドイツ人・ブルガリア人の入植地は地区ごとに多数派）
+
+- id: lang_mariupol_greeks
+  name: マリウポリのギリシア人の村
+  select:
+    pieces: [UKR-Manhush, UKR-Nikolske]
+  timeline:
+    - from: 1648
+      main: tatar
+    - from: 1780
+      main: greek
+      minor: ukrainian
+      note: 1778年、エカチェリーナ2世の命でクリミアの正教徒ギリシア人がアゾフ海北岸に移され、マリウポリ周辺に村を作った（ルメイ語・ウルム語＝テュルク系の話者も含む）。
+      source: "https://ja.wikipedia.org/wiki/マリウポリ"
+
+- id: lang_donbas
+  name: ドンバス（ドネツ川流域）
+  select:
+    adm1: ["UKR/Donetsk Oblast", "UKR/Luhansk Oblast"]
+    exclude: [UKR-Manhush, UKR-Nikolske]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: tatar
+      note: 「荒野」と呼ばれた草原。北部にスロボダ・ウクライナのコサック集落、南部はノガイ人の遊牧地。
+    - from: 1750
+      main: ukrainian
+      minor: russian
+      note: スラヴャノ・セルビア（1753）などの入植地。東部はドン・コサックの地と接する。炭鉱・製鉄業（ユーゾフカ＝ドネツク、1869年創建）にロシア各地から労働者が集まり、工業都市はロシア語が多数になる。
+
+- id: lang_sloboda_ua
+  name: スロボダ・ウクライナ（ハルキウ）
+  select:
+    adm1: ["UKR/Kharkiv Oblast"]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: russian
+      note: 17世紀にドニエプル右岸から逃れたウクライナ人がモスクワ国家の南の境界に作った「自由村（スロボダ）」の地域。東部にはロシア人の村もある。
+
+- id: lang_crimea_steppe
+  name: クリミア北部の草原
+  select:
+    pieces: [UKR-Dzhankoy, UKR-Krasnoperekopsk, UKR-Rozdolne, UKR-Pervomaiske, UKR-Krasnohvardiiske, UKR-Chornomorske, UKR-Saky, UKR-Nyzhniohirskyi, UKR-Sovietsky]
+  timeline:
+    - from: 1648
+      main: tatar
+      note: クリミア＝ハン国のクリミア・タタール人とノガイ人の地域。
+    - from: 1783
+      main: tatar
+      minor: russian
+      note: 1783年のロシアによる併合の後、タタール人の移住（流出）が続き、ロシア人・ウクライナ人・ドイツ人などが入植する。
+      source: "https://ja.wikipedia.org/wiki/クリミア・タタール人"
+    - from: 1860
+      main: russian
+      minor: tatar
+      note: クリミア戦争の後（1856–62）、約10万人以上のタタール人がオスマン帝国へ移住し、草原の村の多くが空になった。要確認（ロシア語・ウクライナ語・ドイツ語の入植者の混在。ここではロシア語で代表させる）
+
+- id: lang_crimea_mountains
+  name: クリミアの山地と南岸（バフチサライ・シンフェローポリ・ビロヒルスク・南岸）
+  select:
+    pieces: [UKR-Bakhchysarai, UKR-Simferopol, UKR-Bilohirsk, UKR-Kirovske, UKR-Balakavaskyi]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: greek
+      note: ハン国の首都バフチサライ。南岸の旧オスマン直轄地（カッファ＝フェオドシヤ）にはギリシア人・アルメニア人・カライム人も住んだ。
+    - from: 1780
+      main: tatar
+      note: 1778年に正教徒のギリシア人・アルメニア人がアゾフ海北岸へ移住させられた。
+    - from: 1800
+      main: tatar
+      minor: russian
+      note: 1897年の調査でも、ヤルタ郡・シンフェローポリ郡の山地ではタタール人が多数。都市はロシア語。
+
+- id: lang_kerch_sevastopol
+  name: ケルチ・セヴァストポリ
+  select:
+    pieces: [UKR-Lenine, UKR-Leninskyi, UKR-Nakhimovskyi]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: turkish
+    - from: 1783
+      main: russian
+      minor: tatar
+      note: セヴァストポリは1783年創建の黒海艦隊の軍港。ケルチは1774年にロシア領。
+
+- id: lang_budjak_ua
+  name: ブジャク（南ベッサラビア）
+  select:
+    regions: [budjak]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: romanian
+      note: ブジャク・ノガイ人の遊牧地。町（アッケルマン・イズマイル・キリア）はオスマン帝国の要塞。
+    - from: 1812
+      main: bulgarian
+      minor: ukrainian
+      note: ブカレスト条約（1812）でロシア領。ノガイ人は去り、バルカンから逃れたブルガリア人・ガガウズ人、ドイツ人（サラタ・タルティノ）、ウクライナ人・ロシア人（リポヴァン）・モルドヴァ人などが入植して、民族のモザイクになる。要確認（郡ごとに多数派が違う。ブルガリア人はボルフラド周辺に集中）
+      source: "https://ja.wikipedia.org/wiki/ブジャク"
+
+- id: lang_izmail
+  name: イズマイル・レニ・キリア（ドナウ川下流）
+  select:
+    pieces: [UKR-Izmali, UKR-Reni, UKR-Kiliia]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: turkish
+    - from: 1812
+      main: romanian
+      minor: russian
+      note: モルドヴァ人の村と、ドナウ・デルタのリポヴァン（古儀式派ロシア人）・ウクライナ人。要確認
+
+- id: lang_chernivtsi_north
+  name: 北ブコヴィナ（ウクライナ語の地域）
+  select:
+    pieces: [UKR-Kitsman, UKR-Zastavna, UKR-Vyzhnytsia, UKR-Putyla, UKR-Sniatyn]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: romanian
+      note: モルダヴィア公国の北部。山地はフツル人（ルテニア人の一派）。1775年にオーストリア領ブコヴィナ。ガリツィアからのルテニア人の流入が続く。
+
+- id: lang_bukovina_south_ua
+  name: ブコヴィナ南部（ウクライナ側）・ヘルツァ
+  select:
+    pieces: [UKR-Hlyboka, UKR-Storozhynets, UKR-Novoselytsia, UKR-Hertsa]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: ukrainian
+
+- id: lang_khotyn
+  name: ホティン地方（北ベッサラビア）
+  select:
+    pieces: [UKR-Khotyn, UKR-Kelmentsi, UKR-Sokyriany]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: romanian
+
+- id: lang_transcarpathia
+  name: ザカルパッチャ（カルパト・ルテニア）
+  select:
+    adm1: ["UKR/Zakarpattia Oblast"]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: hungarian
+      note: ハンガリー王国の北東部。山地はルシン人（ウクライナ語系）、平野の町はハンガリー語。ユダヤ人も多い。
+      source: "https://ja.wikipedia.org/wiki/ルシン人"
+
+- id: lang_berehove
+  name: ベレホヴェ（ベレグサース）
+  select:
+    pieces: [UKR-Berehove]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: ukrainian
+
+# ======== モルドヴァ（ベッサラビア） ========
+- id: lang_bessarabia
+  name: ベッサラビア（モルドヴァ）
+  select:
+    iso: [MDA]
+  timeline:
+    - from: 1648
+      main: romanian
+      note: モルダヴィア公国（オスマン帝国の付庸国）の東部。モルドヴァ人（ルーマニア語）。
+    - from: 1812
+      main: romanian
+      minor: ukrainian
+      note: ブカレスト条約（1812）でロシア領「ベッサラビア県」。北部にはウクライナ人、町にはロシア人とユダヤ人が増える。ロシア化政策で、学校・行政の言葉がロシア語になる。
+      source: "https://ja.wikipedia.org/wiki/ベッサラビア"
+
+- id: lang_bessarabia_south
+  name: ベッサラビア南部（ベンデル・ブジャク北部）
+  select:
+    regions: [budjak_bender]
+    pieces: [MDA-Cahul, MDA-Cimislia, MDA-Leova, MDA-Cantemir]
+    exclude: [MDA-Gagauzia, MDA-Taraclia]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: tatar
+      note: ベンデル（ティギナ）はオスマン帝国の要塞。南の草原はブジャク・ノガイ人の遊牧地。
+    - from: 1812
+      main: romanian
+      minor: bulgarian
+      note: ノガイ人が去ったあと、モルドヴァ人の村に加えてブルガリア人・ガガウズ人の入植地ができる。
+
+- id: lang_gagauzia
+  name: ガガウズ人の地域（コムラト）
+  select:
+    pieces: [MDA-Gagauzia]
+  timeline:
+    - from: 1648
+      main: tatar
+      note: ブジャク・ノガイ人の遊牧地。
+    - from: 1812
+      main: turkish
+      minor: bulgarian
+      note: ガガウズ人（テュルク系の言葉を話す正教徒。ここでは turkish で塗る）がバルカン（ドブルジャ・ブルガリア北東部）から移住した。
+      source: "https://ja.wikipedia.org/wiki/ガガウズ人"
+
+- id: lang_taraclia
+  name: タラクリア（ブルガリア人の地域）
+  select:
+    pieces: [MDA-Taraclia]
+  timeline:
+    - from: 1648
+      main: tatar
+    - from: 1812
+      main: bulgarian
+      minor: turkish
+      note: 露土戦争（1806–12、1828–29）の時期にブルガリア人が移住した。
+
+- id: lang_chisinau
+  name: キシナウ（キシニョフ）
+  select:
+    pieces: [MDA-Chisinau]
+  timeline:
+    - from: 1648
+      main: romanian
+    - from: 1812
+      main: romanian
+      minor: yiddish
+      note: ブカレスト条約（1812）でロシア領ベッサラビアの中心になり、ユダヤ人が急増する。ロシア人の官吏・軍人、ブルガリア人・ギリシア人・アルメニア人も移り住む。
+    - from: 1850
+      main: yiddish
+      minor: russian
+      note: ベッサラビア県の県都。19世紀後半にはユダヤ人が住民の最大の集団になる（1897年の調査で、イディッシュ語約46%、ロシア語約27%、モルドヴァ語〈ルーマニア語〉約17%）。1903年にポグロムが起きる。切り替えの年は19世紀半ばの目安。
+
+- id: lang_balti
+  name: バルツィ（ベルツィ）
+  select:
+    pieces: [MDA-Balti]
+  timeline:
+    - from: 1648
+      main: romanian
+    - from: 1812
+      main: romanian
+      minor: ukrainian
+    - from: 1850
+      main: yiddish
+      note: 1812年ロシア領。北ベッサラビアの市場町として育ち、ユダヤ人が住民の多数になった（1897年の調査でユダヤ人約56%。ほかはウクライナ人・モルドヴァ人・ロシア人がそれぞれ1〜2割弱）。2番目の集団がはっきりしないので minor は付けない。切り替えの年は19世紀半ばの目安。要確認
+
+- id: lang_bender
+  name: ベンデル（ティギナ）
+  select:
+    pieces: [MDA-Bender]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: turkish
+      note: オスマン帝国の要塞都市（ベンデル）。トルコ人の守備隊とモルドヴァ人・ユダヤ人・アルメニア人の町人。
+    - from: 1812
+      main: romanian
+      minor: russian
+      note: 1812年ロシア領。ロシアの要塞と守備隊。
+    - from: 1880
+      main: yiddish
+      minor: russian
+      note: 1897年の調査でユダヤ人約3分の1が最大の集団で、ロシア人（守備隊を含む）・ウクライナ人・モルドヴァ人が続く。要確認
+
+- id: lang_transnistria
+  name: ドニエストル川左岸
+  select:
+    regions: [transnistria]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: ukrainian
+      note: 北部はポーランド領ポドリア、南部はイェディサンの縁。モルドヴァ人とウクライナ人の村が混在する。
+
+# ======== ロシア西部 ========
+- id: lang_russia_base
+  name: ロシア（下地：ロシア語）
+  select:
+    iso: [RUS]
+  timeline:
+    - from: 1648
+      main: russian
+      note: 大ロシアの農民はロシア語。トヴェリ周辺には17世紀に移住したカレリア人の村がある。
+
+- id: lang_kaliningrad
+  name: 東プロイセン北部（サームラント・ナタンゲン・プロイセン領リトアニア）
+  select:
+    pieces: [RUS-Kaliningrad]
+  timeline:
+    - from: 1648
+      main: german
+      minor: lithuanian
+      note: プロイセン公国。東部（インスターブルク・ティルジット・グンビンネン）は「小リトアニア」で、リトアニア語の農民が多かった。1709–11年のペストで東部の人口の多くが失われ、ザルツブルクのプロテスタントなどドイツ語の入植者が入った（「再植民」）。
+    - from: 1850
+      main: german
+      note: リトアニア語は北東部の一部に残るだけになる。
+
+- id: lang_ingria
+  name: イングリア（インゲルマンランド）
+  select:
+    regions: [ingria, ingria_south]
+  timeline:
+    - from: 1648
+      main: finnish
+      minor: russian
+      note: ストルボヴォ条約（1617）でスウェーデン領になったあと、正教徒の多くがロシアへ逃れ、ルター派のフィン人（サヴォ・カレリア地峡から）が移住した（イングリア・フィン人）。イジョラ人・ヴォート人もフィン系。
+      source: "https://ja.wikipedia.org/wiki/イングリア・フィン人"
+    - from: 1720
+      main: russian
+      minor: finnish
+      note: サンクトペテルブルク（1703年創建）が首都になり、ロシア人の農民・町人が大量に入る。ドイツ人も多い。
+
+- id: lang_karelian_isthmus
+  name: カレリア地峡・ラドガ湖北岸（旧フィンランド）
+  select:
+    regions: [kexholm_vyborg]
+  timeline:
+    - from: 1648
+      main: finnish
+      note: スウェーデン領フィンランドの東部。ヴィボルグはスウェーデン語・ドイツ語・フィンランド語の町。1721・1743年にロシア領（「旧フィンランド」）、1812年にフィンランド大公国へ編入された。
+
+- id: lang_veps_east
+  name: ラドガ湖南東・オネガ湖南西（ヴェプス人の地域）
+  select:
+    pieces: [RUS-Lotinapelto_District, RUS-Koskenala_District, RUS-Boksitogorsky_District, RUS-Tihvina_District]
+  timeline:
+    - from: 1648
+      main: russian
+      minor: finnish
+      note: ヴェプス語（フィン系。ここでは finnish で塗る）の村が残る。要確認
+
+- id: lang_karelia
+  name: カレリア（ロシア領）
+  select:
+    adm1: ["RUS/Republic of Karelia"]
+    exclude: [RUS-Lahdenpohja_District, RUS-Sortavala_District, RUS-Pitkaranta_District, RUS-Suojarvi_District]
+  timeline:
+    - from: 1648
+      main: finnish
+      minor: russian
+      note: カレリア語（フィンランド語と近いフィン系の言葉。ここでは finnish で塗る）の正教徒の農民。白海沿岸のポモール（ロシア人）、オネガ湖周辺にはヴェプス人。
+      source: "https://ja.wikipedia.org/wiki/カレリア語"
+
+- id: lang_karelia_russian
+  name: オネガ湖東岸・白海沿岸（ロシア語の地域）
+  select:
+    pieces: [RUS-Petroskoi_District, RUS-Puutoisten_District, RUS-Medvezhyegorsky_District, RUS-Kemsky_District, RUS-Sorokka_District]
+  timeline:
+    - from: 1648
+      main: russian
+      minor: finnish
+      note: ペトロザヴォーツクは1703年の製鉄所から生まれた町。プドジ・ポモーリエ（白海沿岸）はロシア語。
+
+- id: lang_kola
+  name: コラ半島
+  select:
+    pieces: [RUS-Murmansk_Oblast]
+  timeline:
+    - from: 1648
+      main: sami
+      minor: russian
+      note: コラ・サーミ人のトナカイ遊牧と、沿岸のポモール（ロシア人）の漁村。
+    - from: 1860
+      main: russian
+      minor: sami
+      note: ロシア人・フィン人・コミ人などの移住が進み、サーミ人は少数派になる。要確認
+
+- id: lang_nenets
+  name: ネネツ（ペチョラ川下流のツンドラ）
+  select:
+    pieces: [RUS-Nenets_Autonomous_Okrug]
+  timeline:
+    - from: 1648
+      main: samoyedic
+      minor: russian
+      note: ネネツ人（サモエード系）のトナカイ遊牧地。19世紀にはコミ人（イジマ・コミ）もトナカイ遊牧に加わる。
+
+- id: lang_komi
+  name: コミ
+  select:
+    pieces: [RUS-Komi_Republic]
+  timeline:
+    - from: 1648
+      main: volga_finnic
+      minor: russian
+      note: コミ人（ペルミ系のフィン・ウゴル語族）。14世紀にステファンがコミ語の文字を作り、正教を広めた。
+
+- id: lang_khanty_mansi
+  name: オビ川中流（ハンティ・マンシ）
+  select:
+    pieces: [RUS-Khanty_Mansiysk_Autonomous_Okrug_Ugra]
+  timeline:
+    - from: 1648
+      main: ob_ugric
+      minor: russian
+      note: ハンティ人・マンシ人（オビ・ウゴル系。ハンガリー語の遠い親戚）の狩猟・漁労の地。
+
+- id: lang_sverdlovsk
+  name: 中部ウラル（エカテリンブルク）
+  select:
+    pieces: [RUS-Sverdlovsk_Oblast]
+  timeline:
+    - from: 1648
+      main: russian
+      minor: ob_ugric
+      note: ヴェルホトゥーリエ（1598）からのロシア人の入植地。北部の森林はマンシ人。
+    - from: 1720
+      main: russian
+      note: デミドフ家などの製鉄所（エカテリンブルク1723年創建）が建ち、ロシア人の工業地帯になる。
+
+- id: lang_perm
+  name: ペルミ
+  select:
+    pieces: [RUS-Perm_Krai, RUS-Kirov_Oblast]
+  timeline:
+    - from: 1648
+      main: russian
+      minor: volga_finnic
+      note: 北部にコミ・ペルミャク人、南部にウドムルト人・マリ人・タタール人・バシキール人の村。
+
+- id: lang_udmurtia
+  name: ウドムルト
+  select:
+    pieces: [RUS-Udmurtia]
+  timeline:
+    - from: 1648
+      main: volga_finnic
+      minor: russian
+      note: ウドムルト人（ペルミ系）。イジェフスク（1760年の製鉄所）・ヴォトキンスクの工場町はロシア語。
+
+- id: lang_mari
+  name: マリ
+  select:
+    pieces: [RUS-Mari_El]
+  timeline:
+    - from: 1648
+      main: volga_finnic
+      minor: russian
+      note: マリ人（チェレミス人）。伝統的な自然崇拝を保つ者も多かった。
+
+- id: lang_chuvashia
+  name: チュヴァシ
+  select:
+    pieces: [RUS-Chuvashia]
+  timeline:
+    - from: 1648
+      main: chuvash
+      minor: russian
+      note: チュヴァシ人（ブルガール系のテュルク語を話す。18世紀に正教化）。
+
+- id: lang_tatarstan
+  name: カザン（タタールスタン）
+  select:
+    pieces: [RUS-Tatarstan]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: russian
+      note: ヴォルガ・タタール人（1552年のカザン征服以来ロシア領）。カザン市と西部にはロシア人が多い。19世紀にジャディード運動（イスラームの教育改革）の中心になる。
+      source: "https://ja.wikipedia.org/wiki/ヴォルガ・タタール人"
+
+- id: lang_bashkiria
+  name: バシキール
+  select:
+    pieces: [RUS-Bashkortostan]
+  timeline:
+    - from: 1648
+      main: tatar
+      note: バシキール人（テュルク系。ここでは tatar で塗る）の半遊牧の地。西部にはタタール人・チュヴァシ人・マリ人の移住者。
+    - from: 1750
+      main: tatar
+      minor: russian
+      note: 18世紀のバシキール人の反乱（1735–40、プガチョフの乱への参加）の鎮圧後、ロシア人の入植と鉱山の開発が進む。
+
+- id: lang_mordovia
+  name: モルドヴィン
+  select:
+    pieces: [RUS-Republic_of_Mordovia]
+  timeline:
+    - from: 1648
+      main: volga_finnic
+      minor: russian
+      note: モルドヴィン人（エルジャ・モクシャ）。ロシア人の村と混在する。
+    - from: 1800
+      main: russian
+      minor: volga_finnic
+      note: 要確認（19世紀にはロシア人が多数を占めたとされる）
+
+- id: lang_middle_volga
+  name: ヴォルガ中流（シンビルスク・サマーラ・ペンザ）
+  select:
+    pieces: [RUS-Ulyanovsk_Oblast, RUS-Samara_Oblast, RUS-Penza_Oblast]
+  timeline:
+    - from: 1648
+      main: russian
+      minor: volga_finnic
+      note: ロシア人の農民に、モルドヴィン人・チュヴァシ人・タタール人の村が混じる。
+
+- id: lang_lower_volga
+  name: ヴォルガ下流（サラトフ・ツァリーツィン）
+  select:
+    pieces: [RUS-Saratov_Oblast, RUS-Volgograd_Oblast]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: russian
+      note: ノガイ人・カルムイク人の遊牧地に、ロシアの要塞都市（サラトフ1590年、ツァリーツィン1589年）が点在する。要確認
+    - from: 1720
+      main: russian
+      minor: kalmyk
+    - from: 1770
+      main: russian
+      minor: german
+      note: エカチェリーナ2世の招きで、1764年からドイツ人の農民がヴォルガ川流域に入植した（ヴォルガ・ドイツ人）。1771年、カルムイク人の多くが中央アジアへ去った。
+      source: "https://ja.wikipedia.org/wiki/ヴォルガ・ドイツ人"
+
+- id: lang_kalmykia
+  name: カルムイク
+  select:
+    regions: [kalmyk]
+  timeline:
+    - from: 1648
+      main: kalmyk
+      note: 1630年代にジュンガリアから移ってきたモンゴル系のカルムイク人（チベット仏教）の遊牧地。
+      source: "https://ja.wikipedia.org/wiki/カルムイク人"
+    - from: 1771
+      main: kalmyk
+      minor: russian
+      note: 1771年、ヴォルガ川東岸のカルムイク人の大部分がジュンガリアへ帰ろうとして大きな犠牲を出した。西岸の人びとが残る。
+
+- id: lang_astrakhan
+  name: アストラハン
+  select:
+    pieces: [RUS-Astrakhan_Oblast]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: russian
+      note: アストラハン・タタール人とノガイ人。アストラハン市（1556年からロシア領）はロシア人・アルメニア人・インド商人なども住む交易都市。
+    - from: 1750
+      main: russian
+      minor: tatar
+    - from: 1801
+      main: russian
+      minor: turkmen_kazakh
+      note: 1801年、ヴォルガ・ウラル川間の草原にカザフのブケイ・オルダ（内オルダ）が移ってきた。
+
+- id: lang_south_urals
+  name: 南ウラル・トボル川流域（オレンブルク・チェリャビンスク・クルガン）
+  select:
+    regions: [russia_steppe]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: turkmen_kazakh
+      note: バシキール人の土地と、カザフ人・ノガイ人の遊牧地。クルガン周辺はシベリア・タタール人。
+    - from: 1750
+      main: russian
+      minor: tatar
+      note: オレンブルク（1743）とオレンブルク要塞線、ウラル・コサックの入植で、ロシア人の地域になる。
+
+- id: lang_pskov_seto
+  name: ペチョールィ（セトゥマー）
+  select:
+    pieces: [RUS-Pechorsky_District]
+  timeline:
+    - from: 1648
+      main: estonian
+      minor: russian
+      note: セト人（エストニア語系の方言を話す正教徒）の地域。ペチョールィ修道院の町はロシア語。
+
+- id: lang_pytalovo
+  name: ピタロヴォ（アブレネ）
+  select:
+    pieces: [RUS-Pytalovsky_District]
+  timeline:
+    - from: 1648
+      main: latvian
+      minor: russian
+      note: ラトガレ語とロシア語の村が混在する。要確認
+
+- id: lang_nevel
+  name: ネヴェリ・セベジ・ウスヴャティ（ヴィテプスク県北東部）
+  select:
+    pieces: [RUS-Nevelsky_District, RUS-Sebezhsky_District, RUS-Usvyatsky_District]
+  timeline:
+    - from: 1648
+      main: belarusian
+      minor: russian
+      note: 1772年までポーランド＝リトアニア領。ベラルーシ語とロシア語の中間の方言。要確認
+
+- id: lang_smolensk
+  name: スモレンスク西部
+  select:
+    regions: [smolensk]
+  timeline:
+    - from: 1648
+      main: belarusian
+      minor: russian
+      note: 1611–54年はポーランド＝リトアニア領で、1667年のアンドルソヴォ条約でロシア領として確定。西部の方言はベラルーシ語に近い。要確認（1897年の調査では大部分が「大ロシア語」とされた）
+    - from: 1800
+      main: russian
+      minor: belarusian
+
+- id: lang_bryansk_west
+  name: ブリャンスク西部（旧チェルニヒウ県北部：スタロドゥーブ・ノヴォズィプコフ）
+  select:
+    pieces: [RUS-Klintsovsky_District, RUS-Novozybkov, RUS-Novozybkovsky_District, RUS-Starodub, RUS-Starodubsky_District, RUS-Pogarsky_District, RUS-Surazhsky_District, RUS-Klimovsky_District, RUS-Zlynkovsky_District, RUS-Krasnogorsky_District, RUS-Gordeyevsky_District, RUS-Mglinsky_District, RUS-Unechsky_District, RUS-Pochepsky_District, RUS-x_8]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: belarusian
+      note: ヘトマン国家のスタロドゥーブ連隊の地域。南部はウクライナ語、北部はベラルーシ語系の方言。18世紀にクリンツィ・ノヴォズィプコフなどに古儀式派のロシア人の町ができる。要確認
+    - from: 1800
+      main: russian
+      minor: belarusian
+      note: 1897年の調査では、ノヴォズィプコフ郡・スタロドゥーブ郡の多数派は「大ロシア語」とされた。要確認
+
+- id: lang_kursk_sw
+  name: クルスク南西部（スジャ・グルシコヴォ）
+  select:
+    pieces: [RUS-Sudzhansky_District, RUS-Glushkovsky_District, RUS-Korenevsky_District, RUS-Belovsky_District]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: russian
+      note: スロボダ・ウクライナの北の縁。
+
+- id: lang_belgorod_south
+  name: ベルゴロド南部・西部（スロボダ・ウクライナ）
+  select:
+    pieces: [RUS-Grayvoronsky_District, RUS-Krasnoyaruzhsky_District, RUS-Rakityansky_District, RUS-Borisovsky_District, RUS-Valuysky_District, RUS-Veydelevsky_District, RUS-Rovensky_District, RUS-Volokonovsky_District, RUS-Krasnogvardeysky_District, RUS-Shebekinsky_District, RUS-x_17, RUS-x_39]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: russian
+      note: ベルゴロド防衛線（1630–50年代）の南にウクライナ人の入植地が広がった。
+
+- id: lang_voronezh_south
+  name: ヴォロネジ南部（オストロゴシスク・ロッソシ・ボグチャル）
+  select:
+    pieces: [RUS-Ostrogozhsky_District, RUS-Rossoshansky_District, RUS-Bogucharsky_District, RUS-Kantemirovsky_District, RUS-Olkhovatsky_District, RUS-Kamensky_District, RUS-Petropavlovsky_District, RUS-Repyovsky_District, RUS-Verkhnemamonsky_District, RUS-x_28, RUS-x_34, RUS-x_35, RUS-x_40]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: russian
+      note: オストロゴシスク連隊（スロボダ・コサック）の地域。要確認（無名のピース x_ の位置は南部と推定）
+
+# ---- ドン・クバン・北カフカス ----
+- id: lang_don
+  name: ドン・コサックの地
+  select:
+    regions: [don]
+    adm1: ["RUS/Rostov Oblast"]
+  timeline:
+    - from: 1648
+      main: russian
+      minor: ukrainian
+      note: ドン・コサック（ロシア語の方言）。西部の村には18〜19世紀にウクライナ人の農民が移住した。
+
+- id: lang_azov
+  name: アゾフ・タガンログ
+  select:
+    regions: [azov]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: turkish
+      note: アゾフはオスマン帝国の要塞（1696–1711年はロシア領）。周辺はノガイ人。
+    - from: 1740
+      main: russian
+      minor: ukrainian
+      note: ベオグラード条約（1739）、キュチュク・カイナルジャ条約（1774）でロシア領として確定。タガンログはギリシア人・イタリア人の商人も多い港町。
+
+- id: lang_nakhichevan_don
+  name: ナヒチェヴァン・ナ・ドヌ（ドン川のアルメニア人の町）
+  select:
+    pieces: [RUS-Myasnikovsky_District]
+  timeline:
+    - from: 1648
+      main: russian
+    - from: 1780
+      main: armenian
+      minor: russian
+      note: 1779年、クリミアのアルメニア人がエカチェリーナ2世の命でドン川下流に移され、ナヒチェヴァン・ナ・ドヌと周辺の村を作った。
+      source: "https://ja.wikipedia.org/wiki/ナヒチェヴァン・ナ・ドヌ"
+
+- id: lang_sal_steppe
+  name: サリスク草原（ドンのカルムイク人）
+  select:
+    pieces: [RUS-Remontnensky_District, RUS-Zavetinsky_District]
+  timeline:
+    - from: 1648
+      main: kalmyk
+      minor: russian
+      note: ドン・コサックに属したカルムイク人（ブザヴァ）の遊牧地。要確認
+
+- id: lang_kuban
+  name: クバン川右岸の草原（黒海コサック）
+  select:
+    regions: [kuban, taman]
+    exclude: [RUS-Stavropol_Krai]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: caucasian
+      note: クリミア＝ハン国に属するノガイ人の遊牧地。南はチェルケス人の地。
+    - from: 1792
+      main: ukrainian
+      minor: russian
+      note: 1792年、旧ザポロージャ・コサックが「黒海コサック軍」としてクバンに移され、エカテリノダール（クラスノダール）を作った。クバン・コサックはウクライナ語の方言（バラチカ）を話した。東部（ライン・コサック）はロシア語。
+      source: "https://ja.wikipedia.org/wiki/クバン・コサック"
+
+- id: lang_circassia
+  name: チェルケス（クバン川左岸・黒海東岸）
+  select:
+    regions: [circassia, anapa]
+    exclude: [RUS-Karachay_Cherkessia]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: アディゲ人（チェルケス人）の諸部族（ナトゥハイ、シャプスグ、アバゼフ、ブジェドゥグなど）の地。
+    - from: 1864
+      main: russian
+      minor: ukrainian
+      note: コーカサス戦争の終結（1864）とともに、チェルケス人の大部分（数十万人）がオスマン帝国へ追放・移住させられた（チェルケス人の追放）。空いた土地にコサック・ロシア人・ウクライナ人・アルメニア人・ギリシア人が入植する。東部（ラバ川流域）はライン・コサックとロシア人の農民が多い。1897年のクバン州全体ではウクライナ語約47%・ロシア語約42%。
+      source: "https://ja.wikipedia.org/wiki/チェルケス人虐殺"
+
+- id: lang_circassia_west
+  name: クバン川左岸の西部（アナパ・クルィムスク・アビンスク）
+  select:
+    pieces: [RUS-Anapa_Urban_Okrug, RUS-Krymsky_District, RUS-Abinsky_District, RUS-Seversky_District, RUS-x_15]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: ナトゥハイ人・シャプスグ人の地。アナパにはオスマン帝国の要塞（1829年ロシア領）。
+    - from: 1864
+      main: ukrainian
+      minor: russian
+      note: チェルケス人の追放のあと、黒海コサック（ウクライナ語の方言を話すクバン・コサック）のスタニツァが作られた。要確認
+
+- id: lang_adygea
+  name: アディゲ（クバン川左岸に残ったアディゲ人の地域）
+  select:
+    pieces: [RUS-x_11, RUS-x_18, RUS-Giaginsky_District, RUS-Koshekhablsky_District, RUS-Krasnogvardeysky_District_2, RUS-Maykopsky_District, RUS-Shovgenovsky_District, RUS-Takhtamukaysky_District, RUS-Teuchezhsky_District]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: ベジェドゥグ人・テミルゴイ人・アバゼフ人などのアディゲ（チェルケス）諸部族の地。
+    - from: 1864
+      main: russian
+      minor: caucasian
+      note: クバン川左岸の一部にアディゲ人が残った（アウル）。マイコープなどにはロシア人・コサックが入植した。
+
+- id: lang_sochi
+  name: 黒海東岸（ソチ・トゥアプセ）
+  select:
+    pieces: [RUS-Resort_Town_of_Sochi_municipal_formation, RUS-Tuapsinsky_District]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: シャプスグ人・ウビフ人・アブハズ系の部族の地。
+    - from: 1864
+      main: russian
+      minor: armenian
+      note: ウビフ人はほぼ全員がオスマン帝国へ移住した。トルコから来たアルメニア人（ハムシェン）・ギリシア人の入植者が多い。要確認
+
+- id: lang_karachay
+  name: カラチャイ・チェルケス
+  select:
+    pieces: [RUS-Karachay_Cherkessia]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: caucasian
+      note: エルブルス山北麓のカラチャイ人（テュルク系）と、平地のチェルケス人・アバザ人。
+
+- id: lang_stavropol
+  name: スタヴロポリ
+  select:
+    pieces: [RUS-Stavropol_Krai]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: caucasian
+      note: ノガイ人の遊牧地と、南部のカバルダ人の放牧地。
+    - from: 1780
+      main: russian
+      minor: ukrainian
+      note: アゾフ・モズドク要塞線（1777–）とスタヴロポリ（1777）の建設以後、ロシア人・ウクライナ人の農民が入植した（1897年でロシア人約57%、ウクライナ人約36%）。要確認
+
+- id: lang_nogai_steppe
+  name: ノガイ草原（クマ川下流）
+  select:
+    regions: [nogai_kuma]
+  timeline:
+    - from: 1648
+      main: tatar
+      note: ノガイ人の遊牧地。
+
+- id: lang_kizlyar
+  name: テレク川下流（キズリャル）
+  select:
+    regions: [kizlyar]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: russian
+      note: クムク人・ノガイ人の地と、テレク・コサック（グレベン・コサック）の村。
+    - from: 1740
+      main: russian
+      minor: armenian
+      note: 1735年にキズリャル要塞。アルメニア人・グルジア人の商人も多く住んだ。要確認
+
+- id: lang_kabarda
+  name: カバルダ・バルカル
+  select:
+    regions: [kabarda]
+  timeline:
+    - from: 1648
+      main: caucasian
+      minor: tatar
+      note: カバルダ人（東チェルケス人）と、山地のバルカル人（テュルク系）。
+    - from: 1880
+      main: caucasian
+      minor: russian
+      note: ナリチクなどにロシア人の入植地が増える。要確認
+
+- id: lang_ossetia
+  name: 北オセチア
+  select:
+    regions: [ossetia]
+  timeline:
+    - from: 1648
+      main: ossetian
+    - from: 1800
+      main: ossetian
+      minor: russian
+      note: ウラジカフカス（1784）とモズドクなどテレク・コサックの村。
+
+- id: lang_chechnya
+  name: チェチェン・イングーシ
+  select:
+    regions: [chechnya]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: チェチェン人・イングーシ人（ナフ系）。テレク川左岸にはコサックの村。
+    - from: 1860
+      main: caucasian
+      minor: russian
+      note: イマーム・シャミール降伏（1859）の後、テレク川沿いにコサックの村と要塞が増える。チェチェン人の一部はオスマン帝国へ移住した。要確認
+
+- id: lang_dagestan
+  name: ダゲスタン（山地）
+  select:
+    regions: [dagestan]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: アヴァール人・ダルギン人・ラク人・レズギン人・タバサラン人など数十の言語が谷ごとに話される「言語の山」。共通語としてアラビア語（学問）、クムク語・アゼルバイジャン語（交易）が使われた。
+      source: "https://ja.wikipedia.org/wiki/ダゲスタン共和国"
+
+- id: lang_dagestan_north
+  name: ダゲスタン北部の平野（ハサヴユルト・ババユルト）
+  select:
+    pieces: [RUS-Khasavyurtovsky_District, RUS-Babayurtovsky_District, RUS-Kizilyurtovsky_District, RUS-Buynaksky_District]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: caucasian
+      note: クムク人（テュルク系）の平野。チェチェン人（アッキ）・アヴァール人も住む。
+
+- id: lang_dagestan_coast
+  name: ダゲスタン沿岸（タルキ・カイタグ）
+  select:
+    regions: [dagestan_coast]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: caucasian
+      note: タルキのシャムハル国。クムク語（テュルク系）。南部の沿岸（マガラムケント）はレズギン人。要確認
+
+- id: lang_derbent
+  name: デルベント
+  select:
+    regions: [derbent]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: caucasian
+      note: デルベント市はアゼルバイジャン語・タト語（イラン系）・山岳ユダヤ人の町。周辺の山村はレズギン人・タバサラン人。1806年にロシア領。
+
+# ======== カスピ海東岸・中央アジア西部 ========
+- id: lang_kazakh_west
+  name: カザフ草原西部
+  select:
+    regions: [kazakh_west]
+    iso: [KAZ]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: カザフ小ジュズの遊牧地。マンギシュラク半島はトルクメン人。
+    - from: 1880
+      main: turkmen_kazakh
+      minor: russian
+      note: ウラル川沿いのウラル・コサックの村と、19世紀末からのロシア人・ウクライナ人の農民の入植。要確認
+
+- id: lang_karakalpak
+  name: アム川デルタ北部（カラカルパク）
+  select:
+    adm1: ["UZB/Republic of Karakalpakstan"]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      minor: uzbek
+      note: カラカルパク人（カザフ語に近いキプチャク系）。南部はウズベク人・トルクメン人。
+
+- id: lang_khorezm
+  name: ホラズム（ヒヴァ）
+  select:
+    adm1: ["UZB/Xorazm Region"]
+  timeline:
+    - from: 1648
+      main: uzbek
+      minor: turkmen_kazakh
+      note: ヒヴァ＝ハン国の中心。ウズベク人と定住のサルト人（ホラズム方言はオグズ系に近い）、トルクメン人。
+
+- id: lang_turkmen
+  name: トルクメン
+  select:
+    iso: [TKM]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: トルクメン諸部族（テケ、ヨムート、サルクなど）。メルヴ・チャルジョウのオアシスにはペルシア語・ウズベク語の住民もいた。1881年のギョクテペの戦いでロシアが征服。
+
+- id: lang_dasoguz
+  name: ダショグズ（ホラズム南部）
+  select:
+    adm1: ["TKM/Dasoguz"]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      minor: uzbek
+      note: ヒヴァ＝ハン国の領域で、トルクメン人（ヨムート）とウズベク人が住む。

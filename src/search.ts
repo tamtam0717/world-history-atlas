@@ -5,17 +5,18 @@ import { cityName, type AtlasIndex } from "./data";
 import type { AtlasMap } from "./map";
 import { MODERN_ALIASES_JA, MODERN_NAMES, MODERN_NAMES_EN } from "./modern";
 
-type Kind = "polity" | "city" | "country" | "mcity" | "sea";
+type Kind = "polity" | "movement" | "city" | "country" | "mcity" | "sea";
 
 const KIND_LABEL: Record<Kind, string> = {
   polity: "国",
+  movement: "潮流",
   city: "都市",
   country: "現代の国",
   mcity: "現代の都市",
   sea: "海",
 };
 const SEA_LABEL: Record<string, string> = { ocean: "大洋", sea: "海", gulf: "湾", strait: "海峡" };
-const KIND_ORDER: Record<Kind, number> = { polity: 0, city: 1, country: 2, mcity: 3, sea: 4 };
+const KIND_ORDER: Record<Kind, number> = { polity: 0, movement: 0.5, city: 1, country: 2, mcity: 3, sea: 4 };
 const MAX_RESULTS = 12;
 
 interface Item {
@@ -74,6 +75,8 @@ export interface SearchDeps {
   idx: AtlasIndex;
   year(): number;
   selectPolity(id: string): void;
+  /** 潮流を選ぶ（勢いのない年なら最盛期の年へ） */
+  selectMovement?(id: string): void;
   /** 候補を選んで移動する直前（履歴に積むため） */
   beforeJump?(): void;
 }
@@ -167,10 +170,34 @@ export class Search {
       });
     }
 
+    // 潮流（名前のほか、代表的な人物・作品でも引ける）
+    if (this.deps.selectMovement) {
+      for (const m of idx.atlas.movements ?? []) {
+        items.push({
+          kind: "movement",
+          label: m.name,
+          keys: norm([m.name, m.id.replace(/_/g, " ")]),
+          rank: 0,
+          go: () => this.deps.selectMovement!(m.id),
+        });
+        // 人物・作品は一致度を下げる（名前の一致より後に並ぶよう、別の項目として足す）
+        const extra = norm([...(m.people ?? []), ...(m.works ?? [])]);
+        if (extra.length)
+          items.push({
+            kind: "movement",
+            label: m.name,
+            sub: (m.people ?? []).slice(0, 3).join("・"),
+            keys: extra,
+            rank: 1,
+            go: () => this.deps.selectMovement!(m.id),
+          });
+      }
+    }
+
     // その時代の都市
     const histCities: { name: string; lon: number; lat: number }[] = [];
     for (const c of idx.atlas.cities ?? []) {
-      if (c.founded && year < c.founded) continue;
+      if ((c.founded && year < c.founded) || (c.until && year > c.until)) continue;
       const name = cityName(c, year);
       histCities.push({ name, lon: c.lon, lat: c.lat });
       const others = [c.name, c.modern, ...(c.names ?? []).map((n) => n.name)].filter((n) => n && n !== name);
@@ -252,7 +279,7 @@ export class Search {
     const q = normalize(this.input.value);
     if (!q) {
       this.results = [];
-      this.render(this.input.value ? "" : "国名・地名を入力（日本語／英語）");
+      this.render(this.input.value ? "" : "国名・地名・潮流を入力（日本語／英語）");
       return;
     }
     const lq = loose(q);
@@ -266,7 +293,16 @@ export class Search {
       if (best < 9) scored.push({ it, s: best });
     }
     scored.sort((a, b) => a.s - b.s || KIND_ORDER[a.it.kind] - KIND_ORDER[b.it.kind] || a.it.rank - b.it.rank || a.it.label.length - b.it.label.length);
-    this.results = scored.slice(0, MAX_RESULTS).map((x) => x.it);
+    const seenMv = new Set<string>();
+    this.results = scored
+      .filter(({ it }) => {
+        if (it.kind !== "movement") return true;
+        if (seenMv.has(it.label)) return false;
+        seenMv.add(it.label);
+        return true;
+      })
+      .slice(0, MAX_RESULTS)
+      .map((x) => x.it);
     this.active = 0;
     this.render(this.results.length ? "" : "見つかりません");
   }

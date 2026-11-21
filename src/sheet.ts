@@ -64,5 +64,9 @@ export function setupSheet(panel: HTMLElement, handle: HTMLElement) {
     reveal() {
       if (mq.matches && snap === "peek") apply("half");
     },
+    /** 操作部（.controls）の高さが変わったとき：今の段階のまま高さを合わせ直す */
+    refresh() {
+      if (mq.matches && snap === "peek") apply("peek", false);
+    },
   };
 }

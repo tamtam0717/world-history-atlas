@@ -1,0 +1,1266 @@
+# 言語（民族）の分布：ハンガリー王国（ハンガリー・スロヴァキア・トランシルヴァニア・ヴォイヴォディナ・クロアチア）・
+# ルーマニア・スロヴェニア・バルカン半島・ギリシア・キプロス（1648–1914）
+# 形式は docs/language-format.md。main = 住民（特に農村の民衆）の多数派の言語、minor = 2〜3割以上の少数派。
+# セルビア語・クロアチア語・ボスニア語（ボシュニャク人）・モンテネグロ語はセルボ・クロアチア語（serbocroatian）にまとめる。
+# マケドニアのスラヴ語はブルガリア語・マケドニア語（bulgarian）。アルーマニア語（ヴラフ人）とメグレノ・ルーマニア語は romanian に含める。
+# バルカンでは民族の帰属が言語より宗教（正教会の総主教座・ブルガリア総主教代理座・イスラーム）で決まることが多く、
+# 19世紀末の統計は国ごとに大きく食い違う。とくにマケドニアは「要確認」が多い。
+
+# ======== ハンガリー（現在の国境の内側） ========
+- id: lang_hungary_base
+  name: ハンガリー（下地：ハンガリー語）
+  select:
+    iso: [HUN]
+  timeline:
+    - from: 1648
+      main: hungarian
+      note: 1648年、中部・南部はオスマン帝国領（ブダ州など）で、150年の戦乱で人口が大きく減っていた。町にはドイツ語の市民、ユダヤ人も多い。カルロヴィッツ条約（1699）・パッサロヴィッツ条約（1718）の後、ハプスブルク家と領主が荒廃した土地にドイツ人（ドナウ・シュヴァーベン人）・スロヴァキア人・セルビア人などを入植させ、王国は多民族のモザイクになる。アウスグライヒ（1867）の後、ハンガリー政府はマジャル化政策（学校でのハンガリー語教育など）を進め、都市のドイツ人・ユダヤ人の多くがハンガリー語に移った。
+      source: https://ja.wikipedia.org/wiki/ドナウ・シュヴァーベン人
+
+- id: lang_ottoman_south_hu
+  name: オスマン領ハンガリー南部（バラニャ・バーチ・チョングラード）
+  select:
+    adm1: ["HUN/Baranya", "HUN/Bács-Kiskun", "HUN/Tolna"]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: serbocroatian
+      note: オスマン帝国の支配のもとで南スラヴ人（セルビア人、カトリックのショクツィ人・ブニェヴツィ人）が北へ移り住んでいた。
+    - from: 1720
+      main: hungarian
+      minor: german
+      note: ドナウ・シュヴァーベン人の入植。バラニャ・トルナの丘陵地帯は「シュヴァーベンのトルコ」と呼ばれた。
+
+- id: lang_swabian_turkey
+  name: 「シュヴァーベンのトルコ」（バラニャ・トルナの丘陵地帯）
+  select:
+    pieces: [HUN-Boly, HUN-Pecsvarad, HUN-Komlo, HUN-Hegyhat, HUN-Bonyhad]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: serbocroatian
+    - from: 1720
+      main: german
+      minor: hungarian
+      note: 18世紀前半に南西ドイツ（フルダ、ヘッセン、プファルツなど）から来たドイツ人の村が多数を占めた。
+
+- id: lang_bacs_south_hu
+  name: バーチ南部（バーチャルマーシュ・バヤ）
+  select:
+    pieces: [HUN-Bacsalmas, HUN-Baja]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: hungarian
+      note: ブニェヴツィ人（カトリックの南スラヴ人）の地域。
+    - from: 1750
+      main: hungarian
+      minor: german
+      note: ドイツ人の入植村が加わり、ハンガリー語・ドイツ語・ブニェヴツィ語の混在地域になる。要確認
+
+- id: lang_siklos
+  name: シクローシュ・シェッレ（オルマーンシャーグ）
+  select:
+    pieces: [HUN-Siklos, HUN-Sellye, HUN-Mohacs]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: serbocroatian
+      note: ドラヴァ川沿いにショクツィ人・セルビア人の村がある。モハーチにはドイツ人も多い。
+
+- id: lang_buda_hills
+  name: ブダ山地・ピリシュ（ドイツ人の村）
+  select:
+    pieces: [HUN-Budakeszi, HUN-Pilisvorosvar, HUN-Mor, HUN-Tatabanya]
+  timeline:
+    - from: 1648
+      main: hungarian
+    - from: 1700
+      main: german
+      minor: hungarian
+      note: ブダの奪回（1686）の後、ブダ山地・ヴェールテシュ山地・バコニ山地にドイツ人が入植した。要確認
+
+- id: lang_budapest
+  name: ブダとペスト（ブダペスト）
+  select:
+    pieces: [HUN-I_kerulet, HUN-II_kerulet, HUN-III_kerulet, HUN-IV_kerulet, HUN-V_kerulet, HUN-VI_kerulet, HUN-VII_kerulet, HUN-VIII_kerulet, HUN-IX_kerulet, HUN-X_kerulet, HUN-XI_kerulet, HUN-XII_kerulet, HUN-XIII_kerulet, HUN-XIV_kerulet, HUN-XV_kerulet, HUN-XVI_kerulet, HUN-XVII_kerulet, HUN-XVIII_kerulet, HUN-XIX_kerulet, HUN-XX_kerulet, HUN-XXI_kerulet, HUN-XXII_kerulet, HUN-XXIII_kerulet]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: hungarian
+      note: ブダはオスマン帝国のブダ州の州都。ムスリムの軍人・役人と、ハンガリー人・ユダヤ人・南スラヴ人の住民。
+    - from: 1690
+      main: german
+      minor: hungarian
+      note: 1686年の奪回の後、ムスリムは去り、ドイツ人の市民が町を再建した。19世紀前半のペスト・ブダは住民の多数がドイツ語。
+    - from: 1870
+      main: hungarian
+      minor: german
+      note: 1851年のペストではドイツ語の住民がまだ過半数だったが、1867年の妥協（アウスグライヒ）の後に急速にハンガリー語化し、1880年の調査ではハンガリー語が約57%になる。1873年に統合してブダペスト。1900年には約8割がハンガリー語を母語とした（ユダヤ人の多くもハンガリー語）。
+    - from: 1900
+      main: hungarian
+
+- id: lang_west_hungary_german
+  name: 西ハンガリーのドイツ語の町（ショプロン・モション・クーセグ）
+  select:
+    pieces: [HUN-Sopron, HUN-Mosonmagyarovar, HUN-K_szeg]
+  timeline:
+    - from: 1648
+      main: german
+      minor: hungarian
+      note: オーストリアとの境界地帯で、中世以来のドイツ語の地域（「ハイデンボーデン」など）。ショプロン（エーデンブルク）はドイツ語の町。
+
+- id: lang_szentgotthard
+  name: セントゴットハールド（ラーバ川上流）
+  select:
+    pieces: [HUN-Szentgotthard]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: slovene
+      note: スロヴェニア語（プレクムリェ方言）とドイツ語の村がある。
+
+- id: lang_bekes_slovak
+  name: ベーケーシュチャバ・サルヴァシュ（スロヴァキア人の入植地）
+  select:
+    pieces: [HUN-Bekescsaba, HUN-Szarvas]
+  timeline:
+    - from: 1648
+      main: hungarian
+    - from: 1720
+      main: slovak
+      minor: hungarian
+      note: 1718年以後、上部ハンガリーからルター派のスロヴァキア人が入植し、ベーケーシュチャバはスロヴァキア人の大きな村になった。
+    - from: 1880
+      main: hungarian
+      minor: slovak
+      note: マジャル化が進む。要確認
+
+- id: lang_bekes_south
+  name: トートコムローシュ・ジュラ（南東部の混在地域）
+  select:
+    pieces: [HUN-Mez_kovacshaza, HUN-Gyula, HUN-Sarkad]
+  timeline:
+    - from: 1648
+      main: hungarian
+    - from: 1720
+      main: hungarian
+      minor: slovak
+      note: トートコムローシュにはスロヴァキア人、ジュラ・サルカド周辺にはルーマニア人・ドイツ人の住民がいる。要確認
+
+- id: lang_nyiregyhaza
+  name: ニーレジハーザ（「トゥルポシュ」のスロヴァキア人）
+  select:
+    pieces: [HUN-Nyiregyhaza]
+  timeline:
+    - from: 1648
+      main: hungarian
+    - from: 1760
+      main: hungarian
+      minor: slovak
+      note: 1753年からスロヴァキア人（トゥルポシュ）が入植した。19世紀にマジャル化する。
+    - from: 1880
+      main: hungarian
+
+- id: lang_nograd
+  name: ノーグラード・ボルショド北部（スロヴァキア語の村のある地域）
+  select:
+    adm1: ["HUN/Nógrád"]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: slovak
+
+# ======== スロヴァキア（上部ハンガリー） ========
+- id: lang_slovakia_base
+  name: スロヴァキア（上部ハンガリー。下地：スロヴァキア語）
+  select:
+    iso: [SVK]
+  timeline:
+    - from: 1648
+      main: slovak
+      note: 農民はスロヴァキア語（書き言葉はチェコ語で代用されていた）。貴族はハンガリー語、鉱山都市・都市はドイツ語の市民が多い。オラヴァ・スピシュ北部にはポーランド語系（グラル）の村もある。ベルノラーク（1787）、シトゥール（1843）がスロヴァキア語の書き言葉を定める。1867年以後はマジャル化政策が強まる（1907年のアポニー法）。
+      source: https://ja.wikipedia.org/wiki/リュドヴィート・シトゥール
+
+- id: lang_slovakia_hungarian_south
+  name: スロヴァキア南部（ハンガリー語の地域：ジトニー島・コマールノ・ガラーンタ）
+  select:
+    pieces: [SVK-District_of_Dunajskn_Streda, SVK-District_of_Komprno, SVK-District_of_Nova_Zkmky, SVK-District_of_Galanta, SVK-District_of_Gala, SVK-District_of_Senec, SVK-District_of_Rimavsk, SVK-District_of_Lucenec, SVK-District_of_Velka_Krta, SVK-District_of_Ronnava]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: slovak
+      note: ドナウ川北岸の平野と、南部の盆地はハンガリー語の農村。言語の境界は数百年あまり動かなかった。
+
+- id: lang_slovakia_mixed_south
+  name: スロヴァキア南部の言語境界（レヴィツェ・コシツェ周辺・トレビショフ）
+  select:
+    pieces: [SVK-District_of_Levice, SVK-District_of_Kovice_okolie, SVK-District_of_Trebi_ov, SVK-District_of_Revnca, SVK-District_of_Krupina]
+  timeline:
+    - from: 1648
+      main: slovak
+      minor: hungarian
+
+- id: lang_kosice
+  name: コシツェ（カッシャ）市
+  select:
+    pieces: [SVK-District_of_Kolice_I, SVK-District_of_Kolice_II, SVK-District_of_Kolice_III, SVK-District_of_Kolice_IV]
+  timeline:
+    - from: 1648
+      main: slovak
+      minor: hungarian
+      note: ドイツ語・ハンガリー語・スロヴァキア語の三言語の都市。
+    - from: 1890
+      main: hungarian
+      minor: slovak
+      note: マジャル化で、1880年の調査ではスロヴァキア語とハンガリー語がほぼ同数、1910年の調査ではハンガリー語が約75%（実態はスロヴァキア語との二言語の住民が多い）。要確認
+
+- id: lang_bratislava
+  name: ブラチスラヴァ（プレスブルク／ポジョニ）
+  select:
+    pieces: [SVK-District_of_Bratislava_I, SVK-District_of_Bratislava_II, SVK-District_of_Bratislava_III, SVK-District_of_Bratislava_IV, SVK-District_of_Bratislava_V]
+  timeline:
+    - from: 1648
+      main: german
+      minor: hungarian
+      note: ハンガリー王国の首都（1536–1783）・戴冠の町。市民の多数はドイツ語。周辺の農村はスロヴァキア語。1910年の調査でドイツ語約42%、ハンガリー語約40%、スロヴァキア語約15%。
+      source: "https://ja.wikipedia.org/wiki/ブラチスラヴァ"
+
+- id: lang_zips
+  name: スピシュ（ツィップス）・ゲルニツァの鉱山町（ツィップス・ドイツ人）
+  select:
+    pieces: [SVK-District_of_Kermarok, SVK-District_of_Poprad, SVK-District_of_Levoca, SVK-District_of_Gelnica, SVK-District_of_Spieskn_Novo_Ves]
+  timeline:
+    - from: 1648
+      main: slovak
+      minor: german
+      note: 中世の植民以来のツィップス・ドイツ人の町々（ケジュマロク・レヴォチャなど）と鉱山町。
+
+- id: lang_hauerland
+  name: 中部スロヴァキアの鉱山地帯（ハウアーラント）
+  select:
+    pieces: [SVK-District_of_Prievidza, SVK-District_of_Turcianske_Teplice, SVK-District_of_Giar_nad_Hronom, SVK-District_of_Banskk_vtiavnica]
+  timeline:
+    - from: 1648
+      main: slovak
+      minor: german
+      note: クレムニツァ・バンスカー・シチャヴニツァなどの鉱山都市と、ハンドロヴァ周辺のドイツ語の村。
+
+- id: lang_rusyn_sk
+  name: スロヴァキア北東部（ルシン人の地域）
+  select:
+    pieces: [SVK-District_of_Medzilaborce, SVK-District_of_Svidnsk, SVK-District_of_Snina]
+  timeline:
+    - from: 1648
+      main: ukrainian
+      minor: slovak
+      note: ルシン人（ウクライナ語系。東方典礼カトリック）の村。
+
+- id: lang_slovakia_northeast
+  name: シャリシュ・ゼンプレーン北部（スロヴァキア語とルシン語の混在）
+  select:
+    pieces: [SVK-District_of_Stropkov, SVK-District_of_Humennn, SVK-District_of_Bardejov, SVK-District_of_Stark_Lubovna, SVK-District_of_Sobrance]
+  timeline:
+    - from: 1648
+      main: slovak
+      minor: ukrainian
+
+# ======== ルーマニア ========
+- id: lang_romania_base
+  name: ルーマニア（下地：ルーマニア語）
+  select:
+    iso: [ROU]
+  timeline:
+    - from: 1648
+      main: romanian
+      note: ワラキア・モルダヴィアの農民はルーマニア語。18世紀のファナリオット（ギリシア系の公）の時代、宮廷の言葉はギリシア語。モルダヴィアの町にはユダヤ人が多い（19世紀にヤシでは住民の約半数）。1859年のワラキアとモルダヴィアの統合、1862年のルーマニア公国の成立。ルーマニア語のキリル文字からラテン文字への切りかえ（1860年ごろ）。
+
+- id: lang_transylvania
+  name: トランシルヴァニア・バナト・クリシャナ（ルーマニア人の多い地域）
+  select:
+    pieces: [ROU-ALBA, ROU-HUNEDOARA, ROU-CLUJ, ROU-SALAJ, ROU-BIHOR, ROU-ARAD, ROU-MARAMURES]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: hungarian
+      note: 農民の多くはルーマニア語（正教徒・のちのユニエイト）だが、政治的な「三つの国民」（ハンガリー貴族・セーケイ人・ザクセン人）に入れられず権利を持たなかった。都市（クルージュ＝コロジュヴァール、オラデア＝ナジヴァーラド）はハンガリー語。
+      source: "https://ja.wikipedia.org/wiki/トランシルヴァニア"
+
+- id: lang_szekely
+  name: セーケイ地方（ハルギタ・コヴァスナ）
+  select:
+    pieces: [ROU-HARGHITA, ROU-COVASNA]
+  timeline:
+    - from: 1648
+      main: hungarian
+      note: セーケイ人（ハンガリー語を話す国境警備民の流れをくむ集団）の地域。
+
+- id: lang_mures
+  name: マロシュ（ムレシュ）
+  select:
+    pieces: [ROU-MURES]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: romanian
+      note: 東部はセーケイ人、西部はルーマニア人の村。
+
+- id: lang_saxon_sibiu
+  name: ザクセン人の地（ヘルマンシュタット＝シビウ）
+  select:
+    pieces: [ROU-SIBIU]
+  timeline:
+    - from: 1648
+      main: german
+      minor: romanian
+      note: ジーベンビュルゲン・ザクセン人（12世紀にライン・モーゼル地方から来たドイツ人）の「王領地」。ルター派。
+      source: "https://ja.wikipedia.org/wiki/トランシルヴァニア・ザクセン人"
+    - from: 1750
+      main: romanian
+      minor: german
+      note: ザクセン人の村の周りにルーマニア人の住民が増え、18世紀には多数派になる。
+
+- id: lang_saxon_brasov
+  name: ブルツェンラント（ブラショヴ＝クロンシュタット）
+  select:
+    pieces: [ROU-BRASOV]
+  timeline:
+    - from: 1648
+      main: german
+      minor: romanian
+      note: ザクセン人の都市クロンシュタットとその周辺。ルーマニア人の地区（シュケイ）、東部にはハンガリー語のチャーンゴー人の村もある。
+    - from: 1800
+      main: romanian
+      minor: german
+      note: 1910年の調査でルーマニア人・ハンガリー人・ドイツ人がほぼ3分の1ずつ。要確認
+
+- id: lang_saxon_bistrita
+  name: ネースナーラント（ビストリツァ）
+  select:
+    pieces: [ROU-BISTRITA_NASAUD]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: german
+      note: 南部のビストリツァ（ビストリッツ）周辺はザクセン人、北部のナサウドはルーマニア人の国境警備連隊の地域。
+
+- id: lang_satu_mare
+  name: サトゥ・マーレ（サトマール）
+  select:
+    pieces: [ROU-SATU_MARE]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: romanian
+      note: 1712年からカーロイ家が南西ドイツの農民（サトマール・シュヴァーベン人）を入植させた。彼らは19世紀にハンガリー語化する。
+
+- id: lang_banat_ro
+  name: バナト（ティミショアラ）
+  select:
+    pieces: [ROU-TIMIS]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: serbocroatian
+      note: オスマン帝国のテメシュヴァール州。ルーマニア人とセルビア人の農民。
+    - from: 1720
+      main: romanian
+      minor: german
+      note: パッサロヴィッツ条約（1718）でハプスブルク家の直轄地「テメシュヴァールのバナト」になり、ドイツ人（バナト・シュヴァーベン人）を大規模に入植させた（三度の「シュヴァーベンの行進」）。ハンガリー人・ブルガリア人（カトリック）・スロヴァキア人なども入る。
+      source: "https://ja.wikipedia.org/wiki/バナト"
+
+- id: lang_caras
+  name: バナト山地（カラシュ・セヴェリン）
+  select:
+    pieces: [ROU-CARAS_SEVERIN]
+  timeline:
+    - from: 1648
+      main: romanian
+    - from: 1750
+      main: romanian
+      minor: german
+      note: レシツァの製鉄所や鉱山町にドイツ人（ボヘミア・オーストリアから）、山中にはチェコ人の村も作られた。ルーマニア人の国境警備連隊の地域。
+
+- id: lang_bukovina_ro
+  name: ブコヴィナ南部（スチャヴァ）
+  select:
+    pieces: [ROU-SUCEAVA]
+  timeline:
+    - from: 1648
+      main: romanian
+    - from: 1775
+      main: romanian
+      minor: ukrainian
+      note: 1775年にオーストリア領。北部にはウクライナ人、町にはドイツ人・ユダヤ人が増える。
+
+- id: lang_dobruja_constanta
+  name: ドブルジャ南部（コンスタンツァ）
+  select:
+    pieces: [ROU-CONSTANTA]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: turkish
+      note: ドブルジャ・タタール人とトルコ人の村。沿岸にはギリシア人、ルーマニア人の牧畜民も。
+    - from: 1880
+      main: tatar
+      minor: romanian
+      note: ベルリン条約（1878）でルーマニア領。ムスリムの多くがオスマン帝国へ移住し、ルーマニア人の入植が始まるが、1880年代はまだタタール人・トルコ人が多い。
+    - from: 1900
+      main: romanian
+      minor: tatar
+      note: ルーマニア人の入植とコンスタンツァ港の建設（1896–）で、1890年代後半にルーマニア人が多数になる。タタール人・トルコ人・ブルガリア人・ギリシア人も残る。要確認
+
+- id: lang_dobruja_tulcea
+  name: ドブルジャ北部（トゥルチャ・ドナウ・デルタ）
+  select:
+    pieces: [ROU-TULCEA]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: romanian
+    - from: 1830
+      main: bulgarian
+      minor: romanian
+      note: 露土戦争の時期にタタール人が減り、ブルガリア人・ルーマニア人・リポヴァン（古儀式派ロシア人）・ウクライナ人（ザドナイ・コサック）・ドイツ人などが入る。要確認
+    - from: 1890
+      main: romanian
+      minor: bulgarian
+      note: ベルリン条約（1878）でルーマニア領になり、ルーマニア人の入植が進んで、1890年ごろにはルーマニア人が最大の集団になる。リポヴァン（古儀式派ロシア人）・ウクライナ人・ブルガリア人も多い。要確認
+
+# ======== スロヴェニア ========
+- id: lang_slovenia
+  name: スロヴェニア（カルニオラ・南シュタイアーマルク・ゴリツィア）
+  select:
+    iso: [SVN]
+  timeline:
+    - from: 1648
+      main: slovene
+      note: 農民はスロヴェニア語。町の市民・貴族はドイツ語。19世紀にスロヴェニア人の民族運動（プレシェーレン、「統一スロヴェニア」綱領1848）。
+
+- id: lang_gottschee
+  name: ゴットシェー（コチェーヴィエ）
+  select:
+    pieces: [SVN-Kocevje]
+  timeline:
+    - from: 1648
+      main: german
+      minor: slovene
+      note: 14世紀からのドイツ語の「言語の島」（ゴットシェー・ドイツ人）。
+      source: "https://ja.wikipedia.org/wiki/ゴットシェー"
+
+- id: lang_maribor
+  name: マリボル（マールブルク）
+  select:
+    pieces: [SVN-Maribor]
+  timeline:
+    - from: 1648
+      main: german
+      minor: slovene
+      note: 市内はドイツ語（1910年で約8割）、周辺の農村はスロヴェニア語。
+
+- id: lang_styrian_towns
+  name: ツェリェ・プトゥイ（南シュタイアーマルクの町）
+  select:
+    pieces: [SVN-Celje, SVN-Ptuj]
+  timeline:
+    - from: 1648
+      main: slovene
+      minor: german
+      note: 町（ツィリ・ペッタウ）はドイツ語、周辺はスロヴェニア語。
+
+- id: lang_prekmurje_hu
+  name: レンダヴァ周辺（プレクムリェのハンガリー語の村）
+  select:
+    pieces: [SVN-Lendava, SVN-Dobrovnik, SVN-Hodoj]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: slovene
+
+- id: lang_koper_coast
+  name: コペル・イゾラ・ピラン（イストリア北岸）
+  select:
+    pieces: [SVN-Koper_Capodistria, SVN-Izola_Isola, SVN-Piran_Pirano, SVN-Ankaran_Ancarano, 115-Dragonja]
+  timeline:
+    - from: 1648
+      main: italian
+      minor: slovene
+      note: ヴェネツィア共和国領の港町はイタリア語（ヴェネト方言）。後背地の村はスロヴェニア語。
+
+# ======== クロアチア ========
+- id: lang_croatia_base
+  name: クロアチア・スラヴォニア・ダルマチア（下地：セルボ・クロアチア語）
+  select:
+    iso: [HRV]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      note: ザグレブ周辺の北西部はカイ方言、沿岸・島はチャ方言、スラヴォニア・ダルマチア内陸はシュト方言。軍政国境地帯にはオスマン帝国から逃れたセルビア人（正教徒）が多く住む。イリリア運動（ガイ、1830年代）がシュト方言にもとづく書き言葉を定め、1850年のウィーン文語協定でセルビア語と共通の標準語が作られた。
+      source: https://ja.wikipedia.org/wiki/イリュリア運動
+
+- id: lang_istria_west
+  name: イストリア西岸（ウマグ・ポレチュ・ロヴィニ・プーラ）
+  select:
+    pieces: [HRV-Grad_Umag, HRV-Grad_Novigrad, HRV-Op_ina_Brtonigla, HRV-Grad_Buje, HRV-Grad_Pore, HRV-Op_ina_Vrsar, HRV-Op_ina_Funtana, HRV-Op_ina_Tar_Vabriga, HRV-Grad_Rovinj, HRV-Op_ina_Bale, HRV-Grad_Vodnjan, HRV-Op_ina_Fa_ana, HRV-Grad_Pula, HRV-Op_ina_Gro_njan, HRV-Op_ina_Oprtalj, HRV-Op_ina_Motovun, HRV-Op_ina_Vi_inada]
+  timeline:
+    - from: 1648
+      main: italian
+      minor: serbocroatian
+      note: ヴェネツィア領イストリアの港町と西岸はイタリア語（ヴェネト方言・イストリオート語）。内陸はクロアチア語の村。1856年からプーラはオーストリア海軍の軍港。ドイツ語・クロアチア語の住民も増える。
+
+- id: lang_istria_inland
+  name: イストリア内陸（ハプスブルク領のパジン伯領など）
+  select:
+    adm1: ["HRV/Istria"]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: italian
+      note: 内陸の農民はクロアチア語（チャ方言）。小さな町はイタリア語。チチャリヤ山地には少数のイストロ・ルーマニア語の村がある。
+
+- id: lang_rijeka
+  name: フィウメ（リエカ）
+  select:
+    pieces: [HRV-Grad_Rijeka]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: italian
+    - from: 1800
+      main: italian
+      minor: serbocroatian
+      note: 1779年からハンガリー王国の港（「分離体」）。商業都市として成長し、イタリア語が多数になる。1910年の調査でイタリア語約49%、クロアチア語約26%、ハンガリー語約13%。
+
+- id: lang_losinj
+  name: ロシニ島（ルッシーノ）
+  select:
+    pieces: [HRV-Otok_Losinj]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: italian
+    - from: 1800
+      main: italian
+      minor: serbocroatian
+      note: 帆船の船主・船乗りの町マリ・ロシニはイタリア語化した。要確認
+
+- id: lang_zadar
+  name: ザダル（ザーラ）
+  select:
+    pieces: [HRV-Grad_Zadar]
+  timeline:
+    - from: 1648
+      main: italian
+      minor: serbocroatian
+      note: ヴェネツィア領ダルマチアの首都。市内はイタリア語、周辺の村はクロアチア語。1797年からオーストリア領（1805–13年はフランス）。
+
+- id: lang_dalmatia_towns
+  name: ダルマチアの沿岸都市（スプリト・シベニク・トロギル・ドゥブロヴニク）
+  select:
+    pieces: [HRV-Grad_Split, HRV-Grad_ibenik, HRV-Grad_Trogir, HRV-Grad_Dubrovnik, HRV-Grad_Kor_ula]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: italian
+      note: 都市の上層と行政・文化の言葉はイタリア語。民衆はクロアチア語。
+    - from: 1880
+      main: serbocroatian
+      note: 1880年代にダルマチアの市政がイタリア派（自治派）からクロアチア人の国民党へ移る（スプリトは1882年）。
+
+- id: lang_baranja_hr
+  name: クロアチア領バラニャ（ベリ・マナスティル）
+  select:
+    pieces: [HRV-Grad_Beli_Manastir, HRV-Op_ina_Bilje, HRV-Op_ina_Darda, HRV-Op_ina_Kne_evi_Vinogradi, HRV-Op_ina_Dra, HRV-Op_ina_Jagodnjak, HRV-Op_ina_Popovac, HRV-Op_ina_Petlovac, HRV-Op_ina_eminac]
+  timeline:
+    - from: 1648
+      main: hungarian
+      minor: serbocroatian
+    - from: 1720
+      main: hungarian
+      minor: german
+      note: ハンガリー語の村と、ドナウ・シュヴァーベン人の入植村、セルビア人・ショクツィ人の村が混在する。要確認
+
+- id: lang_osijek_vukovar
+  name: オシイェク・ヴコヴァル（ドイツ人の多い町）
+  select:
+    pieces: [HRV-Grad_Osijek, HRV-Grad_Vukovar]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: turkish
+      note: オスマン帝国の要塞都市（オシイェクは1687年に奪回）。
+    - from: 1720
+      main: serbocroatian
+      minor: german
+      note: ドイツ人の職人・商人が入植し、19世紀のオシイェクではドイツ語が多数とされる。要確認
+
+# ======== ボスニア・ヘルツェゴヴィナ ========
+- id: lang_bosnia
+  name: ボスニア・ヘルツェゴヴィナ
+  select:
+    iso: [BIH]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      note: ムスリム（ボシュニャク人）・正教徒（セルビア人）・カトリック（クロアチア人）の住民がいずれも同じ言葉を話した。オスマン帝国の役人・知識人はトルコ語も使った。サラエヴォにはラディーノ語を話すセファルディム（ユダヤ人）もいた。1878年からオーストリア＝ハンガリーの占領、1908年併合。
+
+# ======== セルビア ========
+- id: lang_serbia_base
+  name: セルビア（下地）
+  select:
+    iso: [SRB]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      note: オスマン帝国のもとで、町にはムスリム（トルコ語・アルバニア語・スラヴ系）が多かった。1690年と1737年に多くのセルビア人がハプスブルク領へ移住した（セルビア人の大移住）。セルビア公国の自治（1830）の後、ムスリムの住民は都市から退去していった（1867年に要塞からオスマン軍が撤退）。
+      source: "https://ja.wikipedia.org/wiki/セルビア人の大移住"
+
+- id: lang_belgrade
+  name: ベオグラード
+  select:
+    pieces: [SRB-Belgrade]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: turkish
+      note: オスマン帝国の要塞都市で、ムスリムの住民（トルコ語）が多かった。
+    - from: 1830
+      main: serbocroatian
+
+- id: lang_timok_vlach
+  name: 東セルビアのヴラフ人の地域（ボル・クラドヴォ・マイダンペク）
+  select:
+    pieces: [SRB-Bor_Municipality, SRB-Kladovo_Municipality, SRB-Majdanpek_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+    - from: 1750
+      main: romanian
+      minor: serbocroatian
+      note: 18〜19世紀にワラキア・バナトからヴラフ人（ルーマニア語の方言を話す）が移住した。
+      source: "https://ja.wikipedia.org/wiki/ヴラフ人"
+
+- id: lang_timok_mixed
+  name: ネゴティン・ホモリェ（ヴラフ人の村の多い地域）
+  select:
+    pieces: [SRB-Negotin_Municipality, SRB-Kucevo_Municipality, SRB-Zagubica_Municipality, SRB-Zajecar_City, SRB-Boljevac_Municipality, SRB-Golubac_Municipality, SRB-Petrovac_na_Mlavi_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+    - from: 1750
+      main: serbocroatian
+      minor: romanian
+
+- id: lang_toplica
+  name: トプリツァ・ヤブラニツァ（ニシュ州のアルバニア人の地域）
+  select:
+    pieces: [SRB-Prokuplje_Municipality, SRB-Kursumlija_Municipality, SRB-Blace_Municipality, SRB-Zitoradja_Municipality, SRB-Lebane_Municipality, SRB-Medvedja_Municipality, SRB-Bojnik_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: albanian
+      note: 17〜18世紀にアルバニア人のムスリムがトプリツァ・コサニツァ・ヤブラニツァの谷に移り住んだ。
+    - from: 1878
+      main: serbocroatian
+      note: 露土戦争（1877–78）でセルビア領になり、アルバニア人の多くがコソヴォへ追われた（ムハジル）。
+
+- id: lang_presevo
+  name: プレシェヴォ・ブヤノヴァツ
+  select:
+    pieces: [SRB-Presevo_Municipality, SRB-Bujanovac_Municipality]
+  timeline:
+    - from: 1648
+      main: albanian
+      minor: serbocroatian
+      note: 要確認（ブヤノヴァツはセルビア人・アルバニア人・ロマの混在地域）
+
+- id: lang_western_outlands
+  name: ディミトロフグラード・ボシレグラード（西部辺境）
+  select:
+    pieces: [SRB-Dimitrovgrad_Municipality, SRB-Bosilegrad_Municipality]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      note: ブルガリア語の地域（1878–1919年はブルガリア領）。
+
+- id: lang_pirot
+  name: ピロト・トルラク方言の地域
+  select:
+    pieces: [SRB-Pirot_Municipality, SRB-Babusnica_Municipality, SRB-Bela_Palanka_Municipality, SRB-Knjazevac_Municipality, SRB-Crna_Trava_Municipality, SRB-Trgoviste_Municipality, SRB-Surdulica_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: bulgarian
+      note: トルラク方言（セルビア語とブルガリア語の中間の方言）の地域。セルビア・ブルガリアの双方が自国の言葉と主張した。要確認
+
+# ---- ヴォイヴォディナ（バーチカ・バナト・スレム） ----
+- id: lang_vojvodina_base
+  name: ヴォイヴォディナ（下地）
+  select:
+    adm1: ["SRB/North Banat District", "SRB/Central Banat District", "SRB/South Banat District", "SRB/North Backa District", "SRB/West Backa District", "SRB/South Backa District", "SRB/Syrmia District"]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: hungarian
+      note: オスマン帝国の支配下で、セルビア人とブニェヴツィ人の地域になっていた。
+    - from: 1700
+      main: serbocroatian
+      minor: hungarian
+      note: 1690年の大移住でセルビア人がハプスブルク領に入り、軍政国境地帯を守った。バナトは1718年までオスマン領。
+    - from: 1750
+      main: serbocroatian
+      minor: german
+      note: 1720年代からのドイツ人（ドナウ・シュヴァーベン人）の入植が進む。18世紀後半、マリア・テレジアとヨーゼフ2世の入植政策でドイツ人・ハンガリー人・スロヴァキア人・ルシン人・ルーマニア人などが入り、ヨーロッパ有数の民族のモザイクになる。
+      source: "https://ja.wikipedia.org/wiki/ヴォイヴォディナ"
+
+- id: lang_vojvodina_hungarian
+  name: ティサ川沿いの北バーチカ・北バナト（ハンガリー語の地域）
+  select:
+    pieces: [SRB-Kanjiza_Municipality, SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Coka_Municipality, SRB-Novi_Knezevac_Municipality, SRB-Backa_Topola_Municipality, SRB-Mali_Idjos_Municipality, SRB-Becej_Municipality, SRB-Temerin_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: hungarian
+    - from: 1750
+      main: hungarian
+      minor: serbocroatian
+      note: 18世紀にハンガリー人が再入植した。テメリンなどにはドイツ人も多い。
+
+- id: lang_subotica
+  name: スボティツァ（サバトカ）
+  select:
+    pieces: [SRB-Subotica_City]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      note: ブニェヴツィ人の町。
+    - from: 1750
+      main: serbocroatian
+      minor: hungarian
+    - from: 1880
+      main: hungarian
+      minor: serbocroatian
+      note: 1910年の調査でハンガリー語約58%、ブニェヴツィ語約35%。
+
+- id: lang_vojvodina_german
+  name: ドナウ川沿いのドイツ人の地域（アパティン・オジャツィ・ヴルバス・バチュカ・パランカ・クラ）
+  select:
+    pieces: [SRB-Apatin_Municipality, SRB-Odzaci_Municipality, SRB-Vrbas_Municipality, SRB-Backa_Palanka_Municipality, SRB-Kula_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+    - from: 1760
+      main: german
+      minor: serbocroatian
+      note: ドナウ・シュヴァーベン人の入植村が多数。クラ（ルスキ・クルストゥル）・ヴルバス（クツラ）にはルシン人の村もある。
+
+- id: lang_backi_petrovac
+  name: バチュキ・ペトロヴァツ（スロヴァキア人の入植地）
+  select:
+    pieces: [SRB-Backi_Petrovac_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+    - from: 1750
+      main: slovak
+      minor: serbocroatian
+      note: 1745年にルター派のスロヴァキア人が入植した。
+
+- id: lang_kovacica
+  name: コヴァチツァ（バナトのスロヴァキア人の村）
+  select:
+    pieces: [SRB-Kovacica_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+    - from: 1800
+      main: slovak
+      minor: romanian
+      note: コヴァチツァ・パディナはスロヴァキア人、ウズディンはルーマニア人、デベリャチャはハンガリー人の村。要確認
+
+- id: lang_banat_romanian_rs
+  name: アリブナル（セルビア領バナトのルーマニア人の村）
+  select:
+    pieces: [SRB-Alibunar_Municipality]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: serbocroatian
+
+- id: lang_banat_german_rs
+  name: ヴルシャツ・ベラ・ツルクヴァ・プランディシュテ（南バナトのドイツ人の町）
+  select:
+    pieces: [SRB-Vrsac_Municipality, SRB-Bela_Crkva_Municipality, SRB-Plandiste_Municipality, SRB-Zitiste_Municipality, SRB-Secanj_Municipality, SRB-Nova_Crnja_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: romanian
+    - from: 1750
+      main: german
+      minor: serbocroatian
+      note: ヴルシャツ（ヴェルシェッツ）・ベラ・ツルクヴァ（ヴァイスキルヒェン）はドイツ語の町。周辺はセルビア人・ルーマニア人・ハンガリー人の村が混在する。要確認
+
+- id: lang_stara_pazova
+  name: スタラ・パゾヴァ（スレムのスロヴァキア人の村）
+  select:
+    pieces: [SRB-Stara_Pazova_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+    - from: 1780
+      main: serbocroatian
+      minor: slovak
+
+# ======== コソヴォ ========
+- id: lang_kosovo
+  name: コソヴォ（下地）
+  select:
+    iso: [XKX]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: albanian
+      note: ペーチ総主教座（1557–1766）のある、セルビア正教会の中心地。西部の山地からアルバニア人が平野へ移り住みつつあった。要確認（17世紀の民族構成は史料が乏しく、議論がある）
+    - from: 1740
+      main: albanian
+      minor: serbocroatian
+      note: 1690年・1737年のセルビア人の大移住の後、アルバニア人（多くはムスリム）の割合が増え、19世紀には多数派になる。1878年にはニシュ州から追われたアルバニア人が流入した。1912年の第1次バルカン戦争でセルビア・モンテネグロ領。
+      source: "https://ja.wikipedia.org/wiki/コソボの歴史"
+
+- id: lang_dukagjin
+  name: ドゥカジン高原（ジャコヴァ・デチャニ・プリズレン周辺）
+  select:
+    pieces: [XKX-Municipality_of_Gjakova, XKX-Municipality_of_Decan, XKX-Municipality_of_Junik, XKX-Municipality_of_Rahovec, XKX-Municipality_of_Malisheva, XKX-Municipality_of_Prizren, XKX-Municipality_of_Suhareka, XKX-Municipality_of_Drenas, XKX-Municipality_of_Skenderaj]
+  timeline:
+    - from: 1648
+      main: albanian
+      minor: serbocroatian
+      note: プリズレンは1878年の「プリズレン連盟」（アルバニア人の民族運動）の結成の地。
+
+- id: lang_kosovo_serb
+  name: コソヴォの北部とセルビア人の村の多い地区（イバル川以北・グラチャニツァ・シュトルプツェ）
+  select:
+    pieces: [XKX-Municipality_of_Leposaviq, XKX-Municipality_of_Zubin_Potok, XKX-Municipality_of_Zvecan, XKX-Municipality_of_North_Mitrovica, XKX-Municipality_of_Gracanica, XKX-Municipality_of_Shterpce, XKX-Municipality_of_Partesh, XKX-Municipality_of_Ranillug, XKX-Municipality_of_Kllokot, XKX-Municipality_of_Novoberde]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: albanian
+
+- id: lang_gora
+  name: ゴーラ（ドラガシュ）
+  select:
+    pieces: [XKX-Municipality_of_Dragash]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: albanian
+      note: ゴーラ人（南スラヴ系の言葉を話すムスリム）とアルバニア人のオポヤ地方。
+
+- id: lang_mamusha
+  name: マムシャ
+  select:
+    pieces: [XKX-Municipality_of_Mamusha]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: albanian
+      note: トルコ語を話す村。
+
+# ======== モンテネグロ ========
+- id: lang_montenegro
+  name: モンテネグロ
+  select:
+    iso: [MNE]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      note: ツェティニェの主教公（ヴラディカ）の国。北部（サンジャク）はムスリムのスラヴ人とセルビア人。コトル湾はヴェネツィア領で、町の上層はイタリア語。
+
+- id: lang_ulcinj
+  name: ウルツィニ（ドゥルチーニョ）
+  select:
+    pieces: [MNE-Ulcinj_Municipality]
+  timeline:
+    - from: 1648
+      main: albanian
+      note: アルバニア人の港町。1880年にモンテネグロ領。
+
+- id: lang_plav_gusinje
+  name: プラヴ・グシニェ
+  select:
+    pieces: [MNE-Plav_Municipality, MNE-Gusinje_Municipality]
+  timeline:
+    - from: 1648
+      main: albanian
+      minor: serbocroatian
+      note: アルバニア人とスラヴ系ムスリムの地域。1912年にモンテネグロ領。要確認
+
+- id: lang_bar_podgorica
+  name: バール・ポドゴリツァ（トゥジ・マレシアを含む）
+  select:
+    pieces: [MNE-Bar_Municipality, MNE-Podgorica_Municipality]
+  timeline:
+    - from: 1648
+      main: serbocroatian
+      minor: albanian
+      note: ポドゴリツァ（1878年までオスマン領）とバールの町には、アルバニア人・トルコ人のムスリムが多かった。トゥジ周辺のマレシア（高地）はアルバニア人のカトリックの部族。
+
+# ======== アルバニア ========
+- id: lang_albania
+  name: アルバニア
+  select:
+    iso: [ALB]
+  timeline:
+    - from: 1648
+      main: albanian
+      note: 北部はゲグ方言、南部はトスク方言。17世紀にイスラームへの改宗が進む。中部・南部の町（ヴォスコポイェ、ベラト、コルチャ）にはアルーマニア人（ヴラフ人）も多く、ヴォスコポイェは18世紀にバルカン有数の商業都市だった。プリズレン連盟（1878）以後のアルバニア人の民族運動（ナショナル・ルネサンス）。1908年のマナスティル会議でラテン文字の正書法が決まる。1912年に独立宣言。
+      source: "https://ja.wikipedia.org/wiki/アルバニア語"
+
+- id: lang_albania_greek
+  name: アルバニア南部のギリシア語の地域（ドロプル・デルヴィナ・サランダ）
+  select:
+    pieces: [ALB-Gjirokaster, ALB-Delvine, ALB-Sarande]
+  timeline:
+    - from: 1648
+      main: albanian
+      minor: greek
+      note: ドロプル谷・デルヴィナ・ヒマラ周辺には正教徒のギリシア語の村がある。
+
+# ======== 北マケドニア ========
+- id: lang_macedonia_base
+  name: マケドニア（下地：マケドニアのスラヴ語）
+  select:
+    iso: [MKD]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: turkish
+      note: 農民はスラヴ語（ブルガリア語の西部方言、のちのマケドニア語）。町と平野にはトルコ人・ユリュク（遊牧のトルコ系）、アルバニア人のムスリム、アルーマニア人・ユダヤ人が住む。1870年のブルガリア総主教代理座の設立の後、ギリシア・ブルガリア・セルビアがそれぞれ学校と教会でマケドニアのスラヴ系住民を取り合った（「マケドニア問題」）。1903年のイリンデン蜂起。1913年のブカレスト条約でセルビア領。
+      source: https://ja.wikipedia.org/wiki/マケドニア問題
+
+- id: lang_polog
+  name: ポログ（テトヴォ・ゴスティヴァル）
+  select:
+    adm1: ["MKD/Polog"]
+    exclude: [MKD-Mavrovo_and_Rostusha]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: albanian
+    - from: 1750
+      main: albanian
+      minor: bulgarian
+      note: 18世紀からアルバニア人のムスリムが北西マケドニアに移り住み、ポログ盆地の多数派になる。要確認
+
+- id: lang_macedonia_albanian
+  name: 西マケドニアのアルバニア人の地域（デバル・ザヤス・サライ・リプコヴォ）
+  select:
+    pieces: [MKD-Debar, MKD-Zajas, MKD-Oslomej, MKD-Saraj, MKD-Arachinovo, MKD-Studenichani, MKD-Lipkovo, MKD-Chair]
+  timeline:
+    - from: 1648
+      main: albanian
+      minor: bulgarian
+
+- id: lang_zhupa
+  name: ジュパ・プラスニツァ（トルコ語を話す村）
+  select:
+    pieces: [MKD-Centar_Zhupa, MKD-Plasnitsa]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: albanian
+
+- id: lang_krushevo
+  name: クルシェヴォ（アルーマニア人の町）
+  select:
+    pieces: [MKD-Krushevo]
+  timeline:
+    - from: 1648
+      main: bulgarian
+    - from: 1770
+      main: romanian
+      minor: bulgarian
+      note: 18世紀後半、ヴォスコポイェの破壊（1769）の後に移ってきたアルーマニア人の商人の町（アルーマニア語は romanian の色で塗る）。1903年のイリンデン蜂起で「クルシェヴォ共和国」。要確認
+
+- id: lang_kumanovo
+  name: クマノヴォ・スタロ・ナゴリチャネ
+  select:
+    pieces: [MKD-Kumanovo, MKD-Staro_Nagorichane, MKD-Kriva_Palanka]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: serbocroatian
+      note: 北部の村の方言はセルビア語に近い。
+
+# ======== ブルガリア ========
+- id: lang_bulgaria_base
+  name: ブルガリア（下地：ブルガリア語）
+  select:
+    iso: [BGR]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: turkish
+      note: 農民の多くはブルガリア語。町と平野にはトルコ人のムスリムが多い。正教会の上層と学校はギリシア語（コンスタンティノープル総主教座）。ロドピ山地のポマク（ブルガリア語を話すムスリム）もブルガリア語に含める。
+    - from: 1880
+      main: bulgarian
+      note: 露土戦争（1877–78）とブルガリア公国の成立で、トルコ人・チェルケス人のムスリムの多くが去った。19世紀の民族再生（ブルガリア語の学校、1870年の総主教代理座）。
+      source: "https://ja.wikipedia.org/wiki/ブルガリア民族復興"
+
+- id: lang_deliorman
+  name: デリオルマン（ブルガリア北東部のトルコ人の地域）
+  select:
+    pieces: [BGR-Razgrad, BGR-Targovishte, BGR-Kardzhali]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: bulgarian
+      note: トルコ人の農民が多数の地域。クルジャリ（ロドピ東部）もトルコ人が多い。
+
+- id: lang_shumen_silistra
+  name: シュメン・シリストラ・ドブリチ（ドブルジャ南部）
+  select:
+    pieces: [BGR-Shumen, BGR-Silistra, BGR-Dobrich]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: bulgarian
+      note: トルコ人・タタール人の村と、ガガウズ人・ブルガリア人の村。1860年代にはクリミアからタタール人、カフカスからチェルケス人が移り住んだ。
+    - from: 1880
+      main: bulgarian
+      minor: turkish
+      note: 露土戦争の後、ムスリムの多くが移住し、ブルガリア人が入植した。南ドブルジャ（ドブリチ・シリストラ）は1913年にルーマニア領。要確認
+
+- id: lang_bulgaria_black_sea
+  name: 黒海沿岸の町（ヴァルナ・ブルガス）
+  select:
+    pieces: [BGR-Varna, BGR-Burgas]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: greek
+      note: アンヒアロス（ポモリエ）・ソゾポル・メセンブリア（ネセバル）・ヴァルナなどの港町はギリシア語。
+    - from: 1880
+      main: bulgarian
+      minor: turkish
+      note: 1906年の反ギリシア暴動の後、ギリシア人の多くがギリシアへ移った。
+
+- id: lang_vidin
+  name: ヴィディン（ドナウ川沿いのヴラフ人の村）
+  select:
+    pieces: [BGR-Vidin]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: romanian
+      note: ドナウ川沿いにヴラフ人（ルーマニア語）の村がある。
+
+# ======== ギリシア ========
+- id: lang_greece_base
+  name: ギリシア（下地：ギリシア語）
+  select:
+    iso: [GRC]
+  timeline:
+    - from: 1648
+      main: greek
+      note: 正教徒の民衆はギリシア語（ペロポネソス東部のツァコニア語を含む）。オスマン帝国の支配層・町のムスリムはトルコ語。クレタ島のムスリムはギリシア語を話した。ギリシア独立（1830年のロンドン議定書）。独立戦争中に、モレアとルメリのムスリム住民は殺害・追放された。書き言葉はカサレヴサ（文語）。
+      source: https://ja.wikipedia.org/wiki/ギリシャ独立戦争
+
+- id: lang_attica_arvanite
+  name: アッティカ・サロニコス湾の島々（アルヴァニテスの地域）
+  select:
+    pieces: [GRC-Acharnes, GRC-Aspropyrgos, GRC-Elefsina, GRC-Fyli, GRC-Mandra_Eidyllia, GRC-Megara, GRC-Salamina, GRC-Marathon, GRC-Oropos, GRC-Dionysos, GRC-Kropia, GRC-Markopoulo_Mesogaias, GRC-Spata_Artemida, GRC-Paiania, GRC-Pallini, GRC-Rafina_Pikermi, GRC-Saronikos, GRC-Lavreotiki, GRC-Ydra, GRC-Spetses, GRC-Poros, GRC-Troizinia_Methana, GRC-Ermionida, GRC-Aegina, GRC-Agistri]
+  timeline:
+    - from: 1648
+      main: albanian
+      minor: greek
+      note: 14〜15世紀に移住したアルヴァニテス（アルバニア語を話す正教徒）の村。ヒドラ・スペツェスの船主はアルヴァニテスで、独立戦争の艦隊を担った。
+      source: "https://ja.wikipedia.org/wiki/アルヴァニテス"
+    - from: 1880
+      main: greek
+      minor: albanian
+      note: 独立後の学校・兵役・アテネの成長で、ギリシア語化が進む。要確認
+
+- id: lang_athens_piraeus
+  name: アテネ・ピレウス
+  select:
+    adm1: ["GRC/Attica"]
+    exclude: [GRC-Acharnes, GRC-Aspropyrgos, GRC-Elefsina, GRC-Fyli, GRC-Mandra_Eidyllia, GRC-Megara, GRC-Salamina, GRC-Marathon, GRC-Oropos, GRC-Dionysos, GRC-Kropia, GRC-Markopoulo_Mesogaias, GRC-Spata_Artemida, GRC-Paiania, GRC-Pallini, GRC-Rafina_Pikermi, GRC-Saronikos, GRC-Lavreotiki, GRC-Ydra, GRC-Spetses, GRC-Poros, GRC-Troizinia_Methana, GRC-Ermionida, GRC-Aegina, GRC-Agistri, GRC-Kythira]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: albanian
+      note: オスマン時代のアテネは小さな町で、周辺の村はアルヴァニテス。
+    - from: 1834
+      main: greek
+      note: 1834年にギリシア王国の首都になり、各地からギリシア人が集まる。
+
+- id: lang_boeotia_euboea_arvanite
+  name: ボイオティア・南エヴィア・コリンティア・アルゴリダ（アルヴァニテスの村の多い地域）
+  select:
+    pieces: [GRC-Thebes, GRC-Tanagra, GRC-Aliartos, GRC-Karystos, GRC-Kymi_Aliveri, GRC-Corinth, GRC-Loutraki_Agioi_Theodoroi, GRC-Velo_Vocha, GRC-Nemea, GRC-Epidaurus, GRC-Argos_Mykines, GRC-Lokroi, GRC-Andros]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: albanian
+      note: 要確認（南エヴィア・ボイオティアの村の多くはアルバニア語が多数）
+
+- id: lang_chameria
+  name: チャメリア（テスプロティア）・スーリ
+  select:
+    pieces: [GRC-Filiates, GRC-Igoumenitsa, GRC-Souli]
+  timeline:
+    - from: 1648
+      main: albanian
+      minor: greek
+      note: チャム人（アルバニア語を話す住民。ムスリムと正教徒）。正教徒のスーリオテスは1803年にアリー・パシャに追われた。1913年にギリシア領。
+
+- id: lang_pindus_vlach
+  name: ピンドス山地（アルーマニア人の村）
+  select:
+    pieces: [GRC-Metsovo]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: greek
+      note: メツォヴォはアルーマニア人（ヴラフ人）の牧畜民と商人の町。アルーマニア語はルーマニア語に近いロマンス系の言葉で、ここでは romanian（ルーマニア語）の色で塗る。
+      source: "https://ja.wikipedia.org/wiki/アルーマニア人"
+
+- id: lang_pindus_mixed
+  name: ピンドス山地とその周辺（ヴラフ人の村の多い地区）
+  select:
+    pieces: [GRC-Grevena, GRC-Deskati, GRC-Pyli, GRC-Meteora, GRC-Elassona, GRC-Zagori, GRC-Konitsa, GRC-North_Tzoumerka, GRC-Argithea]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: romanian
+      note: サマリナ・ペリヴォリ（グレヴェナ）、アスプロポタモス、ザゴリなどにアルーマニア人の村が多い。
+
+- id: lang_thessaly_plain
+  name: テッサリア平原（コニャル・トルコ人の村）
+  select:
+    pieces: [GRC-Larissa, GRC-Tyrnavos, GRC-Farsala, GRC-Trikala, GRC-Kileler, GRC-Agia, GRC-Tempi]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: turkish
+      note: ラリサ（イェニシェヒル）を中心に、アナトリアから移ったコニャル・トルコ人の村が多かった。
+    - from: 1881
+      main: greek
+      note: 1881年にテッサリアがギリシア領になり、ムスリムは移住していった。
+
+- id: lang_macedonia_gr_south
+  name: ギリシア領マケドニア南部（ハルキディキ・ピエリア・イマティア・コザニ）
+  select:
+    pieces: [GRC-Kassandra, GRC-Sithonia, GRC-Polygyros, GRC-Nea_Propontida, GRC-Aristotelis, GRC-Katerini, GRC-Dion_Olympus, GRC-Pydna_Kolindros, GRC-Veria, GRC-Naousa, GRC-Kozani, GRC-Servia_Velventos, GRC-Voio, GRC-Thermaikos, GRC-Thermi, GRC-Volvi, GRC-Mount_Anthos]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: turkish
+      note: ギリシア語の村と町（ナウサ・ヴェリア・コザニ・シアティスタ）。平野にはトルコ人の村も。アトス山には各国の正教の修道院（ギリシア・ロシア・ブルガリア・セルビア）。
+    - from: 1913
+      main: greek
+      note: 第1・第2次バルカン戦争（1912–13）でギリシア領。戦争中にムスリムの多くが避難・移住したので、ここではトルコ語の minor を外す（残ったムスリムが去るのは1923年の住民交換）。
+
+- id: lang_macedonia_gr_slav
+  name: ギリシア領マケドニア西部・北部（スラヴ語の村の多い地域：フロリナ・カストリア・エデッサ・キルキス）
+  select:
+    pieces: [GRC-Florina, GRC-Prespes, GRC-Amyntaio, GRC-Kastoria, GRC-Orestida, GRC-Nestorio, GRC-Edessa, GRC-Skydra, GRC-Pella, GRC-Almopia, GRC-Paionia, GRC-Kilkis, GRC-Chalkidona, GRC-Alexandria, GRC-Lagkadas, GRC-Oraiokastro, GRC-Oraiokastro_2, GRC-Delta, GRC-Sintiki, GRC-Irakleia, GRC-Kato_Nevrokopiou]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: greek
+      note: マケドニアのスラヴ語の農村。町（カストリア・エデッサ）はギリシア語・トルコ語・アルーマニア語も話された。アルモピア（モグレナ）にはメグレノ・ルーマニア語とスラヴ系ムスリムの村がある。総主教派（ギリシア派）と総主教代理座派（ブルガリア派）の村が対立した。1904–08年の「マケドニア闘争」。要確認（20世紀の住民交換の前の状態）
+
+- id: lang_eordaia
+  name: エオルダイア（カイラリア）
+  select:
+    pieces: [GRC-Eordaia]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: bulgarian
+      note: プトレマイダ（カイラル）周辺はトルコ人の村が多かった。
+
+- id: lang_thessaloniki
+  name: テッサロニキ（サロニカ）
+  select:
+    pieces: [GRC-Thessaloniki]
+  timeline:
+    - from: 1648
+      main: ladino
+      minor: turkish
+      note: 1492年にスペインから追放されたセファルディム（ユダヤ人）が住民の半数前後を占め、ラディーノ語（ユダヤ・スペイン語）の都市になった。トルコ人（改宗ユダヤ人のデンメを含む）、ギリシア人も多い。1912年にギリシア領。
+      source: "https://ja.wikipedia.org/wiki/テッサロニキ"
+
+- id: lang_thessaloniki_suburbs
+  name: テッサロニキ周辺
+  select:
+    pieces: [GRC-Kalamaria, GRC-Neapoli_Sykies, GRC-Pavlos_Melas, GRC-Ampelokipoi_Menemeni, GRC-Kordelio_Evosmos, GRC-Pylaia_Chortiatis]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: turkish
+
+- id: lang_serres_drama
+  name: セレス・ドラマ・カヴァラ（東マケドニア）
+  select:
+    pieces: [GRC-Serres, GRC-Emmanouil_Pappas, GRC-Nea_Zichni, GRC-Amphipolis, GRC-Pangeou, GRC-Visaltia, GRC-Kavalas, GRC-Prosotsanis]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: turkish
+      note: ギリシア語・トルコ語・ブルガリア語の住民が混在する。北部の村はスラヴ語。要確認
+
+- id: lang_drama_turkish
+  name: ドラマ平野・パラネスティ
+  select:
+    pieces: [GRC-Dramas, GRC-Doxatou, GRC-Paranestiou]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: greek
+      note: タバコ栽培のトルコ人の村が多い。パラネスティの山地はポマク。
+
+- id: lang_western_thrace
+  name: 西トラキア（クサンティ・コモティニ）
+  select:
+    pieces: [GRC-Xanthis, GRC-Komotinis, GRC-Iasmou, GRC-Arrianon, GRC-Avdiron, GRC-Topirou, GRC-Nestou, GRC-Thassou]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: greek
+      note: トルコ人の農民が多数。町と沿岸にはギリシア人。1913–19年はブルガリア領。要確認（タソス島はギリシア語）
+
+- id: lang_pomak_gr
+  name: ロドピ山地南部（ポマク人の村）
+  select:
+    pieces: [GRC-Mykis]
+  timeline:
+    - from: 1648
+      main: bulgarian
+      minor: turkish
+      note: ポマク人（ブルガリア語を話すムスリム）。
+
+- id: lang_evros
+  name: エヴロス（東トラキア西部）
+  select:
+    pieces: [GRC-Alexandroupolis, GRC-Soufliou, GRC-Didymoteichou, GRC-Orestiadas, GRC-Maronias_Sapon, GRC-Samothrakis]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: turkish
+      note: ギリシア語・トルコ語・ブルガリア語の村が混在する。要確認
+
+# ======== キプロス ========
+- id: lang_cyprus
+  name: キプロス
+  select:
+    iso: [CYP]
+  timeline:
+    - from: 1648
+      main: greek
+      minor: turkish
+      note: 1571年のオスマン帝国の征服後、アナトリアからトルコ人が移住し、住民の約4分の1〜3分の1がトルコ語のムスリムになった。1878年にイギリスの管理下。
+      source: "https://ja.wikipedia.org/wiki/キプロスの歴史"
