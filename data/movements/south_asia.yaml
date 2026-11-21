@@ -1,0 +1,547 @@
+# 潮流：南アジア・東南アジア（1648–2025）。形式は docs/movements-format.md
+# spread の書き方：
+# - 独立後の国は政体（india・pakistan・indonesia など）で書く。
+# - 植民地の時代は、政体（britain・netherlands・france）で書くと本国や他の植民地まで光るので、政治の地域（data/regions の
+#   india_*.yaml・mainland_sea.yaml・maritime_sea.yaml）の ID の一覧で書く。一覧は YAML のアンカーで一度だけ書き、ほかの項目では参照する
+#   （&british_india・&bengal・&punjab・&maharashtra・&hindustan・&vietnam_regions・&indies・&java・&philippine_regions・&burma_regions）。
+#   2026-11-21 の時点の地域 ID。地域 ID が変わったら、ここも直す（npm run data で「未定義の地域」の警告が出る）。
+# - 英領インドの一覧（&british_india）は、ネパール・ブータン・シッキム・スリランカ・モルディブを除いた、現在のインド・パキスタン・バングラデシュの地域。
+
+- id: bhakti
+  name: バクティ運動（ヒンドゥー教の信愛の運動）
+  kind: religion
+  curve:
+    - [1648, 0.8]
+    - [1700, 0.6]
+    - [1750, 0.5]
+    - [1800, 0.4]
+    - [1850, 0.3]
+    - [1900, 0.25]
+    - [1950, 0.2]
+    - [2025, 0.2]
+  spread:
+    - where:
+        regions: &maharashtra [bombay_island, salsette, bassein, desh_west, satara, konkan_south, kolhapur_land, sangli, solapur, marathwada, osmanabad, khandesh, ahmadnagar, berar, nagpur_land, chanda]
+      center: true
+      curve: [[1648, 1.0], [1700, 0.7], [1800, 0.5], [1900, 0.4], [2025, 0.3]]
+    - where:
+        regions: &hindustan [delhi, up_saharanpur, up_meerut, up_agra, up_lower_doab, up_rohilkhand, up_rampur, up_awadh, up_gorakhpur, up_allahabad, up_benares, up_bundelkhand, up_jhansi, bihar, purnea]
+      curve: [[1648, 0.8], [1700, 0.6], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
+    - where:
+        regions: &bengal [wb_central, wb_north, kolkata, twenty_four_parganas, burdwan_midnapore, east_bengal]
+      curve: [[1648, 0.8], [1700, 0.6], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
+    - where: {regions: [upper_assam, tinsukia, middle_assam, darrang, kamrup, manipur_valley]}
+      curve: [[1648, 0.6], [1720, 0.8], [1800, 0.5], [1900, 0.3], [2025, 0.2]]
+  people: [トゥカーラーム, トゥルシーダース, チャイタニヤ, カビール, ミーラーバーイー, シャンカラデーヴァ]
+  works: [『ラームチャリトマーナス』（トゥルシーダース）, 『ギーター・ゴーヴィンダ』]
+  events: []
+  text: 神（クリシュナ・ラーマ・シヴァなど）への個人的な愛と帰依（バクティ）によって救われると説き、カーストや儀礼を重んじるバラモンの宗教を批判した民衆的な運動。南インドに始まり、15〜17 世紀に北インド（カビール・トゥルシーダース）・ベンガル（チャイタニヤ）・マハーラーシュトラ（トゥカーラーム）・アッサム（シャンカラデーヴァ）へ広がった。各地の言葉で歌われた詩は、地方の言語の文学を育てた。イスラームの神秘主義（スーフィズム）とも影響し合い、シク教を生んだ。
+  source: "https://ja.wikipedia.org/wiki/バクティ"
+
+- id: sikhism_khalsa
+  name: シク教の展開（カールサー）
+  kind: religion
+  curve:
+    - [1648, 0.4]
+    - [1675, 0.5]
+    - [1699, 0.8]
+    - [1765, 0.9]
+    - [1799, 1.0]
+    - [1839, 1.0]
+    - [1849, 0.6]
+    - [1873, 0.6]
+    - [1920, 0.8]
+    - [1947, 0.7]
+    - [1984, 0.8]
+    - [2000, 0.6]
+    - [2025, 0.5]
+  spread:
+    - where:
+        regions: &punjab [pk_lahore, pk_bar, pk_potohar, pk_attock, pk_multan, pk_thal, pk_dgkhan, pb_majha, pb_doaba, pb_kapurthala, pb_cis_sutlej, pb_phulkian]
+      center: true
+      curve: [[1648, 0.4], [1699, 0.8], [1765, 0.9], [1799, 1.0], [1839, 1.0], [1849, 0.6], [1920, 0.8], [1946, 0.8], [1947, 0]]
+    - where: {regions: [pb_majha, pb_doaba, pb_kapurthala, pb_cis_sutlej, pb_phulkian]}
+      center: true
+      curve: [[1947, 0.8], [1966, 0.9], [1984, 1.0], [1995, 0.7], [2025, 0.6]]
+    - where: {polities: [sikh_empire]}
+      curve: [[1799, 1.0], [1849, 1.0]]
+  people: [グル＝ナーナク, グル＝テーグ＝バハードゥル, グル＝ゴービンド＝シング, ランジート＝シング]
+  works: [『グル・グラント・サーヒブ』]
+  events: [グル・ゴービンド・シングがカールサーを結成, ランジート・シングがラホールを取る, 黄金寺院事件とインディラ・ガンディーの暗殺]
+  text: ナーナク（1469–1539）がヒンドゥー教のバクティとイスラームのスーフィズムの影響のもとに開いた一神教。偶像崇拝とカーストを否定する。ムガル帝国の迫害（第9代グルの処刑、1675）に対し、第10代グルのゴービンド＝シングが 1699 年に信徒の共同体カールサーを結成して武装し、18 世紀にはシク教徒の軍事集団（ミスル）がパンジャーブを支配して、ランジート＝シングのシク王国（1799–1849）が生まれた。印パ分離でパキスタン側のシク教徒はインドへ移り、1984 年には自治を求める運動と政府の衝突（黄金寺院事件）が起きた。
+  source: "https://ja.wikipedia.org/wiki/シク教"
+
+- id: bengal_renaissance
+  name: ベンガル・ルネサンス
+  kind: thought
+  curve:
+    - [1800, 0.1]
+    - [1815, 0.3]
+    - [1830, 0.6]
+    - [1860, 0.9]
+    - [1880, 1.0]
+    - [1905, 1.0]
+    - [1913, 0.9]
+    - [1930, 0.6]
+    - [1941, 0.4]
+    - [1950, 0.2]
+    - [1960, 0]
+  spread:
+    - where: {regions: [kolkata, twenty_four_parganas]}
+      center: true
+      curve: [[1800, 0.2], [1815, 0.5], [1830, 0.8], [1860, 1.0], [1905, 1.0], [1930, 0.7], [1950, 0.3], [1960, 0]]
+    - where:
+        regions: *bengal
+      curve: [[1815, 0.1], [1840, 0.3], [1870, 0.6], [1905, 0.8], [1930, 0.5], [1950, 0.2], [1960, 0]]
+  people: [ラーム＝モーハン＝ローイ, イーシュワル＝チャンドラ＝ヴィディヤーサーガル, バンキム＝チャンドラ, ラビンドラナート＝タゴール, ヴィヴェーカーナンダ, J. C. ボース]
+  works: [『ギーターンジャリ』（タゴール）, 『アーナンダマト』（バンキム。「バンデー・マータラム」の歌）]
+  events: []
+  text: 19 世紀のカルカッタで、英語教育を受けた中間層（バドラロク）が西洋の思想・科学を学び、インドの伝統を見直して、社会改革と近代的なベンガル語の文学・芸術を生み出した動き。ラーム＝モーハン＝ローイはサティー（寡婦殉死）の廃止（1829）を訴え、ヴィディヤーサーガルは寡婦の再婚を認めさせた（1856）。タゴールはアジアで初めてノーベル文学賞を受けた（1913）。インドの民族運動の思想的な源の一つになった。
+  source: "https://ja.wikipedia.org/wiki/ベンガル・ルネサンス"
+
+- id: hindu_reform
+  name: ヒンドゥー教の改革運動（ブラフモ・サマージ、アーリヤ・サマージ）
+  kind: religion
+  curve:
+    - [1820, 0.1]
+    - [1828, 0.4]
+    - [1860, 0.6]
+    - [1875, 0.8]
+    - [1893, 1.0]
+    - [1910, 0.8]
+    - [1930, 0.6]
+    - [1947, 0.4]
+    - [1970, 0.2]
+    - [2000, 0.1]
+  spread:
+    - where:
+        regions: *bengal
+      center: true
+      curve: [[1828, 0.6], [1860, 0.9], [1893, 1.0], [1920, 0.6], [1947, 0.3], [1970, 0.1]]
+    - where:
+        regions: *punjab
+      curve: [[1875, 0.4], [1886, 0.8], [1920, 0.9], [1946, 0.7], [1947, 0]]
+    - where: {regions: [pb_majha, pb_doaba, pb_kapurthala, pb_cis_sutlej, pb_phulkian, hr_north, hr_panipat, hr_south, hr_hisar, hr_mahendragarh, delhi]}
+      curve: [[1947, 0.6], [1970, 0.3], [2000, 0.2]]
+    - where:
+        regions: *maharashtra
+      curve: [[1867, 0.4], [1890, 0.6], [1920, 0.5], [1950, 0.2]]
+    - where:
+        regions: *hindustan
+      curve: [[1875, 0.2], [1900, 0.5], [1930, 0.5], [1950, 0.3], [2000, 0.1]]
+  people: [ラーム＝モーハン＝ローイ, デーヴェーンドラナート＝タゴール, ダヤーナンダ＝サラスヴァティー, ラーマクリシュナ, ヴィヴェーカーナンダ]
+  events: []
+  text: キリスト教の宣教や西洋の思想に向き合い、ヒンドゥー教を内側から改めようとした運動。ラーム＝モーハン＝ローイのブラフモ・サマージ（1828）は偶像崇拝やカーストを批判して唯一神を説き、ダヤーナンダのアーリヤ・サマージ（1875）は「ヴェーダに帰れ」と唱えてパンジャーブ・北インドに広まった。ラーマクリシュナの弟子ヴィヴェーカーナンダは、シカゴの万国宗教会議（1893）でヒンドゥー教を世界に紹介した。
+  source: "https://ja.wikipedia.org/wiki/ブラフモ・サマージ"
+
+- id: aligarh_movement
+  name: インド・ムスリムの改革（アリーガル運動・デーオバンド学派）
+  kind: thought
+  curve:
+    - [1860, 0.1]
+    - [1867, 0.4]
+    - [1875, 0.7]
+    - [1900, 1.0]
+    - [1920, 0.9]
+    - [1947, 0.6]
+    - [1970, 0.4]
+    - [2000, 0.4]
+    - [2025, 0.4]
+  spread:
+    - where: {regions: [up_agra, up_meerut, up_saharanpur]}
+      center: true
+      curve: [[1867, 0.6], [1875, 0.9], [1900, 1.0], [1947, 0.7], [1970, 0.4], [2025, 0.4]]
+    - where:
+        regions: *hindustan
+      curve: [[1867, 0.3], [1900, 0.6], [1947, 0.5], [1970, 0.3], [2025, 0.3]]
+    - where:
+        regions: *punjab
+      curve: [[1880, 0.3], [1906, 0.6], [1946, 0.7], [1947, 0]]
+    - where: {polities: [pakistan, bangladesh]}
+      curve: [[1947, 0.6], [1970, 0.5], [2025, 0.5]]
+  people: [サイイド＝アフマド＝ハーン, ムハンマド＝イクバール, シブリー＝ヌーマーニー]
+  works: []
+  events: [アリーガルにムスリムの学校（のちのアリーガル・ムスリム大学）]
+  text: インド大反乱（1857）の後、地位を失ったインドのムスリムの再生を目指した動き。サイイド＝アフマド＝ハーンはアリーガルに西洋式の学校（1875。のちのアリーガル・ムスリム大学）を開き、英語教育とイギリスへの協調を説いた。これに対しデーオバンド学院（1867）はイスラームの伝統的な学問を守った。アリーガル出身者はムスリム連盟の中心となり、詩人イクバールはムスリムの国家の構想を示した。
+  source: "https://ja.wikipedia.org/wiki/アリーガル運動"
+
+- id: indian_nationalism
+  name: インドの民族運動（インド国民会議・スワデーシ・スワラージ）
+  kind: system
+  curve:
+    - [1857, 0.2]
+    - [1876, 0.3]
+    - [1885, 0.5]
+    - [1905, 0.8]
+    - [1911, 0.7]
+    - [1919, 0.9]
+    - [1930, 1.0]
+    - [1942, 1.0]
+    - [1947, 0.9]
+    - [1950, 0.5]
+    - [1964, 0.4]
+    - [1977, 0.3]
+    - [2000, 0.2]
+    - [2025, 0.2]
+  spread:
+    - where:
+        regions: &british_india [
+                pk_lahore, pk_bar, pk_potohar, pk_attock, pk_multan, pk_thal, pk_dgkhan, pk_bahawalpur, pk_peshawar, pk_hazara, pk_dik, pk_swat,
+                pk_chitral, pk_tribal, pk_kohistan, pk_upper_sindh, pk_khairpur, pk_lower_sindh, pk_thar, pk_karachi, pk_kalat, pk_kachhi, pk_nushki,
+                pk_quetta, pk_pishin, pk_sibi, pk_zhob, pk_marri_bugti, pk_baltistan, pk_gilgit, pk_hunza, kashmir_valley, pk_azad_kashmir, jammu,
+                ladakh, hp_kangra, hp_kullu, hp_chamba_mandi, hp_shimla, uk_tehri, uk_garhwal, uk_kumaon, pb_majha, pb_doaba, pb_kapurthala,
+                pb_cis_sutlej, pb_phulkian, hr_north, hr_panipat, hr_south, hr_hisar, hr_mahendragarh, delhi, up_saharanpur, up_meerut, up_agra,
+                up_lower_doab, up_rohilkhand, up_rampur, up_awadh, up_gorakhpur, up_allahabad, up_benares, up_bundelkhand, up_jhansi, mp_gwalior,
+                mp_malwa_scindia, mp_malwa_holkar, mp_bhopal, mp_bundelkhand, mp_sagar, mp_baghelkhand, mp_mandla, mp_deogarh, mp_narmada, mp_nimar,
+                rj_mewar, rj_marwar, rj_amber, rj_alwar, rj_bharatpur, rj_bikaner, rj_jaisalmer, rj_hadoti, rj_vagad, rj_ajmer, gj_kutch,
+                gj_kathiawar, gj_baroda, gj_ahmedabad, gj_kheda, gj_east, gj_panchmahals, gj_surat, gj_bharuch, gj_valsad,
+                wb_central, wb_north, kolkata, twenty_four_parganas, burdwan_midnapore, bihar, purnea, santhal_parganas, manbhum,
+                chota_nagpur_plateau, singhbhum, saraikela_kharsawan, orissa_coast, mayurbhanj, orissa_states, kandhamal, sambalpur,
+                orissa_west_states, sundargarh, koraput, ganjam, chhattisgarh_plain, chhattisgarh_states, surguja_jashpur, bastar, east_bengal,
+                karimganj, cooch_behar, bengal_duars, eastern_duars, assam_duars, kalimpong, darjeeling, upper_assam, tinsukia, middle_assam,
+                darrang, kamrup, goalpara, karbi_hills, namsai, cachar, dima_hasao, jaintia_hills, khasi_hills, garo_hills, lushai_hills,
+                naga_hills_west, naga_hills_mid, naga_hills_east, manipur_valley, manipur_hills, tripura_hills,
+                bombay_island, salsette, bassein, desh_west, satara, konkan_south, kolhapur_land, sangli, solapur, marathwada, osmanabad,
+                khandesh, ahmadnagar, berar, nagpur_land, chanda, bijapur_core, belgaum, dharwad, gulbarga_bidar, raichur, bellary, sonda_land,
+                malnad, canara, mysore_core, bangalore, sira, chitradurga_land, kodagu, telangana, circars, guntur, kurnool, kadapa, anantapur,
+                nellore, madras, chingleput, arcot, baramahal, salem, kongu, dindigul, madurai_land, tirunelveli, trichy, thanjavur_land,
+                ramnad_land, pudukkottai_land, travancore_core, quilon, central_kerala, cochin_land, calicut_land, north_malabar, kasaragod,
+                lakshadweep, south_andaman, north_andaman, nicobar]
+      curve: [[1857, 0.2], [1885, 0.4], [1905, 0.6], [1919, 0.8], [1930, 1.0], [1942, 1.0], [1946, 1.0], [1947, 0]]
+    - where:
+        regions: *bengal
+      center: true
+      curve: [[1885, 0.6], [1905, 1.0], [1911, 0.8], [1930, 0.9], [1946, 0.9], [1947, 0]]
+    - where:
+        regions: *maharashtra
+      center: true
+      curve: [[1885, 0.7], [1905, 0.9], [1920, 0.8], [1946, 0.9], [1947, 0]]
+    - where: {polities: [india]}
+      curve: [[1947, 0.9], [1950, 0.6], [1964, 0.5], [1977, 0.3], [2000, 0.2], [2025, 0.2]]
+  people: [ナオロジー, ティラク, ゴーカレー, ガンディー, ネルー, チャンドラ＝ボース, パテール]
+  works: [『インドの貧困と非英国的支配』（ナオロジー）]
+  events: [インド国民会議の創立, ベンガル分割令とスワデーシー運動, アムリトサル事件, 国民会議派ラホール大会で「プールナ・スワラージ」を決議, インド・パキスタンの分離独立]
+  text: 1885 年にイギリスの協力のもとで生まれたインド国民会議は、当初は穏健な請願の団体だったが、1905 年のベンガル分割令をきっかけに、ティラクらの急進派のもとで英貨排斥・スワデーシ（国産品愛用）・スワラージ（自治）・民族教育の4綱領を掲げた（1906 年カルカッタ大会）。第一次世界大戦後はガンディーの指導で大衆運動となり、1929 年のラホール大会で完全独立（プールナ・スワラージ）を決議した。1947 年にインドとパキスタンが分かれて独立した。
+  source: "https://ja.wikipedia.org/wiki/インド国民会議"
+
+- id: satyagraha
+  name: ガンディーの非暴力・不服従運動（サティヤーグラハ）
+  kind: thought
+  curve:
+    - [1906, 0.2]
+    - [1915, 0.3]
+    - [1919, 0.7]
+    - [1922, 0.8]
+    - [1930, 1.0]
+    - [1934, 0.7]
+    - [1942, 0.9]
+    - [1948, 0.6]
+    - [1960, 0.5]
+    - [1968, 0.6]
+    - [1990, 0.4]
+    - [2025, 0.3]
+  spread:
+    - where: {regions: [gj_ahmedabad, gj_kheda, gj_surat, gj_bharuch, gj_valsad, gj_kathiawar]}
+      center: true
+      curve: [[1915, 0.5], [1918, 0.8], [1930, 1.0], [1942, 1.0], [1947, 0.8], [1948, 0]]
+    - where:
+        regions: *british_india
+      curve: [[1917, 0.3], [1919, 0.6], [1922, 0.8], [1923, 0.5], [1930, 1.0], [1934, 0.6], [1942, 0.9], [1946, 0.7], [1947, 0]]
+    - where: {polities: [india]}
+      curve: [[1947, 0.7], [1948, 0.6], [1960, 0.4], [1975, 0.4], [2000, 0.3], [2025, 0.3]]
+  people: [ガンディー, ネルー, ガッファール＝ハーン, ヴィノーバ＝バーヴェ]
+  works: [『ヒンド・スワラージ』（ガンディー）]
+  events: [チャンパーランのサティヤーグラハ, ガンディーの非協力運動, 塩の行進, ガンディーの暗殺]
+  text: 「真理の把握」を意味するサティヤーグラハは、暴力を使わずに不正な法や命令に従わないことで相手の良心に訴える抵抗の方法。ガンディーが南アフリカのインド人の差別撤廃運動（1906–）で始め、インドでは非協力運動（1920–22）、塩の行進（1930）、「インドを立ち去れ」運動（1942）で民衆を動員した。チャルカー（糸車）による手紡ぎを奨励し、不可触民の差別やヒンドゥーとムスリムの対立にも取り組んだ。アメリカの公民権運動（キング牧師）など、世界の非暴力の運動に影響を与えた。
+  source: "https://ja.wikipedia.org/wiki/サティヤーグラハ"
+
+- id: muslim_league
+  name: ムスリム連盟とパキスタン運動
+  kind: system
+  curve:
+    - [1906, 0.3]
+    - [1916, 0.4]
+    - [1930, 0.5]
+    - [1940, 0.8]
+    - [1946, 1.0]
+    - [1947, 1.0]
+    - [1950, 0.6]
+    - [1958, 0.3]
+    - [1971, 0.2]
+    - [1980, 0]
+  spread:
+    - where: {regions: [up_agra, up_meerut, up_saharanpur, up_rohilkhand, up_rampur, up_awadh]}
+      curve: [[1906, 0.5], [1920, 0.4], [1937, 0.7], [1946, 0.9], [1947, 0]]
+    - where:
+        regions: *punjab
+      center: true
+      curve: [[1906, 0.2], [1930, 0.4], [1940, 0.9], [1946, 1.0], [1947, 0]]
+    - where: {regions: [pk_peshawar, pk_hazara, pk_dik, pk_swat, pk_chitral, pk_upper_sindh, pk_khairpur, pk_lower_sindh, pk_thar, pk_karachi, pk_kalat, pk_kachhi, pk_quetta, pk_pishin, pk_sibi, pk_zhob]}
+      curve: [[1930, 0.3], [1940, 0.7], [1946, 0.9], [1947, 0]]
+    - where:
+        regions: *bengal
+      curve: [[1906, 0.6], [1911, 0.4], [1937, 0.6], [1946, 1.0], [1947, 0]]
+    - where: {polities: [pakistan]}
+      center: true
+      curve: [[1947, 1.0], [1950, 0.6], [1958, 0.3], [1971, 0.2], [1980, 0]]
+  people: [ムハンマド＝アリー＝ジンナー, イクバール, リヤーカト＝アリー＝ハーン, ファズルル＝ハク]
+  events: [全インド・ムスリム連盟の結成, ラホール決議（パキスタン決議）, インド・パキスタンの分離独立]
+  text: 1906 年にダッカで結成された全インド・ムスリム連盟は、ムスリムの権利を守るための政党で、当初はイギリスに協力的だった。ジンナーの指導のもと、ヒンドゥーとムスリムは別の民族だとする「二民族論」を掲げ、1940 年のラホール決議でムスリムの国家（パキスタン）を求めた。1946 年の直接行動の日にはカルカッタで大規模な暴動が起き、1947 年にインドから分かれてパキスタンが独立した。
+  source: "https://ja.wikipedia.org/wiki/全インド・ムスリム連盟"
+
+- id: ambedkar_dalit
+  name: 不可触民の解放運動（アンベードカル）
+  kind: thought
+  curve:
+    - [1873, 0.1]
+    - [1924, 0.3]
+    - [1927, 0.5]
+    - [1932, 0.6]
+    - [1950, 0.8]
+    - [1956, 0.9]
+    - [1980, 0.7]
+    - [1990, 0.8]
+    - [2025, 0.7]
+  spread:
+    - where:
+        regions: *maharashtra
+      center: true
+      curve: [[1873, 0.2], [1927, 0.7], [1950, 0.9], [1956, 1.0], [1990, 0.8], [2025, 0.7]]
+    - where: {polities: [india]}
+      curve: [[1947, 0.5], [1950, 0.7], [1980, 0.5], [1990, 0.7], [2025, 0.6]]
+    - where: {regions: [travancore_core, quilon, central_kerala, madras, chingleput, arcot, thanjavur_land]}
+      curve: [[1900, 0.3], [1924, 0.6], [1947, 0.5]]
+  people: [アンベードカル, ジョーティラーオ＝プレー, ナーラーヤナ＝グル, ペリヤール]
+  events: [ヴァイコム・サティヤーグラハ]
+  text: カースト制度の最下層に置かれ、「不可触民」として差別された人々（今日のダリト）が、平等な権利を求めた運動。プレーの真理探究協会（1873）、ケーララのナーラーヤナ＝グル、寺院の道を通る権利を求めたヴァイコム・サティヤーグラハ（1924–25）などを経て、自らも不可触民の出身のアンベードカルが分離選挙を求め、ガンディーと対立した（プーナ協定、1932）。アンベードカルはインド憲法の起草の中心となり（不可触民制の廃止）、1956 年には数十万人とともに仏教に改宗した。
+  source: "https://ja.wikipedia.org/wiki/B・R・アンベードカル"
+
+- id: chakri_reform
+  name: チャクリ改革（シャムの近代化）
+  kind: system
+  curve:
+    - [1851, 0.2]
+    - [1868, 0.4]
+    - [1892, 0.9]
+    - [1905, 1.0]
+    - [1910, 0.8]
+    - [1932, 0.5]
+    - [1945, 0.2]
+    - [1960, 0]
+  spread:
+    - where: {polities: [siam]}
+      center: true
+      curve: [[1851, 0.3], [1855, 0.4], [1868, 0.6], [1892, 0.9], [1905, 1.0], [1910, 0.8], [1932, 0.6], [1945, 0.3], [1960, 0]]
+  people: [ラーマ4世（モンクット）, ラーマ5世（チュラロンコン）, ダムロン親王]
+  events: [ラーマ5世の即位とチャクリ改革, シャムの独立に関するイギリス・フランスの宣言]
+  text: ラーマ4世がボウリング条約（1855）で開国した後、ラーマ5世（チュラロンコン、在位 1868–1910）が進めた近代化改革。奴隷制の廃止、中央集権的な省庁と州の制度、鉄道・電信・学校の整備などを行った。周辺の領土をイギリス・フランスに譲りながらも、英仏の勢力圏の間の緩衝国として、東南アジアで唯一独立を保った。1932 年の立憲革命で絶対王政は終わった。
+  source: "https://ja.wikipedia.org/wiki/チャクリー改革"
+
+- id: philippine_revolution
+  name: フィリピン革命（プロパガンダ運動・カティプーナン）
+  kind: system
+  curve:
+    - [1872, 0.2]
+    - [1880, 0.4]
+    - [1887, 0.6]
+    - [1892, 0.7]
+    - [1896, 1.0]
+    - [1899, 1.0]
+    - [1902, 0.5]
+    - [1910, 0.3]
+    - [1935, 0.4]
+    - [1946, 0.3]
+    - [1960, 0]
+  spread:
+    - where: {regions: [manila, calabarzon, central_luzon]}
+      center: true
+      curve: [[1872, 0.4], [1887, 0.7], [1896, 1.0], [1899, 1.0], [1902, 0.6], [1910, 0.3], [1935, 0.4], [1946, 0.3], [1960, 0]]
+    - where:
+        regions: &philippine_regions [manila, central_luzon, calabarzon, ilocos, cagayan, batanes, cordillera, bicol, mindoro, mindoro_west, palawan, western_visayas, central_visayas, eastern_visayas, north_mindanao, mindanao_interior, zamboanga, zamboanga_sibugay, lanao_norte, lanao_sur, maguindanao, south_mindanao, davao, basilan, sulu]
+      curve: [[1880, 0.2], [1896, 0.6], [1898, 0.9], [1899, 0.9], [1902, 0.4], [1910, 0.2], [1935, 0.3], [1946, 0.2], [1960, 0]]
+  people: [ホセ＝リサール, ボニファシオ, アギナルド, マビニ]
+  works: [『ノリ・メ・タンヘレ』（リサール）, 『エル・フィリブステリスモ』（リサール）]
+  events: [ホセ＝リサールの『ノリ・メ・タンヘレ』, フィリピン革命の始まり, アギナルドの独立宣言]
+  text: スペインの植民地支配と修道会の特権に対する民族運動。留学した知識人（イルストラード）のリサールらは、小説でスペイン支配を批判し、改革を求めた（プロパガンダ運動）。1892 年にボニファシオが秘密結社カティプーナンを結成し、1896 年に武装蜂起した。リサールは処刑された。アギナルドは米西戦争のなか 1898 年に独立を宣言し、マロロス憲法のもとでフィリピン共和国（1899）を建てたが、領有を図るアメリカとの戦争（フィリピン・アメリカ戦争、1899–1902）に敗れた。
+  source: "https://ja.wikipedia.org/wiki/フィリピン革命"
+
+- id: vietnamese_nationalism
+  name: ベトナムの民族運動（ドンズー〈東遊〉運動・ベトナム光復会）
+  kind: system
+  curve:
+    - [1885, 0.3]
+    - [1896, 0.2]
+    - [1904, 0.5]
+    - [1907, 0.8]
+    - [1909, 0.6]
+    - [1912, 0.7]
+    - [1925, 0.6]
+    - [1930, 0.8]
+    - [1931, 0.4]
+    - [1941, 0.5]
+    - [1945, 0.6]
+    - [1954, 0.3]
+    - [1960, 0]
+  spread:
+    - where:
+        regions: &vietnam_regions [vnm_hanoi, vnm_delta_garnier, vnm_delta_core, vnm_delta_north, vnm_haiphong, vnm_hoabinh_phutho, vnm_vietbac, vnm_yenbai, vnm_border, vnm_caobang, vnm_sonla, vnm_laichau, vnm_thanh_nghe, vnm_hatinh, vnm_quangbinh_north, vnm_quangbinh_south, vnm_vinhlinh, vnm_quangtri_dmz, vnm_quangtri, vnm_quangnam, vnm_quangngai, vnm_binhdinh, vnm_phuyen, vnm_khanhhoa, vnm_panduranga, vnm_highlands, vnm_saigon, vnm_giadinh_east, vnm_tayninh, vnm_binhphuoc, vnm_dinhtuong, vnm_vinhlong, vnm_west_delta, vnm_hatien, vnm_camau, vnm_condao]
+      center: true
+      curve: [[1885, 0.4], [1896, 0.2], [1904, 0.5], [1907, 0.9], [1909, 0.6], [1912, 0.7], [1925, 0.6], [1930, 0.9], [1931, 0.4], [1941, 0.5], [1945, 0.6], [1954, 0.3], [1960, 0]]
+    - where: {regions: [japan_main]}
+      curve: [[1904, 0], [1905, 0.4], [1908, 0.5], [1909, 0.1], [1910, 0]]
+  people: [ファン＝ボイ＝チャウ, ファン＝チュー＝チン, クオン＝デ, グエン＝タイ＝ホック]
+  works: [『ベトナム亡国史』（ファン＝ボイ＝チャウ）]
+  events: [ドンズー（東遊）運動]
+  text: フランスの植民地支配に対するベトナムの民族運動。皇帝を擁した勤王運動（1885–96）の後、ファン＝ボイ＝チャウは日露戦争の日本の勝利に刺激され、青年を日本へ留学させるドンズー（東遊）運動（1905–09）を起こしたが、日仏協約（1907）を結んだ日本政府に留学生を追放された。その後は辛亥革命にならってベトナム光復会（1912）を結成した。1927 年のベトナム国民党はイエンバイ蜂起（1930）に失敗し、運動の主導権はホー＝チ＝ミンらの共産主義者に移った。
+  source: "https://ja.wikipedia.org/wiki/東遊運動"
+
+- id: indonesian_nationalism
+  name: インドネシアの民族運動（ブディ・ウトモ・イスラーム同盟〈サレカット・イスラーム〉・インドネシア国民党）
+  kind: system
+  curve:
+    - [1900, 0.2]
+    - [1908, 0.4]
+    - [1912, 0.7]
+    - [1919, 0.9]
+    - [1926, 0.7]
+    - [1928, 0.9]
+    - [1934, 0.6]
+    - [1942, 0.6]
+    - [1945, 1.0]
+    - [1949, 1.0]
+    - [1955, 0.6]
+    - [1965, 0.3]
+    - [1975, 0]
+  spread:
+    - where:
+        regions: &java [batavia, karawang_bogor, priangan, cirebon, banten_core, tangerang, semarang, pasisir_central, pasisir_rembang, pasisir_east, surabaya, yogyakarta, surakarta, mangkunegaran, kedu, bagelen_banyumas, mancanegara_east, pasuruan, malang, blambangan, madura_west, madura_east]
+      center: true
+      curve: [[1900, 0.3], [1908, 0.5], [1912, 0.8], [1919, 1.0], [1926, 0.7], [1928, 0.9], [1934, 0.6], [1942, 0.6], [1945, 1.0], [1949, 1.0]]
+    - where:
+        regions: &indies [
+                batavia, karawang_bogor, priangan, cirebon, banten_core, tangerang, lampung, semarang, pasisir_central, pasisir_rembang,
+                pasisir_east, surabaya, yogyakarta, surakarta, mangkunegaran, kedu, bagelen_banyumas, mancanegara_east, pasuruan, malang,
+                blambangan, madura_west, madura_east, aceh_core, aceh_rest, east_sumatra, medan, batak, tapanuli_coast, mandailing, nias,
+                padang, minangkabau_tanahdatar, minangkabau_agam, pasaman, minangkabau_south, mentawai, siak, indragiri, jambi, kerinci,
+                palembang, palembang_upland, bengkulu, bangka, riau_islands, sambas, pontianak, matan, kapuas_upper, banjar, kotawaringin,
+                central_borneo, kutai, kutai_upper, paser, berau, bulungan, makassar, gowa_core, gowa_coast, bone, wajo, luwu, toraja, mandar,
+                buton, konawe, central_sulawesi, banggai, gorontalo, minahasa, bolaang, sangihe, ambon_banda, hoamoal, buru, seram_east,
+                southeast_maluku, ternate, tidore, bacan, bali_north, bali_south, bali_east, klungkung, lombok, sumbawa, manggarai,
+                flores_central, flores_east, sumba, kupang, timor_west_south, timor_west_north]
+      curve: [[1908, 0.2], [1912, 0.5], [1919, 0.7], [1928, 0.7], [1942, 0.5], [1945, 0.8], [1949, 0.9]]
+    - where: {polities: [indonesia]}
+      curve: [[1950, 0.9], [1955, 0.6], [1965, 0.3], [1975, 0]]
+  people: [カルティニ, チョクロアミノト, スカルノ, ハッタ, シャフリル]
+  events: [ブディ・ウトモの結成, イスラーム同盟（サレカット・イスラム）の結成, インドネシア共産党の結成, 青年の誓い, インドネシアの独立宣言, スラバヤの戦い（インドネシア独立戦争）]
+  text: オランダの「倫理政策」（1901–）で教育を受けた知識人が始めた民族運動。ジャワの医学生のブディ・ウトモ（1908）に続き、イスラーム同盟（サレカット・イスラーム、1911/12）は華人商人への対抗から始まって大衆組織に成長した。1920 年のインドネシア共産党、1927 年のスカルノのインドネシア国民党を経て、1928 年の「青年の誓い」で「一つの祖国・一つの民族・一つの言語（インドネシア語）」が宣言された。日本の占領期を経て、1945 年 8 月 17 日に独立を宣言し、オランダとの独立戦争の末、1949 年に主権が移された。
+  source: "https://ja.wikipedia.org/wiki/サレカット・イスラーム"
+
+- id: burmese_nationalism
+  name: ビルマの民族運動（タキン党）
+  kind: system
+  curve:
+    - [1906, 0.2]
+    - [1920, 0.5]
+    - [1930, 0.8]
+    - [1938, 0.9]
+    - [1942, 0.8]
+    - [1945, 1.0]
+    - [1948, 1.0]
+    - [1955, 0.4]
+    - [1962, 0.2]
+    - [1970, 0]
+  spread:
+    - where:
+        regions: &burma_regions [mmr_arakan_north, mmr_arakan_maungdaw, mmr_arakan_kyaukpyu, mmr_arakan_thandwe, mmr_shwebo, mmr_ava, mmr_katha, mmr_kabaw, mmr_hkamti, mmr_prome, mmr_pegu_delta, mmr_syriam, mmr_pegu, mmr_thaton, mmr_martaban, mmr_hpapun, mmr_tavoy, mmr_mergui, mmr_shan, mmr_kengtung, mmr_wa, mmr_kokang, mmr_karenni, mmr_bhamo, mmr_kachin, mmr_putao, mmr_chin]
+      center: true
+      curve: [[1906, 0.2], [1920, 0.5], [1930, 0.8], [1938, 0.9], [1942, 0.8], [1945, 1.0], [1948, 1.0], [1955, 0.4], [1962, 0.2], [1970, 0]]
+  people: [アウン＝サン, ウー＝ヌ, サヤ＝サン, バー＝モウ]
+  events: [タキン党とサヤ・サンの反乱, ビルマのインドからの分離, ビルマの独立]
+  text: 仏教青年会（YMBA、1906）に始まり、1920 年の大学ストライキ、1930–32 年のサヤ＝サンの農民反乱を経て、「われらビルマ人協会」（タキン党、1930）の青年たちが完全独立を求めた。アウン＝サンらは日本軍とともにビルマ独立義勇軍をつくってイギリス軍と戦ったが、1945 年に抗日に転じた。アウン＝サンは独立の直前（1947）に暗殺され、ビルマは 1948 年にイギリス連邦の外で独立した。
+  source: "https://ja.wikipedia.org/wiki/タキン党"
+
+- id: non_aligned
+  name: 第三世界の連帯と非同盟運動（平和五原則・バンドン会議）
+  kind: system
+  curve:
+    - [1947, 0.2]
+    - [1954, 0.6]
+    - [1955, 0.9]
+    - [1961, 1.0]
+    - [1970, 0.8]
+    - [1979, 0.7]
+    - [1991, 0.4]
+    - [2025, 0.3]
+  spread:
+    - where: {polities: [india]}
+      center: true
+      curve: [[1947, 0.5], [1954, 0.9], [1961, 1.0], [1964, 0.8], [1971, 0.6], [1991, 0.4], [2025, 0.4]]
+    - where: {polities: [indonesia]}
+      center: true
+      curve: [[1950, 0.4], [1955, 1.0], [1961, 0.9], [1965, 0.5], [1991, 0.4], [2025, 0.3]]
+    - where: {polities: [yugoslavia, egypt]}
+      curve: [[1954, 0.5], [1956, 0.8], [1961, 1.0], [1970, 0.8], [1980, 0.6], [1991, 0.3]]
+    - where: {polities: [burma, sri_lanka, cambodia]}
+      curve: [[1954, 0.4], [1955, 0.7], [1961, 0.8], [1970, 0.5], [1991, 0.3], [2025, 0.2]]
+  people: [ネルー, スカルノ, ナセル, ティトー, 周恩来, エンクルマ]
+  events: [アジア・アフリカ会議（バンドン会議）]
+  text: 冷戦のなかで、東西どちらの陣営にも属さない立場をとった新興独立国の連帯。1954 年にネルーと周恩来が平和五原則を確認し、1955 年にインドネシアのバンドンでアジア・アフリカ会議（29 か国）が開かれて平和十原則が採択された。1961 年にはベオグラードで第1回非同盟諸国首脳会議が開かれ（ティトー・ナセル・ネルー・スカルノ）、のちに 100 か国以上が加わった。
+  source: "https://ja.wikipedia.org/wiki/非同盟運動"
+
+- id: green_revolution
+  name: 緑の革命
+  kind: system
+  curve:
+    - [1960, 0.1]
+    - [1966, 0.5]
+    - [1970, 0.9]
+    - [1980, 1.0]
+    - [1990, 0.7]
+    - [2000, 0.4]
+    - [2010, 0.3]
+    - [2025, 0.2]
+  spread:
+    - where: {regions: [pb_majha, pb_doaba, pb_kapurthala, pb_cis_sutlej, pb_phulkian, hr_north, hr_panipat, hr_south, hr_hisar]}
+      center: true
+      curve: [[1965, 0.4], [1968, 0.9], [1975, 1.0], [1990, 0.8], [2000, 0.6], [2025, 0.5]]
+    - where: {polities: [india, pakistan]}
+      curve: [[1965, 0.2], [1968, 0.6], [1980, 0.8], [1990, 0.6], [2000, 0.4], [2025, 0.3]]
+    - where: {regions: [calabarzon]}
+      center: true
+      curve: [[1960, 0.5], [1966, 1.0], [1980, 0.8], [2000, 0.5], [2025, 0.4]]
+    - where: {polities: [philippines, indonesia, siam, malaysia, bangladesh, sri_lanka, vietnam]}
+      curve: [[1966, 0.2], [1975, 0.6], [1985, 0.7], [1995, 0.5], [2010, 0.3], [2025, 0.2]]
+  people: [ノーマン＝ボーローグ, M. S. スワミナサン]
+  events: []
+  text: 1960 年代から、多収量の小麦・稲の品種（国際稲研究所〈フィリピン〉の IR8 など）と、化学肥料・農薬・灌漑を組み合わせて、アジアの穀物の生産を大きく伸ばした農業の変革。インドのパンジャーブ・ハリヤーナーが中心となり、インドは食料の自給を達成した。一方で、豊かな農民と貧しい農民の格差、地下水の枯渇や土壌の汚染などの問題も生んだ。
+  source: "https://ja.wikipedia.org/wiki/緑の革命"
+
+- id: asean
+  name: ASEAN（東南アジア諸国連合）と地域協力
+  kind: system
+  curve:
+    - [1961, 0.1]
+    - [1967, 0.4]
+    - [1976, 0.6]
+    - [1992, 0.8]
+    - [1999, 0.9]
+    - [2015, 1.0]
+    - [2025, 0.9]
+  spread:
+    - where: {polities: [indonesia, malaysia, singapore, philippines, siam]}
+      center: true
+      curve: [[1967, 0.5], [1976, 0.7], [1992, 0.9], [2015, 1.0], [2025, 0.9]]
+    - where: {polities: [brunei]}
+      curve: [[1984, 0.7], [2015, 1.0], [2025, 0.9]]
+    - where: {polities: [vietnam]}
+      curve: [[1995, 0.6], [2007, 0.8], [2015, 1.0], [2025, 0.9]]
+    - where: {polities: [laos, burma]}
+      curve: [[1997, 0.5], [2015, 0.8], [2021, 0.6], [2025, 0.6]]
+    - where: {polities: [cambodia]}
+      curve: [[1999, 0.5], [2015, 0.8], [2025, 0.8]]
+    - where: {polities: [east_timor]}
+      curve: [[2011, 0.2], [2022, 0.4], [2025, 0.7]]
+  people: [スハルト, リー＝クアンユー, マハティール, タナット＝コーマン]
+  events: [東南アジア諸国連合（ASEAN）の結成, ベトナムのASEAN加盟とアメリカとの国交, 東ティモールのASEAN加盟]
+  text: 1967 年にインドネシア・マレーシア・フィリピン・シンガポール・タイの5か国がバンコク宣言で結成した地域協力の機構。当初はベトナム戦争下の反共産主義の性格が強かったが、冷戦の終わりの後、ブルネイ（1984）・ベトナム（1995）・ラオス・ミャンマー（1997）・カンボジア（1999）が加わって10か国となり、ASEAN 自由貿易地域（AFTA、1992–）、ASEAN 共同体（2015）へ進んだ。内政不干渉の原則と全会一致の「ASEAN 方式」をとる。
+  source: "https://ja.wikipedia.org/wiki/東南アジア諸国連合"
