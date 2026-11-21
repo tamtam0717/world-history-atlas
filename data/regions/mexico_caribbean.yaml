@@ -297,6 +297,17 @@
     - from: 1648
       owner: "spain"
       label: "ヌエバ・エスパーニャ副王領"
+    - from: 1812
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "アナワク会議（モレーロス）"
+      cause: "モレーロスの独立派が南部を押さえ、アカプルコを取り（1813年4月）、チルパンシンゴ会議で独立を宣言する（1813年11月）"
+      source: "https://ja.wikipedia.org/wiki/ホセ・マリア・モレーロス"
+    - from: 1814
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "王党派がアカプルコ・チルパンシンゴを奪い返す（山地のゲリラは1821年まで続く）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
     - from: 1821
       owner: "mexico"
       cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
@@ -489,6 +500,17 @@
     - from: 1648
       owner: "spain"
       label: "ヌエバ・エスパーニャ副王領"
+    - from: 1812
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "アナワク会議（モレーロス）"
+      cause: "モレーロスの独立派がオアハカを取る（11月）"
+      source: "https://ja.wikipedia.org/wiki/ホセ・マリア・モレーロス"
+    - from: 1814
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "王党派がオアハカを奪い返す（3月）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
     - from: 1821
       owner: "mexico"
       cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
@@ -1045,10 +1067,11 @@
       cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
       source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
     - from: 1822
-      owner: "mexico"
+      owner: "central_america"
       certainty: "uncertain"
-      label: "中米（メキシコ帝国に併合）"
-      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      label: "エルサルバドル（メキシコへの併合を拒む）"
+      cause: "中米がメキシコ帝国に併合されるが、エルサルバドルは拒んで抵抗を続ける（年末にはアメリカ合衆国への編入を議決）"
+      note: "フィリソラのメキシコ軍がサン・サルバドルを落としたのは1823年2月"
       source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
     - from: 1823
       owner: "central_america"
@@ -1665,7 +1688,41 @@
 - id: cuba
   name: キューバ
   select:
-    pieces: [CUB-Artemisa, CUB-Camaguey, CUB-Ciego_de_Avila, CUB-Cienfuegos, CUB-Granma, CUB-Guantanamo, CUB-Holguin, CUB-Isle_of_Youth, CUB-Las_Tunas, CUB-Matanzas, CUB-Mayabeque, CUB-Pinar_del_Rio, CUB-Sancti_Spiritus, CUB-Santiago_de_Cuba, CUB-Villa_Clara]
+    pieces: [CUB-Artemisa, CUB-Camaguey, CUB-Ciego_de_Avila, CUB-Cienfuegos, CUB-Isle_of_Youth, CUB-Matanzas, CUB-Mayabeque, CUB-Pinar_del_Rio, CUB-Sancti_Spiritus, CUB-Villa_Clara]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "キューバ"
+    - from: 1899
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカ軍政）"
+      cause: "パリ条約（1898年12月）でスペインがキューバを放棄し、1899年1月1日にアメリカ軍政が始まる（1898年中はハバナの総督府が西部・中部を治めた）"
+      source: "https://ja.wikipedia.org/wiki/米西戦争"
+    - from: 1902
+      owner: "cuba"
+      overlord: "usa"
+      cause: "キューバ共和国が独立する（プラット修正条項でアメリカが干渉権を持つ）"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+    - from: 1906
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカの第2次軍政）"
+      cause: "反乱を機にアメリカが再び占領する"
+      source: "https://en.wikipedia.org/wiki/Second_Occupation_of_Cuba"
+    - from: 1909
+      owner: "cuba"
+      overlord: "usa"
+      cause: "アメリカ軍が撤退する"
+    - from: 1934
+      owner: "cuba"
+      cause: "善隣外交のもとでプラット修正条項が廃止される"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+
+- id: cuba_oriente
+  name: キューバ東部（オリエンテ）
+  select:
+    pieces: [CUB-Granma, CUB-Guantanamo, CUB-Holguin, CUB-Las_Tunas, CUB-Santiago_de_Cuba]
   timeline:
     - from: 1648
       owner: "spain"
@@ -1673,9 +1730,15 @@
     - from: 1898
       owner: "usa"
       certainty: "occupied"
-      label: "キューバ（アメリカ軍政）"
-      cause: "米西戦争に敗れたスペインがキューバを放棄し、アメリカ軍政が始まる"
+      label: "キューバ東部（アメリカ軍の占領）"
+      cause: "米西戦争でサンティアゴ・デ・クーバのスペイン軍が降伏し（7月）、アメリカ軍が東部（オリエンテ）を押さえる"
       source: "https://ja.wikipedia.org/wiki/米西戦争"
+    - from: 1899
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカ軍政）"
+      cause: "スペインの統治が終わり（1月1日）、アメリカ軍政が全島に及ぶ"
+      source: "https://en.wikipedia.org/wiki/United_States_Military_Government_in_Cuba"
     - from: 1902
       owner: "cuba"
       overlord: "usa"
@@ -1715,11 +1778,11 @@
       label: "キューバ"
       cause: "パリ条約でスペインに返還される（スペインはフロリダをイギリスに譲る）"
       source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
-    - from: 1898
+    - from: 1899
       owner: "usa"
       certainty: "occupied"
       label: "キューバ（アメリカ軍政）"
-      cause: "米西戦争に敗れたスペインがキューバを放棄し、アメリカ軍政が始まる"
+      cause: "パリ条約（1898年12月）でスペインがキューバを放棄し、1899年1月1日にアメリカ軍政が始まる（1898年中はハバナの総督府が西部・中部を治めた）"
       source: "https://ja.wikipedia.org/wiki/米西戦争"
     - from: 1902
       owner: "cuba"
@@ -1753,8 +1816,8 @@
     - from: 1898
       owner: "usa"
       certainty: "occupied"
-      label: "キューバ（アメリカ軍政）"
-      cause: "米西戦争に敗れたスペインがキューバを放棄し、アメリカ軍政が始まる"
+      label: "キューバ東部（アメリカ軍の占領）"
+      cause: "米西戦争でアメリカ海兵隊がグアンタナモ湾に上陸し（6月）、東部を押さえる（全島の軍政は1899年1月から）"
       source: "https://ja.wikipedia.org/wiki/米西戦争"
     - from: 1902
       owner: "cuba"
@@ -2012,9 +2075,9 @@
 
 - id: haiti_south
   name: ハイチ南部・西部
-  note: "1794–98年、ポルトープランスなどはイギリス軍に占領された（ピースの過半はフランス側のリゴーの支配地として描く）"
+  note: "1794–98年、南県（レ・カイ）はフランス共和派のリゴーが押さえ続けた。西県（ポルトープランス）はイギリス軍に占領された（別の地域で描く）"
   select:
-    pieces: [HTI-Departement_de_l_Ouest, HTI-Sud_Department, HTI-Departement_du_Sud_Est, HTI-Departement_des_Nippes]
+    pieces: [HTI-Sud_Department, HTI-Departement_du_Sud_Est, HTI-Departement_des_Nippes]
   timeline:
     - from: 1648
       owner: "spain"
@@ -2041,6 +2104,74 @@
     - from: 1794
       owner: "france"
       label: "サン・ドマング"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが全島を押さえ、終身総督とする憲法を定める"
+      source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール"
+    - from: 1802
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ナポレオンが送ったルクレールの遠征軍がトゥサンを捕らえる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1803
+      owner: "haiti"
+      certainty: "uncertain"
+      cause: "ヴェルティエールの戦いに敗れたフランス軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      owner: "haiti"
+      cause: "デサリーヌがハイチの独立を宣言する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: haiti_ouest
+  name: ハイチ西県（ポルトープランス）
+  select:
+    pieces: [HTI-Departement_de_l_Ouest]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "イスパニョーラ島西部"
+      note: "1605年にスペインが北部・西部の住民を移したため（オソリオの強制移住）、野生の牛を狩るフランス人などの海賊（バッカニア）の地となっていた"
+    - from: 1665
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "フランス西インド会社がトルトゥーガ島とイスパニョーラ島西部に植民地を置く（ドジュロン総督）"
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1697
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ライスワイク条約でスペインが島の西部をフランス領と認める"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Ryswick"
+    - from: 1791
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "ハイチ革命が始まり、白人・有色自由人・奴隷の争いが南部にも広がる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1794
+      owner: "britain"
+      certainty: "occupied"
+      label: "サン・ドマング（イギリスの占領）"
+      cause: "イギリス軍が首府ポルトープランスを落とし（6月）、レオガンなど西部の海岸を押さえる"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1798
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "トゥサン・ルヴェルチュールとの協定でイギリス軍が撤退する"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
     - from: 1801
       owner: "france"
       label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
@@ -2163,8 +2294,10 @@
       label: "サント・ドミンゴ"
     - from: 1809
       owner: "spain"
+      certainty: "uncertain"
       label: "サント・ドミンゴ"
       cause: "スペイン系住民の蜂起とイギリス軍の助けでフランス軍が降伏し、スペイン領に戻る"
+      note: "アンシュ・ミルバレなど中央高原の町には、この時期からハイチ（ペシオン・クリストフ）側の勢力が及んでいたともいわれ、帰属ははっきりしない"
       source: "https://en.wikipedia.org/wiki/España_Boba"
     - from: 1821
       owner: "dominican_republic"

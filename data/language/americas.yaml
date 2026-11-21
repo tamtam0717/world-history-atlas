@@ -448,7 +448,7 @@
 - id: lang_cherokee
   name: チェロキーの地（アパラチア山地の南部）
   select:
-    pieces: [USA-Cherokee_NC, USA-Clay_NC, USA-Graham_NC, USA-Haywood_NC, USA-Jackson_NC, USA-Macon_NC, USA-Madison_NC, USA-Swain_NC, USA-Transylvania_NC, USA-Barrow_GA, USA-Bartow_GA, USA-Catoosa_GA, USA-Chattooga_GA, USA-Cherokee_GA, USA-Cobb_GA, USA-Dade_GA, USA-Dawson_GA, USA-Fannin_GA, USA-Floyd_GA, USA-Forsyth_GA, USA-Gilmer_GA, USA-Gordon_GA, USA-Gwinnett_GA, USA-Hall_GA, USA-Lumpkin_GA, USA-Murray_GA, USA-Paulding_GA, USA-Pickens_GA, USA-Polk_GA, USA-Towns_GA, USA-Union_GA, USA-Walker_GA, USA-White_GA, USA-Whitfield_GA, USA-Bledsoe_TN, USA-Blount_TN, USA-Bradley_TN, USA-Cumberland_TN, USA-Hamilton_TN, USA-Knox_TN, USA-Loudon_TN, USA-McMinn_TN, USA-Meigs_TN, USA-Monroe_TN, USA-Polk_TN, USA-Rhea_TN, USA-Roane_TN, USA-Sequatchie_TN, USA-Sevier_TN, USA-Van_Buren_TN, USA-White_TN, USA-Anderson_SC, USA-Oconee_SC, USA-Pickens_SC, USA-Cherokee_AL, USA-DeKalb_AL, USA-Etowah_AL, USA-Jackson_AL, USA-Marshall_AL]
+    pieces: [USA-Cherokee_NC, USA-Clay_NC, USA-Graham_NC, USA-Haywood_NC, USA-Jackson_NC, USA-Macon_NC, USA-Madison_NC, USA-Swain_NC, USA-Transylvania_NC, USA-Barrow_GA, USA-Bartow_GA, USA-Catoosa_GA, USA-Chattooga_GA, USA-Cherokee_GA, USA-Cobb_GA, USA-Dade_GA, USA-Dawson_GA, USA-Fannin_GA, USA-Floyd_GA, USA-Forsyth_GA, USA-Gilmer_GA, USA-Gordon_GA, USA-Gwinnett_GA, USA-Hall_GA, USA-Lumpkin_GA, USA-Murray_GA, USA-Paulding_GA, USA-Pickens_GA, USA-Polk_GA, USA-Towns_GA, USA-Union_GA, USA-Walker_GA, USA-White_GA, USA-Whitfield_GA, USA-Bledsoe_TN, USA-Bradley_TN, USA-Cumberland_TN, USA-Hamilton_TN, USA-McMinn_TN, USA-Meigs_TN, USA-Monroe_TN, USA-Polk_TN, USA-Rhea_TN, USA-Sequatchie_TN, USA-Van_Buren_TN, USA-White_TN, USA-Anderson_SC, USA-Oconee_SC, USA-Pickens_SC, USA-Cherokee_AL, USA-DeKalb_AL, USA-Etowah_AL, USA-Jackson_AL, USA-Marshall_AL]
   timeline:
     - from: 1648
       main: iroquoian
@@ -458,6 +458,28 @@
       main: english
       note: インディアン強制移住法（1830）とニュー・エコタ条約（1835）で、チェロキーはインディアン準州へ移された（「涙の旅路」1838–39、約 4 千人が死亡）。一部はノースカロライナの山地に残った（チェロキー東部支族）。
       source: "https://ja.wikipedia.org/wiki/涙の旅路"
+- id: lang_east_tennessee_1805
+  name: テネシー東部（カンバーランド高原、1805–06 年の割譲地）
+  select:
+    pieces: [USA-White_TN, USA-Van_Buren_TN, USA-Cumberland_TN, USA-Bledsoe_TN, USA-Sequatchie_TN, USA-Rhea_TN]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: チェロキー人の地。
+    - from: 1810
+      main: english
+      note: テリコ条約（1805–06）でチェロキー人が割譲した。
+- id: lang_hiwassee
+  name: テネシー東部（ハイワシー購入地）
+  select:
+    pieces: [USA-McMinn_TN, USA-Monroe_TN, USA-Meigs_TN]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: チェロキー人の地。
+    - from: 1820
+      main: english
+      note: ハイワシー購入（1819 年のカルフーン条約）でチェロキー人が割譲した。
 - id: lang_us_deep_south
   name: ジョージア・アラバマ・ミシシッピ
   select:
@@ -538,9 +560,9 @@
       main: english
       note: ブーンのウィルダネス・ロード（1775）。ケンタッキーは 1792 年、テネシーは 1796 年に州になった。
 - id: lang_west_tennessee
-  name: テネシー西部（チカソーの地）
+  name: テネシー西部・ケンタッキーのジャクソン購入地（チカソーの地）
   select:
-    pieces: [USA-Benton_TN, USA-Carroll_TN, USA-Chester_TN, USA-Crockett_TN, USA-Decatur_TN, USA-Dyer_TN, USA-Fayette_TN, USA-Gibson_TN, USA-Hardeman_TN, USA-Hardin_TN, USA-Haywood_TN, USA-Henderson_TN, USA-Henry_TN, USA-Lake_TN, USA-Lauderdale_TN, USA-Madison_TN, USA-McNairy_TN, USA-Obion_TN, USA-Shelby_TN, USA-Tipton_TN, USA-Weakley_TN]
+    pieces: [USA-Benton_TN, USA-Carroll_TN, USA-Chester_TN, USA-Crockett_TN, USA-Decatur_TN, USA-Dyer_TN, USA-Fayette_TN, USA-Gibson_TN, USA-Hardeman_TN, USA-Hardin_TN, USA-Haywood_TN, USA-Henderson_TN, USA-Henry_TN, USA-Lake_TN, USA-Lauderdale_TN, USA-Madison_TN, USA-McNairy_TN, USA-Obion_TN, USA-Shelby_TN, USA-Tipton_TN, USA-Weakley_TN, USA-Ballard_KY, USA-Calloway_KY, USA-Carlisle_KY, USA-Fulton_KY, USA-Graves_KY, USA-Hickman_KY, USA-Marshall_KY, USA-McCracken_KY]
   timeline:
     - from: 1648
       main: muskogean
