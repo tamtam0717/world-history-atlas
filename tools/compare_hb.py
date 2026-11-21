@@ -99,7 +99,7 @@ def main():
         print(f"\n===== {year}年 =====")
         main_of = {}
         for ours, d in sorted(by_polity.items(), key=lambda kv: -sum(kv[1].values())):
-            total = sum(d.values())
+            total = sum(d.values()) or 1.0
             top = sorted(d.items(), key=lambda kv: -kv[1])
             main_of[ours] = top[0][0]
             dist = "、".join(f"{k} {v / total:.0%}" for k, v in top[:5] if v / total >= 0.02)

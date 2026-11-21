@@ -1,7 +1,7 @@
 // 右パネル（スマホでは下からのシート）の中身：その年の出来事・国境の変化・選んだ国の情報
 
 import { AtlasIndex, curveAt, curveMax, sourcesOf, type BorderChange, type CurvePoint, type DistKey, type HistEvent, type Movement, type Polity, type ReligionEntry, type Ruler } from "./data";
-import { MOVEMENT_COLORS, type ReligionPick } from "./map";
+import { MOVEMENT_COLORS, secularColor, secularText, type ReligionPick } from "./map";
 import { hydrateImages, imageSlot, refKey, wikiRefs, type WikiRef } from "./images";
 
 const esc = (s: unknown) =>
@@ -145,7 +145,7 @@ export class Panel {
         ? `（上位：${this.link(c.prev.overlord, year)} → ${this.link(c.cur.overlord, year)}）`
         : "";
     const owners = c.prev.owner === c.cur.owner ? this.link(c.cur.owner, year) : `${this.link(c.prev.owner, year - 1)} → ${this.link(c.cur.owner, year)}`;
-    return `<li class="change"><b>${esc(c.region.name)}</b>：${owners}${ov} ${note}${srcList(c.cur)}</li>`;
+    return `<li class="change"><b>${esc(this.idx.regionName(c.region, year))}</b>：${owners}${ov} ${note}${srcList(c.cur)}</li>`;
   }
 
   private eventLine(e: HistEvent, year: number) {
@@ -168,8 +168,16 @@ export class Panel {
     return `<span class="rel-kind"><span class="swatch" style="background:${esc(k.color)}"></span>${esc(k.name)}</span>`;
   }
 
+  /** 世俗化の割合（濃い→薄いの帯の上に、いまの位置を示す） */
+  private secularRow(s: number, color: string) {
+    const pct = Math.round(s * 100);
+    return `<dt>宗教離れ</dt><dd><span class="rel-secular" title="無宗教・宗教離れの割合の目安：${pct}%"><span class="bar" style="background:linear-gradient(90deg, ${esc(color)}, ${esc(secularColor(color, 1))})"><span class="mark" style="left:${pct}%"></span></span>${secularText(s)}</span></dd>`;
+  }
+
   private relSummary(e: ReligionEntry, key: DistKey = "religion") {
-    return `${this.relKind(e.main, key)}${e.minor ? `<span class="rel-minor">＋${this.relKind(e.minor, key)}</span>` : ""}`;
+    return `${this.relKind(e.main, key)}${e.minor ? `<span class="rel-minor">＋${this.relKind(e.minor, key)}</span>` : ""}${
+      key === "religion" && e.secular ? `<span class="rel-minor">・宗教離れ${secularText(e.secular)}</span>` : ""
+    }`;
   }
 
   renderYear(year: number, opts: { dist?: DistKey | null; movement?: string | null } = {}) {
@@ -195,7 +203,7 @@ export class Panel {
       const regs = this.idx.atlas.regions;
       html += `<h3>国境の変化</h3><ul class="changes">${this.groupedChanges(
         "political",
-        changes.map((c) => ({ name: c.region.name, region: regs.indexOf(c.region), ...this.changeBody(c, year) })),
+        changes.map((c) => ({ name: this.idx.regionName(c.region, year), region: regs.indexOf(c.region), ...this.changeBody(c, year) })),
       )}</ul>`;
     }
     if (!events.length && !changes.length && !relChanges.length) {
@@ -295,8 +303,10 @@ export class Panel {
     const r = pick.region >= 0 ? this.idx.dist(key)?.regions[pick.region] : undefined;
     const cur = r ? this.idx.distEntry(key, pick.region, year) : null;
     const fam = key === "language" ? this.idx.distKind(key, cur?.main)?.family : undefined;
+    // 世俗化の割合は、外側の大きい地域に書かれていることもあるのでピースの値から引く
+    const secular = key !== "religion" ? 0 : pick.piece != null ? (this.idx.distState(key, pick.piece, year)?.[4] ?? 0) : (cur?.secular ?? 0);
     let html = `<div class="card-head">
-        <span class="swatch big" style="background:${esc(this.idx.distKind(key, cur?.main)?.color ?? "#e2e0dc")}"></span>
+        <span class="swatch big" style="background:${esc(secularColor(this.idx.distKind(key, cur?.main)?.color ?? "#e2e0dc", secular))}"></span>
         <div><h2>${esc(r?.name ?? pick.place)}</h2>
         <div class="meta">${key === "language" ? "言語（民族）" : "宗教"}の分布${r ? ` ・ ${esc(pick.place)}付近` : ""}${fam ? ` ・ ${esc(fam)}` : ""}</div></div>
         <button class="close" data-close aria-label="閉じる">×</button>
@@ -307,7 +317,7 @@ export class Panel {
       html += `<h3>${year}年</h3>
         <dl class="rel-now"><dt>多数派</dt><dd>${this.relKind(cur.main, key)}</dd>${
           cur.minor ? `<dt>少数派</dt><dd>${this.relKind(cur.minor, key)}</dd>` : ""
-        }</dl>`;
+        }${secular ? this.secularRow(secular, this.idx.distKind(key, cur.main)?.color ?? "#c8c4bb") : ""}</dl>`;
       if (cur.note) html += `<p class="period">${escY(cur.note)}</p>`;
       if (r.timeline.length > 1) {
         html += `<h3>変遷</h3><ul class="rel-timeline">${r.timeline

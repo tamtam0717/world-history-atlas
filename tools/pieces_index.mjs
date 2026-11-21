@@ -4,12 +4,13 @@ import { feature } from "topojson-client";
 import { geoArea, geoCentroid } from "d3-geo";
 const t = JSON.parse(fs.readFileSync("public/data/pieces.topo.json", "utf8"));
 const fc = feature(t, t.objects.pieces);
-const rows = ["id\tname\tiso\tadm1\tadm2\tlon\tlat\tarea_km2"];
+const rows = ["id\tname\tiso\tadm1\tadm2\tlon\tlat\tarea_km2\tzone"];
 for (const f of fc.features) {
   const p = f.properties, c = geoCentroid(f);
   const clean = (s) => String(s ?? "").replace(/[\t\n\r]/g, " ");
-  rows.push([p.id, clean(p.name), p.iso, clean(p.adm1), clean(p.adm2), c[0].toFixed(3), c[1].toFixed(3), Math.round(geoArea(f) * 6371 * 6371)].join("\t"));
+  rows.push([p.id, clean(p.name), p.iso, clean(p.adm1), clean(p.adm2), c[0].toFixed(3), c[1].toFixed(3), Math.round(geoArea(f) * 6371 * 6371), p.zone ?? "eu"].join("\t"));
 }
 fs.mkdirSync("data/generated", { recursive: true });
 fs.writeFileSync("data/generated/pieces.tsv", rows.join("\n") + "\n");
-console.log(`data/generated/pieces.tsv: ${rows.length - 1} pieces`);
+const nEu = fc.features.filter((f) => (f.properties.zone ?? "eu") === "eu").length;
+console.log(`data/generated/pieces.tsv: ${rows.length - 1} pieces（範囲内 ${nEu}、範囲外 ${rows.length - 1 - nEu}）`);

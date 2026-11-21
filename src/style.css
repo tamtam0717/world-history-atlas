@@ -215,6 +215,11 @@ body.debug #debug-info {
   background: #e6e2d8;
   border: 1px solid #ccc4b4;
 }
+/* 歴史データのない地域：現代の国の色を淡くしたものが、細い線で区切られて並ぶ */
+.lg-pending {
+  background: linear-gradient(90deg, #efe1c6 0 33%, #9d9385 33% calc(33% + 1px), #d9e1d0 0 66%, #9d9385 66% calc(66% + 1px), #d3dee6 0);
+  border: 1px solid #c9c1b3;
+}
 .tooltip {
   position: absolute;
   display: none;
@@ -599,6 +604,55 @@ body.debug #debug-info {
   font-weight: 600;
   text-align: center;
 }
+/* 国を選んでいる間の節目（その国の節目）：国の色の丸と、« » の縁取り */
+.milestone .ms-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px 1px 0;
+  border-radius: 50%;
+  background: var(--ms-color);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35) inset;
+  vertical-align: middle;
+}
+.milestone .ms-terr {
+  font-style: normal;
+  font-size: 9px;
+  margin-right: 2px;
+  vertical-align: 1px;
+}
+.milestone .ms-gain,
+.milestone .ms-appear {
+  color: #2f7a3a;
+}
+.milestone .ms-loss,
+.milestone .ms-vanish {
+  color: #a23a2a;
+}
+.milestone .ms-who {
+  flex: 0 1 auto;
+  color: var(--ink);
+  font-weight: 600;
+  text-align: center;
+}
+@media (max-width: 799px) {
+  .milestone .ms-who-long {
+    display: none;
+  }
+}
+.ms-polity .milestone {
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--ms-color) 28%, transparent) 50%, transparent);
+  border-radius: 4px;
+}
+.ms-polity .milestone .ms-prev,
+.ms-polity .milestone .ms-next {
+  color: color-mix(in srgb, var(--ms-color) 35%, var(--ink));
+}
+.ms-polity #prev10:not(:disabled),
+.ms-polity #next10:not(:disabled) {
+  box-shadow: 0 0 0 2px var(--ms-color) inset;
+  background: color-mix(in srgb, var(--ms-color) 25%, var(--panel));
+}
 .yearbar button:disabled {
   opacity: 0.35;
 }
@@ -976,7 +1030,8 @@ body[data-layer="religion"] .legend {
   display: flex;
   align-items: center;
 }
-.rel-legend li.rl-hatch {
+.rel-legend li.rl-hatch,
+.rel-legend li.rl-secular {
   grid-column: 1 / -1;
   white-space: normal;
   color: var(--muted);
@@ -992,6 +1047,9 @@ body[data-layer="religion"] .legend {
 }
 .rel-legend i.rl-nodata {
   background: #e2e0dc;
+}
+.rel-legend i.rl-pending {
+  background: linear-gradient(90deg, #ece2cf 0 50%, #9d9385 50% calc(50% + 1px), #e0e5df 0);
 }
 @media (max-width: 799px) {
   .rel-legend {
@@ -1018,6 +1076,29 @@ body[data-layer="religion"] .legend {
 .rel-minor {
   margin-left: 6px;
   color: var(--muted);
+}
+/* 世俗化：宗派の色→地の色の帯に、いまの割合の印 */
+.rel-secular {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.rel-secular .bar {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.rel-secular .mark {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 12px;
+  margin-left: -1px;
+  background: var(--ink);
+  border-radius: 1px;
 }
 .rel-now {
   display: grid;

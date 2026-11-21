@@ -1,6 +1,6 @@
 // 指定した年の地図を PNG に書き出す（データの目視確認用）。
 // 使い方:
-//   node tools/snapshot.mjs 1700 [1715 ...] [--out DIR] [--zoom LON,LAT,K] [--debug] [--polity ID] [--size WxH]
+//   node tools/snapshot.mjs 1700 [1715 ...] [--out DIR] [--zoom LON,LAT,K] [--debug] [--polity ID] [--size WxH] [--layer political|religion|language]
 //   例: node tools/snapshot.mjs 1700 --zoom 10,51,3   … 経度10・緯度51 を中心に3倍拡大
 // 事前に npm run data（atlas.json の生成）を済ませておくこと。
 
@@ -36,6 +36,11 @@ const flag = (name) => {
 const outDir = opt("--out", ".cache/snapshots");
 const zoomArg = opt("--zoom", null);
 const polity = opt("--polity", null);
+const layer = opt("--layer", null);
+if (layer && !["political", "religion", "language"].includes(layer)) {
+  console.error("--layer は political / religion / language のどれかです");
+  process.exit(1);
+}
 const [w, h] = opt("--size", "1400x1000").split("x").map(Number);
 const debug = flag("--debug");
 const years = args.map(Number).filter(Number.isFinite);
@@ -56,6 +61,7 @@ page.on("pageerror", (e) => console.error("pageerror:", e.message));
 for (const y of years) {
   const hash = new URLSearchParams({ y: String(y) });
   if (polity) hash.set("p", polity);
+  if (layer && layer !== "political") hash.set("l", layer);
   // ハッシュだけの変更では再読み込みされないので、一度空ページを挟む
   await page.goto("about:blank");
   // 表示範囲（data/meta.yaml）の外の年も確認できるよう、範囲を広げて開く
@@ -69,7 +75,7 @@ for (const y of years) {
     await page.waitForTimeout(900);
   }
   await page.waitForTimeout(300);
-  const file = path.join(outDir, `map_${y}${zoomArg ? "_zoom" : ""}${polity ? "_" + polity : ""}.png`);
+  const file = path.join(outDir, `map_${y}${zoomArg ? "_zoom" : ""}${polity ? "_" + polity : ""}${layer && layer !== "political" ? "_" + layer : ""}.png`);
   await page.screenshot({ path: file });
   console.log(file);
 }

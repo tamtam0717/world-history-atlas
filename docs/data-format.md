@@ -32,6 +32,10 @@ data/
 | adm2 | ドイツ・フランス・イタリア・ベルギー・ギリシャのみ：一段上の区画（ドイツの行政管区、フランスの県、イタリアの州など） |
 | lon, lat | 重心（経度・緯度） |
 | area_km2 | 面積 |
+| zone | `eu`：ヨーロッパと周辺（経度 -25〜62、緯度 25〜72）の細かいピース／`world`：その外の全世界のピース（CGAZ の州・省単位。ADM2 の国は ADM1 ごとにまとめてある） |
+
+範囲の端にかかる区画（ロシア・カザフスタン・イランなど）は、範囲で切らずに全体の形を使う（ID は全世界に広げる前と同じ）。
+`world` のピースは、歴史データができるまで地図では「現代の国境（歴史データ準備中）」として淡く表示される。
 
 ピースの粒度は国によって違う。ドイツは郡（約420）、フランスは郡（arrondissement、約320）、イタリアは県（107）、ポーランドは郡（powiat、約380）など。
 ロシア・トルコ・中東などは州単位で粗い。
@@ -82,10 +86,13 @@ awk -F'\t' '$3=="DEU" && $6>9 && $6<10.5 && $7>50 && $7<51' data/generated/piece
 ```yaml
 - id: silesia
   name: シュレジエン
+  names:                              # 任意。時期で名前を変える（右パネルの「国境の変化」の見出し）。範囲外は name
+    - {from: 1945, name: シロンスク（ポーランド南西部）}   # 例。from・to は省略可（その年を含む）
   select:                             # ピースの選び方（すべて和集合。最後に exclude を引く）
     adm1: ["POL/Opole Voivodeship", "POL/Lower Silesian Voivodeship"]   # 「国コード/adm1名」
     adm2: ["DEU/Dresden"]             # 「国コード/adm2名」（ドイツなど、細かい国のみ）
-    iso: [LIE]                        # 現代の国全体
+    iso: [LIE]                        # 現代の国全体（範囲 zone=eu にかかる国は、その範囲内のピースだけ）
+    iso_all: [KAZ]                    # 現代の国全体（範囲外 zone=world のピースも含める）
     pieces: [CZE-Opava, CZE-Jesenik]  # ピース ID を直接
     regions: [upper_lusatia]          # ほかの地域の中身を取り込む
     exclude: [POL-powiat_kluczborski] # ピースを除く

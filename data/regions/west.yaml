@@ -4,6 +4,7 @@
 # ================================================================ フランス
 - id: france_kingdom
   name: フランス王国（本土）
+  names: [{from: 1914, name: "フランス本土"}]
   select:
     iso: [FRA]
   timeline:
@@ -11,6 +12,15 @@
       owner: france
       note: ここで上書きしない地域（三司教領メッス・トゥール・ヴェルダン、上アルザスなどを含む）はフランス領。
       source: "ja.wikipedia: フランス王国"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: upper_alsace
   name: 上アルザス（ズントガウ）
@@ -27,9 +37,25 @@
       cause: フランクフルト講和条約（アルザス＝ロレーヌのドイツへの割譲）
       note: ドイツ帝国の帝国直轄領エルザス＝ロートリンゲン（どの構成国にも属さず、帝国が直接治めた）。
       source: "ja.wikipedia: フランクフルト講和条約"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でフランス軍が進駐。ヴェルサイユ条約（1919）で休戦の日にさかのぼってフランスに返還
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1940
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: 独仏休戦協定の後、ドイツが事実上併合（ガウに編入。法的な併合条約はない）
+      note: 住民はドイツ国籍を押しつけられ、男性はドイツ軍に徴兵された。
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1944
+      owner: france
+      cause: 連合軍の進撃（メス・ストラスブール・ミュルーズの解放、11月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: lower_alsace
   name: 下アルザスとデカポリス（十帝国都市）
+  names: [{from: 1871, name: "下アルザス（ストラスブール）"}]
   select:
     pieces: [FRA-Haguenau, FRA-Molsheim, FRA-Saverne, FRA-Selestat, FRA-Colmar]
   timeline:
@@ -50,6 +76,21 @@
       cause: フランクフルト講和条約（アルザス＝ロレーヌのドイツへの割譲）
       note: ドイツ帝国の帝国直轄領エルザス＝ロートリンゲン（どの構成国にも属さず、帝国が直接治めた）。
       source: "ja.wikipedia: フランクフルト講和条約"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でフランス軍が進駐。ヴェルサイユ条約（1919）で休戦の日にさかのぼってフランスに返還
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1940
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: 独仏休戦協定の後、ドイツが事実上併合（ガウに編入。法的な併合条約はない）
+      note: 住民はドイツ国籍を押しつけられ、男性はドイツ軍に徴兵された。
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1944
+      owner: france
+      cause: 連合軍の進撃（メス・ストラスブール・ミュルーズの解放、11月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: strasbourg_city
   name: ストラスブール
@@ -68,6 +109,21 @@
       cause: フランクフルト講和条約（アルザス＝ロレーヌのドイツへの割譲）
       note: ドイツ帝国の帝国直轄領エルザス＝ロートリンゲン（どの構成国にも属さず、帝国が直接治めた）。
       source: "ja.wikipedia: フランクフルト講和条約"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でフランス軍が進駐。ヴェルサイユ条約（1919）で休戦の日にさかのぼってフランスに返還
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1940
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: 独仏休戦協定の後、ドイツが事実上併合（ガウに編入。法的な併合条約はない）
+      note: 住民はドイツ国籍を押しつけられ、男性はドイツ軍に徴兵された。
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1944
+      owner: france
+      cause: 連合軍の進撃（メス・ストラスブール・ミュルーズの解放、11月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: montbeliard
   name: モンベリアール伯領
@@ -83,6 +139,15 @@
       owner: france
       cause: フランスによる併合
       source: "ja.wikipedia: モンベリアール"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: franche_comte
   name: フランシュ＝コンテ（ブルゴーニュ伯領）
@@ -98,6 +163,15 @@
       owner: france
       cause: ナイメーヘンの和約
       source: "ja.wikipedia: ナイメーヘンの和約"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: lorraine_duchy
   name: ロレーヌ公国
@@ -130,6 +204,15 @@
       owner: france
       cause: スタニスワフ・レシチニスキの死去によるフランス併合（1738年ウィーン条約の取り決め）
       source: "ja.wikipedia: ロレーヌ公国"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
   note: ヴァル＝ド＝ブリエのロンウィ（ルクセンブルク領→1678年フランス）やザール地方の小領などはピースが粗いため描かない。
 
 - id: sarrebourg
@@ -147,6 +230,21 @@
       cause: フランクフルト講和条約（アルザス＝ロレーヌのドイツへの割譲）
       note: ドイツ帝国の帝国直轄領エルザス＝ロートリンゲン（どの構成国にも属さず、帝国が直接治めた）。
       source: "ja.wikipedia: フランクフルト講和条約"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でフランス軍が進駐。ヴェルサイユ条約（1919）で休戦の日にさかのぼってフランスに返還
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1940
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: 独仏休戦協定の後、ドイツが事実上併合（ガウに編入。法的な併合条約はない）
+      note: 住民はドイツ国籍を押しつけられ、男性はドイツ軍に徴兵された。
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1944
+      owner: france
+      cause: 連合軍の進撃（メス・ストラスブール・ミュルーズの解放、11月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: barrois
   name: バール公領（バロワ・ムーヴァン）
@@ -171,6 +269,15 @@
     - from: 1766
       owner: france
       cause: スタニスワフ・レシチニスキの死去によるフランス併合
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: thionville
   name: ティオンヴィル（ルクセンブルク公領の南部）
@@ -190,6 +297,21 @@
       cause: フランクフルト講和条約（アルザス＝ロレーヌのドイツへの割譲）
       note: ドイツ帝国の帝国直轄領エルザス＝ロートリンゲン（どの構成国にも属さず、帝国が直接治めた）。
       source: "ja.wikipedia: フランクフルト講和条約"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でフランス軍が進駐。ヴェルサイユ条約（1919）で休戦の日にさかのぼってフランスに返還
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1940
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: 独仏休戦協定の後、ドイツが事実上併合（ガウに編入。法的な併合条約はない）
+      note: 住民はドイツ国籍を押しつけられ、男性はドイツ軍に徴兵された。
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1944
+      owner: france
+      cause: 連合軍の進撃（メス・ストラスブール・ミュルーズの解放、11月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: roussillon
   name: ルシヨンとセルダーニュ北部
@@ -205,6 +327,20 @@
       owner: france
       cause: ピレネー条約
       source: "ja.wikipedia: ピレネー条約"
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: germany
+      certainty: occupied
+      label: ヴィシー政府
+      cause: 連合軍の北アフリカ上陸に対し、ドイツ軍が南部の自由地域も占領（11月）
+      source: "https://en.wikipedia.org/wiki/Case_Anton"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: artois_south
   name: アルトワ（アラス・ベテューヌ・ランス）
@@ -221,6 +357,15 @@
       owner: france
       cause: ピレネー条約
       source: "ja.wikipedia: ピレネー条約"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: saint_omer
   name: サントメール（アルトワ北部）
@@ -235,9 +380,19 @@
       owner: france
       cause: ナイメーヘンの和約
       source: "ja.wikipedia: ナイメーヘンの和約"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: dunkirk
   name: ダンケルクと海沿いフランドル
+  names: [{from: 1914, name: "ダンケルク"}]
   select:
     pieces: [FRA-Dunkerque]
   timeline:
@@ -255,9 +410,25 @@
       owner: france
       cause: チャールズ2世がダンケルクをフランスに売却
       source: "ja.wikipedia: ダンケルク"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: germany
+      certainty: occupied
+      label: ダンケルク要塞（ドイツ軍）
+      cause: 連合軍がフランス北部を解放したが、ダンケルクの町と周辺は「ダンケルク要塞」としてドイツ軍が保つ（9月〜）
+      source: "https://en.wikipedia.org/wiki/Siege_of_Dunkirk_(1944–1945)"
+    - from: 1945
+      owner: france
+      cause: ドイツの降伏で、ダンケルクのドイツ軍が降伏（5月9日）
+      source: "https://en.wikipedia.org/wiki/Siege_of_Dunkirk_(1944–1945)"
 
 - id: walloon_flanders
   name: ワロン・フランドル（リール・ドゥエー）
+  names: [{from: 1914, name: "リール・ドゥエー（フランス北部）"}]
   select:
     pieces: [FRA-Lille, FRA-Douai]
   timeline:
@@ -269,6 +440,24 @@
       owner: france
       cause: アーヘンの和約（南ネーデルラント継承戦争）
       source: "ja.wikipedia: アーヘンの和約_(1668年)"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      cause: 第一次世界大戦（ドイツ軍が北東部を占領。1918年の休戦まで続く）
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でドイツ軍が撤退
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: hainaut_west
   name: エノー南部（アヴェーヌ・ル・ケノワ・ランドルシー）
@@ -284,6 +473,24 @@
       cause: ピレネー条約
       note: モブージュは1678年にフランス領。
       source: "ja.wikipedia: ピレネー条約"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      cause: 第一次世界大戦（ドイツ軍が北東部を占領。1918年の休戦まで続く）
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でドイツ軍が撤退
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: cambresis_valenciennes
   name: カンブレジとヴァランシエンヌ
@@ -299,6 +506,24 @@
       owner: france
       cause: ナイメーヘンの和約
       source: "ja.wikipedia: ナイメーヘンの和約"
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      cause: 第一次世界大戦（ドイツ軍が北東部を占領。1918年の休戦まで続く）
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でドイツ軍が撤退
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: avignon_comtat
   name: アヴィニョンとヴネッサン伯領（教皇領）
@@ -313,9 +538,24 @@
       owner: france
       cause: 憲法制定国民議会によるアヴィニョンとヴネッサン伯領の併合
       source: "ja.wikipedia: アヴィニョン"
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: germany
+      certainty: occupied
+      label: ヴィシー政府
+      cause: 連合軍の北アフリカ上陸に対し、ドイツ軍が南部の自由地域も占領（11月）
+      source: "https://en.wikipedia.org/wiki/Case_Anton"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: savoy_duchy
   name: サヴォイア公国（サヴォワ）
+  names: [{from: 1860, name: "サヴォワ"}]
   select:
     pieces: [FRA-Annecy, FRA-Bonneville, FRA-Saint_Julien_en_Genevois, FRA-Thonon_les_Bains, FRA-Albertville, FRA-Chambery, FRA-Saint_Jean_de_Maurienne]
   timeline:
@@ -336,6 +576,24 @@
       owner: france
       cause: トリノ条約（イタリア統一戦争への協力の代償として、サルデーニャ王国がフランスに割譲。住民投票で承認）
       source: "ja.wikipedia: トリノ条約 (1860年)"
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: italy
+      certainty: occupied
+      cause: イタリア軍がローヌ川以東の南東部とコルシカを占領（11月）
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      cause: イタリアの降伏（9月）で、イタリアの占領地をドイツ軍が引き継ぐ
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: savoy_1814_french
   name: シャンベリとアヌシー（1814年にフランスに残った部分）
@@ -354,6 +612,24 @@
       owner: france
       cause: トリノ条約（イタリア統一戦争への協力の代償として、サルデーニャ王国がフランスに割譲。住民投票で承認）
       source: "ja.wikipedia: トリノ条約 (1860年)"
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: italy
+      certainty: occupied
+      cause: イタリア軍がローヌ川以東の南東部とコルシカを占領（11月）
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      cause: イタリアの降伏（9月）で、イタリアの占領地をドイツ軍が引き継ぐ
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: nice_county
   name: ニース伯領
@@ -375,6 +651,24 @@
       owner: france
       cause: トリノ条約（イタリア統一戦争への協力の代償として、サルデーニャ王国がフランスに割譲。住民投票で承認）
       source: "ja.wikipedia: トリノ条約 (1860年)"
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: italy
+      certainty: occupied
+      cause: イタリア軍がローヌ川以東の南東部とコルシカを占領（11月）
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      cause: イタリアの降伏（9月）で、イタリアの占領地をドイツ軍が引き継ぐ
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: barcelonnette
   name: バルスロネット渓谷
@@ -388,6 +682,24 @@
       owner: france
       cause: ユトレヒト条約（アルプスの渓谷の交換）
       source: "ja.wikipedia: ユトレヒト条約"
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: italy
+      certainty: occupied
+      cause: イタリア軍がローヌ川以東の南東部とコルシカを占領（11月）
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      cause: イタリアの降伏（9月）で、イタリアの占領地をドイツ軍が引き継ぐ
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: monaco
   name: モナコ
@@ -415,6 +727,20 @@
       cause: フランス＝モナコ条約（マントン・ロクブリュヌをフランスに売却し、独立を認められる）
       note: マントンとロクブリュヌ（1848年に独立を宣言）はニースのピースに含まれるため、地図では描かない。
       source: "ja.wikipedia: モナコ"
+    - from: 1942
+      owner: italy
+      certainty: occupied
+      cause: イタリア軍がモナコを占領（11月）
+      source: "https://en.wikipedia.org/wiki/Monaco_in_World_War_II"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      cause: イタリアの降伏の後、ドイツ軍が占領（9月）
+      source: "https://en.wikipedia.org/wiki/Monaco_in_World_War_II"
+    - from: 1944
+      owner: monaco
+      cause: 連合軍による解放（9月）
+      source: "https://en.wikipedia.org/wiki/Monaco_in_World_War_II"
 
 - id: corsica
   name: コルシカ島
@@ -442,6 +768,20 @@
       owner: france
       cause: イギリス軍の撤退とフランスの再占領
       source: "ja.wikipedia: コルシカ島"
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: italy
+      certainty: occupied
+      cause: イタリア軍がローヌ川以東の南東部とコルシカを占領（11月）
+      note: ドイツ軍も1943年に進駐した。
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1943
+      owner: france
+      cause: レジスタンスと自由フランス軍によるコルシカ解放（10月）。フランス本土で最初に解放された県
+      source: "https://en.wikipedia.org/wiki/Liberation_of_Corsica"
 
 - id: andorra
   name: アンドラ
@@ -644,6 +984,28 @@
     - from: 1648
       owner: denmark
       source: "ja.wikipedia: アイスランドの歴史"
+    - from: 1918
+      owner: iceland
+      cause: デンマーク＝アイスランド連合法（12月1日）でアイスランド王国が独立（デンマーク王を君主とする同君連合）
+      source: "https://ja.wikipedia.org/wiki/アイスランド王国"
+    - from: 1940
+      owner: britain
+      certainty: occupied
+      label: アイスランド（イギリスの占領）
+      cause: 第二次世界大戦でイギリス軍がアイスランドに上陸・占領（5月）
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Iceland"
+    - from: 1941
+      owner: usa
+      certainty: occupied
+      label: アイスランド（アメリカ軍の駐留）
+      cause: アイスランド政府との協定でアメリカ軍が防衛を引き継ぐ（7月）
+      note: アイスランドの政府は存続し、アメリカ軍の駐留は協定によるもの。イギリス軍も一部が残った。
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Iceland"
+    - from: 1944
+      owner: iceland
+      cause: アイスランド共和国の成立（6月17日。デンマークとの同君連合を解消）
+      note: アメリカ軍は1946–47年にいったん撤退し、1951年からNATOの基地として2006年まで駐留した。
+      source: "https://ja.wikipedia.org/wiki/アイスランド"
 
 - id: east_greenland
   name: 東グリーンランド
@@ -654,6 +1016,30 @@
       owner: null
       note: デンマーク＝ノルウェーの植民は1721年から西岸で始まった。東岸は19世紀末まで植民されていない。
       source: "ja.wikipedia: グリーンランドの歴史"
+    - from: 1921
+      owner: denmark
+      certainty: nominal
+      label: グリーンランド
+      cause: デンマークがグリーンランド全島の主権を宣言
+      source: "https://ja.wikipedia.org/wiki/グリーンランドの歴史"
+    - from: 1931
+      owner: denmark
+      certainty: uncertain
+      label: グリーンランド
+      cause: ノルウェーが東グリーンランドの一部を「赤毛のエイリークの地」として占有を宣言
+      source: "https://en.wikipedia.org/wiki/Erik_the_Red%27s_Land"
+    - from: 1933
+      owner: denmark
+      certainty: nominal
+      label: グリーンランド
+      cause: 常設国際司法裁判所がデンマークの主権を認める判決（4月）
+      source: "https://en.wikipedia.org/wiki/Erik_the_Red%27s_Land"
+    - from: 1953
+      owner: denmark
+      label: グリーンランド
+      cause: デンマーク憲法の改正でグリーンランドが植民地からデンマーク本国の一部となる
+      note: 1979年に自治政府、2009年に拡大された自治が認められた。
+      source: "https://ja.wikipedia.org/wiki/グリーンランドの歴史"
 
 # ================================================================ モロッコ
 - id: morocco
@@ -694,6 +1080,24 @@
       cause: フェス条約・フランス＝スペイン条約（タンジールは保護領から除かれ、国際管理の予定地とされた）
       note: タンジールの国際管理地域が正式に発足したのは1923年（ピースにはスペイン保護領に入ったアシラも含まれる）。
       source: "ja.wikipedia: タンジール国際管理地域"
+    - from: 1925
+      owner: tangier_zone
+      cause: タンジール協定（1923年調印、1925年発効）で国際管理地域が発足
+      source: "https://ja.wikipedia.org/wiki/タンジール国際管理地域"
+    - from: 1940
+      owner: spain
+      certainty: occupied
+      label: タンジール（スペインの占領）
+      cause: フランスの敗北に乗じてスペイン軍が占領（6月）
+      source: "https://ja.wikipedia.org/wiki/タンジール国際管理地域"
+    - from: 1945
+      owner: tangier_zone
+      cause: スペイン軍の撤退と国際管理の回復（10月）
+      source: "https://ja.wikipedia.org/wiki/タンジール国際管理地域"
+    - from: 1956
+      owner: morocco
+      cause: 独立したモロッコへの返還（10月）
+      source: "https://ja.wikipedia.org/wiki/タンジール国際管理地域"
 
 - id: morocco_south_nominal
   name: スース南部・ヌーン川流域（ゲルミーム）
@@ -711,6 +1115,22 @@
       cause: フェス条約（モロッコがフランスの保護国に）
       note: ヌーン川以南の部族地域にはフランスの支配はまだ及んでいない。
       source: "ja.wikipedia: フェス条約"
+    - from: 1934
+      owner: france
+      cause: アトラス山地と南部の「平定」の完了（フランス軍がアンティ・アトラスとドラア川流域を制圧）
+      source: "https://en.wikipedia.org/wiki/Pacification_of_Morocco"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1956
+      owner: morocco
+      cause: フランスとの共同宣言（3月）でモロッコが独立
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: western_sahara
   name: 西サハラと内陸の砂漠（部族地域）
@@ -728,6 +1148,25 @@
       cause: フランス＝スペイン協定（西サハラの北と東の境界を定め、モーリタニア北部・マリ北部の砂漠をフランスの勢力圏とする）
       note: ティリス・ゼムール（モーリタニア北部）やタウデニ（マリ北部）の砂漠の実際の占領は1930年代まで遅れた。西サハラは別の地域（spanish_sahara）で描く。
       source: "https://en.wikipedia.org/wiki/French_West_Africa"
+    - from: 1934
+      owner: france
+      label: モーリタニア
+      cause: フランス軍がティリス・ゼムール（モーリタニア北部）を制圧
+      source: "https://en.wikipedia.org/wiki/Colonial_Mauritania"
+    - from: 1940
+      owner: vichy_france
+      label: モーリタニア
+      cause: フランスの降伏。フランス領西アフリカはヴィシー政府に従う
+      source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
+    - from: 1942
+      owner: france
+      label: モーリタニア
+      cause: トーチ作戦の後、フランス領西アフリカが連合国側に移る（11月）
+      source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
+    - from: 1960
+      owner: mauritania
+      cause: モーリタニアの独立（11月）
+      source: "https://ja.wikipedia.org/wiki/モーリタニア"
 
 # ================================================================ アルジェ・チュニス・トリポリ
 - id: algiers_regency
@@ -746,6 +1185,18 @@
       cause: フランス軍のアルジェ占領（デイの降伏）
       note: 征服の進み方は、より小さな地域（alg_ で始まる地域）で地方ごとに示す。
       source: "ja.wikipedia: フランスのアルジェリア侵略"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: oran
   name: オラン
@@ -779,6 +1230,18 @@
       owner: france
       cause: フランス軍のオラン占領
       source: "ja.wikipedia: オラン"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: algeria_saharan_nominal
   name: アルジェリアのオアシス地帯（ムザブ・スーフ・ワルグラなど）
@@ -795,6 +1258,18 @@
       owner: null
       cause: アルジェの陥落（デイの政権の消滅）
       note: オアシスの諸勢力は自立した。フランスの進出は、より小さな地域（alg_ で始まる地域）で示す。
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: algeria_deep_sahara
   name: アルジェリア南部の砂漠（トゥアト・ホガールなど）
@@ -805,6 +1280,24 @@
       owner: null
       note: トゥアレグなどの遊牧部族の地域。トゥアトのオアシスはモロッコのスルタンに名目的に従うこともあった。
       source: "ja.wikipedia: サハラ砂漠"
+    - from: 1934
+      owner: france
+      cause: フランス軍がティンドゥフを占領
+      note: このピースのうち、ほかの地域で描かれずに残るのはティンドゥフ。
+      source: "https://en.wikipedia.org/wiki/Tindouf"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      note: モロッコもティンドゥフ周辺の領有を主張し、1963年に両国が戦った（砂の戦争）。
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: tunis_regency
   name: チュニス
@@ -821,6 +1314,20 @@
       cause: バルドー条約（チュニジアがフランスの保護国に。ベイの政府は残る）
       note: 1883年のマルサ協定で、フランスの統監が内政も握った。オスマン帝国は保護国化を認めなかった。
       source: "ja.wikipedia: バルドー条約"
+    - from: 1940
+      owner: vichy_france
+      label: チュニジア
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      label: チュニジア
+      cause: 連合軍の北アフリカ上陸の後、チュニジア西部のフランス軍は連合国側についた（11月）
+      source: "https://ja.wikipedia.org/wiki/チュニジアの戦い"
+    - from: 1956
+      owner: tunisia
+      cause: フランスとの議定書（3月）でチュニジアが独立
+      source: "https://ja.wikipedia.org/wiki/チュニジア"
 
 - id: tripoli_regency
   name: トリポリ摂政領（トリポリタニアとキレナイカ）
@@ -840,6 +1347,35 @@
       cause: ローザンヌ（ウーシー）条約（イタリア＝トルコ戦争の講和。オスマン帝国がリビアを放棄）
       note: イタリアの支配は沿岸の都市とその周辺にとどまり、内陸ではサヌーシー教団などが抵抗を続けた。
       source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1915
+      owner: italy
+      certainty: nominal
+      cause: 1914–15年の反乱（12月にフェザーンから撤退、1915年4月のガルダビーヤの戦いで大敗）で、イタリアの支配は沿岸の町に縮む
+      source: "https://en.wikipedia.org/wiki/Italian_Libya"
+    - from: 1918
+      owner: tripolitania_republic
+      certainty: uncertain
+      cause: トリポリタニア共和国の宣言（11月）
+      source: "https://en.wikipedia.org/wiki/Tripolitanian_Republic"
+    - from: 1922
+      owner: italy
+      certainty: uncertain
+      cause: イタリアの総督ヴォルピがトリポリタニアの再征服を始める（ミスラタの占領など）
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1924
+      owner: italy
+      cause: トリポリタニア北部の再征服の完了
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1943
+      owner: britain
+      certainty: occupied
+      label: トリポリタニア
+      cause: 連合軍がトリポリを占領（1月）し、トリポリタニアはイギリスの軍政下に
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Libya)"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
 
 - id: libya_interior_nominal
   name: フェザーンとリビアの内陸
@@ -865,6 +1401,225 @@
       note: イタリア軍は1914年はじめにフェザーンのムルズクまで進んだが、同年末の反乱で沿岸に退いた。
       source: "ja.wikipedia: イタリア・トルコ戦争"
 
+- id: fezzan
+  name: フェザーン（リビア南西部）
+  select:
+    pieces: [LBY-Murzuq, LBY-Sabha, LBY-Wadi_al_Hayaa, LBY-Ash_Shati, LBY-Ghat]
+  timeline:
+    - from: 1648
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      note: フェザーンはアウラード・ムハンマド朝の支配地で、トリポリに貢納していた。
+      source: "en.wikipedia: Awlad Muhammad dynasty"
+    - from: 1835
+      owner: ottoman
+      certainty: nominal
+      cause: オスマン帝国がカラマンリー朝を廃し、直接の支配に戻す
+      note: フェザーンは1831–42年、アブドゥルジャリールが自立していた。オスマン帝国は1842年にフェザーンを支配下に戻した。
+      source: "en.wikipedia: Ottoman Tripolitania"
+    - from: 1912
+      owner: italy
+      certainty: nominal
+      cause: ローザンヌ（ウーシー）条約
+      note: イタリア軍は1914年はじめにフェザーンのムルズクまで進んだが、同年末の反乱で沿岸に退いた。
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1930
+      owner: italy
+      cause: イタリア軍がフェザーンを征服（1929–30年）
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1943
+      owner: france
+      certainty: occupied
+      label: フェザーン
+      cause: 自由フランス軍（ルクレール）がフェザーンを占領（1月）し、フランスの軍政下に
+      source: "https://en.wikipedia.org/wiki/French_administration_of_Fezzan"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+    - from: 2019
+      owner: libya_east
+      certainty: uncertain
+      cause: リビア国民軍が南部を制圧（1–2月）
+      source: "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
+
+- id: ghadamis
+  name: ガダーミス
+  select:
+    pieces: [LBY-Ghadamis]
+  timeline:
+    - from: 1648
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      note: フェザーンはアウラード・ムハンマド朝の支配地で、トリポリに貢納していた。
+      source: "en.wikipedia: Awlad Muhammad dynasty"
+    - from: 1835
+      owner: ottoman
+      certainty: nominal
+      cause: オスマン帝国がカラマンリー朝を廃し、直接の支配に戻す
+      note: フェザーンは1831–42年、アブドゥルジャリールが自立していた。オスマン帝国は1842年にフェザーンを支配下に戻した。
+      source: "en.wikipedia: Ottoman Tripolitania"
+    - from: 1912
+      owner: italy
+      certainty: nominal
+      cause: ローザンヌ（ウーシー）条約
+      note: イタリア軍は1914年はじめにフェザーンのムルズクまで進んだが、同年末の反乱で沿岸に退いた。
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1924
+      owner: italy
+      cause: イタリアのトリポリタニア再征服
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1943
+      owner: france
+      certainty: occupied
+      label: フェザーン＝ガダーミス
+      cause: 自由フランス軍（ルクレール）がフェザーンを占領（1月）し、フランスの軍政下に
+      source: "https://en.wikipedia.org/wiki/French_administration_of_Fezzan"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+
+- id: mizdah
+  name: ミズダ（ナフーサ山地の南）
+  select:
+    pieces: [LBY-Mizdah]
+  timeline:
+    - from: 1648
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      note: フェザーンはアウラード・ムハンマド朝の支配地で、トリポリに貢納していた。
+      source: "en.wikipedia: Awlad Muhammad dynasty"
+    - from: 1835
+      owner: ottoman
+      certainty: nominal
+      cause: オスマン帝国がカラマンリー朝を廃し、直接の支配に戻す
+      note: フェザーンは1831–42年、アブドゥルジャリールが自立していた。オスマン帝国は1842年にフェザーンを支配下に戻した。
+      source: "en.wikipedia: Ottoman Tripolitania"
+    - from: 1912
+      owner: italy
+      certainty: nominal
+      cause: ローザンヌ（ウーシー）条約
+      note: イタリア軍は1914年はじめにフェザーンのムルズクまで進んだが、同年末の反乱で沿岸に退いた。
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1924
+      owner: italy
+      cause: イタリアのトリポリタニア再征服
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1943
+      owner: britain
+      certainty: occupied
+      label: トリポリタニア
+      cause: 連合軍がトリポリを占領（1月）し、トリポリタニアはイギリスの軍政下に
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Libya)"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+
+- id: jufrah
+  name: ジュフラ（リビア中部のオアシス）
+  select:
+    pieces: [LBY-Al_Jufrah]
+  timeline:
+    - from: 1648
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      note: フェザーンはアウラード・ムハンマド朝の支配地で、トリポリに貢納していた。
+      source: "en.wikipedia: Awlad Muhammad dynasty"
+    - from: 1835
+      owner: ottoman
+      certainty: nominal
+      cause: オスマン帝国がカラマンリー朝を廃し、直接の支配に戻す
+      note: フェザーンは1831–42年、アブドゥルジャリールが自立していた。オスマン帝国は1842年にフェザーンを支配下に戻した。
+      source: "en.wikipedia: Ottoman Tripolitania"
+    - from: 1912
+      owner: italy
+      certainty: nominal
+      cause: ローザンヌ（ウーシー）条約
+      note: イタリア軍は1914年はじめにフェザーンのムルズクまで進んだが、同年末の反乱で沿岸に退いた。
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1928
+      owner: italy
+      cause: イタリア軍がジュフラのオアシスを占領
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1943
+      owner: britain
+      certainty: occupied
+      label: トリポリタニア
+      cause: 連合軍がトリポリを占領（1月）し、トリポリタニアはイギリスの軍政下に
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Libya)"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+    - from: 2017
+      owner: libya_east
+      certainty: uncertain
+      cause: リビア国民軍がジュフラを制圧（6月）
+      source: "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
+
+- id: ajdabiya
+  name: アジュダービヤとキレナイカの南の砂漠
+  select:
+    pieces: [LBY-Ajdabiya]
+  timeline:
+    - from: 1648
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      note: フェザーンはアウラード・ムハンマド朝の支配地で、トリポリに貢納していた。
+      source: "en.wikipedia: Awlad Muhammad dynasty"
+    - from: 1835
+      owner: ottoman
+      certainty: nominal
+      cause: オスマン帝国がカラマンリー朝を廃し、直接の支配に戻す
+      note: フェザーンは1831–42年、アブドゥルジャリールが自立していた。オスマン帝国は1842年にフェザーンを支配下に戻した。
+      source: "en.wikipedia: Ottoman Tripolitania"
+    - from: 1912
+      owner: italy
+      certainty: nominal
+      cause: ローザンヌ（ウーシー）条約
+      note: イタリア軍は1914年はじめにフェザーンのムルズクまで進んだが、同年末の反乱で沿岸に退いた。
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1915
+      owner: senussi
+      certainty: uncertain
+      cause: 1914–15年の反乱（12月にフェザーンから撤退、1915年4月のガルダビーヤの戦いで大敗）で、イタリアの支配は沿岸の町に縮む
+      note: 1920年のラジマ協定で、アジュダービヤはサヌーシー教団のイドリースのアミール国の都とされた。
+      source: "https://en.wikipedia.org/wiki/Emirate_of_Cyrenaica"
+    - from: 1923
+      owner: italy
+      certainty: uncertain
+      cause: ファシスト政権のイタリアが協定を破棄し、アジュダービヤを占領（4月）
+      note: ウマル・ムフタールの抵抗が1931年まで続いた。
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1932
+      owner: italy
+      cause: キレナイカの抵抗の鎮圧（ウマル・ムフタールの処刑、1931年9月）
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1941
+      owner: britain
+      certainty: occupied
+      label: キレナイカ
+      cause: クルセーダー作戦（11–12月）でイギリス軍がキレナイカを奪う
+      note: 1942年1月にロンメルが奪い返したが、同年11月のエル・アラメインの戦いの後、イギリス軍が再び占領した。
+      source: "https://en.wikipedia.org/wiki/Western_Desert_campaign"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+    - from: 2014
+      owner: libya_east
+      certainty: uncertain
+      cause: 第二次リビア内戦（代表議会とリビア国民軍が東部を支配）
+      source: "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
+
+
 - id: kufra
   name: クフラ（リビア南東の砂漠）
   select:
@@ -879,6 +1634,32 @@
       cause: サヌーシー教団が本拠をクフラに移す
       note: 名目上はオスマン帝国、1912年以降はイタリアの領土とされたが、イタリアがクフラを占領したのは1931年。
       source: "ja.wikipedia: サヌーシー教団"
+    - from: 1931
+      owner: italy
+      cause: イタリア軍がクフラを占領（1月）
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1941
+      owner: france
+      certainty: occupied
+      label: クフラ（自由フランス軍の占領）
+      cause: 自由フランス軍（ルクレール）がクフラを攻略（3月）
+      source: "https://en.wikipedia.org/wiki/Capture_of_Kufra"
+    - from: 1943
+      owner: britain
+      certainty: occupied
+      label: キレナイカ
+      cause: キレナイカのイギリス軍政に入る
+      note: 要確認：1943年以降の管轄。
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Libya)"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+    - from: 2014
+      owner: libya_east
+      certainty: uncertain
+      cause: 第二次リビア内戦（代表議会とリビア国民軍が東部を支配）
+      source: "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
 
 # ================================================================ エジプト
 - id: egypt
@@ -914,6 +1695,11 @@
       owner: britain
       cause: イギリスの保護国宣言（12月。オスマン帝国の宗主権を否定し、エジプト・スルタン国とする）
       source: "ja.wikipedia: エジプト・スルタン国"
+    - from: 1922
+      owner: egypt
+      cause: イギリスがエジプトの独立を一方的に宣言（2月。保護国の廃止）
+      note: スエズ運河の防衛やスーダンの問題はイギリスが保留し、イギリス軍は運河地帯に1956年まで駐留した。
+      source: "https://ja.wikipedia.org/wiki/エジプト王国"
 
 - id: egypt_western_desert
   name: エジプト西部の砂漠（シーワなど）
@@ -947,6 +1733,11 @@
       certainty: nominal
       cause: イギリスの保護国宣言（エジプト・スルタン国）
       source: "ja.wikipedia: エジプト・スルタン国"
+    - from: 1922
+      owner: egypt
+      cause: イギリスがエジプトの独立を宣言（保護国の廃止）
+      note: 1925年のイタリアとの協定で、ジャグブーブ・オアシスはイタリア領リビアに譲られた。第二次世界大戦では、1940年と1942年にイタリア・ドイツ軍がこの地域に攻め込んだ（エル・アラメインの戦い）。
+      source: "https://ja.wikipedia.org/wiki/エジプト王国"
 
 - id: tunisia_south_nominal
   name: チュニジア南部の砂漠（タタウィーン）
@@ -966,6 +1757,27 @@
       cause: バルドー条約（チュニジアがフランスの保護国に）
       note: 南部は軍政地域とされた。
       source: "ja.wikipedia: バルドー条約"
+    - from: 1940
+      owner: vichy_france
+      label: チュニジア
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: germany
+      certainty: occupied
+      label: チュニジア
+      cause: ドイツ・イタリア軍がチュニジアに進駐（11月）
+      note: 1943年3月のマレト線の戦いの舞台。
+      source: "https://ja.wikipedia.org/wiki/チュニジアの戦い"
+    - from: 1943
+      owner: france
+      label: チュニジア
+      cause: チュニジアの戦いでドイツ・イタリア軍が降伏（5月）
+      source: "https://ja.wikipedia.org/wiki/チュニジアの戦い"
+    - from: 1956
+      owner: tunisia
+      cause: フランスとの議定書（3月）でチュニジアが独立
+      source: "https://ja.wikipedia.org/wiki/チュニジア"
 
 # ================================================================ 1815–1914 に加えた地域
 # ---------------------------------------------------------------- フランス東部（1871年）
@@ -979,6 +1791,37 @@
       cause: フランクフルト講和条約（アルザス＝ロレーヌのドイツへの割譲）
       note: ドイツ帝国の帝国直轄領エルザス＝ロートリンゲン。ティオンヴィル・サールブールも同じ（それぞれの地域で描く）。現在のモゼル県の範囲にあたる。
       source: "ja.wikipedia: アルザス＝ロレーヌ"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でフランス軍が進駐。ヴェルサイユ条約（1919）で休戦の日にさかのぼってフランスに返還
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1940
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: 独仏休戦協定の後、ドイツが事実上併合（ガウに編入。法的な併合条約はない）
+      note: 住民はドイツ国籍を押しつけられ、男性はドイツ軍に徴兵された。
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1944
+      owner: france
+      cause: 連合軍の進撃（メス・ストラスブール・ミュルーズの解放、11月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: forbach_1944
+  name: フォルバック
+  note: ドイツ領ロレーヌ（german_lorraine）のうち、1944年末に前線になっていたフォルバックだけを塗り分けるための地域。1943年以前は german_lorraine と同じ。
+  select:
+    pieces: [FRA-Forbach]
+  timeline:
+    - from: 1944
+      owner: france
+      certainty: uncertain
+      cause: 連合軍がメス・サルグミーヌを解放（11–12月）。フォルバック周辺はジークフリート線の前の前線になり、解放は1945年2–3月
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+    - from: 1945
+      owner: france
+      cause: 連合軍がフォルバックを解放（2–3月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 - id: belfort
   name: ベルフォール
@@ -990,6 +1833,15 @@
       cause: フランクフルト講和条約（ベルフォールの要塞は普仏戦争で降伏せず、フランスに残された）
       note: アルザスのうちフランスに残った部分で、のちのベルフォール地域圏（テリトワール・ド・ベルフォール）。
       source: "ja.wikipedia: ベルフォール"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
 # ---------------------------------------------------------------- スペイン（カルリスタ戦争）
 - id: basque_navarre
@@ -1017,6 +1869,15 @@
       owner: spain
       cause: カルリスタの敗北（2月）。バスクの特権（フエロ）は廃止された
       source: "ja.wikipedia: 第三次カルリスタ戦争"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。ナバラ・アラバは反乱軍につき、ギプスコアは9月に反乱軍が制圧）
+      note: ビスカヤはバスク自治政府のもとで1937年6月まで共和国側にとどまった（bizkaia_cw で描く）。
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
 
 # ---------------------------------------------------------------- モロッコ（1907–1912）
 - id: morocco_spanish_zone
@@ -1029,6 +1890,18 @@
       cause: フランス＝スペイン条約（11月。モロッコ北部をスペインの保護領とする）
       note: スペインの統治はテトゥアン（首都）とセウタ・メリリャ・ララシュの周辺にとどまった。
       source: "ja.wikipedia: スペイン保護領モロッコ"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1956
+      owner: morocco
+      cause: スペインとの共同宣言（4月）でスペイン保護領が独立モロッコに復帰
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: morocco_spanish_rif
   name: リーフ山地（スペイン保護領の内陸）
@@ -1041,6 +1914,28 @@
       cause: フランス＝スペイン条約
       note: リーフ山地の部族はスペインの支配に服さなかった（のちのリーフ戦争、1921–26）。
       source: "ja.wikipedia: スペイン保護領モロッコ"
+    - from: 1921
+      owner: rif_republic
+      certainty: uncertain
+      cause: アヌンヌの戦い（7月）でリーフの部族がスペイン軍に大勝し、アブドゥルカリームがリーフ共和国を建てる
+      note: シャウエン（シェフシャウエン）は1924年にスペイン軍が撤退するまでスペインが保持していた。
+      source: "https://ja.wikipedia.org/wiki/リーフ戦争"
+    - from: 1926
+      owner: spain
+      cause: アルフセマス上陸（1925年9月）などフランス・スペインの共同作戦で、アブドゥルカリームが降伏（1926年5月）
+      source: "https://ja.wikipedia.org/wiki/リーフ戦争"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1956
+      owner: morocco
+      cause: スペインとの共同宣言（4月）でスペイン保護領が独立モロッコに復帰
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: melilla_hinterland
   name: メリリャ周辺（ナドール）
@@ -1056,6 +1951,18 @@
       owner: spain
       cause: フランス＝スペイン条約（スペインの保護領に）
       source: "ja.wikipedia: スペイン保護領モロッコ"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1956
+      owner: morocco
+      cause: スペインとの共同宣言（4月）でスペイン保護領が独立モロッコに復帰
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: larache
   name: ララシュとクサル・エル・ケビール
@@ -1071,6 +1978,18 @@
       owner: spain
       cause: フランス＝スペイン条約（スペインの保護領に）
       source: "ja.wikipedia: スペイン保護領モロッコ"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1956
+      owner: morocco
+      cause: スペインとの共同宣言（4月）でスペイン保護領が独立モロッコに復帰
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: morocco_french_zone
   name: フランス保護領モロッコ
@@ -1083,6 +2002,18 @@
       owner: france
       cause: フェス条約（3月。モロッコがフランスの保護国となる）
       source: "ja.wikipedia: フェス条約"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1956
+      owner: morocco
+      cause: フランスとの共同宣言（3月）でモロッコが独立
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: morocco_french_unpacified
   name: 中アトラス・高アトラス・サハラ側（フランスの支配が及ばない地域）
@@ -1095,6 +2026,22 @@
       cause: フェス条約
       note: 中アトラス・高アトラスやサハラ側の部族はフランスに抵抗し、「平定」は1934年まで続いた。マラケシュ周辺の南部は、フランスと結んだグラーウィー家などの大カーイドが治めた。
       source: "https://en.wikipedia.org/wiki/Pacification_of_Morocco"
+    - from: 1934
+      owner: france
+      cause: アトラス山地と南部の「平定」の完了（フランス軍がアンティ・アトラスとドラア川流域を制圧）
+      source: "https://en.wikipedia.org/wiki/Pacification_of_Morocco"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1956
+      owner: morocco
+      cause: フランスとの共同宣言（3月）でモロッコが独立
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: taza_khenifra
   name: タザとヘニフラ（1914年に占領）
@@ -1107,6 +2054,22 @@
       cause: フランス軍がタザ（5月）とヘニフラ（6月）を占領
       note: タザの占領で、アルジェリアとモロッコ西部を結ぶ回廊がつながった。周辺の部族の抵抗は続いた。
       source: "https://en.wikipedia.org/wiki/Pacification_of_Morocco"
+    - from: 1934
+      owner: france
+      cause: アトラス山地と南部の「平定」の完了（フランス軍がアンティ・アトラスとドラア川流域を制圧）
+      source: "https://en.wikipedia.org/wiki/Pacification_of_Morocco"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1956
+      owner: morocco
+      cause: フランスとの共同宣言（3月）でモロッコが独立
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: oujda
   name: ウジダ
@@ -1122,6 +2085,18 @@
       owner: france
       cause: フェス条約
       source: "ja.wikipedia: フェス条約"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1956
+      owner: morocco
+      cause: フランスとの共同宣言（3月）でモロッコが独立
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: chaouia
   name: カサブランカとシャウイーヤ
@@ -1137,6 +2112,18 @@
       owner: france
       cause: フェス条約
       source: "ja.wikipedia: フェス条約"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1956
+      owner: morocco
+      cause: フランスとの共同宣言（3月）でモロッコが独立
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: fez_rabat_1911
   name: フェス・メクネス・ラバトと平野部（1911年のフランス出兵）
@@ -1152,6 +2139,18 @@
       owner: france
       cause: フェス条約
       source: "ja.wikipedia: フェス条約"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1956
+      owner: morocco
+      cause: フランスとの共同宣言（3月）でモロッコが独立
+      source: "https://ja.wikipedia.org/wiki/モロッコ"
 
 - id: sidi_ifni
   name: イフニ
@@ -1164,6 +2163,27 @@
       cause: フランス＝スペイン条約（1860年のワド・ラス条約で譲られたイフニをスペイン領と確認）
       note: スペインがイフニを実際に占領したのは1934年。
       source: "ja.wikipedia: イフニ"
+    - from: 1934
+      owner: spain
+      cause: スペイン軍がイフニを占領
+      source: "https://ja.wikipedia.org/wiki/イフニ"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1958
+      owner: morocco
+      certainty: uncertain
+      cause: イフニ戦争（1957–58。モロッコ解放軍が内陸を制圧し、スペインはシディ・イフニの町の周辺だけを保つ）
+      source: "https://en.wikipedia.org/wiki/Ifni_War"
+    - from: 1969
+      owner: morocco
+      cause: スペインがイフニをモロッコに返還（6月）
+      source: "https://ja.wikipedia.org/wiki/イフニ"
 
 - id: tarfaya_strip
   name: タルファヤ地帯（ジュビー岬）
@@ -1180,6 +2200,19 @@
       cause: フランス＝スペイン条約（ドラア川と北緯27度40分の間をスペインの南部保護領とする）
       note: スペインがジュビー岬（タルファヤ）を占領したのは1916年。このピースの北の端はドラア川より北にはみ出す。
       source: "ja.wikipedia: タルファヤ"
+    - from: 1936
+      owner: nationalist_spain
+      certainty: nominal
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1958
+      owner: morocco
+      cause: シントラ協定（4月）でスペインがタルファヤ地帯をモロッコに返還
+      source: "https://ja.wikipedia.org/wiki/タルファヤ"
 
 - id: spanish_sahara
   name: 西サハラ（リオ・デ・オロ。1904年からサギア・エル・ハムラも）
@@ -1192,6 +2225,26 @@
       cause: スペインがリオ・デ・オロの海岸の保護領化を宣言（ビリャ・シスネロス＝ダフラの建設）
       note: 内陸の境界は1900・1904・1912年のフランスとの条約で定まった。サギア・エル・ハムラは1904年にスペインの勢力圏とされた。実際の支配は沿岸の拠点だけで、内陸の占領は1930年代。
       source: "ja.wikipedia: スペイン領サハラ"
+    - from: 1934
+      owner: spain
+      cause: スペイン軍が内陸のスマラなどを占領
+      source: "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      note: 1958年にスペインの海外州（スペイン領サハラ）となった。
+      source: "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - from: 1976
+      owner: morocco
+      certainty: uncertain
+      label: 西サハラ
+      cause: マドリード協定（1975年11月）でスペインが撤退（1976年2月）。北部をモロッコ、南部をモーリタニアが分けた
+      note: 帰属は国際的に定まっていない（国連の非自治地域）。独立を求めるポリサリオ戦線は1976年にサハラ・アラブ民主共和国を宣言し、東部の砂漠の一部を支配する。モーリタニアは1979年に南部（ティリス・アル＝ガルビーヤ）を放棄し、モロッコが併合した。ピースが1つしかないため、全体をモロッコの支配として不確実（斜線）で描く。
+      source: "https://ja.wikipedia.org/wiki/西サハラ問題"
 
 - id: mali_north
   name: マリ北部の砂漠（タウデニ）
@@ -1204,6 +2257,31 @@
       cause: フランス軍のトンブクトゥ占領（フランス領スーダン）
       note: サハラ北部のタウデニ（岩塩の産地）まで達したのは1906年ごろ。
       source: "ja.wikipedia: フランス領スーダン"
+    - from: 1940
+      owner: vichy_france
+      label: フランス領スーダン
+      cause: フランスの降伏。フランス領西アフリカはヴィシー政府に従う
+      source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
+    - from: 1942
+      owner: france
+      label: フランス領スーダン
+      cause: トーチ作戦の後、フランス領西アフリカが連合国側に移る（11月）
+      source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
+    - from: 1960
+      owner: mali
+      cause: マリの独立（9月。6月にセネガルとのマリ連邦として独立し、8月に分かれた）
+      source: "https://ja.wikipedia.org/wiki/マリ共和国"
+    - from: 2012
+      owner: azawad
+      certainty: uncertain
+      cause: マリ北部の紛争（4月にアザワド解放民族運動が独立を宣言し、のちイスラーム武装勢力が北部の都市を支配）
+      source: "https://en.wikipedia.org/wiki/Mali_War"
+    - from: 2013
+      owner: mali
+      certainty: uncertain
+      cause: フランス軍の介入（セルヴァル作戦、1月）でマリ政府軍が北部の都市を取り戻す
+      note: 北部の砂漠ではトゥアレグの武装勢力（キダルなど）とイスラーム武装勢力の活動が続き、政府の支配は弱い。
+      source: "https://en.wikipedia.org/wiki/Mali_War"
 
 # ---------------------------------------------------------------- アルジェリアの征服（1830–1911）
 - id: alg_algiers
@@ -1221,6 +2299,18 @@
       label: アルジェリア
       cause: 第二共和政の憲法でアルジェリアをフランスの領土（3県）とする
       source: "ja.wikipedia: フランス領アルジェリア"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_mitidja
   name: ミティジャ平野（ブリダ・ティパザ）
@@ -1238,6 +2328,18 @@
       label: アルジェリア
       cause: タフナ条約（1837）でフランス領と認められ、ブリダを占領
       source: "ja.wikipedia: タフナ条約"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_mostaganem
   name: モスタガネム
@@ -1253,6 +2355,18 @@
       label: アルジェリア
       cause: フランス軍のモスタガネム占領
       source: "https://en.wikipedia.org/wiki/Mostaganem"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_west
   name: アルジェリア西部の内陸（トレムセン・マスカラ・ティアレット）
@@ -1286,6 +2400,18 @@
       label: アルジェリア
       cause: アブド＝アルカーディルの降伏（12月）
       source: "ja.wikipedia: アブド・アルカーディル"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_titteri
   name: アルジェリア中部の内陸（メデア・ミリアナ・シェリフ）
@@ -1318,6 +2444,18 @@
       label: アルジェリア
       cause: アブド＝アルカーディルの降伏
       source: "ja.wikipedia: アブド・アルカーディル"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_constantine
   name: コンスタンティーヌとアルジェリア東部
@@ -1334,6 +2472,18 @@
       label: アルジェリア
       cause: フランス軍のコンスタンティーヌ攻略（10月）
       source: "ja.wikipedia: コンスタンティーヌ"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_annaba
   name: ボーヌ（アンナバ）
@@ -1349,6 +2499,18 @@
       label: アルジェリア
       cause: フランス軍のボーヌ占領
       source: "https://en.wikipedia.org/wiki/Annaba"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_setif
   name: セティフとメジャナ
@@ -1372,6 +2534,18 @@
       cause: フランス軍がセティフ（1839）などを確保
       note: 要確認。
       source: "https://en.wikipedia.org/wiki/French_conquest_of_Algeria"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_aures
   name: オーレス山地とジバン（バトナ・ビスクラ・テベッサ）
@@ -1399,6 +2573,18 @@
       label: アルジェリア
       cause: ザアチャの戦い（1849）とオーレス遠征。アフマド・ベイは1848年に降伏
       source: "https://en.wikipedia.org/wiki/Siege_of_Zaatcha"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_kabylia
   name: 大カビリー（ティジ・ウズー・ブイラ）
@@ -1416,6 +2602,18 @@
       cause: ランドン元帥の遠征による大カビリーの征服
       note: 1871年、モクラーニの反乱でカビリーが蜂起した。
       source: "ja.wikipedia: カビリア"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_little_kabylia
   name: 小カビリー（ベジャイア・ジジェル）
@@ -1438,6 +2636,18 @@
       label: アルジェリア
       cause: カビリーの征服
       source: "ja.wikipedia: カビリア"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_high_plateaus
   name: ジェルファとラグアト（高原とサハラの入口）
@@ -1453,6 +2663,18 @@
       label: アルジェリア
       cause: フランス軍のラグアト攻略（12月）
       source: "https://en.wikipedia.org/wiki/Siege_of_Laghouat"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_south_west
   name: アルジェリア南西の高原（エル・バヤド・ナーマ）
@@ -1475,6 +2697,18 @@
       cause: ウラード・シーディー・シャイフの反乱（1864–83）の終結
       note: 要確認。
       source: "https://en.wikipedia.org/wiki/Ouled_Sidi_Cheikh"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_mzab
   name: ムザブ（ガルダイア）
@@ -1492,6 +2726,18 @@
       label: アルジェリア
       cause: ムザブの併合
       source: "https://en.wikipedia.org/wiki/M'zab"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_ouargla_souf
   name: ワルグラとスーフ（エル・ウェド）・トゥグルト
@@ -1517,6 +2763,18 @@
       cause: サハラのオアシス（イン・サラー・トゥアト）の征服が進み、南方地域（南部領土、1902年）として軍政下に組みこまれる
       note: certain にした年は便宜的（要確認）。
       source: "https://en.wikipedia.org/wiki/Southern_Territories"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_bechar
   name: ベシャール
@@ -1529,6 +2787,18 @@
       cause: フランス軍のベシャール占領（コロン＝ベシャールの建設）
       note: モロッコとの国境地帯で、それまではモロッコのスルタンに名目的に従う部族の地域だった。
       source: "https://en.wikipedia.org/wiki/Béchar"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_tuat
   name: トゥアトとグララ（アドラール）
@@ -1541,6 +2811,18 @@
       cause: フランス軍のトゥアト・グララ・ティディケルトのオアシス占領（1899–1901）
       note: モロッコのスルタンも宗主権を主張していた。
       source: "https://en.wikipedia.org/wiki/Touat"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_hoggar
   name: ホガール（タマンラセット）とイン・サラー
@@ -1554,6 +2836,22 @@
       cause: フランス軍のイン・サラー占領（1899年12月〜1900年）
       note: 1902年のティトの戦いでホガールのトゥアレグを破り、1905年までに帰順させた。
       source: "https://en.wikipedia.org/wiki/Battle_of_Tit"
+    - from: 1920
+      owner: france
+      cause: トゥアレグの反乱（1916–17）の鎮圧の後、フランスの軍政が定着
+      source: "https://en.wikipedia.org/wiki/Kaocen_revolt"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_ajjer
   name: タッシリ・ナジェール（イリジ・ジャネット）
@@ -1567,6 +2865,22 @@
       cause: フランス軍のジャネット占領
       note: オスマン帝国（リビアのガート）もこの地域を自国領と主張していた。要確認。
       source: "https://en.wikipedia.org/wiki/Djanet"
+    - from: 1920
+      owner: france
+      cause: トゥアレグの反乱（1916–17）の鎮圧の後、フランスの軍政が定着
+      source: "https://en.wikipedia.org/wiki/Kaocen_revolt"
+    - from: 1940
+      owner: vichy_france
+      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      source: "https://en.wikipedia.org/wiki/French_North_Africa"
+    - from: 1942
+      owner: france
+      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      source: "https://ja.wikipedia.org/wiki/トーチ作戦"
+    - from: 1962
+      owner: algeria
+      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 # ---------------------------------------------------------------- リビア（1911–1912）
 - id: libya_coast_1911
@@ -1584,6 +2898,65 @@
       cause: ローザンヌ（ウーシー）条約
       source: "ja.wikipedia: イタリア・トルコ戦争"
 
+- id: libya_coast_1911_west
+  name: トリポリとホムス（フムス）
+  note: 第一次世界大戦中の反乱の時期にもイタリアが保った沿岸の町。
+  select:
+    pieces: [LBY-Tajura_wa_an_Nawahi_al_Arba, LBY-Al_Marqab]
+  timeline:
+    - from: 1911
+      owner: italy
+      certainty: occupied
+      cause: イタリア＝トルコ戦争（10月、イタリア軍が沿岸の港を占領。11月に併合を宣言）
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1912
+      owner: italy
+      cause: ローザンヌ（ウーシー）条約
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1943
+      owner: britain
+      certainty: occupied
+      label: トリポリタニア
+      cause: 連合軍がトリポリを占領（1月）し、トリポリタニアはイギリスの軍政下に
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Libya)"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+
+- id: libya_coast_1911_east
+  name: キレナイカの港（ベンガジ・デルナ・トブルク）
+  select:
+    pieces: [LBY-Benghazi, LBY-Al_Qubbah, LBY-Al_Butnan]
+  timeline:
+    - from: 1911
+      owner: italy
+      certainty: occupied
+      cause: イタリア＝トルコ戦争（10月、イタリア軍が沿岸の港を占領。11月に併合を宣言）
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1912
+      owner: italy
+      cause: ローザンヌ（ウーシー）条約
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1941
+      owner: britain
+      certainty: occupied
+      label: キレナイカ
+      cause: クルセーダー作戦（11–12月）でイギリス軍がキレナイカを奪う
+      note: トブルクは1941年4–12月の包囲に耐えたが、1942年6月にロンメルに落とされ、11月にイギリス軍が奪い返した。1949年にイドリースのキレナイカ首長国が自治を認められた。
+      source: "https://en.wikipedia.org/wiki/Western_Desert_campaign"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+    - from: 2014
+      owner: libya_east
+      certainty: uncertain
+      cause: 第二次リビア内戦（代表議会とリビア国民軍が東部を支配）
+      note: デルナ（クッバ）は2014–18年、イスラーム武装勢力が支配した。
+      source: "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
+
+
 - id: cyrenaica_interior
   name: キレナイカの内陸（緑の山地）
   select:
@@ -1595,6 +2968,37 @@
       cause: ローザンヌ（ウーシー）条約
       note: サヌーシー教団とオスマン帝国の将校（エンヴェルら）が抵抗を続けた。
       source: "ja.wikipedia: サヌーシー教団"
+    - from: 1915
+      owner: senussi
+      certainty: uncertain
+      cause: 1914–15年の反乱（12月にフェザーンから撤退、1915年4月のガルダビーヤの戦いで大敗）で、イタリアの支配は沿岸の町に縮む
+      note: 1917年のアクロマ協定・1920年のラジマ協定で、イタリアはサヌーシー教団に内陸の自治を認めた。
+      source: "https://en.wikipedia.org/wiki/Emirate_of_Cyrenaica"
+    - from: 1923
+      owner: italy
+      certainty: uncertain
+      cause: ファシスト政権のイタリアが協定を破棄して再征服を始める
+      note: ウマル・ムフタールが緑の山地（ジャバル・アフダル）でゲリラ戦を続けた。
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1932
+      owner: italy
+      cause: キレナイカの抵抗の鎮圧（1931年9月にウマル・ムフタールを処刑）
+      source: "https://en.wikipedia.org/wiki/Second_Italo-Senussi_War"
+    - from: 1941
+      owner: britain
+      certainty: occupied
+      label: キレナイカ
+      cause: クルセーダー作戦（11–12月）でイギリス軍がキレナイカを奪う
+      source: "https://en.wikipedia.org/wiki/Western_Desert_campaign"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月24日。国連総会の決議による）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+    - from: 2014
+      owner: libya_east
+      certainty: uncertain
+      cause: 第二次リビア内戦（代表議会とリビア国民軍が東部を支配）
+      source: "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
 
 # ---------------------------------------------------------------- グリーンランド
 - id: greenland_ammassalik
@@ -1608,3 +3012,453 @@
       cause: デンマークがアンマサリク（タシーラク）に交易所と伝道所を開く
       note: 東海岸で最初のデンマークの拠点。
       source: "https://en.wikipedia.org/wiki/Tasiilaq"
+    - from: 1953
+      owner: denmark
+      label: グリーンランド
+      cause: デンマーク憲法の改正でグリーンランドが植民地からデンマーク本国の一部となる
+      note: 1979年に自治政府、2009年に拡大された自治が認められた。
+      source: "https://ja.wikipedia.org/wiki/グリーンランドの歴史"
+
+# ================================================================ 1914–2025 に加えた地域
+# ---------------------------------------------------------------- フランス本土（2つの世界大戦の占領）
+- id: fr_ww1_occupied
+  name: 第一次世界大戦でドイツ軍が占領したフランス北東部（エーヌ北部・アルデンヌ・ムーズ北部）
+  select:
+    pieces: [FRA-Laon, FRA-Saint_Quentin, FRA-Vervins, FRA-Charleville_Mezieres, FRA-Rethel, FRA-Sedan, FRA-Vouziers, FRA-Verdun]
+  timeline:
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      cause: 第一次世界大戦（ドイツ軍が北東部を占領。1918年の休戦まで続く）
+      note: 前線はおおむねソワソン・ランス・ヴェルダンの北を通った。ヴェルダンの町と要塞はフランス軍が守り抜いた（ヴェルダンの戦い、1916）が、現在のヴェルダン郡の北部（モンメディ・ステネ）と東のヴォエーヴル平野は占領下にあった。
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でドイツ軍が撤退
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: lens_ww1
+  name: ランス（パ＝ド＝カレーの炭田）
+  select:
+    pieces: [FRA-Lens]
+  timeline:
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      cause: 第一次世界大戦（ドイツ軍が北東部を占領。1918年の休戦まで続く）
+      note: 前線はランスの西、アラスの東を通った。
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でドイツ軍が撤退
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: peronne_ww1
+  name: ペロンヌ（ソンム東部）
+  select:
+    pieces: [FRA-Peronne]
+  timeline:
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      cause: 第一次世界大戦（ドイツ軍が北東部を占領。1918年の休戦まで続く）
+      note: ソンムの戦い（1916）の戦場。
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1917
+      owner: france
+      cause: ドイツ軍がヒンデンブルク線へ退却（3月、アルベリヒ作戦）
+      note: 1918年3月のドイツ軍の春季攻勢で一時ふたたび占領された。
+      source: "https://en.wikipedia.org/wiki/Operation_Alberich"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: briey_ww1
+  name: ブリエ（ロンウィ＝ブリエの鉄鉱地帯）
+  select:
+    pieces: [FRA-Val_de_Briey]
+  timeline:
+    - from: 1914
+      owner: german_empire
+      certainty: occupied
+      cause: 第一次世界大戦（ドイツ軍が北東部を占領。1918年の休戦まで続く）
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）でドイツ軍が撤退
+      source: "https://en.wikipedia.org/wiki/German_occupation_of_north-eastern_France_during_World_War_I"
+    - from: 1940
+      owner: germany
+      certainty: occupied
+      cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
+      source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: thann_ww1
+  name: タン・マズヴォーの谷（フランス軍が占領したアルザス南部）
+  select:
+    pieces: [FRA-Thann]
+  timeline:
+    - from: 1914
+      owner: france
+      certainty: occupied
+      cause: 第一次世界大戦（フランス軍がヴォージュ山脈の東斜面のタン・マズヴォー・サン＝タマランの谷を占領）
+      note: ドイツ帝国領アルザスのうち、大戦中にフランス軍が保った唯一の地域。
+      source: "https://en.wikipedia.org/wiki/Thann,_Haut-Rhin"
+    - from: 1918
+      owner: france
+      cause: 休戦（11月）。ヴェルサイユ条約（1919）でフランスに返還
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1940
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: 独仏休戦協定の後、ドイツが事実上併合
+      source: "https://ja.wikipedia.org/wiki/アルザス＝ロレーヌ"
+    - from: 1944
+      owner: france
+      cause: 連合軍の進撃（12月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: colmar_pocket
+  name: コルマール（コルマール包囲戦の地域）
+  select:
+    pieces: [FRA-Colmar]
+  timeline:
+    - from: 1944
+      owner: germany
+      label: アルザス＝モゼル（ドイツが併合）
+      certainty: occupied
+      cause: ドイツ軍がコルマール周辺に立てこもる（コルマール・ポケット）
+      note: 1945年2月にフランス軍とアメリカ軍が解放した。
+      source: "https://en.wikipedia.org/wiki/Colmar_Pocket"
+    - from: 1945
+      owner: france
+      cause: コルマール・ポケットの解放（2月）
+      source: "https://en.wikipedia.org/wiki/Colmar_Pocket"
+
+- id: saint_nazaire_pocket
+  name: ロリアン・サン＝ナゼール・ラ・ロシェル（大西洋岸のドイツ軍の要塞）
+  note: ダンケルク要塞は dunkirk に書いた。ロワイヤン（1945年4月に解放）とジロンド河口のポケットは、ピースの一部なので描いていない。
+  select:
+    pieces: [FRA-Saint_Nazaire, FRA-Lorient, FRA-La_Rochelle]
+  timeline:
+    - from: 1944
+      owner: germany
+      certainty: occupied
+      label: 大西洋岸の要塞（ドイツ軍）
+      cause: 連合軍がフランス西部を解放したが、ドイツ軍がロリアン・サン＝ナゼールの潜水艦基地とラ・ロシェル（ラ・パリス）を「要塞」として保つ（8–9月〜）
+      source: "https://en.wikipedia.org/wiki/Saint-Nazaire_pocket"
+    - from: 1945
+      owner: france
+      cause: ドイツの降伏で、要塞のドイツ軍が降伏（5月。ラ・ロシェル9日、ロリアン10日、サン＝ナゼール11日）
+      source: "https://en.wikipedia.org/wiki/Atlantic_pockets"
+
+- id: fr_free_zone
+  name: フランス南部の自由地域（1940–42年のヴィシー政府の地域）
+  note: 1940年の境界線（休戦ライン）は、ジュネーヴ付近からドール・シャロン＝シュル＝ソーヌ・ムーラン・ヴィエルゾン・ロッシュの近く・アングレーム・モン＝ド＝マルサンを通り、スペイン国境のサン＝ジャン＝ピエ＝ド＝ポールに至った。線が郡をまたぐ所は面積の大きい側に入れた（ムーラン・ヴィエルゾン・アングレーム・ドール・シャロンなど）。
+  select:
+    pieces: [FRA-Belley, FRA-Bourg_en_Bresse, FRA-Gex, FRA-Nantua, FRA-Charolles, FRA-Macon, FRA-Louhans, FRA-Montlucon, FRA-Moulins, FRA-Vichy, FRA-Bourges, FRA-Saint_Amand_Montrond, FRA-Chateauroux, FRA-Issoudun, FRA-La_Chatre, FRA-Le_Blanc, FRA-Loches, FRA-Montmorillon, FRA-Confolens, FRA-Bellac, FRA-Limoges, FRA-Rochechouart, FRA-Aubusson, FRA-Gueret, FRA-Brive_la_Gaillarde, FRA-Tulle, FRA-Ussel, FRA-Bergerac, FRA-Nontron, FRA-Perigueux, FRA-Sarlat_la_Caneda, FRA-Cahors, FRA-Figeac, FRA-Gourdon, FRA-Agen, FRA-Marmande, FRA-Nerac, FRA-Villeneuve_sur_Lot, FRA-Auch, FRA-Condom, FRA-Mirande, FRA-Castelsarrasin, FRA-Montauban, FRA-Muret, FRA-Saint_Gaudens, FRA-Toulouse, FRA-Foix, FRA-Pamiers, FRA-Saint_Girons, FRA-Carcassonne, FRA-Limoux, FRA-Narbonne, FRA-Argeles_Gazost, FRA-Bagneres_de_Bigorre, FRA-Tarbes, FRA-Pau, FRA-Oloron_Sainte_Marie, FRA-Ambert, FRA-Clermont_Ferrand, FRA-Issoire, FRA-Riom, FRA-Thiers, FRA-Aurillac, FRA-Mauriac, FRA-Saint_Flour, FRA-Brioude, FRA-Le_Puy_en_Velay, FRA-Yssingeaux, FRA-Montbrison, FRA-Roanne, FRA-Saint_Etienne, FRA-Lyon, FRA-Villefranche_sur_Saone, FRA-Grenoble, FRA-La_Tour_du_Pin, FRA-Vienne, FRA-Die, FRA-Nyons, FRA-Valence, FRA-Largentiere, FRA-Privas, FRA-Tournon_sur_Rhone, FRA-Florac_Trois_Rivieres, FRA-Mende, FRA-Millau, FRA-Rodez, FRA-Villefranche_de_Rouergue, FRA-Albi, FRA-Castres, FRA-Beziers, FRA-Lodeve, FRA-Montpellier, FRA-Ales, FRA-Le_Vigan, FRA-Nimes, FRA-Apt, FRA-Aix_en_Provence, FRA-Arles, FRA-Istres, FRA-Marseille, FRA-Brignoles, FRA-Draguignan, FRA-Toulon, FRA-Grasse, FRA-Castellane, FRA-Digne_les_Bains, FRA-Forcalquier, FRA-Briancon, FRA-Gap]
+  timeline:
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: germany
+      certainty: occupied
+      label: ヴィシー政府
+      cause: 連合軍の北アフリカ上陸に対し、ドイツ軍が南部の自由地域も占領（11月）
+      source: "https://en.wikipedia.org/wiki/Case_Anton"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: jura_free_zone
+  name: ジュラ南部（ロン＝ル＝ソーニエ・サン＝クロード）
+  select:
+    pieces: [FRA-Lons_le_Saunier, FRA-Saint_Claude]
+  timeline:
+    - from: 1940
+      owner: vichy_france
+      cause: 独仏休戦協定（南部は「自由地域」としてヴィシー政府が治める）
+      source: "https://en.wikipedia.org/wiki/Zone_libre"
+    - from: 1942
+      owner: germany
+      certainty: occupied
+      label: ヴィシー政府
+      cause: 連合軍の北アフリカ上陸に対し、ドイツ軍が南部の自由地域も占領（11月）
+      source: "https://en.wikipedia.org/wiki/Case_Anton"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+- id: fr_italian_zone
+  name: フランス南東部のイタリア占領地域（1942–43年）
+  select:
+    pieces: [FRA-Grenoble, FRA-La_Tour_du_Pin, FRA-Vienne, FRA-Die, FRA-Nyons, FRA-Valence, FRA-Brignoles, FRA-Draguignan, FRA-Grasse, FRA-Castellane, FRA-Digne_les_Bains, FRA-Forcalquier, FRA-Briancon, FRA-Gap]
+  timeline:
+    - from: 1942
+      owner: italy
+      certainty: occupied
+      cause: イタリア軍がローヌ川以東の南東部とコルシカを占領（11月）
+      note: 1940年6月の休戦では、イタリアはマントンなど国境沿いのわずかな地域だけを占領した。トゥーロン（軍港）はドイツ軍が占領した。
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1943
+      owner: germany
+      certainty: occupied
+      cause: イタリアの降伏（9月）で、イタリアの占領地をドイツ軍が引き継ぐ
+      source: "https://en.wikipedia.org/wiki/Italian_occupation_of_France"
+    - from: 1944
+      owner: france
+      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
+# ---------------------------------------------------------------- アイルランド（1922年）
+- id: irish_free_state
+  name: アイルランド自由国（南部26州）
+  select:
+    iso: [IRL]
+  timeline:
+    - from: 1922
+      owner: ireland
+      cause: 英愛条約（1921年12月調印）にもとづきアイルランド自由国が成立（1922年12月6日）
+      note: 北東部の6州（北アイルランド）は1921年に自治議会を開き、自由国の成立直後に連合王国に残ることを選んだ。1921年の時点では、独立戦争（1919–21）の休戦の後もアイルランド全島が連合王国の一部だった。
+      source: "https://ja.wikipedia.org/wiki/英愛条約"
+
+# ---------------------------------------------------------------- スペイン内戦（1936–39年）
+- id: spain_cw_nat1936
+  name: 1936年末に反乱軍が支配したスペイン
+  select:
+    pieces: [ESP-Coruna, ESP-Lugo, ESP-Ourense, ESP-Pontevedra, ESP-Leon, ESP-Zamora, ESP-Salamanca, ESP-Valladolid, ESP-Palencia, ESP-Burgos, ESP-Soria, ESP-Segovia, ESP-Avila, ESP-Rioja_La, ESP-Zaragoza, ESP-Caceres, ESP-Badajoz, ESP-Sevilla, ESP-Cadiz, ESP-Huelva, ESP-Balears_Illes, ESP-Palmas_Las, ESP-Santa_Cruz_de_Tenerife, ESP-Ceuta, ESP-Melilla]
+  timeline:
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月の軍の反乱。ガリシア・旧カスティーリャ・ナバラ・アラゴン西部・アンダルシア西部などで反乱軍が勝ち、8月にバダホスを落とした）
+      note: アストゥリアスのオビエドも反乱軍が保ったが、県の大半は共和国側。バダホス県の東部（ラ・セレナ）は1938年まで共和国側。マヨルカ島・イビサ島は反乱軍、メノルカ島は共和国側。
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利。1939年3月にマドリードが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+
+- id: spain_cw_aragon
+  name: アラゴンの前線（ウエスカ・テルエル）
+  select:
+    pieces: [ESP-Huesca, ESP-Teruel]
+  timeline:
+    - from: 1936
+      owner: nationalist_spain
+      certainty: uncertain
+      cause: スペイン内戦（反乱軍がウエスカ・テルエルの町を保ち、県の東部はカタルーニャから来た共和国側の民兵が押さえた）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1938
+      owner: nationalist_spain
+      cause: テルエルの戦い（1937年12月–38年2月）とアラゴン攻勢（3–4月）で反乱軍がアラゴン全域を制圧
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利。1939年3月にマドリードが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+
+- id: spain_cw_south_front
+  name: トレド・コルドバ・グラナダ（前線が通った県）
+  select:
+    pieces: [ESP-Toledo, ESP-Cordoba, ESP-Granada]
+  timeline:
+    - from: 1936
+      owner: nationalist_spain
+      certainty: uncertain
+      cause: スペイン内戦（反乱軍がトレド（9月にアルカサルを解放）・コルドバ・グラナダの町を押さえる）
+      note: 県の一部（トレド南東部、コルドバ北部のポソブランコ、グラナダ東部のグアディス・バサ）は1939年まで共和国側だった。
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利。1939年3月にマドリードが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+
+- id: bizkaia_cw
+  name: ビスカヤ（ビルバオ）
+  select:
+    pieces: [ESP-Bizkaia]
+  timeline:
+    - from: 1936
+      owner: spain
+      label: バスク自治政府
+      cause: スペイン内戦（10月にバスク自治政府が成立し、共和国側にとどまる）
+      source: "https://en.wikipedia.org/wiki/Basque_Government_(1936%E2%80%931937)"
+    - from: 1937
+      owner: nationalist_spain
+      cause: 北部戦線（4月のゲルニカ爆撃の後、6月にビルバオが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利。1939年3月にマドリードが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+
+- id: spain_cw_north1937
+  name: アストゥリアス・カンタブリア・マラガ（1937年に反乱軍が制圧）
+  select:
+    pieces: [ESP-Asturias, ESP-Cantabria, ESP-Malaga]
+  timeline:
+    - from: 1937
+      owner: nationalist_spain
+      cause: マラガの陥落（2月）と北部戦線（8月にサンタンデール、10月にヒホンが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利。1939年3月にマドリードが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+
+- id: spain_cw_castellon
+  name: カステリョン
+  select:
+    pieces: [ESP-Castellon]
+  timeline:
+    - from: 1938
+      owner: nationalist_spain
+      cause: アラゴン攻勢で反乱軍が地中海岸のビナロスに達し（4月）、6月にカステリョンを落とす。共和国側の地域は南北に分断された
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利。1939年3月にマドリードが陥落）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+
+- id: lleida_cw
+  name: リェイダ（レリダ）
+  select:
+    pieces: [ESP-Lleida]
+  timeline:
+    - from: 1938
+      owner: nationalist_spain
+      certainty: uncertain
+      cause: 反乱軍がリェイダを落とす（4月）。前線はセグレ川に沿った
+      note: 県の北部と東部は12月のカタルーニャ攻勢まで共和国側。エブロ川の戦い（7–11月）は南のタラゴナ県で戦われた。
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: カタルーニャ攻勢（1938年12月–39年2月。1月にバルセロナが陥落）と内戦の終結
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+
+# ---------------------------------------------------------------- チュニジア（1942–43年）
+- id: tunisia_axis_1942
+  name: チュニジア北東部と東海岸（1942–43年のドイツ・イタリア軍の占領地）
+  select:
+    pieces: [TUN-Tunis, TUN-Ariana, TUN-Ben_Arous, TUN-Manouba, TUN-Bizerte, TUN-Nabeul, TUN-Zaghouan, TUN-Sousse, TUN-Monastir, TUN-Mahdia, TUN-Sfax, TUN-Kairouan, TUN-Gabes, TUN-Medenine]
+  timeline:
+    - from: 1942
+      owner: germany
+      certainty: occupied
+      label: チュニジア
+      cause: 連合軍の北アフリカ上陸に対し、ドイツ・イタリア軍がチュニス・ビゼルトに空輸で進駐し、東海岸を押さえる（11月）
+      note: イタリア軍も占領に加わった。チュニスのベイとフランスの統監はとどまった。
+      source: "https://ja.wikipedia.org/wiki/チュニジアの戦い"
+    - from: 1943
+      owner: france
+      label: チュニジア
+      cause: チュニジアの戦いでドイツ・イタリア軍が降伏（5月）
+      source: "https://ja.wikipedia.org/wiki/チュニジアの戦い"
+    - from: 1956
+      owner: tunisia
+      cause: フランスとの議定書（3月）でチュニジアが独立
+      note: ビゼルトのフランス軍基地は1963年まで残った。
+      source: "https://ja.wikipedia.org/wiki/チュニジア"
+
+# ---------------------------------------------------------------- リビア（シルト）・シナイ半島
+- id: surt
+  name: シルト（シドラ湾岸）
+  select:
+    pieces: [LBY-Surt]
+  timeline:
+    - from: 1942
+      owner: britain
+      certainty: occupied
+      label: トリポリタニア
+      cause: エル・アラメインの戦いの後、イギリス第8軍がシルトに達する（12月）
+      source: "https://en.wikipedia.org/wiki/Western_Desert_campaign"
+    - from: 1951
+      owner: libya
+      cause: リビア連合王国の独立（12月）
+      source: "https://ja.wikipedia.org/wiki/リビア王国"
+    - from: 2015
+      owner: libya
+      certainty: uncertain
+      cause: 第二次リビア内戦（2015–16年、シルトは「イスラム国」に支配された）
+      note: 2016年12月、西部の政府側の部隊が奪い返した。
+      source: "https://en.wikipedia.org/wiki/Battle_of_Sirte_(2016)"
+    - from: 2017
+      owner: libya
+      cause: 西部の政府側の部隊がシルトを奪回（2016年12月）
+      source: "https://en.wikipedia.org/wiki/Battle_of_Sirte_(2016)"
+    - from: 2020
+      owner: libya_east
+      certainty: uncertain
+      cause: リビア国民軍がシルトを制圧（1月）
+      note: 2020年10月の停戦後、シルトとジュフラを結ぶ線が東西の境界となった。
+      source: "https://en.wikipedia.org/wiki/Second_Libyan_Civil_War"
+
+- id: north_sinai
+  name: 北シナイ
+  note: スエズ戦争（1956年11月–57年3月）のイスラエルの一時占領は描かない。
+  select:
+    pieces: [EGY-North_Sinai_Governorate]
+  timeline:
+    - from: 1967
+      owner: israel
+      certainty: occupied
+      label: シナイ半島（イスラエルの占領）
+      cause: 第3次中東戦争（6月。イスラエルがシナイ半島を占領）
+      source: "https://ja.wikipedia.org/wiki/第三次中東戦争"
+    - from: 1979
+      owner: egypt
+      cause: エジプト＝イスラエル平和条約（3月）にもとづく段階的な返還（5月にアリーシュを返還）
+      note: 東部のラファ周辺の返還は1982年4月。
+      source: "https://ja.wikipedia.org/wiki/エジプト・イスラエル平和条約"
+
+- id: south_sinai
+  name: 南シナイ
+  select:
+    pieces: [EGY-South_Sinai_Governorate]
+  timeline:
+    - from: 1967
+      owner: israel
+      certainty: occupied
+      label: シナイ半島（イスラエルの占領）
+      cause: 第3次中東戦争（6月。イスラエルがシナイ半島を占領）
+      note: 1975年の第2次兵力引き離し協定で、スエズ湾岸の油田地帯がエジプトに返された。
+      source: "https://ja.wikipedia.org/wiki/第三次中東戦争"
+    - from: 1982
+      owner: egypt
+      cause: エジプト＝イスラエル平和条約にもとづく返還の完了（4月。シャルム・エル・シェイク）
+      note: ターバーは国際仲裁の後、1989年に返還された。
+      source: "https://ja.wikipedia.org/wiki/エジプト・イスラエル平和条約"
+

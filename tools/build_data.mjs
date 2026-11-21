@@ -52,17 +52,25 @@ const tsv = fs.readFileSync(path.join(DATA, "generated", "pieces.tsv"), "utf8").
 const header = tsv.shift().split("\t");
 const pieces = tsv.map((l) => Object.fromEntries(l.split("\t").map((v, i) => [header[i], v])));
 const pieceIndex = new Map(pieces.map((p, i) => [p.id, i]));
+// select の iso：国全体のピース。ただし、ヨーロッパの範囲（zone=eu）にかかる国は範囲内のピースだけ
+// （全世界に広げる前に書いたデータの意味を変えないため。範囲外まで含めるときは iso_all を使う）
 const byIso = new Map();
+const byIsoAll = new Map();
 const byAdm1 = new Map();
 const byAdm2 = new Map();
+const euIsos = new Set(pieces.filter((p) => (p.zone ?? "eu") === "eu").map((p) => p.iso));
 for (const [i, p] of pieces.entries()) {
   if (p.adm2) {
     const k2 = `${p.iso}/${p.adm2}`;
     if (!byAdm2.has(k2)) byAdm2.set(k2, []);
     byAdm2.get(k2).push(i);
   }
-  if (!byIso.has(p.iso)) byIso.set(p.iso, []);
-  byIso.get(p.iso).push(i);
+  if (!byIsoAll.has(p.iso)) byIsoAll.set(p.iso, []);
+  byIsoAll.get(p.iso).push(i);
+  if ((p.zone ?? "eu") === "eu" || !euIsos.has(p.iso)) {
+    if (!byIso.has(p.iso)) byIso.set(p.iso, []);
+    byIso.get(p.iso).push(i);
+  }
   const k = `${p.iso}/${p.adm1}`;
   if (!byAdm1.has(k)) byAdm1.set(k, []);
   byAdm1.get(k).push(i);
@@ -88,6 +96,14 @@ for (const r of regions) {
   if (!r.id) throw new Error(`${r._file}: 地域に id がありません`);
   if (regionById.has(r.id)) throw new Error(`地域 ID の重複: ${r.id}`);
   regionById.set(r.id, r);
+  // 時期による地域名（names: [{from, to, name}]。範囲外は name）。20世紀の「国境の変化」で近世の名前が出ないようにする
+  if (r.names != null) {
+    if (!Array.isArray(r.names)) warn(`${r._file} の ${r.id}: names はリストで書いてください`);
+    else
+      for (const n of r.names)
+        if (!n || typeof n.name !== "string" || (n.from != null && typeof n.from !== "number") || (n.to != null && typeof n.to !== "number"))
+          warn(`${r._file} の ${r.id}: names の項目は {from, to, name}（from・to は年の数値、どちらか省略可）で書いてください`);
+  }
 }
 
 const resolving = new Set();
@@ -106,6 +122,11 @@ function resolveRegion(id, where) {
   const where2 = `${r._file} の ${id}`;
   for (const iso of sel.iso ?? []) {
     const l = byIso.get(iso);
+    if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
+    for (const i of l ?? []) set.add(i);
+  }
+  for (const iso of sel.iso_all ?? []) {
+    const l = byIsoAll.get(iso);
     if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
     for (const i of l ?? []) set.add(i);
   }
@@ -251,6 +272,11 @@ function buildDistribution(dir, label) {
       if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
       for (const i of l ?? []) set.add(i);
     }
+    for (const iso of sel.iso_all ?? []) {
+      const l = byIsoAll.get(iso);
+      if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
+      for (const i of l ?? []) set.add(i);
+    }
     for (const k of sel.adm1 ?? []) {
       const l = byAdm1.get(k);
       if (!l) warn(`${where2}: 該当のない adm1 "${k}"`);
@@ -279,27 +305,43 @@ function buildDistribution(dir, label) {
     return set;
   }
   for (const r of regs) resolveOwn(r.id, r._file);
+  // 世俗化だけの地域（宗教のみ）：timeline のどの項目にも main がなく secular だけがあるもの。
+  // 多数派の判定には使わず、世俗化の割合だけを重ねる（data/religion/secular.yaml）
+  const secularOnly = (r) => dir === "religion" && (r.timeline ?? []).length > 0 && r.timeline.every((e) => e.main == null && e.secular != null);
   for (const r of regs) {
     let prev = -Infinity;
+    const secOnly = secularOnly(r);
     for (const e of r.timeline ?? []) {
       const where = `${r._file} の ${r.id}（${e.from}年）`;
       if (typeof e.from !== "number") warn(`${where}: from（開始年）は数値で書いてください`);
       if (e.from <= prev) warn(`${where}: timeline は年の昇順で、同じ年を重ねないでください`);
       prev = e.from;
-      if (e.main == null) warn(`${where}: main（多数派）がありません`);
+      if (e.main == null) {
+        if (!secOnly) warn(`${where}: main（多数派）がありません（世俗化だけの地域なら、すべての項目を secular だけにしてください）`);
+      }
       else if (!kindIdx.has(e.main)) warn(`${where}: main "${e.main}" は ${dir}/_kinds.yaml にない${label}です`);
       if (e.minor != null && !kindIdx.has(e.minor)) warn(`${where}: minor "${e.minor}" は ${dir}/_kinds.yaml にない${label}です`);
       if (e.minor != null && e.minor === e.main) warn(`${where}: minor が main と同じです`);
+      if (e.secular != null) {
+        if (dir !== "religion") warn(`${where}: secular は宗教のデータだけで使えます`);
+        else if (typeof e.secular !== "number" || !(e.secular >= 0 && e.secular <= 1)) warn(`${where}: secular（世俗化の割合）は 0〜1 の数値で書いてください`);
+      }
     }
   }
-  const tlRegions = regs.filter((r) => (r.timeline ?? []).length > 0);
+  const tlRegions = regs.filter((r) => (r.timeline ?? []).length > 0 && !secularOnly(r));
+  const secRegions = regs.filter(secularOnly);
   const rIdx = new Map(tlRegions.map((r, i) => [r.id, i]));
   const ofPiece = pieces.map(() => []);
   for (const r of tlRegions) for (const i of done.get(r.id)) ofPiece[i].push(r);
   for (const list of ofPiece) list.sort((a, b) => done.get(a.id).size - done.get(b.id).size);
-  const pieceTl = ofPiece.map((list) => {
+  // 世俗化の割合を引く地域（ふつうの地域と世俗化だけの地域、小さい順）
+  const secOfPiece = ofPiece.map((l) => l.slice());
+  for (const r of secRegions) for (const i of done.get(r.id)) secOfPiece[i].push(r);
+  for (const list of secOfPiece) list.sort((a, b) => done.get(a.id).size - done.get(b.id).size);
+  const pieceTl = ofPiece.map((list, pi) => {
     if (list.length === 0) return [];
-    const years = [...new Set(list.flatMap((r) => r.timeline.map((e) => e.from)))].sort((a, b) => a - b);
+    const secList = secOfPiece[pi];
+    const years = [...new Set(secList.flatMap((r) => r.timeline.map((e) => e.from)))].sort((a, b) => a - b);
     const out = [];
     let last = "";
     for (const y of years) {
@@ -312,6 +354,18 @@ function buildDistribution(dir, label) {
         }
       }
       if (!state) continue;
+      // 世俗化の割合（宗教のみ）：main とは別に、その年の記述に secular を書いている「いちばん小さい地域」から取る。
+      // 小さい地域の記述に secular がなければ、外側の大きい地域の値が効く（secular: 0 と書けば打ち消せる）。
+      // 0 より大きいときだけ 5 番目に入れる
+      if (dir === "religion") {
+        for (const r of secList) {
+          const e = entryAt(r, y);
+          if (e && typeof e.secular === "number") {
+            if (e.secular > 0) state.push(Math.min(1, e.secular));
+            break;
+          }
+        }
+      }
       const key = state.slice(1).join(",");
       if (key !== last) out.push(state);
       last = key;
@@ -427,7 +481,7 @@ const atlas = {
   certainty: CERTAINTY,
   pieceIds: pieces.map((p) => p.id),
   polities: polities.map(strip),
-  regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, timeline: r.timeline })),
+  regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, ...(r.names ? { names: r.names } : {}), timeline: r.timeline })),
   pieceTimelines,
   events: events.map(strip),
   seas,

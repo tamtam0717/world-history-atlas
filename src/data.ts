@@ -57,6 +57,8 @@ export interface TimelineEntry extends Sourced {
 export interface Region {
   id: string;
   name: string;
+  /** 時期による名前（範囲外は name） */
+  names?: { from?: number; to?: number; name: string }[];
   timeline: TimelineEntry[];
 }
 
@@ -122,6 +124,8 @@ export interface ReligionEntry extends Sourced {
   from: number;
   main: string;
   minor?: string | null;
+  /** 世俗化（無宗教・宗教離れ）の割合の目安 0〜1（宗教のみ） */
+  secular?: number;
   note?: string;
 }
 
@@ -131,8 +135,8 @@ export interface ReligionRegion {
   timeline: ReligionEntry[];
 }
 
-/** [開始年, main の index, minor の index（なければ -1）, 宗教の地域 index] */
-export type ReligionState = [number, number, number, number];
+/** [開始年, main の index, minor の index（なければ -1）, 宗教の地域 index, 世俗化の割合 0〜1（宗教のみ。なければ省略）] */
+export type ReligionState = [number, number, number, number, number?];
 
 export interface Religion {
   kinds: ReligionKind[];
@@ -309,6 +313,11 @@ export class AtlasIndex {
     return (p.names ?? []).find((n) => (n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity));
   }
 
+  /** 地域のその年の名前（names に当てはまる項目があればそれ、なければ name） */
+  regionName(r: { name: string; names?: { from?: number; to?: number; name: string }[] }, year: number): string {
+    return (r.names ?? []).find((n) => (n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity))?.name ?? r.name;
+  }
+
   polityName(p: Polity, year: number): string {
     return this.nameEntry(p, year)?.name ?? p.name;
   }
@@ -415,14 +424,14 @@ export function curveMax(c: CurvePoint[]): number {
 }
 
 /** 年の昇順の [開始年, ...] の並びから、その年に有効なものを二分探索で探す */
-function stateAt<T extends number[]>(tl: T[] | undefined, year: number): T | null {
+function stateAt<T extends readonly (number | undefined)[]>(tl: T[] | undefined, year: number): T | null {
   if (!tl || tl.length === 0) return null;
   let lo = 0;
   let hi = tl.length - 1;
   let ans = -1;
   while (lo <= hi) {
     const mid = (lo + hi) >> 1;
-    if (tl[mid][0] <= year) {
+    if ((tl[mid][0] as number) <= year) {
       ans = mid;
       lo = mid + 1;
     } else hi = mid - 1;

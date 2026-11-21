@@ -29,6 +29,32 @@
       note: セルビア人の大移住（1690、総主教アルセニエ3世）で正教徒が増え、カルロヴツィが府主教座になる。18世紀にはハンガリー人・ドイツ人（ドナウ・シュヴァーベン人）・ブニェヴツィのカトリックが入植する。
       source: "https://ja.wikipedia.org/wiki/セルビア人の大移住"
 
+- id: rel_vojvodina_hungarian
+  name: ティサ川沿いの北バーチカ・北バナト（ハンガリー人の地域）
+  select:
+    pieces: [SRB-Kanjiza_Municipality, SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Coka_Municipality, SRB-Novi_Knezevac_Municipality, SRB-Backa_Topola_Municipality, SRB-Mali_Idjos_Municipality, SRB-Becej_Municipality, SRB-Temerin_Municipality]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: catholic
+      note: オスマン帝国の支配下で、セルビア人の正教徒が多い。
+    - from: 1750
+      main: catholic
+      minor: orthodox
+      note: 18世紀にハンガリー人（カトリック）が再入植した。言語の lang_vojvodina_hungarian と同じ範囲・同じ年。
+      source: "https://en.wikipedia.org/wiki/Hungarians_in_Vojvodina"
+
+- id: rel_subotica
+  name: スボティツァ（サバトカ）
+  select:
+    pieces: [SRB-Subotica_City]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: orthodox
+      note: ブニェヴツィ人（カトリックの南スラヴ人）の町。18世紀からはハンガリー人（カトリック）も多く、1910年の調査でハンガリー語約58%、ブニェヴツィ語約35%。正教徒のセルビア人は少数。
+      source: "https://en.wikipedia.org/wiki/Subotica"
+
 - id: rel_sandzak
   name: ラシュカ・ズラティボル（ノヴィ・パザル県）
   select:
@@ -93,6 +119,21 @@
       minor: orthodox
       note: 大トルコ戦争でハプスブルク軍に協力したセルビア人の多くが北へ移住し（1690）、アルバニア人（多くはムスリム）が増える。（要確認）
       source: "https://ja.wikipedia.org/wiki/セルビア人の大移住"
+    - from: 1970
+      main: sunni
+      note: セルビア人（正教徒）の割合は戦後下がり続けた（1971年で約18%）。1999年のコソヴォ紛争の後、北部と飛び地を除くセルビア人の多くが去った。コソヴォのアルバニア人にはカトリックも少数いる。
+      source: "https://ja.wikipedia.org/wiki/コソボ紛争"
+
+- id: rel_kosovo_serb
+  name: コソヴォの北部とセルビア人の村の多い地区（イバル川以北・グラチャニツァ・シュトルプツェ）
+  select:
+    pieces: [XKX-Municipality_of_Leposaviq, XKX-Municipality_of_Zubin_Potok, XKX-Municipality_of_Zvecan, XKX-Municipality_of_North_Mitrovica, XKX-Municipality_of_Gracanica, XKX-Municipality_of_Shterpce, XKX-Municipality_of_Partesh, XKX-Municipality_of_Ranillug, XKX-Municipality_of_Kllokot, XKX-Municipality_of_Novoberde]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: セルビア人（正教徒）の多い地区。イバル川以北の4自治体（レポサヴィチ・ズヴェチャン・ズビン・ポトク・北ミトロヴィツァ）は1999年のコソヴォ紛争の後も住民の約9割がセルビア人。南部の飛び地（グラチャニツァ・シュトルプツェなど）は2008年以後のセルビア人が多数の自治体。言語の lang_kosovo_serb と同じ範囲。
+      source: "https://en.wikipedia.org/wiki/North_Kosovo"
 
 - id: rel_montenegro
   name: モンテネグロ
@@ -175,6 +216,10 @@
       main: sunni
       minor: orthodox
       note: オーストリア＝ハンガリーの占領（1878、1908年併合）の後、ムスリムの一部（数万〜十数万人）がオスマン帝国へ移住した。1879年の調査でボスニア・ヘルツェゴヴィナ全体はムスリム約39％・正教徒約43％・カトリック約18％。サラエヴォ・トゥズラ・ビハチ周辺などではムスリムが多数のまま。
+    - from: 1995
+      main: sunni
+      note: ボスニア紛争（1992–95）で、各勢力による「民族浄化」が行われ、1995年7月にはスルプスカ共和国軍がスレブレニツァでボシュニャク人の男性約8000人を殺害した。デイトン合意（1995）の後、この地域（サラエヴォ・トゥズラ・ビハチ周辺）はボシュニャク人（ムスリム）が大多数。ブルチコ地区は三民族が混在する。
+      source: "https://ja.wikipedia.org/wiki/スレブレニツァの虐殺"
 
 - id: rel_bosnia_catholic_central
   name: 中部ボスニアのカトリック地域（ラシュヴァ・フォイニツァ）・ゼニツァ
@@ -185,6 +230,10 @@
       main: sunni
       minor: catholic
       note: フォイニツァ・クレシェヴォなどのフランシスコ会修道院の周辺にカトリックが多い。モスタルはムスリムの町。
+    - from: 1995
+      main: sunni
+      minor: catholic
+      note: 中部ボスニア（ラシュヴァ谷）とヘルツェゴヴィナ＝ネレトヴァ（モスタル）は、ボシュニャク人とクロアチア人が混在する。1993年のアフミチの虐殺、モスタルの戦いなどが起きた。
 
 - id: rel_herzegovina_west
   name: 西ヘルツェゴヴィナ・リヴノ・ポサヴィナ
@@ -195,6 +244,9 @@
       main: catholic
       minor: sunni
       note: クロアチア人のカトリックが多い。
+    - from: 1995
+      main: catholic
+      note: クロアチア人の多い地域。1993–94年のクロアチア人とボシュニャク人の衝突の後、ボシュニャク人の多くが去った。
 
 - id: rel_bosnia_serb
   name: ボスニア東部・北部とヘルツェゴヴィナ東部（現スルプスカ共和国）
@@ -205,6 +257,10 @@
       main: orthodox
       minor: sunni
       note: 農村には正教徒のセルビア人が多く、バニャ・ルカなどの町はムスリムが多い。（多数派の判定は要確認）
+    - from: 1995
+      main: orthodox
+      note: ボスニア紛争中、スルプスカ共和国の支配地域からボシュニャク人とクロアチア人の大部分が追放された。戦後に一部が帰還したが、2013年の調査でセルビア人が約82%、ボシュニャク人が約14%。
+      source: "https://ja.wikipedia.org/wiki/ボスニア・ヘルツェゴビナ紛争"
 
 - id: rel_albania
   name: アルバニア中部
@@ -215,6 +271,11 @@
       main: sunni
       minor: orthodox
       note: 17世紀にイスラームへの改宗が急速に進み、アルバニア人の多数がムスリムになる。ベクタシュ教団も広まる。（17世紀半ばの比率は要確認）
+    - from: 1967
+      main: sunni
+      minor: orthodox
+      note: 1967年、エンヴェル・ホッジャの政権は「世界初の無神論国家」を宣言し、すべての宗教活動を禁止した（1990年に解除）。地図は伝統的な帰属。
+      source: "https://en.wikipedia.org/wiki/State_atheism"
 
 - id: rel_albania_north
   name: アルバニア北部（シュコドラ・コソヴォ寄りの山地）
@@ -255,6 +316,17 @@
       main: orthodox
       minor: sunni
       note: スラヴ人の正教徒が多数（オフリド大主教座。1767年に廃止）。トルコ人（ユルック）と改宗者のムスリムが町と東部・西部に多い。
+
+- id: rel_macedonia_muslim
+  name: 西マケドニアのムスリムの多い地域（ストルガ・デバル・ザヤス・ジュパ・スコピエ北部）
+  select:
+    pieces: [MKD-Struga, MKD-Debar, MKD-Zajas, MKD-Oslomej, MKD-Saraj, MKD-Arachinovo, MKD-Studenichani, MKD-Lipkovo, MKD-Chair, MKD-Centar_Zhupa, MKD-Plasnitsa]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: アルバニア人（ストルガ・デバル・ザヤス・スコピエ北部）とトルコ人（ジュパ・プラスニツァ）のムスリムが多い地域。2002年の調査でストルガ自治体はアルバニア人約57%、マケドニア人約32%。言語の lang_macedonia_albanian・lang_zhupa と同じ範囲。
+      source: "https://en.wikipedia.org/wiki/Albanians_in_North_Macedonia"
 
 - id: rel_polog
   name: ポログ（テトヴォ・ゴスティヴァル）
@@ -316,6 +388,11 @@
       main: sunni
       minor: orthodox
       note: ブルガリア公国のラズグラト・タルゴヴィシテ（デリオルマン）では、移住の後もトルコ人が多い。カルジャリ・スモリャン（ロドピ山地）は1912年までオスマン帝国領で、ムスリムが多数。
+    - from: 1989
+      main: sunni
+      minor: orthodox
+      note: 1984–89年の「再生プロセス」（トルコ系住民への改名の強制）の後、1989年に約36万人がトルコへ出国した。半数近くは戻り、クルジャリ・ラズグラドなどではムスリムが今も多数。
+      source: "https://en.wikipedia.org/wiki/Revival_Process"
 
 - id: rel_bulgaria_northeast_1878
   name: ブルガリア北東部の町と平野（ルセ・シュメン・ヴァルナ・シリストラ・ドブリチ）・ハスコヴォ
@@ -354,6 +431,25 @@
       main: orthodox
       minor: sunni
       note: トルコ人の入植者と改宗者のムスリムが多い。テッサロニキは住民の過半数がユダヤ教徒（セファルディム）の町。エピルス・マケドニアは1912–13年のバルカン戦争でギリシア領になるが、ムスリムの大部分が去るのは1923年の住民交換のとき。
+    - from: 1923
+      main: orthodox
+      note: 1923年のローザンヌ条約に基づくギリシアとトルコの住民交換で、ムスリムはトルコへ移され、小アジア・ポントス・東トラキアから100万人を超えるギリシア人難民が入った（多くはマケドニアに入植）。1943年にはテッサロニキのユダヤ人の大部分がアウシュヴィッツで殺害された。
+      source: "https://en.wikipedia.org/wiki/Population_exchange_between_Greece_and_Turkey"
+
+- id: rel_chameria
+  name: チャメリア（テスプロティア）
+  select:
+    pieces: [GRC-Filiates, GRC-Igoumenitsa, GRC-Souli]
+  timeline:
+    - from: 1923
+      main: orthodox
+      minor: sunni
+      note: ムスリムのチャム人（アルバニア系）は「アルバニア人」として1923年の住民交換の対象から外され、残った（1940年ごろ約2万人）。言語の lang_chameria と同じ範囲。
+      source: "https://en.wikipedia.org/wiki/Cham_Albanians"
+    - from: 1944
+      main: orthodox
+      note: 1944–45年、ギリシアの抵抗組織（EDES）がムスリムのチャム人をアルバニアへ追放した。
+      source: "https://en.wikipedia.org/wiki/Expulsion_of_Cham_Albanians"
 
 - id: rel_thessaly
   name: テッサリア
@@ -378,6 +474,11 @@
       main: sunni
       minor: orthodox
       note: トルコ人とポマクのムスリムが多い。（多数派の判定は要確認）
+    - from: 1923
+      main: orthodox
+      minor: sunni
+      note: 西トラキアのムスリムは住民交換の対象外となり、今もロドピ・クサンティ県に多い（トルコ人・ポマク人・ロマ）。ドラマ・カヴァラのムスリムは移された。難民が入植し、地域全体では正教徒が多数になった。
+      source: "https://en.wikipedia.org/wiki/Muslim_minority_of_Greece"
 
 - id: rel_crete
   name: クレタ島
@@ -426,7 +527,7 @@
       note: ルーマニア人は正教徒。
 
 - id: rel_dobruja
-  name: ドブルジャ南部（コンスタンツァ）
+  name: 北ドブルジャ（コンスタンツァ・トゥルチャ）
   select:
     regions: [dobruja_ro]
   timeline:
@@ -442,6 +543,9 @@
       main: orthodox
       minor: sunni
       note: ルーマニア人の入植が進み、キリスト教徒（ルーマニア人・ブルガリア人・ギリシア人・リポヴァン人・ドイツ人など）が明らかに多数になる。タタール人・トルコ人のムスリムも2割ほど残る。（切り替えの年は要確認）
+    - from: 1940
+      main: orthodox
+      note: 1940年に南ドブルジャ（ブルガリアへ返還）からルーマニア人が移された。ムスリム（タタール人・トルコ人）は今も数%。
 
 - id: rel_dobruja_north
   name: ドブルジャ北部（トゥルチャ・ドナウ・デルタ）
@@ -474,6 +578,10 @@
       main: orthodox
       minor: catholic
       note: アルバ・ユリア合同（1698–1701）で、ルーマニア人の一部がギリシア・カトリック（ユニエイト）になる。正教徒の抵抗も強く（1760年代のソフロニエの運動）、両派が並ぶ。（比率は要確認）
+    - from: 1948
+      main: orthodox
+      note: 1948年にギリシア・カトリック教会は廃止され、正教会に合同させられた（1990年に復活）。
+      source: "https://en.wikipedia.org/wiki/Romanian_Greek_Catholic_Church"
 
 - id: rel_alba_blaj
   name: アルバ（ブラジ）
@@ -487,6 +595,10 @@
       main: catholic
       minor: orthodox
       note: ブラジがルーマニア人のギリシア・カトリック（ユニエイト）教会の中心になる（1737–）。（多数派の判定は要確認）
+    - from: 1948
+      main: orthodox
+      note: 1948年、共産党政権はルーマニアのギリシア・カトリック教会（ユニエイト。その中心がブラジ）を廃止し、正教会に合同させた。1990年に再び認められたが、信者は少数にとどまる。
+      source: "https://en.wikipedia.org/wiki/Romanian_Greek_Catholic_Church"
 
 - id: rel_transylvania_saxon
   name: トランシルヴァニアのザクセン人地域（シビウ・ブラショフ）
@@ -497,6 +609,14 @@
       main: lutheran
       minor: orthodox
       note: ドイツ系のザクセン人はルター派。周辺の村にはルーマニア人の正教徒が多い。（多数派の判定は要確認）
+    - from: 1800
+      main: orthodox
+      minor: lutheran
+      note: ルーマニア人（正教徒・ギリシア・カトリック）が増え、住民の最大の集団になる（ブラショフ周辺は1910年の調査でルーマニア人・ハンガリー人・ドイツ人がほぼ3分の1ずつ）。言語（lang_saxon_brasov）と同じ年。シビウは rel_saxon_sibiu（1750年）。要確認
+    - from: 1990
+      main: orthodox
+      note: ザクセン人（ルター派）は1970–80年代と1990年前後に大部分が西ドイツへ移った。
+      source: "https://en.wikipedia.org/wiki/Transylvanian_Saxons"
 
 - id: rel_szekely_reformed
   name: セーケイ地方（ハーロムセーク・マロシュセーク）
@@ -527,6 +647,10 @@
       main: reformed
       minor: orthodox
       note: ハンガリー人の改革派とルーマニア人の正教徒（のちユニエイト）が混在。1712年からはドイツ人カトリック（サトマール・シュヴァーベン人）が入植した。（多数派の判定は要確認）
+    - from: 1950
+      main: orthodox
+      minor: reformed
+      note: 戦後、ルーマニア人が増えた（2011年でルーマニア人約58%、ハンガリー人約34%）。
 
 - id: rel_banat_ro
   name: バナト（ティミショアラ・アラド）
@@ -541,6 +665,9 @@
       minor: catholic
       note: ハプスブルク領バナトでドイツ人カトリック（ドナウ・シュヴァーベン人）の大規模な入植が行われる（1720年代〜1780年代）。
       source: "https://ja.wikipedia.org/wiki/ドナウ・シュヴァーベン人"
+    - from: 1990
+      main: orthodox
+      note: カトリックのバナト・シュヴァーベン人は1970–80年代と1990年前後に大部分が西ドイツへ移った。
 
 # ======== アナトリア・キプロス ========
 - id: rel_anatolia
@@ -551,6 +678,10 @@
     - from: 1648
       main: sunni
       note: トルコ人のスンナ派（ハナフィー派）が多数。各地の町にギリシア人（正教）・アルメニア人（アルメニア使徒教会）・ユダヤ教徒の共同体がある。中部・東部にはアレヴィー（クズルバシュ）の村も多い。
+    - from: 1923
+      main: sunni
+      note: 1923年の住民交換で、アナトリアの正教徒（約120万人）はギリシアへ、ギリシアのムスリム（約40万人）はトルコへ移された。地図の「スンナ派」の地域には、アレヴィー派（地図ではシーア派の色にしていない）も各地に多い。1939年にはハタイ（アレクサンドレッタ）がシリアからトルコへ移った。
+      source: "https://en.wikipedia.org/wiki/Population_exchange_between_Greece_and_Turkey"
 
 - id: rel_istanbul_thrace
   name: イスタンブル・東トラキア・海峡地帯
@@ -561,6 +692,10 @@
       main: sunni
       minor: orthodox
       note: イスタンブルは住民の4割ほどがキリスト教徒（ギリシア人・アルメニア人）とユダヤ教徒。コンスタンティノープル総主教座（フェネル）とアルメニア総主教座がある。
+    - from: 1922
+      main: sunni
+      note: 東トラキアのギリシア人は1922年にギリシアへ避難した。イスタンブルのギリシア人・アルメニア人は住民交換の対象外だったが、1955年の反ギリシア暴動（イスタンブル・ポグロム）と1964年の追放で大きく減った。世界総主教庁（コンスタンティノープル総主教）は今もイスタンブルにある。
+      source: "https://en.wikipedia.org/wiki/Istanbul_pogrom"
 
 - id: rel_pontus
   name: 黒海東部沿岸（トラブゾン・ギュミュシュハネ）
@@ -571,6 +706,10 @@
       main: sunni
       minor: orthodox
       note: ポントス・ギリシア人の正教徒が多い（ギュミュシュハネの鉱山など）。改宗者や隠れキリスト教徒もいる。
+    - from: 1923
+      main: sunni
+      note: ポントスのギリシア人は第一次世界大戦中から強制移送・虐殺を受け、1923年の住民交換でギリシアへ移された。
+      source: "https://en.wikipedia.org/wiki/Greek_genocide"
 
 - id: rel_armenian_highlands
   name: アナトリア東部（アルメニア人の多い地域）
@@ -581,6 +720,10 @@
       main: sunni
       minor: oriental
       note: トルコ人・クルド人のスンナ派と、アルメニア人（アルメニア使徒教会）が混在する。ヴァン・ムシュ・ビトリスではアルメニア人の割合が高い。キリキア（アダナ・マラシュの山地）にはシス（コザン）のカトリコス座がある。
+    - from: 1915
+      main: sunni
+      note: 1915–16年のアルメニア人虐殺で、アナトリア東部のアルメニア人（アルメニア使徒教会・アルメニア・カトリック・プロテスタント）の社会はほぼ消えた。トルコ政府は「ジェノサイド」という呼び方を認めていない。
+      source: "https://ja.wikipedia.org/wiki/アルメニア人虐殺"
 
 - id: rel_assyrian
   name: ハッカリ・トゥル・アブディン（アッシリア人の地）
@@ -591,6 +734,10 @@
       main: sunni
       minor: oriental
       note: ハッカリの山地には東方教会（ネストリウス派）、マルディン・トゥル・アブディンにはシリア正教会のアッシリア人が多い。クルド人はスンナ派、ヤズィーディー教徒もいる。
+    - from: 1915
+      main: sunni
+      note: 1915–18年、ハッカリの東方教会のアッシリア人と、トゥル・アブディンのシリア正教徒は虐殺・追放された（セイフォ）。トゥル・アブディンのシリア正教徒の村は一部残ったが、1970–90年代に多くがヨーロッパへ移住した。
+      source: "https://en.wikipedia.org/wiki/Sayfo"
 
 - id: rel_dersim
   name: デルスィム（トゥンジェリ）
@@ -601,6 +748,10 @@
       main: shia
       minor: oriental
       note: クルド人のアレヴィー（クズルバシュ。シーア派系として塗る）が多い。アルメニア人の村もある。（要確認）
+    - from: 1915
+      main: shia
+      note: 地図の「シーア派」はアレヴィー派。アルメニア人は1915年に強制移送された。1937–38年のデルスィムの虐殺で多くの住民が殺害・移住させられた。
+      source: "https://en.wikipedia.org/wiki/Dersim_massacre"
 
 - id: rel_cyprus
   name: キプロス
@@ -611,6 +762,12 @@
       main: orthodox
       minor: sunni
       note: オスマン帝国の征服（1571）後、正教会（キプロス独立正教会）が復活し、トルコ人の入植者と改宗者のムスリムが人口の2〜3割を占める。
+    - from: 1974
+      main: orthodox
+      minor: sunni
+      note: 1974年のトルコ軍の侵攻で島は南北に分かれた。北部はムスリム（トルコ系）、南部は正教徒（ギリシア系）。ニコシア地区は北部がトルコ系、南部がギリシア系。
+      source: "https://ja.wikipedia.org/wiki/キプロス問題"
+
 
 # ======== シリア・レバノン・パレスチナ・ヨルダン ========
 - id: rel_levant
@@ -621,6 +778,10 @@
     - from: 1648
       main: sunni
       note: アラブ人のスンナ派が多数。各地の町に正教徒・ギリシア・カトリック（メルキト、1724年分離）・シリア正教会・アルメニア人、エルサレム・サフェドなどにユダヤ教徒が住む。
+    - from: 1948
+      main: sunni
+      note: 1948年の第1次中東戦争で約70万人のパレスチナ・アラブ人が避難・追放され（ナクバ）、ヨルダン・レバノン・シリア・ガザなどの難民キャンプに住んだ。イスラエルの地区は別に塗っている。2011年からのシリア内戦では人口の半数近くが国内外へ避難した。
+      source: "https://ja.wikipedia.org/wiki/パレスチナ難民"
 
 - id: rel_alawite
   name: シリア沿岸の山地（ラタキア・タルトゥース）
@@ -650,25 +811,46 @@
       note: 19世紀、とくに1860年のレバノン山地の内戦の後、ドゥルーズ派の移住が本格化し、ハウラーン山地は「ドゥルーズ山地」と呼ばれるようになる。
 
 - id: rel_mount_lebanon_maronite
-  name: レバノン山地北部（ケセルワン・ジュベイル）と北レバノン
+  name: レバノン山地北部（ケセルワン・ジュベイル）
   select:
-    pieces: [LBN-Keserwan_Jbeil, LBN-Liban_Nord]
+    pieces: [LBN-Keserwan_Jbeil]
   timeline:
     - from: 1648
       main: catholic
       minor: shia
-      note: マロン派（ローマと合同したカトリック）の地。ケセルワンには17世紀まで十二イマーム派が多かった。北レバノンのトリポリはスンナ派、クーラは正教徒。
+      note: マロン派（ローマと合同したカトリック）の地。ケセルワンには17世紀まで十二イマーム派が多かった。
+
+- id: rel_lebanon_north
+  name: 北レバノン（トリポリ・ズガルタ・ブシャッリ・クーラ）
+  select:
+    pieces: [LBN-Liban_Nord]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: catholic
+      note: トリポリ（スンナ派の大都市）とミニエ・ドンニエはスンナ派。山側のズガルタ・ブシャッリ・バトルーンはマロン派（カトリックに数える）、クーラは正教徒。県全体ではスンナ派が多い。ピースが1つなので、マロン派の山地は斜線（minor）で示す。
+      source: "https://en.wikipedia.org/wiki/North_Governorate"
 
 - id: rel_mount_lebanon_druze
-  name: レバノン山地南部（シューフ・メトン）
+  name: レバノン山地（メトン・バアブダ・アレイ・シューフ）
   select:
     pieces: [LBN-Mont_Liban]
   timeline:
     - from: 1648
       main: other
       minor: catholic
-      note: ドゥルーズ派（その他）の地。ドゥルーズ派の領主（マアン家、のちシハーブ家）のもとでマロン派の農民が南へ移住し、18世紀には混在が進む。
+      note: ドゥルーズ派（その他）の領主（マアン家、のちシハーブ家）の地。南部のシューフ・アレイはドゥルーズ派が多い。領主のもとでマロン派の農民が北から移住し、18世紀には混在が進む。
       source: "https://ja.wikipedia.org/wiki/ドゥルーズ派"
+    - from: 1800
+      main: catholic
+      minor: other
+      note: マロン派の移住と人口の増加で、山地全体ではキリスト教徒（マロン派。カトリックに数える）が多数になる。北部のメトンとバアブダはキリスト教徒が多く、ドゥルーズ派が多いのはシューフ・アレイ。1860年のドゥルーズ派とマロン派の衝突の後、レバノン山地はキリスト教徒の知事が治める自治県になった（1861–1915）。切り替えの年は目安（要確認）。
+      source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"
+    - from: 1984
+      main: catholic
+      minor: other
+      note: レバノン内戦（1975–90）の「山岳戦争」（1983–84）で、シューフ・アレイのキリスト教徒（マロン派）の多くが追われた。県全体（メトン・バアブダを含む）では今もキリスト教徒が多く、ドゥルーズ派・シーア派が続く。
+      source: "https://en.wikipedia.org/wiki/Mountain_War_(Lebanon)"
 
 - id: rel_lebanon_shia
   name: ジャバル・アーミル（南レバノン）とベカー高原
@@ -708,6 +890,10 @@
       main: sunni
       minor: oriental
       note: ニネヴェ平原と北部の山地に東方教会（アッシリア人。一部は1681年以後カルデア・カトリックに）とシリア正教会の信徒が多い。シンジャールなどにはヤズィーディー教徒が住む。
+    - from: 2014
+      main: sunni
+      note: 2014年、「イスラム国」（IS）がモースルとニーナワー平原を占領し、キリスト教徒（アッシリア人・カルデア人）とヤズィーディー教徒は追われ、ヤズィーディー教徒は虐殺された（シンジャル）。2017年のIS掃討の後、一部が帰還した。
+      source: "https://en.wikipedia.org/wiki/Genocide_of_Yazidis_by_the_Islamic_State"
 
 - id: rel_iraq_shrines
   name: ナジャフ・カルバラー・ヒッラ
@@ -728,6 +914,10 @@
       main: sunni
       minor: shia
       note: バグダードはスンナ派の町だが、カーズィミヤ（シーア派の聖廟）周辺などにシーア派が多い。ユダヤ教徒の大きな共同体もある。（比率は要確認）
+    - from: 1980
+      main: shia
+      minor: sunni
+      note: 南部からのシーア派の人口の流入で、バグダードではシーア派が多数になったとされる（サドル・シティなど）。2006–07年の宗派間の内戦で住み分けが進んだ（要確認）。
 
 - id: rel_iraq_south_shia
   name: イラク南部（ワーシト・ディーワーニーヤ・アマーラ・ナーシリーヤ・バスラ）
@@ -845,6 +1035,12 @@
       main: oriental
       minor: orthodox
       note: 商人・職人の多くはアルメニア人（アルメニア使徒教会）で、19世紀初めには住民の過半を占めた。（比率は要確認）
+    - from: 1925
+      main: orthodox
+      minor: oriental
+      note: ジョージアの首都になり、ジョージア人が増えた。
+    - from: 1990
+      main: orthodox
 
 - id: rel_kvemo_kartli
   name: クヴェモ・カルトリ（ボルチャロ）
@@ -852,9 +1048,13 @@
     pieces: [GEO-Kvemo_Kartli]
   timeline:
     - from: 1648
+      main: shia
+      minor: orthodox
+      note: ボルチャロのトルコ系遊牧民（シーア派）が多い。19世紀にはアルメニア人・ギリシア人（東方諸教会・正教会）・ドイツ人の入植地も作られた。言語（lang_borchalo）と同じくアゼルバイジャン人を多数とする。（比率は要確認）
+    - from: 2000
       main: orthodox
       minor: shia
-      note: ボルチャロのトルコ系遊牧民（シーア派）が多い。（比率は要確認）
+      note: ジョージア人の移住とアゼルバイジャン人・アルメニア人・ギリシア人の流出で、2002年の調査でジョージア人とアゼルバイジャン人がほぼ同数（約45%ずつ）、2014年はジョージア人約51%、アゼルバイジャン人約41%。年は目安。
 
 - id: rel_samtskhe_adjara
   name: サムツヘ（アハルツィヘ）・アジャリア
@@ -873,6 +1073,11 @@
       main: sunni
       minor: orthodox
       note: アジャリア（バトゥミ）はベルリン条約（1878）でロシア領になる。ムスリムのアジャリア人の一部はオスマン帝国へ移住したが、多数はムスリムのまま。バトゥミ市にはロシア人・アルメニア人・ギリシア人が増える。（サムツヘは rel_samtskhe_javakheti）
+    - from: 1944
+      main: orthodox
+      minor: sunni
+      note: アジャリアのムスリムのジョージア人はソ連時代と独立後に正教に戻る人が多く、2014年の調査で正教徒約54%、ムスリム約40%。
+      source: "https://en.wikipedia.org/wiki/Adjara"
 
 - id: rel_samtskhe_javakheti
   name: サムツヘ・ジャヴァヘティ（アハルツィヘ・アハルカラキ）
@@ -891,6 +1096,11 @@
       main: oriental
       minor: sunni
       note: アドリアノープル条約（1829）でロシア領になり、エルズルム周辺から多くのアルメニア人がアハルカラキなどに移住した。ムスリム（メスヘティア人）の一部はオスマン帝国へ去ったが、アハルツィヘ周辺には多く残る。ジョージア人（正教・カトリック）、ドゥホボール派のロシア人（1840年代〜）も住む。（比率は要確認）
+    - from: 1944
+      main: oriental
+      minor: orthodox
+      note: 1944年11月、メスヘティア・トルコ人（ムスリム、約9万人）が中央アジアへ強制移住させられた（今も帰還はわずか）。ジャヴァヘティはアルメニア人が多数。
+      source: "https://en.wikipedia.org/wiki/Meskhetian_Turks"
 
 - id: rel_abkhazia
   name: アブハジア
@@ -909,11 +1119,18 @@
       main: orthodox
       minor: sunni
       note: 1864年（公国の廃止）、1866年のレフニの反乱と1877年の露土戦争の後、ムスリムのアブハズ人の多くがオスマン帝国へ移住させられた（ムハージル）。空いた土地にメグレル人（ジョージア人）・ロシア人・アルメニア人・ギリシア人が入植する。（比率は要確認）
+    - from: 1993
+      main: orthodox
+      minor: sunni
+      note: アブハジア紛争（1992–93）でジョージア人（正教徒）の大部分が追われた。アブハズ人にはキリスト教徒とムスリムがいる。
+      source: "https://en.wikipedia.org/wiki/Ethnic_cleansing_of_Georgians_in_Abkhazia"
+
 
 - id: rel_erivan
-  name: エレバン・ハン国（アルメニア中部・イグドゥル）
+  name: アルメニア中部（旧エレバン・ハン国：エレバン周辺・シラク・イグドゥル）
   select:
     regions: [armenia_erivan]
+    pieces: [ARM-Shirak]
   timeline:
     - from: 1648
       main: shia
@@ -925,6 +1142,28 @@
       minor: shia
       note: トルコマンチャーイ条約（1828）でロシア領になり、ペルシアとオスマン帝国から5万人以上のアルメニア人が移住し、多くのムスリムが去った。1897年の調査で、エリヴァン県はアルメニア人約53％、ムスリム（アゼルバイジャン人・クルド人）約38％。
       source: "https://ja.wikipedia.org/wiki/トルコマンチャーイ条約"
+    - from: 1920
+      main: oriental
+      minor: shia
+      note: 1918年にアルメニア共和国、1920年からソヴィエト・アルメニア。虐殺を逃れたアルメニア人が住み、アゼルバイジャン人（シーア派）は減った（ソヴィエト・アルメニア全体で1926年に約9%）。
+    - from: 1950
+      main: oriental
+      note: アゼルバイジャン人の一部は1948–50年にアゼルバイジャンへ移され（全体で1959年に約6%、1989年に約2.5%）、残りもナゴルノ・カラバフ紛争（1988–94）で去った。言語（lang_armenia）と同じ年で切り替える。
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+
+- id: rel_kars
+  name: カルス
+  select:
+    pieces: [TUR-Kars]
+  timeline:
+    - from: 1880
+      main: sunni
+      minor: oriental
+      note: ベルリン条約（1878）でロシア領（カルス州）。オスマン領のアルメニア人やギリシア人・ロシア人（モロカン派など）が入植した（1897年でアルメニア人約24%）。ロシア領だったので1915年のアルメニア人虐殺の時点ではアルメニア人が残った。
+    - from: 1920
+      main: sunni
+      note: 1918年にオスマン帝国、次いでアルメニア共和国。1920年のトルコ＝アルメニア戦争でトルコが取り、1921年のカルス条約で確定した。アルメニア人とロシア系・ギリシア系の住民は去った。言語（lang_kars）と同じ年。
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Kars"
 
 - id: rel_nakhchivan
   name: ナヒチェヴァン
@@ -935,16 +1174,22 @@
       main: shia
       minor: oriental
       note: トルコ系（シーア派）の住民が多数で、アルメニア人の村も多い。1828年にロシア領になった後もムスリムが多数（1897年の調査で約6割）。
+    - from: 1930
+      main: shia
+      note: ソ連のナヒチェヴァン自治共和国（アゼルバイジャン領）。アルメニア人は1920年代から減り続け、1980年代末にはほとんどいなくなった。
 
 - id: rel_armenian_highland_villages
-  name: シュニク（ザンゲズール）・シラク・ロリ・タヴシュ
+  name: シュニク（ザンゲズール）・ロリ・タヴシュ
   select:
-    pieces: [ARM-Syunik, ARM-Shirak, ARM-Lori, ARM-Tavush]
+    pieces: [ARM-Syunik, ARM-Lori, ARM-Tavush]
   timeline:
     - from: 1648
       main: oriental
       minor: shia
       note: アルメニア人のメリク（小領主）たちの山地。ムスリムの遊牧民も住む。ロリにはジョージア人も多い。
+    - from: 1990
+      main: oriental
+      note: ナゴルノ・カラバフ紛争（1988–94）でアゼルバイジャン人の村の住民は去った。
 
 - id: rel_azerbaijan
   name: アゼルバイジャン北部（シルヴァン・カラバフ・ガンジャ・シェキ）
@@ -956,6 +1201,11 @@
       main: shia
       minor: sunni
       note: シーア派が多数。北部（シェキ・クバ・シルヴァン北部）にはスンナ派が多い。山岳カラバフにはアルメニア人のメリク領がある。
+    - from: 1990
+      main: shia
+      minor: sunni
+      note: ナゴルノ・カラバフ紛争（1988–94）で、アルメニア人（アルメニア使徒教会）はバクーなどから去った。カラバフの山地のアルメニア人は1994–2023年にアルメニア人勢力の支配下にあったが、2023年のアゼルバイジャンの攻撃の後、ほぼ全員がアルメニアへ去った（ピースが分かれていないので地図には描いていない）。
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
 
 # ======== 中央アジア・アフガニスタン・パキスタン ========
 - id: rel_central_asia
@@ -976,3 +1226,167 @@
       main: sunni
       minor: shia
       note: サファヴィー朝の州都で、シーア派の住民も多い。（比率は要確認）
+
+# ======== 1914–2025 で分けた地域 ========
+- id: rel_igdir
+  name: ウードゥル（スルマル）
+  select:
+    pieces: [TUR-I_d_r]
+  timeline:
+    - from: 1920
+      main: shia
+      minor: sunni
+      note: 1920年にトルコ領。アルメニア人は去り、シーア派のアゼルバイジャン人とスンナ派のクルド人が多数になった。
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Kars"
+
+- id: rel_thrace_muslim
+  name: 西トラキアのムスリムの多い町村（アリアナ・ヤシモス・ミキ）
+  select:
+    pieces: [GRC-Arrianon, GRC-Iasmou, GRC-Mykis]
+  timeline:
+    - from: 1923
+      main: sunni
+      minor: orthodox
+      note: 住民交換の対象外となったムスリム（トルコ人・ポマク人）が多数の地域。
+      source: "https://en.wikipedia.org/wiki/Muslim_minority_of_Greece"
+
+- id: rel_cyprus_north
+  name: キプロス北部（キレニア）
+  select:
+    pieces: [CYP-Kyrenia]
+  timeline:
+    - from: 1974
+      main: sunni
+      note: 1974年のトルコ軍の占領で、ギリシア系住民（正教徒）は南へ逃れ、1975年に南部のトルコ系住民が移ってきた。
+      source: "https://ja.wikipedia.org/wiki/キプロス問題"
+
+- id: rel_cyprus_famagusta
+  name: ファマグスタ地区
+  select:
+    pieces: [CYP-Famagusta]
+  timeline:
+    - from: 1974
+      main: sunni
+      minor: orthodox
+      note: 地区の大部分は1974年にトルコ軍が占領した。南東部（アヤ・ナパ・パラリムニ）は共和国側。
+
+- id: rel_cyprus_south
+  name: キプロス南部（リマソル・ラルナカ・パフォス）
+  select:
+    pieces: [CYP-Limassol, CYP-Larnaca, CYP-Paphos]
+  timeline:
+    - from: 1975
+      main: orthodox
+      note: 1974–75年にトルコ系住民（ムスリム）は北部へ移った。
+
+# ---- イスラエル（ユダヤ教 jewish は1948年以後のイスラエルの多数派の宗教） ----
+- id: rel_israel_tel_aviv
+  name: テルアビブ地区（ヤッフォ）
+  select:
+    pieces: [ISR-Tel_Aviv]
+  timeline:
+    - from: 1935
+      main: jewish
+      minor: sunni
+      note: 委任統治下でユダヤ人の移民が増え、1930年代にはヤッフォ地区でユダヤ人が多数になった。
+      source: "https://ja.wikipedia.org/wiki/パレスチナ委任統治領"
+    - from: 1948
+      main: jewish
+      note: 1948年の第1次中東戦争でヤッフォのアラブ人の大部分が避難・追放された。
+
+- id: rel_israel_center
+  name: イスラエル中央地区
+  select:
+    pieces: [ISR-Central_District]
+  timeline:
+    - from: 1948
+      main: jewish
+      note: 1948年の戦争でリッダ・ラムラなどのアラブ人の多くが避難・追放され、ユダヤ人移民が住んだ。
+
+- id: rel_israel_haifa
+  name: ハイファ地区
+  select:
+    pieces: [ISR-Haifa]
+  timeline:
+    - from: 1948
+      main: jewish
+      minor: sunni
+      note: 1948年4月にハイファのアラブ人の大部分が去った。ワディ・アーラなどにムスリムの町が残る。
+
+- id: rel_israel_north
+  name: イスラエル北部地区（ガリラヤ）
+  select:
+    pieces: [ISR-Northern_District]
+  timeline:
+    - from: 1948
+      main: sunni
+      minor: jewish
+      note: ガリラヤにはムスリム・キリスト教徒・ドゥルーズ派のアラブ人が多く残った。
+    - from: 1970
+      main: jewish
+      minor: sunni
+      note: ユダヤ人の町の建設で、ユダヤ教徒が最大の集団になった（2019年でユダヤ教徒約44%、ムスリム約39%、ドゥルーズ派約9%、キリスト教徒約7%）。年は目安（要確認）。アラブ人（ムスリム・キリスト教徒・ドゥルーズ派）を合わせると半数余りになるので、言語の地図ではアラビア語が多数になる（矛盾ではない）。
+      source: "https://en.wikipedia.org/wiki/Northern_District_(Israel)"
+
+- id: rel_israel_south
+  name: イスラエル南部地区（ネゲヴ）
+  select:
+    pieces: [ISR-Southern_District]
+  timeline:
+    - from: 1950
+      main: jewish
+      minor: sunni
+      note: ネゲヴのベドウィン（ムスリム）の多くは1948–50年に避難・追放され、残った人は地区の人口の約2割。
+
+- id: rel_israel_jerusalem
+  name: エルサレム地区
+  select:
+    pieces: [ISR-Jerusalem_District]
+  timeline:
+    - from: 1880
+      main: sunni
+      minor: jewish
+      note: 19世紀後半から東欧のユダヤ人の移住（第1次アリヤー1882–）が続き、エルサレム市ではユダヤ人が多数になった。委任統治（1920–48）の下でも、周りの村を含めるとムスリムとキリスト教徒のアラブ人が多い。言語（lang_jerusalem）と同じく1880年から少数派を示す。
+    - from: 1948
+      main: jewish
+      note: 1948年の戦争で西エルサレムとその周りのアラブ人は避難・追放された。
+      source: "https://ja.wikipedia.org/wiki/パレスチナ難民"
+    - from: 1967
+      main: jewish
+      minor: sunni
+      note: 1967年の第3次中東戦争で東エルサレムをイスラエルが占領・併合した（国際的には認められていない）。東エルサレムのパレスチナ人（ムスリム・キリスト教徒）は地区の人口の約3分の1。
+      source: "https://ja.wikipedia.org/wiki/エルサレム"
+
+- id: rel_vojvodina_slovak_petrovac
+  name: バチュキ・ペトロヴァツ（スロヴァキア人の入植地）
+  select:
+    pieces: [SRB-Backi_Petrovac_Municipality]
+  timeline:
+    - from: 1750
+      main: lutheran
+      minor: orthodox
+      note: 1745年にルター派のスロヴァキア人が入植した。言語の lang_backi_petrovac と同じ範囲。
+
+- id: rel_vojvodina_slovak_kovacica
+  name: コヴァチツァ（バナトのスロヴァキア人の村）
+  select:
+    pieces: [SRB-Kovacica_Municipality]
+  timeline:
+    - from: 1800
+      main: lutheran
+      minor: orthodox
+      note: コヴァチツァ・パディナはルター派のスロヴァキア人、ウズディンは正教徒のルーマニア人の村。言語の lang_kovacica と同じ範囲。要確認
+
+- id: rel_eordaia
+  name: エオルダイア（カイラリア）
+  select:
+    pieces: [GRC-Eordaia]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: プトレマイダ（カイラル）周辺はトルコ人（ムスリム）の村が多かった。スラヴ語・ギリシア語の正教徒の村もある。言語の lang_eordaia と同じ範囲。
+    - from: 1923
+      main: orthodox
+      note: 1923年の住民交換でムスリムの住民がトルコへ移され、小アジアからのギリシア人難民が入植した（プトレマイダ）。
+      source: "https://en.wikipedia.org/wiki/Population_exchange_between_Greece_and_Turkey"

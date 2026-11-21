@@ -1,7 +1,7 @@
 """地図に描く川と湖のデータ public/data/rivers.json・lakes.json を作る。
 
 元データ（Natural Earth 10m、パブリックドメイン）を .cache/ne/ にダウンロードし、
-範囲（経度 -25〜62、緯度 25〜72）で切り出し、日本語名・表示を始める拡大率（minz）・規模（rank）を付けて、
+範囲（経度 -25〜62、緯度 25〜72）で切り出し（範囲外の全世界は、大河と大きな湖だけを加える）、日本語名・表示を始める拡大率（minz）・規模（rank）を付けて、
 mapshaper で簡略化して書き出す。
 
 使い方:
@@ -44,10 +44,15 @@ SOURCES = [
     "ne_10m_lakes_europe",
 ]
 BBOX = (-25, 25, 62, 72)
+# 範囲外（全世界）で描く川・湖の scalerank の上限（大河・大きな湖だけ）
+WORLD_MAX_RIVER_SCALERANK = 5
+WORLD_MAX_LAKE_SCALERANK = 3
 
 # 簡略化の目安（メートル）。拡大率 9 で 1 ピクセル ≒ 100m（北緯50度付近）。数ピクセル程度の誤差にとどめる
 SIMPLIFY_INTERVAL_RIVERS = 600
 SIMPLIFY_INTERVAL_LAKES = 300
+# 範囲外の簡略化の間隔（範囲内の何倍か）
+WORLD_SIMPLIFY_FACTOR = 6
 # 補助データ（ne_10m_rivers_europe）の scalerank 12 は細かすぎるので落とす
 MAX_RIVER_SCALERANK = 11
 
@@ -112,6 +117,36 @@ RIVER_JA: dict[str, str] = {
     "Atrek": "アトレク川", "Atrak": "アトレク川", "Qezel Owzan": "キジル・ウズン川", "Sefid": "セフィード川",
     "Bojana": "ボヤナ川", "Buna": "ボヤナ川", "Drin": "ドリン川", "Neretva": "ネレトヴァ川",
     "Moulouya": "ムルーヤ川", "Oued Sebou": "セブ川", "Oum Er Rbia": "ウム・エル・ルビア川",
+    # 範囲外（全世界）の大河
+    "Chang Jiang": "長江", "Yangtze": "長江", "Jinsha": "長江", "Tongtian": "長江", "Tuotuo": "長江",
+    "Huang": "黄河", "Xi": "西江", "Heilong Jiang": "アムール川（黒竜江）", "Amur": "アムール川（黒竜江）",
+    "Argun’": "アルグン川", "Hailar": "ハイラル川", "Songhua": "松花江", "Liao": "遼河",
+    "Mekong": "メコン川", "Lancang": "メコン川", "Salween": "サルウィン川", "Nu": "サルウィン川",
+    "Ayeyarwady": "エーヤワディー川", "Irrawaddy Delta": "エーヤワディー川", "Nmai": "エーヤワディー川",
+    "Ganges": "ガンジス川", "Brahmaputra": "ブラマプトラ川", "Yarlung": "ブラマプトラ川", "Dihang": "ブラマプトラ川",
+    "Indus": "インダス川", "Shiquan": "インダス川", "Godävari": "ゴーダーヴァリー川",
+    "Panj": "アム川", "Pamir": "アム川", "Naryn": "シル川",
+    "Ob": "オビ川", "Irtysh": "イルティシュ川", "Ertis": "イルティシュ川", "Ertix": "イルティシュ川",
+    "Tobol": "トボル川", "Yenisey": "エニセイ川", "Verkhniy Yenisey": "エニセイ川", "Malyy Yenisey": "エニセイ川",
+    "Kyzyl-Khem": "エニセイ川", "Angara": "アンガラ川", "Lower Tunguska": "下ツングースカ川",
+    "Lena": "レナ川", "Aldan": "アルダン川", "Kolyma": "コリマ川", "Indigirka": "インディギルカ川",
+    "Selenga": "セレンゲ川",
+    "Bahr el Jebel": "ナイル川", "El Bahr el Abyad": "白ナイル川", "El Bahr el Azraq": "青ナイル川",
+    "Abay": "青ナイル川", "Albert Nile": "ナイル川", "Victoria Nile": "ナイル川",
+    "Niger": "ニジェール川", "Benue": "ベヌエ川", "Bénoué": "ベヌエ川", "Congo": "コンゴ川",
+    "Lualaba": "コンゴ川", "Ubangi": "ウバンギ川", "Kasai": "カサイ川", "Zambezi": "ザンベジ川",
+    "Orange": "オレンジ川", "Vaal": "ヴァール川", "Sénégal": "セネガル川", "Volta": "ヴォルタ川",
+    "Mississippi": "ミシシッピ川", "Missouri": "ミズーリ川", "Ohio": "オハイオ川", "Arkansas": "アーカンソー川",
+    "Tennessee": "テネシー川", "Rio Grande": "リオ・グランデ川", "Colorado": "コロラド川",
+    "Columbia": "コロンビア川", "Snake": "スネーク川", "St. Lawrence": "セントローレンス川",
+    "Mackenzie": "マッケンジー川", "Yukon": "ユーコン川", "Nelson": "ネルソン川", "Saskatchewan": "サスカチュワン川",
+    "Fraser": "フレーザー川", "Hudson": "ハドソン川",
+    "Amazonas": "アマゾン川", "Amazon": "アマゾン川", "Solimões": "アマゾン川", "Marañón": "アマゾン川",
+    "Ucayali": "ウカヤリ川", "Negro": "ネグロ川", "Madeira": "マデイラ川", "Tapajós": "タパジョス川",
+    "Xingu": "シングー川", "Tocantins": "トカンチンス川", "Araguaia": "アラグアイア川",
+    "Orinoco": "オリノコ川", "Magdalena": "マグダレナ川", "Paraná": "パラナ川", "Paraguay": "パラグアイ川",
+    "Uruguay": "ウルグアイ川", "São  Francisco": "サン・フランシスコ川",
+    "Murray": "マリー川", "Darling": "ダーリング川",
     # 運河
     "Suez Canal": "スエズ運河", "Caledonian Canal": "カレドニア運河", "Ferenc Csatorna": "フランツ運河",
     "Ismailiya Canal": "イスマイリア運河",
@@ -152,6 +187,12 @@ RIVER_MINZ: dict[str, float] = {
     "テレク川": 5, "リオニ川": 5, "ムール川": 5, "アイセル川": 5, "レク川": 5, "西モラヴァ川": 5,
     "ティチーノ川": 5, "ミンチョ川": 5, "サン川": 5, "ネリス川": 5, "トレント川": 5,
     "スエズ運河": 4,
+    # 範囲外（全世界）の大河
+    "長江": 2, "黄河": 2, "ガンジス川": 2, "インダス川": 2, "メコン川": 2, "アマゾン川": 2, "ミシシッピ川": 2,
+    "コンゴ川": 2, "ニジェール川": 2, "オビ川": 2, "エニセイ川": 2, "レナ川": 2, "アムール川（黒竜江）": 2,
+    "ブラマプトラ川": 3, "エーヤワディー川": 3, "西江": 3, "白ナイル川": 3, "青ナイル川": 3, "ザンベジ川": 3,
+    "イルティシュ川": 3, "ミズーリ川": 3, "セントローレンス川": 3, "パラナ川": 3, "オリノコ川": 3,
+    "リオ・グランデ川": 3, "サルウィン川": 3, "マッケンジー川": 3, "ユーコン川": 3,
 }
 
 # 湖の日本語名（Natural Earth の name_ja より優先する）
@@ -169,6 +210,11 @@ LAKE_JA: dict[str, str] = {
     "Kaliningradskiy Zaliv": "ヴィスワ潟", "Zalew Wislany": "ヴィスワ潟",
     "Lough Neagh": "ネイ湖", "Loch Ness": "ネス湖", "North Aral Sea": "アラル海", "South Aral Sea": "アラル海",
     "Võrtsjärv": "ヴォルツ湖",
+    "Lake Baikal": "バイカル湖", "Lake Balkhash": "バルハシ湖", "Issyk-Kul": "イシク湖", "Qinghai Hu": "青海湖",
+    "Lake Victoria": "ヴィクトリア湖", "Lake Tanganyika": "タンガニーカ湖", "Lake Malawi": "マラウイ湖",
+    "Lake Chad": "チャド湖", "Lake Superior": "スペリオル湖", "Lake Michigan": "ミシガン湖",
+    "Lake Huron": "ヒューロン湖", "Lake Erie": "エリー湖", "Lake Ontario": "オンタリオ湖",
+    "Lago Titicaca": "ティティカカ湖", "Tonlé Sap": "トンレサップ湖",
 }
 
 # 歴史地図として重要な湖の表示開始の拡大率
@@ -177,6 +223,8 @@ LAKE_MINZ: dict[str, float] = {
     "レマン湖": 4, "ボーデン湖": 4, "バラトン湖": 4, "ヴァン湖": 3, "ウルミア湖": 3, "セヴァン湖": 4,
     "死海": 4, "ガリラヤ湖": 5, "イリメニ湖": 4, "アラル海": 2, "ヴィスワ潟": 4,
     "コモ湖": 5, "ガルダ湖": 5, "マッジョーレ湖": 5, "シュコダル湖": 5, "オフリド湖": 5,
+    "バイカル湖": 2, "バルハシ湖": 3, "ヴィクトリア湖": 2, "タンガニーカ湖": 3, "マラウイ湖": 3,
+    "スペリオル湖": 2, "ミシガン湖": 2, "ヒューロン湖": 2, "エリー湖": 3, "オンタリオ湖": 3, "チャド湖": 3,
 }
 
 # 貯水池として登録されているが、もとは自然の湖のもの（残す）
@@ -195,11 +243,21 @@ def fetch() -> None:
             urllib.request.urlretrieve(f"{BASE}/{name}.geojson", p)
 
 
-def load(name: str) -> gpd.GeoDataFrame:
-    g = gpd.read_file(CACHE / f"{name}.geojson")
-    g = g[g.geometry.notna()].cx[BBOX[0] : BBOX[2], BBOX[1] : BBOX[3]].copy()
+def load(name: str, world_max_scalerank: int | None = None) -> gpd.GeoDataFrame:
+    """範囲内を切り出す。world_max_scalerank を指定すると、範囲外のうちその規模以上のものも加える"""
+    g0 = gpd.read_file(CACHE / f"{name}.geojson")
+    g0 = g0[g0.geometry.notna()]
+    g = g0.cx[BBOX[0] : BBOX[2], BBOX[1] : BBOX[3]].copy()
     g["geometry"] = g.geometry.intersection(box(*BBOX))
-    return g[~g.geometry.is_empty]
+    g = g[~g.geometry.is_empty]
+    g["wflag"] = 0
+    if world_max_scalerank is None:
+        return g
+    w = g0[g0.scalerank <= world_max_scalerank].copy()
+    w["geometry"] = w.geometry.difference(box(*BBOX))
+    w = w[~w.geometry.is_empty & w.geometry.geom_type.isin(["LineString", "MultiLineString", "Polygon", "MultiPolygon"])]
+    w["wflag"] = 1
+    return pd.concat([g, w], ignore_index=True)
 
 
 def s(v) -> str:
@@ -227,7 +285,7 @@ def minz_to_rank(z: float) -> int:
 
 
 def build_rivers() -> list[dict]:
-    a = load("ne_10m_rivers_lake_centerlines")
+    a = load("ne_10m_rivers_lake_centerlines", WORLD_MAX_RIVER_SCALERANK)
     b = load("ne_10m_rivers_europe")
     b = b[b.scalerank <= MAX_RIVER_SCALERANK]
     rows = []
@@ -245,7 +303,7 @@ def build_rivers() -> list[dict]:
                 minz = min(minz, RIVER_MINZ[ja])
                 rank = min(rank, minz_to_rank(RIVER_MINZ[ja]))
             canal = next((CANAL_FROM[k] for k in keys if k in CANAL_FROM), None)
-            rows.append(dict(name=ja, name_en=name_en, minz=minz, rank=rank, canal=canal, geom=r.geometry))
+            rows.append(dict(name=ja, name_en=name_en, minz=minz, rank=rank, canal=canal, world=int(getattr(r, "wflag", 0)), geom=r.geometry))
     # 同じ川（日本語名）の区間は一番大きい区分にそろえ、1つの地物にまとめる
     best: dict[str, tuple[float, int, str]] = {}
     for r in rows:
@@ -258,16 +316,16 @@ def build_rivers() -> list[dict]:
     for r in rows:
         if r["name"]:
             minz, rank, en = best[r["name"]]
-            key = (r["name"], en, minz, rank, r["canal"])
+            key = (r["name"], en, minz, rank, r["canal"], r["world"])
         else:
-            key = ("", r["name_en"], r["minz"], r["rank"], r["canal"])
+            key = ("", r["name_en"], r["minz"], r["rank"], r["canal"], r["world"])
         groups.setdefault(key, []).append(r["geom"])
     feats = []
-    for (ja, en, minz, rank, canal), geoms in groups.items():
+    for (ja, en, minz, rank, canal, world), geoms in groups.items():
         g = unary_union(geoms)
         if g.geom_type == "MultiLineString":
             g = linemerge(g)
-        props = dict(name=ja, name_en=en, minz=minz, rank=rank)
+        props = dict(name=ja, name_en=en, minz=minz, rank=rank, _w=world)
         if canal:
             props["from"] = canal
         feats.append(dict(type="Feature", properties=props, geometry=mapping(g)))
@@ -281,7 +339,7 @@ def default_lake_minz(min_zoom: float, sr: float) -> float:
 
 
 def build_lakes() -> list[dict]:
-    a = load("ne_10m_lakes")
+    a = load("ne_10m_lakes", WORLD_MAX_LAKE_SCALERANK)
     b = load("ne_10m_lakes_europe")
     b = b[b.scalerank <= 11]
     feats = []
@@ -295,7 +353,7 @@ def build_lakes() -> list[dict]:
             if ja in LAKE_MINZ:
                 minz = min(minz, LAKE_MINZ[ja])
             rank = int(r.scalerank)
-            props = dict(name=ja, name_en=s(getattr(r, "name_en", "")) or name, minz=minz, rank=rank)
+            props = dict(name=ja, name_en=s(getattr(r, "name_en", "")) or name, minz=minz, rank=rank, _w=int(getattr(r, "wflag", 0)))
             feats.append(dict(type="Feature", properties=props, geometry=mapping(r.geometry)))
     feats.sort(key=lambda f: (f["properties"]["rank"], f["properties"]["name_en"]))
     return feats
@@ -304,10 +362,11 @@ def build_lakes() -> list[dict]:
 def write_simplified(feats: list[dict], out: Path, interval: int, kind: str) -> None:
     tmp = ROOT / ".cache" / f"{out.stem}_raw.geojson"
     tmp.write_text(json.dumps(dict(type="FeatureCollection", features=feats), ensure_ascii=False))
-    cmd = ["npx", "--yes", "mapshaper", "-i", str(tmp), "-simplify", f"interval={interval}"]
+    # 範囲外（_w=1）は粗くてよいので、間隔を広げて簡略化する
+    cmd = ["npx", "--yes", "mapshaper", "-i", str(tmp), "-simplify", "variable", f"interval=_w ? {interval * WORLD_SIMPLIFY_FACTOR} : {interval}"]
     if kind == "polygon":
         cmd += ["keep-shapes", "-filter-slivers", "min-area=0.5km2"]
-    cmd += ["-filter", "!this.isNull", "-o", str(out), "format=geojson", "precision=0.0005"]
+    cmd += ["-filter", "!this.isNull", "-each", "delete _w", "-o", str(out), "format=geojson", "precision=0.0005"]
     subprocess.run(cmd, check=True, cwd=ROOT)
     # 座標がなくなった地物・属性の整形
     fc = json.loads(out.read_text())
