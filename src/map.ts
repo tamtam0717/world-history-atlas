@@ -35,7 +35,7 @@ const FONT = ["Noto Sans Medium"];
 const FONT_REGULAR = ["Noto Sans Regular"];
 const LOCAL_FONT = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Meiryo", sans-serif';
 /** 帝国の枠として描く上位政体（それ以外の overlord は宗主権として細い点線） */
-const EMPIRE_FRAMES = new Set(["hre", "rhine_confederation", "german_confederation", "north_german_confederation"]);
+const EMPIRE_FRAMES = new Set(["hre", "rhine_confederation", "german_confederation", "north_german_confederation", "hungary_crown"]);
 
 /** 地図の主題（塗り分けの種類）。分布（宗教・言語）を足すときは DistKey にも足す */
 export type MapLayer = "political" | DistKey;

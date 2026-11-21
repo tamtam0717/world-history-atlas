@@ -923,6 +923,28 @@
       cause: "第1回ポーランド分割（ガリツィア・ロドメリア王国）"
       source: "https://ja.wikipedia.org/wiki/ポーランド分割"
 
+- id: auschwitz_zator
+  name: アウシュヴィッツ（オシフィエンチム）・ザトル公領
+  note: "ガリツィアの一部だが、1818年からドイツ連邦に加えられた（かつてボヘミア王冠に属したため）。ピースはオシフィエンチム郡とヴァドヴィツェ郡で近似"
+  select:
+    pieces: [POL-powiat_o_wi_cimski, POL-powiat_wadowicki]
+  timeline:
+    - from: 1648
+      owner: poland_lithuania
+    - from: 1772
+      owner: habsburg
+      cause: "第1回ポーランド分割（ガリツィア・ロドメリア王国）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1818
+      owner: habsburg
+      overlord: german_confederation
+      cause: "アウシュヴィッツ公領・ザトル公領がドイツ連邦に編入される"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Auschwitz"
+    - from: 1866
+      owner: habsburg
+      cause: "普墺戦争の敗北とプラハ条約でドイツ連邦が解体"
+      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+
 - id: silesia_pl
   name: シュレジエン（ポーランド部分）
   note: "グラーツ伯領（クウォツコ）を含む。シュヴィーブス（1686–1695 ブランデンブルク）は省略"
