@@ -1,0 +1,2183 @@
+# 宗教の分布：南北アメリカ（アメリカ合衆国・カナダ・メキシコ・中米・カリブ・南米・海外領土）1648–2025
+# 形式は docs/religion-format.md（「南北アメリカ」の節）。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# - 先住民の伝統的な信仰（シャーマニズム・精霊信仰・プエブロの祭祀など）は other。ヨーロッパ人の植民地・伝道所（ミッション）が
+#   住民の多数を改宗させた時期から、キリスト教の色にする。
+# - プロテスタントの宗派：会衆派（ピューリタン）・長老派・オランダ改革派は reformed、イギリス国教会（独立後の監督派）は anglican、
+#   ドイツ系・北欧系のルター派は lutheran、18 世紀末以後の信仰復興で広がったバプテスト・メソジスト（アフリカ系アメリカ人の教会を含む）と
+#   20 世紀のペンテコステ派・福音派は evangelical、モルモン教は lds。モラヴィア兄弟団（ヘルンフート派）の伝道は evangelical とした。
+# - アフリカ系の信仰（ハイチのヴードゥー、キューバのサンテリア、ブラジルのカンドンブレ・ウンバンダ、ジャマイカのラスタファリなど）は、
+#   多くの人がカトリック・プロテスタントと重ねて信じる習合的な信仰なので、塗りはカトリックなどにして note に書く。
+# - 世俗化（キューバの革命後・ウルグアイ・カナダ・アメリカ合衆国の近年など）は data/religion/secular.yaml の「南北アメリカ」。
+# - 言語（data/language/americas.yaml）と、地域の分け方と切り替えの年をできるだけそろえている。
+# - アメリカ合衆国の太平洋の領土（グアム・北マリアナ・米領サモア）はオセアニアの担当に残す。
+
+# ================================================================
+# アメリカ合衆国
+# ================================================================
+- id: rel_us_base
+  name: 北アメリカの先住民の地（アメリカ合衆国の範囲）
+  select:
+    iso: [USA]
+    exclude: [USA-Guam, USA-Commonwealth_of_the_Northern_Mariana_Islands, USA-American_Samoa]
+  timeline:
+    - from: 1648
+      main: other
+      note: 先住民の伝統的な信仰（精霊・祖先・自然の力をまつる儀礼、平原の太陽の踊り、プエブロのカチナの祭祀など）。地域ごとの変化は下の小さい地域で示す。
+      source: "https://ja.wikipedia.org/wiki/ネイティブ・アメリカン"
+
+# ---- ニューイングランド ----
+- id: rel_new_england_south
+  name: マサチューセッツ・コネティカット・ロードアイランド
+  select:
+    adm1: ["USA/Massachusetts", "USA/Connecticut", "USA/Rhode Island"]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: ピューリタン（会衆派）の植民地。マサチューセッツ湾植民地（1630）・コネティカット・ニューヘイヴン。ロードアイランドはロジャー・ウィリアムズの信仰の自由の植民地で、バプテスト・クエーカーも住んだ。先住民はフィリップ王戦争（1675–76）で大きく減った。
+      source: "https://ja.wikipedia.org/wiki/ピューリタン"
+    - from: 1850
+      main: reformed
+      minor: catholic
+      note: ジャガイモ飢饉（1845–49）の後、アイルランド系のカトリックがボストンなどに大量に移住した。
+    - from: 1900
+      main: catholic
+      minor: reformed
+      note: アイルランド系・イタリア系・ポルトガル系・フランス系カナダ人の移民で、カトリックが最大の宗派になった（1900 年代のボストンはカトリックが多数）。
+- id: rel_new_hampshire_vermont
+  name: ニューハンプシャー・ヴァーモント
+  select:
+    adm1: ["USA/New Hampshire", "USA/Vermont"]
+  timeline:
+    - from: 1648
+      main: other
+      note: アベナキ人の地。ニューハンプシャーの海岸（ポーツマス）にはイングランド人の町があった。
+    - from: 1720
+      main: reformed
+      note: 会衆派のニューイングランド人の入植。ヴァーモント（グリーン・マウンテン）への入植は七年戦争後の 1760 年代に本格化した。
+    - from: 1900
+      main: reformed
+      minor: catholic
+      note: フランス系カナダ人が繊維工場の労働者として移り住んだ。
+    - from: 1950
+      main: catholic
+      minor: reformed
+- id: rel_maine
+  name: メイン
+  select:
+    adm1: ["USA/Maine"]
+  timeline:
+    - from: 1648
+      main: other
+      note: アベナキ人などワバナキ連合の地。海岸の南部（ヨーク・カスコ湾）にイングランド人の漁村がある。アベナキ人にはイエズス会のフランス人宣教師が伝道し、多くがカトリックになった。
+    - from: 1760
+      main: reformed
+      note: ヌーヴェル・フランスの滅亡（1760）で、ニューイングランドからの入植が内陸へ進んだ。
+    - from: 1900
+      main: reformed
+      minor: catholic
+      note: フランス系カナダ人・アイルランド系の移住。
+- id: rel_maine_south
+  name: メイン南部の海岸（ヨーク・カンバーランド）
+  select:
+    pieces: [USA-York_ME, USA-Cumberland_ME]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: キタリー・ヨーク・ファルマス（ポートランド）など、1640 年代からのイングランド人の町（1652 年にマサチューセッツに併合）。
+    - from: 1900
+      main: reformed
+      minor: catholic
+- id: rel_aroostook
+  name: メイン北部（アルーストック、マダワスカ）
+  select:
+    pieces: [USA-Aroostook_ME]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1790
+      main: catholic
+      note: セントジョン川上流のマダワスカに、追放を逃れたアカディア人が住みついた（1785–）。
+    - from: 1860
+      main: catholic
+      minor: reformed
+
+# ---- 中部植民地 ----
+- id: rel_nyc
+  name: ニューヨーク市（マンハッタン・ブルックリン・クイーンズ・ブロンクス・スタテン島）
+  select:
+    pieces: [USA-New_York_NY, USA-Kings_NY, USA-Queens_NY, USA-Bronx_NY, USA-Richmond_NY]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: オランダ西インド会社のニューアムステルダム（1626–）。オランダ改革派教会が公認の教会だったが、ユダヤ人（1654–）・ルター派・クエーカーなども住んだ。1664 年にイングランドが奪い、ニューヨークと改名した。
+      source: "https://ja.wikipedia.org/wiki/ニューアムステルダム"
+    - from: 1850
+      main: reformed
+      minor: catholic
+      note: アイルランド系・ドイツ系のカトリックの移民が急増した。
+    - from: 1880
+      main: catholic
+      minor: reformed
+    - from: 1900
+      main: catholic
+      minor: jewish
+      note: 東欧からのユダヤ人（1881–1924 年の大移民）とイタリア系の移民。1920〜50 年代のニューヨーク市の住民の約 4 分の 1 はユダヤ人で、世界最大のユダヤ人の都市だった。
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City"
+- id: rel_hudson
+  name: ハドソン川流域・ロングアイランド
+  select:
+    pieces: [USA-Westchester_NY, USA-Rockland_NY, USA-Orange_NY, USA-Putnam_NY, USA-Dutchess_NY, USA-Ulster_NY, USA-Greene_NY, USA-Columbia_NY, USA-Albany_NY, USA-Rensselaer_NY, USA-Schenectady_NY, USA-Nassau_NY, USA-Suffolk_NY]
+  timeline:
+    - from: 1648
+      main: other
+      minor: reformed
+      note: ニューネーデルラント（フォート・オラニエ〈オールバニー〉・エソプス〈キングストン〉）の点在する入植地と、レナペ人・マヒカン人の地。ロングアイランドの東部はニューイングランド人の町。
+    - from: 1680
+      main: reformed
+      note: オランダ系の農民（パトルーン制の荘園）とニューイングランド系の住民。
+    - from: 1900
+      main: reformed
+      minor: catholic
+    - from: 1950
+      main: catholic
+      minor: reformed
+- id: rel_nyc_suburbs
+  name: ニューヨークの郊外（ナッソー・ウェストチェスター・ロックランド）
+  select:
+    pieces: [USA-Nassau_NY, USA-Westchester_NY, USA-Rockland_NY]
+  timeline:
+    - from: 1950
+      main: catholic
+      minor: jewish
+      note: 第二次世界大戦後の郊外化で、ニューヨーク市のカトリック・ユダヤ人の家族が移り住んだ。
+- id: rel_upstate_ny
+  name: ニューヨーク州北部・西部
+  select:
+    adm1: ["USA/New York"]
+  timeline:
+    - from: 1648
+      main: other
+      note: イロコイ連邦（モホーク・オナイダ・オノンダガ・カユガ・セネカ）の地。
+    - from: 1790
+      main: reformed
+      note: 独立戦争でイロコイの多くがイギリス側についたため、戦後に土地を奪われ（スタンウィックス砦条約 1784 など）、ニューイングランドからの入植が急速に進んだ。
+    - from: 1830
+      main: evangelical
+      minor: reformed
+      note: 第2次大覚醒の中心地（「焼き尽くされた地域」）。メソジスト・バプテストが広がり、モルモン教（1830、パルマイラ）も生まれた。
+      source: "https://ja.wikipedia.org/wiki/第二次大覚醒"
+    - from: 1900
+      main: catholic
+      minor: evangelical
+      note: バッファロー・ロチェスター・シラキュースなどの工業都市に、アイルランド・イタリア・ポーランドからの移民が増えた。
+- id: rel_new_jersey
+  name: ニュージャージー
+  select:
+    adm1: ["USA/New Jersey"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: reformed
+      note: レナペ人の地。ハドソン川の西岸（パヴォニア・ベルヘン）にオランダ人の入植地。
+    - from: 1680
+      main: reformed
+      note: 東部はオランダ改革派・スコットランド系長老派、西部はクエーカーの植民地。
+    - from: 1920
+      main: catholic
+      minor: reformed
+- id: rel_pennsylvania_east
+  name: ペンシルヴェニア東部（フィラデルフィアとドイツ系の郡）
+  select:
+    pieces: [USA-Adams_PA, USA-Berks_PA, USA-Bucks_PA, USA-Carbon_PA, USA-Chester_PA, USA-Cumberland_PA, USA-Dauphin_PA, USA-Delaware_PA, USA-Lancaster_PA, USA-Lebanon_PA, USA-Lehigh_PA, USA-Montgomery_PA, USA-Northampton_PA, USA-Northumberland_PA, USA-Perry_PA, USA-Philadelphia_PA, USA-Schuylkill_PA, USA-Snyder_PA, USA-Union_PA, USA-York_PA]
+  timeline:
+    - from: 1648
+      main: other
+      note: レナペ人・サスケハノック人の地。デラウェア川の下流にスウェーデン人・オランダ人の小さな入植地。
+    - from: 1690
+      main: reformed
+      note: ウィリアム・ペンのクエーカーの植民地（1681–）。信仰の自由を認めたので、クエーカー（地図では塗りに使う宗派がないので改革派の色にまとめ、note で示す）・長老派・バプテストなどが集まった。
+      source: "https://ja.wikipedia.org/wiki/ペンシルベニア植民地"
+    - from: 1740
+      main: reformed
+      minor: lutheran
+      note: ドイツからの移民（ペンシルヴェニア・ダッチ）。ルター派・ドイツ改革派・メノナイト・アーミッシュ。
+    - from: 1900
+      main: catholic
+      minor: lutheran
+      note: 炭鉱・製鉄の町に、アイルランド・イタリア・東欧からのカトリックの移民が増えた。
+- id: rel_pennsylvania
+  name: ペンシルヴェニア中部・西部
+  select:
+    adm1: ["USA/Pennsylvania"]
+  timeline:
+    - from: 1648
+      main: other
+      note: サスケハノック人（のちショーニー人・レナペ人）の地。西部のオハイオ川流域はフランスとイギリスが争った（デュケーヌ砦 1754）。
+    - from: 1770
+      main: reformed
+      note: 七年戦争（フレンチ＝インディアン戦争）の後、スコットランド系アイルランド人（長老派）が入植した。
+    - from: 1900
+      main: catholic
+      minor: reformed
+      note: ピッツバーグの製鉄業と炭鉱に、東欧・イタリアからの移民が集まった。
+- id: rel_delaware
+  name: デラウェア
+  select:
+    adm1: ["USA/Delaware"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: lutheran
+      note: ニュースウェーデン（1638–55、クリスティーナ砦〈ウィルミントン〉）。スウェーデン人・フィンランド人のルター派の入植地は数百人で、住民の多くはレナペ人。
+      source: "https://ja.wikipedia.org/wiki/ニュースウェーデン"
+    - from: 1680
+      main: anglican
+      minor: reformed
+    - from: 1800
+      main: evangelical
+      note: メソジストの拠点になった。
+    - from: 1950
+      main: evangelical
+      minor: catholic
+
+# ---- チェサピーク・南部 ----
+- id: rel_maryland
+  name: メリーランド・ワシントン D.C.
+  select:
+    adm1: ["USA/Maryland", "USA/District of Columbia"]
+  timeline:
+    - from: 1648
+      main: anglican
+      minor: catholic
+      note: カトリックのボルティモア卿の植民地（1634）。信仰寛容法（1649）。住民の多くはプロテスタントで、1702 年にイギリス国教会が公認の教会になった。
+      source: "https://ja.wikipedia.org/wiki/メリーランド植民地"
+    - from: 1800
+      main: evangelical
+      minor: catholic
+      note: 独立後、メソジストが広がった。ボルティモアはアメリカ最初のカトリックの司教座（1789）。
+- id: rel_virginia
+  name: ヴァージニア
+  select:
+    adm1: ["USA/Virginia"]
+  timeline:
+    - from: 1648
+      main: anglican
+      note: ジェームズタウン（1607）以来のイギリス国教会の植民地。タバコのプランテーションで、1700 年ごろから黒人奴隷が増えた。
+      source: "https://ja.wikipedia.org/wiki/バージニア植民地"
+    - from: 1790
+      main: evangelical
+      minor: anglican
+      note: 大覚醒の後、バプテスト・メソジストが広がり、黒人奴隷の多くもバプテスト・メソジストになった。ヴァージニア信教自由法（1786、ジェファソン）で国教会は公認を失った。
+    - from: 1850
+      main: evangelical
+- id: rel_virginia_west
+  name: ヴァージニア西部（シェナンドー渓谷・アパラチア）
+  select:
+    pieces: [USA-Alleghany_VA, USA-Bath_VA, USA-Bedford_VA, USA-Bland_VA, USA-Botetourt_VA, USA-Bristol_VA, USA-Buchanan_VA, USA-Buena_Vista_VA, USA-Carroll_VA, USA-Covington_VA, USA-Craig_VA, USA-Danville_VA, USA-Dickenson_VA, USA-Floyd_VA, USA-Franklin_VA, USA-Galax_VA, USA-Giles_VA, USA-Grayson_VA, USA-Henry_VA, USA-Highland_VA, USA-Lee_VA, USA-Lexington_VA, USA-Martinsville_VA, USA-Montgomery_VA, USA-Norton_VA, USA-Patrick_VA, USA-Pittsylvania_VA, USA-Pulaski_VA, USA-Radford_VA, USA-Roanoke_City_VA, USA-Roanoke_VA, USA-Rockbridge_VA, USA-Russell_VA, USA-Salem_VA, USA-Scott_VA, USA-Smyth_VA, USA-Tazewell_VA, USA-Washington_VA, USA-Wise_VA, USA-Wythe_VA]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1740
+      main: reformed
+      note: ペンシルヴェニアから南下したスコットランド系アイルランド人（長老派）とドイツ系（ルター派・改革派）の入植。
+    - from: 1790
+      main: evangelical
+- id: rel_west_virginia
+  name: ウェストヴァージニア
+  select:
+    adm1: ["USA/West Virginia"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ショーニー人などの狩り場。
+    - from: 1780
+      main: evangelical
+      note: アパラチア山地の入植者に、メソジスト・バプテストが広がった。
+- id: rel_north_carolina
+  name: ノースカロライナ
+  select:
+    adm1: ["USA/North Carolina"]
+  timeline:
+    - from: 1648
+      main: other
+      note: タスカローラ人・カトーバ人などの地。北東部のアルベマール湾にヴァージニアからの入植者が住み始めた（1650 年代）。
+    - from: 1720
+      main: anglican
+      note: タスカローラ戦争（1711–15）の後、入植が広がった。イギリス国教会が公認だったが、クエーカー・長老派・バプテストが多く、教会の少ない植民地だった。
+    - from: 1790
+      main: evangelical
+- id: rel_nc_cherokee
+  name: ノースカロライナ西部（チェロキーの地）
+  select:
+    pieces: [USA-Cherokee_NC, USA-Clay_NC, USA-Graham_NC, USA-Haywood_NC, USA-Jackson_NC, USA-Macon_NC, USA-Madison_NC, USA-Swain_NC, USA-Transylvania_NC]
+  timeline:
+    - from: 1648
+      main: other
+      note: チェロキー人の地（チェロキーの言語・信仰）。
+    - from: 1830
+      main: evangelical
+      note: チェロキーの土地の割譲（1819）と強制移住（1838「涙の旅路」）の後、白人の入植が進んだ。残ったチェロキー東部支族（クアラ）にもバプテスト・メソジストが広がった。
+- id: rel_south_carolina
+  name: サウスカロライナ
+  select:
+    adm1: ["USA/South Carolina"]
+  timeline:
+    - from: 1648
+      main: other
+      note: カトーバ人・ヤマシー人などの地。
+    - from: 1690
+      main: anglican
+      minor: other
+      note: チャールストン（1670）を中心とする米・インディゴのプランテーション植民地。1708 年には黒人奴隷が人口の過半数になった。アフリカから連れてこられた人々の多くは、18 世紀にはまだ故郷の信仰を保っていた。
+      source: "https://ja.wikipedia.org/wiki/カロライナ植民地"
+    - from: 1790
+      main: evangelical
+      note: 大覚醒の後、白人・黒人の多くがバプテスト・メソジストになった。
+- id: rel_sc_upcountry
+  name: サウスカロライナ北西部（アップカントリー）
+  select:
+    pieces: [USA-Abbeville_SC, USA-Anderson_SC, USA-Cherokee_SC, USA-Greenville_SC, USA-Greenwood_SC, USA-Laurens_SC, USA-Newberry_SC, USA-Oconee_SC, USA-Pickens_SC, USA-Saluda_SC, USA-Spartanburg_SC, USA-Union_SC]
+  timeline:
+    - from: 1648
+      main: other
+      note: チェロキー人・カトーバ人の地。
+    - from: 1770
+      main: reformed
+      note: スコットランド系アイルランド人（長老派）の入植。
+    - from: 1800
+      main: evangelical
+- id: rel_us_georgia
+  name: ジョージア（東部・海岸）
+  select:
+    adm1: ["USA/Georgia"]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリーク人（マスコギ）の地。
+    - from: 1750
+      main: anglican
+      note: オグルソープのジョージア植民地（1732、サヴァナ）。1751 年に奴隷制が認められ、プランテーションが広がった。
+    - from: 1790
+      main: evangelical
+- id: rel_georgia_coast_missions
+  name: ジョージアの海岸（グアレの伝道所）
+  select:
+    pieces: [USA-McIntosh_GA, USA-Glynn_GA, USA-Camden_GA, USA-Liberty_GA, USA-Chatham_GA, USA-Bryan_GA]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: スペイン領フロリダのフランシスコ会の伝道所（グアレ）。グアレ人の多くがカトリックに改宗していた。
+      source: "https://en.wikipedia.org/wiki/Spanish_missions_in_Georgia"
+    - from: 1690
+      main: other
+      note: カロライナのイギリス人とその同盟の先住民の攻撃で、伝道所はフロリダへ退いた。
+    - from: 1750
+      main: anglican
+    - from: 1790
+      main: evangelical
+- id: rel_georgia_interior
+  name: ジョージア西部・北部（クリーク・チェロキーの地）
+  select:
+    pieces: [USA-Baker_GA, USA-Banks_GA, USA-Barrow_GA, USA-Bartow_GA, USA-Bibb_GA, USA-Bleckley_GA, USA-Brooks_GA, USA-Butts_GA, USA-Calhoun_GA, USA-Carroll_GA, USA-Catoosa_GA, USA-Chattahoochee_GA, USA-Chattooga_GA, USA-Cherokee_GA, USA-Clarke_GA, USA-Clay_GA, USA-Clayton_GA, USA-Cobb_GA, USA-Colquitt_GA, USA-Cook_GA, USA-Coweta_GA, USA-Crawford_GA, USA-Crisp_GA, USA-Dade_GA, USA-Dawson_GA, USA-DeKalb_GA, USA-Decatur_GA, USA-Dooly_GA, USA-Dougherty_GA, USA-Douglas_GA, USA-Early_GA, USA-Fannin_GA, USA-Fayette_GA, USA-Floyd_GA, USA-Forsyth_GA, USA-Fulton_GA, USA-Gilmer_GA, USA-Gordon_GA, USA-Grady_GA, USA-Gwinnett_GA, USA-Habersham_GA, USA-Hall_GA, USA-Haralson_GA, USA-Harris_GA, USA-Heard_GA, USA-Henry_GA, USA-Houston_GA, USA-Jackson_GA, USA-Jasper_GA, USA-Jones_GA, USA-Lamar_GA, USA-Lee_GA, USA-Lumpkin_GA, USA-Macon_GA, USA-Marion_GA, USA-Meriwether_GA, USA-Miller_GA, USA-Mitchell_GA, USA-Monroe_GA, USA-Morgan_GA, USA-Murray_GA, USA-Muscogee_GA, USA-Newton_GA, USA-Oconee_GA, USA-Paulding_GA, USA-Peach_GA, USA-Pickens_GA, USA-Pike_GA, USA-Polk_GA, USA-Pulaski_GA, USA-Putnam_GA, USA-Quitman_GA, USA-Rabun_GA, USA-Randolph_GA, USA-Rockdale_GA, USA-Schley_GA, USA-Seminole_GA, USA-Spalding_GA, USA-Stewart_GA, USA-Sumter_GA, USA-Talbot_GA, USA-Taylor_GA, USA-Terrell_GA, USA-Thomas_GA, USA-Tift_GA, USA-Towns_GA, USA-Troup_GA, USA-Turner_GA, USA-Twiggs_GA, USA-Union_GA, USA-Upson_GA, USA-Walker_GA, USA-Walton_GA, USA-Webster_GA, USA-White_GA, USA-Whitfield_GA, USA-Wilcox_GA, USA-Worth_GA]
+  timeline:
+    - from: 1648
+      main: other
+      note: 西部はクリーク人、北部はチェロキー人の地。
+    - from: 1830
+      main: evangelical
+      note: クリーク人の土地の割譲（1821–27）とチェロキーの強制移住（1838）の後、白人と黒人奴隷の綿花地帯になった。
+- id: rel_florida_north
+  name: フロリダ北部（伝道所の地）
+  select:
+    pieces: [USA-Alachua_FL, USA-Baker_FL, USA-Bay_FL, USA-Bradford_FL, USA-Calhoun_FL, USA-Clay_FL, USA-Columbia_FL, USA-Dixie_FL, USA-Duval_FL, USA-Escambia_FL, USA-Flagler_FL, USA-Franklin_FL, USA-Gadsden_FL, USA-Gilchrist_FL, USA-Gulf_FL, USA-Hamilton_FL, USA-Holmes_FL, USA-Jackson_FL, USA-Jefferson_FL, USA-Lafayette_FL, USA-Leon_FL, USA-Levy_FL, USA-Liberty_FL, USA-Madison_FL, USA-Marion_FL, USA-Nassau_FL, USA-Okaloosa_FL, USA-Putnam_FL, USA-Santa_Rosa_FL, USA-St_Johns_FL, USA-Suwannee_FL, USA-Taylor_FL, USA-Union_FL, USA-Volusia_FL, USA-Wakulla_FL, USA-Walton_FL, USA-Washington_FL]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: スペイン領フロリダ。フランシスコ会の伝道所が、ティムクア人・アパラチー人の村々に置かれた（17 世紀半ばに約 2 万 5 千人の改宗者）。
+      source: "https://en.wikipedia.org/wiki/Spanish_missions_in_Florida"
+    - from: 1705
+      main: other
+      note: カロライナのイギリス人とクリーク人の襲撃（1702–06）で伝道所は壊滅し、住民は奴隷として売られるか逃げた。18 世紀半ばからクリーク人の一派がセミノールとして住みついた。
+    - from: 1830
+      main: evangelical
+      note: アメリカ合衆国への割譲（1819 年のアダムズ＝オニス条約、1821 年に引き渡し）の後、ジョージアなどから綿花の農園主が移り住んだ。
+- id: rel_st_augustine
+  name: セントオーガスティン・ペンサコーラ
+  select:
+    pieces: [USA-St_Johns_FL, USA-Escambia_FL]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: セントオーガスティン（1565）はスペインのフロリダ総督の所在地。ペンサコーラは 1698 年の建設。
+    - from: 1830
+      main: evangelical
+      minor: catholic
+- id: rel_florida_south
+  name: フロリダ南部
+  select:
+    pieces: [USA-Brevard_FL, USA-Broward_FL, USA-Charlotte_FL, USA-Citrus_FL, USA-Collier_FL, USA-DeSoto_FL, USA-Glades_FL, USA-Hardee_FL, USA-Hendry_FL, USA-Hernando_FL, USA-Highlands_FL, USA-Hillsborough_FL, USA-Indian_River_FL, USA-Lake_FL, USA-Lee_FL, USA-Manatee_FL, USA-Martin_FL, USA-Miami_Dade_FL, USA-Monroe_FL, USA-Okeechobee_FL, USA-Orange_FL, USA-Osceola_FL, USA-Palm_Beach_FL, USA-Pasco_FL, USA-Pinellas_FL, USA-Polk_FL, USA-Sarasota_FL, USA-Seminole_FL, USA-St_Lucie_FL, USA-Sumter_FL]
+  timeline:
+    - from: 1648
+      main: other
+      note: カルーサ人・テケスタ人の地（18 世紀に病気と奴隷狩りで消滅）。のちセミノールの地。
+    - from: 1880
+      main: evangelical
+      note: 第 3 次セミノール戦争（1855–58）の後、鉄道の開通（1890 年代）で入植が進んだ。
+- id: rel_miami
+  name: マイアミ（マイアミ＝デード）
+  select:
+    pieces: [USA-Miami_Dade_FL]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1900
+      main: evangelical
+    - from: 1960
+      main: catholic
+      minor: evangelical
+      note: キューバ革命（1959）の後、亡命したキューバ人が集まった。ハイチ人・中南米の移民も多い。ユダヤ人も多い（1970 年代に約 15%）。
+- id: rel_alabama_mississippi
+  name: アラバマ・ミシシッピ・テネシー・ケンタッキー・アーカンソー
+  select:
+    adm1: ["USA/Alabama", "USA/Mississippi", "USA/Tennessee", "USA/Kentucky", "USA/Arkansas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: チョクトー・チカソー・クリーク・チェロキー・ナチェズなどの地。
+    - from: 1820
+      main: evangelical
+      minor: other
+      note: 独立後、ケンタッキー（1792 州）・テネシー（1796 州）から入植が進み、米英戦争後の「綿花王国」の拡大で深南部に白人と黒人奴隷が移った。
+    - from: 1840
+      main: evangelical
+      note: インディアン強制移住法（1830）で「文明化五部族」がミシシッピ川の西へ移された。南部の白人・黒人はバプテスト・メソジストが多数（「バイブル・ベルト」）。
+      source: "https://ja.wikipedia.org/wiki/インディアン移住法"
+- id: rel_kentucky_tennessee_early
+  name: ケンタッキー・テネシー（独立期の入植）
+  select:
+    adm1: ["USA/Kentucky", "USA/Tennessee"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1790
+      main: evangelical
+      note: ダニエル・ブーンらの西部への入植。ケイン・リッジの野外集会（1801）など、第 2 次大覚醒の信仰復興がここで広がった。
+- id: rel_mobile
+  name: モービル（アラバマ南部）
+  select:
+    pieces: [USA-Mobile_AL, USA-Baldwin_AL]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1710
+      main: catholic
+      note: フランス領ルイジアナのモービル（1702）。1763 年にイギリス、1780 年にスペイン、1813 年にアメリカ合衆国の手に移った。
+    - from: 1830
+      main: evangelical
+      minor: catholic
+- id: rel_louisiana_north
+  name: ルイジアナ北部
+  select:
+    adm1: ["USA/Louisiana"]
+  timeline:
+    - from: 1648
+      main: other
+      note: カドー人・チョクトー人・ナチェズ人などの地。ナキトシュ（1714）にフランスの砦。
+    - from: 1810
+      main: evangelical
+      note: ルイジアナ購入（1803）の後、アメリカ人の入植が進んだ。
+- id: rel_louisiana_south
+  name: ルイジアナ南部（ニューオーリンズとアカディアナ）
+  select:
+    pieces: [USA-Orleans_LA, USA-Jefferson_LA, USA-Plaquemines_LA, USA-St_Bernard_LA, USA-St_Charles_LA, USA-St_James_LA, USA-St_John_the_Baptist_LA, USA-Ascension_LA, USA-Assumption_LA, USA-Iberville_LA, USA-West_Baton_Rouge_LA, USA-Pointe_Coupee_LA, USA-Lafourche_LA, USA-Terrebonne_LA, USA-St_Mary_LA, USA-Iberia_LA, USA-St_Martin_LA, USA-Lafayette_LA, USA-Vermilion_LA, USA-Acadia_LA, USA-St_Landry_LA, USA-Evangeline_LA, USA-Avoyelles_LA, USA-Jefferson_Davis_LA, USA-Calcasieu_LA, USA-Cameron_LA, USA-Allen_LA]
+  timeline:
+    - from: 1648
+      main: other
+      note: チティマチャ人・アタカパ人・ホウマ人などの地。
+    - from: 1730
+      main: catholic
+      note: フランス領ルイジアナ。ニューオーリンズの建設（1718）。1763 年にスペインに譲られ、1765 年からカナダを追われたアカディア人（ケイジャン）が西の大草原と湿地に住みついた。ニューオーリンズのアフリカ系の住民の信仰にはヴードゥーが重なる。
+      source: "https://ja.wikipedia.org/wiki/ケイジャン"
+    - from: 1850
+      main: catholic
+      minor: evangelical
+
+# ---- 北西部・中西部 ----
+- id: rel_ohio_indiana
+  name: オハイオ・インディアナ・アイオワ・ミズーリ・カンザス
+  select:
+    adm1: ["USA/Ohio", "USA/Indiana", "USA/Iowa", "USA/Missouri", "USA/Kansas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ショーニー・マイアミ・デラウェア（レナペ）・ワイアンドット・オセージ・カンザなどの地。
+    - from: 1810
+      main: evangelical
+      note: 北西部条例（1787）とフォールン・ティンバーズの戦い（1794）の後、オハイオ（1803 州）から入植が西へ進んだ。メソジストの巡回説教師が開拓地に教会を広げた。
+    - from: 1880
+      main: evangelical
+      minor: catholic
+      note: ドイツ系・アイルランド系の移民（シンシナティ・セントルイスなど）。
+- id: rel_ohio_valley_late
+  name: アイオワ・カンザス（入植の遅い地域）
+  select:
+    adm1: ["USA/Iowa", "USA/Kansas"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: evangelical
+      note: アイオワは 1846 年、カンザスは 1861 年に州になった（「流血のカンザス」1854–59）。
+- id: rel_missouri
+  name: ミズーリ
+  select:
+    adm1: ["USA/Missouri"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1770
+      main: other
+      minor: catholic
+      note: フランス人のセントルイス（1764）・サントジュヌヴィエーヴ。
+    - from: 1810
+      main: evangelical
+      minor: catholic
+      note: ルイジアナ購入の後、ケンタッキー・テネシーからの入植。ミズーリ協定（1820）で奴隷州として加わった。
+- id: rel_illinois_michigan
+  name: イリノイ・ミシガン
+  select:
+    adm1: ["USA/Illinois", "USA/Michigan"]
+  timeline:
+    - from: 1648
+      main: other
+      note: イリノイ連合・ポタワトミ・オジブワ・オタワ（オダワ）などの地。フランスのイエズス会の伝道所（カスカスキア、デトロイト 1701）。
+    - from: 1830
+      main: evangelical
+      minor: catholic
+      note: エリー運河（1825）の開通で、ニューイングランド・ニューヨークからの入植が進んだ。ブラック・ホーク戦争（1832）。
+    - from: 1920
+      main: catholic
+      minor: evangelical
+      note: シカゴ・デトロイトの工業化で、アイルランド・ドイツ・ポーランド・イタリアなどからのカトリックの移民が増え、最大の宗派になった。
+- id: rel_upper_peninsula
+  name: ミシガン州アッパー半島
+  select:
+    pieces: [USA-Michigan_Upper_Peninsula]
+  timeline:
+    - from: 1648
+      main: other
+      note: オジブワ人の地。スー・セント・マリーにイエズス会の伝道所（1668）。
+    - from: 1870
+      main: catholic
+      minor: lutheran
+      note: 銅山・鉄山の開発で、アイルランド系・フランス系カナダ人・コーンウォール人、のちにフィンランド人（ルター派）が移住した。
+- id: rel_wisconsin
+  name: ウィスコンシン
+  select:
+    adm1: ["USA/Wisconsin"]
+  timeline:
+    - from: 1648
+      main: other
+      note: オジブワ・メノミニー・ホーチャンク（ウィネベーゴ）などの地。
+    - from: 1850
+      main: catholic
+      minor: lutheran
+      note: ドイツ系（カトリックとルター派）・ノルウェー系の移民が多数を占めた。
+- id: rel_minnesota_dakotas
+  name: ミネソタ・ノースダコタ・サウスダコタ
+  select:
+    adm1: ["USA/Minnesota", "USA/North Dakota", "USA/South Dakota"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ダコタ・ラコタ（スー）・オジブワ・マンダン・ヒダーツァの地。
+    - from: 1880
+      main: lutheran
+      minor: catholic
+      note: ホームステッド法（1862）と鉄道の開通で、ノルウェー・スウェーデン・ドイツ（ロシアのドイツ人を含む）からの移民が入植した。ラコタの保留地ではカトリックと監督派の伝道が進んだ。
+- id: rel_minnesota_early
+  name: ミネソタ（1850 年代の入植）
+  select:
+    adm1: ["USA/Minnesota"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1860
+      main: lutheran
+      minor: catholic
+      note: 1858 年に州。ダコタ戦争（1862）の後、ダコタ人は州から追放された。
+- id: rel_nebraska
+  name: ネブラスカ
+  select:
+    adm1: ["USA/Nebraska"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ポーニー・オマハ・ポンカ・オトーなどの地。
+    - from: 1870
+      main: evangelical
+      minor: lutheran
+      note: 1867 年に州。
+
+# ---- 南西部 ----
+- id: rel_oklahoma
+  name: オクラホマ（西部）
+  select:
+    adm1: ["USA/Oklahoma"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ウィチタ・コマンチ・カイオワ・シャイアン・アラパホの地。
+    - from: 1890
+      main: evangelical
+      note: 1889 年のランドラン（土地の早い者勝ちの開放）で、白人の入植が一気に進んだ。1907 年に州。
+- id: rel_indian_territory
+  name: オクラホマ東部（インディアン準州の五部族）
+  select:
+    pieces: [USA-Adair_OK, USA-Cherokee_OK, USA-Craig_OK, USA-Delaware_OK, USA-Mayes_OK, USA-Nowata_OK, USA-Rogers_OK, USA-Sequoyah_OK, USA-Washington_OK, USA-Wagoner_OK, USA-Ottawa_OK, USA-Creek_OK, USA-Okfuskee_OK, USA-Okmulgee_OK, USA-McIntosh_OK, USA-Muskogee_OK, USA-Tulsa_OK, USA-Seminole_OK, USA-Hughes_OK, USA-Atoka_OK, USA-Bryan_OK, USA-Choctaw_OK, USA-Coal_OK, USA-Haskell_OK, USA-Latimer_OK, USA-Le_Flore_OK, USA-McCurtain_OK, USA-Pittsburg_OK, USA-Pushmataha_OK, USA-Carter_OK, USA-Garvin_OK, USA-Johnston_OK, USA-Love_OK, USA-Marshall_OK, USA-McClain_OK, USA-Murray_OK, USA-Pontotoc_OK, USA-Jefferson_OK, USA-Stephens_OK]
+  timeline:
+    - from: 1648
+      main: other
+      note: ウィチタ人・カドー人・オセージ人などの地。
+    - from: 1840
+      main: evangelical
+      minor: other
+      note: 強制移住させられたチェロキー・クリーク・チョクトー・チカソー・セミノール（「文明化五部族」）の国。バプテスト・メソジストの伝道が進み、多くが改宗した。
+      source: "https://ja.wikipedia.org/wiki/インディアン準州"
+    - from: 1890
+      main: evangelical
+- id: rel_texas
+  name: テキサス（西部・平原）
+  select:
+    adm1: ["USA/Texas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: アパッチ人、18 世紀からコマンチ人の地（コマンチェリア）。
+    - from: 1880
+      main: evangelical
+      note: レッドリヴァー戦争（1874–75）でコマンチ人・カイオワ人が保留地に移され、牧畜業者と綿花農家が入植した。
+    - from: 1990
+      main: evangelical
+      minor: catholic
+      note: メキシコ系の住民の増加。
+- id: rel_texas_east
+  name: テキサス東部・中部
+  select:
+    pieces: [USA-Anderson_TX, USA-Angelina_TX, USA-Aransas_TX, USA-Austin_TX, USA-Bastrop_TX, USA-Bee_TX, USA-Bell_TX, USA-Bosque_TX, USA-Bowie_TX, USA-Brazoria_TX, USA-Brazos_TX, USA-Burleson_TX, USA-Burnet_TX, USA-Caldwell_TX, USA-Calhoun_TX, USA-Camp_TX, USA-Cass_TX, USA-Chambers_TX, USA-Cherokee_TX, USA-Collin_TX, USA-Colorado_TX, USA-Cooke_TX, USA-Coryell_TX, USA-Dallas_TX, USA-DeWitt_TX, USA-Delta_TX, USA-Denton_TX, USA-Ellis_TX, USA-Falls_TX, USA-Fannin_TX, USA-Fayette_TX, USA-Fort_Bend_TX, USA-Franklin_TX, USA-Freestone_TX, USA-Galveston_TX, USA-Goliad_TX, USA-Gonzales_TX, USA-Grayson_TX, USA-Gregg_TX, USA-Grimes_TX, USA-Guadalupe_TX, USA-Hamilton_TX, USA-Hardin_TX, USA-Harris_TX, USA-Harrison_TX, USA-Hays_TX, USA-Henderson_TX, USA-Hill_TX, USA-Hood_TX, USA-Hopkins_TX, USA-Houston_TX, USA-Hunt_TX, USA-Jack_TX, USA-Jackson_TX, USA-Jasper_TX, USA-Jefferson_TX, USA-Jim_Wells_TX, USA-Johnson_TX, USA-Karnes_TX, USA-Kaufman_TX, USA-Lamar_TX, USA-Lavaca_TX, USA-Lee_TX, USA-Leon_TX, USA-Liberty_TX, USA-Limestone_TX, USA-Live_Oak_TX, USA-Madison_TX, USA-Marion_TX, USA-Matagorda_TX, USA-McLennan_TX, USA-Milam_TX, USA-Montague_TX, USA-Montgomery_TX, USA-Morris_TX, USA-Nacogdoches_TX, USA-Navarro_TX, USA-Newton_TX, USA-Nueces_TX, USA-Orange_TX, USA-Panola_TX, USA-Parker_TX, USA-Polk_TX, USA-Rains_TX, USA-Red_River_TX, USA-Refugio_TX, USA-Robertson_TX, USA-Rockwall_TX, USA-Rusk_TX, USA-Sabine_TX, USA-San_Augustine_TX, USA-San_Jacinto_TX, USA-San_Patricio_TX, USA-Shelby_TX, USA-Smith_TX, USA-Somervell_TX, USA-Tarrant_TX, USA-Titus_TX, USA-Travis_TX, USA-Trinity_TX, USA-Tyler_TX, USA-Upshur_TX, USA-Van_Zandt_TX, USA-Victoria_TX, USA-Walker_TX, USA-Waller_TX, USA-Washington_TX, USA-Wharton_TX, USA-Williamson_TX, USA-Wilson_TX, USA-Wise_TX, USA-Wood_TX]
+  timeline:
+    - from: 1648
+      main: other
+      note: 東部はカドー人（ハシナイ）、中部・海岸はトンカワ人・カランカワ人などの地。スペインはナコドチェス（1716）などに伝道所を置いた。
+    - from: 1840
+      main: evangelical
+      note: メキシコの時代（1821–35）にオースティンの植民地などアメリカ人の入植が進み（入植者は形式上カトリックへの改宗が条件だった）、テキサス共和国（1836）・アメリカ合衆国への併合（1845）を経て、南部の綿花地帯になった。
+    - from: 1990
+      main: evangelical
+      minor: catholic
+- id: rel_texas_german
+  name: テキサス・ヒルカントリー（ドイツ系）
+  select:
+    pieces: [USA-Gillespie_TX, USA-Kendall_TX, USA-Comal_TX]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: lutheran
+      minor: catholic
+      note: アデルスフェラインのドイツ人移民がニューブラウンフェルズ（1845）・フレデリックスバーグ（1846）を建てた。
+- id: rel_texas_hispanic
+  name: テキサス南部（リオグランデ川下流）
+  select:
+    pieces: [USA-Cameron_TX, USA-Hidalgo_TX, USA-Starr_TX, USA-Zapata_TX, USA-Webb_TX, USA-Jim_Hogg_TX, USA-Brooks_TX, USA-Kenedy_TX, USA-Willacy_TX, USA-Duval_TX, USA-Jim_Wells_TX]
+  timeline:
+    - from: 1648
+      main: other
+      note: コアウイルテカ系の諸集団の地。
+    - from: 1760
+      main: catholic
+      note: エスカンドンのヌエボ・サンタンデール植民地（1749–、ラレド 1755）。テハーノ（テキサスのメキシコ系）の牧場の地。
+- id: rel_texas_border
+  name: テキサスの国境地帯・トランスペコス
+  select:
+    pieces: [USA-Maverick_TX, USA-Dimmit_TX, USA-Zavala_TX, USA-La_Salle_TX, USA-Val_Verde_TX, USA-Kinney_TX, USA-Frio_TX, USA-Hudspeth_TX, USA-Presidio_TX, USA-Culberson_TX, USA-Pecos_TX, USA-Reeves_TX, USA-Kleberg_TX, USA-Nueces_TX, USA-San_Patricio_TX, USA-Bee_TX, USA-Atascosa_TX, USA-Uvalde_TX]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1890
+      main: catholic
+      minor: evangelical
+      note: 鉄道の開通とメキシコ革命（1910–20）期の移住で、メキシコ系の住民が多数になった。
+- id: rel_bexar
+  name: サンアントニオ（ベア郡）
+  select:
+    pieces: [USA-Bexar_TX]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1720
+      main: catholic
+      note: サンアントニオの伝道所（アラモ〈サン・アントニオ・デ・バレロ〉1718 など）と、スペイン領テキサスの首府（1772–）。
+    - from: 1850
+      main: catholic
+      minor: evangelical
+- id: rel_el_paso
+  name: エルパソ
+  select:
+    pieces: [USA-El_Paso_TX]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1690
+      main: catholic
+      note: プエブロの反乱（1680）で逃れたスペイン人とティワ人（イスレタ、1682）がリオグランデ川の両岸に住みついた（エル・パソ・デル・ノルテ）。
+- id: rel_new_mexico
+  name: ニューメキシコ（東部・南部）
+  select:
+    adm1: ["USA/New Mexico"]
+  timeline:
+    - from: 1648
+      main: other
+      note: アパッチ人（メスカレロ・ヒカリヤ）、東部はコマンチ人の地。
+    - from: 1880
+      main: catholic
+      minor: evangelical
+      note: 鉄道の開通（1879–81）で、アメリカ人の牧畜業者・鉱山労働者が入植した。
+- id: rel_little_texas
+  name: ニューメキシコ東部（「リトル・テキサス」）
+  select:
+    pieces: [USA-Curry_NM, USA-Roosevelt_NM, USA-Lea_NM, USA-Eddy_NM, USA-Chaves_NM, USA-Quay_NM]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1900
+      main: evangelical
+      minor: catholic
+      note: テキサスからの牧場主・農民（南部のバプテスト）が入植した。
+- id: rel_rio_grande_nm
+  name: ニューメキシコ北部（リオグランデ川上流）
+  select:
+    pieces: [USA-Rio_Arriba_NM, USA-Taos_NM, USA-Santa_Fe_NM, USA-Sandoval_NM, USA-Bernalillo_NM, USA-Valencia_NM, USA-Socorro_NM, USA-Mora_NM, USA-San_Miguel_NM, USA-Guadalupe_NM, USA-Los_Alamos_NM, USA-Torrance_NM, USA-Cibola_NM, USA-Colfax_NM, USA-Union_NM, USA-Harding_NM, USA-De_Baca_NM]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: スペインのヌエボ・メヒコ（1598–、サンタフェ 1610）。フランシスコ会の伝道所がプエブロの村々に置かれたが、プエブロの人々はカチナの祭祀を保った。
+      source: "https://ja.wikipedia.org/wiki/プエブロの反乱"
+    - from: 1680
+      main: other
+      note: プエブロの反乱（1680）でスペイン人は追われ、教会は壊された。
+    - from: 1693
+      main: catholic
+      minor: other
+      note: ディエゴ・デ・バルガスの再征服（1692–93）。プエブロではカトリックと伝統の祭祀が並んで行われるようになった。
+- id: rel_navajo
+  name: ナヴァホの地（ニューメキシコ北西部・アリゾナ北東部）
+  select:
+    pieces: [USA-San_Juan_NM, USA-McKinley_NM, USA-Apache_AZ, USA-Navajo_AZ]
+  timeline:
+    - from: 1648
+      main: other
+      note: ナヴァホ人（ディネ）とホピ人の地。ナヴァホは「ロング・ウォーク」（1864）でボスケ・レドンドへ強制移住させられたが、1868 年の条約で故郷に戻った。
+    - from: 1960
+      main: other
+      minor: evangelical
+      note: キリスト教の諸派（カトリック・福音派・モルモン教）と、ペヨーテを用いるネイティブ・アメリカン・チャーチが広がった。
+- id: rel_arizona
+  name: アリゾナ
+  select:
+    adm1: ["USA/Arizona"]
+  timeline:
+    - from: 1648
+      main: other
+      note: オーダム（ピマ）・アパッチ・ヤヴァパイ・ユマなどの地。
+    - from: 1880
+      main: evangelical
+      minor: catholic
+      note: アメリカ＝メキシコ戦争（1848）とガズデン購入（1853）でアメリカ領。アパッチ戦争の終結（1886、ジェロニモの降伏）と鉄道の開通で入植が進んだ。東部にはモルモン教徒の町も多い。
+    - from: 1990
+      main: catholic
+      minor: evangelical
+      note: メキシコ系の住民の増加。
+- id: rel_pimeria_alta
+  name: アリゾナ南部（ピメリア・アルタ）
+  select:
+    pieces: [USA-Pima_AZ, USA-Santa_Cruz_AZ]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1710
+      main: other
+      minor: catholic
+      note: イエズス会のキノ神父の伝道所（サン・ザビエル・デル・バク 1692/1700、トゥマカコリ）。トゥバク（1752）・トゥーソン（1775）にスペインの砦。
+    - from: 1860
+      main: catholic
+      minor: other
+
+# ---- 山岳部・太平洋岸 ----
+- id: rel_utah
+  name: ユタ
+  select:
+    adm1: ["USA/Utah"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ユート・パイユート・ゴシュートの地。
+    - from: 1850
+      main: lds
+      note: ブリガム・ヤングの率いるモルモン教徒がソルトレーク盆地に移住した（1847）。モルモン教会（末日聖徒イエス・キリスト教会）の神権政治と一夫多妻制の問題で、州になったのは 1896 年。
+      source: "https://ja.wikipedia.org/wiki/末日聖徒イエス・キリスト教会"
+- id: rel_idaho
+  name: アイダホ
+  select:
+    adm1: ["USA/Idaho"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ショショーニ・バノック・ネズパース（ニミイプー）の地。
+    - from: 1880
+      main: lds
+      minor: evangelical
+      note: 南東部にモルモン教徒が入植した。北部は鉱山の町（福音派・カトリック）。
+- id: rel_mountain_west
+  name: モンタナ・ワイオミング・コロラド・ネヴァダ
+  select:
+    adm1: ["USA/Montana", "USA/Wyoming", "USA/Colorado", "USA/Nevada"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ショショーニ・ユート・クロウ・ブラックフット・シャイアン・アラパホ・パイユートなどの地。
+    - from: 1870
+      main: evangelical
+      minor: catholic
+      note: パイクスピークのゴールドラッシュ（1858–59）・ネヴァダのコムストック銀山（1859）・モンタナの金銀・銅山で入植が進んだ。
+- id: rel_montana
+  name: モンタナ
+  select:
+    adm1: ["USA/Montana"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: catholic
+      minor: evangelical
+      note: ビュートの銅山のアイルランド系、イエズス会の伝道（セント・メアリー 1841）。
+- id: rel_nevada
+  name: ネヴァダ
+  select:
+    adm1: ["USA/Nevada"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: evangelical
+      minor: catholic
+    - from: 1980
+      main: catholic
+      minor: evangelical
+      note: ラスヴェガスの成長とメキシコ系の住民の増加。
+- id: rel_san_luis_valley
+  name: コロラド南部（サンルイス・バレー）
+  select:
+    pieces: [USA-Conejos_CO, USA-Costilla_CO, USA-Alamosa_CO, USA-Rio_Grande_CO, USA-Saguache_CO, USA-Huerfano_CO, USA-Las_Animas_CO]
+  timeline:
+    - from: 1648
+      main: other
+      note: ユート人の地。
+    - from: 1855
+      main: catholic
+      note: ニューメキシコのイスパノがサンルイス（1851）などを建てた。
+- id: rel_california
+  name: カリフォルニア（内陸・北部）
+  select:
+    adm1: ["USA/California"]
+  timeline:
+    - from: 1648
+      main: other
+      note: 小さな集団に分かれた多くの先住民（ヨクーツ・ミウォク・ポモ・マイドゥなど）の地。
+    - from: 1850
+      main: evangelical
+      minor: catholic
+      note: ゴールドラッシュ（1848–）で人口が急増し、1850 年に州になった。先住民は殺害・病気・飢えで激減した（1846 年の約 15 万人から 1870 年には約 3 万人）。
+      source: "https://en.wikipedia.org/wiki/California_genocide"
+    - from: 1970
+      main: catholic
+      minor: evangelical
+      note: メキシコ系・中米系・フィリピン系の移民で、カトリックが最大の宗派になった。
+- id: rel_alta_california
+  name: カリフォルニアの海岸（アルタ・カリフォルニアの伝道所）
+  select:
+    pieces: [USA-San_Diego_CA, USA-Orange_CA, USA-Los_Angeles_CA, USA-Ventura_CA, USA-Santa_Barbara_CA, USA-San_Luis_Obispo_CA, USA-Monterey_CA, USA-San_Benito_CA, USA-Santa_Cruz_CA, USA-Santa_Clara_CA, USA-San_Mateo_CA, USA-San_Francisco_CA, USA-Alameda_CA, USA-Contra_Costa_CA, USA-Marin_CA, USA-Sonoma_CA, USA-Napa_CA]
+  timeline:
+    - from: 1648
+      main: other
+      note: チュマシュ・トングヴァ・オローニ・クメヤーイなどの地。
+    - from: 1780
+      main: catholic
+      minor: other
+      note: フニペロ・セラらフランシスコ会の 21 の伝道所（サンディエゴ 1769 〜ソノマ 1823）。伝道所に集められた先住民は改宗させられ、病気で激減した。
+      source: "https://ja.wikipedia.org/wiki/カリフォルニアの伝道所"
+    - from: 1810
+      main: catholic
+    - from: 1850
+      main: evangelical
+      minor: catholic
+      note: ゴールドラッシュの後、アメリカ人が多数になった（南部の牧場地帯は 1870 年代まで、カリフォルニオ〈メキシコ系〉の住民が多かった）。
+    - from: 1970
+      main: catholic
+      minor: evangelical
+- id: rel_pacific_northwest
+  name: オレゴン・ワシントン
+  select:
+    adm1: ["USA/Oregon", "USA/Washington"]
+  timeline:
+    - from: 1648
+      main: other
+      note: チヌーク・サリシュ・ネズパース・ヤキマなどの地。
+    - from: 1860
+      main: evangelical
+      minor: catholic
+      note: オレゴン・トレイルによる入植（1840 年代〜）。メソジストの伝道（1834）、カトリックの伝道。オレゴン協定（1846）で北緯 49 度が英米の境になった。
+- id: rel_alaska
+  name: アラスカ
+  select:
+    adm1: ["USA/Alaska"]
+  timeline:
+    - from: 1648
+      main: other
+      note: イヌピアット・ユピック・アレウト・アサバスカ系（デナイナなど）・トリンギットの地。
+    - from: 1800
+      main: other
+      minor: orthodox
+      note: ロシア領アメリカ（露米会社 1799）。アリューシャン列島・コディアック島の住民の多くが正教徒になった（コディアックの伝道団 1794）。
+      source: "https://en.wikipedia.org/wiki/Russian_Orthodox_Church_in_America"
+    - from: 1900
+      main: evangelical
+      minor: orthodox
+      note: アメリカ合衆国による購入（1867）。クロンダイク・ノームのゴールドラッシュ（1896–1900）で白人が増えた。長老派・モラヴィア派・メソジストの伝道。
+    - from: 1950
+      main: evangelical
+      minor: catholic
+- id: rel_hawaii
+  name: ハワイ
+  select:
+    adm1: ["USA/Hawaii"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ハワイの伝統的な宗教（神々〈アクア〉とカプ〈タブー〉の制度）。
+    - from: 1830
+      main: reformed
+      note: カメハメハ 2 世のカプの廃止（1819）の後、アメリカの会衆派の宣教師（1820–）が伝道し、カアフマヌ摂政らが改宗した。
+      source: "https://ja.wikipedia.org/wiki/ハワイ王国"
+    - from: 1860
+      main: reformed
+      minor: catholic
+    - from: 1900
+      main: shinbutsu
+      minor: catholic
+      note: サトウキビ農園の労働者として日本人が大量に移住し（1885 年の官約移民〜）、1900〜20 年代には人口の約 4 割が日系人だった。浄土真宗の本願寺派などの寺が各地に建てられた。カトリックはポルトガル系・フィリピン系など。
+      source: "https://ja.wikipedia.org/wiki/日系アメリカ人"
+    - from: 1960
+      main: catholic
+      minor: shinbutsu
+      note: 日系人の 2 世・3 世の間でキリスト教や無宗教が増えた。
+- id: rel_puerto_rico
+  name: プエルトリコ
+  select:
+    adm1: ["USA/Puerto Rico"]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: スペインの植民地（サンフアン 1521）。
+    - from: 1980
+      main: catholic
+      minor: evangelical
+      note: 米西戦争（1898）でアメリカ領になった後、プロテスタントの伝道が進み、20 世紀後半にペンテコステ派が広がった。
+- id: rel_usvi
+  name: アメリカ領ヴァージン諸島（旧デンマーク領西インド諸島）
+  select:
+    adm1: ["USA/United States Virgin Islands"]
+  timeline:
+    - from: 1672
+      main: lutheran
+      note: デンマーク西インド会社のセント・トーマス島（1672）。デンマークの国教会（ルター派）。
+    - from: 1760
+      main: evangelical
+      minor: anglican
+      note: モラヴィア兄弟団の伝道（1732–）で、アフリカ系の奴隷の多くが改宗した。セント・クロイ島（1733 年にフランスから購入）はイギリス系の農園主が多く、国教会も広がった。
+      source: "https://en.wikipedia.org/wiki/Moravian_Church_in_the_Virgin_Islands"
+    - from: 1920
+      main: evangelical
+      minor: catholic
+      note: 1917 年にアメリカ合衆国が購入した。
+
+# ================================================================
+# カナダ・サンピエール島・バミューダ
+# ================================================================
+- id: rel_canada_base
+  name: カナダの先住民の地
+  select:
+    iso: [CAN]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリー・オジブワ・イヌ（モンタニェ）・デネ（アサバスカ系）・イヌイット・北西海岸の諸民族などの伝統的な信仰。
+- id: rel_laurentian
+  name: セントローレンス川流域（ケベック・トロワリヴィエール・モントリオール）
+  select:
+    pieces: [CAN-Capitale_Nationale, CAN-Mauricie, CAN-Montreal]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ヌーヴェル・フランス（ケベック 1608、トロワリヴィエール 1634、ヴィル・マリー〈モントリオール〉1642）。イエズス会・ウルスラ会の伝道と教育。
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1830
+      main: catholic
+      minor: anglican
+      note: モントリオールはイギリス系・アイルランド系の住民が増え、1830〜60 年代には英語系が多数だった（プロテスタントは国教会・長老派）。
+    - from: 1880
+      main: catholic
+- id: rel_quebec_seigneuries
+  name: ケベック南部（領主制の農村）
+  select:
+    pieces: [CAN-Monteregie, CAN-Centre_du_Quebec, CAN-Chaudiere_Appalaches, CAN-Bas_Saint_Laurent, CAN-Laval, CAN-Lanaudiere, CAN-Laurentides, CAN-Gaspesie_Iles_de_la_Madeleine, CAN-Gaspesie_Iles_de_la_Madeleine_Magdalen_Islands]
+  timeline:
+    - from: 1648
+      main: other
+      note: アベナキ・イヌ・アルゴンキンなどの地。
+    - from: 1700
+      main: catholic
+      note: セントローレンス川の両岸に領主制（セニョリー）の農村が広がった。1760 年にイギリスが占領した後も、ケベック法（1774）でカトリックの信仰が認められた。
+- id: rel_eastern_townships
+  name: ケベックのイースタン・タウンシップス（エストリ）・ウタウエ
+  select:
+    pieces: [CAN-Estrie, CAN-Outaouais]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1800
+      main: anglican
+      minor: evangelical
+      note: アメリカ独立戦争後、ロイヤリスト（王党派）とニューイングランド人が入植した。ウタウエ（オタワ川の北岸）は 1820 年代からの木材業の地。
+    - from: 1880
+      main: catholic
+      minor: anglican
+      note: フランス系カナダ人が多数になった。
+- id: rel_quebec_north
+  name: ケベック北部（サグネ・アビティビ・コート・ノール）
+  select:
+    pieces: [CAN-Saguenay_Lac_Saint_Jean, CAN-Abitibi_Temiscamingue, CAN-Cote_Nord, CAN-Cote_Nord_Anticosti]
+  timeline:
+    - from: 1648
+      main: other
+      note: イヌ（モンタニェ）・アルゴンキンの地。タドゥサックに毛皮交易所とイエズス会の伝道所。
+    - from: 1870
+      main: catholic
+      note: サグネ（1838–）、アビティビ（1910 年代の開拓）など、カトリック教会が勧めた「植民（コロニザシオン）」の地。イヌの人々もカトリックになった。
+- id: rel_quebec_far_north
+  name: ケベック・ラブラドルの極北（クリー・イヌイット）
+  select:
+    pieces: [CAN-Nord_du_Quebec, CAN-Nord_du_Quebec_Ungava, CAN-Abitibi_Temiscamingue_North, CAN-Cote_Nord_Labrador_Coast, CAN-Newfoundland_and_Labrador_Labrador]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリー・イヌ・イヌイットの地。
+    - from: 1900
+      main: anglican
+      note: ハドソン湾会社の交易所を拠点に、イギリス国教会の宣教師がクリー・イヌイットに伝道した。ラブラドルの海岸にはモラヴィア兄弟団の伝道所（ナイン 1771 など）。
+- id: rel_acadia
+  name: アカディア（ノヴァスコシアのファンディ湾岸）
+  select:
+    pieces: [CAN-Annapolis_Valley]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: アカディア（ポール・ロワイヤル 1605）。フランス系のアカディア人と、早くからカトリックになったミクマク人。
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1760
+      main: reformed
+      minor: anglican
+      note: アカディア人の追放（1755–64）の後、ニューイングランドからの入植者（会衆派）とロイヤリストが住んだ。
+- id: rel_nova_scotia
+  name: ノヴァスコシア（ハリファクスと東部）
+  select:
+    pieces: [CAN-Halifax, CAN-North_Shore_Cote_nord, CAN-Southern_Sud]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ミクマク人の地（カトリック）。
+    - from: 1760
+      main: anglican
+      minor: reformed
+      note: ハリファクス（1749）。スコットランド系（長老派、ピクトゥー 1773）・ドイツ系（ルネンバーグ 1753）・ロイヤリスト。
+- id: rel_cape_breton
+  name: ケープ・ブレトン島
+  select:
+    pieces: [CAN-Cape_Breton]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ミクマク人（カトリック）。1713 年からフランスのイル・ロワイヤル（ルイブール要塞）。
+    - from: 1800
+      main: catholic
+      minor: reformed
+      note: スコットランド高地の移民（カトリックと長老派、ゲール語）。
+- id: rel_new_brunswick
+  name: ニューブランズウィック・プリンスエドワード島
+  select:
+    adm1: ["CAN/New Brunswick", "CAN/Prince Edward Island"]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ミクマク人・マリシート人（カトリック）とアカディア人。
+    - from: 1790
+      main: anglican
+      minor: catholic
+      note: ロイヤリストの入植（1783–、ニューブランズウィック植民地 1784）。
+    - from: 1880
+      main: catholic
+      minor: evangelical
+      note: アカディア人（北部・東部）とアイルランド系のカトリックが最大の宗派。プロテスタントはバプテストなど。
+- id: rel_newfoundland
+  name: ニューファンドランド
+  select:
+    pieces: [CAN-Newfoundland_and_Labrador]
+  timeline:
+    - from: 1648
+      main: anglican
+      note: イングランドの漁業の拠点（アヴァロン半島）。先住民のベオスック人は 1829 年に絶えた。プレザンス（プラセンティア）は 1662–1713 年にフランスの拠点。
+    - from: 1800
+      main: anglican
+      minor: catholic
+      note: アイルランドからの移民で、カトリックが住民の約 4 割になった。
+- id: rel_ontario_south
+  name: オンタリオ南部
+  select:
+    pieces: [CAN-Kingston_Pembroke, CAN-Hamilton_Niagara_Peninsula, CAN-Toronto, CAN-London, CAN-Windsor_Sarnia, CAN-Stratford_Bruce_Peninsula, CAN-Kitchener_Waterloo_Barrie, CAN-Muskoka_Kawarthas]
+  timeline:
+    - from: 1648
+      main: other
+      minor: catholic
+      note: ヒューロン（ウェンダット）連合の地。イエズス会のサント・マリー伝道所（1639–49）があったが、1649 年にイロコイの攻撃で滅んだ。
+      source: "https://ja.wikipedia.org/wiki/ヒューロン族"
+    - from: 1650
+      main: other
+    - from: 1790
+      main: anglican
+      note: ロイヤリストの入植（アッパー・カナダ 1791）。
+    - from: 1840
+      main: evangelical
+      minor: anglican
+      note: メソジストが最大の宗派になった（1871 年の国勢調査で、メソジスト 28%・長老派 22%・国教会 20%・カトリック 17%）。1925 年にメソジスト・長老派・会衆派が合同してカナダ合同教会になった。
+    - from: 1970
+      main: catholic
+      minor: evangelical
+      note: 第二次世界大戦後のイタリア・ポルトガルなどからの移民で、カトリックが最大の宗派になった。トロントは 1990 年代から世界の宗教の集まる都市になった。
+- id: rel_ottawa
+  name: オタワ
+  select:
+    pieces: [CAN-Ottawa]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1830
+      main: catholic
+      minor: anglican
+      note: リドー運河（1832）の建設でバイタウン（1855 年からオタワ）が生まれた。フランス系とアイルランド系のカトリックが多い。
+- id: rel_ontario_north
+  name: オンタリオ北部
+  select:
+    pieces: [CAN-Northeast_Nord_est_James_Bay_Slope, CAN-Northwest_Nord_ouest, CAN-Northwest_Nord_ouest_Rainy_River, CAN-Northwest_Nord_ouest_Hudson_Slope, CAN-Northeast_Nord_est_Far_North, CAN-Northwest_Nord_ouest_Far_North]
+  timeline:
+    - from: 1648
+      main: other
+      note: オジブワ・クリーの地。
+    - from: 1900
+      main: anglican
+      minor: catholic
+      note: 鉄道（カナダ太平洋鉄道 1885）と鉱山の開発。北部のクリーにはイギリス国教会の伝道。
+- id: rel_ontario_northeast
+  name: オンタリオ北東部（サドベリーなど）
+  select:
+    pieces: [CAN-Northeast_Nord_est]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1900
+      main: catholic
+      minor: anglican
+      note: サドベリーのニッケル鉱山などに、フランス系カナダ人が移り住んだ（フランコ・オンタリアン）。
+- id: rel_red_river
+  name: レッドリヴァー（マニトバ 1870 年の州）
+  select:
+    pieces: [CAN-Manitoba_1870_Province]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1820
+      main: catholic
+      minor: anglican
+      note: セルカーク卿のレッドリヴァー植民地（1812）。フランス語を話すメティ（先住民とヨーロッパ人の子孫、カトリック）が多数だった。
+      source: "https://ja.wikipedia.org/wiki/メティ"
+    - from: 1880
+      main: evangelical
+      minor: catholic
+      note: レッドリヴァーの反乱（1869–70、ルイ・リエル）の後、オンタリオからのプロテスタントの入植が進んだ。
+- id: rel_prairies
+  name: カナダの平原（マニトバ・サスカチュワン・アルバータ）
+  select:
+    pieces: [CAN-Manitoba, CAN-Manitoba_1881_Extension, CAN-Saskatchewan, CAN-Alberta]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリー・オジブワ・アシニボイン・ブラックフット連合の地（ルパートランド）。
+    - from: 1900
+      main: evangelical
+      minor: catholic
+      note: カナダ太平洋鉄道（1885）とホームステッドの開放で、ウクライナ・ドイツ・スカンディナヴィア・イギリスからの移民が入植した。ウクライナ系の多くはユニエイト（東方典礼カトリック、カトリックに含める）と正教徒。
+- id: rel_prairies_north
+  name: カナダの平原の北部・北西準州
+  select:
+    pieces: [CAN-Saskatchewan_North, CAN-Alberta_North, CAN-Northwest_Territories]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリー・デネ（チペワイアンなど）の地。
+    - from: 1900
+      main: catholic
+      minor: anglican
+      note: オブレート会のカトリックの伝道がデネ・メティに広がった。
+- id: rel_british_columbia
+  name: ブリティッシュコロンビア
+  select:
+    adm1: ["CAN/British Columbia"]
+  timeline:
+    - from: 1648
+      main: other
+      note: 北西海岸の諸民族（ハイダ・クワクワカワクゥ・サリシュなど）のポトラッチとトーテムポールの文化。
+    - from: 1870
+      main: anglican
+      minor: evangelical
+      note: フレーザー川のゴールドラッシュ（1858）。1871 年にカナダに加わった。ポトラッチは 1884–1951 年に法律で禁止された。
+- id: rel_yukon_arctic
+  name: ユーコン・カナダの北極圏（ヌナヴト）
+  select:
+    pieces: [CAN-Yukon, CAN-Nunavut, CAN-Nunavut_Arctic_Islands, CAN-Northwest_Territories_Arctic_Islands]
+  timeline:
+    - from: 1648
+      main: other
+      note: デネ（アサバスカ系）・イヌイットの地。
+    - from: 1910
+      main: anglican
+      note: クロンダイクのゴールドラッシュ（1896–99）。イヌイットの多くは国教会の伝道で改宗した。
+- id: rel_spm
+  name: サンピエール島・ミクロン島
+  select:
+    iso: [SPM]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: フランスの漁民の島（バスク・ブルターニュ・ノルマンディー出身）。1763 年からフランス領として確定。
+- id: rel_bermuda
+  name: バミューダ
+  select:
+    iso: [BMU]
+  timeline:
+    - from: 1648
+      main: anglican
+      note: 1609 年の難破から始まるイギリスの植民地。アフリカ系の住民も国教会・メソジストが多い。
+
+# ================================================================
+# メキシコ
+# ================================================================
+- id: rel_mexico
+  name: メキシコ中部・南部
+  select:
+    iso: [MEX]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ヌエバ・エスパーニャ副王領。16 世紀のフランシスコ会・ドミニコ会・アウグスティノ会の伝道で、先住民の多くがカトリックになった。グアダルーペの聖母の信仰（1531 年の出現の伝承）が広まり、各地の村の守護聖人の祭りには先住民の信仰が重なる。
+      source: "https://ja.wikipedia.org/wiki/グアダルーペの聖母"
+- id: rel_mexico_north
+  name: メキシコ北部（ソノラ・チワワ）
+  select:
+    adm1: ["MEX/Sonora", "MEX/Chihuahua"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: イエズス会の伝道所がヤキ・マヨ・オパタ・ピマ・タラウマラの村々に広がっていた。北部にはアパッチ人の地が残った。
+    - from: 1780
+      main: catholic
+- id: rel_mexico_northeast
+  name: メキシコ北東部（コアウイラ・タマウリパス）
+  select:
+    adm1: ["MEX/Coahuila de Zaragoza", "MEX/Tamaulipas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: コアウイルテカ系の諸集団、のちリパン・アパッチの地。
+    - from: 1760
+      main: catholic
+      note: コアウイラ（モンクローバ 1689）、ヌエボ・サンタンデール（タマウリパス、1749–）の植民。
+- id: rel_baja_california
+  name: バハ・カリフォルニア
+  select:
+    adm1: ["MEX/Baja California", "MEX/Baja California Sur"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ペリクー・グアイクラ・コチミーなどの地。
+    - from: 1730
+      main: catholic
+      minor: other
+      note: イエズス会のロレト伝道所（1697）から伝道所が北へ広がった。先住民は病気で激減した。
+    - from: 1800
+      main: catholic
+- id: rel_chiapas
+  name: チアパス
+  select:
+    adm1: ["MEX/Chiapas"]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: グアテマラ総督領の一部（1824 年にメキシコに加わった）。マヤ系のツォツィル人・ツェルタル人の村では、カトリックとマヤの伝統が重なる。
+    - from: 1990
+      main: catholic
+      minor: evangelical
+      note: 1970 年代から福音派・ペンテコステ派などのプロテスタントが急速に広がり、2000 年には住民の 2 割を超えた（メキシコで最も高い）。チャムラなどでは改宗者が村から追放される衝突も起きた。
+      source: "https://en.wikipedia.org/wiki/Protestantism_in_Mexico"
+- id: rel_mexico_southeast
+  name: タバスコ・カンペチェ・キンタナロー
+  select:
+    adm1: ["MEX/Tabasco", "MEX/Campeche", "MEX/Quintana Roo"]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: キンタナローの東部では、カスタ戦争（1847–1901）のマヤの反乱者が「話す十字架」（チャン・サンタ・クルス）の信仰を中心に独自の社会を作った（カトリックとマヤの信仰の習合）。
+      source: "https://ja.wikipedia.org/wiki/カスタ戦争"
+    - from: 2000
+      main: catholic
+      minor: evangelical
+      note: プロテスタントが住民の 2 割前後になった。
+
+# ================================================================
+# 中米
+# ================================================================
+- id: rel_central_america
+  name: 中米（グアテマラ〜パナマ）
+  select:
+    iso: [GTM, HND, SLV, NIC, CRI, PAN]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: グアテマラ総督領（グアテマラ・エルサルバドル・ホンジュラス・ニカラグア・コスタリカ）と、ペルー副王領のパナマ。マヤ系の村々では、カトリックの聖人の信仰と、マヤの暦や祈祷師（アフキフ）の伝統が重なる。
+    - from: 2010
+      main: catholic
+      minor: evangelical
+      note: コスタリカ・パナマでも福音派が住民の 2 割を超えた。
+- id: rel_guatemala
+  name: グアテマラ・ホンジュラス・エルサルバドル・ニカラグア
+  select:
+    iso: [GTM, HND, SLV, NIC]
+  timeline:
+    - from: 1648
+      main: catholic
+    - from: 1990
+      main: catholic
+      minor: evangelical
+      note: 1970 年代から福音派・ペンテコステ派が急速に広がった。グアテマラではリオス・モント政権（1982–83）のもとで改宗が進み、2010 年代にはプロテスタントが人口の約 4 割になった。ホンジュラス・エルサルバドル・ニカラグアでも 3〜4 割。
+      source: "https://en.wikipedia.org/wiki/Protestantism_in_Guatemala"
+- id: rel_peten
+  name: ペテン（イツァ人の地）
+  select:
+    adm1: ["GTM/Petén"]
+  timeline:
+    - from: 1648
+      main: other
+      note: マヤ系のイツァ人の王国（ノフペテン）が独立を保っていた。
+    - from: 1700
+      main: catholic
+      note: 1697 年にスペインがノフペテン（フローレス）を征服した。
+    - from: 1990
+      main: catholic
+      minor: evangelical
+- id: rel_mosquitia
+  name: モスキート海岸（ミスキートの地）
+  select:
+    adm1: ["HND/Gracias a Dios", "NIC/North Carribean Coast Autonomous Region", "NIC/South Atlantic Autonomous Region", "NIC/Rio San Juan"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ミスキート人・マヤンナ（スモ）人・ラマ人の地。イギリスと結んだミスキート王国（1630 年代〜）。
+    - from: 1880
+      main: evangelical
+      note: モラヴィア兄弟団の伝道（ブルーフィールズ 1849–）で、ミスキート人の多くがモラヴィア派になった（地図では福音派の色）。南部のクレオール（アフリカ系）は英語を話すプロテスタント。
+      source: "https://en.wikipedia.org/wiki/Moravian_Church_in_Nicaragua"
+    - from: 1980
+      main: evangelical
+      minor: catholic
+      note: 太平洋側からのメスティーソ（カトリック）の入植が進んだ。
+- id: rel_limon
+  name: コスタリカのリモン・パナマのボカス・デル・トロ
+  select:
+    adm1: ["CRI/Provincia Limón", "PAN/Provincia de Bocas del Toro"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ブリブリ・カベカル・ングベなどの先住民の地。
+    - from: 1890
+      main: anglican
+      minor: catholic
+      note: 鉄道とバナナ農園（ユナイテッド・フルーツ）の労働者として、ジャマイカなど西インド諸島のアフリカ系の人々が移住した（国教会・メソジスト・バプテスト）。
+    - from: 1950
+      main: catholic
+      minor: evangelical
+- id: rel_panama_indigenous
+  name: パナマの先住民の地（グナ・ヤラ、ングベ・ブグレ、ダリエン）
+  select:
+    adm1: ["PAN/Comarca Guna Yala", "PAN/Comarca Ngäbe-Buglé", "PAN/Comarca Emberá-Wounaan"]
+  timeline:
+    - from: 1648
+      main: other
+      note: グナ（クナ）・ングベ・エンベラなどの伝統的な信仰。
+    - from: 1950
+      main: catholic
+      minor: other
+      note: グナ人は 1925 年の反乱（トゥレ革命）で自治を得た。カトリック・プロテスタントの伝道が進んだが、伝統の儀礼も続く。
+- id: rel_belize
+  name: ベリーズ（英領ホンジュラス）
+  select:
+    iso: [BLZ]
+  timeline:
+    - from: 1648
+      main: other
+      note: マヤ人の地。スペインの支配は及ばなかった。
+    - from: 1800
+      main: anglican
+      minor: other
+      note: イギリスの木材伐採者（ベイメン）とアフリカ系の奴隷の入植地。セント・ジョージズ・キーの戦い（1798）でスペインの攻撃を退けた。
+    - from: 1860
+      main: catholic
+      minor: anglican
+      note: カスタ戦争を逃れたユカタンのマヤ人・メスティーソ（カトリック）が北部に移り住み、ガリフナ人（1802–）も南部の海岸に住んだ。1862 年に英領ホンジュラス。
+    - from: 2000
+      main: catholic
+      minor: evangelical
+
+# ================================================================
+# カリブ海
+# ================================================================
+- id: rel_spanish_caribbean
+  name: キューバ・イスパニョーラ島
+  select:
+    iso: [CUB, DOM, HTI]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: スペインの植民地（イスパニョーラ島の西部は 1605 年にスペインが住民を引き揚げた）。カリブの先住民（タイノ人）は 16 世紀にほぼ絶えた。
+- id: rel_cuba
+  name: キューバ
+  select:
+    iso: [CUB]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 砂糖のプランテーションで奴隷として連れてこられたヨルバ人などの信仰が、カトリックの聖人と結びついてサンテリア（レグラ・デ・オチャ）になった（地図ではカトリックの色）。
+      source: "https://ja.wikipedia.org/wiki/サンテリア"
+- id: rel_guantanamo_base
+  name: グアンタナモ米軍基地
+  select:
+    pieces: [CUB-Guantanamo_Bay_Naval_Base]
+  timeline:
+    - from: 1648
+      main: catholic
+    - from: 1903
+      main: evangelical
+      minor: catholic
+      note: 1903 年の協定でアメリカ合衆国が租借した海軍基地（住民は米軍の関係者）。
+- id: rel_haiti
+  name: ハイチ（サン＝ドマング）
+  select:
+    iso: [HTI]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 西部はトルトゥーガ島のフランス人の海賊（バッカニア）の拠点。1697 年のライスワイク条約でフランス領サン＝ドマングになった。アフリカから連れてこられた人々の信仰がカトリックと結びついてヴードゥーが生まれ、ハイチ革命（1791–1804）を支える力になった（地図ではカトリックの色）。
+      source: "https://ja.wikipedia.org/wiki/ブードゥー教"
+    - from: 1990
+      main: catholic
+      minor: evangelical
+      note: 20 世紀後半にプロテスタント（バプテスト・ペンテコステ派など）が広がり、住民の 3〜4 割になった。
+- id: rel_jamaica
+  name: ジャマイカ
+  select:
+    iso: [JAM]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: スペインの植民地（サンティアゴ・デ・ラ・ベガ）。
+    - from: 1660
+      main: anglican
+      note: 1655 年にイングランド（クロムウェル）が奪った。砂糖のプランテーションで、住民の 9 割がアフリカ系の奴隷になった。逃亡奴隷（マルーン）の共同体。
+    - from: 1840
+      main: anglican
+      minor: evangelical
+      note: バプテスト（サム・シャープの反乱 1831–32 を導いた「黒人バプテスト」）・メソジスト・モラヴィア派の伝道。奴隷制の廃止（1834–38）。
+    - from: 1970
+      main: evangelical
+      minor: anglican
+      note: ペンテコステ派（チャーチ・オブ・ゴッドなど）が最大になった。1930 年代にはラスタファリ運動が生まれた。
+      source: "https://ja.wikipedia.org/wiki/ラスタファリ運動"
+- id: rel_british_caribbean
+  name: イギリス領の西インド諸島（バルバドス・リーワード諸島・バハマなど）
+  select:
+    iso: [BRB, ATG, KNA, AIA, MSR, VGB, BHS, TCA, CYM]
+  timeline:
+    - from: 1648
+      main: anglican
+      note: イギリスの植民地（バルバドス 1627、セントキッツ 1624、アンティグア 1632、モントセラト 1632 など）。17 世紀後半から砂糖のプランテーションでアフリカ系の奴隷が住民の大多数になった。
+    - from: 1850
+      main: anglican
+      minor: evangelical
+      note: メソジスト・モラヴィア派の伝道が奴隷の間に広がり、奴隷制廃止（1834–38）後に教会が増えた。
+- id: rel_montserrat_irish
+  name: モントセラト
+  select:
+    iso: [MSR]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: anglican
+      note: セントキッツから移ったアイルランド系のカトリックの入植地。
+    - from: 1720
+      main: anglican
+      minor: catholic
+- id: rel_bahamas
+  name: バハマ
+  select:
+    iso: [BHS]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: バミューダのピューリタン（エルーセラ・アドヴェンチャラーズ）がエルーセラ島に入植した（1648）。先住民のルカヤン人は 16 世紀にスペイン人に連れ去られて絶えていた。
+    - from: 1700
+      main: anglican
+      note: ナッソー（ニュー・プロヴィデンス島）は海賊の拠点を経て、1718 年からイギリスの直轄植民地。
+    - from: 1800
+      main: evangelical
+      minor: anglican
+      note: アメリカ独立戦争後のロイヤリストとその奴隷の移住。バプテストが最大の宗派になった。
+- id: rel_cayman
+  name: ケイマン諸島
+  select:
+    iso: [CYM]
+  timeline:
+    - from: 1648
+      main: anglican
+      note: ジャマイカからの入植（1730 年代から定住）。
+    - from: 1850
+      main: reformed
+      minor: evangelical
+      note: 長老派（1846 年の伝道）が最大の宗派。
+- id: rel_tca
+  name: タークス・カイコス諸島
+  select:
+    iso: [TCA]
+  timeline:
+    - from: 1648
+      main: anglican
+    - from: 1850
+      main: evangelical
+      minor: anglican
+- id: rel_french_antilles
+  name: フランス領アンティル（グアドループ・マルティニーク・サン・バルテルミー・サン・マルタン）
+  select:
+    iso: [GLP, MTQ, BLM, MAF]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: フランスの植民地（マルティニーク・グアドループ 1635）。砂糖のプランテーションの奴隷制（黒人法典 1685）。サン・バルテルミーは 1784–1878 年にスウェーデン領だったが、住民はカトリック。
+- id: rel_windward_french
+  name: ドミニカ・セントルシア・グレナダ（フランス系の島）
+  select:
+    iso: [DMA, LCA, GRD]
+  timeline:
+    - from: 1648
+      main: other
+      note: カリブ人（カリナゴ）の島。
+    - from: 1670
+      main: catholic
+      note: フランス人の入植（グレナダ 1649、セントルシア 1650 年代）。ドミニカは 1763 年まで「中立の島」とされたが、フランス人の農園が広がった。のちイギリス領になっても、住民の多くはカトリックのまま。
+- id: rel_dominica_carib
+  name: ドミニカ（カリナゴの島）
+  select:
+    iso: [DMA]
+  timeline:
+    - from: 1648
+      main: other
+      note: カリナゴ（カリブ人）の島。フランスとイギリスは 1660 年の協定で、ドミニカとセントヴィンセントをカリブ人の島として残した。
+    - from: 1730
+      main: catholic
+      note: フランス人の入植が進んだ（1763 年にイギリス領）。カリナゴの子孫は東海岸の保留地（1903–）に住む。
+- id: rel_grenada
+  name: グレナダ
+  select:
+    iso: [GRD]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1660
+      main: catholic
+    - from: 1850
+      main: catholic
+      minor: anglican
+      note: 1763 年にイギリス領。国教会・メソジストも広がった。
+- id: rel_st_vincent
+  name: セントヴィンセント・グレナディーン
+  select:
+    iso: [VCT]
+  timeline:
+    - from: 1648
+      main: other
+      note: カリブ人と、逃亡・難破したアフリカ人とカリブ人の子孫の「黒いカリブ人」（ガリフナ）の島。
+    - from: 1800
+      main: anglican
+      minor: evangelical
+      note: 第 2 次カリブ戦争（1795–96）の後、ガリフナ人はホンジュラス沖のロアタン島へ追放された（1797）。
+- id: rel_trinidad
+  name: トリニダード・トバゴ
+  select:
+    iso: [TTO]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: スペインの植民地（サン・ホセ・デ・オルーニャ）。住民の多くは先住民（アラワク・カリブ系）。
+    - from: 1790
+      main: catholic
+      note: 人口勅令（1783）で、フランス系のカトリックの農園主と奴隷が移住した。1797 年にイギリスが占領した。
+    - from: 1880
+      main: catholic
+      minor: hindu
+      note: 奴隷制廃止の後、インドから年季契約の労働者が来た（1845–1917、約 14 万人）。
+      source: "https://en.wikipedia.org/wiki/Indo-Trinidadians_and_Tobagonians"
+- id: rel_trinidad_indian
+  name: トリニダード中部・南部（インド系の地域）
+  select:
+    adm1: ["TTO/Chaguanas", "TTO/Couva-Tabaquite-Talparo", "TTO/Penal-Debe", "TTO/Siparia", "TTO/Princes Town", "TTO/Rio Claro-Mayaro"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+    - from: 1790
+      main: catholic
+    - from: 1900
+      main: hindu
+      minor: catholic
+      note: サトウキビ農園の地にインド系の村が広がった。インド系の約 6 割がヒンドゥー教徒、ほかにムスリムと長老派（カナダのミッション）。
+- id: rel_tobago
+  name: トバゴ島
+  select:
+    adm1: ["TTO/Tobago"]
+  timeline:
+    - from: 1648
+      main: other
+      note: クールラント公国（1654–59、ルター派）・オランダ・フランス・イギリスが入植を争った島。
+    - from: 1770
+      main: anglican
+      note: 1763 年からイギリス領（1781–1803 年はフランス領）の砂糖の島。
+    - from: 1850
+      main: anglican
+      minor: evangelical
+      note: メソジスト・モラヴィア派。
+- id: rel_dutch_caribbean
+  name: オランダ領アンティル（キュラソー・アルバ・ボネール・シント・マールテン・サバ・シント・ユースタティウス）
+  select:
+    iso: [CUW, ABW, BES, SXM]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: キュラソー（1634 年にオランダが奪う）は奴隷貿易の中継地。支配層はオランダ改革派とセファルディムのユダヤ人（アメリカ最古のシナゴーグ、1732）だったが、アフリカ系の住民はスペイン・ポルトガル系の宣教師によってカトリックになった。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Cura%C3%A7ao"
+- id: rel_windward_dutch
+  name: シント・マールテン・シント・ユースタティウス・サバ
+  select:
+    pieces: [SXM-Sint_Maarten, BES-St_Eustatius, BES-Saba]
+  timeline:
+    - from: 1648
+      main: reformed
+      note: オランダ西インド会社の島（シント・ユースタティウスは 18 世紀の中継貿易で栄えた「黄金の岩」）。イギリス系・アフリカ系の住民が多い。
+    - from: 1800
+      main: evangelical
+      minor: catholic
+      note: メソジストが広がった。
+
+# ================================================================
+# 南米
+# ================================================================
+- id: rel_south_america_colonial
+  name: 南米（スペイン・ポルトガルの植民地の中心部）
+  select:
+    iso: [COL, VEN, ECU, PER, BOL, CHL, ARG, URY, PRY, BRA]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: スペインのペルー副王領（ヌエバ・グラナダ・リオ・デ・ラ・プラタはのちに分かれる）とポルトガル領ブラジル。アンデスの村々では、カトリックの聖人の祭りに、大地の母神パチャママや山の神（アプ）の信仰が重なる。
+      source: "https://ja.wikipedia.org/wiki/パチャママ"
+- id: rel_amazon_base
+  name: アマゾン・オリノコの熱帯林
+  select:
+    adm1: ["COL/Amazonas", "COL/Caquetá", "COL/Guainía", "COL/Guaviare", "COL/Vaupés", "COL/Vichada", "COL/Putumayo", "VEN/Amazonas", "VEN/Delta Amacuro", "ECU/Napo", "ECU/Orellana", "ECU/Pastaza", "ECU/Morona Santiago", "ECU/Sucumbios", "ECU/Zamora Chinchipe", "PER/Ucayali", "PER/Madre de Dios", "BOL/Pando", "BRA/Amazonas", "BRA/Acre", "BRA/Rondonia", "BRA/Amapa"]
+  timeline:
+    - from: 1648
+      main: other
+      note: アマゾン・オリノコの熱帯林の先住民（トゥカノ・ウィトト・ヤノマミ・シュアル・アシャニンカなど）の伝統的な信仰（シャーマンによる治療と精霊の世界）。イエズス会・フランシスコ会・カルメル会の伝道所が川沿いに点在した。
+    - from: 1900
+      main: other
+      minor: catholic
+      note: ゴム・ブーム（1879–1912）で、ゴムの採集人（セリンゲイロ）が熱帯林の奥まで入った。先住民は強制労働（プトゥマヨ事件など）と病気で激減した。
+      source: "https://ja.wikipedia.org/wiki/ゴム・ブーム"
+    - from: 1960
+      main: catholic
+      minor: other
+      note: 道路の建設と入植（ブラジルのロンドニア・アクレ、エクアドルの石油開発など）で、アンデス・ブラジル北東部からの移住者が多数になった。
+- id: rel_amazon_deep
+  name: アマゾン奥地（先住民の多い地域）
+  select:
+    adm1: ["COL/Guainía", "COL/Vaupés", "COL/Vichada", "COL/Amazonas", "VEN/Amazonas", "ECU/Pastaza", "ECU/Morona Santiago"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1960
+      main: other
+      minor: catholic
+      note: 住民の多くはいまも先住民。カトリックと福音派（アメリカの夏期言語協会〈SIL〉などの伝道）が広がった。
+    - from: 2000
+      main: catholic
+      minor: other
+- id: rel_peru_loreto
+  name: ペルーのロレト（マイナスの伝道所）
+  select:
+    pieces: [PER-Maynas, PER-Alto_Amazonas, PER-Loreto_Province, PER-Requena, PER-Mariscal_Ramon_Castilla, PER-Putumayo, PER-Datem_del_Maranon, PER-Ucayali_Province]
+  timeline:
+    - from: 1648
+      main: other
+      minor: catholic
+      note: イエズス会のマイナスの伝道所（1638–1768）。
+    - from: 1900
+      main: catholic
+      minor: other
+      note: ゴム・ブームでイキトスが栄えた。
+- id: rel_llanos_missions
+  name: リャノス（オリノコ川流域の大草原）
+  select:
+    adm1: ["COL/Meta", "COL/Casanare", "COL/Arauca", "VEN/Apure", "VEN/Barinas", "VEN/Guárico", "VEN/Cojedes", "VEN/Portuguesa", "VEN/Bolívar", "VEN/Anzoátegui", "VEN/Monagas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: 先住民（アチャグア・サリバ・カリブ系など）の地。
+    - from: 1720
+      main: catholic
+      note: イエズス会（カサナレ・メタ、1660 年代〜）とカプチン会（グアヤナのカロニ川、1724〜）の伝道所が広がり、リャネロ（牧畜民）の大牧場の地になった。
+- id: rel_guajira
+  name: グアヒラ半島（ワユーの地）
+  select:
+    adm1: ["COL/La Guajira"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ワユー（グアヒロ）人は馬と牛を取り入れ、スペインの支配に服さなかった。
+    - from: 1950
+      main: catholic
+      minor: other
+- id: rel_san_andres
+  name: サン・アンドレス・プロビデンシア
+  select:
+    adm1: ["COL/Archipiélago de San Andrés, Providencia y Santa Catalina"]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 1631 年にピューリタンのプロヴィデンス島会社が入植したが、1641 年にスペインが追い払った。
+    - from: 1800
+      main: evangelical
+      note: ジャマイカなどから来たイギリス系・アフリカ系の住民（ライサル）。バプテスト教会（1844–）。
+    - from: 1970
+      main: catholic
+      minor: evangelical
+      note: 自由港（1953）の後、コロンビア本土からの移住者が多数になった。
+- id: rel_ecuador_galapagos
+  name: ガラパゴス諸島
+  select:
+    adm1: ["ECU/Galápagos"]
+  timeline:
+    - from: 1832
+      main: catholic
+      note: エクアドルが領有を宣言し（1832）、入植が始まった。ダーウィンの訪問（1835）。
+- id: rel_bolivia_lowlands
+  name: ボリビアの東部低地（モホス・チキトス）
+  select:
+    adm1: ["BOL/Beni", "BOL/Santa Cruz"]
+  timeline:
+    - from: 1648
+      main: other
+      note: モホ人・チキタノ人などの地。サンタ・クルス・デ・ラ・シエラ（1561）にスペイン人の町。
+    - from: 1700
+      main: catholic
+      note: イエズス会のモホスの伝道所（1682–）とチキトスの伝道所（1691–）。
+- id: rel_guyana
+  name: ガイアナ（エセキボ・デメララ・バービス）
+  select:
+    iso: [GUY]
+  timeline:
+    - from: 1648
+      main: other
+      note: アラワク系（ロコノ）・カリブ系の先住民の地。オランダの交易所（エセキボ 1616、バービス 1627）。
+    - from: 1720
+      main: reformed
+      minor: other
+      note: オランダの砂糖のプランテーション（デメララ 1746–）。住民の大多数はアフリカ系の奴隷。バービスの奴隷反乱（1763）。
+    - from: 1830
+      main: anglican
+      minor: evangelical
+      note: 1814 年にイギリス領（1831 年に英領ギアナ）。デメララの奴隷反乱（1823）。国教会・メソジスト・会衆派（ロンドン伝道協会）。
+    - from: 1880
+      main: anglican
+      minor: hindu
+      note: 奴隷制廃止の後、インドから年季契約の労働者（1838–1917、約 24 万人）が来た。
+- id: rel_guyana_indian
+  name: ガイアナの海岸（インド系の地域）
+  select:
+    adm1: ["GUY/East Berbice-Corentyne", "GUY/Mahaica-Berbice", "GUY/Essequibo Islands-West Demerara", "GUY/Pomeroon-Supenaam"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1720
+      main: reformed
+      minor: other
+    - from: 1830
+      main: anglican
+      minor: evangelical
+    - from: 1900
+      main: hindu
+      minor: anglican
+      note: 砂糖の農園地帯で、インド系の住民が多数になった（インド系の約 6 割がヒンドゥー教徒、ほかにムスリム・キリスト教徒）。
+- id: rel_guyana_interior
+  name: ガイアナの内陸（ルプヌニなど）
+  select:
+    adm1: ["GUY/Upper Takutu-Upper Essequibo", "GUY/Potaro-Siparuni", "GUY/Cuyuni-Mazaruni", "GUY/Barina-Waini"]
+  timeline:
+    - from: 1648
+      main: other
+      note: マクシ・ワピシャナ・パタモナ・アカワイオ・ワラオなど先住民の地。
+    - from: 1920
+      main: catholic
+      minor: anglican
+      note: イエズス会（ルプヌニ）・国教会の伝道。
+- id: rel_suriname
+  name: スリナム（パラマリボと海岸）
+  select:
+    iso: [SUR]
+  timeline:
+    - from: 1648
+      main: other
+      note: カリブ系（カリナ）・アラワク系の先住民の地。
+    - from: 1670
+      main: reformed
+      minor: other
+      note: イギリスの入植（1650、ウィロビー卿）の後、ブレダ条約（1667）でオランダ領（ニューアムステルダムと交換）。住民の大多数はアフリカ系の奴隷。ユダヤ人の入植地（ヨーデンサヴァネ）もあった。
+    - from: 1850
+      main: evangelical
+      minor: catholic
+      note: モラヴィア兄弟団（ヘルンフート派）の伝道（1735–）がアフリカ系の住民の間で最大の教会になった。奴隷制の廃止は 1863 年。
+    - from: 1900
+      main: evangelical
+      minor: hindu
+      note: インド（1873–）・ジャワ（1890–）から年季契約の労働者が来た。
+- id: rel_suriname_hindu
+  name: スリナムの農村（ニッケリー・ワニカ・サラマッカ）
+  select:
+    adm1: ["SUR/Nickerie", "SUR/Wanica", "SUR/Saramacca"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1670
+      main: reformed
+      minor: other
+    - from: 1850
+      main: evangelical
+    - from: 1910
+      main: hindu
+      minor: sunni
+      note: 年季契約を終えたインド系（ヒンドゥスターニー）・ジャワ系の住民が農地をもらって住みついた。
+- id: rel_suriname_javanese
+  name: スリナムのコメウェイネ（ジャワ系）
+  select:
+    adm1: ["SUR/Commewijne"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1670
+      main: reformed
+      minor: other
+    - from: 1850
+      main: evangelical
+    - from: 1910
+      main: sunni
+      minor: hindu
+      note: ジャワ島からの年季契約の労働者（1890–1939、約 3 万 3 千人）の多くがムスリム。
+      source: "https://en.wikipedia.org/wiki/Javanese_Surinamese"
+- id: rel_suriname_interior
+  name: スリナムの内陸（マルーンと先住民の地）
+  select:
+    adm1: ["SUR/Sipaliwini", "SUR/Brokopondo", "SUR/Marowijne"]
+  timeline:
+    - from: 1648
+      main: other
+      note: 先住民（トリオ・ワヤナ・カリナなど）の地。
+    - from: 1760
+      main: other
+      note: 農園から逃れたアフリカ系のマルーン（ンジュカ・サラマカなど）が熱帯林に共同体を作り、オランダと和平条約を結んだ（1760・1762）。マルーンの信仰ウィンティは、西アフリカの神々と祖先の信仰を受けつぐ。
+      source: "https://ja.wikipedia.org/wiki/マルーン"
+    - from: 1950
+      main: other
+      minor: evangelical
+      note: モラヴィア派・カトリックの伝道。
+- id: rel_french_guiana
+  name: フランス領ギアナ
+  select:
+    iso: [GUF]
+  timeline:
+    - from: 1648
+      main: other
+      note: カリナ・アラワク・パリクル・ワヤンピなど先住民の地。
+    - from: 1670
+      main: catholic
+      note: カイエンヌ（1664 年にフランスが確保）。1852–1953 年は流刑地（悪魔島）。
+- id: rel_brazil_interior
+  name: ブラジルの内陸（植民の遅い地域）
+  select:
+    adm1: ["BRA/Minas Gerais", "BRA/Goias", "BRA/Tocantins", "BRA/Mato Grosso", "BRA/Mato Grosso do Sul", "BRA/Piaui", "BRA/Ceara", "BRA/Parana", "BRA/Santa Catarina", "BRA/Rio Grande do Sul"]
+    pieces: [120-Isla_Brasilera]   # ウルグアイ川の中州（ブラジルとウルグアイが帰属を争う無人島）
+  timeline:
+    - from: 1648
+      main: other
+      note: ジェー語族（カイアポ・シャヴァンテ・カインガン）・トゥピ系などの先住民の地。サンパウロの奥地探検隊（バンデイランテス）が先住民を奴隷として連れ去った。
+    - from: 1720
+      main: catholic
+      note: ミナス・ジェライスの金（1690 年代〜）・ゴイアス・マット・グロッソの金鉱の発見でゴールドラッシュが起き、内陸に町と教会が建った（オウロ・プレット）。北東部の内陸（セルタン）・南部（パラナ・サンタカタリーナ・リオグランデ・ド・スル）にも牧畜の植民が広がった。南部のドイツ系の入植地（サン・レオポルド 1824、ブルメナウ 1850）にはルター派も多い（州の 1〜2 割）。
+    - from: 2000
+      main: catholic
+      minor: evangelical
+- id: rel_brazil_missoes
+  name: リオグランデ・ド・スルのミソンイス（七つの伝道村）
+  select:
+    pieces: [BRA-Rio_Grande_do_Sul_Missoes]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1690
+      main: catholic
+      note: イエズス会のグアラニーの伝道村（七つの村、1682–1706）。マドリード条約（1750）でポルトガル領とされ、グアラニー戦争（1754–56）が起きた。
+      source: "https://ja.wikipedia.org/wiki/グアラニー戦争"
+- id: rel_brazil_amazon_towns
+  name: ブラジル北部（パラ・マラニャン）
+  select:
+    adm1: ["BRA/Para", "BRA/Maranhao"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: ベレン（1616）・サン・ルイス（1612 年のフランスの建設、1615 年にポルトガル）。イエズス会（アントニオ・ヴィエイラ）の伝道村。
+    - from: 1800
+      main: catholic
+    - from: 2000
+      main: catholic
+      minor: evangelical
+- id: rel_brazil
+  name: ブラジル（福音派の広がり）
+  select:
+    iso: [BRA]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: 北東部（バイーア・ペルナンブーコ）の砂糖のプランテーション。アフリカ系の住民の信仰はカトリックと結びつき、カンドンブレ（バイーア）・ウンバンダ（20 世紀のリオ）になった（地図ではカトリックの色）。1630–54 年はオランダが北東部（ペルナンブーコ）を支配した。
+      source: "https://ja.wikipedia.org/wiki/カンドンブレ"
+    - from: 2000
+      main: catholic
+      minor: evangelical
+      note: ペンテコステ派・新ペンテコステ派（神の王国ユニバーサル教会など）が急速に広がり、福音派は 1991 年の 9% から 2010 年に 22%、2022 年に約 27% になった。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Brazil"
+- id: rel_roraima
+  name: ロライマ（ヤノマミ・マクシの地）
+  select:
+    adm1: ["BRA/Roraima"]
+  timeline:
+    - from: 1648
+      main: other
+      note: マクシ・ワピシャナ・ヤノマミなどの地。
+    - from: 1950
+      main: catholic
+      minor: other
+      note: ボア・ヴィスタ（1830 年代の牧場から）を中心に入植が進んだ。1987 年からの金の採掘人（ガリンペイロ）の侵入で、ヤノマミ人が病気と暴力で大きな被害を受けた。
+    - from: 2000
+      main: catholic
+      minor: evangelical
+- id: rel_roraima_indigenous
+  name: ロライマの先住民の地域（ラポーザ・セーラ・ド・ソル、ヤノマミ）
+  select:
+    pieces: [BRA-Uiramuta, BRA-Normandia, BRA-Pacaraima, BRA-Amajari, BRA-Alto_Alegre]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1950
+      main: other
+      minor: catholic
+      note: ラポーザ・セーラ・ド・ソル（2005 年に先住民の土地として確定）とヤノマミの保護区。
+- id: rel_chaco
+  name: グランチャコ
+  select:
+    adm1: ["ARG/Chaco", "ARG/Formosa", "PRY/PRESIDENTE HAYES", "PRY/ALTO PARAGUAY", "PRY/BOQUERON"]
+  timeline:
+    - from: 1648
+      main: other
+      note: グアイクル系（トバ〈コム〉・モコビー・ピラガ）・マタコ系（ウィチ）・アヨレオなどの狩猟採集民の地。スペインの支配は及ばなかった。
+    - from: 1900
+      main: catholic
+      minor: other
+      note: アルゼンチン軍の「チャコの征服」（1884–1911）とケブラチョ材・綿花の開発で入植が進んだ。
+- id: rel_paraguay_chaco
+  name: パラグアイのチャコ（ボケロン）
+  select:
+    adm1: ["PRY/BOQUERON"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1930
+      main: other
+      minor: evangelical
+      note: カナダ・ロシアからのメノナイト（再洗礼派の流れのプロテスタント）の入植地（メノ 1927、フェルンハイム 1930）。チャコ戦争（1932–35）の戦場。
+      source: "https://en.wikipedia.org/wiki/Mennonites_in_Paraguay"
+    - from: 1960
+      main: evangelical
+      minor: catholic
+      note: メノナイトの伝道で、ニバクレ・エンヘトなどの先住民の多くが改宗した。
+- id: rel_pampas_patagonia
+  name: パンパ南部・パタゴニア（アルゼンチン）
+  select:
+    adm1: ["ARG/La Pampa", "ARG/Neuquén", "ARG/Río Negro", "ARG/Chubut", "ARG/Santa Cruz", "ARG/Tierra del Fuego"]
+  timeline:
+    - from: 1648
+      main: other
+      note: テウェルチェ・プエルチェ・ランケル・マプーチェ（18 世紀にアンデスの西から広がった）・セルクナム（オナ）などの地。
+    - from: 1890
+      main: catholic
+      note: ロカ将軍の「砂漠の征服」（1878–85）で先住民は殺害・追放され、牧羊の大農場の地になった。チュブ川流域にはウェールズ人の入植地（1865、会衆派・メソジスト）。サレジオ会の伝道。
+      source: "https://ja.wikipedia.org/wiki/砂漠の征服"
+- id: rel_araucania
+  name: アラウカニア（マプーチェの地）
+  select:
+    pieces: [CHL-Provincia_de_Malleco, CHL-Provincia_de_Cautin, CHL-Provincia_de_Arauco, CHL-Provincia_de_Valdivia, CHL-Provincia_de_Ranco, CHL-Provincia_de_Osorno, CHL-Provincia_de_Llanquihue]
+  timeline:
+    - from: 1648
+      main: other
+      note: マプーチェ人（アラウカノ）はビオビオ川を境にスペインに抵抗し、キリン協定（1641）で独立を認められた。バルディビアにはスペインの要塞（1645 年の再建）。
+      source: "https://ja.wikipedia.org/wiki/マプチェ族"
+    - from: 1860
+      main: other
+      minor: catholic
+      note: バルディビア・オソルノ・ランキウエ湖畔にドイツ人の入植（1846–、カトリックとルター派）。
+    - from: 1890
+      main: catholic
+      minor: other
+      note: チリ軍の「アラウカニアの平定」（1861–83）で、マプーチェの土地はチリに併合され、保留地（レドゥクシオン）に押し込められた。
+- id: rel_chile_south
+  name: チリ南部（チロエ・アイセン・マガジャネス）
+  select:
+    pieces: [CHL-Provincia_de_Chiloe, CHL-Provincia_de_Palena, CHL-Provincia_de_Aysen, CHL-Provincia_de_Coyhaique, CHL-Provincia_de_General_Carrera, CHL-Provincia_de_Capitan_Prat, CHL-Provincia_de_Magallanes, CHL-Provincia_de_Ultima_Esperanza, CHL-Provincia_de_Tierra_del_Fuego, CHL-Provincia_de_la_Antartica_Chilena]
+  timeline:
+    - from: 1648
+      main: other
+      note: チョノ・カウェスカル（アラカルフ）・ヤガン・セルクナム・テウェルチェなどの地。
+    - from: 1900
+      main: catholic
+      note: プンタ・アレナス（1848）と牧羊の大農場。セルクナム人は 1880〜1900 年代に虐殺と病気でほぼ絶えた。アイセンの入植は 1920 年代から。
+- id: rel_chiloe
+  name: チロエ島
+  select:
+    pieces: [CHL-Provincia_de_Chiloe]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: イエズス会の巡回伝道（1608–）による木造の教会群（世界遺産）。スペインの最後の拠点（1826 年までスペイン領）。
+- id: rel_chile_biobio
+  name: チリのビオビオ・アラウカニア（ペンテコステ派の広がり）
+  select:
+    pieces: [CHL-Provincia_de_Concepcion, CHL-Provincia_de_Bio_Bio, CHL-Provincia_de_Arauco, CHL-Provincia_de_Malleco, CHL-Provincia_de_Cautin]
+  timeline:
+    - from: 1990
+      main: catholic
+      minor: evangelical
+      note: チリのペンテコステ派（1909 年のバルパライソのメソジストの信仰復興から）は、ビオビオ・アラウカニアで住民の 2 割を超える。
+      source: "https://en.wikipedia.org/wiki/Pentecostalism_in_Chile"
+- id: rel_easter_island
+  name: イースター島（ラパ・ヌイ）
+  select:
+    pieces: [CHL-Easter_Island_Province]
+  timeline:
+    - from: 1648
+      main: other
+      note: ラパ・ヌイの人々の信仰（モアイ、のちに鳥人儀礼〈タンガタ・マヌ〉）。
+    - from: 1870
+      main: catholic
+      note: ペルーの奴隷狩り（1862）と天然痘で人口は 100 人あまりに減った。カトリックの宣教師（1864–）が伝道した。1888 年にチリが併合した。
+      source: "https://ja.wikipedia.org/wiki/イースター島"
+- id: rel_uruguay
+  name: ウルグアイ（バンダ・オリエンタル）
+  select:
+    iso: [URY]
+  timeline:
+    - from: 1648
+      main: other
+      note: チャルア人・ミヌアン人の地。牛が放たれ、野生の牛の大群が広がった。
+    - from: 1730
+      main: catholic
+      note: ポルトガルのコロニア・ド・サクラメント（1680）とスペインのモンテビデオ（1726）。1831 年にはチャルア人が殺された（サルシプエデスの虐殺）。
+- id: rel_uruguay_colonia
+  name: ウルグアイの初期の町（コロニア・ソリアノ）
+  select:
+    adm1: ["URY/Colonia", "URY/Soriano"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: サント・ドミンゴ・ソリアノの伝道所（1624）。コロニア・ド・サクラメントは 1680 年からのポルトガルの拠点（1777 年にスペイン領）。
+    - from: 1730
+      main: catholic
+- id: rel_paraguay_north
+  name: パラグアイ東部の森林（アマンバイ・カニンデユ・アルト・パラナ）
+  select:
+    adm1: ["PRY/AMAMBAY", "PRY/CANINDEYU", "PRY/ALTO PARANA"]
+  timeline:
+    - from: 1648
+      main: other
+      note: グアラニー系の森の民（アチェ・ムビャ・パイ・タビテラ）の地。
+    - from: 1880
+      main: catholic
+      note: マテ茶の採集と開拓。
+- id: rel_falklands
+  name: フォークランド（マルビナス）諸島
+  select:
+    iso: ["117"]
+  timeline:
+    - from: 1764
+      main: catholic
+      note: フランス（ブーガンヴィル）のポール・ルイ（1764）。1767 年にスペインに譲られた（イギリスもポート・エグモント 1765–74）。
+    - from: 1833
+      main: anglican
+      note: 1833 年にイギリスが占領し、イギリス人の牧羊の植民地になった。1982 年のフォークランド（マルビナス）戦争。
+      source: "https://ja.wikipedia.org/wiki/フォークランド紛争"

@@ -1129,10 +1129,39 @@
 - id: usa
   name: アメリカ合衆国
   home_iso: [USA]   # 本国（本土・アラスカ・ハワイ）。フィリピン・占領地は含めない
+  names:
+    - {from: 1776, to: 1788, name: アメリカ合衆国（連合会議）, short: アメリカ, kind: 国家連合（連合規約、1781年発効）}
   short: アメリカ
   color: "#d2c48e"
   kind: 連邦共和国
   rulers:
+    - {name: ジョージ・ワシントン, title: 大統領, from: 1789, to: 1797, note: 初代大統領。2期で退き、告別演説で外国との同盟を戒めた, source: "https://ja.wikipedia.org/wiki/ジョージ・ワシントン"}
+    - {name: ジョン・アダムズ, title: 大統領, from: 1797, to: 1801, source: "https://ja.wikipedia.org/wiki/ジョン・アダムズ"}
+    - {name: トマス・ジェファソン, title: 大統領, from: 1801, to: 1809, note: 独立宣言の起草者。1803年にルイジアナを購入した, source: "https://ja.wikipedia.org/wiki/トーマス・ジェファーソン"}
+    - {name: ジェームズ・マディソン, title: 大統領, from: 1809, to: 1817, note: 「憲法の父」。米英戦争（1812–14年）, source: "https://ja.wikipedia.org/wiki/ジェームズ・マディソン"}
+    - {name: ジェームズ・モンロー, title: 大統領, from: 1817, to: 1825, note: モンロー宣言（1823年）, source: "https://ja.wikipedia.org/wiki/ジェームズ・モンロー"}
+    - {name: ジョン・クインシー・アダムズ, title: 大統領, from: 1825, to: 1829, source: "https://ja.wikipedia.org/wiki/ジョン・クインシー・アダムズ"}
+    - {name: アンドリュー・ジャクソン, title: 大統領, from: 1829, to: 1837, note: 西部出身の初の大統領（ジャクソニアン・デモクラシー）。インディアン強制移住法（1830年）, source: "https://ja.wikipedia.org/wiki/アンドリュー・ジャクソン"}
+    - {name: マーティン・ヴァン・ビューレン, title: 大統領, from: 1837, to: 1841, source: "https://ja.wikipedia.org/wiki/マーティン・ヴァン・ビューレン"}
+    - {name: ウィリアム・ヘンリー・ハリソン, title: 大統領, from: 1841, to: 1841, note: 就任1か月で死去した, source: "https://ja.wikipedia.org/wiki/ウィリアム・ハリソン"}
+    - {name: ジョン・タイラー, title: 大統領, from: 1841, to: 1845, note: 1845年にテキサスを併合した, source: "https://ja.wikipedia.org/wiki/ジョン・タイラー"}
+    - {name: ジェームズ・ポーク, title: 大統領, from: 1845, to: 1849, note: オレゴン協定（1846年）、アメリカ＝メキシコ戦争, source: "https://ja.wikipedia.org/wiki/ジェームズ・ポーク"}
+    - {name: ザカリー・テイラー, title: 大統領, from: 1849, to: 1850, source: "https://ja.wikipedia.org/wiki/ザカリー・テイラー"}
+    - {name: ミラード・フィルモア, title: 大統領, from: 1850, to: 1853, note: 1850年の妥協。ペリーを日本に送った, source: "https://ja.wikipedia.org/wiki/ミラード・フィルモア"}
+    - {name: フランクリン・ピアース, title: 大統領, from: 1853, to: 1857, note: カンザス・ネブラスカ法（1854年）, source: "https://ja.wikipedia.org/wiki/フランクリン・ピアース"}
+    - {name: ジェームズ・ブキャナン, title: 大統領, from: 1857, to: 1861, source: "https://ja.wikipedia.org/wiki/ジェームズ・ブキャナン"}
+    - {name: エイブラハム・リンカン, title: 大統領, from: 1861, to: 1865, note: 共和党。南北戦争を指導し、奴隷解放宣言（1863年）を出した。1865年4月に暗殺された, source: "https://ja.wikipedia.org/wiki/エイブラハム・リンカーン"}
+    - {name: アンドリュー・ジョンソン, title: 大統領, from: 1865, to: 1869, source: "https://ja.wikipedia.org/wiki/アンドリュー・ジョンソン"}
+    - {name: ユリシーズ・グラント, title: 大統領, from: 1869, to: 1877, note: 南北戦争の北軍の総司令官, source: "https://ja.wikipedia.org/wiki/ユリシーズ・S・グラント"}
+    - {name: ラザフォード・ヘイズ, title: 大統領, from: 1877, to: 1881, note: 南部から連邦軍を引き揚げ、再建（リコンストラクション）が終わった, source: "https://ja.wikipedia.org/wiki/ラザフォード・ヘイズ"}
+    - {name: ジェームズ・ガーフィールド, title: 大統領, from: 1881, to: 1881, note: 就任の年に暗殺された, source: "https://ja.wikipedia.org/wiki/ジェームズ・ガーフィールド"}
+    - {name: チェスター・アーサー, title: 大統領, from: 1881, to: 1885, source: "https://ja.wikipedia.org/wiki/チェスター・A・アーサー"}
+    - {name: グロヴァー・クリーヴランド, title: 大統領, from: 1885, to: 1889, source: "https://ja.wikipedia.org/wiki/グロバー・クリーブランド"}
+    - {name: ベンジャミン・ハリソン, title: 大統領, from: 1889, to: 1893, source: "https://ja.wikipedia.org/wiki/ベンジャミン・ハリソン"}
+    - {name: グロヴァー・クリーヴランド, title: 大統領, from: 1893, to: 1897, note: 2度目（連続しない2期）, source: "https://ja.wikipedia.org/wiki/グロバー・クリーブランド"}
+    - {name: ウィリアム・マッキンリー, title: 大統領, from: 1897, to: 1901, note: 米西戦争（1898年）・ハワイ併合。1901年に暗殺された, source: "https://ja.wikipedia.org/wiki/ウィリアム・マッキンリー"}
+    - {name: セオドア・ローズヴェルト, title: 大統領, from: 1901, to: 1909, note: 「棍棒外交」でカリブ海に介入し、パナマ運河の建設を始めた。ポーツマス条約を仲介した, source: "https://ja.wikipedia.org/wiki/セオドア・ルーズベルト"}
+    - {name: ウィリアム・タフト, title: 大統領, from: 1909, to: 1913, note: 「ドル外交」, source: "https://ja.wikipedia.org/wiki/ウィリアム・タフト"}
     - {name: ウッドロー・ウィルソン, title: 大統領, from: 1913, to: 1921, note: 1917年に第一次世界大戦に参戦し、十四か条の平和原則を示した。, source: "https://en.wikipedia.org/wiki/Woodrow_Wilson"}
     - {name: ウォレン・ハーディング, title: 大統領, from: 1921, to: 1923, source: "https://en.wikipedia.org/wiki/Warren_G._Harding"}
     - {name: カルヴィン・クーリッジ, title: 大統領, from: 1923, to: 1929, source: "https://en.wikipedia.org/wiki/Calvin_Coolidge"}
@@ -1154,19 +1183,40 @@
     - {name: ジョー・バイデン, title: 大統領, from: 2021, to: 2025, source: "https://en.wikipedia.org/wiki/Joe_Biden"}
     - {name: ドナルド・トランプ（再任）, title: 大統領, from: 2025, source: "https://en.wikipedia.org/wiki/Donald_Trump"}
   periods:
+    - from: 1776
+      to: 1788
+      text: イギリスの13植民地が独立を宣言し（1776年）、フランスの支援を得て独立戦争に勝った（パリ条約、1783年）。連合規約のもとの中央政府は弱く、1787年に合衆国憲法が作られた。
+    - from: 1789
+      to: 1828
+      text: ワシントンを初代大統領として連邦政府が発足した。ルイジアナ購入（1803年）で領土を倍にし、米英戦争（1812–14年）の後は国民意識が高まった。モンロー宣言（1823年）でヨーロッパとの相互不干渉を唱えた。
+    - from: 1829
+      to: 1860
+      text: ジャクソン大統領のもとで白人男性の民主政治が広がる一方、先住民は強制移住させられた（涙の道）。「明白な天命（マニフェスト・デスティニー）」を掲げてテキサス併合・オレゴン協定・アメリカ＝メキシコ戦争で太平洋岸に達した。奴隷制の拡大をめぐって南北の対立が深まった。
+    - from: 1861
+      to: 1877
+      text: 南部11州が脱退してアメリカ連合国を作り、南北戦争（1861–65年）が起きた。北部が勝って奴隷制は廃止された（憲法修正第13条）。戦後の再建（リコンストラクション）で南部は連邦軍の占領下に置かれた。
+    - from: 1878
+      to: 1913
+      text: 大陸横断鉄道（1869年）とともに西部の開拓が進み、1890年にフロンティアの消滅が宣言された。工業が急成長して世界一の工業国となり、移民が大量に来た。米西戦争（1898年）でフィリピン・プエルトリコ・グアムを得てハワイを併合し、カリブ海・太平洋に進出した。
     - from: 1917
       to: 1918
       text: 第一次世界大戦に連合国側で参戦し（1917年4月）、戦争の勝敗を決めた。
+    - from: 1919
+      to: 1940
+      text: 上院がヴェルサイユ条約を批准せず、国際連盟に加わらなかった。1920年代の繁栄（大量生産・大衆消費）の後、1929年の株価の大暴落から世界恐慌が始まり、フランクリン・ローズヴェルトがニューディール政策を進めた。
     - from: 1941
       to: 1945
       text: 第二次世界大戦に参戦し（1941年12月）、ヨーロッパではイギリスとともに北アフリカ・イタリア・フランスに上陸してドイツを破った。
     - from: 1945
       to: 1990
       text: 戦後はドイツ南部・オーストリアの一部・ベルリンの西部を占領した。冷戦ではマーシャル・プラン（1947）・NATO（1949）で西ヨーロッパを支え、ソ連と対立した。
+    - from: 1954
+      to: 1975
+      text: 国内では黒人差別の撤廃を求める公民権運動が広がり（キング牧師、1964年の公民権法）、対外的にはキューバ危機（1962年）・ベトナム戦争（1965–73年）があった。ドル危機（1971年）で戦後の金・ドル本位制が終わった。
     - from: 1991
       to: 2025
       text: 冷戦後は唯一の超大国として NATO の東方拡大を進めた。2022年からはロシアの侵攻を受けたウクライナを支援した。
-  note: ヨーロッパの地図では、占領地区（1945–49年のドイツ南部、1945–55年のオーストリア西部など）とアイスランドの駐留（1941–44年）に使う。1913年より前の大統領は省略。
+  note: 本土・ハワイの領域は data/regions/usa.yaml（A1）。ヨーロッパの地図では、占領地区（1945–49年のドイツ南部、1945–55年のオーストリア西部など）とアイスランドの駐留（1941–44年）にも使う。準州は label に準州名を付けた。元首は大統領（1776–89年の連合会議の議長は省略）。
   source: "https://ja.wikipedia.org/wiki/アメリカ合衆国大統領の一覧"
 
 - id: tangier_zone
