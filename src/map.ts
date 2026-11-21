@@ -250,6 +250,7 @@ export class AtlasMap {
     map.addSource("modern-borders", { type: "geojson", data: this.modernBorders() });
     map.addSource("pending-borders", { type: "geojson", data: this.pendingBorders() });
     map.addSource("pending-labels", { type: "geojson", data: this.pendingLabels() });
+    map.addSource("pending-coast", { type: "geojson", data: { type: "FeatureCollection", features: [this.pendingCoast(this.pending)] } });
     map.addSource("modern-labels", { type: "geojson", data: this.modernLabels() });
     map.addSource("modern-cities", { type: "geojson", data: this.modernCities() });
     map.addSource("seas", { type: "geojson", data: this.seas() });
@@ -379,17 +380,20 @@ export class AtlasMap {
         "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.3, 4, 0.6, 8, 1],
       },
     });
-    map.addLayer({
-      id: "borders",
-      type: "line",
-      source: "borders",
-      layout: { "line-join": "round" },
-      paint: {
-        "line-color": "#4a4038",
-        "line-opacity": 0.85,
-        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.5, 6, 1.1, 9, 1.6],
-      },
-    });
+    // 国境線。歴史データのない地域の海岸線（とデータのある地域との境）は年で変わらないので、別のソースで一度だけ渡す
+    for (const id of ["pending-coast", "borders"]) {
+      map.addLayer({
+        id,
+        type: "line",
+        source: id,
+        layout: { "line-join": "round" },
+        paint: {
+          "line-color": "#4a4038",
+          "line-opacity": 0.85,
+          "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.5, 6, 1.1, 9, 1.6],
+        },
+      });
+    }
     // 保護国・植民地など、同じ国の色の中の「元の国」の境界（細い破線）
     map.addLayer({
       id: "subunit-borders",
@@ -811,7 +815,7 @@ export class AtlasMap {
       if (subs.length) {
         const pos = this.posMap();
         const own = this.ownerOf;
-        const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => {
+        const geom = mesh(this.topo, this.dataObj(this.pending), (a, b) => {
           const i = pos.get(a)!;
           const j = pos.get(b)!;
           return a !== b && own[i] === own[j] && subOf[i] !== subOf[j];
@@ -828,8 +832,8 @@ export class AtlasMap {
     let bd = this.meshCache.get(key);
     if (!bd) {
       const pos = this.posMap();
-      const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => a === b || own[pos.get(a)!] !== own[pos.get(b)!]);
-      bd = { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geom as Geometry }] };
+      const geom = mesh(this.topo, this.dataObj(this.pending), (a, b) => a === b || own[pos.get(a)!] !== own[pos.get(b)!]);
+      bd = { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: dropArtificialEdges(geom as Geometry) }] };
       if (this.meshCache.size > 300) this.meshCache.clear();
       this.meshCache.set(key, bd);
     }
@@ -844,7 +848,7 @@ export class AtlasMap {
       const features: Feature[] = [];
       for (const o of ovs) {
         const is = (g: unknown) => this.ovOf[pos.get(g)!] === o;
-        const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => (a === b ? is(a) : is(a) !== is(b)));
+        const geom = mesh(this.topo, this.dataObj(this.pending), (a, b) => (a === b ? is(a) : is(a) !== is(b)));
         features.push({
           type: "Feature",
           properties: { kind: "empire" },
@@ -1026,8 +1030,8 @@ export class AtlasMap {
     let bd = this.meshCache.get(mkey);
     if (!bd) {
       const pos = this.posMap();
-      const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => a === b || own[pos.get(a)!] !== own[pos.get(b)!]);
-      bd = { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geom as Geometry }] };
+      const geom = mesh(this.topo, this.dataObj(this.distPending[key]), (a, b) => a === b || own[pos.get(a)!] !== own[pos.get(b)!]);
+      bd = { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: dropArtificialEdges(geom as Geometry) }] };
       if (this.meshCache.size > 300) this.meshCache.clear();
       this.meshCache.set(mkey, bd);
     }
@@ -1236,6 +1240,34 @@ export class AtlasMap {
     return this.topoOfAtlasCache;
   }
 
+  /**
+   * 歴史データのあるピースだけの GeometryCollection。年ごとの境界線（mesh）はこれだけで計算して軽くする。
+   * データのないピースとの境は、この中では1つのピースだけが使う弧（a === b）になるので、境界として描かれる
+   */
+  private dataObjCache = new Map<boolean[], GeometryCollection>();
+  private dataObj(pend: boolean[]): never {
+    let o = this.dataObjCache.get(pend);
+    if (!o) {
+      const gs = (this.topo.objects.pieces as GeometryCollection).geometries;
+      o = { type: "GeometryCollection", geometries: gs.filter((_, i) => !pend[i]) };
+      this.dataObjCache.set(pend, o);
+    }
+    return o as never;
+  }
+
+  /** 歴史データのないピースの海岸線（とデータのある地域との境）。年によって変わらないので一度だけ作る */
+  private coastCache = new Map<boolean[], Feature>();
+  private pendingCoast(pend: boolean[]): Feature {
+    let f = this.coastCache.get(pend);
+    if (!f) {
+      const gs = (this.topo.objects.pieces as GeometryCollection).geometries;
+      const obj = { type: "GeometryCollection", geometries: gs.filter((_, i) => pend[i]) };
+      f = { type: "Feature", properties: {}, geometry: dropArtificialEdges(mesh(this.topo, obj as never, (a, b) => a === b) as Geometry) };
+      this.coastCache.set(pend, f);
+    }
+    return f;
+  }
+
   private posMapCache: Map<unknown, number> | null = null;
   private posMap() {
     if (!this.posMapCache) {
@@ -1315,7 +1347,7 @@ export class AtlasMap {
     const pos = this.posMap();
     const iso = (g: unknown) => this.geoms[pos.get(g)!].properties!.iso;
     const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => a === b || iso(a) !== iso(b));
-    return { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geom as Geometry }] };
+    return { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: dropArtificialEdges(geom as Geometry) }] };
   }
 
   private modernLabels(): FeatureCollection {
@@ -1388,7 +1420,7 @@ export class AtlasMap {
     // 線・ラベル：宗教表示でも、重ねる国境は現代／その時代を切り替えられる
     set(["modern-borders", "modern-cities-dot"], on);
     set(["modern-labels", "modern-cities-label"], on && lb);
-    set(["borders", "cities-dot", "highlight"], !on || rel);
+    set(["borders", "pending-coast", "cities-dot", "highlight"], !on || rel);
     set(["frames", "suz-band", "suzerain", "subunit-borders"], !on && !rel);
     set(["pending-borders"], !on);
     set(["pending-labels"], !on && lb);
@@ -1400,8 +1432,10 @@ export class AtlasMap {
     set(["labels", "cities-label", "sublabels"], !on && lb);
     set(["seas", "rivers-label", "lakes-label"], lb);
     // 宗教表示では、国境と国名を薄くして宗教の塗り分けを主役にする
-    this.map.setPaintProperty("borders", "line-opacity", rel ? 0.35 : 0.85);
-    this.map.setPaintProperty("borders", "line-color", rel ? "#2e2822" : "#4a4038");
+    for (const l of ["borders", "pending-coast"]) {
+      this.map.setPaintProperty(l, "line-opacity", rel ? 0.35 : 0.85);
+      this.map.setPaintProperty(l, "line-color", rel ? "#2e2822" : "#4a4038");
+    }
     this.map.setPaintProperty("modern-borders", "line-opacity", rel ? 0.45 : 1);
     for (const l of ["labels", "modern-labels"]) {
       this.map.setPaintProperty(l, "text-opacity", rel ? 0.4 : 0.62);
@@ -1825,16 +1859,47 @@ function declutterCities(features: Feature[]) {
   }
 }
 
+/**
+ * 範囲 [西, 南, 東, 北]。日付変更線（経度 ±180）をまたぐもの（ロシア・フィジーなど）は、
+ * 西経を +360 して東端が 180 を超える形のほうが狭ければ、そちらを返す
+ */
 function bbox(geo: GeoMultiPolygon): [number, number, number, number] {
   let [x0, y0, x1, y1] = [Infinity, Infinity, -Infinity, -Infinity];
+  let [s0, s1] = [Infinity, -Infinity];
   for (const poly of geo.coordinates)
     for (const [x, y] of poly[0]) {
       if (x < x0) x0 = x;
       if (y < y0) y0 = y;
       if (x > x1) x1 = x;
       if (y > y1) y1 = y;
+      const xs = x < 0 ? x + 360 : x;
+      if (xs < s0) s0 = xs;
+      if (xs > s1) s1 = xs;
     }
+  if (s1 - s0 < x1 - x0 - 1e-9) return [s0, y0, s1, y1];
   return [x0, y0, x1, y1];
+}
+
+/**
+ * 境界線（mesh）から、データの都合でできた見かけの線を除く：日付変更線（経度 ±180）に沿った線と、
+ * 南極点のまわりを切り落とした縁（南緯 84.9 度より南）
+ */
+function dropArtificialEdges(g: Geometry): Geometry {
+  if (g.type !== "MultiLineString") return g;
+  const bad = (a: number[], b: number[]) =>
+    (Math.abs(a[0]) >= 179.999 && Math.abs(b[0]) >= 179.999 && Math.sign(a[0]) === Math.sign(b[0])) || (a[1] < -84.9 && b[1] < -84.9);
+  const out: number[][][] = [];
+  for (const line of g.coordinates) {
+    let cur: number[][] = [line[0]];
+    for (let k = 1; k < line.length; k++) {
+      if (bad(line[k - 1], line[k])) {
+        if (cur.length > 1) out.push(cur);
+        cur = [line[k]];
+      } else cur.push(line[k]);
+    }
+    if (cur.length > 1) out.push(cur);
+  }
+  return { type: "MultiLineString", coordinates: out };
 }
 
 /** 整数の並びの簡易ハッシュ（FNV-1a を2本） */

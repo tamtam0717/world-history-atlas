@@ -186,6 +186,8 @@ def build_world(cfg, inner_countries, used, taken, clip):
                 rows.append({"name": pname, "iso": iso, "adm1": "" if single else pname,
                              "src": "geoBoundaries CGAZ ADM2（ADM1 ごとに結合）", "geometry": geom})
     w = gpd.GeoDataFrame(rows, geometry="geometry", crs="EPSG:4326")
+    # 南極点のまわり（南緯 85 度より南）は、地図（Web メルカトルの範囲外）で形が崩れるので切り落とす
+    w["geometry"] = w.geometry.make_valid().intersection(box(-180, -85, 180, 90))
     w["geometry"] = w.geometry.apply(polys_only)
     w = w[~w.geometry.is_empty]
     # bbox の中にすっぽり入る区画は、範囲内で小さすぎて捨てた断片なので、ここでも捨てる
