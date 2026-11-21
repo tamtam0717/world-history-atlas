@@ -517,13 +517,149 @@ const cities = readYaml("cities.yaml");
 }
 const modernCitiesFile = path.join(DATA, "generated", "cities_modern.json");
 const citiesModern = fs.existsSync(modernCitiesFile) ? JSON.parse(fs.readFileSync(modernCitiesFile, "utf8")) : [];
+
+// ---- 出来事の場所（右パネルで、地図に映っている地域の出来事を先に並べるため） ----
+// 出来事ごとに代表点 pts（[経度, 緯度] の列）を求める。関係する政体ごとに1点：
+//   その年の首都（cities.yaml の capital）→ なければ本国（home_iso）の重心 → なければ、その年の領域（ピース）の重心。
+// 地域別のファイル（下の FILE_BOX）の出来事は、その地域の中の点を優先する：
+//   首都が地域の外なら、その政体の地域内の領土の重心（例：インドの出来事のイギリス → 英領インド）。
+//   地域の中の点が1つでもあれば、地域の外の点（例：ペリー来航のワシントン）は捨てる。
+const FILE_BOX = {
+  // [西, 南, 東, 北]
+  "events/china.yaml": [97, 18, 135, 54],
+  "events/inner_asia.yaml": [45, 25, 150, 62],
+  "events/japan_korea.yaml": [118, 20, 160, 56],
+  "events/india_east.yaml": [60, 5, 98, 37],
+  "events/india_north.yaml": [60, 5, 98, 37],
+  "events/india_south.yaml": [60, 5, 98, 37],
+  "events/mainland_sea.yaml": [92, 5, 110, 29],
+  "events/maritime_sea.yaml": [94, -11, 142, 21],
+  "events/ottoman.yaml": [10, 10, 65, 49],
+};
+const regionCenter = new Map(); // 地域 ID → [経度, 緯度]（国境の変化の一覧も、地図に映っている地域を先にするため）
+{
+  const inBox = (b, lon, lat) => lon >= b[0] && lon <= b[2] && lat >= b[1] && lat <= b[3];
+  const capitals = new Map(); // 政体 ID → [{from, to, lon, lat}]
+  for (const c of cities) {
+    for (const k of c.capital ?? []) {
+      if (!capitals.has(k.polity)) capitals.set(k.polity, []);
+      capitals.get(k.polity).push({ from: k.from ?? -Infinity, to: k.to ?? Infinity, lon: c.lon, lat: c.lat });
+    }
+  }
+  const capitalAt = (id, y) => {
+    const list = capitals.get(id);
+    if (!list) return null;
+    let best = null;
+    let gap = Infinity;
+    for (const k of list) {
+      const g = y < k.from ? k.from - y : y > k.to ? y - k.to : 0;
+      if (g < gap) [best, gap] = [k, g];
+    }
+    return best ? [best.lon, best.lat] : null;
+  };
+  const pLon = pieces.map((p) => Number(p.lon));
+  const pLat = pieces.map((p) => Number(p.lat));
+  const pArea = pieces.map((p) => Math.max(1, Number(p.area_km2) || 1));
+  const ownerAt = (i, y) => {
+    let o = -1;
+    for (const s of pieceTimelines[i]) {
+      if (s[0] > y) break;
+      o = s[1];
+    }
+    return o;
+  };
+  // 政体の、その年の領域の重心（box があればその中だけ）。面積で重みをつけた単位ベクトルの平均
+  const cache = new Map();
+  const territoryCentroid = (id, y, box) => {
+    const pi = polityIds.get(id);
+    if (pi == null) return null;
+    const key = `${pi}|${y}|${box ?? ""}`;
+    if (cache.has(key)) return cache.get(key);
+    let x = 0, yy = 0, z = 0, n = 0;
+    for (let i = 0; i < pieces.length; i++) {
+      if (box && !inBox(box, pLon[i], pLat[i])) continue;
+      if (ownerAt(i, y) !== pi) continue;
+      const lo = (pLon[i] * Math.PI) / 180, la = (pLat[i] * Math.PI) / 180, w = pArea[i];
+      x += w * Math.cos(la) * Math.cos(lo);
+      yy += w * Math.cos(la) * Math.sin(lo);
+      z += w * Math.sin(la);
+      n++;
+    }
+    const r = n ? [(Math.atan2(yy, x) * 180) / Math.PI, (Math.atan2(z, Math.hypot(x, yy)) * 180) / Math.PI] : null;
+    cache.set(key, r);
+    return r;
+  };
+  for (const r of timelineRegions) {
+    let x = 0, yy = 0, z = 0;
+    for (const i of resolved.get(r.id)) {
+      const lo = (pLon[i] * Math.PI) / 180, la = (pLat[i] * Math.PI) / 180, w = pArea[i];
+      x += w * Math.cos(la) * Math.cos(lo);
+      yy += w * Math.cos(la) * Math.sin(lo);
+      z += w * Math.sin(la);
+    }
+    if (x || yy || z) {
+      const r1 = (v) => Math.round(v * 10) / 10;
+      regionCenter.set(r.id, [r1((Math.atan2(yy, x) * 180) / Math.PI), r1((Math.atan2(z, Math.hypot(x, yy)) * 180) / Math.PI)]);
+    }
+  }
+  // 本国（home_iso）の重心：首都のない政体（アメリカなど）の代わりの点。歴史データのない地域（南北アメリカなど）では、
+  // その年の所属を問わず本国のピース全体の重心にする
+  const homeCentroid = (id, y) => {
+    const groups = polityHome[id];
+    if (!groups) return null;
+    const list = groups.filter(([f, t]) => (f == null || f <= y) && (t == null || y <= t)).flatMap((g) => g[2]);
+    if (!list.length) return null;
+    const pi = polityIds.get(id);
+    const owned = list.filter((i) => ownerAt(i, y) === pi);
+    const use = owned.length ? owned : list;
+    let x = 0, yy = 0, z = 0;
+    for (const i of use) {
+      const lo = (pLon[i] * Math.PI) / 180, la = (pLat[i] * Math.PI) / 180, w = pArea[i];
+      x += w * Math.cos(la) * Math.cos(lo);
+      yy += w * Math.cos(la) * Math.sin(lo);
+      z += w * Math.sin(la);
+    }
+    return [(Math.atan2(yy, x) * 180) / Math.PI, (Math.atan2(z, Math.hypot(x, yy)) * 180) / Math.PI];
+  };
+  let none = 0;
+  for (const e of events) {
+    const box = FILE_BOX[e._file] ?? null;
+    const inside = [];
+    const outside = [];
+    for (const id of e.polities ?? []) {
+      const cap = capitalAt(id, e.year);
+      let pt = null;
+      if (box) {
+        if (cap && inBox(box, ...cap)) pt = cap;
+        else pt = territoryCentroid(id, e.year, box);
+        if (pt) {
+          inside.push(pt);
+          continue;
+        }
+      }
+      pt = cap ?? homeCentroid(id, e.year) ?? territoryCentroid(id, e.year, null);
+      if (pt) (box && inBox(box, ...pt) ? inside : outside).push(pt);
+    }
+    let pts = inside.length ? inside : outside;
+    if (!pts.length && box) pts = [[(box[0] + box[2]) / 2, (box[1] + box[3]) / 2]];
+    // 近い点（1度以内）はまとめ、小数1桁に丸める
+    const out = [];
+    for (const p of pts) {
+      const q = [Math.round(p[0] * 10) / 10, Math.round(p[1] * 10) / 10];
+      if (!out.some((o) => Math.abs(o[0] - q[0]) < 1 && Math.abs(o[1] - q[1]) < 1)) out.push(q);
+    }
+    if (out.length) e.pts = out;
+    else none++;
+  }
+  if (none) console.log(`出来事の場所：${none} 件は場所を決められませんでした（パネルでは常に「地図の範囲内」として扱う）`);
+}
 const atlas = {
   generated: new Date().toISOString(),
   range: meta.range,
   certainty: CERTAINTY,
   pieceIds: pieces.map((p) => p.id),
   polities: polities.map(({ _file, home_iso, ...rest }) => rest),
-  regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, ...(r.names ? { names: r.names } : {}), timeline: r.timeline })),
+  regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, ...(r.names ? { names: r.names } : {}), timeline: r.timeline, ...(regionCenter.has(r.id) ? { c: regionCenter.get(r.id) } : {}) })),
   pieceTimelines,
   events: events.map(strip),
   seas,

@@ -162,6 +162,12 @@ indirect の使い道：
   source: "https://ja.wikipedia.org/wiki/オーストリア継承戦争"
 ```
 
+出来事の場所は書かなくてよい。`npm run data` が関係する政体（polities）から代表点を計算して atlas.json に入れ（`pts`）、
+右パネルでは地図に映っている地域の出来事を先に並べる（外のものは「地図の範囲の外」の下に薄く出す）。
+代表点は、その年の首都（cities.yaml の capital）→ 本国（home_iso）の重心 → その年の領域の重心の順。
+アジアの地域別ファイル・ottoman.yaml の出来事は、そのファイルの地域の中の点を優先する（tools/build_data.mjs の FILE_BOX）。
+関係国の書き方で場所がずれる場合（例：植民地の出来事に本国だけを書く）は、現地の政体も polities に入れるとよい。
+
 ## 出典
 
 - 条約名、Wikipedia の記事（URL か「ja.wikipedia: 記事名」）、書籍名などを `source` に書く。

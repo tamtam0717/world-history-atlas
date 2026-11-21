@@ -61,6 +61,8 @@ export interface Region {
   /** 時期による名前（範囲外は name） */
   names?: { from?: number; to?: number; name: string }[];
   timeline: TimelineEntry[];
+  /** 地域の中心 [経度, 緯度]（build_data.mjs が計算。パネルで地図に映っている変化を先に並べる） */
+  c?: [number, number];
 }
 
 export interface HistEvent extends Sourced {
@@ -70,6 +72,8 @@ export interface HistEvent extends Sourced {
   text?: string;
   polities?: string[];
   importance?: number;
+  /** 出来事の代表点 [経度, 緯度] の列（関係国の首都・領域から build_data.mjs が計算） */
+  pts?: [number, number][];
 }
 
 /** [開始年, 所属政体 index, 上位政体 index, 確からしさ index, 地域 index] */

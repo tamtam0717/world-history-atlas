@@ -21,6 +21,8 @@ export const MOVEMENT_KIND_LABEL: Record<string, string> = { thought: "思想・
 export class Panel {
   /** 潮流の小さな曲線（スパークライン）の横軸にする年の範囲 */
   range: [number, number] = [1648, 1815];
+  /** 地図に映っているかを調べる関数を返す（main.ts が地図とつなぐ。地図の準備前は null） */
+  viewProbe: () => ViewProbe | null = () => null;
 
   constructor(
     private polityEl: HTMLElement,
@@ -123,15 +125,18 @@ export class Panel {
       groups.get(it.key)!.push(it);
     }
     let html = "";
+    let k = 0;
     for (const g of groups.values()) {
       const ids = g.map((x) => x.region).join(",");
+      const pts = kind === "political" ? ptsAttr(g.map((x) => this.idx.atlas.regions[x.region]?.c).filter((c): c is [number, number] => !!c)) : "";
+      const sortAttr = kind === "political" ? ` data-k="${k++}" data-imp="0"${pts}` : "";
       if (g.length === 1) {
-        html += `<li class="change" data-rkind="${kind}" data-regions="${ids}"><b>${esc(g[0].name)}</b>：${g[0].body}</li>`;
+        html += `<li class="change" data-rkind="${kind}" data-regions="${ids}"${sortAttr}><b>${esc(g[0].name)}</b>：${g[0].body}</li>`;
         continue;
       }
       // 代表は、いちばん広い地域
       const sorted = [...g].sort((a, b) => this.idx.regionPieceCount(kind, b.region) - this.idx.regionPieceCount(kind, a.region));
-      html += `<li class="change group" data-rkind="${kind}" data-regions="${ids}"><details><summary><b>${esc(sorted[0].name)}</b>ほか<span class="grp-n">${
+      html += `<li class="change group" data-rkind="${kind}" data-regions="${ids}"${sortAttr}><details><summary><b>${esc(sorted[0].name)}</b>ほか<span class="grp-n">${
         g.length - 1
       }</span>地域：${g[0].body}</summary><div class="grp-list">${sorted.map((x) => esc(x.name)).join("、")}</div></details></li>`;
     }
@@ -148,12 +153,13 @@ export class Panel {
     return `<li class="change"><b>${esc(this.idx.regionName(c.region, year))}</b>：${owners}${ov} ${note}${srcList(c.cur)}</li>`;
   }
 
-  private eventLine(e: HistEvent, year: number) {
+  private eventLine(e: HistEvent, year: number, k?: number) {
     const date = e.date && String(e.date).length > 4 ? `<span class="date"><a href="#" class="ylink" data-year="${e.year}">${esc(formatDate(String(e.date)))}</a></span>` : "";
     const ps = (e.polities ?? []).map((p) => this.link(p, year)).join(" ");
     const imp = e.importance ?? 2;
     const img = imp <= 2 ? imageSlot(wikiRefs(e.source), imp === 1 ? "event-wide" : "event", e.title) : "";
-    return `<li class="event imp${imp}">${img}
+    const sortAttr = k == null ? "" : ` data-k="${k}" data-imp="${imp}"${ptsAttr(e.pts)}`;
+    return `<li class="event imp${imp}"${sortAttr}>${img}
       <div class="ev-title">${date}${esc(e.title)}</div>
       ${e.text ? `<div class="ev-text">${escY(e.text)}</div>` : ""}
       ${ps ? `<div class="ev-polities">${ps}</div>` : ""}
@@ -186,7 +192,7 @@ export class Panel {
     const dk = opts.dist ?? null;
     const relChanges = dk ? this.idx.distChangesIn(dk, year) : [];
     let html = `<h2>${year}年の出来事</h2>`;
-    if (events.length) html += `<ul class="events">${events.map((e) => this.eventLine(e, year)).join("")}</ul>`;
+    if (events.length) html += `<ul class="events" data-sort>${events.map((e, k) => this.eventLine(e, year, k)).join("")}</ul>`;
     if (relChanges.length) {
       const regs = this.idx.dist(dk!)!.regions;
       html += `<h3>${DIST_LABEL[dk!]}分布の変化</h3><ul class="changes">${this.groupedChanges(
@@ -201,7 +207,7 @@ export class Panel {
     }
     if (changes.length) {
       const regs = this.idx.atlas.regions;
-      html += `<h3>国境の変化</h3><ul class="changes">${this.groupedChanges(
+      html += `<h3>国境の変化</h3><ul class="changes" data-sort>${this.groupedChanges(
         "political",
         changes.map((c) => ({ name: this.idx.regionName(c.region, year), region: regs.indexOf(c.region), ...this.changeBody(c, year) })),
       )}</ul>`;
@@ -217,7 +223,61 @@ export class Panel {
     }
     html += this.movementsHtml(year, opts.movement ?? null);
     this.eventsEl.innerHTML = html;
+    this.arrangeByView(false);
     hydrateImages(this.eventsEl);
+  }
+
+  /**
+   * 出来事・国境の変化の一覧を、地図に映っている地域のものから先に並べ直す（地図を動かし終えたときにも呼ぶ）。
+   * 映っているもの（重要度順）→「地図の範囲の外」の見出し → 外のもの（重要度順、同じなら画面の中心に近い順）。
+   * 外のものは薄く表示する。並びが変わらなければ何もしない。
+   */
+  arrangeByView(keepScroll = true) {
+    const probe = this.viewProbe();
+    const scroller = keepScroll ? scrollParent(this.eventsEl) : null;
+    const top0 = scroller?.scrollTop ?? 0;
+    let shift = 0;
+    for (const ul of this.eventsEl.querySelectorAll<HTMLUListElement>("ul[data-sort]")) {
+      const lis = [...ul.querySelectorAll<HTMLLIElement>(":scope > li[data-k]")];
+      const items = lis.map((li) => {
+        const pts = parsePts(li.getAttribute("data-pts"));
+        let inView = true;
+        let dist = 0;
+        if (probe && pts.length) {
+          const r = pts.map((p) => probe(p[0], p[1]));
+          inView = r.some((x) => x.inView);
+          dist = Math.min(...r.map((x) => x.dist));
+        }
+        return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist };
+      });
+      const order = [...items].sort((a, b) => {
+        if (a.inView !== b.inView) return a.inView ? -1 : 1;
+        if (a.imp !== b.imp) return a.imp - b.imp;
+        if (!a.inView && Math.abs(a.dist - b.dist) > 1) return a.dist - b.dist;
+        return a.k - b.k;
+      });
+      const nIn = order.filter((x) => x.inView).length;
+      const head = ul.querySelector<HTMLLIElement>(":scope > li.out-head");
+      const key = order.map((x) => x.k).join(",") + "|" + nIn;
+      if (ul.dataset.order === key) continue;
+      ul.dataset.order = key;
+      // 一覧より下を読んでいるときは、一覧の高さの変化だけスクロールを補正する
+      const below = scroller ? ul.getBoundingClientRect().bottom <= scroller.getBoundingClientRect().top : false;
+      const h0 = ul.offsetHeight;
+      head?.remove();
+      order.forEach((x, i) => {
+        if (i === nIn && nIn < order.length) {
+          const h = head ?? document.createElement("li");
+          h.className = "out-head";
+          h.textContent = "地図の範囲の外";
+          ul.appendChild(h);
+        }
+        x.li.classList.toggle("outside", !x.inView);
+        ul.appendChild(x.li);
+      });
+      if (below) shift += ul.offsetHeight - h0;
+    }
+    if (scroller) scroller.scrollTop = top0 + shift;
   }
 
   // ---- この時代の潮流 ----
@@ -452,6 +512,27 @@ function shortUrl(u: string) {
   } catch {
     return u;
   }
+}
+
+export type ViewProbe = (lon: number, lat: number) => { inView: boolean; dist: number };
+
+/** 並べ替え用の代表点の属性（ data-pts="経度,緯度;経度,緯度" ） */
+function ptsAttr(pts: [number, number][] | undefined): string {
+  return pts?.length ? ` data-pts="${pts.map((p) => `${p[0]},${p[1]}`).join(";")}"` : "";
+}
+
+function parsePts(s: string | null): [number, number][] {
+  if (!s) return [];
+  return s.split(";").map((x) => x.split(",").map(Number) as [number, number]);
+}
+
+/** いちばん近い、縦にスクロールする親要素 */
+function scrollParent(el: HTMLElement): HTMLElement | null {
+  for (let p = el.parentElement; p; p = p.parentElement) {
+    const o = getComputedStyle(p).overflowY;
+    if ((o === "auto" || o === "scroll") && p.scrollHeight > p.clientHeight) return p;
+  }
+  return null;
 }
 
 function formatDate(d: string) {

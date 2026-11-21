@@ -1136,6 +1136,35 @@ export class AtlasMap {
     return { lon: c.lng, lat: c.lat, zoom: this.map.getZoom() };
   }
 
+  /**
+   * 地図に映っているかを調べる関数（地図の準備前は null）。
+   * visibleBottom：地図の上端から、見えている部分の下端までのピクセル（省略時は下のシートの最小の高さを除いた範囲）。
+   * 返す関数は、点が画面に映っているか、と画面の中心からの角距離（度）を返す。
+   * 地球儀の裏側（地平線の向こう）は除く。
+   */
+  viewProbe(visibleBottom?: number): ((lon: number, lat: number) => { inView: boolean; dist: number }) | null {
+    if (!this.loaded) return null;
+    const c = this.map.getCenter();
+    const { width } = this.viewSize();
+    // スマホでは下のシートの上端（引き上げたときはその分だけ地図が隠れる）
+    const height = visibleBottom ?? this.viewSize().height;
+    const rad = Math.PI / 180;
+    const lat0 = c.lat * rad;
+    const lon0 = c.lng * rad;
+    return (lon, lat) => {
+      const la = lat * rad;
+      const cosd = Math.sin(lat0) * Math.sin(la) + Math.cos(lat0) * Math.cos(la) * Math.cos(lon * rad - lon0);
+      const dist = Math.acos(Math.max(-1, Math.min(1, cosd))) / rad;
+      if (dist > 85) return { inView: false, dist };
+      const p = this.map.project([lon, lat]);
+      if (p.x < 0 || p.x > width || p.y < 0 || p.y > height) return { inView: false, dist };
+      // 地球儀の地平線の向こうの点も画面内に投影されるので、画面の点から逆に求めた経緯度と比べて除く
+      const back = this.map.unproject(p);
+      const near = Math.abs(back.lat - lat) < 0.5 && Math.abs((((back.lng - lon + 540) % 360) - 180)) < 0.5;
+      return { inView: near, dist };
+    };
+  }
+
   setView(v: { lon: number; lat: number; zoom: number }) {
     this.map.jumpTo({ center: [v.lon, v.lat], zoom: v.zoom });
   }
