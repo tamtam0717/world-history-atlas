@@ -90,7 +90,7 @@
       source: "https://ja.wikipedia.org/wiki/ウクライナ東方カトリック教会"
     - from: 1947
       main: catholic
-      note: 1944–46年の住民交換と1947年のヴィスワ作戦で、正教徒・ギリシア・カトリックのウクライナ人はこの地域からいなくなった。
+      note: 1944–46年の住民交換で、正教徒・ギリシア・カトリックのウクライナ人の大部分がソ連領へ移され、残った人も1947年のヴィスワ作戦でポーランド西部・北部へ移された。
       source: "https://en.wikipedia.org/wiki/Operation_Vistula"
 
 
@@ -939,3 +939,42 @@
       minor: catholic
       note: 1941年に町のユダヤ人のほとんどがドイツ占領下で殺害され、戦後はロシアなどから労働者が移り住んだ（1989年でロシア人約58%）。ロシア系の住民は正教会と古儀式派、ラトヴィア人・ポーランド人はカトリック（地図は伝統的な帰属）。言語（lang_daugavpils）と同じ年で切り替える。
       source: "https://en.wikipedia.org/wiki/Daugavpils"
+
+- id: rel_peipus_old_believers
+  name: ペイプス湖西岸（古儀式派の村）
+  select:
+    pieces: [EST-Mustvee_linn, EST-Kasepem_vald]
+  timeline:
+    - from: 1700
+      main: orthodox
+      minor: lutheran
+      note: 17世紀末から、ロシアの宗教的迫害を逃れた古儀式派（ラスコーリニキ。正教会から分かれた人々なので正教会に数える）がペイプス湖の西岸に村を作った。言語の lang_peipus_russian と同じ範囲。
+      source: "https://en.wikipedia.org/wiki/Russian_Old_Believers_in_Estonia"
+
+- id: rel_nakhichevan_don
+  name: ナヒチェヴァン・ナ・ドヌ（ドン川のアルメニア人の町）
+  select:
+    pieces: [RUS-Myasnikovsky_District]
+  timeline:
+    - from: 1780
+      main: oriental
+      minor: orthodox
+      note: 1779年、クリミアのアルメニア人（アルメニア使徒教会）がエカチェリーナ2世の命でドン川下流に移され、ナヒチェヴァン・ナ・ドヌと周辺の村を作った。言語の lang_nakhichevan_don と同じ範囲・同じ年。
+    - from: 1928
+      main: orthodox
+      minor: oriental
+      note: 1928年にナヒチェヴァン・ナ・ドヌはロストフ・ナ・ドヌに合併された。周辺の村（チャルティルなど）にはアルメニア人が今も多い。
+
+- id: rel_berehove
+  name: ベレホヴェ（ベレグサース）
+  select:
+    pieces: [UKR-Berehove]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: ハンガリー人の町と村。ハンガリー人は改革派（カルヴァン派）が多く、ルシン人はギリシア・カトリック（カトリックに数える）。言語の lang_berehove と同じ範囲。
+    - from: 1949
+      main: reformed
+      minor: orthodox
+      note: 1949年にギリシア・カトリック教会が廃止され、ルシン人の教会は正教会に合同させられた（1989年に復活）。ハンガリー人の改革派は残った。

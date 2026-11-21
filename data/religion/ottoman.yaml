@@ -609,6 +609,10 @@
       main: lutheran
       minor: orthodox
       note: ドイツ系のザクセン人はルター派。周辺の村にはルーマニア人の正教徒が多い。（多数派の判定は要確認）
+    - from: 1800
+      main: orthodox
+      minor: lutheran
+      note: ルーマニア人（正教徒・ギリシア・カトリック）が増え、住民の最大の集団になる（ブラショフ周辺は1910年の調査でルーマニア人・ハンガリー人・ドイツ人がほぼ3分の1ずつ）。言語（lang_saxon_brasov）と同じ年。シビウは rel_saxon_sibiu（1750年）。要確認
     - from: 1990
       main: orthodox
       note: ザクセン人（ルター派）は1970–80年代と1990年前後に大部分が西ドイツへ移った。
@@ -1044,9 +1048,13 @@
     pieces: [GEO-Kvemo_Kartli]
   timeline:
     - from: 1648
+      main: shia
+      minor: orthodox
+      note: ボルチャロのトルコ系遊牧民（シーア派）が多い。19世紀にはアルメニア人・ギリシア人（東方諸教会・正教会）・ドイツ人の入植地も作られた。言語（lang_borchalo）と同じくアゼルバイジャン人を多数とする。（比率は要確認）
+    - from: 2000
       main: orthodox
       minor: shia
-      note: ボルチャロのトルコ系遊牧民（シーア派）が多い。（比率は要確認）
+      note: ジョージア人の移住とアゼルバイジャン人・アルメニア人・ギリシア人の流出で、2002年の調査でジョージア人とアゼルバイジャン人がほぼ同数（約45%ずつ）、2014年はジョージア人約51%、アゼルバイジャン人約41%。年は目安。
 
 - id: rel_samtskhe_adjara
   name: サムツヘ（アハルツィヘ）・アジャリア
@@ -1142,6 +1150,20 @@
       main: oriental
       note: アゼルバイジャン人の一部は1948–50年にアゼルバイジャンへ移され（全体で1959年に約6%、1989年に約2.5%）、残りもナゴルノ・カラバフ紛争（1988–94）で去った。言語（lang_armenia）と同じ年で切り替える。
       source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+
+- id: rel_kars
+  name: カルス
+  select:
+    pieces: [TUR-Kars]
+  timeline:
+    - from: 1880
+      main: sunni
+      minor: oriental
+      note: ベルリン条約（1878）でロシア領（カルス州）。オスマン領のアルメニア人やギリシア人・ロシア人（モロカン派など）が入植した（1897年でアルメニア人約24%）。ロシア領だったので1915年のアルメニア人虐殺の時点ではアルメニア人が残った。
+    - from: 1920
+      main: sunni
+      note: 1918年にオスマン帝国、次いでアルメニア共和国。1920年のトルコ＝アルメニア戦争でトルコが取り、1921年のカルス条約で確定した。アルメニア人とロシア系・ギリシア系の住民は去った。言語（lang_kars）と同じ年。
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Kars"
 
 - id: rel_nakhchivan
   name: ナヒチェヴァン
@@ -1334,3 +1356,37 @@
       minor: sunni
       note: 1967年の第3次中東戦争で東エルサレムをイスラエルが占領・併合した（国際的には認められていない）。東エルサレムのパレスチナ人（ムスリム・キリスト教徒）は地区の人口の約3分の1。
       source: "https://ja.wikipedia.org/wiki/エルサレム"
+
+- id: rel_vojvodina_slovak_petrovac
+  name: バチュキ・ペトロヴァツ（スロヴァキア人の入植地）
+  select:
+    pieces: [SRB-Backi_Petrovac_Municipality]
+  timeline:
+    - from: 1750
+      main: lutheran
+      minor: orthodox
+      note: 1745年にルター派のスロヴァキア人が入植した。言語の lang_backi_petrovac と同じ範囲。
+
+- id: rel_vojvodina_slovak_kovacica
+  name: コヴァチツァ（バナトのスロヴァキア人の村）
+  select:
+    pieces: [SRB-Kovacica_Municipality]
+  timeline:
+    - from: 1800
+      main: lutheran
+      minor: orthodox
+      note: コヴァチツァ・パディナはルター派のスロヴァキア人、ウズディンは正教徒のルーマニア人の村。言語の lang_kovacica と同じ範囲。要確認
+
+- id: rel_eordaia
+  name: エオルダイア（カイラリア）
+  select:
+    pieces: [GRC-Eordaia]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: プトレマイダ（カイラル）周辺はトルコ人（ムスリム）の村が多かった。スラヴ語・ギリシア語の正教徒の村もある。言語の lang_eordaia と同じ範囲。
+    - from: 1923
+      main: orthodox
+      note: 1923年の住民交換でムスリムの住民がトルコへ移され、小アジアからのギリシア人難民が入植した（プトレマイダ）。
+      source: "https://en.wikipedia.org/wiki/Population_exchange_between_Greece_and_Turkey"
