@@ -990,14 +990,26 @@
       owner: "usa"
       certainty: "nominal"
       label: "未組織地"
-    - from: 1846
+    - from: 1854
       owner: "usa"
       certainty: "nominal"
-      label: "オレゴン・カントリー"
-    - from: 1848
+      label: "ネブラスカ準州"
+      cause: "カンザス・ネブラスカ法でネブラスカ準州が置かれる（大陸分水嶺の東、北緯49度まで）"
+    - from: 1861
       owner: "usa"
       certainty: "nominal"
-      label: "未組織地"
+      label: "ダコタ準州"
+      cause: "ダコタ準州が置かれる（モンタナ・ワイオミングの東部を含む）"
+    - from: 1863
+      owner: "usa"
+      certainty: "nominal"
+      label: "アイダホ準州"
+      cause: "アイダホ準州が置かれる（モンタナ・ワイオミングの全域を含む）"
+    - from: 1864
+      owner: "usa"
+      certainty: "nominal"
+      label: "ダコタ準州"
+      cause: "モンタナ準州が分かれ、ワイオミングはダコタ準州に戻る"
     - from: 1868
       owner: "usa"
       label: "ワイオミング準州"
@@ -1263,11 +1275,10 @@
     - from: 1754
       owner: "france"
       label: "ヌーヴェル・フランス（デュケーヌ砦）"
-      cause: "フランスがオハイオ川の分岐点にデュケーヌ砦を築く（フレンチ・インディアン戦争の始まり）"
+      cause: "フランスがオハイオ川の分岐点にデュケーヌ砦を築く（フレンチ＝インディアン戦争の始まり）"
       source: "https://ja.wikipedia.org/wiki/デュケーヌ砦"
     - from: 1758
       owner: "britain"
-      certainty: "nominal"
       label: "ペンシルヴェニア植民地"
       cause: "イギリス軍がデュケーヌ砦を奪い、ピット砦とする"
       source: "https://ja.wikipedia.org/wiki/デュケーヌ砦"
@@ -1493,7 +1504,8 @@
       source: ["https://ja.wikipedia.org/wiki/パリ条約_(1763年)", "https://ja.wikipedia.org/wiki/1763年宣言"]
     - from: 1775
       owner: "britain"
-      label: "トランシルヴェニア植民地"
+      label: "トランシルヴェニア会社の入植地（ブーンズボロ）"
+      note: "トランシルヴェニア会社の植民地はイギリス政府に認められず、ヴァージニアも土地の購入を無効とした"
       cause: "ハロッズバーグ・ブーンズボロが建設され、トランシルヴェニア会社がチェロキーから土地を買う（サイカモア・ショールズ条約）"
       source: "https://ja.wikipedia.org/wiki/トランシルヴェニア植民地"
     - from: 1776
@@ -1620,7 +1632,7 @@
 - id: us_tx_austin
   name: "テキサス中部・沿岸（オースティンの植民地）"
   select:
-    pieces: [USA-Anderson_TX, USA-Travis_TX, USA-Williamson_TX, USA-Aransas_TX, USA-Austin_TX, USA-Bandera_TX, USA-Bastrop_TX, USA-Bee_TX, USA-Brazoria_TX, USA-Brazos_TX, USA-Burleson_TX, USA-Caldwell_TX, USA-Calhoun_TX, USA-Chambers_TX, USA-Collin_TX, USA-Colorado_TX, USA-Cooke_TX, USA-Dallas_TX, USA-DeWitt_TX, USA-Delta_TX, USA-Denton_TX, USA-Ellis_TX, USA-Falls_TX, USA-Fannin_TX, USA-Fayette_TX, USA-Fort_Bend_TX, USA-Freestone_TX, USA-Frio_TX, USA-Galveston_TX, USA-Gonzales_TX, USA-Grayson_TX, USA-Grimes_TX, USA-Hardin_TX, USA-Harris_TX, USA-Hays_TX, USA-Henderson_TX, USA-Hill_TX, USA-Hunt_TX, USA-Jackson_TX, USA-Jefferson_TX, USA-Kaufman_TX, USA-Kendall_TX, USA-Kerr_TX, USA-Lavaca_TX, USA-Lee_TX, USA-Leon_TX, USA-Liberty_TX, USA-Limestone_TX, USA-Live_Oak_TX, USA-Madison_TX, USA-Matagorda_TX, USA-McLennan_TX, USA-Medina_TX, USA-Milam_TX, USA-Montgomery_TX, USA-Navarro_TX, USA-Orange_TX, USA-Rains_TX, USA-Real_TX, USA-Robertson_TX, USA-Rockwall_TX, USA-San_Jacinto_TX, USA-San_Patricio_TX, USA-Tarrant_TX, USA-Uvalde_TX, USA-Van_Zandt_TX, USA-Waller_TX, USA-Washington_TX, USA-Wharton_TX]
+    pieces: [USA-Anderson_TX, USA-Travis_TX, USA-Williamson_TX, USA-Aransas_TX, USA-Austin_TX, USA-Bandera_TX, USA-Bastrop_TX, USA-Bee_TX, USA-Brazoria_TX, USA-Brazos_TX, USA-Burleson_TX, USA-Caldwell_TX, USA-Calhoun_TX, USA-Chambers_TX, USA-Collin_TX, USA-Colorado_TX, USA-Cooke_TX, USA-Dallas_TX, USA-DeWitt_TX, USA-Delta_TX, USA-Denton_TX, USA-Ellis_TX, USA-Falls_TX, USA-Fannin_TX, USA-Fayette_TX, USA-Fort_Bend_TX, USA-Freestone_TX, USA-Frio_TX, USA-Gonzales_TX, USA-Grayson_TX, USA-Grimes_TX, USA-Hardin_TX, USA-Harris_TX, USA-Hays_TX, USA-Henderson_TX, USA-Hill_TX, USA-Hunt_TX, USA-Jackson_TX, USA-Jefferson_TX, USA-Kaufman_TX, USA-Kendall_TX, USA-Kerr_TX, USA-Lavaca_TX, USA-Lee_TX, USA-Leon_TX, USA-Liberty_TX, USA-Limestone_TX, USA-Live_Oak_TX, USA-Madison_TX, USA-Matagorda_TX, USA-McLennan_TX, USA-Medina_TX, USA-Milam_TX, USA-Montgomery_TX, USA-Navarro_TX, USA-Orange_TX, USA-Rains_TX, USA-Real_TX, USA-Robertson_TX, USA-Rockwall_TX, USA-San_Jacinto_TX, USA-San_Patricio_TX, USA-Tarrant_TX, USA-Uvalde_TX, USA-Van_Zandt_TX, USA-Waller_TX, USA-Washington_TX, USA-Wharton_TX]
   timeline:
     - from: 1648
       owner: "spain"
@@ -1651,6 +1663,55 @@
       owner: "csa"
       cause: "合衆国から脱退し、アメリカ連合国（南部連合）に加わる"
       source: "https://ja.wikipedia.org/wiki/アメリカ連合国"
+    - from: 1865
+      owner: "usa"
+      cause: "南北戦争が終わり、南部連合が崩壊する（4–5月）"
+      source: "https://ja.wikipedia.org/wiki/南北戦争"
+
+- id: us_tx_austin_galveston
+  name: "ガルヴェストン"
+  select:
+    pieces: [USA-Galveston_TX]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "テハス（ヌエバ・エスパーニャ副王領）"
+      note: "1685–89年にフランスのラ・サールがマタゴルダ湾に砦を置いた"
+      source: "https://ja.wikipedia.org/wiki/スペイン領テキサス"
+    - from: 1821
+      owner: "mexico"
+      certainty: "nominal"
+      label: "コアウイラ・イ・テハス州"
+      cause: "メキシコの独立"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1825
+      owner: "mexico"
+      label: "コアウイラ・イ・テハス州"
+      cause: "スティーヴン・オースティンらの植民地にアメリカ人が入植する"
+      source: "https://ja.wikipedia.org/wiki/スティーブン・オースティン"
+    - from: 1836
+      owner: "texas"
+      cause: "テキサスが独立を宣言し（3月）、サン・ハシントの戦いでメキシコ軍を破る（4月）"
+      source: "https://ja.wikipedia.org/wiki/テキサス共和国"
+    - from: 1845
+      owner: "usa"
+      cause: "テキサス併合（12月29日、28番目の州）"
+      source: "https://ja.wikipedia.org/wiki/テキサス併合"
+    - from: 1861
+      owner: "csa"
+      cause: "合衆国から脱退し、アメリカ連合国（南部連合）に加わる"
+      source: "https://ja.wikipedia.org/wiki/アメリカ連合国"
+    - from: 1862
+      owner: "usa"
+      certainty: "occupied"
+      label: "北軍の占領地"
+      cause: "北軍がガルヴェストンを占領する（10月。1863年1月1日のガルヴェストンの戦いで南軍が取り戻す）"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Galveston_(1863)"
+    - from: 1863
+      owner: "csa"
+      cause: "ガルヴェストンの戦い（1月1日）で南軍が取り戻す"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Galveston_(1863)"
     - from: 1865
       owner: "usa"
       cause: "南北戦争が終わり、南部連合が崩壊する（4–5月）"
@@ -2045,10 +2106,16 @@
       source: "https://ja.wikipedia.org/wiki/ニューオーリンズ"
     - from: 1763
       owner: "spain"
+      certainty: "nominal"
       label: "ルイジアナ（スペイン領）"
       cause: "フォンテーヌブロー条約（1762年）でスペイン領になる（スペインの統治は1766–69年から）"
       note: "1800年のサン・イルデフォンソ条約でフランスに返されたが、実際の統治は1803年までスペインが続けた"
       source: "https://ja.wikipedia.org/wiki/フォンテーヌブロー条約_(1762年)"
+    - from: 1766
+      owner: "spain"
+      label: "ルイジアナ（スペイン領）"
+      cause: "スペインの総督ウリョーアが着任する（1768年に追われ、1769年にオライリーが統治を固める）"
+      source: "https://ja.wikipedia.org/wiki/ルイジアナ_(ヌーベル・エスパーニャ)"
     - from: 1803
       owner: "usa"
       label: "オーリンズ準州"
@@ -2091,10 +2158,16 @@
       source: "https://ja.wikipedia.org/wiki/ニューオーリンズ"
     - from: 1763
       owner: "spain"
+      certainty: "nominal"
       label: "ルイジアナ（スペイン領）"
       cause: "フォンテーヌブロー条約（1762年）でスペイン領になる（スペインの統治は1766–69年から）"
       note: "1800年のサン・イルデフォンソ条約でフランスに返されたが、実際の統治は1803年までスペインが続けた"
       source: "https://ja.wikipedia.org/wiki/フォンテーヌブロー条約_(1762年)"
+    - from: 1766
+      owner: "spain"
+      label: "ルイジアナ（スペイン領）"
+      cause: "スペインの総督ウリョーアが着任する（1768年に追われ、1769年にオライリーが統治を固める）"
+      source: "https://ja.wikipedia.org/wiki/ルイジアナ_(ヌーベル・エスパーニャ)"
     - from: 1803
       owner: "usa"
       label: "オーリンズ準州"
@@ -2569,7 +2642,6 @@
       cause: "米作の農園が広がる"
     - from: 1712
       owner: "britain"
-      certainty: "nominal"
       label: "サウスカロライナ植民地"
       source: "https://ja.wikipedia.org/wiki/サウスカロライナ植民地"
     - from: 1776
@@ -2608,7 +2680,6 @@
       cause: "米作の農園が広がる"
     - from: 1712
       owner: "britain"
-      certainty: "nominal"
       label: "サウスカロライナ植民地"
       source: "https://ja.wikipedia.org/wiki/サウスカロライナ植民地"
     - from: 1776
@@ -3136,7 +3207,6 @@
       source: "https://ja.wikipedia.org/wiki/テネシー州"
     - from: 1806
       owner: "usa"
-      label: "南西部領地"
       cause: "チェロキー・チカソーが土地を譲る（1805–06年）"
     - from: 1861
       owner: "csa"
@@ -3156,7 +3226,6 @@
       source: "https://ja.wikipedia.org/wiki/南北戦争"
     - from: 1865
       owner: "usa"
-      label: "南西部領地"
       cause: "南北戦争が終わり、南部連合が崩壊する（4–5月）"
       source: "https://ja.wikipedia.org/wiki/南北戦争"
 
@@ -3490,7 +3559,6 @@
       cause: "ヴァージニアからの入植者がアルベマール湾に住む"
     - from: 1712
       owner: "britain"
-      certainty: "nominal"
       label: "ノースカロライナ植民地"
       note: "1712年に南北の総督が分かれ、1729年に王領植民地になった"
       source: "https://ja.wikipedia.org/wiki/ノースカロライナ植民地"
@@ -3522,7 +3590,6 @@
       cause: "ヴァージニアからの入植者がアルベマール湾に住む"
     - from: 1712
       owner: "britain"
-      certainty: "nominal"
       label: "ノースカロライナ植民地"
       note: "1712年に南北の総督が分かれ、1729年に王領植民地になった"
       source: "https://ja.wikipedia.org/wiki/ノースカロライナ植民地"
@@ -3560,7 +3627,6 @@
       cause: "ヴァージニアからの入植者がアルベマール湾に住む"
     - from: 1712
       owner: "britain"
-      certainty: "nominal"
       label: "ノースカロライナ植民地"
       note: "1712年に南北の総督が分かれ、1729年に王領植民地になった"
       source: "https://ja.wikipedia.org/wiki/ノースカロライナ植民地"
@@ -3654,14 +3720,6 @@
       owner: "usa"
       certainty: "nominal"
       label: "未組織地"
-    - from: 1846
-      owner: "usa"
-      certainty: "nominal"
-      label: "オレゴン・カントリー"
-    - from: 1848
-      owner: "usa"
-      certainty: "nominal"
-      label: "オレゴン準州"
     - from: 1850
       owner: "lakota"
       certainty: "uncertain"
@@ -3709,22 +3767,21 @@
       owner: "usa"
       certainty: "nominal"
       label: "未組織地"
-    - from: 1846
+    - from: 1854
       owner: "usa"
       certainty: "nominal"
-      label: "オレゴン・カントリー"
-    - from: 1848
+      label: "ネブラスカ準州"
+      cause: "カンザス・ネブラスカ法でネブラスカ準州が置かれる（大陸分水嶺の東、北緯49度まで）"
+    - from: 1861
       owner: "usa"
       certainty: "nominal"
-      label: "オレゴン準州"
-    - from: 1853
-      owner: "usa"
-      certainty: "nominal"
-      label: "ワシントン準州"
+      label: "ダコタ準州"
+      cause: "ダコタ準州が置かれる（モンタナ・ワイオミングの東部を含む）"
     - from: 1863
       owner: "usa"
       certainty: "nominal"
       label: "アイダホ準州"
+      cause: "アイダホ準州が置かれる（モンタナ・ワイオミングの全域を含む）"
     - from: 1864
       owner: "usa"
       certainty: "nominal"
@@ -3938,7 +3995,6 @@
       source: "https://ja.wikipedia.org/wiki/ケンタッキー州"
     - from: 1795
       owner: "usa"
-      label: "ケンタッキー郡（ヴァージニア州）"
       cause: "入植が進む"
 
 - id: us_pa_1769
@@ -4132,22 +4188,21 @@
       owner: "usa"
       certainty: "nominal"
       label: "未組織地"
-    - from: 1846
+    - from: 1854
       owner: "usa"
       certainty: "nominal"
-      label: "オレゴン・カントリー"
-    - from: 1848
+      label: "ネブラスカ準州"
+      cause: "カンザス・ネブラスカ法でネブラスカ準州が置かれる（大陸分水嶺の東、北緯49度まで）"
+    - from: 1861
       owner: "usa"
       certainty: "nominal"
-      label: "オレゴン準州"
-    - from: 1853
-      owner: "usa"
-      certainty: "nominal"
-      label: "ワシントン準州"
+      label: "ダコタ準州"
+      cause: "ダコタ準州が置かれる（モンタナ・ワイオミングの東部を含む）"
     - from: 1863
       owner: "usa"
       certainty: "nominal"
       label: "アイダホ準州"
+      cause: "アイダホ準州が置かれる（モンタナ・ワイオミングの全域を含む）"
     - from: 1864
       owner: "usa"
       label: "モンタナ準州"
@@ -4269,11 +4324,11 @@
       label: "東フロリダ"
       cause: "パリ条約でスペインがフロリダをイギリスに譲る"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
-    - from: 1783
+    - from: 1784
       owner: "spain"
       certainty: "nominal"
       label: "東フロリダ（スペイン領）"
-      cause: "パリ条約でフロリダがスペインに返される"
+      cause: "パリ条約（1783年）でフロリダがスペインに返される（東フロリダの引き渡しは1784年7月）"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
     - from: 1821
       owner: "usa"
@@ -4517,7 +4572,6 @@
       label: "ニュージャージー植民地"
     - from: 1702
       owner: "britain"
-      certainty: "nominal"
       label: "ニュージャージー植民地"
     - from: 1776
       owner: "usa"
@@ -4816,14 +4870,6 @@
       certainty: "nominal"
       label: "ミズーリ準州"
     - from: 1821
-      owner: "usa"
-      certainty: "nominal"
-      label: "未組織地"
-    - from: 1846
-      owner: "usa"
-      certainty: "nominal"
-      label: "オレゴン・カントリー"
-    - from: 1848
       owner: "usa"
       certainty: "nominal"
       label: "未組織地"
@@ -5265,10 +5311,10 @@
       label: "東フロリダ"
       cause: "パリ条約でスペインがフロリダをイギリスに譲る"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
-    - from: 1783
+    - from: 1784
       owner: "spain"
       label: "東フロリダ（スペイン領）"
-      cause: "パリ条約でフロリダがスペインに返される"
+      cause: "パリ条約（1783年）でフロリダがスペインに返される（東フロリダの引き渡しは1784年7月）"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
     - from: 1821
       owner: "usa"
@@ -5301,10 +5347,10 @@
       label: "東フロリダ"
       cause: "パリ条約でスペインがフロリダをイギリスに譲る"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
-    - from: 1783
+    - from: 1784
       owner: "spain"
       label: "東フロリダ（スペイン領）"
-      cause: "パリ条約でフロリダがスペインに返される"
+      cause: "パリ条約（1783年）でフロリダがスペインに返される（東フロリダの引き渡しは1784年7月）"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
     - from: 1821
       owner: "usa"
@@ -5343,10 +5389,10 @@
       label: "東フロリダ"
       cause: "パリ条約でスペインがフロリダをイギリスに譲る"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
-    - from: 1783
+    - from: 1784
       owner: "spain"
       label: "東フロリダ（スペイン領）"
-      cause: "パリ条約でフロリダがスペインに返される"
+      cause: "パリ条約（1783年）でフロリダがスペインに返される（東フロリダの引き渡しは1784年7月）"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
     - from: 1821
       owner: "usa"
@@ -5490,7 +5536,7 @@
       owner: "britain"
       certainty: "nominal"
       label: "ニューヨーク植民地"
-      cause: "フレンチ・インディアン戦争でイギリス軍がタイコンデロガ・クラウン・ポイントを奪う"
+      cause: "フレンチ＝インディアン戦争でイギリス軍がタイコンデロガ・クラウン・ポイントを奪う"
       source: "https://ja.wikipedia.org/wiki/フレンチ・インディアン戦争"
     - from: 1776
       owner: "usa"
@@ -5562,10 +5608,11 @@
       certainty: "nominal"
       label: "マリアナ諸島（スペイン領東インド）"
       source: "https://ja.wikipedia.org/wiki/北マリアナ諸島"
-    - from: 1668
+    - from: 1695
       owner: "spain"
       label: "マリアナ諸島（スペイン領東インド）"
-      cause: "スペインがマリアナ諸島の布教を始める"
+      note: "スペインのマリアナ諸島の布教は1668年にグアムで始まった"
+      cause: "スペイン軍がチャモロの抵抗を抑え、サイパン・テニアンなど北部の島々を押さえる（住民はグアムなどに移された）"
     - from: 1899
       owner: "german_empire"
       label: "ドイツ領ニューギニア（マリアナ諸島）"
@@ -6392,12 +6439,10 @@
       label: "ニュージャージー植民地"
     - from: 1674
       owner: "britain"
-      certainty: "nominal"
       label: "東ジャージー"
       note: "1674年から東ジャージー（ニューヨーク寄り）と西ジャージー（クエーカー教徒の植民地）に分かれた"
     - from: 1702
       owner: "britain"
-      certainty: "nominal"
       label: "ニュージャージー植民地"
     - from: 1776
       owner: "usa"
@@ -6431,13 +6476,11 @@
       source: "https://ja.wikipedia.org/wiki/ウェストミンスター条約_(1674年)"
     - from: 1674
       owner: "britain"
-      certainty: "nominal"
       label: "東ジャージー"
       cause: "ウェストミンスター条約でイギリスに返される"
       source: "https://ja.wikipedia.org/wiki/ウェストミンスター条約_(1674年)"
     - from: 1702
       owner: "britain"
-      certainty: "nominal"
       label: "ニュージャージー植民地"
     - from: 1776
       owner: "usa"
@@ -6513,11 +6556,11 @@
       label: "東フロリダ"
       cause: "パリ条約でスペインがフロリダをイギリスに譲る"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
-    - from: 1783
+    - from: 1784
       owner: "spain"
       certainty: "nominal"
       label: "東フロリダ（スペイン領）"
-      cause: "パリ条約でフロリダがスペインに返される"
+      cause: "パリ条約（1783年）でフロリダがスペインに返される（東フロリダの引き渡しは1784年7月）"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
     - from: 1821
       owner: "usa"
@@ -6713,7 +6756,6 @@
       label: "ニュージャージー植民地"
     - from: 1702
       owner: "britain"
-      certainty: "nominal"
       label: "ニュージャージー植民地"
     - from: 1776
       owner: "usa"
@@ -6919,9 +6961,14 @@
       source: "https://ja.wikipedia.org/wiki/ハワイ王国"
     - from: 1898
       owner: "usa"
-      label: "ハワイ準州"
+      label: "ハワイ（合衆国が併合）"
       cause: "アメリカ合衆国がハワイを併合する（7月）"
       source: "https://ja.wikipedia.org/wiki/ハワイ併合"
+    - from: 1900
+      owner: "usa"
+      label: "ハワイ準州"
+      cause: "ハワイ基本法（組織法）でハワイ準州が置かれる"
+      source: "https://ja.wikipedia.org/wiki/ハワイ準州"
     - from: 1959
       owner: "usa"
 
@@ -7018,10 +7065,34 @@
       label: "イリノイ郡（ヴァージニア州）"
       cause: "ジョージ・ロジャーズ・クラークがカスカスキアを占領する"
       source: "https://ja.wikipedia.org/wiki/ジョージ・ロジャーズ・クラーク"
-    - from: 1819
+    - from: 1783
       owner: "usa"
-      label: "イリノイ郡（ヴァージニア州）"
-      cause: "入植が進む（1832年のブラック・ホーク戦争で北部も開かれる）"
+      certainty: "nominal"
+      cause: "パリ条約でアメリカ合衆国の領土になる（ヴァージニアは1784年に北西部の領有権を連邦に譲る）"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
+    - from: 1787
+      owner: "usa"
+      certainty: "nominal"
+      label: "北西部領地"
+      cause: "北西部条例で北西部領地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/北西部領地"
+    - from: 1800
+      owner: "usa"
+      certainty: "nominal"
+      label: "インディアナ準州"
+      cause: "北西部領地の西部がインディアナ準州になる"
+      source: "https://ja.wikipedia.org/wiki/インディアナ準州"
+    - from: 1809
+      owner: "usa"
+      certainty: "nominal"
+      label: "イリノイ準州"
+      cause: "インディアナ準州からイリノイ準州が分かれる"
+      source: "https://ja.wikipedia.org/wiki/イリノイ準州"
+    - from: 1818
+      owner: "usa"
+      cause: "21番目の州（イリノイ州）になる（12月）"
+      note: "南部から入植が進み、北部は1832年のブラック・ホーク戦争の後に開かれた"
+      source: "https://ja.wikipedia.org/wiki/イリノイ州"
 
 - id: us_ca_desert
   name: "カリフォルニア南東部（砂漠地帯）"
@@ -7084,11 +7155,28 @@
       label: "イリノイ郡（ヴァージニア州）"
       cause: "ジョージ・ロジャーズ・クラークがヴィンセンズを占領する"
       source: "https://ja.wikipedia.org/wiki/ジョージ・ロジャーズ・クラーク"
-    - from: 1818
+    - from: 1783
       owner: "usa"
-      label: "イリノイ郡（ヴァージニア州）"
-      cause: "セントメアリーズ条約（1818年）などで先住民が中部の土地を譲る"
-      note: "1811年にティペカヌーの戦いで、ショーニーのテカムセの連合が敗れた"
+      certainty: "nominal"
+      cause: "パリ条約でアメリカ合衆国の領土になる（ヴァージニアは1784年に北西部の領有権を連邦に譲る）"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
+    - from: 1787
+      owner: "usa"
+      certainty: "nominal"
+      label: "北西部領地"
+      cause: "北西部条例で北西部領地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/北西部領地"
+    - from: 1800
+      owner: "usa"
+      certainty: "nominal"
+      label: "インディアナ準州"
+      cause: "北西部領地の西部がインディアナ準州になる"
+      source: "https://ja.wikipedia.org/wiki/インディアナ準州"
+    - from: 1816
+      owner: "usa"
+      cause: "19番目の州（インディアナ州）になる（12月）"
+      note: "中部・北部の先住民の土地は、セントメアリーズ条約（1818年）などで譲られた"
+      source: "https://ja.wikipedia.org/wiki/インディアナ州"
 
 - id: us_ia
   name: "アイオワ"
@@ -7206,7 +7294,22 @@
     - from: 1848
       owner: "usa"
       certainty: "nominal"
-      label: "未組織地"
+      label: "オレゴン準州"
+    - from: 1859
+      owner: "usa"
+      certainty: "nominal"
+      label: "ワシントン準州"
+      cause: "オレゴンの州昇格で、残りがワシントン準州に入る"
+    - from: 1863
+      owner: "usa"
+      certainty: "nominal"
+      label: "アイダホ準州"
+      cause: "アイダホ準州が置かれる（モンタナ・ワイオミングの全域を含む）"
+    - from: 1864
+      owner: "usa"
+      certainty: "nominal"
+      label: "ダコタ準州"
+      cause: "モンタナ準州が分かれ、ワイオミングはダコタ準州に戻る"
     - from: 1868
       owner: "usa"
       certainty: "nominal"
@@ -7464,15 +7567,17 @@
       cause: "ケベック法でオハイオ川以北がケベック植民地に入る"
       source: "https://ja.wikipedia.org/wiki/ケベック法"
     - from: 1783
-      owner: "usa"
-      certainty: "nominal"
-      cause: "パリ条約でアメリカ合衆国の領土になる"
-      note: "デトロイト・マキノーなどの砦には、1796年（ジェイ条約）までイギリス軍が残った"
+      owner: "britain"
+      certainty: "uncertain"
+      label: "デトロイト（ジェイ条約までイギリス軍が駐留）"
+      cause: "パリ条約で合衆国領と決まるが、イギリス軍はデトロイトの砦を手放さない"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
-    - from: 1787
+    - from: 1796
       owner: "usa"
       certainty: "nominal"
       label: "北西部領地"
+      cause: "ジェイ条約でイギリス軍がデトロイトの砦を引き渡す"
+      source: "https://ja.wikipedia.org/wiki/ジェイ条約"
     - from: 1800
       owner: "usa"
       certainty: "nominal"
@@ -7531,15 +7636,17 @@
       cause: "ケベック法でオハイオ川以北がケベック植民地に入る"
       source: "https://ja.wikipedia.org/wiki/ケベック法"
     - from: 1783
-      owner: "usa"
-      certainty: "nominal"
-      cause: "パリ条約でアメリカ合衆国の領土になる"
-      note: "デトロイト・マキノーなどの砦には、1796年（ジェイ条約）までイギリス軍が残った"
+      owner: "britain"
+      certainty: "uncertain"
+      label: "マキナック（ジェイ条約までイギリス軍が駐留）"
+      cause: "パリ条約で合衆国領と決まるが、イギリス軍はマキナックの砦を手放さない"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
-    - from: 1787
+    - from: 1796
       owner: "usa"
       certainty: "nominal"
       label: "北西部領地"
+      cause: "ジェイ条約でイギリス軍がマキナックの砦を引き渡す"
+      source: "https://ja.wikipedia.org/wiki/ジェイ条約"
     - from: 1800
       owner: "usa"
       certainty: "nominal"
@@ -7548,6 +7655,18 @@
       owner: "usa"
       certainty: "nominal"
       label: "ミシガン準州"
+    - from: 1812
+      owner: "britain"
+      certainty: "occupied"
+      label: "マキナック島（イギリス軍の占領）"
+      cause: "米英戦争でイギリス軍がマキナック砦を奪う（7月）"
+      source: "https://ja.wikipedia.org/wiki/米英戦争"
+    - from: 1815
+      owner: "usa"
+      certainty: "nominal"
+      label: "ミシガン準州"
+      cause: "ガン条約（1814年12月）で返される"
+      source: "https://ja.wikipedia.org/wiki/ガン条約"
     - from: 1836
       owner: "usa"
       certainty: "nominal"
@@ -7566,6 +7685,7 @@
   timeline:
     - from: 1648
       owner: null
+      note: "セントルイス（1764年）・サント・ジュヌヴィエーヴ（1750年ごろ）などフランス系の町はあったが、ピースが州全体なので1803年まで nominal にした"
     - from: 1682
       owner: "france"
       certainty: "nominal"
@@ -7608,11 +7728,11 @@
       label: "東フロリダ"
       cause: "パリ条約でスペインがフロリダをイギリスに譲る"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
-    - from: 1783
+    - from: 1784
       owner: "spain"
       certainty: "nominal"
       label: "東フロリダ（スペイン領）"
-      cause: "パリ条約でフロリダがスペインに返される"
+      cause: "パリ条約（1783年）でフロリダがスペインに返される（東フロリダの引き渡しは1784年7月）"
       source: "https://ja.wikipedia.org/wiki/パリ条約_(1783年)"
     - from: 1821
       owner: "usa"
@@ -7643,7 +7763,7 @@
       certainty: "nominal"
       label: "アルタ・カリフォルニア（ヌエバ・エスパーニャ副王領）"
       source: "https://ja.wikipedia.org/wiki/アルタ・カリフォルニア"
-    - from: 1771
+    - from: 1770
       owner: "spain"
       label: "アルタ・カリフォルニア（ヌエバ・エスパーニャ副王領）"
       cause: "スペインの伝道所が海岸に並ぶ（モントレー 1770年、サンガブリエル 1771年）"
@@ -7720,10 +7840,16 @@
       source: "https://ja.wikipedia.org/wiki/ナキトーシュ_(ルイジアナ州)"
     - from: 1763
       owner: "spain"
+      certainty: "nominal"
       label: "ルイジアナ（スペイン領）"
       cause: "フォンテーヌブロー条約（1762年）でスペイン領になる（スペインの統治は1766–69年から）"
       note: "1800年のサン・イルデフォンソ条約でフランスに返されたが、実際の統治は1803年までスペインが続けた"
       source: "https://ja.wikipedia.org/wiki/フォンテーヌブロー条約_(1762年)"
+    - from: 1766
+      owner: "spain"
+      label: "ルイジアナ（スペイン領）"
+      cause: "スペインの総督ウリョーアが着任する（1768年に追われ、1769年にオライリーが統治を固める）"
+      source: "https://ja.wikipedia.org/wiki/ルイジアナ_(ヌーベル・エスパーニャ)"
     - from: 1803
       owner: "usa"
       label: "オーリンズ準州"
@@ -7986,6 +8112,16 @@
       owner: "usa"
       cause: "ジェイ条約でイギリス軍が砦を引き渡す"
       source: "https://ja.wikipedia.org/wiki/ジェイ条約"
+    - from: 1813
+      owner: "britain"
+      certainty: "occupied"
+      label: "ナイアガラ砦（イギリス軍の占領）"
+      cause: "米英戦争でイギリス軍がナイアガラ砦を奪う（12月）"
+      source: "https://ja.wikipedia.org/wiki/米英戦争"
+    - from: 1815
+      owner: "usa"
+      cause: "ガン条約（1814年12月）で返される"
+      source: "https://ja.wikipedia.org/wiki/ガン条約"
 
 - id: us_or
   name: "オレゴン"

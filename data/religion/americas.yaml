@@ -150,10 +150,27 @@
     - from: 1648
       main: other
       minor: reformed
-      note: ニューネーデルラント（フォート・オラニエ〈オールバニー〉・エソプス〈キングストン〉）の点在する入植地と、レナペ人・マヒカン人の地。ロングアイランドの東部はニューイングランド人の町。
+      note: ニューネーデルラント（フォート・オラニエ〈オールバニー〉・エソプス〈キングストン〉）の点在する入植地と、レナペ人・マヒカン人の地。
     - from: 1680
       main: reformed
       note: オランダ系の農民（パトルーン制の荘園）とニューイングランド系の住民。
+    - from: 1900
+      main: reformed
+      minor: catholic
+    - from: 1950
+      main: catholic
+      minor: reformed
+- id: rel_suffolk
+  name: ロングアイランド東部（サフォーク）
+  select:
+    pieces: [USA-Suffolk_NY]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: other
+      note: ニューイングランドからの会衆派の入植者の町（サウサンプトン・サウスオールド 1640、イーストハンプトン 1648）と、モンタウク人などの地。
+    - from: 1700
+      main: reformed
     - from: 1900
       main: reformed
       minor: catholic
@@ -205,9 +222,9 @@
       main: catholic
       minor: reformed
 - id: rel_pennsylvania_east
-  name: ペンシルヴェニア東部（フィラデルフィアとドイツ系の郡）
+  name: ペンシルヴェニア南東部（フィラデルフィア）
   select:
-    pieces: [USA-Adams_PA, USA-Berks_PA, USA-Bucks_PA, USA-Carbon_PA, USA-Chester_PA, USA-Cumberland_PA, USA-Dauphin_PA, USA-Delaware_PA, USA-Lancaster_PA, USA-Lebanon_PA, USA-Lehigh_PA, USA-Montgomery_PA, USA-Northampton_PA, USA-Northumberland_PA, USA-Perry_PA, USA-Philadelphia_PA, USA-Schuylkill_PA, USA-Snyder_PA, USA-Union_PA, USA-York_PA]
+    pieces: [USA-Philadelphia_PA, USA-Bucks_PA, USA-Chester_PA, USA-Delaware_PA, USA-Montgomery_PA]
   timeline:
     - from: 1648
       main: other
@@ -219,11 +236,28 @@
     - from: 1740
       main: reformed
       minor: lutheran
-      note: ドイツからの移民（ペンシルヴェニア・ダッチ）。ルター派・ドイツ改革派・メノナイト・アーミッシュ。
+      note: ドイツからの移民（ペンシルヴェニア・ダッチ。ジャーマンタウン 1683）。ルター派・ドイツ改革派・メノナイト。
     - from: 1900
       main: catholic
+      minor: reformed
+      note: フィラデルフィアに、アイルランド・イタリア・東欧からのカトリックの移民が増えた。
+- id: rel_pennsylvania_dutch
+  name: ペンシルヴェニア・ダッチの郡（ランカスター・バークスなど）
+  select:
+    pieces: [USA-Lancaster_PA, USA-Berks_PA, USA-Lehigh_PA, USA-Northampton_PA, USA-Lebanon_PA, USA-York_PA, USA-Dauphin_PA, USA-Schuylkill_PA, USA-Adams_PA, USA-Cumberland_PA, USA-Snyder_PA, USA-Union_PA]
+  timeline:
+    - from: 1648
+      main: other
+      note: サスケハノック人（1675 年にイロコイ連邦に敗れて離散）、のちショーニー人・レナペ人の地。
+    - from: 1740
+      main: reformed
       minor: lutheran
-      note: 炭鉱・製鉄の町に、アイルランド・イタリア・東欧からのカトリックの移民が増えた。
+      note: ドイツ南西部・スイスからの移民（ペンシルヴェニア・ダッチ。ランカスター 1729、ヨーク 1741）。ドイツ改革派（地図では改革派）・ルター派・メノナイト・アーミッシュ。カンバーランド渓谷にはスコットランド系アイルランド人（長老派）。
+      source: "https://ja.wikipedia.org/wiki/ペンシルベニア・ダッチ"
+    - from: 1900
+      main: lutheran
+      minor: catholic
+      note: ルター派が最大の宗派。スクールキルなどの炭鉱の町に、アイルランド・東欧からのカトリックの移民が増えた。
 - id: rel_pennsylvania
   name: ペンシルヴェニア中部・西部
   select:
@@ -564,9 +598,21 @@
     - from: 1648
       main: other
       note: カルーサ人・テケスタ人の地（18 世紀に病気と奴隷狩りで消滅）。のちセミノールの地。
-    - from: 1880
+    - from: 1870
       main: evangelical
-      note: 第 3 次セミノール戦争（1855–58）の後、鉄道の開通（1890 年代）で入植が進んだ。
+      note: 第 3 次セミノール戦争（1855–58）の後、牧畜（クラッカー）と柑橘の農家の入植が進み、鉄道の開通（1880〜90 年代）で人口が急増した。
+- id: rel_key_west
+  name: キーウェスト（モンロー）
+  select:
+    pieces: [USA-Monroe_FL]
+  timeline:
+    - from: 1648
+      main: other
+      note: カルーサ人・テケスタ人の地。
+    - from: 1830
+      main: evangelical
+      minor: catholic
+      note: キーウェスト（1822 年に入植）は海難救助と海軍の町で、19 世紀後半にはフロリダ最大の都市になった。バハマ系（メソジストなど）とキューバ系（カトリック、葉巻の工場）の住民。
 - id: rel_miami
   name: マイアミ（マイアミ＝デード）
   select:
@@ -690,6 +736,34 @@
       main: catholic
       minor: evangelical
 
+- id: rel_acadiana
+  name: アカディアナ（ルイジアナ南西部のケイジャンの地）
+  select:
+    pieces: [USA-Lafayette_LA, USA-Vermilion_LA, USA-Acadia_LA, USA-St_Landry_LA, USA-Evangeline_LA, USA-Avoyelles_LA, USA-St_Martin_LA, USA-Iberia_LA, USA-St_Mary_LA, USA-Jefferson_Davis_LA, USA-Calcasieu_LA, USA-Cameron_LA, USA-Allen_LA, USA-Lafourche_LA, USA-Terrebonne_LA, USA-Assumption_LA]
+  timeline:
+    - from: 1648
+      main: other
+      note: アタカパ人・チティマチャ人・ホウマ人などの地。
+    - from: 1780
+      main: catholic
+      note: 1765 年からカナダを追われたアカディア人（ケイジャン）がスペイン領ルイジアナに招かれ、西の大草原と湿地（バイユー）に住みついた。
+      source: "https://ja.wikipedia.org/wiki/ケイジャン"
+- id: rel_east_baton_rouge
+  name: バトンルージュ（イースト・バトンルージュ）
+  select:
+    pieces: [USA-East_Baton_Rouge_LA]
+  timeline:
+    - from: 1648
+      main: other
+      note: ホウマ人などの地。フランスの小さな砦（1719）があった。
+    - from: 1780
+      main: catholic
+      minor: anglican
+      note: イギリス領西フロリダ（1763–79）の時代にイギリス系・アメリカ系の入植者が住みつき、1779 年にスペインが奪った。アカディア人も住んだ。
+    - from: 1810
+      main: evangelical
+      minor: catholic
+      note: 西フロリダ共和国（1810）の後、アメリカ合衆国に併合された。
 # ---- 北西部・中西部 ----
 - id: rel_ohio_indiana
   name: オハイオ・インディアナ・アイオワ・ミズーリ・カンザス
@@ -706,6 +780,62 @@
       main: evangelical
       minor: catholic
       note: ドイツ系・アイルランド系の移民（シンシナティ・セントルイスなど）。
+- id: rel_ohio
+  name: オハイオ
+  select:
+    adm1: ["USA/Ohio"]
+  timeline:
+    - from: 1648
+      main: other
+      note: エリー人（1650 年代にイロコイ連邦に滅ぼされた）の後、ショーニー・デラウェア（レナペ）・ワイアンドット・マイアミなどが住んだ。
+    - from: 1800
+      main: evangelical
+      note: フォールン・ティンバーズの戦い（1794）とグリーンヴィル条約（1795）の後、入植が急速に進み、1803 年に州になった。メソジストの巡回説教師が開拓地に教会を広げた。北東部の西部保留地（ウェスタン・リザーヴ）はコネティカットからの会衆派の入植地。
+    - from: 1880
+      main: evangelical
+      minor: catholic
+      note: ドイツ系・アイルランド系の移民（シンシナティ・クリーヴランドなど）。
+- id: rel_ohio_firelands
+  name: オハイオ北部（ファイアランズ・1805 年の割譲地）
+  select:
+    pieces: [USA-Huron_OH, USA-Erie_OH, USA-Lorain_OH, USA-Medina_OH, USA-Wayne_OH, USA-Richland_OH, USA-Ashland_OH, USA-Holmes_OH, USA-Morrow_OH]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1810
+      main: evangelical
+      note: フォート・インダストリー条約（1805）で先住民が割譲し、コネティカットの「ファイアランズ」（独立戦争で焼かれた町の住民への補償地）などに入植が進んだ。
+    - from: 1880
+      main: evangelical
+      minor: catholic
+- id: rel_ohio_northwest
+  name: オハイオ北西部（セント・メアリーズ条約の割譲地）
+  select:
+    pieces: [USA-Mercer_OH, USA-Auglaize_OH, USA-Hardin_OH, USA-Allen_OH, USA-Wyandot_OH, USA-Crawford_OH, USA-Van_Wert_OH, USA-Hancock_OH, USA-Putnam_OH, USA-Paulding_OH, USA-Seneca_OH, USA-Defiance_OH, USA-Henry_OH, USA-Sandusky_OH, USA-Wood_OH, USA-Ottawa_OH, USA-Williams_OH, USA-Fulton_OH, USA-Lucas_OH, USA-Marion_OH]
+  timeline:
+    - from: 1648
+      main: other
+      note: ワイアンドット・ショーニー・オタワ・マイアミの地（グリーンヴィル条約の線の北西）。
+    - from: 1820
+      main: evangelical
+      note: セント・メアリーズ条約（1818）で先住民が割譲し、入植が進んだ（ワイアンドット人は 1843 年にカンザスへ移された）。
+    - from: 1880
+      main: evangelical
+      minor: catholic
+- id: rel_indiana
+  name: インディアナ
+  select:
+    adm1: ["USA/Indiana"]
+  timeline:
+    - from: 1648
+      main: other
+      note: マイアミ・ポタワトミ・ショーニー・デラウェアなどの地。ヴァンセンヌにフランス人の町（1732）。
+    - from: 1820
+      main: evangelical
+      note: ティッピカヌーの戦い（1811）と米英戦争の後、南部から入植が進み、1816 年に州になった（1820 年の人口 14.7 万人）。
+    - from: 1880
+      main: evangelical
+      minor: catholic
 - id: rel_iowa
   name: アイオワ
   select:
@@ -784,6 +914,22 @@
       main: catholic
       minor: evangelical
       note: シカゴ・デトロイトの工業化で、アイルランド・ドイツ・ポーランド・イタリアなどからのカトリックの移民が増え、最大の宗派になった。
+- id: rel_illinois
+  name: イリノイ
+  select:
+    pieces: [USA-Illinois]
+  timeline:
+    - from: 1648
+      main: other
+      note: イリノイ連合・ポタワトミなどの地。カスカスキア・カホキアにフランス人の村と伝道所。
+    - from: 1820
+      main: evangelical
+      minor: catholic
+      note: 南部（「エジプト」）にケンタッキー・テネシーからの入植が進み、1818 年に州になった（1820 年の人口 5.5 万人）。北部への入植はブラック・ホーク戦争（1832）とエリー運河の後。
+    - from: 1920
+      main: catholic
+      minor: evangelical
+      note: シカゴの工業化で、アイルランド・ドイツ・ポーランド・イタリアなどからのカトリックの移民が増え、最大の宗派になった。
 - id: rel_upper_peninsula
   name: ミシガン州アッパー半島
   select:
@@ -805,9 +951,13 @@
       main: other
       note: オジブワ・メノミニー・ホーチャンク（ウィネベーゴ）などの地。
     - from: 1850
+      main: evangelical
+      minor: catholic
+      note: 1848 年に州。ニューイングランド・ニューヨークからの入植者（ヤンキー。会衆派・メソジスト・バプテスト）が多数で、ドイツ系の移民（カトリックとルター派）が増えはじめた。
+    - from: 1880
       main: catholic
       minor: lutheran
-      note: ドイツ系（カトリックとルター派）・ノルウェー系の移民が多数を占めた。
+      note: ドイツ系（カトリックとルター派）・ポーランド系・ノルウェー系の大移民で、カトリックが最大の宗派、ルター派が2番目になった。
 - id: rel_minnesota_dakotas
   name: ミネソタ・ノースダコタ・サウスダコタ
   select:
@@ -828,9 +978,13 @@
     - from: 1648
       main: other
     - from: 1860
+      main: evangelical
+      minor: catholic
+      note: 1858 年に州（1860 年の人口 17 万人）。ニューイングランド系（ヤンキー）・ドイツ系・アイルランド系が中心だった。ダコタ戦争（1862）の後、ダコタ人は州から追放された。
+    - from: 1880
       main: lutheran
       minor: catholic
-      note: 1858 年に州。ダコタ戦争（1862）の後、ダコタ人は州から追放された。
+      note: 南北戦争後のスウェーデン・ノルウェー・ドイツからの大移民で、ルター派が最大の宗派になった。
 - id: rel_nebraska
   name: ネブラスカ
   select:
@@ -903,7 +1057,7 @@
 - id: rel_texas_german
   name: テキサス・ヒルカントリー（ドイツ系）
   select:
-    pieces: [USA-Gillespie_TX, USA-Kendall_TX, USA-Comal_TX]
+    pieces: [USA-Gillespie_TX, USA-Kendall_TX, USA-Comal_TX, USA-Kerr_TX, USA-Mason_TX, USA-Llano_TX]
   timeline:
     - from: 1648
       main: other
@@ -911,6 +1065,28 @@
       main: lutheran
       minor: catholic
       note: アデルスフェラインのドイツ人移民がニューブラウンフェルズ（1845）・フレデリックスバーグ（1846）を建てた。
+- id: rel_medina_tx
+  name: メディナ（カストロヴィル）
+  select:
+    pieces: [USA-Medina_TX]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: catholic
+      minor: evangelical
+      note: アンリ・カストロが連れてきたアルザス人（カトリック）のカストロヴィル（1844）。
+- id: rel_texas_frontier
+  name: テキサス中部の辺境の郡（ブランコ・エラス・ランパサス・パロピント）
+  select:
+    pieces: [USA-Blanco_TX, USA-Erath_TX, USA-Lampasas_TX, USA-Palo_Pinto_TX]
+  timeline:
+    - from: 1648
+      main: other
+      note: コマンチ人・リパン・アパッチ人の地。
+    - from: 1860
+      main: evangelical
+      note: 1850 年代に辺境の砦（フォート・ワース 1849 など）の外側へ牧畜民・農民が入植した。
 - id: rel_texas_hispanic
   name: テキサス南部（リオグランデ川下流）
   select:
@@ -929,10 +1105,14 @@
   timeline:
     - from: 1648
       main: other
-    - from: 1890
+    - from: 1880
+      main: evangelical
+      minor: catholic
+      note: 牧畜（キング牧場など）と鉄道の開通で、アメリカ人の牧場主・労働者とメキシコ系の住民（カトリック）が住んだ。
+    - from: 1920
       main: catholic
       minor: evangelical
-      note: 鉄道の開通とメキシコ革命（1910–20）期の移住で、メキシコ系の住民が多数になった。
+      note: メキシコ革命（1910–20）期の移住で、メキシコ系の住民が多数になった（コーパスクリスティ〈ヌエセス〉などは 20 世紀後半）。
 - id: rel_bexar
   name: サンアントニオ（ベア郡）
   select:
@@ -1036,9 +1216,9 @@
       main: other
       note: オーダム（ピマ）・アパッチ・ヤヴァパイ・ユマなどの地。
     - from: 1880
-      main: evangelical
-      minor: catholic
-      note: アメリカ＝メキシコ戦争（1848）とガズデン購入（1853）でアメリカ領。アパッチ戦争の終結（1886、ジェロニモの降伏）と鉄道の開通で入植が進んだ。東部にはモルモン教徒の町も多い。
+      main: catholic
+      minor: evangelical
+      note: アメリカ＝メキシコ戦争（1848）とガズデン購入（1853）でアメリカ領。アパッチ戦争の終結（1886、ジェロニモの降伏）と鉄道の開通で入植が進んだ。東部にはモルモン教徒の町も多い。教会員の最大の宗派はカトリック（宗教団体の国勢調査 1890・1906。メキシコ系の住民）。
     - from: 1990
       main: catholic
       minor: evangelical
@@ -1058,6 +1238,18 @@
       main: catholic
       minor: other
 
+- id: rel_yuma
+  name: アリゾナのユマ郡
+  select:
+    pieces: [USA-Yuma_AZ]
+  timeline:
+    - from: 1648
+      main: other
+      note: ユマ（ケチャン）人・ココパ人の地。スペインの伝道所（1780）はケチャン人の反乱（1781）で壊された。
+    - from: 1880
+      main: catholic
+      minor: evangelical
+      note: コロラド川の渡し場の町ユマ。メキシコ系の住民が多数。
 # ---- 山岳部・太平洋岸 ----
 - id: rel_utah
   name: ユタ
@@ -1120,6 +1312,30 @@
       main: catholic
       minor: evangelical
       note: ラスヴェガスの成長とメキシコ系の住民の増加。
+- id: rel_colorado
+  name: コロラド
+  select:
+    adm1: ["USA/Colorado"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ユート人（山地）、シャイアン・アラパホ・カイオワ・コマンチ（平原）の地。
+    - from: 1860
+      main: evangelical
+      minor: catholic
+      note: パイクスピークのゴールドラッシュ（1858–59）でデンヴァーと山地の鉱山の町ができた。1876 年に州。
+- id: rel_colorado_west_slope
+  name: コロラド西部（ロッキー山脈の西斜面）
+  select:
+    pieces: [USA-Montezuma_CO, USA-Dolores_CO, USA-Mesa_CO, USA-San_Miguel_CO, USA-Montrose_CO, USA-Rio_Blanco_CO, USA-Moffat_CO, USA-Garfield_CO, USA-Delta_CO, USA-La_Plata_CO, USA-Ouray_CO, USA-San_Juan_CO, USA-Hinsdale_CO, USA-Archuleta_CO, USA-Gunnison_CO, USA-Routt_CO, USA-Mineral_CO, USA-Pitkin_CO, USA-Eagle_CO, USA-Grand_CO, USA-Jackson_CO]
+  timeline:
+    - from: 1648
+      main: other
+      note: ユート人の地。
+    - from: 1880
+      main: evangelical
+      minor: catholic
+      note: サンフアン山地の鉱山（ブルノー協定 1873）と、ミーカーの事件（1879）の後のユート人の保留地の解体（1881）で入植が進んだ。
 - id: rel_san_luis_valley
   name: コロラド南部（サンルイス・バレー）
   select:
@@ -1144,10 +1360,15 @@
       minor: catholic
       note: ゴールドラッシュ（1848–）で人口が急増し、1850 年に州になった。先住民は殺害・病気・飢えで激減した（1846 年の約 15 万人から 1870 年には約 3 万人）。
       source: "https://en.wikipedia.org/wiki/California_genocide"
+    - from: 1890
+      main: catholic
+      minor: evangelical
+      note: 宗教団体の国勢調査（1890・1906・1926）では、教会員の最大の宗派はカトリック（1890・1906 年は教会員の過半数）。メキシコ系・アイルランド系・イタリア系・ポルトガル系の移民による。
+      source: "https://en.wikipedia.org/wiki/Religion_in_California"
     - from: 1970
       main: catholic
       minor: evangelical
-      note: メキシコ系・中米系・フィリピン系の移民で、カトリックが最大の宗派になった。
+      note: メキシコ系・中米系・フィリピン系の移民で、カトリックが住民の約 3 分の 1 を占める最大の宗派になった。
 - id: rel_alta_california
   name: カリフォルニアの海岸（アルタ・カリフォルニアの伝道所）
   select:
@@ -1167,9 +1388,10 @@
       main: evangelical
       minor: catholic
       note: ゴールドラッシュの後、アメリカ人が多数になった（南部の牧場地帯は 1870 年代まで、カリフォルニオ〈メキシコ系〉の住民が多かった）。
-    - from: 1970
+    - from: 1890
       main: catholic
       minor: evangelical
+      note: 教会員の最大の宗派はカトリック（宗教団体の国勢調査 1890・1906）。サンフランシスコのアイルランド系・イタリア系、南部のメキシコ系。
 - id: rel_pacific_northwest
   name: オレゴン・ワシントン
   select:
@@ -1429,6 +1651,27 @@
       main: catholic
       minor: evangelical
       note: 第二次世界大戦後のイタリア・ポルトガルなどからの移民で、カトリックが最大の宗派になった。トロントは 1990 年代から世界の宗教の集まる都市になった。
+- id: rel_windsor
+  name: ウィンザー・サーニア（デトロイト川の南岸）
+  select:
+    pieces: [CAN-Windsor_Sarnia]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1750
+      main: catholic
+      minor: other
+      note: デトロイト（1701）の対岸のフランス人の農村（ヒューロンの伝道所 1728、アサンプション教区 1767）。
+    - from: 1800
+      main: anglican
+      minor: catholic
+      note: ロイヤリストの入植。
+    - from: 1840
+      main: evangelical
+      minor: catholic
+    - from: 1970
+      main: catholic
+      minor: evangelical
 - id: rel_ottawa
   name: オタワ
   select:
@@ -1479,6 +1722,9 @@
       main: evangelical
       minor: catholic
       note: レッドリヴァーの反乱（1869–70、ルイ・リエル）の後、オンタリオからのプロテスタントの入植が進んだ。
+    - from: 1990
+      main: catholic
+      minor: evangelical
 - id: rel_prairies
   name: カナダの平原（マニトバ・サスカチュワン・アルバータ）
   select:
@@ -1491,6 +1737,10 @@
       main: evangelical
       minor: catholic
       note: カナダ太平洋鉄道（1885）とホームステッドの開放で、ウクライナ・ドイツ・スカンディナヴィア・イギリスからの移民が入植した。ウクライナ系の多くはユニエイト（東方典礼カトリック、カトリックに含める）と正教徒。
+    - from: 1990
+      main: catholic
+      minor: evangelical
+      note: 合同教会（1925 年にメソジスト・長老派などが合同）の信者が減り、カトリックが最大の宗派になった（2001 年のサスカチュワンでカトリック 31%、合同教会 20%）。
 - id: rel_prairies_north
   name: カナダの平原の北部・北西準州
   select:
@@ -1511,10 +1761,32 @@
     - from: 1648
       main: other
       note: 北西海岸の諸民族（ハイダ・クワクワカワクゥ・サリシュなど）のポトラッチとトーテムポールの文化。
-    - from: 1870
+    - from: 1890
       main: anglican
       minor: evangelical
-      note: フレーザー川のゴールドラッシュ（1858）。1871 年にカナダに加わった。ポトラッチは 1884–1951 年に法律で禁止された。
+      note: フレーザー川のゴールドラッシュ（1858）。1871 年にカナダに加わった（1881 年の国勢調査でも住民約 4.9 万人のうち先住民が約 2.6 万人で多数）。カナダ太平洋鉄道（1885）の開通で入植者が多数になった。ポトラッチは 1884–1951 年に法律で禁止された。
+    - from: 2000
+      main: catholic
+      minor: evangelical
+      note: 無宗教が多数になった中で、残る宗派ではカトリックが最大（2001 年にカトリック 17%、合同教会 9%、国教会 8%）。
+- id: rel_vancouver_island
+  name: ヴァンクーヴァー島・ハイダ・グワイ
+  select:
+    pieces: [CAN-British_Columbia_Vancouver_Island, CAN-British_Columbia_Haida_Gwaii]
+  timeline:
+    - from: 1648
+      main: other
+      note: ヌーチャヌルス・クワクワカワクゥ・コースト・サリシュ・ハイダの地。
+    - from: 1870
+      main: anglican
+      minor: other
+      note: ヴィクトリア（1843 年にハドソン湾会社の砦）とヴァンクーヴァー島植民地（1849）。国教会・メソジストの伝道。
+    - from: 1890
+      main: anglican
+      minor: evangelical
+    - from: 2000
+      main: catholic
+      minor: evangelical
 - id: rel_yukon_arctic
   name: ユーコン・カナダの北極圏（ヌナヴト）
   select:
@@ -1566,6 +1838,17 @@
       note: イエズス会の伝道所がヤキ・マヨ・オパタ・ピマ・タラウマラの村々に広がっていた。北部にはアパッチ人の地が残った。
     - from: 1780
       main: catholic
+- id: rel_coahuila
+  name: コアウイラ
+  select:
+    adm1: ["MEX/Coahuila de Zaragoza"]
+  timeline:
+    - from: 1648
+      main: other
+      note: コアウイルテカ系の諸集団、のちリパン・アパッチの地。南端のサルティーヨ（1577）にスペイン人の町とトラスカラ人の村。
+    - from: 1730
+      main: catholic
+      note: モンクローバ（1689、コアウイラ州の首府）と、フランシスコ会の伝道所・軍の砦（プレシディオ）が北へ広がった。
 - id: rel_mexico_northeast
   name: メキシコ北東部（コアウイラ・タマウリパス）
   select:
@@ -1574,7 +1857,7 @@
     - from: 1648
       main: other
       note: コアウイルテカ系の諸集団、のちリパン・アパッチの地。
-    - from: 1760
+    - from: 1750
       main: catholic
       note: コアウイラ（モンクローバ 1689）、ヌエボ・サンタンデール（タマウリパス、1749–）の植民。
 - id: rel_baja_california
@@ -1643,8 +1926,24 @@
     - from: 1990
       main: catholic
       minor: evangelical
-      note: 1970 年代から福音派・ペンテコステ派が急速に広がった。グアテマラではリオス・モント政権（1982–83）のもとで改宗が進み、2010 年代にはプロテスタントが人口の約 4 割になった。ホンジュラス・エルサルバドル・ニカラグアでも 3〜4 割。
+      note: 1970 年代から福音派・ペンテコステ派が急速に広がった。グアテマラではリオス・モント政権（1982–83）のもとで改宗が進み、2010 年代にはプロテスタントが人口の約 4 割になり、カトリックとほぼ拮抗している。ホンジュラス・エルサルバドル・ニカラグアでも 3〜4 割。
       source: "https://en.wikipedia.org/wiki/Protestantism_in_Guatemala"
+- id: rel_honduras
+  name: ホンジュラス
+  select:
+    iso: [HND]
+  timeline:
+    - from: 1648
+      main: catholic
+    - from: 1990
+      main: catholic
+      minor: evangelical
+      note: 1970 年代から福音派・ペンテコステ派が急速に広がった。
+    - from: 2015
+      main: evangelical
+      minor: catholic
+      note: 2010 年代の調査（CID ギャラップなど）で、福音派が 4 割を超えてカトリック（3 割台）を上回った。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Honduras"
 - id: rel_peten
   name: ペテン（イツァ人の地）
   select:
@@ -1675,6 +1974,26 @@
       main: evangelical
       minor: catholic
       note: 太平洋側からのメスティーソ（カトリック）の入植が進んだ。
+- id: rel_nicaragua_south_caribbean
+  name: ニカラグアのカリブ海南部（ブルーフィールズ）・リオ・サン・フアン
+  select:
+    adm1: ["NIC/South Atlantic Autonomous Region", "NIC/Rio San Juan"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ラマ人・マヤンナ人・ミスキート人の地。
+    - from: 1850
+      main: anglican
+      minor: other
+      note: ブルーフィールズのクレオール（ジャマイカ系などのアフリカ系）は英語を話すプロテスタント（国教会）。モラヴィア兄弟団の伝道（1849–）も始まった。
+    - from: 1880
+      main: evangelical
+      minor: other
+      note: クレオールとミスキート人の多くがモラヴィア派になった（地図では福音派の色）。
+    - from: 1980
+      main: catholic
+      minor: evangelical
+      note: 太平洋側からのメスティーソ（カトリック）の入植で、スペイン語の住民が多数になった。
 - id: rel_limon
   name: コスタリカのリモン・パナマのボカス・デル・トロ
   select:
@@ -2407,6 +2726,25 @@
       main: catholic
       note: ロカ将軍の「砂漠の征服」（1878–85）で先住民は殺害・追放され、牧羊の大農場の地になった。チュブ川流域にはウェールズ人の入植地（1865、会衆派・メソジスト）。サレジオ会の伝道。
       source: "https://ja.wikipedia.org/wiki/砂漠の征服"
+- id: rel_chubut
+  name: チュブ（ウェールズ人の入植地）
+  select:
+    adm1: ["ARG/Chubut"]
+  timeline:
+    - from: 1648
+      main: other
+      note: テウェルチェ人の地。
+    - from: 1880
+      main: reformed
+      minor: other
+      note: ウェールズ人の入植地（1865 年にプエルト・マドリン、ガイマン・トレレウ）。会衆派・メソジストなどの非国教徒の礼拝堂（カペル）が建てられた（地図では改革派の色）。
+      source: "https://en.wikipedia.org/wiki/Y_Wladfa"
+    - from: 1900
+      main: catholic
+      minor: reformed
+      note: スペイン・イタリア系の移民と軍の入植で、カトリックが多数になった。
+    - from: 1930
+      main: catholic
 - id: rel_araucania
   name: アラウカニア（マプーチェの地）
   select:

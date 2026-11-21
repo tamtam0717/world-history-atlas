@@ -595,6 +595,21 @@
       main: english
       minor: spanish
       note: キューバ系・プエルトリコ系・中南米の移民（ヒスパニックが 2020 年に 26%）。
+- id: lang_florida_south
+  name: フロリダ南部・中部
+  select:
+    pieces: [USA-Brevard_FL, USA-Broward_FL, USA-Charlotte_FL, USA-Citrus_FL, USA-Collier_FL, USA-DeSoto_FL, USA-Glades_FL, USA-Hardee_FL, USA-Hendry_FL, USA-Hernando_FL, USA-Highlands_FL, USA-Hillsborough_FL, USA-Indian_River_FL, USA-Lake_FL, USA-Lee_FL, USA-Manatee_FL, USA-Martin_FL, USA-Okeechobee_FL, USA-Orange_FL, USA-Palm_Beach_FL, USA-Pasco_FL, USA-Pinellas_FL, USA-Polk_FL, USA-Sarasota_FL, USA-Seminole_FL, USA-St_Lucie_FL, USA-Sumter_FL, USA-Osceola_FL]
+  timeline:
+    - from: 1760
+      main: muskogean
+      note: セミノールの地（カルーサ人・テケスタ人は 18 世紀に病気と奴隷狩りで消滅）。
+    - from: 1870
+      main: english
+      note: 第 3 次セミノール戦争（1855–58）の後、牧畜（クラッカー）と柑橘の農家の入植が進み、鉄道の開通（1880〜90 年代）で人口が急増した。
+    - from: 2010
+      main: english
+      minor: spanish
+      note: キューバ系・プエルトリコ系・中南米の移民。
 - id: lang_florida_north
   name: フロリダ北部（アパラチーの伝道所）
   select:
@@ -670,6 +685,20 @@
       note: ルイジアナ購入（1803）の後、アメリカ人の入植。
     - from: 1840
       main: english
+- id: lang_east_baton_rouge
+  name: バトンルージュ（イースト・バトンルージュ）
+  select:
+    pieces: [USA-East_Baton_Rouge_LA]
+  timeline:
+    - from: 1648
+      main: muskogean
+      note: ホウマ人などの地。フランスの小さな砦（1719）があった。
+    - from: 1780
+      main: english
+      minor: french
+      note: イギリス領西フロリダ（1763–79）の時代にイギリス系・アメリカ系の入植者が住みつき、1779 年にスペインが奪った。アカディア人も住んだ。
+    - from: 1840
+      main: english
 - id: lang_acadiana
   name: アカディアナ（ルイジアナ南西部のケイジャンの地）
   select:
@@ -695,7 +724,7 @@
 - id: lang_new_orleans
   name: ニューオーリンズとミシシッピ川沿い
   select:
-    pieces: [USA-Orleans_LA, USA-Jefferson_LA, USA-Plaquemines_LA, USA-St_Bernard_LA, USA-St_Charles_LA, USA-St_James_LA, USA-St_John_the_Baptist_LA, USA-Ascension_LA, USA-Iberville_LA, USA-West_Baton_Rouge_LA, USA-Pointe_Coupee_LA, USA-East_Baton_Rouge_LA]
+    pieces: [USA-Orleans_LA, USA-Jefferson_LA, USA-Plaquemines_LA, USA-St_Bernard_LA, USA-St_Charles_LA, USA-St_James_LA, USA-St_John_the_Baptist_LA, USA-Ascension_LA, USA-Iberville_LA, USA-West_Baton_Rouge_LA, USA-Pointe_Coupee_LA]
   timeline:
     - from: 1648
       main: muskogean
@@ -756,6 +785,81 @@
       minor: german
     - from: 1920
       main: english
+- id: lang_ohio_firelands
+  name: オハイオ北部（ファイアランズ・1805 年の割譲地）
+  select:
+    pieces: [USA-Huron_OH, USA-Erie_OH, USA-Lorain_OH, USA-Medina_OH, USA-Wayne_OH, USA-Richland_OH, USA-Ashland_OH, USA-Holmes_OH, USA-Morrow_OH]
+  timeline:
+    - from: 1810
+      main: english
+      note: フォート・インダストリー条約（1805）の後の入植。
+    - from: 1860
+      main: english
+      minor: german
+    - from: 1920
+      main: english
+- id: lang_ohio_northwest
+  name: オハイオ北西部（セント・メアリーズ条約の割譲地）
+  select:
+    pieces: [USA-Mercer_OH, USA-Auglaize_OH, USA-Hardin_OH, USA-Allen_OH, USA-Wyandot_OH, USA-Crawford_OH, USA-Van_Wert_OH, USA-Hancock_OH, USA-Putnam_OH, USA-Paulding_OH, USA-Seneca_OH, USA-Defiance_OH, USA-Henry_OH, USA-Sandusky_OH, USA-Wood_OH, USA-Ottawa_OH, USA-Williams_OH, USA-Fulton_OH, USA-Lucas_OH, USA-Marion_OH]
+  timeline:
+    - from: 1800
+      main: algonquian
+      minor: iroquoian
+      note: ワイアンドット（イロコイ系）・ショーニー・オタワ・マイアミ（アルゴンキン系）の地（グリーンヴィル条約の線の北西）。
+    - from: 1820
+      main: english
+      minor: algonquian
+      note: セント・メアリーズ条約（1818）の後の入植。
+    - from: 1840
+      main: english
+      note: ワイアンドット人は 1843 年にカンザスへ移された。
+    - from: 1860
+      main: english
+      minor: german
+    - from: 1920
+      main: english
+- id: lang_indiana_illinois
+  name: インディアナ・イリノイ
+  select:
+    pieces: [USA-Indiana, USA-Illinois]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: マイアミ・イリノイ・ポタワトミ・キカプーなど（アルゴンキン系）の地。ヴァンセンヌ・カスカスキアにフランス人の村。
+    - from: 1820
+      main: english
+      minor: algonquian
+      note: インディアナ（1816 州、1820 年の人口 14.7 万人）・イリノイ（1818 州、5.5 万人）。南部から入植が進んだ。
+    - from: 1830
+      main: english
+      note: ブラック・ホーク戦争（1832）の後、先住民の多くがミシシッピ川の西へ移された。
+    - from: 1860
+      main: english
+      minor: german
+      note: シンシナティ・シカゴ・ミルウォーキーなどへのドイツ系の大移民。
+    - from: 1920
+      main: english
+- id: lang_michigan
+  name: ミシガン（下半島）
+  select:
+    pieces: [USA-Michigan]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: オジブワ・オタワ・ポタワトミの地。フランスのデトロイト（1701）。
+    - from: 1810
+      main: algonquian
+      minor: english
+      note: 白人はデトロイト周辺に数千人（1810 年に約 4,800 人）で、先住民の方が多かった。
+    - from: 1830
+      main: english
+      note: エリー運河（1825）の開通でニューイングランド・ニューヨークからの入植が急増し、1837 年に州になった。
+    - from: 1860
+      main: english
+      minor: german
+    - from: 1920
+      main: english
 - id: lang_upper_peninsula
   name: ミシガン州アッパー半島
   select:
@@ -798,8 +902,12 @@
       note: ダコタ（東部スー）人の地。北部にはオジブワ人が西へ移ってきた（18 世紀）。
     - from: 1860
       main: english
+      minor: german
+      note: 1858 年に州。ニューイングランド系・ドイツ系・アイルランド系が中心だった。
+    - from: 1880
+      main: english
       minor: swedish
-      note: 1858 年に州。ダコタ戦争（1862）の後、ダコタ人は追放された。スウェーデン・ノルウェー・ドイツからの移民が住民の多数を占めた（1910 年の外国生まれは 4 人に 1 人）。
+      note: 南北戦争後の大移民。ダコタ戦争（1862）の後、ダコタ人は追放された。スウェーデン・ノルウェー・ドイツからの移民が住民の多数を占めた（1910 年の外国生まれは 4 人に 1 人）。
       source: "https://en.wikipedia.org/wiki/Swedish_Americans"
     - from: 1930
       main: english
@@ -1101,6 +1209,21 @@
       main: spanish
       minor: english
       note: ヒスパニックが最大の民族集団になった（ハリス郡 43%、ダラス郡 40%、2020）。黒人・アジア系も多い多民族の大都市圏。
+- id: lang_texas_frontier
+  name: テキサス中部の辺境の郡（ブランコ・エラス・ランパサス・パロピント）
+  select:
+    pieces: [USA-Blanco_TX, USA-Erath_TX, USA-Lampasas_TX, USA-Palo_Pinto_TX]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      minor: athabaskan
+      note: コマンチ人・リパン・アパッチ人の地。
+    - from: 1860
+      main: english
+      note: 1850 年代に辺境の砦の外側へ牧畜民・農民が入植した。
+    - from: 2000
+      main: english
+      minor: spanish
 - id: lang_bexar
   name: サンアントニオ（ベア郡）
   select:
@@ -1300,6 +1423,23 @@
       main: english
       minor: spanish
       note: ネヴァダ（2020 年に 29%）・コロラド（22%）でヒスパニックが増えた。
+- id: lang_colorado_west_slope
+  name: コロラド西部（ロッキー山脈の西斜面）
+  select:
+    pieces: [USA-Montezuma_CO, USA-Dolores_CO, USA-Mesa_CO, USA-San_Miguel_CO, USA-Montrose_CO, USA-Rio_Blanco_CO, USA-Moffat_CO, USA-Garfield_CO, USA-Delta_CO, USA-La_Plata_CO, USA-Ouray_CO, USA-San_Juan_CO, USA-Hinsdale_CO, USA-Archuleta_CO, USA-Gunnison_CO, USA-Routt_CO, USA-Mineral_CO, USA-Pitkin_CO, USA-Eagle_CO, USA-Grand_CO, USA-Jackson_CO]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      note: ユート人の地。
+    - from: 1880
+      main: english
+      minor: uto_aztecan
+      note: サンフアン山地の鉱山と、ユート人の保留地の解体（1881）で入植が進んだ。
+    - from: 1890
+      main: english
+    - from: 2000
+      main: english
+      minor: spanish
 - id: lang_idaho_plateau
   name: アイダホ（コロンビア高原）
   select:
@@ -1952,10 +2092,10 @@
       main: pacific_na
       minor: athabaskan
       note: 海岸のサリシュ・クワクワカワクゥ・ヌーチャヌルス・チムシアン・ニスガ（北西海岸）と、内陸のアサバスカ系（キャリア・チルコーティン）・サリシュ系の地。
-    - from: 1880
+    - from: 1890
       main: english
       minor: pacific_na
-      note: フレーザー川のゴールドラッシュ（1858）、1871 年にカナダに加わった。カナダ太平洋鉄道（1885）の建設には中国人労働者が使われた。
+      note: フレーザー川のゴールドラッシュ（1858）、1871 年にカナダに加わった（1881 年にも先住民が住民の過半数）。カナダ太平洋鉄道（1885）の建設には中国人労働者が使われた。
     - from: 1910
       main: english
     - from: 2000
@@ -2220,6 +2360,20 @@
       main: spanish
       minor: athabaskan
       note: コアウイラの植民（モンクローバ 1689、サルティーヨ）。北部はリパン・アパッチ、のちコマンチの襲撃の地。
+    - from: 1850
+      main: spanish
+- id: lang_tamaulipas
+  name: タマウリパス（ヌエボ・サンタンデール）
+  select:
+    adm1: ["MEX/Tamaulipas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: コアウイルテカ系・タマウリパ系などの諸集団（孤立した言語）の地。
+    - from: 1750
+      main: spanish
+      minor: other
+      note: エスカンドンのヌエボ・サンタンデール植民地（1748–、20 あまりの町を建設）。
     - from: 1850
       main: spanish
 - id: lang_nuevo_leon
@@ -4048,10 +4202,10 @@
     - from: 1648
       main: chaco_patagonia
       note: テウェルチェ人の地。
-    - from: 1870
+    - from: 1880
       main: welsh
       minor: chaco_patagonia
-      note: ウェールズ人の入植地（ミモサ号、1865 年にプエルト・マドリン）。ガイマン・トレレウなどのウェールズ語の共同体（ウェールズ語は今も話される）。
+      note: ウェールズ人の入植地（ミモサ号、1865 年にプエルト・マドリン。1870 年代までは 150〜700 人ほどで、1880 年代の移民で増えた）。ガイマン・トレレウなどのウェールズ語の共同体（ウェールズ語は今も話される）。
       source: "https://en.wikipedia.org/wiki/Y_Wladfa"
     - from: 1900
       main: spanish

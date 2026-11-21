@@ -771,9 +771,9 @@
       source: "https://ja.wikipedia.org/wiki/1867年憲法法"
 
 - id: on_south
-  name: "オンタリオ南部（トロント・ロンドン・ウィンザー）"
+  name: "オンタリオ南部（トロント・ロンドン）"
   select:
-    pieces: [CAN-Toronto, CAN-London, CAN-Windsor_Sarnia]
+    pieces: [CAN-Toronto, CAN-London]
   timeline:
     - from: 1648
       owner: "france"
@@ -818,6 +818,75 @@
       cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
       note: "初代副総督シムコーのもとで入植が進み、1793年にヨーク（現トロント）が首府となった"
       source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_south_windsor
+  name: "オンタリオ南西端（ウィンザー・サーニア）"
+  select:
+    pieces: [CAN-Windsor_Sarnia]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "ニュートラル連合などの地。フランスはヒューロンなどの同盟者を通じて交易した"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1650
+      owner: "iroquois"
+      certainty: "uncertain"
+      cause: "イロコイ連邦がヒューロン・ペトゥン・ニュートラルを攻め滅ぼし、オンタリオ湖の北岸に村を置く（ビーバー戦争）"
+      note: "1660年代–1680年代にはオンタリオ湖北岸にイロコイの村があった。範囲ははっきりしない"
+      source: "https://en.wikipedia.org/wiki/Beaver_Wars"
+    - from: 1701
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      cause: "モントリオールの大講和でイロコイとフランス・五大湖の諸部族が和平を結ぶ。南オンタリオにはミシサガ（アニシナベ）が移り住む"
+      note: "1701年にデトロイト（対岸がウィンザー）が築かれ、ウィンザー側にもフランス人の農村ができた"
+      source: "https://en.wikipedia.org/wiki/Great_Peace_of_Montreal"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "フランス軍の降伏で五大湖地方の砦がイギリスに渡る"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      note: "初代副総督シムコーのもとで入植が進み、1793年にヨーク（現トロント）が首府となった"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1813
+      owner: "usa"
+      certainty: "occupied"
+      label: "アマーストバーグ・サンドイッチ（アメリカ軍の占領）"
+      cause: "米英戦争のテムズの戦い（10月）の後、アメリカ軍がデトロイト川の東岸を占領する"
+      source: "https://ja.wikipedia.org/wiki/米英戦争"
+    - from: 1815
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "ガン条約（1814年12月）で返される"
+      source: "https://ja.wikipedia.org/wiki/ガン条約"
     - from: 1841
       owner: "britain"
       label: "カナダ連合植民地"
@@ -2021,9 +2090,9 @@
       source: "https://en.wikipedia.org/wiki/History_of_Bermuda"
     - from: 1941
       owner: "britain"
-      label: "バミューダ（イギリスの海外領土）"
+      label: "バミューダ"
       cause: "英米の基地協定（駆逐艦と基地の交換、1940）でアメリカ軍の基地が置かれる（1995年まで）"
-      note: "1968年に自治の憲法が施行された。1995年の住民投票では独立が否決された"
+      note: "1968年に自治の憲法が施行された。1995年の住民投票では独立が否決された。「イギリスの海外領土」の呼び名は2002年から"
       source: "https://en.wikipedia.org/wiki/Destroyers-for-bases_deal"
 
 # ================================================================ アラスカ：1648–1783 所属なし、1784–1866 ロシア（nominal）、1867– アメリカ
