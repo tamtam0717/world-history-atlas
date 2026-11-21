@@ -550,3 +550,38 @@ docs/review/am_north.md への対応。対象は data/regions/usa.yaml・canada.
 
 ### 確認
 - `npm run data`：警告なし。
+
+## 南北アメリカ 分布・都市・潮流
+
+対象：docs/review/am_distributions.md（A 7・B 約 30・C 13）。data/religion/americas.yaml・_kinds.yaml、data/language/americas.yaml・_kinds.yaml、data/cities.yaml（南北アメリカ）、data/movements/americas.yaml、docs/religion-format.md・language-format.md。政治のデータ（polities・regions・events）には触っていない。
+
+### A（すべて反映）
+- **米領ヴァージン諸島 1648–71**：`lang_usvi`・`rel_usvi` に 1648（english/dutch、anglican/reformed）・1651（フランスのセント・クロイ島、french・catholic）を足した。宗教は A7 の原則で 1690–1759 を other／lutheran に。
+- **カンザス**：`rel_ohio_valley_late` をやめ、`rel_kansas`（東部 1860）・`rel_kansas_central`（中部・南東部〈オセージの土地・チェロキー中立地〉1870）・`rel_kansas_west`（1880）に分けた。言語も `lang_kansas_east` 1860・中部は `lang_nebraska_kansas` の 1870・`lang_kansas_west` 1880 で同じ年に。
+- **アイオワ**：`rel_iowa`・`lang_iowa` を作り、どちらも 1840（english/algonquian、evangelical/other）→ 1850 に。`lang_iowa_missouri` はミズーリだけにした。
+- **ヴァーモント**：`rel_vermont` を作り 1760 年から reformed（言語の `lang_nne` 1760 とそろう）。
+- **アマゾン**：`rel_amazon_brazil`（アマゾナス・アクレ 1880 catholic/other）・`rel_amapa`（1800）・`rel_pando`（1900）を作り、言語の切り替えの年にそろえた。ロライマ南部（`rel_roraima`）も 1900 年に。コロンビア・ペルーなどの奥地（`rel_amazon_deep`）はそのまま。
+- **ナヴァホ**：`rel_navajo`（マッキンリー・アパッチ）に 1970 evangelical/other、`rel_navajo_border_towns`（サンフアン・ナヴァホ）を作り 1980 evangelical/other（言語の english 1980 とそろう）。
+- **英領・オランダ領の砂糖植民地（まとめ役の判断どおり）**：奴隷が多数になった年から main: other・minor: 宗主国の宗派、奴隷の多くが改宗した年から宗主国の宗派（main）＋evangelical（minor）。ジャマイカ 1680→1830、バルバドス・リーワード諸島・英領ヴァージン諸島など 1680→1820、モントセラト 1700→1820、トバゴ 1770→1830、セントヴィンセント 1800→1830、ガイアナ 1720→1830、スリナム（海岸・農村）1670→1850（モラヴィア派、evangelical）、シント・ユースタティウス・シント・マールテン・サバ 1720→1800、ベリーズ 1790→1830、米領ヴァージン諸島 1690→1760。サウスカロライナのロウカントリー（`rel_sc_lowcountry` 新設）は 1710 other/anglican → 1790 other/evangelical → 1830 evangelical、ジョージアの海岸は 1770 other/anglican → 1790 other/evangelical → 1830 evangelical。カトリックの植民地は catholic のまま。方針を docs/religion-format.md の「南北アメリカ」に書いた。
+
+### B（すべて反映）
+- **宗教と言語の年の食い違い**：ミシシッピの湾岸 3 郡を `rel_mobile` に／イースト・バトンルージュを宗教・言語とも別の地域にして 1780（english/french、catholic/anglican）／アカディアナの 16 郡を `rel_acadiana`（1780 catholic）に／南フロリダの言語を `lang_florida_south`（1870）、宗教も 1870 に（キーウェストは `rel_key_west` 1830）／テネシー西部とケンタッキーのジャクソン購入地（8 郡を言語にも追加）を `rel_jackson_purchase` 1820 に／テネシー東部のチェロキーの地は割譲の年で分けた（ノックスなど 6 郡は `lang_cherokee` から外して 1790、カンバーランド高原 1810、ハイワシー購入地 1820、テネシー南東部・アラバマ北東部 1840。宗教も同じ）／ミシガン（下半島）の言語を `lang_michigan` で 1830、インディアナ・イリノイは `lang_indiana_illinois` で 1820、宗教も `rel_indiana`・`rel_illinois` を 1820 に／ニューハンプシャーを `lang_maine_south` から外し `lang_new_hampshire`（1648 algonquian/english → 1720 english）／ジョージアの海岸 6 郡を `lang_lowcountry` から分け 1740 english・1770 creole_english／`rel_suffolk` 1648 reformed／テキサスの国境地帯の宗教を言語に合わせ 1880 evangelical/catholic → 1920 catholic/evangelical／ユマを `rel_yuma` 1880 catholic／コアウイラの宗教を `rel_coahuila` で 1730、タマウリパスは宗教・言語（`lang_tamaulipas` 新設）とも 1750／ブルーフィールズ側を `rel_nicaragua_south_caribbean`（1850 anglican/other、1880 evangelical、1980 catholic/evangelical）／チュブを言語 1880 welsh、宗教 `rel_chubut`（1880 reformed/other、1900 catholic/reformed）。
+- **入植の年**（郡単位で地域を作り、宗教と言語を同じ年に）：ヴァージニアのピードモント 1730（`rel_virginia_piedmont`・`lang_virginia_piedmont`）とシェナンドー渓谷 1740、ノースカロライナのピードモント 1750・西部の山地 1780、サウスカロライナのミッドランズ 1740・アップカントリーの言語 1770、ペンシルヴェニアは宗教も南東部（1690）とペンシルヴェニア・ダッチの郡（1740、`rel_pennsylvania_dutch`）に分けた、オハイオは宗教・言語とも州 1800・ファイアランズ 1810・北西部 20 郡 1820、ジョージア東部 1770・オコーニー線の西 21 郡 1810・南部 4 郡 1820（言語・宗教）、コロラドの西斜面 21 郡 1880（`rel_colorado_west_slope`・`lang_colorado_west_slope`。ほかのコロラドは宗教も 1860）、ブリティッシュコロンビア本土は宗教・言語とも 1890（ヴァンクーヴァー島は 1870 のまま、`rel_vancouver_island` 新設）。
+- **宗派**：カリフォルニア（海岸・内陸）は 1890 年から catholic/evangelical、アリゾナは 1880 年から catholic/evangelical／ブリティッシュコロンビア 2000 catholic/evangelical、カナダの平原・ウィニペグ 1990 catholic/evangelical／`rel_honduras` を作り 2015 evangelical/catholic（グアテマラは note に「ほぼ拮抗」）／ウィスコンシン 1850 evangelical/catholic → 1880 catholic/lutheran／ミネソタ 1860 evangelical/catholic → 1880 lutheran/catholic（言語も 1860 english/german → 1880 english/swedish）／ロウカントリーは A7 で対応。
+- **色**：エスキモー・アレウト #d5e8de → #7fb8c4、メソアメリカのその他 #b5ddd9 → #7cbfa8、sa_other #ddd3b4 → #b5a67e（データ未整備との ΔE はそれぞれ 27・31・29。カリブ語族とは ΔE 14 なので carib は変えていない）。
+- **宗教の凡例**：evangelical を「福音派（バプテスト・メソジストなど）」、lds を「モルモン教（末日聖徒）」に縮めた（1850 年の凡例が枠に収まることを確認）。
+- **都市**：ダラス・フェニックス・シンシナティ・ピッツバーグ・フォルタレザ・クリチバ・カリ・ロサリオを足した。フィラデルフィアの capital を 1778–82・1790–99 にし、ボルティモア 1776、ヨーク（ペンシルヴェニア、新設）1777 を加えた。
+- **潮流**：奴隷制廃止運動の北部の spread を、13 植民地の北部（1775–）・旧北西部の 4 州（1820–）・ウィスコンシン・アイオワ・ミネソタ（1846–）に分けた。
+
+### C（反映したもの）
+- docs のアイダホの書き方、ユーコン（宗教 1900、`rel_yukon`）、サグネ（宗教 1860、`rel_saguenay`）、ベリーズ（宗教 1790）、パナマ市の座標（カスコ・ビエホ）、シウダー・トルヒーヨ 1936–60、アスンシオンの capital を 1867 年まで、ラテンアメリカの独立運動の curve に [1902, 0.2]、カウディーリョの people を「サルミエント（批判者）」、インディヘニスモの名前を「インディヘニスモと先住民運動」、言語の語族名「南米・中米の先住民の諸語」→「チブチャ系など」（凡例で切れないよう）。
+- 分割で使われなくなった地域（`rel_us_georgia`・`rel_ohio_indiana`・`lang_carolinas`・`lang_old_northwest`）は消した（右パネルの「分布の変化」に出てしまうため）。`rel_illinois_michigan` はミシガンだけの `rel_michigan` に、`rel_new_hampshire_vermont` はニューハンプシャーだけにした。
+
+### 直さなかったもの
+- C：大覚醒の `&thirteen` のメイン北部・ヴァーモント、首都の空白（チリ 1810–17 など）、ハイチの言語 1648、チリのパタゴニアの 10 年のずれ、ペンテコステ派の潮流の追加。
+- 要確認（コチャバンバ、モスキート海岸北部、アカディアナの「民族」、グリーンランド西部のデータなし〈北欧の担当〉）は判断材料が足りないので今のまま。
+- ウェストヴァージニアの言語 1760 と宗教 1780 の 20 年のずれ（指摘外）。
+
+### 確認
+- `npm run data`・`npm run data:strict`：警告なし。照合1（宗教 other なのに言語がヨーロッパの言語）で 25 年以上残るのは、A7 の方針で意図したもの（砂糖植民地・ロウカントリーのクレオール語＋その他）と、スリナムのマルーン（ウィンティ）だけ。
+- snapshot（.cache/snapshots/am_dist_fix）：宗教 1750・1850（--zoom -80,10,1.3）で凡例が枠に収まること、ジャマイカ・ガイアナの 1850 年の色、南東部 1750・1800（--zoom -82,33,5）でロウカントリーの other＋斜線・ジョージア内陸の灰色、言語 1820（--zoom -90,38,3）でオハイオ北西部・ミシガン・イリノイの斜線、1900 年の南米（sa_other の新しい色）・北極圏（エスキモー・アレウトの新しい色）を目視した。
