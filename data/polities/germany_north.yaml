@@ -1417,6 +1417,7 @@
 
 - id: german_empire
   name: ドイツ帝国
+  home_iso: [DEU, POL, RUS, LTU, DNK, FRA]   # 本国（エルザス＝ロートリンゲン・東部領土を含む）。膠州湾・占領地は含めない
   short: ドイツ帝国
   color: "#a7abc0"
   kind: 帝国（連邦国家）
@@ -1463,6 +1464,7 @@
 
 - id: germany
   name: ドイツ
+  home_iso: [DEU, POL, RUS, LTU, DNK]   # 本国（1945 年までの東部領土を含む）。大戦中の併合・占領地は occupied なので含まれない
   names:
     - {from: 1918, to: 1932, name: ドイツ共和国（ヴァイマル共和国）, short: ドイツ, kind: 共和国（連邦制）}
     - {from: 1933, to: 1945, name: ドイツ国（ナチス・ドイツ）, short: ドイツ, kind: 独裁国家（ナチ党の一党独裁）}

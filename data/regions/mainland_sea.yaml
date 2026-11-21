@@ -1,0 +1,5914 @@
+# S4 大陸部東南アジア（MMR THA LAO KHM VNM）の地域と所属の変遷（1648–2025）
+# このファイルは scratchpad/s4/gen_regions_s4.py で生成した（手で直してよい。直したときは生成をやめてこのファイルを正とする）。
+# 主な方針：
+#  - 冊封：ベトナム（黎朝〈鄭氏〉1667–・西山朝 1789–・阮朝–1882、トンキン北部–1884）は清の帯。シャム・ビルマ・ラオスの朝貢は帯なし。
+#  - シャムの宗主権下（ランナー・ラオ諸国・パタニ・カンボジアの一時期）は独自の色＋overlord: siam。
+#  - フランス領インドシナ：コーチシナは直轄（濃い色）、アンナン・トンキン・カンボジア・ルアンパバーン王国は保護国（indirect）。
+#    ラオス（ルアンパバーン王国以外）は直轄。1940（北部）・1941（全域）–1944 は overlord: japan（日本軍の進駐。フランスの行政は続いた）。
+#  - イギリス領ビルマ：管区ビルマは直轄、シャン諸州・カレンニー・カチン・チン丘陵は間接統治（indirect）。
+#  - 1942–45 のビルマ：日本の占領（occupied）→ 1943 ビルマ国（overlord: japan）。タイが得たケントゥンは siam。
+#  - インドシナ戦争・ベトナム戦争・カンボジア内戦・ミャンマー内戦は、年末の時点の大まかな支配で描く（細かい前線は描けない）。
+
+- id: mmr_arakan_north
+  name: アラカン（ミャウー・シットウェー）
+  select:
+    pieces: [MMR-Sittwe, MMR-Mrauk_U]
+  timeline:
+  - from: 1648
+    owner: arakan
+    note: 都はミャウー。ベンガルのチッタゴンも支配していた（1666年まで）
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Mrauk_U"
+  - from: 1785
+    owner: burma
+    cause: ボードーパヤー王のビルマ軍がアラカンを征服し、都ミャウーを落とす（1784年末–1785年1月）
+    source: "https://en.wikipedia.org/wiki/Konbaung_conquest_of_Arakan"
+  - from: 1825
+    owner: britain
+    certainty: occupied
+    label: アラカン（イギリス軍の占領）
+    cause: 第1次イギリス＝ビルマ戦争。イギリス軍がアラカンの都ミャウーを落とす（4月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1826
+    owner: britain
+    label: アラカン（英領インド）
+    cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、アラカンがイギリス領となる
+    source: "https://ja.wikipedia.org/wiki/ヤンダボ条約"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がアキャブ（シットウェー）を占領する（5月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がアキャブを奪回する（1月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2024
+    owner: burma
+    certainty: uncertain
+    cause: アラカン軍がミャウーなど州の大半をおさえ、国軍は州都シットウェーを保つ
+    note: ミャウー（Mrauk-U のピース）は2024年2月にアラカン軍が占領した。ピースが州都シットウェーと合わさっているので斜線とした
+    source: "https://en.wikipedia.org/wiki/Arakan_Army"
+
+- id: mmr_arakan_maungdaw
+  name: アラカン北部（マウンドー）
+  select:
+    pieces: [MMR-Maungdaw]
+  timeline:
+  - from: 1648
+    owner: arakan
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Mrauk_U"
+  - from: 1785
+    owner: burma
+    cause: ビルマのアラカン征服
+    source: "https://en.wikipedia.org/wiki/Konbaung_conquest_of_Arakan"
+  - from: 1825
+    owner: britain
+    certainty: occupied
+    label: アラカン（イギリス軍の占領）
+    cause: 第1次イギリス＝ビルマ戦争。イギリス軍がアラカンの都ミャウーを落とす（4月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1826
+    owner: britain
+    label: アラカン（英領インド）
+    cause: ヤンダボ条約
+    source: "https://ja.wikipedia.org/wiki/ヤンダボ条約"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: britain
+    certainty: uncertain
+    label: 英領ビルマ
+    cause: アラカンの前線。イギリス軍が第1次アラカン作戦でマウンドーに進む（12月）
+    source: "https://en.wikipedia.org/wiki/Arakan_Campaign_1942–1943"
+  - from: 1943
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍の反撃でイギリス軍がインド国境へ退く（5月）
+    source: "https://en.wikipedia.org/wiki/Arakan_Campaign_1942–1943"
+  - from: 1944
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がマウンドーを取る（1月。第2次アラカン作戦）
+    source: "https://en.wikipedia.org/wiki/Battle_of_the_Admin_Box"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    note: 住民の多くはムスリムのロヒンギャ。1982年の国籍法で国籍を認められず、1978・1991–92・2016–17年に大量の難民がバングラデシュに逃れた
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2017
+    owner: burma
+    cause: 国軍の掃討作戦で、ロヒンギャ70万人以上がバングラデシュに逃れる（8月から）
+    source: "https://ja.wikipedia.org/wiki/ロヒンギャ難民"
+  - from: 2024
+    owner: arakan_army
+    certainty: uncertain
+    cause: アラカン軍がマウンドーを落とし、バングラデシュとの国境をすべておさえる（12月）
+    source: "https://en.wikipedia.org/wiki/Arakan_Army"
+
+- id: mmr_arakan_kyaukpyu
+  name: アラカン南部（チャウピュー）
+  select:
+    pieces: [MMR-Kyaukpyu]
+  timeline:
+  - from: 1648
+    owner: arakan
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Mrauk_U"
+  - from: 1785
+    owner: burma
+    cause: ビルマのアラカン征服
+    source: "https://en.wikipedia.org/wiki/Konbaung_conquest_of_Arakan"
+  - from: 1825
+    owner: britain
+    certainty: occupied
+    label: アラカン（イギリス軍の占領）
+    cause: 第1次イギリス＝ビルマ戦争。イギリス軍がアラカンの都ミャウーを落とす（4月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1826
+    owner: britain
+    label: アラカン（英領インド）
+    cause: ヤンダボ条約
+    source: "https://ja.wikipedia.org/wiki/ヤンダボ条約"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がラムリー島・チャウピューを取る（1–2月）
+    source: "https://en.wikipedia.org/wiki/Battle_of_Ramree_Island"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2024
+    owner: burma
+    certainty: uncertain
+    cause: アラカン軍がアン（国軍の西部軍管区司令部）などを落とす（12月）。チャウピューの町は国軍が保つ
+    source: "https://en.wikipedia.org/wiki/Arakan_Army"
+
+- id: mmr_arakan_thandwe
+  name: アラカン南部（タンドウェー）
+  select:
+    pieces: [MMR-Thandwe]
+  timeline:
+  - from: 1648
+    owner: arakan
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Mrauk_U"
+  - from: 1785
+    owner: burma
+    cause: ビルマのアラカン征服
+    source: "https://en.wikipedia.org/wiki/Konbaung_conquest_of_Arakan"
+  - from: 1825
+    owner: britain
+    certainty: occupied
+    label: アラカン（イギリス軍の占領）
+    cause: 第1次イギリス＝ビルマ戦争。イギリス軍がアラカンの都ミャウーを落とす（4月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1826
+    owner: britain
+    label: アラカン（英領インド）
+    cause: ヤンダボ条約
+    source: "https://ja.wikipedia.org/wiki/ヤンダボ条約"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2024
+    owner: arakan_army
+    certainty: uncertain
+    cause: アラカン軍がタンドウェーを落とす
+    note: 年は要確認（2024年後半）
+    source: "https://en.wikipedia.org/wiki/Arakan_Army"
+
+- id: mmr_shwebo
+  name: シュエボー（コンバウン朝の故地）
+  select:
+    pieces: [MMR-Shwebo, MMR-Kanbalu, MMR-Yinmarbin, MMR-Monywa]
+  timeline:
+  - {from: 1648, owner: burma}
+  - from: 1752
+    owner: burma
+    cause: アラウンパヤーがシュエボー（モクソボ）で挙兵し、コンバウン朝を開く
+    note: タウングー朝の都アヴァはこの年ペグー軍に落とされた
+    source: "https://ja.wikipedia.org/wiki/アラウンパヤー"
+  - from: 1885
+    owner: britain
+    certainty: occupied
+    label: 上ビルマ（イギリス軍の占領）
+    cause: 第3次イギリス＝ビルマ戦争。イギリス軍がマンダレーを占領し、ティーボー王を捕らえる（11月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1886
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマをイギリス領インドに併合（1月1日）
+    note: 王朝の滅亡後も各地で抵抗が続き、平定は1890年ごろまでかかった
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がシュエボー・モンユワを取る（1月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2021
+    owner: burma
+    certainty: uncertain
+    cause: 国軍のクーデタ（2月）の後、民主派の国民防衛隊や少数民族の武装勢力が国軍と戦い、内戦状態となる
+    note: 国軍が町を、抵抗勢力が農村・山地を広くおさえる地域。年末の境界は描けないので斜線で示す
+    source: "https://ja.wikipedia.org/wiki/2021年ミャンマークーデター"
+
+- id: mmr_ava
+  name: 上ビルマ（アヴァ・マンダレー）
+  select:
+    pieces: [MMR-Mandalay, MMR-Sagaing, MMR-Kyaukse, MMR-Myingyan, MMR-Pyinoolwin, MMR-Nyaung_U, MMR-Meiktila, MMR-Yamethin, MMR-Det_Khi_Na, MMR-Oke_Ta_Ra, MMR-Pakokku, MMR-Magway, MMR-Minbu, MMR-Gangaw]
+  timeline:
+  - from: 1648
+    owner: burma
+    note: 都はアヴァ（インワ）
+    source: "https://ja.wikipedia.org/wiki/タウングー王朝"
+  - from: 1752
+    owner: hanthawaddy
+    certainty: uncertain
+    cause: ペグー（復興ハンターワディー王国）の軍がアヴァを落とし、タウングー朝が滅ぶ（3月）
+    note: ペグー軍は上ビルマの各地に守備隊を置いたが、北のアラウンパヤーとの戦いが続いた
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1754
+    owner: burma
+    cause: アラウンパヤーがアヴァを取り戻す（1月）
+    source: "https://ja.wikipedia.org/wiki/アラウンパヤー"
+  - from: 1885
+    owner: britain
+    certainty: occupied
+    label: 上ビルマ（イギリス軍の占領）
+    cause: 第3次イギリス＝ビルマ戦争。イギリス軍がマンダレーを占領し、ティーボー王を捕らえる（11月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1886
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマをイギリス領インドに併合（1月1日）
+    note: 王朝の滅亡後も各地で抵抗が続き、平定は1890年ごろまでかかった
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がメイッティーラ・マンダレーを取る（3月）
+    source: "https://en.wikipedia.org/wiki/Battle_of_Meiktila_and_Mandalay"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2005
+    owner: burma
+    cause: 首都をヤンゴンからネーピードー（ピンマナ近郊）に移す
+    source: "https://ja.wikipedia.org/wiki/ネピドー"
+
+- id: mmr_katha
+  name: カター（上ビルマ北部）
+  select:
+    pieces: [MMR-Katha]
+  timeline:
+  - {from: 1648, owner: burma}
+  - from: 1885
+    owner: britain
+    certainty: occupied
+    label: 上ビルマ（イギリス軍の占領）
+    cause: 第3次イギリス＝ビルマ戦争。イギリス軍がマンダレーを占領し、ティーボー王を捕らえる（11月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1886
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマをイギリス領インドに併合（1月1日）
+    note: 王朝の滅亡後も各地で抵抗が続き、平定は1890年ごろまでかかった
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1944
+    owner: britain
+    label: 英領ビルマ
+    cause: 連合軍がカターを取る（12月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2021
+    owner: burma
+    certainty: uncertain
+    cause: 国軍のクーデタ（2月）の後、民主派の国民防衛隊や少数民族の武装勢力が国軍と戦い、内戦状態となる
+    note: 国軍が町を、抵抗勢力が農村・山地を広くおさえる地域。年末の境界は描けないので斜線で示す
+    source: "https://ja.wikipedia.org/wiki/2021年ミャンマークーデター"
+
+- id: mmr_kabaw
+  name: カバウ谷・チンドウィン川流域
+  select:
+    pieces: [MMR-Kale, MMR-Tamu, MMR-Mawlaik]
+  timeline:
+  - {from: 1648, owner: burma, note: カバウ谷はマニプルとの間で争われた（1826–34年はマニプル領とされた）}
+  - from: 1885
+    owner: britain
+    certainty: occupied
+    label: 上ビルマ（イギリス軍の占領）
+    cause: 第3次イギリス＝ビルマ戦争。イギリス軍がマンダレーを占領し、ティーボー王を捕らえる（11月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1886
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマをイギリス領インドに併合（1月1日）
+    note: 王朝の滅亡後も各地で抵抗が続き、平定は1890年ごろまでかかった
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1944
+    owner: britain
+    label: 英領ビルマ
+    cause: インパール作戦の失敗で日本軍が退き、イギリス軍がタムー・カレーワに進む
+    source: "https://ja.wikipedia.org/wiki/インパール作戦"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2021
+    owner: burma
+    certainty: uncertain
+    cause: 国軍のクーデタ（2月）の後、民主派の国民防衛隊や少数民族の武装勢力が国軍と戦い、内戦状態となる
+    note: 国軍が町を、抵抗勢力が農村・山地を広くおさえる地域。年末の境界は描けないので斜線で示す
+    source: "https://ja.wikipedia.org/wiki/2021年ミャンマークーデター"
+
+- id: mmr_hkamti
+  name: ナガ丘陵（カムティ）
+  select:
+    pieces: [MMR-Hkamti]
+  timeline:
+  - {from: 1648, owner: burma, certainty: nominal, note: ナガ人の山地。ビルマの支配は名目的}
+  - from: 1886
+    owner: britain
+    certainty: nominal
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマのイギリス領インドへの併合
+    note: ナガ丘陵の大半は統治の及ばない地域とされた
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がチンドウィン川上流に進む
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1944
+    owner: britain
+    label: 英領ビルマ
+    cause: 連合軍が北ビルマを取り戻す
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    certainty: nominal
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2021
+    owner: burma
+    certainty: uncertain
+    cause: 国軍のクーデタ（2月）の後、民主派の国民防衛隊や少数民族の武装勢力が国軍と戦い、内戦状態となる
+    note: 国軍が町を、抵抗勢力が農村・山地を広くおさえる地域。年末の境界は描けないので斜線で示す
+    source: "https://ja.wikipedia.org/wiki/2021年ミャンマークーデター"
+
+- id: mmr_prome
+  name: プローム・タウングー（ビルマ中部）
+  select:
+    pieces: [MMR-Pyay, MMR-Thayet, MMR-Thayarwady, MMR-Taungoo]
+  timeline:
+  - {from: 1648, owner: burma}
+  - from: 1752
+    owner: hanthawaddy
+    certainty: uncertain
+    cause: ペグー軍がアヴァを落とし、ビルマ中部をおさえる
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1755
+    owner: burma
+    cause: アラウンパヤーがプロームを落とし（2月）、下ビルマに進む
+    source: "https://ja.wikipedia.org/wiki/アラウンパヤー"
+  - from: 1852
+    owner: britain
+    label: 英領インド（ペグー州）
+    cause: 第2次イギリス＝ビルマ戦争でイギリスがペグー（下ビルマ）を併合（12月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: アラカン・ペグー・テナセリムをまとめてイギリス領ビルマ州とする
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+
+- id: mmr_pegu_delta
+  name: 下ビルマ（ダゴン・デルタ）
+  select:
+    pieces: [MMR-Hinthada, MMR-Yangon_North, MMR-Yangon_West, MMR-Yangon_East, MMR-Pathein, MMR-Myaungmya, MMR-Labutta, MMR-Maubin, MMR-Pyapon]
+  timeline:
+  - {from: 1648, owner: burma}
+  - from: 1741
+    owner: hanthawaddy
+    cause: モン人の反乱が下ビルマに広がる
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1755
+    owner: burma
+    cause: アラウンパヤーがダゴンを取り、ラングーン（「戦いの終わり」）と名づける（5月）
+    source: "https://ja.wikipedia.org/wiki/ヤンゴン"
+  - from: 1852
+    owner: britain
+    label: 英領インド（ペグー州）
+    cause: 第2次イギリス＝ビルマ戦争でイギリスがラングーン（4月）を取り、ペグーを併合（12月）
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: イギリス領ビルマ州の成立
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2008
+    owner: burma
+    cause: サイクロン・ナルギスがエーヤワディー・デルタを襲う（5月。死者・行方不明者約14万人）
+    source: "https://ja.wikipedia.org/wiki/サイクロン・ナルギス"
+
+- id: mmr_syriam
+  name: シリアム（タンリン）
+  select:
+    pieces: [MMR-Yangon_South]
+  timeline:
+  - {from: 1648, owner: burma, note: 1599–1613年はポルトガル人デ・ブリトが支配した港}
+  - from: 1740
+    owner: hanthawaddy
+    cause: モン人の反乱でペグー・シリアムが自立（11月）
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1756
+    owner: burma
+    cause: アラウンパヤーがシリアムを落とす（7月）。フランスの商館も滅ぼされた
+    source: "https://en.wikipedia.org/wiki/Siege_of_Syriam_(1756)"
+  - from: 1852
+    owner: britain
+    label: 英領インド（ペグー州）
+    cause: イギリスのペグー併合
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: イギリス領ビルマ州の成立
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+
+- id: mmr_pegu
+  name: ペグー（バゴー）
+  select:
+    pieces: [MMR-Bago]
+  timeline:
+  - {from: 1648, owner: burma}
+  - from: 1740
+    owner: hanthawaddy
+    cause: モン人がタウングー朝に反乱し、ペグーで王を立てる（11月。復興ハンターワディー王国）
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1757
+    owner: burma
+    cause: アラウンパヤーがペグーを落とし、王国を滅ぼす（5月）
+    source: "https://ja.wikipedia.org/wiki/アラウンパヤー"
+  - from: 1852
+    owner: britain
+    label: 英領インド（ペグー州）
+    cause: イギリスのペグー併合
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: イギリス領ビルマ州の成立
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+
+- id: mmr_thaton
+  name: タトン（モン地方西部）
+  select:
+    pieces: [MMR-Thaton]
+  timeline:
+  - {from: 1648, owner: burma}
+  - from: 1741
+    owner: hanthawaddy
+    cause: モン人の反乱が広がる
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1757
+    owner: burma
+    cause: アラウンパヤーのペグー征服
+    source: "https://ja.wikipedia.org/wiki/アラウンパヤー"
+  - from: 1852
+    owner: britain
+    label: 英領インド（ペグー州）
+    cause: イギリスのペグー併合
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: イギリス領ビルマ州の成立
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+
+- id: mmr_martaban
+  name: モールメイン・マルタバン
+  select:
+    pieces: [MMR-Mawlamyine, MMR-Hpa_An, MMR-Kawkareik, MMR-Myawaddy]
+  timeline:
+  - {from: 1648, owner: burma}
+  - from: 1741
+    owner: hanthawaddy
+    cause: モン人の反乱が広がる
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1757
+    owner: burma
+    cause: アラウンパヤーのペグー征服
+    source: "https://ja.wikipedia.org/wiki/アラウンパヤー"
+  - from: 1824
+    owner: britain
+    certainty: occupied
+    label: テナセリム（イギリス軍の占領）
+    cause: 第1次イギリス＝ビルマ戦争。イギリス軍がタヴォイ・メルギー・マルタバンを占領する
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1826
+    owner: britain
+    label: テナセリム（英領インド）
+    cause: ヤンダボ条約で、サルウィン川以南のテナセリムがイギリス領となる
+    source: "https://ja.wikipedia.org/wiki/ヤンダボ条約"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: イギリス領ビルマ州の成立
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がタイから侵入し、モールメインを落とす（1月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 1949
+    owner: burma
+    certainty: uncertain
+    cause: カレン民族同盟（KNU）が独立を求めて武装闘争を始める
+    note: カレン人の武装勢力は1990年代まで国境地帯に「解放区」を持った（本拠マナプロウは1995年に陥落）
+    source: "https://en.wikipedia.org/wiki/Karen_conflict"
+  - from: 1995
+    owner: burma
+    cause: 国軍がKNUの本拠マナプロウを落とす
+    source: "https://en.wikipedia.org/wiki/Manerplaw"
+
+- id: mmr_hpapun
+  name: カレン丘陵（パプン）
+  select:
+    pieces: [MMR-Hpapun]
+  timeline:
+  - {from: 1648, owner: burma, certainty: nominal, note: カレン人の山地}
+  - from: 1852
+    owner: britain
+    certainty: nominal
+    label: 英領インド（ペグー州）
+    cause: イギリスのペグー併合
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - {from: 1886, owner: britain, label: 英領インド（ビルマ州）, cause: イギリスのビルマ平定}
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 1949
+    owner: burma
+    certainty: uncertain
+    cause: カレン民族同盟（KNU）の武装闘争
+    note: パプン（ムートラウ）一帯はKNUの拠点であり続けた
+    source: "https://en.wikipedia.org/wiki/Karen_conflict"
+
+- id: mmr_tavoy
+  name: タヴォイ（ダウェー）
+  select:
+    pieces: [MMR-Dawei]
+  timeline:
+  - {from: 1648, owner: burma, note: ビルマとアユタヤが争った港（1614年からビルマ領）}
+  - from: 1741
+    owner: hanthawaddy
+    certainty: uncertain
+    cause: モン人の反乱
+    note: タヴォイの領主は自立し、アユタヤとも結んだ
+    source: "https://en.wikipedia.org/wiki/Restored_Hanthawaddy_Kingdom"
+  - from: 1757
+    owner: burma
+    cause: アラウンパヤーのペグー征服
+    source: "https://ja.wikipedia.org/wiki/アラウンパヤー"
+  - from: 1792
+    owner: siam
+    certainty: occupied
+    cause: タヴォイの領主がシャムに寝返り、シャム軍が入る
+    source: "https://en.wikipedia.org/wiki/Burmese–Siamese_War_(1792–1794)"
+  - from: 1793
+    owner: burma
+    cause: ビルマ軍がタヴォイ・メルギーを取り戻す
+    source: "https://en.wikipedia.org/wiki/Burmese–Siamese_War_(1792–1794)"
+  - from: 1824
+    owner: britain
+    certainty: occupied
+    label: テナセリム（イギリス軍の占領）
+    cause: 第1次イギリス＝ビルマ戦争。イギリス軍がタヴォイ・メルギー・マルタバンを占領する
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1826
+    owner: britain
+    label: テナセリム（英領インド）
+    cause: ヤンダボ条約で、サルウィン川以南のテナセリムがイギリス領となる
+    source: "https://ja.wikipedia.org/wiki/ヤンダボ条約"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: イギリス領ビルマ州の成立
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がタイから侵入してタヴォイを落とす（1月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+
+- id: mmr_mergui
+  name: メルギー・テナセリム（ミェイ）
+  select:
+    pieces: [MMR-Myeik, MMR-Kawthoung]
+  timeline:
+  - from: 1648
+    owner: siam
+    note: アユタヤのインド洋側の港。1687年にイギリス東インド会社と衝突した（メルギーの虐殺）
+    source: "https://en.wikipedia.org/wiki/Mergui"
+  - from: 1765
+    owner: burma
+    cause: シンビューシン王のビルマ軍がアユタヤ攻撃の途中でメルギー・テナセリムを取る
+    source: "https://en.wikipedia.org/wiki/Burmese–Siamese_War_(1765–1767)"
+  - from: 1792
+    owner: siam
+    certainty: occupied
+    cause: シャム軍がメルギーに入る
+    source: "https://en.wikipedia.org/wiki/Burmese–Siamese_War_(1792–1794)"
+  - from: 1793
+    owner: burma
+    cause: ビルマ軍がメルギーを取り戻す
+    source: "https://en.wikipedia.org/wiki/Burmese–Siamese_War_(1792–1794)"
+  - from: 1824
+    owner: britain
+    certainty: occupied
+    label: テナセリム（イギリス軍の占領）
+    cause: 第1次イギリス＝ビルマ戦争。イギリス軍がタヴォイ・メルギー・マルタバンを占領する
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1826
+    owner: britain
+    label: テナセリム（英領インド）
+    cause: ヤンダボ条約で、サルウィン川以南のテナセリムがイギリス領となる
+    source: "https://ja.wikipedia.org/wiki/ヤンダボ条約"
+  - from: 1862
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: イギリス領ビルマ州の成立
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がメルギー・ヴィクトリアポイントを占領する（1月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    label: 英領ビルマ
+    cause: イギリス軍がビルマを取り戻す（5月にラングーンを奪回）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+
+- id: mmr_shan
+  name: シャン諸州
+  select:
+    pieces: [MMR-Taunggyi, MMR-Loilen, MMR-Langkho, MMR-Kyaukme, MMR-Lashio, MMR-Muse, MMR-Mongmit]
+  timeline:
+  - from: 1648
+    owner: burma
+    certainty: indirect
+    label: シャン諸州
+    note: シャン人の諸侯（ソーボワ）が治める多数の小国。ビルマ王に貢納し、王の宮廷に人質を出した
+    source: "https://en.wikipedia.org/wiki/Shan_States"
+  - from: 1886
+    owner: britain
+    certainty: nominal
+    label: シャン諸州
+    cause: 上ビルマの併合。シャンの諸侯の帰順は1887–90年
+    source: "https://en.wikipedia.org/wiki/Shan_States"
+  - from: 1888
+    owner: britain
+    certainty: indirect
+    label: シャン諸州
+    cause: シャンの諸侯の多くがイギリスに帰順する
+    note: 1922年にシャン連合州となる
+    source: "https://en.wikipedia.org/wiki/Federated_Shan_States"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がラーショーを落とし、援蔣ルート（ビルマ・ルート）を断つ（4月）
+    source: "https://ja.wikipedia.org/wiki/援蔣ルート"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がシャン諸州（ケントゥン・モンパンを除く）をビルマ国に渡す
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    certainty: indirect
+    label: シャン諸州
+    cause: イギリス軍の再占領
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦の独立。シャン州となる（パンロン協定にもとづく）
+    note: 1959年に諸侯（ソーボワ）が権限を手放した
+    source: "https://ja.wikipedia.org/wiki/パンロン会議"
+
+- id: mmr_shan_north
+  name: 北部シャン州
+  select:
+    pieces: [MMR-Kyaukme, MMR-Lashio, MMR-Muse, MMR-Mongmit]
+  timeline:
+  # 2022年までは mmr_shan（シャン諸州）の変遷に従う
+  - from: 2023
+    owner: burma
+    certainty: uncertain
+    cause: 1027作戦（10月）。MNDAA・TNLA・アラカン軍の「三兄弟同盟」がチンシュエホー・ナムサン・チャウメーなど北部シャン州の町を取る
+    note: 2024年8月にMNDAAがラーショーを落とした。2025年4月に中国の仲介でラーショーは国軍に返され、同年秋に国軍はチャウメー・シーポーも取り戻したが、山地は武装勢力が広くおさえる。年末の境界は描けないので斜線で示す
+    source: "https://en.wikipedia.org/wiki/Operation_1027"
+
+- id: mmr_kengtung
+  name: ケントゥン（チャイントン）
+  select:
+    pieces: [MMR-Kengtung, MMR-Tachileik, MMR-Monghsat]
+  timeline:
+  - from: 1648
+    owner: burma
+    certainty: indirect
+    label: ケントゥン
+    note: シャン人（クン人）の国。ビルマに貢納し、ランナー・シプソンパンナーとも結びついた
+    source: "https://en.wikipedia.org/wiki/Kengtung_State"
+  - from: 1886
+    owner: britain
+    certainty: nominal
+    label: ケントゥン
+    cause: 上ビルマの併合
+    source: "https://en.wikipedia.org/wiki/Kengtung_State"
+  - from: 1890
+    owner: britain
+    certainty: indirect
+    label: シャン諸州
+    cause: ケントゥンがイギリスに帰順する
+    source: "https://en.wikipedia.org/wiki/Kengtung_State"
+  - from: 1942
+    owner: siam
+    certainty: occupied
+    label: ケントゥン（タイ軍の占領）
+    cause: 日本と同盟したタイの軍がケントゥンを占領する（5月）
+    source: "https://en.wikipedia.org/wiki/Saharat_Thai_Doem"
+  - from: 1943
+    owner: siam
+    certainty: occupied
+    label: サハラット・タイ・ドゥーム（連合タイ州）
+    cause: 日本がケントゥン・モンパンのタイへの編入を認める（8月）
+    note: 戦後に無効とされた
+    source: "https://en.wikipedia.org/wiki/Saharat_Thai_Doem"
+  - from: 1945
+    owner: britain
+    certainty: indirect
+    label: シャン諸州
+    cause: 日本の降伏でタイが返還する
+    source: "https://en.wikipedia.org/wiki/Saharat_Thai_Doem"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦の独立
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 1950
+    owner: burma
+    certainty: uncertain
+    label: 国民党軍の残党
+    cause: 国共内戦に敗れた国民党軍の残党が雲南から入り、拠点をつくる
+    note: 1953年に国連決議で一部が台湾に撤収したが、残りは1961年まで居座った。のちに「黄金の三角地帯」のアヘン生産の中心となった
+    source: "https://en.wikipedia.org/wiki/Kuomintang_in_Burma"
+  - from: 1954
+    owner: burma
+    cause: 国民党軍の一部が台湾に撤収する
+    source: "https://en.wikipedia.org/wiki/Kuomintang_in_Burma"
+
+- id: mmr_wa
+  name: ワ山地
+  select:
+    pieces: [MMR-Hopang, MMR-Matman]
+  timeline:
+  - from: 1648
+    owner: null
+    certainty: uncertain
+    note: ワ人の山地。どの国の支配も及ばなかった
+    source: "https://en.wikipedia.org/wiki/Wa_States"
+  - from: 1886
+    owner: britain
+    certainty: nominal
+    label: ワ州
+    cause: 上ビルマの併合。ワ州はイギリスの統治の及ばない地域とされた
+    source: "https://en.wikipedia.org/wiki/Wa_States"
+  - from: 1948
+    owner: burma
+    certainty: nominal
+    cause: ビルマ連邦の独立
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 1968
+    owner: cpb
+    certainty: uncertain
+    cause: ビルマ共産党が中国の支援で中国国境地帯に「解放区」をつくる
+    source: "https://en.wikipedia.org/wiki/Communist_Party_of_Burma"
+  - from: 1989
+    owner: wa_state
+    certainty: uncertain
+    cause: ビルマ共産党がワ人の兵士の反乱で解体し、ワ州連合軍（UWSA）が生まれ、国軍と停戦する
+    source: "https://en.wikipedia.org/wiki/Wa_State"
+
+- id: mmr_kokang
+  name: コーカン
+  select:
+    pieces: [MMR-Laukkaing]
+  timeline:
+  - from: 1648
+    owner: southern_ming
+    certainty: nominal
+    note: 漢人の楊氏が治めた地域（のち清の土司とされた）。雲南は1659年まで南明の支配下（東アジアの G1 の雲南にそろえた）
+    source: "https://en.wikipedia.org/wiki/Kokang"
+  - from: 1659
+    owner: qing
+    certainty: nominal
+    cause: 清軍が雲南を平定する
+    source: "https://en.wikipedia.org/wiki/Kokang"
+  - from: 1673
+    owner: three_feudatories
+    certainty: nominal
+    cause: 三藩の乱（呉三桂が雲南で挙兵）
+  - from: 1681
+    owner: qing
+    certainty: nominal
+    cause: 三藩の乱の終わり
+  - from: 1897
+    owner: britain
+    certainty: indirect
+    label: シャン諸州
+    cause: イギリスと清の協定でイギリス領ビルマに入る
+    source: "https://en.wikipedia.org/wiki/Kokang"
+  - {from: 1942, owner: britain, certainty: nominal, label: シャン諸州, cause: 日本軍は及ばず、楊氏が抗日の側で治める, note: 要確認}
+  - from: 1948
+    owner: burma
+    certainty: indirect
+    label: コーカン
+    cause: ビルマ連邦の独立
+    source: "https://en.wikipedia.org/wiki/Kokang"
+  - from: 1968
+    owner: cpb
+    certainty: uncertain
+    cause: ビルマ共産党の「解放区」となる
+    source: "https://en.wikipedia.org/wiki/Communist_Party_of_Burma"
+  - from: 1989
+    owner: burma
+    certainty: indirect
+    label: コーカン（第1特区）
+    cause: ミャンマー民族民主同盟軍（MNDAA）が共産党から分かれ、国軍と停戦して自治を得る
+    source: "https://en.wikipedia.org/wiki/Myanmar_National_Democratic_Alliance_Army"
+  - from: 2009
+    owner: burma
+    cause: 国軍がコーカンを制圧する（コーカン事件）
+    source: "https://en.wikipedia.org/wiki/2009_Kokang_incident"
+  - from: 2024
+    owner: burma
+    certainty: uncertain
+    label: コーカン
+    cause: 1027作戦でMNDAAがラウカイを取る（1月）
+    note: 2025年に中国の仲介でラーショーは国軍に返されたが、コーカンの扱いは要確認
+    source: "https://en.wikipedia.org/wiki/Operation_1027"
+
+- id: mmr_karenni
+  name: カレンニー（カヤー）
+  select:
+    pieces: [MMR-Loikaw, MMR-Bawlake]
+  timeline:
+  - from: 1648
+    owner: burma
+    certainty: nominal
+    note: カレンニー人（赤カレン）の小国。ビルマに名目的に従った
+    source: "https://en.wikipedia.org/wiki/Karenni_States"
+  - from: 1875
+    owner: null
+    certainty: uncertain
+    label: カレンニー諸州
+    cause: イギリスとビルマが西カレンニーの独立を認める
+    source: "https://en.wikipedia.org/wiki/Karenni_States"
+  - from: 1892
+    owner: britain
+    certainty: indirect
+    label: カレンニー諸州
+    cause: カレンニーの諸侯がイギリスの保護下に入る
+    source: "https://en.wikipedia.org/wiki/Karenni_States"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍のビルマ占領
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: ビルマ国の成立
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1945
+    owner: britain
+    certainty: indirect
+    label: カレンニー諸州
+    cause: イギリス軍の再占領
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦の独立（カレンニー州。1952年にカヤー州）
+    source: "https://en.wikipedia.org/wiki/Kayah_State"
+  - from: 2021
+    owner: burma
+    certainty: uncertain
+    cause: 国軍のクーデタ（2月）の後、民主派の国民防衛隊や少数民族の武装勢力が国軍と戦い、内戦状態となる
+    note: 国軍が町を、抵抗勢力が農村・山地を広くおさえる地域。年末の境界は描けないので斜線で示す
+    source: "https://ja.wikipedia.org/wiki/2021年ミャンマークーデター"
+
+- id: mmr_bhamo
+  name: バモー
+  select:
+    pieces: [MMR-Bhamo]
+  timeline:
+  - {from: 1648, owner: burma, note: 雲南との交易の町}
+  - from: 1885
+    owner: britain
+    certainty: occupied
+    label: 上ビルマ（イギリス軍の占領）
+    cause: 第3次イギリス＝ビルマ戦争
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1886
+    owner: britain
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマの併合
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1937
+    owner: britain
+    label: 英領ビルマ
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1944
+    owner: britain
+    label: 英領ビルマ
+    cause: 中国軍・連合軍がバモーを取る（12月）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 1962
+    owner: burma
+    certainty: uncertain
+    cause: カチン独立軍（KIA）の武装闘争が広がる（1961年から）
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+  - from: 1994
+    owner: burma
+    cause: KIAが国軍と停戦
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+  - from: 2011
+    owner: burma
+    certainty: uncertain
+    cause: KIAと国軍の戦闘が再開する（6月）
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+
+- id: mmr_kachin
+  name: カチン丘陵（ミッチーナー）
+  select:
+    pieces: [MMR-Myitkyina, MMR-Mohnyin]
+  timeline:
+  - {from: 1648, owner: burma, certainty: nominal, note: カチン人（ジンポー人）の山地とシャン人の小国。ビルマの支配は名目的}
+  - from: 1886
+    owner: britain
+    certainty: nominal
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマの併合
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1895
+    owner: britain
+    certainty: indirect
+    label: カチン丘陵
+    cause: ミッチーナー県が置かれ、カチンの首長を通じた統治が始まる
+    source: "https://en.wikipedia.org/wiki/Kachin_Hills"
+  - from: 1937
+    owner: britain
+    label: カチン丘陵
+    cause: ビルマ統治法の施行で、ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がビルマを占領する（ビルマの戦い）
+    source: "https://ja.wikipedia.org/wiki/ビルマの戦い"
+  - from: 1943
+    owner: burma_state
+    overlord: japan
+    cause: 日本がビルマに「独立」を与え、バー・モウのビルマ国が成立（8月）
+    source: "https://ja.wikipedia.org/wiki/ビルマ国"
+  - from: 1944
+    owner: britain
+    label: 英領ビルマ
+    cause: 連合軍がモーガウン（6月）・ミッチーナー（8月）を取る
+    source: "https://en.wikipedia.org/wiki/Siege_of_Myitkyina"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 1962
+    owner: burma
+    certainty: uncertain
+    cause: カチン独立軍（KIA）の武装闘争が広がる（1961年から）
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+  - from: 1994
+    owner: burma
+    cause: KIAが国軍と停戦
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+  - from: 2011
+    owner: burma
+    certainty: uncertain
+    cause: KIAと国軍の戦闘が再開する（6月）
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+
+- id: mmr_putao
+  name: プタオ（カチン州北部）
+  select:
+    pieces: [MMR-Puta_O]
+  timeline:
+  - {from: 1648, owner: burma, certainty: nominal, note: シャン人のカムティ・ロン諸国とカチン・リス人などの山地}
+  - from: 1886
+    owner: britain
+    certainty: nominal
+    label: 英領インド（ビルマ州）
+    cause: 上ビルマの併合
+    source: "https://ja.wikipedia.org/wiki/英緬戦争"
+  - from: 1914
+    owner: britain
+    certainty: indirect
+    label: カチン丘陵
+    cause: フォート・ハーツ（プタオ）に駐屯地が置かれる
+    source: "https://en.wikipedia.org/wiki/Putao"
+  - from: 1937
+    owner: britain
+    certainty: indirect
+    label: カチン丘陵
+    cause: ビルマがイギリス領インドから分離される
+    source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+  - from: 1942
+    owner: britain
+    certainty: uncertain
+    label: 英領ビルマ
+    cause: フォート・ハーツは日本軍に占領されず、連合軍が保った
+    source: "https://en.wikipedia.org/wiki/Putao"
+  - {from: 1944, owner: britain, label: 英領ビルマ, cause: 連合軍の北ビルマ奪回}
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 1962
+    owner: burma
+    certainty: uncertain
+    cause: カチン独立軍（KIA）の武装闘争
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+  - from: 1994
+    owner: burma
+    cause: KIAが国軍と停戦
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+  - from: 2011
+    owner: burma
+    certainty: uncertain
+    cause: KIAと国軍の戦闘が再開する
+    source: "https://en.wikipedia.org/wiki/Kachin_conflict"
+
+- id: mmr_chin
+  name: チン丘陵
+  select:
+    pieces: [MMR-Falam, MMR-Hakha, MMR-Mindat]
+  timeline:
+  - from: 1648
+    owner: null
+    certainty: uncertain
+    note: チン人の諸部族の山地。どの国の支配も及ばなかった
+    source: "https://en.wikipedia.org/wiki/Chin_Hills"
+  - from: 1890
+    owner: britain
+    certainty: nominal
+    label: チン丘陵
+    cause: イギリスのチン＝ルシャイ遠征（1889–90）
+    source: "https://en.wikipedia.org/wiki/Chin-Lushai_Expedition"
+  - from: 1896
+    owner: britain
+    certainty: indirect
+    label: チン丘陵
+    cause: チン丘陵規則で、首長を通じた統治が始まる
+    source: "https://en.wikipedia.org/wiki/Chin_Hills"
+  - {from: 1942, owner: britain, certainty: uncertain, label: チン丘陵, cause: ビルマの大半が日本軍に占領されるが、チン丘陵ではイギリス軍が抵抗を続ける}
+  - from: 1943
+    owner: japan
+    certainty: occupied
+    label: ビルマ（日本軍の占領）
+    cause: 日本軍がファラム・ハカを取る（11月）
+    source: "https://ja.wikipedia.org/wiki/インパール作戦"
+  - from: 1944
+    owner: britain
+    label: 英領ビルマ
+    cause: インパール作戦の失敗後、イギリス軍がチン丘陵を取り戻す（10–11月）
+    source: "https://ja.wikipedia.org/wiki/インパール作戦"
+  - from: 1948
+    owner: burma
+    cause: ビルマ連邦がイギリスから独立（1月4日）
+    source: "https://ja.wikipedia.org/wiki/ミャンマーの歴史"
+  - from: 2021
+    owner: burma
+    certainty: uncertain
+    cause: 国軍のクーデタ（2月）の後、民主派の国民防衛隊や少数民族の武装勢力が国軍と戦い、内戦状態となる
+    note: 国軍が町を、抵抗勢力が農村・山地を広くおさえる地域。年末の境界は描けないので斜線で示す
+    source: "https://ja.wikipedia.org/wiki/2021年ミャンマークーデター"
+
+- id: tha_core
+  name: シャム中部・南部（アユタヤ・バンコク）
+  select:
+    pieces: [THA-Bangkok, THA-Nonthaburi_Province, THA-Pathum_Thani_Province, THA-Samut_Prakan_Province, THA-Samut_Sakhon_Province, THA-Samut_Songkhram_Province, THA-Nakhon_Pathom_Province, THA-Phra_Nakhon_Si_Ayutthaya_Province, THA-Ang_Thong_Province, THA-Sing_Buri_Province, THA-Lopburi_Province, THA-Saraburi_Province, THA-Suphan_Buri_Province, THA-Chai_Nat_Province, THA-Uthai_Thani_Province, THA-Nakhon_Sawan_Province, THA-Nakhon_Nayok_Province, THA-Prachin_Buri_Province, THA-Chachoengsao_Province, THA-Chon_Buri_Province, THA-Rayong_Province, THA-Ratchaburi_Province, THA-Kanchanaburi_Province, THA-Phetchaburi_Province, THA-Prachuap_Khiri_Khan_Province, THA-Chumphon_Province, THA-Ranong_Province, THA-Tak_Province, THA-Sa_Kaeo_Province]
+  timeline:
+  - from: 1648
+    owner: siam
+    note: 都はアユタヤ。チャオプラヤー川の下流の米と、東西交易の中継で栄えた
+    source: "https://ja.wikipedia.org/wiki/アユタヤ王朝"
+  - from: 1767
+    owner: siam
+    cause: アユタヤの陥落（4月）の後、タークシンがビルマ軍を追ってトンブリーに都を置く
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+  - from: 1782
+    owner: siam
+    cause: ラーマ1世がラタナコーシン朝を開き、都をバンコクに移す
+    source: "https://ja.wikipedia.org/wiki/ラーマ1世"
+
+- id: tha_north
+  name: シャム北部（ピッサヌローク）
+  select:
+    pieces: [THA-Phitsanulok_Province, THA-Sukhothai_Province, THA-Phichit_Province, THA-Phetchabun_Province, THA-Uttaradit_Province, THA-Kamphaeng_Phet_Province]
+  timeline:
+  - from: 1648
+    owner: siam
+    source: "https://ja.wikipedia.org/wiki/アユタヤ王朝"
+  - from: 1767
+    owner: siam
+    certainty: uncertain
+    cause: アユタヤの陥落後、ピッサヌロークの領主やファーン（ウッタラディット）の僧侶の政権が分立する
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+  - from: 1770
+    owner: siam
+    cause: タークシンがピッサヌローク・ファーンを従え、シャムを再統一する
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+
+- id: tha_south
+  name: シャム南部（ナコーンシータンマラート）
+  select:
+    pieces: [THA-Nakhon_Si_Thammarat_Province, THA-Phatthalung_Province, THA-Surat_Thani_Province, THA-Krabi_Province, THA-Trang_Province, THA-Phangnga_Province, THA-Phuket_Province]
+  timeline:
+  - from: 1648
+    owner: siam
+    note: ナコーンシータンマラート（リゴール）はアユタヤの属国の性格が強かった
+    source: "https://en.wikipedia.org/wiki/Nakhon_Si_Thammarat_Kingdom"
+  - from: 1767
+    owner: siam
+    certainty: uncertain
+    cause: アユタヤの陥落後、ナコーンシータンマラートの領主が自立する
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+  - from: 1769
+    owner: siam
+    cause: タークシンがナコーンシータンマラートを従える
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+
+- id: tha_songkhla
+  name: ソンクラー
+  select:
+    pieces: [THA-Songkhla_Province]
+  timeline:
+  - from: 1648
+    owner: siam
+    certainty: uncertain
+    note: ソンクラー（シンゴラ）はペルシア系ムスリムのスルタン・スライマーンの一族が治め、アユタヤから自立していた（1680年に滅ぼされた）
+    source: "https://en.wikipedia.org/wiki/Singora"
+  - from: 1680
+    owner: siam
+    cause: ナーライ王がソンクラーのスルタン国を滅ぼす
+    source: "https://en.wikipedia.org/wiki/Singora"
+  - from: 1767
+    owner: siam
+    certainty: uncertain
+    cause: アユタヤの陥落後、南部の諸領主が自立する
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+  - from: 1769
+    owner: siam
+    cause: タークシンが南部を従える
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+
+- id: tha_patani
+  name: パタニ（タイ深南部）
+  select:
+    pieces: [THA-Pattani_Province, THA-Yala_Province, THA-Narathiwat_Province]
+  timeline:
+  - from: 1648
+    owner: patani
+    overlord: siam
+    note: パタニの女王たちの時代（17世紀）。アユタヤと戦ったこともある
+    source: "https://en.wikipedia.org/wiki/Patani_Kingdom"
+  - from: 1786
+    owner: patani
+    overlord: siam
+    cause: ラーマ1世の軍がパタニを征服し、都を破壊する（シャムが王を立てる）
+    source: "https://en.wikipedia.org/wiki/Patani_Kingdom"
+  - from: 1808
+    owner: siam
+    certainty: indirect
+    label: パタニ（7州）
+    cause: パタニの反乱の後、シャムがパタニを7つの州に分け、ソンクラーの監督下に置く
+    source: "https://en.wikipedia.org/wiki/Patani_Kingdom"
+  - from: 1902
+    owner: siam
+    cause: シャムがパタニの諸侯を廃して直接統治にする（モントン・パタニ、1906）
+    source: "https://en.wikipedia.org/wiki/Patani_Kingdom"
+  - from: 2004
+    owner: siam
+    cause: 南部のマレー系ムスリムの分離主義者の武装闘争が激しくなる
+    note: 2004年以降、7000人以上が死亡した
+    source: "https://en.wikipedia.org/wiki/South_Thailand_insurgency"
+
+- id: tha_satun
+  name: サトゥーン（クダ北部）
+  select:
+    pieces: [THA-Satun_Province]
+  timeline:
+  - from: 1648
+    owner: kedah
+    overlord: siam
+    note: マレー人のクダ・スルタン国の北部（セトゥル）。クダはアユタヤに金銀の花を贈る朝貢国だった（島嶼部担当 S5 のクダと同じ扱い）
+    source: "https://en.wikipedia.org/wiki/Satun_Province"
+  - from: 1821
+    owner: siam
+    label: クダ（シャムの直轄）
+    cause: シャム（ラーマ2世）がクダに攻め込み、スルタンを追う
+    source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
+  - from: 1842
+    owner: kedah
+    overlord: siam
+    cause: シャムがスルタンを復位させる。セトゥル（サトゥーン）はクダの王族が治める別の国とされた
+    source: "https://en.wikipedia.org/wiki/Satun_Province"
+  - from: 1909
+    owner: siam
+    cause: バンコク条約（英シャム条約）で、クダ・クランタン・トレンガヌ・プルリスがイギリスに移り、サトゥーンだけがシャムに残る
+    source: "https://ja.wikipedia.org/wiki/英シャム条約_(1909年)"
+
+- id: tha_chanthaburi
+  name: チャンタブリー
+  select:
+    pieces: [THA-Chanthaburi_Province]
+  timeline:
+  - {from: 1648, owner: siam}
+  - from: 1767
+    owner: siam
+    cause: タークシンがチャンタブリーを拠点にアユタヤ奪回の兵を挙げる（6月）
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+  - from: 1893
+    owner: france
+    certainty: occupied
+    label: チャンタブリー（フランス軍の占領）
+    cause: フランス＝シャム戦争の講和で、フランスが条約の保証としてチャンタブリーを占領する
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1905
+    owner: siam
+    cause: 1904年の条約でフランス軍が撤退する（1月）
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
+
+- id: tha_trat
+  name: トラート
+  select:
+    pieces: [THA-Trat_Province]
+  timeline:
+  - {from: 1648, owner: siam}
+  - from: 1904
+    owner: france
+    label: トラート（フランス領インドシナ）
+    cause: フランス＝シャム条約で、チャンタブリーからの撤退と引き換えにトラートがフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
+  - from: 1907
+    owner: siam
+    cause: フランス＝シャム条約で、バッタンバン・シェムリアップと引き換えにトラートがシャムに戻る
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
+
+- id: tha_khorat
+  name: コーラート（ナコーンラーチャシーマー）
+  select:
+    pieces: [THA-Nakhon_Ratchasima_Province, THA-Chaiyaphum_Province]
+  timeline:
+  - {from: 1648, owner: siam, note: 東北部（イサーン）へのシャムの前線の町}
+  - from: 1767
+    owner: siam
+    certainty: uncertain
+    cause: アユタヤの陥落後、ピマーイの王族が自立する
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+  - from: 1768
+    owner: siam
+    cause: タークシンがピマーイの政権を滅ぼす
+    source: "https://ja.wikipedia.org/wiki/タークシン"
+  - from: 1827
+    owner: vientiane
+    certainty: occupied
+    label: コーラート（ラーオ軍の占領）
+    cause: アヌウォンの乱。ヴィエンチャン軍がコーラートを占領する（1827年初め）
+    note: 1827年中にシャム軍が取り戻した。年末の状態ではシャム
+    source: "https://ja.wikipedia.org/wiki/アヌウォン"
+  - from: 1828
+    owner: siam
+    cause: シャム軍がヴィエンチャンを落とす
+    source: "https://ja.wikipedia.org/wiki/アヌウォン"
+
+- id: tha_isan_khmer
+  name: イサーン南部（ブリーラム・スリン）
+  select:
+    pieces: [THA-Buri_Ram_Province, THA-Surin_Province]
+  timeline:
+  - {from: 1648, owner: siam, certainty: uncertain, note: クメール人・クイ人の住む地域。カンボジアとシャムの間で境界ははっきりしなかった}
+  - from: 1760
+    owner: siam
+    cause: クイ人の首長たちがシャムに従い、町の長に任じられる
+    note: 年は要確認
+    source: "https://en.wikipedia.org/wiki/Surin_province"
+
+- id: tha_isan_north
+  name: イサーン北部（メコン川西岸）
+  select:
+    pieces: [THA-Nong_Khai_Province, THA-Bueng_Kan_Province, THA-Udon_Thani_Province, THA-Nong_Bua_Lam_Phu_Province, THA-Loei_Province, THA-Sakon_Nakhon_Province, THA-Nakhon_Phanom_Province, THA-Mukdahan_Province]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    note: ラーンサーン王国の都ヴィエンチャンの対岸
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1707
+    owner: vientiane
+    cause: ラーンサーン王国の分裂
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Vientiane"
+  - from: 1779
+    owner: vientiane
+    overlord: siam
+    cause: シャムがヴィエンチャンを征服し、宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Vientiane"
+  - from: 1828
+    owner: siam
+    cause: アヌウォンの乱が鎮められ、ヴィエンチャン王国が滅ぶ。メコン西岸はシャムが直接治める
+    note: シャムはメコン東岸の住民を西岸に強制移住させた
+    source: "https://ja.wikipedia.org/wiki/アヌウォン"
+
+- id: tha_isan_central
+  name: イサーン中部（コーンケン・ローイエット）
+  select:
+    pieces: [THA-Khon_Kaen_Province, THA-Kalasin, THA-Maha_Sarakham_Province, THA-Roi_Et_Province, THA-Yasothon_Province]
+  timeline:
+  - {from: 1648, owner: lan_xang, certainty: nominal, note: 人口の少ない台地。ラーンサーンの勢力が名目的に及んだ}
+  - from: 1707
+    owner: vientiane
+    certainty: nominal
+    cause: ラーンサーン王国の分裂
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Vientiane"
+  - from: 1779
+    owner: siam
+    certainty: uncertain
+    cause: シャムがラーオ諸国を征服し、ローイエット（1775）・カーラシン（1793）など、シャムに従うラーオ人の町が置かれていく
+    source: "https://en.wikipedia.org/wiki/Isan"
+  - from: 1828
+    owner: siam
+    cause: アヌウォンの乱の鎮圧
+    source: "https://ja.wikipedia.org/wiki/アヌウォン"
+
+- id: tha_isan_ubon
+  name: イサーン南東部（ウボン）
+  select:
+    pieces: [THA-Ubon_Ratchathani_Province, THA-Amnat_Charoen_Province, THA-Si_Sa_Ket_Province]
+  timeline:
+  - {from: 1648, owner: lan_xang, certainty: nominal}
+  - from: 1713
+    owner: champasak
+    certainty: uncertain
+    cause: ラーンサーン南部がチャンパーサック王国として分かれる
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1779
+    owner: champasak
+    overlord: siam
+    cause: シャムがチャンパーサックを宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1792
+    owner: siam
+    cause: ウボンがシャムの直属の町として置かれる
+    source: "https://en.wikipedia.org/wiki/Ubon_Ratchathani"
+
+- id: tha_chiangmai
+  name: ランナー（チェンマイ・ランパーン）
+  select:
+    pieces: [THA-Chiang_Mai_Province, THA-Lamphun_Province, THA-Lampang_Province, THA-Mae_Hong_Son_Province]
+  timeline:
+  - from: 1648
+    owner: lan_na
+    overlord: burma
+    note: 1558年からビルマの属国
+    source: "https://en.wikipedia.org/wiki/Lan_Na"
+  - from: 1727
+    owner: lan_na
+    cause: チェンマイがビルマに反乱して自立する
+    note: チェンセーンはビルマの直轄に残った。ランパーンも自立した（1732）
+    source: "https://en.wikipedia.org/wiki/Lan_Na"
+  - from: 1763
+    owner: burma
+    cause: コンバウン朝のビルマ軍がチェンマイを再び征服する
+    source: "https://en.wikipedia.org/wiki/Lan_Na"
+  - from: 1775
+    owner: lan_na
+    overlord: siam
+    cause: カーウィラらがシャムのタークシンの軍とともにビルマ軍をチェンマイから追う（1月）
+    note: チェンマイは戦乱で1776–1797年に放棄され、ランパーンが拠点となった
+    source: "https://en.wikipedia.org/wiki/Kawila"
+  - from: 1899
+    owner: siam
+    cause: シャムがランナーの諸王国を州（モントン・パーヤップ）に組み込む
+    note: チェンマイ王家は1939年まで名目的に続いた
+    source: "https://en.wikipedia.org/wiki/Monthon_Phayap"
+
+- id: tha_chiangsaen
+  name: チェンセーン（チェンラーイ・パヤオ）
+  select:
+    pieces: [THA-Chiang_Rai_Province, THA-Phayao_Province]
+  timeline:
+  - from: 1648
+    owner: lan_na
+    overlord: burma
+    source: "https://en.wikipedia.org/wiki/Lan_Na"
+  - from: 1727
+    owner: burma
+    cause: チェンマイが自立した後も、チェンセーンはビルマが直接治める
+    source: "https://en.wikipedia.org/wiki/Chiang_Saen"
+  - from: 1804
+    owner: lan_na
+    overlord: siam
+    cause: シャム・ランナー軍がビルマの拠点チェンセーンを落とす
+    source: "https://en.wikipedia.org/wiki/Chiang_Saen"
+  - from: 1899
+    owner: siam
+    cause: シャムがランナーの諸王国を州（モントン・パーヤップ）に組み込む
+    note: チェンマイ王家は1939年まで名目的に続いた
+    source: "https://en.wikipedia.org/wiki/Monthon_Phayap"
+
+- id: tha_nan
+  name: ナーン・プレー
+  select:
+    pieces: [THA-Nan_Province, THA-Phrae_Province]
+  timeline:
+  - from: 1648
+    owner: lan_na
+    overlord: burma
+    note: ナーン・プレーは別の小王国だが、地図ではランナーにまとめた
+    source: "https://en.wikipedia.org/wiki/Nan_Kingdom"
+  - from: 1788
+    owner: lan_na
+    overlord: siam
+    cause: ナーン・プレーがシャムに従う
+    note: 年は要確認
+    source: "https://en.wikipedia.org/wiki/Nan_Kingdom"
+  - from: 1899
+    owner: siam
+    cause: シャムがランナーの諸王国を州（モントン・パーヤップ）に組み込む
+    note: チェンマイ王家は1939年まで名目的に続いた
+    source: "https://en.wikipedia.org/wiki/Monthon_Phayap"
+
+- id: lao_luangprabang
+  name: ルアンパバーン（ラオス北部）
+  select:
+    pieces: [LAO-Luang_Prabang, LAO-Oudomxay, LAO-Luang_Namtha, LAO-Bokeo]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1707
+    owner: luang_prabang
+    cause: ラーンサーン王国が分裂し、ルアンパバーン王国が分かれる
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Luang_Phrabang"
+  - from: 1779
+    owner: luang_prabang
+    overlord: siam
+    cause: シャムがラーオ諸国を宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Luang_Phrabang"
+  - from: 1893
+    owner: france
+    certainty: indirect
+    label: ルアンパバーン王国
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: ルアンパバーン王国
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: laos
+    certainty: uncertain
+    cause: 日本の降伏後、ラオ・イサラ（自由ラオス）がラオスの独立を宣言する（10月）
+    note: 北緯16度以北には中華民国軍が日本軍の武装解除のために進駐した
+    source: "https://ja.wikipedia.org/wiki/ラオ・イサラ"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: フランス軍が戻り、ラオスをルアンパバーン王のもとの統一王国とする（8月の暫定協定）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_northeast
+  name: フアパン・ポンサーリー
+  select:
+    pieces: [LAO-Houaphan, LAO-Phongsaly]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    certainty: nominal
+    note: タイ系・モン＝クメール系の山地の諸侯。フアパンはベトナムにも貢納した
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1707
+    owner: luang_prabang
+    certainty: nominal
+    cause: ラーンサーン王国の分裂
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Luang_Phrabang"
+  - from: 1779
+    owner: luang_prabang
+    overlord: siam
+    certainty: nominal
+    cause: シャムがラーオ諸国を宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Luang_Phrabang"
+  - from: 1893
+    owner: france
+    certainty: indirect
+    label: ルアンパバーン王国
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    note: ポンサーリーの帰属は1895年のフランスと清の協定で決まった
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: ルアンパバーン王国
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: laos
+    certainty: uncertain
+    cause: 日本の降伏後、ラオ・イサラ（自由ラオス）がラオスの独立を宣言する（10月）
+    note: 北緯16度以北には中華民国軍が日本軍の武装解除のために進駐した
+    source: "https://ja.wikipedia.org/wiki/ラオ・イサラ"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: フランス軍が戻り、ラオスをルアンパバーン王のもとの統一王国とする（8月の暫定協定）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1954
+    owner: pathet_lao
+    cause: ジュネーヴ協定で、フアパン・ポンサーリー2州がパテート・ラーオの集結地とされる
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1957
+    owner: laos
+    cause: 第1次連合政府でパテート・ラーオの2州が王国政府に戻される（11月）
+    source: "https://ja.wikipedia.org/wiki/ラオス内戦"
+  - from: 1960
+    owner: pathet_lao
+    cause: コン・レーのクーデタ（8月）の後、内戦が再燃し、パテート・ラーオが北東部をおさえる
+    note: フアパン県のヴィエンサイの洞窟が、パテート・ラーオの本拠となった
+    source: "https://ja.wikipedia.org/wiki/ラオス内戦"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_xaignabouli
+  name: サイニャブリー（メコン川西岸）
+  select:
+    pieces: [LAO-Xaignabouli]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1707
+    owner: luang_prabang
+    cause: ラーンサーン王国の分裂
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Luang_Phrabang"
+  - from: 1779
+    owner: luang_prabang
+    overlord: siam
+    cause: シャムがラーオ諸国を宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Luang_Phrabang"
+  - from: 1893
+    owner: siam
+    label: ルアンパバーン西岸
+    cause: メコン東岸がフランス領となり、西岸はシャムに残る
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1904
+    owner: france
+    certainty: indirect
+    label: ルアンパバーン王国
+    cause: フランス＝シャム条約で、メコン西岸のサイニャブリーがフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
+  - from: 1941
+    owner: siam
+    certainty: occupied
+    label: ラーンチャーン県（タイが併合）
+    cause: タイ＝フランス領インドシナ紛争の後、日本の仲介による東京条約でタイ領となる（5月）
+    source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: ワシントン協定でタイがフランスに返す（11月）
+    source: "https://en.wikipedia.org/wiki/Franco-Thai_War"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_vientiane
+  name: ヴィエンチャン（ラオス中部）
+  select:
+    pieces: [LAO-Vientiane_Capital, LAO-Vientiane, LAO-Xaisomboun, LAO-Bolikhamsai]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    note: 都ヴィエンチャン
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1707
+    owner: vientiane
+    cause: ラーンサーン王国の分裂
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Vientiane"
+  - from: 1779
+    owner: vientiane
+    overlord: siam
+    cause: シャムがヴィエンチャンを征服し、エメラルド仏をバンコクに運ぶ
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Vientiane"
+  - from: 1828
+    owner: siam
+    certainty: uncertain
+    label: ヴィエンチャン（シャムが破壊）
+    cause: アヌウォンの乱の鎮圧。シャム軍が都ヴィエンチャンを破壊し、住民を西岸に移す
+    source: "https://ja.wikipedia.org/wiki/アヌウォン"
+  - from: 1893
+    owner: france
+    label: ラオス
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    note: 1899年にフランス領インドシナのラオスの行政の中心がヴィエンチャンに置かれた
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: ラオス
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: laos
+    certainty: uncertain
+    cause: 日本の降伏後、ラオ・イサラ（自由ラオス）がラオスの独立を宣言する（10月）
+    note: 北緯16度以北には中華民国軍が日本軍の武装解除のために進駐した
+    source: "https://ja.wikipedia.org/wiki/ラオ・イサラ"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: フランス軍が戻り、ラオスをルアンパバーン王のもとの統一王国とする（8月の暫定協定）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_central
+  name: カムムアン・サワンナケート
+  select:
+    pieces: [LAO-Khammouane, LAO-Savannakhet]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1707
+    owner: vientiane
+    cause: ラーンサーン王国の分裂
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Vientiane"
+  - from: 1779
+    owner: vientiane
+    overlord: siam
+    cause: シャムがヴィエンチャンを征服
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Vientiane"
+  - from: 1828
+    owner: siam
+    certainty: uncertain
+    cause: アヌウォンの乱の鎮圧
+    note: ベトナム（阮朝）もこの地域への宗主権を主張した
+    source: "https://ja.wikipedia.org/wiki/アヌウォン"
+  - from: 1893
+    owner: france
+    label: ラオス
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: ラオス
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: laos
+    certainty: uncertain
+    cause: 日本の降伏後、ラオ・イサラ（自由ラオス）がラオスの独立を宣言する（10月）
+    note: 北緯16度以北には中華民国軍が日本軍の武装解除のために進駐した
+    source: "https://ja.wikipedia.org/wiki/ラオ・イサラ"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: フランス軍が戻り、ラオスをルアンパバーン王のもとの統一王国とする（8月の暫定協定）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_xiangkhouang
+  name: シエンクアン（ジャール平原）
+  select:
+    pieces: [LAO-Xiangkhouang]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1707
+    owner: phuan
+    overlord: vientiane
+    cause: ラーンサーン王国の分裂
+    source: "https://en.wikipedia.org/wiki/Muang_Phuan"
+  - from: 1779
+    owner: phuan
+    overlord: siam
+    cause: シャムがラーオ諸国を征服
+    source: "https://en.wikipedia.org/wiki/Muang_Phuan"
+  - from: 1832
+    owner: vietnam
+    certainty: uncertain
+    label: 鎮寧府
+    cause: ベトナムの明命帝がプアン侯国を併合する
+    source: "https://en.wikipedia.org/wiki/Muang_Phuan"
+  - from: 1849
+    owner: phuan
+    overlord: vietnam
+    cause: ベトナムがプアンの王家を戻す
+    note: 年は要確認
+    source: "https://en.wikipedia.org/wiki/Muang_Phuan"
+  - from: 1876
+    owner: siam
+    certainty: uncertain
+    cause: 黒旗軍（ホー）の略奪に対してシャム軍が出兵し、ジャール平原をおさえる
+    source: "https://en.wikipedia.org/wiki/Haw_wars"
+  - from: 1893
+    owner: france
+    label: ラオス
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: ラオス
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: laos
+    certainty: uncertain
+    cause: 日本の降伏後、ラオ・イサラ（自由ラオス）がラオスの独立を宣言する（10月）
+    note: 北緯16度以北には中華民国軍が日本軍の武装解除のために進駐した
+    source: "https://ja.wikipedia.org/wiki/ラオ・イサラ"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: フランス軍が戻り、ラオスをルアンパバーン王のもとの統一王国とする（8月の暫定協定）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1961
+    owner: pathet_lao
+    certainty: uncertain
+    cause: 内戦。パテート・ラーオとコン・レーの中立派がジャール平原をおさえる
+    note: モン人のヴァン・パオ将軍の部隊（アメリカのCIAが支援）との争奪がくり返され、アメリカ軍の大規模な爆撃を受けた
+    source: "https://ja.wikipedia.org/wiki/ラオス内戦"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_south
+  name: 南ラオス（パークセー・サーラワン）
+  select:
+    pieces: [LAO-Pakse, LAO-Paksxong, LAO-Pathoomphone, LAO-Bachiangchaleunsook, LAO-Khong, LAO-Salavan]
+  timeline:
+  - from: 1648
+    owner: lan_xang
+    certainty: nominal
+    source: "https://ja.wikipedia.org/wiki/ラーンサーン王国"
+  - from: 1713
+    owner: champasak
+    cause: ラーンサーン南部がチャンパーサック王国として分かれる
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1779
+    owner: champasak
+    overlord: siam
+    cause: シャムがチャンパーサックを宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1893
+    owner: france
+    label: ラオス
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: ラオス
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: ラオス
+    cause: フランス軍がブン・ウムの協力で南ラオスに戻る
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: フランス軍が戻り、ラオスをルアンパバーン王のもとの統一王国とする（8月の暫定協定）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_attapeu
+  name: アッタプー・セーコーン（ラオス南東部の山地）
+  select:
+    pieces: [LAO-Attapeu, LAO-Xekong]
+  timeline:
+  - {from: 1648, owner: lan_xang, certainty: nominal, note: モン＝クメール系の山地民の地域}
+  - from: 1713
+    owner: champasak
+    certainty: nominal
+    cause: チャンパーサック王国の成立
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1779
+    owner: champasak
+    overlord: siam
+    certainty: nominal
+    cause: シャムがチャンパーサックを宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1893
+    owner: france
+    label: ラオス
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: ラオス
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: ラオス
+    cause: フランス軍がブン・ウムの協力で南ラオスに戻る
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: フランス軍が戻り、ラオスをルアンパバーン王のもとの統一王国とする（8月の暫定協定）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1965
+    owner: pathet_lao
+    certainty: uncertain
+    cause: ホー・チ・ミン・ルートが通り、北ベトナム軍とパテート・ラーオがおさえる
+    note: アッタプーの町は1970年に落ちた
+    source: "https://ja.wikipedia.org/wiki/ホーチミン・ルート"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: lao_champasak_west
+  name: チャンパーサック（メコン川西岸）
+  select:
+    pieces: [LAO-Champasack, LAO-Moonlapamok, LAO-Phonthong, LAO-Sanasomboon, LAO-Sukhuma]
+  timeline:
+  - {from: 1648, owner: lan_xang, certainty: nominal, note: ワット・プーなどクメールの遺跡がある}
+  - from: 1713
+    owner: champasak
+    cause: チャンパーサック王国の成立（都はメコン西岸のチャンパーサック）
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1779
+    owner: champasak
+    overlord: siam
+    cause: シャムがチャンパーサックを宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1904
+    owner: france
+    label: ラオス
+    cause: フランス＝シャム条約で、メコン西岸のチャンパーサックがフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
+  - from: 1941
+    owner: siam
+    certainty: occupied
+    label: ナコーンチャンパーサック県（タイが併合）
+    cause: 東京条約でタイ領となる（5月）
+    source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: ラオス
+    cause: ワシントン協定でタイがフランスに返す（11月）
+    source: "https://en.wikipedia.org/wiki/Franco-Thai_War"
+  - from: 1949
+    owner: laos
+    overlord: france
+    cause: フランス＝ラオス協定で、ラオス王国がフランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1953
+    owner: laos
+    cause: フランス＝ラオス条約でラオスが完全に独立する（10月）
+    source: "https://ja.wikipedia.org/wiki/ラオスの歴史"
+  - from: 1975
+    owner: laos
+    cause: パテート・ラーオが全権を握り、王政を廃してラオス人民民主共和国を建てる（12月）
+    source: "https://ja.wikipedia.org/wiki/ラオス人民民主共和国"
+
+- id: khm_core
+  name: カンボジア（メコン川・トンレサップ湖の流域）
+  select:
+    pieces: [KHM-Phnom_Penh, KHM-Kandal, KHM-Kampong_Chhnang, KHM-Prey_Veng, KHM-Svay_Rieng, KHM-Kampong_Cham, KHM-Pursat, KHM-Kep, KHM-Preah_Sihanouk]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    note: 都はウドン。王はシャム・ベトナムの両方に朝貢し、王族の争いに両国が介入した
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: cambodia
+    overlord: siam
+    cause: シャムで育ったアン・エンがシャムの後ろ盾で即位し、北西部をシャムに譲る
+    source: "https://en.wikipedia.org/wiki/Ang_Eng"
+  - from: 1812
+    owner: cambodia
+    overlord: vietnam
+    cause: アン・チャン2世がシャムと対立してベトナムに頼り、ベトナム軍が駐留する
+    source: "https://en.wikipedia.org/wiki/Ang_Chan_II"
+  - from: 1834
+    owner: vietnam
+    certainty: uncertain
+    label: 鎮西城（ベトナムが併合）
+    cause: シャム＝ベトナム戦争の後、ベトナムがカンボジアを併合し、鎮西城を置く（1835年からアン・メイ女王を傀儡に立てる）
+    source: "https://en.wikipedia.org/wiki/Siamese–Vietnamese_War_(1831–1834)"
+  - from: 1841
+    owner: cambodia
+    overlord: siam
+    certainty: uncertain
+    cause: カンボジア人の反乱とシャム軍の侵攻で、ベトナム軍が退く（シャム＝ベトナム戦争、1841–45）
+    source: "https://en.wikipedia.org/wiki/Siamese–Vietnamese_War_(1841–1845)"
+  - from: 1846
+    owner: cambodia
+    overlord: siam
+    cause: 和約でアン・ドゥオンが王となり、シャムとベトナムの両方の宗主権を認める（1848年に戴冠）
+    note: 地図ではシャムの帯で示す（ベトナムにも朝貢）
+    source: "https://en.wikipedia.org/wiki/Ang_Duong"
+  - from: 1863
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: ノロドム王がフランスの保護を受け入れる（8月）
+    source: "https://ja.wikipedia.org/wiki/フランス領インドシナ"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: カンボジア
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: 日本の降伏後、フランスが戻る（10月）
+    note: 1945年3月の日本軍の仏印処理（明号作戦）でシハヌーク王が独立を宣言したが、年末にはフランスの保護国に戻った
+    source: "https://ja.wikipedia.org/wiki/明号作戦"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: cambodia
+    cause: ロン・ノルのクーデタでシハヌークが追われ（3月）、クメール共和国となる（10月）。内戦が始まる
+    source: "https://ja.wikipedia.org/wiki/ロン・ノル"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: khm_kr73
+  name: カンボジア中南部の農村（コンポントム・タケオなど）
+  select:
+    pieces: [KHM-Kampong_Thom, KHM-Tbong_Khmum, KHM-Kampot, KHM-Kampong_Speu, KHM-Takeo]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    note: 都はウドン。王はシャム・ベトナムの両方に朝貢し、王族の争いに両国が介入した
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: cambodia
+    overlord: siam
+    cause: シャムで育ったアン・エンがシャムの後ろ盾で即位し、北西部をシャムに譲る
+    source: "https://en.wikipedia.org/wiki/Ang_Eng"
+  - from: 1812
+    owner: cambodia
+    overlord: vietnam
+    cause: アン・チャン2世がシャムと対立してベトナムに頼り、ベトナム軍が駐留する
+    source: "https://en.wikipedia.org/wiki/Ang_Chan_II"
+  - from: 1834
+    owner: vietnam
+    certainty: uncertain
+    label: 鎮西城（ベトナムが併合）
+    cause: シャム＝ベトナム戦争の後、ベトナムがカンボジアを併合し、鎮西城を置く（1835年からアン・メイ女王を傀儡に立てる）
+    source: "https://en.wikipedia.org/wiki/Siamese–Vietnamese_War_(1831–1834)"
+  - from: 1841
+    owner: cambodia
+    overlord: siam
+    certainty: uncertain
+    cause: カンボジア人の反乱とシャム軍の侵攻で、ベトナム軍が退く（シャム＝ベトナム戦争、1841–45）
+    source: "https://en.wikipedia.org/wiki/Siamese–Vietnamese_War_(1841–1845)"
+  - from: 1846
+    owner: cambodia
+    overlord: siam
+    cause: 和約でアン・ドゥオンが王となり、シャムとベトナムの両方の宗主権を認める（1848年に戴冠）
+    note: 地図ではシャムの帯で示す（ベトナムにも朝貢）
+    source: "https://en.wikipedia.org/wiki/Ang_Duong"
+  - from: 1863
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: ノロドム王がフランスの保護を受け入れる（8月）
+    source: "https://ja.wikipedia.org/wiki/フランス領インドシナ"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: カンボジア
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: 日本の降伏後、フランスが戻る（10月）
+    note: 1945年3月の日本軍の仏印処理（明号作戦）でシハヌーク王が独立を宣言したが、年末にはフランスの保護国に戻った
+    source: "https://ja.wikipedia.org/wiki/明号作戦"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: cambodia
+    cause: ロン・ノルのクーデタ。内戦が始まる
+    source: "https://ja.wikipedia.org/wiki/ロン・ノル"
+  - from: 1973
+    owner: khmer_rouge
+    certainty: uncertain
+    cause: クメール・ルージュが農村の大半をおさえる（政府軍は州都を保つ）
+    source: "https://ja.wikipedia.org/wiki/カンボジア内戦"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: khm_kratie
+  name: クラチエ・モンドルキリ
+  select:
+    pieces: [KHM-Kratie, KHM-Mondulkiri]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    certainty: nominal
+    note: メコン川沿いの町と、山地民（プノン人など）の高原
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: cambodia
+    overlord: siam
+    certainty: nominal
+    cause: カンボジアがシャムの宗主権下に入る
+    source: "https://en.wikipedia.org/wiki/Ang_Eng"
+  - from: 1812
+    owner: cambodia
+    overlord: vietnam
+    certainty: nominal
+    cause: カンボジアがベトナムに頼る
+    source: "https://en.wikipedia.org/wiki/Ang_Chan_II"
+  - from: 1834
+    owner: vietnam
+    certainty: uncertain
+    label: 鎮西城（ベトナムが併合）
+    cause: ベトナムのカンボジア併合
+    source: "https://en.wikipedia.org/wiki/Siamese–Vietnamese_War_(1831–1834)"
+  - from: 1841
+    owner: cambodia
+    overlord: siam
+    certainty: uncertain
+    cause: シャム＝ベトナム戦争
+    source: "https://en.wikipedia.org/wiki/Siamese–Vietnamese_War_(1841–1845)"
+  - from: 1846
+    owner: cambodia
+    overlord: siam
+    certainty: nominal
+    cause: アン・ドゥオンが王となる
+    source: "https://en.wikipedia.org/wiki/Ang_Duong"
+  - from: 1863
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: ノロドム王がフランスの保護を受け入れる（8月）
+    source: "https://ja.wikipedia.org/wiki/フランス領インドシナ"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: カンボジア
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: 日本の降伏後、フランスが戻る（10月）
+    note: 1945年3月の日本軍の仏印処理（明号作戦）でシハヌーク王が独立を宣言したが、年末にはフランスの保護国に戻った
+    source: "https://ja.wikipedia.org/wiki/明号作戦"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: khmer_rouge
+    certainty: uncertain
+    cause: 北ベトナム軍とクメール・ルージュが北東部をおさえる（1970年半ば）
+    source: "https://ja.wikipedia.org/wiki/カンボジア内戦"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: khm_stungtreng
+  name: ストゥントレン・ラタナキリ
+  select:
+    pieces: [KHM-Stung_Treng, KHM-Ratanakiri_Province]
+  timeline:
+  - {from: 1648, owner: lan_xang, certainty: nominal, note: ラーオ人の町と山地民の地域}
+  - from: 1713
+    owner: champasak
+    certainty: nominal
+    cause: チャンパーサック王国の成立
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1779
+    owner: champasak
+    overlord: siam
+    certainty: nominal
+    cause: シャムがチャンパーサックを宗主権下に置く
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Champasak"
+  - from: 1893
+    owner: france
+    label: ラオス
+    cause: フランス＝シャム条約（パークナーム事件の後）で、メコン川の東岸がフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_crisis_of_1893"
+  - from: 1904
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: フランスがストゥントレンをラオスからカンボジアに移す
+    source: "https://en.wikipedia.org/wiki/Stung_Treng_province"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: カンボジア
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: 日本の降伏後、フランスが戻る（10月）
+    note: 1945年3月の日本軍の仏印処理（明号作戦）でシハヌーク王が独立を宣言したが、年末にはフランスの保護国に戻った
+    source: "https://ja.wikipedia.org/wiki/明号作戦"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: khmer_rouge
+    certainty: uncertain
+    cause: 北ベトナム軍とクメール・ルージュが北東部をおさえる
+    source: "https://ja.wikipedia.org/wiki/カンボジア内戦"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: khm_preahvihear
+  name: プレアヴィヒア（メループレイ）
+  select:
+    pieces: [KHM-Preah_Vihear]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    certainty: nominal
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: siam
+    certainty: nominal
+    cause: カンボジア北部がシャムの勢力下に入る
+    note: メループレイ・トンレロポウの帰属の年は要確認
+    source: "https://en.wikipedia.org/wiki/Preah_Vihear_province"
+  - from: 1904
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: フランス＝シャム条約で、メループレイがフランス領となる
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
+  - from: 1941
+    owner: siam
+    certainty: occupied
+    label: ナコーンチャンパーサック県（タイが併合）
+    cause: 東京条約でタイ領となる（5月）
+    source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: ワシントン協定でタイがフランスに返す（11月）
+    source: "https://en.wikipedia.org/wiki/Franco-Thai_War"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1962
+    owner: cambodia
+    cause: 国際司法裁判所が、国境のプレアヴィヒア寺院をカンボジア領とする判決を出す
+    note: 寺院の周辺の帰属をめぐって2008–11年にタイと武力衝突が起きた
+    source: "https://ja.wikipedia.org/wiki/プレアヴィヒア寺院"
+  - from: 1970
+    owner: khmer_rouge
+    certainty: uncertain
+    cause: 北ベトナム軍とクメール・ルージュが北部をおさえる
+    source: "https://ja.wikipedia.org/wiki/カンボジア内戦"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: khm_battambang
+  name: バッタンバン・シソポン
+  select:
+    pieces: [KHM-Battambang, KHM-Bantey_Meanchey]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: siam
+    label: バッタンバン
+    cause: アン・エンの即位の見返りに、北西部（バッタンバン・シェムリアップ）がシャムの支配下に入る
+    note: シャムが任じたアパイウォン家の知事が治めた
+    source: "https://en.wikipedia.org/wiki/Battambang_province"
+  - from: 1907
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: フランス＝シャム条約で、バッタンバン・シェムリアップ・シソポンがカンボジア（フランス）に戻る
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
+  - from: 1941
+    owner: siam
+    certainty: occupied
+    label: ピブーンソンクラーム県・バッタンバン県（タイが併合）
+    cause: タイ＝フランス領インドシナ紛争の後、東京条約でタイ領となる（5月）
+    source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: ワシントン協定でタイがフランスに返す（11月）
+    source: "https://en.wikipedia.org/wiki/Franco-Thai_War"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: cambodia
+    cause: ロン・ノルのクーデタ。内戦が始まる
+    source: "https://ja.wikipedia.org/wiki/ロン・ノル"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: khm_siemreap
+  name: シェムリアップ（アンコール）
+  select:
+    pieces: [KHM-Siem_Reap]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: siam
+    label: シェムリアップ
+    cause: アン・エンの即位の見返りに、北西部（バッタンバン・シェムリアップ）がシャムの支配下に入る
+    note: シャムが任じたアパイウォン家の知事が治めた
+    source: "https://en.wikipedia.org/wiki/Battambang_province"
+  - from: 1907
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: フランス＝シャム条約で、バッタンバン・シェムリアップ・シソポンがカンボジア（フランス）に戻る
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: カンボジア
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: 日本の降伏後、フランスが戻る（10月）
+    note: 1945年3月の日本軍の仏印処理（明号作戦）でシハヌーク王が独立を宣言したが、年末にはフランスの保護国に戻った
+    source: "https://ja.wikipedia.org/wiki/明号作戦"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: cambodia
+    cause: ロン・ノルのクーデタ。内戦が始まる
+    source: "https://ja.wikipedia.org/wiki/ロン・ノル"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: khm_pailin
+  name: パイリン
+  select:
+    pieces: [KHM-Pailin]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: siam
+    label: バッタンバン
+    cause: アン・エンの即位の見返りに、北西部（バッタンバン・シェムリアップ）がシャムの支配下に入る
+    note: シャムが任じたアパイウォン家の知事が治めた
+    source: "https://en.wikipedia.org/wiki/Battambang_province"
+  - from: 1907
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: フランス＝シャム条約で、バッタンバン・シェムリアップ・シソポンがカンボジア（フランス）に戻る
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
+  - from: 1941
+    owner: siam
+    certainty: occupied
+    label: ピブーンソンクラーム県・バッタンバン県（タイが併合）
+    cause: タイ＝フランス領インドシナ紛争の後、東京条約でタイ領となる（5月）
+    source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: ワシントン協定でタイがフランスに返す（11月）
+    source: "https://en.wikipedia.org/wiki/Franco-Thai_War"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: cambodia
+    cause: ロン・ノルのクーデタ。内戦が始まる
+    source: "https://ja.wikipedia.org/wiki/ロン・ノル"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: khmer_rouge
+    cause: ベトナム軍に追われたクメール・ルージュがタイ国境の山地に拠る
+    note: パイリンの宝石・木材の取引が資金源となった
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1996
+    owner: cambodia
+    cause: パイリンのクメール・ルージュの指導者イエン・サリが政府に投降する（8月）
+    source: "https://ja.wikipedia.org/wiki/イエン・サリ"
+
+- id: khm_oddar
+  name: ウッダーミアンチェイ（アンロンヴェン）
+  select:
+    pieces: [KHM-Oddar_Meanchey]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: siam
+    label: バッタンバン
+    cause: アン・エンの即位の見返りに、北西部（バッタンバン・シェムリアップ）がシャムの支配下に入る
+    note: シャムが任じたアパイウォン家の知事が治めた
+    source: "https://en.wikipedia.org/wiki/Battambang_province"
+  - from: 1907
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: フランス＝シャム条約で、バッタンバン・シェムリアップ・シソポンがカンボジア（フランス）に戻る
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
+  - from: 1941
+    owner: siam
+    certainty: occupied
+    label: ピブーンソンクラーム県・バッタンバン県（タイが併合）
+    cause: タイ＝フランス領インドシナ紛争の後、東京条約でタイ領となる（5月）
+    source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: ワシントン協定でタイがフランスに返す（11月）
+    source: "https://en.wikipedia.org/wiki/Franco-Thai_War"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: cambodia
+    cause: ロン・ノルのクーデタ。内戦が始まる
+    source: "https://ja.wikipedia.org/wiki/ロン・ノル"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: khmer_rouge
+    certainty: uncertain
+    cause: 総選挙を拒んだクメール・ルージュがアンロンヴェンを本拠とする
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1998
+    owner: cambodia
+    cause: ポル・ポトの死（4月）の後、クメール・ルージュの最後の部隊が投降し、消滅する
+    source: "https://ja.wikipedia.org/wiki/ポル・ポト"
+
+- id: khm_kohkong
+  name: コッコン
+  select:
+    pieces: [KHM-Koh_Kong]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    certainty: nominal
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1794
+    owner: siam
+    certainty: nominal
+    label: コッコン
+    cause: シャムがカンボジアの西部を支配下に置く
+    note: シャム領となった年は要確認（トラートの一部とされた）
+    source: "https://en.wikipedia.org/wiki/Koh_Kong_province"
+  - from: 1904
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: フランス＝シャム条約でフランス領となる（1907年にトラートだけシャムに戻された）
+    source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: カンボジア
+    cause: 日本軍がインドシナ全域に進駐する（南部仏印進駐、7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: indirect
+    label: カンボジア
+    cause: 日本の降伏後、フランスが戻る（10月）
+    note: 1945年3月の日本軍の仏印処理（明号作戦）でシハヌーク王が独立を宣言したが、年末にはフランスの保護国に戻った
+    source: "https://ja.wikipedia.org/wiki/明号作戦"
+  - from: 1949
+    owner: cambodia
+    overlord: france
+    cause: フランス＝カンボジア条約で、フランス連合内の協同国となる
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1953
+    owner: cambodia
+    cause: シハヌークの「独立十字軍」によって、フランスから完全に独立する（11月）
+    source: "https://ja.wikipedia.org/wiki/カンボジアの歴史"
+  - from: 1970
+    owner: cambodia
+    cause: ロン・ノルのクーデタ。内戦が始まる
+    source: "https://ja.wikipedia.org/wiki/ロン・ノル"
+  - from: 1975
+    owner: khmer_rouge
+    cause: クメール・ルージュがプノンペンを落とし（4月17日）、都市住民を農村に強制移住させる
+    source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+  - from: 1979
+    owner: cambodia
+    overlord: vietnam
+    cause: ベトナム軍がプノンペンを落とし（1月）、ヘン・サムリンのカンプチア人民共和国を建てる
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1989
+    owner: cambodia
+    cause: ベトナム軍がカンボジアから撤退する（9月）
+    source: "https://ja.wikipedia.org/wiki/カンボジア・ベトナム戦争"
+  - from: 1993
+    owner: cambodia
+    cause: 国連カンボジア暫定統治機構（UNTAC）のもとの総選挙を経て、立憲君主制のカンボジア王国となる
+    note: 1991年のパリ和平協定で、1992–93年は UNTAC が暫定的に統治した
+    source: "https://ja.wikipedia.org/wiki/国際連合カンボジア暫定統治機構"
+
+- id: vnm_hanoi
+  name: ハノイ（東京）
+  select:
+    pieces: [VNM-Ha_N_i]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた。乾隆帝の清軍は1788年12月に昇竜（ハノイ）を占領して黎朝の昭統帝を復位させたが、翌1789年1月の棟多の戦いで敗れて退いた。1か月余りの一時的な占領なので、1788年の地図には描かない
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1873
+    owner: france
+    certainty: occupied
+    label: トンキン（フランス軍の占領）
+    cause: フランスのガルニエがハノイ城と紅河デルタの諸城を落とす（11–12月）
+    note: ガルニエは黒旗軍に殺され、フランス軍は1874年初めに撤退した
+    source: "https://en.wikipedia.org/wiki/Tonkin_campaign"
+  - from: 1874
+    owner: vietnam
+    overlord: qing
+    cause: 第2次サイゴン条約（3月）でフランス軍が引く
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1882
+    owner: france
+    certainty: occupied
+    label: トンキン（フランス軍の占領）
+    cause: フランスのリヴィエールがハノイ城を落とす（4月）
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: ユエ条約（アルマン条約、8月）でベトナムがフランスの保護国となり、フランス軍が紅河デルタをおさえる
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: france
+    certainty: occupied
+    label: ハノイ（フランス軍）
+    cause: ハノイでフランス軍とベトミン軍の戦闘が始まる（12月19日、インドシナ戦争の開始）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: トンキン
+    cause: フランス軍がハノイを確保し（2月）、ベトミンは山地に退く
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    note: 紅河デルタの農村にはベトミンが広く浸透していた
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_delta_garnier
+  name: 紅河デルタ（ナムディン・ハイズオン・ニンビン）
+  select:
+    pieces: [VNM-Nam_nh, VNM-H_i_D_ng, VNM-Ninh_Binh]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1873
+    owner: france
+    certainty: occupied
+    label: トンキン（フランス軍の占領）
+    cause: ガルニエが紅河デルタの諸城を落とす
+    source: "https://en.wikipedia.org/wiki/Tonkin_campaign"
+  - from: 1874
+    owner: vietnam
+    overlord: qing
+    cause: 第2次サイゴン条約でフランス軍が引く
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: ユエ条約（アルマン条約、8月）でベトナムがフランスの保護国となり、フランス軍が紅河デルタをおさえる
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: トンキン
+    cause: インドシナ戦争。フランス軍が紅河デルタの町をおさえる
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    note: 紅河デルタの農村にはベトミンが広く浸透していた
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_delta_core
+  name: 紅河デルタ（フンイエン・ハナム・タイビン）
+  select:
+    pieces: [VNM-H_ng_Yen, VNM-Ha_Nam, VNM-Thai_Binh]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: ユエ条約（アルマン条約、8月）でベトナムがフランスの保護国となり、フランス軍が紅河デルタをおさえる
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: トンキン
+    cause: インドシナ戦争。フランス軍が紅河デルタの町をおさえる
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    note: 紅河デルタの農村にはベトミンが広く浸透していた
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_delta_north
+  name: 紅河デルタ北部（バクニン・バクザン・ヴィンフック・クアンニン）
+  select:
+    pieces: [VNM-B_c_Ninh, VNM-V_nh_Phuc, VNM-B_c_Giang, VNM-Qu_ng_Ninh]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: vietnam
+    overlord: qing
+    certainty: uncertain
+    cause: ユエ条約後も、トンキン北部には清軍と劉永福の黒旗軍がいてフランスに抵抗する
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1884
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: フランス軍がバクニン（3月）・フンホア（4月）を落とす
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: トンキン
+    cause: インドシナ戦争。フランス軍が紅河デルタの町をおさえる
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    note: 紅河デルタの農村にはベトミンが広く浸透していた
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_haiphong
+  name: ハイフォン
+  select:
+    pieces: [VNM-H_i_Phong]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: ユエ条約（アルマン条約、8月）でベトナムがフランスの保護国となり、フランス軍が紅河デルタをおさえる
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1888
+    owner: france
+    label: ハイフォン（フランスの直轄地）
+    cause: ハイフォン・ハノイ・トゥーラン（ダナン）がフランスの直轄地（コンセッション）となる
+    source: "https://ja.wikipedia.org/wiki/ハイフォン"
+  - from: 1940
+    owner: france
+    overlord: japan
+    label: ハイフォン（フランスの直轄地）
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: france
+    certainty: occupied
+    label: ハイフォン（フランス軍）
+    cause: フランス艦隊がハイフォンを砲撃して占領する（11月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: トンキン
+    cause: インドシナ戦争
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    note: 紅河デルタの農村にはベトミンが広く浸透していた
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: france
+    certainty: uncertain
+    label: ハイフォン（フランス軍の集結地）
+    cause: ジュネーヴ協定で、ハイフォンが300日間のフランス連合軍の集結地とされる
+    note: 1955年5月にフランス軍が引き揚げた。北から南へ約90万人（多くはカトリック教徒）が移った
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: north_vietnam
+    cause: フランス軍がハイフォンから引き揚げる（5月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_hoabinh_phutho
+  name: ホアビン・フート
+  select:
+    pieces: [VNM-Hoa_Binh, VNM-Phu_Th]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: vietnam
+    overlord: qing
+    certainty: uncertain
+    cause: ユエ条約後も、トンキン北部には清軍と劉永福の黒旗軍がいてフランスに抵抗する
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1884
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: フランス軍がフンホアを落とす（4月）
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争の前線（1951–52年にはフランス軍がホアビンを一時占領した）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_vietbac
+  name: 越北（タイグエン・トゥエンクアン・バクカン・ハザン）
+  select:
+    pieces: [VNM-Thai_Nguyen, VNM-Tuyen_Quang, VNM-B_c_K_n, VNM-Ha_Giang]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: vietnam
+    overlord: qing
+    certainty: uncertain
+    cause: ユエ条約後も、トンキン北部には清軍と劉永福の黒旗軍がいてフランスに抵抗する
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1885
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: 清仏戦争の天津条約で、清がフランスのベトナム保護権を認め、軍を引く（6月）
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    cause: インドシナ戦争。ベトミンは越北（ヴィエトバク）の山地を本拠とする
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+  - from: 1979
+    owner: vietnam
+    cause: 中越戦争。国境の各地で戦闘が起き、ハザン省では1984–89年にも激戦が続いた（老山の戦い）
+    source: "https://ja.wikipedia.org/wiki/中越戦争"
+
+- id: vnm_yenbai
+  name: イエンバイ
+  select:
+    pieces: [VNM-Yen_Bai]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: vietnam
+    overlord: qing
+    certainty: uncertain
+    cause: ユエ条約後も、トンキン北部には清軍と劉永福の黒旗軍がいてフランスに抵抗する
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1885
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: 清仏戦争の天津条約で、清がフランスのベトナム保護権を認め、軍を引く（6月）
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争。フランス軍はギアロなどに拠点を保つ
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1952
+    owner: north_vietnam
+    cause: ベトミンがギアロを落とし（10月）、西北作戦を始める
+    source: "https://en.wikipedia.org/wiki/Battle_of_Nà_Sản"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_border
+  name: 中国国境（ランソン・ラオカイ）
+  select:
+    pieces: [VNM-L_ng_S_n, VNM-Lao_Cai]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の皇帝のもとで鄭氏が実権を握る（都は東京〈昇竜、ハノイ〉）
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: vietnam
+    overlord: qing
+    certainty: uncertain
+    cause: ユエ条約後も、トンキン北部には清軍と劉永福の黒旗軍がいてフランスに抵抗する
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1885
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: 清仏戦争の天津条約で、清がフランスのベトナム保護権を認め、軍を引く（6月）
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: トンキン
+    cause: フランス軍のレア作戦（10月）で国境の4号道路沿いの町をおさえる
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1950
+    owner: north_vietnam
+    cause: ベトミンの国境作戦でフランス軍がカオバン・ランソン・ラオカイから退く（10月）。中国からの援助の道が開く
+    source: "https://en.wikipedia.org/wiki/Battle_of_Route_Coloniale_4"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+  - from: 1979
+    owner: vietnam
+    cause: 中越戦争。中国軍がランソン・ラオカイ・カオバンを一時占領する（2–3月）
+    note: 3月に中国軍は撤退したので、地図（年末の状態）には占領を描かない。国境での衝突は1980年代末まで続いた
+    source: "https://ja.wikipedia.org/wiki/中越戦争"
+
+- id: vnm_caobang
+  name: カオバン（高平）
+  select:
+    pieces: [VNM-Cao_B_ng]
+  timeline:
+  - from: 1648
+    owner: mac_cao_bang
+    overlord: qing
+    note: 莫朝の残存勢力。明の保護を受け、明清交代の後は清に従った
+    source: "https://ja.wikipedia.org/wiki/莫朝"
+  - from: 1677
+    owner: trinh
+    overlord: qing
+    cause: 鄭氏が高平の莫氏を滅ぼす
+    source: "https://ja.wikipedia.org/wiki/莫朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: vietnam
+    overlord: qing
+    certainty: uncertain
+    cause: ユエ条約後も、トンキン北部には清軍と劉永福の黒旗軍がいてフランスに抵抗する
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1885
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: 清仏戦争の天津条約で、清がフランスのベトナム保護権を認め、軍を引く（6月）
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: トンキン
+    cause: フランス軍のレア作戦で国境の町をおさえる
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1950
+    owner: north_vietnam
+    cause: ベトミンの国境作戦でフランス軍がカオバンから退く（10月）
+    note: ホー・チ・ミンは1941年にカオバン省のパクボーの洞窟に戻り、ベトミンを結成した
+    source: "https://en.wikipedia.org/wiki/Battle_of_Route_Coloniale_4"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+  - from: 1979
+    owner: vietnam
+    cause: 中越戦争。中国軍がカオバンを一時占領する（2–3月）
+    note: 3月に中国軍は撤退したので、地図（年末の状態）には占領を描かない
+    source: "https://ja.wikipedia.org/wiki/中越戦争"
+
+- id: vnm_sonla
+  name: ソンラー（西北）
+  select:
+    pieces: [VNM-S_n_La]
+  timeline:
+  - from: 1648
+    owner: trinh
+    certainty: nominal
+    note: タイ系の諸侯（シプソン・チャウ・タイ）の山地。ベトナムとラオスの両方に貢納した
+    source: "https://en.wikipedia.org/wiki/Sip_Song_Chau_Tai"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: nominal
+    cause: 西山軍が鄭氏を滅ぼす
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    certainty: nominal
+    cause: 光中帝が清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    certainty: nominal
+    cause: 阮朝の成立
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1885
+    owner: france
+    certainty: nominal
+    label: トンキン
+    cause: 天津条約で清がフランスのベトナム保護権を認める
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1888
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: フランスのパヴィの遠征で、タイ系の首長ド・ヴァン・チがフランスに従う
+    source: "https://en.wikipedia.org/wiki/Sip_Song_Chau_Tai"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    certainty: uncertain
+    cause: 八月革命（ベトナム民主共和国の独立宣言）
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: タイ自治区
+    cause: フランス軍がラオスから戻り、タイ系の首長ド・ヴァン・ロンを通じて治める
+    source: "https://en.wikipedia.org/wiki/Tai_Federation"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: indirect
+    label: タイ自治区
+    cause: ベトナム国の成立（タイ自治区は1950年に皇帝領とされる）
+    source: "https://en.wikipedia.org/wiki/Tai_Federation"
+  - from: 1952
+    owner: north_vietnam
+    cause: ベトミンの西北作戦でソンラー一帯を取る（フランス軍はナサンの拠点を1953年に引き払う）
+    source: "https://en.wikipedia.org/wiki/Battle_of_Nà_Sản"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_laichau
+  name: ライチャウ・ディエンビエン（西北）
+  select:
+    pieces: [VNM-Lai_Chau, VNM-i_n_Bien]
+  timeline:
+  - from: 1648
+    owner: trinh
+    certainty: nominal
+    note: タイ系の諸侯（シプソン・チャウ・タイ）の山地。ベトナムとラオスの両方に貢納した
+    source: "https://en.wikipedia.org/wiki/Sip_Song_Chau_Tai"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: nominal
+    cause: 西山軍が鄭氏を滅ぼす
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    certainty: nominal
+    cause: 光中帝が清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    certainty: nominal
+    cause: 阮朝の成立
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1885
+    owner: france
+    certainty: nominal
+    label: トンキン
+    cause: 天津条約で清がフランスのベトナム保護権を認める
+    source: "https://ja.wikipedia.org/wiki/清仏戦争"
+  - from: 1888
+    owner: france
+    certainty: indirect
+    label: トンキン
+    cause: フランスのパヴィの遠征で、タイ系の首長ド・ヴァン・チがフランスに従う
+    source: "https://en.wikipedia.org/wiki/Sip_Song_Chau_Tai"
+  - from: 1940
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: トンキン
+    cause: 日本軍が北部仏印に進駐する（9月）
+    source: "https://ja.wikipedia.org/wiki/北部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    certainty: uncertain
+    cause: 八月革命（ベトナム民主共和国の独立宣言）
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: france
+    certainty: indirect
+    label: タイ自治区
+    cause: フランス軍がラオスから戻り、タイ系の首長ド・ヴァン・ロンを通じて治める
+    source: "https://en.wikipedia.org/wiki/Tai_Federation"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: indirect
+    label: タイ自治区
+    cause: ベトナム国の成立（タイ自治区は1950年に皇帝領とされる）
+    source: "https://en.wikipedia.org/wiki/Tai_Federation"
+  - from: 1953
+    owner: north_vietnam
+    certainty: uncertain
+    cause: ベトミンがライチャウを取る（12月）。フランス軍はディエンビエンフーに空挺部隊を降ろし、要塞をつくる（11月）
+    source: "https://ja.wikipedia.org/wiki/ディエンビエンフーの戦い"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いでフランス軍が降伏する（5月7日）。ジュネーヴ協定
+    source: "https://ja.wikipedia.org/wiki/ディエンビエンフーの戦い"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_thanh_nghe
+  name: タインホア・ゲアン
+  select:
+    pieces: [VNM-Thanh_Hoa, VNM-Ngh_An]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: 黎朝の出身地（タインホア）。鄭氏の南の守りの地
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    cause: インドシナ戦争。タインホア・ゲアン・ハティンはベトミンの「第4連区」として戦争の間も保たれた
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_hatinh
+  name: ハティン
+  select:
+    pieces: [VNM-Ha_T_nh]
+  timeline:
+  - from: 1648
+    owner: trinh
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1655
+    owner: nguyen_lords
+    certainty: occupied
+    cause: 鄭阮紛争。阮氏の軍がラム川（藍江）以南を占領する
+    source: "https://en.wikipedia.org/wiki/Trịnh–Nguyễn_War"
+  - from: 1660
+    owner: trinh
+    cause: 鄭氏が阮氏の軍を追い返す
+    source: "https://en.wikipedia.org/wiki/Trịnh–Nguyễn_War"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    cause: インドシナ戦争。タインホア・ゲアン・ハティンはベトミンの「第4連区」として戦争の間も保たれた
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_quangbinh_north
+  name: クアンビン北部（ザイン川以北）
+  select:
+    pieces: [VNM-Quang_Trach, VNM-Ba_Don, VNM-Tuyen_Hoa, VNM-Minh_Hoa]
+  timeline:
+  - from: 1648
+    owner: trinh
+    note: ザイン川（霊江）が鄭氏と阮氏の境
+    source: "https://en.wikipedia.org/wiki/Trịnh–Nguyễn_War"
+  - from: 1667
+    owner: trinh
+    overlord: qing
+    cause: 清が黎朝の玄宗を安南国王に冊封する
+    source: "https://ja.wikipedia.org/wiki/黎朝"
+  - from: 1786
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍が鄭氏を滅ぼす
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約でフランスの保護国となる
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争。フランス軍は海岸の町をおさえた
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_quangbinh_south
+  name: クアンビン南部（ドンホイ）
+  select:
+    pieces: [VNM-Bo_Trach, VNM-Dong_Hoi, VNM-Quang_Ninh, VNM-Le_Thuy]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    note: 阮氏は鄭氏の侵攻に備えて長城（ドンホイの塁）を築いた
+    source: "https://en.wikipedia.org/wiki/Trịnh–Nguyễn_War"
+  - from: 1775
+    owner: trinh
+    certainty: occupied
+    cause: 鄭氏の軍が西山の反乱に乗じて南下し、阮氏の都フエ（富春）を落とす（2月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1786
+    owner: tay_son
+    cause: 西山軍が鄭氏の軍を追い、フエを取る（6月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1801
+    owner: nguyen_lords
+    cause: 阮福映がフエを取り戻す（6月）
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: north_vietnam
+    cause: ディエンビエンフーの戦いの後、ジュネーヴ協定で北緯17度線以北がベトナム民主共和国のものとなる（7月）
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_vinhlinh
+  name: ヴィンリン（ベンハイ川以北）
+  select:
+    pieces: [VNM-Vinh_Linh]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    source: "https://ja.wikipedia.org/wiki/広南国"
+  - from: 1775
+    owner: trinh
+    certainty: occupied
+    cause: 鄭氏の軍が西山の反乱に乗じて南下し、阮氏の都フエ（富春）を落とす（2月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1786
+    owner: tay_son
+    cause: 西山軍が鄭氏の軍を追い、フエを取る（6月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1801
+    owner: nguyen_lords
+    cause: 阮福映がフエを取り戻す（6月）
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争が始まる（12月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: アンナン
+    cause: フランス軍がフエ・ダナンなど中部の町をおさえる（2月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: north_vietnam
+    cause: ジュネーヴ協定で、ベンハイ川（北緯17度線）が南北の境界（軍事境界線）となる
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1976
+    owner: vietnam
+    cause: 南北の統一（ベトナム社会主義共和国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_quangtri_dmz
+  name: クアンチ北部・西部（非武装地帯の南）
+  select:
+    pieces: [VNM-Gio_Linh, VNM-Cam_Lo, VNM-Dong_Ha, VNM-Huong_Hoa, VNM-Da_Krong]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    source: "https://ja.wikipedia.org/wiki/広南国"
+  - from: 1775
+    owner: trinh
+    certainty: occupied
+    cause: 鄭氏の軍が西山の反乱に乗じて南下し、阮氏の都フエ（富春）を落とす（2月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1786
+    owner: tay_son
+    cause: 西山軍が鄭氏の軍を追い、フエを取る（6月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1801
+    owner: nguyen_lords
+    cause: 阮福映がフエを取り戻す（6月）
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争が始まる（12月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: アンナン
+    cause: フランス軍がフエ・ダナンなど中部の町をおさえる（2月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1972
+    owner: prg
+    certainty: uncertain
+    cause: 北ベトナム軍の春季大攻勢（イースター攻勢）でクアンチ省北部を取る
+    note: ケサン（フオンホア）では1968年に激戦があった。クアンチの町は9月に南ベトナム軍が奪い返した
+    source: "https://en.wikipedia.org/wiki/Easter_Offensive"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_quangtri
+  name: クアンチ南部・フエ
+  select:
+    pieces: [VNM-Trieu_Phong, VNM-Quang_Tri, VNM-Hai_Lang, VNM-Th_a_Thien_Hu]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    note: フエ（富春）は阮氏の都（1687年から）
+    source: "https://ja.wikipedia.org/wiki/広南国"
+  - from: 1775
+    owner: trinh
+    certainty: occupied
+    cause: 鄭氏の軍が西山の反乱に乗じて南下し、阮氏の都フエ（富春）を落とす（2月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1786
+    owner: tay_son
+    cause: 西山軍が鄭氏の軍を追い、フエを取る（6月）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1801
+    owner: nguyen_lords
+    cause: 阮福映がフエを取り戻す（6月）
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争が始まる（12月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: アンナン
+    cause: フランス軍がフエ・ダナンなど中部の町をおさえる（2月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_quangnam
+  name: クアンナム・ダナン
+  select:
+    pieces: [VNM-Qu_ng_Nam, VNM-a_N_ng]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    note: 会安（ホイアン）は日本人町・中国人町のある国際港
+    source: "https://ja.wikipedia.org/wiki/ホイアン"
+  - from: 1774
+    owner: tay_son
+    cause: 西山軍がクアンナムに進む
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1801
+    owner: nguyen_lords
+    cause: 阮福映がクアンナムを取る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1858
+    owner: france
+    certainty: occupied
+    label: トゥーラン（フランス・スペイン軍の占領）
+    cause: 宣教師の迫害を理由に、フランス・スペイン連合軍がダナン（トゥーラン）を攻める（9月）
+    note: 1860年3月に撤退した
+    source: "https://ja.wikipedia.org/wiki/コーチシナ戦争"
+  - from: 1860
+    owner: vietnam
+    overlord: qing
+    cause: フランス・スペイン軍がダナンから撤退する（3月）
+    source: "https://ja.wikipedia.org/wiki/コーチシナ戦争"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争（クアンナム南部はベトミンの第5連区）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1947
+    owner: france
+    certainty: uncertain
+    label: アンナン
+    cause: フランス軍がダナンをおさえる
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1965
+    owner: south_vietnam
+    cause: アメリカ海兵隊がダナンに上陸する（3月）。アメリカ軍の本格的な地上戦への介入
+    source: "https://ja.wikipedia.org/wiki/ベトナム戦争"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_quangngai
+  name: クアンガイ
+  select:
+    pieces: [VNM-Qu_ng_Ngai]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    source: "https://ja.wikipedia.org/wiki/広南国"
+  - from: 1773
+    owner: tay_son
+    cause: 西山の反乱軍がクイニョン・クアンガイをおさえる
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    cause: インドシナ戦争。クアンガイ・ビンディン・フーイエンはベトミンの第5連区の「自由区」として戦争の間も保たれた
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1968
+    owner: south_vietnam
+    cause: ソンミ村の虐殺（3月）。アメリカ軍の部隊が住民約500人を殺した
+    source: "https://ja.wikipedia.org/wiki/ソンミ村虐殺事件"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_binhdinh
+  name: ビンディン（西山の故地）
+  select:
+    pieces: [VNM-Binh_nh]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    source: "https://ja.wikipedia.org/wiki/広南国"
+  - from: 1772
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山邑の阮岳・阮恵・阮侶の3兄弟が阮氏に反乱を起こす（1771）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1773
+    owner: tay_son
+    cause: 西山軍がクイニョン（帰仁）を取る
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1799
+    owner: nguyen_lords
+    cause: 阮福映がクイニョンを落とす（6月）
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1801
+    owner: tay_son
+    certainty: uncertain
+    cause: 西山軍がクイニョンを取り戻す（守将の武性が自殺）
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    cause: インドシナ戦争。クアンガイ・ビンディン・フーイエンはベトミンの第5連区の「自由区」として戦争の間も保たれた
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_phuyen
+  name: フーイエン
+  select:
+    pieces: [VNM-Phu_Yen]
+  timeline:
+  - from: 1648
+    owner: nguyen_lords
+    note: 1611年から阮氏の領土
+    source: "https://ja.wikipedia.org/wiki/広南国"
+  - from: 1774
+    owner: tay_son
+    cause: 西山軍が南に進む
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1799
+    owner: nguyen_lords
+    cause: 阮福映の北進
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+  - from: 1946
+    owner: north_vietnam
+    cause: インドシナ戦争。クアンガイ・ビンディン・フーイエンはベトミンの第5連区の「自由区」として戦争の間も保たれた
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_khanhhoa
+  name: カインホア（ニャチャン）
+  select:
+    pieces: [VNM-Khanh_Hoa]
+  timeline:
+  - from: 1648
+    owner: champa
+    note: チャンパーのカウターラ（ニャチャンのポー・ナガル寺院）
+    source: "https://ja.wikipedia.org/wiki/チャンパー"
+  - from: 1653
+    owner: nguyen_lords
+    cause: 阮氏がチャンパーを攻め、ファンラン川以北を奪う
+    source: "https://ja.wikipedia.org/wiki/チャンパー"
+  - from: 1774
+    owner: tay_son
+    cause: 西山軍が南に進む
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1789
+    owner: tay_son
+    overlord: qing
+    cause: 光中帝（阮恵）が棟多の戦いで清軍を破り（1月）、清の冊封を受ける
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1793
+    owner: nguyen_lords
+    cause: 阮福映がジエンカイン（カインホア）に城を築く
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+    certainty: uncertain
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: アンナン
+    cause: フランス軍がニャチャンを取る（1–2月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_panduranga
+  name: ニントゥアン・ビントゥアン（パーンドゥランガ）
+  select:
+    pieces: [VNM-Ninh_Thu_n, VNM-Binh_Thu_n]
+  timeline:
+  - from: 1648
+    owner: champa
+    note: チャンパーの最後の地域パーンドゥランガ
+    source: "https://ja.wikipedia.org/wiki/チャンパー"
+  - from: 1693
+    owner: champa
+    overlord: nguyen_lords
+    cause: 阮氏がチャンパー王を捕らえ（1692）、順城鎮として従える（1697）
+    source: "https://ja.wikipedia.org/wiki/チャンパー"
+  - from: 1777
+    owner: champa
+    overlord: tay_son
+    certainty: uncertain
+    cause: 西山軍が南部に進む（阮福映との争奪）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1790
+    owner: champa
+    overlord: nguyen_lords
+    cause: 阮福映がパーンドゥランガをおさえる
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: champa
+    overlord: vietnam
+    cause: 阮朝の成立
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1832
+    owner: vietnam
+    overlord: qing
+    cause: 明命帝が順城鎮を廃し、チャンパーが滅ぶ
+    source: "https://ja.wikipedia.org/wiki/チャンパー"
+  - from: 1883
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ユエ条約（アルマン条約）でベトナムがフランスの保護国となる（8月）
+    source: "https://ja.wikipedia.org/wiki/フエ条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+    certainty: uncertain
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: アンナン
+    cause: フランス軍が南アンナンに戻る
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_highlands
+  name: 中部高原（コントゥム・ザライ・ダクラク・ラムドン）
+  select:
+    pieces: [VNM-Kon_Tum, VNM-Gia_Lai, VNM-k_L_k, VNM-k_Nong, VNM-Lam_ng]
+  timeline:
+  - from: 1648
+    owner: null
+    certainty: uncertain
+    note: ジャライ人・エデ人・バナール人などの山地民の地域。ジャライ人の「火の王」「水の王」はカンボジア・阮氏に贈り物を送った
+    source: "https://en.wikipedia.org/wiki/Central_Highlands_(Vietnam)"
+  - from: 1893
+    owner: france
+    certainty: nominal
+    label: 中部高原
+    cause: フランスがメコン東岸を得て、高原に探検と宣教の拠点を広げる
+    source: "https://en.wikipedia.org/wiki/Central_Highlands_(Vietnam)"
+  - from: 1904
+    owner: france
+    certainty: indirect
+    label: アンナン
+    cause: ダクラクなどの高原がアンナン保護国に組み込まれる（ダラット〈ラムドン〉は高原の避暑地として開かれる）
+    note: 年は地域によって1898–1923年とまちまち（要確認）
+    source: "https://en.wikipedia.org/wiki/Central_Highlands_(Vietnam)"
+  - from: 1941
+    owner: france
+    overlord: japan
+    certainty: indirect
+    label: アンナン
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: north_vietnam
+    cause: 八月革命。ホー・チ・ミンがハノイでベトナム民主共和国の独立を宣言する（9月2日）
+    note: 北緯16度以北には日本軍の武装解除のため中華民国軍が進駐した（1946年まで）。3月の日本軍の仏印処理（明号作戦）でバオ・ダイのベトナム帝国が独立を宣言したが、8月に退位した
+    source: "https://ja.wikipedia.org/wiki/ベトナム八月革命"
+    certainty: uncertain
+  - from: 1946
+    owner: france
+    label: アンナン
+    cause: フランス軍が高原に戻る（バンメトート、3月）
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    cause: フランスがバオ・ダイを元首とするベトナム国をつくる（フランス連合の協同国）
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_saigon
+  name: サイゴン（ザーディン）
+  select:
+    pieces: [VNM-Ho_Chi_Minh]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    note: プレイ・ノコール。1623年からベトナム人の移住と阮氏の税関が認められていた
+    source: "https://ja.wikipedia.org/wiki/ホーチミン市"
+  - from: 1698
+    owner: nguyen_lords
+    cause: 阮氏が嘉定府を置き、サイゴン一帯を正式に領土とする
+    source: "https://ja.wikipedia.org/wiki/ホーチミン市"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1859
+    owner: france
+    certainty: occupied
+    label: サイゴン（フランス軍の占領）
+    cause: フランス・スペイン軍がサイゴンの城を落とす（2月）
+    source: "https://ja.wikipedia.org/wiki/コーチシナ戦争"
+  - from: 1862
+    owner: france
+    label: コーチシナ
+    cause: 第1次サイゴン条約（6月）で、東部3省（ビエンホア・ザーディン・ディントゥオン）とコンソン島がフランスに割譲される
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_giadinh_east
+  name: ビエンホア・ザーディン（ドンナイ・バリア・ビンズオン・ロンアン）
+  select:
+    pieces: [VNM-ng_Nai, VNM-Ba_R_a_V_ng_Tau, VNM-Binh_D_ng, VNM-Long_An]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1698
+    owner: nguyen_lords
+    cause: 阮氏が嘉定府を置く
+    note: 1679年に明の遺臣（陳上川ら）がビエンホア・ミートーに移住を認められていた
+    source: "https://ja.wikipedia.org/wiki/ホーチミン市"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1861
+    owner: france
+    certainty: occupied
+    label: コーチシナ（フランス軍の占領）
+    cause: フランス軍がキホアの戦い（2月）に勝ち、ミートー・ビエンホアを取る
+    source: "https://ja.wikipedia.org/wiki/コーチシナ戦争"
+  - from: 1862
+    owner: france
+    label: コーチシナ
+    cause: 第1次サイゴン条約（6月）で、東部3省（ビエンホア・ザーディン・ディントゥオン）とコンソン島がフランスに割譲される
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_tayninh
+  name: タイニン
+  select:
+    pieces: [VNM-Tay_Ninh]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1834
+    owner: vietnam
+    overlord: qing
+    cause: ベトナムのカンボジア併合。タイニンは嘉定のタイニン府とされる（1836）
+    source: "https://en.wikipedia.org/wiki/Tây_Ninh_province"
+  - from: 1861
+    owner: france
+    certainty: occupied
+    label: コーチシナ（フランス軍の占領）
+    cause: フランス軍がザーディン省をおさえる
+    source: "https://ja.wikipedia.org/wiki/コーチシナ戦争"
+  - from: 1862
+    owner: france
+    label: コーチシナ
+    cause: 第1次サイゴン条約（6月）で、東部3省（ビエンホア・ザーディン・ディントゥオン）とコンソン島がフランスに割譲される
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_binhphuoc
+  name: ビンフオック（南部の山地）
+  select:
+    pieces: [VNM-Binh_Ph_c]
+  timeline:
+  - {from: 1648, owner: cambodia, certainty: nominal, note: スティエン人などの山地民の地域}
+  - from: 1834
+    owner: vietnam
+    overlord: qing
+    certainty: nominal
+    cause: ベトナムのカンボジア併合
+    source: "https://en.wikipedia.org/wiki/Siamese–Vietnamese_War_(1831–1834)"
+  - from: 1862
+    owner: france
+    certainty: nominal
+    label: コーチシナ
+    cause: 第1次サイゴン条約
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1904
+    owner: france
+    label: コーチシナ
+    cause: フランスがゴム農園を開き、トゥーザウモット省の統治が山地に及ぶ
+    note: 年は要確認
+    source: "https://en.wikipedia.org/wiki/Bình_Phước_province"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1972
+    owner: prg
+    certainty: uncertain
+    cause: 北ベトナム軍の攻勢でロクニンを取り、臨時革命政府の本拠とする（4月）
+    source: "https://en.wikipedia.org/wiki/Battle_of_Lộc_Ninh"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_dinhtuong
+  name: ディントゥオン（ミートー）
+  select:
+    pieces: [VNM-Ti_n_Giang]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1732
+    owner: nguyen_lords
+    cause: 阮氏がミートー一帯に定遠州を置く
+    source: "https://en.wikipedia.org/wiki/Mỹ_Tho"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1861
+    owner: france
+    certainty: occupied
+    label: コーチシナ（フランス軍の占領）
+    cause: フランス軍がミートーを取る（4月）
+    source: "https://ja.wikipedia.org/wiki/コーチシナ戦争"
+  - from: 1862
+    owner: france
+    label: コーチシナ
+    cause: 第1次サイゴン条約（6月）で、東部3省（ビエンホア・ザーディン・ディントゥオン）とコンソン島がフランスに割譲される
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_vinhlong
+  name: ヴィンロン・ベンチェ
+  select:
+    pieces: [VNM-V_nh_Long, VNM-B_n_Tre]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    source: "https://en.wikipedia.org/wiki/Post-Angkor_period"
+  - from: 1732
+    owner: nguyen_lords
+    cause: 阮氏がヴィンロン一帯に進出する（定遠州）
+    source: "https://en.wikipedia.org/wiki/Vĩnh_Long_province"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1867
+    owner: france
+    label: コーチシナ
+    cause: フランスが西部3省（ヴィンロン・アンザン・ハティエン）を占領し、コーチシナ全体を植民地とする（1874年の第2次サイゴン条約で承認）
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_west_delta
+  name: メコン・デルタ西部（アンザン・カントー・ソクチャン）
+  select:
+    pieces: [VNM-Tra_Vinh, VNM-ng_Thap, VNM-An_Giang, VNM-C_n_Th, VNM-H_u_Giang, VNM-Soc_Tr_ng, VNM-B_c_Lieu]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    note: クメール人の住むカンプチア・クロム
+    source: "https://en.wikipedia.org/wiki/Khmer_Krom"
+  - from: 1757
+    owner: nguyen_lords
+    cause: カンボジア王の即位を助けた見返りに、阮氏がメコン・デルタ西部（ソクチャン・チャウドック一帯）を得る
+    source: "https://en.wikipedia.org/wiki/Khmer_Krom"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1867
+    owner: france
+    label: コーチシナ
+    cause: フランスが西部3省（ヴィンロン・アンザン・ハティエン）を占領し、コーチシナ全体を植民地とする（1874年の第2次サイゴン条約で承認）
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_hatien
+  name: ハティエン・カマウ
+  select:
+    pieces: [VNM-Kien_Giang]
+  timeline:
+  - from: 1648
+    owner: cambodia
+    note: カンボジアの港市（ピエム）
+    source: "https://ja.wikipedia.org/wiki/河仙"
+  - from: 1708
+    owner: ha_tien
+    overlord: nguyen_lords
+    cause: 河仙を治める莫玖が広南阮氏に従う
+    source: "https://ja.wikipedia.org/wiki/河仙"
+  - from: 1771
+    owner: siam
+    certainty: occupied
+    cause: シャムのタークシンが河仙を落とす（11月）
+    source: "https://ja.wikipedia.org/wiki/河仙"
+  - from: 1773
+    owner: ha_tien
+    overlord: nguyen_lords
+    cause: シャムと阮氏の和議で莫天賜が河仙に戻る
+    source: "https://ja.wikipedia.org/wiki/河仙"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1867
+    owner: france
+    label: コーチシナ
+    cause: フランスが西部3省（ヴィンロン・アンザン・ハティエン）を占領し、コーチシナ全体を植民地とする（1874年の第2次サイゴン条約で承認）
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_camau
+  name: カマウ（ウーミン）
+  select:
+    pieces: [VNM-Ca_Mau]
+  timeline:
+  - {from: 1648, owner: cambodia, certainty: nominal, note: マングローブの湿地}
+  - from: 1708
+    owner: ha_tien
+    overlord: nguyen_lords
+    certainty: nominal
+    cause: 河仙の莫玖が広南阮氏に従う
+    source: "https://ja.wikipedia.org/wiki/河仙"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1867
+    owner: france
+    label: コーチシナ
+    cause: フランスが西部3省（ヴィンロン・アンザン・ハティエン）を占領し、コーチシナ全体を植民地とする（1874年の第2次サイゴン条約で承認）
+    source: "https://ja.wikipedia.org/wiki/サイゴン条約"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: フランス軍がサイゴンに戻る
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: north_vietnam
+    certainty: uncertain
+    cause: インドシナ戦争。ウーミンの森はベトミンの南部の根拠地となる
+    source: "https://en.wikipedia.org/wiki/U_Minh_forest"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+
+- id: vnm_condao
+  name: コンソン島（コンダオ）
+  select:
+    pieces: [VNM-Con_o]
+  timeline:
+  - {from: 1648, owner: nguyen_lords, certainty: nominal, note: プロ・コンドール島}
+  - from: 1702
+    owner: britain
+    label: プロ・コンドール（イギリス東インド会社）
+    cause: イギリス東インド会社が商館と砦を置く
+    source: "https://en.wikipedia.org/wiki/Côn_Sơn_Island"
+  - from: 1705
+    owner: nguyen_lords
+    certainty: nominal
+    cause: 傭兵の反乱で商館が滅ぶ
+    source: "https://en.wikipedia.org/wiki/Côn_Sơn_Island"
+  - from: 1777
+    owner: tay_son
+    cause: 西山軍が嘉定（サイゴン）を落とし、阮氏の一族を滅ぼす（阮福映は逃れる）
+    source: "https://ja.wikipedia.org/wiki/西山朝"
+  - from: 1778
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1783
+    owner: tay_son
+    cause: 西山軍が嘉定を落とし、阮福映はシャムに逃れる
+    note: 1784年にシャム軍が阮福映を助けて侵入したが、1785年1月にラックガム・ソアイムットの戦いで西山軍に敗れた
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1788
+    owner: nguyen_lords
+    cause: 阮福映が嘉定を取り戻す（9月）。フランス人宣教師ピニョーの集めた義勇兵の協力も得る
+    source: "https://ja.wikipedia.org/wiki/嘉隆帝"
+  - from: 1802
+    owner: vietnam
+    overlord: qing
+    cause: 阮福映が西山朝を滅ぼし、嘉隆帝として阮朝を開く
+    note: 1804年に清から「越南国王」に冊封された
+    source: "https://ja.wikipedia.org/wiki/阮朝"
+  - from: 1861
+    owner: france
+    certainty: occupied
+    label: コーチシナ（フランス軍の占領）
+    cause: フランス軍がコンソン島を占領する
+    source: "https://ja.wikipedia.org/wiki/コーチシナ戦争"
+  - from: 1862
+    owner: france
+    label: コンソン島（政治犯の流刑地）
+    cause: 第1次サイゴン条約でフランスに割譲される
+    note: フランスと南ベトナムの政治犯の監獄が置かれた
+    source: "https://ja.wikipedia.org/wiki/コンダオ島"
+  - from: 1941
+    owner: france
+    overlord: japan
+    label: コーチシナ
+    cause: 日本軍が南部仏印に進駐する（7月）
+    source: "https://ja.wikipedia.org/wiki/南部仏印進駐"
+  - from: 1945
+    owner: france
+    certainty: uncertain
+    label: コーチシナ
+    cause: イギリス軍の進駐に続いてフランス軍がサイゴンに戻る（9–10月）。ベトミンは農村で抵抗する
+    source: "https://ja.wikipedia.org/wiki/第一次インドシナ戦争"
+  - from: 1946
+    owner: france
+    certainty: uncertain
+    label: コーチシナ自治共和国
+    cause: フランスがコーチシナ自治共和国をつくる（6月）
+    source: "https://en.wikipedia.org/wiki/Autonomous_Republic_of_Cochinchina"
+  - from: 1949
+    owner: south_vietnam
+    overlord: france
+    certainty: uncertain
+    cause: コーチシナがベトナム国に統合される
+    source: "https://ja.wikipedia.org/wiki/ベトナム国"
+  - from: 1954
+    owner: south_vietnam
+    cause: ジュネーヴ協定で北緯17度線以南からフランス軍・ベトミン軍が引き揚げ、ベトナム国が治める
+    source: "https://ja.wikipedia.org/wiki/ジュネーヴ協定"
+  - from: 1955
+    owner: south_vietnam
+    cause: ゴ・ディン・ジエムがバオ・ダイを廃し、ベトナム共和国とする（10月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム共和国"
+  - from: 1975
+    owner: prg
+    cause: 北ベトナム軍と解放戦線の総攻撃でサイゴンが落ち、ベトナム共和国が滅ぶ（4月30日）
+    source: "https://ja.wikipedia.org/wiki/サイゴン陥落"
+  - from: 1976
+    owner: vietnam
+    cause: 南北が統一され、ベトナム社会主義共和国が成立する（7月）
+    source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
+

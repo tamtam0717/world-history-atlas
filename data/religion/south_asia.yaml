@@ -1,0 +1,1010 @@
+# 宗教の分布：南アジア（インド・パキスタン・バングラデシュ・スリランカ・ネパール・ブータン・モルディブ）1648–2025
+# 形式は docs/religion-format.md（「南アジア・東南アジア」の節に塗り分けの方針）。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# - 国勢調査（英領インドは 1872/1881 年から、独立後の 2011 年など）の宗教別人口を目安にした。それより前は推計で、note に書いた。
+# - 1947 年の印パ分離では、パンジャーブ・ベンガル・デリー・シンド・ジャンムーで大規模な住民の移動と暴力が起き、
+#   約 1,000〜1,500 万人が国境を越えて移り、数十万〜100 万人が犠牲になったとされる。地図では 1947 年に切り替える。
+# - ジャイナ教（グジャラート・ラージャスターン）、パールシー（ゾロアスター教。ボンベイ）、ユダヤ教（コーチン）は少数なので note に書く。
+# - キリスト教のプロテスタント（長老派・バプテストなど）は、韓国と同じく reformed で塗り、note に書く。
+# - 言語（data/language/south_asia.yaml）と、切り替えの年をできるだけそろえている。
+
+# ======== インド（全体の既定値） ========
+- id: rel_india
+  name: インド
+  select:
+    iso: [IND]
+  timeline:
+    - from: 1648
+      main: hindu
+      note: ヒンドゥー教が多数。ムガル帝国（イスラーム）の支配のもとでもヒンドゥー教徒が人口の4分の3ほどを占めた。ムスリムは北インドの都市と、西北（パンジャーブ・シンド）・東部（ベンガル）に多い。ジャイナ教徒はグジャラート・ラージャスターンの商人に多い。
+      source: "https://ja.wikipedia.org/wiki/インドの宗教"
+    - from: 1947
+      main: hindu
+      note: 印パ分離（1947）。ヒンドゥー教徒・シク教徒はパキスタンから、ムスリムはインドからパキスタンへ大規模に移った。2011 年の国勢調査では、ヒンドゥー教徒 79.8%、ムスリム 14.2%、キリスト教徒 2.3%、シク教徒 1.7%、仏教徒 0.7%、ジャイナ教徒 0.4%。
+      source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"
+
+# ---- 北インド：ムスリムの多い地域 ----
+- id: rel_rohilkhand_doab
+  name: ローヒルカンド・ドアーブ上部（ウッタル・プラデーシュ西部）
+  select:
+    pieces: [IND-Moradabad, IND-Bijnor, IND-Saharanpur, IND-Muzaffarnagar, IND-Samli, IND-Meerut, IND-Bareilly, IND-Sambhal, IND-Jyotiba_Phule_Nagar, IND-Hapur, IND-Lucknow]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ムスリムが3〜4割と多い。18 世紀にはアフガン系のローヒラ族がローヒルカンドを治めた。ラクナウはアワド太守の都で、シーア派の文化の中心。デーオバンド学院（1867）はサハーランプル県。
+      source: "https://ja.wikipedia.org/wiki/ローヒルカンド"
+- id: rel_rampur
+  name: ラームプル
+  select:
+    pieces: [IND-Rampur]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ローヒラ族（アフガン系）の移住の前は、ヒンドゥー教徒が多かったと考えられる。
+    - from: 1750
+      main: sunni
+      minor: hindu
+      note: ローヒラ族の移住とラームプル藩王国（1774–1949）。ムスリムがほぼ半数（2011 年に約 50%）。
+      source: "https://en.wikipedia.org/wiki/Rampur_State"
+- id: rel_seemanchal
+  name: ビハール北東部（シーマーンチャル）
+  select:
+    pieces: [IND-Araria, IND-Purnia, IND-Katihar]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ムスリムが4割前後。ベンガルと地続きの地域。
+- id: rel_kishanganj
+  name: キシャンガンジ
+  select:
+    pieces: [IND-Kishanganj]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: ムスリムが約7割（2011）。
+- id: rel_bhopal
+  name: ボーパール
+  select:
+    pieces: [IND-Bhopal]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ボーパール藩王国（1707–1949）はムスリムの太守（女性の君主ベーガムが4代続いた）の国。都市はムスリムが多い。
+      source: "https://ja.wikipedia.org/wiki/ボーパール藩王国"
+- id: rel_haridwar
+  name: ハリドワール
+  select:
+    pieces: [IND-Hardwar]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ガンジス川の聖地ハリドワール（クンブ・メーラの開催地）。郡の農村部はムスリムが3割ほど。
+
+# ---- デリー・ハリヤーナー ----
+- id: rel_delhi
+  name: デリー
+  select:
+    adm1: ["IND/Delhi"]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ムガル帝国の都シャージャハーナーバード（1648 年完成）。ジャーマー・マスジドが建てられた。1941 年でもムスリムが約3分の1。
+      source: "https://ja.wikipedia.org/wiki/シャージャハーナーバード"
+    - from: 1947
+      main: hindu
+      note: 分離独立のときの暴動で多くのムスリムがパキスタンへ去り、パンジャーブからヒンドゥー教徒・シク教徒の難民が流れ込んだ。ムスリムは約 13%（2011）。
+      source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"
+- id: rel_haryana
+  name: ハリヤーナー
+  select:
+    adm1: ["IND/Haryana"]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: 英領時代はパンジャーブ州の東部。ムスリムが3割ほど（1941）。
+    - from: 1947
+      main: hindu
+      note: 分離独立でムスリムの多くがパキスタンへ去り、西パンジャーブからヒンドゥー教徒・シク教徒が移ってきた。
+- id: rel_mewat
+  name: メーワート（ヌーフ）
+  select:
+    pieces: [IND-Mewat]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: イスラームに改宗したメーオ族の地。1947 年にもガンディーの説得で多くがとどまった。ムスリムが約8割（2011）。
+      source: "https://en.wikipedia.org/wiki/Meo_(ethnic_group)"
+- id: rel_chandigarh
+  name: チャンディーガル
+  select:
+    pieces: [IND-Chandigarh]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+    - from: 1947
+      main: hindu
+      minor: sikh
+      note: 分離独立でラホールを失った東パンジャーブの新しい州都として、ル・コルビュジエの設計で建設された（1953）。
+
+# ---- パンジャーブ（インド側） ----
+- id: rel_punjab_in
+  name: 東パンジャーブ（マージャ・ドアーバ。アムリトサル・ジャランダル・ルディヤーナー）
+  select:
+    adm1: ["IND/Punjab"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: パンジャーブの中部ではムスリムが最も多く、ヒンドゥー教徒が続く。シク教（ナーナク〈1469–1539〉が開いた）はジャート農民の間に広まりつつあった。アムリトサルの黄金寺院（ハリマンディル）はシク教の総本山。
+      source: "https://ja.wikipedia.org/wiki/シク教"
+    - from: 1765
+      main: sunni
+      minor: sikh
+      note: シク教徒のミスル（軍事集団）がパンジャーブを支配し、ランジート＝シングのシク王国（1799–1849）につながる。19 世紀の国勢調査ではムスリム4割前後、シク教徒とヒンドゥー教徒がそれぞれ3割前後（郡ごとに差が大きい）。
+      source: "https://ja.wikipedia.org/wiki/シク王国"
+    - from: 1947
+      main: sikh
+      minor: hindu
+      note: 分離独立でムスリムのほぼ全員がパキスタンへ去り、西パンジャーブからシク教徒・ヒンドゥー教徒が移ってきた。1966 年にパンジャーブ語の州として分けられ、シク教徒が多数（約 58%、2011）の唯一の州になった。1984 年には黄金寺院へ軍が突入し（ブルースター作戦）、インディラ＝ガンディー首相が暗殺された。
+      source: "https://ja.wikipedia.org/wiki/ブルースター作戦"
+- id: rel_punjab_malwa
+  name: パンジャーブ南東部（マールワー。パティヤーラ・サングルール・バティンダー）
+  select:
+    pieces: [IND-Patiala, IND-Sangrur, IND-Barnala, IND-Bathinda, IND-Mansa, IND-Faridkot, IND-Muktsar, IND-Fatehgarh_Sahib, IND-Rupnagar, IND-Sahibzada_Ajit_Singh_Nagar]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: マールワー（サトレジ川の南）。
+    - from: 1765
+      main: hindu
+      minor: sikh
+      note: パティヤーラ・ナーバ・ジーンドなどシク教徒の君主の藩王国（プルキアン諸国）の地。
+      source: "https://en.wikipedia.org/wiki/Phulkian_Misl"
+    - from: 1947
+      main: sikh
+      minor: hindu
+- id: rel_doaba_hindu
+  name: パンジャーブ北東部（ジャランダル・ホシヤールプル・パターンコート）
+  select:
+    pieces: [IND-Jalandhar, IND-Hoshiarpur, IND-Pathankot, IND-Shahid_Bhagat_Singh_Nagar]
+  timeline:
+    - from: 1947
+      main: hindu
+      minor: sikh
+      note: 分離独立の後はヒンドゥー教徒（ダリトのアード・ダルム派を含む）がやや多く、シク教徒が3〜4割。
+- id: rel_hoshiarpur
+  name: ホシヤールプル
+  select:
+    pieces: [IND-Hoshiarpur]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: シワーリク丘陵のふもと。分離独立の前からヒンドゥー教徒が多く（1941 年に約5割）、ムスリムは約3分の1、シク教徒は2割弱。
+    - from: 1947
+      main: hindu
+      minor: sikh
+      note: 分離独立でムスリムがパキスタンへ去った。ヒンドゥー教徒（ダリトのアード・ダルム派を含む）がやや多く、シク教徒が3〜4割。
+- id: rel_ludhiana
+  name: ルディヤーナー
+  select:
+    pieces: [IND-Ludhiana]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+    - from: 1765
+      main: sunni
+      minor: sikh
+      note: シク教徒のミスルの支配が及ぶ。
+    - from: 1881
+      main: sikh
+      minor: sunni
+      note: 英領時代にジャート農民のシク教化が進み、シク教徒が最も多くなった（1941 年でシク教徒約 42%、ムスリム約 37%）。
+    - from: 1947
+      main: sikh
+      minor: hindu
+      note: 分離独立でムスリムがパキスタンへ去った。
+
+# ---- ジャンムー・カシミール、ラダック ----
+- id: rel_kashmir_valley
+  name: カシミール盆地
+  select:
+    pieces: [IND-Srinagar, IND-Anantnag, IND-Badgam, IND-Bandipore, IND-Baramula, IND-Ganderbal, IND-Kulgam, IND-Kupwara, IND-Pulwama, IND-Shupiyan, PAK-Azad_Kashmir]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: 14 世紀からイスラーム化し、ムスリム（スンナ派。シーア派も1割ほど）が大多数。スーフィーの聖者廟の信仰が根づく。ヒンドゥー教徒のカシミール・パンディット（ブラーミン）は数％。
+      source: "https://ja.wikipedia.org/wiki/カシミール"
+    - from: 1990
+      main: sunni
+      note: 1989 年からの武装闘争の中で、カシミール・パンディットの大半（10 万人以上）が盆地を去った。
+      source: "https://en.wikipedia.org/wiki/Exodus_of_Kashmiri_Hindus"
+- id: rel_jammu_muslim
+  name: ジャンムーの山地（プーンチ・ラージャウリー・ドーダ・キシュトワール・ラームバン）
+  select:
+    pieces: [IND-Punch, IND-Rajouri, IND-Doda, IND-Kishtwar, IND-Ramban]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: ムスリムが過半数の山地。ヒンドゥー教徒も多い。
+- id: rel_jammu_hindu
+  name: ジャンムー（ジャンムー・カトゥア・サンバ・ウダムプル・リアーシー）
+  select:
+    pieces: [IND-Jammu, IND-Kathua, IND-Samba, IND-Udhampur]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ドーグラー人（ヒンドゥー教徒）の地。1941 年にはジャンムー州全体でムスリムが6割、ジャンムー郡でも4割を占めた。
+    - from: 1947
+      main: hindu
+      note: 1947 年の秋、ジャンムーで多数のムスリムが殺害・追放され（ジャンムーの虐殺）、多くがパキスタン側へ逃れた。
+      source: "https://en.wikipedia.org/wiki/1947_Jammu_massacres"
+- id: rel_reasi
+  name: リアーシー
+  select:
+    pieces: [IND-Reasi]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: ジャンムーの山地で、1941 年にはムスリムが約3分の2を占めた。
+    - from: 1947
+      main: hindu
+      minor: sunni
+      note: 1947 年のジャンムーの虐殺と移動の後、ヒンドゥー教徒がやや多くなった。ムスリムは今も半数近い。
+      source: "https://en.wikipedia.org/wiki/1947_Jammu_massacres"
+- id: rel_ladakh_leh
+  name: ラダック（レー）
+  select:
+    pieces: [IND-Leh_Ladakh, IND-DATA_NOT_AVAILABLE]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: チベット仏教（ドゥク派・ゲルク派）の僧院（ヘミス・ティクセなど）が多い「小チベット」。
+      source: "https://ja.wikipedia.org/wiki/ラダック"
+- id: rel_kargil
+  name: カルギル
+  select:
+    pieces: [IND-Kargil]
+  timeline:
+    - from: 1648
+      main: shia
+      note: プリグ人・バルティ人のシーア派（十二イマーム派）が多数。ザンスカールは仏教徒。
+
+# ---- ヒマーチャル・プラデーシュの高地 ----
+- id: rel_lahaul_spiti
+  name: ラーホール・スピティ
+  select:
+    pieces: [IND-Lahul_Spiti]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      minor: hindu
+      note: チベット仏教の高地（タボ寺など）。
+- id: rel_kinnaur
+  name: キンナウル
+  select:
+    pieces: [IND-Kinnaur]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: tibetan_buddhism
+
+# ---- ゴア・西海岸 ----
+- id: rel_goa
+  name: ゴア
+  select:
+    adm1: ["IND/Goa"]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: hindu
+      note: ポルトガル領（1510–1961）。旧征服地（ゴア島・バルデス・サルセテ）では 16 世紀の宗教裁判（異端審問）と改宗政策でカトリックが多数になった。フランシスコ＝ザビエルの遺体を納めたボン・ジェズ教会がある。18 世紀後半に加わった新征服地はヒンドゥー教徒が多く、1900 年ごろには両者がほぼ半々。
+      source: "https://ja.wikipedia.org/wiki/ゴア州"
+    - from: 1961
+      main: hindu
+      minor: catholic
+      note: 1961 年にインドに併合された後、ほかの州からの移住でヒンドゥー教徒が多数になった。カトリックは約 25%（2011）。
+- id: rel_mumbai
+  name: ボンベイ（ムンバイ）
+  select:
+    pieces: [IND-Mumbai, IND-Mumbai_Suburban]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ポルトガル領から 1661 年にイギリスへ（チャールズ2世の結婚の持参金）。商業都市として、パールシー（ゾロアスター教徒）・グジャラートの商人・ムスリムが集まった。ムスリムは約2割。
+      source: "https://ja.wikipedia.org/wiki/パールシー"
+
+# ---- ケーララ ----
+- id: rel_kerala
+  name: ケーララ
+  select:
+    adm1: ["IND/Kerala"]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ヒンドゥー教徒が過半数。北部（マラバール）にはアラブ商人の子孫とされるマーピラ（ムスリム）、中部には「聖トマス派」と呼ばれる古いキリスト教徒が多い。コーチンにはユダヤ人の会堂（1568）がある。
+      source: "https://ja.wikipedia.org/wiki/ケーララ州"
+- id: rel_malappuram
+  name: マラプラム（マラバール南部）
+  select:
+    pieces: [IND-Malappuram]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: マーピラ（ムスリム）が約7割。1921 年のマーピラ（モープラー）反乱の中心。
+      source: "https://en.wikipedia.org/wiki/Malabar_rebellion"
+- id: rel_central_travancore
+  name: ケーララ中部（コッタヤム・エルナクラム・イドゥッキ）
+  select:
+    pieces: [IND-Kottayam, IND-Ernakulam, IND-Idukki]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: catholic
+      note: 聖トマス派キリスト教徒（シリア典礼）の中心地。ポルトガルが押しつけたラテン化への反発（クーナン十字架の誓い、1653）で、ローマに従うシロ・マラバル派（カトリック）と、シリア正教会系（東方諸教会）に分かれた。キリスト教徒は約4割。
+      source: "https://ja.wikipedia.org/wiki/トマス派"
+- id: rel_pathanamthitta
+  name: パッタナムティッタ
+  select:
+    pieces: [IND-Pathanamthitta]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: oriental
+      note: マランカラ正教会・ヤコブ派などのシリア典礼の教会（東方諸教会）と、プロテスタント化したマール・トーマ教会の信者が多い。キリスト教徒は約4割。
+
+# ---- タミル・ナードゥ、カルナータカ、テランガーナほか ----
+- id: rel_kanniyakumari
+  name: カンニヤークマリ
+  select:
+    pieces: [IND-Kanniyakumari]
+  timeline:
+    - from: 1648
+      main: hindu
+    - from: 1850
+      main: hindu
+      minor: catholic
+      note: 19 世紀に低いカーストの人々の間でキリスト教（プロテスタントの南インド教会とカトリック）への改宗が進み、キリスト教徒が4割を超えた。漁民はポルトガル時代からのカトリック。
+- id: rel_dakshina_kannada
+  name: マンガロール（ダクシナ・カンナダ）
+  select:
+    pieces: [IND-Dakshina_Kannada]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ムスリム（ベアリ）が約4分の1。マンガロールのカトリックはゴアから移った人々の子孫。
+- id: rel_hyderabad_city
+  name: ハイデラバード（市）
+  select:
+    pieces: [IND-Hydrabad]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: クトゥブ・シャーヒー朝（–1687）とニザーム（ハイデラバード藩王国）の都。チャールミナールが象徴。ムスリムが4割前後。
+      source: "https://ja.wikipedia.org/wiki/ハイデラバード藩王国"
+- id: rel_lakshadweep
+  name: ラクシャドウィープ
+  select:
+    pieces: [IND-Lakshadweep]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ほぼ全員がムスリム（マラバール海岸と同じシャーフィイー派）。
+
+# ---- 西ベンガル ----
+- id: rel_west_bengal
+  name: 西ベンガル
+  select:
+    adm1: ["IND/West Bengal"]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ベンガル西部はヒンドゥー教徒が多い。ムスリムは3割ほど（1941）。チャイタニヤ（1486–1534）が広めたクリシュナ信仰（ベンガル・ヴィシュヌ派）が盛ん。
+      source: "https://ja.wikipedia.org/wiki/チャイタニヤ"
+    - from: 1947
+      main: hindu
+      minor: sunni
+      note: 分離独立で東パキスタンからヒンドゥー教徒の難民が流れ込み（1971 年まで続いた）、ムスリムの一部が東パキスタンへ移った。ムスリムは約 27%（2011）。
+- id: rel_murshidabad_malda
+  name: ムルシダーバード・マルダ
+  select:
+    pieces: [IND-Murshidabad, IND-Maldah]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: ベンガル太守の都ムルシダーバード（1717–）。ムスリムが過半数（ムルシダーバード 66%、マルダ 51%、2011）。
+      source: "https://ja.wikipedia.org/wiki/ムルシダーバード"
+- id: rel_darjeeling
+  name: ダージリン・カリンポン
+  select:
+    pieces: [IND-Darjiling, IND-Kalimpong]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      minor: other
+      note: シッキム王国（ブータン）領。レプチャ人（自然崇拝と仏教）とブーティア人（チベット仏教）の地。
+    - from: 1870
+      main: hindu
+      minor: tibetan_buddhism
+      note: イギリスが茶園と避暑地を開き、ネパールからの移住者（多くがヒンドゥー教徒。タマン人など仏教徒も）が多数になった。
+      source: "https://ja.wikipedia.org/wiki/ダージリン"
+
+# ---- 北東インド ----
+- id: rel_assam
+  name: アッサム
+  select:
+    adm1: ["IND/Assam"]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: other
+      note: アホーム王国の王家と住民はヒンドゥー化し、シャンカラデーヴァ（1449–1568）が開いたヴィシュヌ派の僧院（サットラ。マジュリ島など）が広がっていた。ボド人・カルビ人・ミシン人などの平野・山地の部族は在来の信仰。
+      source: "https://ja.wikipedia.org/wiki/シャンカラデーヴァ"
+    - from: 1930
+      main: hindu
+      minor: sunni
+      note: 1900 年代から東ベンガルのムスリム農民がブラマプトラ川の中洲や低地に移住した。ムスリムは 1941 年に約4分の1、2011 年に 34%。移民をめぐるアッサム運動（1979–85）が起きた。
+      source: "https://en.wikipedia.org/wiki/Assam_Movement"
+- id: rel_lower_assam
+  name: アッサム西部・中部の低地（ドゥブリー・バルペタ・ゴールパラ・ナガオンなど）
+  select:
+    pieces: [IND-Dhubri, IND-South_Salmara_Mankachar, IND-Barpeta, IND-Goalpara, IND-Darrang, IND-Morigaon, IND-Nagaon, IND-Hojai, IND-Bongaigaon]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ムガル帝国との境に近く、もとからムスリムもいた。
+    - from: 1950
+      main: sunni
+      minor: hindu
+      note: 東ベンガル（東パキスタン）からのムスリムの移住が重なり、ムスリムが多数になった（2011 年の国勢調査で過半数）。
+- id: rel_barak_valley
+  name: バラク渓谷（カリムガンジ・ハイラカンディ）
+  select:
+    pieces: [IND-Karimganj, IND-Hailakandi]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: ベンガル語圏のシレット地方と一続きで、ムスリムが過半数。カリムガンジは 1947 年までシレット県の一部。
+- id: rel_dima_hasao
+  name: アッサムの山地（カルビ・アングロン、ディマ・ハサオ）
+  select:
+    pieces: [IND-Karbi_Anglong_East, IND-Karbi_Anglong_West, IND-Dima_Hasao]
+  timeline:
+    - from: 1648
+      main: other
+      minor: hindu
+      note: カルビ人・ディマサ人などの在来の信仰。
+    - from: 1950
+      main: hindu
+      minor: other
+      note: ヒンドゥー化が進んだ。キリスト教徒も1〜3割。
+- id: rel_meghalaya
+  name: メガラヤ（カシ丘陵・ジャインティア丘陵・ガロ丘陵）
+  select:
+    adm1: ["IND/Meghalaya"]
+  timeline:
+    - from: 1648
+      main: other
+      note: カシ人（ニアム・カシ）・ガロ人（ソンサレク）の在来の信仰。
+    - from: 1900
+      main: other
+      minor: reformed
+      note: ウェールズのカルヴァン派メソジスト（長老派）の宣教（1841–）がカシ語をローマ字で書き表した。ガロ丘陵ではアメリカのバプテスト。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_Meghalaya"
+    - from: 1975
+      main: reformed
+      minor: other
+      note: キリスト教徒が過半数になった（1981 年 53%）。
+    - from: 2000
+      main: reformed
+      minor: catholic
+      note: キリスト教徒は約 75%（2011）。プロテスタント（長老派・バプテスト）とカトリックがほぼ並ぶ（地図ではプロテスタント全体を main）。
+- id: rel_mizoram
+  name: ミゾラム
+  select:
+    adm1: ["IND/Mizoram"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ミゾ（ルシャイ）人の在来の信仰。
+    - from: 1910
+      main: other
+      minor: reformed
+      note: ウェールズの長老派（1894–）とバプテストの宣教。1900〜30 年代の信仰復興運動で改宗が広がった。
+    - from: 1930
+      main: reformed
+      minor: other
+    - from: 1951
+      main: reformed
+      note: キリスト教徒が 8〜9 割（2011 年 87%）。長老派が最大。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_Mizoram"
+- id: rel_nagaland
+  name: ナガランド
+  select:
+    adm1: ["IND/Nagaland"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ナガ人の諸部族の在来の信仰。
+    - from: 1900
+      main: other
+      minor: reformed
+      note: アメリカのバプテストの宣教（1872–）。
+    - from: 1960
+      main: reformed
+      minor: other
+      note: キリスト教徒が過半数に（1971 年 67%）。
+    - from: 1980
+      main: reformed
+      note: キリスト教徒が約 88%（2011）。ナガランドは世界でも有数のバプテストの多い地域。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_Nagaland"
+- id: rel_dimapur
+  name: ディマプル
+  select:
+    pieces: [IND-Dimapur]
+  timeline:
+    - from: 1648
+      main: other
+      minor: hindu
+      note: ディマサ王国の古都。
+    - from: 1980
+      main: reformed
+      minor: hindu
+      note: ナガランドの商業の中心。ほかの州からの移住者（ヒンドゥー教徒）も多い。
+- id: rel_manipur
+  name: マニプルの山地
+  select:
+    adm1: ["IND/Manipur"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ナガ人・クキ人などの在来の信仰。
+    - from: 1920
+      main: other
+      minor: reformed
+    - from: 1960
+      main: reformed
+      minor: other
+    - from: 1980
+      main: reformed
+      note: 山地の住民はほぼキリスト教徒（バプテストなど）。2023 年から、谷のメイテイ人と山地のクキ人の間で衝突が続く。
+- id: rel_imphal_valley
+  name: マニプルの谷（インパール）
+  select:
+    pieces: [IND-Imphal_East, IND-Imphal_West, IND-Bishnupur, IND-Thoubal, IND-Kakching, IND-Jiribam]
+  timeline:
+    - from: 1648
+      main: other
+      note: メイテイ人の在来の信仰（サナマヒ）。
+    - from: 1720
+      main: hindu
+      minor: other
+      note: ガリーブ・ニワーズ王（在位 1709–48）がヴィシュヌ派（ベンガル・ヴィシュヌ派）を国の宗教とし、メイテイ人はヒンドゥー化した。在来の信仰も残る。ムスリム（メイテイ・パンガル）も1割ほど。
+      source: "https://en.wikipedia.org/wiki/Pamheiba"
+- id: rel_tripura
+  name: トリプラ
+  select:
+    adm1: ["IND/Tripura"]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: other
+      note: トリプラ王国（マーニキヤ朝）の王家はヒンドゥー教徒。トリプリ人などの山地民は在来の信仰とヒンドゥー教。
+    - from: 1950
+      main: hindu
+      note: 東パキスタンからヒンドゥー教徒のベンガル人の難民が大量に移り住み、住民の多数になった。
+- id: rel_arunachal
+  name: アルナーチャル・プラデーシュ
+  select:
+    adm1: ["IND/Arunachal Pradesh"]
+  timeline:
+    - from: 1648
+      main: other
+      note: アディ人・ニシ人・アパタニ人などの在来の信仰（ドニ・ポロなど）。東部のカムティ人・シンポー人は上座部仏教。
+    - from: 1990
+      main: other
+      minor: reformed
+      note: 1970 年代からキリスト教が広がった。2011 年にはキリスト教徒 30%、ヒンドゥー教徒 29%、在来の信仰 26%、仏教徒 12%。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Arunachal_Pradesh"
+- id: rel_tirap
+  name: アルナーチャル南東部（ティラプ・チャンラン・ロンディン）
+  select:
+    pieces: [IND-Tirap, IND-Changlang, IND-Longding]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1990
+      main: reformed
+      minor: other
+      note: ナガ系の住民の多くがバプテストに改宗した。
+- id: rel_tawang
+  name: タワン・西カメン
+  select:
+    pieces: [IND-Tawang, IND-West_Kameng]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: モンパ人のチベット仏教（ゲルク派）。タワン僧院（1680 年ごろ）はダライ・ラマ6世の生地に近い。
+      source: "https://ja.wikipedia.org/wiki/タワン僧院"
+- id: rel_sikkim
+  name: シッキム
+  select:
+    adm1: ["IND/Sikkim"]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      minor: other
+      note: 1642 年にナムギャル朝の王国が建てられ、ブーティア人（チベット系）の王家のもとでチベット仏教（ニンマ派）が国の宗教。レプチャ人の在来の信仰も残る。
+      source: "https://ja.wikipedia.org/wiki/シッキム王国"
+    - from: 1890
+      main: hindu
+      minor: tibetan_buddhism
+      note: イギリスの保護国となった後、ネパールからの移住者が増え、1891 年には住民の多数になった。
+- id: rel_sikkim_north
+  name: 北シッキム
+  select:
+    pieces: [IND-North_District]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      minor: other
+      note: ラチェン・ラチュンのブーティア人と、ゾングのレプチャ人の地。
+
+# ---- 東部の部族地域 ----
+- id: rel_jharkhand_tribal
+  name: チョーター・ナーグプル高原（ラーンチー・グムラ・クンティ・シングブーム）
+  select:
+    pieces: [IND-Ranchi, IND-Khunti, IND-Gumla, IND-Lohardaga, IND-Pashchimi_Singhbhum, IND-Simdega]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: other
+      note: ムンダ人・オラオン人・ホー人などの部族の在来の信仰（サルナ）が多い。ビルサ＝ムンダの反乱（1899–1900）の地。
+      source: "https://ja.wikipedia.org/wiki/ビルサ・ムンダ"
+- id: rel_simdega
+  name: シムデガ
+  select:
+    pieces: [IND-Simdega]
+  timeline:
+    - from: 1648
+      main: other
+      minor: hindu
+    - from: 1950
+      main: catholic
+      minor: other
+      note: 19 世紀末からのイエズス会（ベルギー）とルター派（ゴスナー教会）の宣教で、キリスト教徒が過半数。
+- id: rel_bastar
+  name: バスタル（チャッティースガル南部）
+  select:
+    pieces: [IND-Bastar, IND-Dakshin_Bastar_Dantewada, IND-Bijapur_2, IND-Narayanpur, IND-Sukma, IND-Kondagaon, IND-Uttar_Bastar_Kanker]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: other
+      note: ゴーンド人などの部族の地。在来の神々の信仰とヒンドゥー教が混ざる（国勢調査では多くがヒンドゥー教徒とされる）。
+
+# ---- アンダマン・ニコバル ----
+- id: rel_andaman
+  name: アンダマン諸島
+  select:
+    pieces: [IND-North_Middle_Andaman, IND-South_Andaman]
+  timeline:
+    - from: 1648
+      main: other
+      note: 先住のアンダマン人（ジャラワ人・センチネル人など）の狩猟採集の社会。
+    - from: 1950
+      main: hindu
+      note: イギリスの流刑地（1858–。ポートブレアの監獄）を経て、独立後に本土（とくに東パキスタンからのベンガル人難民）からの入植が進んだ。キリスト教徒・ムスリムもいる。
+      source: "https://ja.wikipedia.org/wiki/アンダマン・ニコバル諸島"
+- id: rel_nicobar
+  name: ニコバル諸島
+  select:
+    pieces: [IND-Nicobars]
+  timeline:
+    - from: 1648
+      main: other
+      note: ニコバル人の在来の信仰。デンマーク（1756–1868）の名目的な領有。
+    - from: 1950
+      main: anglican
+      minor: other
+      note: 20 世紀にニコバル人の多くが聖公会（現在の北インド教会）に改宗した。
+
+# ======== パキスタン ========
+- id: rel_pakistan
+  name: パキスタン
+  select:
+    iso_all: [PAK]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スンナ派（ハナフィー派）が多数。シーア派は1〜2割。バローチスターンのマクラーンにはズィクリー派がいる。
+      source: "https://ja.wikipedia.org/wiki/パキスタンの宗教"
+- id: rel_punjab_pk
+  name: 西パンジャーブ（ラホール・ラーワルピンディー・ムルターン）
+  select:
+    adm1: ["PAK/Punjab", "PAK/Islamabad Capital Territory"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: ムスリムが多数。都市の商人・金融業者にはヒンドゥー教徒が多く、19 世紀にはシク教徒も増えた（ヒンドゥー教徒・シク教徒を合わせて約4分の1、1941）。ラホールはシク王国の都（1799–1849）で、ナーナクの生地ナンカナ・サーヒブもここにある。
+      source: "https://ja.wikipedia.org/wiki/ラホール"
+    - from: 1947
+      main: sunni
+      note: 分離独立でヒンドゥー教徒・シク教徒のほぼ全員がインドへ去り、東パンジャーブなどからムスリムの難民が来た。少数のキリスト教徒（約2%）がいる。アフマディーヤは 1974 年に憲法で非ムスリムとされた。
+      source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"
+- id: rel_sindh
+  name: シンド
+  select:
+    adm1: ["PAK/Sindh"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: スーフィーの聖者廟の信仰が根づく（セーフワーンのラール・シャハバーズ・カランダル廟など）。都市の商人にヒンドゥー教徒が多く、1941 年は約 27%。
+      source: "https://ja.wikipedia.org/wiki/シンド州"
+    - from: 1947
+      main: sunni
+      note: ヒンドゥー教徒の多く（特に都市の住民）がインドへ去り、インドからムスリムの難民（ムハージル）がカラチ・ハイデラバードに来た。ヒンドゥー教徒は約8%（2017）で、南東部に多い。
+- id: rel_thar
+  name: タール（タールパールカル・ウメルコート）
+  select:
+    pieces: [PAK-Tharparkar, PAK-Umerkot]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: タール砂漠の地域。ヒンドゥー教徒（多くは指定カーストの農民・牧畜民）が多い。
+    - from: 1947
+      main: sunni
+      minor: hindu
+      note: ヒンドゥー教徒が今も4〜5割を占める、パキスタンで最もヒンドゥー教徒の多い地域。
+- id: rel_baltistan
+  name: バルティスターン・ギルギット
+  select:
+    pieces: [PAK-Skardu, PAK-Shigar, PAK-Kharmang, PAK-Ghanche, PAK-Gilgit, PAK-Nagar]
+  timeline:
+    - from: 1648
+      main: shia
+      note: バルティ人・シナー人のシーア派（十二イマーム派）。チベット仏教から 15〜16 世紀に改宗した。
+- id: rel_hunza
+  name: フンザ・ギゼル（イスマーイール派）
+  select:
+    pieces: [PAK-Hunza, PAK-Ghizer]
+  timeline:
+    - from: 1648
+      main: shia
+      note: シーア派のうちイスマーイール派（ニザール派。指導者はアーガー・ハーン）の地。
+      source: "https://ja.wikipedia.org/wiki/イスマーイール派"
+- id: rel_chitral
+  name: チトラール
+  select:
+    pieces: [PAK-Chitral]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: shia
+      note: 北部にイスマーイール派が多い。南部の谷には多神教のカラーシュ人が暮らす。
+- id: rel_kurram
+  name: クッラム
+  select:
+    pieces: [PAK-Kurram]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: パシュトゥーン人のうちトゥーリー族はシーア派。
+
+# ======== バングラデシュ（東ベンガル） ========
+- id: rel_bangladesh
+  name: 東ベンガル（バングラデシュ）
+  select:
+    iso: [BGD]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: 16〜18 世紀、ムガル帝国のもとでベンガル東部の森林や湿地が開墾され、その担い手の農民の間にイスラーム（スーフィーの聖者の信仰）が広まった。地主・商人・知識層にはヒンドゥー教徒が多い。1901 年の国勢調査でムスリムは東ベンガルの約3分の2。
+      source: "https://en.wikipedia.org/wiki/Islam_in_Bangladesh"
+    - from: 1971
+      main: sunni
+      note: 分離独立（1947）とその後の暴動・1971 年の独立戦争で、多くのヒンドゥー教徒がインドへ移った。ヒンドゥー教徒の割合は 1951 年 22%、1974 年 13.5%、2022 年 8%。
+      source: "https://ja.wikipedia.org/wiki/バングラデシュ独立戦争"
+- id: rel_chittagong_hills
+  name: チッタゴン丘陵
+  select:
+    pieces: [BGD-Rangamati, BGD-Bandarban, BGD-Khagrachhari]
+  timeline:
+    - from: 1648
+      main: theravada
+      minor: other
+      note: チャクマ人・マルマ人（上座部仏教）と、トリプラ人・ムロ人などの山地民の地。
+    - from: 1980
+      main: theravada
+      minor: sunni
+      note: 政府の入植政策でベンガル人のムスリムが移り住み、山地民の武装闘争（1977–97 年の和平協定まで）が起きた。カプタイ・ダム（1962）でチャクマ人の多くが土地を失った。
+      source: "https://en.wikipedia.org/wiki/Chittagong_Hill_Tracts_conflict"
+    - from: 2000
+      main: sunni
+      minor: theravada
+      note: ベンガル人が住民の半分ほどになった。
+
+# ======== ネパール ========
+- id: rel_nepal
+  name: ネパール
+  select:
+    iso: [NPL]
+  timeline:
+    - from: 1648
+      main: hindu
+      note: ヒンドゥー教が多数。カトマンズ盆地のネワール人はヒンドゥー教と仏教（ネワール仏教）が重なり合う。東部の山地のライ人・リンブー人は在来の信仰（キラント）。タラーイ平原の南部にはムスリムもいる。ブッダの生地ルンビニーがある。
+      source: "https://ja.wikipedia.org/wiki/ネパールの宗教"
+    - from: 1769
+      main: hindu
+      note: ゴルカ朝のプリトビ＝ナラヤン＝シャハがカトマンズ盆地を征服して統一。ヒンドゥー教の王国として、1854 年の法典（ムルキ・アイン）でカーストの秩序が定められた。2008 年の王制廃止の後、世俗国家になった。
+      source: "https://ja.wikipedia.org/wiki/ゴルカ朝"
+- id: rel_nepal_himalaya
+  name: ネパールの高地（ムスタン・マナン・ラスワ）
+  select:
+    pieces: [NPL-Mustang, NPL-Manang, NPL-Rasuwa]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: チベット系の住民（ロバ人・マナンギ人・タマン人）のチベット仏教。ムスタン（ロー王国）は 2008 年まで王家が残った。
+- id: rel_nepal_sherpa
+  name: ネパールの高地（ソルクンブ・ドルパ・シンドゥパルチョーク）
+  select:
+    pieces: [NPL-Solukhumbu, NPL-Dolpa, NPL-Sindhupalchok]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: tibetan_buddhism
+      note: エヴェレストの麓のシェルパ人、ドルポ人、タマン人のチベット仏教（ボン教も）。
+
+# ======== ブータン ========
+- id: rel_bhutan
+  name: ブータン
+  select:
+    iso: [BTN]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      note: チベットから来たシャブドゥン＝ガワン＝ナムゲル（1594–1651）がドゥク派（カギュ派の一派）の国家を建て、各地にゾン（城塞と僧院を兼ねる）を築いた。
+      source: "https://ja.wikipedia.org/wiki/ブータン"
+- id: rel_bhutan_south
+  name: ブータン南部（サムツェ・サルパン・チラン・ダガナ）
+  select:
+    pieces: [BTN-Samtse, BTN-Sarpang, BTN-Tsirang, BTN-Dagana]
+  timeline:
+    - from: 1648
+      main: tibetan_buddhism
+      minor: other
+      note: 人口の少ない森林と山麓。
+    - from: 1900
+      main: hindu
+      minor: tibetan_buddhism
+      note: 19 世紀末からネパール系の住民（ローツァンパ。多くがヒンドゥー教徒）が移り住んだ。1990 年代はじめ、国籍法と同化政策をめぐる対立から約 10 万人がネパールの難民キャンプへ逃れた（多くが 2007 年からアメリカなどへ第三国定住）。
+      source: "https://en.wikipedia.org/wiki/Lhotshampa"
+
+# ======== スリランカ ========
+- id: rel_sri_lanka
+  name: スリランカ（セイロン）
+  select:
+    iso: [LKA]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: シンハラ人の上座部仏教。キャンディ王国が仏歯寺を守る。沿岸はポルトガル（–1658）、ついでオランダ（–1796）の支配で、カトリックとオランダ改革派の信者も生まれた。1753 年にシャムから僧を招いて受戒の伝統（シャム派）を復興した。
+      source: "https://ja.wikipedia.org/wiki/スリランカの仏教"
+    - from: 1873
+      main: theravada
+      note: 19 世紀後半、キリスト教の宣教に対抗する仏教の復興運動が起きた（パーナドゥラ論争 1873、アナガーリカ＝ダルマパーラ）。キリスト教徒は約7%、主に沿岸部のカトリック。
+      source: "https://en.wikipedia.org/wiki/Anagarika_Dharmapala"
+- id: rel_jaffna
+  name: スリランカ北部（ジャフナ・ヴァヴニヤ・ムッライティヴ・キリノッチ）
+  select:
+    pieces: [LKA-Jaffna_District, LKA-Kilinochchi_District, LKA-Mullaitivu_District, LKA-Vavuniya_District]
+  timeline:
+    - from: 1648
+      main: hindu
+      note: タミル人のヒンドゥー教（シヴァ派）。19 世紀にアールムガ＝ナーヴァラルがシヴァ派の復興運動を起こした。カトリックも1〜2割。1990 年に LTTE（タミル・イーラム解放のトラの意）がムスリムを北部から追放した。
+      source: "https://ja.wikipedia.org/wiki/スリランカ内戦"
+- id: rel_mannar
+  name: マンナール
+  select:
+    pieces: [LKA-Mannar_District]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: hindu
+      note: ポルトガル時代（16 世紀）にザビエルの宣教で漁民の多くがカトリックになった。マドゥ教会は国内のカトリック最大の巡礼地。
+- id: rel_batticaloa
+  name: バッティカロア
+  select:
+    pieces: [LKA-Batticaloa_District]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: タミル人のヒンドゥー教徒と、タミル語を話すムスリム（ムーア人）。
+- id: rel_trincomalee
+  name: トリンコマリー
+  select:
+    pieces: [LKA-Trincomalee_District]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: 天然の良港。古いシヴァ寺院（コーネーシュワラム）がある。
+    - from: 1980
+      main: sunni
+      minor: hindu
+      note: 独立後の灌漑と入植でシンハラ人（仏教徒）が増え、内戦でタミル人が減った。ムスリム・仏教徒・ヒンドゥー教徒がほぼ3分している（2012）。
+- id: rel_ampara
+  name: アンパーラ
+  select:
+    pieces: [LKA-Ampara_District]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: 東海岸のムーア人（ムスリム）の農村地帯。
+    - from: 1960
+      main: sunni
+      minor: theravada
+      note: ガル・オヤ開発（1950 年代）でシンハラ人の入植者が増えた。
+- id: rel_nuwara_eliya
+  name: ヌワラ・エリヤ（中央高地の茶園）
+  select:
+    pieces: [LKA-Nuwara_Eliya_District]
+  timeline:
+    - from: 1648
+      main: theravada
+    - from: 1880
+      main: hindu
+      minor: theravada
+      note: 1840 年代からのコーヒー、1870 年代からの茶のプランテーションの労働者として、南インドからタミル人（インド・タミル）が連れてこられた。
+      source: "https://ja.wikipedia.org/wiki/インド・タミル"
+- id: rel_puttalam
+  name: プッタラム（北西部の海岸）
+  select:
+    pieces: [LKA-Puttalam_District]
+  timeline:
+    - from: 1648
+      main: theravada
+      minor: catholic
+      note: 沿岸の漁村にカトリックが多い。ムスリムも約2割。
+
+# ======== モルディブ ========
+- id: rel_maldives
+  name: モルディブ
+  select:
+    iso: [MDV]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: 12 世紀（伝承では 1153 年）に仏教からイスラームに改宗。憲法で国民はすべてムスリムとされる。
+      source: "https://ja.wikipedia.org/wiki/モルディブ"

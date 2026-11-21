@@ -1239,16 +1239,40 @@ export class AtlasMap {
     const level = new Float32Array(n);
     const center = new Uint8Array(n);
     const regionPieces = this.idx.atlas.movementRegions ?? {};
+    const homes = this.idx.atlas.movementHome ?? {};
+    const occupied = this.idx.atlas.certainty.indexOf("occupied");
     const topoOf = this.topoIndexOfAtlas();
     for (const sp of m.spread) {
       const v = curveAt(sp.curve, year);
       if (v <= 0) continue;
-      const pol = new Set(sp.polities.map((id) => this.idx.polityIndex.get(id)));
+      // 政体 index → その年の本国のピース（atlas の index。null なら全領域）
+      const pol = new Map<number | undefined, Set<number> | null>();
+      for (const id of sp.polities) {
+        const h = sp.colonies ? undefined : homes[id];
+        let set: Set<number> | null = null;
+        if (h) {
+          set = new Set();
+          for (const [from, to, ps] of h) if ((from == null || from <= year) && (to == null || year <= to)) for (const a of ps) set.add(a);
+        }
+        pol.set(this.idx.polityIndex.get(id), set);
+      }
+      const excluded = new Set<number>();
+      for (const r of sp.exclude ?? []) for (const a of regionPieces[r] ?? []) excluded.add(a);
       const apply = (i: number) => {
+        if (excluded.size && excluded.has(this.atlasIdx[i])) return;
         if (v > level[i]) level[i] = v;
         if (sp.center) center[i] = 1;
       };
-      if (pol.size) for (let i = 0; i < n; i++) if (pol.has(this.ownerOf[i])) apply(i);
+      if (pol.size)
+        for (let i = 0; i < n; i++) {
+          if (!pol.has(this.ownerOf[i])) continue;
+          if (!sp.colonies) {
+            if (this.certOf[i] === occupied) continue;
+            const home = pol.get(this.ownerOf[i]);
+            if (home && !home.has(this.atlasIdx[i])) continue;
+          }
+          apply(i);
+        }
       for (const r of sp.regions) for (const a of regionPieces[r] ?? []) {
         const i = topoOf[a];
         if (i >= 0) apply(i);

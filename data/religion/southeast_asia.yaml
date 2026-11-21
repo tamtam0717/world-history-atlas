@@ -1,0 +1,1293 @@
+# 宗教の分布：東南アジア（ミャンマー・タイ・ラオス・カンボジア・ベトナム・マレーシア・シンガポール・ブルネイ・インドネシア・フィリピン・東ティモール）1648–2025
+# 形式は docs/religion-format.md（「南アジア・東南アジア」の節）。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# - 大陸部は上座部仏教（theravada）。ベトナムは東アジアの方針に合わせて、儒教・仏教（大乗）・道教と祖先祭祀が重なる
+#   民間信仰（vietnamese_folk）で塗る。山地の少数民族の在来の信仰（精霊信仰）は other。
+# - 島嶼部はイスラーム（スンナ派。シャーフィイー派）、フィリピンはカトリック。インドネシアのキリスト教の地域は、
+#   オランダ改革派の流れをくむ教会（ミナハサ・アンボン・トラジャ・パプアなど）を reformed、バタク人・ニアスの教会（HKBP など。
+#   世界ルーテル連盟に加盟）を lutheran で塗る。
+# - 東南アジアの華人の宗教（仏教・道教・祖先祭祀）は、中国と同じ chinese_folk で塗る。
+# - 言語（data/language/southeast_asia.yaml）と、切り替えの年をできるだけそろえている。
+
+# ======== ミャンマー（ビルマ） ========
+- id: rel_myanmar
+  name: ミャンマー（ビルマ）
+  select:
+    iso: [MMR]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: ビルマ人・モン人・シャン人・ラカイン人の上座部仏教。パガン以来の仏塔（パゴダ）の信仰と、ナッ（精霊）の信仰が重なる。
+      source: "https://ja.wikipedia.org/wiki/ミャンマーの仏教"
+- id: rel_yangon
+  name: ラングーン（ヤンゴン）
+  select:
+    pieces: [MMR-Yangon_East, MMR-Yangon_North, MMR-Yangon_South, MMR-Yangon_West]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: シュエダゴン・パゴダの門前町（ダゴン）。
+    - from: 1880
+      main: theravada
+      minor: hindu
+      note: 英領インドの一州として、インドからの移民（ヒンドゥー教徒とムスリム）が流れ込み、1931 年にはラングーン市の人口の過半数がインド系だった。
+      source: "https://en.wikipedia.org/wiki/Burmese_Indians"
+    - from: 1942
+      main: theravada
+      note: 日本軍の侵攻（1942）でインド系の住民の多くがインドへ逃れ、1962 年以後の国有化でさらに去った。
+- id: rel_maungdaw
+  name: ラカイン北部（マウンドー・ブティダウン）
+  select:
+    pieces: [MMR-Maungdaw]
+  timeline:
+    - from: 1648
+      main: theravada
+      minor: sunni
+      note: アラカン（ラカイン）王国（ミャウー朝、–1785）。王国の宮廷にはムスリムもいた。
+      source: "https://ja.wikipedia.org/wiki/アラカン"
+    - from: 1880
+      main: sunni
+      minor: theravada
+      note: イギリス領の時代にベンガル（チッタゴン）との行き来と移住が増え、ムスリムのロヒンギャが多数になった。1982 年の国籍法で多くが国籍を認められなかった。
+      source: "https://ja.wikipedia.org/wiki/ロヒンギャ"
+    - from: 2017
+      main: sunni
+      minor: theravada
+      note: 2017 年の国軍の掃討作戦で、70 万人以上のロヒンギャがバングラデシュへ逃れた（国連の調査団はジェノサイドの意図を指摘）。残る住民の構成ははっきりしない。2024 年にはアラカン軍がこの地域の大部分を支配した。
+      source: "https://ja.wikipedia.org/wiki/ロヒンギャ危機"
+- id: rel_sittwe
+  name: ラカイン中部（シットウェー）
+  select:
+    pieces: [MMR-Sittwe]
+  timeline:
+    - from: 1648
+      main: theravada
+    - from: 1880
+      main: theravada
+      minor: sunni
+      note: ラカイン人の仏教徒とロヒンギャが混住する。2012 年の衝突の後、ムスリムの多くはキャンプに隔離された。
+- id: rel_chin
+  name: チン州
+  select:
+    pieces: [MMR-Falam, MMR-Hakha, MMR-Mindat]
+  timeline:
+    - from: 1648
+      main: other
+      note: チン人の在来の信仰。
+    - from: 1930
+      main: other
+      minor: reformed
+      note: アメリカのバプテストの宣教（1899–）。
+    - from: 1966
+      main: reformed
+      note: キリスト教徒が約 85%（2014）。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_Myanmar"
+- id: rel_kachin
+  name: カチン州
+  select:
+    pieces: [MMR-Myitkyina, MMR-Bhamo, MMR-Mohnyin, MMR-Puta_O]
+  timeline:
+    - from: 1648
+      main: other
+      minor: theravada
+      note: 山地のカチン人（ジンポー人）は在来の信仰、谷のシャン人は上座部仏教。
+    - from: 1960
+      main: theravada
+      minor: reformed
+      note: カチン人の多くがバプテストやカトリックに改宗した（州全体でキリスト教徒約 34%、2014）。ビルマ人・シャン人の仏教徒も多い。
+- id: rel_kayah
+  name: カヤー州（カレンニー）
+  select:
+    pieces: [MMR-Loikaw, MMR-Bawlake]
+  timeline:
+    - from: 1648
+      main: theravada
+      minor: other
+    - from: 1950
+      main: theravada
+      minor: catholic
+      note: カヤー人（赤カレン）の多くがカトリックに改宗した（キリスト教徒約 46%、2014）。
+- id: rel_wa
+  name: シャン州北東部（ワ・コーカン）
+  select:
+    pieces: [MMR-Matman, MMR-Hopang]
+  timeline:
+    - from: 1648
+      main: other
+      minor: theravada
+      note: ワ人の在来の信仰（バプテストに改宗した人も多い）。
+- id: rel_kokang
+  name: コーカン（ラウカイン）
+  select:
+    pieces: [MMR-Laukkaing]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      minor: theravada
+      note: 中国系（漢人）のコーカン人の地。中国の民間信仰（仏教・道教・祖先祭祀）。言語の地図でも中国語。
+- id: rel_naga_hills_mm
+  name: ナガ丘陵（カムティ）
+  select:
+    pieces: [MMR-Hkamti]
+  timeline:
+    - from: 1648
+      main: other
+      minor: theravada
+      note: ナガ人の在来の信仰（のちにキリスト教も）と、谷のシャン人（カムティ）の仏教。
+
+# ======== タイ（シャム） ========
+- id: rel_thailand
+  name: タイ（シャム）
+  select:
+    iso: [THA]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: 上座部仏教。王は仏教の保護者。ラーマ4世（モンクット）は即位前に戒律の厳しいタンマユット派を開いた（1833）。都市の華人は仏教と祖先祭祀を併せて信仰し、多くがタイ社会に同化した。
+      source: "https://ja.wikipedia.org/wiki/タイの仏教"
+- id: rel_patani
+  name: タイ深南部（パッターニー・ヤラー・ナラーティワート・サトゥーン）
+  select:
+    adm1: ["THA/Pattani Province", "THA/Yala Province", "THA/Narathiwat Province", "THA/Satun Province"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: theravada
+      note: マレー系ムスリムのパタニ王国。1785 年からシャムに服属し、1909 年の英シャム条約でシャム領と決まった。2004 年から分離独立派の武装闘争が激しくなった。
+      source: "https://ja.wikipedia.org/wiki/パタニ王国"
+- id: rel_andaman_coast
+  name: タイ南部の海岸（ソンクラー・クラビー・パンガー）
+  select:
+    adm1: ["THA/Songkhla Province", "THA/Krabi Province", "THA/Phangnga Province"]
+  timeline:
+    - from: 1648
+      main: theravada
+      minor: sunni
+      note: ムスリム（多くはタイ語を話す）が2〜3割。
+
+# ======== ラオス ========
+- id: rel_laos
+  name: ラオス（ラーンサーン）
+  select:
+    iso: [LAO]
+  timeline:
+    - from: 1648
+      main: theravada
+      minor: other
+      note: 低地のラーオ人は上座部仏教（ルアンパバーンのシエントーン寺、ヴィエンチャンのタート・ルアン）。山地のラーオ・トゥン（モン・クメール系）・ラーオ・スーン（モン人など）は精霊信仰（ピー）。
+      source: "https://ja.wikipedia.org/wiki/ラオスの仏教"
+- id: rel_laos_highlands
+  name: ラオスの山地（ポンサーリー・ルアンナムター・ウドムサイ・セコン・アッタプー・フアパン・シエンクアン）
+  select:
+    pieces: [LAO-Phongsaly, LAO-Luang_Namtha, LAO-Oudomxay, LAO-Xekong, LAO-Attapeu, LAO-Houaphan, LAO-Xiangkhouang, LAO-Xaisomboun]
+  timeline:
+    - from: 1648
+      main: other
+      minor: theravada
+      note: 山地民（クム人・モン人・アカ人・黒タイ人など）の精霊信仰と祖先祭祀が多い。
+
+# ======== カンボジア ========
+- id: rel_cambodia
+  name: カンボジア
+  select:
+    iso: [KHM]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: クメール人の上座部仏教。アンコール・ワットは 16 世紀に仏教寺院として使われていた。チャム人（ムスリム）は数％。
+      source: "https://ja.wikipedia.org/wiki/カンボジアの仏教"
+    - from: 1975
+      main: theravada
+      note: クメール・ルージュ（民主カンプチア、1975–79）は宗教を禁じ、僧侶を還俗・殺害し、寺院を壊した。チャム人のムスリムも迫害された。1989 年に仏教は国の宗教に戻った（世俗化は secular.yaml）。
+      source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+- id: rel_phnom_penh
+  name: プノンペン
+  select:
+    pieces: [KHM-Phnom_Penh]
+  timeline:
+    - from: 1648
+      main: theravada
+    - from: 1880
+      main: theravada
+      minor: chinese_folk
+      note: フランス保護国の首都（1866–）。20 世紀前半の市の人口は、クメール人・華人・ベトナム人がほぼ3分の1ずつ。
+    - from: 1975
+      main: theravada
+      note: クメール・ルージュは都市の住民を農村へ強制移住させ、華人・ベトナム人を迫害・追放した。
+- id: rel_cambodia_highlands
+  name: カンボジア東北部の山地（ラタナキリ・モンドルキリ）
+  select:
+    adm1: ["KHM/Ratanakiri Province", "KHM/Mondulkiri"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: theravada
+      note: ジャライ人・プノン人など山地民（クメール・ルー）の精霊信仰。
+
+# ======== ベトナム ========
+- id: rel_vietnam
+  name: ベトナム
+  select:
+    iso: [VNM]
+  timeline:
+    - from: 1648
+      main: vietnamese_folk
+      note: 祖先祭祀・儒教（黎朝・阮朝の国家の学問）・大乗仏教・道教と村の守護神（タインホアン）の信仰が重なる。17 世紀にイエズス会（アレクサンドル＝ド＝ロード）の宣教でカトリックが広がり、ローマ字表記（クオック・グー）が生まれた。
+      source: "https://ja.wikipedia.org/wiki/ベトナムの宗教"
+    - from: 1858
+      main: vietnamese_folk
+      note: 宣教師の迫害を口実にフランスが出兵し（1858）、植民地化が進んだ。カトリックは約7〜10%。20 世紀には南部で新宗教のカオダイ教（1926）・ホアハオ教（1939）が広がった。1963 年には南ベトナムで仏教徒が政権の弾圧に抗議した（ティック・クアン・ドックの焼身）。
+      source: "https://ja.wikipedia.org/wiki/カオダイ教"
+- id: rel_bui_chu
+  name: ナムディン・ニンビン（北部のカトリックの中心地）
+  select:
+    pieces: [VNM-Nam_nh, VNM-Ninh_Binh]
+  timeline:
+    - from: 1648
+      main: vietnamese_folk
+    - from: 1700
+      main: vietnamese_folk
+      minor: catholic
+      note: ブイチュー・ファットジエムなど、北部のカトリックの村が集まる地域（ファットジエム大聖堂、1891）。
+    - from: 1954
+      main: vietnamese_folk
+      note: ジュネーヴ協定（1954）の後、北部のカトリック約 60 万人が南へ移った。
+- id: rel_dong_nai
+  name: ドンナイ（ビエンホア）
+  select:
+    pieces: [VNM-ng_Nai]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: クメール人の地（プレイノコールの周辺）。
+    - from: 1700
+      main: vietnamese_folk
+      note: 1698 年に阮氏がザーディン（嘉定）を置き、ベトナム人の入植が進んだ。明の遺臣（華人）も入植した。
+    - from: 1955
+      main: vietnamese_folk
+      minor: catholic
+      note: 北から逃れたカトリックがビエンホア・ホーナイなどに村をつくった。
+- id: rel_saigon
+  name: サイゴン（ホーチミン）と東南部
+  select:
+    pieces: [VNM-Ho_Chi_Minh, VNM-Binh_D_ng, VNM-Ba_R_a_V_ng_Tau, VNM-Long_An, VNM-Ti_n_Giang, VNM-Con_o, VNM-Tay_Ninh]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: クメール人の地（プレイノコール）。17 世紀前半からベトナム人が移り住んでいた。
+    - from: 1700
+      main: vietnamese_folk
+      note: 1698 年に阮氏がザーディンを置いた。チョロン（ショロン）は華人の町。タイニンには 1926 年にカオダイ教の総本山が置かれた。
+- id: rel_mekong_delta
+  name: メコン・デルタ
+  select:
+    pieces: [VNM-An_Giang, VNM-Kien_Giang, VNM-C_n_Th, VNM-H_u_Giang, VNM-B_c_Lieu, VNM-Ca_Mau, VNM-V_nh_Long, VNM-B_n_Tre, VNM-ng_Thap]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: カンボジア領で、クメール人（クメール・クロム）の上座部仏教の地。ハティエンは 1708 年に華人の鄚玖（マック・クー）が開いた港町。
+    - from: 1760
+      main: theravada
+      minor: vietnamese_folk
+      note: 阮氏が 1757 年までにデルタ全域を支配下に置き、ベトナム人の入植が進んだ。デルタ西部（アンザン・キエンザン・カマウ・バクリエウ）では、まだクメール人が多かった。
+      source: "https://ja.wikipedia.org/wiki/南進_(ベトナム)"
+    - from: 1850
+      main: vietnamese_folk
+      minor: theravada
+      note: 阮朝のもとでの入植と、明命帝のクメール人への同化政策で、ベトナム人が多数になった。
+    - from: 1900
+      main: vietnamese_folk
+      note: フランスの運河開削と稲作の開拓でベトナム人の移住がさらに進んだ。アンザンではホアハオ教（1939）が広がった。
+- id: rel_mekong_delta_east
+  name: メコン・デルタ東部（ヴィンロン・ベンチェ・ドンタップ）
+  select:
+    pieces: [VNM-V_nh_Long, VNM-B_n_Tre, VNM-ng_Thap]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: カンボジア領で、クメール人の地。
+    - from: 1760
+      main: vietnamese_folk
+      minor: theravada
+      note: ヴィンロン（1732 年に阮氏の営）など、デルタ東部はベトナム人の入植が早かった。
+    - from: 1850
+      main: vietnamese_folk
+- id: rel_khmer_krom
+  name: チャーヴィン・ソクチャン（クメール・クロムの多い地域）
+  select:
+    pieces: [VNM-Tra_Vinh, VNM-Soc_Tr_ng]
+  timeline:
+    - from: 1648
+      main: theravada
+    - from: 1800
+      main: theravada
+      minor: vietnamese_folk
+    - from: 1900
+      main: vietnamese_folk
+      minor: theravada
+      note: クメール人が今も約3割を占め、上座部仏教の寺院が多い。
+- id: rel_panduranga
+  name: ニントゥアン・ビントゥアン（チャンパーのパーンドゥランガ）
+  select:
+    pieces: [VNM-Ninh_Thu_n, VNM-Binh_Thu_n]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: チャンパー王国の最後の地パーンドゥランガ。チャム人はヒンドゥー教（バラモン）と、イスラームが土着化したバニ派に分かれる。
+      source: "https://ja.wikipedia.org/wiki/チャンパー王国"
+    - from: 1800
+      main: vietnamese_folk
+      minor: hindu
+      note: 1697 年に阮氏に服属し、1832 年に明命帝が併合した。ベトナム人の入植が進んだ。
+    - from: 1900
+      main: vietnamese_folk
+      note: チャム人は約1割（ニントゥアン）。
+- id: rel_kauthara
+  name: カインホア（チャンパーのカウターラ）
+  select:
+    pieces: [VNM-Khanh_Hoa]
+  timeline:
+    - from: 1648
+      main: hindu
+      note: チャンパーの地。ニャチャンのポー・ナガル塔。
+    - from: 1700
+      main: vietnamese_folk
+      note: 1653 年に阮氏が奪い、ベトナム人が入植した。
+- id: rel_vn_northwest
+  name: ベトナム西北部の山地（ライチャウ・ディエンビエン・ソンラ・ハザン）
+  select:
+    pieces: [VNM-Lai_Chau, VNM-i_n_Bien, VNM-S_n_La, VNM-Ha_Giang]
+  timeline:
+    - from: 1648
+      main: other
+      note: 黒タイ・白タイ人、モン人、ザオ（ヤオ）人などの少数民族の精霊信仰と祖先祭祀。
+- id: rel_lao_cai
+  name: ラオカイ・イエンバイ
+  select:
+    pieces: [VNM-Lao_Cai, VNM-Yen_Bai]
+  timeline:
+    - from: 1648
+      main: other
+      minor: vietnamese_folk
+    - from: 1970
+      main: vietnamese_folk
+      minor: other
+      note: 1960 年代からの新経済区への移住で、キン人（ベトナム人）が最大の民族になった。
+- id: rel_central_highlands
+  name: 中部高原（コントゥム・ザライ・ダクラク・ダクノン）
+  select:
+    pieces: [VNM-Kon_Tum, VNM-Gia_Lai, VNM-k_L_k, VNM-k_Nong, VNM-Binh_Ph_c]
+  timeline:
+    - from: 1648
+      main: other
+      note: バナール人・ジャライ人・エデ人・ムノン人など山地民の精霊信仰。フランス人はモンタニャールと呼んだ。コントゥムでは 19 世紀半ばからカトリックの宣教が行われた。
+      source: "https://ja.wikipedia.org/wiki/デガ"
+    - from: 1965
+      main: other
+      minor: vietnamese_folk
+      note: 南ベトナム政府の入植（1957–）と、統一後の新経済区（1976–）でキン人が移り住んだ。山地民の間ではプロテスタントも広がった。
+    - from: 1985
+      main: vietnamese_folk
+      minor: other
+      note: キン人が多数になった（コントゥムは今も山地民が半数ほど）。
+- id: rel_lam_dong
+  name: ラムドン（ダラット）
+  select:
+    pieces: [VNM-Lam_ng]
+  timeline:
+    - from: 1648
+      main: other
+      note: コホ人などの山地民。
+    - from: 1950
+      main: other
+      minor: vietnamese_folk
+      note: フランスが避暑地ダラットを開いた（1893–）。
+    - from: 1960
+      main: vietnamese_folk
+      minor: catholic
+      note: 北から逃れたカトリックの入植が多く、キリスト教徒が3割前後。
+
+# ======== マレーシア・シンガポール・ブルネイ ========
+- id: rel_malaysia
+  name: マレー半島
+  select:
+    iso: [MYS]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: マレー人はムスリム（シャーフィイー派）。各州のスルタンがイスラームの長。
+      source: "https://ja.wikipedia.org/wiki/マレーシアのイスラム教"
+- id: rel_malaya_west
+  name: マレー半島西海岸（ヌグリ・スンビラン・マラッカ・ジョホール・パハン・ペラ）
+  select:
+    adm1: ["MYS/Negeri Sembilan", "MYS/Malacca", "MYS/Johor", "MYS/Pahang", "MYS/Perak"]
+    pieces: [MYS-Seberang_Perai_Selatan, MYS-Seberang_Perai_Tengah, MYS-Seberang_Perai_Utara]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: マラッカは 1641 年からオランダ領。華人・ポルトガル系（クリスタン）の住民もいる。
+    - from: 1890
+      main: sunni
+      minor: chinese_folk
+      note: 錫鉱山とゴム園の開発で、華人（仏教・道教・祖先祭祀）とインド人（ヒンドゥー教、多くはタミル人）の移民が増えた。
+      source: "https://ja.wikipedia.org/wiki/マレーシアの華人"
+- id: rel_kinta
+  name: キンタ・ラルット（ペラの錫鉱山。イポー・タイピン）
+  select:
+    pieces: [MYS-Kinta, MYS-Kampar, MYS-Larut_dan_Matang]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1860
+      main: chinese_folk
+      minor: sunni
+      note: 錫鉱山に華人の労働者が集まり（ラルット戦争 1862–74 は華人の秘密結社の争い）、華人が多数になった。
+      source: "https://en.wikipedia.org/wiki/Larut_Wars"
+    - from: 1980
+      main: sunni
+      minor: chinese_folk
+      note: ラルット（タイピン）ではマレー人が多数に戻った。イポー（キンタ）は今も華人が多い。
+- id: rel_selangor
+  name: スランゴール・クアラルンプール
+  select:
+    adm1: ["MYS/Selangor", "MYS/Kuala Lumpur", "MYS/Putrajaya"]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1870
+      main: chinese_folk
+      minor: sunni
+      note: 錫鉱山の町クアラルンプール（1857 年ごろ）は華人の町として発展した。1931 年のスランゴールは華人が約半数。インド人（タミル人のゴム園の労働者など）も約3割いたが、地図は2番目の少数派までしか描けない。
+      source: "https://ja.wikipedia.org/wiki/クアラルンプール"
+    - from: 1980
+      main: sunni
+      minor: chinese_folk
+      note: マレー人の都市への移住（新経済政策、1971–）で、ムスリムが多数になった。
+- id: rel_kuala_lumpur
+  name: クアラルンプール
+  select:
+    pieces: [MYS-Kuala_Lumpur]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1870
+      main: chinese_folk
+      minor: sunni
+      note: 錫鉱山の町として華人のカピタン（葉亜来）のもとで発展した。1980 年でも市の人口の過半数（約 52%）が華人。
+      source: "https://ja.wikipedia.org/wiki/クアラルンプール"
+    - from: 2000
+      main: sunni
+      minor: chinese_folk
+      note: マレー人の移住が続き、2000 年代にマレー系が華人を上回った（2010 年はマレー系 46%、華人 43%）。
+- id: rel_penang
+  name: ペナン島（ジョージタウン）
+  select:
+    pieces: [MYS-Timur_Laut, MYS-Barat_Daya]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: クダのスルタンの領地。
+    - from: 1790
+      main: chinese_folk
+      minor: sunni
+      note: イギリス東インド会社のフランシス＝ライトが 1786 年に港を開いた。華人が多数の港市（コンシー〈宗族の会館〉の建物が残る）。
+      source: "https://ja.wikipedia.org/wiki/ジョージタウン_(ペナン)"
+- id: rel_sabah
+  name: 北ボルネオ（サバ）
+  select:
+    adm1: ["MYS/Sabah"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: カダザン・ドゥスン人・ムルット人など内陸の在来の信仰と、海岸のバジャウ人・スルク人（ブルネイ・スールーの影響）のイスラーム。
+    - from: 1970
+      main: sunni
+      minor: catholic
+      note: 北ボルネオ会社の統治（1881–1946）でキリスト教の宣教と華人の移住が進んだ。マレーシア加盟後はイスラーム化の政策とフィリピン・インドネシアからの移民でムスリムが多数（約 65%、2010）。キリスト教徒は約 26%。
+- id: rel_sarawak
+  name: サラワク
+  select:
+    adm1: ["MYS/Sarawak"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: イバン人・ビダユ人などダヤク系の在来の信仰。海岸のマレー人・メラナウ人はムスリム。
+    - from: 1900
+      main: other
+      minor: chinese_folk
+      note: ブルック家（白人王）の統治（1841–1946）で、福州系などの華人が入植した。
+      source: "https://ja.wikipedia.org/wiki/サラワク王国"
+    - from: 1980
+      main: catholic
+      minor: sunni
+      note: イバン人などの多くがキリスト教徒になり、キリスト教徒が最大（約 43%、2010）。地図ではカトリックで塗るが、聖公会・メソジスト・ボルネオ福音教会なども合わせた数。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_Sarawak"
+- id: rel_singapore
+  name: シンガポール
+  select:
+    iso: [SGP]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ジョホール王国の領地。マレー人とオラン・ラウト（海の民）の小さな集落。
+    - from: 1830
+      main: chinese_folk
+      note: ラッフルズが 1819 年に港を開き、華人が多数の港市になった。マレー人（ムスリム）は1割余り、インド人（ヒンドゥー教・イスラーム）もいる。2020 年は仏教 31%、キリスト教 19%、無宗教 20%、イスラーム 16%、道教 9%。
+      source: "https://ja.wikipedia.org/wiki/シンガポールの宗教"
+- id: rel_brunei
+  name: ブルネイ・ラブアン
+  select:
+    iso: [BRN]
+    adm1: ["MYS/Labuan"]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ブルネイのスルタン国。イスラームが国の宗教（1991 年から「マレー・イスラーム・王制」を国是とする）。ラブアン島もブルネイ・マレー人（ムスリム）の島で、1848 年にイギリス領、のちに海峡植民地の一部になった。
+
+# ======== インドネシア ========
+- id: rel_indonesia
+  name: インドネシア
+  select:
+    iso: [IDN]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: 13〜17 世紀に港市からイスラームが広まった。ジャワの内陸では、ヒンドゥー・仏教の時代からの習俗とイスラームが混ざった信仰（アバンガン）が多く、戒律に厳しい層（サントリ）と区別される。
+      source: "https://ja.wikipedia.org/wiki/インドネシアのイスラム教"
+    - from: 1945
+      main: sunni
+      note: 建国五原則（パンチャシラ）の「唯一神への信仰」のもとで、イスラーム・プロテスタント・カトリック・ヒンドゥー教・仏教（のちに儒教も）が公認された。ムスリムは約 87%（2010）。
+      source: "https://ja.wikipedia.org/wiki/パンチャシラ"
+- id: rel_bali
+  name: バリ
+  select:
+    adm1: ["IDN/Bali"]
+  timeline:
+    - from: 1648
+      main: hindu
+      note: マジャパヒト王国の滅亡の後、ジャワのヒンドゥー教の貴族・僧が移り、バリ・ヒンドゥー（祖先祭祀と精霊の信仰が重なる）が続いた。オランダの征服でププタン（王族の集団自決、1906・08）が起きた。
+      source: "https://ja.wikipedia.org/wiki/バリ・ヒンドゥー"
+- id: rel_blambangan
+  name: ブランバンガン（バニュワンギ）
+  select:
+    pieces: [IDN-Banyuwangi]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: ジャワ東端のブランバンガン王国は、ジャワで最後まで残ったヒンドゥー教の王国（バリの王国と結んだ）。
+      source: "https://en.wikipedia.org/wiki/Blambangan_Kingdom"
+    - from: 1780
+      main: sunni
+      note: オランダ東インド会社の征服（1768–72）の後、イスラーム化とマドゥラ人・ジャワ人の移住が進んだ。オシン人の文化にヒンドゥー時代の名残がある。
+- id: rel_flores_east
+  name: フローレス東部・ソロル（ララントゥカ・シッカ）
+  select:
+    pieces: [IDN-Flores_Timur, IDN-Sikka, IDN-Lembata]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: 16 世紀からポルトガルのドミニコ会が宣教し、ララントゥカはポルトガル系混血のトパス人の拠点となった。
+      source: "https://en.wikipedia.org/wiki/Larantuka"
+    - from: 1920
+      main: catholic
+- id: rel_flores
+  name: フローレス（マンガライ・ンガダ・エンデ）
+  select:
+    pieces: [IDN-Manggarai, IDN-Manggarai_Barat, IDN-Manggarai_Timur, IDN-Ngada, IDN-Nagekeo, IDN-Ende]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: 在来の信仰。海岸にはムスリム（ビマ・ブギスの影響）もいる。
+    - from: 1930
+      main: catholic
+      minor: other
+      note: 神言会（SVD、1913–）の宣教でカトリックが広がった。
+    - from: 1950
+      main: catholic
+      note: フローレスは住民の大半がカトリック（エンデにはムスリムも多い）。スカルノは 1934–38 年にエンデへ流刑にされた。
+- id: rel_timor_west
+  name: 西ティモール南部・ロテ・サブ（クパン）
+  select:
+    pieces: [IDN-Kupang, IDN-Kota_Kupang, IDN-Rote_Ndao, IDN-Sabu_Raijua, IDN-Timor_Tengah_Selatan, IDN-Alor]
+  timeline:
+    - from: 1648
+      main: other
+      note: ティモール人（アトニ人）などの在来の信仰。クパンには 1653 年にオランダ東インド会社の砦が置かれた。
+    - from: 1750
+      main: other
+      minor: reformed
+      note: ロテ島の王たちが 18 世紀にプロテスタントに改宗し、学校を開いた。
+    - from: 1930
+      main: reformed
+      minor: other
+      note: プロテスタント（ティモール福音キリスト教会）が多数になった。
+- id: rel_timor_west_north
+  name: 西ティモール北部（ベル・マラカ・北中部ティモール）
+  select:
+    pieces: [IDN-Belu, IDN-Malaka, IDN-Timor_Tengah_Utara]
+  timeline:
+    - from: 1648
+      main: other
+      note: 在来の信仰。ポルトガルとオランダの勢力の境。
+    - from: 1930
+      main: other
+      minor: catholic
+    - from: 1960
+      main: catholic
+      note: カトリックが大多数。1999 年には東ティモールからの避難民が流れ込んだ。
+- id: rel_sumba
+  name: スンバ
+  select:
+    pieces: [IDN-Sumba_Barat, IDN-Sumba_Barat_Daya, IDN-Sumba_Tengah, IDN-Sumba_Timur]
+  timeline:
+    - from: 1648
+      main: other
+      note: マラプ（祖先の霊）の信仰。巨石の墓。
+      source: "https://en.wikipedia.org/wiki/Marapu"
+    - from: 1960
+      main: other
+      minor: reformed
+    - from: 1990
+      main: reformed
+      minor: catholic
+      note: プロテスタントが多数。マラプの信仰も1割ほど残る。
+- id: rel_lombok_west
+  name: 西ロンボク・マタラム
+  select:
+    pieces: [IDN-Lombok_Barat, IDN-Kota_Mataram]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ササク人はムスリム（伝統的な混淆信仰ワクトゥ・テルも）。
+    - from: 1750
+      main: sunni
+      minor: hindu
+      note: バリのカランガスム王国がロンボクを支配し（1740 年代–1894）、バリ人が西部に移り住んだ。
+      source: "https://en.wikipedia.org/wiki/Lombok"
+- id: rel_toba
+  name: トバ・バタク（北タパヌリ・トバ・サモシール）
+  select:
+    pieces: [IDN-Tapanuli_Utara, IDN-Toba_Samosir, IDN-Samosir, IDN-Humbang_Hasundutan, IDN-Danau_Toba]
+  timeline:
+    - from: 1648
+      main: other
+      note: バタク人の在来の信仰（パルマリム）。
+    - from: 1880
+      main: other
+      minor: lutheran
+      note: ドイツのライン伝道会のノメンセン（1862–）の宣教で、トバ湖の南のシロンドン谷から改宗が始まった（信徒は 1881 年に約 7,000 人）。
+      source: "https://en.wikipedia.org/wiki/Batak_Christian_Protestant_Church"
+    - from: 1900
+      main: lutheran
+      minor: other
+      note: 改宗がトバ湖の周りと北タパヌリ全体に広がり、バタク・キリスト教会（HKBP）が生まれた（信徒は 1911 年に約 10 万人）。
+    - from: 1910
+      main: lutheran
+      note: トバ・バタクの大半がプロテスタント（カトリックも1〜2割）。
+- id: rel_dairi
+  name: ダイリ・パクパク
+  select:
+    pieces: [IDN-Dairi, IDN-Pakpak_Bharat]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1920
+      main: other
+      minor: lutheran
+    - from: 1950
+      main: lutheran
+      minor: catholic
+- id: rel_karo
+  name: カロ高原
+  select:
+    pieces: [IDN-Karo]
+  timeline:
+    - from: 1648
+      main: other
+      note: カロ・バタク人の在来の信仰。
+    - from: 1965
+      main: reformed
+      minor: sunni
+      note: 1965 年の九・三〇事件の後、宗教を持つことが事実上求められ、カロ・バタク・プロテスタント教会（オランダ改革派の流れ）への改宗が急増した。カトリック・ムスリムも多い。
+- id: rel_simalungun
+  name: シマルングン・東スマトラの農園地帯
+  select:
+    pieces: [IDN-Simalungun, IDN-Tapanuli_Tengah, IDN-Kota_Sibolga]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+    - from: 1920
+      main: sunni
+      minor: lutheran
+      note: 農園の労働者としてジャワ人（ムスリム）が移り住み、トバ・バタクも移住した。
+- id: rel_siantar
+  name: プマタン・シアンタル
+  select:
+    pieces: [IDN-Kota_Pematang_Siantar]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+    - from: 1920
+      main: lutheran
+      minor: sunni
+- id: rel_mandailing
+  name: マンダイリン・南タパヌリ
+  select:
+    pieces: [IDN-Tapanuli_Selatan, IDN-Kota_Padangsidimpuan, IDN-Mandailing_Natal, IDN-Padang_Lawas, IDN-Padang_Lawas_Utara]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: マンダイリン・アンコラのバタク人。
+    - from: 1830
+      main: sunni
+      note: パドリ戦争（1803–38）の時期に、ミナンカバウのパドリ派の遠征でイスラームに改宗した。
+      source: "https://ja.wikipedia.org/wiki/パドリ戦争"
+- id: rel_nias_island
+  name: ニアス島
+  select:
+    pieces: [IDN-Nias, IDN-Nias_Barat, IDN-Nias_Selatan, IDN-Nias_Utara, IDN-Kota_Gunungsitoli]
+  timeline:
+    - from: 1648
+      main: other
+      note: 巨石文化と在来の信仰。
+    - from: 1920
+      main: lutheran
+      minor: other
+      note: 1916 年からの「大悔い改め（ファンゲサ・セブア）」でプロテスタントへの改宗が広がった（ニアス・キリスト教会）。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_Nias"
+    - from: 1960
+      main: lutheran
+      minor: catholic
+- id: rel_medan
+  name: メダン
+  select:
+    pieces: [IDN-Kota_Medan]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: デリのスルタン国。
+    - from: 1900
+      main: sunni
+      minor: chinese_folk
+      note: タバコ農園の中心として、華人・ジャワ人・インド人が集まった。1930 年の市の人口の3分の1は華人。
+      source: "https://ja.wikipedia.org/wiki/メダン"
+    - from: 1960
+      main: sunni
+      minor: lutheran
+      note: バタク人の移住が増えた。
+- id: rel_mentawai
+  name: メンタワイ諸島
+  select:
+    pieces: [IDN-Kepulauan_Mentawai]
+  timeline:
+    - from: 1648
+      main: other
+      note: メンタワイ人の在来の信仰（アラト・サバウルック）。
+    - from: 1950
+      main: reformed
+      minor: catholic
+- id: rel_bangka
+  name: バンカ・ブリトゥン
+  select:
+    adm1: ["IDN/Bangka-Belitung Islands"]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1750
+      main: sunni
+      minor: chinese_folk
+      note: 18 世紀前半から錫鉱山に華人（客家など）の労働者が集まった。
+      source: "https://en.wikipedia.org/wiki/Bangka_Island"
+    - from: 1970
+      main: sunni
+      note: 華人は1割ほどになった。
+- id: rel_west_kalimantan
+  name: 西カリマンタン
+  select:
+    adm1: ["IDN/West Kalimantan"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+      note: 海岸のマレー人のスルタン国（サンバス・ポンティアナック〈1771–〉）と、内陸のダヤク人の在来の信仰。
+- id: rel_kalbar_interior
+  name: 西カリマンタンの内陸（ランダック・サンガウ・シンタン・カプアス上流）
+  select:
+    pieces: [IDN-Landak, IDN-Sanggau, IDN-Sekadau, IDN-Sintang, IDN-Bengkayang]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: ダヤク人の在来の信仰。
+    - from: 1960
+      main: catholic
+      minor: other
+      note: カプチン会などの宣教でダヤク人の多くがカトリック・プロテスタントになった。
+    - from: 1980
+      main: catholic
+      minor: sunni
+- id: rel_kalbar_upper
+  name: カプアス川上流・ムラウィ
+  select:
+    pieces: [IDN-Kapuas_Hulu, IDN-Melawi]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: ダヤク人の在来の信仰。川沿いの町にはマレー人（ムスリム）がいる。
+    - from: 1960
+      main: sunni
+      minor: catholic
+      note: ダヤク人の多くはカトリック・プロテスタントになったが、川沿いのマレー人（イスラームに改宗したダヤク人を含む）と移住者でムスリムがやや多い（カプアス・フルで約 55%、2010）。
+- id: rel_singkawang
+  name: サンバス・ポンティアナック（華人の金鉱の地）
+  select:
+    pieces: [IDN-Sambas, IDN-Mempawah, IDN-Kota_Pontianak]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+    - from: 1770
+      main: sunni
+      minor: chinese_folk
+      note: 18 世紀半ばから客家の金鉱夫が集まり、公司（コンシ。蘭芳公司など）と呼ばれる自治組織をつくった（オランダが 1850 年代に解体）。
+      source: "https://ja.wikipedia.org/wiki/蘭芳公司"
+- id: rel_singkawang_city
+  name: シンカワン（華人の町）
+  select:
+    pieces: [IDN-Kota_Singkawang]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+    - from: 1770
+      main: chinese_folk
+      minor: sunni
+      note: 客家の金鉱夫の町として発展した。今も華人が4割余りを占め、仏教・儒教・道教の廟が多い（「千の廟の町」）。旧正月の十五日の祭り（チャップ・ゴー・メ）で知られる。
+- id: rel_kalimantan_central
+  name: 中部カリマンタン
+  select:
+    adm1: ["IDN/Central Kalimantan"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: ンガジュ・ダヤク人などのカハリンガン（祖先の霊の信仰。1980 年に「ヒンドゥー・カハリンガン」として公認）。海岸のバンジャル人はムスリム。
+      source: "https://en.wikipedia.org/wiki/Kaharingan"
+    - from: 1970
+      main: sunni
+      minor: other
+      note: 移住者（バンジャル人・ジャワ人）が増え、ムスリムが多数になった。ダヤク人にはプロテスタント（カリマンタン福音教会）も多い。言語の地図では今もダヤクが多数なのは、ダヤク人の一部もイスラームに改宗しているため（改宗するとバンジャル人・マレー人を名のる例も多い）で、ムスリムの多くはバンジャル人・ジャワ人などの移住者とその子孫、残りはムスリムのダヤク人。
+- id: rel_kalimantan_east
+  name: 東・北カリマンタン
+  select:
+    adm1: ["IDN/East Kalimantan", "IDN/North Kalimantan"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: 内陸のダヤク人（ケニャ人・カヤン人など）の在来の信仰。海岸のクタイ・ブルンガンのスルタン国はムスリム。
+    - from: 1950
+      main: sunni
+      minor: other
+      note: 石油（バリクパパン）・木材・炭鉱の開発で、ジャワ人・ブギス人・バンジャル人が移り住んだ。ムスリムの多くはこの移住者と海岸のクタイ人で、内陸のダヤク人はキリスト教徒が多い。2024 年から新首都ヌサンタラの建設が始まった。
+- id: rel_kalimantan_east_interior
+  name: マハカム川上流・マリナウ
+  select:
+    pieces: [IDN-Kutai_Barat, IDN-Mahakam_Hulu, IDN-Malinau]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1950
+      main: reformed
+      minor: catholic
+      note: ダヤク人の多くがキリスト教徒（カトリック・プロテスタント）になった。
+- id: rel_minahasa
+  name: ミナハサ・マナド
+  select:
+    pieces: [IDN-Minahasa, IDN-Minahasa_Selatan, IDN-Minahasa_Tenggara, IDN-Minahasa_Utara, IDN-Kota_Manado, IDN-Kota_Tomohon, IDN-Kota_Bitung, IDN-Kepulauan_Sangihe, IDN-Kepulauan_Talaud, IDN-Siau_Tagulandang_Biaro]
+  timeline:
+    - from: 1648
+      main: other
+      minor: catholic
+      note: ミナハサ人の在来の信仰。サンギル諸島には 16〜17 世紀のスペイン・ポルトガルの宣教でカトリックがいた。
+    - from: 1700
+      main: other
+      minor: reformed
+      note: オランダ東インド会社と同盟（1679）。サンギル・タラウドの王家はプロテスタントに。
+    - from: 1860
+      main: reformed
+      minor: other
+      note: オランダ伝道協会（1831–）の宣教で、ミナハサ人はプロテスタントになった。
+      source: "https://en.wikipedia.org/wiki/Christian_Evangelical_Church_in_Minahasa"
+    - from: 1900
+      main: reformed
+      note: 住民の大半がプロテスタント。オランダ領東インドの軍や役人にミナハサ人が多く登用された。
+- id: rel_bolaang_mongondow
+  name: ボラアン・モンゴンドウ
+  select:
+    pieces: [IDN-Bolaang_Mongondow, IDN-Bolaang_Mongondow_Selatan, IDN-Bolaang_Mongondow_Timur, IDN-Bolaang_Mongondow_Utara, IDN-Kota_Kotamobagu]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: sunni
+      minor: other
+      note: 19 世紀に王家と住民がイスラームに改宗した。
+    - from: 1950
+      main: sunni
+      minor: reformed
+- id: rel_central_sulawesi
+  name: 中部スラウェシ
+  select:
+    adm1: ["IDN/Central Sulawesi"]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+      note: 海岸と谷のカイリ人・ブギス人の地にイスラームが広まり、内陸の山地民は在来の信仰。
+- id: rel_poso
+  name: ポソ（中部スラウェシ）
+  select:
+    pieces: [IDN-Poso, IDN-Morowali_Utara]
+  timeline:
+    - from: 1648
+      main: other
+      note: パモナ人などの在来の信仰。
+    - from: 1910
+      main: other
+      minor: reformed
+      note: オランダの宣教師クロイトとアドリアーニ（1892–）の宣教。
+    - from: 1930
+      main: reformed
+      minor: sunni
+      note: 1998–2001 年に、キリスト教徒とムスリムの間でポソ紛争が起きた。
+      source: "https://en.wikipedia.org/wiki/Poso_riots"
+- id: rel_toraja
+  name: タナ・トラジャ（スラウェシ南部の山地）・ママサ
+  select:
+    pieces: [IDN-Tana_Toraja, IDN-Toraja_Utara, IDN-Mamasa]
+  timeline:
+    - from: 1648
+      main: other
+      note: トラジャ人の祖先の信仰（アルック・トドロ）。盛大な葬儀と岩窟墓で知られる。
+      source: "https://ja.wikipedia.org/wiki/トラジャ族"
+    - from: 1940
+      main: other
+      minor: reformed
+      note: オランダ改革派の宣教（1913–）。
+    - from: 1965
+      main: reformed
+      minor: other
+      note: 独立後に改宗が進んだ（トラジャ教会）。カトリックも1割余り。
+- id: rel_ambon
+  name: アンボン
+  select:
+    pieces: [IDN-Kota_Ambon]
+  timeline:
+    - from: 1648
+      main: reformed
+      minor: sunni
+      note: ポルトガル時代にカトリックになった村は、オランダ東インド会社の支配（1605–）でプロテスタントになった。ヒトゥ半島などはムスリムの村。丁子の生産を独占するため、会社は他の島の木を切り倒した。
+      source: "https://ja.wikipedia.org/wiki/アンボン"
+- id: rel_central_maluku
+  name: 中部マルク（セラム・バンダ・レアセ）・ブル
+  select:
+    pieces: [IDN-Maluku_Tengah, IDN-Seram_Bagian_Barat, IDN-Buru]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: reformed
+      note: ムスリムの村とキリスト教徒の村が入り混じる。セラム内陸のアルフル人は在来の信仰。バンダ諸島では 1621 年にオランダ東インド会社が住民の大半を殺害・追放し、ナツメグの農園に奴隷を入れた。1999–2002 年にはマルク紛争（キリスト教徒とムスリムの衝突）が起きた。
+      source: "https://en.wikipedia.org/wiki/Maluku_sectarian_conflict"
+- id: rel_seram_east
+  name: 東セラム
+  select:
+    pieces: [IDN-Seram_Bagian_Timur]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+    - from: 1900
+      main: sunni
+- id: rel_buru_south
+  name: 南ブル
+  select:
+    pieces: [IDN-Buru_Selatan]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+    - from: 1950
+      main: reformed
+      minor: sunni
+- id: rel_kei
+  name: クイ諸島（南東マルク）
+  select:
+    pieces: [IDN-Maluku_Tenggara]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+    - from: 1930
+      main: catholic
+      minor: sunni
+      note: イエズス会・聖心会の宣教（1888–）でカトリックが広がった。
+- id: rel_tual
+  name: トゥアル
+  select:
+    pieces: [IDN-Kota_Tual]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+    - from: 1930
+      main: sunni
+      minor: catholic
+- id: rel_aru_tanimbar
+  name: アル諸島・タニンバル諸島・南西諸島
+  select:
+    pieces: [IDN-Kepulauan_Aru, IDN-Maluku_Tenggara_Barat, IDN-Maluku_Barat_Daya]
+  timeline:
+    - from: 1648
+      main: other
+      note: 在来の信仰。
+    - from: 1930
+      main: reformed
+      minor: catholic
+      note: プロテスタント（マルク・プロテスタント教会）とカトリックが広がった。
+- id: rel_halmahera
+  name: 北ハルマヘラ
+  select:
+    pieces: [IDN-Halmahera_Utara]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: トベロ人・ガレラ人の在来の信仰。テルナテのスルタンの支配下。
+    - from: 1900
+      main: reformed
+      minor: sunni
+      note: オランダのユトレヒト伝道協会（1866–）の宣教。
+- id: rel_halmahera_mixed
+  name: ハルマヘラの西部・東部・モロタイ
+  select:
+    pieces: [IDN-Halmahera_Barat, IDN-Halmahera_Timur, IDN-Pulau_Morotai]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+    - from: 1900
+      main: sunni
+      minor: reformed
+- id: rel_papua
+  name: パプア（西ニューギニア）
+  select:
+    adm1: ["IDN/Papua"]
+  timeline:
+    - from: 1648
+      main: other
+      note: パプア人の在来の信仰。海岸の一部はティドレのスルタンの影響下。
+    - from: 1930
+      main: other
+      minor: reformed
+      note: 1855 年にドイツ人宣教師がマンシナム島に上陸した。20 世紀前半に北部でプロテスタント、南部でカトリックが広がった。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_Indonesia"
+    - from: 1960
+      main: reformed
+      minor: catholic
+      note: プロテスタント 65%、カトリック 18%、ムスリム 16%（2010）。インドネシアに併合（1969）された後、移住者のムスリムが増えた。
+- id: rel_west_papua
+  name: 西パプア（鳥頭半島）
+  select:
+    adm1: ["IDN/West Papua"]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: ラジャ・アンパット・ファクファクの海岸はティドレのスルタンの影響でムスリム。
+    - from: 1930
+      main: reformed
+      minor: sunni
+      note: マノクワリ周辺から広がったプロテスタントが多数。ムスリムは約 38%（2010）。
+
+# ======== フィリピン ========
+- id: rel_philippines
+  name: フィリピン
+  select:
+    iso: [PHL]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: スペインの支配（1565–1898）のもとで、ルソン・ビサヤの低地はカトリックに改宗した。修道会（アウグスチノ会・フランシスコ会・ドミニコ会・イエズス会など）が教区を担った。
+      source: "https://ja.wikipedia.org/wiki/フィリピンのカトリック"
+    - from: 1902
+      main: catholic
+      note: アメリカの統治でプロテスタントの宣教が始まった。フィリピン独立教会（アグリパイ派、1902）、イグレシア・ニ・クリスト（1914）が生まれた。カトリックは約 80%（2015）。
+      source: "https://en.wikipedia.org/wiki/Philippine_Independent_Church"
+- id: rel_cordillera
+  name: コルディリェラ（ルソン北部の山地）
+  select:
+    pieces: [PHL-Apayao, PHL-Benguet, PHL-Ifugao, PHL-Kalinga]
+  timeline:
+    - from: 1648
+      main: other
+      note: イフガオ人（棚田で知られる）・ボントック人などの山地民の在来の信仰。スペインの支配はほとんど及ばなかった。
+      source: "https://ja.wikipedia.org/wiki/コルディリェーラの棚田群"
+    - from: 1920
+      main: other
+      minor: catholic
+      note: アメリカの統治でバギオが避暑地・行政の中心となり、カトリック（ベルギーの CICM）と聖公会の宣教が進んだ。
+    - from: 1950
+      main: catholic
+      minor: other
+- id: rel_mountain_province
+  name: マウンテン州（サガダ・ボントック）
+  select:
+    pieces: [PHL-Mountain_Province]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1920
+      main: other
+      minor: anglican
+      note: アメリカ聖公会の宣教（サガダ、1904–）。
+    - from: 1950
+      main: anglican
+      minor: catholic
+- id: rel_palawan_mindoro
+  name: パラワン・ミンドロ
+  select:
+    pieces: [PHL-Palawan, PHL-Occidental_Mindoro, PHL-Oriental_Mindoro]
+  timeline:
+    - from: 1648
+      main: other
+      minor: catholic
+      note: スペインの拠点はミンドロの海岸と、パラワン北部のクヨ島・タイタイなどだけ。ミンドロ内陸のマンヤン人、パラワン本島のパラワン人・タグバヌワ人は在来の信仰。パラワン南部はスールー・ブルネイの影響でムスリム。
+    - from: 1900
+      main: catholic
+      minor: other
+      note: ルソン・ビサヤからのキリスト教徒の移住が進み、カトリックが多数になった。
+    - from: 1950
+      main: catholic
+      note: 戦後の移住（タガログ人・ビサヤ人・イロカノ人）でさらに増えた。
+- id: rel_moro
+  name: ムスリム・ミンダナオ（スールー・マギンダナオ・ラナオ）
+  select:
+    pieces: [PHL-Sulu, PHL-Tawi_Tawi, PHL-Basilan, PHL-Maguindanao, PHL-Cotabato_City, PHL-Lanao_del_Sur]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スールー王国（1405 年ごろ–）・マギンダナオ王国のムスリム。スペインは彼らを「モロ」と呼び、モロ戦争と呼ばれる長い戦いが続いた。
+      source: "https://ja.wikipedia.org/wiki/モロ_(フィリピン)"
+    - from: 1970
+      main: sunni
+      note: 1970 年代からモロ民族解放戦線（MNLF）、モロ・イスラーム解放戦線（MILF）の武装闘争。2019 年にバンサモロ自治地域が発足した。
+      source: "https://ja.wikipedia.org/wiki/バンサモロ"
+- id: rel_isabela_basilan
+  name: イサベラ（バシラン）
+  select:
+    pieces: [PHL-City_of_Isabela]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1950
+      main: catholic
+      minor: sunni
+- id: rel_zamboanga
+  name: サンボアンガ半島
+  select:
+    pieces: [PHL-Zamboanga_del_Norte, PHL-Zamboanga_del_Sur, PHL-Zamboanga_Sibugay]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+      note: スバヌン人の在来の信仰と、海岸のムスリム。サンボアンガの町には 1635 年にスペインの砦（ピラール砦）が築かれ、スペイン語系のクレオール語（チャバカノ語）を話すカトリックの町になった。
+    - from: 1930
+      main: catholic
+      minor: sunni
+      note: ビサヤ諸島からのカトリックの入植者が多数になった。
+- id: rel_northern_mindanao
+  name: ミンダナオ北部の海岸（ミサミス・カミギン）・カラガ
+  select:
+    pieces: [PHL-Misamis_Oriental, PHL-Misamis_Occidental, PHL-Camiguin, PHL-Agusan_del_Norte, PHL-Surigao_del_Norte, PHL-Surigao_del_Sur, PHL-Dinagat_Islands]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: other
+      note: 17 世紀からイエズス会・アウグスチノ会レコレクト派がカトリックを広めた海岸の町。内陸はルマド（山地民）。
+    - from: 1900
+      main: catholic
+- id: rel_mindanao_interior
+  name: ミンダナオの内陸と東南部（ブキドノン・アグサン・ダバオ）
+  select:
+    pieces: [PHL-Bukidnon, PHL-Agusan_del_Sur, PHL-Davao_del_Norte, PHL-Davao_del_Sur, PHL-Davao_Oriental, PHL-Davao_Occidental, PHL-Compostela_Valley]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: マノボ人・バゴボ人などルマド（山地民）の在来の信仰。ダバオ湾の海岸はマギンダナオ王国の影響下。スペインは 1848 年にダバオを征服した。
+    - from: 1930
+      main: other
+      minor: catholic
+      note: アメリカ統治下で、マニラ麻の農園（ダバオには日本人移民の町もあった）とカトリックの入植者が増えた。
+      source: "https://ja.wikipedia.org/wiki/ダバオ"
+    - from: 1950
+      main: catholic
+      minor: other
+      note: 入植政策でビサヤ・ルソンからの入植者が多数になった。プロテスタント・福音派も多い。
+- id: rel_lanao_norte
+  name: 北ラナオ
+  select:
+    pieces: [PHL-Lanao_del_Norte]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: マラナオ人のムスリム。
+    - from: 1950
+      main: catholic
+      minor: sunni
+      note: イリガンの工業化と入植で、カトリックが多数になった。
+- id: rel_cotabato
+  name: コタバト・南コタバト・サランガニ
+  select:
+    pieces: [PHL-Cotabato, PHL-South_Cotabato, PHL-Sarangani]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+      note: マギンダナオ王国の地。山地はティボリ人・ブラアン人。
+    - from: 1950
+      main: catholic
+      minor: sunni
+      note: コロナダル谷への入植（1939–）で、ビサヤ・イロコスからのカトリックの入植者が多数になった。土地をめぐる対立が、のちのモロの武装闘争の背景の一つになった。
+
+# ======== 東ティモール ========
+- id: rel_east_timor
+  name: 東ティモール
+  select:
+    iso: [TLS]
+  timeline:
+    - from: 1648
+      main: other
+      note: 在来の信仰（祖先と聖なる家〈ウマ・ルリック〉の信仰）。ポルトガルの支配は海岸の拠点（リファウ＝オエクシ、1769 年からディリ）に限られ、カトリックは少数。
+      source: "https://ja.wikipedia.org/wiki/東ティモール"
+    - from: 1950
+      main: other
+      minor: catholic
+      note: 1975 年にはカトリックは住民の約3割。
+    - from: 1980
+      main: catholic
+      minor: other
+      note: インドネシアの占領下で、住民はカトリックとしての信仰を拠り所にし（公認宗教への所属も求められた）、改宗が急増した。ディリのベロ司教は 1996 年にノーベル平和賞を受けた。
+    - from: 1999
+      main: catholic
+      note: カトリックが約 97%（2015）。

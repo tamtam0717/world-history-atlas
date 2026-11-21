@@ -717,26 +717,26 @@
     - [1975, 0.05]
     - [1980, 0]
   spread:
-    - where: {polities: [britain]}
+    - where: {polities: [britain], include_colonies: true}
       center: true
       curve: [[1870, 0.5], [1875, 0.7], [1882, 0.9], [1898, 1.0], [1914, 1.0], [1918, 1.0], [1945, 0.8], [1950, 0.6], [1960, 0.3], [1968, 0.1], [1980, 0]]
-    - where: {polities: [france]}
+    - where: {polities: [france], include_colonies: true}
       curve: [[1870, 0.3], [1881, 0.7], [1898, 0.9], [1912, 1.0], [1914, 1.0], [1918, 1.0], [1945, 0.8], [1954, 0.6], [1962, 0.2], [1970, 0]]
-    - where: {polities: [german_empire]}
+    - where: {polities: [german_empire], include_colonies: true}
       curve: [[1880, 0.3], [1884, 0.6], [1890, 0.6], [1897, 0.9], [1914, 1.0], [1918, 1.0]]
-    - where: {polities: [italy]}
+    - where: {polities: [italy], include_colonies: true}
       curve: [[1882, 0.3], [1895, 0.6], [1896, 0.3], [1911, 0.9], [1914, 0.8], [1936, 1.0], [1943, 0.5], [1945, 0]]
-    - where: {polities: [belgium]}
+    - where: {polities: [belgium], include_colonies: true}
       curve: [[1885, 0.5], [1908, 0.8], [1914, 0.8], [1950, 0.8], [1960, 0.1], [1962, 0]]
-    - where: {polities: [russia]}
+    - where: {polities: [russia], include_colonies: true}
       curve: [[1870, 0.5], [1891, 0.7], [1904, 1.0], [1905, 0.6], [1914, 0.7], [1917, 0.7], [1918, 0]]
-    - where: {polities: [habsburg]}
+    - where: {polities: [habsburg], include_colonies: true}
       curve: [[1878, 0.4], [1908, 0.8], [1914, 0.8], [1918, 0.8]]
-    - where: {polities: [portugal, spain, netherlands]}
+    - where: {polities: [portugal, spain, netherlands], include_colonies: true}
       curve: [[1870, 0.4], [1885, 0.5], [1898, 0.4], [1914, 0.5], [1945, 0.5], [1949, 0.4], [1962, 0.3], [1975, 0.1], [1976, 0]]
-    - where: {polities: [germany]}
+    - where: {polities: [germany], include_colonies: true}
       curve: [[1935, 0.4], [1939, 0.9], [1942, 1.0], [1945, 0]]
-    - where: {polities: [japan]}
+    - where: {polities: [japan], include_colonies: true}
       curve: [[1874, 0.2], [1895, 0.6], [1905, 0.8], [1910, 0.9], [1931, 0.9], [1937, 1.0], [1942, 1.0], [1945, 0]]
   people: [ディズレーリ, ジョゼフ・チェンバレン, セシル・ローズ, ジュール・フェリー, ヴィルヘルム2世, レオポルド2世, ホブソン]
   works: [『帝国主義論』（ホブソン）]
@@ -892,23 +892,23 @@
     - [1946, 0.1]
     - [1950, 0]
   spread:
-    - where: {polities: [german_empire]}
+    - where: {polities: [german_empire], include_colonies: true}
       center: true
       curve: [[1914, 0.9], [1916, 1.0], [1918, 1.0]]
-    - where: {polities: [germany]}
+    - where: {polities: [germany], include_colonies: true}
       center: true
       curve: [[1938, 0.4], [1939, 0.8], [1942, 1.0], [1944, 1.0]]
-    - where: {polities: [britain]}
+    - where: {polities: [britain], include_colonies: true}
       curve: [[1914, 0.8], [1916, 1.0], [1918, 1.0], [1919, 0], [1938, 0], [1939, 0.8], [1942, 1.0], [1945, 1.0], [1946, 0]]
-    - where: {polities: [france]}
+    - where: {polities: [france], include_colonies: true}
       curve: [[1914, 0.9], [1916, 1.0], [1918, 1.0], [1919, 0], [1938, 0], [1939, 0.8], [1940, 0.3], [1941, 0]]
-    - where: {polities: [italy]}
+    - where: {polities: [italy], include_colonies: true}
       curve: [[1915, 0.7], [1918, 0.9], [1919, 0], [1939, 0], [1940, 0.6], [1943, 0.6], [1944, 0]]
-    - where: {polities: [russia]}
+    - where: {polities: [russia], include_colonies: true}
       curve: [[1914, 0.8], [1916, 0.9], [1917, 0.6], [1918, 0]]
-    - where: {polities: [habsburg]}
+    - where: {polities: [habsburg], include_colonies: true}
       curve: [[1914, 0.8], [1918, 0.9]]
-    - where: {polities: [soviet_union]}
+    - where: {polities: [soviet_union], include_colonies: true}
       curve: [[1940, 0], [1941, 1.0], [1945, 1.0], [1946, 0]]
   people: [ルーデンドルフ, ロイド・ジョージ, クレマンソー, チャーチル, スターリン, ヒトラー]
   works: [『西部戦線異状なし』（レマルク）, 『総力戦』（ルーデンドルフ）]
@@ -963,9 +963,39 @@
       curve: [[1949, 0.8], [1956, 1.0], [1978, 0.9], [1992, 0.6], [2025, 0.5]]
     - where: {polities: [north_korea]}
       curve: [[1946, 0.6], [1948, 1.0], [2025, 1.0]]
+    # 東南アジア（S6 追加）
+    - where: {polities: [north_vietnam]}
+      curve: [[1945, 0.5], [1954, 0.9], [1960, 1.0], [1975, 1.0]]
+    - where: {polities: [vietnam]}
+      curve: [[1976, 1.0], [1986, 0.8], [1990, 0.6], [2025, 0.5]]
+    - where: {polities: [laos]}
+      curve: [[1975, 0.9], [1986, 0.7], [1990, 0.5], [2025, 0.5]]
+    - where: {polities: [khmer_rouge]}
+      curve: [[1975, 1.0], [1978, 1.0]]
+    - where: {polities: [cambodia]}
+      curve: [[1979, 0.7], [1989, 0.4], [1991, 0.1], [1993, 0]]
+    # 政権をとらなかった東南アジア・南アジアの共産主義（S6 レビューで追加）
+    # インドネシア共産党（PKI）：1920 年結成。1948 年のマディウン事件の後に立て直し、1955 年の総選挙で第4党、
+    # 1960 年代にはソ連・中国に次ぐ規模になったが、1965 年の九・三〇事件の後の弾圧で壊滅した。
+    - where: {polities: [indonesia]}
+      curve: [[1945, 0.2], [1948, 0.3], [1950, 0.4], [1955, 0.6], [1965, 0.8], [1966, 0]]
+    # マラヤ共産党の武装闘争（マラヤ非常事態、1948–60）
+    - where: {regions: [perak, selangor, negeri_sembilan, pahang, johor, malacca]}
+      curve: [[1947, 0], [1948, 0.5], [1951, 0.6], [1955, 0.4], [1960, 0.1], [1989, 0]]
+    # フィリピンのフクバラハップ（フク団）の反乱（1946–54）。中部ルソンの農民が中心
+    - where: {regions: [central_luzon]}
+      curve: [[1945, 0], [1946, 0.4], [1950, 0.6], [1954, 0.2], [1969, 0.2], [2025, 0.1]]
+    # インドのケーララ州（1957 年に選挙で世界初の共産党の州政府）・西ベンガル州（左翼戦線政権 1977–2011）
+    - where: {regions: [travancore_core, quilon, central_kerala, cochin_land, calicut_land, north_malabar, kasaragod]}
+      curve: [[1956, 0], [1957, 0.6], [1959, 0.4], [1967, 0.5], [2025, 0.4]]
+    - where: {regions: [wb_central, wb_north, kolkata, twenty_four_parganas, burdwan_midnapore]}
+      curve: [[1966, 0], [1967, 0.3], [1977, 0.6], [2011, 0.2], [2025, 0.1]]
+    # ネパールのマオイスト（ネパール共産党毛沢東主義派）の人民戦争（1996–2006）。2008 年の制憲議会選挙で第一党になり、王制が廃止された
+    - where: {polities: [nepal]}
+      curve: [[1995, 0], [1996, 0.4], [2001, 0.6], [2008, 0.7], [2013, 0.4], [2025, 0.4]]
   people: [レーニン, トロツキー, スターリン, フルシチョフ, ブレジネフ, ティトー]
   works: [『国家と革命』（レーニン）]
-  events: [ロシア十月革命（十一月革命）, コミンテルン（第3インターナショナル）の結成, ソヴィエト社会主義共和国連邦の成立, 中国共産党の結成, 中華人民共和国の成立, 朝鮮戦争, スターリン批判, ハンガリー動乱（ハンガリー事件）, 中ソ国境紛争（珍宝島事件）, 「プラハの春」とワルシャワ条約機構軍の介入, 東欧革命, ソ連の解体と独立国家共同体（CIS）]
+  events: [ロシア十月革命（十一月革命）, コミンテルン（第3インターナショナル）の結成, ソヴィエト社会主義共和国連邦の成立, 中国共産党の結成, 中華人民共和国の成立, 朝鮮戦争, スターリン批判, ハンガリー動乱（ハンガリー事件）, 中ソ国境紛争（珍宝島事件）, 「プラハの春」とワルシャワ条約機構軍の介入, 東欧革命, ソ連の解体と独立国家共同体（CIS）, 九・三〇事件]
   text: マルクス主義にもとづき、共産党の一党独裁のもとで土地・工場を国有化し、国家の計画で経済を動かす体制。ロシア革命で生まれ、スターリンの時代に五か年計画・農業集団化と大規模な粛清をともなって確立した。第二次世界大戦後は東欧・中国・北朝鮮などに広がったが、経済の停滞と自由への要求から、1989年の東欧革命と1991年のソ連解体で崩れた。中国（改革開放で市場経済を取り入れた）・北朝鮮・ベトナム・キューバなどでは、その後も共産党の一党支配が続いている。
   source: "https://ja.wikipedia.org/wiki/共産主義"
 
@@ -1027,7 +1057,7 @@
     - [1944, 0.8]
     - [1945, 0]
   spread:
-    - where: {polities: [germany]}
+    - where: {polities: [germany], include_colonies: true}
       center: true
       curve: [[1920, 0.1], [1923, 0.2], [1929, 0.2], [1930, 0.5], [1932, 0.8], [1933, 1.0], [1944, 1.0]]
   people: [ヒトラー, ヒムラー, ゲッベルス, ゲーリング]
@@ -1051,12 +1081,12 @@
     - [1989, 0.1]
     - [1991, 0]
   spread:
-    - where: {polities: [germany]}
+    - where: {polities: [germany], include_colonies: true}
       center: true
       curve: [[1933, 0.8], [1938, 1.0], [1944, 1.0]]
-    - where: {polities: [italy]}
+    - where: {polities: [italy], include_colonies: true}
       curve: [[1925, 0.6], [1938, 0.8], [1943, 0.5], [1944, 0]]
-    - where: {polities: [soviet_union]}
+    - where: {polities: [soviet_union], include_colonies: true}
       center: true
       curve: [[1928, 0.6], [1936, 1.0], [1953, 1.0], [1956, 0.6], [1985, 0.4], [1991, 0]]
   people: [ハンナ・アーレント, ジョージ・オーウェル, カール・ポパー]
@@ -1122,18 +1152,28 @@
     - [1989, 0.4]
     - [1991, 0]
   spread:
-    - where: {polities: [soviet_union]}
+    - where: {polities: [soviet_union], include_colonies: true}
       center: true
       curve: [[1946, 0.6], [1948, 1.0], [1962, 1.0], [1972, 0.7], [1980, 0.9], [1987, 0.6], [1991, 0]]
-    - where: {polities: [west_germany, east_germany]}
+    - where: {polities: [west_germany, east_germany], include_colonies: true}
       center: true
       curve: [[1949, 1.0], [1961, 1.0], [1972, 0.7], [1980, 0.8], [1989, 0.4], [1990, 0]]
-    - where: {polities: [poland, czechoslovakia, hungary, romania, bulgaria]}
+    - where: {polities: [poland, czechoslovakia, hungary, romania, bulgaria], include_colonies: true}
       curve: [[1947, 0.8], [1956, 0.9], [1972, 0.6], [1980, 0.8], [1989, 0.3], [1990, 0]]
-    - where: {polities: [britain, france, italy, belgium, netherlands, luxembourg, denmark, norway, portugal, iceland]}
+    - where: {polities: [britain, france, italy, belgium, netherlands, luxembourg, denmark, norway, portugal, iceland], include_colonies: true}
       curve: [[1947, 0.6], [1949, 0.8], [1962, 0.9], [1972, 0.5], [1980, 0.7], [1989, 0.3], [1991, 0]]
-    - where: {polities: [greece, turkey]}
+    - where: {polities: [greece, turkey], include_colonies: true}
       curve: [[1947, 0.8], [1962, 0.8], [1974, 0.6], [1989, 0.3], [1991, 0]]
+    # 東南アジア・南アジア（S6 追加）：ベトナム戦争・東南アジア条約機構（SEATO、1954–77）
+    - where: {polities: [north_vietnam, south_vietnam], include_colonies: true}
+      center: true
+      curve: [[1954, 0.8], [1960, 0.9], [1965, 1.0], [1973, 1.0], [1975, 0.9], [1976, 0]]
+    - where: {polities: [laos, cambodia], include_colonies: true}
+      curve: [[1954, 0.3], [1960, 0.7], [1965, 0.8], [1970, 1.0], [1975, 0.9], [1979, 0.8], [1989, 0.5], [1991, 0]]
+    - where: {polities: [siam, philippines, pakistan], include_colonies: true}
+      curve: [[1950, 0.4], [1954, 0.7], [1965, 0.8], [1975, 0.5], [1977, 0.3], [1980, 0.5], [1989, 0.3], [1991, 0]]
+    - where: {polities: [indonesia, malaysia, burma, india], include_colonies: true}
+      curve: [[1950, 0.3], [1962, 0.4], [1965, 0.6], [1971, 0.5], [1980, 0.3], [1991, 0]]
   people: [トルーマン, スターリン, チャーチル, ケネディ, フルシチョフ, ブレジネフ, レーガン, ゴルバチョフ]
   events: [「鉄のカーテン」演説, トルーマン・ドクトリン, マーシャル・プラン, ベルリン封鎖, 北大西洋条約機構（NATO）の結成, 朝鮮戦争, ワルシャワ条約機構の結成, ベルリンの壁の建設, キューバ危機, ニクソン訪中, 全欧安全保障協力会議（CSCE）とヘルシンキ宣言, ベルリンの壁の崩壊]
   text: 第二次世界大戦後、アメリカを中心とする資本主義（西側）陣営と、ソ連を中心とする社会主義（東側）陣営が、直接の戦争はせずに、軍事同盟・核兵器の開発・経済・宣伝で張り合った状態。ヨーロッパは「鉄のカーテン」で東西に分断され、ドイツとベルリンがその最前線となった。1989年のマルタ会談で終結が宣言された。
@@ -1156,21 +1196,40 @@
     - [1997, 0.1]
     - [2000, 0]
   spread:
-    - where: {polities: [britain]}
+    - where: {polities: [britain], include_colonies: true}
       curve: [[1945, 0.4], [1947, 0.9], [1957, 0.8], [1960, 1.0], [1965, 0.8], [1980, 0.3], [1997, 0.2], [2000, 0]]
-    - where: {polities: [france]}
+    - where: {polities: [france], include_colonies: true}
       center: true
       curve: [[1945, 0.4], [1954, 0.9], [1956, 0.9], [1960, 1.0], [1962, 1.0], [1965, 0.4], [1980, 0.1]]
-    - where: {polities: [netherlands]}
+    - where: {polities: [netherlands], include_colonies: true}
       curve: [[1945, 0.6], [1949, 0.9], [1962, 0.6], [1975, 0.4], [1980, 0]]
-    - where: {polities: [belgium]}
+    - where: {polities: [belgium], include_colonies: true}
       curve: [[1955, 0.3], [1960, 1.0], [1962, 0.8], [1965, 0]]
-    - where: {polities: [portugal]}
+    - where: {polities: [portugal], include_colonies: true}
       curve: [[1961, 0.4], [1974, 1.0], [1975, 1.0], [1980, 0]]
     - where: {polities: [algeria, tunisia, morocco, libya]}
       curve: [[1951, 0.8], [1956, 1.0], [1962, 1.0], [1970, 0.3]]
     - where: {polities: [egypt, cyprus, syria, lebanon, iraq, jordan]}
       curve: [[1922, 0.5], [1946, 0.8], [1956, 1.0], [1960, 0.8], [1970, 0.3]]
+    # 南アジア・東南アジア（S6 追加）
+    - where: {polities: [india, pakistan]}
+      center: true
+      curve: [[1947, 1.0], [1950, 0.8], [1954, 0.8], [1961, 0.7], [1965, 0.4], [1975, 0.2], [1980, 0]]
+    - where: {polities: [sri_lanka, burma]}
+      curve: [[1948, 0.9], [1955, 0.7], [1965, 0.3], [1975, 0]]
+    - where: {polities: [indonesia]}
+      center: true
+      curve: [[1945, 0.9], [1949, 1.0], [1955, 1.0], [1963, 0.8], [1966, 0.3], [1976, 0.2], [1980, 0]]
+    - where: {polities: [philippines]}
+      curve: [[1946, 0.8], [1955, 0.4], [1965, 0.1], [1970, 0]]
+    - where: {polities: [north_vietnam, south_vietnam, laos, cambodia]}
+      curve: [[1945, 0.8], [1954, 1.0], [1960, 0.6], [1975, 0.3], [1976, 0]]
+    - where: {polities: [malaysia, singapore]}
+      curve: [[1957, 0.9], [1963, 1.0], [1965, 0.8], [1970, 0.3], [1975, 0]]
+    - where: {polities: [bangladesh]}
+      curve: [[1971, 0.6], [1975, 0.2], [1980, 0]]
+    - where: {polities: [east_timor]}
+      curve: [[2002, 0.6], [2010, 0.2], [2015, 0]]
   people: [ガンディー, ナセル, エンクルマ, ホー・チ・ミン, ファノン, ド・ゴール]
   works: [『地に呪われたる者』（ファノン）]
   events: [「アフリカの年」と植民地の独立, スエズ戦争（第2次中東戦争）, 南欧の民主化（ポルトガル・ギリシア・スペイン）]

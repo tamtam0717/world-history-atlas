@@ -770,3 +770,78 @@
       secular: 0.45
     - from: 1991
       secular: 0.3
+
+# ======== 東南アジア（S6、2026-11-21） ========
+# ベトナムは中国（sec_china）の考え方に合わせる：共産党政権の下で信仰の活動が制限され、国勢調査では8割以上が「無宗教」と答えるが、
+# 祖先祭祀や寺・廟への参拝は広く続いているので、中国よりやや低めの値にする。
+- id: sec_vietnam
+  name: ベトナム（北ベトナム）
+  select:
+    iso: [VNM]
+  timeline:
+    - from: 1954
+      secular: 0.25
+      note: ベトナム民主共和国（北ベトナム）が北部を治める。土地改革（1953–56）で村の寺・廟の土地が没収された。
+    - from: 1960
+      secular: 0.45
+      note: 合作社化と反宗教政策。カトリックの多くは 1954 年に南へ移った。
+    - from: 1986
+      secular: 0.4
+      note: ドイモイ（刷新）政策の後、寺・廟の祭りや祖先祭祀が復活した。
+- id: sec_south_vietnam
+  name: 南ベトナム（北緯 17 度線より南）
+  select:
+    pieces: [VNM-Gio_Linh, VNM-Cam_Lo, VNM-Dong_Ha, VNM-Trieu_Phong, VNM-Hai_Lang, VNM-Quang_Tri, VNM-Huong_Hoa, VNM-Da_Krong, VNM-Th_a_Thien_Hu, VNM-a_N_ng, VNM-Qu_ng_Nam, VNM-Qu_ng_Ngai, VNM-Binh_nh, VNM-Phu_Yen, VNM-Khanh_Hoa, VNM-Ninh_Thu_n, VNM-Binh_Thu_n, VNM-Kon_Tum, VNM-Gia_Lai, VNM-k_L_k, VNM-k_Nong, VNM-Lam_ng, VNM-Binh_Ph_c, VNM-Tay_Ninh, VNM-Binh_D_ng, VNM-ng_Nai, VNM-Ba_R_a_V_ng_Tau, VNM-Ho_Chi_Minh, VNM-Long_An, VNM-Ti_n_Giang, VNM-B_n_Tre, VNM-Tra_Vinh, VNM-V_nh_Long, VNM-ng_Thap, VNM-An_Giang, VNM-Kien_Giang, VNM-C_n_Th, VNM-H_u_Giang, VNM-Soc_Tr_ng, VNM-B_c_Lieu, VNM-Ca_Mau, VNM-Con_o]
+  timeline:
+    - from: 1954
+      secular: 0
+      note: ベトナム共和国（南ベトナム）。仏教・カトリック・カオダイ教・ホアハオ教の活動は盛ん。
+    - from: 1975
+      secular: 0.25
+      note: サイゴン陥落（1975）と統一（1976）の後、宗教団体は国家の管理下に置かれ、カオダイ教・ホアハオ教の組織は解散させられた。
+    - from: 1980
+      secular: 0.35
+    - from: 1990
+      secular: 0.3
+      note: ドイモイの後、信仰の活動が回復した。
+- id: sec_laos
+  name: ラオス
+  select:
+    iso: [LAO]
+  timeline:
+    - from: 1975
+      secular: 0.25
+      note: ラオス人民民主共和国の成立。僧侶の再教育や托鉢の制限が行われた。
+    - from: 1990
+      secular: 0.1
+      note: 政府は仏教を国民の文化として再び重んじるようになった（タート・ルアンが国の象徴に）。
+- id: sec_cambodia
+  name: カンボジア
+  select:
+    iso: [KHM]
+  timeline:
+    - from: 1975
+      secular: 0.85
+      note: クメール・ルージュ（民主カンプチア）は宗教を全面的に禁じた。僧侶は還俗させられ、多くが殺された。
+      source: "https://ja.wikipedia.org/wiki/クメール・ルージュ"
+    - from: 1979
+      secular: 0.3
+      note: ベトナム軍の侵攻でポル＝ポト政権が倒れ、仏教は制限つきで再開された。
+    - from: 1989
+      secular: 0.05
+      note: 仏教が国の宗教に戻った（1993 年の憲法でも国教）。
+    - from: 1993
+      secular: 0
+- id: sec_singapore
+  name: シンガポール
+  select:
+    iso: [SGP]
+  timeline:
+    - from: 1980
+      secular: 0.1
+      note: 「無宗教」と答える人が増えた（1980 年 13%）。
+    - from: 2000
+      secular: 0.15
+    - from: 2020
+      secular: 0.2
+      note: 無宗教 20%（2020 年の国勢調査）。

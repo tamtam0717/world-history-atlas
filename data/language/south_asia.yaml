@@ -1,0 +1,841 @@
+# 言語（民族）の分布：南アジア（インド・パキスタン・バングラデシュ・スリランカ・ネパール・ブータン・モルディブ）1648–2025
+# 形式は docs/language-format.md（「南アジア・東南アジア」の節）。main = 住民（特に農村）の多数派の民族の言語、minor = 2〜3割以上の少数派。
+# - インドの国勢調査（1881 年から言語の集計、独立後は 1961・2011 年など）の母語の数を目安にした。
+# - ヒンディー語圏の方言（ラージャスターニー・アワディー・ガルワーリー・チャッティースガリーなど）は hindustani にまとめ、note に書く。
+#   ビハール州とネパールのタラーイ東部は、マイティリー語・ボージプリー語などのビハール諸語（bihari）で塗る。
+# - ヒンドゥスターニー語（ヒンディー語とウルドゥー語）は、話し言葉はほぼ同じで、文字と語彙（サンスクリット系かペルシア・アラビア系か）が違う。
+# - 1956 年の州再編でインドの州の境は言語にそってひかれた。地図の州のピースは、このおかげで言語の境とほぼ重なる。
+# - 宗教（data/religion/south_asia.yaml）と、切り替えの年をできるだけそろえている。
+
+# ======== インド（既定はヒンドゥスターニー語） ========
+- id: lang_india
+  name: 北インド（ヒンディー語圏）
+  select:
+    iso: [IND]
+  timeline:
+    - from: 1648
+      main: hindustani
+      note: ガンジス川流域のヒンディー語圏（ブラジ・アワディー・ラージャスターニーなどの方言を含む）。ムガル帝国の宮廷と行政の言葉はペルシア語で、北インドの都市と宮廷でウルドゥー語の文学が栄えた（ミール、ガーリブ）。
+      source: "https://ja.wikipedia.org/wiki/ヒンドゥスターニー語"
+    - from: 1950
+      main: hindustani
+      note: 1950 年の憲法でヒンディー語（デーヴァナーガリー文字）が連邦の公用語とされ、英語も使われ続けた。南インドではヒンディー語の押しつけに反対する運動が起きた（タミル・ナードゥ 1965）。
+      source: "https://ja.wikipedia.org/wiki/インドの言語"
+
+# ---- パンジャーブ・ハリヤーナー・デリー ----
+- id: lang_punjab_in
+  name: 東パンジャーブ
+  select:
+    adm1: ["IND/Punjab"]
+  timeline:
+    - from: 1648
+      main: punjabi
+      note: パンジャーブ語。シク教の聖典はグルムキー文字で書かれる。
+      source: "https://ja.wikipedia.org/wiki/パンジャーブ語"
+- id: lang_chandigarh
+  name: チャンディーガル
+  select:
+    pieces: [IND-Chandigarh]
+  timeline:
+    - from: 1648
+      main: punjabi
+      minor: hindustani
+    - from: 1953
+      main: hindustani
+      minor: punjabi
+      note: 1953 年に州都として建設された新都市。各地から役人・商人が移り住み、母語はヒンディー語が約3分の2、パンジャーブ語は2割余り（2011）。
+- id: lang_delhi
+  name: デリー
+  select:
+    adm1: ["IND/Delhi"]
+  timeline:
+    - from: 1648
+      main: hindustani
+      note: ウルドゥー語の詩の中心地（ムガル宮廷）。
+    - from: 1947
+      main: hindustani
+      minor: punjabi
+      note: 西パンジャーブから来たパンジャーブ人（ヒンドゥー教徒・シク教徒）の難民が、デリーの人口の3分の1近くを占めた。
+      source: "https://en.wikipedia.org/wiki/Punjabis_in_Delhi"
+- id: lang_lahaul
+  name: ラーホール・スピティ
+  select:
+    pieces: [IND-Lahul_Spiti]
+  timeline:
+    - from: 1648
+      main: tibetan
+      minor: hindustani
+      note: スピティはチベット語。ラーホールはチベット語ではないチベット・ビルマ系の諸語（ガハリ語など）だが、郡を分けられないのでチベット語の色で塗る。
+- id: lang_kinnaur
+  name: キンナウル
+  select:
+    pieces: [IND-Kinnaur]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      minor: hindustani
+      note: キンナウリ語（チベット・ビルマ系。チベット語とは別）。地図では北東インドなどのチベット・ビルマ系諸語の色で塗る。
+
+# ---- ジャンムー・カシミール、ラダック、アーザード・カシミール ----
+- id: lang_kashmir
+  name: カシミール盆地
+  select:
+    pieces: [IND-Srinagar, IND-Anantnag, IND-Badgam, IND-Bandipore, IND-Baramula, IND-Ganderbal, IND-Kulgam, IND-Kupwara, IND-Pulwama, IND-Shupiyan]
+  timeline:
+    - from: 1648
+      main: kashmiri
+      note: カシミール語（ダルド系）。カシミール・パンディット（ヒンドゥー教徒）もカシミール語を話す。
+      source: "https://ja.wikipedia.org/wiki/カシミール語"
+- id: lang_doda
+  name: チェナーブ渓谷（ドーダ・キシュトワール・ラームバン）
+  select:
+    pieces: [IND-Doda, IND-Kishtwar, IND-Ramban]
+  timeline:
+    - from: 1648
+      main: kashmiri
+      minor: punjabi
+      note: カシミール語（キシュトワーリー）と、ドーグリー語・パハーリー語・グージャル人のゴージリー語が混在する。
+- id: lang_jammu
+  name: ジャンムー・プーンチ・ラージャウリー
+  select:
+    pieces: [IND-Jammu, IND-Kathua, IND-Samba, IND-Udhampur, IND-Reasi, IND-Punch, IND-Rajouri, PAK-Azad_Kashmir]
+  timeline:
+    - from: 1648
+      main: punjabi
+      note: ドーグリー語（ジャンムー）・パハーリー語（プーンチ・ミールプル）はパンジャーブ語に近い。グージャル人・バッカルワール人（牧畜民）はゴージリー語。
+      source: "https://ja.wikipedia.org/wiki/ドーグリー語"
+- id: lang_ladakh
+  name: ラダック・バルティスターン
+  select:
+    pieces: [IND-Leh_Ladakh, IND-DATA_NOT_AVAILABLE, IND-Kargil, PAK-Skardu, PAK-Shigar, PAK-Kharmang, PAK-Ghanche]
+  timeline:
+    - from: 1648
+      main: tibetan
+      note: ラダック語・バルティ語・プリグ語（チベット語の西部の方言）。バルティスターンとカルギルの住民はシーア派ムスリムだが、言語はチベット系。
+      source: "https://ja.wikipedia.org/wiki/バルティ語"
+
+# ---- グジャラート・マハーラーシュトラ・ゴア ----
+- id: lang_gujarat
+  name: グジャラート
+  select:
+    adm1: ["IND/Gujarat", "IND/Dadra and Nagar Haveli and Daman and Diu"]
+  timeline:
+    - from: 1648
+      main: gujarati
+      note: グジャラート語。スーラトは 17 世紀のムガル帝国最大の港で、イギリス・オランダの商館があった。商人（バニヤー・ジャイナ教徒・ボーホラー派のムスリム・パールシー）はインド洋の交易で活躍した。カッチはカッチー語（シンド語に近い）。
+      source: "https://ja.wikipedia.org/wiki/グジャラート語"
+- id: lang_maharashtra
+  name: マハーラーシュトラ
+  select:
+    adm1: ["IND/Maharashtra"]
+  timeline:
+    - from: 1648
+      main: marathi
+      note: マラーティー語。シヴァージー（1630–80）とマラーター同盟の言葉。バクティの詩人トゥカーラーム（17 世紀）。
+      source: "https://ja.wikipedia.org/wiki/マラーティー語"
+- id: lang_mumbai
+  name: ボンベイ（ムンバイ）
+  select:
+    pieces: [IND-Mumbai, IND-Mumbai_Suburban]
+  timeline:
+    - from: 1648
+      main: marathi
+      note: コーリー人（漁民）の島々。
+    - from: 1700
+      main: marathi
+      minor: gujarati
+      note: グジャラートの商人（パールシー・バニヤー・ボーホラー）が移り住んだ。1960 年のボンベイ州の分割（マハーラーシュトラとグジャラート）では、ボンベイの帰属が争われた。
+      source: "https://en.wikipedia.org/wiki/Samyukta_Maharashtra_Movement"
+    - from: 1990
+      main: marathi
+      minor: hindustani
+      note: 北インドからの移住者が増え、ヒンディー語・ウルドゥー語を話す住民が4割近くになった。
+- id: lang_goa
+  name: ゴア
+  select:
+    adm1: ["IND/Goa"]
+  timeline:
+    - from: 1648
+      main: konkani
+      note: コーンカニー語。ポルトガル領の時代、行政と上流階級の言葉はポルトガル語。1987 年にコーンカニー語がゴアの公用語になった。
+      source: "https://ja.wikipedia.org/wiki/コーンカニー語"
+
+# ---- 南インド ----
+- id: lang_karnataka
+  name: カルナータカ（マイソール）
+  select:
+    adm1: ["IND/Karnataka"]
+  timeline:
+    - from: 1648
+      main: kannada
+      note: カンナダ語。海岸（マンガロール・ウドゥピ）はトゥル語、コダグはコダヴァ語。北部（ビジャープル・ビーダル）には、デカンのムスリムのダッキニー語（ウルドゥー語）を話す人も多い。
+      source: "https://ja.wikipedia.org/wiki/カンナダ語"
+- id: lang_belgaum
+  name: ベルガウム
+  select:
+    pieces: [IND-Belgaum]
+  timeline:
+    - from: 1648
+      main: kannada
+      minor: marathi
+      note: マラーティー語の話者も多く、1956 年の州再編以来、マハーラーシュトラとの間で帰属が争われている。
+- id: lang_bangalore
+  name: バンガロール
+  select:
+    pieces: [IND-Bangalore]
+  timeline:
+    - from: 1648
+      main: kannada
+    - from: 1810
+      main: kannada
+      minor: tamil
+      note: イギリスの軍の駐屯地（カントンメント、1809–）にタミル人が多く住んだ。現在は IT 産業の中心で、各地からの移住者が多い。
+- id: lang_kerala
+  name: ケーララ・ラクシャドウィープ・マーヘ
+  select:
+    adm1: ["IND/Kerala", "IND/Lakshadweep"]
+    pieces: [IND-Mahe]
+  timeline:
+    - from: 1648
+      main: malayalam
+      note: マラヤーラム語。ラクシャドウィープはマラヤーラム語の方言（ジェセリ）。南端のミニコイ島はディベヒ語。
+      source: "https://ja.wikipedia.org/wiki/マラヤーラム語"
+- id: lang_tamil_nadu
+  name: タミル・ナードゥ・プドゥチェリー
+  select:
+    adm1: ["IND/Tamil Nadu"]
+    pieces: [IND-Puducherry, IND-Karaikal]
+  timeline:
+    - from: 1648
+      main: tamil
+      note: タミル語。2000 年以上の文学の伝統をもつ。北部と西部にはテルグ語・カンナダ語の話者もいる。
+      source: "https://ja.wikipedia.org/wiki/タミル語"
+    - from: 1920
+      main: tamil
+      note: ドラヴィダ運動（正義党、ペリヤールの自尊運動）がバラモン支配とヒンディー語に反対し、1967 年から DMK などドラヴィダ系の政党が州を治める。
+      source: "https://en.wikipedia.org/wiki/Dravidian_movement"
+- id: lang_nilgiris
+  name: ニルギリ
+  select:
+    pieces: [IND-The_Nilgiris]
+  timeline:
+    - from: 1648
+      main: kannada
+      minor: tamil
+      note: バダガ人（カンナダ語の方言）・トダ人などの高原。
+    - from: 1900
+      main: tamil
+      minor: kannada
+      note: 避暑地ウータカムンドと茶園の開発で、タミル人が多数になった。
+- id: lang_telugu
+  name: アーンドラ・テランガーナ
+  select:
+    adm1: ["IND/Andhra Pradesh", "IND/Telangana"]
+  timeline:
+    - from: 1648
+      main: telugu
+      note: テルグ語。ドラヴィダ系で話者が最も多い。1953 年に言語にもとづく最初の州（アーンドラ州）がつくられ、州再編のきっかけになった。テランガーナは 2014 年に分かれた。
+      source: "https://ja.wikipedia.org/wiki/テルグ語"
+- id: lang_hyderabad
+  name: ハイデラバード（市）
+  select:
+    pieces: [IND-Hydrabad]
+  timeline:
+    - from: 1648
+      main: telugu
+      minor: hindustani
+      note: ニザームの宮廷はウルドゥー語（ダッキニー）とペルシア語。ウルドゥー語を話すムスリムが市の3〜4割。
+
+# ---- 東インド ----
+- id: lang_bihar
+  name: ビハール
+  select:
+    adm1: ["IND/Bihar"]
+  timeline:
+    - from: 1648
+      main: bihari
+      note: 北部のミティラーはマイティリー語、西部はボージプリー語、パトナ・ガヤーの周辺はマガヒー語。書き言葉と学校の言葉はヒンディー語（ウルドゥー語）で、住民の多くも国勢調査でヒンディー語と答えてきた。マイティリー語は 2003 年に憲法の第8附則の言語に加わった。
+      source: "https://ja.wikipedia.org/wiki/マイティリー語"
+- id: lang_jharkhand
+  name: ジャールカンド
+  select:
+    adm1: ["IND/Jharkhand"]
+  timeline:
+    - from: 1648
+      main: hindustani
+      minor: munda
+      note: 平野の住民はコールター語・ナーグプリー語（ヒンディー語に近い）。チョーター・ナーグプル高原にはサンタル人・ムンダ人・ホー人（ムンダ諸語）、オラオン人（クルフ語）などの部族が多い。
+      source: "https://ja.wikipedia.org/wiki/ジャールカンド州"
+- id: lang_santal_parganas
+  name: サンタル・パルガナ（ドゥムカ・パークル）
+  select:
+    pieces: [IND-Dumka, IND-Pakur]
+  timeline:
+    - from: 1648
+      main: hindustani
+      minor: munda
+    - from: 1800
+      main: munda
+      minor: hindustani
+      note: 18 世紀末からサンタル人が移り住み、開墾した。1855 年のサンタルの反乱（フール）。
+      source: "https://en.wikipedia.org/wiki/Santal_rebellion"
+- id: lang_singhbhum
+  name: シングブーム・クンティ（ホー人・ムンダ人）
+  select:
+    pieces: [IND-Pashchimi_Singhbhum, IND-Khunti]
+  timeline:
+    - from: 1648
+      main: munda
+      minor: hindustani
+      note: ホー語・ムンダーリー語。ビルサ＝ムンダの反乱（1899–1900）の地。
+- id: lang_oraon
+  name: グムラ・ロハルダガ・シムデガ（オラオン人）
+  select:
+    pieces: [IND-Gumla, IND-Lohardaga, IND-Simdega, IND-Jashpur]
+  timeline:
+    - from: 1648
+      main: hindustani
+      minor: gondi
+      note: オラオン人（クルフ語。ドラヴィダ系）が多い。ムンダ人・カリア人も。
+- id: lang_odisha
+  name: オリッサ（オディシャ）
+  select:
+    adm1: ["IND/Odisha"]
+  timeline:
+    - from: 1648
+      main: odia
+      note: オリヤー語。プリーのジャガンナート寺院の地。1936 年に言語にもとづいてビハールから分かれ、オリッサ州となった。
+      source: "https://ja.wikipedia.org/wiki/オリヤー語"
+- id: lang_odisha_south
+  name: オリッサ南部の山地（コーラープット・マルカンギリ・ラーヤガダ・ナバランガプル・カンダマル）
+  select:
+    pieces: [IND-Koraput, IND-Malkangiri, IND-Rayagada, IND-Nabarangapur, IND-Kandhamal, IND-Gajapati]
+  timeline:
+    - from: 1648
+      main: odia
+      minor: gondi
+      note: コンド人（クイ語・クヴィ語）・ゴーンド人などドラヴィダ系の部族と、ソラ人・ボンド人などのムンダ系の部族。
+- id: lang_odisha_north
+  name: オリッサ北部（マユールバンジ・スンダルガル・クンジャル）
+  select:
+    pieces: [IND-Mayurbhanj, IND-Sundargarh, IND-Kendujhar]
+  timeline:
+    - from: 1648
+      main: odia
+      minor: munda
+      note: サンタル人・ホー人・ムンダ人の部族が多い。
+- id: lang_chhattisgarh
+  name: バスタル（チャッティースガル南部）・マドヤ・プラデーシュ東部の山地
+  select:
+    pieces: [IND-Bastar, IND-Dakshin_Bastar_Dantewada, IND-Bijapur_2, IND-Narayanpur, IND-Sukma, IND-Kondagaon, IND-Uttar_Bastar_Kanker]
+  timeline:
+    - from: 1648
+      main: gondi
+      minor: hindustani
+      note: ゴーンド人などの部族の地（ゴーンディー語・ハルビー語）。中世にはゴーンド人の王国（ガルハ・マンドラ）があった。
+      source: "https://ja.wikipedia.org/wiki/ゴンド族"
+- id: lang_mandla
+  name: マンドラ・ディンドリ（ゴーンドの王国ガルハ・マンドラの地）
+  select:
+    pieces: [IND-Mandla, IND-Dindori]
+  timeline:
+    - from: 1648
+      main: hindustani
+      minor: gondi
+      note: ゴーンド人の部族の人口は多いが、ゴーンディー語の話者は半数に届かず、ヒンディー語（チャッティースガリー語を含む）が多い。
+- id: lang_gadchiroli
+  name: ガドチロリ
+  select:
+    pieces: [IND-Gadchiroli]
+  timeline:
+    - from: 1648
+      main: marathi
+      minor: gondi
+      note: マラーティー語が多数で、ゴーンド人・マディア人の部族の言語が続く。
+- id: lang_west_bengal
+  name: 西ベンガル
+  select:
+    adm1: ["IND/West Bengal"]
+  timeline:
+    - from: 1648
+      main: bengali
+      note: ベンガル語。19 世紀にカルカッタでベンガル・ルネサンスが起き、タゴール（1913 年ノーベル文学賞）が出た。
+      source: "https://ja.wikipedia.org/wiki/ベンガル語"
+- id: lang_purulia
+  name: プルリア・ジャールグラーム
+  select:
+    pieces: [IND-Puruliya, IND-Jhargram]
+  timeline:
+    - from: 1648
+      main: bengali
+      minor: munda
+      note: サンタル人などの部族が多い。
+- id: lang_darjeeling
+  name: ダージリン・カリンポン
+  select:
+    pieces: [IND-Darjiling, IND-Kalimpong]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      minor: tibetan
+      note: レプチャ人（レプチャ語）とブーティア人の地。
+    - from: 1870
+      main: nepali
+      minor: tibetan
+      note: 茶園の労働者としてネパール系の住民（ゴルカ）が多数になった。1980 年代からゴルカランド州を求める運動が続く。
+      source: "https://en.wikipedia.org/wiki/Gorkhaland_movement"
+
+# ---- 北東インド ----
+- id: lang_assam
+  name: アッサム
+  select:
+    adm1: ["IND/Assam"]
+  timeline:
+    - from: 1648
+      main: assamese
+      note: アッサム語。13 世紀にタイ系のアホーム人が王国を建てたが、支配層もしだいにアッサム語を話すようになった。上アッサムの茶園には、19 世紀からチョーター・ナーグプルの部族（ムンダ・サンタル・オラオン）の労働者が移された。
+      source: "https://ja.wikipedia.org/wiki/アッサム語"
+    - from: 1930
+      main: assamese
+      minor: bengali
+      note: 東ベンガルからの移住者が増えた。1960 年代以後、言語と移民をめぐる対立が続いた（アッサム運動 1979–85）。
+- id: lang_lower_assam_bengali
+  name: ドゥブリー・南サルマラ
+  select:
+    pieces: [IND-Dhubri, IND-South_Salmara_Mankachar]
+  timeline:
+    - from: 1648
+      main: assamese
+      minor: bengali
+      note: ベンガルとの境。ラージバンシー人（コーチ王国の住民）の地。
+    - from: 1950
+      main: bengali
+      minor: assamese
+      note: 東ベンガル出身のムスリムが多数になった（国勢調査ではアッサム語と答える人も多い）。
+- id: lang_barak
+  name: バラク渓谷（カチャール・カリムガンジ・ハイラカンディ）
+  select:
+    pieces: [IND-Cachar, IND-Karimganj, IND-Hailakandi]
+  timeline:
+    - from: 1648
+      main: bengali
+      note: ベンガル語（シレット方言）。1961 年にアッサム語の公用語化に反対する言語運動が起きた。
+      source: "https://en.wikipedia.org/wiki/Bengali_Language_Movement_(Barak_Valley)"
+- id: lang_bodoland
+  name: ボドランド（コクラジャール・チラン・バクサ・ウダルグリ）
+  select:
+    pieces: [IND-Kokrajhar, IND-Chirang, IND-Baksa, IND-Udalguri]
+  timeline:
+    - from: 1648
+      main: assamese
+      minor: tb_northeast
+      note: ボド人（チベット・ビルマ系）の地。2003 年にボドランド地域評議会が置かれた。
+- id: lang_assam_hills
+  name: アッサムの山地（カルビ・アングロン、ディマ・ハサオ）
+  select:
+    pieces: [IND-Karbi_Anglong_East, IND-Karbi_Anglong_West, IND-Dima_Hasao]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      minor: assamese
+      note: カルビ人・ディマサ人。
+- id: lang_khasi
+  name: カシ丘陵・ジャインティア丘陵
+  select:
+    pieces: [IND-East_Khasi_Hills, IND-West_Khasi_Hills, IND-South_West_Khasi_Hills, IND-Ribhoi, IND-East_Jaintia_Hills, IND-West_Jaintia_Hills]
+  timeline:
+    - from: 1648
+      main: munda
+      note: カシ人・ジャインティア（プナル）人のカシ語（オーストロアジア系）。母系の社会。
+      source: "https://ja.wikipedia.org/wiki/カシ語"
+- id: lang_northeast_hills
+  name: 北東インドの山地（ガロ・ナガ・ミゾ・マニプル・アルナーチャル）
+  select:
+    adm1: ["IND/Nagaland", "IND/Mizoram", "IND/Manipur", "IND/Arunachal Pradesh"]
+    pieces: [IND-East_Garo_Hills, IND-North_Garo_Hills, IND-South_Garo_Hills, IND-South_West_Garo_Hills, IND-West_Garo_Hills]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      note: ガロ人、ナガ人の諸部族、ミゾ人、クキ人、アディ人・ニシ人などチベット・ビルマ系の言語の地。マニプルの谷のメイテイ語（マニプリ語）は王国の言葉。ナガ人は 1947 年から独立を求める運動を続けた（1963 年にナガランド州）。
+      source: "https://ja.wikipedia.org/wiki/ナガ族"
+- id: lang_tawang
+  name: タワン・西カメン
+  select:
+    pieces: [IND-Tawang, IND-West_Kameng]
+  timeline:
+    - from: 1648
+      main: tibetan
+      note: モンパ人（チベット系の言語）。
+- id: lang_tripura
+  name: トリプラ
+  select:
+    adm1: ["IND/Tripura"]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      minor: bengali
+      note: トリプリ人（コクボロク語）の王国。王家はベンガル語の文化を取り入れた。
+    - from: 1950
+      main: bengali
+      minor: tb_northeast
+      note: 東パキスタンからのベンガル人の難民で、ベンガル人が住民の約7割になった。1980 年に大きな民族暴動が起きた。
+- id: lang_sikkim
+  name: シッキム
+  select:
+    adm1: ["IND/Sikkim"]
+  timeline:
+    - from: 1648
+      main: tibetan
+      minor: tb_northeast
+      note: ブーティア人（シッキム語。チベット語の方言）の王家とレプチャ人。
+    - from: 1890
+      main: nepali
+      minor: tibetan
+      note: ネパールからの移住者が多数になった。
+- id: lang_sikkim_north
+  name: 北シッキム
+  select:
+    pieces: [IND-North_District]
+  timeline:
+    - from: 1648
+      main: tibetan
+      minor: tb_northeast
+
+# ---- アンダマン・ニコバル ----
+- id: lang_andaman
+  name: アンダマン諸島
+  select:
+    pieces: [IND-North_Middle_Andaman, IND-South_Andaman]
+  timeline:
+    - from: 1648
+      main: other
+      note: アンダマン諸語（大アンダマン語群・オンゲ語など。系統不明）。19 世紀後半から、植民地化と病気で大アンダマン人は激減した。
+      source: "https://ja.wikipedia.org/wiki/アンダマン諸語"
+    - from: 1950
+      main: bengali
+      minor: hindustani
+      note: 流刑地の時代（1858–）の後、独立後に東ベンガルの難民などが入植した。ベンガル語・ヒンディー語・タミル語・テルグ語などが混在する。
+- id: lang_nicobar
+  name: ニコバル諸島
+  select:
+    pieces: [IND-Nicobars]
+  timeline:
+    - from: 1648
+      main: munda
+      note: ニコバル語（オーストロアジア系）。
+
+# ======== パキスタン ========
+- id: lang_pakistan_punjab
+  name: 西パンジャーブ
+  select:
+    adm1: ["PAK/Punjab", "PAK/Islamabad Capital Territory"]
+  timeline:
+    - from: 1648
+      main: punjabi
+      note: パンジャーブ語（南部はサライキ語）。パキスタンの国語はウルドゥー語（1947–）だが、パンジャーブ語を母語とする人が最も多い。
+      source: "https://ja.wikipedia.org/wiki/パキスタンの言語"
+- id: lang_sindh
+  name: シンド
+  select:
+    adm1: ["PAK/Sindh"]
+  timeline:
+    - from: 1648
+      main: sindhi
+      note: シンド語。カラチはシンドの漁村から、18 世紀に港町として発展した。
+      source: "https://ja.wikipedia.org/wiki/シンド語"
+- id: lang_karachi
+  name: カラチ
+  select:
+    pieces: [PAK-Karachi]
+  timeline:
+    - from: 1648
+      main: sindhi
+      minor: pashto_baluchi
+      note: シンド人とバローチ人の漁村・港。
+    - from: 1947
+      main: hindustani
+      note: インドから来たウルドゥー語を話すムスリム（ムハージル）が多数になり、パシュトゥーン人・パンジャーブ人も集まった。1972 年にはシンド語の州公用語化をめぐって暴動が起きた。
+      source: "https://en.wikipedia.org/wiki/Muhajir_people"
+- id: lang_hyderabad_sindh
+  name: ハイデラバード（シンド）
+  select:
+    pieces: [PAK-Hyderabad]
+  timeline:
+    - from: 1648
+      main: sindhi
+    - from: 1947
+      main: hindustani
+      minor: sindhi
+      note: ムハージルの移住で、市ではウルドゥー語の話者が多数になった。
+- id: lang_balochistan
+  name: バローチスターン
+  select:
+    adm1: ["PAK/Balochistan"]
+  timeline:
+    - from: 1648
+      main: pashto_baluchi
+      note: 南部・西部はバローチ人、北部（クエッタ・ゾーブ・ピシン）はパシュトゥーン人。中部のカラート・フズダールではブラーフイー語（ドラヴィダ系の孤立した言語）が話される。
+      source: "https://ja.wikipedia.org/wiki/ブラーフイー語"
+- id: lang_kachhi
+  name: カッチー平野・ラスベラ
+  select:
+    pieces: [PAK-Jafarabad, PAK-Nasirabad, PAK-Jhal_Magsi, PAK-Kachhi, PAK-Lasbela, PAK-Sibi]
+  timeline:
+    - from: 1648
+      main: pashto_baluchi
+      minor: sindhi
+      note: シンド語の方言（ラーシー語など）とバローチー語。
+- id: lang_khyber
+  name: ハイバル・パフトゥンフワ（北西辺境）
+  select:
+    adm1: ["PAK/Khyber Pakhtunkhwa"]
+  timeline:
+    - from: 1648
+      main: pashto_baluchi
+      note: パシュトゥーン人のパシュトー語。部族の慣習（パシュトゥーンワリ）が強い。1893 年のデュアランド・ラインでアフガニスタンと分けられた。
+      source: "https://ja.wikipedia.org/wiki/パシュトゥーン人"
+- id: lang_hazara
+  name: ハザラ地方（アボッターバード・マーンセーラ・ハリプル）
+  select:
+    pieces: [PAK-Abbottabad, PAK-Mansehra, PAK-Haripur]
+  timeline:
+    - from: 1648
+      main: punjabi
+      minor: pashto_baluchi
+      note: ヒンドコ語（パンジャーブ語に近い）。
+- id: lang_dera
+  name: デーラ・イスマーイール・ハーン
+  select:
+    pieces: [PAK-Dera_Ismail_Khan]
+  timeline:
+    - from: 1648
+      main: punjabi
+      minor: pashto_baluchi
+      note: サライキ語とパシュトー語。
+- id: lang_dardistan
+  name: ダルディスターン（ギルギット・チトラール・コーヒスターン）
+  select:
+    pieces: [PAK-Gilgit, PAK-Diamer, PAK-Astore, PAK-Ghizer, PAK-Nagar, PAK-Hunza, PAK-Chitral, PAK-Kohistan]
+  timeline:
+    - from: 1648
+      main: dardic
+      note: シナー語（ギルギット）・コワール語（チトラール）・コーヒスターニー語などダルド諸語。フンザ・ナガルでは系統不明の孤立した言語ブルシャスキー語が話される。
+      source: "https://ja.wikipedia.org/wiki/ブルシャスキー語"
+
+# ======== バングラデシュ ========
+- id: lang_bangladesh
+  name: 東ベンガル（バングラデシュ）
+  select:
+    iso: [BGD]
+  timeline:
+    - from: 1648
+      main: bengali
+      note: ベンガル語（シレット・チッタゴンなどの方言）。
+    - from: 1952
+      main: bengali
+      note: パキスタンがウルドゥー語だけを国語にしようとしたことに反対し、1952 年 2 月 21 日に学生が犠牲になった（言語運動）。この日はユネスコの「国際母語デー」になった。言語運動はバングラデシュ独立（1971）の原点とされる。
+      source: "https://ja.wikipedia.org/wiki/ベンガル語国語化運動"
+- id: lang_chittagong_hills
+  name: チッタゴン丘陵
+  select:
+    pieces: [BGD-Rangamati, BGD-Bandarban, BGD-Khagrachhari]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      note: チャクマ人（チャクマ語はベンガル語に近い）、マルマ人（ビルマ語系）、トリプラ人、ムロ人など「ジュマ」と呼ばれる山地民。
+    - from: 1980
+      main: tb_northeast
+      minor: bengali
+      note: ベンガル人の入植で対立が深まった（1997 年の和平協定）。
+    - from: 2000
+      main: bengali
+      minor: tb_northeast
+
+# ======== ネパール ========
+- id: lang_nepal
+  name: ネパールの丘陵（ネパール語）
+  select:
+    iso: [NPL]
+  timeline:
+    - from: 1648
+      main: nepali
+      note: ネパール語（カス語）。カス人・ゴルカの王家の言葉。丘陵にはマガル人・グルン人・タマン人などチベット・ビルマ系の民族も多い。
+      source: "https://ja.wikipedia.org/wiki/ネパール語"
+- id: lang_kathmandu
+  name: カトマンズ盆地
+  select:
+    pieces: [NPL-Kathmandu, NPL-Lalitpur, NPL-Bhaktapur]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      note: ネワール人のネワール語（チベット・ビルマ系）。マッラ朝の3王国（カトマンズ・パタン・バクタプル）が栄えた。
+      source: "https://ja.wikipedia.org/wiki/ネワール語"
+    - from: 1800
+      main: tb_northeast
+      minor: nepali
+      note: ゴルカ朝の征服（1768–69）の後、ネパール語の話者が移り住んだ。
+    - from: 1950
+      main: nepali
+      minor: tb_northeast
+      note: 首都への移住で、ネパール語の話者が多数になった。ネワール人は約2割。
+- id: lang_nepal_east
+  name: ネパール東部の丘陵（ライ人・リンブー人の地）
+  select:
+    pieces: [NPL-Taplejung, NPL-Panchthar, NPL-Terhathum, NPL-Dhankuta, NPL-Sankhuwasabha, NPL-Bhojpur, NPL-Khotang, NPL-Okhaldhunga, NPL-Ilam]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      note: キラント（ライ人・リンブー人）の地。リンブー人の諸王国。
+    - from: 1800
+      main: tb_northeast
+      minor: nepali
+      note: ゴルカ朝の征服（1770 年代）の後、カス人（ネパール語）の移住が進んだ。
+- id: lang_tamang
+  name: タマン人の丘陵（ラスワ・ヌワコート・マクワンプル・シンドゥパルチョーク）
+  select:
+    pieces: [NPL-Rasuwa, NPL-Nuwakot, NPL-Makawanpur, NPL-Sindhupalchok, NPL-Dolakha, NPL-Solukhumbu]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      minor: nepali
+      note: タマン語・シェルパ語（チベット系）など。
+- id: lang_nepal_himalaya
+  name: ムスタン・マナン・ドルパ
+  select:
+    pieces: [NPL-Mustang, NPL-Manang, NPL-Dolpa]
+  timeline:
+    - from: 1648
+      main: tibetan
+      minor: nepali
+      note: ロバ人（ムスタン）、マナンギ人、ドルポ人などチベット系の言語。
+- id: lang_terai_east
+  name: タラーイ東部（マデシュ）
+  select:
+    adm1: ["NPL/Province 2"]
+    pieces: [NPL-Morang, NPL-Sunsari, NPL-Jhapa, NPL-Udayapur]
+  timeline:
+    - from: 1648
+      main: bihari
+      note: マイティリー語・ボージプリー語のマデシ人と、タルー人・ラージバンシー人などの平野の民族。
+      source: "https://en.wikipedia.org/wiki/Madhesi_people"
+- id: lang_terai_east_hills
+  name: タラーイ東部の新しい入植地（モラン・スンサリ・ジャパ）
+  select:
+    pieces: [NPL-Morang, NPL-Sunsari, NPL-Jhapa]
+  timeline:
+    - from: 1960
+      main: nepali
+      minor: bihari
+      note: マラリアの撲滅（1950 年代）の後、丘陵からの移住者が多数になった。
+- id: lang_terai_west
+  name: タラーイ中部・西部
+  select:
+    pieces: [NPL-Chitawan, NPL-Nawalparasi, NPL-Nawalpur, NPL-Kapilbastu, NPL-Banke, NPL-Bardiya, NPL-Kailali, NPL-Kanchanpur, NPL-Dang]
+  timeline:
+    - from: 1648
+      main: hindustani
+      minor: nepali
+      note: タルー人の言語（ヒンディー語・アワディー語に近い）とアワディー語。
+      source: "https://ja.wikipedia.org/wiki/タルー族"
+    - from: 1960
+      main: nepali
+      minor: hindustani
+      note: マラリアの撲滅と再定住の政策で、丘陵からの移住者が多数になった（カピルバストゥ・バンケはアワディー語の話者が多い）。
+
+# ======== ブータン ========
+- id: lang_bhutan
+  name: ブータン
+  select:
+    iso: [BTN]
+  timeline:
+    - from: 1648
+      main: tibetan
+      note: 西部のゾンカ語（国語。チベット語の南方の方言）、東部のツァンラ語（シャチョップ）、中部のブムタン語など。
+      source: "https://ja.wikipedia.org/wiki/ゾンカ語"
+- id: lang_bhutan_south
+  name: ブータン南部（サムツェ・サルパン・チラン・ダガナ）
+  select:
+    pieces: [BTN-Samtse, BTN-Sarpang, BTN-Tsirang, BTN-Dagana]
+  timeline:
+    - from: 1648
+      main: tibetan
+      minor: tb_northeast
+      note: ロプ人（ドヤ人）などの山麓の民族。
+    - from: 1900
+      main: nepali
+      minor: tibetan
+      note: ネパール系のローツァンパが移り住んだ。1989 年の「一国家一国民」政策（ゾンカ語・民族衣装の強制）と 1990 年代の難民の流出（約 10 万人）。
+      source: "https://en.wikipedia.org/wiki/Lhotshampa"
+
+# ======== スリランカ ========
+- id: lang_sri_lanka
+  name: スリランカ（シンハラ語）
+  select:
+    iso: [LKA]
+  timeline:
+    - from: 1648
+      main: sinhala
+      note: シンハラ語。沿岸にはムーア人（タミル語を話すムスリム）や、ポルトガル系・オランダ系の混血のバーガーもいる。
+      source: "https://ja.wikipedia.org/wiki/シンハラ語"
+    - from: 1956
+      main: sinhala
+      note: 1956 年の「シンハラ語のみ法」がタミル人の反発を招き、民族対立は内戦（1983–2009）に至った。
+      source: "https://en.wikipedia.org/wiki/Sinhala_Only_Act"
+- id: lang_sri_lanka_tamil
+  name: スリランカ北部・東部（タミル語）
+  select:
+    pieces: [LKA-Jaffna_District, LKA-Kilinochchi_District, LKA-Mullaitivu_District, LKA-Vavuniya_District, LKA-Mannar_District, LKA-Batticaloa_District]
+  timeline:
+    - from: 1648
+      main: tamil
+      note: スリランカ・タミル人（ジャフナ王国は 1619 年にポルトガルに滅ぼされた）。東部はタミル人とタミル語を話すムーア人。
+      source: "https://ja.wikipedia.org/wiki/スリランカ・タミル人"
+    - from: 1983
+      main: tamil
+      note: 内戦（1983–2009）。LTTE が北部・東部の分離独立を目指し、2009 年に政府軍に敗れた。多くのタミル人が国外へ逃れた。
+      source: "https://ja.wikipedia.org/wiki/スリランカ内戦"
+- id: lang_trincomalee
+  name: トリンコマリー・アンパーラ
+  select:
+    pieces: [LKA-Trincomalee_District, LKA-Ampara_District]
+  timeline:
+    - from: 1648
+      main: tamil
+      note: タミル人とムーア人（タミル語を話すムスリム）。
+    - from: 1960
+      main: tamil
+      minor: sinhala
+      note: 灌漑・入植計画（ガル・オヤ、カンタレー）でシンハラ人が増えた。
+- id: lang_hill_country_tamil
+  name: 中央高地の茶園（ヌワラ・エリヤ・バドゥッラ）
+  select:
+    pieces: [LKA-Nuwara_Eliya_District]
+  timeline:
+    - from: 1648
+      main: sinhala
+    - from: 1880
+      main: tamil
+      minor: sinhala
+      note: 南インドから連れてこられたインド・タミル人の茶園労働者。1948 年の国籍法で多くが国籍を奪われ、一部はインドへ送還された（1964 年のシリマヴォ・シャストリ協定）。
+      source: "https://ja.wikipedia.org/wiki/インド・タミル"
+- id: lang_badulla
+  name: バドゥッラ
+  select:
+    pieces: [LKA-Badulla_District]
+  timeline:
+    - from: 1648
+      main: sinhala
+    - from: 1880
+      main: sinhala
+      minor: tamil
+
+# ======== モルディブ ========
+- id: lang_maldives
+  name: モルディブ
+  select:
+    iso: [MDV]
+  timeline:
+    - from: 1648
+      main: dhivehi
+      note: ディベヒ語（シンハラ語に近いインド・アーリア系）。ターナ文字で書く。
+      source: "https://ja.wikipedia.org/wiki/ディベヒ語"

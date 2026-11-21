@@ -1,0 +1,1347 @@
+# 言語（民族）の分布：東南アジア 1648–2025
+# 形式は docs/language-format.md（「南アジア・東南アジア」の節）。main = 住民（特に農村）の多数派の民族の言語、minor = 2〜3割以上の少数派。
+# - 華人（中国語の諸方言：福建・潮州・広東・客家・海南）は、東アジアと同じ chinese で塗る。シャム・ジャワなどで同化が進んだ華人
+#   （プラナカン）は、その時期に応じて note に書く。
+# - インドネシアの共通語（インドネシア語＝マレー語）が広まった後も、「民族」の言語（ジャワ語・スンダ語など）で塗る。
+# - 宗教（data/religion/southeast_asia.yaml）と、切り替えの年をできるだけそろえている。
+
+# ======== ミャンマー ========
+- id: lang_myanmar
+  name: 上ビルマ（ビルマ語）
+  select:
+    iso: [MMR]
+  timeline:
+    - from: 1648
+      main: burmese
+      note: ビルマ語。エーヤワディー（イラワジ）川の中流域（アヴァ・マンダレーの周辺）がビルマ人の中心地。
+      source: "https://ja.wikipedia.org/wiki/ビルマ語"
+- id: lang_lower_burma
+  name: 下ビルマ（ペグー・ラングーンとデルタ）
+  select:
+    pieces: [MMR-Bago, MMR-Yangon_East, MMR-Yangon_North, MMR-Yangon_South, MMR-Yangon_West, MMR-Hinthada, MMR-Maubin, MMR-Myaungmya, MMR-Pathein, MMR-Pyapon, MMR-Labutta]
+  timeline:
+    - from: 1648
+      main: mon
+      minor: burmese
+      note: モン人の地（ペグー〈バゴー〉はかつてのモンの王都）。タウングー朝の支配下で、ビルマ人も住む。1740–57 年にはモン人の復興ペグー王国があった。
+      source: "https://ja.wikipedia.org/wiki/モン族"
+    - from: 1760
+      main: burmese
+      minor: mon
+      note: コンバウン朝のアラウンパヤーがペグーを滅ぼし（1757）、ビルマ人の移住と同化が進んだ。
+      source: "https://ja.wikipedia.org/wiki/コンバウン王朝"
+    - from: 1880
+      main: burmese
+      minor: karen
+      note: イギリス領になった下ビルマでは、デルタの開墾（米の輸出）で上ビルマからの移住が進んだ。デルタにはカレン人も多い。ラングーン市は 1931 年にインド系の住民が過半数だった。
+      source: "https://en.wikipedia.org/wiki/Burmese_Indians"
+- id: lang_lower_burma_cities
+  name: ラングーン・ペグー（1880 年以後）
+  select:
+    pieces: [MMR-Bago, MMR-Yangon_East, MMR-Yangon_North, MMR-Yangon_South, MMR-Yangon_West]
+  timeline:
+    - from: 1880
+      main: burmese
+      note: ラングーン市の人口の過半数はインド系（ベンガル・タミル・テルグ・ヒンドゥスターニーなど。1931）だったが、日本軍の侵攻（1942）と独立後の国有化（1962–）で多くが去った。ラングーン市のインド系は下の lang_yangon で斜線にしている。
+- id: lang_yangon
+  name: ラングーン市（インド系の住民）
+  select:
+    pieces: [MMR-Yangon_East, MMR-Yangon_North, MMR-Yangon_South, MMR-Yangon_West]
+  timeline:
+    - from: 1880
+      main: burmese
+      minor: tamil
+      note: 英領インドの一州として、インドから労働者・商人が流れ込み、1931 年にはラングーン市の人口の過半数がインド系だった。言語はテルグ語・タミル語・ベンガル語（チッタゴン方言）・ヒンドゥスターニー語などに分かれるので、斜線は南インドからの移民を代表してタミル語の色で示す（宗教の地図ではヒンドゥー教の斜線）。
+      source: "https://en.wikipedia.org/wiki/Burmese_Indians"
+    - from: 1942
+      main: burmese
+      note: 日本軍の侵攻（1942）でインド系の住民の多くがインドへ逃れ、1962 年以後の国有化でさらに去った。
+- id: lang_mon
+  name: モン州（モーラミャイン・タトン）
+  select:
+    pieces: [MMR-Mawlamyine, MMR-Thaton]
+  timeline:
+    - from: 1648
+      main: mon
+      minor: karen
+      note: モン語。タトンは古いモンの都。
+    - from: 1850
+      main: mon
+      minor: burmese
+      note: モーラミャイン（モールメイン）は第1次英緬戦争（1824–26）の後、イギリス領テナセリムの中心になった。
+- id: lang_kayin
+  name: カイン州（カレン州）・カヤー州
+  select:
+    pieces: [MMR-Hpa_An, MMR-Hpapun, MMR-Kawkareik, MMR-Myawaddy, MMR-Loikaw, MMR-Bawlake]
+  timeline:
+    - from: 1648
+      main: karen
+      minor: burmese
+      note: スゴー・カレン人・ポー・カレン人、カヤー（カレンニー）人。1949 年からカレン民族同盟（KNU）の武装闘争が続いた。
+      source: "https://ja.wikipedia.org/wiki/カレン族"
+- id: lang_shan
+  name: シャン州
+  select:
+    pieces: [MMR-Taunggyi, MMR-Loilen, MMR-Langkho, MMR-Kengtung, MMR-Monghsat, MMR-Tachileik, MMR-Lashio, MMR-Muse, MMR-Kyaukme]
+  timeline:
+    - from: 1648
+      main: shan
+      minor: burmese
+      note: シャン人（タイ系）の諸侯（ソーボワ）の国々。ビルマの王の宗主権のもとで自治を保った。パオ人・パラウン人・ラフ人なども住む。
+      source: "https://ja.wikipedia.org/wiki/シャン族"
+- id: lang_wa
+  name: ワ地域
+  select:
+    pieces: [MMR-Matman, MMR-Hopang]
+  timeline:
+    - from: 1648
+      main: mon_khmer_hill
+      minor: shan
+      note: ワ人（モン・クメール系のワ語）。現在はワ州連合軍の事実上の自治地域。
+- id: lang_kokang
+  name: コーカン
+  select:
+    pieces: [MMR-Laukkaing]
+  timeline:
+    - from: 1648
+      main: chinese
+      note: 中国語（雲南の方言）を話す漢人の地。
+- id: lang_kachin
+  name: カチン州・ナガ丘陵
+  select:
+    pieces: [MMR-Myitkyina, MMR-Bhamo, MMR-Mohnyin, MMR-Puta_O, MMR-Hkamti]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      minor: shan
+      note: カチン人（ジンポー語・リス語・ラワン語など）・ナガ人の山地と、谷のシャン人。1961 年からカチン独立軍の武装闘争。
+      source: "https://ja.wikipedia.org/wiki/カチン族"
+- id: lang_chin
+  name: チン州
+  select:
+    pieces: [MMR-Falam, MMR-Hakha, MMR-Mindat]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      note: チン人（ミゾ人と同系）の諸言語。
+- id: lang_arakan
+  name: アラカン（ラカイン）
+  select:
+    pieces: [MMR-Mrauk_U, MMR-Kyaukpyu, MMR-Thandwe]
+  timeline:
+    - from: 1648
+      main: burmese
+      note: ラカイン人（ラカイン語はビルマ語の古い方言）。ミャウー朝（–1785）は、ベンガル湾の交易とポルトガル人傭兵で栄えた。
+      source: "https://ja.wikipedia.org/wiki/アラカン"
+- id: lang_sittwe
+  name: シットウェー
+  select:
+    pieces: [MMR-Sittwe]
+  timeline:
+    - from: 1648
+      main: burmese
+    - from: 1880
+      main: burmese
+      minor: rohingya
+      note: ラカイン人とロヒンギャの混住地。
+- id: lang_maungdaw
+  name: ラカイン北部（マウンドー・ブティダウン）
+  select:
+    pieces: [MMR-Maungdaw]
+  timeline:
+    - from: 1648
+      main: burmese
+      minor: rohingya
+      note: ロヒンギャ語（チッタゴン方言に近いインド・アーリア系）を話すムスリムが古くから住んだとされるが、その起源と時期はミャンマー政府との間で争点になっている。
+      source: "https://ja.wikipedia.org/wiki/ロヒンギャ"
+    - from: 1880
+      main: rohingya
+      minor: burmese
+      note: イギリス領の時代にベンガルとの移住が増え、ロヒンギャが多数になった。1978 年・1991–92 年にも大量の難民がバングラデシュへ逃れた。
+    - from: 2017
+      main: rohingya
+      minor: burmese
+      note: 2017 年の国軍の掃討作戦で、70 万人以上がバングラデシュ（コックスバザール）へ逃れた。残る住民の構成ははっきりしない。
+
+# ======== タイ ========
+- id: lang_thailand
+  name: タイ中部・南部（シャム）
+  select:
+    iso: [THA]
+  timeline:
+    - from: 1648
+      main: thai
+      note: タイ語（シャム語。南部は南タイ方言）。アユタヤ朝（–1767）、トンブリー朝、ラタナコーシン朝（1782–）。
+      source: "https://ja.wikipedia.org/wiki/タイ語"
+    - from: 1939
+      main: thai
+      note: ピブーン政権が国名をシャムからタイに改め（1939）、「タイ人」としての国民統合と華人の同化を進めた。
+      source: "https://ja.wikipedia.org/wiki/プレーク・ピブーンソンクラーム"
+- id: lang_bangkok
+  name: バンコク
+  select:
+    adm1: ["THA/Bangkok", "THA/Samut Prakan Province", "THA/Nonthaburi Province"]
+  timeline:
+    - from: 1648
+      main: thai
+      note: アユタヤの外港の町。
+    - from: 1782
+      main: thai
+      minor: chinese
+      note: ラタナコーシン朝の都。米の輸出と精米業を担った華人（潮州人が多い）が、20 世紀初めには市の人口の半分近くを占めた。
+      source: "https://ja.wikipedia.org/wiki/タイの華人"
+    - from: 1960
+      main: thai
+      note: 華人の多くはタイ社会に同化し、タイ語を話すようになった（タイ人の多くが華人の祖先をもつ）。
+- id: lang_lanna
+  name: 北タイ（ランナー）
+  select:
+    adm1: ["THA/Chiang Mai Province", "THA/Chiang Rai Province", "THA/Lampang Province", "THA/Lamphun Province", "THA/Phrae Province", "THA/Nan Province", "THA/Phayao Province"]
+  timeline:
+    - from: 1648
+      main: lanna
+      note: 北タイ語（カム・ムアン）。ランナー王国は 1558–1775 年にビルマの支配下にあり、その後シャムの宗主権の下に入り、1899 年に直轄化された。山地にはカレン人・モン人・アカ人・ラフ人などの山地民が住む。
+      source: "https://ja.wikipedia.org/wiki/ラーンナー王国"
+- id: lang_mae_hong_son
+  name: メーホンソン
+  select:
+    adm1: ["THA/Mae Hong Son Province"]
+  timeline:
+    - from: 1648
+      main: shan
+      minor: karen
+      note: シャン人（タイ・ヤイ）とカレン人の地。
+- id: lang_tak
+  name: ターク
+  select:
+    adm1: ["THA/Tak Province"]
+  timeline:
+    - from: 1648
+      main: thai
+      minor: karen
+- id: lang_isan
+  name: タイ東北部（イサーン）
+  select:
+    adm1: ["THA/Amnat Charoen Province", "THA/Bueng Kan Province", "THA/Chaiyaphum Province", "THA/Kalasin", "THA/Khon Kaen Province", "THA/Loei Province", "THA/Maha Sarakham Province", "THA/Mukdahan Province", "THA/Nakhon Phanom Province", "THA/Nong Bua Lam Phu Province", "THA/Nong Khai Province", "THA/Roi Et Province", "THA/Sakon Nakhon Province", "THA/Ubon Ratchathani Province", "THA/Udon Thani Province", "THA/Yasothon Province"]
+  timeline:
+    - from: 1648
+      main: lao
+      note: ラーオ人の地（ラーオ語）。17 世紀のコーラート高原は人口のまばらな地域で、ラーオ人の大規模な移住は 18 世紀後半〜19 世紀前半。この時期、シャムはラオスの諸王国を服属させ、メコン川の東の住民をイサーンへ強制移住させた（ヴィエンチャンのアヌ王の反乱 1826–28 の後など）。
+      source: "https://ja.wikipedia.org/wiki/イーサーン"
+    - from: 1950
+      main: lao
+      minor: thai
+      note: 学校とメディアで標準タイ語が広まり、住民は「コン・イサーン」（タイ国民）としての意識を強めた。言語はラーオ語（イサーン語）。
+- id: lang_khorat
+  name: ナコーンラーチャシーマー（コーラート）
+  select:
+    adm1: ["THA/Nakhon Ratchasima Province"]
+  timeline:
+    - from: 1648
+      main: thai
+      minor: lao
+      note: コーラート方言（タイ語の一種）とラーオ語。
+- id: lang_surin
+  name: スリン
+  select:
+    adm1: ["THA/Surin Province"]
+  timeline:
+    - from: 1648
+      main: khmer
+      minor: lao
+      note: 北クメール語の話者とクーイ人（モン・クメール系）が多い。
+- id: lang_buriram
+  name: ブリーラム・シーサケート
+  select:
+    adm1: ["THA/Buri Ram Province", "THA/Si Sa Ket Province"]
+  timeline:
+    - from: 1648
+      main: lao
+      minor: khmer
+- id: lang_deep_south
+  name: タイ深南部（パッターニー・ヤラー・ナラーティワート）
+  select:
+    adm1: ["THA/Pattani Province", "THA/Yala Province", "THA/Narathiwat Province"]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: thai
+      note: マレー語（パタニ方言）を話すマレー系ムスリム。
+- id: lang_satun
+  name: サトゥーン
+  select:
+    adm1: ["THA/Satun Province"]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: thai
+      note: クダのスルタンの領地。
+    - from: 1909
+      main: thai
+      minor: malay
+      note: シャム領となった後、住民の多くはタイ語を話すムスリムになった。
+
+# ======== ラオス ========
+- id: lang_laos
+  name: ラオス（ラーオ語）
+  select:
+    iso: [LAO]
+  timeline:
+    - from: 1648
+      main: lao
+      note: ラーオ語。ラーンサーン王国は 1707 年にルアンパバーンとヴィエンチャン、1713 年にチャンパーサックの3王国に分かれた。フランス領の時代（1893–1953）には、ヴィエンチャンなどの都市にベトナム人の役人・商人が移り住み、1940 年代にはヴィエンチャンの人口の過半数がベトナム人だったとされる（地図では郡を分けていないので塗らない）。
+      source: "https://ja.wikipedia.org/wiki/ラーオ語"
+- id: lang_laos_north
+  name: ラオス北部の山地（ポンサーリー・ルアンナムター・ウドムサイ）
+  select:
+    pieces: [LAO-Phongsaly, LAO-Luang_Namtha, LAO-Oudomxay]
+  timeline:
+    - from: 1648
+      main: mon_khmer_hill
+      minor: tibeto_burman
+      note: クム人（モン・クメール系）、アカ人・プーノーイ人（チベット・ビルマ系）、タイ・ルー人などの山地。
+- id: lang_laos_hmong
+  name: シエンクアン・サイソンブン・フアパン
+  select:
+    pieces: [LAO-Xiangkhouang, LAO-Xaisomboun, LAO-Houaphan]
+  timeline:
+    - from: 1648
+      main: lao
+      minor: mon_khmer_hill
+      note: プアン人（ラーオ系）のシエンクアン王国。
+    - from: 1850
+      main: lao
+      minor: hmong_mien
+      note: 19 世紀に中国南部からモン人（ミャオ族）が移り住んだ。ラオス内戦ではモン人の多くがアメリカの CIA の「秘密戦争」に動員され、1975 年以後、多くが難民としてタイ・アメリカへ逃れた。
+      source: "https://ja.wikipedia.org/wiki/モン族_(東南アジア)"
+- id: lang_laos_south_hills
+  name: ラオス南部の山地（セコン・アッタプー）
+  select:
+    pieces: [LAO-Xekong, LAO-Attapeu]
+  timeline:
+    - from: 1648
+      main: mon_khmer_hill
+      minor: lao
+      note: カトゥ人・タリアン人・ラヴェン人などのモン・クメール系の山地民。
+
+# ======== カンボジア ========
+- id: lang_cambodia
+  name: カンボジア
+  select:
+    iso: [KHM]
+  timeline:
+    - from: 1648
+      main: khmer
+      note: クメール語（カンボジア語）。チャム人（チャム語）、ベトナム人、華人もいる。
+      source: "https://ja.wikipedia.org/wiki/クメール語"
+    - from: 1970
+      main: khmer
+      note: ロン＝ノル政権（1970）のもとでベトナム人の虐殺と追放が起き、クメール・ルージュ（1975–79）は少数民族と都市の住民を迫害した。人口の4分の1近くが命を落としたとされる。
+      source: "https://ja.wikipedia.org/wiki/カンボジア大虐殺"
+- id: lang_phnom_penh
+  name: プノンペン
+  select:
+    pieces: [KHM-Phnom_Penh]
+  timeline:
+    - from: 1648
+      main: khmer
+    - from: 1880
+      main: khmer
+      minor: chinese
+      note: フランス保護国の首都。華人とベトナム人がクメール人と並ぶ住民だった。
+    - from: 1975
+      main: khmer
+- id: lang_cambodia_highlands
+  name: カンボジア東北部の山地（ラタナキリ・モンドルキリ）
+  select:
+    adm1: ["KHM/Ratanakiri Province", "KHM/Mondulkiri"]
+  timeline:
+    - from: 1648
+      main: mon_khmer_hill
+      minor: khmer
+      note: プノン人・タンプアン人・クルン人（モン・クメール系）とジャライ人（チャム系）。
+    - from: 2000
+      main: khmer
+      minor: mon_khmer_hill
+      note: 道路の整備と農園開発で、低地からクメール人が移り住んだ。
+
+# ======== ベトナム ========
+- id: lang_vietnam
+  name: ベトナム（キン人）
+  select:
+    iso: [VNM]
+  timeline:
+    - from: 1648
+      main: vietnamese
+      note: ベトナム語（キン人）。書き言葉は漢文と、漢字を応用した字喃（チュノム）。17 世紀に宣教師がローマ字表記（クオック・グー）を考案し、20 世紀に広く使われるようになった。
+      source: "https://ja.wikipedia.org/wiki/ベトナム語"
+- id: lang_saigon
+  name: ザーディン（サイゴン）と東南部
+  select:
+    pieces: [VNM-Binh_D_ng, VNM-Ba_R_a_V_ng_Tau, VNM-Long_An, VNM-Ti_n_Giang, VNM-Con_o, VNM-Tay_Ninh, VNM-ng_Nai]
+  timeline:
+    - from: 1648
+      main: khmer
+      note: クメール人の地（プレイノコール）。
+    - from: 1700
+      main: vietnamese
+      note: 阮氏のザーディン（1698）。明の遺臣の華人も、ビエンホア・ミトーに入植した。
+      source: "https://ja.wikipedia.org/wiki/南進_(ベトナム)"
+- id: lang_ho_chi_minh
+  name: サイゴン・チョロン（ホーチミン）
+  select:
+    pieces: [VNM-Ho_Chi_Minh]
+  timeline:
+    - from: 1648
+      main: khmer
+    - from: 1700
+      main: vietnamese
+    - from: 1800
+      main: vietnamese
+      minor: chinese
+      note: チョロン（堤岸）は華人の商業の町。
+    - from: 1978
+      main: vietnamese
+      note: 社会主義化（商業の国有化）と中越戦争（1979）の前後に、華人の多くがボート・ピープルとして国外へ逃れた。
+      source: "https://ja.wikipedia.org/wiki/ボート・ピープル"
+- id: lang_mekong_delta
+  name: メコン・デルタ
+  select:
+    pieces: [VNM-An_Giang, VNM-Kien_Giang, VNM-C_n_Th, VNM-H_u_Giang, VNM-B_c_Lieu, VNM-Ca_Mau, VNM-V_nh_Long, VNM-B_n_Tre, VNM-ng_Thap]
+  timeline:
+    - from: 1648
+      main: khmer
+      note: クメール人（クメール・クロム）の地。
+    - from: 1760
+      main: khmer
+      minor: vietnamese
+      note: 阮氏の支配とベトナム人の入植。デルタ西部はまだクメール人が多かった。
+    - from: 1850
+      main: vietnamese
+      minor: khmer
+      note: ベトナム人が多数になった。
+    - from: 1900
+      main: vietnamese
+- id: lang_mekong_delta_east
+  name: メコン・デルタ東部（ヴィンロン・ベンチェ・ドンタップ）
+  select:
+    pieces: [VNM-V_nh_Long, VNM-B_n_Tre, VNM-ng_Thap]
+  timeline:
+    - from: 1648
+      main: khmer
+    - from: 1760
+      main: vietnamese
+      minor: khmer
+      note: デルタ東部はベトナム人の入植が早かった（ヴィンロン 1732）。
+    - from: 1850
+      main: vietnamese
+- id: lang_khmer_krom
+  name: チャーヴィン・ソクチャン
+  select:
+    pieces: [VNM-Tra_Vinh, VNM-Soc_Tr_ng]
+  timeline:
+    - from: 1648
+      main: khmer
+    - from: 1800
+      main: khmer
+      minor: vietnamese
+    - from: 1900
+      main: vietnamese
+      minor: khmer
+      note: クメール人が約3割。
+- id: lang_panduranga
+  name: ニントゥアン・ビントゥアン（パーンドゥランガ）
+  select:
+    pieces: [VNM-Ninh_Thu_n, VNM-Binh_Thu_n]
+  timeline:
+    - from: 1648
+      main: cham
+      note: チャム語。チャンパー王国の最後の地。
+      source: "https://ja.wikipedia.org/wiki/チャム族"
+    - from: 1800
+      main: vietnamese
+      minor: cham
+    - from: 1900
+      main: vietnamese
+- id: lang_kauthara
+  name: カインホア
+  select:
+    pieces: [VNM-Khanh_Hoa]
+  timeline:
+    - from: 1648
+      main: cham
+    - from: 1700
+      main: vietnamese
+- id: lang_vn_northwest
+  name: ベトナム西北部（ディエンビエン・ソンラ）
+  select:
+    pieces: [VNM-i_n_Bien, VNM-S_n_La]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      minor: hmong_mien
+      note: 黒タイ・白タイ人（タイ系）のムアン（盆地の小国）。19 世紀からモン人が山の上に移り住んだ。ディエンビエンフーの戦い（1954）の地。
+      source: "https://ja.wikipedia.org/wiki/ディエンビエンフーの戦い"
+- id: lang_vn_hmong
+  name: ライチャウ・ハザン・ラオカイ
+  select:
+    pieces: [VNM-Lai_Chau, VNM-Ha_Giang, VNM-Lao_Cai]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      minor: hmong_mien
+      note: タイ人・タイー人と、モン人・ザオ（ヤオ）人。
+    - from: 1850
+      main: hmong_mien
+      minor: zhuang_tai
+      note: モン人の移住が進み、山地の最大の民族になった。
+- id: lang_lao_cai_kinh
+  name: ラオカイ（1970 年以後）
+  select:
+    pieces: [VNM-Lao_Cai]
+  timeline:
+    - from: 1970
+      main: vietnamese
+      minor: hmong_mien
+      note: 新経済区への移住でキン人が最大の民族になった。
+- id: lang_viet_bac
+  name: ベトバク（カオバン・ランソン・バクカン）
+  select:
+    pieces: [VNM-Cao_B_ng, VNM-L_ng_S_n, VNM-B_c_K_n]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      note: タイー人・ヌン人（チワン語に近いタイ系の言語）の地。ホー＝チ＝ミンは 1941 年にカオバンのパクボーに戻り、ベトミンを結成した。
+      source: "https://ja.wikipedia.org/wiki/タイー族"
+- id: lang_tuyen_quang
+  name: トゥエンクアン・イエンバイ
+  select:
+    pieces: [VNM-Tuyen_Quang, VNM-Yen_Bai]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      minor: vietnamese
+    - from: 1970
+      main: vietnamese
+      minor: zhuang_tai
+      note: キン人の移住が進んだ。
+- id: lang_hoa_binh
+  name: ホアビン
+  select:
+    pieces: [VNM-Hoa_Binh]
+  timeline:
+    - from: 1648
+      main: muong
+      minor: vietnamese
+      note: ムオン人（ベトナム語と同じ系統のムオン語）。
+- id: lang_central_highlands
+  name: 中部高原（ザライ・ダクラク）
+  select:
+    pieces: [VNM-Gia_Lai, VNM-k_L_k]
+  timeline:
+    - from: 1648
+      main: cham
+      minor: mon_khmer_hill
+      note: ジャライ人・エデ人（チャム系）とバナール人・ムノン人（モン・クメール系）。
+    - from: 1965
+      main: cham
+      minor: vietnamese
+      note: 南ベトナム政府の入植（1957–）。山地民の自治を求める運動（FULRO）が起きた。
+    - from: 1985
+      main: vietnamese
+      minor: cham
+      note: 統一後の新経済区への移住で、キン人が多数になった。2001・04 年には山地民の土地と信仰をめぐる抗議が起きた。
+- id: lang_kon_tum
+  name: コントゥム・ダクノン・ビンフオック
+  select:
+    pieces: [VNM-Kon_Tum, VNM-k_Nong, VNM-Binh_Ph_c]
+  timeline:
+    - from: 1648
+      main: mon_khmer_hill
+      note: バナール人・セダン人・ムノン人・スティエン人（モン・クメール系）。
+    - from: 1965
+      main: mon_khmer_hill
+      minor: vietnamese
+    - from: 1985
+      main: vietnamese
+      minor: mon_khmer_hill
+- id: lang_lam_dong
+  name: ラムドン（ダラット）
+  select:
+    pieces: [VNM-Lam_ng]
+  timeline:
+    - from: 1648
+      main: mon_khmer_hill
+      note: コホ人・マー人（モン・クメール系）。
+    - from: 1950
+      main: mon_khmer_hill
+      minor: vietnamese
+    - from: 1960
+      main: vietnamese
+      minor: mon_khmer_hill
+
+# ======== マレーシア・シンガポール・ブルネイ ========
+- id: lang_malaysia
+  name: マレー半島
+  select:
+    iso: [MYS]
+  timeline:
+    - from: 1648
+      main: malay
+      note: マレー語（ムラユ語）。マラッカ海峡の交易の共通語。ジャウィ文字（アラビア文字）で書かれた。
+      source: "https://ja.wikipedia.org/wiki/マレー語"
+- id: lang_malaya_west
+  name: マレー半島西海岸
+  select:
+    adm1: ["MYS/Negeri Sembilan", "MYS/Malacca", "MYS/Johor", "MYS/Pahang", "MYS/Perak"]
+    pieces: [MYS-Seberang_Perai_Selatan, MYS-Seberang_Perai_Tengah, MYS-Seberang_Perai_Utara]
+  timeline:
+    - from: 1648
+      main: malay
+      note: ヌグリ・スンビランはスマトラから移ったミナンカバウ人の地（母系の慣習）。マラッカには華人とマレー人の混血のババ・ニョニャ（プラナカン）がいた。
+    - from: 1890
+      main: malay
+      minor: chinese
+      note: 錫鉱山とゴム園の開発で、華人とインド人（南インドのタミル人が多い）の移民が増えた。1957 年の独立時、マラヤの人口はマレー人約5割、華人約4割、インド人約1割。
+      source: "https://ja.wikipedia.org/wiki/マレーシアの華人"
+- id: lang_kinta
+  name: キンタ・ラルット（イポー・タイピン）
+  select:
+    pieces: [MYS-Kinta, MYS-Kampar, MYS-Larut_dan_Matang]
+  timeline:
+    - from: 1648
+      main: malay
+    - from: 1860
+      main: chinese
+      minor: malay
+      note: 錫鉱山の華人（客家・広東人）。
+    - from: 1980
+      main: malay
+      minor: chinese
+- id: lang_selangor
+  name: スランゴール・クアラルンプール
+  select:
+    adm1: ["MYS/Selangor", "MYS/Kuala Lumpur", "MYS/Putrajaya"]
+  timeline:
+    - from: 1648
+      main: malay
+      note: ブギス人の子孫のスルタン家（18 世紀〜）。
+    - from: 1870
+      main: chinese
+      minor: malay
+      note: クアラルンプールは華人のカピタン（葉亜来）のもとで発展した。1969 年の5月13日事件（民族暴動）の後、マレー人を優遇するブミプトラ政策が始まった。タミル人などのインド人も多い（1931 年に約3割）が、地図は2番目の少数派までしか描けない。
+      source: "https://ja.wikipedia.org/wiki/5月13日事件"
+    - from: 1980
+      main: malay
+      minor: chinese
+- id: lang_kuala_lumpur
+  name: クアラルンプール
+  select:
+    pieces: [MYS-Kuala_Lumpur]
+  timeline:
+    - from: 1648
+      main: malay
+    - from: 1870
+      main: chinese
+      minor: malay
+      note: 華人の錫鉱山の町として発展した。1980 年でも市の人口の過半数（約 52%）が華人。
+    - from: 2000
+      main: malay
+      minor: chinese
+      note: 2000 年代にマレー系が華人を上回った（2010 年はマレー系 46%、華人 43%）。
+- id: lang_penang
+  name: ペナン島（ジョージタウン）
+  select:
+    pieces: [MYS-Timur_Laut, MYS-Barat_Daya]
+  timeline:
+    - from: 1648
+      main: malay
+    - from: 1790
+      main: chinese
+      minor: malay
+      note: 華人（福建人が多い）の港市。インド系のムスリム（ジャウィ・プラナカン）も多い。
+- id: lang_sabah
+  name: 北ボルネオ（サバ）
+  select:
+    adm1: ["MYS/Sabah"]
+  timeline:
+    - from: 1648
+      main: dayak
+      minor: malay
+      note: 内陸のカダザン・ドゥスン人・ムルット人。海岸のバジャウ人（海の民）・ブルネイ・マレー人・スルク人。1963 年以後はフィリピン・インドネシアからの移民も多い。
+- id: lang_sarawak
+  name: サラワク
+  select:
+    adm1: ["MYS/Sarawak"]
+  timeline:
+    - from: 1648
+      main: dayak
+      minor: malay
+      note: イバン人（海ダヤク）・ビダユ人・オラン・ウル（カヤン人・ケニャ人など）と、海岸のマレー人・メラナウ人。
+    - from: 1900
+      main: dayak
+      minor: chinese
+      note: ブルック家の招きで福州系の華人がシブに入植した（1901）。華人は約4分の1。
+- id: lang_labuan_brunei
+  name: ブルネイ・ラブアン
+  select:
+    iso: [BRN]
+    adm1: ["MYS/Labuan"]
+  timeline:
+    - from: 1648
+      main: malay
+      note: ブルネイ・マレー語。かつてはボルネオ北部とフィリピン南部に勢力を広げた。
+- id: lang_singapore
+  name: シンガポール
+  select:
+    iso: [SGP]
+  timeline:
+    - from: 1648
+      main: malay
+      note: マレー人とオラン・ラウト（海の民）の小さな集落。
+    - from: 1830
+      main: chinese
+      minor: malay
+      note: 1819 年の開港の後、福建・潮州・広東・客家・海南の華人が集まった。
+      source: "https://ja.wikipedia.org/wiki/シンガポールの歴史"
+    - from: 1900
+      main: chinese
+      note: 華人が約4分の3。マレー人は約 13%、インド人は約9%。独立（1965）後は英語を共通語とし、華人には標準中国語（華語）を広めた（「華語を話そう運動」1979–）。
+      source: "https://en.wikipedia.org/wiki/Speak_Mandarin_Campaign"
+
+# ======== インドネシア ========
+- id: lang_indonesia
+  name: インドネシア（マレー系の地域）
+  select:
+    iso: [IDN]
+  timeline:
+    - from: 1648
+      main: malay
+      note: スマトラ東岸（リアウ・ジャンビ・パレンバン）・ボルネオの海岸のマレー人。マレー語は群島の交易の共通語で、1928 年の「青年の誓い」で「インドネシア語」として民族の共通語とされた。
+      source: "https://ja.wikipedia.org/wiki/インドネシア語"
+- id: lang_riau
+  name: リアウ
+  select:
+    adm1: ["IDN/Riau"]
+  timeline:
+    - from: 1648
+      main: malay
+      note: シアク王国（1723–）などマレー人のスルタン国。
+    - from: 1980
+      main: malay
+      minor: javanese
+      note: 移住政策（トランスミグラシ）と石油・パーム油の開発で、ジャワ人・ミナンカバウ人・バタク人が移り住んだ。
+- id: lang_aceh
+  name: アチェ
+  select:
+    adm1: ["IDN/Aceh"]
+  timeline:
+    - from: 1648
+      main: acehnese
+      note: アチェ語。アチェ王国は 17 世紀前半（イスカンダル・ムダ）に最盛期を迎え、「メッカのベランダ」と呼ばれた。
+      source: "https://ja.wikipedia.org/wiki/アチェ王国"
+- id: lang_gayo
+  name: ガヨ高地・アラス・シムルエ
+  select:
+    pieces: [IDN-Aceh_Tengah, IDN-Bener_Meriah, IDN-Gayo_Lues, IDN-Aceh_Tenggara, IDN-Simeulue]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      minor: acehnese
+      note: ガヨ人・アラス人などの高地の民族（ガヨ語）。
+- id: lang_singkil
+  name: シンキル・スブルッサラム
+  select:
+    pieces: [IDN-Aceh_Singkil, IDN-Kota_Subulussalam]
+  timeline:
+    - from: 1648
+      main: batak
+      minor: malay
+      note: パクパク・バタク系のシンキル人。
+- id: lang_batak
+  name: バタク高地（北スマトラ）
+  select:
+    adm1: ["IDN/North Sumatra"]
+  timeline:
+    - from: 1648
+      main: batak
+      note: トバ・カロ・シマルングン・パクパク・マンダイリンなどのバタク人。
+      source: "https://ja.wikipedia.org/wiki/バタク人"
+- id: lang_east_sumatra
+  name: 東スマトラ（デリ・ランカット・アサハン）
+  select:
+    pieces: [IDN-Langkat, IDN-Deli_Serdang, IDN-Serdang_Bedagai, IDN-Batu_Bara, IDN-Asahan, IDN-Labuhan_Batu, IDN-Labuhan_Batu_Selatan, IDN-Labuhan_Batu_Utara, IDN-Kota_Binjai, IDN-Kota_Tebing_Tinggi, IDN-Kota_Tanjung_Balai]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: batak
+      note: デリ・ランカット・アサハンなどのマレー人のスルタン国。
+    - from: 1900
+      main: javanese
+      minor: malay
+      note: 1860 年代からタバコ・ゴム・パーム油の農園が開かれ、契約労働者（クーリー）としてジャワ人と華人が大量に連れてこられた。
+      source: "https://en.wikipedia.org/wiki/Deli_Sultanate"
+- id: lang_medan
+  name: メダン
+  select:
+    pieces: [IDN-Kota_Medan]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: batak
+    - from: 1900
+      main: malay
+      minor: chinese
+      note: 農園の中心都市として、華人・ジャワ人・インド人が集まった。
+    - from: 1960
+      main: javanese
+      minor: batak
+      note: バタク人の移住が増え、ジャワ人・バタク人・華人・マレー人などが混在する。
+- id: lang_simalungun
+  name: シマルングン
+  select:
+    pieces: [IDN-Simalungun]
+  timeline:
+    - from: 1648
+      main: batak
+    - from: 1920
+      main: javanese
+      minor: batak
+      note: 農園の労働者のジャワ人が多数になった。
+- id: lang_nias
+  name: ニアス島
+  select:
+    pieces: [IDN-Nias, IDN-Nias_Barat, IDN-Nias_Selatan, IDN-Nias_Utara, IDN-Kota_Gunungsitoli]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      note: ニアス語。
+- id: lang_minangkabau
+  name: 西スマトラ（ミナンカバウ）
+  select:
+    adm1: ["IDN/West Sumatra"]
+  timeline:
+    - from: 1648
+      main: minangkabau
+      note: ミナンカバウ人（母系社会）。各地へ出稼ぎ・移住する慣習（ムランタウ）で知られる。
+      source: "https://ja.wikipedia.org/wiki/ミナンカバウ人"
+- id: lang_mentawai
+  name: メンタワイ諸島
+  select:
+    pieces: [IDN-Kepulauan_Mentawai]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+- id: lang_lampung
+  name: ランプン
+  select:
+    adm1: ["IDN/Lampung"]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      note: ランプン人。コショウの産地で、バンテン王国の影響下にあった。
+    - from: 1930
+      main: austronesian_other
+      minor: javanese
+      note: オランダの植民（コロニサシ、1905–）でジャワ人の入植が始まった。
+      source: "https://en.wikipedia.org/wiki/Transmigration_program"
+    - from: 1960
+      main: javanese
+      minor: austronesian_other
+      note: 独立後の移住政策（トランスミグラシ）で、ジャワ人が住民の6割余りになった。
+- id: lang_bangka
+  name: バンカ・ブリトゥン
+  select:
+    adm1: ["IDN/Bangka-Belitung Islands"]
+  timeline:
+    - from: 1648
+      main: malay
+    - from: 1750
+      main: malay
+      minor: chinese
+      note: 錫鉱山の客家。
+    - from: 1970
+      main: malay
+- id: lang_jakarta
+  name: バタヴィア（ジャカルタ）
+  select:
+    adm1: ["IDN/Jakarta Special Capital Region"]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: chinese
+      note: オランダ東インド会社の本拠地バタヴィア（1619–）。各地から連れてこられた奴隷や移住者の子孫が混ざり合い、マレー語のクレオールを話すブタウィ人が生まれた。華人は 1740 年に大虐殺された（紅河事件）。
+      source: "https://ja.wikipedia.org/wiki/ブタウィ人"
+    - from: 1960
+      main: sundanese
+      minor: javanese
+      note: 首都への移住で、スンダ人（約 33%、1961）・ジャワ人（約 25%）がブタウィ人（約 23%）を上回った。
+    - from: 1980
+      main: javanese
+      minor: malay
+      note: ジャワ人が最大（約 36%、2010）で、ブタウィ人が続く。
+- id: lang_west_java
+  name: 西ジャワ・バンテン（スンダ）
+  select:
+    adm1: ["IDN/West Java", "IDN/Banten"]
+  timeline:
+    - from: 1648
+      main: sundanese
+      note: スンダ語。バンテン王国の北部の海岸はジャワ語（バンテン方言）。
+      source: "https://ja.wikipedia.org/wiki/スンダ人"
+- id: lang_cirebon
+  name: チルボン・インドラマユ
+  select:
+    pieces: [IDN-Cirebon, IDN-Kota_Cirebon, IDN-Indramayu]
+  timeline:
+    - from: 1648
+      main: javanese
+      minor: sundanese
+      note: チルボン王国。ジャワ語（チルボン方言）。
+- id: lang_java
+  name: 中部・東ジャワ
+  select:
+    adm1: ["IDN/Central Java", "IDN/Special Region of Yogyakarta", "IDN/East Java"]
+  timeline:
+    - from: 1648
+      main: javanese
+      note: ジャワ語。マタラム王国の宮廷文化（敬語の体系、影絵芝居ワヤン）。
+      source: "https://ja.wikipedia.org/wiki/ジャワ語"
+- id: lang_madura
+  name: マドゥラ島
+  select:
+    pieces: [IDN-Bangkalan, IDN-Sampang, IDN-Pamekasan, IDN-Sumenep]
+  timeline:
+    - from: 1648
+      main: madurese
+      note: マドゥラ語。
+- id: lang_tapal_kuda
+  name: 東ジャワの東端（シトゥボンド・ボンドウォソ）
+  select:
+    pieces: [IDN-Situbondo, IDN-Bondowoso]
+  timeline:
+    - from: 1648
+      main: javanese
+      note: ヒンドゥー教のブランバンガン王国の地。
+    - from: 1800
+      main: madurese
+      minor: javanese
+      note: 18〜19 世紀にマドゥラ人が移り住み、多数になった。
+- id: lang_tapal_kuda_mixed
+  name: プロボリンゴ・ジュンブル・ルマジャン・パスルアン
+  select:
+    pieces: [IDN-Probolinggo, IDN-Kota_Probolinggo, IDN-Jember, IDN-Lumajang, IDN-Pasuruan, IDN-Kota_Pasuruan]
+  timeline:
+    - from: 1648
+      main: javanese
+    - from: 1850
+      main: javanese
+      minor: madurese
+      note: マドゥラ人の移住。ブロモ山のテングル人はジャワ語を話すヒンドゥー教徒。
+- id: lang_bali_lombok
+  name: バリ・ロンボク
+  select:
+    adm1: ["IDN/Bali"]
+    pieces: [IDN-Lombok_Barat, IDN-Lombok_Tengah, IDN-Lombok_Timur, IDN-Lombok_Utara, IDN-Kota_Mataram]
+  timeline:
+    - from: 1648
+      main: balinese
+      note: バリ語（バリ）とササク語（ロンボク）。
+- id: lang_nusa_tenggara
+  name: 小スンダ列島（スンバワ・フローレス・スンバ・西ティモール）
+  select:
+    adm1: ["IDN/West Nusa Tenggara", "IDN/East Nusa Tenggara"]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      note: スンバワ語・ビマ語・マンガライ語・シッカ語・スンバ語・ダワン語（ウアブ・メト）など多くの言語。共通語はクパン・マレー語。
+- id: lang_alor
+  name: アロール・パンタル
+  select:
+    pieces: [IDN-Alor]
+  timeline:
+    - from: 1648
+      main: papuan
+      minor: austronesian_other
+      note: アロール・パンタル諸語（パプア系）。
+- id: lang_belu
+  name: ベル・マラカ（西ティモール東部）
+  select:
+    pieces: [IDN-Belu, IDN-Malaka]
+  timeline:
+    - from: 1648
+      main: tetum
+      minor: austronesian_other
+      note: テトゥン語の地。東ティモールと同じ民族。
+- id: lang_kalbar
+  name: 西カリマンタン
+  select:
+    adm1: ["IDN/West Kalimantan"]
+  timeline:
+    - from: 1648
+      main: dayak
+      minor: malay
+      note: 内陸のダヤク人（イバン人・カンタク人など）と、海岸のマレー人。
+- id: lang_kalbar_coast
+  name: 西カリマンタンの海岸（ポンティアナック・サンバス・クタパン）
+  select:
+    pieces: [IDN-Sambas, IDN-Mempawah, IDN-Kota_Pontianak, IDN-Ketapang, IDN-Kayong_Utara, IDN-Kubu_Raya]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: dayak
+    - from: 1770
+      main: malay
+      minor: chinese
+      note: 客家・潮州の華人の金鉱夫と商人。1967 年には内陸から華人が追われた。1999 年にはサンバスでダヤク人・マレー人とマドゥラ人移住者の衝突が起きた。
+      source: "https://en.wikipedia.org/wiki/Sambas_riots"
+- id: lang_singkawang
+  name: シンカワン
+  select:
+    pieces: [IDN-Kota_Singkawang]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: dayak
+    - from: 1770
+      main: chinese
+      minor: malay
+      note: 客家の町。今も華人が4割余りを占める。
+- id: lang_kalimantan
+  name: 中部・東部・北カリマンタン
+  select:
+    adm1: ["IDN/Central Kalimantan", "IDN/East Kalimantan", "IDN/North Kalimantan"]
+  timeline:
+    - from: 1648
+      main: dayak
+      minor: malay
+      note: ンガジュ人・ケニャ人・カヤン人などダヤクの諸民族と、海岸のバンジャル人・クタイ人（マレー系）。
+- id: lang_kaltim_coast
+  name: 東カリマンタンの都市（バリクパパン・サマリンダ・ボンタン・タラカン）
+  select:
+    pieces: [IDN-Kota_Balikpapan, IDN-Kota_Samarinda, IDN-Kota_Bontang, IDN-Kota_Tarakan, IDN-Kutai_Kartanegara, IDN-Penajam_Paser_Utara]
+  timeline:
+    - from: 1648
+      main: malay
+      minor: dayak
+      note: クタイ王国（マレー系）。
+    - from: 1980
+      main: javanese
+      minor: bugis
+      note: 石油・天然ガスと木材の開発で、ジャワ人・ブギス人・バンジャル人が集まった。
+- id: lang_banjar
+  name: 南カリマンタン（バンジャル）
+  select:
+    adm1: ["IDN/South Kalimantan"]
+  timeline:
+    - from: 1648
+      main: malay
+      note: バンジャル人（マレー系のバンジャル語）。バンジャルマシン王国（–1860）。
+- id: lang_minahasa
+  name: 北スラウェシ・ゴロンタロ
+  select:
+    adm1: ["IDN/North Sulawesi", "IDN/Gorontalo"]
+  timeline:
+    - from: 1648
+      main: sulawesi
+      note: ミナハサ人・サンギル人・モンゴンドウ人・ゴロンタロ人。共通語はマナド・マレー語。
+- id: lang_central_sulawesi
+  name: 中部・東南スラウェシ
+  select:
+    adm1: ["IDN/Central Sulawesi", "IDN/Southeast Sulawesi"]
+  timeline:
+    - from: 1648
+      main: sulawesi
+      minor: bugis
+      note: カイリ人・パモナ人・トラキ人・ムナ人・ブトン人（ウォリオ語）など。海岸にはブギス人の移住者が多い。
+- id: lang_south_sulawesi
+  name: 南・西スラウェシ（ブギス・マカッサル・マンダル）
+  select:
+    adm1: ["IDN/South Sulawesi", "IDN/West Sulawesi"]
+  timeline:
+    - from: 1648
+      main: bugis
+      note: ブギス人・マカッサル人・マンダル人。ゴワ王国（マカッサル）は 1669 年にオランダ東インド会社とボネ王国に敗れた。ブギス人の航海者・商人は群島の各地に移り住んだ。
+      source: "https://ja.wikipedia.org/wiki/ブギス族"
+- id: lang_toraja
+  name: タナ・トラジャ・ママサ
+  select:
+    pieces: [IDN-Tana_Toraja, IDN-Toraja_Utara, IDN-Mamasa]
+  timeline:
+    - from: 1648
+      main: sulawesi
+      note: トラジャ語。
+- id: lang_maluku
+  name: マルク（南マルク）
+  select:
+    adm1: ["IDN/Maluku"]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      note: アンボン・セラム・バンダ・クイ・アル・タニンバルなどの多くの言語。アンボンではアンボン・マレー語が日常語になった。
+- id: lang_north_maluku_papuan
+  name: テルナテ・ティドレ・北ハルマヘラ
+  select:
+    pieces: [IDN-Kota_Ternate, IDN-Kota_Tidore_Kepulauan, IDN-Halmahera_Utara, IDN-Halmahera_Barat, IDN-Pulau_Morotai]
+  timeline:
+    - from: 1648
+      main: papuan
+      note: テルナテ語・ティドレ語・トベロ語・ガレラ語などは、オーストロネシア系ではない北ハルマヘラ諸語（パプア系）。丁子の産地で、テルナテ・ティドレのスルタンが勢力を争った。
+      source: "https://ja.wikipedia.org/wiki/テルナテ王国"
+- id: lang_north_maluku
+  name: 北マルク（南ハルマヘラ・スラ）
+  select:
+    adm1: ["IDN/North Maluku"]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+- id: lang_papua
+  name: パプア（西ニューギニア）
+  select:
+    adm1: ["IDN/Papua"]
+  timeline:
+    - from: 1648
+      main: papuan
+      note: 数百のパプア諸語（ダニ語・アスマット語など）と、北部海岸のオーストロネシア系の言語。
+      source: "https://ja.wikipedia.org/wiki/パプア諸語"
+- id: lang_west_papua
+  name: 西パプア（鳥頭半島）
+  select:
+    adm1: ["IDN/West Papua"]
+  timeline:
+    - from: 1648
+      main: papuan
+    - from: 1990
+      main: papuan
+      minor: javanese
+      note: 移住政策で、ジャワ人・ブギス人などの移住者が住民の4割前後になった。
+
+# ======== フィリピン ========
+- id: lang_tagalog
+  name: タガログ地方（マニラ・南タガログ・中部ルソン）
+  select:
+    iso: [PHL]
+  timeline:
+    - from: 1648
+      main: tagalog
+      note: タガログ語。1937 年にタガログ語をもとにした国語（のちのフィリピノ語）が定められた。スペイン語は植民地の行政と教会・上流層の言葉で、アメリカ統治下（1898–1946）で英語が広まった。
+      source: "https://ja.wikipedia.org/wiki/タガログ語"
+- id: lang_pampanga
+  name: パンパンガ・タルラック
+  select:
+    pieces: [PHL-Pampanga, PHL-Tarlac]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      minor: tagalog
+      note: パンパンガ語（カパンパンガン）。タルラックはパンパンガ人・イロカノ人・パンガシナン人が混住する。
+- id: lang_zambales
+  name: サンバレス
+  select:
+    pieces: [PHL-Zambales]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      note: サンバル人とアエタ人。
+    - from: 1950
+      main: tagalog
+      minor: ilocano
+      note: 移住者（タガログ人・イロカノ人）が増えた。オロンガポにはアメリカ海軍のスービック基地（–1992）があった。
+- id: lang_nueva_ecija
+  name: ヌエバ・エシハ・アウロラ
+  select:
+    pieces: [PHL-Nueva_Ecija, PHL-Aurora]
+  timeline:
+    - from: 1648
+      main: tagalog
+    - from: 1880
+      main: tagalog
+      minor: ilocano
+      note: 19 世紀に開拓された米作地帯で、イロカノ人も多く入植した。
+- id: lang_ilocos
+  name: イロコス・カガヤン渓谷
+  select:
+    pieces: [PHL-Ilocos_Norte, PHL-Ilocos_Sur, PHL-La_Union, PHL-Abra]
+  timeline:
+    - from: 1648
+      main: ilocano
+      note: イロカノ語。人口が多く、各地へ移住した（ハワイへの移民も多い）。マルコス元大統領の地盤。
+      source: "https://ja.wikipedia.org/wiki/イロカノ語"
+- id: lang_pangasinan
+  name: パンガシナン
+  select:
+    pieces: [PHL-Pangasinan]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      minor: ilocano
+      note: パンガシナン語。西部と東部にはイロカノ人も多い。
+- id: lang_cagayan
+  name: カガヤン渓谷
+  select:
+    pieces: [PHL-Cagayan, PHL-Isabela, PHL-Nueva_Vizcaya, PHL-Quirino]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      note: イバナグ人・イタウィス人・ガダン人。
+    - from: 1880
+      main: ilocano
+      minor: philippine_other
+      note: スペインのタバコ専売制度（1782–1882）のもとでタバコ栽培が広がり、イロカノ人の移住が進んだ。
+- id: lang_batanes
+  name: バタネス
+  select:
+    pieces: [PHL-Batanes]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      note: イヴァタン語（台湾の蘭嶼のヤミ語に近い）。
+- id: lang_cordillera
+  name: コルディリェラ
+  select:
+    pieces: [PHL-Apayao, PHL-Benguet, PHL-Ifugao, PHL-Kalinga, PHL-Mountain_Province]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      note: イフガオ語・ボントック語・カリンガ語・イバロイ語・カンカナイ語など（イゴロットと総称された）。
+    - from: 1960
+      main: philippine_other
+      minor: ilocano
+      note: 共通語はイロカノ語。バギオには低地からの移住者が多い。
+- id: lang_bicol
+  name: ビコール
+  select:
+    pieces: [PHL-Albay, PHL-Camarines_Norte, PHL-Camarines_Sur, PHL-Catanduanes, PHL-Sorsogon]
+  timeline:
+    - from: 1648
+      main: bikol
+      note: ビコール語。
+- id: lang_visayas
+  name: ビサヤ諸島
+  select:
+    pieces: [PHL-Aklan, PHL-Antique, PHL-Capiz, PHL-Guimaras, PHL-Iloilo, PHL-Negros_Occidental, PHL-Negros_Oriental, PHL-Bohol, PHL-Cebu, PHL-Siquijor, PHL-Biliran, PHL-Eastern_Samar, PHL-Leyte, PHL-Northern_Samar, PHL-Samar, PHL-Southern_Leyte, PHL-Masbate, PHL-Romblon]
+  timeline:
+    - from: 1648
+      main: visayan
+      note: セブアノ語（セブ・ボホール・ネグロス東部）、ヒリガイノン語（パナイ・ネグロス西部）、ワライ語（サマール・レイテ）など。セブはマゼランの来航（1521）とレガスピの最初の拠点（1565）の地。
+      source: "https://ja.wikipedia.org/wiki/ビサヤ諸語"
+- id: lang_mindoro_palawan
+  name: ミンドロ・パラワン・マリンドゥケ
+  select:
+    pieces: [PHL-Occidental_Mindoro, PHL-Oriental_Mindoro, PHL-Palawan, PHL-Marinduque]
+  timeline:
+    - from: 1648
+      main: tagalog
+      minor: philippine_other
+      note: 海岸のタガログ人と、マンヤン人（ミンドロ）・パラワン人・タグバヌワ人・クヨノン人（パラワン）。マリンドゥケはタガログ語の島。
+- id: lang_mindoro_palawan_interior
+  name: ミンドロ・パラワン
+  select:
+    pieces: [PHL-Occidental_Mindoro, PHL-Oriental_Mindoro, PHL-Palawan]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      minor: tagalog
+      note: ミンドロ内陸のマンヤン人、パラワン本島のパラワン人・タグバヌワ人、北部のクヨノン人が多い。タガログ人はミンドロの海岸に住んでいた。
+    - from: 1950
+      main: tagalog
+      minor: philippine_other
+      note: 20 世紀の移住で、タガログ人が多数になった（パラワンではクヨノン語・ビサヤ諸語の話者も多い）。
+- id: lang_mindanao_north
+  name: ミンダナオ北部の海岸・カラガ
+  select:
+    pieces: [PHL-Misamis_Oriental, PHL-Misamis_Occidental, PHL-Camiguin, PHL-Agusan_del_Norte, PHL-Surigao_del_Norte, PHL-Surigao_del_Sur, PHL-Dinagat_Islands]
+  timeline:
+    - from: 1648
+      main: visayan
+      minor: philippine_other
+      note: セブアノ語・スリガオノン語（ビサヤ系）の海岸の住民と、内陸のルマド（山地民）。
+    - from: 1900
+      main: visayan
+- id: lang_mindanao_interior
+  name: ミンダナオの内陸と東南部（ブキドノン・アグサン・ダバオ）
+  select:
+    pieces: [PHL-Bukidnon, PHL-Agusan_del_Sur, PHL-Davao_del_Norte, PHL-Davao_del_Sur, PHL-Davao_Oriental, PHL-Davao_Occidental, PHL-Compostela_Valley]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      minor: moro
+      note: マノボ人・バゴボ人・マンダヤ人などルマドの諸言語。
+    - from: 1950
+      main: visayan
+      minor: philippine_other
+      note: ビサヤ諸島からの入植者（セブアノ語）が多数になった。
+- id: lang_moro
+  name: ムスリム・ミンダナオ（スールー・マギンダナオ・ラナオ）
+  select:
+    pieces: [PHL-Sulu, PHL-Tawi_Tawi, PHL-Basilan, PHL-Maguindanao, PHL-Cotabato_City, PHL-Lanao_del_Sur, PHL-City_of_Isabela]
+  timeline:
+    - from: 1648
+      main: moro
+      note: タウスグ語（スールー）・サマ語（タウィタウィ）・ヤカン語（バシラン）・マギンダナオ語・マラナオ語。
+      source: "https://ja.wikipedia.org/wiki/モロ_(フィリピン)"
+- id: lang_lanao_norte
+  name: 北ラナオ
+  select:
+    pieces: [PHL-Lanao_del_Norte]
+  timeline:
+    - from: 1648
+      main: moro
+    - from: 1950
+      main: visayan
+      minor: moro
+- id: lang_cotabato
+  name: コタバト・南コタバト・サランガニ
+  select:
+    pieces: [PHL-Cotabato, PHL-South_Cotabato, PHL-Sarangani]
+  timeline:
+    - from: 1648
+      main: moro
+      minor: philippine_other
+      note: マギンダナオ人と、ティボリ人・ブラアン人などの山地民。
+    - from: 1950
+      main: visayan
+      minor: moro
+      note: ヒリガイノン語・セブアノ語の入植者が多数になった。
+- id: lang_zamboanga
+  name: サンボアンガ半島
+  select:
+    pieces: [PHL-Zamboanga_del_Norte, PHL-Zamboanga_del_Sur, PHL-Zamboanga_Sibugay]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      minor: moro
+      note: スバヌン人と海岸のムスリム。サンボアンガ市はスペイン語系のクレオール語チャバカノ語。
+    - from: 1930
+      main: visayan
+      minor: moro
+      note: セブアノ語の入植者が多数になった。
+
+# ======== 東ティモール ========
+- id: lang_east_timor
+  name: 東ティモール
+  select:
+    iso: [TLS]
+  timeline:
+    - from: 1648
+      main: tetum
+      note: テトゥン語のほか、マンバイ語・ケマク語・ブナク語など多くの言語。独立後はテトゥン語とポルトガル語が公用語（2002）。
+      source: "https://ja.wikipedia.org/wiki/テトゥン語"
+- id: lang_lautem
+  name: ラウテム（東端）
+  select:
+    pieces: [TLS-Lautem]
+  timeline:
+    - from: 1648
+      main: papuan
+      minor: tetum
+      note: ファタルク語（パプア系）。
+- id: lang_oecusse
+  name: オエクシ
+  select:
+    adm1: ["TLS/Oecusse"]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      minor: tetum
+      note: バイケノ語（西ティモールのダワン語と同じ）。リファウはポルトガル人が最初に拠点を置いた所（1556 年ごろ）。

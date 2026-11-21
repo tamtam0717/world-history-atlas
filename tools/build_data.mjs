@@ -88,6 +88,34 @@ const checkPolity = (id, where) => {
   if (id == null) return;
   if (!polityIds.has(id)) warn(`${where}: 未定義の政体 "${id}"`);
 };
+// 本国（home_iso。docs/movements-format.md）：潮流の spread が既定で光らせる範囲。政体 ID → [[from, to, ピース index の一覧], ...]
+// 項目は ISO コード（"GBR"）か {iso, from, to}（from・to は年。両端を含み、どちらも省略可）。ISO はその国の全ピース（iso_all と同じ）
+const polityHome = {};
+for (const p of polities) {
+  if (p.home_iso == null) continue;
+  const where = `${p._file} の ${p.id} の home_iso`;
+  if (!Array.isArray(p.home_iso) || p.home_iso.length === 0) {
+    warn(`${where}: ISO コードのリストで書いてください`);
+    continue;
+  }
+  const groups = new Map();
+  for (const h of p.home_iso) {
+    const e = typeof h === "string" ? { iso: h } : h;
+    if (!e || typeof e.iso !== "string" || (e.from != null && typeof e.from !== "number") || (e.to != null && typeof e.to !== "number")) {
+      warn(`${where}: 項目は ISO コードか {iso, from, to}（from・to は年の数値、省略可）で書いてください（${JSON.stringify(h)}）`);
+      continue;
+    }
+    const l = byIsoAll.get(e.iso);
+    if (!l) {
+      warn(`${where}: ピースのない国コード "${e.iso}"`);
+      continue;
+    }
+    const k = `${e.from ?? ""}|${e.to ?? ""}`;
+    if (!groups.has(k)) groups.set(k, [e.from ?? null, e.to ?? null, []]);
+    groups.get(k)[2].push(...l);
+  }
+  polityHome[p.id] = [...groups.values()].map(([f, t, l]) => [f, t, [...new Set(l)].sort((a, b) => a - b)]);
+}
 
 // ---- 地域 ----
 const regions = loadDir("regions");
@@ -430,18 +458,31 @@ for (const m of movementsRaw) {
   const spread = [];
   for (const [i, s] of (m.spread ?? []).entries()) {
     const w = `${where} の spread ${i + 1} 番目`;
+    const KEYS = ["polities", "regions", "exclude_regions", "include_colonies"];
+    for (const k of Object.keys(s.where ?? {})) if (!KEYS.includes(k)) warn(`${w}: where の "${k}" は使えません（${KEYS.join(" / ")}）`);
     const pol = s.where?.polities ?? [];
     const reg = s.where?.regions ?? [];
+    const exc = s.where?.exclude_regions ?? [];
+    const colonies = s.where?.include_colonies ?? false;
     if (!pol.length && !reg.length) warn(`${w}: where に polities か regions を書いてください`);
+    if (typeof colonies !== "boolean") warn(`${w}: include_colonies は true か false で書いてください`);
+    if (colonies === true && !pol.length) warn(`${w}: include_colonies は polities と一緒に使います`);
     for (const p of pol) checkPolity(p, w);
-    const regionsOk = [];
-    for (const r of reg) {
-      if (!regionById.has(r)) warn(`${w}: 未定義の地域 "${r}"`);
-      else regionsOk.push(r);
-    }
+    const okRegions = (list) => {
+      const out = [];
+      for (const r of list) {
+        if (!regionById.has(r)) warn(`${w}: 未定義の地域 "${r}"`);
+        else out.push(r);
+      }
+      return out;
+    };
+    const regionsOk = okRegions(reg);
+    const excludeOk = okRegions(exc);
     spread.push({
       polities: pol.filter((p) => polityIds.has(p)),
       regions: regionsOk,
+      ...(excludeOk.length ? { exclude: excludeOk } : {}),
+      ...(colonies === true ? { colonies: true } : {}),
       center: !!s.center,
       curve: checkCurve(s.curve, w),
     });
@@ -452,7 +493,7 @@ for (const m of movementsRaw) {
 }
 // spread の regions は政治の地域のピースで解決する（画面で使うためピース index の一覧を出力）
 const movementRegions = {};
-for (const m of movements) for (const s of m.spread) for (const r of s.regions) {
+for (const m of movements) for (const s of m.spread) for (const r of [...s.regions, ...(s.exclude ?? [])]) {
   if (!(r in movementRegions)) movementRegions[r] = [...resolveRegion(r, "movements")].sort((a, b) => a - b);
 }
 
@@ -481,7 +522,7 @@ const atlas = {
   range: meta.range,
   certainty: CERTAINTY,
   pieceIds: pieces.map((p) => p.id),
-  polities: polities.map(strip),
+  polities: polities.map(({ _file, home_iso, ...rest }) => rest),
   regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, ...(r.names ? { names: r.names } : {}), timeline: r.timeline })),
   pieceTimelines,
   events: events.map(strip),
@@ -493,6 +534,12 @@ const atlas = {
   language,
   movements,
   movementRegions,
+  // 潮流で使う政体の本国（植民地・占領地を光らせないため）
+  movementHome: Object.fromEntries(
+    [...new Set(movements.flatMap((m) => m.spread.filter((s) => !s.colonies).flatMap((s) => s.polities)))]
+      .filter((id) => id in polityHome)
+      .map((id) => [id, polityHome[id]]),
+  ),
 };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(atlas));
