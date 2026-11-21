@@ -264,5 +264,75 @@
       "6328:乌兰县": "海西"
     },
     "_comment_names": "names_by_code：地州界の名前（地区の所在地）がわかりにくい・誤っている区画に、地級コード（1999年）で名前を付ける"
+  },
+  "_comment_world_adm2": "範囲外（zone=world）で ADM1 では粗い国を CGAZ ADM2 単位にする。\"all\" は国全体、{\"only\": [...]} はその ADM1 だけ、{\"except\": [...]} はその ADM1 以外。ADM1 名は CGAZ の表記のまま（ベトナムは文字化けした ? を含む）。adm1_fix は ADM2 ピースの adm1 欄に入れる親の州名の文字化けを直す",
+  "world_adm2": {
+    "IND": "all",
+    "PAK": "all",
+    "BGD": "all",
+    "LKA": "all",
+    "NPL": "all",
+    "MMR": "all",
+    "PHL": "all",
+    "IDN": {
+      "except": [
+        "Papua",
+        "West Papua"
+      ]
+    },
+    "LAO": {
+      "only": [
+        "Champasak"
+      ]
+    },
+    "VNM": {
+      "only": [
+        "Qu?ng Tr?",
+        "Qu?ng Bình"
+      ]
+    },
+    "MYS": {
+      "only": [
+        "Penang",
+        "Perak",
+        "Sarawak"
+      ]
+    }
+  },
+  "_why_world_adm2": {
+    "IND": "ムガル帝国の解体、マラーター・マイソール、東インド会社の段階的な拡大、藩王国、仏領（ポンディシェリ・カーリカール・マーヘ・ヤナム）、ポルトガル領（ゴア・ダマン・ディウ・ダードラー＝ナガル・ハヴェーリー）",
+    "PAK": "シンド・パンジャーブ・バローチスターンの藩王国（カラート・バハーワルプル・ハイルプル）、北西辺境と部族地域、ギルギット＝バルティスタン（フンザ・ナガル）",
+    "BGD": "1666 ムガル帝国のチッタゴン征服（それまでアラカン）、1947 シレットの住民投票",
+    "LKA": "ポルトガル・オランダの沿岸領とキャンディ王国、ジャフナ王国",
+    "NPL": "ゴルカ朝の統一（1768 カトマンズ盆地）、1816 スガウリ条約、1860 タライ西部（ナヤ・ムルク）の返還",
+    "MMR": "1826・1852・1885 の英緬戦争（1852 の境界はタエッ・タウングーの県）、シャン諸州・カレンニー",
+    "PHL": "スペインの段階的な支配（コルディリェラ、ミンダナオのマギンダナオ王国・スールー王国）",
+    "IDN": "VOC・オランダの段階的な拡大（ジャワの県単位の割譲、マタラムの分裂、バリの諸王国、マカッサル、アンボン・バンダ、ティモール西部）。パプアは州のまま",
+    "LAO": "1904 メコン右岸（チャンパーサック西部）のフランスへの割譲、1941 タイへの割譲",
+    "VNM": "ザイン川（クアンビン）の鄭氏・阮氏の境界、1954 の北緯17度線（ベンハイ川、クアンチのヴィンリン県が北）",
+    "MYS": "ペナン島（1786）とウェルズリー州（1800）、ディンディングス（ペラのマンジュン、1874–1935）、サラワクの段階的な拡大（リンバン 1890・ラワス 1905）"
+  },
+  "adm1_fix": {
+    "IND": {
+      "Mah?r?shtra": "Maharashtra",
+      "N?g?land": "Nagaland",
+      "Tamil N?du": "Tamil Nadu",
+      "Chhatt?sgarh": "Chhattisgarh",
+      "Gujar?t": "Gujarat",
+      "Bih?r": "Bihar",
+      "Lad?kh": "Ladakh",
+      "R?jasth?n": "Rajasthan",
+      "Telang?na": "Telangana",
+      "Arun?chal Pradesh": "Arunachal Pradesh",
+      "Megh?laya": "Meghalaya",
+      "Jh?rkhand": "Jharkhand",
+      "Karn?taka": "Karnataka",
+      "Uttar?khand": "Uttarakhand",
+      "D?dra and Nagar Haveli and Dam?n and Diu": "Dadra and Nagar Haveli and Daman and Diu",
+      "Chand?garh": "Chandigarh",
+      "Him?chal Pradesh": "Himachal Pradesh",
+      "Jammu and Kashm?r": "Jammu and Kashmir",
+      "Hary?na": "Haryana"
+    }
   }
 }

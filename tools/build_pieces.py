@@ -166,6 +166,10 @@ def build_world(cfg, inner_countries, used, taken, clip):
 
             rows.extend(build_chn(cfg, adm1, adm2).to_dict("records"))
             continue
+        if iso in cfg.get("world_adm2", {}):
+            # 範囲外でも ADM2 単位にする国（南アジア・東南アジアなど）。ADM2 を1つずつピースにする
+            rows.extend(world_adm2_rows(iso, cfg, adm1, adm2, used))
+            continue
         if iso in inner_countries:
             base, lvl = country_base(iso, cfg, adm1, adm2)
         else:
@@ -224,6 +228,41 @@ def build_world(cfg, inner_countries, used, taken, clip):
     w["adm1"] = w["adm1"].where(w["adm1"] != "", w["name"])
     w["zone"] = "world"
     return w[["id", "name", "iso", "adm1", "adm2", "src", "zone", "geometry"]]
+
+
+def world_adm2_rows(iso, cfg, adm1, adm2, used):
+    """pieces_config.json の world_adm2 の国。指定の ADM1 の中は CGAZ ADM2 を1つずつピースにし、
+    残りの ADM1 はそのまま。範囲内のピースに使った区画（used）は除く"""
+    spec = cfg["world_adm2"][iso]
+    fix = cfg.get("adm1_fix", {}).get(iso, {})
+    a1c = adm1[adm1.shapeGroup == iso]
+    if spec == "all":
+        fine1 = a1c
+    elif "only" in spec:
+        fine1 = a1c[a1c.shapeName.isin(spec["only"])]
+    else:
+        fine1 = a1c[~a1c.shapeName.isin(spec["except"])]
+    missing = set(spec.get("only", []) if isinstance(spec, dict) else []) - set(fine1.shapeName)
+    if missing:
+        raise SystemExit(f"world_adm2 {iso}: ADM1 が見つからない {sorted(missing)}")
+    rows = []
+    for t in a1c[~a1c.index.isin(fine1.index)].itertuples():
+        if t.shapeID in used:
+            continue
+        rows.append({"name": t.shapeName, "iso": iso, "adm1": t.shapeName, "src": "geoBoundaries CGAZ ADM1", "geometry": t.geometry})
+    a2c = adm2[(adm2.shapeGroup == iso) & ~adm2.shapeID.isin(used)]
+    # 親の ADM1：代表点が入る ADM1。どれにも入らない（海岸のずれなど）ものは最も近い ADM1
+    pts = gpd.GeoDataFrame(a2c[["shapeName"]], geometry=a2c.geometry.representative_point(), crs=a2c.crs)
+    par = a1c[["shapeName", "geometry"]].rename(columns={"shapeName": "parent"})
+    j = gpd.sjoin_nearest(pts, par, how="left")
+    j = j[~j.index.duplicated()]
+    for idx, t in zip(a2c.index, a2c.itertuples()):
+        p = j.at[idx, "parent"]
+        if p not in set(fine1.shapeName):
+            continue
+        rows.append({"name": t.shapeName, "iso": iso, "adm1": fix.get(p, p).strip(), "src": "geoBoundaries CGAZ ADM2",
+                     "geometry": t.geometry.make_valid()})
+    return rows
 
 
 def apply_splits(g, specs):
