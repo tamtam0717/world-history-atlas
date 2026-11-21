@@ -857,7 +857,10 @@
   timeline:
   - {from: 1648, owner: nepal_baise, certainty: uncertain, note: 森の多いタライの平野。北のドティ・サリヤーンなどの王国と、南のムガル帝国（のちアワド太守）の間で帰属があいまいだった}
   - {from: 1790, owner: nepal, certainty: uncertain, cause: ゴルカがドティなどの西部の山地を征服し、ふもとのタライも押さえる, source: 'https://en.wikipedia.org/wiki/Doti_Kingdom'}
-  - {from: 1816, owner: britain, label: ナヤ・ムルク（イギリス領）, cause: グルカ戦争に敗れたネパールが、スガウリ条約でメチ川の東の地を東インド会社に譲る（3月）, note: 東部のタライは1816年12月に返されたが、西部は東インド会社が持ち続けた, source: 'https://ja.wikipedia.org/wiki/スガウリ条約'}
+  - {from: 1816, owner: britain, certainty: indirect, label: アワド（保護国）, cause: グルカ戦争に敗れたネパールがスガウリ条約で西部のタライを東インド会社に譲り（3月）、会社は戦費を貸したアワド太守にこれを与える, note: 東部のタライは1816年12月に返されたが、西部は返されなかった。アワドに与えられた経緯・範囲は要確認（南アジアの整合で india_north.yaml の up_awadh にそろえた）, source: 'https://ja.wikipedia.org/wiki/スガウリ条約'}
+  - {from: 1856, owner: britain, label: アワド州, cause: ダルハウジー総督が「失政」を理由にアワドを併合（2月）, source: 'https://ja.wikipedia.org/wiki/アワド太守'}
+  - {from: 1857, owner: awadh, certainty: uncertain, label: アワド（反乱軍が支配）, cause: インド大反乱。アワドの反乱軍が年末まで支配した, source: 'https://ja.wikipedia.org/wiki/インド大反乱'}
+  - {from: 1858, owner: britain, label: アワド州, cause: イギリス軍が反乱を鎮圧する。反乱軍の残党はタライからネパールへ逃れた（1859）, source: 'https://ja.wikipedia.org/wiki/インド大反乱'}
   - {from: 1860, owner: nepal, cause: インド大反乱（1857–59）の鎮圧を助けた礼として、イギリスが西部のタライ（ナヤ・ムルク＝新しい国）をネパールに返す（11月）, source: 'https://en.wikipedia.org/wiki/Naya_Muluk'}
 - id: bhutan_west
   name: ブータン西部・中部

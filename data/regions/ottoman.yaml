@@ -1724,13 +1724,31 @@
       certainty: uncertain
       cause: カラート・ハン国の成立
       source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
+    - from: 1739
+      owner: kalat
+      overlord: persia
+      certainty: uncertain
+      cause: ナーディル・シャーがカラート・ハン国を臣従させる
+      source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
+    - from: 1747
+      owner: kalat
+      overlord: durrani
+      certainty: uncertain
+      cause: カラート・ハン国がドゥッラーニー朝に臣従する
+      source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
+    - from: 1758
+      owner: kalat
+      certainty: uncertain
+      cause: カラート条約でカラート・ハン国が事実上自立する
+      source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
     - from: 1876
       owner: britain
-      certainty: uncertain
+      certainty: indirect
+      label: カラート藩王国
       cause: マストゥング条約でカラート・ハン国がイギリスの保護下に入る
       source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
-      note: チャガイは1896年にイギリスの直轄地となった。
-  note: バローチ諸部族の地。カラート・ハン国の支配の範囲・時期は要確認。
+      note: チャガイは1896年にイギリス領バローチスターンに加えられた（chagai_m）。
+  note: バローチ諸部族の地。カラート・ハン国の支配の範囲・時期は要確認。1739–1875年の宗主権・1876年からの藩王国の扱いは india_north.yaml の pk_kalat にそろえた（南アジアの整合）。
 
 - id: gwadar
   name: グワーダル
@@ -4061,6 +4079,7 @@
   select:
     pieces: ["PAK-Chagai"]
   timeline:
+    - {from: 1896, owner: britain, label: "イギリス領バローチスターン", cause: "チャガイ・西シナーラーニーがイギリス領バローチスターンに加えられる（アフガニスタン・ペルシアとの境界画定の後）", source: "https://en.wikipedia.org/wiki/Chagai_District"}
     - {from: 1947, owner: pakistan, cause: "イギリス領インドの分離独立でパキスタンが成立（8月14日）", source: "https://ja.wikipedia.org/wiki/パキスタン"}
 
 - id: makran_m
@@ -4069,7 +4088,8 @@
     pieces: ["PAK-Kech"]
   timeline:
     - {from: 1947, owner: kalat, certainty: uncertain, cause: "イギリスの撤退でカラート・ハン国（マクラーンはその付庸）が独立を宣言（8月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
-    - {from: 1948, owner: pakistan, cause: "カラート・マクラーンがパキスタンに加わる（3月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1948, owner: pakistan, certainty: indirect, label: "マクラーン藩王国", cause: "カラート・マクラーンがパキスタンに加わる（3月）", source: "https://en.wikipedia.org/wiki/Makran_(princely_state)"}
+    - {from: 1955, owner: pakistan, cause: "藩王国が廃止され、西パキスタン州（ワン・ユニット）に統合される（10月）", source: "https://en.wikipedia.org/wiki/Makran_(princely_state)"}
 
 - id: ir_british_zone
   name: "イラン南西部（フーゼスターン・ケルマーンシャー・ハマダーン）"

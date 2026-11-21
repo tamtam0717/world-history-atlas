@@ -42,11 +42,11 @@
       to: 1818
       text: 宰相バージー・ラーオ2世がバセイン条約（1802）でイギリスの軍事保護を受け入れ、反発した諸侯は第2次マラーター戦争（1803–05）に敗れた。第3次マラーター戦争（1817–18）で宰相の領地はイギリスに併合され、マラーター同盟は解体した。
   note: >-
-    地図では宰相（ペーシュワー）の直轄地だけでなく、シンディア（グワーリヤル）・ホールカル（インドール）・ガーイクワード（バローダ）・
+    地図では宰相（ペーシュワー）の直轄地だけでなく、シンディア（グワーリオル）・ホールカル（インドール）・ガーイクワード（バローダ）・
     ナーグプルのボーンスレー家などの諸侯の領地も owner: maratha とし、諸侯の名を副ラベル（label）で出す。
     ナーグプルのボーンスレー家の君主：ラグージー1世（1739–55）、ジャーノージー（1755–72）、ムドージー1世（1775–88）、ラグージー2世（1788–1816）、
     アッパー・サーヘブ（1816–18）、ラグージー3世（1818–53。跡継ぎなく死去し、失権の原理で併合）。1749年のシャーフーの死後、王家はサーターラーで名目だけの存在となった。
-    1802年末のバセイン条約から1817年までの宰相領は、イギリスの軍事保護下（owner: britain・indirect）として描く。
+    1802年末のバセイン条約から1817年までの宰相領は、マラーター同盟の色のままイギリスの軍事保護の帯（overlord: britain）を付けて描く（同盟は1818年まで大勢力だったため）。
   source:
     - "https://ja.wikipedia.org/wiki/マラーター王国"
     - "https://ja.wikipedia.org/wiki/マラーター同盟"
@@ -161,7 +161,7 @@
 - id: keladi
   name: ケラディ・ナーヤカ朝（イッケリ）
   short: ケラディ
-  color: "#9fc19a"
+  color: "#b3e4ad"
   kind: 王国（ナーヤカ）
   rulers:
     - {name: シヴァッパ・ナーヤカ, title: ケラディの王, from: 1645, to: 1660, note: ポルトガル人をカナラ海岸の港から追った, source: "https://en.wikipedia.org/wiki/Shivappa_Nayaka"}
@@ -175,7 +175,7 @@
 - id: sonda
   name: スンダ（ソーデ）王国
   short: スンダ
-  color: "#b3c9a0"
+  color: "#e4d7ae"
   kind: 王国（ナーヤカ）
   periods:
     - from: 1648
@@ -234,7 +234,7 @@
     - {to: 1673, name: タンジャーヴール・ナーヤカ朝, short: タンジャーヴール, kind: 王国（ナーヤカ）}
     - {from: 1674, name: タンジャーヴール・マラーター王国, short: タンジャーヴール, kind: 王国（マラーターの王家）}
   short: タンジャーヴール
-  color: "#d0a06e"
+  color: "#b9e3a9"
   kind: 王国
   rulers:
     - {name: ヴィジャヤラーガヴァ・ナーヤカ, title: タンジャーヴールの王, from: 1633, to: 1673, note: マドゥライのナーヤカとの戦いで敗死, source: "https://en.wikipedia.org/wiki/Thanjavur_Nayak_kingdom"}
@@ -281,7 +281,7 @@
 - id: carnatic
   name: カーナティック太守領（アルコット太守）
   short: カーナティック
-  color: "#8aa5d6"
+  color: "#4bc6d4"
   kind: 太守領（ナワーブ）
   rulers:
     - {name: サアーダトゥッラー・ハーン1世, title: カーナティック太守, from: 1710, to: 1732, source: "https://en.wikipedia.org/wiki/Saadatullah_Khan_I"}
@@ -357,7 +357,7 @@
 - id: calicut
   name: カリカット王国（ザモリン）
   short: カリカット
-  color: "#e0a47c"
+  color: "#e4bef9"
   kind: 王国
   periods:
     - from: 1648
@@ -430,7 +430,7 @@
     - {to: 1971, name: セイロン, short: セイロン, kind: 立憲君主国（イギリス連邦の自治領）}
     - {from: 1972, name: スリランカ民主社会主義共和国, short: スリランカ, kind: 共和国（1978年から大統領制）}
   short: スリランカ
-  color: "#e7a75f"
+  color: "#d9af7a"
   kind: 共和国
   rulers:
     - {name: D・S・セーナーナーヤカ, title: 首相, from: 1948, to: 1952, source: "https://en.wikipedia.org/wiki/D._S._Senanayake"}
