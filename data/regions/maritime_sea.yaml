@@ -193,6 +193,30 @@
       cause: "ハーグ協定でオランダがインドネシアに主権を移す（12月27日）"
       source: "https://ja.wikipedia.org/wiki/ハーグ円卓会議"
 
+- id: bandung_city
+  name: バンドン
+  select:
+    pieces: [IDN-Kota_Bandung]
+  timeline:
+    # 1944年まではプリアンガン（priangan）の変遷に従う
+    - from: 1945
+      owner: britain
+      certainty: occupied
+      label: "ジャワ（イギリス軍の占領）"
+      cause: "日本の降伏の後、イギリス軍がバンドンに入る（10月）"
+      note: "市の北部をイギリス軍が、南部を共和国側がおさえた"
+      source: "https://ja.wikipedia.org/wiki/インドネシア独立戦争"
+    - from: 1946
+      owner: netherlands
+      certainty: occupied
+      label: "ジャワ（オランダ軍の占領）"
+      cause: "「バンドン火の海」（3月）。共和国側は市の南部に火を放って退き、のちイギリス軍からオランダ軍が引き継ぐ"
+      source: "https://en.wikipedia.org/wiki/Bandung_Sea_of_Fire"
+    - from: 1949
+      owner: indonesia
+      cause: "ハーグ協定でオランダがインドネシアに主権を移す（12月27日）"
+      source: "https://ja.wikipedia.org/wiki/ハーグ円卓会議"
+
 - id: cirebon
   name: チルボン
   select:
@@ -2215,6 +2239,29 @@
       cause: "ハーグ協定でオランダがインドネシアに主権を移す（12月27日）"
       source: "https://ja.wikipedia.org/wiki/ハーグ円卓会議"
 
+- id: palembang_city
+  name: パレンバン（市）
+  select:
+    pieces: [IDN-Kota_Palembang]
+  timeline:
+    # 1944年まではパレンバン（palembang）の変遷に従う
+    - from: 1945
+      owner: britain
+      certainty: occupied
+      label: "スマトラ（イギリス軍の占領）"
+      cause: "日本の降伏の後、連合軍（イギリス軍）が上陸し、主な都市を押さえる（10月）"
+      source: "https://ja.wikipedia.org/wiki/インドネシア独立戦争"
+    - from: 1946
+      owner: netherlands
+      certainty: occupied
+      label: "スマトラ（オランダ軍の占領）"
+      cause: "イギリス軍が撤退し、オランダ軍が都市を引き継ぐ"
+      note: "1947年1月には市内で共和国軍との激しい戦闘があった（五日五晩の戦い）"
+    - from: 1949
+      owner: indonesia
+      cause: "ハーグ協定でオランダがインドネシアに主権を移す（12月27日）"
+      source: "https://ja.wikipedia.org/wiki/ハーグ円卓会議"
+
 - id: palembang_upland
   name: パレンバン高地（パスマ・ラワス）
   select:
@@ -3717,11 +3764,12 @@
       label: "テルナテ王国"
       cause: "VOCとの戦争に敗れ、テルナテがVOCの臣下となる"
       source: "https://ja.wikipedia.org/wiki/テルナテ王国"
-    - from: 1796
+    - from: 1801
       owner: britain
       certainty: indirect
       label: "テルナテ王国"
-      cause: "イギリス軍がアンボン・バンダなどを占領する（フランス革命戦争。オランダはフランスの衛星国）"
+      cause: "イギリス軍がテルナテの砦を落とす（6月。フランス革命戦争。オランダはフランスの衛星国）"
+      note: "アンボン・バンダは1796年にイギリスに落ちたが、北マルクのオランダの砦は1801年まで残った（年は要確認）"
     - from: 1803
       owner: netherlands
       certainty: indirect
@@ -3777,11 +3825,6 @@
       label: "ティドレ王国"
       cause: "VOCがスルタンを退けてティドレを臣下とする。王族ヌクが抵抗を始める"
       source: "https://ja.wikipedia.org/wiki/ティドレ王国"
-    - from: 1796
-      owner: britain
-      certainty: indirect
-      label: "ティドレ王国"
-      cause: "イギリス軍がアンボン・バンダなどを占領する（フランス革命戦争。オランダはフランスの衛星国）"
     - from: 1797
       owner: tidore
       cause: "ヌクがイギリスの助けでティドレを取り戻す"
@@ -3837,11 +3880,12 @@
       label: "バチャン王国"
       note: "バチャンの王国は1609年からVOCの砦を受け入れた"
       source: "https://ja.wikipedia.org/wiki/バチャン諸島"
-    - from: 1796
+    - from: 1801
       owner: britain
       certainty: indirect
       label: "バチャン王国"
-      cause: "イギリス軍がアンボン・バンダなどを占領する（フランス革命戦争。オランダはフランスの衛星国）"
+      cause: "イギリス軍がテルナテの砦を落とす（6月。フランス革命戦争。オランダはフランスの衛星国）"
+      note: "アンボン・バンダは1796年にイギリスに落ちたが、北マルクのオランダの砦は1801年まで残った（年は要確認）"
     - from: 1803
       owner: netherlands
       certainty: indirect
@@ -4434,6 +4478,12 @@
       label: "オランダ領ニューギニア"
       cause: "日本の降伏。オランダは1949年のハーグ協定の後もニューギニア西部を手放さなかった"
       source: "https://ja.wikipedia.org/wiki/オランダ領ニューギニア"
+    - from: 1950
+      owner: netherlands
+      label: "オランダ領ニューギニア"
+      cause: "ハーグ協定（1949年12月）の後もオランダが手元に残し、ホランディアを首都とする独立した植民地とする"
+      note: "海岸部はオランダが実際に治めた。1961年にはニューギニア評議会を置き、自治・独立への準備を進めた"
+      source: "https://ja.wikipedia.org/wiki/オランダ領ニューギニア"
     - from: 1962
       owner: untea
       cause: "ニューヨーク協定で国連の暫定統治（UNTEA）に移される（10月）"
@@ -4472,6 +4522,12 @@
       label: "オランダ領ニューギニア"
       cause: "連合軍がホランディアに上陸する（4月）"
       source: "https://ja.wikipedia.org/wiki/ニューギニアの戦い"
+    - from: 1950
+      owner: netherlands
+      label: "オランダ領ニューギニア"
+      cause: "ハーグ協定（1949年12月）の後もオランダが手元に残し、ホランディアを首都とする独立した植民地とする"
+      note: "海岸部と主な谷はオランダが実際に治めた（内陸の高地には支配の及ばない所も残った）。1961年にニューギニア評議会を置いた"
+      source: "https://ja.wikipedia.org/wiki/オランダ領ニューギニア"
     - from: 1962
       owner: untea
       cause: "ニューヨーク協定で国連の暫定統治（UNTEA）に移される（10月）"
@@ -4782,7 +4838,7 @@
       source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
     - from: 1821
       owner: siam
-      label: "クダ（シャムの占領）"
+      label: "クダ（シャムの直轄）"
       cause: "シャム（ラーマ2世）がクダに攻め込み、スルタンを追う"
       source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
     - from: 1842
@@ -4840,7 +4896,7 @@
       source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
     - from: 1821
       owner: siam
-      label: "クダ（シャムの占領）"
+      label: "クダ（シャムの直轄）"
       cause: "シャムがクダに攻め込み、スルタンを追う"
       source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
     - from: 1843

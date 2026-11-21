@@ -1,7 +1,7 @@
 # S4 大陸部東南アジア（MMR THA LAO KHM VNM）の地域と所属の変遷（1648–2025）
 # このファイルは scratchpad/s4/gen_regions_s4.py で生成した（手で直してよい。直したときは生成をやめてこのファイルを正とする）。
 # 主な方針：
-#  - 冊封：ベトナム（黎朝〈鄭氏〉1667–・西山朝 1789–・阮朝–1882）は清の帯。シャム・ビルマ・ラオスの朝貢は帯なし。
+#  - 冊封：ベトナム（黎朝〈鄭氏〉1667–・西山朝 1789–・阮朝–1882、トンキン北部–1884）は清の帯。シャム・ビルマ・ラオスの朝貢は帯なし。
 #  - シャムの宗主権下（ランナー・ラオ諸国・パタニ・カンボジアの一時期）は独自の色＋overlord: siam。
 #  - フランス領インドシナ：コーチシナは直轄（濃い色）、アンナン・トンキン・カンボジア・ルアンパバーン王国は保護国（indirect）。
 #    ラオス（ルアンパバーン王国以外）は直轄。1940（北部）・1941（全域）–1944 は overlord: japan（日本軍の進駐。フランスの行政は続いた）。
@@ -1035,6 +1035,19 @@
     note: 1959年に諸侯（ソーボワ）が権限を手放した
     source: "https://ja.wikipedia.org/wiki/パンロン会議"
 
+- id: mmr_shan_north
+  name: 北部シャン州
+  select:
+    pieces: [MMR-Kyaukme, MMR-Lashio, MMR-Muse, MMR-Mongmit]
+  timeline:
+  # 2022年までは mmr_shan（シャン諸州）の変遷に従う
+  - from: 2023
+    owner: burma
+    certainty: uncertain
+    cause: 1027作戦（10月）。MNDAA・TNLA・アラカン軍の「三兄弟同盟」がチンシュエホー・ナムサン・チャウメーなど北部シャン州の町を取る
+    note: 2024年8月にMNDAAがラーショーを落とした。2025年4月に中国の仲介でラーショーは国軍に返され、同年秋に国軍はチャウメー・シーポーも取り戻したが、山地は武装勢力が広くおさえる。年末の境界は描けないので斜線で示す
+    source: "https://en.wikipedia.org/wiki/Operation_1027"
+
 - id: mmr_kengtung
   name: ケントゥン（チャイントン）
   select:
@@ -1566,7 +1579,7 @@
     source: "https://en.wikipedia.org/wiki/Satun_Province"
   - from: 1821
     owner: siam
-    label: クダ（シャムの占領）
+    label: クダ（シャムの直轄）
     cause: シャム（ラーマ2世）がクダに攻め込み、スルタンを追う
     source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
   - from: 1842
@@ -3108,7 +3121,7 @@
     owner: tay_son
     certainty: uncertain
     cause: 西山軍の阮恵が鄭氏を滅ぼす（7月）
-    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた
+    note: 黎朝の皇帝は名目上残ったが、1788年に阮恵が光中帝として即位し、清の出兵を招いた。乾隆帝の清軍は1788年12月に昇竜（ハノイ）を占領して黎朝の昭統帝を復位させたが、翌1789年1月の棟多の戦いで敗れて退いた。1か月余りの一時的な占領なので、1788年の地図には描かない
     source: "https://ja.wikipedia.org/wiki/西山朝"
   - from: 1789
     owner: tay_son
@@ -3793,13 +3806,8 @@
     source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
   - from: 1979
     owner: vietnam
-    certainty: uncertain
     cause: 中越戦争。中国軍がランソン・ラオカイ・カオバンを一時占領する（2–3月）
-    note: 年末には中国軍は撤退していた
-    source: "https://ja.wikipedia.org/wiki/中越戦争"
-  - from: 1980
-    owner: vietnam
-    cause: 中越戦争の後も国境での衝突が1980年代末まで続いた
+    note: 3月に中国軍は撤退したので、地図（年末の状態）には占領を描かない。国境での衝突は1980年代末まで続いた
     source: "https://ja.wikipedia.org/wiki/中越戦争"
 
 - id: vnm_caobang
@@ -3880,12 +3888,8 @@
     source: "https://ja.wikipedia.org/wiki/ベトナム社会主義共和国"
   - from: 1979
     owner: vietnam
-    certainty: uncertain
     cause: 中越戦争。中国軍がカオバンを一時占領する（2–3月）
-    source: "https://ja.wikipedia.org/wiki/中越戦争"
-  - from: 1980
-    owner: vietnam
-    cause: 中国軍の撤退
+    note: 3月に中国軍は撤退したので、地図（年末の状態）には占領を描かない
     source: "https://ja.wikipedia.org/wiki/中越戦争"
 
 - id: vnm_sonla
