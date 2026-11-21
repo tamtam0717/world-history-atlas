@@ -1,5 +1,5 @@
 # S4 大陸部東南アジア（MMR THA LAO KHM VNM）の地域と所属の変遷（1648–2025）
-# このファイルは scratchpad の gen_regions.py で生成した（手で直してよい。直したときは生成をやめてこのファイルを正とする）。
+# このファイルは scratchpad/s4/gen_regions_s4.py で生成した（手で直してよい。直したときは生成をやめてこのファイルを正とする）。
 # 主な方針：
 #  - 冊封：ベトナム（黎朝〈鄭氏〉1667–・西山朝 1789–・阮朝–1882）は清の帯。シャム・ビルマ・ラオスの朝貢は帯なし。
 #  - シャムの宗主権下（ランナー・ラオ諸国・パタニ・カンボジアの一時期）は独自の色＋overlord: siam。
@@ -1024,8 +1024,10 @@
     source: "https://en.wikipedia.org/wiki/Saharat_Thai_Doem"
   - from: 1943
     owner: siam
+    certainty: occupied
     label: サハラット・タイ・ドゥーム（連合タイ州）
     cause: 日本がケントゥン・モンパンのタイへの編入を認める（8月）
+    note: 戦後に無効とされた
     source: "https://en.wikipedia.org/wiki/Saharat_Thai_Doem"
   - from: 1945
     owner: britain
@@ -1503,15 +1505,24 @@
     pieces: [THA-Satun_Province]
   timeline:
   - from: 1648
+    owner: kedah
+    overlord: siam
+    note: マレー人のクダ・スルタン国の北部（セトゥル）。クダはアユタヤに金銀の花を贈る朝貢国だった（島嶼部担当 S5 のクダと同じ扱い）
+    source: "https://en.wikipedia.org/wiki/Satun_Province"
+  - from: 1821
     owner: siam
-    certainty: indirect
-    label: クダ
-    note: マレー人のクダ・スルタン国の北部（セトゥル）。クダはアユタヤに金銀の花を贈る朝貢国だった。島嶼部担当（S5）のクダと合わせて見ること
+    label: クダ（シャムの占領）
+    cause: シャム（ラーマ2世）がクダに攻め込み、スルタンを追う
+    source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
+  - from: 1842
+    owner: kedah
+    overlord: siam
+    cause: シャムがスルタンを復位させる。セトゥル（サトゥーン）はクダの王族が治める別の国とされた
     source: "https://en.wikipedia.org/wiki/Satun_Province"
   - from: 1909
     owner: siam
-    cause: イギリス＝シャム条約で、クダ・クランタン・トレンガヌ・プルリスがイギリスに移り、サトゥーンだけがシャムに残る
-    source: "https://en.wikipedia.org/wiki/Anglo-Siamese_Treaty_of_1909"
+    cause: バンコク条約（英シャム条約）で、クダ・クランタン・トレンガヌ・プルリスがイギリスに移り、サトゥーンだけがシャムに残る
+    source: "https://ja.wikipedia.org/wiki/英シャム条約_(1909年)"
 
 - id: tha_chanthaburi
   name: チャンタブリー
@@ -1892,6 +1903,7 @@
     source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
   - from: 1941
     owner: siam
+    certainty: occupied
     label: ラーンチャーン県（タイが併合）
     cause: タイ＝フランス領インドシナ紛争の後、日本の仲介による東京条約でタイ領となる（5月）
     source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
@@ -2252,6 +2264,7 @@
     source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
   - from: 1941
     owner: siam
+    certainty: occupied
     label: ナコーンチャンパーサック県（タイが併合）
     cause: 東京条約でタイ領となる（5月）
     source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
@@ -2649,6 +2662,7 @@
     source: "https://en.wikipedia.org/wiki/Franco-Siamese_treaty_of_1904"
   - from: 1941
     owner: siam
+    certainty: occupied
     label: ナコーンチャンパーサック県（タイが併合）
     cause: 東京条約でタイ領となる（5月）
     source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
@@ -2718,6 +2732,7 @@
     source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
   - from: 1941
     owner: siam
+    certainty: occupied
     label: ピブーンソンクラーム県・バッタンバン県（タイが併合）
     cause: タイ＝フランス領インドシナ紛争の後、東京条約でタイ領となる（5月）
     source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
@@ -2847,6 +2862,7 @@
     source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
   - from: 1941
     owner: siam
+    certainty: occupied
     label: ピブーンソンクラーム県・バッタンバン県（タイが併合）
     cause: タイ＝フランス領インドシナ紛争の後、東京条約でタイ領となる（5月）
     source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
@@ -2905,6 +2921,7 @@
     source: "https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907"
   - from: 1941
     owner: siam
+    certainty: occupied
     label: ピブーンソンクラーム県・バッタンバン県（タイが併合）
     cause: タイ＝フランス領インドシナ紛争の後、東京条約でタイ領となる（5月）
     source: "https://ja.wikipedia.org/wiki/タイ・フランス領インドシナ紛争"
