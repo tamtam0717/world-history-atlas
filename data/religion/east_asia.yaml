@@ -636,7 +636,7 @@
     - from: 1648
       main: other
       minor: shinbutsu
-      note: アイヌの信仰（カムイ、イオマンテ）。南端の和人地（松前藩）には和人の寺社がある。
+      note: アイヌの信仰（カムイ、イオマンテ）。南西端の和人地（松前藩。別のピースで rel_japan の神仏習合）には和人の寺社がある。
       source: "https://ja.wikipedia.org/wiki/アイヌ"
     - from: 1869
       main: shinbutsu
@@ -660,6 +660,21 @@
       minor: shinbutsu
       note: 琉球処分（1879）で沖縄県となり、神社の建立など同化政策が進んだ。祖先崇拝と御嶽の信仰は今も根強い。
       source: "https://ja.wikipedia.org/wiki/琉球処分"
+- id: rel_amami
+  name: 奄美群島
+  select:
+    pieces: [JPN-Amami_Islands]
+  timeline:
+    - from: 1648
+      main: other
+      minor: shinbutsu
+      note: 琉球と同じノロ（神女）の祭祀と祖先崇拝。1611年から薩摩藩の直轄地で、薩摩はノロの祭祀を制限し、代官所の周りに寺社を建てた。
+      source: "https://ja.wikipedia.org/wiki/ノロ"
+    - from: 1879
+      main: other
+      minor: shinbutsu
+      note: 明治政府の同化政策で神社が建てられた。1891年からカトリックの宣教が進み、奄美大島には信徒の多い集落ができた（昭和初期に弾圧を受けた）。祖先崇拝とノロの祭祀は今も残る（沖縄と同じ年で切り替える）。
+      source: "https://ja.wikipedia.org/wiki/奄美群島"
 
 # ======== 朝鮮 ========
 - id: rel_korea

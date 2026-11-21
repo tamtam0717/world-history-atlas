@@ -937,7 +937,7 @@
 - id: rel_arabia
   name: アラビア半島北部・東部
   select:
-    iso: [SAU, KWT, QAT, ARE, OMN, BHR]
+    iso_all: [SAU, KWT, QAT, ARE, OMN, BHR]   # 範囲外（zone=world）のピース（アスィール・ジーザーン・カタール南部など）も含める
   timeline:
     - from: 1648
       main: sunni
@@ -1204,14 +1204,33 @@
     - from: 1990
       main: shia
       minor: sunni
-      note: ナゴルノ・カラバフ紛争（1988–94）で、アルメニア人（アルメニア使徒教会）はバクーなどから去った。カラバフの山地のアルメニア人は1994–2023年にアルメニア人勢力の支配下にあったが、2023年のアゼルバイジャンの攻撃の後、ほぼ全員がアルメニアへ去った（ピースが分かれていないので地図には描いていない）。
+      note: ナゴルノ・カラバフ紛争（1988–94）で、アルメニア人（アルメニア使徒教会）はバクーなどから去った。カラバフの山地（旧自治州）は別のピースで rel_karabakh で描く。
       source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+- id: rel_karabakh
+  name: ナゴルノ・カラバフ（山岳カラバフ）
+  select:
+    pieces: [AZE-Nagorno_Karabakh]
+  timeline:
+    - from: 1648
+      main: oriental
+      minor: shia
+      note: アルメニア人のメリク（小領主）たちの山地で、アルメニア使徒教会のガンザサル修道院がある。18世紀半ばからカラバフ・ハン国の都シュシャにムスリム（シーア派）が住んだ。
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ"
+    - from: 1992
+      main: oriental
+      note: 戦争（1988–94）で、シュシャなどのアゼルバイジャン人（約4万人）は追われた（シュシャの陥落は1992年5月）。
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+    - from: 2023
+      main: shia
+      note: 2023年9月のアゼルバイジャン軍の攻撃の後、アルメニア人のほぼ全員（約10万人）がアルメニアへ去った。アゼルバイジャンはシュシャなどへの移住を進めている。
+      source: "https://ja.wikipedia.org/wiki/2023年ナゴルノ・カラバフ衝突"
 
 # ======== 中央アジア・アフガニスタン・パキスタン ========
 - id: rel_central_asia
   name: 中央アジア（カザフ・トルクメン・ホラズム）・アフガニスタン西部・バローチスターン
   select:
-    iso: [KAZ, TKM, UZB, AFG, PAK]
+    iso: [KAZ, UZB, AFG, PAK]
+    iso_all: [TKM]   # トルクメニスタン東部（レバプ・マリ南部）の範囲外のピースも含める
   timeline:
     - from: 1648
       main: sunni

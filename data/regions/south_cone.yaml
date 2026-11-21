@@ -3,7 +3,7 @@
 # 植民地は宗主国の色＋label（ペルー副王領・リオ・デ・ラ・プラタ副王領・チリ総督領・ポルトガル領ブラジル）。
 # 主張だけで先住民の地だった所（アマゾン奥地・チャコ・パタゴニアなど）は certainty: nominal。
 # マプーチェ（アラウカニア、パンパの一部）は独自の政体 mapuche。
-# 注意：ARG-Buenos_Aires のピースには現在のエントレ・リオス州が含まれている（ピースの分割が必要）。
+# エントレ・リオス州は ARG-Buenos_Aires から分けたピース ARG-Entre_Rios（2026-11-21。pieces.tsv の adm1 は元の「Buenos Aires」のまま）。
 
 - id: br_paraiba_rn
   name: パライバ・リオグランデ・ド・ノルテ
@@ -1086,7 +1086,7 @@
     - from: 1852
       owner: "buenos_aires_state"
       cause: "ブエノスアイレス州が9月の革命でアルゼンチン連合から離れる"
-      note: "このピースには現在のエントレ・リオス州（アルゼンチン連合の側で、首都パラナがあった）も含まれている"
+      note: "アルゼンチン連合（首都はエントレ・リオスのパラナ）とは別の国として歩んだ"
       source: "https://en.wikipedia.org/wiki/State_of_Buenos_Aires"
     - from: 1861
       owner: "argentina"
@@ -1094,7 +1094,7 @@
       source: "https://en.wikipedia.org/wiki/Battle_of_Pav%C3%B3n"
 
 - id: ar_buenos_aires
-  name: ブエノスアイレス州（エントレ・リオスを含むピース）
+  name: ブエノスアイレス州
   select:
     pieces: [ARG-Buenos_Aires]
   timeline:
@@ -1102,7 +1102,7 @@
       owner: "spain"
       certainty: "nominal"
       label: "ペルー副王領"
-      note: "スペインが治めたのはブエノスアイレス市の周りとラ・プラタ川沿いだけで、サラド川より南のパンパは19世紀前半まで先住民の地だった（このピースにはエントレ・リオス州も含まれる）。ブエノスアイレス市は別のピース"
+      note: "スペインが治めたのはブエノスアイレス市の周りとラ・プラタ川沿いだけで、サラド川より南のパンパは19世紀前半まで先住民の地だった。ブエノスアイレス市とエントレ・リオスは別のピース"
     - from: 1776
       owner: "spain"
       certainty: "nominal"
@@ -1127,11 +1127,62 @@
     - from: 1852
       owner: "buenos_aires_state"
       cause: "ブエノスアイレス州が9月の革命でアルゼンチン連合から離れる"
-      note: "このピースには現在のエントレ・リオス州（アルゼンチン連合の側で、首都パラナがあった）も含まれている"
+      note: "アルゼンチン連合（首都はエントレ・リオスのパラナ）とは別の国として歩んだ"
       source: "https://en.wikipedia.org/wiki/State_of_Buenos_Aires"
     - from: 1861
       owner: "argentina"
       cause: "パボンの戦いでミトレのブエノスアイレス軍が勝ち、国が再統一される"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Pav%C3%B3n"
+
+- id: ar_entre_rios
+  name: エントレ・リオス
+  select:
+    pieces: [ARG-Entre_Rios]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "パラナ川とウルグアイ川にはさまれた地（「川の間」）。チャルア人・ミヌアン人・チャナ人の地で、サンタフェの町の管轄とされたが、スペイン人の入植は18世紀から"
+      source: "https://ja.wikipedia.org/wiki/エントレ・リオス州"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1783
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "副王の命でロカモラがグアレグアイ・グアレグアイチュ・コンセプシオン・デル・ウルグアイの町を建てる"
+      note: "パラナ川の岸のバハダ（のちのパラナ）には1730年代から集落があった"
+      source: "https://en.wikipedia.org/wiki/Entre_R%C3%ADos_Province"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1815
+      owner: "liga_federal"
+      cause: "アルティガスの連邦同盟（自由の民の同盟）に加わる（1814年にブエノスアイレスの総督府から州として分かれる）"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1820
+      owner: "united_provinces_rio_plata"
+      cause: "アルティガスが敗れて連邦同盟が崩れる（諸州はそれぞれ自立した）"
+      note: "エントレ・リオスの首領ラミレスはアルティガスを破り、コリエンテス・ミシオネスを合わせて「エントレ・リオス共和国」を名のったが（1820–21年）、翌年戦死した"
+      source: "https://en.wikipedia.org/wiki/Republic_of_Entre_R%C3%ADos"
+    - from: 1831
+      owner: "argentina"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+    - from: 1852
+      owner: "argentina"
+      cause: "エントレ・リオス州知事ウルキサがカセロスの戦い（2月）でロサスを倒す。ブエノスアイレス州が離れた後、ウルキサが残りの13州のアルゼンチン連合をまとめる"
+      note: "1853年の憲法でウルキサが初代大統領となり、首都はエントレ・リオスのパラナに置かれた（1853–61年）"
+      source: "https://ja.wikipedia.org/wiki/フスト・ホセ・デ・ウルキサ"
+    - from: 1861
+      owner: "argentina"
+      cause: "パボンの戦い（9月）でブエノスアイレスのミトレが勝ち、連合政府は解散する（12月）。ブエノスアイレスを首都に国が再統一される"
+      note: "ウルキサは1870年に暗殺され、ロペス・ホルダンの反乱（1870–76年）が続いた"
       source: "https://en.wikipedia.org/wiki/Battle_of_Pav%C3%B3n"
 
 - id: ar_santa_fe

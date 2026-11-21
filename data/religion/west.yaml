@@ -97,6 +97,7 @@
   name: スペインとポルトガル
   select:
     iso: [ESP, PRT]
+    pieces: [PRT-RegiAo_AutA3noma_dos_AAores]   # アゾレス諸島（範囲外のピース）
   timeline:
     - from: 1648
       main: catholic
@@ -232,6 +233,19 @@
     - from: 1921
       main: lutheran
       note: 東グリーンランド（アンマサリク）への伝道は1894年に始まり、1920年代までに住民のほぼ全員がルター派の洗礼を受けた。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Greenland"
+
+- id: rel_west_greenland
+  name: 西グリーンランド
+  select:
+    regions: [west_greenland]
+  timeline:
+    - from: 1648
+      main: other
+      note: イヌイットの伝統的な信仰（アンガコック〈シャーマン〉）。
+    - from: 1780
+      main: lutheran
+      note: ハンス・エーゲデ（1721–）のデンマーク＝ノルウェーのルター派と、モラヴィア兄弟団（1733–1900）の伝道で、18世紀末までに西岸のイヌイットの多くが洗礼を受けた。北西部のチューレのイヌイットへの伝道は1909年から。
       source: "https://en.wikipedia.org/wiki/Religion_in_Greenland"
 
 # ---- 北アフリカ ----

@@ -1232,7 +1232,7 @@
 - id: east_transcaucasia
   name: アゼルバイジャン北部（シルヴァン・カラバフ・ガンジャ）とザンゲズール・シュラゲル
   select:
-    pieces: [AZE-Contiguous_Azerbaijan, ARM-Syunik, ARM-Shirak]
+    pieces: [AZE-Contiguous_Azerbaijan, AZE-Nagorno_Karabakh, ARM-Syunik, ARM-Shirak]
   timeline:
     - from: 1648
       owner: persia
@@ -4155,7 +4155,65 @@
     - {from: 1918, owner: azerbaijan, cause: "アゼルバイジャン民主共和国の独立（5月28日）。9月にオスマン軍とともにバクーを押さえ、11月からイギリス軍が駐留", source: "https://ja.wikipedia.org/wiki/アゼルバイジャン民主共和国"}
     - {from: 1922, owner: soviet_union, label: "アゼルバイジャン共和国\nザカフカース連邦の一部（1936年まで）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
     - {from: 1991, owner: azerbaijan, cause: "アゼルバイジャンが独立（8月30日に宣言、10月18日に独立法）", source: "https://ja.wikipedia.org/wiki/アゼルバイジャン"}
-  note: "ナゴルノ・カラバフ（アルメニア人の多い自治州）はピースが分かれていないため、アゼルバイジャンに含めて描いた。1991–1994年の戦争ののちアルメニア人勢力（アルツァフ共和国）が周辺の地区を含めて押さえたが、2020年の戦争と2023年9月のアゼルバイジャンの攻勢で解体した。"
+  note: "ナゴルノ・カラバフ（旧自治州）は別のピースで、地域 nagorno_karabakh で描く。1994–2020年にアルメニア人勢力が占領した周りの7地区（ケルベジェル・ラチン・アグダムなど）はこのピースの中なので描けない（アゼルバイジャンとして塗る）。"
+
+- id: nagorno_karabakh
+  name: "ナゴルノ・カラバフ（山岳カラバフ）"
+  names:
+    - {from: 1923, to: 1990, name: "ナゴルノ・カラバフ自治州"}
+    - {from: 1991, to: 2023, name: "ナゴルノ・カラバフ（アルツァフ）"}
+  select:
+    pieces: ["AZE-Nagorno_Karabakh"]
+  timeline:
+    - {from: 1917, owner: transcaucasia, certainty: uncertain, cause: "十月革命を認めないグルジア・アルメニア・アゼルバイジャンの政党がザカフカース委員部を作る（11月）", source: "https://en.wikipedia.org/wiki/Transcaucasian_Commissariat"}
+    - from: 1918
+      owner: azerbaijan
+      certainty: uncertain
+      label: "山岳カラバフ（アルメニアと係争）"
+      cause: "アゼルバイジャンとアルメニアが独立し（5月）、山岳カラバフの帰属を争う。現地のアルメニア人の評議会はアゼルバイジャンの支配を拒んだ"
+      note: "1919年にイギリス軍の承認でアゼルバイジャンの総督が置かれた。1920年3月のアルメニア人の蜂起は鎮圧され、シュシャのアルメニア人地区が焼かれた。4月にアゼルバイジャン、12月にアルメニアが赤軍に占領されてソヴィエト化した"
+      source: "https://en.wikipedia.org/wiki/Armenian%E2%80%93Azerbaijani_war_(1918%E2%80%931920)"
+    - {from: 1921, owner: azerbaijan, label: "", cause: "ロシア共産党のカフカース局が、山岳カラバフをアゼルバイジャンに残すと決める（7月）", source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ自治州"}
+    - {from: 1922, owner: soviet_union, label: "アゼルバイジャン共和国\nザカフカース連邦の一部（1936年まで）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
+    - from: 1923
+      owner: soviet_union
+      label: "ナゴルノ・カラバフ自治州\n（アゼルバイジャン共和国）"
+      cause: "アゼルバイジャン共和国の中に山岳カラバフ自治州が置かれる（7月。州都ハンケンディをステパナケルトと改称）"
+      note: "住民の約4分の3がアルメニア人（アルメニア使徒教会）、約4分の1がアゼルバイジャン人。アルメニアとは細い山地（ラチン）で隔てられていた"
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ自治州"
+    - from: 1988
+      owner: soviet_union
+      certainty: uncertain
+      label: "ナゴルノ・カラバフ自治州\n（アゼルバイジャン共和国）"
+      cause: "自治州の議会がアルメニアへの移管を求める（2月）。スムガイトでアルメニア人が殺され、ナゴルノ・カラバフ紛争が始まる"
+      note: "1989年にはモスクワの特別管理委員会が直接治めた。1991年春にはソ連軍とアゼルバイジャンの部隊がアルメニア人の村を追い立てた（リング作戦）"
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+    - from: 1991
+      owner: artsakh
+      certainty: uncertain
+      label: ""
+      cause: "ソ連の解体のなかで、アルメニア人がナゴルノ・カラバフ共和国の独立を宣言する（9月2日。12月に住民投票）。アゼルバイジャンは自治州を廃止した"
+      note: "国際的にはアゼルバイジャン領（アルメニアも承認していない）だが、アルメニアの支援を受けたアルメニア人の事実上の国家だったので、アブハジア・沿ドニエストルと同じく独自の政体を斜線（不確実）で描く。1991年末はシュシャなどがアゼルバイジャン側で、1992年夏にはアゼルバイジャン軍が北部（マルタケルト）を一時奪った"
+      source: "https://ja.wikipedia.org/wiki/アルツァフ共和国"
+    - from: 1994
+      owner: artsakh
+      certainty: uncertain
+      label: ""
+      cause: "ビシュケク議定書で停戦（5月）。アルツァフ側が旧自治州のほぼ全域と周りのアゼルバイジャンの7地区を押さえる"
+      note: "周りの7地区はアゼルバイジャンのピース（AZE-Contiguous_Azerbaijan）の中なので、地図ではアゼルバイジャンとして塗っている"
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+    - from: 2020
+      owner: artsakh
+      certainty: uncertain
+      label: "アルツァフ（ロシアの平和維持部隊）"
+      cause: "第2次ナゴルノ・カラバフ戦争（9–11月）。アゼルバイジャンがシュシャと南部（ハドルト）を奪い、停戦で周りの7地区も取り戻す。ロシアの平和維持部隊が駐留する"
+      note: "アゼルバイジャンが取ったのは旧自治州の南部と中部の一部で、年末もステパナケルトを含む過半はアルツァフ側だったので、ピース全体をアルツァフとして描く"
+      source: "https://ja.wikipedia.org/wiki/2020年ナゴルノ・カラバフ紛争"
+    - from: 2023
+      owner: azerbaijan
+      label: ""
+      cause: "アゼルバイジャン軍の攻撃（9月19–20日）でアルツァフが降伏し、アルメニア人のほぼ全員（約10万人）がアルメニアへ逃れる。アルツァフ共和国は2024年1月1日に解散した"
+      source: "https://ja.wikipedia.org/wiki/2023年ナゴルノ・カラバフ衝突"
 
 - id: khorezm_uz
   name: "ホラズム（ヒヴァ）"
