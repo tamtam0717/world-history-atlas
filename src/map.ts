@@ -152,6 +152,7 @@ export class AtlasMap {
     this.ready = new Promise((resolve) => {
       this.map.on("load", () => {
         this.setup();
+        this.setupZoomFilters();
         this.loaded = true;
         this.baseZoom = this.map.getZoom();
         if (this.year) this.render(this.year);
@@ -617,6 +618,9 @@ export class AtlasMap {
           "text-max-width": 30,
           // 国名は「背景」：字間を広げ、半透明でやわらかく
           "text-letter-spacing": 0.3,
+          // 国名は「背景」なので、都市名などとぶつかっても消さない（都市名の配置にも影響させない）
+          "text-allow-overlap": true,
+          "text-ignore-placement": true,
           "symbol-sort-key": ["get", "rank"],
           "text-padding": 3,
         },
@@ -629,6 +633,32 @@ export class AtlasMap {
         },
       });
     }
+  }
+
+  /**
+   * MapLibre はレイヤーの filter の ["zoom"] をタイルの整数の拡大率で評価するため、
+   * 「拡大率 3.2 から出す」のような細かい出し分けが効かない（3.9 でも 3 として扱われる）。
+   * そこで ["zoom"] を含む filter を覚えておき、拡大率が変わるたびに今の拡大率の数値へ置き換える。
+   */
+  private zoomFilters = new Map<string, unknown>();
+  private lastFilterZoom = NaN;
+  private setupZoomFilters() {
+    const hasZoom = (x: unknown): boolean =>
+      Array.isArray(x) ? (x.length === 1 && x[0] === "zoom") || x.some(hasZoom) : false;
+    for (const l of this.map.getStyle().layers) {
+      const f = this.map.getFilter(l.id);
+      if (f && hasZoom(f)) this.zoomFilters.set(l.id, f);
+    }
+    const apply = () => {
+      const z = Math.round(this.map.getZoom() * 10) / 10;
+      if (z === this.lastFilterZoom) return;
+      this.lastFilterZoom = z;
+      const sub = (x: unknown): unknown =>
+        Array.isArray(x) ? (x.length === 1 && x[0] === "zoom" ? z : x.map(sub)) : x;
+      for (const [id, f] of this.zoomFilters) this.map.setFilter(id, sub(f) as never);
+    };
+    this.map.on("zoom", apply);
+    apply();
   }
 
   render(year: number) {
