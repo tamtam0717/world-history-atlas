@@ -7,10 +7,11 @@ const out = [];
 for (const f of d.features) {
   const p = f.properties;
   const [lon, lat] = [p.LONGITUDE, p.LATITUDE];
-  if (lon < -25 || lon > 62 || lat < 25 || lat > 72) continue;
+  // ヨーロッパと周辺（ピースの範囲内）は人口 15 万以上、それ以外の地域は 30 万以上（と首都）
+  const europe = lon >= -25 && lon <= 62 && lat >= 25 && lat <= 72;
   const pop = p.POP_MAX ?? 0;
   const capital = /Admin-0 capital/.test(p.FEATURECLA ?? "");
-  if (pop < 150000 && !capital) continue;
+  if (pop < (europe ? 150000 : 300000) && !capital) continue;
   const en = p.NAME_EN || p.NAME;
   out.push({
     name: p.NAME_JA || p.NAME,

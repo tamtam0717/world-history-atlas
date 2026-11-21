@@ -1,4 +1,4 @@
-# F 北欧・東欧の出来事（1648–1914）。europe.yaml にあるものは書かない。
+# F 北欧・東欧の出来事（1648–2025）。europe.yaml にあるものは書かない。
 
 - year: 1648
   title: フメリニツキーの乱
@@ -482,3 +482,482 @@
   polities: [russia]
   importance: 2
   source: "https://ja.wikipedia.org/wiki/ピョートル・ストルイピン"
+
+# ---------------------------------------------------------------
+# 1915–2025
+# ---------------------------------------------------------------
+- year: 1915
+  title: ロシア軍の大撤退
+  text: ゴルリツェ＝タルヌフの突破（5月）の後、ドイツ・オーストリア軍がポーランド・リトアニア・クールラントを占領した。ロシアは多くの兵と住民を失い、帝政への不満が強まった。
+  polities: [russia, german_empire, habsburg]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Great_Retreat_(Russian)"
+- year: 1916
+  title: ブルシーロフ攻勢
+  text: ロシア軍がガリツィア・ヴォリニでオーストリア＝ハンガリー軍を大きく押し戻した。第一次世界大戦でロシアの最大の勝利だったが、損害も大きかった。
+  polities: [russia, habsburg]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ブルシーロフ攻勢"
+- year: 1917
+  date: "1917-11-20"
+  title: ウクライナ人民共和国の成立
+  text: キエフの中央ラーダ（議長フルシェフスキー）がウクライナ人民共和国を宣言し、1918年1月に独立を宣言した。
+  polities: [ukraine, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ウクライナ人民共和国"
+- year: 1917
+  date: "1917-12-06"
+  title: フィンランドの独立宣言
+  text: スヴィンフヴューの元老院が独立を宣言し、12月31日にレーニンのソヴィエト政府が承認した。
+  polities: [finland, russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/フィンランドの独立宣言"
+- year: 1918
+  date: "1918-01"
+  title: フィンランド内戦
+  text: 社会主義者の赤衛軍と、マンネルヘイムの白衛軍が戦った。白衛軍はドイツ軍の助けを得て5月までに勝ったが、戦後の収容所でも多くの赤衛軍側の人々が亡くなり、深い傷を残した。
+  polities: [finland, german_empire, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/フィンランド内戦"
+- year: 1918
+  date: "1918-02-16"
+  title: バルト三国の独立宣言
+  text: リトアニア（2月16日）とエストニア（2月24日）がドイツ軍の占領のもとで、ラトヴィア（11月18日）がドイツの敗戦の後に独立を宣言した。三国はソヴィエト・ロシアやドイツ義勇軍と戦い、1920年に独立を認めさせた。
+  polities: [lithuania, estonia, latvia, russia, german_empire]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/バルト三国"
+- year: 1918
+  date: "1918-05"
+  title: ロシア内戦と対ソ干渉戦争
+  text: チェコ軍団の反乱をきっかけに、白軍とボリシェヴィキの内戦が全国に広がった。イギリス・フランス・アメリカ・日本などが干渉軍を送り、日本はシベリアに出兵した。ボリシェヴィキは赤軍（トロツキーが組織）と戦時共産主義で戦った。
+  polities: [russia, white_movement, britain, france, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ロシア内戦"
+- year: 1918
+  date: "1918-07-17"
+  title: ニコライ2世一家の処刑
+  text: 退位した皇帝ニコライ2世と家族が、エカテリンブルクでボリシェヴィキに銃殺された。
+  polities: [russia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ロマノフ家の処刑"
+- year: 1918
+  date: "1918-11-01"
+  title: 西ウクライナ人民共和国とポーランド＝ウクライナ戦争
+  text: 東ガリツィアのウクライナ人がリヴィウで独立を宣言し、ポーランドと戦った。1919年7月までにポーランドが東ガリツィア全体を押さえた。
+  polities: [west_ukraine, poland, ukraine]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ポーランド・ウクライナ戦争"
+- year: 1918
+  date: "1918-12-01"
+  title: アイスランド王国の成立
+  text: デンマーク＝アイスランド連合法で、アイスランドはデンマーク王を国王とする主権国家となった。
+  polities: [iceland, denmark]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アイスランド王国"
+- year: 1918
+  date: "1918-12-27"
+  title: ヴィエルコポルスカ蜂起
+  text: ポズナンのポーランド人がドイツに対して蜂起し、ポズナン地方の大部分を押さえた。ヴェルサイユ条約でポーランド領と認められた。
+  polities: [poland, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Greater_Poland_uprising_(1918–1919)"
+- year: 1920
+  date: "1920-02"
+  title: タルトゥ条約とリガ条約（バルト諸国の独立承認）
+  text: ソヴィエト・ロシアはエストニア（2月）・リトアニア（7月、モスクワ条約）・ラトヴィア（8月、リガ条約）・フィンランド（10月、タルトゥ条約。ペツァモを割譲）の独立を認めた。
+  polities: [russia, estonia, latvia, lithuania, finland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/タルトゥ条約"
+- year: 1920
+  date: "1920-02"
+  title: 北シュレースヴィヒの住民投票
+  text: ヴェルサイユ条約にもとづく住民投票で、北部がデンマークへの帰属を選び、6月にデンマークに戻った（南部はドイツに残った）。
+  polities: [denmark, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/シュレースヴィヒの住民投票"
+- year: 1920
+  date: "1920-08"
+  title: ポーランド＝ソヴィエト戦争と「ヴィスワの奇跡」
+  text: キエフまで攻め込んだポーランド軍は赤軍の反撃でワルシャワに迫られたが、8月のワルシャワの戦いでピウスツキが逆転した。ヨーロッパへの革命の拡大は止まった。
+  polities: [poland, russia, ukraine]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ポーランド・ソビエト戦争"
+- year: 1920
+  date: "1920-10-09"
+  title: 中部リトアニアの樹立
+  text: ポーランド軍のジェリゴフスキ将軍がヴィリニュスを占領して「中部リトアニア共和国」を立て、1922年にポーランドに併合された。リトアニアとポーランドは1938年まで国交を断った。
+  polities: [central_lithuania, lithuania, poland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/中部リトアニア共和国"
+- year: 1920
+  date: "1920-11"
+  title: ヴランゲリ軍のクリミア撤退
+  text: 白軍の最後の拠点クリミアから、ヴランゲリの軍と避難民約15万人が船でコンスタンティノープルへ逃れ、ヨーロッパの内戦はほぼ終わった。多くの「白系ロシア人」が亡命者としてパリ・ベルリンなどに住んだ。
+  polities: [white_movement, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/クリミア撤退"
+- year: 1921
+  date: "1921-03-18"
+  title: リガ条約（ポーランド＝ソヴィエト戦争の講和）
+  text: ポーランドは、ベラルーシ西部とウクライナ西部（ヴォリニ・東ガリツィア）を得た。ウクライナ人・ベラルーシ人の民族の土地は分けられた。
+  polities: [poland, russia, ukraine]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/リガ条約_(1921年)"
+- year: 1921
+  date: "1921-03"
+  title: クロンシュタットの反乱とネップ
+  text: 革命の拠点だったクロンシュタットの水兵が言論の自由などを求めて反乱し、鎮圧された。レーニンは戦時共産主義をやめ、穀物の自由な販売などを認める新経済政策（ネップ）に転じた。
+  polities: [russia]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/新経済政策"
+- year: 1921
+  title: 上シロンスク（オーバーシュレジエン）の分割
+  text: 3月の住民投票ではドイツへの帰属が多数だったが、ポーランド人の蜂起の後、国際連盟の裁定で工業地帯の東部（カトヴィツェなど）がポーランドに分けられた。
+  polities: [poland, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/シレジア蜂起"
+- year: 1921
+  date: "1921-06"
+  title: オーランド諸島の帰属の裁定
+  text: スウェーデン系住民の島々について、国際連盟がフィンランドの領有を認めた。かわりに自治と非武装・中立が保障された。
+  polities: [finland, sweden]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/オーランド諸島"
+- year: 1923
+  date: "1923-01"
+  title: リトアニアのメーメル（クライペダ）編入
+  text: 国際連盟の下でフランス軍が管理していたメーメル地方を、リトアニアが「住民の蜂起」の形で占領し、1924年のクライペダ協定で自治地域として編入した。
+  polities: [lithuania, france, germany]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/クライペダ"
+- year: 1924
+  date: "1924-01-21"
+  title: レーニンの死
+  text: 後継をめぐってスターリンとトロツキーらが争い、1927年までにトロツキーは党から追放された。ペトログラードはレニングラードと改められた。
+  polities: [soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ウラジーミル・レーニン"
+- year: 1926
+  date: "1926-05"
+  title: ピウスツキの五月クーデター
+  text: 議会政治の混乱に対し、ピウスツキが軍を率いてワルシャワを押さえ、実権を握った（サナツィア体制）。
+  polities: [poland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/五月クーデター"
+- year: 1928
+  title: 第1次五か年計画と農業の集団化
+  text: スターリンはネップをやめ、計画経済による重工業化を始めた。農民はコルホーズ（集団農場）に強制的に組み込まれ、抵抗する豊かな農民（クラーク）は追放された。
+  polities: [soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/五カ年計画"
+- year: 1932
+  title: ウクライナなどの大飢饉（ホロドモール）
+  text: 集団化と過酷な穀物の徴発で、1932–1933年にウクライナ・カザフスタン・北カフカスなどで数百万人が餓死した。ウクライナなど多くの国がジェノサイドと認定している。
+  polities: [soviet_union, ukraine]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ホロドモール"
+- year: 1936
+  title: 大粛清
+  text: 1934年のキーロフ暗殺をきっかけに、モスクワ裁判（1936–1938）でジノヴィエフ・ブハーリンら古参党員が処刑され、赤軍の将校や一般市民にも弾圧が広がった。処刑された人は約70万人、強制収容所（グラーグ）に送られた人はさらに多い。
+  polities: [soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/大粛清"
+- year: 1939
+  date: "1939-09-17"
+  title: ソ連のポーランド東部侵攻
+  text: 独ソ不可侵条約の秘密議定書にもとづき、ソ連軍が東から侵攻した。ポーランドは独ソに分割され、ソ連は東部をベラルーシ・ウクライナに併合し、ヴィリニュスはリトアニアに渡した。
+  polities: [soviet_union, poland, lithuania, germany]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ソ連のポーランド侵攻"
+- year: 1939
+  date: "1939-11-30"
+  title: 冬戦争（ソ連＝フィンランド戦争）
+  text: 領土の交換の要求を断られたソ連がフィンランドに攻め込んだ。フィンランド軍は激しく抵抗したが、1940年3月のモスクワ講和条約でカレリア地峡・ラドガ湖北岸などを失った。ソ連は国際連盟から除名された。
+  polities: [soviet_union, finland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/冬戦争"
+- year: 1940
+  date: "1940-04"
+  title: カティンの森事件
+  text: ソ連の内務人民委員部（NKVD）が、捕虜としたポーランド軍の将校・警察官など約2万2000人をカティンの森などで銃殺した。ソ連は1990年まで自らの犯行と認めなかった。
+  polities: [soviet_union, poland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/カティンの森事件"
+- year: 1940
+  date: "1940-06"
+  title: バルト三国のソ連併合
+  text: ソ連は最後通牒で軍を進駐させ、選挙を経て8月に3国を構成共和国として併合した。1941年6月と戦後には、数万人の住民がシベリアなどへ強制移送された。
+  polities: [soviet_union, estonia, latvia, lithuania]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/バルト諸国占領"
+- year: 1940
+  date: "1940-06-28"
+  title: ベッサラビアと北ブコヴィナのソ連編入
+  text: ソ連の最後通牒でルーマニアが割譲した。ベッサラビアの大部分はモルダヴィア共和国、北ブコヴィナと南ベッサラビアはウクライナ共和国とされた。
+  polities: [soviet_union, romania]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ソ連のベッサラビアと北ブコヴィナ占領"
+- year: 1941
+  date: "1941-06-25"
+  title: 継続戦争
+  text: フィンランドがドイツとともにソ連と戦い、冬戦争で失った土地と東カレリアを占領した。1944年夏のソ連の反攻で押し戻された。
+  polities: [finland, soviet_union, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/継続戦争"
+- year: 1941
+  date: "1941-09"
+  title: バビ・ヤールの虐殺とアインザッツグルッペン
+  text: ドイツ軍の後について進んだ移動殺害部隊（アインザッツグルッペン）が占領地のユダヤ人を大量に射殺した。キエフ郊外のバビ・ヤールでは2日間で3万人以上が殺された。
+  polities: [germany, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/バビ・ヤール大虐殺"
+- year: 1941
+  date: "1941-09-08"
+  title: レニングラード包囲戦
+  text: ドイツ・フィンランド軍がレニングラードを包囲し、1944年1月まで約900日続いた。凍ったラドガ湖の「命の道」で補給したが、飢えと寒さで約100万人の市民が亡くなった。
+  polities: [soviet_union, germany, finland]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/レニングラード包囲戦"
+- year: 1941
+  date: "1941-12"
+  title: モスクワの戦い
+  text: モスクワに迫ったドイツ軍を、冬の寒さとシベリアからの増援を得た赤軍が押し返した。ドイツの電撃戦は初めて失敗した。
+  polities: [soviet_union, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/モスクワの戦い"
+- year: 1943
+  date: "1943-04-19"
+  title: ワルシャワ・ゲットー蜂起
+  text: 絶滅収容所への移送に抵抗して、ゲットーのユダヤ人がドイツ軍と約1か月戦い、鎮圧された。
+  polities: [poland, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ワルシャワ・ゲットー蜂起"
+- year: 1943
+  date: "1943-07"
+  title: クルスクの戦い
+  text: 史上最大の戦車戦でドイツ軍の最後の大攻勢が失敗し、東部戦線の主導権はソ連に移った。赤軍は年末までにキエフを奪い返した。
+  polities: [soviet_union, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/クルスクの戦い"
+- year: 1943
+  date: "1943-10"
+  title: デンマークのユダヤ人の救出
+  text: ドイツによる逮捕・移送の計画が漏れ、市民や抵抗組織が約7000人のユダヤ人を漁船で中立国スウェーデンへ逃がした。
+  polities: [denmark, sweden, germany]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Rescue_of_the_Danish_Jews"
+- year: 1944
+  date: "1944-02"
+  title: チェチェン人・クリミア・タタール人などの強制移住
+  text: スターリンは「ドイツへの協力」を理由に、チェチェン人・イングーシ人・カルムイク人・クリミア・タタール人などの民族全体を中央アジア・シベリアへ強制移住させ、移送中や移住先で多くが亡くなった。
+  polities: [soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ソ連における強制移住"
+- year: 1944
+  date: "1944-06-17"
+  title: アイスランド共和国の成立
+  text: ドイツ占領下のデンマークとの同君連合を、国民投票を経て解消し、共和国となった。
+  polities: [iceland, denmark]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アイスランド"
+- year: 1944
+  date: "1944-06-22"
+  title: バグラチオン作戦
+  text: ソ連軍の大攻勢でドイツ中央軍集団が壊滅し、ベラルーシが解放された。赤軍は8月にヴィスワ川に達した。
+  polities: [soviet_union, germany, belarus]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/バグラチオン作戦"
+- year: 1944
+  date: "1944-08-01"
+  title: ワルシャワ蜂起
+  text: ロンドンの亡命政府に従う国内軍がドイツ軍に対して蜂起したが、対岸まで来ていたソ連軍は動かず、63日間の戦いで鎮圧された。約20万人が亡くなり、ワルシャワはドイツ軍に破壊された。
+  polities: [poland, germany, soviet_union]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ワルシャワ蜂起"
+- year: 1944
+  date: "1944-09-19"
+  title: ソ連とフィンランドの休戦
+  text: フィンランドはモスクワ休戦協定で1940年の国境に戻り、ペツァモを割譲し、ポルッカラを租借させた。北部のドイツ軍と戦った（ラップランド戦争）。
+  polities: [finland, soviet_union, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/モスクワ休戦協定"
+- year: 1945
+  date: "1945-01-27"
+  title: アウシュヴィッツの解放
+  text: ソ連軍が、約110万人が殺された最大の絶滅収容所アウシュヴィッツ＝ビルケナウを解放した。この日はのちに国際ホロコースト記念日とされた。
+  polities: [soviet_union, poland, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アウシュヴィッツ強制収容所"
+- year: 1945
+  title: 東プロイセンの分割とドイツ人の追放
+  text: ポツダム協定で東プロイセンの北部（ケーニヒスベルク）はソ連、南部はポーランドに入った。ケーニヒスベルクは1946年にカリーニングラードと改められた。オーデル＝ナイセ線以東のドイツ人は避難・追放され、ポーランド東部の住民が西へ移された。
+  polities: [soviet_union, poland, germany]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/カリーニングラード州"
+- year: 1948
+  date: "1948-04-06"
+  title: フィンランド＝ソ連友好協力相互援助条約
+  text: フィンランドは西側の体制を保ったまま、ソ連に敵対しないことを約束した（「フィンランド化」）。
+  polities: [finland, soviet_union]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/フィンランド化"
+- year: 1949
+  date: "1949-01"
+  title: 経済相互援助会議（コメコン）の結成
+  text: マーシャル・プランに対抗して、ソ連と東欧諸国が経済協力の組織をつくった。
+  polities: [soviet_union, poland, czechoslovakia, hungary, romania, bulgaria]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/経済相互援助会議"
+- year: 1953
+  date: "1953-03-05"
+  title: スターリンの死
+  text: 秘密警察長官ベリヤが処刑され、フルシチョフが党の第一書記として台頭した。収容所の囚人の釈放が始まった。
+  polities: [soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ヨシフ・スターリン"
+- year: 1954
+  title: クリミアのウクライナへの移管
+  text: ソ連の中で、クリミア州がロシア共和国からウクライナ共和国に移された。ソ連の解体後、クリミアはウクライナ領となった。
+  polities: [soviet_union, ukraine]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/クリミア州のウクライナ移管"
+- year: 1956
+  date: "1956-10"
+  title: ポズナン暴動とポーランドの十月
+  text: 6月のポズナンの労働者の暴動の後、ゴムウカが党の第一書記に復帰した。ソ連は介入をちらつかせたが、ゴムウカの改革を受け入れた。
+  polities: [poland, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ポズナン暴動"
+- year: 1957
+  date: "1957-10-04"
+  title: スプートニクの打ち上げ
+  text: ソ連が世界初の人工衛星を打ち上げ、アメリカに衝撃を与えた（スプートニク・ショック）。1961年にはガガーリンが初の有人宇宙飛行に成功した。
+  polities: [soviet_union, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/スプートニク1号"
+- year: 1981
+  date: "1981-12-13"
+  title: ポーランドの戒厳令
+  text: ソ連の介入を恐れたヤルゼルスキが戒厳令をしき、「連帯」を非合法化してワレサら指導者を拘束した。
+  polities: [poland, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ポーランドの戒厳令"
+- year: 1989
+  date: "1989-06-04"
+  title: ポーランドの円卓会議と6月選挙
+  text: 政府と「連帯」の円卓会議の合意で行われた部分的な自由選挙で連帯が圧勝し、8月にマゾヴィエツキ内閣が生まれた。東欧革命の先がけとなった。
+  polities: [poland, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ポーランド円卓会議"
+- year: 1989
+  date: "1989-08-23"
+  title: バルトの道
+  text: 独ソ不可侵条約から50年の日に、約200万人が手をつないでタリン・リガ・ヴィリニュスを結ぶ約600キロの人間の鎖をつくり、独立を訴えた（「歌う革命」）。
+  polities: [estonia, latvia, lithuania, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/バルトの道"
+- year: 1990
+  date: "1990-03-11"
+  title: リトアニアの独立回復宣言
+  text: ソ連の構成国で最初に独立の回復を宣言した。ソ連は経済封鎖で応じ、1991年1月にはヴィリニュスのテレビ塔をソ連軍が襲って市民14人が亡くなった（血の日曜日事件）。
+  polities: [lithuania, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/リトアニアの独立回復"
+- year: 1991
+  date: "1991-08-24"
+  title: ウクライナの独立宣言
+  text: 八月クーデタの失敗の後、ウクライナ最高会議が独立を宣言し、12月1日の国民投票で90％以上が支持した。これがソ連の解体を決定づけた。
+  polities: [ukraine, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ウクライナ独立宣言"
+- year: 1993
+  date: "1993-10"
+  title: ロシアの十月政変と新憲法
+  text: エリツィン大統領と対立した最高会議（議会）の建物を軍が砲撃して制圧した。12月の国民投票で強い大統領権限を持つ新憲法が成立した。
+  polities: [russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ロシア憲法危機"
+- year: 1994
+  date: "1994-12"
+  title: 第1次チェチェン紛争
+  text: 独立を宣言したチェチェンにロシア軍が侵攻し、首都グロズヌイは廃墟となった。1996年のハサヴユルト協定でロシア軍は撤退した。
+  polities: [russia, ichkeria]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第一次チェチェン紛争"
+- year: 1994
+  date: "1994-12-05"
+  title: ブダペスト覚書
+  text: ウクライナ・ベラルーシ・カザフスタンがソ連の核兵器を放棄して核拡散防止条約に加わるかわりに、アメリカ・イギリス・ロシアが3国の領土の保全を約束した。
+  polities: [ukraine, belarus, russia, usa, britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ブダペスト覚書"
+- year: 1995
+  date: "1995-01-01"
+  title: スウェーデン・フィンランドのEU加盟
+  text: オーストリアとともにヨーロッパ連合に加わった。ノルウェーは国民投票で加盟を否決した（1994）。
+  polities: [sweden, finland, austria, norway]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/欧州連合の拡大"
+- year: 1998
+  date: "1998-08"
+  title: ロシアの財政危機
+  text: ロシア政府が国債の支払いを停止し、ルーブルが暴落した。翌年、エリツィンは辞任してプーチンを後継に指名した。
+  polities: [russia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ロシア財政危機"
+- year: 1999
+  date: "1999-08"
+  title: 第2次チェチェン紛争
+  text: ダゲスタンへの武装勢力の侵入と連続アパート爆破事件を受けて、首相プーチンがチェチェンに再び軍を送った。2000年にグロズヌイを制圧し、親ロシア派のカディロフ家による統治が始まった。
+  polities: [russia, ichkeria]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第二次チェチェン紛争"
+- year: 2004
+  date: "2004-03-29"
+  title: バルト三国などのNATO加盟
+  text: エストニア・ラトヴィア・リトアニア（旧ソ連の構成国として初めて）とルーマニア・ブルガリア・スロヴァキア・スロヴェニアが北大西洋条約機構に加わった。
+  polities: [estonia, latvia, lithuania, romania, bulgaria, slovakia, slovenia, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/北大西洋条約機構の拡大"
+- year: 2004
+  date: "2004-11"
+  title: オレンジ革命
+  text: ウクライナの大統領選挙の不正に抗議する大規模なデモで再選挙が行われ、親欧米のユシチェンコが当選した。
+  polities: [ukraine, russia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/オレンジ革命"
+- year: 2010
+  date: "2010-04-10"
+  title: スモレンスクの政府専用機墜落
+  text: カティンの森事件の追悼に向かったポーランドのレフ・カチンスキ大統領夫妻と政府・軍の要人ら96人が、ロシアのスモレンスク近郊で墜落事故により亡くなった。
+  polities: [poland, russia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ポーランド空軍Tu-154墜落事故"
+- year: 2011
+  date: "2011-07-22"
+  title: ノルウェー連続テロ事件
+  text: 移民の受け入れに反対する極右の男が、オスロの政府庁舎の爆破とウトヤ島の労働党青年部の集会の銃撃で77人を殺害した。
+  polities: [norway]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ノルウェー連続テロ事件"
+- year: 2014
+  date: "2014-04"
+  title: ドンバス戦争
+  text: ロシアの支援を受けた武装勢力が東部のドネツク・ルハンシク州の一部を押さえ、「人民共和国」を名乗った。7月には上空のマレーシア航空17便が撃墜されて298人が亡くなった。ミンスク合意（2014・2015）で停戦が図られたが、戦闘は続いた。
+  polities: [ukraine, russia, donetsk_pr, luhansk_pr]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ドンバス戦争"
+- year: 2020
+  date: "2020-08"
+  title: ベラルーシの大統領選挙と抗議デモ
+  text: ルカシェンコの6選に不正があったとして、数十万人規模の抗議デモが続いたが、治安部隊に弾圧され、野党の指導者たちは国外に逃れるか投獄された。
+  polities: [belarus, russia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/2020年ベラルーシ反政府デモ"
+- year: 2022
+  date: "2022-09-30"
+  title: ロシアのウクライナ4州併合宣言
+  text: ロシアは占領下のドネツク・ルハンシク・ザポリージャ・ヘルソン4州で「住民投票」を行い、併合を宣言した。国連総会はこれを無効とする決議を採択した。11月にウクライナ軍がヘルソン市を奪い返した。
+  polities: [russia, ukraine, donetsk_pr, luhansk_pr]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ロシアによるウクライナ4州の併合"

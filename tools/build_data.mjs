@@ -52,17 +52,25 @@ const tsv = fs.readFileSync(path.join(DATA, "generated", "pieces.tsv"), "utf8").
 const header = tsv.shift().split("\t");
 const pieces = tsv.map((l) => Object.fromEntries(l.split("\t").map((v, i) => [header[i], v])));
 const pieceIndex = new Map(pieces.map((p, i) => [p.id, i]));
+// select の iso：国全体のピース。ただし、ヨーロッパの範囲（zone=eu）にかかる国は範囲内のピースだけ
+// （全世界に広げる前に書いたデータの意味を変えないため。範囲外まで含めるときは iso_all を使う）
 const byIso = new Map();
+const byIsoAll = new Map();
 const byAdm1 = new Map();
 const byAdm2 = new Map();
+const euIsos = new Set(pieces.filter((p) => (p.zone ?? "eu") === "eu").map((p) => p.iso));
 for (const [i, p] of pieces.entries()) {
   if (p.adm2) {
     const k2 = `${p.iso}/${p.adm2}`;
     if (!byAdm2.has(k2)) byAdm2.set(k2, []);
     byAdm2.get(k2).push(i);
   }
-  if (!byIso.has(p.iso)) byIso.set(p.iso, []);
-  byIso.get(p.iso).push(i);
+  if (!byIsoAll.has(p.iso)) byIsoAll.set(p.iso, []);
+  byIsoAll.get(p.iso).push(i);
+  if ((p.zone ?? "eu") === "eu" || !euIsos.has(p.iso)) {
+    if (!byIso.has(p.iso)) byIso.set(p.iso, []);
+    byIso.get(p.iso).push(i);
+  }
   const k = `${p.iso}/${p.adm1}`;
   if (!byAdm1.has(k)) byAdm1.set(k, []);
   byAdm1.get(k).push(i);
@@ -106,6 +114,11 @@ function resolveRegion(id, where) {
   const where2 = `${r._file} の ${id}`;
   for (const iso of sel.iso ?? []) {
     const l = byIso.get(iso);
+    if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
+    for (const i of l ?? []) set.add(i);
+  }
+  for (const iso of sel.iso_all ?? []) {
+    const l = byIsoAll.get(iso);
     if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
     for (const i of l ?? []) set.add(i);
   }
@@ -248,6 +261,11 @@ function buildDistribution(dir, label) {
     const where2 = `${r._file} の ${id}`;
     for (const iso of sel.iso ?? []) {
       const l = byIso.get(iso);
+      if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
+      for (const i of l ?? []) set.add(i);
+    }
+    for (const iso of sel.iso_all ?? []) {
+      const l = byIsoAll.get(iso);
       if (!l) warn(`${where2}: ピースのない国コード "${iso}"`);
       for (const i of l ?? []) set.add(i);
     }

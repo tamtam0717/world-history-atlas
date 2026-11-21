@@ -10,7 +10,7 @@ import { feature, merge, mesh, neighbors } from "topojson-client";
 import type { GeometryCollection, MultiPolygon, Polygon, Topology } from "topojson-specification";
 import type { Feature, FeatureCollection, Geometry, MultiPolygon as GeoMultiPolygon } from "geojson";
 import { AtlasIndex, cityCapitalOf, cityName, cityPop, curveAt, fallbackColor, type DistKey, type Movement, type ReligionEntry, type TimelineEntry } from "./data";
-import { assignColors, modernName } from "./modern";
+import { assignColors, MODERN_NAMES, modernName } from "./modern";
 
 type PieceProps = { id: string; name: string; iso: string; adm1?: string; adm2?: string };
 type PieceGeom = (Polygon<PieceProps> | MultiPolygon<PieceProps>) & { id?: string };
@@ -37,6 +37,12 @@ const SEA = "#cfdde3";
 const NODATA = "#e6e2d8";
 /** 宗教表示で、データのないピースの色 */
 const REL_NODATA = "#e2e0dc";
+/**
+ * 歴史データがまだ1つもない地域（ヨーロッパ以外など）は、現代の国の色をこの色に寄せて淡く・彩度を落として塗る。
+ * 「現代の国境で仮に塗ってある（歴史の地図は準備中）」と、ひと目でわかるようにする
+ */
+const PENDING_BASE = "#ece8e0";
+const PENDING_LINE = "#9d9385";
 const RIVER = "#7ea6c2";
 const EUROPE: [[number, number], [number, number]] = [
   [-11, 34],
@@ -48,6 +54,9 @@ const FONT_REGULAR = ["Noto Sans Regular"];
 const LOCAL_FONT = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Meiryo", sans-serif';
 /** 帝国の枠として描く上位政体（それ以外の overlord は宗主権として、宗主国の色の帯で描く） */
 const EMPIRE_FRAMES = new Set(["hre", "rhine_confederation", "german_confederation", "north_german_confederation", "hungary_crown"]);
+
+/** 地域へのジャンプ（W・E・NA・SA・AF・AS・OC） */
+export type MapRegion = "world" | "europe" | "na" | "sa" | "af" | "as" | "oc";
 
 /** 地図の主題（塗り分けの種類）。分布（宗教・言語）を足すときは DistKey にも足す */
 export type MapLayer = "political" | DistKey;
@@ -103,6 +112,10 @@ export class AtlasMap {
   private movement: Movement | null = null;
   private mvTimer = 0;
   private baseZoom = 3;
+  /** 歴史データ（政治）がまだ1つもないピース。現代の国境で淡く塗る */
+  private pending: boolean[] = [];
+  /** 分布（宗教・言語）のデータがまだ1つもないピース */
+  private distPending: Record<DistKey, boolean[]> = { religion: [], language: [] };
   debug = false;
   bottomInset = 0;
 
@@ -117,6 +130,9 @@ export class AtlasMap {
     const atlasPos = new Map(idx.atlas.pieceIds.map((id, i) => [id, i]));
     this.atlasIdx = this.geoms.map((g) => atlasPos.get(g.properties!.id) ?? -1);
     const n = this.geoms.length;
+    const noTl = (tls: unknown[][] | undefined) => this.atlasIdx.map((a) => a < 0 || !tls?.[a]?.length);
+    this.pending = noTl(idx.atlas.pieceTimelines);
+    this.distPending = { religion: noTl(idx.dist("religion")?.pieceTimelines), language: noTl(idx.dist("language")?.pieceTimelines) };
     this.ownerOf = new Int32Array(n).fill(-2);
     this.ovOf = new Int32Array(n);
     this.colorOf = new Array(n).fill(undefined);
@@ -213,7 +229,17 @@ export class AtlasMap {
     fc.features.forEach((f, i) => {
       f.id = i;
       const p = f.properties as PieceProps;
-      f.properties = { pid: p.id, name: p.name, iso: p.iso, mcolor: mcolors.get(p.iso) };
+      const mc = mcolors.get(p.iso) ?? "#dddddd";
+      // データのない年の色：歴史データがまだないピースは現代の国の色を淡くしたもの、あるピースは灰色（データの抜け）
+      f.properties = {
+        pid: p.id,
+        name: p.name,
+        iso: p.iso,
+        mcolor: mc,
+        pc: this.pending[i] ? mix(mc, PENDING_BASE, 0.42) : NODATA,
+        rc: this.distPending.religion[i] ? mix(mc, PENDING_BASE, 0.25) : REL_NODATA,
+        lc: this.distPending.language[i] ? mix(mc, PENDING_BASE, 0.25) : REL_NODATA,
+      };
     });
     map.addSource("pieces", { type: "geojson", data: fc });
     for (const id of ["borders", "overlords", "suz", "subunits", "sublabels", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes", "mv", "flash"]) {
@@ -222,6 +248,8 @@ export class AtlasMap {
     // 川の名前用：細かく曲がる線のままだと線に沿った文字が置けないので、強めに単純化した別のソースを使う
     map.addSource("rivers-lbl", { type: "geojson", data: EMPTY, tolerance: 8 });
     map.addSource("modern-borders", { type: "geojson", data: this.modernBorders() });
+    map.addSource("pending-borders", { type: "geojson", data: this.pendingBorders() });
+    map.addSource("pending-labels", { type: "geojson", data: this.pendingLabels() });
     map.addSource("modern-labels", { type: "geojson", data: this.modernLabels() });
     map.addSource("modern-cities", { type: "geojson", data: this.modernCities() });
     map.addSource("seas", { type: "geojson", data: this.seas() });
@@ -231,14 +259,14 @@ export class AtlasMap {
       id: "fill",
       type: "fill",
       source: "pieces",
-      paint: { "fill-color": ["coalesce", ["feature-state", "c"], NODATA] },
+      paint: { "fill-color": ["coalesce", ["feature-state", "c"], ["get", "pc"]] },
     });
     // 隣り合うピースの継ぎ目に出る細い隙間を、同じ色の細い線で埋める
     map.addLayer({
       id: "seam",
       type: "line",
       source: "pieces",
-      paint: { "line-color": ["coalesce", ["feature-state", "c"], NODATA], "line-width": 0.8 },
+      paint: { "line-color": ["coalesce", ["feature-state", "c"], ["get", "pc"]], "line-width": 0.8 },
     });
     map.addLayer({
       id: "modern-fill",
@@ -260,14 +288,14 @@ export class AtlasMap {
       type: "fill",
       source: "pieces",
       layout: { visibility: "none" },
-      paint: { "fill-color": ["coalesce", ["feature-state", "r"], REL_NODATA] },
+      paint: { "fill-color": ["coalesce", ["feature-state", "r"], ["get", "rc"]] },
     });
     map.addLayer({
       id: "rel-seam",
       type: "line",
       source: "pieces",
       layout: { visibility: "none" },
-      paint: { "line-color": ["coalesce", ["feature-state", "r"], REL_NODATA], "line-width": 0.8 },
+      paint: { "line-color": ["coalesce", ["feature-state", "r"], ["get", "rc"]], "line-width": 0.8 },
     });
     map.addLayer({ id: "hatch", type: "fill", source: "hatch", paint: { "fill-pattern": ["get", "pat"] } });
     map.addLayer({
@@ -337,6 +365,18 @@ export class AtlasMap {
         "line-color": "#5b4a38",
         "line-opacity": 0.75,
         "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.4, 6, 0.9, 9, 1.3],
+      },
+    });
+    // 歴史データのない地域の、現代の国境（淡い細線。歴史の国境と見分けられるように）
+    map.addLayer({
+      id: "pending-borders",
+      type: "line",
+      source: "pending-borders",
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": PENDING_LINE,
+        "line-opacity": 0.75,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.3, 4, 0.6, 8, 1],
       },
     });
     map.addLayer({
@@ -597,6 +637,29 @@ export class AtlasMap {
         "text-halo-color": "rgba(255,255,255,.55)",
         "text-halo-width": 1.1,
         "text-halo-blur": 0.6,
+      },
+    });
+
+    // 歴史データのない地域の現代の国名（歴史の国名より淡く小さく。「仮の地図」とわかるように）
+    map.addLayer({
+      id: "pending-labels",
+      type: "symbol",
+      source: "pending-labels",
+      filter: [">=", ["zoom"], ["get", "minz"]],
+      layout: {
+        "text-field": ["get", "name"],
+        "text-font": FONT_REGULAR,
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1, ["*", ["get", "s"], 8.5], 5, ["*", ["get", "s"], 13], 8, ["*", ["get", "s"], 17]],
+        "text-max-width": 30,
+        "text-letter-spacing": 0.2,
+        "symbol-sort-key": ["get", "rank"],
+        "text-padding": 2,
+      },
+      paint: {
+        "text-color": "#6f665a",
+        "text-opacity": 0.6,
+        "text-halo-color": "rgba(255,255,255,.5)",
+        "text-halo-width": 1,
       },
     });
 
@@ -1022,10 +1085,11 @@ export class AtlasMap {
    * いま分布の表示で描いている種類（凡例用。データのないピースがあれば nodata = true）。
    * onScreen なら、画面に見えているピースだけを数える（地図の準備前は全体）
    */
-  religionKindsShown(onScreen = false): { kinds: number[]; minors: boolean; nodata: boolean } {
+  religionKindsShown(onScreen = false): { kinds: number[]; minors: boolean; nodata: boolean; pending: boolean } {
     const key: DistKey = isDist(this.layer) ? this.layer : "religion";
     const set = new Set<number>();
     let nodata = false;
+    let pending = false;
     let minors = false;
     let visible: Iterable<number> | null = null;
     if (onScreen && this.loaded) {
@@ -1037,7 +1101,8 @@ export class AtlasMap {
     for (const i of all) {
       const s = this.atlasIdx[i] >= 0 ? this.idx.distState(key, this.atlasIdx[i], this.year) : null;
       if (!s || s[1] < 0) {
-        nodata = true;
+        if (this.distPending[key][i]) pending = true;
+        else nodata = true;
         continue;
       }
       set.add(s[1]);
@@ -1046,7 +1111,7 @@ export class AtlasMap {
         set.add(s[2]); // minor にしか出てこない種類も凡例に入れる
       }
     }
-    return { kinds: [...set].sort((a, b) => a - b), minors, nodata };
+    return { kinds: [...set].sort((a, b) => a - b), minors, nodata, pending };
   }
 
   /** 宗教表示で選んでいる地域（枠で強調する）。-1 で解除 */
@@ -1268,6 +1333,37 @@ export class AtlasMap {
     return { type: "FeatureCollection", features };
   }
 
+  /** 歴史データのない地域の、現代の国どうしの境界（データのある地域との境と海岸線は、ふつうの国境線で描く） */
+  private pendingBorders(): FeatureCollection {
+    const pos = this.posMap();
+    const pend = this.pending;
+    const iso = (i: number) => this.geoms[i].properties!.iso;
+    const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => {
+      const i = pos.get(a)!;
+      const j = pos.get(b)!;
+      return a !== b && pend[i] && pend[j] && iso(i) !== iso(j);
+    });
+    return { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geom as Geometry }] };
+  }
+
+  /** 歴史データのない地域の、現代の国名（国のうちデータのない部分に置く） */
+  private pendingLabels(): FeatureCollection {
+    const byIso = new Map<string, number[]>();
+    this.geoms.forEach((g, i) => {
+      if (!this.pending[i]) return;
+      const iso = g.properties!.iso;
+      if (!(iso in MODERN_NAMES)) return; // 係争地の小さな区画には名前を出さない
+      if (!byIso.has(iso)) byIso.set(iso, []);
+      byIso.get(iso)!.push(i);
+    });
+    const features: Feature[] = [];
+    for (const [iso, ps] of byIso) {
+      const l = this.merged(`pending${iso}`, ps).label;
+      if (l) features.push(labelFeature(modernName(iso), l, { scale: 0.85 }));
+    }
+    return { type: "FeatureCollection", features };
+  }
+
   /** 現代の国境を表示するかどうか */
   setModern(on: boolean) {
     this.modernOn = on;
@@ -1294,6 +1390,13 @@ export class AtlasMap {
     set(["modern-labels", "modern-cities-label"], on && lb);
     set(["borders", "cities-dot", "highlight"], !on || rel);
     set(["frames", "suz-band", "suzerain", "subunit-borders"], !on && !rel);
+    set(["pending-borders"], !on);
+    set(["pending-labels"], !on && lb);
+    if (rel) {
+      const prop = this.layer === "language" ? "lc" : "rc";
+      this.map.setPaintProperty("rel-fill", "fill-color", ["coalesce", ["feature-state", "r"], ["get", prop]]);
+      this.map.setPaintProperty("rel-seam", "line-color", ["coalesce", ["feature-state", "r"], ["get", prop]]);
+    }
     set(["labels", "cities-label", "sublabels"], !on && lb);
     set(["seas", "rivers-label", "lakes-label"], lb);
     // 宗教表示では、国境と国名を薄くして宗教の塗り分けを主役にする
@@ -1427,8 +1530,8 @@ export class AtlasMap {
     );
   }
 
-  /** 地域へ移動する（W：地球全体、E：ヨーロッパ、NA・AF・AS：北米・アフリカ・アジア） */
-  flyToRegion(region: "world" | "europe" | "na" | "af" | "as") {
+  /** 地域へ移動する（W：地球全体、E：ヨーロッパ、NA・SA・AF・AS・OC：北米・南米・アフリカ・アジア・オセアニア） */
+  flyToRegion(region: MapRegion) {
     if (region === "world") {
       const c = this.map.getCenter();
       this.map.flyTo({ center: [c.lng, Math.max(-30, Math.min(30, c.lat))], zoom: this.map.getMinZoom(), duration: 900, essential: true });
@@ -1437,8 +1540,10 @@ export class AtlasMap {
     const boxes: Record<string, [number, number, number, number]> = {
       europe: [EUROPE[0][0], EUROPE[0][1], EUROPE[1][0], EUROPE[1][1]],
       na: [-128, 14, -60, 58],
+      sa: [-82, -56, -34, 13],
       af: [-18, -35, 52, 37],
       as: [40, 0, 145, 60],
+      oc: [112, -47, 179, 0],
     };
     this.fitBox(boxes[region]);
   }
@@ -1489,6 +1594,7 @@ export class AtlasMap {
       if (isDist(this.layer)) text = this.religionHoverText(i);
       else if (this.modernOn) text = modernName(this.geoms[i].properties!.iso);
       else if (this.ownerOf[i] >= 0) text = this.idx.polityName(this.idx.atlas.polities[this.ownerOf[i]], this.year);
+      else if (this.pending[i]) text = `${modernName(this.geoms[i].properties!.iso)}（現代の国境）\nこの地域の歴史の地図は準備中`;
       if (this.debug) {
         const p = this.geoms[i].properties!;
         text = `${text ? text + "\n" : ""}${p.id}（${p.name}）`;
@@ -1508,6 +1614,7 @@ export class AtlasMap {
     const key = this.layer as DistKey;
     const r = this.relRegion[i];
     const e = r >= 0 ? this.idx.distEntry(key, r, this.year) : null;
+    if (!e && this.distPending[key][i]) return `${modernName(this.geoms[i].properties!.iso)}（現代の国境）\n${DIST_LABEL[key]}の地図は準備中`;
     if (!e) return `${DIST_LABEL[key]}データ未整備`;
     const d = this.idx.dist(key)!;
     const nm = (id: string | null | undefined) => d.kinds.find((k) => k.id === id)?.name ?? id ?? "";
@@ -1629,6 +1736,17 @@ function inwardRings(m: Merged): GeoMultiPolygon {
 }
 
 /** 色を暗く（f < 1）する */
+/** 色 a を色 b に寄せる（t = a の割合） */
+function mix(a: string, b: string, t: number): string {
+  const rgb = (c: string) => {
+    const m = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(c);
+    return m ? [m[1], m[2], m[3]].map((v) => parseInt(v, 16)) : [221, 221, 221];
+  };
+  const [x, y] = [rgb(a), rgb(b)];
+  const hex = x.map((v, k) => Math.round(v * t + y[k] * (1 - t)).toString(16).padStart(2, "0")).join("");
+  return `#${hex}`;
+}
+
 function shade(color: string, f: number): string {
   const m = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(color);
   if (!m) return color;

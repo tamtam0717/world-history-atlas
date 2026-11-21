@@ -215,6 +215,11 @@ body.debug #debug-info {
   background: #e6e2d8;
   border: 1px solid #ccc4b4;
 }
+/* 歴史データのない地域：現代の国の色を淡くしたものが、細い線で区切られて並ぶ */
+.lg-pending {
+  background: linear-gradient(90deg, #efe1c6 0 33%, #9d9385 33% calc(33% + 1px), #d9e1d0 0 66%, #9d9385 66% calc(66% + 1px), #d3dee6 0);
+  border: 1px solid #c9c1b3;
+}
 .tooltip {
   position: absolute;
   display: none;
@@ -1041,6 +1046,9 @@ body[data-layer="religion"] .legend {
 }
 .rel-legend i.rl-nodata {
   background: #e2e0dc;
+}
+.rel-legend i.rl-pending {
+  background: linear-gradient(90deg, #ece2cf 0 50%, #9d9385 50% calc(50% + 1px), #e0e5df 0);
 }
 @media (max-width: 799px) {
   .rel-legend {

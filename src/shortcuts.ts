@@ -1,11 +1,11 @@
 // キーボードショートカット（一覧は index.html の #help。? キーで表示）
 //
-// 2文字のもの（NA・AF・AS）は、先頭の文字（N・A）が単独では何もしないので、待たずに確定できる。
+// 2文字のもの（NA・SA・AF・AS・OC）は、先頭の文字（N・S・A・O）が単独では何もしないので、待たずに確定できる。
 // 先頭の文字を押してから 1 秒以内に次の文字を押すと 2 文字のショートカットになり、
 // それ以外のキーを押したときは先頭の文字を忘れて、そのキー本来の動作をする（例：A → C は C の動作）。
 
 import type { DistKey } from "./data";
-import type { AtlasMap } from "./map";
+import type { AtlasMap, MapRegion } from "./map";
 import type { Search } from "./search";
 
 export interface ShortcutActions {
@@ -33,9 +33,14 @@ export interface ShortcutActions {
 }
 
 type LayerKey = DistKey | "political";
-type Region = "world" | "europe" | "na" | "af" | "as";
-const COMBOS: Record<string, Region> = { NA: "na", AF: "af", AS: "as" };
-const PREFIXES = new Set(["N", "A"]);
+const COMBOS: Record<string, MapRegion> = { NA: "na", SA: "sa", AF: "af", AS: "as", OC: "oc" };
+const PREFIXES = new Set(["N", "S", "A", "O"]);
+const PREFIX_HINT: Record<string, string> = {
+  N: "N … A で北米",
+  S: "S … A で南米",
+  A: "A … F でアフリカ／S でアジア",
+  O: "O … C でオセアニア",
+};
 const COMBO_MS = 1000;
 
 const ARROWS: Record<string, [number, number]> = {
@@ -250,7 +255,7 @@ export function setupShortcuts(a: ShortcutActions) {
     if (PREFIXES.has(l)) {
       pending = l;
       pendingAt = now;
-      toast(l === "N" ? "N … A で北米" : "A … F でアフリカ／S でアジア", COMBO_MS);
+      toast(PREFIX_HINT[l], COMBO_MS);
       return true;
     }
     switch (l) {

@@ -436,7 +436,7 @@ async function main() {
     const hatchSample = kinds.length
       ? `<li class="rl-hatch"><i style="background:repeating-linear-gradient(135deg, ${stripeColor(kinds[0].color)} 0 2px, #f1efe9 2px 6px)"></i>斜線＝少数派も多い地域<span class="rl-long">（斜線の色が少数派）</span></li>`
       : "";
-    const notes = `${shown.minors ? hatchSample : ""}${shown.nodata ? `<li><i class="rl-nodata"></i>データ作成中</li>` : ""}`;
+    const notes = `${shown.minors ? hatchSample : ""}${shown.nodata ? `<li><i class="rl-nodata"></i>データ作成中</li>` : ""}${shown.pending ? `<li><i class="rl-pending"></i>現代の国境（データ準備中）</li>` : ""}`;
     const toggle = (label: string) =>
       `<button type="button" class="rl-toggle" aria-label="凡例を開く／閉じる">${label}<span class="rl-caret"></span></button>`;
     if (dist === "religion") {

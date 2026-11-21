@@ -142,7 +142,7 @@ def main():
     inner_countries = set(g.iso)
 
     # ---- 範囲外（zone=world） ----
-    world = build_world(cfg, inner_countries, used, set(g.id))
+    world = build_world(cfg, inner_countries, used, set(g.id), clip)
     g = gpd.GeoDataFrame(pd.concat([g, world], ignore_index=True), crs="EPSG:4326")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -152,7 +152,7 @@ def main():
     print(counts.head(40).to_string(), file=sys.stderr)
 
 
-def build_world(cfg, inner_countries, used, taken):
+def build_world(cfg, inner_countries, used, taken, clip):
     """bbox の外のピース。範囲内のピースに使っていない CGAZ の区画から作る"""
     adm1 = read_cgaz("ADM1")
     adm2 = read_cgaz("ADM2")
@@ -188,6 +188,8 @@ def build_world(cfg, inner_countries, used, taken):
     w = gpd.GeoDataFrame(rows, geometry="geometry", crs="EPSG:4326")
     w["geometry"] = w.geometry.apply(polys_only)
     w = w[~w.geometry.is_empty]
+    # bbox の中にすっぽり入る区画は、範囲内で小さすぎて捨てた断片なので、ここでも捨てる
+    w = w[~w.geometry.within(clip)]
     w["name"] = w["name"].fillna("").astype(str).replace("", "unnamed")
     w["cx"] = w.geometry.representative_point().x
     w = w.sort_values(["iso", "name", "cx"]).reset_index(drop=True)
