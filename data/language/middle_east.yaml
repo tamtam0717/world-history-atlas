@@ -1,0 +1,522 @@
+# 言語（民族）の分布：アナトリア・東トラキア・コーカサス南部・メソポタミア・レヴァント・アラビア・イラン・アフガニスタン西部（1648–1914）
+# 形式は docs/language-format.md。main = 住民（特に農村の民衆）の多数派の言語、minor = 2〜3割以上の少数派。
+# 範囲は1914年まで（1915年のアルメニア人虐殺、1923年のギリシア・トルコの住民交換の前の状態）。
+# ザザ語はクルド語に、ラズ語はジョージア語（カルトヴェリ系）に、ギーラーン語・マーザンダラーン語・ロル語はペルシア語に、
+# ガシュガーイー語はアゼルバイジャン語に含める。
+
+# ======== アナトリア・東トラキア ========
+- id: lang_anatolia_base
+  name: アナトリア（下地：トルコ語）
+  select:
+    iso: [TUR]
+  timeline:
+    - from: 1648
+      main: turkish
+      note: ムスリムの農民・遊牧民（ユルック、トゥルクメン）はトルコ語。カラマン地方などには、トルコ語を話しギリシア文字で書く正教徒（カラマンルデス）もいた。カッパドキアの一部の村はギリシア語。クリミア・タタール人、チェルケス人（1864年の追放）、バルカンのムスリム（1878年以後）など、ロシアとバルカンから数百万人のムスリム難民（ムハジル）がアナトリアに定住した。
+      source: https://ja.wikipedia.org/wiki/ムハージル
+
+- id: lang_istanbul
+  name: イスタンブル
+  select:
+    pieces: [TUR-stanbul]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: greek
+      note: 住民の約4割が非ムスリム（ギリシア人・アルメニア人・ユダヤ人）で、フェネル地区にはコンスタンティノープル総主教座があった。ガラタ・ペラには西欧の商人も住む。
+
+- id: lang_east_thrace
+  name: 東トラキア（エディルネ・クルクラーレリ・テキルダー）
+  select:
+    pieces: [TUR-Edirne, TUR-K_rklareli, TUR-Tekirda]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: greek
+      note: ギリシア語の村と町（ロドスト＝テキルダー、ヴィゼなど）が多い。ストランジャ山地にはブルガリア人の村、エディルネにはユダヤ人・アルメニア人もいる。
+
+- id: lang_aegean_coast
+  name: エーゲ海沿岸（イズミル・アイドゥン・バルケスィル・チャナッカレ）
+  select:
+    pieces: [TUR-zmir, TUR-Ayd_n, TUR-Bal_kesir, TUR-Canakkale]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: greek
+      note: スミルナ（イズミル）は西欧との貿易の港で、19世紀末には市内の住民の多数がギリシア人などの非ムスリム。エーゲ海の島々からギリシア人の移住が続いた。アイヴァルク・イムロズ島などはギリシア語の町。
+      source: "https://ja.wikipedia.org/wiki/イズミル"
+
+- id: lang_pontus
+  name: ポントス（黒海沿岸東部：トラブゾン・ギレスン・ギュミュシュハネ）
+  select:
+    pieces: [TUR-Trabzon, TUR-Giresun, TUR-Gumu_hane, TUR-Ordu, TUR-Samsun]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: greek
+      note: ポントス・ギリシア語の正教徒の村。トラブゾン東部（オフ・トンヤ）にはギリシア語を話すムスリムの村もある。ギュミュシュハネの銀山にもギリシア人の鉱夫。
+      source: "https://ja.wikipedia.org/wiki/ポントス人"
+
+- id: lang_lazistan
+  name: ラズィスタン（リゼ）
+  select:
+    pieces: [TUR-Rize]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: georgian
+      note: 東部の沿岸（パザル・アルデシェン・フンドゥクル）はラズ人（カルトヴェリ系のラズ語）。山地のヘムシン人はアルメニア系。
+
+- id: lang_artvin
+  name: アルトヴィン（シャヴシェティ・クラルジェティ）
+  select:
+    pieces: [TUR-Artvin, TUR-Ardahan]
+  timeline:
+    - from: 1648
+      main: georgian
+      minor: turkish
+      note: ムスリムのジョージア人（チヴェネブリ）とラズ人の地域。アルダハンにはトルコ人・テレケメ人も多い。1878–1918年はロシア領。要確認
+
+- id: lang_kars
+  name: カルス
+  select:
+    pieces: [TUR-Kars]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: armenian
+      note: 要塞都市カルス（アルメニアの古都）。周辺はトルコ人・クルド人・アルメニア人の村。ベルリン条約（1878）でロシア領。ムスリムの一部がオスマン帝国へ移り、アルメニア人・ギリシア人（コーカサス・ギリシア人）・ロシア人（モロカン派など）が入植した。要確認（1897年はアルメニア人・トルコ人・クルド人がほぼ並ぶ）
+
+- id: lang_igdir
+  name: スルマル（ウードゥル）
+  select:
+    pieces: [TUR-I_d_r]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: armenian
+      note: エレバン・ハン国（イラン）の一部。
+    - from: 1830
+      main: armenian
+      minor: azerbaijani
+      note: トルコマンチャーイ条約（1828）でロシア領。イランからアルメニア人が移住した。
+
+- id: lang_armenian_plateau
+  name: アルメニア高原（エルズルム・エルズィンジャン・スィヴァス・ハルプート）
+  select:
+    pieces: [TUR-Erzurum, TUR-Erzincan, TUR-Bayburt, TUR-Sivas, TUR-Elaz, TUR-Kayseri, TUR-Malatya, TUR-Tokat, TUR-Amasya]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: armenian
+      note: アルメニア人の村と町（エルズルム、ハルプート、スィヴァス、カイセリなど）がムスリムの村と入りまじる。マラティヤ周辺はクルド人も多い。露土戦争（1828–29、1877–78）の後、エルズルムのアルメニア人の一部がロシア領へ移住した。1894–96年のアルメニア人虐殺（ハミディイェ虐殺）。
+      source: "https://ja.wikipedia.org/wiki/西アルメニア"
+
+- id: lang_kurdistan_tr
+  name: クルディスタン（トルコ南東部）
+  select:
+    pieces: [TUR-Hakkari, TUR-rnak, TUR-Siirt, TUR-Batman, TUR-Bingol, TUR-Ad_yaman, TUR-A_r]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: armenian
+      note: クルド人の部族・首長国（ボフタン、ハッカーリなど）の地域。山地にはアッシリア人（ネストリウス派、アラム語）、アルメニア人の村がある。ビンギョルはザザ語。
+
+- id: lang_dersim
+  name: デルスィム（トゥンジェリ）
+  select:
+    pieces: [TUR-Tunceli]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: armenian
+      note: ザザ語とクルマンジー語のアレヴィー派の山地。
+
+- id: lang_van_bitlis
+  name: ヴァン・ビトリス
+  select:
+    pieces: [TUR-Van, TUR-Bitlis]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: armenian
+      note: ヴァン湖周辺はアルメニア人の古くからの中心地（ヴァスプラカン）。19世紀末でもヴァン州の住民の3〜4割がアルメニア人とされる。要確認
+
+- id: lang_mus
+  name: ムシュ平原
+  select:
+    pieces: [TUR-Mu]
+  timeline:
+    - from: 1648
+      main: armenian
+      minor: kurdish
+      note: ムシュ平原とサスーンの山地はアルメニア人の農民が多かった。要確認
+
+- id: lang_diyarbakir
+  name: ディヤルバクル
+  select:
+    pieces: [TUR-Diyarbak_r]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: armenian
+      note: 町はトルコ語・アルメニア語・クルド語・アラム語（シリア正教会）。周辺の農村はクルド人。
+
+- id: lang_mardin_urfa
+  name: マルディン・ウルファ（北メソポタミア）
+  select:
+    pieces: [TUR-Mardin, TUR-anl_urfa]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: arabic
+      note: マルディン・ウルファの町はアラビア語も話される。トゥール・アブディーン（ミドヤト）はシリア正教会のアラム語（トゥロヨ語）の村。ハッラーン平原はアラブ人の遊牧民。
+
+- id: lang_cilicia
+  name: キリキア・南東部（アダナ・マラシュ・アインタブ）
+  select:
+    pieces: [TUR-Adana, TUR-Kahramanmara, TUR-Gaziantep, TUR-Osmaniye, TUR-Mersin, TUR-Kilis]
+  timeline:
+    - from: 1648
+      main: turkish
+      minor: armenian
+      note: キリキア（かつての小アルメニア王国の地）のアルメニア人（ゼイトゥン・ハジン・アインタブ）。平野にはトゥルクメンの遊牧民、ヌサイリー派のアラブ人。1909年のアダナ虐殺。要確認
+
+- id: lang_hatay
+  name: アンティオキア（ハタイ）
+  select:
+    pieces: [TUR-Hatay]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: turkish
+      note: アンティオキア（アンタキヤ）はアラビア語（スンナ派・アラウィー派・正教徒）。アムク平原にはトゥルクメン、ムーサー山にはアルメニア人の村。
+
+# ======== コーカサス南部 ========
+- id: lang_georgia
+  name: ジョージア（グルジア）
+  select:
+    iso: [GEO]
+  timeline:
+    - from: 1648
+      main: georgian
+      note: カルトリ・カヘティ・イメレティなどのジョージア人。西部はメグレル語・スヴァン語（同じカルトヴェリ系）。1801年からロシア領。
+
+- id: lang_tbilisi
+  name: トビリシ（ティフリス）
+  select:
+    pieces: [GEO-Tbilisi]
+  timeline:
+    - from: 1648
+      main: georgian
+      minor: armenian
+      note: 商人・職人にアルメニア人が多い。
+    - from: 1800
+      main: armenian
+      minor: georgian
+      note: ロシアのカフカス総督府の所在地。1897年の調査で、アルメニア人約38%、ジョージア人約26%、ロシア人約25%。
+
+- id: lang_abkhazia
+  name: アブハジア
+  select:
+    pieces: [GEO-Abkhazia]
+  timeline:
+    - from: 1648
+      main: caucasian
+      minor: georgian
+      note: アブハズ人（北西コーカサス系の言葉）。南部はメグレル人（ジョージア人）。1866年・1877年の反乱の後、多くのアブハズ人がオスマン帝国へ移住させられた（ムハジル）。空いた土地にメグレル人・ロシア人・アルメニア人・ギリシア人が入植した。
+
+- id: lang_borchalo
+  name: ボルチャロ（クヴェモ・カルトリ）
+  select:
+    pieces: [GEO-Kvemo_Kartli]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: georgian
+      note: テュルク系（アゼルバイジャン語）の牧畜民の地域。19世紀にアルメニア人・ギリシア人・ドイツ人の入植地も作られる。
+
+- id: lang_samtskhe_javakheti
+  name: サムツヘ・ジャヴァヘティ
+  select:
+    pieces: [GEO-Samtskhe_Javakheti]
+  timeline:
+    - from: 1648
+      main: georgian
+      minor: turkish
+      note: オスマン帝国のチルドゥル州（アハルツィヘ）。ムスリムのメスヘティ人（トルコ語・ジョージア語）。
+    - from: 1830
+      main: armenian
+      minor: georgian
+      note: アドリアノープル条約（1829）でロシア領。エルズルムからアルメニア人が移住し、ジャヴァヘティはアルメニア人が多数になる。ドゥホボール派のロシア人の村も作られた。
+
+- id: lang_shida_kartli
+  name: シダ・カルトリ（南オセチアを含む）
+  select:
+    pieces: [GEO-Shida_Kartli, GEO-Mtskheta_Mtianeti]
+  timeline:
+    - from: 1648
+      main: georgian
+      minor: ossetian
+      note: 北部の山地（ツヒンヴァリ北方・トゥルソ）にオセット人の村がある。
+
+- id: lang_armenia
+  name: アルメニア（エレバン・ハン国など）
+  select:
+    iso: [ARM]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: armenian
+      note: イランのエレバン・ハン国。住民の多数はムスリム（テュルク系・クルド人）で、アルメニア人はエチミアジン（アルメニア教会の総本山）周辺などに住んだ。
+    - from: 1830
+      main: armenian
+      minor: azerbaijani
+      note: トルコマンチャーイ条約（1828）でロシア領になり、イランとオスマン帝国から約5万人以上のアルメニア人が移住し、多くのムスリムが去った。1897年の調査でエレバン県の住民はアルメニア人約53%、ムスリム約38%。
+      source: "https://ja.wikipedia.org/wiki/トルコマンチャーイ条約"
+
+- id: lang_armenia_north
+  name: アルメニア北部・南部の山地（ロリ・タヴシュ・シュニク）
+  select:
+    pieces: [ARM-Lori, ARM-Tavush, ARM-Syunik]
+  timeline:
+    - from: 1648
+      main: armenian
+      minor: azerbaijani
+      note: ロリ・タヴシュはジョージアとの境界地帯。シュニク（ザンゲズル）はアルメニア人のメリク（領主）の地域。
+
+- id: lang_azerbaijan
+  name: アゼルバイジャン（シルヴァン・カラバフ・ギャンジャ）
+  select:
+    iso: [AZE]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: armenian
+      note: テュルク系のアゼルバイジャン語（当時は「タタール語」と呼ばれた）。カラバフの山地はアルメニア人のメリク領。南東部はタリシュ人（イラン系）、北部はレズギン人など。1813年・1828年にロシア領。バクーは1870年代から石油の町になり、ロシア人・アルメニア人が増える。
+
+# ======== レヴァント・メソポタミア ========
+- id: lang_levant
+  name: シリア・レバノン・パレスチナ・ヨルダン
+  select:
+    iso: [SYR, LBN, ISR, JOR, "118", "124", "126", "129"]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: アラビア語（スンナ派・シーア派・アラウィー派・ドルーズ派・キリスト教徒）。ダマスカス近郊のマアルーラなどには西アラム語が残る。
+
+- id: lang_jazira_sy
+  name: ジャズィーラ（ハサカ）・アレッポ
+  select:
+    pieces: [SYR-Al_Hasakeh, SYR-Aleppo]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: kurdish
+      note: 北部の山地（クルド山＝アフリーン）とトルコとの境界地帯にクルド人の村。アレッポにはアルメニア人・トルコ語の住民も多い。
+
+- id: lang_jerusalem
+  name: エルサレム
+  select:
+    pieces: [ISR-Jerusalem_District]
+  timeline:
+    - from: 1648
+      main: arabic
+    - from: 1880
+      main: arabic
+      minor: yiddish
+      note: 19世紀後半から東欧のユダヤ人の移住（第1次アリヤー1882–）が続き、エルサレム旧市街と新市街ではユダヤ人が多数になった（イディッシュ語・ラディーノ語・アラビア語。ベン・イェフダーのヘブライ語復興）。地区全体ではアラブ人の村が多い。
+      source: "https://ja.wikipedia.org/wiki/アリヤー"
+
+- id: lang_amman
+  name: アンマン（チェルケス人の入植地）
+  select:
+    pieces: [JOR-Amman, SYR-Quneitra]
+  timeline:
+    - from: 1648
+      main: arabic
+    - from: 1880
+      main: arabic
+      minor: caucasian
+      note: 1878年以後、オスマン政府がチェルケス人・チェチェン人の難民をアンマン・ゴラン高原（クネイトラ）に定住させた。
+
+- id: lang_iraq
+  name: イラク（メソポタミア）
+  select:
+    iso: [IRQ]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: アラビア語のメソポタミア方言。バグダードにはユダヤ人（19世紀末に住民の約3分の1）、南部の湿地にはマーシュ・アラブ。
+
+- id: lang_iraqi_kurdistan
+  name: イラク北部のクルディスタン（ドホーク・アルビール・スレイマニヤ）
+  select:
+    pieces: [IRQ-Dohuk, IRQ-Erbil, IRQ-Al_Sulaimaniyah]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: hebrew_aramaic
+      note: クルド人の首長国（ソーラーン、バーバーン、バーフディナーン）。ドホーク・アルビール周辺にはアッシリア人・カルデア人のアラム語の村がある。要確認（スレイマニヤはほぼクルド語）
+
+- id: lang_kirkuk
+  name: キルクーク
+  select:
+    pieces: [IRQ-Kirkuk]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: turkish
+      note: キルクーク市とその周辺の町はトルクメン（トルコ語系）が多い。農村はクルド人とアラブ人。
+
+- id: lang_mosul
+  name: モスル・ディヤーラ
+  select:
+    pieces: [IRQ-Ninawa, IRQ-Diyala]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: kurdish
+      note: モスル北東のニネヴェ平原にはアッシリア人（アラム語）、シンジャル山にはヤズィーディー（クルド語）が住む。
+
+# ======== アラビア半島 ========
+- id: lang_arabia
+  name: アラビア半島・ペルシア湾岸
+  select:
+    iso: [SAU, KWT, BHR, QAT, ARE, OMN]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: アラビア語。バーレーンには古くからのシーア派のバハールナ。ペルシア湾岸の港にはペルシア人・インド商人も住む。ムサンダム半島にはクムザーリー語（イラン系）の村がある。
+
+# ======== イラン ========
+- id: lang_iran
+  name: イラン（下地：ペルシア語）
+  select:
+    iso: [IRN]
+  timeline:
+    - from: 1648
+      main: persian
+      note: ペルシア語（サファヴィー朝の宮廷と行政はペルシア語、軍人と王家はテュルク系の言葉も使った）。カスピ海沿岸はギーラーン語・マーザンダラーン語、ザグロス山地はロル語・バフティヤーリー語（いずれもイラン系。ここでは persian に含める）。
+      source: "https://ja.wikipedia.org/wiki/ペルシア語"
+
+- id: lang_iran_azerbaijan
+  name: イラン領アゼルバイジャン（タブリーズ・アルダビール・ザンジャーン）
+  select:
+    pieces: [IRN-East_Azerbaijan, IRN-Ardabil, IRN-Zanjan]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: persian
+      note: テュルク系のアゼルバイジャン語の地域。タブリーズはイラン第2の都市で、ガージャール朝の皇太子の居所。
+
+- id: lang_urmia
+  name: 西アゼルバイジャン（オルーミーエ）
+  select:
+    pieces: [IRN-West_Azerbaijan]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: kurdish
+      note: 北部はアゼルバイジャン語、南部（マハーバード）と山地はクルド人。オルーミーエ平野にはアッシリア人（アラム語）とアルメニア人の村が多かった。
+
+- id: lang_iran_kurdistan
+  name: イラン領クルディスタン（サナンダジ・ケルマーンシャー・イーラーム）
+  select:
+    pieces: [IRN-Kurdistan, IRN-Kermanshah, IRN-Ilam]
+  timeline:
+    - from: 1648
+      main: kurdish
+      minor: persian
+      note: アルダラーン家（サナンダジ）などのクルド人の地域。ケルマーンシャー・イーラームは南クルド語。
+
+- id: lang_iran_turkic_mixed
+  name: ハマダーン・ガズヴィーン・アラーク（ペルシア語とテュルク語の混在）
+  select:
+    pieces: [IRN-Hamadan, IRN-Qazvin, IRN-Markazi]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: azerbaijani
+      note: テュルク系の村が多い。
+
+- id: lang_fars
+  name: ファールス・チャハールマハール（ガシュガーイー族の遊牧地）
+  select:
+    pieces: [IRN-Fars, IRN-Chaharmahal_and_Bakhtiari]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: azerbaijani
+      note: テュルク系の遊牧民ガシュガーイー族が夏営地と冬営地を往復した。チャハールマハールはバフティヤーリー族（ロル語）とテュルク系の村。
+
+- id: lang_khuzestan
+  name: フーゼスターン（アラビスターン）
+  select:
+    pieces: [IRN-Khuzestan]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: persian
+      note: 平野はアラブ人の部族（ムハンマラのシャイフなど）、北部と東部の山地はロル人・バフティヤーリー族。1908年に油田が発見される。
+
+- id: lang_hormozgan
+  name: ホルモズガーン（ペルシア湾岸）
+  select:
+    pieces: [IRN-Hormozgan]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: arabic
+      note: 湾岸の港（バンダレ・アッバース）と島々にはアラブ人も多い。
+
+- id: lang_turkmen_sahra
+  name: トルクメン・サフラー（ゴレスターン）
+  select:
+    pieces: [IRN-Golestan]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      minor: persian
+      note: グルガーン川流域のトルクメン人（ヨムート族）の遊牧地。南部の町（アスタラーバード）はペルシア語。
+
+- id: lang_north_khorasan
+  name: 北ホラーサーン（クルド人の移住地）
+  select:
+    pieces: [IRN-North_Khorasan]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: kurdish
+      note: サファヴィー朝のアッバース1世が、ウズベク・トルクメンに対する備えとしてクルド人を移住させた（クルマンジー語）。テュルク系の住民も多い。
+
+- id: lang_baluchistan
+  name: バローチスターン（イラン・パキスタン）
+  select:
+    pieces: [IRN-Sistan_and_Baluchestan, PAK-Chagai, PAK-Gwadar, PAK-Kech]
+  timeline:
+    - from: 1648
+      main: pashto_baluchi
+      minor: persian
+      note: バローチ人の遊牧・オアシスの地。北部のスィースターンはペルシア語。グワーダルは1783–1958年オマーン領。
+
+# ======== アフガニスタン西部 ========
+- id: lang_herat
+  name: ヘラート
+  select:
+    adm1: ["AFG/Herat"]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: pashto_baluchi
+      note: ペルシア語（ダリー語）の都市と農村。18世紀からパシュトゥーン人（ドゥッラーニー族）が移り住む。
+
+- id: lang_farah
+  name: ファラー・ニームルーズ
+  select:
+    adm1: ["AFG/Farah", "AFG/Nimruz"]
+  timeline:
+    - from: 1648
+      main: pashto_baluchi
+      minor: persian
+      note: パシュトゥーン人とバローチ人の部族、スィースターンのペルシア語の農民。要確認

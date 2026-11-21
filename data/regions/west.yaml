@@ -395,23 +395,20 @@
     iso: [MCO]
   timeline:
     - from: 1648
-      owner: monaco
-      overlord: france
-      note: 1641年のペロンヌ条約以来、フランスの保護下。
+      owner: france
+      note: モナコ公国（グリマルディ家）。1641年のペロンヌ条約以来フランスの保護下にあるため、保護国の方針によりフランスの色で塗る。
       source: "ja.wikipedia: モナコ"
     - from: 1793
       owner: france
       cause: フランスによる併合
       source: "ja.wikipedia: モナコ"
     - from: 1814
-      owner: monaco
-      overlord: france
-      cause: 第1次パリ条約で公国が復活
+      owner: france
+      cause: 第1次パリ条約でモナコ公国が復活（フランスの保護下）
       source: "ja.wikipedia: モナコ"
     - from: 1815
-      owner: monaco
-      overlord: savoy
-      cause: ウィーン会議（サルデーニャ王国の保護下へ）
+      owner: savoy
+      cause: ウィーン会議（モナコ公国はサルデーニャ王国の保護下へ）
       source: "ja.wikipedia: モナコ"
     - from: 1861
       owner: monaco
@@ -709,10 +706,9 @@
       note: テクナなどの部族が半独立しており、スルタンの支配は名目的。
       source: "ja.wikipedia: モロッコの歴史"
     - from: 1912
-      owner: morocco
-      overlord: france
+      owner: france
       certainty: nominal
-      cause: フェス条約（フランスの保護国に）
+      cause: フェス条約（モロッコがフランスの保護国に）
       note: ヌーン川以南の部族地域にはフランスの支配はまだ及んでいない。
       source: "ja.wikipedia: フェス条約"
 
@@ -819,9 +815,8 @@
       overlord: ottoman
       source: "ja.wikipedia: オスマン帝国領チュニジア"
     - from: 1881
-      owner: tunis
-      overlord: france
-      cause: バルドー条約（フランスの保護国に）
+      owner: france
+      cause: バルドー条約（チュニジアがフランスの保護国に。ベイの政府は残る）
       note: 1883年のマルサ協定で、フランスの統監が内政も握った。オスマン帝国は保護国化を認めなかった。
       source: "ja.wikipedia: バルドー条約"
 
@@ -908,14 +903,13 @@
       cause: ムハンマド・アリーがエジプト総督に就任
       source: "ja.wikipedia: ムハンマド・アリー朝"
     - from: 1882
-      owner: egypt
-      overlord: ottoman
+      owner: britain
+      certainty: occupied
       cause: イギリス軍がウラービー運動を鎮圧し、エジプトを占領
       note: 名目上はオスマン帝国の宗主権のもとにあるヘディーヴ国だが、実際にはイギリスの占領下（「隠された保護国」）。
       source: "ja.wikipedia: ウラービー革命"
     - from: 1914
-      owner: egypt
-      overlord: britain
+      owner: britain
       cause: イギリスの保護国宣言（12月。オスマン帝国の宗主権を否定し、エジプト・スルタン国とする）
       source: "ja.wikipedia: エジプト・スルタン国"
 
@@ -942,16 +936,14 @@
       cause: ムハンマド・アリーがシーワ・オアシスを征服
       source: "ja.wikipedia: シーワ・オアシス"
     - from: 1882
-      owner: egypt
-      overlord: ottoman
-      certainty: nominal
+      owner: britain
+      certainty: occupied
       cause: イギリスのエジプト占領
       note: 西の境界はオスマン帝国領リビア（1912年からイタリア領）との間で未確定だった。
     - from: 1914
-      owner: egypt
-      overlord: britain
+      owner: britain
       certainty: nominal
-      cause: イギリスの保護国宣言
+      cause: イギリスの保護国宣言（エジプト・スルタン国）
       source: "ja.wikipedia: エジプト・スルタン国"
 
 - id: tunisia_south_nominal
@@ -966,10 +958,9 @@
       note: 遊牧部族の地域で、ベイの支配は名目的。
       source: "ja.wikipedia: オスマン帝国領チュニジア"
     - from: 1881
-      owner: tunis
-      overlord: france
+      owner: france
       certainty: nominal
-      cause: バルドー条約（フランスの保護国に）
+      cause: バルドー条約（チュニジアがフランスの保護国に）
       note: 南部は軍政地域とされた。
       source: "ja.wikipedia: バルドー条約"
 
@@ -1031,8 +1022,7 @@
     pieces: [MAR-Tetouan_Province, MAR-Prefecture_de_M_diq_Fnideq, MAR-Fahs_Anjra_Province, MAR-Chefchaouen_Province, MAR-Larache_Province, MAR-Al_Hoceima_Province, MAR-Province_de_Driouch, MAR-Province_de_Nador]
   timeline:
     - from: 1912
-      owner: morocco
-      overlord: spain
+      owner: spain
       cause: フランス＝スペイン条約（11月。モロッコ北部をスペインの保護領とする）
       note: スペインの統治はテトゥアン（首都）とセウタ・メリリャ・ララシュの周辺にとどまった。
       source: "ja.wikipedia: スペイン保護領モロッコ"
@@ -1043,8 +1033,7 @@
     pieces: [MAR-Chefchaouen_Province, MAR-Al_Hoceima_Province, MAR-Province_de_Driouch]
   timeline:
     - from: 1912
-      owner: morocco
-      overlord: spain
+      owner: spain
       certainty: nominal
       cause: フランス＝スペイン条約
       note: リーフ山地の部族はスペインの支配に服さなかった（のちのリーフ戦争、1921–26）。
@@ -1061,8 +1050,7 @@
       cause: 第二次メリリャ戦争（リーフの部族と戦い、メリリャ周辺を占領）
       source: "https://en.wikipedia.org/wiki/Second_Melillan_campaign"
     - from: 1912
-      owner: morocco
-      overlord: spain
+      owner: spain
       cause: フランス＝スペイン条約（スペインの保護領に）
       source: "ja.wikipedia: スペイン保護領モロッコ"
 
@@ -1077,8 +1065,7 @@
       cause: スペイン軍がララシュとクサル・エル・ケビールに上陸・占領（6月）
       source: "https://en.wikipedia.org/wiki/Larache"
     - from: 1912
-      owner: morocco
-      overlord: spain
+      owner: spain
       cause: フランス＝スペイン条約（スペインの保護領に）
       source: "ja.wikipedia: スペイン保護領モロッコ"
 
@@ -1090,8 +1077,7 @@
     exclude: [MAR-Prefecture_of_Tangier_Assilah, MAR-Tarfaya_Province, MAR-Province_d_Es_Semara, MAR-Oued_Ed_Dahab_Province, MAR-Sidi_Ifni_Province]
   timeline:
     - from: 1912
-      owner: morocco
-      overlord: france
+      owner: france
       cause: フェス条約（3月。モロッコがフランスの保護国となる）
       source: "ja.wikipedia: フェス条約"
 
@@ -1101,8 +1087,7 @@
     pieces: [MAR-Province_d_Errachidia, MAR-Province_de_Tinghir, MAR-Zagora_Province, MAR-Ouarzazate_Province, MAR-Province_de_Midelt, MAR-Province_d_Azilal, MAR-Province_de_Boulemane, MAR-Province_de_Figuig, MAR-Tata_Province, MAR-Taroudant_Province, MAR-Tiznit_Province, MAR-Chtouka_Ait_Baha_Province, MAR-Province_de_Khenifra, MAR-Province_d_Ifrane, MAR-Province_de_Taounate, MAR-Province_de_Taza]
   timeline:
     - from: 1912
-      owner: morocco
-      overlord: france
+      owner: france
       certainty: nominal
       cause: フェス条約
       note: 中アトラス・高アトラスやサハラ側の部族はフランスに抵抗し、「平定」は1934年まで続いた。マラケシュ周辺の南部は、フランスと結んだグラーウィー家などの大カーイドが治めた。
@@ -1114,8 +1099,7 @@
     pieces: [MAR-Province_de_Taza, MAR-Province_de_Khenifra]
   timeline:
     - from: 1914
-      owner: morocco
-      overlord: france
+      owner: france
       certainty: uncertain
       cause: フランス軍がタザ（5月）とヘニフラ（6月）を占領
       note: タザの占領で、アルジェリアとモロッコ西部を結ぶ回廊がつながった。周辺の部族の抵抗は続いた。
@@ -1132,8 +1116,7 @@
       cause: フランス軍がウジダを占領（3月。フランス人医師の殺害を口実に）
       source: "https://en.wikipedia.org/wiki/Oujda"
     - from: 1912
-      owner: morocco
-      overlord: france
+      owner: france
       cause: フェス条約
       source: "ja.wikipedia: フェス条約"
 
@@ -1148,8 +1131,7 @@
       cause: カサブランカ砲撃とフランス軍の上陸（8月）、翌年までにシャウイーヤ平野を占領
       source: "https://en.wikipedia.org/wiki/Bombardment_of_Casablanca"
     - from: 1912
-      owner: morocco
-      overlord: france
+      owner: france
       cause: フェス条約
       source: "ja.wikipedia: フェス条約"
 
@@ -1164,8 +1146,7 @@
       cause: スルタンの救援要請を口実にフランス軍がフェスに入る（5月。第2次モロッコ事件のきっかけ）
       source: "ja.wikipedia: アガディール事件"
     - from: 1912
-      owner: morocco
-      overlord: france
+      owner: france
       cause: フェス条約
       source: "ja.wikipedia: フェス条約"
 
@@ -1191,8 +1172,7 @@
       note: 1904年のフランス＝スペイン協定でスペインの勢力圏とされたが、遊牧部族の地域。
       source: "ja.wikipedia: タルファヤ"
     - from: 1912
-      owner: morocco
-      overlord: spain
+      owner: spain
       certainty: nominal
       cause: フランス＝スペイン条約（ドラア川と北緯27度40分の間をスペインの南部保護領とする）
       note: スペインがジュビー岬（タルファヤ）を占領したのは1916年。このピースの北の端はドラア川より北にはみ出す。
