@@ -299,6 +299,11 @@
       main: yiddish
       minor: polish
       note: 19世紀にユダヤ人が住民の最大の集団になる（1897年の調査で、ユダヤ人約半数、ポーランド人約4割、残りはロシア人の官吏・軍人）。切り替えの年は19世紀半ばの目安。要確認
+    - from: 1920
+      main: polish
+      minor: yiddish
+      note: 独立したポーランドの町。戦間期はポーランド人が多数になり、1931年の調査でユダヤ人は約3分の1（約3万9千人／約11万2千人）。
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Lublin"
     - from: 1942
       main: polish
       note: 1942年3–4月にルブリンのゲットーの住民はベウジェツ強制収容所に送られ、殺害された（ラインハルト作戦）。
@@ -316,6 +321,10 @@
       main: yiddish
       minor: polish
       note: シェドルツェ県の県都（1867–）。1897年の調査でユダヤ人が住民の約半数を占め、ポーランド人とロシア人の守備隊がそれに次ぐ。要確認
+    - from: 1920
+      main: polish
+      minor: yiddish
+      note: 独立したポーランドの町。ロシア軍の守備隊が去り、戦間期はポーランド人が多数（1921年の調査でユダヤ人は4割弱）。要確認
     - from: 1942
       main: polish
       note: 1942年8月にゲットーの住民の大部分がトレブリンカに送られた。
@@ -442,7 +451,7 @@
     - from: 1960
       main: belarusian
       minor: russian
-      note: ソ連時代、特に1960年代以後のロシア語化で、都市ではロシア語が日常語になった。農村ではベラルーシ語とロシア語の混ざった話し方（トラシャンカ）が多い。1994年以後のルカシェンコ政権もロシア語を重んじ、1995年の国民投票でロシア語も国家語になった。
+      note: ソ連時代、特に1960年代以後のロシア語化で、都市ではロシア語が日常語になった（2009年の調査で家庭でロシア語を話す人は約7割）。農村ではベラルーシ語とロシア語の混ざった話し方（トラシャンカ）が多い。この地図は「民族」で塗るので、住民の多数（約8割）を占めるベラルーシ人の色にし、ロシア語は斜線で示す。1994年以後のルカシェンコ政権もロシア語を重んじ、1995年の国民投票でロシア語も国家語になった。
       source: "https://en.wikipedia.org/wiki/Russification_of_Belarus"
 
 - id: lang_belarus_west
@@ -469,6 +478,53 @@
       minor: ukrainian
       note: 西ポリーシャの方言はベラルーシ語とウクライナ語の中間。
 
+- id: lang_jewish_towns_belarus_east
+  name: ヴィテプスク・マヒリョウ・ホメリ・バブルイスク（ユダヤ人の多かった町）
+  select:
+    pieces: [BLR-Vitebsk, BLR-Mogilev, BLR-Gomel, BLR-Babruysk]
+  timeline:
+    - from: 1850
+      main: belarusian
+      minor: yiddish
+      note: ユダヤ人の定住区域（パレ）の町。1897年の調査で、町の住民のうちユダヤ人はヴィテプスク約52%、マヒリョウ約50%、ホメリ約55%、バブルイスク約60%。ピースは周りの農村（ベラルーシ人）を含むので、イディッシュ語は斜線（minor）で示す。
+      source: "https://en.wikipedia.org/wiki/Pale_of_Settlement"
+    - from: 1941
+      main: belarusian
+      minor: russian
+      note: 1941年の夏から秋、ドイツ占領下で町のユダヤ人のほとんどが殺害された（ヴィテプスク・マヒリョウ・ホメリ・バブルイスクのゲットーは1941年中に解体）。
+      source: "https://en.wikipedia.org/wiki/The_Holocaust_in_Belarus"
+
+- id: lang_jewish_towns_polesia
+  name: ブレスト・ピンスク（ユダヤ人の多かった町）
+  select:
+    pieces: [BLR-Brest, BLR-Pinsk]
+  timeline:
+    - from: 1850
+      main: belarusian
+      minor: yiddish
+      note: 1897年の調査で、町の住民のうちユダヤ人はブレスト約65%、ピンスク約74%。ピースは周りの農村を含むので、イディッシュ語は斜線（minor）で示す。1921–39年はポーランド領。
+      source: "https://en.wikipedia.org/wiki/Pinsk"
+    - from: 1942
+      main: belarusian
+      minor: ukrainian
+      note: 1942年10–11月、ブレストとピンスクのゲットーの住民はドイツ占領下で殺害された。
+      source: "https://en.wikipedia.org/wiki/Pinsk_Ghetto"
+
+- id: lang_jewish_towns_grodno
+  name: フロドナ（グロドノ）
+  select:
+    pieces: [BLR-Grodno]
+  timeline:
+    - from: 1850
+      main: belarusian
+      minor: yiddish
+      note: 1897年の調査で、町の住民のうちユダヤ人は約47%。ピースは周りの農村を含むので、イディッシュ語は斜線（minor）で示す。1921–39年はポーランド領。
+    - from: 1943
+      main: belarusian
+      minor: polish
+      note: 1942年11月から1943年3月にかけて、ゲットーの住民はアウシュヴィッツとトレブリンカへ送られた。
+      source: "https://en.wikipedia.org/wiki/Grodno_Ghetto"
+
 - id: lang_minsk_city
   name: ミンスク市
   select:
@@ -491,9 +547,9 @@
       note: 1941–43年、ドイツ占領下のミンスク・ゲットーで市のユダヤ人のほとんどが殺害された。戦後の復興で周りの農村とロシアなどから人が移り住んだ。
       source: "https://en.wikipedia.org/wiki/Minsk_Ghetto"
     - from: 1960
-      main: russian
-      minor: belarusian
-      note: 住民の多数はベラルーシ人だが、1960年代以後の都市ではロシア語が日常語になった（1999年の調査で家庭の言語はロシア語が多数）。
+      main: belarusian
+      minor: russian
+      note: 住民の多数はベラルーシ人（1989年で約72%、ロシア人約20%）。ただし1960年代以後の都市ではロシア語が日常語になり、1999年の調査で家庭の言語はロシア語が多数。この地図は「民族」で塗るので、ロシア語は少数派（斜線）で示す。
       source: "https://en.wikipedia.org/wiki/Russification_of_Belarus"
 
 # ======== ウクライナ ========
@@ -513,6 +569,21 @@
     - from: 1991
       main: ukrainian
       note: 1991年に独立。都市部（特に東部・南部）ではロシア語の話者が多いが、2014年と2022年のロシアの侵攻の後、ウクライナ語に切り替える人が増えた。2022年以後、数百万人が国外へ避難している。
+
+- id: lang_jewish_towns_zhytomyr
+  name: ベルディチウ・ジトーミル（ユダヤ人の多かった町）
+  select:
+    pieces: [UKR-Berdychiv, UKR-Zhytomyr]
+  timeline:
+    - from: 1850
+      main: ukrainian
+      minor: yiddish
+      note: ユダヤ人の定住区域（パレ）の町。1897年の調査で、町の住民のうちユダヤ人はベルディチウ約80%（「ヴォルィーニのエルサレム」）、ジトーミル約46%。ピースは周りの農村を含むので、イディッシュ語は斜線（minor）で示す。
+      source: "https://en.wikipedia.org/wiki/Berdychiv"
+    - from: 1941
+      main: ukrainian
+      note: 1941年9月、ドイツ軍の占領の直後に、ベルディチウとジトーミルのユダヤ人の大部分が銃殺された（ホロコースト）。
+      source: "https://en.wikipedia.org/wiki/Berdychiv_massacre"
 
 - id: lang_galicia_ua
   name: 東ガリツィア・ヴォルィーニ西部（ポーランド語の少数派のいる地域）
@@ -593,7 +664,7 @@
     - from: 1960
       main: ukrainian
       minor: russian
-      note: 住民の多数はウクライナ人（2001年のドネツィク州で約57%）だが、炭鉱・工業都市ではロシア語が日常語（ロシア語を母語とする人が約75%）。2014年からロシアが支援する勢力とロシア軍が一部を占領し、多くの住民が避難した。
+      note: 住民の多数はウクライナ人（2001年のドネツィク州で約57%、ロシア人約38%）だが、炭鉱・工業都市ではロシア語が日常語（ロシア語を母語とする人が約75%）。この地図は「民族」で塗るので、ウクライナ人の色にし、ロシア語は斜線で示す。2014年からロシアが支援する勢力とロシア軍が一部を占領し、多くの住民が避難した。
       source: "https://en.wikipedia.org/wiki/Donbas"
 
 - id: lang_sloboda_ua

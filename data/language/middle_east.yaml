@@ -390,6 +390,20 @@
       main: armenian
       note: ナゴルノ・カラバフ紛争（1988–94）で、アゼルバイジャン人はアゼルバイジャンへ去った。
 
+- id: lang_nakhchivan
+  name: ナヒチェヴァン
+  select:
+    pieces: [AZE-Nakhchivan_Autonomous_Republic]
+  timeline:
+    - from: 1648
+      main: azerbaijani
+      minor: armenian
+      note: トルコ系（アゼルバイジャン人）の住民が多数で、アルメニア人の村も多い。1828年にロシア領になった後もムスリムが多数（1897年の調査で約6割）。
+    - from: 1930
+      main: azerbaijani
+      note: ソ連のナヒチェヴァン自治共和国（アゼルバイジャン領、1924–）。アルメニア人は1926年の約11%から1979年の約1.4%へ減り、1980年代末にはほとんどいなくなった。宗教（rel_nakhchivan）と同じ年で切り替える。
+      source: "https://en.wikipedia.org/wiki/Nakhchivan_Autonomous_Republic"
+
 - id: lang_azerbaijan
   name: アゼルバイジャン（シルヴァン・カラバフ・ギャンジャ）
   select:
@@ -447,9 +461,13 @@
       source: "https://ja.wikipedia.org/wiki/パレスチナ委任統治領"
     - from: 1948
       main: hebrew
-      minor: arabic
-      note: 1948年の第1次中東戦争（イスラエルの独立）で、西エルサレムとその回廊の村のアラブ人は避難・追放された。旧市街を含む東エルサレムは1967年の第3次中東戦争でイスラエルが占領・併合した（国際的には認められていない）。
+      note: 1948年の第1次中東戦争（イスラエルの独立）で、西エルサレムとその回廊の村のアラブ人は避難・追放された。残ったアラブ人の村はアブー・ゴーシュなど数か所だけ。
       source: "https://ja.wikipedia.org/wiki/パレスチナ難民"
+    - from: 1967
+      main: hebrew
+      minor: arabic
+      note: 1967年の第3次中東戦争で、旧市街を含む東エルサレムをイスラエルが占領・併合した（国際的には認められていない）。東エルサレムのパレスチナ人は地区の人口の約3分の1。
+      source: "https://ja.wikipedia.org/wiki/エルサレム"
 
 - id: lang_amman
   name: アンマン（チェルケス人の入植地）
@@ -715,7 +733,7 @@
     - from: 1948
       main: arabic
       minor: hebrew
-      note: ガリラヤにはナザレなどアラブ人（ムスリム・キリスト教徒・ドゥルーズ派）の町や村が多く残り、今も地区の人口の半数余りがアラブ人。ユダヤ人の町も建てられた。
+      note: ガリラヤにはナザレなどアラブ人（ムスリム・キリスト教徒・ドゥルーズ派）の町や村が多く残り、今も地区の人口の半数余りがアラブ人。ユダヤ人の町も建てられた。宗教の地図では1970年からユダヤ教が最大の集団（多数派の色）になるが、アラブ人は宗教が3つに分かれるためで、矛盾ではない。
       source: "https://en.wikipedia.org/wiki/Northern_District_(Israel)"
 
 - id: lang_israel_south

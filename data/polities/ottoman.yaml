@@ -270,6 +270,8 @@
     - {to: 1851, name: モンテネグロ（主教公国）, kind: 主教公国}
     - {from: 1852, to: 1909, name: モンテネグロ公国, kind: 公国}
     - {from: 1910, to: 1918, name: モンテネグロ王国, kind: 王国}
+    - {from: 1919, to: 1944, name: モンテネグロ（ユーゴスラヴィア王国の一部）, kind: 地方（ユーゴスラヴィア王国）}
+    - {from: 1945, to: 2005, name: モンテネグロ共和国（ユーゴスラヴィアの構成共和国）, kind: 構成共和国（2003年からセルビア・モンテネグロの構成国）}
     - {from: 2006, name: モンテネグロ, kind: 共和国}
   short: モンテネグロ
   color: "#cf9fa8"
@@ -334,6 +336,8 @@
     - {from: 1817, to: 1877, name: セルビア公国, kind: 自治公国（オスマン帝国の宗主権下）}
     - {from: 1878, to: 1881, name: セルビア公国, kind: 公国}
     - {from: 1882, to: 1918, name: セルビア王国, kind: 王国}
+    - {from: 1919, to: 1944, name: セルビア（ユーゴスラヴィア王国の一部）, kind: 地方（ユーゴスラヴィア王国）}
+    - {from: 1945, to: 2002, name: セルビア共和国（ユーゴスラヴィアの構成共和国）, kind: 構成共和国}
     - {from: 2003, to: 2005, name: セルビア・モンテネグロ, short: セルビア・モンテネグロ, kind: 国家連合}
     - {from: 2006, name: セルビア共和国, short: セルビア, kind: 共和国}
   short: セルビア
@@ -1102,7 +1106,7 @@
   short: ブハラ
   color: "#e2b2a1"
   kind: ハン国
-  note: 1599–1747年はジャーン朝（アストラハン朝）、1747年（実質）／1785年（アミール称号）からマンギト朝。地図の範囲は西端（アム川中流・メルヴ）だけ。
+  note: 1599–1747年はジャーン朝（アストラハン朝）、1747年（実質）／1785年（アミール称号）からマンギト朝。東部（ヒッサール・クリャーブなど、今のタジキスタン）は1870年ごろの征服で、それより前の地図では描いていない。
   rulers:
     - {name: シャー・ムラード, title: アミール（マンギト朝）, from: 1785, to: 1800, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {name: ハイダル, title: アミール, from: 1800, to: 1826, source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
@@ -1579,7 +1583,7 @@
 - id: republika_srpska
   name: スルプスカ共和国（ボスニアのセルビア人勢力）
   short: スルプスカ共和国
-  color: "#e2b29e"
+  color: "#b4a2c6"
   kind: 自称国家（内戦中）
   note: 1992年1月にボスニアのセルビア人が宣言した。内戦中は国土の約7割を押さえたが、ピースは現在のスルプスカ共和国（国土の49％）の範囲で描いた。1995年のデイトン合意でボスニア・ヘルツェゴヴィナの構成体の一つとして残った。
   rulers:
@@ -1669,7 +1673,8 @@
 - id: turkey
   name: トルコ共和国
   names:
-    - {to: 1922, name: トルコ大国民議会政府（アンカラ政府）, short: トルコ（アンカラ政府）, kind: 国民闘争の政府}
+    - {to: 1919, name: アナトリア・ルメリ権利擁護委員会（国民闘争）, short: トルコ（国民闘争）, kind: 国民闘争の組織（ムスタファ・ケマルが指導）}
+    - {from: 1920, to: 1922, name: トルコ大国民議会政府（アンカラ政府）, short: トルコ（アンカラ政府）, kind: 国民闘争の政府}
     - {from: 1923, name: トルコ共和国, short: トルコ, kind: 共和国}
   short: トルコ
   color: "#a9cf98"
@@ -1784,6 +1789,9 @@
 
 - id: hejaz
   name: ヒジャーズ王国
+  names:
+    - {to: 1915, name: メッカのシャリーフ（ハーシム家）, short: メッカのシャリーフ, kind: オスマン帝国のもとのメッカの太守}
+    - {from: 1916, name: ヒジャーズ王国, short: ヒジャーズ, kind: 王国}
   short: ヒジャーズ
   color: "#cfe0a8"
   kind: 王国
@@ -1871,6 +1879,9 @@
 
 - id: israel
   name: イスラエル国
+  names:
+    - {to: 1947, name: パレスチナのユダヤ人社会（イシューヴ）, short: イシューヴ, kind: ユダヤ人社会（イギリスの委任統治下）}
+    - {from: 1948, name: イスラエル国, short: イスラエル, kind: 共和国（議院内閣制）}
   short: イスラエル
   color: "#a9c4e8"
   kind: 共和国（議院内閣制）
@@ -1912,7 +1923,8 @@
 - id: palestine
   name: パレスチナ（パレスチナ自治政府）
   names:
-    - {to: 2011, name: パレスチナ自治政府, short: パレスチナ自治区, kind: 自治政府}
+    - {to: 1993, name: パレスチナ解放機構（PLO）, short: PLO, kind: 解放組織（1964年結成）}
+    - {from: 1994, to: 2011, name: パレスチナ自治政府, short: パレスチナ自治区, kind: 自治政府}
     - {from: 2012, name: パレスチナ国（パレスチナ自治政府）, short: パレスチナ, kind: 自治政府（国連のオブザーバー国家）}
   short: パレスチナ
   color: "#b6d9a2"
@@ -1932,7 +1944,8 @@
 - id: jordan
   name: ヨルダン・ハーシム王国
   names:
-    - {to: 1948, name: トランスヨルダン王国, short: トランスヨルダン, kind: 王国}
+    - {to: 1945, name: トランスヨルダン首長国, short: トランスヨルダン, kind: 首長国（イギリスの委任統治下）}
+    - {from: 1946, to: 1948, name: トランスヨルダン王国, short: トランスヨルダン, kind: 王国}
     - {from: 1949, name: ヨルダン・ハーシム王国, short: ヨルダン, kind: 王国}
   short: ヨルダン
   color: "#dcc49b"
@@ -2126,7 +2139,7 @@
   short: ウズベキスタン
   color: "#a8c6e6"
   kind: 共和国
-  note: 1924年にウズベク・ソヴィエト社会主義共和国として作られ（1936年からカラカルパク自治共和国を含む）、1991年8月に独立した。地図の範囲は北西部（カラカルパクスタンとホラズム）だけ。
+  note: 1924年にウズベク・ソヴィエト社会主義共和国として作られ（1936年からカラカルパク自治共和国を含む）、1991年8月に独立した。1929年にタジク共和国が分かれた。
   rulers:
     - {name: イスラム・カリモフ, title: 大統領, from: 1991, to: 2016, note: 1989年から共産党第一書記。2005年のアンディジャンの抗議を武力で抑えた。, source: "https://ja.wikipedia.org/wiki/イスラム・カリモフ"}
     - {name: シャフカト・ミルジヨエフ, title: 大統領, from: 2016, note: 経済の開放と規制の緩和を進めた。, source: "https://ja.wikipedia.org/wiki/シャフカト・ミルズィヤエフ"}
@@ -2140,7 +2153,7 @@
   short: カザフスタン
   color: "#a9d5cf"
   kind: 共和国
-  note: 1920年にロシア共和国の中のキルギス（カザフ）自治共和国として作られ、1936年にカザフ・ソヴィエト社会主義共和国（ソ連の構成共和国）となった。1991年12月に独立した（ソ連の構成共和国で最後）。地図の範囲は西部（カスピ海・アラル海の周辺）だけ。
+  note: 1920年にロシア共和国の中のキルギス自治共和国として作られ、1925年にカザフ自治共和国と改称、1936年にカザフ・ソヴィエト社会主義共和国（ソ連の構成共和国）となった。1991年12月に独立した（ソ連の構成共和国で最後）。
   rulers:
     - {name: ヌルスルタン・ナザルバエフ, title: 大統領, from: 1991, to: 2019, note: 1989年から共産党第一書記。首都をアスタナに移した（1997）。辞任後も2022年まで安全保障会議議長として影響力を持った。, source: "https://ja.wikipedia.org/wiki/ヌルスルタン・ナザルバエフ"}
     - {name: カスム＝ジョマルト・トカエフ, title: 大統領, from: 2019, note: 2022年1月の騒乱ののちナザルバエフ一族の影響を排した。, source: "https://ja.wikipedia.org/wiki/カシムジョマルト・トカエフ"}
@@ -2219,7 +2232,8 @@
 - id: armenia
   name: アルメニア
   names:
-    - {to: 1919, name: アルメニア共和国（第一共和国）, short: アルメニア, kind: 共和国}
+    - {to: 1917, name: アルメニア人, short: アルメニア人, kind: 民族（オスマン帝国・ロシア帝国の住民）}
+    - {from: 1918, to: 1919, name: アルメニア共和国（第一共和国）, short: アルメニア, kind: 共和国}
     - {from: 1920, to: 1922, name: アルメニア・ソヴィエト社会主義共和国, short: アルメニア, kind: ソヴィエト共和国}
     - {from: 1991, name: アルメニア共和国, short: アルメニア, kind: 共和国}
   short: アルメニア
@@ -2308,3 +2322,90 @@
   rulers:
     - {name: ミールザー・クーチェク・ハーン, title: 指導者, from: 1920, to: 1921, source: "https://en.wikipedia.org/wiki/Mirza_Kuchik_Khan"}
   source: "https://en.wikipedia.org/wiki/Persian_Socialist_Soviet_Republic"
+
+# ================================================================ 1914–2025：アラビア半島南部・中央アジア（レビュー 2025_east の B で追加）
+- id: idrisid_asir
+  name: アスィールのイドリース家の首長国
+  short: イドリース家（アスィール）
+  color: "#d9d49c"
+  kind: 首長国（スーフィー教団の長の国）
+  note: モロッコ出身のスーフィーの家系のムハンマド・イドリースィーが、1909年ごろからオスマン帝国に反乱を起こし、紅海沿岸のティハーマ（ジーザーン・サビヤ）に作った国。第一次世界大戦ではイギリスと結んだ。1921年にイギリスからホデイダを預かったが、1925年にイエメンのイマームに奪われた。1926年にサウード家の保護下に入り、1930年に併合された（1934年のターイフ条約で確定）。
+  rulers:
+    - {name: ムハンマド・イドリースィー, title: 首長, from: 1909, to: 1923, source: "https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir"}
+  source: "https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir"
+
+- id: yemen
+  name: イエメン共和国
+  short: イエメン
+  color: "#9fc6bf"
+  kind: 共和国
+  names:
+    - {to: 1917, name: イエメン（イマーム・ヤフヤーの自治領）, short: イエメン, kind: ザイド派イマームの自治領（オスマン帝国の宗主権下）}
+    - {from: 1918, to: 1961, name: イエメン王国（ムタワッキル王国）, short: イエメン, kind: 王国（ザイド派のイマーム）}
+    - {from: 1962, to: 1989, name: イエメン・アラブ共和国（北イエメン）, short: 北イエメン, kind: 共和国}
+    - {from: 1990, name: イエメン共和国, short: イエメン, kind: 共和国}
+  note: 北部の高地はシーア派の一派ザイド派のイマームの地。オスマン帝国は1849年に沿岸のティハーマ、1872年にサナアを押さえたが、イマームの抵抗が続き、1911年のダアン条約で高地の自治を認めた。1918年にオスマン軍が撤退して王国となった。1962年の革命で共和国となり、王党派（サウジアラビアが支援）と共和派（エジプトが支援）の内戦が1970年まで続いた。1990年に南イエメンと統合した。2014年からフーシ派（アンサール・アッラー）がサナアを押さえ、2015年からサウジアラビアなどが介入する内戦が続く。
+  rulers:
+    - {name: ヤフヤー, title: イマーム, from: 1904, to: 1948, note: 1948年に暗殺された, source: "https://en.wikipedia.org/wiki/Yahya_Muhammad_Hamid_ed-Din"}
+    - {name: アフマド, title: イマーム（国王）, from: 1948, to: 1962, source: "https://en.wikipedia.org/wiki/Ahmad_bin_Yahya"}
+    - {name: アブドゥッラー・サッラール, title: 大統領, from: 1962, to: 1967, note: 1962年9月の革命の指導者, source: "https://en.wikipedia.org/wiki/Abdullah_al-Sallal"}
+    - {name: アブドゥッラフマーン・イルヤーニー, title: 大統領（共和国評議会議長）, from: 1967, to: 1974, source: "https://en.wikipedia.org/wiki/Abdul_Rahman_al-Iryani"}
+    - {name: イブラーヒーム・ハムディー, title: 大統領（司令評議会議長）, from: 1974, to: 1977, source: "https://en.wikipedia.org/wiki/Ibrahim_al-Hamdi"}
+    - {name: アフマド・ガシュミー, title: 大統領, from: 1977, to: 1978, source: "https://en.wikipedia.org/wiki/Ahmad_al-Ghashmi"}
+    - {name: アリー・アブドゥッラー・サーレハ, title: 大統領, from: 1978, to: 2012, note: 1990年の統合後も統一イエメンの大統領。2011年の「アラブの春」の抗議で退いた, source: "https://ja.wikipedia.org/wiki/アリー・アブドッラー・サーレハ"}
+    - {name: アブドラッボ・マンスール・ハーディー, title: 大統領, from: 2012, to: 2022, source: "https://en.wikipedia.org/wiki/Abdrabbuh_Mansur_Hadi"}
+    - {name: ラシャード・アリーミー, title: 大統領指導評議会議長, from: 2022, source: "https://en.wikipedia.org/wiki/Rashad_al-Alimi"}
+  source: "https://ja.wikipedia.org/wiki/イエメン"
+
+- id: south_yemen
+  name: イエメン民主人民共和国（南イエメン）
+  short: 南イエメン
+  color: "#e3b27f"
+  kind: 社会主義国（イエメン社会党）
+  names:
+    - {to: 1969, name: 南イエメン人民共和国, short: 南イエメン, kind: 共和国}
+    - {from: 1970, name: イエメン民主人民共和国（南イエメン）, short: 南イエメン, kind: 社会主義国（イエメン社会党）}
+  note: 1967年11月、イギリス軍の撤退とともに、アデンと旧アデン保護領が民族解放戦線（NLF）のもとで独立した。アラブ世界で唯一のマルクス主義の国で、ソ連と結んだ。1986年の内戦（アデンの衝突）ののち、1990年5月に北イエメンと統合した。1994年の分離の試み（内戦）は北に鎮圧された。
+  rulers:
+    - {name: カフターン・シャアビー, title: 大統領, from: 1967, to: 1969, source: "https://en.wikipedia.org/wiki/Qahtan_Muhammad_al-Shaabi"}
+    - {name: サーリム・ルバイイ・アリー, title: 大統領評議会議長, from: 1969, to: 1978, source: "https://en.wikipedia.org/wiki/Salim_Rubai_Ali"}
+    - {name: アブドゥルファッターフ・イスマーイール, title: 最高人民評議会幹部会議長, from: 1978, to: 1980, source: "https://en.wikipedia.org/wiki/Abdul_Fattah_Ismail"}
+    - {name: アリー・ナースィル・ムハンマド, title: 最高人民評議会幹部会議長, from: 1980, to: 1986, source: "https://en.wikipedia.org/wiki/Ali_Nasir_Muhammad"}
+    - {name: ハイダル・アブー・バクル・アッタース, title: 最高人民評議会幹部会議長, from: 1986, to: 1990, source: "https://en.wikipedia.org/wiki/Haidar_Abu_Bakr_al-Attas"}
+  source: "https://en.wikipedia.org/wiki/South_Yemen"
+
+- id: houthi
+  name: フーシ派（アンサール・アッラー）の支配地域
+  short: フーシ派
+  color: "#b7d39a"
+  kind: 武装勢力（ザイド派）の事実上の政府
+  note: 北部サアダのザイド派の運動。2014年9月に首都サナアを押さえ、2015年にハーディー政権を追った。イランの支援を受け、サウジアラビアの主導する連合軍と戦った。2023年からガザの戦争に関連して紅海の船舶を攻撃した。地図では、おおよその支配地域を州単位で斜線（不確実）で描いた。
+  rulers:
+    - {name: アブドゥルマリク・フーシー, title: 指導者, from: 2014, source: "https://en.wikipedia.org/wiki/Abdul-Malik_al-Houthi"}
+  source: "https://ja.wikipedia.org/wiki/フーシ派"
+
+- id: tajikistan
+  name: タジキスタン共和国
+  short: タジキスタン
+  color: "#e5adb9"
+  kind: 共和国（大統領制）
+  note: 1924年の民族・共和国境界画定でウズベク共和国の中のタジク自治共和国となり、1929年にホジェンド（レニナバード）を加えてタジク・ソヴィエト社会主義共和国（ソ連の構成共和国）となった。1991年9月に独立したが、1992–1997年に旧共産党系の政府とイスラーム勢力などの内戦があった。
+  rulers:
+    - {name: ラフモン・ナビエフ, title: 大統領, from: 1991, to: 1992, source: "https://en.wikipedia.org/wiki/Rahmon_Nabiyev"}
+    - {name: エモマリ・ラフモン, title: 最高会議議長、1994年から大統領, from: 1992, source: "https://ja.wikipedia.org/wiki/エモマリ・ラフモン"}
+  source: "https://ja.wikipedia.org/wiki/タジキスタン"
+
+- id: kyrgyzstan
+  name: キルギス共和国
+  short: キルギス
+  color: "#c8b6df"
+  kind: 共和国
+  note: 1924年にロシア共和国の中のカラ・キルギス自治州として作られ、1926年にキルギス自治共和国、1936年にキルギス・ソヴィエト社会主義共和国（ソ連の構成共和国）となった。1991年8月に独立した。2005年（チューリップ革命）・2010年・2020年に政変で大統領が交代した。
+  rulers:
+    - {name: アスカル・アカエフ, title: 大統領, from: 1990, to: 2005, source: "https://ja.wikipedia.org/wiki/アスカル・アカエフ"}
+    - {name: クルマンベク・バキエフ, title: 大統領, from: 2005, to: 2010, source: "https://ja.wikipedia.org/wiki/クルマンベク・バキエフ"}
+    - {name: ローザ・オトゥンバエヴァ, title: 大統領, from: 2010, to: 2011, source: "https://ja.wikipedia.org/wiki/ローザ・オトゥンバエヴァ"}
+    - {name: アルマズベク・アタンバエフ, title: 大統領, from: 2011, to: 2017, source: "https://ja.wikipedia.org/wiki/アルマズベク・アタンバエフ"}
+    - {name: ソーロンバイ・ジェーンベコフ, title: 大統領, from: 2017, to: 2020, source: "https://ja.wikipedia.org/wiki/ソーロンバイ・ジェーンベコフ"}
+    - {name: サディル・ジャパロフ, title: 大統領, from: 2021, source: "https://ja.wikipedia.org/wiki/サディル・ジャパロフ"}
+  source: "https://ja.wikipedia.org/wiki/キルギス"

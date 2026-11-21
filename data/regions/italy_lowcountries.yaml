@@ -1488,10 +1488,13 @@
   note: ヴェローナのピースはアディジェ川で分かれ、1797–1805年は西岸（ガルダ湖南岸・ヴィッラフランカ）がチザルピーナ共和国領。ウーディネのピースの東端（アクイレイア周辺など）はオーストリア領だった。
 
 - id: belluno_ozav
-  name: ベッルーノ（アルプス前地作戦地域）
+  name: ベッルーノ
   select:
     pieces: [ITA-Belluno]
+  note: "1917–1918年はカポレットの戦いのあとのオーストリア＝ドイツ軍の占領（ピアーヴェ川の線まで）。トレヴィーゾ・ヴェネツィアのピースはピアーヴェ川の東の一部だけが占領されたので、塗り分けていない。"
   timeline:
+    - {from: 1917, owner: habsburg, certainty: occupied, label: フリウリ・ヴェネト東部（オーストリア＝ドイツ軍の占領）, cause: カポレットの戦い（10–11月）でイタリア軍がピアーヴェ川まで退き、ベッルーノがオーストリア＝ドイツ軍に占領される, source: "https://ja.wikipedia.org/wiki/カポレットの戦い"}
+    - {from: 1918, owner: italy, cause: ヴィットリオ・ヴェネトの戦い（10–11月）でイタリア軍が奪回, source: "https://ja.wikipedia.org/wiki/ヴィットリオ・ヴェネトの戦い"}
     - from: 1943
       owner: germany
       certainty: occupied
@@ -1503,10 +1506,12 @@
       cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
 - id: friuli_ozak
-  name: フリウリ（アドリア海沿岸作戦地域）
+  name: フリウリ（ウーディネ・ポルデノーネ）
   select:
     pieces: [ITA-Udine, ITA-Pordenone]
   timeline:
+    - {from: 1917, owner: habsburg, certainty: occupied, label: フリウリ・ヴェネト東部（オーストリア＝ドイツ軍の占領）, cause: カポレットの戦い（10–11月）でイタリア軍がピアーヴェ川まで退き、フリウリがオーストリア＝ドイツ軍に占領される, source: "https://ja.wikipedia.org/wiki/カポレットの戦い"}
+    - {from: 1918, owner: italy, cause: ヴィットリオ・ヴェネトの戦い（10–11月）でイタリア軍が奪回, source: "https://ja.wikipedia.org/wiki/ヴィットリオ・ヴェネトの戦い"}
     - from: 1943
       owner: germany
       certainty: occupied

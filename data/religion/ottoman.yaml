@@ -29,6 +29,32 @@
       note: セルビア人の大移住（1690、総主教アルセニエ3世）で正教徒が増え、カルロヴツィが府主教座になる。18世紀にはハンガリー人・ドイツ人（ドナウ・シュヴァーベン人）・ブニェヴツィのカトリックが入植する。
       source: "https://ja.wikipedia.org/wiki/セルビア人の大移住"
 
+- id: rel_vojvodina_hungarian
+  name: ティサ川沿いの北バーチカ・北バナト（ハンガリー人の地域）
+  select:
+    pieces: [SRB-Kanjiza_Municipality, SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Coka_Municipality, SRB-Novi_Knezevac_Municipality, SRB-Backa_Topola_Municipality, SRB-Mali_Idjos_Municipality, SRB-Becej_Municipality, SRB-Temerin_Municipality]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: catholic
+      note: オスマン帝国の支配下で、セルビア人の正教徒が多い。
+    - from: 1750
+      main: catholic
+      minor: orthodox
+      note: 18世紀にハンガリー人（カトリック）が再入植した。言語の lang_vojvodina_hungarian と同じ範囲・同じ年。
+      source: "https://en.wikipedia.org/wiki/Hungarians_in_Vojvodina"
+
+- id: rel_subotica
+  name: スボティツァ（サバトカ）
+  select:
+    pieces: [SRB-Subotica_City]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: orthodox
+      note: ブニェヴツィ人（カトリックの南スラヴ人）の町。18世紀からはハンガリー人（カトリック）も多く、1910年の調査でハンガリー語約58%、ブニェヴツィ語約35%。正教徒のセルビア人は少数。
+      source: "https://en.wikipedia.org/wiki/Subotica"
+
 - id: rel_sandzak
   name: ラシュカ・ズラティボル（ノヴィ・パザル県）
   select:
@@ -97,6 +123,17 @@
       main: sunni
       note: セルビア人（正教徒）の割合は戦後下がり続けた（1971年で約18%）。1999年のコソヴォ紛争の後、北部と飛び地を除くセルビア人の多くが去った。コソヴォのアルバニア人にはカトリックも少数いる。
       source: "https://ja.wikipedia.org/wiki/コソボ紛争"
+
+- id: rel_kosovo_serb
+  name: コソヴォの北部とセルビア人の村の多い地区（イバル川以北・グラチャニツァ・シュトルプツェ）
+  select:
+    pieces: [XKX-Municipality_of_Leposaviq, XKX-Municipality_of_Zubin_Potok, XKX-Municipality_of_Zvecan, XKX-Municipality_of_North_Mitrovica, XKX-Municipality_of_Gracanica, XKX-Municipality_of_Shterpce, XKX-Municipality_of_Partesh, XKX-Municipality_of_Ranillug, XKX-Municipality_of_Kllokot, XKX-Municipality_of_Novoberde]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: セルビア人（正教徒）の多い地区。イバル川以北の4自治体（レポサヴィチ・ズヴェチャン・ズビン・ポトク・北ミトロヴィツァ）は1999年のコソヴォ紛争の後も住民の約9割がセルビア人。南部の飛び地（グラチャニツァ・シュトルプツェなど）は2008年以後のセルビア人が多数の自治体。言語の lang_kosovo_serb と同じ範囲。
+      source: "https://en.wikipedia.org/wiki/North_Kosovo"
 
 - id: rel_montenegro
   name: モンテネグロ
@@ -280,6 +317,17 @@
       minor: sunni
       note: スラヴ人の正教徒が多数（オフリド大主教座。1767年に廃止）。トルコ人（ユルック）と改宗者のムスリムが町と東部・西部に多い。
 
+- id: rel_macedonia_muslim
+  name: 西マケドニアのムスリムの多い地域（ストルガ・デバル・ザヤス・ジュパ・スコピエ北部）
+  select:
+    pieces: [MKD-Struga, MKD-Debar, MKD-Zajas, MKD-Oslomej, MKD-Saraj, MKD-Arachinovo, MKD-Studenichani, MKD-Lipkovo, MKD-Chair, MKD-Centar_Zhupa, MKD-Plasnitsa]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: アルバニア人（ストルガ・デバル・ザヤス・スコピエ北部）とトルコ人（ジュパ・プラスニツァ）のムスリムが多い地域。2002年の調査でストルガ自治体はアルバニア人約57%、マケドニア人約32%。言語の lang_macedonia_albanian・lang_zhupa と同じ範囲。
+      source: "https://en.wikipedia.org/wiki/Albanians_in_North_Macedonia"
+
 - id: rel_polog
   name: ポログ（テトヴォ・ゴスティヴァル）
   select:
@@ -388,6 +436,21 @@
       note: 1923年のローザンヌ条約に基づくギリシアとトルコの住民交換で、ムスリムはトルコへ移され、小アジア・ポントス・東トラキアから100万人を超えるギリシア人難民が入った（多くはマケドニアに入植）。1943年にはテッサロニキのユダヤ人の大部分がアウシュヴィッツで殺害された。
       source: "https://en.wikipedia.org/wiki/Population_exchange_between_Greece_and_Turkey"
 
+- id: rel_chameria
+  name: チャメリア（テスプロティア）
+  select:
+    pieces: [GRC-Filiates, GRC-Igoumenitsa, GRC-Souli]
+  timeline:
+    - from: 1923
+      main: orthodox
+      minor: sunni
+      note: ムスリムのチャム人（アルバニア系）は「アルバニア人」として1923年の住民交換の対象から外され、残った（1940年ごろ約2万人）。言語の lang_chameria と同じ範囲。
+      source: "https://en.wikipedia.org/wiki/Cham_Albanians"
+    - from: 1944
+      main: orthodox
+      note: 1944–45年、ギリシアの抵抗組織（EDES）がムスリムのチャム人をアルバニアへ追放した。
+      source: "https://en.wikipedia.org/wiki/Expulsion_of_Cham_Albanians"
+
 - id: rel_thessaly
   name: テッサリア
   select:
@@ -464,7 +527,7 @@
       note: ルーマニア人は正教徒。
 
 - id: rel_dobruja
-  name: ドブルジャ南部（コンスタンツァ）
+  name: 北ドブルジャ（コンスタンツァ・トゥルチャ）
   select:
     regions: [dobruja_ro]
   timeline:
@@ -744,28 +807,45 @@
       note: 19世紀、とくに1860年のレバノン山地の内戦の後、ドゥルーズ派の移住が本格化し、ハウラーン山地は「ドゥルーズ山地」と呼ばれるようになる。
 
 - id: rel_mount_lebanon_maronite
-  name: レバノン山地北部（ケセルワン・ジュベイル）と北レバノン
+  name: レバノン山地北部（ケセルワン・ジュベイル）
   select:
-    pieces: [LBN-Keserwan_Jbeil, LBN-Liban_Nord]
+    pieces: [LBN-Keserwan_Jbeil]
   timeline:
     - from: 1648
       main: catholic
       minor: shia
-      note: マロン派（ローマと合同したカトリック）の地。ケセルワンには17世紀まで十二イマーム派が多かった。北レバノンのトリポリはスンナ派、クーラは正教徒。
+      note: マロン派（ローマと合同したカトリック）の地。ケセルワンには17世紀まで十二イマーム派が多かった。
+
+- id: rel_lebanon_north
+  name: 北レバノン（トリポリ・ズガルタ・ブシャッリ・クーラ）
+  select:
+    pieces: [LBN-Liban_Nord]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: catholic
+      note: トリポリ（スンナ派の大都市）とミニエ・ドンニエはスンナ派。山側のズガルタ・ブシャッリ・バトルーンはマロン派（カトリックに数える）、クーラは正教徒。県全体ではスンナ派が多い。ピースが1つなので、マロン派の山地は斜線（minor）で示す。
+      source: "https://en.wikipedia.org/wiki/North_Governorate"
 
 - id: rel_mount_lebanon_druze
-  name: レバノン山地南部（シューフ・メトン）
+  name: レバノン山地（メトン・バアブダ・アレイ・シューフ）
   select:
     pieces: [LBN-Mont_Liban]
   timeline:
     - from: 1648
       main: other
       minor: catholic
-      note: ドゥルーズ派（その他）の地。ドゥルーズ派の領主（マアン家、のちシハーブ家）のもとでマロン派の農民が南へ移住し、18世紀には混在が進む。
+      note: ドゥルーズ派（その他）の領主（マアン家、のちシハーブ家）の地。南部のシューフ・アレイはドゥルーズ派が多い。領主のもとでマロン派の農民が北から移住し、18世紀には混在が進む。
       source: "https://ja.wikipedia.org/wiki/ドゥルーズ派"
+    - from: 1800
+      main: catholic
+      minor: other
+      note: マロン派の移住と人口の増加で、山地全体ではキリスト教徒（マロン派。カトリックに数える）が多数になる。北部のメトンとバアブダはキリスト教徒が多く、ドゥルーズ派が多いのはシューフ・アレイ。1860年のドゥルーズ派とマロン派の衝突の後、レバノン山地はキリスト教徒の知事が治める自治県になった（1861–1915）。切り替えの年は目安（要確認）。
+      source: "https://en.wikipedia.org/wiki/Mount_Lebanon_Mutasarrifate"
     - from: 1984
-      main: other
-      note: レバノン内戦（1975–90）の「山岳戦争」（1983–84）で、シューフのキリスト教徒（マロン派）の多くが追われた。
+      main: catholic
+      minor: other
+      note: レバノン内戦（1975–90）の「山岳戦争」（1983–84）で、シューフ・アレイのキリスト教徒（マロン派）の多くが追われた。県全体（メトン・バアブダを含む）では今もキリスト教徒が多く、ドゥルーズ派・シーア派が続く。
       source: "https://en.wikipedia.org/wiki/Mountain_War_(Lebanon)"
 
 - id: rel_lebanon_shia
@@ -1039,9 +1119,10 @@
 
 
 - id: rel_erivan
-  name: エレバン・ハン国（アルメニア中部・イグドゥル）
+  name: アルメニア中部（旧エレバン・ハン国：エレバン周辺・シラク・イグドゥル）
   select:
     regions: [armenia_erivan]
+    pieces: [ARM-Shirak]
   timeline:
     - from: 1648
       main: shia
@@ -1056,10 +1137,10 @@
     - from: 1920
       main: oriental
       minor: shia
-      note: 1918年にアルメニア共和国、1920年からソヴィエト・アルメニア。虐殺を逃れたアルメニア人が住み、アゼルバイジャン人（シーア派）は減った。
-    - from: 1990
+      note: 1918年にアルメニア共和国、1920年からソヴィエト・アルメニア。虐殺を逃れたアルメニア人が住み、アゼルバイジャン人（シーア派）は減った（ソヴィエト・アルメニア全体で1926年に約9%）。
+    - from: 1950
       main: oriental
-      note: ナゴルノ・カラバフ紛争（1988–94）でアゼルバイジャン人はアルメニアを去った。
+      note: アゼルバイジャン人の一部は1948–50年にアゼルバイジャンへ移され（全体で1959年に約6%、1989年に約2.5%）、残りもナゴルノ・カラバフ紛争（1988–94）で去った。言語（lang_armenia）と同じ年で切り替える。
       source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
 
 - id: rel_nakhchivan
@@ -1076,9 +1157,9 @@
       note: ソ連のナヒチェヴァン自治共和国（アゼルバイジャン領）。アルメニア人は1920年代から減り続け、1980年代末にはほとんどいなくなった。
 
 - id: rel_armenian_highland_villages
-  name: シュニク（ザンゲズール）・シラク・ロリ・タヴシュ
+  name: シュニク（ザンゲズール）・ロリ・タヴシュ
   select:
-    pieces: [ARM-Syunik, ARM-Shirak, ARM-Lori, ARM-Tavush]
+    pieces: [ARM-Syunik, ARM-Lori, ARM-Tavush]
   timeline:
     - from: 1648
       main: oriental
@@ -1222,7 +1303,7 @@
     - from: 1970
       main: jewish
       minor: sunni
-      note: ユダヤ人の町の建設で、ユダヤ教徒が最大の集団になった（2019年でユダヤ教徒約44%、ムスリム約39%、ドゥルーズ派約9%、キリスト教徒約7%）。年は目安（要確認）。
+      note: ユダヤ人の町の建設で、ユダヤ教徒が最大の集団になった（2019年でユダヤ教徒約44%、ムスリム約39%、ドゥルーズ派約9%、キリスト教徒約7%）。年は目安（要確認）。アラブ人（ムスリム・キリスト教徒・ドゥルーズ派）を合わせると半数余りになるので、言語の地図ではアラビア語が多数になる（矛盾ではない）。
       source: "https://en.wikipedia.org/wiki/Northern_District_(Israel)"
 
 - id: rel_israel_south
@@ -1240,10 +1321,10 @@
   select:
     pieces: [ISR-Jerusalem_District]
   timeline:
-    - from: 1920
+    - from: 1880
       main: sunni
       minor: jewish
-      note: 委任統治下のエルサレム市ではユダヤ人が多数だが、周りの村を含めるとムスリムとキリスト教徒のアラブ人が多い。
+      note: 19世紀後半から東欧のユダヤ人の移住（第1次アリヤー1882–）が続き、エルサレム市ではユダヤ人が多数になった。委任統治（1920–48）の下でも、周りの村を含めるとムスリムとキリスト教徒のアラブ人が多い。言語（lang_jerusalem）と同じく1880年から少数派を示す。
     - from: 1948
       main: jewish
       note: 1948年の戦争で西エルサレムとその周りのアラブ人は避難・追放された。

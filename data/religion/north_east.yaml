@@ -32,7 +32,7 @@
       source: "https://en.wikipedia.org/wiki/Religion_in_Estonia"
 
 - id: rel_latgale
-  name: ポーランド領リヴォニア（ラトガレ）
+  name: ラトガレ（旧ポーランド領リヴォニア）
   select:
     regions: [latgale]
   timeline:
@@ -53,7 +53,7 @@
       note: ソ連時代も、カトリック教会は民族の拠り所として信仰が保たれた（1972年の『リトアニア・カトリック教会年代記』など）。
 
 - id: rel_memel_prussia
-  name: プロイセン公国（東プロイセン）とメーメル
+  name: 東プロイセン（旧プロイセン公国）とメーメル
   select:
     regions: [memel, ducal_prussia]
   timeline:
@@ -326,14 +326,14 @@
       main: catholic
       note: オーストリア領ガリツィア。ルーシ人（ウクライナ人）はほとんどがギリシア・カトリック（カトリックに数える）で、正教徒はわずか。ポーランド人はローマ・カトリック。ユダヤ教徒が人口の1割前後（町では3〜5割）を占める。1808年にリヴィウ府主教座が置かれ、ギリシア・カトリック教会はウクライナ人の民族運動の拠り所になる。
     - from: 1946
-      main: orthodox
-      minor: catholic
-      note: 1944–46年にポーランド人（ローマ・カトリック）はポーランドへ移された。1946年、ソ連当局が開かせた「リヴィウ教会会議」で、ギリシア・カトリック教会はロシア正教会に強制的に合同させられ、聖職者は逮捕された。教会は地下で続いた。
+      main: catholic
+      minor: orthodox
+      note: 1944–46年にポーランド人（ローマ・カトリック）はポーランドへ移された。1946年、ソ連当局が開かせた「リヴィウ教会会議」で、ギリシア・カトリック教会はロシア正教会に強制的に合同させられ、聖職者は逮捕された。しかし信徒の多くは地下教会として信仰を保ったので、地図は伝統的な帰属（ギリシア・カトリック＝カトリック）のままにし、公式に正教会に編入された教会を斜線（minor）で示す。
       source: "https://en.wikipedia.org/wiki/Ukrainian_Greek_Catholic_Church"
     - from: 1990
       main: catholic
       minor: orthodox
-      note: 1989年にギリシア・カトリック教会が再び認められ、多くの教会が戻った。ガリツィアでは今もギリシア・カトリックが最大の宗派（カトリックに数える）。
+      note: 1989年にギリシア・カトリック教会が再び認められ、多くの教会が戻った（地下で信仰が保たれていた証拠）。ガリツィアでは今もギリシア・カトリックが最大の宗派（カトリックに数える）。
 
 - id: rel_zakarpattia
   name: ザカルパッチャ
@@ -365,7 +365,7 @@
       source: "https://en.wikipedia.org/wiki/Religion_in_Ukraine"
 
 - id: rel_crimea
-  name: クリミア＝ハン国
+  name: クリミア山地・南岸（旧クリミア＝ハン国の中心）
   select:
     regions: [crimea]
   timeline:
@@ -882,12 +882,60 @@
       note: 1957年に帰還が認められた。2010年でカラチャイ人・チェルケス人・アバザ人・ノガイ人（ムスリム）が約6割、ロシア人が約3割。
 
 - id: rel_ida_viru
-  name: エストニア北東部（ナルヴァ・イダ・ヴィル県の工業都市）
+  name: エストニア北東部（イダ・ヴィル県の工業都市）
   select:
-    pieces: [EST-Narva_linn, EST-Narva_Jvesuu_linn, EST-Sillamae_linn, EST-Kohtla_Jlrve_linn, EST-Vaivara_vald, EST-Johvi, EST-Maardu]
+    pieces: [EST-Narva_Jvesuu_linn, EST-Sillamae_linn, EST-Kohtla_Jlrve_linn, EST-Vaivara_vald, EST-Johvi, EST-Maardu]
   timeline:
     - from: 1960
       main: orthodox
       minor: lutheran
       note: 戦後、ロシアなどから移り住んだ労働者（伝統的に正教会）が多数になった（地図は伝統的な帰属）。
       source: "https://en.wikipedia.org/wiki/Ida-Viru_County"
+
+- id: rel_narva
+  name: ナルヴァ
+  select:
+    pieces: [EST-Narva_linn]
+  timeline:
+    - from: 1945
+      main: orthodox
+      note: 1944年の戦闘で町はほぼ破壊され、戦前の住民の多くは戻ることを許されなかった。代わりにロシアなどから労働者（伝統的に正教会）が移り住んだ（1989年でロシア人約86%。地図は伝統的な帰属）。言語の lang_narva と同じ年。
+      source: "https://en.wikipedia.org/wiki/Narva"
+
+- id: rel_tallinn
+  name: タリン
+  select:
+    pieces: [EST-Tallinna_linn]
+  timeline:
+    - from: 1950
+      main: lutheran
+      minor: orthodox
+      note: 戦後、ロシアなどから労働者が移り住み、ロシア系の住民（伝統的に正教会）が増えた（1989年でロシア人約41%）。エストニア人は今も最大の集団。地図は伝統的な帰属（エストニアは世俗化が非常に進んでいる）。
+      source: "https://en.wikipedia.org/wiki/Tallinn"
+
+- id: rel_riga
+  name: リガ
+  select:
+    pieces: [LVA-R_ga, LVA-J_rmalas]
+  timeline:
+    - from: 1970
+      main: orthodox
+      minor: lutheran
+      note: ソ連時代にロシア・ウクライナ・ベラルーシから多くの労働者（伝統的に正教会）が移り住み、1970年の調査でロシア人約43%、ラトヴィア人約41%（1989年はロシア人約47%）。言語の lang_riga と同じ年で切り替える（地図は伝統的な帰属）。
+      source: "https://en.wikipedia.org/wiki/Riga"
+    - from: 2010
+      main: lutheran
+      minor: orthodox
+      note: 独立後、ロシア系住民の一部の出国などで、2011年の調査ではラトヴィア人約46%、ロシア人約40%。ラトヴィア人にはルター派のほかカトリックも多い。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Latvia"
+
+- id: rel_daugavpils
+  name: ダウガフピルス
+  select:
+    pieces: [LVA-Daugavpils]
+  timeline:
+    - from: 1941
+      main: orthodox
+      minor: catholic
+      note: 1941年に町のユダヤ人のほとんどがドイツ占領下で殺害され、戦後はロシアなどから労働者が移り住んだ（1989年でロシア人約58%）。ロシア系の住民は正教会と古儀式派、ラトヴィア人・ポーランド人はカトリック（地図は伝統的な帰属）。言語（lang_daugavpils）と同じ年で切り替える。
+      source: "https://en.wikipedia.org/wiki/Daugavpils"

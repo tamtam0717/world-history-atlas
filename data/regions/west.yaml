@@ -413,10 +413,15 @@
       cause: 独仏休戦協定（6月。北部と大西洋岸をドイツが占領）
       source: "https://en.wikipedia.org/wiki/German_military_administration_in_occupied_France_during_World_War_II"
     - from: 1944
+      owner: germany
+      certainty: occupied
+      label: ダンケルク要塞（ドイツ軍）
+      cause: 連合軍がフランス北部を解放したが、ダンケルクの町と周辺は「ダンケルク要塞」としてドイツ軍が保つ（9月〜）
+      source: "https://en.wikipedia.org/wiki/Siege_of_Dunkirk_(1944–1945)"
+    - from: 1945
       owner: france
-      cause: 連合軍のノルマンディー上陸（6月）・南仏上陸（8月）とパリ解放（8月）
-      note: ダンケルクの町と周辺は「ダンケルク要塞」としてドイツ軍が1945年5月の降伏まで保った。
-      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+      cause: ドイツの降伏で、ダンケルクのドイツ軍が降伏（5月9日）
+      source: "https://en.wikipedia.org/wiki/Siege_of_Dunkirk_(1944–1945)"
 
 - id: walloon_flanders
   name: ワロン・フランドル（リール・ドゥエー）
@@ -1795,6 +1800,22 @@
       cause: 連合軍の進撃（メス・ストラスブール・ミュルーズの解放、11月）
       source: "https://en.wikipedia.org/wiki/Liberation_of_France"
 
+- id: forbach_1944
+  name: フォルバック
+  note: ドイツ領ロレーヌ（german_lorraine）のうち、1944年末に前線になっていたフォルバックだけを塗り分けるための地域。1943年以前は german_lorraine と同じ。
+  select:
+    pieces: [FRA-Forbach]
+  timeline:
+    - from: 1944
+      owner: france
+      certainty: uncertain
+      cause: 連合軍がメス・サルグミーヌを解放（11–12月）。フォルバック周辺はジークフリート線の前の前線になり、解放は1945年2–3月
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+    - from: 1945
+      owner: france
+      cause: 連合軍がフォルバックを解放（2–3月）
+      source: "https://en.wikipedia.org/wiki/Liberation_of_France"
+
 - id: belfort
   name: ベルフォール
   select:
@@ -3137,20 +3158,21 @@
       source: "https://en.wikipedia.org/wiki/Colmar_Pocket"
 
 - id: saint_nazaire_pocket
-  name: サン＝ナゼール（大西洋岸のドイツ軍の要塞）
+  name: ロリアン・サン＝ナゼール・ラ・ロシェル（大西洋岸のドイツ軍の要塞）
+  note: ダンケルク要塞は dunkirk に書いた。ロワイヤン（1945年4月に解放）とジロンド河口のポケットは、ピースの一部なので描いていない。
   select:
-    pieces: [FRA-Saint_Nazaire]
+    pieces: [FRA-Saint_Nazaire, FRA-Lorient, FRA-La_Rochelle]
   timeline:
     - from: 1944
       owner: germany
       certainty: occupied
-      cause: ドイツ軍がサン＝ナゼールの潜水艦基地とロワール河口の両岸を「要塞」として保つ
-      note: ロリアン・ラ・ロシェル・ロワイヤン・ダンケルクなども同じく1945年まで包囲された（ピースの大半は解放されているので描いていない）。サン＝ナゼールのドイツ軍は1945年5月11日に降伏した。
+      label: 大西洋岸の要塞（ドイツ軍）
+      cause: 連合軍がフランス西部を解放したが、ドイツ軍がロリアン・サン＝ナゼールの潜水艦基地とラ・ロシェル（ラ・パリス）を「要塞」として保つ（8–9月〜）
       source: "https://en.wikipedia.org/wiki/Saint-Nazaire_pocket"
     - from: 1945
       owner: france
-      cause: ドイツの降伏（5月）
-      source: "https://en.wikipedia.org/wiki/Saint-Nazaire_pocket"
+      cause: ドイツの降伏で、要塞のドイツ軍が降伏（5月。ラ・ロシェル9日、ロリアン10日、サン＝ナゼール11日）
+      source: "https://en.wikipedia.org/wiki/Atlantic_pockets"
 
 - id: fr_free_zone
   name: フランス南部の自由地域（1940–42年のヴィシー政府の地域）
