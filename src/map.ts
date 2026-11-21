@@ -48,8 +48,6 @@ const FONT_REGULAR = ["Noto Sans Regular"];
 const LOCAL_FONT = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", "Meiryo", sans-serif';
 /** 帝国の枠として描く上位政体（それ以外の overlord は宗主権として、宗主国の色の帯で描く） */
 const EMPIRE_FRAMES = new Set(["hre", "rhine_confederation", "german_confederation", "north_german_confederation", "hungary_crown"]);
-/** 宗主権の描き方（比較用。band：内側の帯、hatch：斜線、both：両方） */
-const SUZ_STYLE = new URLSearchParams(location.search).get("suz") ?? "band";
 
 /** 地図の主題（塗り分けの種類）。分布（宗教・言語）を足すときは DistKey にも足す */
 export type MapLayer = "political" | DistKey;
@@ -271,14 +269,6 @@ export class AtlasMap {
       paint: { "line-color": ["coalesce", ["feature-state", "r"], REL_NODATA], "line-width": 0.8 },
     });
     map.addLayer({ id: "hatch", type: "fill", source: "hatch", paint: { "fill-pattern": ["get", "pat"] } });
-    // 宗主権（案 B：宗主国の色の淡い斜線。比較用に ?suz=hatch で出す）
-    map.addLayer({
-      id: "suz-hatch",
-      type: "fill",
-      source: "suz",
-      layout: { visibility: vis(SUZ_STYLE === "hatch" || SUZ_STYLE === "both") },
-      paint: { "fill-pattern": ["get", "pat"], "fill-opacity": 0.8 },
-    });
     map.addLayer({
       id: "rel-hatch",
       type: "fill",
@@ -314,17 +304,17 @@ export class AtlasMap {
         ],
       },
     });
-    // 宗主権（案 A：宗主国の色の帯）。宗主権下の国の境界の内側に沿って、外側ほど濃く内側へぼかした帯を描く。
+    // 宗主権：宗主国の色の帯。宗主権下の国の境界の内側に沿って、外側ほど濃く内側へぼかした帯を描く。
     // 「宗主国の色に縁取られている＝その傘の下にある」と見えるようにする（輪は内側が右になる向きにそろえてある）
     const bandW = (k: number) => ["interpolate", ["exponential", 1.4], ["zoom"], 2, 5 * k, 5, 10 * k, 8, 20 * k];
     map.addLayer({
       id: "suz-band",
       type: "line",
       source: "suz",
-      layout: { "line-join": "round", visibility: vis(SUZ_STYLE !== "hatch") },
+      layout: { "line-join": "round" },
       paint: {
         "line-color": ["get", "color"],
-        "line-opacity": 0.8,
+        "line-opacity": 0.85,
         "line-width": bandW(1) as never,
         "line-offset": bandW(0.5) as never,
         "line-blur": bandW(0.85) as never,
@@ -777,7 +767,7 @@ export class AtlasMap {
       const m = this.merged(`suz${k}`, g.pieces);
       suz.push({
         type: "Feature",
-        properties: { color: shade(color, 0.82), edge: shade(color, 0.55), pat: this.suzHatch(color) },
+        properties: { color: shade(color, 0.82), edge: shade(color, 0.55) },
         geometry: inwardRings(m),
       });
     }
@@ -885,13 +875,6 @@ export class AtlasMap {
     if (this.subCache.size > 400) this.subCache.clear();
     this.subCache.set(year, out);
     return out;
-  }
-
-  /** 宗主権の斜線（案 B）の画像。宗主国の色ごとに1枚 */
-  private suzHatch(color: string): string {
-    const id = `suz-hatch-${color}`;
-    if (!this.map.hasImage(id)) this.map.addImage(id, hatchImage(shade(color, 0.7), 9, 0.16), { pixelRatio: 2 });
-    return id;
   }
 
   /** 川の表示条件：拡大率が minz（+ extra）以上で、運河は開通年（from）以降 */
@@ -1267,9 +1250,7 @@ export class AtlasMap {
     set(["modern-borders", "modern-cities-dot"], on);
     set(["modern-labels", "modern-cities-label"], on && lb);
     set(["borders", "cities-dot", "highlight"], !on || rel);
-    set(["frames", "suzerain", "subunit-borders"], !on && !rel);
-    set(["suz-band"], !on && !rel && SUZ_STYLE !== "hatch");
-    set(["suz-hatch"], !on && !rel && (SUZ_STYLE === "hatch" || SUZ_STYLE === "both"));
+    set(["frames", "suz-band", "suzerain", "subunit-borders"], !on && !rel);
     set(["labels", "cities-label", "sublabels"], !on && lb);
     set(["seas", "rivers-label", "lakes-label"], lb);
     // 宗教表示では、国境と国名を薄くして宗教の塗り分けを主役にする
