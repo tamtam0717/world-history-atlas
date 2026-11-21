@@ -1,0 +1,400 @@
+# G3 日本・朝鮮（JPN KOR PRK、サハリン・千島）の地域と所属の変遷（1648–2025）
+# 日本のピースは都道府県単位。小笠原諸島（東京都）・奄美諸島（鹿児島県）・大東諸島や先島諸島（沖縄県）は分けられないので note で示す。
+# サハリン・千島の4ピースは data/regions/north_east.yaml の sakhalin（adm1 全体）とも重なるが、こちらのほうが小さいので優先される。
+
+# ---- 日本 ----
+
+- id: japan_main
+  name: 日本（本州・四国・九州）
+  select:
+    iso_all: [JPN]
+    exclude: [JPN-Hokkaido, JPN-Okinawa_Prefecture]
+  timeline:
+    - from: 1648
+      owner: japan
+      note: 江戸幕府の直轄地（天領）と約260の藩からなる幕藩体制。対馬藩（長崎県）は朝鮮との外交・貿易を、薩摩藩（鹿児島県）は琉球を、松前藩は蝦夷地との交易を担った
+      source: "https://ja.wikipedia.org/wiki/幕藩体制"
+    - from: 1945
+      owner: japan
+      overlord: usa
+      label: 日本（連合国の占領下）
+      cause: ポツダム宣言を受け入れて降伏し、連合国軍（GHQ）の占領下に入る（8–9月）
+      note: 占領は連合国軍最高司令官マッカーサーのもとで、実質的にアメリカが行った。日本政府を通じた間接統治。1946年からは奄美諸島（鹿児島県）・小笠原諸島（東京都）などが日本の行政から切り離されたが、ピースが分けられないので描いていない
+      source: "https://ja.wikipedia.org/wiki/連合国軍占領下の日本"
+    - from: 1952
+      owner: japan
+      cause: サンフランシスコ平和条約の発効で独立を回復（4月28日）
+      note: 奄美諸島は1953年、小笠原諸島は1968年に返還された（ピースが分けられないので地図では描いていない）
+      source: "https://ja.wikipedia.org/wiki/日本国との平和条約"
+
+- id: hokkaido
+  name: 北海道（蝦夷地）
+  names:
+    - {to: 1868, name: 蝦夷地}
+    - {from: 1869, name: 北海道}
+  select:
+    pieces: [JPN-Hokkaido]
+  timeline:
+    - from: 1648
+      owner: japan
+      certainty: nominal
+      label: 蝦夷地
+      note: 和人の住む地（和人地）は渡島半島の南端だけで、その他はアイヌの人々の土地（蝦夷地）。松前藩がアイヌとの交易を独占した。1669年のシャクシャインの戦いの後、アイヌへの支配が強まった
+      source: "https://ja.wikipedia.org/wiki/蝦夷地"
+    - from: 1799
+      owner: japan
+      certainty: nominal
+      label: 蝦夷地（幕府の直轄）
+      cause: ロシアの接近に備え、幕府が東蝦夷地を直轄にする（1807年に西蝦夷地も）
+      note: 1821年に松前藩に戻され、1855年に再び幕府の直轄となった。内陸の大部分はなおアイヌの土地だったので、名目的な支配（白い斜線）として描く
+      source: "https://ja.wikipedia.org/wiki/蝦夷地"
+    - from: 1821
+      owner: japan
+      certainty: nominal
+      label: 蝦夷地
+      cause: 蝦夷地が松前藩に返される
+      source: "https://ja.wikipedia.org/wiki/松前藩"
+    - from: 1855
+      owner: japan
+      certainty: nominal
+      label: 蝦夷地（幕府の直轄）
+      cause: 日米和親条約で箱館が開港し、幕府が蝦夷地を再び直轄にする
+      source: "https://ja.wikipedia.org/wiki/箱館奉行"
+    - from: 1868
+      owner: ezo_republic
+      certainty: uncertain
+      cause: 旧幕府軍の榎本武揚らが箱館の五稜郭を占領し、松前城を落とす（12月）
+      note: 年末には箱館・松前など渡島半島の南部をおさえた
+      source: "https://ja.wikipedia.org/wiki/箱館戦争"
+    - from: 1869
+      owner: japan
+      cause: 箱館戦争が終わり（5月）、新政府が開拓使を置いて蝦夷地を北海道と改める
+      note: 屯田兵などによる開拓が進められ、アイヌの人々は土地や生業を奪われて同化政策を受けた（1899年の北海道旧土人保護法）
+      source: "https://ja.wikipedia.org/wiki/開拓使"
+    - from: 1945
+      owner: japan
+      overlord: usa
+      label: 日本（連合国の占領下）
+      cause: 日本の降伏と連合国軍の占領
+      source: "https://ja.wikipedia.org/wiki/連合国軍占領下の日本"
+    - from: 1952
+      owner: japan
+      cause: サンフランシスコ平和条約の発効で独立を回復
+      source: "https://ja.wikipedia.org/wiki/日本国との平和条約"
+
+- id: okinawa
+  name: 沖縄（琉球）
+  names:
+    - {to: 1878, name: 琉球}
+    - {from: 1879, name: 沖縄県}
+  select:
+    pieces: [JPN-Okinawa_Prefecture]
+  timeline:
+    - from: 1648
+      owner: ryukyu
+      note: 1609年から薩摩藩の支配も受ける（両属）。明清交代期で、中国との冊封関係は清との間でまだ結ばれていない（1654年に明の印を返し、1663年に清の冊封使が来る）
+      source: "https://ja.wikipedia.org/wiki/琉球王国"
+    - from: 1663
+      owner: ryukyu
+      overlord: qing
+      cause: 清の冊封使が来て尚質王を琉球国王に封じる
+      source: "https://ja.wikipedia.org/wiki/冊封使"
+    - from: 1872
+      owner: japan
+      certainty: uncertain
+      label: 琉球藩（清も宗主権を主張）
+      cause: 明治政府が琉球国王の尚泰を琉球藩王とする
+      note: 1875年には清への朝貢を禁じた。清は日本の領有を認めず、琉球の士族の一部も清に救いを求めた
+      source: "https://ja.wikipedia.org/wiki/琉球処分"
+    - from: 1879
+      owner: japan
+      cause: 琉球処分（琉球藩を廃して沖縄県を置く）
+      note: 清との帰属問題は日清戦争（1894–95）で事実上決着した
+      source: "https://ja.wikipedia.org/wiki/琉球処分"
+    - from: 1945
+      owner: usa
+      certainty: occupied
+      label: 沖縄（アメリカの軍政）
+      cause: 沖縄戦（3–6月）でアメリカ軍が占領し、軍政を敷く
+      source: "https://ja.wikipedia.org/wiki/沖縄戦"
+    - from: 1952
+      owner: usa
+      certainty: occupied
+      label: 沖縄（アメリカの施政権下）
+      cause: サンフランシスコ平和条約第3条で、アメリカの施政権下に置かれる
+      note: 日本は「潜在主権」を持つとされた。琉球政府があったが、アメリカの琉球列島民政府（USCAR）が実権を持ち、広大な米軍基地がつくられた
+      source: "https://ja.wikipedia.org/wiki/琉球列島米国民政府"
+    - from: 1972
+      owner: japan
+      cause: 沖縄返還（5月15日）
+      note: 返還後も在日米軍の基地の多くが沖縄に集中している
+      source: "https://ja.wikipedia.org/wiki/沖縄返還"
+
+# ---- サハリン（樺太）・千島列島 ----
+
+- id: north_sakhalin
+  name: 北サハリン（北樺太）
+  select:
+    pieces: [RUS-Sakhalin_Oblast]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: ニヴフ人・ウイルタ人・アイヌ人などの土地
+      source: "https://ja.wikipedia.org/wiki/樺太"
+    - from: 1732
+      owner: qing
+      certainty: nominal
+      cause: 清がサハリンの住民を辺民に組み入れ、毛皮（貂皮）の朝貢を受ける
+      note: 年は要確認。清は下流アムールの役所で朝貢を受けただけで、島に役所は置かなかった（1809年の間宮林蔵の探検でも確かめられた）
+      source: "https://ja.wikipedia.org/wiki/山丹交易"
+    - from: 1858
+      owner: russia
+      certainty: uncertain
+      cause: ロシアがアムール川流域に進出し（アイグン条約）、北サハリンに哨所を置く
+      note: 1855年の日露和親条約では樺太の国境を決めず、両国民の雑居の地とした。1860年の北京条約でロシアは沿海州を得た
+      source: "https://ja.wikipedia.org/wiki/日露和親条約"
+    - from: 1875
+      owner: russia
+      cause: 樺太・千島交換条約で、樺太全島がロシア領となる
+      note: 流刑地として使われた（チェーホフ『サハリン島』）
+      source: "https://ja.wikipedia.org/wiki/樺太・千島交換条約"
+    - from: 1918
+      owner: white_movement
+      certainty: uncertain
+      cause: ロシア内戦。北サハリンは白軍の側
+      source: "https://ja.wikipedia.org/wiki/シベリア出兵"
+    - from: 1920
+      owner: japan
+      certainty: occupied
+      label: 北サハリン（日本の保障占領）
+      cause: 尼港事件の後、日本軍が北サハリンを保障占領する（7月）
+      source: "https://ja.wikipedia.org/wiki/北樺太占領"
+    - from: 1925
+      owner: soviet_union
+      label: ロシア共和国
+      cause: 日ソ基本条約で日本軍が撤退する（5月）
+      note: 日本は北サハリンの石油・石炭の利権を得た（1944年に返還）
+      source: "https://ja.wikipedia.org/wiki/日ソ基本条約"
+    - from: 1991
+      owner: russia
+      cause: ソ連の解体（ロシア連邦）
+      source: "https://ja.wikipedia.org/wiki/ソビエト連邦の崩壊"
+
+- id: south_sakhalin
+  name: 南サハリン（南樺太）
+  names:
+    - {from: 1905, to: 1945, name: 南樺太（樺太庁）}
+  select:
+    pieces: [RUS-Sakhalin_Oblast_South]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: アイヌ人・ニヴフ人・ウイルタ人などの土地
+      source: "https://ja.wikipedia.org/wiki/樺太"
+    - from: 1732
+      owner: qing
+      certainty: nominal
+      cause: 清がサハリンの住民を辺民に組み入れ、毛皮（貂皮）の朝貢を受ける
+      note: 年は要確認。南部のアイヌは松前藩とも交易し（1790年に白主に交易所）、1807年からは幕府が西蝦夷地の一部として直轄にした。山丹交易で清の絹織物（蝦夷錦）が日本に入った
+      source: "https://ja.wikipedia.org/wiki/山丹交易"
+    - from: 1807
+      owner: japan
+      certainty: nominal
+      label: 北蝦夷地（樺太）
+      cause: 幕府が西蝦夷地とともに樺太を直轄にする
+      note: 1808–09年に間宮林蔵が樺太を探検し、島であることを確かめた（間宮海峡）。南部のアイヌは清にも朝貢を続けた
+      source: "https://ja.wikipedia.org/wiki/間宮林蔵"
+    - from: 1855
+      owner: japan
+      certainty: uncertain
+      label: 樺太（日露の雑居地）
+      cause: 日露和親条約で、樺太は国境を定めず両国民の雑居の地とされる
+      note: 南部は日本人の漁場が多かったので日本の色で描く。1867年の樺太仮規則でも雑居が続いた
+      source: "https://ja.wikipedia.org/wiki/日露和親条約"
+    - from: 1875
+      owner: russia
+      cause: 樺太・千島交換条約で、樺太全島がロシア領となる
+      source: "https://ja.wikipedia.org/wiki/樺太・千島交換条約"
+    - from: 1905
+      owner: japan
+      label: 樺太
+      cause: ポーツマス条約で北緯50度以南が日本領となる
+      note: 1907年に樺太庁を置いた。1943年に内地に編入された
+      source: "https://ja.wikipedia.org/wiki/ポーツマス条約"
+    - from: 1945
+      owner: soviet_union
+      certainty: occupied
+      label: 南樺太（ソ連の占領）
+      cause: ソ連が日ソ中立条約を破って対日参戦し、南樺太を占領する（8月）
+      source: "https://ja.wikipedia.org/wiki/樺太の戦い_(1945年)"
+    - from: 1946
+      owner: soviet_union
+      label: ロシア共和国
+      cause: ソ連が南樺太・千島列島の編入を宣言する（2月）
+      note: 日本はサンフランシスコ平和条約（1951）で南樺太の権利を放棄したが、ソ連は条約に調印しておらず、日本政府は帰属は未定との立場
+      source: "https://ja.wikipedia.org/wiki/南樺太"
+    - from: 1991
+      owner: russia
+      cause: ソ連の解体（ロシア連邦）
+      source: "https://ja.wikipedia.org/wiki/ソビエト連邦の崩壊"
+
+- id: north_kurils
+  name: 千島列島（得撫島以北）
+  select:
+    pieces: [RUS-Sakhalin_Oblast_North_Kurils]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: 千島アイヌの土地
+      source: "https://ja.wikipedia.org/wiki/千島列島"
+    - from: 1711
+      owner: russia
+      certainty: nominal
+      cause: カムチャツカのコサックが千島列島北部に渡り、住民から毛皮税（ヤサク）を取り始める
+      note: 年は要確認。18世紀後半にはロシアの毛皮商人が得撫島まで進出した
+      source: "https://ja.wikipedia.org/wiki/千島列島"
+    - from: 1855
+      owner: russia
+      cause: 日露和親条約で得撫島以北がロシア領と決まる
+      source: "https://ja.wikipedia.org/wiki/日露和親条約"
+    - from: 1875
+      owner: japan
+      cause: 樺太・千島交換条約で、千島列島全体が日本領となる
+      source: "https://ja.wikipedia.org/wiki/樺太・千島交換条約"
+    - from: 1945
+      owner: soviet_union
+      certainty: occupied
+      label: 千島列島（ソ連の占領）
+      cause: ソ連軍が千島列島を占領する（8–9月。占守島の戦い）
+      source: "https://ja.wikipedia.org/wiki/占守島の戦い"
+    - from: 1946
+      owner: soviet_union
+      label: ロシア共和国
+      cause: ソ連が南樺太・千島列島の編入を宣言する（2月）
+      note: 日本はサンフランシスコ平和条約で千島列島の権利を放棄した
+      source: "https://ja.wikipedia.org/wiki/千島列島"
+    - from: 1991
+      owner: russia
+      cause: ソ連の解体（ロシア連邦）
+      source: "https://ja.wikipedia.org/wiki/ソビエト連邦の崩壊"
+
+- id: south_kurils
+  name: 北方領土（択捉・国後・色丹・歯舞）
+  select:
+    pieces: [RUS-Sakhalin_Oblast_South_Kurils]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: アイヌの人々の土地
+      source: "https://ja.wikipedia.org/wiki/北方地域"
+    - from: 1754
+      owner: japan
+      certainty: nominal
+      label: 蝦夷地
+      cause: 松前藩が国後島に交易の場所（国後場所）を開く
+      note: 年は要確認。1789年にクナシリ・メナシの戦い（アイヌの蜂起）が起こった。1798年に近藤重蔵が択捉島に「大日本恵登呂府」の標柱を立て、1799年に幕府の直轄となった
+      source: "https://ja.wikipedia.org/wiki/クナシリ・メナシの戦い"
+    - from: 1855
+      owner: japan
+      cause: 日露和親条約で択捉島以南が日本領と決まる
+      source: "https://ja.wikipedia.org/wiki/日露和親条約"
+    - from: 1945
+      owner: soviet_union
+      certainty: occupied
+      label: 北方領土（ソ連の占領）
+      cause: ソ連軍が択捉・国後・色丹・歯舞を占領する（8月末–9月初め）
+      source: "https://ja.wikipedia.org/wiki/北方領土問題"
+    - from: 1946
+      owner: soviet_union
+      label: 北方領土（日本が返還を要求）
+      cause: ソ連が南樺太・千島列島の編入を宣言する（2月）。日本人住民は1947–49年に送還された
+      note: 日本は、これらの島は日本固有の領土で、平和条約で放棄した「千島列島」に含まれないとして返還を求めている。1956年の日ソ共同宣言では、平和条約の締結後に歯舞・色丹を引き渡すとされた
+      source: "https://ja.wikipedia.org/wiki/北方領土問題"
+    - from: 1991
+      owner: russia
+      label: 北方領土（日本が返還を要求）
+      cause: ソ連の解体（ロシア連邦）
+      source: "https://ja.wikipedia.org/wiki/北方領土問題"
+
+# ---- 朝鮮半島 ----
+# 現代の北朝鮮（PRK）・韓国（KOR）の道はどれも、1945–50年の北緯38度線でも1953年の休戦ラインでも、面積の大きい側が同じ（開城・甕津は北、江原道の束草・鉄原の南部は南）。
+# このため、ピースの粒度では38度線と休戦ラインの違いは描けない（note で示す）。
+
+- id: korea
+  name: 朝鮮半島
+  select:
+    iso_all: [KOR, PRK]
+  timeline:
+    - from: 1648
+      owner: joseon
+      overlord: qing
+      note: 丙子胡乱（1636–37）で清に降伏し、清の冊封を受けて朝貢した。首都は漢城（ソウル）
+      source: "https://ja.wikipedia.org/wiki/丙子の乱"
+    - from: 1895
+      owner: joseon
+      cause: 下関条約で清が朝鮮の独立を認め、清の宗主権がなくなる
+      source: "https://ja.wikipedia.org/wiki/下関条約"
+    - from: 1905
+      owner: japan
+      label: 大韓帝国（日本の保護国）
+      cause: 第2次日韓協約（乙巳条約）で韓国は外交権を失い、日本の保護国となる。統監府が置かれる（初代統監は伊藤博文）
+      note: 1907年の第3次日韓協約で内政も日本の統監が握り、韓国軍は解散させられた
+      source: "https://ja.wikipedia.org/wiki/第二次日韓協約"
+    - from: 1910
+      owner: japan
+      label: 朝鮮（日本の植民地）
+      cause: 韓国併合条約（8月）。朝鮮総督府が置かれる
+      note: 初代総督は寺内正毅。1910年代の武断政治、三・一独立運動（1919）後の「文化政治」、1930年代後半からの皇民化政策（創氏改名・神社参拝の強制など）と戦時の動員が行われた
+      source: "https://ja.wikipedia.org/wiki/韓国併合"
+
+- id: korea_north
+  name: 朝鮮北部（北緯38度線以北）
+  names:
+    - {from: 1948, name: 北朝鮮}
+  select:
+    iso_all: [PRK]
+  timeline:
+    - from: 1945
+      owner: soviet_union
+      certainty: occupied
+      label: 朝鮮北部（ソ連の占領）
+      cause: 日本の降伏後、北緯38度線以北をソ連軍が占領する（8月）
+      note: 実際の境界は北緯38度線。開城や黄海道の南部（甕津）はこの時期は南側だったが、ピースの大部分が北なので北として描く
+      source: "https://ja.wikipedia.org/wiki/ソ連軍政期の朝鮮"
+    - from: 1948
+      owner: north_korea
+      cause: 朝鮮民主主義人民共和国の成立（9月9日）
+      source: "https://ja.wikipedia.org/wiki/朝鮮民主主義人民共和国"
+    - from: 1953
+      owner: north_korea
+      cause: 朝鮮戦争の休戦協定（7月27日）。休戦ライン（軍事境界線）が境界となる
+      note: 開城は北側、江原道の東部（束草など）は南側に移ったが、ピースの単位では変わらない。1950年末の戦線もほぼ38度線付近にあったので、戦争中の各年は戦前の境界で描く
+      source: "https://ja.wikipedia.org/wiki/朝鮮戦争休戦協定"
+
+- id: korea_south
+  name: 朝鮮南部（北緯38度線以南）
+  names:
+    - {from: 1948, name: 韓国}
+  select:
+    iso_all: [KOR]
+  timeline:
+    - from: 1945
+      owner: usa
+      certainty: occupied
+      label: 朝鮮南部（アメリカの軍政）
+      cause: 日本の降伏後、北緯38度線以南をアメリカ軍が占領し、軍政を敷く（9月）
+      note: 江原道（韓国）の北部（束草・鉄原など）は38度線の北でソ連の占領地区だったが、ピースの大部分が南なので南として描く
+      source: "https://ja.wikipedia.org/wiki/在朝鮮アメリカ陸軍司令部軍政庁"
+    - from: 1948
+      owner: south_korea
+      cause: 大韓民国の成立（8月15日）
+      source: "https://ja.wikipedia.org/wiki/大韓民国"
+    - from: 1953
+      owner: south_korea
+      cause: 朝鮮戦争の休戦協定（7月27日）。休戦ライン（軍事境界線）が境界となる
+      note: 1950年6月の北朝鮮の侵攻で一時は釜山周辺を残してほぼ全土が北朝鮮に占領された（年末時点では38度線付近まで押し戻していた）
+      source: "https://ja.wikipedia.org/wiki/朝鮮戦争"
