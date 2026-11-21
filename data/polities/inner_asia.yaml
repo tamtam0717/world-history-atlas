@@ -1,0 +1,259 @@
+# 内陸アジア（モンゴル・内モンゴル・新疆・チベット・青海、シベリア南部・極東の一部）の政体。担当 G2。
+# 清（qing）・中華民国（roc）・中華人民共和国（prc）・満洲国（manchukuo）は G1、日本（japan）は G3、
+# ロシア（russia）・ソ連（soviet_union）・白軍（white_movement）・極東共和国（far_eastern_republic）・トゥヴァ（tuva）は north_east.yaml で定義。
+
+# ---------------------------------------------------------------- モンゴル高原
+- id: khalkha
+  name: ハルハ（外モンゴル）
+  short: ハルハ
+  color: "#b9cfa0"
+  kind: 遊牧諸侯の連合（3ハン家）
+  rulers:
+    - {name: ゴンボドルジ, title: トゥシェート・ハン, from: 1636, to: 1655, note: 生年・即位年は要確認, source: "https://en.wikipedia.org/wiki/Tüsheet_Khan"}
+    - {name: チャホンドルジ, title: トゥシェート・ハン, from: 1655, to: 1691, note: 1691年のドローン・ノール会盟で清に服属した。弟がジェブツンダンバ・ホトクト1世（ザナバザル）, source: "https://en.wikipedia.org/wiki/Chakhundorj"}
+  periods:
+    - from: 1648
+      to: 1687
+      text: チンギス・ハンの子孫が率いるハルハ部が、トゥシェート・ハン、ジャサクト・ハン、セチェン・ハンの3ハン家に分かれてモンゴル高原の北部（外モンゴル）を治めた。チベット仏教が広まり、ジェブツンダンバ・ホトクト（ザナバザル）が宗教上の権威となった。
+    - from: 1688
+      to: 1691
+      text: 1688年、ジュンガルのガルダンが侵入し、ハルハの諸侯は南の内モンゴルへ逃れて清の康熙帝に保護を求めた。1691年のドローン・ノール会盟で清に服属し、以後は清の藩部（外モンゴル）となった。
+  note: 北西部（フブスグル・トゥヴァ方面）には、トゥシェート・ハン家から分かれたアルタン・ハン（ホトゴイト部）がいて、エニセイ川上流のキルギス人などを従えていた（1667年ごろジュンガルに滅ぼされる）。
+  source:
+    - "https://ja.wikipedia.org/wiki/ハルハ"
+    - "https://ja.wikipedia.org/wiki/ドロンノール会盟"
+
+- id: dzungar
+  name: ジュンガル
+  short: ジュンガル
+  color: "#c9b27e"
+  kind: 遊牧国家（オイラト）
+  rulers:
+    - {name: エルデニ・バートル・ホンタイジ, title: ホンタイジ, from: 1634, to: 1653, source: "https://en.wikipedia.org/wiki/Erdeni_Batur"}
+    - {name: センゲ, title: ホンタイジ, from: 1653, to: 1670, note: 1670年に異母兄弟に殺される, source: "https://en.wikipedia.org/wiki/Sengge"}
+    - {name: ガルダン, title: ホンタイジ→ボショクト・ハン（1679〜）, from: 1671, to: 1697, note: 1697年に死去（病死とも服毒とも）, source: "https://ja.wikipedia.org/wiki/ガルダン"}
+    - {name: ツェワン・アラブタン, title: ホンタイジ, from: 1697, to: 1727, source: "https://ja.wikipedia.org/wiki/ツェワンラブタン"}
+    - {name: ガルダン・ツェリン, title: ホンタイジ, from: 1727, to: 1745, source: "https://en.wikipedia.org/wiki/Galdan_Tseren"}
+    - {name: ツェワン・ドルジ・ナムジャル, title: ホンタイジ, from: 1746, to: 1750, source: "https://en.wikipedia.org/wiki/Tsewang_Dorji_Namjal"}
+    - {name: ラマ・ドルジ, title: ホンタイジ, from: 1750, to: 1753, source: "https://en.wikipedia.org/wiki/Lama_Dorji"}
+    - {name: ダワチ, title: ホンタイジ, from: 1753, to: 1755, note: 1755年に清軍に捕らえられる。その後アムルサナが清に背いて自立を図った（1755–1757）, source: "https://en.wikipedia.org/wiki/Dawachi"}
+  periods:
+    - from: 1648
+      to: 1679
+      text: 西モンゴルのオイラト諸部のうち、ジュンガル部がイリ地方を本拠に勢力を広げた。エルデニ・バートルは法典（モンゴル・オイラト法典、1640）の制定を主導し、チベット仏教（ゲルク派）を保護した。
+    - from: 1680
+      to: 1697
+      text: ガルダンがタリム盆地のヤルカンド・ハン国を滅ぼしてオアシス都市を支配下に置き（1680）、1688年には東のハルハに侵入した。清の康熙帝は自ら軍を率いてガルダンを破り（1690 ウラーン・ブトゥン、1696 ジョーン・モド）、ガルダンは翌年に死んだ。
+    - from: 1698
+      to: 1745
+      text: ツェワン・アラブタンとガルダン・ツェリンのもとで、ジュンガルはなお中央アジア最大の遊牧国家だった。1717年にはチベットに侵入してラサを占領し、カザフ草原にも攻め込んだ（カザフの「大災厄」）。清とはアルタイ山脈を境に戦い（1731 ホトン・ノールの戦い）、1739年に講和した。
+    - from: 1746
+      to: 1757
+      text: ガルダン・ツェリンの死後に後継争いが起こり、清の乾隆帝はこれに乗じて1755年にイリを占領した。協力者だったアムルサナが背くと再び軍を送り（1757）、反乱の鎮圧と天然痘の流行でジュンガルの人々の多くが死に、国は滅んだ。
+  note: >-
+    オイラト（西モンゴル）はジュンガル・ドルベト・ホシュート・トルグートなどの部族連合で、ジュンガル部がその盟主となった。
+    トルグート部は17世紀前半にヴォルガ川下流へ移り（カルムイク）、1771年にその一部が清領のイリへ戻った。
+    地図では、ジュンガルの直接の支配地（ジュンガル盆地・イリ・西モンゴル・アルタイ）と、ホージャ家を通じて治めたタリム盆地（1680–1755、間接統治）を描く。
+  source:
+    - "https://ja.wikipedia.org/wiki/ジュンガル"
+    - "https://en.wikipedia.org/wiki/Dzungar_Khanate"
+
+- id: mongolia
+  name: モンゴル国
+  names:
+    - {to: 1923, name: ボグド・ハーン政権（モンゴル国）, short: モンゴル, kind: 君主国（活仏を君主とする）}
+    - {from: 1924, to: 1991, name: モンゴル人民共和国, short: モンゴル, kind: 人民共和国（社会主義・ソ連の衛星国）}
+    - {from: 1992, name: モンゴル国, short: モンゴル, kind: 共和国}
+  short: モンゴル
+  color: "#8fc1a9"
+  kind: 共和国
+  rulers:
+    - {name: ボグド・ハーン（ジェブツンダンバ・ホトクト8世）, title: ハーン（皇帝）, from: 1911, to: 1924, note: 1919–1921年は中華民国が自治を取り消した。1921年の人民革命の後は権限を制限された君主。1924年5月に死去, source: "https://ja.wikipedia.org/wiki/ボグド・ハーン"}
+    - {name: ダムディン・スフバートル, title: 人民政府の軍事相（革命の指導者）, from: 1921, to: 1923, note: 首相はボドー（1921–1922）、ダムディンバザル（1922–1923）, source: "https://ja.wikipedia.org/wiki/ダムディン・スフバートル"}
+    - {name: バルダンドルジ・ツェレンドルジ, title: 首相, from: 1923, to: 1928, source: "https://en.wikipedia.org/wiki/Balingiin_Tserendorj"}
+    - {name: アナンディン・アマル, title: 首相, from: 1928, to: 1930, note: 1936–1939年にも首相, source: "https://en.wikipedia.org/wiki/Anandyn_Amar"}
+    - {name: ツェンゲルティン・ジグジッドジャブ, title: 首相, from: 1930, to: 1932, note: 要確認, source: "https://en.wikipedia.org/wiki/Tsengeltiin_Jigjidjav"}
+    - {name: ペルジディン・ゲンデン, title: 首相, from: 1932, to: 1936, note: 1936年に解任され、1937年にソ連で処刑された, source: "https://en.wikipedia.org/wiki/Peljidiin_Genden"}
+    - {name: ホルローギーン・チョイバルサン, title: 内相・元帥→首相（1939〜）, from: 1936, to: 1952, note: 1936年から実権を握り、1937–1939年の大粛清を進めた（1936–1939年の首相はアマル）, source: "https://ja.wikipedia.org/wiki/ホルローギーン・チョイバルサン"}
+    - {name: ユムジャーギーン・ツェデンバル, title: 首相→人民大会議幹部会議長（1974〜）・人民革命党書記長, from: 1952, to: 1984, source: "https://ja.wikipedia.org/wiki/ユムジャーギーン・ツェデンバル"}
+    - {name: ジャムビン・バトムンフ, title: 人民大会議幹部会議長・人民革命党書記長, from: 1984, to: 1990, source: "https://en.wikipedia.org/wiki/Jambyn_Batmönkh"}
+    - {name: プンサルマーギーン・オチルバト, title: 大統領, from: 1990, to: 1997, source: "https://ja.wikipedia.org/wiki/プンサルマーギーン・オチルバト"}
+    - {name: ナツァギーン・バガバンディ, title: 大統領, from: 1997, to: 2005, source: "https://ja.wikipedia.org/wiki/ナツァギーン・バガバンディ"}
+    - {name: ナンバリーン・エンフバヤル, title: 大統領, from: 2005, to: 2009, source: "https://ja.wikipedia.org/wiki/ナンバリーン・エンフバヤル"}
+    - {name: ツァヒアギーン・エルベグドルジ, title: 大統領, from: 2009, to: 2017, source: "https://ja.wikipedia.org/wiki/ツァヒアギーン・エルベグドルジ"}
+    - {name: ハルトマーギーン・バトトルガ, title: 大統領, from: 2017, to: 2021, source: "https://ja.wikipedia.org/wiki/ハルトマーギーン・バトトルガ"}
+    - {name: ウフナーギーン・フレルスフ, title: 大統領, from: 2021, to: 2025, source: "https://ja.wikipedia.org/wiki/ウフナーギーン・フレルスフ"}
+  periods:
+    - from: 1911
+      to: 1920
+      text: 辛亥革命で清の支配が崩れると、1911年12月にハルハの諸侯が活仏ジェブツンダンバ・ホトクト8世をボグド・ハーン（皇帝）に推して独立を宣言した。1915年のキャフタ協定で、中華民国の宗主権のもとの自治にとどめられ、1919年には中国軍（徐樹錚）が自治を取り消した。
+    - from: 1921
+      to: 1939
+      text: 1921年、スフバートルらのモンゴル人民党がソヴィエト赤軍とともに中国軍とウンゲルンの白軍を追い、人民政府を立てた（モンゴル人民革命）。1924年にボグド・ハーンが死ぬとモンゴル人民共和国となり、ソ連にならって牧畜の集団化や仏教寺院の破壊が進められ、1937–1939年の大粛清で多くの僧侶や政治家が殺された。1939年にはノモンハン（ハルハ河）で日本・満洲国軍とソ連・モンゴル軍が戦った。
+    - from: 1945
+      to: 1989
+      text: 1945年のヤルタ協定と住民投票（10月）を経て、1946年に中華民国が独立を承認した。チョイバルサン、ツェデンバルの長い指導のもとでソ連の衛星国として社会主義化と定住化・都市化が進み、1961年に国際連合に加盟した。中ソ対立ではソ連の側に立った。
+    - from: 1990
+      to: 2025
+      text: 1990年の民主化運動で一党独裁が終わり、1992年の新憲法で国名をモンゴル国とした。市場経済に移り、鉱物資源（石炭・銅）の輸出が経済を支えている。
+  note: 1924–1991年の指導者は、実権を持った首相・党書記長を書いた。中華民国は1946年まで独立を認めず、台湾の中華民国政府が独立承認を事実上認めたのは2002年。
+  source:
+    - "https://ja.wikipedia.org/wiki/モンゴル国"
+    - "https://ja.wikipedia.org/wiki/モンゴル人民共和国"
+    - "https://ja.wikipedia.org/wiki/ボグド・ハーン政権"
+
+- id: mengjiang
+  name: 蒙疆政権（蒙古聯合自治政府）
+  names:
+    - {to: 1936, name: 蒙古軍政府, short: 蒙古軍政府, kind: 軍政府（日本の傀儡政権）}
+    - {from: 1937, to: 1938, name: 蒙古聯盟自治政府（蒙疆）, short: 蒙疆, kind: 自治政府（日本の傀儡政権）}
+    - {from: 1939, name: 蒙古聯合自治政府（蒙疆）, short: 蒙疆, kind: 自治政府（日本の傀儡政権）}
+  short: 蒙疆
+  color: "#d8c4a4"
+  kind: 自治政府（日本の傀儡政権）
+  rulers:
+    - {name: 徳王（デムチュクドンロブ）, title: 総裁→主席, from: 1936, to: 1945, source: "https://ja.wikipedia.org/wiki/徳王"}
+  periods:
+    - from: 1936
+      to: 1945
+      text: 内モンゴルの自治をめざした徳王は、関東軍の後押しで1936年に蒙古軍政府を作った。日中戦争が始まると日本軍はチャハル・綏遠・山西北部を占領し（1937）、張家口を首都とする蒙疆の政権がまとめられた（1939年に蒙古聯合自治政府）。実権は日本の軍人・顧問が握り、1945年8月のソ連・モンゴル軍の進攻で崩れた。
+  note: 地図では overlord を japan（日本）にする。張家口（チャハル南部）・大同（山西北部）など長城の南の部分は G1（中国本土）の担当のピース。
+  source:
+    - "https://ja.wikipedia.org/wiki/蒙古聯合自治政府"
+
+- id: inner_mongolia_ag
+  name: 内モンゴル自治政府
+  names:
+    - {to: 1946, name: 東モンゴル自治政府, short: 東モンゴル, kind: 自治政府}
+  short: 内モンゴル
+  color: "#e2aea4"
+  kind: 自治政府（中国共産党の指導下）
+  rulers:
+    - {name: ウランフー（雲沢）, title: 主席, from: 1947, to: 1949, note: 1949年以後も内モンゴル自治区の主席・党書記（1966年の文化大革命で失脚）。1946年の東モンゴル自治政府の主席はボヤンマンダフ, source: "https://ja.wikipedia.org/wiki/ウランフ"}
+  periods:
+    - from: 1946
+      to: 1949
+      text: 日本の敗戦後、内モンゴル東部の満洲国の旧興安省などでモンゴル人がモンゴル人民共和国との合併や自治を求めた（1946年1月 東モンゴル自治政府）。中国共産党はウランフーを中心にこれをまとめ、1947年5月に王爺廟（ウランホト）で内モンゴル自治政府を作った。国共内戦では共産党の側に立ち、1949年に中華人民共和国の内モンゴル自治区となった。
+  note: 中華人民共和国の成立（1949）より前の、中国で最初の省級の民族自治政府。地図では1946–1948年の内モンゴル東部を不確実（斜線）で描く。
+  source:
+    - "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
+    - "https://en.wikipedia.org/wiki/Inner_Mongolian_Autonomous_Government"
+
+# ---------------------------------------------------------------- 東トルキスタン（新疆）
+- id: yarkent
+  name: ヤルカンド・ハン国
+  short: ヤルカンド
+  color: "#d9b996"
+  kind: ハン国（チャガタイ家）
+  rulers:
+    - {name: アブドゥッラー・ハン, title: ハン, from: 1638, to: 1669, source: "https://en.wikipedia.org/wiki/Abdullah_Khan_(Yarkent)"}
+    - {name: イスマーイール・ハン, title: ハン, from: 1670, to: 1678, note: ガルダンに捕らえられた（年は1678–1680と諸説）。その後、ジュンガルはホージャ家（白山党のアーファーク・ホージャ）を通じてタリム盆地を治めた, source: "https://en.wikipedia.org/wiki/Yarkent_Khanate"}
+  periods:
+    - from: 1648
+      to: 1679
+      text: チャガタイ・ハン家の子孫がヤルカンドを都にタリム盆地のオアシス都市（カシュガル・ヤルカンド・ホータン・アクス）を治めた。イスラーム神秘主義の教団の指導者ホージャ家が白山党・黒山党に分かれて争い、ハンの権威は弱まっていた。
+  note: トルファン・ハミにもチャガタイ家の分家の王家があり（トルファン・ハン国）、地図ではまとめてヤルカンド・ハン国として描く。1680年ごろジュンガルに征服された。
+  source:
+    - "https://ja.wikipedia.org/wiki/ヤルカンド・ハン国"
+    - "https://en.wikipedia.org/wiki/Yarkent_Khanate"
+
+- id: kashgaria
+  name: ヤークーブ・ベク政権（カシュガリア）
+  short: ヤークーブ・ベク政権
+  color: "#c3d08d"
+  kind: 王国（アミール国）
+  rulers:
+    - {name: ヤークーブ・ベク, title: アミール（バダウレト）, from: 1865, to: 1877, note: 1877年5月にコルラで急死, source: "https://ja.wikipedia.org/wiki/ヤクブ・ベク"}
+  periods:
+    - from: 1865
+      to: 1877
+      text: 1864年に新疆の回民（ドンガン）・ウイグル人が清に反乱を起こすと、コーカンド・ハン国の軍人ヤークーブ・ベクがカシュガルに入り、タリム盆地からトルファン・ウルムチまでを支配した。イギリス・ロシアと条約を結び、オスマン帝国の宗主権を認めて援助を受けた。1876–1877年に左宗棠の清軍に敗れ、国は滅んだ。
+  note: オスマン帝国の宗主権（1873–1874年に承認）は名目的なので、地図では overlord を付けない。
+  source:
+    - "https://ja.wikipedia.org/wiki/ヤクブ・ベク"
+    - "https://en.wikipedia.org/wiki/Yettishar"
+
+- id: east_turkestan_islamic
+  name: 東トルキスタン・イスラーム共和国
+  short: 東トルキスタン
+  color: "#a9c9df"
+  kind: 共和国（未承認）
+  rulers:
+    - {name: ホージャ・ニヤーズ, title: 大統領, from: 1933, to: 1934, source: "https://en.wikipedia.org/wiki/Khoja_Niyaz"}
+  periods:
+    - from: 1933
+      to: 1934
+      text: 新疆省の主席金樹仁の圧政に対して、ハミから始まったウイグル人・回民の反乱が広がり、1933年11月にカシュガルで東トルキスタン・イスラーム共和国が建てられた。1934年、馬仲英の回民軍に追われ、ソ連の支援を受けた盛世才が新疆を押さえた。
+  note: 首相はサービト・ダーモッラー。ホータンのアミールたちの政権を含めて描く。
+  source:
+    - "https://ja.wikipedia.org/wiki/東トルキスタン・イスラム共和国"
+
+- id: east_turkestan
+  name: 東トルキスタン共和国
+  short: 東トルキスタン
+  color: "#9fc4dc"
+  kind: 共和国（未承認。ソ連の支援を受けた）
+  rulers:
+    - {name: アリハン・トレ, title: 主席, from: 1944, to: 1946, note: 1946年にソ連に連れ去られた, source: "https://en.wikipedia.org/wiki/Elihan_Töre"}
+    - {name: アフメトジャン・カスィミ, title: 指導者（新疆省連合政府の副主席）, from: 1946, to: 1949, note: 1949年8月、北京へ向かう途中に飛行機事故で死去, source: "https://en.wikipedia.org/wiki/Ehmetjan_Qasim"}
+  periods:
+    - from: 1944
+      to: 1949
+      text: 1944年11月、イリ地方でウイグル人・カザフ人などがソ連の後押しを受けて蜂起し、グルジャ（伊寧）で東トルキスタン共和国を建てた。1946年に国民政府と和議を結んで新疆省連合政府に加わったが、イリ・タルバガタイ・アルタイの「三区」は事実上の独立を保ち、1949年に中国共産党に合流した。
+  note: 1946年以降は「三区革命政府」とも呼ばれる。
+  source:
+    - "https://ja.wikipedia.org/wiki/東トルキスタン共和国_(1944年-1949年)"
+
+# ---------------------------------------------------------------- チベット・青海
+- id: khoshut
+  name: ホシュート（グシ・ハン王家）
+  short: ホシュート
+  color: "#c9abc6"
+  kind: 遊牧国家（オイラト）
+  rulers:
+    - {name: グシ・ハン, title: ハン（チベット王）, from: 1642, to: 1655, source: "https://ja.wikipedia.org/wiki/グシ・ハン"}
+    - {name: ダヤン・ハン, title: ハン（チベット王）, from: 1658, to: 1668, source: "https://en.wikipedia.org/wiki/Dayan_Khan_(Khoshut)"}
+    - {name: ダライ・ハン, title: ハン（チベット王）, from: 1671, to: 1701, source: "https://en.wikipedia.org/wiki/Tenzin_Dalai_Khan"}
+    - {name: ラサン・ハン, title: ハン（チベット王）, from: 1703, to: 1717, note: 1717年にラサに侵入したジュンガル軍に殺された, source: "https://en.wikipedia.org/wiki/Lha-bzang_Khan"}
+    - {name: ロブサン・ダンジン, title: 青海ホシュートの首長, from: 1717, to: 1724, note: 1723年に清に背き、1724年に年羹堯の軍に敗れた, source: "https://en.wikipedia.org/wiki/Lobzang_Danjin"}
+  periods:
+    - from: 1648
+      to: 1716
+      text: オイラトのホシュート部のグシ・ハンは青海（ココノール）を本拠に、1642年にチベットを征服してダライ・ラマ5世に献じ、自らはチベット王として軍事を握った（ダライ・ラマ政権の保護者）。青海の諸侯は1697–1698年に清の康熙帝に服属した。
+    - from: 1717
+      to: 1724
+      text: 1717年にジュンガルがラサを占領してラサン・ハンを殺し、チベットでのホシュートの支配は終わった。青海のロブサン・ダンジンは1723年に清に背いたが敗れ、青海は清の藩部となった。
+  note: 地図では1648–1716年のチベットを、ダライ・ラマ政権（tibet）の上にホシュートの帯（overlord）を付けて描き、青海はホシュートの領地とする。
+  source:
+    - "https://ja.wikipedia.org/wiki/ホシュート"
+    - "https://en.wikipedia.org/wiki/Khoshut_Khanate"
+
+- id: tibet
+  name: チベット（ダライ・ラマ政権）
+  short: チベット
+  color: "#e1b47c"
+  kind: 政教一致の政権（ガンデンポタン）
+  rulers:
+    - {name: ダライ・ラマ5世（ガワン・ロサン・ギャツォ）, title: ダライ・ラマ, from: 1642, to: 1682, note: 死は摂政サンギェ・ギャツォによって1696年まで隠された, source: "https://ja.wikipedia.org/wiki/ダライ・ラマ5世"}
+    - {name: ダライ・ラマ6世（ツァンヤン・ギャツォ）, title: ダライ・ラマ, from: 1697, to: 1706, note: 1706年にラサン・ハンに廃され、清へ送られる途中で死去。1682–1705年の実権者は摂政サンギェ・ギャツォ, source: "https://ja.wikipedia.org/wiki/ダライ・ラマ6世"}
+    - {name: ダライ・ラマ7世（ケルサン・ギャツォ）, title: ダライ・ラマ, from: 1720, to: 1757, note: 1728–1747年は貴族ポラネーが清の任命で政務を執った（ポラネーの子ギュルメ・ナムギャルは1750年に殺された）, source: "https://ja.wikipedia.org/wiki/ダライ・ラマ7世"}
+    - {name: ダライ・ラマ8世（ジャムペル・ギャツォ）, title: ダライ・ラマ, from: 1762, to: 1804, note: 政務は摂政が執ることが多かった, source: "https://ja.wikipedia.org/wiki/ダライ・ラマ8世"}
+    - {name: ダライ・ラマ13世（トゥプテン・ギャツォ）, title: ダライ・ラマ, from: 1895, to: 1933, note: 1879年に即位、1895年から親政。9世–12世（1810–1875年）はいずれも若くして死に、摂政が政務を執った, source: "https://ja.wikipedia.org/wiki/ダライ・ラマ13世"}
+    - {name: ダライ・ラマ14世（テンジン・ギャツォ）, title: ダライ・ラマ, from: 1950, to: 1959, note: 1940年に即位、1950年に親政。1934–1950年は摂政（レティン・リンポチェ、タクタ・リンポチェ）。1959年にインドへ亡命, source: "https://ja.wikipedia.org/wiki/ダライ・ラマ14世"}
+  periods:
+    - from: 1648
+      to: 1716
+      text: ダライ・ラマ5世はホシュートのグシ・ハンの支援でチベットの政治と宗教の頂点に立ち、ラサにポタラ宮を建てた。5世の死後は摂政サンギェ・ギャツォが政治を握ったが、1705年にホシュートのラサン・ハンに殺された。
+    - from: 1717
+      to: 1911
+      text: 1717年のジュンガルの侵入を清が退けて（1720）、チベットは清の藩部となった。1727年から駐蔵大臣が置かれ、ダライ・ラマ政権（カシャ）が内政を治めた。1788–1792年のネパール（グルカ）との戦争の後、清は活仏の選定に金瓶掣籤を導入するなど統制を強めた。
+    - from: 1912
+      to: 1950
+      text: 1904年のイギリス軍のラサ進駐、1910年の清軍の進駐を経て、辛亥革命の後にダライ・ラマ13世は中国軍を追い、1913年に独立を宣言した。中華民国は認めず、1914年のシムラ会議でもまとまらなかった。チベットは事実上独立した国として、カム（東チベット）の境界で中国の軍閥と争った。
+    - from: 1950
+      to: 1959
+      text: 1950年に中国人民解放軍がチャムドでチベット軍を破り、1951年の「十七か条協定」でチベットは中華人民共和国に組み込まれた。ダライ・ラマ政権は内政を続けたが、東部の改革への反発から1959年3月にラサで蜂起が起こり、ダライ・ラマ14世はインドへ亡命した（亡命政府はダラムサラ）。
+  note: 1720–1911年と1951年以降は、地図では清・中華人民共和国の間接統治（certainty indirect。1959年以降は中華人民共和国の直接の統治）として描く。チベットの帰属をめぐっては、中国政府とチベット亡命政府の見解が分かれている。
+  source:
+    - "https://ja.wikipedia.org/wiki/ガンデンポタン"
+    - "https://ja.wikipedia.org/wiki/チベットの歴史"

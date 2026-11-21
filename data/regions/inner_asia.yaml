@@ -1,0 +1,914 @@
+# 内陸アジア（担当 G2）：モンゴル（MNG）、中国の内モンゴル・新疆・チベット・青海、
+# ロシアのシベリア南部・極東でロシア領になる前の時期（アルタイ・ハカス・トゥヴァ・アムール・沿海州）。
+# 清の藩部（モンゴル・青海・チベット・新疆〈1884年の省設置まで〉・内モンゴル）は owner: qing・certainty: indirect。
+# ロシアのピースは north_east.yaml（ヨーロッパ担当）の1ピースの地域が、それぞれの開始年から優先される。
+# ここでは2–3ピースの大きめの地域で、その前の時期だけを補う（重なりの決まり：小さい地域が優先）。
+
+# =============================================================== モンゴル高原（外モンゴル）
+- id: khalkha_land
+  name: 外モンゴル（ハルハ）
+  select:
+    iso_all: [MNG]
+  timeline:
+    - from: 1648
+      owner: khalkha
+      note: トゥシェート・ハン、ジャサクト・ハン、セチェン・ハンの3ハン家の遊牧地。北西部（フブスグル）にはアルタン・ハン（ホトゴイト部）がいた
+      source: "https://ja.wikipedia.org/wiki/ハルハ"
+    - from: 1688
+      owner: dzungar
+      certainty: occupied
+      label: ハルハ（ジュンガルの侵入）
+      cause: ジュンガルのガルダンがハルハに侵入し、ハルハの諸侯は内モンゴルへ逃れる
+      source: "https://ja.wikipedia.org/wiki/ガルダン"
+    - from: 1691
+      owner: qing
+      certainty: indirect
+      cause: ドローン・ノール会盟でハルハの諸侯が康熙帝に服属し、清の藩部（外モンゴル）となる
+      note: 1696年のジョーン・モドの戦いでガルダンが敗れ、ハルハの人々は故地に戻った。のちウリャスタイ（1733）に定辺左副将軍、フレー（ウランバートル）に庫倫辦事大臣が置かれた
+      source: "https://ja.wikipedia.org/wiki/ドロンノール会盟"
+    - from: 1911
+      owner: mongolia
+      cause: 辛亥革命の後、ハルハの諸侯がジェブツンダンバ・ホトクト8世をボグド・ハーンに推して独立を宣言（12月）
+      source: "https://ja.wikipedia.org/wiki/ボグド・ハーン政権"
+    - from: 1915
+      owner: mongolia
+      overlord: roc
+      cause: キャフタ協定（ロシア・中華民国・モンゴル）で、中華民国の宗主権のもとの自治とされる（6月）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Kyakhta_(1915)"
+    - from: 1919
+      owner: roc
+      certainty: uncertain
+      label: 外モンゴル（自治の取り消し）
+      cause: 中国の徐樹錚の軍がフレー（庫倫）に入り、外モンゴルの自治を取り消す（11月）
+      source: "https://en.wikipedia.org/wiki/Occupation_of_Mongolia"
+    - from: 1921
+      owner: mongolia
+      cause: ウンゲルンの白軍が中国軍を追い（2月）、続いてスフバートルの人民義勇軍とソヴィエト赤軍がフレーを占領して人民政府を立てる（7月）
+      note: 1924年にモンゴル人民共和国。中華民国が独立を認めたのは1946年1月（1945年10月の住民投票の後）
+      source: "https://ja.wikipedia.org/wiki/モンゴル人民革命"
+
+- id: mongolia_west
+  name: 西モンゴル（ホブド・オブス・バヤン・ウルギー）
+  select:
+    pieces: [MNG-Khovd, MNG-Uvs, MNG-Bayan_Olgii]
+  timeline:
+    - from: 1648
+      owner: dzungar
+      certainty: uncertain
+      note: オイラト（ドルベト・ホシュートなど）の遊牧地で、ジュンガルの勢力圏。東のハルハのジャサクト・ハン家との境はあいまい
+      source: "https://ja.wikipedia.org/wiki/オイラト"
+    - from: 1680
+      owner: dzungar
+      cause: ガルダンのもとでジュンガルの支配が固まる
+      source: "https://ja.wikipedia.org/wiki/ガルダン"
+    - from: 1731
+      owner: dzungar
+      certainty: uncertain
+      cause: 清とジュンガルの戦争（ホトン・ノールの戦い）。1739年の講和でアルタイ山脈が境とされたが、ホブド一帯は両者の係争地だった
+      source: "https://en.wikipedia.org/wiki/Dzungar–Qing_Wars"
+    - from: 1755
+      owner: qing
+      certainty: indirect
+      cause: 清がジュンガルを滅ぼす。ドルベト部は1753年に清に服属していた
+      note: のちにホブドに参賛大臣が置かれ、アルタイ・ウリャンハイやカザフの遊牧民も管轄した。バヤン・ウルギーには19世紀後半からカザフ人が移り住んだ
+      source: "https://ja.wikipedia.org/wiki/ジュンガル"
+    - from: 1912
+      owner: mongolia
+      cause: ボグド・ハーン政権の軍がホブドの清の城を攻め落とす（8月）
+      source: "https://en.wikipedia.org/wiki/Battle_of_Khovd"
+    - from: 1915
+      owner: mongolia
+      overlord: roc
+      cause: キャフタ協定で、中華民国の宗主権のもとの自治とされる（6月）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Kyakhta_(1915)"
+    - from: 1919
+      owner: roc
+      certainty: uncertain
+      label: 外モンゴル（自治の取り消し）
+      cause: 中国の徐樹錚の軍が外モンゴルの自治を取り消す（11月）
+      source: "https://en.wikipedia.org/wiki/Occupation_of_Mongolia"
+    - from: 1921
+      owner: mongolia
+      cause: モンゴル人民革命。人民政府が西モンゴルの白軍の残党を退ける
+      source: "https://ja.wikipedia.org/wiki/モンゴル人民革命"
+
+# =============================================================== 内モンゴル
+- id: inner_mongolia
+  name: 内モンゴル
+  select:
+    adm1: ["CHN/Inner Mongolia Autonomous Region"]
+  timeline:
+    - from: 1648
+      owner: qing
+      certainty: indirect
+      note: 南モンゴルの諸部は1636年に清（ホンタイジ）に服属し、盟旗制（旗・盟に分けて王公に治めさせる）のもとに置かれた。帰化城（フフホト）一帯のトゥメト部などは山西の官庁の管轄も受けた
+      source: "https://ja.wikipedia.org/wiki/内モンゴル"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立と清の皇帝の退位（2月）。内モンゴルの王公の多くは中華民国にとどまる
+      note: 1914年に熱河・チャハル・綏遠の特別区、1928年に熱河・チャハル・綏遠・寧夏の省となった
+      source: "https://ja.wikipedia.org/wiki/内モンゴル"
+    - from: 1949
+      owner: prc
+      cause: 綏遠の国民政府軍が共産党に降り（9月）、中華人民共和国の成立（10月）。内モンゴル自治区（1947年成立）に綏遠省を合わせていく（1954）
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治区"
+
+- id: alxa
+  name: アラシャン（阿拉善）
+  select:
+    pieces: [CHN-Alashan]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: 明の長城の北の砂漠と草原。オルドス・ハルハなどのモンゴル人がまばらに遊牧した
+      source: "https://en.wikipedia.org/wiki/Alxa_League"
+    - from: 1686
+      owner: qing
+      certainty: indirect
+      cause: ジュンガルから逃れたホシュート部の一派（バヤル・バートル）が清に服属し、アラシャンに遊牧地を与えられる（1697年に旗とされる）
+      source: "https://en.wikipedia.org/wiki/Alxa_League"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立。1929年から寧夏省に属する
+      source: "https://en.wikipedia.org/wiki/Alxa_League"
+    - from: 1949
+      owner: prc
+      cause: 寧夏の馬鴻逵の政権が崩れ、人民解放軍が入る（9月）
+      source: "https://ja.wikipedia.org/wiki/寧夏回族自治区"
+
+- id: hulunbuir
+  name: ホロンバイル（呼倫貝爾）
+  select:
+    pieces: [CHN-Hulunbeier]
+  timeline:
+    - from: 1648
+      owner: qing
+      certainty: nominal
+      note: ダウール・ソロン（エヴェンキ）などの狩猟・遊牧民が清に貂皮を納めた。北のアルグン川一帯ではロシアのコサックと争った（1689年のネルチンスク条約でアルグン川が国境）
+      source: "https://ja.wikipedia.org/wiki/ホロンバイル市"
+    - from: 1732
+      owner: qing
+      certainty: indirect
+      cause: 清がソロン・ダウール・バルガの兵をホロンバイルに移して八旗に編成し、ハイラルに城を築く（1734）
+      note: 黒竜江将軍の管轄
+      source: "https://en.wikipedia.org/wiki/Hulunbuir"
+    - from: 1912
+      owner: mongolia
+      certainty: uncertain
+      cause: バルガの王公がハイラルを占領し、ボグド・ハーン政権に加わる（1月）
+      source: "https://en.wikipedia.org/wiki/Hulunbuir"
+    - from: 1915
+      owner: roc
+      cause: 露中協定で、中華民国の主権のもとの特別区とされる（1920年に特別区は廃止）
+      note: 1929年の中ソ紛争（中東鉄道をめぐる）では、ソ連軍が一時ハイラル・満洲里を占領した（地図では描かない）
+      source: "https://en.wikipedia.org/wiki/Hulunbuir"
+    - from: 1932
+      owner: manchukuo
+      overlord: japan
+      cause: 満洲国の成立（3月）。興安北分省（のち興安北省）とされる
+      source: "https://ja.wikipedia.org/wiki/興安省"
+    - from: 1945
+      owner: soviet_union
+      certainty: occupied
+      label: 内モンゴル東部（ソ連軍の占領）
+      cause: ソ連の対日参戦（8月）。ソ連軍・モンゴル軍が満洲国を占領する
+      source: "https://ja.wikipedia.org/wiki/ソ連対日参戦"
+    - from: 1946
+      owner: inner_mongolia_ag
+      certainty: uncertain
+      cause: ソ連軍の撤退（4–5月）。モンゴル人の自治運動を中国共産党がまとめる（1947年5月 内モンゴル自治政府）
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
+    - from: 1949
+      owner: prc
+      cause: 中華人民共和国の成立（10月）。内モンゴル自治区となる
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治区"
+
+- id: hinggan_jirim
+  name: 内モンゴル東部（興安・ジリム）
+  select:
+    pieces: [CHN-Xingan, CHN-Tongliao]
+  timeline:
+    - from: 1648
+      owner: qing
+      certainty: indirect
+      note: ホルチン部などのジリム盟。清（後金）に早くから従い、皇室と婚姻を重ねた
+      source: "https://en.wikipedia.org/wiki/Jirim_League"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立（奉天・吉林・黒竜江の省に分けて管轄）
+      source: "https://en.wikipedia.org/wiki/Jirim_League"
+    - from: 1932
+      owner: manchukuo
+      overlord: japan
+      cause: 満洲国の成立（3月）。モンゴル人の地域は興安省とされる
+      source: "https://ja.wikipedia.org/wiki/興安省"
+    - from: 1945
+      owner: soviet_union
+      certainty: occupied
+      label: 内モンゴル東部（ソ連軍の占領）
+      cause: ソ連の対日参戦（8月）。ソ連軍・モンゴル軍が満洲国を占領する
+      source: "https://ja.wikipedia.org/wiki/ソ連対日参戦"
+    - from: 1946
+      owner: inner_mongolia_ag
+      certainty: uncertain
+      cause: 王爺廟（ウランホト）で東モンゴル自治政府が成立（1月）。1947年5月に内モンゴル自治政府となる
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
+    - from: 1949
+      owner: prc
+      cause: 中華人民共和国の成立（10月）。内モンゴル自治区となる
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治区"
+
+- id: juu_uda
+  name: 赤峰（ジョーウダ盟）
+  select:
+    pieces: [CHN-Chifeng]
+  timeline:
+    - from: 1648
+      owner: qing
+      certainty: indirect
+      note: ジョーウダ盟（ハラチン・オンニュートなど）。清の時代に漢人の農民が多く移り住み、熱河の官庁も置かれた
+      source: "https://en.wikipedia.org/wiki/Chifeng"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立（1914年 熱河特別区、1928年 熱河省）
+      source: "https://ja.wikipedia.org/wiki/熱河省"
+    - from: 1933
+      owner: manchukuo
+      overlord: japan
+      cause: 関東軍の熱河作戦（2–3月）。熱河省が満洲国に編入される
+      source: "https://ja.wikipedia.org/wiki/熱河作戦"
+    - from: 1945
+      owner: soviet_union
+      certainty: occupied
+      label: 内モンゴル東部（ソ連軍の占領）
+      cause: ソ連の対日参戦（8月）。ソ連軍・モンゴル軍が熱河に入る
+      source: "https://ja.wikipedia.org/wiki/ソ連対日参戦"
+    - from: 1946
+      owner: inner_mongolia_ag
+      certainty: uncertain
+      cause: 国共内戦。中国共産党の勢力が保つ（国民政府軍は1946年8月に承徳を奪うが、北の赤峰には及ばない）
+      note: 赤峰一帯の共産党の政権は熱河省の機関で、ジョーウダ盟が内モンゴル自治政府に入ったのは1947年以後。地図では内モンゴル自治政府にまとめて描く（近似）
+      source: "https://en.wikipedia.org/wiki/Chifeng"
+    - from: 1949
+      owner: prc
+      cause: 中華人民共和国の成立（10月）。1955年に熱河省が廃止され、内モンゴル自治区に入る
+      source: "https://ja.wikipedia.org/wiki/熱河省"
+
+- id: xilingol
+  name: シリンゴル（錫林郭勒）
+  select:
+    pieces: [CHN-Xilinguole]
+  timeline:
+    - from: 1648
+      owner: qing
+      certainty: indirect
+      note: シリンゴル盟とチャハル（清の直轄の八旗）の遊牧地
+      source: "https://en.wikipedia.org/wiki/Xilingol_League"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立（1914年 チャハル特別区、1928年 チャハル省）
+      source: "https://ja.wikipedia.org/wiki/チャハル省"
+    - from: 1936
+      owner: mengjiang
+      overlord: japan
+      cause: 徳王が関東軍の後押しで蒙古軍政府を作る（5月）
+      source: "https://ja.wikipedia.org/wiki/徳王"
+    - from: 1945
+      owner: roc
+      certainty: uncertain
+      cause: ソ連軍・モンゴル軍の進攻で蒙疆政権が崩れる（8月）。スニトで「内モンゴル人民共和国」の樹立が宣言されたが、長続きしなかった
+      source: "https://en.wikipedia.org/wiki/Inner_Mongolian_People%27s_Republic"
+    - from: 1948
+      owner: inner_mongolia_ag
+      certainty: uncertain
+      cause: 中国共産党の勢力がシリンゴルに及び、内モンゴル自治政府に加わる
+      note: 要確認（1947–1948年の経過）
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
+    - from: 1949
+      owner: prc
+      cause: 中華人民共和国の成立（10月）。内モンゴル自治区となる
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治区"
+
+- id: suiyuan_mengjiang
+  name: 綏遠（フフホト・包頭・ウランチャブ）
+  select:
+    pieces: [CHN-Huhehaote, CHN-Baotou, CHN-Wulanchabu]
+  timeline:
+    - from: 1937
+      owner: mengjiang
+      overlord: japan
+      cause: 日中戦争で日本軍が綏遠の帰綏（フフホト）・包頭を占領し（10月）、蒙古聯盟自治政府が作られる
+      note: 1936年の綏遠事件では、蒙古軍政府の軍が綏遠省主席の傅作義に敗れていた。西の河套（バヤンノール）は国民政府軍が保った
+      source: "https://ja.wikipedia.org/wiki/蒙古聯合自治政府"
+    - from: 1945
+      owner: roc
+      cause: 日本の降伏（8月）。傅作義の国民政府軍が帰綏・包頭に戻る
+      source: "https://ja.wikipedia.org/wiki/傅作義"
+    - from: 1949
+      owner: prc
+      cause: 綏遠の董其武らが共産党に降る（綏遠和平解放、9月）。中華人民共和国の成立
+      source: "https://ja.wikipedia.org/wiki/綏遠省"
+
+# =============================================================== 東トルキスタン（新疆）
+- id: ili_bortala
+  name: イリ（伊犁）・ボルタラ
+  select:
+    pieces: [CHN-Yili, CHN-Boertala]
+  timeline:
+    - from: 1648
+      owner: dzungar
+      note: ジュンガルの本拠地。イリ川流域にホンタイジの宮廷が置かれた
+      source: "https://ja.wikipedia.org/wiki/ジュンガル"
+    - from: 1755
+      owner: qing
+      certainty: uncertain
+      cause: 清軍がイリを占領してジュンガルの君主ダワチを捕らえる。秋にはアムルサナが清に背く
+      source: "https://ja.wikipedia.org/wiki/アムルサナ"
+    - from: 1757
+      owner: qing
+      certainty: indirect
+      cause: アムルサナの反乱の鎮圧とジュンガルの滅亡。1762年にイリ将軍が置かれ、新疆全体を統轄する
+      note: 理藩院の管轄の藩部とされたが、イリは満洲人の将軍の軍政で、漢人・回民・ウイグル人（タランチ）・シボ人などが移された
+      source: "https://ja.wikipedia.org/wiki/イリ将軍"
+    - from: 1864
+      owner: null
+      certainty: uncertain
+      cause: イリで回民・ウイグル人（タランチ）が蜂起し（11月）、清のイリ将軍府も1866年に陥落する。タランチのスルタン政権が成立
+      source: "https://en.wikipedia.org/wiki/Dungan_Revolt_(1862–1877)"
+    - from: 1871
+      owner: russia
+      certainty: occupied
+      label: イリ地方（ロシアの占領）
+      cause: ロシア軍がイリ地方を占領する（イリ事件、7月）
+      source: "https://ja.wikipedia.org/wiki/イリ事件"
+    - from: 1882
+      owner: qing
+      certainty: indirect
+      cause: イリ条約（ペテルブルク条約、1881年2月）でイリ地方の大部分が清に返され、1882年3月に引き渡される
+      note: イリ川上流の西部（ホルゴスより西）はロシア領に残った
+      source: "https://ja.wikipedia.org/wiki/イリ条約"
+    - from: 1884
+      owner: qing
+      cause: 新疆省の設置（11月）。郡県制による直接統治に移る
+      source: "https://ja.wikipedia.org/wiki/新疆省"
+    - from: 1912
+      owner: roc
+      cause: 辛亥革命。イリでも革命派が蜂起し（1月）、楊増新が新疆の実権を握る
+      note: 新疆の省政府は1928年まで楊増新、1928–1933年に金樹仁、1933–1944年に盛世才が治め、南京の国民政府からは半ば独立していた
+      source: "https://ja.wikipedia.org/wiki/楊増新"
+    - from: 1944
+      owner: east_turkestan
+      certainty: uncertain
+      cause: イリ事件（三区革命）。グルジャ（伊寧）で東トルキスタン共和国が成立（11月）
+      source: "https://ja.wikipedia.org/wiki/東トルキスタン共和国_(1944年-1949年)"
+    - from: 1945
+      owner: east_turkestan
+      cause: 東トルキスタン共和国の軍がイリ全体を押さえる。9月にはマナス川で国民政府軍と停戦
+      source: "https://ja.wikipedia.org/wiki/東トルキスタン共和国_(1944年-1949年)"
+    - from: 1949
+      owner: prc
+      cause: 三区の政権が中国共産党に合流し、人民解放軍が新疆に入る（10–12月）
+      source: "https://ja.wikipedia.org/wiki/新疆の平和解放"
+
+- id: tarbagatai_altai
+  name: タルバガタイ・アルタイ（塔城・アルタイ）
+  select:
+    pieces: [CHN-Tacheng, CHN-Kelamayi, CHN-Aletai]
+  timeline:
+    - from: 1648
+      owner: dzungar
+      note: ジュンガル盆地の北部。オイラトの遊牧地
+      source: "https://ja.wikipedia.org/wiki/ジュンガル"
+    - from: 1755
+      owner: qing
+      certainty: uncertain
+      cause: 清軍がジュンガルを攻める。秋にアムルサナが清に背く
+      source: "https://ja.wikipedia.org/wiki/アムルサナ"
+    - from: 1757
+      owner: qing
+      certainty: indirect
+      cause: ジュンガルの滅亡。タルバガタイに参賛大臣が置かれる（1764）。カザフの遊牧民が移り住む
+      note: アルタイはホブド参賛大臣の管轄で、1919年に新疆省に入った
+      source: "https://en.wikipedia.org/wiki/Tarbagatay"
+    - from: 1864
+      owner: qing
+      certainty: uncertain
+      cause: 新疆の回民・ウイグル人の反乱。タルバガタイの城が陥落する（1865）
+      source: "https://en.wikipedia.org/wiki/Dungan_Revolt_(1862–1877)"
+    - from: 1877
+      owner: qing
+      certainty: indirect
+      cause: 左宗棠の清軍が北新疆を取り戻す
+      source: "https://ja.wikipedia.org/wiki/左宗棠"
+    - from: 1884
+      owner: qing
+      cause: 新疆省の設置（11月）
+      source: "https://ja.wikipedia.org/wiki/新疆省"
+    - from: 1912
+      owner: roc
+      cause: 辛亥革命。中華民国の新疆省となる（アルタイは1919年まで北京政府の直轄）
+      source: "https://ja.wikipedia.org/wiki/楊増新"
+    - from: 1945
+      owner: east_turkestan
+      cause: 東トルキスタン共和国の軍がタルバガタイ・アルタイを押さえる（イリとあわせて「三区」）
+      source: "https://ja.wikipedia.org/wiki/東トルキスタン共和国_(1944年-1949年)"
+    - from: 1949
+      owner: prc
+      cause: 三区の政権が中国共産党に合流し、人民解放軍が新疆に入る（10–12月）
+      source: "https://ja.wikipedia.org/wiki/新疆の平和解放"
+
+- id: urumqi
+  name: ウルムチ・昌吉・石河子
+  select:
+    pieces: [CHN-Wulumuqi, CHN-Changji, CHN-Shihezi]
+  timeline:
+    - from: 1648
+      owner: dzungar
+      note: 天山山脈の北麓。ジュンガルの遊牧地
+      source: "https://ja.wikipedia.org/wiki/ジュンガル"
+    - from: 1755
+      owner: qing
+      certainty: uncertain
+      cause: 清軍がジュンガルを攻める。秋にアムルサナが清に背く
+      source: "https://ja.wikipedia.org/wiki/アムルサナ"
+    - from: 1757
+      owner: qing
+      certainty: indirect
+      cause: ジュンガルの滅亡。ウルムチ（迪化）に城が築かれ、漢人・回民の屯田が進む
+      source: "https://ja.wikipedia.org/wiki/ウルムチ市"
+    - from: 1864
+      owner: null
+      certainty: uncertain
+      cause: 回民の反乱。ウルムチで妥明（ダウード・ハリーファ）が「清真国」を立てる
+      source: "https://en.wikipedia.org/wiki/Dungan_Revolt_(1862–1877)"
+    - from: 1870
+      owner: kashgaria
+      cause: ヤークーブ・ベクの軍がウルムチの回民の政権を破る
+      source: "https://ja.wikipedia.org/wiki/ヤクブ・ベク"
+    - from: 1876
+      owner: qing
+      certainty: indirect
+      cause: 左宗棠の部将劉錦棠がウルムチ（8月）・マナス（11月）を奪回する
+      source: "https://ja.wikipedia.org/wiki/左宗棠"
+    - from: 1884
+      owner: qing
+      cause: 新疆省の設置（11月）。ウルムチ（迪化）が省都となる
+      source: "https://ja.wikipedia.org/wiki/新疆省"
+    - from: 1912
+      owner: roc
+      cause: 辛亥革命。楊増新が新疆の実権を握る
+      source: "https://ja.wikipedia.org/wiki/楊増新"
+    - from: 1949
+      owner: prc
+      cause: 新疆の国民政府軍が共産党に降り（9月、新疆の平和解放）、人民解放軍がウルムチに入る（10月）
+      note: 1955年に新疆ウイグル自治区。石河子は新疆生産建設兵団の町
+      source: "https://ja.wikipedia.org/wiki/新疆の平和解放"
+
+- id: turfan
+  name: トルファン
+  select:
+    pieces: [CHN-Tulufan]
+  timeline:
+    - from: 1648
+      owner: yarkent
+      note: チャガタイ家の分家のトルファン・ハン国。地図ではヤルカンド・ハン国にまとめる
+      source: "https://en.wikipedia.org/wiki/Turpan_Khanate"
+    - from: 1680
+      owner: dzungar
+      certainty: indirect
+      cause: ジュンガルのガルダンがタリム盆地・トルファンを征服する
+      source: "https://ja.wikipedia.org/wiki/ガルダン"
+    - from: 1755
+      owner: qing
+      certainty: indirect
+      cause: ジュンガルの滅亡。トルファンの領主エミン・ホージャが清に従い、郡王とされる
+      note: トルファンは1720年代から清とジュンガルの係争地だった
+      source: "https://en.wikipedia.org/wiki/Emin_Khoja"
+    - from: 1864
+      owner: null
+      certainty: uncertain
+      cause: 回民・ウイグル人の反乱
+      source: "https://en.wikipedia.org/wiki/Dungan_Revolt_(1862–1877)"
+    - from: 1870
+      owner: kashgaria
+      cause: ヤークーブ・ベクの軍がトルファンを押さえる
+      source: "https://ja.wikipedia.org/wiki/ヤクブ・ベク"
+    - from: 1877
+      owner: qing
+      certainty: indirect
+      cause: 清軍がトルファンを奪回する（4月）。5月にヤークーブ・ベクが死ぬ
+      source: "https://ja.wikipedia.org/wiki/左宗棠"
+    - from: 1884
+      owner: qing
+      cause: 新疆省の設置（11月）
+      source: "https://ja.wikipedia.org/wiki/新疆省"
+    - from: 1912
+      owner: roc
+      cause: 辛亥革命。中華民国の新疆省
+      source: "https://ja.wikipedia.org/wiki/楊増新"
+    - from: 1949
+      owner: prc
+      cause: 新疆の平和解放（9月）
+      source: "https://ja.wikipedia.org/wiki/新疆の平和解放"
+
+- id: hami
+  name: ハミ（クムル）
+  select:
+    pieces: [CHN-Hami]
+  timeline:
+    - from: 1648
+      owner: yarkent
+      note: チャガタイ家の分家の支配地（トルファン・ハン国の一部）。地図ではヤルカンド・ハン国にまとめる
+      source: "https://en.wikipedia.org/wiki/Kumul_Khanate"
+    - from: 1680
+      owner: dzungar
+      certainty: indirect
+      cause: ジュンガルのガルダンがハミを従える
+      source: "https://ja.wikipedia.org/wiki/ガルダン"
+    - from: 1697
+      owner: qing
+      certainty: indirect
+      cause: ハミのベグ（アブドゥッラー）が清に服属する（1696–1697）。ハミ王家（クムル・ハン国）は1930年まで続く
+      source: "https://en.wikipedia.org/wiki/Kumul_Khanate"
+    - from: 1884
+      owner: qing
+      cause: 新疆省の設置（11月）。ハミ王家は自治を保つ
+      source: "https://ja.wikipedia.org/wiki/新疆省"
+    - from: 1912
+      owner: roc
+      cause: 辛亥革命。中華民国の新疆省
+      note: 1930年にハミ王家が廃されると、翌1931年にハミでウイグル人の反乱が起こり、新疆全体の内乱となった
+      source: "https://en.wikipedia.org/wiki/Kumul_Rebellion"
+    - from: 1949
+      owner: prc
+      cause: 新疆の平和解放（9月）
+      source: "https://ja.wikipedia.org/wiki/新疆の平和解放"
+
+- id: kashgar_khotan
+  name: カシュガル・ホータン（タリム盆地西部）
+  select:
+    pieces: [CHN-Kashi, CHN-Kezileisu, CHN-Hetian]
+  timeline:
+    - from: 1648
+      owner: yarkent
+      note: ヤルカンド・ハン国の本拠地（ヤルカンドはカシュガル地区）
+      source: "https://ja.wikipedia.org/wiki/ヤルカンド・ハン国"
+    - from: 1680
+      owner: dzungar
+      certainty: indirect
+      cause: ジュンガルのガルダンがヤルカンド・ハン国を滅ぼし、白山党のアーファーク・ホージャを通じて治める
+      source: "https://ja.wikipedia.org/wiki/ガルダン"
+    - from: 1755
+      owner: qing
+      certainty: nominal
+      cause: ジュンガルの滅亡。清に保護された白山党のホージャ（大小ホージャ）がカシュガル・ヤルカンドに戻る
+      source: "https://ja.wikipedia.org/wiki/大小和卓の乱"
+    - from: 1757
+      owner: null
+      certainty: uncertain
+      cause: 大小ホージャ（ブルハーヌッディーンとホージャ・ジャハーン）が清に背く
+      source: "https://ja.wikipedia.org/wiki/大小和卓の乱"
+    - from: 1759
+      owner: qing
+      certainty: indirect
+      cause: 清軍が大小ホージャを破り、タリム盆地を征服する。ジュンガルとあわせて「新疆」と呼ばれる
+      note: 現地のウイグル人の有力者（ベグ）を官に任じて治めさせた（ベグ官人制）。カシュガルに参賛大臣
+      source: "https://ja.wikipedia.org/wiki/新疆"
+    - from: 1864
+      owner: null
+      certainty: uncertain
+      cause: 回民・ウイグル人の反乱が南新疆にも広がる。ホータンなどで現地の政権が立つ
+      source: "https://en.wikipedia.org/wiki/Dungan_Revolt_(1862–1877)"
+    - from: 1865
+      owner: kashgaria
+      cause: コーカンドのヤークーブ・ベクがカシュガルに入る（1月）。1866年にヤルカンド・ホータンを従える
+      source: "https://ja.wikipedia.org/wiki/ヤクブ・ベク"
+    - from: 1877
+      owner: qing
+      certainty: indirect
+      cause: 清軍がカシュガル・ヤルカンド・ホータンを奪回する（12月）
+      source: "https://ja.wikipedia.org/wiki/左宗棠"
+    - from: 1884
+      owner: qing
+      cause: 新疆省の設置（11月）。ベグ官人制を廃して郡県制とする
+      source: "https://ja.wikipedia.org/wiki/新疆省"
+    - from: 1912
+      owner: roc
+      cause: 辛亥革命。中華民国の新疆省
+      source: "https://ja.wikipedia.org/wiki/楊増新"
+    - from: 1933
+      owner: east_turkestan_islamic
+      certainty: uncertain
+      cause: カシュガルで東トルキスタン・イスラーム共和国が成立（11月）。ホータンのアミールの政権も加わる
+      source: "https://ja.wikipedia.org/wiki/東トルキスタン・イスラム共和国"
+    - from: 1934
+      owner: roc
+      certainty: uncertain
+      cause: 馬仲英の回民軍がカシュガルを奪い、共和国が崩れる（2–4月）。南新疆は1937年まで回民軍（馬虎山）が支配した
+      source: "https://en.wikipedia.org/wiki/Kumul_Rebellion"
+    - from: 1937
+      owner: roc
+      cause: 盛世才がソ連軍の助けで南新疆を押さえる
+      source: "https://en.wikipedia.org/wiki/Islamic_rebellion_in_Xinjiang_(1937)"
+    - from: 1949
+      owner: prc
+      cause: 新疆の平和解放（9月）。人民解放軍がカシュガルに入る（12月）
+      note: アクサイチン（ホータン地区の南東。インドも領有を主張）は1950年代から中国が実効支配し、1962年の中印国境紛争の舞台となった
+      source: "https://ja.wikipedia.org/wiki/新疆の平和解放"
+
+- id: aksu_karashahr
+  name: アクス・クチャ・カラシャール（タリム盆地北部・東部）
+  select:
+    pieces: [CHN-Akesu, CHN-Bayinguoleng]
+  timeline:
+    - from: 1648
+      owner: yarkent
+      note: アクス・クチャ（亀茲）などのオアシス都市
+      source: "https://ja.wikipedia.org/wiki/ヤルカンド・ハン国"
+    - from: 1680
+      owner: dzungar
+      certainty: indirect
+      cause: ジュンガルのガルダンがタリム盆地を征服する
+      source: "https://ja.wikipedia.org/wiki/ガルダン"
+    - from: 1755
+      owner: qing
+      certainty: nominal
+      cause: ジュンガルの滅亡。清に保護された大小ホージャがタリム盆地に戻る
+      source: "https://ja.wikipedia.org/wiki/大小和卓の乱"
+    - from: 1757
+      owner: null
+      certainty: uncertain
+      cause: 大小ホージャが清に背く
+      source: "https://ja.wikipedia.org/wiki/大小和卓の乱"
+    - from: 1759
+      owner: qing
+      certainty: indirect
+      cause: 清がタリム盆地を征服する
+      note: 1771年、ヴォルガ川下流から帰ってきたトルグート部がカラシャール（ユルドゥズ）に遊牧地を与えられた
+      source: "https://ja.wikipedia.org/wiki/新疆"
+    - from: 1864
+      owner: null
+      certainty: uncertain
+      cause: クチャで反乱が起こり、ラーシディーン・ホージャの政権が立つ
+      source: "https://en.wikipedia.org/wiki/Dungan_Revolt_(1862–1877)"
+    - from: 1867
+      owner: kashgaria
+      cause: ヤークーブ・ベクがクチャ・アクス・コルラを征服する
+      source: "https://ja.wikipedia.org/wiki/ヤクブ・ベク"
+    - from: 1877
+      owner: qing
+      certainty: indirect
+      cause: 清軍がタリム盆地を奪回する（10–12月）
+      source: "https://ja.wikipedia.org/wiki/左宗棠"
+    - from: 1884
+      owner: qing
+      cause: 新疆省の設置（11月）
+      source: "https://ja.wikipedia.org/wiki/新疆省"
+    - from: 1912
+      owner: roc
+      cause: 辛亥革命。中華民国の新疆省
+      source: "https://ja.wikipedia.org/wiki/楊増新"
+    - from: 1949
+      owner: prc
+      cause: 新疆の平和解放（9月）
+      note: 1964年、バインゴリンのロプノールで中国が初の核実験を行った
+      source: "https://ja.wikipedia.org/wiki/新疆の平和解放"
+
+# =============================================================== チベット
+- id: tibet_central
+  name: チベット（ウー・ツァン・ガリ・チャンタン）
+  select:
+    pieces: [CHN-Lasa, CHN-Shannan, CHN-Rikaze, CHN-Naqu, CHN-Linzhi, CHN-Ali]
+  timeline:
+    - from: 1648
+      owner: tibet
+      overlord: khoshut
+      note: 1642年、ホシュートのグシ・ハンがツァン王を倒してダライ・ラマ5世にチベットの統治権を献じた（ガンデンポタン）。グシ・ハンの王家はチベット王を名のり軍事を握った
+      source: "https://ja.wikipedia.org/wiki/ガンデンポタン"
+    - from: 1717
+      owner: dzungar
+      certainty: occupied
+      label: チベット（ジュンガルの占領）
+      cause: ジュンガル軍がラサを占領し、ホシュートのラサン・ハンを殺す（11–12月）
+      source: "https://en.wikipedia.org/wiki/Dzungar_conquest_of_Tibet"
+    - from: 1720
+      owner: qing
+      certainty: indirect
+      cause: 清の遠征軍がジュンガル軍を追ってラサに入り、ダライ・ラマ7世を即位させる（9–10月）
+      note: 1727年から駐蔵大臣（アンバン）が置かれた。1793年の「欽定蔵内善後章程」で統制が強まった
+      source: "https://en.wikipedia.org/wiki/Chinese_expedition_to_Tibet_(1720)"
+    - from: 1910
+      owner: qing
+      cause: 清軍（四川の新軍）がラサに入り、ダライ・ラマ13世がインドへ逃れる（2月）
+      note: 1904年にはイギリスのヤングハズバンドの遠征軍がラサに入り、ラサ条約を結ばせていた（地図では描かない）
+      source: "https://ja.wikipedia.org/wiki/ダライ・ラマ13世"
+    - from: 1911
+      owner: qing
+      certainty: uncertain
+      cause: 辛亥革命。ラサの清軍が反乱を起こし、チベット人の部隊と戦う
+      source: "https://en.wikipedia.org/wiki/Xinhai_Lhasa_turmoil"
+    - from: 1912
+      owner: tibet
+      cause: 中国軍が降伏し、インド経由でチベットから去る（1912年8月の協定、1913年1月に完了）。ダライ・ラマ13世がラサに戻り、1913年2月に独立を宣言する
+      note: 中華民国はチベットを自国の領土とし、独立を認めなかった。地図では事実上の統治で描く
+      source: "https://ja.wikipedia.org/wiki/チベット_(1912-1951)"
+    - from: 1951
+      owner: prc
+      certainty: indirect
+      cause: 「チベットの平和解放に関する十七か条協定」（5月）。人民解放軍がラサに入る（10月）
+      note: ダライ・ラマ政権（カシャ）は1959年まで内政を続けた
+      source: "https://ja.wikipedia.org/wiki/十七か条協定"
+    - from: 1959
+      owner: prc
+      cause: チベット蜂起（3月）。ダライ・ラマ14世がインドへ亡命し、ダライ・ラマ政権は廃される
+      note: 1965年にチベット自治区。ニンティ（林芝）南部のマクマホン・ラインの南（アルナーチャル・プラデーシュ）はインドが実効支配し、中国も領有を主張している（ピースは中国の実効支配の範囲）
+      source: "https://ja.wikipedia.org/wiki/チベット動乱"
+
+- id: chamdo
+  name: チャムド（昌都。カム西部）
+  select:
+    pieces: [CHN-Changdu]
+  timeline:
+    - from: 1648
+      owner: tibet
+      overlord: khoshut
+      note: カム（東チベット）の西部。チャムドの寺院領や土司（地方の首長）の地で、ダライ・ラマ政権とホシュートに従った
+      source: "https://en.wikipedia.org/wiki/Kham"
+    - from: 1717
+      owner: dzungar
+      certainty: occupied
+      label: チベット（ジュンガルの占領）
+      cause: ジュンガル軍がラサを占領する
+      source: "https://en.wikipedia.org/wiki/Dzungar_conquest_of_Tibet"
+    - from: 1718
+      owner: qing
+      certainty: indirect
+      cause: 清軍が四川からカムに入り、チャムドを従える（1718–1719）。1725年に寧静山を境にカム西部をダライ・ラマ政権の管轄、東部を四川の管轄とする
+      source: "https://en.wikipedia.org/wiki/Kham"
+    - from: 1909
+      owner: qing
+      cause: 趙爾豊の軍がチャムドに入り、カムの土司を廃して直接統治とする（改土帰流）
+      source: "https://en.wikipedia.org/wiki/Zhao_Erfeng"
+    - from: 1912
+      owner: roc
+      certainty: uncertain
+      cause: 中華民国の四川軍（のちの川辺特別区）がチャムドを保ち、チベット軍と争う
+      source: "https://en.wikipedia.org/wiki/Xikang"
+    - from: 1918
+      owner: tibet
+      cause: チベット軍がチャムドを奪回し（4月）、ロンバツァの停戦協定で長江（金沙江）がおおよその境とされる
+      source: "https://en.wikipedia.org/wiki/Sino-Tibetan_War"
+    - from: 1950
+      owner: prc
+      cause: チャムドの戦い。人民解放軍がチベット軍を破る（10月）
+      source: "https://en.wikipedia.org/wiki/Battle_of_Chamdo"
+
+# =============================================================== 青海
+- id: xining
+  name: 西寧・海東（湟水流域）
+  select:
+    pieces: [CHN-Xining, CHN-Haidong]
+  timeline:
+    - from: 1648
+      owner: qing
+      note: 明の西寧衛を清が引き継ぐ（1645ごろ）。1648–1649年に甘粛で回民の米喇印・丁国棟の反乱が起こった
+      source: "https://ja.wikipedia.org/wiki/西寧市"
+    - from: 1862
+      owner: qing
+      certainty: uncertain
+      cause: 陝西・甘粛の回民の反乱が西寧にも広がる。西寧は回民の指導者（馬桂源ら）の支配下に入る
+      source: "https://en.wikipedia.org/wiki/Dungan_Revolt_(1862–1877)"
+    - from: 1873
+      owner: qing
+      cause: 左宗棠の清軍が西寧を奪回する（1872年末）
+      source: "https://ja.wikipedia.org/wiki/左宗棠"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立。回民の軍閥の馬麒・馬歩芳（馬家軍）が青海を治める（1928年に青海省）
+      source: "https://ja.wikipedia.org/wiki/馬歩芳"
+    - from: 1949
+      owner: prc
+      cause: 人民解放軍が西寧に入る（9月）
+      source: "https://ja.wikipedia.org/wiki/青海省"
+
+- id: kokonor
+  name: 青海（ココノール・ツァイダム）
+  select:
+    pieces: [CHN-Haibei, CHN-Hainanzhou, CHN-Huangnan, CHN-Haixi, CHN-Geermu]
+  timeline:
+    - from: 1648
+      owner: khoshut
+      note: グシ・ハンが1637年に青海（ココノール）を征服し、ホシュートの本拠地とした。アムドのチベット人の部族も従えた
+      source: "https://ja.wikipedia.org/wiki/ホシュート"
+    - from: 1698
+      owner: khoshut
+      overlord: qing
+      cause: 青海ホシュートの諸侯が康熙帝に服属し、王・貝勒などの爵位を受ける（1697–1698）
+      source: "https://en.wikipedia.org/wiki/Khoshut_Khanate"
+    - from: 1724
+      owner: qing
+      certainty: indirect
+      cause: ロブサン・ダンジンの反乱（1723）を年羹堯・岳鍾琪の軍が鎮める。青海のモンゴル人を旗に編成し、1725年に西寧弁事大臣を置く
+      source: "https://en.wikipedia.org/wiki/Lobzang_Danjin"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立。馬麒・馬歩芳の馬家軍が治める（1928年に青海省）
+      source: "https://ja.wikipedia.org/wiki/馬歩芳"
+    - from: 1949
+      owner: prc
+      cause: 人民解放軍が西寧に入り（9月）、青海の各地を押さえる
+      source: "https://ja.wikipedia.org/wiki/青海省"
+
+- id: golog_yushu
+  name: ゴロク・ユシュ（玉樹。青海南部）
+  select:
+    pieces: [CHN-Guoluo, CHN-Yushu]
+  timeline:
+    - from: 1648
+      owner: khoshut
+      certainty: uncertain
+      note: ユシュ（ナンチェン王国など）はカムのチベット人の部族、ゴロクはアムドの遊牧部族の地で、ホシュートとダライ・ラマ政権に従ったが自立的だった
+      source: "https://en.wikipedia.org/wiki/Yushu_Tibetan_Autonomous_Prefecture"
+    - from: 1698
+      owner: khoshut
+      certainty: uncertain
+      overlord: qing
+      cause: 青海ホシュートの諸侯が康熙帝に服属する
+      source: "https://en.wikipedia.org/wiki/Khoshut_Khanate"
+    - from: 1724
+      owner: qing
+      certainty: nominal
+      cause: 青海の平定。ユシュの部族は西寧弁事大臣の管轄とされたが、ゴロクの部族はほとんど従わなかった
+      source: "https://en.wikipedia.org/wiki/Golog_people"
+    - from: 1912
+      owner: roc
+      certainty: uncertain
+      cause: 中華民国の成立。馬家軍が支配を広げ、1932年にはユシュをめぐってチベット軍と戦う（青海・チベット戦争）
+      source: "https://en.wikipedia.org/wiki/Sino-Tibetan_War"
+    - from: 1949
+      owner: prc
+      certainty: uncertain
+      cause: 人民解放軍が青海に入る（9月）。南部の遊牧地に支配が及ぶのは数年後
+      source: "https://ja.wikipedia.org/wiki/青海省"
+    - from: 1952
+      owner: prc
+      cause: ゴロクの部族が中華人民共和国に服属する
+      note: 1958年、青海・カム・アムドで牧畜の集団化に反対する大規模な反乱が起こり、鎮圧された
+      source: "https://en.wikipedia.org/wiki/Golog_people"
+
+# =============================================================== ロシアのシベリア南部・極東（ロシア領になる前）
+- id: sayan_pre_russia
+  name: サヤン山地（トゥヴァ・ハカス）
+  select:
+    pieces: [RUS-Tuva, RUS-Khakassia]
+  timeline:
+    - from: 1648
+      owner: khalkha
+      certainty: uncertain
+      note: ハルハのアルタン・ハン（ホトゴイト部）が、トゥヴァの人々やエニセイ川上流のキルギス人の諸侯を従えていた。ハカスの北にはロシアのクラスノヤルスク砦（1628）があり、キルギス人はロシアにも貢納を迫られた
+      source: "https://en.wikipedia.org/wiki/Altan_Khan_of_the_Khalkha"
+    - from: 1667
+      owner: dzungar
+      certainty: uncertain
+      cause: ジュンガルのセンゲがアルタン・ハンを破り、トゥヴァ・エニセイ・キルギスを従える
+      note: ハカス（ミヌシンスク盆地）は1707年から north_east.yaml の khakassia（ロシア）が優先される
+      source: "https://en.wikipedia.org/wiki/Altan_Khan_of_the_Khalkha"
+    - from: 1758
+      owner: qing
+      certainty: indirect
+      cause: 清がジュンガルを滅ぼし、トゥヴァ（タンヌ・ウリャンハイ）を従えて、ウリャスタイの定辺左副将軍の管轄とする
+      source: "https://ja.wikipedia.org/wiki/ウリャンハイ地方"
+    - from: 1912
+      owner: mongolia
+      certainty: uncertain
+      cause: 辛亥革命で清の支配が崩れる。ボグド・ハーン政権が領有を主張し、ロシア人の入植者も増える
+      note: 1914年からは north_east.yaml の tuva（ロシアの保護領）が優先される
+      source: "https://ja.wikipedia.org/wiki/ウリャンハイ地方"
+
+- id: altai_pre_russia
+  name: アルタイ（ロシア領になる前）
+  select:
+    pieces: [RUS-Altai_Krai, RUS-Altai_Republic]
+  timeline:
+    - from: 1648
+      owner: dzungar
+      certainty: uncertain
+      note: テレウト人・アルタイの諸部族の地で、ジュンガルに貢納した。北の境にはロシアのクズネツク砦（1618）があった。アルタイ地方は1718年、山地アルタイは1756年から north_east.yaml の地域（ロシア）が優先される
+      source: "https://en.wikipedia.org/wiki/Dzungar_Khanate"
+
+- id: amur_primorye_pre1858
+  name: アムール川流域・沿海州（ロシア領になる前）
+  select:
+    pieces: [RUS-Amur_Oblast, RUS-Jewish_Autonomous_Oblast, RUS-Primorsky_Krai]
+  timeline:
+    - from: 1648
+      owner: qing
+      certainty: nominal
+      note: >-
+        ダウール人・エヴェンキ人・ナナイ人・ウデゲ人などの狩猟・漁労民の地で、清に貂皮を納めた（寧古塔・のち吉林・黒竜江の将軍の管轄）。
+        1650年代からロシアのコサックが侵入し（ハバロフの遠征、1665年にアルバジン砦）、清はアルバジンを攻めて（1685–1686）、
+        1689年のネルチンスク条約でアムール川流域を清の領土と認めさせた。清の実際の支配は弱かった。1858年からは north_east.yaml の地域（ロシア）が優先される
+      source:
+        - "https://ja.wikipedia.org/wiki/ネルチンスク条約"
+        - "https://ja.wikipedia.org/wiki/アルバジン"

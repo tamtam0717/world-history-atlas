@@ -1,0 +1,1079 @@
+# 言語（民族）の分布：東アジア（中国・台湾・日本・朝鮮・モンゴル）とシベリア・極東（1648–2025）
+# 形式は docs/language-format.md。「民族」でそろえる：回族は中国語を話すので chinese（宗教の地図でイスラーム）、
+# 満洲人は 19 世紀に多くが中国語に移ったが、民族として多い所は manchu_tungusic で示す。
+# 切り替えの年は宗教（data/religion/east_asia.yaml）とそろえている。ゆっくり進む移住・同化の年は目安。
+
+# ======== 中国 ========
+- id: lang_china
+  name: 中国本土
+  select:
+    iso: [CHN]
+  timeline:
+    - from: 1648
+      main: chinese
+      note: 漢語（中国語）。北方の官話のほか、呉語（上海・蘇州）・粤語（広東語）・閩語（福建・台湾）・客家語・湘語・贛語など、互いに通じにくい方言（方言群）に分かれる。書き言葉（文言・漢文）は共通。
+      source: "https://ja.wikipedia.org/wiki/中国語"
+    - from: 1920
+      main: chinese
+      note: 文学革命（白話運動）で口語の書き言葉が広まり、国語（北京語を基にした標準語）の普及が始まる。中華人民共和国では普通話と簡体字（1956）。
+      source: "https://ja.wikipedia.org/wiki/文学革命"
+
+# ---- チベット ----
+- id: lang_tibet
+  name: チベット（ウ・ツァン、カム、アムド）
+  select:
+    adm1: ["CHN/Tibet Autonomous Region"]
+    pieces: [CHN-Yushu, CHN-Guoluo, CHN-Huangnan, CHN-Hainanzhou, CHN-Ganzi, CHN-Aba, CHN-Gannan]
+  timeline:
+    - from: 1648
+      main: tibetan
+      note: チベット人。アムド（青海）・カム（四川西部）の方言は、ラサの言葉と大きく異なる。アバ（四川）にはチャン族（羌族）も住む。
+      source: "https://ja.wikipedia.org/wiki/チベット語"
+- id: lang_diqing
+  name: デチェン（雲南北西部）
+  select:
+    pieces: [CHN-Diqing]
+  timeline:
+    - from: 1648
+      main: tibetan
+      minor: tibeto_burman
+      note: チベット人とリス族・ナシ族が住む。現在の香格里拉（中甸）。
+- id: lang_haibei
+  name: 青海北部（海北）
+  select:
+    pieces: [CHN-Haibei]
+  timeline:
+    - from: 1648
+      main: tibetan
+      minor: mongolian
+    - from: 1960
+      main: chinese
+      minor: tibetan
+      note: 漢人・回族の移住で漢語を話す人が多数になる
+- id: lang_haixi
+  name: 青海のツァイダム盆地（海西・ゴルムド）
+  select:
+    pieces: [CHN-Haixi, CHN-Geermu]
+  timeline:
+    - from: 1648
+      main: mongolian
+      minor: tibetan
+      note: ホシュート部などのモンゴル人とチベット人
+    - from: 1960
+      main: chinese
+      minor: mongolian
+      note: ゴルムドの建設と資源開発で漢人が多数になる
+- id: lang_xining
+  name: 西寧と湟水の谷（西寧・海東）
+  select:
+    pieces: [CHN-Xining, CHN-Haidong]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: tibetan
+      note: 漢人と回族（どちらも漢語）が多く、チベット人・土族（モンゴル系の言葉）・サラール人（テュルク系）も住む。
+- id: lang_linxia
+  name: 甘粛の臨夏（河州）
+  select:
+    pieces: [CHN-Linxia]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: mongolian
+      note: 漢人・回族（漢語）と、東郷族・保安族（モンゴル系の言葉を話すムスリム）。
+      source: "https://ja.wikipedia.org/wiki/東郷族"
+
+# ---- 新疆 ----
+- id: lang_tarim
+  name: タリム盆地（カシュガル・ホータン・アクス・トゥルファン・ハミ）
+  select:
+    pieces: [CHN-Kashi, CHN-Hetian, CHN-Akesu, CHN-Tulufan, CHN-Hami]
+  timeline:
+    - from: 1648
+      main: uyghur
+      note: オアシスのテュルク系の定住民。チャガタイ語で書いた。「ウイグル」の民族名は 1921 年（タシュケントの会議）・1934 年（新疆省政府）に定められた。
+      source: "https://ja.wikipedia.org/wiki/ウイグル"
+- id: lang_akesu
+  name: アクス
+  select:
+    pieces: [CHN-Akesu]
+  timeline:
+    - from: 1648
+      main: uyghur
+    - from: 1980
+      main: uyghur
+      minor: chinese
+      note: 兵団などの移住で漢人が3割近くになる
+- id: lang_hami
+  name: ハミ（クムル）
+  select:
+    pieces: [CHN-Hami]
+  timeline:
+    - from: 1648
+      main: uyghur
+    - from: 1960
+      main: chinese
+      minor: uyghur
+      note: 鉄道の開通と移住で漢人が多数になる
+- id: lang_kizilsu
+  name: クズルス（キルギス人の地）
+  select:
+    pieces: [CHN-Kezileisu]
+  timeline:
+    - from: 1648
+      main: uyghur
+      minor: turkmen_kazakh
+      note: 山地にキルギス人が住む（キルギス語はカザフ語に近いので、カザフ語などの色で示す）
+- id: lang_bayingol
+  name: バインゴリン（コルラ・カラシャール）
+  select:
+    pieces: [CHN-Bayinguoleng]
+  timeline:
+    - from: 1648
+      main: uyghur
+    - from: 1771
+      main: uyghur
+      minor: mongolian
+      note: ヴォルガ川流域から帰還したトルグート部がユルドゥズの草原に移された（1771）
+      source: "https://ja.wikipedia.org/wiki/トルグート"
+    - from: 1970
+      main: chinese
+      minor: uyghur
+      note: 兵団と石油開発で漢人が多数になる
+- id: lang_ili
+  name: イリ
+  select:
+    pieces: [CHN-Yili]
+  timeline:
+    - from: 1648
+      main: mongolian
+      note: ジュンガル（オイラト）の本拠地
+    - from: 1760
+      main: uyghur
+      minor: turkmen_kazakh
+      note: ジュンガルの滅亡（1755–58）の後、清はタリム盆地からタランチ（ウイグル人の農民）を移し、満洲・シベ・ソロン・チャハルの駐屯兵を置いた。19 世紀にはカザフ人の遊牧民が入った。1871–81 年はロシアが占領した（イリ事件）。
+      source: "https://ja.wikipedia.org/wiki/イリ条約"
+    - from: 1970
+      main: chinese
+      minor: turkmen_kazakh
+      note: 兵団の入植で漢人が最大になる（カザフ人・ウイグル人がそれに次ぐ）
+- id: lang_tacheng
+  name: タルバガタイ（塔城）
+  select:
+    pieces: [CHN-Tacheng]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1770
+      main: turkmen_kazakh
+      minor: mongolian
+    - from: 1970
+      main: chinese
+      minor: turkmen_kazakh
+      note: 兵団の入植で漢人が多数になる
+- id: lang_altay_han
+  name: アルタイ（1970 年以後）
+  select:
+    pieces: [CHN-Aletai]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1770
+      main: turkmen_kazakh
+      minor: mongolian
+    - from: 1970
+      main: turkmen_kazakh
+      minor: chinese
+      note: カザフ人が半数を占め、漢人が4割ほど
+- id: lang_bortala
+  name: ボルタラ
+  select:
+    pieces: [CHN-Boertala]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1760
+      main: mongolian
+      minor: turkmen_kazakh
+      note: 清はチャハル部のモンゴル人を駐屯させた
+    - from: 1970
+      main: chinese
+      minor: mongolian
+- id: lang_urumqi
+  name: ウルムチ（迪化）・昌吉
+  select:
+    pieces: [CHN-Wulumuqi, CHN-Changji]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1760
+      main: chinese
+      minor: uyghur
+      note: 清が迪化を建設し、漢人・回族が移り住んだ。ウイグル人・カザフ人も多い。
+    - from: 1960
+      main: chinese
+      note: 1950 年代からの移住で漢人が7割を超える
+- id: lang_shihezi_karamay
+  name: 石河子・カラマイ
+  select:
+    pieces: [CHN-Shihezi, CHN-Kelamayi]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1760
+      main: turkmen_kazakh
+      note: カザフ人の牧地
+    - from: 1958
+      main: chinese
+      note: 兵団と油田の町として建設される
+
+# ---- 内モンゴル（宗教と同じ年で切り替え） ----
+- id: lang_inner_mongolia
+  name: 内モンゴル
+  select:
+    adm1: ["CHN/Inner Mongolia Autonomous Region"]
+  timeline:
+    - from: 1648
+      main: mongolian
+      note: チャハル・ハラチン・トゥメト・オルドス・ホルチンなどのモンゴル人。清は盟旗制で間接的に治めた。
+- id: lang_im_south
+  name: 内モンゴル南部（フフホト・包頭・ウランチャブ・赤峰）
+  select:
+    pieces: [CHN-Huhehaote, CHN-Baotou, CHN-Wulanchabu, CHN-Chifeng]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1800
+      main: chinese
+      minor: mongolian
+      note: 山西・河北の漢人の農民・商人が移住した（走西口）。土默特のモンゴル人は早くから農耕化・漢語化した。
+      source: "https://ja.wikipedia.org/wiki/走西口"
+    - from: 1950
+      main: chinese
+- id: lang_im_hetao
+  name: 河套（バヤンノール）
+  select:
+    pieces: [CHN-Bayannaoer]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1900
+      main: chinese
+      minor: mongolian
+    - from: 1950
+      main: chinese
+- id: lang_im_ordos_horqin
+  name: オルドス・ホルチン（鄂爾多斯・烏海・通遼）
+  select:
+    pieces: [CHN-Eerduosi, CHN-Wuhai, CHN-Tongliao]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1930
+      main: chinese
+      minor: mongolian
+      note: 清末の「移民実辺」（1902–）で牧地の開墾が公認され、漢人が急増した。通遼（ホルチン）は今もモンゴル人が4割を超える。
+      source: "https://ja.wikipedia.org/wiki/移民実辺"
+- id: lang_im_northeast
+  name: 内モンゴル東部（興安・フルンボイル）
+  select:
+    pieces: [CHN-Xingan, CHN-Hulunbeier]
+  timeline:
+    - from: 1648
+      main: mongolian
+      note: フルンボイルにはバルガ・ブリヤートのモンゴル人のほか、ダウール人（モンゴル系の言葉）・エヴェンキ人・オロチョン人も住む。
+    - from: 1950
+      main: chinese
+      minor: mongolian
+- id: lang_im_steppe
+  name: シリンゴル・アラシャン
+  select:
+    pieces: [CHN-Xilinguole, CHN-Alashan]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1970
+      main: chinese
+      minor: mongolian
+
+# ---- 満洲（中国東北） ----
+- id: lang_liaodong
+  name: 遼東（盛京）
+  select:
+    adm1: ["CHN/Liaoning Province"]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: manchu_tungusic
+      note: 明代から漢人の住む地。清の入関（1644）で八旗の多くが北京に移ったが、盛京（瀋陽）には満洲人の旗人が残った。
+      source: "https://ja.wikipedia.org/wiki/盛京"
+    - from: 1800
+      main: chinese
+      note: 山東・河北からの漢人の移住が続き、満洲人も多くが漢語を話すようになった（現在の遼寧省の満洲族は人口の1割あまり）。
+- id: lang_west_liaoning
+  name: 遼西のモンゴル（朝陽・阜新）
+  select:
+    pieces: [CHN-Chaoyang, CHN-Fuxin]
+  timeline:
+    - from: 1648
+      main: mongolian
+      note: ハラチン部・トゥメト部の牧地
+    - from: 1800
+      main: chinese
+      minor: mongolian
+    - from: 1950
+      main: chinese
+- id: lang_jilin
+  name: 吉林（中部・南部）
+  select:
+    pieces: [CHN-Changchun, CHN-Jilin, CHN-Siping, CHN-Liaoyuan, CHN-Tonghua, CHN-Baishan]
+  timeline:
+    - from: 1648
+      main: manchu_tungusic
+      note: 満洲人（女真）の故地。清は柳条辺牆の外への漢人の移住を禁じた（封禁）。
+      source: "https://ja.wikipedia.org/wiki/柳条辺牆"
+    - from: 1880
+      main: chinese
+      minor: manchu_tungusic
+      note: 封禁の緩和で、山東・河北から漢人が大量に移住した（闖関東）。
+      source: "https://ja.wikipedia.org/wiki/闖関東"
+    - from: 1910
+      main: chinese
+      note: 満洲語を話す人はほとんどいなくなる
+- id: lang_jilin_west
+  name: 吉林西部（白城・松原）
+  select:
+    pieces: [CHN-Baicheng, CHN-Songyuan]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1910
+      main: chinese
+      minor: mongolian
+    - from: 1950
+      main: chinese
+- id: lang_yanbian
+  name: 延辺（間島）
+  select:
+    pieces: [CHN-Yanbian]
+  timeline:
+    - from: 1648
+      main: manchu_tungusic
+      note: 清の封禁地で、人口はわずか
+    - from: 1900
+      main: korean
+      minor: chinese
+      note: 1869 年の飢饉の後、朝鮮北部から朝鮮人の農民が移り住み、多数派になった。日本は間島協約（1909）で清の領有を認めた。
+      source: "https://ja.wikipedia.org/wiki/間島協約"
+    - from: 1970
+      main: chinese
+      minor: korean
+      note: 朝鮮族の割合は 1950 年代の6割から、現在の3割ほどに下がった
+- id: lang_heilongjiang
+  name: 黒龍江
+  select:
+    adm1: ["CHN/Heilongjiang Province"]
+  timeline:
+    - from: 1648
+      main: manchu_tungusic
+      note: ナナイ人（ホジェン）・エヴェンキ人（ソロン）・オロチョン人などツングース系の人々と、ダウール人。
+    - from: 1900
+      main: chinese
+      note: 東清鉄道の建設と漢人の移住で、漢人が多数になる
+- id: lang_qiqihar
+  name: チチハル（嫩江流域）
+  select:
+    pieces: [CHN-Qiqihaer]
+  timeline:
+    - from: 1648
+      main: mongolian
+      minor: manchu_tungusic
+      note: ダウール人（モンゴル系の言葉）とソロン（エヴェンキ人）。1650 年代にアムール川流域から移された。
+    - from: 1900
+      main: chinese
+- id: lang_harbin
+  name: ハルビン
+  select:
+    pieces: [CHN-Haerbin]
+  timeline:
+    - from: 1648
+      main: manchu_tungusic
+    - from: 1900
+      main: chinese
+      minor: russian
+      note: 東清鉄道の町として 1898 年にロシアが建設。ロシア革命後は亡命ロシア人も集まった。
+      source: "https://ja.wikipedia.org/wiki/ハルビン市"
+    - from: 1950
+      main: chinese
+- id: lang_heilongjiang_north
+  name: 大興安嶺・黒河
+  select:
+    pieces: [CHN-Daxinganling, CHN-Heihe]
+  timeline:
+    - from: 1648
+      main: manchu_tungusic
+      note: オロチョン人・エヴェンキ人の狩猟地
+    - from: 1930
+      main: chinese
+
+# ---- 西南の少数民族 ----
+- id: lang_liangshan
+  name: 涼山・攀枝花（イ族の地）
+  select:
+    pieces: [CHN-Liangshan, CHN-Panzhihua]
+  timeline:
+    - from: 1648
+      main: tibeto_burman
+      minor: chinese
+      note: イ族（彝族、ロロ）。山地は 20 世紀半ばまで独立性を保った（「独立ロロ」）。
+      source: "https://ja.wikipedia.org/wiki/イ族"
+- id: lang_panzhihua
+  name: 攀枝花
+  select:
+    pieces: [CHN-Panzhihua]
+  timeline:
+    - from: 1648
+      main: tibeto_burman
+      minor: chinese
+    - from: 1965
+      main: chinese
+      note: 三線建設の鉄鋼都市として 1965 年に建設された
+- id: lang_nw_yunnan
+  name: 怒江・麗江（リス族・ナシ族の地）
+  select:
+    pieces: [CHN-Nujiang, CHN-Lijiang]
+  timeline:
+    - from: 1648
+      main: tibeto_burman
+      minor: chinese
+      note: 怒江はリス族・ヌー族・トーロン族、麗江はナシ族（トンパ文字）。麗江の木氏土司は 1723 年の改土帰流で廃された。
+      source: "https://ja.wikipedia.org/wiki/ナシ族"
+- id: lang_yunnan_yi
+  name: 雲南中部・南部（大理・楚雄・紅河・普洱・臨滄）
+  select:
+    pieces: [CHN-Dali, CHN-Chuxiong, CHN-Honghe, CHN-Simao, CHN-Lincang]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: tibeto_burman
+      note: 明代から漢人の軍屯・移住が進んだ。大理のペー族（白族）、楚雄・紅河のイ族・ハニ族、普洱・臨滄のハニ族・ラフ族・ワ族・タイ族など、多くの民族が住む。
+- id: lang_yunnan_south
+  name: 紅河・普洱・臨滄（雲南南部の山地）
+  select:
+    pieces: [CHN-Honghe, CHN-Simao, CHN-Lincang]
+  timeline:
+    - from: 1648
+      main: tibeto_burman
+      minor: chinese
+      note: ハニ族・イ族・ラフ族などの土司の地
+    - from: 1900
+      main: chinese
+      minor: tibeto_burman
+      note: 漢人の移住（個旧の錫鉱山など）が進む
+- id: lang_wenshan
+  name: 文山（雲南東南部）
+  select:
+    pieces: [CHN-Wenshan]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      minor: chinese
+      note: チワン族・ミャオ族の地
+    - from: 1900
+      main: chinese
+      minor: zhuang_tai
+- id: lang_dai
+  name: シーサンパンナ
+  select:
+    pieces: [CHN-Xishuangbanna]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      note: タイ・ルー人の王国（シプソンパンナー）。山地にはハニ族（アカ族）も住む。
+      source: "https://ja.wikipedia.org/wiki/シーサンパンナ・タイ族自治州"
+    - from: 1970
+      main: zhuang_tai
+      minor: chinese
+      note: 国営のゴム農場の建設で漢人が移住した
+- id: lang_dehong
+  name: 徳宏
+  select:
+    pieces: [CHN-Dehong]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      note: タイ・ヌア人。山地にはジンポー人（カチン人）。
+    - from: 1970
+      main: chinese
+      minor: zhuang_tai
+- id: lang_guangxi_zhuang
+  name: 広西西部（チワン族の地）
+  select:
+    pieces: [CHN-Baise, CHN-Hechi, CHN-Chongzuo, CHN-Nanning, CHN-Laibin]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      minor: chinese
+      note: チワン族（壮族）は中国最大の少数民族。多くが漢語（西南官話・粤語）と二言語。南寧などの町では漢語が多い。
+      source: "https://ja.wikipedia.org/wiki/チワン族"
+- id: lang_guangxi_mixed
+  name: 柳州・貴港
+  select:
+    pieces: [CHN-Liuzhou, CHN-Guigang]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: zhuang_tai
+- id: lang_hainan_south
+  name: 海南島南部（黎族の地）
+  select:
+    pieces: [CHN-Sanya]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: zhuang_tai
+      note: 島の中南部の山地は黎族（リー族。タイ・カダイ系）の地
+- id: lang_qiandongnan
+  name: 黔東南（ミャオ族・トン族）
+  select:
+    pieces: [CHN-Qiandongnan]
+  timeline:
+    - from: 1648
+      main: hmong_mien
+      minor: zhuang_tai
+      note: ミャオ族（苗族）とトン族（侗族。タイ・カダイ系）。改土帰流（1726–）の後もミャオ族の反乱が続いた（1735、1795、1855–72）。
+      source: "https://ja.wikipedia.org/wiki/ミャオ族"
+- id: lang_qiannan
+  name: 黔南・黔西南（プイ族の地）
+  select:
+    pieces: [CHN-Qiannan, CHN-Qianxinan]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      minor: hmong_mien
+      note: プイ族（布依族。チワン族に近い）とミャオ族
+    - from: 1800
+      main: zhuang_tai
+      minor: chinese
+      note: 改土帰流の後、漢人の移住が進む
+- id: lang_qianxinan
+  name: 黔西南
+  select:
+    pieces: [CHN-Qianxinan]
+  timeline:
+    - from: 1648
+      main: zhuang_tai
+      minor: hmong_mien
+    - from: 1800
+      main: chinese
+      minor: zhuang_tai
+- id: lang_tujia
+  name: 湘西・張家界・恩施・銅仁（土家族・ミャオ族の地）
+  select:
+    pieces: [CHN-Xiangxi, CHN-Zhangjiajie, CHN-Enshi, CHN-Tongren]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: tibeto_burman
+      note: 土家族（チベット・ビルマ系の言葉。多くは漢語に移った）とミャオ族。土家族は 1957 年に民族として認められ、1980 年代に多くの人が漢族から土家族に登録を改めた（現在は人口の4〜7割）。
+      source: "https://ja.wikipedia.org/wiki/土家族"
+- id: lang_bijie
+  name: 畢節（貴州西北部）
+  select:
+    pieces: [CHN-Bijie]
+  timeline:
+    - from: 1648
+      main: chinese
+      minor: tibeto_burman
+      note: 水西のイ族の土司（安氏）の地。1664 年に呉三桂が滅ぼした。
+- id: lang_hk_macau
+  name: 香港・マカオ
+  select:
+    adm1: ["CHN/Hong Kong Special Administrative Region", "CHN/Macau Special Administrative Region"]
+  timeline:
+    - from: 1648
+      main: chinese
+      note: 広東語（粤語）。イギリス領（香港）では英語、ポルトガル領（マカオ）ではポルトガル語が公用語だったが、話す人は少数。
+
+# ======== 台湾（宗教と同じ年で切り替え） ========
+- id: lang_taiwan
+  name: 台湾（山地・東部）
+  select:
+    iso: [TWN]
+  timeline:
+    - from: 1648
+      main: austronesian
+      note: 台湾原住民（オーストロネシア系の諸語。アミ・タイヤル・パイワン・ブヌンなど、平地の平埔族）。オーストロネシア語族の故地とされる。
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+- id: lang_taiwan_islands
+  name: 澎湖・金門・馬祖
+  select:
+    pieces: [TWN-Penghu, TWN-Kinmen, TWN-Matsu_Islands]
+  timeline:
+    - from: 1648
+      main: chinese
+      note: 福建の漢人（閩南語・閩東語）
+- id: lang_tw_southwest
+  name: 台湾南西部（台南・高雄）
+  select:
+    pieces: [TWN-Tainan, TWN-Kaohsiung]
+  timeline:
+    - from: 1648
+      main: austronesian
+      minor: chinese
+      note: シラヤ族などの平埔族の地。オランダが福建の漢人を招いて開墾させた。
+    - from: 1662
+      main: chinese
+      minor: austronesian
+      note: 鄭成功の渡台で漢人が多数になる
+      source: "https://ja.wikipedia.org/wiki/鄭氏政権"
+    - from: 1720
+      main: chinese
+- id: lang_tw_west
+  name: 台湾西部の平野（嘉義・彰化・雲林・屏東）
+  select:
+    pieces: [TWN-Chiayi, TWN-Chiayi_County, TWN-Changhua_County, TWN-Yunlin_County, TWN-Pingtung_County]
+  timeline:
+    - from: 1648
+      main: austronesian
+    - from: 1720
+      main: chinese
+      minor: austronesian
+      note: 福建（閩南語）・広東（客家語）の漢人が開墾した。平埔族はしだいに漢語に移った。
+      source: "https://ja.wikipedia.org/wiki/平埔族"
+    - from: 1800
+      main: chinese
+- id: lang_tw_north
+  name: 台湾北部・中部（台北・桃園・新竹・苗栗・台中）
+  select:
+    pieces: [TWN-Taipei, TWN-New_Taipei, TWN-Keelung, TWN-Taoyuan, TWN-Hsinchu, TWN-Hsinchu_County, TWN-Miaoli_County, TWN-Taichung]
+  timeline:
+    - from: 1648
+      main: austronesian
+    - from: 1760
+      main: chinese
+      minor: austronesian
+      note: 台北盆地・桃園・新竹の開墾。桃園・新竹・苗栗の丘陵地は客家が多い。
+    - from: 1820
+      main: chinese
+    - from: 1950
+      main: chinese
+      note: 1949 年前後に国民政府とともに約 100 万人の外省人が渡り、台北に多く住んだ。国語（北京語）が普及する。
+      source: "https://ja.wikipedia.org/wiki/外省人"
+- id: lang_tw_yilan
+  name: 宜蘭
+  select:
+    pieces: [TWN-Yilan_County]
+  timeline:
+    - from: 1648
+      main: austronesian
+      note: クバラン族の地
+    - from: 1810
+      main: chinese
+      minor: austronesian
+    - from: 1860
+      main: chinese
+- id: lang_tw_nantou
+  name: 南投（台湾中部の山地）
+  select:
+    pieces: [TWN-Nantou_County]
+  timeline:
+    - from: 1648
+      main: austronesian
+    - from: 1880
+      main: chinese
+      minor: austronesian
+      note: 埔里盆地などへの入植と清末の「開山撫番」で漢人が増えた。山地はブヌン族・タイヤル族・セデック族（霧社事件、1930）の地。
+      source: "https://ja.wikipedia.org/wiki/霧社事件"
+- id: lang_tw_east
+  name: 台湾東部（花蓮・台東）
+  select:
+    pieces: [TWN-Hualien_County, TWN-Taitung_County]
+  timeline:
+    - from: 1648
+      main: austronesian
+      note: アミ族・タロコ族・プユマ族・ブヌン族などの地
+    - from: 1950
+      main: chinese
+      minor: austronesian
+      note: 日本統治期の移民村と、戦後の漢人・外省人の移住で漢人が多数になる。原住民は今も人口の3割前後。
+
+# ======== 日本 ========
+- id: lang_japan
+  name: 日本
+  select:
+    iso: [JPN]
+  timeline:
+    - from: 1648
+      main: japanese
+      note: 和人（日本語）。方言の差は大きく、明治以後に標準語（東京の山の手の言葉が基）の教育が進んだ。
+      source: "https://ja.wikipedia.org/wiki/日本語"
+- id: lang_hokkaido
+  name: 蝦夷地・北海道
+  select:
+    pieces: [JPN-Hokkaido]
+  timeline:
+    - from: 1648
+      main: ainu
+      minor: japanese
+      note: アイヌの地。南端の和人地（松前藩）だけ和人が住む。シャクシャインの戦い（1669）の後、松前藩の支配が強まる。
+      source: "https://ja.wikipedia.org/wiki/シャクシャインの戦い"
+    - from: 1869
+      main: japanese
+      minor: ainu
+      note: 開拓使の設置（1869）と屯田兵・移民の入植で和人が急増した。
+      source: "https://ja.wikipedia.org/wiki/開拓使"
+    - from: 1890
+      main: japanese
+      note: アイヌは人口の数％となり、同化政策で日本語に移った。2019 年のアイヌ施策推進法で先住民族と明記された。
+      source: "https://ja.wikipedia.org/wiki/アイヌ施策推進法"
+- id: lang_okinawa
+  name: 琉球・沖縄
+  select:
+    pieces: [JPN-Okinawa_Prefecture]
+  timeline:
+    - from: 1648
+      main: ryukyuan
+      note: 琉球語（沖縄語・宮古語・八重山語など。日本語と同じ語族だが、互いに通じない）。王府の公文書には漢文と候文も使われた。
+      source: "https://ja.wikipedia.org/wiki/琉球諸語"
+    - from: 1945
+      main: japanese
+      minor: ryukyuan
+      note: 琉球処分（1879）の後、学校で標準語が強制され（方言札）、戦後は日本語が日常の言葉になった。琉球諸語は消滅の危機にある。
+      source: "https://ja.wikipedia.org/wiki/方言札"
+
+# ======== 朝鮮 ========
+- id: lang_korea
+  name: 朝鮮
+  select:
+    iso: [KOR, PRK]
+  timeline:
+    - from: 1648
+      main: korean
+      note: 朝鮮語。訓民正音（ハングル、1446）は民間・女性の間で使われ、公文書は漢文で書かれた。
+      source: "https://ja.wikipedia.org/wiki/朝鮮語"
+    - from: 1910
+      main: korean
+      note: 日本の植民地支配。1930 年代末から学校での朝鮮語の授業が廃止され、創氏改名（1940）が行われた。日本人の移住者は人口の3％ほど。
+      source: "https://ja.wikipedia.org/wiki/創氏改名"
+
+# ======== モンゴル ========
+- id: lang_mongolia
+  name: モンゴル（外モンゴル）
+  select:
+    iso: [MNG]
+  timeline:
+    - from: 1648
+      main: mongolian
+      note: ハルハ・モンゴル人。西部（ホブド・オブス）はオイラト（ドルベト・ザハチンなど）。縦書きのモンゴル文字を使い、1941〜46 年にキリル文字に改めた。
+      source: "https://ja.wikipedia.org/wiki/モンゴル語"
+- id: lang_bayan_olgii
+  name: バヤン・ウルギー
+  select:
+    pieces: [MNG-Bayan_Olgii]
+  timeline:
+    - from: 1648
+      main: mongolian
+    - from: 1870
+      main: turkmen_kazakh
+      minor: mongolian
+      note: 19 世紀後半からカザフ人が移り住み、多数派になった。1940 年にカザフ人の県として設けられた。
+      source: "https://ja.wikipedia.org/wiki/バヤン・ウルギー県"
+
+# ======== シベリア・極東（ロシア。宗教と同じ年で切り替え） ========
+- id: lang_sib_tyumen
+  name: 西シベリア（チュメニ・トボリスク）
+  select:
+    pieces: [RUS-Tyumen_Oblast]
+  timeline:
+    - from: 1648
+      main: tatar
+      minor: russian
+      note: シベリア・タタール人。トボリスク（1587）・チュメニ（1586）にロシア人が住む。
+      source: "https://ja.wikipedia.org/wiki/シベリア・タタール人"
+    - from: 1700
+      main: russian
+      minor: tatar
+    - from: 1800
+      main: russian
+- id: lang_sib_steppe
+  name: 西シベリア南部（オムスク・ノヴォシビルスク）
+  select:
+    pieces: [RUS-Omsk_Oblast, RUS-Novosibirsk_Oblast]
+  timeline:
+    - from: 1648
+      main: tatar
+      note: シベリア・タタール人・バラバ・タタール人とテレウト人。南はカザフ人の牧地。
+    - from: 1760
+      main: russian
+      note: 要塞線（オムスク 1716）とロシア人の入植。シベリア鉄道（1890 年代）で移住がさらに増えた。
+- id: lang_sib_tomsk
+  name: トムスク
+  select:
+    pieces: [RUS-Tomsk_Oblast]
+  timeline:
+    - from: 1648
+      main: samoyedic
+      minor: russian
+      note: セリクプ人（サモエード系）・ハンティ人。トムスクは 1604 年の砦。
+    - from: 1700
+      main: russian
+- id: lang_sib_krasnoyarsk
+  name: クラスノヤルスク（エニセイ川流域）
+  select:
+    pieces: [RUS-Krasnoyarsk_Krai]
+  timeline:
+    - from: 1648
+      main: manchu_tungusic
+      minor: russian
+      note: エヴェンキ人（ツングース）・ケット人・ネネツ人・ドルガン人などが広い北部に住み、南部にロシア人の砦（クラスノヤルスク 1628、エニセイスク 1619）。
+    - from: 1700
+      main: russian
+      note: 南部の農耕地帯にロシア人が多数になる（北部のタイミル・エヴェンキの先住民の地は人口がごく少ない）
+- id: lang_sib_kuznetsk_altai
+  name: クズネツク・アルタイ地方（ケメロヴォ・アルタイ地方）
+  select:
+    pieces: [RUS-Kemerovo_Oblast, RUS-Altai_Krai]
+  timeline:
+    - from: 1648
+      main: siberian_turkic
+      note: ショル人・テレウト人（テュルク系）。ジュンガルの影響下にあった。
+    - from: 1760
+      main: russian
+      note: バルナウルの鉱山（1730 年代〜）とロシア人の農民の入植
+- id: lang_sib_altai_rep
+  name: アルタイ山地（アルタイ共和国）
+  select:
+    pieces: [RUS-Altai_Republic]
+  timeline:
+    - from: 1648
+      main: siberian_turkic
+      note: アルタイ人（オイロト）。1756 年にロシアに服属した。
+    - from: 1900
+      main: russian
+      minor: siberian_turkic
+      note: ロシア人の移住で多数派が逆転した。アルタイ人は今も人口の3割余り。
+- id: lang_sib_khakassia
+  name: ハカス（ミヌシンスク盆地）
+  select:
+    pieces: [RUS-Khakassia]
+  timeline:
+    - from: 1648
+      main: siberian_turkic
+      note: エニセイ・キルギス（ハカス人の祖先）。1703 年にジュンガルが多くを移住させた。
+    - from: 1850
+      main: russian
+      minor: siberian_turkic
+      note: ロシア人の農民の入植
+    - from: 1960
+      main: russian
+      note: ハカス人は人口の1割余りになる
+- id: lang_sib_tuva
+  name: トゥヴァ（ウリャンハイ）
+  select:
+    pieces: [RUS-Tuva]
+  timeline:
+    - from: 1648
+      main: siberian_turkic
+      note: トゥヴァ人（テュルク系）。モンゴルの影響が強い。
+      source: "https://ja.wikipedia.org/wiki/トゥヴァ人"
+    - from: 1944
+      main: siberian_turkic
+      minor: russian
+      note: ソ連に編入され、ロシア人が人口の3〜4割になる
+    - from: 1995
+      main: siberian_turkic
+      note: ロシア人の多くが去り、トゥヴァ人が8割を占める
+- id: lang_sib_irkutsk
+  name: イルクーツク
+  select:
+    pieces: [RUS-Irkutsk_Oblast]
+  timeline:
+    - from: 1648
+      main: buryat
+      minor: manchu_tungusic
+      note: バイカル湖西岸のブリヤート人とエヴェンキ人
+    - from: 1760
+      main: russian
+      minor: buryat
+      note: イルクーツク（1661）を中心にロシア人の入植が進む
+    - from: 1850
+      main: russian
+- id: lang_sib_buryatia
+  name: ブリヤート（バイカル湖東岸）
+  select:
+    pieces: [RUS-Buryatia]
+  timeline:
+    - from: 1648
+      main: buryat
+      note: ブリヤート人（モンゴル系）。ネルチンスク条約（1689）・キャフタ条約（1727）でロシア領とされた。
+      source: "https://ja.wikipedia.org/wiki/ブリヤート人"
+    - from: 1760
+      main: buryat
+      minor: russian
+    - from: 1900
+      main: russian
+      minor: buryat
+      note: シベリア鉄道の開通とロシア人の入植で多数派が逆転した。ブリヤート人は今も人口の3割ほど。
+- id: lang_sib_transbaikal
+  name: ザバイカル（チタ・ネルチンスク）
+  select:
+    pieces: [RUS-Zabaykalsky_Krai]
+  timeline:
+    - from: 1648
+      main: buryat
+      minor: manchu_tungusic
+      note: ブリヤート人とエヴェンキ人（ハムニガン）
+    - from: 1741
+      main: russian
+      minor: buryat
+      note: ネルチンスクの銀山・流刑地とコサックの入植。アガ地方にブリヤート人が多い。
+    - from: 1900
+      main: russian
+- id: lang_sib_sakha
+  name: ヤクーチア（サハ）
+  select:
+    pieces: [RUS-Sakha_Republic]
+  timeline:
+    - from: 1648
+      main: siberian_turkic
+      note: ヤクート人（サハ人。テュルク系）と、北部のエヴェン人・エヴェンキ人・ユカギール人
+      source: "https://ja.wikipedia.org/wiki/ヤクート人"
+    - from: 1930
+      main: siberian_turkic
+      minor: russian
+      note: 金・ダイヤモンドの鉱山開発でロシア人が増える
+    - from: 1970
+      main: russian
+      minor: siberian_turkic
+      note: 1970〜80 年代にはロシア人がヤクート人を上回った
+    - from: 2000
+      main: siberian_turkic
+      minor: russian
+      note: ソ連解体の後、ロシア人の多くが去り、サハ人が再び最大になった（2010 年に約5割）
+- id: lang_far_east
+  name: アムール・沿海州・ハバロフスク・ユダヤ自治州
+  select:
+    pieces: [RUS-Amur_Oblast, RUS-Primorsky_Krai, RUS-Khabarovsk_Krai, RUS-Jewish_Autonomous_Oblast]
+  timeline:
+    - from: 1648
+      main: manchu_tungusic
+      note: ナナイ人・ウデヘ人・ウリチ人・エヴェンキ人などツングース系の人々と、アムール河口のニヴフ人。ゼヤ川・アムール川上流のダウール人は 1650 年代に清が南へ移した。
+    - from: 1890
+      main: russian
+      note: アイグン条約（1858）・北京条約（1860）でロシア領となり、ロシア人・ウクライナ人の農民が入植した（ウクライナ人の多い地方は「緑のウクライナ」と呼ばれた）。沿海州には朝鮮人も多かったが、1937 年に中央アジアへ強制移住させられた。ユダヤ自治州（1934）のユダヤ人は、最も多い時期でも人口の2割に届かなかった。
+      source: "https://ja.wikipedia.org/wiki/高麗人"
+- id: lang_sib_magadan
+  name: マガダン
+  select:
+    pieces: [RUS-Magadan_Oblast]
+  timeline:
+    - from: 1648
+      main: paleosiberian
+      minor: manchu_tungusic
+      note: コリャーク人（古アジア諸語）とエヴェン人（ツングース系）
+    - from: 1935
+      main: russian
+      note: ダリストロイ（強制収容所による金鉱開発）の拠点となり、移住者と囚人の地になった
+      source: "https://ja.wikipedia.org/wiki/ダリストロイ"
+- id: lang_sib_chukotka
+  name: チュクチ
+  select:
+    pieces: [RUS-Chukotka_Autonomous_Okrug]
+  timeline:
+    - from: 1648
+      main: paleosiberian
+      note: チュクチ人（トナカイ遊牧と海獣猟）とエスキモー（ユピック）。1648 年にデジニョフがベーリング海峡を回航した。
+      source: "https://ja.wikipedia.org/wiki/セミョン・デジニョフ"
+    - from: 1950
+      main: russian
+      minor: paleosiberian
+      note: 鉱山開発で移住者が多数になる。ソ連解体の後に人口が大きく減り、チュクチ人が再び3割近くになった。
+- id: lang_sib_kamchatka
+  name: カムチャツカ
+  select:
+    pieces: [RUS-Kamchatka_Krai]
+  timeline:
+    - from: 1648
+      main: paleosiberian
+      note: イテリメン人（カムチャダール）・コリャーク人
+    - from: 1850
+      main: russian
+      minor: paleosiberian
+      note: ロシアの征服（1697–）と天然痘でイテリメン人が激減し、多くがロシア語に移った（カムチャダール）。
+    - from: 1930
+      main: russian
+- id: lang_sib_yamal
+  name: ヤマル・ネネツ
+  select:
+    pieces: [RUS-Yamalo_Nenets_Autonomous_Okrug]
+  timeline:
+    - from: 1648
+      main: samoyedic
+      note: ネネツ人（サモエード系）・ハンティ人のトナカイ遊牧
+    - from: 1975
+      main: russian
+      minor: samoyedic
+      note: 天然ガス田の開発で移住者が多数になる
+- id: lang_sakhalin_north
+  name: 北サハリン
+  select:
+    pieces: [RUS-Sakhalin_Oblast]
+  timeline:
+    - from: 1648
+      main: paleosiberian
+      minor: manchu_tungusic
+      note: ニヴフ人（古アジア諸語）とウイルタ人（ツングース系）。間宮林蔵の探検（1808–09）で島であることが確かめられた。
+      source: "https://ja.wikipedia.org/wiki/間宮林蔵"
+    - from: 1880
+      main: russian
+      note: ロシアの流刑植民地となり、ロシア人が多数になる
+- id: lang_sakhalin_south
+  name: 南サハリン（樺太）
+  select:
+    pieces: [RUS-Sakhalin_Oblast_South]
+  timeline:
+    - from: 1648
+      main: ainu
+      minor: paleosiberian
+      note: 樺太アイヌ・ニヴフ人・ウイルタ人。南端の白主・久春古丹に松前藩の交易所があった。
+    - from: 1907
+      main: japanese
+      note: ポーツマス条約（1905）で日本領（樺太）となり、日本人の移民が多数になった（1941 年に約 40 万人）。朝鮮人の労働者も移された。
+      source: "https://ja.wikipedia.org/wiki/樺太"
+    - from: 1947
+      main: russian
+      note: ソ連が占領し（1945）、日本人は 1946–49 年に引き揚げた。朝鮮人の一部は帰国できずに残った（サハリン残留朝鮮人）。
+- id: lang_kurils_north
+  name: 北千島
+  select:
+    pieces: [RUS-Sakhalin_Oblast_North_Kurils]
+  timeline:
+    - from: 1648
+      main: ainu
+      note: 千島アイヌの地
+    - from: 1885
+      main: japanese
+      note: 樺太・千島交換条約（1875）で日本領となり、千島アイヌは色丹島に移された（1884）。日本人の漁業者が住んだ。
+      source: "https://ja.wikipedia.org/wiki/樺太・千島交換条約"
+    - from: 1946
+      main: russian
+- id: lang_kurils_south
+  name: 南千島（国後・択捉・色丹・歯舞）
+  select:
+    pieces: [RUS-Sakhalin_Oblast_South_Kurils]
+  timeline:
+    - from: 1648
+      main: ainu
+      note: アイヌの地
+    - from: 1800
+      main: japanese
+      minor: ainu
+      note: 幕府の直轄（1799）と場所請負制の漁場で和人が入った。
+      source: "https://ja.wikipedia.org/wiki/クナシリ・メナシの戦い"
+    - from: 1870
+      main: japanese
+    - from: 1947
+      main: russian
+      note: ソ連が占領し（1945）、日本人の住民は 1947–49 年に引き揚げた（北方領土問題）。
+      source: "https://ja.wikipedia.org/wiki/北方領土問題"
