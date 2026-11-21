@@ -58,7 +58,10 @@ for (const y of years) {
   if (polity) hash.set("p", polity);
   // ハッシュだけの変更では再読み込みされないので、一度空ページを挟む
   await page.goto("about:blank");
-  await page.goto(`${base}${debug ? "?debug=pieces" : ""}#${hash}`);
+  // 表示範囲（data/meta.yaml）の外の年も確認できるよう、範囲を広げて開く
+  const q = new URLSearchParams({ range: "476-2030" });
+  if (debug) q.set("debug", "pieces");
+  await page.goto(`${base}?${q}#${hash}`);
   await page.waitForSelector("body.ready", { timeout: 30000 });
   if (zoomArg) {
     const [lon, lat, k] = zoomArg.split(",").map(Number);

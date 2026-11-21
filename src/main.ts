@@ -16,7 +16,10 @@ async function main() {
     fetch(`${base}data/atlas.json`).then((r) => r.json() as Promise<Atlas>),
   ]);
   const idx = new AtlasIndex(atlas);
-  const [minYear, maxYear] = atlas.range;
+  // 確認用：?range=1648-1914 で表示範囲を一時的に広げられる（データ作成中の年を見るため）
+  const rangeParam = new URLSearchParams(location.search).get("range")?.split("-").map(Number);
+  const [minYear, maxYear] =
+    rangeParam && rangeParam.length === 2 && rangeParam.every(Number.isFinite) ? (rangeParam as [number, number]) : atlas.range;
 
   const state = {
     year: minYear,
