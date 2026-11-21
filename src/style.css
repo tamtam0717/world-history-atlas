@@ -1091,3 +1091,319 @@ a.ylink:hover {
     margin-top: 1px;
   }
 }
+
+/* ---- 言語の凡例（語族ごと） ---- */
+body[data-layer="language"] .legend {
+  display: none;
+}
+.rel-legend[data-dist="language"] {
+  max-width: 340px;
+  max-height: calc(100% - 120px);
+  overflow-y: auto;
+}
+.rel-legend .rl-fams {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rel-legend .rl-fam-head {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 11px;
+  color: #4a4038;
+}
+.rel-legend .rl-fam-head i {
+  width: 22px;
+}
+.rel-legend .rl-fam ul {
+  padding-left: 12px;
+  margin-top: 1px;
+}
+.rel-legend .rl-notes {
+  margin-top: 4px;
+  grid-template-columns: 1fr;
+}
+.rel-legend .rl-empty {
+  color: var(--muted);
+}
+/* 畳んだとき：語族の見出しだけを横に並べる（色の見本で語族が分かる） */
+.rel-legend[data-dist="language"].collapsed .rl-fams {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+.rel-legend[data-dist="language"].collapsed .rl-fam-head {
+  font-weight: 500;
+  font-size: 10.5px;
+}
+@media (max-width: 799px) {
+  .rel-legend[data-dist="language"] {
+    max-height: calc(100% - 230px);
+  }
+  .rel-legend .rl-fam ul {
+    padding-left: 6px;
+  }
+}
+
+/* ---- この時代の潮流（パネル） ---- */
+.panel-body h3.mv-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.mv-key {
+  display: inline-flex;
+  gap: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 10.5px;
+}
+.mv-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.mv-key i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c);
+}
+.movements .mv {
+  border-bottom: 1px solid rgba(221, 213, 198, 0.6);
+}
+.mv-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 4px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 6px;
+  isolation: isolate;
+}
+/* 背景の帯：長さと濃さが勢い */
+.mv-row::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 2px;
+  bottom: 2px;
+  width: calc(var(--v) * 100%);
+  border-radius: 6px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--c) calc(8% + var(--v) * 22%), transparent), transparent);
+}
+.mv-row:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+/* 勢いの玉：強いほど大きく・濃く・つやが出る */
+.mv-orb {
+  flex: none;
+  width: calc(9px + var(--v) * 9px);
+  height: calc(9px + var(--v) * 9px);
+  margin: 0 calc((1 - var(--v)) * 4.5px);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 30%, rgba(255, 255, 255, calc(0.15 + var(--v) * 0.75)) 0, rgba(255, 255, 255, 0) 48%),
+    radial-gradient(circle at 50% 60%, color-mix(in srgb, var(--c) calc(25% + var(--v) * 75%), #e9e4da), color-mix(in srgb, var(--c) calc(20% + var(--v) * 60%), #cfc8bb));
+  box-shadow: 0 0 calc(var(--v) * 5px) color-mix(in srgb, var(--c) calc(var(--v) * 60%), transparent);
+}
+.mv.peak .mv-orb {
+  animation: mv-glow 2.4s ease-in-out infinite;
+}
+@keyframes mv-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 4px 1px color-mix(in srgb, var(--c) 55%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 11px 4px color-mix(in srgb, var(--c) 70%, transparent);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mv.peak .mv-orb {
+    animation: none;
+    box-shadow: 0 0 8px 2px color-mix(in srgb, var(--c) 60%, transparent);
+  }
+}
+.mv-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  color: color-mix(in srgb, var(--ink) calc(55% + var(--v) * 45%), #fff);
+  font-weight: 500;
+}
+.mv.peak .mv-name,
+.mv.sel .mv-name {
+  font-weight: 700;
+}
+.mv-spark {
+  flex: none;
+}
+.mv-spark .sp-area {
+  fill: color-mix(in srgb, var(--c) 22%, transparent);
+}
+.mv-spark .sp-line {
+  fill: none;
+  stroke: color-mix(in srgb, var(--c) 70%, #fff);
+  stroke-width: 1.1;
+}
+.mv-spark .sp-now {
+  stroke: rgba(43, 38, 32, 0.35);
+  stroke-width: 0.8;
+}
+.mv-spark .sp-dot {
+  fill: var(--c);
+  stroke: #fff;
+  stroke-width: 1;
+}
+.mv.sel {
+  background: color-mix(in srgb, var(--c) 7%, #fff);
+  border-radius: 8px;
+  box-shadow: inset 3px 0 0 var(--c);
+}
+.mv-detail {
+  padding: 2px 10px 10px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.mv-meta {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.mv-text {
+  margin: 4px 0 6px;
+}
+.mv-sub {
+  margin: 4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+  align-items: baseline;
+}
+.mv-sub b {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-right: 2px;
+}
+.mv-sub span {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0 7px;
+  font-size: 12px;
+}
+.mv-events {
+  display: block;
+}
+.mv-events ul li {
+  font-size: 12.5px;
+  padding: 1px 0;
+}
+.mv-hint {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+/* ---- 潮流の年表（スライダーの下の帯） ---- */
+.mv-band {
+  margin-top: 4px;
+}
+.mvb-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: none;
+  padding: 2px 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  width: 100%;
+}
+.mvb-caret::before {
+  content: "▾";
+  font-size: 9px;
+}
+.mv-band.collapsed .mvb-caret::before {
+  content: "▸";
+}
+.mvb-mini {
+  display: none;
+  gap: 4px;
+  margin-left: 6px;
+}
+.mv-band.collapsed .mvb-mini {
+  display: inline-flex;
+}
+.mvb-mini i {
+  width: calc(5px + var(--v) * 5px);
+  height: calc(5px + var(--v) * 5px);
+  border-radius: 50%;
+  align-self: center;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.7), transparent 55%), var(--c);
+  opacity: calc(0.35 + var(--v) * 0.65);
+}
+.mv-band.collapsed .mvb-body {
+  display: none;
+}
+.mvb-body {
+  position: relative;
+  /* スライダーのつまみの幅の分だけ内側に寄せて、年の位置をスライダーと合わせる */
+  margin: 0 8px;
+}
+.mvb-row {
+  position: relative;
+  height: 13px;
+  margin: 1px 0;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.mvb-row canvas {
+  display: block;
+}
+.mvb-row:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.mvb-row.sel {
+  outline: 1.5px solid rgba(43, 38, 32, 0.55);
+  outline-offset: 0;
+}
+.mvb-label {
+  position: absolute;
+  top: 0;
+  font-size: 9.5px;
+  line-height: 13px;
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.55), 0 0 1px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+.mvb-cursor {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 0;
+  border-left: 1.5px solid var(--accent);
+  pointer-events: none;
+}
+.mv-band.collapsed .mvb-cursor {
+  display: none;
+}
+.rel-legend .rl-fam ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px 10px;
+}
+.rel-legend[data-dist="language"] .rl-notes {
+  display: grid;
+}

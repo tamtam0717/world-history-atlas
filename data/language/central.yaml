@@ -1,0 +1,571 @@
+# 言語（民族）の分布：ドイツ・低地諸国・スイス・オーストリア・チェコ・イタリア（1648–1914）
+# 形式は docs/language-format.md。main = 住民（特に農村の民衆）の多数派の言語、minor = 2〜3割以上の少数派。
+# 方言の扱い：低地ドイツ語・アレマン語・バイエルン語・ルクセンブルク語は german、リンブルフ語は dutch、
+# イタリアの諸方言（ピエモンテ語・ロンバルド語・ヴェネト語・ナポリ語・シチリア語など）は italian、
+# フリウリ語・ラディン語は romansh（レト・ロマンス語）、ヴァッレ・ダオスタのフランコ・プロヴァンサル語は french に含める。
+
+# ======== ドイツ ========
+- id: lang_germany_base
+  name: ドイツ（下地：ドイツ語）
+  select:
+    iso: [DEU]
+  timeline:
+    - from: 1648
+      main: german
+      note: 北部の民衆は低地ドイツ語、中部・南部は高地ドイツ語の諸方言を話した。書き言葉はルター訳聖書以来の標準ドイツ語。
+    - from: 1800
+      main: german
+      note: ユダヤ人は18世紀後半（メンデルスゾーンらのハスカラー）からドイツ語に移り、西部のイディッシュ語はほぼ消える。
+
+- id: lang_angeln
+  name: シュレースヴィヒ中部（アンゲルン）
+  select:
+    pieces: [DEU-Schleswig_Flensburg, DEU-Schleswig_Flensburg_2]
+  timeline:
+    - from: 1648
+      main: danish
+      minor: german
+      note: アンゲルンとシュレースヴィヒ北部の農村は南ユトランド方言のデンマーク語。教会と学校の言葉はドイツ語。
+    - from: 1850
+      main: german
+      minor: danish
+      note: 19世紀前半に、アンゲルンの農民は低地ドイツ語に乗りかえた（言語の交替）。第2次シュレースヴィヒ戦争（1864）後はプロイセン領。
+      source: "https://ja.wikipedia.org/wiki/シュレースヴィヒ公国"
+
+- id: lang_flensburg
+  name: フレンスブルク
+  select:
+    pieces: [DEU-Flensburg_Kreisfreie_Stadt, DEU-Flensburg_Kreisfreie_Stadt_2]
+  timeline:
+    - from: 1648
+      main: german
+      minor: danish
+      note: 商人の町で、ドイツ語とデンマーク語の二言語。
+
+- id: lang_north_frisia
+  name: 北フリースラント
+  select:
+    pieces: [DEU-Nordfriesland]
+  timeline:
+    - from: 1648
+      main: frisian
+      minor: german
+      note: 北海の島々（ジュルト・フェール・アムルム・ハリゲン）と沿岸の湿地は北フリジア語。北部の台地はデンマーク語、南のアイダーシュテットとフーズムは低地ドイツ語。要確認
+    - from: 1800
+      main: german
+      minor: frisian
+      note: 本土側から低地ドイツ語化が進む。
+
+- id: lang_upper_lusatia_sorbian
+  name: 上ラウジッツ（バウツェン周辺のソルブ人の地域）
+  select:
+    pieces: [DEU-Bautzen]
+  timeline:
+    - from: 1648
+      main: sorbian
+      minor: german
+      note: バウツェン・カーメンツ・ホイアースヴェルダ周辺の農村は上ソルブ語（西スラヴ系）。町はドイツ語。ソルブ人はスラヴ系の「ヴェンド人」とも呼ばれた。
+      source: "https://ja.wikipedia.org/wiki/ソルブ人"
+    - from: 1850
+      main: german
+      minor: sorbian
+      note: 工業化と学校教育でドイツ語化が進む。1880年代の調査（ムカ）で、ザクセンのソルブ人は約5万人。
+
+- id: lang_gorlitz
+  name: 上ラウジッツ東部（ゲルリッツ・ニースキー）
+  select:
+    pieces: [DEU-Gorlitz]
+  timeline:
+    - from: 1648
+      main: german
+      minor: sorbian
+      note: 北部（ニースキー・ヴァイスヴァッサー周辺）の農村はソルブ語。
+
+- id: lang_lower_lusatia_sorbian
+  name: 下ラウジッツ（シュプレーヴァルト・コトブス周辺）
+  select:
+    pieces: [DEU-Spree_Neie, DEU-Oberspreewald_Lausitz]
+  timeline:
+    - from: 1648
+      main: sorbian
+      minor: german
+      note: コトブス周辺とシュプレーヴァルトの農村は下ソルブ語。
+    - from: 1880
+      main: german
+      minor: sorbian
+      note: プロイセンの学校政策でドイツ語化が進み、下ソルブ語は高齢者と農村に残る。
+
+- id: lang_cottbus
+  name: コトブス市・ダーメ＝シュプレーヴァルト
+  select:
+    pieces: [DEU-Cottbus_Kreisfreie_Stadt, DEU-Dahme_Spreewald]
+  timeline:
+    - from: 1648
+      main: german
+      minor: sorbian
+    - from: 1880
+      main: german
+
+# ======== 低地諸国 ========
+- id: lang_netherlands
+  name: オランダ
+  select:
+    iso: [NLD]
+  timeline:
+    - from: 1648
+      main: dutch
+      note: 東部（フローニンゲン・ドレンテ・オーファーアイセル・ヘルダーラント東部）は低地ザクセン方言、南東部はリンブルフ方言。ここではオランダ語に含める。
+
+- id: lang_friesland
+  name: フリースラント
+  select:
+    adm1: ["NLD/Fryslân"]
+  timeline:
+    - from: 1648
+      main: frisian
+      minor: dutch
+      note: 農村は西フリジア語。レーワルデンなどの町は「町フリジア語」（オランダ語との混合）を話した。
+      source: "https://ja.wikipedia.org/wiki/西フリジア語"
+
+- id: lang_flanders
+  name: フランデレン（ベルギー北部）
+  select:
+    adm1: ["BEL/Vlaams Gewest"]
+  timeline:
+    - from: 1648
+      main: dutch
+      note: 民衆はフラマン語（オランダ語の南部方言）。18世紀から上層・都市の行政にフランス語が広がる。
+    - from: 1830
+      main: dutch
+      note: ベルギー独立（1830）後、行政・裁判・高等教育の言葉はフランス語。民衆はフラマン語のままで、フラマン運動が始まる。1898年の平等法でオランダ語も公用語になる。
+      source: "https://ja.wikipedia.org/wiki/フラマン運動"
+
+- id: lang_wallonia
+  name: ワロン（ベルギー南部）
+  select:
+    adm1: ["BEL/Wallonne Gewest"]
+  timeline:
+    - from: 1648
+      main: french
+      note: ワロン語・ピカルディ語（フランス語と近縁のオイル諸語）。書き言葉はフランス語。
+
+- id: lang_verviers
+  name: ヴェルヴィエ（東部の国境地帯）
+  select:
+    pieces: [BEL-Verviers]
+  timeline:
+    - from: 1648
+      main: french
+      minor: german
+      note: オイペン周辺（1815–1919年はプロイセン領）はドイツ語。
+
+- id: lang_brussels
+  name: ブリュッセル
+  select:
+    pieces: [BEL-Bruxelles_Capitale]
+  timeline:
+    - from: 1648
+      main: dutch
+      minor: french
+      note: 民衆はブラバント方言のオランダ語。宮廷・貴族はフランス語。
+    - from: 1880
+      main: dutch
+      minor: french
+      note: 独立後の首都で、行政・商業の言葉としてフランス語が中流層に急速に広がる（フランス語化）。
+    - from: 1900
+      main: french
+      minor: dutch
+      note: 1910年の調査で、ブリュッセル都市圏ではフランス語だけを話す住民と二言語話者が多数になる。要確認
+
+- id: lang_arlon
+  name: アルロン（ルクセンブルク語の地域）
+  select:
+    pieces: [BEL-Arlon]
+  timeline:
+    - from: 1648
+      main: german
+      minor: french
+      note: ルクセンブルク方言（ドイツ語の一種）。1839年のロンドン条約でベルギー領になったあと、フランス語化が進む。
+
+- id: lang_virton
+  name: ヴィルトン（ゴーム地方）
+  select:
+    pieces: [BEL-Virton]
+  timeline:
+    - from: 1648
+      main: french
+
+- id: lang_luxembourg
+  name: ルクセンブルク
+  select:
+    iso: [LUX]
+  timeline:
+    - from: 1648
+      main: german
+      minor: french
+      note: 民衆はルクセンブルク語（モーゼル・フランケン方言）。行政と上層はフランス語とドイツ語。
+
+# ======== スイス ========
+- id: lang_swiss_german
+  name: スイス（下地：ドイツ語圏）
+  select:
+    iso: [CHE, LIE]
+  timeline:
+    - from: 1648
+      main: german
+      note: スイスドイツ語（アレマン方言）。
+
+- id: lang_swiss_romandy
+  name: スイス・ロマンド（フランス語圏）
+  select:
+    adm1: ["CHE/Genève", "CHE/Vaud", "CHE/Neuchâtel", "CHE/Jura"]
+    pieces: [CHE-Courtelary, CHE-Moutier, CHE-La_Neuveville, CHE-La_Broye, CHE-La_Glane, CHE-La_Gruyere, CHE-La_Veveyse, CHE-Sion, CHE-Conthey, CHE-Herens, CHE-Martigny, CHE-Entremont, CHE-Saint_Maurice, CHE-Monthey]
+  timeline:
+    - from: 1648
+      main: french
+      note: 民衆の言葉はフランコ・プロヴァンサル語（ジュラ地方はオイル系のフランシュ＝コンテ方言）。ジュネーヴ・ヌーシャテルなどの都市から標準フランス語に置きかわっていく。
+
+- id: lang_fribourg_sarine
+  name: フリブール（ザリーネ）
+  select:
+    pieces: [CHE-La_Sarine]
+  timeline:
+    - from: 1648
+      main: french
+      minor: german
+      note: フリブール市はドイツ語とフランス語の境界の町。
+
+- id: lang_bilingual_towns
+  name: ビール・ムルテン・シエール（言語境界の地区）
+  select:
+    pieces: [CHE-Biel, CHE-Lac, CHE-Sierre]
+  timeline:
+    - from: 1648
+      main: german
+      minor: french
+      note: ビールは時計工業でジュラ地方からフランス語の住民が流入し、19世紀に二言語の町になる。ムルテン（湖水地区）とシエールにも両方の話者がいる。要確認（シエールはフランス語が多数とする見方もある）
+
+- id: lang_ticino
+  name: ティチーノ・グラウビュンデン南部（イタリア語圏）
+  select:
+    adm1: ["CHE/Ticino"]
+    pieces: [CHE-Moesa, CHE-Bernina]
+  timeline:
+    - from: 1648
+      main: italian
+      note: ロンバルド方言。ティチーノは1798年まで、スイスの共同支配地（ヘルヴェティア共和国以後は独立の州）。
+
+- id: lang_romansh
+  name: グラウビュンデンのロマンシュ語の谷（エンガディン・ズルセルヴァ・アルブラ）
+  select:
+    pieces: [CHE-Surselva, CHE-Inn, CHE-Albula, CHE-Hinterrhein]
+  timeline:
+    - from: 1648
+      main: romansh
+      minor: german
+      note: ロマンシュ語（レト・ロマンス語）。ラインヴァルトなどの高地にはヴァルザー（ドイツ語）の村がある。
+      source: "https://ja.wikipedia.org/wiki/ロマンシュ語"
+
+- id: lang_maloja
+  name: マローヤ（上エンガディンとブレガリア）
+  select:
+    pieces: [CHE-Maloja]
+  timeline:
+    - from: 1648
+      main: romansh
+      minor: italian
+      note: 上エンガディンはロマンシュ語、ブレガリア谷はイタリア語（ロンバルド方言）。
+
+- id: lang_imboden
+  name: イムボーデン（クール西方）
+  select:
+    pieces: [CHE-Imboden]
+  timeline:
+    - from: 1648
+      main: romansh
+      minor: german
+    - from: 1880
+      main: german
+      minor: romansh
+      note: クールに近い谷から、ロマンシュ語はドイツ語に置きかわっていく。要確認
+
+# ======== オーストリア ========
+- id: lang_austria_base
+  name: オーストリア（下地：ドイツ語）
+  select:
+    iso: [AUT]
+  timeline:
+    - from: 1648
+      main: german
+      note: バイエルン・オーストリア方言（フォアアールベルクはアレマン方言）。
+
+- id: lang_vienna
+  name: ウィーン
+  select:
+    pieces: [AUT-Wien_Stadt]
+  timeline:
+    - from: 1648
+      main: german
+    - from: 1880
+      main: german
+      note: 帝国の首都にボヘミア・モラヴィアからチェコ人が大量に流入し、1900年ごろには「チェコ人の最大の都市の一つ」と言われた（1910年の調査ではチェコ語を日常語とする者は約7%だが、実数はもっと多いとされる）。ガリツィアなどから来たユダヤ人も多い。
+
+- id: lang_burgenland_croat
+  name: ブルゲンラント（クロアチア人の村のある地域）
+  select:
+    pieces: [AUT-Oberpullendorf, AUT-Gussing, AUT-Eisenstadt_Umgebung, AUT-Neusiedl_am_See]
+  timeline:
+    - from: 1648
+      main: german
+      minor: serbocroatian
+      note: 16世紀にオスマン帝国から逃れたクロアチア人が西ハンガリー（いまのブルゲンラント）に移住し、ブルゲンラント・クロアチア語の村を作った。要確認（ノイジードル湖周辺はハンガリー語の村も混じる）
+      source: "https://ja.wikipedia.org/wiki/ブルゲンラント・クロアチア人"
+
+- id: lang_oberwart
+  name: オーバーヴァルト（ハンガリー語の村のある地域）
+  select:
+    pieces: [AUT-Oberwart]
+  timeline:
+    - from: 1648
+      main: german
+      minor: hungarian
+      note: オーバーヴァルト（フェルシェーウール）周辺には中世の国境警備民の流れをくむハンガリー語の村がある。
+
+- id: lang_south_carinthia
+  name: 南ケルンテン（ヴェルカーマルクト・ヤウン谷）
+  select:
+    pieces: [AUT-Volkermarkt]
+  timeline:
+    - from: 1648
+      main: slovene
+      minor: german
+      note: ドラウ川の南の農村はスロヴェニア語。町はドイツ語。1910年の調査でも、のちの住民投票（1920）の A 地区ではスロヴェニア語の話者が多数。
+      source: "https://ja.wikipedia.org/wiki/ケルンテン住民投票"
+
+- id: lang_klagenfurt_land
+  name: クラーゲンフルト周辺・ロゼンタール
+  select:
+    pieces: [AUT-Klagenfurt_Land]
+  timeline:
+    - from: 1648
+      main: slovene
+      minor: german
+    - from: 1880
+      main: german
+      minor: slovene
+      note: クラーゲンフルトに近い所からドイツ語化が進む。要確認
+
+- id: lang_carinthia_mixed
+  name: フィラッハ周辺・ガイル谷
+  select:
+    pieces: [AUT-Villach_Land, AUT-Hermagor]
+  timeline:
+    - from: 1648
+      main: german
+      minor: slovene
+      note: ガイル谷下流とフィラッハ南方の村はスロヴェニア語。
+
+# ======== ボヘミア・モラヴィア・オーストリア領シュレジエン ========
+- id: lang_bohemia_czech
+  name: ボヘミア・モラヴィア（下地：チェコ語）
+  select:
+    iso: [CZE]
+  timeline:
+    - from: 1648
+      main: czech
+      note: 白山の戦い（1620）の後、チェコ語の貴族の多くが追放・没落し、上層と都市ではドイツ語が優勢になる。農村の民衆はチェコ語。
+    - from: 1800
+      main: czech
+      note: 民族再生運動（ドブロフスキー、ユングマン、パラツキー）で、チェコ語の書き言葉が復興する。
+      source: "https://ja.wikipedia.org/wiki/チェコ民族復興運動"
+
+- id: lang_sudeten_core
+  name: ボヘミア・モラヴィアの国境地帯（ドイツ語の地域：エーガーラント・北ボヘミア・北モラヴィア）
+  select:
+    pieces: [CZE-Cheb, CZE-Karlovy_Vary, CZE-Sokolov, CZE-Chomutov, CZE-Usti_nad_Labem, CZE-D_in, CZE-eska_Lipa, CZE-Liberec, CZE-Jablonec_nad_Nisou, CZE-Tachov, CZE-esky_Krumlov, CZE-umperk, CZE-Jesenik, CZE-Bruntal]
+  timeline:
+    - from: 1648
+      main: german
+      note: 中世の東方植民以来のドイツ語の地域（20世紀に「ズデーテン地方」と呼ばれる）。三十年戦争後の再植民でもドイツ語の住民が入った。
+      source: "https://ja.wikipedia.org/wiki/ズデーテン地方"
+
+- id: lang_sudeten_mixed
+  name: 国境地帯の混在地区（テプリツェ・モスト・リトムニェジツェ・トルトノフ・スヴィタヴィ・ノヴィー・イチーン）
+  select:
+    pieces: [CZE-Teplice, CZE-Most, CZE-Litom_ice, CZE-Trutnov, CZE-Svitavy, CZE-Novy_Ji_in]
+  timeline:
+    - from: 1648
+      main: german
+      minor: czech
+      note: 言語境界の地区。スヴィタヴィ（シェーンヘングスト地方）、ノヴィー・イチーン（クーレンヒェン）はドイツ語の多い地域。
+    - from: 1880
+      main: german
+      minor: czech
+      note: 北ボヘミアの褐炭鉱山（モスト・テプリツェ）にチェコ人の労働者が流入する。
+
+- id: lang_bohemia_border_czech
+  name: 国境地帯のチェコ語多数の地区（ドイツ語の少数派あり）
+  select:
+    pieces: [CZE-Louny, CZE-Nachod, CZE-Usti_nad_Orlici, CZE-Rychnov_nad_Kn_nou, CZE-Doma_lice, CZE-Klatovy, CZE-Prachatice, CZE-Jind_ich_v_Hradec, CZE-Plze_North, CZE-Znojmo, CZE-B_eclav, CZE-Olomouc, CZE-Jihlava, CZE-Opava]
+  timeline:
+    - from: 1648
+      main: czech
+      minor: german
+      note: 町（オロモウツ・イフラヴァ・ズノイモ・オパヴァ）や国境寄りの村にドイツ語の住民が多い。イフラヴァ周辺はドイツ語の「言語の島」。要確認（ズノイモ・プラハティツェは南部・西部ではドイツ語が多数）
+
+- id: lang_brno
+  name: ブルノ市
+  select:
+    pieces: [CZE-Brno_City]
+  timeline:
+    - from: 1648
+      main: german
+      minor: czech
+      note: モラヴィアの中心都市。市内はドイツ語が多数（1900年でも約6割）、周辺の農村と流入した労働者はチェコ語。
+
+- id: lang_prague
+  name: プラハ
+  select:
+    pieces: [CZE-Prague]
+  timeline:
+    - from: 1648
+      main: czech
+      minor: german
+      note: 18世紀〜19世紀前半の上層・官吏・商人はドイツ語。
+    - from: 1880
+      main: czech
+      note: 農村からのチェコ人の流入で、1880年代にはドイツ語の住民は1割以下になる。
+
+- id: lang_teschen_cz
+  name: テッシェン（チェシン）・シロンスク西部（カルヴィナー）
+  select:
+    pieces: [CZE-Karvina]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: czech
+      note: チェシン・シロンスクの農民はポーランド語のシロンスク方言。
+    - from: 1880
+      main: polish
+      minor: czech
+      note: 炭鉱の発展でガリツィアからポーランド人、モラヴィアからチェコ人の労働者が集まる。
+
+- id: lang_ostrava
+  name: オストラヴァ・フリーデク
+  select:
+    pieces: [CZE-Ostrava_City, CZE-Frydek_Mistek]
+  timeline:
+    - from: 1648
+      main: czech
+      minor: polish
+      note: ラシュスコ方言（チェコ語とポーランド語の中間）の地域。要確認
+
+# ======== イタリア ========
+- id: lang_italy_base
+  name: イタリア（下地：イタリア語）
+  select:
+    iso: [ITA, SMR, VAT]
+  timeline:
+    - from: 1648
+      main: italian
+      note: 民衆は各地の方言（ピエモンテ語・ロンバルド語・ヴェネト語・ナポリ語・シチリア語など）を話し、書き言葉はトスカーナ語にもとづくイタリア語。統一（1861）の時点で標準イタリア語を話せたのは人口の数パーセントとされる。南部にはアルバニア系（アルバレシュ）・ギリシア系（グリコ）の村が点在する。
+      source: "https://ja.wikipedia.org/wiki/イタリア語"
+
+- id: lang_aosta
+  name: ヴァッレ・ダオスタ
+  select:
+    pieces: [ITA-Aosta]
+  timeline:
+    - from: 1648
+      main: french
+      note: 民衆はフランコ・プロヴァンサル語、書き言葉・公用語はフランス語（サヴォイア家の時代から）。イタリア統一後にイタリア語化の政策が始まる。
+
+- id: lang_cuneo
+  name: クーネオ（オック語の谷のある地域）
+  select:
+    pieces: [ITA-Cuneo]
+  timeline:
+    - from: 1648
+      main: italian
+      minor: occitan
+      note: アルプス側の谷（ヴァル・マイラ、ヴァル・ヴァライタなど）はオック語。平野はピエモンテ語。
+
+- id: lang_south_tyrol
+  name: 南チロル（ボルツァーノ）
+  select:
+    pieces: [ITA-Bolzano]
+  timeline:
+    - from: 1648
+      main: german
+      minor: romansh
+      note: ドイツ語（バイエルン方言）。ドロミテのガルデーナ谷・バディア谷はラディン語（レト・ロマンス語）。ボルツァーノ南方のサルルン（サロルノ）付近から南はイタリア語。
+      source: "https://ja.wikipedia.org/wiki/南チロル"
+
+- id: lang_trentino
+  name: トレンティーノ
+  select:
+    pieces: [ITA-Trento]
+  timeline:
+    - from: 1648
+      main: italian
+      note: トレント司教領（帝国の一部）だが、住民はイタリア語。ファッサ谷はラディン語、高地の一部にドイツ語の村（モケーニ・チンブリ）。
+
+- id: lang_friuli
+  name: フリウリ
+  select:
+    pieces: [ITA-Udine, ITA-Pordenone]
+  timeline:
+    - from: 1648
+      main: romansh
+      minor: italian
+      note: 農村はフリウリ語（レト・ロマンス語。ここでは romansh で塗る）。都市はヴェネト方言。ナティゾーネ谷などの東端の山地はスロヴェニア語。
+      source: "https://ja.wikipedia.org/wiki/フリウリ語"
+
+- id: lang_gorizia_it
+  name: ゴリツィア
+  select:
+    pieces: [ITA-Gorizia]
+  timeline:
+    - from: 1648
+      main: romansh
+      minor: slovene
+      note: ゴリツィア伯領（ハプスブルク家領）の平野はフリウリ語、丘陵と山地はスロヴェニア語。町はイタリア語・ドイツ語も使われた。
+
+- id: lang_trieste
+  name: トリエステ
+  select:
+    pieces: [ITA-Trieste]
+  timeline:
+    - from: 1648
+      main: italian
+      minor: slovene
+      note: 市内はイタリア語（ヴェネト方言）。カルスト台地の村はスロヴェニア語。
+    - from: 1720
+      main: italian
+      minor: slovene
+      note: 1719年の自由港の指定で、ハプスブルク帝国の港として急成長。ギリシア人・ドイツ人・ユダヤ人なども集まる。1910年の調査でスロヴェニア語話者は約25%。
+
+- id: lang_sardinia
+  name: サルデーニャ
+  select:
+    pieces: [ITA-Cagliari, ITA-Nuoro, ITA-Oristano, ITA-Sud_Sardegna]
+  timeline:
+    - from: 1648
+      main: sardinian
+      minor: spanish
+      note: 民衆はサルデーニャ語（イタリア語とは別のロマンス系言語）。スペイン領の時代、行政と教養層はスペイン語・カタルーニャ語。
+      source: "https://ja.wikipedia.org/wiki/サルデーニャ語"
+    - from: 1720
+      main: sardinian
+      minor: italian
+      note: 1720年にサヴォイア家のサルデーニャ王国になり、1760年代から公用語がイタリア語に切りかわる。
+
+- id: lang_sassari
+  name: サッサリ（サルデーニャ北部）
+  select:
+    pieces: [ITA-Sassari]
+  timeline:
+    - from: 1648
+      main: sardinian
+      minor: italian
+      note: サッサリ語・ガッルーラ語（コルシカ語に近いイタリア系）とサルデーニャ語が混在する。アルゲーロはカタルーニャ語。
