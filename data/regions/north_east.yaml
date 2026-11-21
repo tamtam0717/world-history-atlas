@@ -1332,6 +1332,20 @@
       source: "https://en.wikipedia.org/wiki/Ossetia"
       note: "年は便宜的（1830年前後の討伐による。要確認）"
 
+- id: dagestan_russian
+  name: ダゲスタンの平地と南部（イマーム国の外）
+  select:
+    pieces: [RUS-x_19, RUS-x_20, RUS-x_21, RUS-Agulsky_District, RUS-Akhtynsky_District, RUS-Akushinsky_District, RUS-Babayurtovsky_District, RUS-Buynaksky_District, RUS-Dakhadayevsky_District, RUS-Dokuzparinsky_District, RUS-Kaytagsky_District, RUS-Khasavyurtovsky_District, RUS-Khivsky_District, RUS-Kizilyurtovsky_District, RUS-Kulinsky_District, RUS-Kurakhsky_District, RUS-Laksky_District, RUS-Levashinsky_District, RUS-Rutulsky_District, RUS-Sergokalinsky_District, RUS-Suleyman_Stalsky_District, RUS-Tabasaransky_District]
+  timeline:
+    - from: 1834
+      owner: russia
+      certainty: uncertain
+      note: "クムイクの平地（タルキのシャムハル領）、ダルギン人の地（アクシャ）、カジクムフ・キュレ・タバサランなど南部の諸侯国。ロシアの支配下に残ったが、イマーム国の攻撃や離反で揺れた（1840年代にはカジクムフなどが一時イマーム国側）"
+    - from: 1859
+      owner: russia
+      cause: "シャミールの降伏でダゲスタン全体がロシアに平定される"
+      source: "https://ja.wikipedia.org/wiki/イマーム・シャミール"
+
 - id: chechnya
   name: チェチェン・イングーシ
   select:
@@ -1371,7 +1385,7 @@
       certainty: uncertain
       cause: "シャミールがイマームとなり、ダゲスタン山地のイマーム国がロシアへの抵抗の中心となる"
       source: "https://ja.wikipedia.org/wiki/コーカサス・イマーム国"
-      note: "イマーム国の領域は戦況で大きく動いた（1843年ごろが最大）"
+      note: "アヴァール人・アンディ人などの山地。イマーム国の領域は戦況で大きく動いた（1843年ごろが最大）。平地と南部は dagestan_russian でロシア側として描く"
     - from: 1859
       owner: russia
       cause: "グニブでシャミールが降伏し、イマーム国が滅ぶ"

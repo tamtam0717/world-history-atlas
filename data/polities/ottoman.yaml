@@ -574,6 +574,11 @@
     - {name: ロトフ・アリー・ハン, title: ザンド朝の君主, from: 1789, to: 1794, source: "https://en.wikipedia.org/wiki/Lotf_Ali_Khan"}
     - {name: アーガー・モハンマド・ハーン, title: シャー（ガージャール朝）, from: 1794, to: 1797, note: 1794年にザンド朝を滅ぼしてイランを統一し、1796年に正式に戴冠。それ以前は qajar_north（ガージャール族）を参照。, source: "https://ja.wikipedia.org/wiki/アーガー・モハンマド・シャー"}
     - {name: ファトフ・アリー・シャー, title: シャー（ガージャール朝）, from: 1797, to: 1834, source: "https://ja.wikipedia.org/wiki/ファトフ・アリー・シャー"}
+    - {name: モハンマド・シャー, title: シャー（ガージャール朝）, from: 1834, to: 1848, source: "https://ja.wikipedia.org/wiki/モハンマド・シャー"}
+    - {name: ナーセロッディーン・シャー, title: シャー（ガージャール朝）, from: 1848, to: 1896, note: 宰相アミール・キャビールの改革（1848–1851）。1896年に暗殺された。, source: "https://ja.wikipedia.org/wiki/ナーセロッディーン・シャー"}
+    - {name: モザッファロッディーン・シャー, title: シャー（ガージャール朝）, from: 1896, to: 1907, note: 1906年に憲法と議会を認めた。, source: "https://ja.wikipedia.org/wiki/モザッファロッディーン・シャー"}
+    - {name: モハンマド・アリー・シャー, title: シャー（ガージャール朝）, from: 1907, to: 1909, note: 1908年に議会を砲撃して解散したが、立憲派に追われて退位。, source: "https://ja.wikipedia.org/wiki/モハンマド・アリー・シャー"}
+    - {name: アフマド・シャー, title: シャー（ガージャール朝）, from: 1909, to: 1925, note: 即位時11歳。, source: "https://ja.wikipedia.org/wiki/アフマド・シャー"}
   periods:
     - from: 1648
       to: 1721
@@ -593,7 +598,16 @@
     - from: 1794
       to: 1815
       text: アーガー・モハンマド・ハーンがザンド朝を倒してイランを統一し、テヘランを都とした（ガージャール朝）。ファトフ・アリー・シャーはロシアとの戦争に敗れ、グリスタン条約（1813）でカフカースの大半を失った。
-  source: "https://ja.wikipedia.org/wiki/サファヴィー朝"
+    - from: 1816
+      to: 1847
+      text: 第二次イラン＝ロシア戦争に敗れ、トルコマンチャーイ条約（1828）でエレバン・ナヒチェヴァンを失い、治外法権と低関税を認めた。ヘラートの奪回をめざしたが（1837–1838年の包囲）、イギリスの干渉で果たせなかった。
+    - from: 1848
+      to: 1895
+      text: ナーセロッディーン・シャーの長い治世。バーブ教徒の反乱（1848–1852）を鎮圧した。ヘラートを占領したが英国＝イラン戦争に敗れ、パリ条約（1857）でアフガニスタンへの権利を捨てた。ロシア・イギリスに利権を次々と与え、タバコ・ボイコット運動（1891–1892）で利権の撤回に追い込まれた。
+    - from: 1896
+      to: 1914
+      text: イラン立憲革命（1905–1911）で議会と憲法（1906）ができたが、英露協商（1907）で北部はロシア、南東部はイギリスの勢力圏に分けられ、1911年にはロシア軍の介入で議会が閉鎖された。1908年に南西部で石油が見つかった。
+  source: "https://ja.wikipedia.org/wiki/ガージャール朝"
 
 - id: hotaki
   name: ホータキー朝（アフガン）
@@ -660,22 +674,66 @@
     - {name: ザマーン・シャー, title: シャー, from: 1793, to: 1801, source: "https://en.wikipedia.org/wiki/Zaman_Shah_Durrani"}
     - {name: マフムード・シャー, title: シャー, from: 1801, to: 1803, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
     - {name: シュジャー・シャー, title: シャー, from: 1803, to: 1809, source: "https://en.wikipedia.org/wiki/Shah_Shuja_Durrani"}
-    - {name: マフムード・シャー（再任）, title: シャー, from: 1809, to: 1818, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
+    - {name: マフムード・シャー（再任）, title: シャー, from: 1809, to: 1818, note: 1818年に宰相ファトフ・ハーン（バーラクザイ家）を殺したことで王国は分裂し、以後ヘラートだけを保った（herat）。, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
   periods:
     - from: 1747
       to: 1772
       text: ナーディル・シャーの部将だったアフマド・シャーがカンダハールで即位し、アフガニスタンの基礎を築いた。インドにもたびたび遠征した。
     - from: 1773
       to: 1815
-      text: 首都をカーブルに移したが、ティムール・シャーの死後は王子たちの争いで弱体化した。ヘラートは王族が治める半ば独立の地となった。
+      text: 首都をカーブルに移したが、ティムール・シャーの死後は王子たちの争いで弱体化した。ヘラートは王族が治める半ば独立の地となった。1818年に王国は分裂し、カーブル・カンダハールはバーラクザイ家の兄弟の手に移った。
   source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"
+
+- id: herat
+  name: ヘラート侯国
+  short: ヘラート
+  color: "#cdb790"
+  kind: 侯国
+  note: ドゥッラーニー朝の分裂後、サドーザイ家のマフムード・シャー、カームラーン・シャーがヘラートを保った。1842年からは宰相ヤール・モハンマド・ハーンの一族が治め、ペルシアとアフガニスタンが奪い合った。
+  rulers:
+    - {name: マフムード・シャー, title: シャー, from: 1818, to: 1829, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_Durrani"}
+    - {name: カームラーン・シャー, title: シャー, from: 1829, to: 1842, note: 1837–1838年のペルシア軍の包囲に耐えた。, source: "https://en.wikipedia.org/wiki/Kamran_Shah_Durrani"}
+    - {name: ヤール・モハンマド・ハーン, title: 宰相・支配者, from: 1842, to: 1851, source: "https://en.wikipedia.org/wiki/Yar_Mohammad_Khan_Alakozai"}
+    - {name: サイード・モハンマド・ハーン, title: 支配者, from: 1851, to: 1855, note: 要確認}
+    - {name: スルターン・アフマド・ハーン, title: 支配者（ペルシアの保護下）, from: 1857, to: 1863, note: 1855–1857年はペルシアの介入で支配者がめまぐるしく替わった（要確認）。, source: "https://en.wikipedia.org/wiki/Sultan_Ahmad_Khan"}
+  periods:
+    - from: 1818
+      to: 1862
+      text: ペルシアはヘラートの奪回をめざして1837–1838年と1856年に攻めたが、イギリスが軍事介入して阻んだ（パリ条約、1857）。1863年にドースト・モハンマドが攻め落とし、アフガニスタンに統合された。
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Herat"
+
+- id: afghanistan
+  name: アフガニスタン（バーラクザイ朝）
+  short: アフガニスタン
+  color: "#d5c2a0"
+  kind: 王国（アミール）
+  note: 1818年以後、バーラクザイ家の兄弟がカーブル・カンダハールなどを分けて治めた。ドースト・モハンマドが1826年にカーブルを押さえ、1834年からアミールを称した。地図の範囲はアフガニスタン西部（ファラー・ニームルーズ・ヘラート）だけ。1879年のガンダマク条約から外交はイギリスが握った（保護国）。
+  rulers:
+    - {name: ドースト・モハンマド・ハーン, title: カーブルのアミール, from: 1826, to: 1839, source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
+    - {name: シュジャー・シャー, title: シャー（イギリスが擁立）, from: 1839, to: 1842, note: 第一次アフガン戦争でイギリスが復位させたが、1842年に殺された。, source: "https://en.wikipedia.org/wiki/Shah_Shuja_Durrani"}
+    - {name: ドースト・モハンマド・ハーン（再任）, title: アミール, from: 1842, to: 1863, note: 1855年にカンダハール、1863年にヘラートを併合した。, source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
+    - {name: シール・アリー・ハーン, title: アミール, from: 1863, to: 1866, source: "https://en.wikipedia.org/wiki/Sher_Ali_Khan"}
+    - {name: モハンマド・アフザル・ハーン, title: アミール, from: 1866, to: 1867, source: "https://en.wikipedia.org/wiki/Mohammad_Afzal_Khan"}
+    - {name: モハンマド・アアザム・ハーン, title: アミール, from: 1867, to: 1868, source: "https://en.wikipedia.org/wiki/Mohammad_Azam_Khan"}
+    - {name: シール・アリー・ハーン（再任）, title: アミール, from: 1868, to: 1879, source: "https://en.wikipedia.org/wiki/Sher_Ali_Khan"}
+    - {name: モハンマド・ヤアクーブ・ハーン, title: アミール, from: 1879, to: 1879, note: ガンダマク条約を結んだ。, source: "https://en.wikipedia.org/wiki/Mohammad_Yaqub_Khan"}
+    - {name: アブドゥッラフマーン・ハーン, title: アミール, from: 1880, to: 1901, note: 「鉄のアミール」。デュアランド・ライン（1893）を認めた。, source: "https://ja.wikipedia.org/wiki/アブドゥッラフマーン・ハーン"}
+    - {name: ハビーブッラー・ハーン, title: アミール, from: 1901, to: 1919, source: "https://en.wikipedia.org/wiki/Habibullah_Khan"}
+  periods:
+    - from: 1826
+      to: 1878
+      text: ドースト・モハンマドが国を立て直したが、ロシアの南下をおそれたイギリスが侵攻した（第一次アフガン戦争、1838–1842）。イギリス軍は大敗して撤退し、ドースト・モハンマドが復位してカンダハール・ヘラートを統合した。
+    - from: 1879
+      to: 1914
+      text: 第二次アフガン戦争（1878–1880）ののち、ガンダマク条約で外交をイギリスに委ねる保護国となった。英露の緩衝国として国境が定められ（パンジデ事件1885、デュアランド・ライン1893）、アブドゥッラフマーンが中央集権化を進めた。
+  source: "https://ja.wikipedia.org/wiki/バーラクザイ朝"
 
 - id: kalat
   name: カラート・ハン国
   short: カラート
   color: "#cbbf9b"
   kind: ハン国
-  note: バローチスターンのハン国。ナーディル・シャー、のちドゥッラーニー朝に臣従したが、1758年のカラート条約で事実上自立した。地図の範囲はごく一部（要確認）。
+  note: バローチスターンのハン国。ナーディル・シャー、のちドゥッラーニー朝に臣従したが、1758年のカラート条約で事実上自立した。1876年のマストゥング条約でイギリスの保護下に入った（バローチスターン管区）。地図の範囲はごく一部（要確認）。
   source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"
 
 # ---------------------------------------------------------------- 中央アジア
@@ -692,6 +750,12 @@
     - from: 1740
       to: 1815
       text: ナーディル・シャーに征服されたのち（1740）、内紛が続いた。1804年にコングラト朝が成立し、アラル海南岸のカラカルパクなどへ勢力を広げた。
+    - from: 1816
+      to: 1872
+      text: ムハンマド・ラヒーム・ハン（1806–1825）らのもとで、トルクメン諸部族やメルヴに勢力を広げた。1839–1840年のロシアのペロフスキー遠征は冬の草原で失敗した。
+    - from: 1873
+      to: 1914
+      text: 1873年にロシア軍に首都を落とされ、ガンデミアン条約でアム川右岸をロシアに割譲し、ロシアの保護国となった。
   source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"
 
 - id: bukhara
@@ -709,7 +773,21 @@
     - from: 1740
       to: 1815
       text: ナーディル・シャーに服属したのち、マンギト部が実権を握った（マンギト朝）。シャー・ムラード（1785–1800）がアミールを称し、1785年ごろメルヴを奪った。
+    - from: 1816
+      to: 1867
+      text: ナスルッラー（1827–1860）がコーカンドと争った。メルヴは1820年代からヒヴァ、のちトルクメンの手に移った。
+    - from: 1868
+      to: 1914
+      text: ロシア軍にサマルカンドを奪われ（1868）、ロシアの保護国となった。
   source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"
+
+- id: kokand
+  name: コーカンド・ハン国
+  short: コーカンド
+  color: "#c9d6a0"
+  kind: ハン国
+  note: フェルガナ盆地を本拠とするウズベクのハン国。19世紀前半にシル川中流・下流に勢力を広げ、1817年ごろアク・メチェト（現クズロルダ）に要塞を築いた。1853年にロシアがアク・メチェトを落とし、1876年にハン国はロシアに併合された。地図の範囲はシル川下流（クズロルダ）だけ。
+  source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"
 
 - id: kazakh
   name: カザフ＝ハン国（小ジュズ）
@@ -724,6 +802,9 @@
     - from: 1731
       to: 1815
       text: 小ジュズはロシアの保護を求めた。ロシアはオレンブルク（1743）などの要塞線を築いて草原に進出した。1801年にはヴォルガ・ウラル間にブケイ・オルダが置かれた。
+    - from: 1816
+      to: 1847
+      text: ロシアは中ジュズ（1822）・小ジュズ（1824）のハン位を廃止して直接統治に移った。ケネサル・カスモフの反乱（1837–1847）を最後に、カザフ草原はロシアの支配下に入った。
   source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"
 
 # ---------------------------------------------------------------- カフカース
@@ -785,7 +866,7 @@
   short: ミングレリア
   color: "#c3d8a1"
   kind: 公国
-  note: ジョージア西部、黒海沿岸の公国（ダディアニ家）。1803年にロシアの保護国となった。
+  note: ジョージア西部、黒海沿岸の公国（ダディアニ家）。1803年にロシアの保護国となり、1857年にロシアの直接統治に移され、1867年に公国は廃止された。
   source: "https://en.wikipedia.org/wiki/Principality_of_Mingrelia"
 
 - id: guria
@@ -793,7 +874,7 @@
   short: グリア
   color: "#a9c9b9"
   kind: 公国
-  note: ジョージア西南部の小公国（グリエリ家）。1810年にロシアの保護国となった。
+  note: ジョージア西南部の小公国（グリエリ家）。1810年にロシアの保護国となり、1829年に併合された。
   source: "https://en.wikipedia.org/wiki/Principality_of_Guria"
 
 - id: abkhazia
@@ -801,7 +882,7 @@
   short: アブハジア
   color: "#a0b9ca"
   kind: 公国（オスマン帝国の宗主権下）
-  note: シェルヴァシゼ（チャチバ）家の公国。1810年にロシアの保護国となった。
+  note: シェルヴァシゼ（チャチバ）家の公国。1810年にロシアの保護国となり、1864年に併合された。その後、多くのムスリム住民がオスマン帝国へ移住（追放）された。
   source: "https://en.wikipedia.org/wiki/Principality_of_Abkhazia"
 
 # ---------------------------------------------------------------- アラビア半島

@@ -1,0 +1,471 @@
+# 言語（民族）の分布：北欧・フィンランド・バルト地方・グリーンランド（1648–1914）
+# 形式は docs/language-format.md。main = 住民（特に農村の民衆）の多数派の言語、minor = 2〜3割以上の少数派。
+# バルト地方（エストニア・リヴォニア・クールラント）の領主と都市の上層はドイツ系（バルト・ドイツ人）。
+# 人口の1割に満たないため、農村では minor にせず note に書く。
+
+# ======== デンマーク ========
+- id: lang_denmark
+  name: デンマーク
+  select:
+    iso: [DNK]
+  timeline:
+    - from: 1648
+      main: danish
+
+- id: lang_north_schleswig
+  name: 北シュレースヴィヒ（南ユトランド）
+  select:
+    regions: [schleswig_dk]
+  timeline:
+    - from: 1648
+      main: danish
+      minor: german
+      note: 農村は南ユトランド方言のデンマーク語。トゥナー・オーベンロー・セナボーなどの町の上層はドイツ語。1864–1920年はプロイセン領で、ドイツ語化の政策がとられた。
+
+# ======== ノルウェー ========
+- id: lang_norway
+  name: ノルウェー
+  select:
+    iso: [NOR]
+  timeline:
+    - from: 1648
+      main: norwegian
+      note: 民衆はノルウェー語の諸方言。デンマークとの同君連合（〜1814）の時代、書き言葉はデンマーク語。19世紀にイーヴァル・オーセンの「ランスモール（ニーノシュク）」と、デンマーク語をノルウェー化した「リクスモール（ブークモール）」が生まれる。
+      source: "https://ja.wikipedia.org/wiki/ノルウェー語"
+
+- id: lang_sapmi_no_inner
+  name: フィンマルク内陸（カウトケイノ・カラショーク）
+  select:
+    pieces: [NOR-Guovdageaidnu_sme_1, NOR-Kara_johka_sme_1]
+  timeline:
+    - from: 1648
+      main: sami
+      note: トナカイ遊牧の北サーミ人の地域。1751年のストレムスタード条約でノルウェーとスウェーデンの国境が引かれた。
+
+- id: lang_sapmi_no_east
+  name: フィンマルク東部（タナ・ネッセビー・ポルサンゲル）
+  select:
+    pieces: [NOR-Deatnu_sme_1, NOR-Unjarga_sme_1, NOR-Porsa_gu_sme_2]
+  timeline:
+    - from: 1648
+      main: sami
+      minor: norwegian
+      note: フィヨルドと川沿いのサーミ人（海サーミ・川サーミ）。19世紀にはフィンランドから移住したクヴェン人（フィンランド語）も加わる。
+
+- id: lang_finnmark_coast
+  name: フィンマルクとトロムス北部の沿岸
+  select:
+    pieces: [NOR-Alta_nor, NOR-Hammerfest_nor, NOR-Hasvik_nor, NOR-Kvalsund_nor, NOR-Loppa_nor, NOR-Masy_nor, NOR-Nordkapp_nor, NOR-Lebesby_nor, NOR-Gamvik_nor, NOR-Berlevag_nor, NOR-Batsfjord_nor, NOR-Vard_nor, NOR-Sr_Varanger_nor,
+             NOR-Kafjord_nor_2, NOR-Lyngen_nor, NOR-Omasvuotna_sme_2, NOR-Kvnangen_nor, NOR-Nordreisa_nor, NOR-Skjervy_nor, NOR-Loabak_sme_1, NOR-Divtasvuodna_smj_1, NOR-Fuossko_smj_2, NOR-Habmer_smj_2]
+  timeline:
+    - from: 1648
+      main: norwegian
+      minor: sami
+      note: 漁村と交易地はノルウェー語。フィヨルドの奥にはサーミ人の村が多い。19世紀後半から「ノルウェー化」の政策で、学校でのサーミ語の使用が制限される。
+
+- id: lang_vadso
+  name: ヴァッソー（クヴェン人の町）
+  select:
+    pieces: [NOR-Vads_nor]
+  timeline:
+    - from: 1648
+      main: norwegian
+      minor: sami
+    - from: 1800
+      main: norwegian
+      minor: finnish
+      note: 18世紀末から19世紀に、北フィンランドとトルネ谷からクヴェン人が移住し、1870年代には住民の半数近くがフィンランド語を話した。要確認
+
+# ======== スウェーデン ========
+- id: lang_sweden
+  name: スウェーデン
+  select:
+    iso: [SWE]
+  timeline:
+    - from: 1648
+      main: swedish
+      note: ヴェルムランドの森林地帯には16〜17世紀に移住した「森のフィン人」（フィンランド語）の村が点在する。
+
+- id: lang_scania
+  name: スコーネ・ブレーキンゲ・ハッランド
+  select:
+    regions: [scania, halland]
+  timeline:
+    - from: 1648
+      main: danish
+      note: 1658年のロスキレ条約（ハッランドは1645年のブレムセブルー条約）までデンマーク領。
+    - from: 1700
+      main: swedish
+      note: 教会・学校のスウェーデン化（デンマーク語の聖書・讃美歌の禁止）が進み、18世紀初めまでに書き言葉はスウェーデン語に切りかわった。話し言葉のスコーネ方言は、もとはデンマーク語の東部方言。
+      source: "https://ja.wikipedia.org/wiki/スコーネ地方"
+
+- id: lang_bohuslan
+  name: ボーヒュースレーン
+  select:
+    regions: [bohuslan]
+  timeline:
+    - from: 1648
+      main: norwegian
+      note: 1658年のロスキレ条約までノルウェー領。
+    - from: 1700
+      main: swedish
+      note: スウェーデン化が進む（方言はノルウェー語と近い）。
+
+- id: lang_tornedalen
+  name: トルネ谷（スウェーデン側）
+  select:
+    pieces: [SWE-Haparanda, SWE-Overtornea, SWE-Pajala]
+  timeline:
+    - from: 1648
+      main: finnish
+      note: トルネ谷の住民はフィンランド語（のちのメアンキエリ語）。1809年のフレデリクスハムン条約でトルネ川が国境になり、谷が二つに分けられた。
+      source: "https://ja.wikipedia.org/wiki/メアンキエリ語"
+    - from: 1880
+      main: finnish
+      minor: swedish
+      note: スウェーデン語だけの学校など、スウェーデン化の政策が始まる。
+
+- id: lang_norrbotten_ore
+  name: イェリヴァレ・キルナ（ラップランド北部）
+  select:
+    pieces: [SWE-Gallivare, SWE-Kiruna]
+  timeline:
+    - from: 1648
+      main: sami
+      minor: finnish
+      note: トナカイ遊牧のサーミ人と、フィンランド語の入植者。
+    - from: 1850
+      main: finnish
+      minor: sami
+    - from: 1900
+      main: swedish
+      minor: finnish
+      note: 鉄鉱山の開発とオーフォート線（1902）の開通で、キルナ・マルムベリェトに南からスウェーデン人の労働者が集まる。要確認
+
+- id: lang_lappmark
+  name: スウェーデン領ラップランド（ラップマルク）
+  select:
+    pieces: [SWE-Jokkmokk, SWE-Arjeplog, SWE-Arvidsjaur, SWE-Sorsele, SWE-Storuman, SWE-Vilhelmina, SWE-Dorotea, SWE-Lycksele, SWE-Mala, SWE-Asele]
+  timeline:
+    - from: 1648
+      main: sami
+      minor: swedish
+      note: サーミ人の地域。17世紀にスウェーデン王国がラップマルクへの入植を奨励し（1673年・1695年の布告）、銀山の開発も始まる。
+    - from: 1750
+      main: swedish
+      minor: sami
+      note: 1749年の布告などで、ヴェステルボッテンのラップマルクにはスウェーデン人の入植者の村が広がる。要確認（ノールボッテン側のヨックモック・アリエプローグはサーミ人の割合が高いまま）
+
+# ======== フィンランド ========
+- id: lang_finland
+  name: フィンランド
+  select:
+    iso: [FIN]
+  timeline:
+    - from: 1648
+      main: finnish
+      note: 民衆はフィンランド語。スウェーデン王国の時代、行政・教育・教会の上層の言葉はスウェーデン語。
+    - from: 1863
+      main: finnish
+      note: 1863年の言語令でフィンランド語も公用語になる（実施は1883年まで）。フェンノマン運動（スネルマンら）。
+      source: "https://ja.wikipedia.org/wiki/フェンノマン運動"
+
+- id: lang_finland_swedish_coast
+  name: フィンランドのスウェーデン語の沿岸（オストロボスニア・ウーシマー西部・トゥルク群島）
+  select:
+    pieces: [FIN-Pietarsaaren_seutukunta, FIN-Sydosterbotten, FIN-Vaasa_sub_region, FIN-Raseborgs_ekonomiska_region, FIN-Turunmaan_seutukunta]
+  timeline:
+    - from: 1648
+      main: swedish
+      minor: finnish
+      note: 中世のスウェーデン人の入植以来、沿岸の農民・漁民はスウェーデン語。
+      source: "https://ja.wikipedia.org/wiki/フィンランド・スウェーデン人"
+
+- id: lang_aland
+  name: オーランド諸島
+  select:
+    adm1: ["FIN/Åland Islands"]
+  timeline:
+    - from: 1648
+      main: swedish
+
+- id: lang_porvoo_loviisa
+  name: ポルヴォー・ロヴィーサ（ウーシマー東部）
+  select:
+    pieces: [FIN-Porvoon_seutukunta, FIN-Loviisan_seutukunta]
+  timeline:
+    - from: 1648
+      main: swedish
+      minor: finnish
+
+- id: lang_helsinki
+  name: ヘルシンキ周辺
+  select:
+    pieces: [FIN-Helsinki_sub_region]
+  timeline:
+    - from: 1648
+      main: swedish
+      minor: finnish
+      note: ヘルシンキ（ヘルシングフォシュ）とその周辺の農村はスウェーデン語。1812年にフィンランド大公国の首都になる。
+    - from: 1890
+      main: finnish
+      minor: swedish
+      note: 内陸からの労働者の流入で、1890年代にヘルシンキ市ではフィンランド語の話者がスウェーデン語の話者を上回る。
+
+- id: lang_finland_mixed_coast
+  name: トゥルク・コッコラ・キュロンマー（両言語の混在）
+  select:
+    pieces: [FIN-Turun_seutukunta, FIN-Kokkolan_seutukunta, FIN-Kyronmaan_seutukunta]
+  timeline:
+    - from: 1648
+      main: finnish
+      minor: swedish
+      note: トゥルク（オーボ）は1812年までの首都で、上層と商人はスウェーデン語。コッコラ周辺の沿岸（クロノビーなど）はスウェーデン語の村。
+
+- id: lang_sapmi_fi
+  name: フィンランド最北部（イナリ・ウツヨキ）
+  select:
+    pieces: [FIN-Pohjois_Lapin_seutukunta]
+  timeline:
+    - from: 1648
+      main: sami
+      minor: finnish
+      note: イナリ・サーミ語、北サーミ語、スコルト・サーミ語の地域。
+
+- id: lang_lapland_fell
+  name: フィンランド・ラップランド西部（エノンテキエ・キッティラ）
+  select:
+    pieces: [FIN-Tunturi_Lapin_seutukunta]
+  timeline:
+    - from: 1648
+      main: sami
+      minor: finnish
+    - from: 1800
+      main: finnish
+      minor: sami
+      note: フィンランド人の入植で、サーミ人は少数派になる。要確認
+
+# ======== エストニア ========
+- id: lang_estonia
+  name: エストニア
+  select:
+    iso: [EST]
+  timeline:
+    - from: 1648
+      main: estonian
+      note: 農民はエストニア語（南部はヴォロ語・セト語）。領主（荘園主）と都市の上層はバルト・ドイツ人で、農奴制のもとで支配していた。1710年からロシア領だが、ドイツ系貴族の特権は続いた。
+      source: "https://ja.wikipedia.org/wiki/バルト・ドイツ人"
+    - from: 1860
+      main: estonian
+      note: 農奴解放（1816–19）の後、エストニア語の新聞（ヤンセン）と民族叙事詩「カレヴィポエク」で民族覚醒が進む。1880年代からロシア化政策。
+
+- id: lang_tallinn
+  name: タリン（レヴァル）
+  select:
+    pieces: [EST-Tallinna_linn]
+  timeline:
+    - from: 1648
+      main: estonian
+      minor: german
+      note: ハンザ都市以来、市参事会・商人・職人の上層はドイツ語。下層はエストニア語。
+    - from: 1880
+      main: estonian
+      minor: russian
+      note: 工業化で農村からエストニア人が流入し、ドイツ人の割合は1割程度に下がる。ロシア人の官吏・労働者・軍人が増える。要確認
+
+- id: lang_narva
+  name: ナルヴァ
+  select:
+    pieces: [EST-Narva_linn]
+  timeline:
+    - from: 1648
+      main: estonian
+      minor: german
+      note: スウェーデン領時代の国境の要塞都市。
+    - from: 1720
+      main: estonian
+      minor: russian
+      note: 大北方戦争（1700–21）でロシア領。クレーンホルムの紡績工場（1857）にロシア人労働者が集まる。
+
+- id: lang_peipus_russian
+  name: ペイプス湖西岸（古儀式派の村）
+  select:
+    pieces: [EST-Mustvee_linn, EST-Kasepem_vald]
+  timeline:
+    - from: 1648
+      main: estonian
+    - from: 1700
+      main: russian
+      minor: estonian
+      note: 17世紀末から、ロシアの宗教的迫害を逃れた古儀式派（ラスコーリニキ）がペイプス湖の西岸に村を作った。
+      source: "https://ja.wikipedia.org/wiki/古儀式派"
+
+- id: lang_estonian_swedes
+  name: エストニアのスウェーデン人の地域（ノアルートシ・ヴォルムシ・ルフヌ）
+  select:
+    pieces: [EST-Noarootsi_vald, EST-Vormsi_vald, EST-Ruhnu_vald]
+  timeline:
+    - from: 1648
+      main: swedish
+      minor: estonian
+      note: 中世以来の沿岸スウェーデン人（エイボフォルク）の地域。
+      source: "https://ja.wikipedia.org/wiki/エストニア・スウェーデン人"
+
+- id: lang_hiiumaa_swedes
+  name: ヒーウマー島西部・パルディスキ
+  select:
+    pieces: [EST-Hiiu_vald, EST-Paldiski_linn]
+  timeline:
+    - from: 1648
+      main: estonian
+      minor: swedish
+      note: ヒーウマー島のレイギ、パクリ半島・パクリ諸島にスウェーデン語の村があった。
+    - from: 1781
+      main: estonian
+      note: 1781年、レイギのスウェーデン人はエカチェリーナ2世の命で南ウクライナへ移住させられた（「古スウェーデン村」）。
+
+# ======== ラトヴィア ========
+- id: lang_latvia
+  name: ラトヴィア（リヴォニア南部・クールラント）
+  select:
+    iso: [LVA]
+  timeline:
+    - from: 1648
+      main: latvian
+      note: 農民はラトヴィア語。領主と都市の上層はバルト・ドイツ人。クールラント北西部の海岸にはリヴォニア語（フィン系）の漁村が残った。1850年代から「青年ラトヴィア人」の民族覚醒。
+
+- id: lang_riga
+  name: リガ
+  select:
+    pieces: [LVA-R_ga, LVA-J_rmalas]
+  timeline:
+    - from: 1648
+      main: german
+      minor: latvian
+      note: ハンザ都市。市民権を持つ商人・職人はドイツ人で、ラトヴィア人は下層の労働者・使用人。スウェーデン領（1621–1710）、のちロシア領。
+    - from: 1880
+      main: latvian
+      minor: german
+      note: 工業化で農村からラトヴィア人が流入する。1897年の調査で、ラトヴィア人約45%、ドイツ人約23%、ロシア人約16%。
+      source: "https://ja.wikipedia.org/wiki/リガ"
+
+- id: lang_latgale
+  name: ラトガレ（ポーランド領リヴォニア）
+  select:
+    regions: [latgale]
+    pieces: [LVA-Ludzas_novads, LVA-R_zeknes, LVA-R_zeknes_novads, LVA-Kr_slavas_novads, LVA-Aug_daugavas_novads, LVA-Prei_u_novads, LVA-Balvu_novads]
+  timeline:
+    - from: 1648
+      main: latvian
+      minor: russian
+      note: 農民はラトガレ語（ラトヴィア語の東部方言）でカトリック。1772年までポーランド領で、領主はポーランド系。17世紀末から古儀式派のロシア人の村が増える。要確認（東端にはベラルーシ語の村もある）
+
+- id: lang_daugavpils
+  name: ダウガフピルス（ドヴィンスク）
+  select:
+    pieces: [LVA-Daugavpils]
+  timeline:
+    - from: 1648
+      main: latvian
+      minor: polish
+    - from: 1800
+      main: russian
+      minor: yiddish
+      note: ロシア領（1772–）の要塞都市。ユダヤ人の定住区域（パレ）の北端で、1897年にはユダヤ人が住民の4割以上、次いでロシア人・ポーランド人。要確認
+
+# ======== リトアニア ========
+- id: lang_lithuania
+  name: リトアニア
+  select:
+    iso: [LTU]
+  timeline:
+    - from: 1648
+      main: lithuanian
+      note: 農民はリトアニア語（西部はジェマイティア方言）。貴族は16世紀からポーランド語化していた。町にはユダヤ人（イディッシュ語）が多い。
+    - from: 1864
+      main: lithuanian
+      note: 1月蜂起（1863）の後、ロシア政府がラテン文字のリトアニア語出版を禁止（〜1904）。プロイセン領から本を運び込む「本の密輸人」が活躍した。
+      source: "https://ja.wikipedia.org/wiki/リトアニア語出版禁止令"
+
+- id: lang_vilnius_city
+  name: ヴィリニュス（ヴィルノ）
+  select:
+    pieces: [LTU-Vilnius_city_municipality]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+      note: リトアニア大公国の首都だが、市民と貴族の言葉はポーランド語。ユダヤ人の学問の中心（「リトアニアのエルサレム」）。
+    - from: 1800
+      main: polish
+      minor: yiddish
+      note: 1897年の調査で、イディッシュ語約40%、ポーランド語約31%、ロシア語約20%、リトアニア語約2%。
+      source: "https://ja.wikipedia.org/wiki/ヴィリニュス"
+
+- id: lang_kaunas_city
+  name: カウナス（コヴノ）市
+  select:
+    pieces: [LTU-Kauno_miesto_savivaldyb]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+      note: 1897年の調査ではユダヤ人約36%、ロシア人約25%（要塞の軍人を含む）、ポーランド人約22%、リトアニア人約7%。要確認
+
+- id: lang_vilnius_region
+  name: ヴィリニュス周辺（東リトアニア）
+  select:
+    pieces: [LTU-Vilniaus_rajono_savivaldyb, LTU-Trak_rajono_savivaldyb, LTU-ven_ioni_rajono_savivaldyb, LTU-Elektr_nai_Municipality]
+  timeline:
+    - from: 1648
+      main: lithuanian
+      minor: polish
+      note: 東リトアニアの農村では、リトアニア語とスラヴ系の言葉（ポーランド語・ベラルーシ語の方言）が混在する。
+    - from: 1850
+      main: polish
+      minor: lithuanian
+      note: 19世紀に、ヴィリニュス周辺の農民はベラルーシ語・ポーランド語の方言（「土地の言葉」）へ移っていった。民族の帰属は流動的。要確認
+
+- id: lang_salcininkai
+  name: シャルチニンカイ（ヴィリニュス南方）
+  select:
+    pieces: [LTU-al_inink_rajono_savivaldyb]
+  timeline:
+    - from: 1648
+      main: belarusian
+      minor: polish
+      note: ベラルーシ語系の方言の農村。のちにポーランド人としての意識が広がる。要確認
+
+- id: lang_memel_country
+  name: メーメル地方（小リトアニア）の農村
+  select:
+    regions: [memel]
+  timeline:
+    - from: 1648
+      main: lithuanian
+      minor: german
+      note: プロイセン領の「小リトアニア」。リトアニア語の最初の書物（1547）もここで出版された。ルター派。
+    - from: 1880
+      main: lithuanian
+      minor: german
+      note: ドイツ語化が進み、1910年ごろにはリトアニア語の話者は約半数。要確認
+
+- id: lang_memel_city
+  name: メーメル（クライペダ）市・クルシュー砂州
+  select:
+    pieces: [LTU-Klaip_da_City_Municipality, LTU-Neringos_savivaldyb]
+  timeline:
+    - from: 1648
+      main: german
+      minor: lithuanian
+      note: ドイツ語の港町。クルシュー砂州の漁民（クルシェニエキ）はラトヴィア語に近いクルシュー語を話した。
+
+# ======== グリーンランド ========
+- id: lang_greenland
+  name: グリーンランド東部
+  select:
+    iso: [GRL]
+  timeline:
+    - from: 1648
+      main: other
+      note: イヌイット（グリーンランド語）。東海岸のアンマサリクにデンマークの交易所ができるのは1894年。北東部は無人。

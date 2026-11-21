@@ -1407,3 +1407,7 @@ body[data-layer="language"] .legend {
 .rel-legend[data-dist="language"] .rl-notes {
   display: grid;
 }
+.rel-legend.collapsed .rl-fam ul,
+.rel-legend.collapsed .rl-notes {
+  display: none;
+}
