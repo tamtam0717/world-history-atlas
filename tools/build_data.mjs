@@ -442,6 +442,7 @@ const checkCurve = (c, where) => {
 };
 const eventTitles = new Set(events.map((e) => e.title));
 const movements = [];
+const pseudoRegions = new Map();
 for (const m of movementsRaw) {
   const where = `${m._file} の ${m.id ?? "(id なし)"}`;
   if (!m.id || !m.name) {
@@ -458,13 +459,27 @@ for (const m of movementsRaw) {
   const spread = [];
   for (const [i, s] of (m.spread ?? []).entries()) {
     const w = `${where} の spread ${i + 1} 番目`;
-    const KEYS = ["polities", "regions", "exclude_regions", "include_colonies"];
+    const KEYS = ["polities", "regions", "exclude_regions", "include_colonies", "iso", "adm1"];
     for (const k of Object.keys(s.where ?? {})) if (!KEYS.includes(k)) warn(`${w}: where の "${k}" は使えません（${KEYS.join(" / ")}）`);
     const pol = s.where?.polities ?? [];
     const reg = s.where?.regions ?? [];
     const exc = s.where?.exclude_regions ?? [];
     const colonies = s.where?.include_colonies ?? false;
-    if (!pol.length && !reg.length) warn(`${w}: where に polities か regions を書いてください`);
+    // iso・adm1（現代の国・州のピース。年や所属に関係なく光る）：政治の地域がまだない所や、植民地の一部だけを光らせたいときに使う。
+    // 画面では regions と同じに扱うので、"iso:USA"・"adm1:USA/Virginia" という名前の地域として movementRegions に入れる
+    const isoSel = s.where?.iso ?? [];
+    const adm1Sel = s.where?.adm1 ?? [];
+    const pseudo = [];
+    for (const iso of isoSel) {
+      if (!byIsoAll.has(iso)) warn(`${w}: ピースのない国コード "${iso}"`);
+      else pseudo.push([`iso:${iso}`, byIsoAll.get(iso)]);
+    }
+    for (const k of adm1Sel) {
+      if (!byAdm1.has(k)) warn(`${w}: 該当のない adm1 "${k}"`);
+      else pseudo.push([`adm1:${k}`, byAdm1.get(k)]);
+    }
+    for (const [k, l] of pseudo) pseudoRegions.set(k, l);
+    if (!pol.length && !reg.length && !pseudo.length) warn(`${w}: where に polities・regions・iso・adm1 のどれかを書いてください`);
     if (typeof colonies !== "boolean") warn(`${w}: include_colonies は true か false で書いてください`);
     if (colonies === true && !pol.length) warn(`${w}: include_colonies は polities と一緒に使います`);
     for (const p of pol) checkPolity(p, w);
@@ -480,7 +495,7 @@ for (const m of movementsRaw) {
     const excludeOk = okRegions(exc);
     spread.push({
       polities: pol.filter((p) => polityIds.has(p)),
-      regions: regionsOk,
+      regions: [...regionsOk, ...pseudo.map(([k]) => k)],
       ...(excludeOk.length ? { exclude: excludeOk } : {}),
       ...(colonies === true ? { colonies: true } : {}),
       center: !!s.center,
@@ -494,7 +509,8 @@ for (const m of movementsRaw) {
 // spread の regions は政治の地域のピースで解決する（画面で使うためピース index の一覧を出力）
 const movementRegions = {};
 for (const m of movements) for (const s of m.spread) for (const r of [...s.regions, ...(s.exclude ?? [])]) {
-  if (!(r in movementRegions)) movementRegions[r] = [...resolveRegion(r, "movements")].sort((a, b) => a - b);
+  if (!(r in movementRegions))
+    movementRegions[r] = pseudoRegions.has(r) ? [...new Set(pseudoRegions.get(r))].sort((a, b) => a - b) : [...resolveRegion(r, "movements")].sort((a, b) => a - b);
 }
 
 // ---- 出力 ----
@@ -535,6 +551,11 @@ const FILE_BOX = {
   "events/mainland_sea.yaml": [92, 5, 110, 29],
   "events/maritime_sea.yaml": [94, -11, 142, 21],
   "events/ottoman.yaml": [10, 10, 65, 49],
+  "events/usa.yaml": [-180, 15, -60, 72],
+  "events/canada.yaml": [-170, 40, -50, 84],
+  "events/mexico_caribbean.yaml": [-118, 7, -58, 33],
+  "events/andes.yaml": [-82, -24, -50, 13],
+  "events/south_cone.yaml": [-76, -56, -34, 6],
 };
 const regionCenter = new Map(); // 地域 ID → [経度, 緯度]（国境の変化の一覧も、地図に映っている地域を先にするため）
 {

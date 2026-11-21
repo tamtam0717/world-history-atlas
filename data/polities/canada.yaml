@@ -1,0 +1,118 @@
+# A2 カナダ・アラスカの政体。
+# 植民地の時期（ヌーヴェル・フランス、英領北アメリカ、ルパートランド、ロシア領アメリカ）は宗主国（france・britain・russia）の色＋地域の label で描く。
+# アラスカ（1867–）は usa（A1）。
+
+- id: canada
+  name: カナダ
+  home_iso: [CAN]   # 本国（潮流の spread が既定で光らせる範囲）
+  names:
+    - {to: 1931, name: カナダ（自治領）, kind: 自治領（イギリス帝国）}
+  short: カナダ
+  color: "#c9a3d6"
+  kind: 連邦・立憲君主国
+  note: >-
+    元首はイギリス国王（カナダ国王）で、総督が代わりを務める。実際の政治は議会の多数派から選ばれる首相が行うので、ここには首相を挙げる。
+    1867年の英領北アメリカ法で自治領となり、1931年のウェストミンスター憲章で外交を含む完全な自治を得た。1982年の憲法法で憲法の改正権もイギリスから移された。
+  rulers:
+    - {name: ジョン・A・マクドナルド, title: 首相, from: 1867, to: 1873, note: 保守党。連邦結成の中心人物。太平洋鉄道スキャンダルで辞任した。, source: "https://ja.wikipedia.org/wiki/ジョン・A・マクドナルド"}
+    - {name: アレグザンダー・マッケンジー, title: 首相, from: 1873, to: 1878, note: 自由党。, source: "https://en.wikipedia.org/wiki/Alexander_Mackenzie_(politician)"}
+    - {name: ジョン・A・マクドナルド（再任）, title: 首相, from: 1878, to: 1891, note: 保護関税の「国家政策」をとり、大陸横断鉄道（カナダ太平洋鉄道）を完成させた。在任中に死去。, source: "https://ja.wikipedia.org/wiki/ジョン・A・マクドナルド"}
+    - {name: ジョン・アボット, title: 首相, from: 1891, to: 1892, note: 保守党。, source: "https://en.wikipedia.org/wiki/John_Abbott"}
+    - {name: ジョン・トンプソン, title: 首相, from: 1892, to: 1894, note: 保守党。在任中に死去。, source: "https://en.wikipedia.org/wiki/John_Sparrow_David_Thompson"}
+    - {name: マッケンジー・ボーウェル, title: 首相, from: 1894, to: 1896, note: 保守党。, source: "https://en.wikipedia.org/wiki/Mackenzie_Bowell"}
+    - {name: チャールズ・タッパー, title: 首相, from: 1896, to: 1896, note: 保守党。, source: "https://en.wikipedia.org/wiki/Charles_Tupper"}
+    - {name: ウィルフリッド・ローリエ, title: 首相, from: 1896, to: 1911, note: 自由党。初のフランス系の首相。移民の受け入れと西部の開拓を進めた。, source: "https://ja.wikipedia.org/wiki/ウィルフリッド・ローリエ"}
+    - {name: ロバート・ボーデン, title: 首相, from: 1911, to: 1920, note: 保守党（1917年から連合政府）。第一次世界大戦を指導し、徴兵制を導入した。, source: "https://en.wikipedia.org/wiki/Robert_Borden"}
+    - {name: アーサー・ミーエン, title: 首相, from: 1920, to: 1921, note: 保守党。, source: "https://en.wikipedia.org/wiki/Arthur_Meighen"}
+    - {name: ウィリアム・ライアン・マッケンジー・キング, title: 首相, from: 1921, to: 1926, note: 自由党。, source: "https://en.wikipedia.org/wiki/William_Lyon_Mackenzie_King"}
+    - {name: アーサー・ミーエン（再任）, title: 首相, from: 1926, to: 1926, note: 3か月ほどの短い政権。, source: "https://en.wikipedia.org/wiki/Arthur_Meighen"}
+    - {name: マッケンジー・キング（再任）, title: 首相, from: 1926, to: 1930, source: "https://en.wikipedia.org/wiki/William_Lyon_Mackenzie_King"}
+    - {name: R・B・ベネット, title: 首相, from: 1930, to: 1935, note: 保守党。世界恐慌の対策に苦しみ、オタワ会議（1932）を主催した。, source: "https://en.wikipedia.org/wiki/R._B._Bennett"}
+    - {name: マッケンジー・キング（3度目）, title: 首相, from: 1935, to: 1948, note: 第二次世界大戦を指導した。在任期間はカナダで最も長い。, source: "https://en.wikipedia.org/wiki/William_Lyon_Mackenzie_King"}
+    - {name: ルイ・サンローラン, title: 首相, from: 1948, to: 1957, note: 自由党。ニューファンドランドの加盟とNATOへの参加を進めた。, source: "https://en.wikipedia.org/wiki/Louis_St._Laurent"}
+    - {name: ジョン・ディーフェンベーカー, title: 首相, from: 1957, to: 1963, note: 進歩保守党。, source: "https://en.wikipedia.org/wiki/John_Diefenbaker"}
+    - {name: レスター・ピアソン, title: 首相, from: 1963, to: 1968, note: 自由党。スエズ危機で国連緊急軍を提案しノーベル平和賞（1957）。国旗（メープル・リーフ旗）を定めた。, source: "https://ja.wikipedia.org/wiki/レスター・B・ピアソン"}
+    - {name: ピエール・トルドー, title: 首相, from: 1968, to: 1979, note: 自由党。二言語主義・多文化主義を進めた。, source: "https://ja.wikipedia.org/wiki/ピエール・トルドー"}
+    - {name: ジョー・クラーク, title: 首相, from: 1979, to: 1980, note: 進歩保守党。, source: "https://en.wikipedia.org/wiki/Joe_Clark"}
+    - {name: ピエール・トルドー（再任）, title: 首相, from: 1980, to: 1984, note: 1982年に憲法をイギリスから移し、権利と自由の憲章を定めた。, source: "https://ja.wikipedia.org/wiki/ピエール・トルドー"}
+    - {name: ジョン・ターナー, title: 首相, from: 1984, to: 1984, note: 自由党。, source: "https://en.wikipedia.org/wiki/John_Turner"}
+    - {name: ブライアン・マルルーニー, title: 首相, from: 1984, to: 1993, note: 進歩保守党。米加自由貿易協定・NAFTAを結んだ。, source: "https://en.wikipedia.org/wiki/Brian_Mulroney"}
+    - {name: キム・キャンベル, title: 首相, from: 1993, to: 1993, note: 進歩保守党。初の女性の首相。, source: "https://en.wikipedia.org/wiki/Kim_Campbell"}
+    - {name: ジャン・クレティエン, title: 首相, from: 1993, to: 2003, note: 自由党。, source: "https://en.wikipedia.org/wiki/Jean_Chr%C3%A9tien"}
+    - {name: ポール・マーティン, title: 首相, from: 2003, to: 2006, note: 自由党。, source: "https://en.wikipedia.org/wiki/Paul_Martin"}
+    - {name: スティーヴン・ハーパー, title: 首相, from: 2006, to: 2015, note: 保守党。, source: "https://en.wikipedia.org/wiki/Stephen_Harper"}
+    - {name: ジャスティン・トルドー, title: 首相, from: 2015, to: 2025, note: 自由党。ピエール・トルドーの長男。, source: "https://ja.wikipedia.org/wiki/ジャスティン・トルドー"}
+    - {name: マーク・カーニー, title: 首相, from: 2025, note: 自由党。, source: "https://en.wikipedia.org/wiki/Mark_Carney"}
+  periods:
+    - from: 1867
+      to: 1885
+      text: 英領北アメリカ法で4州のカナダ連邦（自治領）が成立した。ルパートランドを買い取り（1870）、ブリティッシュコロンビア（1871）・プリンスエドワード島（1873）を加えて大西洋から太平洋に広がり、大陸横断鉄道を完成させた（1885）。西部ではメティのリエルの反乱が2度起きた。
+    - from: 1896
+      to: 1913
+      text: ローリエのもとで東欧などからの移民を集め、平原の小麦地帯が開拓された（アルバータ・サスカチュワン州、1905）。ユーコンではクロンダイクのゴールドラッシュが起きた。
+    - from: 1914
+      to: 1918
+      text: イギリスとともに第一次世界大戦を戦い、ヴィミー・リッジの戦い（1917）などで大きな犠牲を払った。徴兵制をめぐってフランス系住民の反発が強まった。戦争への貢献でパリ講和会議に独自の代表を送った。
+    - from: 1919
+      to: 1945
+      text: バルフォア報告（1926）とウェストミンスター憲章（1931）で、本国と対等な自治領として完全な自治を得た。世界恐慌で大きな打撃を受け、第二次世界大戦では連合国として参戦した（ノルマンディー上陸作戦など）。
+    - from: 1946
+      to: 1959
+      text: 戦後の好景気の中、ニューファンドランドが加わり（1949）、NATOの原加盟国となった。セントローレンス海路（1959）が開通した。
+    - from: 1960
+      to: 1982
+      text: ケベック州で「静かな革命」が起こり、フランス系住民の民族意識が高まった。英語・フランス語の二言語主義（1969）と多文化主義（1971）を国の方針とし、1982年に憲法をイギリスから移した（権利と自由の憲章）。ケベックの分離を問う住民投票（1980）は否決された。
+    - from: 1983
+      to: 2025
+      text: アメリカ・メキシコと自由貿易を進めた（NAFTA、1994）。1995年のケベック住民投票では分離がわずかな差で否決された。先住民の自治と和解（ヌナブト準州、1999。寄宿学校問題の真実和解委員会、2008–15）が課題となった。
+
+- id: newfoundland
+  name: ニューファンドランド（自治領）
+  short: ニューファンドランド
+  color: "#9fcdbf"
+  kind: 自治領（イギリス帝国）
+  note: ニューファンドランドは1855年に責任政府（自治）を得たが、1907年までは地図ではイギリスの植民地（britain＋label）として描く。1934–49年は自治を停止してイギリスが任命する統治委員会が治めたので、britain＋label。元首はイギリス国王。ここには首相を挙げる。
+  rulers:
+    - {name: ロバート・ボンド, title: 首相, from: 1907, to: 1909, note: 1900年から植民地の首相。, source: "https://en.wikipedia.org/wiki/Robert_Bond"}
+    - {name: エドワード・モリス, title: 首相, from: 1909, to: 1917, source: "https://en.wikipedia.org/wiki/Edward_Patrick_Morris,_1st_Baron_Morris"}
+    - {name: ジョン・クロスビー, title: 首相, from: 1917, to: 1918, source: "https://en.wikipedia.org/wiki/John_Chalker_Crosbie"}
+    - {name: ウィリアム・ロイド, title: 首相, from: 1918, to: 1919, source: "https://en.wikipedia.org/wiki/William_F._Lloyd"}
+    - {name: マイケル・キャッシン, title: 首相, from: 1919, to: 1919, source: "https://en.wikipedia.org/wiki/Michael_Patrick_Cashin"}
+    - {name: リチャード・スクワイアズ, title: 首相, from: 1919, to: 1923, source: "https://en.wikipedia.org/wiki/Richard_Squires"}
+    - {name: ウィリアム・ウォーレン, title: 首相, from: 1923, to: 1924, source: "https://en.wikipedia.org/wiki/William_Warren_(politician)"}
+    - {name: アルバート・ヒックマン, title: 首相, from: 1924, to: 1924, source: "https://en.wikipedia.org/wiki/Albert_Hickman"}
+    - {name: ウォルター・モンロー, title: 首相, from: 1924, to: 1928, source: "https://en.wikipedia.org/wiki/Walter_Stanley_Monroe"}
+    - {name: フレデリック・オールダイス, title: 首相, from: 1928, to: 1928, source: "https://en.wikipedia.org/wiki/Frederick_C._Alderdice"}
+    - {name: リチャード・スクワイアズ（再任）, title: 首相, from: 1928, to: 1932, note: 財政危機の中、1932年の暴動の後に退陣した。, source: "https://en.wikipedia.org/wiki/Richard_Squires"}
+    - {name: フレデリック・オールダイス（再任）, title: 首相, from: 1932, to: 1934, note: 自治を停止して統治委員会に移すことを受け入れた。, source: "https://en.wikipedia.org/wiki/Frederick_C._Alderdice"}
+  periods:
+    - from: 1907
+      to: 1918
+      text: 1907年に自治領となった。タラ漁と製紙が主な産業。第一次世界大戦ではニューファンドランド連隊がソンムの戦い（ボーモン・アメル、1916）で壊滅的な損害を受けた。
+    - from: 1919
+      to: 1933
+      text: 戦争の負債と漁業の不振、世界恐慌で財政が破綻し、1934年に自治を停止した。1927年にラブラドルの境界がニューファンドランドに有利に決まった。
+
+- id: red_river
+  name: レッド・リヴァー臨時政府
+  short: レッド・リヴァー
+  color: "#b9cf8f"
+  kind: 臨時政府（メティ）
+  rulers:
+    - {name: ルイ・リエル, title: 臨時政府の議長, from: 1869, to: 1870, note: メティ（先住民とフランス系の混血の人々）の指導者。1870年にカナダ政府と交渉してマニトバ州をつくらせたが、亡命を強いられた。1885年の北西部の反乱の後に処刑された。, source: "https://ja.wikipedia.org/wiki/ルイ・リエル"}
+  periods:
+    - from: 1869
+      to: 1870
+      text: ハドソン湾会社がルパートランドをカナダに引き渡す際、住民に相談がなかったことにメティが反発し、リエルを指導者に臨時政府をつくった（レッド・リヴァーの反乱）。交渉の結果、マニトバ州が置かれた（1870）。
+  source: "https://ja.wikipedia.org/wiki/レッド・リヴァーの反乱"
+
+- id: huron
+  name: ヒューロン連合（ウェンダット）
+  short: ヒューロン
+  color: "#b3c99a"
+  kind: 部族連合
+  periods:
+    - from: 1648
+      to: 1649
+      text: ジョージア湾の南に住むイロコイ語系の4部族の連合。フランスの同盟者として毛皮交易の仲立ちをし、イエズス会が布教した。疫病で人口が半減したところにイロコイ連邦の攻撃を受け、1649年に崩壊した。生き残った人々はケベックの近く（ロレット）や五大湖西部に移った（のちのワイアンドット）。
+  source: "https://ja.wikipedia.org/wiki/ヒューロン族"
