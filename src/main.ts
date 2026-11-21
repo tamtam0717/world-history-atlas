@@ -124,7 +124,12 @@ async function main() {
     const m = $("#map").getBoundingClientRect();
     return map.viewProbe(Math.max(m.height * 0.4, $("#panel").getBoundingClientRect().top - m.top));
   };
-  map.onMoveEnd(() => panel.arrangeByView());
+  // 動かし終えた時点では新しい範囲のタイルがまだ描かれていないことがあるので、描画が落ち着いたときにもう一度並べる
+  const arrange = () => panel.arrangeByView();
+  map.onMoveEnd(() => {
+    arrange();
+    map.whenIdle(arrange);
+  });
 
   // スライダーの下の潮流の帯（年表）
   const band = new MovementBand($("#mv-band"), idx, [minYear, maxYear], (id) => selectMovement(id), () => sheet.refresh());
@@ -493,6 +498,7 @@ async function main() {
   }
   map.onMoveEnd(() => {
     renderLegend();
+    map.whenIdle(renderLegend);
   });
 
   // ---- 検索とキーボードショートカット ----
