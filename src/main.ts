@@ -111,6 +111,14 @@ async function main() {
     (kind, regions) => map.flashRegions(kind, regions),
   );
   panel.range = [minYear, maxYear];
+  // 出来事・国境の変化は、地図に映っている地域のものから先に並べる（地図を動かし終えたら並べ直す）
+  panel.viewProbe = () => {
+    if (!mobile.matches) return map.viewProbe();
+    // シートを大きく引き上げて読んでいるときに全部が「範囲の外」にならないよう、地図の上 4 割は見えているものとする
+    const m = $("#map").getBoundingClientRect();
+    return map.viewProbe(Math.max(m.height * 0.4, $("#panel").getBoundingClientRect().top - m.top));
+  };
+  map.onMoveEnd(() => panel.arrangeByView());
 
   // スライダーの下の潮流の帯（年表）
   const band = new MovementBand($("#mv-band"), idx, [minYear, maxYear], (id) => selectMovement(id), () => sheet.refresh());
@@ -651,6 +659,7 @@ async function main() {
   (window as unknown as { __polityMs: unknown }).__polityMs = polityMs; // 確認用（国の節目の一覧）
   await map.ready;
   document.body.classList.add("ready");
+  panel.arrangeByView(false); // 地図の準備ができたので、映っている地域の出来事を先にする
   // 国の情報の「上位の政体」「間接統治」は地図の所属から求めるので、最初の描画が終わってから出し直す
   if (state.polity && !isDist(state.layer)) panel.renderPolity(state.polity, state.year, map.overlordOf(state.polity), map.indirectOf(state.polity));
   void map.loadWater(base);
