@@ -1,0 +1,2755 @@
+# A4 南米北部・アンデス（COL・VEN・ECU・PER・BOL・GUY・SUR・GUF）の地域と所属の変遷（1648–2025）
+# scratchpad/a4/gen_regions.py で生成した（各ピースはちょうど1つの地域に属する）。手で直してもよい。
+# スペイン領の副王領・聴訴院・州は spain＋label。主張だけの奥地（アマゾン・オリノコ・ギアナ奥地）は certainty: nominal。
+# 独立戦争期（1810–25）は年末の主な支配で塗る。独立宣言前の評議会（フンタ）の年は spain・uncertain。
+# 太平洋戦争のチリの占領（タクナ・モケグア 1880–83、リマ・カヤオ 1881–82、アレキパ 1883）は occupied、
+# アンコン条約後のタクナ・タラタのチリの管理（1884–1929/1925）は chile・uncertain。
+# パナマ地峡（PAN）は A3 の担当（1821–30 は gran_colombia、1831–1903 は colombia で塗る約束）。
+
+- id: col_bogota
+  name: "ボゴタ・クンディナマルカ"
+  select:
+    pieces: [COL-Bogota_Capital_District, COL-Cundinamarca]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "cundinamarca"
+      cause: "クンディナマルカ国が成立する（ナリーニョ）。連合州に加わらず、連邦派と内戦になる"
+      source: "https://en.wikipedia.org/wiki/Free_and_Independent_State_of_Cundinamarca"
+    - from: 1814
+      owner: "new_granada_united"
+      cause: "ボリバルの率いる連合州の軍がボゴタを占め、クンディナマルカが連合州に加わる（12月）"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "ボヤカの戦い（8月7日）でボリバルが勝ち、ボゴタを解放。12月にアンゴストゥーラ会議がコロンビア共和国（大コロンビア）の成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ボヤカの戦い"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_central
+  name: "ボヤカ・トリマ・ウイラ"
+  select:
+    pieces: [COL-Boyaca, COL-Tolima, COL-Huila]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "new_granada_united"
+      cause: "ヌエバ・グラナダ連合州が結成される（11月）。独立派どうしの内戦が続いた（「愚かな祖国」の時代）"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "ボヤカの戦い（8月7日）でボリバルが勝ち、ボゴタを解放。12月にアンゴストゥーラ会議がコロンビア共和国（大コロンビア）の成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ボヤカの戦い"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_santander
+  name: "サンタンデール"
+  select:
+    pieces: [COL-Santander, COL-Norte_de_Santander]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "new_granada_united"
+      cause: "ヌエバ・グラナダ連合州が結成される（11月）。独立派どうしの内戦が続いた（「愚かな祖国」の時代）"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "ボヤカの戦い（8月7日）でボリバルが勝ち、ボゴタを解放。12月にアンゴストゥーラ会議がコロンビア共和国（大コロンビア）の成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ボヤカの戦い"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_antioquia
+  name: "アンティオキア・カルダス"
+  select:
+    pieces: [COL-Antioquia, COL-Caldas, COL-Risaralda, COL-Quindio]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "new_granada_united"
+      cause: "ヌエバ・グラナダ連合州が結成される（11月）。独立派どうしの内戦が続いた（「愚かな祖国」の時代）"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "ボヤカの戦い（8月7日）でボリバルが勝ち、ボゴタを解放。12月にアンゴストゥーラ会議がコロンビア共和国（大コロンビア）の成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ボヤカの戦い"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_choco
+  name: "チョコ"
+  select:
+    pieces: [COL-Choco]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "new_granada_united"
+      cause: "ヌエバ・グラナダ連合州が結成される（11月）。独立派どうしの内戦が続いた（「愚かな祖国」の時代）"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1819
+      owner: "gran_colombia"
+      certainty: "uncertain"
+      cause: "ボヤカの戦い（8月7日）でボリバルが勝ち、ボゴタを解放。12月にアンゴストゥーラ会議がコロンビア共和国（大コロンビア）の成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ボヤカの戦い"
+    - from: 1820
+      owner: "gran_colombia"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_valle
+  name: "カウカ川流域（カリ）"
+  select:
+    pieces: [COL-Valle_del_Cauca]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "new_granada_united"
+      cause: "ヌエバ・グラナダ連合州が結成される（11月）。独立派どうしの内戦が続いた（「愚かな祖国」の時代）"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1819
+      owner: "gran_colombia"
+      certainty: "uncertain"
+      cause: "ボヤカの戦い（8月7日）でボリバルが勝ち、ボゴタを解放。12月にアンゴストゥーラ会議がコロンビア共和国（大コロンビア）の成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ボヤカの戦い"
+    - from: 1820
+      owner: "gran_colombia"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_cauca
+  name: "ポパヤン"
+  select:
+    pieces: [COL-Cauca]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ポパヤン（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "ポパヤン（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "new_granada_united"
+      certainty: "uncertain"
+      cause: "独立派がポパヤンを占める（3月、バホ・パラセの戦い）。以後、パストの王党派と取り合いが続いた"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1820
+      owner: "gran_colombia"
+      certainty: "uncertain"
+      cause: "大コロンビア軍がポパヤンに入るが、パストの王党派との戦いが続く"
+    - from: 1821
+      owner: "gran_colombia"
+    - from: 1830
+      owner: "ecuador"
+      certainty: "uncertain"
+      cause: "大コロンビアの解体の中で、カウカ県（ポパヤン・パスト）がエクアドルへの合流を宣言する"
+      note: "1832年のパスト条約でヌエバ・グラナダに戻った（カルチ川が国境）。カリ・ブガなど北部の町の態度は要確認"
+      source: "https://en.wikipedia.org/wiki/Ecuador–Colombia_relations"
+    - from: 1832
+      owner: "colombia"
+      cause: "パスト条約（12月）でエクアドルがカウカ・パストをヌエバ・グラナダに返す"
+      source: "https://en.wikipedia.org/wiki/Ecuador–Colombia_relations"
+
+- id: col_pasto
+  name: "パスト（ナリーニョ）"
+  select:
+    pieces: [COL-Narino]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "パスト（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "パスト（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1822
+      owner: "gran_colombia"
+      cause: "ボンボナの戦い（4月）とピチンチャの戦い（5月）の後、王党派の町パストが降伏する"
+      note: "パストでは1824年までアグアロンゴらの王党派の反乱が続いた"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Bombona"
+    - from: 1830
+      owner: "ecuador"
+      certainty: "uncertain"
+      cause: "大コロンビアの解体の中で、パストがエクアドルへの合流を宣言する"
+      source: "https://en.wikipedia.org/wiki/Ecuador–Colombia_relations"
+    - from: 1832
+      owner: "colombia"
+      cause: "パスト条約（12月）でエクアドルがパストをヌエバ・グラナダに返す"
+
+- id: col_cartagena
+  name: "カルタヘナ（カリブ海岸西部）"
+  select:
+    pieces: [COL-Bolivar, COL-Atlantico, COL-Sucre, COL-Cordoba]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "カルタヘナ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "カルタヘナ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "カルタヘナ（評議会）"
+      cause: "5月、カルタヘナの市参事会が総督を退け、評議会を作る"
+    - from: 1811
+      owner: "new_granada_united"
+      cause: "カルタヘナが独立を宣言（11月11日）し、ヌエバ・グラナダ連合州に加わる"
+      source: "https://en.wikipedia.org/wiki/Cartagena_de_Indias#Independence"
+    - from: 1815
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が105日の包囲の末にカルタヘナを落とす（12月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Cartagena_(1815)"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "カルタヘナの王党派が降伏する（10月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Cartagena_(1820–1821)"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_santa_marta
+  name: "サンタ・マルタ・リオアチャ"
+  select:
+    pieces: [COL-Magdalena, COL-Cesar, COL-La_Guajira]
+  note: "ラ・グアヒーラ半島の先住民ワユー（グアヒーロ）は植民地期を通じてほぼ自立していた（ピースの粒度では表せない）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "サンタ・マルタ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "サンタ・マルタ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1820
+      owner: "gran_colombia"
+      cause: "大コロンビア軍がサンタ・マルタを占める（11月）"
+      note: "サンタ・マルタは独立期を通じて王党派の拠点だった"
+      source: "https://en.wikipedia.org/wiki/Santa_Marta"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_llanos
+  name: "東部平原（カサナレ）"
+  select:
+    pieces: [COL-Casanare, COL-Arauca, COL-Meta]
+  note: "植民地期はイエズス会などの布教村と牧場が点在した"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "平原（リャノス）（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      label: "平原（リャノス）（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ（諸都市の評議会）"
+      cause: "7月20日、ボゴタで評議会（フンタ）が副王を退ける。各地の都市も評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立宣言"
+    - from: 1811
+      owner: "new_granada_united"
+      cause: "ヌエバ・グラナダ連合州が結成される（11月）。独立派どうしの内戦が続いた（「愚かな祖国」の時代）"
+      source: "https://en.wikipedia.org/wiki/United_Provinces_of_New_Granada"
+    - from: 1816
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "モリーリョの遠征軍が独立派を破り、ボゴタに入る（5月）"
+      source: "https://en.wikipedia.org/wiki/Spanish_reconquest_of_New_Granada"
+    - from: 1817
+      owner: "venezuela"
+      certainty: "uncertain"
+      cause: "カサナレの平原が独立派のゲリラの拠点となる（1818年からサンタンデールが軍を組織。アンゴストゥーラのボリバル政府の下）"
+      source: "https://en.wikipedia.org/wiki/Francisco_de_Paula_Santander"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "ボリバルの軍がカサナレからアンデスを越え、ボヤカで勝つ（8月）。12月に大コロンビアが成立"
+      source: "https://ja.wikipedia.org/wiki/ボヤカの戦い"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: col_east
+  name: "オリノコ・アマゾン上流（ビチャダ・グアイニア・バウペス・グアビアレ）"
+  select:
+    pieces: [COL-Vichada, COL-Guainia, COL-Vaupes, COL-Guaviare]
+  note: "スペイン・コロンビアの主張は及んでいたが、実際には先住民の地（nominal）。ポルトガル・ブラジルとの境もあいまいだった"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1819
+      owner: "gran_colombia"
+      certainty: "nominal"
+      cause: "大コロンビアの成立（主張のみ。先住民の地）"
+    - from: 1831
+      owner: "colombia"
+      certainty: "nominal"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+    - from: 1910
+      owner: "colombia"
+      cause: "ゴムの採集が広がり、バウペス（1910）・ビチャダ（1913）に特別区（コミサリア）が置かれる"
+      note: "実際の国家の存在は薄く、20世紀後半まで先住民の地が広かった（要確認：年は目安）"
+      source: "https://en.wikipedia.org/wiki/Vaupés_Department"
+
+- id: col_amazon
+  name: "カケター・プトゥマヨ"
+  select:
+    pieces: [COL-Caqueta, COL-Putumayo]
+  note: "モコアなどの布教村を除き、実際には先住民の地（nominal）。20世紀初めのプトゥマヨ川流域はペルーのゴム会社（アラナ）が支配した"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ポパヤン（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      certainty: "nominal"
+      label: "ポパヤン（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1822
+      owner: "gran_colombia"
+      certainty: "nominal"
+      cause: "パストの降伏で南部が大コロンビアに入る（主張のみ）"
+    - from: 1831
+      owner: "colombia"
+      certainty: "nominal"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+    - from: 1933
+      owner: "colombia"
+      cause: "レティシア紛争の後、コロンビアがアマゾン南部に軍と道路を置き、実効支配を固める"
+      source: "https://en.wikipedia.org/wiki/Colombia–Peru_war"
+
+- id: col_amazonas
+  name: "アマゾナス（レティシア）"
+  select:
+    pieces: [COL-Amazonas]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ポパヤン（ペルー副王領）"
+      note: "スペイン領。サンタフェ・デ・ボゴタの聴訴院（アウディエンシア）が治め、ペルー副王に属した"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1717
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が置かれる（1723年にいったん廃止）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1723
+      owner: "spain"
+      certainty: "nominal"
+      label: "ポパヤン（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "ヌエバ・グラナダ副王領が再び置かれる（ボゴタが都）"
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1822
+      owner: "gran_colombia"
+      certainty: "nominal"
+      cause: "パストの降伏で南部が大コロンビアに入る（主張のみ）"
+    - from: 1831
+      owner: "colombia"
+      certainty: "nominal"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+    - from: 1900
+      owner: "peru"
+      certainty: "uncertain"
+      cause: "ペルーのゴム会社（アラナのペルー・アマゾン会社）がプトゥマヨ川とカケター川の間を支配する。レティシアはペルーの町"
+      note: "先住民の強制労働と虐殺が1912年にケースメントの報告で国際問題になった（プトゥマヨ事件）。コロンビア・エクアドルも領有を主張"
+      source: "https://en.wikipedia.org/wiki/Putumayo_genocide"
+    - from: 1930
+      owner: "colombia"
+      cause: "サロモン＝ロサノ条約（1922年調印、1928年批准）によりペルーがレティシアを引き渡す（8月）"
+      source: "https://en.wikipedia.org/wiki/Salomón–Lozano_Treaty"
+    - from: 1932
+      owner: "peru"
+      certainty: "occupied"
+      label: "レティシア（ペルーの占領）"
+      cause: "ペルー人の一団がレティシアを占拠し、ペルー軍が支援する（9月、レティシア紛争）"
+      source: "https://en.wikipedia.org/wiki/Colombia–Peru_war"
+    - from: 1933
+      owner: "colombia"
+      certainty: "uncertain"
+      label: "レティシア（国際連盟の管理）"
+      cause: "停戦（5月）の後、国際連盟の委員会がレティシアを1年間管理する（1934年6月にコロンビアへ）"
+      source: "https://en.wikipedia.org/wiki/Colombia–Peru_war"
+    - from: 1934
+      owner: "colombia"
+      cause: "リオデジャネイロ議定書（5月）でペルーがサロモン＝ロサノ条約を認め、レティシアがコロンビアに戻る"
+
+- id: col_san_andres
+  name: "サン・アンドレス・プロビデンシア"
+  select:
+    pieces: [COL-Archipielago_de_San_Andres_Providencia_y_Santa_Catalina]
+  note: "ニカラグアも領有を主張した（1928年のエスゲラ＝バルセナス条約、2012年の国際司法裁判所の判決で周辺の海域を一部失う）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: ""
+      note: "1631–41年にはイングランドのピューリタンの植民地（プロヴィデンス島会社）があり、1641年にスペインが奪った。その後もジャマイカ系のイギリス人入植者が住んだ"
+      source: "https://en.wikipedia.org/wiki/Providence_Island_colony"
+    - from: 1803
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領"
+      cause: "サン・アンドレス諸島がヌエバ・グラナダ副王領（カルタヘナ）の管轄に移される"
+      source: "https://en.wikipedia.org/wiki/San_Andrés,_Providencia_and_Santa_Catalina"
+    - from: 1822
+      owner: "gran_colombia"
+      cause: "諸島が大コロンビアに加わる（6月）"
+      note: "1818–21年にはフランス人の私掠船長オーリーがプロビデンシアを拠点にした"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアが解体し、ヌエバ・グラナダ共和国となる（11月）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_caracas
+  name: "カラカス・中部（ララを含む）"
+  select:
+    pieces: [VEN-Distrito_Capital, VEN-La_Guaira, VEN-Miranda, VEN-Aragua, VEN-Carabobo, VEN-Yaracuy, VEN-Lara]
+  note: "プエルト・カベーリョ（カラボボ）の要塞は1823年11月まで王党派が守った"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ベネズエラ州"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ベネズエラ（カラカスの評議会）"
+      cause: "4月19日、カラカスの市参事会が総監を退けて最高評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://en.wikipedia.org/wiki/Venezuelan_Declaration_of_Independence"
+    - from: 1811
+      owner: "venezuela"
+      cause: "7月5日、ベネズエラ議会が独立を宣言する（第一共和国）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ独立宣言"
+    - from: 1812
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "大地震とスペイン軍の反攻で第一共和国が崩れ、ミランダが降伏する（7月）"
+      source: "https://en.wikipedia.org/wiki/First_Republic_of_Venezuela"
+    - from: 1813
+      owner: "venezuela"
+      cause: "ボリバルの「感嘆すべき遠征」でカラカスを奪回（8月）、東部はマリーニョが解放（第二共和国）"
+      source: "https://en.wikipedia.org/wiki/Admirable_Campaign"
+    - from: 1814
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ボベスの率いる平原の騎兵（リャネーロ）に敗れ、第二共和国が崩れる"
+      source: "https://en.wikipedia.org/wiki/Second_Republic_of_Venezuela"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "カラボボの戦い（6月24日）でボリバルが勝ち、カラカスを解放"
+      source: "https://ja.wikipedia.org/wiki/カラボボの戦い"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_andes
+  name: "アンデス地方（メリダ・トルヒーヨ・タチラ）"
+  select:
+    pieces: [VEN-Merida, VEN-Trujillo, VEN-Tachira]
+  note: "トルヒーヨは1786年までベネズエラ州に属した（ラベルは単純化）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "マラカイボ州（ヌエバ・グラナダ）"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ベネズエラ（カラカスの評議会）"
+      cause: "4月19日、カラカスの市参事会が総監を退けて最高評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://en.wikipedia.org/wiki/Venezuelan_Declaration_of_Independence"
+    - from: 1811
+      owner: "venezuela"
+      cause: "7月5日、ベネズエラ議会が独立を宣言する（第一共和国）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ独立宣言"
+    - from: 1812
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "大地震とスペイン軍の反攻で第一共和国が崩れ、ミランダが降伏する（7月）"
+      source: "https://en.wikipedia.org/wiki/First_Republic_of_Venezuela"
+    - from: 1813
+      owner: "venezuela"
+      cause: "ボリバルがヌエバ・グラナダから攻め入り、メリダ・トルヒーヨを解放（5–6月。「死に至る戦い」の布告）"
+      source: "https://en.wikipedia.org/wiki/Admirable_Campaign"
+    - from: 1814
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ボベスの率いる平原の騎兵（リャネーロ）に敗れ、第二共和国が崩れる"
+      source: "https://en.wikipedia.org/wiki/Second_Republic_of_Venezuela"
+    - from: 1820
+      owner: "gran_colombia"
+      cause: "大コロンビア軍がメリダ・トルヒーヨを占める。11月にトルヒーヨで休戦条約"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_llanos
+  name: "平原（バリナス・グアリコ）"
+  select:
+    pieces: [VEN-Barinas, VEN-Portuguesa, VEN-Cojedes, VEN-Guarico]
+  note: "1813–14年の平原では王党派のボベスの騎兵が優勢だった。1816–20年はパエスの独立派のゲリラと王党派が争った"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ベネズエラ州"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ベネズエラ（カラカスの評議会）"
+      cause: "4月19日、カラカスの市参事会が総監を退けて最高評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://en.wikipedia.org/wiki/Venezuelan_Declaration_of_Independence"
+    - from: 1811
+      owner: "venezuela"
+      cause: "7月5日、ベネズエラ議会が独立を宣言する（第一共和国）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ独立宣言"
+    - from: 1812
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "大地震とスペイン軍の反攻で第一共和国が崩れ、ミランダが降伏する（7月）"
+      source: "https://en.wikipedia.org/wiki/First_Republic_of_Venezuela"
+    - from: 1813
+      owner: "venezuela"
+      certainty: "uncertain"
+      cause: "ボリバルの「感嘆すべき遠征」でカラカスを奪回（8月）、東部はマリーニョが解放（第二共和国）"
+      source: "https://en.wikipedia.org/wiki/Admirable_Campaign"
+    - from: 1814
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ボベスの率いる平原の騎兵（リャネーロ）に敗れ、第二共和国が崩れる"
+      source: "https://en.wikipedia.org/wiki/Second_Republic_of_Venezuela"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "カラボボの戦い（6月24日）でボリバルが勝ち、カラカスを解放"
+      source: "https://ja.wikipedia.org/wiki/カラボボの戦い"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_apure
+  name: "アプレ"
+  select:
+    pieces: [VEN-Apure]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ベネズエラ州"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1750
+      owner: "spain"
+      label: "ベネズエラ州"
+      cause: "カプチン会の布教村と牧場が広がる（目安の年）"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ベネズエラ（カラカスの評議会）"
+      cause: "4月19日、カラカスの市参事会が総監を退けて最高評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://en.wikipedia.org/wiki/Venezuelan_Declaration_of_Independence"
+    - from: 1811
+      owner: "venezuela"
+      cause: "7月5日、ベネズエラ議会が独立を宣言する（第一共和国）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ独立宣言"
+    - from: 1812
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "大地震とスペイン軍の反攻で第一共和国が崩れ、ミランダが降伏する（7月）"
+      source: "https://en.wikipedia.org/wiki/First_Republic_of_Venezuela"
+    - from: 1816
+      owner: "venezuela"
+      certainty: "uncertain"
+      cause: "パエスの率いる平原の騎兵（リャネーロ）がアプレで王党派を破り始める"
+      source: "https://ja.wikipedia.org/wiki/ホセ・アントニオ・パエス"
+    - from: 1817
+      owner: "venezuela"
+      cause: "アプレの平原がパエスの独立派の拠点となる"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "12月、アンゴストゥーラ会議が大コロンビアの成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/アンゴストゥーラ会議"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_coro
+  name: "コロ（ファルコン）"
+  select:
+    pieces: [VEN-Falcon]
+  note: "コロは独立期を通じて王党派の町だった（1806年のミランダの上陸も失敗）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ベネズエラ州"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "コロが大コロンビアに加わる（5月）"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_maracaibo
+  name: "マラカイボ（スリア）"
+  select:
+    pieces: [VEN-Zulia]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "マラカイボ州（ヌエバ・グラナダ）"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "マラカイボが独立を宣言して大コロンビアに加わる（1月）"
+    - from: 1822
+      owner: "spain"
+      certainty: "occupied"
+      label: "マラカイボ（王党派の奪回）"
+      cause: "王党派のモラレスが反攻し、マラカイボを奪い返す（9月）"
+    - from: 1823
+      owner: "gran_colombia"
+      cause: "マラカイボ湖の海戦（7月）で大コロンビアの艦隊が勝ち、王党派が降伏する"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Lake_Maracaibo"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_east
+  name: "東部（クマナ・バルセロナ・マトゥリン）"
+  select:
+    pieces: [VEN-Sucre, VEN-Monagas, VEN-Anzoategui]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・アンダルシア州（クマナ）"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ベネズエラ（カラカスの評議会）"
+      cause: "4月19日、カラカスの市参事会が総監を退けて最高評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://en.wikipedia.org/wiki/Venezuelan_Declaration_of_Independence"
+    - from: 1811
+      owner: "venezuela"
+      cause: "7月5日、ベネズエラ議会が独立を宣言する（第一共和国）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ独立宣言"
+    - from: 1812
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "大地震とスペイン軍の反攻で第一共和国が崩れ、ミランダが降伏する（7月）"
+      source: "https://en.wikipedia.org/wiki/First_Republic_of_Venezuela"
+    - from: 1813
+      owner: "venezuela"
+      cause: "マリーニョがトリニダード沖から上陸し、東部を解放する（1–8月）"
+      source: "https://en.wikipedia.org/wiki/Santiago_Mariño"
+    - from: 1814
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ボベスの率いる平原の騎兵（リャネーロ）に敗れ、第二共和国が崩れる"
+      source: "https://en.wikipedia.org/wiki/Second_Republic_of_Venezuela"
+    - from: 1816
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ベネズエラ総監領"
+      cause: "マリーニョ・ベルムデス・ピアルらの独立派のゲリラが東部で戦う"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "クマナの王党派が降伏する（10月）"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_margarita
+  name: "マルガリータ島（ヌエバ・エスパルタ）"
+  select:
+    pieces: [VEN-Nueva_Esparta]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "マルガリータ州"
+      note: "スペイン領。ベネズエラ州などの州はサント・ドミンゴの聴訴院（ヌエバ・エスパーニャ副王領）に属し、1717–23年と1739年からはヌエバ・グラナダ副王領に属した。マラカイボ州は初めからボゴタの聴訴院の下にあった"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれ、カラカスの総監の下に諸州がまとまる（1786年にカラカス聴訴院）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ベネズエラ（カラカスの評議会）"
+      cause: "4月19日、カラカスの市参事会が総監を退けて最高評議会を作る（名目上はフェルナンド7世に忠誠）"
+      source: "https://en.wikipedia.org/wiki/Venezuelan_Declaration_of_Independence"
+    - from: 1811
+      owner: "venezuela"
+      cause: "7月5日、ベネズエラ議会が独立を宣言する（第一共和国）"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ独立宣言"
+    - from: 1812
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "大地震とスペイン軍の反攻で第一共和国が崩れ、ミランダが降伏する（7月）"
+      source: "https://en.wikipedia.org/wiki/First_Republic_of_Venezuela"
+    - from: 1813
+      owner: "venezuela"
+      cause: "ボリバルの「感嘆すべき遠征」でカラカスを奪回（8月）、東部はマリーニョが解放（第二共和国）"
+      source: "https://en.wikipedia.org/wiki/Admirable_Campaign"
+    - from: 1815
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "スペインのモリーリョの遠征軍がマルガリータ島を占める（4月）"
+      source: "https://en.wikipedia.org/wiki/Pablo_Morillo"
+    - from: 1816
+      owner: "venezuela"
+      cause: "アリスメンディの蜂起と、ハイチから来たボリバルの遠征隊（5月）で島が独立派の拠点となる"
+      source: "https://en.wikipedia.org/wiki/Juan_Bautista_Arismendi"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "12月、アンゴストゥーラ会議が大コロンビアの成立を宣言"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_guayana
+  name: "ギアナ（ボリバル州）"
+  select:
+    pieces: [VEN-Bolivar]
+  note: "南部・東部の奥地はベネズエラの主張が及ぶだけの先住民の地だった（ピースの粒度では表せない）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ギアナ州"
+      note: "オリノコ川下流のサント・トメ・デ・ギアナなど、わずかな拠点のほかは先住民の地。オランダ領エセキボとの境はあいまい"
+      source: "https://en.wikipedia.org/wiki/Spanish_Guayana"
+    - from: 1724
+      owner: "spain"
+      label: "ギアナ州"
+      cause: "カタルーニャのカプチン会がカロニ川流域に布教村を広げる"
+    - from: 1777
+      owner: "spain"
+      label: "ベネズエラ総監領"
+      cause: "ベネズエラ総監領が置かれる"
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ総督領"
+    - from: 1817
+      owner: "venezuela"
+      cause: "ピアルとボリバルがアンゴストゥーラを落とし（7月）、独立派の拠点とする（第三共和国）"
+      source: "https://ja.wikipedia.org/wiki/アンゴストゥーラ会議"
+    - from: 1819
+      owner: "gran_colombia"
+      cause: "12月、アンゴストゥーラ会議が大コロンビアの成立を宣言"
+      source: "https://ja.wikipedia.org/wiki/アンゴストゥーラ会議"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ven_delta
+  name: "オリノコ・デルタ（デルタ・アマクロ）"
+  select:
+    pieces: [VEN-Delta_Amacuro]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ギアナ州"
+      note: "ワラオ人の地"
+    - from: 1777
+      owner: "spain"
+      certainty: "nominal"
+      label: "ベネズエラ総監領"
+    - from: 1817
+      owner: "venezuela"
+      certainty: "nominal"
+      cause: "独立派がギアナを解放する"
+    - from: 1819
+      owner: "gran_colombia"
+      certainty: "nominal"
+    - from: 1830
+      owner: "venezuela"
+      certainty: "nominal"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+    - from: 1884
+      owner: "venezuela"
+      cause: "デルタ・アマクロ準州（連邦直轄領）が置かれる"
+
+- id: ven_amazonas
+  name: "ベネズエラのアマゾナス"
+  select:
+    pieces: [VEN-Amazonas]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ギアナ州"
+      note: "オリノコ川上流・ネグロ川上流の先住民の地。1759年にサン・カルロス・デ・リオ・ネグロの砦が置かれた"
+    - from: 1777
+      owner: "spain"
+      certainty: "nominal"
+      label: "ベネズエラ総監領"
+    - from: 1817
+      owner: "venezuela"
+      certainty: "nominal"
+      cause: "独立派がギアナを解放する"
+    - from: 1819
+      owner: "gran_colombia"
+      certainty: "nominal"
+    - from: 1830
+      owner: "venezuela"
+      certainty: "nominal"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+    - from: 1900
+      owner: "venezuela"
+      cause: "アマゾナス準州でゴムの採集が広がる（年は目安）"
+      note: "20世紀半ばまで国家の存在は薄かった"
+
+- id: ven_islands
+  name: "ベネズエラ沖の島々（連邦属領）"
+  select:
+    pieces: [VEN-Dependencias_Federales]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: ""
+      note: "ロス・ロケス・ラ・オルチラ・アベス島などの無人に近い島々"
+    - from: 1821
+      owner: "gran_colombia"
+      certainty: "nominal"
+      cause: "カラボボの戦いの後、大コロンビアの領域となる"
+    - from: 1830
+      owner: "venezuela"
+      cause: "ベネズエラが大コロンビアから分離する（パエス）"
+      note: "アベス島はオランダと争ったが、1865年のスペイン女王の仲裁でベネズエラ領と認められた"
+      source: "https://ja.wikipedia.org/wiki/大コロンビア"
+
+- id: ecu_quito
+  name: "キト（中部・北部の高地とエスメラルダス）"
+  select:
+    pieces: [ECU-Pichincha, ECU-Imbabura, ECU-Carchi, ECU-Cotopaxi, ECU-Tungurahua, ECU-Chimborazo, ECU-Bolivar, ECU-Santo_Domingo_de_los_Tsachilas, ECU-Esmeraldas]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "キト（ペルー副王領）"
+      note: "スペイン領。キトの聴訴院（アウディエンシア）が治めた"
+      source: "https://ja.wikipedia.org/wiki/キト・アウディエンシア"
+    - from: 1717
+      owner: "spain"
+      label: "キト（ヌエバ・グラナダ副王領）"
+      cause: "キト聴訴院がヌエバ・グラナダ副王領に移される"
+    - from: 1723
+      owner: "spain"
+      label: "キト（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "キト（ヌエバ・グラナダ副王領）"
+      cause: "ヌエバ・グラナダ副王領の再設置で、その一部となる"
+    - from: 1810
+      owner: "spain"
+      certainty: "uncertain"
+      label: "キト（評議会）"
+      cause: "9月、キトに2度目の評議会（最高評議会）ができる（1809年8月10日の「最初の叫び」の評議会は10月に崩れた）"
+      source: "https://ja.wikipedia.org/wiki/キト自治宣言"
+    - from: 1811
+      owner: "ecuador"
+      certainty: "uncertain"
+      cause: "キト国の評議会が摂政会議への服従をやめ、1812年2月に憲法を定める"
+      source: "https://en.wikipedia.org/wiki/State_of_Quito"
+    - from: 1812
+      owner: "spain"
+      label: "キト（ヌエバ・グラナダ副王領）"
+      cause: "スペインのモンテス将軍がキトを落とす（11月）"
+      source: "https://en.wikipedia.org/wiki/State_of_Quito"
+    - from: 1822
+      owner: "gran_colombia"
+      cause: "ピチンチャの戦い（5月24日）でスクレが勝ち、キトが解放されて大コロンビアに入る"
+      source: "https://ja.wikipedia.org/wiki/ピチンチャの戦い"
+    - from: 1830
+      owner: "ecuador"
+      cause: "エクアドルが大コロンビアから分離して独立する（5月、フローレス）"
+      source: "https://ja.wikipedia.org/wiki/エクアドルの歴史"
+
+- id: ecu_cuenca
+  name: "クエンカ・ロハ"
+  select:
+    pieces: [ECU-Azuay, ECU-Canar, ECU-Loja]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "クエンカ（ペルー副王領）"
+      note: "スペイン領。キトの聴訴院（アウディエンシア）が治めた"
+      source: "https://ja.wikipedia.org/wiki/キト・アウディエンシア"
+    - from: 1717
+      owner: "spain"
+      label: "クエンカ（ヌエバ・グラナダ副王領）"
+      cause: "キト聴訴院がヌエバ・グラナダ副王領に移される"
+    - from: 1723
+      owner: "spain"
+      label: "クエンカ（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "クエンカ（ヌエバ・グラナダ副王領）"
+      cause: "ヌエバ・グラナダ副王領の再設置で、その一部となる"
+    - from: 1822
+      owner: "gran_colombia"
+      cause: "スクレの軍がクエンカに入り（2月）、ピチンチャの戦い（5月）の後に大コロンビアに入る"
+    - from: 1830
+      owner: "ecuador"
+      cause: "エクアドルが大コロンビアから分離して独立する（5月、フローレス）"
+      source: "https://ja.wikipedia.org/wiki/エクアドルの歴史"
+
+- id: ecu_guayaquil
+  name: "グアヤキル・マナビ"
+  select:
+    pieces: [ECU-Guayas, ECU-Santa_Elena, ECU-Los_Rios, ECU-Manabi]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアヤキル（ペルー副王領）"
+      note: "スペイン領。キトの聴訴院（アウディエンシア）が治めた"
+      source: "https://ja.wikipedia.org/wiki/キト・アウディエンシア"
+    - from: 1717
+      owner: "spain"
+      label: "グアヤキル（ヌエバ・グラナダ副王領）"
+      cause: "キト聴訴院がヌエバ・グラナダ副王領に移される"
+    - from: 1723
+      owner: "spain"
+      label: "グアヤキル（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "グアヤキル（ヌエバ・グラナダ副王領）"
+      cause: "ヌエバ・グラナダ副王領の再設置で、その一部となる"
+    - from: 1803
+      owner: "spain"
+      label: "グアヤキル（ペルー副王領）"
+      cause: "グアヤキルがペルー副王の管轄に移される（軍事・通商）"
+      source: "https://en.wikipedia.org/wiki/Free_Province_of_Guayaquil"
+    - from: 1820
+      owner: "guayaquil"
+      cause: "10月9日、グアヤキルが独立を宣言する（グアヤキル自由県。オルメド）"
+      source: "https://en.wikipedia.org/wiki/Free_Province_of_Guayaquil"
+    - from: 1822
+      owner: "gran_colombia"
+      cause: "7月、ボリバルがグアヤキルを大コロンビアに編入する（グアヤキル会談の直前）"
+      source: "https://ja.wikipedia.org/wiki/グアヤキル会談"
+    - from: 1830
+      owner: "ecuador"
+      cause: "エクアドルが大コロンビアから分離して独立する（5月、フローレス）"
+      source: "https://ja.wikipedia.org/wiki/エクアドルの歴史"
+
+- id: ecu_el_oro
+  name: "エル・オロ（マチャラ）"
+  select:
+    pieces: [ECU-El_Oro]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアヤキル（ペルー副王領）"
+      note: "スペイン領。キトの聴訴院（アウディエンシア）が治めた"
+      source: "https://ja.wikipedia.org/wiki/キト・アウディエンシア"
+    - from: 1717
+      owner: "spain"
+      label: "グアヤキル（ヌエバ・グラナダ副王領）"
+      cause: "キト聴訴院がヌエバ・グラナダ副王領に移される"
+    - from: 1723
+      owner: "spain"
+      label: "グアヤキル（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      label: "グアヤキル（ヌエバ・グラナダ副王領）"
+      cause: "ヌエバ・グラナダ副王領の再設置で、その一部となる"
+    - from: 1803
+      owner: "spain"
+      label: "グアヤキル（ペルー副王領）"
+      cause: "グアヤキルがペルー副王の管轄に移される（軍事・通商）"
+      source: "https://en.wikipedia.org/wiki/Free_Province_of_Guayaquil"
+    - from: 1820
+      owner: "guayaquil"
+      cause: "10月9日、グアヤキルが独立を宣言する（グアヤキル自由県。オルメド）"
+      source: "https://en.wikipedia.org/wiki/Free_Province_of_Guayaquil"
+    - from: 1822
+      owner: "gran_colombia"
+      cause: "7月、ボリバルがグアヤキルを大コロンビアに編入する（グアヤキル会談の直前）"
+      source: "https://ja.wikipedia.org/wiki/グアヤキル会談"
+    - from: 1830
+      owner: "ecuador"
+      cause: "エクアドルが大コロンビアから分離して独立する（5月、フローレス）"
+      source: "https://ja.wikipedia.org/wiki/エクアドルの歴史"
+    - from: 1941
+      owner: "peru"
+      certainty: "occupied"
+      label: "エル・オロ（ペルーの占領）"
+      cause: "エクアドル＝ペルー戦争（7月）でペルー軍がエル・オロ州を占領する"
+      source: "https://en.wikipedia.org/wiki/Ecuadorian–Peruvian_War"
+    - from: 1942
+      owner: "ecuador"
+      cause: "リオデジャネイロ議定書（1月）の後、ペルー軍が撤退する"
+      source: "https://en.wikipedia.org/wiki/Rio_Protocol"
+
+- id: ecu_oriente
+  name: "エクアドル東部（オリエンテ）"
+  select:
+    pieces: [ECU-Sucumbios, ECU-Napo, ECU-Orellana, ECU-Pastaza, ECU-Morona_Santiago, ECU-Zamora_Chinchipe]
+  note: "キホス・マカスなどわずかな町と布教村を除いて先住民の地（nominal）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "キト（ペルー副王領）"
+      note: "スペイン領。キトの聴訴院（アウディエンシア）が治めた"
+      source: "https://ja.wikipedia.org/wiki/キト・アウディエンシア"
+    - from: 1717
+      owner: "spain"
+      certainty: "nominal"
+      label: "キト（ヌエバ・グラナダ副王領）"
+      cause: "キト聴訴院がヌエバ・グラナダ副王領に移される"
+    - from: 1723
+      owner: "spain"
+      certainty: "nominal"
+      label: "キト（ペルー副王領）"
+      cause: "ヌエバ・グラナダ副王領がいったん廃止され、ペルー副王領に戻る"
+    - from: 1739
+      owner: "spain"
+      certainty: "nominal"
+      label: "キト（ヌエバ・グラナダ副王領）"
+      cause: "ヌエバ・グラナダ副王領の再設置で、その一部となる"
+    - from: 1822
+      owner: "gran_colombia"
+      certainty: "nominal"
+      cause: "ピチンチャの戦い（5月24日）でスクレが勝ち、キトが解放されて大コロンビアに入る"
+      source: "https://ja.wikipedia.org/wiki/ピチンチャの戦い"
+    - from: 1830
+      owner: "ecuador"
+      certainty: "nominal"
+      cause: "エクアドルが大コロンビアから分離して独立する（5月、フローレス）"
+      note: "エクアドルはマラニョン川・アマゾン川までを主張したが、ペルーが南部と東部に進出し、境は未画定のままだった"
+      source: "https://ja.wikipedia.org/wiki/エクアドルの歴史"
+    - from: 1942
+      owner: "ecuador"
+      cause: "リオデジャネイロ議定書でペルーとの国境が決まり、エクアドルは主張していたアマゾン地方の大半を失う"
+      note: "コンドル山脈の一部が未画定のまま残り、1981年（パキーシャ）・1995年（セネパ）に衝突した。1998年のブラジリア議定書で確定"
+      source: "https://en.wikipedia.org/wiki/Rio_Protocol"
+
+- id: ecu_galapagos
+  name: "ガラパゴス諸島"
+  select:
+    pieces: [ECU-Galapagos]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島。スペインは領有を主張したが統治せず、海賊や捕鯨船が立ち寄った（所属なしで描く）"
+    - from: 1832
+      owner: "ecuador"
+      cause: "エクアドルがガラパゴス諸島の領有を宣言する（2月）"
+      source: "https://ja.wikipedia.org/wiki/ガラパゴス諸島"
+
+- id: per_north
+  name: "ペルー北部（トルヒーヨ・カハマルカ・ピウラ）"
+  select:
+    pieces: [PER-Tumbes, PER-Piura, PER-Lambayeque, PER-La_Libertad, PER-Cajamarca, PER-Amazonas, PER-San_Martin, PER-Ancash]
+  note: "トゥンベスとハエン（カハマルカ）はエクアドルも主張したが、独立期からペルーが治めた"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1821
+      owner: "peru"
+      cause: "トルヒーヨ（1820年12月）・ピウラ・カハマルカ・チャチャポヤスなど北部の諸州が独立派に加わる"
+      source: "https://ja.wikipedia.org/wiki/ペルーの独立"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "北ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: per_lima
+  name: "リマ"
+  select:
+    pieces: [PER-Lima, PER-Municipalidad_Metropolitana_de_Lima]
+  note: "1823年6–7月と1824年2–12月には王党派が一時リマを占めた（年末の状態では独立派）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1821
+      owner: "peru"
+      cause: "7月28日、サン・マルティンがリマでペルーの独立を宣言する（北部の諸州も独立派に加わる）"
+      source: "https://ja.wikipedia.org/wiki/ペルーの独立"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "北ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1881
+      owner: "chile"
+      certainty: "occupied"
+      label: "リマ（チリの占領）"
+      cause: "太平洋戦争：チョリーヨス・ミラフローレスの戦い（1月）の後、チリ軍がリマを占領する"
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+    - from: 1883
+      owner: "peru"
+      cause: "アンコン条約（10月）の後、チリ軍がリマから撤退する"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ancón"
+
+- id: per_callao
+  name: "カヤオ"
+  select:
+    pieces: [PER-El_Callao]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1821
+      owner: "peru"
+      cause: "カヤオの要塞の王党派が降伏する（9月）"
+    - from: 1824
+      owner: "spain"
+      label: "カヤオ要塞（王党派）"
+      cause: "2月、カヤオの守備隊が反乱を起こして要塞を王党派に渡す"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Callao_(1825–1826)"
+    - from: 1826
+      owner: "peru"
+      cause: "王党派のロディルが包囲の末に降伏する（1月）。南アメリカ本土で最後のスペインの拠点だった"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Callao_(1825–1826)"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "北ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1881
+      owner: "chile"
+      certainty: "occupied"
+      label: "カヤオ（チリの占領）"
+      cause: "太平洋戦争：チリ軍がリマとカヤオを占領する"
+    - from: 1883
+      owner: "peru"
+      cause: "アンコン条約（10月）の後、チリ軍が撤退する"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ancón"
+
+- id: per_center
+  name: "ペルー中部（フニン・パスコ・ウアヌコ・イカ）"
+  select:
+    pieces: [PER-Junin, PER-Pasco, PER-Huanuco, PER-Ica]
+  note: "1742–52年のフアン・サントス・アタワルパの反乱以後、中部のアマゾン側（チャンチャマヨなど）は約100年スペイン人が入れなかった（ピースの粒度では表せない）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1821
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ペルー副王領"
+      cause: "独立派と王党派が中部の高地と南海岸を争う（王党派の主力はハウハ・ワンカヨに）"
+    - from: 1824
+      owner: "peru"
+      cause: "フニンの戦い（8月）とアヤクーチョの戦い（12月）で独立派が勝つ"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "北ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: per_south
+  name: "ペルー南部（アヤクーチョ・アプリマク・ワンカベリカ）"
+  select:
+    pieces: [PER-Ayacucho, PER-Apurimac, PER-Huancavelica]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクーチョの戦い（12月9日）でスクレが副王軍を破り、王党派が降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: per_arequipa
+  name: "アレキパ"
+  select:
+    pieces: [PER-Arequipa]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクーチョの戦い（12月9日）でスクレが副王軍を破り、王党派が降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1883
+      owner: "chile"
+      certainty: "occupied"
+      label: "アレキパ（チリの占領）"
+      cause: "太平洋戦争：チリ軍がアレキパを占領する（10月）"
+    - from: 1884
+      owner: "peru"
+      cause: "アンコン条約の批准の後、チリ軍が撤退する（8月）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ancón"
+
+- id: per_cusco
+  name: "クスコ"
+  select:
+    pieces: [PER-Cusco]
+  note: "1821–24年は副王ラ・セルナが都をクスコに移して王党派の本拠とした"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1780
+      owner: "spain"
+      certainty: "uncertain"
+      label: "トゥパク・アマルの反乱"
+      cause: "11月、トゥパク・アマル2世が反乱を起こし、年末にクスコを包囲する"
+      source: "https://en.wikipedia.org/wiki/Rebellion_of_Túpac_Amaru_II"
+    - from: 1781
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "トゥパク・アマル2世が捕らえられ、クスコで処刑される（5月）"
+    - from: 1814
+      owner: "spain"
+      certainty: "uncertain"
+      label: "クスコの反乱"
+      cause: "8月、プマカワとアングロ兄弟がクスコで反乱を起こす（1815年3月に鎮圧）"
+      source: "https://en.wikipedia.org/wiki/Cuzco_Rebellion_of_1814"
+    - from: 1815
+      owner: "spain"
+      label: "ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクーチョの戦い（12月9日）でスクレが副王軍を破り、王党派が降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: per_puno
+  name: "プーノ"
+  select:
+    pieces: [PER-Puno]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1776
+      owner: "spain"
+      label: "プーノ（ラ・プラタ副王領）"
+      cause: "プーノがリオ・デ・ラ・プラタ副王領に移される（1796年にペルーへ戻る）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1780
+      owner: "spain"
+      certainty: "uncertain"
+      label: "トゥパク・アマルの反乱"
+      cause: "トゥパク・アマル2世の反乱がティティカカ湖の周りに広がる"
+    - from: 1782
+      owner: "spain"
+      label: "プーノ（ラ・プラタ副王領）"
+      cause: "ディエゴ・クリストバル・トゥパク・アマルが降伏し、反乱が鎮まる"
+    - from: 1796
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "プーノがペルー副王領に戻される"
+    - from: 1814
+      owner: "spain"
+      certainty: "uncertain"
+      label: "クスコの反乱"
+      cause: "クスコの反乱軍がプーノとラパスを占める"
+    - from: 1815
+      owner: "spain"
+      label: "ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクーチョの戦い（12月9日）でスクレが副王軍を破り、王党派が降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: per_moquegua
+  name: "モケグア・タクナ北部（カンダラベ・ホルヘ・バサドレ）"
+  select:
+    pieces: [PER-Moquegua, PER-Candarave, PER-Jorge_Basadre]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクーチョの戦い（12月9日）でスクレが副王軍を破り、王党派が降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1880
+      owner: "chile"
+      certainty: "occupied"
+      label: "タクナ・モケグア（チリの占領）"
+      cause: "太平洋戦争：チリ軍がモケグア・タクナを占領する（3–5月。アルト・デ・ラ・アリアンサの戦い）"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Tacna"
+    - from: 1884
+      owner: "peru"
+      cause: "アンコン条約の批准の後、チリ軍が撤退する（サマ川より北はペルーに残る）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ancón"
+
+- id: per_tacna
+  name: "タクナ"
+  select:
+    pieces: [PER-Tacna_Province]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクーチョの戦い（12月9日）でスクレが副王軍を破り、王党派が降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1880
+      owner: "chile"
+      certainty: "occupied"
+      label: "タクナ・モケグア（チリの占領）"
+      cause: "太平洋戦争：チリ軍がモケグア・タクナを占領する（3–5月。アルト・デ・ラ・アリアンサの戦い）"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Tacna"
+    - from: 1884
+      owner: "chile"
+      certainty: "uncertain"
+      label: "タクナ（チリの管理）"
+      cause: "アンコン条約（1883年10月調印、1884年批准）：タクナ・アリカは10年間チリが治め、住民投票で帰属を決めることになる（投票は行われなかった）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ancón"
+    - from: 1929
+      owner: "peru"
+      cause: "リマ条約（6月）：タクナはペルーに、アリカはチリに分ける（8月に引き渡し）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Lima_(1929)"
+
+- id: per_tarata
+  name: "タラタ"
+  select:
+    pieces: [PER-Tarata]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクーチョの戦い（12月9日）でスクレが副王軍を破り、王党派が降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1880
+      owner: "chile"
+      certainty: "occupied"
+      label: "タクナ・モケグア（チリの占領）"
+      cause: "太平洋戦争：チリ軍がモケグア・タクナを占領する（3–5月。アルト・デ・ラ・アリアンサの戦い）"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Tacna"
+    - from: 1884
+      owner: "chile"
+      certainty: "uncertain"
+      label: "タクナ（チリの管理）"
+      cause: "アンコン条約（1883年10月調印、1884年批准）：タクナ・アリカは10年間チリが治め、住民投票で帰属を決めることになる（投票は行われなかった）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Ancón"
+    - from: 1925
+      owner: "peru"
+      cause: "アメリカ合衆国の大統領クーリッジの仲裁裁定で、タラタがペルーに返される（9月）"
+      source: "https://en.wikipedia.org/wiki/Tacna–Arica_compromise"
+
+- id: per_loreto_north
+  name: "ロレート北部（マラニョン川・アマゾン川の北）"
+  select:
+    pieces: [PER-Datem_del_Maranon, PER-Loreto_Province, PER-Maynas, PER-Putumayo]
+  note: "エクアドルはマラニョン川・アマゾン川の北を、コロンビアはプトゥマヨ川の南の一部を主張した（コロンビアとは1922年のサロモン＝ロサノ条約で決着）"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "マイナス（キト）"
+      note: "イエズス会の布教村（マイナス布教区、ボルハが拠点）のほかは先住民の地。キトの聴訴院に属した"
+      source: "https://en.wikipedia.org/wiki/Maynas"
+    - from: 1802
+      owner: "spain"
+      certainty: "nominal"
+      label: "マイナス（ペルー副王領）"
+      cause: "国王の勅令でマイナスの統治がペルー副王領に移される（のちのペルー・エクアドルの国境紛争のもと）"
+      source: "https://en.wikipedia.org/wiki/Real_Cédula_of_1802"
+    - from: 1821
+      owner: "peru"
+      certainty: "nominal"
+      cause: "マイナス（モヨバンバ）がペルーの独立に加わる"
+    - from: 1836
+      owner: "peru_bolivia"
+      certainty: "nominal"
+      label: "北ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      certainty: "nominal"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1864
+      owner: "peru"
+      certainty: "uncertain"
+      cause: "イキトスに海軍の河港が置かれ、ペルーの支配が広がる。エクアドル・コロンビアも領有を主張"
+      source: "https://ja.wikipedia.org/wiki/イキトス"
+    - from: 1942
+      owner: "peru"
+      cause: "リオデジャネイロ議定書（1月）でエクアドルとの国境が決まる"
+      source: "https://en.wikipedia.org/wiki/Rio_Protocol"
+
+- id: per_loreto_south
+  name: "ロレート南部（ユリマグアス・レケナ・ウカヤリ下流）"
+  select:
+    pieces: [PER-Alto_Amazonas, PER-Requena, PER-Ucayali_Province, PER-Mariscal_Ramon_Castilla]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "マイナス（キト）"
+      note: "イエズス会の布教村（マイナス布教区、ボルハが拠点）のほかは先住民の地。キトの聴訴院に属した"
+      source: "https://en.wikipedia.org/wiki/Maynas"
+    - from: 1802
+      owner: "spain"
+      certainty: "nominal"
+      label: "マイナス（ペルー副王領）"
+      cause: "国王の勅令でマイナスの統治がペルー副王領に移される（のちのペルー・エクアドルの国境紛争のもと）"
+      source: "https://en.wikipedia.org/wiki/Real_Cédula_of_1802"
+    - from: 1821
+      owner: "peru"
+      certainty: "nominal"
+      cause: "マイナス（モヨバンバ）がペルーの独立に加わる"
+    - from: 1836
+      owner: "peru_bolivia"
+      certainty: "nominal"
+      label: "北ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      certainty: "nominal"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1864
+      owner: "peru"
+      cause: "イキトスに河港が置かれ、汽船の航路とゴムの採集でペルーの支配が広がる"
+      source: "https://ja.wikipedia.org/wiki/イキトス"
+
+- id: per_selva
+  name: "ペルー東部のアマゾン（ウカヤリ・マドレ・デ・ディオス）"
+  select:
+    pieces: [PER-Ucayali, PER-Madre_de_Dios]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "スペイン領。リマに副王が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - from: 1821
+      owner: "peru"
+      certainty: "nominal"
+      cause: "ペルーの独立（主張のみ。先住民の地）"
+    - from: 1836
+      owner: "peru_bolivia"
+      certainty: "nominal"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "peru"
+      certainty: "nominal"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1900
+      owner: "peru"
+      cause: "ゴム・ブームでフィッツカラルドらがウカヤリ川・マドレ・デ・ディオス川に進出し、プエルト・マルドナド（1902）が作られる"
+      note: "ボリビア・ブラジルとの国境は1909年の条約で決まった"
+      source: "https://en.wikipedia.org/wiki/Madre_de_Dios_Region"
+
+- id: bol_lapaz
+  name: "ラパス・オルロ"
+  select:
+    pieces: [BOL-La_Paz, BOL-Oruro]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      note: "スペイン領アルト・ペルー。チャルカス（ラ・プラタ、今のスクレ）の聴訴院が治め、ポトシ銀山があった"
+      source: "https://ja.wikipedia.org/wiki/チャルカス・アウディエンシア"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "リオ・デ・ラ・プラタ副王領が置かれ、アルト・ペルー（チャルカス）がその一部となる"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1781
+      owner: "spain"
+      certainty: "uncertain"
+      label: "トゥパク・カタリの反乱"
+      cause: "トゥパク・カタリがラパスを包囲する（3–10月）。11月に捕らえられ処刑された"
+      source: "https://en.wikipedia.org/wiki/Siege_of_La_Paz"
+    - from: 1782
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "アルト・ペルー（ブエノスアイレスの軍）"
+      cause: "ブエノスアイレスの革命政府の軍（第1次北部遠征。カステリ）がスイパチャで勝ち（11月）、アルト・ペルーを占める"
+      source: "https://en.wikipedia.org/wiki/First_Upper_Peru_campaign"
+    - from: 1811
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "ワキの戦い（6月）でブエノスアイレスの軍が敗れ、ペルー副王の軍がアルト・ペルーを取り戻す"
+      note: "1813年・1815年にもブエノスアイレスの軍が攻め入ったが、年末までに退いた。各地で独立派のゲリラ（レプブリケタ）が戦った"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Huaqui"
+    - from: 1825
+      owner: "bolivia"
+      cause: "スクレの軍がアルト・ペルーを解放し、8月6日にボリビアが独立を宣言する"
+      source: "https://ja.wikipedia.org/wiki/ボリビアの歴史"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: bol_charcas
+  name: "チュキサカ・ポトシ"
+  select:
+    pieces: [BOL-Chuquisaca, BOL-Potosi]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      note: "スペイン領アルト・ペルー。チャルカス（ラ・プラタ、今のスクレ）の聴訴院が治め、ポトシ銀山があった"
+      source: "https://ja.wikipedia.org/wiki/チャルカス・アウディエンシア"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "リオ・デ・ラ・プラタ副王領が置かれ、アルト・ペルー（チャルカス）がその一部となる"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "アルト・ペルー（ブエノスアイレスの軍）"
+      cause: "ブエノスアイレスの革命政府の軍（第1次北部遠征。カステリ）がスイパチャで勝ち（11月）、アルト・ペルーを占める"
+      source: "https://en.wikipedia.org/wiki/First_Upper_Peru_campaign"
+    - from: 1811
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "ワキの戦い（6月）でブエノスアイレスの軍が敗れ、ペルー副王の軍がアルト・ペルーを取り戻す"
+      note: "1813年・1815年にもブエノスアイレスの軍が攻め入ったが、年末までに退いた。各地で独立派のゲリラ（レプブリケタ）が戦った"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Huaqui"
+    - from: 1825
+      owner: "bolivia"
+      cause: "スクレの軍がアルト・ペルーを解放し、8月6日にボリビアが独立を宣言する"
+      source: "https://ja.wikipedia.org/wiki/ボリビアの歴史"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: bol_cochabamba
+  name: "コチャバンバ"
+  select:
+    pieces: [BOL-Cochabamba]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      note: "スペイン領アルト・ペルー。チャルカス（ラ・プラタ、今のスクレ）の聴訴院が治め、ポトシ銀山があった"
+      source: "https://ja.wikipedia.org/wiki/チャルカス・アウディエンシア"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "リオ・デ・ラ・プラタ副王領が置かれ、アルト・ペルー（チャルカス）がその一部となる"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "アルト・ペルー（ブエノスアイレスの軍）"
+      cause: "ブエノスアイレスの革命政府の軍（第1次北部遠征。カステリ）がスイパチャで勝ち（11月）、アルト・ペルーを占める"
+      source: "https://en.wikipedia.org/wiki/First_Upper_Peru_campaign"
+    - from: 1811
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "コチャバンバ（独立派の蜂起）"
+      cause: "ワキの敗戦の後もコチャバンバが再び蜂起する（10月。1812年5月に鎮圧）"
+    - from: 1812
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "ゴジェネチェの軍がコチャバンバを落とす（5月）"
+    - from: 1825
+      owner: "bolivia"
+      cause: "スクレの軍がアルト・ペルーを解放し、8月6日にボリビアが独立を宣言する"
+      source: "https://ja.wikipedia.org/wiki/ボリビアの歴史"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: bol_tarija
+  name: "タリハ"
+  select:
+    pieces: [BOL-Tarija]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      note: "スペイン領アルト・ペルー。チャルカス（ラ・プラタ、今のスクレ）の聴訴院が治め、ポトシ銀山があった"
+      source: "https://ja.wikipedia.org/wiki/チャルカス・アウディエンシア"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "リオ・デ・ラ・プラタ副王領が置かれ、アルト・ペルー（チャルカス）がその一部となる"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1807
+      owner: "spain"
+      label: "サルタ（ラ・プラタ副王領）"
+      cause: "タリハがサルタ州（今のアルゼンチン北西部）に移される"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "アルト・ペルー（ブエノスアイレスの軍）"
+      cause: "ブエノスアイレスの革命政府の軍（第1次北部遠征。カステリ）がスイパチャで勝ち（11月）、アルト・ペルーを占める"
+      source: "https://en.wikipedia.org/wiki/First_Upper_Peru_campaign"
+    - from: 1811
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "ワキの戦い（6月）でブエノスアイレスの軍が敗れ、ペルー副王の軍がアルト・ペルーを取り戻す"
+      note: "1813年・1815年にもブエノスアイレスの軍が攻め入ったが、年末までに退いた。各地で独立派のゲリラ（レプブリケタ）が戦った"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Huaqui"
+    - from: 1825
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "タリハ（サルタ州）"
+      cause: "王党派の敗北の後、タリハはサルタ州（リオ・デ・ラ・プラタ連合州）に戻る"
+    - from: 1826
+      owner: "bolivia"
+      cause: "タリハの市参事会がボリビアへの帰属を決める（8月）。アルゼンチンは1889年に認めた"
+      source: "https://en.wikipedia.org/wiki/Tarija"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: bol_santa_cruz
+  name: "サンタ・クルス（チキートス）"
+  select:
+    pieces: [BOL-Santa_Cruz]
+  note: "東部のチャコ（今のパラグアイ側）との境はチャコ戦争（1932–35）まで未画定"
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チャルカス（ペルー副王領）"
+      note: "スペイン領アルト・ペルー。チャルカス（ラ・プラタ、今のスクレ）の聴訴院が治め、ポトシ銀山があった"
+      source: "https://ja.wikipedia.org/wiki/チャルカス・アウディエンシア"
+    - from: 1691
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      cause: "イエズス会がチキートスに布教村（レドゥクシオン）を作り始める"
+      source: "https://en.wikipedia.org/wiki/Jesuit_Missions_of_Chiquitos"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "リオ・デ・ラ・プラタ副王領が置かれ、アルト・ペルー（チャルカス）がその一部となる"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "アルト・ペルー（ブエノスアイレスの軍）"
+      cause: "ブエノスアイレスの革命政府の軍（第1次北部遠征。カステリ）がスイパチャで勝ち（11月）、アルト・ペルーを占める"
+      source: "https://en.wikipedia.org/wiki/First_Upper_Peru_campaign"
+    - from: 1811
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "ワキの戦い（6月）でブエノスアイレスの軍が敗れ、ペルー副王の軍がアルト・ペルーを取り戻す"
+      note: "1813年・1815年にもブエノスアイレスの軍が攻め入ったが、年末までに退いた。各地で独立派のゲリラ（レプブリケタ）が戦った"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Huaqui"
+    - from: 1813
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "サンタ・クルス（独立派）"
+      cause: "ベルグラーノの派遣したワルネスがサンタ・クルスを治める"
+      source: "https://en.wikipedia.org/wiki/Ignacio_Warnes"
+    - from: 1816
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "エル・パリの戦い（11月）でワルネスが戦死する"
+    - from: 1825
+      owner: "bolivia"
+      cause: "スクレの軍がアルト・ペルーを解放し、8月6日にボリビアが独立を宣言する"
+      source: "https://ja.wikipedia.org/wiki/ボリビアの歴史"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: bol_beni
+  name: "ベニ（モホス）"
+  select:
+    pieces: [BOL-Beni]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チャルカス（ペルー副王領）"
+      note: "スペイン領アルト・ペルー。チャルカス（ラ・プラタ、今のスクレ）の聴訴院が治め、ポトシ銀山があった"
+      source: "https://ja.wikipedia.org/wiki/チャルカス・アウディエンシア"
+    - from: 1682
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      cause: "イエズス会がモホスに最初の布教村（ロレト）を作る"
+      source: "https://en.wikipedia.org/wiki/Jesuit_Missions_of_Moxos"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "リオ・デ・ラ・プラタ副王領が置かれ、アルト・ペルー（チャルカス）がその一部となる"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1825
+      owner: "bolivia"
+      cause: "スクレの軍がアルト・ペルーを解放し、8月6日にボリビアが独立を宣言する"
+      source: "https://ja.wikipedia.org/wiki/ボリビアの歴史"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+
+- id: bol_pando
+  name: "パンド（アマゾン北部）"
+  select:
+    pieces: [BOL-Pando]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チャルカス（ペルー副王領）"
+      note: "スペイン領アルト・ペルー。チャルカス（ラ・プラタ、今のスクレ）の聴訴院が治め、ポトシ銀山があった"
+      source: "https://ja.wikipedia.org/wiki/チャルカス・アウディエンシア"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "リオ・デ・ラ・プラタ副王領が置かれ、アルト・ペルー（チャルカス）がその一部となる"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1825
+      owner: "bolivia"
+      certainty: "nominal"
+      cause: "ボリビアの独立（主張のみ。先住民の地）"
+    - from: 1836
+      owner: "peru_bolivia"
+      certainty: "nominal"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合が成立する（10月、サンタ・クルスが最高護民官）"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合"
+    - from: 1839
+      owner: "bolivia"
+      certainty: "nominal"
+      cause: "ユンガイの戦い（1月）でチリとペルーの亡命派の軍に敗れ、連合が解体する"
+      source: "https://ja.wikipedia.org/wiki/ペルー・ボリビア連合戦争"
+    - from: 1900
+      owner: "bolivia"
+      cause: "ゴム・ブームでボリビア政府がリベラルタなどに拠点を置く（北のアクレではブラジル人入植者と戦争になる）"
+      note: "アクレは1903年のペトロポリス条約でブラジル領に。ペルーとの境は1909–11年に確定。パンド県は1938年に設置"
+      source: "https://en.wikipedia.org/wiki/Acre_War"
+
+- id: guy_essequibo
+  name: "エセキボ川河口"
+  select:
+    pieces: [GUY-Essequibo_Islands_West_Demerara]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "エセキボ（オランダ西インド会社）"
+      note: "ゼーラント（オランダ西インド会社）の植民地。キク・オーヴァー・アル砦が拠点。サトウキビの奴隷制プランテーションが広がった"
+      source: "https://en.wikipedia.org/wiki/Essequibo_(colony)"
+    - from: 1781
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "アメリカ独立戦争に加わったオランダに対し、イギリスがエセキボ・デメララ・ベルビセを占領する"
+      source: "https://en.wikipedia.org/wiki/Demerara#History"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "ギアナ（フランスの占領）"
+      cause: "フランスがイギリスから奪う（ロンシャン＝のちのジョージタウンを建設）"
+    - from: 1784
+      owner: "netherlands"
+      label: "エセキボ（オランダ西インド会社）"
+      cause: "パリ条約でオランダに返される"
+    - from: 1796
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "フランス革命戦争：オランダ（バタヴィア共和国）がフランス側についたため、イギリスが占領する"
+    - from: 1802
+      owner: "netherlands"
+      label: "エセキボ（オランダ西インド会社）"
+      cause: "アミアンの和約でバタヴィア共和国に返される"
+    - from: 1803
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "戦争の再開でイギリスが再び占領する（9月）"
+    - from: 1814
+      owner: "britain"
+      label: "デメララ＝エセキボ"
+      cause: "ロンドン協定（8月）でエセキボ・デメララ・ベルビセがイギリスに割譲される"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1831
+      owner: "britain"
+      label: "英領ギアナ"
+      cause: "デメララ＝エセキボとベルビセが合わさり、英領ギアナとなる"
+      source: "https://ja.wikipedia.org/wiki/イギリス領ギアナ"
+    - from: 1966
+      owner: "guyana"
+      cause: "5月26日、ガイアナがイギリスから独立する"
+      source: "https://ja.wikipedia.org/wiki/ガイアナ"
+
+- id: guy_demerara
+  name: "デメララ（ジョージタウン）"
+  select:
+    pieces: [GUY-Demerara_Mahaica]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "エセキボ（オランダ西インド会社）"
+      source: "https://en.wikipedia.org/wiki/Essequibo_(colony)"
+    - from: 1746
+      owner: "netherlands"
+      label: "デメララ（オランダ西インド会社）"
+      cause: "デメララ川流域に入植が許され、植民地デメララが作られる"
+      source: "https://en.wikipedia.org/wiki/Demerara"
+    - from: 1781
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "アメリカ独立戦争に加わったオランダに対し、イギリスがエセキボ・デメララ・ベルビセを占領する"
+      source: "https://en.wikipedia.org/wiki/Demerara#History"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "ギアナ（フランスの占領）"
+      cause: "フランスがイギリスから奪う（ロンシャン＝のちのジョージタウンを建設）"
+    - from: 1784
+      owner: "netherlands"
+      label: "エセキボ（オランダ西インド会社）"
+      cause: "パリ条約でオランダに返される"
+    - from: 1796
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "フランス革命戦争：オランダ（バタヴィア共和国）がフランス側についたため、イギリスが占領する"
+    - from: 1802
+      owner: "netherlands"
+      label: "エセキボ（オランダ西インド会社）"
+      cause: "アミアンの和約でバタヴィア共和国に返される"
+    - from: 1803
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "戦争の再開でイギリスが再び占領する（9月）"
+    - from: 1814
+      owner: "britain"
+      label: "デメララ＝エセキボ"
+      cause: "ロンドン協定（8月）でエセキボ・デメララ・ベルビセがイギリスに割譲される"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1831
+      owner: "britain"
+      label: "英領ギアナ"
+      cause: "デメララ＝エセキボとベルビセが合わさり、英領ギアナとなる"
+      source: "https://ja.wikipedia.org/wiki/イギリス領ギアナ"
+    - from: 1966
+      owner: "guyana"
+      cause: "5月26日、ガイアナがイギリスから独立する"
+      source: "https://ja.wikipedia.org/wiki/ガイアナ"
+
+- id: guy_berbice
+  name: "ベルビセ"
+  select:
+    pieces: [GUY-East_Berbice_Corentyne, GUY-Mahaica_Berbice]
+  note: "コランティン川上流のニュー川の三角地帯（ティグリ）はスリナムも主張している"
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "ベルビセ（オランダ）"
+      note: "1627年にファン・ペーレ家が開いたオランダの植民地（1720年からベルビセ協会）"
+      source: "https://en.wikipedia.org/wiki/Essequibo_(colony)"
+    - from: 1763
+      owner: "netherlands"
+      certainty: "uncertain"
+      label: "ベルビセ奴隷反乱"
+      cause: "2月、クフィー（コフィ）を指導者とする奴隷の反乱が起こり、植民地の大半を反乱軍が押さえる（1764年に鎮圧）"
+      source: "https://en.wikipedia.org/wiki/Berbice_slave_uprising"
+    - from: 1764
+      owner: "netherlands"
+      label: "ベルビセ（オランダ）"
+      cause: "オランダ・近隣の植民地からの援軍が反乱を鎮める"
+    - from: 1781
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "アメリカ独立戦争に加わったオランダに対し、イギリスがエセキボ・デメララ・ベルビセを占領する"
+      source: "https://en.wikipedia.org/wiki/Demerara#History"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "ギアナ（フランスの占領）"
+      cause: "フランスがイギリスから奪う（ロンシャン＝のちのジョージタウンを建設）"
+    - from: 1784
+      owner: "netherlands"
+      label: "ベルビセ（オランダ）"
+      cause: "パリ条約でオランダに返される"
+    - from: 1796
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "フランス革命戦争：オランダ（バタヴィア共和国）がフランス側についたため、イギリスが占領する"
+    - from: 1802
+      owner: "netherlands"
+      label: "ベルビセ（オランダ）"
+      cause: "アミアンの和約でバタヴィア共和国に返される"
+    - from: 1803
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "戦争の再開でイギリスが再び占領する（9月）"
+    - from: 1814
+      owner: "britain"
+      label: "ベルビセ"
+      cause: "ロンドン協定（8月）でエセキボ・デメララ・ベルビセがイギリスに割譲される"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1831
+      owner: "britain"
+      label: "英領ギアナ"
+      cause: "デメララ＝エセキボとベルビセが合わさり、英領ギアナとなる"
+      source: "https://ja.wikipedia.org/wiki/イギリス領ギアナ"
+    - from: 1966
+      owner: "guyana"
+      cause: "5月26日、ガイアナがイギリスから独立する"
+      source: "https://ja.wikipedia.org/wiki/ガイアナ"
+
+- id: guy_pomeroon
+  name: "ポメルーン"
+  select:
+    pieces: [GUY-Pomeroon_Supenaam]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "エセキボ（オランダ西インド会社）"
+      note: "1650年代にオランダ人のノヴァ・ゼーランディア植民地があったが、1666年に壊された。その後はまばらな交易所"
+      source: "https://en.wikipedia.org/wiki/Essequibo_(colony)"
+    - from: 1781
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "アメリカ独立戦争に加わったオランダに対し、イギリスがエセキボ・デメララ・ベルビセを占領する"
+      source: "https://en.wikipedia.org/wiki/Demerara#History"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "ギアナ（フランスの占領）"
+      cause: "フランスがイギリスから奪う（ロンシャン＝のちのジョージタウンを建設）"
+    - from: 1784
+      owner: "netherlands"
+      label: "エセキボ（オランダ西インド会社）"
+      cause: "パリ条約でオランダに返される"
+    - from: 1796
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "フランス革命戦争：オランダ（バタヴィア共和国）がフランス側についたため、イギリスが占領する"
+    - from: 1802
+      owner: "netherlands"
+      label: "エセキボ（オランダ西インド会社）"
+      cause: "アミアンの和約でバタヴィア共和国に返される"
+    - from: 1803
+      owner: "britain"
+      certainty: "occupied"
+      label: "ギアナ（イギリスの占領）"
+      cause: "戦争の再開でイギリスが再び占領する（9月）"
+    - from: 1814
+      owner: "britain"
+      label: "デメララ＝エセキボ"
+      cause: "ロンドン協定（8月）でエセキボ・デメララ・ベルビセがイギリスに割譲される"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1831
+      owner: "britain"
+      label: "英領ギアナ"
+      cause: "デメララ＝エセキボとベルビセが合わさり、英領ギアナとなる"
+      source: "https://ja.wikipedia.org/wiki/イギリス領ギアナ"
+    - from: 1966
+      owner: "guyana"
+      cause: "5月26日、ガイアナがイギリスから独立する"
+      source: "https://ja.wikipedia.org/wiki/ガイアナ"
+
+- id: guy_interior
+  name: "ギアナ中部の奥地"
+  select:
+    pieces: [GUY-Upper_Demerara_Berbice, GUY-Potaro_Siparuni]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "エセキボ（オランダ西インド会社）"
+      note: "オランダの交易者が入るだけの先住民の地（nominal）"
+    - from: 1814
+      owner: "britain"
+      certainty: "nominal"
+      label: "英領ギアナ"
+      cause: "ロンドン協定でイギリスに割譲される"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1899
+      owner: "britain"
+      label: "英領ギアナ"
+      cause: "金・ダイヤモンドの採掘と境界の確定で、植民地政府の支配が奥地に及ぶ（年は目安）"
+    - from: 1966
+      owner: "guyana"
+      cause: "5月26日、ガイアナがイギリスから独立する"
+      source: "https://ja.wikipedia.org/wiki/ガイアナ"
+
+- id: guy_west
+  name: "エセキボ川の西（ベネズエラとの係争地）"
+  select:
+    pieces: [GUY-Barina_Waini, GUY-Cuyuni_Mazaruni]
+  note: "スペイン・ベネズエラもエセキボ川までを主張した（主張が重なる所は、地図で一般的に示されるオランダ・イギリス側にした）"
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "エセキボ（オランダ西インド会社）"
+      note: "オランダの交易者が入るだけの先住民の地（nominal）"
+    - from: 1814
+      owner: "britain"
+      certainty: "nominal"
+      label: "英領ギアナ"
+      cause: "ロンドン協定でイギリスに割譲される"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1841
+      owner: "britain"
+      certainty: "uncertain"
+      label: "英領ギアナ（ベネズエラとの係争地）"
+      cause: "イギリスがショーンバーグの調べた境界線を示し、ベネズエラとの係争が始まる"
+      source: "https://en.wikipedia.org/wiki/Guayana_Esequiba"
+    - from: 1899
+      owner: "britain"
+      label: "英領ギアナ"
+      cause: "パリの仲裁裁定（10月）でエセキボ川の西の大半がイギリス領と決まる（1895年のベネズエラ危機でアメリカが仲裁を求めた）"
+      source: "https://en.wikipedia.org/wiki/Venezuela_Crisis_of_1895"
+    - from: 1966
+      owner: "guyana"
+      cause: "5月26日、ガイアナが独立する。直前のジュネーヴ協定（2月）でベネズエラとの係争は話し合いに委ねられた"
+      note: "ベネズエラは1962年から仲裁裁定を無効と主張し、この地域を「グアヤナ・エセキバ」と呼んで領有を主張している（2023年に住民投票、国際司法裁判所で審理中）。実際の統治はガイアナ"
+      source: "https://en.wikipedia.org/wiki/Guayana_Esequiba"
+
+- id: guy_south
+  name: "ルプヌニ（ブラジルとの係争地を含む）"
+  select:
+    pieces: [GUY-Upper_Takutu_Upper_Essequibo]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "エセキボ（オランダ西インド会社）"
+      note: "オランダの交易者が入るだけの先住民の地（nominal）"
+    - from: 1814
+      owner: "britain"
+      certainty: "nominal"
+      label: "英領ギアナ"
+      cause: "ロンドン協定でイギリスに割譲される"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1842
+      owner: "britain"
+      certainty: "uncertain"
+      label: "英領ギアナ（ブラジルとの係争地）"
+      cause: "ピララをめぐってブラジルと争い、係争地を中立地帯とする"
+    - from: 1904
+      owner: "britain"
+      label: "英領ギアナ"
+      cause: "イタリア王の仲裁裁定で、ブラジルとの国境が決まる（6月）"
+      source: "https://en.wikipedia.org/wiki/Pirara_Question"
+    - from: 1966
+      owner: "guyana"
+      cause: "5月26日、ガイアナがイギリスから独立する"
+      source: "https://ja.wikipedia.org/wiki/ガイアナ"
+
+- id: sur_core
+  name: "スリナム中心部（パラマリボ）"
+  select:
+    pieces: [SUR-Paramaribo, SUR-Wanica, SUR-Commewijne, SUR-Para, SUR-Saramacca]
+  note: "1682–1795年はスリナム協会（オランダ西インド会社・アムステルダム市・ファン・アールセン家）の植民地。サトウキビ・コーヒーの奴隷制プランテーションが広がった"
+  timeline:
+    - from: 1648
+      owner: null
+      note: "先住民の地。オランダ人・イギリス人の交易所が断続的にあった（所属なしで描く）"
+    - from: 1650
+      owner: "britain"
+      label: "スリナム（イギリス）"
+      cause: "バルバドス総督ウィロビー卿がスリナムに入植地を開く（パラマリボ）"
+      source: "https://en.wikipedia.org/wiki/Willoughbyland"
+    - from: 1667
+      owner: "netherlands"
+      label: "オランダ領スリナム"
+      cause: "ゼーラントのクレインセンがスリナムを奪い（2月）、ブレダの和約でオランダ領となる（ニューアムステルダムとの交換）"
+      note: "同年10月にイギリスが奪い返したが、1668年に返された（1674年のウェストミンスター条約で確定）"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1799
+      owner: "britain"
+      certainty: "occupied"
+      label: "スリナム（イギリスの占領）"
+      cause: "フランス革命戦争：バタヴィア共和国の植民地スリナムをイギリスが占領する（8月）"
+    - from: 1802
+      owner: "netherlands"
+      label: "オランダ領スリナム"
+      cause: "アミアンの和約で返される"
+    - from: 1804
+      owner: "britain"
+      certainty: "occupied"
+      label: "スリナム（イギリスの占領）"
+      cause: "イギリスが再び占領する（5月）"
+    - from: 1816
+      owner: "netherlands"
+      label: "オランダ領スリナム"
+      cause: "ロンドン協定（1814年）に基づいてオランダに返される（2月）"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1954
+      owner: "netherlands"
+      certainty: "indirect"
+      label: "スリナム（オランダ王国の構成国）"
+      cause: "オランダ王国憲章でスリナムが自治権をもつ王国の構成国となる"
+      source: "https://en.wikipedia.org/wiki/Charter_for_the_Kingdom_of_the_Netherlands"
+    - from: 1975
+      owner: "suriname"
+      cause: "11月25日、スリナムが独立する"
+      source: "https://ja.wikipedia.org/wiki/スリナム"
+
+- id: sur_coast
+  name: "スリナム東西の海岸（ニッケリー・コロニー・マロワイネ）"
+  select:
+    pieces: [SUR-Nickerie, SUR-Coronie, SUR-Marowijne]
+  note: "プランテーションが広がったのは18世紀末から（コロニーはイギリス占領期の入植）"
+  timeline:
+    - from: 1648
+      owner: null
+      note: "先住民の地。オランダ人・イギリス人の交易所が断続的にあった（所属なしで描く）"
+    - from: 1650
+      owner: "britain"
+      certainty: "nominal"
+      label: "スリナム（イギリス）"
+      cause: "バルバドス総督ウィロビー卿がスリナムに入植地を開く（パラマリボ）"
+      source: "https://en.wikipedia.org/wiki/Willoughbyland"
+    - from: 1667
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "オランダ領スリナム"
+      cause: "ゼーラントのクレインセンがスリナムを奪い（2月）、ブレダの和約でオランダ領となる（ニューアムステルダムとの交換）"
+      note: "同年10月にイギリスが奪い返したが、1668年に返された（1674年のウェストミンスター条約で確定）"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1799
+      owner: "britain"
+      certainty: "occupied"
+      label: "スリナム（イギリスの占領）"
+      cause: "フランス革命戦争：バタヴィア共和国の植民地スリナムをイギリスが占領する（8月）"
+    - from: 1802
+      owner: "netherlands"
+      label: "オランダ領スリナム"
+      cause: "アミアンの和約で返される"
+    - from: 1804
+      owner: "britain"
+      certainty: "occupied"
+      label: "スリナム（イギリスの占領）"
+      cause: "イギリスが再び占領する（5月）"
+    - from: 1816
+      owner: "netherlands"
+      label: "オランダ領スリナム"
+      cause: "ロンドン協定（1814年）に基づいてオランダに返される（2月）"
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+    - from: 1954
+      owner: "netherlands"
+      certainty: "indirect"
+      label: "スリナム（オランダ王国の構成国）"
+      cause: "オランダ王国憲章でスリナムが自治権をもつ王国の構成国となる"
+      source: "https://en.wikipedia.org/wiki/Charter_for_the_Kingdom_of_the_Netherlands"
+    - from: 1975
+      owner: "suriname"
+      cause: "11月25日、スリナムが独立する"
+      source: "https://ja.wikipedia.org/wiki/スリナム"
+
+- id: sur_interior
+  name: "スリナムの奥地"
+  select:
+    pieces: [SUR-Brokopondo, SUR-Sipaliwini]
+  note: "1986–92年の内戦（ジャングル・コマンド）では東部の奥地が政府の手を離れた。南部の境（ラワ川上流）はフランス領ギアナと、西部（ティグリ）はガイアナと争っている"
+  timeline:
+    - from: 1648
+      owner: null
+      note: "先住民の地。オランダ人・イギリス人の交易所が断続的にあった（所属なしで描く）"
+    - from: 1650
+      owner: "britain"
+      certainty: "nominal"
+      label: "スリナム（イギリス）"
+      cause: "バルバドス総督ウィロビー卿がスリナムに入植地を開く（パラマリボ）"
+      source: "https://en.wikipedia.org/wiki/Willoughbyland"
+    - from: 1667
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "オランダ領スリナム"
+      cause: "ゼーラントのクレインセンがスリナムを奪い（2月）、ブレダの和約でオランダ領となる（ニューアムステルダムとの交換）"
+      note: "同年10月にイギリスが奪い返したが、1668年に返された（1674年のウェストミンスター条約で確定）"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1760
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "オランダ領スリナム（マルーンの地）"
+      cause: "逃亡奴隷の共同体（マルーン）のンジュカと和平条約を結び（1760）、サラマカとも結ぶ（1762）。奥地はマルーンと先住民が自治した"
+      source: "https://en.wikipedia.org/wiki/Ndyuka_people"
+    - from: 1799
+      owner: "britain"
+      certainty: "nominal"
+      label: "スリナム（イギリスの占領）"
+      cause: "イギリスがスリナムを占領する"
+    - from: 1802
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "オランダ領スリナム（マルーンの地）"
+    - from: 1804
+      owner: "britain"
+      certainty: "nominal"
+      label: "スリナム（イギリスの占領）"
+    - from: 1816
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "オランダ領スリナム（マルーンの地）"
+      cause: "オランダに返される"
+    - from: 1954
+      owner: "netherlands"
+      certainty: "indirect"
+      label: "スリナム（オランダ王国の構成国）"
+      cause: "オランダ王国憲章でスリナムが自治権をもつ王国の構成国となる"
+      source: "https://en.wikipedia.org/wiki/Charter_for_the_Kingdom_of_the_Netherlands"
+    - from: 1975
+      owner: "suriname"
+      cause: "11月25日、スリナムが独立する"
+      source: "https://ja.wikipedia.org/wiki/スリナム"
+
+- id: guf
+  name: "フランス領ギアナ"
+  select:
+    pieces: [GUF-Guyane]
+  note: "1852–1953年は流刑植民地（悪魔島など）が置かれた。ブラジルとの境（アマパー）は1900年のスイスの仲裁で決まった"
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ギアナ（フランスの入植の試み）"
+      note: "1643年にポンセ・ド・ブレティニーがカイエンヌに入植したが、先住民との戦いで失敗した"
+      source: "https://en.wikipedia.org/wiki/French_Guiana#History"
+    - from: 1658
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "カイエンヌ（オランダ）"
+      cause: "オランダ西インド会社の入植者がカイエンヌに住みつく"
+    - from: 1664
+      owner: "france"
+      label: "フランス領ギアナ"
+      cause: "フランスがカイエンヌを取り戻し、本格的な植民地とする（フランス西インド会社）"
+      note: "1676年にオランダが一時奪ったが、同年中にデストレがとり返した。奥地は先住民と逃亡奴隷の地"
+      source: "https://en.wikipedia.org/wiki/French_Guiana#History"
+    - from: 1809
+      owner: "portugal"
+      certainty: "occupied"
+      label: "カイエンヌ（ポルトガルの占領）"
+      cause: "ナポレオン戦争：ブラジルに移ったポルトガル王室がイギリスとともにカイエンヌを占領する（1月）"
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Cayenne_(1809)"
+    - from: 1817
+      owner: "france"
+      label: "フランス領ギアナ"
+      cause: "ウィーン会議の取り決めでフランスに返される（11月）"
+    - from: 1946
+      owner: "france"
+      label: "フランス海外県（ギアナ）"
+      cause: "フランスの海外県となる"
+      source: "https://ja.wikipedia.org/wiki/フランス領ギアナ"

@@ -1,0 +1,330 @@
+# A5 ブラジル・南米南部の政体（1648–2025）
+# 植民地の時期はスペイン（spain）・ポルトガル（portugal）を使う（data/polities/west.yaml）。
+# 元首：共和国は大統領（実権者）。軍事政権の時期は軍の大統領・評議会議長を書く。
+
+# ---- ブラジル ----
+
+- id: brazil
+  name: ブラジル連邦共和国
+  home_iso: [BRA]
+  names:
+    - {to: 1888, name: ブラジル帝国, short: ブラジル, kind: 帝国（立憲君主政）}
+    - {from: 1889, to: 1929, name: ブラジル合衆国（第一共和政）, short: ブラジル, kind: 連邦共和国}
+    - {from: 1930, to: 1945, name: ブラジル合衆国（ヴァルガス時代）, short: ブラジル, kind: 連邦共和国（1937年からエスタード・ノーヴォの独裁）}
+    - {from: 1946, to: 1963, name: ブラジル合衆国（第二共和政）, short: ブラジル, kind: 連邦共和国}
+    - {from: 1964, to: 1984, name: ブラジル（軍事政権）, short: ブラジル, kind: 軍事政権}
+    - {from: 1985, name: ブラジル連邦共和国, short: ブラジル, kind: 連邦共和国}
+  short: ブラジル
+  color: "#bcd97a"
+  kind: 連邦共和国
+  rulers:
+    - {name: ペドロ1世, title: ブラジル皇帝, from: 1822, to: 1831, note: ポルトガル王ジョアン6世の子。1831年に退位してポルトガルに戻った, source: "https://ja.wikipedia.org/wiki/ペドロ1世_(ブラジル皇帝)"}
+    - {name: ペドロ2世, title: ブラジル皇帝, from: 1831, to: 1889, note: 5歳で即位し、1840年まで摂政が治めた（摂政時代には各地で反乱が起きた）。1889年の共和派のクーデタで退位, source: "https://ja.wikipedia.org/wiki/ペドロ2世_(ブラジル皇帝)"}
+    - {name: デオドロ・ダ・フォンセカ, title: 大統領, from: 1889, to: 1891, note: 帝政を倒した軍人, source: "https://ja.wikipedia.org/wiki/デオドロ・ダ・フォンセカ"}
+    - {name: フロリアノ・ペイショット, title: 大統領, from: 1891, to: 1894, source: "https://ja.wikipedia.org/wiki/フロリアノ・ペイショット"}
+    - {name: プルデンテ・デ・モライス, title: 大統領, from: 1894, to: 1898, source: "https://ja.wikipedia.org/wiki/プルデンテ・デ・モライス"}
+    - {name: カンポス・サレス, title: 大統領, from: 1898, to: 1902, source: "https://ja.wikipedia.org/wiki/カンポス・サレス"}
+    - {name: ロドリゲス・アルヴェス, title: 大統領, from: 1902, to: 1906, source: "https://ja.wikipedia.org/wiki/ロドリゲス・アルヴェス"}
+    - {name: アフォンソ・ペナ, title: 大統領, from: 1906, to: 1909, source: "https://ja.wikipedia.org/wiki/アフォンソ・ペナ"}
+    - {name: ニロ・ペサーニャ, title: 大統領, from: 1909, to: 1910, source: "https://ja.wikipedia.org/wiki/ニロ・ペサーニャ"}
+    - {name: エルメス・ダ・フォンセカ, title: 大統領, from: 1910, to: 1914, source: "https://ja.wikipedia.org/wiki/エルメス・ダ・フォンセカ"}
+    - {name: ヴェンセスラウ・ブラス, title: 大統領, from: 1914, to: 1918, source: "https://ja.wikipedia.org/wiki/ヴェンセスラウ・ブラス"}
+    - {name: デルフィン・モレイラ, title: 大統領, from: 1918, to: 1919, note: 当選したロドリゲス・アルヴェスの病死で代行, source: "https://ja.wikipedia.org/wiki/ブラジルの大統領の一覧"}
+    - {name: エピタシオ・ペソア, title: 大統領, from: 1919, to: 1922, source: "https://ja.wikipedia.org/wiki/エピタシオ・ペソア"}
+    - {name: アルトゥール・ベルナルデス, title: 大統領, from: 1922, to: 1926, source: "https://ja.wikipedia.org/wiki/アルトゥール・ベルナルデス"}
+    - {name: ワシントン・ルイス, title: 大統領, from: 1926, to: 1930, note: 1930年の革命で追われた, source: "https://ja.wikipedia.org/wiki/ワシントン・ルイス"}
+    - {name: ジェトゥリオ・ヴァルガス, title: 大統領, from: 1930, to: 1945, note: 1930年の革命で政権を握り、1937年からエスタード・ノーヴォ（新国家）の独裁体制。1945年に軍に退けられた, source: "https://ja.wikipedia.org/wiki/ジェトゥリオ・ヴァルガス"}
+    - {name: ジョゼ・リニャレス, title: 大統領（暫定）, from: 1945, to: 1946, source: "https://ja.wikipedia.org/wiki/ブラジルの大統領の一覧"}
+    - {name: エウリコ・ガスパール・ドゥトラ, title: 大統領, from: 1946, to: 1951, source: "https://ja.wikipedia.org/wiki/エウリコ・ガスパール・ドゥトラ"}
+    - {name: ジェトゥリオ・ヴァルガス, title: 大統領, from: 1951, to: 1954, note: 選挙で返り咲いたが、1954年に自殺した, source: "https://ja.wikipedia.org/wiki/ジェトゥリオ・ヴァルガス"}
+    - {name: カフェ・フィーリョ, title: 大統領, from: 1954, to: 1955, note: 1955年にはカルロス・ルス、ネレウ・ラモスが短く代行した, source: "https://ja.wikipedia.org/wiki/カフェ・フィーリョ"}
+    - {name: ジュセリーノ・クビチェック, title: 大統領, from: 1956, to: 1961, note: 「50年の進歩を5年で」を掲げ、ブラジリアを建設した, source: "https://ja.wikipedia.org/wiki/ジュセリーノ・クビチェック"}
+    - {name: ジャニオ・クアドロス, title: 大統領, from: 1961, to: 1961, source: "https://ja.wikipedia.org/wiki/ジャニオ・クアドロス"}
+    - {name: ジョアン・グラール, title: 大統領, from: 1961, to: 1964, note: 1964年の軍のクーデタで追われた, source: "https://ja.wikipedia.org/wiki/ジョアン・グラール"}
+    - {name: カステロ・ブランコ, title: 大統領（軍政）, from: 1964, to: 1967, source: "https://ja.wikipedia.org/wiki/ウンベルト・デ・アレンカール・カステロ・ブランコ"}
+    - {name: コスタ・エ・シルヴァ, title: 大統領（軍政）, from: 1967, to: 1969, source: "https://ja.wikipedia.org/wiki/アルトゥール・ダ・コスタ・エ・シルヴァ"}
+    - {name: エミリオ・ガラスタズ・メディシ, title: 大統領（軍政）, from: 1969, to: 1974, note: 「ブラジルの奇跡」と呼ばれた高度成長と、強い弾圧の時期, source: "https://ja.wikipedia.org/wiki/エミリオ・ガラスタズ・メディシ"}
+    - {name: エルネスト・ガイゼル, title: 大統領（軍政）, from: 1974, to: 1979, source: "https://ja.wikipedia.org/wiki/エルネスト・ガイゼル"}
+    - {name: ジョアン・フィゲイレド, title: 大統領（軍政）, from: 1979, to: 1985, source: "https://ja.wikipedia.org/wiki/ジョアン・フィゲイレド"}
+    - {name: ジョゼ・サルネイ, title: 大統領, from: 1985, to: 1990, note: 民政移管。当選したタンクレド・ネヴェスの急死で就任, source: "https://ja.wikipedia.org/wiki/ジョゼ・サルネイ"}
+    - {name: フェルナンド・コロール・デ・メロ, title: 大統領, from: 1990, to: 1992, note: 汚職で弾劾され辞任, source: "https://ja.wikipedia.org/wiki/フェルナンド・コロール・デ・メロ"}
+    - {name: イタマール・フランコ, title: 大統領, from: 1992, to: 1994, source: "https://ja.wikipedia.org/wiki/イタマール・フランコ"}
+    - {name: フェルナンド・エンリケ・カルドーゾ, title: 大統領, from: 1995, to: 2002, note: レアル・プランでインフレを抑えた, source: "https://ja.wikipedia.org/wiki/フェルナンド・エンリケ・カルドーゾ"}
+    - {name: ルイス・イナシオ・ルーラ・ダ・シルヴァ, title: 大統領, from: 2003, to: 2010, source: "https://ja.wikipedia.org/wiki/ルイス・イナシオ・ルーラ・ダ・シルヴァ"}
+    - {name: ジルマ・ルセフ, title: 大統領, from: 2011, to: 2016, note: 2016年に弾劾で罷免, source: "https://ja.wikipedia.org/wiki/ジルマ・ルセフ"}
+    - {name: ミシェル・テメル, title: 大統領, from: 2016, to: 2018, source: "https://ja.wikipedia.org/wiki/ミシェル・テメル"}
+    - {name: ジャイール・ボルソナーロ, title: 大統領, from: 2019, to: 2022, source: "https://ja.wikipedia.org/wiki/ジャイール・ボルソナーロ"}
+    - {name: ルイス・イナシオ・ルーラ・ダ・シルヴァ, title: 大統領, from: 2023, to: 2025, source: "https://ja.wikipedia.org/wiki/ルイス・イナシオ・ルーラ・ダ・シルヴァ"}
+  periods:
+    - {from: 1822, to: 1850, text: ポルトガルから独立した立憲君主国。南米で唯一の帝国として、旧ポルトガル領の広い国土を一つに保ったが、摂政時代には各地で反乱（カバナージェン・ファラーポス戦争など）が起きた。}
+    - {from: 1850, to: 1888, text: ペドロ2世のもとで安定し、コーヒーの輸出で栄えた。パラグアイ戦争（1864–70）に勝った。奴隷貿易は1850年に禁じられ、奴隷制は1888年の黄金法で廃止された。}
+    - {from: 1889, to: 1929, text: 軍のクーデタで共和政になる。サンパウロとミナスジェライスの大地主が交代で大統領を出す「カフェ・コン・レイテ（コーヒーとミルク）」の政治。ヨーロッパ・日本から移民が来た。}
+    - {from: 1930, to: 1945, text: ヴァルガスが革命で政権を握り、1937年からエスタード・ノーヴォ（新国家）の独裁で工業化と労働者保護を進めた。第二次世界大戦では連合国側で参戦した。}
+    - {from: 1946, to: 1963, text: 民主政。クビチェックの開発政策で内陸に新首都ブラジリアが建てられた（1960）。}
+    - {from: 1964, to: 1984, text: 軍事政権。高度成長（ブラジルの奇跡）の一方で、反対派への弾圧と対外債務が膨らんだ。}
+    - {from: 1985, to: 2025, text: 民政に戻り、1988年に新憲法。インフレを抑え、BRICS の一つとして新興国の大国となった。}
+
+- id: riograndense_republic
+  name: リオグランデ共和国
+  short: リオグランデ共和国
+  color: "#e5d77a"
+  kind: 共和国（ブラジルからの分離を宣言）
+  rulers:
+    - {name: ベント・ゴンサルヴェス, title: 大統領, from: 1836, to: 1843, source: "https://ja.wikipedia.org/wiki/ベント・ゴンサルヴェス"}
+    - {name: ゴメス・ジャルジン, title: 大統領, from: 1843, to: 1845, source: "https://en.wikipedia.org/wiki/Riograndense_Republic"}
+  periods:
+    - {from: 1836, to: 1845, text: ブラジル南部の牧畜業者（ガウーショ）が帝国政府の税などに反発したファラーポス戦争（1835–45）で、反乱軍が独立を宣言した。イタリアのガリバルディも加わった。1845年の協定で帝国に戻った。}
+  source: "https://ja.wikipedia.org/wiki/ファロウピーリャ革命"
+
+# ---- アルゼンチン ----
+
+- id: united_provinces_rio_plata
+  name: リオ・デ・ラ・プラタ連合州
+  short: ラ・プラタ連合州
+  color: "#aacde9"
+  kind: 国家連合
+  rulers:
+    - {name: コルネリオ・サアベドラ, title: 第一評議会・大評議会の議長, from: 1810, to: 1811, source: "https://ja.wikipedia.org/wiki/コルネリオ・サアベドラ"}
+    - {name: 三頭政治（第1次・第2次）, title: 執政, from: 1811, to: 1814, note: 第2次三頭政治のもとで1813年議会が奴隷の子の解放などを決めた, source: "https://en.wikipedia.org/wiki/First_Triumvirate_(Argentina)"}
+    - {name: ヘルバシオ・ポサダス, title: 最高執政官, from: 1814, to: 1815, source: "https://en.wikipedia.org/wiki/Gervasio_Antonio_de_Posadas"}
+    - {name: カルロス・マリア・デ・アルベアル, title: 最高執政官, from: 1815, to: 1815, note: その後1816年までアルバレス・トマス、バルカルセが代行, source: "https://ja.wikipedia.org/wiki/カルロス・マリア・デ・アルベアル"}
+    - {name: フアン・マルティン・デ・プエイレドン, title: 最高執政官, from: 1816, to: 1819, note: トゥクマン会議で選ばれ、サン・マルティンのアンデス越えを支えた, source: "https://en.wikipedia.org/wiki/Juan_Mart%C3%ADn_de_Pueyrred%C3%B3n"}
+    - {name: ホセ・ロンドー, title: 最高執政官, from: 1819, to: 1820, note: 1820年のセペダの戦いで中央政府が崩れた, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_Rondeau"}
+    - {name: マルティン・ロドリゲス, title: ブエノスアイレス州知事, from: 1820, to: 1824, note: 中央政府がない時期。外交はブエノスアイレス州が代わりに担った（大臣リバダビア）, source: "https://en.wikipedia.org/wiki/Mart%C3%ADn_Rodr%C3%ADguez_(Argentine_governor)"}
+    - {name: ベルナルディノ・リバダビア, title: 大統領, from: 1826, to: 1827, note: 中央集権的な憲法をつくったが、諸州に拒まれて辞任, source: "https://ja.wikipedia.org/wiki/ベルナルディノ・リバダビア"}
+    - {name: マヌエル・ドレーゴ, title: ブエノスアイレス州知事, from: 1827, to: 1828, note: 1828年にラバージェのクーデタで銃殺された, source: "https://en.wikipedia.org/wiki/Manuel_Dorrego"}
+    - {name: フアン・マヌエル・デ・ロサス, title: ブエノスアイレス州知事, from: 1829, to: 1832, source: "https://ja.wikipedia.org/wiki/フアン・マヌエル・デ・ロサス"}
+  periods:
+    - {from: 1810, to: 1816, text: 五月革命でブエノスアイレスに自治政府ができ、1816年のトゥクマン会議で独立を宣言した。上ペルー（ボリビア）・パラグアイ・バンダ・オリエンタル（ウルグアイ）は離れていった。}
+    - {from: 1817, to: 1830, text: サン・マルティンのアンデス軍がチリ・ペルーを解放した。国内では中央集権派（ウニタリオ）と連邦派（フェデラル）が争い、1820年から諸州が自立した。1825–28年のシスプラティナ戦争ではブラジルと戦った。}
+  source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ連合州"
+
+- id: argentina
+  name: アルゼンチン共和国
+  home_iso: [ARG]
+  names:
+    - {to: 1860, name: アルゼンチン連合, short: アルゼンチン, kind: 国家連合（諸州の連合）}
+    - {from: 1861, name: アルゼンチン共和国, short: アルゼンチン, kind: 連邦共和国}
+  short: アルゼンチン
+  color: "#9cc6e6"
+  kind: 連邦共和国
+  rulers:
+    - {name: ブエノスアイレス州知事（バルカルセ・ビアモンテ・マサ）, title: ブエノスアイレス州知事, from: 1832, to: 1835, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Argentina"}
+    - {name: フアン・マヌエル・デ・ロサス, title: ブエノスアイレス州知事（連合の外交を担う）, from: 1835, to: 1852, note: 連邦派の独裁者。1852年のカセーロスの戦いで敗れ、イギリスに亡命した, source: "https://ja.wikipedia.org/wiki/フアン・マヌエル・デ・ロサス"}
+    - {name: フスト・ホセ・デ・ウルキサ, title: 臨時執政官・大統領, from: 1852, to: 1860, note: 1853年憲法のもとで初代大統領（1854–60）, source: "https://ja.wikipedia.org/wiki/フスト・ホセ・デ・ウルキサ"}
+    - {name: サンティアゴ・デルキ, title: 大統領, from: 1860, to: 1861, source: "https://en.wikipedia.org/wiki/Santiago_Derqui"}
+    - {name: バルトロメ・ミトレ, title: 大統領, from: 1862, to: 1868, source: "https://ja.wikipedia.org/wiki/バルトロメ・ミトレ"}
+    - {name: ドミンゴ・ファウスティーノ・サルミエント, title: 大統領, from: 1868, to: 1874, note: 教育の普及に努めた, source: "https://ja.wikipedia.org/wiki/ドミンゴ・ファウスティーノ・サルミエント"}
+    - {name: ニコラス・アベジャネダ, title: 大統領, from: 1874, to: 1880, source: "https://en.wikipedia.org/wiki/Nicol%C3%A1s_Avellaneda"}
+    - {name: フリオ・アルヘンティーノ・ロカ, title: 大統領, from: 1880, to: 1886, note: 「砂漠の征服」を指揮した軍人, source: "https://ja.wikipedia.org/wiki/フリオ・アルヘンティーノ・ロカ"}
+    - {name: ミゲル・フアレス・セルマン, title: 大統領, from: 1886, to: 1890, note: 1890年の公園革命と金融危機で辞任, source: "https://en.wikipedia.org/wiki/Miguel_Ju%C3%A1rez_Celman"}
+    - {name: カルロス・ペジェグリーニ, title: 大統領, from: 1890, to: 1892, source: "https://en.wikipedia.org/wiki/Carlos_Pellegrini"}
+    - {name: ルイス・サエンス・ペーニャ, title: 大統領, from: 1892, to: 1895, source: "https://en.wikipedia.org/wiki/Luis_S%C3%A1enz_Pe%C3%B1a"}
+    - {name: ホセ・エバリスト・ウリブル, title: 大統領, from: 1895, to: 1898, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_Evaristo_Uriburu"}
+    - {name: フリオ・アルヘンティーノ・ロカ, title: 大統領, from: 1898, to: 1904, source: "https://ja.wikipedia.org/wiki/フリオ・アルヘンティーノ・ロカ"}
+    - {name: マヌエル・キンタナ, title: 大統領, from: 1904, to: 1906, source: "https://en.wikipedia.org/wiki/Manuel_Quintana"}
+    - {name: ホセ・フィゲロア・アルコルタ, title: 大統領, from: 1906, to: 1910, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_Figueroa_Alcorta"}
+    - {name: ロケ・サエンス・ペーニャ, title: 大統領, from: 1910, to: 1914, note: 男子の秘密・義務投票（サエンス・ペーニャ法、1912）, source: "https://ja.wikipedia.org/wiki/ロケ・サエンス・ペーニャ"}
+    - {name: ビクトリーノ・デ・ラ・プラサ, title: 大統領, from: 1914, to: 1916, source: "https://en.wikipedia.org/wiki/Victorino_de_la_Plaza"}
+    - {name: イポリト・イリゴージェン, title: 大統領, from: 1916, to: 1922, note: 急進党。初めての普通選挙による大統領, source: "https://ja.wikipedia.org/wiki/イポリト・イリゴージェン"}
+    - {name: マルセロ・T・デ・アルベアル, title: 大統領, from: 1922, to: 1928, source: "https://en.wikipedia.org/wiki/Marcelo_Torcuato_de_Alvear"}
+    - {name: イポリト・イリゴージェン, title: 大統領, from: 1928, to: 1930, note: 1930年の軍のクーデタで追われた, source: "https://ja.wikipedia.org/wiki/イポリト・イリゴージェン"}
+    - {name: ホセ・フェリックス・ウリブル, title: 臨時大統領（軍政）, from: 1930, to: 1932, note: 「忌まわしき10年」の始まり, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_F%C3%A9lix_Uriburu"}
+    - {name: アグスティン・P・フスト, title: 大統領, from: 1932, to: 1938, source: "https://en.wikipedia.org/wiki/Agust%C3%ADn_Pedro_Justo"}
+    - {name: ロベルト・M・オルティス, title: 大統領, from: 1938, to: 1942, source: "https://en.wikipedia.org/wiki/Roberto_Mar%C3%ADa_Ortiz"}
+    - {name: ラモン・カスティージョ, title: 大統領, from: 1942, to: 1943, note: 1943年の軍のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Ram%C3%B3n_Castillo"}
+    - {name: ペドロ・パブロ・ラミレス, title: 大統領（軍政）, from: 1943, to: 1944, source: "https://en.wikipedia.org/wiki/Pedro_Pablo_Ram%C3%ADrez"}
+    - {name: エデルミロ・ファレル, title: 大統領（軍政）, from: 1944, to: 1946, note: 副大統領・労働長官のペロンが力を伸ばした, source: "https://en.wikipedia.org/wiki/Edelmiro_Juli%C3%A1n_Farrell"}
+    - {name: フアン・ペロン, title: 大統領, from: 1946, to: 1955, note: 労働者を支持基盤とする正義党（ペロン党）。妻エバ（エビータ）も人気を集めた。1955年のクーデタで追われた, source: "https://ja.wikipedia.org/wiki/フアン・ペロン"}
+    - {name: ペドロ・エウヘニオ・アランブル, title: 臨時大統領（軍政）, from: 1955, to: 1958, note: 1955年のロナルディの短い政権の後, source: "https://en.wikipedia.org/wiki/Pedro_Eugenio_Aramburu"}
+    - {name: アルトゥーロ・フロンディシ, title: 大統領, from: 1958, to: 1962, source: "https://en.wikipedia.org/wiki/Arturo_Frondizi"}
+    - {name: ホセ・マリア・ギド, title: 大統領, from: 1962, to: 1963, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Guido"}
+    - {name: アルトゥーロ・イリア, title: 大統領, from: 1963, to: 1966, source: "https://en.wikipedia.org/wiki/Arturo_Umberto_Illia"}
+    - {name: フアン・カルロス・オンガニア, title: 大統領（軍政）, from: 1966, to: 1970, source: "https://en.wikipedia.org/wiki/Juan_Carlos_Ongan%C3%ADa"}
+    - {name: アレハンドロ・ラヌーセ, title: 大統領（軍政）, from: 1971, to: 1973, note: 1970–71年はレビングストン, source: "https://en.wikipedia.org/wiki/Alejandro_Agust%C3%ADn_Lanusse"}
+    - {name: フアン・ペロン, title: 大統領, from: 1973, to: 1974, note: 亡命から帰国し、カンポラの辞任の後に当選。在任中に死去, source: "https://ja.wikipedia.org/wiki/フアン・ペロン"}
+    - {name: イサベル・ペロン, title: 大統領, from: 1974, to: 1976, note: 世界初の女性大統領。1976年のクーデタで追われた, source: "https://ja.wikipedia.org/wiki/イサベル・ペロン"}
+    - {name: ホルヘ・ラファエル・ビデラ, title: 大統領（軍政）, from: 1976, to: 1981, note: 「汚い戦争」で多くの人が行方不明になった, source: "https://ja.wikipedia.org/wiki/ホルヘ・ラファエル・ビデラ"}
+    - {name: レオポルド・ガルティエリ, title: 大統領（軍政）, from: 1981, to: 1982, note: 1981年のビオラの短い政権の後。フォークランド戦争の敗北で辞任, source: "https://ja.wikipedia.org/wiki/レオポルド・ガルティエリ"}
+    - {name: レイナルド・ビニョーネ, title: 大統領（軍政）, from: 1982, to: 1983, source: "https://en.wikipedia.org/wiki/Reynaldo_Bignone"}
+    - {name: ラウル・アルフォンシン, title: 大統領, from: 1983, to: 1989, note: 民政移管, source: "https://ja.wikipedia.org/wiki/ラウル・アルフォンシン"}
+    - {name: カルロス・メネム, title: 大統領, from: 1989, to: 1999, source: "https://ja.wikipedia.org/wiki/カルロス・メネム"}
+    - {name: フェルナンド・デ・ラ・ルア, title: 大統領, from: 1999, to: 2001, note: 2001年の経済危機で辞任。その後数人が短く代行した, source: "https://ja.wikipedia.org/wiki/フェルナンド・デ・ラ・ルーア"}
+    - {name: エドゥアルド・ドゥアルデ, title: 大統領, from: 2002, to: 2003, source: "https://ja.wikipedia.org/wiki/エドゥアルド・ドゥアルデ"}
+    - {name: ネストル・キルチネル, title: 大統領, from: 2003, to: 2007, source: "https://ja.wikipedia.org/wiki/ネストル・キルチネル"}
+    - {name: クリスティナ・フェルナンデス・デ・キルチネル, title: 大統領, from: 2007, to: 2015, source: "https://ja.wikipedia.org/wiki/クリスティーナ・フェルナンデス・デ・キルチネル"}
+    - {name: マウリシオ・マクリ, title: 大統領, from: 2015, to: 2019, source: "https://ja.wikipedia.org/wiki/マウリシオ・マクリ"}
+    - {name: アルベルト・フェルナンデス, title: 大統領, from: 2019, to: 2023, source: "https://ja.wikipedia.org/wiki/アルベルト・フェルナンデス"}
+    - {name: ハビエル・ミレイ, title: 大統領, from: 2023, to: 2025, source: "https://ja.wikipedia.org/wiki/ハビエル・ミレイ"}
+  periods:
+    - {from: 1831, to: 1852, text: 諸州がゆるく連合し、ブエノスアイレス州知事ロサスが独裁的に力をふるった（連邦派と中央集権派の内戦が続いた）。}
+    - {from: 1852, to: 1879, text: カセーロスの戦いでロサスが倒れ、1853年に連邦憲法ができた。ブエノスアイレス州は1861年まで分かれていた。ミトレ・サルミエントのもとで国家の基礎がつくられ、パラグアイ戦争（1864–70）に加わった。}
+    - {from: 1879, to: 1929, text: 「砂漠の征服」でパンパとパタゴニアを征服し、ヨーロッパ（イタリア・スペイン）から大量の移民が来た。小麦・牛肉の輸出で世界有数の豊かな国となった。1912年に男子普通選挙。}
+    - {from: 1930, to: 1945, text: 1930年の軍のクーデタから保守派の不正選挙の時代（忌まわしき10年）。1943年に再び軍が政権を握った。}
+    - {from: 1946, to: 1955, text: ペロン政権。労働者の保護・産業の国有化を進めた（ペロニズム）。}
+    - {from: 1955, to: 1982, text: 軍のクーデタと短い民政が繰り返された。1976–83年の軍事政権は左翼ゲリラの掃討を名目に多くの市民を拉致・殺害し（汚い戦争）、1982年にはフォークランド戦争でイギリスに敗れた。}
+    - {from: 1983, to: 2025, text: 民政に戻った。たびたび経済危機（2001年の債務不履行など）とインフレに苦しんだ。}
+
+- id: buenos_aires_state
+  name: ブエノスアイレス国
+  short: ブエノスアイレス
+  color: "#7fa7d4"
+  kind: 州（アルゼンチン連合から分離）
+  rulers:
+    - {name: パストール・オブリガード, title: 州知事, from: 1853, to: 1857, note: 1852–53年はバレンティン・アルシーナなど, source: "https://en.wikipedia.org/wiki/State_of_Buenos_Aires"}
+    - {name: バレンティン・アルシーナ, title: 州知事, from: 1857, to: 1859, source: "https://en.wikipedia.org/wiki/Valent%C3%ADn_Alsina"}
+    - {name: バルトロメ・ミトレ, title: 州知事, from: 1860, to: 1861, source: "https://ja.wikipedia.org/wiki/バルトロメ・ミトレ"}
+  periods:
+    - {from: 1852, to: 1861, text: ロサスが倒れた後、ブエノスアイレス州はウルキサの連合政府と対立して離れ、関税収入を握って独自に歩んだ。1859年のセペダの戦いで敗れたが、1861年のパボンの戦いに勝ち、ミトレのもとで国が再統一された。}
+  source: "https://en.wikipedia.org/wiki/State_of_Buenos_Aires"
+
+- id: liga_federal
+  name: 連邦同盟（自由の民の同盟）
+  short: 連邦同盟
+  color: "#c8a9df"
+  kind: 州の同盟（アルティガスが保護者）
+  rulers:
+    - {name: ホセ・アルティガス, title: 自由の民の保護者, from: 1815, to: 1820, note: ウルグアイ建国の父とされる, source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"}
+  periods:
+    - {from: 1815, to: 1820, text: バンダ・オリエンタル（ウルグアイ）のアルティガスを中心に、ブエノスアイレスの中央集権に反対する連邦派の諸州（エントレ・リオス・コリエンテス・ミシオネス・サンタフェ）が同盟した。1816年からポルトガル・ブラジル軍に攻められ、1820年に崩れた。}
+  source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+
+# ---- ウルグアイ ----
+
+- id: uruguay
+  name: ウルグアイ東方共和国
+  home_iso: [URY]
+  short: ウルグアイ
+  color: "#b9b3e3"
+  kind: 共和国
+  rulers:
+    - {name: フルクトゥオソ・リベラ, title: 大統領, from: 1830, to: 1834, note: コロラド党の祖, source: "https://ja.wikipedia.org/wiki/フルクトゥオソ・リベラ"}
+    - {name: マヌエル・オリベ, title: 大統領, from: 1835, to: 1838, note: ブランコ党の祖, source: "https://ja.wikipedia.org/wiki/マヌエル・オリベ"}
+    - {name: フルクトゥオソ・リベラ, title: 大統領, from: 1839, to: 1843, source: "https://ja.wikipedia.org/wiki/フルクトゥオソ・リベラ"}
+    - {name: ホアキン・スアレス, title: 大統領（モンテビデオの防衛政府）, from: 1843, to: 1852, note: 大戦争の間、オリベは郊外のセリートに別の政府を置いた, source: "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Su%C3%A1rez"}
+    - {name: ベナンシオ・フローレス, title: 大統領, from: 1865, to: 1868, note: ブラジルの支援で政権を握り、パラグアイ戦争に加わった。1852–65年は主な人物を省略, source: "https://ja.wikipedia.org/wiki/ベナンシオ・フローレス"}
+    - {name: ロレンソ・ラトーレ, title: 大統領（独裁）, from: 1876, to: 1880, source: "https://en.wikipedia.org/wiki/Lorenzo_Latorre"}
+    - {name: ホセ・バッジェ・イ・オルドニェス, title: 大統領, from: 1903, to: 1907, note: 1880–1903年の大統領は省略, source: "https://ja.wikipedia.org/wiki/ホセ・バッジェ・イ・オルドニェス"}
+    - {name: クラウディオ・ウィリマン, title: 大統領, from: 1907, to: 1911, source: "https://en.wikipedia.org/wiki/Claudio_Williman"}
+    - {name: ホセ・バッジェ・イ・オルドニェス, title: 大統領, from: 1911, to: 1915, note: 8時間労働・離婚法・国営企業など先進的な改革（バッジスモ）, source: "https://ja.wikipedia.org/wiki/ホセ・バッジェ・イ・オルドニェス"}
+    - {name: ガブリエル・テラ, title: 大統領, from: 1931, to: 1938, note: 1933年に議会を解散して独裁的に治めた。1915–31年の大統領は省略, source: "https://en.wikipedia.org/wiki/Gabriel_Terra"}
+    - {name: ルイス・バッジェ・ベレス, title: 大統領, from: 1947, to: 1951, note: 1938–47年の大統領は省略。1952–67年は国家評議会（合議制の元首）, source: "https://en.wikipedia.org/wiki/Luis_Batlle_Berres"}
+    - {name: ホルヘ・パチェコ・アレコ, title: 大統領, from: 1967, to: 1972, note: 都市ゲリラ（トゥパマロス）との対立が深まった, source: "https://en.wikipedia.org/wiki/Jorge_Pacheco_Areco"}
+    - {name: フアン・マリア・ボルダベリ, title: 大統領, from: 1972, to: 1976, note: 1973年に軍と組んで議会を解散した（軍民独裁の始まり）, source: "https://en.wikipedia.org/wiki/Juan_Mar%C3%ADa_Bordaberry"}
+    - {name: アパリシオ・メンデス, title: 大統領（軍政）, from: 1976, to: 1981, source: "https://en.wikipedia.org/wiki/Aparicio_M%C3%A9ndez"}
+    - {name: グレゴリオ・アルバレス, title: 大統領（軍政）, from: 1981, to: 1985, source: "https://en.wikipedia.org/wiki/Gregorio_%C3%81lvarez"}
+    - {name: フリオ・マリア・サンギネッティ, title: 大統領, from: 1985, to: 1990, note: 民政移管, source: "https://en.wikipedia.org/wiki/Julio_Mar%C3%ADa_Sanguinetti"}
+    - {name: ルイス・アルベルト・ラカジェ, title: 大統領, from: 1990, to: 1995, source: "https://en.wikipedia.org/wiki/Luis_Alberto_Lacalle"}
+    - {name: フリオ・マリア・サンギネッティ, title: 大統領, from: 1995, to: 2000, source: "https://en.wikipedia.org/wiki/Julio_Mar%C3%ADa_Sanguinetti"}
+    - {name: ホルヘ・バッジェ, title: 大統領, from: 2000, to: 2005, source: "https://en.wikipedia.org/wiki/Jorge_Batlle"}
+    - {name: タバレ・バスケス, title: 大統領, from: 2005, to: 2010, note: 左派の拡大戦線の初の政権, source: "https://ja.wikipedia.org/wiki/タバレ・バスケス"}
+    - {name: ホセ・ムヒカ, title: 大統領, from: 2010, to: 2015, note: 元トゥパマロス。質素な暮らしで知られた, source: "https://ja.wikipedia.org/wiki/ホセ・ムヒカ"}
+    - {name: タバレ・バスケス, title: 大統領, from: 2015, to: 2020, source: "https://ja.wikipedia.org/wiki/タバレ・バスケス"}
+    - {name: ルイス・ラカジェ・ポウ, title: 大統領, from: 2020, to: 2025, source: "https://ja.wikipedia.org/wiki/ルイス・ラカジェ・ポウ"}
+    - {name: ヤマンドゥ・オルシ, title: 大統領, from: 2025, to: 2025, source: "https://en.wikipedia.org/wiki/Yamand%C3%BA_Orsi"}
+  periods:
+    - {from: 1828, to: 1851, text: アルゼンチンとブラジルの間の緩衝国として独立した。コロラド党（リベラ）とブランコ党（オリベ）が争い、大戦争（1839–51）では両隣国やイギリス・フランスも介入した。}
+    - {from: 1852, to: 1902, text: 内戦と政変が続き、パラグアイ戦争（1864–70）にはブラジル・アルゼンチンと組んで加わった。牧畜と移民で経済が伸びた。}
+    - {from: 1903, to: 1958, text: バッジェ・イ・オルドニェスの改革で福祉国家が早くから築かれ、「南米のスイス」と呼ばれた。}
+    - {from: 1959, to: 1984, text: 経済の停滞と都市ゲリラ（トゥパマロス）の活動の中で、1973年から軍民独裁が続いた。}
+    - {from: 1985, to: 2025, text: 民政に戻り、二大政党と左派の拡大戦線が政権を交代しながら安定した民主政を保っている。}
+
+# ---- パラグアイ ----
+
+- id: paraguay
+  name: パラグアイ共和国
+  home_iso: [PRY]
+  short: パラグアイ
+  color: "#e8a9b8"
+  kind: 共和国
+  rulers:
+    - {name: ホセ・ガスパル・ロドリゲス・デ・フランシア, title: 終身独裁官, from: 1814, to: 1840, note: 1811–14年は評議会・執政。国を閉ざして独立を守った, source: "https://ja.wikipedia.org/wiki/ホセ・ガスパル・ロドリゲス・デ・フランシア"}
+    - {name: カルロス・アントニオ・ロペス, title: 執政・大統領, from: 1841, to: 1862, note: 国を開き、鉄道・製鉄所・軍備を整えた, source: "https://ja.wikipedia.org/wiki/カルロス・アントニオ・ロペス"}
+    - {name: フランシスコ・ソラノ・ロペス, title: 大統領, from: 1862, to: 1870, note: パラグアイ戦争を起こし、1870年に戦死した, source: "https://ja.wikipedia.org/wiki/フランシスコ・ソラノ・ロペス"}
+    - {name: ベルナルディーノ・カバジェロ, title: 大統領, from: 1880, to: 1886, note: コロラド党の祖。1870–80年と1886–1932年の多くの大統領は省略, source: "https://en.wikipedia.org/wiki/Bernardino_Caballero"}
+    - {name: エウセビオ・アヤラ, title: 大統領, from: 1932, to: 1936, note: チャコ戦争の時の大統領, source: "https://en.wikipedia.org/wiki/Eusebio_Ayala"}
+    - {name: ラファエル・フランコ, title: 大統領, from: 1936, to: 1937, note: 2月革命の軍人, source: "https://en.wikipedia.org/wiki/Rafael_Franco"}
+    - {name: ホセ・フェリックス・エスティガリビア, title: 大統領, from: 1939, to: 1940, note: チャコ戦争の司令官, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_F%C3%A9lix_Estigarribia"}
+    - {name: イヒニオ・モリニゴ, title: 大統領, from: 1940, to: 1948, note: 1947年に内戦, source: "https://en.wikipedia.org/wiki/Higinio_Mor%C3%ADnigo"}
+    - {name: アルフレド・ストロエスネル, title: 大統領, from: 1954, to: 1989, note: 35年続いた独裁。1948–54年の大統領は省略, source: "https://ja.wikipedia.org/wiki/アルフレド・ストロエスネル"}
+    - {name: アンドレス・ロドリゲス, title: 大統領, from: 1989, to: 1993, note: クーデタでストロエスネルを倒した, source: "https://en.wikipedia.org/wiki/Andr%C3%A9s_Rodr%C3%ADguez_(Paraguayan_politician)"}
+    - {name: フアン・カルロス・ワスモシ, title: 大統領, from: 1993, to: 1998, source: "https://en.wikipedia.org/wiki/Juan_Carlos_Wasmosy"}
+    - {name: ラウル・クバス, title: 大統領, from: 1998, to: 1999, source: "https://en.wikipedia.org/wiki/Ra%C3%BAl_Cubas_Grau"}
+    - {name: ルイス・ゴンサレス・マキ, title: 大統領, from: 1999, to: 2003, source: "https://en.wikipedia.org/wiki/Luis_%C3%81ngel_Gonz%C3%A1lez_Macchi"}
+    - {name: ニカノル・ドゥアルテ, title: 大統領, from: 2003, to: 2008, source: "https://en.wikipedia.org/wiki/Nicanor_Duarte"}
+    - {name: フェルナンド・ルゴ, title: 大統領, from: 2008, to: 2012, note: 61年ぶりの政権交代。2012年に弾劾で罷免, source: "https://ja.wikipedia.org/wiki/フェルナンド・ルゴ"}
+    - {name: フェデリコ・フランコ, title: 大統領, from: 2012, to: 2013, source: "https://en.wikipedia.org/wiki/Federico_Franco"}
+    - {name: オラシオ・カルテス, title: 大統領, from: 2013, to: 2018, source: "https://ja.wikipedia.org/wiki/オラシオ・カルテス"}
+    - {name: マリオ・アブド・ベニテス, title: 大統領, from: 2018, to: 2023, source: "https://ja.wikipedia.org/wiki/マリオ・アブド・ベニテス"}
+    - {name: サンティアゴ・ペニャ, title: 大統領, from: 2023, to: 2025, source: "https://ja.wikipedia.org/wiki/サンティアゴ・ペニャ"}
+  periods:
+    - {from: 1811, to: 1862, text: スペインとブエノスアイレスから独立した。フランシアが国を閉ざして独裁し、ロペス父子のもとで南米でも早く鉄道や製鉄所をつくった。}
+    - {from: 1864, to: 1870, text: パラグアイ戦争（三国同盟戦争）でブラジル・アルゼンチン・ウルグアイと戦って敗れ、人口の大きな部分（男性の大部分）を失った。}
+    - {from: 1870, to: 1931, text: 戦後の荒廃の中で、コロラド党と自由党の争いと政変が続いた。国有地が外国資本に売られた。}
+    - {from: 1932, to: 1935, text: チャコ戦争でボリビアに勝ち、チャコ・ボレアルの大部分を得た。}
+    - {from: 1954, to: 1989, text: ストロエスネルの独裁。反対派を弾圧し、ブラジルとイタイプ・ダムをつくった。}
+    - {from: 1989, to: 2025, text: 民政に移った。長くコロラド党の政権が続いている。}
+
+# ---- チリ ----
+
+- id: chile
+  name: チリ共和国
+  home_iso: [CHL]
+  short: チリ
+  color: "#e39d86"
+  kind: 共和国
+  rulers:
+    - {name: マテオ・デ・トロ・イ・サンブラノ, title: 第一評議会の議長, from: 1810, to: 1811, source: "https://en.wikipedia.org/wiki/Mateo_de_Toro_Zambrano"}
+    - {name: ホセ・ミゲル・カレーラ, title: 評議会の長, from: 1811, to: 1813, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_Miguel_Carrera"}
+    - {name: ベルナルド・オイギンス, title: 最高執政官, from: 1817, to: 1823, note: 独立の指導者。1818年に独立を宣言した, source: "https://ja.wikipedia.org/wiki/ベルナルド・オイギンス"}
+    - {name: ラモン・フレイレ, title: 最高執政官, from: 1823, to: 1826, source: "https://en.wikipedia.org/wiki/Ram%C3%B3n_Freire"}
+    - {name: ホセ・ホアキン・プリエト, title: 大統領, from: 1831, to: 1841, note: 1829–30年の内戦で保守派が勝った。大臣ポルタレスが1833年憲法の体制を築いた, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_Joaqu%C3%ADn_Prieto"}
+    - {name: マヌエル・ブルネス, title: 大統領, from: 1841, to: 1851, source: "https://en.wikipedia.org/wiki/Manuel_Bulnes"}
+    - {name: マヌエル・モント, title: 大統領, from: 1851, to: 1861, source: "https://en.wikipedia.org/wiki/Manuel_Montt"}
+    - {name: ホセ・ホアキン・ペレス, title: 大統領, from: 1861, to: 1871, source: "https://en.wikipedia.org/wiki/Jos%C3%A9_Joaqu%C3%ADn_P%C3%A9rez"}
+    - {name: フェデリコ・エラスリス・サニャルトゥ, title: 大統領, from: 1871, to: 1876, source: "https://en.wikipedia.org/wiki/Federico_Err%C3%A1zuriz_Za%C3%B1artu"}
+    - {name: アニバル・ピント, title: 大統領, from: 1876, to: 1881, note: 太平洋戦争の時の大統領, source: "https://en.wikipedia.org/wiki/An%C3%ADbal_Pinto"}
+    - {name: ドミンゴ・サンタ・マリア, title: 大統領, from: 1881, to: 1886, source: "https://en.wikipedia.org/wiki/Domingo_Santa_Mar%C3%ADa"}
+    - {name: ホセ・マヌエル・バルマセダ, title: 大統領, from: 1886, to: 1891, note: 1891年の内戦で議会派に敗れ、自殺した, source: "https://ja.wikipedia.org/wiki/ホセ・マヌエル・バルマセダ"}
+    - {name: ホルヘ・モント, title: 大統領, from: 1891, to: 1896, note: 議会派の勝利で議会主導の「議会共和政」（1891–1925）が始まる。1896–1920年の大統領は省略, source: "https://en.wikipedia.org/wiki/Jorge_Montt"}
+    - {name: アルトゥーロ・アレッサンドリ, title: 大統領, from: 1920, to: 1925, note: 1924–25年に軍の介入で一時亡命。1925年憲法, source: "https://ja.wikipedia.org/wiki/アルトゥーロ・アレッサンドリ"}
+    - {name: カルロス・イバニェス・デル・カンポ, title: 大統領, from: 1927, to: 1931, note: 独裁的に治め、世界恐慌の中で辞任した, source: "https://ja.wikipedia.org/wiki/カルロス・イバニェス・デル・カンポ"}
+    - {name: アルトゥーロ・アレッサンドリ, title: 大統領, from: 1932, to: 1938, note: 1931–32年の混乱（「社会主義共和国」など）の後, source: "https://ja.wikipedia.org/wiki/アルトゥーロ・アレッサンドリ"}
+    - {name: ペドロ・アギーレ・セルダ, title: 大統領, from: 1938, to: 1941, note: 人民戦線の政権, source: "https://en.wikipedia.org/wiki/Pedro_Aguirre_Cerda"}
+    - {name: フアン・アントニオ・リオス, title: 大統領, from: 1942, to: 1946, source: "https://en.wikipedia.org/wiki/Juan_Antonio_R%C3%ADos"}
+    - {name: ガブリエル・ゴンサレス・ビデラ, title: 大統領, from: 1946, to: 1952, source: "https://en.wikipedia.org/wiki/Gabriel_Gonz%C3%A1lez_Videla"}
+    - {name: カルロス・イバニェス・デル・カンポ, title: 大統領, from: 1952, to: 1958, source: "https://ja.wikipedia.org/wiki/カルロス・イバニェス・デル・カンポ"}
+    - {name: ホルヘ・アレッサンドリ, title: 大統領, from: 1958, to: 1964, source: "https://en.wikipedia.org/wiki/Jorge_Alessandri"}
+    - {name: エドゥアルド・フレイ・モンタルバ, title: 大統領, from: 1964, to: 1970, note: キリスト教民主党。銅山のチリ化・農地改革, source: "https://ja.wikipedia.org/wiki/エドゥアルド・フレイ・モンタルバ"}
+    - {name: サルバドール・アジェンデ, title: 大統領, from: 1970, to: 1973, note: 選挙で生まれた社会主義政権（人民連合）。1973年9月11日のクーデタで死去, source: "https://ja.wikipedia.org/wiki/サルバドール・アジェンデ"}
+    - {name: アウグスト・ピノチェト, title: 軍事評議会議長・大統領, from: 1973, to: 1990, note: 軍事独裁。反対派の弾圧と新自由主義の経済政策, source: "https://ja.wikipedia.org/wiki/アウグスト・ピノチェト"}
+    - {name: パトリシオ・エイルウィン, title: 大統領, from: 1990, to: 1994, note: 民政移管, source: "https://ja.wikipedia.org/wiki/パトリシオ・エイルウィン"}
+    - {name: エドゥアルド・フレイ・ルイス＝タグレ, title: 大統領, from: 1994, to: 2000, source: "https://ja.wikipedia.org/wiki/エドゥアルド・フレイ・ルイス＝タグレ"}
+    - {name: リカルド・ラゴス, title: 大統領, from: 2000, to: 2006, source: "https://ja.wikipedia.org/wiki/リカルド・ラゴス"}
+    - {name: ミチェル・バチェレ, title: 大統領, from: 2006, to: 2010, note: チリ初の女性大統領, source: "https://ja.wikipedia.org/wiki/ミチェル・バチェレ"}
+    - {name: セバスティアン・ピニェラ, title: 大統領, from: 2010, to: 2014, source: "https://ja.wikipedia.org/wiki/セバスティアン・ピニェラ"}
+    - {name: ミチェル・バチェレ, title: 大統領, from: 2014, to: 2018, source: "https://ja.wikipedia.org/wiki/ミチェル・バチェレ"}
+    - {name: セバスティアン・ピニェラ, title: 大統領, from: 2018, to: 2022, source: "https://ja.wikipedia.org/wiki/セバスティアン・ピニェラ"}
+    - {name: ガブリエル・ボリッチ, title: 大統領, from: 2022, to: 2025, source: "https://ja.wikipedia.org/wiki/ガブリエル・ボリッチ"}
+  periods:
+    - {from: 1810, to: 1826, text: 1810年に自治政府ができたが、1814年にペルー副王の軍に敗れた。1817年にサン・マルティンとオイギンスのアンデス軍が解放し、1818年に独立を宣言。最後の王党派の拠点チロエは1826年に降伏した。}
+    - {from: 1830, to: 1878, text: 保守派のポルタレスが築いた1833年憲法の体制で、ラテンアメリカでは珍しく安定した。ペルー＝ボリビア連合との戦争（1836–39）に勝った。}
+    - {from: 1879, to: 1891, text: 太平洋戦争（1879–84）でペルー・ボリビアに勝ち、硝石の産地（タラパカ・アントファガスタ）を得た。南ではマプーチェの地（アラウカニア）を占領した。}
+    - {from: 1891, to: 1924, text: 1891年の内戦で議会派が勝ち、議会共和政となった。硝石と銅の輸出に頼り、労働運動が起こった。}
+    - {from: 1925, to: 1969, text: 1925年憲法のもとで、人民戦線などの中道・左派政権と保守派が交代した。}
+    - {from: 1970, to: 1973, text: アジェンデの人民連合政権が銅山の国有化など社会主義政策を進めたが、経済の混乱と対立の中で軍のクーデタに倒された。}
+    - {from: 1973, to: 1989, text: ピノチェトの軍事独裁。多くの市民が殺害・行方不明となった。新自由主義の経済改革を進めた。}
+    - {from: 1990, to: 2025, text: 1988年の国民投票でピノチェトの続投が否決され、民政に移った。2019年の大規模な抗議運動の後、新しい憲法がつくられようとしたが、国民投票で2度否決された。}
+
+# ---- 先住民 ----
+
+- id: mapuche
+  name: マプーチェ（アラウカニア）
+  short: マプーチェ
+  color: "#c4a27a"
+  kind: 先住民の諸部族
+  periods:
+    - {from: 1648, to: 1810, text: ビオビオ川の南のアラウカニアで、スペインの征服を退けて自立を保った（アラウコ戦争）。スペインは会議（パルラメント）を開いて境界と交易を取り決めた。18世紀からはアンデスの東のパンパにも広がった。}
+    - {from: 1810, to: 1883, text: 独立後もアラウカニアとパンパで自立を保ち、牛や馬の交易・襲撃で力を持った（パンパのカルフクラなど）。1860年代からチリ軍のアラウカニア占領（1861–83）とアルゼンチンの「砂漠の征服」（1879–84）で征服された。}
+  note: マプーチェは「大地の人」。スペイン人はアラウコ人（アラウカノ）と呼んだ。統一した国家ではなく、首長（ロンコ）たちが必要に応じて連合した。パンパのランケル人なども含めてこの色で塗る。
+  source: "https://ja.wikipedia.org/wiki/マプチェ族"
