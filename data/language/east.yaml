@@ -194,13 +194,53 @@
 - id: lang_pl_jewish_cities
   name: ワルシャワ・ウッチ・ルブリン・クラクフ・ビャウィストク（ユダヤ人の多い大都市）
   select:
-    pieces: [POL-Warszawa, POL-od, POL-Lublin, POL-Krakow, POL-Bia_ystok, POL-Radom, POL-Tarnow, POL-Rzeszow, POL-Przemy_l, POL-Che_m, POL-Siedlce, POL-Kielce, POL-Cz_stochowa]
+    pieces: [POL-Warszawa, POL-od, POL-Krakow, POL-Radom, POL-Tarnow, POL-Rzeszow, POL-Przemy_l, POL-Che_m, POL-Kielce, POL-Cz_stochowa]
   timeline:
     - from: 1648
       main: polish
       minor: yiddish
-      note: ユダヤ人が住民の3〜5割を占める都市。ビャウィストクでは19世紀末にユダヤ人が6割を超えた。ウッチは1820年代からの繊維工業の町で、ドイツ人（約2割）も多い。
+      note: ユダヤ人が住民の3〜4割を占める都市（1897年の調査で、ワルシャワ約34%、ウッチ約31%、ラドム約39%）。最大の集団はポーランド人。ウッチは1820年代からの繊維工業の町で、ドイツ人（約2割）も多い。ガリツィア（オーストリア領）の国勢調査はイディッシュ語を言語として数えず、ユダヤ人の多くがポーランド語・ドイツ語の話者として数えられた。
       source: "https://ja.wikipedia.org/wiki/ウッチ"
+
+- id: lang_bialystok
+  name: ビャウィストク
+  select:
+    pieces: [POL-Bia_ystok]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+      note: ブラニツキ家の所領の町。
+    - from: 1850
+      main: yiddish
+      note: 1807年ロシア領。19世紀に毛織物工業の町として急成長し、ユダヤ人が住民の多数になった（1897年の調査で、イディッシュ語約63%、ポーランド語約17%、ロシア語約10%、ドイツ語約7%）。2番目の集団が2割に届かないので minor は付けない。切り替えの年は19世紀半ばの目安。
+
+- id: lang_lublin
+  name: ルブリン
+  select:
+    pieces: [POL-Lublin]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+      note: ユダヤ人の自治機関「四地方評議会」の開かれた町。ユダヤ人の学問の中心の一つ。
+    - from: 1850
+      main: yiddish
+      minor: polish
+      note: 19世紀にユダヤ人が住民の最大の集団になる（1897年の調査で、ユダヤ人約半数、ポーランド人約4割、残りはロシア人の官吏・軍人）。切り替えの年は19世紀半ばの目安。要確認
+
+- id: lang_siedlce
+  name: シェドルツェ
+  select:
+    pieces: [POL-Siedlce]
+  timeline:
+    - from: 1648
+      main: polish
+      minor: yiddish
+    - from: 1880
+      main: yiddish
+      minor: polish
+      note: シェドルツェ県の県都（1867–）。1897年の調査でユダヤ人が住民の約半数を占め、ポーランド人とロシア人の守備隊がそれに次ぐ。要確認
 
 - id: lang_podlachia_east
   name: ポドラシェ東部（ベラルーシ語の村の多い地域）
@@ -294,11 +334,11 @@
       note: 農民はベラルーシ語（当時は「ルテニア語」）。貴族（シュラフタ）はポーランド語化していた。町と小都市（シュテットル）にはユダヤ人が多い。1696年、リトアニア大公国の公用語がルテニア語からポーランド語に替わる。
     - from: 1800
       main: belarusian
-      minor: russian
-      note: ポーランド分割（1772・1793・1795）でロシア領。1863年の1月蜂起の後、ロシア化政策が強まり、官吏・都市の言葉としてロシア語が広がる。要確認（ロシア語は主に都市と官吏。1897年の調査では農村の多数派はベラルーシ語）
-    - from: 1880
+      note: ポーランド分割（1772・1793・1795）でロシア領。農民はベラルーシ語のままで、貴族と町の上層はポーランド語、町と小都市にはユダヤ人が多い。ロシア語はまだ官吏と軍人の言葉。
+    - from: 1863
       main: belarusian
-      note: 1897年の調査でベラルーシ語を母語とする者は、ミンスク・ヴィテプスク・モギリョフ・グロドノの4県で多数派。ユダヤ人は町の住民の5〜6割。
+      minor: russian
+      note: 1863年の1月蜂起の後、ロシア化政策が強まり（ポーランド語の学校・出版の禁止、ユニエイトの正教への編入は1839年）、官吏・学校・都市の言葉としてロシア語が広がる。1897年の調査でもベラルーシ語を母語とする者は、ミンスク・ヴィテプスク・モギリョフ・グロドノの4県で多数派。ユダヤ人は町の住民の5〜6割。minor のロシア語は主に都市と官吏。
 
 - id: lang_belarus_west
   name: ベラルーシ西部（グロドノ地方。カトリックの住民の多い地域）
@@ -329,9 +369,9 @@
       main: belarusian
       minor: polish
     - from: 1850
-      main: russian
-      minor: yiddish
-      note: 1897年の調査で、ユダヤ人約51%、ロシア語話者約25%、ベラルーシ語話者は約9%。要確認
+      main: yiddish
+      minor: russian
+      note: 19世紀にはユダヤ人が住民の最大の集団（1897年の調査で、イディッシュ語約51%、ロシア語約25%、ポーランド語約11%、ベラルーシ語約9%）。ロシア語は官吏・軍人と、ベラルーシ人・ポーランド人の一部が話す。切り替えの年は19世紀半ばの目安。
 
 # ======== ウクライナ ========
 - id: lang_ukraine_base
@@ -615,10 +655,46 @@
   timeline:
     - from: 1648
       main: romanian
-    - from: 1850
+    - from: 1812
       main: romanian
       minor: yiddish
-      note: ベッサラビア県の県都。1897年の調査でユダヤ人約46%、ロシア人・モルドヴァ人がそれぞれ約2割。1903年にポグロムが起きる。要確認
+      note: ブカレスト条約（1812）でロシア領ベッサラビアの中心になり、ユダヤ人が急増する。ロシア人の官吏・軍人、ブルガリア人・ギリシア人・アルメニア人も移り住む。
+    - from: 1850
+      main: yiddish
+      minor: russian
+      note: ベッサラビア県の県都。19世紀後半にはユダヤ人が住民の最大の集団になる（1897年の調査で、イディッシュ語約46%、ロシア語約27%、モルドヴァ語〈ルーマニア語〉約17%）。1903年にポグロムが起きる。切り替えの年は19世紀半ばの目安。
+
+- id: lang_balti
+  name: バルツィ（ベルツィ）
+  select:
+    pieces: [MDA-Balti]
+  timeline:
+    - from: 1648
+      main: romanian
+    - from: 1812
+      main: romanian
+      minor: ukrainian
+    - from: 1850
+      main: yiddish
+      note: 1812年ロシア領。北ベッサラビアの市場町として育ち、ユダヤ人が住民の多数になった（1897年の調査でユダヤ人約56%。ほかはウクライナ人・モルドヴァ人・ロシア人がそれぞれ1〜2割弱）。2番目の集団がはっきりしないので minor は付けない。切り替えの年は19世紀半ばの目安。要確認
+
+- id: lang_bender
+  name: ベンデル（ティギナ）
+  select:
+    pieces: [MDA-Bender]
+  timeline:
+    - from: 1648
+      main: romanian
+      minor: turkish
+      note: オスマン帝国の要塞都市（ベンデル）。トルコ人の守備隊とモルドヴァ人・ユダヤ人・アルメニア人の町人。
+    - from: 1812
+      main: romanian
+      minor: russian
+      note: 1812年ロシア領。ロシアの要塞と守備隊。
+    - from: 1880
+      main: yiddish
+      minor: russian
+      note: 1897年の調査でユダヤ人約3分の1が最大の集団で、ロシア人（守備隊を含む）・ウクライナ人・モルドヴァ人が続く。要確認
 
 - id: lang_transnistria
   name: ドニエストル川左岸
@@ -1080,9 +1156,35 @@
       note: アディゲ人（チェルケス人）の諸部族（ナトゥハイ、シャプスグ、アバゼフ、ブジェドゥグなど）の地。
     - from: 1864
       main: russian
-      minor: caucasian
-      note: コーカサス戦争の終結（1864）とともに、チェルケス人の大部分（数十万人）がオスマン帝国へ追放・移住させられた（チェルケス人の追放）。空いた土地にコサック・ロシア人・ウクライナ人・アルメニア人・ギリシア人が入植する。クバン川左岸の一部（現在のアディゲ）にアディゲ人が残る。
+      minor: ukrainian
+      note: コーカサス戦争の終結（1864）とともに、チェルケス人の大部分（数十万人）がオスマン帝国へ追放・移住させられた（チェルケス人の追放）。空いた土地にコサック・ロシア人・ウクライナ人・アルメニア人・ギリシア人が入植する。東部（ラバ川流域）はライン・コサックとロシア人の農民が多い。1897年のクバン州全体ではウクライナ語約47%・ロシア語約42%。
       source: "https://ja.wikipedia.org/wiki/チェルケス人虐殺"
+
+- id: lang_circassia_west
+  name: クバン川左岸の西部（アナパ・クルィムスク・アビンスク）
+  select:
+    pieces: [RUS-Anapa_Urban_Okrug, RUS-Krymsky_District, RUS-Abinsky_District, RUS-Seversky_District, RUS-x_15]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: ナトゥハイ人・シャプスグ人の地。アナパにはオスマン帝国の要塞（1829年ロシア領）。
+    - from: 1864
+      main: ukrainian
+      minor: russian
+      note: チェルケス人の追放のあと、黒海コサック（ウクライナ語の方言を話すクバン・コサック）のスタニツァが作られた。要確認
+
+- id: lang_adygea
+  name: アディゲ（クバン川左岸に残ったアディゲ人の地域）
+  select:
+    pieces: [RUS-x_11, RUS-x_18, RUS-Giaginsky_District, RUS-Koshekhablsky_District, RUS-Krasnogvardeysky_District_2, RUS-Maykopsky_District, RUS-Shovgenovsky_District, RUS-Takhtamukaysky_District, RUS-Teuchezhsky_District]
+  timeline:
+    - from: 1648
+      main: caucasian
+      note: ベジェドゥグ人・テミルゴイ人・アバゼフ人などのアディゲ（チェルケス）諸部族の地。
+    - from: 1864
+      main: russian
+      minor: caucasian
+      note: クバン川左岸の一部にアディゲ人が残った（アウル）。マイコープなどにはロシア人・コサックが入植した。
 
 - id: lang_sochi
   name: 黒海東岸（ソチ・トゥアプセ）

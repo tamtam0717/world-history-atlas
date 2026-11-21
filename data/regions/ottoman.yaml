@@ -126,6 +126,7 @@
       owner: romania
       cause: ベルリン条約で北ドブルジャがルーマニア領に（南ベッサラビアをロシアに返す代わり）
       source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
+  note: ドナウ・デルタ（河口の島々）は1829年のアドリアノープル条約でロシア領となり、1856年のパリ条約でオスマン帝国に戻された（1857年に画定）。トゥルチャ県のピースからデルタだけを切り出せないため、地図には描いていない。
 
 - id: bessarabia
   name: ベッサラビア（プルート・ドニエストル間の中部・北部）
@@ -1257,7 +1258,7 @@
       source: "https://en.wikipedia.org/wiki/Principality_of_Abkhazia"
 
 - id: samtskhe_adjara
-  name: サムツヘ（アハルツィヘ）・アジャリア
+  name: アジャリア（バトゥミ）とサムツヘ（1829年まで）
   select:
     pieces: [GEO-Samtskhe_Javakheti, GEO-Adjara]
   timeline:
@@ -1322,7 +1323,7 @@
     - from: 1751
       owner: persia
       certainty: uncertain
-      cause: ナーディル・シャーの死後の争奪（アーザード・ハン、ザンド朝、ガージャール族）
+      cause: ナーディル・シャーの死後の争奪（アーザード・ハン、ザンド朝、カージャール族）
     - from: 1763
       owner: persia
       cause: カリーム・ハン・ザンドがアゼルバイジャンを平定
@@ -1342,7 +1343,7 @@
       owner: persia
       cause: ナーディルがアフガン軍を破りイスファハーンを奪回
       source: "https://en.wikipedia.org/wiki/Battle_of_Damghan_(1729)"
-  note: アフガン（ホータキー朝）の支配範囲は時期によって変わり、境界は近似（要確認）。テヘラン・アルボルズは1786年からガージャール族の都（qajar_north は別の地域で上書き）。
+  note: アフガン（ホータキー朝）の支配範囲は時期によって変わり、境界は近似（要確認）。テヘラン・アルボルズは1786年からカージャール族の都（qajar_north は別の地域で上書き）。
 
 - id: iran_north_qajar
   name: イラン北部（マーザンダラーン・ゴレスターン・ギーラーン・テヘラン周辺）
@@ -1357,7 +1358,7 @@
       source: "https://ja.wikipedia.org/wiki/ガージャール朝"
     - from: 1794
       owner: persia
-      cause: ガージャール朝の統一（ザンド朝の滅亡）
+      cause: カージャール朝の統一（ザンド朝の滅亡）
   note: 1780–1793年の両勢力の境界はめまぐるしく変わった（近似）。
 
 - id: tehran_qajar
@@ -1380,7 +1381,7 @@
       source: "https://ja.wikipedia.org/wiki/テヘラン"
     - from: 1794
       owner: persia
-      cause: ガージャール朝の統一（ザンド朝の滅亡）
+      cause: カージャール朝の統一（ザンド朝の滅亡）
 
 - id: gilan
   name: ギーラーン
@@ -1403,7 +1404,7 @@
       cause: アーガー・モハンマド・ハーンの北部支配
     - from: 1794
       owner: persia
-      cause: ガージャール朝の統一（ザンド朝の滅亡）
+      cause: カージャール朝の統一（ザンド朝の滅亡）
 
 - id: khorasan
   name: ホラーサーン
@@ -1420,7 +1421,7 @@
     - from: 1796
       owner: persia
       cause: アーガー・モハンマド・ハーンがマシュハドを占領（アフシャール朝の滅亡）
-  note: 1796年以後もホラーサーンの諸侯は半ば自立していた（1803年ごろガージャール朝が平定）。
+  note: 1796年以後もホラーサーンの諸侯は半ば自立していた（1803年ごろカージャール朝が平定）。
 
 - id: sistan_baluchestan
   name: スィースターン・バルーチスターン
@@ -1625,7 +1626,7 @@
     - from: 1748
       owner: null
       certainty: uncertain
-      cause: ナーディル・シャーの死後、ガージャール系のバイラム・アリー・ハンらが自立
+      cause: ナーディル・シャーの死後、カージャール系のバイラム・アリー・ハンらが自立
     - from: 1785
       owner: bukhara
       cause: ブハラのシャー・ムラードがメルヴを征服
@@ -1847,6 +1848,15 @@
       owner: saudi
       cause: 第二次サウード王国がハサーを征服
       source: "https://en.wikipedia.org/wiki/Emirate_of_Nejd"
+    - from: 1838
+      owner: egypt
+      certainty: occupied
+      cause: エジプト軍（フルシード・パシャ）がナジュドとハサーに再び進駐
+      source: "https://en.wikipedia.org/wiki/Emirate_of_Nejd"
+    - from: 1843
+      owner: saudi
+      cause: ファイサル・イブン・トゥルキーがリヤドに復位し、ハサーも再び支配
+      source: "https://en.wikipedia.org/wiki/Faisal_bin_Turki_Al_Saud"
     - from: 1871
       owner: ottoman
       cause: オスマン帝国のミドハト・パシャがハサーを征服（ナジュド県）
@@ -1881,7 +1891,7 @@
       owner: britain
       cause: 英・クウェート協定（秘密協定）でイギリスの保護下に入る
       source: "https://en.wikipedia.org/wiki/Anglo-Kuwaiti_Agreement_of_1899"
-  note: ウトゥーブ族の定住は1716年ごろ。サバーフ家の首長の始まりは1752年とされる（要確認）。
+  note: ウトゥーブ族の定住は1716年ごろ。サバーフ家の首長の始まりは1752年とされる（要確認）。1899年の協定は秘密協定で、オスマン帝国の名目上の主権は残った（1913年の英・オスマン協定（未批准）でも「オスマン帝国の自治郡」とされた）。保護国を宗主国の色で塗る方針により、1899年からイギリスの色にしている。
 
 - id: bahrain_r
   name: バーレーン
@@ -1894,11 +1904,11 @@
       owner: bahrain
       cause: ハリーファ家がバーレーンを征服
       source: "https://ja.wikipedia.org/wiki/バーレーンの歴史"
-    - from: 1861
+    - from: 1880
       owner: britain
-      cause: 恒久平和友好条約でイギリスの保護下に入る（1880・1892年の協定で外交もイギリスに委ねる）
+      cause: 1880年の協定で外交をイギリスに委ね、保護下に入る（1892年の排他的協定で確定）
       source: "https://ja.wikipedia.org/wiki/バーレーンの歴史"
-  note: 1717–1738年ごろはオマーンや在地アラブの支配も入り混じる（要確認）。
+  note: 1717–1738年ごろはオマーンや在地アラブの支配も入り混じる（要確認）。1861年の「恒久平和友好条約」は海上の休戦の約束で、外交の委任（保護）は1880年・1892年の協定から。休戦海岸（1892年から britain）と同じ考え方で、1880年からイギリスの色にした。
 
 - id: qatar_r
   name: カタル
@@ -2076,6 +2086,7 @@
       owner: bulgaria
       cause: ロンドン条約・ブカレスト条約でブルガリア領に（ピリン・マケドニア）
       source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1913年)"
+  note: ベルリン条約（1878）ではカルジャリ（クルジャリ）地方は東ルメリに入るとされたが、ポマク（ブルガリア語を話すムスリム）の「タムラシュ共和国」などで東ルメリの支配は及ばず、1886年のトプハネ協定でオスマン帝国に戻された。地図では1912年までオスマン領として描いている。
 
 # ---------------------------------------------------------------- セルビア
 - id: serbia_1830
@@ -2489,7 +2500,17 @@
       owner: greece
       cause: ロンドン条約で処分を委ねられた列強が、エーゲ海の島々をギリシア領と決める（1914年2月。オスマン帝国は1923年まで認めない）
       source: "https://en.wikipedia.org/wiki/Treaty_of_London_(1913)"
-  note: イカリア島は1912年7月に自由国を宣言し、11月にギリシアと統合された。インブロス・テネドス（現トルコ）はオスマン領に戻された。
+  note: イカリア島は1912年7月に自由国を宣言し、11月にギリシアと統合された（地域 ikaria で別に描く）。インブロス・テネドス（現トルコ）はオスマン領に戻された。
+
+- id: ikaria
+  name: イカリア島
+  select:
+    pieces: [GRC-Ikaria]
+  timeline:
+    - from: 1912
+      owner: greece
+      cause: イカリアの住民がオスマン帝国の守備隊を追って自由国を宣言し（7月）、11月にギリシアと統合された（ギリシア軍の占領ではない）
+      source: "https://en.wikipedia.org/wiki/Free_State_of_Icaria"
 
 - id: samos_r
   name: サモス島

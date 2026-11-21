@@ -47,6 +47,11 @@ export interface TimelineEntry extends Sourced {
   certainty?: string;
   cause?: string;
   note?: string;
+  /**
+   * 地図の副ラベル（任意）。宗主国の色で塗る保護国・植民地などで、元の国・地域の名前を
+   * 宗主国の色の中に小さく出すときに使う（例：「チュニジア」）。空文字なら副ラベルを出さない
+   */
+  label?: string;
 }
 
 export interface Region {

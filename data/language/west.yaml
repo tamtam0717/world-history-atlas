@@ -2,7 +2,7 @@
 # 形式は docs/language-format.md。main = 住民（特に農村の民衆）の多数派の言語、minor = 2〜3割以上の少数派。
 # 大きな地域（国全体）で下地を書き、小さな地域で例外を上書きする（いちばん小さい地域が優先）。
 # 方言連続体の扱い：オイル諸語（ピカルディ語・ワロン語・ガロ語など）とフランコ・プロヴァンサル語は french に、
-# アストゥリアス語・アラゴン語は spanish に、ガリシア語は portuguese に、コルシカ語・モナコ語は italian に含める。
+# アストゥリアス語・アラゴン語は spanish に、ガリシア語は galician（ポルトガル語に近い別の色）に、コルシカ語・モナコ語は italian に含める。
 
 # ======== フランス ========
 - id: lang_france_base
@@ -248,8 +248,8 @@
     adm1: ["ESP/Galicia"]
   timeline:
     - from: 1648
-      main: portuguese
-      note: ガリシア語（ポルトガル語と同じ系統。ここでは portuguese として塗る）。都市の上層と行政はカスティーリャ語。
+      main: galician
+      note: ガリシア語（ポルトガル語と同じ系統の言葉）。都市の上層と行政はカスティーリャ語。
 
 - id: lang_portugal
   name: ポルトガル
@@ -717,9 +717,26 @@
       note: トゥアレグ人（タマシェク語）とアラブ系の遊牧民。ニジェール川沿いはソンガイ語。要確認
 
 - id: lang_algiers_city
-  name: アルジェ・オラン・アンナバ（ヨーロッパ人の入植の中心）
+  name: アンナバ（ボーヌ）
   select:
-    pieces: [DZA-Alger, DZA-Annaba]
+    pieces: [DZA-Annaba]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: turkish
+      note: アルジェ摂政領の東部の港町。
+    - from: 1830
+      main: arabic
+    - from: 1870
+      main: arabic
+      minor: french
+      note: フランスの征服（1830–）のあと、フランス人・スペイン人・イタリア人・マルタ人の入植者が都市と平野に集まる。1870年のクレミュー令でアルジェリアのユダヤ人はフランス市民になる。アンナバ（ボーヌ）の市内もヨーロッパ系が多いが、このピースは周辺の農村を含むので、アラビア語を main のままにする（アルジェ市は lang_algiers_capital）。
+      source: "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
+
+- id: lang_algiers_capital
+  name: アルジェ市
+  select:
+    pieces: [DZA-Alger]
   timeline:
     - from: 1648
       main: arabic
@@ -727,10 +744,14 @@
       note: アルジェはオスマン帝国の摂政領の首都で、支配層はトルコ系の軍人（イェニチェリ）。
     - from: 1830
       main: arabic
-    - from: 1870
+    - from: 1850
       main: arabic
       minor: french
-      note: フランスの征服（1830–）のあと、フランス人・スペイン人・イタリア人・マルタ人の入植者が都市と平野に集まる。1870年のクレミュー令でアルジェリアのユダヤ人はフランス市民になる。要確認（アルジェ市内は19世紀末にヨーロッパ人が多数）
+      note: フランスの征服（1830–）のあと、フランス人・スペイン人・イタリア人・マルタ人の入植者がアルジェ市に集まる。
+    - from: 1880
+      main: french
+      minor: arabic
+      note: 1880年代にはアルジェ市の住民の約3分の2がヨーロッパ系（フランス人のほか、スペイン人・イタリア人・マルタ人。1870年のクレミュー令でフランス市民になったユダヤ人も多い）。スペイン語・イタリア語・マルタ語の住民もフランス語に同化していく。アラビア語・ベルベル語の住民は旧市街（カスバ）と周辺。要確認（ピースは現在のアルジェ県で、郊外の村を含む）
       source: "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
 
 - id: lang_oran

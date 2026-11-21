@@ -336,10 +336,10 @@
       main: german
       minor: latvian
       note: ハンザ都市。市民権を持つ商人・職人はドイツ人で、ラトヴィア人は下層の労働者・使用人。スウェーデン領（1621–1710）、のちロシア領。
-    - from: 1880
+    - from: 1890
       main: latvian
       minor: german
-      note: 工業化で農村からラトヴィア人が流入する。1897年の調査で、ラトヴィア人約45%、ドイツ人約23%、ロシア人約16%。
+      note: 工業化で農村からラトヴィア人が流入し、1890年代に最大の集団になる（1881年の調査ではドイツ人約40%・ラトヴィア人約29%・ロシア人約20%、1897年の調査ではラトヴィア人約42%・ドイツ人約25%・ロシア人約17%）。
       source: "https://ja.wikipedia.org/wiki/リガ"
 
 - id: lang_latgale
@@ -353,6 +353,18 @@
       minor: russian
       note: 農民はラトガレ語（ラトヴィア語の東部方言）でカトリック。1772年までポーランド領で、領主はポーランド系。17世紀末から古儀式派のロシア人の村が増える。要確認（東端にはベラルーシ語の村もある）
 
+- id: lang_rezekne
+  name: レーゼクネ（レジツァ）
+  select:
+    pieces: [LVA-R_zeknes]
+  timeline:
+    - from: 1648
+      main: latvian
+      minor: russian
+    - from: 1850
+      main: yiddish
+      note: ヴィテプスク県の郡の町（1772年ロシア領）。ユダヤ人の定住区域（パレ）の内側で、ユダヤ人が住民の多数になった（1897年の調査でユダヤ人約6割、ロシア人・ラトヴィア人・ポーランド人がそれぞれ1〜2割弱）。2番目の集団が2割に届かないので minor は付けない。切り替えの年は19世紀半ばの目安。要確認
+
 - id: lang_daugavpils
   name: ダウガフピルス（ドヴィンスク）
   select:
@@ -364,7 +376,11 @@
     - from: 1800
       main: russian
       minor: yiddish
-      note: ロシア領（1772–）の要塞都市。ユダヤ人の定住区域（パレ）の北端で、1897年にはユダヤ人が住民の4割以上、次いでロシア人・ポーランド人。要確認
+      note: ロシア領（1772–）。1810年代からロシアの要塞（ドヴィンスク要塞）が築かれ、守備隊と古儀式派のロシア人が多い。要確認
+    - from: 1850
+      main: yiddish
+      minor: russian
+      note: ユダヤ人の定住区域（パレ）の北端で、鉄道の結節点として成長し、ユダヤ人が住民の最大の集団になる（1897年の調査でイディッシュ語約46%、次いでロシア語（古儀式派と守備隊）・ポーランド語・ラトヴィア語）。切り替えの年は19世紀半ばの目安。要確認
 
 # ======== リトアニア ========
 - id: lang_lithuania
@@ -385,7 +401,12 @@
     - from: 1648
       main: polish
       minor: yiddish
-      note: リトアニア大公国の首都だが、市民と貴族の言葉はポーランド語。ユダヤ人の学問の中心（「リトアニアのエルサレム」）。1897年の調査で、イディッシュ語約40%、ポーランド語約31%、ロシア語約20%、リトアニア語約2%。
+      note: リトアニア大公国の首都だが、市民と貴族の言葉はポーランド語。ユダヤ人の学問の中心（「リトアニアのエルサレム」）。
+      source: https://ja.wikipedia.org/wiki/ヴィリニュス
+    - from: 1850
+      main: yiddish
+      minor: polish
+      note: ロシア領（1795–）の県都。19世紀にはユダヤ人が住民の最大の集団になる。1897年の調査で、イディッシュ語約40%、ポーランド語約31%、ロシア語約20%、リトアニア語約2%。切り替えの年は19世紀半ばの目安。
       source: https://ja.wikipedia.org/wiki/ヴィリニュス
 
 - id: lang_kaunas_city
@@ -396,7 +417,35 @@
     - from: 1648
       main: polish
       minor: yiddish
-      note: 1897年の調査ではユダヤ人約36%、ロシア人約25%（要塞の軍人を含む）、ポーランド人約22%、リトアニア人約7%。要確認
+      note: 町人はポーランド語とイディッシュ語。周りの農村はリトアニア語。
+    - from: 1850
+      main: yiddish
+      minor: russian
+      note: コヴノ県の県都（1843–）。ユダヤ人が住民の最大の集団になる（1897年の調査ではユダヤ人約36%、ロシア人約25%（要塞の軍人を含む）、ポーランド人約22%、リトアニア人約7%）。切り替えの年は19世紀半ばの目安。要確認
+
+- id: lang_siauliai_city
+  name: シャウレイ（シャヴリ）市
+  select:
+    pieces: [LTU-iauli_miesto_savivaldyb]
+  timeline:
+    - from: 1648
+      main: lithuanian
+    - from: 1850
+      main: yiddish
+      minor: lithuanian
+      note: 19世紀に皮革工業の町として育ち、ユダヤ人が住民の多数になった（1897年の調査でユダヤ人が5〜6割）。2番目の集団（リトアニア人・ポーランド人）は要確認。切り替えの年は19世紀半ばの目安。
+
+- id: lang_panevezys_city
+  name: パネヴェジース（ポネヴェジ）市
+  select:
+    pieces: [LTU-Panev_io_miesto_savivaldyb]
+  timeline:
+    - from: 1648
+      main: lithuanian
+    - from: 1850
+      main: yiddish
+      minor: lithuanian
+      note: 1897年の調査でユダヤ人が住民の約半数。2番目の集団（リトアニア人・ポーランド人・ロシア人）は要確認。切り替えの年は19世紀半ばの目安。
 
 - id: lang_vilnius_region
   name: ヴィリニュス周辺（東リトアニア）

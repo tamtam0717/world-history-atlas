@@ -1,4 +1,4 @@
-# 宗教（宗派）の分布：北欧・バルト・ポーランド＝リトアニア・ロシア・ウクライナ・北カフカス（1648–1815）
+# 宗教（宗派）の分布：北欧・バルト・ポーランド＝リトアニア・ロシア・ウクライナ・北カフカス（1648–1914）
 # 形式は docs/religion-format.md。main = 住民の多数派、minor = 2〜3割以上の少数派。
 # 東方典礼カトリック（ユニエイト。ブレスト合同1596）はカトリックに含め、note に書く。
 
@@ -20,6 +20,9 @@
     - from: 1648
       main: lutheran
       note: ドイツ人の領主・都市市民と、エストニア人・ラトヴィア人の農民はルター派。1710年以降のロシア支配でもルター派の教会は維持された。
+    - from: 1845
+      main: lutheran
+      note: 1845–48年、リヴォニア・エストニア南部の農民の一部（地方によって1〜2割）が、土地をもらえるという噂から正教に改宗した。多数派はルター派のまま。1880年代からはロシア化政策で正教会の建設も進む。
 
 - id: rel_latgale
   name: ポーランド領リヴォニア（ラトガレ）
@@ -57,6 +60,20 @@
     - from: 1648
       main: catholic
       note: カトリックが多数。ワルシャワ連盟協約（1573）の宗教寛容はしだいに後退し、1658年にはアリウス派（ポーランド兄弟団）が追放された。ユダヤ教徒の人口も多い。
+
+- id: rel_chelm_eparchy
+  name: ヘウム（ホルム）地方・南ポドラシェ（ユニエイトのヘウム主教区）
+  select:
+    pieces: [POL-Che_m, POL-powiat_che_mski, POL-powiat_hrubieszowski, POL-powiat_w_odawski, POL-Bia_a_Podlaska, POL-powiat_bialski]
+  timeline:
+    - from: 1648
+      main: catholic
+      note: ポーランド人のローマ・カトリックと、ユニエイト（ギリシア・カトリック）のルーシ人の村が混在する。どちらもカトリックに数える。町にはユダヤ教徒が多い。
+    - from: 1875
+      main: catholic
+      minor: orthodox
+      note: ロシア政府が会議王国に残ったヘウム主教区のユニエイト教会を廃止し（1875）、信徒を正教会に移した。抵抗した村（プラトゥリンなど）は弾圧された。1905年の寛容令の後、10万人以上がローマ・カトリックに移る。（比率は要確認）
+      source: "https://ja.wikipedia.org/wiki/ウクライナ東方カトリック教会"
 
 - id: rel_pomerania
   name: ポンメルン・ノイマルク
@@ -155,6 +172,10 @@
       main: catholic
       minor: orthodox
       note: 18世紀にはユニエイト（東方典礼カトリック）がベラルーシの農民の多数派になる。1772年以後のロシア領でもユニエイト教会は1839年まで存続した。（時期は要確認）
+    - from: 1839
+      main: orthodox
+      note: ポロツク教会会議（1839）で、ロシア帝国内のユニエイト教会は廃止され、信徒（約160万人）は正教会に編入された。ローマ・カトリック（ポーランド人の貴族、北西部のベラルーシ人）は1割前後で、町にはユダヤ教徒が多い。
+      source: "https://en.wikipedia.org/wiki/Synod_of_Polotsk"
 
 - id: rel_belarus_west
   name: ベラルーシ西部（グロドノ・ブレスト）
@@ -165,6 +186,25 @@
       main: catholic
       minor: orthodox
       note: ローマ・カトリック（ポーランド人・リトアニア人）とユニエイトのルーシ人が多い。ブレストはブレスト合同の地。
+    - from: 1839
+      main: orthodox
+      minor: catholic
+      note: ポロツク教会会議（1839）でユニエイト教会が廃止され、ルーシ人の農民は正教会に移された。ポーランド人とカトリックのベラルーシ人が多いので、ローマ・カトリックは2〜3割ほど残る。
+      source: "https://en.wikipedia.org/wiki/Synod_of_Polotsk"
+
+- id: rel_belarus_nw
+  name: ベラルーシ北西部（グロドノ・リダ・アシュミャニ・ブラスラフ）
+  select:
+    pieces: [BLR-Grodno, BLR-Lida, BLR-Iwye, BLR-Shchuchyn, BLR-Voranava, BLR-Ashmyany, BLR-Astravyets, BLR-Smarhon, BLR-Braslaw]
+  timeline:
+    - from: 1648
+      main: catholic
+      minor: orthodox
+      note: リトアニアに近く、ローマ・カトリックのポーランド人・ベラルーシ人（リトアニア人を含む）が多い。ルーシ人の農民は正教徒とユニエイト。
+    - from: 1839
+      main: catholic
+      minor: orthodox
+      note: 1839年にユニエイトは正教会に移されたが、この地方ではローマ・カトリックが多数のまま（1897年の調査でも、ヴィリナ県・グロドノ県北部の郡ではカトリックが多い）。（郡の範囲は目安）
 
 - id: rel_lith_1793
   name: ベラルーシ中部・ウクライナ北西部（1793年ロシア領）
@@ -183,6 +223,10 @@
       minor: catholic
       note: 第2次分割でロシア領になると、エカチェリーナ2世の政策で多くのユニエイトの村が正教会に移された（1794–96年）。
       source: "https://ja.wikipedia.org/wiki/ウクライナ東方カトリック教会"
+    - from: 1839
+      main: orthodox
+      minor: catholic
+      note: 残っていたユニエイトの教区も、ポロツク教会会議（1839）で正教会に編入された。ローマ・カトリックはポーランド人の貴族と一部の農民。1863年の1月蜂起の後はカトリック教会への圧力が強まる。
 
 - id: rel_volhynia_west
   name: ヴォルィーニ西部
@@ -232,6 +276,9 @@
       minor: orthodox
       note: プシェミシル（1691）・リヴィウ（1700）・ルーツク（1702）の主教区がユニエイトに加わり、ルーシ人の多くがギリシア・カトリック（東方典礼カトリック）になる。
       source: "https://ja.wikipedia.org/wiki/ウクライナ東方カトリック教会"
+    - from: 1772
+      main: catholic
+      note: オーストリア領ガリツィア。ルーシ人（ウクライナ人）はほとんどがギリシア・カトリック（カトリックに数える）で、正教徒はわずか。ポーランド人はローマ・カトリック。ユダヤ教徒が人口の1割前後（町では3〜5割）を占める。1808年にリヴィウ府主教座が置かれ、ギリシア・カトリック教会はウクライナ人の民族運動の拠り所になる。
 
 - id: rel_zakarpattia
   name: ザカルパッチャ
@@ -265,6 +312,28 @@
       main: sunni
       minor: orthodox
       note: ロシアに併合され、タタール人の一部がオスマン帝国へ移住し、ロシア人などが入植する。（比率は要確認）
+    - from: 1860
+      main: sunni
+      minor: orthodox
+      note: クリミア戦争の後（1856–62）にタタール人の大量移住が起きたが、山地と南岸（バフチサライ・カラスバザール）ではタタール人が多数のまま。シンフェローポリ市はロシア人が多い。北部の草原は rel_crimea_steppe。
+
+- id: rel_crimea_steppe
+  name: クリミア北部の草原
+  select:
+    pieces: [UKR-Dzhankoy, UKR-Krasnoperekopsk, UKR-Rozdolne, UKR-Pervomaiske, UKR-Krasnohvardiiske, UKR-Chornomorske, UKR-Saky, UKR-Nyzhniohirskyi, UKR-Sovietsky]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: クリミア・タタール人とノガイ人（スンナ派）の地。
+    - from: 1783
+      main: sunni
+      minor: orthodox
+      note: ロシアに併合され、タタール人の一部がオスマン帝国へ移住し、ロシア人・ウクライナ人・ドイツ人などが入植する。
+    - from: 1860
+      main: orthodox
+      minor: sunni
+      note: クリミア戦争の後（1856–62）、10万人以上のタタール人がオスマン帝国へ移住し、草原の村の多くが空になった。ロシア人・ウクライナ人（正教）のほか、ドイツ人（ルター派・カトリック・メノー派）・ブルガリア人・エストニア人なども入植する。1897年の調査で、タヴリーダ県のクリミア部分のタタール人は約35％。
+      source: "https://en.wikipedia.org/wiki/Crimean_Tatars"
 
 - id: rel_crimea_south
   name: クリミア南岸（ケフェ・スダク・バラクラヴァ）
@@ -277,7 +346,22 @@
       note: 南岸の山地にはギリシア系の正教徒（旧ゴート人を含む）とアルメニア人が住む。1778年、彼らの多くはロシアによってアゾフ海北岸（マリウポリなど）へ移された。
     - from: 1779
       main: sunni
-      note: キリスト教徒の移住（1778）後。
+      note: キリスト教徒の移住（1778）後。南岸の村はタタール人が多数のまま（1897年の調査でも、ヤルタ郡の山村はタタール人が多い）。
+
+- id: rel_sevastopol_kerch
+  name: セヴァストポリとケルチ半島
+  select:
+    pieces: [UKR-Nakhimovskyi, UKR-Leninskyi]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1783
+      main: orthodox
+      minor: sunni
+      note: セヴァストポリは1783年創建の黒海艦隊の軍港で、ロシア人の町。ケルチ半島の村にはタタール人が残る。
+    - from: 1860
+      main: orthodox
+      note: クリミア戦争の後（1856–62）、ケルチ半島のタタール人の多くがオスマン帝国へ移住した。
 
 - id: rel_kerch
   name: ケルチ
@@ -323,7 +407,26 @@
     - from: 1783
       main: sunni
       minor: orthodox
-      note: ロシアに併合され、入植が始まる。ノガイ人はモロチナ川周辺に定住させられた（1790年代）。メノー派のドイツ人も入植する（1804–）。（比率は要確認）
+      note: ロシアに併合され、入植が始まる。ノガイ人はモロチナ川周辺（rel_molochna）に定住させられた（1790年代）。（比率は要確認）
+    - from: 1800
+      main: orthodox
+      note: ドニエプル川左岸の草原は、ウクライナ人・ロシア人の農民と入植者の地になる。ノガイ人はモロチナ川流域に移された。
+
+- id: rel_molochna
+  name: モロチナ川流域・アゾフ海北岸（ノガイ人の再定住地）
+  select:
+    pieces: [UKR-Melitopol, UKR-Tokmak, UKR-Berdiansk, UKR-Prymorsk, UKR-Pryazovske, UKR-Yakymivka, UKR-Chernihivka, UKR-Bilmak]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ノガイ人の遊牧地。
+    - from: 1783
+      main: sunni
+      minor: orthodox
+      note: ロシアに併合される。1790年代、ロシア政府はノガイ人をモロチナ川流域に定住させた。メノー派のドイツ人（1804–）・ブルガリア人・ウクライナ人の村も作られる。（比率は要確認）
+    - from: 1860
+      main: orthodox
+      note: クリミア戦争の後（1856–62）、ノガイ人のほぼ全員がオスマン帝国へ移住した。空いた村にはブルガリア人・ウクライナ人などが入る。メノー派・ルター派のドイツ人の入植地は地区ごとに多い。
 
 - id: rel_budjak
   name: ブジャク（南ベッサラビア）とベンデル
@@ -374,15 +477,32 @@
       note: スウェーデンのルター派化政策で、正教徒のカレリア人の多くはロシア側へ移住した（17世紀）。
 
 - id: rel_volga_tatar
-  name: カザン・タタール（タタールスタン）とバシキール
+  name: カザン・タタール（タタールスタン）
   select:
-    adm1: ["RUS/Tatarstan", "RUS/Bashkortostan"]
+    adm1: ["RUS/Tatarstan"]
   timeline:
     - from: 1648
       main: sunni
       minor: orthodox
-      note: ヴォルガ・タタール人とバシキール人はスンナ派。カザンなどの都市にはロシア人の正教徒が多い。18世紀半ばには強制改宗が試みられ、エカチェリーナ2世の寛容勅令（1773）で緩和された。
+      note: スンナ派と正教会がほぼ拮抗する地域。ヴォルガ・タタール人はスンナ派だが、カザン市と西部・南部にはロシア人、北西部にはチュヴァシ人・マリ人、改宗したタタール人（クリャシェン）の正教徒が多い（1897年のカザン県全体では正教徒が多数）。18世紀半ばには強制改宗が試みられ、エカチェリーナ2世の寛容勅令（1773）で緩和された。
       source: "https://ja.wikipedia.org/wiki/ヴォルガ・タタール人"
+    - from: 1860
+      main: sunni
+      minor: orthodox
+      note: 1860年代、名目上正教徒になっていたタタール人の一部がイスラームに戻る運動が起きる。19世紀後半、カザンはジャディード運動（イスラームの教育改革）の中心になる。スンナ派と正教会の拮抗は続く。
+
+- id: rel_bashkiria
+  name: バシキール
+  select:
+    adm1: ["RUS/Bashkortostan"]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: バシキール人（スンナ派）の半遊牧の地。西部にはタタール人の移住者も多い。
+    - from: 1750
+      main: sunni
+      minor: orthodox
+      note: バシキール人の反乱（1735–40）の鎮圧後、ロシア人の入植と鉱山・工場の開発が進む。1897年のウファ県では、ムスリム（バシキール人・タタール人）が約半数、ロシア人などの正教徒が約4割。
 
 - id: rel_middle_volga_pagan
   name: マリ・ウドムルト・チュヴァシ
@@ -421,6 +541,19 @@
       minor: sunni
       note: オレンブルク遠征（1734–）で要塞線が築かれ、コサックとロシア人の農民が入植する。（比率は要確認）
 
+- id: rel_kazakh_west
+  name: カザフ草原西部（ウラリスク・トゥルガイ）
+  select:
+    iso: [KAZ]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: カザフ人（スンナ派）の遊牧地。伝統的な信仰も残る。
+    - from: 1880
+      main: sunni
+      minor: orthodox
+      note: ウラル川沿いのウラル・コサックに加え、19世紀後半にはロシア人・ウクライナ人の農民の入植が進む（とくにトゥルガイ州北部＝コスタナイ）。（比率は要確認）
+
 - id: rel_siberia_north
   name: ロシア北東部の先住民の地（ネネツ・ハンティ＝マンシ）
   select:
@@ -442,13 +575,55 @@
 
 # ======== 北カフカス ========
 - id: rel_north_caucasus_muslim
-  name: 北カフカスのムスリム地域（チェルケス・カバルダ・チェチェン・ダゲスタン）
+  name: 北カフカスのムスリム地域（ダゲスタン・カラチャイ・ノガイ草原）
   select:
-    regions: [circassia, anapa, kabarda, chechnya, dagestan, dagestan_coast, nogai_kuma]
+    regions: [dagestan, dagestan_coast, nogai_kuma]
+    pieces: [RUS-Karachay_Cherkessia]
   timeline:
     - from: 1648
       main: sunni
-      note: ダゲスタンは古くからスンナ派（シャーフィイー派）。チェルケス人・カバルダ人・チェチェン人のイスラーム化は16〜18世紀に進み、伝統的な信仰やキリスト教の名残も残る。
+      note: ダゲスタンは古くからスンナ派（シャーフィイー派）。チェルケス人・カバルダ人・チェチェン人のイスラーム化は16〜18世紀に進み、伝統的な信仰やキリスト教の名残も残る。カフカス戦争（1817–64）ではシャミール（1834–59）のもとでイスラームの聖戦が戦われた。
+
+- id: rel_circassia
+  name: チェルケス（クバン川左岸・黒海沿岸）
+  select:
+    regions: [circassia, anapa]
+    exclude: [RUS-Karachay_Cherkessia, RUS-Resort_Town_of_Sochi_municipal_formation, RUS-Tuapsinsky_District]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: アディゲ人（チェルケス人）の諸部族の地。イスラーム化は16〜18世紀に進み、伝統的な信仰やキリスト教の名残も残る。
+    - from: 1864
+      main: orthodox
+      minor: sunni
+      note: カフカス戦争の終わり（1864）に、チェルケス人の大部分（数十万人）がオスマン帝国へ追放・移住させられた（ムハージル）。空いた土地にコサック・ロシア人・ウクライナ人・アルメニア人・ギリシア人が入植する。クバン川左岸の一部（現在のアディゲ）にアディゲ人のムスリムが残る。
+      source: "https://en.wikipedia.org/wiki/Circassian_genocide"
+
+- id: rel_sochi
+  name: 黒海東岸（ソチ・トゥアプセ）
+  select:
+    pieces: [RUS-Resort_Town_of_Sochi_municipal_formation, RUS-Tuapsinsky_District]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: シャプスグ人・ウビフ人などの部族の地。
+    - from: 1864
+      main: orthodox
+      minor: oriental
+      note: ウビフ人はほぼ全員がオスマン帝国へ移住した。ロシア人・ウクライナ人・ギリシア人のほか、トルコから来たアルメニア人（ハムシェン人など）の入植者が多い。（比率は要確認）
+
+- id: rel_kabarda_chechnya
+  name: カバルダ・チェチェン（テレク川沿いのコサック地帯を含む）
+  select:
+    regions: [kabarda, chechnya]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: カバルダ人・チェチェン人のイスラーム化は16〜18世紀に進み、伝統的な信仰も残る。
+    - from: 1860
+      main: sunni
+      minor: orthodox
+      note: カフカス戦争の間に、テレク川・スンジャ川沿いにコサックの村（スタニツァ）とグロズヌイ（1818）などの要塞が築かれた。カバルダの平野の一部やチェチェンの一部の住民はオスマン帝国へ移住した（1860年代）。（比率は要確認）
 
 - id: rel_derbent
   name: デルベント
@@ -492,6 +667,9 @@
       main: orthodox
       minor: sunni
       note: 黒海コサック（旧ザポロージャ・コサック）がクバン右岸に移住する（1792–93）。（比率は要確認）
+    - from: 1864
+      main: orthodox
+      note: カフカス戦争の終わり（1864）までにノガイ人の多くはオスマン帝国へ移住し、クバン州の右岸はコサックとロシア人・ウクライナ人の農民の地になる（古儀式派も多い）。
 
 - id: rel_taman
   name: タマン半島

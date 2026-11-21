@@ -1,4 +1,4 @@
-# 宗教（宗派）の分布：オスマン帝国（バルカン・アナトリア・東地中海・イラク）、アラビア、ペルシア、南カフカス、中央アジア（1648–1815）
+# 宗教（宗派）の分布：オスマン帝国（バルカン・アナトリア・東地中海・イラク）、アラビア、ペルシア、南カフカス、中央アジア（1648–1914）
 # 形式は docs/religion-format.md。main = 住民の多数派、minor = 2〜3割以上の少数派。
 # オスマン帝国では宗教ごとの共同体（ミッレト）が自治を認められ、キリスト教徒・ユダヤ教徒は人頭税（ジズヤ）を払って信仰を保った。
 
@@ -11,6 +11,9 @@
     - from: 1648
       main: orthodox
       note: セルビア人は正教徒（ペーチ総主教座。1766年に廃止され、コンスタンティノープル総主教座の管轄に）。町にはトルコ人・改宗者のムスリムが住む。
+    - from: 1830
+      main: orthodox
+      note: セルビア公国の自治（1830）で、ムスリムは要塞の町に限られる。1862年のベオグラード砲撃の後、町のムスリムはほぼ全員が退去し、1867年にオスマン帝国の守備隊も撤退した。セルビア正教会は1831年に自治、1879年に独立（独立教会）を認められる。
 
 - id: rel_vojvodina
   name: ヴォイヴォディナ（バーチカ・バナト・スレム）
@@ -36,10 +39,23 @@
       minor: sunni
       note: ノヴィ・パザルなどにムスリム（スラヴ系の改宗者）が多い。
 
-- id: rel_south_serbia
-  name: 南セルビア（トプリツァ・ヤブラニツァ・プチニャ）
+- id: rel_south_serbia_base
+  name: 南セルビア（レスコヴァツ・ヴラニェ・南東の山地）
   select:
     adm1: ["SRB/Toplica District", "SRB/Jablanica District", "SRB/Pcinja District"]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: 農村はセルビア人（東の山地はブルガリア人）の正教徒。レスコヴァツ・ヴラニェなどの町にはトルコ人・アルバニア人のムスリムが多い。
+    - from: 1878
+      main: orthodox
+      note: 露土戦争（1877–78）とベルリン条約でセルビア領になり、町と村のムスリムはオスマン帝国側（コソヴォ・マケドニア）へ去った。ボシレグラードは1920年までブルガリア領。
+
+- id: rel_south_serbia
+  name: トプリツァ・ヤブラニツァ（アルバニア人のムスリムの谷）
+  select:
+    pieces: [SRB-Prokuplje_Municipality, SRB-Kursumlija_Municipality, SRB-Blace_Municipality, SRB-Zitoradja_Municipality, SRB-Lebane_Municipality, SRB-Medvedja_Municipality, SRB-Bojnik_Municipality]
   timeline:
     - from: 1648
       main: orthodox
@@ -47,7 +63,21 @@
     - from: 1690
       main: sunni
       minor: orthodox
-      note: セルビア人の大移住（1690）の後、アルバニア人のムスリムが移り住み、多数派になったとされる。（要確認）
+      note: セルビア人の大移住（1690）の後、アルバニア人のムスリムがトプリツァ・コサニツァ・ヤブラニツァの谷に移り住み、多数派になったとされる。（要確認）
+    - from: 1878
+      main: orthodox
+      note: 露土戦争（1877–78）でセルビア領になり、アルバニア人のムスリムの多くがコソヴォへ追われた（ムハージル）。空いた村にはセルビア人がモンテネグロ・コソヴォなどから入植した。
+      source: "https://en.wikipedia.org/wiki/Expulsion_of_the_Albanians_1877%E2%80%931878"
+
+- id: rel_presevo
+  name: プレシェヴォ・ブヤノヴァツ
+  select:
+    pieces: [SRB-Presevo_Municipality, SRB-Bujanovac_Municipality]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: アルバニア人のムスリムが多く、セルビア人の正教徒の村もある。1878年以後もオスマン帝国領（コソヴォ州）に残り、1912年の第1次バルカン戦争でセルビア領になる。
 
 - id: rel_kosovo
   name: コソヴォ
@@ -76,12 +106,26 @@
 - id: rel_montenegro_muslim
   name: モンテネグロ東部・南部のムスリム地域（プラヴ・グシニェ・ロジャイェ・バール・ウルツィニ）
   select:
-    pieces: [MNE-Plav_Municipality, MNE-Gusinje_Municipality, MNE-Ro_aje_Municipality, MNE-Petnjica_Municipality, MNE-Bar_Municipality, MNE-Ulcinj_Municipality]
+    pieces: [MNE-Plav_Municipality, MNE-Gusinje_Municipality, MNE-Ro_aje_Municipality, MNE-Petnjica_Municipality, MNE-Ulcinj_Municipality]
   timeline:
     - from: 1648
       main: sunni
       minor: orthodox
-      note: アルバニア人・スラヴ系のムスリムが多い。バールとウルツィニにはアルバニア人のカトリックも住む。
+      note: アルバニア人・スラヴ系のムスリムが多い。ウルツィニにはアルバニア人のカトリックも住む。ウルツィニは1880年にモンテネグロ領になったが、アルバニア人のムスリムが多数のまま。プラヴ・グシニェ・ロジャイェは1912年までオスマン帝国領。
+
+- id: rel_bar
+  name: バール
+  select:
+    pieces: [MNE-Bar_Municipality]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: オスマン帝国の港町アンティヴァリ。ムスリム（アルバニア人・スラヴ系）が多く、周辺にはアルバニア人のカトリック、セルビア人の正教徒の村もある。
+    - from: 1878
+      main: orthodox
+      minor: sunni
+      note: ベルリン条約でモンテネグロ領になり、町のムスリムの多くはシュコドラへ去った。周辺の村（ムルコヴィチなど）にはムスリム、シェスタニにはカトリックのアルバニア人が残る。（比率は要確認）
 
 - id: rel_montenegro_mixed
   name: モンテネグロの混在地域（ポドゴリツァ・ビイェロ・ポリェ・プリェヴリャ）
@@ -127,6 +171,10 @@
       minor: orthodox
       note: 15〜17世紀に住民の多くがイスラームに改宗した（ボシュニャク人）。正教徒（セルビア人）とカトリック（フランシスコ会が保護したクロアチア人）も多い。
       source: "https://ja.wikipedia.org/wiki/ボシュニャク人"
+    - from: 1878
+      main: sunni
+      minor: orthodox
+      note: オーストリア＝ハンガリーの占領（1878、1908年併合）の後、ムスリムの一部（数万〜十数万人）がオスマン帝国へ移住した。1879年の調査でボスニア・ヘルツェゴヴィナ全体はムスリム約39％・正教徒約43％・カトリック約18％。サラエヴォ・トゥズラ・ビハチ周辺などではムスリムが多数のまま。
 
 - id: rel_bosnia_catholic_central
   name: 中部ボスニアのカトリック地域（ラシュヴァ・フォイニツァ）・ゼニツァ
@@ -230,22 +278,58 @@
 - id: rel_bulgaria_mixed
   name: ブルガリア南部・東部の混在地域（トラキア平原・ドナウ沿い）
   select:
-    pieces: [BGR-Plovdiv, BGR-Pazardzhik, BGR-Stara_Zagora, BGR-Sliven, BGR-Yambol, BGR-Burgas, BGR-Blagoevgrad, BGR-Sofia_City, BGR-Vidin]
+    pieces: [BGR-Plovdiv, BGR-Pazardzhik, BGR-Burgas, BGR-Blagoevgrad]
   timeline:
     - from: 1648
       main: orthodox
       minor: sunni
       note: トルコ人の入植者と町のムスリムが多い。ロドピ山地西部・ピリン山地にはブルガリア語を話すムスリム（ポマク）も住む。
+    - from: 1878
+      main: orthodox
+      minor: sunni
+      note: 露土戦争（1877–78）で多くのムスリムが去ったが、ロドピ山地西部のポマクとブルガス周辺のトルコ人の村は残る（東ルメリ、1885年にブルガリアと合同）。ブラゴエヴグラト（ピリン地方）は1912年までオスマン帝国領。
+
+- id: rel_bulgaria_1878_south
+  name: ソフィア・ヴィディン・トラキア北部（スタラ・ザゴラ・スリヴェン・ヤンボル）
+  select:
+    pieces: [BGR-Sofia_City, BGR-Vidin, BGR-Stara_Zagora, BGR-Sliven, BGR-Yambol]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: トルコ人の入植者と町のムスリムが多い。
+    - from: 1878
+      main: orthodox
+      note: 露土戦争（1877–78）の間と後に、町と村のムスリム（トルコ人など）の多くがオスマン帝国へ去った（移住した人と犠牲者は数十万人とされる）。ブルガリア人の正教徒がはっきり多数になる。
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1878年)"
 
 - id: rel_bulgaria_muslim
   name: ブルガリア北東部（デリオルマン）・ロドピ山地東部
   select:
-    pieces: [BGR-Shumen, BGR-Razgrad, BGR-Targovishte, BGR-Silistra, BGR-Dobrich, BGR-Varna, BGR-Ruse, BGR-Kardzhali, BGR-Haskovo, BGR-Smolyan]
+    pieces: [BGR-Razgrad, BGR-Targovishte, BGR-Kardzhali, BGR-Smolyan]
   timeline:
     - from: 1648
       main: sunni
       minor: orthodox
       note: デリオルマン（北東部）とロドピ山地東部はトルコ人が多い。ロドピ中部（スモリャン）はポマク（ブルガリア語を話すムスリム）の地。（多数派の判定は要確認）
+    - from: 1878
+      main: sunni
+      minor: orthodox
+      note: ブルガリア公国のラズグラト・タルゴヴィシテ（デリオルマン）では、移住の後もトルコ人が多い。カルジャリ・スモリャン（ロドピ山地）は1912年までオスマン帝国領で、ムスリムが多数。
+
+- id: rel_bulgaria_northeast_1878
+  name: ブルガリア北東部の町と平野（ルセ・シュメン・ヴァルナ・シリストラ・ドブリチ）・ハスコヴォ
+  select:
+    pieces: [BGR-Ruse, BGR-Shumen, BGR-Varna, BGR-Silistra, BGR-Dobrich, BGR-Haskovo]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: トルコ人が多く、ドブルジャ南部にはタタール人もいる。ドナウ沿いと黒海沿岸の町にはブルガリア人・ギリシア人も多い。（多数派の判定は要確認）
+    - from: 1878
+      main: orthodox
+      minor: sunni
+      note: 露土戦争（1877–78）とベルリン条約でブルガリア公国（ハスコヴォは東ルメリ）に。ムスリムの多くがオスマン帝国へ移住し、ブルガリア人が入植して多数派になるが、トルコ人の村は多く残る。南ドブルジャ（シリストラ・ドブリチ）は1913年からルーマニア領。
 
 # ---- ギリシア ----
 - id: rel_greece
@@ -255,17 +339,34 @@
   timeline:
     - from: 1648
       main: orthodox
-      note: ギリシア人は正教徒（コンスタンティノープル総主教座）。アトス山は正教の修道院の中心。
+      note: ギリシア人は正教徒（コンスタンティノープル総主教座）。アトス山は正教の修道院の中心。ペロポネソス・中部ギリシアの町にはトルコ人などのムスリム（人口の1割前後）が住む。
+    - from: 1821
+      main: orthodox
+      note: ギリシア独立戦争（1821–29）で、ペロポネソス・中部ギリシア・エーゲ海の島々のムスリムは殺害されるか追放され（トリポリツァの虐殺、1821）、ほとんどいなくなった。1833年にギリシア正教会がコンスタンティノープル総主教座から独立を宣言する（承認は1850年）。
+      source: "https://ja.wikipedia.org/wiki/ギリシャ独立戦争"
 
 - id: rel_greece_north
   name: マケドニア・テッサリア・エピルス（ギリシア北部）
   select:
-    adm2: ["GRC/Kentrikis Makedonias", "GRC/Dytikis Makedonias", "GRC/Thessalias", "GRC/Ipeiroy"]
+    adm2: ["GRC/Kentrikis Makedonias", "GRC/Dytikis Makedonias", "GRC/Ipeiroy"]
   timeline:
     - from: 1648
       main: orthodox
       minor: sunni
-      note: トルコ人の入植者（テッサリアのコニャル人など）と改宗者のムスリムが多い。テッサロニキは住民の過半数がユダヤ教徒（セファルディム）の町。
+      note: トルコ人の入植者と改宗者のムスリムが多い。テッサロニキは住民の過半数がユダヤ教徒（セファルディム）の町。エピルス・マケドニアは1912–13年のバルカン戦争でギリシア領になるが、ムスリムの大部分が去るのは1923年の住民交換のとき。
+
+- id: rel_thessaly
+  name: テッサリア
+  select:
+    adm2: ["GRC/Thessalias"]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: ラリサ（イェニシェヒル）を中心に、アナトリアから移ったコニャル・トルコ人の村が多い。
+    - from: 1881
+      main: orthodox
+      note: 1881年にテッサリアがギリシア領になり、ムスリムの多くはオスマン帝国領へ移住していった。
 
 - id: rel_thrace_west
   name: 西トラキア・東マケドニア（クサンティ・コモティニ・ドラマ・エヴロス）
@@ -290,6 +391,9 @@
       main: orthodox
       minor: sunni
       note: オスマン帝国の征服後、改宗者を中心にムスリムが増え、18世紀には人口の3〜4割に達したとされる。（要確認）
+    - from: 1898
+      main: orthodox
+      note: 1821年以後たびたびの反乱（1866–69年など）でムスリムは町に集まり、減っていく（1881年に約26％）。1898年にクレタ自治国になると多くのムスリムが島を去り、1900年には約11％になった。1913年にギリシア領。
 
 - id: rel_cyclades_catholic
   name: シロス島
@@ -322,14 +426,39 @@
       note: ルーマニア人は正教徒。
 
 - id: rel_dobruja
-  name: ドブルジャ
+  name: ドブルジャ南部（コンスタンツァ）
   select:
     regions: [dobruja_ro]
   timeline:
     - from: 1648
       main: sunni
       minor: orthodox
-      note: タタール人・トルコ人のムスリムが多く、ルーマニア人・ブルガリア人・ギリシア人も住む。北部のドナウ・デルタには古儀式派のロシア人（リポヴァン人）が逃れてくる。
+      note: タタール人・トルコ人のムスリムが多く、ルーマニア人・ブルガリア人・ギリシア人も住む。1850–60年代にはクリミアのタタール人とチェルケス人がオスマン帝国によって入植させられた。
+    - from: 1880
+      main: sunni
+      minor: orthodox
+      note: ベルリン条約（1878）でルーマニア領になり、ムスリム（タタール人・トルコ人・チェルケス人）の多くがオスマン帝国へ移住し、ルーマニア人の入植が始まる。1880年代はキリスト教徒とムスリムがほぼ拮抗する。
+    - from: 1890
+      main: orthodox
+      minor: sunni
+      note: ルーマニア人の入植が進み、キリスト教徒（ルーマニア人・ブルガリア人・ギリシア人・リポヴァン人・ドイツ人など）が明らかに多数になる。タタール人・トルコ人のムスリムも2割ほど残る。（切り替えの年は要確認）
+
+- id: rel_dobruja_north
+  name: ドブルジャ北部（トゥルチャ・ドナウ・デルタ）
+  select:
+    pieces: [ROU-TULCEA]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: タタール人・トルコ人のムスリムが多い。ドナウ・デルタには古儀式派のロシア人（リポヴァン人）が逃れてくる。
+    - from: 1830
+      main: orthodox
+      minor: sunni
+      note: 露土戦争の時期にタタール人が減り、ブルガリア人・ルーマニア人・リポヴァン人（古儀式派）・ウクライナ人（ザドナイ・コサック）などのキリスト教徒が多くなる。（要確認）
+    - from: 1880
+      main: orthodox
+      note: ベルリン条約（1878）でルーマニア領になり、ムスリムの多くが移住した。ルーマニア人・ブルガリア人・リポヴァン人が住み、ドイツ人の村（ルター派・カトリック）もある。
 
 - id: rel_transylvania_romanian
   name: トランシルヴァニアのルーマニア人地域
@@ -512,9 +641,13 @@
       main: sunni
       note: 遊牧民と少数の村落。
     - from: 1711
+      main: sunni
+      minor: other
+      note: アイン・ダーラの戦い（1711）の後、レバノン山地からドゥルーズ派の移住が始まる。（時期と比率は要確認）
+    - from: 1860
       main: other
       minor: sunni
-      note: アイン・ダーラの戦い（1711）の後、レバノン山地からドゥルーズ派が移住し、のちの「ドゥルーズ山地」となる。（時期と比率は要確認）
+      note: 19世紀、とくに1860年のレバノン山地の内戦の後、ドゥルーズ派の移住が本格化し、ハウラーン山地は「ドゥルーズ山地」と呼ばれるようになる。
 
 - id: rel_mount_lebanon_maronite
   name: レバノン山地北部（ケセルワン・ジュベイル）と北レバノン
@@ -589,12 +722,26 @@
 - id: rel_iraq_south
   name: イラク中部・南部（バグダード・バスラ・湿原地帯）
   select:
-    pieces: [IRQ-Baghdad, IRQ-Diyala, IRQ-Wasit, IRQ-Al_Qadisiyah, IRQ-Maysan, IRQ-Dhi_Qar, IRQ-Al_Muthanna, IRQ-Al_Basrah]
+    pieces: [IRQ-Baghdad, IRQ-Diyala]
   timeline:
     - from: 1648
       main: sunni
       minor: shia
-      note: 南部のアラブ部族のシーア派への改宗は18世紀から進み、19世紀にシーア派が多数になる。バスラにはシーア派が多い。湿原にはマンダ教徒もいる。（比率は要確認）
+      note: バグダードはスンナ派の町だが、カーズィミヤ（シーア派の聖廟）周辺などにシーア派が多い。ユダヤ教徒の大きな共同体もある。（比率は要確認）
+
+- id: rel_iraq_south_shia
+  name: イラク南部（ワーシト・ディーワーニーヤ・アマーラ・ナーシリーヤ・バスラ）
+  select:
+    pieces: [IRQ-Wasit, IRQ-Al_Qadisiyah, IRQ-Maysan, IRQ-Dhi_Qar, IRQ-Al_Muthanna, IRQ-Al_Basrah]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: shia
+      note: 南部のアラブ部族のシーア派への改宗は18世紀から進む。バスラにはシーア派が多い。湿原にはマンダ教徒もいる。（比率は要確認）
+    - from: 1850
+      main: shia
+      minor: sunni
+      note: 遊牧から定住農耕に移ったアラブ部族の多くがシーア派に改宗し、19世紀半ばまでにイラク南部はシーア派が多数になる。（時期は目安）
 
 # ======== アラビア半島 ========
 - id: rel_arabia
@@ -722,6 +869,28 @@
       main: sunni
       minor: orthodox
       note: 17〜18世紀にジョージア人のイスラーム化が進む。アハルツィヘにはアルメニア人も多い。（時期は要確認）
+    - from: 1878
+      main: sunni
+      minor: orthodox
+      note: アジャリア（バトゥミ）はベルリン条約（1878）でロシア領になる。ムスリムのアジャリア人の一部はオスマン帝国へ移住したが、多数はムスリムのまま。バトゥミ市にはロシア人・アルメニア人・ギリシア人が増える。（サムツヘは rel_samtskhe_javakheti）
+
+- id: rel_samtskhe_javakheti
+  name: サムツヘ・ジャヴァヘティ（アハルツィヘ・アハルカラキ）
+  select:
+    pieces: [GEO-Samtskhe_Javakheti]
+  timeline:
+    - from: 1648
+      main: orthodox
+      minor: sunni
+      note: オスマン帝国のチュルドゥル州。アタベク家は1625年にイスラームに改宗した。
+    - from: 1700
+      main: sunni
+      minor: orthodox
+      note: 17〜18世紀にジョージア人のイスラーム化が進む（メスヘティア人）。アハルツィヘにはアルメニア人も多い。（時期は要確認）
+    - from: 1830
+      main: oriental
+      minor: sunni
+      note: アドリアノープル条約（1829）でロシア領になり、エルズルム周辺から多くのアルメニア人がアハルカラキなどに移住した。ムスリム（メスヘティア人）の一部はオスマン帝国へ去ったが、アハルツィヘ周辺には多く残る。ジョージア人（正教・カトリック）、ドゥホボール派のロシア人（1840年代〜）も住む。（比率は要確認）
 
 - id: rel_abkhazia
   name: アブハジア
@@ -736,17 +905,36 @@
       main: sunni
       minor: orthodox
       note: オスマン帝国の影響で、シェルヴァシゼ家の公と住民の一部がイスラームに改宗する。公ケレシュベイはイスラーム、その子ギオルギは1808年に正教に改宗してロシアの保護を受けた。（比率は要確認）
+    - from: 1877
+      main: orthodox
+      minor: sunni
+      note: 1864年（公国の廃止）、1866年のレフニの反乱と1877年の露土戦争の後、ムスリムのアブハズ人の多くがオスマン帝国へ移住させられた（ムハージル）。空いた土地にメグレル人（ジョージア人）・ロシア人・アルメニア人・ギリシア人が入植する。（比率は要確認）
 
 - id: rel_erivan
-  name: エレバン・ハン国・ナヒチェヴァン
+  name: エレバン・ハン国（アルメニア中部・イグドゥル）
   select:
-    regions: [armenia_erivan, nakhchivan]
+    regions: [armenia_erivan]
   timeline:
     - from: 1648
       main: shia
       minor: oriental
-      note: サファヴィー朝のアルメニア人強制移住（1604–05）の後、トルコ系の遊牧民（シーア派）とクルド人が増え、ムスリムが多数になった。アルメニア人はエチミアジン（カトリコス座）周辺などに残る。アルメニア人の多数派化はロシア併合（1828）後の移住による。
+      note: サファヴィー朝のアルメニア人強制移住（1604–05）の後、トルコ系の遊牧民（シーア派）とクルド人が増え、ムスリムが多数になった。アルメニア人はエチミアジン（カトリコス座）周辺などに残る。
       source: "https://ja.wikipedia.org/wiki/エリヴァン・ハン国"
+    - from: 1830
+      main: oriental
+      minor: shia
+      note: トルコマンチャーイ条約（1828）でロシア領になり、ペルシアとオスマン帝国から5万人以上のアルメニア人が移住し、多くのムスリムが去った。1897年の調査で、エリヴァン県はアルメニア人約53％、ムスリム（アゼルバイジャン人・クルド人）約38％。
+      source: "https://ja.wikipedia.org/wiki/トルコマンチャーイ条約"
+
+- id: rel_nakhchivan
+  name: ナヒチェヴァン
+  select:
+    regions: [nakhchivan]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: oriental
+      note: トルコ系（シーア派）の住民が多数で、アルメニア人の村も多い。1828年にロシア領になった後もムスリムが多数（1897年の調査で約6割）。
 
 - id: rel_armenian_highland_villages
   name: シュニク（ザンゲズール）・シラク・ロリ・タヴシュ
