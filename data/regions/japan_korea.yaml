@@ -100,11 +100,18 @@
       cause: 清の冊封使が来て尚質王を琉球国王に封じる
       source: "https://ja.wikipedia.org/wiki/冊封使"
     - from: 1872
-      owner: japan
-      certainty: uncertain
-      label: 琉球藩（清も宗主権を主張）
-      cause: 明治政府が琉球国王の尚泰を琉球藩王とする
-      note: 1875年には清への朝貢を禁じた。清は日本の領有を認めず、琉球の士族の一部も清に救いを求めた
+      owner: ryukyu
+      overlord: qing
+      label: 琉球藩
+      cause: 明治政府が琉球国王の尚泰を琉球藩王とする（琉球藩）
+      note: 王府は存続し、1874年まで清への進貢も続けた。高校世界史では1879年の琉球処分で王国が滅んだとするので、それまで琉球として描く
+      source: "https://ja.wikipedia.org/wiki/琉球処分"
+    - from: 1875
+      owner: ryukyu
+      overlord: japan
+      label: 琉球藩
+      cause: 明治政府が清への朝貢と冊封を禁じ、明治の年号を使わせる
+      note: 清は日本の領有を認めず、琉球の士族の一部も清に救いを求めた。地図では宗主権の帯を清から日本の色に替えて示す
       source: "https://ja.wikipedia.org/wiki/琉球処分"
     - from: 1879
       owner: japan
@@ -300,8 +307,15 @@
       source: "https://ja.wikipedia.org/wiki/クナシリ・メナシの戦い"
     - from: 1855
       owner: japan
+      certainty: nominal
+      label: 蝦夷地（幕府の直轄）
       cause: 日露和親条約で択捉島以南が日本領と決まる
+      note: 国境は確定したが、北海道本島と同じく箱館奉行のもとの蝦夷地で、住民の多くはアイヌの人々だったので、1868年までは名目的な支配（白い斜線）として描く
       source: "https://ja.wikipedia.org/wiki/日露和親条約"
+    - from: 1869
+      owner: japan
+      cause: 新政府が開拓使を置き、千島国（国後・択捉）などを北海道に含める
+      source: "https://ja.wikipedia.org/wiki/開拓使"
     - from: 1945
       owner: soviet_union
       certainty: occupied

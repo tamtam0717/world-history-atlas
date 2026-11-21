@@ -68,8 +68,14 @@
       source: "https://en.wikipedia.org/wiki/Dzungar–Qing_Wars"
     - from: 1755
       owner: qing
-      certainty: indirect
+      certainty: uncertain
       cause: 清がジュンガルを滅ぼす。ドルベト部は1753年に清に服属していた
+      note: 1755–1757年はアムルサナの反乱でオイラトの地が争われたので、不確実（斜線）として描く
+      source: "https://ja.wikipedia.org/wiki/アムルサナ"
+    - from: 1757
+      owner: qing
+      certainty: indirect
+      cause: アムルサナの反乱が鎮められ、オイラトの地が清の支配下に入る
       note: のちにホブドに参賛大臣が置かれ、アルタイ・ウリャンハイやカザフの遊牧民も管轄した。バヤン・ウルギーには19世紀後半からカザフ人が移り住んだ
       source: "https://ja.wikipedia.org/wiki/ジュンガル"
     - from: 1912
@@ -295,16 +301,27 @@
       cause: 徳王が関東軍の後押しで蒙古軍政府を作る（5月）
       source: "https://ja.wikipedia.org/wiki/徳王"
     - from: 1945
-      owner: roc
-      certainty: uncertain
+      owner: soviet_union
+      certainty: occupied
+      label: シリンゴル（ソ連・モンゴル軍の占領）
       cause: ソ連軍・モンゴル軍の進攻で蒙疆政権が崩れる（8月）。スニトで「内モンゴル人民共和国」の樹立が宣言されたが、長続きしなかった
-      source: "https://en.wikipedia.org/wiki/Inner_Mongolian_People%27s_Republic"
-    - from: 1948
+      note: 11月にウランフーが張家口で内モンゴル自治運動連合会を作り（中国共産党の指導下）、シリンゴル・チャハルの両盟はその勢力圏に入った。国民政府の支配はほとんど及ばなかった
+      source:
+        - "https://en.wikipedia.org/wiki/Inner_Mongolian_People%27s_Republic"
+        - "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
+    - from: 1946
       owner: inner_mongolia_ag
       overlord: chinese_soviet
       certainty: uncertain
-      cause: 中国共産党の勢力がシリンゴルに及び、内モンゴル自治政府に加わる
-      note: 要確認（1947–1948年の経過）
+      label: 内モンゴル自治運動連合会
+      cause: ソ連軍・モンゴル軍が引き揚げ、ウランフーの内モンゴル自治運動連合会（中国共産党の指導下）の勢力圏となる
+      note: 1946年10月に国民政府軍が張家口を奪ったが、北のシリンゴルの草原には支配が及ばなかった。1947年5月の内モンゴル自治政府にはシリンゴル盟も加わった。経過は要確認
+      source: "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
+    - from: 1947
+      owner: inner_mongolia_ag
+      overlord: chinese_soviet
+      certainty: uncertain
+      cause: 王爺廟（ウランホト）で内モンゴル自治政府が成立し（5月）、シリンゴル盟もその管轄とされる
       source: "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
     - from: 1949
       owner: prc
@@ -951,3 +968,15 @@
       source:
         - "https://ja.wikipedia.org/wiki/ネルチンスク条約"
         - "https://ja.wikipedia.org/wiki/アルバジン"
+    - from: 1665
+      owner: qing
+      certainty: uncertain
+      label: アムール川流域（ロシアと係争）
+      cause: ロシアのコサックがアムール川上流にアルバジン砦を築く
+      note: 清は1685・1686年にアルバジンを攻めた
+      source: "https://ja.wikipedia.org/wiki/アルバジン"
+    - from: 1689
+      owner: qing
+      certainty: nominal
+      cause: ネルチンスク条約でアムール川流域が清の領土とされ、アルバジン砦は壊される
+      source: "https://ja.wikipedia.org/wiki/ネルチンスク条約"
