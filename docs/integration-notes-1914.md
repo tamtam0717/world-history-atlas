@@ -18,3 +18,10 @@
 - 重複候補：カールスバート決議（BS・全体）、1866 の大併合とエムス電報（BS）、ルクセンブルク危機 1867（C）
 - 1864–65 の共同統治：1864 両公国 prussia（斜線）、1865 ホルシュタイン habsburg（斜線）
 - 画面：1871 の「国境の変化」が大量に並ぶ → 画面担当に「同じ変化はまとめる」を依頼済み
+
+## F（北欧・東欧）から
+- 南ベッサラビア（budjak_1856：UKR-Bolhrad, Izmail, Kiliia, Reni, Tatarbunary）：1856 moldavia（宗主権 ottoman）→ 1859 romania（宗主権 ottoman）→ 1878 russia。E は MDA 側（カフル）を同じ年に。E が romania 開始を 1862 にするなら F 側（budjak_1856・hertsa）も直す
+- ヘルツァ：1859 romania（宗主権 ottoman）、1878 独立
+- 北シュレースヴィヒ（DNK 4 ピース）：BN と同じ扱いに揃えた（1864 共同統治→1866 プロイセン→1871 german_empire）
+- ポーランド王国：1867 から owner を russia に
+- 重複候補：第1次シュレースヴィヒ戦争、デンマーク戦争（BN）、プロイセンのドイツ化政策（BN）
