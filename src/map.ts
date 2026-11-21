@@ -583,7 +583,7 @@ export class AtlasMap {
       layout: {
         "text-field": ["format", ["get", "name"], {}, "\n", {}, ["get", "note"], { "font-scale": 0.72 }],
         "text-font": FONT,
-        "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["get", "s"], 9], 5, ["*", ["get", "s"], 12.5], 8, ["*", ["get", "s"], 16]],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["get", "s"], 11], 5, ["*", ["get", "s"], 14.5], 8, ["*", ["get", "s"], 18]],
         "text-max-width": 30,
         "text-letter-spacing": 0.15,
         "text-line-height": 1.15,
@@ -696,7 +696,7 @@ export class AtlasMap {
     subs.forEach((u, k) => {
       for (const i of u.pieces) subOf[i] = k;
       const l = this.merged(`sub${u.owner}|${u.name}`, u.pieces).label;
-      if (l) sublabels.push(labelFeature(u.name, l, { note: u.note, scale: 0.8, chars: Math.max([...u.name].length, [...u.note].length * 0.72) }));
+      if (l) sublabels.push(labelFeature(u.name, l, { note: u.note, scale: 0.9, chars: Math.max([...u.name].length, [...u.note].length * 0.72) }));
     });
     this.setData("sublabels", { type: "FeatureCollection", features: sublabels });
     const subKey = "sub" + hashInts(subOf) + hashInts(this.ownerOf);
@@ -1161,6 +1161,7 @@ export class AtlasMap {
       if ((c.founded && year < c.founded) || (c.until && year > c.until)) continue;
       features.push(cityFeature(cityName(c, year), c.lon, c.lat, cityPop(c, year), !!cityCapitalOf(c, year)));
     }
+    declutterCities(features);
     return { type: "FeatureCollection", features };
   }
 
@@ -1618,6 +1619,7 @@ function cityFeature(name: string, lon: number, lat: number, pop: number, capita
     properties: {
       name,
       capital,
+      pop,
       // 大きな国の首都は早めに出す。小さな領邦の首都は、人口なりの拡大率より少し早めに出す程度にする
       minz: capital ? (pop >= 40000 ? Math.min(minz, 3.4) : minz - 0.7) : minz,
       r: capital ? r * 0.9 : r * 0.8,
@@ -1625,6 +1627,37 @@ function cityFeature(name: string, lon: number, lat: number, pop: number, capita
     },
     geometry: { type: "Point", coordinates: [lon, lat] },
   };
+}
+
+/**
+ * 近すぎる都市（例：1871 年のパリとヴェルサイユ）の重なりを防ぐ。2つの都市の点が画面上で
+ * CITY_GAP px より近くなる拡大率では、重要度の低いほう（人口、首都は4倍で比べる）を出さない
+ * （minz を引き上げる）。都市名どうしの重なりは MapLibre が隠すが、点と名前の重なりは防げないため
+ */
+const CITY_GAP = 30;
+function declutterCities(features: Feature[]) {
+  const pts = features.map((f) => {
+    const [lon, lat] = (f.geometry as { coordinates: number[] }).coordinates;
+    const p = f.properties!;
+    return { lon, lat, p, imp: p.pop * (p.capital ? 4 : 1) };
+  });
+  pts.sort((a, b) => b.imp - a.imp);
+  for (let j = 1; j < pts.length; j++) {
+    const b = pts[j];
+    const k = Math.cos((b.lat * Math.PI) / 180);
+    for (let i = 0; i < j; i++) {
+      const a = pts[i];
+      const dLat = a.lat - b.lat;
+      if (Math.abs(dLat) > 1.5) continue;
+      const dLon = (a.lon - b.lon) * k;
+      if (Math.abs(dLon) > 1.5) continue;
+      const km = Math.max(0.5, Math.hypot(dLon, dLat) * KM_PER_DEG);
+      // 拡大率 z で 1px ≒ 40075·cos(緯度) / (512·2^z) km
+      const z = Math.log2((CITY_GAP * 40075 * k) / (512 * km));
+      // 重要なほうが z より手前の拡大率で出るときだけ、重なる範囲で隠す
+      if (a.p.minz < z && z > b.p.minz) b.p.minz = z;
+    }
+  }
 }
 
 function bbox(geo: GeoMultiPolygon): [number, number, number, number] {
