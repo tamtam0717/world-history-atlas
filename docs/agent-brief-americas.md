@@ -65,3 +65,6 @@
 
 ## 最後に報告すること
 docs/agent-brief.md と同じ（日本語・簡潔に）。担当どうしの確認点も。
+
+## 追記：海外領土のピース（ピースの見直しで追加）
+CGAZ になかった海外領土は Natural Earth から足してあり、iso は地域のコード：A3＝GLP・MTQ・BLM・MAF・SXM・ABW・CUW・BES・AIA・MSR・VGB・CYM・TCA（プエルトリコ・米領ヴァージン諸島は USA の ADM1）、A4＝GUF、A2＝BMU・SPM、A5＝SGS。パナマ運河地帯は PAN-*_Canal_Zone の 3 ピース、グアンタナモ基地は CUB-Guantanamo_Bay_Naval_Base。アメリカ合衆国の郡ピースの ID は「郡名_州略号」（例 USA-Washington_PA）。
