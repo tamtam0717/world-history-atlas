@@ -42,7 +42,20 @@
   timeline:
     - from: 1880
       main: burmese
-      note: ラングーン市の人口の過半数はインド系（ベンガル・タミル・テルグ・ヒンドゥスターニーなど。1931）だったが、日本軍の侵攻（1942）と独立後の国有化（1962–）で多くが去った。
+      note: ラングーン市の人口の過半数はインド系（ベンガル・タミル・テルグ・ヒンドゥスターニーなど。1931）だったが、日本軍の侵攻（1942）と独立後の国有化（1962–）で多くが去った。ラングーン市のインド系は下の lang_yangon で斜線にしている。
+- id: lang_yangon
+  name: ラングーン市（インド系の住民）
+  select:
+    pieces: [MMR-Yangon_East, MMR-Yangon_North, MMR-Yangon_South, MMR-Yangon_West]
+  timeline:
+    - from: 1880
+      main: burmese
+      minor: tamil
+      note: 英領インドの一州として、インドから労働者・商人が流れ込み、1931 年にはラングーン市の人口の過半数がインド系だった。言語はテルグ語・タミル語・ベンガル語（チッタゴン方言）・ヒンドゥスターニー語などに分かれるので、斜線は南インドからの移民を代表してタミル語の色で示す（宗教の地図ではヒンドゥー教の斜線）。
+      source: "https://en.wikipedia.org/wiki/Burmese_Indians"
+    - from: 1942
+      main: burmese
+      note: 日本軍の侵攻（1942）でインド系の住民の多くがインドへ逃れ、1962 年以後の国有化でさらに去った。
 - id: lang_mon
   name: モン州（モーラミャイン・タトン）
   select:
@@ -400,9 +413,26 @@
       main: khmer
       note: クメール人（クメール・クロム）の地。
     - from: 1760
+      main: khmer
+      minor: vietnamese
+      note: 阮氏の支配とベトナム人の入植。デルタ西部はまだクメール人が多かった。
+    - from: 1850
       main: vietnamese
       minor: khmer
-      note: 阮氏の支配とベトナム人の入植。
+      note: ベトナム人が多数になった。
+    - from: 1900
+      main: vietnamese
+- id: lang_mekong_delta_east
+  name: メコン・デルタ東部（ヴィンロン・ベンチェ・ドンタップ）
+  select:
+    pieces: [VNM-V_nh_Long, VNM-B_n_Tre, VNM-ng_Thap]
+  timeline:
+    - from: 1648
+      main: khmer
+    - from: 1760
+      main: vietnamese
+      minor: khmer
+      note: デルタ東部はベトナム人の入植が早かった（ヴィンロン 1732）。
     - from: 1850
       main: vietnamese
 - id: lang_khmer_krom
@@ -599,11 +629,26 @@
     - from: 1870
       main: chinese
       minor: malay
-      note: クアラルンプールは華人のカピタン（葉亜来）のもとで発展した。1969 年の5月13日事件（民族暴動）の後、マレー人を優遇するブミプトラ政策が始まった。
+      note: クアラルンプールは華人のカピタン（葉亜来）のもとで発展した。1969 年の5月13日事件（民族暴動）の後、マレー人を優遇するブミプトラ政策が始まった。タミル人などのインド人も多い（1931 年に約3割）が、地図は2番目の少数派までしか描けない。
       source: "https://ja.wikipedia.org/wiki/5月13日事件"
     - from: 1980
       main: malay
       minor: chinese
+- id: lang_kuala_lumpur
+  name: クアラルンプール
+  select:
+    pieces: [MYS-Kuala_Lumpur]
+  timeline:
+    - from: 1648
+      main: malay
+    - from: 1870
+      main: chinese
+      minor: malay
+      note: 華人の錫鉱山の町として発展した。1980 年でも市の人口の過半数（約 52%）が華人。
+    - from: 2000
+      main: malay
+      minor: chinese
+      note: 2000 年代にマレー系が華人を上回った（2010 年はマレー系 46%、華人 43%）。
 - id: lang_penang
   name: ペナン島（ジョージタウン）
   select:
@@ -828,10 +873,10 @@
       note: オランダ東インド会社の本拠地バタヴィア（1619–）。各地から連れてこられた奴隷や移住者の子孫が混ざり合い、マレー語のクレオールを話すブタウィ人が生まれた。華人は 1740 年に大虐殺された（紅河事件）。
       source: "https://ja.wikipedia.org/wiki/ブタウィ人"
     - from: 1960
-      main: javanese
-      minor: sundanese
-      note: 首都への移住で、スンダ人・ジャワ人がブタウィ人を上回った。
-    - from: 1990
+      main: sundanese
+      minor: javanese
+      note: 首都への移住で、スンダ人（約 33%、1961）・ジャワ人（約 25%）がブタウィ人（約 23%）を上回った。
+    - from: 1980
       main: javanese
       minor: malay
       note: ジャワ人が最大（約 36%、2010）で、ブタウィ人が続く。
@@ -1188,7 +1233,20 @@
     - from: 1648
       main: tagalog
       minor: philippine_other
-      note: 海岸のタガログ人と、マンヤン人（ミンドロ）・パラワン人・タグバヌワ人・クヨノン人（パラワン）。
+      note: 海岸のタガログ人と、マンヤン人（ミンドロ）・パラワン人・タグバヌワ人・クヨノン人（パラワン）。マリンドゥケはタガログ語の島。
+- id: lang_mindoro_palawan_interior
+  name: ミンドロ・パラワン
+  select:
+    pieces: [PHL-Occidental_Mindoro, PHL-Oriental_Mindoro, PHL-Palawan]
+  timeline:
+    - from: 1648
+      main: philippine_other
+      minor: tagalog
+      note: ミンドロ内陸のマンヤン人、パラワン本島のパラワン人・タグバヌワ人、北部のクヨノン人が多い。タガログ人はミンドロの海岸に住んでいた。
+    - from: 1950
+      main: tagalog
+      minor: philippine_other
+      note: 20 世紀の移住で、タガログ人が多数になった（パラワンではクヨノン語・ビサヤ諸語の話者も多い）。
 - id: lang_mindanao_north
   name: ミンダナオ北部の海岸・カラガ
   select:

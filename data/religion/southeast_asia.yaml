@@ -109,12 +109,21 @@
 - id: rel_wa
   name: シャン州北東部（ワ・コーカン）
   select:
-    pieces: [MMR-Matman, MMR-Hopang, MMR-Laukkaing]
+    pieces: [MMR-Matman, MMR-Hopang]
   timeline:
     - from: 1648
       main: other
       minor: theravada
-      note: ワ人の在来の信仰（バプテストに改宗した人も多い）。コーカンは中国系（漢人）。
+      note: ワ人の在来の信仰（バプテストに改宗した人も多い）。
+- id: rel_kokang
+  name: コーカン（ラウカイン）
+  select:
+    pieces: [MMR-Laukkaing]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      minor: theravada
+      note: 中国系（漢人）のコーカン人の地。中国の民間信仰（仏教・道教・祖先祭祀）。言語の地図でも中国語。
 - id: rel_naga_hills_mm
   name: ナガ丘陵（カムティ）
   select:
@@ -277,13 +286,31 @@
       main: theravada
       note: カンボジア領で、クメール人（クメール・クロム）の上座部仏教の地。ハティエンは 1708 年に華人の鄚玖（マック・クー）が開いた港町。
     - from: 1760
-      main: vietnamese_folk
-      minor: theravada
-      note: 阮氏が 1757 年までにデルタ全域を支配下に置き、ベトナム人の入植が進んだ。
+      main: theravada
+      minor: vietnamese_folk
+      note: 阮氏が 1757 年までにデルタ全域を支配下に置き、ベトナム人の入植が進んだ。デルタ西部（アンザン・キエンザン・カマウ・バクリエウ）では、まだクメール人が多かった。
       source: "https://ja.wikipedia.org/wiki/南進_(ベトナム)"
     - from: 1850
       main: vietnamese_folk
-      note: ベトナム人が多数になった。アンザンではホアハオ教（1939）が広がった。
+      minor: theravada
+      note: 阮朝のもとでの入植と、明命帝のクメール人への同化政策で、ベトナム人が多数になった。
+    - from: 1900
+      main: vietnamese_folk
+      note: フランスの運河開削と稲作の開拓でベトナム人の移住がさらに進んだ。アンザンではホアハオ教（1939）が広がった。
+- id: rel_mekong_delta_east
+  name: メコン・デルタ東部（ヴィンロン・ベンチェ・ドンタップ）
+  select:
+    pieces: [VNM-V_nh_Long, VNM-B_n_Tre, VNM-ng_Thap]
+  timeline:
+    - from: 1648
+      main: theravada
+      note: カンボジア領で、クメール人の地。
+    - from: 1760
+      main: vietnamese_folk
+      minor: theravada
+      note: ヴィンロン（1732 年に阮氏の営）など、デルタ東部はベトナム人の入植が早かった。
+    - from: 1850
+      main: vietnamese_folk
 - id: rel_khmer_krom
   name: チャーヴィン・ソクチャン（クメール・クロムの多い地域）
   select:
@@ -430,12 +457,28 @@
     - from: 1870
       main: chinese_folk
       minor: sunni
-      note: 錫鉱山の町クアラルンプール（1857 年ごろ）は華人の町として発展した。1931 年のスランゴールは華人が約半数。
+      note: 錫鉱山の町クアラルンプール（1857 年ごろ）は華人の町として発展した。1931 年のスランゴールは華人が約半数。インド人（タミル人のゴム園の労働者など）も約3割いたが、地図は2番目の少数派までしか描けない。
       source: "https://ja.wikipedia.org/wiki/クアラルンプール"
     - from: 1980
       main: sunni
       minor: chinese_folk
       note: マレー人の都市への移住（新経済政策、1971–）で、ムスリムが多数になった。
+- id: rel_kuala_lumpur
+  name: クアラルンプール
+  select:
+    pieces: [MYS-Kuala_Lumpur]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1870
+      main: chinese_folk
+      minor: sunni
+      note: 錫鉱山の町として華人のカピタン（葉亜来）のもとで発展した。1980 年でも市の人口の過半数（約 52%）が華人。
+      source: "https://ja.wikipedia.org/wiki/クアラルンプール"
+    - from: 2000
+      main: sunni
+      minor: chinese_folk
+      note: マレー人の移住が続き、2000 年代にマレー系が華人を上回った（2010 年はマレー系 46%、華人 43%）。
 - id: rel_penang
   name: ペナン島（ジョージタウン）
   select:
@@ -452,7 +495,7 @@
 - id: rel_sabah
   name: 北ボルネオ（サバ）
   select:
-    adm1: ["MYS/Sabah", "MYS/Labuan"]
+    adm1: ["MYS/Sabah"]
   timeline:
     - from: 1648
       main: other
@@ -494,13 +537,14 @@
       note: ラッフルズが 1819 年に港を開き、華人が多数の港市になった。マレー人（ムスリム）は1割余り、インド人（ヒンドゥー教・イスラーム）もいる。2020 年は仏教 31%、キリスト教 19%、無宗教 20%、イスラーム 16%、道教 9%。
       source: "https://ja.wikipedia.org/wiki/シンガポールの宗教"
 - id: rel_brunei
-  name: ブルネイ
+  name: ブルネイ・ラブアン
   select:
     iso: [BRN]
+    adm1: ["MYS/Labuan"]
   timeline:
     - from: 1648
       main: sunni
-      note: ブルネイのスルタン国。イスラームが国の宗教（1991 年から「マレー・イスラーム・王制」を国是とする）。
+      note: ブルネイのスルタン国。イスラームが国の宗教（1991 年から「マレー・イスラーム・王制」を国是とする）。ラブアン島もブルネイ・マレー人（ムスリム）の島で、1848 年にイギリス領、のちに海峡植民地の一部になった。
 
 # ======== インドネシア ========
 - id: rel_indonesia
@@ -634,10 +678,14 @@
       main: other
       note: バタク人の在来の信仰（パルマリム）。
     - from: 1880
+      main: other
+      minor: lutheran
+      note: ドイツのライン伝道会のノメンセン（1862–）の宣教で、トバ湖の南のシロンドン谷から改宗が始まった（信徒は 1881 年に約 7,000 人）。
+      source: "https://en.wikipedia.org/wiki/Batak_Christian_Protestant_Church"
+    - from: 1900
       main: lutheran
       minor: other
-      note: ドイツのライン伝道会のノメンセン（1862–）の宣教で改宗が進み、バタク・キリスト教会（HKBP）が生まれた。
-      source: "https://en.wikipedia.org/wiki/Batak_Christian_Protestant_Church"
+      note: 改宗がトバ湖の周りと北タパヌリ全体に広がり、バタク・キリスト教会（HKBP）が生まれた（信徒は 1911 年に約 10 万人）。
     - from: 1910
       main: lutheran
       note: トバ・バタクの大半がプロテスタント（カトリックも1〜2割）。
@@ -773,7 +821,7 @@
 - id: rel_kalbar_interior
   name: 西カリマンタンの内陸（ランダック・サンガウ・シンタン・カプアス上流）
   select:
-    pieces: [IDN-Landak, IDN-Sanggau, IDN-Sekadau, IDN-Sintang, IDN-Melawi, IDN-Kapuas_Hulu, IDN-Bengkayang]
+    pieces: [IDN-Landak, IDN-Sanggau, IDN-Sekadau, IDN-Sintang, IDN-Bengkayang]
   timeline:
     - from: 1648
       main: other
@@ -786,10 +834,23 @@
     - from: 1980
       main: catholic
       minor: sunni
-- id: rel_singkawang
-  name: サンバス・シンカワン（華人の金鉱の地）
+- id: rel_kalbar_upper
+  name: カプアス川上流・ムラウィ
   select:
-    pieces: [IDN-Kota_Singkawang, IDN-Sambas, IDN-Mempawah, IDN-Kota_Pontianak]
+    pieces: [IDN-Kapuas_Hulu, IDN-Melawi]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: ダヤク人の在来の信仰。川沿いの町にはマレー人（ムスリム）がいる。
+    - from: 1960
+      main: sunni
+      minor: catholic
+      note: ダヤク人の多くはカトリック・プロテスタントになったが、川沿いのマレー人（イスラームに改宗したダヤク人を含む）と移住者でムスリムがやや多い（カプアス・フルで約 55%、2010）。
+- id: rel_singkawang
+  name: サンバス・ポンティアナック（華人の金鉱の地）
+  select:
+    pieces: [IDN-Sambas, IDN-Mempawah, IDN-Kota_Pontianak]
   timeline:
     - from: 1648
       main: sunni
@@ -799,6 +860,18 @@
       minor: chinese_folk
       note: 18 世紀半ばから客家の金鉱夫が集まり、公司（コンシ。蘭芳公司など）と呼ばれる自治組織をつくった（オランダが 1850 年代に解体）。
       source: "https://ja.wikipedia.org/wiki/蘭芳公司"
+- id: rel_singkawang_city
+  name: シンカワン（華人の町）
+  select:
+    pieces: [IDN-Kota_Singkawang]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: other
+    - from: 1770
+      main: chinese_folk
+      minor: sunni
+      note: 客家の金鉱夫の町として発展した。今も華人が4割余りを占め、仏教・儒教・道教の廟が多い（「千の廟の町」）。旧正月の十五日の祭り（チャップ・ゴー・メ）で知られる。
 - id: rel_kalimantan_central
   name: 中部カリマンタン
   select:
@@ -812,7 +885,7 @@
     - from: 1970
       main: sunni
       minor: other
-      note: 移住者（バンジャル人・ジャワ人）が増え、ムスリムが多数になった。ダヤク人にはプロテスタント（カリマンタン福音教会）も多い。
+      note: 移住者（バンジャル人・ジャワ人）が増え、ムスリムが多数になった。ダヤク人にはプロテスタント（カリマンタン福音教会）も多い。言語の地図では今もダヤクが多数なのは、ダヤク人の一部もイスラームに改宗しているため（改宗するとバンジャル人・マレー人を名のる例も多い）で、ムスリムの多くはバンジャル人・ジャワ人などの移住者とその子孫、残りはムスリムのダヤク人。
 - id: rel_kalimantan_east
   name: 東・北カリマンタン
   select:
@@ -825,7 +898,7 @@
     - from: 1950
       main: sunni
       minor: other
-      note: 石油（バリクパパン）・木材・炭鉱の開発で、ジャワ人・ブギス人・バンジャル人が移り住んだ。2024 年から新首都ヌサンタラの建設が始まった。
+      note: 石油（バリクパパン）・木材・炭鉱の開発で、ジャワ人・ブギス人・バンジャル人が移り住んだ。ムスリムの多くはこの移住者と海岸のクタイ人で、内陸のダヤク人はキリスト教徒が多い。2024 年から新首都ヌサンタラの建設が始まった。
 - id: rel_kalimantan_east_interior
   name: マハカム川上流・マリナウ
   select:
@@ -1096,11 +1169,16 @@
     pieces: [PHL-Palawan, PHL-Occidental_Mindoro, PHL-Oriental_Mindoro]
   timeline:
     - from: 1648
+      main: other
+      minor: catholic
+      note: スペインの拠点はミンドロの海岸と、パラワン北部のクヨ島・タイタイなどだけ。ミンドロ内陸のマンヤン人、パラワン本島のパラワン人・タグバヌワ人は在来の信仰。パラワン南部はスールー・ブルネイの影響でムスリム。
+    - from: 1900
       main: catholic
       minor: other
-      note: 海岸の町はカトリック。ミンドロのマンヤン人、パラワン人は在来の信仰。パラワン南部はスールーの影響でムスリム。
+      note: ルソン・ビサヤからのキリスト教徒の移住が進み、カトリックが多数になった。
     - from: 1950
       main: catholic
+      note: 戦後の移住（タガログ人・ビサヤ人・イロカノ人）でさらに増えた。
 - id: rel_moro
   name: ムスリム・ミンダナオ（スールー・マギンダナオ・ラナオ）
   select:

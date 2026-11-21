@@ -178,6 +178,39 @@
       main: hindu
       minor: sikh
       note: 分離独立の後はヒンドゥー教徒（ダリトのアード・ダルム派を含む）がやや多く、シク教徒が3〜4割。
+- id: rel_hoshiarpur
+  name: ホシヤールプル
+  select:
+    pieces: [IND-Hoshiarpur]
+  timeline:
+    - from: 1648
+      main: hindu
+      minor: sunni
+      note: シワーリク丘陵のふもと。分離独立の前からヒンドゥー教徒が多く（1941 年に約5割）、ムスリムは約3分の1、シク教徒は2割弱。
+    - from: 1947
+      main: hindu
+      minor: sikh
+      note: 分離独立でムスリムがパキスタンへ去った。ヒンドゥー教徒（ダリトのアード・ダルム派を含む）がやや多く、シク教徒が3〜4割。
+- id: rel_ludhiana
+  name: ルディヤーナー
+  select:
+    pieces: [IND-Ludhiana]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+    - from: 1765
+      main: sunni
+      minor: sikh
+      note: シク教徒のミスルの支配が及ぶ。
+    - from: 1881
+      main: sikh
+      minor: sunni
+      note: 英領時代にジャート農民のシク教化が進み、シク教徒が最も多くなった（1941 年でシク教徒約 42%、ムスリム約 37%）。
+    - from: 1947
+      main: sikh
+      minor: hindu
+      note: 分離独立でムスリムがパキスタンへ去った。
 
 # ---- ジャンムー・カシミール、ラダック ----
 - id: rel_kashmir_valley
@@ -205,7 +238,7 @@
 - id: rel_jammu_hindu
   name: ジャンムー（ジャンムー・カトゥア・サンバ・ウダムプル・リアーシー）
   select:
-    pieces: [IND-Jammu, IND-Kathua, IND-Samba, IND-Udhampur, IND-Reasi]
+    pieces: [IND-Jammu, IND-Kathua, IND-Samba, IND-Udhampur]
   timeline:
     - from: 1648
       main: hindu
@@ -213,7 +246,21 @@
       note: ドーグラー人（ヒンドゥー教徒）の地。1941 年にはジャンムー州全体でムスリムが6割、ジャンムー郡でも4割を占めた。
     - from: 1947
       main: hindu
-      note: 1947 年の秋、ジャンムーで多数のムスリムが殺害・追放され（ジャンムーの虐殺）、多くがパキスタン側へ逃れた。リアーシー郡は今もムスリムが半数近い。
+      note: 1947 年の秋、ジャンムーで多数のムスリムが殺害・追放され（ジャンムーの虐殺）、多くがパキスタン側へ逃れた。
+      source: "https://en.wikipedia.org/wiki/1947_Jammu_massacres"
+- id: rel_reasi
+  name: リアーシー
+  select:
+    pieces: [IND-Reasi]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: hindu
+      note: ジャンムーの山地で、1941 年にはムスリムが約3分の2を占めた。
+    - from: 1947
+      main: hindu
+      minor: sunni
+      note: 1947 年のジャンムーの虐殺と移動の後、ヒンドゥー教徒がやや多くなった。ムスリムは今も半数近い。
       source: "https://en.wikipedia.org/wiki/1947_Jammu_massacres"
 - id: rel_ladakh_leh
   name: ラダック（レー）

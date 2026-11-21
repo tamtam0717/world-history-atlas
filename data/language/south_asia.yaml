@@ -40,6 +40,10 @@
     - from: 1648
       main: punjabi
       minor: hindustani
+    - from: 1953
+      main: hindustani
+      minor: punjabi
+      note: 1953 年に州都として建設された新都市。各地から役人・商人が移り住み、母語はヒンディー語が約3分の2、パンジャーブ語は2割余り（2011）。
 - id: lang_delhi
   name: デリー
   select:
@@ -54,14 +58,23 @@
       note: 西パンジャーブから来たパンジャーブ人（ヒンドゥー教徒・シク教徒）の難民が、デリーの人口の3分の1近くを占めた。
       source: "https://en.wikipedia.org/wiki/Punjabis_in_Delhi"
 - id: lang_lahaul
-  name: ラーホール・スピティ・キンナウル
+  name: ラーホール・スピティ
   select:
-    pieces: [IND-Lahul_Spiti, IND-Kinnaur]
+    pieces: [IND-Lahul_Spiti]
   timeline:
     - from: 1648
       main: tibetan
       minor: hindustani
-      note: スピティはチベット語、ラーホール・キンナウルはチベット・ビルマ系の諸語。
+      note: スピティはチベット語。ラーホールはチベット語ではないチベット・ビルマ系の諸語（ガハリ語など）だが、郡を分けられないのでチベット語の色で塗る。
+- id: lang_kinnaur
+  name: キンナウル
+  select:
+    pieces: [IND-Kinnaur]
+  timeline:
+    - from: 1648
+      main: tb_northeast
+      minor: hindustani
+      note: キンナウリ語（チベット・ビルマ系。チベット語とは別）。地図では北東インドなどのチベット・ビルマ系諸語の色で塗る。
 
 # ---- ジャンムー・カシミール、ラダック、アーザード・カシミール ----
 - id: lang_kashmir
@@ -314,13 +327,31 @@
 - id: lang_chhattisgarh
   name: バスタル（チャッティースガル南部）・マドヤ・プラデーシュ東部の山地
   select:
-    pieces: [IND-Bastar, IND-Dakshin_Bastar_Dantewada, IND-Bijapur_2, IND-Narayanpur, IND-Sukma, IND-Kondagaon, IND-Uttar_Bastar_Kanker, IND-Mandla, IND-Dindori, IND-Gadchiroli]
+    pieces: [IND-Bastar, IND-Dakshin_Bastar_Dantewada, IND-Bijapur_2, IND-Narayanpur, IND-Sukma, IND-Kondagaon, IND-Uttar_Bastar_Kanker]
   timeline:
     - from: 1648
       main: gondi
       minor: hindustani
       note: ゴーンド人などの部族の地（ゴーンディー語・ハルビー語）。中世にはゴーンド人の王国（ガルハ・マンドラ）があった。
       source: "https://ja.wikipedia.org/wiki/ゴンド族"
+- id: lang_mandla
+  name: マンドラ・ディンドリ（ゴーンドの王国ガルハ・マンドラの地）
+  select:
+    pieces: [IND-Mandla, IND-Dindori]
+  timeline:
+    - from: 1648
+      main: hindustani
+      minor: gondi
+      note: ゴーンド人の部族の人口は多いが、ゴーンディー語の話者は半数に届かず、ヒンディー語（チャッティースガリー語を含む）が多い。
+- id: lang_gadchiroli
+  name: ガドチロリ
+  select:
+    pieces: [IND-Gadchiroli]
+  timeline:
+    - from: 1648
+      main: marathi
+      minor: gondi
+      note: マラーティー語が多数で、ゴーンド人・マディア人の部族の言語が続く。
 - id: lang_west_bengal
   name: 西ベンガル
   select:
@@ -521,7 +552,7 @@
       main: sindhi
       minor: pashto_baluchi
       note: シンド人とバローチ人の漁村・港。
-    - from: 1950
+    - from: 1947
       main: hindustani
       note: インドから来たウルドゥー語を話すムスリム（ムハージル）が多数になり、パシュトゥーン人・パンジャーブ人も集まった。1972 年にはシンド語の州公用語化をめぐって暴動が起きた。
       source: "https://en.wikipedia.org/wiki/Muhajir_people"
@@ -532,7 +563,7 @@
   timeline:
     - from: 1648
       main: sindhi
-    - from: 1950
+    - from: 1947
       main: hindustani
       minor: sindhi
       note: ムハージルの移住で、市ではウルドゥー語の話者が多数になった。

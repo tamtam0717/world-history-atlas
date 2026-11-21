@@ -159,8 +159,13 @@ export type MovementKind = "thought" | "art" | "religion" | "system";
 export type CurvePoint = [number, number];
 
 export interface MovementSpread {
+  /** 政体（既定では本国 movementHome だけ。占領地は除く） */
   polities: string[];
   regions: string[];
+  /** 除く政治の地域（movementRegions のキー） */
+  exclude?: string[];
+  /** true なら政体の全領域（植民地・占領地を含む） */
+  colonies?: boolean;
   center: boolean;
   curve: CurvePoint[];
 }
@@ -197,6 +202,8 @@ export interface Atlas {
   movements?: Movement[];
   /** 潮流の spread で使う政治の地域 → ピース index の一覧 */
   movementRegions?: Record<string, number[]>;
+  /** 潮流で使う政体の本国：政体 ID → [開始年|null, 終了年|null（両端を含む）, ピース index の一覧][] */
+  movementHome?: Record<string, [number | null, number | null, number[]][]>;
 }
 
 export class AtlasIndex {
