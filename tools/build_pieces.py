@@ -105,12 +105,17 @@ def main():
     g["geometry"] = g.geometry.make_valid()
     g["full"] = g.geometry  # bbox で切る前の形（地図にはこちらを使う）
     g["geometry"] = g.geometry.intersection(clip)
+    # split で分けたピースは、bbox の外にあっても捨てない（西サハラ南部・ビル・タウィールなど。
+    # 元の区画の shapeID は範囲内で使ったことになるので、範囲外のピースとしては作られないため）
+    sp = g["_split"].fillna(False).astype(bool) if "_split" in g else pd.Series(False, index=g.index)
+    small = g.geometry.is_empty | (g.geometry.area < 1e-4)
+    g.loc[sp & small, "geometry"] = g.loc[sp & small, "full"]
     g = g[~g.geometry.is_empty & g.geometry.notna()]
     g = g[g.geometry.geom_type.isin(["Polygon", "MultiPolygon", "GeometryCollection"])]
     g["geometry"] = g.geometry.apply(polys_only)
     g = g[~g.geometry.is_empty]
     # 面積が極端に小さい断片（bbox の端など）は捨てる（その区画は範囲外のピースになる）
-    g = g[g.to_crs("EPSG:3035").area > 2e5]
+    g = g[(g.to_crs("EPSG:3035").area > 2e5) | sp.reindex(g.index, fill_value=False)]
     used |= set(g.shapeID.dropna())
 
     # ID を付ける（同名は bbox で切った形の重心の西→東順で _2, _3 ...）
@@ -326,18 +331,65 @@ def add_ne_pieces(w, specs, adm1):
     return w
 
 
+_UNITS_CACHE = {}
+
+
+def load_units(src):
+    """split の units に使う区画（既定は CGAZ ADM2。"gb/....geojson" なども可）"""
+    if src not in _UNITS_CACHE:
+        if src == "cgaz_adm2":
+            u = read_cgaz("ADM2")[["shapeName", "shapeGroup", "geometry"]]
+        else:
+            u = gpd.read_file(SRC / src, engine="pyogrio")[["shapeName", "geometry"]]
+            u["shapeGroup"] = ""
+        u = u.copy()
+        u["geometry"] = u.geometry.make_valid()
+        u["rp"] = u.geometry.representative_point()
+        _UNITS_CACHE[src] = u
+    return _UNITS_CACHE[src]
+
+
+def units_geom(part, iso, piece_geom):
+    """part["units"] の区画（名前のリスト）を結合した形。代表点がピースの中にあるものだけを使う。
+    units_bbox があれば代表点がその中にあるものだけ、units_clip（名前 → bbox）はその区画を bbox で切る"""
+    u = load_units(part.get("units_src", "cgaz_adm2"))
+    if part.get("units_src", "cgaz_adm2") == "cgaz_adm2":
+        u = u[u.shapeGroup == part.get("units_iso", iso)]
+    u = u[u.shapeName.isin(part["units"])]
+    u = u[u.rp.within(piece_geom.buffer(0.01))]
+    if "units_bbox" in part:
+        u = u[u.rp.within(box(*part["units_bbox"]))]
+    missing = set(part["units"]) - set(u.shapeName)
+    if missing:
+        raise SystemExit(f"split units: 見つからない {sorted(missing)}（{part.get('suffix') or part.get('rename')}）")
+    geoms = []
+    for name, gm in zip(u.shapeName, u.geometry):
+        if name in part.get("units_clip", {}):
+            gm = gm.intersection(box(*part["units_clip"][name]))
+        geoms.append(gm)
+    return polys_only(unary_union(geoms))
+
+
 def apply_splits(g, specs):
-    """島などを別ピースに分ける。分けた部分の名前は「元の名前 + suffix」になる"""
+    """島などを別ピースに分ける。分けた部分の名前は「元の名前 + suffix」（rename があればその名前）になる。
+    name が "*" なら、その国のすべてのピースに当てる（切り取る部分がないピースはそのまま）。
+    merge_into があれば、新しいピースにせず、同じ国のその名前のピースに足す。
+    分けた結果、元のピースが空になる場合は分けない（元の ID を消さないため）"""
     from shapely.geometry import MultiPolygon, Polygon, box as sbox
 
     rows = []
+    merges = []
     for spec in specs:
-        m = (g.iso == spec["iso"]) & (g.shapeName == spec["name"])
+        m = g.iso == spec["iso"]
+        if spec["name"] != "*":
+            m &= g.shapeName == spec["name"]
         for idx in g[m].index:
             geom = g.at[idx, "geometry"]
             polys = list(getattr(geom, "geoms", [geom]))
             for part in spec["parts"]:
-                if "line" in part:
+                if "units" in part:
+                    bb = units_geom(part, spec["iso"], MultiPolygon(polys))
+                elif "line" in part:
                     # 線（経度・緯度の点列）から km の幅の帯で切り取る（パナマ運河地帯など）
                     bb = line_buffer(part["line"], part["km"])
                 elif "poly" in part:
@@ -350,24 +402,47 @@ def apply_splits(g, specs):
                     taken = [p for p in polys if p is not big and bb.contains(p.representative_point())]
                     if not taken:
                         continue
-                    polys = [p for p in polys if p is big or not bb.contains(p.representative_point())]
-                elif part.get("cut") or "line" in part or "poly" in part:
+                    rest = [p for p in polys if p is big or not bb.contains(p.representative_point())]
+                elif part.get("cut") or "line" in part or "poly" in part or "units" in part:
                     # bbox で切り取る（陸続きの部分を線で分ける）
                     cur = MultiPolygon(polys)
-                    taken = [p for p in poly_list(cur.intersection(bb)) if p.area > 1e-9]
+                    inter = poly_list(cur.intersection(bb))
+                    taken = [p for p in inter if p.area > part.get("min_area", 1e-9)]
                     if not taken:
                         continue
-                    polys = poly_list(cur.difference(bb))
+                    # min_area より小さい切れ端は元のピースに残す
+                    tiny = [p for p in inter if p.area > 1e-9 and p.area <= part.get("min_area", 1e-9)]
+                    rest = poly_list(cur.difference(bb.difference(unary_union(tiny).buffer(1e-7)) if tiny else bb))
+                    if "units" in part:
+                        # 区画の外形と元のピースの外形の小さなずれで残った細片は、切り取る側に付ける
+                        tk = MultiPolygon(taken)
+                        big = max((p.area for p in rest), default=0)
+                        moved = [p for p in rest if p.area < 0.02 * big and p.distance(tk) < 1e-6]
+                        if moved:
+                            taken = poly_list(unary_union(taken + moved))
+                            rest = [p for p in rest if not any(p is q for q in moved)]
                 else:
                     taken = [p for p in polys if bb.contains(p.representative_point())]
                     if not taken:
                         continue
-                    polys = [p for p in polys if p not in taken]
+                    rest = [p for p in polys if p not in taken]
+                if not [p for p in rest if p.area > 1e-9]:
+                    continue  # すべてが切り取られる（元のピースが消える）ので分けない
+                polys = rest
+                if part.get("merge_into"):
+                    merges.append((spec["iso"], part["merge_into"], MultiPolygon(taken)))
+                    continue
                 r = g.loc[idx].copy()
-                r["shapeName"] = f'{spec["name"]} {part["suffix"]}'
+                r["shapeName"] = part.get("rename") or f'{g.at[idx, "shapeName"]} {part["suffix"]}'
                 r["geometry"] = MultiPolygon(taken)
+                r["_split"] = True
                 rows.append(r)
             g.at[idx, "geometry"] = MultiPolygon(polys)
+    for iso, target, gm in merges:
+        t = g[(g.iso == iso) & (g.shapeName == target)].index
+        if len(t) != 1:
+            raise SystemExit(f"split merge_into: {iso} {target} が {len(t)} 個")
+        g.at[t[0], "geometry"] = polys_only(unary_union([g.at[t[0], "geometry"], gm]))
     if rows:
         g = gpd.GeoDataFrame(pd.concat([g, gpd.GeoDataFrame(rows, crs=g.crs)], ignore_index=True), crs=g.crs)
     return g

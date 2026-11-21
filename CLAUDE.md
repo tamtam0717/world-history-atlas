@@ -105,10 +105,14 @@
   - 田村さんの決定：実効支配は濃く、主張だけは nominal（斜線）、主な先住民勢力は独自の色。
   - 砂糖植民地などの宗教は住民の多数派で（奴隷が多数の時期は other＋宗主国の宗派を minor）。
   - 画面：出来事・国境の変化は地図に映っている地域を先に（関係国の領土が画面に映っていれば範囲内）。出来事に at: [経度, 緯度] を書ける。所属なしは点描、データ未整備は灰色で区別。
-- 次の作業の候補：アフリカ → オセアニア。ピースの宿題：エントレ・リオス（ARG-Buenos_Aires に含まれている）、サウスダコタ（ミズーリ川）、北海道の和人地、関東州の金州、奄美・小笠原、休戦ライン、ナゴルノ・カラバフほか。
-  - 宿題：北海道の和人地（渡島・檜山）・関東州の金州・奄美・小笠原・休戦ラインのピース分割。潮流 spread に除外の書き方を足す案。
+- 次の作業の候補：アフリカ → オセアニア。
+  - 宿題：潮流 spread に除外の書き方を足す案。
+- アフリカのピースとピースの宿題（2026-11-22）：world_adm2 で NGA GHA CMR ETH ERI UGA TZA MLI SEN GMB GIN SLE CIV BFA TGO BEN NER TCD AGO MOZ MWI MDG ZAF を CGAZ ADM2 に、KEN は沿岸5県（ザンジバルの10マイル帯）、SSD は中央・東エクアトリア（ラド飛び地）だけ。北アフリカ（MAR DZA TUN LBY EGY）・ESH は従来どおり（ヨーロッパ担当のデータあり）。NAM は CGAZ・gbOpen とも ADM2 の名前と形が食い違っている（Walvis Bay の名前が内陸の区画に付いている）ので ADM1 のまま（ウォルビス・ベイは未分割）。Natural Earth から REU MYT SHN（セントヘレナ・アセンション・トリスタン）IOT（チャゴス）ATF を追加。split：西サハラ（北緯26度以北 Saguia_el_Hamra、24度以南 Tiris_al_Gharbiyya）、ビル・タウィール、ハラーイブ、ワディ・ハルファ突出部、アオズー地帯（TCD の4ピース *_Aouzou、国境に平行な線で近似）。
+  - 宿題の結果：ARG-Entre_Rios、USA-South_Dakota_East（ミズーリ川の東・ヤンクトン。元の ID が西）、JPN-Hokkaido_Wajinchi・JPN-Amami_Islands・JPN-Tokara_Islands・JPN-Ogasawara_Islands、関東州は CHN-Dalian の北緯39.45度以南を CHN-Dalian_urban に足した（3,483km²）、AZE-Nagorno_Karabakh（地区で近似、約4,250km²）、北緯38度線：KOR-Gangwon/Gyeonggi_North_of_38th_parallel、PRK-North/South_Hwanghae_South_of_38th_parallel。新しいピースの所属データはまだない（data/ の note の「ピースが分けられない」も未修正）。
+  - split の新しい書き方：name "*"（その国の全ピース）、units（CGAZ ADM2 の区画名で切る。units_bbox・units_clip）、rename、merge_into、min_area。範囲内（zone=eu）の split で bbox の外に出たピースも残す。全16,245ピース（pieces.topo.json 7.5MB、gzip 1.76MB）。
+  - 残り：src/modern.ts の MODERN_NAMES に REU MYT SHN IOT ATF がない。タンジール国際管理地帯（MAR-Prefecture_of_Tangier_Assilah にアシラが入る。分けると新ピースが iso: [MAR] のフランス保護領に入るので保留）、ウォルビス・ベイ、イレミ三角地帯、ゴレ島（ダカール県で代用）は未分割。
 - 次の作業：全世界のデータ。東アジア（中国・日本・朝鮮）→ 南・東南アジア → 南北アメリカ → アフリカ → オセアニア（田村さん了承済み）。
-  - ピースの分割が必要な既知の場所：ナゴルノ・カラバフ（アゼルバイジャンを郡単位に）、オイペン・マルメディ、ブリガ・テンダ、ザール、ベルリン東西、ニコシア。
+  - ピースの分割が必要な既知の場所：オイペン・マルメディ、ブリガ・テンダ、ザール、ベルリン東西、ニコシア（ナゴルノ・カラバフは 2026-11-22 に分割済み）。
 - 田村さんの決定（2026-11-20）：1815年のプファルツ・ラインヘッセンは暫定統治（斜線）のまま／出来事は約340件すべて残す／Pages 公開はレビュー指摘の修正が終わってから（その時点で手順を案内する）。
 - GitHub Pages：公開済み（https://tamtam0717.github.io/world-history-atlas/ ）。main に取り込むと自動でデプロイされる。田村さんの了承があれば、Claude がプルリクエストを作ってマージまで行ってよい（2026-11-20）。
 

@@ -2,6 +2,11 @@
 
 /** ピースの iso（国コード）→ 日本語の国名 */
 export const MODERN_NAMES: Record<string, string> = {
+  REU: "レユニオン",
+  MYT: "マヨット",
+  SHN: "セントヘレナ",
+  IOT: "英領インド洋地域",
+  ATF: "仏領南方・南極地域",
   GUF: "フランス領ギアナ",
   GLP: "グアドループ",
   MTQ: "マルティニーク",
@@ -224,6 +229,11 @@ export const MODERN_NAMES: Record<string, string> = {
 
 /** ピースの iso → 英語の国名（検索用）。別名があれば後ろに並べる */
 export const MODERN_NAMES_EN: Record<string, string[]> = {
+  REU: ["Réunion"],
+  MYT: ["Mayotte"],
+  SHN: ["Saint Helena"],
+  IOT: ["British Indian Ocean Territory"],
+  ATF: ["French Southern Territories"],
   GUF: ["French Guiana"],
   GLP: ["Guadeloupe"],
   MTQ: ["Martinique"],
