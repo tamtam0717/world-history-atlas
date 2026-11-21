@@ -132,7 +132,9 @@
 - id: roc
   name: 中華民国
   names:
-    - {to: 1927, name: 中華民国（北京政府）}
+    - {to: 1911, name: 中華民国（革命派の諸省）}
+    - {from: 1912, to: 1912, name: 中華民国}
+    - {from: 1913, to: 1927, name: 中華民国（北京政府）}
     - {from: 1928, to: 1948, name: 中華民国（国民政府）}
     - {from: 1949, name: 中華民国（台湾）}
   short: 中華民国
@@ -150,7 +152,8 @@
     - {name: 張作霖, title: 陸海軍大元帥, from: 1927, to: 1928, note: 1926–1927年は摂政内閣。1928年6月に北京を退き、奉天へ戻る途中で関東軍に爆殺された, source: "https://ja.wikipedia.org/wiki/張作霖"}
     - {name: 蔣介石, title: 国民政府主席, from: 1928, to: 1931, note: 1928年2–10月の主席は譚延闓, source: "https://ja.wikipedia.org/wiki/蔣介石"}
     - {name: 林森, title: 国民政府主席, from: 1931, to: 1943, note: 名目上の元首。実権は軍事委員会委員長の蔣介石, source: "https://ja.wikipedia.org/wiki/林森"}
-    - {name: 蔣介石, title: 国民政府主席→総統（1948）, from: 1943, to: 1949, note: 1949年1月に下野し、李宗仁が代理総統となった, source: "https://ja.wikipedia.org/wiki/蔣介石"}
+    - {name: 蔣介石, title: 国民政府主席→総統（1948）, from: 1943, to: 1949, note: 1949年1月に下野した（国民党総裁として実権は保った）, source: "https://ja.wikipedia.org/wiki/蔣介石"}
+    - {name: 李宗仁, title: 代理総統, from: 1949, to: 1950, note: 蔣介石の下野（1949年1月）の後に代理総統となり、共産党と和平交渉をしたが決裂した。12月にアメリカへ渡り、1950年3月に蔣介石が総統に復帰した, source: "https://ja.wikipedia.org/wiki/李宗仁"}
     - {name: 蔣介石, title: 総統, from: 1950, to: 1975, note: 1950年3月に台北で総統に復帰, source: "https://ja.wikipedia.org/wiki/蔣介石"}
     - {name: 厳家淦, title: 総統, from: 1975, to: 1978, note: 実権は行政院長の蔣経国, source: "https://ja.wikipedia.org/wiki/厳家淦"}
     - {name: 蔣経国, title: 総統, from: 1978, to: 1988, source: "https://ja.wikipedia.org/wiki/蔣経国"}
@@ -230,7 +233,7 @@
     - from: 1946
       to: 1949
       text: 国共内戦。人民解放軍は満洲を押さえ、三大戦役（遼瀋・淮海・平津）で国民政府軍を破った。1949年10月1日に中華人民共和国を建てた。
-  note: 1949年10月の中華人民共和国（prc）の成立までの共産党の支配地をこの政体で描く。1937–1945年は国民政府の帯（overlord）を付ける。日本軍の後方の抗日根拠地（晋察冀など）は境界が定まらないので描いていない。1946–1948年の内モンゴル自治政府（inner_mongolia_ag、G2）には、この政体の帯（overlord）を付けて共産党の指導下にあることを示す
+  note: 1949年10月の中華人民共和国（prc）の成立までの共産党の支配地をこの政体で描く。1937–1944年は国民政府の帯（overlord）を付ける。日本軍の後方の抗日根拠地（晋察冀など）は境界が定まらないので描いていない。1946–1948年の内モンゴル自治政府（inner_mongolia_ag、G2）には、この政体の帯（overlord）を付けて共産党の指導下にあることを示す
   source:
     - "https://ja.wikipedia.org/wiki/中華ソビエト共和国"
     - "https://ja.wikipedia.org/wiki/陝甘寧辺区"
@@ -242,7 +245,7 @@
   color: "#ee8f88"
   kind: 共和国（中国共産党の一党支配）
   rulers:
-    - {name: 毛沢東, title: 中国共産党主席（国家主席 1949–1959）, from: 1949, to: 1976, source: "https://ja.wikipedia.org/wiki/毛沢東"}
+    - {name: 毛沢東, title: 中国共産党主席（中央人民政府主席 1949–1954、国家主席 1954–1959）, from: 1949, to: 1976, source: "https://ja.wikipedia.org/wiki/毛沢東"}
     - {name: 華国鋒, title: 中国共産党主席, from: 1976, to: 1978, note: 1981年まで党主席だが、1978年の三中全会から実権は鄧小平に移った, source: "https://ja.wikipedia.org/wiki/華国鋒"}
     - {name: 鄧小平, title: 最高指導者（党副主席・中央軍事委員会主席）, from: 1978, to: 1989, note: 党の総書記は胡耀邦（1982–1987）・趙紫陽（1987–1989）。1992年の南巡講話まで影響力を持った, source: "https://ja.wikipedia.org/wiki/鄧小平"}
     - {name: 江沢民, title: 中国共産党総書記（国家主席 1993–2003）, from: 1989, to: 2002, source: "https://ja.wikipedia.org/wiki/江沢民"}

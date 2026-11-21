@@ -1,5 +1,5 @@
 # G1 中国（中国本土・東北・台湾）の出来事（1648–2025）
-# アヘン戦争・義和団戦争・日露戦争・太平洋戦争は europe.yaml、香港の返還は west.yaml、
+# アヘン戦争・義和団戦争・日露戦争・太平洋戦争は europe.yaml、香港の返還（1997）は west.yaml、
 # 満洲事変・日中戦争・下関条約・台湾出兵・ワシントン会議などは japan_korea.yaml、
 # ネルチンスク条約・アイグン条約・北京条約（沿海州）・イリ条約・チベット・新疆・中印国境紛争・核実験は inner_asia.yaml にある。
 
@@ -72,6 +72,12 @@
   polities: [qing, britain]
   importance: 1
   source: "https://ja.wikipedia.org/wiki/広東システム"
+- year: 1782
+  title: 『四庫全書』の完成
+  text: 乾隆帝が古今の書物を集めて経・史・子・集の4部に分けて筆写させた大叢書（約3万6000冊）。編集の過程で清に都合の悪い書物は禁書とされた（文字の獄）。
+  polities: [qing]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/四庫全書"
 - year: 1793
   title: マカートニーの来訪
   text: イギリスの使節マカートニーが熱河で乾隆帝に会い、貿易の拡大を求めたが、朝貢の儀礼をめぐって対立し、要求は退けられた。1816年のアマーストも失敗した。
@@ -155,6 +161,13 @@
   polities: [qing, france]
   importance: 1
   source: "https://ja.wikipedia.org/wiki/清仏戦争"
+- year: 1895
+  date: "1895-05-25"
+  title: 台湾民主国と日本の台湾平定
+  text: 下関条約で台湾が日本に割譲されると、台湾の官僚・郷紳が台湾民主国を名のって抵抗した。日本軍は台北（6月）・台南（10月）を取って全島を平定したが、各地の武装抵抗はその後も続いた。
+  polities: [japan, qing]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/台湾民主国"
 - year: 1898
   title: 列強の租借地（中国分割）
   text: ドイツが膠州湾、ロシアが旅順・大連、イギリスが威海衛と九龍半島の新界、フランスが広州湾（1899）を租借し、鉄道・鉱山の利権と勢力範囲を広げた。
@@ -293,6 +306,13 @@
   polities: [chinese_soviet, roc]
   importance: 2
   source: "https://ja.wikipedia.org/wiki/中華ソビエト共和国"
+- year: 1933
+  date: "1933-11"
+  title: 福建事変
+  text: 上海事変（1932）で日本軍と戦った第十九路軍が福州で中華共和国人民革命政府を作り、蔣介石の「安内攘外」に反対して抗日を唱えたが、翌年1月に鎮圧された。
+  polities: [roc]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/福建事変"
 - year: 1934
   date: "1934-10"
   title: 長征
@@ -477,6 +497,13 @@
   polities: [roc, prc]
   importance: 2
   source: "https://ja.wikipedia.org/wiki/第三次台湾海峡危機"
+- year: 1999
+  date: "1999-12-20"
+  title: マカオの返還
+  text: 16世紀半ばからポルトガル人が住み、1887年の条約でポルトガル領となったマカオが、中葡共同声明（1987）にもとづいて中国に返された。香港（1997）と同じく「一国二制度」のもとで特別行政区となった。
+  polities: [prc, portugal]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/マカオ返還"
 - year: 2001
   date: "2001-12-11"
   title: 中国の世界貿易機関（WTO）加盟

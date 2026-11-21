@@ -355,17 +355,17 @@
       note: 清の入関（1644）で満洲人の多くが北京に移り、遼東は人口が減った。1653 年の遼東招民開墾令で山東などから漢人を招いた。満洲人はシャーマニズム（堂子の祭り）も保った。
       source: "https://ja.wikipedia.org/wiki/盛京"
 - id: rel_west_liaoning
-  name: 遼西のモンゴル（朝陽・阜新）
+  name: 熱河・遼西のモンゴル（承徳・朝陽・阜新）
   select:
-    pieces: [CHN-Chaoyang, CHN-Fuxin]
+    pieces: [CHN-Chengde, CHN-Chaoyang, CHN-Fuxin]
   timeline:
     - from: 1648
       main: tibetan_buddhism
-      note: ハラチン部・トゥメト部などのモンゴル人の牧地
+      note: ハラチン部・トゥメト部などのモンゴル人の牧地。承徳の避暑山荘（1703–）の周りには、チベット仏教の寺院（外八廟）が建てられた。
     - from: 1800
       main: chinese_folk
       minor: tibetan_buddhism
-      note: 漢人の農民の移住が進む
+      note: 漢人の農民の移住が進む（熱河の開発）
     - from: 1950
       main: chinese_folk
 - id: rel_jilin
@@ -475,6 +475,18 @@
       main: chinese_folk
       minor: theravada
       note: 漢人の移住で漢人が最大になる。
+- id: rel_panzhihua
+  name: 攀枝花
+  select:
+    pieces: [CHN-Panzhihua]
+  timeline:
+    - from: 1648
+      main: chinese_folk
+      minor: other
+      note: 谷の漢人の農民と、山地のイ族（祖先崇拝とビモの信仰）
+    - from: 1965
+      main: chinese_folk
+      note: 三線建設の鉄鋼都市として 1965 年に建設された
 - id: rel_yi_lisu
   name: 涼山・怒江（イ族・リス族の地）
   select:

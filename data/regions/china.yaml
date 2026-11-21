@@ -213,10 +213,13 @@
       label: 満洲（ロシア軍の占領）
       cause: 義和団戦争に乗じてロシア軍が満洲全土を占領する（7–10月）
       source: "https://ja.wikipedia.org/wiki/満洲還付条約"
-    - from: 1904
+    - from: 1905
       owner: qing
-      cause: 洮南府などを置き、モンゴル人の牧地を開墾地として州県制にする
-      source: "https://ja.wikipedia.org/wiki/洮南市"
+      cause: ポーツマス条約・満洲善後条約で清に返される（東清鉄道・南満洲鉄道の付属地は残る）
+      note: 清は1904年に洮南府などを置き、モンゴル人の牧地を開墾地として州県制にした（地図では周りの満洲と同じく、ロシア軍の占領が終わる1905年から清の直轄として描く）
+      source:
+        - "https://ja.wikipedia.org/wiki/ポーツマス条約"
+        - "https://ja.wikipedia.org/wiki/洮南市"
     - from: 1912
       owner: roc
       cause: 中華民国の成立（1月）と宣統帝の退位（2月）。清が滅びる
@@ -539,6 +542,7 @@
       owner: russia
       label: 関東州（ロシアの租借地）
       cause: 旅順・大連をロシアが25年間租借する（3月）
+      note: 関東州は金州・普蘭店の南までを含むが、地図では旅順・大連の市街のピース（CHN-Dalian_urban）だけを塗っている。金州など北半分は鞍山・丹東と同じピース（CHN-Dalian）に入っていて、ピースを分けないと描けないため（今後の課題）
       source: "https://ja.wikipedia.org/wiki/関東州"
     - from: 1905
       owner: japan
@@ -1711,6 +1715,48 @@
       owner: qing
       note: 清（順治帝）は1644年に北京に入り、華北・江南を支配する。摂政はドルゴン
       source: "https://ja.wikipedia.org/wiki/清"
+    - from: 1911
+      owner: roc
+      certainty: uncertain
+      label: 辛亥革命で独立した省
+      cause: 武昌起義（10月10日）。南方を中心に14省が清からの独立を宣言する
+      source: "https://ja.wikipedia.org/wiki/辛亥革命"
+    - from: 1912
+      owner: roc
+      cause: 中華民国の成立（1月）と宣統帝の退位（2月）。清が滅びる
+      source: "https://ja.wikipedia.org/wiki/中華民国_(1912年-1949年)"
+    - from: 1927
+      owner: canton_government
+      cause: 北伐軍が上海・南京を取り、南京に国民政府を置く（4月）。馮玉祥・閻錫山も北伐に加わる
+      source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
+    - from: 1928
+      owner: roc
+      cause: 北伐の完了。北京を取り（6月）、国民政府が中国を統一する（12月 張学良の易幟）
+      source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
+    - from: 1949
+      owner: prc
+      cause: 中華人民共和国の成立（10月1日）。人民解放軍が長江を渡り（4月）、南京・上海・広州・重慶・成都を取る
+      source: "https://ja.wikipedia.org/wiki/中華人民共和国"
+
+- id: cn_shaanxi_hanzhong
+  name: 陝西南部（漢中・安康）
+  select:
+    pieces: [CHN-Ankang, CHN-Hanzhong]
+  timeline:
+    - from: 1648
+      owner: qing
+      note: 清（順治帝）は1644年に北京に入り、華北・江南を支配する。摂政はドルゴン
+      source: "https://ja.wikipedia.org/wiki/清"
+    - from: 1674
+      owner: three_feudatories
+      certainty: uncertain
+      cause: 三藩の乱。呉三桂の部将の王屏藩が四川から漢中を取る
+      note: 大きな地域 cn_shaanxi_ankang の中で、三藩の乱の時期だけ分けて描くための地域（それ以外の年は同じ変遷）
+      source: "https://ja.wikipedia.org/wiki/三藩の乱"
+    - from: 1680
+      owner: qing
+      cause: 清軍が陝西南部・四川に反攻し、漢中を取り戻す（1679–1680年）
+      source: "https://ja.wikipedia.org/wiki/三藩の乱"
     - from: 1911
       owner: roc
       certainty: uncertain
@@ -3191,8 +3237,9 @@
       cause: 北伐の完了。北京を取り（6月）、国民政府が中国を統一する（12月 張学良の易幟）
       source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1942
-      owner: wang_jingwei
-      overlord: japan
+      owner: japan
+      certainty: occupied
+      label: 日本の占領地
       cause: 浙贛作戦。日本軍が金華を占領する（5月）
       source: "https://ja.wikipedia.org/wiki/浙贛作戦"
     - from: 1945
@@ -3241,8 +3288,9 @@
       cause: 北伐の完了。北京を取り（6月）、国民政府が中国を統一する（12月 張学良の易幟）
       source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1941
-      owner: wang_jingwei
-      overlord: japan
+      owner: japan
+      certainty: occupied
+      label: 日本の占領地
       cause: 日本軍が寧波・紹興を占領する（4月）
       source: "https://ja.wikipedia.org/wiki/日中戦争"
     - from: 1945
@@ -3291,8 +3339,9 @@
       cause: 北伐の完了。北京を取り（6月）、国民政府が中国を統一する（12月 張学良の易幟）
       source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1941
-      owner: wang_jingwei
-      overlord: japan
+      owner: japan
+      certainty: occupied
+      label: 日本の占領地
       cause: 日本軍が寧波・紹興を占領する（4月）
       source: "https://ja.wikipedia.org/wiki/日中戦争"
     - from: 1945
@@ -3352,9 +3401,15 @@
     pieces: [CHN-Zhoushan]
   timeline:
     - from: 1648
+      owner: southern_ming
+      certainty: uncertain
+      note: 明の遺臣の黄斌卿が舟山を押さえ、1649年からは魯王（朱以海、監国）が張名振らと本拠とした。魯王は永暦帝とは別の南明の政権だが、地図では南明としてまとめる
+      source: "https://ja.wikipedia.org/wiki/朱以海"
+    - from: 1651
       owner: qing
-      note: 清（順治帝）は1644年に北京に入り、華北・江南を支配する。摂政はドルゴン
-      source: "https://ja.wikipedia.org/wiki/清"
+      cause: 清軍が舟山を落とす（9月）。魯王は廈門の鄭成功のもとに逃れる
+      note: 1655–1656年には鄭成功の軍が一時舟山を占領した（地図では描いていない）
+      source: "https://ja.wikipedia.org/wiki/朱以海"
     - from: 1911
       owner: roc
       certainty: uncertain
@@ -5311,10 +5366,6 @@
       label: 広州湾（フランスの租借地）
       cause: フランス軍が広州湾を占領し（4月）、1899年に99年間の租借の条約を結ぶ
       source: "https://ja.wikipedia.org/wiki/広州湾"
-    - from: 1928
-      owner: roc
-      cause: 北伐の完了。北京を取り（6月）、国民政府が中国を統一する（12月 張学良の易幟）
-      source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1943
       owner: japan
       certainty: occupied
@@ -5323,8 +5374,8 @@
       source: "https://ja.wikipedia.org/wiki/広州湾"
     - from: 1945
       owner: roc
-      cause: 日本の降伏（8月15日、9月9日に南京で降伏文書の調印）。国民政府が占領地を接収する
-      source: "https://ja.wikipedia.org/wiki/日中戦争"
+      cause: 日本の降伏（8月15日）。中仏協定（8月18日）でフランスが広州湾の租借を返し、国民政府が接収する
+      source: "https://ja.wikipedia.org/wiki/広州湾"
     - from: 1949
       owner: prc
       cause: 中華人民共和国の成立（10月1日）。人民解放軍が長江を渡り（4月）、南京・上海・広州・重慶・成都を取る
@@ -5822,6 +5873,13 @@
       label: 台湾（オランダ東インド会社）
       note: 平野部の先住民の村々を服属させ、漢人の移民に開墾させた
       source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+    - from: 1661
+      owner: tungning
+      overlord: southern_ming
+      certainty: uncertain
+      label: ""
+      cause: 鄭成功が台湾に上陸し（4月）、プロヴィンシア城を降して（5月）台湾南部の平野を押さえる
+      source: "https://ja.wikipedia.org/wiki/ゼーランディア城包囲戦"
     - from: 1662
       owner: tungning
       label: ""
@@ -5906,6 +5964,14 @@
       label: 台湾（オランダ東インド会社）
       note: オランダ東インド会社が1624年にタイオワン（台南）にゼーランディア城を築いた。1642年には北部のスペイン人（基隆・淡水）を追った
       source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+    - from: 1661
+      owner: tungning
+      overlord: southern_ming
+      certainty: uncertain
+      label: ""
+      cause: 鄭成功が澎湖を経て台湾に上陸し（4月）、プロヴィンシア城（赤崁）を降す（5月）。ゼーランディア城を囲む
+      note: 1661年末にオランダ東インド会社に残っていたのはゼーランディア城（安平）だけ
+      source: "https://ja.wikipedia.org/wiki/ゼーランディア城包囲戦"
     - from: 1662
       owner: tungning
       label: ""
@@ -6062,15 +6128,23 @@
     pieces: [TWN-Penghu]
   timeline:
     - from: 1648
-      owner: southern_ming
+      owner: tungning
+      overlord: southern_ming
       certainty: nominal
-      note: 明の時代から澎湖巡検司が置かれたが、明清交代期は鄭氏の海上勢力の下にあった
+      label: ""
+      note: 明の時代から澎湖巡検司が置かれたが、オランダが1624年に退いた後は明の守備もなく、明清交代期は鄭氏の海上勢力の下にあった
       source: "https://ja.wikipedia.org/wiki/澎湖諸島"
+    - from: 1661
+      owner: tungning
+      overlord: southern_ming
+      label: ""
+      cause: 鄭成功の軍が澎湖に入り、ここを経て台湾に渡る（4月）
+      source: "https://ja.wikipedia.org/wiki/ゼーランディア城包囲戦"
     - from: 1662
       owner: tungning
       label: ""
-      cause: 鄭成功がゼーランディア城を落とし、オランダ東インド会社を追う（2月）
-      source: "https://ja.wikipedia.org/wiki/ゼーランディア城包囲戦"
+      cause: 永暦帝が昆明で殺され（6月）、南明が滅びる。鄭氏は独自の政権となる
+      source: "https://ja.wikipedia.org/wiki/永暦帝"
     - from: 1683
       owner: qing
       cause: 施琅が澎湖の海戦で鄭氏を破り、鄭克塽が降る（8月）。台湾府を置き福建省に属させる

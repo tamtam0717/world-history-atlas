@@ -325,16 +325,17 @@
       main: chinese
       note: 山東・河北からの漢人の移住が続き、満洲人も多くが漢語を話すようになった（現在の遼寧省の満洲族は人口の1割あまり）。
 - id: lang_west_liaoning
-  name: 遼西のモンゴル（朝陽・阜新）
+  name: 熱河・遼西のモンゴル（承徳・朝陽・阜新）
   select:
-    pieces: [CHN-Chaoyang, CHN-Fuxin]
+    pieces: [CHN-Chengde, CHN-Chaoyang, CHN-Fuxin]
   timeline:
     - from: 1648
       main: mongolian
-      note: ハラチン部・トゥメト部の牧地
+      note: ハラチン部・トゥメト部の牧地。承徳の北には清の皇帝の狩場（木蘭囲場）が置かれた。
     - from: 1800
       main: chinese
       minor: mongolian
+      note: 18 世紀に熱河（承徳）の開発とともに漢人の農民が移り住み、多数派になった。
     - from: 1950
       main: chinese
 - id: lang_jilin
@@ -447,8 +448,9 @@
     pieces: [CHN-Panzhihua]
   timeline:
     - from: 1648
-      main: tibeto_burman
-      minor: chinese
+      main: chinese
+      minor: tibeto_burman
+      note: 金沙江・安寧河の谷（米易・塩辺）には清代から漢人の農民が多く、周りの山地にイ族が住む。
     - from: 1965
       main: chinese
       note: 三線建設の鉄鋼都市として 1965 年に建設された
@@ -748,7 +750,7 @@
   timeline:
     - from: 1648
       main: ryukyuan
-      note: 琉球語（沖縄語・宮古語・八重山語など。日本語と同じ語族だが、互いに通じない）。王府の公文書には漢文と候文も使われた。
+      note: 琉球語（沖縄語・宮古語・八重山語など。日本語と同じ語族だが、互いに通じない）。王府の公文書には漢文と候文も使われた。奄美群島も琉球語（奄美語）の地域だが、鹿児島県が1つのピースなので地図では表せない。
       source: "https://ja.wikipedia.org/wiki/琉球諸語"
     - from: 1945
       main: japanese
