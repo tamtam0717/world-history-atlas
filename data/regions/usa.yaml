@@ -375,7 +375,6 @@
       cause: "南北戦争が終わる。五部族は1866年の条約で土地の一部を失う"
     - from: 1907
       owner: "usa"
-      label: "未組織地"
       cause: "オクラホマ準州と合わさり、オクラホマ州になる"
       source: "https://ja.wikipedia.org/wiki/オクラホマ州"
 
@@ -1194,7 +1193,6 @@
       source: "https://ja.wikipedia.org/wiki/ランドラッシュ"
     - from: 1907
       owner: "usa"
-      label: "未組織地"
       cause: "インディアン準州と合わさり、オクラホマ州になる"
       source: "https://ja.wikipedia.org/wiki/オクラホマ州"
 
@@ -2946,6 +2944,7 @@
       source: "https://ja.wikipedia.org/wiki/ヌエバ・エスパーニャ"
     - from: 1750
       owner: "comanche"
+      certainty: "uncertain"
       cause: "コマンチがこの地を勢力圏にする（コマンチェリア）"
       source: "https://ja.wikipedia.org/wiki/コマンチ族"
     - from: 1875
@@ -2960,7 +2959,6 @@
       source: "https://ja.wikipedia.org/wiki/オクラホマ準州"
     - from: 1907
       owner: "usa"
-      label: "未組織地"
       cause: "オクラホマ州になる"
       source: "https://ja.wikipedia.org/wiki/オクラホマ州"
 
@@ -3061,6 +3059,7 @@
       source: "https://ja.wikipedia.org/wiki/ヌエバ・エスパーニャ"
     - from: 1750
       owner: "comanche"
+      certainty: "uncertain"
       cause: "コマンチがこの地を勢力圏にする（コマンチェリア）"
       source: "https://ja.wikipedia.org/wiki/コマンチ族"
     - from: 1875
@@ -3075,7 +3074,6 @@
       source: "https://en.wikipedia.org/wiki/Greer_County,_Texas"
     - from: 1907
       owner: "usa"
-      label: "未組織地"
       cause: "オクラホマ州になる"
       source: "https://ja.wikipedia.org/wiki/オクラホマ州"
 
@@ -3753,15 +3751,9 @@
       source: "https://ja.wikipedia.org/wiki/ルイジアナ_(ヌーヴェルフランス)"
     - from: 1750
       owner: "comanche"
+      certainty: "uncertain"
       cause: "コマンチがこの地を勢力圏にする（コマンチェリア）"
       source: "https://ja.wikipedia.org/wiki/コマンチ族"
-    - from: 1763
-      owner: "spain"
-      certainty: "nominal"
-      label: "ルイジアナ（スペイン領）"
-      cause: "フォンテーヌブロー条約（1762年）でフランスがミシシッピ川以西をスペインに譲る"
-      note: "1800年のサン・イルデフォンソ条約でフランスに返されたが、実際の統治は1803年までスペインが続けた"
-      source: "https://ja.wikipedia.org/wiki/フォンテーヌブロー条約_(1762年)"
     - from: 1875
       owner: "usa"
       certainty: "indirect"
@@ -3775,7 +3767,6 @@
       source: "https://ja.wikipedia.org/wiki/オクラホマ準州"
     - from: 1907
       owner: "usa"
-      label: "未組織地"
       cause: "オクラホマ州になる"
       source: "https://ja.wikipedia.org/wiki/オクラホマ州"
 
@@ -5477,7 +5468,6 @@
       source: "https://ja.wikipedia.org/wiki/ランドラッシュ"
     - from: 1907
       owner: "usa"
-      label: "未組織地"
       cause: "インディアン準州と合わさり、オクラホマ州になる"
       source: "https://ja.wikipedia.org/wiki/オクラホマ州"
 
@@ -6291,11 +6281,14 @@
       owner: "usa"
       cause: "オーガスタ条約（1783年）で土地が譲られる"
       source: "https://ja.wikipedia.org/wiki/ジョージア州"
-    - from: 1785
-      owner: "cherokee"
-      overlord: "usa"
-      cause: "ホープウェル条約でチェロキーが合衆国の保護下に入る"
-      source: "https://ja.wikipedia.org/wiki/ホープウェル条約"
+    - from: 1861
+      owner: "csa"
+      cause: "合衆国から脱退し、アメリカ連合国（南部連合）に加わる"
+      source: "https://ja.wikipedia.org/wiki/アメリカ連合国"
+    - from: 1865
+      owner: "usa"
+      cause: "南北戦争が終わり、南部連合が崩壊する（4–5月）"
+      source: "https://ja.wikipedia.org/wiki/南北戦争"
 
 - id: us_fl_pensacola
   name: "ペンサコーラ"

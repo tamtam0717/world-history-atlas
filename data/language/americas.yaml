@@ -1,0 +1,4064 @@
+# 言語（民族）の分布：南北アメリカ 1648–2025
+# 形式は docs/language-format.md（「南北アメリカ」の節）。main = 住民の多数派の民族の言語、minor = 2〜3割以上の少数派。
+# - 先住民の言語は、語族ごとの大きな分け方（アルゴンキン・イロコイ・スー・マスコギ・ナ・デネ・ナワトル・マヤ・ケチュア・アイマラ・
+#   トゥピ・グアラニーなど）で塗る。17 世紀の先住民の分布は、多くの集団が移動・合流した後の 18 世紀の知見による推定を含む目安。
+# - 「民族」でそろえる方針の、アメリカ大陸での当てはめ（docs/language-format.md）：
+#   - メスティーソ（先住民とヨーロッパ人の混血）・ムラート・パルド（ブラジル）は、スペイン語・ポルトガル語を話し、国民として自らを
+#     とらえる人々として、spanish / portuguese で塗る。先住民の言語を話す・先住民として自らをとらえる人が多数の地域だけを先住民の色にする。
+#   - アフリカ系の住民は、クレオール語を話す所（ジャマイカ・ハイチ・小アンティル・スリナム・ガラ）はクレオール語の色、ヨーロッパの言語を
+#     話す所（アメリカ合衆国南部・ブラジル・キューバなど）はその言語の色にして note に書く。
+#   - 移民の国（アメリカ合衆国・カナダ・アルゼンチン・ウルグアイ・ブラジル南部）では、移民の言語が日常に使われた 1〜2 世代の間だけ
+#     minor（斜線）で示し、英語・スペイン語・ポルトガル語への同化が進んだ時点で外す（例：ブエノスアイレスのイタリア系 1880–1940）。
+# - 先住民が多数だった土地に入植者が多数になる変化は、「入植者が住民の多数になった年」の目安で切り替える。
+# - 宗教（data/religion/americas.yaml）と、地域の分け方と切り替えの年をできるだけそろえている。
+
+# ================================================================
+# アメリカ合衆国
+# ================================================================
+- id: lang_us_base
+  name: 北アメリカの先住民の地（アメリカ合衆国の範囲。地域ごとの言語は下の小さい地域で示す）
+  select:
+    iso: [USA]
+    exclude: [USA-Guam, USA-Commonwealth_of_the_Northern_Mariana_Islands, USA-American_Samoa]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: 下の小さい地域がない所の既定値。
+- id: lang_new_england
+  name: マサチューセッツ・コネティカット・ロードアイランド
+  select:
+    adm1: ["USA/Massachusetts", "USA/Connecticut", "USA/Rhode Island"]
+  timeline:
+    - from: 1648
+      main: english
+      minor: algonquian
+      note: ピューリタンの大移住（1630 年代、約 2 万人）。ワンパノアグ・ナラガンセット・ペクォート・マサチューセット（アルゴンキン系）の人々は疫病とペクォート戦争（1637）で減っていた。エリオットはマサチューセット語の聖書（1663）を出した。
+      source: "https://ja.wikipedia.org/wiki/ニューイングランド"
+    - from: 1680
+      main: english
+      note: フィリップ王戦争（1675–76）で先住民の多くが殺され、奴隷として売られた。
+- id: lang_nne
+  name: ニューハンプシャー・ヴァーモント・メイン
+  select:
+    adm1: ["USA/New Hampshire", "USA/Vermont", "USA/Maine"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: アベナキ人などワバナキ連合の地。
+    - from: 1760
+      main: english
+      note: ヌーヴェル・フランスの滅亡（1760）で、ニューイングランドからの入植が内陸へ進んだ。
+    - from: 1890
+      main: english
+      minor: french
+      note: フランス系カナダ人が繊維工場・製材所の労働者として移住した（ニューハンプシャー・メインの住民の 2 割前後）。
+    - from: 1950
+      main: english
+- id: lang_maine_south
+  name: メイン南部・ニューハンプシャーの海岸
+  select:
+    pieces: [USA-York_ME, USA-Cumberland_ME, USA-New_Hampshire]
+  timeline:
+    - from: 1648
+      main: english
+      minor: algonquian
+    - from: 1720
+      main: english
+    - from: 1890
+      main: english
+      minor: french
+    - from: 1950
+      main: english
+- id: lang_aroostook
+  name: メイン北部（マダワスカ）
+  select:
+    pieces: [USA-Aroostook_ME]
+  timeline:
+    - from: 1648
+      main: algonquian
+    - from: 1800
+      main: french
+      minor: algonquian
+      note: アカディア人のマダワスカの入植地（1785–）。ウェブスター＝アッシュバートン条約（1842）で川の南はアメリカ領になった。
+    - from: 1870
+      main: english
+      minor: french
+- id: lang_nyc
+  name: ニューヨーク市
+  select:
+    pieces: [USA-New_York_NY, USA-Kings_NY, USA-Queens_NY, USA-Bronx_NY, USA-Richmond_NY]
+  timeline:
+    - from: 1648
+      main: dutch
+      minor: algonquian
+      note: ニューアムステルダム。オランダ語のほか、フランス語（ワロン人）・英語など 18 の言語が話されたという。周辺はレナペ（マンシー）人の地。
+      source: "https://ja.wikipedia.org/wiki/ニューアムステルダム"
+    - from: 1700
+      main: dutch
+      minor: english
+      note: 1664 年にイングランドが奪い、ヨーク公にちなんでニューヨークと改名した。
+    - from: 1740
+      main: english
+      minor: dutch
+      note: ブルックリン（キングズ郡）の農村では 19 世紀初めまでオランダ語が話された。
+    - from: 1800
+      main: english
+    - from: 1850
+      main: english
+      minor: german
+      note: ドイツ系（クラインドイッチュラント）とアイルランド系（英語）の移民が急増した。
+    - from: 1900
+      main: english
+      minor: yiddish
+      note: 東欧からのユダヤ人の大移民（1881–1924）。ロウアー・イースト・サイドではイディッシュ語の新聞・劇場が栄えた。イタリア系の移民も多い。
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City"
+    - from: 1950
+      main: english
+      minor: spanish
+      note: ユダヤ人の 2 世以降は英語が日常語になった。プエルトリコからの移住（1950 年代の「大移住」）、のちにドミニカ人などの中南米の移民。
+- id: lang_bronx
+  name: ブロンクス
+  select:
+    pieces: [USA-Bronx_NY]
+  timeline:
+    - from: 1990
+      main: spanish
+      minor: english
+      note: プエルトリコ系・ドミニカ系の住民が多数になった（ヒスパニックが 2000 年に 48%、2020 年に 55%）。
+- id: lang_hudson
+  name: ハドソン川流域・ロングアイランド
+  select:
+    pieces: [USA-Westchester_NY, USA-Rockland_NY, USA-Orange_NY, USA-Putnam_NY, USA-Dutchess_NY, USA-Ulster_NY, USA-Greene_NY, USA-Columbia_NY, USA-Albany_NY, USA-Rensselaer_NY, USA-Schenectady_NY, USA-Nassau_NY]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: dutch
+      note: レナペ人・マヒカン人の地に、ニューネーデルラントの入植地（フォート・オラニエ〈オールバニー〉、レンセラールの荘園、エソプス〈キングストン〉）。
+    - from: 1680
+      main: dutch
+      minor: english
+    - from: 1760
+      main: english
+      minor: dutch
+      note: ハドソン川の農村では、オランダ語が 19 世紀まで残った（奴隷解放運動家ソジャーナ・トゥルースの母語もオランダ語）。
+    - from: 1810
+      main: english
+- id: lang_suffolk
+  name: ロングアイランド東部（サフォーク）
+  select:
+    pieces: [USA-Suffolk_NY]
+  timeline:
+    - from: 1648
+      main: english
+      minor: algonquian
+      note: ニューイングランドからの入植者の町（サウサンプトン 1640）。モンタウク人などの地。
+    - from: 1700
+      main: english
+- id: lang_iroquoia
+  name: ニューヨーク州北部・西部（イロコイア）
+  select:
+    adm1: ["USA/New York"]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: イロコイ連邦（ハウデノサウニー）の五部族（1722 年にタスカローラが加わり六部族）。「大いなる平和の法」による連合。毛皮交易をめぐるビーバー戦争（1640–1701）でヒューロン・エリーなどを滅ぼした。
+      source: "https://ja.wikipedia.org/wiki/イロコイ連邦"
+    - from: 1790
+      main: english
+      minor: iroquoian
+      note: 独立戦争でイロコイの多く（オナイダ・タスカローラ以外）がイギリス側につき、サリヴァン遠征（1779）で村々が焼かれた。戦後、土地の大部分が売却された。
+    - from: 1810
+      main: english
+      note: ニューイングランドからの入植が急増した（エリー運河 1825）。
+- id: lang_mohawk_valley
+  name: モホーク川流域（パラティン・ドイツ人）
+  select:
+    pieces: [USA-Montgomery_NY, USA-Herkimer_NY, USA-Fulton_NY, USA-Schoharie_NY]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: モホーク人の地。
+    - from: 1730
+      main: iroquoian
+      minor: german
+      note: プファルツから来たドイツ人（パラティン、1710–）が入植した。
+    - from: 1790
+      main: english
+      minor: german
+    - from: 1830
+      main: english
+- id: lang_new_jersey
+  name: ニュージャージー
+  select:
+    adm1: ["USA/New Jersey"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: dutch
+      note: レナペ人の地。
+    - from: 1690
+      main: english
+      minor: dutch
+      note: 東ジャージー（スコットランド系・オランダ系）と西ジャージー（クエーカー）。
+    - from: 1780
+      main: english
+    - from: 2010
+      main: english
+      minor: spanish
+      note: 中南米からの移民（ヒスパニックが 2020 年に 21%）。
+- id: lang_pennsylvania_se
+  name: ペンシルヴェニア南東部（フィラデルフィア）
+  select:
+    pieces: [USA-Philadelphia_PA, USA-Bucks_PA, USA-Chester_PA, USA-Delaware_PA, USA-Montgomery_PA]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: swedish
+      note: レナペ人の地に、ニュースウェーデンの小さな入植地（ティニカム島 1643）。
+    - from: 1690
+      main: english
+      note: ウィリアム・ペンのフィラデルフィア（1682）。
+- id: lang_pennsylvania_dutch
+  name: ペンシルヴェニア・ダッチの郡（ランカスター・バークスなど）
+  select:
+    pieces: [USA-Lancaster_PA, USA-Berks_PA, USA-Lehigh_PA, USA-Northampton_PA, USA-Lebanon_PA, USA-York_PA, USA-Dauphin_PA, USA-Schuylkill_PA, USA-Adams_PA, USA-Cumberland_PA, USA-Snyder_PA, USA-Union_PA]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: サスケハノック人（イロコイ系）の地（1675 年にイロコイ連邦に敗れて離散）。
+    - from: 1740
+      main: german
+      minor: english
+      note: ドイツ南西部・スイスからの移民（ペンシルヴェニア・ダッチ）。独立期のペンシルヴェニアの住民の約 3 分の 1 がドイツ系だった。アーミッシュはいまもペンシルヴェニア・ドイツ語を話す。
+      source: "https://ja.wikipedia.org/wiki/ペンシルベニア・ダッチ"
+    - from: 1870
+      main: english
+      minor: german
+    - from: 1920
+      main: english
+      note: 第一次世界大戦で、ドイツ語の教会・学校・新聞が減った。
+- id: lang_pennsylvania
+  name: ペンシルヴェニア中部・西部
+  select:
+    adm1: ["USA/Pennsylvania"]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: サスケハノック人・エリー人（イロコイ系）の地。のちショーニー人・レナペ人が移り住んだ。
+    - from: 1730
+      main: algonquian
+      note: ショーニー人・レナペ人（デラウェア）が、東部から押し出されてサスケハナ川・オハイオ川流域に移った。
+    - from: 1780
+      main: english
+      note: スタンウィックス砦条約（1768）の後、スコットランド系アイルランド人の入植。
+- id: lang_delaware_md
+  name: デラウェア・メリーランド・ワシントン D.C.
+  select:
+    adm1: ["USA/Delaware", "USA/Maryland", "USA/District of Columbia"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: english
+      note: ナンティコーク・ピスカタウェイ・レナペなどの地。メリーランドの入植地（セント・メアリーズ・シティ 1634）。
+    - from: 1690
+      main: english
+      note: 黒人奴隷はタバコのプランテーションの労働力として、メリーランドの住民の約 3 割を占めた（言葉は英語）。
+- id: lang_virginia
+  name: ヴァージニア東部（タイドウォーター）
+  select:
+    adm1: ["USA/Virginia"]
+  timeline:
+    - from: 1648
+      main: english
+      minor: algonquian
+      note: ジェームズタウン（1607）。ポウハタン連合（アルゴンキン系）との戦争（1622・1644）の後、先住民は保留地に押し込められた。1650 年の植民地の人口は約 1 万 9 千人。
+      source: "https://ja.wikipedia.org/wiki/ポウハタン族"
+    - from: 1690
+      main: english
+      note: 18 世紀のヴァージニアの住民の約 4 割がアフリカ系の奴隷（言葉は英語）。
+- id: lang_virginia_west
+  name: ヴァージニア西部・ウェストヴァージニア
+  select:
+    pieces: [USA-Alleghany_VA, USA-Bath_VA, USA-Bedford_VA, USA-Bland_VA, USA-Botetourt_VA, USA-Bristol_VA, USA-Buchanan_VA, USA-Buena_Vista_VA, USA-Carroll_VA, USA-Covington_VA, USA-Craig_VA, USA-Danville_VA, USA-Dickenson_VA, USA-Floyd_VA, USA-Franklin_VA, USA-Galax_VA, USA-Giles_VA, USA-Grayson_VA, USA-Henry_VA, USA-Highland_VA, USA-Lee_VA, USA-Lexington_VA, USA-Martinsville_VA, USA-Montgomery_VA, USA-Norton_VA, USA-Patrick_VA, USA-Pittsylvania_VA, USA-Pulaski_VA, USA-Radford_VA, USA-Roanoke_City_VA, USA-Roanoke_VA, USA-Rockbridge_VA, USA-Russell_VA, USA-Salem_VA, USA-Scott_VA, USA-Smyth_VA, USA-Tazewell_VA, USA-Washington_VA, USA-Wise_VA, USA-Wythe_VA]
+    adm1: ["USA/West Virginia"]
+  timeline:
+    - from: 1648
+      main: siouan
+      note: モナカン人などスー系の人々（のちにショーニー人の狩り場）。
+    - from: 1760
+      main: english
+      minor: german
+      note: シェナンドー渓谷にペンシルヴェニアからドイツ系とスコットランド系アイルランド人が入植した。
+    - from: 1800
+      main: english
+- id: lang_carolinas
+  name: ノースカロライナ・サウスカロライナ（ピードモント）
+  select:
+    adm1: ["USA/North Carolina", "USA/South Carolina"]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: iroquoian
+      note: カトーバ・チェロー・ワックスホーなどスー系の人々と、タスカローラ人（イロコイ系）の地。
+    - from: 1720
+      main: english
+      note: タスカローラ戦争（1711–15）とヤマシー戦争（1715–17）の後、入植が内陸へ進んだ。
+- id: lang_nc_east
+  name: ノースカロライナ東部
+  select:
+    pieces: [USA-Beaufort_NC, USA-Bertie_NC, USA-Brunswick_NC, USA-Camden_NC, USA-Carteret_NC, USA-Chowan_NC, USA-Craven_NC, USA-Currituck_NC, USA-Dare_NC, USA-Duplin_NC, USA-Edgecombe_NC, USA-Franklin_NC, USA-Gates_NC, USA-Greene_NC, USA-Halifax_NC, USA-Hertford_NC, USA-Hyde_NC, USA-Johnston_NC, USA-Jones_NC, USA-Lenoir_NC, USA-Martin_NC, USA-Nash_NC, USA-New_Hanover_NC, USA-Northampton_NC, USA-Onslow_NC, USA-Pamlico_NC, USA-Pasquotank_NC, USA-Pender_NC, USA-Perquimans_NC, USA-Pitt_NC, USA-Sampson_NC, USA-Tyrrell_NC, USA-Vance_NC, USA-Warren_NC, USA-Washington_NC, USA-Wayne_NC, USA-Wilson_NC]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      minor: algonquian
+      note: タスカローラ人（イロコイ系）と、海岸のアルゴンキン系の人々（ロアノーク島の「失われた植民地」1587 の地）。
+    - from: 1720
+      main: english
+- id: lang_lowcountry
+  name: ロウカントリー（サウスカロライナ・ジョージアの海岸）
+  select:
+    pieces: [USA-Charleston_SC, USA-Beaufort_SC, USA-Colleton_SC, USA-Georgetown_SC, USA-Jasper_SC, USA-Berkeley_SC, USA-Dorchester_SC, USA-Chatham_GA, USA-Bryan_GA, USA-Liberty_GA, USA-McIntosh_GA, USA-Glynn_GA, USA-Camden_GA]
+  timeline:
+    - from: 1648
+      main: muskogean
+      note: グアレ人（スペインの伝道所）・ヤマシー人などの地。
+    - from: 1700
+      main: english
+      note: チャールストン（1670）を中心とするプランテーション植民地（ジョージアは 1733–）。
+    - from: 1730
+      main: creole_english
+      minor: english
+      note: 米のプランテーションで、西アフリカ（とくに稲作地帯のシエラレオネ・セネガンビア）から連れてこられた人々が住民の大多数になり、英語系クレオール語のガラ語（ジョージアではギーチー）が生まれた。
+      source: "https://ja.wikipedia.org/wiki/ガラ語"
+    - from: 1910
+      main: english
+      minor: creole_english
+      note: 南部の黒人の北部への「大移動」（1910–70）。シー・アイランズにガラの共同体が残る。
+    - from: 1970
+      main: english
+- id: lang_cherokee
+  name: チェロキーの地（アパラチア山地の南部）
+  select:
+    pieces: [USA-Cherokee_NC, USA-Clay_NC, USA-Graham_NC, USA-Haywood_NC, USA-Jackson_NC, USA-Macon_NC, USA-Madison_NC, USA-Swain_NC, USA-Transylvania_NC, USA-Barrow_GA, USA-Bartow_GA, USA-Catoosa_GA, USA-Chattooga_GA, USA-Cherokee_GA, USA-Cobb_GA, USA-Dade_GA, USA-Dawson_GA, USA-Fannin_GA, USA-Floyd_GA, USA-Forsyth_GA, USA-Gilmer_GA, USA-Gordon_GA, USA-Gwinnett_GA, USA-Hall_GA, USA-Lumpkin_GA, USA-Murray_GA, USA-Paulding_GA, USA-Pickens_GA, USA-Polk_GA, USA-Towns_GA, USA-Union_GA, USA-Walker_GA, USA-White_GA, USA-Whitfield_GA, USA-Bledsoe_TN, USA-Blount_TN, USA-Bradley_TN, USA-Cumberland_TN, USA-Hamilton_TN, USA-Knox_TN, USA-Loudon_TN, USA-McMinn_TN, USA-Meigs_TN, USA-Monroe_TN, USA-Polk_TN, USA-Rhea_TN, USA-Roane_TN, USA-Sequatchie_TN, USA-Sevier_TN, USA-Van_Buren_TN, USA-White_TN, USA-Anderson_SC, USA-Oconee_SC, USA-Pickens_SC, USA-Cherokee_AL, USA-DeKalb_AL, USA-Etowah_AL, USA-Jackson_AL, USA-Marshall_AL]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: チェロキー人の地。セコイアのチェロキー文字（1821）、成文憲法と新聞『チェロキー・フェニックス』（1828）。
+      source: "https://ja.wikipedia.org/wiki/チェロキー族"
+    - from: 1840
+      main: english
+      note: インディアン強制移住法（1830）とニュー・エコタ条約（1835）で、チェロキーはインディアン準州へ移された（「涙の旅路」1838–39、約 4 千人が死亡）。一部はノースカロライナの山地に残った（チェロキー東部支族）。
+      source: "https://ja.wikipedia.org/wiki/涙の旅路"
+- id: lang_us_deep_south
+  name: ジョージア・アラバマ・ミシシッピ
+  select:
+    adm1: ["USA/Georgia", "USA/Alabama", "USA/Mississippi"]
+  timeline:
+    - from: 1648
+      main: muskogean
+      note: クリーク（マスコギ）連合・チョクトー・チカソー・ナチェズなどの地。
+    - from: 1800
+      main: muskogean
+      minor: english
+      note: ジョージア東部・ミシシッピ川沿いのナチェズ地方に入植が進んだ。
+    - from: 1830
+      main: english
+      minor: muskogean
+      note: クリーク戦争（1813–14、ホースシュー・ベンドの戦い）の後、クリークの土地が割譲された。綿花のプランテーションが広がり、アラバマ・ミシシッピの住民の約半分がアフリカ系の奴隷になった（言葉は英語）。
+    - from: 1840
+      main: english
+      note: チョクトー（1831–33）・クリーク（1836）・チカソー（1837）の強制移住。
+      source: "https://ja.wikipedia.org/wiki/インディアン移住法"
+- id: lang_georgia_east
+  name: ジョージア東部（サヴァナ川流域）
+  select:
+    pieces: [USA-Appling_GA, USA-Atkinson_GA, USA-Bacon_GA, USA-Baldwin_GA, USA-Ben_Hill_GA, USA-Berrien_GA, USA-Brantley_GA, USA-Bryan_GA, USA-Bulloch_GA, USA-Burke_GA, USA-Candler_GA, USA-Chatham_GA, USA-Coffee_GA, USA-Columbia_GA, USA-Dodge_GA, USA-Effingham_GA, USA-Elbert_GA, USA-Emanuel_GA, USA-Evans_GA, USA-Franklin_GA, USA-Glascock_GA, USA-Glynn_GA, USA-Greene_GA, USA-Hancock_GA, USA-Hart_GA, USA-Irwin_GA, USA-Jeff_Davis_GA, USA-Jefferson_GA, USA-Jenkins_GA, USA-Johnson_GA, USA-Lanier_GA, USA-Laurens_GA, USA-Liberty_GA, USA-Lincoln_GA, USA-Long_GA, USA-Madison_GA, USA-McDuffie_GA, USA-McIntosh_GA, USA-Montgomery_GA, USA-Oglethorpe_GA, USA-Pierce_GA, USA-Richmond_GA, USA-Screven_GA, USA-Taliaferro_GA, USA-Tattnall_GA, USA-Telfair_GA, USA-Toombs_GA, USA-Treutlen_GA, USA-Ware_GA, USA-Warren_GA, USA-Washington_GA, USA-Wayne_GA, USA-Wheeler_GA, USA-Wilkes_GA, USA-Wilkinson_GA]
+  timeline:
+    - from: 1648
+      main: muskogean
+    - from: 1770
+      main: english
+      note: オーガスタ（1736）を中心にサヴァナ川流域へ入植が進んだ。
+- id: lang_mobile
+  name: モービル・ビロクシ（メキシコ湾岸）
+  select:
+    pieces: [USA-Mobile_AL, USA-Baldwin_AL, USA-Harrison_MS, USA-Jackson_MS, USA-Hancock_MS]
+  timeline:
+    - from: 1648
+      main: muskogean
+    - from: 1710
+      main: french
+      minor: muskogean
+      note: フランス領ルイジアナのビロクシ（1699）・モービル（1702）。
+    - from: 1770
+      main: english
+      minor: french
+      note: 1763 年にイギリス領西フロリダ、1780 年にスペインが奪い、1810–13 年にアメリカ合衆国が併合した。
+    - from: 1830
+      main: english
+- id: lang_tennessee_kentucky
+  name: テネシー・ケンタッキー
+  select:
+    adm1: ["USA/Tennessee", "USA/Kentucky"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: muskogean
+      note: ショーニー人・チェロキー人・チカソー人の狩り場で、定住する人は少なかった。
+    - from: 1790
+      main: english
+      note: ブーンのウィルダネス・ロード（1775）。ケンタッキーは 1792 年、テネシーは 1796 年に州になった。
+- id: lang_west_tennessee
+  name: テネシー西部（チカソーの地）
+  select:
+    pieces: [USA-Benton_TN, USA-Carroll_TN, USA-Chester_TN, USA-Crockett_TN, USA-Decatur_TN, USA-Dyer_TN, USA-Fayette_TN, USA-Gibson_TN, USA-Hardeman_TN, USA-Hardin_TN, USA-Haywood_TN, USA-Henderson_TN, USA-Henry_TN, USA-Lake_TN, USA-Lauderdale_TN, USA-Madison_TN, USA-McNairy_TN, USA-Obion_TN, USA-Shelby_TN, USA-Tipton_TN, USA-Weakley_TN]
+  timeline:
+    - from: 1648
+      main: muskogean
+      note: チカソー人の地。
+    - from: 1820
+      main: english
+      note: チカソーの土地の割譲（ジャクソン購入、1818）。
+- id: lang_florida
+  name: フロリダ
+  select:
+    adm1: ["USA/Florida"]
+  timeline:
+    - from: 1648
+      main: other
+      note: ティムクア人（北部）・カルーサ人（南部）など、孤立した言語の人々の地。
+    - from: 1720
+      main: other
+      note: カロライナのイギリス人とクリーク人の襲撃（1702–06）で、伝道所の村々は壊滅した。
+    - from: 1760
+      main: muskogean
+      note: クリーク人の一派がフロリダに移り、セミノール（「離れた人々」）と呼ばれた。逃亡した黒人奴隷（ブラック・セミノール）も合流した。
+      source: "https://ja.wikipedia.org/wiki/セミノール"
+    - from: 1840
+      main: english
+      minor: muskogean
+      note: 第 2 次セミノール戦争（1835–42）で、セミノールの多くはインディアン準州へ移された。
+    - from: 1860
+      main: english
+    - from: 2010
+      main: english
+      minor: spanish
+      note: キューバ系・プエルトリコ系・中南米の移民（ヒスパニックが 2020 年に 26%）。
+- id: lang_florida_north
+  name: フロリダ北部（アパラチーの伝道所）
+  select:
+    pieces: [USA-Calhoun_FL, USA-Franklin_FL, USA-Gadsden_FL, USA-Gulf_FL, USA-Jackson_FL, USA-Jefferson_FL, USA-Lafayette_FL, USA-Leon_FL, USA-Liberty_FL, USA-Madison_FL, USA-Taylor_FL, USA-Wakulla_FL]
+  timeline:
+    - from: 1648
+      main: muskogean
+      minor: spanish
+      note: アパラチー人（マスコギ系）の伝道所の村々（サン・ルイス・デ・タラリ、現在のタラハシー）。
+    - from: 1710
+      main: muskogean
+    - from: 1840
+      main: english
+    - from: 2010
+      main: english
+- id: lang_st_augustine
+  name: セントオーガスティン・ペンサコーラ
+  select:
+    pieces: [USA-St_Johns_FL, USA-Escambia_FL]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: other
+      note: スペイン領フロリダの首府セントオーガスティン（1565）。
+    - from: 1770
+      main: english
+      minor: spanish
+      note: 1763–83 年はイギリス領。メノルカ島などから来た年季契約の労働者（ミノルカン）が残った。
+    - from: 1800
+      main: spanish
+      minor: english
+      note: 1783 年にスペインに返還された。
+    - from: 1830
+      main: english
+- id: lang_miami
+  name: マイアミ（マイアミ＝デード）
+  select:
+    pieces: [USA-Miami_Dade_FL]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1760
+      main: muskogean
+    - from: 1900
+      main: english
+      note: 鉄道の開通（1896）でマイアミが建設された。
+    - from: 1980
+      main: spanish
+      minor: english
+      note: キューバ革命（1959）後の亡命者と、マリエル事件（1980）の移民で、ヒスパニックが多数になった（2020 年に 69%）。ハイチ人も多い。
+      source: "https://en.wikipedia.org/wiki/Cuban_exile"
+- id: lang_osceola
+  name: フロリダ中部（オーランド南部、オセオーラ）
+  select:
+    pieces: [USA-Osceola_FL]
+  timeline:
+    - from: 2010
+      main: spanish
+      minor: english
+      note: プエルトリコからの移住が多い（ヒスパニックが過半数）。
+- id: lang_louisiana
+  name: ルイジアナ北部・アーカンソー
+  select:
+    adm1: ["USA/Louisiana", "USA/Arkansas"]
+  timeline:
+    - from: 1648
+      main: caddoan
+      minor: siouan
+      note: カドー連合（レッド川流域）・クアポー（スー系、アーカンソー川の河口）などの地。
+    - from: 1820
+      main: english
+      minor: caddoan
+      note: ルイジアナ購入（1803）の後、アメリカ人の入植。
+    - from: 1840
+      main: english
+- id: lang_acadiana
+  name: アカディアナ（ルイジアナ南西部のケイジャンの地）
+  select:
+    pieces: [USA-Lafayette_LA, USA-Vermilion_LA, USA-Acadia_LA, USA-St_Landry_LA, USA-Evangeline_LA, USA-Avoyelles_LA, USA-St_Martin_LA, USA-Iberia_LA, USA-St_Mary_LA, USA-Jefferson_Davis_LA, USA-Calcasieu_LA, USA-Cameron_LA, USA-Allen_LA, USA-Lafourche_LA, USA-Terrebonne_LA, USA-Assumption_LA]
+  timeline:
+    - from: 1648
+      main: other
+      note: アタカパ人・チティマチャ人など、孤立した言語の人々の地。
+    - from: 1780
+      main: french
+      minor: other
+      note: カナダを追われたアカディア人（1755 年の大追放）が、スペイン領ルイジアナに招かれて住みついた（ケイジャン）。
+      source: "https://ja.wikipedia.org/wiki/ケイジャン"
+    - from: 1810
+      main: french
+      minor: creole_french
+      note: アフリカ系の住民はルイジアナ・クレオール語（フランス語系クレオール語）を話した。
+    - from: 1960
+      main: english
+      minor: french
+      note: 1921 年の州憲法で学校での英語以外の使用が禁じられ、ケイジャン・フランス語を話す若い世代は減った。1968 年に CODOFIL（ルイジアナ・フランス語振興会議）が作られた。
+      source: "https://en.wikipedia.org/wiki/Louisiana_French"
+- id: lang_new_orleans
+  name: ニューオーリンズとミシシッピ川沿い
+  select:
+    pieces: [USA-Orleans_LA, USA-Jefferson_LA, USA-Plaquemines_LA, USA-St_Bernard_LA, USA-St_Charles_LA, USA-St_James_LA, USA-St_John_the_Baptist_LA, USA-Ascension_LA, USA-Iberville_LA, USA-West_Baton_Rouge_LA, USA-Pointe_Coupee_LA, USA-East_Baton_Rouge_LA]
+  timeline:
+    - from: 1648
+      main: muskogean
+      note: ホウマ人・チョクトー人などの地。
+    - from: 1730
+      main: french
+      minor: creole_french
+      note: ニューオーリンズ（1718）。アフリカから連れてこられた奴隷（1719–）と自由有色人（ジャン・ド・クルール）。スペイン領の時代（1763–1800）も言葉はフランス語だった。ハイチ革命の難民（1809）でフランス語の住民がさらに増えた。
+    - from: 1840
+      main: english
+      minor: french
+      note: ルイジアナ購入の後、アメリカ人の移住で英語の住民が多数になった。
+    - from: 1900
+      main: english
+
+# ---- 中西部 ----
+- id: lang_old_northwest
+  name: オハイオ・インディアナ・イリノイ・ミシガン
+  select:
+    adm1: ["USA/Ohio", "USA/Indiana", "USA/Illinois", "USA/Michigan"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: マイアミ・イリノイ・ポタワトミ・オジブワ・オタワ（オダワ）など（アルゴンキン系）の地。オハイオ川流域はビーバー戦争でイロコイに追われ、一時は住む人が少なかった。
+    - from: 1810
+      main: english
+      minor: algonquian
+      note: 北西部条例（1787）。テカムセの部族連合（1805–13）は米英戦争で敗れた。
+    - from: 1830
+      main: english
+      note: ブラック・ホーク戦争（1832）の後、先住民の多くがミシシッピ川の西へ移された。
+    - from: 1860
+      main: english
+      minor: german
+      note: シンシナティ・シカゴ・ミルウォーキーなどへのドイツ系の大移民（1848 年革命後の「四十八年組」など）。
+    - from: 1920
+      main: english
+- id: lang_ohio_wyandot
+  name: オハイオ（ワイアンドット・ショーニー・デラウェアの地）
+  select:
+    adm1: ["USA/Ohio"]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: エリー人（イロコイ系）の地。1650 年代にイロコイ連邦に滅ぼされた。
+    - from: 1720
+      main: algonquian
+      minor: iroquoian
+      note: ショーニー人・デラウェア人（アルゴンキン系）・ワイアンドット人（ヒューロンの子孫、イロコイ系）が移り住んだ。
+    - from: 1800
+      main: english
+      note: フォールン・ティンバーズの戦い（1794）とグリーンヴィル条約（1795）の後、入植が急速に進み、1803 年に州になった。
+    - from: 1860
+      main: english
+      minor: german
+    - from: 1920
+      main: english
+- id: lang_upper_peninsula
+  name: ミシガン州アッパー半島
+  select:
+    pieces: [USA-Michigan_Upper_Peninsula]
+  timeline:
+    - from: 1648
+      main: algonquian
+    - from: 1870
+      main: english
+      minor: algonquian
+    - from: 1900
+      main: english
+      minor: finnish
+      note: 銅山・鉄山にフィンランド人が移住した（アメリカのフィンランド系の中心地）。
+    - from: 1950
+      main: english
+- id: lang_wisconsin_minnesota
+  name: ウィスコンシン・ミネソタ
+  select:
+    adm1: ["USA/Wisconsin", "USA/Minnesota"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: siouan
+      note: オジブワ・メノミニー（アルゴンキン系）と、ホーチャンク（ウィネベーゴ）・ダコタ（スー系）の地。
+    - from: 1850
+      main: english
+      minor: german
+      note: ウィスコンシンは 1848 年に州。ドイツ系の移民が住民の約 3 分の 1 を占めた（ミルウォーキー）。
+    - from: 1930
+      main: english
+- id: lang_minnesota
+  name: ミネソタ
+  select:
+    adm1: ["USA/Minnesota"]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: algonquian
+      note: ダコタ（東部スー）人の地。北部にはオジブワ人が西へ移ってきた（18 世紀）。
+    - from: 1860
+      main: english
+      minor: swedish
+      note: 1858 年に州。ダコタ戦争（1862）の後、ダコタ人は追放された。スウェーデン・ノルウェー・ドイツからの移民が住民の多数を占めた（1910 年の外国生まれは 4 人に 1 人）。
+      source: "https://en.wikipedia.org/wiki/Swedish_Americans"
+    - from: 1930
+      main: english
+- id: lang_iowa_missouri
+  name: アイオワ・ミズーリ
+  select:
+    adm1: ["USA/Iowa", "USA/Missouri"]
+  timeline:
+    - from: 1648
+      main: siouan
+      note: オセージ・ミズーリア・アイオワなど（スー系）の地。セントルイス（1764）はフランス人の毛皮交易の町。
+    - from: 1820
+      main: english
+      minor: siouan
+      note: ミズーリは 1821 年に州（ミズーリ協定）。
+    - from: 1840
+      main: english
+- id: lang_great_plains_north
+  name: 大平原の北部（ダコタ・ネブラスカ・モンタナ東部・ワイオミング東部）
+  select:
+    adm1: ["USA/North Dakota", "USA/South Dakota", "USA/Nebraska", "USA/Montana", "USA/Wyoming"]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: caddoan
+      note: マンダン・ヒダーツァ・クロウ（スー系）、ポーニー・アリカラ（カドー系）の地。
+    - from: 1780
+      main: siouan
+      note: 馬を得たラコタ（西部スー）が大平原に広がり、バッファローの狩猟民になった。シャイアン・アラパホ・ブラックフット（アルゴンキン系）も西部にいる。
+      source: "https://ja.wikipedia.org/wiki/ラコタ族"
+    - from: 1890
+      main: english
+      minor: siouan
+      note: リトルビッグホーンの戦い（1876）・ウンデッド・ニーの虐殺（1890）。バッファローの絶滅と鉄道・ホームステッド法による入植で、先住民は保留地に移された。ダコタにはノルウェー系・ロシアのドイツ人（ヴォルガ・黒海）が多く入植した。
+      source: "https://ja.wikipedia.org/wiki/ウンデッド・ニーの虐殺"
+    - from: 1920
+      main: english
+- id: lang_montana_wyoming
+  name: モンタナ・ワイオミング（ロッキー山脈側）
+  select:
+    adm1: ["USA/Montana", "USA/Wyoming"]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      minor: algonquian
+      note: ショショーニ人（ユト・アステカ系）の地。ブラックフット・アラパホ・シャイアン（アルゴンキン系）、クロウ（スー系）もいた。
+    - from: 1780
+      main: algonquian
+      minor: siouan
+      note: ブラックフット連合・シャイアン・アラパホが馬を得て勢力を広げた。
+    - from: 1890
+      main: english
+      minor: algonquian
+      note: モンタナは 1889 年、ワイオミングは 1890 年に州（ワイオミングは女性参政権を最初に認めた州）。
+    - from: 1920
+      main: english
+- id: lang_nebraska_kansas
+  name: ネブラスカ・カンザス
+  select:
+    adm1: ["USA/Nebraska", "USA/Kansas"]
+  timeline:
+    - from: 1648
+      main: caddoan
+      minor: siouan
+      note: ポーニー（カドー系）・ウィチタ（カドー系）、カンザ・オセージ・オマハ・オトー（スー系）の地。
+    - from: 1870
+      main: english
+      minor: caddoan
+      note: カンザス・ネブラスカ法（1854）で準州になり、奴隷制をめぐる「流血のカンザス」の争いが起きた。
+    - from: 1880
+      main: english
+      minor: german
+      note: ロシアのヴォルガ・ドイツ人・メノナイト（冬小麦を持ちこんだ）などドイツ系の入植。
+    - from: 1920
+      main: english
+
+# ---- 南西部 ----
+- id: lang_oklahoma
+  name: オクラホマ西部
+  select:
+    adm1: ["USA/Oklahoma"]
+  timeline:
+    - from: 1648
+      main: caddoan
+      note: ウィチタ人（カドー系）の地。
+    - from: 1750
+      main: uto_aztecan
+      minor: caddoan
+      note: コマンチ人・カイオワ人の地（コマンチェリアの北部）。
+    - from: 1890
+      main: english
+      minor: uto_aztecan
+      note: 1889 年のランドラン。
+    - from: 1910
+      main: english
+- id: lang_indian_territory
+  name: オクラホマ東部（インディアン準州の五部族）
+  select:
+    pieces: [USA-Creek_OK, USA-Okfuskee_OK, USA-Okmulgee_OK, USA-McIntosh_OK, USA-Muskogee_OK, USA-Tulsa_OK, USA-Seminole_OK, USA-Hughes_OK, USA-Atoka_OK, USA-Bryan_OK, USA-Choctaw_OK, USA-Coal_OK, USA-Haskell_OK, USA-Latimer_OK, USA-Le_Flore_OK, USA-McCurtain_OK, USA-Pittsburg_OK, USA-Pushmataha_OK, USA-Carter_OK, USA-Garvin_OK, USA-Johnston_OK, USA-Love_OK, USA-Marshall_OK, USA-McClain_OK, USA-Murray_OK, USA-Pontotoc_OK, USA-Jefferson_OK, USA-Stephens_OK]
+  timeline:
+    - from: 1648
+      main: caddoan
+      note: ウィチタ人・カドー人の地。
+    - from: 1840
+      main: muskogean
+      minor: english
+      note: 強制移住させられたクリーク・チョクトー・チカソー・セミノール（マスコギ系）の国々。連れてこられた黒人奴隷もいた（解放後のフリードメン）。
+      source: "https://ja.wikipedia.org/wiki/インディアン準州"
+    - from: 1890
+      main: english
+      minor: muskogean
+      note: ドーズ法（1887）による土地の個人割り当てで、部族の共有地が解体され、白人の入植が進んだ。1907 年にオクラホマ州になった。
+    - from: 1920
+      main: english
+- id: lang_cherokee_nation_ok
+  name: オクラホマ北東部（チェロキー・ネーション）
+  select:
+    pieces: [USA-Adair_OK, USA-Cherokee_OK, USA-Craig_OK, USA-Delaware_OK, USA-Mayes_OK, USA-Nowata_OK, USA-Rogers_OK, USA-Sequoyah_OK, USA-Washington_OK, USA-Wagoner_OK, USA-Ottawa_OK]
+  timeline:
+    - from: 1648
+      main: caddoan
+    - from: 1750
+      main: siouan
+      note: オセージ人（スー系）の地。
+    - from: 1840
+      main: iroquoian
+      minor: english
+      note: 「涙の旅路」の後のチェロキー・ネーション（首都タレクア）。
+    - from: 1890
+      main: english
+      minor: iroquoian
+    - from: 1950
+      main: english
+- id: lang_texas
+  name: テキサス西部（平原）
+  select:
+    adm1: ["USA/Texas"]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      note: アパッチ人（ナ・デネ系）の地。
+    - from: 1730
+      main: uto_aztecan
+      note: 馬を得たコマンチ人が大平原の南部を支配し（コマンチェリア）、アパッチを南へ追った。
+      source: "https://ja.wikipedia.org/wiki/コマンチ族"
+    - from: 1880
+      main: english
+      note: レッドリヴァー戦争（1874–75）の後、牧畜業者（カウボーイ）と綿花農家が入植した。
+    - from: 2000
+      main: english
+      minor: spanish
+      note: テキサスのヒスパニックは 2000 年に 32%、2020 年に 39%。
+- id: lang_texas_east
+  name: テキサス東部（カドーの地）
+  select:
+    pieces: [USA-Anderson_TX, USA-Angelina_TX, USA-Austin_TX, USA-Bowie_TX, USA-Camp_TX, USA-Cass_TX, USA-Chambers_TX, USA-Cherokee_TX, USA-Delta_TX, USA-Fannin_TX, USA-Franklin_TX, USA-Freestone_TX, USA-Gregg_TX, USA-Grimes_TX, USA-Hardin_TX, USA-Harris_TX, USA-Harrison_TX, USA-Henderson_TX, USA-Hopkins_TX, USA-Houston_TX, USA-Hunt_TX, USA-Jasper_TX, USA-Jefferson_TX, USA-Kaufman_TX, USA-Lamar_TX, USA-Leon_TX, USA-Liberty_TX, USA-Madison_TX, USA-Marion_TX, USA-Montgomery_TX, USA-Morris_TX, USA-Nacogdoches_TX, USA-Newton_TX, USA-Orange_TX, USA-Panola_TX, USA-Polk_TX, USA-Rains_TX, USA-Red_River_TX, USA-Rusk_TX, USA-Sabine_TX, USA-San_Augustine_TX, USA-San_Jacinto_TX, USA-Shelby_TX, USA-Smith_TX, USA-Titus_TX, USA-Trinity_TX, USA-Tyler_TX, USA-Upshur_TX, USA-Van_Zandt_TX, USA-Walker_TX, USA-Waller_TX, USA-Wood_TX]
+  timeline:
+    - from: 1648
+      main: caddoan
+      note: カドー連合（ハシナイ）。「テキサス」の名は、カドーの言葉の「友」（タイシャ）から。
+    - from: 1830
+      main: english
+      note: メキシコの時代のオースティンの植民地（1821–）などで、アメリカ南部からの入植者と黒人奴隷が増え、テキサス独立（1836）につながった。
+      source: "https://ja.wikipedia.org/wiki/テキサス共和国"
+    - from: 2000
+      main: english
+      minor: spanish
+- id: lang_texas_central
+  name: テキサス中部・海岸
+  select:
+    pieces: [USA-Aransas_TX, USA-Bastrop_TX, USA-Bee_TX, USA-Bell_TX, USA-Blanco_TX, USA-Bosque_TX, USA-Brazos_TX, USA-Burleson_TX, USA-Burnet_TX, USA-Caldwell_TX, USA-Calhoun_TX, USA-Colorado_TX, USA-Comal_TX, USA-Coryell_TX, USA-Dallas_TX, USA-DeWitt_TX, USA-Ellis_TX, USA-Erath_TX, USA-Falls_TX, USA-Fayette_TX, USA-Goliad_TX, USA-Gonzales_TX, USA-Guadalupe_TX, USA-Hamilton_TX, USA-Hays_TX, USA-Hill_TX, USA-Hood_TX, USA-Jackson_TX, USA-Jim_Wells_TX, USA-Johnson_TX, USA-Karnes_TX, USA-Lampasas_TX, USA-Lavaca_TX, USA-Lee_TX, USA-Limestone_TX, USA-Live_Oak_TX, USA-McLennan_TX, USA-Milam_TX, USA-Navarro_TX, USA-Nueces_TX, USA-Palo_Pinto_TX, USA-Parker_TX, USA-Refugio_TX, USA-Robertson_TX, USA-Rockwall_TX, USA-San_Patricio_TX, USA-Somervell_TX, USA-Tarrant_TX, USA-Travis_TX, USA-Victoria_TX, USA-Washington_TX, USA-Williamson_TX, USA-Wilson_TX]
+  timeline:
+    - from: 1648
+      main: other
+      note: トンカワ人・カランカワ人・コアウイルテカ系の諸集団など、孤立した言語の人々の地。のちにコマンチ人・リパン・アパッチ人の襲撃の地。
+    - from: 1840
+      main: english
+      minor: spanish
+      note: テキサス共和国。ゴリアド・ビクトリアなどにはテハーノ（メキシコ系）の住民がいた。
+    - from: 1860
+      main: english
+    - from: 2000
+      main: english
+      minor: spanish
+- id: lang_texas_german
+  name: テキサス・ヒルカントリー（ドイツ系）
+  select:
+    pieces: [USA-Gillespie_TX, USA-Kendall_TX, USA-Comal_TX]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1730
+      main: athabaskan
+      note: リパン・アパッチ人の地。
+    - from: 1850
+      main: german
+      minor: english
+      note: アデルスフェライン（ドイツ人移民協会）のニューブラウンフェルズ（1845）・フレデリックスバーグ（1846）。テキサス・ドイツ語は 20 世紀半ばまで話された。
+      source: "https://en.wikipedia.org/wiki/Texas_German"
+    - from: 1920
+      main: english
+      minor: german
+    - from: 1950
+      main: english
+- id: lang_texas_german_belt
+  name: テキサスのドイツ系・チェコ系の入植地
+  select:
+    pieces: [USA-Guadalupe_TX, USA-Kerr_TX, USA-Mason_TX, USA-Llano_TX, USA-Medina_TX, USA-Austin_TX, USA-Fayette_TX, USA-Washington_TX, USA-DeWitt_TX, USA-Lavaca_TX, USA-Colorado_TX]
+  timeline:
+    - from: 1850
+      main: english
+      minor: german
+      note: ドイツ系（カストロヴィルのアルザス人を含む）・チェコ系（モラヴィア）の農民の入植。
+    - from: 1950
+      main: english
+- id: lang_texas_rio_grande
+  name: テキサス南部（リオグランデ川下流、ヌエボ・サンタンデール）
+  select:
+    pieces: [USA-Cameron_TX, USA-Hidalgo_TX, USA-Starr_TX, USA-Zapata_TX, USA-Webb_TX, USA-Jim_Hogg_TX, USA-Brooks_TX, USA-Kenedy_TX, USA-Willacy_TX, USA-Duval_TX, USA-Jim_Wells_TX]
+  timeline:
+    - from: 1648
+      main: other
+      note: コアウイルテカ系の諸集団の地。
+    - from: 1760
+      main: spanish
+      note: エスカンドンのヌエボ・サンタンデール植民地（1749–）。ラレド（1755）・リオグランデ川沿いの牧場。アメリカ＝メキシコ戦争（1846–48）の後もテハーノの住民が多数を保った。
+      source: "https://en.wikipedia.org/wiki/Tejano"
+- id: lang_texas_border
+  name: テキサスの国境地帯・トランスペコス・コーパスクリスティ
+  select:
+    pieces: [USA-Maverick_TX, USA-Dimmit_TX, USA-Zavala_TX, USA-La_Salle_TX, USA-Val_Verde_TX, USA-Kinney_TX, USA-Frio_TX, USA-Hudspeth_TX, USA-Presidio_TX, USA-Culberson_TX, USA-Pecos_TX, USA-Reeves_TX, USA-Kleberg_TX, USA-Nueces_TX, USA-San_Patricio_TX, USA-Bee_TX, USA-Atascosa_TX, USA-Uvalde_TX]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1730
+      main: athabaskan
+      note: リパン・アパッチ人、のちコマンチ人の襲撃の地。
+    - from: 1880
+      main: english
+      minor: spanish
+    - from: 1920
+      main: spanish
+      minor: english
+      note: 鉄道の開通と、メキシコ革命（1910–20）を逃れた人々の移住で、メキシコ系の住民が多数になった（コーパスクリスティ〈ヌエセス〉などは 20 世紀後半）。
+- id: lang_texas_hispanic_late
+  name: テキサス西部の盆地・平原（メキシコ系の増えた郡）
+  select:
+    pieces: [USA-Ector_TX, USA-Crane_TX, USA-Ward_TX, USA-Dawson_TX, USA-Hale_TX, USA-Lamb_TX, USA-Parmer_TX, USA-Castro_TX, USA-Deaf_Smith_TX, USA-Bailey_TX, USA-Cochran_TX, USA-Hockley_TX, USA-Crosby_TX, USA-Floyd_TX, USA-Lynn_TX, USA-Gaines_TX, USA-Andrews_TX, USA-Winkler_TX, USA-Moore_TX]
+  timeline:
+    - from: 1990
+      main: spanish
+      minor: english
+      note: 綿花・石油・食肉加工の労働者としてメキシコ系の住民が増え、多数になった。
+- id: lang_texas_metros
+  name: ヒューストン・ダラス（ハリス・ダラス郡）
+  select:
+    pieces: [USA-Harris_TX, USA-Dallas_TX]
+  timeline:
+    - from: 2010
+      main: spanish
+      minor: english
+      note: ヒスパニックが最大の民族集団になった（ハリス郡 43%、ダラス郡 40%、2020）。黒人・アジア系も多い多民族の大都市圏。
+- id: lang_bexar
+  name: サンアントニオ（ベア郡）
+  select:
+    pieces: [USA-Bexar_TX]
+  timeline:
+    - from: 1648
+      main: other
+      note: コアウイルテカ系（パヤヤ）の人々の地。
+    - from: 1720
+      main: spanish
+      minor: other
+      note: サンアントニオの伝道所（アラモ 1718）とスペイン領テキサスの首府（1772–1824）。アラモの戦い（1836）。
+    - from: 1850
+      main: english
+      minor: spanish
+      note: ドイツ系の移民もサンアントニオの住民の約 3 分の 1 を占めた（1850 年代）。
+    - from: 1990
+      main: spanish
+      minor: english
+      note: ヒスパニックが過半数（2020 年に 60%）。
+- id: lang_el_paso
+  name: エルパソ
+  select:
+    pieces: [USA-El_Paso_TX]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      note: マンソ人・スマ人などの地（のちアパッチ）。
+    - from: 1690
+      main: spanish
+      minor: pueblo
+      note: プエブロの反乱（1680）で逃れたスペイン人と、ティワ人（イスレタ・デル・スル 1682）。
+    - from: 1760
+      main: spanish
+      note: リオグランデ川の南岸のエル・パソ・デル・ノルテ（現在のシウダー・フアレス）と結びついた一つの町。1848 年に川が国境になった。
+    - from: 1900
+      main: spanish
+      minor: english
+- id: lang_new_mexico
+  name: ニューメキシコ南部・東部
+  select:
+    adm1: ["USA/New Mexico"]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      note: アパッチ人（メスカレロ・チリカワ・ヒカリヤ）の地。
+    - from: 1880
+      main: spanish
+      minor: english
+      note: アパッチ戦争の終結と鉄道の開通。
+    - from: 1920
+      main: english
+      minor: spanish
+- id: lang_little_texas
+  name: ニューメキシコ東部（「リトル・テキサス」）
+  select:
+    pieces: [USA-Curry_NM, USA-Roosevelt_NM, USA-Lea_NM, USA-Eddy_NM, USA-Chaves_NM, USA-Quay_NM]
+  timeline:
+    - from: 1648
+      main: athabaskan
+    - from: 1730
+      main: uto_aztecan
+      note: コマンチ人の地。
+    - from: 1900
+      main: english
+      minor: spanish
+      note: テキサスからの牧場主・農民の入植。
+- id: lang_dona_ana
+  name: メシーヤ盆地（ドニャ・アナ）・ニューメキシコ北東部
+  select:
+    pieces: [USA-Dona_Ana_NM, USA-Guadalupe_NM, USA-De_Baca_NM, USA-Union_NM, USA-Harding_NM, USA-Colfax_NM]
+  timeline:
+    - from: 1648
+      main: athabaskan
+    - from: 1860
+      main: spanish
+      minor: english
+      note: ラス・クルーセス（1849）・メシーヤ。ガズデン購入（1853）でアメリカ領。
+- id: lang_rio_grande_nm
+  name: ニューメキシコ北部（リオグランデ川上流のプエブロとイスパノ）
+  select:
+    pieces: [USA-Rio_Arriba_NM, USA-Taos_NM, USA-Santa_Fe_NM, USA-Sandoval_NM, USA-Bernalillo_NM, USA-Valencia_NM, USA-Socorro_NM, USA-Mora_NM, USA-San_Miguel_NM, USA-Los_Alamos_NM, USA-Torrance_NM, USA-Cibola_NM]
+  timeline:
+    - from: 1648
+      main: pueblo
+      minor: spanish
+      note: プエブロの人々（タノ系のティワ・テワ・トワ、ケレス、ズニ）の村々と、スペインのヌエボ・メヒコ（サンタフェ 1610）。
+      source: "https://ja.wikipedia.org/wiki/プエブロ"
+    - from: 1680
+      main: pueblo
+      note: プエブロの反乱（1680、ポペ）でスペイン人は追われた。
+    - from: 1693
+      main: pueblo
+      minor: spanish
+      note: ディエゴ・デ・バルガスの再征服。
+    - from: 1760
+      main: spanish
+      minor: pueblo
+      note: イスパノ（ヌエボ・メヒコのスペイン系）の住民が多数になった。プエブロの人口は天然痘で大きく減った。
+    - from: 1950
+      main: spanish
+      minor: english
+      note: ロスアラモスの原爆開発（1943–）・アルバカーキの成長でアメリカ人が増えた。北部の農村のイスパノは、16〜17 世紀の古いスペイン語を残す。
+- id: lang_albuquerque
+  name: アルバカーキ・ロスアラモス・サンドバル
+  select:
+    pieces: [USA-Bernalillo_NM, USA-Los_Alamos_NM, USA-Sandoval_NM]
+  timeline:
+    - from: 1970
+      main: english
+      minor: spanish
+- id: lang_navajo
+  name: ナヴァホの地（ニューメキシコ北西部・アリゾナ北東部）
+  select:
+    pieces: [USA-San_Juan_NM, USA-McKinley_NM, USA-Apache_AZ, USA-Navajo_AZ]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      note: ナヴァホ人（ディネ、ナ・デネ系）とホピ人（ユト・アステカ系）。ナヴァホは羊の牧畜と織物を取り入れた。
+      source: "https://ja.wikipedia.org/wiki/ナバホ族"
+    - from: 1970
+      main: athabaskan
+      minor: english
+      note: 第二次世界大戦の「ナヴァホ・コードトーカー」（暗号通信兵）。ナヴァホ・ネーションは合衆国最大の先住民の保留地。
+- id: lang_san_juan_nm
+  name: ニューメキシコのサンフアン郡（ファーミントン）
+  select:
+    pieces: [USA-San_Juan_NM, USA-Navajo_AZ]
+  timeline:
+    - from: 1648
+      main: athabaskan
+    - from: 1980
+      main: english
+      minor: athabaskan
+      note: 石油・天然ガス・石炭の開発の町（先住民は郡の住民の約 4 割）。
+- id: lang_arizona
+  name: アリゾナ
+  select:
+    adm1: ["USA/Arizona"]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      minor: uto_aztecan
+      note: アパッチ人（西部アパッチ・チリカワ）、ヤヴァパイ・ハヴァスパイ・ワラパイ・モハーヴェ（ユマ系）の地。
+    - from: 1890
+      main: english
+      minor: spanish
+      note: アパッチ戦争の終結（1886、ジェロニモの降伏）。1912 年に州。
+    - from: 2000
+      main: english
+      minor: spanish
+      note: ヒスパニックが 2020 年に 32%。
+- id: lang_pimeria_alta
+  name: アリゾナ南部（ピメリア・アルタ、トゥーソン）
+  select:
+    pieces: [USA-Pima_AZ, USA-Santa_Cruz_AZ, USA-Pinal_AZ, USA-Maricopa_AZ]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      note: オーダム人（ピマ・トホノ・オーダム）の地。ギラ川のアキメル・オーダムは灌漑農業を営んだ。
+    - from: 1760
+      main: uto_aztecan
+      minor: spanish
+      note: キノ神父の伝道所（1692–）、トゥバク（1752）・トゥーソン（1775）の砦。
+    - from: 1880
+      main: english
+      minor: spanish
+      note: ガズデン購入（1853）でアメリカ領。トゥーソンの住民は 1880 年代までメキシコ系が多数だった。フェニックス（1868–）は灌漑農業の町。
+- id: lang_santa_cruz_yuma
+  name: アリゾナの国境の郡（サンタクルーズ・ユマ）
+  select:
+    pieces: [USA-Santa_Cruz_AZ, USA-Yuma_AZ]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      minor: pacific_na
+      note: ユマ（ケチャン）人・ココパ人（ユマ系）とオーダム人の地。
+    - from: 1880
+      main: spanish
+      minor: english
+      note: ノガレス・ユマはメキシコと結びついた国境の町。
+- id: lang_great_basin
+  name: ユタ・ネヴァダ・コロラド西部（グレートベースン）
+  select:
+    adm1: ["USA/Utah", "USA/Nevada", "USA/Colorado", "USA/Idaho"]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      note: ユート・パイユート・ショショーニ・ゴシュート（ユト・アステカ系、「ユタ」はユートから）の地。ワショー人もいる。
+    - from: 1860
+      main: english
+      minor: uto_aztecan
+      note: モルモン教徒のユタ入植（1847）。コムストック銀山（1859）とパイクスピークのゴールドラッシュ（1858）。
+    - from: 1880
+      main: english
+    - from: 2000
+      main: english
+      minor: spanish
+      note: ネヴァダ（2020 年に 29%）・コロラド（22%）でヒスパニックが増えた。
+- id: lang_idaho_plateau
+  name: アイダホ（コロンビア高原）
+  select:
+    adm1: ["USA/Idaho"]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      minor: pacific_na
+      note: 南部はショショーニ・バノック（ユト・アステカ系）、北部はネズパース（サハプティン系）・クールダレーン（サリシュ系）の地。
+    - from: 1880
+      main: english
+      minor: pacific_na
+      note: ネズパース戦争（1877、ジョゼフ酋長）。
+    - from: 1900
+      main: english
+- id: lang_colorado_plains
+  name: コロラド東部（大平原）
+  select:
+    pieces: [USA-Adams_CO, USA-Arapahoe_CO, USA-Baca_CO, USA-Bent_CO, USA-Cheyenne_CO, USA-Crowley_CO, USA-Denver_CO, USA-El_Paso_CO, USA-Elbert_CO, USA-Kiowa_CO, USA-Kit_Carson_CO, USA-Las_Animas_CO, USA-Lincoln_CO, USA-Logan_CO, USA-Morgan_CO, USA-Otero_CO, USA-Phillips_CO, USA-Prowers_CO, USA-Pueblo_CO, USA-Sedgwick_CO, USA-Washington_CO, USA-Weld_CO, USA-Yuma_CO]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      note: アパッチ人の地。
+    - from: 1730
+      main: uto_aztecan
+      note: コマンチ人の地。
+    - from: 1800
+      main: algonquian
+      note: シャイアン・アラパホ（アルゴンキン系）が南へ移ってきた。
+    - from: 1870
+      main: english
+      minor: algonquian
+      note: サンドクリークの虐殺（1864）。デンヴァー（1858）。1876 年に州。
+    - from: 1880
+      main: english
+    - from: 2000
+      main: english
+      minor: spanish
+- id: lang_san_luis_valley
+  name: コロラド南部（サンルイス・バレーとラスアニマス）
+  select:
+    pieces: [USA-Conejos_CO, USA-Costilla_CO, USA-Alamosa_CO, USA-Rio_Grande_CO, USA-Saguache_CO, USA-Huerfano_CO, USA-Las_Animas_CO]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      note: ユート人の地。
+    - from: 1860
+      main: spanish
+      note: ニューメキシコのイスパノがサンルイス（1851、コロラド最古の町）を建てた。
+    - from: 1900
+      main: spanish
+      minor: english
+- id: lang_california
+  name: カリフォルニア（北部・内陸）
+  select:
+    adm1: ["USA/California"]
+  timeline:
+    - from: 1648
+      main: pacific_na
+      note: 数十の言語に分かれた多くの小さな集団（ヨクーツ・ミウォク・ポモ・マイドゥ・ウィントゥ・ユロクなど）。北アメリカで最も言語の多様な地域だった。
+      source: "https://en.wikipedia.org/wiki/Indigenous_languages_of_California"
+    - from: 1850
+      main: english
+      minor: spanish
+      note: ゴールドラッシュ（1848–）で世界中から人が集まった。先住民は殺害・病気・飢えで激減した。中国からの移民も多く（1852 年に約 2 万人）、のちに中国人排斥法（1882）が作られた。
+      source: "https://en.wikipedia.org/wiki/California_genocide"
+    - from: 1880
+      main: english
+    - from: 2000
+      main: english
+      minor: spanish
+      note: カリフォルニアのヒスパニックは 2014 年に白人を抜いて最大の民族集団になった（2020 年に 39%）。アジア系も 15%。
+- id: lang_alta_california
+  name: カリフォルニア南部の海岸（アルタ・カリフォルニアの伝道所）
+  select:
+    pieces: [USA-San_Diego_CA, USA-Orange_CA, USA-Los_Angeles_CA, USA-Ventura_CA, USA-Santa_Barbara_CA, USA-San_Luis_Obispo_CA, USA-Riverside_CA, USA-San_Bernardino_CA]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      minor: pacific_na
+      note: トングヴァ（ガブリエリーノ）・ルイセーニョ・カウイヤ（ユト・アステカ系）、チュマシュ・クメヤーイ（ユマ系）の地。
+    - from: 1790
+      main: pacific_na
+      minor: spanish
+      note: フランシスコ会の伝道所（サンディエゴ 1769、サンガブリエル 1771）とプエブロ・デ・ロサンゼルス（1781）。
+      source: "https://ja.wikipedia.org/wiki/カリフォルニアの伝道所"
+    - from: 1830
+      main: spanish
+      minor: pacific_na
+      note: メキシコ独立後の伝道所の世俗化（1834）で、土地はカリフォルニオ（メキシコ系）の牧場（ランチョ）になった。
+    - from: 1880
+      main: english
+      minor: spanish
+      note: 鉄道（1876・1885）と土地ブームでアメリカ人が多数になった。
+    - from: 2000
+      main: spanish
+      minor: english
+      note: ロサンゼルス郡のヒスパニックは 2000 年に 45%、2020 年に 49% で最大の民族集団。
+- id: lang_ca_coast_white
+  name: サンディエゴ・オレンジ・サンタバーバラ・サンルイスオビスポ・ヴェンチュラ
+  select:
+    pieces: [USA-San_Diego_CA, USA-Orange_CA, USA-Santa_Barbara_CA, USA-San_Luis_Obispo_CA, USA-Ventura_CA]
+  timeline:
+    - from: 2000
+      main: english
+      minor: spanish
+- id: lang_ca_central_valley
+  name: カリフォルニアのセントラル・バレーとインペリアル・バレー
+  select:
+    pieces: [USA-Imperial_CA, USA-Fresno_CA, USA-Tulare_CA, USA-Kern_CA, USA-Kings_CA, USA-Madera_CA, USA-Merced_CA, USA-Monterey_CA, USA-San_Benito_CA, USA-Stanislaus_CA]
+  timeline:
+    - from: 2000
+      main: spanish
+      minor: english
+      note: 農業労働者（ブラセロ計画 1942–64 など）としてメキシコ系の住民が増えた。セサール・チャベスの農業労働者組合（1962–）。
+- id: lang_ca_north_coast
+  name: カリフォルニア北部の海岸（サンフランシスコ湾岸・モントレー）
+  select:
+    pieces: [USA-Monterey_CA, USA-San_Benito_CA, USA-Santa_Cruz_CA, USA-Santa_Clara_CA, USA-San_Mateo_CA, USA-San_Francisco_CA, USA-Alameda_CA, USA-Contra_Costa_CA, USA-Marin_CA, USA-Sonoma_CA, USA-Napa_CA]
+  timeline:
+    - from: 1648
+      main: pacific_na
+      note: オローニ（コスタノ）・ミウォク・ポモの地。
+    - from: 1800
+      main: pacific_na
+      minor: spanish
+      note: サンフランシスコの砦と伝道所（1776）、アルタ・カリフォルニアの首府モントレー（1770）。ロシアのロス砦（1812–41）。
+    - from: 1850
+      main: english
+      minor: spanish
+    - from: 1870
+      main: english
+- id: lang_san_francisco
+  name: サンフランシスコ・サンタクララ（シリコンバレー）
+  select:
+    pieces: [USA-San_Francisco_CA, USA-Santa_Clara_CA, USA-Alameda_CA]
+  timeline:
+    - from: 1990
+      main: english
+      minor: chinese
+      note: 1965 年の移民法改正の後、中国・台湾・香港・ベトナム・フィリピン・インドなどアジア系の住民が増えた（サンフランシスコ・サンタクララは 2020 年に約 4 割がアジア系）。
+- id: lang_pacific_northwest
+  name: オレゴン・ワシントン
+  select:
+    adm1: ["USA/Oregon", "USA/Washington"]
+  timeline:
+    - from: 1648
+      main: pacific_na
+      note: チヌーク・サリシュ・ワカシュ（マカ）・サハプティン（ヤキマ・ネズパース）などの地。交易のためのチヌーク・ジャーゴンが使われた。
+    - from: 1860
+      main: english
+      minor: pacific_na
+      note: オレゴン・トレイル（1840 年代〜）。オレゴン協定（1846）で北緯 49 度以南がアメリカ領。オレゴンは 1859 年、ワシントンは 1889 年に州。
+    - from: 1890
+      main: english
+- id: lang_alaska
+  name: アラスカ
+  select:
+    adm1: ["USA/Alaska"]
+  timeline:
+    - from: 1648
+      main: eskimo_aleut
+      minor: athabaskan
+      note: イヌピアット・ユピック・アルティーク・アレウト（エスキモー・アレウト系）が海岸に、アサバスカ系の人々が内陸に、トリンギット・ハイダが南東部に住む。
+    - from: 1800
+      main: eskimo_aleut
+      minor: athabaskan
+      note: ロシア領アメリカ（露米会社、首府ノヴォアルハンゲリスク〈シトカ〉1808–）。ロシア人は数百人にすぎず、アレウト人を毛皮の狩猟に使った。
+      source: "https://ja.wikipedia.org/wiki/ロシア領アメリカ"
+    - from: 1900
+      main: english
+      minor: eskimo_aleut
+      note: アメリカ合衆国による購入（1867）。クロンダイク・ノームのゴールドラッシュ（1896–1900）で白人が増えた。
+    - from: 1950
+      main: english
+      note: 第二次世界大戦と冷戦の軍事基地。1959 年に州。先住民は住民の約 15%。
+- id: lang_hawaii
+  name: ハワイ
+  select:
+    adm1: ["USA/Hawaii"]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ハワイ語を話すハワイ人の首長国（1795–1810 年にカメハメハ 1 世が統一）。
+      source: "https://ja.wikipedia.org/wiki/ハワイ王国"
+    - from: 1890
+      main: polynesian
+      minor: japanese
+      note: 欧米人の持ちこんだ病気で、ハワイ人の人口は 1778 年の数十万人から 1890 年には 4 万人ほどに減った。サトウキビ農園の労働者として中国人（1852–）・日本人（1885 年の官約移民〜）・ポルトガル人が来た。
+    - from: 1900
+      main: japanese
+      minor: polynesian
+      note: 1893 年に王国が倒され、1898 年にアメリカ合衆国が併合した。1900〜20 年代には日系人が人口の約 4 割を占めた。
+      source: "https://ja.wikipedia.org/wiki/日系アメリカ人"
+    - from: 1970
+      main: english
+      minor: japanese
+      note: 1959 年に州。アメリカ本土からの移住が増え、白人が最大の集団になった（日系 25%、フィリピン系、ハワイ系、中国系が続く）。日常語はハワイ・クレオール英語（ピジン）。
+- id: lang_puerto_rico
+  name: プエルトリコ
+  select:
+    adm1: ["USA/Puerto Rico"]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: スペインの植民地。アフリカ系・タイノ系（先住民）・スペイン系の血をひくボリクア。1898 年の米西戦争でアメリカ領になったが、スペイン語が日常語のまま。
+- id: lang_usvi
+  name: アメリカ領ヴァージン諸島（旧デンマーク領西インド諸島）
+  select:
+    adm1: ["USA/United States Virgin Islands"]
+  timeline:
+    - from: 1672
+      main: creole_english
+      minor: dutch
+      note: デンマーク領西インド諸島（セント・トーマス 1672、セント・ジョン 1718、セント・クロイ 1733）。セント・トーマスのアフリカ系の住民はオランダ語系クレオール語（ネーヘルホランス）を、セント・クロイは英語系クレオール語を話した。デンマーク語を話す人は少なかった。
+      source: "https://en.wikipedia.org/wiki/Negerhollands"
+    - from: 1850
+      main: creole_english
+      note: 1917 年にアメリカ合衆国が購入した。
+
+# ================================================================
+# カナダ・サンピエール島・バミューダ
+# ================================================================
+- id: lang_canada_base
+  name: カナダの先住民の地
+  select:
+    iso: [CAN]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: クリー・オジブワ・イヌ（モンタニェ）・アルゴンキン・ミクマクなど（アルゴンキン系）の地。下の小さい地域がない所の既定値。
+- id: lang_laurentian
+  name: セントローレンス川流域（ケベック・トロワリヴィエール・モントリオール）
+  select:
+    pieces: [CAN-Capitale_Nationale, CAN-Mauricie, CAN-Montreal]
+  timeline:
+    - from: 1648
+      main: french
+      minor: algonquian
+      note: ヌーヴェル・フランス。1650 年ごろのフランス人は約 2 千人だった（王領植民地になった 1663 年から入植が進み、1760 年に約 7 万人）。
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1680
+      main: french
+- id: lang_montreal
+  name: モントリオール
+  select:
+    pieces: [CAN-Montreal]
+  timeline:
+    - from: 1830
+      main: english
+      minor: french
+      note: イギリス系・スコットランド系の商人とアイルランド系の移民で、1831〜65 年ごろは英語系の住民が多数だった。
+      source: "https://en.wikipedia.org/wiki/History_of_Montreal"
+    - from: 1870
+      main: french
+      minor: english
+      note: 農村からのフランス系の移住で、再びフランス語系が多数になった。1977 年のフランス語憲章（101 号法）。
+    - from: 2000
+      main: french
+      minor: english
+      note: 移民（ハイチ・マグレブ・レバノンなど）の多くはフランス語を使う。
+- id: lang_quebec_seigneuries
+  name: ケベック南部（領主制の農村）
+  select:
+    pieces: [CAN-Monteregie, CAN-Centre_du_Quebec, CAN-Chaudiere_Appalaches, CAN-Bas_Saint_Laurent, CAN-Laval, CAN-Lanaudiere, CAN-Laurentides, CAN-Saguenay_Lac_Saint_Jean]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: iroquoian
+      note: アベナキ・イヌ・アルゴンキンの地。カナワケ（1667）などにはモホーク人のカトリックの村。
+    - from: 1700
+      main: french
+      note: セントローレンス川の両岸の領主制（セニョリー）の農村。
+- id: lang_saguenay
+  name: サグネ・ラック・サン・ジャン
+  select:
+    pieces: [CAN-Saguenay_Lac_Saint_Jean]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: イヌ（モンタニェ）人の地。タドゥサックは 1600 年からの毛皮交易所。
+    - from: 1860
+      main: french
+      note: 1838 年からの入植と製材業。
+- id: lang_gaspesie
+  name: ガスペジー・マドレーヌ諸島
+  select:
+    pieces: [CAN-Gaspesie_Iles_de_la_Madeleine, CAN-Gaspesie_Iles_de_la_Madeleine_Magdalen_Islands]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: ミクマク人の地。フランスの漁民の基地。
+    - from: 1770
+      main: french
+      minor: english
+      note: アカディア人の追放後の帰還者と、ロイヤリスト・イギリス諸島からの漁民。
+- id: lang_eastern_townships
+  name: イースタン・タウンシップス（エストリ）・ウタウエ
+  select:
+    pieces: [CAN-Estrie, CAN-Outaouais]
+  timeline:
+    - from: 1648
+      main: algonquian
+    - from: 1800
+      main: english
+      note: ロイヤリストとニューイングランド人の入植（イースタン・タウンシップス）、ウタウエの木材業（1800–、フィレモン・ライト）。
+    - from: 1880
+      main: french
+      minor: english
+      note: フランス系カナダ人が移り住み、多数になった。
+    - from: 1950
+      main: french
+- id: lang_quebec_north
+  name: ケベック北部（コート・ノール・アビティビ）
+  select:
+    pieces: [CAN-Abitibi_Temiscamingue, CAN-Cote_Nord, CAN-Cote_Nord_Anticosti]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: イヌ（モンタニェ）・アルゴンキン・クリーの地。
+    - from: 1930
+      main: french
+      minor: algonquian
+      note: アビティビの開拓（1910–30 年代、大恐慌期の「植民」）、コート・ノールの鉄鉱山・水力発電・製紙。
+    - from: 1960
+      main: french
+- id: lang_quebec_far_north
+  name: ケベック北部の極北（クリー・イヌイット）
+  select:
+    pieces: [CAN-Nord_du_Quebec, CAN-Abitibi_Temiscamingue_North, CAN-Cote_Nord_Labrador_Coast]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: クリー・イヌの地。
+- id: lang_inuit
+  name: イヌイットの地（ヌナヴィク・ヌナヴト・ラブラドル北部・北極諸島）
+  select:
+    pieces: [CAN-Nord_du_Quebec_Ungava, CAN-Nunavut, CAN-Nunavut_Arctic_Islands, CAN-Northwest_Territories_Arctic_Islands]
+  timeline:
+    - from: 1648
+      main: eskimo_aleut
+      note: イヌイット（「人々」の意）の地。1999 年にイヌイットの自治のヌナヴト準州が作られた。
+      source: "https://ja.wikipedia.org/wiki/ヌナブト準州"
+- id: lang_labrador
+  name: ラブラドル
+  select:
+    pieces: [CAN-Newfoundland_and_Labrador_Labrador]
+  timeline:
+    - from: 1648
+      main: eskimo_aleut
+      minor: algonquian
+      note: 海岸はイヌイット、内陸はイヌ（ナスカピ）の地。モラヴィア兄弟団の伝道所（ナイン 1771 など）。
+    - from: 1960
+      main: english
+      minor: eskimo_aleut
+      note: グースベイの空軍基地（1941）・ラブラドル・シティの鉄鉱山で入植者が増えた。
+- id: lang_acadia
+  name: アカディア（ノヴァスコシアのファンディ湾岸）
+  select:
+    pieces: [CAN-Annapolis_Valley]
+  timeline:
+    - from: 1648
+      main: french
+      minor: algonquian
+      note: アカディア人（ポール・ロワイヤル、ミナス・グラン・プレ）とミクマク人。ユトレヒト条約（1713）でイギリス領ノヴァスコシアになった。
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1760
+      main: english
+      note: アカディア人の大追放（1755–64、ロングフェローの『エヴァンジェリン』）。ニューイングランドからの入植者（プランター）が土地に入った。
+- id: lang_nova_scotia
+  name: ノヴァスコシア（ハリファクス・南部・北岸）
+  select:
+    pieces: [CAN-Halifax, CAN-Southern_Sud, CAN-North_Shore_Cote_nord]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: french
+      note: ミクマク人の地。
+    - from: 1760
+      main: english
+      minor: algonquian
+      note: ハリファクス（1749）。ルネンバーグのドイツ系（1753）。
+    - from: 1790
+      main: english
+      note: ロイヤリストの入植（1783–、黒人のロイヤリストも約 3 千人）。南西部のクレアには帰還したアカディア人。
+- id: lang_pictou
+  name: ノヴァスコシアの北岸（ピクトゥー・アンティゴニッシュ）
+  select:
+    pieces: [CAN-North_Shore_Cote_nord]
+  timeline:
+    - from: 1800
+      main: english
+      minor: gaelic
+      note: スコットランド高地の移民（ヘクター号、1773）。
+    - from: 1900
+      main: english
+- id: lang_cape_breton
+  name: ケープ・ブレトン島
+  select:
+    pieces: [CAN-Cape_Breton]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: ミクマク人の地。
+    - from: 1720
+      main: french
+      minor: algonquian
+      note: フランスのイル・ロワイヤル（ルイブール要塞 1713–58）。
+    - from: 1760
+      main: algonquian
+      minor: french
+      note: ルイブールの陥落（1758）で、フランス人の住民は追放された。
+    - from: 1810
+      main: gaelic
+      minor: english
+      note: スコットランド高地の「ハイランド・クリアランス」で追われた人々が大量に移住し、スコットランド・ゲール語が多数の言葉になった。
+      source: "https://en.wikipedia.org/wiki/Canadian_Gaelic"
+    - from: 1900
+      main: english
+      minor: gaelic
+    - from: 1950
+      main: english
+- id: lang_new_brunswick
+  name: ニューブランズウィック
+  select:
+    adm1: ["CAN/New Brunswick"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: french
+      note: マリシート（ウォラストキイク）・ミクマク・パサマクォディの地。アカディア人の村。
+    - from: 1790
+      main: english
+      minor: french
+      note: ロイヤリストの入植（1783–、約 1 万 4 千人）でニューブランズウィック植民地（1784）が作られた。北部・東部はアカディア人（現在も州の約 3 分の 1）。1969 年にカナダで唯一の公式な英仏二言語の州になった。
+- id: lang_pei
+  name: プリンスエドワード島
+  select:
+    adm1: ["CAN/Prince Edward Island"]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: ミクマク人の地。
+    - from: 1730
+      main: french
+      minor: algonquian
+      note: フランスのイル・サン・ジャン（1720–）。アカディア人の移住。
+    - from: 1770
+      main: english
+      minor: gaelic
+      note: アカディア人の追放（1758）の後、イギリス領。スコットランド高地の移民（カトリック・ゲール語）とアイルランド系。
+    - from: 1880
+      main: english
+- id: lang_newfoundland
+  name: ニューファンドランド島
+  select:
+    pieces: [CAN-Newfoundland_and_Labrador]
+  timeline:
+    - from: 1648
+      main: english
+      minor: other
+      note: イングランドの漁業の拠点（アヴァロン半島）。先住民のベオスック人（孤立した言語）は内陸に住み、1829 年に最後の一人が亡くなった。プレザンスは 1662–1713 年にフランスの拠点。
+      source: "https://ja.wikipedia.org/wiki/ベオサック族"
+    - from: 1750
+      main: english
+      note: アイルランド南東部からの漁民の移住（アイルランド語も 19 世紀まで話された）。1949 年にカナダに加わった。
+- id: lang_ontario_south
+  name: オンタリオ南部
+  select:
+    pieces: [CAN-Kingston_Pembroke, CAN-Hamilton_Niagara_Peninsula, CAN-Toronto, CAN-London, CAN-Windsor_Sarnia, CAN-Stratford_Bruce_Peninsula, CAN-Kitchener_Waterloo_Barrie, CAN-Muskoka_Kawarthas]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      note: ヒューロン（ウェンダット）・ペトゥン・ニュートラル（イロコイ系）の地。1649–51 年にイロコイ連邦の攻撃で滅ぼされ、離散した。
+      source: "https://ja.wikipedia.org/wiki/ヒューロン族"
+    - from: 1700
+      main: algonquian
+      note: オジブワ（ミシサガ）人が南へ移り住んだ。
+    - from: 1790
+      main: english
+      minor: algonquian
+      note: ロイヤリストの入植（アッパー・カナダ 1791）。モホーク人のジョゼフ・ブラントはイギリス側で戦い、グランド川の土地を与えられた（シックス・ネーションズ）。
+    - from: 1820
+      main: english
+      note: 米英戦争（1812–14）。イギリス諸島からの大量の移民。
+    - from: 2000
+      main: english
+      minor: hindustani
+      note: 1967 年の移民の点数制度の後、トロントは住民の半分が外国生まれの多民族都市になった（南アジア系・中国系・フィリピン系・カリブ系など）。斜線は最大の集団の南アジア系を代表してヒンドゥスターニー語の色で示す。
+- id: lang_ontario_south_rest
+  name: オンタリオ南部の農村
+  select:
+    pieces: [CAN-Kingston_Pembroke, CAN-Stratford_Bruce_Peninsula, CAN-Muskoka_Kawarthas, CAN-London, CAN-Windsor_Sarnia, CAN-Hamilton_Niagara_Peninsula, CAN-Kitchener_Waterloo_Barrie]
+  timeline:
+    - from: 2000
+      main: english
+- id: lang_windsor
+  name: ウィンザー・サーニア（デトロイト川の南岸）
+  select:
+    pieces: [CAN-Windsor_Sarnia]
+  timeline:
+    - from: 1750
+      main: french
+      minor: algonquian
+      note: デトロイト（1701）の対岸のフランス人の農村（アサンプション教区 1767）。
+    - from: 1800
+      main: english
+      minor: french
+    - from: 1850
+      main: english
+      note: 地下鉄道で逃れてきた黒人奴隷の終着地の一つ。
+- id: lang_ottawa
+  name: オタワ
+  select:
+    pieces: [CAN-Ottawa]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: アルゴンキン（アニシナアベ）人の地。
+    - from: 1830
+      main: english
+      minor: french
+      note: リドー運河（1832）。1857 年にヴィクトリア女王が連合カナダの首都に選んだ。
+- id: lang_ontario_north
+  name: オンタリオ北部
+  select:
+    pieces: [CAN-Northwest_Nord_ouest, CAN-Northwest_Nord_ouest_Rainy_River, CAN-Northwest_Nord_ouest_Hudson_Slope, CAN-Northeast_Nord_est_James_Bay_Slope]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: オジブワ・クリーの地。
+    - from: 1900
+      main: english
+      minor: algonquian
+      note: カナダ太平洋鉄道（1885）・鉱山・製紙。
+- id: lang_ontario_northeast
+  name: オンタリオ北東部（サドベリー）
+  select:
+    pieces: [CAN-Northeast_Nord_est]
+  timeline:
+    - from: 1648
+      main: algonquian
+    - from: 1900
+      main: english
+      minor: french
+      note: フランス系カナダ人の鉱山・林業の労働者（フランコ・オンタリアン）。
+- id: lang_far_north_ontario
+  name: オンタリオ・マニトバの極北
+  select:
+    pieces: [CAN-Northeast_Nord_est_Far_North, CAN-Northwest_Nord_ouest_Far_North]
+  timeline:
+    - from: 1648
+      main: algonquian
+      note: クリー（オジ・クリー）の地。ハドソン湾会社のムース・ファクトリー（1673）などの交易所。
+- id: lang_red_river
+  name: レッドリヴァー（マニトバ 1870 年の州）
+  select:
+    pieces: [CAN-Manitoba_1870_Province]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: siouan
+      note: クリー・オジブワ・アシニボイン（スー系）の地。
+    - from: 1820
+      main: french
+      minor: english
+      note: セルカーク卿のレッドリヴァー植民地（1812）。フランス語系のメティ（カトリック）と英語系のメティ（カントリー・ボーン）が住民の多数を占めた。メティの言葉ミチフは、クリー語とフランス語が混ざってできた。
+      source: "https://ja.wikipedia.org/wiki/メティ"
+    - from: 1880
+      main: english
+      minor: french
+      note: レッドリヴァーの反乱（1869–70）の後、マニトバ州（1870）。オンタリオからの英語系の入植者が多数になり、メティの多くは西へ移った。
+    - from: 1900
+      main: english
+      minor: ukrainian
+      note: ウクライナ（ガリツィア）・ドイツ系メノナイト・アイスランドからの移民。ウィニペグは 1910 年代に多民族の都市になった。
+    - from: 1950
+      main: english
+- id: lang_prairies
+  name: カナダの平原（マニトバ・サスカチュワン・アルバータの南部）
+  select:
+    pieces: [CAN-Manitoba, CAN-Manitoba_1881_Extension, CAN-Saskatchewan, CAN-Alberta]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: siouan
+      note: 平原クリー・ブラックフット連合（アルゴンキン系）・アシニボイン（スー系）の地（ルパートランド、ハドソン湾会社の領域）。
+    - from: 1900
+      main: english
+      minor: algonquian
+      note: 北西の反乱（1885、ルイ・リエル）の後、カナダ太平洋鉄道（1885）とドミニオン土地法（1872）で入植が進んだ。
+    - from: 1910
+      main: english
+      minor: ukrainian
+      note: ウクライナ・ドイツ・スカンディナヴィアからの大量の移民（1896–1914、内務大臣シフトンの移民政策）。アルバータ・サスカチュワンは 1905 年に州。
+      source: "https://en.wikipedia.org/wiki/Ukrainian_Canadians"
+    - from: 1950
+      main: english
+- id: lang_prairies_north
+  name: カナダの平原の北部
+  select:
+    pieces: [CAN-Saskatchewan_North, CAN-Alberta_North]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      minor: algonquian
+      note: デネ（チペワイアン・ビーバーなど、アサバスカ系）とウッドランド・クリーの地。
+    - from: 1950
+      main: english
+      minor: algonquian
+      note: アサバスカのオイルサンド（フォート・マクマレー）・ウラン鉱山の開発。
+- id: lang_northwest_territories
+  name: 北西準州・ユーコン
+  select:
+    pieces: [CAN-Northwest_Territories, CAN-Yukon]
+  timeline:
+    - from: 1648
+      main: athabaskan
+      note: デネ（スレイヴィー・ドグリブ・グウィッチンなど、アサバスカ系）の地。マッケンジー川のデルタにはイヌヴィアルイト（イヌイット）。
+    - from: 1970
+      main: english
+      minor: athabaskan
+      note: 鉱山・石油の開発と行政の町（イエローナイフ）。北西準州の公用語は英語・フランス語と 9 つの先住民の言語。
+- id: lang_yukon
+  name: ユーコン
+  select:
+    pieces: [CAN-Yukon]
+  timeline:
+    - from: 1648
+      main: athabaskan
+    - from: 1900
+      main: english
+      minor: athabaskan
+      note: クロンダイクのゴールドラッシュ（1896–99）でドーソン・シティの人口は 3 万人を超えた。
+    - from: 1950
+      main: english
+- id: lang_british_columbia
+  name: ブリティッシュコロンビアの本土
+  select:
+    pieces: [CAN-British_Columbia]
+  timeline:
+    - from: 1648
+      main: pacific_na
+      minor: athabaskan
+      note: 海岸のサリシュ・クワクワカワクゥ・ヌーチャヌルス・チムシアン・ニスガ（北西海岸）と、内陸のアサバスカ系（キャリア・チルコーティン）・サリシュ系の地。
+    - from: 1880
+      main: english
+      minor: pacific_na
+      note: フレーザー川のゴールドラッシュ（1858）、1871 年にカナダに加わった。カナダ太平洋鉄道（1885）の建設には中国人労働者が使われた。
+    - from: 1910
+      main: english
+    - from: 2000
+      main: english
+      minor: chinese
+      note: 香港の返還（1997）の前後に香港・台湾・中国本土からの移民が増え、ヴァンクーヴァーの住民の約 2 割が中国系になった。南アジア系も多い。
+- id: lang_vancouver_island
+  name: ヴァンクーヴァー島・ハイダ・グワイ
+  select:
+    pieces: [CAN-British_Columbia_Vancouver_Island, CAN-British_Columbia_Haida_Gwaii]
+  timeline:
+    - from: 1648
+      main: pacific_na
+      note: ヌーチャヌルス・クワクワカワクゥ・コースト・サリシュ・ハイダの地。クック（1778）、スペイン・イギリスのヌートカ湾の危機（1789–94）。
+    - from: 1870
+      main: english
+      minor: pacific_na
+      note: ヴィクトリア（1843 年にハドソン湾会社の砦）。ヴァンクーヴァー島植民地（1849）。
+    - from: 1910
+      main: english
+- id: lang_haida_gwaii
+  name: ハイダ・グワイ（クイーン・シャーロット諸島）
+  select:
+    pieces: [CAN-British_Columbia_Haida_Gwaii]
+  timeline:
+    - from: 1910
+      main: english
+      minor: pacific_na
+      note: ハイダ人は天然痘（1862）で約 9 割が亡くなった。
+- id: lang_spm
+  name: サンピエール島・ミクロン島
+  select:
+    iso: [SPM]
+  timeline:
+    - from: 1648
+      main: french
+      note: フランスの漁民の島。1763 年のパリ条約でフランスに残された（ヌーヴェル・フランスの最後の名残）。
+- id: lang_bermuda
+  name: バミューダ
+  select:
+    iso: [BMU]
+  timeline:
+    - from: 1648
+      main: english
+      note: イギリスの植民地。18 世紀からアフリカ系の住民が多数（言葉は英語）。
+
+# ================================================================
+# メキシコ
+# ================================================================
+- id: lang_mexico_central
+  name: メキシコ中央高原（メキシコ盆地・プエブラ・トラスカラ・モレロス・イダルゴ・ゲレロ・ベラクルス）
+  select:
+    adm1: ["MEX/Mexico", "MEX/Puebla", "MEX/Tlaxcala", "MEX/Morelos", "MEX/Hidalgo", "MEX/Guerrero", "MEX/Veracruz de Ignacio de la Llave"]
+  timeline:
+    - from: 1648
+      main: nahuatl
+      minor: spanish
+      note: ヌエバ・エスパーニャの中心部。先住民の人口は征服と疫病で 16 世紀に激減したが、17 世紀半ばには住民の多数はなおナワトル語を話す先住民（ほかにオトミ語・トトナコ語など）だった。先住民の村（プエブロ・デ・インディオス）は自治の「インディオ共和国」として残された。
+      source: "https://ja.wikipedia.org/wiki/ナワトル語"
+    - from: 1850
+      main: spanish
+      minor: nahuatl
+      note: メスティーソ（混血）が増え、スペイン語が多数の言葉になった。改革法（レルド法 1856）で先住民の村の共有地が解体された。
+    - from: 1930
+      main: spanish
+      note: メキシコ革命後の国民統合の政策（スペイン語の教育とメスティーソを国民とする考え方〈「宇宙的人種」〉）。
+- id: lang_puebla_hidalgo_veracruz
+  name: プエブラ北部・イダルゴ・ベラクルス北部・ゲレロ（先住民の多い山地）
+  select:
+    adm1: ["MEX/Puebla", "MEX/Hidalgo", "MEX/Veracruz de Ignacio de la Llave", "MEX/Guerrero"]
+  timeline:
+    - from: 1648
+      main: nahuatl
+      minor: spanish
+    - from: 1880
+      main: spanish
+      minor: nahuatl
+      note: シエラ・ノルテ・デ・プエブラ・ワステカ（ナワトル語・トトナコ語・オトミ語・テネク語）や、ゲレロの山地（ナワトル語・ミシュテカ語・トラパネカ語）には先住民の言葉が多く残る（州の住民の 1〜2 割）。
+    - from: 1950
+      main: spanish
+- id: lang_mexico_city
+  name: メキシコ市
+  select:
+    adm1: ["MEX/Distrito Federal"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: nahuatl
+      note: ヌエバ・エスパーニャ副王領の首都。スペイン人・クリオーリョ・メスティーソ・ムラート・先住民（サン・フアン・テノチティトラン、トラテロルコの地区）が住んだ。
+      source: "https://ja.wikipedia.org/wiki/メキシコシティ"
+    - from: 1800
+      main: spanish
+- id: lang_oaxaca
+  name: オアハカ
+  select:
+    adm1: ["MEX/Oaxaca"]
+  timeline:
+    - from: 1648
+      main: oto_manguean
+      minor: spanish
+      note: サポテカ人・ミシュテカ人・マサテコ人・チナンテコ人（オト・マンゲ語族）、ミヘ人など。山がちなオアハカでは先住民の村の共同体が強く残った。サポテカ人のベニート・フアレスは最初の先住民出身の大統領（1858–72）。
+      source: "https://ja.wikipedia.org/wiki/サポテカ文明"
+    - from: 1900
+      main: oto_manguean
+      minor: spanish
+      note: 先住民の言葉を話す人は 2020 年に州の住民の 31%、先住民と自らをとらえる人は約 7 割。
+- id: lang_chiapas
+  name: チアパス（低地・海岸）
+  select:
+    adm1: ["MEX/Chiapas"]
+  timeline:
+    - from: 1648
+      main: mayan
+      minor: spanish
+      note: グアテマラ総督領の一部（1824 年にメキシコに加わった）。マヤ系（ツォツィル・ツェルタル・チョル・トホラバル・マム）とソケ人の地。
+    - from: 1880
+      main: spanish
+      minor: mayan
+      note: 太平洋岸のソコヌスコのコーヒー農園と、グリハルバ川流域の牧場（ラディーノ〈スペイン語を話す人々〉の地）。
+- id: lang_chiapas_highlands
+  name: チアパスの高地とラカンドンの森（マヤ系の村々）
+  select:
+    pieces: [MEX-Chamula, MEX-Zinacantan, MEX-Chenalho, MEX-Mitontic, MEX-Larrainzar, MEX-Chalchihuitan, MEX-Pantelho, MEX-Tenejapa, MEX-Oxchuc, MEX-Huixtan, MEX-San_Juan_Cancuc, MEX-Chanal, MEX-Amatenango_del_Valle, MEX-Aldama, MEX-Santiago_el_Pinar, MEX-San_Andres_Duraznal, MEX-Ocosingo, MEX-Chilon, MEX-Sitala, MEX-Yajalon, MEX-Tila, MEX-Tumbala, MEX-Salto_de_Agua, MEX-Sabanilla, MEX-Palenque, MEX-Bochil, MEX-El_Bosque, MEX-Simojovel, MEX-Huitiupan, MEX-Jitotol, MEX-Pueblo_Nuevo_Solistahuacan, MEX-Las_Margaritas, MEX-Altamirano, MEX-Maravilla_Tenejapa, MEX-Amatan, MEX-Ixtapa, MEX-San_Lucas, MEX-Rayon, MEX-Pantepec, MEX-Tapalapa, MEX-Ocotepec, MEX-Coapilla, MEX-Francisco_Leon, MEX-Chapultenango]
+  timeline:
+    - from: 1648
+      main: mayan
+      minor: spanish
+      note: 高地（ロス・アルトス）のツォツィル人・ツェルタル人の村々、北部のチョル人、東部のトホラバル人、北西部のソケ人（ミヘ・ソケ系）。ツェルタルの反乱（1712）。
+    - from: 1800
+      main: mayan
+      note: 1994 年のサパティスタ民族解放軍（EZLN）の蜂起は、北米自由貿易協定（NAFTA）の発効の日に、この地域で起きた。
+      source: "https://ja.wikipedia.org/wiki/サパティスタ民族解放軍"
+- id: lang_yucatan
+  name: ユカタン
+  select:
+    adm1: ["MEX/Yucatan"]
+  timeline:
+    - from: 1648
+      main: mayan
+      minor: spanish
+      note: ユカテコ・マヤ語の地。メリダ（1542）を中心とするスペインの支配。スペイン人もマヤ語を覚えるほど、マヤ語が広く使われた。
+    - from: 1950
+      main: mayan
+      minor: spanish
+      note: マヤ語を話す人は減った（2020 年に州の住民の 23%）が、先住民と自らをとらえる人は約 65%。
+- id: lang_campeche_qroo
+  name: カンペチェ・キンタナロー
+  select:
+    adm1: ["MEX/Campeche", "MEX/Quintana Roo"]
+  timeline:
+    - from: 1648
+      main: mayan
+      minor: spanish
+      note: キンタナローの東部は、カスタ戦争（1847–1901）のマヤの反乱者のチャン・サンタ・クルスの地。
+      source: "https://ja.wikipedia.org/wiki/カスタ戦争"
+    - from: 1970
+      main: spanish
+      minor: mayan
+      note: カンクンのリゾート開発（1970–）と国内からの移住で、スペイン語の住民が多数になった。
+- id: lang_tabasco
+  name: タバスコ
+  select:
+    adm1: ["MEX/Tabasco"]
+  timeline:
+    - from: 1648
+      main: mayan
+      minor: spanish
+      note: チョンタル・マヤ人の地。
+    - from: 1800
+      main: spanish
+      minor: mayan
+    - from: 1900
+      main: spanish
+- id: lang_michoacan
+  name: ミチョアカン
+  select:
+    adm1: ["MEX/Michoacan de Ocampo"]
+  timeline:
+    - from: 1648
+      main: mesoamerican_other
+      minor: spanish
+      note: プレペチャ人（タラスコ、孤立した言語）の地。司教バスコ・デ・キロガの「病院村」。
+      source: "https://ja.wikipedia.org/wiki/プレペチャ族"
+    - from: 1850
+      main: spanish
+      minor: mesoamerican_other
+    - from: 1930
+      main: spanish
+- id: lang_bajio_west
+  name: バヒオ・メキシコ西部（グアナフアト・ケレタロ・ハリスコ・コリマ・アグアスカリエンテス・サカテカス・サンルイスポトシ）
+  select:
+    adm1: ["MEX/Guanajuato", "MEX/Queretaro de Arteaga", "MEX/Jalisco", "MEX/Colima", "MEX/Aguascalientes", "MEX/Zacatecas", "MEX/San Luis Potosi"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: oto_manguean
+      note: サカテカス・グアナフアトの銀山（16 世紀〜）と、農業・牧畜の地バヒオ。北の遊牧民（チチメカ）との戦争（1550–90）の後、スペイン人・メスティーソと、南から移されたオトミ人・プレペチャ人・トラスカラ人の地になった。グアダラハラはヌエバ・ガリシアの中心。
+      source: "https://en.wikipedia.org/wiki/Chichimeca_War"
+    - from: 1750
+      main: spanish
+- id: lang_huasteca_slp
+  name: サンルイスポトシ（ワステカ）
+  select:
+    adm1: ["MEX/San Luis Potosi"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: nahuatl
+      note: 東部のワステカにはナワトル語・テネク語（ワステコ、マヤ系）を話す人々。
+    - from: 1900
+      main: spanish
+- id: lang_nayarit
+  name: ナヤリット
+  select:
+    adm1: ["MEX/Nayarit"]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      minor: spanish
+      note: コラ人・ウイチョル人（ユト・アステカ系）の山地。ナヤリの山地は 1722 年までスペインに征服されなかった。
+    - from: 1800
+      main: spanish
+      minor: uto_aztecan
+    - from: 1900
+      main: spanish
+- id: lang_mexico_northwest
+  name: メキシコ北西部（シナロア・ドゥランゴ）
+  select:
+    adm1: ["MEX/Sinaloa", "MEX/Durango"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: uto_aztecan
+      note: 鉱山の町（ドゥランゴ 1563）と、テペワン人・アカシー人・マヨ人（ユト・アステカ系）の地。テペワンの反乱（1616–20）。
+    - from: 1800
+      main: spanish
+- id: lang_sonora_chihuahua
+  name: ソノラ・チワワ
+  select:
+    adm1: ["MEX/Sonora", "MEX/Chihuahua"]
+  timeline:
+    - from: 1648
+      main: uto_aztecan
+      minor: spanish
+      note: ヤキ・マヨ・オパタ・ピマ（ソノラ）、タラウマラ（ララムリ）・コンチョ（チワワ）の地。イエズス会の伝道所と、パラル（1631）の銀山。北部はアパッチ人の襲撃の地。
+      source: "https://ja.wikipedia.org/wiki/ヤキ族"
+    - from: 1800
+      main: spanish
+      minor: uto_aztecan
+    - from: 1910
+      main: spanish
+      note: ディアス政権のヤキ戦争（1870 年代〜1900 年代）で、ヤキ人の多くはユカタンのサイザル麻の農園へ送られた。チワワの山地（シエラ・タラウマラ）にはタラウマラ人が残る。
+- id: lang_coahuila_nl_tamps
+  name: コアウイラ・ヌエボレオン・タマウリパス
+  select:
+    adm1: ["MEX/Coahuila de Zaragoza", "MEX/Nuevo Leon", "MEX/Tamaulipas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: コアウイルテカ系などの諸集団（孤立した言語）の地。ヌエボ・レオン（モンテレイ 1596）にスペイン人の町。
+    - from: 1730
+      main: spanish
+      minor: athabaskan
+      note: コアウイラの植民（モンクローバ 1689、サルティーヨ）。北部はリパン・アパッチ、のちコマンチの襲撃の地。
+    - from: 1850
+      main: spanish
+- id: lang_nuevo_leon
+  name: ヌエボレオン（モンテレイ）
+  select:
+    adm1: ["MEX/Nuevo Leon"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: other
+    - from: 1750
+      main: spanish
+- id: lang_baja_california
+  name: バハ・カリフォルニア
+  select:
+    adm1: ["MEX/Baja California", "MEX/Baja California Sur"]
+  timeline:
+    - from: 1648
+      main: pacific_na
+      note: ペリクー・グアイクラ（南部）、コチミー・クメヤーイ・パイパイ（北部、ユマ系）の地。
+    - from: 1740
+      main: pacific_na
+      minor: spanish
+      note: イエズス会のロレト伝道所（1697）。
+    - from: 1800
+      main: spanish
+      note: 先住民は病気で激減した。
+- id: lang_baja_north
+  name: バハ・カリフォルニア北部
+  select:
+    adm1: ["MEX/Baja California"]
+  timeline:
+    - from: 1648
+      main: pacific_na
+    - from: 1900
+      main: spanish
+      note: ドミニコ会の伝道所（1774–）。20 世紀のティフアナ・メヒカリの成長。
+
+# ================================================================
+# 中米
+# ================================================================
+- id: lang_guatemala_highlands
+  name: グアテマラ西部高地（マヤ系の地）
+  select:
+    adm1: ["GTM/Huehuetenango", "GTM/Quiché", "GTM/Totonicapán", "GTM/Sololá", "GTM/Chimaltenango", "GTM/Alta Verapaz", "GTM/Baja Verapaz", "GTM/Quetzaltenango", "GTM/Suchitepéquez", "GTM/Sacatepéquez", "GTM/San Marcos"]
+  timeline:
+    - from: 1648
+      main: mayan
+      minor: spanish
+      note: キチェ・カクチケル・マム・ケクチ・ツトゥヒルなど 20 あまりのマヤ系の言語。『ポポル・ヴフ』（キチェ人の神話）。
+      source: "https://ja.wikipedia.org/wiki/グアテマラ"
+    - from: 1800
+      main: mayan
+      note: 内戦（1960–96）の中で、高地のマヤ系の村々は軍の虐殺の被害を受けた（約 20 万人の死者・行方不明者の多くはマヤ系）。キチェ人のリゴベルタ・メンチュウは 1992 年にノーベル平和賞を受けた。
+      source: "https://ja.wikipedia.org/wiki/グアテマラ内戦"
+- id: lang_guatemala_mixed
+  name: グアテマラの太平洋側の高地・低地（ケツァルテナンゴ・サンマルコス・サカテペケス・スチテペケス）
+  select:
+    adm1: ["GTM/Quetzaltenango", "GTM/San Marcos", "GTM/Sacatepéquez", "GTM/Suchitepéquez"]
+  timeline:
+    - from: 1648
+      main: mayan
+      minor: spanish
+      note: アンティグア（サンティアゴ・デ・ロス・カバジェロス、1543–1773 年の首都）はサカテペケス。
+    - from: 1900
+      main: spanish
+      minor: mayan
+      note: コーヒー農園の地。ラディーノ（スペイン語を話すメスティーソ）が多数になった。
+- id: lang_guatemala_east
+  name: グアテマラ東部・首都・太平洋岸
+  select:
+    iso: [GTM]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: mayan
+      note: 東部はポコマム・チョルティ（マヤ系）とシンカ人の地に、ラディーノの牧場と町。
+    - from: 1800
+      main: spanish
+      note: グアテマラ・シティ（ヌエバ・グアテマラ、1776 年に首都）。
+- id: lang_peten
+  name: ペテン
+  select:
+    adm1: ["GTM/Petén"]
+  timeline:
+    - from: 1648
+      main: mayan
+      note: イツァ人の王国（ノフペテン）は 1697 年まで独立を保った（メソアメリカの最後の独立国家）。
+      source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Petén"
+    - from: 1970
+      main: spanish
+      minor: mayan
+      note: 熱帯林の開拓（1960 年代〜）で、ラディーノとケクチ人が移住した。
+- id: lang_izabal
+  name: イサバル（カリブ海岸）
+  select:
+    adm1: ["GTM/Izabal"]
+  timeline:
+    - from: 1648
+      main: mayan
+    - from: 1900
+      main: spanish
+      minor: mayan
+      note: バナナ農園（ユナイテッド・フルーツ）。リビングストンにはガリフナ人。
+- id: lang_belize
+  name: ベリーズ
+  select:
+    iso: [BLZ]
+  timeline:
+    - from: 1648
+      main: mayan
+      note: マヤ人（モパン・ユカテコ・ケクチ）の地。
+    - from: 1860
+      main: spanish
+      minor: mayan
+      note: カスタ戦争（1847–）を逃れたユカタンのメスティーソとマヤ人が北部・西部（コロサル・オレンジウォーク・カヨ）に移り住んだ。
+- id: lang_belize_district
+  name: ベリーズ・シティ・スタンクリーク
+  select:
+    adm1: ["BLZ/Belize", "BLZ/Stann Creek"]
+  timeline:
+    - from: 1648
+      main: mayan
+    - from: 1790
+      main: creole_english
+      minor: english
+      note: イギリスのベイメン（ログウッド・マホガニーの伐採者）とアフリカ系の奴隷。ベリーズ・クリオール（英語系クレオール語）が共通語になった。スタンクリークにはガリフナ人（1802・1832–）が住みついた。
+      source: "https://en.wikipedia.org/wiki/Belizean_Creole"
+    - from: 1990
+      main: creole_english
+      minor: spanish
+      note: 中米の内戦を逃れた難民（グアテマラ・エルサルバドル・ホンジュラス）の移住で、メスティーソがベリーズ全体の最大の集団になった（2000 年）。
+- id: lang_toledo
+  name: トレド（ベリーズ南部）
+  select:
+    adm1: ["BLZ/Toledo"]
+  timeline:
+    - from: 1648
+      main: mayan
+      note: グアテマラから移ったモパン・ケクチのマヤ人が多数。
+- id: lang_honduras
+  name: ホンジュラス中部・南部
+  select:
+    iso: [HND]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: mesoamerican_other
+      note: コマヤグア（総督領の州都）・テグシガルパ（銀山）。レンカ人（孤立した言語）の地。
+    - from: 1800
+      main: spanish
+- id: lang_honduras_west
+  name: ホンジュラス西部（レンカの地）
+  select:
+    adm1: ["HND/Lempira", "HND/Intibucá", "HND/La Paz", "HND/Ocotepeque", "HND/Copán"]
+  timeline:
+    - from: 1648
+      main: mesoamerican_other
+      minor: spanish
+      note: レンカ人の村々（征服期にレンピラが抵抗した）。コパンはマヤ系のチョルティ人。
+    - from: 1850
+      main: spanish
+      minor: mesoamerican_other
+      note: レンカ語は 20 世紀に話されなくなったが、レンカ人として自らをとらえる人は多い。
+- id: lang_honduras_north
+  name: ホンジュラスの北海岸・オランチョ
+  select:
+    adm1: ["HND/Atlántida", "HND/Colón", "HND/Cortés", "HND/Yoro", "HND/Olancho"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: spanish
+      note: トルパン（ヒカケ）・ペチ人（チブチャ系）の地。トルヒーヨ・プエルト・カバリョスの港。
+    - from: 1800
+      main: spanish
+      minor: arawak
+      note: セントヴィンセントから追放されたガリフナ人（1797）が海岸に村々を作った（ガリフナ語はアラワク語族）。
+    - from: 1900
+      main: spanish
+      note: バナナ農園（ユナイテッド・フルーツ・スタンダード・フルーツ）と「バナナ共和国」。サン・ペドロ・スーラの成長。
+- id: lang_mosquitia
+  name: モスキート海岸（ホンジュラスのグラシアス・ア・ディオス、ニカラグアのカリブ海北部）
+  select:
+    adm1: ["HND/Gracias a Dios", "NIC/North Carribean Coast Autonomous Region"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      note: ミスキート人（ミスマルパ語族）・マヤンナ（スモ）人。ミスキート人はアフリカ系の難破者・逃亡奴隷と混ざり、イギリスと結んでミスキート王国（1630 年代〜1860、イギリスの保護）を作った。
+      source: "https://ja.wikipedia.org/wiki/ミスキート族"
+    - from: 1990
+      main: chibchan
+      minor: spanish
+      note: 太平洋側のメスティーソの入植が進んだ。ニカラグア内戦（1980 年代）ではミスキート人の一部がサンディニスタ政権に抵抗した。
+- id: lang_bay_islands
+  name: バイア諸島（ホンジュラス）
+  select:
+    adm1: ["HND/Bay Islands"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      note: ペチ人の島。海賊の拠点。
+    - from: 1840
+      main: creole_english
+      note: ケイマン諸島・ジャマイカからのイギリス系・アフリカ系の入植。1860 年にイギリスがホンジュラスに返した。
+    - from: 1990
+      main: spanish
+      minor: creole_english
+      note: 観光開発と本土からの移住。
+- id: lang_el_salvador
+  name: エルサルバドル
+  select:
+    iso: [SLV]
+  timeline:
+    - from: 1648
+      main: nahuatl
+      minor: spanish
+      note: ピピル人（ナワトル語の一方言）の地クスカトラン。東部はレンカ人・カカオペラ人。
+    - from: 1800
+      main: spanish
+      minor: nahuatl
+      note: 藍（インディゴ）の農園。
+    - from: 1932
+      main: spanish
+      note: 1932 年の農民の蜂起の弾圧（ラ・マタンサ）で、ピピル人の数千〜数万人が殺され、先住民の言葉と服装は隠されるようになった。
+      source: "https://ja.wikipedia.org/wiki/ラ・マタンサ"
+- id: lang_el_salvador_east
+  name: エルサルバドル東部
+  select:
+    adm1: ["SLV/Departamento de San Miguel", "SLV/Departamento de La Unión", "SLV/Departamento de Morazán", "SLV/Departamento de Usulután"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: mesoamerican_other
+      note: レンカ人の地。
+    - from: 1800
+      main: spanish
+- id: lang_nicaragua_pacific
+  name: ニカラグアの太平洋側（レオン・グラナダ・マナグア）
+  select:
+    iso: [NIC]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: oto_manguean
+      note: レオン・グラナダのスペイン人の町と、チョロテガ人（オト・マンゲ系）・ニカラオ人（ナワトル系）の村。
+    - from: 1800
+      main: spanish
+- id: lang_nicaragua_central
+  name: ニカラグア中部の山地（マタガルパ・ヒノテガ・ヌエバ・セゴビア・チョンタレス）
+  select:
+    adm1: ["NIC/Matagalpa (Departemento)", "NIC/Jinotega (Departamento)", "NIC/Nueva Segovia", "NIC/Madriz", "NIC/Estelí", "NIC/Boaco", "NIC/Chontales"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      minor: spanish
+      note: マタガルパ人（ミスマルパ系）などの地。
+    - from: 1850
+      main: spanish
+      note: コーヒー農園の開発。サンディーノの反米ゲリラ戦（1927–33）の地。
+- id: lang_nicaragua_south_caribbean
+  name: ニカラグアのカリブ海南部（ブルーフィールズ）・リオ・サン・フアン
+  select:
+    adm1: ["NIC/South Atlantic Autonomous Region", "NIC/Rio San Juan"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      note: ラマ人・マヤンナ人・ミスキート人の地。
+    - from: 1850
+      main: creole_english
+      minor: chibchan
+      note: ブルーフィールズのクレオール（ジャマイカ系などのアフリカ系、英語系クレオール語）がミスキート保護領の中心。1894 年にニカラグアが併合した。
+    - from: 1980
+      main: spanish
+      minor: creole_english
+      note: 太平洋側からのメスティーソの入植で、スペイン語の住民が多数になった。
+- id: lang_rio_san_juan
+  name: リオ・サン・フアン
+  select:
+    adm1: ["NIC/Rio San Juan"]
+  timeline:
+    - from: 1648
+      main: chibchan
+    - from: 1900
+      main: spanish
+      note: 太平洋とカリブ海を結ぶ運河の候補地とされた川の流域。
+- id: lang_costa_rica
+  name: コスタリカ
+  select:
+    iso: [CRI]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: chibchan
+      note: 中央盆地のカルタゴ（1563）を中心とする小さな農民の植民地。先住民の人口は少なかった。
+    - from: 1750
+      main: spanish
+- id: lang_guanacaste
+  name: グアナカステ・プンタレナス
+  select:
+    adm1: ["CRI/Provincia Guanacaste", "CRI/Provincia Puntarenas"]
+  timeline:
+    - from: 1648
+      main: oto_manguean
+      minor: spanish
+      note: チョロテガ人（オト・マンゲ系、グアナカステ）と、南部のボルカ人・ブリブリ人（チブチャ系）。
+    - from: 1800
+      main: spanish
+- id: lang_limon
+  name: リモン（コスタリカのカリブ海岸）
+  select:
+    adm1: ["CRI/Provincia Limón"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      note: ブリブリ人・カベカル人（チブチャ系）の地（タラマンカ）。
+    - from: 1890
+      main: creole_english
+      minor: spanish
+      note: 鉄道（1871–90）とバナナ農園の労働者として、ジャマイカなどからアフリカ系の人々が移住した（リモン・クレオール英語）。黒人の中央盆地への移住は 1948 年まで制限された。
+      source: "https://en.wikipedia.org/wiki/Afro-Costa_Ricans"
+    - from: 1960
+      main: spanish
+      minor: creole_english
+- id: lang_panama
+  name: パナマ
+  select:
+    iso: [PAN]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: chibchan
+      note: パナマ地峡は、ペルーの銀をポルトベーロへ運ぶ道（カミノ・レアル）の地。パナマ市は 1671 年に海賊モーガンに焼かれ、1673 年に移された。地峡の住民の多くはアフリカ系（シマロン）とメスティーソ。
+    - from: 1750
+      main: spanish
+- id: lang_panama_canal
+  name: パナマ運河地帯・コロン
+  select:
+    pieces: [PAN-Colon_Province_Canal_Zone, PAN-Provincia_de_Panama_Canal_Zone, PAN-Provincia_de_Panama_Oeste_Canal_Zone, PAN-Colon_Province]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: chibchan
+    - from: 1750
+      main: spanish
+    - from: 1860
+      main: spanish
+      minor: creole_english
+      note: パナマ鉄道（1850–55）の建設に西インド諸島の労働者が集まった。コロンは鉄道の終点として作られた町。
+    - from: 1910
+      main: english
+      minor: creole_english
+      note: アメリカ合衆国のパナマ運河地帯（1903–79）。運河の建設（1904–14）には約 4 万人の西インド諸島の労働者が働いた。アメリカ人（ゾーニアン）は「ゴールド」、西インド諸島の人は「シルバー」と分けられた。
+      source: "https://ja.wikipedia.org/wiki/パナマ運河地帯"
+    - from: 1980
+      main: spanish
+      minor: creole_english
+      note: パナマ運河条約（1977）で運河地帯はパナマに返還され（1979）、運河も 1999 年に返還された。
+- id: lang_colon_city
+  name: コロン県（運河地帯の外）
+  select:
+    pieces: [PAN-Colon_Province]
+  timeline:
+    - from: 1910
+      main: spanish
+      minor: creole_english
+- id: lang_panama_indigenous
+  name: パナマの先住民の地（グナ・ヤラ、ングベ・ブグレ、ボカス・デル・トロ、ダリエン）
+  select:
+    adm1: ["PAN/Comarca Guna Yala", "PAN/Comarca Ngäbe-Buglé", "PAN/Provincia de Bocas del Toro"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      note: グナ（クナ）人・ングベ人・ブグレ人（チブチャ系）。グナ人は 1925 年の反乱（トゥレ革命）で自治を得た（サン・ブラス）。
+      source: "https://ja.wikipedia.org/wiki/クナ族"
+- id: lang_bocas
+  name: ボカス・デル・トロ
+  select:
+    adm1: ["PAN/Provincia de Bocas del Toro"]
+  timeline:
+    - from: 1890
+      main: creole_english
+      minor: chibchan
+      note: バナナ農園（ユナイテッド・フルーツ）の労働者の西インド諸島系の人々。
+    - from: 1960
+      main: spanish
+      minor: chibchan
+- id: lang_darien
+  name: ダリエン
+  select:
+    adm1: ["PAN/Provincia de Darién", "PAN/Comarca Emberá-Wounaan"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      minor: sa_other
+      note: グナ人・エンベラ人・ウォウナアン人（チョコ系）の熱帯林。スコットランドのダリエン計画（1698–1700）の失敗の地。
+    - from: 1900
+      main: sa_other
+      minor: spanish
+      note: エンベラ人・ウォウナアン人とアフリカ系のダリエン人。
+- id: lang_chiriqui
+  name: チリキ・ベラグアス
+  select:
+    adm1: ["PAN/Provincia de Chiriquí", "PAN/Provincia de Veraguas"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      minor: spanish
+      note: ングベ（グアイミ）人の地。
+    - from: 1800
+      main: spanish
+      minor: chibchan
+    - from: 1950
+      main: spanish
+
+# ================================================================
+# カリブ海
+# ================================================================
+- id: lang_cuba
+  name: キューバ
+  select:
+    iso: [CUB]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: スペインの植民地。先住民（タイノ）の人口は 16 世紀に激減した。19 世紀の砂糖のプランテーションの拡大で、アフリカから約 80 万人の奴隷が連れてこられ、1841 年には奴隷と自由有色人が人口の過半数を占めた（言葉はスペイン語。ヨルバ語系の祭儀の言葉ルクミが残る）。
+      source: "https://ja.wikipedia.org/wiki/アフリカ系キューバ人"
+- id: lang_guantanamo_base
+  name: グアンタナモ米軍基地
+  select:
+    pieces: [CUB-Guantanamo_Bay_Naval_Base]
+  timeline:
+    - from: 1648
+      main: spanish
+    - from: 1903
+      main: english
+      note: アメリカ合衆国が租借した海軍基地（1903–）。
+- id: lang_hispaniola_east
+  name: ドミニカ共和国（サント・ドミンゴ）
+  select:
+    iso: [DOM]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: スペイン領サント・ドミンゴ（アメリカで最初の植民地の首府）。17〜18 世紀は牧畜の貧しい植民地だった。ハイチの支配（1822–44）を経て独立した。
+- id: lang_samana
+  name: サマナ半島
+  select:
+    adm1: ["DOM/Samaná"]
+  timeline:
+    - from: 1830
+      main: spanish
+      minor: english
+      note: ハイチのボワイエ大統領の招きで、アメリカ合衆国の解放された黒人が移住した（1824–25）。その子孫は 20 世紀まで英語を話した（サマナ英語）。
+    - from: 1950
+      main: spanish
+- id: lang_haiti
+  name: ハイチ（サン＝ドマング）
+  select:
+    iso: [HTI]
+  timeline:
+    - from: 1648
+      main: french
+      note: スペインが住民を引き揚げた（1605）西部と北のトルトゥーガ島に、フランス人のバッカニア（野牛狩り・海賊）が住みついた。
+    - from: 1700
+      main: creole_french
+      minor: french
+      note: ライスワイク条約（1697）でフランス領サン＝ドマング。砂糖・コーヒーのプランテーションに、毎年数万人のアフリカ人が連れてこられ、1789 年には奴隷が約 50 万人、白人は約 3 万人だった。奴隷の共通語としてハイチ語（フランス語系クレオール語）が生まれた。
+      source: "https://ja.wikipedia.org/wiki/ハイチ語"
+    - from: 1804
+      main: creole_french
+      note: トゥサン・ルヴェルチュールらのハイチ革命（1791–1804）で、世界で最初の黒人の共和国として独立した。フランス語は上流層の言葉、国民の大多数はハイチ語だけを話す（1987 年の憲法で公用語）。
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+- id: lang_jamaica
+  name: ジャマイカ
+  select:
+    iso: [JAM]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: other
+      note: スペインの植民地（住民は数千人）。
+    - from: 1660
+      main: english
+      minor: creole_english
+      note: 1655 年にイングランドが奪った。スペイン人の奴隷は山地に逃れてマルーンになった。
+    - from: 1700
+      main: creole_english
+      minor: english
+      note: 砂糖のプランテーションで、住民の 9 割がアフリカ系の奴隷になった。ジャマイカ・パトワ（英語系クレオール語）。マルーン戦争（1730 年代、1795）。
+      source: "https://ja.wikipedia.org/wiki/ジャマイカ・クレオール語"
+    - from: 1840
+      main: creole_english
+      note: 奴隷制の廃止（1834–38）の後、白人の農園主は減った。インド・中国からの年季契約の労働者も来た。
+- id: lang_bahamas
+  name: バハマ
+  select:
+    iso: [BHS]
+  timeline:
+    - from: 1648
+      main: english
+      note: エルーセラ・アドヴェンチャラーズ（1648）。ナッソーは 18 世紀初めに海賊の拠点になった（黒ひげなど）。
+    - from: 1790
+      main: creole_english
+      minor: english
+      note: アメリカ独立戦争後、ロイヤリストとその奴隷が移住し、アフリカ系が多数になった（バハマ・クレオール）。
+- id: lang_barbados
+  name: バルバドス
+  select:
+    iso: [BRB]
+  timeline:
+    - from: 1648
+      main: english
+      minor: creole_english
+      note: 1627 年からのイギリスの植民地。1640 年代の「砂糖革命」で、白人の年季奉公人に代わってアフリカ系の奴隷が増えた（1650 年に白人 3 万人・奴隷 2 万人）。
+      source: "https://en.wikipedia.org/wiki/Sugar_Revolution"
+    - from: 1680
+      main: creole_english
+      minor: english
+      note: 奴隷が住民の多数になった（ベイジャン）。バルバドスの奴隷法（1661）はほかのイギリス植民地の手本になった。
+    - from: 1850
+      main: creole_english
+- id: lang_leewards
+  name: リーワード諸島（アンティグア・セントキッツ・ネイヴィス・モントセラト・アンギラ・英領ヴァージン諸島）
+  select:
+    iso: [ATG, KNA, MSR, AIA, VGB]
+  timeline:
+    - from: 1648
+      main: english
+      note: イギリスの植民地（セントキッツは 1624 年、イギリスとフランスで島を分けていた〈1713 年まで〉）。モントセラトはアイルランド系のカトリックの入植地。
+    - from: 1700
+      main: creole_english
+      minor: english
+      note: 砂糖のプランテーションでアフリカ系の奴隷が住民の大多数になった。
+    - from: 1850
+      main: creole_english
+- id: lang_cayman_tca
+  name: ケイマン諸島・タークス・カイコス諸島
+  select:
+    iso: [CYM, TCA]
+  timeline:
+    - from: 1680
+      main: english
+      note: タークス諸島の塩田（バミューダの塩採り、1680 年代〜）、ケイマン諸島の入植（1730 年代〜）。
+    - from: 1790
+      main: english
+      minor: creole_english
+      note: アフリカ系の住民が増えた（タークス・カイコスは 1790 年代からロイヤリストの綿花農園。のちアフリカ系が多数）。
+- id: lang_tca
+  name: タークス・カイコス諸島
+  select:
+    iso: [TCA]
+  timeline:
+    - from: 1680
+      main: english
+    - from: 1800
+      main: creole_english
+      minor: english
+- id: lang_french_antilles
+  name: グアドループ・マルティニーク
+  select:
+    iso: [GLP, MTQ]
+  timeline:
+    - from: 1648
+      main: french
+      minor: carib
+      note: フランスの植民地（1635）。カリブ人（カリナゴ）は 1660 年までにほぼ追い出された。
+    - from: 1690
+      main: creole_french
+      minor: french
+      note: 砂糖のプランテーションで奴隷が住民の多数になり、アンティル・クレオール語が生まれた（エメ・セゼールらのネグリチュード運動〈1930 年代〜〉はマルティニークから）。
+      source: "https://ja.wikipedia.org/wiki/アンティル・クレオール語"
+    - from: 1850
+      main: creole_french
+      minor: french
+      note: 奴隷制の廃止（1848、シェルシェール）。1946 年にフランスの海外県になった。インド系の年季契約の労働者（1853–89）も来た。
+- id: lang_st_barth
+  name: サン・バルテルミー島
+  select:
+    iso: [BLM]
+  timeline:
+    - from: 1648
+      main: french
+      note: ノルマンディー・ブルターニュ出身のフランス人の島。1784–1878 年はスウェーデン領（首都グスタヴィア）。砂糖の農園に向かない小さな島で、白人の住民が多い。
+- id: lang_st_martin
+  name: サン・マルタン島・シント・マールテン
+  select:
+    iso: [MAF, SXM]
+  timeline:
+    - from: 1648
+      main: english
+      minor: french
+      note: コンコルディア条約（1648）で、島をフランス（北）とオランダ（南）が分けた。入植者にはイギリス系も多かった。
+      source: "https://ja.wikipedia.org/wiki/セント・マーチン島"
+    - from: 1750
+      main: creole_english
+      minor: french
+      note: 島の両側でアフリカ系の住民の英語系クレオール語が共通語になった。
+- id: lang_dominica_stlucia
+  name: ドミニカ・セントルシア
+  select:
+    iso: [DMA, LCA]
+  timeline:
+    - from: 1648
+      main: carib
+      note: カリナゴ（カリブ人）の島。カリナゴの言葉（イエリ語）はアラワク語族だが、男性の言葉にカリブ語の語彙が多かった（地図ではカリブ語族の色）。
+      source: "https://ja.wikipedia.org/wiki/カリナゴ"
+    - from: 1720
+      main: creole_french
+      minor: carib
+      note: フランス人の入植（セントルシアは 1650 年代から、ドミニカは 18 世紀）。
+    - from: 1790
+      main: creole_french
+      note: イギリス領になった後も（ドミニカ 1763、セントルシア 1814）、住民の言葉はフランス語系クレオール語（クウェヨル）。
+- id: lang_grenada
+  name: グレナダ
+  select:
+    iso: [GRD]
+  timeline:
+    - from: 1648
+      main: carib
+      note: カリブ人の島。1651 年にフランス人に追いつめられたカリブ人が崖から身を投げたと伝えられる（ソトゥール）。
+    - from: 1660
+      main: creole_french
+      minor: french
+      note: フランスの植民地（1649–1763）。
+    - from: 1800
+      main: creole_english
+      minor: creole_french
+      note: 1763 年にイギリス領。19 世紀に英語系クレオール語に移った。
+    - from: 1900
+      main: creole_english
+- id: lang_st_vincent
+  name: セントヴィンセント・グレナディーン
+  select:
+    iso: [VCT]
+  timeline:
+    - from: 1648
+      main: carib
+      note: カリブ人と「黒いカリブ人」（ガリフナ、アフリカ系とカリブ人の子孫）の島。フランス人の小さな入植地。
+      source: "https://ja.wikipedia.org/wiki/ガリフナ"
+    - from: 1800
+      main: creole_english
+      note: 第 2 次カリブ戦争（1795–96）の後、ガリフナ人の約 5 千人はホンジュラス沖のロアタン島へ追放された（1797）。その子孫が中米のカリブ海岸に広がった。
+- id: lang_trinidad
+  name: トリニダード島
+  select:
+    iso: [TTO]
+  timeline:
+    - from: 1648
+      main: arawak
+      minor: spanish
+      note: アラワク系・カリブ系の先住民の島。スペインの小さな入植地（サン・ホセ・デ・オルーニャ）。
+    - from: 1790
+      main: creole_french
+      minor: spanish
+      note: スペインの人口勅令（1783）で、フランス領の島々からカトリックの農園主と奴隷が移住し、フランス語系クレオール語が共通語になった。
+    - from: 1850
+      main: creole_english
+      minor: creole_french
+      note: 1797 年にイギリスが占領した。
+    - from: 1880
+      main: creole_english
+      minor: hindustani
+      note: インドからの年季契約の労働者（1845–1917、約 14 万人、ボージプリー語系のカリブ・ヒンドゥスターニー語）。現在の住民はインド系とアフリカ系がほぼ半々。
+      source: "https://en.wikipedia.org/wiki/Indo-Trinidadians_and_Tobagonians"
+- id: lang_trinidad_indian
+  name: トリニダード中部・南部（インド系の地域）
+  select:
+    adm1: ["TTO/Chaguanas", "TTO/Couva-Tabaquite-Talparo", "TTO/Penal-Debe", "TTO/Siparia", "TTO/Princes Town", "TTO/Rio Claro-Mayaro"]
+  timeline:
+    - from: 1900
+      main: hindustani
+      minor: creole_english
+      note: 年季契約を終えたインド系の人々がサトウキビ地帯に村を作った。カリブ・ヒンドゥスターニー語は 20 世紀後半に英語系クレオール語へ移ったが、民族としてのインド系がこの地域の多数。
+- id: lang_tobago
+  name: トバゴ島
+  select:
+    adm1: ["TTO/Tobago"]
+  timeline:
+    - from: 1648
+      main: carib
+      note: クールラント公国（1654–59）・オランダ・フランス・イギリスが入植を争った。
+    - from: 1770
+      main: creole_english
+      minor: english
+      note: イギリス領の砂糖の島（1763–）。トバゴ・クレオール英語。
+    - from: 1850
+      main: creole_english
+- id: lang_curacao
+  name: キュラソー・ボネール
+  select:
+    pieces: [CUW-Curacao, BES-Bonaire]
+  timeline:
+    - from: 1648
+      main: dutch
+      minor: arawak
+      note: オランダ西インド会社の島（1634）。奴隷貿易の中継地。先住民のカケティオ人（アラワク系）。セファルディムのユダヤ人はポルトガル語を話した。
+    - from: 1700
+      main: papiamento
+      minor: dutch
+      note: アフリカ系の住民の間で、ポルトガル語・スペイン語をもとにしたクレオール語のパピアメント語が生まれ、やがて全住民の言葉になった。
+      source: "https://ja.wikipedia.org/wiki/パピアメント語"
+    - from: 1800
+      main: papiamento
+- id: lang_aruba
+  name: アルバ
+  select:
+    iso: [ABW]
+  timeline:
+    - from: 1648
+      main: arawak
+      minor: dutch
+      note: オランダ西インド会社は島を牧場として使い、カケティオ人（アラワク系）が多く住み続けた。
+    - from: 1820
+      main: papiamento
+      minor: arawak
+      note: 金の発見（1824）。
+    - from: 1900
+      main: papiamento
+- id: lang_saba_statia
+  name: サバ・シント・ユースタティウス
+  select:
+    pieces: [BES-Saba, BES-St_Eustatius]
+  timeline:
+    - from: 1648
+      main: english
+      note: オランダ領だが、入植者にはイギリス系・アイルランド系が多かった。シント・ユースタティウスは 1776 年にアメリカ合衆国の旗に最初に礼砲を撃った。
+    - from: 1780
+      main: creole_english
+      minor: english
+- id: lang_saba
+  name: サバ島
+  select:
+    pieces: [BES-Saba]
+  timeline:
+    - from: 1780
+      main: english
+      minor: creole_english
+      note: 険しい島で、白人とアフリカ系の住民がほぼ半々。
+
+# ================================================================
+# 南米
+# ================================================================
+- id: lang_south_america_spanish
+  name: 南米のスペイン語の地域（既定値）
+  select:
+    iso: [COL, VEN, ECU, PER, BOL, CHL, ARG, URY, PRY]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: スペインの植民地の町と農村。下の小さい地域がない所の既定値。
+- id: lang_colombia_muisca
+  name: ボゴタ盆地・ボヤカ（ムイスカの地）
+  select:
+    adm1: ["COL/Cundinamarca", "COL/Bogota Capital District", "COL/Boyacá"]
+  timeline:
+    - from: 1648
+      main: chibchan
+      minor: spanish
+      note: ムイスカ人（チブチャ語族）の村々と、ヌエバ・グラナダの首府サンタフェ・デ・ボゴタ（1538）。
+      source: "https://ja.wikipedia.org/wiki/ムイスカ"
+    - from: 1760
+      main: spanish
+      minor: chibchan
+      note: 混血が進み、ムイスカ語は 18 世紀に話されなくなった（1770 年にカルロス 3 世が先住民の言葉の使用を禁止）。
+    - from: 1800
+      main: spanish
+- id: lang_cauca_narino
+  name: カウカ・ナリーニョ（コロンビア南西部の高地）
+  select:
+    adm1: ["COL/Cauca", "COL/Nariño"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: sa_other
+      note: ポパヤン（1537）の町と、ナサ（パエス）・ミサク（グアンビアーノ）・パスト人の地。ナサ人はいまも自治の伝統を保つ。
+- id: lang_choco
+  name: チョコ（太平洋岸）
+  select:
+    adm1: ["COL/Chocó"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: エンベラ・ウォウナアン（チョコ系）の熱帯林。
+    - from: 1720
+      main: spanish
+      minor: sa_other
+      note: 砂金の採掘にアフリカ系の奴隷が連れてこられ、住民の大多数になった（言葉はスペイン語。現在も住民の約 8 割がアフリカ系）。
+- id: lang_guajira
+  name: グアヒラ半島（ワユーの地）
+  select:
+    adm1: ["COL/La Guajira"]
+  timeline:
+    - from: 1648
+      main: arawak
+      note: ワユー（グアヒロ）人（アラワク語族）。牛と馬の牧畜民として、スペインの支配に服さなかった。
+      source: "https://ja.wikipedia.org/wiki/ワユー族"
+    - from: 1950
+      main: arawak
+      minor: spanish
+- id: lang_san_andres
+  name: サン・アンドレス・プロビデンシア
+  select:
+    adm1: ["COL/Archipiélago de San Andrés, Providencia y Santa Catalina"]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: ピューリタンのプロヴィデンス島会社の入植地（1631–41）の跡。
+    - from: 1800
+      main: creole_english
+      note: ジャマイカなどから来たライサル（アフリカ系・イギリス系の住民）。
+    - from: 1970
+      main: spanish
+      minor: creole_english
+      note: 自由港（1953）の後、本土からの移住者が多数になった。
+- id: lang_llanos
+  name: リャノス（オリノコ川流域の大草原）
+  select:
+    adm1: ["COL/Meta", "COL/Casanare", "COL/Arauca", "VEN/Apure", "VEN/Barinas", "VEN/Guárico", "VEN/Cojedes", "VEN/Portuguesa"]
+  timeline:
+    - from: 1648
+      main: arawak
+      minor: sa_other
+      note: アチャグア人（アラワク系）・サリバ人・グアイボ（シクアニ）人の地。
+    - from: 1760
+      main: spanish
+      minor: arawak
+      note: イエズス会・フランシスコ会の伝道所と、リャネロ（牧畜民のメスティーソ）の大牧場。リャネロはボリバルの独立戦争の騎兵隊になった。
+    - from: 1820
+      main: spanish
+- id: lang_vichada
+  name: ビチャダ（シクアニの地）
+  select:
+    adm1: ["COL/Vichada"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: シクアニ（グアイボ）人の地。
+    - from: 1990
+      main: sa_other
+      minor: spanish
+- id: lang_colombia_amazon
+  name: コロンビアのアマゾン（カケタ・プトゥマヨ・グアビアレ）
+  select:
+    adm1: ["COL/Caquetá", "COL/Putumayo", "COL/Guaviare"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: ウィトト・コレグアヘ・シオナ・カムサ・ヌカクなどの地。
+    - from: 1960
+      main: spanish
+      minor: sa_other
+      note: アンデスからの入植（「暴力の時代」〈1948–58〉の避難民）とコカの栽培地の広がり。
+- id: lang_colombia_deep_amazon
+  name: コロンビアのアマゾン奥地（アマソナス・バウペス・グアイニア）
+  select:
+    adm1: ["COL/Amazonas", "COL/Vaupés", "COL/Guainía"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: arawak
+      note: トゥカノ系（バウペス）・アラワク系（グアイニアのクリパコ）・ウィトト・ティクナなどの地。
+    - from: 1990
+      main: sa_other
+      minor: spanish
+      note: 住民の過半数はいまも先住民（バウペス・グアイニアは約 7〜8 割）。
+- id: lang_venezuela_east
+  name: ベネズエラ東部（スクレ・アンソアテギ・モナガス）
+  select:
+    adm1: ["VEN/Sucre", "VEN/Anzoátegui", "VEN/Monagas"]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: spanish
+      note: クマナ（1521 年に建設、南米最古のスペイン人の町の一つ）と、クマナゴト・チャイマ（カリブ系）の地。
+    - from: 1760
+      main: spanish
+      minor: carib
+      note: カプチン会・フランシスコ会の伝道所。
+    - from: 1820
+      main: spanish
+- id: lang_guayana_ven
+  name: ベネズエラのグアヤナ（ボリバル州）
+  select:
+    adm1: ["VEN/Bolívar"]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: arawak
+      note: ペモン・カリーニャ（カリブ系）などの地。
+    - from: 1800
+      main: carib
+      minor: spanish
+      note: アンゴストゥーラ（1764、現在のシウダー・ボリバル）。ボリバルはここで議会を開いた（1819）。
+    - from: 1850
+      main: spanish
+      minor: carib
+    - from: 1950
+      main: spanish
+      note: オリノコ川の鉄鉱山とシウダー・グアヤナの工業地帯（1961–）。南部のグラン・サバナにはペモン人が住む。
+- id: lang_venezuela_amazonas
+  name: ベネズエラのアマソナス
+  select:
+    adm1: ["VEN/Amazonas"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: arawak
+      note: ヤノマミ・ピアロア・イェクアナ（カリブ系）・アラワク系の地。
+    - from: 1990
+      main: sa_other
+      minor: spanish
+- id: lang_delta_amacuro
+  name: オリノコ・デルタ（デルタ・アマクロ）
+  select:
+    adm1: ["VEN/Delta Amacuro"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: ワラオ人（「カヌーの民」、孤立した言語）の地。
+    - from: 1950
+      main: spanish
+      minor: sa_other
+- id: lang_zulia
+  name: スリア（マラカイボ湖）
+  select:
+    adm1: ["VEN/Zulia"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: arawak
+      note: マラカイボ（1574）の町と、グアヒラ半島のワユー人。
+    - from: 1800
+      main: spanish
+      note: マラカイボ湖の石油の開発（1914–）。グアヒラ半島にはワユー人が住む。
+- id: lang_ecuador_sierra
+  name: エクアドルの高地（シエラ）
+  select:
+    adm1: ["ECU/Carchi", "ECU/Imbabura", "ECU/Pichincha", "ECU/Cotopaxi", "ECU/Tungurahua", "ECU/Bolívar", "ECU/Chimborazo", "ECU/Cañar", "ECU/Azuay", "ECU/Loja"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+      note: キトのアウディエンシア。インカの支配（15 世紀末）で広まったキチュア語（ケチュア語の北の方言）を話す先住民が、アシエンダ（大農園）とオブラヘ（織物工場）で働いた。キトはスペイン人とメスティーソの町。
+      source: "https://ja.wikipedia.org/wiki/キチュア語"
+    - from: 1900
+      main: spanish
+      minor: quechua
+      note: メスティーソ化が進んだ。1964 年の農地改革でワシプンゴ（アシエンダの小作制度）が廃止された。
+- id: lang_ecuador_sierra_kichwa
+  name: エクアドルの高地中部（チンボラソ・コトパクシ・インバブラ）
+  select:
+    adm1: ["ECU/Chimborazo", "ECU/Cotopaxi", "ECU/Imbabura", "ECU/Bolívar", "ECU/Cañar"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+    - from: 1950
+      main: spanish
+      minor: quechua
+      note: キチュア人が住民の 2〜4 割を占める（オタバロの織物と市場）。1990 年の先住民の「蜂起」（レバンタミエント）から、エクアドル先住民連合（CONAIE）は政治の大きな力になった。
+      source: "https://en.wikipedia.org/wiki/CONAIE"
+- id: lang_ecuador_pichincha
+  name: キト（ピチンチャ）
+  select:
+    adm1: ["ECU/Pichincha"]
+  timeline:
+    - from: 1850
+      main: spanish
+- id: lang_ecuador_coast
+  name: エクアドルの海岸（コスタ）
+  select:
+    adm1: ["ECU/Guayas", "ECU/Manabi", "ECU/Los Ríos", "ECU/El Oro", "ECU/Santa Elena", "ECU/Esmeraldas", "ECU/Santo Domingo de los Tsáchilas"]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: グアヤキル（1538）の港と造船所。エスメラルダスはアフリカ系のマルーン（サンボ）の地で、スペインの支配は名目的だった。
+- id: lang_ecuador_oriente
+  name: エクアドルのアマゾン（オリエンテ）
+  select:
+    adm1: ["ECU/Napo", "ECU/Orellana", "ECU/Sucumbios", "ECU/Pastaza", "ECU/Morona Santiago", "ECU/Zamora Chinchipe"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: quechua
+      note: シュアル・アチュアル（ヒバロ系）・ワオラニ・シオナ・コファンなどの地。ナポ川流域にはキチュア語を話す先住民。
+    - from: 1970
+      main: spanish
+      minor: sa_other
+      note: 石油の開発（1967–）とアンデスからの入植。ペルーとの国境紛争（1941・1981・1995）の地。
+- id: lang_napo
+  name: ナポ（アマゾンのキチュア）
+  select:
+    adm1: ["ECU/Napo"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: sa_other
+      note: アマゾンのキチュア人（ナポ・ルナ）。
+    - from: 1990
+      main: quechua
+      minor: spanish
+- id: lang_shuar
+  name: パスタサ・モロナ・サンティアゴ（シュアル・アチュアルの地）
+  select:
+    adm1: ["ECU/Pastaza", "ECU/Morona Santiago"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: シュアル人（首狩りの「ツァンツァ」で知られた）はスペイン・エクアドルの支配に長く服さなかった。サレジオ会の伝道（1893–）。
+    - from: 1990
+      main: sa_other
+      minor: spanish
+      note: シュアル連合（1964）は南米で最初の先住民の連合組織の一つ。
+- id: lang_galapagos
+  name: ガラパゴス諸島
+  select:
+    adm1: ["ECU/Galápagos"]
+  timeline:
+    - from: 1832
+      main: spanish
+      note: エクアドルが領有を宣言し（1832）、入植が始まった。
+- id: lang_peru_highlands
+  name: ペルーの高地（シエラ）
+  select:
+    adm1: ["PER/Ancash", "PER/Huánuco", "PER/Pasco", "PER/Junín", "PER/Huancavelica", "PER/Ayacucho", "PER/Apurímac", "PER/Cusco", "PER/Cajamarca"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+      note: ペルー副王領の高地の先住民の村（レドゥクシオン）。ミタ（ポトシ銀山・ワンカベリカ水銀鉱山への強制労働）と貢納。ケチュア語はインカ帝国の共通語で、植民地でも布教の言葉として広まった。
+      source: "https://ja.wikipedia.org/wiki/ケチュア語"
+- id: lang_peru_south_highlands
+  name: ペルー南部の高地（クスコ・アヤクチョ・アプリマック・ワンカベリカ）
+  select:
+    adm1: ["PER/Cusco", "PER/Ayacucho", "PER/Apurímac", "PER/Huancavelica"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+      note: トゥパク・アマルー 2 世の反乱（1780–81）の地。
+      source: "https://ja.wikipedia.org/wiki/トゥパク・アマル2世"
+    - from: 1980
+      main: quechua
+      minor: spanish
+      note: 「センデロ・ルミノソ」（輝ける道、1980–）との内戦で、アヤクチョなどのケチュア語を話す農民が最大の被害者になった（約 7 万人の死者の 4 分の 3 がケチュア語話者）。
+      source: "https://ja.wikipedia.org/wiki/センデロ・ルミノソ"
+- id: lang_peru_central_highlands
+  name: ペルー中部・北部の高地（フニン・パスコ・カハマルカ・アンカシュ・ワヌコ）
+  select:
+    adm1: ["PER/Junín", "PER/Pasco", "PER/Cajamarca", "PER/Ancash", "PER/Huánuco"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+    - from: 1850
+      main: quechua
+      minor: spanish
+      note: カハマルカ（アタワルパが捕らえられた地、1532）は 19 世紀にスペイン語化が進んだ。
+    - from: 1900
+      main: spanish
+      minor: quechua
+      note: セロ・デ・パスコの鉱山と中央鉄道（1870–1908）、ワンカヨの市場。フニン・パスコ・カハマルカではスペイン語が多数になった。
+- id: lang_cajamarca
+  name: カハマルカ
+  select:
+    adm1: ["PER/Cajamarca"]
+  timeline:
+    - from: 1850
+      main: spanish
+      minor: quechua
+    - from: 1900
+      main: spanish
+- id: lang_peru_coast
+  name: ペルーの海岸（コスタ）
+  select:
+    adm1: ["PER/Tumbes", "PER/Piura", "PER/La Libertad", "PER/Lima", "PER/Municipalidad Metropolitana de Lima", "PER/El Callao", "PER/Ica", "PER/Arequipa"]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: リマ（「諸王の都」1535）はペルー副王領の首都で、スペイン人・クリオーリョ・アフリカ系の奴隷（リマの住民の約 4 割）の町。海岸の谷にはサトウキビ・ブドウの農園。
+      source: "https://ja.wikipedia.org/wiki/リマ"
+    - from: 1960
+      main: spanish
+      minor: quechua
+      note: 高地からの移住で、リマの周りにバリアーダ（スラム、「若い町」）が広がった（リマの人口は 1940 年の 60 万人から 1981 年に 450 万人）。
+- id: lang_lima_late
+  name: リマ以外の海岸
+  select:
+    adm1: ["PER/Tumbes", "PER/Piura", "PER/La Libertad", "PER/Ica"]
+  timeline:
+    - from: 1960
+      main: spanish
+- id: lang_lambayeque
+  name: ランバイェケ（モチカの地）
+  select:
+    adm1: ["PER/Lambayeque"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: spanish
+      note: モチェ文化の子孫の言葉のモチカ語（ユンガ語）が 19 世紀まで話された（20 世紀初めに消滅）。
+      source: "https://en.wikipedia.org/wiki/Mochica_language"
+    - from: 1800
+      main: spanish
+      minor: sa_other
+    - from: 1900
+      main: spanish
+- id: lang_arequipa
+  name: アレキパ
+  select:
+    adm1: ["PER/Arequipa"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: quechua
+      note: 「白い町」アレキパはスペイン人の多い町。高地（コルカ谷）はケチュア語・アイマラ語を話す人々の地。
+- id: lang_peru_south_coast
+  name: モケグア・タクナ
+  select:
+    adm1: ["PER/Moquegua"]
+    pieces: [PER-Tacna_Province, PER-Jorge_Basadre]
+  timeline:
+    - from: 1648
+      main: aymara
+      minor: spanish
+      note: アイマラ語を話す人々の谷と、スペイン人のブドウ酒の農園。
+    - from: 1850
+      main: spanish
+      minor: aymara
+    - from: 1950
+      main: spanish
+- id: lang_tacna_highlands
+  name: タクナの高地（カンダラベ・タラタ）
+  select:
+    pieces: [PER-Candarave, PER-Tarata]
+  timeline:
+    - from: 1648
+      main: aymara
+      minor: spanish
+      note: タラタは太平洋戦争の後チリに占領され（1885–1925）、タクナとともにペルーに戻った（タクナは 1929 年）。
+- id: lang_puno
+  name: プーノ（ティティカカ湖）
+  select:
+    adm1: ["PER/Puno"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: aymara
+      note: ティティカカ湖の北はケチュア語、南と西（チュクイト・フリ）はアイマラ語。ペルーで先住民の割合が最も高い県（2017 年の国勢調査で、自らをケチュアかアイマラととらえる人が約 9 割）。
+- id: lang_peru_selva_edge
+  name: ペルーの高地の東斜面（アマソナス・サン・マルティン）
+  select:
+    adm1: ["PER/Amazonas", "PER/San Martín"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: spanish
+      note: チャチャポヤスの町（1538）と、アワフン（アグアルナ、ヒバロ系）・チャチャポヤ人などの地。モヨバンバはアマゾンへの入口の町。
+    - from: 1850
+      main: spanish
+      minor: sa_other
+    - from: 1950
+      main: spanish
+- id: lang_peru_amazon
+  name: ペルーのアマゾン（ロレト・ウカヤリ・マドレ・デ・ディオス）
+  select:
+    pieces: [PER-Maynas, PER-Alto_Amazonas, PER-Loreto_Province, PER-Requena, PER-Mariscal_Ramon_Castilla, PER-Putumayo, PER-Ucayali_Province, PER-Ucayali, PER-Madre_de_Dios]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: シピボ・コニボ（パノ系）・アシャニンカ（アラワク系）・ククマ（トゥピ系）・ウラリナ・ボラ・ウィトトなどの地。イエズス会のマイナスの伝道所（1638–1768）。
+    - from: 1900
+      main: spanish
+      minor: sa_other
+      note: ゴム・ブーム（1880–1914）でイキトスが栄えた。プトゥマヨ川流域では、ペルー・アマゾン会社によるウィトト人などの強制労働と虐殺が国際的な非難を浴びた（ケースメントの報告、1912）。
+      source: "https://en.wikipedia.org/wiki/Putumayo_genocide"
+- id: lang_peru_amazon_late
+  name: ペルーのアマゾンの奥地（ウカヤリ・マドレ・デ・ディオス・ダテム）
+  select:
+    pieces: [PER-Ucayali, PER-Ucayali_Province, PER-Madre_de_Dios, PER-Datem_del_Maranon, PER-Putumayo]
+  timeline:
+    - from: 1648
+      main: sa_other
+    - from: 1950
+      main: spanish
+      minor: sa_other
+      note: プカルパへの道路（1943）と、アンデスからの入植。マドレ・デ・ディオスの金の採掘。
+- id: lang_datem
+  name: ダテム・デル・マラニョン（アワフン・アチュアル・カンドシの地）
+  select:
+    pieces: [PER-Datem_del_Maranon]
+  timeline:
+    - from: 1950
+      main: sa_other
+      minor: spanish
+- id: lang_bolivia_altiplano
+  name: ボリビアのアルティプラノ（ラパス・オルロ）
+  select:
+    adm1: ["BOL/La Paz", "BOL/Oruro"]
+  timeline:
+    - from: 1648
+      main: aymara
+      minor: quechua
+      note: アイマラ語を話す人々の高原（チャルカスのアウディエンシア、ペルー副王領）。ラパス（1548）はスペイン人の町。トゥパク・カタリのラパス包囲（1781）。
+      source: "https://ja.wikipedia.org/wiki/アイマラ族"
+    - from: 1950
+      main: aymara
+      minor: spanish
+      note: ボリビア革命（1952）の農地改革と普通選挙。アイマラ人のエボ・モラレスは最初の先住民出身の大統領（2006–19）になり、2009 年の憲法で「多民族国家」とされた。エル・アルトはアイマラ人の大都市。
+      source: "https://ja.wikipedia.org/wiki/エボ・モラレス"
+- id: lang_bolivia_valleys
+  name: ボリビアの高地南部・谷（ポトシ・コチャバンバ・チュキサカ）
+  select:
+    adm1: ["BOL/Potosí", "BOL/Cochabamba", "BOL/Chuquisaca"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+      note: ポトシ銀山（1545–）は 17 世紀初めに人口 15 万人の世界有数の都市だった。ラ・プラタ（チュキサカ、現在のスクレ）はアウディエンシアの所在地。コチャバンバの谷は穀倉。
+      source: "https://ja.wikipedia.org/wiki/ポトシ"
+    - from: 1950
+      main: quechua
+      minor: spanish
+      note: コチャバンバ・スクレの町はスペイン語が多いが、農村と町の市場ではケチュア語が広く使われる。
+- id: lang_tarija
+  name: タリハ
+  select:
+    adm1: ["BOL/Tarija"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: tupi_guarani
+      note: スペイン人の農民の谷（チャパコ）。東の低地にはグアラニー系のチリグアノ人。
+    - from: 1900
+      main: spanish
+- id: lang_bolivia_lowlands
+  name: ボリビアの東部低地（サンタクルス・ベニ・パンド）
+  select:
+    adm1: ["BOL/Santa Cruz", "BOL/Beni", "BOL/Pando"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: tupi_guarani
+      note: チキタノ人（チキトス）・モホ人（アラワク系、ベニ）・グアラニー系のチリグアノ人（アバ・グアラニー）・アヨレオ人などの地。サンタ・クルス・デ・ラ・シエラ（1561）のスペイン人の町。
+    - from: 1700
+      main: sa_other
+      minor: spanish
+      note: イエズス会のモホス（1682–）・チキトス（1691–）の伝道所（世界遺産の教会群）。
+    - from: 1900
+      main: spanish
+      minor: sa_other
+      note: ゴム・ブームで、ベニ・パンドの先住民がゴムの採集に動員された。チリグアノ人の最後の大反乱（クルユキ、1892）。
+    - from: 1950
+      main: spanish
+      note: サンタ・クルスは石油・天然ガス・大豆で成長し、ボリビア最大の都市になった。高地からの移住者（コージャ）も多い。
+- id: lang_beni
+  name: ベニ（モホス）
+  select:
+    adm1: ["BOL/Beni"]
+  timeline:
+    - from: 1648
+      main: arawak
+      note: モホ人（アラワク系）の平原と、盛り土の農耕の遺跡。
+    - from: 1700
+      main: arawak
+      minor: spanish
+      note: イエズス会のモホスの伝道所（1682–1767）。
+    - from: 1900
+      main: spanish
+      minor: arawak
+    - from: 1950
+      main: spanish
+- id: lang_guyana
+  name: ガイアナの海岸（デメララ・ジョージタウン）
+  select:
+    iso: [GUY]
+  timeline:
+    - from: 1648
+      main: arawak
+      minor: carib
+      note: ロコノ（アラワク）・カリナ（カリブ）・ワラオ人の地。オランダの交易所。
+    - from: 1720
+      main: dutch
+      minor: arawak
+      note: オランダの砂糖の植民地（エセキボ・デメララ・バービス）。アフリカ系の奴隷の間では、オランダ語系クレオール語（バービス・ダッチ）が話された。
+      source: "https://en.wikipedia.org/wiki/Berbice_Creole_Dutch"
+    - from: 1810
+      main: creole_english
+      minor: english
+      note: 1796 年からイギリスが占領し（1814 年に正式に割譲）、英語系クレオール語（ガイアナ・クレオール）が共通語になった。
+    - from: 1880
+      main: creole_english
+      minor: hindustani
+      note: インドからの年季契約の労働者（1838–1917、約 24 万人）。ほかにポルトガル（マデイラ）・中国からも来た。
+- id: lang_guyana_indian
+  name: ガイアナの海岸（インド系の地域）
+  select:
+    adm1: ["GUY/East Berbice-Corentyne", "GUY/Mahaica-Berbice", "GUY/Essequibo Islands-West Demerara", "GUY/Pomeroon-Supenaam"]
+  timeline:
+    - from: 1900
+      main: hindustani
+      minor: creole_english
+      note: 砂糖の農園地帯でインド系が多数になった（ガイアナ全体でも約 4 割がインド系で最大の集団）。インド系とアフリカ系の政党の対立（PPP のジェーガンと PNC のバーナム）は独立（1966）の前後の政治を大きく揺るがした。
+      source: "https://en.wikipedia.org/wiki/Indo-Guyanese"
+- id: lang_guyana_interior
+  name: ガイアナの内陸（ルプヌニ・ポタロ・クユニ）
+  select:
+    adm1: ["GUY/Upper Takutu-Upper Essequibo", "GUY/Potaro-Siparuni", "GUY/Cuyuni-Mazaruni"]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: arawak
+      note: マクシ・パタモナ・アカワイオ（カリブ系）とワピシャナ（アラワク系）の地。エセキボ川より西はベネズエラが領有を主張している（エセキボ紛争）。
+      source: "https://ja.wikipedia.org/wiki/グアヤナ・エセキバ"
+    - from: 1990
+      main: carib
+      minor: creole_english
+      note: 金・ダイヤモンドの採掘で海岸からの移住者が増えた。
+- id: lang_barima_waini
+  name: バリマ・ワイニ（ガイアナ北西部）
+  select:
+    adm1: ["GUY/Barina-Waini"]
+  timeline:
+    - from: 1648
+      main: arawak
+      minor: sa_other
+      note: ロコノ（アラワク）・ワラオ・カリナの地。
+- id: lang_upper_demerara
+  name: 上デメララ（リンデン）
+  select:
+    adm1: ["GUY/Upper Demerara-Berbice"]
+  timeline:
+    - from: 1648
+      main: arawak
+    - from: 1920
+      main: creole_english
+      note: ボーキサイトの鉱山の町リンデン（1916–）。
+- id: lang_suriname
+  name: スリナム（パラマリボと海岸）
+  select:
+    iso: [SUR]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: arawak
+      note: カリナ（カリブ系）・ロコノ（アラワク系）の地。
+    - from: 1660
+      main: english
+      minor: carib
+      note: イギリスのウィロビー卿の植民地（1650、バルバドスからの農園主）。
+    - from: 1680
+      main: creole_english
+      minor: dutch
+      note: ブレダ条約（1667）でオランダ領になったが、奴隷の間ではイギリス時代の英語をもとにしたスラナン語（スラナン・トンゴ）が生まれ、全住民の共通語になった。
+      source: "https://ja.wikipedia.org/wiki/スラナン語"
+    - from: 1900
+      main: creole_english
+      minor: hindustani
+      note: 奴隷制の廃止（1863）の後、インド（1873–1916、約 3 万 4 千人）・ジャワ（1890–1939、約 3 万 3 千人）・中国から年季契約の労働者が来た。独立（1975）の前後には住民の多くがオランダへ移住した。
+- id: lang_paramaribo
+  name: パラマリボ
+  select:
+    adm1: ["SUR/Paramaribo"]
+  timeline:
+    - from: 1900
+      main: creole_english
+      minor: dutch
+      note: スラナン語が日常の共通語、オランダ語が公用語・教育の言葉。クレオール（アフリカ系）・インド系・ジャワ系・マルーン・中国系・ユダヤ系などが住む多民族の都市。
+- id: lang_suriname_hindustani
+  name: スリナムの農村（ニッケリー・ワニカ・サラマッカ）
+  select:
+    adm1: ["SUR/Nickerie", "SUR/Wanica", "SUR/Saramacca"]
+  timeline:
+    - from: 1910
+      main: hindustani
+      minor: javanese
+      note: 年季契約を終えたインド系（サルナミ・ヒンドゥスターニー語）・ジャワ系の住民が、政府の農地に住みついた。インド系はスリナムの最大の民族集団（2012 年に 27%）。
+      source: "https://en.wikipedia.org/wiki/Indo-Surinamese"
+- id: lang_commewijne
+  name: コメウェイネ（ジャワ系）
+  select:
+    adm1: ["SUR/Commewijne"]
+  timeline:
+    - from: 1910
+      main: javanese
+      minor: hindustani
+      note: ジャワ島からの年季契約の労働者が農園の地に住んだ（スリナム・ジャワ語）。
+      source: "https://en.wikipedia.org/wiki/Javanese_Surinamese"
+- id: lang_suriname_interior
+  name: スリナムの内陸（マルーンと先住民の地）
+  select:
+    adm1: ["SUR/Sipaliwini", "SUR/Brokopondo", "SUR/Marowijne"]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: arawak
+      note: トリオ・ワヤナ・カリナ（カリブ系）の地。
+    - from: 1760
+      main: creole_english
+      minor: carib
+      note: 農園から逃れたアフリカ系のマルーン（ンジュカ・サラマカ・マタワイ・パラマカなど）が熱帯林に共同体を作り、オランダと和平条約を結んだ（ンジュカ 1760、サラマカ 1762）。言葉はンジュカ語・サラマカ語など英語系（サラマカ語はポルトガル語の語彙も多い）のクレオール語。
+      source: "https://ja.wikipedia.org/wiki/マルーン"
+- id: lang_french_guiana
+  name: フランス領ギアナ
+  select:
+    iso: [GUF]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: arawak
+      note: カリナ・ロコノ・パリクル・ワヤンピ・テコなど先住民の地。
+    - from: 1700
+      main: creole_french
+      minor: carib
+      note: カイエンヌ（1664 年にフランスが確保）。農園のアフリカ系の奴隷の間でギアナ・クレオール語（フランス語系）が生まれた。クールー（1763–65）の入植の失敗。
+    - from: 1900
+      main: creole_french
+      minor: french
+      note: 流刑地（1852–1953、悪魔島）。1946 年にフランスの海外県。クールーの宇宙センター（1968–）。ハイチ・ブラジル・スリナムからの移民も多い。
+- id: lang_brazil_coast
+  name: ブラジルの海岸（北東部・リオデジャネイロ）
+  select:
+    iso: [BRA]
+  timeline:
+    - from: 1648
+      main: portuguese
+      minor: tupi_guarani
+      note: サルヴァドール（バイーア、1549–1763 年の首都）・オリンダ・レシフェ（ペルナンブーコ）・リオデジャネイロ。砂糖のエンジェーニョ（製糖所）にアフリカから大量の奴隷が連れてこられた（ブラジルに来たアフリカ人は約 480 万人で、大西洋奴隷貿易の約 4 割）。ペルナンブーコは 1630–54 年にオランダ西インド会社の支配下（マウリッツ・スタット）。
+      source: "https://ja.wikipedia.org/wiki/ブラジルの歴史"
+    - from: 1750
+      main: portuguese
+      note: アフリカ系の住民も言葉はポルトガル語（ヨルバ語は祭儀の言葉として残った）。
+- id: lang_sao_paulo
+  name: サンパウロ（パウリスタの地）
+  select:
+    adm1: ["BRA/Sao Paulo"]
+  timeline:
+    - from: 1648
+      main: tupi_guarani
+      minor: portuguese
+      note: ポルトガル人の男性とトゥピ人の女性の子孫（マメルコ）が多く、トゥピ語をもとにした共通語（リングア・ジェラル・パウリスタ）が日常の言葉だった。バンデイランテス（奥地探検隊）は先住民の奴隷狩りと金の探索で内陸へ進んだ。
+      source: "https://en.wikipedia.org/wiki/L%C3%ADngua_Geral_Paulista"
+    - from: 1760
+      main: portuguese
+      minor: tupi_guarani
+      note: ポンバル侯の改革（1757 年の法でリングア・ジェラルの使用を禁止）。
+    - from: 1800
+      main: portuguese
+    - from: 1890
+      main: portuguese
+      minor: italian
+      note: コーヒー農園の労働者として、イタリアからの大量の移民（1880–1920）。1900 年ごろのサンパウロ市の住民の半分近くがイタリア系だった。日本人の移民は 1908 年（笠戸丸）から。
+      source: "https://ja.wikipedia.org/wiki/イタリア系ブラジル人"
+    - from: 1940
+      main: portuguese
+      note: 2 世・3 世はポルトガル語に移った。ブラジル北東部からの国内移住（ノルデスチーノ）が増えた。
+- id: lang_amazon_lingua_geral
+  name: ブラジルのアマゾン（パラ・マラニャン・アマパ）
+  select:
+    adm1: ["BRA/Para", "BRA/Maranhao", "BRA/Amapa"]
+  timeline:
+    - from: 1648
+      main: tupi_guarani
+      minor: portuguese
+      note: グラン・パラ・マラニャン州。先住民・メスティーソ（カボクロ）・ポルトガル人の共通語は、トゥピ語をもとにしたリングア・ジェラル（ニェエンガトゥ）だった。
+      source: "https://ja.wikipedia.org/wiki/ニェエンガトゥ語"
+    - from: 1800
+      main: portuguese
+      minor: tupi_guarani
+      note: ポンバル侯の改革（1757）でポルトガル語の使用が命じられた。カバナージェンの反乱（1835–40）。
+    - from: 1860
+      main: portuguese
+- id: lang_amazonas_br
+  name: ブラジルのアマゾン（アマゾナス・ロライマ・アクレ・ロンドニア）
+  select:
+    adm1: ["BRA/Amazonas", "BRA/Acre", "BRA/Rondonia", "BRA/Roraima"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: tupi_guarani
+      note: トゥカノ・アラワク・パノ・ヤノマミ・カリブなど多くの言語の先住民の地。カルメル会の伝道所とリングア・ジェラル。
+    - from: 1880
+      main: portuguese
+      minor: sa_other
+      note: ゴム・ブームで、干ばつの北東部から約 30 万人のセリンゲイロ（ゴムの採集人）がアマゾンへ移った。マナウスにはオペラ劇場（1896）が建った。アクレはボリビアから得た（ペトロポリス条約 1903）。
+      source: "https://ja.wikipedia.org/wiki/アクレ戦争"
+    - from: 1950
+      main: portuguese
+- id: lang_amazonas_upper_rio_negro
+  name: アマゾナス（ネグロ川上流）
+  select:
+    adm1: ["BRA/Amazonas"]
+  timeline:
+    - from: 1880
+      main: portuguese
+      minor: sa_other
+      note: サン・ガブリエル・ダ・カショエイラなどネグロ川の上流は住民の大多数が先住民で、ニェエンガトゥ語・トゥカノ語・バニワ語が市の公用語になっている（2002）。
+- id: lang_rondonia
+  name: ロンドニア
+  select:
+    adm1: ["BRA/Rondonia"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: スルイ・カリティアナ・ウル・エウ・ワウ・ワウなどの地。
+    - from: 1970
+      main: portuguese
+      note: マデイラ・マモレ鉄道（1912）と、軍事政権の入植政策（BR-364 の道路、1970–80 年代）で、南部からの移住者が熱帯林を切り開いた。
+- id: lang_roraima
+  name: ロライマ
+  select:
+    adm1: ["BRA/Roraima"]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: sa_other
+      note: マクシ・タウレパン（カリブ系）・ワピシャナ（アラワク系）・ヤノマミ・イェクアナの地。
+    - from: 1990
+      main: portuguese
+      minor: carib
+      note: 金の採掘人（ガリンペイロ）の侵入（1987–）と道路沿いの入植。
+- id: lang_roraima_indigenous
+  name: ロライマの先住民の地域（ラポーザ・セーラ・ド・ソル、ヤノマミ）
+  select:
+    pieces: [BRA-Uiramuta, BRA-Normandia, BRA-Pacaraima, BRA-Amajari, BRA-Alto_Alegre]
+  timeline:
+    - from: 1990
+      main: carib
+      minor: portuguese
+      note: ウイラムタンは住民の約 9 割が先住民（マクシなど）。アルト・アレグレ西部はヤノマミの地（ヤノマミの言葉は孤立した語族）。
+- id: lang_boa_vista
+  name: ボア・ヴィスタとロライマ南部
+  select:
+    pieces: [BRA-Boa_Vista, BRA-Canta, BRA-Mucajai, BRA-Iracema, BRA-Caracarai, BRA-Rorainopolis, BRA-Sao_Joao_da_Baliza, BRA-Sao_Luiz, BRA-Caroebe, BRA-Bonfim]
+  timeline:
+    - from: 1648
+      main: carib
+      minor: arawak
+    - from: 1900
+      main: portuguese
+      minor: carib
+      note: ボア・ヴィスタはブランコ川の牧場と軍の砦（サン・ジョアキン 1775）から。
+    - from: 1980
+      main: portuguese
+- id: lang_brazil_interior
+  name: ブラジルの内陸（ミナス・ジェライス・ゴイアス・マット・グロッソ・セルタン）
+  select:
+    adm1: ["BRA/Minas Gerais", "BRA/Goias", "BRA/Tocantins", "BRA/Mato Grosso", "BRA/Mato Grosso do Sul", "BRA/Piaui", "BRA/Ceara", "BRA/Distrito Federal"]
+  timeline:
+    - from: 1648
+      main: sa_other
+      note: ジェー語族（カイアポ・シャヴァンテ・ボロロ・ボトクード）・カリリ人などの地。
+    - from: 1720
+      main: portuguese
+      minor: sa_other
+      note: ミナス・ジェライスのゴールドラッシュ（1690 年代〜）と、ゴイアス・マット・グロッソ（クイアバ 1719）の金鉱。北東部の内陸（セルタン）の牧畜。
+    - from: 1800
+      main: portuguese
+      note: 内陸のシングー川流域などには先住民が残った（シングー先住民公園 1961）。
+- id: lang_parana_sc
+  name: パラナ・サンタカタリーナ
+  select:
+    adm1: ["BRA/Parana", "BRA/Santa Catarina"]
+  timeline:
+    - from: 1648
+      main: tupi_guarani
+      minor: sa_other
+      note: グアラニー人（グアイラのイエズス会の伝道所は 1628–31 年にバンデイランテスに破壊された）と、カインガン・ショクレン（ジェー語族）の地。
+    - from: 1720
+      main: portuguese
+      minor: sa_other
+      note: パラナグア・クリチバ（1693）・サンタカタリーナ島（デステーロ）・ラグーナの町と、サンパウロへの牛の道。
+    - from: 1860
+      main: portuguese
+      minor: german
+      note: ドイツ系（ブルメナウ 1850、ジョインヴィレ 1851）・イタリア系・ポーランド系・ウクライナ系の入植。
+    - from: 1950
+      main: portuguese
+      note: ヴァルガス政権の国民化政策（1938–）で、外国語の学校・新聞が禁止された。
+- id: lang_rio_grande_do_sul
+  name: リオグランデ・ド・スル
+  select:
+    pieces: [BRA-Rio_Grande_do_Sul, 120-Isla_Brasilera]
+  timeline:
+    - from: 1648
+      main: tupi_guarani
+      minor: chaco_patagonia
+      note: グアラニー人と、ミヌアン・チャルア人（パンパの人々）の地。
+    - from: 1740
+      main: portuguese
+      minor: tupi_guarani
+      note: ポルトガルのリオ・グランデ（1737）とアゾレス諸島からの入植。ガウーショ（牧畜民）の地。
+    - from: 1800
+      main: portuguese
+    - from: 1860
+      main: portuguese
+      minor: german
+      note: ドイツ系（サン・レオポルド 1824）とイタリア系（セーラ・ガウーシャ 1875–）の入植。ドイツ語の方言（リオグランデンサー・フンスリュック語）は今も残る。
+    - from: 1950
+      main: portuguese
+- id: lang_missoes
+  name: リオグランデ・ド・スルのミソンイス（七つの伝道村）
+  select:
+    pieces: [BRA-Rio_Grande_do_Sul_Missoes]
+  timeline:
+    - from: 1648
+      main: tupi_guarani
+      note: グアラニー人の地。
+    - from: 1690
+      main: tupi_guarani
+      minor: spanish
+      note: イエズス会のグアラニーの伝道村（七つの村、1682–）。伝道村ではグアラニー語が使われ、グアラニー語の印刷も行われた。グアラニー戦争（1754–56）。
+      source: "https://ja.wikipedia.org/wiki/グアラニー戦争"
+    - from: 1810
+      main: portuguese
+      minor: tupi_guarani
+      note: 1801 年にポルトガルが占領した。
+    - from: 1850
+      main: portuguese
+- id: lang_paraguay
+  name: パラグアイ東部
+  select:
+    iso: [PRY]
+  timeline:
+    - from: 1648
+      main: tupi_guarani
+      minor: spanish
+      note: アスンシオン（1537）のスペイン人とグアラニー人の結婚で生まれたメスティーソの社会。イエズス会のグアラニーの伝道村（レドゥクシオン、1609–1767）。パラグアイの住民の大多数は、メスティーソでもグアラニー語を日常語とする（1992 年の憲法で公用語、国民の約 9 割が話す）。
+      source: "https://ja.wikipedia.org/wiki/グアラニー語"
+- id: lang_asuncion
+  name: アスンシオン
+  select:
+    adm1: ["PRY/ASUNCION"]
+  timeline:
+    - from: 1950
+      main: spanish
+      minor: tupi_guarani
+      note: 首都ではスペイン語が多く使われ、グアラニー語との二言語（ジョパラ）。
+- id: lang_paraguay_brazilian
+  name: パラグアイ東部の国境地帯（アルト・パラナ・カニンデユ）
+  select:
+    adm1: ["PRY/ALTO PARANA", "PRY/CANINDEYU"]
+  timeline:
+    - from: 1980
+      main: tupi_guarani
+      minor: portuguese
+      note: ストロエスネル政権（1954–89）の時代に、ブラジルから大豆の農民（ブラシグアイオ）が大量に入植した。イタイプ・ダム（1984）。
+- id: lang_chaco
+  name: グランチャコ
+  select:
+    adm1: ["ARG/Chaco", "ARG/Formosa", "PRY/PRESIDENTE HAYES", "PRY/ALTO PARAGUAY", "PRY/BOQUERON"]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      note: トバ（コム）・モコビー・ピラガ（グアイクル系）・ウィチ・ニバクレ（マタコ系）・エンヘト・アヨレオなどの狩猟採集民の地。
+      source: "https://en.wikipedia.org/wiki/Gran_Chaco"
+    - from: 1910
+      main: spanish
+      minor: chaco_patagonia
+      note: アルゼンチン軍の「チャコの征服」（1884–1911）と、ケブラチョ材・綿花の開発。
+    - from: 1950
+      main: spanish
+- id: lang_paraguay_chaco
+  name: パラグアイのチャコ
+  select:
+    adm1: ["PRY/PRESIDENTE HAYES", "PRY/ALTO PARAGUAY", "PRY/BOQUERON"]
+  timeline:
+    - from: 1910
+      main: chaco_patagonia
+      minor: spanish
+      note: チャコ戦争（1932–35）はこの地をめぐるボリビアとの戦争。
+    - from: 1960
+      main: tupi_guarani
+      minor: chaco_patagonia
+      note: 東部からのパラグアイ人（グアラニー語）の移住。
+- id: lang_boqueron
+  name: ボケロン（メノナイトの入植地）
+  select:
+    adm1: ["PRY/BOQUERON"]
+  timeline:
+    - from: 1930
+      main: chaco_patagonia
+      minor: german
+      note: カナダ・ソ連から来たメノナイト（低地ドイツ語〈プラウトディーチュ〉を話す）の入植地（メノ 1927、フェルンハイム 1930、ノイラント 1947）。
+      source: "https://en.wikipedia.org/wiki/Mennonites_in_Paraguay"
+- id: lang_argentina_northwest
+  name: アルゼンチン北西部（サルタ・カタマルカ・トゥクマン・ラ・リオハ）
+  select:
+    adm1: ["ARG/Salta", "ARG/Catamarca", "ARG/Tucumán", "ARG/La Roja"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: quechua
+      note: ペルー副王領のトゥクマン州。カルチャキ谷のディアギタ人の反乱（1630–43、1658–67）の後、先住民は各地へ移された。ケチュア語が広く使われた。
+      source: "https://en.wikipedia.org/wiki/Calchaqu%C3%AD_Wars"
+    - from: 1800
+      main: spanish
+- id: lang_salta_chaco
+  name: サルタ東部（チャコ・サルテーニョ）
+  select:
+    pieces: [ARG-Rivadavia, ARG-Oran, ARG-General_Jose_de_San_Martin, ARG-Anta]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      note: ウィチ人（マタコ系）・チョロテ人などの地。
+    - from: 1920
+      main: spanish
+      minor: chaco_patagonia
+      note: サトウキビ農園（レデスマなど）への出稼ぎ。リバダビアなどではウィチ人がいまも多い。
+- id: lang_jujuy
+  name: フフイ（プーナとウマワカ谷）
+  select:
+    adm1: ["ARG/Jujuy"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+      note: コジャ（オマワカ・アタカマなどの子孫）の地。ウマワカ谷はアンデスとラ・プラタを結ぶ道（世界遺産）。
+    - from: 1850
+      main: spanish
+      minor: quechua
+      note: 言葉はスペイン語に移ったが、コジャとして自らをとらえる人が多い。
+- id: lang_santiago_estero
+  name: サンティアゴ・デル・エステロ
+  select:
+    adm1: ["ARG/Santiago del Estero"]
+  timeline:
+    - from: 1648
+      main: quechua
+      minor: spanish
+      note: アルゼンチン最古の町（1553）。農村ではケチュア語（サンティアゲーニョ・キチュア）が話され続けている。
+      source: "https://en.wikipedia.org/wiki/Santiago_del_Estero_Quichua"
+    - from: 1850
+      main: spanish
+      minor: quechua
+- id: lang_corrientes_misiones
+  name: コリエンテス・ミシオネス
+  select:
+    adm1: ["ARG/Corrientes", "ARG/Misiones"]
+  timeline:
+    - from: 1648
+      main: tupi_guarani
+      minor: spanish
+      note: イエズス会のグアラニーの伝道村（ミシオネス、サン・イグナシオ・ミニなど世界遺産）。コリエンテスのメスティーソもグアラニー語を話した。
+    - from: 1850
+      main: spanish
+      minor: tupi_guarani
+      note: ミシオネスの伝道村はイエズス会の追放（1767）とパラグアイ・ブラジルとの戦争で荒廃した。
+    - from: 1950
+      main: spanish
+      minor: tupi_guarani
+      note: コリエンテスでは今もグアラニー語が話され、2004 年に州の公用語の一つになった。ミシオネスにはポーランド系・ウクライナ系・ドイツ系の入植地（1897–）。
+- id: lang_cuyo_cordoba
+  name: クージョ・コルドバ（メンドーサ・サンフアン・サンルイス・コルドバ）
+  select:
+    adm1: ["ARG/Mendoza", "ARG/San Juan", "ARG/San Luis", "ARG/Córdoba"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: sa_other
+      note: クージョはチリの総督領に属した（1776 年まで）。メンドーサにはワルペ人。コルドバのイエズス会の大学（1613）。
+    - from: 1750
+      main: spanish
+- id: lang_buenos_aires
+  name: ブエノスアイレス・サンタフェ（パンパ湿潤地帯）
+  select:
+    adm1: ["ARG/Buenos Aires", "ARG/Ciudad Autónoma de Buenos Aires", "ARG/Santa Fe"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: chaco_patagonia
+      note: ブエノスアイレス（1580 年の再建）・サンタフェの町と、パンパの先住民（ケランディ・プエルチェ）。野生の牛と馬が広がった。
+    - from: 1760
+      main: spanish
+      minor: mapuche
+      note: アンデスの西から来たマプーチェ人がパンパに広がった（パンパのアラウカノ化）。サラド川の南は先住民の地だった。
+    - from: 1840
+      main: spanish
+    - from: 1880
+      main: spanish
+      minor: italian
+      note: ヨーロッパからの大量の移民（1880–1930、約 600 万人）。1914 年のブエノスアイレス市の住民の約半分が外国生まれで、イタリア系（とくにジェノヴァ・南イタリア）が最大、スペイン系がこれに続く。タンゴとココリチェ（イタリア語混じりのスペイン語）。
+      source: "https://ja.wikipedia.org/wiki/イタリア系アルゼンチン人"
+    - from: 1940
+      main: spanish
+      note: 移民の子孫はスペイン語（リオプラテンセ）に同化した。
+- id: lang_pampas_patagonia
+  name: パンパ南部・パタゴニア（アルゼンチン）
+  select:
+    adm1: ["ARG/La Pampa", "ARG/Río Negro", "ARG/Santa Cruz", "ARG/Tierra del Fuego"]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      note: テウェルチェ（パタゴニア）・プエルチェ・ペウエンチェ・セルクナム（オナ、フエゴ島）・ヤガン（ヤマナ）の地。
+      source: "https://en.wikipedia.org/wiki/Tehuelche_people"
+    - from: 1760
+      main: mapuche
+      minor: chaco_patagonia
+      note: マプーチェ語（マプドゥングン）が北パタゴニア・パンパの共通語になった（ランケル・サリナス・グランデスのカルフクラ）。
+    - from: 1890
+      main: spanish
+      minor: mapuche
+      note: ロカ将軍の「砂漠の征服」（1878–85）で、先住民は殺害・追放された。フエゴ島のセルクナム人は、牧羊業者の雇った狩人と病気でほぼ絶えた。
+      source: "https://ja.wikipedia.org/wiki/砂漠の征服"
+    - from: 1930
+      main: spanish
+- id: lang_neuquen
+  name: ネウケン
+  select:
+    adm1: ["ARG/Neuquén"]
+  timeline:
+    - from: 1648
+      main: mapuche
+      minor: chaco_patagonia
+      note: ペウエンチェ人（アラウカリアの実を食べる人々）の地。マプーチェ語を話すようになった。
+    - from: 1890
+      main: spanish
+      minor: mapuche
+      note: マプーチェ人の共同体が今も多い。
+- id: lang_chubut
+  name: チュブ
+  select:
+    adm1: ["ARG/Chubut"]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      note: テウェルチェ人の地。
+    - from: 1870
+      main: welsh
+      minor: chaco_patagonia
+      note: ウェールズ人の入植地（ミモサ号、1865 年にプエルト・マドリン）。ガイマン・トレレウなどのウェールズ語の共同体（ウェールズ語は今も話される）。
+      source: "https://en.wikipedia.org/wiki/Y_Wladfa"
+    - from: 1900
+      main: spanish
+      minor: welsh
+    - from: 1930
+      main: spanish
+- id: lang_chile_central
+  name: チリ中部（サンティアゴ・バルパライソ・中央盆地）
+  select:
+    iso: [CHL]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: mapuche
+      note: チリ総督領（ペルー副王領）の中心部。北のピクンチェ人（マプーチェ語を話す）はスペイン人の農園（エンコミエンダ）に組み込まれ、メスティーソ化した。
+    - from: 1750
+      main: spanish
+- id: lang_chile_north
+  name: チリ北部（アタカマ砂漠とアンデス）
+  select:
+    pieces: [CHL-Provincia_de_Arica, CHL-Provincia_de_Iquique, CHL-Provincia_del_Tamarugal, CHL-Provincia_de_Tocopilla, CHL-Provincia_de_El_Loa, CHL-Provincia_de_Antofagasta, CHL-Provincia_de_Antofagasta_South_of_24S]
+  timeline:
+    - from: 1648
+      main: aymara
+      minor: sa_other
+      note: アリカ・タラパカのアイマラ人と、アタカマのリカンアンタイ（アタカメーニョ、クンサ語）・海岸の漁民チャンゴの地。ペルー副王領（タラパカ・アリカ）とボリビアの海岸（アントファガスタ）。
+    - from: 1880
+      main: spanish
+      minor: aymara
+      note: 硝石（チリ硝石）の採掘をめぐる太平洋戦争（1879–84）で、チリがボリビアの海岸とペルーのタラパカを奪った。硝石の町と港に、チリ中部から労働者が集まった。
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+    - from: 1930
+      main: spanish
+- id: lang_parinacota
+  name: パリナコタ・タマルガルの高地（アイマラの地）
+  select:
+    pieces: [CHL-Provincia_de_Parinacota]
+  timeline:
+    - from: 1648
+      main: aymara
+      note: アルティプラノのアイマラ人の牧畜の村々。
+    - from: 1990
+      main: aymara
+      minor: spanish
+- id: lang_el_loa
+  name: エル・ロア（サン・ペドロ・デ・アタカマ・カラマ）
+  select:
+    pieces: [CHL-Provincia_de_El_Loa]
+  timeline:
+    - from: 1648
+      main: sa_other
+      minor: spanish
+      note: リカンアンタイ（アタカメーニョ）人の地。クンサ語は 20 世紀半ばに話されなくなった。
+    - from: 1920
+      main: spanish
+      minor: sa_other
+      note: チュキカマタの銅山（1915–）。
+- id: lang_araucania
+  name: アラウカニア（マプーチェの地）
+  select:
+    pieces: [CHL-Provincia_de_Malleco, CHL-Provincia_de_Cautin, CHL-Provincia_de_Arauco]
+  timeline:
+    - from: 1648
+      main: mapuche
+      note: マプーチェ人はビオビオ川を境にスペインに抵抗した（アラウコ戦争、16 世紀〜）。キリン協定（1641）以後、スペインは独立した民として交渉の会議（パルラメント）を開いた。
+      source: "https://ja.wikipedia.org/wiki/アラウコ戦争"
+    - from: 1890
+      main: spanish
+      minor: mapuche
+      note: チリ軍の「アラウカニアの平定」（1861–83）でマプーチェの土地はチリに併合され、保留地に押し込められた。チリ中部とヨーロッパからの入植者が土地に入った。現在もアラウカニア州の住民の約 3 分の 1 がマプーチェ。
+      source: "https://ja.wikipedia.org/wiki/マプチェ族"
+- id: lang_biobio_frontier
+  name: コンセプシオン・ビオビオ（フロンテラ）
+  select:
+    pieces: [CHL-Provincia_de_Concepcion, CHL-Provincia_de_Bio_Bio]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: mapuche
+      note: スペインの国境の砦（フロンテラ）の線と、コンセプシオンの町。
+    - from: 1800
+      main: spanish
+- id: lang_valdivia_osorno
+  name: バルディビア・オソルノ・ランキウエ
+  select:
+    pieces: [CHL-Provincia_de_Valdivia, CHL-Provincia_de_Ranco, CHL-Provincia_de_Osorno, CHL-Provincia_de_Llanquihue]
+  timeline:
+    - from: 1648
+      main: mapuche
+      note: ウイリチェ人（南のマプーチェ）の地。バルディビアのスペインの要塞（1645 年に再建）。オソルノは 1604 年に放棄され、1796 年に再建された。
+    - from: 1860
+      main: mapuche
+      minor: german
+      note: ドイツ人の入植（1846–75、ベルナルド・フィリッピとビセンテ・ペレス・ロサレスの植民事業）。ランキウエ湖畔（プエルト・モント 1853）・バルディビア・オソルノの町。
+      source: "https://en.wikipedia.org/wiki/German_colonization_of_Valdivia,_Osorno_and_Llanquihue"
+    - from: 1890
+      main: spanish
+      minor: german
+    - from: 1930
+      main: spanish
+      minor: mapuche
+      note: ドイツ系の子孫はスペイン語に同化した。オソルノの海岸などにウイリチェの共同体が残る。
+- id: lang_chiloe
+  name: チロエ島
+  select:
+    pieces: [CHL-Provincia_de_Chiloe]
+  timeline:
+    - from: 1648
+      main: mapuche
+      minor: spanish
+      note: ウイリチェ人とチョノ人の島。スペイン人の町カストロ（1567）。
+    - from: 1800
+      main: spanish
+      note: チロエのメスティーソ（チロテ）。チロエはスペインの最後の拠点で、1826 年にチリに加わった。
+- id: lang_chile_patagonia
+  name: チリのパタゴニア（アイセン・マガジャネス・フエゴ島）
+  select:
+    pieces: [CHL-Provincia_de_Palena, CHL-Provincia_de_Aysen, CHL-Provincia_de_Coyhaique, CHL-Provincia_de_General_Carrera, CHL-Provincia_de_Capitan_Prat, CHL-Provincia_de_Magallanes, CHL-Provincia_de_Ultima_Esperanza, CHL-Provincia_de_Tierra_del_Fuego, CHL-Provincia_de_la_Antartica_Chilena]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      note: チョノ・カウェスカル（アラカルフ）・ヤガン（カヌーの民）、テウェルチェ・セルクナムの地。
+    - from: 1890
+      main: spanish
+      minor: chaco_patagonia
+      note: プンタ・アレナス（1848）とマゼラン海峡の航路。牧羊の大農場。チロエ・クロアチア・イギリスなどからの移住者。
+    - from: 1930
+      main: spanish
+      note: アイセンへの入植（1920 年代〜）。
+- id: lang_easter_island
+  name: イースター島（ラパ・ヌイ）
+  select:
+    pieces: [CHL-Easter_Island_Province]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ラパ・ヌイの人々（ポリネシア系）。ロンゴロンゴ文字の板が残る。
+      source: "https://ja.wikipedia.org/wiki/イースター島"
+    - from: 1990
+      main: polynesian
+      minor: spanish
+      note: 1888 年にチリが併合した。1966 年までは島の大部分が羊の牧場として貸し出され、住民は村に閉じこめられた。観光の発達でチリ本土からの移住者が増えた（住民の約半数がラパ・ヌイ）。
+- id: lang_uruguay
+  name: ウルグアイ（バンダ・オリエンタル）
+  select:
+    iso: [URY]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      minor: tupi_guarani
+      note: チャルア・ミヌアン人（チャルア語族）と、グアラニー人の地。
+    - from: 1750
+      main: spanish
+      minor: chaco_patagonia
+      note: モンテビデオ（1726）と大牧場（エスタンシア）。ガウチョ。チャルア人はサルシプエデスの虐殺（1831）で滅ぼされた。
+    - from: 1830
+      main: spanish
+    - from: 1880
+      main: spanish
+      minor: italian
+      note: イタリア・スペインからの移民で、1880 年代のモンテビデオの住民の約半分が外国生まれだった。
+    - from: 1940
+      main: spanish
+- id: lang_uruguay_west
+  name: ウルグアイ西部（コロニア・ソリアノ）
+  select:
+    adm1: ["URY/Colonia", "URY/Soriano"]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: chaco_patagonia
+      note: サント・ドミンゴ・ソリアノの伝道所（1624）。
+    - from: 1690
+      main: portuguese
+      minor: spanish
+      note: ポルトガルのコロニア・ド・サクラメント（1680）は、ブエノスアイレスの対岸の密貿易の拠点（1777 年のサン・イルデフォンソ条約でスペイン領）。
+    - from: 1780
+      main: spanish
+- id: lang_uruguay_north
+  name: ウルグアイ北部（ブラジルとの国境地帯）
+  select:
+    adm1: ["URY/Artigas", "URY/Rivera", "URY/Tacuarembó", "URY/Cerro Largo", "URY/Treinta y Tres"]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      minor: tupi_guarani
+    - from: 1800
+      main: portuguese
+      minor: spanish
+      note: ブラジル（リオグランデ・ド・スル）の牧場主が北部に広く土地を持ち、ポルトガル語が話された。ブラジル（シスプラチナ州、1821–28）からの独立後も 20 世紀初めまで続いた。
+      source: "https://en.wikipedia.org/wiki/Uruguayan_Portuguese"
+    - from: 1900
+      main: spanish
+      minor: portuguese
+      note: スペイン語の学校教育の広がり（1877 年の教育改革〜）。国境の町（リベラ・アルティガス）では今もポルトゥニョール（ウルグアイ・ポルトガル語）が話される。
+- id: lang_falklands
+  name: フォークランド（マルビナス）諸島
+  select:
+    iso: ["117"]
+  timeline:
+    - from: 1764
+      main: french
+      note: フランス（ブーガンヴィル）のポール・ルイ（1764、サン・マロの人々。「マルビナス」の名はサン・マロ〈マルウィヌ〉から）。
+    - from: 1767
+      main: spanish
+      note: スペインに譲られた（プエルト・ソレダード）。1811 年にスペインは撤退し、1820 年からラ・プラタ連合州（アルゼンチン）が領有を主張した。
+    - from: 1833
+      main: english
+      note: 1833 年にイギリスが占領し、イギリス人の牧羊の植民地になった。1982 年のフォークランド（マルビナス）戦争。
+      source: "https://ja.wikipedia.org/wiki/フォークランド紛争"
