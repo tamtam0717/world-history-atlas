@@ -1,0 +1,1236 @@
+# S1 北西インド・パキスタンの地域と所属の変遷（1648–2025）
+# 地域は「同じ所属の変遷をたどった県（ピース）のまとまり」。互いに重ならない。
+# PAK-Chagai・PAK-Gwadar・PAK-Kech は ottoman.yaml にある。
+# 生成：S1 の作業用スクリプト（gen_s1.py）。手で直してよい。
+
+- id: pk_lahore
+  name: "ラホール・グジュラーンワーラー・スィヤールコート（パンジャーブ中部）"
+  select:
+    pieces: [PAK-Lahore, PAK-Kasur, PAK-Sheikhpura, PAK-Gujranwala, PAK-Sialkot, PAK-Narowal, PAK-Hafizabad]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1758, owner: "maratha", certainty: "uncertain", label: "パンジャーブ（マラーター軍の進出）", cause: "マラーター軍（ラグナート・ラーオ）がシルヒンド・ラホールを取る（3–4月）", source: "https://en.wikipedia.org/wiki/Maratha_conquest_of_North-west_India"}
+    - {from: 1759, owner: "durrani", cause: "アフマド・シャーが再びパンジャーブに入り、マラーター軍を追う（第3次パーニーパットの戦いへ）", source: "https://ja.wikipedia.org/wiki/第三次パーニーパットの戦い"}
+    - {from: 1765, owner: "sikh_misls", cause: "シク教徒のミスルがラホールを取り、パンジャーブを分けて治める（4月）", source: "https://en.wikipedia.org/wiki/Misl"}
+    - {from: 1799, owner: "sikh_empire", cause: "ランジート・シングがラホールを取る（7月）。1801年にパンジャーブのマハーラージャを名のる", source: "https://ja.wikipedia.org/wiki/ランジート・シング"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_bar
+  name: "ファイサラーバード・ジャング・サーヒーワール（パンジャーブ中西部）"
+  select:
+    pieces: [PAK-Faisalabad, PAK-Jhang, PAK-Toba_Tek_Singh, PAK-Okara, PAK-Sahiwal, PAK-Pakpattan]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1765, owner: "sikh_misls", certainty: "uncertain", cause: "シク教徒のミスル（バンギー家など）が勢力を広げる。ジャングのスィヤール族の首長などは半ば自立していた", source: "https://en.wikipedia.org/wiki/Misl"}
+    - {from: 1806, owner: "sikh_empire", cause: "ランジート・シングがジャングを併合（1806年ごろ）。パークパッタン・カマーリヤーなども順に従える", source: "https://en.wikipedia.org/wiki/Sikh_Empire"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "シク王国による征服の年は地域ごとに違う（1806–1816年）。要確認。"
+
+- id: pk_potohar
+  name: "ラーワルピンディー・ジェーラム・グジュラート・サルゴーダー"
+  select:
+    pieces: [PAK-Rawalpindi, PAK-Islamabad_Capital_Territory, PAK-Chakwal, PAK-Jhelum, PAK-Gujrat, PAK-Mandi_Bahauddin, PAK-Sargodha, PAK-Khushab]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1765, owner: "sikh_misls", cause: "シク教徒のミスル（スケルチャキア家など）がガッカル族からラーワルピンディー一帯を奪う", source: "https://en.wikipedia.org/wiki/Misl"}
+    - {from: 1799, owner: "sikh_empire", cause: "ランジート・シング（スケルチャキア家）がミスルを統一する", source: "https://ja.wikipedia.org/wiki/ランジート・シング"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_attock
+  name: "アトック"
+  select:
+    pieces: [PAK-Attock]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1813, owner: "sikh_empire", cause: "アトックの戦い（7月）。シク王国がインダス川の渡し場のアトック城を取る", source: "https://en.wikipedia.org/wiki/Battle_of_Attock_(1813)"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_multan
+  name: "ムルターン・ムザッファルガル"
+  select:
+    pieces: [PAK-Multan, PAK-Khanewal, PAK-Lodhran, PAK-Vihari, PAK-Muzaffargarh]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1772, owner: "sikh_misls", cause: "シク教徒のバンギー・ミスルがムルターンを取る", source: "https://en.wikipedia.org/wiki/Bhangi_Misl"}
+    - {from: 1780, owner: "durrani", cause: "ティムール・シャーがムルターンを取り戻す（2月）", source: "https://en.wikipedia.org/wiki/Timur_Shah_Durrani"}
+    - {from: 1818, owner: "sikh_empire", cause: "シク王国がムルターンを攻め落とす（6月）", source: "https://en.wikipedia.org/wiki/Siege_of_Multan_(1818)"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "ムルターンの反乱（1848）から第2次シク戦争。ムルターンの包囲（1849年1月）ののち、イギリスがパンジャーブを併合", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_thal
+  name: "ミアーンワーリー・バッカル・レイヤ（タル砂漠）"
+  select:
+    pieces: [PAK-Mianwali, PAK-Bhakkar, PAK-Layyah]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1821, owner: "sikh_empire", cause: "シク王国がマンケーラの太守（ドゥッラーニー朝の臣下）を降す", source: "https://en.wikipedia.org/wiki/Sikh_Empire"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_dgkhan
+  name: "デーラー・ガーズィー・ハーン・ラージャンプル"
+  select:
+    pieces: [PAK-Dera_Ghazi_Khan, PAK-Rajanpur]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1739, owner: "persia", cause: "カルナールの戦いの後の講和で、ムガル帝国がインダス川の西の地をナーディル・シャーに譲る", source: "https://ja.wikipedia.org/wiki/ナーディル・シャー"}
+    - {from: 1747, owner: "durrani", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1819, owner: "sikh_empire", cause: "シク王国がデーラー・ガーズィー・ハーンを取る", source: "https://en.wikipedia.org/wiki/Sikh_Empire"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_bahawalpur
+  name: "バハーワルプル"
+  select:
+    pieces: [PAK-Bahawalpur, PAK-Bahawalnagar, PAK-Rahim_Yar_Khan]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1748, owner: "bahawalpur", cause: "ダーウードプトラ族のバハーワル・ハーンがバハーワルプルの町を建てる（ドゥッラーニー朝に名目上従う）", source: "https://en.wikipedia.org/wiki/Bahawalpur_(princely_state)"}
+    - {from: 1838, owner: "britain", certainty: "indirect", label: "バハーワルプル藩王国", cause: "バハーワルプルがイギリスと条約を結び、保護下に入る（1833・1838年）", source: "https://en.wikipedia.org/wiki/Bahawalpur_(princely_state)"}
+    - {from: 1947, owner: "pakistan", certainty: "indirect", label: "バハーワルプル藩王国", cause: "バハーワルプルがパキスタンに加わる（10月）", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+    - {from: 1955, owner: "pakistan", cause: "藩王国が廃止され、西パキスタン州（ワン・ユニット）に統合される（10月）", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+
+- id: pk_peshawar
+  name: "ペシャーワル・マルダーン・コハート"
+  select:
+    pieces: [PAK-Peshawar, PAK-Charsadda, PAK-Nowshera, PAK-Mardan, PAK-Swabi, PAK-Kohat, PAK-Hangu]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のカーブル州"}
+    - {from: 1739, owner: "persia", cause: "カルナールの戦いの後の講和で、ムガル帝国がインダス川の西の地をナーディル・シャーに譲る", source: "https://ja.wikipedia.org/wiki/ナーディル・シャー"}
+    - {from: 1747, owner: "durrani", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: "afghanistan", cause: "ドゥッラーニー朝の分裂。ペシャーワルはバーラクザイ家の兄弟（ペシャーワルのサルダール）の手に", source: "https://en.wikipedia.org/wiki/Peshawar_Sardars"}
+    - {from: 1823, owner: "sikh_empire", certainty: "indirect", label: "ペシャーワル（バーラクザイ家のサルダールがシク王国に貢納）", cause: "ナウシェラの戦い（3月）でシク軍がアフガン軍を破る", source: "https://en.wikipedia.org/wiki/Battle_of_Nowshera"}
+    - {from: 1834, owner: "sikh_empire", cause: "シク王国がペシャーワルを併合（5月）", source: "https://en.wikipedia.org/wiki/Sikh_Empire"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_hazara
+  name: "ハザーラ（アボッターバード・マーンセヘラー）"
+  select:
+    pieces: [PAK-Abbottabad, PAK-Haripur, PAK-Mansehra, PAK-Battagram]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ドゥッラーニー朝がカシュミールとともにハザーラを取る", source: "https://en.wikipedia.org/wiki/Hazara_region"}
+    - {from: 1820, owner: "sikh_empire", cause: "シク王国の将軍ハリ・シング・ナルワーがハザーラを征服（1818–20年）", source: "https://en.wikipedia.org/wiki/Hari_Singh_Nalwa"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)"}
+    - {from: 1847, owner: "sikh_empire", cause: "グラーブ・シングがハザーラをラホール政府（イギリスの監督下）に返し、ジャンムー近くの土地と交換", source: "https://en.wikipedia.org/wiki/Hazara_region"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_dik
+  name: "デーラー・イスマーイール・ハーン・バンヌー"
+  select:
+    pieces: [PAK-Dera_Ismail_Khan, PAK-Tank, PAK-Lakki_Marwat, PAK-Bannu, PAK-Karak]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1739, owner: "persia", cause: "カルナールの戦いの後の講和で、ムガル帝国がインダス川の西の地をナーディル・シャーに譲る", source: "https://ja.wikipedia.org/wiki/ナーディル・シャー"}
+    - {from: 1747, owner: "durrani", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1821, owner: "sikh_empire", cause: "シク王国がデーラー・イスマーイール・ハーンを取る（バンヌーへの支配は名目的）", source: "https://en.wikipedia.org/wiki/Sikh_Empire"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_swat
+  name: "スワート・ディール・マラカンド・ブネール"
+  select:
+    pieces: [PAK-Swat, PAK-Buner, PAK-Shangla, PAK-Upper_Dir, PAK-Lower_Dir, PAK-Malakand]
+  timeline:
+    - {from: 1648, owner: null, certainty: "uncertain", note: "ユースフザイ族などパシュトゥーン人の部族の地。ムガル帝国・ドゥッラーニー朝の支配は及ばなかった"}
+    - {from: 1895, owner: "britain", certainty: "indirect", label: "マラカンド管区（ディール・スワートなど）", cause: "チトラル救援遠征の後、マラカンド管区が置かれ、ディールなどがイギリスの保護下に", source: "https://en.wikipedia.org/wiki/Malakand_Agency"}
+    - {from: 1947, owner: "pakistan", certainty: "indirect", label: "ディール・スワート・チトラル藩王国", cause: "ディール・スワートがパキスタンに加わる", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+    - {from: 1969, owner: "pakistan", cause: "ディール・スワート・チトラルの藩王国が廃止され、北西辺境州に統合される（7月）", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+  note: "スワートは1915年にスワート王国となり、1926年にイギリスに認められた。ブネールは1923年にスワートに併合された。"
+
+- id: pk_chitral
+  name: "チトラル"
+  select:
+    pieces: [PAK-Chitral]
+  timeline:
+    - {from: 1648, owner: "dardistan", note: "カトゥール家のメヘタル（王）が治めた"}
+    - {from: 1895, owner: "britain", certainty: "indirect", label: "チトラル藩王国", cause: "チトラル包囲戦（3–4月）と救援遠征。チトラルがイギリスの保護下に", source: "https://en.wikipedia.org/wiki/Siege_of_Chitral"}
+    - {from: 1947, owner: "pakistan", certainty: "indirect", label: "ディール・スワート・チトラル藩王国", cause: "チトラルがパキスタンに加わる", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+    - {from: 1969, owner: "pakistan", cause: "ディール・スワート・チトラルの藩王国が廃止され、北西辺境州に統合される（7月）", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+
+- id: pk_tribal
+  name: "部族地域（ハイバル・クッラム・ワズィーリスターンなど）"
+  select:
+    pieces: [PAK-Bajaur, PAK-Mohmand, PAK-Khyber, PAK-Orakzai, PAK-Kurram, PAK-North_Waziristan, PAK-South_Waziristan]
+  timeline:
+    - {from: 1648, owner: null, certainty: "uncertain", note: "パシュトゥーン人の諸部族（アフリーディー・ワズィールなど）の地。ムガル帝国はハイバル峠の道を押さえようとしたが、部族は自立していた"}
+    - {from: 1747, owner: "durrani", certainty: "nominal", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: null, certainty: "uncertain", cause: "ドゥッラーニー朝の分裂", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1893, owner: "britain", certainty: "nominal", label: "部族地域", cause: "デュアランド・ライン協定（11月）でアフガニスタンとの境が定められ、部族地域がイギリス領インド側に", source: "https://ja.wikipedia.org/wiki/デュアランド・ライン"}
+    - {from: 1947, owner: "pakistan", certainty: "indirect", label: "連邦直轄部族地域（FATA）", cause: "部族地域がパキスタンに加わる。部族の慣習法と政治代理官による間接的な統治が続く", source: "https://en.wikipedia.org/wiki/Federally_Administered_Tribal_Areas"}
+    - {from: 2018, owner: "pakistan", cause: "部族地域がハイバル・パフトゥーンハー州に統合される（5月）", source: "https://en.wikipedia.org/wiki/Federally_Administered_Tribal_Areas"}
+  note: "ハイバル峠・クッラムは1879年のガンダマク条約からイギリスの管理下に入った。"
+
+- id: pk_kohistan
+  name: "コーヒスターン"
+  select:
+    pieces: [PAK-Kohistan]
+  timeline:
+    - {from: 1648, owner: null, certainty: "uncertain", note: "インダス・コーヒスターンの山地の部族の地"}
+    - {from: 1893, owner: "britain", certainty: "nominal", label: "部族地域", cause: "デュアランド・ライン協定（11月）。インダス・コーヒスターンは統治の及ばない部族地域とされた", source: "https://en.wikipedia.org/wiki/Kohistan_District,_Pakistan"}
+    - {from: 1947, owner: "pakistan", certainty: "indirect", label: "部族地域", cause: "パキスタンに加わる", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+    - {from: 1976, owner: "pakistan", cause: "コーヒスターン県が置かれ、北西辺境州の直接の統治下に", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+
+- id: pk_upper_sindh
+  name: "上シンド（スッカル・シカールプル・ラールカーナー）"
+  select:
+    pieces: [PAK-Sukkur, PAK-Shikarpur, PAK-Ghotki, PAK-Jacobabad, PAK-Kashmore, PAK-Qambar_Shahdadkot, PAK-Naushehro_Feroze, PAK-Dadu]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のムルターン州（バッカル）"}
+    - {from: 1701, owner: "sindh", cause: "カルホーラ家のヤール・ムハンマドがムガル帝国から上シンドの統治を認められ、事実上自立する", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1739, owner: "sindh", overlord: "persia", cause: "ナーディル・シャーがシンドに攻め入り、カルホーラ朝を臣従させる", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1747, owner: "sindh", overlord: "durrani", cause: "ナーディル・シャーの死後、カルホーラ朝はドゥッラーニー朝に貢納する", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1783, owner: "sindh", cause: "ハーラーニーの戦いでバローチ系のタールプル家がカルホーラ家を倒す。ドゥッラーニー朝への貢納は名目的になる", source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {from: 1843, owner: "britain", label: "イギリス東インド会社領", cause: "ミアーニーの戦い（2月）・ハイダラーバードの戦い（3月）で、ネーピア将軍の軍がタールプル家のミールたちを破り、シンドを併合", source: "https://ja.wikipedia.org/wiki/ミアーニーの戦い"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_khairpur
+  name: "ハイルプル"
+  select:
+    pieces: [PAK-Khairpur]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のムルターン州（バッカル）"}
+    - {from: 1701, owner: "sindh", cause: "カルホーラ家のヤール・ムハンマドがムガル帝国から上シンドの統治を認められ、事実上自立する", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1739, owner: "sindh", overlord: "persia", cause: "ナーディル・シャーがシンドに攻め入り、カルホーラ朝を臣従させる", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1747, owner: "sindh", overlord: "durrani", cause: "ナーディル・シャーの死後、カルホーラ朝はドゥッラーニー朝に貢納する", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1783, owner: "sindh", cause: "ハーラーニーの戦いでバローチ系のタールプル家がカルホーラ家を倒す。ドゥッラーニー朝への貢納は名目的になる", source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {from: 1843, owner: "britain", certainty: "indirect", label: "ハイルプル藩王国", cause: "シンド併合のなか、イギリスに味方したハイルプルのミール・アリー・ムラードの国だけが藩王国として残る", source: "https://en.wikipedia.org/wiki/Khairpur_(princely_state)"}
+    - {from: 1947, owner: "pakistan", certainty: "indirect", label: "ハイルプル藩王国", cause: "ハイルプルがパキスタンに加わる（10月）", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+    - {from: 1955, owner: "pakistan", cause: "藩王国が廃止され、西パキスタン州（ワン・ユニット）に統合される（10月）", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+
+- id: pk_lower_sindh
+  name: "下シンド（ハイダラーバード・タッター・ミールプルハース）"
+  select:
+    pieces: [PAK-Thatta, PAK-Hyderabad, PAK-Jamshoro, PAK-Matiari, PAK-Tando_Allahyar, PAK-Tando_Muhammad_Khan, PAK-Badin, PAK-Nawabshah, PAK-Sanghar, PAK-Mirpurkhas]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のタッター州"}
+    - {from: 1737, owner: "sindh", cause: "ムガル帝国がタッター（下シンド）の統治もカルホーラ家のヌール・ムハンマドに任せ、シンド全体がカルホーラ朝の支配下に", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1739, owner: "sindh", overlord: "persia", cause: "ナーディル・シャーがシンドに攻め入り、カルホーラ朝を臣従させる", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1747, owner: "sindh", overlord: "durrani", cause: "ナーディル・シャーの死後、カルホーラ朝はドゥッラーニー朝に貢納する", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1783, owner: "sindh", cause: "ハーラーニーの戦いでバローチ系のタールプル家がカルホーラ家を倒す。ドゥッラーニー朝への貢納は名目的になる", source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {from: 1843, owner: "britain", label: "イギリス東インド会社領", cause: "ミアーニーの戦い（2月）・ハイダラーバードの戦い（3月）で、ネーピア将軍の軍がタールプル家のミールたちを破り、シンドを併合", source: "https://ja.wikipedia.org/wiki/ミアーニーの戦い"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_thar
+  name: "タルパールカル・ウメルコート"
+  select:
+    pieces: [PAK-Tharparkar, PAK-Umerkot]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のタッター州の東の端（ウメルコートはアクバルの生地）"}
+    - {from: 1737, owner: "sindh", certainty: "uncertain", cause: "カルホーラ朝の支配が及ぶ。タール砂漠のソーダー族のラージプートとジョードプル王国も争った", source: "https://en.wikipedia.org/wiki/Umerkot"}
+    - {from: 1813, owner: "sindh", cause: "タールプル家がジョードプル王国からウメルコートを取る", source: "https://en.wikipedia.org/wiki/Umerkot"}
+    - {from: 1843, owner: "britain", label: "イギリス東インド会社領", cause: "ミアーニーの戦い（2月）・ハイダラーバードの戦い（3月）で、ネーピア将軍の軍がタールプル家のミールたちを破り、シンドを併合", source: "https://ja.wikipedia.org/wiki/ミアーニーの戦い"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_karachi
+  name: "カラーチー"
+  select:
+    pieces: [PAK-Karachi]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のタッター州"}
+    - {from: 1737, owner: "sindh", cause: "ムガル帝国がタッター（下シンド）の統治もカルホーラ家のヌール・ムハンマドに任せ、シンド全体がカルホーラ朝の支配下に", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1739, owner: "sindh", overlord: "persia", cause: "ナーディル・シャーがシンドに攻め入り、カルホーラ朝を臣従させる", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1757, owner: "kalat", cause: "カルホーラ家がカラーチーの港をカラートのハンに譲る（年は要確認）", source: "https://en.wikipedia.org/wiki/History_of_Karachi"}
+    - {from: 1795, owner: "sindh", cause: "タールプル家がカラートからカラーチーを取る", source: "https://en.wikipedia.org/wiki/History_of_Karachi"}
+    - {from: 1839, owner: "britain", certainty: "occupied", label: "カラーチー（イギリス軍の占領）", cause: "第1次アフガン戦争のなかでイギリス軍がカラーチーを占領（2月）", source: "https://en.wikipedia.org/wiki/History_of_Karachi"}
+    - {from: 1843, owner: "britain", label: "イギリス東インド会社領", cause: "ミアーニーの戦い（2月）・ハイダラーバードの戦い（3月）で、ネーピア将軍の軍がタールプル家のミールたちを破り、シンドを併合", source: "https://ja.wikipedia.org/wiki/ミアーニーの戦い"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_kalat
+  name: "カラート・マストゥング・フズダール・ハーラーン・ラス・ベーラ"
+  select:
+    pieces: [PAK-Kalat, PAK-Mastung, PAK-Khuzdar, PAK-Kharan, PAK-Awaran, PAK-Panjgur, PAK-Lasbela]
+  timeline:
+    - {from: 1648, owner: null, certainty: "uncertain", note: "バローチ・ブラーフーイーの諸部族の地。ムガル帝国・サファヴィー朝の支配は名目的"}
+    - {from: 1666, owner: "kalat", cause: "カラート・ハン国の成立", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1739, owner: "kalat", overlord: "persia", cause: "ナーディル・シャーがカラート・ハン国を臣従させる", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1747, owner: "kalat", overlord: "durrani", cause: "カラート・ハン国がドゥッラーニー朝に臣従する", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1758, owner: "kalat", cause: "カラート条約。ナスィール・ハン1世がアフマド・シャーの包囲に耐え、カラート・ハン国が事実上自立する", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1876, owner: "britain", certainty: "indirect", label: "カラート藩王国", cause: "マストゥング条約（12月）。カラート・ハン国がイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1947, owner: "kalat", certainty: "uncertain", cause: "イギリスの撤退でカラートのハンが独立を宣言（8月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1948, owner: "pakistan", certainty: "indirect", label: "カラート藩王国", cause: "カラート・ハン国がパキスタンに加わる（3月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1955, owner: "pakistan", cause: "藩王国が廃止され、西パキスタン州（ワン・ユニット）に統合される（10月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+  note: "ハーラーン・ラス・ベーラ・マクラーン（パンジグール）はカラートの臣下の小国。1948年3月に別々にパキスタンに加わった。"
+
+- id: pk_kachhi
+  name: "カッチー・ナスィーラーバード・ジャファラーバード"
+  select:
+    pieces: [PAK-Kachhi, PAK-Nasirabad, PAK-Jafarabad, PAK-Jhal_Magsi]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "nominal", note: "ムガル帝国のムルターン州（スィーウィー）の名目的な支配"}
+    - {from: 1701, owner: "sindh", cause: "カルホーラ家がカッチー平原を押さえる", source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {from: 1740, owner: "kalat", overlord: "persia", cause: "ナーディル・シャーがカッチーをカルホーラ家から取り上げ、カラートのハンに与える", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1747, owner: "kalat", overlord: "durrani", cause: "カラート・ハン国がドゥッラーニー朝に臣従する", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1758, owner: "kalat", cause: "カラート条約。ナスィール・ハン1世がアフマド・シャーの包囲に耐え、カラート・ハン国が事実上自立する", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1876, owner: "britain", certainty: "indirect", label: "カラート藩王国", cause: "マストゥング条約（12月）。カラート・ハン国がイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1947, owner: "kalat", certainty: "uncertain", cause: "イギリスの撤退でカラートのハンが独立を宣言（8月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1948, owner: "pakistan", certainty: "indirect", label: "カラート藩王国", cause: "カラート・ハン国がパキスタンに加わる（3月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1955, owner: "pakistan", cause: "藩王国が廃止され、西パキスタン州（ワン・ユニット）に統合される（10月）", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+
+- id: pk_nushki
+  name: "ヌシュキ"
+  select:
+    pieces: [PAK-Nushki]
+  timeline:
+    - {from: 1648, owner: null, certainty: "uncertain", note: "バローチの諸部族の地"}
+    - {from: 1666, owner: "kalat", cause: "カラート・ハン国の成立", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1739, owner: "kalat", overlord: "persia", cause: "ナーディル・シャーがカラート・ハン国を臣従させる", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1747, owner: "kalat", overlord: "durrani", cause: "カラート・ハン国がドゥッラーニー朝に臣従する", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1758, owner: "kalat", cause: "カラート条約。ナスィール・ハン1世がアフマド・シャーの包囲に耐え、カラート・ハン国が事実上自立する", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1876, owner: "britain", certainty: "indirect", label: "カラート藩王国", cause: "マストゥング条約（12月）。カラート・ハン国がイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1899, owner: "britain", label: "イギリス領バローチスターン", cause: "カラートのハンがヌシュキをイギリスに永久に貸す", source: "https://en.wikipedia.org/wiki/Nushki"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_quetta
+  name: "クエッタ"
+  select:
+    pieces: [PAK-Quetta]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "uncertain", note: "ムガル帝国のカンダハール州の一部（1649年にサファヴィー朝がカンダハールを奪う）"}
+    - {from: 1649, owner: "persia", certainty: "uncertain", cause: "サファヴィー朝がカンダハールをムガル帝国から奪う（2月）", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1709, owner: "hotaki", certainty: "uncertain", cause: "ミール・ワイスのホータキー家がカンダハールで自立", source: "https://ja.wikipedia.org/wiki/ホータキー朝"}
+    - {from: 1738, owner: "persia", cause: "ナーディル・シャーがカンダハールを落とす", source: "https://ja.wikipedia.org/wiki/ナーディル・シャー"}
+    - {from: 1747, owner: "durrani", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1758, owner: "kalat", cause: "アフマド・シャーがクエッタ（シャール）をカラートのハンに与える（年は要確認）", source: "https://en.wikipedia.org/wiki/Quetta"}
+    - {from: 1876, owner: "britain", certainty: "indirect", label: "カラート藩王国", cause: "マストゥング条約（12月）。カラート・ハン国がイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1883, owner: "britain", label: "イギリス領バローチスターン", cause: "カラートのハンがクエッタをイギリスに貸す。1887年にイギリス領バローチスターンの中心となる", source: "https://en.wikipedia.org/wiki/Quetta"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_pishin
+  name: "ピシーン・チャマン"
+  select:
+    pieces: [PAK-Pishin, PAK-Qilla_Abdullah]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "uncertain", note: "ムガル帝国のカンダハール州の一部（1649年にサファヴィー朝がカンダハールを奪う）"}
+    - {from: 1649, owner: "persia", certainty: "uncertain", cause: "サファヴィー朝がカンダハールをムガル帝国から奪う（2月）", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1709, owner: "hotaki", certainty: "uncertain", cause: "ミール・ワイスのホータキー家がカンダハールで自立", source: "https://ja.wikipedia.org/wiki/ホータキー朝"}
+    - {from: 1738, owner: "persia", cause: "ナーディル・シャーがカンダハールを落とす", source: "https://ja.wikipedia.org/wiki/ナーディル・シャー"}
+    - {from: 1747, owner: "durrani", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: "afghanistan", cause: "ドゥッラーニー朝の分裂。カンダハールのバーラクザイ家のサルダールの支配下に", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1879, owner: "britain", label: "イギリス領バローチスターン", cause: "第2次アフガン戦争。ガンダマク条約（5月）でアフガニスタンがピシーン・スィビーをイギリスに渡す", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_sibi
+  name: "スィビー・ズィヤーラト"
+  select:
+    pieces: [PAK-Sibi, PAK-Ziarat]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "nominal", note: "ムガル帝国のムルターン州（スィーウィー）"}
+    - {from: 1739, owner: "persia", cause: "カルナールの戦いの後の講和で、ムガル帝国がインダス川の西の地をナーディル・シャーに譲る", source: "https://ja.wikipedia.org/wiki/ナーディル・シャー"}
+    - {from: 1747, owner: "durrani", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: "afghanistan", certainty: "nominal", cause: "ドゥッラーニー朝の分裂。カンダハールのバーラクザイ家の名目的な支配下に", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1879, owner: "britain", label: "イギリス領バローチスターン", cause: "第2次アフガン戦争。ガンダマク条約（5月）でアフガニスタンがピシーン・スィビーをイギリスに渡す", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_zhob
+  name: "ゾーブ・ローラーライ（バローチスターン北東部）"
+  select:
+    pieces: [PAK-Zhob, PAK-Qilla_Saifullah, PAK-Musakhel, PAK-Loralai, PAK-Barkhan]
+  timeline:
+    - {from: 1648, owner: null, certainty: "uncertain", note: "カーカル族などパシュトゥーン人の部族の地"}
+    - {from: 1747, owner: "durrani", certainty: "nominal", cause: "ナーディル・シャーの暗殺。アフマド・シャー・ドゥッラーニーがアフガニスタンと周辺を引き継ぐ", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: null, certainty: "uncertain", cause: "ドゥッラーニー朝の分裂", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1887, owner: "britain", label: "イギリス領バローチスターン", cause: "イギリスがローラーライ（1886）・ゾーブ（1889–90）に軍を送り、イギリス領バローチスターンに加える", source: "https://en.wikipedia.org/wiki/Zhob_District"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pk_marri_bugti
+  name: "マッリー・ブグティー（コーフルー・デーラー・ブグティー）"
+  select:
+    pieces: [PAK-Kohlu, PAK-Dera_Bugti]
+  timeline:
+    - {from: 1648, owner: null, certainty: "uncertain", note: "バローチのマッリー族・ブグティー族の地"}
+    - {from: 1666, owner: "kalat", certainty: "nominal", cause: "カラート・ハン国の名目的な支配", source: "https://en.wikipedia.org/wiki/Khanate_of_Kalat"}
+    - {from: 1879, owner: "britain", certainty: "nominal", label: "マッリー・ブグティー部族地域", cause: "第2次アフガン戦争の後、マッリー・ブグティーの部族地域がイギリスの政治代理官の監督下に", source: "https://en.wikipedia.org/wiki/Marri_tribe"}
+    - {from: 1947, owner: "pakistan", cause: "インド独立法により、ムスリムの多い地域がパキスタンとして分離独立（8月14日）", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "部族の地での実際の支配は弱く、パキスタンの時代にも武装闘争が続いた。"
+
+- id: pk_baltistan
+  name: "バルティスターン（スカルドゥ）"
+  select:
+    pieces: [PAK-Skardu, PAK-Shigar, PAK-Ghanche, PAK-Kharmang]
+  timeline:
+    - {from: 1648, owner: "baltistan", note: "1637年からムガル帝国に貢納"}
+    - {from: 1840, owner: "sikh_empire", label: "バルティスターン（ジャンムーのグラーブ・シングが征服）", cause: "グラーブ・シングの部将ゾーラーワル・シングがバルティスターンを征服", source: "https://en.wikipedia.org/wiki/Zorawar_Singh_Kahluria"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)"}
+    - {from: 1947, owner: "india", certainty: "uncertain", cause: "藩王ハリ・シングがインドへの帰属に署名（10月26日）。第1次印パ戦争。スカルドゥの藩王国軍が包囲される", source: "https://ja.wikipedia.org/wiki/第一次印パ戦争"}
+    - {from: 1948, owner: "pakistan", label: "ギルギット・バルティスターン（北方地域）", cause: "スカルドゥの守備隊が降伏し（8月）、バルティスターンがパキスタンの支配下に", source: "https://en.wikipedia.org/wiki/Siege_of_Skardu"}
+
+- id: pk_gilgit
+  name: "ギルギット・アストール・チラース"
+  select:
+    pieces: [PAK-Gilgit, PAK-Astore, PAK-Diamer]
+  timeline:
+    - {from: 1648, owner: "dardistan"}
+    - {from: 1842, owner: "sikh_empire", label: "ギルギット（ジャンムーのグラーブ・シングが征服）", cause: "シク王国・ドーグラーの軍がギルギットに入る", source: "https://en.wikipedia.org/wiki/Gilgit-Baltistan"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)", note: "ギルギットは1852–60年に一時ドーグラーの手を離れた。チラースは1851年に従った"}
+    - {from: 1947, owner: "pakistan", label: "ギルギット・バルティスターン（北方地域）", cause: "ギルギット・スカウトの反乱（11月1日）。藩王国の総督を捕らえ、パキスタンへの加入を求める", source: "https://en.wikipedia.org/wiki/Gilgit_rebellion"}
+
+- id: pk_hunza
+  name: "フンザ・ナガル・ギゼル"
+  select:
+    pieces: [PAK-Hunza, PAK-Nagar, PAK-Ghizer]
+  timeline:
+    - {from: 1648, owner: "dardistan"}
+    - {from: 1891, owner: "britain", certainty: "indirect", label: "ギルギット管区（フンザ・ナガルなど）", cause: "フンザ・ナガル遠征（12月）。イギリス軍がフンザ・ナガルを降し、ギルギット管区の下に置く", source: "https://en.wikipedia.org/wiki/Hunza–Nagar_Campaign"}
+    - {from: 1947, owner: "pakistan", certainty: "indirect", label: "フンザ・ナガル藩王国", cause: "ギルギットの反乱に続いて、フンザ・ナガルがパキスタンに加わる（11月）", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+    - {from: 1974, owner: "pakistan", cause: "フンザ・ナガルの藩王国が廃止される", source: "https://en.wikipedia.org/wiki/Princely_states_of_Pakistan"}
+
+- id: kashmir_valley
+  name: "カシュミール盆地（スリーナガル）"
+  select:
+    pieces: [IND-Srinagar, IND-Anantnag, IND-Badgam, IND-Baramula, IND-Bandipore, IND-Ganderbal, IND-Kupwara, IND-Kulgam, IND-Pulwama, IND-Shupiyan]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のカシュミール州。歴代の皇帝の避暑地"}
+    - {from: 1752, owner: "durrani", cause: "アフマド・シャーの部将がカシュミールを取る（1752年ごろ）", source: "https://en.wikipedia.org/wiki/Afghan_rule_in_Kashmir"}
+    - {from: 1819, owner: "sikh_empire", cause: "ショーピヤーンの戦い（7月）でシク軍がアフガン軍を破り、カシュミールを取る", source: "https://en.wikipedia.org/wiki/Battle_of_Shopian"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)"}
+    - {from: 1947, owner: "india", cause: "パキスタンの部族民の侵入を受け、藩王ハリ・シングがインドへの帰属に署名（10月26日）。第1次印パ戦争が始まる", source: "https://ja.wikipedia.org/wiki/第一次印パ戦争"}
+    - {from: 2019, owner: "india", cause: "インド憲法370条によるジャンムー・カシュミール州の自治が廃止され、連邦直轄領に（8–10月）", source: "https://ja.wikipedia.org/wiki/ジャンムー・カシミール_(連邦直轄領)"}
+  note: "1949年の停戦ライン（1972年から実効支配線）の東側。"
+
+- id: pk_azad_kashmir
+  name: "アーザード・カシュミール（ムザッファラーバード・ミールプル）"
+  select:
+    pieces: [PAK-Azad_Kashmir]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のカシュミール州・ラホール州の山地"}
+    - {from: 1752, owner: "durrani", cause: "アフマド・シャーの部将がカシュミールを取る（1752年ごろ）", source: "https://en.wikipedia.org/wiki/Afghan_rule_in_Kashmir"}
+    - {from: 1819, owner: "sikh_empire", cause: "シク王国がカシュミールを取る", source: "https://en.wikipedia.org/wiki/Battle_of_Shopian"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)"}
+    - {from: 1947, owner: "pakistan", label: "アーザード・カシュミール", cause: "第1次印パ戦争。プーンチの反乱と部族民の侵入で西部をパキスタン側が押さえ、アーザード・カシュミール政府が作られる（10月）", source: "https://ja.wikipedia.org/wiki/アザド・カシミール"}
+
+- id: jammu
+  name: "ジャンムー・ラージャウリー・プーンチ・キシュトワール"
+  select:
+    pieces: [IND-Jammu, IND-Samba, IND-Kathua, IND-Udhampur, IND-Reasi, IND-Rajouri, IND-Punch, IND-Ramban, IND-Doda, IND-Kishtwar]
+  timeline:
+    - {from: 1648, owner: "pahari_states", note: "ジャンムー・キシュトワール・ラージャウリーなどの山岳の王国。ムガル帝国に貢納した"}
+    - {from: 1808, owner: "sikh_empire", cause: "シク王国がジャンムーを併合（1808年）。キシュトワール（1821）なども順に従える", source: "https://en.wikipedia.org/wiki/Jammu_(city)"}
+    - {from: 1822, owner: "sikh_empire", certainty: "indirect", label: "ジャンムー（ラージャ・グラーブ・シング）", cause: "ランジート・シングがドーグラー家のグラーブ・シングをジャンムーのラージャに任じる", source: "https://ja.wikipedia.org/wiki/グラーブ・シング"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)"}
+    - {from: 1947, owner: "india", cause: "藩王ハリ・シングがインドへの帰属に署名（10月26日）。プーンチ・ミールプルなど西部はパキスタン側に", source: "https://ja.wikipedia.org/wiki/第一次印パ戦争"}
+    - {from: 2019, owner: "india", cause: "インド憲法370条によるジャンムー・カシュミール州の自治が廃止され、連邦直轄領に（8–10月）", source: "https://ja.wikipedia.org/wiki/ジャンムー・カシミール_(連邦直轄領)"}
+
+- id: ladakh
+  name: "ラダック（レー・カールギル）"
+  select:
+    pieces: [IND-Leh_Ladakh, IND-Kargil]
+  timeline:
+    - {from: 1648, owner: "ladakh"}
+    - {from: 1834, owner: "sikh_empire", label: "ラダック（ジャンムーのグラーブ・シングが征服）", cause: "グラーブ・シングの部将ゾーラーワル・シングがラダックに攻め込む（1834–40年）。1842年のチュシュル条約でチベットとの境を確認", source: "https://en.wikipedia.org/wiki/Zorawar_Singh_Kahluria"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)"}
+    - {from: 1947, owner: "india", cause: "藩王ハリ・シングがインドへの帰属に署名（10月26日）", source: "https://ja.wikipedia.org/wiki/第一次印パ戦争"}
+    - {from: 2019, owner: "india", cause: "ラダックがジャンムー・カシュミール州から分かれ、連邦直轄領に（10月）", source: "https://ja.wikipedia.org/wiki/ラダック_(連邦直轄領)"}
+  note: "アクサイチン（中国が実効支配）は中国のピースに含まれる。カールギルは1948年5–11月にパキスタン側に取られ、1999年にはカールギル紛争が起きた。"
+
+- id: siachen
+  name: "シアチェン氷河"
+  select:
+    pieces: [IND-DATA_NOT_AVAILABLE]
+  timeline:
+    - {from: 1648, owner: "ladakh", certainty: "uncertain", note: "人の住まない氷河地帯（ヌブラ谷・バルティスターンの北）"}
+    - {from: 1834, owner: "sikh_empire", certainty: "uncertain", cause: "ドーグラー軍がラダックを征服", source: "https://en.wikipedia.org/wiki/Zorawar_Singh_Kahluria"}
+    - {from: 1846, owner: "britain", certainty: "uncertain", label: "ジャンムー・カシュミール藩王国", cause: "アムリトサル条約（3月）。グラーブ・シングがイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開く", source: "https://ja.wikipedia.org/wiki/アムリトサル条約_(1846年)"}
+    - {from: 1947, owner: "india", certainty: "uncertain", cause: "藩王国がインドに帰属。1949年の停戦ラインは北のNJ9842で終わり、その先の境は決められなかった", source: "https://ja.wikipedia.org/wiki/シアチェン紛争"}
+    - {from: 1984, owner: "india", cause: "メーグドゥート作戦（4月）。インド軍がシアチェン氷河を押さえる", source: "https://ja.wikipedia.org/wiki/シアチェン紛争"}
+
+- id: hp_kangra
+  name: "カーングラ・ハミールプル・ウナ"
+  select:
+    pieces: [IND-Kangra, IND-Hamirpur, IND-Una]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "カーングラ城はムガル帝国の直轄（1620年〜）。周りはカトーチ家などの山岳の王国"}
+    - {from: 1786, owner: "pahari_states", cause: "カトーチ家のサンサール・チャンドがカーングラ城を取り戻し、山岳諸国の盟主となる", source: "https://en.wikipedia.org/wiki/Sansar_Chand"}
+    - {from: 1809, owner: "sikh_empire", cause: "ゴルカ軍に攻められたサンサール・チャンドがランジート・シングに助けを求め、カーングラがシク王国のものに", source: "https://en.wikipedia.org/wiki/Sansar_Chand"}
+    - {from: 1846, owner: "britain", label: "イギリス東インド会社領", cause: "第1次シク戦争の後、ラホール条約でジャランダル・ドアーブ（ビアース川とサトレジ川の間）と山地がイギリス領に（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: hp_kullu
+  name: "クッルー・ラーホール・スピティ"
+  select:
+    pieces: [IND-Kullu, IND-Lahul_Spiti]
+  timeline:
+    - {from: 1648, owner: "pahari_states", note: "クッルー王国。スピティはラダック王国に属した"}
+    - {from: 1840, owner: "sikh_empire", cause: "シク王国がクッルーを併合", source: "https://en.wikipedia.org/wiki/Kullu_district"}
+    - {from: 1846, owner: "britain", label: "イギリス東インド会社領", cause: "第1次シク戦争の後、ラホール条約でジャランダル・ドアーブ（ビアース川とサトレジ川の間）と山地がイギリス領に（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: hp_chamba_mandi
+  name: "チャンバ・マンディー"
+  select:
+    pieces: [IND-Chamba, IND-Mandi]
+  timeline:
+    - {from: 1648, owner: "pahari_states", note: "チャンバ・マンディー・スケートの王国"}
+    - {from: 1809, owner: "pahari_states", overlord: "sikh_empire", cause: "カーングラを得たシク王国に、山岳の諸国が貢納するようになる", source: "https://en.wikipedia.org/wiki/Punjab_Hill_States_Agency"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "パンジャーブ山岳藩王国（チャンバ・マンディーなど）", cause: "第1次シク戦争の後、チャンバ・マンディーなどがイギリスの保護下に", source: "https://en.wikipedia.org/wiki/Punjab_Hill_States_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "パンジャーブ山岳藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "山岳の藩王国がまとまってヒマーチャル・プラデーシュとなる（4月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: hp_shimla
+  name: "シムラー・ソーラン・シルモール・キンナウル・ビラースプル"
+  select:
+    pieces: [IND-Shimla, IND-Solan, IND-Sirmaur, IND-Kinnaur, IND-Bilaspur]
+  timeline:
+    - {from: 1648, owner: "pahari_states", note: "ビラースプル（カフルール）・シルモール・ブシャハルなど「シムラーの山岳諸国」"}
+    - {from: 1810, owner: "nepal", cause: "ゴルカ（ネパール）の軍がサトレジ川まで西へ進み、山岳の諸国を従える（1803–10年）", source: "https://ja.wikipedia.org/wiki/ネパール戦争"}
+    - {from: 1815, owner: "britain", certainty: "indirect", label: "シムラー山岳藩王国", cause: "ネパール戦争（グルカ戦争）でゴルカ軍が退き（5月 マラーオンの戦い）、山岳の諸国がイギリスの保護下に。翌年スガウリ条約", source: "https://ja.wikipedia.org/wiki/ネパール戦争"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "シムラー山岳藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "山岳の藩王国がまとまってヒマーチャル・プラデーシュとなる（4月。ビラースプルは1954年）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "シムラーの町は1830年ごろからイギリス領となり、1864年から英領インドの夏の首都となった。"
+
+- id: uk_tehri
+  name: "テフリ・ガルワール・ウッタルカーシー"
+  select:
+    pieces: [IND-Tehri_Garhwal, IND-Uttarkashi]
+  timeline:
+    - {from: 1648, owner: "garhwal"}
+    - {from: 1804, owner: "nepal", cause: "ゴルカ（ネパール）の軍がガルワール王国を征服（1804年）。王プラデュムナ・シャーは戦死", source: "https://en.wikipedia.org/wiki/Gorkha_conquest_of_Garhwal"}
+    - {from: 1815, owner: "britain", certainty: "indirect", label: "テフリ・ガルワール藩王国", cause: "ネパール戦争の後、ガルワール西部が王家（スダルシャン・シャー）に返され、テフリ・ガルワール藩王国としてイギリスの保護下に", source: "https://en.wikipedia.org/wiki/Tehri_Garhwal_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "テフリ・ガルワール藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "テフリ・ガルワールがウッタル・プラデーシュ州に統合される（8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: uk_garhwal
+  name: "ガルワール東部・デヘラードゥーン"
+  select:
+    pieces: [IND-Garhwal, IND-Chamoli, IND-Rudraprayag, IND-Dehradun]
+  timeline:
+    - {from: 1648, owner: "garhwal"}
+    - {from: 1804, owner: "nepal", cause: "ゴルカ（ネパール）の軍がガルワール王国を征服（1804年）。王プラデュムナ・シャーは戦死", source: "https://en.wikipedia.org/wiki/Gorkha_conquest_of_Garhwal"}
+    - {from: 1815, owner: "britain", label: "イギリス東インド会社領", cause: "ネパール戦争（グルカ戦争）でイギリス軍がゴルカ軍を破る（1815年5月）。翌年のスガウリ条約でクマーオーン・ガルワールがイギリス領に", source: "https://ja.wikipedia.org/wiki/スガウリ条約"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: uk_kumaon
+  name: "クマーオーン（アルモーラー・ナイニータール）"
+  select:
+    pieces: [IND-Almora, IND-Bageshwar, IND-Pithoragarh, IND-Champawat, IND-Nainital]
+  timeline:
+    - {from: 1648, owner: "kumaon"}
+    - {from: 1790, owner: "nepal", cause: "ゴルカ（ネパール）の軍がクマーオーン王国を征服し、アルモーラーを取る", source: "https://en.wikipedia.org/wiki/Kumaon_Kingdom"}
+    - {from: 1815, owner: "britain", label: "イギリス東インド会社領", cause: "ネパール戦争（グルカ戦争）でイギリス軍がゴルカ軍を破る（1815年5月）。翌年のスガウリ条約でクマーオーン・ガルワールがイギリス領に", source: "https://ja.wikipedia.org/wiki/スガウリ条約"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pb_majha
+  name: "アムリトサル・グルダースプル（マージャー）"
+  select:
+    pieces: [IND-Amritsar, IND-Tarn_Taran, IND-Gurdaspur, IND-Pathankot]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1758, owner: "maratha", certainty: "uncertain", label: "パンジャーブ（マラーター軍の進出）", cause: "マラーター軍（ラグナート・ラーオ）がシルヒンド・ラホールを取る（3–4月）", source: "https://en.wikipedia.org/wiki/Maratha_conquest_of_North-west_India"}
+    - {from: 1759, owner: "durrani", cause: "アフマド・シャーが再びパンジャーブに入り、マラーター軍を追う（第3次パーニーパットの戦いへ）", source: "https://ja.wikipedia.org/wiki/第三次パーニーパットの戦い"}
+    - {from: 1765, owner: "sikh_misls", cause: "シク教徒のミスルがラホールを取り、パンジャーブを分けて治める（4月）", source: "https://en.wikipedia.org/wiki/Misl"}
+    - {from: 1802, owner: "sikh_empire", cause: "ランジート・シングがバンギー・ミスルからアムリトサルを取る", source: "https://ja.wikipedia.org/wiki/ランジート・シング"}
+    - {from: 1849, owner: "britain", label: "イギリス東インド会社領", cause: "第2次シク戦争の後、イギリスがパンジャーブを併合（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pb_doaba
+  name: "ジャランダル・ホーシヤールプル（ドアーバー）"
+  select:
+    pieces: [IND-Jalandhar, IND-Hoshiarpur, IND-Shahid_Bhagat_Singh_Nagar]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1758, owner: "maratha", certainty: "uncertain", label: "パンジャーブ（マラーター軍の進出）", cause: "マラーター軍（ラグナート・ラーオ）がシルヒンド・ラホールを取る（3–4月）", source: "https://en.wikipedia.org/wiki/Maratha_conquest_of_North-west_India"}
+    - {from: 1759, owner: "durrani", cause: "アフマド・シャーが再びパンジャーブに入り、マラーター軍を追う（第3次パーニーパットの戦いへ）", source: "https://ja.wikipedia.org/wiki/第三次パーニーパットの戦い"}
+    - {from: 1765, owner: "sikh_misls", cause: "シク教徒のミスルがラホールを取り、パンジャーブを分けて治める（4月）", source: "https://en.wikipedia.org/wiki/Misl"}
+    - {from: 1811, owner: "sikh_empire", cause: "ランジート・シングがジャランダル・ドアーブのミスルを併合（1811年ごろ）", source: "https://en.wikipedia.org/wiki/Sikh_Empire"}
+    - {from: 1846, owner: "britain", label: "イギリス東インド会社領", cause: "第1次シク戦争の後、ラホール条約でジャランダル・ドアーブ（ビアース川とサトレジ川の間）と山地がイギリス領に（3月）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pb_kapurthala
+  name: "カプールタラー"
+  select:
+    pieces: [IND-Kapurthala]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1752, owner: "durrani", cause: "ムガル帝国がラホール・ムルターン（パンジャーブ）をアフマド・シャー・ドゥッラーニーに譲る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1758, owner: "maratha", certainty: "uncertain", label: "パンジャーブ（マラーター軍の進出）", cause: "マラーター軍（ラグナート・ラーオ）がシルヒンド・ラホールを取る（3–4月）", source: "https://en.wikipedia.org/wiki/Maratha_conquest_of_North-west_India"}
+    - {from: 1759, owner: "durrani", cause: "アフマド・シャーが再びパンジャーブに入り、マラーター軍を追う（第3次パーニーパットの戦いへ）", source: "https://ja.wikipedia.org/wiki/第三次パーニーパットの戦い"}
+    - {from: 1765, owner: "sikh_misls", cause: "シク教徒のミスルがラホールを取り、パンジャーブを分けて治める（4月）", source: "https://en.wikipedia.org/wiki/Misl"}
+    - {from: 1811, owner: "sikh_empire", certainty: "indirect", label: "カプールタラー（アフルワーリア家）", cause: "アフルワーリア・ミスルのファテ・シングがランジート・シングに従う", source: "https://en.wikipedia.org/wiki/Kapurthala_State"}
+    - {from: 1846, owner: "britain", certainty: "indirect", label: "カプールタラー藩王国", cause: "第1次シク戦争の後、カプールタラーがイギリスの保護下に", source: "https://en.wikipedia.org/wiki/Kapurthala_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "カプールタラー藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "パティヤーラー・東パンジャーブ藩王国連合（PEPSU）に統合される（7月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: pb_cis_sutlej
+  name: "ルディヤーナー・フィーローズプル・ルーパナガル（サトレジ川の南）"
+  select:
+    pieces: [IND-Ludhiana, IND-Firozpur, IND-Fazilka, IND-Moga, IND-Muktsar, IND-Rupnagar, IND-Sahibzada_Ajit_Singh_Nagar, IND-Chandigarh]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のデリー州シルヒンド地方"}
+    - {from: 1757, owner: "durrani", cause: "アフマド・シャー・ドゥッラーニーがシルヒンドを取る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1758, owner: "maratha", certainty: "uncertain", label: "パンジャーブ（マラーター軍の進出）", cause: "マラーター軍（ラグナート・ラーオ）がシルヒンド・ラホールを取る（3–4月）", source: "https://en.wikipedia.org/wiki/Maratha_conquest_of_North-west_India"}
+    - {from: 1759, owner: "durrani", cause: "アフマド・シャーが再びパンジャーブに入り、マラーター軍を追う（第3次パーニーパットの戦いへ）", source: "https://ja.wikipedia.org/wiki/第三次パーニーパットの戦い"}
+    - {from: 1764, owner: "sikh_misls", cause: "シク教徒のミスルがシルヒンドを落とす（1764年1月）。サトレジ川の南もシク諸侯が分けて治める", source: "https://en.wikipedia.org/wiki/Battle_of_Sirhind_(1764)"}
+    - {from: 1809, owner: "britain", certainty: "indirect", label: "サトレジ川以南のシク諸侯", cause: "アムリトサル条約（4月）。サトレジ川をシク王国との境とし、川の南のシク諸侯がイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Treaty_of_Amritsar_(1809)"}
+    - {from: 1846, owner: "britain", label: "イギリス東インド会社領", cause: "第1次シク戦争の後、サトレジ川の南の諸侯の領地の多くをイギリスが併合（フィーローズプルは1835年、ルディヤーナーは1836年から）", source: "https://ja.wikipedia.org/wiki/シク戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: pb_phulkian
+  name: "パティヤーラー・サングルール・バティンダー・ジーンド（プルキアン諸国）"
+  select:
+    pieces: [IND-Patiala, IND-Sangrur, IND-Barnala, IND-Mansa, IND-Bathinda, IND-Fatehgarh_Sahib, IND-Faridkot, IND-Jind]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のデリー州シルヒンド地方"}
+    - {from: 1757, owner: "durrani", cause: "アフマド・シャー・ドゥッラーニーがシルヒンドを取る", source: "https://ja.wikipedia.org/wiki/アフマド・シャー・ドゥッラーニー"}
+    - {from: 1758, owner: "maratha", certainty: "uncertain", label: "パンジャーブ（マラーター軍の進出）", cause: "マラーター軍（ラグナート・ラーオ）がシルヒンド・ラホールを取る（3–4月）", source: "https://en.wikipedia.org/wiki/Maratha_conquest_of_North-west_India"}
+    - {from: 1759, owner: "durrani", cause: "アフマド・シャーが再びパンジャーブに入り、マラーター軍を追う（第3次パーニーパットの戦いへ）", source: "https://ja.wikipedia.org/wiki/第三次パーニーパットの戦い"}
+    - {from: 1764, owner: "sikh_misls", label: "パティヤーラー・ナーバー・ジーンド（プルキアン・ミスル）", cause: "シク教徒のミスルがシルヒンドを落とす（1764年1月）。サトレジ川の南もシク諸侯が分けて治める", source: "https://en.wikipedia.org/wiki/Battle_of_Sirhind_(1764)"}
+    - {from: 1809, owner: "britain", certainty: "indirect", label: "パティヤーラーなどのシク藩王国", cause: "アムリトサル条約（4月）。サトレジ川をシク王国との境とし、川の南のシク諸侯がイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Treaty_of_Amritsar_(1809)"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "パティヤーラーなどのシク藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "パティヤーラー・東パンジャーブ藩王国連合（PEPSU）に統合される（7月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "パティヤーラーのアーラー・シングは1761年・1765年にドゥッラーニー朝からシルヒンドの統治を認められた。"
+
+- id: hr_north
+  name: "アンバーラー・クルクシェートラ・カイタル（ハリヤーナー北部）"
+  select:
+    pieces: [IND-Ambala, IND-Yamunanagar, IND-Panchkula, IND-Kurukshetra, IND-Kaithal]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のデリー州"}
+    - {from: 1764, owner: "sikh_misls", cause: "シク教徒のミスルがシルヒンドを落とす（1764年1月）。サトレジ川の南もシク諸侯が分けて治める", source: "https://en.wikipedia.org/wiki/Battle_of_Sirhind_(1764)"}
+    - {from: 1809, owner: "britain", certainty: "indirect", label: "サトレジ川以南のシク諸侯", cause: "アムリトサル条約（4月）。サトレジ川をシク王国との境とし、川の南のシク諸侯がイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Treaty_of_Amritsar_(1809)"}
+    - {from: 1846, owner: "britain", label: "イギリス東インド会社領", cause: "跡継ぎの絶えたシク諸侯の領地（カイタル 1843年など）と第1次シク戦争で敵対した諸侯の領地をイギリスが併合", source: "https://en.wikipedia.org/wiki/Cis-Sutlej_states"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: hr_panipat
+  name: "パーニーパット・カルナール・ソーニーパト"
+  select:
+    pieces: [IND-Panipat, IND-Karnal, IND-Sonipat]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のデリー州"}
+    - {from: 1784, owner: "maratha", label: "シンディア家（ムガル皇帝の摂政）", cause: "マハーダージー・シンディアがムガル帝国の摂政（ワキーレ・ムトラク）となり、デリー周辺を治める", source: "https://en.wikipedia.org/wiki/Mahadaji_Shinde"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。レイク将軍の軍がデリー・ラスワーリーでシンディア軍を破り、スルジ・アンジャンガーオン条約でガンジス・ヤムナー両河間などがイギリス領に（12月）", source: "https://en.wikipedia.org/wiki/Treaty_of_Surji-Anjangaon"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "パーニーパットでは1526・1556・1761年に大きな戦いがあった。1760年代–80年代はシク教徒・ロヒラ・マラーターが争った。"
+
+- id: hr_south
+  name: "ローフタク・グルガーオン・ファリーダーバード（ハリヤーナー南部）"
+  select:
+    pieces: [IND-Rohtak, IND-Jhajjar, IND-Rewari, IND-Gurgaon, IND-Faridabad, IND-Palwal, IND-Mewat]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のデリー州"}
+    - {from: 1784, owner: "maratha", label: "シンディア家（ムガル皇帝の摂政）", cause: "マハーダージー・シンディアがムガル帝国の摂政（ワキーレ・ムトラク）となり、デリー周辺を治める", source: "https://en.wikipedia.org/wiki/Mahadaji_Shinde"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。レイク将軍の軍がデリー・ラスワーリーでシンディア軍を破り、スルジ・アンジャンガーオン条約でガンジス・ヤムナー両河間などがイギリス領に（12月）", source: "https://en.wikipedia.org/wiki/Treaty_of_Surji-Anjangaon"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: hr_hisar
+  name: "ヒサール・シルサー・ビワーニー（ハリヤーナー西部）"
+  select:
+    pieces: [IND-Hisar, IND-Fatehabad, IND-Sirsa, IND-Bhiwani]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のデリー州"}
+    - {from: 1784, owner: "maratha", certainty: "uncertain", label: "シンディア家（ムガル皇帝の摂政）", cause: "マハーダージー・シンディアがムガル帝国の摂政（ワキーレ・ムトラク）となり、デリー周辺を治める", source: "https://en.wikipedia.org/wiki/Mahadaji_Shinde"}
+    - {from: 1803, owner: "britain", certainty: "uncertain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。レイク将軍の軍がデリー・ラスワーリーでシンディア軍を破り、スルジ・アンジャンガーオン条約でガンジス・ヤムナー両河間などがイギリス領に（12月）。ハリヤーナー西部の実際の支配は1810年ごろから", source: "https://en.wikipedia.org/wiki/Treaty_of_Surji-Anjangaon"}
+    - {from: 1810, owner: "britain", label: "イギリス東インド会社領", cause: "イギリスがヒサール・シルサーのバッティー族などを従える", source: "https://en.wikipedia.org/wiki/Hisar_district"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "1798–1801年はアイルランド出身の冒険家ジョージ・トマスがハーンスィーを拠点にこの地を治めた。"
+
+- id: hr_mahendragarh
+  name: "マヘーンドラガル（ナールナウル）"
+  select:
+    pieces: [IND-Mahendragarh]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のアーグラ州ナールナウル"}
+    - {from: 1784, owner: "maratha", label: "シンディア家（ムガル皇帝の摂政）", cause: "マハーダージー・シンディアがムガル帝国の摂政（ワキーレ・ムトラク）となり、デリー周辺を治める", source: "https://en.wikipedia.org/wiki/Mahadaji_Shinde"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。レイク将軍の軍がデリー・ラスワーリーでシンディア軍を破り、スルジ・アンジャンガーオン条約でガンジス・ヤムナー両河間などがイギリス領に（12月）", source: "https://en.wikipedia.org/wiki/Treaty_of_Surji-Anjangaon"}
+    - {from: 1858, owner: "britain", certainty: "indirect", label: "パティヤーラーなどのシク藩王国", cause: "インド大反乱の鎮圧に協力したパティヤーラー・ジーンドなどにナールナウル一帯が与えられる", source: "https://en.wikipedia.org/wiki/Mahendragarh_district"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "パティヤーラーなどのシク藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "パティヤーラー・東パンジャーブ藩王国連合（PEPSU）に統合される（7月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: delhi
+  name: "デリー"
+  select:
+    pieces: [IND-New_Delhi, IND-North, IND-North_East, IND-North_West, IND-East, IND-West, IND-South, IND-South_East, IND-South_West, IND-Shahdara]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "シャー・ジャハーンの新都シャージャハーナーバード（1648年完成）"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。デリーの戦い（9月）でレイク将軍の軍がシンディア軍を破ってデリーに入り、皇帝シャー・アーラム2世をイギリスの保護下に置く", source: "https://ja.wikipedia.org/wiki/デリーの戦い_(1803年)"}
+    - {from: 1857, owner: "britain", label: "イギリス東インド会社領", cause: "インド大反乱。5月に反乱軍がデリーを押さえて皇帝を担いだが、9月にイギリス軍が奪い返す", source: "https://ja.wikipedia.org/wiki/インド大反乱"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1912, owner: "britain", label: "デリー（イギリス領インドの首都）", cause: "首都をカルカッタからデリーに移す（1911年12月 デリー・ダルバールで発表）。1931年にニューデリーが完成", source: "https://ja.wikipedia.org/wiki/ニューデリー"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: delhi_red_fort
+  name: "オールドデリー（赤い城）"
+  select:
+    pieces: [IND-Central]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "シャー・ジャハーンの新都シャージャハーナーバードと赤い城（1648年完成）"}
+    - {from: 1803, owner: "mughal", overlord: "britain", cause: "第2次マラーター戦争でイギリス軍がデリーに入る（9月）。皇帝はイギリスの年金を受け、赤い城の中だけを治める名目的な存在に", source: "https://ja.wikipedia.org/wiki/デリーの戦い_(1803年)"}
+    - {from: 1857, owner: "britain", label: "イギリス東インド会社領", cause: "インド大反乱。9月にイギリス軍がデリーを奪い返し、皇帝バハードゥル・シャー2世を捕らえる（翌年ビルマへ流され、ムガル帝国は滅ぶ）", source: "https://ja.wikipedia.org/wiki/バハードゥル・シャー2世"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1912, owner: "britain", label: "デリー（イギリス領インドの首都）", cause: "首都をカルカッタからデリーに移す（1911年12月 デリー・ダルバールで発表）", source: "https://ja.wikipedia.org/wiki/ニューデリー"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_saharanpur
+  name: "サハーランプル・ムザッファルナガル・ハリドワール"
+  select:
+    pieces: [IND-Saharanpur, IND-Muzaffarnagar, IND-Samli, IND-Hardwar]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1757, owner: "rohilla", label: "ナジーブ・ウッダウラの領地", cause: "ロヒラのナジーブ・ウッダウラがドゥッラーニー朝の後ろ盾でサハーランプルを治める", source: "https://en.wikipedia.org/wiki/Najib_ad-Dawlah"}
+    - {from: 1788, owner: "maratha", label: "シンディア家", cause: "皇帝を失明させたナジーブの孫グラーム・カーディルをシンディア家が討ち、その領地を取る", source: "https://en.wikipedia.org/wiki/Ghulam_Qadir"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。レイク将軍の軍がデリー・ラスワーリーでシンディア軍を破り、スルジ・アンジャンガーオン条約でガンジス・ヤムナー両河間などがイギリス領に（12月）", source: "https://en.wikipedia.org/wiki/Treaty_of_Surji-Anjangaon"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_meerut
+  name: "メーラト・ガーズィヤーバード・ブランドシャフル（ドアーブ北部）"
+  select:
+    pieces: [IND-Meerut, IND-Baghpat, IND-Ghaziabad, IND-Hapur, IND-Gautam_Buddha_Nagar, IND-Bulandshahr]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1784, owner: "maratha", label: "シンディア家（ムガル皇帝の摂政）", cause: "マハーダージー・シンディアがムガル帝国の摂政（ワキーレ・ムトラク）となり、デリー周辺を治める", source: "https://en.wikipedia.org/wiki/Mahadaji_Shinde"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。レイク将軍の軍がデリー・ラスワーリーでシンディア軍を破り、スルジ・アンジャンガーオン条約でガンジス・ヤムナー両河間などがイギリス領に（12月）", source: "https://en.wikipedia.org/wiki/Treaty_of_Surji-Anjangaon"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "1857年5月10日、メーラトのインド人傭兵（シパーヒー）の蜂起からインド大反乱が始まった。"
+
+- id: up_agra
+  name: "アーグラ・マトゥラー・アリーガル"
+  select:
+    pieces: [IND-Agra, IND-Mathura, IND-Mahamaya_Nagar, IND-Aligarh, IND-Firozabad, IND-Etah, IND-Kanshiram_Nagar]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のアーグラ州（タージ・マハルは1653年ごろ完成）"}
+    - {from: 1761, owner: "bharatpur", cause: "ジャート王国のスーラジ・マルがアーグラを取る（6月）", source: "https://en.wikipedia.org/wiki/Suraj_Mal"}
+    - {from: 1774, owner: "mughal", cause: "ムガル帝国の将軍ミールザー・ナジャフ・ハーンがジャートからアーグラを取り戻す", source: "https://en.wikipedia.org/wiki/Mirza_Najaf_Khan"}
+    - {from: 1785, owner: "maratha", label: "シンディア家（ムガル皇帝の摂政）", cause: "マハーダージー・シンディアがムガル帝国の摂政（ワキーレ・ムトラク）となり、デリー周辺を治める", source: "https://en.wikipedia.org/wiki/Mahadaji_Shinde"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。レイク将軍の軍がデリー・ラスワーリーでシンディア軍を破り、スルジ・アンジャンガーオン条約でガンジス・ヤムナー両河間などがイギリス領に（12月）", source: "https://en.wikipedia.org/wiki/Treaty_of_Surji-Anjangaon"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_lower_doab
+  name: "カーンプル・エーターワー・ファッルハーバード（ドアーブ南部）"
+  select:
+    pieces: [IND-Kanpur_Nagar, IND-Kanpur_Dehat, IND-Etawah, IND-Auraiya, IND-Mainpuri, IND-Farrukhabad, IND-Kannauj]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1750, owner: "awadh", certainty: "uncertain", cause: "アワドの太守・ファッルハーバードのバンガシュ家・マラーターがドアーブ南部を争う（要確認）", source: "https://en.wikipedia.org/wiki/Farrukhabad"}
+    - {from: 1774, owner: "awadh", cause: "ロヒラ戦争の後、ドアーブ南部がアワドの支配下に", source: "https://en.wikipedia.org/wiki/Rohilla_War"}
+    - {from: 1801, owner: "britain", label: "イギリス東インド会社領", cause: "アワドが軍事保護条約の費用として、ロヒルカンド・ドアーブ南部・ゴーラクプルなどを会社に譲る（割譲州、11月）", source: "https://en.wikipedia.org/wiki/Ceded_and_Conquered_Provinces"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "1857年6–7月、カーンプルでナーナー・サーヒブの反乱軍がイギリス人の守備隊と家族を殺した。"
+
+- id: up_rohilkhand
+  name: "ロヒルカンド（バレーリー・モーラーダーバード）"
+  select:
+    pieces: [IND-Bareilly, IND-Budaun, IND-Pilibhit, IND-Shahjahanpur, IND-Moradabad, IND-Bijnor, IND-Jyotiba_Phule_Nagar, IND-Sambhal, IND-Udham_Singh_Nagar]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1740, owner: "rohilla", cause: "アフガン系のロヒラの首長アリー・ムハンマド・ハーンがロヒルカンドで自立（1737年にムガル皇帝が認める）", source: "https://en.wikipedia.org/wiki/Ali_Mohammed_Khan"}
+    - {from: 1774, owner: "awadh", cause: "ロヒラ戦争。アワドと東インド会社の軍がロヒラを破り（4月）、ロヒルカンドをアワドが併合", source: "https://en.wikipedia.org/wiki/Rohilla_War"}
+    - {from: 1801, owner: "britain", label: "イギリス東インド会社領", cause: "アワドが軍事保護条約の費用として、ロヒルカンド・ドアーブ南部・ゴーラクプルなどを会社に譲る（割譲州、11月）", source: "https://en.wikipedia.org/wiki/Ceded_and_Conquered_Provinces"}
+    - {from: 1857, owner: "britain", certainty: "uncertain", label: "ロヒルカンド（反乱軍が支配）", cause: "インド大反乱。年末にはまだ反乱軍が支配していた（1858年に鎮圧）（バレーリーのハーン・バハードゥル・ハーン）", source: "https://ja.wikipedia.org/wiki/インド大反乱"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_rampur
+  name: "ラームプル"
+  select:
+    pieces: [IND-Rampur]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1740, owner: "rohilla", cause: "ロヒラの首長アリー・ムハンマド・ハーンがロヒルカンドで自立", source: "https://en.wikipedia.org/wiki/Ali_Mohammed_Khan"}
+    - {from: 1774, owner: "rohilla", overlord: "awadh", label: "ラームプル", cause: "ロヒラ戦争の後、ファイズッラー・ハーンがラームプルの太守としてアワドの下に残る（ラール・ダング条約）", source: "https://en.wikipedia.org/wiki/Rampur_State"}
+    - {from: 1801, owner: "britain", certainty: "indirect", label: "ラームプル藩王国", cause: "アワドの割譲にともない、ラームプルがイギリスの保護下に", source: "https://en.wikipedia.org/wiki/Rampur_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ラームプル藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "ラームプルがウッタル・プラデーシュ州に統合される（12月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: up_awadh
+  name: "アワド（ラクナウ・ファイザーバード）"
+  select:
+    pieces: [IND-Lucknow, IND-Unnao, IND-Hardoi, IND-Sitapur, IND-Kheri, IND-Bahraich, IND-Shrawasti, IND-Balrampur, IND-Gonda, IND-Bara_Banki, IND-Faizabad, IND-Ambedkar_Nagar, IND-Sultanpur, IND-Amethi, IND-Rae_Bareli, IND-Pratapgarh_2]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1722, owner: "awadh", cause: "ムガル帝国の州長官サアーダト・ハーンがアワドで事実上自立し、太守の位を世襲する", source: "https://ja.wikipedia.org/wiki/アワド太守"}
+    - {from: 1801, owner: "britain", certainty: "indirect", label: "アワド（保護国）", cause: "アワドが領土の半分を会社に譲り、残りも会社の保護下に入る（11月）", source: "https://en.wikipedia.org/wiki/Ceded_and_Conquered_Provinces"}
+    - {from: 1856, owner: "britain", label: "イギリス東インド会社領", cause: "ダルハウジー総督が「失政」を理由にアワドを併合（2月）", source: "https://ja.wikipedia.org/wiki/アワド太守"}
+    - {from: 1857, owner: "awadh", certainty: "uncertain", label: "アワド（反乱軍が支配）", cause: "インド大反乱。年末にはまだ反乱軍が支配していた（1858年に鎮圧）。ラクナウの反乱軍がビルジース・カドルを王に担ぐ", source: "https://ja.wikipedia.org/wiki/インド大反乱"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "イギリス軍がラクナウを奪い返し（3月）、反乱を鎮圧。インド統治法でイギリス政府の直轄に", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_gorakhpur
+  name: "ゴーラクプル・バスティー・アーザムガル"
+  select:
+    pieces: [IND-Gorakhpur, IND-Deoria, IND-Kushinagar, IND-Mahrajganj, IND-Basti, IND-Sant_Kabir_Nagar, IND-Siddharthnagar, IND-Azamgarh, IND-Mau]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1722, owner: "awadh", cause: "ムガル帝国の州長官サアーダト・ハーンがアワドで事実上自立し、太守の位を世襲する", source: "https://ja.wikipedia.org/wiki/アワド太守"}
+    - {from: 1801, owner: "britain", label: "イギリス東インド会社領", cause: "アワドが軍事保護条約の費用として、ロヒルカンド・ドアーブ南部・ゴーラクプルなどを会社に譲る（割譲州、11月）", source: "https://en.wikipedia.org/wiki/Ceded_and_Conquered_Provinces"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_allahabad
+  name: "アラーハーバード・コーラー（ファテープル）"
+  select:
+    pieces: [IND-Allahabad, IND-Kaushambi, IND-Fatehpur]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1748, owner: "awadh", cause: "アワドの太守サフダル・ジャングがアラーハーバード州も治める（年は要確認）", source: "https://en.wikipedia.org/wiki/Safdarjung"}
+    - {from: 1765, owner: "mughal", cause: "アラーハーバード条約（8月）。ブクサールの戦いに敗れたアワドから、コーラーとアラーハーバードが皇帝シャー・アーラム2世に与えられる", source: "https://ja.wikipedia.org/wiki/アラーハーバード条約"}
+    - {from: 1773, owner: "awadh", cause: "ベナレス条約。皇帝がマラーターの保護でデリーに戻ったため、会社がコーラーとアラーハーバードをアワドに売る", source: "https://en.wikipedia.org/wiki/Treaty_of_Benares_(1773)"}
+    - {from: 1801, owner: "britain", label: "イギリス東インド会社領", cause: "アワドが軍事保護条約の費用として、ロヒルカンド・ドアーブ南部・ゴーラクプルなどを会社に譲る（割譲州、11月）", source: "https://en.wikipedia.org/wiki/Ceded_and_Conquered_Provinces"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_benares
+  name: "ベナレス・ジャウンプル・ガーズィープル・ミルザープル"
+  select:
+    pieces: [IND-Varanasi, IND-Chandauli, IND-Sant_Ravidas_Nagar_Bhadohi, IND-Jaunpur, IND-Ghazipur, IND-Ballia, IND-Mirzapur, IND-Sonbhadra]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国（シャー・ジャハーン）の直轄の州（スーバ）"}
+    - {from: 1722, owner: "awadh", cause: "ムガル帝国の州長官サアーダト・ハーンがアワドで事実上自立し、太守の位を世襲する", source: "https://ja.wikipedia.org/wiki/アワド太守"}
+    - {from: 1775, owner: "britain", certainty: "indirect", label: "ベナレス（ラージャが会社に従う）", cause: "ファイザーバード条約（5月）。アワドがベナレスのラージャへの宗主権を会社に譲る", source: "https://en.wikipedia.org/wiki/Benares_State"}
+    - {from: 1795, owner: "britain", label: "イギリス東インド会社領", cause: "ベナレスにも永代ザミンダーリー制が敷かれ、会社の直接の統治下に（ラームナガルのラージャの小さな領地だけが残る）", source: "https://en.wikipedia.org/wiki/Benares_State"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: up_bundelkhand
+  name: "バーンダー・ハミールプル・マホーバー（ブンデールカンド東部）"
+  select:
+    pieces: [IND-Banda, IND-Chitrakoot, IND-Hamirpur_2, IND-Mahoba]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ブンデールカンドの諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1680, owner: "bundela", cause: "チャトラサールがムガル帝国に反乱し、ブンデールカンドに王国を開く（1670年代〜）", source: "https://en.wikipedia.org/wiki/Chhatrasal"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争。バセイン条約の追加条約などでブンデールカンドの一部がイギリス領に", source: "https://en.wikipedia.org/wiki/Bundelkhand_Agency"}
+    - {from: 1857, owner: "britain", certainty: "uncertain", label: "ブンデールカンド（反乱軍が支配）", cause: "インド大反乱。年末にはまだ反乱軍が支配していた（1858年に鎮圧）（バーンダーの太守など）", source: "https://ja.wikipedia.org/wiki/インド大反乱"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "バーンダーは1732年からバージーラーオ1世の子孫（バーンダーの太守）の領地。マホーバー・チャルカーリーなどはチャトラサールの子孫のブンデーラ諸国。"
+
+- id: up_jhansi
+  name: "ジャーンシー・ジャーラウン・ラリトプル"
+  select:
+    pieces: [IND-Jhansi, IND-Jalaun, IND-Lalitpur]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ブンデールカンドの諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1680, owner: "bundela", cause: "チャトラサールがムガル帝国に反乱し、ブンデールカンドに王国を開く（1670年代〜）", source: "https://en.wikipedia.org/wiki/Chhatrasal"}
+    - {from: 1732, owner: "maratha", label: "ペーシュワーの代官（ジャーンシー・カールピー）", cause: "ムガル軍に攻められたチャトラサールがマラーターのバージーラーオ1世に助けられ、領土の3分の1（ジャーンシー・カールピー・サーガルなど）を与える", source: "https://en.wikipedia.org/wiki/Chhatrasal"}
+    - {from: 1817, owner: "britain", certainty: "indirect", label: "ジャーンシー藩王国", cause: "第3次マラーター戦争。プーナ条約（6月）でペーシュワーがグジャラート・ブンデールカンドなどの権利をイギリスに譲る", source: "https://ja.wikipedia.org/wiki/マラーター戦争"}
+    - {from: 1853, owner: "britain", label: "イギリス東インド会社領", cause: "ダルハウジー総督が、跡継ぎのない藩王国を併合する「失権の原則」でジャーンシーを併合（1853年11月）", source: "https://ja.wikipedia.org/wiki/失権の原理"}
+    - {from: 1857, owner: "britain", certainty: "uncertain", label: "ジャーンシー（ラクシュミー・バーイーと反乱軍が支配）", cause: "インド大反乱。年末にはまだ反乱軍が支配していた（1858年に鎮圧）。ジャーンシーは王妃ラクシュミー・バーイーが治めた", source: "https://ja.wikipedia.org/wiki/ラクシュミー・バーイー"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "ジャーラウン（カールピー）は1840年、ラリトプル（チャンデーリー）は1844年にイギリス領となった（近似）。"
+
+- id: mp_gwalior
+  name: "グワーリオル・シヴプリー・グナ・モーレーナー"
+  select:
+    pieces: [IND-Gwalior, IND-Morena, IND-Bhind, IND-Shivpuri, IND-Sheopur, IND-Guna, IND-Ashoknagar]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のアーグラ州・マールワー州"}
+    - {from: 1752, owner: "maratha", label: "シンディア家（グワーリオル）", cause: "マラーターがグワーリオル周辺に進む。グワーリオル城はゴーハドのジャートと争い、1784年にマハーダージー・シンディアが取った", source: "https://en.wikipedia.org/wiki/Gwalior_State"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "グワーリオル藩王国（シンディア家）", cause: "第3次マラーター戦争のなか、シンディア家がグワーリオル条約（1817年11月）でイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Gwalior_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "グワーリオル藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "マディヤ・バーラト連合に統合される（5月）。1956年にマディヤ・プラデーシュ州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: mp_malwa_scindia
+  name: "ウッジャイン・マンドサウル・ヴィディシャー（マールワー北部）"
+  select:
+    pieces: [IND-Ujjain, IND-Shajapur, IND-Agar, IND-Mandsaur, IND-Neemuch, IND-Vidisha]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のマールワー州"}
+    - {from: 1738, owner: "maratha", label: "シンディア家（ウッジャイン）", cause: "ボーパールの戦いに敗れたニザームとの講和（ドゥラーハ条約、1738年1月）で、ムガル帝国がマールワーをペーシュワーに任せる", source: "https://en.wikipedia.org/wiki/Battle_of_Bhopal"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "グワーリオル藩王国（シンディア家）", cause: "第3次マラーター戦争のなか、シンディア家がグワーリオル条約（1817年11月）でイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Gwalior_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "グワーリオル藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "マディヤ・バーラト連合に統合される（5月）。1956年にマディヤ・プラデーシュ州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: mp_malwa_holkar
+  name: "インドール・デーワース・ダール・ラトラーム（マールワー西部・ニマール）"
+  select:
+    pieces: [IND-Indore, IND-Dewas, IND-Dhar, IND-Ratlam, IND-Khargone_West_Nimar, IND-Barwani, IND-Jhabua, IND-Alirajpur]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のマールワー州"}
+    - {from: 1738, owner: "maratha", label: "ホールカル家（インドール）・プワール家（ダール・デーワース）", cause: "ボーパールの戦いに敗れたニザームとの講和（ドゥラーハ条約、1738年1月）で、ムガル帝国がマールワーをペーシュワーに任せる", source: "https://en.wikipedia.org/wiki/Battle_of_Bhopal"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "インドール藩王国（ホールカル家）など", cause: "マヒドプルの戦い（1817年12月）に敗れたホールカル家が、マンドサウル条約（1818年1月）でイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Holkar_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "インドールなどの藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "マディヤ・バーラト連合に統合される（5月）。1956年にマディヤ・プラデーシュ州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "ラトラーム（ラートール家）・ジャーブアー・アリーラージプル・バルワーニーなどの小さな藩王国も含む。"
+
+- id: mp_bhopal
+  name: "ボーパール・セホール・ラーイセーン・ラージガル"
+  select:
+    pieces: [IND-Bhopal, IND-Sehore, IND-Raisen, IND-Rajgarh]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のマールワー州"}
+    - {from: 1723, owner: "bhopal", cause: "アフガン人の傭兵隊長ドースト・ムハンマド・ハーンがボーパールの太守国を開く", source: "https://en.wikipedia.org/wiki/Bhopal_State"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "ボーパール藩王国", cause: "ボーパールがイギリスと保護条約を結ぶ（ピンダーリー戦争に協力）", source: "https://en.wikipedia.org/wiki/Bhopal_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ボーパール藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "ボーパールがインドに統合され、中央直轄州となる（6月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "ラージガル・ナルスィンガルはラージプートの小さな藩王国。"
+
+- id: mp_bundelkhand
+  name: "オルチャー・ダティアー・パンナー・チャタルプル（ブンデールカンド西部）"
+  select:
+    pieces: [IND-Tikamgarh, IND-Niwari, IND-Datia, IND-Chhatarpur, IND-Panna]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ブンデールカンドの諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1680, owner: "bundela", cause: "チャトラサールがムガル帝国に反乱し、ブンデールカンドに王国を開く（1670年代〜）", source: "https://en.wikipedia.org/wiki/Chhatrasal"}
+    - {from: 1812, owner: "britain", certainty: "indirect", label: "ブンデールカンドの藩王国（オルチャー・パンナーなど）", cause: "ブンデーラの諸王国がイギリスと保護条約を結ぶ（1806–1812年）", source: "https://en.wikipedia.org/wiki/Bundelkhand_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ブンデールカンドの藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "ヴィンディヤ・プラデーシュ州に統合される（4月）。1956年にマディヤ・プラデーシュ州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: mp_sagar
+  name: "サーガル・ダモー"
+  select:
+    pieces: [IND-Sagar, IND-Damoh]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ブンデールカンドの諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1680, owner: "bundela", cause: "チャトラサールがムガル帝国に反乱し、ブンデールカンドに王国を開く（1670年代〜）", source: "https://en.wikipedia.org/wiki/Chhatrasal"}
+    - {from: 1735, owner: "maratha", label: "サーガル（ペーシュワーの代官）", cause: "ムガル軍に攻められたチャトラサールがマラーターのバージーラーオ1世に助けられ、領土の3分の1（ジャーンシー・カールピー・サーガルなど）を与える", source: "https://en.wikipedia.org/wiki/Chhatrasal"}
+    - {from: 1818, owner: "britain", label: "イギリス東インド会社領", cause: "第3次マラーター戦争（1817–18年）。ペーシュワー・ボーンスレー家の領地がイギリス領に（サーガル・ナルマダー地方）", source: "https://ja.wikipedia.org/wiki/マラーター戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: mp_baghelkhand
+  name: "レーワー・サトナー・シャフドール（バゲールカンド）"
+  select:
+    pieces: [IND-Rewa, IND-Satna, IND-Sidhi, IND-Singrauli, IND-Shahdol, IND-Umaria, IND-Anuppur]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "レーワーなどの諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rewa", cause: "アウラングゼーブの死後、ムガル帝国の力が及ばなくなる", source: "https://en.wikipedia.org/wiki/Rewa_State"}
+    - {from: 1812, owner: "britain", certainty: "indirect", label: "レーワー藩王国", cause: "レーワーがイギリスと保護条約を結ぶ", source: "https://en.wikipedia.org/wiki/Rewa_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "レーワーなどの藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "ヴィンディヤ・プラデーシュ州に統合される（4月）。1956年にマディヤ・プラデーシュ州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: mp_mandla
+  name: "ジャバルプル・マンドラー（ガルハ＝マンドラー）"
+  select:
+    pieces: [IND-Jabalpur, IND-Katni, IND-Mandla, IND-Dindori, IND-Narsimhapur]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ゴンド諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "gondwana", cause: "アウラングゼーブの死後、ゴンドの王国はムガル帝国への貢納をやめる", source: "https://en.wikipedia.org/wiki/Gondwana_(India)"}
+    - {from: 1781, owner: "maratha", label: "サーガルのマラーター（1799年からナーグプルのボーンスレー家）", cause: "サーガルのマラーターがガルハ＝マンドラーのゴンド王国を滅ぼす", source: "https://en.wikipedia.org/wiki/Garha_Kingdom"}
+    - {from: 1818, owner: "britain", label: "イギリス東インド会社領", cause: "第3次マラーター戦争（1817–18年）。ペーシュワー・ボーンスレー家の領地がイギリス領に（サーガル・ナルマダー地方）", source: "https://ja.wikipedia.org/wiki/マラーター戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: mp_deogarh
+  name: "チンドワーラー・セオニー・バーラーガート（デーオガル）"
+  select:
+    pieces: [IND-Chhindwara, IND-Seoni, IND-Balaghat]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ゴンド諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "gondwana", cause: "アウラングゼーブの死後、ゴンドの王国はムガル帝国への貢納をやめる", source: "https://en.wikipedia.org/wiki/Gondwana_(India)"}
+    - {from: 1743, owner: "maratha", label: "ボーンスレー家（ナーグプル）", cause: "ナーグプルのボーンスレー家（ラグージー1世）がデーオガルのゴンド王国を併合", source: "https://en.wikipedia.org/wiki/Deogarh_kingdom"}
+    - {from: 1854, owner: "britain", label: "イギリス東インド会社領", cause: "ダルハウジー総督が「失権の原則」でナーグプル王国を併合（1853年12月–54年）", source: "https://ja.wikipedia.org/wiki/失権の原理"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: mp_narmada
+  name: "ホーシャンガーバード・ハルダー・ベートゥール"
+  select:
+    pieces: [IND-Hoshangabad, IND-Harda, IND-Betul]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のマールワー州・ベラール州の境"}
+    - {from: 1740, owner: "maratha", label: "ボーンスレー家（ナーグプル）など", cause: "マラーターがナルマダー川流域に進む（ホーシャンガーバードは1795年にボーンスレー家が取る。要確認）", source: "https://en.wikipedia.org/wiki/Narmadapuram_district"}
+    - {from: 1818, owner: "britain", label: "イギリス東インド会社領", cause: "第3次マラーター戦争（1817–18年）。ペーシュワー・ボーンスレー家の領地がイギリス領に（サーガル・ナルマダー地方）", source: "https://ja.wikipedia.org/wiki/マラーター戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: mp_nimar
+  name: "カンドワー・ブルハーンプル（東ニマール）"
+  select:
+    pieces: [IND-Khandwa_East_Nimar, IND-Burhanpur]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のハーンデーシュ州（都ブルハーンプル）"}
+    - {from: 1724, owner: "hyderabad", cause: "ニザーム・ウルムルクがシャカル・ケーダの戦いでムガル帝国の軍を破り、デカンで自立", source: "https://ja.wikipedia.org/wiki/ニザーム王国"}
+    - {from: 1760, owner: "maratha", label: "シンディア家", cause: "ウドギールの戦いでマラーターがニザームを破り、ブルハーンプルなどを得る", source: "https://en.wikipedia.org/wiki/Battle_of_Udgir"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "グワーリオル藩王国（シンディア家）", cause: "第3次マラーター戦争のなか、シンディア家がグワーリオル条約（1817年11月）でイギリスの保護下に入る", source: "https://en.wikipedia.org/wiki/Gwalior_State"}
+    - {from: 1860, owner: "britain", label: "イギリス東インド会社領", cause: "シンディア家との領地の交換で、ニマールがイギリス領に", source: "https://en.wikipedia.org/wiki/Khandwa_district"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: rj_mewar
+  name: "メーワール（ウダイプル・チットールガル）"
+  select:
+    pieces: [IND-Udaipur, IND-Rajsamand, IND-Chittaurgarh, IND-Bhilwara]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "メーワール（ウダイプル）", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rajput_mewar", cause: "アウラングゼーブの死後、メーワール・マールワール・アンベールのラージプート王家が同盟し、ムガル帝国から事実上自立する（1708年）", source: "https://en.wikipedia.org/wiki/Rajput_rebellion_of_1708–1710"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "ウダイプル藩王国（メーワール）", cause: "第3次マラーター戦争・ピンダーリー戦争のなか、ラージプートの諸王国がイギリスと保護条約を結ぶ（1817–18年）", source: "https://en.wikipedia.org/wiki/Rajputana_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ウダイプル藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "ラージャスターン連合に加わる（4月）。1949年にラージャスターン州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "1679–81年、メーワールはマールワールとともにアウラングゼーブと戦った。"
+
+- id: rj_marwar
+  name: "マールワール（ジョードプル・ナーガウル・バールメール）"
+  select:
+    pieces: [IND-Jodhpur, IND-Nagaur, IND-Pali, IND-Barmer, IND-Jalor]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "マールワール（ジョードプル）", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1679, owner: "mughal", certainty: "uncertain", label: "マールワール（ムガルの直轄・ラートール族の抵抗）", cause: "王ジャスワント・シングの死後、アウラングゼーブがジョードプルを直轄にし、ジズヤを復活。ラートール族の反乱が続く（1679–1707年）", source: "https://en.wikipedia.org/wiki/Rathore_rebellion_(1679–1707)"}
+    - {from: 1707, owner: "rajput_marwar", cause: "アウラングゼーブの死後、アジート・シングがジョードプルを取り戻す", source: "https://en.wikipedia.org/wiki/Ajit_Singh_of_Marwar"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "ジョードプル藩王国（マールワール）", cause: "第3次マラーター戦争・ピンダーリー戦争のなか、ラージプートの諸王国がイギリスと保護条約を結ぶ（1817–18年）", source: "https://en.wikipedia.org/wiki/Rajputana_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ジョードプル藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "ラージャスターン州に統合される（3月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: rj_amber
+  name: "ジャイプル・シーカル・トーンク（ドゥンダール）"
+  select:
+    pieces: [IND-Jaipur, IND-Dausa, IND-Sikar, IND-Jhunjhunun, IND-Tonk, IND-Sawai_Madhopur]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "アンベール（ジャイプル）", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rajput_amber", cause: "アウラングゼーブの死後、メーワール・マールワール・アンベールのラージプート王家が同盟し、ムガル帝国から事実上自立する（1708年）", source: "https://en.wikipedia.org/wiki/Rajput_rebellion_of_1708–1710"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "ジャイプル藩王国", cause: "第3次マラーター戦争・ピンダーリー戦争のなか、ラージプートの諸王国がイギリスと保護条約を結ぶ（1817–18年）", source: "https://en.wikipedia.org/wiki/Rajputana_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ジャイプル藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "ラージャスターン州に統合される（3月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "トーンクは1806年にホールカル家からピンダーリーの首領アミール・ハーンに与えられ、1817年にトーンク藩王国となった（近似）。"
+
+- id: rj_alwar
+  name: "アルワル"
+  select:
+    pieces: [IND-Alwar]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "アンベール（ジャイプル）・メーワート", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rajput_amber", cause: "アウラングゼーブの死後、メーワール・マールワール・アンベールのラージプート王家が同盟し、ムガル帝国から事実上自立する（1708年）", source: "https://en.wikipedia.org/wiki/Rajput_rebellion_of_1708–1710"}
+    - {from: 1770, owner: "rajput_states", label: "アルワル", cause: "ジャイプル王家の家臣だったプラタープ・シングがアルワル王国を開く", source: "https://en.wikipedia.org/wiki/Alwar_State"}
+    - {from: 1803, owner: "britain", certainty: "indirect", label: "アルワル藩王国", cause: "第2次マラーター戦争でイギリスに味方し、保護条約を結ぶ", source: "https://en.wikipedia.org/wiki/Alwar_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "アルワル藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "マツヤ連合に統合される（3月）。1949年にラージャスターン州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: rj_bharatpur
+  name: "バラトプル・ドールプル・カラウリー"
+  select:
+    pieces: [IND-Bharatpur, IND-Dhaulpur, IND-Karauli]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のアーグラ州。ジャート農民が17世紀後半からたびたび反乱した"}
+    - {from: 1722, owner: "bharatpur", cause: "ジャートの指導者バダン・シングがバラトプル王国を開く", source: "https://en.wikipedia.org/wiki/Bharatpur_State"}
+    - {from: 1805, owner: "britain", certainty: "indirect", label: "バラトプル藩王国など", cause: "レイク将軍のバラトプル包囲（1–4月）に耐えたが、イギリスと保護条約を結ぶ", source: "https://en.wikipedia.org/wiki/Siege_of_Bharatpur_(1805)"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "バラトプルなどの藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "マツヤ連合に統合される（3月）。1949年にラージャスターン州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "ドールプル（ゴーハドのジャート、1806年〜）・カラウリー（ヤーダヴ家のラージプート）は別の小国。近似としてまとめた。"
+
+- id: rj_bikaner
+  name: "ビーカーネール・チュール・ガンガーナガル"
+  select:
+    pieces: [IND-Bikaner, IND-Churu, IND-Ganganagar, IND-Hanumangarh]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ビーカーネール", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rajput_bikaner", cause: "アウラングゼーブの死後、ムガル帝国の力が及ばなくなる", source: "https://en.wikipedia.org/wiki/Bikaner_State"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "ビーカーネール藩王国", cause: "第3次マラーター戦争・ピンダーリー戦争のなか、ラージプートの諸王国がイギリスと保護条約を結ぶ（1817–18年）", source: "https://en.wikipedia.org/wiki/Rajputana_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ビーカーネール藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "ラージャスターン州に統合される（3月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: rj_jaisalmer
+  name: "ジャイサルメール"
+  select:
+    pieces: [IND-Jaisalmer]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ジャイサルメール", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rajput_states", label: "ジャイサルメール", cause: "アウラングゼーブの死後、ムガル帝国の力が及ばなくなる", source: "https://en.wikipedia.org/wiki/Jaisalmer_State"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "ジャイサルメール藩王国", cause: "第3次マラーター戦争・ピンダーリー戦争のなか、ラージプートの諸王国がイギリスと保護条約を結ぶ（1817–18年）", source: "https://en.wikipedia.org/wiki/Rajputana_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ジャイサルメール藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "ラージャスターン州に統合される（3月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: rj_hadoti
+  name: "コーター・ブーンディー・ジャーラーワール（ハーラーオーティー）"
+  select:
+    pieces: [IND-Kota, IND-Bundi, IND-Baran, IND-Jhalawar]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "コーター・ブーンディー", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rajput_states", label: "コーター・ブーンディー", cause: "アウラングゼーブの死後、ムガル帝国の力が及ばなくなる", source: "https://en.wikipedia.org/wiki/Hadoti"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "コーター・ブーンディー藩王国", cause: "第3次マラーター戦争・ピンダーリー戦争のなか、ラージプートの諸王国がイギリスと保護条約を結ぶ（1817–18年）", source: "https://en.wikipedia.org/wiki/Rajputana_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "コーター・ブーンディーなどの藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "ラージャスターン連合に統合される（3月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "18世紀はシンディア家・ホールカル家に貢納した。ジャーラーワールは1838年にコーターから分かれた。"
+
+- id: rj_vagad
+  name: "ドゥンガルプル・バーンスワーラー・プラタープガル・シローヒー"
+  select:
+    pieces: [IND-Dungarpur, IND-Banswara, IND-Pratapgarh, IND-Sirohi]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "ワーガドの諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1708, owner: "rajput_states", label: "ワーガドの諸王国", cause: "アウラングゼーブの死後、ムガル帝国の力が及ばなくなる", source: "https://en.wikipedia.org/wiki/Vagad"}
+    - {from: 1818, owner: "britain", certainty: "indirect", label: "ドゥンガルプル・バーンスワーラーなどの藩王国", cause: "第3次マラーター戦争・ピンダーリー戦争のなか、ラージプートの諸王国がイギリスと保護条約を結ぶ（1817–18年）", source: "https://en.wikipedia.org/wiki/Rajputana_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "ワーガドなどの藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "ラージャスターン連合に統合される（3月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: rj_ajmer
+  name: "アジメール"
+  select:
+    pieces: [IND-Ajmer]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のアジメール州の中心。スーフィーの聖者チシュティーの廟がある"}
+    - {from: 1756, owner: "maratha", label: "シンディア家", cause: "マラーター（シンディア家）がアジメールを取る（マールワール王国と奪い合い、1791年から確定。要確認）", source: "https://en.wikipedia.org/wiki/Ajmer"}
+    - {from: 1818, owner: "britain", label: "イギリス東インド会社領", cause: "シンディア家がアジメールをイギリスに譲る（6月）", source: "https://en.wikipedia.org/wiki/Ajmer-Merwara"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: gj_kutch
+  name: "カッチ"
+  select:
+    pieces: [IND-Kachchh]
+  timeline:
+    - {from: 1648, owner: "cutch", note: "ムガル帝国に貢納したが、ほぼ自立していた"}
+    - {from: 1819, owner: "britain", certainty: "indirect", label: "カッチ藩王国", cause: "イギリスと保護条約を結ぶ（1816・1819年）", source: "https://en.wikipedia.org/wiki/Cutch_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "カッチ藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "カッチがインドの中央直轄州となる（6月）。1956年にボンベイ州、1960年にグジャラート州へ", source: "https://ja.wikipedia.org/wiki/藩王国"}
+
+- id: gj_kathiawar
+  name: "カーティヤーワール（サウラーシュトラ）"
+  select:
+    pieces: [IND-Jamnagar, IND-Devbhumi_Dwarka, IND-Porbandar, IND-Junagadh, IND-Gir_Somnath, IND-Rajkot, IND-Morbi, IND-Surendranagar, IND-Bhavnagar, IND-Batod]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "カーティヤーワールの諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1730, owner: "gujarat_states", cause: "ムガル帝国のグジャラート支配が崩れ、カーティヤーワールの諸王国が自立（ジュナーガドのバービー家は1748年に太守を名のる）", source: "https://en.wikipedia.org/wiki/Kathiawar"}
+    - {from: 1807, owner: "britain", certainty: "indirect", label: "カーティヤーワールの藩王国", cause: "ウォーカー大佐の協定（1807–08年）。ガーイクワード家に貢納していたカーティヤーワールの諸侯がイギリスの保護下に", source: "https://en.wikipedia.org/wiki/Kathiawar_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "カーティヤーワールの藩王国（インドに帰属）", cause: "藩王国がインドに帰属（8月）。ジュナーガドの太守はパキスタンへの帰属を宣言したが、11月にインドが掌握", source: "https://ja.wikipedia.org/wiki/ジュナーガド藩王国"}
+    - {from: 1948, owner: "india", cause: "サウラーシュトラ連合州に統合される（2月）", source: "https://en.wikipedia.org/wiki/Saurashtra_(state)"}
+  note: "18世紀後半はガーイクワード家などマラーターが毎年軍を送って貢納を取り立てた（地図では帯を付けない）。"
+
+- id: gj_baroda
+  name: "バローダ・メーサーナー・パータン・アムレーリー・ナヴサーリー（ガーイクワード家）"
+  select:
+    pieces: [IND-Vadodara, IND-Mahesana, IND-Patan, IND-Amreli, IND-Navsari]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のグジャラート州"}
+    - {from: 1734, owner: "maratha", label: "ガーイクワード家（バローダ）", cause: "マラーターのピラージー・ガーイクワードがバローダを取る", source: "https://en.wikipedia.org/wiki/Baroda_State"}
+    - {from: 1802, owner: "britain", certainty: "indirect", label: "バローダ藩王国（ガーイクワード家）", cause: "ガーイクワード家がイギリスと軍事保護条約を結ぶ（1802・1805年）", source: "https://en.wikipedia.org/wiki/Baroda_State"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "バローダ藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "バローダがボンベイ州に統合される（5月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "メーサーナー・パータン（カディー地方）・アムレーリーは1750–60年代にガーイクワード家の領地となった（近似）。"
+
+- id: gj_ahmedabad
+  name: "アフマダーバード・ガーンディーナガル"
+  select:
+    pieces: [IND-Ahmadabad, IND-Gandhinagar]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のグジャラート州の都"}
+    - {from: 1753, owner: "maratha", label: "ペーシュワーとガーイクワード家（アフマダーバード）", cause: "マラーター軍がアフマダーバードを落とし（4月）、ムガル帝国のグジャラート支配が終わる", source: "https://en.wikipedia.org/wiki/Ahmedabad"}
+    - {from: 1817, owner: "britain", label: "イギリス東インド会社領", cause: "第3次マラーター戦争。プーナ条約（6月）でペーシュワーがグジャラート・ブンデールカンドなどの権利をイギリスに譲る", source: "https://ja.wikipedia.org/wiki/マラーター戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: gj_kheda
+  name: "ケーダ・アーナンド"
+  select:
+    pieces: [IND-Kheda, IND-Anand]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のグジャラート州"}
+    - {from: 1753, owner: "maratha", label: "ペーシュワーとガーイクワード家（アフマダーバード）", cause: "マラーター軍がアフマダーバードを落とし、ムガル帝国のグジャラート支配が終わる", source: "https://en.wikipedia.org/wiki/Ahmedabad"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "ガーイクワード家が軍事保護条約の費用としてケーダをイギリスに譲る", source: "https://en.wikipedia.org/wiki/Kheda_district"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "カンバートは太守国（藩王国）として残った。"
+
+- id: gj_east
+  name: "グジャラート東部（パーランプル・イダル・ラージピープラーなど）"
+  select:
+    pieces: [IND-Banas_Kantha, IND-Sabar_Kantha, IND-Aravali, IND-Mahisagar, IND-Chhota_Udaipur, IND-Narmada, IND-The_Dangs]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "グジャラート東部の諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1730, owner: "gujarat_states", cause: "ムガル帝国のグジャラート支配が崩れ、諸王国が自立（イダルはジョードプル王家の分家が1729年に取る）", source: "https://en.wikipedia.org/wiki/Mahi_Kantha_Agency"}
+    - {from: 1820, owner: "britain", certainty: "indirect", label: "マヒー・カーンター・レーワー・カーンターなどの藩王国", cause: "ガーイクワード家に貢納していた諸侯がイギリスの保護下に（1820年ごろ）", source: "https://en.wikipedia.org/wiki/Rewa_Kantha_Agency"}
+    - {from: 1947, owner: "india", certainty: "indirect", label: "グジャラート東部の藩王国（インドに帰属した藩王国）", cause: "藩王国がインドへの帰属文書に署名（1947年8月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1948, owner: "india", cause: "ボンベイ州に統合される（6月）", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "ダーングはビール人の首長たちの地。"
+
+- id: gj_panchmahals
+  name: "パンチ・マハール・ダーホード"
+  select:
+    pieces: [IND-Panch_Mahals, IND-Dohad]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のグジャラート州"}
+    - {from: 1761, owner: "maratha", label: "シンディア家", cause: "シンディア家がパーヴァーガドを取る（年は要確認）", source: "https://en.wikipedia.org/wiki/Panchmahal_district"}
+    - {from: 1853, owner: "britain", label: "イギリス東インド会社領", cause: "シンディア家がパンチ・マハールの管理をイギリスに委ねる（1861年に譲渡）", source: "https://en.wikipedia.org/wiki/Panchmahal_district"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: gj_surat
+  name: "スーラト・ターピー"
+  select:
+    pieces: [IND-Surat, IND-Tapi]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国最大の港。イギリス東インド会社の商館（1613年〜）があった"}
+    - {from: 1759, owner: "britain", certainty: "uncertain", label: "スーラト（会社が実質的に支配）", cause: "東インド会社がスーラトの城を取り、町を実質的に支配する", source: "https://en.wikipedia.org/wiki/Surat"}
+    - {from: 1800, owner: "britain", label: "イギリス東インド会社領", cause: "会社がスーラトの太守の領地を併合", source: "https://en.wikipedia.org/wiki/Surat"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+  note: "1664・1670年にシヴァージーがスーラトを略奪した。"
+
+- id: gj_bharuch
+  name: "バルーチ（ブローチ）"
+  select:
+    pieces: [IND-Bharuch]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のグジャラート州"}
+    - {from: 1772, owner: "britain", label: "イギリス東インド会社領", cause: "東インド会社がブローチの太守を攻め、町を取る", source: "https://en.wikipedia.org/wiki/Bharuch"}
+    - {from: 1783, owner: "maratha", label: "シンディア家", cause: "サールバイ条約（1782年）で、第1次マラーター戦争の仲介をしたシンディア家にブローチが与えられる", source: "https://en.wikipedia.org/wiki/Treaty_of_Salbai"}
+    - {from: 1803, owner: "britain", label: "イギリス東インド会社領", cause: "第2次マラーター戦争でイギリスがブローチを取る", source: "https://en.wikipedia.org/wiki/Bharuch"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: gj_valsad
+  name: "ヴァルサード"
+  select:
+    pieces: [IND-Valsad]
+  timeline:
+    - {from: 1648, owner: "mughal", note: "ムガル帝国のグジャラート州の南の端"}
+    - {from: 1740, owner: "maratha", label: "ペーシュワー", cause: "マラーターがグジャラート南部を押さえる（年は要確認）", source: "https://en.wikipedia.org/wiki/Valsad_district"}
+    - {from: 1817, owner: "britain", label: "イギリス東インド会社領", cause: "第3次マラーター戦争。プーナ条約（6月）でペーシュワーがグジャラート・ブンデールカンドなどの権利をイギリスに譲る", source: "https://ja.wikipedia.org/wiki/マラーター戦争"}
+    - {from: 1858, owner: "britain", label: "イギリス領インド", cause: "インド大反乱の後、インド統治法で東インド会社が解散し、イギリス政府の直轄となる（11月 ヴィクトリア女王の宣言）", source: "https://ja.wikipedia.org/wiki/インド統治法_(1858年)"}
+    - {from: 1947, owner: "india", cause: "インド独立法により、イギリス領インドがインドとパキスタンに分かれて独立（8月15日）。分離にともなって大量の難民と暴力が起きる", source: "https://ja.wikipedia.org/wiki/インド・パキスタン分離独立"}
+
+- id: daman
+  name: "ダマン"
+  select:
+    pieces: [IND-Daman]
+  timeline:
+    - {from: 1648, owner: "portugal", label: "ダマン（ポルトガル領）", note: "1559年からポルトガル領"}
+    - {from: 1961, owner: "india", cause: "インド軍がゴア・ダマン・ディーウを接収（12月、ヴィジャイ作戦）", source: "https://ja.wikipedia.org/wiki/インドのゴア侵攻"}
+
+- id: diu
+  name: "ディーウ"
+  select:
+    pieces: [IND-Diu]
+  timeline:
+    - {from: 1648, owner: "portugal", label: "ディーウ（ポルトガル領）", note: "1535年からポルトガル領"}
+    - {from: 1961, owner: "india", cause: "インド軍がゴア・ダマン・ディーウを接収（12月、ヴィジャイ作戦）", source: "https://ja.wikipedia.org/wiki/インドのゴア侵攻"}
+
+- id: dadra
+  name: "ダードラー・ナガル・ハヴェーリー"
+  select:
+    pieces: [IND-Dadra_Nagar_Haveli]
+  timeline:
+    - {from: 1648, owner: "mughal", certainty: "indirect", label: "グジャラート東部の諸王国", note: "ムガル帝国に臣従し貢納する在地の王国（間接統治）"}
+    - {from: 1740, owner: "maratha", label: "ペーシュワー", cause: "マラーターがラームナガル（ダラムプル）のコーリー王国から取る（年は要確認）", source: "https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli"}
+    - {from: 1783, owner: "portugal", label: "ダードラー・ナガル・ハヴェーリー（ポルトガル領）", cause: "ペーシュワーとの友好条約（1779年）で、ポルトガルがナガル・ハヴェーリーを得る（1783–85年に引き渡し）", source: "https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli"}
+    - {from: 1954, owner: "india", certainty: "uncertain", label: "自由ダードラー・ナガル・ハヴェーリー", cause: "親インドの義勇兵がポルトガルの役人を追い出し（7–8月）、インドの後押しで自治の行政府を作る", source: "https://en.wikipedia.org/wiki/Free_Dadra_and_Nagar_Haveli"}
+    - {from: 1961, owner: "india", cause: "インドに正式に併合される（8月）", source: "https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli"}

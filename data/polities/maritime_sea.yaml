@@ -1,0 +1,729 @@
+# S5 島嶼部東南アジア（IDN・MYS・SGP・BRN・PHL・TLS）の政体（1648–2025）
+# 他の担当が参照しうる ID：mataram・banten・aceh・johor・brunei・sulu・ternate・tidore・gowa
+#   indonesia・malaysia・singapore・philippines・east_timor
+# オランダ（netherlands）・イギリス（britain）・スペイン（spain）・ポルトガル（portugal）・アメリカ（usa）・日本（japan）・シャム（siam）は他の担当の政体を使う。
+# オランダ東インド会社（VOC）やその後のオランダ政庁と保護条約（臣従の契約）を結んだスルタン国は、その年から
+# owner: netherlands・certainty: indirect・label（元の国名）で描く（英領インドの藩王国と同じ扱い）。そのため、
+# ここで定義する在地の政体の多くは「保護下に入るまで」の時期だけ地図に出る。
+
+# ===== ジャワ =====
+- id: mataram
+  name: マタラム王国
+  short: マタラム
+  color: "#b9cc8a"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アマンクラット1世, title: スルタン（ススフナン）, from: 1646, to: 1677, note: スルタン＝アグンの子。専制で王族・ウラマーと対立し、トルナジャヤの反乱で都を追われて死去, source: "https://en.wikipedia.org/wiki/Amangkurat_I_of_Mataram"}
+    - {name: アマンクラット2世, title: ススフナン, from: 1677, to: 1703, note: オランダ東インド会社（VOC）の軍の力で反乱を鎮め、見返りに領土と特権を与えた。都をカルタスラに移した, source: "https://en.wikipedia.org/wiki/Amangkurat_II_of_Mataram"}
+    - {name: アマンクラット3世, title: ススフナン, from: 1703, to: 1705, note: 叔父パクブウォノ1世とVOCに追われ、1708年にセイロンへ流された（第1次ジャワ継承戦争）, source: "https://en.wikipedia.org/wiki/Amangkurat_III_of_Mataram"}
+    - {name: パクブウォノ1世, title: ススフナン, from: 1704, to: 1719, note: 1705年の条約でプリアンガン・チルボン・マドゥラ東部をVOCに譲った, source: "https://en.wikipedia.org/wiki/Pakubuwono_I"}
+    - {name: アマンクラット4世, title: ススフナン, from: 1719, to: 1726, source: "https://en.wikipedia.org/wiki/Amangkurat_IV_of_Mataram"}
+    - {name: パクブウォノ2世, title: ススフナン, from: 1726, to: 1749, note: 華人の反乱（1740–43）に加担したのち降り、北海岸をVOCに譲った（1743）。都をスラカルタに移し（1745）、死の直前に王国の主権をVOCに委ねた, source: "https://en.wikipedia.org/wiki/Pakubuwono_II"}
+    - {name: パクブウォノ3世, title: ススフナン, from: 1749, to: 1755, note: 1755年のギヤンティ条約で王国はスラカルタとヨグヤカルタに分かれた（スラカルタのススフナンとしては1788年まで）, source: "https://en.wikipedia.org/wiki/Pakubuwono_III"}
+  periods:
+    - from: 1648
+      to: 1676
+      text: スルタン＝アグンのもとでジャワ中・東部を統一した内陸の農業国家。アマンクラット1世は北海岸の港市を締めつけ、バタヴィアのオランダ東インド会社とは和を結んだ。
+    - from: 1677
+      to: 1742
+      text: トルナジャヤの反乱（1674–80）以後、王はVOCの軍事援助に頼り、そのたびに領土と貿易の特権を手放した。王位をめぐる「ジャワ継承戦争」が繰り返された。
+    - from: 1743
+      to: 1755
+      text: 北海岸とマドゥラをVOCに譲って内陸国となる。王族マンクブミの反乱の末、1755年のギヤンティ条約でスラカルタ（ススフナン）とヨグヤカルタ（スルタン）に分かれ、ともにオランダの保護下に置かれた。
+  note: >-
+    1755年以後のスラカルタ・ヨグヤカルタ（および1757年のマンクヌガラン、1813年のパクアラマン）は、地図ではオランダ（イギリス統治期はイギリス）の間接統治（label）で描く。
+    ヨグヤカルタの主なスルタン：ハメンクブウォノ1世（マンクブミ、1755–92）、ハメンクブウォノ9世（1940–88。独立戦争で共和国を支え、のち副大統領）。
+    1830年のジャワ戦争の終わりに両王家は外領（マンチャヌガラ）を失った。
+  source: "https://ja.wikipedia.org/wiki/マタラム・スルタン国"
+
+- id: banten
+  name: バンテン王国
+  short: バンテン
+  color: "#e3c27a"
+  kind: 王国（イスラーム。港市国家）
+  rulers:
+    - {name: アブル・マファキル, title: スルタン, from: 1596, to: 1651, source: "https://en.wikipedia.org/wiki/Banten_Sultanate"}
+    - {name: アゲン・ティルタヤサ, title: スルタン, from: 1651, to: 1683, note: 胡椒貿易で最盛期を築き、イギリス・デンマークなどとも交易してVOCに対抗した。子のハジとの内戦でVOCに敗れた, source: "https://en.wikipedia.org/wiki/Ageng_Tirtayasa"}
+    - {name: ハジ（アブ・ナスル・アブドゥル・カハル）, title: スルタン, from: 1683, to: 1687, note: VOCの援助で父を破り、1684年の条約で胡椒の独占権を与えて保護下に入った, source: "https://en.wikipedia.org/wiki/Sultan_Haji_of_Banten"}
+  periods:
+    - from: 1648
+      to: 1683
+      text: ジャワ西端の胡椒の港市国家。スマトラ南部のランプンを従え、アジア・ヨーロッパの商人が集まる自由港としてバタヴィアのVOCと競った。
+  note: 1684年以後はVOCの保護国（地図ではオランダの間接統治）。1808年にダーンデルスが王宮を壊し、1813年にラッフルズが王国を廃した。
+  source: "https://ja.wikipedia.org/wiki/バンテン王国"
+
+- id: surapati
+  name: スラパティの国（パスルアン）
+  short: スラパティ
+  color: "#d8a7a0"
+  kind: 反VOCの在地政権
+  rulers:
+    - {name: スラパティ, title: パスルアンの支配者（アディパティ）, from: 1686, to: 1706, note: バリ出身の奴隷からVOCの兵士となり、のち反抗して東ジャワに自立した。1686年にカルタスラでVOCのタック大尉を討った, source: "https://en.wikipedia.org/wiki/Untung_Surapati"}
+  periods:
+    - from: 1686
+      to: 1766
+      text: VOCに反抗したスラパティが東ジャワのパスルアンに立てた政権。1706年に彼が戦死し、パスルアンは翌年VOCとマタラムに奪われたが、子孫はマランの山地で1767年まで抵抗を続けた。
+  source: "https://ja.wikipedia.org/wiki/スラパティ"
+
+# ===== スマトラ =====
+- id: aceh
+  name: アチェ王国
+  short: アチェ
+  color: "#8fbf8f"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: タージュル・アラム・サフィアトゥッディーン, title: スルタナ（女王）, from: 1641, to: 1675, note: イスカンダル・ムダの娘で、4代続く女王の時代の最初, source: "https://en.wikipedia.org/wiki/Taj_ul-Alam"}
+    - {name: ナキアトゥッディーン, title: スルタナ, from: 1675, to: 1678, source: "https://en.wikipedia.org/wiki/Naqiatuddin_Nur_ul-Alam"}
+    - {name: ザキアトゥッディーン, title: スルタナ, from: 1678, to: 1688, source: "https://en.wikipedia.org/wiki/Zaqiatuddin_Inayat_Syah"}
+    - {name: カマラト・シャー, title: スルタナ, from: 1688, to: 1699, note: 女王の時代の最後。以後はアラブ系の王統, source: "https://en.wikipedia.org/wiki/Kamalat_Syah"}
+    - {name: ジャウハル・アラム, title: スルタン, from: 1795, to: 1823, note: 1815–19年に一時王位を追われた。要確認, source: "https://en.wikipedia.org/wiki/Alauddin_Jauhar_ul-Alam_Syah"}
+    - {name: イブラーヒーム・マンスール・シャー, title: スルタン, from: 1857, to: 1870, note: 1838年から摂政として実権。要確認, source: "https://en.wikipedia.org/wiki/Alauddin_Ibrahim_Mansur_Syah"}
+    - {name: マフムード・シャー2世, title: スルタン, from: 1870, to: 1874, note: アチェ戦争のさなかに病死, source: "https://en.wikipedia.org/wiki/Alauddin_Mahmud_Syah_II"}
+    - {name: ムハンマド・ダウド・シャー, title: スルタン, from: 1874, to: 1903, note: 山地に移って抵抗を続け、1903年にオランダに降った, source: "https://en.wikipedia.org/wiki/Muhammad_Daud_Syah_of_Aceh"}
+  periods:
+    - from: 1648
+      to: 1699
+      text: 17世紀前半のイスカンダル・ムダのもとで最盛期を迎えたイスラームの港市国家。女王の時代に貴族（ウレーバラン）の力が強まり、スマトラ西海岸やマレー半島への支配は弱まった。
+    - from: 1700
+      to: 1872
+      text: 胡椒の輸出で栄え、19世紀にはアメリカやイギリスとも取引した。1824年の英蘭協約と1871年のスマトラ条約で、イギリスはオランダのアチェ進出を認めた。
+    - from: 1873
+      to: 1903
+      text: アチェ戦争。オランダは1874年に王都クタラジャ（バンダ・アチェ）を落として併合を宣言したが、ウラマーや貴族（テウク・ウマル、チュッ・ニャ・ディンら）のゲリラ戦が1903年ごろまで続いた。
+  note: 1874年以後のアチェは地図ではオランダ領。独立後のアチェはインドネシアの州で、自由アチェ運動（GAM）の独立闘争は2005年のヘルシンキ和平合意で終わり、2006年から特別自治（イスラーム法の施行など）が認められた。
+  source: "https://ja.wikipedia.org/wiki/アチェ王国"
+
+- id: minangkabau
+  name: ミナンカバウ王国（パガルユン）
+  short: ミナンカバウ
+  color: "#d0c08f"
+  kind: 王国（ゆるやかな首長連合）
+  rulers:
+    - {name: アラム・バガガル・シャー, title: パガルユンの王（スルタン）, from: 1821, to: 1833, note: 王族の一人として1821年にオランダと条約を結び、パドリ派に対抗した。1833年にオランダに捕らえられ流された。要確認, source: "https://en.wikipedia.org/wiki/Pagaruyung_Kingdom"}
+  periods:
+    - from: 1648
+      to: 1814
+      text: スマトラ中西部の高地の王国。王（パガルユンの王家）の権威は儀礼的で、村々（ナガリ）は母系の慣習法（アダット）にもとづく自治を行った。金と胡椒を海岸の港に送った。
+  note: 1815年ごろからパドリ派（厳格なイスラームの改革派）が王族を殺して高地を支配し、王族と慣習法の首長はオランダに援助を求めた（パドリ戦争、1821–37）。
+  source: "https://ja.wikipedia.org/wiki/パガルユン王国"
+
+- id: padri
+  name: パドリ派の支配地
+  short: パドリ派
+  color: "#a7c4a0"
+  kind: イスラーム改革派の勢力
+  rulers:
+    - {name: トゥアンク・イマム・ボンジョル, title: パドリ派の指導者, from: 1821, to: 1837, note: 1837年にボンジョルが落ち、捕らえられて流された, source: "https://en.wikipedia.org/wiki/Tuanku_Imam_Bonjol"}
+  periods:
+    - from: 1815
+      to: 1837
+      text: メッカ巡礼から帰った人々が始めた厳格なイスラームの改革運動（パドリ運動）が、ミナンカバウ高地の慣習法の首長や王族と争い、高地の大部分を押さえた。オランダはパドリ戦争（1821–37）でこれを破った。
+  source: "https://ja.wikipedia.org/wiki/パドリ戦争"
+
+- id: siak
+  name: シアク王国
+  short: シアク
+  color: "#e2a99f"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: ラジャ・クチル（アブドゥル・ジャリル・ラフマト・シャー）, title: スルタン, from: 1723, to: 1746, note: 1718年にジョホールの王位を奪ったが、ブギス人に追われてシアクに王国を立てた, source: "https://en.wikipedia.org/wiki/Sultanate_of_Siak_Sri_Indrapura"}
+    - {name: シャリフ・カシム2世, title: スルタン, from: 1915, to: 1945, note: 1945年に王国をインドネシア共和国に合わせた（地図では1858年からオランダの間接統治）, source: "https://en.wikipedia.org/wiki/Sultan_Syarif_Kasim_II"}
+  periods:
+    - from: 1723
+      to: 1857
+      text: ジョホールの王位を追われたラジャ・クチルがスマトラ東岸のシアク川に立てた王国。18世紀後半にはスマトラ東岸の諸王国に勢力を広げた。1858年の条約でオランダの保護下に入った。
+  source: "https://ja.wikipedia.org/wiki/シアク王国"
+
+- id: indragiri
+  name: インドラギリ王国
+  short: インドラギリ
+  color: "#c9d2a0"
+  kind: 王国（イスラーム）
+  periods:
+    - from: 1648
+      to: 1837
+      text: スマトラ東岸のインドラギリ川流域の小王国。胡椒と金を産し、ジョホールやジャンビ、VOCと交易した。1838年にオランダの保護下に入った。
+  note: 君主は省略。
+  source: "https://en.wikipedia.org/wiki/Indragiri_Sultanate"
+
+- id: jambi
+  name: ジャンビ王国
+  short: ジャンビ
+  color: "#9fcfcf"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: タハ・サイフッディン, title: スルタン, from: 1855, to: 1904, note: オランダとの条約を拒んで1858年に退けられたが、内陸で40年以上抵抗を続け、1904年に戦死した, source: "https://en.wikipedia.org/wiki/Thaha_Syaifuddin"}
+  periods:
+    - from: 1648
+      to: 1857
+      text: スマトラ中東部のバタンハリ川流域の胡椒の王国。17世紀にはVOCと結び、ジョホールと争って1673年にジョホールの都を焼いた（ジャンビ＝ジョホール戦争）。
+  source: "https://ja.wikipedia.org/wiki/ジャンビ王国"
+
+- id: palembang
+  name: パレンバン王国
+  short: パレンバン
+  color: "#c9b8e0"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アブドゥルラフマン（キアイ・マス・エンディ）, title: スルタン, from: 1659, to: 1706, note: 1659年のVOCの攻撃で焼かれた都を立て直し、スルタンを名乗った, source: "https://en.wikipedia.org/wiki/Palembang_Sultanate"}
+    - {name: マフムード・バダルッディン1世, title: スルタン, from: 1724, to: 1757, note: バンカ島の錫の採掘を始め、王国を富ませた, source: "https://en.wikipedia.org/wiki/Mahmud_Badaruddin_I"}
+    - {name: マフムード・バダルッディン2世, title: スルタン, from: 1803, to: 1821, note: 1812年にイギリスに一時追われ、1819年にオランダ軍を退けたが、1821年に敗れてテルナテに流された, source: "https://en.wikipedia.org/wiki/Mahmud_Badaruddin_II"}
+  periods:
+    - from: 1648
+      to: 1820
+      text: スマトラ南東部のムシ川流域の王国。胡椒と、18世紀からはバンカ島の錫をVOCに独占的に売る代わりに保護を受けたが、内政は自立していた。
+  note: 1821年にオランダが都を占領し、1823年に王国を廃した。
+  source: "https://ja.wikipedia.org/wiki/パレンバン・スルタン国"
+
+# ===== マレー半島・リアウ =====
+- id: johor
+  name: ジョホール王国
+  names:
+    - {to: 1823, name: ジョホール王国（ジョホール＝リアウ）, short: ジョホール}
+  short: ジョホール
+  color: "#a6b9e0"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アブドゥル・ジャリル・シャー3世, title: スルタン, from: 1623, to: 1677, note: 1641年にVOCと組んでポルトガルからマラッカを奪った。1673年にジャンビに都を焼かれた, source: "https://en.wikipedia.org/wiki/Abdul_Jalil_Shah_III_of_Johor"}
+    - {name: イブラーヒーム・シャー, title: スルタン, from: 1677, to: 1685, source: "https://en.wikipedia.org/wiki/Ibrahim_Shah_of_Johor"}
+    - {name: マフムード・シャー2世, title: スルタン, from: 1685, to: 1699, note: 暗殺され、マラッカ王家の血統が絶えた, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_II_of_Johor"}
+    - {name: アブドゥル・ジャリル・シャー4世, title: スルタン（もと宰相〈ブンダハラ〉）, from: 1699, to: 1718, source: "https://en.wikipedia.org/wiki/Abdul_Jalil_Shah_IV_of_Johor"}
+    - {name: ラジャ・クチル（アブドゥル・ジャリル・ラフマト・シャー）, title: スルタン, from: 1718, to: 1722, note: ミナンカバウの勢力を率いて王位を奪ったが、ブギス人に追われた, source: "https://en.wikipedia.org/wiki/Raja_Kecil"}
+    - {name: スライマン・バドルル・アラム・シャー, title: スルタン, from: 1722, to: 1760, note: ブギス人の副王（ヤン・ディプルトゥアン・ムダ）が実権を握った, source: "https://en.wikipedia.org/wiki/Sulaiman_Badrul_Alam_Shah_of_Johor"}
+    - {name: マフムード・シャー3世, title: スルタン, from: 1761, to: 1812, note: 1784年にVOCがリアウを攻め、王国はVOCに臣従した。のちリンガに移った, source: "https://en.wikipedia.org/wiki/Mahmud_Shah_III_of_Johor"}
+    - {name: アブドゥル・ラフマン・ムアッザム・シャー, title: スルタン（リアウ＝リンガ）, from: 1812, to: 1823, note: オランダが支持した。1824年の英蘭協約以後はリアウ＝リンガのスルタン, source: "https://en.wikipedia.org/wiki/Abdul_Rahman_Muazzam_Shah_of_Johor"}
+    - {name: フセイン・シャー, title: スルタン（イギリスが承認）, from: 1819, to: 1835, note: ラッフルズが兄の王位継承権を立てて擁立し、シンガポールの割譲を認めさせた, source: "https://en.wikipedia.org/wiki/Hussein_Shah_of_Johor"}
+    - {name: アブー・バカル, title: トゥムンゴン→マハラジャ→スルタン, from: 1862, to: 1895, note: 1885年にイギリスとの条約でスルタンと認められ、外交をイギリスに委ねた。「近代ジョホールの父」, source: "https://ja.wikipedia.org/wiki/アブー・バカル_(ジョホール王)"}
+    - {name: イブラーヒーム, title: スルタン, from: 1895, to: 1913, note: 1914年にイギリスの総顧問官を受け入れた（在位は1959年まで）, source: "https://en.wikipedia.org/wiki/Ibrahim_of_Johor"}
+  periods:
+    - from: 1648
+      to: 1698
+      text: マラッカ王国の流れをくむ王国で、マレー半島南部・リアウ諸島・スマトラ東岸の一部を治めた。1641年にVOCとともにマラッカを落としたが、ジャンビとの戦争（1666–79）で都を焼かれた。
+    - from: 1699
+      to: 1783
+      text: スルタンの暗殺で王統が替わり、ミナンカバウ系のラジャ・クチルとブギス人が王位を争った。1722年以後は都をリアウ（ビンタン島）に置き、ブギス人の副王が実権を握って中継貿易で栄えた。
+    - from: 1784
+      to: 1823
+      text: 1784年にVOCがリアウを攻め、王国はVOCの臣下となった。1819年にイギリスはシンガポールに商館を置き、別のスルタン（フセイン）を立てた。1824年の英蘭協約で王国は分かれた。
+    - from: 1824
+      to: 1913
+      text: 英蘭協約でマラッカ海峡の北がイギリス、南がオランダの勢力圏となり、半島部はトゥムンゴン（のちスルタン）家のジョホールとなった。アブー・バカルは胡椒・ガンビールの栽培で国を富ませ、1885年に外交をイギリスに委ねた。
+  note: 1914年以後は地図ではイギリスの間接統治（非連合州）。1824年以後のリアウ＝リンガ王国（1911年に廃止）はオランダの間接統治。
+  source: "https://ja.wikipedia.org/wiki/ジョホール王国"
+
+- id: kedah
+  name: クダ王国
+  short: クダ
+  color: "#b9d8a0"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アブドゥッラー・ムカッラム・シャー, title: スルタン, from: 1778, to: 1797, note: 1786年にペナン島をイギリス東インド会社（フランシス・ライト）に貸した, source: "https://en.wikipedia.org/wiki/Abdullah_Mukarram_Shah_of_Kedah"}
+    - {name: アフマド・タジュッディン・ハリム・シャー2世, title: スルタン, from: 1797, to: 1843, note: 1821年にシャムに追われ、1842年に復位した, source: "https://en.wikipedia.org/wiki/Ahmad_Tajuddin_Halim_Shah_II_of_Kedah"}
+  periods:
+    - from: 1648
+      to: 1908
+      text: マレー半島北西部の米作の王国。シャム（アユタヤ朝、のちラタナコーシン朝）に金銀の花（ブンガ・マス）を贈る朝貢国だった。1821–42年にはシャムに占領された。
+  note: 1909年のバンコク条約（英シャム条約）でイギリスの保護下に入った（地図ではイギリスの間接統治。非連合州）。
+  source: "https://ja.wikipedia.org/wiki/クダ・スルタン国"
+
+- id: perlis
+  name: プルリス王国
+  short: プルリス
+  color: "#a9d0b8"
+  kind: 王国（イスラーム）
+  periods:
+    - from: 1843
+      to: 1908
+      text: 1842年にクダを返したシャムが、その北部を切り離して立てた小王国。シャムの朝貢国だった。
+  note: 君主は省略。1909年からイギリスの保護下。
+  source: "https://en.wikipedia.org/wiki/Perlis"
+
+- id: kelantan
+  name: クランタン王国
+  short: クランタン
+  color: "#d8c8a0"
+  kind: 王国（イスラーム）
+  periods:
+    - from: 1648
+      to: 1908
+      text: マレー半島北東部の王国。17世紀にはパタニ王国の勢力下にあり、18世紀後半からは独自の王家（ロン・ユヌス家）のもとでシャムに朝貢した。
+  note: 君主は省略。1909年のバンコク条約でイギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Kelantan_Sultanate"
+
+- id: terengganu
+  name: トレンガヌ王国
+  short: トレンガヌ
+  color: "#a8c8d8"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: ザイナル・アビディン1世, title: スルタン, from: 1725, to: 1733, note: ジョホールの王族で、トレンガヌに王家を開いた。年は要確認, source: "https://en.wikipedia.org/wiki/Zainal_Abidin_I_of_Terengganu"}
+  periods:
+    - from: 1725
+      to: 1908
+      text: ジョホールの王族が開いたマレー半島東岸の王国。19世紀にはシャムに朝貢しつつ、内政はかなり自立していた。
+  note: 1909年のバンコク条約でイギリスの勢力下に入り、1919年にイギリスの顧問官を受け入れた。
+  source: "https://en.wikipedia.org/wiki/Terengganu_Sultanate"
+
+- id: perak
+  name: ペラ王国
+  short: ペラ
+  color: "#e0c0a0"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アブドゥッラー・ムハンマド・シャー2世, title: スルタン, from: 1874, to: 1876, note: パンコール条約でイギリスの駐在官を受け入れたが、駐在官バーチの殺害（1875）に関わったとして流された, source: "https://en.wikipedia.org/wiki/Abdullah_Muhammad_Shah_II_of_Perak"}
+  periods:
+    - from: 1648
+      to: 1873
+      text: 錫を産するマレー半島西岸の王国。17世紀前半はアチェに従い、のちVOCに錫を売る契約を結んだ。19世紀に錫の鉱山が開かれて華人の移民が増え、その抗争と王位争いがイギリスの介入を招いた。
+  note: 1874年のパンコール条約でイギリスの駐在官を受け入れた（地図ではイギリスの間接統治。1895年からマレー連合州）。
+  source: "https://ja.wikipedia.org/wiki/ペラ・スルタン国"
+
+- id: selangor
+  name: スランゴール王国
+  short: スランゴール
+  color: "#c6d8b6"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: サレフッディン（ラジャ・ルム）, title: スルタン, from: 1766, to: 1778, note: ブギス人の王族で、スランゴールの初代スルタン, source: "https://en.wikipedia.org/wiki/Salehuddin_of_Selangor"}
+  periods:
+    - from: 1766
+      to: 1873
+      text: 18世紀に移り住んだブギス人が開いた王国。19世紀に錫の採掘で華人が増え、クアラルンプールが生まれた。王族の内戦（1867–74）がイギリスの介入を招いた。
+  note: 1874年からイギリスの駐在官を受け入れた。
+  source: "https://en.wikipedia.org/wiki/Selangor_Sultanate"
+
+- id: pahang
+  name: パハン王国
+  short: パハン
+  color: "#d0b0c4"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アフマド（ワン・アフマド）, title: ブンダハラ→スルタン, from: 1863, to: 1887, note: 内戦に勝って実権を握り、1882年にスルタンを名乗った, source: "https://en.wikipedia.org/wiki/Ahmad_al-Muadzam_Shah_of_Pahang"}
+  periods:
+    - from: 1853
+      to: 1887
+      text: ジョホール王国の宰相（ブンダハラ）家が治めた地が、19世紀半ばに自立した。1888年にイギリスの駐在官を受け入れ、反対する首長の反乱（1891–95）が起こった。
+  source: "https://en.wikipedia.org/wiki/Pahang_Sultanate"
+
+- id: negeri_sembilan
+  name: ヌグリ・スンビラン
+  short: ヌグリ・スンビラン
+  color: "#b2c3a2"
+  kind: 首長連合（ミナンカバウ系）
+  rulers:
+    - {name: ラジャ・ムレワル, title: ヤン・ディプルトゥアン・ブサール, from: 1773, to: 1795, note: ミナンカバウから迎えられた最初の君主。年は要確認, source: "https://en.wikipedia.org/wiki/Negeri_Sembilan"}
+  periods:
+    - from: 1773
+      to: 1894
+      text: ミナンカバウ系の移住者の「九つの国」の連合。母系の慣習法（アダット・プルパティ）を保った。1874年からスンガイ・ウジョンなどが順にイギリスの保護下に入り、1895年に連合としてまとまった。
+  source: "https://en.wikipedia.org/wiki/Negeri_Sembilan"
+
+# ===== ボルネオ =====
+- id: brunei
+  name: ブルネイ王国
+  names:
+    - {from: 1984, name: ブルネイ・ダルサラーム国, kind: 王国（スルタンの絶対君主制）}
+  short: ブルネイ
+  color: "#f0d88a"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アブドゥル・ジャリルル・アクバル, title: スルタン, from: 1598, to: 1659, source: "https://en.wikipedia.org/wiki/Abdul_Jalilul_Akbar"}
+    - {name: アブドゥル・ジャリルル・ジャッバール, title: スルタン, from: 1659, to: 1660, source: "https://en.wikipedia.org/wiki/List_of_sultans_of_Brunei"}
+    - {name: ムハンマド・アリー, title: スルタン, from: 1660, to: 1661, note: 殺され、ブルネイ内戦（1661–73）が起こった, source: "https://en.wikipedia.org/wiki/Muhammad_Ali_of_Brunei"}
+    - {name: アブドゥル・ハックル・ムビン, title: スルタン, from: 1661, to: 1673, source: "https://en.wikipedia.org/wiki/Abdul_Hakkul_Mubin"}
+    - {name: ムヒウッディン, title: スルタン, from: 1673, to: 1690, note: 内戦の助けの見返りに、北ボルネオ東部をスールー王国に譲ったとされる, source: "https://en.wikipedia.org/wiki/Muhyiddin_of_Brunei"}
+    - {name: オマール・アリ・サイフッディン2世, title: スルタン, from: 1828, to: 1852, note: 1841年にサラワクをジェームズ＝ブルックに与え、1846年にラブアンをイギリスに譲った, source: "https://en.wikipedia.org/wiki/Omar_Ali_Saifuddin_II"}
+    - {name: アブドゥル・モミン, title: スルタン, from: 1852, to: 1885, source: "https://en.wikipedia.org/wiki/Abdul_Momin_of_Brunei"}
+    - {name: ハシム・ジャリルル・アラム・アカマッディン, title: スルタン, from: 1885, to: 1906, note: 1888年にイギリスの保護国となり、1906年にイギリスの駐在官を受け入れた, source: "https://en.wikipedia.org/wiki/Hashim_Jalilul_Alam_Aqamaddin"}
+    - {name: オマール・アリ・サイフッディン3世, title: スルタン, from: 1950, to: 1967, note: 1959年の憲法で内政の自治を得た, source: "https://en.wikipedia.org/wiki/Omar_Ali_Saifuddien_III"}
+    - {name: ハサナル・ボルキア, title: スルタン（首相を兼ねる）, from: 1967, to: 2025, source: "https://ja.wikipedia.org/wiki/ハサナル・ボルキア"}
+  periods:
+    - from: 1648
+      to: 1840
+      text: かつてボルネオ北岸の全体とフィリピン南部に勢力をもった港市国家。17世紀の内戦で北東部をスールーに譲り、海岸の首長たちへの支配も弱まった。
+    - from: 1841
+      to: 1887
+      text: サラワクのブルック家とイギリス北ボルネオ会社に領土を次々と割譲・貸与し、国土は小さくなった。1888年にイギリスの保護国となった。
+    - from: 1984
+      to: 2025
+      text: 1984年に完全に独立。石油と天然ガスの収入で国民に手厚い福祉を行うスルタンの絶対君主制の国。
+  note: 1888–1983年は地図ではイギリスの間接統治（保護国）。1906年から駐在官制度、1959年から内政自治。1962年のブルネイ反乱の後もマレーシアに加わらなかった。
+  source: "https://ja.wikipedia.org/wiki/ブルネイ"
+
+- id: sarawak
+  name: サラワク王国（ブルック家）
+  short: サラワク
+  color: "#c0a8d8"
+  kind: 王国（イギリス人の「白人王（ホワイト・ラジャ）」の国）
+  rulers:
+    - {name: ジェームズ＝ブルック, title: ラジャ, from: 1841, to: 1868, note: イギリスの冒険家。反乱の鎮圧を助けた見返りにブルネイのスルタンからサラワクの統治を任された, source: "https://ja.wikipedia.org/wiki/ジェームズ・ブルック"}
+    - {name: チャールズ＝ブルック, title: ラジャ, from: 1868, to: 1917, note: 領土を北へ広げ、1888年にイギリスの保護国とした, source: "https://en.wikipedia.org/wiki/Charles_Brooke,_Rajah_of_Sarawak"}
+    - {name: ヴァイナー＝ブルック, title: ラジャ, from: 1917, to: 1946, note: 1946年にサラワクをイギリスに譲った, source: "https://en.wikipedia.org/wiki/Charles_Vyner_Brooke"}
+  periods:
+    - from: 1841
+      to: 1887
+      text: ブルック家がブルネイから領土を少しずつ得て（1853・1861・1882・1885・1890・1905年）、ボルネオ北西部に広げた。ダヤク人の首狩りや「海賊」の取り締まりを名目に内陸に支配を広げた。
+  note: 1888–1941年は地図ではイギリスの間接統治（保護国）。1946年にイギリスの直轄植民地、1963年にマレーシアの州。
+  source: "https://ja.wikipedia.org/wiki/サラワク王国"
+
+- id: west_borneo
+  name: 西ボルネオの諸王国
+  short: 西ボルネオ諸国
+  color: "#c8c090"
+  kind: 小王国の集まり（サンバス・スカダナ〈マタン〉・ランダクなど）
+  periods:
+    - from: 1648
+      to: 1778
+      text: ボルネオ西岸の川ごとの小王国。ダイヤモンドと金を産し、ジャワのバンテン・マタラムなどの影響を受けた。18世紀には華人の金鉱労働者の組合（公司。蘭芳公司など）が内陸に自治の社会をつくった。
+  note: 1771年にアラブ系のアブドゥルラフマンがポンティアナックを開き、1779年にVOCと条約を結んだ。各王国は19世紀前半までにオランダの保護下に入った。蘭芳公司は1884年にオランダに滅ぼされた。
+  source: "https://en.wikipedia.org/wiki/Pontianak_Sultanate"
+
+- id: banjar
+  name: バンジャル王国（バンジャルマシン）
+  short: バンジャル
+  color: "#d8b48a"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: アダム, title: スルタン, from: 1825, to: 1857, note: 後継をめぐる争いにオランダが介入し、バンジャルマシン戦争を招いた, source: "https://en.wikipedia.org/wiki/Banjar_Sultanate"}
+  periods:
+    - from: 1648
+      to: 1786
+      text: ボルネオ南部のバリト川下流の胡椒の王国。17世紀にはマタラムの圧力を受けつつ、オランダ・イギリスの商人と取引した。
+  note: 1787年の条約で王国の主権をVOCに渡し、その封土として返された（地図ではオランダの間接統治）。1860年にオランダが王国を廃し、アンタサリらのバンジャルマシン戦争（1859–1905）が続いた。
+  source: "https://ja.wikipedia.org/wiki/バンジャルマシン王国"
+
+- id: kutai
+  name: クタイ王国（クタイ・カルタヌガラ）
+  short: クタイ
+  color: "#b0d0a0"
+  kind: 王国（イスラーム）
+  periods:
+    - from: 1648
+      to: 1843
+      text: ボルネオ東部のマハカム川流域の王国。ブギス人の商人が住みつき、森林産物と金を交易した。1844年にオランダの保護下に入った。
+  note: 君主は省略。20世紀には石油と石炭の産地となった（バリクパパン）。
+  source: "https://en.wikipedia.org/wiki/Kutai_Kartanegara_Sultanate"
+
+- id: berau
+  name: ブラウ王国
+  short: ブラウ
+  color: "#a8c4b4"
+  kind: 王国（イスラーム。のちブルンガン・サンバリウンなどに分かれる）
+  periods:
+    - from: 1648
+      to: 1849
+      text: ボルネオ北東部の小王国。18世紀にブルンガンが分かれ、スールー王国の勢力も及んだ。1834年（ブラウ）・1850年（ブルンガン）にオランダの保護下に入った。
+  note: 君主は省略。
+  source: "https://en.wikipedia.org/wiki/Berau_Sultanate"
+
+# ===== スラウェシ =====
+- id: gowa
+  name: ゴワ王国（マカッサル）
+  short: ゴワ
+  color: "#d7a76f"
+  kind: 王国（イスラーム。ゴワとタッロの連合）
+  rulers:
+    - {name: マリクッサイド, title: スルタン, from: 1639, to: 1653, source: "https://en.wikipedia.org/wiki/Malikussaid_of_Gowa"}
+    - {name: ハサヌッディン, title: スルタン, from: 1653, to: 1669, note: マカッサル戦争でVOCとボネのアルン・パラッカに敗れ、ボンガヤ条約を結んだ。「東方の雄鶏」と呼ばれ、インドネシアの国家英雄, source: "https://ja.wikipedia.org/wiki/ハサヌディン"}
+  periods:
+    - from: 1648
+      to: 1666
+      text: マカッサルの港を中心に、スラウェシ南部・ロンボク・スンバワなどを支配した海洋王国。香辛料の自由貿易を掲げてVOCの独占に対抗し、ポルトガル人・イギリス人の商人も受け入れた。
+  note: 1667年のボンガヤ条約以後はVOCの臣下（地図ではオランダの間接統治）。1905–06年のオランダの遠征で王国は解体され、1936年に自治領として復活した。
+  source: "https://ja.wikipedia.org/wiki/ゴワ王国"
+
+- id: bone
+  name: ボネ王国
+  short: ボネ
+  color: "#c4d48e"
+  kind: 王国（ブギス人。イスラーム）
+  rulers:
+    - {name: アルン・パラッカ, title: ボネの王（アルンポネ）, from: 1672, to: 1696, note: ゴワに服していたボネの王族。VOCと組んでゴワを破り（1667–69）、スラウェシ南部の覇者となった。王位は1672年から, source: "https://en.wikipedia.org/wiki/Arung_Palakka"}
+    - {name: ラ・パワウォイ, title: アルンポネ, from: 1895, to: 1905, note: 1905年のオランダの遠征に敗れて流された, source: "https://en.wikipedia.org/wiki/Bone_State"}
+  periods:
+    - from: 1667
+      to: 1859
+      text: ゴワの敗北の後、アルン・パラッカのもとでスラウェシ南部の覇権を握ったブギス人の王国。VOCの同盟者として自立を保ち、19世紀にはオランダと何度も戦った（1824–25、1859–60年）。
+  note: 1860年の条約でオランダの臣下となり（地図ではオランダの間接統治）、1905年に征服された。ブギス人の商人・移民は東南アジアの海に広く進出した。
+  source: "https://ja.wikipedia.org/wiki/ボネ王国"
+
+- id: luwu
+  name: ルウ王国
+  short: ルウ
+  color: "#d0a8a8"
+  kind: 王国（ブギス人の古王国）
+  periods:
+    - from: 1648
+      to: 1905
+      text: スラウェシ南部で最も古いとされるブギス人の王国。ボネ湾の北岸を治め、鉄と森林産物を交易した。17世紀以後はボネの勢力下に置かれることが多かった。
+  note: 君主は省略。1906年にオランダの支配下に入った。
+  source: "https://en.wikipedia.org/wiki/Luwu_Kingdom"
+
+- id: buton
+  name: ブトン王国
+  short: ブトン
+  color: "#b8d0e8"
+  kind: 王国（イスラーム）
+  periods:
+    - from: 1648
+      to: 1905
+      text: スラウェシ南東のブトン島の王国。1613年からVOCの同盟国で、ゴワやテルナテに対抗した。スルタンを選挙で選ぶ独自の制度をもった。
+  note: 君主は省略。1906年にオランダの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Sultanate_of_Buton"
+
+# ===== マルク（モルッカ） =====
+- id: ternate
+  name: テルナテ王国
+  short: テルナテ
+  color: "#e0b0c8"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: マンダル・シャー, title: スルタン, from: 1648, to: 1675, note: 1652年にVOCと丁子の栽培をやめる条約を結んだ。1650–55年に一時王位を追われた, source: "https://en.wikipedia.org/wiki/Mandar_Syah"}
+    - {name: シボリ（カイチリ・シボリ・アムステルダム）, title: スルタン, from: 1675, to: 1690, note: VOCと戦って敗れ、1683年に王国はVOCの臣下となった, source: "https://en.wikipedia.org/wiki/Sibori_Amsterdam"}
+  periods:
+    - from: 1648
+      to: 1682
+      text: 丁子の産地モルッカ諸島北部の王国で、スラウェシ東部・北部の沿岸やセラム島西部にも勢力をもった。VOCと結んで丁子の栽培をやめる代わりに年金を受け、1683年にはVOCの臣下となった。
+  note: 1683年以後は地図ではオランダの間接統治。
+  source: "https://ja.wikipedia.org/wiki/テルナテ王国"
+
+- id: tidore
+  name: ティドレ王国
+  short: ティドレ
+  color: "#b8a6d9"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: サイフッディン, title: スルタン, from: 1657, to: 1689, note: スペインが撤退した後、1667年にVOCと条約を結んだ, source: "https://en.wikipedia.org/wiki/Saifuddin_of_Tidore"}
+    - {name: ヌク, title: スルタン, from: 1797, to: 1805, note: 1780年からVOCに抵抗し、イギリスの助けでティドレを取り戻した。インドネシアの国家英雄, source: "https://en.wikipedia.org/wiki/Nuku_Muhammad_Amiruddin"}
+  periods:
+    - from: 1648
+      to: 1779
+      text: テルナテと並ぶ丁子の王国。1663年までスペインと結び、のちVOCの臣下となった。ハルマヘラ島東部・セラム島東部・ニューギニア西部の沿岸に名目的な宗主権をもった。
+    - from: 1797
+      to: 1805
+      text: VOCに退けられた王族ヌクがイギリスの援助で王国を取り戻し、オランダに対抗した。
+  note: 1780–96年と1806年以後は地図ではオランダの間接統治（イギリス占領期を除く）。オランダは、ティドレの宗主権を根拠にニューギニア西部の領有を主張した。
+  source: "https://ja.wikipedia.org/wiki/ティドレ王国"
+
+# ===== 小スンダ列島 =====
+- id: bali
+  name: バリの諸王国
+  short: バリ
+  color: "#e8b07a"
+  kind: ヒンドゥー教の王国の集まり（クルンクンのデワ・アグンが名目上の盟主）
+  rulers:
+    - {name: デワ・アグン・ジャンベ2世, title: クルンクンの王（デワ・アグン）, from: 1903, to: 1908, note: 1908年、オランダ軍の前で王族とともに「ププタン」（集団での死の行進）を行って死んだ, source: "https://en.wikipedia.org/wiki/Dewa_Agung_Jambe_II"}
+  periods:
+    - from: 1648
+      to: 1848
+      text: ゲルゲル王国が17世紀末に分かれてできたバリ島の諸王国（クルンクン・カランアスム・ブレレン・バドゥンなど）。ジャワ東端のブランバンガンやロンボク島にも勢力を広げた。奴隷貿易と米で栄えた。
+    - from: 1849
+      to: 1908
+      text: オランダは1849年に北部（ブレレン・ジュンブラナ）、1894年にロンボク、1906年にバドゥン・タバナン、1908年にクルンクンを征服した。南部の王族はププタンで抵抗の意志を示した。
+  note: 地図ではバリの諸王国を1つの色で描く。ロンボク島西部は18世紀からカランアスム王家の支配下。
+  source: "https://ja.wikipedia.org/wiki/バリ島の歴史"
+
+# ===== フィリピン南部 =====
+- id: sulu
+  name: スールー王国
+  short: スールー
+  color: "#d9c27e"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: サラーフッディン・バフティアル, title: スルタン, from: 1649, to: 1680, note: 年は要確認, source: "https://en.wikipedia.org/wiki/Sultanate_of_Sulu"}
+    - {name: アズィームッディン1世（アリムッディン1世）, title: スルタン, from: 1735, to: 1748, note: スペインに捕らえられてマニラで洗礼を受けた。1764–74年に復位した, source: "https://en.wikipedia.org/wiki/Azim_ud-Din_I_of_Sulu"}
+    - {name: ジャマルル・アザム, title: スルタン, from: 1862, to: 1881, note: 1878年に北ボルネオをイギリス人オーバーベックらに貸し与え、スペインの保護条約に署名した, source: "https://en.wikipedia.org/wiki/Jamal_ul-Azam"}
+    - {name: ジャマルル・キラム2世, title: スルタン, from: 1894, to: 1915, note: 1899年にアメリカとベイツ協定、1915年にカーペンター協定を結んで政治的な権限を手放した（1936年まで在位）, source: "https://en.wikipedia.org/wiki/Jamalul_Kiram_II"}
+  periods:
+    - from: 1648
+      to: 1877
+      text: スールー諸島のホロを都とする海洋王国。中国向けのナマコ・真珠などの交易と、イラヌン人などの奴隷狩りの遠征で栄え、北ボルネオ東部にも勢力を広げた。スペインとは「モロ戦争」を繰り返した。
+  note: 1876年にスペインがホロを占領し、1878年の条約で保護下に入った（地図ではスペイン、のちアメリカの間接統治）。マレーシアのサバ州に対するフィリピンの領有権の主張は、この王国の権利にもとづく。
+  source: "https://ja.wikipedia.org/wiki/スールー王国"
+
+- id: maguindanao
+  name: マギンダナオ王国
+  short: マギンダナオ
+  color: "#a5d4a5"
+  kind: 王国（イスラーム）
+  rulers:
+    - {name: クダラット, title: スルタン, from: 1619, to: 1671, note: スペインの進出を退け、ミンダナオ南西部を治めた, source: "https://en.wikipedia.org/wiki/Muhammad_Kudarat"}
+  periods:
+    - from: 1648
+      to: 1860
+      text: ミンダナオ島南西部のプランギ川（コタバト）流域の王国。スルタン・クダラットのもとで最盛期を迎え、スペインのミンダナオ進出を阻んだ。内陸のマラナオ人（ラナオ）や東のダバオ湾岸にも名目的な影響を及ぼした。
+  note: 1861年にスペインがコタバトに砦を築き、王国は保護下に入った。上流のブアヤン（ダトゥ・ウト）は1880年代まで抵抗した。
+  source: "https://ja.wikipedia.org/wiki/マギンダナオ王国"
+
+# ===== 独立後 =====
+- id: indonesia
+  name: インドネシア共和国
+  names:
+    - {to: 1948, name: インドネシア共和国, kind: 共和国（独立戦争中）}
+    - {from: 1949, to: 1949, name: インドネシア連邦共和国, kind: 連邦共和国}
+  short: インドネシア
+  color: "#d4a5c9"
+  kind: 共和国
+  rulers:
+    - {name: スカルノ, title: 大統領, from: 1945, to: 1967, note: 1959年に「指導される民主主義」を唱えて議会を解散。九・三〇事件の後の1966年3月に実権をスハルトに渡した, source: "https://ja.wikipedia.org/wiki/スカルノ"}
+    - {name: スハルト, title: 大統領, from: 1967, to: 1998, note: 「新秩序」の開発独裁。アジア通貨危機のさなかに退陣した, source: "https://ja.wikipedia.org/wiki/スハルト"}
+    - {name: ハビビ, title: 大統領, from: 1998, to: 1999, source: "https://ja.wikipedia.org/wiki/バハルディン・ユスフ・ハビビ"}
+    - {name: アブドゥルラフマン・ワヒド, title: 大統領, from: 1999, to: 2001, source: "https://ja.wikipedia.org/wiki/アブドゥルラフマン・ワヒド"}
+    - {name: メガワティ・スカルノプトゥリ, title: 大統領, from: 2001, to: 2004, note: スカルノの娘, source: "https://ja.wikipedia.org/wiki/メガワティ・スカルノプトゥリ"}
+    - {name: スシロ・バンバン・ユドヨノ, title: 大統領, from: 2004, to: 2014, note: 初の直接選挙で選ばれた大統領, source: "https://ja.wikipedia.org/wiki/スシロ・バンバン・ユドヨノ"}
+    - {name: ジョコ・ウィドド, title: 大統領, from: 2014, to: 2024, source: "https://ja.wikipedia.org/wiki/ジョコ・ウィドド"}
+    - {name: プラボウォ・スビアント, title: 大統領, from: 2024, to: 2025, source: "https://ja.wikipedia.org/wiki/プラボウォ・スビアント"}
+  periods:
+    - from: 1945
+      to: 1949
+      text: 1945年8月17日にスカルノとハッタが独立を宣言。再び支配しようとするオランダと戦い（インドネシア独立戦争）、国際世論と国連の圧力で1949年のハーグ協定により独立を認めさせた。
+    - from: 1950
+      to: 1965
+      text: 1950年に単一の共和国となる。スカルノはアジア・アフリカ会議（1955）を開いて非同盟の立場をとり、議会制の混乱の後「指導される民主主義」で国軍と共産党（PKI）の均衡の上に立った。西イリアンを獲得し、マレーシアと対決した。
+    - from: 1966
+      to: 1998
+      text: 九・三〇事件の後、共産党員とされた人々が大量に殺され、スハルトが実権を握った（「新秩序」）。国軍を背景にした開発独裁で経済成長を進め、ASEANの中心国となった。1976年に東ティモールを併合した。
+    - from: 1998
+      to: 2025
+      text: アジア通貨危機でスハルトが退陣し、民主化と地方分権が進んだ（レフォルマシ）。東ティモールの独立（2002）、アチェ和平（2005）を経て、世界最大のイスラーム人口をもつ民主国家となり、G20の一員となった。
+  source: "https://ja.wikipedia.org/wiki/インドネシア"
+
+- id: malaysia
+  name: マレーシア
+  names:
+    - {to: 1962, name: マラヤ連邦, short: マラヤ, kind: 立憲君主制（連邦。国王は9州のスルタンの互選）}
+  short: マレーシア
+  color: "#9fc5e0"
+  kind: 立憲君主制（連邦。国王は9州のスルタンの互選）
+  rulers:
+    - {name: トゥンク・アブドゥル・ラーマン, title: 首相, from: 1957, to: 1970, note: 「独立の父」。1963年にマレーシアを結成した, source: "https://ja.wikipedia.org/wiki/トゥンク・アブドゥル・ラーマン"}
+    - {name: アブドゥル・ラザク, title: 首相, from: 1970, to: 1976, note: 新経済政策（ブミプトラ政策）を始めた, source: "https://ja.wikipedia.org/wiki/アブドゥル・ラザク"}
+    - {name: フセイン・オン, title: 首相, from: 1976, to: 1981, source: "https://ja.wikipedia.org/wiki/フセイン・オン"}
+    - {name: マハティール・ビン・モハマド, title: 首相, from: 1981, to: 2003, note: 日本などに学ぶ「ルック・イースト政策」で工業化を進めた, source: "https://ja.wikipedia.org/wiki/マハティール・ビン・モハマド"}
+    - {name: アブドゥラ・バダウィ, title: 首相, from: 2003, to: 2009, source: "https://ja.wikipedia.org/wiki/アブドゥラ・アフマド・バダウィ"}
+    - {name: ナジブ・ラザク, title: 首相, from: 2009, to: 2018, source: "https://ja.wikipedia.org/wiki/ナジブ・ラザク"}
+    - {name: マハティール・ビン・モハマド, title: 首相, from: 2018, to: 2020, note: 初の政権交代, source: "https://ja.wikipedia.org/wiki/マハティール・ビン・モハマド"}
+    - {name: ムヒディン・ヤシン, title: 首相, from: 2020, to: 2021, source: "https://ja.wikipedia.org/wiki/ムヒディン・ヤシン"}
+    - {name: イスマイル・サブリ・ヤアコブ, title: 首相, from: 2021, to: 2022, source: "https://ja.wikipedia.org/wiki/イスマイル・サブリ・ヤアコブ"}
+    - {name: アンワル・イブラヒム, title: 首相, from: 2022, to: 2025, source: "https://ja.wikipedia.org/wiki/アンワル・イブラヒム"}
+  periods:
+    - from: 1957
+      to: 1962
+      text: 1957年にマラヤ連邦としてイギリスから独立。共産党ゲリラとの戦い（マラヤ非常事態、1948–60）を続けながら、マレー人・華人・インド人の政党の連合（連盟党）が政権を担った。
+    - from: 1963
+      to: 1969
+      text: 1963年にシンガポール・サバ・サラワクを加えてマレーシアを結成。インドネシアの「対決」政策（1963–66）に直面し、1965年にシンガポールを分離した。
+    - from: 1970
+      to: 2017
+      text: 1969年の五・一三事件（民族暴動）の後、マレー人を優遇する新経済政策（ブミプトラ政策）を進め、国民戦線の長期政権のもとで輸出工業化に成功した。
+    - from: 2018
+      to: 2025
+      text: 2018年の選挙で独立以来初めて政権が交代し、その後は連立の組み替えが続いた。
+  note: 国家元首は国王（ヤン・ディプルトゥアン・アゴン。9州のスルタンが5年ごとに交代で務める）。上の君主欄は実権をもつ首相。
+  source: "https://ja.wikipedia.org/wiki/マレーシア"
+
+- id: singapore
+  name: シンガポール共和国
+  short: シンガポール
+  color: "#f0a6b4"
+  kind: 共和国（都市国家）
+  rulers:
+    - {name: リー・クアンユー, title: 首相, from: 1965, to: 1990, note: 1959年から自治州首相。人民行動党の長期政権で「開発独裁」型の経済成長を進めた, source: "https://ja.wikipedia.org/wiki/リー・クアンユー"}
+    - {name: ゴー・チョクトン, title: 首相, from: 1990, to: 2004, source: "https://ja.wikipedia.org/wiki/ゴー・チョクトン"}
+    - {name: リー・シェンロン, title: 首相, from: 2004, to: 2024, source: "https://ja.wikipedia.org/wiki/リー・シェンロン"}
+    - {name: ローレンス・ウォン, title: 首相, from: 2024, to: 2025, source: "https://ja.wikipedia.org/wiki/ローレンス・ウォン"}
+  periods:
+    - from: 1965
+      to: 2025
+      text: 華人とマレー人の対立からマレーシアを離れて独立。人民行動党の政権のもとで外資を呼び込む輸出工業化・金融・中継貿易で急成長し、アジアNIEs（新興工業経済地域）の一つとなった。
+  source: "https://ja.wikipedia.org/wiki/シンガポール"
+
+- id: philippines
+  name: フィリピン共和国
+  names:
+    - {to: 1945, name: フィリピン共和国（第一共和国・マロロス共和国）, short: フィリピン, kind: 共和国（革命政府）}
+  short: フィリピン
+  color: "#9ed1c0"
+  kind: 共和国（大統領制）
+  rulers:
+    - {name: エミリオ＝アギナルド, title: 革命政府の首班→大統領, from: 1898, to: 1901, note: 1898年6月12日に独立を宣言し、1899年1月にマロロス憲法のもとで大統領となった。1901年にアメリカ軍に捕らえられた, source: "https://ja.wikipedia.org/wiki/エミリオ・アギナルド"}
+    - {name: マヌエル・ロハス, title: 大統領, from: 1946, to: 1948, source: "https://ja.wikipedia.org/wiki/マヌエル・ロハス"}
+    - {name: エルピディオ・キリノ, title: 大統領, from: 1948, to: 1953, source: "https://ja.wikipedia.org/wiki/エルピディオ・キリノ"}
+    - {name: ラモン・マグサイサイ, title: 大統領, from: 1953, to: 1957, note: フク団の反乱を鎮めた, source: "https://ja.wikipedia.org/wiki/ラモン・マグサイサイ"}
+    - {name: カルロス・ガルシア, title: 大統領, from: 1957, to: 1961, source: "https://ja.wikipedia.org/wiki/カルロス・ガルシア"}
+    - {name: ディオスダド・マカパガル, title: 大統領, from: 1961, to: 1965, source: "https://ja.wikipedia.org/wiki/ディオスダド・マカパガル"}
+    - {name: フェルディナンド・マルコス, title: 大統領, from: 1965, to: 1986, note: 1972年に戒厳令を出して独裁を行い、1986年の「ピープル・パワー革命」で亡命した, source: "https://ja.wikipedia.org/wiki/フェルディナンド・マルコス"}
+    - {name: コラソン・アキノ, title: 大統領, from: 1986, to: 1992, source: "https://ja.wikipedia.org/wiki/コラソン・アキノ"}
+    - {name: フィデル・ラモス, title: 大統領, from: 1992, to: 1998, source: "https://ja.wikipedia.org/wiki/フィデル・ラモス"}
+    - {name: ジョセフ・エストラダ, title: 大統領, from: 1998, to: 2001, source: "https://ja.wikipedia.org/wiki/ジョセフ・エストラダ"}
+    - {name: グロリア・マカパガル・アロヨ, title: 大統領, from: 2001, to: 2010, source: "https://ja.wikipedia.org/wiki/グロリア・マカパガル・アロヨ"}
+    - {name: ベニグノ・アキノ3世, title: 大統領, from: 2010, to: 2016, source: "https://ja.wikipedia.org/wiki/ベニグノ・アキノ3世"}
+    - {name: ロドリゴ・ドゥテルテ, title: 大統領, from: 2016, to: 2022, source: "https://ja.wikipedia.org/wiki/ロドリゴ・ドゥテルテ"}
+    - {name: フェルディナンド・マルコス・ジュニア, title: 大統領, from: 2022, to: 2025, source: "https://ja.wikipedia.org/wiki/ボンボン・マルコス"}
+  periods:
+    - from: 1898
+      to: 1901
+      text: フィリピン革命。アギナルドがスペインからの独立を宣言し、アジアで最初の共和国（マロロス共和国）を立てたが、パリ条約でフィリピンを得たアメリカとの戦争（フィリピン＝アメリカ戦争）に敗れた。
+    - from: 1946
+      to: 1971
+      text: 1946年7月4日に独立。アメリカとの軍事基地協定・相互防衛条約のもとで西側陣営に属し、地主層の寡頭支配が続いた。共産党系のフク団の反乱が起こった。
+    - from: 1972
+      to: 1985
+      text: マルコス大統領が戒厳令を出して独裁を行った（開発独裁）。ミンダナオではモロ民族解放戦線（MNLF）が武装闘争を始めた。1983年に野党指導者ベニグノ・アキノが暗殺された。
+    - from: 1986
+      to: 2025
+      text: ピープル・パワー革命（エドサ革命）で民主化。1992年に米軍基地が返還された。2016年の南シナ海の仲裁裁判で中国の主張を退ける判断を得た。2019年にミンダナオのイスラーム教徒の自治政府（バンサモロ）ができた。
+  note: 1935–46年のアメリカ統治下の自治政府（コモンウェルス。大統領ケソン、1944年からオスメニャ）は、地図ではアメリカの間接統治（label）で描く。1943–45年の日本占領下の共和国は philippine_second_republic。
+  source: "https://ja.wikipedia.org/wiki/フィリピン"
+
+- id: philippine_second_republic
+  name: フィリピン共和国（日本占領下の第二共和国）
+  short: フィリピン（ラウレル政権）
+  color: "#8ec0b0"
+  kind: 共和国（日本の占領下の政権）
+  rulers:
+    - {name: ホセ＝ラウレル, title: 大統領, from: 1943, to: 1945, note: 日本の「独立」の付与により大統領となった。1945年8月に解散を宣言した, source: "https://ja.wikipedia.org/wiki/ホセ・ラウレル"}
+  periods:
+    - from: 1943
+      to: 1945
+      text: 日本がフィリピンに与えた「独立」による政権（1943年10月）。日本と同盟条約を結び、英米に宣戦した。アメリカに亡命したコモンウェルス政府とゲリラはこれを認めなかった。
+  source: "https://ja.wikipedia.org/wiki/フィリピン第二共和国"
+
+- id: east_timor
+  name: 東ティモール民主共和国
+  names:
+    - {to: 1998, name: 東ティモール民主共和国（フレティリンの独立宣言）, short: 東ティモール, kind: 独立を宣言した政府}
+    - {from: 1999, to: 2001, name: 国連東ティモール暫定行政機構（UNTAET）, short: 東ティモール（国連の暫定統治）, kind: 国連の暫定統治}
+  short: 東ティモール
+  color: "#c7b07a"
+  kind: 共和国
+  rulers:
+    - {name: フランシスコ・シャヴィエル・ド・アマラル, title: 大統領（フレティリン）, from: 1975, to: 1975, note: 1975年11月28日に独立を宣言した。要確認, source: "https://en.wikipedia.org/wiki/Francisco_Xavier_do_Amaral"}
+    - {name: セルジオ・デメロ, title: 国連事務総長特別代表（暫定行政官）, from: 1999, to: 2002, source: "https://ja.wikipedia.org/wiki/セルジオ・デメロ"}
+    - {name: シャナナ・グスマン, title: 大統領, from: 2002, to: 2007, note: 独立闘争の指導者。のち首相, source: "https://ja.wikipedia.org/wiki/シャナナ・グスマン"}
+    - {name: ジョゼ・ラモス＝ホルタ, title: 大統領, from: 2007, to: 2012, note: 1996年ノーベル平和賞, source: "https://ja.wikipedia.org/wiki/ジョゼ・ラモス＝ホルタ"}
+    - {name: タウル・マタン・ルアク, title: 大統領, from: 2012, to: 2017, source: "https://ja.wikipedia.org/wiki/タウル・マタン・ルアク"}
+    - {name: フランシスコ・グテレス（ル・オロ）, title: 大統領, from: 2017, to: 2022, source: "https://en.wikipedia.org/wiki/Francisco_Guterres"}
+    - {name: ジョゼ・ラモス＝ホルタ, title: 大統領, from: 2022, to: 2025, source: "https://ja.wikipedia.org/wiki/ジョゼ・ラモス＝ホルタ"}
+  periods:
+    - from: 1975
+      to: 1975
+      text: ポルトガルのカーネーション革命の後の内戦を経て、フレティリンが独立を宣言したが、9日後にインドネシア軍が侵攻した。
+    - from: 1999
+      to: 2001
+      text: 1999年の住民投票で独立派が勝ち、インドネシア国軍と併合派民兵の破壊・殺害の後、国連の暫定統治の下に置かれた。
+    - from: 2002
+      to: 2025
+      text: 2002年5月20日に独立した、21世紀最初の独立国。2025年にASEANの11番目の加盟国となった。
+  source: "https://ja.wikipedia.org/wiki/東ティモール"
+
+- id: untea
+  name: 国連暫定行政機構（西イリアン）
+  short: 国連暫定統治
+  color: "#cfd3d8"
+  kind: 国連の暫定統治
+  periods:
+    - from: 1962
+      to: 1962
+      text: 1962年のニューヨーク協定により、オランダ領ニューギニア（西イリアン）は国連の暫定統治（UNTEA）を経て、1963年5月にインドネシアに引き渡された。
+  source: "https://en.wikipedia.org/wiki/United_Nations_Temporary_Executive_Authority"

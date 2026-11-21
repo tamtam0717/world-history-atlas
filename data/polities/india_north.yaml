@@ -1,0 +1,407 @@
+# 北西インド・パキスタンの政体。担当 S1（1648–2025）。
+# パキスタン（pakistan）は ottoman.yaml で定義済み（使うだけ）。イギリス（britain）・ポルトガル（portugal）・ペルシア（persia）・
+# ドゥッラーニー朝（durrani）・アフガニスタン（afghanistan）・カラート（kalat）も既存。
+# マラーター同盟（maratha）・ハイデラバード（hyderabad）は S3、ネパール（nepal）は S2 が定義する。
+# シンディア家・ホールカル家・ガーイクワード家などマラーターの諸侯の領地は、owner: maratha と副ラベル（label）で表した。
+# 藩王国（イギリスの保護下に入った在地政権）は owner: britain・certainty: indirect・label に藩王国名で描く（docs/agent-brief-south-asia.md）。
+
+# ---------------------------------------------------------------- ムガル帝国
+- id: mughal
+  name: ムガル帝国
+  short: ムガル帝国
+  color: "#8cc4b0"
+  kind: 帝国（パーディシャー）
+  rulers:
+    - {name: シャー・ジャハーン, title: 皇帝（パーディシャー）, from: 1628, to: 1658, note: タージ・マハル、デリーの新都シャージャハーナーバードを造営した。1658年に息子アウラングゼーブに幽閉された。, source: "https://ja.wikipedia.org/wiki/シャー・ジャハーン"}
+    - {name: アウラングゼーブ, title: 皇帝, from: 1658, to: 1707, note: 帝国の最大版図を築いたが、厳格なイスラーム政策（1679年のジズヤ復活など）がラージプート・マラーター・シク教徒の反発を招いた。1681年からデカンに遠征し、そのまま陣中で没した。, source: "https://ja.wikipedia.org/wiki/アウラングゼーブ"}
+    - {name: バハードゥル・シャー1世, title: 皇帝, from: 1707, to: 1712, source: "https://ja.wikipedia.org/wiki/バハードゥル・シャー1世"}
+    - {name: ジャハーンダール・シャー, title: 皇帝, from: 1712, to: 1713, source: "https://ja.wikipedia.org/wiki/ジャハーンダール・シャー"}
+    - {name: ファッルフシヤル, title: 皇帝, from: 1713, to: 1719, note: サイイド兄弟が実権を握った。1717年に東インド会社に関税免除の勅許を与えた。, source: "https://ja.wikipedia.org/wiki/ファッルフシヤル"}
+    - {name: ラフィー・ウッダラジャート／シャー・ジャハーン2世, title: 皇帝, from: 1719, to: 1719, note: サイイド兄弟に擁立され、数か月ずつで亡くなった。, source: "https://en.wikipedia.org/wiki/Rafi_ud-Darajat"}
+    - {name: ムハンマド・シャー, title: 皇帝, from: 1719, to: 1748, note: 在位中にデカン（ニザーム）・アワド・ベンガルの太守が自立し、1739年にナーディル・シャーがデリーを略奪した。, source: "https://ja.wikipedia.org/wiki/ムハンマド・シャー"}
+    - {name: アフマド・シャー・バハードゥル, title: 皇帝, from: 1748, to: 1754, note: 宰相に廃位・失明させられた。, source: "https://en.wikipedia.org/wiki/Ahmad_Shah_Bahadur"}
+    - {name: アーラムギール2世, title: 皇帝, from: 1754, to: 1759, note: 宰相イマード・ウルムルクに殺された。, source: "https://en.wikipedia.org/wiki/Alamgir_II"}
+    - {name: シャー・アーラム2世, title: 皇帝, from: 1759, to: 1806, note: 1771年までアラーハーバードなどを流浪し、1765年に東インド会社にベンガル・ビハール・オリッサのディーワーニー（徴税権）を与えた。1771年にマラーターの保護でデリーに戻った。1788年にロヒラのグラーム・カーディルに失明させられた。1803年からイギリスの保護下。, source: "https://ja.wikipedia.org/wiki/シャー・アーラム2世"}
+    - {name: アクバル2世, title: 皇帝（イギリスの年金を受ける）, from: 1806, to: 1837, source: "https://ja.wikipedia.org/wiki/アクバル2世"}
+    - {name: バハードゥル・シャー2世, title: 皇帝, from: 1837, to: 1857, note: インド大反乱で反乱軍に皇帝として担がれた。1857年9月にデリーが陥落して捕らえられ、1858年にビルマのラングーンへ流された。ムガル帝国の最後の皇帝。, source: "https://ja.wikipedia.org/wiki/バハードゥル・シャー2世"}
+  periods:
+    - from: 1648
+      to: 1657
+      text: シャー・ジャハーンの治世。デリーに新都シャージャハーナーバード（赤い城）を、アーグラにタージ・マハルを築き、インド＝イスラーム文化が栄えた。北はカーブル・カシュミールから、南はデカン北部までを治めた。
+    - from: 1658
+      to: 1706
+      text: アウラングゼーブが兄弟を倒して即位し、デカンのビジャープル・ゴールコンダを滅ぼして（1686・87）帝国は最大の版図となった。しかし非ムスリムへのジズヤ（人頭税）を復活し、ラージプートの反乱、シヴァージーのマラーター、シク教徒、ジャートとの戦いが続いて、財政が傾いた。
+    - from: 1707
+      to: 1760
+      text: アウラングゼーブの死後、皇帝は短い間隔で替わり、デカン（ニザーム）・アワド・ベンガルの太守が事実上独立した。マラーターが北へ勢力を広げ、ナーディル・シャー（1739）とアフマド・シャー・ドゥッラーニー（1757）がデリーを略奪した。
+    - from: 1761
+      to: 1802
+      text: 皇帝の力はデリー周辺に限られた。シャー・アーラム2世は1771年にマラーターの保護でデリーに戻り、1784年からはシンディア家（マハーダージー・シンディア）が摂政として帝国の実権を握った。
+    - from: 1803
+      to: 1857
+      text: 第2次マラーター戦争でイギリス軍がデリーを占領し、皇帝はイギリスの年金を受ける名目的な存在となった（地図では赤い城のあるデリー中心部だけを描く）。1857年のインド大反乱で反乱軍がバハードゥル・シャー2世を皇帝に担いだが、鎮圧され、1858年に帝国は滅んだ。
+  note: 1803年以後の皇帝は、デリーの赤い城の中だけを治める名目上の君主だった。地図では、デリー中心部のピース（IND-Central）だけをムガル帝国（イギリスの帯つき）として残した。
+  source: "https://ja.wikipedia.org/wiki/ムガル帝国"
+
+# ---------------------------------------------------------------- 独立後のインド
+- id: india
+  name: インド
+  names:
+    - {to: 1949, name: インド（自治領）, kind: 自治領（イギリス連邦）}
+    - {from: 1950, name: インド共和国, kind: 連邦共和国}
+  short: インド
+  color: "#f2b36b"
+  kind: 連邦共和国
+  rulers:
+    - {name: ジャワハルラール・ネルー, title: 首相, from: 1947, to: 1964, note: 国民会議派。非同盟・計画経済を進めた。総督はマウントバッテン（–1948）、ラージャゴーパーラーチャーリ（1948–50）。1950年からは大統領（ラージェンドラ・プラサード）が元首。, source: "https://ja.wikipedia.org/wiki/ジャワハルラール・ネルー"}
+    - {name: ラール・バハードゥル・シャーストリー, title: 首相, from: 1964, to: 1966, note: 1966年1月、タシケントでの印パ首脳会談中に急死した。, source: "https://ja.wikipedia.org/wiki/ラール・バハードゥル・シャーストリー"}
+    - {name: インディラ・ガンディー, title: 首相, from: 1966, to: 1977, note: 1975–77年に非常事態を宣言した。, source: "https://ja.wikipedia.org/wiki/インディラ・ガンディー"}
+    - {name: モラルジー・デーサーイー, title: 首相, from: 1977, to: 1979, note: ジャナタ党。初の国民会議派以外の政権。, source: "https://ja.wikipedia.org/wiki/モラルジー・デーサーイー"}
+    - {name: チャラン・シン, title: 首相, from: 1979, to: 1980, source: "https://ja.wikipedia.org/wiki/チャラン・シン"}
+    - {name: インディラ・ガンディー（再任）, title: 首相, from: 1980, to: 1984, note: 1984年10月、シク教徒の護衛に暗殺された。, source: "https://ja.wikipedia.org/wiki/インディラ・ガンディー"}
+    - {name: ラジーヴ・ガンディー, title: 首相, from: 1984, to: 1989, note: 1991年に暗殺された。, source: "https://ja.wikipedia.org/wiki/ラジーヴ・ガンディー"}
+    - {name: V・P・シン／チャンドラ・シェーカル, title: 首相, from: 1989, to: 1991, source: "https://ja.wikipedia.org/wiki/V・P・シン"}
+    - {name: P・V・ナラシンハ・ラーオ, title: 首相, from: 1991, to: 1996, note: 財務相マンモハン・シンとともに経済の自由化を進めた。, source: "https://ja.wikipedia.org/wiki/P・V・ナラシンハ・ラーオ"}
+    - {name: デーヴェー・ガウダ／グジラール, title: 首相, from: 1996, to: 1998, note: 1996年5月にヴァージペーイーが13日間だけ首相を務めた。, source: "https://ja.wikipedia.org/wiki/H・D・デーヴェー・ガウダ"}
+    - {name: アタル・ビハーリー・ヴァージペーイー, title: 首相, from: 1998, to: 2004, note: インド人民党（BJP）。1998年に核実験を行った。, source: "https://ja.wikipedia.org/wiki/アタル・ビハーリー・ヴァージペーイー"}
+    - {name: マンモハン・シン, title: 首相, from: 2004, to: 2014, note: 国民会議派。初のシク教徒の首相。, source: "https://ja.wikipedia.org/wiki/マンモハン・シン"}
+    - {name: ナレンドラ・モディ, title: 首相, from: 2014, note: インド人民党（BJP）。, source: "https://ja.wikipedia.org/wiki/ナレンドラ・モディ"}
+  periods:
+    - from: 1947
+      to: 1949
+      text: 1947年8月15日にイギリス連邦の自治領として独立した。パキスタンとの分離で大量の難民と暴力が起き、カシミールをめぐって第1次印パ戦争となった。500を超える藩王国の多くを1948–49年に統合した。1948年1月、ガンディーが暗殺された。
+    - from: 1950
+      to: 1964
+      text: 1950年に憲法を施行して共和国となった。ネルー首相のもとで議会制民主主義・政教分離（セキュラリズム）・計画経済と非同盟外交を進めた。1954年に周恩来と平和五原則を確認したが、1962年に中国と国境で戦った。
+    - from: 1965
+      to: 1990
+      text: 1965年・1971年にパキスタンと戦い、1971年はバングラデシュの独立を助けた。インディラ・ガンディーは「緑の革命」で食糧の自給を進め、1974年に核実験を行い、1975–77年に非常事態を敷いた。1984年にはパンジャーブのシク教徒の過激派と衝突し、首相が暗殺された。
+    - from: 1991
+      to: 2013
+      text: 1991年の経済危機をきっかけに自由化を進め、IT産業などで高い成長を続けた。ヒンドゥー・ナショナリズムが強まり（1992年のアヨーディヤーのモスク破壊）、1998年に核兵器を持った。カシミールではパキスタンと対立が続いた（1999年カールギル紛争）。
+    - from: 2014
+      text: モディ政権のもとで経済大国となり、2023年には人口が世界最多となった。2019年にジャンムー・カシュミール州の自治権を廃止した。2025年5月、カシミールのテロ事件をきっかけにパキスタンと武力衝突した。
+  note: 地図はインドが実際に統治している範囲（カシミールは実効支配線〈LoC〉の南・東側）で塗る。アクサイチン（中国が実効支配）はインドも領有を主張している。
+  source: "https://ja.wikipedia.org/wiki/インド"
+
+# ---------------------------------------------------------------- パンジャーブ
+- id: sikh_misls
+  name: シク教徒の諸ミスル（ダル・カールサ）
+  short: シク諸ミスル
+  color: "#efe0a0"
+  kind: 軍事同盟（ミスル）
+  periods:
+    - from: 1765
+      to: 1798
+      text: ドゥッラーニー朝の侵入とムガル帝国の衰えのなかで、シク教徒の12の軍団（ミスル）がパンジャーブ各地を分けて治めた。年に2回アムリトサルに集まり、共同で戦った（ダル・カールサ）。1765年にラホールを取った。
+  note: ミスルにはバンギー（ラホール・アムリトサル）、スケルチャキア（グジュラーンワーラー）、カンハイヤー、アフルワーリア、ラームガリア、プルキアン（パティヤーラー・ナーバー・ジーンド）などがあった。サトレジ川の南（シス・サトレジ）のミスルは、1809年からイギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Misl"
+
+- id: sikh_empire
+  name: シク王国
+  short: シク王国
+  color: "#e9c75f"
+  kind: 王国（マハーラージャ）
+  rulers:
+    - {name: ランジート・シング, title: マハーラージャ, from: 1799, to: 1839, note: 1799年にラホールを取り、1801年にパンジャーブのマハーラージャを名のった。ムルターン（1818）・カシュミール（1819）・ペシャーワル（1834）を併合した。, source: "https://ja.wikipedia.org/wiki/ランジート・シング"}
+    - {name: カラク・シング, title: マハーラージャ, from: 1839, to: 1840, source: "https://en.wikipedia.org/wiki/Kharak_Singh"}
+    - {name: ナウ・ニハール・シング／チャンド・カウル（摂政）, title: マハーラージャ, from: 1840, to: 1841, source: "https://en.wikipedia.org/wiki/Nau_Nihal_Singh"}
+    - {name: シェール・シング, title: マハーラージャ, from: 1841, to: 1843, note: 1843年に暗殺された。, source: "https://en.wikipedia.org/wiki/Sher_Singh_(Sikh_Empire)"}
+    - {name: ドゥリープ・シング, title: マハーラージャ, from: 1843, to: 1849, note: 幼少で、母ジンド・カウルが摂政。1849年にイギリスに退位させられた。, source: "https://ja.wikipedia.org/wiki/ドゥリープ・シング"}
+  periods:
+    - from: 1799
+      to: 1838
+      text: ランジート・シングがシク教徒のミスルを統一し、ヨーロッパ式の軍隊を育ててアフガン人からムルターン・カシュミール・ペシャーワルを奪った。1809年のアムリトサル条約でサトレジ川をイギリスとの境とした。
+    - from: 1839
+      to: 1849
+      text: ランジート・シングの死後、王位争いと軍の暴走で混乱した。第1次シク戦争（1845–46）に敗れてジャランダル・ドアーブとカシュミールを失い、第2次シク戦争（1848–49）の後にイギリスに併合された。
+  note: ジャンムーのグラーブ・シング（ドーグラー家）はシク王国の臣下で、ラダック（1834–）・バルティスターン（1840）を征服した。第1次シク戦争の後、アムリトサル条約（1846）でイギリスからカシュミールを買い、ジャンムー・カシュミール藩王国を開いた。
+  source: "https://ja.wikipedia.org/wiki/シク王国"
+
+- id: bahawalpur
+  name: バハーワルプル
+  short: バハーワルプル
+  color: "#e0c0dc"
+  kind: 太守国（ナワーブ）
+  rulers:
+    - {name: バハーワル・ハーン2世, title: ナワーブ, from: 1772, to: 1809, note: 要確認, source: "https://en.wikipedia.org/wiki/Bahawalpur_(princely_state)"}
+    - {name: サーディク・ムハンマド・ハーン2世, title: ナワーブ, from: 1809, to: 1826, note: 要確認, source: "https://en.wikipedia.org/wiki/Bahawalpur_(princely_state)"}
+    - {name: バハーワル・ハーン3世, title: ナワーブ, from: 1826, to: 1852, note: 1833・1838年にイギリスと条約を結んだ。, source: "https://en.wikipedia.org/wiki/Bahawalpur_(princely_state)"}
+  note: シンド出身のダーウードプトラ族のアッバース家が、18世紀半ばにサトレジ川の南に建てた国。ドゥッラーニー朝に名目上従った。1838年からイギリスの保護下（藩王国）、1947年にパキスタンに加わり、1955年に西パキスタン州に統合された。
+  source: "https://en.wikipedia.org/wiki/Bahawalpur_(princely_state)"
+
+# ---------------------------------------------------------------- シンド・バローチスターン北部
+- id: sindh
+  name: シンド（カルホーラ朝）
+  names:
+    - {to: 1782, name: シンド（カルホーラ朝）, short: シンド, kind: 太守国}
+    - {from: 1783, name: シンド（タールプル家のミール）, short: シンド, kind: 首長国（ミールたちの共同統治）}
+  short: シンド
+  color: "#b8cfe8"
+  kind: 太守国
+  rulers:
+    - {name: ヤール・ムハンマド・カルホーラ, title: シンドの支配者（ムガルの太守）, from: 1701, to: 1719, source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {name: ヌール・ムハンマド・カルホーラ, title: シンドの支配者, from: 1719, to: 1755, note: 1737年にムガル帝国からタッター（下シンド）も任された。1739年にナーディル・シャー、1747年からドゥッラーニー朝に服属した。, source: "https://en.wikipedia.org/wiki/Noor_Mohammad_Kalhoro"}
+    - {name: グラーム・シャー・カルホーラ, title: シンドの支配者, from: 1757, to: 1772, note: ハイダラーバードの町を建てた（1768）。1755–57年は兄弟が争った。, source: "https://en.wikipedia.org/wiki/Ghulam_Shah_Kalhoro"}
+    - {name: サルファラーズ・ハーンほか, title: シンドの支配者, from: 1772, to: 1783, note: カルホーラ家の内紛が続き、1783年のハーラーニーの戦いでタールプル家に倒された。, source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"}
+    - {name: ミール・ファテ・アリー・ハーン・タールプル, title: ミール（ハイダラーバード）, from: 1783, to: 1801, note: 兄弟と共同で治めた（「4人の友」）。ハイルプル・ミールプルにも一族のミールがいた。, source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {name: ミール・グラーム・アリー・ハーン, title: ミール, from: 1801, to: 1811, source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {name: ミール・カラム・アリー・ハーン, title: ミール, from: 1811, to: 1828, source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {name: ミール・ムラード・アリー・ハーン, title: ミール, from: 1828, to: 1833, source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {name: ミール・ヌール・ムハンマド・ハーン, title: ミール, from: 1833, to: 1840, source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+    - {name: ミール・ナスィール・ハーン, title: ミール, from: 1840, to: 1843, note: 1843年のミアーニーの戦いでネーピアの軍に敗れた。, source: "https://en.wikipedia.org/wiki/Talpur_dynasty"}
+  periods:
+    - from: 1701
+      to: 1782
+      text: スーフィーの家系カルホーラ家が、ムガル帝国の太守としてシンドを治め、事実上独立した。1739年にナーディル・シャー、1747年からはドゥッラーニー朝に貢納した。
+    - from: 1783
+      to: 1843
+      text: バローチ系のタールプル家がカルホーラ家を倒し、ハイダラーバード・ハイルプル・ミールプルのミールたちが分けて治めた。インダス川の航行を求めるイギリスと条約を結んだが（1832・1839）、1843年にネーピアの軍に敗れてイギリスに併合された（ハイルプルだけが藩王国として残った）。
+  source: "https://en.wikipedia.org/wiki/Kalhora_dynasty"
+
+# ---------------------------------------------------------------- カシュミール・ラダック・バルティスターン
+- id: ladakh
+  name: ラダック王国
+  short: ラダック
+  color: "#e6d3b0"
+  kind: 王国（ナムギャル朝）
+  rulers:
+    - {name: デルダン・ナムギャル, title: ラダック王, from: 1642, to: 1694, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Deldan_Namgyal"}
+    - {name: ツェパル・ナムギャル, title: ラダック王, from: 1808, to: 1842, note: 1834年からドーグラー軍の侵入を受け、王国は失われた。在位年は要確認, source: "https://en.wikipedia.org/wiki/Namgyal_dynasty_of_Ladakh"}
+  periods:
+    - from: 1648
+      to: 1683
+      text: チベット仏教の王国。1679–84年のチベット・ラダック・ムガル戦争でチベット（ダライ・ラマ政権）に攻められ、ムガル帝国の援軍を得た。1684年のティンモスガン条約でチベットとの境を定め、以後チベットに定期的に使節を送った。
+    - from: 1684
+      to: 1833
+      text: ムガル帝国に名目上従い、チベットとの交易（パシュミナの羊毛など）で栄えた。1834年からジャンムーのグラーブ・シングの部将ゾーラーワル・シングに攻められ、シク王国・ジャンムーの支配下に入った。
+  source: "https://en.wikipedia.org/wiki/Namgyal_dynasty_of_Ladakh"
+
+- id: baltistan
+  name: バルティスターン（スカルドゥ）
+  short: バルティスターン
+  color: "#c8b8a0"
+  kind: 王国（マクポン家）
+  note: スカルドゥのマクポン家などの小王国。1637年からムガル帝国に貢納した。1840年にジャンムーのドーグラー軍（ゾーラーワル・シング）に征服された。
+  source: "https://en.wikipedia.org/wiki/Maqpon_dynasty"
+
+- id: dardistan
+  name: ギルギット・フンザ・ナガルの諸王国
+  short: ダルディスターン諸国
+  color: "#d4c6d8"
+  kind: 小王国の集まり
+  note: カラコルム山脈の谷ごとの小王国（ギルギット、フンザ、ナガル、ヤスィン、プニアル、チラースなど）。どの大国にも従わなかった。19世紀にシク王国・ジャンムー＝カシュミールが南から進み、1891年のフンザ・ナガル遠征で英領インドの支配が及んだ。
+  source: "https://en.wikipedia.org/wiki/Gilgit-Baltistan"
+
+# ---------------------------------------------------------------- ヒマラヤの山岳諸国
+- id: pahari_states
+  name: パハーリー諸国（西ヒマラヤの山岳諸国）
+  short: 山岳諸国
+  color: "#c4d0e8"
+  kind: 小王国の集まり（ラージプートの王家）
+  note: ジャンムー、チャンバ、カーングラ、マンディー、クッルー、ビラースプル、シルモール、ブシャハルなど、西ヒマラヤの山あいのラージプート系の小王国。ムガル帝国に貢納した。19世紀はじめにゴルカ（ネパール）・シク王国の侵入を受け、1815–46年にイギリスの保護下に入った。細密画（パハーリー派）で知られる。
+  source: "https://en.wikipedia.org/wiki/Punjab_Hill_States_Agency"
+
+- id: garhwal
+  name: ガルワール王国
+  short: ガルワール
+  color: "#b4dcc4"
+  kind: 王国
+  rulers:
+    - {name: プラディープ・シャー, title: ガルワール王, from: 1717, to: 1772, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Garhwal_Kingdom"}
+    - {name: プラデュムナ・シャー, title: ガルワール王, from: 1785, to: 1804, note: 1804年、ゴルカ軍とのデヘラードゥーン近くの戦いで戦死した。, source: "https://en.wikipedia.org/wiki/Pradyumna_Shah"}
+  note: ガンジス川の源流の山国。1804年にゴルカ（ネパール）に征服され、1815年のネパール戦争の後、西半分がテフリ・ガルワール藩王国として王家に返された。
+  source: "https://en.wikipedia.org/wiki/Garhwal_Kingdom"
+
+- id: kumaon
+  name: クマーオーン王国（チャンド朝）
+  short: クマーオーン
+  color: "#d9cfa0"
+  kind: 王国
+  note: アルモーラーを都とするチャンド朝の王国。1790年にゴルカ（ネパール）に征服され、1815年のネパール戦争の後はイギリスの直轄地となった。
+  source: "https://en.wikipedia.org/wiki/Kumaon_Kingdom"
+
+# ---------------------------------------------------------------- ガンジス川中流
+- id: awadh
+  name: アワド（太守国）
+  names:
+    - {to: 1818, name: アワド（太守国）, short: アワド, kind: 太守国（ナワーブ）}
+    - {from: 1819, name: アワド王国, short: アワド, kind: 王国}
+  short: アワド
+  color: "#c7a3d6"
+  kind: 太守国（ナワーブ）
+  rulers:
+    - {name: サアーダト・ハーン（ブルハーン・ウルムルク）, title: アワドの太守（ナワーブ）, from: 1722, to: 1739, note: ペルシア系のシーア派。ムガル帝国の州長官として赴任し、事実上自立した。, source: "https://en.wikipedia.org/wiki/Saadat_Ali_Khan_I"}
+    - {name: サフダル・ジャング, title: 太守・ムガル帝国の宰相, from: 1739, to: 1754, source: "https://en.wikipedia.org/wiki/Safdarjung"}
+    - {name: シュジャー・ウッダウラ, title: 太守, from: 1754, to: 1775, note: 1764年のブクサールの戦いで東インド会社に敗れ、1765年のアラーハーバード条約で会社と同盟した。1774年にロヒルカンドを併合した。, source: "https://en.wikipedia.org/wiki/Shuja-ud-Daula"}
+    - {name: アーサフ・ウッダウラ, title: 太守, from: 1775, to: 1797, note: 都をラクナウに移した。1775年にベナレスを会社に譲った。, source: "https://en.wikipedia.org/wiki/Asaf-ud-Daula"}
+    - {name: ワズィール・アリー・ハーン, title: 太守, from: 1797, to: 1798, note: 会社に廃位された。, source: "https://en.wikipedia.org/wiki/Wazir_Ali_Khan"}
+    - {name: サアーダト・アリー・ハーン2世, title: 太守, from: 1798, to: 1814, note: 1801年の条約で領土の約半分（ロヒルカンド・ドアーブ南部・ゴーラクプルなど）を会社に譲った。, source: "https://en.wikipedia.org/wiki/Saadat_Ali_Khan_II"}
+    - {name: ガーズィー・ウッディーン・ハイダル, title: 太守→アワド王（1819〜）, from: 1814, to: 1827, note: イギリスのすすめでムガル皇帝から離れ、王を名のった。, source: "https://en.wikipedia.org/wiki/Ghazi-ud-Din_Haidar_Shah"}
+    - {name: ナスィール・ウッディーン・ハイダル, title: アワド王, from: 1827, to: 1837, source: "https://en.wikipedia.org/wiki/Nasir-ud-Din_Haidar_Shah"}
+    - {name: ムハンマド・アリー・シャー, title: アワド王, from: 1837, to: 1842, source: "https://en.wikipedia.org/wiki/Muhammad_Ali_Shah_(Awadh)"}
+    - {name: アムジャド・アリー・シャー, title: アワド王, from: 1842, to: 1847, source: "https://en.wikipedia.org/wiki/Amjad_Ali_Shah"}
+    - {name: ワージド・アリー・シャー, title: アワド王, from: 1847, to: 1856, note: 1856年、「失政」を理由にダルハウジー総督に王国を併合され、カルカッタへ移された。, source: "https://ja.wikipedia.org/wiki/ワージド・アリー・シャー"}
+    - {name: ビルジース・カドル（母ハズラト・マハルが摂政）, title: アワド王（反乱軍が擁立）, from: 1857, to: 1858, note: インド大反乱で、ラクナウの反乱軍が擁立した。1858年3月にラクナウが奪い返され、ネパールへ逃れた。, source: "https://en.wikipedia.org/wiki/Begum_Hazrat_Mahal"}
+  periods:
+    - from: 1722
+      to: 1764
+      text: ムガル帝国の州長官サアーダト・ハーンが自立して開いた国。名目上はムガル皇帝に従い、歴代の太守は帝国の宰相も務めた（地図では宗主権の帯を付けない）。
+    - from: 1765
+      to: 1800
+      text: ブクサールの戦い（1764）に敗れた後、東インド会社の同盟国となり、会社の軍隊を国内に置いて費用を払った。ラクナウはインド＝イスラーム文化の中心として栄えた。
+    - from: 1801
+      to: 1856
+      text: 1801年の条約で領土の半分を会社に譲り、残りも会社の保護下に入った（地図ではイギリスの色を薄く塗る）。1856年に併合され、これがインド大反乱の一因となった。
+  source: "https://ja.wikipedia.org/wiki/アワド太守"
+
+- id: rohilla
+  name: ロヒラ（ロヒルカンド）
+  short: ロヒルカンド
+  color: "#cfe0a8"
+  kind: 首長国（アフガン系）
+  rulers:
+    - {name: アリー・ムハンマド・ハーン, title: ロヒラの首長, from: 1721, to: 1748, source: "https://en.wikipedia.org/wiki/Ali_Mohammed_Khan"}
+    - {name: ハーフィズ・ラフマト・ハーン, title: ロヒルカンドの摂政, from: 1748, to: 1774, note: 1774年、アワドと東インド会社の軍とのミーラーンプル・カトラの戦いで戦死した。, source: "https://en.wikipedia.org/wiki/Hafiz_Rahmat_Khan_Barech"}
+  note: アフガン系のロヒラ族がガンジス川上流の東側（ロヒルカンド）に建てた国。1774年のロヒラ戦争でアワドに併合された。ラームプルだけはロヒラの太守国として残った（のち藩王国）。
+  source: "https://en.wikipedia.org/wiki/Rohilkhand"
+
+# ---------------------------------------------------------------- ラージプーターナー
+- id: rajput_mewar
+  name: メーワール王国（ウダイプル）
+  short: メーワール
+  color: "#f0b090"
+  kind: 王国（ラーナー）
+  rulers:
+    - {name: ラーナー・アマル・シング2世, title: メーワールのラーナー, from: 1698, to: 1710, source: "https://en.wikipedia.org/wiki/Amar_Singh_II"}
+    - {name: ラーナー・サングラーム・シング2世, title: メーワールのラーナー, from: 1710, to: 1734, source: "https://en.wikipedia.org/wiki/Sangram_Singh_II"}
+    - {name: ラーナー・ジャガト・シング2世, title: メーワールのラーナー, from: 1734, to: 1751, source: "https://en.wikipedia.org/wiki/Jagat_Singh_II"}
+    - {name: ラーナー・プラタープ・シング2世／ラージ・シング2世, title: メーワールのラーナー, from: 1751, to: 1761, source: "https://en.wikipedia.org/wiki/Rulers_of_Mewar"}
+    - {name: ラーナー・アリ・シング2世, title: メーワールのラーナー, from: 1761, to: 1773, source: "https://en.wikipedia.org/wiki/Rulers_of_Mewar"}
+    - {name: ラーナー・ハミール・シング2世, title: メーワールのラーナー, from: 1773, to: 1778, source: "https://en.wikipedia.org/wiki/Rulers_of_Mewar"}
+    - {name: ラーナー・ビーム・シング, title: メーワールのラーナー, from: 1778, to: 1828, note: 1818年にイギリスと保護条約を結んだ。, source: "https://en.wikipedia.org/wiki/Bhim_Singh_of_Mewar"}
+  note: ラージプートの名門シソーディア家の国。1615年にムガル帝国と和を結んで貢納したが、ほかのラージプートの王家と違い、娘を皇帝に嫁がせず、宮廷にも仕えなかった。1679–81年にはアウラングゼーブと戦った。18世紀にはマラーターに貢納を強いられ、1818年にイギリスの保護下（藩王国）に入った。
+  source: "https://en.wikipedia.org/wiki/Mewar"
+
+- id: rajput_marwar
+  name: マールワール王国（ジョードプル）
+  short: マールワール
+  color: "#bcc98c"
+  kind: 王国
+  rulers:
+    - {name: アジート・シング, title: マールワール王, from: 1707, to: 1724, note: 父ジャスワント・シングの死（1678）の後に生まれ、ドゥルガーダースらラートール族の戦士に守られて育った。1707年にジョードプルを取り戻した。, source: "https://en.wikipedia.org/wiki/Ajit_Singh_of_Marwar"}
+    - {name: アバイ・シング, title: マールワール王, from: 1724, to: 1749, source: "https://en.wikipedia.org/wiki/Abhai_Singh"}
+    - {name: ラーム・シング／バクト・シング, title: マールワール王, from: 1749, to: 1752, source: "https://en.wikipedia.org/wiki/Bakht_Singh"}
+    - {name: ヴィジャイ・シング, title: マールワール王, from: 1752, to: 1793, source: "https://en.wikipedia.org/wiki/Vijay_Singh_of_Marwar"}
+    - {name: ビーム・シング, title: マールワール王, from: 1793, to: 1803, source: "https://en.wikipedia.org/wiki/Bhim_Singh_of_Marwar"}
+    - {name: マーン・シング, title: マールワール王, from: 1803, to: 1843, note: 1818年にイギリスと保護条約を結んだ。, source: "https://en.wikipedia.org/wiki/Man_Singh_of_Marwar"}
+  note: ラートール家のラージプートの国。王ジャスワント・シングが1678年に没すると、アウラングゼーブがジョードプルを直轄にし、ラートール族は約30年にわたって抵抗した（1679–1707）。
+  source: "https://en.wikipedia.org/wiki/Marwar"
+
+- id: rajput_amber
+  name: ジャイプル王国（アンベール）
+  short: ジャイプル
+  color: "#9cbfe0"
+  kind: 王国
+  rulers:
+    - {name: サワーイー・ジャイ・シング2世, title: アンベール（ジャイプル）王, from: 1699, to: 1743, note: 1727年に新都ジャイプルを築き、ジャンタル・マンタル（天文台）を建てた。, source: "https://ja.wikipedia.org/wiki/ジャイ・シング2世"}
+    - {name: イーシュワリー・シング, title: ジャイプル王, from: 1743, to: 1750, source: "https://en.wikipedia.org/wiki/Ishwari_Singh"}
+    - {name: マードー・シング1世, title: ジャイプル王, from: 1750, to: 1768, source: "https://en.wikipedia.org/wiki/Madho_Singh_I"}
+    - {name: プリトヴィー・シング2世, title: ジャイプル王, from: 1768, to: 1778, source: "https://en.wikipedia.org/wiki/Jaipur_State"}
+    - {name: プラタープ・シング, title: ジャイプル王, from: 1778, to: 1803, note: ジャイプルの「風の宮殿」（ハワー・マハル）を建てた。, source: "https://en.wikipedia.org/wiki/Pratap_Singh_of_Jaipur"}
+    - {name: ジャガト・シング2世, title: ジャイプル王, from: 1803, to: 1818, note: 1818年にイギリスと保護条約を結んだ。, source: "https://en.wikipedia.org/wiki/Jagat_Singh_II_of_Jaipur"}
+  note: カッチワーハー家のラージプートの国。16世紀からムガル帝国と結び、多くの将軍を出した（ジャイ・シング1世はシヴァージーと戦った）。地図では、ムガル帝国の衰えたアウラングゼーブ死後（1708）から独自の色で描く。
+  source: "https://en.wikipedia.org/wiki/Jaipur_State"
+
+- id: rajput_bikaner
+  name: ビーカーネール王国
+  short: ビーカーネール
+  color: "#d8c08a"
+  kind: 王国
+  rulers:
+    - {name: スジャーン・シング, title: ビーカーネール王, from: 1700, to: 1735, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Bikaner_State"}
+    - {name: ゾーラーワル・シング, title: ビーカーネール王, from: 1736, to: 1746, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Bikaner_State"}
+    - {name: ガジ・シング, title: ビーカーネール王, from: 1746, to: 1787, source: "https://en.wikipedia.org/wiki/Gaj_Singh_of_Bikaner"}
+    - {name: スーラト・シング, title: ビーカーネール王, from: 1787, to: 1828, note: 1818年にイギリスと保護条約を結んだ。, source: "https://en.wikipedia.org/wiki/Surat_Singh_of_Bikaner"}
+  note: タール砂漠の北部のラートール家の国。
+  source: "https://en.wikipedia.org/wiki/Bikaner_State"
+
+- id: rajput_states
+  name: その他のラージプート諸国
+  short: ラージプート諸国
+  color: "#e6c9a8"
+  kind: 小王国の集まり
+  note: ジャイサルメール、コーター・ブーンディー（ハーラーオーティー）、ドゥンガルプル・バーンスワーラー・プラタープガル（ワーガド）、シローヒー、カラウリー、アルワル（1770年〜）などのラージプートの王国をまとめて描く。18世紀にはマラーター（シンディア家・ホールカル家）に貢納を強いられ、ピンダーリーの略奪にも苦しんだ。1817–18年にイギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Rajputana"
+
+- id: bharatpur
+  name: バラトプル（ジャート王国）
+  short: バラトプル
+  color: "#a9b8dc"
+  kind: 王国（ジャート）
+  rulers:
+    - {name: バダン・シング, title: ラージャ, from: 1722, to: 1756, source: "https://en.wikipedia.org/wiki/Badan_Singh"}
+    - {name: スーラジ・マル, title: ラージャ, from: 1756, to: 1763, note: ジャート王国の最盛期を築き、1761年にアーグラを取った。, source: "https://en.wikipedia.org/wiki/Suraj_Mal"}
+    - {name: ジャワーハル・シング, title: ラージャ, from: 1763, to: 1768, source: "https://en.wikipedia.org/wiki/Jawahar_Singh"}
+    - {name: ラタン・シング／ナワル・シングほか, title: ラージャ, from: 1768, to: 1776, note: 要確認, source: "https://en.wikipedia.org/wiki/Bharatpur_State"}
+    - {name: ランジート・シング（バラトプル）, title: ラージャ, from: 1776, to: 1805, note: 1805年にイギリス軍（レイク将軍）の包囲に耐えたが、保護条約を結んだ。, source: "https://en.wikipedia.org/wiki/Ranjit_Singh_of_Bharatpur"}
+  note: 17世紀後半からムガル帝国に反乱したジャート農民の指導者たちが、アーグラ・マトゥラーの西に建てた国。1826年にイギリス軍がバラトプル城を落とした。
+  source: "https://en.wikipedia.org/wiki/Bharatpur_State"
+
+# ---------------------------------------------------------------- 中央インド
+- id: bhopal
+  name: ボーパール（太守国）
+  short: ボーパール
+  color: "#b0d8d0"
+  kind: 太守国（ナワーブ）
+  rulers:
+    - {name: ドースト・ムハンマド・ハーン, title: ナワーブ, from: 1723, to: 1728, note: アフガン人の傭兵隊長。ムガル帝国の衰えに乗じて国を開いた。, source: "https://en.wikipedia.org/wiki/Dost_Mohammad_Khan_(Bhopal)"}
+    - {name: ヤール・ムハンマド・ハーン, title: ナワーブ, from: 1728, to: 1742, source: "https://en.wikipedia.org/wiki/Bhopal_State"}
+    - {name: ファイズ・ムハンマド・ハーン, title: ナワーブ, from: 1742, to: 1777, source: "https://en.wikipedia.org/wiki/Bhopal_State"}
+    - {name: ハヤート・ムハンマド・ハーン, title: ナワーブ, from: 1777, to: 1807, source: "https://en.wikipedia.org/wiki/Bhopal_State"}
+    - {name: ガウス・ムハンマド・ハーン（宰相ワズィール・ムハンマドが実権）, title: ナワーブ, from: 1807, to: 1818, note: 1818年にイギリスと保護条約を結んだ。要確認, source: "https://en.wikipedia.org/wiki/Bhopal_State"}
+  note: 1819–1926年は4代続けて女性の君主（ベーグム）が治めた。藩王国としては1949年にインドに統合された。
+  source: "https://en.wikipedia.org/wiki/Bhopal_State"
+
+- id: bundela
+  name: ブンデーラ諸国（ブンデールカンド）
+  short: ブンデールカンド
+  color: "#d8b4c8"
+  kind: 小王国の集まり
+  rulers:
+    - {name: チャトラサール, title: パンナーの王, from: 1675, to: 1731, note: ムガル帝国に反乱してブンデールカンドに王国を開いた。1729年にムガル軍に攻められ、マラーターのバージーラーオ1世に助けられて、領土の3分の1を与えた。, source: "https://en.wikipedia.org/wiki/Chhatrasal"}
+  note: オルチャー、パンナー、ダティアー、チャルカーリーなどブンデーラ家のラージプートの王国をまとめて描く。1803–1812年にイギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Bundelkhand"
+
+- id: rewa
+  name: レーワー（バゲールカンド）
+  short: レーワー
+  color: "#c6c0e6"
+  kind: 王国
+  note: バゲール家のラージプートの王国（バゲールカンド）。ムガル帝国に貢納した。1812年にイギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Rewa_State"
+
+- id: gondwana
+  name: ゴンド諸王国（ゴンドワナ）
+  short: ゴンド諸王国
+  color: "#c9d9a0"
+  kind: 王国の集まり
+  note: 中央インドの森林地帯の先住民ゴンド人の王国（ガルハ＝マンドラー、デーオガル、ケールラなど）。ムガル帝国に貢納した。18世紀にマラーター（ナーグプルのボーンスレー家、サーガルのペーシュワーの代官）に併合された。
+  source: "https://en.wikipedia.org/wiki/Gondwana_(India)"
+
+# ---------------------------------------------------------------- グジャラート
+- id: cutch
+  name: カッチ王国
+  short: カッチ
+  color: "#e2b8a8"
+  kind: 王国（ラーオ）
+  note: ジャーデージャー家の王国。ムガル帝国に貢納したが、ほぼ自立していた。1815–19年にイギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Cutch_State"
+
+- id: gujarat_states
+  name: グジャラートの諸王国（カーティヤーワールなど）
+  short: カーティヤーワール諸国
+  color: "#d8d2a4"
+  kind: 小王国の集まり
+  note: カーティヤーワール半島（サウラーシュトラ）のナワーナガル・ジュナーガド・バーヴナガル・ポールバンダル・ゴーンダルなどと、本土東部のイダル・パーランプル・ラージピープラーなどの小王国をまとめて描く。18世紀後半はマラーター（ガーイクワード家）に貢納し、1807年のウォーカーの協定などでイギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Kathiawar"
