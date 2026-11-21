@@ -1,0 +1,888 @@
+# 言語（民族）の分布：フランス・イベリア半島・ブリテン諸島・アイスランド・北アフリカ・マルタ（1648–1914）
+# 形式は docs/language-format.md。main = 住民（特に農村の民衆）の多数派の言語、minor = 2〜3割以上の少数派。
+# 大きな地域（国全体）で下地を書き、小さな地域で例外を上書きする（いちばん小さい地域が優先）。
+# 方言連続体の扱い：オイル諸語（ピカルディ語・ワロン語・ガロ語など）とフランコ・プロヴァンサル語は french に、
+# アストゥリアス語・アラゴン語は spanish に、ガリシア語は portuguese に、コルシカ語・モナコ語は italian に含める。
+
+# ======== フランス ========
+- id: lang_france_base
+  name: フランス（下地：フランス語＝オイル諸語の地域）
+  select:
+    regions: [france_kingdom, savoy_duchy, nice_county, avignon_comtat, corsica, monaco]
+    iso: [FRA]
+  timeline:
+    - from: 1648
+      main: french
+      note: 北フランスの民衆はピカルディ語・ノルマン語・ガロ語などのオイル諸語を話し、パリの標準フランス語とは差があった。リヨン・サヴォワ・フランシュ＝コンテ南部はフランコ・プロヴァンサル語（ここではフランス語に含める）。
+
+- id: lang_occitan
+  name: 南フランス（オック語の地域）
+  select:
+    pieces: [FRA-Agen, FRA-Arcachon, FRA-Aubusson, FRA-Bellac, FRA-Bergerac, FRA-Blaye, FRA-Bordeaux, FRA-Brive_la_Gaillarde, FRA-Confolens, FRA-Dax, FRA-Gueret, FRA-Langon, FRA-Lesparre_Medoc, FRA-Libourne, FRA-Limoges, FRA-Marmande, FRA-Mont_de_Marsan, FRA-Nontron, FRA-Nerac, FRA-Pau, FRA-Perigueux, FRA-Rochechouart, FRA-Sarlat_la_Caneda, FRA-Tulle, FRA-Ussel, FRA-Villeneuve_sur_Lot,
+             FRA-Ambert, FRA-Aurillac, FRA-Brioude, FRA-Clermont_Ferrand, FRA-Issoire, FRA-Largentiere, FRA-Le_Puy_en_Velay, FRA-Mauriac, FRA-Privas, FRA-Riom, FRA-Saint_Flour, FRA-Thiers, FRA-Yssingeaux, FRA-Die, FRA-Nyons, FRA-Valence, FRA-Montlucon,
+             FRA-Aix_en_Provence, FRA-Apt, FRA-Arles, FRA-Avignon, FRA-Barcelonnette, FRA-Briancon, FRA-Brignoles, FRA-Carpentras, FRA-Castellane, FRA-Digne_les_Bains, FRA-Draguignan, FRA-Forcalquier, FRA-Gap, FRA-Grasse, FRA-Istres, FRA-Marseille, FRA-Toulon]
+    adm1: ["FRA/Occitanie"]
+    exclude: [FRA-Perpignan, FRA-Ceret, FRA-Prades]
+  timeline:
+    - from: 1648
+      main: occitan
+      minor: french
+      note: 農村の民衆の言葉はオック語（ガスコーニュ語・ラングドック語・プロヴァンス語・リムーザン語・オーヴェルニュ語など）。1539年のヴィレル＝コトレの勅令以来、公文書と教養層の言葉はフランス語。
+    - from: 1880
+      main: occitan
+      minor: french
+      note: フェリー法（1881–82）の無償・義務の初等教育で、学校ではフランス語だけが使われ、若い世代と都市からフランス語化が進む。それでも1914年の時点で、農村の多数派はまだオック語を日常に話していた。
+
+- id: lang_nice
+  name: ニース
+  select:
+    pieces: [FRA-Nice]
+  timeline:
+    - from: 1648
+      main: occitan
+      minor: italian
+      note: ニース伯領（サヴォイア家領）の民衆はオック語のニース方言。行政と教養層の言葉はイタリア語。
+    - from: 1860
+      main: occitan
+      minor: french
+      note: トリノ条約（1860）でフランスに割譲され、イタリア語に代わってフランス語化が進む。
+
+- id: lang_basque_fr
+  name: フランス領バスク（ラブール・低ナバラ）
+  select:
+    pieces: [FRA-Bayonne]
+  timeline:
+    - from: 1648
+      main: basque
+      minor: occitan
+      note: 内陸の農村はバスク語。バイヨンヌ市とアドゥール川沿いはガスコーニュ語（オック語）。
+
+- id: lang_bearn_soule
+  name: ベアルンとスール
+  select:
+    pieces: [FRA-Oloron_Sainte_Marie]
+  timeline:
+    - from: 1648
+      main: occitan
+      minor: basque
+      note: ベアルンはガスコーニュ語（オック語）。西端のスール地方はバスク語。
+
+- id: lang_roussillon
+  name: ルシヨン（北カタルーニャ）
+  select:
+    pieces: [FRA-Perpignan, FRA-Ceret, FRA-Prades]
+  timeline:
+    - from: 1648
+      main: catalan
+      note: ピレネー条約（1659）でフランス領になるが、民衆はカタルーニャ語を話し続けた。
+    - from: 1880
+      main: catalan
+      minor: french
+      note: 学校教育と鉄道で、ペルピニャンを中心にフランス語化が進む。
+
+- id: lang_lower_brittany
+  name: 低ブルターニュ（ブルトン語の地域）
+  select:
+    pieces: [FRA-Brest, FRA-Chateaulin, FRA-Quimper, FRA-Morlaix, FRA-Lannion, FRA-Guingamp, FRA-Lorient, FRA-Pontivy, FRA-Vannes]
+  timeline:
+    - from: 1648
+      main: breton
+      note: サン＝ブリユーからヴァンヌ東方を結ぶ線より西の農村は、ほぼブルトン語だけを話した。東の「高ブルターニュ」はガロ語（オイル諸語）。
+    - from: 1880
+      main: breton
+      minor: french
+      note: 学校でのブルトン語禁止（「シンボル」の罰）が広がり、港町・都市からフランス語化が進む。1914年でも農村はブルトン語が多数。
+
+- id: lang_saint_brieuc
+  name: サン＝ブリユー（ブルトン語とガロ語の境界）
+  select:
+    pieces: [FRA-Saint_Brieuc]
+  timeline:
+    - from: 1648
+      main: breton
+      minor: french
+      note: 言語境界がこの地域を通る。西半分はブルトン語、東半分はガロ語。
+
+- id: lang_westhoek
+  name: フランス領フランドル（ヴェストフーク）
+  select:
+    pieces: [FRA-Dunkerque]
+  timeline:
+    - from: 1648
+      main: dutch
+      note: ダンケルク・アズブルック周辺の農村はフラマン語（西フラマン方言）。1662年にダンケルクがフランス領、1678年のナイメーヘン条約で周辺もフランス領になる。
+    - from: 1800
+      main: dutch
+      minor: french
+      note: ダンケルク市などの都市はフランス語化。農村は20世紀までフラマン語が多数。
+
+- id: lang_alsace
+  name: アルザス
+  select:
+    pieces: [FRA-Altkirch, FRA-Colmar, FRA-Mulhouse, FRA-Thann, FRA-Selestat, FRA-Molsheim, FRA-Haguenau, FRA-Saverne]
+  timeline:
+    - from: 1648
+      main: german
+      note: アルザス語（アレマン方言）。ウェストファリア条約（1648）とストラスブール併合（1681）でフランス領になるが、民衆の言葉はドイツ語のまま。ヴォージュ山中の一部（ヴァル・ドルベなど）はロマンス系。
+      source: "https://ja.wikipedia.org/wiki/アルザス語"
+
+- id: lang_strasbourg
+  name: ストラスブール
+  select:
+    pieces: [FRA-Strasbourg]
+  timeline:
+    - from: 1648
+      main: german
+    - from: 1800
+      main: german
+      minor: french
+      note: フランス革命後、都市の上・中層にフランス語が広がる。1871–1918年はドイツ帝国領でドイツ語が公用語。
+
+- id: lang_german_lorraine
+  name: ドイツ語圏ロレーヌ（モーゼル東部）
+  select:
+    pieces: [FRA-Forbach, FRA-Sarreguemines, FRA-Thionville, FRA-Sarrebourg]
+  timeline:
+    - from: 1648
+      main: german
+      minor: french
+      note: ロレーヌ・フランケン方言とルクセンブルク方言の地域。言語境界はティオンヴィル・サールブールの付近を通り、西側はフランス語。
+
+- id: lang_metz
+  name: メス
+  select:
+    pieces: [FRA-Metz]
+  timeline:
+    - from: 1648
+      main: french
+      minor: german
+      note: メス市と周辺はフランス語（ロレーヌ方言）。東部の農村はドイツ語。
+
+- id: lang_corsica
+  name: コルシカ島
+  select:
+    regions: [corsica]
+  timeline:
+    - from: 1648
+      main: italian
+      note: コルシカ語（トスカーナ方言に近いイタリア系の言葉）。ジェノヴァ領の時代は書き言葉もイタリア語。
+    - from: 1768
+      main: italian
+      note: ヴェルサイユ条約（1768）でフランス領。19世紀後半からフランス語が公用語として広がるが、民衆はコルシカ語を話し続けた。
+
+- id: lang_monaco
+  name: モナコ
+  select:
+    regions: [monaco]
+  timeline:
+    - from: 1648
+      main: italian
+      minor: occitan
+      note: モナコ語（リグリア語＝イタリア系の方言）。周辺はオック語。
+    - from: 1861
+      main: italian
+      minor: french
+      note: ロクブリュヌとマントンをフランスに売却（1861）。カジノ開業（1863）とともにフランス語の住民が増える。要確認（19世紀末には外国人が多数）。
+
+# ======== イベリア半島 ========
+- id: lang_spain_base
+  name: スペイン（下地：カスティーリャ語の地域）
+  select:
+    iso: [ESP]
+  timeline:
+    - from: 1648
+      main: spanish
+      note: アストゥリアス語・アラゴン語の山地の方言はここではカスティーリャ語（スペイン語）に含める。
+
+- id: lang_catalonia
+  name: カタルーニャ
+  select:
+    adm1: ["ESP/Cataluña/Catalunya"]
+  timeline:
+    - from: 1648
+      main: catalan
+      note: 新国家基本令（1716）でカタルーニャの諸制度が廃止され、行政・法廷の言葉がカスティーリャ語になるが、民衆はカタルーニャ語を話し続けた。19世紀にはカタルーニャ語の文芸復興（ラナシェンサ）。
+      source: "https://ja.wikipedia.org/wiki/新国家基本令"
+
+- id: lang_valencia
+  name: バレンシア
+  select:
+    adm1: ["ESP/Comunitat Valenciana"]
+  timeline:
+    - from: 1648
+      main: catalan
+      minor: spanish
+      note: 沿岸の平野はバレンシア語（カタルーニャ語）。西部の内陸（アラゴン・カスティーリャとの境）はカスティーリャ語を話す地域が帯状に続く。1609年のモリスコ追放のあと、空いた土地にアラゴンなどから入植者が入った。
+
+- id: lang_balearics
+  name: バレアレス諸島
+  select:
+    adm1: ["ESP/Illes Balears"]
+  timeline:
+    - from: 1648
+      main: catalan
+      note: マジョルカ語・メノルカ語（カタルーニャ語）。メノルカ島は1708–1802年の大部分がイギリス領だったが、言葉は変わらない。
+
+- id: lang_andorra
+  name: アンドラ
+  select:
+    regions: [andorra]
+  timeline:
+    - from: 1648
+      main: catalan
+
+- id: lang_gipuzkoa
+  name: ギプスコア・ビスカヤ（バスク語の地域）
+  select:
+    pieces: [ESP-Gipuzkoa, ESP-Bizkaia]
+  timeline:
+    - from: 1648
+      main: basque
+      minor: spanish
+      note: 農村はほぼバスク語。ビルバオ市とビスカヤ西端（エンカルタシオネス）はカスティーリャ語。
+    - from: 1880
+      main: basque
+      minor: spanish
+      note: ビルバオ周辺の鉱山・製鉄業に各地から労働者が集まり、ビスカヤの工業地帯はカスティーリャ語が多数になる。農村はバスク語のまま。
+
+- id: lang_alava_navarra
+  name: アラバ・ナバラ
+  select:
+    pieces: [ESP-Alava, ESP-Navarra]
+  timeline:
+    - from: 1648
+      main: spanish
+      minor: basque
+      note: ナバラ北部のピレネー山地とアラバ北部はバスク語。南部（リベラ地方、アラバ南部）はカスティーリャ語。18〜19世紀にバスク語の地域は北へ後退していく。
+
+- id: lang_galicia
+  name: ガリシア
+  select:
+    adm1: ["ESP/Galicia"]
+  timeline:
+    - from: 1648
+      main: portuguese
+      note: ガリシア語（ポルトガル語と同じ系統。ここでは portuguese として塗る）。都市の上層と行政はカスティーリャ語。
+
+- id: lang_portugal
+  name: ポルトガル
+  select:
+    iso: [PRT]
+  timeline:
+    - from: 1648
+      main: portuguese
+      note: 北東端のミランダ・ド・ドウロではミランダ語（アストゥリアス・レオン語系）が話される。
+
+# ======== ブリテン諸島 ========
+- id: lang_england
+  name: イングランド
+  select:
+    adm1: ["GBR/England"]
+    pieces: [GBR-Isles_of_Scilly]
+  timeline:
+    - from: 1648
+      main: english
+
+- id: lang_cornwall
+  name: コーンウォール
+  select:
+    pieces: [GBR-Cornwall]
+  timeline:
+    - from: 1648
+      main: english
+      minor: cornish
+      note: コーンウォール語は西部（ペンウィス・ケリア）にだけ残っていた。
+    - from: 1750
+      main: english
+      note: コーンウォール語は18世紀後半に日常語として話されなくなる（「最後の話者」ドリー・ペントリース、1777年没）。
+      source: "https://ja.wikipedia.org/wiki/コーンウォール語"
+
+- id: lang_wales
+  name: ウェールズ
+  select:
+    adm1: ["GBR/Wales"]
+  timeline:
+    - from: 1648
+      main: welsh
+      minor: english
+      note: ウェールズのほぼ全域で民衆はウェールズ語を話した。英語はイングランドとの境界地帯と町の上層。
+    - from: 1850
+      main: welsh
+      minor: english
+      note: 南ウェールズの炭田・製鉄業にイングランドから労働者が流入。1891年の調査でウェールズ語の話者は約54%。
+
+- id: lang_south_pembroke
+  name: ペンブルックシャー（「ウェールズの向こうの小イングランド」）
+  select:
+    pieces: [GBR-Pembrokeshire]
+  timeline:
+    - from: 1648
+      main: welsh
+      minor: english
+      note: ランズカー線より南は中世以来の英語地域。北部はウェールズ語。
+
+- id: lang_wales_border
+  name: ウェールズ東部の境界地帯（モンマス・ラドナー）
+  select:
+    pieces: [GBR-Monmouthshire]
+  timeline:
+    - from: 1648
+      main: welsh
+      minor: english
+    - from: 1800
+      main: english
+      minor: welsh
+      note: 18世紀のうちに東部から英語化が進む。
+
+- id: lang_wales_southeast
+  name: 南東ウェールズの工業地帯（カーディフ・ニューポート・谷間の炭田）
+  select:
+    pieces: [GBR-Cardiff, GBR-Newport, GBR-Vale_of_Glamorgan, GBR-Torfaen, GBR-Blaenau_Gwent, GBR-Caerphilly, GBR-Merthyr_Tydfil, GBR-Rhondda_Cynon_Taf, GBR-Bridgend]
+  timeline:
+    - from: 1648
+      main: welsh
+    - from: 1850
+      main: welsh
+      minor: english
+      note: 製鉄・炭鉱の町にイングランド・アイルランドから労働者が集まる。
+    - from: 1890
+      main: english
+      minor: welsh
+      note: 1901年の調査で、グラモーガン東部・モンマスシャーの話者は少数派になっている。カーディフは英語の都市。
+
+- id: lang_wales_northeast
+  name: 北東ウェールズ（フリント・レクサム）・中部ウェールズ東部（ポウィス）
+  select:
+    pieces: [GBR-Flintshire, GBR-Wrexham, GBR-Powys]
+  timeline:
+    - from: 1648
+      main: welsh
+      minor: english
+    - from: 1890
+      main: english
+      minor: welsh
+      note: ラドナーシャー（ポウィス東部）は19世紀初めまでに英語化。フリントシャーは1901年に話者が約半数。要確認（ポウィス西部のモンゴメリー・ブレコンはウェールズ語が多い）。
+
+- id: lang_scotland_lowlands
+  name: スコットランド低地
+  select:
+    adm1: ["GBR/Scotland"]
+  timeline:
+    - from: 1648
+      main: scots
+      note: 低地地方の民衆はスコットランド語（英語と近縁のゲルマン系の言葉）。書き言葉と教養層の言葉は17世紀から英語に近づいていく。
+
+- id: lang_galloway
+  name: ギャロウェー・キャリック
+  select:
+    pieces: [GBR-Dumfries_and_Galloway, GBR-South_Ayrshire]
+  timeline:
+    - from: 1648
+      main: scots
+      minor: gaelic
+      note: ギャロウェーとキャリックのゲール語は17世紀に消えつつあった。
+    - from: 1700
+      main: scots
+
+- id: lang_highlands
+  name: スコットランド高地（ハイランド）
+  select:
+    pieces: [GBR-Highland]
+  timeline:
+    - from: 1648
+      main: gaelic
+      minor: scots
+      note: 高地地方の民衆はゲール語。北東端のケイスネスはスコットランド語。
+    - from: 1750
+      main: gaelic
+      minor: english
+      note: ジャコバイトの反乱の鎮圧（1746）後、氏族制度が解体され、英語の学校が広がる。ハイランド・クリアランス（18世紀末〜19世紀半ば）で多くの住民がカナダなどへ移住。
+      source: "https://ja.wikipedia.org/wiki/ハイランド・クリアランス"
+
+- id: lang_hebrides
+  name: アウター・ヘブリディーズ
+  select:
+    pieces: [GBR-Na_h_Eileanan_Siar]
+  timeline:
+    - from: 1648
+      main: gaelic
+
+- id: lang_argyll
+  name: アーガイル
+  select:
+    pieces: [GBR-Argyll_and_Bute]
+  timeline:
+    - from: 1648
+      main: gaelic
+    - from: 1850
+      main: gaelic
+      minor: english
+    - from: 1900
+      main: english
+      minor: gaelic
+      note: 1901年の調査でアーガイルのゲール語話者は人口の約半数を割り込む（ほぼ全員が英語との二言語話者）。要確認
+
+- id: lang_highland_fringe
+  name: 高地の縁（パース・スターリング西部・モレー山地）
+  select:
+    pieces: [GBR-Perth_and_Kinross, GBR-Stirling]
+  timeline:
+    - from: 1648
+      main: scots
+      minor: gaelic
+      note: パースシャー北部・西部やスターリング西部の山地はゲール語。
+    - from: 1850
+      main: scots
+      note: 19世紀にゲール語は山地の奥へ後退する。
+
+- id: lang_northern_isles
+  name: オークニー・シェトランド
+  select:
+    pieces: [GBR-Orkney_Islands, GBR-Shetland_Islands]
+  timeline:
+    - from: 1648
+      main: scots
+      note: ノルン語（古ノルド語の流れをくむ言葉）がシェトランドなどで18世紀まで残った。
+      source: "https://ja.wikipedia.org/wiki/ノルン語"
+
+# ---- アイルランド ----
+- id: lang_ireland_base
+  name: アイルランド（下地）
+  select:
+    regions: [ireland]
+    iso: [IRL]
+  timeline:
+    - from: 1648
+      main: irish
+      minor: english
+      note: 民衆の大多数はアイルランド語。英語はダブリンとペイル（ダブリン周辺）、町、入植者の地域。クロムウェルの征服（1649–53）と土地の没収で、地主層は英語話者のプロテスタントになる。
+    - from: 1800
+      main: irish
+      minor: english
+      note: 1800年ごろ、人口のおよそ半分がアイルランド語の話者。農村の貧しい層ほどアイルランド語。
+    - from: 1850
+      main: english
+      minor: irish
+      note: 大飢饉（1845–49）で約100万人が死亡し、100万人以上が移住した。犠牲は西部・南部のアイルランド語話者の農民に集中し、残った人びとも英語に切り替えた。1851年の調査で話者は約23%。
+      source: "https://ja.wikipedia.org/wiki/ジャガイモ飢饉"
+    - from: 1880
+      main: english
+      note: 1891年の調査で話者は約14%。西部の海岸地帯（のちのゲールタハト）以外ではほぼ消える。
+
+- id: lang_ireland_east
+  name: アイルランド東部（ダブリン・ペイル・ウェックスフォード南部）
+  select:
+    adm1: ["IRL/Leinster"]
+    exclude: [IRL-ATHLONE_LEA_5, IRL-BALLYMAHON_LEA_6, IRL-GRANARD_LEA_5, IRL-LONGFORD_LEA_7, IRL-MOATE_LEA_4, IRL-MULLINGAR_LEA_6, IRL-KINNEGAD_LEA_5, IRL-BIRR_LEA_6, IRL-EDENDERRY_LEA_6, IRL-TULLAMORE_LEA_7, IRL-BORRIS_IN_OSSORY_MOUNTMELLICK_LEA_6, IRL-GRAIGUECULLEN_PORTARLINGTON_LEA_6, IRL-PORTLAOISE_LEA_7, IRL-CALLAN_THOMASTOWN_LEA_6, IRL-CASTLECOMER_LEA_6, IRL-KILKENNY_LEA_7, IRL-PILTOWN_LEA_5, IRL-CARLOW_LEA_7, IRL-MUINEBEAG_LEA_5, IRL-TULLOW_LEA_6]
+  timeline:
+    - from: 1648
+      main: irish
+      minor: english
+      note: ダブリン市とペイルの町は英語。ウェックスフォード南部のフォース・バージーでは中世英語の流れをくむヨーラ語が19世紀初めまで残った。
+    - from: 1750
+      main: english
+      minor: irish
+      note: 18世紀のうちにレンスター東部は英語化が進む。
+    - from: 1800
+      main: english
+      note: 1800年ごろにはレンスター東部でアイルランド語を話すのは高齢者などに限られる。要確認（ミース・ラウス北部には19世紀半ばまで話者が残った）。
+
+- id: lang_dublin
+  name: ダブリン
+  select:
+    pieces: [IRL-ARTANE_WHITEHALL_LEA_6, IRL-BALLYFERMOT_DRIMNAGH_LEA_5, IRL-BALLYMUN_FINGLAS_LEA_6, IRL-CABRA_GLASNEVIN_LEA_7, IRL-CLONTARF_LEA_6, IRL-DONAGHMEDE_LEA_5, IRL-KIMMAGE_RATHMINES_LEA_6, IRL-NORTH_INNER_CITY_LEA_7, IRL-PEMBROKE_LEA_5, IRL-SOUTH_EAST_INNER_CITY_LEA_5, IRL-SOUTH_WEST_INNER_CITY_LEA_5, IRL-BLACKROCK_LEA_6, IRL-DUN_LAOGHAIRE_LEA_7, IRL-DUNDRUM_LEA_7, IRL-STILLORGAN_LEA_6, IRL-KILLINEY_SHANKILL_LEA_7, IRL-GLENCULLEN_SANDYFORD_LEA_7, IRL-RATHFARNHAM_TEMPLEOGUE_LEA_7, IRL-TALLAGHT_CENTRAL_LEA_6, IRL-TALLAGHT_SOUTH_LEA_5, IRL-FIRHOUSE_BOHERNABREENA_LEA_5, IRL-CLONDALKIN_LEA_7, IRL-PALMERSTOWN_FONTHILL_LEA_5, IRL-LUCAN_LEA_5, IRL-CASTLEKNOCK_LEA_6, IRL-BLANCHARDSTOWN_MULHUDDART_LEA_5, IRL-ONGAR_LEA_5, IRL-HOWTH_MALAHIDE_LEA_7, IRL-SWORDS_LEA_7]
+  timeline:
+    - from: 1648
+      main: english
+      minor: irish
+      note: ダブリンは中世以来、英語の都市（周辺の農村から来た住民にはアイルランド語話者も多い）。
+    - from: 1800
+      main: english
+
+- id: lang_ireland_midlands
+  name: アイルランド中部（ロングフォード・ウェストミース・オファリー・リーシュ・キルケニー・カーロウ）
+  select:
+    pieces: [IRL-ATHLONE_LEA_5, IRL-BALLYMAHON_LEA_6, IRL-GRANARD_LEA_5, IRL-LONGFORD_LEA_7, IRL-MOATE_LEA_4, IRL-MULLINGAR_LEA_6, IRL-KINNEGAD_LEA_5, IRL-BIRR_LEA_6, IRL-EDENDERRY_LEA_6, IRL-TULLAMORE_LEA_7, IRL-BORRIS_IN_OSSORY_MOUNTMELLICK_LEA_6, IRL-GRAIGUECULLEN_PORTARLINGTON_LEA_6, IRL-PORTLAOISE_LEA_7, IRL-CALLAN_THOMASTOWN_LEA_6, IRL-CASTLECOMER_LEA_6, IRL-KILKENNY_LEA_7, IRL-PILTOWN_LEA_5, IRL-CARLOW_LEA_7, IRL-MUINEBEAG_LEA_5, IRL-TULLOW_LEA_6,
+             IRL-BAILIEBOROUGH_COOTEHILL_LEA_6, IRL-BALLYJAMESDUFF_LEA_6, IRL-CAVAN_BELTURBET_LEA_6, IRL-BALLYBAY_CLONES_LEA_5, IRL-CARRICKMACROSS_CASTLEBLAYNEY_LEA_6, IRL-MONAGHAN_LEA_7]
+  timeline:
+    - from: 1648
+      main: irish
+      minor: english
+    - from: 1800
+      main: english
+      minor: irish
+      note: 中部とキャヴァン・モナハンは18世紀後半から英語化が進んでいた。
+    - from: 1850
+      main: english
+      note: 大飢饉の後、中部のアイルランド語はほぼ消える。
+
+- id: lang_ireland_west
+  name: アイルランド西部・南西部（コナハト・ケリー・西コーク・クレア・ドニゴール）
+  select:
+    adm1: ["IRL/Connacht"]
+    pieces: [IRL-BANTRY_WEST_CORK_LEA_4, IRL-SKIBBEREEN_WEST_CORK_LEA_5, IRL-MACROOM_LEA_6, IRL-KANTURK_LEA_4, IRL-CASTLEISLAND_LEA_4, IRL-KILLARNEY_LEA_7, IRL-LISTOWEL_LEA_6, IRL-TRALEE_LEA_7, IRL-ENNISTIMON_LEA_4, IRL-KILRUSH_LEA_5, IRL-ENNIS_LEA_7, IRL-NEWCASTLE_WEST_LEA_6, IRL-DUNGARVAN_LEA_6,
+             IRL-DONEGAL_LEA_6, IRL-LETTERKENNY_LEA_7, IRL-LIFFORD_STRANORLAR_LEA_6, IRL-BUNCRANA_LEA_5, IRL-CARNDONAGH_LEA_4]
+  timeline:
+    - from: 1648
+      main: irish
+    - from: 1800
+      main: irish
+      minor: english
+    - from: 1850
+      main: irish
+      minor: english
+      note: 大飢饉の被害が最も大きかった地域。死と移住で人口が大きく減り、町と東寄りの地域から英語化が進む。
+    - from: 1880
+      main: english
+      minor: irish
+      note: 1891年、アイルランド語の話者がまだ多数なのは海岸の一部だけ。
+
+- id: lang_gaeltacht
+  name: 西海岸のゲールタハト（コネマラ・ベルマレット・ディングル半島・イヴェラ・ドニゴール西部）
+  select:
+    pieces: [IRL-CONAMARA_NORTH_LEA_4, IRL-CONAMARA_SOUTH_LEA_5, IRL-BELMULLET_LEA_3, IRL-WESTPORT_LEA_4, IRL-CORCA_DHUIBHNE_LEA_3, IRL-KENMARE_LEA_6, IRL-GLENTIES_LEA_6, IRL-MILFORD_LEA_3]
+  timeline:
+    - from: 1648
+      main: irish
+    - from: 1850
+      main: irish
+      minor: english
+      note: 大飢饉の後もアイルランド語が多数のまま残った地域（のちのゲールタハト）。1893年のゲール語連盟の設立で、言葉を守る運動が始まる。
+      source: "https://ja.wikipedia.org/wiki/ゲールタハト"
+
+- id: lang_munster_east
+  name: マンスター東部（ティペラリー・リムリック・コーク東部・ウォーターフォード）
+  select:
+    adm1: ["IRL/Munster"]
+    exclude: [IRL-BANTRY_WEST_CORK_LEA_4, IRL-SKIBBEREEN_WEST_CORK_LEA_5, IRL-MACROOM_LEA_6, IRL-KANTURK_LEA_4, IRL-CASTLEISLAND_LEA_4, IRL-KILLARNEY_LEA_7, IRL-LISTOWEL_LEA_6, IRL-TRALEE_LEA_7, IRL-ENNISTIMON_LEA_4, IRL-KILRUSH_LEA_5, IRL-ENNIS_LEA_7, IRL-NEWCASTLE_WEST_LEA_6, IRL-DUNGARVAN_LEA_6, IRL-CORCA_DHUIBHNE_LEA_3, IRL-KENMARE_LEA_6]
+  timeline:
+    - from: 1648
+      main: irish
+      minor: english
+      note: コーク・リムリック・ウォーターフォードの町は英語話者が多い。
+    - from: 1850
+      main: english
+      minor: irish
+      note: 大飢饉の後、英語化が急速に進む。
+    - from: 1880
+      main: english
+
+- id: lang_ulster_east
+  name: アルスター東部（アントリム・ダウン）
+  select:
+    pieces: [GBR-Antrim_and_Newtownabbey, GBR-Ards_and_North_Down, GBR-Mid_and_East_Antrim, GBR-Causeway_Coast_and_Glens, GBR-Lisburn_and_Castlereagh]
+  timeline:
+    - from: 1648
+      main: scots
+      minor: irish
+      note: 17世紀初めからスコットランド低地の入植者（長老派）が入り、アントリム・ダウンの北部はアルスター・スコットランド語の地域になる。アントリムの谷（グレンズ）はアイルランド語。
+      source: "https://ja.wikipedia.org/wiki/アルスター植民"
+    - from: 1750
+      main: scots
+      minor: english
+    - from: 1850
+      main: english
+      minor: scots
+      note: 工業化と学校教育で英語が広がる。農村にはアルスター・スコットランド語が残る。
+
+- id: lang_belfast
+  name: ベルファスト
+  select:
+    pieces: [GBR-Belfast]
+  timeline:
+    - from: 1648
+      main: scots
+      minor: english
+    - from: 1800
+      main: english
+      minor: irish
+      note: 19世紀に造船・亜麻工業で急成長。西部のカトリック住民には農村から来たアイルランド語話者もいた。要確認
+    - from: 1860
+      main: english
+
+- id: lang_ulster_mid
+  name: アルスター中部・西部（アーマー・ティローン・ロンドンデリー・ファーマナ）
+  select:
+    pieces: [GBR-Armagh_City_Banbridge_and_Craigavon, GBR-Mid_Ulster, GBR-Derry_City_and_Strabane, GBR-Fermanagh_and_Omagh, GBR-Newry_Mourne_and_Down]
+  timeline:
+    - from: 1648
+      main: irish
+      minor: english
+      note: アルスター植民（1609–）で、イングランド人・スコットランド人の入植地と町ができる。農村の多くはアイルランド語のまま。
+    - from: 1750
+      main: english
+      minor: irish
+    - from: 1880
+      main: english
+      note: ティローンのスペリン山地、南アーマーには19世紀末まで話者が残った。
+
+# ======== アイスランド・グリーンランド ========
+- id: lang_iceland
+  name: アイスランド
+  select:
+    regions: [iceland]
+    iso: [ISL]
+  timeline:
+    - from: 1648
+      main: icelandic
+
+# ======== マルタ ========
+- id: lang_malta
+  name: マルタ
+  select:
+    regions: [malta_region]
+    iso: [MLT]
+  timeline:
+    - from: 1648
+      main: maltese
+      note: 民衆はマルタ語（アラビア語系でラテン文字を使う）。聖ヨハネ騎士団の時代、行政と教養層はイタリア語。
+    - from: 1800
+      main: maltese
+      note: 1800年からイギリス統治（1814年のパリ条約で正式に領有）。行政語はイタリア語から英語へ移っていく（言語問題）。
+
+# ======== 北アフリカ ========
+- id: lang_maghreb_base
+  name: マグリブ（下地：アラビア語）
+  select:
+    iso: [MAR, DZA, TUN, LBY, ESH, MRT, MLI]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: アラビア語のマグリブ方言（西サハラ・モーリタニアはハッサーニーヤ方言）。ベルベル語の地域は下で上書き。
+
+- id: lang_morocco_mixed
+  name: モロッコ北部・中部の平野（アラビア語とベルベル語の混在）
+  select:
+    adm1: ["MAR/Fez-Meknes", "MAR/Oriental", "MAR/Marrakech-Safi", "MAR/Tangier-Tetouan-Al Hoceima", "MAR/Rabat-Salé-Kenitra"]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: berber
+      note: 平野と都市はアラビア語。山地はベルベル語。当時のモロッコの人口の半分近くがベルベル語の話者だったとされる。要確認
+
+- id: lang_morocco_berber
+  name: モロッコの山地（リーフ・中アトラス・高アトラス・スース・ドラア）
+  select:
+    adm1: ["MAR/Souss-Massa", "MAR/Drâa-Tafilalet", "MAR/Béni Mellal-Khénifra"]
+    pieces: [MAR-Al_Hoceima_Province, MAR-Province_de_Driouch, MAR-Province_de_Nador, MAR-Province_de_Khemisset, MAR-Province_d_El_Hajeb, MAR-Province_d_Ifrane, MAR-Province_de_Boulemane, MAR-Province_de_Sefrou, MAR-Al_Haouz_Province, MAR-Chichaoua_Province, MAR-Province_de_Figuig, MAR-Guelmim_Province, MAR-Sidi_Ifni_Province]
+    exclude: [MAR-Province_de_Fquih_Ben_Saleh, MAR-Province_de_Khouribga]
+  timeline:
+    - from: 1648
+      main: berber
+      minor: arabic
+      note: リーフ山地はタリフィート語、中アトラスはタマジクト語、高アトラスとスース地方はタシュリヒート語。オアシスの町と平野部にはアラビア語話者。
+
+- id: lang_morocco_atlantic
+  name: モロッコ大西洋岸の平野（シャウイア・ドゥカラ）
+  select:
+    adm1: ["MAR/Casablanca-Settat"]
+    pieces: [MAR-Province_de_Fquih_Ben_Saleh, MAR-Province_de_Khouribga]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: 中世にアラブ系の遊牧部族が入ったため、早くからアラビア語化した平野。
+    - from: 1907
+      main: arabic
+      minor: french
+      note: 1907年にフランス軍がカサブランカに上陸、1912年にフランスの保護国。カサブランカにヨーロッパ人が急増する。要確認（州全体では少数）
+
+- id: lang_kabylia
+  name: カビリア
+  select:
+    pieces: [DZA-Tizi_Ouzou, DZA-Bejaia]
+  timeline:
+    - from: 1648
+      main: berber
+      note: カビール語（ベルベル語）の山地。1857年までフランスの征服に抵抗した。
+
+- id: lang_algeria_mixed
+  name: カビリア周辺とホドナ（アラビア語とベルベル語の混在）
+  select:
+    pieces: [DZA-Bouira, DZA-Bordj_Bou_Arreidj, DZA-Satif, DZA-Boumerdes, DZA-Jijel, DZA-Oum_el_Bouaghi, DZA-Tebessa, DZA-Biskra, DZA-Chlef, DZA-Ouargla, DZA-Bechar]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: berber
+      note: 東のカビリア小地方、西のダーラ山地（シュリフ）、オアシスのワルグラ（ワルグラ語）、ベシャール周辺のクスール（ゼナティ系）などにベルベル語が残る。
+
+- id: lang_aures
+  name: オーレス山地
+  select:
+    pieces: [DZA-Batna, DZA-Khenchela]
+  timeline:
+    - from: 1648
+      main: berber
+      minor: arabic
+      note: シャウイーア語（ベルベル語）の山地。
+
+- id: lang_mzab
+  name: ムザブ（ガルダイア）
+  select:
+    pieces: [DZA-Ghardaia]
+  timeline:
+    - from: 1648
+      main: berber
+      minor: arabic
+      note: イバード派のムザブ人はムザブ語（ベルベル語）。周辺の遊牧民はアラビア語。
+
+- id: lang_tuareg
+  name: サハラ中部（トゥアレグ人の地域）
+  select:
+    pieces: [DZA-Tamanghasset, DZA-Tamanghasset_2, DZA-Illizi, LBY-Ghat]
+  timeline:
+    - from: 1648
+      main: berber
+      minor: arabic
+      note: トゥアレグ人はタマシェク語（ベルベル語）を話し、ティフィナグ文字を伝えた。
+
+- id: lang_mali_north
+  name: トンブクトゥ（ニジェール川中流の北）
+  select:
+    pieces: [MLI-Tombouctou]
+  timeline:
+    - from: 1648
+      main: berber
+      minor: arabic
+      note: トゥアレグ人（タマシェク語）とアラブ系の遊牧民。ニジェール川沿いはソンガイ語。要確認
+
+- id: lang_algiers_city
+  name: アルジェ・オラン・アンナバ（ヨーロッパ人の入植の中心）
+  select:
+    pieces: [DZA-Alger, DZA-Annaba]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: turkish
+      note: アルジェはオスマン帝国の摂政領の首都で、支配層はトルコ系の軍人（イェニチェリ）。
+    - from: 1830
+      main: arabic
+    - from: 1870
+      main: arabic
+      minor: french
+      note: フランスの征服（1830–）のあと、フランス人・スペイン人・イタリア人・マルタ人の入植者が都市と平野に集まる。1870年のクレミュー令でアルジェリアのユダヤ人はフランス市民になる。要確認（アルジェ市内は19世紀末にヨーロッパ人が多数）
+      source: "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
+
+- id: lang_oran
+  name: オラン
+  select:
+    regions: [oran]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: spanish
+      note: オランは1509年以来スペインの要塞都市（1708–32年はアルジェ領）。周辺の部族はアラビア語。
+    - from: 1792
+      main: arabic
+      note: 1792年、スペインがオランを手放す。
+    - from: 1850
+      main: arabic
+      minor: spanish
+      note: フランス領になったオラン地方にスペイン人の入植者が大量に入る。19世紀末にはオラン市のヨーロッパ人の多数がスペイン系。要確認
+
+- id: lang_mitidja
+  name: ミティジャ平野と西部の入植地（ブリダ・ティパザ・シディ・ベル・アベス・モスタガネム）
+  select:
+    pieces: [DZA-Blida, DZA-Tipaza, DZA-Sidi_Bel_Abbes, DZA-Mostaganem, DZA-Ain_Temouchent]
+  timeline:
+    - from: 1648
+      main: arabic
+    - from: 1870
+      main: arabic
+      minor: french
+      note: フランスの入植地。シディ・ベル・アベスは外人部隊の本拠地で、スペイン系の入植者も多い。
+
+- id: lang_tunis
+  name: チュニス
+  select:
+    pieces: [TUN-Tunis]
+  timeline:
+    - from: 1648
+      main: arabic
+    - from: 1880
+      main: arabic
+      minor: italian
+      note: 19世紀にシチリアなどからイタリア人の移民が増え、1881年のフランス保護国化の時点でもヨーロッパ人の多数はイタリア人だった。
+      source: "https://ja.wikipedia.org/wiki/チュニジアのイタリア人"
+
+- id: lang_tunisia_south_berber
+  name: ジェルバ島と南チュニジアの山地
+  select:
+    pieces: [TUN-Medenine, TUN-Tataouine]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: berber
+      note: ジェルバ島（イバード派）とマトマタ・タタウィーンの山村にベルベル語が残る。
+
+- id: lang_nafusa
+  name: ナフーサ山地・ズワーラ・ガダーミス
+  select:
+    pieces: [LBY-Mizdah, LBY-An_Nuqat_al_Khams, LBY-Ghadamis]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: berber
+      note: ナフーサ山地（イバード派）、沿岸のズワーラ、オアシスのガダーミスはベルベル語。要確認（ピースの区画は現代の行政区で、ナフーサ山地を正確には切り出せない）
+
+- id: lang_tripoli_coast
+  name: トリポリタニアとキレナイカの沿岸
+  select:
+    regions: [tripoli_regency]
+  timeline:
+    - from: 1648
+      main: arabic
+    - from: 1911
+      main: arabic
+      note: 伊土戦争（1911–12）でイタリアが占領。
+
+- id: lang_fezzan_tebu
+  name: フェザーン南部とクフラ（テダ人の地域）
+  select:
+    pieces: [LBY-Murzuq, LBY-Al_Kufrah]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: other
+      note: 南部の山地と砂漠はテダ語（トゥブ人）の地域。オアシスにはカヌリ語の住民もいた。
+
+- id: lang_egypt
+  name: エジプト
+  select:
+    regions: [egypt]
+    iso: [EGY]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: エジプト方言のアラビア語。コプト語は17世紀までに日常語としてはほぼ消え、コプト教会の典礼語として残る。支配層のマムルークとオスマン官僚はトルコ語。
+
+- id: lang_alexandria
+  name: アレクサンドリア
+  select:
+    pieces: [EGY-Alexandria_Governorate]
+  timeline:
+    - from: 1648
+      main: arabic
+    - from: 1860
+      main: arabic
+      minor: greek
+      note: ムハンマド・アリー以後の綿花貿易で、ギリシア人・イタリア人・レヴァント人などの外国人が集まる国際都市になった。外国人は1897年に人口の約15%（ギリシア人が最多）。要確認
+
+- id: lang_nubia
+  name: 上エジプト南部（ヌビア）
+  select:
+    pieces: [EGY-Aswan_Governorate]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: other
+      note: アスワンより南のナイル川沿いはヌビア語の地域。
+
+- id: lang_siwa
+  name: エジプト西部の砂漠（シーワ）
+  select:
+    pieces: [EGY-Matrouh_Governorate]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: berber
+      note: 沿岸はベドウィンのアラビア語。シーワ・オアシスはシーワ語（ベルベル語）。

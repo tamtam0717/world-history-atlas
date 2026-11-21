@@ -1,4 +1,4 @@
-# F 北欧・東欧（DNK NOR SWE FIN EST LVA LTU POL BLR UKR RUS）の地域と所属の変遷（1648–1815）
+# F 北欧・東欧（DNK NOR SWE FIN EST LVA LTU POL BLR UKR RUS）の地域と所属の変遷（1648–1914）
 # ピースは担当範囲のものだけを選ぶ。大きな地域（国全体）を小さな地域で上書きしている所がある（重なりの決まり）。
 
 - id: denmark_dk
@@ -17,6 +17,31 @@
     - from: 1648
       owner: denmark
       note: "シュレースヴィヒ公国（帝国外）。1713/1720年まではゴットルプ家の持ち分が散在（地図では省略）"
+    - from: 1864
+      owner: prussia
+      certainty: uncertain
+      cause: "デンマーク戦争（第2次シュレースヴィヒ戦争）に敗れたデンマークが、ウィーン条約でシュレースヴィヒをプロイセン・オーストリアに割譲"
+      source: "https://ja.wikipedia.org/wiki/第二次シュレースヴィヒ＝ホルシュタイン戦争"
+      note: "プロイセン・オーストリアの共同管理。割譲のとき、王国の飛び地とエーロ島などの交換があった（地図では省略）"
+    - from: 1865
+      owner: prussia
+      certainty: uncertain
+      cause: "ガスタイン協定（主権は共同のまま、シュレースヴィヒはプロイセンが管理）"
+      source: "https://ja.wikipedia.org/wiki/ガシュタイン協定"
+    - from: 1866
+      owner: prussia
+      cause: "普墺戦争後のプラハ条約でプロイセンに併合（北部の住民投票の条項は1878年に削除）"
+      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国シュレースヴィヒ＝ホルシュタイン州（ドイツ帝国の構成国）。1920年の住民投票でデンマークに戻る"
 
 - id: bornholm
   name: ボーンホルム島
@@ -45,6 +70,10 @@
       owner: norway
       cause: "キール条約でデンマークがノルウェーを放棄。独立宣言の後、11月にスウェーデンと同君連合"
       source: "https://ja.wikipedia.org/wiki/キール条約"
+    - from: 1905
+      owner: norway
+      cause: "スウェーデンとの同君連合を解消して完全に独立（カールスタード協定）"
+      source: "https://ja.wikipedia.org/wiki/スウェーデン＝ノルウェー"
 
 - id: finnmark_inner
   name: フィンマルク内陸（カウトケイノ・カラショーク）
@@ -255,6 +284,16 @@
       owner: prussia
       cause: "ヴェーラウ条約でプロイセン公国がポーランドの宗主権から離れる"
       source: "https://ja.wikipedia.org/wiki/ヴェーラウ条約"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: lithuania
   name: リトアニア大公国（1795年ロシア領部分）
@@ -305,6 +344,11 @@
       overlord: russia
       cause: "ウィーン議定書でポーランド立憲王国に"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: russia
+      cause: "一月蜂起の鎮圧後、ポーランド王国の独自の行政機関が廃止され、ロシアの直轄に近い「ヴィスワ地方」となる"
+      source: "https://ja.wikipedia.org/wiki/ポーランド立憲王国"
+      note: "ロシア皇帝はポーランド王の称号を保った（1915年まで）"
 
 - id: pom_sw
   name: スウェーデン領ポンメルン（オーデル河口）
@@ -330,6 +374,20 @@
       overlord: german_confederation
       cause: "ドイツ連邦の成立"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1866
+      owner: prussia
+      cause: "普墺戦争でドイツ連邦が解体"
+      source: "https://ja.wikipedia.org/wiki/普墺戦争"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: goleniow
   name: ゴルノウ（オーデル東岸）
@@ -363,6 +421,20 @@
       overlord: german_confederation
       cause: "ドイツ連邦の成立"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1866
+      owner: prussia
+      cause: "普墺戦争でドイツ連邦が解体"
+      source: "https://ja.wikipedia.org/wiki/普墺戦争"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: pom_br
   name: ヒンターポンメルン・ノイマルク
@@ -385,6 +457,20 @@
       overlord: german_confederation
       cause: "ドイツ連邦の成立"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1866
+      owner: prussia
+      cause: "普墺戦争でドイツ連邦が解体"
+      source: "https://ja.wikipedia.org/wiki/普墺戦争"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: lauenburg
   name: ラウエンブルク・ビュートウ
@@ -403,6 +489,16 @@
       owner: prussia
       cause: "第1回ポーランド分割でポーランドの宗主権がなくなる"
       source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: royal_prussia
   name: 王領プロイセン（ポメレリア・ヴァルミア）
@@ -420,6 +516,16 @@
       owner: prussia
       cause: "第1回ポーランド分割（西プロイセン）"
       source: "https://ja.wikipedia.org/wiki/ポーランド分割"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: kulm
   name: ヘウムノ地方
@@ -441,6 +547,16 @@
       owner: prussia
       cause: "ウィーン議定書でプロイセンに返還"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: danzig
   name: ダンツィヒ（グダンスク）
@@ -462,6 +578,16 @@
       owner: prussia
       cause: "ナポレオン軍の降伏後、プロイセン領に（1815年ウィーン議定書で確定）"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: torun
   name: トルン
@@ -483,6 +609,16 @@
       owner: prussia
       cause: "ウィーン議定書"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: ducal_prussia
   name: プロイセン公国（東プロイセン）
@@ -500,6 +636,16 @@
       owner: prussia
       cause: "ヴェーラウ条約でプロイセン公国がポーランドの宗主権から離れる"
       source: "https://ja.wikipedia.org/wiki/ヴェーラウ条約"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: netze
   name: ネッツェ地区
@@ -521,6 +667,16 @@
       owner: prussia
       cause: "ウィーン議定書でポズナン大公国としてプロイセン領に"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: sp_posen
   name: 大ポーランド西部（1815年ポズナン大公国）
@@ -546,6 +702,16 @@
       owner: prussia
       cause: "ウィーン議定書でポズナン大公国としてプロイセン領に"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: sp_congress
   name: 大ポーランド東部・クヤヴィ・ウッチ・プウォツク
@@ -576,6 +742,11 @@
       overlord: russia
       cause: "ウィーン議定書でポーランド立憲王国に"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: russia
+      cause: "一月蜂起の鎮圧後、ポーランド王国の独自の行政機関が廃止され、ロシアの直轄に近い「ヴィスワ地方」となる"
+      source: "https://ja.wikipedia.org/wiki/ポーランド立憲王国"
+      note: "ロシア皇帝はポーランド王の称号を保った（1915年まで）"
 
 - id: p3_congress
   name: マゾフシェ北部・ポドラシェ北部・新シュレジエン
@@ -603,6 +774,11 @@
       overlord: russia
       cause: "ウィーン議定書でポーランド立憲王国に"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: russia
+      cause: "一月蜂起の鎮圧後、ポーランド王国の独自の行政機関が廃止され、ロシアの直轄に近い「ヴィスワ地方」となる"
+      source: "https://ja.wikipedia.org/wiki/ポーランド立憲王国"
+      note: "ロシア皇帝はポーランド王の称号を保った（1915年まで）"
 
 - id: bialystok
   name: ビャウィストク地区
@@ -650,6 +826,11 @@
       overlord: russia
       cause: "ウィーン議定書でポーランド立憲王国に"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: russia
+      cause: "一月蜂起の鎮圧後、ポーランド王国の独自の行政機関が廃止され、ロシアの直轄に近い「ヴィスワ地方」となる"
+      source: "https://ja.wikipedia.org/wiki/ポーランド立憲王国"
+      note: "ロシア皇帝はポーランド王の称号を保った（1915年まで）"
 
 - id: krakow
   name: クラクフ
@@ -669,6 +850,10 @@
     - from: 1815
       owner: krakow
       cause: "ウィーン議定書でクラクフ自由市となる（ロシア・プロイセン・オーストリアの保護下）"
+      source: "https://ja.wikipedia.org/wiki/クラクフ自由市"
+    - from: 1846
+      owner: habsburg
+      cause: "クラクフ蜂起の後、オーストリアが併合（クラクフ大公国としてガリツィアに編入）"
       source: "https://ja.wikipedia.org/wiki/クラクフ自由市"
 
 - id: zamosc
@@ -692,6 +877,11 @@
       overlord: russia
       cause: "ウィーン議定書でポーランド立憲王国に"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1867
+      owner: russia
+      cause: "一月蜂起の鎮圧後、ポーランド王国の独自の行政機関が廃止され、ロシアの直轄に近い「ヴィスワ地方」となる"
+      source: "https://ja.wikipedia.org/wiki/ポーランド立憲王国"
+      note: "ロシア皇帝はポーランド王の称号を保った（1915年まで）"
 
 - id: wieliczka
   name: ヴィエリチカ（ヴィスワ川南岸のクラクフ近郊）
@@ -767,6 +957,20 @@
       overlord: german_confederation
       cause: "ドイツ連邦の成立"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1866
+      owner: prussia
+      cause: "普墺戦争でドイツ連邦が解体"
+      source: "https://ja.wikipedia.org/wiki/普墺戦争"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: austrian_silesia
   name: テッシェン（オーストリア領シュレジエン）
@@ -785,6 +989,10 @@
       overlord: german_confederation
       cause: "ドイツ連邦の成立"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1866
+      owner: habsburg
+      cause: "普墺戦争でドイツ連邦が解体"
+      source: "https://ja.wikipedia.org/wiki/普墺戦争"
 
 - id: lusatia
   name: ラウジッツ（ポーランド部分）
@@ -808,6 +1016,20 @@
       overlord: german_confederation
       cause: "ウィーン議定書でラウジッツの大部分をプロイセンに割譲"
       source: "https://ja.wikipedia.org/wiki/ウィーン議定書"
+    - from: 1866
+      owner: prussia
+      cause: "普墺戦争でドイツ連邦が解体"
+      source: "https://ja.wikipedia.org/wiki/普墺戦争"
+    - from: 1867
+      owner: prussia
+      overlord: north_german_confederation
+      cause: "北ドイツ連邦の成立"
+      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
+    - from: 1871
+      owner: german_empire
+      cause: "ドイツ帝国の成立（プロイセン王がドイツ皇帝を兼ねる）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
+      note: "プロイセン王国（ドイツ帝国の構成国）"
 
 - id: ingria
   name: イングリア（インゲルマンランド）
@@ -938,6 +1160,11 @@
       overlord: russia
       certainty: uncertain
       note: "ドン・コサック軍の土地。アゾフはオスマン帝国の要塞（1696–1711 ロシア、1739/1774 ロシア）"
+    - from: 1835
+      owner: russia
+      cause: "ドン・コサック軍統治規程で、ドン・コサック軍の地がロシアの行政に組み込まれる（ドン・コサック軍州）"
+      source: "https://ja.wikipedia.org/wiki/ドン・コサック"
+      note: "コサックの自治は形の上で1920年まで残った。年の選び方は要確認"
 
 - id: azov
   name: アゾフ（ドン川河口）・タガンログ
@@ -1040,6 +1267,10 @@
       owner: ottoman
       cause: "オスマン帝国がアナパ要塞を建設（1829年のアドリアノープル条約までオスマン領）"
       source: "https://en.wikipedia.org/wiki/Anapa"
+    - from: 1829
+      owner: russia
+      cause: "アドリアノープル条約でオスマン帝国がアナパと黒海東岸をロシアに割譲"
+      source: "https://ja.wikipedia.org/wiki/アドリアノープル条約"
 
 - id: circassia
   name: チェルケス（クバン川左岸・黒海東岸）
@@ -1052,6 +1283,15 @@
       owner: circassia
       certainty: uncertain
       note: "チェルケス人の諸部族。オスマン帝国・クリミアが名目上の宗主権を主張"
+    - from: 1829
+      owner: russia
+      certainty: nominal
+      cause: "アドリアノープル条約でオスマン帝国が黒海東岸の権利をロシアに譲る。チェルケス人は服属せず、抵抗を続けた"
+      source: "https://ja.wikipedia.org/wiki/アドリアノープル条約"
+    - from: 1864
+      owner: russia
+      cause: "カフカス戦争の終結。チェルケス人の多くがオスマン帝国へ追放・移住させられた"
+      source: "https://ja.wikipedia.org/wiki/チェルケス人虐殺"
 
 - id: kabarda
   name: カバルダ
@@ -1067,6 +1307,10 @@
       certainty: nominal
       cause: "キュチュク・カイナルジ条約でカバルダのロシア帰属をオスマン帝国が承認"
       source: "https://ja.wikipedia.org/wiki/キュチュク・カイナルジ条約"
+    - from: 1822
+      owner: russia
+      cause: "エルモロフの遠征でカバルダの自立が失われ、ロシアの直接統治に"
+      source: "https://en.wikipedia.org/wiki/Kabarda"
 
 - id: ossetia
   name: オセチア
@@ -1082,6 +1326,11 @@
       certainty: uncertain
       cause: "ウラジカフカス要塞の建設"
       source: "https://ja.wikipedia.org/wiki/ウラジカフカス"
+    - from: 1830
+      owner: russia
+      cause: "ロシアの討伐で山地のオセット人の諸共同体も服属"
+      source: "https://en.wikipedia.org/wiki/Ossetia"
+      note: "年は便宜的（1830年前後の討伐による。要確認）"
 
 - id: chechnya
   name: チェチェン・イングーシ
@@ -1092,6 +1341,16 @@
       owner: null
       certainty: uncertain
       note: "チェチェン人・イングーシ人の諸共同体（国家なし）"
+    - from: 1840
+      owner: caucasian_imamate
+      certainty: uncertain
+      cause: "チェチェン人がロシアに蜂起し、シャミールのイマーム国に加わる"
+      source: "https://ja.wikipedia.org/wiki/コーカサス・イマーム国"
+      note: "テレク川沿いの平地とイングーシの一部はロシアの支配下（ピースの粒度の都合で全体をイマーム国として描く）"
+    - from: 1859
+      owner: russia
+      cause: "シャミールの降伏でイマーム国が滅び、ロシアが北東カフカスを平定"
+      source: "https://ja.wikipedia.org/wiki/イマーム・シャミール"
 
 - id: dagestan
   name: ダゲスタン（山地）
@@ -1107,6 +1366,16 @@
       certainty: uncertain
       cause: "ゴレスターン条約でダゲスタンがロシア領に"
       source: "https://ja.wikipedia.org/wiki/ゴレスターン条約"
+    - from: 1834
+      owner: caucasian_imamate
+      certainty: uncertain
+      cause: "シャミールがイマームとなり、ダゲスタン山地のイマーム国がロシアへの抵抗の中心となる"
+      source: "https://ja.wikipedia.org/wiki/コーカサス・イマーム国"
+      note: "イマーム国の領域は戦況で大きく動いた（1843年ごろが最大）"
+    - from: 1859
+      owner: russia
+      cause: "グニブでシャミールが降伏し、イマーム国が滅ぶ"
+      source: "https://ja.wikipedia.org/wiki/イマーム・シャミール"
 
 - id: dagestan_coast
   name: ダゲスタン沿岸（タルキ・カイタグ）
@@ -1184,6 +1453,11 @@
       overlord: russia
       certainty: uncertain
       note: "ノガイ人の遊牧地（カルムイク・ロシアの影響下）"
+    - from: 1822
+      owner: russia
+      cause: "カフカス州の再編で、ノガイ人の遊牧地がロシアの行政区に組み込まれる"
+      source: "https://en.wikipedia.org/wiki/Nogais"
+      note: "年は便宜的（要確認）"
 
 - id: kalmyk
   name: カルムイク
@@ -1292,6 +1566,15 @@
     - from: 1648
       owner: moldavia
       overlord: ottoman
+    - from: 1859
+      owner: romania
+      overlord: ottoman
+      cause: "モルダヴィアとワラキアが同じ君主（クザ）を選び、連合公国（ルーマニア）となる"
+      source: "https://ja.wikipedia.org/wiki/アレクサンドル・ヨアン・クザ"
+    - from: 1878
+      owner: romania
+      cause: "ベルリン条約でルーマニアの独立が承認される"
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
 
 - id: hotin
   name: ホティン地方
@@ -1323,6 +1606,27 @@
       owner: russia
       cause: "ブカレスト条約でベッサラビアがロシア領に"
       source: "https://ja.wikipedia.org/wiki/ブカレスト条約_(1812年)"
+
+- id: budjak_1856
+  name: 南ベッサラビア（イズマイル・ボルフラド・キリア）
+  select:
+    pieces: [UKR-Bolhrad, UKR-Izmali, UKR-Kiliia, UKR-Reni, UKR-Tatarbunary]
+  timeline:
+    - from: 1856
+      owner: moldavia
+      overlord: ottoman
+      cause: "クリミア戦争後のパリ条約で、ロシアが南ベッサラビアをモルダヴィアに割譲（ドナウ河口からロシアを遠ざける）"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1856年)"
+      note: "ボルフラド（ボルグラード）の帰属は1857年のパリ会議で確定。タタルブナリ郡は境界（ブルナス湖の東〜トラヤヌスの土塁）が郡をまたぐため、面積の大きい側として含めた（要確認）"
+    - from: 1859
+      owner: romania
+      overlord: ottoman
+      cause: "モルダヴィアとワラキアが同じ君主（クザ）を選び、連合公国（ルーマニア）となる"
+      source: "https://ja.wikipedia.org/wiki/アレクサンドル・ヨアン・クザ"
+    - from: 1878
+      owner: russia
+      cause: "ベルリン条約で南ベッサラビアがロシアに戻る（ルーマニアは代わりにドブルジャを得る）"
+      source: "https://ja.wikipedia.org/wiki/ベルリン条約_(1878年)"
 
 - id: crimea
   name: クリミア半島

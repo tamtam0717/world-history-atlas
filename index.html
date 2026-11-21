@@ -25,7 +25,7 @@
         <div id="search" class="search" role="search" hidden>
           <div class="search-box">
             <svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12.6 12.6 17 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-            <input id="search-input" type="search" placeholder="国名・地名（日本語／英語）" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" aria-label="国名・地名で検索" />
+            <input id="search-input" type="search" placeholder="国名・地名・潮流（日本語／英語）" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" aria-label="国名・地名で検索" />
             <button class="search-close" aria-label="閉じる">×</button>
           </div>
           <ul class="search-results" role="listbox"></ul>
@@ -47,6 +47,8 @@
               <dt><kbd>C</kbd>（押している間）</dt><dd>現代の国境と切り替え</dd>
               <dt><kbd>M</kbd></dt><dd>現代の国境の表示を切り替え</dd>
               <dt><kbd>R</kbd></dt><dd>宗教の分布と切り替え（長押しすると離したときに戻る）</dd>
+              <dt><kbd>Y</kbd></dt><dd>言語（民族）の分布と切り替え（長押しも同じ）</dd>
+              <dt><kbd>T</kbd></dt><dd>潮流の年表（スライダーの下の帯）を開く／閉じる</dd>
               <dt><kbd>L</kbd></dt><dd>地名の表示／非表示</dd>
             </dl>
             <dl>
@@ -58,10 +60,10 @@
               <dt><kbd>N</kbd><kbd>A</kbd> / <kbd>A</kbd><kbd>F</kbd> / <kbd>A</kbd><kbd>S</kbd></dt><dd>北米／アフリカ／アジア（続けて押す）</dd>
               <dt><kbd>G</kbd></dt><dd>選択中の国へ移動</dd>
               <dt class="help-sec">その他</dt><dd></dd>
-              <dt><kbd>F</kbd></dt><dd>国名・地名で検索</dd>
+              <dt><kbd>F</kbd></dt><dd>国名・地名・潮流で検索</dd>
               <dt><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>[</kbd> <kbd>]</kbd></dt><dd>戻る／進む（年・国・表示の移動の履歴）</dd>
               <dt><kbd>U</kbd></dt><dd>今の年・国の URL をコピー</dd>
-              <dt><kbd>Esc</kbd></dt><dd>閉じる／選択を解除</dd>
+              <dt><kbd>Esc</kbd></dt><dd>閉じる／選択を解除（国 → 潮流の順）</dd>
               <dt><kbd>?</kbd></dt><dd>この一覧</dd>
             </dl>
           </div>
@@ -87,6 +89,7 @@
           </div>
           <input id="slider" type="range" step="1" aria-label="年のスライダー" />
           <div id="milestone" class="milestone"></div>
+          <div id="mv-band" class="mv-band"></div>
         </div>
         <div class="panel-body">
           <section id="polity" class="card" hidden></section>

@@ -107,6 +107,8 @@ export interface ReligionKind {
   id: string;
   name: string;
   color: string;
+  /** 語族（言語のみ） */
+  family?: string;
 }
 
 export interface ReligionEntry extends Sourced {
@@ -131,6 +133,38 @@ export interface Religion {
   pieceTimelines: ReligionState[][];
 }
 
+/** 言語（民族）の分布（docs/language-format.md）。形は宗教と同じ */
+export type LanguageKind = ReligionKind;
+export type Language = Religion;
+
+/** 分布の主題（宗教・言語）。同じ形のデータを同じ仕組みで描く */
+export type DistKey = "religion" | "language";
+
+// ---- 潮流（docs/movements-format.md） ----
+
+export type MovementKind = "thought" | "art" | "religion" | "system";
+/** [年, 強さ 0〜1] */
+export type CurvePoint = [number, number];
+
+export interface MovementSpread {
+  polities: string[];
+  regions: string[];
+  center: boolean;
+  curve: CurvePoint[];
+}
+
+export interface Movement extends Sourced {
+  id: string;
+  name: string;
+  kind: MovementKind;
+  curve: CurvePoint[];
+  spread: MovementSpread[];
+  people?: string[];
+  works?: string[];
+  events?: string[];
+  text?: string;
+}
+
 export interface Atlas {
   range: [number, number];
   certainty: string[];
@@ -145,6 +179,12 @@ export interface Atlas {
   citiesModern: ModernCity[];
   /** 宗教の分布（古い atlas.json にはない） */
   religion?: Religion;
+  /** 言語の分布（古い atlas.json にはない） */
+  language?: Language;
+  /** 潮流（古い atlas.json にはない） */
+  movements?: Movement[];
+  /** 潮流の spread で使う政治の地域 → ピース index の一覧 */
+  movementRegions?: Record<string, number[]>;
 }
 
 export class AtlasIndex {
@@ -189,6 +229,53 @@ export class AtlasIndex {
     let cur: ReligionEntry | null = null;
     for (const e of r?.timeline ?? []) if (e.from <= year) cur = e;
     return cur;
+  }
+
+  // ---- 分布（宗教・言語）を共通に扱う ----
+  dist(key: DistKey): Religion | undefined {
+    return key === "religion" ? this.atlas.religion : this.atlas.language;
+  }
+
+  distState(key: DistKey, piece: number, year: number): ReligionState | null {
+    return stateAt(this.dist(key)?.pieceTimelines[piece], year);
+  }
+
+  distChangesIn(key: DistKey, year: number): { region: ReligionRegion; prev: ReligionEntry; cur: ReligionEntry }[] {
+    const out: { region: ReligionRegion; prev: ReligionEntry; cur: ReligionEntry }[] = [];
+    for (const r of this.dist(key)?.regions ?? []) {
+      const i = r.timeline.findIndex((e) => e.from === year);
+      if (i > 0) out.push({ region: r, prev: r.timeline[i - 1], cur: r.timeline[i] });
+    }
+    return out;
+  }
+
+  distKind(key: DistKey, id: string | null | undefined): ReligionKind | undefined {
+    return id ? this.dist(key)?.kinds.find((k) => k.id === id) : undefined;
+  }
+
+  distEntry(key: DistKey, region: number, year: number): ReligionEntry | null {
+    const r = this.dist(key)?.regions[region];
+    let cur: ReligionEntry | null = null;
+    for (const e of r?.timeline ?? []) if (e.from <= year) cur = e;
+    return cur;
+  }
+
+  // ---- 潮流 ----
+  movement(id: string | null | undefined): Movement | undefined {
+    return id ? this.atlas.movements?.find((m) => m.id === id) : undefined;
+  }
+
+  /** その年に勢いのある潮流（強い順） */
+  movementsAt(year: number): { m: Movement; v: number }[] {
+    return (this.atlas.movements ?? [])
+      .map((m) => ({ m, v: curveAt(m.curve, year) }))
+      .filter((x) => x.v > 0)
+      .sort((a, b) => b.v - a.v);
+  }
+
+  /** 題名から出来事を探す */
+  eventByTitle(title: string): HistEvent | undefined {
+    return this.atlas.events.find((e) => e.title === title);
   }
 
   /** その年に当てはまる names の項目 */
@@ -283,6 +370,22 @@ export function cityName(c: City, year: number): string {
     if ((n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity)) return n.name;
   }
   return c.name;
+}
+
+/** 強さの曲線の、その年の値（点の間は線形補間、範囲外は 0） */
+export function curveAt(c: CurvePoint[], year: number): number {
+  if (!c.length || year < c[0][0] || year > c[c.length - 1][0]) return 0;
+  for (let i = 1; i < c.length; i++) {
+    const [y1, v1] = c[i];
+    const [y0, v0] = c[i - 1];
+    if (year <= y1) return y1 === y0 ? v1 : v0 + ((v1 - v0) * (year - y0)) / (y1 - y0);
+  }
+  return c[c.length - 1][1];
+}
+
+/** 曲線の最大値 */
+export function curveMax(c: CurvePoint[]): number {
+  return c.reduce((m, p) => Math.max(m, p[1]), 0);
 }
 
 /** 年の昇順の [開始年, ...] の並びから、その年に有効なものを二分探索で探す */

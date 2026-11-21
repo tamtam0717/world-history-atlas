@@ -9,7 +9,7 @@ import polylabel from "polylabel";
 import { feature, merge, mesh, neighbors } from "topojson-client";
 import type { GeometryCollection, MultiPolygon, Polygon, Topology } from "topojson-specification";
 import type { Feature, FeatureCollection, Geometry, MultiPolygon as GeoMultiPolygon } from "geojson";
-import { AtlasIndex, cityCapitalOf, cityName, cityPop, fallbackColor, type ReligionEntry } from "./data";
+import { AtlasIndex, cityCapitalOf, cityName, cityPop, curveAt, fallbackColor, type DistKey, type Movement, type ReligionEntry } from "./data";
 import { assignColors, modernName } from "./modern";
 
 type PieceProps = { id: string; name: string; iso: string; adm1?: string; adm2?: string };
@@ -37,12 +37,22 @@ const LOCAL_FONT = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP"
 /** 帝国の枠として描く上位政体（それ以外の overlord は宗主権として細い点線） */
 const EMPIRE_FRAMES = new Set(["hre", "rhine_confederation", "german_confederation"]);
 
-/** 地図の主題（塗り分けの種類）。言語などを足すときはここに増やす */
-export type MapLayer = "political" | "religion";
+/** 地図の主題（塗り分けの種類）。分布（宗教・言語）を足すときは DistKey にも足す */
+export type MapLayer = "political" | DistKey;
+export const isDist = (l: MapLayer): l is DistKey => l === "religion" || l === "language";
+const DIST_LABEL: Record<DistKey, string> = { religion: "宗教", language: "言語" };
 
-/** 宗教表示でクリックした場所の情報 */
+/** 潮流の種類ごとの色（地図の光・パネルの丸・年表の帯で共通） */
+export const MOVEMENT_COLORS: Record<string, string> = {
+  thought: "#2f6fd0",
+  art: "#c93a7c",
+  religion: "#d08a10",
+  system: "#1f9a6a",
+};
+
+/** 分布（宗教・言語）の表示でクリックした場所の情報 */
 export interface ReligionPick {
-  /** 宗教の地域の番号（atlas.religion.regions）。データがなければ -1 */
+  /** 分布の地域の番号（atlas.religion.regions / atlas.language.regions）。データがなければ -1 */
   region: number;
   /** 現代の地名（ピース名） */
   place: string;
@@ -51,7 +61,7 @@ export interface ReligionPick {
 export interface MapCallbacks {
   onSelect(polityId: string | null): void;
   onPiece?(piece: PieceProps | null): void;
-  /** 宗教表示のときのクリック（何もない所なら null） */
+  /** 分布（宗教・言語）の表示のときのクリック（何もない所なら null） */
   onReligion?(pick: ReligionPick | null): void;
 }
 
@@ -77,6 +87,9 @@ export class AtlasMap {
   private relRegion: Int32Array;
   private relColorOf: (string | null | undefined)[];
   private relSelected = -1;
+  /** 地図上で広がりを見せている潮流 */
+  private movement: Movement | null = null;
+  private mvTimer = 0;
   private baseZoom = 3;
   debug = false;
   bottomInset = 0;
@@ -135,10 +148,10 @@ export class AtlasMap {
     });
 
     this.map.on("click", (e) => {
-      const f = this.map.queryRenderedFeatures(e.point, { layers: [this.layer === "religion" ? "rel-fill" : "fill"] })[0];
+      const f = this.map.queryRenderedFeatures(e.point, { layers: [isDist(this.layer) ? "rel-fill" : "fill"] })[0];
       const i = f ? Number(f.id) : -1;
       if (this.debug) this.cb.onPiece?.(i >= 0 ? this.geoms[i].properties! : null);
-      if (this.layer === "religion") {
+      if (isDist(this.layer)) {
         this.cb.onReligion?.(i >= 0 ? { region: this.relRegion[i], place: this.geoms[i].properties!.name } : null);
         return;
       }
@@ -174,10 +187,12 @@ export class AtlasMap {
     ] as const) {
       map.addImage(`hatch-${name}`, hatchImage(color, size), { pixelRatio: 2 });
     }
-    // 宗教の少数派の斜線（宗教の種類ごとに1枚）
-    (this.idx.atlas.religion?.kinds ?? []).forEach((k, i) => {
-      map.addImage(`rhatch-${i}`, hatchImage(stripeColor(k.color), 8, 0.32), { pixelRatio: 2 });
-    });
+    // 宗教・言語の少数派の斜線（種類ごとに1枚）
+    for (const key of ["religion", "language"] as const) {
+      (this.idx.dist(key)?.kinds ?? []).forEach((k, i) => {
+        map.addImage(`${key}-hatch-${i}`, hatchImage(stripeColor(k.color), 8, 0.32), { pixelRatio: 2 });
+      });
+    }
 
     // ピース（塗りは feature-state "c"、現代版の色は属性 mcolor）
     const fc = feature(this.topo, this.topo.objects.pieces as GeometryCollection<PieceProps>) as unknown as FeatureCollection;
@@ -188,7 +203,7 @@ export class AtlasMap {
       f.properties = { pid: p.id, name: p.name, iso: p.iso, mcolor: mcolors.get(p.iso) };
     });
     map.addSource("pieces", { type: "geojson", data: fc });
-    for (const id of ["borders", "overlords", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes"]) {
+    for (const id of ["borders", "overlords", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes", "mv"]) {
       map.addSource(id, { type: "geojson", data: EMPTY });
     }
     // 川の名前用：細かく曲がる線のままだと線に沿った文字が置けないので、強めに単純化した別のソースを使う
@@ -342,6 +357,63 @@ export class AtlasMap {
       type: "line",
       source: "highlight",
       paint: { "line-color": "#1d1a16", "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1.6, 6, 3] },
+    });
+
+    // 潮流の広がり：地図全体を薄いベールで沈め、盛んな地域を種類の色で光らせる。
+    // 勢い（lvl 0〜1）が強いほど濃く、光のにじみ（ぼかした太い線）も広く明るい。発信地（center）はさらに強く光らせる
+    map.addLayer({
+      id: "mv-veil",
+      type: "fill",
+      source: "pieces",
+      layout: { visibility: "none" },
+      paint: { "fill-color": "#f7f4ee", "fill-opacity": 0.5 },
+    }, "lakes");
+    map.addLayer({
+      id: "mv-fill",
+      type: "fill",
+      source: "mv",
+      paint: {
+        "fill-color": ["get", "color"],
+        "fill-opacity": ["interpolate", ["linear"], ["get", "lvl"], 0, 0.05, 1, 0.6],
+      },
+    });
+    map.addLayer({
+      id: "mv-glow",
+      type: "line",
+      source: "mv",
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": ["get", "color"],
+        "line-opacity": ["interpolate", ["linear"], ["get", "lvl"], 0, 0.1, 1, 0.75],
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, ["+", 2, ["*", 10, ["get", "lvl"]]], 7, ["+", 6, ["*", 26, ["get", "lvl"]]]],
+        "line-blur": ["interpolate", ["linear"], ["zoom"], 2, ["+", 2, ["*", 8, ["get", "lvl"]]], 7, ["+", 6, ["*", 22, ["get", "lvl"]]]],
+      },
+    });
+    map.addLayer({
+      id: "mv-core",
+      type: "line",
+      source: "mv",
+      filter: ["get", "center"],
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": "#fffbe8",
+        "line-opacity": 0.9,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1.2, 7, 2.5],
+        "line-blur": 0.6,
+      },
+    });
+    map.addLayer({
+      id: "mv-center-glow",
+      type: "line",
+      source: "mv",
+      filter: ["get", "center"],
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": ["get", "color"],
+        "line-opacity": 0.8,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 10, 7, 34],
+        "line-blur": ["interpolate", ["linear"], ["zoom"], 2, 9, 7, 30],
+      },
     });
 
     // 海・海峡の名前
@@ -553,7 +625,8 @@ export class AtlasMap {
     this.setData("cities", this.historicCities(year));
     this.map.setFilter("rivers", this.riverFilter(year));
     this.map.setFilter("rivers-label", this.riverFilter(year, 1.2));
-    if (this.layer === "religion") this.renderReligion(year);
+    if (isDist(this.layer)) this.renderReligion(year);
+    this.renderMovement();
     this.renderHighlight();
   }
 
@@ -566,13 +639,13 @@ export class AtlasMap {
     ] as maplibregl.FilterSpecification;
   }
 
-  // ---- 宗教表示 ----
+  // ---- 分布（宗教・言語）の表示 ----
   private renderReligion(year: number) {
-    const rel = this.idx.atlas.religion;
-    const kinds = rel?.kinds ?? [];
+    const key = this.layer as DistKey;
+    const kinds = this.idx.dist(key)?.kinds ?? [];
     const groups = new Map<string, number[]>();
     for (let i = 0; i < this.geoms.length; i++) {
-      const s = this.atlasIdx[i] >= 0 ? this.idx.religionState(this.atlasIdx[i], year) : null;
+      const s = this.atlasIdx[i] >= 0 ? this.idx.distState(key, this.atlasIdx[i], year) : null;
       const main = s ? s[1] : -1;
       this.relMain[i] = main;
       this.relRegion[i] = s ? s[3] : -1;
@@ -582,37 +655,38 @@ export class AtlasMap {
         this.relColorOf[i] = color;
       }
       if (s && s[2] >= 0) {
-        const key = `${s[2]}`;
-        let g = groups.get(key);
-        if (!g) groups.set(key, (g = []));
+        const k = `${s[2]}`;
+        let g = groups.get(k);
+        if (!g) groups.set(k, (g = []));
         g.push(i);
       }
     }
     // 少数派の斜線（同じ minor のピースを結合）
     const hatch: Feature[] = [];
     for (const [minor, ps] of groups) {
-      hatch.push({ type: "Feature", properties: { pat: `rhatch-${minor}` }, geometry: this.merged(`relh${minor}`, ps).geo });
+      hatch.push({ type: "Feature", properties: { pat: `${key}-hatch-${minor}` }, geometry: this.merged(`${key}h${minor}`, ps).geo });
     }
     this.setData("rel-hatch", { type: "FeatureCollection", features: hatch });
 
-    // 宗教の境界（main の違うピースの間と、海岸線）
+    // 宗教・言語の境界（main の違うピースの間と、海岸線）
     const own = this.relMain;
-    const key = "rel" + hashInts(own);
-    let bd = this.meshCache.get(key);
+    const mkey = key + hashInts(own);
+    let bd = this.meshCache.get(mkey);
     if (!bd) {
       const pos = this.posMap();
       const geom = mesh(this.topo, this.topo.objects.pieces as never, (a, b) => a === b || own[pos.get(a)!] !== own[pos.get(b)!]);
       bd = { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geom as Geometry }] };
       if (this.meshCache.size > 300) this.meshCache.clear();
-      this.meshCache.set(key, bd);
+      this.meshCache.set(mkey, bd);
     }
     this.setData("rel-borders", bd);
   }
 
-  /** 地図の主題（政治／宗教）を切り替える */
+  /** 地図の主題（政治／宗教／言語）を切り替える */
   setLayer(layer: MapLayer) {
     if (layer === this.layer) return;
     this.layer = layer;
+    this.relSelected = -1;
     this.tooltip.style.display = "none";
     if (!this.loaded) {
       this.ready.then(() => {
@@ -623,6 +697,17 @@ export class AtlasMap {
     }
     if (this.year) this.render(this.year);
     this.applyModern();
+  }
+
+  private idleWaiting = new Set<() => void>();
+  /** 次に地図の描画が落ち着いたとき（同じ関数は1回だけ） */
+  whenIdle(cb: () => void) {
+    if (!this.loaded || this.idleWaiting.has(cb)) return;
+    this.idleWaiting.add(cb);
+    this.map.once("idle", () => {
+      this.idleWaiting.delete(cb);
+      cb();
+    });
   }
 
   /** 地図を動かし終えたとき（ドラッグ・拡大・移動のアニメーションの終わり） */
@@ -644,13 +729,24 @@ export class AtlasMap {
     return this.layer;
   }
 
-  /** いま宗教表示で描いている main の種類（凡例用。データのないピースがあれば nodata = true） */
-  religionKindsShown(): { kinds: number[]; minors: boolean; nodata: boolean } {
+  /**
+   * いま分布の表示で描いている種類（凡例用。データのないピースがあれば nodata = true）。
+   * onScreen なら、画面に見えているピースだけを数える（地図の準備前は全体）
+   */
+  religionKindsShown(onScreen = false): { kinds: number[]; minors: boolean; nodata: boolean } {
+    const key: DistKey = isDist(this.layer) ? this.layer : "religion";
     const set = new Set<number>();
     let nodata = false;
     let minors = false;
-    for (let i = 0; i < this.geoms.length; i++) {
-      const s = this.atlasIdx[i] >= 0 ? this.idx.religionState(this.atlasIdx[i], this.year) : null;
+    let visible: Iterable<number> | null = null;
+    if (onScreen && this.loaded) {
+      const seen = new Set<number>();
+      for (const f of this.map.queryRenderedFeatures({ layers: ["rel-fill"] })) seen.add(Number(f.id));
+      if (seen.size) visible = seen;
+    }
+    const all = visible ?? this.geoms.keys();
+    for (const i of all) {
+      const s = this.atlasIdx[i] >= 0 ? this.idx.distState(key, this.atlasIdx[i], this.year) : null;
       if (!s || s[1] < 0) {
         nodata = true;
         continue;
@@ -670,9 +766,98 @@ export class AtlasMap {
     this.renderHighlight();
   }
 
-  /** 宗教の地域の、その年の記述 */
+  /** 分布の地域の、その年の記述 */
   religionEntry(region: number): ReligionEntry | null {
-    return this.idx.religionEntry(region, this.year);
+    return isDist(this.layer) ? this.idx.distEntry(this.layer, region, this.year) : null;
+  }
+
+  // ---- 潮流の広がり ----
+  /** 地図上で広がりを見せる潮流（null で解除） */
+  setMovement(m: Movement | null) {
+    if (m === this.movement) return;
+    this.movement = m;
+    if (this.loaded) this.renderMovement();
+    else this.ready.then(() => this.renderMovement());
+  }
+
+  private renderMovement() {
+    if (!this.loaded) return;
+    const m = this.movement;
+    const on = !!m;
+    for (const l of ["mv-veil", "mv-fill", "mv-glow", "mv-core", "mv-center-glow"]) {
+      this.map.setLayoutProperty(l, "visibility", on ? "visible" : "none");
+    }
+    clearInterval(this.mvTimer);
+    this.mvTimer = 0;
+    if (!m) {
+      this.setData("mv", EMPTY);
+      return;
+    }
+    const year = this.year;
+    const n = this.geoms.length;
+    const level = new Float32Array(n);
+    const center = new Uint8Array(n);
+    const regionPieces = this.idx.atlas.movementRegions ?? {};
+    const topoOf = this.topoIndexOfAtlas();
+    for (const sp of m.spread) {
+      const v = curveAt(sp.curve, year);
+      if (v <= 0) continue;
+      const pol = new Set(sp.polities.map((id) => this.idx.polityIndex.get(id)));
+      const apply = (i: number) => {
+        if (v > level[i]) level[i] = v;
+        if (sp.center) center[i] = 1;
+      };
+      if (pol.size) for (let i = 0; i < n; i++) if (pol.has(this.ownerOf[i])) apply(i);
+      for (const r of sp.regions) for (const a of regionPieces[r] ?? []) {
+        const i = topoOf[a];
+        if (i >= 0) apply(i);
+      }
+    }
+    // 勢いを 6 段階にまとめ、同じ段階・発信地かどうかの同じピースを結合する
+    const groups = new Map<string, number[]>();
+    for (let i = 0; i < n; i++) {
+      if (level[i] <= 0) continue;
+      const lvl = Math.max(1, Math.round(level[i] * 6));
+      const k = `${lvl}|${center[i]}`;
+      let g = groups.get(k);
+      if (!g) groups.set(k, (g = []));
+      g.push(i);
+    }
+    const color = MOVEMENT_COLORS[m.kind] ?? "#777";
+    const features: Feature[] = [];
+    for (const [k, ps] of groups) {
+      const [lvl, c] = k.split("|").map(Number);
+      features.push({
+        type: "Feature",
+        properties: { lvl: lvl / 6, center: c === 1, color },
+        geometry: this.merged(`mv${k}`, ps).geo,
+      });
+    }
+    // 弱いものから描いて、強いものを上に重ねる
+    features.sort((a, b) => (a.properties!.lvl as number) - (b.properties!.lvl as number));
+    this.setData("mv", { type: "FeatureCollection", features });
+    // 発信地は、ゆっくり明滅させる（脈打つ光）
+    if (features.some((f) => f.properties!.center)) {
+      const t0 = performance.now();
+      this.mvTimer = window.setInterval(() => {
+        if (document.hidden) return;
+        const ph = (Math.sin(((performance.now() - t0) / 1600) * Math.PI * 2) + 1) / 2;
+        this.map.setPaintProperty("mv-center-glow", "line-opacity", 0.45 + 0.45 * ph);
+      }, 90);
+    }
+  }
+
+  private topoOfAtlasCache: Int32Array | null = null;
+  /** atlas のピース番号 → topo のピース番号 */
+  private topoIndexOfAtlas(): Int32Array {
+    if (!this.topoOfAtlasCache) {
+      const a = new Int32Array(this.idx.atlas.pieceIds.length).fill(-1);
+      this.atlasIdx.forEach((ai, ti) => {
+        if (ai >= 0) a[ai] = ti;
+      });
+      this.topoOfAtlasCache = a;
+    }
+    return this.topoOfAtlasCache;
   }
 
   private posMapCache: Map<unknown, number> | null = null;
@@ -784,7 +969,7 @@ export class AtlasMap {
   private applyModern() {
     const on = this.modernOn;
     const lb = this.labelsOn;
-    const rel = this.layer === "religion";
+    const rel = isDist(this.layer);
     const set = (layers: string[], v: boolean) => {
       for (const l of layers) this.map.setLayoutProperty(l, "visibility", v ? "visible" : "none");
     };
@@ -842,11 +1027,11 @@ export class AtlasMap {
   private renderHighlight() {
     if (!this.loaded) return;
     let geo: GeoMultiPolygon | null = null;
-    if (this.layer === "religion") {
+    if (isDist(this.layer)) {
       const r = this.relSelected;
       const ps: number[] = [];
       if (r >= 0) for (let j = 0; j < this.geoms.length; j++) if (this.relRegion[j] === r) ps.push(j);
-      geo = ps.length ? this.merged(`relsel${r}`, ps).geo : null;
+      geo = ps.length ? this.merged(`${this.layer}sel${r}`, ps).geo : null;
     } else geo = this.selected ? this.polityGeo(this.selected) : null;
     this.setData("highlight", geo ? { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geo }] } : EMPTY);
   }
@@ -984,11 +1169,11 @@ export class AtlasMap {
 
   private hover(point: maplibregl.Point, ev: MouseEvent) {
     if (!this.loaded || (ev as PointerEvent).pointerType === "touch" || matchMedia("(hover: none)").matches) return;
-    const f = this.map.queryRenderedFeatures(point, { layers: [this.layer === "religion" ? "rel-fill" : this.modernOn ? "modern-fill" : "fill"] })[0];
+    const f = this.map.queryRenderedFeatures(point, { layers: [isDist(this.layer) ? "rel-fill" : this.modernOn ? "modern-fill" : "fill"] })[0];
     let text = "";
     if (f) {
       const i = Number(f.id);
-      if (this.layer === "religion") text = this.religionHoverText(i);
+      if (isDist(this.layer)) text = this.religionHoverText(i);
       else if (this.modernOn) text = modernName(this.geoms[i].properties!.iso);
       else if (this.ownerOf[i] >= 0) text = this.idx.polityName(this.idx.atlas.polities[this.ownerOf[i]], this.year);
       if (this.debug) {
@@ -1007,12 +1192,13 @@ export class AtlasMap {
   }
 
   private religionHoverText(i: number): string {
+    const key = this.layer as DistKey;
     const r = this.relRegion[i];
-    const e = r >= 0 ? this.idx.religionEntry(r, this.year) : null;
-    if (!e) return "宗教データ未整備";
-    const kinds = this.idx.atlas.religion!.kinds;
-    const nm = (id: string | null | undefined) => kinds.find((k) => k.id === id)?.name ?? id ?? "";
-    return `${this.idx.atlas.religion!.regions[r].name}：${nm(e.main)}${e.minor ? `（${nm(e.minor)}も多い）` : ""}`;
+    const e = r >= 0 ? this.idx.distEntry(key, r, this.year) : null;
+    if (!e) return `${DIST_LABEL[key]}データ未整備`;
+    const d = this.idx.dist(key)!;
+    const nm = (id: string | null | undefined) => d.kinds.find((k) => k.id === id)?.name ?? id ?? "";
+    return `${d.regions[r].name}：${nm(e.main)}${e.minor ? `（${nm(e.minor)}も多い）` : ""}`;
   }
 
   /** 川と湖を読み込む（地図の初回表示の後に呼ぶ） */

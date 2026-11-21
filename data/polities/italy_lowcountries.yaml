@@ -11,7 +11,8 @@
     - {from: 1806, to: 1809, name: ホラント王国, short: ホラント, kind: 王国（フランスの衛星国）}
     - {from: 1810, to: 1812, name: オランダ（フランス帝国に併合）, kind: フランス帝国の一部}
     - {from: 1813, to: 1814, name: ネーデルラント主権公国, kind: 公国}
-    - {from: 1815, name: ネーデルラント連合王国, kind: 王国}
+    - {from: 1815, to: 1829, name: ネーデルラント連合王国, kind: 王国（ベルギーを含む）}
+    - {from: 1830, name: オランダ王国（ネーデルラント王国）, kind: 王国}
   short: オランダ
   color: "#ee8a4a"
   kind: 共和国
@@ -105,8 +106,26 @@
       title: 主権者公（1813–1815）→ネーデルラント国王（1815–1840）
       from: 1813
       to: 1840
-      note: ウィレム5世の子。1815年からルクセンブルク大公を兼ねる。
+      note: ウィレム5世の子。1815年からルクセンブルク大公を兼ねる。ベルギーの独立を1839年まで認めなかった。1840年に退位。
       source: "https://ja.wikipedia.org/wiki/ウィレム1世_(オランダ王)"
+    - name: ウィレム2世
+      title: オランダ国王・ルクセンブルク大公
+      from: 1840
+      to: 1849
+      note: ワーテルローの戦いで連合軍の部隊を率いた。1848年の革命の波を受けて、自由主義の憲法改正を認めた。
+      source: "https://ja.wikipedia.org/wiki/ウィレム2世_(オランダ王)"
+    - name: ウィレム3世
+      title: オランダ国王・ルクセンブルク大公
+      from: 1849
+      to: 1890
+      note: 男子の後継ぎがなく、死去でオランダとルクセンブルクの同君連合が終わった。
+      source: "https://ja.wikipedia.org/wiki/ウィレム3世_(オランダ王)"
+    - name: ウィルヘルミナ
+      title: オランダ女王
+      from: 1890
+      to: 1948
+      note: 1898年まで母エンマが摂政。
+      source: "https://ja.wikipedia.org/wiki/ウィルヘルミナ_(オランダ女王)"
   periods:
     - from: 1648
       to: 1672
@@ -126,10 +145,109 @@
     - from: 1813
       to: 1815
       text: ナポレオンの敗退後に独立を回復し、ウィレム1世が帰国。ウィーン会議で旧オーストリア領ネーデルラント（ベルギー）を合わせ、ネーデルラント連合王国となった。
+    - from: 1816
+      to: 1829
+      text: 南北を合わせた連合王国。国王ウィレム1世が産業・運河の振興を進めたが、オランダ語の強制やプロテスタント中心の政治に、カトリックでフランス語話者の多い南部（ベルギー）が反発した。
+    - from: 1830
+      to: 1847
+      text: 1830年に南部がベルギーとして独立し、オランダは王国の北半分にもどる。国王は独立を認めず軍を置き続けたが、1839年のロンドン条約で承認し、リンブルフとルクセンブルクの東半分を保った。ジャワ島では強制栽培制度（1830年〜）で植民地から大きな利益を得た。
+    - from: 1848
+      to: 1889
+      text: 1848年の革命の波の中で、トルベッケの起草した憲法で立憲君主制・議院内閣制となる。自由主義の時代で、1863年に植民地の奴隷制を廃止し、強制栽培制度も段階的に廃止された。
+    - from: 1890
+      to: 1914
+      text: 女王ウィルヘルミナが即位し、ルクセンブルクとの同君連合が終わる。スマトラ北部のアチェ戦争（1873–1904ごろ）などで東インドの支配を広げ、20世紀初めには「倫理政策」を掲げた。第一次世界大戦では中立を守った。
   source:
     - "https://ja.wikipedia.org/wiki/ネーデルラント連邦共和国"
     - "https://ja.wikipedia.org/wiki/バタヴィア共和国"
     - "https://ja.wikipedia.org/wiki/ホラント王国"
+    - "https://ja.wikipedia.org/wiki/ネーデルラント連合王国"
+    - "https://ja.wikipedia.org/wiki/オランダの歴史"
+
+- id: belgium
+  name: ベルギー王国
+  short: ベルギー
+  color: "#e6c15c"
+  kind: 王国（立憲君主制）
+  rulers:
+    - name: 臨時政府
+      title: ベルギー臨時政府（集団の統治機関）
+      from: 1830
+      to: 1831
+      note: 1830年9月の蜂起の後に成立し、10月4日に独立を宣言した。シャルル・ロジエらが加わった。
+      source: "https://en.wikipedia.org/wiki/Provisional_Government_of_Belgium"
+    - name: エラスム・シュルレ・ド・ショキエ
+      title: 摂政
+      from: 1831
+      to: 1831
+      note: 国王が決まるまでの摂政（1831年2月〜7月）。
+      source: "https://en.wikipedia.org/wiki/Erasme_Louis_Surlet_de_Chokier"
+    - name: レオポルド1世
+      title: ベルギー国王
+      from: 1831
+      to: 1865
+      note: ドイツのザクセン＝コーブルク家の出身。イギリス王女シャーロットの夫で、ヴィクトリア女王の叔父。
+      source: "https://ja.wikipedia.org/wiki/レオポルド1世_(ベルギー王)"
+    - name: レオポルド2世
+      title: ベルギー国王（1885–1908 コンゴ自由国の元首を兼ねる）
+      from: 1865
+      to: 1909
+      note: コンゴ自由国を私有地として支配し、住民への過酷な強制労働が国際的な非難を浴びた。
+      source: "https://ja.wikipedia.org/wiki/レオポルド2世_(ベルギー王)"
+    - name: アルベール1世
+      title: ベルギー国王
+      from: 1909
+      to: 1934
+      note: 第一次世界大戦ではドイツ軍に抵抗し、イーゼル川の前線で軍を率いた（「騎士王」）。
+      source: "https://ja.wikipedia.org/wiki/アルベール1世_(ベルギー王)"
+  periods:
+    - from: 1830
+      to: 1838
+      text: 1830年、フランス七月革命の影響でブリュッセルで蜂起が起こり、オランダから独立を宣言。ロンドン会議で列強が独立を認め、1831年に当時もっとも自由主義的といわれた憲法を定めて立憲王国となった。オランダはなお独立を認めなかった。
+    - from: 1839
+      to: 1884
+      text: 1839年のロンドン条約でオランダが独立を承認し、列強がベルギーの永世中立を保障した。石炭・鉄鋼をもとに、大陸ヨーロッパでいち早く産業革命が進んだ。カトリック派と自由主義派が交代で政権をになった。
+    - from: 1885
+      to: 1907
+      text: ベルリン会議（1884–85）で国王レオポルド2世の私有地としてコンゴ自由国が認められ、天然ゴムなどの搾取が行われた。国内では労働運動が高まり、1893年に男子普通選挙（複数投票制つき）が実現した。
+    - from: 1908
+      to: 1914
+      text: 国際的な非難を受けて、1908年にコンゴ自由国はベルギー政府の植民地（ベルギー領コンゴ）となった。1914年8月、ドイツ軍が中立を破って侵入し（シュリーフェン計画）、年末までに国土の大部分が占領された。
+  source:
+    - "https://ja.wikipedia.org/wiki/ベルギー"
+    - "https://ja.wikipedia.org/wiki/ベルギー独立革命"
+
+- id: luxembourg
+  name: ルクセンブルク大公国
+  short: ルクセンブルク
+  color: "#8cc7bd"
+  kind: 大公国
+  rulers:
+    - {name: ウィレム1世, title: ルクセンブルク大公（オランダ国王）, from: 1815, to: 1840, source: "https://ja.wikipedia.org/wiki/ウィレム1世_(オランダ王)"}
+    - {name: ウィレム2世, title: ルクセンブルク大公（オランダ国王）, from: 1840, to: 1849, source: "https://ja.wikipedia.org/wiki/ウィレム2世_(オランダ王)"}
+    - {name: ウィレム3世, title: ルクセンブルク大公（オランダ国王）, from: 1849, to: 1890, note: 1850–1879年は弟のヘンドリック王子が大公の代理（総督）として治めた。, source: "https://ja.wikipedia.org/wiki/ウィレム3世_(オランダ王)"}
+    - {name: アドルフ, title: ルクセンブルク大公（ナッサウ＝ヴァイルブルク家）, from: 1890, to: 1905, note: 1866年にプロイセンに併合されたナッサウ公国の元公。ナッサウ家の家門協約により継いだ。, source: "https://en.wikipedia.org/wiki/Adolphe,_Grand_Duke_of_Luxembourg"}
+    - {name: ギヨーム4世, title: ルクセンブルク大公, from: 1905, to: 1912, source: "https://en.wikipedia.org/wiki/William_IV,_Grand_Duke_of_Luxembourg"}
+    - {name: マリー＝アデライド, title: ルクセンブルク女大公, from: 1912, to: 1919, source: "https://en.wikipedia.org/wiki/Marie-Adélaïde,_Grand_Duchess_of_Luxembourg"}
+  periods:
+    - from: 1815
+      to: 1829
+      text: ウィーン会議で大公国となり、オランダ国王が大公を兼ねた（同君連合）。同時にドイツ連邦にも加盟し、首都の要塞にはプロイセン軍が連邦軍として駐留した。
+    - from: 1830
+      to: 1838
+      text: ベルギー独立革命で、首都の要塞を除く大公国のほぼ全域がベルギー側に加わった。
+    - from: 1839
+      to: 1866
+      text: 1839年のロンドン条約で、西のフランス語圏（現ベルギーのリュクサンブール州）をベルギーに譲り、東のドイツ語系の地域だけになる。1842年からドイツ関税同盟に加わった。
+    - from: 1867
+      to: 1889
+      text: ドイツ連邦の解体後、オランダ国王がルクセンブルクをフランスに売ろうとした（ルクセンブルク危機）。1867年のロンドン条約で永世中立国となり、要塞は取り壊され、プロイセン軍も撤退した。製鉄業が発展した。
+    - from: 1890
+      to: 1914
+      text: 女性のウィルヘルミナがオランダ女王になると、男子相続のルクセンブルクではナッサウ＝ヴァイルブルク家のアドルフが大公となり、同君連合が終わった。1914年8月、ドイツ軍が中立を破って占領した。
+  source:
+    - "https://ja.wikipedia.org/wiki/ルクセンブルク"
+    - "https://en.wikipedia.org/wiki/History_of_Luxembourg"
 
 - id: liege
   name: リエージュ司教領
@@ -166,7 +284,8 @@
     - {to: 1797, name: スイス盟約者団（誓約同盟）, kind: 国家連合（13邦）}
     - {from: 1798, to: 1802, name: ヘルヴェティア共和国, short: ヘルヴェティア, kind: 共和国（単一国家。フランスの衛星国）}
     - {from: 1803, to: 1814, name: スイス連邦（盟約者団）, kind: 国家連合（19州。調停期）}
-    - {from: 1815, name: スイス連邦（盟約者団）, kind: 国家連合（22州。永世中立）}
+    - {from: 1815, to: 1847, name: スイス連邦（盟約者団）, kind: 国家連合（22州。永世中立）}
+    - {from: 1848, name: スイス連邦, kind: 連邦国家（22州。永世中立）}
   short: スイス
   color: "#d39a86"
   kind: 国家連合（13邦）
@@ -190,10 +309,22 @@
     - from: 1814
       to: 1815
       text: ウィーン会議でジュネーヴ・ヴァレー・ヌーシャテルが加わって22州となり、永世中立が国際的に認められた。
+    - from: 1816
+      to: 1846
+      text: 22州がゆるやかに結びつく国家連合（1815年の連邦条約）。1830年代から各州で自由主義の改革（「再生」）が進み、自由主義の州と保守的なカトリックの州の対立が深まった。
+    - from: 1847
+      to: 1848
+      text: 保守的なカトリック7州が分離同盟（ゾンダーブント）を結び、1847年の分離同盟戦争（内戦）で連邦軍に敗れた。1848年に新憲法を定め、首都をベルンとする連邦国家となった。
+    - from: 1849
+      to: 1914
+      text: 連邦国家として、関税・通貨・郵便を統一し、鉄道（1882年ゴッタルド鉄道トンネル）と観光・工業で発展した。1864年に赤十字国際委員会の主導でジュネーヴ条約が結ばれた。1874年の憲法改正で国民投票（レファレンダム）が導入され、直接民主制が広がった。第一次世界大戦では中立を守った。
+  note: 1848年からの連邦国家では、7人の連邦参事会（内閣）が集団で元首の役を担い、連邦大統領は1年交代のため君主の欄には書かない。
   source:
     - "https://ja.wikipedia.org/wiki/旧スイス連邦"
     - "https://ja.wikipedia.org/wiki/ヘルヴェティア共和国"
     - "https://ja.wikipedia.org/wiki/調停法"
+    - "https://ja.wikipedia.org/wiki/分離同盟戦争"
+    - "https://ja.wikipedia.org/wiki/スイス"
 
 - id: graubunden
   name: グラウビュンデン（三同盟）
@@ -260,6 +391,7 @@
     - {name: フリードリヒ・ヴィルヘルム3世, title: ヌーシャテル公（プロイセン王）, from: 1797, to: 1806, source: "https://ja.wikipedia.org/wiki/フリードリヒ・ヴィルヘルム3世_(プロイセン王)"}
     - {name: ベルティエ, title: ヌーシャテル公（ナポレオンの元帥）, from: 1806, to: 1814, source: "https://en.wikipedia.org/wiki/Louis-Alexandre_Berthier"}
     - {name: フリードリヒ・ヴィルヘルム3世, title: ヌーシャテル公（プロイセン王）, from: 1814, to: 1840, source: "https://ja.wikipedia.org/wiki/フリードリヒ・ヴィルヘルム3世_(プロイセン王)"}
+    - {name: フリードリヒ・ヴィルヘルム4世, title: ヌーシャテル公（プロイセン王）, from: 1840, to: 1848, note: 1848年の革命で共和国が宣言され、実際の支配を失った。1857年のパリ条約で権利を正式に放棄した。, source: "https://ja.wikipedia.org/wiki/フリードリヒ・ヴィルヘルム4世_(プロイセン王)"}
   periods:
     - from: 1648
       to: 1706
@@ -270,6 +402,9 @@
     - from: 1806
       to: 1815
       text: 1806年にプロイセンがナポレオンに譲り、元帥ベルティエの公国となる。1814年にプロイセン王のもとに戻り、1815年にスイスの州となった（プロイセン王の公国でもある状態が1857年まで続く）。
+    - from: 1816
+      to: 1857
+      text: スイスの州でありながらプロイセン王の公国でもあった。1848年3月の革命で共和国が宣言され、王党派の反乱（1856年）をめぐってプロイセンとスイスが戦争寸前になった（ヌーシャテル事件）。1857年のパリ条約でプロイセン王が権利を放棄した。
   source:
     - "https://en.wikipedia.org/wiki/Principality_of_Neuchâtel"
 
@@ -303,6 +438,8 @@
     - {name: フランツ・ヨーゼフ1世, title: リヒテンシュタイン侯, from: 1772, to: 1781, source: "https://en.wikipedia.org/wiki/Franz_Joseph_I,_Prince_of_Liechtenstein"}
     - {name: アロイス1世, title: リヒテンシュタイン侯, from: 1781, to: 1805, source: "https://en.wikipedia.org/wiki/Aloys_I,_Prince_of_Liechtenstein"}
     - {name: ヨハン1世ヨーゼフ, title: リヒテンシュタイン侯, from: 1805, to: 1836, source: "https://en.wikipedia.org/wiki/Johann_I_Joseph,_Prince_of_Liechtenstein"}
+    - {name: アロイス2世, title: リヒテンシュタイン侯, from: 1836, to: 1858, source: "https://en.wikipedia.org/wiki/Aloys_II,_Prince_of_Liechtenstein"}
+    - {name: ヨハン2世, title: リヒテンシュタイン侯, from: 1858, to: 1929, note: 在位71年。, source: "https://en.wikipedia.org/wiki/Johann_II,_Prince_of_Liechtenstein"}
   periods:
     - from: 1648
       to: 1718
@@ -310,6 +447,9 @@
     - from: 1719
       to: 1815
       text: 1719年、皇帝が二つの所領をあわせてリヒテンシュタイン侯国とした。1806年にライン同盟、1815年にドイツ連邦に加わる。
+    - from: 1816
+      to: 1914
+      text: ドイツ連邦の加盟国（1866年の解体まで）。1852年にオーストリアと関税同盟を結び、オーストリアと強く結びついた。1862年に憲法を定め、1868年に軍隊を廃止した。
   note: 1712年より前は小さな帝国伯領（君主は省略）。侯家の当主は主にウィーンに住んだ。
   source:
     - "https://ja.wikipedia.org/wiki/リヒテンシュタイン"
@@ -357,8 +497,26 @@
       title: サルデーニャ王
       from: 1802
       to: 1821
-      note: 1814年までサルデーニャ島だけを治めた。
+      note: 1814年までサルデーニャ島だけを治めた。1821年のピエモンテ革命で退位した。
       source: "https://ja.wikipedia.org/wiki/ヴィットーリオ・エマヌエーレ1世"
+    - name: カルロ・フェリーチェ
+      title: サルデーニャ王
+      from: 1821
+      to: 1831
+      note: 兄ヴィットーリオ・エマヌエーレ1世の退位で即位。オーストリア軍の助けで革命を鎮圧した。
+      source: "https://en.wikipedia.org/wiki/Charles_Felix_of_Sardinia"
+    - name: カルロ・アルベルト
+      title: サルデーニャ王
+      from: 1831
+      to: 1849
+      note: 分家のカリニャーノ家の出身。1848年に憲法（アルベルト憲章）を定め、オーストリアと戦ったが、1849年のノヴァーラの戦いに敗れて退位した。
+      source: "https://en.wikipedia.org/wiki/Charles_Albert_of_Sardinia"
+    - name: ヴィットーリオ・エマヌエーレ2世
+      title: サルデーニャ王（1861年からイタリア国王）
+      from: 1849
+      to: 1861
+      note: 首相カヴールとともにイタリア統一を進めた。1861年からは italy（イタリア王国）の欄を参照。
+      source: "https://ja.wikipedia.org/wiki/ヴィットーリオ・エマヌエーレ2世"
   periods:
     - from: 1648
       to: 1712
@@ -375,9 +533,59 @@
     - from: 1814
       to: 1815
       text: ウィーン会議でピエモンテ・サヴォイア・ニースを回復し、旧ジェノヴァ共和国も獲得した。のちのイタリア統一の中心となる。
+    - from: 1816
+      to: 1847
+      text: 復古王政の保守的な王国。1821年にカルボナリ・自由主義の軍人の革命が起きたが、オーストリア軍の介入で鎮圧された。
+    - from: 1848
+      to: 1849
+      text: 国王カルロ・アルベルトがアルベルト憲章（憲法）を定め、ミラノ・ヴェネツィアの蜂起に応えてオーストリアと戦った（第1次イタリア独立戦争）。クストーツァ（1848）・ノヴァーラ（1849）で敗れ、国王は退位した。
+    - from: 1850
+      to: 1858
+      text: 憲法を保った唯一のイタリアの国として、統一運動（リソルジメント）の中心となる。首相カヴール（1852年〜）が鉄道・産業を整え、クリミア戦争に参戦してパリ講和会議でイタリア問題を訴えた。1858年、プロンビエールの密約でフランスのナポレオン3世と同盟した。
+    - from: 1859
+      to: 1861
+      text: フランスとともにオーストリアと戦い（イタリア統一戦争）、1859年にロンバルディアを得た。1860年にはサヴォイア・ニースをフランスに譲るかわりに中部イタリアを併合し、ガリバルディ（千人隊）が征服した両シチリア王国、マルケ・ウンブリアも住民投票で合わせた。1861年3月、イタリア王国となった。
   source:
     - "https://ja.wikipedia.org/wiki/サヴォイア公国"
     - "https://ja.wikipedia.org/wiki/サルデーニャ王国"
+    - "https://ja.wikipedia.org/wiki/イタリア統一運動"
+
+- id: italy
+  name: イタリア王国
+  short: イタリア
+  color: "#a5cf8c"
+  kind: 王国（立憲君主制）
+  rulers:
+    - name: ヴィットーリオ・エマヌエーレ2世
+      title: イタリア国王
+      from: 1861
+      to: 1878
+      note: 1849年からサルデーニャ王。「祖国の父」と呼ばれる。
+      source: "https://ja.wikipedia.org/wiki/ヴィットーリオ・エマヌエーレ2世"
+    - name: ウンベルト1世
+      title: イタリア国王
+      from: 1878
+      to: 1900
+      note: 1900年、モンツァで無政府主義者に暗殺された。
+      source: "https://ja.wikipedia.org/wiki/ウンベルト1世"
+    - name: ヴィットーリオ・エマヌエーレ3世
+      title: イタリア国王
+      from: 1900
+      to: 1946
+      source: "https://ja.wikipedia.org/wiki/ヴィットーリオ・エマヌエーレ3世"
+  periods:
+    - from: 1861
+      to: 1870
+      text: 1861年3月、トリノで最初のイタリア議会が開かれ、イタリア王国が成立した（首都はトリノ、1865年からフィレンツェ）。まだヴェネツィアとローマを欠き、「未回収」だった。1866年にプロイセンと結んでオーストリアと戦い（普墺戦争）、ヴェネトを得た。1870年、普仏戦争でフランス軍が引き上げたすきにローマを占領し、翌年首都とした。
+    - from: 1871
+      to: 1895
+      text: 統一後も、豊かな北部と貧しい南部の格差（南部問題）、山賊の反乱、教皇との対立（ローマ問題）が続いた。1882年にドイツ・オーストリアと三国同盟を結び、紅海沿岸のエリトリア・ソマリアに植民地を得た。南部やヴェネトから南北アメリカへの移民が急増した。
+    - from: 1896
+      to: 1914
+      text: 1896年にエチオピアのアドワの戦いで大敗した。20世紀初めの首相ジョリッティのもとで北部の工業化と選挙権の拡大（1912年に男子普通選挙に近い法）が進んだ。1911–12年のイタリア＝トルコ戦争でリビアとドデカネス諸島を得た。オーストリアに残るトレンティーノ・トリエステの回復を求める「未回収のイタリア」の運動が続き、1914年の第一次世界大戦では三国同盟から離れて中立を宣言した。
+  source:
+    - "https://ja.wikipedia.org/wiki/イタリア王国"
+    - "https://ja.wikipedia.org/wiki/イタリア統一運動"
 
 - id: genoa
   name: ジェノヴァ共和国
@@ -552,7 +760,8 @@
     - {name: リナルド・デステ, title: モデナ公, from: 1694, to: 1737, source: "https://en.wikipedia.org/wiki/Rinaldo_d'Este,_Duke_of_Modena"}
     - {name: フランチェスコ3世・デステ, title: モデナ公, from: 1737, to: 1780, source: "https://en.wikipedia.org/wiki/Francesco_III_d'Este,_Duke_of_Modena"}
     - {name: エルコレ3世・デステ, title: モデナ公, from: 1780, to: 1796, note: 1796年にナポレオン軍に追われ、1803年に亡命先で没した。, source: "https://en.wikipedia.org/wiki/Ercole_III_d'Este,_Duke_of_Modena"}
-    - {name: フランチェスコ4世, title: モデナ公（ハプスブルク＝エステ家）, from: 1814, to: 1846, source: "https://en.wikipedia.org/wiki/Francis_IV,_Duke_of_Modena"}
+    - {name: フランチェスコ4世, title: モデナ公（ハプスブルク＝エステ家）, from: 1814, to: 1846, note: 1829年に母マリア・ベアトリーチェからマッサ・カッラーラ公国を相続した。, source: "https://en.wikipedia.org/wiki/Francis_IV,_Duke_of_Modena"}
+    - {name: フランチェスコ5世, title: モデナ公, from: 1846, to: 1859, note: 1859年6月に亡命し、1860年の住民投票でモデナはサルデーニャ王国に併合された。, source: "https://en.wikipedia.org/wiki/Francis_V,_Duke_of_Modena"}
   periods:
     - from: 1648
       to: 1795
@@ -563,6 +772,9 @@
     - from: 1814
       to: 1815
       text: エステ家の血を引くハプスブルク家のフランチェスコ4世が公位につき、オーストリアの強い影響下に置かれた。
+    - from: 1816
+      to: 1859
+      text: オーストリアの保護下の保守的な公国。1831年にメノッティらの蜂起（カルボナリ）が起こったがオーストリア軍に鎮圧された。1829年にマッサ・カッラーラ、1847年にグアスタッラとルニジャーナの一部を得た。1859年のイタリア統一戦争で公は亡命し、1860年にサルデーニャ王国に併合された。
   source:
     - "https://ja.wikipedia.org/wiki/モデナ・レッジョ公国"
 
@@ -579,6 +791,9 @@
     - {name: フィリッポ, title: パルマ・ピアチェンツァ公（ブルボン＝パルマ家）, from: 1748, to: 1765, source: "https://en.wikipedia.org/wiki/Philip,_Duke_of_Parma"}
     - {name: フェルディナンド, title: パルマ・ピアチェンツァ公, from: 1765, to: 1802, source: "https://en.wikipedia.org/wiki/Ferdinand,_Duke_of_Parma"}
     - {name: マリア・ルイジア（マリー・ルイーズ）, title: パルマ女公, from: 1814, to: 1847, note: ナポレオンの2番目の皇后。ハプスブルク家出身。, source: "https://en.wikipedia.org/wiki/Marie_Louise_of_Austria"}
+    - {name: カルロ2世, title: パルマ公（ブルボン＝パルマ家。もとルッカ公カルロ・ロドヴィーコ）, from: 1847, to: 1849, note: 1848年の革命で国を離れ、1849年に退位した。, source: "https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Parma"}
+    - {name: カルロ3世, title: パルマ公, from: 1849, to: 1854, note: 1854年に暗殺された。, source: "https://en.wikipedia.org/wiki/Charles_III,_Duke_of_Parma"}
+    - {name: ロベルト1世, title: パルマ公, from: 1854, to: 1859, note: 幼少のため母ルイーズ・マリー（フランス王家の出身）が摂政。1859年に亡命した。, source: "https://en.wikipedia.org/wiki/Robert_I,_Duke_of_Parma"}
   periods:
     - from: 1648
       to: 1730
@@ -592,6 +807,12 @@
     - from: 1802
       to: 1813
       text: フェルディナンドの死後、フランスが接収し、1808年に正式に併合（ターロ県）。
+    - from: 1814
+      to: 1847
+      text: ウィーン会議で、ナポレオンの皇后だったマリー・ルイーズ（ハプスブルク家）が一代かぎりの女公となった。比較的穏やかな統治だった。
+    - from: 1847
+      to: 1859
+      text: マリー・ルイーズの死後、ルッカ公だったブルボン＝パルマ家のカルロ2世が戻った。1848年の革命と公の暗殺（1854年）で揺れ、1859年のイタリア統一戦争で摂政ルイーズ・マリーが亡命し、1860年にサルデーニャ王国に併合された。
   source:
     - "https://ja.wikipedia.org/wiki/パルマ公国"
 
@@ -605,6 +826,8 @@
   kind: 共和国
   rulers:
     - {name: エリザ・ボナパルト, title: ルッカ・ピオンビーノ女公（1809年からトスカーナ大公妃を兼ねる）, from: 1805, to: 1814, note: ナポレオンの妹。夫フェリーチェ・バチョッキと共同で統治した。, source: "https://en.wikipedia.org/wiki/Elisa_Bonaparte"}
+    - {name: マリア・ルイーザ, title: ルッカ女公（スペイン・ブルボン家。もとエトルリア王妃）, from: 1815, to: 1824, note: 1817年までオーストリアの暫定統治で、実際の統治は1817年から。, source: "https://en.wikipedia.org/wiki/Maria_Luisa_of_Spain,_Duchess_of_Lucca"}
+    - {name: カルロ・ロドヴィーコ, title: ルッカ公, from: 1824, to: 1847, note: 1847年にルッカをトスカーナに譲り、パルマ公カルロ2世となった。, source: "https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Parma"}
   periods:
     - from: 1648
       to: 1798
@@ -615,6 +838,9 @@
     - from: 1815
       to: 1815
       text: ウィーン会議で、エトルリア王国の旧王妃マリア・ルイーザ（スペイン・ブルボン家）の公国とされた（実際の統治は1817年から）。
+    - from: 1816
+      to: 1847
+      text: ブルボン家のルッカ公国。ウィーン議定書の取り決めにより、マリー・ルイーズの死でパルマが空くと、ルッカ公はパルマへ移り、ルッカはトスカーナに併合されることになっていた。1847年、予定より少し早くトスカーナに併合された。
   source:
     - "https://ja.wikipedia.org/wiki/ルッカ共和国"
     - "https://en.wikipedia.org/wiki/Principality_of_Lucca_and_Piombino"
@@ -632,6 +858,8 @@
     - {name: ピエトロ・レオポルド, title: トスカーナ大公（のちの皇帝レオポルト2世）, from: 1765, to: 1790, source: "https://ja.wikipedia.org/wiki/レオポルト2世_(神聖ローマ皇帝)"}
     - {name: フェルディナンド3世, title: トスカーナ大公, from: 1790, to: 1801, note: 1799年にフランス軍に追われ、リュネヴィル条約で正式に退位。1803年にザルツブルク選帝侯、1806年にヴュルツブルク大公。, source: "https://ja.wikipedia.org/wiki/フェルディナンド3世_(トスカーナ大公)"}
     - {name: フェルディナンド3世, title: トスカーナ大公（復位）, from: 1814, to: 1824, source: "https://ja.wikipedia.org/wiki/フェルディナンド3世_(トスカーナ大公)"}
+    - {name: レオポルド2世, title: トスカーナ大公, from: 1824, to: 1859, note: 1849年2月〜7月は革命で国を離れた。1859年4月に再び亡命し、7月に退位した。, source: "https://en.wikipedia.org/wiki/Leopold_II,_Grand_Duke_of_Tuscany"}
+    - {name: フェルディナンド4世, title: トスカーナ大公（名目のみ）, from: 1859, to: 1860, note: 父の退位で継いだが、一度も国に戻れなかった。, source: "https://en.wikipedia.org/wiki/Ferdinand_IV,_Grand_Duke_of_Tuscany"}
   periods:
     - from: 1648
       to: 1736
@@ -648,6 +876,12 @@
     - from: 1814
       to: 1815
       text: フェルディナンド3世が復位した。
+    - from: 1816
+      to: 1858
+      text: ハプスブルク＝ロートリンゲン家の大公のもとで、イタリアの中では比較的寛容で穏やかな統治が行われた。1847年にルッカを併合。1848年の革命で憲法を認め、1849年には大公が一時亡命して共和政府が成立したが、オーストリア軍の介入で復位した。
+    - from: 1859
+      to: 1860
+      text: 1859年4月、イタリア統一戦争の始まりとともにフィレンツェで市民が立ち上がり、大公は亡命。リカーゾリの臨時政府が治め、1860年3月の住民投票でサルデーニャ王国に併合された。
   source:
     - "https://ja.wikipedia.org/wiki/トスカーナ大公国"
 
@@ -672,6 +906,13 @@
     - {name: クレメンス14世, title: ローマ教皇, from: 1769, to: 1774, note: 1773年にイエズス会を解散させた。, source: "https://en.wikipedia.org/wiki/Pope_Clement_XIV"}
     - {name: ピウス6世, title: ローマ教皇, from: 1775, to: 1799, note: 1798年にフランス軍に連れ去られ、1799年にフランスのヴァランスで没した。, source: "https://en.wikipedia.org/wiki/Pope_Pius_VI"}
     - {name: ピウス7世, title: ローマ教皇, from: 1800, to: 1823, note: 1801年にナポレオンとコンコルダート（宗教協約）を結んだが、1809年から1814年までフランスに幽閉された。, source: "https://en.wikipedia.org/wiki/Pope_Pius_VII"}
+    - {name: レオ12世, title: ローマ教皇, from: 1823, to: 1829, source: "https://en.wikipedia.org/wiki/Pope_Leo_XII"}
+    - {name: ピウス8世, title: ローマ教皇, from: 1829, to: 1830, source: "https://en.wikipedia.org/wiki/Pope_Pius_VIII"}
+    - {name: グレゴリウス16世, title: ローマ教皇, from: 1831, to: 1846, note: 即位直後の1831年に中部イタリアで革命が起き、オーストリア軍の介入で鎮圧された。, source: "https://en.wikipedia.org/wiki/Pope_Gregory_XVI"}
+    - {name: ピウス9世, title: ローマ教皇（1870年まで教皇領の君主）, from: 1846, to: 1878, note: 初めは自由主義的な改革で期待を集めたが、1848年の革命でローマを逃れて以後は保守に転じた。1870年に教皇領を失い、「ヴァチカンの囚人」を名のってイタリア王国と対立した。1869–70年に第1ヴァチカン公会議を開き、教皇不可謬を定めた。, source: "https://en.wikipedia.org/wiki/Pope_Pius_IX"}
+    - {name: レオ13世, title: ローマ教皇（教皇領なし）, from: 1878, to: 1903, note: 1891年の回勅「レールム・ノヴァールム」で労働問題についての教会の立場を示した。, source: "https://en.wikipedia.org/wiki/Pope_Leo_XIII"}
+    - {name: ピウス10世, title: ローマ教皇（教皇領なし）, from: 1903, to: 1914, source: "https://en.wikipedia.org/wiki/Pope_Pius_X"}
+    - {name: ベネディクトゥス15世, title: ローマ教皇（教皇領なし）, from: 1914, to: 1922, source: "https://en.wikipedia.org/wiki/Pope_Benedict_XV"}
   periods:
     - from: 1648
       to: 1795
@@ -688,9 +929,22 @@
     - from: 1814
       to: 1815
       text: ウィーン会議でマルケとレガツィオーネを含む教皇領が回復された。
+    - from: 1816
+      to: 1848
+      text: 聖職者が行政を独占する保守的な統治に、北のボローニャ・ロマーニャなどで不満が強く、1831年に革命が起きた。オーストリア軍がボローニャに、フランス軍がアンコーナに駐留した（1832–1838）。
+    - from: 1849
+      to: 1859
+      text: 1848年の革命で教皇ピウス9世はローマを逃れ、1849年2月にマッツィーニらのローマ共和国が成立したが、7月にフランス軍が攻め落とした。以後、ローマにはフランス軍が、ボローニャなど北部にはオーストリア軍が駐留して教皇を守った。
+    - from: 1860
+      to: 1870
+      text: 1859–60年に、ロマーニャ・レガツィオーネ、ついでマルケ・ウンブリアがサルデーニャ王国（イタリア）に併合され、教皇領はローマ周辺のラツィオだけになった。フランス軍の保護で残ったが、1870年9月、普仏戦争でフランス軍が去るとイタリア軍がローマを占領し、教皇領は消滅した。
+    - from: 1871
+      to: 1914
+      text: 教皇は領土を失い、ヴァチカン宮殿に閉じこもってイタリア王国を認めなかった（ローマ問題。1929年のラテラノ条約で解決）。カトリック教徒に国政選挙への参加を禁じた。
   source:
     - "https://ja.wikipedia.org/wiki/教皇領"
     - "https://ja.wikipedia.org/wiki/ローマ教皇の一覧"
+    - "https://ja.wikipedia.org/wiki/ローマ問題"
 
 - id: san_marino
   name: サンマリノ共和国
@@ -701,6 +955,9 @@
     - from: 1648
       to: 1815
       text: ティターノ山の上の小さな共和国。1739–1740年に教皇特使アルベローニに一時占領されたが独立を回復し、ナポレオンも独立を尊重した。
+    - from: 1816
+      to: 1914
+      text: 1849年、ローマ共和国の崩壊後に逃れてきたガリバルディをかくまった。イタリア統一の後も独立を保ち、1862年にイタリア王国と友好条約を結んだ。
   source:
     - "https://ja.wikipedia.org/wiki/サンマリノ"
 
@@ -710,6 +967,7 @@
   name: ナポリ王国
   names:
     - {from: 1806, to: 1814, name: シチリア王国（ブルボン家）, short: シチリア, kind: 王国（本土を失いシチリア島だけを統治）}
+    - {from: 1816, name: 両シチリア王国, short: 両シチリア, kind: 王国}
   short: ナポリ
   color: "#9fc4d0"
   kind: 王国（シチリア王国と同君連合）
@@ -728,8 +986,11 @@
       title: ナポリ王・シチリア王（1816年から両シチリア王フェルディナンド1世）
       from: 1759
       to: 1825
-      note: 1806年から1815年まではシチリア島だけを治めた。王妃マリア・カロリーナ（マリア・テレジアの娘）が実権を握った。
+      note: 1806年から1815年まではシチリア島だけを治めた。王妃マリア・カロリーナ（マリア・テレジアの娘）が実権を握った。1820年の革命で憲法を認めたが、オーストリア軍の介入で撤回した。
       source: "https://ja.wikipedia.org/wiki/フェルディナンド1世_(両シチリア王)"
+    - {name: フランチェスコ1世, title: 両シチリア王, from: 1825, to: 1830, source: "https://en.wikipedia.org/wiki/Francis_I_of_the_Two_Sicilies"}
+    - {name: フェルディナンド2世, title: 両シチリア王, from: 1830, to: 1859, note: 1848年の革命の鎮圧でメッシーナを砲撃し、「砲弾王（レ・ボンバ）」とあだ名された。, source: "https://en.wikipedia.org/wiki/Ferdinand_II_of_the_Two_Sicilies"}
+    - {name: フランチェスコ2世, title: 両シチリア王, from: 1859, to: 1861, note: 1860年にガリバルディにナポリを追われ、ガエータ要塞で抵抗したが1861年2月に降伏した。, source: "https://en.wikipedia.org/wiki/Francis_II_of_the_Two_Sicilies"}
   periods:
     - from: 1648
       to: 1706
@@ -746,9 +1007,19 @@
     - from: 1806
       to: 1815
       text: ナポレオンに本土を奪われ、国王はシチリア島に逃れてイギリス海軍に守られた。1815年に本土を回復し、翌年両シチリア王国となる。
+    - from: 1816
+      to: 1847
+      text: ナポリとシチリアを一つにまとめた両シチリア王国（首都ナポリ）。1820年にカルボナリの革命が起きたが、オーストリア軍の介入（ライバッハ会議）で鎮圧された。シチリアではナポリ支配への反発が強かった。
+    - from: 1848
+      to: 1859
+      text: 1848年1月のパレルモ蜂起がヨーロッパの1848年革命の先がけとなり、シチリアは1849年5月まで独立政府を保った。鎮圧後は専制が強まり、イギリスの政治家グラッドストンに「神の否定」と非難された。
+    - from: 1860
+      to: 1861
+      text: 1860年5月、ガリバルディの千人隊（赤シャツ隊）がシチリアに上陸し、9月にナポリに入った。10月の住民投票でサルデーニャ王国への併合が決まり、1861年2月にガエータ要塞が降伏して王国は滅んだ。
   source:
     - "https://ja.wikipedia.org/wiki/ナポリ王国"
     - "https://ja.wikipedia.org/wiki/シチリア王国"
+    - "https://ja.wikipedia.org/wiki/両シチリア王国"
 
 - id: malta
   name: 聖ヨハネ騎士団（マルタ騎士団）
@@ -879,3 +1150,33 @@
       text: フランス軍がナポリ王国の本土を占領し、ナポレオンの兄ジョゼフ、ついで義弟ミュラを王とした。封建制の廃止などの改革が行われた。ミュラは1815年にイタリア統一を呼びかけてオーストリアと戦い、敗れて王位を失った。
   source:
     - "https://en.wikipedia.org/wiki/Kingdom_of_Naples_(Napoleonic)"
+
+# ================================================================ 1848年革命のイタリアの国々
+
+- id: san_marco_republic
+  name: サン・マルコ共和国（ヴェネツィア共和国）
+  short: サン・マルコ共和国
+  color: "#e9b98b"
+  kind: 共和国（1848年革命）
+  rulers:
+    - {name: ダニエーレ・マニン, title: 大統領, from: 1848, to: 1849, source: "https://en.wikipedia.org/wiki/Daniele_Manin"}
+  periods:
+    - from: 1848
+      to: 1849
+      text: 1848年3月、ヴェネツィアでマニンらがオーストリア軍を追い出して共和国を宣言した。オーストリア軍の包囲と砲撃、コレラに耐えたが、1849年8月に降伏した。
+  source:
+    - "https://en.wikipedia.org/wiki/Republic_of_San_Marco"
+
+- id: sicily_1848
+  name: シチリア王国（1848年革命）
+  short: シチリア
+  color: "#bcd8e2"
+  kind: 王国（革命政府。国王は不在）
+  rulers:
+    - {name: ルッジェーロ・セッティモ, title: 臨時政府の首班（王国の摂政）, from: 1848, to: 1849, note: 議会はサルデーニャ王家のジェノヴァ公を国王に選んだが、ジェノヴァ公は受けなかった。, source: "https://en.wikipedia.org/wiki/Ruggero_Settimo"}
+  periods:
+    - from: 1848
+      to: 1849
+      text: 1848年1月12日のパレルモ蜂起でブルボン家の軍を追い出し、ナポリから独立した王国を宣言した。1848年9月にメッシーナが砲撃の末に奪い返され、1849年5月にパレルモが降伏して終わった。
+  source:
+    - "https://en.wikipedia.org/wiki/Sicilian_revolution_of_1848"
