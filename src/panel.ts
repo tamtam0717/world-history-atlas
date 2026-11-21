@@ -29,7 +29,43 @@ export class Panel {
     private onPolity: (id: string | null) => void,
     private onYear: (year: number) => void = () => {},
     private onMovement: (id: string | null) => void = () => {},
+    /** 変化の行にマウスを乗せた／押したとき、その地域群を地図で強調する（null で解除） */
+    private onRegions: (kind: "political" | DistKey, regions: number[] | null) => void = () => {},
   ) {
+    // 変化の行（まとめた行も）：マウスを乗せると地図で強調、押すと強調を固定（もう一度押すと解除）
+    let pinned: HTMLElement | null = null;
+    const regionsOf = (el: Element) => ({
+      kind: el.getAttribute("data-rkind") as "political" | DistKey,
+      ids: el.getAttribute("data-regions")!.split(",").map(Number),
+    });
+    const show = (el: Element | null) => {
+      if (el) {
+        const r = regionsOf(el);
+        this.onRegions(r.kind, r.ids);
+      } else if (pinned && pinned.isConnected) show(pinned);
+      else this.onRegions("political", null);
+    };
+    eventsEl.addEventListener("mouseover", (e) => {
+      const el = (e.target as Element).closest("[data-regions]");
+      if (el) show(el);
+    });
+    eventsEl.addEventListener("mouseout", (e) => {
+      const el = (e.target as Element).closest("[data-regions]");
+      if (el && !el.contains(e.relatedTarget as Node)) show(null);
+    });
+    eventsEl.addEventListener("click", (e) => {
+      const t = e.target as Element;
+      if (t.closest("a")) return;
+      const el = t.closest<HTMLElement>("[data-regions]");
+      if (!el) return;
+      for (const x of eventsEl.querySelectorAll(".change.pinned")) x.classList.remove("pinned");
+      if (pinned === el) pinned = null;
+      else {
+        pinned = el;
+        el.classList.add("pinned");
+      }
+      show(pinned);
+    });
     for (const el of [polityEl, eventsEl]) {
       el.addEventListener("click", (e) => {
         const y = (e.target as Element).closest("[data-year]");
@@ -60,6 +96,46 @@ export class Panel {
     if (!p) return esc(id);
     const color = p.color ?? "#ccc";
     return `<a href="#" class="plink" data-polity="${esc(id)}"><span class="swatch" style="background:${esc(color)}"></span>${esc(this.idx.polityName(p, year))}</a>`;
+  }
+
+  /** 変化の本文（地域名を除いた部分）と、同じ変化をまとめるためのキー */
+  private changeBody(c: BorderChange, year: number): { body: string; key: string } {
+    const note = c.cur.cause ? `<span class="cause">${escY(c.cur.cause)}</span>` : "";
+    const ov =
+      c.prev.owner === c.cur.owner && c.prev.overlord !== c.cur.overlord
+        ? `（上位：${this.link(c.prev.overlord, year)} → ${this.link(c.cur.overlord, year)}）`
+        : "";
+    const owners = c.prev.owner === c.cur.owner ? this.link(c.cur.owner, year) : `${this.link(c.prev.owner, year - 1)} → ${this.link(c.cur.owner, year)}`;
+    return {
+      body: `${owners}${ov} ${note}`,
+      key: [c.prev.owner, c.cur.owner, c.prev.overlord, c.cur.overlord, c.cur.cause ?? ""].join("|"),
+    };
+  }
+
+  /**
+   * 同じ変化（前後の所属・上位の枠・理由が同じ）をまとめた一覧。
+   * 2件以上は「代表の地域ほか N 地域：本文」の1行にし、押すと全地域を展開する
+   */
+  private groupedChanges(kind: "political" | DistKey, items: { name: string; region: number; key: string; body: string }[]): string {
+    const groups = new Map<string, typeof items>();
+    for (const it of items) {
+      if (!groups.has(it.key)) groups.set(it.key, []);
+      groups.get(it.key)!.push(it);
+    }
+    let html = "";
+    for (const g of groups.values()) {
+      const ids = g.map((x) => x.region).join(",");
+      if (g.length === 1) {
+        html += `<li class="change" data-rkind="${kind}" data-regions="${ids}"><b>${esc(g[0].name)}</b>：${g[0].body}</li>`;
+        continue;
+      }
+      // 代表は、いちばん広い地域
+      const sorted = [...g].sort((a, b) => this.idx.regionPieceCount(kind, b.region) - this.idx.regionPieceCount(kind, a.region));
+      html += `<li class="change group" data-rkind="${kind}" data-regions="${ids}"><details><summary><b>${esc(sorted[0].name)}</b>ほか<span class="grp-n">${
+        g.length - 1
+      }</span>地域：${g[0].body}</summary><div class="grp-list">${sorted.map((x) => esc(x.name)).join("、")}</div></details></li>`;
+    }
+    return html;
   }
 
   private changeLine(c: BorderChange, year: number) {
@@ -104,17 +180,23 @@ export class Panel {
     let html = `<h2>${year}年の出来事</h2>`;
     if (events.length) html += `<ul class="events">${events.map((e) => this.eventLine(e, year)).join("")}</ul>`;
     if (relChanges.length) {
-      html += `<h3>${DIST_LABEL[dk!]}分布の変化</h3><ul class="changes">${relChanges
-        .map(
-          (c) =>
-            `<li class="change"><b>${esc(c.region.name)}</b>：${this.relSummary(c.prev, dk!)} → ${this.relSummary(c.cur, dk!)}${
-              c.cur.note ? ` <span class="cause">${escY(c.cur.note)}</span>` : ""
-            }</li>`,
-        )
-        .join("")}</ul>`;
+      const regs = this.idx.dist(dk!)!.regions;
+      html += `<h3>${DIST_LABEL[dk!]}分布の変化</h3><ul class="changes">${this.groupedChanges(
+        dk!,
+        relChanges.map((c) => ({
+          name: c.region.name,
+          region: regs.indexOf(c.region),
+          key: [c.prev.main, c.prev.minor ?? "", c.cur.main, c.cur.minor ?? "", c.cur.note ?? ""].join("|"),
+          body: `${this.relSummary(c.prev, dk!)} → ${this.relSummary(c.cur, dk!)}${c.cur.note ? ` <span class="cause">${escY(c.cur.note)}</span>` : ""}`,
+        })),
+      )}</ul>`;
     }
     if (changes.length) {
-      html += `<h3>国境の変化</h3><ul class="changes">${changes.map((c) => this.changeLine(c, year)).join("")}</ul>`;
+      const regs = this.idx.atlas.regions;
+      html += `<h3>国境の変化</h3><ul class="changes">${this.groupedChanges(
+        "political",
+        changes.map((c) => ({ name: c.region.name, region: regs.indexOf(c.region), ...this.changeBody(c, year) })),
+      )}</ul>`;
     }
     if (!events.length && !changes.length && !relChanges.length) {
       html += `<p class="empty">この年に登録された出来事はありません。</p>`;

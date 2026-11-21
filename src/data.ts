@@ -260,6 +260,25 @@ export class AtlasIndex {
     return cur;
   }
 
+  private regionCounts = new Map<string, Int32Array>();
+  /** 地域（政治の地域、または分布の地域）を使っているピースの数（まとめ表示で代表の地域を選ぶため） */
+  regionPieceCount(kind: "political" | DistKey, region: number): number {
+    let c = this.regionCounts.get(kind);
+    if (!c) {
+      const tls = kind === "political" ? this.atlas.pieceTimelines : (this.dist(kind)?.pieceTimelines ?? []);
+      const col = kind === "political" ? 4 : 3;
+      const n = kind === "political" ? this.atlas.regions.length : (this.dist(kind)?.regions.length ?? 0);
+      c = new Int32Array(n);
+      for (const tl of tls) {
+        const seen = new Set<number>();
+        for (const st of tl) seen.add((st as number[])[col]);
+        for (const r of seen) if (r >= 0 && r < n) c[r]++;
+      }
+      this.regionCounts.set(kind, c);
+    }
+    return c[region] ?? 0;
+  }
+
   // ---- 潮流 ----
   movement(id: string | null | undefined): Movement | undefined {
     return id ? this.atlas.movements?.find((m) => m.id === id) : undefined;

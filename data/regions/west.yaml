@@ -972,3 +972,620 @@
       cause: バルドー条約（フランスの保護国に）
       note: 南部は軍政地域とされた。
       source: "ja.wikipedia: バルドー条約"
+
+# ================================================================ 1815–1914 に加えた地域
+# ---------------------------------------------------------------- フランス東部（1871年）
+- id: german_lorraine
+  name: ドイツ領ロレーヌ（メス・フォルバック・サルグミーヌ）
+  select:
+    pieces: [FRA-Metz, FRA-Forbach, FRA-Sarreguemines]
+  timeline:
+    - from: 1871
+      owner: german_empire
+      cause: フランクフルト講和条約（アルザス＝ロレーヌのドイツへの割譲）
+      note: ドイツ帝国の帝国直轄領エルザス＝ロートリンゲン。ティオンヴィル・サールブールも同じ（それぞれの地域で描く）。現在のモゼル県の範囲にあたる。
+      source: "ja.wikipedia: アルザス＝ロレーヌ"
+
+- id: belfort
+  name: ベルフォール
+  select:
+    pieces: [FRA-Belfort]
+  timeline:
+    - from: 1871
+      owner: france
+      cause: フランクフルト講和条約（ベルフォールの要塞は普仏戦争で降伏せず、フランスに残された）
+      note: アルザスのうちフランスに残った部分で、のちのベルフォール地域圏（テリトワール・ド・ベルフォール）。
+      source: "ja.wikipedia: ベルフォール"
+
+# ---------------------------------------------------------------- スペイン（カルリスタ戦争）
+- id: basque_navarre
+  name: ナバラとバスク3県
+  select:
+    pieces: [ESP-Navarra, ESP-Gipuzkoa, ESP-Bizkaia, ESP-Alava]
+  timeline:
+    - from: 1834
+      owner: carlists
+      certainty: uncertain
+      cause: 第一次カルリスタ戦争（ズマラカレギの指揮でカルリスタが農村部を支配）
+      note: ビルバオ・サン・セバスティアン・パンプローナ・ビトリアなどの都市は政府側が保持した。
+      source: "ja.wikipedia: 第一次カルリスタ戦争"
+    - from: 1839
+      owner: spain
+      cause: ベルガラ協定（カルリスタ軍の主力が降伏）
+      source: "ja.wikipedia: 第一次カルリスタ戦争"
+    - from: 1873
+      owner: carlists
+      certainty: uncertain
+      cause: 第三次カルリスタ戦争（カルリスタがエステーリャを都として内陸を支配）
+      note: 戦争は1872年に始まった。ビルバオなどの都市は政府側が保持した（ビルバオ包囲戦、1874年）。
+      source: "ja.wikipedia: 第三次カルリスタ戦争"
+    - from: 1876
+      owner: spain
+      cause: カルリスタの敗北（2月）。バスクの特権（フエロ）は廃止された
+      source: "ja.wikipedia: 第三次カルリスタ戦争"
+
+# ---------------------------------------------------------------- モロッコ（1907–1912）
+- id: morocco_spanish_zone
+  name: スペイン保護領モロッコ（北部）
+  select:
+    pieces: [MAR-Tetouan_Province, MAR-Prefecture_de_M_diq_Fnideq, MAR-Fahs_Anjra_Province, MAR-Chefchaouen_Province, MAR-Larache_Province, MAR-Al_Hoceima_Province, MAR-Province_de_Driouch, MAR-Province_de_Nador]
+  timeline:
+    - from: 1912
+      owner: morocco
+      overlord: spain
+      cause: フランス＝スペイン条約（11月。モロッコ北部をスペインの保護領とする）
+      note: スペインの統治はテトゥアン（首都）とセウタ・メリリャ・ララシュの周辺にとどまった。
+      source: "ja.wikipedia: スペイン保護領モロッコ"
+
+- id: morocco_spanish_rif
+  name: リーフ山地（スペイン保護領の内陸）
+  select:
+    pieces: [MAR-Chefchaouen_Province, MAR-Al_Hoceima_Province, MAR-Province_de_Driouch]
+  timeline:
+    - from: 1912
+      owner: morocco
+      overlord: spain
+      certainty: nominal
+      cause: フランス＝スペイン条約
+      note: リーフ山地の部族はスペインの支配に服さなかった（のちのリーフ戦争、1921–26）。
+      source: "ja.wikipedia: スペイン保護領モロッコ"
+
+- id: melilla_hinterland
+  name: メリリャ周辺（ナドール）
+  select:
+    pieces: [MAR-Province_de_Nador]
+  timeline:
+    - from: 1909
+      owner: spain
+      certainty: occupied
+      cause: 第二次メリリャ戦争（リーフの部族と戦い、メリリャ周辺を占領）
+      source: "https://en.wikipedia.org/wiki/Second_Melillan_campaign"
+    - from: 1912
+      owner: morocco
+      overlord: spain
+      cause: フランス＝スペイン条約（スペインの保護領に）
+      source: "ja.wikipedia: スペイン保護領モロッコ"
+
+- id: larache
+  name: ララシュとクサル・エル・ケビール
+  select:
+    pieces: [MAR-Larache_Province]
+  timeline:
+    - from: 1911
+      owner: spain
+      certainty: occupied
+      cause: スペイン軍がララシュとクサル・エル・ケビールに上陸・占領（6月）
+      source: "https://en.wikipedia.org/wiki/Larache"
+    - from: 1912
+      owner: morocco
+      overlord: spain
+      cause: フランス＝スペイン条約（スペインの保護領に）
+      source: "ja.wikipedia: スペイン保護領モロッコ"
+
+- id: morocco_french_zone
+  name: フランス保護領モロッコ
+  select:
+    iso: [MAR]
+    exclude_regions: [morocco_spanish_zone]
+    exclude: [MAR-Prefecture_of_Tangier_Assilah, MAR-Tarfaya_Province, MAR-Province_d_Es_Semara, MAR-Oued_Ed_Dahab_Province, MAR-Sidi_Ifni_Province]
+  timeline:
+    - from: 1912
+      owner: morocco
+      overlord: france
+      cause: フェス条約（3月。モロッコがフランスの保護国となる）
+      source: "ja.wikipedia: フェス条約"
+
+- id: morocco_french_unpacified
+  name: 中アトラス・高アトラス・サハラ側（フランスの支配が及ばない地域）
+  select:
+    pieces: [MAR-Province_d_Errachidia, MAR-Province_de_Tinghir, MAR-Zagora_Province, MAR-Ouarzazate_Province, MAR-Province_de_Midelt, MAR-Province_d_Azilal, MAR-Province_de_Boulemane, MAR-Province_de_Figuig, MAR-Tata_Province, MAR-Taroudant_Province, MAR-Tiznit_Province, MAR-Chtouka_Ait_Baha_Province, MAR-Province_de_Khenifra, MAR-Province_d_Ifrane, MAR-Province_de_Taounate, MAR-Province_de_Taza]
+  timeline:
+    - from: 1912
+      owner: morocco
+      overlord: france
+      certainty: nominal
+      cause: フェス条約
+      note: 中アトラス・高アトラスやサハラ側の部族はフランスに抵抗し、「平定」は1934年まで続いた。マラケシュ周辺の南部は、フランスと結んだグラーウィー家などの大カーイドが治めた。
+      source: "https://en.wikipedia.org/wiki/Pacification_of_Morocco"
+
+- id: taza_khenifra
+  name: タザとヘニフラ（1914年に占領）
+  select:
+    pieces: [MAR-Province_de_Taza, MAR-Province_de_Khenifra]
+  timeline:
+    - from: 1914
+      owner: morocco
+      overlord: france
+      certainty: uncertain
+      cause: フランス軍がタザ（5月）とヘニフラ（6月）を占領
+      note: タザの占領で、アルジェリアとモロッコ西部を結ぶ回廊がつながった。周辺の部族の抵抗は続いた。
+      source: "https://en.wikipedia.org/wiki/Pacification_of_Morocco"
+
+- id: oujda
+  name: ウジダ
+  select:
+    pieces: [MAR-Prefecture_d_Oujda_Angad]
+  timeline:
+    - from: 1907
+      owner: france
+      certainty: occupied
+      cause: フランス軍がウジダを占領（3月。フランス人医師の殺害を口実に）
+      source: "https://en.wikipedia.org/wiki/Oujda"
+    - from: 1912
+      owner: morocco
+      overlord: france
+      cause: フェス条約
+      source: "ja.wikipedia: フェス条約"
+
+- id: chaouia
+  name: カサブランカとシャウイーヤ
+  select:
+    pieces: [MAR-Prefecture_of_Casablanca, MAR-Prefecture_of_Mohammedia, MAR-Mediouna_Province, MAR-Nouaceur_Province, MAR-Berrechid_Province, MAR-Settat_Province, MAR-Province_de_Benslimane]
+  timeline:
+    - from: 1907
+      owner: france
+      certainty: occupied
+      cause: カサブランカ砲撃とフランス軍の上陸（8月）、翌年までにシャウイーヤ平野を占領
+      source: "https://en.wikipedia.org/wiki/Bombardment_of_Casablanca"
+    - from: 1912
+      owner: morocco
+      overlord: france
+      cause: フェス条約
+      source: "ja.wikipedia: フェス条約"
+
+- id: fez_rabat_1911
+  name: フェス・メクネス・ラバトと平野部（1911年のフランス出兵）
+  select:
+    pieces: [MAR-Prefecture_de_Fes, MAR-Prefecture_de_Meknes, MAR-Prefecture_of_Rabat, MAR-Prefecture_of_Sale, MAR-Prefecture_de_Skhirate_Temara, MAR-Province_de_Kenitra, MAR-Province_de_Sidi_Kacem, MAR-Province_de_Sidi_Slimane, MAR-Province_de_Khemisset, MAR-Province_de_Moulay_Yacoub]
+  timeline:
+    - from: 1911
+      owner: france
+      certainty: occupied
+      cause: スルタンの救援要請を口実にフランス軍がフェスに入る（5月。第2次モロッコ事件のきっかけ）
+      source: "ja.wikipedia: アガディール事件"
+    - from: 1912
+      owner: morocco
+      overlord: france
+      cause: フェス条約
+      source: "ja.wikipedia: フェス条約"
+
+- id: sidi_ifni
+  name: イフニ
+  select:
+    pieces: [MAR-Sidi_Ifni_Province]
+  timeline:
+    - from: 1912
+      owner: spain
+      certainty: nominal
+      cause: フランス＝スペイン条約（1860年のワド・ラス条約で譲られたイフニをスペイン領と確認）
+      note: スペインがイフニを実際に占領したのは1934年。
+      source: "ja.wikipedia: イフニ"
+
+- id: tarfaya_strip
+  name: タルファヤ地帯（ジュビー岬）
+  select:
+    pieces: [MAR-Tarfaya_Province, MAR-Province_d_Es_Semara, MAR-Oued_Ed_Dahab_Province]
+  timeline:
+    - from: 1904
+      owner: null
+      note: 1904年のフランス＝スペイン協定でスペインの勢力圏とされたが、遊牧部族の地域。
+      source: "ja.wikipedia: タルファヤ"
+    - from: 1912
+      owner: morocco
+      overlord: spain
+      certainty: nominal
+      cause: フランス＝スペイン条約（ドラア川と北緯27度40分の間をスペインの南部保護領とする）
+      note: スペインがジュビー岬（タルファヤ）を占領したのは1916年。このピースの北の端はドラア川より北にはみ出す。
+      source: "ja.wikipedia: タルファヤ"
+
+- id: spanish_sahara
+  name: 西サハラ（リオ・デ・オロとサギア・エル・ハムラ）
+  select:
+    iso: [ESH]
+  timeline:
+    - from: 1884
+      owner: spain
+      certainty: nominal
+      cause: スペインがリオ・デ・オロの海岸の保護領化を宣言（ビリャ・シスネロス＝ダフラの建設）
+      note: 内陸の境界は1900・1904・1912年のフランスとの条約で定まった。サギア・エル・ハムラは1904年にスペインの勢力圏とされた。実際の支配は沿岸の拠点だけで、内陸の占領は1930年代。
+      source: "ja.wikipedia: スペイン領サハラ"
+
+- id: mali_north
+  name: マリ北部の砂漠（タウデニ）
+  select:
+    pieces: [MLI-Tombouctou]
+  timeline:
+    - from: 1894
+      owner: france
+      certainty: nominal
+      cause: フランス軍のトンブクトゥ占領（フランス領スーダン）
+      note: サハラ北部のタウデニ（岩塩の産地）まで達したのは1906年ごろ。
+      source: "ja.wikipedia: フランス領スーダン"
+
+# ---------------------------------------------------------------- アルジェリアの征服（1830–1911）
+- id: alg_algiers
+  name: アルジェ
+  select:
+    pieces: [DZA-Alger]
+  timeline:
+    - from: 1830
+      owner: france
+      cause: フランス軍のアルジェ占領（7月。デイの降伏）
+      source: "ja.wikipedia: フランスのアルジェリア侵略"
+    - from: 1848
+      owner: france
+      cause: 第二共和政の憲法でアルジェリアをフランスの領土（3県）とする
+      source: "ja.wikipedia: フランス領アルジェリア"
+
+- id: alg_mitidja
+  name: ミティジャ平野（ブリダ・ティパザ）
+  select:
+    pieces: [DZA-Blida, DZA-Tipaza]
+  timeline:
+    - from: 1830
+      owner: france
+      certainty: uncertain
+      cause: アルジェの陥落（フランス軍は平野に入ったが、部族の抵抗が続く）
+      source: "ja.wikipedia: フランスのアルジェリア侵略"
+    - from: 1838
+      owner: france
+      cause: タフナ条約（1837）でフランス領と認められ、ブリダを占領
+      source: "ja.wikipedia: タフナ条約"
+
+- id: alg_mostaganem
+  name: モスタガネム
+  select:
+    pieces: [DZA-Mostaganem]
+  timeline:
+    - from: 1830
+      owner: null
+      certainty: uncertain
+      cause: アルジェの陥落（オランのベイの支配の崩壊）
+    - from: 1833
+      owner: france
+      cause: フランス軍のモスタガネム占領
+      source: "https://en.wikipedia.org/wiki/Mostaganem"
+
+- id: alg_west
+  name: アルジェリア西部の内陸（トレムセン・マスカラ・ティアレット）
+  select:
+    pieces: [DZA-Tlemcen, DZA-Sidi_Bel_Abbes, DZA-Ain_Temouchent, DZA-Mascara, DZA-Saiida, DZA-Relizane, DZA-Tiaret]
+  timeline:
+    - from: 1830
+      owner: null
+      certainty: uncertain
+      cause: アルジェの陥落（オランのベイの支配の崩壊）
+      note: 1830–32年、モロッコのスルタンの軍がトレムセンに入った。
+      source: "ja.wikipedia: アブド・アルカーディル"
+    - from: 1832
+      owner: abd_al_qadir
+      certainty: uncertain
+      cause: アブド＝アルカーディルがアミールに推される（11月）
+      source: "ja.wikipedia: アブド・アルカーディル"
+    - from: 1837
+      owner: abd_al_qadir
+      cause: タフナ条約（フランスが内陸の大部分の支配を認める）
+      source: "ja.wikipedia: タフナ条約"
+    - from: 1842
+      owner: france
+      certainty: uncertain
+      cause: ビュジョー将軍の遠征でマスカラ（1841）・トレムセン（1842）を占領
+      note: アブド＝アルカーディルは各地でゲリラ戦を続けた。
+      source: "ja.wikipedia: アブド・アルカーディル"
+    - from: 1847
+      owner: france
+      cause: アブド＝アルカーディルの降伏（12月）
+      source: "ja.wikipedia: アブド・アルカーディル"
+
+- id: alg_titteri
+  name: アルジェリア中部の内陸（メデア・ミリアナ・シェリフ）
+  select:
+    pieces: [DZA-Medea, DZA-Ain_Defla, DZA-Tissemsilt, DZA-Chlef]
+  timeline:
+    - from: 1830
+      owner: null
+      certainty: uncertain
+      cause: アルジェの陥落（ティテリのベイの支配の崩壊）
+      source: "ja.wikipedia: フランスのアルジェリア侵略"
+    - from: 1835
+      owner: abd_al_qadir
+      certainty: uncertain
+      cause: アブド＝アルカーディルがメデアに進出
+      source: "ja.wikipedia: アブド・アルカーディル"
+    - from: 1837
+      owner: abd_al_qadir
+      cause: タフナ条約
+      source: "ja.wikipedia: タフナ条約"
+    - from: 1840
+      owner: france
+      certainty: uncertain
+      cause: フランス軍がメデアとミリアナを占領（6月）
+      note: シェリフ（オルレアンヴィル）は1843年に占領。
+      source: "ja.wikipedia: アブド・アルカーディル"
+    - from: 1847
+      owner: france
+      cause: アブド＝アルカーディルの降伏
+      source: "ja.wikipedia: アブド・アルカーディル"
+
+- id: alg_constantine
+  name: コンスタンティーヌとアルジェリア東部
+  select:
+    pieces: [DZA-Constantine, DZA-Mila, DZA-Skikda, DZA-Guelma, DZA-Souk_Ahras, DZA-Oum_el_Bouaghi, DZA-El_Tarf]
+  timeline:
+    - from: 1830
+      owner: constantine
+      overlord: ottoman
+      cause: アルジェの陥落（コンスタンティーヌのアフマド・ベイが自立し、オスマン帝国のスルタンを主君とする）
+      source: "https://en.wikipedia.org/wiki/Beylik_of_Constantine"
+    - from: 1837
+      owner: france
+      cause: フランス軍のコンスタンティーヌ攻略（10月）
+      source: "ja.wikipedia: コンスタンティーヌ"
+
+- id: alg_annaba
+  name: ボーヌ（アンナバ）
+  select:
+    pieces: [DZA-Annaba]
+  timeline:
+    - from: 1830
+      owner: constantine
+      overlord: ottoman
+      cause: アルジェの陥落
+    - from: 1832
+      owner: france
+      cause: フランス軍のボーヌ占領
+      source: "https://en.wikipedia.org/wiki/Annaba"
+
+- id: alg_setif
+  name: セティフとメジャナ
+  select:
+    pieces: [DZA-Satif, DZA-Bordj_Bou_Arreidj, DZA-M_Sila]
+  timeline:
+    - from: 1830
+      owner: constantine
+      overlord: ottoman
+      cause: アルジェの陥落
+    - from: 1837
+      owner: france
+      certainty: uncertain
+      cause: コンスタンティーヌの陥落（メジャナのモクラーニ家などの首長がフランスに帰順）
+      note: アブド＝アルカーディルもこの地域に代官を置いて争った。年は要確認。
+      source: "https://en.wikipedia.org/wiki/French_conquest_of_Algeria"
+    - from: 1841
+      owner: france
+      cause: フランス軍がセティフ（1839）などを確保
+      note: 要確認。
+      source: "https://en.wikipedia.org/wiki/French_conquest_of_Algeria"
+
+- id: alg_aures
+  name: オーレス山地とジバン（バトナ・ビスクラ・テベッサ）
+  select:
+    pieces: [DZA-Batna, DZA-Khenchela, DZA-Biskra, DZA-Tebessa]
+  timeline:
+    - from: 1830
+      owner: constantine
+      overlord: ottoman
+      cause: アルジェの陥落
+    - from: 1837
+      owner: constantine
+      overlord: ottoman
+      certainty: uncertain
+      cause: コンスタンティーヌの陥落（アフマド・ベイがオーレス山地に退いて抵抗を続ける）
+      source: "https://en.wikipedia.org/wiki/Ahmed_Bey_ben_Mohamed_Chérif"
+    - from: 1844
+      owner: france
+      certainty: uncertain
+      cause: フランス軍のビスクラ占領とバトナの建設
+      source: "https://en.wikipedia.org/wiki/French_conquest_of_Algeria"
+    - from: 1850
+      owner: france
+      cause: ザアチャの戦い（1849）とオーレス遠征。アフマド・ベイは1848年に降伏
+      source: "https://en.wikipedia.org/wiki/Siege_of_Zaatcha"
+
+- id: alg_kabylia
+  name: 大カビリー（ティジ・ウズー・ブイラ）
+  select:
+    pieces: [DZA-Tizi_Ouzou, DZA-Bouira, DZA-Boumerdes]
+  timeline:
+    - from: 1830
+      owner: null
+      cause: アルジェの陥落（ベルベル人のカビール諸部族は自立）
+      note: デイの時代もカビリーの山地の支配は名目的だった。沿岸のデリス（ブーメルデス）は1844年にフランスが占領。
+      source: "ja.wikipedia: カビリア"
+    - from: 1857
+      owner: france
+      cause: ランドン元帥の遠征による大カビリーの征服
+      note: 1871年、モクラーニの反乱でカビリーが蜂起した。
+      source: "ja.wikipedia: カビリア"
+
+- id: alg_little_kabylia
+  name: 小カビリー（ベジャイア・ジジェル）
+  select:
+    pieces: [DZA-Bejaia, DZA-Jijel]
+  timeline:
+    - from: 1830
+      owner: null
+      cause: アルジェの陥落（カビール諸部族は自立）
+      source: "ja.wikipedia: カビリア"
+    - from: 1839
+      owner: france
+      certainty: uncertain
+      cause: フランスがベジャイア（ブジー、1833）・ジジェル（1839）の港を占領
+      note: 内陸の山地は自立を保った。
+      source: "https://en.wikipedia.org/wiki/French_conquest_of_Algeria"
+    - from: 1857
+      owner: france
+      cause: カビリーの征服
+      source: "ja.wikipedia: カビリア"
+
+- id: alg_high_plateaus
+  name: ジェルファとラグアト（高原とサハラの入口）
+  select:
+    pieces: [DZA-Djelfa, DZA-Laghouat]
+  timeline:
+    - from: 1830
+      owner: null
+      cause: アルジェの陥落
+      note: 遊牧部族の地域。
+    - from: 1852
+      owner: france
+      cause: フランス軍のラグアト攻略（12月）
+      source: "https://en.wikipedia.org/wiki/Siege_of_Laghouat"
+
+- id: alg_south_west
+  name: アルジェリア南西の高原（エル・バヤド・ナーマ）
+  select:
+    pieces: [DZA-El_Bayadh, DZA-Naama]
+  timeline:
+    - from: 1830
+      owner: null
+      cause: アルジェの陥落
+      note: ウラード・シーディー・シャイフ部族連合などの遊牧民の地域。
+    - from: 1845
+      owner: france
+      certainty: nominal
+      cause: ララ・マグニア条約（フランスとモロッコの国境画定。部族の一部がフランスに帰順）
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Lalla_Maghnia"
+    - from: 1883
+      owner: france
+      cause: ウラード・シーディー・シャイフの反乱（1864–83）の終結
+      note: 要確認。
+      source: "https://en.wikipedia.org/wiki/Ouled_Sidi_Cheikh"
+
+- id: alg_mzab
+  name: ムザブ（ガルダイア）
+  select:
+    pieces: [DZA-Ghardaia]
+  timeline:
+    - from: 1853
+      owner: france
+      certainty: nominal
+      cause: ムザブのオアシス都市がフランスの保護を受け入れる条約
+      source: "https://en.wikipedia.org/wiki/M'zab"
+    - from: 1882
+      owner: france
+      cause: ムザブの併合
+      source: "https://en.wikipedia.org/wiki/M'zab"
+
+- id: alg_ouargla_souf
+  name: ワルグラとスーフ（エル・ウェド）・トゥグルト
+  select:
+    pieces: [DZA-Ouargla, DZA-El_Oued]
+  timeline:
+    - from: 1854
+      owner: france
+      certainty: nominal
+      cause: フランス軍のトゥグルト占領（スーフのオアシスが帰順）
+      source: "https://en.wikipedia.org/wiki/Touggourt"
+    - from: 1872
+      owner: france
+      cause: フランス軍のワルグラ占領
+      note: 要確認。
+      source: "https://en.wikipedia.org/wiki/Ouargla"
+
+- id: alg_bechar
+  name: ベシャール
+  select:
+    pieces: [DZA-Bechar]
+  timeline:
+    - from: 1903
+      owner: france
+      cause: フランス軍のベシャール占領（コロン＝ベシャールの建設）
+      note: モロッコとの国境地帯で、それまではモロッコのスルタンに名目的に従う部族の地域だった。
+      source: "https://en.wikipedia.org/wiki/Béchar"
+
+- id: alg_tuat
+  name: トゥアトとグララ（アドラール）
+  select:
+    pieces: [DZA-Adrar]
+  timeline:
+    - from: 1901
+      owner: france
+      cause: フランス軍のトゥアト・グララ・ティディケルトのオアシス占領（1899–1901）
+      note: モロッコのスルタンも宗主権を主張していた。
+      source: "https://en.wikipedia.org/wiki/Touat"
+
+- id: alg_hoggar
+  name: ホガール（タマンラセット）とイン・サラー
+  select:
+    pieces: [DZA-Tamanghasset_2]
+  timeline:
+    - from: 1900
+      owner: france
+      certainty: nominal
+      cause: フランス軍のイン・サラー占領（1899年12月〜1900年）
+      note: 1902年のティトの戦いでホガールのトゥアレグを破り、1905年までに帰順させた。
+      source: "https://en.wikipedia.org/wiki/Battle_of_Tit"
+
+- id: alg_ajjer
+  name: タッシリ・ナジェール（イリジ・ジャネット）
+  select:
+    pieces: [DZA-Illizi]
+  timeline:
+    - from: 1911
+      owner: france
+      certainty: nominal
+      cause: フランス軍のジャネット占領
+      note: オスマン帝国（リビアのガート）もこの地域を自国領と主張していた。要確認。
+      source: "https://en.wikipedia.org/wiki/Djanet"
+
+# ---------------------------------------------------------------- リビア（1911–1912）
+- id: libya_coast_1911
+  name: リビア沿岸の港（トリポリ・ホムス・ベンガジ・デルナ・トブルク）
+  select:
+    pieces: [LBY-Tajura_wa_an_Nawahi_al_Arba, LBY-Al_Marqab, LBY-Benghazi, LBY-Al_Qubbah, LBY-Al_Butnan]
+  timeline:
+    - from: 1911
+      owner: italy
+      certainty: occupied
+      cause: イタリア＝トルコ戦争（10月、イタリア軍が沿岸の港を占領。11月に併合を宣言）
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+    - from: 1912
+      owner: italy
+      cause: ローザンヌ（ウーシー）条約
+      source: "ja.wikipedia: イタリア・トルコ戦争"
+
+- id: cyrenaica_interior
+  name: キレナイカの内陸（緑の山地）
+  select:
+    pieces: [LBY-Al_Jabal_al_Akhdar, LBY-Al_Marj]
+  timeline:
+    - from: 1912
+      owner: italy
+      certainty: uncertain
+      cause: ローザンヌ（ウーシー）条約
+      note: サヌーシー教団とオスマン帝国の将校（エンヴェルら）が抵抗を続けた。
+      source: "ja.wikipedia: サヌーシー教団"
+
+# ---------------------------------------------------------------- グリーンランド
+- id: greenland_ammassalik
+  name: 東グリーンランドのアンマサリク
+  select:
+    pieces: [GRL-Sermersooq]
+  timeline:
+    - from: 1894
+      owner: denmark
+      certainty: nominal
+      cause: デンマークがアンマサリク（タシーラク）に交易所と伝道所を開く
+      note: 東海岸で最初のデンマークの拠点。
+      source: "https://en.wikipedia.org/wiki/Tasiilaq"

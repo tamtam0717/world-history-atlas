@@ -87,6 +87,12 @@ export class MovementBand {
       .slice(0, 6)
       .map((x) => `<i style="--c:${MOVEMENT_COLORS[x.m.kind]};--v:${x.v.toFixed(2)}" title="${x.m.name}"></i>`)
       .join("");
+    // その年に勢いのある潮流がなく、選んでもいなければ帯ごと隠す
+    const none = !active.length && !selected;
+    if (none !== this.root.classList.contains("none")) {
+      this.root.classList.toggle("none", none);
+      this.onResize();
+    }
     const [y0, y1] = this.range;
     this.cursor.style.left = `${((year - y0) / Math.max(1, y1 - y0)) * 100}%`;
     if (this.collapsed || !this.width) return;

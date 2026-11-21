@@ -203,7 +203,7 @@ export class AtlasMap {
       f.properties = { pid: p.id, name: p.name, iso: p.iso, mcolor: mcolors.get(p.iso) };
     });
     map.addSource("pieces", { type: "geojson", data: fc });
-    for (const id of ["borders", "overlords", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes", "mv"]) {
+    for (const id of ["borders", "overlords", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes", "mv", "flash"]) {
       map.addSource(id, { type: "geojson", data: EMPTY });
     }
     // 川の名前用：細かく曲がる線のままだと線に沿った文字が置けないので、強めに単純化した別のソースを使う
@@ -357,6 +357,21 @@ export class AtlasMap {
       type: "line",
       source: "highlight",
       paint: { "line-color": "#1d1a16", "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1.6, 6, 3] },
+    });
+
+    // パネルの変化の行で指した地域群（マウスを乗せる／押す）
+    map.addLayer({
+      id: "flash-fill",
+      type: "fill",
+      source: "flash",
+      paint: { "fill-color": "#c0392b", "fill-opacity": 0.28 },
+    });
+    map.addLayer({
+      id: "flash-line",
+      type: "line",
+      source: "flash",
+      layout: { "line-join": "round" },
+      paint: { "line-color": "#8a1f12", "line-width": ["interpolate", ["linear"], ["zoom"], 2, 1.5, 6, 3] },
     });
 
     // 潮流の広がり：地図全体を薄いベールで沈め、盛んな地域を種類の色で光らせる。
@@ -769,6 +784,28 @@ export class AtlasMap {
   /** 分布の地域の、その年の記述 */
   religionEntry(region: number): ReligionEntry | null {
     return isDist(this.layer) ? this.idx.distEntry(this.layer, region, this.year) : null;
+  }
+
+  /** パネルの変化の行で指した地域群を強調する（その年に、その地域の記述が効いているピース）。null で解除 */
+  flashRegions(kind: MapLayer, regions: number[] | null) {
+    if (!this.loaded) return;
+    if (!regions || !regions.length) {
+      this.setData("flash", EMPTY);
+      return;
+    }
+    const set = new Set(regions);
+    const ps: number[] = [];
+    for (let i = 0; i < this.geoms.length; i++) {
+      const a = this.atlasIdx[i];
+      if (a < 0) continue;
+      const st = kind === "political" ? this.idx.pieceState(a, this.year) : this.idx.distState(kind, a, this.year);
+      const r = st ? (st as number[])[kind === "political" ? 4 : 3] : -1;
+      if (set.has(r)) ps.push(i);
+    }
+    this.setData(
+      "flash",
+      ps.length ? { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: this.merged(`fl${kind}`, ps).geo }] } : EMPTY,
+    );
   }
 
   // ---- 潮流の広がり ----

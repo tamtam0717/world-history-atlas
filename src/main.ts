@@ -107,6 +107,7 @@ async function main() {
     (id) => selectPolity(id, true),
     (y) => setYear(y),
     (id) => selectMovement(id),
+    (kind, regions) => map.flashRegions(kind, regions),
   );
   panel.range = [minYear, maxYear];
 
@@ -126,6 +127,7 @@ async function main() {
     map.setSelected(state.polity);
     map.setReligionSelected(dist && state.relPick ? state.relPick.region : -1);
     map.setMovement(idx.movement(state.movement) ?? null);
+    map.flashRegions("political", null);
     panel.renderYear(state.year, { dist, movement: state.movement });
     if (dist) panel.renderReligion(state.relPick, state.year, dist);
     else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null);

@@ -1411,3 +1411,52 @@ body[data-layer="language"] .legend {
 .rel-legend.collapsed .rl-notes {
   display: none;
 }
+
+/* ---- 国境・分布の変化：同じ変化をまとめた行 ---- */
+.changes .change[data-regions] {
+  cursor: pointer;
+  border-radius: 4px;
+}
+.changes .change[data-regions]:hover,
+.changes .change.pinned {
+  background: rgba(192, 57, 43, 0.08);
+  box-shadow: inset 3px 0 0 rgba(192, 57, 43, 0.6);
+}
+.change.group summary {
+  list-style: none;
+  cursor: pointer;
+}
+.change.group summary::-webkit-details-marker {
+  display: none;
+}
+.change.group summary::before {
+  content: "▸";
+  font-size: 10px;
+  color: var(--muted);
+  margin-right: 4px;
+}
+.change.group details[open] summary::before {
+  content: "▾";
+}
+.grp-n {
+  display: inline-block;
+  min-width: 1.6em;
+  margin: 0 3px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: #8a3b2a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.55;
+}
+.grp-list {
+  margin: 4px 0 2px 14px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.mv-band.none {
+  display: none;
+}
