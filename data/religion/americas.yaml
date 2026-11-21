@@ -50,14 +50,33 @@
   timeline:
     - from: 1648
       main: other
-      note: アベナキ人の地。ニューハンプシャーの海岸（ポーツマス）にはイングランド人の町があった。
+      minor: reformed
+      note: アベナキ人の地。ニューハンプシャーの海岸（ポーツマス・ドーヴァー・エクセター・ハンプトン）にはイングランド人の町があった。
     - from: 1720
       main: reformed
-      note: 会衆派のニューイングランド人の入植。ヴァーモント（グリーン・マウンテン）への入植は七年戦争後の 1760 年代に本格化した。
+      note: 会衆派のニューイングランド人の入植。
     - from: 1900
       main: reformed
       minor: catholic
       note: フランス系カナダ人が繊維工場の労働者として移り住んだ。
+    - from: 1950
+      main: catholic
+      minor: reformed
+- id: rel_vermont
+  name: ヴァーモント
+  select:
+    pieces: [USA-Vermont]
+  timeline:
+    - from: 1648
+      main: other
+      note: アベナキ人の地。イギリス人の最初の拠点はダマー砦（1724）。
+    - from: 1760
+      main: reformed
+      note: 七年戦争の後、ニューイングランドからの入植が本格化した（ベニントン 1761）。ヴァーモント共和国（1777–91）を経て 1791 年に州。
+    - from: 1900
+      main: reformed
+      minor: catholic
+      note: フランス系カナダ人が移り住んだ。
     - from: 1950
       main: catholic
       minor: reformed
@@ -270,6 +289,37 @@
       note: 大覚醒の後、バプテスト・メソジストが広がり、黒人奴隷の多くもバプテスト・メソジストになった。ヴァージニア信教自由法（1786、ジェファソン）で国教会は公認を失った。
     - from: 1850
       main: evangelical
+- id: rel_virginia_piedmont
+  name: ヴァージニアのピードモント
+  select:
+    pieces: [USA-Albemarle_VA, USA-Amelia_VA, USA-Amherst_VA, USA-Appomattox_VA, USA-Brunswick_VA, USA-Buckingham_VA, USA-Campbell_VA, USA-Charlotte_VA, USA-Charlottesville_VA, USA-Culpeper_VA, USA-Cumberland_VA, USA-Fauquier_VA, USA-Fluvanna_VA, USA-Goochland_VA, USA-Greene_VA, USA-Greensville_VA, USA-Halifax_VA, USA-Loudoun_VA, USA-Louisa_VA, USA-Lunenburg_VA, USA-Lynchburg_VA, USA-Madison_VA, USA-Mecklenburg_VA, USA-Nelson_VA, USA-Nottoway_VA, USA-Orange_VA, USA-Powhatan_VA, USA-Prince_Edward_VA, USA-Rappahannock_VA, USA-Spotsylvania_VA]
+  timeline:
+    - from: 1648
+      main: other
+      note: モナカン人・サポニ人など（スー系）の地。
+    - from: 1730
+      main: anglican
+      note: 滝線（フォール・ライン）より西のピードモントへ、タバコの農園主が奴隷を連れて進出した（1720〜30 年代）。
+    - from: 1790
+      main: evangelical
+      minor: anglican
+    - from: 1850
+      main: evangelical
+- id: rel_shenandoah
+  name: シェナンドー渓谷
+  select:
+    pieces: [USA-Augusta_VA, USA-Rockingham_VA, USA-Shenandoah_VA, USA-Frederick_VA, USA-Clarke_VA, USA-Page_VA, USA-Warren_VA, USA-Winchester_VA, USA-Harrisonburg_VA, USA-Staunton_VA, USA-Waynesboro_VA]
+  timeline:
+    - from: 1648
+      main: other
+      note: ショーニー人などの狩り場。
+    - from: 1740
+      main: reformed
+      minor: lutheran
+      note: ペンシルヴェニアから南下したスコットランド系アイルランド人（長老派）とドイツ系（ルター派・改革派・メノナイト）の入植（1730〜40 年代）。
+    - from: 1790
+      main: evangelical
+      minor: reformed
 - id: rel_virginia_west
   name: ヴァージニア西部（シェナンドー渓谷・アパラチア）
   select:
@@ -306,6 +356,31 @@
       note: タスカローラ戦争（1711–15）の後、入植が広がった。イギリス国教会が公認だったが、クエーカー・長老派・バプテストが多く、教会の少ない植民地だった。
     - from: 1790
       main: evangelical
+- id: rel_nc_piedmont
+  name: ノースカロライナのピードモント
+  select:
+    pieces: [USA-Alamance_NC, USA-Alexander_NC, USA-Alleghany_NC, USA-Anson_NC, USA-Bladen_NC, USA-Cabarrus_NC, USA-Caswell_NC, USA-Catawba_NC, USA-Chatham_NC, USA-Columbus_NC, USA-Cumberland_NC, USA-Davidson_NC, USA-Davie_NC, USA-Durham_NC, USA-Forsyth_NC, USA-Gaston_NC, USA-Granville_NC, USA-Guilford_NC, USA-Harnett_NC, USA-Hoke_NC, USA-Iredell_NC, USA-Lee_NC, USA-Lincoln_NC, USA-Mecklenburg_NC, USA-Montgomery_NC, USA-Moore_NC, USA-Orange_NC, USA-Person_NC, USA-Randolph_NC, USA-Richmond_NC, USA-Robeson_NC, USA-Rockingham_NC, USA-Rowan_NC, USA-Scotland_NC, USA-Stanly_NC, USA-Stokes_NC, USA-Surry_NC, USA-Union_NC, USA-Wake_NC, USA-Wilkes_NC, USA-Yadkin_NC]
+  timeline:
+    - from: 1648
+      main: other
+      note: カトーバ人・サポニ人・オカニーチー人など（スー系）の地。
+    - from: 1750
+      main: reformed
+      note: ペンシルヴェニアからの「グレート・ワゴン・ロード」で、スコットランド系アイルランド人（長老派）・ドイツ系・モラヴィア派（セイラム 1753–）・クエーカーが入植した。ケープフィア川の上流にはスコットランド高地人（長老派）が住んだ。サンディ・クリークのバプテスト（1755）。
+    - from: 1790
+      main: evangelical
+- id: rel_nc_mountains
+  name: ノースカロライナ西部の山地・山麓
+  select:
+    pieces: [USA-Ashe_NC, USA-Avery_NC, USA-Buncombe_NC, USA-Burke_NC, USA-Caldwell_NC, USA-Cleveland_NC, USA-Henderson_NC, USA-McDowell_NC, USA-Mitchell_NC, USA-Polk_NC, USA-Rutherford_NC, USA-Watauga_NC, USA-Yancey_NC]
+  timeline:
+    - from: 1648
+      main: other
+      note: チェロキー人・カトーバ人の地。
+    - from: 1780
+      main: evangelical
+      minor: reformed
+      note: チェロキーの土地の割譲（1777）の後、ブルーリッジの山地に入植が進んだ。バプテスト・メソジストが広がった。
 - id: rel_nc_cherokee
   name: ノースカロライナ西部（チェロキーの地）
   select:
@@ -318,9 +393,23 @@
       main: evangelical
       note: チェロキーの土地の割譲（1819）と強制移住（1838「涙の旅路」）の後、白人の入植が進んだ。残ったチェロキー東部支族（クアラ）にもバプテスト・メソジストが広がった。
 - id: rel_south_carolina
-  name: サウスカロライナ
+  name: サウスカロライナ（ミッドランズ・海岸平野）
   select:
     adm1: ["USA/South Carolina"]
+  timeline:
+    - from: 1648
+      main: other
+      note: カトーバ人・ワテリー人・コンガリー人などの地。
+    - from: 1740
+      main: anglican
+      note: 内陸の「タウンシップ」（オレンジバーグ 1735、サックス＝ゴータ 1735 など）に、ドイツ系・スイス系・スコットランド系アイルランド人・ウェールズ系（バプテスト）が入植した。
+    - from: 1790
+      main: evangelical
+      note: 大覚醒の後、白人・黒人の多くがバプテスト・メソジストになった。
+- id: rel_sc_lowcountry
+  name: サウスカロライナのロウカントリー（米のプランテーション）
+  select:
+    pieces: [USA-Charleston_SC, USA-Beaufort_SC, USA-Colleton_SC, USA-Georgetown_SC, USA-Jasper_SC, USA-Berkeley_SC, USA-Dorchester_SC]
   timeline:
     - from: 1648
       main: other
@@ -328,11 +417,19 @@
     - from: 1690
       main: anglican
       minor: other
-      note: チャールストン（1670）を中心とする米・インディゴのプランテーション植民地。1708 年には黒人奴隷が人口の過半数になった。アフリカから連れてこられた人々の多くは、18 世紀にはまだ故郷の信仰を保っていた。
+      note: チャールストン（1670）を中心とする米・インディゴのプランテーション植民地。
       source: "https://ja.wikipedia.org/wiki/カロライナ植民地"
+    - from: 1710
+      main: other
+      minor: anglican
+      note: 1708 年には黒人奴隷が人口の過半数になり、米のプランテーションの郡では住民の 7〜8 割になった。農園主と国教会は奴隷への伝道に消極的で、西アフリカ（セネガンビア・シエラレオネ・コンゴ・アンゴラ）から連れてこられた人々の多くは故郷の信仰を保った（地図では「住民の多数派」の原則で、その他の色）。
     - from: 1790
+      main: other
+      minor: evangelical
+      note: 独立後、白人の多くと、黒人の一部がバプテスト・メソジストになった（チャールストンのアフリカン・メソジスト監督教会 1817）。
+    - from: 1830
       main: evangelical
-      note: 大覚醒の後、白人・黒人の多くがバプテスト・メソジストになった。
+      note: メソジストの「奴隷への伝道」（1829–）などで、奴隷の多くがバプテスト・メソジストの信者になった。シー・アイランズのガラの人々の信仰（「プレイズ・ハウス」）にはアフリカの要素が残る。
 - id: rel_sc_upcountry
   name: サウスカロライナ北西部（アップカントリー）
   select:
@@ -360,9 +457,9 @@
     - from: 1790
       main: evangelical
 - id: rel_georgia_coast_missions
-  name: ジョージアの海岸（グアレの伝道所）
+  name: ジョージアの海岸（グアレの伝道所・米のプランテーション）
   select:
-    pieces: [USA-McIntosh_GA, USA-Glynn_GA, USA-Camden_GA, USA-Liberty_GA, USA-Chatham_GA, USA-Bryan_GA]
+    pieces: [USA-Chatham_GA, USA-Bryan_GA, USA-Liberty_GA, USA-McIntosh_GA, USA-Glynn_GA, USA-Camden_GA]
   timeline:
     - from: 1648
       main: catholic
@@ -372,10 +469,55 @@
     - from: 1690
       main: other
       note: カロライナのイギリス人とその同盟の先住民の攻撃で、伝道所はフロリダへ退いた。
-    - from: 1750
+    - from: 1740
       main: anglican
+      note: オグルソープのジョージア植民地（1732、サヴァナ）。当初は奴隷制を禁じていた。
+    - from: 1770
+      main: other
+      minor: anglican
+      note: 1751 年に奴隷制が認められ、海岸の米のプランテーションでアフリカ系の奴隷が住民の多数になった（サウスカロライナのロウカントリーと同じく、奴隷の多くは故郷の信仰を保った）。
+    - from: 1790
+      main: other
+      minor: evangelical
+      note: サヴァナの第一アフリカン・バプテスト教会（1788）など、黒人のバプテストの教会が生まれた。
+    - from: 1830
+      main: evangelical
+      note: 奴隷の多くがバプテスト・メソジストの信者になった。
+- id: rel_georgia_east
+  name: ジョージア東部（サヴァナ川流域〜オコーニー川）
+  select:
+    pieces: [USA-Bulloch_GA, USA-Burke_GA, USA-Candler_GA, USA-Columbia_GA, USA-Effingham_GA, USA-Elbert_GA, USA-Emanuel_GA, USA-Evans_GA, USA-Franklin_GA, USA-Glascock_GA, USA-Greene_GA, USA-Hancock_GA, USA-Hart_GA, USA-Jefferson_GA, USA-Jenkins_GA, USA-Johnson_GA, USA-Lincoln_GA, USA-Long_GA, USA-Madison_GA, USA-McDuffie_GA, USA-Montgomery_GA, USA-Oglethorpe_GA, USA-Richmond_GA, USA-Screven_GA, USA-Taliaferro_GA, USA-Tattnall_GA, USA-Toombs_GA, USA-Warren_GA, USA-Washington_GA, USA-Wilkes_GA]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリーク人（マスコギ）の地。
+    - from: 1770
+      main: anglican
+      note: オーガスタ（1736）を中心にサヴァナ川流域へ入植が進んだ（1763・1773 年の割譲）。エフィンガムにはザルツブルクから追われたルター派の人々（1734–）が住んだ。
     - from: 1790
       main: evangelical
+- id: rel_georgia_oconee_ocmulgee
+  name: ジョージア中南部（オコーニー川の西・アルタマハ川の南）
+  select:
+    pieces: [USA-Irwin_GA, USA-Baldwin_GA, USA-Berrien_GA, USA-Ben_Hill_GA, USA-Wilkinson_GA, USA-Dodge_GA, USA-Lanier_GA, USA-Telfair_GA, USA-Laurens_GA, USA-Atkinson_GA, USA-Coffee_GA, USA-Wheeler_GA, USA-Jeff_Davis_GA, USA-Treutlen_GA, USA-Bacon_GA, USA-Ware_GA, USA-Appling_GA, USA-Pierce_GA, USA-Brantley_GA, USA-Wayne_GA, USA-Stephens_GA]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリーク人の地。
+    - from: 1810
+      main: evangelical
+      note: フォート・ウィルキンソン条約（1802）・ワシントン条約（1805）でクリーク人がオコーニー川とオクマルギー川の間を割譲し、土地くじ（ランド・ロッタリー）で入植が進んだ。
+- id: rel_georgia_south
+  name: ジョージア南部（フォート・ジャクソン条約の割譲地）
+  select:
+    pieces: [USA-Charlton_GA, USA-Clinch_GA, USA-Echols_GA, USA-Lowndes_GA]
+  timeline:
+    - from: 1648
+      main: other
+      note: クリーク人、のちセミノールの地。
+    - from: 1820
+      main: evangelical
+      note: クリーク戦争の後のフォート・ジャクソン条約（1814）で割譲された。
 - id: rel_georgia_interior
   name: ジョージア西部・北部（クリーク・チェロキーの地）
   select:
@@ -520,16 +662,53 @@
       main: evangelical
       minor: catholic
       note: ドイツ系・アイルランド系の移民（シンシナティ・セントルイスなど）。
-- id: rel_ohio_valley_late
-  name: アイオワ・カンザス（入植の遅い地域）
+- id: rel_iowa
+  name: アイオワ
   select:
-    adm1: ["USA/Iowa", "USA/Kansas"]
+    pieces: [USA-Iowa]
   timeline:
     - from: 1648
       main: other
+      note: ソーク・メスクワキ（フォックス）・アイオワ人などの地。
+    - from: 1840
+      main: evangelical
+      minor: other
+      note: ブラック・ホーク戦争（1832）の後のブラック・ホーク購入（1833）で東部が白人の入植に開かれ、アイオワ準州（1838）になった。
     - from: 1850
       main: evangelical
-      note: アイオワは 1846 年、カンザスは 1861 年に州になった（「流血のカンザス」1854–59）。
+      note: 1846 年に州。ソーク・メスクワキ人は 1845 年までに州の外へ移された。
+- id: rel_kansas
+  name: カンザス東部
+  select:
+    adm1: ["USA/Kansas"]
+  timeline:
+    - from: 1648
+      main: other
+      note: カンザ・オセージ・ポーニー・ウィチタの地。1830 年代からは東部の諸部族（ショーニー・デラウェアなど）の移住先の保留地。
+    - from: 1860
+      main: evangelical
+      note: カンザス・ネブラスカ法（1854）で白人の入植が始まり、奴隷制をめぐる「流血のカンザス」（1854–59）を経て 1861 年に州になった（1860 年の人口 10.7 万人）。
+- id: rel_kansas_central
+  name: カンザス中部・南東部（1870 年代の入植）
+  select:
+    pieces: [USA-Smith_KS, USA-Osborne_KS, USA-Russell_KS, USA-Barton_KS, USA-Pratt_KS, USA-Stafford_KS, USA-Barber_KS, USA-Jewell_KS, USA-Lincoln_KS, USA-Mitchell_KS, USA-Ellsworth_KS, USA-Rice_KS, USA-Kingman_KS, USA-Reno_KS, USA-Harper_KS, USA-Republic_KS, USA-Cloud_KS, USA-Ottawa_KS, USA-Saline_KS, USA-McPherson_KS, USA-Sumner_KS, USA-Sedgwick_KS, USA-Harvey_KS, USA-Cowley_KS, USA-Chautauqua_KS, USA-Elk_KS, USA-Montgomery_KS, USA-Wilson_KS, USA-Neosho_KS, USA-Labette_KS, USA-Crawford_KS, USA-Cherokee_KS]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: evangelical
+      note: オセージ人の保留地の割譲（1870）・チェロキー中立地の売却（1867）と、鉄道（カンザス・パシフィック、サンタフェ鉄道）の開通で入植が進んだ。マクファーソン・ハーヴィーにはロシアから来たメノナイトが住んだ（1874–）。
+- id: rel_kansas_west
+  name: カンザス西部（1880 年代の入植）
+  select:
+    pieces: [USA-Greeley_KS, USA-Morton_KS, USA-Hamilton_KS, USA-Stanton_KS, USA-Wallace_KS, USA-Cheyenne_KS, USA-Sherman_KS, USA-Wichita_KS, USA-Kearny_KS, USA-Stevens_KS, USA-Grant_KS, USA-Logan_KS, USA-Rawlins_KS, USA-Thomas_KS, USA-Scott_KS, USA-Haskell_KS, USA-Seward_KS, USA-Finney_KS, USA-Gove_KS, USA-Lane_KS, USA-Decatur_KS, USA-Sheridan_KS, USA-Gray_KS, USA-Meade_KS, USA-Ness_KS, USA-Norton_KS, USA-Hodgeman_KS, USA-Ford_KS, USA-Graham_KS, USA-Trego_KS, USA-Clark_KS, USA-Phillips_KS, USA-Rooks_KS, USA-Ellis_KS, USA-Edwards_KS, USA-Rush_KS, USA-Kiowa_KS, USA-Comanche_KS, USA-Pawnee_KS]
+  timeline:
+    - from: 1648
+      main: other
+      note: シャイアン・アラパホ・カイオワ・コマンチの狩り場（バッファローの平原）。
+    - from: 1880
+      main: evangelical
+      note: バッファローの絶滅（1870 年代）と平原の戦争の終結の後、牧畜（ダッジシティ）と小麦の農家が入植した。エリス郡などにはヴォルガ・ドイツ人（カトリック）も住んだ。
 - id: rel_missouri
   name: ミズーリ
   select:
@@ -784,7 +963,26 @@
     - from: 1960
       main: other
       minor: evangelical
-      note: キリスト教の諸派（カトリック・福音派・モルモン教）と、ペヨーテを用いるネイティブ・アメリカン・チャーチが広がった。
+      note: キリスト教の諸派（カトリック・福音派・モルモン教）と、ペヨーテを用いるネイティブ・アメリカン・チャーチ（キリスト教と結びついた信仰）が広がった。
+    - from: 1970
+      main: evangelical
+      minor: other
+      note: ナヴァホ人の多くがキリスト教の諸派（ペンテコステ派などの福音派・カトリック・モルモン教）か、ネイティブ・アメリカン・チャーチに属するようになった。伝統の儀礼（歌い手による癒やしの儀式など）を併せて行う人も多い。
+- id: rel_navajo_border_towns
+  name: ナヴァホの地の周辺の郡（サンフアン・ナヴァホ）
+  select:
+    pieces: [USA-San_Juan_NM, USA-Navajo_AZ]
+  timeline:
+    - from: 1648
+      main: other
+      note: ナヴァホ人とホピ人の地。
+    - from: 1960
+      main: other
+      minor: evangelical
+    - from: 1980
+      main: evangelical
+      minor: other
+      note: ファーミントン・ウィンズロー・ショーローなどの町に、白人（モルモン教徒・福音派）とヒスパニック（カトリック）が増え、先住民は住民の約 4 割になった。
 - id: rel_arizona
   name: アリゾナ
   select:
@@ -1001,9 +1199,20 @@
   select:
     adm1: ["USA/United States Virgin Islands"]
   timeline:
+    - from: 1648
+      main: anglican
+      minor: reformed
+      note: セント・クロイ島にイギリス人・オランダ人の小さな入植地があった。セント・トーマス島・セント・ジョン島はほぼ無人。
+    - from: 1651
+      main: catholic
+      note: フランス（1651 年にマルタ騎士団、1665 年からフランス西インド会社）がセント・クロイ島に入植した。住民は数百人程度。
     - from: 1672
       main: lutheran
       note: デンマーク西インド会社のセント・トーマス島（1672）。デンマークの国教会（ルター派）。
+    - from: 1690
+      main: other
+      minor: lutheran
+      note: 砂糖の農園でアフリカ系の奴隷が住民の多数になった（1691 年のセント・トーマス島は奴隷 555 人、白人 389 人）。ルター派の国教会は奴隷への伝道に消極的で、奴隷の多くは故郷の信仰を保った。
     - from: 1760
       main: evangelical
       minor: anglican
@@ -1458,9 +1667,13 @@
       main: other
       note: マヤ人の地。スペインの支配は及ばなかった。
     - from: 1800
+      main: other
+      minor: anglican
+      note: イギリスの木材伐採者（ベイメン）とアフリカ系の奴隷の入植地（奴隷が住民の約 4 分の 3）。セント・ジョージズ・キーの戦い（1798）でスペインの攻撃を退けた。北部・西部の内陸はマヤ人の地。
+    - from: 1830
       main: anglican
       minor: other
-      note: イギリスの木材伐採者（ベイメン）とアフリカ系の奴隷の入植地。セント・ジョージズ・キーの戦い（1798）でスペインの攻撃を退けた。
+      note: 国教会（1812 年に聖ヨハネ大聖堂）・バプテスト（1822–）・メソジスト（1825–）の伝道で、アフリカ系の住民の多くがキリスト教徒になった。
     - from: 1860
       main: catholic
       minor: anglican
@@ -1523,11 +1736,15 @@
       note: スペインの植民地（サンティアゴ・デ・ラ・ベガ）。
     - from: 1660
       main: anglican
-      note: 1655 年にイングランド（クロムウェル）が奪った。砂糖のプランテーションで、住民の 9 割がアフリカ系の奴隷になった。逃亡奴隷（マルーン）の共同体。
-    - from: 1840
+      note: 1655 年にイングランド（クロムウェル）が奪った。
+    - from: 1680
+      main: other
+      minor: anglican
+      note: 砂糖のプランテーションで、住民の 9 割がアフリカ系の奴隷になった。農園主と国教会は奴隷への伝道に消極的で、奴隷の多くはアフリカの信仰（オベア・ミャルなど）を保った（地図では「住民の多数派」の原則で、その他の色）。逃亡奴隷（マルーン）の共同体。
+    - from: 1830
       main: anglican
       minor: evangelical
-      note: バプテスト（サム・シャープの反乱 1831–32 を導いた「黒人バプテスト」）・メソジスト・モラヴィア派の伝道。奴隷制の廃止（1834–38）。
+      note: モラヴィア派（1754–）・メソジスト・バプテスト（ジョージ・リールらアメリカから来た黒人の説教師 1783–）の伝道が 1800〜20 年代に広がり、奴隷の多くがキリスト教徒になった。サム・シャープの反乱（1831–32、「バプテスト戦争」）。奴隷制の廃止（1834–38）。
     - from: 1970
       main: evangelical
       minor: anglican
@@ -1540,11 +1757,15 @@
   timeline:
     - from: 1648
       main: anglican
-      note: イギリスの植民地（バルバドス 1627、セントキッツ 1624、アンティグア 1632、モントセラト 1632 など）。17 世紀後半から砂糖のプランテーションでアフリカ系の奴隷が住民の大多数になった。
-    - from: 1850
+      note: イギリスの植民地（バルバドス 1627、セントキッツ 1624、アンティグア 1632、モントセラト 1632 など）。はじめはイギリス人の小農・年季奉公人が多かった。
+    - from: 1680
+      main: other
+      minor: anglican
+      note: 「砂糖革命」（バルバドス 1640〜60 年代、リーワード諸島 1680 年代〜）で、アフリカ系の奴隷が住民の大多数になった。農園主と国教会は奴隷への伝道に消極的で、奴隷の多くはアフリカの信仰を保った（地図では「住民の多数派」の原則で、その他の色）。
+    - from: 1820
       main: anglican
       minor: evangelical
-      note: メソジスト・モラヴィア派の伝道が奴隷の間に広がり、奴隷制廃止（1834–38）後に教会が増えた。
+      note: モラヴィア派（アンティグア 1756–）・メソジスト（アンティグア 1760 年代–）の伝道が奴隷の間に広がり、奴隷の多くがキリスト教徒になった。奴隷制の廃止（1834–38）。
 - id: rel_montserrat_irish
   name: モントセラト
   select:
@@ -1554,9 +1775,14 @@
       main: catholic
       minor: anglican
       note: セントキッツから移ったアイルランド系のカトリックの入植地。
-    - from: 1720
-      main: anglican
+    - from: 1700
+      main: other
       minor: catholic
+      note: 砂糖のプランテーションでアフリカ系の奴隷が住民の多数になった。
+    - from: 1820
+      main: anglican
+      minor: evangelical
+      note: メソジストの伝道で奴隷の多くがキリスト教徒になった。
 - id: rel_bahamas
   name: バハマ
   select:
@@ -1646,9 +1872,13 @@
       main: other
       note: カリブ人と、逃亡・難破したアフリカ人とカリブ人の子孫の「黒いカリブ人」（ガリフナ）の島。
     - from: 1800
+      main: other
+      minor: anglican
+      note: 第 2 次カリブ戦争（1795–96）の後、ガリフナ人はホンジュラス沖のロアタン島へ追放された（1797）。砂糖のプランテーションの奴隷が住民の大多数になった。
+    - from: 1830
       main: anglican
       minor: evangelical
-      note: 第 2 次カリブ戦争（1795–96）の後、ガリフナ人はホンジュラス沖のロアタン島へ追放された（1797）。
+      note: メソジストの伝道で、奴隷の多くがキリスト教徒になった。
 - id: rel_trinidad
   name: トリニダード・トバゴ
   select:
@@ -1689,12 +1919,13 @@
       main: other
       note: クールラント公国（1654–59、ルター派）・オランダ・フランス・イギリスが入植を争った島。
     - from: 1770
-      main: anglican
-      note: 1763 年からイギリス領（1781–1803 年はフランス領）の砂糖の島。
-    - from: 1850
+      main: other
+      minor: anglican
+      note: 1763 年からイギリス領（1781–1803 年はフランス領）の砂糖の島。住民の 9 割以上がアフリカ系の奴隷で、多くは故郷の信仰を保った。
+    - from: 1830
       main: anglican
       minor: evangelical
-      note: メソジスト・モラヴィア派。
+      note: モラヴィア派（1790–）・メソジストの伝道で奴隷の多くがキリスト教徒になった。
 - id: rel_dutch_caribbean
   name: オランダ領アンティル（キュラソー・アルバ・ボネール・シント・マールテン・サバ・シント・ユースタティウス）
   select:
@@ -1712,10 +1943,14 @@
     - from: 1648
       main: reformed
       note: オランダ西インド会社の島（シント・ユースタティウスは 18 世紀の中継貿易で栄えた「黄金の岩」）。イギリス系・アフリカ系の住民が多い。
+    - from: 1720
+      main: other
+      minor: reformed
+      note: 砂糖・中継貿易の島で、アフリカ系の奴隷が住民の多数になった（サバは白人の小農が多い）。
     - from: 1800
       main: evangelical
       minor: catholic
-      note: メソジストが広がった。
+      note: メソジストの伝道（シント・ユースタティウスの黒人の説教師「ブラック・ハリー」1780 年代など）で、アフリカ系の住民の多くがキリスト教徒になった。
 
 # ================================================================
 # 南米
@@ -1746,6 +1981,56 @@
       main: catholic
       minor: other
       note: 道路の建設と入植（ブラジルのロンドニア・アクレ、エクアドルの石油開発など）で、アンデス・ブラジル北東部からの移住者が多数になった。
+- id: rel_amazon_brazil
+  name: ブラジルのアマゾン（アマゾナス・アクレ）
+  select:
+    adm1: ["BRA/Amazonas", "BRA/Acre"]
+  timeline:
+    - from: 1648
+      main: other
+      note: 先住民（トゥカノ・アラワク・パノ・ヤノマミなど）の地。カルメル会の伝道所が川沿いに点在した。
+    - from: 1880
+      main: catholic
+      minor: other
+      note: ゴム・ブーム（1879–1912）で、干ばつの北東部から約 30 万人のセリンゲイロ（カトリック）がマナウス・アクレへ移った。川沿いのカボクロ（先住民と白人の混血の住民）もカトリック。アクレは「ブラジル人が多数」であることがペトロポリス条約（1903）でブラジル領になる理由になった。
+      source: "https://ja.wikipedia.org/wiki/ゴム・ブーム"
+    - from: 1950
+      main: catholic
+    - from: 2000
+      main: catholic
+      minor: evangelical
+      note: 福音派・ペンテコステ派が住民の 3 割前後になった。
+- id: rel_amapa
+  name: アマパ
+  select:
+    adm1: ["BRA/Amapa"]
+  timeline:
+    - from: 1648
+      main: other
+      note: パリクル・ワヤンピなど先住民の地。
+    - from: 1800
+      main: catholic
+      minor: other
+      note: マカパの要塞（1764–82）と、アゾレス諸島などからの入植。アマゾン下流の住民（カボクロ）はカトリック。
+    - from: 1880
+      main: catholic
+    - from: 2000
+      main: catholic
+      minor: evangelical
+- id: rel_pando
+  name: パンド（ボリビア）
+  select:
+    adm1: ["BOL/Pando"]
+  timeline:
+    - from: 1648
+      main: other
+      note: パノ系・アラワク系の先住民の地。
+    - from: 1900
+      main: catholic
+      minor: other
+      note: ゴム・ブームで、スペイン語を話すゴムの採集人とボリビア・ブラジルの商人が入った（アクレ戦争 1899–1903）。
+    - from: 1950
+      main: catholic
 - id: rel_amazon_deep
   name: アマゾン奥地（先住民の多い地域）
   select:
@@ -1838,13 +2123,13 @@
       main: other
       note: アラワク系（ロコノ）・カリブ系の先住民の地。オランダの交易所（エセキボ 1616、バービス 1627）。
     - from: 1720
-      main: reformed
-      minor: other
-      note: オランダの砂糖のプランテーション（デメララ 1746–）。住民の大多数はアフリカ系の奴隷。バービスの奴隷反乱（1763）。
+      main: other
+      minor: reformed
+      note: オランダの砂糖のプランテーション（デメララ 1746–）。住民の大多数はアフリカ系の奴隷で、オランダ改革派の教会は奴隷に伝道しなかった（地図では「住民の多数派」の原則で、その他の色）。バービスの奴隷反乱（1763）。
     - from: 1830
       main: anglican
       minor: evangelical
-      note: 1814 年にイギリス領（1831 年に英領ギアナ）。デメララの奴隷反乱（1823）。国教会・メソジスト・会衆派（ロンドン伝道協会）。
+      note: 1814 年にイギリス領（1831 年に英領ギアナ）。会衆派（ロンドン伝道協会、1808–）・メソジスト・国教会の伝道で、奴隷の多くがキリスト教徒になった（デメララの奴隷反乱〈1823〉の指導者は伝道協会の教会の執事）。
     - from: 1880
       main: anglican
       minor: hindu
@@ -1857,8 +2142,8 @@
     - from: 1648
       main: other
     - from: 1720
-      main: reformed
-      minor: other
+      main: other
+      minor: reformed
     - from: 1830
       main: anglican
       minor: evangelical
@@ -1887,9 +2172,9 @@
       main: other
       note: カリブ系（カリナ）・アラワク系の先住民の地。
     - from: 1670
-      main: reformed
-      minor: other
-      note: イギリスの入植（1650、ウィロビー卿）の後、ブレダ条約（1667）でオランダ領（ニューアムステルダムと交換）。住民の大多数はアフリカ系の奴隷。ユダヤ人の入植地（ヨーデンサヴァネ）もあった。
+      main: other
+      minor: reformed
+      note: イギリスの入植（1650、ウィロビー卿）の後、ブレダ条約（1667）でオランダ領（ニューアムステルダムと交換）。住民の大多数はアフリカ系の奴隷で、多くはアフリカの信仰（のちのウィンティ）を保った（地図では「住民の多数派」の原則で、その他の色）。農園主はオランダ改革派とユダヤ人（ヨーデンサヴァネ）。
     - from: 1850
       main: evangelical
       minor: catholic
@@ -1906,8 +2191,8 @@
     - from: 1648
       main: other
     - from: 1670
-      main: reformed
-      minor: other
+      main: other
+      minor: reformed
     - from: 1850
       main: evangelical
     - from: 1910
@@ -1922,8 +2207,8 @@
     - from: 1648
       main: other
     - from: 1670
-      main: reformed
-      minor: other
+      main: other
+      minor: reformed
     - from: 1850
       main: evangelical
     - from: 1910
@@ -2020,10 +2305,10 @@
     - from: 1648
       main: other
       note: マクシ・ワピシャナ・ヤノマミなどの地。
-    - from: 1950
+    - from: 1900
       main: catholic
       minor: other
-      note: ボア・ヴィスタ（1830 年代の牧場から）を中心に入植が進んだ。1987 年からの金の採掘人（ガリンペイロ）の侵入で、ヤノマミ人が病気と暴力で大きな被害を受けた。
+      note: ボア・ヴィスタ（1830 年代の牧場から、1890 年に町）を中心に、北東部からの牧畜民の入植が進んだ。1987 年からの金の採掘人（ガリンペイロ）の侵入で、ヤノマミ人が病気と暴力で大きな被害を受けた。
     - from: 2000
       main: catholic
       minor: evangelical

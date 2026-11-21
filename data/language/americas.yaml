@@ -54,10 +54,28 @@
       note: フランス系カナダ人が繊維工場・製材所の労働者として移住した（ニューハンプシャー・メインの住民の 2 割前後）。
     - from: 1950
       main: english
-- id: lang_maine_south
-  name: メイン南部・ニューハンプシャーの海岸
+- id: lang_new_hampshire
+  name: ニューハンプシャー
   select:
-    pieces: [USA-York_ME, USA-Cumberland_ME, USA-New_Hampshire]
+    pieces: [USA-New_Hampshire]
+  timeline:
+    - from: 1648
+      main: algonquian
+      minor: english
+      note: ペナクック・アベナキ人の地。海岸の 4 つの町（ポーツマス・ドーヴァー・エクセター・ハンプトン）にイングランド人が千人ほど住んでいた。
+    - from: 1720
+      main: english
+      note: ワバナキ連合との戦争（1688–1725）の間も入植が内陸へ進んだ。
+    - from: 1890
+      main: english
+      minor: french
+      note: フランス系カナダ人が繊維工場（マンチェスターのアモスケグ）の労働者として移住した。
+    - from: 1950
+      main: english
+- id: lang_maine_south
+  name: メイン南部の海岸
+  select:
+    pieces: [USA-York_ME, USA-Cumberland_ME]
   timeline:
     - from: 1648
       main: english
@@ -276,6 +294,31 @@
     - from: 1690
       main: english
       note: 18 世紀のヴァージニアの住民の約 4 割がアフリカ系の奴隷（言葉は英語）。
+- id: lang_virginia_piedmont
+  name: ヴァージニアのピードモント
+  select:
+    pieces: [USA-Albemarle_VA, USA-Amelia_VA, USA-Amherst_VA, USA-Appomattox_VA, USA-Brunswick_VA, USA-Buckingham_VA, USA-Campbell_VA, USA-Charlotte_VA, USA-Charlottesville_VA, USA-Culpeper_VA, USA-Cumberland_VA, USA-Fauquier_VA, USA-Fluvanna_VA, USA-Goochland_VA, USA-Greene_VA, USA-Greensville_VA, USA-Halifax_VA, USA-Loudoun_VA, USA-Louisa_VA, USA-Lunenburg_VA, USA-Lynchburg_VA, USA-Madison_VA, USA-Mecklenburg_VA, USA-Nelson_VA, USA-Nottoway_VA, USA-Orange_VA, USA-Powhatan_VA, USA-Prince_Edward_VA, USA-Rappahannock_VA, USA-Spotsylvania_VA]
+  timeline:
+    - from: 1648
+      main: siouan
+      note: モナカン人・サポニ人など（スー系）の地。
+    - from: 1730
+      main: english
+      note: 滝線より西のピードモントへ、タバコの農園主が奴隷を連れて進出した（1720〜30 年代）。
+- id: lang_shenandoah
+  name: シェナンドー渓谷
+  select:
+    pieces: [USA-Augusta_VA, USA-Rockingham_VA, USA-Shenandoah_VA, USA-Frederick_VA, USA-Clarke_VA, USA-Page_VA, USA-Warren_VA, USA-Winchester_VA, USA-Harrisonburg_VA, USA-Staunton_VA, USA-Waynesboro_VA]
+  timeline:
+    - from: 1648
+      main: siouan
+      note: モナカン人など（のちにショーニー人の狩り場）。
+    - from: 1740
+      main: english
+      minor: german
+      note: ペンシルヴェニアからドイツ系とスコットランド系アイルランド人が入植した（1730〜40 年代）。
+    - from: 1800
+      main: english
 - id: lang_virginia_west
   name: ヴァージニア西部・ウェストヴァージニア
   select:
@@ -303,6 +346,52 @@
     - from: 1720
       main: english
       note: タスカローラ戦争（1711–15）とヤマシー戦争（1715–17）の後、入植が内陸へ進んだ。
+- id: lang_nc_piedmont
+  name: ノースカロライナのピードモント
+  select:
+    pieces: [USA-Alamance_NC, USA-Alexander_NC, USA-Alleghany_NC, USA-Anson_NC, USA-Bladen_NC, USA-Cabarrus_NC, USA-Caswell_NC, USA-Catawba_NC, USA-Chatham_NC, USA-Columbus_NC, USA-Cumberland_NC, USA-Davidson_NC, USA-Davie_NC, USA-Durham_NC, USA-Forsyth_NC, USA-Gaston_NC, USA-Granville_NC, USA-Guilford_NC, USA-Harnett_NC, USA-Hoke_NC, USA-Iredell_NC, USA-Lee_NC, USA-Lincoln_NC, USA-Mecklenburg_NC, USA-Montgomery_NC, USA-Moore_NC, USA-Orange_NC, USA-Person_NC, USA-Randolph_NC, USA-Richmond_NC, USA-Robeson_NC, USA-Rockingham_NC, USA-Rowan_NC, USA-Scotland_NC, USA-Stanly_NC, USA-Stokes_NC, USA-Surry_NC, USA-Union_NC, USA-Wake_NC, USA-Wilkes_NC, USA-Yadkin_NC]
+  timeline:
+    - from: 1648
+      main: siouan
+      note: カトーバ人・サポニ人・オカニーチー人など（スー系）の地。
+    - from: 1750
+      main: english
+      note: 「グレート・ワゴン・ロード」でペンシルヴェニアから入植者が南下した。ケープフィア川の上流のスコットランド高地人はゲール語も話した。
+- id: lang_nc_mountains
+  name: ノースカロライナ西部の山地・山麓
+  select:
+    pieces: [USA-Ashe_NC, USA-Avery_NC, USA-Buncombe_NC, USA-Burke_NC, USA-Caldwell_NC, USA-Cleveland_NC, USA-Henderson_NC, USA-McDowell_NC, USA-Mitchell_NC, USA-Polk_NC, USA-Rutherford_NC, USA-Watauga_NC, USA-Yancey_NC]
+  timeline:
+    - from: 1648
+      main: iroquoian
+      minor: siouan
+      note: チェロキー人・カトーバ人の地。
+    - from: 1780
+      main: english
+      note: チェロキーの土地の割譲（1777）の後、ブルーリッジの山地に入植が進んだ。
+- id: lang_sc_midlands
+  name: サウスカロライナのミッドランズ・海岸平野
+  select:
+    pieces: [USA-Aiken_SC, USA-Allendale_SC, USA-Bamberg_SC, USA-Barnwell_SC, USA-Calhoun_SC, USA-Chester_SC, USA-Chesterfield_SC, USA-Clarendon_SC, USA-Darlington_SC, USA-Dillon_SC, USA-Edgefield_SC, USA-Fairfield_SC, USA-Florence_SC, USA-Hampton_SC, USA-Horry_SC, USA-Kershaw_SC, USA-Lancaster_SC, USA-Lee_SC, USA-Lexington_SC, USA-Marion_SC, USA-Marlboro_SC, USA-McCormick_SC, USA-Orangeburg_SC, USA-Richland_SC, USA-Sumter_SC, USA-Williamsburg_SC, USA-York_SC]
+  timeline:
+    - from: 1648
+      main: siouan
+      note: カトーバ人・ワテリー人・コンガリー人など（スー系）の地。
+    - from: 1740
+      main: english
+      note: 内陸の「タウンシップ」（オレンジバーグ 1735 など）への入植。
+- id: lang_sc_upcountry
+  name: サウスカロライナ北西部（アップカントリー）
+  select:
+    pieces: [USA-Abbeville_SC, USA-Anderson_SC, USA-Cherokee_SC, USA-Greenville_SC, USA-Greenwood_SC, USA-Laurens_SC, USA-Newberry_SC, USA-Oconee_SC, USA-Pickens_SC, USA-Saluda_SC, USA-Spartanburg_SC, USA-Union_SC]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: iroquoian
+      note: カトーバ人（スー系）・チェロキー人（イロコイ系）の地。
+    - from: 1770
+      main: english
+      note: スコットランド系アイルランド人の入植（1750〜60 年代）。チェロキーの土地の割譲（1777）で北西端まで広がった。
 - id: lang_nc_east
   name: ノースカロライナ東部
   select:
@@ -315,9 +404,9 @@
     - from: 1720
       main: english
 - id: lang_lowcountry
-  name: ロウカントリー（サウスカロライナ・ジョージアの海岸）
+  name: ロウカントリー（サウスカロライナの海岸）
   select:
-    pieces: [USA-Charleston_SC, USA-Beaufort_SC, USA-Colleton_SC, USA-Georgetown_SC, USA-Jasper_SC, USA-Berkeley_SC, USA-Dorchester_SC, USA-Chatham_GA, USA-Bryan_GA, USA-Liberty_GA, USA-McIntosh_GA, USA-Glynn_GA, USA-Camden_GA]
+    pieces: [USA-Charleston_SC, USA-Beaufort_SC, USA-Colleton_SC, USA-Georgetown_SC, USA-Jasper_SC, USA-Berkeley_SC, USA-Dorchester_SC]
   timeline:
     - from: 1648
       main: muskogean
@@ -334,6 +423,26 @@
       main: english
       minor: creole_english
       note: 南部の黒人の北部への「大移動」（1910–70）。シー・アイランズにガラの共同体が残る。
+    - from: 1970
+      main: english
+- id: lang_georgia_coast
+  name: ジョージアの海岸
+  select:
+    pieces: [USA-Chatham_GA, USA-Bryan_GA, USA-Liberty_GA, USA-McIntosh_GA, USA-Glynn_GA, USA-Camden_GA]
+  timeline:
+    - from: 1648
+      main: muskogean
+      note: グアレ人（スペインの伝道所）・ヤマシー人などの地。1680〜1700 年代に伝道所が引き揚げた後は、ほぼ空白の地になった。
+    - from: 1740
+      main: english
+      note: オグルソープのジョージア植民地（1732、サヴァナ）。
+    - from: 1770
+      main: creole_english
+      minor: english
+      note: 1751 年に奴隷制が認められ、米のプランテーションでアフリカ系の奴隷が住民の多数になった。ガラ語（ジョージアではギーチー）。
+    - from: 1910
+      main: english
+      minor: creole_english
     - from: 1970
       main: english
 - id: lang_cherokee
@@ -372,13 +481,33 @@
 - id: lang_georgia_east
   name: ジョージア東部（サヴァナ川流域）
   select:
-    pieces: [USA-Appling_GA, USA-Atkinson_GA, USA-Bacon_GA, USA-Baldwin_GA, USA-Ben_Hill_GA, USA-Berrien_GA, USA-Brantley_GA, USA-Bryan_GA, USA-Bulloch_GA, USA-Burke_GA, USA-Candler_GA, USA-Chatham_GA, USA-Coffee_GA, USA-Columbia_GA, USA-Dodge_GA, USA-Effingham_GA, USA-Elbert_GA, USA-Emanuel_GA, USA-Evans_GA, USA-Franklin_GA, USA-Glascock_GA, USA-Glynn_GA, USA-Greene_GA, USA-Hancock_GA, USA-Hart_GA, USA-Irwin_GA, USA-Jeff_Davis_GA, USA-Jefferson_GA, USA-Jenkins_GA, USA-Johnson_GA, USA-Lanier_GA, USA-Laurens_GA, USA-Liberty_GA, USA-Lincoln_GA, USA-Long_GA, USA-Madison_GA, USA-McDuffie_GA, USA-McIntosh_GA, USA-Montgomery_GA, USA-Oglethorpe_GA, USA-Pierce_GA, USA-Richmond_GA, USA-Screven_GA, USA-Taliaferro_GA, USA-Tattnall_GA, USA-Telfair_GA, USA-Toombs_GA, USA-Treutlen_GA, USA-Ware_GA, USA-Warren_GA, USA-Washington_GA, USA-Wayne_GA, USA-Wheeler_GA, USA-Wilkes_GA, USA-Wilkinson_GA]
+    pieces: [USA-Bryan_GA, USA-Bulloch_GA, USA-Burke_GA, USA-Candler_GA, USA-Chatham_GA, USA-Columbia_GA, USA-Effingham_GA, USA-Elbert_GA, USA-Emanuel_GA, USA-Evans_GA, USA-Franklin_GA, USA-Glascock_GA, USA-Glynn_GA, USA-Greene_GA, USA-Hancock_GA, USA-Hart_GA, USA-Jefferson_GA, USA-Jenkins_GA, USA-Johnson_GA, USA-Liberty_GA, USA-Lincoln_GA, USA-Long_GA, USA-Madison_GA, USA-McDuffie_GA, USA-McIntosh_GA, USA-Montgomery_GA, USA-Oglethorpe_GA, USA-Richmond_GA, USA-Screven_GA, USA-Taliaferro_GA, USA-Tattnall_GA, USA-Toombs_GA, USA-Warren_GA, USA-Washington_GA, USA-Wilkes_GA]
   timeline:
     - from: 1648
       main: muskogean
     - from: 1770
       main: english
       note: オーガスタ（1736）を中心にサヴァナ川流域へ入植が進んだ。
+- id: lang_georgia_oconee_ocmulgee
+  name: ジョージア中南部（オコーニー川の西・アルタマハ川の南）
+  select:
+    pieces: [USA-Irwin_GA, USA-Baldwin_GA, USA-Berrien_GA, USA-Ben_Hill_GA, USA-Wilkinson_GA, USA-Dodge_GA, USA-Lanier_GA, USA-Telfair_GA, USA-Laurens_GA, USA-Atkinson_GA, USA-Coffee_GA, USA-Wheeler_GA, USA-Jeff_Davis_GA, USA-Treutlen_GA, USA-Bacon_GA, USA-Ware_GA, USA-Appling_GA, USA-Pierce_GA, USA-Brantley_GA, USA-Wayne_GA, USA-Stephens_GA]
+  timeline:
+    - from: 1648
+      main: muskogean
+    - from: 1810
+      main: english
+      note: フォート・ウィルキンソン条約（1802）・ワシントン条約（1805）でクリーク人が土地を割譲し、土地くじで入植が進んだ。
+- id: lang_georgia_south
+  name: ジョージア南部（フォート・ジャクソン条約の割譲地）
+  select:
+    pieces: [USA-Charlton_GA, USA-Clinch_GA, USA-Echols_GA, USA-Lowndes_GA]
+  timeline:
+    - from: 1648
+      main: muskogean
+    - from: 1820
+      main: english
+      note: クリーク戦争の後のフォート・ジャクソン条約（1814）で割譲された。
 - id: lang_mobile
   name: モービル・ビロクシ（メキシコ湾岸）
   select:
@@ -703,6 +832,45 @@
       main: english
       minor: algonquian
       note: モンタナは 1889 年、ワイオミングは 1890 年に州（ワイオミングは女性参政権を最初に認めた州）。
+    - from: 1920
+      main: english
+- id: lang_iowa
+  name: アイオワ
+  select:
+    pieces: [USA-Iowa]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: algonquian
+      note: アイオワ人（スー系）と、ソーク・メスクワキ人（アルゴンキン系。18 世紀に五大湖の方から移ってきた）の地。
+    - from: 1840
+      main: english
+      minor: algonquian
+      note: ブラック・ホーク購入（1833）で東部が白人の入植に開かれ、アイオワ準州（1838）になった。
+    - from: 1850
+      main: english
+      note: 1846 年に州。
+- id: lang_kansas_east
+  name: カンザス東部
+  select:
+    pieces: [USA-Clay_KS, USA-Dickinson_KS, USA-Marion_KS, USA-Washington_KS, USA-Butler_KS, USA-Geary_KS, USA-Riley_KS, USA-Morris_KS, USA-Chase_KS, USA-Marshall_KS, USA-Pottawatomie_KS, USA-Greenwood_KS, USA-Wabaunsee_KS, USA-Lyon_KS, USA-Nemaha_KS, USA-Jackson_KS, USA-Shawnee_KS, USA-Woodson_KS, USA-Coffey_KS, USA-Osage_KS, USA-Brown_KS, USA-Jefferson_KS, USA-Atchison_KS, USA-Allen_KS, USA-Anderson_KS, USA-Douglas_KS, USA-Franklin_KS, USA-Doniphan_KS, USA-Leavenworth_KS, USA-Bourbon_KS, USA-Linn_KS, USA-Miami_KS, USA-Johnson_KS, USA-Wyandotte_KS]
+  timeline:
+    - from: 1860
+      main: english
+      note: カンザス・ネブラスカ法（1854）で白人の入植が始まり、「流血のカンザス」（1854–59）を経て 1861 年に州になった。
+- id: lang_kansas_west
+  name: カンザス西部
+  select:
+    pieces: [USA-Greeley_KS, USA-Morton_KS, USA-Hamilton_KS, USA-Stanton_KS, USA-Wallace_KS, USA-Cheyenne_KS, USA-Sherman_KS, USA-Wichita_KS, USA-Kearny_KS, USA-Stevens_KS, USA-Grant_KS, USA-Logan_KS, USA-Rawlins_KS, USA-Thomas_KS, USA-Scott_KS, USA-Haskell_KS, USA-Seward_KS, USA-Finney_KS, USA-Gove_KS, USA-Lane_KS, USA-Decatur_KS, USA-Sheridan_KS, USA-Gray_KS, USA-Meade_KS, USA-Ness_KS, USA-Norton_KS, USA-Hodgeman_KS, USA-Ford_KS, USA-Graham_KS, USA-Trego_KS, USA-Clark_KS, USA-Phillips_KS, USA-Rooks_KS, USA-Ellis_KS, USA-Edwards_KS, USA-Rush_KS, USA-Kiowa_KS, USA-Comanche_KS, USA-Pawnee_KS]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: algonquian
+      note: シャイアン・アラパホ（アルゴンキン系）、カイオワ、コマンチ（ユト・アステカ系）の狩り場。
+    - from: 1880
+      main: english
+      minor: german
+      note: 牧畜と小麦の農家の入植。エリス郡などにヴォルガ・ドイツ人が住んだ。
     - from: 1920
       main: english
 - id: lang_nebraska_kansas
@@ -1321,6 +1489,13 @@
   select:
     adm1: ["USA/United States Virgin Islands"]
   timeline:
+    - from: 1648
+      main: english
+      minor: dutch
+      note: セント・クロイ島にイギリス人・オランダ人の小さな入植地（1620–40 年代〜）があった。セント・トーマス島・セント・ジョン島はほぼ無人で、住民はごくわずか。
+    - from: 1651
+      main: french
+      note: 1650 年にスペインがイギリス人を追い出した後、フランス（1651 年にマルタ騎士団、1665 年からフランス西インド会社）がセント・クロイ島に入植した。住民は数百人程度。
     - from: 1672
       main: creole_english
       minor: dutch
