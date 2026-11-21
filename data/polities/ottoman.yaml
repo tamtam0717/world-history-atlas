@@ -1,4 +1,4 @@
-# 担当 E：バルカン・オスマン・中東の政体（1648–1914）
+# 担当 E：バルカン・オスマン・中東の政体（1648–2025）
 
 # ---------------------------------------------------------------- オスマン帝国
 - id: ottoman
@@ -1477,3 +1477,834 @@
       text: 1915年にオスマン軍が撤退し、1916年の条約でイギリスの保護国となった。1949年から石油の輸出が始まった。
     - from: 1971
       text: 1971年に独立した。世界有数の天然ガスの輸出国となり、一人あたりの所得は世界最高の水準。
+
+# ================================================================ 1914–2025：バルカン
+- id: yugoslavia
+  name: ユーゴスラヴィア
+  names:
+    - {to: 1928, name: セルブ＝クロアート＝スロヴェーン王国, short: セルブ＝クロアート＝スロヴェーン王国, kind: 王国}
+    - {from: 1929, to: 1943, name: ユーゴスラヴィア王国, kind: 王国（1941–1945年は亡命政府）}
+    - {from: 1944, to: 1944, name: ユーゴスラヴィア（人民解放軍の支配地）, kind: 臨時政府（ユーゴスラヴィア人民解放反ファシスト会議）}
+    - {from: 1945, to: 1962, name: ユーゴスラヴィア連邦人民共和国, kind: 社会主義国（共産主義者同盟。6共和国の連邦）}
+    - {from: 1963, to: 1991, name: ユーゴスラヴィア社会主義連邦共和国, kind: 社会主義国（6共和国・2自治州の連邦）}
+    - {from: 1992, to: 2002, name: ユーゴスラヴィア連邦共和国, kind: 連邦共和国（セルビアとモンテネグロ）}
+  short: ユーゴスラヴィア
+  color: "#dcab86"
+  kind: 王国
+  note: >-
+    1918年12月1日、セルビア王国とオーストリア＝ハンガリーの南スラヴ人地域（スロヴェニア・クロアチア・ボスニアなど）、モンテネグロが合同してできた。1929年に国名をユーゴスラヴィア（南スラヴ人の国）とした。
+    1941年4月に枢軸国に分割占領され、1944–1945年にティトーのパルチザンが国土を解放した。1991–1992年にスロヴェニア・クロアチア・マケドニア・ボスニアが独立し、残ったセルビアとモンテネグロが1992年にユーゴスラヴィア連邦共和国を作った（2003年にセルビア・モンテネグロ、serbia を参照）。
+    元首の欄には実権を持つ人を書いた（1980–1991年は各共和国の代表による輪番の連邦幹部会）。
+  rulers:
+    - {name: ペータル1世, title: 国王, from: 1918, to: 1921, note: 高齢のため王太子アレクサンダルが摂政として統治した。, source: "https://ja.wikipedia.org/wiki/ペータル1世_(セルビア王)"}
+    - name: アレクサンダル1世
+      title: 国王
+      from: 1921
+      to: 1934
+      note: 1929年1月に憲法を停止して国王の独裁を始め、国名をユーゴスラヴィアとした。1934年にマルセイユでクロアチアの民族主義者（ウスタシャ）らに暗殺された。
+      source: "https://ja.wikipedia.org/wiki/アレクサンダル1世_(ユーゴスラビア王)"
+    - {name: ペータル2世, title: 国王, from: 1934, to: 1945, note: 1941年3月までは叔父パヴレ王子が摂政。1941年4月にロンドンへ亡命し、1945年11月に王制が廃止された。, source: "https://ja.wikipedia.org/wiki/ペータル2世_(ユーゴスラビア王)"}
+    - name: ヨシップ・ブロズ・ティトー
+      title: パルチザンの最高司令官・首相（1945–1953）・大統領（1953–1980）
+      from: 1944
+      to: 1980
+      note: 共産主義者同盟の書記長。1948年にスターリンと決裂し、自主管理社会主義と非同盟外交を進めた。
+      source: "https://ja.wikipedia.org/wiki/ヨシップ・ブロズ・チトー"
+    - name: 連邦幹部会（集団指導）
+      title: 輪番の議長
+      from: 1980
+      to: 1991
+      note: ティトーの死後、6共和国・2自治州の代表8人が1年交代で議長を務めた。1980年代後半からセルビア共和国のミロシェヴィチが力を伸ばした。
+      source: "https://en.wikipedia.org/wiki/Presidency_of_Yugoslavia"
+    - name: スロボダン・ミロシェヴィチ
+      title: セルビア共和国大統領（1989–1997）、連邦大統領（1997–2000）
+      from: 1992
+      to: 2000
+      note: 連邦大統領はチョシッチ（1992–1993）、リリッチ（1993–1997）だったが、実権はミロシェヴィチにあった。2000年の選挙の不正への抗議で倒れ、旧ユーゴスラヴィア国際刑事裁判所に引き渡されて裁判中に死去した。
+      source: "https://ja.wikipedia.org/wiki/スロボダン・ミロシェヴィッチ"
+    - {name: ヴォイスラヴ・コシュトゥニツァ, title: 連邦大統領, from: 2000, to: 2003, source: "https://ja.wikipedia.org/wiki/ヴォイスラヴ・コシュトゥニツァ"}
+  periods:
+    - from: 1918
+      to: 1928
+      text: セルビアの王家と中央集権の憲法（1921）のもとで、セルビア人と連邦制を求めるクロアチア人が対立し、1928年には議会でクロアチア農民党のラディチが撃たれた。
+    - from: 1929
+      to: 1940
+      text: 国王アレクサンダルが独裁を行ったが1934年に暗殺された。1939年にクロアチア自治州を作って妥協を図った。
+    - from: 1941
+      to: 1945
+      text: 1941年3月の三国同盟加入に反対するクーデタの直後、ドイツ・イタリア・ハンガリー・ブルガリアに侵攻され分割された。クロアチア独立国のウスタシャ政権はセルビア人・ユダヤ人・ロマを大量に殺害した。王党派のチェトニクと共産党のパルチザンが抵抗し、パルチザンが自力で国土を解放した。
+    - from: 1946
+      to: 1980
+      text: ティトーのもとで6共和国の連邦となった。1948年にコミンフォルムから追放されてソ連と決裂し、労働者の自主管理と非同盟外交（1961年ベオグラードで第1回非同盟諸国首脳会議）を進めた。
+    - from: 1981
+      to: 1991
+      text: ティトーの死後、対外債務と物価の高騰で経済が悪化し、コソヴォ問題をきっかけにセルビア民族主義が高まった。1991年にスロヴェニア・クロアチアが独立を宣言し、内戦が始まった。
+    - from: 1992
+      to: 2002
+      text: セルビアとモンテネグロでユーゴスラヴィア連邦共和国を作ったが、ボスニア内戦への関与で国連の経済制裁を受けた。1999年にはコソヴォ紛争でNATOの空爆を受けた。2000年にミロシェヴィチ政権が倒れた。
+  source:
+    - "https://ja.wikipedia.org/wiki/ユーゴスラビア"
+    - "https://ja.wikipedia.org/wiki/ユーゴスラビア王国"
+    - "https://ja.wikipedia.org/wiki/ユーゴスラビア社会主義連邦共和国"
+
+- id: bosnia
+  name: ボスニア・ヘルツェゴヴィナ
+  names:
+    - {to: 1994, name: ボスニア・ヘルツェゴヴィナ共和国, short: ボスニア, kind: 共和国}
+    - {from: 1995, name: ボスニア・ヘルツェゴヴィナ, short: ボスニア, kind: 連邦国家（二つの構成体）}
+  short: ボスニア・ヘルツェゴヴィナ
+  color: "#ecd28f"
+  kind: 共和国
+  note: >-
+    1992年3月の住民投票で独立を決め、4月に国際的に承認されたが、反対するセルビア人勢力との内戦となった。1995年12月のデイトン合意で、ボシュニャク人（ムスリム）・クロアチア人のボスニア連邦とセルビア人のスルプスカ共和国の二つの構成体からなる国となった。
+    国家元首は3民族の代表からなる大統領評議会（8か月ごとの輪番の議長）で、和平の実施を監督する国際社会の上級代表が法律の制定や政治家の解任の権限を持つ。元首の欄には上級代表も書いた。
+  rulers:
+    - {name: アリヤ・イゼトベゴヴィチ, title: 幹部会議長, from: 1992, to: 1996, note: 民主行動党（ボシュニャク人）。1996–2000年は大統領評議会の委員。, source: "https://ja.wikipedia.org/wiki/アリヤ・イゼトベゴヴィッチ"}
+    - {name: カール・ビルト, title: 上級代表, from: 1995, to: 1997, source: "https://ja.wikipedia.org/wiki/カール・ビルト"}
+    - {name: カルロス・ウェステンドルプ, title: 上級代表, from: 1997, to: 1999, source: "https://en.wikipedia.org/wiki/Carlos_Westendorp"}
+    - {name: ヴォルフガング・ペトリッチ, title: 上級代表, from: 1999, to: 2002, source: "https://en.wikipedia.org/wiki/Wolfgang_Petritsch"}
+    - {name: パディ・アッシュダウン, title: 上級代表, from: 2002, to: 2006, source: "https://en.wikipedia.org/wiki/Paddy_Ashdown"}
+    - {name: クリスティアン・シュヴァルツ＝シリング, title: 上級代表, from: 2006, to: 2007, source: "https://en.wikipedia.org/wiki/Christian_Schwarz-Schilling"}
+    - {name: ミロスラフ・ライチャーク, title: 上級代表, from: 2007, to: 2009, source: "https://en.wikipedia.org/wiki/Miroslav_Lajčák"}
+    - {name: ヴァレンティン・インツコ, title: 上級代表, from: 2009, to: 2021, source: "https://en.wikipedia.org/wiki/Valentin_Inzko"}
+    - {name: クリスティアン・シュミット, title: 上級代表, from: 2021, source: "https://en.wikipedia.org/wiki/Christian_Schmidt_(politician)"}
+  periods:
+    - from: 1992
+      to: 1995
+      text: 独立に反対するセルビア人勢力がユーゴスラヴィア軍の支援で国土の約7割を押さえ、ボシュニャク人とクロアチア人も一時争った。サライェヴォの包囲、「民族浄化」と呼ばれる追放・虐殺が起き、1995年7月のスレブレニツァではボシュニャク人約8,000人が殺された。NATOの空爆ののちデイトン合意で内戦が終わった。
+    - from: 1996
+      text: 二つの構成体とブルチコ行政区（2000）からなる分権的な国となり、国際社会の上級代表とEUの部隊が和平を見守っている。民族ごとの政党の対立で国の統合は進まず、2022年にEU加盟候補国となった。
+  source: "https://ja.wikipedia.org/wiki/ボスニア・ヘルツェゴビナ"
+
+- id: republika_srpska
+  name: スルプスカ共和国（ボスニアのセルビア人勢力）
+  short: スルプスカ共和国
+  color: "#e2b29e"
+  kind: 自称国家（内戦中）
+  note: 1992年1月にボスニアのセルビア人が宣言した。内戦中は国土の約7割を押さえたが、ピースは現在のスルプスカ共和国（国土の49％）の範囲で描いた。1995年のデイトン合意でボスニア・ヘルツェゴヴィナの構成体の一つとして残った。
+  rulers:
+    - {name: ラドヴァン・カラジッチ, title: 大統領, from: 1992, to: 1996, note: 旧ユーゴスラヴィア国際刑事裁判所でジェノサイド（スレブレニツァ）などの罪で終身刑となった。, source: "https://ja.wikipedia.org/wiki/ラドヴァン・カラジッチ"}
+  source: "https://ja.wikipedia.org/wiki/スルプスカ共和国"
+
+- id: herzeg_bosnia
+  name: ヘルツェグ＝ボスナ・クロアチア人共和国
+  short: ヘルツェグ＝ボスナ
+  color: "#c4d4ef"
+  kind: 自称国家（内戦中）
+  note: ボスニアのクロアチア人勢力がクロアチアの支援で作った政体（1991年に共同体、1993年に共和国を宣言）。1993–1994年にボシュニャク人と戦った。1994年3月のワシントン合意でボシュニャク人とともにボスニア連邦を作った。
+  rulers:
+    - {name: マテ・ボバン, title: 大統領, from: 1993, to: 1994, source: "https://en.wikipedia.org/wiki/Mate_Boban"}
+  source: "https://en.wikipedia.org/wiki/Croatian_Republic_of_Herzeg-Bosnia"
+
+- id: north_macedonia
+  name: 北マケドニア
+  names:
+    - {to: 2018, name: マケドニア共和国, short: マケドニア, kind: 共和国}
+    - {from: 2019, name: 北マケドニア共和国, short: 北マケドニア, kind: 共和国}
+  short: 北マケドニア
+  color: "#e9df92"
+  kind: 共和国
+  note: 1991年9月の住民投票でユーゴスラヴィアから平和的に独立した。国名をめぐってギリシアが反対し、1993年に「マケドニア旧ユーゴスラヴィア共和国」の暫定名で国連に加盟した。2018年のプレスパ協定で2019年2月に「北マケドニア共和国」と改めた。議院内閣制で首相が実権を持つ（元首の欄は初代大統領のほかは首相）。大統領はグリゴロフ（1991–1999）、トライコフスキ（1999–2004）、ツルヴェンコフスキ（2004–2009）、イヴァノフ（2009–2019）、ペンダロフスキ（2019–2024）、シリャノフスカ＝ダフコヴァ（2024–）。
+  rulers:
+    - {name: キロ・グリゴロフ, title: 大統領, from: 1991, to: 1999, note: 独立を主導し、ユーゴスラヴィア内戦に巻き込まれずに独立を保った。, source: "https://ja.wikipedia.org/wiki/キロ・グリゴロフ"}
+    - {name: ブランコ・ツルヴェンコフスキ, title: 首相, from: 1992, to: 1998, source: "https://ja.wikipedia.org/wiki/ブランコ・ツルヴェンコフスキ"}
+    - {name: リュプチョ・ゲオルギエフスキ, title: 首相, from: 1998, to: 2002, source: "https://en.wikipedia.org/wiki/Ljubčo_Georgievski"}
+    - {name: ブランコ・ツルヴェンコフスキ（再任）, title: 首相, from: 2002, to: 2004, source: "https://ja.wikipedia.org/wiki/ブランコ・ツルヴェンコフスキ"}
+    - {name: ヴラド・ブチコフスキ, title: 首相, from: 2004, to: 2006, note: 2004年はハリ・コストフが短期間首相。, source: "https://en.wikipedia.org/wiki/Vlado_Bučkovski"}
+    - {name: ニコラ・グルエフスキ, title: 首相, from: 2006, to: 2016, note: 民族主義的な内政マケドニア革命組織（VMRO-DPMNE）。盗聴事件をきっかけに辞任し、のちハンガリーに亡命した。, source: "https://ja.wikipedia.org/wiki/ニコラ・グルエフスキ"}
+    - {name: ゾラン・ザエフ, title: 首相, from: 2017, to: 2022, note: 社会民主同盟。プレスパ協定を結んだ。2016–2017年はディミトリエフ、2020年はスパソフスキの選挙管理内閣。, source: "https://ja.wikipedia.org/wiki/ゾラン・ザエフ"}
+    - {name: ディミタル・コヴァチェフスキ, title: 首相, from: 2022, to: 2024, source: "https://en.wikipedia.org/wiki/Dimitar_Kovačevski"}
+    - {name: フリスティヤン・ミツコスキ, title: 首相, from: 2024, note: VMRO-DPMNE。2024年はタラト・ジャフェリの選挙管理内閣ののち就任。, source: "https://en.wikipedia.org/wiki/Hristijan_Mickoski"}
+  periods:
+    - from: 1991
+      to: 2000
+      text: 平和的に独立したが、国名・国旗をめぐってギリシアに経済封鎖された（1994–1995）。1999年のコソヴォ紛争では多くのアルバニア人難民が流れ込んだ。
+    - from: 2001
+      to: 2016
+      text: 2001年にアルバニア人の武装勢力と政府軍が衝突したが、オフリド合意でアルバニア語の公用語化など少数民族の権利を広げて収まった。2005年にEU加盟候補国となった。
+    - from: 2017
+      text: プレスパ協定（2018）でギリシアとの国名問題を解決して「北マケドニア」となり、2020年にNATOに加盟した。EU加盟の交渉はブルガリアとの歴史・言語の問題で遅れている。
+  source: "https://ja.wikipedia.org/wiki/北マケドニア"
+
+- id: kosovo
+  name: コソヴォ
+  names:
+    - {from: 2008, name: コソヴォ共和国, short: コソヴォ, kind: 共和国（一部の国だけが承認）}
+  short: コソヴォ
+  color: "#9fb9e3"
+  kind: 共和国
+  note: 2008年2月17日に独立を宣言した。アメリカ・日本・EUの多くの国など100以上の国が承認しているが、セルビア・ロシア・中国などは認めていない（国連には未加盟）。2010年に国際司法裁判所は独立宣言が国際法に反しないとする意見を出した。議院内閣制で首相が実権を持つ（元首の欄は首相）。大統領はセイディウ（–2010）、ヤヒャガ（2011–2016）、サチ（2016–2020）、オスマニ（2021–）。
+  rulers:
+    - {name: ハシム・サチ, title: 首相, from: 2008, to: 2014, note: コソヴォ解放軍の元指導者。2016–2020年は大統領。2020年に戦争犯罪の罪で起訴されて辞任した。, source: "https://ja.wikipedia.org/wiki/ハシム・サチ"}
+    - {name: イサ・ムスタファ, title: 首相, from: 2014, to: 2017, source: "https://en.wikipedia.org/wiki/Isa_Mustafa"}
+    - {name: ラムシュ・ハラディナイ, title: 首相, from: 2017, to: 2020, source: "https://en.wikipedia.org/wiki/Ramush_Haradinaj"}
+    - {name: アルビン・クルティ, title: 首相, from: 2020, to: 2020, source: "https://en.wikipedia.org/wiki/Albin_Kurti"}
+    - {name: アヴドゥッラ・ホティ, title: 首相, from: 2020, to: 2021, source: "https://en.wikipedia.org/wiki/Avdullah_Hoti"}
+    - {name: アルビン・クルティ（再任）, title: 首相, from: 2021, note: 自己決定運動。2025年2月の選挙後は議会の組閣が進まず、暫定の首相を続けた（要確認）。, source: "https://en.wikipedia.org/wiki/Albin_Kurti"}
+  periods:
+    - from: 2008
+      text: 独立を宣言し、2013年のブリュッセル合意でセルビアとの関係の正常化を始めたが、セルビア人が多い北部では緊張が続いている。人口の約9割がアルバニア人。
+  source: "https://ja.wikipedia.org/wiki/コソボ"
+
+- id: unmik
+  name: 国際連合コソヴォ暫定行政ミッション（UNMIK）
+  short: コソヴォ（国連暫定統治）
+  color: "#b9d3ec"
+  kind: 国連の暫定統治
+  note: 1999年6月、コソヴォ紛争でのNATOの空爆ののち、国連安保理決議1244で設けられた。セルビア（ユーゴスラヴィア）の主権を残したまま国連が行政を担い、NATO主体のコソヴォ治安維持部隊（KFOR）が駐留した。2001年から暫定自治政府が作られ、大統領はルゴヴァ（2002–2006）。元首の欄は国連事務総長特別代表。
+  rulers:
+    - {name: ベルナール・クシュネル, title: 国連事務総長特別代表, from: 1999, to: 2001, source: "https://ja.wikipedia.org/wiki/ベルナール・クシュネル"}
+    - {name: ハンス・ヘッケルップ, title: 国連事務総長特別代表, from: 2001, to: 2001, source: "https://en.wikipedia.org/wiki/Hans_Hækkerup"}
+    - {name: ミヒャエル・シュタイナー, title: 国連事務総長特別代表, from: 2002, to: 2003, source: "https://en.wikipedia.org/wiki/Michael_Steiner_(diplomat)"}
+    - {name: ハリ・ホルケリ, title: 国連事務総長特別代表, from: 2003, to: 2004, source: "https://en.wikipedia.org/wiki/Harri_Holkeri"}
+    - {name: セーレン・イェッセン＝ペーターセン, title: 国連事務総長特別代表, from: 2004, to: 2006, source: "https://en.wikipedia.org/wiki/Søren_Jessen-Petersen"}
+    - {name: ヨアヒム・リュッカー, title: 国連事務総長特別代表, from: 2006, to: 2008, source: "https://en.wikipedia.org/wiki/Joachim_Rücker"}
+  periods:
+    - from: 1999
+      to: 2007
+      text: 紛争中に追われたアルバニア人難民が戻る一方、セルビア人の多くが逃れた（2004年3月には反セルビア人の暴動）。地位をめぐる交渉（アハティサーリ案）はセルビアの反対でまとまらなかった。
+  source: "https://ja.wikipedia.org/wiki/国際連合コソボ暫定行政ミッション"
+
+# ================================================================ 1914–2025：トルコ・キプロス
+- id: turkey
+  name: トルコ共和国
+  names:
+    - {to: 1922, name: トルコ大国民議会政府（アンカラ政府）, short: トルコ（アンカラ政府）, kind: 国民闘争の政府}
+    - {from: 1923, name: トルコ共和国, short: トルコ, kind: 共和国}
+  short: トルコ
+  color: "#a9cf98"
+  kind: 共和国
+  note: >-
+    1920年4月、ムスタファ・ケマルらがアンカラで大国民議会を開き、イスタンブルのスルタン政府に代わる政府を作った（国民闘争、ottoman から引き継ぐ）。1922年11月にスルタン制を廃止し、1923年7月のローザンヌ条約で国境が定まり、10月29日に共和国を宣言した。首都はアンカラ。
+    元首の欄には実権を持つ人を書いた。1950–2014年は首相（1960・1980年の軍のクーデタの時期は軍の指導者）。2017年の国民投票で大統領制に移った。
+  rulers:
+    - name: ムスタファ・ケマル（アタテュルク）
+      title: 大国民議会議長（1920–1923）、大統領（1923–1938）
+      from: 1920
+      to: 1938
+      note: カリフ制の廃止（1924）、文字改革（ローマ字化、1928）、女性参政権（1934）などの近代化・世俗化を進めた。1934年に「アタテュルク（父なるトルコ人）」の姓を贈られた。
+      source: "https://ja.wikipedia.org/wiki/ムスタファ・ケマル・アタテュルク"
+    - {name: イスメト・イノニュ, title: 大統領, from: 1938, to: 1950, note: 第二次世界大戦では中立を保ち、1946年に複数政党制を認めた。, source: "https://ja.wikipedia.org/wiki/イスメト・イノニュ"}
+    - {name: アドナン・メンデレス, title: 首相, from: 1950, to: 1960, note: 民主党。大統領はジェラル・バヤル。1960年の軍のクーデタで倒され、1961年に処刑された。, source: "https://ja.wikipedia.org/wiki/アドナン・メンデレス"}
+    - {name: ジェマル・ギュルセル, title: 国家統一委員会議長（軍）、大統領（1961–1966）, from: 1960, to: 1961, source: "https://en.wikipedia.org/wiki/Cemal_Gürsel"}
+    - {name: イスメト・イノニュ（首相）, title: 首相, from: 1961, to: 1965, source: "https://ja.wikipedia.org/wiki/イスメト・イノニュ"}
+    - {name: スレイマン・デミレル, title: 首相, from: 1965, to: 1971, note: 公正党。1971年に軍の「書簡によるクーデタ」で辞任した。, source: "https://ja.wikipedia.org/wiki/スレイマン・デミレル"}
+    - {name: 軍の後押しを受けた内閣, title: 首相（エリム・メレン・タル）, from: 1971, to: 1973, source: "https://en.wikipedia.org/wiki/1971_Turkish_military_memorandum"}
+    - name: ビュレント・エジェヴィトとスレイマン・デミレル
+      title: 首相（交互）
+      from: 1974
+      to: 1980
+      note: 共和人民党のエジェヴィト（1974。キプロス出兵を命じた。1977、1978–1979）と公正党のデミレル（1975–1977、1977–1978、1979–1980）が交互に政権を担った。左右の政治暴力で多くの死者が出た。
+      source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Turkey"
+    - {name: ケナン・エヴレン, title: 国家保安評議会議長（軍）、大統領（1982–1989）, from: 1980, to: 1983, note: 1980年9月のクーデタで政党を解散させ、1982年に新憲法を定めた。, source: "https://ja.wikipedia.org/wiki/ケナン・エヴレン"}
+    - {name: トゥルグト・オザル, title: 首相（1983–1989）、大統領（1989–1993）, from: 1983, to: 1991, note: 祖国党。経済の自由化を進めた。1991年まで政治の中心にいた。, source: "https://ja.wikipedia.org/wiki/トゥルグト・オザル"}
+    - {name: スレイマン・デミレル（再任）, title: 首相, from: 1991, to: 1993, note: 1993–2000年は大統領。, source: "https://ja.wikipedia.org/wiki/スレイマン・デミレル"}
+    - {name: タンス・チルレル, title: 首相, from: 1993, to: 1996, note: トルコ初の女性首相。, source: "https://ja.wikipedia.org/wiki/タンス・チルレル"}
+    - {name: ネジメッティン・エルバカン, title: 首相, from: 1996, to: 1997, note: イスラーム系の福祉党。軍の圧力で辞任した（「ポストモダン・クーデタ」）。, source: "https://ja.wikipedia.org/wiki/ネジメッティン・エルバカン"}
+    - {name: メスット・ユルマズ, title: 首相, from: 1997, to: 1999, source: "https://ja.wikipedia.org/wiki/メスット・ユルマズ"}
+    - {name: ビュレント・エジェヴィト（再任）, title: 首相, from: 1999, to: 2002, source: "https://ja.wikipedia.org/wiki/ビュレント・エジェヴィト"}
+    - {name: アブドゥッラー・ギュル, title: 首相, from: 2002, to: 2003, note: 2007–2014年は大統領。, source: "https://ja.wikipedia.org/wiki/アブドゥッラー・ギュル"}
+    - name: レジェップ・タイイップ・エルドアン
+      title: 首相（2003–2014）、大統領（2014–）
+      from: 2003
+      note: 公正発展党（AKP）。2016年7月のクーデタ未遂ののち非常事態のもとで反対派を大量に処分し、2017年の国民投票で強い大統領制に改めた。
+      source: "https://ja.wikipedia.org/wiki/レジェップ・タイイップ・エルドアン"
+  periods:
+    - from: 1920
+      to: 1922
+      text: 大国民議会政府がセーヴル条約を拒み、東部でアルメニアを破り（1920）、ソヴィエト・ロシアと国境を定め（1921）、南部からフランス軍を去らせた。サカリヤの戦い（1921）・大攻勢（1922）でギリシア軍を小アジアから追い出した。
+    - from: 1923
+      to: 1938
+      text: ローザンヌ条約で国境と主権を回復し、ギリシアとの住民交換を行った。アタテュルクが共和人民党の一党体制のもとで、カリフ制の廃止、イスラーム法に代わる民法、ローマ字の採用、女性参政権など近代化・世俗化を進めた。1925年のクルド人の反乱などは鎮圧された。
+    - from: 1939
+      to: 1949
+      text: 第二次世界大戦では中立を保ち（1945年2月に名目的に参戦）、戦後はソ連の圧力に対してアメリカの援助を受けた（トルーマン・ドクトリン）。1946年に複数政党制となった。1939年にハタイ（アレクサンドレッタ）をシリアから編入した。
+    - from: 1950
+      to: 1979
+      text: 民主党が選挙で政権をとり、1952年にNATOに加盟した。1960年・1971年に軍が政治に介入した。1974年にキプロスに出兵して島の北部を占領した。
+    - from: 1980
+      to: 2002
+      text: 1980年の軍のクーデタののち、オザルのもとで経済の自由化が進み、多くの人が西ドイツなどに働きに出た。1984年からクルディスタン労働者党（PKK）との武力紛争が続いた。1999年にEU加盟候補国となった。
+    - from: 2003
+      text: エルドアンの公正発展党のもとで経済が成長したが、2010年代から権威主義を強めた。シリア内戦では約300万人の難民を受け入れ、シリア北部に出兵した。2023年2月の大地震で5万人以上が死亡した。2025年にPKKが武装解除を表明した。
+  source:
+    - "https://ja.wikipedia.org/wiki/トルコ"
+    - "https://ja.wikipedia.org/wiki/トルコ革命"
+
+- id: hatay_state
+  name: ハタイ国
+  short: ハタイ
+  color: "#cfb4a8"
+  kind: 共和国（トルコの保護下）
+  note: フランス委任統治領シリアのアレクサンドレッタ地方で、トルコの圧力とフランスの同意のもと1938年9月に作られた国。1939年6月の議会の決議でトルコに編入された（フランスはトルコの中立を得るために認めた）。シリアは今もこの編入を認めていない。
+  rulers:
+    - {name: タイフル・ソクメン, title: 大統領, from: 1938, to: 1939, source: "https://en.wikipedia.org/wiki/Tayfur_Sökmen"}
+  source: "https://ja.wikipedia.org/wiki/ハタイ国"
+
+- id: cyprus
+  name: キプロス共和国
+  short: キプロス
+  color: "#e7c48e"
+  kind: 共和国
+  note: 1960年8月にイギリスから独立した（イギリスはアクロティリ・デケリアの基地を残した）。ギリシア系とトルコ系の住民の権力分担の憲法だったが、1963年末から衝突が起き、1964年から国連の平和維持部隊が駐留している。1974年のトルコの出兵で島の北部（約37％）がトルコの占領下に置かれ、1983年に北キプロス・トルコ共和国（トルコだけが承認）が宣言された。大統領制。
+  rulers:
+    - {name: マカリオス3世, title: 大統領（キプロス正教会の大主教）, from: 1960, to: 1977, note: 1974年7月にギリシアの軍事政権が後押しするクーデタで一時追われた（サンプソンの8日間の政権、クレリデスの代行を経て12月に復帰）。, source: "https://ja.wikipedia.org/wiki/マカリオス3世"}
+    - {name: スピロス・キプリアヌ, title: 大統領, from: 1977, to: 1988, source: "https://en.wikipedia.org/wiki/Spyros_Kyprianou"}
+    - {name: ゲオルギオス・ヴァシリウ, title: 大統領, from: 1988, to: 1993, source: "https://en.wikipedia.org/wiki/George_Vasiliou"}
+    - {name: グラフコス・クレリデス, title: 大統領, from: 1993, to: 2003, source: "https://en.wikipedia.org/wiki/Glafcos_Clerides"}
+    - {name: タソス・パパドプロス, title: 大統領, from: 2003, to: 2008, note: 2004年の国連の統一案（アナン案）に反対し、住民投票でギリシア系が否決した。, source: "https://en.wikipedia.org/wiki/Tassos_Papadopoulos"}
+    - {name: ディミトリス・フリストフィアス, title: 大統領, from: 2008, to: 2013, source: "https://en.wikipedia.org/wiki/Demetris_Christofias"}
+    - {name: ニコス・アナスタシアディス, title: 大統領, from: 2013, to: 2023, note: 2013年の金融危機でEUの支援を受けた。, source: "https://en.wikipedia.org/wiki/Nicos_Anastasiades"}
+    - {name: ニコス・フリストドゥリディス, title: 大統領, from: 2023, source: "https://en.wikipedia.org/wiki/Nikos_Christodoulides"}
+  periods:
+    - from: 1960
+      to: 1973
+      text: 独立したが、ギリシアとの統合（エノシス）を求めるギリシア系と分割を求めるトルコ系が対立し、1963–1964年の衝突でトルコ系は飛び地に移り住んだ。
+    - from: 1974
+      text: 1974年7月、ギリシアの軍事政権が後押しするクーデタに対してトルコが出兵し、島は南北に分かれた（多くの住民が避難民となった）。南のキプロス共和国は2004年にEUに加盟し、2008年にユーロを導入した。統一の交渉はまとまっていない。
+  source: "https://ja.wikipedia.org/wiki/キプロス"
+
+# ================================================================ 1914–2025：アラブ東部
+- id: arab_syria
+  name: シリア・アラブ王国
+  names:
+    - {to: 1919, name: ダマスクスのアラブ政府, short: アラブ政府（シリア）, kind: 占領地行政（東部占領地行政区）}
+    - {from: 1920, name: シリア・アラブ王国, kind: 王国}
+  short: シリア・アラブ王国
+  color: "#d4c2e0"
+  kind: 王国
+  note: アラブの反乱を率いたファイサル（メッカのシャリーフ、フサインの子）が1918年10月にダマスクスに入って作った政府。イギリスの占領地行政のもとで内陸シリアとヨルダン川東岸を治め、1920年3月にシリア国民会議が独立と王国を宣言したが、サン・レモ会議でシリアはフランスの委任統治とされ、7月のマイサルーンの戦いでフランス軍に倒された。
+  rulers:
+    - {name: ファイサル, title: アラブ政府の首長・国王, from: 1918, to: 1920, note: 1921年にイギリスに迎えられてイラク国王となった。, source: "https://ja.wikipedia.org/wiki/ファイサル1世_(イラク王)"}
+  periods:
+    - from: 1918
+      to: 1920
+      text: フサイン＝マクマホン協定で約束されたアラブ国家を目指したが、英仏のサイクス＝ピコ協定とサン・レモ会議（1920）でシリア・レバノンはフランス、パレスチナ・ヨルダン・イラクはイギリスの委任統治とされた。
+  source: "https://ja.wikipedia.org/wiki/シリア・アラブ王国"
+
+- id: hejaz
+  name: ヒジャーズ王国
+  short: ヒジャーズ
+  color: "#cfe0a8"
+  kind: 王国
+  note: メッカのシャリーフ（預言者ムハンマドの子孫のハーシム家）フサインが1916年6月にオスマン帝国に対して「アラブの反乱」を起こして作った王国。イギリスの支援を受け、イギリスの将校ロレンスも加わった。1924年にカリフを称したが、イブン・サウードに攻められ、1925年に滅んだ。
+  rulers:
+    - {name: フサイン・イブン・アリー, title: ヒジャーズ王（1924年にカリフを称する）, from: 1916, to: 1924, source: "https://ja.wikipedia.org/wiki/フサイン・イブン・アリー"}
+    - {name: アリー・イブン・フサイン, title: ヒジャーズ王, from: 1924, to: 1925, source: "https://en.wikipedia.org/wiki/Ali_of_Hejaz"}
+  periods:
+    - from: 1916
+      to: 1925
+      text: アラブの反乱でメッカ・ジッダを押さえ、ヒジャーズ鉄道を攻撃しながら北上してアカバ（1917）・ダマスクス（1918）に達した。メディナのオスマン軍は1919年1月まで持ちこたえた。子のファイサル・アブドゥッラーはイラク・トランスヨルダンの王家となった。
+  source: "https://ja.wikipedia.org/wiki/ヒジャーズ王国"
+
+- id: syria
+  name: シリア
+  names:
+    - {to: 1957, name: シリア共和国, kind: 共和国}
+    - {from: 1961, to: 2023, name: シリア・アラブ共和国, kind: 共和国（1963年からバアス党の一党支配）}
+    - {from: 2024, name: シリア・アラブ共和国（暫定政府）, kind: 暫定政府}
+  short: シリア
+  color: "#c9b4d8"
+  kind: 共和国
+  note: フランスの委任統治（1920–1946）ののち、1946年4月に外国軍が撤退して独立した（1941年に独立を宣言）。1958–1961年はエジプトとアラブ連合共和国を作った（地図ではエジプトの色）。元首の欄は実権を持つ人。
+  rulers:
+    - {name: シュクリー・クーワトリー, title: 大統領, from: 1946, to: 1949, note: 1943年から大統領。, source: "https://en.wikipedia.org/wiki/Shukri_al-Quwatli"}
+    - {name: フスニー・ザイーム／サーミー・ヒンナーウィー, title: 軍のクーデタの指導者, from: 1949, to: 1949, note: 1949年に3回のクーデタが起きた。, source: "https://en.wikipedia.org/wiki/1949_Syrian_coups_d'état"}
+    - {name: アディーブ・シーシャクリー, title: 軍の実力者（1953年から大統領）, from: 1949, to: 1954, source: "https://en.wikipedia.org/wiki/Adib_Shishakli"}
+    - {name: ハーシム・アターシー, title: 大統領, from: 1954, to: 1955, source: "https://en.wikipedia.org/wiki/Hashim_al-Atassi"}
+    - {name: シュクリー・クーワトリー（再任）, title: 大統領, from: 1955, to: 1958, note: エジプトとの合同を進めた。, source: "https://en.wikipedia.org/wiki/Shukri_al-Quwatli"}
+    - {name: ナーズィム・クドスィー, title: 大統領, from: 1961, to: 1963, source: "https://en.wikipedia.org/wiki/Nazim_al-Kudsi"}
+    - {name: アミーン・ハーフィズ, title: 革命指導評議会議長（バアス党）, from: 1963, to: 1966, source: "https://en.wikipedia.org/wiki/Amin_al-Hafiz"}
+    - {name: サラーフ・ジャディード, title: バアス党の実力者, from: 1966, to: 1970, note: 大統領はヌールッディーン・アターシー。, source: "https://en.wikipedia.org/wiki/Salah_Jadid"}
+    - {name: ハーフィズ・アサド, title: 大統領, from: 1970, to: 2000, note: アラウィー派出身の空軍の軍人。1982年にハマーのムスリム同胞団の蜂起を鎮圧し、多数の住民が殺された。, source: "https://ja.wikipedia.org/wiki/ハーフィズ・アル＝アサド"}
+    - {name: バッシャール・アサド, title: 大統領, from: 2000, to: 2024, note: 2024年12月8日、反体制派の進攻でロシアに逃れた。, source: "https://ja.wikipedia.org/wiki/バッシャール・アル＝アサド"}
+    - {name: アフマド・シャラア, title: 暫定大統領, from: 2024, note: 「シャーム解放機構」（HTS）の指導者（ジャウラーニーの名で知られた）。2025年1月に暫定大統領となった。, source: "https://en.wikipedia.org/wiki/Ahmed_al-Sharaa"}
+  periods:
+    - from: 1946
+      to: 1957
+      text: 独立後、第1次中東戦争（1948）の敗北をきっかけに軍のクーデタがくり返された。
+    - from: 1958
+      to: 1961
+      text: ナセルのエジプトとアラブ連合共和国を作ったが、エジプト主導に不満が高まり、1961年のクーデタで離脱した。
+    - from: 1962
+      to: 2010
+      text: 1963年にバアス党が政権を握り、1970年からアサド父子の独裁となった。第3次中東戦争（1967）でゴラン高原をイスラエルに占領され、1976–2005年はレバノンに軍を駐留させた。
+    - from: 2011
+      to: 2024
+      text: 「アラブの春」の抗議運動を政府が武力で抑えて内戦となった。「イスラーム国」の台頭、ロシア・イランの政府側への軍事支援、トルコ・アメリカの介入で国土は分裂し、50万人以上が死亡、1,000万人以上が国内外に逃れた。
+    - from: 2024
+      text: 2024年12月に反体制派がダマスクスを押さえ、アサド政権が倒れた。シャラアの暫定政府のもとで国の再建が始まったが、クルド人勢力やドルーズ派・アラウィー派の地域との関係が課題となっている。
+  source: "https://ja.wikipedia.org/wiki/シリア"
+
+- id: lebanon
+  name: レバノン共和国
+  short: レバノン
+  color: "#9fd0bd"
+  kind: 共和国
+  note: フランスが1920年に作った「大レバノン」をもとに、1943年11月に独立した（フランス軍の撤退は1946年）。大統領はマロン派、首相はスンナ派、議長はシーア派から選ぶ宗派ごとの権力分担（国民協約）が特徴。元首の欄は大統領（空位の時期は省いた）。首相ではラフィーク・ハリーリー（1992–1998、2000–2004。2005年に暗殺）が重要。
+  rulers:
+    - {name: ビシャーラ・フーリー, title: 大統領, from: 1943, to: 1952, source: "https://en.wikipedia.org/wiki/Bechara_El_Khoury"}
+    - {name: カミール・シャムーン, title: 大統領, from: 1952, to: 1958, note: 1958年の危機でアメリカ軍が上陸した。, source: "https://en.wikipedia.org/wiki/Camille_Chamoun"}
+    - {name: フアード・シハーブ, title: 大統領, from: 1958, to: 1964, source: "https://en.wikipedia.org/wiki/Fouad_Chehab"}
+    - {name: シャルル・ヘルー, title: 大統領, from: 1964, to: 1970, source: "https://en.wikipedia.org/wiki/Charles_Helou"}
+    - {name: スライマーン・フランジーエ, title: 大統領, from: 1970, to: 1976, source: "https://en.wikipedia.org/wiki/Suleiman_Frangieh"}
+    - {name: イリヤース・サルキース, title: 大統領, from: 1976, to: 1982, source: "https://en.wikipedia.org/wiki/Elias_Sarkis"}
+    - {name: アミーン・ジュマイエル, title: 大統領, from: 1982, to: 1988, note: 当選した兄バシールが就任前に暗殺された。, source: "https://en.wikipedia.org/wiki/Amine_Gemayel"}
+    - {name: イリヤース・フラーウィー, title: 大統領, from: 1989, to: 1998, note: 1989年に当選したルネ・ムアワドは17日で暗殺された。, source: "https://en.wikipedia.org/wiki/Elias_Hrawi"}
+    - {name: エミール・ラフード, title: 大統領, from: 1998, to: 2007, source: "https://en.wikipedia.org/wiki/Émile_Lahoud"}
+    - {name: ミシェル・スライマーン, title: 大統領, from: 2008, to: 2014, source: "https://en.wikipedia.org/wiki/Michel_Suleiman"}
+    - {name: ミシェル・アウン, title: 大統領, from: 2016, to: 2022, source: "https://ja.wikipedia.org/wiki/ミシェル・アウン"}
+    - {name: ジョゼフ・アウン, title: 大統領, from: 2025, note: 2年あまりの空位ののち、2025年1月に選ばれた（前の軍司令官）。, source: "https://en.wikipedia.org/wiki/Joseph_Aoun"}
+  periods:
+    - from: 1943
+      to: 1974
+      text: 宗派の権力分担のもとで、ベイルートは中東の金融・観光の中心として栄えた。1970年代にはヨルダンを追われたパレスチナ解放機構（PLO）の拠点となった。
+    - from: 1975
+      to: 1990
+      text: キリスト教徒とムスリム・PLOの対立から内戦となり、シリア軍の駐留（1976）、イスラエルの侵攻（1982）、シーア派の武装組織ヒズボラの結成が重なった。1989年のターイフ合意で内戦が終わった。
+    - from: 1991
+      to: 2018
+      text: シリアの強い影響のもとで復興が進んだが、2005年のハリーリー元首相の暗殺ののち抗議運動（杉の革命）でシリア軍が撤退した。2006年にはヒズボラとイスラエルが戦った。シリア内戦で100万人以上の難民を受け入れた。
+    - from: 2019
+      text: 2019年に通貨が暴落して経済が破綻し、2020年8月にはベイルート港の大爆発が起きた。2024年にイスラエルとヒズボラの戦争が激しくなり、11月に停戦した。
+  source: "https://ja.wikipedia.org/wiki/レバノン"
+
+- id: israel
+  name: イスラエル国
+  short: イスラエル
+  color: "#a9c4e8"
+  kind: 共和国（議院内閣制）
+  note: 1948年5月14日、イギリスの委任統治の終わりに独立を宣言した（国連のパレスチナ分割決議、1947）。議院内閣制で首相が実権を持つ（元首の欄は首相）。大統領はヴァイツマン（1949–1952）など儀礼的な元首。1967年以後のヨルダン川西岸・ガザ・ゴラン高原の占領は、地図では占領地（赤い斜線）として描いた。
+  rulers:
+    - {name: ダヴィド・ベン＝グリオン, title: 首相, from: 1948, to: 1954, source: "https://ja.wikipedia.org/wiki/ダヴィド・ベン＝グリオン"}
+    - {name: モシェ・シャレット, title: 首相, from: 1954, to: 1955, source: "https://ja.wikipedia.org/wiki/モシェ・シャレット"}
+    - {name: ダヴィド・ベン＝グリオン（再任）, title: 首相, from: 1955, to: 1963, source: "https://ja.wikipedia.org/wiki/ダヴィド・ベン＝グリオン"}
+    - {name: レヴィ・エシュコル, title: 首相, from: 1963, to: 1969, source: "https://ja.wikipedia.org/wiki/レヴィ・エシュコル"}
+    - {name: ゴルダ・メイア, title: 首相, from: 1969, to: 1974, source: "https://ja.wikipedia.org/wiki/ゴルダ・メイア"}
+    - {name: イツハク・ラビン, title: 首相, from: 1974, to: 1977, source: "https://ja.wikipedia.org/wiki/イツハク・ラビン"}
+    - {name: メナヘム・ベギン, title: 首相, from: 1977, to: 1983, note: リクード。エジプトと平和条約を結んだ（1979）。, source: "https://ja.wikipedia.org/wiki/メナヘム・ベギン"}
+    - {name: イツハク・シャミル, title: 首相, from: 1983, to: 1984, source: "https://ja.wikipedia.org/wiki/イツハク・シャミル"}
+    - {name: シモン・ペレス, title: 首相, from: 1984, to: 1986, source: "https://ja.wikipedia.org/wiki/シモン・ペレス"}
+    - {name: イツハク・シャミル（再任）, title: 首相, from: 1986, to: 1992, source: "https://ja.wikipedia.org/wiki/イツハク・シャミル"}
+    - {name: イツハク・ラビン（再任）, title: 首相, from: 1992, to: 1995, note: オスロ合意（1993）を結び、1995年11月に和平に反対するユダヤ人の青年に暗殺された。, source: "https://ja.wikipedia.org/wiki/イツハク・ラビン"}
+    - {name: シモン・ペレス（再任）, title: 首相, from: 1995, to: 1996, source: "https://ja.wikipedia.org/wiki/シモン・ペレス"}
+    - {name: ベンヤミン・ネタニヤフ, title: 首相, from: 1996, to: 1999, source: "https://ja.wikipedia.org/wiki/ベンヤミン・ネタニヤフ"}
+    - {name: エフード・バラク, title: 首相, from: 1999, to: 2001, source: "https://ja.wikipedia.org/wiki/エフード・バラック"}
+    - {name: アリエル・シャロン, title: 首相, from: 2001, to: 2006, note: 分離壁を作り、ガザから撤退した（2005）。, source: "https://ja.wikipedia.org/wiki/アリエル・シャロン"}
+    - {name: エフード・オルメルト, title: 首相, from: 2006, to: 2009, source: "https://ja.wikipedia.org/wiki/エフード・オルメルト"}
+    - {name: ベンヤミン・ネタニヤフ（再任）, title: 首相, from: 2009, to: 2021, source: "https://ja.wikipedia.org/wiki/ベンヤミン・ネタニヤフ"}
+    - {name: ナフタリ・ベネット／ヤイル・ラピド, title: 首相, from: 2021, to: 2022, source: "https://ja.wikipedia.org/wiki/ナフタリ・ベネット"}
+    - {name: ベンヤミン・ネタニヤフ（3度目）, title: 首相, from: 2022, source: "https://ja.wikipedia.org/wiki/ベンヤミン・ネタニヤフ"}
+  periods:
+    - from: 1948
+      to: 1966
+      text: 独立宣言とともに周辺のアラブ諸国と戦い（第1次中東戦争）、分割案より広い地域を押さえた。約70万人のパレスチナ人が故郷を追われて難民となった（ナクバ）。世界各地からユダヤ人の移民を受け入れた。1956年のスエズ戦争ではシナイ半島に出兵した。
+    - from: 1967
+      to: 1992
+      text: 第3次中東戦争でヨルダン川西岸・ガザ・シナイ半島・ゴラン高原を占領し、占領地に入植地を作った。第4次中東戦争（1973）ののちエジプトと平和条約を結び（1979）、シナイ半島を返した（1982）。1987年に占領地でインティファーダが起きた。
+    - from: 1993
+      to: 2022
+      text: オスロ合意でパレスチナ自治が始まったが、ラビン首相の暗殺、第2次インティファーダ（2000）で和平は行き詰まった。2005年にガザから撤退し、2020年にはアラブ首長国連邦などと国交を結んだ（アブラハム合意）。
+    - from: 2023
+      text: 2023年10月7日、ガザのハマースなどの奇襲で約1,200人が殺され、約250人が人質となった。イスラエルはガザへの大規模な攻撃を続け、ガザ側の死者は6万人を超え、人道危機が深刻になった。レバノンのヒズボラ（2024）やイラン（2025）とも戦った。2025年10月に停戦した。
+  source: "https://ja.wikipedia.org/wiki/イスラエル"
+
+- id: palestine
+  name: パレスチナ（パレスチナ自治政府）
+  names:
+    - {to: 2011, name: パレスチナ自治政府, short: パレスチナ自治区, kind: 自治政府}
+    - {from: 2012, name: パレスチナ国（パレスチナ自治政府）, short: パレスチナ, kind: 自治政府（国連のオブザーバー国家）}
+  short: パレスチナ
+  color: "#b6d9a2"
+  kind: 自治政府
+  note: 1993年のオスロ合意で作られたパレスチナ人の自治政府（1994年からガザとエリコ、1995年から西岸の都市部）。2007年からガザはイスラーム主義組織ハマースが支配し、西岸のファタハ主導の自治政府と分かれている。2012年に国連のオブザーバー国家となり、約150の国がパレスチナ国を承認している（2025年にイギリス・フランスなども承認）。西岸は地域の大半（C地区）をイスラエル軍が支配しているので、地図ではイスラエルの占領地として描いた。
+  rulers:
+    - {name: ヤースィル・アラファート, title: 自治政府議長, from: 1994, to: 2004, note: パレスチナ解放機構（PLO）の議長（1969–2004）。, source: "https://ja.wikipedia.org/wiki/ヤーセル・アラファート"}
+    - {name: マフムード・アッバース, title: 自治政府大統領, from: 2005, note: ガザは2007年からハマース（指導者はハニーヤ、のちスィンワールなど）が支配した。, source: "https://ja.wikipedia.org/wiki/マフムード・アッバース"}
+  periods:
+    - from: 1994
+      to: 2006
+      text: オスロ合意で自治が始まったが、入植地の拡大とテロ、第2次インティファーダ（2000–2005）で和平は進まなかった。2005年にイスラエルがガザの入植地から撤退した。
+    - from: 2007
+      text: ハマースがガザを支配し、イスラエル・エジプトがガザを封鎖した。2023年10月からのイスラエルとハマースの戦争でガザは壊滅的な被害を受け、2025年10月の停戦後もイスラエル軍がガザの半分ほどを押さえている（要確認）。
+  source: "https://ja.wikipedia.org/wiki/パレスチナ自治政府"
+
+- id: jordan
+  name: ヨルダン・ハーシム王国
+  names:
+    - {to: 1948, name: トランスヨルダン王国, short: トランスヨルダン, kind: 王国}
+    - {from: 1949, name: ヨルダン・ハーシム王国, short: ヨルダン, kind: 王国}
+  short: ヨルダン
+  color: "#dcc49b"
+  kind: 王国
+  note: 1921年にハーシム家のアブドゥッラーを首長としてイギリスが作ったトランスヨルダン首長国（委任統治下。地図ではイギリスの色）が、1946年5月に独立して王国となった。1950年に西岸を併合したが、1967年にイスラエルに占領され、1988年に西岸への主権の主張を放棄した。
+  rulers:
+    - {name: アブドゥッラー1世, title: 首長（1921–1946）、国王（1946–1951）, from: 1921, to: 1951, note: ヒジャーズ王フサインの子。1951年にエルサレムで暗殺された。, source: "https://ja.wikipedia.org/wiki/アブドゥッラー1世_(ヨルダン王)"}
+    - {name: タラール, title: 国王, from: 1951, to: 1952, source: "https://ja.wikipedia.org/wiki/タラール_(ヨルダン王)"}
+    - {name: フセイン, title: 国王, from: 1952, to: 1999, note: 1970年の「黒い九月」でPLOを追い出し、1994年にイスラエルと平和条約を結んだ。, source: "https://ja.wikipedia.org/wiki/フセイン1世"}
+    - {name: アブドゥッラー2世, title: 国王, from: 1999, source: "https://ja.wikipedia.org/wiki/アブドゥッラー2世"}
+  periods:
+    - from: 1946
+      to: 1966
+      text: 独立後、第1次中東戦争で西岸と東エルサレムを押さえて併合し（1950）、多くのパレスチナ難民を国民とした。
+    - from: 1967
+      to: 1993
+      text: 第3次中東戦争で西岸を失い、さらに難民を受け入れた。1970年にPLOとの内戦（黒い九月）に勝ってPLOをレバノンへ追った。
+    - from: 1994
+      text: イスラエルと平和条約を結んだ。イラク戦争・シリア内戦で多くの難民を受け入れ、資源の乏しいなかアメリカや湾岸諸国の援助に頼っている。
+  source: "https://ja.wikipedia.org/wiki/ヨルダン"
+
+- id: iraq
+  name: イラク
+  names:
+    - {to: 1957, name: イラク王国, kind: 王国}
+    - {from: 1958, to: 2002, name: イラク共和国, kind: 共和国（1968年からバアス党の一党支配）}
+    - {from: 2003, name: イラク共和国, kind: 連邦共和国（議院内閣制）}
+  short: イラク
+  color: "#c8d69c"
+  kind: 王国
+  note: 第一次世界大戦でイギリスがオスマン帝国のバスラ・バグダード・モースル州を占領し、1920年に委任統治領とした。1921年にファイサルを国王とするイラク王国を作り、1932年に独立した（委任統治の時期は地図ではイギリスの色）。2005年の憲法で議院内閣制となり首相が実権を持つ（元首の欄は2004年から首相）。
+  rulers:
+    - {name: ファイサル1世, title: 国王, from: 1921, to: 1933, source: "https://ja.wikipedia.org/wiki/ファイサル1世_(イラク王)"}
+    - {name: ガーズィー, title: 国王, from: 1933, to: 1939, source: "https://en.wikipedia.org/wiki/Ghazi_of_Iraq"}
+    - {name: ファイサル2世, title: 国王, from: 1939, to: 1958, note: 1953年まで叔父アブドゥルイラーフが摂政。親英派のヌーリー・サイード首相が長く実権を握った。1958年の革命で殺された。, source: "https://ja.wikipedia.org/wiki/ファイサル2世_(イラク王)"}
+    - {name: アブドゥルカリーム・カースィム, title: 首相（軍）, from: 1958, to: 1963, note: 7月14日革命で王制を倒した。, source: "https://ja.wikipedia.org/wiki/アブドルカリーム・カーシム"}
+    - {name: アブドゥッサラーム・アーリフ, title: 大統領, from: 1963, to: 1966, source: "https://en.wikipedia.org/wiki/Abdul_Salam_Arif"}
+    - {name: アブドゥッラフマーン・アーリフ, title: 大統領, from: 1966, to: 1968, source: "https://en.wikipedia.org/wiki/Abdul_Rahman_Arif"}
+    - {name: アフマド・ハサン・バクル, title: 大統領（バアス党）, from: 1968, to: 1979, source: "https://en.wikipedia.org/wiki/Ahmed_Hassan_al-Bakr"}
+    - {name: サッダーム・フセイン, title: 大統領, from: 1979, to: 2003, note: 2003年のイラク戦争で政権を追われ、2006年に処刑された。, source: "https://ja.wikipedia.org/wiki/サッダーム・フセイン"}
+    - {name: ポール・ブレマー, title: 連合国暫定当局の行政官（アメリカ）, from: 2003, to: 2004, source: "https://ja.wikipedia.org/wiki/ポール・ブレマー"}
+    - {name: イヤード・アッラーウィー, title: 暫定政府の首相, from: 2004, to: 2005, source: "https://ja.wikipedia.org/wiki/イヤード・アッラーウィー"}
+    - {name: イブラーヒーム・ジャアファリー, title: 首相, from: 2005, to: 2006, source: "https://en.wikipedia.org/wiki/Ibrahim_al-Jaafari"}
+    - {name: ヌーリー・マーリキー, title: 首相, from: 2006, to: 2014, source: "https://ja.wikipedia.org/wiki/ヌーリー・マーリキー"}
+    - {name: ハイダル・アバーディー, title: 首相, from: 2014, to: 2018, source: "https://ja.wikipedia.org/wiki/ハイダル・アル＝アバーディー"}
+    - {name: アーディル・アブドゥルマフディー, title: 首相, from: 2018, to: 2020, source: "https://en.wikipedia.org/wiki/Adil_Abdul-Mahdi"}
+    - {name: ムスタファ・カーズィミー, title: 首相, from: 2020, to: 2022, source: "https://en.wikipedia.org/wiki/Mustafa_Al-Kadhimi"}
+    - {name: ムハンマド・シーア・スーダーニー, title: 首相, from: 2022, note: 2025年11月に議会選挙が行われた。, source: "https://en.wikipedia.org/wiki/Mohammed_Shia%27_Al_Sudani"}
+  periods:
+    - from: 1921
+      to: 1957
+      text: イギリスの委任統治のもとでハーシム家の王国となり、1932年に独立したが、石油と軍事基地を通じてイギリスの影響が続いた。
+    - from: 1958
+      to: 1978
+      text: 1958年の革命で共和国となり、クーデタがくり返された。1968年からバアス党の政権。1972年に石油を国有化した。
+    - from: 1979
+      to: 2002
+      text: サッダーム・フセインの独裁のもとでイラン＝イラク戦争（1980–1988）を戦い、クルド人を化学兵器で攻撃した（ハラブジャ、1988）。1990年にクウェートに侵攻して湾岸戦争（1991）に敗れ、国連の経済制裁を受けた。北部のクルド人地域は1991年から自治を得た。
+    - from: 2003
+      to: 2013
+      text: アメリカなどの攻撃でフセイン政権が倒れ（イラク戦争）、占領統治ののちシーア派中心の政府ができた。宗派間の衝突とテロで多くの犠牲者が出た。アメリカ軍は2011年に撤退した。
+    - from: 2014
+      to: 2017
+      text: 「イスラーム国」が北部・西部を押さえ、モースルを拠点とした。アメリカ主導の有志連合とイラク軍・クルド人部隊が2017年に奪い返した。
+    - from: 2018
+      text: 汚職と失業への抗議運動（2019）が起き、イランとアメリカの対立の舞台にもなった。
+  source: "https://ja.wikipedia.org/wiki/イラク"
+
+- id: kurdistan_region
+  name: クルディスターン地域（イラク北部）
+  short: クルディスターン地域
+  color: "#e3c08b"
+  kind: 自治地域（事実上の自治）
+  note: 湾岸戦争後のクルド人の蜂起（1991）ののち、多国籍軍の飛行禁止区域に守られてイラク政府の支配から外れた地域。1992年にクルディスターン地域政府を作った。クルディスターン民主党（バールザーニー）とクルディスターン愛国同盟（ターラバーニー）が内戦（1994–1997）をした。2005年のイラク憲法で連邦の自治地域として認められた（地図では2004年からイラクに戻した）。
+  rulers:
+    - {name: マスウード・バールザーニー, title: クルディスターン民主党の党首（2005–2017年は地域の大統領）, from: 1991, to: 2003, note: ターラバーニーの愛国同盟がスレイマーニーヤを中心に別の政府を作った時期もある。, source: "https://ja.wikipedia.org/wiki/マスウード・バールザーニー"}
+  source: "https://ja.wikipedia.org/wiki/クルディスタン地域"
+
+- id: isil
+  name: 「イスラーム国」（IS）
+  short: 「イスラーム国」
+  color: "#a7a39a"
+  kind: 過激派組織の支配地域
+  note: イラクのアル＝カーイダ系の組織から生まれた過激派組織（ISIL・ISIS・ダーイシュとも呼ばれる）。2014年6月にモースルを押さえて「カリフ国」を宣言し、シリアのラッカを拠点とした。住民への虐殺・奴隷化（ヤズィーディー教徒など）や各国でのテロを行った。2017年にモースル・ラッカを失い、2019年にシリアの最後の拠点が落ちた。国家としてはどの国も認めていない。
+  rulers:
+    - {name: アブー・バクル・バグダーディー, title: 「カリフ」を自称した指導者, from: 2014, to: 2019, note: 2019年10月、アメリカ軍の作戦で死亡した。, source: "https://ja.wikipedia.org/wiki/アブー・バクル・アル＝バグダーディー"}
+  source: "https://ja.wikipedia.org/wiki/ISIL"
+
+- id: aanes
+  name: 北・東シリア自治行政区（クルド人主導）
+  short: 北・東シリア自治行政区
+  color: "#e5d27e"
+  kind: 自治行政（事実上の自治）
+  note: シリア内戦で政府軍が引いた北東部で、クルド人の民主統一党（PYD）が2013–2014年に作った自治の行政（ロジャヴァとも呼ばれる）。クルド人主体のシリア民主軍（SDF）がアメリカと組んで「イスラーム国」と戦い、ラッカ（2017）などを押さえた。トルコはPKKの仲間として敵視し、北部に出兵した。2025年3月にシャラア暫定政府と国軍への統合で合意したが、実施は進んでいない（要確認）。ピースは県単位なので、ハサカ県（2014–）とラッカ県（2017–）を塗った。
+  rulers:
+    - {name: マズルーム・アブディ, title: シリア民主軍の総司令官, from: 2015, source: "https://en.wikipedia.org/wiki/Mazloum_Abdi"}
+  source: "https://ja.wikipedia.org/wiki/北・東シリア自治行政区"
+
+- id: syrian_opposition
+  name: シリア反体制派の支配地域（イドリブ）
+  short: 反体制派（イドリブ）
+  color: "#b7d3a2"
+  kind: 反体制派の支配地域
+  note: 2015年3月に反体制派の連合がイドリブ市を押さえて以来、シリア北西部のイドリブ県は反体制派の最後の大きな拠点となった。2017年からはシャーム解放機構（HTS）が中心となり「シリア救国政府」を置いた。2024年11–12月にここから進攻してアサド政権を倒した。
+  rulers:
+    - {name: アブー・ムハンマド・ジャウラーニー（アフマド・シャラア）, title: シャーム解放機構の指導者, from: 2017, to: 2024, source: "https://en.wikipedia.org/wiki/Ahmed_al-Sharaa"}
+  source: "https://en.wikipedia.org/wiki/Idlib_Governorate"
+
+- id: uae
+  name: アラブ首長国連邦
+  short: アラブ首長国連邦
+  color: "#c5b6a2"
+  kind: 連邦（7首長国）
+  note: 1971年12月2日、イギリスの保護から離れた休戦海岸の6首長国（アブダビ・ドバイ・シャルジャ・アジュマーン・ウンム・アル＝カイワイン・フジャイラ）で作り、1972年2月にラアス・アル＝ハイマが加わった。大統領はアブダビの首長、副大統領・首相はドバイの首長が務める。
+  rulers:
+    - {name: ザーイド・イブン・スルターン, title: 大統領（アブダビ首長）, from: 1971, to: 2004, source: "https://ja.wikipedia.org/wiki/ザーイド・ビン・スルターン・アール・ナヒヤーン"}
+    - {name: ハリーファ・イブン・ザーイド, title: 大統領（アブダビ首長）, from: 2004, to: 2022, source: "https://ja.wikipedia.org/wiki/ハリーファ・ビン・ザーイド・アール・ナヒヤーン"}
+    - {name: ムハンマド・イブン・ザーイド, title: 大統領（アブダビ首長）, from: 2022, source: "https://ja.wikipedia.org/wiki/ムハンマド・ビン・ザーイド・アール・ナヒヤーン"}
+  periods:
+    - from: 1971
+      text: アブダビの石油収入をもとに発展し、ドバイは中東の金融・物流・観光の中心となった。2020年にイスラエルと国交を結んだ（アブラハム合意）。
+  source: "https://ja.wikipedia.org/wiki/アラブ首長国連邦"
+
+- id: ras_al_khaimah
+  name: ラアス・アル＝ハイマ首長国
+  short: ラアス・アル＝ハイマ
+  color: "#c0a8d0"
+  kind: 首長国
+  note: 1971年12月のアラブ首長国連邦の結成には加わらず（イランが近くの大トンブ・小トンブ島を占領したため）、1972年2月10日に加わった。
+  rulers:
+    - {name: サクル・イブン・ムハンマド・カースィミー, title: 首長, from: 1948, to: 2010, source: "https://en.wikipedia.org/wiki/Saqr_bin_Mohammad_Al_Qasimi"}
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Ras_Al_Khaimah"
+
+# ================================================================ 1914–2025：南アジア・中央アジア
+- id: pakistan
+  name: パキスタン
+  names:
+    - {to: 1955, name: パキスタン（自治領）, kind: 自治領（イギリス連邦）}
+    - {from: 1956, name: パキスタン・イスラーム共和国, kind: 共和国}
+  short: パキスタン
+  color: "#a3c79b"
+  kind: 共和国
+  note: 1947年8月14日、イギリス領インドの分離独立でムスリムの国として成立した（地図の範囲はバローチスターン西部だけ）。カラート・ハン国などの藩王国は1948年に加わった。1971年に東パキスタンがバングラデシュとして独立した。元首の欄には実権を持つ人（総督・首相・軍の指導者・大統領）を書いた。
+  rulers:
+    - {name: ムハンマド・アリー・ジンナー, title: 総督, from: 1947, to: 1948, note: 「建国の父」。, source: "https://ja.wikipedia.org/wiki/ムハンマド・アリー・ジンナー"}
+    - {name: リヤーカト・アリー・ハーン, title: 首相, from: 1948, to: 1951, note: 1951年に暗殺された。, source: "https://ja.wikipedia.org/wiki/リヤーカト・アリー・ハーン"}
+    - {name: グラーム・ムハンマド／イスカンダル・ミールザー, title: 総督・大統領, from: 1951, to: 1958, note: 首相が短い間隔で替わった。, source: "https://en.wikipedia.org/wiki/Iskander_Mirza"}
+    - {name: アユーブ・ハーン, title: 大統領（軍）, from: 1958, to: 1969, source: "https://ja.wikipedia.org/wiki/アユーブ・ハーン"}
+    - {name: ヤヒヤー・ハーン, title: 大統領（軍）, from: 1969, to: 1971, source: "https://ja.wikipedia.org/wiki/ヤヒヤー・ハーン"}
+    - {name: ズルフィカール・アリー・ブットー, title: 大統領・首相, from: 1971, to: 1977, source: "https://ja.wikipedia.org/wiki/ズルフィカール・アリー・ブットー"}
+    - {name: ムハンマド・ズィヤーウル・ハック, title: 大統領（軍）, from: 1977, to: 1988, note: イスラーム化を進め、アフガニスタンのムジャーヒディーンを支援した。, source: "https://ja.wikipedia.org/wiki/ムハンマド・ジア＝ウル＝ハク"}
+    - {name: ベーナズィール・ブットー, title: 首相, from: 1988, to: 1990, source: "https://ja.wikipedia.org/wiki/ベーナズィール・ブットー"}
+    - {name: ナワーズ・シャリーフ, title: 首相, from: 1990, to: 1993, source: "https://ja.wikipedia.org/wiki/ナワーズ・シャリーフ"}
+    - {name: ベーナズィール・ブットー（再任）, title: 首相, from: 1993, to: 1996, source: "https://ja.wikipedia.org/wiki/ベーナズィール・ブットー"}
+    - {name: ナワーズ・シャリーフ（再任）, title: 首相, from: 1997, to: 1999, note: 1998年に核実験を行った。, source: "https://ja.wikipedia.org/wiki/ナワーズ・シャリーフ"}
+    - {name: パルヴェーズ・ムシャラフ, title: 行政長官・大統領（軍）, from: 1999, to: 2008, source: "https://ja.wikipedia.org/wiki/パルヴェーズ・ムシャラフ"}
+    - {name: アースィフ・アリー・ザルダーリー, title: 大統領, from: 2008, to: 2013, source: "https://ja.wikipedia.org/wiki/アースィフ・アリー・ザルダーリー"}
+    - {name: ナワーズ・シャリーフ（3度目）, title: 首相, from: 2013, to: 2017, source: "https://ja.wikipedia.org/wiki/ナワーズ・シャリーフ"}
+    - {name: イムラン・カーン, title: 首相, from: 2018, to: 2022, note: 2017–2018年はアッバースィー首相。, source: "https://ja.wikipedia.org/wiki/イムラン・カーン"}
+    - {name: シャバズ・シャリーフ, title: 首相, from: 2022, note: 2023–2024年はカーカル選挙管理内閣。大統領はザルダーリー（2024–）。軍の影響力が強い。, source: "https://ja.wikipedia.org/wiki/シャバズ・シャリーフ"}
+  periods:
+    - from: 1947
+      text: インドとの分離独立で多くの人が移動・殺害された。カシミールをめぐってインドと戦争をくり返し、軍のクーデタがたびたび起きた。バローチスターンでは自治を求める武装闘争が続いている。中国の援助でグワーダル港が作られた。
+  source: "https://ja.wikipedia.org/wiki/パキスタン"
+
+- id: transcaspia
+  name: ザカスピ臨時政府
+  short: ザカスピ臨時政府
+  color: "#d7cfa3"
+  kind: 反ボリシェヴィキ政権（イギリスの支援）
+  note: 1918年7月、アシガバートでエスエル（社会革命党）と鉄道労働者がボリシェヴィキを倒して作った政権。イギリス軍（マレソン少将）の支援を受けたが、1919年に赤軍がアシガバートを奪い、1920年2月にクラスノヴォツクも落ちた。
+  source: "https://en.wikipedia.org/wiki/Transcaspian_Government"
+
+- id: turkmenistan
+  name: トルクメニスタン
+  short: トルクメニスタン
+  color: "#b9d4a0"
+  kind: 共和国（大統領の独裁）
+  note: 1924年にトルクメン・ソヴィエト社会主義共和国（ソ連の構成共和国）として作られ、1991年10月に独立した。1995年に国連が永世中立国と認めた。
+  rulers:
+    - {name: サパルムラト・ニヤゾフ, title: 大統領（「トルクメンバシ」）, from: 1991, to: 2006, note: 1985年から共産党第一書記。終身大統領となり、強い個人崇拝を行った。, source: "https://ja.wikipedia.org/wiki/サパルムラト・ニヤゾフ"}
+    - {name: グルバングル・ベルディムハメドフ, title: 大統領, from: 2006, to: 2022, note: 2022年からは国家の最高指導者（人民評議会議長）として実権を持つ。, source: "https://ja.wikipedia.org/wiki/グルバングル・ベルディムハメドフ"}
+    - {name: セルダル・ベルディムハメドフ, title: 大統領, from: 2022, note: 前大統領の子。, source: "https://ja.wikipedia.org/wiki/セルダル・ベルディムハメドフ"}
+  periods:
+    - from: 1991
+      text: 独立後も旧共産党の指導者が独裁を続け、天然ガスの輸出（中国など）に頼っている。外国との行き来が厳しく制限されている。
+  source: "https://ja.wikipedia.org/wiki/トルクメニスタン"
+
+- id: uzbekistan
+  name: ウズベキスタン
+  short: ウズベキスタン
+  color: "#a8c6e6"
+  kind: 共和国
+  note: 1924年にウズベク・ソヴィエト社会主義共和国として作られ（1936年からカラカルパク自治共和国を含む）、1991年8月に独立した。地図の範囲は北西部（カラカルパクスタンとホラズム）だけ。
+  rulers:
+    - {name: イスラム・カリモフ, title: 大統領, from: 1991, to: 2016, note: 1989年から共産党第一書記。2005年のアンディジャンの抗議を武力で抑えた。, source: "https://ja.wikipedia.org/wiki/イスラム・カリモフ"}
+    - {name: シャフカト・ミルジヨエフ, title: 大統領, from: 2016, note: 経済の開放と規制の緩和を進めた。, source: "https://ja.wikipedia.org/wiki/シャフカト・ミルズィヤエフ"}
+  periods:
+    - from: 1991
+      text: 独立後、カリモフの権威主義体制が続いた。ソ連時代の綿花の大規模栽培のための灌漑でアラル海が干上がり、カラカルパクスタンは深刻な環境問題をかかえている。
+  source: "https://ja.wikipedia.org/wiki/ウズベキスタン"
+
+- id: kazakhstan
+  name: カザフスタン
+  short: カザフスタン
+  color: "#a9d5cf"
+  kind: 共和国
+  note: 1920年にロシア共和国の中のキルギス（カザフ）自治共和国として作られ、1936年にカザフ・ソヴィエト社会主義共和国（ソ連の構成共和国）となった。1991年12月に独立した（ソ連の構成共和国で最後）。地図の範囲は西部（カスピ海・アラル海の周辺）だけ。
+  rulers:
+    - {name: ヌルスルタン・ナザルバエフ, title: 大統領, from: 1991, to: 2019, note: 1989年から共産党第一書記。首都をアスタナに移した（1997）。辞任後も2022年まで安全保障会議議長として影響力を持った。, source: "https://ja.wikipedia.org/wiki/ヌルスルタン・ナザルバエフ"}
+    - {name: カスム＝ジョマルト・トカエフ, title: 大統領, from: 2019, note: 2022年1月の騒乱ののちナザルバエフ一族の影響を排した。, source: "https://ja.wikipedia.org/wiki/カシムジョマルト・トカエフ"}
+  periods:
+    - from: 1991
+      text: 石油・天然ガス（カスピ海のテンギス油田など）と鉱物資源で経済が成長した。ロシア・中国の双方と関係を保っている。
+  source: "https://ja.wikipedia.org/wiki/カザフスタン"
+
+# ================================================================ 1914–2025：コーカサス
+- id: transcaucasia
+  name: ザカフカース（ザカフカース民主連邦共和国）
+  names:
+    - {to: 1917, name: ザカフカース委員部, short: ザカフカース, kind: 臨時の地方政府}
+    - {from: 1918, name: ザカフカース民主連邦共和国, short: ザカフカース, kind: 連邦共和国}
+  short: ザカフカース
+  color: "#d8b4c4"
+  kind: 臨時の地方政府
+  note: 十月革命を認めないグルジア（ジョージア）・アルメニア・アゼルバイジャンの政党が1917年11月にティフリス（トビリシ）で作った地方政府。1918年4月に独立の連邦共和国を宣言したが、オスマン帝国の進攻のなかで民族ごとに分かれ、5月に解体した。
+  rulers:
+    - {name: エフゲニ・ゲゲチコリ, title: ザカフカース委員部の議長, from: 1917, to: 1918, source: "https://en.wikipedia.org/wiki/Transcaucasian_Commissariat"}
+    - {name: アカキ・チヘンケリ, title: 首相, from: 1918, to: 1918, source: "https://en.wikipedia.org/wiki/Transcaucasian_Democratic_Federative_Republic"}
+  source: "https://en.wikipedia.org/wiki/Transcaucasian_Democratic_Federative_Republic"
+
+- id: georgia
+  name: ジョージア
+  names:
+    - {to: 1920, name: ジョージア（グルジア）民主共和国, short: ジョージア, kind: 共和国}
+    - {from: 1921, to: 1922, name: グルジア・ソヴィエト社会主義共和国, short: グルジア, kind: ソヴィエト共和国}
+    - {from: 1991, name: ジョージア（グルジア）, short: ジョージア, kind: 共和国}
+  short: ジョージア
+  color: "#c8aad8"
+  kind: 共和国
+  note: >-
+    1918年5月26日に独立し、メンシェヴィキ（社会民主党）の政府を作った。1921年2–3月に赤軍に占領されてソヴィエト共和国となり、1922年からソ連の一部（ザカフカース連邦を経て1936年からグルジア・ソヴィエト社会主義共和国）。1991年4月に独立を宣言した。
+    日本語の国名は2015年に「グルジア」から「ジョージア」に改めた。2012年からは政党「ジョージアの夢」の創設者イヴァニシヴィリが政界の実力者で、2018年からは議院内閣制（元首の欄は首相）。
+  rulers:
+    - {name: ノエ・ジョルダニア, title: 政府の議長, from: 1918, to: 1921, note: 1921年にフランスへ亡命した。, source: "https://en.wikipedia.org/wiki/Noe_Zhordania"}
+    - {name: フィリップ・マハラゼ, title: 革命委員会議長, from: 1921, to: 1922, source: "https://en.wikipedia.org/wiki/Filipp_Makharadze"}
+    - {name: ズヴィアド・ガムサフルディア, title: 大統領, from: 1991, to: 1992, note: 1992年1月の内戦で追われた。, source: "https://ja.wikipedia.org/wiki/ズヴィアド・ガムサフルディア"}
+    - {name: エドゥアルド・シェワルナゼ, title: 国家評議会議長・大統領, from: 1992, to: 2003, note: ソ連の外相（1985–1990）。2003年のバラ革命で辞任した。, source: "https://ja.wikipedia.org/wiki/エドゥアルド・シェワルナゼ"}
+    - {name: ミヘイル・サアカシヴィリ, title: 大統領, from: 2004, to: 2012, note: 欧米寄りの改革を進めた。2008年にロシアと戦って敗れた。, source: "https://ja.wikipedia.org/wiki/ミヘイル・サアカシュヴィリ"}
+    - {name: ビジナ・イヴァニシヴィリ, title: 首相（のち与党の名誉党首）, from: 2012, to: 2013, note: 実業家。首相を退いた後も政界の実力者。, source: "https://ja.wikipedia.org/wiki/ビジナ・イヴァニシヴィリ"}
+    - name: 首相（2013–2024）
+      title: 首相
+      from: 2013
+      to: 2024
+      note: ガリバシヴィリ（2013–2015）、クヴィリカシヴィリ（2015–2018）、バフタゼ（2018–2019）、ガハリア（2019–2021）、ガリバシヴィリ（2021–2024）。大統領はマルグヴェラシヴィリ（2013–2018）、ズラビシヴィリ（2018–2024）。
+      source: "https://en.wikipedia.org/wiki/Prime_Minister_of_Georgia"
+    - {name: イラクリ・コバヒゼ, title: 首相, from: 2024, note: 2024年の議会選挙の結果とEU加盟交渉の停止をめぐって大規模な抗議が続いた。大統領はミハイル・カヴェラシヴィリ（2024–）。, source: "https://en.wikipedia.org/wiki/Irakli_Kobakhidze"}
+  periods:
+    - from: 1918
+      to: 1921
+      text: 独立してドイツ、のちイギリスの保護を求めた。アルメニアとロリ地方をめぐって戦い（1918）、1920年にソヴィエト・ロシアに独立を認められたが、1921年に赤軍に占領された。
+    - from: 1991
+      to: 2003
+      text: 独立直後の内戦と、南オセティア（1991–1992）・アブハジア（1992–1993）の分離紛争で国土の一部を失い、経済が崩れた。
+    - from: 2004
+      text: バラ革命ののちNATO・EU加盟を目指したが、2008年8月のロシアとの戦争に敗れ、ロシアがアブハジア・南オセティアの独立を承認した。2024年からは政府のロシア寄りの姿勢に抗議が続いている。
+  source: "https://ja.wikipedia.org/wiki/ジョージア_(国)"
+
+- id: abkhazia_rep
+  name: アブハジア共和国（未承認国家）
+  short: アブハジア
+  color: "#a8c9a0"
+  kind: 自称国家（ロシアなど数か国だけが承認）
+  note: ジョージアからの分離を求めるアブハズ人勢力がロシアの支援を受けて1992–1993年の戦争に勝ち、事実上独立した（ジョージア系住民の多くが追われた）。2008年の南オセティア紛争ののちロシアが独立を承認し、軍を駐留させている。ジョージアと多くの国は、ロシアの占領下にあるジョージアの領土とみなしている。
+  rulers:
+    - {name: ヴラジスラフ・アルジンバ, title: 最高会議議長・大統領, from: 1993, to: 2005, source: "https://en.wikipedia.org/wiki/Vladislav_Ardzinba"}
+    - {name: セルゲイ・バガプシ, title: 大統領, from: 2005, to: 2011, source: "https://en.wikipedia.org/wiki/Sergei_Bagapsh"}
+    - {name: アレクサンドル・アンクヴァブ, title: 大統領, from: 2011, to: 2014, source: "https://en.wikipedia.org/wiki/Alexander_Ankvab"}
+    - {name: ラウル・ハジンバ, title: 大統領, from: 2014, to: 2020, source: "https://en.wikipedia.org/wiki/Raul_Khajimba"}
+    - {name: アスラン・ブジャニア, title: 大統領, from: 2020, to: 2024, note: ロシアとの投資協定への抗議で辞任した。, source: "https://en.wikipedia.org/wiki/Aslan_Bzhania"}
+    - {name: バドラ・グンバ, title: 大統領（2025年3月の選挙で当選）, from: 2024, source: "https://en.wikipedia.org/wiki/Badra_Gunba"}
+  source: "https://ja.wikipedia.org/wiki/アブハジア"
+
+- id: armenia
+  name: アルメニア
+  names:
+    - {to: 1919, name: アルメニア共和国（第一共和国）, short: アルメニア, kind: 共和国}
+    - {from: 1920, to: 1922, name: アルメニア・ソヴィエト社会主義共和国, short: アルメニア, kind: ソヴィエト共和国}
+    - {from: 1991, name: アルメニア共和国, short: アルメニア, kind: 共和国}
+  short: アルメニア
+  color: "#e8aa9a"
+  kind: 共和国
+  note: 1918年5月28日に独立した（首都エレヴァン）。オスマン帝国から逃れた難民と飢餓に苦しみ、1920年秋にトルコの国民軍に敗れ、12月に赤軍が入ってソヴィエト共和国となった。1922年からソ連の一部（1936年からアルメニア・ソヴィエト社会主義共和国）。1991年9月に独立した。2018年から議院内閣制で首相が実権を持つ。
+  rulers:
+    - {name: ホヴハンネス・カチャズヌニ, title: 首相, from: 1918, to: 1919, source: "https://en.wikipedia.org/wiki/Hovhannes_Katchaznouni"}
+    - {name: アレクサンドル・ハティシャン, title: 首相, from: 1919, to: 1920, source: "https://en.wikipedia.org/wiki/Alexander_Khatisian"}
+    - {name: ハモ・オハンジャニャン／シモン・ヴラツィアン, title: 首相, from: 1920, to: 1920, source: "https://en.wikipedia.org/wiki/Simon_Vratsian"}
+    - {name: アレクサンドル・ミャスニキャン, title: 人民委員会議議長, from: 1921, to: 1922, note: 1920年12月から1921年までは革命委員会（カシヤン）。, source: "https://en.wikipedia.org/wiki/Alexander_Miasnikian"}
+    - {name: レヴォン・テル＝ペトロシャン, title: 大統領, from: 1991, to: 1998, source: "https://ja.wikipedia.org/wiki/レヴォン・テル＝ペトロシャン"}
+    - {name: ロベルト・コチャリャン, title: 大統領, from: 1998, to: 2008, note: ナゴルノ・カラバフの指導者出身。, source: "https://ja.wikipedia.org/wiki/ロベルト・コチャリャン"}
+    - {name: セルジ・サルグシャン, title: 大統領, from: 2008, to: 2018, note: 2018年に首相に移ろうとして抗議運動（ビロード革命）で辞任した。, source: "https://ja.wikipedia.org/wiki/セルジ・サルグシャン"}
+    - {name: ニコル・パシニャン, title: 首相, from: 2018, source: "https://ja.wikipedia.org/wiki/ニコル・パシニャン"}
+  periods:
+    - from: 1918
+      to: 1920
+      text: 独立したが、トルコ・アゼルバイジャン・ジョージアとの国境の争い、難民と飢餓に苦しんだ。1920年にトルコの国民軍に敗れてカルスを失い、ソヴィエト政権となった。
+    - from: 1991
+      to: 2019
+      text: 独立前後からアゼルバイジャンとナゴルノ・カラバフ（アルメニア人が多い自治州）をめぐって戦い（1988–1994）、カラバフと周辺を押さえたが、トルコ・アゼルバイジャンとの国境は閉ざされた。
+    - from: 2020
+      text: 2020年の第2次カラバフ戦争に敗れ、2023年9月にアゼルバイジャンがカラバフを制圧して約10万人のアルメニア人が逃れた。2025年8月、アメリカの仲介でアゼルバイジャンと和平の合意に仮署名した。
+  source: "https://ja.wikipedia.org/wiki/アルメニア"
+
+- id: azerbaijan
+  name: アゼルバイジャン
+  names:
+    - {to: 1919, name: アゼルバイジャン民主共和国, short: アゼルバイジャン, kind: 共和国}
+    - {from: 1920, to: 1922, name: アゼルバイジャン・ソヴィエト社会主義共和国, short: アゼルバイジャン, kind: ソヴィエト共和国}
+    - {from: 1991, name: アゼルバイジャン共和国, short: アゼルバイジャン, kind: 共和国}
+  short: アゼルバイジャン
+  color: "#9fc8d8"
+  kind: 共和国
+  note: 1918年5月28日にムスリムの国として初めての共和国として独立した（9月にオスマン軍とともにバクーを押さえ首都とした）。1920年4月に赤軍に占領されてソヴィエト共和国となり、1922年からソ連の一部。1991年に独立した。飛び地のナヒチェヴァン自治共和国を持つ。
+  rulers:
+    - {name: ファタリ・ハン・ホイスキ, title: 首相, from: 1918, to: 1919, note: 国民評議会議長はマンマド・アミン・ラスルザーデ。, source: "https://en.wikipedia.org/wiki/Fatali_Khan_Khoyski"}
+    - {name: ナシブ・ユシフベイリ, title: 首相, from: 1919, to: 1920, source: "https://en.wikipedia.org/wiki/Nasib_Yusifbeyli"}
+    - {name: ナリマン・ナリマノフ, title: 革命委員会・人民委員会議議長, from: 1920, to: 1922, source: "https://en.wikipedia.org/wiki/Nariman_Narimanov"}
+    - {name: アヤズ・ムタリボフ, title: 大統領, from: 1991, to: 1992, source: "https://en.wikipedia.org/wiki/Ayaz_Mutallibov"}
+    - {name: アブルファズ・エルチベイ, title: 大統領, from: 1992, to: 1993, source: "https://en.wikipedia.org/wiki/Abulfaz_Elchibey"}
+    - {name: ヘイダル・アリエフ, title: 大統領, from: 1993, to: 2003, note: ソ連時代のアゼルバイジャン共産党第一書記。, source: "https://ja.wikipedia.org/wiki/ヘイダル・アリエフ"}
+    - {name: イルハム・アリエフ, title: 大統領, from: 2003, note: ヘイダルの子。, source: "https://ja.wikipedia.org/wiki/イルハム・アリエフ"}
+  periods:
+    - from: 1918
+      to: 1919
+      text: 独立し、女性参政権を認めるなどの改革を行った。アルメニアとカラバフ・ナヒチェヴァン・ザンゲズールをめぐって争った。
+    - from: 1991
+      text: カラバフ戦争（1988–1994）に敗れて国土の約2割を失ったが、カスピ海の石油（バクー＝トビリシ＝ジェイハン・パイプライン、2006）で経済を伸ばし、2020年・2023年の戦争でカラバフ全域を取り戻した。アリエフ父子の長期政権が続いている。
+  source: "https://ja.wikipedia.org/wiki/アゼルバイジャン"
+
+# ================================================================ 1914–2025：モルドバ
+- id: moldavian_dr
+  name: モルダヴィア民主共和国
+  short: モルダヴィア民主共和国
+  color: "#cbb8e0"
+  kind: 共和国
+  note: ロシア革命の混乱のなかで、ベッサラビアの議会（スファトゥル・ツァリイ）が1917年12月に宣言した。ボリシェヴィキの進出に対してルーマニア軍を招き、1918年1月に独立を宣言、4月9日にルーマニアとの合同を決めた。
+  rulers:
+    - {name: イオン・インクレツ, title: スファトゥル・ツァリイ議長, from: 1917, to: 1918, source: "https://en.wikipedia.org/wiki/Ion_Inculeț"}
+  source: "https://ja.wikipedia.org/wiki/モルダヴィア民主共和国"
+
+- id: transnistria_pmr
+  name: 沿ドニエストル・モルドヴァ共和国（未承認国家）
+  short: 沿ドニエストル
+  color: "#d9a3a0"
+  kind: 自称国家（どの国連加盟国も承認していない）
+  note: ドニエストル川東岸のロシア語系住民が多い地域が、モルドヴァ語（ルーマニア語）の公用語化とルーマニアとの統合の動きに反発して1990年9月に宣言した。1992年の内戦でロシア軍（第14軍）の支援を受けて事実上の独立を保ち、ロシア軍が今も駐留している。右岸のベンデル（ティギナ）市も支配する。
+  rulers:
+    - {name: イーゴリ・スミルノフ, title: 大統領, from: 1991, to: 2011, source: "https://en.wikipedia.org/wiki/Igor_Smirnov"}
+    - {name: エヴゲニー・シェフチュク, title: 大統領, from: 2011, to: 2016, source: "https://en.wikipedia.org/wiki/Yevgeny_Shevchuk"}
+    - {name: ヴァジム・クラスノセリスキー, title: 大統領, from: 2016, source: "https://en.wikipedia.org/wiki/Vadim_Krasnoselsky"}
+  periods:
+    - from: 1992
+      text: 停戦後、ロシア・モルドヴァ・沿ドニエストルの合同平和維持部隊が置かれた。2025年1月にはロシアからの天然ガスの供給が止まり、深刻なエネルギー危機となった。
+  source: "https://ja.wikipedia.org/wiki/沿ドニエストル・モルドバ共和国"
+
+# ================================================================ 1914–2025：イラン
+- id: gilan_soviet
+  name: ペルシア社会主義ソヴィエト共和国（ギーラーン共和国）
+  short: ギーラーン共和国
+  color: "#e09a9a"
+  kind: ソヴィエト共和国（自称）
+  note: ギーラーンの森林地帯で反乱を続けていたジャンガリー運動のミールザー・クーチェク・ハーンが、赤軍の上陸（1920年5月）を受けてラシュトで宣言した政権。1921年にソヴィエト・ロシアがイランと友好条約を結んで支援をやめ、レザー・ハーンの軍に倒された。
+  rulers:
+    - {name: ミールザー・クーチェク・ハーン, title: 指導者, from: 1920, to: 1921, source: "https://en.wikipedia.org/wiki/Mirza_Kuchik_Khan"}
+  source: "https://en.wikipedia.org/wiki/Persian_Socialist_Soviet_Republic"
