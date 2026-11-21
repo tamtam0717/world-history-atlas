@@ -580,6 +580,7 @@
   name: チベット仏教の地域（チベット・青海など）
   select:
     regions: [rel_tibet]
+    # 海北は 1960 年から漢人が多数なので、rel_haibei（east_asia.yaml）の項目に中国本土と同じ値を書いて上書きしている
   timeline:
     - from: 1949
       secular: 0
@@ -593,9 +594,11 @@
       secular: 0.25
       note: 寺院の再建が進み、信仰は根強く残る（宗教活動への規制は続く）
 - id: sec_xinjiang
-  name: 新疆
+  name: 新疆のムスリムが多数の地域（タリム盆地・トゥルファン・アルタイ）
+  # 漢人が多数のウルムチ・昌吉・石河子・カラマイは中国本土（sec_china）の値。
+  # ハミ（1960 年から漢人が多数）とバインゴリン・イリ・タルバガタイ・ボルタラ（1970 年から）は下の sec_xinjiang_north。
   select:
-    adm1: ["CHN/Xinjiang Uyghur Autonomous Region"]
+    pieces: [CHN-Kashi, CHN-Hetian, CHN-Akesu, CHN-Kezileisu, CHN-Tulufan, CHN-Aletai]
   timeline:
     - from: 1949
       secular: 0.1
@@ -611,6 +614,23 @@
       secular: 0.4
       note: 「過激主義の取り締まり」として、礼拝・断食・服装など宗教活動への規制が大きく強まり、多くのウイグル人が収容施設に入れられたと報告されている
       source: "https://en.wikipedia.org/wiki/Xinjiang_internment_camps"
+- id: sec_xinjiang_north
+  name: 新疆の、のちに漢人が多数になる地域（ハミ・バインゴリン・イリ・タルバガタイ・ボルタラ）
+  select:
+    pieces: [CHN-Hami, CHN-Bayinguoleng, CHN-Yili, CHN-Tacheng, CHN-Boertala]
+  timeline:
+    - from: 1949
+      secular: 0.1
+      note: 1950 年代まではムスリム（ウイグル人・カザフ人）・モンゴル人が多数で、新疆のムスリムの地域と同じ値
+    - from: 1958
+      secular: 0.2
+    - from: 1966
+      secular: 0.7
+      note: 兵団の入植と鉄道で漢人が多数になった後は、中国本土（sec_china）と同じ値
+    - from: 1978
+      secular: 0.55
+    - from: 2000
+      secular: 0.5
 - id: sec_hongkong_macau
   name: 香港・マカオ
   select:
@@ -742,7 +762,11 @@
       secular: 0
       note: 日本領（樺太・千島）
     - from: 1947
+      secular: 0.45
+      note: 日本人が引き揚げ、ソ連各地からの移住者の土地になる（以後はシベリア・極東の sec_siberia と同じ値）
+    - from: 1959
       secular: 0.6
-      note: 日本人が引き揚げ、ソ連各地からの移住者の土地になる
+    - from: 1988
+      secular: 0.45
     - from: 1991
       secular: 0.3

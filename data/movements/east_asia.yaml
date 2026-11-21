@@ -1,6 +1,12 @@
 # 潮流：東アジア（1648–2025）。形式は docs/movements-format.md
-# spread は政体で書く（qing・roc・prc・japan・joseon など）。清・中華民国の領域にはモンゴル・チベットなども含まれるので、
-# 中国本土の学問・運動でも、地図では領域全体が光る（目安）。
+# spread はふつう政体で書く（qing・roc・prc・japan・joseon など）。ただし政体で書くと、その年の領域全体（藩部・植民地を含む）が光る。
+# - 清の学問・改革（考証学・洋務運動・変法運動など）は、藩部（モンゴル・チベット・新疆・青海）や台湾を光らせないよう、
+#   中国本土と満洲の政治の地域（data/regions/china.yaml）を regions で書く。一覧は考証学の項目で &china_proper として一度だけ書き、
+#   ほかの項目では *china_proper で参照する（YAML のアンカー。同じファイルの中でだけ使える）。
+#   一覧は、2026-11-21 の時点で中国本土・満洲のピースを持つ政治の地域から、チベット系の地域（アバ・カンゼ・甘南・迪慶）を除いたもの。
+#   data/regions/china.yaml の地域 ID を変えたら、ここも直す（npm run data で「未定義の地域」の警告が出る）。
+# - 日本の国内の運動（文明開化・大正デモクラシーなど）は、植民地（台湾・朝鮮・樺太）を光らせないよう、
+#   日本本土の政治の地域（japan_main・hokkaido・okinawa）を regions で書く。
 
 - id: kaozheng
   name: 考証学
@@ -15,13 +21,35 @@
     - [1860, 0.2]
     - [1880, 0.0]
   spread:
-    - where: {polities: [qing]}
+    - where:
+        regions: &china_proper [
+                cn_anhui_anqing, cn_anhui_chaohu, cn_anhui_chizhou, cn_anhui_fuyang, cn_anhui_luan, cn_anhui_maanshan, cn_anhui_xuancheng,
+                cn_beijing_beijing, cn_fujian_fuzhou_fujian, cn_fujian_longyan, cn_fujian_nanping, cn_fujian_quanzhou, cn_fujian_xiamen,
+                cn_gansu_dingxi, cn_gansu_jiayuguan, cn_gansu_jinchang, cn_gansu_pingliang, cn_gansu_qingyang, cn_guangdong_chaozhou,
+                cn_guangdong_dongguan, cn_guangdong_heyuan, cn_guangdong_qingyuan, cn_guangdong_zhanjiang_urban, cn_guangxi_baise,
+                cn_guangxi_chongzuo, cn_guangxi_fangchenggang, cn_guangxi_guigang, cn_guangxi_wuzhou, cn_guizhou_anshun,
+                cn_guizhou_qiandongnan, cn_hainan, cn_hebei_baoding, cn_hebei_cangzhou, cn_hebei_chengde, cn_hebei_handan,
+                cn_hebei_qinhuangdao, cn_hebei_zhangjiakou, cn_heilongjiang_daqing, cn_heilongjiang_daxinganling, cn_heilongjiang_qiqihaer,
+                cn_henan_anyang, cn_henan_hebi, cn_henan_luohe, cn_henan_nanyang, cn_henan_puyang, cn_henan_xinyang, cn_hubei_enshi,
+                cn_hubei_ezhou, cn_hubei_jingmen, cn_hubei_jingzhou, cn_hubei_shennongjia, cn_hubei_xiangfan, cn_hubei_xianning,
+                cn_hunan_changde, cn_hunan_changsha, cn_hunan_chenzhou, cn_hunan_huaihua, cn_hunan_yueyang, cn_jiangsu_changzhou,
+                cn_jiangsu_huaiyin, cn_jiangsu_lianyungang, cn_jiangsu_nanjing, cn_jiangsu_nantong, cn_jiangsu_suzhou_jiangsu,
+                cn_jiangsu_xuzhou, cn_jiangsu_yangzhou, cn_jiangsu_zhenjiang, cn_jiangxi_fuzhou_jiangxi, cn_jiangxi_ganzhou,
+                cn_jiangxi_jiujiang, cn_jiangxi_nanchang, cn_jiangxi_pingxiang, cn_jilin_baicheng, cn_jilin_changchun, cn_jilin_liaoyuan,
+                cn_liaoning_anshan, cn_liaoning_benxi, cn_liaoning_chaoyang, cn_liaoning_dalian_urban, cn_liaoning_fuxin,
+                cn_liaoning_huludao, cn_ningxia_guyuan, cn_ningxia_shizuishan, cn_shaanxi_ankang, cn_shaanxi_weinan, cn_shaanxi_yanan,
+                cn_shaanxi_yulin_shaanxi, cn_shandong_binzhou, cn_shandong_dezhou, cn_shandong_linyi, cn_shandong_qingdao,
+                cn_shandong_qingdao_urban, cn_shandong_weihai_urban, cn_shanxi_changzhi, cn_shanxi_datong, cn_shanxi_jinzhong,
+                cn_shanxi_linfen, cn_shanxi_taiyuan, cn_shanxi_xinzhou, cn_shanxi_yuncheng, cn_sichuan_bazhong, cn_sichuan_chengdu,
+                cn_sichuan_liangshan, cn_yunnan_baoshan, cn_yunnan_chuxiong, cn_yunnan_dali, cn_yunnan_dehong, cn_yunnan_honghe,
+                cn_yunnan_xishuangbanna, cn_zhejiang_hangzhou, cn_zhejiang_huzhou, cn_zhejiang_jinhua, cn_zhejiang_lishui,
+                cn_zhejiang_ningbo, cn_zhejiang_shaoxing, cn_zhejiang_wenzhou, cn_zhejiang_zhoushan]
       center: true
       curve: [[1648, 0.4], [1700, 0.5], [1740, 0.8], [1770, 1.0], [1800, 0.9], [1830, 0.5], [1860, 0.2], [1880, 0.0]]
     - where: {polities: [joseon]}
       curve: [[1760, 0.2], [1800, 0.4], [1840, 0.3], [1870, 0.0]]
-    - where: {polities: [japan]}
-      curve: [[1700, 0.2], [1780, 0.3], [1830, 0.2], [1870, 0.0]]
+    - where: {regions: [japan_main]}
+      curve: [[1780, 0.1], [1800, 0.3], [1830, 0.2], [1870, 0.0]]
   people: [顧炎武, 黄宗羲, 閻若璩, 戴震, 銭大昕, 段玉裁]
   works: [『日知録』, 『明夷待訪録』, 『四庫全書』]
   events: []
@@ -149,7 +177,7 @@
     - [1895, 0.2]
     - [1900, 0.0]
   spread:
-    - where: {polities: [qing]}
+    - where: {regions: *china_proper}
       center: true
       curve: [[1860, 0.2], [1865, 0.6], [1875, 0.9], [1885, 1.0], [1894, 0.8], [1895, 0.2], [1900, 0.0]]
   people: [恭親王, 曽国藩, 李鴻章, 左宗棠, 張之洞]
@@ -170,7 +198,7 @@
     - [1900, 0.1]
     - [1905, 0.0]
   spread:
-    - where: {polities: [japan]}
+    - where: {regions: [japan_main, hokkaido]}   # 沖縄県（1879–）では旧慣温存策がとられたので含めない
       center: true
       curve: [[1866, 0.2], [1871, 0.7], [1875, 1.0], [1885, 0.8], [1890, 0.4], [1900, 0.1], [1905, 0.0]]
   people: [福沢諭吉, 中村正直, 森有礼, 西周, 加藤弘之]
@@ -233,11 +261,9 @@
     - [1911, 0.2]
     - [1913, 0.0]
   spread:
-    - where: {polities: [qing]}
+    - where: {regions: *china_proper}
       center: true
       curve: [[1895, 0.4], [1898, 1.0], [1899, 0.4], [1902, 0.4], [1906, 0.5], [1911, 0.2], [1913, 0.0]]
-    - where: {polities: [japan]}
-      curve: [[1898, 0.2], [1899, 0.4], [1905, 0.3], [1912, 0.0]]
   people: [康有為, 梁啓超, 譚嗣同, 光緒帝]
   works: [『孔子改制考』, 『大同書』, 『新民叢報』]
   events: [戊戌の変法と戊戌の政変, 科挙の廃止と中国同盟会, 憲法大綱の発表と光緒帝・西太后の死]
@@ -260,16 +286,16 @@
     - [2000, 0.3]
     - [2025, 0.2]
   spread:
-    - where: {polities: [qing]}
-      curve: [[1894, 0.1], [1905, 0.4], [1911, 0.8]]
+    - where: {regions: *china_proper}
+      curve: [[1894, 0.1], [1905, 0.4], [1911, 0.8], [1912, 0.0]]
     - where: {polities: [roc]}
       center: true
       curve: [[1912, 0.8], [1919, 0.6], [1924, 0.8], [1928, 1.0], [1937, 0.9], [1949, 0.8], [1987, 0.6], [2000, 0.3], [2025, 0.2]]
     - where: {polities: [canton_government]}
       center: true
       curve: [[1917, 0.7], [1924, 1.0], [1927, 1.0]]
-    - where: {polities: [japan]}
-      curve: [[1897, 0.1], [1905, 0.4], [1911, 0.2], [1915, 0.0]]
+    - where: {regions: [japan_main]}
+      curve: [[1897, 0.1], [1905, 0.3], [1911, 0.15], [1915, 0.0]]
   people: [孫文, 黄興, 宋教仁, 汪兆銘, 蔣介石]
   works: [『三民主義』, 『建国方略』]
   events: [科挙の廃止と中国同盟会, 辛亥革命, 中華民国の成立と清の滅亡, 中国国民党の結成, 第1次国共合作, 北伐の開始, 張作霖爆殺事件と北伐の完了]
@@ -289,7 +315,7 @@
     - [1936, 0.1]
     - [1940, 0.0]
   spread:
-    - where: {polities: [japan]}
+    - where: {regions: [japan_main, hokkaido, okinawa]}
       center: true
       curve: [[1905, 0.2], [1913, 0.6], [1918, 0.8], [1925, 1.0], [1929, 0.7], [1932, 0.3], [1936, 0.1], [1940, 0.0]]
   people: [吉野作造, 美濃部達吉, 原敬, 尾崎行雄, 平塚らいてう, 加藤高明]

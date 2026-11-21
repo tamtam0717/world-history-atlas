@@ -164,23 +164,36 @@
   timeline:
     - from: 1648
       main: mongolian
-    - from: 1770
+      note: オイラト（ジュンガル部・ドルベト部）の遊牧地
+    - from: 1771
+      main: mongolian
+      minor: turkmen_kazakh
+      note: 清はカザフ人には季節の放牧しか認めず、1771 年にヴォルガ川流域から帰還したトルグート部・ホシュート部（オイラト）をタルバガタイ（ホボクサル）に住まわせた。
+      source: "https://ja.wikipedia.org/wiki/トルグート"
+    - from: 1880
       main: turkmen_kazakh
       minor: mongolian
+      note: 1860〜80 年代にロシア領からカザフ人が大量に移り住み、多数派になった。
     - from: 1970
       main: chinese
       minor: turkmen_kazakh
       note: 兵団の入植で漢人が多数になる
 - id: lang_altay_han
-  name: アルタイ（1970 年以後）
+  name: アルタイ（新疆北端）
   select:
     pieces: [CHN-Aletai]
   timeline:
     - from: 1648
       main: mongolian
-    - from: 1770
+      note: オイラトとアルタイ・ウリャンハイ（モンゴル系）の牧地。1919 年まではホブド（モンゴル）の管轄だった。
+    - from: 1771
+      main: mongolian
+      minor: turkmen_kazakh
+      note: カザフ人が季節の放牧で入るようになる。
+    - from: 1870
       main: turkmen_kazakh
       minor: mongolian
+      note: 19 世紀後半、ケレイ部などのカザフ人が移り住み、多数派になった（隣のバヤン・ウルギーと同じ時期）。
     - from: 1970
       main: turkmen_kazakh
       minor: chinese
@@ -199,6 +212,7 @@
     - from: 1970
       main: chinese
       minor: mongolian
+      note: 兵団の入植で漢人が多数になる。モンゴル人・カザフ人がそれに次ぐ。
 - id: lang_urumqi
   name: ウルムチ（迪化）・昌吉
   select:
@@ -1067,12 +1081,13 @@
       main: ainu
       note: アイヌの地
     - from: 1800
-      main: japanese
-      minor: ainu
-      note: 幕府の直轄（1799）と場所請負制の漁場で和人が入った。
+      main: ainu
+      minor: japanese
+      note: 幕府の直轄（1799）と高田屋嘉兵衛の択捉の漁場開設（1799–1800）で和人が入ったが、多くは季節の出稼ぎだった。定住する住民の多くはアイヌ。
       source: "https://ja.wikipedia.org/wiki/クナシリ・メナシの戦い"
     - from: 1870
       main: japanese
+      note: 明治の開拓使の下で和人の漁業者が定住し、多数になる。
     - from: 1947
       main: russian
       note: ソ連が占領し（1945）、日本人の住民は 1947–49 年に引き揚げた（北方領土問題）。
