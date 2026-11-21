@@ -108,6 +108,15 @@
       cause: 中華民国の成立と清の皇帝の退位（2月）。内モンゴルの王公の多くは中華民国にとどまる
       note: 1914年に熱河・チャハル・綏遠の特別区、1928年に熱河・チャハル・綏遠・寧夏の省となった
       source: "https://ja.wikipedia.org/wiki/内モンゴル"
+    - from: 1927
+      owner: canton_government
+      cause: 綏遠は1926年の国民軍（馮玉祥）の撤退の後、山西の閻錫山の勢力下にあり、閻錫山が国民政府に従う（6月）
+      note: 中国本土側（G1）の甘粛・寧夏・山西と同じく、1927年末は国民政府（広州→南京）の側として描く（整合で追加）
+      source: "https://ja.wikipedia.org/wiki/閻錫山"
+    - from: 1928
+      owner: roc
+      cause: 北伐の完了で、南京の国民政府が中華民国の政府となる
+      source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1949
       owner: prc
       cause: 綏遠の国民政府軍が共産党に降り（9月）、中華人民共和国の成立（10月）。内モンゴル自治区（1947年成立）に綏遠省を合わせていく（1954）
@@ -132,6 +141,15 @@
       owner: roc
       cause: 中華民国の成立。1929年から寧夏省に属する
       source: "https://en.wikipedia.org/wiki/Alxa_League"
+    - from: 1927
+      owner: canton_government
+      cause: 寧夏・甘粛を押さえる馮玉祥の国民軍が国民政府に加わり、北伐に参加する（5月）
+      note: 中国本土側（G1）の甘粛・寧夏・山西と同じく、1927年末は国民政府（広州→南京）の側として描く（整合で追加）
+      source: "https://ja.wikipedia.org/wiki/馮玉祥"
+    - from: 1928
+      owner: roc
+      cause: 北伐の完了で、南京の国民政府が中華民国の政府となる
+      source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1949
       owner: prc
       cause: 寧夏の馬鴻逵の政権が崩れ、人民解放軍が入る（9月）
@@ -171,11 +189,12 @@
     - from: 1945
       owner: soviet_union
       certainty: occupied
-      label: 内モンゴル東部（ソ連軍の占領）
+      label: 満洲（ソ連軍の占領）
       cause: ソ連の対日参戦（8月）。ソ連軍・モンゴル軍が満洲国を占領する
       source: "https://ja.wikipedia.org/wiki/ソ連対日参戦"
     - from: 1946
       owner: inner_mongolia_ag
+      overlord: chinese_soviet
       certainty: uncertain
       cause: ソ連軍の撤退（4–5月）。モンゴル人の自治運動を中国共産党がまとめる（1947年5月 内モンゴル自治政府）
       source: "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
@@ -198,6 +217,13 @@
       owner: roc
       cause: 中華民国の成立（奉天・吉林・黒竜江の省に分けて管轄）
       source: "https://en.wikipedia.org/wiki/Jirim_League"
+    - from: 1931
+      owner: japan
+      certainty: occupied
+      label: 満洲（関東軍の占領）
+      cause: 満洲事変（9月）。関東軍が洮南・チチハルを結ぶ鉄道沿い（嫩江の戦い、11月）と奉天・長春を押さえる
+      note: 中国本土側（G1）の遼寧・吉林・チチハルと同じく1931年末を関東軍の占領として描く（整合で追加）。ホロンバイルは1932年末まで蘇炳文が抵抗した
+      source: "https://ja.wikipedia.org/wiki/満洲事変"
     - from: 1932
       owner: manchukuo
       overlord: japan
@@ -206,11 +232,12 @@
     - from: 1945
       owner: soviet_union
       certainty: occupied
-      label: 内モンゴル東部（ソ連軍の占領）
+      label: 満洲（ソ連軍の占領）
       cause: ソ連の対日参戦（8月）。ソ連軍・モンゴル軍が満洲国を占領する
       source: "https://ja.wikipedia.org/wiki/ソ連対日参戦"
     - from: 1946
       owner: inner_mongolia_ag
+      overlord: chinese_soviet
       certainty: uncertain
       cause: 王爺廟（ウランホト）で東モンゴル自治政府が成立（1月）。1947年5月に内モンゴル自治政府となる
       source: "https://ja.wikipedia.org/wiki/内モンゴル自治政府"
@@ -239,16 +266,9 @@
       cause: 関東軍の熱河作戦（2–3月）。熱河省が満洲国に編入される
       source: "https://ja.wikipedia.org/wiki/熱河作戦"
     - from: 1945
-      owner: soviet_union
-      certainty: occupied
-      label: 内モンゴル東部（ソ連軍の占領）
-      cause: ソ連の対日参戦（8月）。ソ連軍・モンゴル軍が熱河に入る
-      source: "https://ja.wikipedia.org/wiki/ソ連対日参戦"
-    - from: 1946
-      owner: inner_mongolia_ag
-      certainty: uncertain
-      cause: 国共内戦。中国共産党の勢力が保つ（国民政府軍は1946年8月に承徳を奪うが、北の赤峰には及ばない）
-      note: 赤峰一帯の共産党の政権は熱河省の機関で、ジョーウダ盟が内モンゴル自治政府に入ったのは1947年以後。地図では内モンゴル自治政府にまとめて描く（近似）
+      owner: chinese_soviet
+      cause: ソ連の対日参戦（8月）でソ連軍・モンゴル軍が熱河に入り、その後に中国共産党の八路軍が承徳・赤峰を押さえる（解放区）
+      note: 1946年は国民政府軍が承徳を奪う（8月）が、北の赤峰には及ばず、中国共産党の熱河省の機関が保った。ジョーウダ盟が内モンゴル自治政府に入ったのは1947年以後なので、熱河（G1の承徳・朝陽）と同じ中国共産党の支配地として描く（整合で変更）
       source: "https://en.wikipedia.org/wiki/Chifeng"
     - from: 1949
       owner: prc
@@ -281,6 +301,7 @@
       source: "https://en.wikipedia.org/wiki/Inner_Mongolian_People%27s_Republic"
     - from: 1948
       owner: inner_mongolia_ag
+      overlord: chinese_soviet
       certainty: uncertain
       cause: 中国共産党の勢力がシリンゴルに及び、内モンゴル自治政府に加わる
       note: 要確認（1947–1948年の経過）
@@ -741,10 +762,10 @@
       label: チベット（ジュンガルの占領）
       cause: ジュンガル軍がラサを占領する
       source: "https://en.wikipedia.org/wiki/Dzungar_conquest_of_Tibet"
-    - from: 1718
+    - from: 1719
       owner: qing
       certainty: indirect
-      cause: 清軍が四川からカムに入り、チャムドを従える（1718–1719）。1725年に寧静山を境にカム西部をダライ・ラマ政権の管轄、東部を四川の管轄とする
+      cause: 清軍が四川からカムに入り、チャムドを従える（1719）。1718年の清の第1次の出兵はジュンガルに敗れた。1725年に寧静山を境にカム西部をダライ・ラマ政権の管轄、東部を四川の管轄とする
       source: "https://en.wikipedia.org/wiki/Kham"
     - from: 1909
       owner: qing
@@ -787,6 +808,15 @@
       owner: roc
       cause: 中華民国の成立。回民の軍閥の馬麒・馬歩芳（馬家軍）が青海を治める（1928年に青海省）
       source: "https://ja.wikipedia.org/wiki/馬歩芳"
+    - from: 1927
+      owner: canton_government
+      cause: 甘粛（当時は西寧を含む）を押さえる馮玉祥の国民軍が国民政府に加わり、北伐に参加する（5月）
+      note: 中国本土側（G1）の甘粛・寧夏・山西と同じく、1927年末は国民政府（広州→南京）の側として描く（整合で追加）
+      source: "https://ja.wikipedia.org/wiki/馮玉祥"
+    - from: 1928
+      owner: roc
+      cause: 北伐の完了で、南京の国民政府が中華民国の政府となる
+      source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1949
       owner: prc
       cause: 人民解放軍が西寧に入る（9月）
@@ -815,6 +845,15 @@
       owner: roc
       cause: 中華民国の成立。馬麒・馬歩芳の馬家軍が治める（1928年に青海省）
       source: "https://ja.wikipedia.org/wiki/馬歩芳"
+    - from: 1927
+      owner: canton_government
+      cause: 甘粛・西寧を押さえる馮玉祥の国民軍が国民政府に加わり、北伐に参加する（5月）
+      note: 中国本土側（G1）の甘粛・寧夏・山西と同じく、1927年末は国民政府（広州→南京）の側として描く（整合で追加）
+      source: "https://ja.wikipedia.org/wiki/馮玉祥"
+    - from: 1928
+      owner: roc
+      cause: 北伐の完了で、南京の国民政府が中華民国の政府となる
+      source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
     - from: 1949
       owner: prc
       cause: 人民解放軍が西寧に入り（9月）、青海の各地を押さえる
