@@ -10,6 +10,10 @@
     - from: 1648
       main: catholic
       note: カトリックが圧倒的多数。プロテスタント（ユグノー）は全人口の5％ほどで、南部・西部に集中する。
+    - from: 1960
+      main: catholic
+      note: 1905年の政教分離法の後、20世紀後半に世俗化が進み、教会に通う人は少なくなった（地図は伝統的な帰属）。戦後のマグリブなどからの移民で、ムスリムが人口の1割近くになり、パリ・マルセイユ・リヨンの郊外に多い。
+      source: "https://en.wikipedia.org/wiki/Religion_in_France"
 
 - id: rel_france_huguenot_core
   name: セヴェンヌ・ヴィヴァレ（ユグノーの中心地）
@@ -97,6 +101,9 @@
     - from: 1648
       main: catholic
       note: モリスコの追放（1609–14）以後、住民はほぼすべてカトリック。異端審問が続く。
+    - from: 1975
+      main: catholic
+      note: フランコ政権（1939–75）はカトリックを国教とした。民主化の後、世俗化が進んだ（地図は伝統的な帰属）。
 
 # ---- ブリテン諸島 ----
 - id: rel_england_wales
@@ -114,6 +121,10 @@
     - from: 1828
       main: anglican
       note: 審査法の廃止（1828）とカトリック教徒解放法（1829）で、非国教徒とカトリックも公職に就けるようになる。19世紀にはメソジストなどの非国教徒が工業都市で増え、1851年の礼拝調査では、イングランドでも礼拝に出た人の半数近くが非国教会の信徒だった。アイルランドからの移民でカトリックも増える。
+    - from: 1960
+      main: anglican
+      note: 20世紀後半に世俗化が進み、2021年の調査ではイングランドとウェールズで「宗教なし」が約37%（地図は伝統的な帰属）。南アジアなどからの移民で、ムスリムは約6.5%（都市部に多い）。
+      source: "https://en.wikipedia.org/wiki/Religion_in_England"
 
 - id: rel_wales
   name: ウェールズ
@@ -152,6 +163,10 @@
     - from: 1648
       main: catholic
       note: 住民の大多数はカトリック。支配層はアイルランド国教会（イギリス国教会系）。クロムウェルの征服（1649–53）後、土地の多くがプロテスタントに移る。18世紀には刑罰法でカトリックの権利が制限される。
+    - from: 1990
+      main: catholic
+      note: 1990年代以後、聖職者による虐待の問題などで教会の影響力は大きく下がり、2015年に同性婚、2018年に人工妊娠中絶が国民投票で認められた（地図は伝統的な帰属）。
+
 
 - id: rel_ulster_east
   name: アルスター東部（アントリム・ダウン北部）
@@ -193,6 +208,9 @@
       main: catholic
       minor: anglican
       note: 農村からの移住で、18世紀後半にはカトリックが再び多数になる。（要確認）
+    - from: 1925
+      main: catholic
+      note: アイルランド自由国の成立（1922）の後、プロテスタント（国教会）の住民の多くがイギリスへ移った。
 
 # ---- 北大西洋 ----
 - id: rel_iceland
@@ -237,6 +255,10 @@
       main: catholic
       minor: sunni
       note: フランスの征服（1831年にオラン占領）の後、スペイン人を中心にヨーロッパ系の入植者が大量に入り、19世紀後半のオラン市とその周辺ではヨーロッパ系の住民（カトリック）が多数になる。クレミュー令（1870）でフランス市民になったユダヤ教徒も多い。（ピースはオラン県で、市とその周辺にあたる。比率は要確認）
+    - from: 1962
+      main: sunni
+      note: 1962年の独立でヨーロッパ系の住民の大部分がフランスへ去った。
+      source: "https://ja.wikipedia.org/wiki/ピエ・ノワール"
 
 - id: rel_algiers_city
   name: アルジェ市
@@ -251,6 +273,14 @@
       minor: sunni
       note: フランスの征服（1830）の後、フランス人・スペイン人・イタリア人・マルタ人などのヨーロッパ系の住民が増え、1880年代にはアルジェ市の住民の約3分の2を占めた（ほとんどがカトリック）。クレミュー令（1870）でユダヤ教徒はフランス市民になる。アンナバ（ボーヌ）などの都市でもヨーロッパ系が多いが、ピースが県単位なのでここでは塗らない。（比率は要確認）
       source: "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
+    - from: 1950
+      main: sunni
+      minor: catholic
+      note: 農村から移り住んだムスリムの住民がヨーロッパ系を上回った。
+    - from: 1962
+      main: sunni
+      note: 1962年の独立でヨーロッパ系の住民（カトリック）とユダヤ人の大部分がフランスへ去った。
+      source: "https://ja.wikipedia.org/wiki/ピエ・ノワール"
 
 - id: rel_egypt
   name: エジプト
@@ -260,3 +290,42 @@
     - from: 1648
       main: sunni
       note: スンナ派が多数。コプト教会（東方諸教会）の信徒が人口の1割前後いる。
+
+# ======== 1914–2025：移民によるイスラームの都市部での広がり ========
+# 国勢調査で宗教を尋ねるイギリスと、推計のあるブリュッセルだけを塗る。フランス・ドイツ・オランダの都市（パリ郊外・マルセイユ・ベルリン・ロッテルダムなど）は信頼できる統計がないか、ムスリムが2割に届かないので塗らない。
+- id: rel_tower_hamlets
+  name: タワーハムレッツ（ロンドン東部）
+  select:
+    pieces: [GBR-Tower_Hamlets]
+  timeline:
+    - from: 1980
+      main: anglican
+      minor: sunni
+      note: 1970年代からバングラデシュ（シレット地方）出身の移民が多く住んだ。
+    - from: 2010
+      main: sunni
+      minor: anglican
+      note: 2011年の調査でムスリム約35%、キリスト教徒約27%、宗教なし約19%（2021年はムスリム約40%）。地図の「イギリス国教会」はキリスト教徒全体を表す。
+      source: "https://en.wikipedia.org/wiki/Religion_in_London"
+
+- id: rel_uk_muslim_cities
+  name: イギリスのムスリムの多い都市（ニューアム・バーミンガム・ブラッドフォード）
+  select:
+    pieces: [GBR-Newham, GBR-Birmingham, GBR-Bradford]
+  timeline:
+    - from: 2010
+      main: anglican
+      minor: sunni
+      note: 1950–70年代からパキスタン・バングラデシュ・インドなどから移民が来た。2021年の調査でムスリムはニューアム約35%、ブラッドフォード約31%、バーミンガム約30%（キリスト教徒は3〜4割）。地図の「イギリス国教会」はキリスト教徒全体を表す。
+      source: "https://en.wikipedia.org/wiki/Islam_in_England"
+
+- id: rel_leicester
+  name: レスター
+  select:
+    pieces: [GBR-Leicester]
+  timeline:
+    - from: 2020
+      main: anglican
+      minor: sunni
+      note: 2021年の調査でキリスト教徒約25%、ムスリム約24%、ヒンドゥー教徒約18%（ヒンドゥー教は地図の種類にない）。
+      source: "https://en.wikipedia.org/wiki/Leicester"
