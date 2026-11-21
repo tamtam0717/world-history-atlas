@@ -1,0 +1,882 @@
+# 東インド・ベンガル・ヒマラヤ（担当 S2）の地域と所属の変遷。tools の外の生成スクリプトで作った（手で直してよい）。
+# 範囲：IND の Bihar・Jharkhand・West Bengal・Odisha・Chhattisgarh・Assam・Arunachal Pradesh・Manipur・Nagaland・
+# Mizoram・Meghalaya・Tripura・Sikkim、および BGD・NPL・BTN。
+# 方針：東インド会社の領地は owner: britain（label で管区・州名）。藩王国は owner: britain・certainty: indirect・label。
+# 1717年以後のベンガル太守・ムガルの名目的な宗主権には帯を付けない。1757–1764年の太守はイギリスの帯。
+
+- id: wb_central
+  name: ベンガル中部（ムルシダーバード・ナディア・ビールブーム・バンクラ・フーグリ）
+  select:
+    pieces: [IND-Murshidabad, IND-Nadia, IND-Birbhum, IND-Bankura, IND-Hugli, IND-Haora]
+  timeline:
+  - {from: 1648, owner: mughal, note: ムガル帝国のベンガル州。1704年からムルシダーバードに太守の役所が置かれた。フーグリ川沿いにはオランダ（チンスラ）・フランス（シャンデルナゴル）・デンマーク（セランポール）などの商館があった（ピースが細かくないので描かない）}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: 1765–1772年は太守の名で会社が徴税する「二重統治」。1773年からベンガル総督（のちインド総督）がカルカッタに置かれた, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 西ベンガル州, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: wb_north
+  name: 北ベンガル（マルダ・ディナージプル）
+  select:
+    pieces: [IND-Maldah, IND-Uttar_Dinajpur, IND-Dakshin_Dinajpur]
+  timeline:
+  - {from: 1648, owner: mughal}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: 1765–1772年は太守の名で会社が徴税する「二重統治」。1773年からベンガル総督（のちインド総督）がカルカッタに置かれた, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 西ベンガル州, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: kolkata
+  name: カルカッタ
+  select:
+    pieces: [IND-Kolkata]
+  timeline:
+  - {from: 1648, owner: mughal}
+  - {from: 1698, owner: britain, label: 東インド会社領, cause: 東インド会社がスターヌティ・カリカタ・ゴーヴィンダプルの3村のザミーンダーリー（地代を取る権利）を買い取る（ジョブ・チャーノックの商館は1690年）, note: 1696年からウィリアム要塞を築いた。1700年にベンガル管区の本拠となった, source: 'https://ja.wikipedia.org/wiki/カルカッタ'}
+  - {from: 1756, owner: bengal_nawab, cause: ベンガル太守シラージュ・ウッダウラがカルカッタを攻め落とす（6月）, source: 'https://ja.wikipedia.org/wiki/シラージュ・ウッダウラ'}
+  - {from: 1757, owner: britain, label: 東インド会社領, cause: クライヴがカルカッタを取り戻す（1月）。プラッシーの戦い（6月）, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: 1765–1772年は太守の名で会社が徴税する「二重統治」。1773年からベンガル総督（のちインド総督）がカルカッタに置かれた, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 西ベンガル州, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: twenty_four_parganas
+  name: 24パルガナ
+  select:
+    pieces: [IND-North_Twenty_Four_Parganas, IND-South_Twenty_Four_Parganas]
+  timeline:
+  - {from: 1648, owner: mughal}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: britain, label: 東インド会社領, cause: プラッシーの戦いの後、ミール・ジャアファルがカルカッタの南の24パルガナのザミーンダーリーを東インド会社に与える（12月）, source: 'https://en.wikipedia.org/wiki/24_Parganas'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: 1765–1772年は太守の名で会社が徴税する「二重統治」。1773年からベンガル総督（のちインド総督）がカルカッタに置かれた, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 西ベンガル州, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: burdwan_midnapore
+  name: バルダマン・メディニープル
+  select:
+    pieces: [IND-Barddhaman, IND-Paschim_Barddhaman, IND-Paschim_Medinipur, IND-Purba_Medinipur, IND-Jhargram]
+  timeline:
+  - {from: 1648, owner: mughal}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1760, owner: britain, label: 東インド会社領, cause: 太守ミール・カーシムが、バルダマン・メディニープル・チッタゴンの3県を東インド会社に譲る, source: 'https://ja.wikipedia.org/wiki/ミール・カーシム'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: 1765–1772年は太守の名で会社が徴税する「二重統治」。1773年からベンガル総督（のちインド総督）がカルカッタに置かれた, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 西ベンガル州, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: bihar
+  name: ビハール
+  select:
+    adm1: [IND/Bihar]
+  timeline:
+  - {from: 1648, owner: mughal, note: ムガル帝国のビハール州（都パトナ）}
+  - {from: 1733, owner: bengal_nawab, cause: ベンガル太守シュジャーウッディーンがビハールも治めることになる（副太守にアリーヴァルディー・ハーン）, source: 'https://en.wikipedia.org/wiki/Shuja-ud-Din_Muhammad_Khan'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: ビハール州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: purnea
+  name: プルネア（ビハール北東部）
+  select:
+    pieces: [IND-Purnia, IND-Katihar, IND-Kishanganj, IND-Araria]
+  timeline:
+  - {from: 1648, owner: mughal, note: プルネアはベンガル州に属するフォウジュダール（軍政官）の管区}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: ビハール州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: santhal_parganas
+  name: サンタル・パルガナ（ラージマハル）
+  select:
+    pieces: [IND-Sahibganj, IND-Pakur, IND-Godda, IND-Dumka, IND-Jamtara, IND-Deoghar]
+  timeline:
+  - {from: 1648, owner: mughal, note: ガンジス川沿いのラージマハルは17世紀前半のベンガル州の州都。内陸のラージマハル丘陵にはパハーリヤー人が住み、支配はゆるかった}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: 1855年のサンタル人の反乱の後、サンタル・パルガナ県が置かれた, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: ビハール州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: manbhum
+  name: マーンブーム（プルリヤ・ダンバード）
+  select:
+    pieces: [IND-Puruliya, IND-Dhanbad, IND-Bokaro]
+  timeline:
+  - {from: 1648, owner: mughal, certainty: nominal, note: パンチェートなどの在地の首長の地。ムガル帝国・ベンガル太守の支配は名目的だった}
+  - {from: 1717, owner: bengal_nawab, certainty: nominal, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, certainty: nominal, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, certainty: nominal, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: 森の多い西部（ジャングル・マハル）は、会社の支配がなかなか及ばなかった, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1805, owner: britain, label: ベンガル管区, cause: ジャングル・マハル県が置かれ、会社の直接の統治が及ぶ, source: 'https://en.wikipedia.org/wiki/Jungle_Mahals'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: ビハール州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: chota_nagpur_plateau
+  name: チョーター・ナーグプル高原
+  select:
+    pieces: [IND-Ranchi, IND-Khunti, IND-Gumla, IND-Simdega, IND-Lohardaga, IND-Latehar, IND-Palamu, IND-Garhwa, IND-Chatra, IND-Hazaribagh, IND-Ramgarh, IND-Kodarma, IND-Giridih]
+  timeline:
+  - {from: 1648, owner: chota_nagpur, note: ナーグヴァンシー家（ランチー）、チェーロ家（パラームー）、ラームガル家などの地。ムガル帝国は1660年にパラームーを攻めた}
+  - {from: 1772, owner: britain, certainty: nominal, label: ベンガル管区, cause: 東インド会社軍がパラームー砦を攻め落とし（1771）、ラームガル・チョーター・ナーグプルの首長を従わせる, note: 会社は首長を通じて地代を取るだけで、支配は名目的だった, source: 'https://en.wikipedia.org/wiki/Chota_Nagpur_Division'}
+  - {from: 1834, owner: britain, label: ベンガル管区, cause: コール人（ムンダ人・オラオン人）の反乱（1831–32）の後、南西辺境管轄区が置かれ、直接の統治が及ぶ, source: 'https://en.wikipedia.org/wiki/Kol_uprising'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: ビハール州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: singhbhum
+  name: シングブーム
+  select:
+    pieces: [IND-Pashchimi_Singhbhum, IND-Purbi_Singhbhum]
+  timeline:
+  - {from: 1648, owner: chota_nagpur, certainty: uncertain, note: ポラハートの王とホー人の地（コールハン）。東部のダルブームはミドナプルの西の首長領}
+  - {from: 1820, owner: britain, certainty: nominal, label: ベンガル管区, cause: ポラハートの王が東インド会社に従う, source: 'https://en.wikipedia.org/wiki/Singhbhum_district'}
+  - {from: 1837, owner: britain, label: ベンガル管区, cause: ホー人の地（コールハン）が会社の直接の統治下に入る, source: 'https://en.wikipedia.org/wiki/Kolhan'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: ビハール州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: saraikela_kharsawan
+  name: セライケラ・カルサワン
+  select:
+    pieces: [IND-Saraikela_Kharsawan]
+  timeline:
+  - {from: 1648, owner: chota_nagpur}
+  - {from: 1820, owner: britain, certainty: indirect, label: セライケラ・カルサワン藩王国, cause: セライケラ・カルサワンの首長が東インド会社と協定を結ぶ, source: 'https://en.wikipedia.org/wiki/Seraikela_State'}
+  - {from: 1947, owner: india, certainty: indirect, label: セライケラ・カルサワン藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1948, owner: india, cause: セライケラ・カルサワンがビハール州に統合される（1948年5月）, source: 'https://en.wikipedia.org/wiki/Seraikela_State'}
+- id: orissa_coast
+  name: オリッサ沿岸（カタック・プリー・バーレーシュワル）
+  select:
+    pieces: [IND-Baleshwar, IND-Bhadrak, IND-Jajapur, IND-Kendrapara, IND-Jagatsinghapur, IND-Cuttack, IND-Khordha, IND-Puri]
+  timeline:
+  - {from: 1648, owner: mughal, note: ムガル帝国のオリッサ州（都カタック）。クルダの王（プリーのジャガンナート寺院の守り手）は貢納する在地の王}
+  - {from: 1717, owner: bengal_nawab, cause: ベンガル太守がオリッサも治める, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1751, owner: maratha, label: ナーグプル（ボーンスレー家）, cause: マラーター（ナーグプルのボーンスレー家）の侵入に苦しんだベンガル太守アリーヴァルディー・ハーンが、講和でオリッサを譲る, note: ナーグプルのボーンスレー家の支配地, source: 'https://en.wikipedia.org/wiki/Maratha_invasions_of_Bengal'}
+  - {from: 1803, owner: britain, label: ベンガル管区, cause: 第2次マラーター戦争。東インド会社軍がカタックを占領し、デーオガーオン条約でオリッサの割譲が決まる（12月）, note: クルダの王は1804年に反乱を起こして領地を失った。1817年には在地の兵（パイカ）の反乱が起こった, source: 'https://ja.wikipedia.org/wiki/マラーター戦争'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: オリッサ州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: mayurbhanj
+  name: マユールバンジ
+  select:
+    pieces: [IND-Mayurbhanj]
+  timeline:
+  - {from: 1648, owner: garhjat, note: ガルジャート（城の国々）と呼ばれた山地の小王国。ムガル帝国には名目的に従っていた}
+  - {from: 1751, owner: garhjat, overlord: maratha, cause: オリッサを得たマラーター（ナーグプルのボーンスレー家）が、山地の小王国から貢納を取る, source: 'https://en.wikipedia.org/wiki/Garhjat_States'}
+  - {from: 1803, owner: britain, certainty: indirect, label: マユールバンジ藩王国, cause: 第2次マラーター戦争の後、山地の小王国が東インド会社と条約を結んで藩王国となる, source: 'https://en.wikipedia.org/wiki/Garhjat_States'}
+  - {from: 1947, owner: india, certainty: indirect, label: マユールバンジ藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1949, owner: india, cause: マユールバンジ藩王国がオリッサ州に統合される（1949年1月1日）, source: 'https://en.wikipedia.org/wiki/Mayurbhanj_State'}
+- id: orissa_states
+  name: オリッサ中部の藩王国（ケーンジャル・ダーンケーナール・ナヤーガル・バウド）
+  select:
+    pieces: [IND-Kendujhar, IND-Dhenkanal, IND-Anugul, IND-Nayagarh, IND-Baudh]
+  timeline:
+  - {from: 1648, owner: garhjat, note: ガルジャート（城の国々）と呼ばれた山地の小王国。ムガル帝国には名目的に従っていた}
+  - {from: 1751, owner: garhjat, overlord: maratha, cause: オリッサを得たマラーター（ナーグプルのボーンスレー家）が、山地の小王国から貢納を取る, source: 'https://en.wikipedia.org/wiki/Garhjat_States'}
+  - {from: 1803, owner: britain, certainty: indirect, label: オリッサ諸藩王国, cause: 第2次マラーター戦争の後、山地の小王国が東インド会社と条約を結んで藩王国となる, note: アヌグル（アングル）は1847年にイギリスが直接の統治に移したが、地図のピースはタールチェールなどの藩王国が大きいので藩王国として描く, source: 'https://en.wikipedia.org/wiki/Garhjat_States'}
+  - {from: 1947, owner: india, certainty: indirect, label: オリッサ諸藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1948, owner: india, cause: 藩王国がインドの州に統合される（1948年1月1日）, source: 'https://en.wikipedia.org/wiki/Eastern_States_Agency'}
+- id: kandhamal
+  name: コンド丘陵（カンダマル）
+  select:
+    pieces: [IND-Kandhamal]
+  timeline:
+  - {from: 1648, owner: garhjat, certainty: uncertain, note: コンド人の山地。バウドの王に名目的に従った}
+  - {from: 1803, owner: britain, certainty: indirect, label: オリッサ諸藩王国, cause: 第2次マラーター戦争の後、山地の小王国が東インド会社と条約を結んで藩王国となる, source: 'https://en.wikipedia.org/wiki/Garhjat_States'}
+  - {from: 1855, owner: britain, label: ベンガル管区, cause: コンド人の人身供犠（メリア）をやめさせる遠征の後、コンド丘陵が直接の統治下に入る, source: 'https://en.wikipedia.org/wiki/Kandhamal_district'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: オリッサ州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: sambalpur
+  name: サンバルプル
+  select:
+    pieces: [IND-Sambalpur, IND-Bargarh, IND-Jharsuguda]
+  timeline:
+  - {from: 1648, owner: garhjat, note: チャウハーン家のサンバルプル王国（周りの小王国の盟主）}
+  - {from: 1800, owner: maratha, label: ナーグプル（ボーンスレー家）, cause: ナーグプルのボーンスレー家がサンバルプルを征服する, note: 1804–1806年は東インド会社が占領し、いったんボーンスレー家に返した, source: 'https://en.wikipedia.org/wiki/Sambalpur_State'}
+  - {from: 1818, owner: britain, certainty: indirect, label: サンバルプル藩王国, cause: 第3次マラーター戦争の後、イギリスが王家を復位させる, source: 'https://en.wikipedia.org/wiki/Sambalpur_State'}
+  - {from: 1849, owner: britain, label: ベンガル管区, cause: 失権の原理（ダルハウジー総督）で併合される, note: 1857年の反乱ではスレンドラ・サーイが長く抵抗した, source: 'https://ja.wikipedia.org/wiki/失権の原理'}
+  - {from: 1862, owner: britain, label: 中央州, cause: 中央州に移される, source: 'https://en.wikipedia.org/wiki/Central_Provinces'}
+  - {from: 1905, owner: britain, label: ベンガル州, cause: ベンガル州（オリッサ管区）に移される, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ビハール・オリッサ州, cause: ビハール・オリッサ州がベンガル州から分かれる（1912年4月）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1936, owner: britain, label: オリッサ州, cause: ビハール州とオリッサ州が分かれる（1936年4月）, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: orissa_west_states
+  name: オリッサ西部の藩王国（パトナ・ソーンプル・バムラ・カーラーハンディ）
+  select:
+    pieces: [IND-Balangir, IND-Subarnapur, IND-Debagarh, IND-Kalahandi, IND-Nuapada]
+  timeline:
+  - {from: 1648, owner: garhjat, note: サンバルプルを盟主とするチャウハーン家などの小王国（18の城の国）}
+  - {from: 1800, owner: garhjat, overlord: maratha, cause: ナーグプルのボーンスレー家がサンバルプルを征服し、周りの小王国も貢納する, source: 'https://en.wikipedia.org/wiki/Sambalpur_State'}
+  - {from: 1818, owner: britain, certainty: indirect, label: チャッティースガル諸藩王国, cause: 第3次マラーター戦争の後、小王国がイギリスの藩王国となる（チャッティースガル諸藩王国）, note: ヌアパダ（カリアール）はライプル県のザミーンダーリー（直轄）だったが、ここでは藩王国にまとめた, source: 'https://en.wikipedia.org/wiki/Eastern_States_Agency'}
+  - {from: 1905, owner: britain, certainty: indirect, label: オリッサ諸藩王国, cause: オリッサの藩王国に移される, source: 'https://en.wikipedia.org/wiki/Garhjat_States'}
+  - {from: 1947, owner: india, certainty: indirect, label: オリッサ諸藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1948, owner: india, cause: 藩王国がインドの州に統合される（1948年1月1日）, source: 'https://en.wikipedia.org/wiki/Eastern_States_Agency'}
+- id: sundargarh
+  name: スンダルガル（ガーングプル・ボーナイ）
+  select:
+    pieces: [IND-Sundargarh]
+  timeline:
+  - {from: 1648, owner: chota_nagpur}
+  - {from: 1758, owner: chota_nagpur, overlord: maratha, cause: ナーグプルのボーンスレー家が貢納を取る, source: 'https://en.wikipedia.org/wiki/Gangpur_State'}
+  - {from: 1818, owner: britain, certainty: indirect, label: チョーター・ナーグプル諸藩王国, cause: 第3次マラーター戦争の後、イギリスの藩王国となる, source: 'https://en.wikipedia.org/wiki/Gangpur_State'}
+  - {from: 1905, owner: britain, certainty: indirect, label: オリッサ諸藩王国, cause: オリッサの藩王国に移される, source: 'https://en.wikipedia.org/wiki/Garhjat_States'}
+  - {from: 1947, owner: india, certainty: indirect, label: オリッサ諸藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1948, owner: india, cause: 藩王国がインドの州に統合される（1948年1月1日）, source: 'https://en.wikipedia.org/wiki/Eastern_States_Agency'}
+- id: koraput
+  name: コーラープト（ジェーポール）
+  select:
+    pieces: [IND-Koraput, IND-Rayagada, IND-Nabarangapur, IND-Malkangiri]
+  timeline:
+  - {from: 1648, owner: garhjat, note: ジェーポール王国。ゴールコンダ王国・ハイデラバードには名目的に従った}
+  - {from: 1775, owner: britain, certainty: nominal, label: マドラス管区, cause: ジェーポールの王が東インド会社に服属し、ヴィザガパタム県のザミーンダーリーとなる（要確認）, note: 山地の奥まで統治が及んだのは19世紀後半から, source: 'https://en.wikipedia.org/wiki/Jeypore_Estate'}
+  - {from: 1863, owner: britain, label: マドラス管区, cause: ジェーポールの山地に会社の統治機構（エージェンシー）が置かれる（要確認）, source: 'https://en.wikipedia.org/wiki/Jeypore_Estate'}
+  - {from: 1936, owner: britain, label: オリッサ州, cause: オリッサ州に移される, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: ganjam
+  name: ガンジャーム
+  select:
+    pieces: [IND-Ganjam, IND-Gajapati]
+  timeline:
+  - {from: 1648, owner: golconda, note: ゴールコンダ王国（クトゥブ・シャーヒー朝）のチカコール地方。山地はパルラケームンディなどの在地の王}
+  - {from: 1687, owner: mughal, cause: アウラングゼーブがゴールコンダ王国を滅ぼす, source: 'https://ja.wikipedia.org/wiki/ゴールコンダ王国'}
+  - {from: 1724, owner: hyderabad, cause: ニザーム・アルムルクがデカンで自立する（ハイデラバード王国）, source: 'https://ja.wikipedia.org/wiki/ニザーム王国'}
+  - {from: 1753, owner: france, label: 北サルカール（フランス）, cause: ハイデラバードのニザームがフランスのビュシーに北サルカールを与える, source: 'https://en.wikipedia.org/wiki/Northern_Circars'}
+  - {from: 1759, owner: hyderabad, cause: イギリス軍がマスリパトナムを落とし、フランスが北サルカールを失う, source: 'https://en.wikipedia.org/wiki/Northern_Circars'}
+  - {from: 1766, owner: britain, label: マドラス管区, cause: ムガル皇帝の勅許（1765）とニザームとの条約（1766）で、北サルカールが東インド会社領となる, source: 'https://en.wikipedia.org/wiki/Northern_Circars'}
+  - {from: 1936, owner: britain, label: オリッサ州, cause: オリッサ州に移される, source: 'https://en.wikipedia.org/wiki/Orissa_Province'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: chhattisgarh_plain
+  name: チャッティースガル平野（ライプル・ビラースプル）
+  select:
+    pieces: [IND-Raipur, IND-Baloda_Bazar, IND-Mahasamund, IND-Gariaband, IND-Dhamtari, IND-Balod, IND-Durg, IND-Bemetra, IND-Bilaspur_2, IND-Mungeli, IND-Janjgir_Champa, IND-Korba, IND-Gaurella_Pendra_Marwahi]
+  timeline:
+  - {from: 1648, owner: ratanpur}
+  - {from: 1741, owner: maratha, label: ナーグプル（ボーンスレー家）, cause: ナーグプルのボーンスレー家の将軍バースカル・パントがラタンプルを落とす, note: ナーグプルのボーンスレー家の支配地。1758年に王家が完全に廃された, source: 'https://en.wikipedia.org/wiki/Kalachuris_of_Ratnapura'}
+  - {from: 1816, owner: britain, certainty: indirect, label: ナーグプル藩王国, cause: ナーグプルのアッパー・サーヘブがイギリスと軍事保護条約を結ぶ（1817年のシータバルディーの戦いの後、領地を減らされた）, note: 1818–1830年はラグージー3世が幼く、イギリスの駐在官が政治を見た, source: 'https://en.wikipedia.org/wiki/Battle_of_Sitabuldi'}
+  - {from: 1854, owner: britain, label: ナーグプル州, cause: ラグージー3世の死後、ダルハウジー総督が失権の原理でナーグプル王国を併合する, source: 'https://en.wikipedia.org/wiki/Nagpur_Province'}
+  - {from: 1861, owner: britain, label: 中央州, cause: 中央州が置かれる, source: 'https://en.wikipedia.org/wiki/Central_Provinces'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: chhattisgarh_states
+  name: チャッティースガル西部・東部の藩王国（カワルダー・ナンドガーオン・ライガル）
+  select:
+    pieces: [IND-Kabeerdham, IND-Rajnandgaon, IND-Raigarh_2]
+  timeline:
+  - {from: 1648, owner: ratanpur}
+  - {from: 1741, owner: maratha, label: ナーグプル（ボーンスレー家）, cause: ナーグプルのボーンスレー家がラタンプルを落とす, source: 'https://en.wikipedia.org/wiki/Kalachuris_of_Ratnapura'}
+  - {from: 1816, owner: britain, certainty: indirect, label: ナーグプル藩王国, cause: ナーグプルのアッパー・サーヘブがイギリスと軍事保護条約を結ぶ（1817年のシータバルディーの戦いの後、領地を減らされた）, source: 'https://en.wikipedia.org/wiki/Battle_of_Sitabuldi'}
+  - {from: 1854, owner: britain, certainty: indirect, label: チャッティースガル諸藩王国, cause: ラグージー3世の死後、ダルハウジー総督が失権の原理でナーグプル王国を併合する, note: ナーグプル王国に従っていたザミーンダール（カワルダー・カイラーガル・ナンドガーオン・ライガル・サーランガルなど）は、1865年ごろ藩王国として認められた, source: 'https://en.wikipedia.org/wiki/Nagpur_Province'}
+  - {from: 1947, owner: india, certainty: indirect, label: チャッティースガル諸藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1948, owner: india, cause: 藩王国がインドの州に統合される（1948年1月1日）, source: 'https://en.wikipedia.org/wiki/Eastern_States_Agency'}
+- id: surguja_jashpur
+  name: スルグジャ・ジャシュプル・コリヤ
+  select:
+    pieces: [IND-Surguja, IND-Surajpur, IND-Balrampur_2, IND-Jashpur, IND-Koriya]
+  timeline:
+  - {from: 1648, owner: chota_nagpur, note: スルグジャ家などの首長の地}
+  - {from: 1758, owner: chota_nagpur, overlord: maratha, cause: ナーグプルのボーンスレー家がスルグジャから貢納を取る, source: 'https://en.wikipedia.org/wiki/Surguja_State'}
+  - {from: 1818, owner: britain, certainty: indirect, label: チョーター・ナーグプル諸藩王国, cause: 第3次マラーター戦争の後、イギリスの藩王国となる, source: 'https://en.wikipedia.org/wiki/Surguja_State'}
+  - {from: 1905, owner: britain, certainty: indirect, label: チャッティースガル諸藩王国, cause: 中央州の管轄に移される, source: 'https://en.wikipedia.org/wiki/Surguja_State'}
+  - {from: 1947, owner: india, certainty: indirect, label: チャッティースガル諸藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1948, owner: india, cause: 藩王国がインドの州に統合される（1948年1月1日）, source: 'https://en.wikipedia.org/wiki/Eastern_States_Agency'}
+- id: bastar
+  name: バスタール・カーンケール
+  select:
+    pieces: [IND-Bastar, IND-Kondagaon, IND-Narayanpur, IND-Bijapur_2, IND-Dakshin_Bastar_Dantewada, IND-Sukma, IND-Uttar_Bastar_Kanker]
+  timeline:
+  - {from: 1648, owner: bastar}
+  - {from: 1778, owner: bastar, overlord: maratha, cause: ナーグプルのボーンスレー家がバスタールから貢納を取る（要確認）, source: 'https://en.wikipedia.org/wiki/Bastar_State'}
+  - {from: 1818, owner: britain, certainty: indirect, label: バスタール藩王国, cause: 第3次マラーター戦争の後、ナーグプル王国の下の藩王国となる（1854年からイギリスの直接の保護下）, note: 1910年に森の民の反乱（ブームカル）が起こった, source: 'https://en.wikipedia.org/wiki/Bastar_State'}
+  - {from: 1947, owner: india, certainty: indirect, label: バスタール藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1948, owner: india, cause: 藩王国がインドの州に統合される（1948年1月1日）, note: 1960年代からこの地域では毛沢東主義派（ナクサライト）の武装闘争が続く, source: 'https://en.wikipedia.org/wiki/Eastern_States_Agency'}
+- id: east_bengal
+  name: 東ベンガル（ダッカ・ラージシャーヒー・クルナ・バリシャル）
+  names:
+  - {from: 1971, name: バングラデシュ}
+  select:
+    iso_all: [BGD]
+  timeline:
+  - {from: 1648, owner: mughal, note: ムガル帝国のベンガル州。州都ダッカ（ジャハーンギールナガル。1610–1704年）}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: pakistan, label: 東ベンガル, cause: インド・パキスタンの分離独立で、東ベンガルはパキスタンの一部となる（8月14日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1955, owner: pakistan, label: 東パキスタン, cause: ワン・ユニット政策で、東ベンガル州が東パキスタン州と改称される（10月）, source: 'https://en.wikipedia.org/wiki/East_Pakistan'}
+  - {from: 1971, owner: bangladesh, cause: バングラデシュ独立戦争。インド軍の参戦の後、12月16日にパキスタン軍が降伏する, source: 'https://ja.wikipedia.org/wiki/バングラデシュ独立戦争'}
+- id: chittagong
+  name: チッタゴン
+  select:
+    pieces: [BGD-Chittagong, BGD-Cox_s_Bazar]
+  timeline:
+  - {from: 1648, owner: arakan, note: アラカン王国（ミャウー朝）の西の地。ポルトガル人の傭兵・海賊がベンガルの沿岸を荒らした}
+  - {from: 1666, owner: mughal, cause: ベンガル太守シャーイスタ・ハーンがアラカンからチッタゴンを奪う（1月）, source: 'https://en.wikipedia.org/wiki/Mughal_conquest_of_Chittagong'}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1760, owner: britain, label: 東インド会社領, cause: 太守ミール・カーシムが、バルダマン・メディニープル・チッタゴンの3県を東インド会社に譲る, source: 'https://ja.wikipedia.org/wiki/ミール・カーシム'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: pakistan, label: 東ベンガル, cause: インド・パキスタンの分離独立で、東ベンガルはパキスタンの一部となる（8月14日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1955, owner: pakistan, label: 東パキスタン, cause: ワン・ユニット政策で、東ベンガル州が東パキスタン州と改称される（10月）, source: 'https://en.wikipedia.org/wiki/East_Pakistan'}
+  - {from: 1971, owner: bangladesh, cause: バングラデシュ独立戦争。インド軍の参戦の後、12月16日にパキスタン軍が降伏する, source: 'https://ja.wikipedia.org/wiki/バングラデシュ独立戦争'}
+- id: chittagong_hill_tracts
+  name: チッタゴン丘陵地帯
+  select:
+    pieces: [BGD-Rangamati, BGD-Khagrachhari, BGD-Bandarban]
+  timeline:
+  - {from: 1648, owner: arakan, certainty: nominal, note: チャクマ人・マルマ人などの山地。首長（チャクマ王など）は平野の支配者に綿などを納めるだけだった}
+  - {from: 1666, owner: mughal, certainty: nominal, cause: ムガル帝国がアラカンからチッタゴンを奪う, source: 'https://en.wikipedia.org/wiki/Mughal_conquest_of_Chittagong'}
+  - {from: 1717, owner: bengal_nawab, certainty: nominal, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1760, owner: britain, certainty: nominal, label: ベンガル管区, cause: チッタゴンが東インド会社に譲られる, source: 'https://ja.wikipedia.org/wiki/ミール・カーシム'}
+  - {from: 1860, owner: britain, label: ベンガル管区, cause: チッタゴン丘陵地帯が県として切り離され、直接の統治下に入る, source: 'https://en.wikipedia.org/wiki/Chittagong_Hill_Tracts'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: pakistan, label: 東ベンガル, cause: インド・パキスタンの分離独立で、東ベンガルはパキスタンの一部となる（8月14日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1955, owner: pakistan, label: 東パキスタン, cause: ワン・ユニット政策で、東ベンガル州が東パキスタン州と改称される（10月）, source: 'https://en.wikipedia.org/wiki/East_Pakistan'}
+  - {from: 1971, owner: bangladesh, cause: バングラデシュ独立戦争。インド軍の参戦の後、12月16日にパキスタン軍が降伏する, source: 'https://ja.wikipedia.org/wiki/バングラデシュ独立戦争'}
+- id: comilla
+  name: コミッラ（トリプラの平野）
+  select:
+    pieces: [BGD-Comilla]
+  timeline:
+  - {from: 1648, owner: tripura, note: トリプラ王国の平野部（チャクラ・ロシャナバード）}
+  - {from: 1733, owner: bengal_nawab, cause: ベンガル太守シュジャーウッディーンがトリプラの平野部を奪う（要確認）, source: 'https://en.wikipedia.org/wiki/Tripura_(princely_state)'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, note: トリプラ王家は平野の所領（チャクラ・ロシャナバード）をザミーンダーリーとして持ち続けた, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: pakistan, label: 東ベンガル, cause: インド・パキスタンの分離独立で、東ベンガルはパキスタンの一部となる（8月14日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1955, owner: pakistan, label: 東パキスタン, cause: ワン・ユニット政策で、東ベンガル州が東パキスタン州と改称される（10月）, source: 'https://en.wikipedia.org/wiki/East_Pakistan'}
+  - {from: 1971, owner: bangladesh, cause: バングラデシュ独立戦争。インド軍の参戦の後、12月16日にパキスタン軍が降伏する, source: 'https://ja.wikipedia.org/wiki/バングラデシュ独立戦争'}
+- id: north_bengal_koch
+  name: ランプル（クリグラム・ラルモニルハト・ニルファマリ）
+  select:
+    pieces: [BGD-Rangpur, BGD-Kurigram, BGD-Lalmonirhat, BGD-Nilphamari]
+  timeline:
+  - {from: 1648, owner: koch_bihar, note: コーチ・ビハール王国の南部。境界は要確認}
+  - {from: 1687, owner: mughal, cause: ムガル帝国がコーチ・ビハール王国の南部（ランプル）を奪う（要確認）, source: 'https://en.wikipedia.org/wiki/Cooch_Behar_State'}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: pakistan, label: 東ベンガル, cause: インド・パキスタンの分離独立で、東ベンガルはパキスタンの一部となる（8月14日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1955, owner: pakistan, label: 東パキスタン, cause: ワン・ユニット政策で、東ベンガル州が東パキスタン州と改称される（10月）, source: 'https://en.wikipedia.org/wiki/East_Pakistan'}
+  - {from: 1971, owner: bangladesh, cause: バングラデシュ独立戦争。インド軍の参戦の後、12月16日にパキスタン軍が降伏する, source: 'https://ja.wikipedia.org/wiki/バングラデシュ独立戦争'}
+- id: sylhet
+  name: シレット
+  select:
+    pieces: [BGD-Sylhet, BGD-Sunamganj, BGD-Habiganj, BGD-Maulvibazar]
+  timeline:
+  - &id001 {from: 1648, owner: mughal, note: ムガル帝国のベンガル州のシレット地方}
+  - &id002 {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - &id003 {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - &id004 {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - &id005 {from: 1874, owner: britain, label: アッサム州, cause: シレットがベンガル管区からアッサム州に移される, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - &id006 {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - &id007 {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: pakistan, label: 東ベンガル, cause: 住民投票（7月）でシレットの大部分が東ベンガル（パキスタン）に入る, source: 'https://en.wikipedia.org/wiki/1947_Sylhet_referendum'}
+  - {from: 1955, owner: pakistan, label: 東パキスタン, cause: ワン・ユニット政策で、東ベンガル州が東パキスタン州と改称される（10月）, source: 'https://en.wikipedia.org/wiki/East_Pakistan'}
+  - {from: 1971, owner: bangladesh, cause: バングラデシュ独立戦争。インド軍の参戦の後、12月16日にパキスタン軍が降伏する, source: 'https://ja.wikipedia.org/wiki/バングラデシュ独立戦争'}
+- id: karimganj
+  name: カリムガンジ
+  select:
+    pieces: [IND-Karimganj]
+  timeline:
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - {from: 1947, owner: india, cause: シレットの住民投票の後、ラドクリフ裁定でカリムガンジ（3つ半のターナ）はインド（アッサム州）に残る, source: 'https://en.wikipedia.org/wiki/1947_Sylhet_referendum'}
+- id: cooch_behar
+  name: コーチ・ビハール
+  select:
+    pieces: [IND-Koch_Bihar]
+  timeline:
+  - {from: 1648, owner: koch_bihar}
+  - {from: 1773, owner: britain, certainty: indirect, label: コーチ・ビハール藩王国, cause: ブータン軍に王を連れ去られたコーチ・ビハールが東インド会社に助けを求め、条約で会社に貢納する藩王国となる（4月）, source: 'https://en.wikipedia.org/wiki/Cooch_Behar_State'}
+  - {from: 1947, owner: india, certainty: indirect, label: コーチ・ビハール藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1949, owner: india, cause: コーチ・ビハールがインドに合併する（9月。1950年に西ベンガル州へ）, source: 'https://en.wikipedia.org/wiki/Cooch_Behar_State'}
+- id: bengal_duars
+  name: 西ドゥアール（ジャルパイグリ・アリプルドゥアール）
+  select:
+    pieces: [IND-Alipurduar, IND-Jalpaiguri]
+  timeline:
+  - {from: 1648, owner: bhutan, note: ヒマラヤのふもとの平野（ドゥアール＝門）。ブータンが支配した。ジャルパイグリ南部はバイクンタプルの首長（コーチ家の分家）の地}
+  - {from: 1865, owner: britain, label: ベンガル管区, cause: ドゥアール戦争（1864–65）の後のシンチュラ条約で、ブータンがベンガル・ドゥアールをイギリスに譲る（11月）, note: 茶園が開かれ、チョーター・ナーグプルから労働者が移り住んだ, source: 'https://en.wikipedia.org/wiki/Treaty_of_Sinchula'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: eastern_duars
+  name: 東ドゥアール（コクラジャール・チラン）
+  select:
+    pieces: [IND-Kokrajhar, IND-Chirang]
+  timeline:
+  - {from: 1648, owner: bhutan, note: ブータンが支配したドゥアール（ゴアルパラの北）}
+  - {from: 1865, owner: britain, label: ベンガル管区, cause: ドゥアール戦争（1864–65）の後のシンチュラ条約で、ブータンがベンガル・ドゥアールをイギリスに譲る（11月）, source: 'https://en.wikipedia.org/wiki/Treaty_of_Sinchula'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: ボド人の自治を求める運動の後、2003年にボドランド地域評議会が置かれた, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: assam_duars
+  name: アッサム・ドゥアール（バクサ・ウダルグリ）
+  select:
+    pieces: [IND-Baksa, IND-Udalguri]
+  timeline:
+  - {from: 1648, owner: bhutan, certainty: uncertain, note: カームループ・ダラングの北のドゥアール。ブータンとアホームが季節ごとに分けて治める取り決めがあった}
+  - {from: 1841, owner: britain, label: アッサム, cause: イギリスがアッサム・ドゥアールを併合する（ブータンには毎年の補償金）, source: 'https://en.wikipedia.org/wiki/Duar_War'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: kalimpong
+  name: カリンポン
+  select:
+    pieces: [IND-Kalimpong]
+  timeline:
+  - {from: 1648, owner: sikkim}
+  - {from: 1706, owner: bhutan, cause: ブータンがシッキムからカリンポンを奪う, source: 'https://en.wikipedia.org/wiki/Kalimpong'}
+  - {from: 1865, owner: britain, label: ベンガル管区, cause: ドゥアール戦争（1864–65）の後のシンチュラ条約で、ブータンがベンガル・ドゥアールをイギリスに譲る（11月）, note: 1866年にダージリン県に加えられた, source: 'https://en.wikipedia.org/wiki/Treaty_of_Sinchula'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: darjeeling
+  name: ダージリン
+  select:
+    pieces: [IND-Darjiling]
+  timeline:
+  - {from: 1648, owner: sikkim}
+  - {from: 1788, owner: nepal, cause: ネパール（ゴルカ）がシッキムに攻め込み、ティースタ川の西を奪う, source: 'https://en.wikipedia.org/wiki/Gorkha_conquest_of_Sikkim'}
+  - {from: 1816, owner: britain, cause: グルカ戦争に敗れたネパールが、スガウリ条約でメチ川の東の地を東インド会社に譲る（3月）, source: 'https://ja.wikipedia.org/wiki/スガウリ条約'}
+  - {from: 1817, owner: sikkim, overlord: britain, cause: ティタリヤ条約で、東インド会社がメチ川とティースタ川の間の地をシッキムに返す（2月）。シッキムは外交でイギリスに従う, source: 'https://en.wikipedia.org/wiki/Treaty_of_Titalia'}
+  - {from: 1835, owner: britain, label: ベンガル管区, cause: シッキム王が療養地としてダージリンの山地を東インド会社に贈る（1850年にシリグリの平野も併合）, note: 紅茶の栽培（1850年代から）と避暑地（夏の州都）で知られる, source: 'https://en.wikipedia.org/wiki/Darjeeling_district'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: ベンガル州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 1980年代にネパール系住民のゴルカランド運動が起こった, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: sikkim_west
+  name: シッキム西部・南部
+  select:
+    pieces: [IND-West_District, IND-South_District]
+  timeline:
+  - {from: 1648, owner: sikkim, note: 1642年に即位したプンツォ・ナムギャルの王国。都はユクソム、のちラブデンツェ}
+  - {from: 1788, owner: nepal, cause: ネパール（ゴルカ）がシッキムに攻め込み、ティースタ川の西を奪う, source: 'https://en.wikipedia.org/wiki/Gorkha_conquest_of_Sikkim'}
+  - {from: 1816, owner: britain, cause: グルカ戦争に敗れたネパールが、スガウリ条約でメチ川の東の地を東インド会社に譲る（3月）, source: 'https://ja.wikipedia.org/wiki/スガウリ条約'}
+  - {from: 1817, owner: sikkim, overlord: britain, cause: ティタリヤ条約で、東インド会社がメチ川とティースタ川の間の地をシッキムに返す（2月）。シッキムは外交でイギリスに従う, source: 'https://en.wikipedia.org/wiki/Treaty_of_Titalia'}
+  - &id008 {from: 1861, owner: britain, certainty: indirect, label: シッキム, cause: トゥムロン条約で、シッキムが事実上イギリスの保護国となる, source: 'https://en.wikipedia.org/wiki/Treaty_of_Tumlong'}
+  - &id009 {from: 1947, owner: india, certainty: indirect, label: シッキム（インドの保護国）, cause: インドの独立の後、1950年の条約でシッキムはインドの保護国となる, source: 'https://en.wikipedia.org/wiki/Kingdom_of_Sikkim'}
+  - &id010 {from: 1975, owner: india, cause: 住民投票で王制が廃止され、シッキムがインドの州となる（5月）, source: 'https://en.wikipedia.org/wiki/1975_Sikkimese_monarchy_referendum'}
+- id: sikkim_east
+  name: シッキム北部・東部
+  select:
+    pieces: [IND-North_District, IND-East_District]
+  timeline:
+  - {from: 1648, owner: sikkim}
+  - {from: 1817, owner: sikkim, overlord: britain, cause: ティタリヤ条約で、東インド会社がメチ川とティースタ川の間の地をシッキムに返す（2月）。シッキムは外交でイギリスに従う, source: 'https://en.wikipedia.org/wiki/Treaty_of_Titalia'}
+  - *id008
+  - *id009
+  - *id010
+- id: upper_assam
+  name: 上アッサム（シヴァサーガル・ジョールハート・ディブルガル）
+  select:
+    pieces: [IND-Sivasagar, IND-Charaideo, IND-Jorhat, IND-Majuli, IND-Golaghat, IND-Dibrugarh, IND-Lakhimpur, IND-Dhemaji]
+  timeline:
+  - {from: 1648, owner: ahom, note: アホーム王国の中心。都ガルガオン（のちランプル）}
+  - {from: 1662, owner: mughal, certainty: occupied, label: アッサム（ムガル軍の占領）, cause: ムガル帝国のミール・ジュムラがアッサムに攻め込み、都ガルガオンを占領する（3月）, source: 'https://en.wikipedia.org/wiki/Mir_Jumla''s_invasion_of_Assam'}
+  - {from: 1663, owner: ahom, cause: ギラジャリガートの条約（1月）でムガル軍が引き揚げる, source: 'https://en.wikipedia.org/wiki/Treaty_of_Ghilajharighat'}
+  - {from: 1817, owner: ahom, overlord: burma, cause: 宮廷の争いに介入したビルマ（コンバウン朝）の軍がアッサムに入り、チャンドラカンタ・シンハを王に立てる, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1821, owner: burma, certainty: occupied, label: アッサム（ビルマの占領）, cause: ビルマ軍がアッサムを占領する（ジョーゲーシュワル・シンハを傀儡の王に立てる）, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1825, owner: britain, certainty: occupied, label: アッサム（イギリス軍の占領）, cause: イギリス軍がビルマ軍を上アッサムから追う（1月、ランプル）, source: 'https://ja.wikipedia.org/wiki/第一次英緬戦争'}
+  - {from: 1826, owner: britain, label: アッサム, cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、ビルマがアッサムへの干渉をやめる（2月）, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1833, owner: britain, certainty: indirect, label: 上アッサム（アホーム王家）, cause: イギリスがプランダル・シンハを上アッサムの王に立てる（貢納を条件とする保護国）, source: 'https://en.wikipedia.org/wiki/Purandar_Singha'}
+  - {from: 1838, owner: britain, label: アッサム, cause: 貢納の滞りを理由に、イギリスが上アッサムを併合する, source: 'https://en.wikipedia.org/wiki/Purandar_Singha'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: tinsukia
+  name: ティンスキア（マタク）
+  select:
+    pieces: [IND-Tinsukia]
+  timeline:
+  - {from: 1648, owner: ahom}
+  - {from: 1817, owner: ahom, overlord: burma, cause: 宮廷の争いに介入したビルマ（コンバウン朝）の軍がアッサムに入り、チャンドラカンタ・シンハを王に立てる, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1821, owner: burma, certainty: occupied, label: アッサム（ビルマの占領）, cause: ビルマ軍がアッサムを占領する（ジョーゲーシュワル・シンハを傀儡の王に立てる）, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1825, owner: britain, certainty: occupied, label: アッサム（イギリス軍の占領）, cause: イギリス軍がビルマ軍を上アッサムから追う（1月、ランプル）, source: 'https://ja.wikipedia.org/wiki/第一次英緬戦争'}
+  - {from: 1826, owner: britain, certainty: indirect, label: マタク, cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、ビルマがアッサムへの干渉をやめる（2月）, note: モアモリアの反乱の後に自立したマタク人の首長（バルセナパティ）の地。イギリスの保護下で自治を保った, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1839, owner: britain, label: アッサム, cause: マタクとサディヤ（カムティ人）の地がイギリスに併合される, source: 'https://en.wikipedia.org/wiki/Matak_Kingdom'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: middle_assam
+  name: 中部アッサム（ナガオン・ソーニトプル）
+  select:
+    pieces: [IND-Nagaon, IND-Morigaon, IND-Hojai, IND-Sonitpur, IND-Biswanath]
+  timeline:
+  - {from: 1648, owner: ahom}
+  - {from: 1662, owner: mughal, certainty: occupied, label: アッサム（ムガル軍の占領）, cause: ミール・ジュムラのアッサム遠征, source: 'https://en.wikipedia.org/wiki/Mir_Jumla''s_invasion_of_Assam'}
+  - {from: 1663, owner: ahom, cause: ギラジャリガートの条約（1月）でムガル軍が引き揚げる, source: 'https://en.wikipedia.org/wiki/Treaty_of_Ghilajharighat'}
+  - {from: 1817, owner: ahom, overlord: burma, cause: 宮廷の争いに介入したビルマ（コンバウン朝）の軍がアッサムに入り、チャンドラカンタ・シンハを王に立てる, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1821, owner: burma, certainty: occupied, label: アッサム（ビルマの占領）, cause: ビルマ軍がアッサムを占領する（ジョーゲーシュワル・シンハを傀儡の王に立てる）, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1824, owner: britain, certainty: occupied, label: アッサム（イギリス軍の占領）, cause: 第1次イギリス＝ビルマ戦争。イギリス軍がアッサム西部・中部を占領する, source: 'https://ja.wikipedia.org/wiki/第一次英緬戦争'}
+  - {from: 1826, owner: britain, label: アッサム, cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、ビルマがアッサムへの干渉をやめる（2月）, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: darrang
+  name: ダラング
+  select:
+    pieces: [IND-Darrang]
+  timeline:
+  - {from: 1648, owner: ahom, note: アホームに従うダラングのコーチ王家の地}
+  - {from: 1662, owner: mughal, certainty: occupied, label: アッサム（ムガル軍の占領）, cause: ミール・ジュムラのアッサム遠征, source: 'https://en.wikipedia.org/wiki/Mir_Jumla''s_invasion_of_Assam'}
+  - {from: 1663, owner: mughal, cause: ギラジャリガートの条約で、アホームがバラリ川の西をムガル帝国に譲る, source: 'https://en.wikipedia.org/wiki/Treaty_of_Ghilajharighat'}
+  - {from: 1667, owner: ahom, cause: アホーム軍がグワーハーティーとその周りを取り戻す（11月）, source: 'https://en.wikipedia.org/wiki/Battle_of_Saraighat'}
+  - {from: 1817, owner: ahom, overlord: burma, cause: 宮廷の争いに介入したビルマ（コンバウン朝）の軍がアッサムに入り、チャンドラカンタ・シンハを王に立てる, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1821, owner: burma, certainty: occupied, label: アッサム（ビルマの占領）, cause: ビルマ軍がアッサムを占領する（ジョーゲーシュワル・シンハを傀儡の王に立てる）, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1824, owner: britain, certainty: occupied, label: アッサム（イギリス軍の占領）, cause: 第1次イギリス＝ビルマ戦争。イギリス軍がアッサム西部・中部を占領する, source: 'https://ja.wikipedia.org/wiki/第一次英緬戦争'}
+  - {from: 1826, owner: britain, label: アッサム, cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、ビルマがアッサムへの干渉をやめる（2月）, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: kamrup
+  name: カームループ（グワーハーティー）
+  select:
+    pieces: [IND-Kamrup, IND-Kamrup_Metropolitan, IND-Nalbari, IND-Barpeta]
+  timeline:
+  - {from: 1648, owner: mughal, note: ムガル帝国のカームループ地方（コーチ・ハジョの旧領）。1639年の協定で東の境はバルナディ川}
+  - {from: 1667, owner: ahom, cause: アホーム軍がグワーハーティーを取り戻す（11月）。1671年のサライガートの戦いでムガル軍を退ける, source: 'https://en.wikipedia.org/wiki/Battle_of_Saraighat'}
+  - {from: 1679, owner: mughal, cause: アホームの長官ラルクソラ・ボルプカンがグワーハーティーをムガル帝国に明け渡す, source: 'https://en.wikipedia.org/wiki/Laluksola_Borphukan'}
+  - {from: 1682, owner: ahom, cause: イタクリの戦いでアホームがグワーハーティーを取り戻し、マナス川を西の境とする, source: 'https://en.wikipedia.org/wiki/Battle_of_Itakhuli'}
+  - {from: 1817, owner: ahom, overlord: burma, cause: 宮廷の争いに介入したビルマ（コンバウン朝）の軍がアッサムに入り、チャンドラカンタ・シンハを王に立てる, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1821, owner: burma, certainty: occupied, label: アッサム（ビルマの占領）, cause: ビルマ軍がアッサムを占領する（ジョーゲーシュワル・シンハを傀儡の王に立てる）, source: 'https://en.wikipedia.org/wiki/Burmese_invasions_of_Assam'}
+  - {from: 1824, owner: britain, certainty: occupied, label: アッサム（イギリス軍の占領）, cause: 第1次イギリス＝ビルマ戦争。イギリス軍がアッサム西部・中部を占領する, source: 'https://ja.wikipedia.org/wiki/第一次英緬戦争'}
+  - {from: 1826, owner: britain, label: アッサム, cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、ビルマがアッサムへの干渉をやめる（2月）, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: goalpara
+  name: ゴアルパラ・ドゥブリー
+  select:
+    pieces: [IND-Goalpara, IND-Dhubri, IND-South_Salmara_Mankachar, IND-Bongaigaon]
+  timeline:
+  - {from: 1648, owner: mughal, note: ムガル帝国のベンガル州の東の端（ランガマティ地方）}
+  - {from: 1717, owner: bengal_nawab, cause: ムルシド・クリー・ハーンがベンガル太守となり、世襲の太守政権が始まる（ムガル皇帝の宗主権は名目的に）, source: 'https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン'}
+  - {from: 1757, owner: bengal_nawab, overlord: britain, cause: プラッシーの戦いの後、東インド会社がミール・ジャアファルを太守に立てる, source: 'https://ja.wikipedia.org/wiki/プラッシーの戦い'}
+  - {from: 1765, owner: britain, label: ベンガル管区, cause: ブクサールの戦いの後のアラーハーバード条約で、東インド会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得る, source: 'https://ja.wikipedia.org/wiki/アラーハーバード条約'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: karbi_hills
+  name: カルビ丘陵・ディマプル
+  select:
+    pieces: [IND-Karbi_Anglong_East, IND-Karbi_Anglong_West, IND-Dimapur]
+  timeline:
+  - {from: 1648, owner: ahom, certainty: uncertain, note: カルビ人（ミキル人）の山地。アホーム・ジャインティア・カチャーリーの間で帰属があいまいだった}
+  - {from: 1826, owner: britain, certainty: nominal, label: アッサム, cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、ビルマがアッサムへの干渉をやめる（2月）, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1838, owner: britain, label: アッサム, cause: ナガオン県の一部として統治が及ぶ（要確認）, source: 'https://en.wikipedia.org/wiki/Karbi_Anglong_district'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: ディマプルは1963年にナガランド州の一部となった, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: namsai
+  name: ナムサイ（サディヤ）
+  select:
+    pieces: [IND-Namsai]
+  timeline:
+  - {from: 1648, owner: ahom, certainty: uncertain, note: アホームのサディヤ長官（サディヤ・コワ・ゴハイン）の管轄。18世紀にカムティ人が移り住んだ}
+  - {from: 1826, owner: britain, certainty: nominal, label: アッサム, cause: 第1次イギリス＝ビルマ戦争のヤンダボ条約で、ビルマがアッサムへの干渉をやめる（2月）, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1839, owner: britain, label: アッサム, cause: カムティ人の反乱の後、サディヤがイギリスの直接の統治下に入る, source: 'https://en.wikipedia.org/wiki/Khamti_people'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: cachar
+  name: カチャール（バラク川の平野）
+  select:
+    pieces: [IND-Cachar, IND-Hailakandi]
+  timeline:
+  - {from: 1648, owner: kachari, certainty: uncertain, note: ディマサ人のカチャーリー王国が17世紀末に都をカスプルに移すまで、平野の帰属はあいまい}
+  - {from: 1700, owner: kachari, cause: カチャーリー王国が都をカスプル（カチャール平野）に移す（要確認）, source: 'https://en.wikipedia.org/wiki/Dimasa_Kingdom'}
+  - {from: 1832, owner: britain, label: ベンガル管区, cause: 跡継ぎのない王ゴービンダ・チャンドラの死後、イギリスがカチャール平野を併合する（8月）, note: 茶園が開かれた, source: 'https://en.wikipedia.org/wiki/Dimasa_Kingdom'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: dima_hasao
+  name: 北カチャール丘陵（ディマ・ハサオ）
+  select:
+    pieces: [IND-Dima_Hasao]
+  timeline:
+  - {from: 1648, owner: kachari, note: カチャーリー王国の古い都マイボンの地}
+  - {from: 1854, owner: britain, label: アッサム, cause: トゥララーム（カチャーリーの将軍で、1832年以後も北カチャール丘陵を治めた）の死後、イギリスが併合する, source: 'https://en.wikipedia.org/wiki/Tularam'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: jaintia_hills
+  name: ジャインティア丘陵
+  select:
+    pieces: [IND-East_Jaintia_Hills, IND-West_Jaintia_Hills]
+  timeline:
+  - {from: 1648, owner: jaintia}
+  - {from: 1835, owner: britain, label: アッサム, cause: イギリスがジャインティア王国を併合する（3月）, source: 'https://en.wikipedia.org/wiki/Jaintia_Kingdom'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 1972年にメガラヤ州の一部となった, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: khasi_hills
+  name: カシ丘陵
+  select:
+    pieces: [IND-East_Khasi_Hills, IND-West_Khasi_Hills, IND-South_West_Khasi_Hills, IND-Ribhoi]
+  timeline:
+  - {from: 1648, owner: khasi}
+  - {from: 1833, owner: britain, certainty: indirect, label: カシ諸国, cause: アングロ・カシ戦争（1829–33）の後、カシの首長たちがイギリスと条約を結ぶ, note: シロン（1874年からアッサム州の州都）などはイギリスの直轄地, source: 'https://en.wikipedia.org/wiki/Khasi_States'}
+  - {from: 1947, owner: india, certainty: indirect, label: カシ諸国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1950, owner: india, cause: カシ諸国がアッサム州に統合される（憲法の施行）, note: 1972年にメガラヤ州となった, source: 'https://en.wikipedia.org/wiki/Khasi_States'}
+- id: garo_hills
+  name: ガロ丘陵
+  select:
+    pieces: [IND-North_Garo_Hills, IND-East_Garo_Hills, IND-South_Garo_Hills, IND-West_Garo_Hills, IND-South_West_Garo_Hills]
+  timeline:
+  - {from: 1648, owner: null, note: ガロ人の村々。ふもとの平野はムガル帝国・ベンガルの在地領主（ザミーンダール）が治めた}
+  - {from: 1869, owner: britain, certainty: nominal, label: アッサム, cause: ガロ丘陵県が置かれる, source: 'https://en.wikipedia.org/wiki/Garo_Hills'}
+  - {from: 1873, owner: britain, label: アッサム, cause: ガロ丘陵の全体に統治が及ぶ, source: 'https://en.wikipedia.org/wiki/Garo_Hills'}
+  - {from: 1874, owner: britain, label: アッサム州, cause: アッサムがベンガル管区から分かれ、首席弁務官の州（アッサム州）となる, source: 'https://en.wikipedia.org/wiki/Assam_Province'}
+  - {from: 1905, owner: britain, label: 東ベンガル・アッサム州, cause: ベンガル分割（カーゾン総督）, source: 'https://ja.wikipedia.org/wiki/ベンガル分割令'}
+  - {from: 1912, owner: britain, label: アッサム州, cause: ベンガル分割の取り消し（1911年12月のデリー・ダルバール。1912年4月に州を再編）, source: 'https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 1972年にメガラヤ州の一部となった, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: lushai_hills
+  name: ルシャイ丘陵（ミゾラム）
+  select:
+    adm1: [IND/Mizoram]
+  timeline:
+  - {from: 1648, owner: null, note: ミゾ人（ルシャイ人）の首長たちの村々。どの国にも属さなかった}
+  - {from: 1890, owner: britain, label: ルシャイ丘陵, cause: ルシャイ遠征（1871–72、1889–90）の後、ルシャイ丘陵がイギリスに併合される, note: 1898年にアッサム州に入った, source: 'https://en.wikipedia.org/wiki/Lushai_Expedition'}
+  - {from: 1947, owner: india, cause: インド・パキスタンの分離独立（8月15日）, note: 1966年にミゾ民族戦線の武装蜂起が起こった。1986年の和平合意で、1987年にミゾラム州となった, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+- id: naga_hills_west
+  name: ナガ丘陵西部（コヒマ）
+  select:
+    pieces: [IND-Kohima, IND-Peren, IND-Phek, IND-Wokha]
+  timeline:
+  - {from: 1648, owner: null, note: アンガミ人などのナガ人の村々。どの国にも属さなかった}
+  - {from: 1866, owner: britain, certainty: nominal, label: ナガ丘陵, cause: ナガ丘陵県が置かれる（サマグティン）, source: 'https://en.wikipedia.org/wiki/Naga_Hills_District'}
+  - {from: 1880, owner: britain, label: ナガ丘陵, cause: コヒマを県の中心とし、アンガミ人の抵抗を抑える（1879–80）, note: 1944年に日本軍がコヒマに迫った（コヒマの戦い）, source: 'https://en.wikipedia.org/wiki/Naga_Hills_District'}
+  - {from: 1947, owner: india, cause: インドの独立（8月15日）。ナガ民族評議会は前日に独立を宣言し、のちに武装闘争に移った, note: 1963年にナガランド州となった, source: 'https://en.wikipedia.org/wiki/Naga_National_Council'}
+- id: naga_hills_mid
+  name: ナガ丘陵中部（モコクチュン）
+  select:
+    pieces: [IND-Mokokchung, IND-Zunheboto]
+  timeline:
+  - {from: 1648, owner: null, note: アオ人・セマ人などのナガ人の村々}
+  - {from: 1889, owner: britain, label: ナガ丘陵, cause: モコクチュンに分署が置かれ、ナガ丘陵県に加えられる, source: 'https://en.wikipedia.org/wiki/Naga_Hills_District'}
+  - {from: 1947, owner: india, cause: インドの独立（8月15日）。ナガ民族評議会は前日に独立を宣言し、のちに武装闘争に移った, source: 'https://en.wikipedia.org/wiki/Naga_National_Council'}
+- id: naga_hills_east
+  name: ナガ丘陵東部（トゥエンサン）
+  select:
+    pieces: [IND-Tuensang, IND-Mon, IND-Longleng, IND-Kiphire]
+  timeline:
+  - {from: 1648, owner: null, note: コニャク人などのナガ人の村々}
+  - {from: 1889, owner: britain, certainty: nominal, label: ナガ部族地域, cause: ナガ丘陵県の東の「統治の外の地域」とされる, source: 'https://en.wikipedia.org/wiki/Naga_Hills_District'}
+  - {from: 1947, owner: india, certainty: nominal, cause: インドの独立（8月15日）。ナガ民族評議会は前日に独立を宣言し、のちに武装闘争に移った, source: 'https://en.wikipedia.org/wiki/Naga_National_Council'}
+  - {from: 1951, owner: india, cause: トゥエンサン辺境区が置かれ、統治が及ぶ（要確認）, source: 'https://en.wikipedia.org/wiki/Tuensang_district'}
+- id: manipur_valley
+  name: マニプル盆地（インパール）
+  select:
+    pieces: [IND-Imphal_East, IND-Imphal_West, IND-Bishnupur, IND-Thoubal, IND-Kakching]
+  timeline:
+  - {from: 1648, owner: manipur}
+  - {from: 1819, owner: burma, certainty: occupied, label: マニプル（ビルマの占領）, cause: ビルマ（コンバウン朝）がマニプルを占領する, source: 'https://en.wikipedia.org/wiki/Chahi_Taret_Khuntakpa'}
+  - {from: 1826, owner: manipur, cause: ガンビール・シンハがイギリスの助けでビルマ軍を追い、ヤンダボ条約で独立が認められる, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1891, owner: britain, certainty: indirect, label: マニプル藩王国, cause: アングロ・マニプル戦争の後、イギリスの藩王国となる, source: 'https://en.wikipedia.org/wiki/Anglo-Manipur_War'}
+  - {from: 1947, owner: india, certainty: indirect, label: マニプル藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1949, owner: india, cause: マニプルがインドに合併する（10月）, note: 1972年にマニプル州となった, source: 'https://en.wikipedia.org/wiki/Manipur_Merger_Agreement'}
+- id: manipur_hills
+  name: マニプルの山地
+  select:
+    pieces: [IND-Senapati, IND-Ukhrul, IND-Tamenglong, IND-Churachandpur, IND-Chandel, IND-Kamjong, IND-Kangpokpi, IND-Noney, IND-Pherzawl, IND-Tengnoupal, IND-Jiribam]
+  timeline:
+  - {from: 1648, owner: manipur, certainty: uncertain, note: ナガ人・クキ人の山地。マニプル王の支配はゆるかった}
+  - {from: 1819, owner: burma, certainty: occupied, label: マニプル（ビルマの占領）, cause: ビルマがマニプルを占領する, source: 'https://en.wikipedia.org/wiki/Chahi_Taret_Khuntakpa'}
+  - {from: 1826, owner: manipur, certainty: uncertain, cause: ヤンダボ条約でマニプルの独立が認められる, source: 'https://ja.wikipedia.org/wiki/ヤンダボ条約'}
+  - {from: 1891, owner: britain, certainty: indirect, label: マニプル藩王国, cause: アングロ・マニプル戦争の後、イギリスの藩王国となる, source: 'https://en.wikipedia.org/wiki/Anglo-Manipur_War'}
+  - {from: 1947, owner: india, certainty: indirect, label: マニプル藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1949, owner: india, cause: マニプルがインドに合併する（10月）, source: 'https://en.wikipedia.org/wiki/Manipur_Merger_Agreement'}
+- id: tripura_hills
+  name: トリプラ
+  select:
+    adm1: [IND/Tripura]
+  timeline:
+  - {from: 1648, owner: tripura, note: 都はウダイプル（のちアガルタラ）}
+  - {from: 1871, owner: britain, certainty: indirect, label: トリプラ藩王国, cause: イギリスの政務官が置かれ、藩王国となる（平野の所領は1765年から東インド会社に地代を払っていた）, source: 'https://en.wikipedia.org/wiki/Tripura_(princely_state)'}
+  - {from: 1947, owner: india, certainty: indirect, label: トリプラ藩王国, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1949, owner: india, cause: トリプラがインドに合併する（10月）, note: 東パキスタン（バングラデシュ）からのベンガル人の流入で、トリプラ人は少数派になった, source: 'https://en.wikipedia.org/wiki/Tripura_(princely_state)'}
+- id: tawang
+  name: タワン
+  select:
+    pieces: [IND-Tawang]
+  timeline:
+  - {from: 1648, owner: tibet, note: モンパ人の地。タワン僧院（1681年創建）を通じて、ダライ・ラマ政権が治めた}
+  - {from: 1720, owner: qing, certainty: indirect, cause: 清がジュンガルをチベットから追い、チベットが清の藩部となる, source: 'https://ja.wikipedia.org/wiki/チベットの歴史'}
+  - {from: 1912, owner: tibet, cause: 辛亥革命の後、チベットが清の駐蔵大臣と軍を追う, note: 1914年のシムラ会議のマクマホン・ラインではイギリス領インド側とされたが、チベット政府の統治が続いた, source: 'https://en.wikipedia.org/wiki/Tawang'}
+  - {from: 1951, owner: india, cause: インド軍がタワンに入り、チベットの役人を退ける（2月）, note: 1962年の中印国境紛争では中国軍が一時占領した（11月に停戦・撤退）。中華人民共和国はアルナーチャル・プラデーシュ州の大部分を「蔵南（南チベット）」として領有を主張している（マクマホン・ラインを認めない）, source: 'https://en.wikipedia.org/wiki/Tawang'}
+- id: west_kameng
+  name: 西カメン
+  select:
+    pieces: [IND-West_Kameng]
+  timeline:
+  - {from: 1648, owner: tibet, certainty: uncertain, note: モンパ人・シェルドゥクペン人の地。北部（ディラン）はタワンを通じてチベットが治めた}
+  - {from: 1720, owner: qing, certainty: indirect, cause: チベットが清の藩部となる, source: 'https://ja.wikipedia.org/wiki/チベットの歴史'}
+  - {from: 1912, owner: tibet, certainty: uncertain, cause: 辛亥革命の後、チベットが清の軍を追う, source: 'https://en.wikipedia.org/wiki/Tawang'}
+  - {from: 1944, owner: britain, certainty: nominal, label: 北東辺境地区, cause: イギリスがセ・ラ峠の南のディランに拠点を置き、チベットの徴税を退ける, source: 'https://en.wikipedia.org/wiki/McMahon_Line'}
+  - {from: 1947, owner: india, certainty: nominal, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1951, owner: india, cause: 北東辺境地区（NEFA）の行政が整い、統治が奥地まで及ぶ, note: 中華人民共和国はアルナーチャル・プラデーシュ州の大部分を「蔵南（南チベット）」として領有を主張している（マクマホン・ラインを認めない）, source: 'https://en.wikipedia.org/wiki/North-East_Frontier_Agency'}
+- id: arunachal
+  name: アルナーチャル（北東辺境）
+  select:
+    adm1: [IND/Arunachal Pradesh]
+    exclude: [IND-Tawang, IND-West_Kameng, IND-Namsai]
+  timeline:
+  - {from: 1648, owner: null, note: ニシ人・アディ人・ミシュミ人などの村々。アホーム王国はふもとの平野への襲撃をやめさせるために、山地の人々に平野の物産を分ける（ポサ）取り決めを結んでいた}
+  - {from: 1914, owner: britain, certainty: nominal, label: 北東辺境地区, cause: シムラ会議でイギリスとチベットがマクマホン・ラインを国境とする（中華民国は認めず）。北東辺境地区が置かれる, source: 'https://en.wikipedia.org/wiki/McMahon_Line'}
+  - {from: 1947, owner: india, certainty: nominal, cause: インド・パキスタンの分離独立（8月15日）, source: 'https://ja.wikipedia.org/wiki/インド・パキスタン分離独立'}
+  - {from: 1954, owner: india, cause: 北東辺境地区（NEFA）の行政が整い、統治が奥地まで及ぶ, note: 1962年の中印国境紛争では中国軍が一時侵入した（11月に停戦・撤退）。1972年に連邦直轄地、1987年に州となった。中華人民共和国はアルナーチャル・プラデーシュ州の大部分を「蔵南（南チベット）」として領有を主張している（マクマホン・ラインを認めない）, source: 'https://en.wikipedia.org/wiki/North-East_Frontier_Agency'}
+- id: nepal_gorkha
+  name: ゴルカ
+  select:
+    pieces: [NPL-Gorkha]
+  timeline:
+  - {from: 1648, owner: nepal, note: ゴルカ王国の本拠}
+- id: nepal_nuwakot
+  name: ヌワコット・ダーディン
+  select:
+    pieces: [NPL-Nuwakot, NPL-Rasuwa, NPL-Dhading]
+  timeline:
+  - {from: 1648, owner: malla, note: カトマンズ王国の西の砦ヌワコットとチベットへの道（ケルン）}
+  - {from: 1744, owner: nepal, cause: プリトヴィ・ナラヤン・シャハがヌワコットを落とす, source: 'https://ja.wikipedia.org/wiki/プリトビ・ナラヤン・シャハ'}
+- id: kathmandu_patan
+  name: カトマンズ・パタン
+  select:
+    pieces: [NPL-Kathmandu, NPL-Lalitpur]
+  timeline:
+  - {from: 1648, owner: malla}
+  - {from: 1768, owner: nepal, cause: ゴルカ軍がカトマンズ（9月、インドラ・ジャートラの祭りの日）とパタンを落とす, source: 'https://ja.wikipedia.org/wiki/プリトビ・ナラヤン・シャハ'}
+- id: bhaktapur
+  name: バクタプル
+  select:
+    pieces: [NPL-Bhaktapur]
+  timeline:
+  - {from: 1648, owner: malla}
+  - {from: 1769, owner: nepal, cause: ゴルカ軍がバクタプルを落とし、マッラ朝が終わる（11月）, source: 'https://ja.wikipedia.org/wiki/プリトビ・ナラヤン・シャハ'}
+- id: nepal_east_hills
+  name: カトマンズ盆地の東の山地（シンドゥパルチョーク・ドラカ）
+  select:
+    pieces: [NPL-Sindhupalchok, NPL-Kavrepalanchok, NPL-Dolakha, NPL-Ramechhap]
+  timeline:
+  - {from: 1648, owner: malla, note: バクタプル・カトマンズ王国の東の山地。チベットへの道（クティ）を押さえる}
+  - {from: 1764, owner: nepal, cause: ゴルカ軍がカトマンズ盆地の周りの山地を押さえて、盆地を封鎖する（要確認）, source: 'https://ja.wikipedia.org/wiki/プリトビ・ナラヤン・シャハ'}
+- id: makwanpur
+  name: マクワンプルと中部タライ
+  select:
+    pieces: [NPL-Makawanpur, NPL-Chitawan, NPL-Bara, NPL-Parsa, NPL-Rautahat, NPL-Sarlahi, NPL-Sindhuli]
+  timeline:
+  - {from: 1648, owner: nepal_sen}
+  - {from: 1762, owner: nepal, cause: ゴルカ軍がマクワンプルを落とす（8月）。1763年にベンガル太守ミール・カーシムの援軍を退ける, source: 'https://en.wikipedia.org/wiki/Makwanpur_Gadhi'}
+- id: nepal_east_terai
+  name: 東部タライ（チャウダンディ）
+  select:
+    pieces: [NPL-Udayapur, NPL-Saptari, NPL-Siraha, NPL-Dhanusha, NPL-Mahottari]
+  timeline:
+  - {from: 1648, owner: nepal_sen, note: チャウダンディのセーン朝の地}
+  - {from: 1773, owner: nepal, cause: ゴルカ軍がチャウダンディを征服する, source: 'https://en.wikipedia.org/wiki/Unification_of_Nepal'}
+- id: vijaypur
+  name: ヴィジャイプル（モラン）
+  select:
+    pieces: [NPL-Morang, NPL-Sunsari, NPL-Jhapa]
+  timeline:
+  - {from: 1648, owner: nepal_sen, note: ヴィジャイプルのセーン朝の地（モラン）}
+  - {from: 1774, owner: nepal, cause: ゴルカ軍がヴィジャイプルを征服する, source: 'https://en.wikipedia.org/wiki/Vijaypur'}
+- id: kirat
+  name: キラート（ネパール東部の山地）
+  select:
+    pieces: [NPL-Bhojpur, NPL-Khotang, NPL-Solukhumbu, NPL-Okhaldhunga, NPL-Dhankuta, NPL-Terhathum, NPL-Sankhuwasabha, NPL-Taplejung, NPL-Panchthar, NPL-Ilam]
+  timeline:
+  - {from: 1648, owner: nepal_kirat, certainty: uncertain}
+  - {from: 1774, owner: nepal, cause: ゴルカがライ人の地（1773）とリンブー人の地を征服し、リンブーの首長と協定を結ぶ（自治と土地の権利〈キパット〉を認める）, source: 'https://en.wikipedia.org/wiki/Limbuwan'}
+- id: chaubise
+  name: チャウビセ諸国（ガンダキ川流域）
+  select:
+    pieces: [NPL-Lamjung, NPL-Tanahu, NPL-Kaski, NPL-Syangja, NPL-Parbat, NPL-Myagdi, NPL-Baglung, NPL-Gulmi, NPL-Arghakhanchi, NPL-Pyuthan, NPL-Manang]
+  timeline:
+  - {from: 1648, owner: nepal_chaubise}
+  - {from: 1786, owner: nepal, cause: ゴルカ（摂政バハドゥル・シャハ）がラムジュン・カスキ・タナフンなどのチャウビセ諸国を征服する, source: 'https://en.wikipedia.org/wiki/Chaubisi_Rajya'}
+- id: palpa
+  name: パルパ・ブトワル
+  select:
+    pieces: [NPL-Palpa, NPL-Nawalparasi, NPL-Nawalpur, NPL-Kapilbastu]
+  timeline:
+  - {from: 1648, owner: nepal_chaubise, note: セーン朝の本家のパルパ王国。ブトワル（タライ）を持つ}
+  - {from: 1806, owner: nepal, cause: ゴルカと同盟していたパルパが併合される, note: ブトワルの帰属をめぐる東インド会社との争いがグルカ戦争のきっかけになった, source: 'https://en.wikipedia.org/wiki/Palpa_District'}
+- id: baise_karnali
+  name: バイセ諸国（カルナリ川流域・ジュムラ）
+  select:
+    pieces: [NPL-Jumla, NPL-Dolpa, NPL-Mugu, NPL-Humla, NPL-Kalikot, NPL-Jajarkot, NPL-Salyan, NPL-Surkhet, NPL-Rukum_W, NPL-Rukum_E, NPL-Rolpa, NPL-Dang, NPL-Mustang]
+  timeline:
+  - {from: 1648, owner: nepal_baise, note: ジュムラ王国を盟主とする小王国。ムスタン（ロー王国）はジュムラに貢納した}
+  - {from: 1789, owner: nepal, cause: ゴルカがジュムラを征服する, note: ムスタン（ロー）の王家は、ネパールに従う王として2008年まで続いた, source: 'https://en.wikipedia.org/wiki/Baise_Rajya'}
+- id: baise_doti
+  name: ドティ（極西部の山地）
+  select:
+    pieces: [NPL-Achham, NPL-Bajhang, NPL-Bajura, NPL-Baitadi, NPL-Dadeldhura, NPL-Darchula, NPL-Doti]
+  timeline:
+  - {from: 1648, owner: nepal_baise, note: ドティ王国などの地}
+  - {from: 1790, owner: nepal, cause: ゴルカがドティを征服し、続いてクマーウーン（1790）にも進む, source: 'https://en.wikipedia.org/wiki/Doti_Kingdom'}
+- id: naya_muluk
+  name: ナヤ・ムルク（西部タライ）
+  select:
+    pieces: [NPL-Banke, NPL-Bardiya, NPL-Kailali, NPL-Kanchanpur]
+  timeline:
+  - {from: 1648, owner: nepal_baise, certainty: uncertain, note: 森の多いタライの平野。北のドティ・サリヤーンなどの王国と、南のムガル帝国（のちアワド太守）の間で帰属があいまいだった}
+  - {from: 1790, owner: nepal, certainty: uncertain, cause: ゴルカがドティなどの西部の山地を征服し、ふもとのタライも押さえる, source: 'https://en.wikipedia.org/wiki/Doti_Kingdom'}
+  - {from: 1816, owner: britain, label: ナヤ・ムルク（イギリス領）, cause: グルカ戦争に敗れたネパールが、スガウリ条約でメチ川の東の地を東インド会社に譲る（3月）, note: 東部のタライは1816年12月に返されたが、西部は東インド会社が持ち続けた, source: 'https://ja.wikipedia.org/wiki/スガウリ条約'}
+  - {from: 1860, owner: nepal, cause: インド大反乱（1857–59）の鎮圧を助けた礼として、イギリスが西部のタライ（ナヤ・ムルク＝新しい国）をネパールに返す（11月）, source: 'https://en.wikipedia.org/wiki/Naya_Muluk'}
+- id: bhutan_west
+  name: ブータン西部・中部
+  select:
+    pieces: [BTN-Haa, BTN-Paro, BTN-Thimpu, BTN-Punakha, BTN-Gasa, BTN-Wangdue_Phodrang, BTN-Chukha, BTN-Samtse, BTN-Dagana, BTN-Tsirang, BTN-Sarpang, BTN-Trongsa, BTN-Bumthang, BTN-Zhemgang]
+  timeline:
+  - {from: 1648, owner: bhutan, note: シャブドゥン・ガワン・ナムゲルが統一したドゥク派の国。冬の都プナカ、夏の都ティンプー}
+  - &id011 {from: 1910, owner: bhutan, overlord: britain, cause: プナカ条約で、ブータンは外交でイギリスの助言に従う（イギリスは内政に干渉しない）, source: 'https://en.wikipedia.org/wiki/Treaty_of_Punakha'}
+  - &id012 {from: 1947, owner: bhutan, cause: インドの独立でイギリスとの条約が終わる}
+  - &id013 {from: 1949, owner: bhutan, overlord: india, cause: インドとの友好条約で、外交でインドの助言に従う（8月）, source: 'https://en.wikipedia.org/wiki/Indo-Bhutan_Friendship_Treaty'}
+  - &id014 {from: 2007, owner: bhutan, cause: インドとの条約が改められ、外交の「助言」の条項がなくなる（2月）, source: 'https://en.wikipedia.org/wiki/Indo-Bhutan_Friendship_Treaty'}
+- id: bhutan_east
+  name: ブータン東部
+  select:
+    pieces: [BTN-Mongar, BTN-Lhuntse, BTN-Trashigang, BTN-Trashiyangtse, BTN-Pemagatshel, BTN-Samdrup_Jongkhar]
+  timeline:
+  - {from: 1648, owner: bhutan, certainty: uncertain, note: 在地の領主が並ぶ東部。トンサの長官がドゥク派の支配を広げていた}
+  - {from: 1655, owner: bhutan, cause: トンサの長官ミンジュル・テンパが東部を征服する（1650年代。年は要確認）, source: 'https://en.wikipedia.org/wiki/History_of_Bhutan'}
+  - *id011
+  - *id012
+  - *id013
+  - *id014

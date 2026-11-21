@@ -1,0 +1,492 @@
+# 東インド・ベンガル・ヒマラヤ（担当 S2）の政体。
+# 範囲：インドのビハール・ジャールカンド・西ベンガル・オディシャ・チャッティースガル・北東諸州・シッキム、
+# およびバングラデシュ・ネパール・ブータン。
+# ムガル帝国（mughal）・インド（india）・パキスタン（pakistan）は S1、マラーター（maratha）・ハイデラバード（hyderabad）・
+# ゴールコンダは S3、ビルマ（burma）・アラカンは S4、チベット（tibet）は inner_asia.yaml、イギリス（britain）・フランス（france）は west.yaml。
+
+# ================================================================ ベンガル
+- id: bengal_nawab
+  name: ベンガル太守（ナワーブ）
+  short: ベンガル太守
+  color: "#d3e08a"
+  kind: 太守領（ムガル帝国から事実上自立）
+  rulers:
+    - {name: ムルシド・クリー・ハーン, title: ベンガル太守, from: 1717, to: 1727, note: 1700年からベンガルのディーワーン（財務長官）。1704年に役所をダッカからムルシダーバードへ移した。1717年に太守（ナーズィム）となり、世襲の太守政権を開いた, source: "https://ja.wikipedia.org/wiki/ムルシド・クリー・ハーン"}
+    - {name: シュジャーウッディーン・ムハンマド・ハーン, title: ベンガル太守, from: 1727, to: 1739, note: 1733年にビハールも治めることになった, source: "https://en.wikipedia.org/wiki/Shuja-ud-Din_Muhammad_Khan"}
+    - {name: サルファラーズ・ハーン, title: ベンガル太守, from: 1739, to: 1740, note: 1740年にアリーヴァルディー・ハーンに敗れて戦死, source: "https://en.wikipedia.org/wiki/Sarfaraz_Khan"}
+    - {name: アリーヴァルディー・ハーン, title: ベンガル太守, from: 1740, to: 1756, note: 1742–1751年にマラーター（ナーグプルのボーンスレー家）の侵入に苦しみ、1751年にオリッサを譲った, source: "https://ja.wikipedia.org/wiki/アリーヴァルディー・ハーン"}
+    - {name: シラージュ・ウッダウラ, title: ベンガル太守, from: 1756, to: 1757, note: 1757年のプラッシーの戦いでイギリス東インド会社に敗れ、殺された, source: "https://ja.wikipedia.org/wiki/シラージュ・ウッダウラ"}
+    - {name: ミール・ジャアファル, title: ベンガル太守, from: 1757, to: 1760, note: 東インド会社に擁立された。1763–1765年に再び太守, source: "https://ja.wikipedia.org/wiki/ミール・ジャアファル"}
+    - {name: ミール・カーシム, title: ベンガル太守, from: 1760, to: 1763, note: 会社と対立して追われ、1764年のブクサールの戦いでアワド太守・ムガル皇帝と組んで敗れた, source: "https://ja.wikipedia.org/wiki/ミール・カーシム"}
+    - {name: ミール・ジャアファル, title: ベンガル太守（復位）, from: 1763, to: 1765, source: "https://ja.wikipedia.org/wiki/ミール・ジャアファル"}
+  periods:
+    - from: 1717
+      to: 1741
+      text: ムガル帝国の衰えとともに、ベンガル・ビハール・オリッサの太守が世襲の政権となった。都ムルシダーバードは豊かなベンガルの富で栄え、太守は皇帝への貢納を続けながら実質的に自立した。カルカッタ（イギリス）・シャンデルナゴル（フランス）・チンスラ（オランダ）などの商館が並んだ。
+    - from: 1742
+      to: 1756
+      text: アリーヴァルディー・ハーンの時代、マラーターの騎兵（バルギー）が毎年のようにベンガル西部を荒らし、1751年の講和でオリッサを譲り、毎年の貢納（チャウト）を約束した。
+    - from: 1756
+      to: 1765
+      text: 若い太守シラージュ・ウッダウラはカルカッタを攻め落としたが（1756）、1757年のプラッシーの戦いでクライヴの率いる東インド会社軍に敗れた。以後の太守は会社に擁立される傀儡となり、1764年のブクサールの戦いの後、1765年に会社がベンガル・ビハール・オリッサのディーワーニー（徴税権）を得て、太守は名目だけの存在になった。
+  note: 地図では、ムルシド・クリー・ハーンが太守となった1717年から独自の色で描く（ビハールは1733年から）。ムガル皇帝の宗主権は名目的なので帯は付けない。1757–1764年は東インド会社に擁立された太守なので、イギリスの帯（overlord）を付けた。1765年以後の太守（ムルシダーバードのナワーブ）は年金を受ける名目だけの存在で、1793年に司法・警察の権限（ニザーマト）も会社に移った。
+  source:
+    - "https://ja.wikipedia.org/wiki/ベンガル太守"
+    - "https://en.wikipedia.org/wiki/Nawab_of_Bengal"
+
+- id: bangladesh
+  name: バングラデシュ人民共和国
+  short: バングラデシュ
+  color: "#86c79c"
+  kind: 共和国
+  rulers:
+    - {name: シェイク・ムジブル・ラフマン, title: 首相→大統領（1975〜）, from: 1971, to: 1975, note: アワミ連盟の指導者で「建国の父」。1971年3月の独立宣言の時はパキスタン軍に逮捕され、1972年1月に帰国。1975年8月のクーデタで家族とともに殺された, source: "https://ja.wikipedia.org/wiki/シェイク・ムジブル・ラフマン"}
+    - {name: ジアウル・ラフマン, title: 陸軍参謀長→大統領（1977〜）, from: 1975, to: 1981, note: 1975年11月の政変の後に実権を握る。バングラデシュ民族主義党（BNP）を作った。1981年に暗殺された, source: "https://ja.wikipedia.org/wiki/ジアウル・ラフマン"}
+    - {name: アブドゥス・サッタール, title: 大統領, from: 1981, to: 1982, source: "https://en.wikipedia.org/wiki/Abdus_Sattar"}
+    - {name: フセイン・モハンマド・エルシャド, title: 戒厳令司令官→大統領（1983〜）, from: 1982, to: 1990, note: 1990年12月の民主化運動で辞任した, source: "https://ja.wikipedia.org/wiki/フセイン・モハンマド・エルシャド"}
+    - {name: カレダ・ジア, title: 首相（BNP）, from: 1991, to: 1996, note: 1991年に議院内閣制に戻った, source: "https://ja.wikipedia.org/wiki/カレダ・ジア"}
+    - {name: シェイク・ハシナ, title: 首相（アワミ連盟）, from: 1996, to: 2001, source: "https://ja.wikipedia.org/wiki/シェイク・ハシナ"}
+    - {name: カレダ・ジア, title: 首相（BNP）, from: 2001, to: 2006, source: "https://ja.wikipedia.org/wiki/カレダ・ジア"}
+    - {name: ファクルディン・アハメド, title: 選挙管理内閣の首席顧問, from: 2007, to: 2008, note: 2007年1月に軍の後押しで非常事態が宣言され、選挙が延期された, source: "https://en.wikipedia.org/wiki/Fakhruddin_Ahmed"}
+    - {name: シェイク・ハシナ, title: 首相（アワミ連盟）, from: 2009, to: 2024, note: 2024年8月、学生の反政府運動（7月革命）で辞任してインドへ逃れた, source: "https://ja.wikipedia.org/wiki/シェイク・ハシナ"}
+    - {name: ムハマド・ユヌス, title: 暫定政府の首席顧問, from: 2024, note: グラミン銀行の創設者（2006年ノーベル平和賞）。2026年2月の総選挙の後、BNP のタリク・ラーマンが首相になった（要確認）, source: "https://ja.wikipedia.org/wiki/ムハマド・ユヌス"}
+  periods:
+    - from: 1971
+      to: 1975
+      text: パキスタンからの独立戦争（1971年3–12月）の末に、インド軍の参戦で独立した。ムジブル・ラフマンの政府は戦争で荒れた国の再建に取り組んだが、1974年の飢饉などで行き詰まり、1975年に一党制に移った直後のクーデタで殺された。
+    - from: 1975
+      to: 1990
+      text: 軍人のジアウル・ラフマン、エルシャドが続けて政権を握った。イスラームを重んじる方向に憲法が改められた。
+    - from: 1991
+      to: 2024
+      text: 議会制民主主義に戻り、カレダ・ジア（BNP）とシェイク・ハシナ（アワミ連盟）の2人の女性指導者が交互に政権を担った。縫製業の輸出で経済は伸びたが、選挙のたびに対立が激しくなり、2009年以後のハシナ政権は強権的になった。
+    - from: 2024
+      text: 2024年の学生運動でハシナ政権が倒れ、ノーベル平和賞のユヌスを首席顧問とする暫定政府が改革と選挙の準備を進めた。
+  note: 1947–1971年は「東ベンガル」（1955年から東パキスタン）としてパキスタンの一部（地図ではパキスタンの色＋副ラベル）。2017年以後、ミャンマーから逃れたロヒンギャの人々約100万人がコックスバザールの難民キャンプにいる。
+  source:
+    - "https://ja.wikipedia.org/wiki/バングラデシュ"
+    - "https://ja.wikipedia.org/wiki/バングラデシュの歴史"
+
+# ================================================================ ヒマラヤ
+- id: nepal
+  name: ネパール
+  names:
+    - {to: 1767, name: ゴルカ王国, short: ゴルカ, kind: 王国（シャハ朝）}
+    - {from: 1768, to: 2007, name: ネパール王国, short: ネパール, kind: 王国（シャハ朝）}
+    - {from: 2008, name: ネパール連邦民主共和国, short: ネパール, kind: 連邦共和国}
+  short: ネパール
+  color: "#c3a6dc"
+  kind: 王国
+  rulers:
+    - {name: クリシュナ・シャハ, title: ゴルカ王, from: 1645, to: 1661, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Gorkha_Kingdom"}
+    - {name: ルドラ・シャハ, title: ゴルカ王, from: 1661, to: 1673, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Gorkha_Kingdom"}
+    - {name: プリトヴィパティ・シャハ, title: ゴルカ王, from: 1673, to: 1716, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Prithvipati_Shah"}
+    - {name: ナラ・ブーパール・シャハ, title: ゴルカ王, from: 1716, to: 1743, source: "https://en.wikipedia.org/wiki/Nara_Bhupal_Shah"}
+    - {name: プリトヴィ・ナラヤン・シャハ, title: ゴルカ王→ネパール王, from: 1743, to: 1775, note: カトマンズ盆地を征服し（1768–69）、ネパールを統一した, source: "https://ja.wikipedia.org/wiki/プリトビ・ナラヤン・シャハ"}
+    - {name: プラタープ・シンハ・シャハ, title: ネパール王, from: 1775, to: 1777, source: "https://en.wikipedia.org/wiki/Pratap_Singh_Shah"}
+    - {name: ラナ・バハドゥル・シャハ, title: ネパール王, from: 1777, to: 1799, note: 幼い時期は母・叔父バハドゥル・シャハが摂政。1799年に退位し、1806年に殺された, source: "https://en.wikipedia.org/wiki/Rana_Bahadur_Shah"}
+    - {name: ギルバン・ユッダ・ビクラム・シャハ, title: ネパール王, from: 1799, to: 1816, note: 幼王。実権はビムセン・タパ（1806–1837年の首相）, source: "https://en.wikipedia.org/wiki/Girvan_Yuddha_Bikram_Shah"}
+    - {name: ラジェンドラ・ビクラム・シャハ, title: ネパール王, from: 1816, to: 1847, source: "https://en.wikipedia.org/wiki/Rajendra_Bikram_Shah"}
+    - {name: スレンドラ・ビクラム・シャハ, title: ネパール王, from: 1847, to: 1881, note: 実権はラナ家の首相ジャンガ・バハドゥル（1846–1877）, source: "https://en.wikipedia.org/wiki/Surendra_Bikram_Shah"}
+    - {name: プリトヴィ・ビール・ビクラム・シャハ, title: ネパール王, from: 1881, to: 1911, note: 実権はラナ家の首相, source: "https://en.wikipedia.org/wiki/Prithvi_Bir_Bikram_Shah"}
+    - {name: トリブバン・ビール・ビクラム・シャハ, title: ネパール王, from: 1911, to: 1955, note: 1950年にインドへ逃れ、1951年に王政復古（ラナ家の専制の終わり）, source: "https://ja.wikipedia.org/wiki/トリブバン"}
+    - {name: マヘンドラ, title: ネパール王, from: 1955, to: 1972, note: 1960年に議会を解散し、政党を禁じる「パンチャーヤト制」をしいた, source: "https://ja.wikipedia.org/wiki/マヘンドラ"}
+    - {name: ビレンドラ, title: ネパール王, from: 1972, to: 2001, note: 1990年の民主化運動で立憲君主制に移った。2001年の王宮事件で殺された, source: "https://ja.wikipedia.org/wiki/ビレンドラ"}
+    - {name: ギャネンドラ, title: ネパール王, from: 2001, to: 2008, note: 2005年に全権を握ったが、2006年の民主化運動で権限を失い、2008年に王政が廃止された, source: "https://ja.wikipedia.org/wiki/ギャネンドラ"}
+    - {name: プシュパ・カマル・ダハル（プラチャンダ）, title: 首相（ネパール共産党毛沢東主義派）, from: 2008, to: 2009, note: 2016–2017年、2022–2024年にも首相, source: "https://ja.wikipedia.org/wiki/プシュパ・カマル・ダハル"}
+    - {name: マダブ・クマール・ネパール／ジャラ・ナート・カナル／バブラム・バッタライ／キル・ラージ・レグミ, title: 首相, from: 2009, to: 2014, note: 首相が短い間隔で替わった（2013–2014年のレグミは選挙管理内閣の首班）, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Nepal"}
+    - {name: スシル・コイララ, title: 首相（ネパール会議派）, from: 2014, to: 2015, note: 2015年に新憲法を公布, source: "https://en.wikipedia.org/wiki/Sushil_Koirala"}
+    - {name: カドガ・プラサード・シャルマ・オリ, title: 首相（統一共産党）, from: 2015, to: 2016, source: "https://ja.wikipedia.org/wiki/カドガ・プラサード・シャルマ・オリ"}
+    - {name: プラチャンダ／シェール・バハドゥル・デウバ, title: 首相, from: 2016, to: 2018, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Nepal"}
+    - {name: カドガ・プラサード・シャルマ・オリ, title: 首相, from: 2018, to: 2021, source: "https://ja.wikipedia.org/wiki/カドガ・プラサード・シャルマ・オリ"}
+    - {name: シェール・バハドゥル・デウバ, title: 首相（ネパール会議派）, from: 2021, to: 2022, source: "https://en.wikipedia.org/wiki/Sher_Bahadur_Deuba"}
+    - {name: プラチャンダ, title: 首相, from: 2022, to: 2024, source: "https://ja.wikipedia.org/wiki/プシュパ・カマル・ダハル"}
+    - {name: カドガ・プラサード・シャルマ・オリ, title: 首相, from: 2024, to: 2025, note: 2025年9月、SNS の禁止をきっかけにした若者の抗議運動（Z世代の抗議）で辞任した, source: "https://en.wikipedia.org/wiki/2025_Nepalese_Gen_Z_protests"}
+    - {name: スシラ・カルキ, title: 暫定首相, from: 2025, note: 元最高裁長官。ネパール初の女性首相。総選挙の実施を任された, source: "https://en.wikipedia.org/wiki/Sushila_Karki"}
+  periods:
+    - from: 1648
+      to: 1743
+      text: ヒマラヤの山あいには数十の小王国があり、カトマンズ盆地ではマッラ朝の3王国（カトマンズ・パタン・バクタプル）がネワール人の都市文化を栄えさせていた。ゴルカはその西にある小さな王国だった。
+    - from: 1744
+      to: 1816
+      text: ゴルカ王プリトヴィ・ナラヤン・シャハがカトマンズ盆地を征服して（1768–69）ネパールを統一し、後継者は東のシッキム、西のクマーウーン・ガルワールまで領土を広げた。チベットとの戦争では清の大軍に敗れ（1792）、清に5年ごとに朝貢することになった。イギリスとのグルカ戦争（1814–1816）に敗れ、スガウリ条約で西部・東部の山地とタライ（平野）の一部を失った。
+    - from: 1846
+      to: 1951
+      text: 1846年の「コートの虐殺」でジャンガ・バハドゥルが権力を握り、ラナ家が世襲の首相として国王を名目だけにした。ラナ家はイギリスと手を結び、インド大反乱の鎮圧を助けて西部のタライを取り戻した（1860）。グルカ兵はイギリス軍の精鋭として両大戦で戦った。1923年の条約でイギリスはネパールの独立をはっきり認めた。
+    - from: 1951
+      to: 1990
+      text: 1950–51年の革命でラナ家の専制が終わり、トリブバン国王のもとで王政が復活した。1959年に初の総選挙が行われたが、マヘンドラ国王は1960年に議会を解散し、政党を禁じた国王中心の「パンチャーヤト制」をしいた。
+    - from: 1990
+      to: 2008
+      text: 1990年の民主化運動（ジャナ・アンドラン）で立憲君主制と複数政党制に移った。1996年から毛沢東主義派（マオイスト）の武装闘争（ネパール内戦）が続き、2001年には王宮で国王一家が殺される事件が起こった。2006年の民主化運動の後に内戦が終わり、2008年に制憲議会が王政を廃止した。
+    - from: 2008
+      text: 連邦民主共和国となった。2015年に大地震（ゴルカ地震）が起こり、同じ年に7州からなる連邦制の新憲法が公布された。政権交代が続き、2025年には若者の抗議運動で首相が辞任した。
+  note: 1768年以前は、ゴルカ王国の時代（地図の名前も「ゴルカ」）。1792年から1908年ごろまで清に朝貢したが、断続的・儀礼的なので帯は付けない。ラナ家の首相（1846–1951）：ジャンガ・バハドゥル（1846–1877）、ラノーディープ・シンハ（1877–1885）、ビール・シャムシェル（1885–1901）、チャンドラ・シャムシェル（1901–1929）、ジュッダ・シャムシェル（1932–1945）、モハン・シャムシェル（1948–1951）など。1990–2008年の首相はギリジャ・プラサード・コイララ、シェール・バハドゥル・デウバなど。
+  source:
+    - "https://ja.wikipedia.org/wiki/ネパールの歴史"
+    - "https://ja.wikipedia.org/wiki/ゴルカ朝"
+    - "https://ja.wikipedia.org/wiki/スガウリ条約"
+
+- id: malla
+  name: マッラ朝（カトマンズ・パタン・バクタプル）
+  short: マッラ朝
+  color: "#e5c3e9"
+  kind: 3つの王国（ネワール人の都市王国）
+  rulers:
+    - {name: プラターパ・マッラ, title: カトマンズ王, from: 1641, to: 1674, note: 学問と芸術を好み、王宮（ハヌマン・ドーカ）を整えた, source: "https://en.wikipedia.org/wiki/Pratap_Malla"}
+    - {name: シッディナラシンハ・マッラ, title: パタン王, from: 1619, to: 1661, note: クリシュナ寺院（パタン）を建てた, source: "https://en.wikipedia.org/wiki/Siddhi_Narsingh_Malla"}
+    - {name: ブパティンドラ・マッラ, title: バクタプル王, from: 1696, to: 1722, note: ニャタポラ寺院を建てた, source: "https://en.wikipedia.org/wiki/Bhupatindra_Malla"}
+    - {name: ジャヤ・プラカーシュ・マッラ, title: カトマンズ王, from: 1735, to: 1768, note: 1768年にゴルカ軍にカトマンズを落とされた, source: "https://en.wikipedia.org/wiki/Jaya_Prakash_Malla"}
+    - {name: ラナジット・マッラ, title: バクタプル王, from: 1722, to: 1769, note: 1769年にバクタプルが落ち、マッラ朝が終わった, source: "https://en.wikipedia.org/wiki/Ranajit_Malla"}
+  periods:
+    - from: 1648
+      to: 1769
+      text: カトマンズ盆地のマッラ朝は、カトマンズ・パタン（ラリトプル）・バクタプルの3王国に分かれて互いに争った。ネワール人の商人はチベット交易で栄え、寺院・王宮の建築や祭礼の文化が花開いた。1768–69年にゴルカに征服された。
+  note: 3つの王国を1つの政体として描く（盆地の外の東の山地はバクタプル・カトマンズの支配地）。君主は主な王だけを書いた。
+  source:
+    - "https://ja.wikipedia.org/wiki/マッラ朝_(ネパール)"
+
+- id: nepal_sen
+  name: セーン朝の諸王国（マクワンプル・チャウダンディ・ヴィジャイプル）
+  short: セーン朝諸国
+  color: "#e9dc96"
+  kind: 王国（セーン朝の分家）
+  periods:
+    - from: 1648
+      to: 1774
+      text: パルパから広がったセーン朝の分家が、ネパール東部の山すそとタライ（平野）にマクワンプル、チャウダンディ、ヴィジャイプルの王国を作っていた。ムガル帝国・ベンガル太守には貢納をして平野部の所領を保った。ゴルカのプリトヴィ・ナラヤン・シャハに、マクワンプル（1762）、チャウダンディ（1773）、ヴィジャイプル（1774）の順に征服された。
+  note: 3つの王国を1つの政体として描く。境界はおおまか（要確認）。西のパルパ（セーン朝の本家）はチャウビセ諸国（nepal_chaubise）に含めた。
+  source:
+    - "https://en.wikipedia.org/wiki/Makwanpur_Gadhi"
+    - "https://en.wikipedia.org/wiki/Vijaypur"
+
+- id: nepal_kirat
+  name: キラート（ライ・リンブーの首長たち）
+  short: キラート
+  color: "#e4d0aa"
+  kind: 首長たちの連合
+  periods:
+    - from: 1648
+      to: 1774
+      text: ネパール東部の山地では、ライ人・リンブー人の首長たちが自治を保っていた。リンブー人の地（リンブワン）はヴィジャイプルのセーン朝やシッキムと結びついていた。1773–74年にゴルカに征服され、リンブーとの協定で一定の自治（キパット）が認められた。
+  note: 境界・従属関係はあいまいなので、地図では不確実（斜線）として描く。
+  source:
+    - "https://en.wikipedia.org/wiki/Limbuwan"
+    - "https://en.wikipedia.org/wiki/Kirata_Kingdom"
+
+- id: nepal_chaubise
+  name: チャウビセ諸国（24の小王国）
+  short: チャウビセ諸国
+  color: "#d6cf9f"
+  kind: 小王国の連合
+  periods:
+    - from: 1648
+      to: 1806
+      text: ガンダキ川流域には「チャウビセ（24の王国）」と呼ばれる小王国（ラムジュン・タナフン・カスキ・パルパなど）が並び、ゴルカと争ったり手を結んだりした。1780年代にゴルカに征服され、ゴルカと同盟していたパルパも1806年に併合された。
+  note: 多くの小王国を1つの政体として描く。境界はおおまか。
+  source:
+    - "https://en.wikipedia.org/wiki/Chaubisi_Rajya"
+
+- id: nepal_baise
+  name: バイセ諸国（22の小王国）
+  short: バイセ諸国
+  color: "#bfdcbd"
+  kind: 小王国の連合
+  periods:
+    - from: 1648
+      to: 1790
+      text: カルナリ川流域の西ネパールには「バイセ（22の王国）」と呼ばれる小王国が並び、ジュムラとドティが有力だった。ムスタン（ロー王国）はジュムラに貢納した。1789–90年にゴルカに征服された。
+  note: 多くの小王国を1つの政体として描く。境界はおおまか。
+  source:
+    - "https://en.wikipedia.org/wiki/Baise_Rajya"
+
+- id: bhutan
+  name: ブータン
+  names:
+    - {to: 1906, name: ブータン（ドゥク・デシ政権）, kind: 政教二重の政権（ドゥク派）}
+    - {from: 1907, name: ブータン王国, kind: 王国（ワンチュク朝）}
+  short: ブータン
+  color: "#7fb6d9"
+  kind: 王国
+  rulers:
+    - {name: シャブドゥン・ガワン・ナムゲル, title: シャブドゥン（宗教・政治の最高指導者）, from: 1616, to: 1651, note: チベットから逃れてブータンを統一した。死は1705年ごろまで隠された, source: "https://ja.wikipedia.org/wiki/ガワン・ナムゲル"}
+    - {name: テンジン・ラプゲ, title: ドゥク・デシ（世俗の長）, from: 1680, to: 1695, note: 第4代のデシ。1651–1680年、1695年以後のデシは note を参照, source: "https://en.wikipedia.org/wiki/Tenzin_Rabgye"}
+    - {name: ジグメ・ナムゲル, title: トンサ・ペンロプ（地方長官）→ドゥク・デシ（1870–1873）, from: 1853, to: 1881, note: ドゥアール戦争（1864–65）でイギリスと戦った。ワンチュク家の祖, source: "https://en.wikipedia.org/wiki/Jigme_Namgyal"}
+    - {name: ウゲン・ワンチュク, title: トンサ・ペンロプ→国王（1907〜）, from: 1885, to: 1926, note: 1885年の内戦に勝って実権を握り、1904年のイギリスのチベット遠征を助けた。1907年に初代国王に選ばれた, source: "https://ja.wikipedia.org/wiki/ウゲン・ワンチュク"}
+    - {name: ジグメ・ワンチュク, title: 国王, from: 1926, to: 1952, source: "https://en.wikipedia.org/wiki/Jigme_Wangchuck"}
+    - {name: ジグメ・ドルジ・ワンチュク, title: 国王, from: 1952, to: 1972, note: 国会（1953）を開き、近代化を進めた。1971年に国連に加盟, source: "https://ja.wikipedia.org/wiki/ジグミ・ドルジ・ワンチュク"}
+    - {name: ジグメ・シンゲ・ワンチュク, title: 国王, from: 1972, to: 2006, note: 「国民総幸福量（GNH）」を唱えた, source: "https://ja.wikipedia.org/wiki/ジグミ・シンゲ・ワンチュク"}
+    - {name: ジグメ・ケサル・ナムゲル・ワンチュク, title: 国王, from: 2006, note: 2008年に憲法を定めて立憲君主制に移った, source: "https://ja.wikipedia.org/wiki/ジグミ・ケサル・ナムゲル・ワンチュク"}
+  periods:
+    - from: 1648
+      to: 1906
+      text: チベットから来たドゥク派の高僧シャブドゥン・ガワン・ナムゲルがブータンを統一し、宗教の長（ジェ・ケンポ）と世俗の長（ドゥク・デシ）の二重の政治のしくみを作った。各地の城塞（ゾン）を拠点にチベットの侵入を退けた。19世紀には地方長官（ペンロプ）どうしの内戦が続いた。
+    - from: 1772
+      to: 1865
+      text: 南の平野（ドゥアール）とコーチ・ビハールをめぐってイギリス東インド会社と争った（1772–74年の戦争）。アッサム・ドゥアールは1841年、ベンガル・ドゥアールはドゥアール戦争（1864–65）の後のシンチュラ条約でイギリス領になった。
+    - from: 1907
+      to: 1971
+      text: トンサの長官ウゲン・ワンチュクが初代国王に選ばれ、ワンチュク朝が始まった。1910年のプナカ条約で外交はイギリスの助言に従うとされ、1949年の条約でその役割をインドが引き継いだ。
+    - from: 1972
+      text: ジグメ・シンゲ・ワンチュク国王が「国民総幸福量」を掲げて独自の近代化を進めた。1990年代には南部のネパール系住民（ロツァンパ）の多くが国を追われて難民となった。2007年にインドとの条約が改められ、2008年に憲法を定めて立憲君主制・議会制民主主義に移った。
+  note: >-
+    ドゥク・デシ（世俗の長）は多くが短期間で、ここでは主な人だけを書いた（第1代テンジン・ドゥクギェ 1651–1656、第2代テンジン・ドゥクダ 1656–1667、第3代チョギェル・ミンジュル・テンパ 1667–1680 など）。
+    地図では、1910–1947年はイギリスの、1949–2006年はインドの帯（外交の指導）を付けた。1971年に国連に加盟している。
+  source:
+    - "https://ja.wikipedia.org/wiki/ブータンの歴史"
+    - "https://en.wikipedia.org/wiki/Treaty_of_Punakha"
+    - "https://en.wikipedia.org/wiki/Indo-Bhutan_Friendship_Treaty"
+
+- id: sikkim
+  name: シッキム王国
+  short: シッキム
+  color: "#f3c6dd"
+  kind: 王国（ナムギャル朝）
+  rulers:
+    - {name: プンツォ・ナムギャル, title: チョギャル（法王）, from: 1642, to: 1670, source: "https://en.wikipedia.org/wiki/Phuntsog_Namgyal"}
+    - {name: テンスン・ナムギャル, title: チョギャル, from: 1670, to: 1700, source: "https://en.wikipedia.org/wiki/Tensung_Namgyal"}
+    - {name: チャクドル・ナムギャル, title: チョギャル, from: 1700, to: 1717, note: 即位直後にブータンの侵入を受け、一時チベットに逃れた, source: "https://en.wikipedia.org/wiki/Chakdor_Namgyal"}
+    - {name: ギュルメ・ナムギャル, title: チョギャル, from: 1717, to: 1733, source: "https://en.wikipedia.org/wiki/Gyurmed_Namgyal"}
+    - {name: プンツォ・ナムギャル2世, title: チョギャル, from: 1733, to: 1780, source: "https://en.wikipedia.org/wiki/Phuntsog_Namgyal_II"}
+    - {name: テンジン・ナムギャル, title: チョギャル, from: 1780, to: 1793, note: ネパール（ゴルカ）の侵入で西部を失い、チベットに逃れた, source: "https://en.wikipedia.org/wiki/Tenzing_Namgyal"}
+    - {name: ツグプ・ナムギャル, title: チョギャル, from: 1793, to: 1863, note: 1817年のティタリヤ条約で失地を取り戻した。1835年にダージリンをイギリスに与えた, source: "https://en.wikipedia.org/wiki/Tsugphud_Namgyal"}
+    - {name: シドケオン・ナムギャル, title: チョギャル, from: 1863, to: 1874, source: "https://en.wikipedia.org/wiki/Sidkeong_Namgyal"}
+    - {name: トゥトブ・ナムギャル, title: チョギャル, from: 1874, to: 1914, note: 1889年からイギリスの政務官が実権を握った, source: "https://en.wikipedia.org/wiki/Thutob_Namgyal"}
+    - {name: タシ・ナムギャル, title: チョギャル, from: 1914, to: 1963, note: 同じ年の前半にシドケオン・トゥルクが在位, source: "https://en.wikipedia.org/wiki/Tashi_Namgyal"}
+    - {name: パルデン・トンドゥプ・ナムギャル, title: チョギャル, from: 1963, to: 1975, note: 1975年に王制が廃止され、シッキムはインドの州になった, source: "https://en.wikipedia.org/wiki/Palden_Thondup_Namgyal"}
+  periods:
+    - from: 1648
+      to: 1816
+      text: チベット系のナムギャル朝が、レプチャ人・ブティア人を治めた仏教王国。東のブータン、西のネパール（ゴルカ）にたびたび攻められ、1788年ごろからはティースタ川以西をネパールに奪われた。
+    - from: 1817
+      to: 1946
+      text: グルカ戦争の後、ティタリヤ条約（1817）でイギリスの仲介のもと失地を取り戻したが、1835年にダージリンをイギリスに与え、1861年のトゥムロン条約で事実上イギリスの保護国になった。1890年の英清協約で清もこれを認めた。ネパールからの移民が増え、住民の多数を占めるようになった。
+    - from: 1947
+      to: 1975
+      text: インドの独立後は、1950年の条約でインドの保護国となった（外交・防衛はインド）。1973年の反王制運動の後、1975年の住民投票で王制が廃止され、インドの22番目の州になった。
+  note: 1861–1946年はイギリス、1947–1974年はインドの保護国として、宗主国の色を薄く（間接統治）＋副ラベルで描く。
+  source:
+    - "https://ja.wikipedia.org/wiki/シッキム王国"
+    - "https://en.wikipedia.org/wiki/Kingdom_of_Sikkim"
+
+# ================================================================ 北東インド
+- id: ahom
+  name: アホーム王国
+  short: アホーム
+  color: "#f1c08c"
+  kind: 王国（タイ系のアホーム人の王朝）
+  rulers:
+    - {name: ジャヤドヴァジ・シンハ, title: スワルガデオ（王）, from: 1648, to: 1663, note: 1662年にムガル帝国のミール・ジュムラに都ガルガオンを奪われ、山地へ逃れた, source: "https://en.wikipedia.org/wiki/Jayadhwaj_Singha"}
+    - {name: チャクラドヴァジ・シンハ, title: スワルガデオ, from: 1663, to: 1670, note: 1667年にグワーハーティーを取り戻した, source: "https://en.wikipedia.org/wiki/Chakradhwaj_Singha"}
+    - {name: ウダヤーディティヤ・シンハ, title: スワルガデオ, from: 1670, to: 1672, note: 1671年のサライガートの戦いで、将軍ラチト・ボルプカンがムガル軍を破った, source: "https://en.wikipedia.org/wiki/Udayaditya_Singha"}
+    - {name: ガダダル・シンハ, title: スワルガデオ, from: 1681, to: 1696, note: 1672–1681年は王が次々に廃される混乱が続いた（要確認）。1682年にイタクリの戦いでムガル軍を追い、グワーハーティーを取り戻した, source: "https://en.wikipedia.org/wiki/Gadadhar_Singha"}
+    - {name: ルドラ・シンハ, title: スワルガデオ, from: 1696, to: 1714, note: 王国の最盛期, source: "https://en.wikipedia.org/wiki/Rudra_Singha"}
+    - {name: シヴァ・シンハ, title: スワルガデオ, from: 1714, to: 1744, source: "https://en.wikipedia.org/wiki/Siva_Singha"}
+    - {name: プラマッタ・シンハ, title: スワルガデオ, from: 1744, to: 1751, source: "https://en.wikipedia.org/wiki/Pramatta_Singha"}
+    - {name: ラジェーシュワル・シンハ, title: スワルガデオ, from: 1751, to: 1769, source: "https://en.wikipedia.org/wiki/Rajeswar_Singha"}
+    - {name: ラクシュミー・シンハ, title: スワルガデオ, from: 1769, to: 1780, note: 即位の年にモアモリアの反乱が起こった, source: "https://en.wikipedia.org/wiki/Lakshmi_Singha"}
+    - {name: ガウリナート・シンハ, title: スワルガデオ, from: 1780, to: 1795, note: モアモリアの反乱で都を追われ、1792年にイギリス（ウェルシュ大尉）の援軍を求めた, source: "https://en.wikipedia.org/wiki/Gaurinath_Singha"}
+    - {name: カマレーシュワル・シンハ, title: スワルガデオ, from: 1795, to: 1811, note: 実権は首相（ブルハゴハイン）プルナナンダ, source: "https://en.wikipedia.org/wiki/Kamaleswar_Singha"}
+    - {name: チャンドラカンタ・シンハ, title: スワルガデオ, from: 1811, to: 1818, note: 1817年にビルマ軍の後押しで実権を取り戻した。1819–1821年にも王, source: "https://en.wikipedia.org/wiki/Chandrakanta_Singha"}
+    - {name: プランダル・シンハ, title: スワルガデオ, from: 1818, to: 1819, note: 1833–1838年にイギリスの保護下で上アッサムの王, source: "https://en.wikipedia.org/wiki/Purandar_Singha"}
+    - {name: ジョーゲーシュワル・シンハ, title: スワルガデオ（ビルマの傀儡）, from: 1821, to: 1825, source: "https://en.wikipedia.org/wiki/Jogeswar_Singha"}
+  periods:
+    - from: 1648
+      to: 1682
+      text: ブラマプトラ川流域（アッサム）を600年近く治めたタイ系のアホーム王国は、西から迫るムガル帝国と戦った。1662年にミール・ジュムラが都を占領したが、アホームは雨季と疫病でムガル軍を苦しめ、1671年のサライガートの戦い、1682年のイタクリの戦いでグワーハーティーを取り戻して、マナス川を西の境とした。
+    - from: 1683
+      to: 1768
+      text: ルドラ・シンハとシヴァ・シンハのもとで王国は最も栄え、ヒンドゥー教（シャークタ派）が王家に広まり、首都ランプル（シヴァサーガル）に寺院や宮殿が建てられた。
+    - from: 1769
+      to: 1826
+      text: ヴィシュヌ派の宗団に属する人々のモアモリアの反乱（1769–1805）で王国は荒れ、宮廷の争いからビルマ（コンバウン朝）の介入を招いた。1817年からビルマ軍が侵入し、1821年にはアッサムを占領した。第1次イギリス＝ビルマ戦争の後、ヤンダボ条約（1826）でアッサムはイギリスのものになった。
+    - from: 1833
+      to: 1838
+      text: イギリスはプランダル・シンハを上アッサムの王として立てたが、1838年に貢納の滞りを理由に併合した。
+  note: 地図では、1817–1820年はビルマの帯（ビルマが王を立てた時期）、1821–1825年はビルマの占領（斜線）として描く。
+  source:
+    - "https://ja.wikipedia.org/wiki/アホーム王国"
+    - "https://en.wikipedia.org/wiki/Ahom_kingdom"
+
+- id: koch_bihar
+  name: コーチ・ビハール王国
+  short: コーチ・ビハール
+  color: "#c9a3e0"
+  kind: 王国（コーチ朝）
+  rulers:
+    - {name: プラーン・ナラヤン, title: 王, from: 1633, to: 1665, note: 1661年にミール・ジュムラに都を一時占領された, source: "https://en.wikipedia.org/wiki/Pran_Narayan"}
+    - {name: モード・ナラヤン, title: 王, from: 1665, to: 1680, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Koch_dynasty"}
+    - {name: ダイルジェンドラ・ナラヤン, title: 王, from: 1765, to: 1783, note: 1770–1774年はブータンに捕らえられて、弟ラジェンドラ・ナラヤン、ダレンドラ・ナラヤンが王位にあった（要確認）, source: "https://en.wikipedia.org/wiki/Koch_dynasty"}
+    - {name: ハレンドラ・ナラヤン, title: 王, from: 1783, to: 1839, source: "https://en.wikipedia.org/wiki/Koch_dynasty"}
+    - {name: ヌリペンドラ・ナラヤン, title: マハーラージャ, from: 1863, to: 1911, note: ブラフモ・サマージの指導者ケーシャブ・チャンドラ・セーンの娘と結婚し、近代化を進めた, source: "https://en.wikipedia.org/wiki/Nripendra_Narayan"}
+    - {name: ジャガッディペンドラ・ナラヤン, title: マハーラージャ, from: 1922, to: 1949, note: 1949年にインドと合併協定を結んだ, source: "https://en.wikipedia.org/wiki/Jagaddipendra_Narayan"}
+  periods:
+    - from: 1648
+      to: 1772
+      text: 16世紀に北ベンガル・アッサム西部を広く治めたコーチ王国の西の分家。ムガル帝国に南部（ランプル方面）を奪われ（1687）、18世紀にはブータンの影響を強く受けた。
+    - from: 1773
+      to: 1949
+      text: 1772年にブータン軍に王を連れ去られると、王家はイギリス東インド会社に助けを求め、1773年の条約で会社に貢納する藩王国となった。1949年にインドに合併し、1950年に西ベンガル州の一部になった。
+  note: 1773–1946年はイギリス、1947–1948年はインドの藩王国として、宗主国の色を薄く（間接統治）＋副ラベルで描く。インド・バングラデシュの国境には、コーチ・ビハール王国の領地の名残の飛び地が多数あった（2015年に交換して解消）。
+  source:
+    - "https://ja.wikipedia.org/wiki/コーチ・ビハール"
+    - "https://en.wikipedia.org/wiki/Cooch_Behar_State"
+
+- id: kachari
+  name: カチャーリー王国（ディマサ）
+  short: カチャーリー
+  color: "#b2c99e"
+  kind: 王国
+  rulers:
+    - {name: タームラッドヴァジ・ナラヤン, title: 王, from: 1706, to: 1708, note: 1706年にアホームのルドラ・シンハに攻められた。在位年は要確認, source: "https://en.wikipedia.org/wiki/Dimasa_Kingdom"}
+    - {name: ゴービンダ・チャンドラ, title: 王, from: 1813, to: 1830, note: ビルマの侵入（1819–1824）で追われ、イギリスに戻された。1830年に殺され、跡継ぎがなく1832年にイギリスが併合した, source: "https://en.wikipedia.org/wiki/Govinda_Chandra_(Dimasa_king)"}
+  periods:
+    - from: 1648
+      to: 1831
+      text: ディマサ人の王国。アホームに追われてディマプルから山地のマイボンへ移り、17世紀末から南のバラク川の平野（カチャール）のカスプルに都を移した。ヒンドゥー教を受け入れた。
+  note: 北カチャール山地（ディマ・ハサオ）は、1832年の併合の後もトゥララームが治め、1854年にイギリス領になった。
+  source:
+    - "https://en.wikipedia.org/wiki/Dimasa_Kingdom"
+
+- id: jaintia
+  name: ジャインティア王国
+  short: ジャインティア
+  color: "#a9c8de"
+  kind: 王国
+  rulers:
+    - {name: ラジェンドラ・シンハ, title: 王, from: 1832, to: 1835, note: 最後の王。1835年にイギリスに平野部の領地を取り上げられ、王国は終わった, source: "https://en.wikipedia.org/wiki/Jaintia_Kingdom"}
+  periods:
+    - from: 1648
+      to: 1834
+      text: ジャインティア丘陵（パナール人）とシレットの北の平野を治めた王国。1835年にイギリスに併合された。
+  source:
+    - "https://en.wikipedia.org/wiki/Jaintia_Kingdom"
+
+- id: khasi
+  name: カシ諸国
+  short: カシ諸国
+  color: "#cbb69c"
+  kind: 首長国（シエム）の集まり
+  periods:
+    - from: 1648
+      to: 1832
+      text: カシ丘陵には、シエム（首長）が治める20あまりの小国が並んでいた。1829–1833年のイギリスとの戦い（アングロ・カシ戦争）の後、条約でイギリスの保護下に入った。
+  note: 1833–1949年はイギリス・インドの保護下の「カシ諸国」として、宗主国の色を薄く（間接統治）＋副ラベルで描く。シロンは1874年からアッサム州の州都。
+  source:
+    - "https://en.wikipedia.org/wiki/Khasi_people"
+    - "https://en.wikipedia.org/wiki/Khasi_States"
+
+- id: tripura
+  name: トリプラ王国
+  short: トリプラ
+  color: "#e8b8a6"
+  kind: 王国（マーニキヤ朝）
+  rulers:
+    - {name: カリヤン・マーニキヤ, title: 王, from: 1626, to: 1660, source: "https://en.wikipedia.org/wiki/Kalyan_Manikya"}
+    - {name: ゴーヴィンダ・マーニキヤ, title: 王, from: 1660, to: 1676, note: 1661–1667年は弟チャトラ・マーニキヤ（ムガルの後ろ盾）が王位を奪った, source: "https://en.wikipedia.org/wiki/Govinda_Manikya"}
+    - {name: ラトナ・マーニキヤ2世, title: 王, from: 1685, to: 1712, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Ratna_Manikya_II"}
+    - {name: ビール・チャンドラ・マーニキヤ, title: マハーラージャ, from: 1862, to: 1896, note: タゴールと親しく、ベンガル文化を取り入れた, source: "https://en.wikipedia.org/wiki/Bir_Chandra_Manikya"}
+    - {name: ラーダー・キショール・マーニキヤ, title: マハーラージャ, from: 1896, to: 1909, source: "https://en.wikipedia.org/wiki/Radha_Kishore_Manikya"}
+    - {name: ビレンドラ・キショール・マーニキヤ, title: マハーラージャ, from: 1909, to: 1923, source: "https://en.wikipedia.org/wiki/Birendra_Kishore_Manikya"}
+    - {name: ビール・ビクラム・キショール・マーニキヤ, title: マハーラージャ, from: 1923, to: 1947, source: "https://en.wikipedia.org/wiki/Bir_Bikram_Kishore_Manikya"}
+    - {name: キリート・ビクラム・キショール・マーニキヤ, title: マハーラージャ, from: 1947, to: 1949, note: 幼王で、母カンチャン・プラバー・デーヴィーが摂政としてインドとの合併協定を結んだ, source: "https://en.wikipedia.org/wiki/Kirit_Bikram_Kishore_Manikya"}
+  periods:
+    - from: 1648
+      to: 1870
+      text: トリプラ人のマーニキヤ朝の王国。西の平野（コミッラ方面）を1733年にベンガル太守に奪われ、平野の所領（チャクラ・ロシャナバード）は1765年以後イギリス東インド会社に地代を払う領地となった。
+    - from: 1871
+      to: 1949
+      text: 1871年にイギリスの政務官が置かれ、藩王国となった。王家はベンガル文化を好み、詩人タゴールと交流した。1949年10月にインドに合併した。
+  note: 1871–1946年はイギリス、1947–1948年はインドの藩王国として、宗主国の色を薄く（間接統治）＋副ラベルで描く。イギリスの保護下に入った年ははっきりしない（1761年の平野部の割譲以後、徐々に）。
+  source:
+    - "https://ja.wikipedia.org/wiki/トリプラ王国"
+    - "https://en.wikipedia.org/wiki/Tripura_(princely_state)"
+
+- id: manipur
+  name: マニプル王国
+  short: マニプル
+  color: "#9dc4e6"
+  kind: 王国（ニントゥジャ朝）
+  rulers:
+    - {name: カゲンバ, title: 王, from: 1597, to: 1652, source: "https://en.wikipedia.org/wiki/Khagemba"}
+    - {name: クンジャオバ, title: 王, from: 1652, to: 1666, source: "https://en.wikipedia.org/wiki/Khunjaoba"}
+    - {name: パイコンバ, title: 王, from: 1666, to: 1697, source: "https://en.wikipedia.org/wiki/Paikhomba"}
+    - {name: チャライロンバ, title: 王, from: 1697, to: 1709, source: "https://en.wikipedia.org/wiki/Charairongba"}
+    - {name: パムヘイバ（ガリブ・ニワズ）, title: 王, from: 1709, to: 1748, note: ヴィシュヌ派のヒンドゥー教を国教とし、ビルマにたびたび攻め込んだ, source: "https://en.wikipedia.org/wiki/Pamheiba"}
+    - {name: バーギャチャンドラ（チンタン・コンバ）, title: 王, from: 1763, to: 1798, note: ビルマの侵入（1758・1764）で一時アッサムに逃れた。在位年は要確認, source: "https://en.wikipedia.org/wiki/Ching-Thang_Khomba"}
+    - {name: ガンビール・シンハ, title: 王, from: 1825, to: 1834, note: イギリスの助けでビルマ軍を追い、王国を取り戻した, source: "https://en.wikipedia.org/wiki/Gambhir_Singh"}
+    - {name: チャンドラキールティ, title: 王, from: 1850, to: 1886, source: "https://en.wikipedia.org/wiki/Chandrakirti_Singh"}
+    - {name: クラチャンドラ, title: 王, from: 1890, to: 1891, note: 1891年のイギリスとの戦争に敗れて流された。実権は弟の将軍ティケンドラジット（処刑）, source: "https://en.wikipedia.org/wiki/Kulachandra_Singh"}
+    - {name: チュラチャンド・シンハ, title: マハーラージャ, from: 1891, to: 1941, source: "https://en.wikipedia.org/wiki/Churachand_Singh"}
+    - {name: ボーダチャンドラ, title: マハーラージャ, from: 1941, to: 1949, note: 1949年9月にインドとの合併協定に署名した（10月に合併）, source: "https://en.wikipedia.org/wiki/Bodhchandra_Singh"}
+  periods:
+    - from: 1648
+      to: 1818
+      text: インパール盆地のメイテイ人の王国。18世紀にヴィシュヌ派のヒンドゥー教を受け入れ、ビルマとの戦いを繰り返した。周りの山地のナガ人・クキ人の村々には、ゆるやかな支配しか及ばなかった。
+    - from: 1819
+      to: 1825
+      text: ビルマ（コンバウン朝）に占領され、多くの住民が連れ去られたり逃げたりした（「7年の荒廃」）。
+    - from: 1826
+      to: 1949
+      text: ガンビール・シンハがイギリスの助けで王国を取り戻し、ヤンダボ条約（1826）で独立が認められた。1891年の戦争（アングロ・マニプル戦争）の後はイギリスの藩王国となった。第二次世界大戦では1944年に日本軍のインパール作戦の戦場になった。1949年にインドに合併した。
+  note: 山地は不確実（斜線）、1891–1946年はイギリス、1947–1948年はインドの藩王国として、宗主国の色を薄く（間接統治）＋副ラベルで描く。
+  source:
+    - "https://ja.wikipedia.org/wiki/マニプル王国"
+    - "https://en.wikipedia.org/wiki/Kingdom_of_Manipur"
+
+# ================================================================ 中部インド東部・オリッサ
+- id: ratanpur
+  name: ラタンプル王国（ハイハヤ朝）
+  short: ラタンプル
+  color: "#d7c8e8"
+  kind: 王国
+  rulers:
+    - {name: ラグナート・シンハ, title: 王, from: 1732, to: 1745, note: 最後の王。1741年にナーグプルのマラーター（ボーンスレー家）の将軍バースカル・パントに降った, source: "https://en.wikipedia.org/wiki/Kalachuris_of_Ratnapura"}
+  periods:
+    - from: 1648
+      to: 1740
+      text: チャッティースガル（「36の城」）の平野を治めたハイハヤ（カラチュリ）朝の王国。北のラタンプルと南のライプルの2つの家に分かれ、ムガル帝国に貢納した。1741年からマラーターの支配下に入った。
+  source:
+    - "https://en.wikipedia.org/wiki/Kalachuris_of_Ratnapura"
+    - "https://en.wikipedia.org/wiki/Chhattisgarh#History"
+
+- id: bastar
+  name: バスタール王国
+  short: バスタール
+  color: "#bfe0b4"
+  kind: 王国（カーカティーヤ朝の子孫を名のる王家）
+  periods:
+    - from: 1648
+      to: 1817
+      text: ゴンド人などの森の民が多く住むチャッティースガル南部の王国。王家はワランガルのカーカティーヤ朝の子孫を名のった。1778年ごろからナーグプルのマラーターに貢納した。
+  note: 1818–1946年はイギリスの藩王国として、宗主国の色を薄く（間接統治）＋副ラベルで描く。北のカーンケール藩王国も含めた。
+  source:
+    - "https://en.wikipedia.org/wiki/Bastar_State"
+
+- id: chota_nagpur
+  name: チョーター・ナーグプルの諸首長
+  short: チョーター・ナーグプル
+  color: "#d9d1ab"
+  kind: 首長・小王国の集まり
+  periods:
+    - from: 1648
+      to: 1771
+      text: 森におおわれたチョーター・ナーグプル高原（ジャールカンド）とその西の山地では、ナーグヴァンシー家（ランチー）、チェーロ家（パラームー）、ラームガル家、スルグジャ家などの首長が、ムンダ人・オラオン人・ホー人などの森の民を治めた。ムガル帝国は1660年にパラームーを攻めるなどしたが、支配は名目的で、首長は貢納を約束するだけだった。
+  note: 多くの首長領を1つの政体として描く。シングブームのホー人の地（コールハン）は1837年までどの首長にも従わなかった。
+  source:
+    - "https://en.wikipedia.org/wiki/Chota_Nagpur_Plateau"
+    - "https://en.wikipedia.org/wiki/Nagvanshis_of_Chotanagpur"
+
+- id: garhjat
+  name: オリッサ山地の諸王国（ガルジャート）
+  short: ガルジャート諸国
+  color: "#c9dfc6"
+  kind: 小王国の集まり
+  periods:
+    - from: 1648
+      to: 1802
+      text: オリッサの海岸平野の西の山地には、「ガルジャート（城の国々）」と呼ばれる小王国（マユールバンジ・ケーンジャル・ダーンケーナール・サンバルプル・パトナ・カーラーハンディなど）や、南のジェーポール王国が並んでいた。ムガル帝国やマラーターには貢納するだけで、内政は自立していた。
+  note: 多くの小王国を1つの政体として描く。1803年以後（西部は1818年以後）はイギリスの藩王国（間接統治）。
+  source:
+    - "https://en.wikipedia.org/wiki/Garhjat_States"
+    - "https://en.wikipedia.org/wiki/Eastern_States_Agency"
