@@ -152,7 +152,7 @@ export class AtlasMap {
       container: mapEl,
       style: this.style(),
       bounds: EUROPE,
-      minZoom: 1.2,
+      minZoom: 0,
       maxZoom: 10,
       attributionControl: false,
       dragRotate: false,
@@ -169,6 +169,8 @@ export class AtlasMap {
       this.map.on("load", () => {
         this.setup();
         this.setupZoomFilters();
+        this.updateMinZoom();
+        this.map.on("resize", () => this.updateMinZoom());
         this.loaded = true;
         this.baseZoom = this.map.getZoom();
         if (this.year) this.render(this.year);
@@ -619,14 +621,19 @@ export class AtlasMap {
       });
     }
 
-    // 保護国・植民地の名前（宗主国の色の中に、国名より小さく。2行目に「○○の保護下」）
+    // 保護国・植民地の名前（宗主国の色の中に、国名より小さく。自動のものは2行目に「○○の保護下」など）
     map.addLayer({
       id: "sublabels",
       type: "symbol",
       source: "sublabels",
       filter: [">=", ["zoom"], ["get", "minz"]],
       layout: {
-        "text-field": ["format", ["get", "name"], {}, "\n", {}, ["get", "note"], { "font-scale": 0.72 }],
+        "text-field": [
+          "case",
+          ["==", ["get", "note"], ""],
+          ["get", "name"],
+          ["format", ["get", "name"], {}, "\n", {}, ["get", "note"], { "font-scale": 0.72 }],
+        ],
         "text-font": FONT,
         "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["*", ["max", 1, ["get", "s"]], 10.5], 5, ["*", ["max", 1, ["get", "s"]], 13.5], 8, ["*", ["max", 1, ["get", "s"]], 17]],
         "text-max-width": 30,
@@ -914,9 +921,12 @@ export class AtlasMap {
    * - ピースごとに、今の owner になる前の owner（元の国）をたどる
    * - 同じ owner・同じ元の国のピースを1つのまとまりにする。元の国がもう地図にほとんど残っていないこと
    *   （残りのピースがまとまりより少ない）と、owner の全体ではないこと
-   * - そのうち、効いている地域の記述（地域名・cause・note）に「（owner の名前）…保護」とあるピースが
-   *   4分の1以上あるものだけを出す（ふつうの併合・割譲は出さない）
-   * - 地域の timeline の項目に label があれば、それを優先する（空文字なら出さない）
+   * - そのうち、効いている地域の記述（地域名・cause・note）に「（owner の名前）…保護／委任統治／植民地」と
+   *   あるピースが4分の1以上あるものだけを出す（ふつうの併合・割譲は出さない）。2行目の文言は記述と certainty から
+   *   「○○の保護下」「○○の委任統治」「○○の植民地」を選び、certainty が occupied のピースが過半なら「○○の占領下」にする
+   *   （「占領」の語では判定しない。解放の記述「ドイツによる○○占領が終わる」などで誤って出るため）
+   * - 地域の timeline の項目に label があれば、それを優先する（空文字なら出さない）。このときは2行目を自動では
+   *   付けない（必要な情報は label に書く。label に改行があれば、改行の後ろを2行目として小さく出す）
    */
   private subUnits(year: number): SubUnit[] {
     const hit = this.subCache.get(year);
@@ -932,7 +942,8 @@ export class AtlasMap {
       for (const e of regions[r]?.timeline ?? []) if (e.from <= year) cur = e;
       return cur;
     };
-    const auto = new Map<string, { owner: number; pred: number; pieces: number[]; prot: number; occ: number }>();
+    type Kind = "prot" | "mandate" | "colony" | "occ";
+    const auto = new Map<string, { owner: number; pred: number; pieces: number[]; hit: number; occ: number; kinds: Record<"prot" | "mandate" | "colony", number> }>();
     const explicit = new Map<string, SubUnit>();
     const reCache = new Map<number, RegExp>();
     for (let i = 0; i < n; i++) {
@@ -942,12 +953,14 @@ export class AtlasMap {
       const tl = idx.atlas.pieceTimelines[a];
       const s = idx.pieceState(a, year)!;
       const e = entryOf(s[4]);
-      const ownerShort = idx.shortName(polities[owner], year);
       if (e?.label !== undefined) {
         if (!e.label) continue;
         const k = `${owner}|${e.label}`;
         let u = explicit.get(k);
-        if (!u) explicit.set(k, (u = { owner, name: e.label, note: `${ownerShort}の保護下`, pieces: [] }));
+        if (!u) {
+          const [name, ...rest] = e.label.split("\n");
+          explicit.set(k, (u = { owner, name, note: rest.join(" ").trim(), pieces: [] }));
+        }
         u.pieces.push(i);
         continue;
       }
@@ -962,22 +975,34 @@ export class AtlasMap {
       if (pred < 0) continue;
       const k = `${owner}|${pred}`;
       let g = auto.get(k);
-      if (!g) auto.set(k, (g = { owner, pred, pieces: [], prot: 0, occ: 0 }));
+      if (!g) auto.set(k, (g = { owner, pred, pieces: [], hit: 0, occ: 0, kinds: { prot: 0, mandate: 0, colony: 0 } }));
       g.pieces.push(i);
       let re = reCache.get(owner);
-      if (!re) reCache.set(owner, (re = new RegExp(`${escapeRe([...ownerShort].slice(0, 3).join(""))}[^。、]{0,14}保護`)));
-      if (re.test(`${regions[s[4]]?.name ?? ""} ${e?.cause ?? ""} ${e?.note ?? ""}`)) g.prot++;
+      if (!re) {
+        const ownerShort = idx.shortName(polities[owner], year);
+        reCache.set(owner, (re = new RegExp(`${escapeRe([...ownerShort].slice(0, 3).join(""))}[^。、]{0,14}(委任統治|植民地|保護)`)));
+      }
+      const m = re.exec(`${regions[s[4]]?.name ?? ""} ${e?.cause ?? ""} ${e?.note ?? ""}`);
+      if (m) {
+        g.hit++;
+        g.kinds[m[1] === "委任統治" ? "mandate" : m[1] === "植民地" ? "colony" : "prot"]++;
+      }
       if (idx.atlas.certainty[s[3]] === "occupied") g.occ++;
     }
     const out: SubUnit[] = [...explicit.values()];
     for (const g of auto.values()) {
       const len = g.pieces.length;
-      if (g.prot * 4 < len || (count.get(g.pred) ?? 0) >= len || count.get(g.owner) === len) continue;
+      if (g.hit * 4 < len || (count.get(g.pred) ?? 0) >= len || count.get(g.owner) === len) continue;
       const ownerShort = idx.shortName(polities[g.owner], year);
+      // certainty が occupied のピースが過半なら占領下。そうでなければ記述でいちばん多い語
+      const kd = g.kinds;
+      const kind: Kind =
+        g.occ * 2 > len ? "occ" : kd.mandate > kd.prot && kd.mandate >= kd.colony ? "mandate" : kd.colony > kd.prot ? "colony" : "prot";
+      const word: Record<Kind, string> = { prot: "の保護下", mandate: "の委任統治", colony: "の植民地", occ: "の占領下" };
       out.push({
         owner: g.owner,
         name: idx.shortName(polities[g.pred], year),
-        note: `${ownerShort}の${g.occ * 2 > len ? "占領下" : "保護下"}`,
+        note: `${ownerShort}${word[kind]}`,
         pieces: g.pieces,
       });
     }
@@ -1547,6 +1572,35 @@ export class AtlasMap {
     return { width: c.clientWidth, height: c.clientHeight - this.bottomInset };
   }
 
+  /**
+   * 見かけの半径が r_app ピクセルになる地球儀の半径 R（ピクセル）。MapLibre のカメラは中心の地表から
+   * D = 1.5 × キャンバスの高さ（視野角 36.87°）の距離にあり、輪郭は遠近法で r_app = R / √(1 + 2R/D) に縮んで見える。
+   */
+  private globeRadiusFor(rApp: number): number {
+    const D = 1.5 * this.map.getContainer().clientHeight;
+    return (rApp * rApp) / D + Math.sqrt((rApp * rApp * rApp * rApp) / (D * D) + rApp * rApp);
+  }
+
+  /** 地球儀の半径が R ピクセルになる拡大率（MapLibre の地球儀の半径は 512·2^zoom / (2π cos 緯度)） */
+  private zoomForRadius(R: number, lat: number): number {
+    return Math.log2((2 * Math.PI * R * Math.cos((lat * Math.PI) / 180)) / 512);
+  }
+
+  /** 地球儀の見かけの直径が、見えている範囲の高さの frac 倍（幅の 94% には収まるように）になる拡大率 */
+  private globeZoom(lat: number, frac: number): number {
+    const { width, height } = this.viewSize();
+    const d = Math.max(50, Math.min(frac * height, 0.94 * width));
+    return this.zoomForRadius(this.globeRadiusFor(d / 2), lat);
+  }
+
+  /** いちばん引いたときに地球儀全体が見えるよう、画面の大きさから minZoom を決める */
+  private updateMinZoom() {
+    // 緯度 60 度を中心にしたとき（同じ拡大率で赤道中心の2倍の大きさになる）でも、直径が範囲の 9 割に収まる値
+    const { width, height } = this.viewSize();
+    const d = Math.max(50, 0.9 * Math.min(width, height));
+    this.map.setMinZoom(Math.max(-2, this.zoomForRadius(this.globeRadiusFor(d / 2), 60)));
+  }
+
   /** 経度・緯度へ移動する。zoom を省略したときは今の拡大率のまま（ただし minZoom より引いていれば寄せる） */
   flyTo(lon: number, lat: number, zoom?: number, minZoom = 0) {
     const z = zoom ?? Math.max(this.map.getZoom(), minZoom);
@@ -1568,7 +1622,8 @@ export class AtlasMap {
   flyToRegion(region: MapRegion) {
     if (region === "world") {
       const c = this.map.getCenter();
-      this.map.flyTo({ center: [c.lng, Math.max(-30, Math.min(30, c.lat))], zoom: this.map.getMinZoom(), duration: 900, essential: true });
+      const lat = Math.max(-30, Math.min(30, c.lat));
+      this.map.flyTo({ center: [c.lng, lat], zoom: Math.max(this.map.getMinZoom(), this.globeZoom(lat, 0.86)), duration: 900, essential: true });
       return;
     }
     const boxes: Record<string, [number, number, number, number]> = {
@@ -1617,6 +1672,7 @@ export class AtlasMap {
     if (px === this.bottomInset) return;
     this.bottomInset = px;
     this.map.setPadding({ top: 0, left: 0, right: 0, bottom: px });
+    if (this.loaded) this.updateMinZoom();
   }
 
   private hover(point: maplibregl.Point, ev: MouseEvent) {

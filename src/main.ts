@@ -136,7 +136,7 @@ async function main() {
     renderLegend();
     map.whenIdle(renderLegend);
     writeHistory();
-    document.title = `${state.year}年 ― ヨーロッパ歴史地図`;
+    document.title = `${state.year}年 ― 世界歴史地図`;
     updateMilestones();
   }
 
