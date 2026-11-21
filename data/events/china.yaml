@@ -1,0 +1,505 @@
+# G1 中国（中国本土・東北・台湾）の出来事（1648–2025）
+# アヘン戦争・義和団戦争・日露戦争・太平洋戦争は europe.yaml、香港の返還は west.yaml、
+# 満洲事変・日中戦争・下関条約・台湾出兵・ワシントン会議などは japan_korea.yaml、
+# ネルチンスク条約・アイグン条約・北京条約（沿海州）・イリ条約・チベット・新疆・中印国境紛争・核実験は inner_asia.yaml にある。
+
+# ---------------------------------------------------------------- 清（1648–1911）
+- year: 1648
+  title: 李成棟・金声桓が南明に寝返る
+  text: 清に降っていた広東の李成棟と江西の金声桓が南明の永暦帝に寝返り、南明の勢力が一時大きく広がった。翌年、清軍が南昌を落として金声桓は敗死した。
+  polities: [southern_ming, qing]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/南明"
+- year: 1659
+  title: 鄭成功の南京攻撃
+  text: 鄭成功が大艦隊で長江をさかのぼって南京を囲んだが、清軍に大敗して廈門に退いた。
+  polities: [tungning, qing]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/鄭成功"
+- year: 1661
+  title: 遷界令
+  text: 清は鄭氏の海上勢力の補給を断つため、広東から山東までの沿海の住民を内陸に移し、海禁を強めた（1684年に解除）。
+  polities: [qing, tungning]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/遷界令"
+- year: 1662
+  date: "1662-02-01"
+  title: 鄭成功がオランダ人を台湾から追う
+  text: 1661年に台湾に渡った鄭成功は、ゼーランディア城を9か月囲んでオランダ東インド会社を降し、台湾に鄭氏の政権を立てた。
+  polities: [tungning, netherlands]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ゼーランディア城包囲戦"
+- year: 1662
+  title: 永暦帝の死と南明の滅亡
+  text: ビルマに逃れていた永暦帝が呉三桂に引き渡され、昆明で殺された。李定国も同じ年に病死した。
+  polities: [southern_ming, qing]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/永暦帝"
+- year: 1673
+  date: "1673-12"
+  title: 三藩の乱
+  text: 康熙帝が藩の廃止を決めると、雲南の呉三桂が挙兵し、福建の耿精忠・広東の尚之信も呼応した。康熙帝は8年をかけて鎮め（1681）、清の支配を固めた。
+  polities: [three_feudatories, qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/三藩の乱"
+- year: 1683
+  title: 鄭氏の降伏と清の台湾領有
+  text: 施琅の率いる清の水軍が澎湖で鄭氏を破り、鄭克塽が降った。清は台湾府を置いて福建省に属させ、翌年に海禁を解いた。
+  polities: [qing, tungning]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/清朝統治時代_(台湾)"
+- year: 1717
+  title: 地丁銀制の始まり
+  text: 康熙帝は1711年の人丁数を固定して以後の増えた人丁に税をかけないとし（1712）、人頭税（丁税）を土地税（地銀）に繰り込む地丁銀制が広東から始まって、雍正帝の時代に全国に広がった。
+  polities: [qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/地丁銀制"
+- year: 1724
+  title: キリスト教布教の禁止
+  text: 典礼問題（中国の信者の孔子崇拝・祖先祭祀をローマ教皇が禁じた）をめぐる対立から、雍正帝がキリスト教の布教を全面的に禁じた。宮廷の宣教師（カスティリオーネら）は技術者として残った。
+  polities: [qing]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/典礼問題"
+- year: 1729
+  title: 軍機処の設置
+  text: 雍正帝がジュンガルとの戦いのために軍機房を置き、のちに軍機処として皇帝の独裁を支える最高機関となった。
+  polities: [qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/軍機処"
+- year: 1757
+  title: ヨーロッパとの貿易を広州1港に限る
+  text: 乾隆帝はヨーロッパ船の来航を広州に限り、特許商人の公行に貿易を独占させた（広東システム）。
+  polities: [qing, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/広東システム"
+- year: 1793
+  title: マカートニーの来訪
+  text: イギリスの使節マカートニーが熱河で乾隆帝に会い、貿易の拡大を求めたが、朝貢の儀礼をめぐって対立し、要求は退けられた。1816年のアマーストも失敗した。
+  polities: [qing, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ジョージ・マカートニー"
+- year: 1796
+  title: 白蓮教徒の乱
+  text: 湖北・四川・陝西の山地で白蓮教徒が蜂起し、清は1804年までかかって鎮めた。正規軍の八旗・緑営の弱さが明らかになり、郷勇（義勇軍）に頼った。
+  polities: [qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/白蓮教徒の乱"
+- year: 1839
+  title: 林則徐のアヘン没収
+  text: 欽差大臣の林則徐が広州でイギリス商人のアヘン約2万箱を没収して廃棄し、アヘン戦争のきっかけとなった。
+  polities: [qing, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/林則徐"
+- year: 1843
+  title: 虎門寨追加条約と望厦条約・黄埔条約
+  text: 南京条約に続いて、イギリスに領事裁判権・協定関税・最恵国待遇を認め（1843）、アメリカ（望厦条約）・フランス（黄埔条約）とも同様の条約を結んだ（1844）。
+  polities: [qing, britain, usa, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/虎門寨追加条約"
+- year: 1851
+  date: "1851-01-11"
+  title: 太平天国の挙兵
+  text: 洪秀全の上帝会が広西の金田村で挙兵し、太平天国を号した。「滅満興漢」を唱えて長江流域に進んだ。
+  polities: [taiping, qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/太平天国"
+- year: 1853
+  date: "1853-03"
+  title: 太平天国が南京を都とする
+  text: 太平天国軍が南京を落として天京と改め、都とした。天朝田畝制度（土地の均分）を発表した。曽国藩は郷里の湖南で湘軍を組織した。
+  polities: [taiping, qing]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/天朝田畝制度"
+- year: 1856
+  date: "1856-10"
+  title: アロー戦争（第2次アヘン戦争）
+  text: 広州でのアロー号事件をきっかけにイギリス・フランスが出兵し、天津条約（1858）で10港の開港・外国公使の北京駐在・キリスト教布教の自由・アヘン貿易の公認を認めさせた。
+  polities: [qing, britain, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アロー戦争"
+- year: 1860
+  date: "1860-10"
+  title: 英仏軍の北京占領と北京条約
+  text: 英仏軍が北京を占領して円明園を焼き、北京条約で天津の開港と九龍半島南部のイギリスへの割譲を認めさせた。咸豊帝は熱河に逃れた。
+  polities: [qing, britain, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/北京条約"
+- year: 1861
+  title: 総理衙門の設置と洋務運動
+  text: 外交を扱う総理各国事務衙門が置かれた。同治帝が即位し、西太后が実権を握った（辛酉政変）。曽国藩・李鴻章・左宗棠らが西洋の軍事技術を取り入れる洋務運動を進めた（「中体西用」）。
+  polities: [qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/洋務運動"
+- year: 1864
+  date: "1864-07"
+  title: 天京の陥落
+  text: 曽国荃の湘軍が天京を落とし、太平天国が滅びた。洪秀全は直前に病死していた。
+  polities: [taiping, qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/天京攻防戦"
+- year: 1868
+  title: 捻軍の鎮圧
+  text: 華北の淮河流域で騎馬の機動戦を続けた捻軍を、李鴻章の淮軍が鎮めた。
+  polities: [qing]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/捻軍"
+- year: 1873
+  title: 大理の陥落（雲南の回民蜂起の終わり）
+  text: 清軍が大理を落とし、杜文秀の政権が滅びた。同じ年に左宗棠が甘粛の粛州を落とし、西北の回民蜂起もほぼ鎮まった。
+  polities: [pingnan, qing]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/杜文秀"
+- year: 1884
+  title: 清仏戦争
+  text: ベトナムの宗主権をめぐってフランスと戦い、天津条約（1885）でベトナムがフランスの保護国となることを認めた。戦後、台湾を福建から分けて台湾省とした。
+  polities: [qing, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/清仏戦争"
+- year: 1898
+  title: 列強の租借地（中国分割）
+  text: ドイツが膠州湾、ロシアが旅順・大連、イギリスが威海衛と九龍半島の新界、フランスが広州湾（1899）を租借し、鉄道・鉱山の利権と勢力範囲を広げた。
+  polities: [qing, german_empire, russia, britain, france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/中国分割"
+- year: 1898
+  date: "1898-09-21"
+  title: 戊戌の変法と戊戌の政変
+  text: 光緒帝が康有為・梁啓超を用いて立憲君主制をめざす改革を始めたが、約100日で西太后らのクーデタで失敗し、光緒帝は幽閉された。
+  polities: [qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/戊戌の変法"
+- year: 1899
+  title: 門戸開放宣言
+  text: アメリカの国務長官ジョン・ヘイが、中国の門戸開放・機会均等（1900年に領土保全も）を列強に呼びかけた。
+  polities: [usa, qing]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/門戸開放政策"
+- year: 1905
+  title: 科挙の廃止と中国同盟会
+  text: 光緒新政の一つとして約1300年続いた科挙が廃止された。東京では孫文が中国同盟会を結成し、三民主義（民族・民権・民生）を掲げた。
+  polities: [qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/中国同盟会"
+- year: 1908
+  title: 憲法大綱の発表と光緒帝・西太后の死
+  text: 9年後の国会開設を約束する欽定憲法大綱が出された。11月に光緒帝と西太后が相次いで死に、3歳の宣統帝（溥儀）が即位した。
+  polities: [qing]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/欽定憲法大綱"
+- year: 1911
+  date: "1911-10-10"
+  title: 辛亥革命
+  text: 鉄道国有化への反対（四川暴動）をきっかけに武昌で新軍が蜂起し、南方を中心に14省が清からの独立を宣言した。
+  polities: [qing, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/辛亥革命"
+
+# ---------------------------------------------------------------- 中華民国（1912–1949）
+- year: 1912
+  date: "1912-01-01"
+  title: 中華民国の成立と清の滅亡
+  text: 南京で孫文が臨時大総統に就任し、中華民国が成立した。2月に宣統帝が退位して清が滅び、3月に袁世凱が臨時大総統となった。
+  polities: [roc, qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/中華民国_(1912年-1949年)"
+- year: 1913
+  title: 第二革命
+  text: 国民党の宋教仁が暗殺され、袁世凱に対して孫文らが蜂起したが敗れ、孫文は日本に亡命した。
+  polities: [roc]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/第二革命"
+- year: 1915
+  date: "1915-01-18"
+  title: 二十一か条要求
+  text: 日本が袁世凱政府に山東のドイツ権益の継承、南満洲・東部内蒙古の権益の延長などを要求し、最後通牒で大部分を受け入れさせた（5月9日は「国恥記念日」とされた）。
+  polities: [japan, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/対華21カ条要求"
+- year: 1915
+  title: 新文化運動の始まり
+  text: 陳独秀が雑誌『新青年』を創刊し、「民主と科学」を掲げて儒教を批判した。1917年から胡適の白話文学、魯迅の『狂人日記』（1918）などの文学革命が続いた。
+  polities: [roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/新文化運動"
+- year: 1916
+  title: 袁世凱の帝政の失敗と軍閥の割拠
+  text: 袁世凱は皇帝に即位しようとしたが、雲南から始まった護国戦争と列強の反対で取り消し、6月に死んだ。以後、北京政府を軍閥が奪い合った。
+  polities: [roc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/護国戦争"
+- year: 1917
+  title: 護法運動と中国の参戦
+  text: 北京政府がドイツに宣戦した一方、孫文は国会の回復を求めて広州に護法軍政府を作り、南北に政府が並び立った。
+  polities: [canton_government, roc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/護法運動"
+- year: 1919
+  date: "1919-05-04"
+  title: 五・四運動
+  text: パリ講和会議で山東のドイツ権益の返還が認められないと伝わると、北京の学生のデモから反日・反帝国主義の運動が全国に広がり、中国代表はヴェルサイユ条約に調印しなかった。
+  polities: [roc, japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/五四運動"
+- year: 1919
+  title: 中国国民党の結成
+  text: 孫文が中華革命党を改めて中国国民党とした。
+  polities: [canton_government]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/中国国民党"
+- year: 1921
+  date: "1921-07"
+  title: 中国共産党の結成
+  text: コミンテルンの指導のもと、陳独秀を委員長として上海で中国共産党が結成された。
+  polities: [roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/中国共産党"
+- year: 1924
+  date: "1924-01"
+  title: 第1次国共合作
+  text: 国民党第1回全国大会で「連ソ・容共・扶助工農」の方針が決まり、共産党員が党籍のまま国民党に入った。黄埔軍官学校（校長 蔣介石）が開かれた。
+  polities: [canton_government]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第一次国共合作"
+- year: 1925
+  title: 孫文の死と五・三〇運動
+  text: 3月に孫文が「革命いまだ成らず」の遺言を残して北京で死去した。5月30日に上海の日本人経営の紡績工場の争議から反帝国主義の運動が広がり、7月に広州で国民政府が成立した。
+  polities: [canton_government, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/五・三〇運動"
+- year: 1926
+  date: "1926-07"
+  title: 北伐の開始
+  text: 蔣介石の国民革命軍が広州から北伐を始め、10月に武漢、11月に南昌を取った。
+  polities: [canton_government, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/北伐_(中国国民党)"
+- year: 1927
+  date: "1927-04-12"
+  title: 上海クーデタと南京国民政府
+  text: 蔣介石が上海で共産党員と労働者を弾圧し、南京に国民政府を立てた。武漢の国民政府も7月に共産党と分かれ、国共合作が崩れた。共産党は南昌・秋収蜂起を起こし、毛沢東は井岡山に根拠地を作った。
+  polities: [canton_government, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/上海クーデター"
+- year: 1928
+  title: 張作霖爆殺事件と北伐の完了
+  text: 日本の山東出兵（済南事件）を経て国民革命軍が6月に北京に入った。奉天に退く張作霖を関東軍が列車ごと爆殺した。子の張学良は12月に国民政府に従い（易幟）、中国の統一が形の上で完成した。
+  polities: [roc, japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/張作霖爆殺事件"
+- year: 1931
+  date: "1931-11-07"
+  title: 中華ソヴィエト共和国臨時政府の成立
+  text: 中国共産党が江西の瑞金で臨時政府を作り、毛沢東が主席となった。国民政府は包囲攻撃（掃共戦）を繰り返した。
+  polities: [chinese_soviet, roc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/中華ソビエト共和国"
+- year: 1934
+  date: "1934-10"
+  title: 長征
+  text: 紅軍は瑞金を捨てて西へ逃れ、約1万2500キロを歩いて1935年10月に陝西北部に着いた。途中の遵義会議（1935年1月）で毛沢東が指導権を握った。
+  polities: [chinese_soviet, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/長征"
+- year: 1935
+  title: 八・一宣言と幣制改革
+  text: 共産党が内戦の停止と抗日民族統一戦線を呼びかけた（八・一宣言）。国民政府はイギリスの支援で通貨を法幣に統一した。12月には北京で抗日の学生運動（一二・九運動）が起こった。
+  polities: [roc, chinese_soviet]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/八・一宣言"
+- year: 1936
+  date: "1936-12-12"
+  title: 西安事件
+  text: 共産党の討伐を命じられていた張学良が西安で蔣介石を監禁し、内戦の停止と抗日を求めた。周恩来の仲介で蔣介石は釈放され、国共の内戦は止まった。
+  polities: [roc, chinese_soviet]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/西安事件"
+- year: 1937
+  date: "1937-09"
+  title: 第2次国共合作
+  text: 盧溝橋事件の後、紅軍は国民革命軍の八路軍・新四軍に改められ、抗日民族統一戦線が成立した。
+  polities: [roc, chinese_soviet]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第二次国共合作"
+- year: 1940
+  date: "1940-03-30"
+  title: 汪兆銘政権の成立
+  text: 重慶を脱出した汪兆銘が、日本の支援で南京に国民政府を作った。日本は1940年11月にこれを承認した。
+  polities: [wang_jingwei, japan, roc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/汪兆銘政権"
+- year: 1941
+  date: "1941-01"
+  title: 皖南事変
+  text: 安徽南部で国民政府軍が新四軍を攻撃し、国共の対立が深まった。
+  polities: [roc, chinese_soviet]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/皖南事変"
+- year: 1943
+  date: "1943-11"
+  title: 不平等条約の撤廃とカイロ会談
+  text: 1月にアメリカ・イギリスが治外法権と租界を放棄した。11月のカイロ会談で、蔣介石・ローズヴェルト・チャーチルは満洲・台湾・澎湖諸島の中国への返還と朝鮮の独立を宣言した。
+  polities: [roc, usa, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/カイロ宣言"
+- year: 1945
+  date: "1945-10-25"
+  title: 中華民国の台湾接収
+  text: 日本の降伏を受けて、中華民国が台湾・澎湖諸島を接収し、台湾省とした。
+  polities: [roc, japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/台湾光復"
+- year: 1946
+  date: "1946-06"
+  title: 国共内戦の全面化
+  text: 重慶会談（1945年10月 双十協定）と政治協商会議の後も衝突が続き、国民政府軍が共産党の解放区への全面攻撃を始めた。共産党は土地改革で農民の支持を集めた。
+  polities: [roc, chinese_soviet]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/国共内戦"
+- year: 1947
+  date: "1947-02-28"
+  title: 二・二八事件
+  text: 台北での闇タバコの取り締まりをきっかけに、本省人（台湾の住民）が国民政府の統治に抗議して全島で立ち上がったが、大陸からの軍に鎮圧され、多くの人が殺された。
+  polities: [roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/二・二八事件"
+- year: 1948
+  title: 三大戦役
+  text: 人民解放軍が遼瀋戦役（9–11月）で満洲を、淮海戦役（11月–1949年1月）で華東を、平津戦役（–1949年1月）で北京・天津を制し、国民政府軍の主力を破った。
+  polities: [chinese_soviet, roc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/三大戦役"
+
+# ---------------------------------------------------------------- 中華人民共和国・台湾（1949–）
+- year: 1949
+  date: "1949-10-01"
+  title: 中華人民共和国の成立
+  text: 毛沢東が北京の天安門で中華人民共和国の成立を宣言した。首相は周恩来。国民政府は12月に台湾の台北に移った。
+  polities: [prc, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/中華人民共和国"
+- year: 1950
+  date: "1950-02-14"
+  title: 中ソ友好同盟相互援助条約
+  text: 毛沢東がモスクワでスターリンと結んだ同盟条約。日本とその同盟国を共通の敵とした。同じ年に土地改革法が出され、10月には朝鮮戦争に人民義勇軍を送った。
+  polities: [prc, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/中ソ友好同盟相互援助条約"
+- year: 1953
+  title: 第1次五か年計画
+  text: ソ連の援助で重工業の建設を進め、農業の集団化（合作社）と商工業の国有化を進めて社会主義への移行を急いだ。1954年に中華人民共和国憲法が定められた。
+  polities: [prc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第一次五カ年計画_(中国)"
+- year: 1954
+  date: "1954-06"
+  title: 平和五原則
+  text: 周恩来とインドのネルー首相が、領土・主権の尊重、相互不可侵、内政不干渉、平等互恵、平和共存の平和五原則を確認した。翌年のアジア・アフリカ会議（バンドン会議）の平和十原則に生かされた。
+  polities: [prc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/平和五原則"
+- year: 1958
+  title: 大躍進と人民公社
+  text: 毛沢東は「15年でイギリスに追いつく」として鉄鋼・穀物の急激な増産を命じ、農村に人民公社を作った。無理な計画と自然災害で数千万人ともいわれる餓死者を出した。8月には台湾の金門島を砲撃した（金門砲戦）。
+  polities: [prc, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/大躍進政策"
+- year: 1966
+  title: プロレタリア文化大革命
+  text: 毛沢東が「実権派」の打倒を呼びかけ、紅衛兵が知識人・党幹部を激しく攻撃した。国家主席の劉少奇や鄧小平が失脚し、社会と経済は混乱した（1977年に終結宣言）。
+  polities: [prc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/文化大革命"
+- year: 1969
+  date: "1969-03"
+  title: 中ソ国境紛争（珍宝島事件）
+  text: ウスリー川の珍宝島（ダマンスキー島）で中ソ両軍が衝突し、中ソ対立は武力衝突に至った。
+  polities: [prc, soviet_union]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/中ソ国境紛争"
+- year: 1971
+  date: "1971-10-25"
+  title: 中華人民共和国の国連代表権
+  text: 国際連合の総会で中国の代表権が中華人民共和国に移り、中華民国（台湾）は国連を去った。
+  polities: [prc, roc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アルバニア決議"
+- year: 1972
+  date: "1972-02"
+  title: ニクソン訪中
+  text: アメリカのニクソン大統領が北京を訪れて毛沢東と会い、米中が和解に向かった（上海コミュニケ）。9月には日中国交正常化が続いた。
+  polities: [prc, usa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ニクソン大統領の中国訪問"
+- year: 1976
+  title: 周恩来・毛沢東の死と四人組の逮捕
+  text: 1月に周恩来、9月に毛沢東が死んだ。10月に華国鋒が江青ら四人組を逮捕し、文化大革命が事実上終わった。
+  polities: [prc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/四人組"
+- year: 1978
+  date: "1978-12"
+  title: 改革・開放政策の始まり
+  text: 共産党の第11期三中全会で鄧小平が実権を握り、農業・工業・国防・科学技術の「四つの現代化」と改革・開放への転換を決めた。1979年に米中の国交が正常化し、深圳などに経済特区が作られた（1980）。
+  polities: [prc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/改革開放"
+- year: 1984
+  date: "1984-12-19"
+  title: 中英共同声明
+  text: イギリスのサッチャー首相と中国の趙紫陽首相が、1997年の香港の返還と、返還後50年間の「一国二制度」に合意した。
+  polities: [prc, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/英中共同声明"
+- year: 1987
+  date: "1987-07-15"
+  title: 台湾の戒厳令の解除
+  text: 1949年から続いた戒厳令が解除された。前年に民主進歩党が結成されており、翌年に李登輝が総統となって民主化が進んだ。
+  polities: [roc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/台湾省戒厳令"
+- year: 1989
+  date: "1989-06-04"
+  title: 天安門事件
+  text: 胡耀邦の死をきっかけに、北京の天安門広場で学生・市民が民主化を求めたが、政府は戒厳令を出し、軍が武力で鎮圧した。総書記の趙紫陽が失脚し、江沢民が後を継いだ。
+  polities: [prc]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/六四天安門事件"
+- year: 1992
+  title: 南巡講話と社会主義市場経済
+  text: 鄧小平が深圳・上海などを回って改革・開放の加速を訴え、共産党は「社会主義市場経済」を目標に掲げた。同じ年に韓国と国交を結んだ。
+  polities: [prc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/南巡講話"
+- year: 1996
+  date: "1996-03"
+  title: 台湾の初の総統直接選挙と台湾海峡危機
+  text: 中華人民共和国がミサイル演習で圧力をかける中、台湾で初めての総統の直接選挙が行われ、李登輝が当選した。2000年には民進党の陳水扁が当選し、初の政権交代が起こった。
+  polities: [roc, prc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/第三次台湾海峡危機"
+- year: 2001
+  date: "2001-12-11"
+  title: 中国の世界貿易機関（WTO）加盟
+  text: 中国がWTOに加盟し（台湾は翌年）、「世界の工場」として輸出を伸ばした。2008年に北京オリンピックが開かれ、2010年にはGDPで日本を抜いて世界第2位となった。
+  polities: [prc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/中国のWTO加盟"
+- year: 2013
+  title: 「一帯一路」構想
+  text: 習近平がユーラシアを陸と海で結ぶ経済圏の構想を打ち出し、2015年にはアジアインフラ投資銀行（AIIB）を作った。
+  polities: [prc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/一帯一路"
+- year: 2014
+  title: 香港の雨傘運動と台湾のひまわり学生運動
+  text: 香港で行政長官の選挙制度に反対する学生らが繁華街を占拠した（雨傘運動）。台湾では中国とのサービス貿易協定に反対する学生が立法院を占拠した。
+  polities: [prc, roc]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/雨傘運動"
+- year: 2020
+  date: "2020-06-30"
+  title: 香港国家安全維持法
+  text: 2019年の大規模な抗議運動の後、中国の全国人民代表大会常務委員会が香港に国家安全維持法を施行し、民主派の活動は厳しく取り締まられた。一国二制度は大きく後退した。
+  polities: [prc]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/香港国家安全維持法"
