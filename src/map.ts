@@ -1557,11 +1557,15 @@ function labelPoint(geo: GeoMultiPolygon): Merged["label"] {
 }
 
 function ringAreaKm2(ring: number[][]) {
+  // 環の平均緯度で経度を縮めた平面座標に直してから、ふつうの多角形の面積（シューレース公式）を求める。
+  // （以前は辺ごとに違う係数を掛けていたため、平行移動で値が変わり、面積が大きくずれていた）
+  let latSum = 0;
+  for (const p of ring) latSum += p[1];
+  const k = Math.cos(((latSum / Math.max(1, ring.length)) * Math.PI) / 180);
   let s = 0;
   for (let i = 0, n = ring.length; i < n; i++) {
     const [x1, y1] = ring[i];
     const [x2, y2] = ring[(i + 1) % n];
-    const k = Math.cos((((y1 + y2) / 2) * Math.PI) / 180);
     s += x1 * k * y2 - x2 * k * y1;
   }
   return (s / 2) * KM_PER_DEG * KM_PER_DEG;

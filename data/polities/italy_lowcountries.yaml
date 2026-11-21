@@ -376,7 +376,6 @@
     - from: 1849
       to: 1914
       text: 連邦国家として、関税・通貨・郵便を統一し、鉄道（1882年ゴッタルド鉄道トンネル）と観光・工業で発展した。1864年に赤十字国際委員会の主導でジュネーヴ条約が結ばれた。1874年の憲法改正で国民投票（レファレンダム）が導入され、直接民主制が広がった。第一次世界大戦では中立を守った。
-  note: 1848年からの連邦国家では、7人の連邦参事会（内閣）が集団で元首の役を担い、連邦大統領は1年交代のため君主の欄には書かない。
     - from: 1915
       to: 1938
       text: 第一次世界大戦では中立を守ったが、ドイツ語圏とフランス語圏で同情する側が分かれた。1918年11月のゼネストの後、比例代表制が導入された。1920年に国際連盟に加わり、本部がジュネーヴに置かれた。
@@ -386,6 +385,7 @@
     - from: 1946
       to: 2025
       text: 冷戦期も中立を保ち、国際連合には2002年まで加わらなかったが、ジュネーヴには多くの国際機関が置かれた。1959年から4つの主要政党が連邦参事会の議席を分け合う「魔法の公式」が続いた。女性の参政権は1971年にようやく連邦で認められた。1979年にベルン州からジュラ州が分かれた。ヨーロッパ連合には加盟せず、2国間協定で結びついている（2008年からシェンゲン協定に参加）。
+  note: 1848年からの連邦国家では、7人の連邦参事会（内閣）が集団で元首の役を担い、連邦大統領は1年交代のため君主の欄には書かない。
   source:
     - "https://ja.wikipedia.org/wiki/旧スイス連邦"
     - "https://ja.wikipedia.org/wiki/ヘルヴェティア共和国"
@@ -1351,3 +1351,95 @@
       text: 1848年1月12日のパレルモ蜂起でブルボン家の軍を追い出し、ナポリから独立した王国を宣言した。1848年9月にメッシーナが砲撃の末に奪い返され、1849年5月にパレルモが降伏して終わった。
   source:
     - "https://en.wikipedia.org/wiki/Sicilian_revolution_of_1848"
+
+# ================================================================ 1914–2025 の政体
+
+- id: italian_social_republic
+  name: イタリア社会共和国
+  short: イタリア社会共和国
+  color: "#bf8fae"
+  kind: 共和国（ドイツの傀儡国家）
+  rulers:
+    - {name: ベニート・ムッソリーニ, title: 国家元首・首相（統領）, from: 1943, to: 1945, note: "1943年9月、幽閉されていたグラン・サッソからドイツの空挺部隊に救出され、北イタリアに政権を立てた。1945年4月、スイスへ逃れる途中でパルチザンに捕らえられ、処刑された。", source: "https://ja.wikipedia.org/wiki/ベニート・ムッソリーニ"}
+  periods:
+    - from: 1943
+      to: 1945
+      text: イタリアの降伏（1943年9月）の後、ドイツ軍が占領した北・中部イタリアに置かれたムッソリーニの政権。政府の機関がガルダ湖畔のサロに置かれたため「サロ共和国」とも呼ばれる。実際にはドイツ軍と親衛隊が支配し、南チロル・トレンティーノ・フリウリ・トリエステはドイツの作戦地域として切り離された。ユダヤ人の移送やパルチザンとの内戦が起こり、1945年4月の連合軍の総攻撃と北イタリアの蜂起で崩壊した。
+  source:
+    - "https://ja.wikipedia.org/wiki/イタリア社会共和国"
+    - "https://en.wikipedia.org/wiki/Italian_Social_Republic"
+
+- id: trieste_free_territory
+  name: トリエステ自由地域
+  short: トリエステ自由地域
+  color: "#c7b8e0"
+  kind: 自由地域（国際連合安全保障理事会の保障。英米軍の軍政）
+  periods:
+    - from: 1947
+      to: 1954
+      text: パリ講和条約でイタリアとユーゴスラヴィアの間の緩衝地として作られた。総督が決まらず、北のA地区（トリエステ市）は英米軍、南のB地区（イストリア北西部）はユーゴスラヴィア軍が軍政を続けた。1954年のロンドン覚書でA地区がイタリア、B地区がユーゴスラヴィアの施政下に入り、事実上消滅した（国境の確定は1975年のオージモ条約）。
+  source:
+    - "https://en.wikipedia.org/wiki/Free_Territory_of_Trieste"
+
+- id: vatican_city
+  name: ヴァチカン市国
+  short: ヴァチカン
+  color: "#f2e5a0"
+  kind: 都市国家（教皇が元首）
+  rulers:
+    - {name: ピウス11世, title: ローマ教皇, from: 1929, to: 1939, note: 1922年に即位。1929年にムッソリーニとラテラノ条約を結んだ。, source: "https://ja.wikipedia.org/wiki/ピウス11世_(ローマ教皇)"}
+    - {name: ピウス12世, title: ローマ教皇, from: 1939, to: 1958, source: "https://ja.wikipedia.org/wiki/ピウス12世_(ローマ教皇)"}
+    - {name: ヨハネ23世, title: ローマ教皇, from: 1958, to: 1963, note: 第2ヴァチカン公会議を開いた。, source: "https://ja.wikipedia.org/wiki/ヨハネ23世_(ローマ教皇)"}
+    - {name: パウロ6世, title: ローマ教皇, from: 1963, to: 1978, source: "https://ja.wikipedia.org/wiki/パウロ6世_(ローマ教皇)"}
+    - {name: ヨハネ・パウロ1世, title: ローマ教皇, from: 1978, to: 1978, note: 在位33日で死去。, source: "https://ja.wikipedia.org/wiki/ヨハネ・パウロ1世_(ローマ教皇)"}
+    - {name: ヨハネ・パウロ2世, title: ローマ教皇, from: 1978, to: 2005, note: ポーランド出身。455年ぶりのイタリア人以外の教皇で、東欧の民主化を後押しした。, source: "https://ja.wikipedia.org/wiki/ヨハネ・パウロ2世_(ローマ教皇)"}
+    - {name: ベネディクト16世, title: ローマ教皇, from: 2005, to: 2013, note: ドイツ出身。2013年に生前退位した。, source: "https://ja.wikipedia.org/wiki/ベネディクト16世_(ローマ教皇)"}
+    - {name: フランシスコ, title: ローマ教皇, from: 2013, to: 2025, note: アルゼンチン出身で、初めての南北アメリカ出身の教皇。2025年4月に死去。, source: "https://ja.wikipedia.org/wiki/フランシスコ_(ローマ教皇)"}
+    - {name: レオ14世, title: ローマ教皇, from: 2025, to: 2025, note: アメリカ合衆国出身。2025年5月に選ばれた。, source: "https://ja.wikipedia.org/wiki/レオ14世_(ローマ教皇)"}
+  periods:
+    - from: 1929
+      to: 1945
+      text: 1929年のラテラノ条約で、イタリアが教皇のヴァチカン市国の主権を認め、教皇はイタリア王国とローマを首都とすることを認めた（ローマ問題の解決）。カトリックはイタリアの国教とされた。第二次世界大戦では中立を保った。
+    - from: 1946
+      to: 2025
+      text: 世界のカトリック教会の中心で、面積約0.44km²の世界最小の国。第2ヴァチカン公会議（1962–1965年）で、各国語でのミサや他宗教との対話など教会の現代化を進めた。1984年の新協約でカトリックはイタリアの国教ではなくなった。
+  source:
+    - "https://ja.wikipedia.org/wiki/バチカン"
+    - "https://ja.wikipedia.org/wiki/ラテラノ条約"
+
+- id: malta_state
+  name: マルタ
+  names:
+    - {to: 1973, name: マルタ（マルタ国）, kind: 立憲君主国（イギリス連邦の王国）}
+    - {from: 1974, name: マルタ共和国, kind: 共和国（議院内閣制）}
+  short: マルタ
+  color: "#e7ae9e"
+  kind: 共和国
+  rulers:
+    - {name: ジョルジョ・ボルグ・オリヴィエ, title: 首相, from: 1964, to: 1971, note: 国民党。1962年から自治政府の首相で、独立を実現した。, source: "https://en.wikipedia.org/wiki/George_Borg_Olivier"}
+    - {name: ドム・ミントフ, title: 首相, from: 1971, to: 1984, note: 労働党。共和制への移行とイギリス軍基地の撤退（1979年）を進め、非同盟の中立政策をとった。, source: "https://en.wikipedia.org/wiki/Dom_Mintoff"}
+    - {name: カルメヌ・ミフスド・ボンニーチ, title: 首相, from: 1984, to: 1987, source: "https://en.wikipedia.org/wiki/Karmenu_Mifsud_Bonnici"}
+    - {name: エディ・フェネク・アダミ, title: 首相, from: 1987, to: 1996, source: "https://en.wikipedia.org/wiki/Eddie_Fenech_Adami"}
+    - {name: アルフレッド・サント, title: 首相, from: 1996, to: 1998, source: "https://en.wikipedia.org/wiki/Alfred_Sant"}
+    - {name: エディ・フェネク・アダミ, title: 首相, from: 1998, to: 2004, note: ヨーロッパ連合への加盟を実現した。, source: "https://en.wikipedia.org/wiki/Eddie_Fenech_Adami"}
+    - {name: ローレンス・ゴンジ, title: 首相, from: 2004, to: 2013, source: "https://en.wikipedia.org/wiki/Lawrence_Gonzi"}
+    - {name: ジョゼフ・マスカット, title: 首相, from: 2013, to: 2020, source: "https://en.wikipedia.org/wiki/Joseph_Muscat"}
+    - {name: ロバート・アベラ, title: 首相, from: 2020, to: 2025, source: "https://en.wikipedia.org/wiki/Robert_Abela"}
+  periods:
+    - from: 1964
+      to: 1973
+      text: 1964年9月にイギリスから独立し、イギリス国王（エリザベス2世）を元首とする王国となった。イギリス軍の基地が経済を支えていた。
+    - from: 1974
+      to: 2025
+      text: 1974年に共和国となり、1979年にイギリス軍が撤退して中立・非同盟を宣言した。観光・金融・海運で経済を伸ばし、2004年にヨーロッパ連合に加盟、2008年にユーロを導入した。2017年、汚職を追及していた記者が爆殺され、政権の責任が問われた。
+  note: 議院内閣制で、実権は首相にあるため首相を載せる（大統領は儀礼的な元首）。
+  source:
+    - "https://ja.wikipedia.org/wiki/マルタ"
+    - "https://en.wikipedia.org/wiki/History_of_Malta"
+
+- id: water
+  name: 海（干拓前の水域）
+  short: ""
+  color: "#cfdde3"
+  kind: 水域
+  note: 干拓地（オランダのハールレマーメール・ゾイデル海の干拓地など）の、干拓される前の年に使う。地図では海と同じ色で塗る。
