@@ -8,7 +8,7 @@
   - pieces_config.json の bbox（ヨーロッパと周辺）の中は、国ごとの設定（ADM2・細かいデータ・
     adm2_within・split・clip）で細かく作る（zone=eu）。bbox の端で切られる区画も、形は切らずに全体を使う。
   - bbox の外（全世界）は CGAZ ADM1 を基本にする（zone=world）。中国は地級単位（tools/chn_pieces.py、
-    pieces_config.json の "chn"）。CGAZ に欠けている区画は Natural Earth で補う（"add_from_ne"）。bbox にかかる国で ADM2 を使う国は、
+    pieces_config.json の "chn"）。南アジア・東南アジアの一部の国（州）は CGAZ ADM2 単位（"world_adm2"）。CGAZ に欠けている区画は Natural Earth で補う（"add_from_ne"）。bbox にかかる国で ADM2 を使う国は、
     範囲外の ADM2 を親の ADM1 ごとにまとめる。
 
 出力:
@@ -250,18 +250,28 @@ def world_adm2_rows(iso, cfg, adm1, adm2, used):
         if t.shapeID in used:
             continue
         rows.append({"name": t.shapeName, "iso": iso, "adm1": t.shapeName, "src": "geoBoundaries CGAZ ADM1", "geometry": t.geometry})
-    a2c = adm2[(adm2.shapeGroup == iso) & ~adm2.shapeID.isin(used)]
+    a2c = adm2[(adm2.shapeGroup == iso) & ~adm2.shapeID.isin(used)].copy()
+    a2c["geometry"] = a2c.geometry.make_valid()
     # 親の ADM1：代表点が入る ADM1。どれにも入らない（海岸のずれなど）ものは最も近い ADM1
     pts = gpd.GeoDataFrame(a2c[["shapeName"]], geometry=a2c.geometry.representative_point(), crs=a2c.crs)
     par = a1c[["shapeName", "geometry"]].rename(columns={"shapeName": "parent"})
     j = gpd.sjoin_nearest(pts, par, how="left")
     j = j[~j.index.duplicated()]
+    for r in cfg.get("adm2_rename", []):
+        if r["iso"] != iso:
+            continue
+        m = a2c.shapeName == r["name"]
+        if "bbox" in r:
+            m &= pts.geometry.within(box(*r["bbox"]))
+        if not m.any():
+            raise SystemExit(f"adm2_rename: 見つからない {r}")
+        a2c.loc[m, "shapeName"] = r["to"]
     for idx, t in zip(a2c.index, a2c.itertuples()):
         p = j.at[idx, "parent"]
         if p not in set(fine1.shapeName):
             continue
         rows.append({"name": t.shapeName, "iso": iso, "adm1": fix.get(p, p).strip(), "src": "geoBoundaries CGAZ ADM2",
-                     "geometry": t.geometry.make_valid()})
+                     "geometry": t.geometry})
     return rows
 
 

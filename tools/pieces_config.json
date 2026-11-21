@@ -334,5 +334,57 @@
       "Jammu and Kashm?r": "Jammu and Kashmir",
       "Hary?na": "Haryana"
     }
-  }
+  },
+  "_comment_adm2_rename": "world_adm2 の ADM2 の名前の誤り（重複・綴り）を直す。bbox があれば代表点がその中にあるものだけ",
+  "adm2_rename": [
+    {
+      "iso": "NPL",
+      "name": "Bara",
+      "bbox": [
+        84.5,
+        26.9,
+        84.95,
+        27.6
+      ],
+      "to": "Parsa",
+      "_why": "CGAZ でパルサ郡が Bara になっている"
+    },
+    {
+      "iso": "NPL",
+      "name": "Saptari",
+      "bbox": [
+        86.0,
+        26.4,
+        86.5,
+        27.0
+      ],
+      "to": "Siraha",
+      "_why": "CGAZ でシラハ郡が Saptari になっている"
+    },
+    {
+      "iso": "NPL",
+      "name": "Synagja",
+      "to": "Syangja"
+    },
+    {
+      "iso": "NPL",
+      "name": "Dadeidhura",
+      "to": "Dadeldhura"
+    },
+    {
+      "iso": "NPL",
+      "name": "Baijura",
+      "to": "Bajura"
+    },
+    {
+      "iso": "NPL",
+      "name": "Kabherepalanchok",
+      "to": "Kavrepalanchok"
+    },
+    {
+      "iso": "NPL",
+      "name": "Nawalapur",
+      "to": "Nawalpur"
+    }
+  ]
 }
