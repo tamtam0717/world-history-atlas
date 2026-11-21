@@ -40,3 +40,11 @@
 - E：リビア 1835–1911 owner ottoman、エジプト 1914 overlord britain、シナイとヒジャーズ・シリアの扱い
 - BN/BS：アルザス＝ロレーヌ（FRA ピース）1871 から german_empire、ザール・プファルツとの境界
 - 1860 ニース・サヴォワは savoy → france（C の出来事と統合済み）
+
+## E（バルカン・オスマン・中東）から
+- D：ボスニア 1878 habsburg occupied（上位の枠なし）、1908 併合 → D の出来事と一致
+- F：bessarabia_1856（MDA 側）= F の budjak_1856 と同じ 1856 moldavia → 1859 romania → 1878 russia
+- 重複候補：アドリアノープル条約 1829（north_east と ottoman の両方）
+- A：egypt の使用（シリア・アダナ 1832–40、クレタ 1830–40、メディナ 1812–40、ナジュド・ハサー）。hijaz_medina の 1812 を egypt に変更した
+- C：ドデカネス 1912・ヴロラ 1914 を italy の占領として描いた
+- アルバニア 1914 がほぼ全域「不確実」と占領 → 見え方を確認
