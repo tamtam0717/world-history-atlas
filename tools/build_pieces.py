@@ -200,6 +200,7 @@ def build_world(cfg, inner_countries, used, taken, clip):
     w["adm2"] = w["adm2"].fillna("") if "adm2" in w else ""
     for spec in cfg.get("add_from_ne", []):
         w = add_from_ne(w, spec, adm1)
+    w = add_ne_pieces(w, cfg.get("add_ne_pieces", []), adm1)
     # 島などを別ピースに分ける（範囲内と同じ設定。範囲外のピースに当たるものだけが効く）
     w = w.rename(columns={"name": "shapeName"})
     w = apply_splits(w, cfg.get("split", []))
@@ -266,18 +267,68 @@ def world_adm2_rows(iso, cfg, adm1, adm2, used):
         if not m.any():
             raise SystemExit(f"adm2_rename: 見つからない {r}")
         a2c.loc[m, "shapeName"] = r["to"]
+    # adm2_suffix：同名の多い国（アメリカの郡など）は、名前に親の州の略号を付ける（"Washington, PA"）
+    suffix = cfg.get("adm2_suffix", {}).get(iso, {})
     for idx, t in zip(a2c.index, a2c.itertuples()):
         p = j.at[idx, "parent"]
         if p not in set(fine1.shapeName):
             continue
-        rows.append({"name": t.shapeName, "iso": iso, "adm1": fix.get(p, p).strip(), "src": "geoBoundaries CGAZ ADM2",
+        name = fix_mojibake(t.shapeName)
+        if p in suffix:
+            name = f"{name}, {suffix[p]}"
+        rows.append({"name": name, "iso": iso, "adm1": fix_mojibake(fix.get(p, p)).strip(), "src": "geoBoundaries CGAZ ADM2",
                      "geometry": t.geometry})
     return rows
 
 
+def fix_mojibake(s):
+    """CGAZ の UTF-8 が Latin-1 として読まれた文字化け（"RegiÃ³n"）を直す"""
+    if s and "Ã" in s:
+        try:
+            return s.encode("latin1").decode("utf8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            return s
+    return s
+
+
+def add_ne_pieces(w, specs, adm1):
+    """CGAZ にない地域（海外領土など）を Natural Earth admin-1 から新しいピースとして足す。
+    ne_adm0 の区画のうち、bbox に代表点が入るもの（ne_names があればその名前だけ）を使う。
+    dissolve: true なら1つのピース（name）にまとめる。carve: true なら、重なる既存のピースから切り取る
+    （グアンタナモ基地のように CGAZ では隣の区画に含まれているもの）。そうでなければ既存のピースと重ならない部分だけを使う"""
+    ne_all = gpd.read_file(SRC / "ne_admin1.geojson", engine="pyogrio")
+    new_rows = []
+    for spec in specs:
+        bb = box(*spec["bbox"])
+        ne = ne_all[ne_all.adm0_a3 == spec["ne_adm0"]]
+        ne = ne[ne.geometry.representative_point().within(bb)]
+        if "ne_names" in spec:
+            ne = ne[ne.name.isin(spec["ne_names"])]
+        if len(ne) == 0:
+            raise SystemExit(f"add_ne_pieces: 見つからない {spec}")
+        groups = [(spec["name"], unary_union(ne.geometry.make_valid().values))] if spec.get("dissolve") else \
+            [(spec.get("names", {}).get(n, n), gm) for n, gm in zip(ne.name, ne.geometry.make_valid())]
+        for name, gm in groups:
+            gm = polys_only(gm)
+            near = w[w.geometry.intersects(gm.envelope.buffer(0.05))]
+            if spec.get("carve"):
+                for idx in near.index:
+                    w.at[idx, "geometry"] = polys_only(w.at[idx, "geometry"].difference(gm))
+            elif len(near):
+                gm = polys_only(gm.difference(unary_union(near.geometry.make_valid().values)))
+            if gm.is_empty:
+                continue
+            new_rows.append({"name": name, "iso": spec["iso"], "adm1": name, "adm2": "",
+                             "src": "Natural Earth admin-1", "geometry": gm})
+    if new_rows:
+        w = gpd.GeoDataFrame(pd.concat([w, gpd.GeoDataFrame(new_rows, geometry="geometry", crs=w.crs)], ignore_index=True),
+                             crs=w.crs)
+    return w
+
+
 def apply_splits(g, specs):
     """島などを別ピースに分ける。分けた部分の名前は「元の名前 + suffix」になる"""
-    from shapely.geometry import MultiPolygon, box as sbox
+    from shapely.geometry import MultiPolygon, Polygon, box as sbox
 
     rows = []
     for spec in specs:
@@ -286,8 +337,21 @@ def apply_splits(g, specs):
             geom = g.at[idx, "geometry"]
             polys = list(getattr(geom, "geoms", [geom]))
             for part in spec["parts"]:
-                bb = sbox(*part["bbox"])
-                if part.get("cut"):
+                if "line" in part:
+                    # 線（経度・緯度の点列）から km の幅の帯で切り取る（パナマ運河地帯など）
+                    bb = line_buffer(part["line"], part["km"])
+                elif "poly" in part:
+                    bb = Polygon(part["poly"])
+                else:
+                    bb = sbox(*part.get("bbox", [-180, -90, 180, 90]))
+                if part.get("islands"):
+                    # 最も大きい多角形（本土）以外（bbox があればその中に代表点があるもの）を取る（北極諸島など）
+                    big = max(polys, key=lambda p: p.area)
+                    taken = [p for p in polys if p is not big and bb.contains(p.representative_point())]
+                    if not taken:
+                        continue
+                    polys = [p for p in polys if p is big or not bb.contains(p.representative_point())]
+                elif part.get("cut") or "line" in part or "poly" in part:
                     # bbox で切り取る（陸続きの部分を線で分ける）
                     cur = MultiPolygon(polys)
                     taken = [p for p in poly_list(cur.intersection(bb)) if p.area > 1e-9]
@@ -307,6 +371,16 @@ def apply_splits(g, specs):
     if rows:
         g = gpd.GeoDataFrame(pd.concat([g, gpd.GeoDataFrame(rows, crs=g.crs)], ignore_index=True), crs=g.crs)
     return g
+
+
+def line_buffer(coords, km):
+    """経度・緯度の点列から、両側 km の帯（多角形、経度・緯度）を作る"""
+    from shapely.geometry import LineString
+
+    ln = gpd.GeoSeries([LineString(coords)], crs="EPSG:4326")
+    lon, lat = coords[0]
+    aeqd = f"+proj=aeqd +lat_0={lat} +lon_0={lon} +units=m"
+    return ln.to_crs(aeqd).buffer(km * 1000, cap_style="flat").to_crs("EPSG:4326").iloc[0]
 
 
 def add_from_ne(w, spec, adm1):

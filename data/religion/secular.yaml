@@ -845,3 +845,202 @@
     - from: 2020
       secular: 0.2
       note: 無宗教 20%（2020 年の国勢調査）。
+
+# ======== 南北アメリカ（2026-11-21、A6 担当） ========
+# アメリカ合衆国・カナダは 1990 年代から「無宗教（nones）」が急に増えた。ウルグアイは 20 世紀初めの政教分離（1919）以来の世俗国家。
+# キューバは革命（1959）後の無神論の国家（1976 年の憲法）から、1992 年の憲法改正で信仰が再び認められた。
+- id: sec_usa
+  name: アメリカ合衆国
+  select:
+    iso: [USA]
+    exclude: [USA-Guam, USA-Commonwealth_of_the_Northern_Mariana_Islands, USA-American_Samoa, USA-Puerto_Rico]
+  timeline:
+    - from: 1970
+      secular: 0.05
+    - from: 1990
+      secular: 0.1
+      note: 「無宗教」と答える人が 1990 年に約 8%
+    - from: 2005
+      secular: 0.17
+    - from: 2015
+      secular: 0.25
+    - from: 2020
+      secular: 0.3
+      note: 「無宗教（nones）」が成人の約 3 割（ピュー・リサーチ・センター、2021）
+      source: "https://www.pewresearch.org/religion/2021/12/14/about-three-in-ten-u-s-adults-are-now-religiously-unaffiliated/"
+- id: sec_usa_south
+  name: アメリカ合衆国南部（バイブル・ベルト）
+  select:
+    adm1: ["USA/Alabama", "USA/Mississippi", "USA/Tennessee", "USA/Kentucky", "USA/Arkansas", "USA/Louisiana", "USA/Georgia", "USA/South Carolina", "USA/North Carolina", "USA/Oklahoma", "USA/Texas", "USA/West Virginia", "USA/Virginia"]
+  timeline:
+    - from: 1970
+      secular: 0.03
+    - from: 1990
+      secular: 0.06
+    - from: 2005
+      secular: 0.12
+    - from: 2015
+      secular: 0.18
+    - from: 2020
+      secular: 0.22
+- id: sec_usa_northeast_west
+  name: ニューイングランド・太平洋岸・西部
+  select:
+    adm1: ["USA/Massachusetts", "USA/Connecticut", "USA/Rhode Island", "USA/New Hampshire", "USA/Vermont", "USA/Maine", "USA/Washington", "USA/Oregon", "USA/California", "USA/Nevada", "USA/Colorado", "USA/Alaska", "USA/Hawaii"]
+  timeline:
+    - from: 1970
+      secular: 0.08
+    - from: 1990
+      secular: 0.15
+    - from: 2005
+      secular: 0.25
+    - from: 2015
+      secular: 0.33
+    - from: 2020
+      secular: 0.4
+      note: ヴァーモント・ニューハンプシャー・メイン・ワシントン・オレゴンは、無宗教が 3〜4 割を超える
+- id: sec_utah
+  name: ユタ
+  select:
+    adm1: ["USA/Utah", "USA/Idaho"]
+  timeline:
+    - from: 1990
+      secular: 0.05
+    - from: 2015
+      secular: 0.15
+    - from: 2020
+      secular: 0.2
+- id: sec_canada
+  name: カナダ
+  select:
+    iso: [CAN]
+  timeline:
+    - from: 1970
+      secular: 0.05
+    - from: 1990
+      secular: 0.12
+      note: 国勢調査の「無宗教」1991 年 12%、2001 年 16%、2011 年 24%、2021 年 35%
+      source: "https://www150.statcan.gc.ca/n1/daily-quotidien/221026/dq221026b-eng.htm"
+    - from: 2000
+      secular: 0.17
+    - from: 2010
+      secular: 0.25
+    - from: 2020
+      secular: 0.35
+- id: sec_canada_west
+  name: ブリティッシュコロンビア・アルバータ・ユーコン
+  select:
+    adm1: ["CAN/British Columbia", "CAN/Alberta", "CAN/Yukon"]
+  timeline:
+    - from: 1970
+      secular: 0.1
+    - from: 1990
+      secular: 0.28
+    - from: 2000
+      secular: 0.33
+    - from: 2010
+      secular: 0.42
+    - from: 2020
+      secular: 0.5
+      note: ブリティッシュコロンビアは無宗教が 52%（2021）
+- id: sec_quebec
+  name: ケベック
+  select:
+    adm1: ["CAN/Quebec"]
+  timeline:
+    - from: 1965
+      secular: 0.12
+      note: 「静かな革命」（1960–）で、教育・福祉が教会から州政府に移り、ミサに出る人が急に減った
+      source: "https://ja.wikipedia.org/wiki/静かな革命"
+    - from: 1980
+      secular: 0.28
+    - from: 2000
+      secular: 0.35
+      note: 多くの人がカトリックの洗礼を受けているが、信仰を実践する人は少ない（国勢調査の無宗教は 2021 年 27%）
+    - from: 2020
+      secular: 0.42
+- id: sec_mexico
+  name: メキシコ
+  select:
+    iso: [MEX]
+  timeline:
+    - from: 2000
+      secular: 0.04
+    - from: 2020
+      secular: 0.1
+      note: 無宗教 約 10%（2020 年の国勢調査）
+- id: sec_cuba
+  name: キューバ
+  select:
+    iso: [CUB]
+  timeline:
+    - from: 1959
+      secular: 0.15
+      note: キューバ革命。1961 年に教会の学校が国有化され、多くの司祭が国外に追放された
+    - from: 1962
+      secular: 0.4
+    - from: 1976
+      secular: 0.5
+      note: 社会主義憲法で無神論の国家とされた
+    - from: 1992
+      secular: 0.35
+      note: 憲法改正で「世俗国家」になり、信仰が再び認められた。ヨハネ・パウロ 2 世の訪問（1998）
+      source: "https://en.wikipedia.org/wiki/Religion_in_Cuba"
+- id: sec_uruguay
+  name: ウルグアイ
+  select:
+    iso: [URY]
+  timeline:
+    - from: 1900
+      secular: 0.1
+      note: バッジェ・イ・オルドーニェスの改革（1903–）。宗教教育の廃止（1909）、離婚の合法化（1907）
+    - from: 1919
+      secular: 0.2
+      note: 1918 年の憲法（1919 年施行）で政教分離。聖週間は「観光週間」、クリスマスは「家族の日」と呼ばれる
+      source: "https://en.wikipedia.org/wiki/Religion_in_Uruguay"
+    - from: 1960
+      secular: 0.3
+    - from: 2000
+      secular: 0.4
+    - from: 2020
+      secular: 0.45
+- id: sec_chile
+  name: チリ
+  select:
+    iso: [CHL]
+  timeline:
+    - from: 2000
+      secular: 0.1
+    - from: 2010
+      secular: 0.18
+    - from: 2020
+      secular: 0.3
+      note: 聖職者による性的虐待の問題（2018）の後、カトリック離れが進んだ
+- id: sec_argentina
+  name: アルゼンチン
+  select:
+    iso: [ARG]
+  timeline:
+    - from: 2000
+      secular: 0.08
+    - from: 2010
+      secular: 0.13
+    - from: 2020
+      secular: 0.19
+- id: sec_brazil
+  name: ブラジル
+  select:
+    iso: [BRA]
+  timeline:
+    - from: 2000
+      secular: 0.07
+    - from: 2020
+      secular: 0.1
+- id: sec_caribbean_secular
+  name: ドミニカ共和国・ジャマイカ・エルサルバドル（無宗教の多い国）
+  select:
+    iso: [DOM, JAM, SLV]
+  timeline:
+    - from: 2010
+      secular: 0.15
+      note: 無宗教と答える人が 15〜20%（ジャマイカ 21%、2011 年の国勢調査）

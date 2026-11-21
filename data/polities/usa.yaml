@@ -1,0 +1,224 @@
+# A1 アメリカ合衆国（アラスカを除く）の政体（1648–2025）
+# usa（アメリカ合衆国）は data/polities/west.yaml にある（A1 が 1913 年以前の大統領・情勢・names を書き足した）。
+# 他の担当が参照しうる ID：csa・texas・iroquois・cherokee・creek・choctaw・chickasaw・seminole・lakota・comanche・hawaii・vermont_republic・franklin
+# アパッチ（apache）は mexico_caribbean.yaml の定義を使う。
+
+- id: csa
+  name: アメリカ連合国（南部連合）
+  short: 南部連合
+  color: "#b9b2a6"
+  kind: 連邦共和国（奴隷制の南部11州）
+  rulers:
+    - {name: ジェファソン・デーヴィス, title: 大統領, from: 1861, to: 1865, note: 1865年5月に捕らえられた。軍の指導者はリー将軍, source: "https://ja.wikipedia.org/wiki/ジェファーソン・デイヴィス"}
+  periods:
+    - from: 1861
+      to: 1865
+      text: 奴隷制の存続を求める南部の州が、リンカンの大統領当選をきっかけに合衆国から脱退して作った国。首都はリッチモンド。南北戦争で北部（合衆国）と戦ったが、ゲティスバーグの戦い（1863年）の後は劣勢になり、1865年4月にリー将軍が降伏した。どの国からも承認されなかった。
+  note: 地図では年末の時点で南軍が押さえていた所を塗り、北軍の占領地は usa の occupied にした。
+  source: "https://ja.wikipedia.org/wiki/アメリカ連合国"
+
+- id: texas
+  name: テキサス共和国
+  short: テキサス
+  color: "#e5b3c6"
+  kind: 共和国
+  rulers:
+    - {name: デヴィッド・バーネット, title: 臨時大統領, from: 1836, to: 1836, source: "https://en.wikipedia.org/wiki/David_G._Burnet"}
+    - {name: サム・ヒューストン, title: 大統領, from: 1836, to: 1838, note: サン・ハシントの戦いでサンタ・アナを捕らえた将軍, source: "https://ja.wikipedia.org/wiki/サミュエル・ヒューストン"}
+    - {name: ミラボー・ラマー, title: 大統領, from: 1838, to: 1841, source: "https://en.wikipedia.org/wiki/Mirabeau_B._Lamar"}
+    - {name: サム・ヒューストン, title: 大統領, from: 1841, to: 1844, source: "https://ja.wikipedia.org/wiki/サミュエル・ヒューストン"}
+    - {name: アンソン・ジョーンズ, title: 大統領, from: 1844, to: 1846, source: "https://en.wikipedia.org/wiki/Anson_Jones"}
+  periods:
+    - from: 1836
+      to: 1845
+      text: メキシコのテキサスに移り住んだアメリカ人が、中央集権化を進めるサンタ・アナの政府に反発して独立した国（アラモの戦いの後、サン・ハシントの戦いで勝つ）。リオ・グランデ川までを領土と主張したが、メキシコは独立を認めなかった。奴隷制を認め、1845年に合衆国に併合された。
+  note: 地図では実際に治めた東部・中部を塗った。ヌエセス川以南はメキシコとの係争地、西部・北部はコマンチの勢力圏として塗り分けた。
+  source: "https://ja.wikipedia.org/wiki/テキサス共和国"
+
+- id: vermont_republic
+  name: ヴァーモント共和国
+  short: ヴァーモント
+  color: "#a8dcb4"
+  kind: 共和国
+  rulers:
+    - {name: トマス・チッテンデン, title: 知事, from: 1778, to: 1789, source: "https://en.wikipedia.org/wiki/Thomas_Chittenden"}
+    - {name: モーゼス・ロビンソン, title: 知事, from: 1789, to: 1790, source: "https://en.wikipedia.org/wiki/Moses_Robinson"}
+    - {name: トマス・チッテンデン, title: 知事, from: 1790, to: 1791, source: "https://en.wikipedia.org/wiki/Thomas_Chittenden"}
+  periods:
+    - from: 1777
+      to: 1791
+      text: ニューヨークとニューハンプシャーが争った土地の住民が独立を宣言した国。奴隷制を憲法で禁じた。独立戦争ではイーサン・アレンの「グリーン・マウンテン・ボーイズ」が戦った。1791年に14番目の州として合衆国に加わった。
+  source: "https://ja.wikipedia.org/wiki/バーモント共和国"
+
+- id: franklin
+  name: フランクリン国
+  short: フランクリン
+  color: "#cce1c1"
+  kind: 自称の州（連邦に認められなかった）
+  rulers:
+    - {name: ジョン・セヴィア, title: 知事, from: 1785, to: 1788, source: "https://en.wikipedia.org/wiki/John_Sevier"}
+  periods:
+    - from: 1784
+      to: 1788
+      text: ノースカロライナが西の土地を連邦に譲ろうとしたとき、アパラチア山脈の西（今のテネシー州東部）の入植者が作った「州」。連邦議会に認められず、1788年に消滅した。
+  source: "https://ja.wikipedia.org/wiki/フランクリン州"
+
+- id: hawaii
+  name: ハワイ王国
+  names:
+    - {from: 1893, to: 1893, name: ハワイ臨時政府, short: ハワイ, kind: 臨時政府}
+    - {from: 1894, name: ハワイ共和国, short: ハワイ, kind: 共和国}
+  short: ハワイ
+  color: "#9fd0d6"
+  kind: 王国（1840年から立憲君主政）
+  rulers:
+    - {name: カメハメハ1世（大王）, title: 王, from: 1795, to: 1819, note: 1810年にカウアイ島を服属させ、諸島を統一した, source: "https://ja.wikipedia.org/wiki/カメハメハ1世"}
+    - {name: カメハメハ2世, title: 王, from: 1819, to: 1824, source: "https://ja.wikipedia.org/wiki/カメハメハ2世"}
+    - {name: カメハメハ3世, title: 王, from: 1825, to: 1854, note: 1840年に憲法を定めた, source: "https://ja.wikipedia.org/wiki/カメハメハ3世"}
+    - {name: カメハメハ4世, title: 王, from: 1855, to: 1863, source: "https://ja.wikipedia.org/wiki/カメハメハ4世"}
+    - {name: カメハメハ5世, title: 王, from: 1863, to: 1872, source: "https://ja.wikipedia.org/wiki/カメハメハ5世"}
+    - {name: ルナリロ, title: 王, from: 1873, to: 1874, source: "https://ja.wikipedia.org/wiki/ルナリロ"}
+    - {name: カラカウア, title: 王, from: 1874, to: 1891, note: 1881年に世界一周の旅で日本を訪れた, source: "https://ja.wikipedia.org/wiki/カラカウア"}
+    - {name: リリウオカラニ, title: 女王, from: 1891, to: 1893, note: 1893年1月、アメリカ人の農園主らのクーデタで退位させられた, source: "https://ja.wikipedia.org/wiki/リリウオカラニ"}
+    - {name: サンフォード・ドール, title: 臨時政府首班・大統領, from: 1893, to: 1898, source: "https://ja.wikipedia.org/wiki/サンフォード・ドール"}
+  periods:
+    - from: 1795
+      to: 1839
+      text: カメハメハ1世が諸島を統一した。捕鯨船や白檀の交易で欧米との接触が増え、アメリカの宣教師が来た（1820年）。
+    - from: 1840
+      to: 1892
+      text: 立憲君主政のもとで、アメリカ人の経営するサトウキビ農園が広がり、日本・中国から移民が来た（日本からの官約移民 1885年〜）。
+    - from: 1893
+      to: 1898
+      text: アメリカ人の農園主らが女王リリウオカラニを退位させて臨時政府・共和国を作り、1898年の米西戦争中に合衆国に併合された。
+  source: "https://ja.wikipedia.org/wiki/ハワイ王国"
+
+# ===== 先住民の勢力 =====
+- id: iroquois
+  name: イロコイ連邦
+  short: イロコイ
+  color: "#a3c3a0"
+  kind: 先住民の部族連合（5部族、1722年から6部族）
+  periods:
+    - from: 1648
+      to: 1700
+      text: モホーク・オナイダ・オノンダガ・カユーガ・セネカの5部族の連合。オランダ・イギリスから得た銃でビーバー戦争を戦い、ヒューロン（1649年）・エリーなどを破って五大湖周辺の毛皮交易を押さえた。1701年にフランスと講和した（モントリオールの大講和）。
+    - from: 1701
+      to: 1775
+      text: 英仏の間で中立を保ちつつ、イギリスとは「盟約の鎖」で結ばれた。1722年にタスカローラが加わり6部族になった。フレンチ＝インディアン戦争ではおもにイギリス側についた。
+    - from: 1776
+      to: 1797
+      text: アメリカ独立戦争で連合は分裂し、多くはイギリス側についた。サリヴァンの遠征（1779年）で村々を焼かれ、戦後はスタンウィックス砦条約（1784年）などで土地の大部分を失い、一部はカナダ（グランド・リヴァー）に移った。
+  note: 連邦の大きな特徴として、部族の代表による会議（オノンダガ）で戦争と講和を決めた。地図では今のニューヨーク州中部・西部とペンシルヴェニア北西部を塗った（A2 はオンタリオ南部 1650–1700 に使う）。
+  source: "https://ja.wikipedia.org/wiki/イロコイ連邦"
+
+- id: cherokee
+  name: チェロキー
+  short: チェロキー
+  color: "#c3a6e0"
+  kind: 先住民の部族（1827年から立憲制のチェロキー・ネーション）
+  rulers:
+    - {name: ジョン・ロス, title: 首長（プリンシパル・チーフ）, from: 1828, to: 1866, note: 強制移住に反対して最高裁判所に訴えた。移住後もインディアン準州で首長を続けた, source: "https://en.wikipedia.org/wiki/John_Ross_(Cherokee_chief)"}
+  periods:
+    - from: 1648
+      to: 1784
+      text: 南部アパラチア山地（今のテネシー東部・ノースカロライナ西部・ジョージア北部など）に住み、イギリスと交易・同盟した。チェロキー戦争（1759–61年）でイギリスと戦い、独立戦争ではイギリス側についた。
+    - from: 1785
+      to: 1838
+      text: ホープウェル条約（1785年）で合衆国の保護下に入り、土地を少しずつ譲った。シクウォイアの文字、新聞、成文憲法（1827年）を持つ「文明化五部族」の代表となり、最高裁判所も自治を認めた（1832年）が、ジャクソン大統領のもとで強制移住させられ、多くが途中で亡くなった（涙の道、1838–39年）。
+  note: 移住後のインディアン準州（オクラホマ東部）は、方針により usa の indirect（label インディアン準州）で塗った。
+  source: ["https://ja.wikipedia.org/wiki/チェロキー族", "https://ja.wikipedia.org/wiki/涙の道"]
+
+- id: creek
+  name: クリーク連合（マスコギー）
+  short: クリーク
+  color: "#8fc1b5"
+  kind: 先住民の部族連合
+  periods:
+    - from: 1648
+      to: 1789
+      text: 今のジョージア・アラバマに住む町々の連合。イギリス・スペイン・フランスの間で交易と同盟を使い分けた。
+    - from: 1790
+      to: 1832
+      text: ニューヨーク条約（1790年）で合衆国の保護下に入った。クリーク戦争（1813–14年）でジャクソンの軍に敗れ、フォート・ジャクソン条約で広い土地を失い、1830年代に強制移住させられた。
+  source: "https://ja.wikipedia.org/wiki/クリーク族"
+
+- id: choctaw
+  name: チョクトー
+  short: チョクトー
+  color: "#dce892"
+  kind: 先住民の部族
+  periods:
+    - from: 1648
+      to: 1785
+      text: 今のミシシッピ・アラバマ西部に住み、フランスと同盟してチカソー・ナチェズと戦った。
+    - from: 1786
+      to: 1830
+      text: ホープウェル条約（1786年）で合衆国の保護下に入り、土地を少しずつ譲った。インディアン強制移住法の後、ダンシング・ラビット・クリーク条約（1830年）で最後の土地を譲り、強制移住させられた最初の部族になった。
+  source: "https://ja.wikipedia.org/wiki/チョクトー族"
+
+- id: chickasaw
+  name: チカソー
+  short: チカソー
+  color: "#dbc3b3"
+  kind: 先住民の部族
+  periods:
+    - from: 1648
+      to: 1785
+      text: 今のミシシッピ北部・テネシー西部に住み、イギリスと同盟してフランス・チョクトーと戦った。
+    - from: 1786
+      to: 1832
+      text: ホープウェル条約（1786年）で合衆国の保護下に入った。ジャクソン購入（1818年）で北の土地を、ポントトク・クリーク条約（1832年）で残りを売り、インディアン準州に移った。
+  source: "https://ja.wikipedia.org/wiki/チカソー族"
+
+- id: seminole
+  name: セミノール
+  short: セミノール
+  color: "#81cf96"
+  kind: 先住民の部族
+  periods:
+    - from: 1750
+      to: 1817
+      text: クリークから分かれてスペイン領フロリダに移った人々と、逃亡した黒人奴隷が合わさってできた部族。
+    - from: 1817
+      to: 1858
+      text: 3度のセミノール戦争（1817–18年、1835–42年、1855–58年）で合衆国に抵抗した。多くはインディアン準州に移されたが、一部はエヴァーグレーズに残った。
+  source: "https://ja.wikipedia.org/wiki/セミノール族"
+
+- id: lakota
+  name: スー（ラコタ・ダコタ）
+  short: スー
+  color: "#e99367"
+  kind: 先住民の部族連合
+  rulers:
+    - {name: レッド・クラウド, title: オグララ・ラコタの指導者, from: 1866, to: 1868, note: レッド・クラウド戦争に勝ち、ララミー砦条約（1868年）を結ばせた, source: "https://ja.wikipedia.org/wiki/レッド・クラウド"}
+    - {name: シッティング・ブル, title: フンクパパ・ラコタの指導者, from: 1868, to: 1877, note: リトルビッグホーンの戦い（1876年）でカスター中佐の部隊を破った。1890年に殺された, source: "https://ja.wikipedia.org/wiki/シッティング・ブル"}
+  periods:
+    - from: 1648
+      to: 1775
+      text: ダコタ（東のスー）はミネソタの森と草原に住んだ。オジブワに押され、西のラコタは馬を手に入れて大平原（グレートプレーンズ）に進出した。
+    - from: 1776
+      to: 1867
+      text: ラコタはブラックヒルズを押さえ、バッファロー狩りの騎馬の民として大平原の北部を支配した。ミネソタのダコタは1851年に土地を譲り、1862年の蜂起（ダコタ戦争）の後に追放された。
+    - from: 1868
+      to: 1877
+      text: ララミー砦条約（1868年）でブラックヒルズを含む大スー保留地を認められたが、金が見つかると合衆国が攻め込み、スー戦争（1876–77年）でブラックヒルズを奪われた。1890年にはウンデッド・ニーの虐殺が起きた。
+  note: 範囲は年によって大きく変わり、あいまいなので、周辺は uncertain にした。
+  source: ["https://ja.wikipedia.org/wiki/スー族", "https://ja.wikipedia.org/wiki/ラコタ族"]
+
+- id: comanche
+  name: コマンチ
+  short: コマンチ
+  color: "#9e8ac7"
+  kind: 先住民の部族
+  rulers:
+    - {name: クアナ・パーカー, title: クアハディ・コマンチの指導者, from: 1870, to: 1875, note: 1875年に降伏し、のち保留地の首長として知られた, source: "https://en.wikipedia.org/wiki/Quanah_Parker"}
+  periods:
+    - from: 1700
+      to: 1874
+      text: 馬を使う騎馬の民として南部大平原（今のテキサス北西部・オクラホマ西部・ニューメキシコ東部など、コマンチェリア）を支配し、スペイン・メキシコ・テキサスの入植地を襲い、交易を押さえた。スペインとは1786年に和平を結んだ。
+    - from: 1874
+      to: 1875
+      text: バッファローの大量の狩猟で暮らしが成り立たなくなり、レッド川戦争（1874–75年）に敗れてオクラホマの保留地に移された。
+  note: 範囲はあいまいなので uncertain で塗った。
+  source: "https://ja.wikipedia.org/wiki/コマンチ族"

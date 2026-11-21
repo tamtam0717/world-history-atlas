@@ -1,0 +1,2354 @@
+# A5 ブラジル・南米南部（BRA・ARG・CHL・PRY・URY・フォークランド・SGS）の地域と所属の変遷（1648–2025）
+# scratchpad/a5/gen_regions.py で生成した（各ピースはちょうど1つの地域に属する）。手で直してもよい。
+# 植民地は宗主国の色＋label（ペルー副王領・リオ・デ・ラ・プラタ副王領・チリ総督領・ポルトガル領ブラジル）。
+# 主張だけで先住民の地だった所（アマゾン奥地・チャコ・パタゴニアなど）は certainty: nominal。
+# マプーチェ（アラウカニア、パンパの一部）は独自の政体 mapuche。
+# 注意：ARG-Buenos_Aires のピースには現在のエントレ・リオス州が含まれている（ピースの分割が必要）。
+
+- id: br_paraiba_rn
+  name: パライバ・リオグランデ・ド・ノルテ
+  select:
+    pieces: [BRA-Paraiba, BRA-Rio_Granda_do_Norte]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      certainty: "uncertain"
+      label: "オランダ領ブラジル"
+      note: "オランダ西インド会社が1630年からブラジル北東部を支配した。1645年からのポルトガル系住民の反乱で内陸を失い、1648年にはレシフェと海岸の砦（パライバ・リオグランデ・ド・ノルテ）が残った"
+      source: "https://ja.wikipedia.org/wiki/オランダ領ブラジル"
+    - from: 1654
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "レシフェのオランダ軍が降伏し、オランダ領ブラジルが終わる（1月）"
+      source: "https://ja.wikipedia.org/wiki/オランダ領ブラジル"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_pernambuco
+  name: ペルナンブーコ
+  select:
+    pieces: [BRA-Pernambuco]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "ポルトガル領ブラジル"
+      note: "州都レシフェはまだオランダ領（1645年からのポルトガル系住民の反乱軍が内陸を押さえ、1648年の第1次グアララペスの戦いに勝った）"
+      source: "https://ja.wikipedia.org/wiki/グアララペスの戦い"
+    - from: 1654
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "レシフェのオランダ軍が降伏し、オランダ領ブラジルが終わる（1月）"
+      source: "https://ja.wikipedia.org/wiki/オランダ領ブラジル"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      note: "1824年に共和派が「赤道連盟」をつくって帝国から離れようとしたが、鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_bahia
+  name: バイーア・セルジッペ・アラゴアス
+  select:
+    pieces: [BRA-Bahia, BRA-Sergipe, BRA-Alagoas]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      note: "サルヴァドール（バイーア）は1763年までブラジルの首府。砂糖のプランテーションとアフリカからの奴隷労働の中心"
+      source: "https://ja.wikipedia.org/wiki/サルヴァドール"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      certainty: "uncertain"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）。バイーアの独立派は内陸（レコンカヴォ）に拠る"
+      note: "州都サルヴァドールはマデイラ・デ・メロのポルトガル軍が1823年7月2日まで保持した（バイーア独立戦争）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+    - from: 1823
+      owner: "brazil"
+      cause: "ポルトガル軍がサルヴァドールから撤退する（7月2日、バイーア独立戦争の終わり）"
+      source: "https://en.wikipedia.org/wiki/Independence_of_Bahia"
+
+- id: br_ceara
+  name: セアラー
+  select:
+    pieces: [BRA-Ceara]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      note: "オランダは1637–44年にセアラーを押さえたが、先住民の反乱で失った。ポルトガルの入植はまだ弱い"
+    - from: 1649
+      owner: "netherlands"
+      certainty: "nominal"
+      label: "オランダ領ブラジル"
+      cause: "オランダがセアラーに砦（スホーネンボルフ砦、のちのフォルタレザ）を築く"
+      source: "https://ja.wikipedia.org/wiki/フォルタレザ"
+    - from: 1654
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "オランダ領ブラジルの終わりで、ポルトガルがフォルタレザの砦を引き継ぐ"
+      source: "https://ja.wikipedia.org/wiki/オランダ領ブラジル"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_southeast
+  name: リオデジャネイロ・サンパウロ・エスピリトサント
+  select:
+    pieces: [BRA-Rio_de_Jeneiro, BRA-Sao_Paulo, BRA-Espirito_Santo]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      note: "サンパウロは奥地に先住民の奴隷狩りや金・銀を求めるバンデイランテス（奥地探検隊）を送り出した。1763年にリオデジャネイロがブラジルの首府になった"
+      source: "https://ja.wikipedia.org/wiki/バンデイランテス"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_minas
+  name: ミナスジェライス
+  select:
+    pieces: [BRA-Minas_Gerais]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      note: "バンデイランテスが通るだけの奥地"
+    - from: 1695
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "バンデイランテスが金鉱を見つけ（1693–95年）、ゴールドラッシュが起こる"
+      note: "1709年のエンボアバス戦争の後、1720年にミナスジェライスのカピタニアが置かれた。18世紀の金の多くはイギリスに流れた"
+      source: "https://ja.wikipedia.org/wiki/ブラジルのゴールドラッシュ"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_goias
+  name: ゴイアス
+  select:
+    pieces: [BRA-Goias, BRA-Distrito_Federal]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+    - from: 1726
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "金鉱が見つかり、ヴィラ・ボア（ゴイアス）に入植が進む（1725年–）"
+      source: "https://ja.wikipedia.org/wiki/ゴイアス州"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      note: "1960年にブラジリアが首都となり、連邦直轄区が置かれた"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_tocantins
+  name: トカンチンス
+  select:
+    pieces: [BRA-Tocantins]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+    - from: 1736
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "北ゴイアス（ナティヴィダーデなど）で金鉱が開かれる"
+      source: "https://ja.wikipedia.org/wiki/トカンチンス州"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_piaui
+  name: ピアウイ
+  select:
+    pieces: [BRA-Piaui]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+    - from: 1695
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "バイーアからの牧畜業者が入植し、モッシャ（オエイラス）の村ができる"
+      source: "https://ja.wikipedia.org/wiki/ピアウイ州"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1823
+      owner: "brazil"
+      cause: "ポルトガル軍が撤退し、北部の諸州がブラジル帝国に加わる（1823年）"
+      note: "ジェニパポの戦い（1823年3月）の後、ポルトガル軍が退いた"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_maranhao
+  name: マラニョン
+  select:
+    pieces: [BRA-Maranhao]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      note: "サン・ルイスは1641–44年にオランダが占領したが、取り戻された。マラニョン州（のちグラン・パラ・マラニョン州）はブラジル総督とは別にリスボンに直属した"
+      source: "https://ja.wikipedia.org/wiki/マラニョン州"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1823
+      owner: "brazil"
+      cause: "ポルトガル軍が撤退し、北部の諸州がブラジル帝国に加わる（1823年）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_para
+  name: パラー
+  select:
+    pieces: [BRA-Para]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      note: "ベレン（1616年建設）がアマゾン川河口の拠点。ポルトガルが実際に治めたのは河口と下流の砦・伝道村だけで、内陸は先住民の地だった。1835–40年にはカバナージェンの反乱が起こった"
+      source: "https://ja.wikipedia.org/wiki/ベレン"
+    - from: 1751
+      owner: "portugal"
+      label: "ポルトガル領ブラジル（グラン・パラ・マラニョン州）"
+      cause: "グラン・パラ・マラニョン州が置かれて州都がベレンに移り、ポンバルの改革で川沿いの伝道村が町に改められる"
+      note: "広いピースのうち、実際に治めたのはアマゾン川と支流沿いの町と村。地図では川沿いの支配の広がりを目安に濃く塗った"
+      source: "https://en.wikipedia.org/wiki/State_of_Gr%C3%A3o-Par%C3%A1_and_Maranh%C3%A3o"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1823
+      owner: "brazil"
+      cause: "ポルトガル軍が撤退し、北部の諸州がブラジル帝国に加わる（1823年）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_amapa
+  name: アマパー
+  select:
+    pieces: [BRA-Amapa]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      note: "フランス（ギアナ）も領有を主張し、1697年にはマカパの砦を一時奪った。ユトレヒト条約（1713年）でオイアポケ川（ヴィセンテ・ピンソン川）が境とされたが、その川がどれかで争いが続いた"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1815
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1823
+      owner: "brazil"
+      certainty: "uncertain"
+      cause: "ポルトガル軍が撤退し、北部の諸州がブラジル帝国に加わる（1823年）"
+      note: "フランス領ギアナとの係争地（オイアポケ川とアラグアリ川の間）。1841年から中立地帯とされた"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+    - from: 1900
+      owner: "brazil"
+      cause: "スイス連邦大統領の仲裁裁定で、オイアポケ川が国境と決まる"
+      source: "https://en.wikipedia.org/wiki/Franco-Brazilian_War"
+
+- id: br_amazonas
+  name: アマゾナス
+  select:
+    pieces: [BRA-Amazonas]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      note: "トルデシリャス条約ではスペインの側だが、1637–39年のテイシェイラの遠征でポルトガルが主張した。17世紀末にはスペインのイエズス会（フリッツ）が上流に伝道村を開いた。実際には先住民の地"
+      source: "https://ja.wikipedia.org/wiki/ペドロ・テイシェイラ"
+    - from: 1750
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      cause: "マドリード条約で、アマゾン川流域の大部分がポルトガル領と認められる"
+      source: "https://ja.wikipedia.org/wiki/マドリード条約_(1750年)"
+    - from: 1815
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1823
+      owner: "brazil"
+      cause: "ポルトガル軍が撤退し、北部の諸州がブラジル帝国に加わる（1823年）"
+      note: "1850年にアマゾナス州が置かれた。19世紀末からゴム・ブームでマナウスが栄えた"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_roraima
+  name: ロライマ（リオ・ブランコ）
+  select:
+    pieces: [BRA-Alto_Alegre, BRA-Amajari, BRA-Boa_Vista, BRA-Canta, BRA-Caracarai, BRA-Caroebe, BRA-Iracema, BRA-Mucajai, BRA-Pacaraima, BRA-Rorainopolis, BRA-Sao_Joao_da_Baliza, BRA-Sao_Luiz, BRA-Bonfim]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      note: "リオ・ブランコ流域。先住民の地"
+    - from: 1775
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "ポルトガルがスペイン軍を退け、サン・ジョアキン砦を築く"
+      source: "https://en.wikipedia.org/wiki/Fort_S%C3%A3o_Joaquim"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1823
+      owner: "brazil"
+      cause: "ポルトガル軍が撤退し、北部の諸州がブラジル帝国に加わる（1823年）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_pirara
+  name: ピララ（ロライマ北東部）
+  select:
+    pieces: [BRA-Normandia, BRA-Uiramuta]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+    - from: 1775
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "ポルトガルがサン・ジョアキン砦を築く"
+      source: "https://en.wikipedia.org/wiki/Fort_S%C3%A3o_Joaquim"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1823
+      owner: "brazil"
+      cause: "ポルトガル軍が撤退し、北部の諸州がブラジル帝国に加わる（1823年）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+    - from: 1842
+      owner: "brazil"
+      certainty: "uncertain"
+      cause: "英領ギアナとの係争（ピララ問題）で中立地帯とされる"
+      source: "https://en.wikipedia.org/wiki/Pirara"
+    - from: 1904
+      owner: "brazil"
+      cause: "イタリア国王の仲裁裁定で、係争地の東側（現ガイアナ）がイギリス、西側がブラジルに分けられる"
+      source: "https://en.wikipedia.org/wiki/Pirara"
+
+- id: br_rondonia
+  name: ロンドニア
+  select:
+    pieces: [BRA-Rondonia]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "トルデシリャス条約ではスペインの側。実際には先住民の地"
+    - from: 1750
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      cause: "マドリード条約で、グアポレ川の東がポルトガル領と認められる"
+      note: "グアポレ川沿いにヴィラ・ベラ（マトグロッソの首府）やプリンシペ・ダ・ベイラ砦（1776年）が置かれた"
+      source: "https://ja.wikipedia.org/wiki/マドリード条約_(1750年)"
+    - from: 1815
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      note: "1907–15年にロンドンの電信線、1912年にマデイラ＝マモレ鉄道が通った"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_acre
+  name: アクレ
+  select:
+    pieces: [BRA-Acre]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チャルカス（ペルー副王領）"
+      note: "チャルカス（上ペルー）の奥地。実際には先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1825
+      owner: "bolivia"
+      certainty: "nominal"
+      cause: "ボリビアの独立"
+      note: "独立戦争期（1810–24年）も、上ペルーの奥地なので、ブエノスアイレスの軍の進出（1810年）は描かずスペインの名目的な支配のままとした。1867年のアヤクチョ条約でボリビア領とされたが、19世紀後半からゴムを採るブラジル人が多く入った。ペルーも一部を主張した"
+    - from: 1836
+      owner: "peru_bolivia"
+      certainty: "nominal"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合の成立（サンタ・クルス）"
+      source: "https://en.wikipedia.org/wiki/Peru%E2%80%93Bolivian_Confederation"
+    - from: 1839
+      owner: "bolivia"
+      certainty: "nominal"
+      cause: "ペルー・ボリビア連合の解体"
+    - from: 1902
+      owner: "bolivia"
+      certainty: "uncertain"
+      cause: "アクレのブラジル系住民がプラシド・デ・カストロのもとで蜂起する（アクレ戦争）"
+      source: "https://en.wikipedia.org/wiki/Acre_War"
+    - from: 1903
+      owner: "brazil"
+      cause: "ペトロポリス条約で、ボリビアが補償と引き換えにアクレをブラジルに譲る"
+      source: "https://ja.wikipedia.org/wiki/ペトロポリス条約"
+
+- id: br_mato_grosso
+  name: マトグロッソ
+  select:
+    pieces: [BRA-Mato_Grosso]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "トルデシリャス条約ではスペインの側。実際には先住民の地"
+    - from: 1719
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "ポルトガル領ブラジル"
+      cause: "バンデイランテスがクイアバで金鉱を見つける"
+      source: "https://ja.wikipedia.org/wiki/クイアバ"
+    - from: 1750
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "マドリード条約で、ポルトガル領と認められる（1748年にマトグロッソのカピタニアが置かれた）"
+      source: "https://ja.wikipedia.org/wiki/マドリード条約_(1750年)"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_ms
+  name: マトグロッソ・ド・スル
+  select:
+    pieces: [BRA-Mato_Grosso_do_Sul]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "イタティンのイエズス会伝道村は1630–40年代にバンデイランテスに壊された。グアイクル族（ムバヤ）の地"
+    - from: 1750
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+      cause: "マドリード条約で、ポルトガル領と認められる"
+      source: "https://ja.wikipedia.org/wiki/マドリード条約_(1750年)"
+    - from: 1775
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "ポルトガルがパラグアイ川にコインブラ砦を築く（1778年にミランダ）"
+      source: "https://en.wikipedia.org/wiki/Forte_Coimbra"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+    - from: 1864
+      owner: "paraguay"
+      certainty: "occupied"
+      label: "マトグロッソ（パラグアイ軍の占領）"
+      cause: "パラグアイ軍がマトグロッソに侵攻し、コルンバなどを占領する（12月。パラグアイ戦争の始まり）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+    - from: 1868
+      owner: "brazil"
+      cause: "パラグアイ軍が撤退する"
+      note: "アパ川とブランコ川の間はパラグアイも主張していたが、1872年の条約でブラジル領と確定した"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+
+- id: br_parana
+  name: パラナ
+  select:
+    pieces: [BRA-Parana]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "ポルトガル領ブラジル"
+      note: "海岸のパラナグア（1648年）だけ。内陸はかつてスペインのグアイラ地方（イエズス会の伝道村は1629–32年にバンデイランテスに壊された）"
+      source: "https://en.wikipedia.org/wiki/Guair%C3%A1_(Spanish_colony)"
+    - from: 1693
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "クリチバが町になり、高原の牧畜が広がる"
+      source: "https://ja.wikipedia.org/wiki/クリチバ"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      note: "西部のパルマス地方はアルゼンチンも主張したが、1895年のクリーヴランド米大統領の裁定でブラジル領とされた"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_santa_catarina
+  name: サンタカタリーナ
+  select:
+    pieces: [BRA-Santa_Catarina]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領ブラジル"
+    - from: 1676
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "ラグナ（1676年）・デステロ（フロリアノーポリス）などの入植"
+      note: "1777年2月にスペイン軍がサンタカタリーナ島を占領したが、同年のサン・イルデフォンソ条約で返された"
+      source: "https://ja.wikipedia.org/wiki/サンタカタリーナ州"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      note: "1839年にファラーポス（ラグナの「ジュリアナ共和国」）が一時ラグナを押さえた。1912–16年にコンテスタード戦争"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+
+- id: br_rio_grande_do_sul
+  name: リオグランデ・ド・スル
+  select:
+    pieces: [BRA-Rio_Grande_do_Sul]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "タペのイエズス会伝道村は1637–38年にバンデイランテスに壊された。野生化した牛の放牧地（バケリア）"
+    - from: 1737
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "ポルトガル領ブラジル"
+      cause: "ポルトガルがリオグランデに要塞を築き、入植を始める"
+      note: "スペイン軍は1763–76年にリオグランデの町と南部を占領した"
+      source: "https://ja.wikipedia.org/wiki/リオグランデ_(リオグランデ・ド・スル州)"
+    - from: 1777
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "サン・イルデフォンソ条約でリオグランデのポルトガル領が認められる"
+      source: "https://ja.wikipedia.org/wiki/サン・イルデフォンソ条約_(1777年)"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+    - from: 1836
+      owner: "riograndense_republic"
+      certainty: "uncertain"
+      cause: "ファラーポス戦争（ファロウピーリャ革命）の反乱軍がリオグランデ共和国の独立を宣言する（9月）"
+      note: "州都ポルトアレグレは帝国軍が守った。年末の支配はおおよそ"
+      source: "https://ja.wikipedia.org/wiki/ファロウピーリャ革命"
+    - from: 1845
+      owner: "brazil"
+      cause: "ポンシェ・ヴェルデ協定で反乱軍が帝国に戻る（3月）"
+      source: "https://ja.wikipedia.org/wiki/ファロウピーリャ革命"
+
+- id: br_missoes
+  name: ミソンイス（東方伝道区）
+  select:
+    pieces: [BRA-Rio_Grande_do_Sul_Missoes]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "1637–38年にバンデイランテスに襲われ、伝道村はウルグアイ川の西へ移った"
+    - from: 1687
+      owner: "spain"
+      label: "イエズス会の伝道村（グアラニー）"
+      cause: "イエズス会がウルグアイ川の東に「七つの村」（サン・ミゲルなど）を開く（1682–1707年）"
+      note: "1750年のマドリード条約でポルトガル領とされ、グアラニー人が抵抗した（グアラニー戦争、1754–56年）。1761年に条約は取り消された"
+      source: "https://ja.wikipedia.org/wiki/グアラニー戦争"
+    - from: 1768
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "イエズス会がスペイン領から追放される"
+      source: "https://ja.wikipedia.org/wiki/イエズス会の追放"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1801
+      owner: "portugal"
+      label: "ポルトガル領ブラジル"
+      cause: "スペインとの戦争（オレンジ戦争）の中で、ポルトガル側の民兵が七つの村を占領する"
+      source: "https://en.wikipedia.org/wiki/Seven_Peoples_of_the_Missions"
+    - from: 1815
+      owner: "portugal"
+      label: "ブラジル王国"
+      cause: "ポルトガル・ブラジル及びアルガルヴェ連合王国が成立し、ブラジルが王国に格上げされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジル及びアルガルヴェ連合王国"
+    - from: 1822
+      owner: "brazil"
+      cause: "ブラジルの独立（王太子ペドロが独立を宣言し、皇帝ペドロ1世となる）"
+      source: "https://ja.wikipedia.org/wiki/ブラジルの独立"
+    - from: 1836
+      owner: "riograndense_republic"
+      certainty: "uncertain"
+      cause: "ファラーポス戦争の反乱軍がリオグランデ共和国の独立を宣言する"
+      source: "https://ja.wikipedia.org/wiki/ファロウピーリャ革命"
+    - from: 1845
+      owner: "brazil"
+      cause: "ポンシェ・ヴェルデ協定で反乱軍が帝国に戻る"
+      source: "https://ja.wikipedia.org/wiki/ファロウピーリャ革命"
+
+- id: uy_montevideo
+  name: モンテビデオ
+  select:
+    pieces: [URY-Montevideo]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+    - from: 1724
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "スペインがモンテビデオを建設する（1724–26年。ポルトガルの進出に備える）"
+      source: "https://ja.wikipedia.org/wiki/モンテビデオ"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "spain"
+      label: "モンテビデオ（スペイン王党派）"
+      cause: "モンテビデオは五月革命に加わらず、王党派の拠点となる"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1814
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレス軍（アルベアル）がモンテビデオを攻め落とす（6月）"
+      source: "https://ja.wikipedia.org/wiki/モンテビデオ包囲戦_(1812年-1814年)"
+    - from: 1815
+      owner: "liga_federal"
+      cause: "ブエノスアイレス軍が退き、アルティガスの東方派がモンテビデオに入る（2月）"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1817
+      owner: "portugal"
+      certainty: "occupied"
+      label: "バンダ・オリエンタル（ポルトガル軍の占領）"
+      cause: "ポルトガル・ブラジル軍（レコル）がモンテビデオに入る（1月）"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジルのバンダ・オリエンタル侵攻"
+    - from: 1821
+      owner: "portugal"
+      label: "シスプラティナ州"
+      cause: "バンダ・オリエンタルがシスプラティナ州として併合される"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1822
+      owner: "portugal"
+      label: "シスプラティナ州"
+      cause: "ブラジルの独立に従わないポルトガル守備隊がモンテビデオにこもる"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1824
+      owner: "brazil"
+      label: "シスプラティナ州"
+      cause: "ポルトガル守備隊が撤退し、モンテビデオもブラジル帝国に入る（2–3月）"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1828
+      owner: "uruguay"
+      cause: "イギリスの仲介によるモンテビデオ条約で、ウルグアイが独立国となる"
+      note: "大戦争（1839–51年）の間、1843–51年はコロラド党の政府がモンテビデオにこもり、ロサスの支援を受けたオリベ（ブランコ党）の軍に包囲された"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+
+- id: uy_colonia
+  name: コロニア・デル・サクラメント
+  select:
+    pieces: [URY-Colonia]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+    - from: 1680
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "コロニア・デル・サクラメント"
+      cause: "ポルトガルがラ・プラタ川の対岸にコロニア・デル・サクラメントを建設する（スペインがすぐ攻め落としたが、1681年の暫定条約で返す）"
+      source: "https://ja.wikipedia.org/wiki/コロニア・デル・サクラメント"
+    - from: 1683
+      owner: "portugal"
+      label: "コロニア・デル・サクラメント"
+      note: "ブエノスアイレス向けの密貿易の拠点。町とその周辺だけで、ピースの全体ではない"
+    - from: 1705
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "スペイン継承戦争でスペイン軍が攻め落とす"
+      source: "https://ja.wikipedia.org/wiki/コロニア・デル・サクラメント"
+    - from: 1715
+      owner: "portugal"
+      label: "コロニア・デル・サクラメント"
+      cause: "ユトレヒト条約（スペインとポルトガルの条約）で返される"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1762
+      owner: "spain"
+      certainty: "occupied"
+      label: "コロニア（スペイン軍の占領）"
+      cause: "七年戦争でスペイン軍（セバリョス）が攻め落とす"
+      source: "https://ja.wikipedia.org/wiki/コロニア・デル・サクラメント"
+    - from: 1763
+      owner: "portugal"
+      label: "コロニア・デル・サクラメント"
+      cause: "パリ条約で返される"
+    - from: 1777
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "セバリョスが再び攻め落とし、サン・イルデフォンソ条約でスペイン領と決まる"
+      source: "https://ja.wikipedia.org/wiki/サン・イルデフォンソ条約_(1777年)"
+    - from: 1810
+      owner: "spain"
+      label: "モンテビデオ（スペイン王党派）"
+      cause: "バンダ・オリエンタルの王党派が五月革命に加わらない"
+    - from: 1814
+      owner: "united_provinces_rio_plata"
+      cause: "モンテビデオの王党派が降伏する"
+    - from: 1815
+      owner: "liga_federal"
+      cause: "アルティガスの東方派がバンダ・オリエンタルを治める"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1817
+      owner: "portugal"
+      certainty: "occupied"
+      label: "バンダ・オリエンタル（ポルトガル軍の占領）"
+      cause: "ポルトガル・ブラジル軍（レコル）がバンダ・オリエンタルを占領する"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジルのバンダ・オリエンタル侵攻"
+    - from: 1821
+      owner: "portugal"
+      label: "シスプラティナ州"
+      cause: "バンダ・オリエンタルがシスプラティナ州として併合される"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1822
+      owner: "brazil"
+      label: "シスプラティナ州"
+      cause: "ブラジルの独立で、レコル将軍の軍がシスプラティナ州をブラジル帝国の側に置く"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1828
+      owner: "uruguay"
+      cause: "イギリスの仲介によるモンテビデオ条約で、ウルグアイが独立国となる"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+
+- id: uy_south
+  name: ウルグアイ南部（カネロネス・サンホセ・ソリアーノなど）
+  select:
+    pieces: [URY-Canelones, URY-San_Jose, URY-Florida, URY-Flores, URY-Soriano, URY-Maldonado, URY-Lavalleja]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "ソリアーノに伝道村（1624年）がある。チャルーア人などの地"
+    - from: 1726
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "モンテビデオの建設で、周辺に牧場と村が広がる"
+      source: "https://ja.wikipedia.org/wiki/モンテビデオ"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "spain"
+      label: "モンテビデオ（スペイン王党派）"
+      cause: "バンダ・オリエンタルの王党派が五月革命に加わらない"
+      note: "1811年にアルティガスが蜂起してモンテビデオを包囲したが、10月の休戦で引き揚げた（東方の脱出）"
+    - from: 1812
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      cause: "アルティガスとブエノスアイレス軍が再びモンテビデオを包囲し、農村を押さえる"
+      source: "https://ja.wikipedia.org/wiki/モンテビデオ包囲戦_(1812年-1814年)"
+    - from: 1814
+      owner: "united_provinces_rio_plata"
+      cause: "モンテビデオの王党派が降伏する"
+    - from: 1815
+      owner: "liga_federal"
+      cause: "アルティガスの東方派がバンダ・オリエンタルを治める"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1817
+      owner: "portugal"
+      certainty: "occupied"
+      label: "バンダ・オリエンタル（ポルトガル軍の占領）"
+      cause: "ポルトガル・ブラジル軍（レコル）がバンダ・オリエンタルを占領する"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジルのバンダ・オリエンタル侵攻"
+    - from: 1821
+      owner: "portugal"
+      label: "シスプラティナ州"
+      cause: "バンダ・オリエンタルがシスプラティナ州として併合される"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1822
+      owner: "brazil"
+      label: "シスプラティナ州"
+      cause: "ブラジルの独立で、レコル将軍の軍がシスプラティナ州をブラジル帝国の側に置く"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1825
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "東方州"
+      cause: "「33人の東方人」の蜂起。フロリダの議会がリオ・デ・ラ・プラタ連合州への合流を宣言し、シスプラティナ戦争が始まる"
+      note: "モンテビデオとコロニアはブラジル軍が守った"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+    - from: 1828
+      owner: "uruguay"
+      cause: "イギリスの仲介によるモンテビデオ条約で、ウルグアイが独立国となる"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+
+- id: uy_east
+  name: ウルグアイ東部（ロチャ・セロラルゴなど）
+  select:
+    pieces: [URY-Rocha, URY-Treinta_y_Tres, URY-Cerro_Largo]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      note: "ポルトガルとの境界地帯。サンタ・テレサ要塞はポルトガルが1762年に築き、1763年にスペインが奪った"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1777
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "サン・イルデフォンソ条約で境界が定まる"
+      source: "https://ja.wikipedia.org/wiki/サン・イルデフォンソ条約_(1777年)"
+    - from: 1810
+      owner: "spain"
+      label: "モンテビデオ（スペイン王党派）"
+      cause: "バンダ・オリエンタルの王党派が五月革命に加わらない"
+    - from: 1812
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      cause: "アルティガスとブエノスアイレス軍が農村を押さえる"
+    - from: 1814
+      owner: "united_provinces_rio_plata"
+      cause: "モンテビデオの王党派が降伏する"
+    - from: 1815
+      owner: "liga_federal"
+      cause: "アルティガスの東方派がバンダ・オリエンタルを治める"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1817
+      owner: "portugal"
+      certainty: "occupied"
+      label: "バンダ・オリエンタル（ポルトガル軍の占領）"
+      cause: "ポルトガル・ブラジル軍（レコル）がバンダ・オリエンタルを占領する"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジルのバンダ・オリエンタル侵攻"
+    - from: 1821
+      owner: "portugal"
+      label: "シスプラティナ州"
+      cause: "バンダ・オリエンタルがシスプラティナ州として併合される"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1822
+      owner: "brazil"
+      label: "シスプラティナ州"
+      cause: "ブラジルの独立で、レコル将軍の軍がシスプラティナ州をブラジル帝国の側に置く"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1825
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "東方州"
+      cause: "「33人の東方人」の蜂起。フロリダの議会がリオ・デ・ラ・プラタ連合州への合流を宣言し、シスプラティナ戦争が始まる"
+      note: "モンテビデオとコロニアはブラジル軍が守った"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+    - from: 1828
+      owner: "uruguay"
+      cause: "イギリスの仲介によるモンテビデオ条約で、ウルグアイが独立国となる"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+
+- id: uy_north
+  name: ウルグアイ北部（サルト・パイサンドゥ・タクアレンボーなど）
+  select:
+    pieces: [URY-Artigas, URY-Rivera, URY-Salto, URY-Paysandu, URY-Tacuarembo, URY-Durazno, URY-Rio_Negro]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "チャルーア人・ミヌアン人の地。伝道村の牛の放牧地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1812
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      cause: "アルティガスとブエノスアイレス軍が農村を押さえる"
+    - from: 1814
+      owner: "united_provinces_rio_plata"
+      cause: "モンテビデオの王党派が降伏する"
+    - from: 1815
+      owner: "liga_federal"
+      cause: "アルティガスの東方派がバンダ・オリエンタルを治める"
+      note: "1817–19年もアルティガスはポルトガル軍と戦い続けた"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1820
+      owner: "portugal"
+      certainty: "occupied"
+      label: "バンダ・オリエンタル（ポルトガル軍の占領）"
+      cause: "タクアレンボーの戦いでアルティガスが敗れる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジルのバンダ・オリエンタル侵攻"
+    - from: 1821
+      owner: "portugal"
+      label: "シスプラティナ州"
+      cause: "バンダ・オリエンタルがシスプラティナ州として併合される"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1822
+      owner: "brazil"
+      label: "シスプラティナ州"
+      cause: "ブラジルの独立で、レコル将軍の軍がシスプラティナ州をブラジル帝国の側に置く"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1825
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "東方州"
+      cause: "「33人の東方人」の蜂起。フロリダの議会がリオ・デ・ラ・プラタ連合州への合流を宣言し、シスプラティナ戦争が始まる"
+      note: "モンテビデオとコロニアはブラジル軍が守った"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+    - from: 1828
+      owner: "uruguay"
+      cause: "イギリスの仲介によるモンテビデオ条約で、ウルグアイが独立国となる"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+
+- id: isla_brasilera
+  name: ブラジル島（クアライ川の河口の中洲）
+  select:
+    pieces: [120-Isla_Brasilera]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1812
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+    - from: 1814
+      owner: "united_provinces_rio_plata"
+    - from: 1815
+      owner: "liga_federal"
+    - from: 1820
+      owner: "portugal"
+      certainty: "occupied"
+      label: "バンダ・オリエンタル（ポルトガル軍の占領）"
+      cause: "タクアレンボーの戦いでアルティガスが敗れる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル・ブラジルのバンダ・オリエンタル侵攻"
+    - from: 1821
+      owner: "portugal"
+      label: "シスプラティナ州"
+      cause: "バンダ・オリエンタルがシスプラティナ州として併合される"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1822
+      owner: "brazil"
+      label: "シスプラティナ州"
+      cause: "ブラジルの独立で、レコル将軍の軍がシスプラティナ州をブラジル帝国の側に置く"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ州"
+    - from: 1825
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "東方州"
+      cause: "「33人の東方人」の蜂起。フロリダの議会がリオ・デ・ラ・プラタ連合州への合流を宣言し、シスプラティナ戦争が始まる"
+      note: "モンテビデオとコロニアはブラジル軍が守った"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+    - from: 1828
+      owner: "uruguay"
+      cause: "イギリスの仲介によるモンテビデオ条約で、ウルグアイが独立国となる"
+      source: "https://ja.wikipedia.org/wiki/シスプラティナ戦争"
+    - from: 1851
+      owner: "brazil"
+      certainty: "uncertain"
+      cause: "ブラジルとウルグアイの国境条約でクアライ川が境とされる"
+      note: "ブラジルが治めているが、ウルグアイは1940年代から自国領と主張している"
+      source: "https://en.wikipedia.org/wiki/Brazilian_Island"
+
+- id: ar_buenos_aires_city
+  name: ブエノスアイレス市
+  select:
+    pieces: [ARG-Ciudad_Autonoma_de_Buenos_Aires]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "ブエノスアイレスはラ・プラタ地方の港。1776年まではペルー副王領のブエノスアイレス総督領"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1831
+      owner: "argentina"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+    - from: 1852
+      owner: "buenos_aires_state"
+      cause: "ブエノスアイレス州が9月の革命でアルゼンチン連合から離れる"
+      note: "このピースには現在のエントレ・リオス州（アルゼンチン連合の側で、首都パラナがあった）も含まれている"
+      source: "https://en.wikipedia.org/wiki/State_of_Buenos_Aires"
+    - from: 1861
+      owner: "argentina"
+      cause: "パボンの戦いでミトレのブエノスアイレス軍が勝ち、国が再統一される"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Pav%C3%B3n"
+
+- id: ar_buenos_aires
+  name: ブエノスアイレス州（エントレ・リオスを含むピース）
+  select:
+    pieces: [ARG-Buenos_Aires]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "スペインが治めたのはブエノスアイレス市の周りとラ・プラタ川沿いだけで、サラド川より南のパンパは19世紀前半まで先住民の地だった（このピースにはエントレ・リオス州も含まれる）。ブエノスアイレス市は別のピース"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "nominal"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1831
+      owner: "argentina"
+      certainty: "nominal"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+    - from: 1833
+      owner: "argentina"
+      cause: "ロサスの砂漠遠征（1833–34年）で、ブエノスアイレス州の南のパンパに支配が広がる"
+      note: "州の南西の端は1879年の砂漠の征服まで先住民の地だった"
+      source: "https://en.wikipedia.org/wiki/Rosas%27_Desert_Campaign"
+    - from: 1852
+      owner: "buenos_aires_state"
+      cause: "ブエノスアイレス州が9月の革命でアルゼンチン連合から離れる"
+      note: "このピースには現在のエントレ・リオス州（アルゼンチン連合の側で、首都パラナがあった）も含まれている"
+      source: "https://en.wikipedia.org/wiki/State_of_Buenos_Aires"
+    - from: 1861
+      owner: "argentina"
+      cause: "パボンの戦いでミトレのブエノスアイレス軍が勝ち、国が再統一される"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Pav%C3%B3n"
+
+- id: ar_santa_fe
+  name: サンタフェ
+  select:
+    pieces: [ARG-Santa_Fe]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1815
+      owner: "liga_federal"
+      certainty: "uncertain"
+      cause: "アルティガスの連邦同盟（自由の民の同盟）に加わる"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1820
+      owner: "united_provinces_rio_plata"
+      cause: "アルティガスが敗れて連邦同盟が崩れる（諸州はそれぞれ自立した）"
+    - from: 1831
+      owner: "argentina"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+
+- id: ar_corrientes
+  name: コリエンテス
+  select:
+    pieces: [ARG-Corrientes]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1815
+      owner: "liga_federal"
+      cause: "アルティガスの連邦同盟（自由の民の同盟）に加わる"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1820
+      owner: "united_provinces_rio_plata"
+      cause: "アルティガスが敗れて連邦同盟が崩れる（諸州はそれぞれ自立した）"
+    - from: 1831
+      owner: "argentina"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+
+- id: ar_tucuman
+  name: トゥクマン地方（北西部・コルドバ）
+  select:
+    pieces: [ARG-Cordoba, ARG-Santiago_del_Estero, ARG-Tucuman, ARG-La_Roja, ARG-Ambato, ARG-Ancasti, ARG-Andalgala, ARG-Belen, ARG-Capayan, ARG-Capital_Catamarca, ARG-El_Alto, ARG-Fray_Mamerto_Esquiu, ARG-La_Paz, ARG-Paclin, ARG-Poman, ARG-Santa_Maria, ARG-Santa_Rosa, ARG-Tinogasta, ARG-Valle_Viejo, ARG-Molinos, ARG-Juan_B_Alberdi, ARG-Tafi_del_Valle, ARG-Anta, ARG-Cachi, ARG-Cafayate, ARG-Capital_Salta, ARG-Cerrillos, ARG-Chicoana, ARG-General_Guemes, ARG-Guachipas, ARG-Iruya, ARG-La_Caldera, ARG-La_Candelaria, ARG-La_Poma, ARG-La_Vina, ARG-Metan, ARG-Rosario_de_Lerma, ARG-Rosario_de_la_Frontera, ARG-San_Carlos, ARG-Santa_Victoria, ARG-Cochinoca, ARG-Dr_Manuel_Belgrano, ARG-El_Carmen, ARG-Humahuaca, ARG-Ledesma, ARG-Palpala, ARG-Rinconada, ARG-San_Antonio, ARG-San_Pedro, ARG-Santa_Barbara, ARG-Santa_Catalina, ARG-Tilcara, ARG-Tumbaya, ARG-Valle_Grande, ARG-Yavi]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "ペルー副王領のトゥクマン総督領（ポトシ銀山への道筋）"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1831
+      owner: "argentina"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+
+- id: ar_cuyo
+  name: クージョ（メンドサ・サンフアン・サンルイス）
+  select:
+    pieces: [ARG-Mendoza, ARG-San_Juan, ARG-San_Luis]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チリ総督領"
+      note: "1776年まではチリ総督領に属した"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1831
+      owner: "argentina"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+
+- id: ar_oran
+  name: オラン
+  select:
+    pieces: [ARG-Oran]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1794
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "サン・ラモン・デ・ラ・ヌエバ・オランが建設される"
+      source: "https://en.wikipedia.org/wiki/San_Ram%C3%B3n_de_la_Nueva_Or%C3%A1n"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1831
+      owner: "argentina"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      source: "https://ja.wikipedia.org/wiki/アルゼンチン連合"
+
+- id: ar_chaco
+  name: チャコ（アルゼンチン）
+  select:
+    pieces: [ARG-Chaco, ARG-Rivadavia, ARG-General_Jose_de_San_Martin]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ。トバ（コム）・モコビ・ウィチなどの先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "nominal"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+    - from: 1831
+      owner: "argentina"
+      certainty: "nominal"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+    - from: 1884
+      owner: "argentina"
+      cause: "ビクトリカのチャコ遠征で、アルゼンチン軍が先住民を制圧する"
+      note: "先住民の抵抗は1910年代まで続いた"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_the_Chaco"
+
+- id: ar_formosa
+  name: フォルモサ（中部チャコ）
+  select:
+    pieces: [ARG-Formosa]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ。トバ（コム）・モコビ・ウィチなどの先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "nominal"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+    - from: 1811
+      owner: "paraguay"
+      certainty: "nominal"
+      cause: "パラグアイの独立。パラグアイはベルメホ川までのチャコを主張した"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1870
+      owner: "argentina"
+      certainty: "nominal"
+      cause: "パラグアイ戦争の後、アルゼンチンがピルコマヨ川までの中部チャコを押さえる（1876年の条約で確定）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+    - from: 1884
+      owner: "argentina"
+      cause: "ビクトリカのチャコ遠征で、アルゼンチン軍が先住民を制圧する"
+      note: "先住民の抵抗は1910年代まで続いた"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_the_Chaco"
+
+- id: ar_misiones
+  name: ミシオネス
+  select:
+    pieces: [ARG-Misiones]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "イエズス会の伝道村（グアラニー）"
+      note: "イエズス会がグアラニー人を集めて開いた伝道村（レドゥクシオン）。三十の村の多くはこの地方とパラグアイ南部にあった"
+      source: "https://ja.wikipedia.org/wiki/グアラニーのイエズス会伝道所群"
+    - from: 1768
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "イエズス会がスペイン領から追放される"
+      source: "https://ja.wikipedia.org/wiki/イエズス会の追放"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1815
+      owner: "liga_federal"
+      certainty: "uncertain"
+      cause: "アルティガスの養子アンドレシートのもとで連邦同盟に加わる"
+      note: "1817年にポルトガル軍が西岸の伝道村を焼き払った"
+      source: "https://ja.wikipedia.org/wiki/ホセ・ヘルバシオ・アルティガス"
+    - from: 1820
+      owner: "united_provinces_rio_plata"
+      certainty: "nominal"
+      cause: "アルティガスが敗れて連邦同盟が崩れる"
+      note: "荒れた地となり、コリエンテス州とパラグアイが争った"
+    - from: 1831
+      owner: "argentina"
+      certainty: "nominal"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+    - from: 1838
+      owner: "paraguay"
+      certainty: "uncertain"
+      cause: "パラグアイがパラナ川の南岸（トリンチェラ・デ・サン・ホセ、今のポサダス）に拠点を置き、北部を押さえる"
+      note: "要確認：パラグアイの進出の年"
+    - from: 1865
+      owner: "argentina"
+      cause: "パラグアイ戦争で、パラグアイ軍が退く"
+      note: "1881年に国の直轄領（ミシオネス国家領）となった"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+
+- id: ar_puna
+  name: プーナ・デ・アタカマ
+  select:
+    pieces: [ARG-Susques, ARG-Los_Andes, ARG-Antofagasta_de_la_Sierra]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      note: "チャルカス（上ペルー）のアタカマ地方に属した"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "アルト・ペルー（ブエノスアイレスの軍）"
+      cause: "ブエノスアイレスの北部軍がスイパチャの戦いに勝ち、上ペルーが五月革命の政府に従う（11月）"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1811
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "ワキの戦いでブエノスアイレス軍が敗れ、ペルー副王の軍が上ペルーを取り戻す（6月）"
+    - from: 1825
+      owner: "bolivia"
+      cause: "ボリビアの独立"
+      source: "https://ja.wikipedia.org/wiki/ボリビアの歴史"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合の成立（サンタ・クルス）"
+      source: "https://en.wikipedia.org/wiki/Peru%E2%80%93Bolivian_Confederation"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ペルー・ボリビア連合の解体"
+    - from: 1879
+      owner: "chile"
+      certainty: "occupied"
+      label: "アタカマ（チリ軍の占領）"
+      cause: "太平洋戦争でチリがボリビアの沿岸とアタカマを占領する"
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+    - from: 1884
+      owner: "chile"
+      cause: "バルパライソ休戦協定でチリがボリビアの沿岸部を治める"
+      note: "ボリビアは1889年の条約でプーナをアルゼンチンに譲るとしたが、チリが押さえていた"
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+    - from: 1899
+      owner: "argentina"
+      cause: "プーナ・デ・アタカマの仲裁（アメリカ公使ブキャナン）で、大部分がアルゼンチンに与えられる"
+      source: "https://en.wikipedia.org/wiki/Puna_de_Atacama_dispute"
+
+- id: ar_la_pampa
+  name: ラ・パンパ
+  select:
+    pieces: [ARG-La_Pampa]
+  timeline:
+    - from: 1648
+      owner: "mapuche"
+      certainty: "uncertain"
+      note: "パンパの先住民の地。18世紀からマプーチェ化が進み、19世紀にはランケル人や、カルフクラのサリナス・グランデスの連合が力を持った"
+      source: "https://en.wikipedia.org/wiki/Calfucur%C3%A1"
+    - from: 1879
+      owner: "argentina"
+      cause: "ロカ将軍の「砂漠の征服」で、アルゼンチン軍がリオ・ネグロ川まで進む"
+      source: "https://ja.wikipedia.org/wiki/砂漠の征服"
+
+- id: ar_neuquen
+  name: ネウケン
+  select:
+    pieces: [ARG-Neuquen]
+  timeline:
+    - from: 1648
+      owner: "mapuche"
+      certainty: "uncertain"
+      note: "ペウエンチェ人などマプーチェの地"
+    - from: 1879
+      owner: "argentina"
+      certainty: "uncertain"
+      cause: "「砂漠の征服」で、アルゼンチン軍がネウケン川の合流点に達する"
+      source: "https://ja.wikipedia.org/wiki/砂漠の征服"
+    - from: 1884
+      owner: "argentina"
+      cause: "アンデス山麓の作戦（1881–83年）が終わり、マプーチェの抵抗が終わる"
+      source: "https://ja.wikipedia.org/wiki/砂漠の征服"
+
+- id: ar_rio_negro
+  name: リオ・ネグロ
+  select:
+    pieces: [ARG-Rio_Negro]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "テウェルチェ人などの地。スペインはパタゴニア全体を主張した"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      note: "1779年にリオ・ネグロ川の河口にカルメン・デ・パタゴネスが建てられた"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "nominal"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+    - from: 1831
+      owner: "argentina"
+      certainty: "nominal"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      note: "チリもパタゴニアを主張した（1881年の条約まで）"
+    - from: 1879
+      owner: "argentina"
+      cause: "ロカ将軍の「砂漠の征服」で、アルゼンチン軍がリオ・ネグロ川を押さえる"
+      source: "https://ja.wikipedia.org/wiki/砂漠の征服"
+
+- id: ar_patagonia
+  name: パタゴニア（チュブ・サンタクルス・ティエラ・デル・フエゴ）
+  select:
+    pieces: [ARG-Chubut, ARG-Santa_Cruz, ARG-Tierra_del_Fuego]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "テウェルチェ人・セルクナム人などの地。スペインはパタゴニア全体を主張した"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "nominal"
+      cause: "ブエノスアイレスの五月革命で自治政府（第一評議会）が成立する"
+    - from: 1831
+      owner: "argentina"
+      certainty: "nominal"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+      note: "チリもパタゴニアを主張した。1865年にチュブ川にウェールズ人が入植した"
+    - from: 1884
+      owner: "argentina"
+      cause: "「砂漠の征服」が終わり、パタゴニアに国の直轄領が置かれる（1881年のチリとの国境条約でアンデスの分水嶺とフエゴ島の分割が決まった）"
+      source: "https://en.wikipedia.org/wiki/Boundary_treaty_of_1881_between_Chile_and_Argentina"
+
+- id: falklands
+  name: フォークランド諸島（マルビナス諸島）
+  select:
+    pieces: [117-Falkland_Islands_UK]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1764
+      owner: "france"
+      label: "マルビナス諸島"
+      cause: "フランスのブーガンヴィルが東フォークランド島にポール・サン・ルイを建てる"
+      source: "https://ja.wikipedia.org/wiki/フォークランド諸島の歴史"
+    - from: 1767
+      owner: "spain"
+      label: "マルビナス諸島"
+      cause: "フランスがスペインに入植地を引き渡す（プエルト・ソレダー）"
+      note: "イギリスも1766–74年に西フォークランド島のポート・エグモントに拠点を置いた（1770年の危機）"
+      source: "https://ja.wikipedia.org/wiki/フォークランド諸島の歴史"
+    - from: 1811
+      owner: null
+      cause: "スペインの守備隊が引き揚げる"
+      note: "アザラシ・捕鯨船が立ち寄るだけになった"
+    - from: 1820
+      owner: "united_provinces_rio_plata"
+      certainty: "nominal"
+      cause: "リオ・デ・ラ・プラタ連合州が領有を宣言する"
+      note: "1829年にブエノスアイレス政府がベルネを長官に任じた"
+    - from: 1831
+      owner: "argentina"
+      certainty: "nominal"
+      cause: "連邦協定（1831年）で諸州がアルゼンチン連合としてまとまる（外交はブエノスアイレス州知事に委ねる）"
+    - from: 1833
+      owner: "britain"
+      label: "フォークランド諸島"
+      cause: "イギリスが諸島を占領し、アルゼンチンの守備隊を退去させる（1月）"
+      note: "アルゼンチンは今もマルビナス諸島として領有を主張している。1982年4–6月にアルゼンチン軍が占領した（フォークランド戦争）"
+      source: "https://ja.wikipedia.org/wiki/フォークランド諸島の歴史"
+
+- id: south_georgia
+  name: サウスジョージア・サウスサンドウィッチ諸島
+  select:
+    pieces: [SGS-South_Georgia_and_the_South_Sandwich_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1775
+      owner: "britain"
+      certainty: "nominal"
+      label: "サウスジョージア"
+      cause: "クックが上陸し、イギリス領を宣言する"
+      source: "https://en.wikipedia.org/wiki/History_of_South_Georgia_and_the_South_Sandwich_Islands"
+    - from: 1908
+      owner: "britain"
+      label: "サウスジョージア"
+      cause: "フォークランド諸島属領として治められる（1904年にグリトビケンに捕鯨基地）"
+      note: "アルゼンチンも領有を主張し、1982年4月に一時占領した"
+      source: "https://en.wikipedia.org/wiki/History_of_South_Georgia_and_the_South_Sandwich_Islands"
+
+- id: cl_central
+  name: チリ中部・北部（サンティアゴ・バルパライソ・コピアポなど）
+  select:
+    pieces: [CHL-Provincia_de_Elqui, CHL-Provincia_de_Limari, CHL-Provincia_de_Choapa, CHL-Provincia_de_Petorca, CHL-Provincia_de_Los_Andes, CHL-Provincia_de_San_Felipe_de_Aconcagua, CHL-Provincia_de_Quillota, CHL-Provincia_de_Marga_Marga, CHL-Provincia_de_Valparaiso, CHL-Provincia_de_San_Antonio, CHL-Provincia_de_Santiago, CHL-Provincia_de_Cordillera, CHL-Provincia_de_Chacabuco, CHL-Provincia_de_Maipo, CHL-Provincia_de_Talagante, CHL-Provincia_de_Melipilla, CHL-Provincia_de_Cachapoal, CHL-Provincia_de_Cardenal_Caro, CHL-Provincia_de_Colchagua, CHL-Provincia_de_Curico, CHL-Provincia_de_Talca, CHL-Provincia_de_Linares, CHL-Provincia_de_Cauquenes, CHL-Provincia_de_Copiapo, CHL-Provincia_de_Huasco, CHL-Provincia_de_Chanaral]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チリ総督領"
+      note: "チリ総督領（ペルー副王領の中の総督領）。北のコピアポ・ワスコは銀・銅の鉱山地帯"
+    - from: 1810
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "サンティアゴで自治政府（第一評議会）が成立する（9月18日。名目上はフェルナンド7世の名で統治）"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1814
+      owner: "spain"
+      label: "チリ総督領"
+      cause: "ランカグアの戦いで愛国派が敗れ、スペインの支配が戻る（レコンキスタ）"
+      source: "https://ja.wikipedia.org/wiki/ランカグアの戦い"
+    - from: 1817
+      owner: "chile"
+      cause: "サン・マルティンとオイギンスのアンデス軍がチャカブコの戦いに勝つ"
+      source: "https://ja.wikipedia.org/wiki/チャカブコの戦い"
+
+- id: cl_south
+  name: ニュブレ・コンセプシオン・ビオビオ
+  select:
+    pieces: [CHL-Provincia_de_Diguillin, CHL-Provincia_de_Punilla, CHL-Provincia_de_Itata, CHL-Provincia_de_Concepcion, CHL-Provincia_de_Bio_Bio]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チリ総督領"
+      note: "ビオビオ川がマプーチェの地との境（1641年のキリンの会議）"
+    - from: 1810
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "サンティアゴで自治政府（第一評議会）が成立する（9月18日。名目上はフェルナンド7世の名で統治）"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1813
+      owner: "spain"
+      label: "チリ総督領"
+      cause: "ペルー副王が送った王党派軍（パレハ）が南部に上陸し、チジャンなどを押さえる"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1814
+      owner: "spain"
+      label: "チリ総督領"
+      cause: "ランカグアの戦いで愛国派が敗れ、スペインの支配が戻る（レコンキスタ）"
+      source: "https://ja.wikipedia.org/wiki/ランカグアの戦い"
+    - from: 1817
+      owner: "chile"
+      cause: "サン・マルティンとオイギンスのアンデス軍がチャカブコの戦いに勝つ"
+      source: "https://ja.wikipedia.org/wiki/チャカブコの戦い"
+
+- id: cl_arauco
+  name: アラウコ
+  select:
+    pieces: [CHL-Provincia_de_Arauco]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "uncertain"
+      label: "チリ総督領"
+      note: "ビオビオ川の南の辺境。アラウコの砦の周りのほかはマプーチェ（ラフケンチェ）の地"
+    - from: 1810
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "サンティアゴで自治政府（第一評議会）が成立する（9月18日。名目上はフェルナンド7世の名で統治）"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1813
+      owner: "spain"
+      certainty: "uncertain"
+      label: "チリ総督領"
+      cause: "王党派軍が南部を押さえる"
+    - from: 1817
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "サン・マルティンとオイギンスのアンデス軍がチャカブコの戦いに勝つ"
+      note: "1819–21年にはベナビデスの王党派ゲリラとマプーチェの一部が抵抗した（「死の戦争」）"
+      source: "https://en.wikipedia.org/wiki/Guerra_a_muerte"
+    - from: 1862
+      owner: "chile"
+      cause: "チリ軍がアラウコの海岸（レブ）を押さえ、アラウカニア占領を始める"
+      source: "https://ja.wikipedia.org/wiki/アラウカニア占領"
+
+- id: cl_malleco
+  name: マジェコ（アラウカニア北部）
+  select:
+    pieces: [CHL-Provincia_de_Malleco]
+  timeline:
+    - from: 1648
+      owner: "mapuche"
+      note: "マプーチェの地。スペインは1641年のキリンの会議などでビオビオ川を境と認めた"
+      source: "https://ja.wikipedia.org/wiki/アラウコ戦争"
+    - from: 1862
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "チリ軍がアンゴルを再建し、アラウカニア占領を始める（1868年にマジェコ川に防衛線）"
+      source: "https://ja.wikipedia.org/wiki/アラウカニア占領"
+    - from: 1881
+      owner: "chile"
+      cause: "チリ軍がカウティン川まで進み、テムコを建てる"
+      source: "https://ja.wikipedia.org/wiki/アラウカニア占領"
+
+- id: cl_cautin
+  name: カウティン（アラウカニア南部）
+  select:
+    pieces: [CHL-Provincia_de_Cautin]
+  timeline:
+    - from: 1648
+      owner: "mapuche"
+      note: "マプーチェの地。1860年にフランス人オルリ＝アントワーヌがこの地で「アラウカニア・パタゴニア王国」を名乗った"
+    - from: 1881
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "チリ軍がテムコを建て、マプーチェの最後の大反乱（11月）を抑える"
+      source: "https://ja.wikipedia.org/wiki/アラウカニア占領"
+    - from: 1883
+      owner: "chile"
+      cause: "チリ軍がビジャリカを占領し、アラウカニア占領が終わる（1月）"
+      source: "https://ja.wikipedia.org/wiki/アラウカニア占領"
+
+- id: cl_valdivia
+  name: バルディビア
+  select:
+    pieces: [CHL-Provincia_de_Valdivia]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "uncertain"
+      label: "チリ総督領"
+      note: "1645年に再建された要塞都市（ペルー副王の直轄。オランダなどの侵入に備えた）。周りはマプーチェ（ウイジチェ）の地"
+      source: "https://ja.wikipedia.org/wiki/バルディビア"
+    - from: 1820
+      owner: "chile"
+      cause: "コクラン提督のチリ海軍がバルディビアの要塞を攻め落とす（2月）"
+      source: "https://en.wikipedia.org/wiki/Capture_of_Valdivia"
+
+- id: cl_osorno
+  name: オソルノ・ランコ
+  select:
+    pieces: [CHL-Provincia_de_Osorno, CHL-Provincia_de_Ranco]
+  timeline:
+    - from: 1648
+      owner: "mapuche"
+      note: "ウイジチェ（南部マプーチェ）の地。スペインのオソルノの町は1604年に放棄された"
+    - from: 1793
+      owner: "spain"
+      certainty: "uncertain"
+      label: "チリ総督領"
+      cause: "ラス・カノアスの会議でウイジチェがスペインの入植を認める"
+      source: "https://en.wikipedia.org/wiki/Osorno,_Chile"
+    - from: 1796
+      owner: "spain"
+      label: "チリ総督領"
+      cause: "オソルノが再建される"
+    - from: 1820
+      owner: "chile"
+      cause: "バルディビア攻略の後、チリ軍がオソルノを押さえる"
+      source: "https://en.wikipedia.org/wiki/Capture_of_Valdivia"
+
+- id: cl_llanquihue
+  name: ジャンキウエ
+  select:
+    pieces: [CHL-Provincia_de_Llanquihue]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "uncertain"
+      label: "チリ総督領"
+      note: "チロエ島の対岸のカルブコ・カレルマプの砦のほかは森林"
+    - from: 1826
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "チロエの王党派が降伏する（タンタウコ条約、1月）"
+      source: "https://ja.wikipedia.org/wiki/チロエ島"
+    - from: 1853
+      owner: "chile"
+      cause: "プエルト・モントが建てられ、ドイツ人の入植が始まる（1852年–）"
+      source: "https://ja.wikipedia.org/wiki/プエルト・モント"
+
+- id: cl_chiloe
+  name: チロエ
+  select:
+    pieces: [CHL-Provincia_de_Chiloe]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チリ総督領"
+      note: "カストロ・チャカオなど。1767–1784年はペルー副王の直轄"
+    - from: 1817
+      owner: "spain"
+      label: "チロエ（スペイン王党派）"
+      cause: "チリ本土の独立後も、チロエは王党派の拠点として残る"
+    - from: 1826
+      owner: "chile"
+      cause: "チロエの王党派が降伏し、チリに編入される（タンタウコ条約、1月）"
+      source: "https://ja.wikipedia.org/wiki/チロエ島"
+
+- id: cl_patagonia
+  name: アイセン・パレナ（西パタゴニア）
+  select:
+    pieces: [CHL-Provincia_de_Palena, CHL-Provincia_de_Aysen, CHL-Provincia_de_Coyhaique, CHL-Provincia_de_General_Carrera, CHL-Provincia_de_Capitan_Prat]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チリ総督領"
+      note: "チョノ人・カウェスカル人などが舟で暮らす地"
+    - from: 1818
+      owner: "chile"
+      certainty: "nominal"
+      cause: "チリの独立宣言"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1881
+      owner: "chile"
+      cause: "アルゼンチンとの国境条約で、アンデスの分水嶺が境とされる"
+      note: "アイセンの境は1902年のイギリス国王エドワード7世の裁定で決まった。入植は20世紀から"
+      source: "https://en.wikipedia.org/wiki/Boundary_treaty_of_1881_between_Chile_and_Argentina"
+
+- id: cl_magallanes
+  name: マガジャネス（プンタ・アレナス）
+  select:
+    pieces: [CHL-Provincia_de_Magallanes]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チリ総督領"
+      note: "テウェルチェ人・カウェスカル人の地"
+    - from: 1818
+      owner: "chile"
+      certainty: "nominal"
+      cause: "チリの独立宣言"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1843
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "チリがマゼラン海峡にブルネス砦を築く（1848年にプンタ・アレナス）"
+      note: "アルゼンチンも海峡の領有を主張した"
+      source: "https://ja.wikipedia.org/wiki/プンタ・アレナス"
+    - from: 1881
+      owner: "chile"
+      cause: "アルゼンチンとの国境条約で、マゼラン海峡がチリ領と決まる"
+      source: "https://en.wikipedia.org/wiki/Boundary_treaty_of_1881_between_Chile_and_Argentina"
+
+- id: cl_fuego
+  name: ティエラ・デル・フエゴ（チリ）・ウルティマ・エスペランサ
+  select:
+    pieces: [CHL-Provincia_de_Ultima_Esperanza, CHL-Provincia_de_Tierra_del_Fuego, CHL-Provincia_de_la_Antartica_Chilena]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チリ総督領"
+      note: "セルクナム人・ヤーガン人などの地"
+    - from: 1818
+      owner: "chile"
+      certainty: "nominal"
+      cause: "チリの独立宣言"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1881
+      owner: "chile"
+      cause: "アルゼンチンとの国境条約で、フエゴ島の西半分とビーグル水道の南がチリ領と決まる"
+      note: "ビーグル水道の島々（ピクトン・レノックス・ヌエバ）は1984年の平和友好条約でチリ領と確定した"
+      source: "https://en.wikipedia.org/wiki/Boundary_treaty_of_1881_between_Chile_and_Argentina"
+
+- id: cl_easter_island
+  name: イースター島（ラパ・ヌイ）
+  select:
+    pieces: [CHL-Easter_Island_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ポリネシア系のラパ・ヌイの人々の島。1722年にオランダのロッヘフェーンが来航し、1770年にスペインが領有を宣言したが統治しなかった"
+    - from: 1888
+      owner: "chile"
+      cause: "チリが併合する（9月）"
+      source: "https://ja.wikipedia.org/wiki/イースター島"
+
+- id: cl_atacama_south
+  name: アントファガスタ南部（南緯24度以南）
+  select:
+    pieces: [CHL-Provincia_de_Antofagasta_South_of_24S]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "チリ総督領"
+      note: "アタカマ砂漠。パポソ付近がチリとチャルカス（上ペルー）の境とされた"
+    - from: 1818
+      owner: "chile"
+      certainty: "uncertain"
+      cause: "チリの独立宣言。ボリビアとの境は決まっていなかった"
+      source: "https://ja.wikipedia.org/wiki/チリの独立"
+    - from: 1866
+      owner: "chile"
+      cause: "チリ＝ボリビア国境条約で南緯24度が境とされる（23–25度の鉱山の税は折半）"
+      source: "https://en.wikipedia.org/wiki/Boundary_Treaty_of_1866_between_Chile_and_Bolivia"
+
+- id: cl_litoral
+  name: アントファガスタ（ボリビアの沿岸部）
+  select:
+    pieces: [CHL-Provincia_de_Antofagasta, CHL-Provincia_de_Tocopilla, CHL-Provincia_de_El_Loa]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "チャルカス（ペルー副王領）"
+      note: "チャルカス（上ペルー）のアタカマ地方"
+    - from: 1776
+      owner: "spain"
+      label: "チャルカス（ラ・プラタ副王領）"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1810
+      owner: "united_provinces_rio_plata"
+      certainty: "uncertain"
+      label: "アルト・ペルー（ブエノスアイレスの軍）"
+      cause: "ブエノスアイレスの北部軍がスイパチャの戦いに勝ち、上ペルーが五月革命の政府に従う（11月）"
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1811
+      owner: "spain"
+      label: "チャルカス（ペルー副王領の軍の支配）"
+      cause: "ワキの戦いでブエノスアイレス軍が敗れ、ペルー副王の軍が上ペルーを取り戻す（6月）"
+    - from: 1825
+      owner: "bolivia"
+      cause: "ボリビアの独立（コビハが海への出口）"
+      note: "1860年代から硝石・銀の採掘にチリ人とチリ資本が入った"
+      source: "https://ja.wikipedia.org/wiki/ボリビアの歴史"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "ボリビア国"
+      cause: "ペルー・ボリビア連合の成立（サンタ・クルス）"
+      source: "https://en.wikipedia.org/wiki/Peru%E2%80%93Bolivian_Confederation"
+    - from: 1839
+      owner: "bolivia"
+      cause: "ペルー・ボリビア連合の解体"
+    - from: 1879
+      owner: "chile"
+      certainty: "occupied"
+      label: "アントファガスタ（チリ軍の占領）"
+      cause: "硝石への課税をめぐってチリ軍がアントファガスタを占領し、太平洋戦争が始まる（2月）"
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+    - from: 1884
+      owner: "chile"
+      cause: "バルパライソ休戦協定でチリが沿岸部を治める（1904年の平和友好条約で正式に割譲）"
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+
+- id: cl_tarapaca
+  name: タラパカ
+  select:
+    pieces: [CHL-Provincia_de_Iquique, CHL-Provincia_del_Tamarugal]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクチョの戦いの後、ペルー南部の王党派も降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合の成立（サンタ・クルス）"
+      source: "https://en.wikipedia.org/wiki/Peru%E2%80%93Bolivian_Confederation"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦いでチリ軍などが勝ち、ペルー・ボリビア連合が解体する"
+    - from: 1879
+      owner: "chile"
+      certainty: "occupied"
+      label: "タラパカ（チリ軍の占領）"
+      cause: "太平洋戦争でチリ軍がタラパカを占領する（11月）"
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+    - from: 1884
+      owner: "chile"
+      cause: "アンコン条約（1883年10月調印、1884年批准）でペルーがタラパカをチリに譲る"
+      note: "硝石の産地。チリの輸出と財政を支えた"
+      source: "https://ja.wikipedia.org/wiki/アンコン条約"
+
+- id: cl_arica
+  name: アリカ・パリナコタ
+  select:
+    pieces: [CHL-Provincia_de_Arica, CHL-Provincia_de_Parinacota]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "ポトシの銀の積み出し港"
+    - from: 1824
+      owner: "peru"
+      cause: "アヤクチョの戦いの後、ペルー南部の王党派も降伏する"
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+    - from: 1836
+      owner: "peru_bolivia"
+      label: "南ペルー国"
+      cause: "ペルー・ボリビア連合の成立（サンタ・クルス）"
+      source: "https://en.wikipedia.org/wiki/Peru%E2%80%93Bolivian_Confederation"
+    - from: 1839
+      owner: "peru"
+      cause: "ユンガイの戦いでチリ軍などが勝ち、ペルー・ボリビア連合が解体する"
+    - from: 1880
+      owner: "chile"
+      certainty: "occupied"
+      label: "アリカ（チリ軍の占領）"
+      cause: "太平洋戦争でチリ軍がアリカを攻め落とす（6月）"
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争_(1879年-1884年)"
+    - from: 1884
+      owner: "chile"
+      certainty: "uncertain"
+      label: "アリカ（チリの管理）"
+      cause: "アンコン条約で、タクナ・アリカは10年間チリが治め、その後に住民投票で帰属を決めることになる"
+      note: "住民投票は行われず、チリは「チリ化」を進めた"
+      source: "https://ja.wikipedia.org/wiki/アンコン条約"
+    - from: 1929
+      owner: "chile"
+      cause: "リマ条約でタクナはペルーに、アリカはチリに分けられる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Lima_(1929)"
+
+- id: py_core
+  name: パラグアイ中部（アスンシオンなど）
+  select:
+    pieces: [PRY-ASUNCION, PRY-CENTRAL, PRY-CORDILLERA, PRY-PARAGUARI, PRY-GUAIRA, PRY-CAAZAPA]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "ペルー副王領のパラグアイ総督領（都アスンシオン）"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      cause: "アスンシオンで独立派が総督を退け、パラグアイが独立する（5月）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1869
+      owner: "brazil"
+      certainty: "occupied"
+      label: "パラグアイ（連合軍の占領）"
+      cause: "連合軍がアスンシオンを占領する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+    - from: 1870
+      owner: "paraguay"
+      cause: "ソラノ・ロペスがセロ・コラで戦死し、パラグアイ戦争が終わる（3月）"
+      note: "ブラジル軍は1876年までアスンシオンに残った。人口の大きな部分を失った"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+
+- id: py_neembucu
+  name: ニェエンブク（ウマイタ）
+  select:
+    pieces: [PRY-NEEMBUCU]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "ペルー副王領のパラグアイ総督領（都アスンシオン）"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      cause: "アスンシオンで独立派が総督を退け、パラグアイが独立する（5月）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1868
+      owner: "brazil"
+      certainty: "occupied"
+      label: "パラグアイ（連合軍の占領）"
+      cause: "連合軍（ブラジル・アルゼンチン・ウルグアイ）がウマイタを攻め落とす（8月）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+    - from: 1870
+      owner: "paraguay"
+      cause: "ソラノ・ロペスがセロ・コラで戦死し、パラグアイ戦争が終わる（3月）"
+      note: "ブラジル軍は1876年までアスンシオンに残った。人口の大きな部分を失った"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+
+- id: py_missions
+  name: パラグアイ南部（ミシオネス・イタプア）
+  select:
+    pieces: [PRY-MISIONES, PRY-ITAPUA]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "イエズス会の伝道村（グアラニー）"
+      note: "イエズス会がグアラニー人を集めて開いた伝道村（トリニダー・ヘスースなど）"
+      source: "https://ja.wikipedia.org/wiki/グアラニーのイエズス会伝道所群"
+    - from: 1768
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "イエズス会がスペイン領から追放される"
+      source: "https://ja.wikipedia.org/wiki/イエズス会の追放"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      cause: "アスンシオンで独立派が総督を退け、パラグアイが独立する（5月）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1869
+      owner: "brazil"
+      certainty: "occupied"
+      label: "パラグアイ（連合軍の占領）"
+      cause: "連合軍がアスンシオンを占領する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+    - from: 1870
+      owner: "paraguay"
+      cause: "ソラノ・ロペスがセロ・コラで戦死し、パラグアイ戦争が終わる（3月）"
+      note: "ブラジル軍は1876年までアスンシオンに残った。人口の大きな部分を失った"
+      source: "https://ja.wikipedia.org/wiki/パラグアイ戦争"
+
+- id: py_north
+  name: サン・ペドロ・カアグアス
+  select:
+    pieces: [PRY-SAN_PEDRO, PRY-CAAGUAZU]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領"
+      note: "ペルー副王領のパラグアイ総督領（都アスンシオン）"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      cause: "アスンシオンで独立派が総督を退け、パラグアイが独立する（5月）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+
+- id: py_concepcion
+  name: コンセプシオン（パラグアイ）
+  select:
+    pieces: [PRY-CONCEPCION]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "ムバヤ人（グアイクル系）の地"
+    - from: 1773
+      owner: "spain"
+      label: "ペルー副王領"
+      cause: "ビジャ・レアル・デ・ラ・コンセプシオンが建設される"
+    - from: 1776
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      cause: "アスンシオンで独立派が総督を退け、パラグアイが独立する（5月）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+
+- id: py_east
+  name: パラグアイ東部（アルト・パラナ・カニンデジュ・アマンバイ）
+  select:
+    pieces: [PRY-ALTO_PARANA, PRY-CANINDEYU, PRY-AMAMBAY]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "旧グアイラ地方の西部。森林で、先住民とマテ茶の採集地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      cause: "アスンシオンで独立派が総督を退け、パラグアイが独立する（5月）"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+
+- id: py_olimpo
+  name: フエルテ・オリンポ
+  select:
+    pieces: [PRY-Fuerte_Olimpo]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ（チャコ・ボレアル）。先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1792
+      owner: "spain"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "パラグアイ川の西岸にボルボン砦（のちのオリンポ砦）が築かれる"
+      source: "https://en.wikipedia.org/wiki/Fuerte_Olimpo"
+    - from: 1811
+      owner: "paraguay"
+      cause: "パラグアイの独立"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+
+- id: py_chaco_river
+  name: チャコのパラグアイ川沿い（プエルト・カサードなど）
+  select:
+    pieces: [PRY-Bahia_Negra, PRY-Carmelo_Peralta, PRY-Puerto_Casado, PRY-Puerto_Pinasco]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ（チャコ・ボレアル）。先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      certainty: "nominal"
+      cause: "パラグアイの独立"
+      note: "ボリビアもチャコ・ボレアルを主張した"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1889
+      owner: "paraguay"
+      cause: "チャコの国有地が売られ、川沿いにケブラチョ（タンニン）の工場と港（プエルト・カサードなど）が開かれる"
+      source: "https://en.wikipedia.org/wiki/Puerto_Casado"
+
+- id: py_villa_hayes
+  name: ビジャ・アジェス（ビジャ・オクシデンタル）
+  select:
+    pieces: [PRY-Villa_Hayes, PRY-Benjamin_Aceval, PRY-Jose_Falcon, PRY-Nanawa]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ（チャコ・ボレアル）。先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      certainty: "nominal"
+      cause: "パラグアイの独立"
+      note: "ボリビアもチャコ・ボレアルを主張した"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1855
+      owner: "paraguay"
+      certainty: "uncertain"
+      cause: "フランス人の入植地ヌエバ・ブルデオスが開かれる"
+      source: "https://en.wikipedia.org/wiki/Villa_Hayes"
+    - from: 1869
+      owner: "argentina"
+      certainty: "occupied"
+      label: "ビジャ・オクシデンタル（アルゼンチン軍の占領）"
+      cause: "パラグアイ戦争で、アルゼンチンがピルコマヨ川の北の川岸を占領する"
+      source: "https://en.wikipedia.org/wiki/Villa_Hayes"
+    - from: 1879
+      owner: "paraguay"
+      cause: "アメリカ大統領ヘイズの仲裁裁定（1878年）でパラグアイ領と決まり、アルゼンチン軍が引き揚げる（5月）"
+      source: "https://en.wikipedia.org/wiki/Villa_Hayes"
+
+- id: py_chaco_central
+  name: チャコ中部（プレシデンテ・アジェス西部）
+  select:
+    pieces: [PRY-Tte_1Ro_Manuel_Irala_Fernandez, PRY-Tte_Esteban_Martinez, PRY-General_Jose_Maria_Bruguez]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ（チャコ・ボレアル）。先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      certainty: "nominal"
+      cause: "パラグアイの独立"
+      note: "ボリビアもチャコ・ボレアルを主張した"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1932
+      owner: "paraguay"
+      cause: "チャコ戦争でパラグアイ軍がチャコ中部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/チャコ戦争"
+
+- id: py_mennonite
+  name: メノナイト入植地（フィラデルフィア・ロマ・プラタ）
+  select:
+    pieces: [PRY-Filadelfia, PRY-Loma_Plata]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ（チャコ・ボレアル）。先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      certainty: "nominal"
+      cause: "パラグアイの独立"
+      note: "ボリビアもチャコ・ボレアルを主張した"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1927
+      owner: "paraguay"
+      cause: "カナダから来たメノナイト（ドイツ系の再洗礼派）がチャコ中部に入植する（メノー入植地。1930年にフェルンハイム）"
+      source: "https://en.wikipedia.org/wiki/Mennonites_in_Paraguay"
+
+- id: py_mariscal
+  name: チャコ西部（マリスカル・エスティガリビア）
+  select:
+    pieces: [PRY-Mariscal_Estigarribia]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領"
+      note: "グラン・チャコ（チャコ・ボレアル）。先住民の地"
+    - from: 1776
+      owner: "spain"
+      certainty: "nominal"
+      label: "リオ・デ・ラ・プラタ副王領"
+      cause: "スペインがブエノスアイレスを都とするリオ・デ・ラ・プラタ副王領を新設する（ラ・プラタ地方・パラグアイ・上ペルー・クージョを含む）"
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1811
+      owner: "paraguay"
+      certainty: "nominal"
+      cause: "パラグアイの独立"
+      note: "ボリビアもチャコ・ボレアルを主張した"
+      source: "https://ja.wikipedia.org/wiki/パラグアイの歴史"
+    - from: 1928
+      owner: "bolivia"
+      certainty: "uncertain"
+      cause: "ボリビアがチャコ西部に砦（フォルティン）を並べて進出する（1928年のバングアルディア砦の衝突）"
+      note: "年は目安。境界のない係争地で、両国の砦が向き合った"
+      source: "https://ja.wikipedia.org/wiki/チャコ戦争"
+    - from: 1933
+      owner: "paraguay"
+      certainty: "uncertain"
+      cause: "チャコ戦争でパラグアイ軍がボリビアの砦（ムニョス砦など）を奪い、西へ進む"
+      source: "https://ja.wikipedia.org/wiki/チャコ戦争"
+    - from: 1935
+      owner: "paraguay"
+      cause: "チャコ戦争の停戦（6月。1938年の講和条約でチャコの大部分がパラグアイ領と決まる）"
+      source: "https://ja.wikipedia.org/wiki/チャコ戦争"

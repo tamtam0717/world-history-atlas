@@ -74,6 +74,10 @@ export interface HistEvent extends Sourced {
   importance?: number;
   /** 出来事の代表点 [経度, 緯度] の列（関係国の首都・領域から build_data.mjs が計算） */
   pts?: [number, number][];
+  /** 場所（at / lon・lat）が書いてある出来事。代表点だけで「地図の範囲内」を判定する */
+  fixed?: boolean;
+  /** 関係国の領土で判定するときに数える範囲（atlas.eventBoxes の番号） */
+  bx?: number;
 }
 
 /** [開始年, 所属政体 index, 上位政体 index, 確からしさ index, 地域 index] */
@@ -194,6 +198,8 @@ export interface Atlas {
   regions: Region[];
   pieceTimelines: PieceState[][];
   events: HistEvent[];
+  /** 出来事の領土判定の範囲 [西, 南, 東, 北]（古い atlas.json にはない） */
+  eventBoxes?: [number, number, number, number][];
   seas: Sea[];
   milestones: Milestone[];
   cities: City[];

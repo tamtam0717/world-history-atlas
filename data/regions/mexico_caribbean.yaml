@@ -1,0 +1,3554 @@
+# A3 メキシコ・中米・カリブの地域と所属の変遷（1648–2025）
+# このファイルは scratchpad/a3/gen.py で生成した（各ピースはちょうど1つの地域に属する）。手で直してもよい。
+# 植民地は宗主国の色＋label。戦争中の占領は、何年も続いたもの・地図の理解に必要なもの（年末の状態）だけ certainty: occupied。
+# プエルトリコ（USA-Puerto_Rico）とアメリカ領ヴァージン諸島（USA-United_States_Virgin_Islands）は iso が USA だが A3 の担当。
+
+- id: mx_aguascalientes
+  name: アグアスカリエンテス
+  select:
+    pieces: [MEX-Aguascalientes]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_baja_california
+  name: バハ・カリフォルニア
+  select:
+    pieces: [MEX-Baja_California]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1774
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "ドミニコ会が半島北部に伝道所を広げる"
+      source: "https://en.wikipedia.org/wiki/Spanish_missions_in_Baja_California"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+
+- id: mx_baja_california_sur
+  name: バハ・カリフォルニア・スル
+  select:
+    pieces: [MEX-Baja_California_Sur]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1697
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "イエズス会のサルバティエラがロレトに伝道所を開く"
+      source: "https://en.wikipedia.org/wiki/Loreto,_Baja_California_Sur"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1847
+      owner: "usa"
+      certainty: "occupied"
+      label: "メキシコ（アメリカ軍の占領）"
+      cause: "アメリカ＝メキシコ戦争でアメリカ軍が占領"
+      source: "https://ja.wikipedia.org/wiki/米墨戦争"
+    - from: 1848
+      owner: "mexico"
+      cause: "グアダルーペ・イダルゴ条約の後、アメリカ軍が撤退"
+      source: "https://ja.wikipedia.org/wiki/グアダルーペ・イダルゴ条約"
+
+- id: mx_campeche
+  name: カンペチェ
+  select:
+    pieces: [MEX-Campeche]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1841
+      owner: "yucatan"
+      cause: "ユカタン共和国がメキシコからの独立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1843
+      owner: "mexico"
+      cause: "ユカタンがメキシコとの協定で復帰する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1846
+      owner: "yucatan"
+      cause: "ユカタンが再び分離する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1848
+      owner: "mexico"
+      cause: "カスタ戦争に追いつめられたユカタンがメキシコに復帰する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_chihuahua
+  name: チワワ
+  select:
+    pieces: [MEX-Chihuahua]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・エスパーニャ副王領"
+      note: "ヌエバ・ビスカヤの北部。パラルの銀山の北はアパッチ・タラウマラなどの地"
+    - from: 1709
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "チワワの町が建設される（銀山）"
+      source: "https://en.wikipedia.org/wiki/Chihuahua_City"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1865
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍がオアハカ・ソノラ・チワワを押さえる"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_coahuila_de_zaragoza
+  name: コアウイラ
+  select:
+    pieces: [MEX-Coahuila_de_Zaragoza]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・エスパーニャ副王領"
+      note: "サルティーヨの周り以外は先住民の地"
+    - from: 1689
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "モンクローバが建設され、コアウイラ州が置かれる"
+      source: "https://en.wikipedia.org/wiki/Monclova"
+    - from: 1750
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1846
+      owner: "usa"
+      certainty: "occupied"
+      label: "メキシコ（アメリカ軍の占領）"
+      cause: "アメリカ＝メキシコ戦争でアメリカ軍が占領"
+      source: "https://ja.wikipedia.org/wiki/米墨戦争"
+    - from: 1848
+      owner: "mexico"
+      cause: "グアダルーペ・イダルゴ条約の後、アメリカ軍が撤退"
+      source: "https://ja.wikipedia.org/wiki/グアダルーペ・イダルゴ条約"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_colima
+  name: コリマ
+  select:
+    pieces: [MEX-Colima]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_distrito_federal
+  name: メキシコ市（連邦区）
+  select:
+    pieces: [MEX-Distrito_Federal]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1847
+      owner: "usa"
+      certainty: "occupied"
+      label: "メキシコ（アメリカ軍の占領）"
+      cause: "アメリカ＝メキシコ戦争でアメリカ軍が占領"
+      source: "https://ja.wikipedia.org/wiki/米墨戦争"
+    - from: 1848
+      owner: "mexico"
+      cause: "グアダルーペ・イダルゴ条約の後、アメリカ軍が撤退"
+      source: "https://ja.wikipedia.org/wiki/グアダルーペ・イダルゴ条約"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_durango
+  name: ドゥランゴ
+  select:
+    pieces: [MEX-Durango]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_guanajuato
+  name: グアナフアト
+  select:
+    pieces: [MEX-Guanajuato]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_guerrero
+  name: ゲレロ
+  select:
+    pieces: [MEX-Guerrero]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1812
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "アナワク会議（モレーロス）"
+      cause: "モレーロスの独立派が南部を押さえ、アカプルコを取り（1813年4月）、チルパンシンゴ会議で独立を宣言する（1813年11月）"
+      source: "https://ja.wikipedia.org/wiki/ホセ・マリア・モレーロス"
+    - from: 1814
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "王党派がアカプルコ・チルパンシンゴを奪い返す（山地のゲリラは1821年まで続く）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+
+- id: mx_hidalgo
+  name: イダルゴ
+  select:
+    pieces: [MEX-Hidalgo]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_jalisco
+  name: ハリスコ
+  select:
+    pieces: [MEX-Jalisco]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_mexico
+  name: メキシコ州
+  select:
+    pieces: [MEX-Mexico]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_michoacan_de_ocampo
+  name: ミチョアカン
+  select:
+    pieces: [MEX-Michoacan_de_Ocampo]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_morelos
+  name: モレロス
+  select:
+    pieces: [MEX-Morelos]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_nayarit
+  name: ナヤリット
+  select:
+    pieces: [MEX-Nayarit]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・エスパーニャ副王領"
+      note: "山地のナヤリ（コラ人）はスペインに服していなかった"
+    - from: 1722
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "スペイン軍がナヤリの山地を征服する"
+      source: "https://en.wikipedia.org/wiki/Cora_people"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_nuevo_leon
+  name: ヌエボ・レオン
+  select:
+    pieces: [MEX-Nuevo_Leon]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1700
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1846
+      owner: "usa"
+      certainty: "occupied"
+      label: "メキシコ（アメリカ軍の占領）"
+      cause: "アメリカ＝メキシコ戦争でアメリカ軍が占領"
+      source: "https://ja.wikipedia.org/wiki/米墨戦争"
+    - from: 1848
+      owner: "mexico"
+      cause: "グアダルーペ・イダルゴ条約の後、アメリカ軍が撤退"
+      source: "https://ja.wikipedia.org/wiki/グアダルーペ・イダルゴ条約"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_oaxaca
+  name: オアハカ
+  select:
+    pieces: [MEX-Oaxaca]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1812
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "アナワク会議（モレーロス）"
+      cause: "モレーロスの独立派がオアハカを取る（11月）"
+      source: "https://ja.wikipedia.org/wiki/ホセ・マリア・モレーロス"
+    - from: 1814
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "王党派がオアハカを奪い返す（3月）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1865
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍がオアハカ・ソノラ・チワワを押さえる"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_puebla
+  name: プエブラ
+  select:
+    pieces: [MEX-Puebla]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1847
+      owner: "usa"
+      certainty: "occupied"
+      label: "メキシコ（アメリカ軍の占領）"
+      cause: "アメリカ＝メキシコ戦争でアメリカ軍が占領"
+      source: "https://ja.wikipedia.org/wiki/米墨戦争"
+    - from: 1848
+      owner: "mexico"
+      cause: "グアダルーペ・イダルゴ条約の後、アメリカ軍が撤退"
+      source: "https://ja.wikipedia.org/wiki/グアダルーペ・イダルゴ条約"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_queretaro_de_arteaga
+  name: ケレタロ
+  select:
+    pieces: [MEX-Queretaro_de_Arteaga]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_quintana_roo
+  name: キンタナ・ロー
+  select:
+    pieces: [MEX-Quintana_Roo]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・エスパーニャ副王領"
+      note: "ユカタン半島の東部は密林で、スペインの支配はバカラルの砦などに限られた"
+    - from: 1821
+      owner: "mexico"
+      certainty: "nominal"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1841
+      owner: "yucatan"
+      certainty: "nominal"
+      cause: "ユカタン共和国がメキシコからの独立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1843
+      owner: "mexico"
+      certainty: "nominal"
+      cause: "ユカタンがメキシコとの協定で復帰する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1846
+      owner: "yucatan"
+      certainty: "nominal"
+      cause: "ユカタンが再び分離する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1848
+      owner: "mexico"
+      certainty: "nominal"
+      cause: "カスタ戦争に追いつめられたユカタンがメキシコに復帰する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1850
+      owner: "maya_independent"
+      certainty: "uncertain"
+      cause: "カスタ戦争で抵抗を続けるマヤ人がチャン・サンタ・クルスを中心に自立する"
+      source: "https://en.wikipedia.org/wiki/Chan_Santa_Cruz"
+    - from: 1901
+      owner: "mexico"
+      cause: "メキシコ軍がチャン・サンタ・クルスを占領する（翌年キンタナ・ロー準州）"
+      source: "https://en.wikipedia.org/wiki/Caste_War_of_Yucatán"
+
+- id: mx_san_luis_potosi
+  name: サン・ルイス・ポトシ
+  select:
+    pieces: [MEX-San_Luis_Potosi]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_sinaloa
+  name: シナロア
+  select:
+    pieces: [MEX-Sinaloa]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_sonora
+  name: ソノラ
+  select:
+    pieces: [MEX-Sonora]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ヌエバ・エスパーニャ副王領"
+      note: "北辺の先住民（アパッチ・コマンチ・セリ・ヤキなど）の地が広く、スペインの支配は鉱山・伝道所・要塞（プレシディオ）の周りに限られた"
+    - from: 1700
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "イエズス会のキノらがピメリア・アルタ（ソノラ北部）に伝道所を広げる"
+      source: "https://en.wikipedia.org/wiki/Pimería_Alta"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1865
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍がオアハカ・ソノラ・チワワを押さえる"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_tabasco
+  name: タバスコ
+  select:
+    pieces: [MEX-Tabasco]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+
+- id: mx_tamaulipas
+  name: タマウリパス
+  select:
+    pieces: [MEX-Tamaulipas]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・エスパーニャ副王領"
+      note: "南端のタンピコ以外は先住民の地"
+    - from: 1748
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "エスカンドンがヌエボ・サンタンデールを開く"
+      source: "https://en.wikipedia.org/wiki/Nuevo_Santander"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1846
+      owner: "usa"
+      certainty: "occupied"
+      label: "メキシコ（アメリカ軍の占領）"
+      cause: "アメリカ＝メキシコ戦争でアメリカ軍が占領"
+      source: "https://ja.wikipedia.org/wiki/米墨戦争"
+    - from: 1848
+      owner: "mexico"
+      cause: "グアダルーペ・イダルゴ条約の後、アメリカ軍が撤退"
+      source: "https://ja.wikipedia.org/wiki/グアダルーペ・イダルゴ条約"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_tlaxcala
+  name: トラスカラ
+  select:
+    pieces: [MEX-Tlaxcala]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_veracruz_de_ignacio_de_la_llave
+  name: ベラクルス
+  select:
+    pieces: [MEX-Veracruz_de_Ignacio_de_la_Llave]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1847
+      owner: "usa"
+      certainty: "occupied"
+      label: "メキシコ（アメリカ軍の占領）"
+      cause: "アメリカ＝メキシコ戦争でアメリカ軍が占領"
+      source: "https://ja.wikipedia.org/wiki/米墨戦争"
+    - from: 1848
+      owner: "mexico"
+      cause: "グアダルーペ・イダルゴ条約の後、アメリカ軍が撤退"
+      source: "https://ja.wikipedia.org/wiki/グアダルーペ・イダルゴ条約"
+    - from: 1862
+      owner: "france"
+      certainty: "occupied"
+      label: "メキシコ（フランス軍の占領）"
+      cause: "フランス・スペイン・イギリスがベラクルスに上陸し、フランス軍が内陸に進む"
+      source: "https://ja.wikipedia.org/wiki/フランスのメキシコ出兵"
+    - from: 1863
+      owner: "second_mexican_empire"
+      overlord: "france"
+      cause: "フランス軍がメキシコ市を占領し、保守派が帝政を宣言する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_yucatan
+  name: ユカタン
+  select:
+    pieces: [MEX-Yucatan]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1841
+      owner: "yucatan"
+      cause: "ユカタン共和国がメキシコからの独立を宣言"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1843
+      owner: "mexico"
+      cause: "ユカタンがメキシコとの協定で復帰する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1846
+      owner: "yucatan"
+      cause: "ユカタンが再び分離する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1848
+      owner: "mexico"
+      cause: "カスタ戦争に追いつめられたユカタンがメキシコに復帰する"
+      source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1867
+      owner: "mexico"
+      cause: "マクシミリアンが処刑され、共和政が回復する"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: mx_zacatecas
+  name: サカテカス
+  select:
+    pieces: [MEX-Zacatecas]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+    - from: 1821
+      owner: "mexico"
+      cause: "メキシコの独立（イグアラ綱領・コルドバ条約）"
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立革命"
+    - from: 1864
+      owner: "second_mexican_empire"
+      overlord: "france"
+      certainty: "uncertain"
+      cause: "帝国軍（フランス軍）が北部・西部に進む"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+    - from: 1866
+      owner: "mexico"
+      cause: "フランス軍の撤退が始まり、共和派（フアレス）が奪い返す"
+      source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: chiapas
+  name: チアパス
+  select:
+    pieces: [MEX-Acala, MEX-Aldama, MEX-Altamirano, MEX-Amatenango_del_Valle, MEX-Amatan, MEX-Angel_Albino_Corzo, MEX-Arriaga, MEX-Berriozabal, MEX-Bochil, MEX-Catazaja, MEX-Chalchihuitan, MEX-Chamula, MEX-Chanal, MEX-Chapultenango, MEX-Chenalho, MEX-Chiapa_de_Corzo, MEX-Chiapilla, MEX-Chicoasen, MEX-Chicomuselo, MEX-Chilon, MEX-Cintalapa, MEX-Coapilla, MEX-Comitan_de_Dominguez, MEX-Copainala, MEX-El_Bosque, MEX-Francisco_Leon, MEX-Frontera_Comalapa, MEX-Huitiupan, MEX-Huixtan, MEX-Ixhuatan, MEX-Ixtacomitan, MEX-Ixtapa, MEX-Ixtapangajoya, MEX-Jiquipilas, MEX-Jitotol, MEX-Juarez, MEX-La_Concordia, MEX-La_Independencia, MEX-La_Libertad, MEX-La_Trinitaria, MEX-Larrainzar, MEX-Las_Margaritas, MEX-Las_Rosas, MEX-Mitontic, MEX-Montecristo_de_Guerrero, MEX-Nicolas_Ruiz, MEX-Ocotepec, MEX-Ocozocoautla_de_Espinosa, MEX-Ostuacan, MEX-Osumacinta, MEX-Oxchuc, MEX-Palenque, MEX-Pantelho, MEX-Pantepec, MEX-Pichucalco, MEX-Pueblo_Nuevo_Solistahuacan, MEX-Rayon, MEX-Reforma, MEX-Sabanilla, MEX-Salto_de_Agua, MEX-San_Andres_Duraznal, MEX-San_Cristobal_de_las_Casas, MEX-San_Fernando, MEX-San_Juan_Cancuc, MEX-San_Lucas, MEX-Santiago_el_Pinar, MEX-Simojovel, MEX-Sitala, MEX-Socoltenango, MEX-Solosuchiapa, MEX-Soyalo, MEX-Suchiapa, MEX-Sunuapa, MEX-Tapalapa, MEX-Tapilula, MEX-Tecpatan, MEX-Tenejapa, MEX-Teopisca, MEX-Tila, MEX-Tonala, MEX-Totolapa, MEX-Tumbala, MEX-Tuxtla_Gutierrez, MEX-Tzimol, MEX-Venustiano_Carranza, MEX-Villa_Corzo, MEX-Villaflores, MEX-Yajalon, MEX-Zinacantan]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "mexico"
+      cause: "チアパスがスペインからの独立とメキシコへの加入を宣言"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+    - from: 1823
+      owner: "mexico"
+      certainty: "uncertain"
+      cause: "メキシコ帝国の崩壊後、チアパスは帰属を決めるまで自立する"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+    - from: 1824
+      owner: "mexico"
+      cause: "住民投票でメキシコへの加入を決める"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+
+- id: lacandon
+  name: ラカンドン密林（チアパス東部）
+  select:
+    pieces: [MEX-Ocosingo, MEX-Marques_de_Comillas, MEX-Benemerito_de_las_Americas, MEX-Maravilla_Tenejapa]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+      note: "ラカンドン密林のマヤ人（ラカンドン人）はスペインに服さなかった"
+    - from: 1821
+      owner: "mexico"
+      cause: "チアパスがスペインからの独立とメキシコへの加入を宣言"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+    - from: 1823
+      owner: "mexico"
+      certainty: "uncertain"
+      cause: "メキシコ帝国の崩壊後、チアパスは帰属を決めるまで自立する"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+    - from: 1824
+      owner: "mexico"
+      cause: "住民投票でメキシコへの加入を決める"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+
+- id: soconusco
+  name: ソコヌスコ
+  note: "1882年の国境条約でグアテマラがチアパス・ソコヌスコへの主張を取り下げた"
+  select:
+    pieces: [MEX-Tapachula, MEX-Huixtla, MEX-Escuintla, MEX-Mapastepec, MEX-Acapetahua, MEX-Acacoyagua, MEX-Villa_Comaltitlan, MEX-Huehuetan, MEX-Tuzantan, MEX-Mazatan, MEX-Frontera_Hidalgo, MEX-Suchiate, MEX-Metapa, MEX-Tuxtla_Chico, MEX-Cacahoatan, MEX-Union_Juarez, MEX-Motozintla, MEX-Mazapa_de_Madero, MEX-El_Porvenir, MEX-La_Grandeza, MEX-Bejucal_de_Ocampo, MEX-Bella_Vista, MEX-Siltepec, MEX-Amatenango_de_la_Frontera, MEX-Pijijiapan]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "mexico"
+      cause: "チアパスがスペインからの独立とメキシコへの加入を宣言"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+    - from: 1823
+      owner: "mexico"
+      certainty: "uncertain"
+      cause: "メキシコ帝国の崩壊後、チアパスは帰属を決めるまで自立する"
+      source: "https://en.wikipedia.org/wiki/Chiapas#History"
+    - from: 1824
+      owner: "central_america"
+      certainty: "uncertain"
+      label: "ソコヌスコ（帰属未定）"
+      cause: "ソコヌスコがグアテマラ（中米連邦）への加入を宣言し、メキシコと争う"
+      note: "1825年からは事実上の中立地帯とされた"
+      source: "https://en.wikipedia.org/wiki/Soconusco"
+    - from: 1839
+      owner: "guatemala"
+      certainty: "uncertain"
+      label: "ソコヌスコ（帰属未定）"
+      cause: "中米連邦の解体で、グアテマラが主張を引き継ぐ"
+    - from: 1842
+      owner: "mexico"
+      cause: "サンタ・アナがソコヌスコを併合する"
+      source: "https://en.wikipedia.org/wiki/Soconusco"
+
+- id: guatemala_core
+  name: グアテマラ
+  select:
+    pieces: [GTM-Alta_Verapaz, GTM-Baja_Verapaz, GTM-Chimaltenango, GTM-Chiquimula, GTM-El_Progreso, GTM-Escuintla, GTM-Guatemala, GTM-Izabal, GTM-Jalapa, GTM-Jutiapa, GTM-Sacatepequez, GTM-Santa_Rosa, GTM-Zacapa]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "uncertain"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "中米（メキシコ帝国に併合）"
+      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1839
+      owner: "guatemala"
+      cause: "グアテマラが中米連邦から離脱する（カレラの勝利）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+
+- id: los_altos
+  name: ロス・アルトス（グアテマラ西部高地）
+  select:
+    pieces: [GTM-Quetzaltenango, GTM-Totonicapan, GTM-Solola, GTM-San_Marcos, GTM-Huehuetenango, GTM-Quiche, GTM-Retalhuleu, GTM-Suchitepequez]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "uncertain"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "中米（メキシコ帝国に併合）"
+      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1838
+      owner: "los_altos"
+      cause: "ケツァルテナンゴを中心にロス・アルトス国が分離する"
+      source: "https://en.wikipedia.org/wiki/Los_Altos_(Central_America)"
+    - from: 1840
+      owner: "guatemala"
+      cause: "カレラのグアテマラ軍がロス・アルトスを滅ぼす"
+      source: "https://en.wikipedia.org/wiki/Los_Altos_(Central_America)"
+
+- id: peten
+  name: ペテン
+  select:
+    pieces: [GTM-Peten]
+  timeline:
+    - from: 1648
+      owner: "itza"
+      certainty: "uncertain"
+      note: "ペテン湖の島の都ノフペテンを中心とするイツァ王国。スペインの征服を逃れた最後のマヤの王国"
+    - from: 1697
+      owner: "spain"
+      certainty: "uncertain"
+      label: "グアテマラ総督領"
+      cause: "スペイン軍がノフペテンを攻め落とし、イツァ王国を滅ぼす"
+      source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Petén"
+    - from: 1821
+      owner: "central_america"
+      certainty: "uncertain"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "中米（メキシコ帝国に併合）"
+      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1839
+      owner: "guatemala"
+      cause: "グアテマラが中米連邦から離脱する（カレラの勝利）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+
+- id: el_salvador
+  name: エルサルバドル
+  note: "1839–40年は中米連邦の最後の州として残り、モラサンの拠点だった"
+  select:
+    pieces: [SLV-Departamento_de_Ahuachapan, SLV-Departamento_de_Cabanas, SLV-Departamento_de_Chalatenango, SLV-Departamento_de_Cuscatlan, SLV-Departamento_de_La_Paz, SLV-Departamento_de_La_Union, SLV-Departamento_de_Morazan, SLV-Departamento_de_San_Miguel, SLV-Departamento_de_San_Salvador, SLV-Departamento_de_Santa_Ana, SLV-Departamento_de_Sonsonate, SLV-Departamento_de_Usulutan, SLV-La_Libertad, SLV-San_Vicente]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "uncertain"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "central_america"
+      certainty: "uncertain"
+      label: "エルサルバドル（メキシコへの併合を拒む）"
+      cause: "中米がメキシコ帝国に併合されるが、エルサルバドルは拒んで抵抗を続ける（年末にはアメリカ合衆国への編入を議決）"
+      note: "フィリソラのメキシコ軍がサン・サルバドルを落としたのは1823年2月"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1841
+      owner: "el_salvador"
+      cause: "エルサルバドルが独立国として憲法を定める（中米連邦の消滅）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+
+- id: honduras
+  name: ホンジュラス
+  select:
+    pieces: [HND-Atlantida, HND-Choluteca, HND-Colon, HND-Comayagua, HND-Copan, HND-Cortes, HND-El_Paraiso, HND-Francisco_Morazan, HND-Intibuca, HND-La_Paz, HND-Lempira, HND-Ocotepeque, HND-Olancho, HND-Santa_Barbara, HND-Valle, HND-Yoro]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "uncertain"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "中米（メキシコ帝国に併合）"
+      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1838
+      owner: "honduras"
+      cause: "ホンジュラスが中米連邦から離脱する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+
+- id: gracias_a_dios
+  name: モスキート海岸（ホンジュラス側）
+  select:
+    pieces: [HND-Gracias_a_Dios]
+  timeline:
+    - from: 1648
+      owner: "miskito"
+      certainty: "uncertain"
+      note: "スペインは領有を主張したが、海岸部は先住民ミスキート人の地。17世紀半ばからジャマイカのイギリス人と結んだ王が立った"
+      source: "https://ja.wikipedia.org/wiki/モスキート海岸"
+    - from: 1740
+      owner: "miskito"
+      overlord: "britain"
+      certainty: "uncertain"
+      cause: "イギリスがミスキート王国を保護下に置く"
+      source: "https://ja.wikipedia.org/wiki/モスキート海岸"
+    - from: 1787
+      owner: "miskito"
+      certainty: "uncertain"
+      cause: "ロンドン協定（1786）でイギリス人の入植者が引き揚げる"
+      source: "https://en.wikipedia.org/wiki/Convention_of_London_(1786)"
+    - from: 1844
+      owner: "miskito"
+      overlord: "britain"
+      certainty: "uncertain"
+      cause: "イギリスがモスキート海岸の保護を再び宣言する"
+      source: "https://ja.wikipedia.org/wiki/モスキート海岸"
+    - from: 1860
+      owner: "honduras"
+      certainty: "nominal"
+      cause: "ワイク＝クルス条約でイギリスがモスキート海岸の北部をホンジュラスに引き渡す"
+      source: "https://en.wikipedia.org/wiki/Wyke–Cruz_Treaty"
+    - from: 1906
+      owner: "honduras"
+      cause: "スペイン国王の仲裁裁定でニカラグアとの境が決まる（ニカラグアの受け入れは1960年の国際司法裁判所の判決後）"
+      source: "https://en.wikipedia.org/wiki/Honduras–Nicaragua_relations"
+
+- id: bay_islands
+  name: ベイ諸島
+  note: "1797年にセントビンセント島から追放されたガリフナ（黒いカリブ）がロアタン島に送られ、のち中米のカリブ海岸に広がった"
+  select:
+    pieces: [HND-Bay_Islands]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      certainty: "uncertain"
+      label: "ベイ諸島（イギリス人の入植地）"
+      note: "プロヴィデンス会社のイギリス人がロアタン島に住み、海賊の基地にもなった"
+    - from: 1650
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+      cause: "スペイン軍がイギリス人を追い出す"
+    - from: 1742
+      owner: "britain"
+      certainty: "occupied"
+      label: "ベイ諸島（イギリスの占領）"
+      cause: "ジェンキンスの耳の戦争中にイギリスがロアタン島に砦を築く"
+    - from: 1749
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+      cause: "アーヘンの和約の後、イギリスが撤退する"
+    - from: 1821
+      owner: "central_america"
+      certainty: "nominal"
+      cause: "中米の独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "nominal"
+    - from: 1823
+      owner: "central_america"
+      certainty: "nominal"
+    - from: 1838
+      owner: "honduras"
+      certainty: "nominal"
+      cause: "ホンジュラスが中米連邦から離脱する"
+    - from: 1852
+      owner: "britain"
+      label: "ベイ諸島植民地"
+      cause: "イギリスがベイ諸島を植民地とする"
+      source: "https://en.wikipedia.org/wiki/Bay_Islands_Department#History"
+    - from: 1860
+      owner: "honduras"
+      cause: "ワイク＝クルス条約でベイ諸島がホンジュラスに返される"
+      source: "https://en.wikipedia.org/wiki/Wyke–Cruz_Treaty"
+
+- id: nicaragua
+  name: ニカラグア
+  note: "1912–33年のアメリカ海兵隊の駐留は、ニカラグア政府が続いていたので overlord: usa（保護国に近い関係）で描く"
+  select:
+    pieces: [NIC-Boaco, NIC-Carazo, NIC-Chinandega, NIC-Chontales, NIC-Esteli, NIC-Granada, NIC-Jinotega_Departamento, NIC-Leon, NIC-Madriz, NIC-Managua, NIC-Masaya, NIC-Matagalpa_Departemento, NIC-Nueva_Segovia, NIC-Rio_San_Juan, NIC-Rivas]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "uncertain"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "中米（メキシコ帝国に併合）"
+      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1838
+      owner: "nicaragua"
+      cause: "ニカラグアが中米連邦から離脱する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1912
+      owner: "nicaragua"
+      overlord: "usa"
+      cause: "アメリカ海兵隊がニカラグアに上陸し、保守派政権を支える"
+      source: "https://en.wikipedia.org/wiki/United_States_occupation_of_Nicaragua"
+    - from: 1933
+      owner: "nicaragua"
+      cause: "アメリカ海兵隊が撤退する"
+      source: "https://en.wikipedia.org/wiki/United_States_occupation_of_Nicaragua"
+
+- id: mosquito_coast_nic
+  name: モスキート海岸（ニカラグア側）
+  note: "1860年以後の範囲は実際には海岸部（リオ・ウエソ〜ラマ川）。ピースの大きさから地域全体で近似した"
+  select:
+    pieces: [NIC-North_Carribean_Coast_Autonomous_Region, NIC-South_Atlantic_Autonomous_Region, NIC-South_Atlantic_Autonomous_Region_Corn_Islands]
+  timeline:
+    - from: 1648
+      owner: "miskito"
+      certainty: "uncertain"
+      note: "スペインは領有を主張したが、海岸部は先住民ミスキート人の地。17世紀半ばからジャマイカのイギリス人と結んだ王が立った"
+      source: "https://ja.wikipedia.org/wiki/モスキート海岸"
+    - from: 1740
+      owner: "miskito"
+      overlord: "britain"
+      certainty: "uncertain"
+      cause: "イギリスがミスキート王国を保護下に置く"
+      source: "https://ja.wikipedia.org/wiki/モスキート海岸"
+    - from: 1787
+      owner: "miskito"
+      certainty: "uncertain"
+      cause: "ロンドン協定（1786）でイギリス人の入植者が引き揚げる"
+      source: "https://en.wikipedia.org/wiki/Convention_of_London_(1786)"
+    - from: 1844
+      owner: "miskito"
+      overlord: "britain"
+      certainty: "uncertain"
+      cause: "イギリスがモスキート海岸の保護を再び宣言する"
+      source: "https://ja.wikipedia.org/wiki/モスキート海岸"
+    - from: 1860
+      owner: "nicaragua"
+      certainty: "indirect"
+      label: "モスキート保護区"
+      cause: "マナグア条約でミスキート王国がニカラグアの中の自治区（モスキート保護区）となる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Managua_(1860)"
+    - from: 1894
+      owner: "nicaragua"
+      cause: "セラヤ大統領がモスキート保護区を併合する"
+      source: "https://en.wikipedia.org/wiki/Mosquito_Coast"
+    - from: 1912
+      owner: "nicaragua"
+      overlord: "usa"
+      cause: "アメリカ海兵隊がニカラグアに上陸し、保守派政権を支える"
+      source: "https://en.wikipedia.org/wiki/United_States_occupation_of_Nicaragua"
+    - from: 1933
+      owner: "nicaragua"
+      cause: "アメリカ海兵隊が撤退する"
+      source: "https://en.wikipedia.org/wiki/United_States_occupation_of_Nicaragua"
+
+- id: costa_rica
+  name: コスタリカ
+  note: "グアナカステ（ニコヤ）は植民地時代はニカラグア州に属し、1824年にコスタリカに加わった"
+  select:
+    pieces: [CRI-Provincia_Alajuela, CRI-Provincia_Cartago, CRI-Provincia_Guanacaste, CRI-Provincia_Heredia, CRI-Provincia_Puntarenas, CRI-Provincia_San_Jose]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "uncertain"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "uncertain"
+      label: "中米（メキシコ帝国に併合）"
+      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1838
+      owner: "costa_rica"
+      cause: "コスタリカが中米連邦から離脱する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+
+- id: limon
+  name: リモン（コスタリカのカリブ海岸）
+  select:
+    pieces: [CRI-Provincia_Limon]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+      note: "タラマンカの先住民はスペインに服さず、海岸にはミスキート人も来襲した"
+    - from: 1821
+      owner: "central_america"
+      certainty: "nominal"
+      cause: "グアテマラ総督領がスペインからの独立を宣言（9月15日）"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカの独立"
+    - from: 1822
+      owner: "mexico"
+      certainty: "nominal"
+      label: "中米（メキシコ帝国に併合）"
+      cause: "中米がイトゥルビデのメキシコ帝国に併合される"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1823
+      owner: "central_america"
+      certainty: "nominal"
+      cause: "メキシコ帝国の崩壊で、中米連合州が独立する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1838
+      owner: "costa_rica"
+      certainty: "nominal"
+      cause: "コスタリカが中米連邦から離脱する"
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+    - from: 1871
+      owner: "costa_rica"
+      cause: "リモン港と首都を結ぶ鉄道の建設が始まり、バナナ農園が広がる"
+      source: "https://en.wikipedia.org/wiki/Limón_Province"
+
+- id: panama
+  name: パナマ
+  select:
+    pieces: [PAN-Colon_Province, PAN-Provincia_de_Chiriqui, PAN-Provincia_de_Cocle, PAN-Provincia_de_Herrera, PAN-Provincia_de_Los_Santos, PAN-Provincia_de_Panama, PAN-Provincia_de_Panama_Oeste, PAN-Provincia_de_Veraguas]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領（パナマ）"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領（パナマ）"
+      cause: "ヌエバ・グラナダ副王領が再び置かれ、パナマがその下に入る"
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_New_Granada"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "パナマがスペインからの独立を宣言し、大コロンビアに加わる"
+      source: "https://en.wikipedia.org/wiki/Independence_of_Panama_from_Spain"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアの解体（ヌエバ・グラナダ共和国）"
+      source: "https://en.wikipedia.org/wiki/Republic_of_New_Granada"
+    - from: 1840
+      owner: "panama"
+      certainty: "uncertain"
+      cause: "イスモ自由国が分離を宣言する"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1841
+      owner: "colombia"
+      cause: "イスモ自由国がヌエバ・グラナダに復帰する（12月）"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1903
+      owner: "panama"
+      overlord: "usa"
+      cause: "アメリカの支援でパナマがコロンビアから独立する"
+      source: "https://ja.wikipedia.org/wiki/パナマの独立"
+    - from: 1939
+      owner: "panama"
+      cause: "ハル＝アルファロ条約の批准で、アメリカの干渉の権利がなくなる"
+      source: "https://en.wikipedia.org/wiki/Hull–Alfaro_Treaty"
+
+- id: panama_frontier
+  name: パナマの辺境（ダリエン・ボカス・デル・トロ）
+  note: "植民地時代、ダリエンのクナ（グナ）人・エンベラ人や西部のグアイミ人の地にはスペインの支配が及ばなかった"
+  select:
+    pieces: [PAN-Provincia_de_Darien, PAN-Comarca_Embera_Wounaan, PAN-Provincia_de_Bocas_del_Toro, PAN-Comarca_Ngabe_Bugle]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領（パナマ）"
+    - from: 1739
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領（パナマ）"
+      cause: "ヌエバ・グラナダ副王領が再び置かれ、パナマがその下に入る"
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_New_Granada"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "パナマがスペインからの独立を宣言し、大コロンビアに加わる"
+      source: "https://en.wikipedia.org/wiki/Independence_of_Panama_from_Spain"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアの解体（ヌエバ・グラナダ共和国）"
+      source: "https://en.wikipedia.org/wiki/Republic_of_New_Granada"
+    - from: 1840
+      owner: "panama"
+      certainty: "uncertain"
+      cause: "イスモ自由国が分離を宣言する"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1841
+      owner: "colombia"
+      cause: "イスモ自由国がヌエバ・グラナダに復帰する（12月）"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1903
+      owner: "panama"
+      overlord: "usa"
+      cause: "アメリカの支援でパナマがコロンビアから独立する"
+      source: "https://ja.wikipedia.org/wiki/パナマの独立"
+    - from: 1939
+      owner: "panama"
+      cause: "ハル＝アルファロ条約の批准で、アメリカの干渉の権利がなくなる"
+      source: "https://en.wikipedia.org/wiki/Hull–Alfaro_Treaty"
+
+- id: guna_yala
+  name: グナ・ヤラ（サン・ブラス）
+  note: "1925年のグナ人の反乱（トゥレ革命）の後、自治が認められた"
+  select:
+    pieces: [PAN-Comarca_Guna_Yala]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領（パナマ）"
+    - from: 1698
+      owner: "scotland"
+      certainty: "uncertain"
+      label: "カレドニア（ダリエン計画）"
+      cause: "スコットランドのダリエン会社がカレドニア植民地を築く"
+      source: "https://ja.wikipedia.org/wiki/ダリエン計画"
+    - from: 1700
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領（パナマ）"
+      cause: "スコットランド人が降伏して撤退する"
+    - from: 1739
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌエバ・グラナダ副王領（パナマ）"
+      cause: "ヌエバ・グラナダ副王領が再び置かれ、パナマがその下に入る"
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_New_Granada"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "パナマがスペインからの独立を宣言し、大コロンビアに加わる"
+      source: "https://en.wikipedia.org/wiki/Independence_of_Panama_from_Spain"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアの解体（ヌエバ・グラナダ共和国）"
+      source: "https://en.wikipedia.org/wiki/Republic_of_New_Granada"
+    - from: 1840
+      owner: "panama"
+      certainty: "uncertain"
+      cause: "イスモ自由国が分離を宣言する"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1841
+      owner: "colombia"
+      cause: "イスモ自由国がヌエバ・グラナダに復帰する（12月）"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1903
+      owner: "panama"
+      overlord: "usa"
+      cause: "アメリカの支援でパナマがコロンビアから独立する"
+      source: "https://ja.wikipedia.org/wiki/パナマの独立"
+    - from: 1939
+      owner: "panama"
+      cause: "ハル＝アルファロ条約の批准で、アメリカの干渉の権利がなくなる"
+      source: "https://en.wikipedia.org/wiki/Hull–Alfaro_Treaty"
+
+- id: canal_zone
+  name: パナマ運河地帯
+  select:
+    pieces: [PAN-Colon_Province_Canal_Zone, PAN-Provincia_de_Panama_Canal_Zone, PAN-Provincia_de_Panama_Oeste_Canal_Zone]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ペルー副王領（パナマ）"
+    - from: 1739
+      owner: "spain"
+      label: "ヌエバ・グラナダ副王領（パナマ）"
+      cause: "ヌエバ・グラナダ副王領が再び置かれ、パナマがその下に入る"
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_New_Granada"
+    - from: 1821
+      owner: "gran_colombia"
+      cause: "パナマがスペインからの独立を宣言し、大コロンビアに加わる"
+      source: "https://en.wikipedia.org/wiki/Independence_of_Panama_from_Spain"
+    - from: 1831
+      owner: "colombia"
+      cause: "大コロンビアの解体（ヌエバ・グラナダ共和国）"
+      source: "https://en.wikipedia.org/wiki/Republic_of_New_Granada"
+    - from: 1840
+      owner: "panama"
+      certainty: "uncertain"
+      cause: "イスモ自由国が分離を宣言する"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1841
+      owner: "colombia"
+      cause: "イスモ自由国がヌエバ・グラナダに復帰する（12月）"
+      source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"
+    - from: 1903
+      owner: "usa"
+      label: "パナマ運河地帯"
+      cause: "ヘイ＝ビュノー＝ヴァリーリャ条約でアメリカが運河地帯を永久に租借する"
+      source: "https://ja.wikipedia.org/wiki/パナマ運河地帯"
+    - from: 1979
+      owner: "usa"
+      certainty: "uncertain"
+      label: "パナマ運河（アメリカが管理）"
+      cause: "新パナマ運河条約の発効で運河地帯が廃止され、行政権がパナマに移る（運河と軍事基地はアメリカが管理）"
+      source: "https://ja.wikipedia.org/wiki/新パナマ運河条約"
+    - from: 1999
+      owner: "panama"
+      cause: "運河がパナマに返還される（12月31日）"
+      source: "https://ja.wikipedia.org/wiki/新パナマ運河条約"
+
+- id: belize_district
+  name: ベリーズ地区（入植地の中心）
+  note: "1798年のセント・ジョージズ・キーの戦いでスペインの攻撃を退けた"
+  select:
+    pieces: [BLZ-Belize]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+    - from: 1665
+      owner: "britain"
+      certainty: "uncertain"
+      label: "ベリーズ（イギリス人の伐採地）"
+      cause: "イギリス人の伐採人（ベイメン）がベリーズ川の河口に住みつく"
+      note: "スペインは主権を保ち、伐採人の追放をくり返した"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1779
+      owner: "spain"
+      certainty: "occupied"
+      label: "グアテマラ総督領"
+      cause: "スペイン軍が伐採人をハバナに連れ去る（アメリカ独立戦争）"
+    - from: 1784
+      owner: "britain"
+      certainty: "uncertain"
+      label: "ベリーズ（イギリス人の伐採地）"
+      cause: "パリ条約（1783）でイギリス人の伐採が認められ、入植者が戻る"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1862
+      owner: "britain"
+      label: "英領ホンジュラス"
+      cause: "ベリーズが正式にイギリスの植民地（英領ホンジュラス）となる"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1973
+      owner: "britain"
+      label: "ベリーズ（イギリスの自治植民地）"
+      cause: "英領ホンジュラスがベリーズと改称する"
+    - from: 1981
+      owner: "belize"
+      cause: "ベリーズの独立"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+
+- id: belize_north
+  name: ベリーズ北部（オレンジウォーク・コロサル）
+  note: "1849年からユカタンのカスタ戦争の避難民が移り住んだ。1893年のメキシコとの条約でオンド川が国境となった"
+  select:
+    pieces: [BLZ-Corozal, BLZ-Orange_Walk]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+    - from: 1784
+      owner: "britain"
+      certainty: "uncertain"
+      label: "ベリーズ（イギリス人の伐採地）"
+      cause: "パリ条約でオンド川とベリーズ川の間の伐採が認められる"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1862
+      owner: "britain"
+      label: "英領ホンジュラス"
+      cause: "ベリーズが正式にイギリスの植民地（英領ホンジュラス）となる"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1973
+      owner: "britain"
+      label: "ベリーズ（イギリスの自治植民地）"
+      cause: "英領ホンジュラスがベリーズと改称する"
+    - from: 1981
+      owner: "belize"
+      cause: "ベリーズの独立"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+
+- id: belize_middle
+  name: ベリーズ中部（カヨ・スタンクリーク）
+  note: "1786年のロンドン協定はシブン川までの伐採しか認めておらず、それより南と西はグアテマラ（中米連邦）も主張した"
+  select:
+    pieces: [BLZ-Cayo, BLZ-Stann_Creek]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "nominal"
+    - from: 1822
+      owner: "mexico"
+      certainty: "nominal"
+    - from: 1823
+      owner: "central_america"
+      certainty: "nominal"
+    - from: 1832
+      owner: "britain"
+      certainty: "uncertain"
+      label: "ベリーズ（イギリス人の伐採地）"
+      cause: "イギリス人の伐採地が南と西に広がる（1823年にガリフナがスタンクリークに移住）"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1862
+      owner: "britain"
+      label: "英領ホンジュラス"
+      cause: "ベリーズが正式にイギリスの植民地（英領ホンジュラス）となる"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1973
+      owner: "britain"
+      label: "ベリーズ（イギリスの自治植民地）"
+      cause: "英領ホンジュラスがベリーズと改称する"
+    - from: 1981
+      owner: "belize"
+      cause: "ベリーズの独立"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+
+- id: toledo
+  name: トレド（ベリーズ南部）
+  note: "グアテマラは、条約の約束（道路の建設）が果たされていないとして、のちにベリーズ全体の領有を主張した"
+  select:
+    pieces: [BLZ-Toledo]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "グアテマラ総督領"
+    - from: 1821
+      owner: "central_america"
+      certainty: "nominal"
+    - from: 1822
+      owner: "mexico"
+      certainty: "nominal"
+    - from: 1823
+      owner: "central_america"
+      certainty: "nominal"
+    - from: 1839
+      owner: "guatemala"
+      certainty: "nominal"
+      cause: "グアテマラが中米連邦から離脱する（カレラの勝利）"
+    - from: 1859
+      owner: "britain"
+      certainty: "uncertain"
+      label: "ベリーズ（イギリス人の伐採地）"
+      cause: "ワイク＝アイシネナ条約でグアテマラがサルストゥーン川までのイギリスの領有を認める"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1862
+      owner: "britain"
+      label: "英領ホンジュラス"
+      cause: "ベリーズが正式にイギリスの植民地（英領ホンジュラス）となる"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+    - from: 1973
+      owner: "britain"
+      label: "ベリーズ（イギリスの自治植民地）"
+      cause: "英領ホンジュラスがベリーズと改称する"
+    - from: 1981
+      owner: "belize"
+      cause: "ベリーズの独立"
+      source: "https://ja.wikipedia.org/wiki/ベリーズの歴史"
+
+- id: cuba
+  name: キューバ
+  select:
+    pieces: [CUB-Artemisa, CUB-Camaguey, CUB-Ciego_de_Avila, CUB-Cienfuegos, CUB-Isle_of_Youth, CUB-Matanzas, CUB-Mayabeque, CUB-Pinar_del_Rio, CUB-Sancti_Spiritus, CUB-Villa_Clara]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "キューバ"
+    - from: 1899
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカ軍政）"
+      cause: "パリ条約（1898年12月）でスペインがキューバを放棄し、1899年1月1日にアメリカ軍政が始まる（1898年中はハバナの総督府が西部・中部を治めた）"
+      source: "https://ja.wikipedia.org/wiki/米西戦争"
+    - from: 1902
+      owner: "cuba"
+      overlord: "usa"
+      cause: "キューバ共和国が独立する（プラット修正条項でアメリカが干渉権を持つ）"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+    - from: 1906
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカの第2次軍政）"
+      cause: "反乱を機にアメリカが再び占領する"
+      source: "https://en.wikipedia.org/wiki/Second_Occupation_of_Cuba"
+    - from: 1909
+      owner: "cuba"
+      overlord: "usa"
+      cause: "アメリカ軍が撤退する"
+    - from: 1934
+      owner: "cuba"
+      cause: "善隣外交のもとでプラット修正条項が廃止される"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+
+- id: cuba_oriente
+  name: キューバ東部（オリエンテ）
+  select:
+    pieces: [CUB-Granma, CUB-Guantanamo, CUB-Holguin, CUB-Las_Tunas, CUB-Santiago_de_Cuba]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "キューバ"
+    - from: 1898
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ東部（アメリカ軍の占領）"
+      cause: "米西戦争でサンティアゴ・デ・クーバのスペイン軍が降伏し（7月）、アメリカ軍が東部（オリエンテ）を押さえる"
+      source: "https://ja.wikipedia.org/wiki/米西戦争"
+    - from: 1899
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカ軍政）"
+      cause: "スペインの統治が終わり（1月1日）、アメリカ軍政が全島に及ぶ"
+      source: "https://en.wikipedia.org/wiki/United_States_Military_Government_in_Cuba"
+    - from: 1902
+      owner: "cuba"
+      overlord: "usa"
+      cause: "キューバ共和国が独立する（プラット修正条項でアメリカが干渉権を持つ）"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+    - from: 1906
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカの第2次軍政）"
+      cause: "反乱を機にアメリカが再び占領する"
+      source: "https://en.wikipedia.org/wiki/Second_Occupation_of_Cuba"
+    - from: 1909
+      owner: "cuba"
+      overlord: "usa"
+      cause: "アメリカ軍が撤退する"
+    - from: 1934
+      owner: "cuba"
+      cause: "善隣外交のもとでプラット修正条項が廃止される"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+
+- id: havana
+  name: ハバナ
+  select:
+    pieces: [CUB-Havana]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "キューバ"
+    - from: 1762
+      owner: "britain"
+      certainty: "occupied"
+      label: "ハバナ（イギリスの占領）"
+      cause: "七年戦争でイギリス軍がハバナを占領する"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Havana"
+    - from: 1763
+      owner: "spain"
+      label: "キューバ"
+      cause: "パリ条約でスペインに返還される（スペインはフロリダをイギリスに譲る）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
+    - from: 1899
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカ軍政）"
+      cause: "パリ条約（1898年12月）でスペインがキューバを放棄し、1899年1月1日にアメリカ軍政が始まる（1898年中はハバナの総督府が西部・中部を治めた）"
+      source: "https://ja.wikipedia.org/wiki/米西戦争"
+    - from: 1902
+      owner: "cuba"
+      overlord: "usa"
+      cause: "キューバ共和国が独立する（プラット修正条項でアメリカが干渉権を持つ）"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+    - from: 1906
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ（アメリカの第2次軍政）"
+      cause: "反乱を機にアメリカが再び占領する"
+      source: "https://en.wikipedia.org/wiki/Second_Occupation_of_Cuba"
+    - from: 1909
+      owner: "cuba"
+      overlord: "usa"
+      cause: "アメリカ軍が撤退する"
+    - from: 1934
+      owner: "cuba"
+      cause: "善隣外交のもとでプラット修正条項が廃止される"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+
+- id: guantanamo_base
+  name: グアンタナモ米軍基地
+  note: "キューバ革命政府は租借を無効と主張している"
+  select:
+    pieces: [CUB-Guantanamo_Bay_Naval_Base]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "キューバ"
+    - from: 1898
+      owner: "usa"
+      certainty: "occupied"
+      label: "キューバ東部（アメリカ軍の占領）"
+      cause: "米西戦争でアメリカ海兵隊がグアンタナモ湾に上陸し（6月）、東部を押さえる（全島の軍政は1899年1月から）"
+      source: "https://ja.wikipedia.org/wiki/米西戦争"
+    - from: 1902
+      owner: "cuba"
+      overlord: "usa"
+      cause: "キューバ共和国が独立する（プラット修正条項でアメリカが干渉権を持つ）"
+      source: "https://ja.wikipedia.org/wiki/プラット修正条項"
+    - from: 1903
+      owner: "usa"
+      label: "グアンタナモ米軍基地"
+      cause: "米キューバ協定でアメリカがグアンタナモ湾を租借する（1934年の条約で無期限に）"
+      source: "https://ja.wikipedia.org/wiki/グアンタナモ米軍基地"
+
+- id: haiti_north
+  name: ハイチ北部
+  select:
+    pieces: [HTI-Departement_du_Nord, HTI-Nord_Est_Department, HTI-Artibonite_Department]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "イスパニョーラ島西部"
+      note: "1605年にスペインが北部・西部の住民を移したため（オソリオの強制移住）、野生の牛を狩るフランス人などの海賊（バッカニア）の地となっていた"
+    - from: 1665
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "フランス西インド会社がトルトゥーガ島とイスパニョーラ島西部に植民地を置く（ドジュロン総督）"
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1697
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ライスワイク条約でスペインが島の西部をフランス領と認める"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Ryswick"
+    - from: 1791
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "ハイチ革命：北部平野で奴隷が蜂起する（8月）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1794
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "フランスが奴隷制を廃止し、トゥサン・ルヴェルチュールがフランス側につく"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが全島を押さえ、終身総督とする憲法を定める"
+      source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール"
+    - from: 1802
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ナポレオンが送ったルクレールの遠征軍がトゥサンを捕らえる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1803
+      owner: "haiti"
+      certainty: "uncertain"
+      cause: "ヴェルティエールの戦いに敗れたフランス軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      owner: "haiti"
+      cause: "デサリーヌがハイチの独立を宣言する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ"
+    - from: 1807
+      owner: "haiti_north"
+      cause: "デサリーヌの暗殺後、北部でクリストフが国を立てる（1811年に王国）"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Haiti"
+    - from: 1820
+      owner: "haiti"
+      cause: "クリストフの死後、ボワイエが北部を併せる"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Haiti"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: haiti_northwest
+  name: ハイチ北西部（モール・サン・ニコラ）
+  select:
+    pieces: [HTI-Nord_Ouest_Department]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "イスパニョーラ島西部"
+      note: "1605年にスペインが北部・西部の住民を移したため（オソリオの強制移住）、野生の牛を狩るフランス人などの海賊（バッカニア）の地となっていた"
+    - from: 1665
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "フランス西インド会社がトルトゥーガ島とイスパニョーラ島西部に植民地を置く（ドジュロン総督）"
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1697
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ライスワイク条約でスペインが島の西部をフランス領と認める"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Ryswick"
+    - from: 1791
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "ハイチ革命：北部平野で奴隷が蜂起する（8月）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1793
+      owner: "britain"
+      certainty: "occupied"
+      label: "サン・ドマング（イギリスの占領）"
+      cause: "イギリス軍がサン・ドマングに上陸する（フランス革命戦争）"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1794
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "フランスが奴隷制を廃止し、トゥサン・ルヴェルチュールがフランス側につく"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1798
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "トゥサン・ルヴェルチュールとの協定でイギリス軍が撤退する"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが全島を押さえ、終身総督とする憲法を定める"
+      source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール"
+    - from: 1802
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ナポレオンが送ったルクレールの遠征軍がトゥサンを捕らえる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1803
+      owner: "haiti"
+      certainty: "uncertain"
+      cause: "ヴェルティエールの戦いに敗れたフランス軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      owner: "haiti"
+      cause: "デサリーヌがハイチの独立を宣言する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ"
+    - from: 1807
+      owner: "haiti_north"
+      cause: "デサリーヌの暗殺後、北部でクリストフが国を立てる（1811年に王国）"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Haiti"
+    - from: 1820
+      owner: "haiti"
+      cause: "クリストフの死後、ボワイエが北部を併せる"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Haiti"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: tortuga
+  name: トルトゥーガ島
+  select:
+    pieces: [HTI-Nord_Ouest_Department_Tortuga]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "uncertain"
+      label: "トルトゥーガ島（海賊の拠点）"
+      note: "1640年からフランス人ルヴァスールが海賊（バッカニア）の砦を築いていた"
+      source: "https://ja.wikipedia.org/wiki/トルトゥーガ島"
+    - from: 1654
+      owner: "spain"
+      certainty: "uncertain"
+      label: "トルトゥーガ島"
+      cause: "スペイン軍が島を奪う"
+    - from: 1659
+      owner: "france"
+      certainty: "uncertain"
+      label: "トルトゥーガ島（海賊の拠点）"
+      cause: "フランスの海賊が島を取り戻す"
+    - from: 1665
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "フランス西インド会社がトルトゥーガ島とイスパニョーラ島西部に植民地を置く（ドジュロン総督）"
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1697
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ライスワイク条約でスペインが島の西部をフランス領と認める"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Ryswick"
+    - from: 1791
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "ハイチ革命：北部平野で奴隷が蜂起する（8月）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1793
+      owner: "britain"
+      certainty: "occupied"
+      label: "サン・ドマング（イギリスの占領）"
+      cause: "イギリス軍がサン・ドマングに上陸する（フランス革命戦争）"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1794
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "フランスが奴隷制を廃止し、トゥサン・ルヴェルチュールがフランス側につく"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1798
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "トゥサン・ルヴェルチュールとの協定でイギリス軍が撤退する"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが全島を押さえ、終身総督とする憲法を定める"
+      source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール"
+    - from: 1802
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ナポレオンが送ったルクレールの遠征軍がトゥサンを捕らえる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1803
+      owner: "haiti"
+      certainty: "uncertain"
+      cause: "ヴェルティエールの戦いに敗れたフランス軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      owner: "haiti"
+      cause: "デサリーヌがハイチの独立を宣言する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ"
+    - from: 1807
+      owner: "haiti_north"
+      cause: "デサリーヌの暗殺後、北部でクリストフが国を立てる（1811年に王国）"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Haiti"
+    - from: 1820
+      owner: "haiti"
+      cause: "クリストフの死後、ボワイエが北部を併せる"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Haiti"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: haiti_south
+  name: ハイチ南部・西部
+  note: "1794–98年、南県（レ・カイ）はフランス共和派のリゴーが押さえ続けた。西県（ポルトープランス）はイギリス軍に占領された（別の地域で描く）"
+  select:
+    pieces: [HTI-Sud_Department, HTI-Departement_du_Sud_Est, HTI-Departement_des_Nippes]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "イスパニョーラ島西部"
+      note: "1605年にスペインが北部・西部の住民を移したため（オソリオの強制移住）、野生の牛を狩るフランス人などの海賊（バッカニア）の地となっていた"
+    - from: 1665
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "フランス西インド会社がトルトゥーガ島とイスパニョーラ島西部に植民地を置く（ドジュロン総督）"
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1697
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ライスワイク条約でスペインが島の西部をフランス領と認める"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Ryswick"
+    - from: 1791
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "ハイチ革命が始まり、白人・有色自由人・奴隷の争いが南部にも広がる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1794
+      owner: "france"
+      label: "サン・ドマング"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが全島を押さえ、終身総督とする憲法を定める"
+      source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール"
+    - from: 1802
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ナポレオンが送ったルクレールの遠征軍がトゥサンを捕らえる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1803
+      owner: "haiti"
+      certainty: "uncertain"
+      cause: "ヴェルティエールの戦いに敗れたフランス軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      owner: "haiti"
+      cause: "デサリーヌがハイチの独立を宣言する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: haiti_ouest
+  name: ハイチ西県（ポルトープランス）
+  select:
+    pieces: [HTI-Departement_de_l_Ouest]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "イスパニョーラ島西部"
+      note: "1605年にスペインが北部・西部の住民を移したため（オソリオの強制移住）、野生の牛を狩るフランス人などの海賊（バッカニア）の地となっていた"
+    - from: 1665
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "フランス西インド会社がトルトゥーガ島とイスパニョーラ島西部に植民地を置く（ドジュロン総督）"
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1697
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ライスワイク条約でスペインが島の西部をフランス領と認める"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Ryswick"
+    - from: 1791
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "ハイチ革命が始まり、白人・有色自由人・奴隷の争いが南部にも広がる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1794
+      owner: "britain"
+      certainty: "occupied"
+      label: "サン・ドマング（イギリスの占領）"
+      cause: "イギリス軍が首府ポルトープランスを落とし（6月）、レオガンなど西部の海岸を押さえる"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1798
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "トゥサン・ルヴェルチュールとの協定でイギリス軍が撤退する"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが全島を押さえ、終身総督とする憲法を定める"
+      source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール"
+    - from: 1802
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ナポレオンが送ったルクレールの遠征軍がトゥサンを捕らえる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1803
+      owner: "haiti"
+      certainty: "uncertain"
+      cause: "ヴェルティエールの戦いに敗れたフランス軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      owner: "haiti"
+      cause: "デサリーヌがハイチの独立を宣言する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: grande_anse
+  name: グランダンス（ジェレミー）
+  select:
+    pieces: [HTI-Departement_de_la_Grande_Anse]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "イスパニョーラ島西部"
+      note: "1605年にスペインが北部・西部の住民を移したため（オソリオの強制移住）、野生の牛を狩るフランス人などの海賊（バッカニア）の地となっていた"
+    - from: 1665
+      owner: "france"
+      certainty: "uncertain"
+      label: "サン・ドマング"
+      cause: "フランス西インド会社がトルトゥーガ島とイスパニョーラ島西部に植民地を置く（ドジュロン総督）"
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1697
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ライスワイク条約でスペインが島の西部をフランス領と認める"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Ryswick"
+    - from: 1793
+      owner: "britain"
+      certainty: "occupied"
+      label: "サン・ドマング（イギリスの占領）"
+      cause: "イギリス軍がサン・ドマングに上陸する（フランス革命戦争）"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1798
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "トゥサン・ルヴェルチュールとの協定でイギリス軍が撤退する"
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Saint-Domingue"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが全島を押さえ、終身総督とする憲法を定める"
+      source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール"
+    - from: 1802
+      owner: "france"
+      label: "サン・ドマング"
+      cause: "ナポレオンが送ったルクレールの遠征軍がトゥサンを捕らえる"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1803
+      owner: "haiti"
+      certainty: "uncertain"
+      cause: "ヴェルティエールの戦いに敗れたフランス軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      owner: "haiti"
+      cause: "デサリーヌがハイチの独立を宣言する（1月1日）"
+      source: "https://ja.wikipedia.org/wiki/ハイチ"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: haiti_centre
+  name: 中央高原（アンシュ）
+  note: "1844年のドミニカ独立の後もハイチが押さえ続け、1929・1936年の国境条約で確定した"
+  select:
+    pieces: [HTI-Centre_Department]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "サント・ドミンゴ"
+    - from: 1704
+      owner: "spain"
+      label: "サント・ドミンゴ"
+      cause: "スペイン人がアンシュ（インチャ）の町を築く"
+    - from: 1795
+      owner: "france"
+      certainty: "nominal"
+      label: "サント・ドミンゴ"
+      cause: "バーゼル条約でスペインが島の東部をフランスに譲る（スペインの行政は続く）"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Basel"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサンが東部を占領する"
+    - from: 1803
+      owner: "france"
+      certainty: "uncertain"
+      label: "サント・ドミンゴ"
+    - from: 1809
+      owner: "spain"
+      certainty: "uncertain"
+      label: "サント・ドミンゴ"
+      cause: "スペイン系住民の蜂起とイギリス軍の助けでフランス軍が降伏し、スペイン領に戻る"
+      note: "アンシュ・ミルバレなど中央高原の町には、この時期からハイチ（ペシオン・クリストフ）側の勢力が及んでいたともいわれ、帰属ははっきりしない"
+      source: "https://en.wikipedia.org/wiki/España_Boba"
+    - from: 1821
+      owner: "dominican_republic"
+      cause: "スペイン領ハイチ独立国が独立を宣言する"
+      source: "https://en.wikipedia.org/wiki/Republic_of_Spanish_Haiti"
+    - from: 1822
+      owner: "haiti"
+      cause: "ボワイエのハイチ軍が東部を統合する"
+      source: "https://en.wikipedia.org/wiki/Haitian_occupation_of_Santo_Domingo"
+    - from: 1915
+      owner: "usa"
+      certainty: "occupied"
+      label: "ハイチ（アメリカの占領）"
+      cause: "アメリカ海兵隊がハイチを占領する"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+    - from: 1934
+      owner: "haiti"
+      cause: "アメリカ海兵隊が撤退する（善隣外交）"
+      source: "https://ja.wikipedia.org/wiki/アメリカのハイチ占領"
+
+- id: dominican
+  name: サント・ドミンゴ（ドミニカ共和国）
+  select:
+    pieces: [DOM-Azua, DOM-Bahoruco, DOM-Barahona, DOM-Dajabon, DOM-Distrito_Nacional, DOM-Duarte, DOM-El_Seybo, DOM-Espaillat, DOM-Hato_Mayor, DOM-Hermanas, DOM-Independencia, DOM-La_Altagracia, DOM-La_Estrelleta, DOM-La_Romana, DOM-La_Vega, DOM-Maria_Trinidad_Sanchez, DOM-Monsenor_Nouel, DOM-Monte_Cristi, DOM-Monte_Plata, DOM-Pedernales, DOM-Peravia, DOM-Puerto_Plata, DOM-Samana, DOM-San_Cristobal, DOM-San_Jose_de_Ocoa, DOM-San_Juan, DOM-San_Pedro_de_Macoris, DOM-Santiago, DOM-Santiago_Rodriguez, DOM-Santo_Domingo, DOM-Sanchez_Ramirez, DOM-Valverde]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "サント・ドミンゴ"
+    - from: 1795
+      owner: "france"
+      certainty: "nominal"
+      label: "サント・ドミンゴ"
+      cause: "バーゼル条約でスペインが島の東部をフランスに譲る（スペインの行政は続く）"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Basel"
+    - from: 1801
+      owner: "france"
+      label: "サン・ドマング（トゥサン・ルヴェルチュールの統治）"
+      cause: "トゥサン・ルヴェルチュールが東部を占領する"
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1802
+      owner: "france"
+      label: "サント・ドミンゴ"
+      cause: "ルクレールの遠征軍が東部を押さえる"
+    - from: 1809
+      owner: "spain"
+      label: "サント・ドミンゴ"
+      cause: "スペイン系住民の蜂起とイギリス軍の助けでフランス軍が降伏し、スペイン領に戻る（「愚かなスペイン」の時代）"
+      source: "https://en.wikipedia.org/wiki/España_Boba"
+    - from: 1821
+      owner: "dominican_republic"
+      cause: "スペイン領ハイチ独立国が独立を宣言する（12月）"
+      source: "https://en.wikipedia.org/wiki/Republic_of_Spanish_Haiti"
+    - from: 1822
+      owner: "haiti"
+      label: "サント・ドミンゴ（ハイチの統治）"
+      cause: "ボワイエのハイチ軍が東部を統合する（2月）"
+      source: "https://en.wikipedia.org/wiki/Haitian_occupation_of_Santo_Domingo"
+    - from: 1844
+      owner: "dominican_republic"
+      cause: "ドミニカ共和国がハイチからの独立を宣言する（2月27日）"
+      source: "https://ja.wikipedia.org/wiki/ドミニカ共和国の歴史"
+    - from: 1861
+      owner: "spain"
+      label: "サント・ドミンゴ"
+      cause: "サンタナ大統領の求めでスペインが再び併合する"
+      source: "https://en.wikipedia.org/wiki/Captaincy_General_of_Santo_Domingo"
+    - from: 1863
+      owner: "spain"
+      certainty: "uncertain"
+      label: "サント・ドミンゴ"
+      cause: "再独立戦争（王政復古戦争）が始まる"
+      source: "https://en.wikipedia.org/wiki/Dominican_Restoration_War"
+    - from: 1865
+      owner: "dominican_republic"
+      cause: "スペイン軍が撤退し、共和国が復活する"
+      source: "https://en.wikipedia.org/wiki/Dominican_Restoration_War"
+    - from: 1916
+      owner: "usa"
+      certainty: "occupied"
+      label: "ドミニカ共和国（アメリカの占領）"
+      cause: "アメリカ海兵隊が上陸し、軍政をしく"
+      source: "https://en.wikipedia.org/wiki/United_States_occupation_of_the_Dominican_Republic_(1916–1924)"
+    - from: 1924
+      owner: "dominican_republic"
+      cause: "アメリカ軍が撤退する"
+
+- id: puerto_rico
+  name: プエルトリコ
+  note: "1917年のジョーンズ法で住民はアメリカの市民権を得た"
+  select:
+    pieces: [USA-Puerto_Rico]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "プエルトリコ"
+    - from: 1898
+      owner: "usa"
+      label: "プエルトリコ"
+      cause: "米西戦争の結果、パリ条約でアメリカに割譲される"
+      source: "https://ja.wikipedia.org/wiki/プエルトリコの歴史"
+    - from: 1952
+      owner: "usa"
+      label: "プエルトリコ（自治連邦区）"
+      cause: "憲法を定め、アメリカの自治連邦区（コモンウェルス）となる"
+      source: "https://ja.wikipedia.org/wiki/プエルトリコ"
+
+- id: jamaica
+  name: ジャマイカ
+  note: "1670年のマドリード条約でスペインがイギリスの領有を認めた"
+  select:
+    pieces: [JAM-Clarendon, JAM-Hanover, JAM-Kingston, JAM-Manchester, JAM-Portland, JAM-Saint_Andrew, JAM-Saint_Ann, JAM-Saint_Catherine, JAM-Saint_Elizabeth, JAM-Saint_James, JAM-Saint_Mary, JAM-Saint_Thomas, JAM-Trelawny, JAM-Westmoreland]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "ジャマイカ"
+    - from: 1655
+      owner: "britain"
+      label: "ジャマイカ"
+      cause: "クロムウェルの西インド遠征軍がジャマイカを奪う"
+      source: "https://ja.wikipedia.org/wiki/ジャマイカの歴史"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（ジャマイカ）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "jamaica"
+      cause: "ジャマイカの独立（8月）"
+      source: "https://ja.wikipedia.org/wiki/ジャマイカの歴史"
+
+- id: cayman
+  name: ケイマン諸島
+  select:
+    pieces: [CYM-Cayman_Islands]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "ケイマン諸島（無人）"
+    - from: 1670
+      owner: "britain"
+      label: "ケイマン諸島"
+      cause: "マドリード条約でイギリス領と認められる（ジャマイカの属領）"
+      source: "https://ja.wikipedia.org/wiki/ケイマン諸島"
+    - from: 1962
+      owner: "britain"
+      label: "ケイマン諸島（イギリスの海外領土）"
+      cause: "ジャマイカの独立でイギリスの直轄となる"
+
+- id: eleuthera
+  name: エルーセラ島
+  select:
+    pieces: [BHS-North_Eleuthera, BHS-Central_Eleuthera, BHS-South_Eleuthera, BHS-Harbour_Island, BHS-Spanish_Wells]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      label: "バハマ"
+      cause: "バミューダのピューリタン「エルーセラの冒険者たち」が入植する"
+      source: "https://en.wikipedia.org/wiki/Eleutheran_Adventurers"
+    - from: 1782
+      owner: "spain"
+      certainty: "occupied"
+      label: "バハマ（スペインの占領）"
+      cause: "スペイン軍がナッソーを占領する（アメリカ独立戦争）"
+      source: "https://en.wikipedia.org/wiki/Capture_of_Nassau_(1782)"
+    - from: 1783
+      owner: "britain"
+      label: "バハマ"
+      cause: "パリ条約でイギリス領に戻る"
+      source: "https://ja.wikipedia.org/wiki/バハマの歴史"
+    - from: 1973
+      owner: "bahamas"
+      cause: "バハマの独立"
+      source: "https://ja.wikipedia.org/wiki/バハマの歴史"
+
+- id: new_providence
+  name: ニュープロヴィデンス島（ナッソー）
+  note: "1700年代初めには海賊（黒ひげなど）の「海賊共和国」の拠点となった"
+  select:
+    pieces: [BHS-New_Providence]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      certainty: "nominal"
+      label: "バハマ"
+    - from: 1666
+      owner: "britain"
+      label: "バハマ"
+      cause: "チャールズタウン（のちのナッソー）が建設される"
+    - from: 1718
+      owner: "britain"
+      label: "バハマ"
+      cause: "ウッズ・ロジャーズ総督が海賊を追い払い、王領植民地とする"
+      source: "https://en.wikipedia.org/wiki/Woodes_Rogers"
+    - from: 1782
+      owner: "spain"
+      certainty: "occupied"
+      label: "バハマ（スペインの占領）"
+      cause: "スペイン軍がナッソーを占領する（アメリカ独立戦争）"
+      source: "https://en.wikipedia.org/wiki/Capture_of_Nassau_(1782)"
+    - from: 1783
+      owner: "britain"
+      label: "バハマ"
+      cause: "パリ条約でイギリス領に戻る"
+      source: "https://ja.wikipedia.org/wiki/バハマの歴史"
+    - from: 1973
+      owner: "bahamas"
+      cause: "バハマの独立"
+      source: "https://ja.wikipedia.org/wiki/バハマの歴史"
+
+- id: bahamas_out
+  name: バハマの外島
+  select:
+    pieces: [BHS-Acklins, BHS-Berry_Islands, BHS-Biminis, BHS-Black_Point, BHS-Cat_Island, BHS-Central_Abaco, BHS-Central_Andros, BHS-City_of_Freeport, BHS-Crooked_Island, BHS-East_Grand_Bahama, BHS-Exuma, BHS-Grand_Cay, BHS-Hope_Town, BHS-Inagua, BHS-Long_Island, BHS-Mangrove_Cay, BHS-Mayaguana, BHS-Moore_s_Island, BHS-North_Abaco, BHS-North_Andros, BHS-Ragged_Island, BHS-Rum_Cay, BHS-San_Salvador, BHS-South_Abaco, BHS-South_Andros, BHS-West_Grand_Bahama]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      certainty: "nominal"
+      label: "バハマ"
+    - from: 1784
+      owner: "britain"
+      label: "バハマ"
+      cause: "アメリカ独立戦争に敗れた王党派（ロイヤリスト）が奴隷を連れて移り住む"
+      source: "https://ja.wikipedia.org/wiki/バハマの歴史"
+    - from: 1973
+      owner: "bahamas"
+      cause: "バハマの独立"
+      source: "https://ja.wikipedia.org/wiki/バハマの歴史"
+
+- id: turks_caicos
+  name: タークス・カイコス諸島
+  select:
+    pieces: [TCA-Turks_and_Caicos_Islands]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      certainty: "nominal"
+      label: "タークス・カイコス諸島（無人）"
+    - from: 1681
+      owner: "britain"
+      certainty: "uncertain"
+      label: "タークス・カイコス諸島"
+      cause: "バミューダの塩田業者が来て住みつく"
+      source: "https://ja.wikipedia.org/wiki/タークス・カイコス諸島"
+    - from: 1799
+      owner: "britain"
+      label: "タークス・カイコス諸島（バハマの一部）"
+      cause: "バハマ植民地に組み込まれる"
+    - from: 1873
+      owner: "britain"
+      label: "タークス・カイコス諸島（ジャマイカの属領）"
+      cause: "ジャマイカの属領となる"
+    - from: 1962
+      owner: "britain"
+      label: "タークス・カイコス諸島（イギリスの海外領土）"
+      cause: "ジャマイカの独立でイギリスの直轄となる"
+
+- id: bvi
+  name: 英領ヴァージン諸島
+  select:
+    pieces: [VGB-British_Virgin_Islands]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "トルトラ島（オランダの入植地）"
+    - from: 1672
+      owner: "britain"
+      label: "英領ヴァージン諸島"
+      cause: "イングランドがオランダからトルトラ島を奪う（第3次英蘭戦争）"
+      source: "https://ja.wikipedia.org/wiki/イギリス領ヴァージン諸島"
+
+- id: usvi
+  name: アメリカ領ヴァージン諸島（セント・クロイ島など）
+  note: "ピースはセント・トマス島・セント・ジョン島・セント・クロイ島を1つにまとめたもの。面積の過半を占めるセント・クロイ島で描く（セント・トマス島は1672年、セント・ジョン島は1718年からデンマーク領）"
+  select:
+    pieces: [USA-United_States_Virgin_Islands]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      certainty: "uncertain"
+      label: "セント・クロイ島"
+      note: "セント・クロイ島にイギリス人とオランダ人が住み、争っていた"
+    - from: 1650
+      owner: "france"
+      label: "サント・クロワ島"
+      cause: "スペインがイギリス人を追い出した後、フランスが島を奪う（1651–65年はマルタ騎士団の所有）"
+      source: "https://en.wikipedia.org/wiki/History_of_the_United_States_Virgin_Islands"
+    - from: 1696
+      owner: "france"
+      certainty: "nominal"
+      label: "サント・クロワ島（無人）"
+      cause: "フランスが入植者をサン・ドマングに移し、島を放棄する"
+    - from: 1733
+      owner: "denmark"
+      label: "デンマーク領西インド諸島"
+      cause: "デンマーク西インド会社がフランスからセント・クロイ島を買う"
+      source: "https://en.wikipedia.org/wiki/Danish_West_Indies"
+    - from: 1801
+      owner: "britain"
+      certainty: "occupied"
+      label: "デンマーク領西インド（イギリスの占領）"
+      cause: "イギリス軍が占領する（第二次武装中立同盟）"
+    - from: 1802
+      owner: "denmark"
+      label: "デンマーク領西インド諸島"
+      cause: "アミアンの和約の前に返還"
+    - from: 1807
+      owner: "britain"
+      certainty: "occupied"
+      label: "デンマーク領西インド（イギリスの占領）"
+      cause: "イギリス軍が再び占領する（ナポレオン戦争）"
+    - from: 1815
+      owner: "denmark"
+      label: "デンマーク領西インド諸島"
+      cause: "パリ条約で返還される"
+    - from: 1917
+      owner: "usa"
+      label: "アメリカ領ヴァージン諸島"
+      cause: "アメリカがデンマークから買い取る"
+      source: "https://ja.wikipedia.org/wiki/アメリカ領ヴァージン諸島"
+
+- id: anguilla
+  name: アンギラ
+  select:
+    pieces: [AIA-Anguilla]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      certainty: "nominal"
+      label: "アンギラ"
+    - from: 1650
+      owner: "britain"
+      label: "アンギラ"
+      cause: "セントクリストファー島のイギリス人が入植する"
+      source: "https://ja.wikipedia.org/wiki/アンギラ"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（アンギラ）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "セントクリストファー・ネイビス・アンギラ"
+    - from: 1967
+      owner: "britain"
+      certainty: "uncertain"
+      label: "アンギラ（分離を宣言）"
+      cause: "住民がセントクリストファー・ネイビス・アンギラからの分離を宣言する"
+      source: "https://en.wikipedia.org/wiki/Anguillian_Revolution"
+    - from: 1969
+      owner: "britain"
+      label: "アンギラ"
+      cause: "イギリスが部隊を送り、直接の統治に戻す"
+      source: "https://en.wikipedia.org/wiki/Anguillian_Revolution"
+    - from: 1980
+      owner: "britain"
+      label: "アンギラ（イギリスの海外領土）"
+      cause: "正式にセントクリストファー・ネイビスから分離する"
+
+- id: saint_martin_fr
+  name: サン・マルタン（フランス領）
+  note: "1651–65年はマルタ騎士団の所有（フランスの主権のもと）"
+  select:
+    pieces: [MAF-St_Martin]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "サン・マルタン"
+      cause: "コンコルディア条約でフランスとオランダが島を分ける"
+      source: "https://ja.wikipedia.org/wiki/コンコルディア条約"
+    - from: 1810
+      owner: "britain"
+      certainty: "occupied"
+      label: "サン・マルタン（イギリスの占領）"
+      cause: "イギリス軍が占領する（ナポレオン戦争）"
+    - from: 1816
+      owner: "france"
+      label: "サン・マルタン（グアドループの属領）"
+      cause: "フランスに返還される"
+    - from: 2007
+      owner: "france"
+      label: "サン・マルタン（海外準県）"
+      cause: "グアドループから分かれて海外準県となる"
+
+- id: sint_maarten
+  name: シント・マールテン（オランダ領）
+  select:
+    pieces: [SXM-Sint_Maarten]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "シント・マールテン"
+      cause: "コンコルディア条約でフランスとオランダが島を分ける"
+      source: "https://ja.wikipedia.org/wiki/コンコルディア条約"
+    - from: 1810
+      owner: "britain"
+      certainty: "occupied"
+      label: "シント・マールテン（イギリスの占領）"
+      cause: "イギリス軍が占領する（ナポレオン戦争）"
+    - from: 1816
+      owner: "netherlands"
+      label: "シント・マールテン"
+      cause: "オランダに返還される"
+    - from: 1954
+      owner: "netherlands"
+      label: "オランダ領アンティル"
+      cause: "オランダ領アンティルがオランダ王国の構成国となる"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+    - from: 2010
+      owner: "netherlands"
+      label: "シント・マールテン（オランダ王国の構成国）"
+      cause: "オランダ領アンティルの解体"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+
+- id: st_barth
+  name: サン・バルテルミー島
+  note: "1651–65年はマルタ騎士団の所有（フランスの主権のもと）"
+  select:
+    pieces: [BLM-Saint_Barthelemy]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "サン・バルテルミー"
+      cause: "セントクリストファー島のフランス人が入植する"
+    - from: 1784
+      owner: "sweden"
+      label: "サン・バルテルミー（スウェーデン領）"
+      cause: "フランスがスウェーデンに譲る（ヨーテボリでの交易権と交換）"
+      source: "https://ja.wikipedia.org/wiki/サン・バルテルミー島"
+    - from: 1878
+      owner: "france"
+      label: "サン・バルテルミー（グアドループの属領）"
+      cause: "住民投票の後、スウェーデンがフランスに返す"
+      source: "https://ja.wikipedia.org/wiki/サン・バルテルミー島"
+    - from: 2007
+      owner: "france"
+      label: "サン・バルテルミー（海外準県）"
+      cause: "グアドループから分かれて海外準県となる"
+
+- id: saba_eustatius
+  name: サバ島・シント・ユースタティウス島
+  select:
+    pieces: [BES-Saba, BES-St_Eustatius]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "シント・ユースタティウス"
+      note: "オランダ西インド会社の自由港。アメリカ独立戦争では13植民地への武器の供給地となった"
+    - from: 1781
+      owner: "france"
+      certainty: "occupied"
+      label: "シント・ユースタティウス（フランスの占領）"
+      cause: "イギリスのロドニー提督が占領した（2月）後、フランス軍が奪う（11月）"
+      source: "https://en.wikipedia.org/wiki/Capture_of_Sint_Eustatius"
+    - from: 1784
+      owner: "netherlands"
+      label: "シント・ユースタティウス"
+      cause: "パリ条約の後、オランダに返還される"
+    - from: 1810
+      owner: "britain"
+      certainty: "occupied"
+      label: "シント・ユースタティウス（イギリスの占領）"
+      cause: "イギリス軍が占領する（ナポレオン戦争）"
+    - from: 1816
+      owner: "netherlands"
+      label: "シント・ユースタティウス"
+      cause: "オランダに返還される"
+    - from: 1954
+      owner: "netherlands"
+      label: "オランダ領アンティル"
+      cause: "オランダ領アンティルがオランダ王国の構成国となる"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+    - from: 2010
+      owner: "netherlands"
+      label: "カリブ・オランダ（オランダの特別自治体）"
+      cause: "オランダ領アンティルの解体"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+
+- id: st_kitts_french
+  name: セントクリストファー島のフランス領（カプステール・バステール）
+  select:
+    pieces: [KNA-Saint_John_Capisterre, KNA-Saint_Paul_Capisterre, KNA-Saint_George_Basseterre, KNA-Saint_Peter_Basseterre]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "サン・クリストフ（フランス領）"
+      note: "1627年から島の両端をフランス、中部をイングランドが分けて治めた。1651–65年はマルタ騎士団の所有"
+      source: "https://ja.wikipedia.org/wiki/セントクリストファー・ネイビスの歴史"
+    - from: 1690
+      owner: "britain"
+      certainty: "occupied"
+      label: "セントクリストファー"
+      cause: "イングランドがフランス領を占領する（大同盟戦争）"
+    - from: 1697
+      owner: "france"
+      label: "サン・クリストフ（フランス領）"
+      cause: "ライスワイク条約でフランスに返還される"
+    - from: 1702
+      owner: "britain"
+      certainty: "occupied"
+      label: "セントクリストファー"
+      cause: "イングランドが再びフランス領を占領する（スペイン継承戦争）"
+    - from: 1713
+      owner: "britain"
+      label: "セントクリストファー"
+      cause: "ユトレヒト条約で島全体がイギリス領となる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Utrecht"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "セントクリストファー（フランスの占領）"
+      cause: "フランス軍がブリムストーン・ヒルの要塞を落とす（アメリカ独立戦争）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Brimstone_Hill"
+    - from: 1783
+      owner: "britain"
+      label: "セントクリストファー"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（セントクリストファー）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "セントクリストファー・ネイビス・アンギラ"
+    - from: 1983
+      owner: "saint_kitts_nevis"
+      cause: "セントクリストファー・ネイビスの独立"
+      source: "https://ja.wikipedia.org/wiki/セントクリストファー・ネイビスの歴史"
+
+- id: st_kitts_english
+  name: セントクリストファー島のイングランド領（中部）
+  select:
+    pieces: [KNA-Christ_Church_Nichola_Town, KNA-Saint_Mary_Cayon, KNA-Trinity_Palmetto_Point, KNA-Saint_Thomas_Middle_Island, KNA-Saint_Anne_Sandy_Point]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      label: "セントクリストファー"
+      source: "https://ja.wikipedia.org/wiki/セントクリストファー・ネイビスの歴史"
+    - from: 1666
+      owner: "france"
+      certainty: "occupied"
+      label: "セントクリストファー"
+      cause: "フランスがイングランド領を占領する（第2次英蘭戦争）"
+    - from: 1667
+      owner: "britain"
+      label: "セントクリストファー"
+      cause: "ブレダの和約で返還が決まる"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "セントクリストファー（フランスの占領）"
+      cause: "フランス軍がブリムストーン・ヒルの要塞を落とす（アメリカ独立戦争）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Brimstone_Hill"
+    - from: 1783
+      owner: "britain"
+      label: "セントクリストファー"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（セントクリストファー）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "セントクリストファー・ネイビス・アンギラ"
+    - from: 1983
+      owner: "saint_kitts_nevis"
+      cause: "セントクリストファー・ネイビスの独立"
+      source: "https://ja.wikipedia.org/wiki/セントクリストファー・ネイビスの歴史"
+
+- id: nevis
+  name: ネイビス島
+  select:
+    pieces: [KNA-Saint_George_Gingerland, KNA-Saint_James_Windward, KNA-Saint_John_Figtree, KNA-Saint_Paul_Charlestown, KNA-Saint_Thomas_Lowland]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      label: "ネイビス"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "ネイビス（フランスの占領）"
+      cause: "フランス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "britain"
+      label: "ネイビス"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（ネイビス）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "セントクリストファー・ネイビス・アンギラ"
+    - from: 1983
+      owner: "saint_kitts_nevis"
+      cause: "セントクリストファー・ネイビスの独立"
+      source: "https://ja.wikipedia.org/wiki/セントクリストファー・ネイビスの歴史"
+
+- id: antigua
+  name: アンティグア島
+  select:
+    pieces: [ATG-Redonda, ATG-Saint_George, ATG-Saint_John, ATG-Saint_Mary, ATG-Saint_Paul, ATG-Saint_Peter, ATG-Saint_Philip]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      label: "アンティグア"
+    - from: 1666
+      owner: "france"
+      certainty: "occupied"
+      label: "アンティグア（フランスの占領）"
+      cause: "フランス軍が占領する（第2次英蘭戦争）"
+    - from: 1667
+      owner: "britain"
+      label: "アンティグア"
+      cause: "ブレダの和約でイングランドに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（アンティグア）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "アンティグア"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1981
+      owner: "antigua_barbuda"
+      cause: "アンティグア・バーブーダの独立"
+      source: "https://ja.wikipedia.org/wiki/アンティグア・バーブーダ"
+
+- id: barbuda
+  name: バーブーダ島
+  select:
+    pieces: [ATG-Barbuda]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      certainty: "nominal"
+      label: "バーブーダ"
+    - from: 1685
+      owner: "britain"
+      label: "バーブーダ"
+      cause: "コドリントン家が島を借り受け、農場を開く"
+      source: "https://en.wikipedia.org/wiki/Barbuda"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（アンティグア）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "アンティグア"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1981
+      owner: "antigua_barbuda"
+      cause: "アンティグア・バーブーダの独立"
+      source: "https://ja.wikipedia.org/wiki/アンティグア・バーブーダ"
+
+- id: montserrat
+  name: モントセラト島
+  note: "1995年からのスーフリエール・ヒルズ火山の噴火で、島の南部（首都プリマスを含む）は立入禁止区域となった"
+  select:
+    pieces: [MSR-Montserrat]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      label: "モントセラト"
+      note: "1632年からアイルランド系カトリックの入植者が多く住んだ"
+    - from: 1782
+      owner: "france"
+      certainty: "occupied"
+      label: "モントセラト（フランスの占領）"
+      cause: "フランス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "britain"
+      label: "モントセラト"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（モントセラト）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "モントセラト（イギリスの海外領土）"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+
+- id: guadeloupe
+  name: グアドループ
+  note: "1794年にイギリスが一時占領したが、同年中にヴィクトル・ユーグが奪い返し、奴隷制廃止を実施した（1802年にナポレオンが奴隷制を復活）"
+  select:
+    pieces: [GLP-Guadeloupe]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "グアドループ"
+    - from: 1759
+      owner: "britain"
+      certainty: "occupied"
+      label: "グアドループ（イギリスの占領）"
+      cause: "七年戦争でイギリス軍が占領する"
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Guadeloupe_(1759)"
+    - from: 1763
+      owner: "france"
+      label: "グアドループ"
+      cause: "パリ条約でフランスに返還される（イギリスはカナダを選んだ）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
+    - from: 1810
+      owner: "britain"
+      certainty: "occupied"
+      label: "グアドループ（イギリスの占領）"
+      cause: "イギリス軍が占領する（ナポレオン戦争）"
+      note: "1813年にイギリスはグアドループをスウェーデンに譲ると約束したが、1814年のパリ条約でフランスに戻すことになった"
+    - from: 1816
+      owner: "france"
+      label: "グアドループ"
+      cause: "フランスに返還される（百日天下の後の再占領を経て）"
+    - from: 1946
+      owner: "france"
+      label: "グアドループ（海外県）"
+      cause: "海外県となる"
+      source: "https://ja.wikipedia.org/wiki/グアドループ"
+
+- id: martinique
+  name: マルティニーク
+  note: "1902年のプレー山の噴火でサン・ピエールの町が全滅した"
+  select:
+    pieces: [MTQ-Martinique]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "マルティニーク"
+    - from: 1762
+      owner: "britain"
+      certainty: "occupied"
+      label: "マルティニーク（イギリスの占領）"
+      cause: "七年戦争でイギリス軍が占領する"
+    - from: 1763
+      owner: "france"
+      label: "マルティニーク"
+      cause: "パリ条約でフランスに返還される"
+    - from: 1794
+      owner: "britain"
+      certainty: "occupied"
+      label: "マルティニーク（イギリスの占領）"
+      cause: "イギリス軍が占領する（フランス革命戦争）"
+    - from: 1802
+      owner: "france"
+      label: "マルティニーク"
+      cause: "アミアンの和約で返還される"
+    - from: 1809
+      owner: "britain"
+      certainty: "occupied"
+      label: "マルティニーク（イギリスの占領）"
+      cause: "イギリス軍が占領する（ナポレオン戦争）"
+    - from: 1814
+      owner: "france"
+      label: "マルティニーク"
+      cause: "パリ条約で返還される"
+    - from: 1946
+      owner: "france"
+      label: "マルティニーク（海外県）"
+      cause: "海外県となる"
+      source: "https://ja.wikipedia.org/wiki/マルティニーク"
+
+- id: dominica
+  name: ドミニカ島
+  select:
+    pieces: [DMA-Saint_Andrew, DMA-Saint_David, DMA-Saint_George, DMA-Saint_John, DMA-Saint_Joseph, DMA-Saint_Luke, DMA-Saint_Mark, DMA-Saint_Patrick, DMA-Saint_Paul, DMA-Saint_Peter]
+  timeline:
+    - from: 1648
+      owner: "kalinago"
+      note: "1660年の英仏とカリブ人の取り決めで、カリブ人の島とされた。18世紀にはフランス人の入植者も住んだ"
+    - from: 1763
+      owner: "britain"
+      label: "ドミニカ"
+      cause: "パリ条約でイギリス領となる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
+    - from: 1778
+      owner: "france"
+      certainty: "occupied"
+      label: "ドミニカ（フランスの占領）"
+      cause: "フランス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "britain"
+      label: "ドミニカ"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（ドミニカ）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "ドミニカ"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1978
+      owner: "dominica"
+      cause: "ドミニカ国の独立"
+      source: "https://ja.wikipedia.org/wiki/ドミニカ国"
+
+- id: saint_lucia
+  name: セントルシア島
+  select:
+    pieces: [LCA-Anse_la_Raya, LCA-Canaries, LCA-Castries, LCA-Choiseul, LCA-Dennery, LCA-Gros_Islet, LCA-Laborie, LCA-Micoud, LCA-Soufriere, LCA-Vieux_Fort]
+  timeline:
+    - from: 1648
+      owner: "kalinago"
+      note: "1639年のイギリス人の入植はカリブ人に退けられた"
+    - from: 1651
+      owner: "france"
+      certainty: "uncertain"
+      label: "サント・リュシー"
+      cause: "マルティニークのフランス人が入植する"
+      source: "https://en.wikipedia.org/wiki/History_of_Saint_Lucia"
+    - from: 1664
+      owner: "britain"
+      certainty: "occupied"
+      label: "セントルシア（イギリスの占領）"
+      cause: "イギリス軍が島を奪う"
+    - from: 1667
+      owner: "france"
+      certainty: "uncertain"
+      label: "サント・リュシー"
+      cause: "ブレダの和約の後、イギリスが撤退する"
+      note: "1723年・1748年の英仏の取り決めで中立地帯とされたが、実際にはフランス人が住んだ"
+    - from: 1763
+      owner: "france"
+      label: "サント・リュシー"
+      cause: "パリ条約でフランス領となる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
+    - from: 1778
+      owner: "britain"
+      certainty: "occupied"
+      label: "セントルシア（イギリスの占領）"
+      cause: "イギリス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "france"
+      label: "サント・リュシー"
+      cause: "パリ条約でフランスに返還される"
+    - from: 1796
+      owner: "britain"
+      certainty: "occupied"
+      label: "セントルシア（イギリスの占領）"
+      cause: "イギリス軍が「山賊の戦争」の反乱軍とフランス軍を破る"
+    - from: 1802
+      owner: "france"
+      label: "サント・リュシー"
+      cause: "アミアンの和約で返還される"
+    - from: 1803
+      owner: "britain"
+      certainty: "occupied"
+      label: "セントルシア（イギリスの占領）"
+      cause: "イギリス軍が再び占領する"
+    - from: 1814
+      owner: "britain"
+      label: "セントルシア"
+      cause: "パリ条約でイギリスに割譲される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（セントルシア）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "セントルシア"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1979
+      owner: "saint_lucia"
+      cause: "セントルシアの独立"
+      source: "https://ja.wikipedia.org/wiki/セントルシア"
+
+- id: saint_vincent
+  name: セントビンセント島（南西部）・グレナディーン諸島北部
+  select:
+    pieces: [VCT-Grenadines, VCT-Saint_Andrew, VCT-Saint_David, VCT-Saint_George, VCT-Saint_Patrick]
+  timeline:
+    - from: 1648
+      owner: "kalinago"
+      note: "1660年の英仏とカリブ人の取り決めで、カリブ人の島とされた"
+    - from: 1763
+      owner: "britain"
+      label: "セントビンセント"
+      cause: "パリ条約でイギリス領となる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
+    - from: 1779
+      owner: "france"
+      certainty: "occupied"
+      label: "セントビンセント（フランスの占領）"
+      cause: "フランス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "britain"
+      label: "セントビンセント"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（セントビンセント）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "セントビンセント"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1979
+      owner: "saint_vincent"
+      cause: "セントビンセント及びグレナディーン諸島の独立"
+      source: "https://ja.wikipedia.org/wiki/セントビンセント及びグレナディーン諸島"
+
+- id: charlotte
+  name: シャーロット（セントビンセント島北東部・ガリフナの地）
+  select:
+    pieces: [VCT-Charlotte]
+  timeline:
+    - from: 1648
+      owner: "kalinago"
+      note: "1660年の英仏とカリブ人の取り決めで、カリブ人の島とされた。逃亡奴隷と混じり合った「黒いカリブ（ガリフナ）」が力を持った"
+    - from: 1773
+      owner: "britain"
+      certainty: "uncertain"
+      label: "セントビンセント"
+      cause: "第1次カリブ戦争の後の条約で、北東部がカリブ人の保留地とされる"
+      source: "https://en.wikipedia.org/wiki/Carib_Wars"
+    - from: 1779
+      owner: "france"
+      certainty: "occupied"
+      label: "セントビンセント（フランスの占領）"
+      cause: "フランス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "britain"
+      certainty: "uncertain"
+      label: "セントビンセント"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1797
+      owner: "britain"
+      label: "セントビンセント"
+      cause: "第2次カリブ戦争に敗れたガリフナが中米のロアタン島に追放される"
+      source: "https://en.wikipedia.org/wiki/Carib_Wars"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（セントビンセント）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "セントビンセント"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1979
+      owner: "saint_vincent"
+      cause: "セントビンセント及びグレナディーン諸島の独立"
+      source: "https://ja.wikipedia.org/wiki/セントビンセント及びグレナディーン諸島"
+
+- id: grenada
+  name: グレナダ
+  note: "1795–96年にフランス革命の影響を受けたフェドンの反乱が起きた"
+  select:
+    pieces: [GRD-Saint_Andrew, GRD-Saint_David, GRD-Saint_George, GRD-Saint_John, GRD-Saint_Mark, GRD-Saint_Patrick, GRD-Southern_Grenadine_Islands]
+  timeline:
+    - from: 1648
+      owner: "kalinago"
+    - from: 1649
+      owner: "france"
+      label: "グレナード"
+      cause: "マルティニークのフランス人がグレナダに入植する（1651年までにカリブ人を滅ぼす）"
+      source: "https://en.wikipedia.org/wiki/History_of_Grenada"
+    - from: 1762
+      owner: "britain"
+      certainty: "occupied"
+      label: "グレナダ（イギリスの占領）"
+      cause: "七年戦争でイギリス軍が占領する"
+    - from: 1763
+      owner: "britain"
+      label: "グレナダ"
+      cause: "パリ条約でイギリス領となる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
+    - from: 1779
+      owner: "france"
+      certainty: "occupied"
+      label: "グレナダ（フランスの占領）"
+      cause: "フランス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "britain"
+      label: "グレナダ"
+      cause: "パリ条約でイギリスに返還される"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（グレナダ）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "グレナダ"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1974
+      owner: "grenada"
+      cause: "グレナダの独立"
+      source: "https://ja.wikipedia.org/wiki/グレナダ"
+
+- id: barbados
+  name: バルバドス
+  select:
+    pieces: [BRB-Christ_Church, BRB-Saint_Andrew, BRB-Saint_George, BRB-Saint_James, BRB-Saint_John, BRB-Saint_Joseph, BRB-Saint_Lucy, BRB-Saint_Michael, BRB-Saint_Peter, BRB-Saint_Philip, BRB-Saint_Thomas]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      label: "バルバドス"
+      note: "1640年代からサトウキビの大農園とアフリカ人奴隷による「砂糖革命」が進んだ"
+      source: "https://en.wikipedia.org/wiki/History_of_Barbados"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（バルバドス）"
+      cause: "イギリス領の島々が西インド連邦を作る"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "britain"
+      label: "バルバドス"
+      cause: "西インド連邦が解体する（1962年5月）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1966
+      owner: "barbados"
+      cause: "バルバドスの独立"
+      source: "https://ja.wikipedia.org/wiki/バルバドス"
+
+- id: trinidad
+  name: トリニダード島
+  note: "1783年のスペインの入植勅令でフランス系カトリックの農園主が移り住んだ。奴隷制廃止の後、インドから多くの契約労働者が来た"
+  select:
+    pieces: [TTO-Chaguanas, TTO-Couva_Tabaquite_Talparo, TTO-Diego_Martin, TTO-Penal_Debe, TTO-Point_Fortin, TTO-Port_of_Spain, TTO-Princes_Town, TTO-Rio_Claro_Mayaro, TTO-San_Fernando, TTO-San_Juan_Laventille, TTO-Sangre_Grande, TTO-Siparia, TTO-Tunapuna_Piarco]
+  timeline:
+    - from: 1648
+      owner: "spain"
+      label: "トリニダード"
+    - from: 1797
+      owner: "britain"
+      certainty: "occupied"
+      label: "トリニダード（イギリスの占領）"
+      cause: "イギリス軍がトリニダードを占領する"
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Trinidad_(1797)"
+    - from: 1802
+      owner: "britain"
+      label: "トリニダード"
+      cause: "アミアンの和約でイギリスに割譲される"
+    - from: 1889
+      owner: "britain"
+      label: "トリニダード・トバゴ"
+      cause: "トバゴと合わせて1つの植民地となる"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（トリニダード・トバゴ）"
+      cause: "イギリス領の島々が西インド連邦を作る（首都ポート・オブ・スペイン）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "trinidad_tobago"
+      cause: "トリニダード・トバゴの独立（8月）"
+      source: "https://ja.wikipedia.org/wiki/トリニダード・トバゴ"
+
+- id: tobago
+  name: トバゴ島
+  note: "17世紀には英・仏・蘭・クールラントが30回以上も奪い合った。ここでは主な変化だけを描く"
+  select:
+    pieces: [TTO-Tobago]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "1637年にスペインがオランダの入植地を破壊して以来、ほぼ無人（カリブ人が往来）"
+    - from: 1654
+      owner: "courland"
+      certainty: "uncertain"
+      label: "新クールラント（トバゴ）"
+      cause: "クールラント公ヤーコプの入植者がトバゴに砦を築く"
+      source: "https://en.wikipedia.org/wiki/Couronian_colonization"
+    - from: 1659
+      owner: "netherlands"
+      certainty: "uncertain"
+      label: "トバゴ（オランダの入植地）"
+      cause: "オランダ人（ランプシンス家）がクールラントの砦を奪う"
+      source: "https://en.wikipedia.org/wiki/Couronian_colonization"
+    - from: 1677
+      owner: "france"
+      certainty: "nominal"
+      label: "トバゴ"
+      cause: "フランスのデストレ提督がオランダの砦を破壊する（オランダ侵略戦争）"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Tobago_(1677)"
+    - from: 1684
+      owner: null
+      note: "英仏が領有を争い、中立地帯とされてほぼ無人のままだった"
+    - from: 1763
+      owner: "britain"
+      label: "トバゴ"
+      cause: "パリ条約でイギリス領となる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)"
+    - from: 1781
+      owner: "france"
+      certainty: "occupied"
+      label: "トバゴ（フランスの占領）"
+      cause: "フランス軍が占領する（アメリカ独立戦争）"
+    - from: 1783
+      owner: "france"
+      label: "トバゴ"
+      cause: "パリ条約でフランス領となる"
+    - from: 1793
+      owner: "britain"
+      certainty: "occupied"
+      label: "トバゴ（イギリスの占領）"
+      cause: "イギリス軍が占領する（フランス革命戦争）"
+    - from: 1802
+      owner: "france"
+      label: "トバゴ"
+      cause: "アミアンの和約でフランスに返還される"
+    - from: 1803
+      owner: "britain"
+      certainty: "occupied"
+      label: "トバゴ（イギリスの占領）"
+      cause: "イギリス軍が再び占領する"
+    - from: 1814
+      owner: "britain"
+      label: "トバゴ"
+      cause: "パリ条約でイギリスに割譲される"
+    - from: 1889
+      owner: "britain"
+      label: "トリニダード・トバゴ"
+      cause: "トリニダードと合わせて1つの植民地となる"
+    - from: 1958
+      owner: "britain"
+      label: "西インド連邦（トリニダード・トバゴ）"
+      cause: "イギリス領の島々が西インド連邦を作る（首都ポート・オブ・スペイン）"
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+    - from: 1962
+      owner: "trinidad_tobago"
+      cause: "トリニダード・トバゴの独立（8月）"
+      source: "https://ja.wikipedia.org/wiki/トリニダード・トバゴ"
+
+- id: aruba
+  name: アルバ
+  select:
+    pieces: [ABW-Aruba]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "アルバ"
+      note: "オランダ西インド会社の拠点（キュラソーは奴隷貿易の中継地）"
+    - from: 1800
+      owner: "britain"
+      certainty: "occupied"
+      label: "アルバ（イギリスの占領）"
+      cause: "イギリス軍が占領する（フランス革命戦争）"
+    - from: 1803
+      owner: "netherlands"
+      label: "アルバ"
+      cause: "アミアンの和約で返還される"
+    - from: 1807
+      owner: "britain"
+      certainty: "occupied"
+      label: "アルバ（イギリスの占領）"
+      cause: "イギリス軍が再び占領する（ナポレオン戦争）"
+    - from: 1816
+      owner: "netherlands"
+      label: "アルバ"
+      cause: "オランダに返還される"
+    - from: 1954
+      owner: "netherlands"
+      label: "オランダ領アンティル"
+      cause: "オランダ領アンティルがオランダ王国の構成国となる"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+    - from: 1986
+      owner: "netherlands"
+      label: "アルバ（オランダ王国の構成国）"
+      cause: "オランダ領アンティルから分かれ、オランダ王国の構成国となる"
+      source: "https://ja.wikipedia.org/wiki/アルバ"
+
+- id: curacao
+  name: キュラソー
+  select:
+    pieces: [CUW-Curacao]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "キュラソー"
+      note: "オランダ西インド会社の拠点（キュラソーは奴隷貿易の中継地）"
+    - from: 1800
+      owner: "britain"
+      certainty: "occupied"
+      label: "キュラソー（イギリスの占領）"
+      cause: "イギリス軍が占領する（フランス革命戦争）"
+    - from: 1803
+      owner: "netherlands"
+      label: "キュラソー"
+      cause: "アミアンの和約で返還される"
+    - from: 1807
+      owner: "britain"
+      certainty: "occupied"
+      label: "キュラソー（イギリスの占領）"
+      cause: "イギリス軍が再び占領する（ナポレオン戦争）"
+    - from: 1816
+      owner: "netherlands"
+      label: "キュラソー"
+      cause: "オランダに返還される"
+    - from: 1954
+      owner: "netherlands"
+      label: "オランダ領アンティル"
+      cause: "オランダ領アンティルがオランダ王国の構成国となる"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+    - from: 2010
+      owner: "netherlands"
+      label: "キュラソー（オランダ王国の構成国）"
+      cause: "オランダ領アンティルの解体"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+
+- id: bonaire
+  name: ボネール
+  select:
+    pieces: [BES-Bonaire]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "ボネール"
+      note: "オランダ西インド会社の拠点（キュラソーは奴隷貿易の中継地）"
+    - from: 1800
+      owner: "britain"
+      certainty: "occupied"
+      label: "ボネール（イギリスの占領）"
+      cause: "イギリス軍が占領する（フランス革命戦争）"
+    - from: 1803
+      owner: "netherlands"
+      label: "ボネール"
+      cause: "アミアンの和約で返還される"
+    - from: 1807
+      owner: "britain"
+      certainty: "occupied"
+      label: "ボネール（イギリスの占領）"
+      cause: "イギリス軍が再び占領する（ナポレオン戦争）"
+    - from: 1816
+      owner: "netherlands"
+      label: "ボネール"
+      cause: "オランダに返還される"
+    - from: 1954
+      owner: "netherlands"
+      label: "オランダ領アンティル"
+      cause: "オランダ領アンティルがオランダ王国の構成国となる"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+    - from: 2010
+      owner: "netherlands"
+      label: "カリブ・オランダ（オランダの特別自治体）"
+      cause: "オランダ領アンティルの解体"
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"

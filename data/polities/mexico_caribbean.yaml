@@ -1,0 +1,890 @@
+# A3 メキシコ・中米・カリブ（MEX・GTM・BLZ・HND・SLV・NIC・CRI・PAN・カリブ海の島々）の政体（1648–2025）
+# 他の担当が参照しうる ID：mexico・second_mexican_empire・apache・central_america・guatemala・panama・cuba・haiti・dominican_republic
+# スペイン（spain）・イギリス（britain）・フランス（france）・オランダ（netherlands）・デンマーク（denmark）・スウェーデン（sweden）・
+# クールラント（courland）・スコットランド（scotland）・アメリカ（usa）・大コロンビア（gran_colombia）・コロンビア（colombia）は他の担当の政体を使う。
+# 植民地の時期は宗主国の色＋label（地域ごとの植民地名）。元首は独立後の実権者（大統領。独裁者が傀儡の大統領を立てた時期は実権者）を書く。
+# 元首の出典は主に Wikipedia の一覧（各国の大統領の一覧）。
+
+# ===== メキシコ =====
+- id: mexico
+  name: メキシコ合衆国
+  names:
+    - {to: 1820, name: メキシコ独立派（アナワク会議）, short: 独立派, kind: 独立運動}
+    - {from: 1821, to: 1822, name: メキシコ帝国（第一帝政）, short: メキシコ, kind: 帝国}
+    - {from: 1823, to: 1823, name: メキシコ（臨時政府）, short: メキシコ, kind: 臨時政府}
+    - {from: 1824, to: 1835, name: メキシコ合衆国, short: メキシコ, kind: 連邦共和国}
+    - {from: 1836, to: 1845, name: メキシコ共和国（中央集権体制）, short: メキシコ, kind: 共和国（中央集権）}
+    - {from: 1846, name: メキシコ合衆国, short: メキシコ, kind: 連邦共和国}
+  short: メキシコ
+  color: "#a9cf8b"
+  kind: 連邦共和国
+  home_iso: [MEX]
+  rulers:
+    - {name: アグスティン・デ・イトゥルビデ（アグスティン1世）, title: 摂政団議長・皇帝, from: 1821, to: 1823, note: イグアラ綱領で独立を実現し、1822年に皇帝に即位したが、翌年サンタ・アナらの反乱で退位した, source: "https://ja.wikipedia.org/wiki/アグスティン・デ・イトゥルビデ"}
+    - {name: グアダルーペ・ビクトリア, title: 大統領, from: 1824, to: 1829, note: 初代大統領。1823–24年は三頭政治の臨時政府, source: "https://en.wikipedia.org/wiki/Guadalupe_Victoria"}
+    - {name: ビセンテ・ゲレロ, title: 大統領, from: 1829, to: 1829, note: 1829年に奴隷制を廃止した。年末にブスタマンテに追われ、1831年に処刑された, source: "https://en.wikipedia.org/wiki/Vicente_Guerrero"}
+    - {name: アナスタシオ・ブスタマンテ, title: 大統領, from: 1830, to: 1832, source: "https://en.wikipedia.org/wiki/Anastasio_Bustamante"}
+    - {name: アントニオ・ロペス・デ・サンタ・アナ, title: 大統領, from: 1833, to: 1835, note: 副大統領ゴメス・ファリアスと交代で政権を担った。1835年に連邦制を廃して中央集権体制にし、テキサスの反乱を招いた, source: "https://ja.wikipedia.org/wiki/アントニオ・ロペス・デ・サンタ・アナ"}
+    - {name: ミゲル・バラガン、ホセ・フスト・コロ, title: 大統領（代行）, from: 1835, to: 1836, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Mexico"}
+    - {name: アナスタシオ・ブスタマンテ, title: 大統領, from: 1837, to: 1841, source: "https://en.wikipedia.org/wiki/Anastasio_Bustamante"}
+    - {name: アントニオ・ロペス・デ・サンタ・アナ, title: 大統領, from: 1841, to: 1844, note: ニコラス・ブラボ、バレンティン・カナリソが代行した時期を含む, source: "https://ja.wikipedia.org/wiki/アントニオ・ロペス・デ・サンタ・アナ"}
+    - {name: ホセ・ホアキン・デ・エレーラ, title: 大統領, from: 1844, to: 1845, source: "https://en.wikipedia.org/wiki/José_Joaquín_de_Herrera"}
+    - {name: マリアノ・パレデス, title: 大統領, from: 1846, to: 1846, source: "https://en.wikipedia.org/wiki/Mariano_Paredes_(President_of_Mexico)"}
+    - {name: アントニオ・ロペス・デ・サンタ・アナ, title: 大統領, from: 1846, to: 1847, note: アメリカ＝メキシコ戦争を指揮したが敗れた, source: "https://ja.wikipedia.org/wiki/アントニオ・ロペス・デ・サンタ・アナ"}
+    - {name: マヌエル・デ・ラ・ペーニャ・イ・ペーニャ, title: 大統領, from: 1847, to: 1848, note: グアダルーペ・イダルゴ条約を結んだ, source: "https://en.wikipedia.org/wiki/Manuel_de_la_Peña_y_Peña"}
+    - {name: ホセ・ホアキン・デ・エレーラ, title: 大統領, from: 1848, to: 1851, source: "https://en.wikipedia.org/wiki/José_Joaquín_de_Herrera"}
+    - {name: マリアノ・アリスタ, title: 大統領, from: 1851, to: 1853, source: "https://en.wikipedia.org/wiki/Mariano_Arista"}
+    - {name: アントニオ・ロペス・デ・サンタ・アナ, title: 大統領（独裁）, from: 1853, to: 1855, note: 「殿下」と称して独裁を行い、ガズデン購入でアメリカに土地を売った。アユトラ革命で追われた, source: "https://ja.wikipedia.org/wiki/アントニオ・ロペス・デ・サンタ・アナ"}
+    - {name: フアン・アルバレス, title: 大統領, from: 1855, to: 1855, source: "https://en.wikipedia.org/wiki/Juan_Álvarez"}
+    - {name: イグナシオ・コモンフォルト, title: 大統領, from: 1855, to: 1858, source: "https://en.wikipedia.org/wiki/Ignacio_Comonfort"}
+    - {name: ベニート・フアレス, title: 大統領, from: 1858, to: 1872, note: 先住民（サポテカ人）出身。レフォルマ戦争（保守派はメキシコ市にスロアガ・ミラモンの政権を立てた）とフランスの干渉戦争を戦い抜いた, source: "https://ja.wikipedia.org/wiki/ベニート・フアレス"}
+    - {name: セバスティアン・レルド・デ・テハダ, title: 大統領, from: 1872, to: 1876, source: "https://en.wikipedia.org/wiki/Sebastián_Lerdo_de_Tejada"}
+    - {name: ポルフィリオ・ディアス, title: 大統領, from: 1876, to: 1880, source: "https://ja.wikipedia.org/wiki/ポルフィリオ・ディアス"}
+    - {name: マヌエル・ゴンサレス, title: 大統領, from: 1880, to: 1884, note: ディアスの盟友, source: "https://en.wikipedia.org/wiki/Manuel_González_Flores"}
+    - {name: ポルフィリオ・ディアス, title: 大統領（独裁）, from: 1884, to: 1911, note: 外国資本を入れて鉄道・鉱山を開発したが、土地の集中と貧富の差が広がった。メキシコ革命で亡命, source: "https://ja.wikipedia.org/wiki/ポルフィリオ・ディアス"}
+    - {name: フランシスコ・マデロ, title: 大統領, from: 1911, to: 1913, note: 1913年2月の「悲劇の十日間」でウエルタに倒され殺された, source: "https://ja.wikipedia.org/wiki/フランシスコ・マデロ"}
+    - {name: ビクトリアノ・ウエルタ, title: 大統領, from: 1913, to: 1914, source: "https://en.wikipedia.org/wiki/Victoriano_Huerta"}
+    - {name: ベヌスティアーノ・カランサ, title: 護憲派の第一統領・大統領, from: 1914, to: 1920, note: 1914–15年はビリャ・サパタ側の革命会議派の政府と争った。1917年憲法を制定, source: "https://ja.wikipedia.org/wiki/ベヌスティアーノ・カランサ"}
+    - {name: アドルフォ・デ・ラ・ウエルタ, title: 大統領（暫定）, from: 1920, to: 1920, source: "https://en.wikipedia.org/wiki/Adolfo_de_la_Huerta"}
+    - {name: アルバロ・オブレゴン, title: 大統領, from: 1920, to: 1924, source: "https://en.wikipedia.org/wiki/Álvaro_Obregón"}
+    - {name: プルタルコ・エリアス・カリェス, title: 大統領・「最高指導者」, from: 1924, to: 1934, note: 1928年に退任した後も、ポルテス・ヒル、オルティス・ルビオ、アベラルド・ロドリゲスの3大統領の背後で実権を握った（マキシマート）, source: "https://en.wikipedia.org/wiki/Plutarco_Elías_Calles"}
+    - {name: ラサロ・カルデナス, title: 大統領, from: 1934, to: 1940, note: 農地改革を進め、1938年に石油を国有化した, source: "https://ja.wikipedia.org/wiki/ラサロ・カルデナス"}
+    - {name: マヌエル・アビラ・カマチョ, title: 大統領, from: 1940, to: 1946, source: "https://en.wikipedia.org/wiki/Manuel_Ávila_Camacho"}
+    - {name: ミゲル・アレマン, title: 大統領, from: 1946, to: 1952, source: "https://en.wikipedia.org/wiki/Miguel_Alemán_Valdés"}
+    - {name: アドルフォ・ルイス・コルティネス, title: 大統領, from: 1952, to: 1958, source: "https://en.wikipedia.org/wiki/Adolfo_Ruiz_Cortines"}
+    - {name: アドルフォ・ロペス・マテオス, title: 大統領, from: 1958, to: 1964, source: "https://en.wikipedia.org/wiki/Adolfo_López_Mateos"}
+    - {name: グスタボ・ディアス・オルダス, title: 大統領, from: 1964, to: 1970, source: "https://en.wikipedia.org/wiki/Gustavo_Díaz_Ordaz"}
+    - {name: ルイス・エチェベリア, title: 大統領, from: 1970, to: 1976, source: "https://en.wikipedia.org/wiki/Luis_Echeverría"}
+    - {name: ホセ・ロペス・ポルティーリョ, title: 大統領, from: 1976, to: 1982, source: "https://en.wikipedia.org/wiki/José_López_Portillo"}
+    - {name: ミゲル・デ・ラ・マドリ, title: 大統領, from: 1982, to: 1988, source: "https://en.wikipedia.org/wiki/Miguel_de_la_Madrid"}
+    - {name: カルロス・サリナス・デ・ゴルタリ, title: 大統領, from: 1988, to: 1994, source: "https://ja.wikipedia.org/wiki/カルロス・サリナス・デ・ゴルタリ"}
+    - {name: エルネスト・セディージョ, title: 大統領, from: 1994, to: 2000, source: "https://en.wikipedia.org/wiki/Ernesto_Zedillo"}
+    - {name: ビセンテ・フォックス, title: 大統領, from: 2000, to: 2006, note: 国民行動党（PAN）。71年続いた制度的革命党（PRI）の政権を終わらせた, source: "https://ja.wikipedia.org/wiki/ビセンテ・フォックス"}
+    - {name: フェリペ・カルデロン, title: 大統領, from: 2006, to: 2012, source: "https://en.wikipedia.org/wiki/Felipe_Calderón"}
+    - {name: エンリケ・ペニャ・ニエト, title: 大統領, from: 2012, to: 2018, source: "https://en.wikipedia.org/wiki/Enrique_Peña_Nieto"}
+    - {name: アンドレス・マヌエル・ロペス・オブラドール, title: 大統領, from: 2018, to: 2024, source: "https://ja.wikipedia.org/wiki/アンドレス・マヌエル・ロペス・オブラドール"}
+    - {name: クラウディア・シェインバウム, title: 大統領, from: 2024, to: 2025, note: 初の女性大統領, source: "https://ja.wikipedia.org/wiki/クラウディア・シェインバウム"}
+  periods:
+    - from: 1821
+      to: 1835
+      text: 独立戦争（1810–21）の末、クリオーリョの軍人イトゥルビデがイグアラ綱領で独立を果たし、皇帝となった。帝政は1年で倒れ、1824年憲法で連邦共和国となった。北はカリフォルニア・テキサスまで及ぶ広い国だったが、北部は人がまばらで、政権は軍人の反乱で何度も替わった。
+    - from: 1836
+      to: 1848
+      text: サンタ・アナらの中央集権体制にテキサスが反発して独立し（1836）、ユカタンも分離した。アメリカ＝メキシコ戦争（1846–48）に敗れ、グアダルーペ・イダルゴ条約で国土の約半分（カリフォルニア・ニューメキシコなど）をアメリカ合衆国に譲った。
+    - from: 1849
+      to: 1867
+      text: ユカタンでマヤ人のカスタ戦争が続く。自由主義者フアレスらのレフォルマ（教会財産の解体、1857年憲法）に保守派が反発して内戦（レフォルマ戦争、1858–61）となった。ついでナポレオン3世のフランス軍が侵入してマクシミリアンの帝国を立てたが、フアレスの共和派が抵抗を続け、1867年に帝国は滅びた。
+    - from: 1868
+      to: 1910
+      text: フアレス・レルドの共和政を経て、ディアスが35年近く独裁した（ポルフィリアート）。外国資本による鉄道・鉱山・石油の開発で経済は伸びたが、農村の共有地が大農園（アシエンダ）に奪われ、不満が積もった。
+    - from: 1911
+      to: 1934
+      text: メキシコ革命：マデロがディアスを倒した後、ウエルタの反革命、サパタ・ビリャ・カランサらの争いが続いた。1917年憲法で地下資源の国有・農地改革・労働者の権利を定めた。1929年にカリェスが国民革命党（のちの制度的革命党 PRI）を作り、軍人の争いを党の中にまとめた。
+    - from: 1934
+      to: 1982
+      text: カルデナスが農地改革と石油の国有化（1938）を進めた。その後、制度的革命党（PRI）の一党優位のもとで工業化が進み、「メキシコの奇跡」と呼ばれる成長が続いた。1968年のトラテロルコ事件など、強権的な面もあった。
+    - from: 1982
+      to: 2025
+      text: 1982年の債務危機の後、市場開放に転じ、1994年に北米自由貿易協定（NAFTA）が発効した（同じ日にチアパスでサパティスタが蜂起）。2000年に PRI の政権が終わって政権交代が定着した。麻薬組織との抗争が深刻になった。
+  note: 1836年からのテキサス、1848年の割譲地（カリフォルニア・ニューメキシコなど）は A1（アメリカ合衆国の担当）のデータ。
+  source: "https://ja.wikipedia.org/wiki/メキシコの歴史"
+
+- id: second_mexican_empire
+  name: メキシコ帝国（第二帝政）
+  names:
+    - {to: 1863, name: メキシコ帝国（摂政政府）, short: メキシコ帝国, kind: 帝国（フランスの干渉で成立）}
+  short: メキシコ帝国
+  color: "#e1a570"
+  kind: 帝国（フランスの干渉で成立）
+  rulers:
+    - {name: フアン・アルモンテら（摂政団）, title: 摂政, from: 1863, to: 1864, source: "https://en.wikipedia.org/wiki/Juan_Almonte"}
+    - {name: マクシミリアン, title: メキシコ皇帝, from: 1864, to: 1867, note: オーストリア皇帝フランツ・ヨーゼフ1世の弟。フランス軍の撤退後、ケレタロで共和派に捕らえられ処刑された, source: "https://ja.wikipedia.org/wiki/マクシミリアン_(メキシコ皇帝)"}
+  periods:
+    - from: 1863
+      to: 1867
+      text: フランス軍がメキシコ市を占領し、保守派がハプスブルク家のマクシミリアンを皇帝に迎えた。フアレスの共和派は北部（パソ・デル・ノルテ）や南部の山地で抵抗を続けた。アメリカの南北戦争が終わると、アメリカの圧力とプロイセンの台頭でフランス軍は撤退し（1866–67）、帝国は崩れた。
+  note: 地図では、帝国の支配が及んだ州を年末の状況でこの色に塗り、1863–66年はフランスの帯（overlord は france）を付ける。支配のあいまいな州は uncertain。
+  source: "https://ja.wikipedia.org/wiki/メキシコ第二帝政"
+
+- id: yucatan
+  name: ユカタン共和国
+  short: ユカタン
+  color: "#93cdbd"
+  kind: 共和国（メキシコから分離）
+  rulers:
+    - {name: サンティアゴ・メンデス, title: 知事, from: 1841, to: 1841, source: "https://en.wikipedia.org/wiki/Santiago_Méndez_Ibarra"}
+    - {name: ミゲル・バルバチャノ, title: 知事, from: 1841, to: 1847, note: メンデスと交代で政権を担った, source: "https://en.wikipedia.org/wiki/Miguel_Barbachano"}
+    - {name: サンティアゴ・メンデス, title: 知事, from: 1847, to: 1848, note: カスタ戦争の危機に、スペイン・イギリス・アメリカに助けを求め、主権を差し出すことまで申し出た, source: "https://en.wikipedia.org/wiki/Santiago_Méndez_Ibarra"}
+  periods:
+    - from: 1841
+      to: 1848
+      text: メキシコの中央集権体制に反発したユカタン半島（今のユカタン・カンペチェ・キンタナ・ロー）が独立を宣言した（1841–43、1846–48）。1847年にマヤ人のカスタ戦争が始まって追いつめられ、メキシコの援助を受けるため1848年に復帰した。
+  source: "https://ja.wikipedia.org/wiki/ユカタン共和国"
+
+- id: maya_independent
+  name: チャン・サンタ・クルス（マヤ人の国）
+  short: チャン・サンタ・クルス
+  color: "#ad9fd0"
+  kind: マヤ人の自立政権
+  periods:
+    - from: 1850
+      to: 1901
+      text: カスタ戦争（1847–1901）で抵抗を続けたマヤ人が、半島東部（今のキンタナ・ロー）に「語る十字架」の信仰を中心とする国家を作った。都はチャン・サンタ・クルス（今のフェリペ・カリーリョ・プエルト）。英領ホンジュラス（ベリーズ）との交易で武器を手に入れ、半世紀にわたりメキシコから自立した。1901年にメキシコ軍が都を占領した。
+  note: 範囲は年により変わる。地図では今のキンタナ・ロー州のピースで近似し、certainty は uncertain。
+  source: "https://en.wikipedia.org/wiki/Chan_Santa_Cruz"
+
+- id: apache
+  name: アパッチ
+  short: アパッチ
+  color: "#f4bcaf"
+  kind: 先住民の諸集団
+  periods:
+    - from: 1648
+      to: 1886
+      text: アメリカ南西部（今のアリゾナ・ニューメキシコ・テキサス西部）からメキシコ北部（チワワ・ソノラ）にかけての山地と乾燥地帯（アパチェリア）に住んだ先住民。スペインの北辺の要塞線（プレシディオ）やメキシコの村々を襲撃し、スペイン・メキシコ・アメリカに長く抵抗した。1886年にジェロニモが降伏した。
+  note: 地図では、1700年ごろから合衆国側のトランス・ペコス（テキサス西部）・ニューメキシコ南部・アリゾナ南東部（アパチェリア）をこの色で塗る（地域ごとに1843–81年にメキシコ・合衆国の支配に移る。ジェロニモの降伏は1886年）。メキシコの州のピースは大きく、アパッチの勢力圏はその一部でしかないので、メキシコ北部（チワワ・ソノラ・コアウイラ）はスペイン・メキシコの色（植民地期の一部は uncertain）で塗る。
+  source: "https://ja.wikipedia.org/wiki/アパッチ族"
+
+# ===== 中米 =====
+- id: itza
+  name: イツァ王国（ペテン・イツァ）
+  short: イツァ
+  color: "#d59590"
+  kind: マヤ人の王国
+  rulers:
+    - {name: カン・エク（アハウ・カン・エク）, title: 王, from: 1648, to: 1697, note: 王名カン・エクは代々の称号。1697年に都ノフペテンがスペイン軍に落とされた, source: "https://en.wikipedia.org/wiki/Nojpetén"}
+  periods:
+    - from: 1648
+      to: 1696
+      text: グアテマラ北部のペテン地方で、湖の島の都ノフペテン（今のフローレス）を中心に、スペインの征服を逃れた最後のマヤ人の王国が続いた。
+  source: "https://en.wikipedia.org/wiki/Itza_Kingdom"
+
+- id: miskito
+  name: ミスキート王国（モスキート王国）
+  short: ミスキート
+  color: "#c79e8a"
+  kind: 先住民の王国（イギリスの保護下）
+  rulers:
+    - {name: ジェレミー1世, title: ミスキート王, from: 1655, to: 1687, note: ジャマイカのイギリス人に認められた最初の王とされる, source: "https://en.wikipedia.org/wiki/Mosquito_Coast"}
+    - {name: ミスキート王たち（ジェレミー2世、エドワード、ジョージ1世・2世など）, title: ミスキート王, from: 1687, to: 1824, note: 在位年は史料によって違う, source: "https://en.wikipedia.org/wiki/Mosquito_Coast"}
+    - {name: ジョージ・フレデリック・オーガスタス1世, title: ミスキート王, from: 1824, to: 1842, source: "https://en.wikipedia.org/wiki/Mosquito_Coast"}
+    - {name: ロバート・チャールズ・フレデリック, title: ミスキート王, from: 1842, to: 1860, note: 1860年のマナグア条約で王国はニカラグアの中の「モスキート保護区」となった, source: "https://en.wikipedia.org/wiki/Mosquito_Coast"}
+  periods:
+    - from: 1648
+      to: 1786
+      text: 今のホンジュラス・ニカラグアのカリブ海岸（モスキート海岸）の先住民ミスキート人の王国。ジャマイカのイギリス人と結んで銃を手に入れ、スペインの入植地を襲った。イギリスは1740年に保護下に置き、ブラック・リバーなどに入植地を作った。
+    - from: 1787
+      to: 1860
+      text: 1786年のロンドン協定でイギリス人入植者は引き揚げたが、王国はスペイン・中米諸国の支配を受けずに続いた。1844年にイギリスが保護を再び宣言し、サン・フアン川の河口（グレータウン）まで押さえたため、運河の建設をねらうアメリカとの争点になった（1850年のクレイトン＝ブルワー条約）。
+  note: 範囲（海岸部の幅）はあいまいなので certainty は uncertain。1860年以後は、北部（ホンジュラスのグラシアス・ア・ディオス）がホンジュラス領、南部がニカラグアの中の自治区（モスキート保護区、1894年に併合）。
+  source: "https://ja.wikipedia.org/wiki/モスキート海岸"
+
+- id: central_america
+  name: 中米連邦
+  names:
+    - {to: 1821, name: 中米（独立したグアテマラ総督領）, short: 中米, kind: 独立政府}
+    - {from: 1823, to: 1823, name: 中米連合州, short: 中米連合州, kind: 連邦共和国}
+  short: 中米連邦
+  color: "#8fc4c9"
+  kind: 連邦共和国
+  rulers:
+    - {name: マヌエル・ホセ・アルセ, title: 連邦大統領, from: 1825, to: 1829, note: 1823–25年は執政委員会。アルセは保守派と結んで自由派と内戦になった, source: "https://en.wikipedia.org/wiki/Manuel_José_Arce"}
+    - {name: フランシスコ・モラサン, title: 連邦大統領, from: 1830, to: 1839, note: ホンジュラス出身の自由派。教会の特権を削ったが、カレラらの反乱で連邦は崩れた。1842年にコスタリカで処刑された, source: "https://ja.wikipedia.org/wiki/フランシスコ・モラサン"}
+  periods:
+    - from: 1821
+      to: 1823
+      text: 1821年9月にグアテマラ総督領が独立を宣言し、翌年イトゥルビデのメキシコ帝国に併合された。帝国が倒れると、チアパスを除く5州が中米連合州として独立した（1823年7月）。
+    - from: 1824
+      to: 1840
+      text: グアテマラ・エルサルバドル・ホンジュラス・ニカラグア・コスタリカの5州の連邦。自由派と保守派の内戦が続き、1838年からニカラグア・ホンジュラス・コスタリカが、1839年にグアテマラが離脱して解体した（エルサルバドルは1841年に独立国となる）。その後も統合の試みは何度もあったが実らなかった。
+  source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+
+- id: los_altos
+  name: ロス・アルトス国
+  short: ロス・アルトス
+  color: "#e3d0a6"
+  kind: 中米連邦の州（分離した高地の国）
+  periods:
+    - from: 1838
+      to: 1839
+      text: グアテマラ西部の高地（ケツァルテナンゴを中心とする地方）のクリオーリョが、中米連邦の第6の州として分離した。1840年にグアテマラのカレラの軍に滅ぼされた。
+  source: "https://en.wikipedia.org/wiki/Los_Altos_(Central_America)"
+
+- id: guatemala
+  name: グアテマラ共和国
+  short: グアテマラ
+  color: "#93bcd6"
+  kind: 共和国
+  home_iso: [GTM]
+  rulers:
+    - {name: ラファエル・カレラ, title: 大統領・終身大統領, from: 1839, to: 1865, note: 先住民・農民を率いて中米連邦を倒した保守派の軍人。1844–48年と1851–65年に大統領（1854年から終身）、ほかの時期も実権を持った, source: "https://ja.wikipedia.org/wiki/ラファエル・カレーラ"}
+    - {name: ビセンテ・セルナ, title: 大統領, from: 1865, to: 1871, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ミゲル・ガルシア・グラナドス, title: 大統領, from: 1871, to: 1873, note: 自由主義革命, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: フスト・ルフィノ・バリオス, title: 大統領, from: 1873, to: 1885, note: コーヒー栽培を広げ、教会の財産を没収した。中米統一をめざしてエルサルバドルに攻め込み戦死, source: "https://en.wikipedia.org/wiki/Justo_Rufino_Barrios"}
+    - {name: マヌエル・リサンドロ・バリリャス, title: 大統領, from: 1885, to: 1892, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ホセ・マリア・レイナ・バリオス, title: 大統領, from: 1892, to: 1898, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: マヌエル・エストラダ・カブレラ, title: 大統領（独裁）, from: 1898, to: 1920, note: ユナイテッド・フルーツ社に特権を与えた, source: "https://en.wikipedia.org/wiki/Manuel_Estrada_Cabrera"}
+    - {name: カルロス・エレラ、ホセ・マリア・オレリャナ、ラサロ・チャコン, title: 大統領, from: 1920, to: 1930, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ホルヘ・ウビコ, title: 大統領（独裁）, from: 1931, to: 1944, source: "https://en.wikipedia.org/wiki/Jorge_Ubico"}
+    - {name: フアン・ホセ・アレバロ, title: 大統領, from: 1945, to: 1951, note: 1944年の「十月革命」の後に選ばれた, source: "https://en.wikipedia.org/wiki/Juan_José_Arévalo"}
+    - {name: ハコボ・アルベンス, title: 大統領, from: 1951, to: 1954, note: 農地改革でユナイテッド・フルーツ社の遊休地を接収し、アメリカの CIA が支援したクーデタで倒された, source: "https://ja.wikipedia.org/wiki/ハコボ・アルベンス・グスマン"}
+    - {name: カルロス・カスティーリョ・アルマス, title: 大統領, from: 1954, to: 1957, source: "https://en.wikipedia.org/wiki/Carlos_Castillo_Armas"}
+    - {name: ミゲル・イディゴラス・フエンテス, title: 大統領, from: 1958, to: 1963, source: "https://en.wikipedia.org/wiki/Miguel_Ydígoras_Fuentes"}
+    - {name: エンリケ・ペラルタ・アスルディア, title: 元首（軍事政権）, from: 1963, to: 1966, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: フリオ・セサル・メンデス・モンテネグロ, title: 大統領, from: 1966, to: 1970, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: カルロス・アラナ・オソリオ, title: 大統領, from: 1970, to: 1974, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ケル・ラウヘルド・ガルシア, title: 大統領, from: 1974, to: 1978, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ロメオ・ルカス・ガルシア, title: 大統領, from: 1978, to: 1982, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: エフライン・リオス・モント, title: 元首（軍事政権）, from: 1982, to: 1983, note: 内戦中の先住民の村々への虐殺の責任を問われ、2013年にジェノサイドの罪で有罪判決を受けた（のち無効とされ再審中に死去）, source: "https://ja.wikipedia.org/wiki/エフライン・リオス・モント"}
+    - {name: オスカル・メヒア・ビクトレス, title: 元首（軍事政権）, from: 1983, to: 1986, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ビニシオ・セレソ, title: 大統領, from: 1986, to: 1991, note: 民政移管, source: "https://en.wikipedia.org/wiki/Vinicio_Cerezo"}
+    - {name: ホルヘ・セラーノ・エリアス, title: 大統領, from: 1991, to: 1993, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ラミロ・デ・レオン・カルピオ, title: 大統領, from: 1993, to: 1996, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: アルバロ・アルスー, title: 大統領, from: 1996, to: 2000, note: 1996年に内戦を終わらせる和平協定を結んだ, source: "https://en.wikipedia.org/wiki/Álvaro_Arzú"}
+    - {name: アルフォンソ・ポルティーリョ, title: 大統領, from: 2000, to: 2004, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: オスカル・ベルヘル, title: 大統領, from: 2004, to: 2008, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: アルバロ・コロン, title: 大統領, from: 2008, to: 2012, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: オットー・ペレス・モリーナ, title: 大統領, from: 2012, to: 2015, note: 汚職事件で辞任, source: "https://en.wikipedia.org/wiki/Otto_Pérez_Molina"}
+    - {name: アレハンドロ・マルドナド, title: 大統領（暫定）, from: 2015, to: 2016, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Guatemala"}
+    - {name: ジミー・モラレス, title: 大統領, from: 2016, to: 2020, source: "https://en.wikipedia.org/wiki/Jimmy_Morales"}
+    - {name: アレハンドロ・ジャマテイ, title: 大統領, from: 2020, to: 2024, source: "https://en.wikipedia.org/wiki/Alejandro_Giammattei"}
+    - {name: ベルナルド・アレバロ, title: 大統領, from: 2024, to: 2025, source: "https://en.wikipedia.org/wiki/Bernardo_Arévalo"}
+  periods:
+    - from: 1839
+      to: 1870
+      text: 中米連邦を離れ、保守派のカレラが教会と結んで長く治めた。1859年にイギリスとベリーズの境界を定める条約を結んだが、のちに約束（道路の建設）が果たされていないとしてベリーズの領有を主張し続けた。
+    - from: 1871
+      to: 1944
+      text: 自由主義革命（1871）の後、コーヒーの輸出経済が発達し、独裁が続いた。エストラダ・カブレラとウビコの時代にアメリカのユナイテッド・フルーツ社が鉄道・港・バナナ農園を握った。
+    - from: 1945
+      to: 1954
+      text: 「グアテマラの春」：アレバロ・アルベンスの改革政権。農地改革がアメリカ企業の土地に及ぶと、冷戦下のアメリカ（CIA）が亡命軍を支援してアルベンスを倒した（1954）。
+    - from: 1955
+      to: 1996
+      text: 軍事政権と内戦（1960–96）。ゲリラとの戦いの中で、とくに1980年代初めに先住民マヤ人の村々が軍に破壊され、約20万人が死亡・行方不明になった。1996年に和平協定が結ばれた。
+    - from: 1997
+      to: 2025
+      text: 民主化が続くが、汚職と犯罪、貧困の問題をかかえる。ベリーズとの領土問題は国際司法裁判所に持ち込まれた（2019）。
+  source: "https://ja.wikipedia.org/wiki/グアテマラの歴史"
+
+- id: el_salvador
+  name: エルサルバドル共和国
+  short: エルサルバドル
+  color: "#e5c29c"
+  kind: 共和国
+  home_iso: [SLV]
+  rulers:
+    - {name: 大統領たち（政変の続いた時代）, title: 大統領, from: 1841, to: 1858, note: 保守派と自由派の争いが続き、グアテマラ・ホンジュラスの干渉を受けた, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: ヘラルド・バリオス, title: 大統領, from: 1859, to: 1863, note: 1858年から代行, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: フランシスコ・ドゥエニャス, title: 大統領, from: 1863, to: 1871, note: 保守派, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: サンティアゴ・ゴンサレス, title: 大統領, from: 1871, to: 1876, note: 自由派の改革が始まる, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: ラファエル・サルディバル, title: 大統領, from: 1876, to: 1885, note: 共有地の廃止とコーヒー農園の拡大, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: フランシスコ・メネンデス, title: 大統領, from: 1885, to: 1890, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: カルロス・エセタ, title: 大統領, from: 1890, to: 1894, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: ラファエル・アントニオ・グティエレス, title: 大統領, from: 1894, to: 1898, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: トマス・レガラド, title: 大統領, from: 1898, to: 1903, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: 大統領たち（コーヒー寡頭支配の時代）, title: 大統領, from: 1903, to: 1912, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: メレンデス＝キニョネス家の大統領たち, title: 大統領, from: 1913, to: 1927, note: カルロス・メレンデス、ホルヘ・メレンデス、アルフォンソ・キニョネスが続けて大統領となった, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: ピオ・ロメロ・ボスケ, title: 大統領, from: 1927, to: 1931, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: アルトゥーロ・アラウホ, title: 大統領, from: 1931, to: 1931, note: 12月のクーデタで倒れ、マルティネスが実権を握る, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: マキシミリアノ・エルナンデス・マルティネス, title: 大統領（独裁）, from: 1931, to: 1944, note: 1932年の農民蜂起を鎮圧し、数万人を殺した（マタンサ）, source: "https://en.wikipedia.org/wiki/Maximiliano_Hernández_Martínez"}
+    - {name: 軍人の大統領たち, title: 大統領, from: 1944, to: 1979, note: オスカル・オソリオ、ホセ・マリア・レムス、フリオ・アダルベルト・リベラ、フィデル・サンチェス・エルナンデス、アルトゥロ・モリーナ、カルロス・ロメロら, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: 革命評議会（ホセ・ナポレオン・ドゥアルテら）, title: 革命評議会, from: 1979, to: 1982, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: アルバロ・マガーニャ, title: 大統領（暫定）, from: 1982, to: 1984, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: ホセ・ナポレオン・ドゥアルテ, title: 大統領, from: 1984, to: 1989, source: "https://en.wikipedia.org/wiki/José_Napoleón_Duarte"}
+    - {name: アルフレド・クリスティアーニ, title: 大統領, from: 1989, to: 1994, note: 1992年に内戦を終わらせるチャプルテペク和平協定を結んだ, source: "https://en.wikipedia.org/wiki/Alfredo_Cristiani"}
+    - {name: アルマンド・カルデロン・ソル, title: 大統領, from: 1994, to: 1999, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: フランシスコ・フローレス, title: 大統領, from: 1999, to: 2004, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: エリアス・アントニオ・サカ, title: 大統領, from: 2004, to: 2009, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: マウリシオ・フネス, title: 大統領, from: 2009, to: 2014, note: 旧ゲリラ組織 FMLN の初の政権, source: "https://en.wikipedia.org/wiki/Mauricio_Funes"}
+    - {name: サルバドール・サンチェス・セレン, title: 大統領, from: 2014, to: 2019, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_El_Salvador"}
+    - {name: ナジブ・ブケレ, title: 大統領, from: 2019, to: 2025, note: ギャング組織の大量拘束で治安を回復したとして支持を集める一方、人権侵害や権力の集中が批判されている, source: "https://ja.wikipedia.org/wiki/ナジブ・ブケレ"}
+  periods:
+    - from: 1841
+      to: 1931
+      text: 中米連邦の解体で独立した、中米でいちばん小さく人口の多い国。19世紀末からコーヒーの輸出で「14家族」と呼ばれる大地主が力を持った。
+    - from: 1931
+      to: 1979
+      text: 軍事政権が続いた。1932年の農民蜂起（マタンサ）の鎮圧で多くの先住民が殺された。1969年にはホンジュラスと「サッカー戦争」を戦った。
+    - from: 1980
+      to: 1992
+      text: 内戦：軍事政権・右派の暗殺部隊とファラブンド・マルティ民族解放戦線（FMLN）が戦い、約7万5千人が死亡した。ロメロ大司教の暗殺（1980）、エル・モソテの虐殺（1981）が起きた。アメリカは政府軍を支援した。1992年に和平。
+    - from: 1993
+      to: 2025
+      text: 和平の後、ARENA と FMLN の二大政党制となった。2001年に米ドルを通貨とした。2019年からブケレ大統領がギャング対策の非常事態体制を敷いた。
+  source: "https://ja.wikipedia.org/wiki/エルサルバドルの歴史"
+
+- id: honduras
+  name: ホンジュラス共和国
+  short: ホンジュラス
+  color: "#99a7e1"
+  kind: 共和国
+  home_iso: [HND]
+  rulers:
+    - {name: 大統領たち（政変の続いた時代）, title: 大統領, from: 1838, to: 1840, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: フランシスコ・フェレラ, title: 大統領, from: 1841, to: 1845, note: 最初の憲法上の大統領。保守派, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: 大統領たち（政変の続いた時代）, title: 大統領, from: 1846, to: 1851, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ホセ・トリニダード・カバーニャス, title: 大統領, from: 1852, to: 1855, note: 自由派。グアテマラのカレラに敗れて追われた, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: サントス・グアルディオラ, title: 大統領, from: 1856, to: 1862, note: 在任中に暗殺された, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ホセ・マリア・メディナ, title: 大統領, from: 1863, to: 1872, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: 大統領たち（政変の続いた時代）, title: 大統領, from: 1872, to: 1875, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: マルコ・アウレリオ・ソト, title: 大統領, from: 1876, to: 1883, note: 自由主義改革, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ルイス・ボグラン, title: 大統領, from: 1883, to: 1891, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: 大統領たち（政変の続いた時代）, title: 大統領, from: 1891, to: 1893, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ポリカルポ・ボニーリャ, title: 大統領, from: 1894, to: 1899, note: 自由党, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: テレンシオ・シエラ, title: 大統領, from: 1899, to: 1903, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: マヌエル・ボニーリャ, title: 大統領, from: 1903, to: 1907, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ミゲル・ダビラ, title: 大統領, from: 1907, to: 1911, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: マヌエル・ボニーリャ, title: 大統領, from: 1912, to: 1913, note: アメリカのバナナ会社の支援で政権に戻った, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: フランシスコ・ベルトラン, title: 大統領, from: 1913, to: 1919, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ラファエル・ロペス・グティエレス, title: 大統領, from: 1920, to: 1924, note: 1924年の内戦の中で死去, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ミゲル・パス・バラオナ, title: 大統領, from: 1925, to: 1929, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ビセンテ・メヒア・コリンドレス, title: 大統領, from: 1929, to: 1933, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ティブルシオ・カリアス・アンディーノ, title: 大統領（独裁）, from: 1933, to: 1949, source: "https://en.wikipedia.org/wiki/Tiburcio_Carías_Andino"}
+    - {name: フアン・マヌエル・ガルベス, title: 大統領, from: 1949, to: 1954, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: フリオ・ロサノ・ディアス, title: 大統領, from: 1954, to: 1956, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: 軍事評議会, title: 軍事評議会, from: 1956, to: 1957, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: ラモン・ビジェダ・モラレス, title: 大統領, from: 1957, to: 1963, note: 自由党。1963年のクーデタで倒れた, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: オスワルド・ロペス・アレリャーノ, title: 大統領・軍事政権の首班, from: 1963, to: 1975, note: 1971–72年に一時退いた, source: "https://en.wikipedia.org/wiki/Oswaldo_López_Arellano"}
+    - {name: フアン・アルベルト・メルガル・カストロ、ポリカルポ・パス・ガルシア, title: 軍事政権の首班, from: 1975, to: 1982, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: 民政の大統領たち, title: 大統領, from: 1982, to: 2006, note: ロベルト・スアソ・コルドバ、ホセ・アスコナ、ラファエル・カジェハス、カルロス・ロベルト・レイナ、カルロス・フローレス、リカルド・マドゥロ, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: マヌエル・セラヤ, title: 大統領, from: 2006, to: 2009, note: 2009年の軍のクーデタで国外に追放された, source: "https://en.wikipedia.org/wiki/Manuel_Zelaya"}
+    - {name: ポルフィリオ・ロボ, title: 大統領, from: 2010, to: 2014, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Honduras"}
+    - {name: フアン・オルランド・エルナンデス, title: 大統領, from: 2014, to: 2022, note: 退任後、アメリカで麻薬密輸の罪で有罪となった, source: "https://en.wikipedia.org/wiki/Juan_Orlando_Hernández"}
+    - {name: シオマラ・カストロ, title: 大統領, from: 2022, to: 2025, note: 初の女性大統領。マヌエル・セラヤの妻, source: "https://en.wikipedia.org/wiki/Xiomara_Castro"}
+  periods:
+    - from: 1838
+      to: 1899
+      text: 中米連邦から離脱。近隣のグアテマラ・ニカラグアの介入と内戦が続いた。1860年にイギリスからベイ諸島とモスキート海岸の北部を引き渡された。
+    - from: 1900
+      to: 1949
+      text: アメリカのユナイテッド・フルーツ社・スタンダード・フルーツ社などがカリブ海岸のバナナ農園と鉄道を握り、「バナナ共和国」の典型とされた。カリアスが長く独裁した。
+    - from: 1950
+      to: 2025
+      text: 軍事政権が続き、1969年にエルサルバドルとサッカー戦争を戦った。1980年代はニカラグアの反政府勢力コントラの拠点となり、アメリカ軍の基地が置かれた。1982年に民政に移ったが、2009年にクーデタが起きた。
+  source: "https://ja.wikipedia.org/wiki/ホンジュラスの歴史"
+
+- id: nicaragua
+  name: ニカラグア共和国
+  short: ニカラグア
+  color: "#d8d189"
+  kind: 共和国
+  home_iso: [NIC]
+  rulers:
+    - {name: 大統領たち（レオンの自由派とグラナダの保守派の争い）, title: 大統領, from: 1838, to: 1852, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: フルト・チャモロ, title: 大統領, from: 1853, to: 1855, note: 保守派。内戦の中で死去し、自由派がウォーカーを招いた, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: ウィリアム・ウォーカー, title: 大統領（自称）, from: 1856, to: 1857, note: アメリカ人の傭兵（フィリバスター）。内戦に乗じて実権を握り、奴隷制を復活させたが、中米諸国の連合軍に追われた, source: "https://ja.wikipedia.org/wiki/ウィリアム・ウォーカー"}
+    - {name: トマス・マルティネス, title: 大統領, from: 1857, to: 1867, note: ウォーカーを追い出した後の保守派・自由派の協調政権, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: 保守派の大統領たち（「30年」の保守派政権）, title: 大統領, from: 1867, to: 1893, note: グラナダの保守派が平和的に政権を引き継いだ, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: ホセ・サントス・セラヤ, title: 大統領, from: 1893, to: 1909, note: 自由派。モスキート保護区を併合したが、アメリカの支援する反乱で辞任, source: "https://en.wikipedia.org/wiki/José_Santos_Zelaya"}
+    - {name: ホセ・マドリス、フアン・ホセ・エストラダ, title: 大統領, from: 1909, to: 1911, note: セラヤの辞任後。アメリカの支援を受けた保守派の反乱で政権が代わった, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: アドルフォ・ディアス, title: 大統領, from: 1911, to: 1917, note: 保守派。アメリカ海兵隊の駐留を招いた（1912年から）, source: "https://en.wikipedia.org/wiki/Adolfo_Díaz"}
+    - {name: エミリアーノ・チャモロ, title: 大統領, from: 1917, to: 1921, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: ディエゴ・マヌエル・チャモロ, title: 大統領, from: 1921, to: 1923, note: 在任中に死去, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: 大統領たち（政変の続いた時代）, title: 大統領, from: 1923, to: 1926, note: 1925年のアメリカ海兵隊の撤退の後、チャモロのクーデタで内戦（立憲戦争）になった, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: アドルフォ・ディアス, title: 大統領, from: 1926, to: 1928, note: アメリカ海兵隊が再び上陸した, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: ホセ・マリア・モンカダ, title: 大統領, from: 1929, to: 1932, note: サンディーノのゲリラがアメリカ海兵隊と戦い続けた, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: フアン・バウティスタ・サカサ, title: 大統領, from: 1933, to: 1936, note: 1934年、国家警備隊のソモサがサンディーノを殺害, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Nicaragua"}
+    - {name: アナスタシオ・ソモサ・ガルシア, title: 国家警備隊司令官・大統領, from: 1936, to: 1956, note: 1934年にサンディーノを暗殺させ、1936年のクーデタで実権を握った（1937年から大統領）。1956年に暗殺された, source: "https://ja.wikipedia.org/wiki/アナスタシオ・ソモサ・ガルシア"}
+    - {name: ルイス・ソモサ・デバイレ, title: 大統領, from: 1956, to: 1963, source: "https://en.wikipedia.org/wiki/Luis_Somoza_Debayle"}
+    - {name: アナスタシオ・ソモサ・デバイレ, title: 国家警備隊司令官・大統領, from: 1963, to: 1979, note: 1963–67年はソモサ家の傀儡の大統領（シック、ゲレロ）の背後で国家警備隊を握った, source: "https://ja.wikipedia.org/wiki/アナスタシオ・ソモサ・デバイレ"}
+    - {name: ダニエル・オルテガ, title: 国家再建評議会の議長・大統領, from: 1979, to: 1990, note: サンディニスタ民族解放戦線（FSLN）。1985年から大統領, source: "https://ja.wikipedia.org/wiki/ダニエル・オルテガ"}
+    - {name: ビオレタ・チャモロ, title: 大統領, from: 1990, to: 1997, source: "https://en.wikipedia.org/wiki/Violeta_Chamorro"}
+    - {name: アルノルド・アレマン, title: 大統領, from: 1997, to: 2002, source: "https://en.wikipedia.org/wiki/Arnoldo_Alemán"}
+    - {name: エンリケ・ボラーニョス, title: 大統領, from: 2002, to: 2007, source: "https://en.wikipedia.org/wiki/Enrique_Bolaños"}
+    - {name: ダニエル・オルテガ, title: 大統領, from: 2007, to: 2025, note: 再選を重ね、2018年の抗議運動の弾圧以後は権威主義を強めた。妻のロサリオ・ムリーリョが副大統領（2025年から共同大統領）, source: "https://ja.wikipedia.org/wiki/ダニエル・オルテガ"}
+  periods:
+    - from: 1838
+      to: 1909
+      text: 中米連邦から離脱。レオン（自由派）とグラナダ（保守派）の争いが続き、1856–57年にはアメリカ人ウォーカーが一時実権を握った。大西洋と太平洋を結ぶ運河の候補地として、英米が強い関心を持った。
+    - from: 1910
+      to: 1936
+      text: アメリカが保守派政権を支え、1912–33年に海兵隊を駐留させた（1925–26年に一時撤退）。1927年からサンディーノが海兵隊とのゲリラ戦を続けた。
+    - from: 1936
+      to: 1979
+      text: ソモサ一族の独裁。国家警備隊を握り、国の富の多くを一族が所有した。1972年のマナグア地震の援助金の横領で反発が強まった。
+    - from: 1979
+      to: 1990
+      text: サンディニスタ革命でソモサ政権が倒れた。アメリカ（レーガン政権）は反政府勢力コントラを支援し、内戦となった（イラン＝コントラ事件）。1990年の選挙でチャモロが勝ち、政権交代した。
+    - from: 1990
+      to: 2025
+      text: 内戦後の復興。2007年にオルテガが政権に戻り、長期政権となった。
+  source: "https://ja.wikipedia.org/wiki/ニカラグアの歴史"
+
+- id: costa_rica
+  name: コスタリカ共和国
+  short: コスタリカ
+  color: "#e4abbb"
+  kind: 共和国
+  home_iso: [CRI]
+  rulers:
+    - {name: ブラウリオ・カリーリョ, title: 元首, from: 1835, to: 1842, note: 1835–37年と1838–42年に元首。コーヒー栽培を奨励し、中米連邦からの離脱を進めた, source: "https://en.wikipedia.org/wiki/Braulio_Carrillo_Colina"}
+    - {name: 大統領たち（政変の続いた時代）, title: 元首・大統領, from: 1842, to: 1846, note: 1842年にモラサンが政権を握ったが、反乱で処刑された, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・マリア・カストロ・マドリス, title: 大統領, from: 1847, to: 1849, note: 1848年に共和国を宣言した, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: フアン・ラファエル・モラ・ポラス, title: 大統領, from: 1849, to: 1859, note: 1856–57年にウォーカーとの戦争を率いた, source: "https://en.wikipedia.org/wiki/Juan_Rafael_Mora_Porras"}
+    - {name: ホセ・マリア・モンテアレグレ, title: 大統領, from: 1859, to: 1863, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ヘスス・ヒメネス, title: 大統領, from: 1863, to: 1866, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・マリア・カストロ・マドリス, title: 大統領, from: 1866, to: 1868, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ヘスス・ヒメネス, title: 大統領, from: 1868, to: 1870, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: トマス・グアルディア, title: 大統領（独裁）, from: 1870, to: 1882, note: カリブ海岸への鉄道を建設させた, source: "https://en.wikipedia.org/wiki/Tomás_Guardia_Gutiérrez"}
+    - {name: プロスペロ・フェルナンデス, title: 大統領, from: 1882, to: 1885, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ベルナルド・ソト, title: 大統領, from: 1885, to: 1889, note: 1889年の選挙で平和な政権交代が始まる, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・ホアキン・ロドリゲス, title: 大統領, from: 1890, to: 1894, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ラファエル・イグレシアス, title: 大統領, from: 1894, to: 1902, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: アスンシオン・エスキベル, title: 大統領, from: 1902, to: 1906, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: クレト・ゴンサレス・ビケス, title: 大統領, from: 1906, to: 1910, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: リカルド・ヒメネス, title: 大統領, from: 1910, to: 1914, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: アルフレド・ゴンサレス・フローレス, title: 大統領, from: 1914, to: 1917, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: フェデリコ・ティノコ, title: 大統領（クーデタ）, from: 1917, to: 1919, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: フリオ・アコスタ, title: 大統領, from: 1920, to: 1924, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: リカルド・ヒメネス, title: 大統領, from: 1924, to: 1928, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: クレト・ゴンサレス・ビケス, title: 大統領, from: 1928, to: 1932, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: リカルド・ヒメネス, title: 大統領, from: 1932, to: 1936, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: レオン・コルテス, title: 大統領, from: 1936, to: 1940, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ラファエル・アンヘル・カルデロン・グアルディア, title: 大統領, from: 1940, to: 1944, note: 社会保障制度を作った, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: テオドロ・ピカド, title: 大統領, from: 1944, to: 1948, note: 1948年の選挙をめぐる内戦で退いた, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・フィゲーレス・フェレール, title: 臨時政府評議会議長, from: 1948, to: 1949, note: 1948年の内戦に勝ち、軍隊を廃止した。のち大統領（1953–58、1970–74）, source: "https://ja.wikipedia.org/wiki/ホセ・フィゲーレス・フェレール"}
+    - {name: オティリオ・ウラテ, title: 大統領, from: 1949, to: 1953, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・フィゲーレス・フェレール, title: 大統領, from: 1953, to: 1958, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: マリオ・エチャンディ, title: 大統領, from: 1958, to: 1962, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: フランシスコ・オルリチ, title: 大統領, from: 1962, to: 1966, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・ホアキン・トレホス, title: 大統領, from: 1966, to: 1970, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・フィゲーレス・フェレール, title: 大統領, from: 1970, to: 1974, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ダニエル・オドゥベル, title: 大統領, from: 1974, to: 1978, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ロドリゴ・カラソ, title: 大統領, from: 1978, to: 1982, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ルイス・アルベルト・モンヘ, title: 大統領, from: 1982, to: 1986, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: オスカル・アリアス, title: 大統領, from: 1986, to: 1990, note: 中米和平合意を主導して1987年にノーベル平和賞。2006–10年にも大統領, source: "https://ja.wikipedia.org/wiki/オスカル・アリアス"}
+    - {name: ラファエル・アンヘル・カルデロン・フルニエ, title: 大統領, from: 1990, to: 1994, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ホセ・マリア・フィゲーレス, title: 大統領, from: 1994, to: 1998, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ミゲル・アンヘル・ロドリゲス, title: 大統領, from: 1998, to: 2002, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: アベル・パチェコ, title: 大統領, from: 2002, to: 2006, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: オスカル・アリアス, title: 大統領, from: 2006, to: 2010, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ラウラ・チンチージャ, title: 大統領, from: 2010, to: 2014, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ルイス・ギジェルモ・ソリス, title: 大統領, from: 2014, to: 2018, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: カルロス・アルバラド, title: 大統領, from: 2018, to: 2022, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+    - {name: ロドリゴ・チャベス, title: 大統領, from: 2022, to: 2025, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Costa_Rica"}
+  periods:
+    - from: 1838
+      to: 1947
+      text: 中米連邦から離脱。中部高原（メセタ・セントラル）の自営農によるコーヒー栽培で発展し、中米では比較的安定した。カリブ海岸では鉄道建設とともにバナナ農園が広がった（ユナイテッド・フルーツ社の発祥の地）。
+    - from: 1948
+      to: 2025
+      text: 1948年の内戦の後、新憲法で軍隊を廃止し、教育と福祉に力を入れた。中米の内戦の時代にも民主政治を保ち、アリアス大統領が中米和平を仲介した。
+  note: 主な元首のみ。元首は大統領（1838–47年の元首の称号は jefe de estado など）。
+  source: "https://ja.wikipedia.org/wiki/コスタリカの歴史"
+
+- id: panama
+  name: パナマ共和国
+  names:
+    - {to: 1841, name: イスモ自由国, short: イスモ, kind: 共和国（コロンビアから一時分離）}
+  short: パナマ
+  color: "#c8afdf"
+  kind: 共和国
+  home_iso: [PAN]
+  rulers:
+    - {name: トマス・エレラ, title: 元首, from: 1840, to: 1841, note: イスモ自由国（1840年11月–1841年12月）, source: "https://en.wikipedia.org/wiki/Free_State_of_the_Isthmus"}
+    - {name: マヌエル・アマドール・ゲレロ, title: 大統領, from: 1904, to: 1908, note: 初代大統領（1903–04年は臨時政府評議会）, source: "https://en.wikipedia.org/wiki/Manuel_Amador_Guerrero"}
+    - {name: ホセ・ドミンゴ・デ・オバルディア, title: 大統領, from: 1908, to: 1910, note: 在任中に死去, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: 大統領代行たち, title: 大統領, from: 1910, to: 1912, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ベリサリオ・ポラス, title: 大統領, from: 1912, to: 1916, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ラモン・マキシミリアノ・バルデス, title: 大統領, from: 1916, to: 1918, note: 在任中に死去, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ベリサリオ・ポラス, title: 大統領, from: 1918, to: 1924, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ロドルフォ・チアリ, title: 大統領, from: 1924, to: 1928, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: フロレンシオ・アルモディオ・アロセメナ, title: 大統領, from: 1928, to: 1931, note: 1931年のクーデタで倒れた, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: アルモディオ・アリアス, title: 大統領, from: 1932, to: 1936, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: フアン・デモステネス・アロセメナ, title: 大統領, from: 1936, to: 1939, note: 在任中に死去, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: アウグスト・サミュエル・ボイド, title: 大統領, from: 1939, to: 1940, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: アルヌルフォ・アリアス, title: 大統領, from: 1940, to: 1941, note: 1949–51年、1968年にも大統領となり、そのたびにクーデタで追われた, source: "https://en.wikipedia.org/wiki/Arnulfo_Arias"}
+    - {name: リカルド・アドルフォ・デ・ラ・グアルディア, title: 大統領, from: 1941, to: 1945, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: エンリケ・アドルフォ・ヒメネス, title: 大統領, from: 1945, to: 1948, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: 大統領たち（国家警察のレモンが実権を握った時代）, title: 大統領, from: 1948, to: 1952, note: 1949–51年はアルヌルフォ・アリアスが大統領, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ホセ・アントニオ・レモン, title: 大統領, from: 1952, to: 1955, note: 在任中に暗殺された, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: リカルド・アリアス, title: 大統領, from: 1955, to: 1956, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: エルネスト・デ・ラ・グアルディア, title: 大統領, from: 1956, to: 1960, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ロベルト・チアリ, title: 大統領, from: 1960, to: 1964, note: 1964年1月、運河地帯の国旗事件, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: マルコ・アウレリオ・ロブレス, title: 大統領, from: 1964, to: 1968, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: オマール・トリホス, title: 国家警備隊司令官（最高指導者）, from: 1968, to: 1981, note: 1968年のクーデタで実権を握り、1977年にカーター大統領と新パナマ運河条約を結んだ。飛行機事故で死去, source: "https://ja.wikipedia.org/wiki/オマール・トリホス"}
+    - {name: 大統領たち（国家警備隊が実権を握った時代）, title: 大統領, from: 1981, to: 1983, note: アリスティデス・ロヨ（1978–82）、リカルド・デ・ラ・エスプリエリャ（1982–84）が大統領。実権は国家警備隊の司令官たち（フローレス、パレデス）にあり、1983年8月にノリエガが司令官となった, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Panama"}
+    - {name: マヌエル・ノリエガ, title: 国防軍司令官（実権者）, from: 1983, to: 1989, note: 大統領を次々に立てて実権を握ったが、麻薬密輸で訴追され、1989年のアメリカ軍の侵攻で捕らえられた, source: "https://ja.wikipedia.org/wiki/マヌエル・ノリエガ"}
+    - {name: ギジェルモ・エンダラ, title: 大統領, from: 1989, to: 1994, source: "https://en.wikipedia.org/wiki/Guillermo_Endara"}
+    - {name: エルネスト・ペレス・バリャダレス, title: 大統領, from: 1994, to: 1999, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ミレヤ・モスコソ, title: 大統領, from: 1999, to: 2004, note: 1999年12月31日に運河の返還を受けた, source: "https://en.wikipedia.org/wiki/Mireya_Moscoso"}
+    - {name: マルティン・トリホス, title: 大統領, from: 2004, to: 2009, note: 運河の拡張（2016年に完成）を決めた, source: "https://en.wikipedia.org/wiki/Martín_Torrijos"}
+    - {name: リカルド・マルティネリ, title: 大統領, from: 2009, to: 2014, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: フアン・カルロス・バレーラ, title: 大統領, from: 2014, to: 2019, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ラウレンティーノ・コルティソ, title: 大統領, from: 2019, to: 2024, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Panama"}
+    - {name: ホセ・ラウル・ムリーノ, title: 大統領, from: 2024, to: 2025, source: "https://en.wikipedia.org/wiki/José_Raúl_Mulino"}
+  periods:
+    - from: 1903
+      to: 1938
+      text: 運河の建設をねらうアメリカ（セオドア・ローズヴェルト）の支援でコロンビアから独立し、運河地帯を永久に租借させた。アメリカは憲法で干渉の権利を持ち、事実上の保護国だった。1914年にパナマ運河が開通した。
+    - from: 1939
+      to: 1977
+      text: 1936年の条約（1939年批准）で干渉権はなくなったが、運河地帯の主権をめぐる対立が続いた（1964年の国旗事件）。1968年からトリホスの軍事政権。
+    - from: 1978
+      to: 2025
+      text: 1977年の新パナマ運河条約で、1979年に運河地帯が廃止され、1999年末に運河が返還された。1989年にアメリカ軍が侵攻してノリエガ政権を倒した。
+  note: 1821–1903 年のパナマは大コロンビア（gran_colombia）・コロンビア（colombia）の一部（A4 の政体）。1840–41年のイスモ自由国はこの ID の names で表す。主な元首のみ。
+  source: "https://ja.wikipedia.org/wiki/パナマの歴史"
+
+- id: belize
+  name: ベリーズ
+  short: ベリーズ
+  color: "#d9b3d6"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [BLZ]
+  rulers:
+    - {name: ジョージ・プライス, title: 首相, from: 1981, to: 1984, note: 独立運動の指導者。1989–93年にも首相。元首はイギリス国王（総督が代行）, source: "https://en.wikipedia.org/wiki/George_Cadle_Price"}
+    - {name: マヌエル・エスキベル, title: 首相, from: 1984, to: 1989, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Belize"}
+    - {name: ジョージ・プライス, title: 首相, from: 1989, to: 1993, source: "https://en.wikipedia.org/wiki/George_Cadle_Price"}
+    - {name: マヌエル・エスキベル, title: 首相, from: 1993, to: 1998, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Belize"}
+    - {name: サイード・ムサ, title: 首相, from: 1998, to: 2008, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Belize"}
+    - {name: ディーン・バロー, title: 首相, from: 2008, to: 2020, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Belize"}
+    - {name: ジョン・ブリセーニョ, title: 首相, from: 2020, to: 2025, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Belize"}
+  periods:
+    - from: 1981
+      to: 2025
+      text: 英領ホンジュラス（1973年にベリーズと改称）が独立した。グアテマラが領有を主張したため、独立後もしばらくイギリス軍が駐留した（グアテマラは1991年に独立を承認したが、領土の主張は続け、国際司法裁判所で審理中）。
+  source: "https://ja.wikipedia.org/wiki/ベリーズ"
+
+# ===== 大アンティル諸島 =====
+- id: cuba
+  name: キューバ共和国
+  short: キューバ
+  color: "#e9b567"
+  kind: 共和国
+  names:
+    - {from: 1961, name: キューバ共和国, short: キューバ, kind: 社会主義国（キューバ共産党の一党制）}
+  home_iso: [CUB]
+  rulers:
+    - {name: トマス・エストラーダ・パルマ, title: 大統領, from: 1902, to: 1906, note: 1906年の反乱でアメリカの再占領を招いた, source: "https://en.wikipedia.org/wiki/Tomás_Estrada_Palma"}
+    - {name: チャールズ・マグーン, title: 臨時総督（アメリカ）, from: 1906, to: 1909, source: "https://en.wikipedia.org/wiki/Charles_Edward_Magoon"}
+    - {name: ホセ・ミゲル・ゴメス, title: 大統領, from: 1909, to: 1913, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Cuba"}
+    - {name: マリオ・ガルシア・メノカル, title: 大統領, from: 1913, to: 1921, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Cuba"}
+    - {name: アルフレド・サヤス, title: 大統領, from: 1921, to: 1925, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_Cuba"}
+    - {name: ヘラルド・マチャード, title: 大統領（独裁）, from: 1925, to: 1933, note: 世界恐慌の中のゼネストと軍の離反で亡命, source: "https://en.wikipedia.org/wiki/Gerardo_Machado"}
+    - {name: フルヘンシオ・バティスタ, title: 陸軍参謀総長（実権者）・大統領, from: 1933, to: 1944, note: 1933年の「軍曹の反乱」で実権を握り、傀儡の大統領の背後にいた。1940–44年は大統領, source: "https://ja.wikipedia.org/wiki/フルヘンシオ・バティスタ"}
+    - {name: ラモン・グラウ・サン・マルティン, title: 大統領, from: 1944, to: 1948, source: "https://en.wikipedia.org/wiki/Ramón_Grau"}
+    - {name: カルロス・プリオ・ソカラス, title: 大統領, from: 1948, to: 1952, source: "https://en.wikipedia.org/wiki/Carlos_Prío_Socarrás"}
+    - {name: フルヘンシオ・バティスタ, title: 大統領（独裁）, from: 1952, to: 1958, note: クーデタで政権に戻った。アメリカ資本・マフィアと結んだ。1959年1月1日に亡命, source: "https://ja.wikipedia.org/wiki/フルヘンシオ・バティスタ"}
+    - {name: フィデル・カストロ, title: 首相・国家評議会議長・共産党第一書記, from: 1959, to: 2008, note: 1959–76年は首相、1976–2008年は国家評議会議長（元首）, source: "https://ja.wikipedia.org/wiki/フィデル・カストロ"}
+    - {name: ラウル・カストロ, title: 国家評議会議長・共産党第一書記, from: 2008, to: 2018, note: フィデルの弟。共産党第一書記は2021年まで, source: "https://ja.wikipedia.org/wiki/ラウル・カストロ"}
+    - {name: ミゲル・ディアス＝カネル, title: 国家評議会議長・大統領・共産党第一書記, from: 2018, to: 2025, note: 2019年から大統領、2021年から党第一書記, source: "https://en.wikipedia.org/wiki/Miguel_Díaz-Canel"}
+  periods:
+    - from: 1902
+      to: 1933
+      text: 米西戦争の後のアメリカ軍政（1898–1902）を経て独立したが、プラット修正条項でアメリカに干渉の権利とグアンタナモ基地を認めさせられた（事実上の保護国）。1906–09年にはアメリカが再占領した。砂糖産業はアメリカ資本が握った。
+    - from: 1934
+      to: 1958
+      text: 善隣外交のもとでプラット修正条項は廃止された（1934）。バティスタが軍を握り、1952年のクーデタで独裁に戻った。ハバナはアメリカ人の観光・賭博の地となった。
+    - from: 1959
+      to: 1991
+      text: キューバ革命：フィデル・カストロ・ゲバラらのゲリラがバティスタを倒した。アメリカ企業の国有化からアメリカと断交し（1961）、ピッグス湾事件の後に社会主義を宣言してソ連と結んだ。1962年のキューバ危機を経て、ソ連の援助で砂糖を輸出する体制が続き、アンゴラなどアフリカにも派兵した。
+    - from: 1992
+      to: 2025
+      text: ソ連の解体で経済が急に悪化した（「特別な時期」）。観光と外国投資を一部受け入れ、2015年にアメリカと国交を回復したが、経済制裁は続く。2021年に全国で抗議行動が起きた。
+  note: 1898–1902年と1906–09年のアメリカ軍政は地図では usa・occupied、1902–33年はプラット修正条項による overlord は usa。
+  source: "https://ja.wikipedia.org/wiki/キューバの歴史"
+
+- id: haiti
+  name: ハイチ共和国
+  names:
+    - {to: 1805, name: ハイチ帝国, short: ハイチ, kind: 帝国}
+    - {from: 1806, to: 1848, name: ハイチ共和国, short: ハイチ, kind: 共和国}
+    - {from: 1849, to: 1858, name: ハイチ帝国, short: ハイチ, kind: 帝国}
+  short: ハイチ
+  color: "#7fb7ab"
+  kind: 共和国
+  home_iso: [HTI]
+  rulers:
+    - {name: ジャン＝ジャック・デサリーヌ（ジャック1世）, title: 総督・皇帝, from: 1804, to: 1806, note: 1804年1月1日に独立を宣言し、同年皇帝に即位。1806年に暗殺された, source: "https://ja.wikipedia.org/wiki/ジャン＝ジャック・デサリーヌ"}
+    - {name: アレクサンドル・ペシオン, title: 大統領（南部の共和国）, from: 1807, to: 1818, note: 北部はクリストフの国（haiti_north）。ペシオンはボリバルを援助した, source: "https://ja.wikipedia.org/wiki/アレクサンドル・ペション"}
+    - {name: ジャン＝ピエール・ボワイエ, title: 大統領, from: 1818, to: 1843, note: 1820年に北部、1822年に東部（今のドミニカ共和国）を併せて全島を治めた。1825年にフランスに巨額の賠償金を約束して独立の承認を得た, source: "https://en.wikipedia.org/wiki/Jean-Pierre_Boyer"}
+    - {name: シャルル・リヴィエール＝エラールら, title: 大統領, from: 1843, to: 1847, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Haiti"}
+    - {name: フォスタン・スールーク（フォスタン1世）, title: 大統領・皇帝, from: 1847, to: 1859, note: 1849年に皇帝となった, source: "https://en.wikipedia.org/wiki/Faustin_Soulouque"}
+    - {name: ファーブル・ジェフラール, title: 大統領, from: 1859, to: 1867, source: "https://en.wikipedia.org/wiki/Fabre_Geffrard"}
+    - {name: 大統領たち（政変の続いた時代）, title: 大統領, from: 1867, to: 1915, note: 1911–15年には7人の大統領が倒れた, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Haiti"}
+    - {name: フィリップ・シュドル・ダルティグナーヴ, title: 大統領（アメリカ占領下）, from: 1915, to: 1922, source: "https://en.wikipedia.org/wiki/Philippe_Sudré_Dartiguenave"}
+    - {name: ルイ・ボルノ, title: 大統領（アメリカ占領下）, from: 1922, to: 1930, source: "https://en.wikipedia.org/wiki/Louis_Borno"}
+    - {name: ステニオ・ヴァンサン, title: 大統領, from: 1930, to: 1941, source: "https://en.wikipedia.org/wiki/Sténio_Vincent"}
+    - {name: エリ・レスコ, title: 大統領, from: 1941, to: 1946, source: "https://en.wikipedia.org/wiki/Élie_Lescot"}
+    - {name: デュマルセ・エスティメ, title: 大統領, from: 1946, to: 1950, source: "https://en.wikipedia.org/wiki/Dumarsais_Estimé"}
+    - {name: ポール・マグロワール, title: 大統領, from: 1950, to: 1956, source: "https://en.wikipedia.org/wiki/Paul_Magloire"}
+    - {name: フランソワ・デュヴァリエ, title: 大統領（終身）, from: 1957, to: 1971, note: 「パパ・ドク」。私兵トントン・マクートで恐怖政治を行った, source: "https://ja.wikipedia.org/wiki/フランソワ・デュヴァリエ"}
+    - {name: ジャン＝クロード・デュヴァリエ, title: 大統領（終身）, from: 1971, to: 1986, note: 「ベビー・ドク」。1986年に民衆の反乱で亡命, source: "https://ja.wikipedia.org/wiki/ジャン＝クロード・デュヴァリエ"}
+    - {name: アンリ・ナンフィら（軍事政権）, title: 国家評議会議長など, from: 1986, to: 1990, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Haiti"}
+    - {name: ジャン＝ベルトラン・アリスティド, title: 大統領, from: 1991, to: 1991, note: 初の民主的な選挙で選ばれた解放の神学の神父。就任7か月でクーデタで追われた, source: "https://ja.wikipedia.org/wiki/ジャン＝ベルトラン・アリスティド"}
+    - {name: ラウール・セドラ（軍事政権）, title: 軍司令官（実権者）, from: 1991, to: 1994, source: "https://en.wikipedia.org/wiki/Raoul_Cédras"}
+    - {name: ジャン＝ベルトラン・アリスティド, title: 大統領, from: 1994, to: 1996, note: アメリカ主導の多国籍軍の介入で復帰, source: "https://ja.wikipedia.org/wiki/ジャン＝ベルトラン・アリスティド"}
+    - {name: ルネ・プレヴァル, title: 大統領, from: 1996, to: 2001, source: "https://en.wikipedia.org/wiki/René_Préval"}
+    - {name: ジャン＝ベルトラン・アリスティド, title: 大統領, from: 2001, to: 2004, note: 2004年の反乱で再び国外へ, source: "https://ja.wikipedia.org/wiki/ジャン＝ベルトラン・アリスティド"}
+    - {name: ボニファス・アレクサンドル, title: 大統領（暫定）, from: 2004, to: 2006, source: "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Haiti"}
+    - {name: ルネ・プレヴァル, title: 大統領, from: 2006, to: 2011, source: "https://en.wikipedia.org/wiki/René_Préval"}
+    - {name: ミシェル・マテリー, title: 大統領, from: 2011, to: 2016, source: "https://en.wikipedia.org/wiki/Michel_Martelly"}
+    - {name: ジョブネル・モイーズ, title: 大統領, from: 2017, to: 2021, note: 2016–17年はジョスレルム・プリヴェール暫定大統領。モイーズは2021年7月に暗殺された, source: "https://en.wikipedia.org/wiki/Jovenel_Moïse"}
+    - {name: アリエル・アンリ, title: 首相（大統領不在の政府）, from: 2021, to: 2024, source: "https://en.wikipedia.org/wiki/Ariel_Henry"}
+    - {name: 暫定大統領評議会, title: 暫定大統領評議会, from: 2024, to: 2025, note: 首都の大部分を武装集団が支配している, source: "https://en.wikipedia.org/wiki/Transitional_Presidential_Council"}
+  periods:
+    - from: 1804
+      to: 1820
+      text: ハイチ革命の末、世界で最初の黒人の共和国として独立した（ラテンアメリカで最初の独立国）。デサリーヌの暗殺の後、北部のクリストフの国（1811年から王国）と南部のペシオンの共和国に分かれた。
+    - from: 1820
+      to: 1843
+      text: ボワイエが島全体を統一した（東部の併合は1822–44年）。1825年にフランスに巨額の「賠償金」を約束して独立を認めさせ、その支払いが長く経済を苦しめた。
+    - from: 1844
+      to: 1914
+      text: 東部がドミニカ共和国として独立した。スールークの帝政（1849–59）の後も政変が繰り返され、外国（ドイツ・アメリカ・フランス）の商人と軍艦が圧力をかけた。
+    - from: 1915
+      to: 1934
+      text: 大統領の殺害を機にアメリカ海兵隊が上陸し、19年間占領した。道路などを整えたが、強制労働への反乱（カコの反乱）を鎮圧した。
+    - from: 1957
+      to: 1986
+      text: デュヴァリエ父子の独裁（トントン・マクートによる恐怖政治）。多くの人が国外に逃れた。
+    - from: 1986
+      to: 2025
+      text: 独裁の終わりの後もクーデタと政情不安が続いた。2010年の大地震で20万人以上が死亡した。2021年の大統領暗殺の後、武装集団（ギャング）が首都を支配するようになり、国連が多国籍の治安支援を認めた。
+  source: "https://ja.wikipedia.org/wiki/ハイチの歴史"
+
+- id: haiti_north
+  name: ハイチ国（北部）
+  names:
+    - {from: 1811, name: ハイチ王国, short: ハイチ王国, kind: 王国}
+  short: ハイチ国（北）
+  color: "#a8e6c1"
+  kind: 国家（北部）
+  rulers:
+    - {name: アンリ・クリストフ（アンリ1世）, title: 大統領・国王, from: 1807, to: 1820, note: 1811年に王となり、サン・スーシ宮殿とラ・フェリエール城塞を築いた。1820年に反乱の中で自殺し、北部は共和国に併合された, source: "https://ja.wikipedia.org/wiki/アンリ・クリストフ"}
+  periods:
+    - from: 1807
+      to: 1820
+      text: デサリーヌの暗殺後、北部をクリストフが治めた。大農園の労働を強制して砂糖・コーヒーの輸出を保ち、貴族制をしいた。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Haiti"
+
+- id: dominican_republic
+  name: ドミニカ共和国
+  names:
+    - {to: 1821, name: スペイン領ハイチ独立国, short: ハイチ（スペイン領）, kind: 独立国（短命）}
+  short: ドミニカ
+  color: "#e7a9c8"
+  kind: 共和国
+  home_iso: [DOM]
+  rulers:
+    - {name: ホセ・ヌニェス・デ・カセレス, title: 大統領, from: 1821, to: 1822, note: 1821年12月に独立を宣言し、大コロンビアへの加入をめざしたが、翌年2月にハイチ軍に併合された, source: "https://en.wikipedia.org/wiki/José_Núñez_de_Cáceres"}
+    - {name: ペドロ・サンタナ, title: 大統領, from: 1844, to: 1848, note: 独立の英雄ドゥアルテを追放して大統領となった, source: "https://en.wikipedia.org/wiki/Pedro_Santana"}
+    - {name: ブエナベントゥーラ・バエス, title: 大統領, from: 1849, to: 1853, source: "https://en.wikipedia.org/wiki/Buenaventura_Báez"}
+    - {name: ペドロ・サンタナ, title: 大統領, from: 1853, to: 1856, source: "https://en.wikipedia.org/wiki/Pedro_Santana"}
+    - {name: ブエナベントゥーラ・バエス, title: 大統領, from: 1856, to: 1858, source: "https://en.wikipedia.org/wiki/Buenaventura_Báez"}
+    - {name: ペドロ・サンタナ, title: 大統領・スペインの総督, from: 1858, to: 1862, note: 1861年にスペインへの再併合を求め、スペイン領サント・ドミンゴの総督となった, source: "https://en.wikipedia.org/wiki/Pedro_Santana"}
+    - {name: 大統領たち（バエス、ルペロンら）, title: 大統領, from: 1865, to: 1882, note: バエスは1869–71年にアメリカへの併合を試みたが、アメリカ上院が否決した, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic"}
+    - {name: ウリセス・ウローら, title: 大統領, from: 1882, to: 1899, note: ウロー（1882–84、1887–99）の独裁。暗殺された, source: "https://en.wikipedia.org/wiki/Ulises_Heureaux"}
+    - {name: 大統領たち, title: 大統領, from: 1899, to: 1916, note: 1905年からアメリカが関税を管理した, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic"}
+    - {name: ハリー・ナップ（アメリカ海軍）ら, title: 軍政長官（アメリカ占領）, from: 1916, to: 1924, source: "https://en.wikipedia.org/wiki/United_States_occupation_of_the_Dominican_Republic_(1916–1924)"}
+    - {name: オラシオ・バスケス, title: 大統領, from: 1924, to: 1930, source: "https://en.wikipedia.org/wiki/Horacio_Vásquez"}
+    - {name: ラファエル・トルヒーヨ, title: 大統領・軍司令官（独裁者）, from: 1930, to: 1961, note: 1938–42年と1952–61年は傀儡の大統領（弟エクトルなど）を立てて実権を握った。1961年に暗殺された, source: "https://ja.wikipedia.org/wiki/ラファエル・トルヒーヨ"}
+    - {name: ホアキン・バラゲール, title: 大統領, from: 1961, to: 1962, source: "https://ja.wikipedia.org/wiki/ホアキン・バラゲール"}
+    - {name: フアン・ボッシュ, title: 大統領, from: 1963, to: 1963, note: 民主的な選挙で選ばれたが7か月でクーデタで追われた。1965年に復帰を求める内戦とアメリカの介入が起きた, source: "https://en.wikipedia.org/wiki/Juan_Bosch"}
+    - {name: 軍の三頭政府など, title: 臨時政府, from: 1963, to: 1966, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic"}
+    - {name: ホアキン・バラゲール, title: 大統領, from: 1966, to: 1978, source: "https://ja.wikipedia.org/wiki/ホアキン・バラゲール"}
+    - {name: アントニオ・グスマン, title: 大統領, from: 1978, to: 1982, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic"}
+    - {name: サルバドール・ホルヘ・ブランコ, title: 大統領, from: 1982, to: 1986, source: "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic"}
+    - {name: ホアキン・バラゲール, title: 大統領, from: 1986, to: 1996, source: "https://ja.wikipedia.org/wiki/ホアキン・バラゲール"}
+    - {name: レオネル・フェルナンデス, title: 大統領, from: 1996, to: 2000, source: "https://en.wikipedia.org/wiki/Leonel_Fernández"}
+    - {name: イポリト・メヒア, title: 大統領, from: 2000, to: 2004, source: "https://en.wikipedia.org/wiki/Hipólito_Mejía"}
+    - {name: レオネル・フェルナンデス, title: 大統領, from: 2004, to: 2012, source: "https://en.wikipedia.org/wiki/Leonel_Fernández"}
+    - {name: ダニーロ・メディナ, title: 大統領, from: 2012, to: 2020, source: "https://en.wikipedia.org/wiki/Danilo_Medina"}
+    - {name: ルイス・アビナデル, title: 大統領, from: 2020, to: 2025, source: "https://en.wikipedia.org/wiki/Luis_Abinader"}
+  periods:
+    - from: 1844
+      to: 1865
+      text: 1844年2月27日、ドゥアルテらの秘密結社「ラ・トリニタリア」の流れをくむ人々がハイチからの独立を宣言した。ハイチの再侵攻をおそれたサンタナは1861年にスペインへの再併合を求めたが、再独立戦争（1863–65）でスペインは撤退した。
+    - from: 1866
+      to: 1930
+      text: 政変と外国からの借金が続き、1905年からアメリカが関税を管理し、1916–24年にはアメリカ海兵隊が占領して軍政をしいた。砂糖産業がアメリカ資本のもとで広がった。
+    - from: 1930
+      to: 1961
+      text: トルヒーヨの独裁。1937年に国境地帯のハイチ人を大量に殺害した（パセリの虐殺）。1961年に暗殺された。
+    - from: 1962
+      to: 2025
+      text: 1965年の内戦でアメリカが軍を送って介入した。その後はバラゲールが長く大統領を務め、1996年以後は選挙による政権交代が定着した。観光と自由貿易地域で成長している。
+  source: "https://ja.wikipedia.org/wiki/ドミニカ共和国の歴史"
+
+- id: jamaica
+  name: ジャマイカ
+  short: ジャマイカ
+  color: "#b9df8f"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [JAM]
+  rulers:
+    - {name: アレクサンダー・バスタマンテ, title: 首相, from: 1962, to: 1967, note: 元首はイギリス国王（総督が代行）, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Jamaica"}
+    - {name: ドナルド・サングスター、ヒュー・シアラー, title: 首相, from: 1967, to: 1972, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Jamaica"}
+    - {name: マイケル・マンリー, title: 首相, from: 1972, to: 1980, note: 民主社会主義をかかげ、キューバと接近した, source: "https://en.wikipedia.org/wiki/Michael_Manley"}
+    - {name: エドワード・シアガ, title: 首相, from: 1980, to: 1989, source: "https://en.wikipedia.org/wiki/Edward_Seaga"}
+    - {name: マイケル・マンリー, title: 首相, from: 1989, to: 1992, source: "https://en.wikipedia.org/wiki/Michael_Manley"}
+    - {name: P・J・パターソン, title: 首相, from: 1992, to: 2006, source: "https://en.wikipedia.org/wiki/P._J._Patterson"}
+    - {name: ポーシャ・シンプソン＝ミラー, title: 首相, from: 2006, to: 2007, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Jamaica"}
+    - {name: ブルース・ゴールディング, title: 首相, from: 2007, to: 2011, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Jamaica"}
+    - {name: アンドリュー・ホルネス, title: 首相, from: 2011, to: 2012, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Jamaica"}
+    - {name: ポーシャ・シンプソン＝ミラー, title: 首相, from: 2012, to: 2016, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Jamaica"}
+    - {name: アンドリュー・ホルネス, title: 首相, from: 2016, to: 2025, source: "https://en.wikipedia.org/wiki/Andrew_Holness"}
+  periods:
+    - from: 1962
+      to: 2025
+      text: 西インド連邦を離れて独立した。人民国家党（PNP）とジャマイカ労働党（JLP）の二大政党が政権を争う。ボーキサイトと観光が主な産業で、レゲエなどの文化が世界に広がった。
+  source: "https://ja.wikipedia.org/wiki/ジャマイカの歴史"
+
+- id: bahamas
+  name: バハマ国
+  short: バハマ
+  color: "#8fd0d4"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [BHS]
+  rulers:
+    - {name: リンデン・ピンドリング, title: 首相, from: 1973, to: 1992, note: 1967年から自治政府の首相。元首はイギリス国王（総督が代行）, source: "https://en.wikipedia.org/wiki/Lynden_Pindling"}
+    - {name: ヒューバート・イングラハム, title: 首相, from: 1992, to: 2002, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_the_Bahamas"}
+    - {name: ペリー・クリスティ, title: 首相, from: 2002, to: 2007, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_the_Bahamas"}
+    - {name: ヒューバート・イングラハム, title: 首相, from: 2007, to: 2012, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_the_Bahamas"}
+    - {name: ペリー・クリスティ, title: 首相, from: 2012, to: 2017, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_the_Bahamas"}
+    - {name: ヒューバート・ミニス, title: 首相, from: 2017, to: 2021, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_the_Bahamas"}
+    - {name: フィリップ・デイヴィス, title: 首相, from: 2021, to: 2025, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_the_Bahamas"}
+  periods:
+    - from: 1973
+      to: 2025
+      text: イギリスから独立した。観光と金融（タックス・ヘイヴン）が主な産業。
+  source: "https://ja.wikipedia.org/wiki/バハマ"
+
+# ===== 小アンティル諸島 =====
+- id: kalinago
+  name: カリブ人（カリナゴ）
+  short: カリブ人
+  color: "#c7a57d"
+  kind: 先住民
+  periods:
+    - from: 1648
+      to: 1796
+      text: 小アンティル諸島の先住民（島のカリブ人、カリナゴ）。ヨーロッパ人の入植に強く抵抗し、1660年の英仏との取り決めでドミニカ島とセントビンセント島はカリブ人の島とされた。セントビンセントでは逃亡奴隷と混じり合った「黒いカリブ（ガリフナ）」が力を持ったが、第2次カリブ戦争（1795–96）に敗れて中米のロアタン島に移された。
+  note: 地図では、ヨーロッパの国が実際に入植・支配する前のドミニカ・セントビンセント・セントルシア・グレナダに使う。
+  source: "https://en.wikipedia.org/wiki/Kalinago"
+
+- id: trinidad_tobago
+  name: トリニダード・トバゴ共和国
+  names:
+    - {to: 1975, name: トリニダード・トバゴ, short: トリニダード・トバゴ, kind: 立憲君主国（英連邦王国）}
+  short: トリニダード・トバゴ
+  color: "#d7a7e6"
+  kind: 共和国
+  home_iso: [TTO]
+  rulers:
+    - {name: エリック・ウィリアムズ, title: 首相, from: 1962, to: 1981, note: 歴史家（『資本主義と奴隷制』）で独立の指導者, source: "https://ja.wikipedia.org/wiki/エリック・ウィリアムズ"}
+    - {name: ジョージ・チェンバース, title: 首相, from: 1981, to: 1986, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+    - {name: A・N・R・ロビンソン, title: 首相, from: 1986, to: 1991, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+    - {name: パトリック・マニング, title: 首相, from: 1991, to: 1995, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+    - {name: バスデオ・パンデー, title: 首相, from: 1995, to: 2001, note: インド系として初の首相, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+    - {name: パトリック・マニング, title: 首相, from: 2001, to: 2010, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+    - {name: カムラ・パサード＝ビセッサー, title: 首相, from: 2010, to: 2015, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+    - {name: キース・ローリー, title: 首相, from: 2015, to: 2025, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+    - {name: カムラ・パサード＝ビセッサー, title: 首相, from: 2025, to: 2025, note: 2025年3月のスチュアート・ヤングの短い在任の後、5月に再び首相, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Trinidad_and_Tobago"}
+  periods:
+    - from: 1962
+      to: 2025
+      text: イギリスから独立し、1976年に共和制となった。アフリカ系とインド系（奴隷制廃止後の契約労働者の子孫）が人口の多くを占める。石油・天然ガスで豊か。
+  source: "https://ja.wikipedia.org/wiki/トリニダード・トバゴ"
+
+- id: barbados
+  name: バルバドス
+  names:
+    - {from: 2021, name: バルバドス, short: バルバドス, kind: 共和国}
+  short: バルバドス
+  color: "#e6cf79"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [BRB]
+  rulers:
+    - {name: エロル・バロー, title: 首相, from: 1966, to: 1976, note: 独立の指導者, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Barbados"}
+    - {name: トム・アダムズ, title: 首相, from: 1976, to: 1985, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Barbados"}
+    - {name: 首相たち, title: 首相, from: 1985, to: 2018, note: バーナード・セント・ジョン、エロル・バロー、アースキン・サンディフォード、オーウェン・アーサー、デイヴィッド・トンプソン、フロインデル・スチュアート, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Barbados"}
+    - {name: ミア・モトリー, title: 首相, from: 2018, to: 2025, note: 2021年に共和制に移った（初代大統領サンドラ・メイソン）, source: "https://en.wikipedia.org/wiki/Mia_Mottley"}
+  periods:
+    - from: 1966
+      to: 2025
+      text: 17世紀からイギリスの砂糖植民地で、本国とのつながりの強さから「リトル・イングランド」と呼ばれた。1966年に独立し、2021年に共和制に移った。
+  source: "https://ja.wikipedia.org/wiki/バルバドス"
+
+- id: grenada
+  name: グレナダ
+  short: グレナダ
+  color: "#c3df9b"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [GRD]
+  rulers:
+    - {name: エリック・ゲイリー, title: 首相, from: 1974, to: 1979, source: "https://en.wikipedia.org/wiki/Eric_Gairy"}
+    - {name: モーリス・ビショップ, title: 人民革命政府の首相, from: 1979, to: 1983, note: ニュー・ジュエル運動のクーデタで政権を握り、キューバと結んだ。党内の対立で殺害された, source: "https://en.wikipedia.org/wiki/Maurice_Bishop"}
+    - {name: 首相たち, title: 首相, from: 1984, to: 2025, note: ハーバート・ブレイズ、キース・ミッチェル（1995–2008、2013–22）、ディコン・ミッチェル（2022–）ら, source: "https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Grenada"}
+  periods:
+    - from: 1974
+      to: 2025
+      text: 1974年に独立。1979年の革命で人民革命政府ができたが、1983年に指導部の内紛でビショップが殺され、アメリカ軍がカリブ諸国の部隊とともに侵攻した。
+  source: "https://ja.wikipedia.org/wiki/グレナダ"
+
+- id: dominica
+  name: ドミニカ国
+  short: ドミニカ国
+  color: "#a3d6a1"
+  kind: 共和国
+  home_iso: [DMA]
+  periods:
+    - from: 1978
+      to: 2025
+      text: イギリスから共和国として独立した。島にはカリブ人（カリナゴ）の自治区が残る。
+  note: ドミニカ共和国（dominican_republic）とは別の国。元首（大統領・首相）は省略。
+  source: "https://ja.wikipedia.org/wiki/ドミニカ国"
+
+- id: saint_lucia
+  name: セントルシア
+  short: セントルシア
+  color: "#aac4ee"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [LCA]
+  periods:
+    - from: 1979
+      to: 2025
+      text: 英仏が14回も奪い合った島。1814年からイギリス領で、1979年に独立した。
+  note: 元首（首相）は省略。
+  source: "https://ja.wikipedia.org/wiki/セントルシア"
+
+- id: saint_vincent
+  name: セントビンセント及びグレナディーン諸島
+  short: セントビンセント
+  color: "#efc59c"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [VCT]
+  periods:
+    - from: 1979
+      to: 2025
+      text: 1979年にイギリスから独立した。
+  note: 元首（首相）は省略。
+  source: "https://ja.wikipedia.org/wiki/セントビンセント及びグレナディーン諸島"
+
+- id: antigua_barbuda
+  name: アンティグア・バーブーダ
+  short: アンティグア・バーブーダ
+  color: "#e3a3c4"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [ATG]
+  periods:
+    - from: 1981
+      to: 2025
+      text: 1981年にイギリスから独立した。バード父子が長く首相を務めた（1981–2004）。
+  note: 元首（首相）は省略。
+  source: "https://ja.wikipedia.org/wiki/アンティグア・バーブーダ"
+
+- id: saint_kitts_nevis
+  name: セントクリストファー・ネイビス
+  short: セントクリストファー・ネイビス
+  color: "#bfe2a4"
+  kind: 立憲君主国（英連邦王国）
+  home_iso: [KNA]
+  periods:
+    - from: 1983
+      to: 2025
+      text: 1983年にイギリスから独立した（アンギラは1980年に分離してイギリス領に残った）。南北アメリカでいちばん小さな国。
+  note: 元首（首相）は省略。
+  source: "https://ja.wikipedia.org/wiki/セントクリストファー・ネイビス"

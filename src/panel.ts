@@ -1,7 +1,7 @@
 // 右パネル（スマホでは下からのシート）の中身：その年の出来事・国境の変化・選んだ国の情報
 
 import { AtlasIndex, curveAt, curveMax, sourcesOf, type BorderChange, type CurvePoint, type DistKey, type HistEvent, type Movement, type Polity, type ReligionEntry, type Ruler } from "./data";
-import { MOVEMENT_COLORS, secularColor, secularText, type ReligionPick } from "./map";
+import { MOVEMENT_COLORS, secularColor, secularText, type BlankInfo, type ReligionPick, type ViewProbe } from "./map";
 import { hydrateImages, imageSlot, refKey, wikiRefs, type WikiRef } from "./images";
 
 const esc = (s: unknown) =>
@@ -158,7 +158,9 @@ export class Panel {
     const ps = (e.polities ?? []).map((p) => this.link(p, year)).join(" ");
     const imp = e.importance ?? 2;
     const img = imp <= 2 ? imageSlot(wikiRefs(e.source), imp === 1 ? "event-wide" : "event", e.title) : "";
-    const sortAttr = k == null ? "" : ` data-k="${k}" data-imp="${imp}"${ptsAttr(e.pts)}`;
+    // 領土による判定（関係国が画面の中にまとまった領土を持つか）に使う政体と範囲。場所が書いてある出来事は点だけで判定する
+    const terr = !e.fixed && e.polities?.length ? ` data-pol="${esc(e.polities.join(","))}"${e.bx != null ? ` data-bx="${e.bx}"` : ""}` : "";
+    const sortAttr = k == null ? "" : ` data-k="${k}" data-imp="${imp}"${ptsAttr(e.pts)}${terr}`;
     return `<li class="event imp${imp}"${sortAttr}>${img}
       <div class="ev-title">${date}${esc(e.title)}</div>
       ${e.text ? `<div class="ev-text">${escY(e.text)}</div>` : ""}
@@ -241,12 +243,20 @@ export class Panel {
       const lis = [...ul.querySelectorAll<HTMLLIElement>(":scope > li[data-k]")];
       const items = lis.map((li) => {
         const pts = parsePts(li.getAttribute("data-pts"));
+        const pol = li.getAttribute("data-pol");
         let inView = true;
         let dist = 0;
         if (probe && pts.length) {
-          const r = pts.map((p) => probe(p[0], p[1]));
+          const r = pts.map((p) => probe.at(p[0], p[1]));
           inView = r.some((x) => x.inView);
           dist = Math.min(...r.map((x) => x.dist));
+        }
+        // 代表点（首都など）が画面の外でも、関係国の領土が画面にまとまって映っていれば範囲内（例：アメリカ中西部を見ているときのアメリカの出来事）。
+        // 数える領土は出来事のファイルの地域の中だけ（英領インドが映っていてもロンドンの出来事は範囲外のまま）
+        if (probe && !inView && pol) {
+          const bx = li.getAttribute("data-bx");
+          const box = bx != null ? this.idx.atlas.eventBoxes?.[Number(bx)] : null;
+          if (probe.holds(pol.split(","), box)) inView = true;
         }
         return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist };
       });
@@ -393,6 +403,41 @@ export class Panel {
     this.polityEl.innerHTML = html;
   }
 
+  /** 国のない土地（所属なし・データ未整備・準備中）をクリックしたときの説明（info が null なら閉じる） */
+  renderBlank(info: BlankInfo | null, year: number) {
+    if (!info) {
+      this.polityEl.hidden = true;
+      this.polityEl.innerHTML = "";
+      return;
+    }
+    this.polityEl.hidden = false;
+    const head = {
+      unowned: { cls: "unowned", title: "所属なし", meta: "どの国にも属さない土地" },
+      nodata: { cls: "nodata", title: "データ未整備", meta: `${year}年の所属はまだ調べていません` },
+      pending: { cls: "pending", title: info.modern, meta: "現代の国境（この地域の歴史の地図は準備中）" },
+    }[info.kind];
+    let html = `<div class="card-head">
+        <span class="swatch big blank-${head.cls}"></span>
+        <div><h2>${esc(head.title)}</h2>
+        <div class="meta">${esc(head.meta)}</div></div>
+        <button class="close" data-close aria-label="閉じる">×</button>
+      </div>`;
+    const place = info.region ? `${esc(info.region)}（${esc(info.place)}付近）` : `${esc(info.place)}（${esc(info.modern)}）`;
+    html += `<p class="period"><span class="years">場所</span>${place}</p>`;
+    if (info.kind === "unowned") {
+      html += `<p class="period">先住民の暮らす地や無人の地など、${year}年の時点でどの国の支配も及んでいなかった土地として描いています（データ未整備ではありません）。</p>`;
+      if (info.note) html += `<p class="period">${escY(info.note)}</p>`;
+      if (info.cause) html += `<p class="period"><span class="cause">${escY(info.cause)}</span></p>`;
+    }
+    if (info.since != null && info.kind === "unowned") html += `<p class="period"><span class="years">${yl(info.since)}–</span>この状態</p>`;
+    if (info.next) {
+      html += `<p class="period"><span class="years"><a href="#" class="ylink" data-year="${info.next.year}">${info.next.year}年</a></span>${
+        info.kind === "nodata" && info.since == null ? "からデータがあります：" : "から："
+      }${info.next.owner ? this.link(info.next.owner, info.next.year) : "所属なし"}</p>`;
+    }
+    this.polityEl.innerHTML = html;
+  }
+
   renderPolity(
     id: string | null,
     year: number,
@@ -514,7 +559,6 @@ function shortUrl(u: string) {
   }
 }
 
-export type ViewProbe = (lon: number, lat: number) => { inView: boolean; dist: number };
 
 /** 並べ替え用の代表点の属性（ data-pts="経度,緯度;経度,緯度" ） */
 function ptsAttr(pts: [number, number][] | undefined): string {

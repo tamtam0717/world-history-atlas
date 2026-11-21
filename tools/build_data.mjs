@@ -249,6 +249,14 @@ for (const e of events) {
   const where = `${e._file} の「${e.title}」`;
   if (typeof e.year !== "number") warn(`${where}: year が数値ではありません`);
   for (const p of e.polities ?? []) checkPolity(p, where);
+  // 任意の場所：lon・lat、または at: [経度, 緯度]。書かれていれば代表点として最優先する
+  if (e.at != null || e.lon != null || e.lat != null) {
+    if (e.at != null && (e.lon != null || e.lat != null)) warn(`${where}: 場所は at か lon・lat のどちらか一方で書いてください`);
+    const [lon, lat] = e.at != null ? (Array.isArray(e.at) && e.at.length === 2 ? e.at : [NaN, NaN]) : [e.lon, e.lat];
+    if (typeof lon !== "number" || typeof lat !== "number" || !(lon >= -180 && lon <= 180) || !(lat >= -90 && lat <= 90)) {
+      warn(`${where}: 場所（at / lon・lat）は [経度, 緯度] の数値で、経度 -180〜180・緯度 -90〜90 にしてください`);
+    } else e._at = [lon, lat];
+  }
 }
 events.sort((a, b) => a.year - b.year || String(a.date ?? "").localeCompare(String(b.date ?? "")));
 
@@ -442,6 +450,7 @@ const checkCurve = (c, where) => {
 };
 const eventTitles = new Set(events.map((e) => e.title));
 const movements = [];
+const pseudoRegions = new Map();
 for (const m of movementsRaw) {
   const where = `${m._file} の ${m.id ?? "(id なし)"}`;
   if (!m.id || !m.name) {
@@ -458,13 +467,27 @@ for (const m of movementsRaw) {
   const spread = [];
   for (const [i, s] of (m.spread ?? []).entries()) {
     const w = `${where} の spread ${i + 1} 番目`;
-    const KEYS = ["polities", "regions", "exclude_regions", "include_colonies"];
+    const KEYS = ["polities", "regions", "exclude_regions", "include_colonies", "iso", "adm1"];
     for (const k of Object.keys(s.where ?? {})) if (!KEYS.includes(k)) warn(`${w}: where の "${k}" は使えません（${KEYS.join(" / ")}）`);
     const pol = s.where?.polities ?? [];
     const reg = s.where?.regions ?? [];
     const exc = s.where?.exclude_regions ?? [];
     const colonies = s.where?.include_colonies ?? false;
-    if (!pol.length && !reg.length) warn(`${w}: where に polities か regions を書いてください`);
+    // iso・adm1（現代の国・州のピース。年や所属に関係なく光る）：政治の地域がまだない所や、植民地の一部だけを光らせたいときに使う。
+    // 画面では regions と同じに扱うので、"iso:USA"・"adm1:USA/Virginia" という名前の地域として movementRegions に入れる
+    const isoSel = s.where?.iso ?? [];
+    const adm1Sel = s.where?.adm1 ?? [];
+    const pseudo = [];
+    for (const iso of isoSel) {
+      if (!byIsoAll.has(iso)) warn(`${w}: ピースのない国コード "${iso}"`);
+      else pseudo.push([`iso:${iso}`, byIsoAll.get(iso)]);
+    }
+    for (const k of adm1Sel) {
+      if (!byAdm1.has(k)) warn(`${w}: 該当のない adm1 "${k}"`);
+      else pseudo.push([`adm1:${k}`, byAdm1.get(k)]);
+    }
+    for (const [k, l] of pseudo) pseudoRegions.set(k, l);
+    if (!pol.length && !reg.length && !pseudo.length) warn(`${w}: where に polities・regions・iso・adm1 のどれかを書いてください`);
     if (typeof colonies !== "boolean") warn(`${w}: include_colonies は true か false で書いてください`);
     if (colonies === true && !pol.length) warn(`${w}: include_colonies は polities と一緒に使います`);
     for (const p of pol) checkPolity(p, w);
@@ -480,7 +503,7 @@ for (const m of movementsRaw) {
     const excludeOk = okRegions(exc);
     spread.push({
       polities: pol.filter((p) => polityIds.has(p)),
-      regions: regionsOk,
+      regions: [...regionsOk, ...pseudo.map(([k]) => k)],
       ...(excludeOk.length ? { exclude: excludeOk } : {}),
       ...(colonies === true ? { colonies: true } : {}),
       center: !!s.center,
@@ -494,11 +517,12 @@ for (const m of movementsRaw) {
 // spread の regions は政治の地域のピースで解決する（画面で使うためピース index の一覧を出力）
 const movementRegions = {};
 for (const m of movements) for (const s of m.spread) for (const r of [...s.regions, ...(s.exclude ?? [])]) {
-  if (!(r in movementRegions)) movementRegions[r] = [...resolveRegion(r, "movements")].sort((a, b) => a - b);
+  if (!(r in movementRegions))
+    movementRegions[r] = pseudoRegions.has(r) ? [...new Set(pseudoRegions.get(r))].sort((a, b) => a - b) : [...resolveRegion(r, "movements")].sort((a, b) => a - b);
 }
 
 // ---- 出力 ----
-const strip = ({ _file, ...rest }) => rest;
+const strip = ({ _file, _at, at, lon, lat, ...rest }) => rest;
 const meta = YAML.parse(fs.readFileSync(path.join(DATA, "meta.yaml"), "utf8"));
 
 // ---- 海の名前・節目・都市 ----
@@ -535,7 +559,18 @@ const FILE_BOX = {
   "events/mainland_sea.yaml": [92, 5, 110, 29],
   "events/maritime_sea.yaml": [94, -11, 142, 21],
   "events/ottoman.yaml": [10, 10, 65, 49],
+  "events/usa.yaml": [-180, 15, -60, 72],
+  "events/canada.yaml": [-170, 40, -50, 84],
+  "events/mexico_caribbean.yaml": [-118, 7, -58, 33],
+  "events/andes.yaml": [-82, -24, -50, 13],
+  "events/south_cone.yaml": [-76, -56, -34, 6],
 };
+// 地域別でないファイル（ヨーロッパの各担当）の出来事で、関係国の領土が画面に映っているかを数える範囲。
+// 植民地（例：英領インド）が映っているだけで本国の出来事が「範囲内」にならないようにする
+const TERRITORY_BOX_DEFAULT = [-32, 27, 66, 72];
+/** 出来事の領土判定の範囲（atlas.eventBoxes。出来事の bx はこの番号） */
+const eventBoxes = [];
+const eventBoxIndex = new Map();
 const regionCenter = new Map(); // 地域 ID → [経度, 緯度]（国境の変化の一覧も、地図に映っている地域を先にするため）
 {
   const inBox = (b, lon, lat) => lon >= b[0] && lon <= b[2] && lat >= b[1] && lat <= b[3];
@@ -623,7 +658,21 @@ const regionCenter = new Map(); // 地域 ID → [経度, 緯度]（国境の変
   };
   let none = 0;
   for (const e of events) {
+    // 場所が書いてあれば、それだけを代表点にする（領土による判定もしない）
+    if (e._at) {
+      e.pts = [[Math.round(e._at[0] * 10) / 10, Math.round(e._at[1] * 10) / 10]];
+      e.fixed = true;
+      continue;
+    }
     const box = FILE_BOX[e._file] ?? null;
+    // 画面に関係国の領土が映っているかの判定で数える範囲（地域別ファイルはその地域、ほかはヨーロッパ）
+    const tbox = box ?? TERRITORY_BOX_DEFAULT;
+    const tk = tbox.join(",");
+    if (!eventBoxIndex.has(tk)) {
+      eventBoxIndex.set(tk, eventBoxes.length);
+      eventBoxes.push(tbox);
+    }
+    e.bx = eventBoxIndex.get(tk);
     const inside = [];
     const outside = [];
     for (const id of e.polities ?? []) {
@@ -662,6 +711,7 @@ const atlas = {
   regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, ...(r.names ? { names: r.names } : {}), timeline: r.timeline, ...(regionCenter.has(r.id) ? { c: regionCenter.get(r.id) } : {}) })),
   pieceTimelines,
   events: events.map(strip),
+  eventBoxes,
   seas,
   milestones,
   cities,

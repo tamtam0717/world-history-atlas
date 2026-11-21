@@ -1,0 +1,2144 @@
+# A2 カナダ・アラスカ（CAN・USA の Alaska・SPM・BMU）の地域と所属の変遷（1648–2025）
+# scratchpad の gen_regions.py で生成した（各ピースはちょうど1つの地域に属する）。手で直してもよい。
+# 方針：入植地・砦の周辺など実際に治めた所は宗主国の色、主張だけの所は certainty: nominal、
+# どの国の主張も及ばない極北・西部（1648 年時点のアラスカ・北極諸島・ブリティッシュコロンビアなど）は owner: null。
+# ルパートランド（ハドソン湾流域）は 1670 年のハドソン湾会社設立から britain の nominal（label）。
+# 1867 年以後のカナダの州には label を付けない。準州（ノースウェスト・ユーコン・ヌナブト）には label。
+
+# ================================================================ ケベック州：セントローレンス川の流域は、入植と領主制（セニョリー）の広がりに合わせて nominal → certain
+- id: qc_quebec_city
+  name: "ケベック"
+  select:
+    pieces: [CAN-Capitale_Nationale]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "ヌーヴェル・フランス"
+      note: "1608年にシャンプランがケベックを築いた。ヌーヴェル・フランス（カナダ）の首府"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1663
+      owner: "france"
+      label: "ヌーヴェル・フランス"
+      cause: "ヌーヴェル・フランスが国王直轄の植民地となる（ルイ14世・コルベール）"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1759
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケベック（イギリスの占領）"
+      cause: "アブラハム平原の戦いでウルフのイギリス軍がモンカルムのフランス軍を破り、ケベックが降伏する（9月）"
+      source: "https://ja.wikipedia.org/wiki/アブラハム平原の戦い"
+    - from: 1763
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_montreal_trois_rivieres
+  name: "モントリオール・トロワリヴィエール"
+  select:
+    pieces: [CAN-Montreal, CAN-Mauricie]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "ヌーヴェル・フランス"
+      note: "トロワリヴィエール（1634）、ヴィル・マリー（モントリオール、1642）。イロコイの攻撃にさらされていた"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1663
+      owner: "france"
+      label: "ヌーヴェル・フランス"
+      cause: "ヌーヴェル・フランスが国王直轄の植民地となる"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "occupied"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_seigneuries
+  name: "セントローレンス川沿いのセニョリー"
+  select:
+    pieces: [CAN-Laval, CAN-Monteregie, CAN-Lanaudiere, CAN-Centre_du_Quebec, CAN-Chaudiere_Appalaches]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "川沿いにわずかな入植地と砦（リシュリュー砦、1642）があるだけで、イロコイの攻撃が続いていた"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1663
+      owner: "france"
+      label: "ヌーヴェル・フランス"
+      cause: "国王直轄の植民地となり、カリニャン＝サリエール連隊の派遣（1665）と入植者の増加で、川の両岸に領主制（セニョリー）の村が広がる"
+      source: "https://en.wikipedia.org/wiki/Carignan-Sali%C3%A8res_Regiment"
+    - from: 1760
+      owner: "britain"
+      certainty: "occupied"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_bas_saint_laurent
+  name: "バ・サン・ローラン"
+  select:
+    pieces: [CAN-Bas_Saint_Laurent]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1700
+      owner: "france"
+      label: "ヌーヴェル・フランス"
+      cause: "カムラスカ（1674）・リヴィエール・デュ・ルー（1689）などのセニョリーが下流の南岸に開かれる"
+      source: "https://en.wikipedia.org/wiki/Bas-Saint-Laurent"
+    - from: 1760
+      owner: "britain"
+      certainty: "occupied"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_gaspesie
+  name: "ガスペ半島"
+  select:
+    pieces: [CAN-Gaspesie_Iles_de_la_Madeleine]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "ミクマクの地。沿岸にフランスの漁業基地があった"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1784
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "アメリカ独立戦争の王党派（ロイヤリスト）がガスペ半島の南岸に入植する"
+      source: "https://ja.wikipedia.org/wiki/王党派_(アメリカ独立戦争)"
+    - from: 1791
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_estrie
+  name: "イースタン・タウンシップス（エストリ）"
+  select:
+    pieces: [CAN-Estrie]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "アベナキの地。ニューイングランドとの間の通り道だった"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1796
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "イースタン・タウンシップスが開かれ、王党派やニューイングランドからの入植者が移り住む"
+      source: "https://en.wikipedia.org/wiki/Eastern_Townships"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_outaouais_laurentides
+  name: "ウタウエ・ローランティド"
+  select:
+    pieces: [CAN-Outaouais, CAN-Laurentides]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "オタワ川は毛皮交易の道。アルゴンキンの地"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1800
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "フィレモン・ライトがオタワ川沿いにハル（現ガティノー）を開き、木材の切り出しと入植が始まる"
+      source: "https://en.wikipedia.org/wiki/Philemon_Wright"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_saguenay
+  name: "サグネ・サン・ジャン湖"
+  select:
+    pieces: [CAN-Saguenay_Lac_Saint_Jean]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "タドゥサックの交易所を中心とする「国王の領地（ドメーヌ・デュ・ロワ）」。入植は禁じられ、イヌーとの毛皮交易だけが行われた"
+      source: "https://en.wikipedia.org/wiki/King%27s_Posts"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1842
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "ハドソン湾会社の独占が終わり、サグネ地方への入植が始まる（1838年から）"
+      source: "https://en.wikipedia.org/wiki/Saguenay%E2%80%93Lac-Saint-Jean"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_cote_nord
+  name: "コート・ノール"
+  select:
+    pieces: [CAN-Cote_Nord]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "タドゥサックなどの交易所のほかはイヌー（モンタニェ）の地"
+      source: "https://en.wikipedia.org/wiki/King%27s_Posts"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏で、フランス軍がカナダを明け渡す"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "パリ条約（1763）でフランスがカナダをイギリスに割譲。国王宣言でケベック植民地が置かれる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でケベックをアッパー・カナダとローワー・カナダに分ける"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ連合植民地"
+      cause: "連合法でアッパー・カナダとローワー・カナダが合わさり、カナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "英領北アメリカ法でカナダ連邦（自治領）が成立。ケベック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_labrador_coast
+  name: "ラブラドル海岸（ケベック側）・アンティコスティ島"
+  select:
+    pieces: [CAN-Cote_Nord_Labrador_Coast, CAN-Cote_Nord_Anticosti]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "アンティコスティ島は1680年にルイ・ジョリエの領地となった。海岸にはイヌーの地とフランスの漁業・交易の基地があった"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ニューファンドランド"
+      cause: "パリ条約でイギリス領となり、国王宣言で漁業のためニューファンドランド総督の管轄とされる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法でケベック植民地に移される"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法でローワー・カナダの一部となる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1809
+      owner: "britain"
+      certainty: "nominal"
+      label: "ニューファンドランド"
+      cause: "ラブラドルの海岸とアンティコスティ島が再びニューファンドランドに移される"
+      source: "https://en.wikipedia.org/wiki/Labrador#History"
+    - from: 1825
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "ブラン・サブロンより西の海岸とアンティコスティ島がローワー・カナダに戻される"
+      source: "https://en.wikipedia.org/wiki/Labrador#History"
+    - from: 1841
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ケベック州の一部となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_magdalen
+  name: "マドレーヌ諸島"
+  select:
+    pieces: [CAN-Gaspesie_Iles_de_la_Madeleine_Magdalen_Islands]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      label: "ニューファンドランド"
+      cause: "パリ条約でイギリス領となり、ニューファンドランド総督の管轄とされる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "ケベック法でケベック植民地に移される"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ケベック州の一部となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_abitibi
+  name: "アビティビ・テミスカマング（南部）"
+  select:
+    pieces: [CAN-Abitibi_Temiscamingue]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "オタワ川上流のアルゴンキンの地。テミスカマング砦（1679）などの交易所があった"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法でローワー・カナダの一部となる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ連合植民地"
+      cause: "連合法"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ケベック州の一部となる"
+      note: "鉱山の開発と入植が進んだのは20世紀に入ってから"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: qc_north_1898
+  name: "ケベック北部（1898年の拡大）"
+  select:
+    pieces: [CAN-Abitibi_Temiscamingue_North, CAN-Nord_du_Quebec]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1686
+      owner: "france"
+      certainty: "nominal"
+      label: "ハドソン湾地方（フランスが占領）"
+      cause: "ド・トロワとイベルヴィルの遠征隊が、ジェームズ湾のイギリスの交易所を奪う"
+      note: "オールバニ砦は1693年にイギリスが取り返した"
+      source: "https://en.wikipedia.org/wiki/Hudson_Bay_expedition_(1686)"
+    - from: 1713
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ユトレヒト条約でハドソン湾地方がイギリス領と認められる"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1898
+      owner: "canada"
+      cause: "ケベック州の北の境がイーストメイン川まで広げられる"
+      source: "https://en.wikipedia.org/wiki/Quebec_Boundaries_Extension_Act,_1898"
+
+- id: qc_ungava
+  name: "アンガヴァ"
+  select:
+    pieces: [CAN-Nord_du_Quebec_Ungava]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "イヌイットとクリー・ナスカピの地"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1895
+      owner: "canada"
+      certainty: "nominal"
+      label: "アンガヴァ地区（ノースウェスト準州）"
+      cause: "ノースウェスト準州の中にアンガヴァ地区が置かれる"
+      source: "https://en.wikipedia.org/wiki/District_of_Ungava"
+    - from: 1912
+      owner: "canada"
+      cause: "ケベック州境拡張法でアンガヴァがケベック州に加えられる"
+      note: "ラブラドルとの境は1927年の枢密院司法委員会の裁定による"
+      source: "https://en.wikipedia.org/wiki/Quebec_Boundaries_Extension_Act,_1912"
+
+# ================================================================ オンタリオ州：南部は 1650–1700 イロコイ（A1 の iroquois）。王党派の入植（1784–）から certain
+- id: on_east
+  name: "オンタリオ東部（キングストン・オタワ）"
+  select:
+    pieces: [CAN-Kingston_Pembroke, CAN-Ottawa]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "オタワ川・セントローレンス川上流は毛皮交易の道。1673年にカタラキ（フロントナック砦、現キングストン）が築かれた"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "モントリオールの降伏"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1784
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "アメリカ独立戦争の王党派（ロイヤリスト）がセントローレンス川上流とキングストンに入植する"
+      source: "https://ja.wikipedia.org/wiki/王党派_(アメリカ独立戦争)"
+    - from: 1791
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_niagara
+  name: "ナイアガラ・ハミルトン"
+  select:
+    pieces: [CAN-Hamilton_Niagara_Peninsula]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "ニュートラル（アティワンダロン）連合の地。フランスと交易した"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1650
+      owner: "iroquois"
+      certainty: "uncertain"
+      cause: "イロコイ連邦がヒューロン・ペトゥン・ニュートラルを攻め滅ぼし、オンタリオ湖の北岸に村を置く（ビーバー戦争）"
+      note: "1660年代–1680年代にはオンタリオ湖北岸にイロコイの村があった。範囲ははっきりしない"
+      source: "https://en.wikipedia.org/wiki/Beaver_Wars"
+    - from: 1701
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      cause: "モントリオールの大講和でイロコイとフランス・五大湖の諸部族が和平を結ぶ。南オンタリオにはミシサガ（アニシナベ）が移り住む"
+      source: "https://en.wikipedia.org/wiki/Great_Peace_of_Montreal"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "フランス軍の降伏で五大湖地方の砦がイギリスに渡る"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1784
+      owner: "britain"
+      label: "ケベック植民地"
+      cause: "バトラー・レンジャーズなど王党派（ロイヤリスト）がナイアガラに入植する"
+      source: "https://ja.wikipedia.org/wiki/王党派_(アメリカ独立戦争)"
+    - from: 1791
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_huronia
+  name: "ヒューロニア（ジョージア湾南岸）・キッチナー"
+  select:
+    pieces: [CAN-Kitchener_Waterloo_Barrie]
+  timeline:
+    - from: 1648
+      owner: "huron"
+      certainty: "uncertain"
+      note: "ジョージア湾の南（シムコー郡）がヒューロン（ウェンダット）の本拠。イエズス会のサント・マリー伝道所があった。南のキッチナー付近はニュートラルの地"
+      source: "https://ja.wikipedia.org/wiki/ヒューロン族"
+    - from: 1649
+      owner: "iroquois"
+      certainty: "uncertain"
+      cause: "イロコイ連邦がヒューロンの村々を攻め、ヒューロン連合が崩壊する（3月）"
+      source: "https://en.wikipedia.org/wiki/Huron%E2%80%93Iroquois_conflicts"
+    - from: 1701
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      cause: "モントリオールの大講和でイロコイとフランス・五大湖の諸部族が和平を結ぶ。南オンタリオにはミシサガ（アニシナベ）が移り住む"
+      source: "https://en.wikipedia.org/wiki/Great_Peace_of_Montreal"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "フランス軍の降伏で五大湖地方の砦がイギリスに渡る"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_south
+  name: "オンタリオ南部（トロント・ロンドン）"
+  select:
+    pieces: [CAN-Toronto, CAN-London]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "ニュートラル連合などの地。フランスはヒューロンなどの同盟者を通じて交易した"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1650
+      owner: "iroquois"
+      certainty: "uncertain"
+      cause: "イロコイ連邦がヒューロン・ペトゥン・ニュートラルを攻め滅ぼし、オンタリオ湖の北岸に村を置く（ビーバー戦争）"
+      note: "1660年代–1680年代にはオンタリオ湖北岸にイロコイの村があった。範囲ははっきりしない"
+      source: "https://en.wikipedia.org/wiki/Beaver_Wars"
+    - from: 1701
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      cause: "モントリオールの大講和でイロコイとフランス・五大湖の諸部族が和平を結ぶ。南オンタリオにはミシサガ（アニシナベ）が移り住む"
+      note: "1701年にデトロイト（対岸がウィンザー）が築かれ、ウィンザー側にもフランス人の農村ができた"
+      source: "https://en.wikipedia.org/wiki/Great_Peace_of_Montreal"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "フランス軍の降伏で五大湖地方の砦がイギリスに渡る"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      note: "初代副総督シムコーのもとで入植が進み、1793年にヨーク（現トロント）が首府となった"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_south_windsor
+  name: "オンタリオ南西端（ウィンザー・サーニア）"
+  select:
+    pieces: [CAN-Windsor_Sarnia]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "ニュートラル連合などの地。フランスはヒューロンなどの同盟者を通じて交易した"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1650
+      owner: "iroquois"
+      certainty: "uncertain"
+      cause: "イロコイ連邦がヒューロン・ペトゥン・ニュートラルを攻め滅ぼし、オンタリオ湖の北岸に村を置く（ビーバー戦争）"
+      note: "1660年代–1680年代にはオンタリオ湖北岸にイロコイの村があった。範囲ははっきりしない"
+      source: "https://en.wikipedia.org/wiki/Beaver_Wars"
+    - from: 1701
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      cause: "モントリオールの大講和でイロコイとフランス・五大湖の諸部族が和平を結ぶ。南オンタリオにはミシサガ（アニシナベ）が移り住む"
+      note: "1701年にデトロイト（対岸がウィンザー）が築かれ、ウィンザー側にもフランス人の農村ができた"
+      source: "https://en.wikipedia.org/wiki/Great_Peace_of_Montreal"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "フランス軍の降伏で五大湖地方の砦がイギリスに渡る"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      note: "初代副総督シムコーのもとで入植が進み、1793年にヨーク（現トロント）が首府となった"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1813
+      owner: "usa"
+      certainty: "occupied"
+      label: "アマーストバーグ・サンドイッチ（アメリカ軍の占領）"
+      cause: "米英戦争のテムズの戦い（10月）の後、アメリカ軍がデトロイト川の東岸を占領する"
+      source: "https://ja.wikipedia.org/wiki/米英戦争"
+    - from: 1815
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "ガン条約（1814年12月）で返される"
+      source: "https://ja.wikipedia.org/wiki/ガン条約"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_backcountry
+  name: "オンタリオ中部（マスコーカ・カワーサ・ブルース半島）"
+  select:
+    pieces: [CAN-Muskoka_Kawarthas, CAN-Stratford_Bruce_Peninsula]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "ペトゥン（ティオノンタティ）・アルゴンキンなどの地"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1650
+      owner: "iroquois"
+      certainty: "uncertain"
+      cause: "イロコイ連邦がヒューロン・ペトゥン・ニュートラルを攻め滅ぼし、オンタリオ湖の北岸に村を置く（ビーバー戦争）"
+      note: "1660年代–1680年代にはオンタリオ湖北岸にイロコイの村があった。範囲ははっきりしない"
+      source: "https://en.wikipedia.org/wiki/Beaver_Wars"
+    - from: 1701
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      cause: "モントリオールの大講和でイロコイとフランス・五大湖の諸部族が和平を結ぶ。南オンタリオにはミシサガ（アニシナベ）が移り住む"
+      source: "https://en.wikipedia.org/wiki/Great_Peace_of_Montreal"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "フランス軍の降伏で五大湖地方の砦がイギリスに渡る"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1830
+      owner: "britain"
+      label: "アッパー・カナダ"
+      cause: "カナダ会社のヒューロン・トラクトなど、内陸への入植が進む（1820年代–）"
+      source: "https://en.wikipedia.org/wiki/Huron_Tract"
+    - from: 1841
+      owner: "britain"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_north
+  name: "オンタリオ北部（五大湖流域）"
+  select:
+    pieces: [CAN-Northeast_Nord_est, CAN-Northwest_Nord_ouest]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "ヌーヴェル・フランス"
+      note: "オジブワ（アニシナベ）・クリーの地。毛皮交易の道（カミニスティキア、1717など）"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1760
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ（イギリスの軍政）"
+      cause: "フランス軍の降伏で五大湖地方の砦がイギリスに渡る"
+      source: "https://ja.wikipedia.org/wiki/モントリオールの降伏"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "インディアン保留地（1763年の国王宣言）"
+      cause: "パリ条約でイギリス領となる。国王宣言（1763）で、ケベック植民地の外の内陸は先住民の土地として入植が禁じられる"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法で、五大湖周辺がケベック植民地に加えられる"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "アッパー・カナダ"
+      cause: "1791年の立憲法（カナダ法）でアッパー・カナダが置かれる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1841
+      owner: "britain"
+      certainty: "nominal"
+      label: "カナダ連合植民地"
+      cause: "連合法でカナダ連合植民地（カナダ州）となる"
+      source: "https://ja.wikipedia.org/wiki/連合法_(1840年)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦（自治領）が成立。オンタリオ州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: on_rainy_river
+  name: "レイニー川・ウッズ湖"
+  select:
+    pieces: [CAN-Northwest_Nord_ouest_Rainy_River]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "オンタリオとマニトバの係争地"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1889
+      owner: "canada"
+      cause: "オンタリオとマニトバの境界争いが枢密院司法委員会の裁定（1884）で決まり、オンタリオ州に入る"
+      source: "https://en.wikipedia.org/wiki/Canada_(Ontario_Boundary)_Act,_1889"
+
+- id: on_james_bay
+  name: "オンタリオ北東部（ジェームズ湾流域）"
+  select:
+    pieces: [CAN-Northeast_Nord_est_James_Bay_Slope]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1686
+      owner: "france"
+      certainty: "nominal"
+      label: "ハドソン湾地方（フランスが占領）"
+      cause: "ド・トロワとイベルヴィルの遠征隊が、ジェームズ湾のイギリスの交易所を奪う"
+      note: "オールバニ砦は1693年にイギリスが取り返した"
+      source: "https://en.wikipedia.org/wiki/Hudson_Bay_expedition_(1686)"
+    - from: 1713
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ユトレヒト条約でハドソン湾地方がイギリス領と認められる"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1889
+      owner: "canada"
+      cause: "オンタリオ州の北の境がオールバニ川まで広げられる"
+      source: "https://en.wikipedia.org/wiki/Canada_(Ontario_Boundary)_Act,_1889"
+
+- id: on_hudson_slope
+  name: "オンタリオ北西部（ハドソン湾流域）"
+  select:
+    pieces: [CAN-Northwest_Nord_ouest_Hudson_Slope]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1889
+      owner: "canada"
+      cause: "オンタリオ州の北の境がオールバニ川まで広げられる"
+      source: "https://en.wikipedia.org/wiki/Canada_(Ontario_Boundary)_Act,_1889"
+
+- id: on_far_north_ne
+  name: "オンタリオ極北部（東）"
+  select:
+    pieces: [CAN-Northeast_Nord_est_Far_North]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1686
+      owner: "france"
+      certainty: "nominal"
+      label: "ハドソン湾地方（フランスが占領）"
+      cause: "ド・トロワとイベルヴィルの遠征隊が、ジェームズ湾のイギリスの交易所を奪う"
+      note: "オールバニ砦は1693年にイギリスが取り返した"
+      source: "https://en.wikipedia.org/wiki/Hudson_Bay_expedition_(1686)"
+    - from: 1713
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ユトレヒト条約でハドソン湾地方がイギリス領と認められる"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1912
+      owner: "canada"
+      cause: "オンタリオ州境拡張法でオールバニ川より北がオンタリオ州に加えられる"
+      source: "https://en.wikipedia.org/wiki/Ontario_Boundaries_Extension_Act"
+
+- id: on_far_north_nw
+  name: "オンタリオ極北部（西）"
+  select:
+    pieces: [CAN-Northwest_Nord_ouest_Far_North]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1912
+      owner: "canada"
+      cause: "オンタリオ州境拡張法でオールバニ川より北がオンタリオ州に加えられる"
+      source: "https://en.wikipedia.org/wiki/Ontario_Boundaries_Extension_Act"
+
+# ================================================================ 平原・北部：ハドソン湾流域はルパートランド（1670– britain nominal）、北極海流域は毛皮交易の広がりから
+- id: mb_red_river
+  name: "レッド・リヴァー（1870年のマニトバ州）"
+  select:
+    pieces: [CAN-Manitoba_1870_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1812
+      owner: "britain"
+      label: "レッド・リヴァー植民地（ハドソン湾会社）"
+      cause: "セルカーク卿がスコットランドからの移民をレッド川とアシニボイン川の合流点に入植させる"
+      note: "北西会社と対立し、1816年にはメティとの衝突（セブン・オークスの戦い）が起きた。1821年に両社が合併した"
+      source: "https://en.wikipedia.org/wiki/Red_River_Colony"
+    - from: 1869
+      owner: "red_river"
+      certainty: "uncertain"
+      cause: "カナダへの移管に反対するメティがリエルを指導者として臨時政府をつくる（レッド・リヴァーの反乱）"
+      source: "https://ja.wikipedia.org/wiki/レッド・リヴァーの反乱"
+    - from: 1870
+      owner: "canada"
+      cause: "マニトバ法でマニトバ州が置かれ、カナダに加わる（7月）"
+      source: "https://en.wikipedia.org/wiki/Manitoba_Act,_1870"
+
+- id: mb_1881
+  name: "マニトバ（1881年の拡大）"
+  select:
+    pieces: [CAN-Manitoba_1881_Extension]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1881
+      owner: "canada"
+      cause: "マニトバ州の境が広げられる"
+      source: "https://en.wikipedia.org/wiki/Manitoba#Expansion"
+
+- id: mb_north
+  name: "マニトバ北部"
+  select:
+    pieces: [CAN-Manitoba]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "1684年にヨーク・ファクトリーが築かれ、ハドソン湾会社の最大の交易所となった。1697–1713年はフランスがヨーク・ファクトリー（ブルボン砦）を押さえたが、ピースが広いのでイギリスの主張のまま描く"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1912
+      owner: "canada"
+      cause: "マニトバ州境拡張法で北緯60度までがマニトバ州に加えられる"
+      source: "https://en.wikipedia.org/wiki/Manitoba_Boundaries_Extension_Act,_1912"
+
+- id: sk_south
+  name: "サスカチュワン南部"
+  select:
+    pieces: [CAN-Saskatchewan]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ブラックフット・クリー・アシニボインなど平原の先住民の地"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1874
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "北西騎馬警察が平原に進出し、先住民と条約を結んでいく（第4–7条約、1874–77）"
+      source: "https://en.wikipedia.org/wiki/North-West_Mounted_Police"
+    - from: 1905
+      owner: "canada"
+      cause: "サスカチュワン州が置かれる"
+      source: "https://en.wikipedia.org/wiki/Saskatchewan_Act"
+
+- id: ab_south
+  name: "アルバータ南部"
+  select:
+    pieces: [CAN-Alberta]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ブラックフット・クリー・アシニボインなど平原の先住民の地"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1874
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "北西騎馬警察が平原に進出し、先住民と条約を結んでいく（第4–7条約、1874–77）"
+      source: "https://en.wikipedia.org/wiki/North-West_Mounted_Police"
+    - from: 1905
+      owner: "canada"
+      cause: "アルバータ州が置かれる"
+      source: "https://en.wikipedia.org/wiki/Alberta_Act"
+
+- id: sk_north
+  name: "サスカチュワン北部"
+  select:
+    pieces: [CAN-Saskatchewan_North]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クリーなど先住民の地。ヨーロッパの国の支配は及んでいない"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1905
+      owner: "canada"
+      cause: "サスカチュワン州が置かれる"
+      source: "https://en.wikipedia.org/wiki/Saskatchewan_Act"
+
+- id: ab_north
+  name: "アルバータ北部（アサバスカ）"
+  select:
+    pieces: [CAN-Alberta_North]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "デネ（チペワイアン）・クリーの地"
+    - from: 1788
+      owner: "britain"
+      certainty: "nominal"
+      label: "北西部の毛皮交易地"
+      cause: "北西会社がアサバスカ湖畔にフォート・チペワイアンを築く"
+      source: "https://en.wikipedia.org/wiki/Fort_Chipewyan"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ルパートランドと北西部の地がカナダに移される"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1899
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "第8条約で北部の先住民と条約を結ぶ（クロンダイクへの道の確保）"
+      source: "https://en.wikipedia.org/wiki/Treaty_8"
+    - from: 1905
+      owner: "canada"
+      cause: "アルバータ州が置かれる"
+      source: "https://en.wikipedia.org/wiki/Alberta_Act"
+
+- id: nwt_main
+  name: "マッケンジー川流域"
+  select:
+    pieces: [CAN-Northwest_Territories]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "デネ・イヌヴィアルイトの地"
+    - from: 1789
+      owner: "britain"
+      certainty: "nominal"
+      label: "北西部の毛皮交易地"
+      cause: "アレグザンダー・マッケンジーがマッケンジー川を北極海まで下り、北西会社の交易所が置かれていく"
+      source: "https://en.wikipedia.org/wiki/Alexander_Mackenzie_(explorer)"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ルパートランドと北西部の地がカナダに移される"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1921
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "第11条約を結び、ノーマン・ウェルズの油田開発が始まる"
+      source: "https://en.wikipedia.org/wiki/Treaty_11"
+
+- id: yukon
+  name: "ユーコン"
+  select:
+    pieces: [CAN-Yukon]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "デネ（トゥチョーネ・グウィッチンなど）の地"
+    - from: 1825
+      owner: "britain"
+      certainty: "nominal"
+      label: "北西部の毛皮交易地"
+      cause: "英露条約で、ロシア領アメリカとの境が西経141度に決まる"
+      note: "1840年代にハドソン湾会社が交易所（フォート・セルカークなど）を置いた"
+      source: "https://en.wikipedia.org/wiki/Anglo-Russian_Convention_of_1825"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "北西部の地がカナダに移される"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1898
+      owner: "canada"
+      label: "ユーコン準州"
+      cause: "クロンダイクのゴールドラッシュで人口が急増し、ユーコン準州が置かれる"
+      source: "https://ja.wikipedia.org/wiki/クロンダイク・ゴールドラッシュ"
+
+- id: nu_mainland
+  name: "キーワティン（ヌナブト本土）"
+  select:
+    pieces: [CAN-Nunavut]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "イヌイットの地"
+    - from: 1670
+      owner: "britain"
+      certainty: "nominal"
+      label: "ルパートランド（ハドソン湾会社）"
+      cause: "ハドソン湾会社が設立され、ハドソン湾に注ぐ川の流域（ルパートランド）の独占権を国王から得る"
+      note: "会社は湾岸の交易所を拠点に、クリーなど先住民と毛皮を交易した。内陸を治めたわけではない"
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1870
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "ハドソン湾会社がルパートランドをイギリス政府に返し、カナダに移される（7月）"
+      source: "https://en.wikipedia.org/wiki/Rupert%27s_Land_Act_1868"
+    - from: 1921
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "騎馬警察の駐在所とハドソン湾会社の交易所が置かれ、行政が及ぶようになる"
+      source: "https://en.wikipedia.org/wiki/Kivalliq_Region"
+    - from: 1999
+      owner: "canada"
+      label: "ヌナブト準州"
+      cause: "イヌイットの自治を目指すヌナブト準州が、ノースウェスト準州から分かれる"
+      source: "https://ja.wikipedia.org/wiki/ヌナブト準州"
+
+- id: arctic_west
+  name: "北極諸島（西部）"
+  select:
+    pieces: [CAN-Northwest_Territories_Arctic_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "イヌイットの地（高緯度の島々は無人）。1576年にフロビッシャーがバフィン島をイングランド領と宣言したが、実際の支配はなかった"
+    - from: 1819
+      owner: "britain"
+      certainty: "nominal"
+      label: "北極諸島（イギリスの主張）"
+      cause: "パリーの北極探検など、北西航路を探すイギリスの探検が島々を調べる"
+      source: "https://en.wikipedia.org/wiki/William_Edward_Parry"
+    - from: 1880
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "イギリスが北極諸島の権利をカナダに移す"
+      note: "スヴェルドルップ諸島にはノルウェーが1930年まで権利を主張した"
+      source: "https://en.wikipedia.org/wiki/Arctic_Archipelago#History"
+    - from: 1922
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "騎馬警察がエルズミア島・バフィン島に駐在所を置き、主権の行使を強める"
+      source: "https://en.wikipedia.org/wiki/Arctic_sovereignty#Canada"
+
+- id: arctic_east
+  name: "北極諸島（東部）・バフィン島"
+  select:
+    pieces: [CAN-Nunavut_Arctic_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "イヌイットの地（高緯度の島々は無人）。1576年にフロビッシャーがバフィン島をイングランド領と宣言したが、実際の支配はなかった"
+    - from: 1819
+      owner: "britain"
+      certainty: "nominal"
+      label: "北極諸島（イギリスの主張）"
+      cause: "パリーの北極探検など、北西航路を探すイギリスの探検が島々を調べる"
+      source: "https://en.wikipedia.org/wiki/William_Edward_Parry"
+    - from: 1880
+      owner: "canada"
+      certainty: "nominal"
+      label: "ノースウェスト準州"
+      cause: "イギリスが北極諸島の権利をカナダに移す"
+      note: "スヴェルドルップ諸島にはノルウェーが1930年まで権利を主張した"
+      source: "https://en.wikipedia.org/wiki/Arctic_Archipelago#History"
+    - from: 1922
+      owner: "canada"
+      label: "ノースウェスト準州"
+      cause: "騎馬警察がエルズミア島・バフィン島に駐在所を置き、主権の行使を強める"
+      source: "https://en.wikipedia.org/wiki/Arctic_sovereignty#Canada"
+    - from: 1999
+      owner: "canada"
+      label: "ヌナブト準州"
+      cause: "ヌナブト準州がノースウェスト準州から分かれる"
+      source: "https://ja.wikipedia.org/wiki/ヌナブト準州"
+
+# ================================================================ ブリティッシュコロンビア：A1 のオレゴン（1818–46 共同占有）と境
+- id: bc_mainland
+  name: "ブリティッシュコロンビア本土"
+  select:
+    pieces: [CAN-British_Columbia]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ハイダ・トリンギット・クワクワカワクゥ・サリッシュなど北西海岸と内陸の先住民の地"
+    - from: 1805
+      owner: "britain"
+      certainty: "nominal"
+      label: "ニューカレドニア（毛皮交易地）"
+      cause: "北西会社のサイモン・フレーザーがロッキー山脈の西に交易所を置く（1805–08）"
+      note: "1818–46年、南部は英米が共同で占有する「オレゴン・カントリー」の一部だった。1846年のオレゴン条約で北緯49度が境となる"
+      source: "https://en.wikipedia.org/wiki/New_Caledonia_(Canada)"
+    - from: 1858
+      owner: "britain"
+      label: "ブリティッシュコロンビア植民地"
+      cause: "フレーザー川のゴールドラッシュで人が押し寄せ、ブリティッシュコロンビア植民地が置かれる"
+      source: "https://en.wikipedia.org/wiki/Colony_of_British_Columbia_(1858%E2%80%931866)"
+    - from: 1871
+      owner: "canada"
+      cause: "大陸横断鉄道の建設を条件に、ブリティッシュコロンビアがカナダに加わる"
+      source: "https://ja.wikipedia.org/wiki/ブリティッシュコロンビア州"
+
+- id: bc_vancouver_island
+  name: "ヴァンクーヴァー島"
+  select:
+    pieces: [CAN-British_Columbia_Vancouver_Island]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ヌーチャヌルス・クワクワカワクゥ・サリッシュの地"
+    - from: 1789
+      owner: "spain"
+      certainty: "nominal"
+      label: "ヌートカ（スペインの砦）"
+      cause: "スペインがヌートカ湾に砦（サンタ・クルス・デ・ヌカ）を築き、イギリス船を拿捕する（ヌートカ湾事件）"
+      source: "https://en.wikipedia.org/wiki/Nootka_Crisis"
+    - from: 1795
+      owner: "britain"
+      certainty: "nominal"
+      label: "ヌートカ（英西の協定で開放）"
+      cause: "ヌートカ協定（1790・94）により、スペインがヌートカから引き揚げる"
+      note: "クックの来航（1778）とヴァンクーヴァーの測量（1792–94）でイギリスが権利を主張した"
+      source: "https://en.wikipedia.org/wiki/Nootka_Convention"
+    - from: 1843
+      owner: "britain"
+      label: "ヴァンクーヴァー島（ハドソン湾会社）"
+      cause: "ハドソン湾会社がフォート・ヴィクトリアを築く"
+      source: "https://en.wikipedia.org/wiki/Fort_Victoria_(British_Columbia)"
+    - from: 1849
+      owner: "britain"
+      label: "ヴァンクーヴァー島植民地"
+      cause: "ヴァンクーヴァー島植民地が置かれ、ハドソン湾会社に統治が任される"
+      source: "https://en.wikipedia.org/wiki/Colony_of_Vancouver_Island"
+    - from: 1866
+      owner: "britain"
+      label: "ブリティッシュコロンビア植民地"
+      cause: "ヴァンクーヴァー島植民地とブリティッシュコロンビア植民地が合わさる"
+      source: "https://en.wikipedia.org/wiki/Colony_of_British_Columbia_(1866%E2%80%931871)"
+    - from: 1871
+      owner: "canada"
+      cause: "ブリティッシュコロンビアがカナダに加わる"
+      source: "https://ja.wikipedia.org/wiki/ブリティッシュコロンビア州"
+
+- id: bc_haida_gwaii
+  name: "ハイダ・グワイ（クイーン・シャーロット諸島）"
+  select:
+    pieces: [CAN-British_Columbia_Haida_Gwaii]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ハイダの地"
+    - from: 1853
+      owner: "britain"
+      certainty: "nominal"
+      label: "クイーン・シャーロット諸島植民地"
+      cause: "金の発見をきっかけに、イギリスがクイーン・シャーロット諸島植民地を置く（ヴァンクーヴァー島の総督が兼ねる）"
+      source: "https://en.wikipedia.org/wiki/Colony_of_the_Queen_Charlotte_Islands"
+    - from: 1863
+      owner: "britain"
+      certainty: "nominal"
+      label: "ブリティッシュコロンビア植民地"
+      cause: "ブリティッシュコロンビア植民地に合わされる"
+      source: "https://en.wikipedia.org/wiki/Colony_of_the_Queen_Charlotte_Islands"
+    - from: 1871
+      owner: "canada"
+      cause: "ブリティッシュコロンビアがカナダに加わる"
+      source: "https://ja.wikipedia.org/wiki/ブリティッシュコロンビア州"
+
+# ================================================================ 沿海州（アカディア）
+- id: ns_annapolis
+  name: "アナポリス谷（ポール・ロワイヤル）"
+  select:
+    pieces: [CAN-Annapolis_Valley]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "アカディア"
+      note: "ポール・ロワイヤル（現アナポリス・ロイヤル）がアカディアの中心。ミナス盆地には干拓地を開いたアカディア人の村が広がった"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1654
+      owner: "britain"
+      certainty: "occupied"
+      label: "アカディア（イングランドの占領）"
+      cause: "ニューイングランドのセジウィックの遠征隊がアカディアの砦を奪う"
+      source: "https://en.wikipedia.org/wiki/Acadia#Conflicts_with_New_England"
+    - from: 1670
+      owner: "france"
+      label: "アカディア"
+      cause: "ブレダ条約（1667）に基づき、アカディアがフランスに返される"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1710
+      owner: "britain"
+      certainty: "occupied"
+      label: "アカディア（イギリスの占領）"
+      cause: "ニューイングランドとイギリスの軍がポール・ロワイヤルを落とす（アン女王戦争）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Port_Royal_(1710)"
+    - from: 1713
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "ユトレヒト条約でアカディア（ノヴァスコシア）がイギリスに割譲される"
+      note: "フランス系のアカディア人は残り、イギリスへの無条件の忠誠の誓いを拒んだ"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1755
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "アカディア人の追放（グラン・デランジュマン）が始まり、1万人以上が土地を追われる"
+      note: "空いた土地にはニューイングランドからの移民（プランター）が入った"
+      source: "https://ja.wikipedia.org/wiki/アカディア人の追放"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ノヴァスコシア州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: ns_halifax
+  name: "ハリファックス"
+  select:
+    pieces: [CAN-Halifax]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      note: "ミクマクの地"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1654
+      owner: "britain"
+      certainty: "nominal"
+      label: "アカディア（イングランドの占領）"
+      cause: "ニューイングランドのセジウィックの遠征隊がアカディアの砦を奪う"
+      source: "https://en.wikipedia.org/wiki/Acadia#Conflicts_with_New_England"
+    - from: 1670
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      cause: "ブレダ条約（1667）に基づき、アカディアがフランスに返される"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1713
+      owner: "britain"
+      certainty: "nominal"
+      label: "ノヴァスコシア"
+      cause: "ユトレヒト条約でノヴァスコシアがイギリスに割譲される"
+      note: "イギリスが押さえたのはアナポリス・ロイヤルとカンソーだけで、各地にアカディア人とミクマクが住み続けた"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1749
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "コーンウォリスがハリファックスを築き、ノヴァスコシアの首府とする"
+      source: "https://ja.wikipedia.org/wiki/ハリファックス_(ノバスコシア州)"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ノヴァスコシア州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: ns_south
+  name: "ノヴァスコシア南岸"
+  select:
+    pieces: [CAN-Southern_Sud]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      note: "ミクマクの地。ラ・エーヴ（1632）はかつてアカディアの中心だった"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1654
+      owner: "britain"
+      certainty: "nominal"
+      label: "アカディア（イングランドの占領）"
+      cause: "ニューイングランドのセジウィックの遠征隊がアカディアの砦を奪う"
+      source: "https://en.wikipedia.org/wiki/Acadia#Conflicts_with_New_England"
+    - from: 1670
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      cause: "ブレダ条約（1667）に基づき、アカディアがフランスに返される"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1713
+      owner: "britain"
+      certainty: "nominal"
+      label: "ノヴァスコシア"
+      cause: "ユトレヒト条約でノヴァスコシアがイギリスに割譲される"
+      note: "イギリスが押さえたのはアナポリス・ロイヤルとカンソーだけで、各地にアカディア人とミクマクが住み続けた"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1753
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "ドイツ系などのプロテスタント移民がルーネンバーグを開く"
+      source: "https://en.wikipedia.org/wiki/Lunenburg,_Nova_Scotia"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ノヴァスコシア州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: ns_north
+  name: "ノヴァスコシア北岸（シグネクト）"
+  select:
+    pieces: [CAN-North_Shore_Cote_nord]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      note: "ミクマクの地。1672年にボーバッサン（シグネクト）にアカディア人の村が開かれた"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1654
+      owner: "britain"
+      certainty: "nominal"
+      label: "アカディア（イングランドの占領）"
+      cause: "ニューイングランドのセジウィックの遠征隊がアカディアの砦を奪う"
+      source: "https://en.wikipedia.org/wiki/Acadia#Conflicts_with_New_England"
+    - from: 1670
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      cause: "ブレダ条約（1667）に基づき、アカディアがフランスに返される"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1713
+      owner: "britain"
+      certainty: "nominal"
+      label: "ノヴァスコシア"
+      cause: "ユトレヒト条約でノヴァスコシアがイギリスに割譲される"
+      note: "イギリスが押さえたのはアナポリス・ロイヤルとカンソーだけで、各地にアカディア人とミクマクが住み続けた"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1755
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "ボーセジュール砦の陥落とアカディア人の追放で、イギリスがシグネクト地峡を押さえる"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Fort_Beaus%C3%A9jour"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ノヴァスコシア州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: new_brunswick
+  name: "ニューブランズウィック"
+  select:
+    pieces: [CAN-New_Brunswick]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      note: "マリシート（ウォラストキイク）・ミクマクの地。セント・ジョン川河口にフランスの砦があった"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1654
+      owner: "britain"
+      certainty: "nominal"
+      label: "アカディア（イングランドの占領）"
+      cause: "ニューイングランドのセジウィックの遠征隊がアカディアの砦を奪う"
+      source: "https://en.wikipedia.org/wiki/Acadia#Conflicts_with_New_England"
+    - from: 1670
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      cause: "ブレダ条約（1667）に基づき、アカディアがフランスに返される"
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+    - from: 1713
+      owner: "france"
+      certainty: "uncertain"
+      label: "アカディア（英仏の係争地）"
+      cause: "ユトレヒト条約でアカディアは割譲されたが、フランスは大陸側のアカディアを含まないと主張する"
+      note: "地図では一般的なフランス側の色で示す。イギリスはニューブランズウィックもノヴァスコシアに含まれると主張した"
+      source: "https://en.wikipedia.org/wiki/Acadia#British_conquest"
+    - from: 1755
+      owner: "britain"
+      certainty: "nominal"
+      label: "ノヴァスコシア"
+      cause: "ボーセジュール砦の陥落とアカディア人の追放"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Fort_Beaus%C3%A9jour"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ノヴァスコシア"
+      cause: "パリ条約でフランスがすべての権利を放棄する"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1784
+      owner: "britain"
+      label: "ニューブランズウィック植民地"
+      cause: "王党派（ロイヤリスト）の入植で、ノヴァスコシアから分かれてニューブランズウィック植民地となる"
+      source: "https://ja.wikipedia.org/wiki/ニューブランズウィック州"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ニューブランズウィック州となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: cape_breton
+  name: "ケープブレトン島"
+  select:
+    pieces: [CAN-Cape_Breton]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      note: "ミクマクの地。サン・ピエール（セント・ピーターズ）にニコラ・ドニの交易所があった"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1713
+      owner: "france"
+      label: "イル・ロワイヤル"
+      cause: "ユトレヒト条約でケープブレトン島（イル・ロワイヤル）はフランスに残る。1719年からルイブール要塞を築く"
+      source: "https://ja.wikipedia.org/wiki/ルイブール要塞"
+    - from: 1745
+      owner: "britain"
+      certainty: "occupied"
+      label: "イル・ロワイヤル（イギリスの占領）"
+      cause: "ニューイングランドの民兵がルイブールを落とす（ジョージ王戦争）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Louisbourg_(1745)"
+    - from: 1749
+      owner: "france"
+      label: "イル・ロワイヤル"
+      cause: "アーヘンの和約（1748）でルイブールがフランスに返される（1749年7月）"
+      source: "https://ja.wikipedia.org/wiki/アーヘンの和約"
+    - from: 1758
+      owner: "britain"
+      certainty: "occupied"
+      label: "イル・ロワイヤル（イギリスの占領）"
+      cause: "イギリス軍がルイブールを落とす（七年戦争・フレンチ＝インディアン戦争）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Louisbourg_(1758)"
+    - from: 1763
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "パリ条約でイギリス領となり、ノヴァスコシアに合わされる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1784
+      owner: "britain"
+      label: "ケープブレトン植民地"
+      cause: "ノヴァスコシアから分かれ、ケープブレトン植民地となる"
+      source: "https://en.wikipedia.org/wiki/Cape_Breton_Island#British_colony"
+    - from: 1820
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "ノヴァスコシアに再び合わされる"
+      source: "https://en.wikipedia.org/wiki/Cape_Breton_Island#British_colony"
+    - from: 1867
+      owner: "canada"
+      cause: "カナダ連邦が成立し、ノヴァスコシア州の一部となる"
+      source: "https://ja.wikipedia.org/wiki/1867年憲法法"
+
+- id: pei
+  name: "プリンスエドワード島"
+  select:
+    pieces: [CAN-Prince_Edward_Island]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "アカディア"
+      note: "ミクマクの地"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+    - from: 1713
+      owner: "france"
+      certainty: "nominal"
+      label: "イル・サン・ジャン"
+      cause: "ユトレヒト条約でフランスに残る"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1720
+      owner: "france"
+      label: "イル・サン・ジャン"
+      cause: "ポール・ラ・ジョワが築かれ、入植が始まる。のちに本土のアカディア人が多く移り住む"
+      source: "https://en.wikipedia.org/wiki/%C3%8Ele-Saint-Jean"
+    - from: 1758
+      owner: "britain"
+      certainty: "occupied"
+      label: "イル・サン・ジャン（イギリスの占領）"
+      cause: "ルイブールの陥落の後、イギリス軍が島を占領し、住民を追放する"
+      source: "https://en.wikipedia.org/wiki/Ile_Saint-Jean_campaign"
+    - from: 1763
+      owner: "britain"
+      label: "ノヴァスコシア"
+      cause: "パリ条約でイギリス領となり、ノヴァスコシアに合わされる"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1769
+      owner: "britain"
+      label: "セント・ジョンズ島植民地"
+      cause: "ノヴァスコシアから分かれ、独立の植民地となる"
+      source: "https://ja.wikipedia.org/wiki/プリンスエドワードアイランド州"
+    - from: 1798
+      owner: "britain"
+      label: "プリンスエドワード島"
+      cause: "島の名がプリンスエドワード島に改められる"
+      source: "https://ja.wikipedia.org/wiki/プリンスエドワードアイランド州"
+    - from: 1873
+      owner: "canada"
+      cause: "鉄道建設の負債の肩代わりを条件に、カナダに加わる"
+      source: "https://ja.wikipedia.org/wiki/プリンスエドワードアイランド州"
+
+# ================================================================ ニューファンドランド：1907–33 自治領（newfoundland）、1934–49 イギリスの統治委員会
+- id: newfoundland_island
+  name: "ニューファンドランド島"
+  select:
+    pieces: [CAN-Newfoundland_and_Labrador]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      certainty: "uncertain"
+      label: "ニューファンドランド"
+      note: "東岸のアヴァロン半島にイングランドの漁業の入植地（セント・ジョンズ・フェリーランドなど）があった。1662年にフランスが南岸のプレザンス（プラセンシア）に砦を築き、島は英仏の漁業基地が並び立った"
+      source: "https://en.wikipedia.org/wiki/History_of_Newfoundland_and_Labrador"
+    - from: 1713
+      owner: "britain"
+      label: "ニューファンドランド"
+      cause: "ユトレヒト条約でフランスはプレザンスを明け渡し、島はイギリス領と認められる"
+      note: "フランスは北岸・西岸で漁をする権利（フレンチ・ショア）を1904年の英仏協商まで持った"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1907
+      owner: "newfoundland"
+      cause: "ニューファンドランドが自治領となる（9月）"
+      source: "https://ja.wikipedia.org/wiki/ニューファンドランド_(自治領)"
+    - from: 1934
+      owner: "britain"
+      label: "ニューファンドランド（統治委員会）"
+      cause: "世界恐慌で財政が破綻し、自治を停止してイギリスが任命する統治委員会の統治となる"
+      source: "https://en.wikipedia.org/wiki/Commission_of_Government"
+    - from: 1949
+      owner: "canada"
+      cause: "2度の住民投票を経て、ニューファンドランドがカナダの10番目の州となる（3月31日）"
+      source: "https://ja.wikipedia.org/wiki/ニューファンドランド・ラブラドール州"
+
+- id: labrador
+  name: "ラブラドル"
+  select:
+    pieces: [CAN-Newfoundland_and_Labrador_Labrador]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "イヌイットとイヌー（ナスカピ）の地。フランスは海岸に漁業・交易の基地を置いた（1702年のクールトマンシュなど）が、領土として治めていなかった"
+    - from: 1763
+      owner: "britain"
+      certainty: "nominal"
+      label: "ラブラドル（ニューファンドランド）"
+      cause: "パリ条約でイギリス領となり、国王宣言でニューファンドランド総督の管轄とされる"
+      note: "1771年にモラヴィア兄弟団がナインに伝道所を開いた"
+      source: "https://ja.wikipedia.org/wiki/1763年宣言"
+    - from: 1774
+      owner: "britain"
+      certainty: "nominal"
+      label: "ケベック植民地"
+      cause: "ケベック法でケベック植民地に移される"
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      owner: "britain"
+      certainty: "nominal"
+      label: "ローワー・カナダ"
+      cause: "1791年の立憲法でローワー・カナダの一部となる"
+      source: "https://ja.wikipedia.org/wiki/1791年憲法法"
+    - from: 1809
+      owner: "britain"
+      certainty: "nominal"
+      label: "ラブラドル（ニューファンドランド）"
+      cause: "ラブラドルが再びニューファンドランドの管轄に移される"
+      source: "https://en.wikipedia.org/wiki/Labrador#History"
+    - from: 1907
+      owner: "newfoundland"
+      certainty: "uncertain"
+      cause: "ニューファンドランドが自治領となる。内陸の境はカナダ（ケベック）と争われた"
+      source: "https://en.wikipedia.org/wiki/Labrador_boundary_dispute"
+    - from: 1927
+      owner: "newfoundland"
+      cause: "枢密院司法委員会の裁定で、大西洋に注ぐ川の流域がニューファンドランド領と決まる"
+      source: "https://en.wikipedia.org/wiki/Labrador_boundary_dispute"
+    - from: 1934
+      owner: "britain"
+      label: "ラブラドル（ニューファンドランド統治委員会）"
+      cause: "ニューファンドランドの自治が停止され、統治委員会の統治となる"
+      source: "https://en.wikipedia.org/wiki/Commission_of_Government"
+    - from: 1949
+      owner: "canada"
+      cause: "ニューファンドランドがカナダに加わる"
+      note: "ケベック州は1927年の境界を正式には認めていない"
+      source: "https://ja.wikipedia.org/wiki/ニューファンドランド・ラブラドール州"
+
+# ================================================================ サンピエール島・ミクロン島・バミューダ
+- id: saint_pierre_miquelon
+  name: "サンピエール島・ミクロン島"
+  select:
+    pieces: [SPM-Saint_Pierre_et_Miquelon]
+  timeline:
+    - from: 1648
+      owner: "france"
+      certainty: "nominal"
+      label: "サンピエール島・ミクロン島"
+      note: "フランス（バスク・ブルターニュ・ノルマンディー）の漁民が季節ごとに使った"
+      source: "https://ja.wikipedia.org/wiki/サンピエール島・ミクロン島"
+    - from: 1670
+      owner: "france"
+      label: "サンピエール島・ミクロン島"
+      cause: "定住の入植地ができる"
+      source: "https://ja.wikipedia.org/wiki/サンピエール島・ミクロン島"
+    - from: 1713
+      owner: "britain"
+      label: "サンピエール島・ミクロン島"
+      cause: "ユトレヒト条約でニューファンドランドとともにイギリス領となる"
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1763
+      owner: "france"
+      label: "サンピエール島・ミクロン島"
+      cause: "パリ条約で漁業の基地としてフランスに返される（北アメリカに残ったフランス領）"
+      source: "https://ja.wikipedia.org/wiki/パリ条約_(1763年)"
+    - from: 1778
+      owner: "britain"
+      certainty: "occupied"
+      label: "サンピエール島・ミクロン島（イギリスの占領）"
+      cause: "アメリカ独立戦争でフランスが参戦し、イギリス軍が島を占領して住民を追放する"
+      source: "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon#History"
+    - from: 1783
+      owner: "france"
+      label: "サンピエール島・ミクロン島"
+      cause: "パリ条約（ヴェルサイユ条約）でフランスに返される"
+      source: "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon#History"
+    - from: 1793
+      owner: "britain"
+      certainty: "occupied"
+      label: "サンピエール島・ミクロン島（イギリスの占領）"
+      cause: "フランス革命戦争でイギリス軍が占領する"
+      source: "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon#History"
+    - from: 1802
+      owner: "france"
+      label: "サンピエール島・ミクロン島"
+      cause: "アミアンの和約で返される"
+      source: "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon#History"
+    - from: 1803
+      owner: "britain"
+      certainty: "occupied"
+      label: "サンピエール島・ミクロン島（イギリスの占領）"
+      cause: "戦争の再開でイギリス軍が再び占領する"
+      source: "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon#History"
+    - from: 1816
+      owner: "france"
+      label: "サンピエール島・ミクロン島"
+      cause: "パリ条約（1814・15）に基づきフランスに返される（1816年）"
+      source: "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon#History"
+    - from: 1940
+      owner: "vichy_france"
+      label: "サンピエール島・ミクロン島"
+      cause: "フランスの降伏で、島の総督はヴィシー政府に従う"
+      source: "https://en.wikipedia.org/wiki/Free_French_takeover_of_Saint_Pierre_and_Miquelon"
+    - from: 1941
+      owner: "france"
+      label: "サンピエール島・ミクロン島"
+      cause: "ド・ゴールの自由フランスの艦隊が島を押さえる（12月24日）"
+      note: "1946年に海外領土、1976年に海外県、1985年から特別な地位の海外自治体（2003年から海外準県）"
+      source: "https://en.wikipedia.org/wiki/Free_French_takeover_of_Saint_Pierre_and_Miquelon"
+
+- id: bermuda
+  name: "バミューダ"
+  select:
+    pieces: [BMU-Bermuda]
+  timeline:
+    - from: 1648
+      owner: "britain"
+      label: "バミューダ"
+      note: "1609年のシー・ヴェンチャー号の難破をきっかけに、1612年からヴァージニア会社（のちサマーズ諸島会社）が入植した"
+      source: "https://ja.wikipedia.org/wiki/バミューダ諸島"
+    - from: 1684
+      owner: "britain"
+      label: "バミューダ"
+      cause: "サマーズ諸島会社の特許状が取り消され、国王直轄の植民地となる"
+      source: "https://en.wikipedia.org/wiki/History_of_Bermuda"
+    - from: 1941
+      owner: "britain"
+      label: "バミューダ"
+      cause: "英米の基地協定（駆逐艦と基地の交換、1940）でアメリカ軍の基地が置かれる（1995年まで）"
+      note: "1968年に自治の憲法が施行された。1995年の住民投票では独立が否決された。「イギリスの海外領土」の呼び名は2002年から"
+      source: "https://en.wikipedia.org/wiki/Destroyers-for-bases_deal"
+
+# ================================================================ アラスカ：1648–1783 所属なし、1784–1866 ロシア（nominal）、1867– アメリカ
+- id: alaska
+  name: "アラスカ"
+  select:
+    pieces: [USA-Alaska]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "イヌピアト・ユピック・アレウト（ウナンガン）・アサバスカ系・トリンギットなどの地。1741年にベーリングとチリコフがアラスカに達した"
+    - from: 1784
+      owner: "russia"
+      certainty: "nominal"
+      label: "ロシア領アメリカ"
+      cause: "シェリホフがコディアク島のスリー・セインツ湾に最初の恒久的な入植地を築く"
+      note: "ロシアが押さえたのはアレウト列島・コディアク島・南東の沿岸の交易所だけで、内陸にはほとんど及ばなかった"
+      source: "https://en.wikipedia.org/wiki/Russian_America"
+    - from: 1799
+      owner: "russia"
+      certainty: "nominal"
+      label: "ロシア領アメリカ（露米会社）"
+      cause: "露米会社が設立され、アメリカ大陸のロシア領の独占権を得る。バラノフがシトカ（ノヴォアルハンゲリスク）を築く"
+      note: "1804年のシトカの戦いでトリンギットを破り、1808年にシトカを首府とした。1824年の露米協定・1825年の英露条約で南の境（北緯54度40分）と東の境（西経141度）が決まった"
+      source: "https://ja.wikipedia.org/wiki/露米会社"
+    - from: 1867
+      owner: "usa"
+      certainty: "nominal"
+      label: "アラスカ（アメリカが購入）"
+      cause: "アメリカがロシアからアラスカを720万ドルで買い取る（国務長官スワード、10月に引き渡し）"
+      note: "1884年まで陸軍・財務省などが管轄し、民政の政府はなかった"
+      source: "https://ja.wikipedia.org/wiki/アラスカ購入"
+    - from: 1884
+      owner: "usa"
+      label: "アラスカ地区"
+      cause: "組織法でアラスカ地区が置かれ、民政の知事が任命される"
+      note: "1890年代のクロンダイク・ノームのゴールドラッシュで人口が増えた。1903年にカナダとの境界（南東部のパンハンドル）が仲裁で決まった"
+      source: "https://en.wikipedia.org/wiki/District_of_Alaska"
+    - from: 1912
+      owner: "usa"
+      label: "アラスカ準州"
+      cause: "アラスカが準州となる"
+      note: "1942–43年に日本軍がアリューシャン列島のアッツ島・キスカ島を占領した（地図のピースはアラスカ全体で1つのため描かない）"
+      source: "https://en.wikipedia.org/wiki/Territory_of_Alaska"
+    - from: 1959
+      owner: "usa"
+      label: ""
+      cause: "アラスカが49番目の州となる（1月3日）"
+      source: "https://ja.wikipedia.org/wiki/アラスカ州"
