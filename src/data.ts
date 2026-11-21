@@ -57,6 +57,8 @@ export interface TimelineEntry extends Sourced {
 export interface Region {
   id: string;
   name: string;
+  /** 時期による名前（範囲外は name） */
+  names?: { from?: number; to?: number; name: string }[];
   timeline: TimelineEntry[];
 }
 
@@ -309,6 +311,11 @@ export class AtlasIndex {
   /** その年に当てはまる names の項目 */
   private nameEntry(p: Polity, year: number): Named | undefined {
     return (p.names ?? []).find((n) => (n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity));
+  }
+
+  /** 地域のその年の名前（names に当てはまる項目があればそれ、なければ name） */
+  regionName(r: { name: string; names?: { from?: number; to?: number; name: string }[] }, year: number): string {
+    return (r.names ?? []).find((n) => (n.from ?? -Infinity) <= year && year <= (n.to ?? Infinity))?.name ?? r.name;
   }
 
   polityName(p: Polity, year: number): string {

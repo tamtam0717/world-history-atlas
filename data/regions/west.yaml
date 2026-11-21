@@ -4,6 +4,7 @@
 # ================================================================ フランス
 - id: france_kingdom
   name: フランス王国（本土）
+  names: [{from: 1914, name: "フランス本土"}]
   select:
     iso: [FRA]
   timeline:
@@ -54,6 +55,7 @@
 
 - id: lower_alsace
   name: 下アルザスとデカポリス（十帝国都市）
+  names: [{from: 1871, name: "下アルザス（ストラスブール）"}]
   select:
     pieces: [FRA-Haguenau, FRA-Molsheim, FRA-Saverne, FRA-Selestat, FRA-Colmar]
   timeline:
@@ -390,6 +392,7 @@
 
 - id: dunkirk
   name: ダンケルクと海沿いフランドル
+  names: [{from: 1914, name: "ダンケルク"}]
   select:
     pieces: [FRA-Dunkerque]
   timeline:
@@ -425,6 +428,7 @@
 
 - id: walloon_flanders
   name: ワロン・フランドル（リール・ドゥエー）
+  names: [{from: 1914, name: "リール・ドゥエー（フランス北部）"}]
   select:
     pieces: [FRA-Lille, FRA-Douai]
   timeline:
@@ -551,6 +555,7 @@
 
 - id: savoy_duchy
   name: サヴォイア公国（サヴォワ）
+  names: [{from: 1860, name: "サヴォワ"}]
   select:
     pieces: [FRA-Annecy, FRA-Bonneville, FRA-Saint_Julien_en_Genevois, FRA-Thonon_les_Bains, FRA-Albertville, FRA-Chambery, FRA-Saint_Jean_de_Maurienne]
   timeline:
@@ -1082,6 +1087,7 @@
     - from: 1940
       owner: spain
       certainty: occupied
+      label: タンジール（スペインの占領）
       cause: フランスの敗北に乗じてスペイン軍が占領（6月）
       source: "https://ja.wikipedia.org/wiki/タンジール国際管理地域"
     - from: 1945
@@ -1635,6 +1641,7 @@
     - from: 1941
       owner: france
       certainty: occupied
+      label: クフラ（自由フランス軍の占領）
       cause: 自由フランス軍（ルクレール）がクフラを攻略（3月）
       source: "https://en.wikipedia.org/wiki/Capture_of_Kufra"
     - from: 1943
@@ -3428,6 +3435,7 @@
     - from: 1967
       owner: israel
       certainty: occupied
+      label: シナイ半島（イスラエルの占領）
       cause: 第3次中東戦争（6月。イスラエルがシナイ半島を占領）
       source: "https://ja.wikipedia.org/wiki/第三次中東戦争"
     - from: 1979
@@ -3444,6 +3452,7 @@
     - from: 1967
       owner: israel
       certainty: occupied
+      label: シナイ半島（イスラエルの占領）
       cause: 第3次中東戦争（6月。イスラエルがシナイ半島を占領）
       note: 1975年の第2次兵力引き離し協定で、スエズ湾岸の油田地帯がエジプトに返された。
       source: "https://ja.wikipedia.org/wiki/第三次中東戦争"

@@ -96,6 +96,14 @@ for (const r of regions) {
   if (!r.id) throw new Error(`${r._file}: 地域に id がありません`);
   if (regionById.has(r.id)) throw new Error(`地域 ID の重複: ${r.id}`);
   regionById.set(r.id, r);
+  // 時期による地域名（names: [{from, to, name}]。範囲外は name）。20世紀の「国境の変化」で近世の名前が出ないようにする
+  if (r.names != null) {
+    if (!Array.isArray(r.names)) warn(`${r._file} の ${r.id}: names はリストで書いてください`);
+    else
+      for (const n of r.names)
+        if (!n || typeof n.name !== "string" || (n.from != null && typeof n.from !== "number") || (n.to != null && typeof n.to !== "number"))
+          warn(`${r._file} の ${r.id}: names の項目は {from, to, name}（from・to は年の数値、どちらか省略可）で書いてください`);
+  }
 }
 
 const resolving = new Set();
@@ -473,7 +481,7 @@ const atlas = {
   certainty: CERTAINTY,
   pieceIds: pieces.map((p) => p.id),
   polities: polities.map(strip),
-  regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, timeline: r.timeline })),
+  regions: timelineRegions.map((r) => ({ id: r.id, name: r.name, ...(r.names ? { names: r.names } : {}), timeline: r.timeline })),
   pieceTimelines,
   events: events.map(strip),
   seas,

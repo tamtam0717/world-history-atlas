@@ -6,6 +6,7 @@
 
 - id: nl_republic
   name: オランダ（七州と国家連合直轄領）
+  names: [{from: 1815, name: "オランダ"}]
   select:
     iso: [NLD]
   timeline:
@@ -397,6 +398,7 @@
 
 - id: upper_guelders_dutch
   name: フェンロー・モンフォールト（1713年からオランダ領上ヘルレ）
+  names: [{from: 1815, name: "フェンロー・モンフォールト（リンブルフ北部）"}]
   select:
     pieces: [NLD-Venlo, NLD-Roerdalen, NLD-Maasgouw]
   timeline:
@@ -512,6 +514,7 @@
 
 - id: gennep
   name: ヘネップ（クレーフェ公国の一部）
+  names: [{from: 1815, name: "ヘネップ（リンブルフ北部）"}]
   select:
     pieces: [NLD-Gennep]
   timeline:
@@ -592,6 +595,7 @@
 
 - id: southern_netherlands
   name: 南ネーデルラント（スペイン領→オーストリア領）
+  names: [{from: 1831, name: "ベルギー"}]
   select:
     iso: [BEL]
   timeline:
@@ -932,6 +936,7 @@
 
 - id: lux_grand_duchy
   name: ルクセンブルク大公国（1839年以降の領域）
+  names: [{from: 1914, name: "ルクセンブルク"}]
   select:
     iso: [LUX]
   timeline:
@@ -1253,6 +1258,7 @@
 
 - id: lombardy
   name: ミラノ公国（ロンバルディア）
+  names: [{from: 1860, name: "ロンバルディア"}]
   select:
     pieces: [ITA-Milano, ITA-Monza_e_della_Brianza, ITA-Lodi, ITA-Como, ITA-Lecco, ITA-Varese, ITA-Cremona,
       ITA-Pavia, ITA-Novara, ITA-Verbano_Cusio_Ossola]
@@ -1509,6 +1515,7 @@
   name: フリウリ（ウーディネ・ポルデノーネ）
   select:
     pieces: [ITA-Udine, ITA-Pordenone]
+  note: タルヴィージオ（カナール渓谷）は1919年のサン＝ジェルマン条約でオーストリアからイタリアへ移ったが、ウーディネのピースの一部なので描いていない。
   timeline:
     - {from: 1917, owner: habsburg, certainty: occupied, label: フリウリ・ヴェネト東部（オーストリア＝ドイツ軍の占領）, cause: カポレットの戦い（10–11月）でイタリア軍がピアーヴェ川まで退き、フリウリがオーストリア＝ドイツ軍に占領される, source: "https://ja.wikipedia.org/wiki/カポレットの戦い"}
     - {from: 1918, owner: italy, cause: ヴィットリオ・ヴェネトの戦い（10–11月）でイタリア軍が奪回, source: "https://ja.wikipedia.org/wiki/ヴィットリオ・ヴェネトの戦い"}
@@ -1624,6 +1631,7 @@
 
 - id: trentino
   name: トレント司教領（トレンティーノ）
+  names: [{from: 1914, name: "トレンティーノ"}]
   select:
     pieces: [ITA-Trento]
   timeline:
@@ -1680,6 +1688,7 @@
 
 - id: south_tyrol
   name: 南チロル（チロル伯領・ブリクセン司教領）
+  names: [{from: 1914, name: "南チロル"}]
   select:
     pieces: [ITA-Bolzano]
   timeline:
@@ -1767,7 +1776,7 @@
       source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"
     - from: 1920
       owner: italy
-      cause: "ラパッロ条約（11月）でユーゴスラヴィアとの国境が確定し、イタリア領となる（1919年のサン＝ジェルマン条約でオーストリアは放棄）"
+      cause: "ラパロ条約（11月）でユーゴスラヴィアとの国境が確定し、イタリア領となる（1919年のサン＝ジェルマン条約でオーストリアは放棄）"
       source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"
     - from: 1943
       owner: germany
@@ -1796,7 +1805,7 @@
     - {from: 1915, owner: italy, certainty: occupied, label: ソチャ（イゾンツォ）川流域（イタリア軍の占領）, cause: 第一次世界大戦でイタリアが参戦（5月）し、イタリア軍がイゾンツォ川西岸のグラディスカ・モンファルコーネを占領（ゴリツィア市は1916年8月）, source: "https://en.wikipedia.org/wiki/Battles_of_the_Isonzo"}
     - {from: 1917, owner: habsburg, cause: カポレットの戦い（10月）でオーストリア＝ドイツ軍がイタリア軍を退ける, source: "https://ja.wikipedia.org/wiki/カポレットの戦い"}
     - {from: 1918, owner: italy, certainty: occupied, label: ジュリア・ヴェネツィア（イタリア軍の占領）, cause: 第一次世界大戦の休戦（11月）でイタリア軍が占領, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でユーゴスラヴィアとの国境が確定し、イタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でユーゴスラヴィアとの国境が確定し、イタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏後、ドイツが「アドリア海沿岸作戦地域」として直接統治, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: britain, certainty: occupied, label: ジュリア・ヴェネツィア（英米軍政のA地区）, cause: 6月のベオグラード協定で、モーガン線の西（A地区）が英米軍の軍政下に置かれた, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: italy, cause: パリ講和条約でゴリツィア市を含む西部がイタリア領に（東部はユーゴスラヴィア領）, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1948,6 +1957,7 @@
 
 - id: legations
   name: ボローニャ・フェラーラ（教皇特使領）
+  names: [{from: 1860, name: "ボローニャ・フェラーラ（エミリア＝ロマーニャ東部）"}]
   select:
     pieces: [ITA-Bologna, ITA-Ferrara]
   timeline:

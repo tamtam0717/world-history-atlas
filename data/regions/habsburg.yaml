@@ -14,6 +14,7 @@
 
 - id: austria_core
   name: オーストリア諸邦（下・上オーストリア、シュタイアーマルク、ケルンテン）
+  names: [{from: 1918, name: "オーストリア（下・上オーストリア、シュタイアーマルク、ケルンテン）"}]
   select:
     adm1: ["AUT/Niederösterreich", "AUT/Wien", "AUT/Oberösterreich", "AUT/Steiermark", "AUT/Kärnten"]
   timeline:
@@ -368,11 +369,12 @@
     - {from: 1993, owner: czech_republic, cause: チェコスロヴァキアの連邦の解消（1月1日）でチェコ共和国が独立, source: "https://ja.wikipedia.org/wiki/チェコスロバキア連邦の解体"}
   note: >-
     1742年のシュレジエン割譲の後もオーストリアに残った部分（トロッパウ・イェーゲルンドルフの南部、テッシェン公領、ナイセ侯領の南部）。
-    オパヴァ郡の北東部（フルチーン地方）は1742年にプロイセン領となったが、ピースの小さい側なので地図ではオーストリアとして描く。
+    オパヴァ郡の北東部（フルチーン地方）は1742年にプロイセン領となったが、ピースの小さい側なので地図ではオーストリアとして描く。1920年にヴェルサイユ条約でドイツからチェコスロヴァキアへ移ったこと（1938–45年はズデーテンとともにドイツ領）も描けない。
   source: "https://ja.wikipedia.org/wiki/オーストリア領シレジア"
 
 - id: bohemia
   name: ボヘミア
+  names: [{from: 1918, name: "ボヘミア（チェコ西部）"}]
   select:
     iso: [CZE]
     exclude_regions: [moravia, silesia_cz]
@@ -402,6 +404,7 @@
 
 - id: upper_hungary
   name: 上部ハンガリー（現スロヴァキア）
+  names: [{from: 1918, name: "スロヴァキア"}]
   select:
     iso: [SVK]
   timeline:
@@ -422,6 +425,7 @@
 
 - id: thokoly_sk
   name: 上部ハンガリー東部（カッシャ・エペリェシュ）
+  names: [{from: 1918, name: "スロヴァキア東部（コシツェ・プレショウ）"}]
   select:
     adm1: ["SVK/Region of Ko?ice", "SVK/Region of Pre?ov"]
   timeline:
@@ -524,6 +528,7 @@
 
 - id: ottoman_hungary_hu
   name: オスマン領ハンガリー（ブダ州など）
+  names: [{from: 1868, name: "ハンガリー中部（ブダペスト周辺）"}]
   select:
     adm1: ["HUN/Pest", "HUN/Fejér", "HUN/Tolna", "HUN/Baranya", "HUN/Somogy", "HUN/Bács-Kiskun",
            "HUN/Csongrád-Csanád", "HUN/Békés", "HUN/Jász-Nagykun-Szolnok", "HUN/Heves"]
@@ -678,6 +683,7 @@
 
 - id: carniola
   name: カルニオラ（クライン）
+  names: [{from: 1918, name: "カルニオラ（スロヴェニア中部）"}]
   select:
     pieces: [SVN-Ljubljana, SVN-Brezovica, SVN-Ig, SVN-Ikofljica, SVN-Dol_pri_Ljubljani, SVN-Medvode,
              SVN-Vodice, SVN-Komenda, SVN-Mengel, SVN-Trzin, SVN-Domcale, SVN-Lukovica, SVN-Moravce,
@@ -757,7 +763,7 @@
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
     # ---- 1915–2025 ----
     - {from: 1918, owner: italy, certainty: occupied, label: ジュリア・ヴェネツィア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -788,7 +794,7 @@
       cause: パリ条約でオーストリアに復帰
     # ---- 1915–2025 ----
     - {from: 1918, owner: italy, certainty: occupied, label: ジュリア・ヴェネツィア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, certainty: occupied, label: トリエステ自由地域（B地区・ユーゴスラヴィアの軍政）, cause: パリ講和条約で国際連合の保障するトリエステ自由地域が設けられ、B地区はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Free_Territory_of_Trieste"}
@@ -827,6 +833,7 @@
 
 - id: croatia_hr
   name: クロアチア・スラヴォニア王国（ザグレブ周辺）
+  names: [{from: 1918, name: "クロアチア（ザグレブ周辺）"}]
   select:
     iso: [HRV]
   timeline:
@@ -1027,7 +1034,7 @@
     # ---- 1915–2025 ----
     - {from: 1918, owner: italy, certainty: occupied, label: フィウメ（連合国軍の占領）, cause: 11月に連合国軍（主にイタリア軍）がフィウメに進駐（ロンドン秘密条約では約束されていなかった）, source: "https://en.wikipedia.org/wiki/Free_State_of_Fiume"}
     - {from: 1919, owner: fiume_free_state, certainty: uncertain, cause: 詩人ダヌンツィオの率いる義勇兵がフィウメを占領（9月）。1920年9月にカルナーロ＝イタリア執政府を宣言, source: "https://en.wikipedia.org/wiki/Italian_Regency_of_Carnaro"}
-    - {from: 1920, owner: fiume_free_state, cause: ラパッロ条約（11月）でフィウメ自由国とされ、12月にイタリア軍がダヌンツィオを退去させる（「血のクリスマス」）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: fiume_free_state, cause: ラパロ条約（11月）でフィウメ自由国とされ、12月にイタリア軍がダヌンツィオを退去させる（「血のクリスマス」）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1924, owner: italy, cause: ローマ条約（1月）でフィウメ（リエカ）はイタリアに併合（東岸のスシャクはユーゴスラヴィアへ）, source: "https://en.wikipedia.org/wiki/Treaty_of_Rome_(1924)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
@@ -1066,7 +1073,7 @@
       source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
     # ---- 1915–2025 ----
     - {from: 1918, owner: italy, certainty: occupied, label: イストリア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1075,6 +1082,7 @@
 
 - id: venetian_istria_hr
   name: ヴェネツィア領イストリア
+  names: [{from: 1918, name: "イストリア（クロアチア側）"}]
   select:
     adm1: ["HRV/Istria"]
     exclude_regions: [austrian_istria_hr]
@@ -1098,7 +1106,7 @@
       cause: パリ条約でオーストリアに復帰
     # ---- 1915–2025 ----
     - {from: 1918, owner: italy, certainty: occupied, label: イストリア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1107,6 +1115,7 @@
 
 - id: venetian_dalmatia_hr
   name: ヴェネツィア領ダルマチア（沿岸・島々）
+  names: [{from: 1918, name: "ダルマチア（沿岸・島々）"}]
   select:
     pieces: [HRV-Otok_Krk, HRV-Op_ina_Malinska_Duba_nica, HRV-Op_ina_Omi_alj, HRV-Otok_Cres, HRV-Otok_Losinj,
              HRV-Grad_Rab, HRV-Op_ina_Lopar, HRV-Grad_Novalja,
@@ -1144,7 +1153,7 @@
       cause: パリ条約でオーストリアに復帰（ウィーン会議で確認）
     # ---- 1915–2025 ----
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1921, owner: yugoslavia, cause: ラパッロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1921, owner: yugoslavia, cause: ラパロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: italy, label: ダルマチア県（イタリアが併合）, certainty: occupied, cause: ローマ協定（5月）で、イタリアがスプリト・シベニクなどダルマチア沿岸と島々を併合（ダルマチア総督府）, source: "https://en.wikipedia.org/wiki/Governorate_of_Dalmatia"}
     - {from: 1943, owner: croatia_ndh, cause: イタリアの降伏（9月）で、クロアチア独立国がイタリア領ダルマチアを併合（実際にはドイツ軍が占領）, source: "https://en.wikipedia.org/wiki/Governorate_of_Dalmatia"}
     - {from: 1944, owner: yugoslavia, cause: パルチザン（ユーゴスラヴィア人民解放軍）がダルマチアを解放（10–12月。スプリト・シベニク・クニン・ドゥブロヴニクなど）, source: "https://en.wikipedia.org/wiki/Yugoslav_Partisans"}
@@ -1441,7 +1450,7 @@
     pieces: [SVN-Bovec, SVN-Kanal, SVN-Nempeter_Vrtojba, SVN-Nova_Gorica, SVN-Tolmin]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: ジュリア・ヴェネツィア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: britain, certainty: occupied, label: ジュリア・ヴェネツィア（英米軍政のA地区）, cause: 6月のベオグラード協定で、モーガン線の西側（A地区）は英米の軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1455,7 +1464,7 @@
     - {from: 1915, owner: italy, certainty: occupied, label: ソチャ（イゾンツォ）川流域（イタリア軍の占領）, cause: 第一次世界大戦でイタリアが参戦し、イタリア軍がソチャ（イゾンツォ）川の西岸・コバリードを占領, source: "https://en.wikipedia.org/wiki/Battles_of_the_Isonzo"}
     - {from: 1917, owner: habsburg, cause: カポレットの戦い（10月）でオーストリア＝ドイツ軍がイタリア軍を退ける, source: "https://ja.wikipedia.org/wiki/カポレットの戦い"}
     - {from: 1918, owner: italy, certainty: occupied, label: ジュリア・ヴェネツィア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: britain, certainty: occupied, label: ジュリア・ヴェネツィア（英米軍政のA地区）, cause: 6月のベオグラード協定で、モーガン線の西側（A地区）は英米の軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1483,7 +1492,7 @@
              SVN-Senana, SVN-Vipava]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: ジュリア・ヴェネツィア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1592,7 +1601,7 @@
              HRV-Op_ina_Suko_an, HRV-Op_ina_Sveti_Filip_i_Jakov, HRV-Op_ina_Vir, HRV-Op_ina_Vrsi]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1921, owner: yugoslavia, cause: ラパッロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1921, owner: yugoslavia, cause: ラパロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: croatia_ndh, cause: 枢軸国のユーゴスラヴィア侵攻（4月）。4月10日にウスタシャがクロアチア独立国を宣言（ボスニア・ヘルツェゴヴィナを含む）, source: "https://ja.wikipedia.org/wiki/クロアチア独立国"}
     - {from: 1944, owner: yugoslavia, cause: パルチザン（ユーゴスラヴィア人民解放軍）がダルマチアを解放（10–12月。スプリト・シベニク・クニン・ドゥブロヴニクなど）, source: "https://en.wikipedia.org/wiki/Yugoslav_Partisans"}
     - {from: 1991, owner: croatia, cause: 6月25日に独立を宣言（10月8日に発効。1992年1月に欧州共同体が承認）, source: "https://ja.wikipedia.org/wiki/クロアチア紛争"}
@@ -1638,7 +1647,7 @@
     pieces: [HRV-Grad_Novalja, HRV-Grad_Pag, HRV-Op_ina_Kolan, HRV-Op_ina_Povljana]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1921, owner: yugoslavia, cause: ラパッロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1921, owner: yugoslavia, cause: ラパロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: croatia_ndh, cause: 枢軸国のユーゴスラヴィア侵攻（4月）。4月10日にウスタシャがクロアチア独立国を宣言（ボスニア・ヘルツェゴヴィナを含む）, source: "https://ja.wikipedia.org/wiki/クロアチア独立国"}
     - {from: 1945, owner: yugoslavia, cause: パルチザンの勝利でユーゴスラヴィアが復活（11月にユーゴスラヴィア連邦人民共和国）, source: "https://en.wikipedia.org/wiki/Socialist_Federal_Republic_of_Yugoslavia"}
     - {from: 1991, owner: croatia, cause: 6月25日に独立を宣言（10月8日に発効。1992年1月に欧州共同体が承認）, source: "https://ja.wikipedia.org/wiki/クロアチア紛争"}
@@ -1649,7 +1658,7 @@
     pieces: [HRV-Grad_Komi_a, HRV-Grad_Vis]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1921, owner: yugoslavia, cause: ラパッロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1921, owner: yugoslavia, cause: ラパロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: italy, label: ダルマチア県（イタリアが併合）, certainty: occupied, cause: ローマ協定（5月）で、イタリアがスプリト・シベニクなどダルマチア沿岸と島々を併合（ダルマチア総督府）, source: "https://en.wikipedia.org/wiki/Governorate_of_Dalmatia"}
     - {from: 1943, owner: yugoslavia, certainty: uncertain, label: ヴィス島（パルチザンの拠点）, cause: イタリアの降伏後、パルチザンがヴィス島を確保（1944年にはティトーの司令部と連合国の基地が置かれた）, source: "https://en.wikipedia.org/wiki/Vis_(island)"}
     - {from: 1944, owner: yugoslavia, cause: パルチザン（ユーゴスラヴィア人民解放軍）がダルマチアを解放（10–12月。スプリト・シベニク・クニン・ドゥブロヴニクなど）, source: "https://en.wikipedia.org/wiki/Yugoslav_Partisans"}
@@ -1661,7 +1670,7 @@
     pieces: [HRV-Otok_Cres, HRV-Otok_Losinj]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1673,7 +1682,7 @@
     pieces: [HRV-Grad_Zadar]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）で、ザラ（ザダル）市とラストヴォ島などがイタリア領として残る（そのほかの北ダルマチアはユーゴスラヴィアへ）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）で、ザラ（ザダル）市とラストヴォ島などがイタリア領として残る（そのほかの北ダルマチアはユーゴスラヴィアへ）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: ザダル（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領, source: "https://en.wikipedia.org/wiki/Zadar"}
     - {from: 1944, owner: yugoslavia, certainty: occupied, label: ザダル（ユーゴスラヴィアの占領。イタリア領）, cause: 10月末にパルチザンがザダルを占領（法的には1947年までイタリア領）, source: "https://en.wikipedia.org/wiki/Zadar"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1687,7 +1696,7 @@
              HRV-Op_ina_Pola_a, HRV-Op_ina_Promina, HRV-Op_ina_Ru_i, HRV-Op_ina_kabrnja]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1921, owner: yugoslavia, cause: ラパッロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1921, owner: yugoslavia, cause: ラパロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: croatia_ndh, cause: 枢軸国のユーゴスラヴィア侵攻（4月）。4月10日にウスタシャがクロアチア独立国を宣言（ボスニア・ヘルツェゴヴィナを含む）, source: "https://ja.wikipedia.org/wiki/クロアチア独立国"}
     - {from: 1944, owner: yugoslavia, cause: パルチザン（ユーゴスラヴィア人民解放軍）がダルマチアを解放（10–12月。スプリト・シベニク・クニン・ドゥブロヴニクなど）, source: "https://en.wikipedia.org/wiki/Yugoslav_Partisans"}
     - {from: 1991, owner: serbian_krajina, certainty: uncertain, cause: クロアチア紛争で、セルビア人勢力とユーゴスラヴィア人民軍が支配（12月にセルビア人クライナ共和国を宣言。国際的には未承認）, source: "https://en.wikipedia.org/wiki/Republic_of_Serbian_Krajina"}
@@ -1700,7 +1709,7 @@
              HRV-Op_ina_Une_i, HRV-Op_ina_Zemunik_Donji]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1921, owner: yugoslavia, cause: ラパッロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1921, owner: yugoslavia, cause: ラパロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: croatia_ndh, cause: 枢軸国のユーゴスラヴィア侵攻（4月）。4月10日にウスタシャがクロアチア独立国を宣言（ボスニア・ヘルツェゴヴィナを含む）, source: "https://ja.wikipedia.org/wiki/クロアチア独立国"}
     - {from: 1944, owner: yugoslavia, cause: パルチザン（ユーゴスラヴィア人民解放軍）がダルマチアを解放（10–12月。スプリト・シベニク・クニン・ドゥブロヴニクなど）, source: "https://en.wikipedia.org/wiki/Yugoslav_Partisans"}
     - {from: 1991, owner: croatia, cause: 6月25日に独立を宣言（10月8日に発効。1992年1月に欧州共同体が承認）, source: "https://ja.wikipedia.org/wiki/クロアチア紛争"}
@@ -1711,7 +1720,7 @@
     pieces: [HRV-Grad_Buje, HRV-Grad_Novigrad, HRV-Grad_Umag, HRV-Op_ina_Brtonigla, HRV-Op_ina_Gro_njan]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: イストリア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, certainty: occupied, label: ジュリア・ヴェネツィア（ユーゴスラヴィア軍政のB地区）, cause: 5月にユーゴスラヴィア軍が占領。6月のベオグラード協定で、モーガン線の東側（B地区）はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, certainty: occupied, label: トリエステ自由地域（B地区・ユーゴスラヴィアの軍政）, cause: パリ講和条約で国際連合の保障するトリエステ自由地域が設けられ、B地区はユーゴスラヴィアの軍政下に, source: "https://en.wikipedia.org/wiki/Free_Territory_of_Trieste"}
@@ -1724,7 +1733,7 @@
     pieces: [HRV-Grad_Pula]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: イストリア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）でイタリア領となる, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: britain, certainty: occupied, label: プーラ（英米軍政のA地区の飛び地）, cause: 6月のベオグラード協定で、プーラ（ポーラ）は英米軍政のA地区の飛び地となる（1947年に住民の多くがイタリアへ去った）, source: "https://en.wikipedia.org/wiki/Morgan_Line"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1747,7 +1756,7 @@
     pieces: [HRV-Op_ina_Lastovo]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1920, owner: italy, cause: ラパッロ条約（11月）で、ザラ（ザダル）市とラストヴォ島などがイタリア領として残る（そのほかの北ダルマチアはユーゴスラヴィアへ）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: italy, cause: ラパロ条約（11月）で、ザラ（ザダル）市とラストヴォ島などがイタリア領として残る（そのほかの北ダルマチアはユーゴスラヴィアへ）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1943, owner: germany, certainty: occupied, label: ザダル（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領, source: "https://en.wikipedia.org/wiki/Zadar"}
     - {from: 1944, owner: yugoslavia, certainty: occupied, label: ザダル（ユーゴスラヴィアの占領。イタリア領）, cause: 10月末にパルチザンがザダルを占領（法的には1947年までイタリア領）, source: "https://en.wikipedia.org/wiki/Zadar"}
     - {from: 1947, owner: yugoslavia, cause: パリ講和条約（2月調印、9月発効）でイタリアからユーゴスラヴィアへ, source: "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"}
@@ -1759,7 +1768,7 @@
     pieces: [HRV-Op_ina_Mljet]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: 北ダルマチア（イタリア軍の占領）, cause: 休戦協定にもとづき、イタリア軍がロンドン秘密条約で約束された北ダルマチアと島々を占領, source: "https://en.wikipedia.org/wiki/Italian_governorate_of_Dalmatia"}
-    - {from: 1921, owner: yugoslavia, cause: ラパッロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1921, owner: yugoslavia, cause: ラパロ条約（1920年11月）にもとづき、イタリア軍が北ダルマチアと島々から撤退（ザダルなどを除く）, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: croatia_ndh, cause: 枢軸国のユーゴスラヴィア侵攻（4月）。4月10日にウスタシャがクロアチア独立国を宣言（ボスニア・ヘルツェゴヴィナを含む）, source: "https://ja.wikipedia.org/wiki/クロアチア独立国"}
     - {from: 1944, owner: yugoslavia, cause: パルチザン（ユーゴスラヴィア人民解放軍）がダルマチアを解放（10–12月。スプリト・シベニク・クニン・ドゥブロヴニクなど）, source: "https://en.wikipedia.org/wiki/Yugoslav_Partisans"}
     - {from: 1991, owner: croatia, cause: 6月25日に独立を宣言（10月8日に発効。1992年1月に欧州共同体が承認）, source: "https://ja.wikipedia.org/wiki/クロアチア紛争"}
@@ -1790,7 +1799,7 @@
     pieces: [HRV-Grad_Kastav, HRV-Op_ina_Vi_kovo]
   timeline:
     - {from: 1918, owner: italy, certainty: occupied, label: イストリア（イタリア軍の占領）, cause: ヴィラ・ジュスティ休戦協定（11月）にもとづき、イタリア軍がロンドン秘密条約の境界線まで進駐, source: "https://en.wikipedia.org/wiki/Armistice_of_Villa_Giusti"}
-    - {from: 1920, owner: yugoslavia, cause: ラパッロ条約（11月）でカスタヴ周辺はセルブ＝クロアート＝スロヴェーン王国に, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
+    - {from: 1920, owner: yugoslavia, cause: ラパロ条約（11月）でカスタヴ周辺はセルブ＝クロアート＝スロヴェーン王国に, source: "https://ja.wikipedia.org/wiki/ラパッロ条約_(1920年)"}
     - {from: 1941, owner: italy, certainty: occupied, cause: ローマ協定（5月）で、イタリアがスシャク・カスタヴ・バカル・チャバル・クルク島・ラブ島などをフィウメ県に併合, source: "https://en.wikipedia.org/wiki/Rome_Agreements_(1941)"}
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, cause: パルチザンの勝利でユーゴスラヴィアが復活（11月にユーゴスラヴィア連邦人民共和国）, source: "https://en.wikipedia.org/wiki/Socialist_Federal_Republic_of_Yugoslavia"}

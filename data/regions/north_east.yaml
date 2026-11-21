@@ -839,6 +839,7 @@
 
 - id: royal_prussia
   name: 王領プロイセン（ポメレリア・ヴァルミア）
+  names: [{from: 1914, name: "西プロイセン（ポメレリア・ヴァルミア）"}]
   select:
     pieces: [POL-Elbl_g, POL-Gdynia, POL-Grudzi_dz, POL-Olsztyn, POL-Sopot, POL-powiat_braniewski, POL-powiat_chojnicki,
       POL-powiat_cz_uchowski, POL-powiat_elbl_ski, POL-powiat_gda_ski, POL-powiat_grudzi_dzki, POL-powiat_kartuski,
@@ -1031,6 +1032,7 @@
 
 - id: ducal_prussia
   name: プロイセン公国（東プロイセン）
+  names: [{from: 1914, name: "東プロイセン（マズーリ・ヴァルミア）"}]
   select:
     pieces: [POL-powiat_bartoszycki, POL-powiat_dzia_dowski, POL-powiat_e_cki, POL-powiat_gi_ycki, POL-powiat_go_dapski,
       POL-powiat_i_awski, POL-powiat_k_trzy_ski, POL-powiat_kwidzy_ski, POL-powiat_mr_gowski, POL-powiat_nidzicki,
@@ -1310,7 +1312,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める（ビャウィストクは1919年2月にポーランドへ）"
       source: "https://ja.wikipedia.org/wiki/オーバー・オスト"
     - from: 1919
@@ -1340,6 +1342,7 @@
 
 - id: wg_congress
   name: 西ガリツィア（ルブリン・ラドム・キェルツェ）
+  names: [{from: 1815, name: "ルブリン・ラドム・キェルツェ"}]
   select:
     pieces: [POL-Bia_a_Podlaska, POL-Che_m, POL-Kielce, POL-Lublin, POL-Radom, POL-Siedlce, POL-Siedlce_County, POL-powiat_bia_obrzeski,
       POL-powiat_bialski, POL-powiat_buski, POL-powiat_che_mski, POL-powiat_czy_ski, POL-powiat_garwoli_ski,
@@ -1532,6 +1535,7 @@
 
 - id: galicia_pl
   name: ガリツィア西部（小ポーランド南部）
+  names: [{from: 1919, name: "小ポーランド南部・ポトカルパチェ"}]
   select:
     pieces: [POL-Krosno, POL-Nowy_S_cz, POL-Przemy_l, POL-Rzeszow, POL-Tarnobrzeg, POL-Tarnow, POL-powiat_a_cucki, POL-powiat_bieszczadzki,
       POL-powiat_boche_ski, POL-powiat_brzeski_2, POL-powiat_brzozowski, POL-powiat_d_bicki, POL-powiat_d_browski,
@@ -4660,7 +4664,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める（ビャウィストクは1919年2月にポーランドへ）"
       source: "https://ja.wikipedia.org/wiki/オーバー・オスト"
     - from: 1919
@@ -4699,7 +4703,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める（ビャウィストクは1919年2月にポーランドへ）"
       source: "https://ja.wikipedia.org/wiki/オーバー・オスト"
     - from: 1919
@@ -5113,6 +5117,7 @@
 
 - id: ducal_prussia_part
   name: プロイセン公国（東プロイセン）（一部）
+  names: [{from: 1914, to: 1945, name: "東プロイセン北部（ケーニヒスベルク）"}, {from: 1946, name: "カリーニングラード州"}]
   select:
     pieces: [RUS-Kaliningrad]
   timeline:
@@ -7807,7 +7812,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める。ベラルーシ人民共和国（3月宣言）は実権を持てなかった"
       source: "https://ja.wikipedia.org/wiki/ベラルーシ人民共和国"
     - from: 1919
@@ -7952,7 +7957,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める。ベラルーシ人民共和国（3月宣言）は実権を持てなかった"
       source: "https://ja.wikipedia.org/wiki/ベラルーシ人民共和国"
     - from: 1919
@@ -8249,7 +8254,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める。ベラルーシ人民共和国（3月宣言）は実権を持てなかった"
       source: "https://ja.wikipedia.org/wiki/ベラルーシ人民共和国"
     - from: 1919
@@ -8298,7 +8303,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める。ベラルーシ人民共和国（3月宣言）は実権を持てなかった"
       source: "https://ja.wikipedia.org/wiki/ベラルーシ人民共和国"
     - from: 1919
@@ -8353,7 +8358,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める。ベラルーシ人民共和国（3月宣言）は実権を持てなかった"
       source: "https://ja.wikipedia.org/wiki/ベラルーシ人民共和国"
     - from: 1919
@@ -8408,7 +8413,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める。ベラルーシ人民共和国（3月宣言）は実権を持てなかった"
       source: "https://ja.wikipedia.org/wiki/ベラルーシ人民共和国"
     - from: 1919
@@ -8463,7 +8468,7 @@
     - from: 1918
       owner: germany
       certainty: occupied
-      label: "ドイツ軍（撤退中）"
+      label: "オーバー・オスト（ドイツ軍の占領）"
       cause: "ドイツ軍が撤退を始める。ベラルーシ人民共和国（3月宣言）は実権を持てなかった"
       source: "https://ja.wikipedia.org/wiki/ベラルーシ人民共和国"
     - from: 1919

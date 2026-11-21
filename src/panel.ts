@@ -145,7 +145,7 @@ export class Panel {
         ? `（上位：${this.link(c.prev.overlord, year)} → ${this.link(c.cur.overlord, year)}）`
         : "";
     const owners = c.prev.owner === c.cur.owner ? this.link(c.cur.owner, year) : `${this.link(c.prev.owner, year - 1)} → ${this.link(c.cur.owner, year)}`;
-    return `<li class="change"><b>${esc(c.region.name)}</b>：${owners}${ov} ${note}${srcList(c.cur)}</li>`;
+    return `<li class="change"><b>${esc(this.idx.regionName(c.region, year))}</b>：${owners}${ov} ${note}${srcList(c.cur)}</li>`;
   }
 
   private eventLine(e: HistEvent, year: number) {
@@ -203,7 +203,7 @@ export class Panel {
       const regs = this.idx.atlas.regions;
       html += `<h3>国境の変化</h3><ul class="changes">${this.groupedChanges(
         "political",
-        changes.map((c) => ({ name: c.region.name, region: regs.indexOf(c.region), ...this.changeBody(c, year) })),
+        changes.map((c) => ({ name: this.idx.regionName(c.region, year), region: regs.indexOf(c.region), ...this.changeBody(c, year) })),
       )}</ul>`;
     }
     if (!events.length && !changes.length && !relChanges.length) {
