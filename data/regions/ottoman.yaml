@@ -4856,13 +4856,81 @@
   note: "アルマトイは1929–1997年にカザフ共和国・カザフスタンの首都。"
 
 - id: afghanistan_east
-  name: "アフガニスタン東部・北部（カーブル・カンダハール・バルフ）"
+  name: "アフガニスタン東部（カーブル・ガズニー・ジャラーラーバード）"
   select:
     iso_all: [AFG]
-    exclude_regions: [herat, farah_nimruz, hazarajat, nuristan]
+    exclude_regions: [herat, farah_nimruz, hazarajat, nuristan, afg_kandahar, afg_balkh, afg_kunduz, afg_badakhshan, afg_badghis_ghor]
   timeline:
+    - {from: 1648, owner: mughal, note: "ムガル帝国のカーブル州。東部の山地（クナル・ホースト・パクティヤー）のパシュトゥーン諸部族への支配は弱かった", source: "https://ja.wikipedia.org/wiki/ムガル帝国"}
+    - {from: 1738, owner: persia, cause: "ナーディル・シャーがガズニー・カーブルを攻略（6月）。翌年の講和でムガル帝国はインダス川以西を割譲", source: "https://en.wikipedia.org/wiki/Nader_Shah%27s_invasion_of_the_Mughal_Empire"}
+    - {from: 1747, owner: durrani, cause: "ナーディル・シャーの死。アフマド・シャー・ドゥッラーニーがカーブルを押さえる", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: afghanistan, certainty: uncertain, cause: "宰相ファトフ・ハーンの殺害でドゥッラーニー朝が分裂。カーブルはバーラクザイ家の兄弟が争う", source: "https://ja.wikipedia.org/wiki/バーラクザイ朝"}
+    - {from: 1826, owner: afghanistan, cause: "ドースト・モハンマドがカーブルを押さえる（1834年からアミールを称する）", source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
     - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
-  note: "1879年より前（ドゥッラーニー朝・バーラクザイ家の時代）は描いていない。1979–1989年のソ連軍の介入、1996–2001年の北部同盟の支配地域（バダフシャーンなど）は描き分けていない。"
+  note: "第一次アフガン戦争（1839–1842）でイギリスがシュジャー・シャーを復位させた時期は、アフガニスタン（rulers に記載）のまま描く。1979–1989年のソ連軍の介入、1996–2001年の北部同盟の支配地域（バダフシャーンなど）は描き分けていない。"
+
+- id: afg_kandahar
+  name: "カンダハール・ヘルマンド・ザーブル・ウルーズガーン"
+  select:
+    pieces: [AFG-Kandahar, AFG-Helmand, AFG-Zabul, AFG-Uruzgan]
+  timeline:
+    - {from: 1648, owner: mughal, note: "カンダハールはムガル帝国とサファヴィー朝が奪い合った（1638年からムガル領）。1648年12月からサファヴィー朝のアッバース2世が包囲した"}
+    - {from: 1649, owner: persia, cause: "サファヴィー朝のアッバース2世がカンダハールを奪回（2月）。ムガル帝国の奪回の試み（1649・1652・1653年）は失敗", source: "https://en.wikipedia.org/wiki/Mughal%E2%80%93Safavid_war_(1649%E2%80%931653)"}
+    - {from: 1709, owner: hotaki, cause: "ギルザイ族のミール・ワイスがカンダハールでサファヴィー朝の総督を倒して自立（ホータキー朝）", source: "https://ja.wikipedia.org/wiki/ホータキー朝"}
+    - {from: 1738, owner: persia, cause: "ナーディルがカンダハールを攻略（3月）し、ホータキー朝が滅ぶ", source: "https://ja.wikipedia.org/wiki/ホータキー朝"}
+    - {from: 1747, owner: durrani, cause: "アフマド・シャー・ドゥッラーニーがカンダハールで即位（ドゥッラーニー朝の成立）", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: afghanistan, certainty: uncertain, cause: "ドゥッラーニー朝の分裂。カンダハールはバーラクザイ家の兄弟（カンダハールのサルダールたち）が治める", source: "https://ja.wikipedia.org/wiki/バーラクザイ朝"}
+    - {from: 1855, owner: afghanistan, cause: "ドースト・モハンマドがカンダハールを併合", source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+  note: "ウルーズガーン北部はハザーラ人の地で、支配は弱かった。第一次アフガン戦争（1839–1842）・第二次アフガン戦争（1878–1880）のイギリス軍の占領は描いていない。"
+
+- id: afg_balkh
+  name: "バルフ・ジョウズジャーン・ファールヤーブ（アフガン・トルキスタン西部）"
+  select:
+    pieces: [AFG-Balkh, AFG-Jowzjan, AFG-Samangan, AFG-Sar_e_Pol, AFG-Faryab]
+  timeline:
+    - {from: 1648, owner: bukhara, note: "バルフはブハラ（ジャーン朝）の王族が治める副都。ムガル帝国のバルフ遠征（1646–1647）は失敗して撤退した", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    - {from: 1737, owner: persia, cause: "ナーディルの子レザー・コリーがバルフを攻略", source: "https://en.wikipedia.org/wiki/Nader_Shah"}
+    - {from: 1751, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーの軍がバルフを征服。マイマナ・シバルガーン・アンドホイなどウズベクの諸侯は貢納する", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: null, certainty: uncertain, cause: "ドゥッラーニー朝の分裂。ウズベクの諸侯が自立し、ブハラやクンドゥズのムラード・ベクの勢力が及ぶ", source: "https://en.wikipedia.org/wiki/Afghan_Turkestan"}
+    - {from: 1850, owner: afghanistan, certainty: uncertain, cause: "ドースト・モハンマドの軍がバルフを征服（1849–1850年）。マイマナなどの服属は1870年代まで揺れた", source: "https://en.wikipedia.org/wiki/Afghan_Turkestan"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+
+- id: afg_kunduz
+  name: "クンドゥズ・バグラーン・タハール（カタガン）"
+  select:
+    pieces: [AFG-Kunduz, AFG-Baghlan, AFG-Takhar]
+  timeline:
+    - {from: 1648, owner: bukhara, certainty: uncertain, note: "ウズベクのカタガン部の地。ブハラ（ジャーン朝）のバルフの王族の支配下"}
+    - {from: 1737, owner: persia, certainty: uncertain, cause: "ナーディルの子レザー・コリーがバルフを攻略", source: "https://en.wikipedia.org/wiki/Nader_Shah"}
+    - {from: 1751, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーの軍がバルフ・クンドゥズを従える", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: null, certainty: uncertain, cause: "ドゥッラーニー朝の分裂。クンドゥズのムラード・ベク（–1842）が自立し、バダフシャーンまで勢力を広げる", source: "https://en.wikipedia.org/wiki/Kunduz"}
+    - {from: 1859, owner: afghanistan, certainty: uncertain, cause: "ドースト・モハンマドの子らがクンドゥズ（カタガン）を征服", source: "https://en.wikipedia.org/wiki/Kunduz"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+  note: "1880年代からアブドゥッラフマーン・ハーンがパシュトゥーン人を北部に移住させた。"
+
+- id: afg_badakhshan
+  name: "バダフシャーン（ワハーンを含む）"
+  select:
+    pieces: [AFG-Badakhshan]
+  timeline:
+    - {from: 1648, owner: null, certainty: uncertain, note: "バダフシャーンのミール（1650年代からヤール家）が治める山国。ブハラ・ドゥッラーニー朝の宗主権は名目的だった", source: "https://en.wikipedia.org/wiki/Badakhshan"}
+    - {from: 1859, owner: afghanistan, certainty: uncertain, cause: "バダフシャーンのミールがアフガニスタンに服属する（1881年に直接統治）", source: "https://en.wikipedia.org/wiki/Badakhshan"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+  note: "ワハーン回廊は英露のパミール協定（1895）でアフガニスタン領とされた緩衝地帯。"
+
+- id: afg_badghis_ghor
+  name: "バードギース・ゴール（アイマク人の地）"
+  select:
+    pieces: [AFG-Badghis, AFG-Ghor]
+  timeline:
+    - {from: 1648, owner: persia, certainty: uncertain, note: "アイマク人・ハザーラ人の山地。サファヴィー朝のヘラート州の周り"}
+    - {from: 1717, owner: herat_abdali, certainty: uncertain, cause: "アブダーリー族がヘラートで自立", source: "https://en.wikipedia.org/wiki/Abdali_Afghans"}
+    - {from: 1732, owner: persia, certainty: uncertain, cause: "ナーディルがヘラートを攻略"}
+    - {from: 1750, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーがヘラートを攻略", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: herat, certainty: uncertain, cause: "ドゥッラーニー朝の分裂（サドーザイ家がヘラートだけを保つ）", source: "https://en.wikipedia.org/wiki/Emirate_of_Herat"}
+    - {from: 1863, owner: afghanistan, certainty: uncertain, cause: "ドースト・モハンマドがヘラートを攻め落とす", source: "https://en.wikipedia.org/wiki/Emirate_of_Herat"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
 
 - id: hazarajat
   name: "ハザーラジャート（バーミヤーン・ダイクンディ）"
