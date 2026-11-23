@@ -564,6 +564,10 @@ const FILE_BOX = {
   "events/mexico_caribbean.yaml": [-118, 7, -58, 33],
   "events/andes.yaml": [-82, -24, -50, 13],
   "events/south_cone.yaml": [-76, -56, -34, 6],
+  "events/west_africa.yaml": [-26, 3, 16, 28],
+  "events/guinea_coast.yaml": [-4, -2, 25, 24],
+  "events/east_africa.yaml": [21, -12, 52, 23],
+  "events/southern_africa.yaml": [8, -36, 60, 6],
 };
 // 地域別でないファイル（ヨーロッパの各担当）の出来事で、関係国の領土が画面に映っているかを数える範囲。
 // 植民地（例：英領インド）が映っているだけで本国の出来事が「範囲内」にならないようにする
