@@ -20,7 +20,7 @@
   timeline:
   - from: 1648
     owner: "ottoman"
-    note: "オスマン帝国のエジプト州の南端（下ヌビア）。エジプト（data/regions/west.yaml）と同じ扱い"
+    note: "オスマン帝国のエジプト州の南端（下ヌビア）。エジプト本体と同じ扱い"
     source: "https://ja.wikipedia.org/wiki/オスマン帝国領エジプト"
   - from: 1805
     owner: "egypt"
@@ -80,7 +80,7 @@
     certainty: "uncertain"
     label: "ハライブ（エジプトが管理。スーダンも領有を主張）"
     cause: "ムバーラク暗殺未遂事件（6月）ののち、エジプト軍がハライブの全域を押さえる（2000年にスーダン軍が撤退）"
-    note: "エジプトは北緯22度線、スーダンは1902年の行政境界を国境と主張し、帰属は決着していない。逆に22度線の南のビル・タウィールはどちらも領有を主張しない（エジプトの地域 west.yaml で扱う）"
+    note: "エジプトは北緯22度線、スーダンは1902年の行政境界を国境と主張し、帰属は決着していない。逆に22度線の南のビル・タウィールはどちらも領有を主張しない"
     source: "https://en.wikipedia.org/wiki/Hala%27ib_Triangle"
 
 - id: sdn_northern
@@ -1077,7 +1077,13 @@
   timeline:
   - from: 1648
     owner: null
-    note: "ザンデ人の諸王国の地（18世紀から南西から広がった）"
+    note: "ザンデ人などの地"
+    source: "https://en.wikipedia.org/wiki/Zande_people"
+  - from: 1800
+    owner: "zande"
+    certainty: "uncertain"
+    cause: "ザンデ（アザンデ）人のアヴォンガラ家の王国群が南西から広がる（18世紀後半〜19世紀）"
+    note: "1870–80年代にはエジプト領スーダンの拠点・奴隷商人も入ったが、王国（グブドゥエなど）は自立を保った"
     source: "https://en.wikipedia.org/wiki/Zande_people"
   - from: 1899
     owner: "britain"
@@ -5957,6 +5963,44 @@
     label: "ドイツ領東アフリカ"
     cause: "ドイツの軍・行政が内陸に及ぶ"
     source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_songea
+  name: "ソンゲア（ンゴニ）"
+  select:
+    pieces: [TZA-Songea, TZA-Songea_Urban, TZA-Namtumbo, TZA-Mbinga]
+  timeline:
+  - from: 1648
+    owner: null
+  - from: 1850
+    owner: "ngoni"
+    certainty: "uncertain"
+    cause: "南から来たンゴニ人（マセコ・ンゴニ、のちンジェル・ムショペの2王国）がソンゲアの高原に定着する（1840年代後半〜1850年代）"
+    source: "https://en.wikipedia.org/wiki/Ngoni_people"
+  - from: 1897
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツがソンゲアに駐屯地を置き、ンゴニの首長たちが従う（1897年）。1905–06年のマジ・マジ反乱にはンゴニも加わった"
+    source: "https://en.wikipedia.org/wiki/Maji_Maji_Rebellion"
   - from: 1916
     owner: "britain"
     certainty: "occupied"

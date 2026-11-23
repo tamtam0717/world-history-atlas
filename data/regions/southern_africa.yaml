@@ -216,6 +216,7 @@
       note: "森林の首長の地。大きな国家はなかった"
     - from: 1870
       owner: "tippu_tip"
+      overlord: "zanzibar"
       certainty: "uncertain"
       cause: "ザンジバルのスワヒリ＝アラブ商人（ティップ・ティプら）がニャングウェ・カソンゴに拠点を置き、象牙と奴隷を求めて勢力を広げる"
       source: "https://ja.wikipedia.org/wiki/ティップー・ティプ"
@@ -263,6 +264,7 @@
       note: "森林の首長の地。大きな国家はなかった"
     - from: 1883
       owner: "tippu_tip"
+      overlord: "zanzibar"
       certainty: "uncertain"
       cause: "スワヒリ＝アラブ商人がスタンリー・フォールズ（ボヨマ滝）の一帯に勢力を広げる"
       source: "https://ja.wikipedia.org/wiki/ティップー・ティプ"
@@ -497,10 +499,14 @@
     pieces: [COD-Tanganyika]
   timeline:
     - from: 1648
+      owner: null
+      note: "タブワ人などの小さな首長国の地"
+      source: "https://ja.wikipedia.org/wiki/ルバ王国"
+    - from: 1800
       owner: "luba"
       certainty: "uncertain"
-      note: "ルバ王国の東の外縁。湖岸にはのちにスワヒリ＝アラブ商人が渡ってきた"
-      source: "https://ja.wikipedia.org/wiki/ルバ王国"
+      cause: "ルバ王国が東へ広がり、タンガニーカ湖の西岸に達する（18世紀末〜19世紀初め）"
+      source: "https://en.wikipedia.org/wiki/Luba_Empire"
     - from: 1885
       owner: "congo_free_state"
       certainty: "nominal"
@@ -543,12 +549,8 @@
     - from: 1648
       owner: "lunda"
       certainty: "uncertain"
-      note: "ルンダ王国の都ムスンバはこの地方の西部（カパンガ付近）にあった。王はムワタ・ヤンヴォと称した"
+      note: "東部（コルウェジより東）は1856–91年にムシリのイェケ王国（都ブンケヤ）が治めたが、ピースが分けられないので、ルンダの都ムスンバのある西部に合わせてルンダの色で塗る（イェケ王国は上カタンガ）"
       source: "https://ja.wikipedia.org/wiki/ルンダ王国"
-    - from: 1856
-      owner: "yeke"
-      cause: "ニャムウェジ人の商人ムシリがカタンガに入り、ブンケヤを都にイェケ王国（ガランガンゼ）を建てる"
-      source: "https://en.wikipedia.org/wiki/Msiri"
     - from: 1891
       owner: "congo_free_state"
       cause: "コンゴ自由国のステアーズ遠征隊がムシリを殺し、カタンガを押さえる（12月）"
@@ -919,10 +921,22 @@
       note: "グラ・バンダ・ルンガなどの人々の地。北のワダイ・バギルミ・ダルフールの奴隷狩りの対象になった"
     - from: 1830
       owner: "dar_al_kuti"
+      overlord: "wadai"
       certainty: "uncertain"
       cause: "ワダイに従うイスラームのダール・アル＝クーティ・スルタン国ができる"
       note: "ワダイの宗主権の下にあった（帯は付けない）。1890年からムハンマド・アッ＝サヌーシーがンデレを都に勢力を広げ、奴隷狩りを行った"
       source: "https://en.wikipedia.org/wiki/Dar_al_Kuti"
+    - from: 1886
+      owner: "rabih"
+      certainty: "uncertain"
+      cause: "スーダンから来たラービフの軍がダール・アル＝クーティ・ダール・ルンガを拠点に奴隷狩りを行う（1880年代後半）"
+      source: "https://en.wikipedia.org/wiki/Rabih_az-Zubayr"
+    - from: 1891
+      owner: "dar_al_kuti"
+      overlord: "wadai"
+      certainty: "uncertain"
+      cause: "ラービフがスルタンを殺し、ムハンマド・アッ＝サヌーシーを立てる（1890年）。ラービフはバギルミ・ボルヌへ移る"
+      source: "https://en.wikipedia.org/wiki/Muhammad_al-Senoussi"
     - from: 1897
       owner: "france"
       certainty: "indirect"
@@ -4407,6 +4421,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4448,6 +4467,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4489,6 +4513,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4539,6 +4568,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4588,6 +4622,11 @@
       label: "フランス領マダガスカル"
       cause: "マダガスカル植民地に組み込まれる"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4629,6 +4668,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4671,6 +4715,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4711,6 +4760,11 @@
       label: "フランス領マダガスカル"
       cause: "マダガスカル植民地に組み込まれる"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4751,6 +4805,11 @@
       label: "フランス領マダガスカル"
       cause: "マダガスカル植民地に組み込まれる"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4799,6 +4858,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4851,6 +4915,11 @@
       cause: "ガリエニ総督の遠征で西部・南部の諸王国・首長が従う（1897–1904）"
       note: "要確認：支配が及んだ年"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4898,6 +4967,11 @@
       cause: "フランス軍がメナベを征服する"
       note: "要確認：征服の年"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4941,6 +5015,11 @@
       cause: "ガリエニ総督の遠征で西部・南部の諸王国・首長が従う（1897–1904）"
       note: "要確認：支配が及んだ年"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -4983,6 +5062,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -5031,6 +5115,11 @@
       cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
       note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
       source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1942
       owner: "britain"
       certainty: "occupied"
@@ -5069,6 +5158,16 @@
       label: "コモロ（マダガスカル植民地の属領）"
       cause: "コモロ諸島がフランスに併合され、マダガスカル植民地の一部になる"
       source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1946
       owner: "france"
       label: "フランス領コモロ（海外領土）"
@@ -5099,6 +5198,16 @@
       label: "コモロ（マダガスカル植民地の属領）"
       cause: "コモロ諸島がフランスに併合され、マダガスカル植民地の一部になる"
       source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1946
       owner: "france"
       label: "フランス領コモロ（海外領土）"
@@ -5148,6 +5257,16 @@
       label: "コモロ（マダガスカル植民地の属領）"
       cause: "コモロ諸島がフランスに併合され、マダガスカル植民地の一部になる"
       source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1946
       owner: "france"
       label: "フランス領コモロ（海外領土）"
@@ -5178,6 +5297,16 @@
       label: "コモロ（マダガスカル植民地の属領）"
       cause: "コモロ諸島とともにマダガスカル植民地の一部になる"
       source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
     - from: 1946
       owner: "france"
       label: "フランス領コモロ（海外領土）"
@@ -5236,6 +5365,16 @@
       label: "レユニオン島（フランス領）"
       cause: "二月革命で奴隷制が廃止され、島の名がレユニオンに戻る"
       source: "https://ja.wikipedia.org/wiki/レユニオン"
+    - from: 1940
+      owner: "vichy_france"
+      label: "レユニオン島（フランス領）"
+      cause: "フランスの降伏。レユニオンはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "レユニオン島（フランス領）"
+      cause: "自由フランスの駆逐艦レオパールが上陸し（11月）、レユニオンが自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/自由フランス"
     - from: 1946
       owner: "france"
       label: "レユニオン（フランスの海外県）"

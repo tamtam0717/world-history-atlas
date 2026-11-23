@@ -1725,6 +1725,17 @@
       note: スエズ運河の防衛やスーダンの問題はイギリスが保留し、イギリス軍は運河地帯に1956年まで駐留した。
       source: "https://ja.wikipedia.org/wiki/エジプト王国"
 
+- id: bir_tawil
+  name: ビル・タウィール
+  select:
+    pieces: [EGY-Aswan_Governorate_Bir_Tawil]
+  timeline:
+    - from: 1956
+      owner: null
+      cause: スーダンの独立。エジプトは北緯22度線を、スーダンは1902年の行政境界を国境とし、どちらもこの地の領有を主張しない
+      note: 北緯22度線の南、1902年の行政境界でエジプトの管理とされた砂漠（1955年まではエジプト本体と同じ扱い）。東のハライブ・トライアングルを両国が争うため、ビル・タウィールはどの国も領有を主張しない「無主地」となっている。
+      source: "https://ja.wikipedia.org/wiki/ビル・タウィール"
+
 - id: egypt_western_desert
   name: エジプト西部の砂漠（シーワなど）
   select:
@@ -2348,35 +2359,51 @@
     pieces: [MLI-Tombouctou]
   timeline:
     - from: 1894
-      owner: france
-      certainty: nominal
-      cause: フランス軍のトンブクトゥ占領（フランス領スーダン）
-      note: サハラ北部のタウデニ（岩塩の産地）まで達したのは1906年ごろ。
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領スーダン"
+      cause: "フランス軍のトンブクトゥ占領（1893年12月〜1894年）。北の砂漠はまだ勢力圏にとどまる"
+      note: "サハラ北部のタウデニ（岩塩の産地）まで達したのは1906年ごろ。"
       source: "ja.wikipedia: フランス領スーダン"
+    - from: 1899
+      owner: "france"
+      label: "フランス領スーダン"
+      cause: "ニジェール川の湾曲部のトゥアレグがフランスに従い（1898–99年）、トンブクトゥ地区の軍政が北の砂漠に及ぶ"
+      source: "https://en.wikipedia.org/wiki/French_Sudan"
+    - from: 1904
+      owner: "france"
+      label: "上セネガル・ニジェール植民地"
+      cause: "上セネガル・ニジェール植民地の設置"
+      source: "https://en.wikipedia.org/wiki/French_Sudan"
+    - from: 1920
+      owner: "france"
+      label: "フランス領スーダン"
+      cause: "フランス領スーダン植民地の設置（上セネガル・ニジェールを改組）"
+      source: "https://en.wikipedia.org/wiki/French_Sudan"
     - from: 1940
-      owner: vichy_france
-      label: フランス領スーダン
-      cause: フランスの降伏。フランス領西アフリカはヴィシー政府に従う
+      owner: "vichy_france"
+      label: "フランス領スーダン"
+      cause: "フランスの降伏。フランス領西アフリカはヴィシー政府に従う"
       source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
     - from: 1942
-      owner: france
-      label: フランス領スーダン
-      cause: トーチ作戦の後、フランス領西アフリカが連合国側に移る（11月）
+      owner: "france"
+      label: "フランス領スーダン"
+      cause: "トーチ作戦の後、フランス領西アフリカが連合国側に移る（11月）"
       source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
     - from: 1960
-      owner: mali
-      cause: マリの独立（9月。6月にセネガルとのマリ連邦として独立し、8月に分かれた）
+      owner: "mali"
+      cause: "マリの独立（9月。6月にセネガルとのマリ連邦として独立し、8月に分かれた）"
       source: "https://ja.wikipedia.org/wiki/マリ共和国"
     - from: 2012
-      owner: azawad
-      certainty: uncertain
-      cause: マリ北部の紛争（4月にアザワド解放民族運動が独立を宣言し、のちイスラーム武装勢力が北部の都市を支配）
+      owner: "azawad"
+      certainty: "uncertain"
+      cause: "マリ北部の紛争（4月にアザワド解放民族運動が独立を宣言し、のちイスラーム武装勢力が北部の都市を支配）"
       source: "https://en.wikipedia.org/wiki/Mali_War"
     - from: 2013
-      owner: mali
-      certainty: uncertain
-      cause: フランス軍の介入（セルヴァル作戦、1月）でマリ政府軍が北部の都市を取り戻す
-      note: 北部の砂漠ではトゥアレグの武装勢力（キダルなど）とイスラーム武装勢力の活動が続き、政府の支配は弱い。
+      owner: "mali"
+      certainty: "uncertain"
+      cause: "フランス軍の介入（セルヴァル作戦、1月）でマリ政府軍が北部の都市を取り戻す"
+      note: "北部の砂漠ではトゥアレグの武装勢力（キダルなど）とイスラーム武装勢力の活動が続き、政府の支配は弱い。"
       source: "https://en.wikipedia.org/wiki/Mali_War"
 
 # ---------------------------------------------------------------- アルジェリアの征服（1830–1911）
@@ -2926,27 +2953,28 @@
     pieces: [DZA-Tamanghasset_2]
   timeline:
     - from: 1900
-      owner: france
-      label: アルジェリア
-      certainty: nominal
-      cause: フランス軍のイン・サラー占領（1899年12月〜1900年）
-      note: 1902年のティトの戦いでホガールのトゥアレグを破り、1905年までに帰順させた。
+      owner: "france"
+      certainty: "nominal"
+      label: "アルジェリア"
+      cause: "フランス軍のイン・サラー占領（1899年12月〜1900年）"
+      note: "1902年のティトの戦いでホガールのトゥアレグを破り、1905年までに帰順させた。"
       source: "https://en.wikipedia.org/wiki/Battle_of_Tit"
-    - from: 1920
-      owner: france
-      cause: トゥアレグの反乱（1916–17）の鎮圧の後、フランスの軍政が定着
-      source: "https://en.wikipedia.org/wiki/Kaocen_revolt"
+    - from: 1905
+      owner: "france"
+      cause: "ホガールのトゥアレグ（ムーサ・アグ・アマスタン）がフランスに従い（1904–05年）、タマンラセットに拠点が置かれる"
+      note: "1916–17年のトゥアレグの反乱（カオセンの反乱）の時期も、ホガールのアメノカル（首長）はフランス側にとどまった"
+      source: "https://en.wikipedia.org/wiki/Moussa_Ag_Amastan"
     - from: 1940
-      owner: vichy_france
-      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      owner: "vichy_france"
+      cause: "フランスの降伏。北アフリカの植民地はヴィシー政府に従う"
       source: "https://en.wikipedia.org/wiki/French_North_Africa"
     - from: 1942
-      owner: france
-      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      owner: "france"
+      cause: "連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った"
       source: "https://ja.wikipedia.org/wiki/トーチ作戦"
     - from: 1962
-      owner: algeria
-      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      owner: "algeria"
+      cause: "エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）"
       source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_ajjer
