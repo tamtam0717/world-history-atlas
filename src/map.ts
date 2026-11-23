@@ -1572,7 +1572,35 @@ export class AtlasMap {
         adj.get(a)!.add(b);
       }
     });
-    return assignColors([...new Set(this.geoms.map((g) => g.properties!.iso))], adj);
+    // 現代の国の色は、最後の年（ふつうは 2025 年）の地図でその国の大部分を持つ政体の色にそろえる。
+    // 歴史の地図と切り替えても色が変わらないように。データのない国だけ、隣と重ならない色を割り当てる。
+    const year = this.idx.atlas.range[1];
+    const polities = this.idx.atlas.polities;
+    const occ = this.idx.atlas.certainty.indexOf("occupied");
+    const tally = new Map<string, Map<number, number>>();
+    this.geoms.forEach((g, i) => {
+      const a = this.atlasIdx[i];
+      if (a < 0) return;
+      const st = this.idx.pieceState(a, year);
+      if (!st || st[1] < 0 || st[3] === occ) return;
+      const iso = g.properties!.iso;
+      if (!tally.has(iso)) tally.set(iso, new Map());
+      const t = tally.get(iso)!;
+      t.set(st[1], (t.get(st[1]) ?? 0) + 1);
+    });
+    const fixed = new Map<string, string>();
+    for (const [iso, t] of tally) {
+      let best = -1;
+      let bn = 0;
+      for (const [o, c] of t) if (c > bn) [best, bn] = [o, c];
+      if (best >= 0) fixed.set(iso, polities[best].color ?? fallbackColor(polities[best].id));
+    }
+    const rest = [...new Set(this.geoms.map((g) => g.properties!.iso))].filter((i) => !fixed.has(i));
+    const restAdj = new Map<string, Set<string>>();
+    for (const iso of rest) restAdj.set(iso, adj.get(iso) ?? new Set());
+    const assigned = assignColors(rest, restAdj, fixed);
+    for (const [k, v] of fixed) assigned.set(k, v);
+    return assigned;
   }
 
   private modernBorders(): FeatureCollection {

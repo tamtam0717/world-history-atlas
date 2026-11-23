@@ -487,12 +487,12 @@ export function modernName(iso: string): string {
 /** 隣り合う国が同じ色にならないよう、隣接関係から貪欲に色を割り当てる */
 export const MODERN_PALETTE = ["#f2d7a6", "#c9dcb4", "#b9d3e6", "#e8bfc4", "#d8c8e6", "#efe3a8", "#bfe0d8"];
 
-export function assignColors(isos: string[], neighbors: Map<string, Set<string>>): Map<string, string> {
-  // 隣国の多い国から順に塗る
+export function assignColors(isos: string[], neighbors: Map<string, Set<string>>, fixed?: Map<string, string>): Map<string, string> {
+  // 隣国の多い国から順に塗る（fixed はすでに色の決まっている国。隣ならその色も避ける）
   const order = [...isos].sort((a, b) => (neighbors.get(b)?.size ?? 0) - (neighbors.get(a)?.size ?? 0));
   const out = new Map<string, string>();
   for (const iso of order) {
-    const used = new Set([...(neighbors.get(iso) ?? [])].map((n) => out.get(n)).filter(Boolean));
+    const used = new Set([...(neighbors.get(iso) ?? [])].map((n) => out.get(n) ?? fixed?.get(n)).filter(Boolean));
     out.set(iso, MODERN_PALETTE.find((c) => !used.has(c)) ?? MODERN_PALETTE[0]);
   }
   return out;
