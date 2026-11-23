@@ -1475,21 +1475,27 @@
     - from: 1648
       owner: null
       note: "サモアの首長たちの地"
+    - from: 1873
+      owner: "samoa_kingdom"
+      certainty: "uncertain"
+      cause: "サモアの首長たちがムリヌウに中央政府を置く（ツトゥイラ島もその一部とされた）"
+      note: "1878年、アメリカはサモア政府との条約でパゴパゴの給炭港の権利を得た。1889年のベルリン一般議定書はツトゥイラを含むサモア諸島の独立と中立を認めた"
+      source: ["https://en.wikipedia.org/wiki/Samoan_crisis", "https://en.wikipedia.org/wiki/American_Samoa"]
     - from: 1900
       owner: "usa"
       label: "アメリカ領サモア"
       cause: "1899年の三国協定でサモア東部がアメリカ領になる（ツトゥイラ島の割譲 1900年）"
       source: "https://ja.wikipedia.org/wiki/アメリカ領サモア"
 
-# マヌア諸島（O2 が追加）：1904 年に割譲。us_am_samoa より小さいので、1900 年からはこちらが優先される
+# マヌア諸島（O2 が追加）：1904 年に割譲。us_am_samoa より小さいので、こちらが優先される
 - id: us_manua
   name: "マヌア諸島"
   select:
     pieces: [USA-Manu_a_Islands]
   timeline:
-    - from: 1900
+    - from: 1648
       owner: null
-      note: "マヌアの王（トゥイ・マヌア）が治め、1904年まで合衆国への割譲に応じなかった"
+      note: "マヌアの王（トゥイ・マヌア）が治め、サモア王国（1873–99年）からも半ば独立していた。1904年まで合衆国への割譲に応じなかった"
       source: "https://en.wikipedia.org/wiki/Manuʻa_Islands"
     - from: 1904
       owner: "usa"
