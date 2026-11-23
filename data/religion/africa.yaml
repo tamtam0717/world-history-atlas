@@ -24,10 +24,10 @@
       minor: sunni
       note: ジョロフ・カヨール・バオル・ワーロなどウォロフ人の王国。王族と戦士層（チェド）は伝統的な信仰を守り、イスラームは商人と聖職者（マラブー）の宗教だった。
       source: "https://ja.wikipedia.org/wiki/ウォロフ人"
-    - from: 1850
+    - from: 1870
       main: sunni
       minor: other
-      note: マラブーの運動と王国の動揺のなかで、農民の多くがムスリムになる。
+      note: マラブーの運動（マ・バ・ジャフ・バのジハード 1861–67）、ラト・ジョールの改宗（1860 年代）など、王国の動揺のなかで農民の多くがムスリムになる。
     - from: 1890
       main: sunni
       note: フランスの征服（カヨールのラト・ジョール戦死 1886）の後、ムリッド教団（アマドゥ・バンバ、1883）・ティジャーニー教団を通じてイスラーム化がほぼ完了した。
@@ -679,11 +679,11 @@
     - from: 1920
       main: other
       minor: evangelical
-      note: バーゼル伝道会（長老派）・ウェスリー派メソジストの伝道が広がる。
+      note: ウェスリー派メソジストの伝道が広がる（バーゼル伝道会〈長老派〉の東部州は別の地域）。
     - from: 1950
       main: evangelical
       minor: other
-      note: "キリスト教徒が多数になる（1960 年の国勢調査で全国の 41%、南部では過半数）。地図の「福音派」はメソジスト・長老派などプロテスタントを表す。"
+      note: "キリスト教徒が多数になる（1960 年の国勢調査で全国の 41%、南部では過半数）。地図の「福音派」はメソジスト（ファンティ人の中部州・アシャンティ）などプロテスタントを表す。"
     - from: 2000
       main: evangelical
       minor: catholic
@@ -705,6 +705,25 @@
     - from: 2000
       main: evangelical
       minor: sunni
+- id: rel_af_ghana_eastern
+  name: ガーナ東部州（アクアペム・アキェム・クロボ）
+  select:
+    adm1: [GHA/Eastern Region]
+  timeline:
+    - from: 1648
+      main: other
+      note: アクワム・アキェムなどアカン人の国とガ・ダンメ系のクロボ人。
+    - from: 1920
+      main: other
+      minor: reformed
+      note: バーゼル伝道会（1828 年からアクロポン）の伝道。ガーナ長老教会（改革派の系統）の中心。
+    - from: 1950
+      main: reformed
+      minor: other
+    - from: 2000
+      main: evangelical
+      minor: reformed
+      note: 1980 年代からペンテコステ派・カリスマ派の教会が急成長した。
 - id: rel_af_ghana_volta
   name: ヴォルタ州（エウェ人）
   select:
@@ -714,12 +733,12 @@
       main: other
     - from: 1930
       main: other
-      minor: evangelical
+      minor: reformed
       note: 北ドイツ伝道会（ブレーメン）の伝道。
     - from: 1960
-      main: evangelical
+      main: reformed
       minor: catholic
-      note: エウェ人の長老派・カトリック。
+      note: エウェ人の福音長老教会（ブレーメン伝道会の系統、改革派）・カトリック。
 - id: rel_af_ghana_oti
   name: オティ州（ヴォルタ川東岸の北部）
   select:
@@ -1856,13 +1875,28 @@
       main: oriental
       note: 1886 年にメネリク2世がアディスアベバを建設した。
 - id: rel_af_dire_dawa
-  name: ディレダワ・ハラル
+  name: ハラル
   select:
-    adm1: [ETH/Dire Dawa, ETH/Hareri]
+    adm1: [ETH/Hareri]
   timeline:
     - from: 1648
       main: sunni
       note: ハラルはアダル・スルタン国以来のイスラームの都市（1887 年にメネリク2世が征服）。
+    - from: 1910
+      main: sunni
+      minor: oriental
+      note: 征服後、アムハラ人の正教徒が移り住んだ。
+- id: rel_af_dire_dawa_city
+  name: ディレダワ
+  select:
+    adm1: [ETH/Dire Dawa]
+  timeline:
+    - from: 1648
+      main: other
+      minor: sunni
+      note: 周りのハラルゲと同じく、オロモ人・ソマリ人の牧畜民の地。
+    - from: 1800
+      main: sunni
     - from: 1910
       main: sunni
       minor: oriental
@@ -2005,7 +2039,7 @@
     - from: 1648
       main: oriental
       minor: other
-      note: ティグレ語を話す牧畜民（ベト・アスゲデ・メンサ・マリアなど）は名目上キリスト教徒だった。ベジャ系のベニ・アメル人はムスリム。
+      note: ティグレ語を話す牧畜民（ベト・アスゲデ・メンサ・マリアなど）は名目上キリスト教徒だった。ガシュ・バルカのベジャ系のベニ・アメル人は早くからムスリム、クナマ人・ナラ人は伝統的な信仰（地域をまとめているので、ここでは多数派のティグレ人で塗った）。
     - from: 1830
       main: sunni
       minor: oriental
@@ -2048,8 +2082,15 @@
     adm1: [SOM/Lower Juba, SOM/Middle Juba, SOM/Gedo]
   timeline:
     - from: 1648
+      main: other
+      minor: sunni
+      note: ジュバ川流域のオロモ人（ワルダイなど）は伝統的な信仰（ワーカ信仰）。キスマヨなど沿岸の町はムスリム。
+    - from: 1850
       main: sunni
       minor: other
+      note: ソマリ人（ダロッド系）の南下とともにイスラームが多数になった（言語と同じ年）。
+    - from: 1900
+      main: sunni
 - id: rel_af_kenya_kikuyu
   name: 中央ケニア（キクユ人）
   select:
@@ -2259,18 +2300,22 @@
       minor: other
       note: ディゴ人はムスリムが多い。
 - id: rel_af_mombasa
-  name: モンバサ・ラム（スワヒリ海岸）
+  name: モンバサ（スワヒリ海岸）
   select:
-    adm1: [KEN/Mombasa, KEN/Lamu]
+    adm1: [KEN/Mombasa]
   timeline:
     - from: 1648
       main: sunni
       note: スワヒリの都市国家。モンバサはポルトガルのフォート・ジーザス（1593–）があり、1698 年にオマーンが奪った。
       source: "https://ja.wikipedia.org/wiki/スワヒリ文化"
-    - from: 1990
+    - from: 1960
       main: sunni
       minor: evangelical
-      note: 内陸からの移住者のキリスト教徒が多い。
+      note: 内陸からの移住者（キリスト教徒）が増えた。
+    - from: 1990
+      main: evangelical
+      minor: sunni
+      note: 独立後の内陸からの移住で、キリスト教徒（プロテスタント・カトリック）が過半数になった（2019 年の国勢調査で6割前後）。地図の「福音派」はプロテスタント全体の目安。
 - id: rel_af_lamu
   name: ラム
   select:
@@ -2437,12 +2482,13 @@
       main: other
       note: ルワンダ王国・ブルンジ王国（ムワミ）の伝統的な信仰（イマナ）。
     - from: 1930
-      main: catholic
-      minor: other
-      note: 白衣宣教会の伝道。1930 年代に首長層の集団改宗（「トルネード」）が起こった。
+      main: other
+      minor: catholic
+      note: 白衣宣教会の伝道。1930 年代に首長層から集団改宗（「トルネード」）が起こったが、1930 年代初めのルワンダのカトリック信徒は人口約 180 万のうち 10 万人前後だった。
       source: "https://ja.wikipedia.org/wiki/ルワンダの歴史"
     - from: 1950
       main: catholic
+      note: 住民の多数がキリスト教徒になった（独立時のルワンダでカトリックが約半数）。
     - from: 1990
       main: catholic
       minor: evangelical
@@ -2909,6 +2955,13 @@
       main: catholic
       minor: other
       note: 1576 年にポルトガルが建設した奴隷貿易の港。1641–48 年はオランダが占領。
+    - from: 1900
+      main: catholic
+      note: 町の住民の大多数がカトリックの洗礼を受けていた。
+    - from: 1950
+      main: catholic
+      minor: evangelical
+      note: メソジスト（ンブンドゥ人）・バプテストに加え、20 世紀末からはペンテコステ派が増えた。伝統的な信仰を主とする住民は数％。
 - id: rel_af_angola_ovimbundu
   name: 中央高原（オヴィンブンドゥ人）
   select:
@@ -3153,8 +3206,11 @@
   timeline:
     - from: 1648
       main: other
+      note: ザンベジ川下流のポルトガル人・混血の大領主（プラゾ）の領地。キリスト教徒はプラゾの領主・混血の住民とケリマネ・セナの町の数千人規模。
+    - from: 1925
+      main: other
       minor: catholic
-      note: ザンベジ川下流のポルトガル人・混血の大領主（プラゾ）の領地。
+      note: 20 世紀前半、カトリックの伝道会の学校が広がった。
     - from: 1950
       main: catholic
       minor: other
@@ -3165,8 +3221,11 @@
   timeline:
     - from: 1648
       main: other
+      note: テテ・セナ（ポルトガルの内陸の拠点）。ムタパ王国の東部。キリスト教徒は町とプラゾの数千人規模。
+    - from: 1925
+      main: other
       minor: catholic
-      note: テテ・セナ（ポルトガルの内陸の拠点）。ムタパ王国の東部。
+      note: 20 世紀前半、カトリックの伝道会の学校が広がった。
     - from: 1950
       main: catholic
       minor: other
@@ -3287,10 +3346,10 @@
     - from: 1648
       main: other
       note: ヘレロ人・ダマラ人・サン人の伝統的な信仰。
-    - from: 1900
+    - from: 1910
       main: lutheran
       minor: other
-      note: ライン伝道会（ルター派）。1904–08 年のヘレロ・ナマの蜂起をドイツ軍が鎮圧し、多くの住民が殺された（ヘレロ・ナマの虐殺）。
+      note: ライン伝道会（ルター派）。ナマ人の改宗は 1870 年ごろからと早いが、ヘレロ人の多くが改宗したのは戦争と収容所の後。1904–08 年のヘレロ・ナマの蜂起をドイツ軍が鎮圧し、多くの住民が殺された（ヘレロ・ナマの虐殺）。
       source: "https://ja.wikipedia.org/wiki/ヘレロ・ナマクア虐殺"
     - from: 1940
       main: lutheran
@@ -3349,13 +3408,13 @@
       minor: evangelical
       note: メソジスト・アメリカン・ボード・ノルウェー伝道会・イギリス国教会の伝道。
     - from: 1940
-      main: african_initiated
-      minor: other
-      note: イザヤ・シェンベのナザレ・バプテスト教会（1910）などアフリカ独立教会が広がった。
+      main: other
+      minor: african_initiated
+      note: イザヤ・シェンベのナザレ・バプテスト教会（1910）などアフリカ独立教会が広がったが、1946・1951 年の国勢調査では独立教会の信徒はアフリカ人の1割台で、宣教師の教会（メソジスト・聖公会・ルター派・カトリック）と伝統的な信仰の方が多かった。
     - from: 1970
       main: african_initiated
       minor: evangelical
-      note: 2001 年の国勢調査では、独立教会（シオン派・使徒派など）が黒人のキリスト教徒の最大の集団。
+      note: 1970〜80 年代に独立教会が黒人の最大の集団になった。2001 年の国勢調査では、独立教会（シオン派・使徒派など）が黒人のキリスト教徒の最大の集団。
       source: "https://ja.wikipedia.org/wiki/アフリカ独立教会"
 - id: rel_af_eastern_cape_xhosa
   name: 東ケープ（コサ人）
