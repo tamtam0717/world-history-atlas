@@ -1308,6 +1308,15 @@
     owner: "south_sudan"
     cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
     source: "https://ja.wikipedia.org/wiki/南スーダン"
+  - from: 2013
+    owner: "south_sudan"
+    certainty: "uncertain"
+    cause: "南スーダン内戦（12月〜）。キール大統領派とマシャール前副大統領の反政府派（SPLM-IO）が戦い、ボル・ベンティウ・マラカルなど上ナイルの町が何度も奪い合われる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
+  - from: 2019
+    owner: "south_sudan"
+    cause: "再活性化和平合意（2018年9月）ののち停戦が続き、2020年2月に統一暫定政府ができる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
 
 - id: ssd_jonglei_unity
   name: "ジョングレイ・ユニティ（ヌエル・ディンカ）"
@@ -1353,6 +1362,15 @@
     owner: "south_sudan"
     cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
     source: "https://ja.wikipedia.org/wiki/南スーダン"
+  - from: 2013
+    owner: "south_sudan"
+    certainty: "uncertain"
+    cause: "南スーダン内戦（12月〜）。キール大統領派とマシャール前副大統領の反政府派（SPLM-IO）が戦い、ボル・ベンティウ・マラカルなどジョングレイ・ユニティの町が何度も奪い合われる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
+  - from: 2019
+    owner: "south_sudan"
+    cause: "再活性化和平合意（2018年9月）ののち停戦が続き、2020年2月に統一暫定政府ができる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
 
 - id: eri_massawa
   name: "マッサワ・ダフラク諸島"
@@ -4518,9 +4536,9 @@
     source: "https://ja.wikipedia.org/wiki/ケニア"
 
 - id: ken_north
-  name: "ケニア北部（北部辺境地区・トゥルカナ）"
+  name: "ケニア北部（北部辺境地区）"
   select:
-    pieces: [KEN-Turkana, KEN-Marsabit, KEN-Samburu, KEN-Isiolo, KEN-Wajir, KEN-Mandera, KEN-Garissa]
+    pieces: [KEN-Marsabit, KEN-Samburu, KEN-Isiolo, KEN-Wajir, KEN-Mandera, KEN-Garissa]
   timeline:
   - from: 1648
     owner: null
@@ -4547,12 +4565,43 @@
   - from: 1926
     owner: "britain"
     label: "ケニア植民地（北部辺境地区）"
-    cause: "北部辺境地区の行政が整う。トゥルカナがウガンダから移される（1926年）"
+    cause: "北部辺境地区の行政が整う"
     source: "https://en.wikipedia.org/wiki/Northern_Frontier_District"
   - from: 1963
     owner: "kenya"
     cause: "ケニアが独立（12月12日）。ソマリ人の分離運動によるシフタ戦争（1963–67年）"
     source: "https://en.wikipedia.org/wiki/Shifta_War"
+
+- id: ken_turkana
+  name: "トゥルカナ（トゥルカナ湖の西）"
+  select:
+    pieces: [KEN-Turkana]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "トゥルカナ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Turkana_County"
+  - from: 1891
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英伊議定書（3月）でジュバ川より西がイギリスの勢力圏とされる"
+    source: "https://en.wikipedia.org/wiki/Northern_Frontier_District"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領（のちのルドルフ州）"
+    cause: "ウガンダ保護領の東部の一部とされる。1902年に東部州の大半が東アフリカ保護領に移ったあともトゥルカナ湖の西はウガンダに残り、ルドルフ州となる"
+    source: "https://en.wikipedia.org/wiki/Rudolf_Province"
+  - from: 1926
+    owner: "britain"
+    label: "ケニア植民地（トゥルカナ）"
+    cause: "ルドルフ州がウガンダからケニア植民地に移される"
+    source: "https://en.wikipedia.org/wiki/Rudolf_Province"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
 
 - id: uga_buganda_core
   name: "ブガンダ中心部（キャドンド・ブシロ・ブレメジ）"
