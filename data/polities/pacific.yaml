@@ -1,0 +1,347 @@
+# O2 太平洋の島々（PNG SLB VUT NCL FJI WSM TON KIR TUV NRU MHL FSM PLW PYF WLF COK NIU TKL PCN UMI CLP）の政体（1648–2025）
+# 地域と所属の変遷は data/regions/pacific.yaml（カウアイ島・マヌア諸島だけは data/regions/usa.yaml）。
+# 植民地・委任統治の時期は統治国（britain・france・german_empire・spain・japan・usa・australia・new_zealand）の政体を使い、元首は書かない。
+# 独立後の国は、儀礼的な元首（イギリス国王・大統領など）ではなく実権をもつ首相・大統領を書く（主な人物だけ）。
+
+# ================================================================ ポリネシア の王国
+
+- id: kauai
+  name: カウアイ王国
+  short: カウアイ
+  color: "#b9d7a8"
+  kind: 王国
+  rulers:
+    - {name: カウムアリイ, title: カウアイ王, from: 1795, to: 1810, note: 1794年ごろ父カエオの後を継いだ。1810年にカメハメハ1世に服属し、その後も1821年までカウアイを治めた, source: "https://en.wikipedia.org/wiki/Kaumualiʻi"}
+  periods:
+    - from: 1795
+      to: 1810
+      text: カメハメハ1世がハワイ・マウイ・オアフを征服した後も、カウアイ島とニイハウ島はカウムアリイ王のもとで独立を保った。カメハメハの侵攻は嵐（1796年）と疫病（1804年）で失敗し、1810年にカウムアリイが服属してハワイ諸島が統一された。
+  source: "https://en.wikipedia.org/wiki/Kaumualiʻi"
+
+- id: tonga
+  name: トンガ王国
+  names:
+    - {to: 1844, name: トンガ（トゥイ・トンガとトゥイ・カノクポルの国）, short: トンガ, kind: 首長国（聖なる王と世俗の王）}
+  short: トンガ
+  color: "#e4b7a0"
+  kind: 王国（立憲君主政）
+  home_iso: [TON]
+  rulers:
+    - {name: ジョージ・トゥポウ1世（タウファアハウ）, title: トンガ王, from: 1845, to: 1893, note: 内戦を終わらせて諸島を統一し、1875年に憲法を定めた, source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ1世"}
+    - {name: ジョージ・トゥポウ2世, title: トンガ王, from: 1893, to: 1918, note: 1900年にイギリスと友好条約を結び保護国となった, source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ2世"}
+    - {name: サローテ・トゥポウ3世, title: トンガ女王, from: 1918, to: 1965, source: "https://ja.wikipedia.org/wiki/サローテ・トゥポウ3世"}
+    - {name: タウファアハウ・トゥポウ4世, title: トンガ王, from: 1965, to: 2006, note: 1970年に保護国の地位を終わらせた, source: "https://ja.wikipedia.org/wiki/タウファアハウ・トゥポウ4世"}
+    - {name: ジョージ・トゥポウ5世, title: トンガ王, from: 2006, to: 2012, note: 2010年の選挙改革で国王の権限を縮めた, source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ5世"}
+    - {name: トゥポウ6世, title: トンガ王, from: 2012, source: "https://ja.wikipedia.org/wiki/トゥポウ6世"}
+  periods:
+    - from: 1648
+      to: 1798
+      text: 神聖な王トゥイ・トンガと、実際の政治を行うトゥイ・カノクポルが並び立つ首長国。かつてはサモアやフィジーの一部にも影響を及ぼした。1773–77年にクックが訪れ「フレンドリー諸島」と呼んだ。
+    - from: 1799
+      to: 1844
+      text: トゥイ・カノクポルの暗殺（1799年）をきっかけに、首長たちが争う内戦が半世紀続いた。1820年代からメソジストの宣教師が布教し、キリスト教に改宗したタウファアハウが勢力を広げた。
+    - from: 1845
+      to: 1899
+      text: タウファアハウがジョージ・トゥポウ1世として即位して諸島を統一し、1875年に憲法を定めて近代的な立憲王国とした。列強の太平洋分割の中で、独立を保った数少ない国。
+    - from: 1900
+      to: 1969
+      text: 1900年の友好条約でイギリスの保護国となり、外交はイギリスが握ったが、王政と内政の自治は続いた。サローテ女王が長く治めた。
+    - from: 1970
+      text: 1970年に保護国の地位が終わり、イギリス連邦の中の独立王国となった。2006年の首都ヌクアロファの暴動の後、2010年の改革で議会の多くが選挙で選ばれるようになった。
+  source: "https://ja.wikipedia.org/wiki/トンガ"
+
+- id: tahiti
+  name: タヒチ王国
+  short: タヒチ
+  color: "#ecc9a9"
+  kind: 王国（ポマレ朝）
+  home_iso: [PYF]
+  rulers:
+    - {name: ポマレ1世, title: タヒチ王, from: 1788, to: 1791, note: ヨーロッパの船から得た銃で勢力を広げた。1791年に子に譲ったが、1803年まで実権を持った, source: "https://ja.wikipedia.org/wiki/ポマレ1世"}
+    - {name: ポマレ2世, title: タヒチ王, from: 1791, to: 1821, note: 1815年のフェイ・ピの戦いで対立する首長を破ってタヒチを統一し、キリスト教に改宗した, source: "https://ja.wikipedia.org/wiki/ポマレ2世"}
+    - {name: ポマレ3世, title: タヒチ王, from: 1821, to: 1827, source: "https://en.wikipedia.org/wiki/Pōmare_III"}
+    - {name: ポマレ4世, title: タヒチ女王, from: 1827, to: 1877, note: 1842年にフランスの保護国とされ、タヒチ戦争（1844–47年）で抵抗した, source: "https://ja.wikipedia.org/wiki/ポマレ4世"}
+    - {name: ポマレ5世, title: タヒチ王, from: 1877, to: 1880, note: 1880年に王国をフランスに譲った, source: "https://ja.wikipedia.org/wiki/ポマレ5世"}
+  periods:
+    - from: 1788
+      to: 1814
+      text: タヒチ島の首長ポマレが、ヨーロッパの船乗りから得た銃とバウンティ号の反乱者の助けで勢力を広げ、王国を作った。1797年にロンドン伝道協会の宣教師が来た。
+    - from: 1815
+      to: 1841
+      text: ポマレ2世がタヒチとモーレア島を統一し、キリスト教の王国とした（1819年に法典）。宣教師とイギリスの影響が強かった。
+    - from: 1842
+      to: 1880
+      text: 1842年にフランスの提督デュプティ＝トゥアールが保護国化を押しつけた。ポマレ4世はイギリスの助けを求めて抵抗し（タヒチ戦争 1844–47年）、敗れて保護国を受け入れた。1880年にポマレ5世が王国をフランスに譲った。
+  source: "https://ja.wikipedia.org/wiki/タヒチ王国"
+
+- id: samoa_kingdom
+  name: サモア王国
+  short: サモア
+  color: "#c3dbb5"
+  kind: 王国（首長たちが王を立てる）
+  rulers:
+    - {name: マリエトア・ラウペパ, title: サモア王, from: 1875, to: 1887, note: 王位はマリエトア家・トゥプア家などの大首長の間で争われた。要確認, source: "https://en.wikipedia.org/wiki/Malietoa_Laupepa"}
+    - {name: トゥプア・タマセセ・ティティマエア, title: サモア王, from: 1887, to: 1889, note: ドイツが立てた王, source: "https://en.wikipedia.org/wiki/Tupua_Tamasese_Titimaea"}
+    - {name: マリエトア・ラウペパ（復位）, title: サモア王, from: 1889, to: 1898, note: ベルリン条約で英米独の三国が王と認めた, source: "https://en.wikipedia.org/wiki/Malietoa_Laupepa"}
+    - {name: マリエトア・タヌマフィリ1世, title: サモア王, from: 1898, to: 1899, note: マタアファ・ヨセフォとの王位争い（第2次サモア内戦）の中で英米が支持した, source: "https://en.wikipedia.org/wiki/Malietoa_Tanumafili_I"}
+  periods:
+    - from: 1873
+      to: 1888
+      text: 首長たちがムリヌウ（アピア近郊）に政府を置いて王を立てたが、マリエトア家とトゥプア家などの王位争いが続いた。アピアに領事を置くイギリス・アメリカ・ドイツが、プランテーションと港をめぐって介入した。
+    - from: 1889
+      to: 1899
+      text: 英米独の艦隊がアピアでにらみ合った末、1889年のベルリン条約で三国の共同の保護のもと王国の独立が認められた。王位争いの内戦が再び起こり、1899年の三国協定でサモアは東西に分割された。
+  note: 王国が成立した年は諸説ある（ここでは首長たちが中央の政府を置いた1873年）。地図では境界と支配があいまいなので斜線（uncertain）で示す。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Samoa"
+
+- id: fiji_kingdom
+  name: フィジー王国
+  short: フィジー王国
+  color: "#d9c48f"
+  kind: 王国（立憲君主政）
+  rulers:
+    - {name: ザコンバウ（セル・エペニサ・ザコンバウ）, title: フィジー王（トゥイ・ヴィティ）, from: 1871, to: 1874, note: バウの大首長。1874年に諸島をイギリスに譲った, source: "https://ja.wikipedia.org/wiki/ザコンバウ"}
+  periods:
+    - from: 1871
+      to: 1874
+      text: バウの大首長ザコンバウが、白人の入植者の支持を得て、フィジー全体を治める立憲王国を作った。財政難と、内陸の部族やヨーロッパ人入植者との対立で行き詰まり、1874年にイギリスに諸島を譲った。
+  note: 1871年以前は、バウ・レワ・カカウドロヴェなどの首長国が争い、東のラウ諸島はトンガ人のマアフが治めた（地図では所属なし）。
+  source: "https://ja.wikipedia.org/wiki/フィジー王国"
+
+# ================================================================ 共同統治
+
+- id: new_hebrides
+  name: ニューヘブリディーズ（英仏共同統治領）
+  short: ニューヘブリディーズ
+  color: "#c6c9e0"
+  kind: 英仏の共同統治領
+  periods:
+    - from: 1906
+      to: 1980
+      text: イギリスとフランスがひとつの植民地を共同で治めた珍しい例。両国の行政・警察・法律・学校が並び立ち、住民の多くはどちらの国籍も持たなかった。1970年代に独立運動（ヴァヌアアク党）が強まった。
+  note: 1887年からは英仏の合同海軍委員会が入植者の争いを取りしまるだけで、統治はなかった。
+  source: "https://ja.wikipedia.org/wiki/ニューヘブリディーズ"
+
+# ================================================================ 独立後の国（メラネシア）
+
+- id: papua_new_guinea
+  name: パプアニューギニア独立国
+  short: パプアニューギニア
+  color: "#d6b38f"
+  kind: 立憲君主政（イギリス連邦王国）
+  home_iso: [PNG]
+  rulers:
+    - {name: マイケル・ソマレ, title: 首相, from: 1975, to: 1980, note: 「建国の父」。1982–85年・2002–11年にも首相, source: "https://ja.wikipedia.org/wiki/マイケル・ソマレ"}
+    - {name: ジュリアス・チャン, title: 首相, from: 1980, to: 1982, note: 1994–97年にも首相（サンドライン事件で辞任）, source: "https://ja.wikipedia.org/wiki/ジュリアス・チャン"}
+    - {name: マイケル・ソマレ, title: 首相, from: 1982, to: 1985, source: "https://ja.wikipedia.org/wiki/マイケル・ソマレ"}
+    - {name: パイアス・ウィンティ, title: 首相, from: 1985, to: 1988, source: "https://en.wikipedia.org/wiki/Paias_Wingti"}
+    - {name: ラビー・ナマリウ, title: 首相, from: 1988, to: 1992, source: "https://en.wikipedia.org/wiki/Rabbie_Namaliu"}
+    - {name: パイアス・ウィンティ, title: 首相, from: 1992, to: 1994, source: "https://en.wikipedia.org/wiki/Paias_Wingti"}
+    - {name: ジュリアス・チャン, title: 首相, from: 1994, to: 1997, source: "https://ja.wikipedia.org/wiki/ジュリアス・チャン"}
+    - {name: ビル・スケート, title: 首相, from: 1997, to: 1999, source: "https://en.wikipedia.org/wiki/Bill_Skate"}
+    - {name: メケレ・モラウタ, title: 首相, from: 1999, to: 2002, source: "https://en.wikipedia.org/wiki/Mekere_Morauta"}
+    - {name: マイケル・ソマレ, title: 首相, from: 2002, to: 2011, source: "https://ja.wikipedia.org/wiki/マイケル・ソマレ"}
+    - {name: ピーター・オニール, title: 首相, from: 2011, to: 2019, source: "https://ja.wikipedia.org/wiki/ピーター・オニール"}
+    - {name: ジェームズ・マラペ, title: 首相, from: 2019, source: "https://ja.wikipedia.org/wiki/ジェームズ・マラペ"}
+  periods:
+    - from: 1975
+      to: 1987
+      text: 1975年にオーストラリアから独立した。800以上の言語が話される多民族の国で、議会制民主主義を保ったが、首相の交代が多い。独立の直前にブーゲンヴィルが分離を宣言した。
+    - from: 1988
+      to: 1998
+      text: パングナ銅山をめぐってブーゲンヴィル島で反乱が起こり、ブーゲンヴィル革命軍（BRA）が島の大部分を支配する内戦（ブーゲンヴィル紛争）となった。1997年に休戦し、1998年に停戦が成立した。
+    - from: 1999
+      text: 2001年のブーゲンヴィル和平協定で自治政府が置かれ（2005年）、2019年の住民投票では独立賛成が97％をこえた。豊かな鉱物・天然ガス資源と、都市の治安・高地の部族紛争が課題。
+  source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: solomon_islands
+  name: ソロモン諸島
+  short: ソロモン諸島
+  color: "#a9cfc4"
+  kind: 立憲君主政（イギリス連邦王国）
+  home_iso: [SLB]
+  rulers:
+    - {name: ピーター・ケニロレア, title: 首相, from: 1978, to: 1981, source: "https://en.wikipedia.org/wiki/Peter_Kenilorea"}
+    - {name: ソロモン・ママロニ, title: 首相, from: 1981, to: 1984, note: 1989–93年・1994–97年にも首相, source: "https://en.wikipedia.org/wiki/Solomon_Mamaloni"}
+    - {name: バーソロミュー・ウルファアル, title: 首相, from: 1997, to: 2000, note: 民族対立の中で武装勢力に辞任させられた, source: "https://en.wikipedia.org/wiki/Bartholomew_Ulufa%27alu"}
+    - {name: アラン・ケマケザ, title: 首相, from: 2001, to: 2006, note: 2003年にオーストラリア主導の地域支援ミッション（RAMSI）を招いた, source: "https://en.wikipedia.org/wiki/Allan_Kemakeza"}
+    - {name: マナセ・ソガバレ, title: 首相, from: 2019, to: 2024, note: 2000–01年・2006–07年・2014–17年にも首相。2019年に台湾と断交して中国と国交を結んだ, source: "https://en.wikipedia.org/wiki/Manasseh_Sogavare"}
+    - {name: ジェレマイア・マネレ, title: 首相, from: 2024, source: "https://en.wikipedia.org/wiki/Jeremiah_Manele"}
+  periods:
+    - from: 1978
+      to: 1997
+      text: 1978年にイギリスから独立した。太平洋戦争の激戦地ガダルカナル島に首都ホニアラがある。
+    - from: 1998
+      to: 2017
+      text: ガダルカナル島の住民とマライタ島からの移住者の対立が武力衝突になり（民族紛争 1998–2003年）、2000年には首相が武装勢力に辞任させられた。2003–17年、オーストラリア・ニュージーランドなどの地域支援ミッション（RAMSI）が治安を回復した。
+    - from: 2018
+      text: 2019年に台湾と断交して中国と国交を結び、2022年に中国と安全保障協定を結んで、オーストラリア・アメリカとの間で注目された。
+  source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+
+- id: vanuatu
+  name: ヴァヌアツ共和国
+  short: ヴァヌアツ
+  color: "#b8c99a"
+  kind: 共和国（議院内閣制）
+  home_iso: [VUT]
+  rulers:
+    - {name: ウォルター・リニ, title: 首相, from: 1980, to: 1991, note: 英国国教会の牧師で、独立運動のヴァヌアアク党の指導者, source: "https://en.wikipedia.org/wiki/Walter_Lini"}
+    - {name: マキシム・カルロ・コーマン, title: 首相, from: 1991, to: 1995, note: フランス語系の穏健派連合（UMP）, source: "https://en.wikipedia.org/wiki/Maxime_Carlot_Korman"}
+  periods:
+    - from: 1980
+      text: 1980年7月に英仏の共同統治から独立した。独立の直前にエスピリトゥサント島でフランス系入植者と結んだナグリアメル運動が分離を宣言し（ココナッツ戦争）、パプアニューギニア軍の助けで鎮圧した。英語系とフランス語系の政党が争い、連立政権の交代が多い。
+  source: "https://ja.wikipedia.org/wiki/バヌアツ"
+
+- id: fiji
+  name: フィジー共和国
+  names:
+    - {to: 1986, name: フィジー, short: フィジー, kind: 立憲君主政（イギリス連邦王国）}
+  short: フィジー
+  color: "#e3cf93"
+  kind: 共和国
+  home_iso: [FJI]
+  rulers:
+    - {name: カミセセ・マラ, title: 首相, from: 1970, to: 1987, note: 1993–2000年は大統領, source: "https://ja.wikipedia.org/wiki/カミセセ・マラ"}
+    - {name: シティヴェニ・ランブカ, title: 軍の指導者・首相, from: 1987, to: 1999, note: 1987年に2度のクーデタを起こした。1992–99年は首相（1987–92年は軍の後見のもとマラが首相）, source: "https://ja.wikipedia.org/wiki/シティヴェニ・ランブカ"}
+    - {name: マヘンドラ・チョードリー, title: 首相, from: 1999, to: 2000, note: インド系初の首相。2000年のクーデタで人質にされ失脚, source: "https://en.wikipedia.org/wiki/Mahendra_Chaudhry"}
+    - {name: ライセニア・ガラセ, title: 首相, from: 2000, to: 2006, source: "https://en.wikipedia.org/wiki/Laisenia_Qarase"}
+    - {name: フランク・バイニマラマ, title: 軍司令官・首相, from: 2006, to: 2022, note: 2006年のクーデタで実権を握り、2014年の選挙で首相, source: "https://ja.wikipedia.org/wiki/フランク・バイニマラマ"}
+    - {name: シティヴェニ・ランブカ, title: 首相, from: 2022, source: "https://ja.wikipedia.org/wiki/シティヴェニ・ランブカ"}
+  periods:
+    - from: 1970
+      to: 1986
+      text: 1970年にイギリスから独立した。植民地時代にサトウキビ農園の契約労働者として来たインド系の子孫が人口の半分近くを占め、先住のフィジー系との関係が政治の大きな問題だった。
+    - from: 1987
+      to: 2005
+      text: インド系の支持を受けた政権が生まれると、1987年にランブカがクーデタを起こして共和政に移り、イギリス連邦の資格を一時失った。2000年にも民間人スペイトのクーデタが起こった。
+    - from: 2006
+      text: 2006年にバイニマラマ司令官がクーデタで実権を握り、2013年の新憲法で民族によらない選挙制度にした。2022年の選挙で政権が交代した。
+  source: "https://ja.wikipedia.org/wiki/フィジー"
+
+# ================================================================ 独立後の国（ポリネシア）
+
+- id: samoa
+  name: サモア独立国
+  names:
+    - {to: 1996, name: 西サモア独立国, short: 西サモア, kind: 立憲君主政（首長による元首）}
+  short: サモア
+  color: "#b2d6a3"
+  kind: 議院内閣制（首長による元首）
+  home_iso: [WSM]
+  rulers:
+    - {name: フィアメ・マタアファ・ムリヌウ2世, title: 首相, from: 1962, to: 1970, note: 1973–75年にも首相, source: "https://en.wikipedia.org/wiki/Fiam%C4%93_Mata%CA%BBafa_Faumuina_Mulinu%CA%BBu_II"}
+    - {name: トゥイラエパ・サイレレ・マリエレガオイ, title: 首相, from: 1998, to: 2021, source: "https://ja.wikipedia.org/wiki/トゥイラエパ・サイレレ・マリエレガオイ"}
+    - {name: フィアメ・ナオミ・マタアファ, title: 首相, from: 2021, to: 2025, note: サモア初の女性首相, source: "https://ja.wikipedia.org/wiki/フィアメ・ナオミ・マタアファ"}
+    - {name: ラアウリ・レウアテア・シュミット, title: 首相, from: 2025, note: 2025年の総選挙の後に就任。要確認, source: "https://en.wikipedia.org/wiki/La%CA%BBauli_Leuatea_Schmidt"}
+  periods:
+    - from: 1962
+      text: 1962年1月1日、ニュージーランドの信託統治から独立した。太平洋の島々で最初の独立国。元首は大首長から選ばれ、議員も長く首長（マタイ）に限られた（1990年に普通選挙）。1997年に国名を「サモア独立国」とした。
+  source: "https://ja.wikipedia.org/wiki/サモア"
+
+- id: cook_islands
+  name: クック諸島
+  short: クック諸島
+  color: "#cfe0b0"
+  kind: ニュージーランドとの自由連合のもとの自治国
+  home_iso: [COK]
+  rulers:
+    - {name: アルバート・ヘンリー, title: 首相, from: 1965, to: 1978, source: "https://en.wikipedia.org/wiki/Albert_Henry"}
+  periods:
+    - from: 1965
+      text: 1965年にニュージーランドと自由連合の関係を結んで内政の自治を得た。住民はニュージーランドの国籍を持ち、外交・防衛でニュージーランドの助けを受ける。近年は独自の外交を広げている。
+  source: "https://ja.wikipedia.org/wiki/クック諸島"
+
+- id: niue
+  name: ニウエ
+  short: ニウエ
+  color: "#d4e3b8"
+  kind: ニュージーランドとの自由連合のもとの自治国
+  home_iso: [NIU]
+  periods:
+    - from: 1974
+      text: 1974年にニュージーランドと自由連合の関係を結んで自治を得た。住民の多くはニュージーランドに移り住んでいる。
+  source: "https://ja.wikipedia.org/wiki/ニウエ"
+
+- id: tuvalu
+  name: ツバル
+  short: ツバル
+  color: "#a8cbd9"
+  kind: 立憲君主政（イギリス連邦王国）
+  home_iso: [TUV]
+  periods:
+    - from: 1978
+      text: エリス諸島がギルバート諸島から分かれ（1975年）、1978年にツバルとして独立した。海抜が低く、海面上昇の影響を強く受ける国として知られる。2023年にオーストラリアと移住の受け入れを含む条約を結んだ。
+  source: "https://ja.wikipedia.org/wiki/ツバル"
+
+# ================================================================ 独立後の国（ミクロネシア）
+
+- id: kiribati
+  name: キリバス共和国
+  short: キリバス
+  color: "#9fc3d6"
+  kind: 共和国（大統領制）
+  home_iso: [KIR]
+  rulers:
+    - {name: イエレミア・タバイ, title: 大統領, from: 1979, to: 1991, source: "https://en.wikipedia.org/wiki/Ieremia_Tabai"}
+    - {name: アノテ・トン, title: 大統領, from: 2003, to: 2016, note: 海面上昇の危機を国際社会に訴えた, source: "https://ja.wikipedia.org/wiki/アノテ・トン"}
+    - {name: タネス・マアマウ, title: 大統領, from: 2016, note: 2019年に台湾と断交して中国と国交を結んだ, source: "https://en.wikipedia.org/wiki/Taneti_Maamau"}
+  periods:
+    - from: 1979
+      text: 1979年にギルバート諸島がイギリスから独立した。同じ年のタラワ条約で、アメリカはフェニックス諸島・ライン諸島の領有の主張を取り下げた。東西約4000km にわたる海に島々が散らばり、日付変更線は1995年に国の東端に移された。
+  source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: nauru
+  name: ナウル共和国
+  short: ナウル
+  color: "#c1b6d8"
+  kind: 共和国（議院内閣制の大統領）
+  home_iso: [NRU]
+  rulers:
+    - {name: ハマー・デロバート, title: 大統領, from: 1968, to: 1976, note: 独立運動の指導者。1978–89年にも大統領, source: "https://en.wikipedia.org/wiki/Hammer_DeRoburt"}
+  periods:
+    - from: 1968
+      text: 1968年1月に独立した。リン鉱石の輸出で一時は1人あたりの所得が世界有数の国になったが、資源が尽きて経済が行き詰まった。2001年からオーストラリアへの難民申請者の収容施設を受け入れた。
+  source: "https://ja.wikipedia.org/wiki/ナウル"
+
+- id: marshall_islands
+  name: マーシャル諸島共和国
+  short: マーシャル諸島
+  color: "#b3c6e6"
+  kind: 共和国（アメリカとの自由連合）
+  home_iso: [MHL]
+  rulers:
+    - {name: アマタ・カブア, title: 大統領, from: 1979, to: 1996, source: "https://en.wikipedia.org/wiki/Amata_Kabua"}
+    - {name: ヒルダ・ハイネ, title: 大統領, from: 2016, to: 2020, note: 2024年から再び大統領, source: "https://en.wikipedia.org/wiki/Hilda_Heine"}
+  periods:
+    - from: 1979
+      text: 1979年に自治政府ができ、1986年のアメリカとの自由連合盟約の発効で独立した（国連加盟 1991年）。防衛はアメリカが担い、クワジャリン環礁にはアメリカ軍のミサイル試験場がある。ビキニ・エニウェトク環礁の核実験の被害の補償が今も問題になっている。
+  source: "https://ja.wikipedia.org/wiki/マーシャル諸島"
+
+- id: micronesia
+  name: ミクロネシア連邦
+  short: ミクロネシア連邦
+  color: "#a6d0c0"
+  kind: 連邦共和国（アメリカとの自由連合）
+  home_iso: [FSM]
+  rulers:
+    - {name: トシオ・ナカヤマ, title: 大統領, from: 1979, to: 1987, note: 日本人の父をもつ初代大統領, source: "https://ja.wikipedia.org/wiki/トシオ・ナカヤマ"}
+  periods:
+    - from: 1979
+      text: 1979年にヤップ・チューク・ポンペイ・コスラエの4州で憲法を定め、1986年のアメリカとの自由連合盟約の発効で独立した（国連加盟 1991年）。防衛はアメリカが担う。
+  source: "https://ja.wikipedia.org/wiki/ミクロネシア連邦"
+
+- id: palau
+  name: パラオ共和国
+  short: パラオ
+  color: "#b9dccc"
+  kind: 共和国（アメリカとの自由連合）
+  home_iso: [PLW]
+  rulers:
+    - {name: ハルオ・レメリク, title: 大統領, from: 1981, to: 1985, note: 在任中に暗殺された, source: "https://en.wikipedia.org/wiki/Haruo_Remeliik"}
+    - {name: クニオ・ナカムラ, title: 大統領, from: 1993, to: 2001, note: 独立を実現した, source: "https://ja.wikipedia.org/wiki/クニオ・ナカムラ"}
+    - {name: トミー・レメンゲサウ, title: 大統領, from: 2001, to: 2009, note: 2013–21年にも大統領, source: "https://ja.wikipedia.org/wiki/トミー・レメンゲサウ"}
+    - {name: スランゲル・ウィップス・ジュニア, title: 大統領, from: 2021, source: "https://en.wikipedia.org/wiki/Surangel_Whipps_Jr."}
+  periods:
+    - from: 1981
+      text: 1981年に世界で初めて非核条項をもつ憲法で自治政府を作った。この条項とアメリカとの自由連合盟約が対立して住民投票を何度もくり返し、1994年にようやく独立した。日本の委任統治時代の影響で日本語由来の言葉が多く残る。
+  source: "https://ja.wikipedia.org/wiki/パラオ"

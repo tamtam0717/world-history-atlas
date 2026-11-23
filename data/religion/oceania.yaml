@@ -1,0 +1,1175 @@
+# 宗教の分布：オセアニア（オーストラリア・ニュージーランド・ニューギニア・太平洋の島々）1648–2025（O3 担当、2026-11-23）
+# 形式は docs/religion-format.md（「オセアニア」の節）。main = 住民の多数派、minor = 2〜3割以上の少数派。
+# - 先住の信仰（祖先・精霊・マナとタプ〈タブー〉の信仰など）は other。宣教で住民の多数がキリスト教徒になった年から宗派の色にする。
+#   ポリネシアは 19 世紀前半に首長・王の改宗とともに急速に、メラネシアは 19 世紀後半〜20 世紀、ニューギニア高地は 1950〜70 年代。
+# - 宗派の色は伝道会の系統で：ロンドン伝道協会（LMS。会衆派）・アメリカン・ボード（ABCFM。会衆派）・長老派・パリ福音伝道会は reformed、
+#   メソジスト（ウェスレー派）・南洋福音伝道会（SSEM）・セブンスデー・アドベンチスト・福音派の伝道会は evangelical、
+#   イングランド国教会の伝道（CMS・メラネシア伝道会）は anglican、ルター派の伝道（ノイエンデッテルスアウ・ヘルマンスブルク）は lutheran、
+#   マリスト会・聖心会（MSC）・神言会（SVD）・ピクプス会・カプチン会は catholic。合同教会（オーストラリア合同教会 1977、
+#   パプアニューギニア合同教会 1968 など）は、もとの最大の教派の色のまま note に書く。
+# - 入植者の宗派：オーストラリア・ニュージーランドはイングランド国教会（anglican）が最大、アイルランド系のカトリックと
+#   スコットランド系の長老派（ニュージーランドのオタゴ・サウスランドでは多数）が続く。オーストラリアでは 1970〜90 年代に
+#   カトリックが国教会を上回った（全国では 1986 年の国勢調査）。
+# - フィジーのインド系はヒンドゥー教（約 8 割）とイスラーム（約 15％）。
+# - 世俗化（secular.yaml の sec_australia・sec_new_zealand）：両国とも 1970 年代から「無宗教」が増え、2020 年代には住民の 4〜5 割。
+#   先住民が多数の地域（ノーザンテリトリー東部・南オーストラリア最西部）は secular: 0 で打ち消している。
+# - 言語（data/language/oceania.yaml）と同じ地域の分け方で、入植者が多数になった年などはなるべく同じ年に切り替えている。
+# - 無人島には値を入れない（言語と同じ）。
+
+# ======== オーストラリア ========
+- id: rel_nsw
+  name: ニューサウスウェールズ（シドニー・キャンベラを含む）
+  select:
+    adm1: ["AUS/New South Wales", "AUS/Australian Capital Territory"]
+    pieces: [AUS-Other_Territories]
+  timeline:
+    - from: 1648
+      main: other
+      note: オーストラリア先住民（アボリジニ）の信仰。祖先の精霊が大地と生き物をつくった「ドリーミング（夢の時）」の物語と儀礼が、土地との結びつきを支えた。
+      source: "https://ja.wikipedia.org/wiki/ドリームタイム"
+    - from: 1830
+      main: anglican
+      minor: catholic
+      note: 流刑植民地の国教会（イングランド国教会）と、流刑囚の約 3 割を占めたアイルランド人のカトリック。1836 年の教会法で各教派が平等に扱われた。
+      source: "https://en.wikipedia.org/wiki/Church_Act_1836"
+    - from: 1990
+      main: catholic
+      minor: anglican
+      note: 戦後のイタリア・ギリシア・レバノンなどからの移民で、カトリック（と正教会）が増えた。シドニーには正教会・イスラーム・仏教・ヒンドゥー教の共同体もある（それぞれ数％）。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Australia"
+- id: rel_tasmania
+  name: タスマニア
+  select:
+    adm1: ["AUS/Tasmania"]
+  timeline:
+    - from: 1648
+      main: other
+      note: タスマニア先住民（パラワ）の信仰。
+    - from: 1820
+      main: anglican
+      minor: catholic
+      note: 流刑植民地。タスマニアは今も国教会（聖公会）の比率が全国で最も高い。
+- id: rel_victoria
+  name: ヴィクトリア
+  select:
+    adm1: ["AUS/Victoria"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1840
+      main: anglican
+      minor: catholic
+      note: ゴールドラッシュ（1851–）でアイルランド人・スコットランド人（長老派）・コーンウォール人（メソジスト）が集まった。中国人の金鉱労働者の信仰は note のみ。
+    - from: 1970
+      main: catholic
+      minor: anglican
+      note: 戦後のイタリア人・ギリシア人などの移民（メルボルンは世界有数のギリシア人の都市）で、カトリックが国教会を上回った。
+- id: rel_south_australia
+  name: 南オーストラリア（東経135度以東）
+  select:
+    pieces: [AUS-South_Australia]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1840
+      main: anglican
+      minor: evangelical
+      note: 国教を置かない「非国教徒の楽園」として建てられ、メソジスト・バプテスト・会衆派が多かった。プロイセンの古ルター派の移民（1838–）がバロッサ渓谷・ハーンドルフに住み、先住民へのルター派の伝道も行った。
+      source: "https://en.wikipedia.org/wiki/Paradise_of_Dissent"
+    - from: 1980
+      main: catholic
+      minor: anglican
+- id: rel_sa_west
+  name: 南オーストラリア西部（東経132〜135度）
+  select:
+    pieces: [AUS-South_Australia_132_135E]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1900
+      main: anglican
+      minor: other
+      note: エア半島西岸の入植者。北部のアナングの土地では、長老派のアーナベラ伝道所（1937）が開かれた。
+    - from: 1950
+      main: anglican
+      minor: catholic
+    - from: 1990
+      main: catholic
+      minor: anglican
+- id: rel_sa_far_west
+  name: 南オーストラリア最西部（東経132度以西）
+  select:
+    pieces: [AUS-South_Australia_west_of_132E]
+  timeline:
+    - from: 1648
+      main: other
+      note: 西部砂漠の人々（アナング）の信仰（チュクルパ）。
+    - from: 1970
+      main: reformed
+      minor: other
+      note: 長老派（のちの合同教会）のアーナベラ伝道所（1937）と、ルター派のヤラタ伝道所（1954）・統合アボリジニ伝道会のウールディア（1933–52）。伝統的な儀礼もキリスト教と並んで続いている。
+      secular: 0
+- id: rel_western_australia
+  name: 西オーストラリア
+  select:
+    adm1: ["AUS/Western Australia"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: other
+      minor: anglican
+      note: スワン川植民地（1829）の入植者は国教会が多かった。ベネディクト会のニュー・ノーシア伝道所（1846）。
+    - from: 1895
+      main: anglican
+      minor: catholic
+    - from: 1990
+      main: catholic
+      minor: anglican
+- id: rel_albany
+  name: オールバニ（キング・ジョージ湾）
+  select:
+    pieces: [AUS-Albany]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: anglican
+    - from: 1990
+      main: anglican
+      minor: catholic
+- id: rel_queensland
+  name: クイーンズランド（東経141度以東）
+  select:
+    pieces: [AUS-Queensland]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1860
+      main: other
+      minor: anglican
+    - from: 1875
+      main: anglican
+      minor: catholic
+      note: 国教会・カトリック（アイルランド系）・長老派・メソジスト。ルター派のドイツ人の入植地もあった。
+    - from: 1990
+      main: catholic
+      minor: anglican
+- id: rel_queensland_west
+  name: クイーンズランド西部（東経141度以西）
+  select:
+    pieces: [AUS-Queensland_west_of_141E]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1930
+      main: anglican
+      minor: other
+    - from: 1960
+      main: anglican
+      minor: catholic
+    - from: 1990
+      main: catholic
+      minor: anglican
+- id: rel_torres_strait
+  name: トレス海峡諸島
+  select:
+    pieces: [AUS-Torres_Strait_Islands_1872, AUS-Torres_Strait_Islands_1879]
+  timeline:
+    - from: 1648
+      main: other
+      note: トレス海峡諸島民の信仰（マロの儀礼など）。
+    - from: 1875
+      main: reformed
+      note: 1871 年 7 月 1 日、ロンドン伝道協会がダーンリー島に上陸した（「光の到来」として今も祝われる）。
+      source: "https://en.wikipedia.org/wiki/Coming_of_the_Light"
+    - from: 1915
+      main: anglican
+      note: ロンドン伝道協会は 1915 年に伝道地を聖公会（カーペンタリア教区）に引き継いだ。
+- id: rel_nt_west
+  name: ノーザンテリトリー西部（ダーウィン・アリススプリングス）
+  select:
+    pieces: [AUS-Northern_Territory_west_of_135E]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1875
+      main: other
+      minor: chinese_folk
+      note: 金鉱と電信線・鉄道の工事に来た中国人の信仰（ダーウィンには廟が建てられた）。ルター派のヘルマンスブルク伝道所（1877、アランダ人の地）。
+      source: "https://en.wikipedia.org/wiki/Hermannsburg,_Northern_Territory"
+    - from: 1900
+      main: other
+    - from: 1950
+      main: catholic
+      minor: other
+      note: カトリックの伝道所（ティウィ諸島 1911、ワディエ〈ポートキーツ〉1935）、メソジスト・聖公会・ルター派の伝道所に先住民が集められた。
+    - from: 1970
+      main: catholic
+      minor: anglican
+      note: ダーウィンの成長。先住民の多くもキリスト教徒になったが、伝統的な儀礼と土地の信仰は続いている。
+- id: rel_nt_east
+  name: ノーザンテリトリー東部（アーネムランド東部）
+  select:
+    pieces: [AUS-Northern_Territory]
+  timeline:
+    - from: 1648
+      main: other
+      note: ヨルング人の信仰。マカッサルの漁民との交流で、イスラーム由来の語や儀礼の要素も伝わった。
+    - from: 1950
+      main: evangelical
+      minor: other
+      note: メソジストの伝道所（ミリンギンビ 1923、イルカラ 1935、エルコー島 1942）と、聖公会の教会伝道協会（CMS）のグルート・アイランド（1921）・ローパー川（1908）。メソジストは 1977 年にオーストラリア合同教会になった。
+      source: "https://en.wikipedia.org/wiki/Methodist_Overseas_Missions"
+      secular: 0
+- id: rel_norfolk
+  name: ノーフォーク島
+  select:
+    pieces: [NFK-Norfolk_Island]
+  timeline:
+    - from: 1788
+      main: anglican
+      note: 流刑地（1788–1814、1825–55）。
+    - from: 1856
+      main: anglican
+      minor: evangelical
+      note: ピトケアン島からの移住者。メラネシア伝道会の本部がノーフォーク島に置かれた（1867–1920）。セブンスデー・アドベンチストの信徒もいる。
+      source: "https://en.wikipedia.org/wiki/Melanesian_Mission"
+- id: rel_christmas_island
+  name: クリスマス島
+  select:
+    pieces: [CXR-Christmas_Island]
+  timeline:
+    - from: 1888
+      main: chinese_folk
+      minor: sunni
+      note: 中国系の住民の仏教・道教と、マレー系の住民のイスラーム。
+- id: rel_cocos
+  name: ココス（キーリング）諸島
+  select:
+    pieces: [CCK-Cocos_Keeling_Islands]
+  timeline:
+    - from: 1827
+      main: sunni
+      note: ココス・マレー人のイスラーム（スンナ派）。
+      source: "https://en.wikipedia.org/wiki/Cocos_Malays"
+
+# ======== ニュージーランド ========
+# マオリは 1830〜40 年代に急速にキリスト教を受け入れた（聖書のマオリ語訳と識字の広まり、部族間の戦い〈マスケット銃戦争〉の終息）。
+# のちにマオリの預言者による宗教が生まれた（パイ・マリーレ 1862、リンガトゥ 1868、ラタナ 1918）。数の上では多くないので塗らず note に書く。
+- id: rel_north_island
+  name: 北島（オークランド・ウェリントン以外）
+  select:
+    adm1: ["NZL/Northland Region", "NZL/Waikato Region", "NZL/Bay of Plenty Region", "NZL/Gisborne Region", "NZL/Hawke's Bay Region", "NZL/Taranaki Region", "NZL/Manawatu-Wanganui Region"]
+  timeline:
+    - from: 1648
+      main: other
+      note: マオリの信仰（神々〈アトゥア〉・マナとタプ・祖先の系譜〈ファカパパ〉）。
+      source: "https://en.wikipedia.org/wiki/M%C4%81ori_religion"
+    - from: 1845
+      main: anglican
+      note: 1814 年に教会伝道協会（CMS）のマースデンがベイ・オブ・アイランズで初めて説教した。ウェスレー派（1822）、カトリックのポンパリエ司教（1838）も続き、1840 年代にはマオリの大多数が洗礼を受けた。
+      source: "https://en.wikipedia.org/wiki/Christianity_in_New_Zealand"
+    - from: 1880
+      main: anglican
+      minor: reformed
+      note: 入植者の国教会と長老派。マオリ戦争の中から預言者テ・ウア・ハウメネのパイ・マリーレ（1862）、テ・コオティのリンガトゥ（1868）、のちにラタナ（1918）が生まれた。
+      source: "https://en.wikipedia.org/wiki/Ringat%C5%AB"
+- id: rel_northland
+  name: ノースランド
+  select:
+    adm1: ["NZL/Northland Region"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1835
+      main: anglican
+      note: CMS とウェスレー派の伝道の中心（ケリケリ・パイヒア・ワイマテ）。ホキアンガにはカトリックの伝道所（1838）。
+    - from: 1900
+      main: anglican
+      minor: catholic
+      note: ダルマチア（クロアチア）人のカウリ樹脂採りとマオリのカトリック。
+- id: rel_auckland
+  name: オークランド
+  select:
+    adm1: ["NZL/Auckland Region"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1840
+      main: anglican
+      minor: reformed
+    - from: 1980
+      main: anglican
+      minor: catholic
+      note: 太平洋の島々からの移民（サモア人の会衆派・トンガ人のメソジスト・カトリック・モルモン教）とアジアからの移民で、宗教の構成が多様になった。2010 年代には国教会より太平洋系・アジア系の教会や無宗教が多い。
+- id: rel_wellington
+  name: ウェリントン
+  select:
+    adm1: ["NZL/Wellington Region"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1845
+      main: anglican
+      minor: reformed
+- id: rel_new_plymouth
+  name: ニュープリマス（タラナキ北部）
+  select:
+    pieces: [NZL-New_Plymouth_District]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1845
+      main: anglican
+      note: マオリの改宗。
+    - from: 1860
+      main: anglican
+      minor: reformed
+      note: 入植者。パリハカの指導者テ・フィティ・オ・ロンゴマイとトフは、聖書と伝統を結びつけた教えで非暴力の抵抗を説いた。
+- id: rel_waikato_basin
+  name: ワイカト（ハミルトン）
+  select:
+    pieces: [NZL-Waikato_Basin]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1845
+      main: anglican
+      note: マオリの改宗（CMS とウェスレー派）。
+    - from: 1870
+      main: anglican
+      minor: reformed
+      note: ワイカト侵攻（1863–64）と土地の没収の後、兵士入植者が住んだ。
+- id: rel_rohe_potae
+  name: キング・カントリー（ロヘ・ポタエ）
+  select:
+    pieces: [NZL-Rohe_Potae]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1845
+      main: anglican
+      note: マオリの改宗。王運動の地では、のちにパイ・マリーレ（ハウハウ）やリンガトゥ、20 世紀にはラタナの信徒も多かった。
+    - from: 1910
+      main: anglican
+      minor: catholic
+- id: rel_ruapehu
+  name: 北島中央部（ルアペフ）
+  select:
+    pieces: [NZL-Ruapehu_District]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: anglican
+      minor: catholic
+      note: マオリの改宗。ファンガヌイ川沿いにはカトリックの伝道村（エルサレム〈ヒルサラマ〉、1883）がある。
+- id: rel_urewera
+  name: ウレウェラ・東ベイ・オブ・プレンティ（ファカタネ）
+  select:
+    pieces: [NZL-Whakatane_District]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: anglican
+      minor: other
+      note: 改宗はほかより遅かった。1868 年以後、トゥホエの多くはテ・コオティのリンガトゥを信じ、1900 年代には預言者ルア・ケナナがウレウェラのマウンガポハトゥに共同体を築いた（1916 年に警察が急襲）。
+      source: "https://en.wikipedia.org/wiki/Rua_Kenana_Hepetipa"
+    - from: 1950
+      main: anglican
+      minor: catholic
+- id: rel_gisborne
+  name: ギズボーン（イースト・ケープ）
+  select:
+    adm1: ["NZL/Gisborne Region"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1845
+      main: anglican
+      note: ンガーティ・ポロウは CMS の伝道で改宗し、マオリの国教会の中心の一つになった。リンガトゥはポバティ湾で生まれた（1868）。
+- id: rel_south_island
+  name: 南島（カンタベリー・ネルソン・マールバラなど）
+  select:
+    adm1: ["NZL/Canterbury Region", "NZL/Nelson Region", "NZL/Tasman Region", "NZL/Marlborough Region", "NZL/West Coast Region"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: anglican
+      minor: reformed
+      note: カンタベリーはイングランド国教会の植民協会が建てた（クライストチャーチ 1850）。ウェストコーストの金鉱にはアイルランド系のカトリックが多かった。
+- id: rel_otago_southland
+  name: オタゴ・サウスランド
+  select:
+    adm1: ["NZL/Otago Region", "NZL/Southland Region"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1850
+      main: reformed
+      minor: anglican
+      note: 1848 年にスコットランド自由教会（長老派）の移民がダニーデンを建てた（「南のエディンバラ」）。オタゴのゴールドラッシュ（1861–）でほかの移民も来たが、長老派が多数のまま。
+      source: "https://ja.wikipedia.org/wiki/ダニーデン"
+- id: rel_chatham
+  name: チャタム諸島
+  select:
+    pieces: [NZL-Chatham_Islands_Territory]
+  timeline:
+    - from: 1648
+      main: other
+      note: モリオリの信仰。
+    - from: 1870
+      main: anglican
+      note: ドイツ人の宣教師（ゴスナー伝道会、1843）とマオリの改宗。
+
+# ======== ニューギニア（パプアニューギニア） ========
+# 現在は住民の 9 割以上がキリスト教徒（カトリック・ルター派・合同教会・聖公会・福音派・アドベンチストなど）だが、多数派になった年は
+# 沿岸で 1910〜40 年代、高地で 1960〜70 年代。比率は目安（要確認）。カーゴ・カルトなどの運動は note に書く。
+- id: rel_png
+  name: ニューギニア（全体の既定。高地）
+  select:
+    iso: [PNG]
+  timeline:
+    - from: 1648
+      main: other
+      note: 祖先と精霊の信仰、男子の家（ハウス・タンバラン）の儀礼、豚の祭宴（モカ・テエ）など。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Papua_New_Guinea"
+    - from: 1970
+      main: catholic
+      minor: lutheran
+      note: 1933 年以後の高地の「発見」の後、カトリック（神言会）・ルター派・バプテスト・アドベンチストなどが伝道し、1960〜70 年代に多数がキリスト教徒になった。
+- id: rel_png_lutheran
+  name: モロベ・東部高地・エンガ（ルター派の伝道地）
+  select:
+    adm1: ["PNG/Morobe Province", "PNG/Eastern Highlands Province", "PNG/Enga Province"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1920
+      main: other
+      minor: lutheran
+      note: 1886 年にバイエルンのノイエンデッテルスアウ伝道会のフレールがフィンシュハーフェンに上陸し、現地の伝道者を通じて集団での改宗を進めた。
+      source: "https://en.wikipedia.org/wiki/Johann_Flierl"
+    - from: 1930
+      main: lutheran
+      note: モロベ（ヒュオン半島）ではルター派が多数になった。東部高地・エンガは 1950〜60 年代（高地はこの地域の年で代表させた。比率は目安）。
+- id: rel_png_highlands_late
+  name: 東部高地・エンガ（高地の伝道）
+  select:
+    adm1: ["PNG/Eastern Highlands Province", "PNG/Enga Province"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1965
+      main: lutheran
+      minor: catholic
+      note: 1950〜60 年代にルター派とカトリック、アドベンチストが伝道した。
+- id: rel_png_madang
+  name: マダン
+  select:
+    adm1: ["PNG/Madang Province"]
+  timeline:
+    - from: 1648
+      main: other
+      note: 1871–83 年にロシアのミクルーホ＝マクライが住んだ（マクライ海岸）。
+    - from: 1930
+      main: lutheran
+      minor: catholic
+      note: ライン伝道会（ルター派、1887）と神言会（カトリック、1896）。ヤリの率いたカーゴ・カルト（1940〜50 年代）。
+      source: "https://en.wikipedia.org/wiki/Yali_Singina"
+- id: rel_png_sepik
+  name: セピック（東セピック・西セピック）
+  select:
+    adm1: ["PNG/East Sepik Province", "PNG/West Sepik (Sandaun) Province"]
+  timeline:
+    - from: 1648
+      main: other
+      note: セピック川流域のハウス・タンバランの儀礼と彫刻。
+    - from: 1940
+      main: catholic
+      note: 神言会（SVD）のカトリックの伝道（1896–）。
+- id: rel_png_papua_coast
+  name: パプア南岸（中央州・ポートモレスビー・湾岸州）
+  select:
+    pieces: [PNG-Central_Province, PNG-National_Capital_District, PNG-Gulf_Province]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1910
+      main: reformed
+      minor: catholic
+      note: ロンドン伝道協会（1871 年にトレス海峡、1873 年にポートモレスビー。ローズ、チャーマーズ）と、聖心会（MSC）のカトリック（ユール島 1885）。LMS の教会は 1968 年にパプアニューギニア合同教会になった。
+      source: "https://en.wikipedia.org/wiki/United_Church_in_Papua_New_Guinea"
+- id: rel_png_western
+  name: 西部州（フライ川）
+  select:
+    adm1: ["PNG/Western Province"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1960
+      main: evangelical
+      minor: catholic
+      note: 海岸部は LMS、内陸は未伝道地域伝道会（UFM。のちのパプアニューギニア福音教会）とカトリック。オク・テディ鉱山（1984–）。
+- id: rel_png_southern_highlands
+  name: 南部高地・ヘラ
+  select:
+    adm1: ["PNG/Southern Highlands Province", "PNG/Hela Province"]
+  timeline:
+    - from: 1648
+      main: other
+      note: フリ人などの信仰。
+    - from: 1975
+      main: evangelical
+      minor: catholic
+      note: 1950〜60 年代からの福音派の伝道（パプアニューギニア福音教会・ウェスレー派・アドベンチスト）とカトリック・合同教会。
+- id: rel_png_milne_bay
+  name: ミルン湾・オロ（北部州）
+  select:
+    adm1: ["PNG/Milne Bay Province", "PNG/Northern (Oro) Province"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1920
+      main: anglican
+      minor: evangelical
+      note: 1891 年に聖公会（ドグラ）とメソジスト（ドブ島）が伝道地を分けた（ミルン湾の北岸とオロは聖公会、島々はメソジスト、東端は LMS のクワト）。オロではのちにカトリックも増えた。
+      source: "https://en.wikipedia.org/wiki/Anglican_Church_of_Papua_New_Guinea"
+- id: rel_png_islands_methodist
+  name: ニューアイルランド
+  select:
+    adm1: ["PNG/New Ireland Province"]
+  timeline:
+    - from: 1648
+      main: other
+      note: マランガンの祭礼と彫刻。
+    - from: 1910
+      main: evangelical
+      minor: catholic
+      note: 1875 年にメソジストのジョージ・ブラウンがデューク・オブ・ヨーク諸島に上陸し、フィジー人・サモア人の伝道者が伝道した。1880 年にはフランス人の侯爵ド・レが「新フランス」植民を試みて失敗した。
+      source: "https://en.wikipedia.org/wiki/Marquis_de_Rays_expedition"
+- id: rel_png_new_britain
+  name: ニューブリテン（東ニューブリテン・西ニューブリテン）
+  select:
+    adm1: ["PNG/East New Britain Province", "PNG/West New Britain Province"]
+  timeline:
+    - from: 1648
+      main: other
+      note: トーライ人のドゥクドゥク・トゥブアンの仮面結社。
+    - from: 1910
+      main: catholic
+      minor: evangelical
+      note: 聖心会（MSC）のカトリック（ヴナポペ 1882）とメソジスト（1875）。ドイツ領ニューギニアの中心はラバウル（1910–）。西ニューブリテンの多数がキリスト教徒になったのは 1930〜40 年代。
+- id: rel_png_manus
+  name: マヌス
+  select:
+    adm1: ["PNG/Manus Province"]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1930
+      main: catholic
+      minor: evangelical
+      note: カトリック（1913–）とルター派・福音派。戦後、パリアウ・マロアトの運動（1946–）が伝統と教会と政治を作りかえた（マーガレット・ミードの研究で知られる）。
+      source: "https://en.wikipedia.org/wiki/Paliau_Maloat"
+- id: rel_bougainville
+  name: ブーゲンヴィル
+  select:
+    pieces: [PNG-Autonomous_Region_of_Bougainville]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1930
+      main: catholic
+      minor: evangelical
+      note: マリスト会のカトリック（1901–）が多数で、メソジスト（合同教会）とアドベンチストが続く。パングナ銅山（1972–89）をめぐるブーゲンヴィル紛争（1988–98）では、教会が和平の仲立ちをした。
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル紛争"
+
+# ======== ソロモン諸島 ========
+- id: rel_solomons
+  name: ソロモン諸島（既定）
+  select:
+    iso: [SLB]
+  timeline:
+    - from: 1648
+      main: other
+      note: 祖先の霊（アダロ）とマナの信仰、首狩り（西部のニュージョージア）。
+      source: "https://en.wikipedia.org/wiki/Religion_in_the_Solomon_Islands"
+    - from: 1930
+      main: anglican
+      minor: catholic
+      note: 聖公会のメラネシア伝道会（1849–。セルウィン、パテソン司教は 1871 年にヌカプ島で殺された）、マリスト会のカトリック（1845 年に一度失敗し、1898 年から）、南洋福音伝道会（SSEM、1904–）、メソジスト（1902–）、アドベンチスト（1914–）。
+      source: "https://en.wikipedia.org/wiki/Anglican_Church_of_Melanesia"
+- id: rel_isabel_central
+  name: イサベル・中央州（ンゲラ）・マキラ
+  select:
+    pieces: [SLB-Isabel, SLB-Central, SLB-Makira]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1905
+      main: anglican
+      note: メラネシア伝道会の中心。イサベルは首長ソゴの改宗（1889）で、ほぼ全員が聖公会になった。
+- id: rel_guadalcanal
+  name: ガダルカナル・ホニアラ
+  select:
+    pieces: [SLB-Guadalcanal, SLB-Capital_Territory_Honiara]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1935
+      main: catholic
+      minor: anglican
+      note: マリスト会のヴィサレ伝道所（1898）。ガダルカナルの戦い（1942–43）の後、アメリカ軍の基地のあとに首都ホニアラが置かれた（1952）。
+- id: rel_malaita
+  name: マライタ
+  select:
+    pieces: [SLB-Malaita]
+  timeline:
+    - from: 1648
+      main: other
+      note: ソロモンで最も人口の多い島。クイーンズランド・フィジーの農園へ多くの労働者が徴募された。
+    - from: 1930
+      main: other
+      minor: evangelical
+      note: クイーンズランドの農園で改宗した帰還労働者が、南洋福音伝道会（SSEM）を広めた。1927 年には伝統を守るクワイオ人が徴税官ベルを殺した。
+      source: "https://en.wikipedia.org/wiki/South_Seas_Evangelical_Church"
+    - from: 1950
+      main: evangelical
+      minor: anglican
+      note: 戦後のマアシナ・ルール運動（1944–52）。山地のクワイオ人の一部はいまも伝統の信仰を守る。
+      source: "https://en.wikipedia.org/wiki/Maasina_Ruru"
+- id: rel_western_solomons
+  name: 西部州・チョイスル
+  select:
+    pieces: [SLB-Western, SLB-Choiseul]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1920
+      main: evangelical
+      minor: catholic
+      note: メソジスト（ロヴィアナ 1902。のちの合同教会）とセブンスデー・アドベンチスト（マロヴォ 1914）。ジョージア島の預言者サイラス・エト（「聖ママ」）のキリスト教同胞教会（1960）。
+- id: rel_shortlands
+  name: ショートランド諸島
+  select:
+    pieces: [SLB-Shortland_Islands]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1920
+      main: catholic
+      note: ブーゲンヴィルと同じマリスト会の伝道地。
+- id: rel_rennell_bellona
+  name: レンネル島・ベローナ島
+  select:
+    pieces: [SLB-Rennell_and_Bellona]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1940
+      main: evangelical
+      note: 1938 年に南洋福音伝道会とアドベンチストの伝道で島民が改宗した。
+- id: rel_temotu
+  name: テモツ（サンタクルーズ諸島）
+  select:
+    pieces: [SLB-Temotu]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1930
+      main: anglican
+      minor: other
+      note: メラネシア伝道会。ティコピア島の首長の改宗は 1955 年（人類学者ファースの研究で知られる）。
+      source: "https://en.wikipedia.org/wiki/Tikopia"
+    - from: 1960
+      main: anglican
+
+# ======== ヴァヌアツ ========
+- id: rel_vanuatu
+  name: ヴァヌアツ南部・中部（長老派の伝道地）
+  select:
+    iso: [VUT]
+  timeline:
+    - from: 1648
+      main: other
+      note: 祖先の霊と首長の位階（ナマンギ）の信仰。ペンテコスト島の「ナゴル」（陸のダイビング）の儀礼。
+    - from: 1900
+      main: reformed
+      minor: other
+      note: 1839 年に LMS のウィリアムズがエロマンゴ島で殺された。1848 年にノヴァスコシアの長老派のゲディーがアネイチュム島に入り、スコットランド・オーストラリアの長老派が南部・中部に広げた。
+      source: "https://en.wikipedia.org/wiki/John_Geddie_(missionary)"
+    - from: 1940
+      main: reformed
+      minor: catholic
+      note: カトリック（マリスト会、1887–）・アドベンチスト・キリストの教会など。タンナ島では 1940 年ごろにジョン・フラム運動が生まれた（カーゴ・カルト）。エスピリトゥサント島・マレクラ島の内陸は改宗が遅かった。
+      source: "https://ja.wikipedia.org/wiki/ジョン・フラム"
+- id: rel_vanuatu_north
+  name: ヴァヌアツ北部（トルバ・ペナマ。聖公会の伝道地）
+  select:
+    pieces: [VUT-Torba, VUT-Penama]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1900
+      main: anglican
+      minor: other
+      note: メラネシア伝道会（聖公会）の伝道地。ペンテコスト島ではカトリック・キリストの教会と、伝統（カストム）を守る村もある。
+    - from: 1940
+      main: anglican
+      minor: catholic
+
+# ======== ニューカレドニア ========
+- id: rel_new_caledonia
+  name: ニューカレドニア本島（北部州）
+  select:
+    iso: [NCL]
+  timeline:
+    - from: 1648
+      main: other
+      note: カナクの祖先の信仰と首長の家（グランド・カーズ）。
+    - from: 1880
+      main: catholic
+      minor: reformed
+      note: マリスト会のカトリック（バラード 1843）と、ロイヤルティ諸島から伝わったプロテスタント（のちにパリ福音伝道会のレーナルト、1902–）。カナクはおよそ半数ずつカトリックとプロテスタントに分かれる。
+      source: "https://en.wikipedia.org/wiki/Maurice_Leenhardt"
+- id: rel_new_caledonia_south
+  name: ニューカレドニア南部（南部州）
+  select:
+    pieces: [NCL-Province_Sud]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: catholic
+      note: 入植者とイル・デ・パン（パン島）のカナクのカトリック。
+- id: rel_loyalty_islands
+  name: ロイヤルティ諸島
+  select:
+    pieces: [NCL-Loyalty_Islands]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1860
+      main: reformed
+      minor: catholic
+      note: LMS のサモア人・ラロトンガ人の伝道者（1840 年代〜）とマリスト会が争い、島ごと・首長ごとにプロテスタントとカトリックに分かれた。プロテスタントが多数。
+      source: "https://en.wikipedia.org/wiki/Loyalty_Islands"
+
+# ======== フィジー ========
+- id: rel_fiji
+  name: フィジー（既定。ヴィティレヴ島の内陸）
+  select:
+    iso: [FJI]
+  timeline:
+    - from: 1648
+      main: other
+      note: 神々（カロウ）と祖先の信仰。戦いと人食いの儀礼もあった。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Fiji"
+    - from: 1875
+      main: evangelical
+      note: ヴィティレヴ島内陸の山地の人々は、1867 年に宣教師ベイカーを殺し、1876 年のイギリスの討伐の後に改宗が進んだ。
+      source: "https://en.wikipedia.org/wiki/Thomas_Baker_(missionary)"
+- id: rel_fiji_coast
+  name: フィジーの沿岸と東部の島々
+  select:
+    pieces: [FJI-Lau, FJI-Lomaiviti, FJI-Tailevu, FJI-Rewa, FJI-Cakaudrove, FJI-Bua, FJI-Kadavu, FJI-Macuata]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1855
+      main: evangelical
+      note: 1835 年にウェスレー派（メソジスト）の宣教師がラウ諸島のラケンバ島に上陸した。バウの大首長ザコンバウの改宗（1854）で、東部と沿岸の首長国が次々に改宗した。カトリック（マリスト会、1844–）は少数。
+      source: "https://ja.wikipedia.org/wiki/ザコンバウ"
+- id: rel_fiji_ba
+  name: フィジー西部（バ州）
+  select:
+    pieces: [FJI-Ba]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1875
+      main: evangelical
+    - from: 1900
+      main: evangelical
+      minor: hindu
+      note: インドからの年季契約の移民（1879–1916）。
+    - from: 1921
+      main: hindu
+      minor: evangelical
+      note: インド系の住民のヒンドゥー教（約 8 割。寺院と祭り）とイスラーム（約 15％）。
+      source: "https://en.wikipedia.org/wiki/Hinduism_in_Fiji"
+- id: rel_fiji_sugar
+  name: フィジーの砂糖地帯（ラ・ナドロガ＝ナヴォサ・ナイタシリ）
+  select:
+    pieces: [FJI-Ra, FJI-Nadroga_Navosa, FJI-Naitasiri]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1875
+      main: evangelical
+    - from: 1920
+      main: evangelical
+      minor: hindu
+- id: rel_fiji_sugar_coast
+  name: レワ・タイレヴ・ブア（スヴァ周辺と砂糖地帯）
+  select:
+    pieces: [FJI-Rewa, FJI-Tailevu, FJI-Bua]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1855
+      main: evangelical
+    - from: 1920
+      main: evangelical
+      minor: hindu
+- id: rel_fiji_labasa
+  name: マクアタ州（ランバサ）
+  select:
+    pieces: [FJI-Macuata]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1855
+      main: evangelical
+    - from: 1900
+      main: evangelical
+      minor: hindu
+    - from: 1940
+      main: hindu
+      minor: evangelical
+- id: rel_rotuma
+  name: ロトゥマ島
+  select:
+    pieces: [FJI-Rotuma]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: evangelical
+      minor: catholic
+      note: ウェスレー派（1841）とマリスト会（1847）が伝道し、両派の首長の争い（1870 年代）がイギリスへの割譲（1881）のきっかけになった。
+      source: "https://en.wikipedia.org/wiki/Rotuma"
+
+# ======== トンガ・サモア ========
+- id: rel_tonga
+  name: トンガ
+  select:
+    iso: [TON]
+  timeline:
+    - from: 1648
+      main: other
+      note: トゥイ・トンガ（神聖王）を頂点とする神々と祖先の信仰。
+    - from: 1835
+      main: evangelical
+      note: ウェスレー派（メソジスト）の伝道（1826–）。ハアパイの首長タウファアハウ（のちのジョージ・トゥポウ 1 世）が 1831 年に改宗し、ヴァヴァウ・ハアパイ、ついでトンガタプを統一した。1875 年の憲法で立憲君主国になった。1885 年に国王がオーストラリアのメソジストから自立したトンガ自由ウェスレー教会を建てた。カトリック・モルモン教（現在は住民の 2 割近く）も多い。
+      source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ1世"
+- id: rel_samoa
+  name: サモア（西サモア）
+  select:
+    iso: [WSM]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1840
+      main: reformed
+      note: 1830 年に LMS のジョン・ウィリアムズがサモアに伝道者を置き、首長マリエトアの改宗とともに会衆派が広まった。メソジスト（1835）・カトリック（1845）・のちにモルモン教も。会衆派の教会（CCCS）が最大。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Samoa"
+- id: rel_wallis_futuna
+  name: ワリス・フトゥナ
+  select:
+    iso: [WLF]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1842
+      main: catholic
+      note: マリスト会の伝道（1837）。フトゥナ島で殉教したシャネル神父（1841）は、オセアニア最初の聖人になった。住民のほぼ全員がカトリック。
+      source: "https://ja.wikipedia.org/wiki/ピエール・シャネル"
+- id: rel_tuvalu
+  name: ツバル
+  select:
+    iso: [TUV]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: reformed
+      note: 1861 年に漂着したクック諸島の助祭エレカナが伝道をはじめ、LMS のサモア人の牧師が続いた。ツバル教会（会衆派）が住民の 9 割以上。
+      source: "https://en.wikipedia.org/wiki/Church_of_Tuvalu"
+- id: rel_tokelau
+  name: トケラウ
+  select:
+    iso: [TKL]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: reformed
+      minor: catholic
+      note: アタフ島は LMS の会衆派、ヌクノヌ島はカトリック、ファカオフォ島は両方。
+- id: rel_niue
+  name: ニウエ
+  select:
+    iso: [NIU]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1860
+      main: reformed
+      note: サモア人の伝道者パウロ（1849）による LMS の伝道。
+- id: rel_cook_islands
+  name: クック諸島
+  select:
+    iso: [COK]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1830
+      main: reformed
+      note: LMS のタヒチ人の伝道者パペイハ（アイツタキ 1821、ラロトンガ 1823）と宣教師ジョン・ウィリアムズ・ピットマン・バザコット。宣教師が首長とともに作った「青い法」が島を治めた。北部の島々は 1850〜60 年代に改宗した（1863 年にペルーの奴隷狩りがペンリン島などを襲った）。
+      source: "https://en.wikipedia.org/wiki/Cook_Islands_Christian_Church"
+
+# ======== フランス領ポリネシア ========
+- id: rel_french_polynesia
+  name: フランス領ポリネシア（ソシエテ諸島・オーストラル諸島）
+  select:
+    iso: [PYF]
+  timeline:
+    - from: 1648
+      main: other
+      note: オロ神の信仰、マラエ（祭祀の場）とアリオイ（芸能・祭祀の結社）。
+      source: "https://en.wikipedia.org/wiki/Tahitian_religion"
+    - from: 1820
+      main: reformed
+      note: 1797 年に LMS のダフ号の宣教師がタヒチに上陸した。ポマレ 2 世の改宗（1812）とフェイ・ピの戦い（1815）の後、ソシエテ諸島・オーストラル諸島の人々は改宗した。1863 年からパリ福音伝道会が LMS を引き継いだ（現在のマオヒ・プロテスタント教会）。
+      source: "https://ja.wikipedia.org/wiki/ポマレ2世"
+- id: rel_tahiti
+  name: タヒチ（ウィンドワード諸島）
+  select:
+    pieces: [PYF-Windward_Islands]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1815
+      main: reformed
+      note: ポマレ 2 世の改宗とフェイ・ピの戦い（1815）。1836 年にフランス人のカトリックの宣教師が追放された事件（プリチャード事件のもと）を口実に、フランスが 1842 年に保護領にした。
+      source: "https://en.wikipedia.org/wiki/Pritchard_affair"
+    - from: 1965
+      main: reformed
+      minor: catholic
+      note: フランス本国からの移住者とトゥアモトゥ・マルケサスからの移住でカトリックが増えた。中国系の住民はカトリックに改宗した人が多い。
+- id: rel_tuamotu_gambier
+  name: トゥアモトゥ・ガンビエ諸島
+  select:
+    pieces: [PYF-Tuamotu_Gambier]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1860
+      main: catholic
+      minor: reformed
+      note: ガンビエ諸島（マンガレヴァ）はピクプス会のラヴァル神父が 1834 年から神権政治のように治め、カトリック化した。トゥアモトゥにはプロテスタントとモルモン教（サニト派）も広まった。ムルロア・ファンガタウファ環礁では 1966–96 年にフランスの核実験が行われた。
+      source: "https://en.wikipedia.org/wiki/Honor%C3%A9_Laval"
+- id: rel_marquesas
+  name: マルケサス諸島
+  select:
+    pieces: [PYF-Marquesas_Islands]
+  timeline:
+    - from: 1648
+      main: other
+      note: 入れ墨と石像（ティキ）の文化。1842 年にフランスが領有した。
+    - from: 1880
+      main: catholic
+      note: ピクプス会のカトリックの伝道（1838–）。人口の激減の中で改宗が進んだ。画家ゴーギャンはヒヴァオア島で没した（1903）。
+- id: rel_pitcairn
+  name: ピトケアン諸島
+  select:
+    iso: [PCN]
+  timeline:
+    - from: 1790
+      main: other
+      note: バウンティ号の反乱者とタヒチ人の小さな共同体。
+    - from: 1810
+      main: anglican
+      note: 最後の反乱者アダムズが聖書と祈祷書で子どもたちを教え、敬虔な共同体になった（1808 年にアメリカの捕鯨船が「発見」）。
+    - from: 1886
+      main: evangelical
+      note: 1886 年に島民全員がセブンスデー・アドベンチストに改宗した。
+      source: "https://en.wikipedia.org/wiki/Pitcairn_Islands"
+
+# ======== ミクロネシア ========
+- id: rel_kiribati
+  name: ギルバート諸島（キリバス。北部・中部）
+  select:
+    iso: [KIR]
+    exclude: [KIR-Kiritimati, KIR-Tabuaeran, KIR-Teraina, KIR-Southern_Line_Islands, KIR-Phoenix_Islands, KIR-Kanton]
+  timeline:
+    - from: 1648
+      main: other
+      note: 祖先の霊（アンティ）の信仰。
+    - from: 1880
+      main: reformed
+      note: アメリカン・ボード（ABCFM、会衆派）のビンガム 2 世がアバイアン環礁に入った（1857）。南部は LMS のサモア人の牧師（1870–）。
+      source: "https://en.wikipedia.org/wiki/Hiram_Bingham_II"
+    - from: 1930
+      main: catholic
+      minor: reformed
+      note: 聖心会（MSC）のカトリック（ノノウチ 1888–）が北部・中部で広まり、現在は住民の過半数がカトリック。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Kiribati"
+- id: rel_kiribati_south
+  name: ギルバート諸島南部（LMS の伝道地）
+  select:
+    pieces: [KIR-Beru, KIR-Nikunau, KIR-Onotoa, KIR-Tamana, KIR-Arorae, KIR-Tabiteuea_North, KIR-Tabiteuea_South]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1880
+      main: reformed
+      note: LMS のサモア人の牧師の伝道（1870–）。ベル島には LMS の本部が置かれた。プロテスタント（キリバス合同教会）が多数。
+- id: rel_banaba
+  name: バナバ島（オーシャン島）
+  select:
+    pieces: [KIR-Banaba]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1890
+      main: reformed
+      note: ABCFM の伝道（1885–）。
+- id: rel_line_islands
+  name: ライン諸島
+  select:
+    pieces: [KIR-Kiritimati, KIR-Tabuaeran, KIR-Teraina]
+  timeline:
+    - from: 1890
+      main: reformed
+      minor: catholic
+      note: ヤシ園の労働者（タヒチ人・ギルバート人）。現在の住民はギルバート諸島からの移住者で、カトリックとプロテスタント。
+- id: rel_phoenix_islands
+  name: フェニックス諸島
+  select:
+    pieces: [KIR-Phoenix_Islands, KIR-Kanton]
+  timeline:
+    - from: 1938
+      main: catholic
+      minor: reformed
+      note: ギルバート諸島南部からの入植者（1938–63）。
+- id: rel_marshall
+  name: マーシャル諸島
+  select:
+    iso: [MHL]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1880
+      main: reformed
+      note: アメリカン・ボード（ABCFM）がエボン環礁に伝道をはじめ（1857）、ハワイ人の伝道者も働いた。マーシャル諸島合同キリスト教会（会衆派）が最大で、アセンブリーズ・オブ・ゴッド・カトリック・モルモン教が続く。
+      source: "https://en.wikipedia.org/wiki/Religion_in_the_Marshall_Islands"
+- id: rel_kosrae
+  name: コスラエ
+  select:
+    pieces: [FSM-Kosrae]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1870
+      main: reformed
+      note: ABCFM の伝道（1852–）。病気で人口が激減する中で、ほぼ全島民が会衆派に改宗した。
+- id: rel_pohnpei
+  name: ポンペイ
+  select:
+    pieces: [FSM-Pohnpei]
+  timeline:
+    - from: 1648
+      main: other
+      note: ナンマルキ（首長）の位階と祭祀。
+    - from: 1880
+      main: reformed
+      minor: catholic
+      note: ABCFM（1852–）。1886 年にスペインが統治をはじめ、カトリック（カプチン会）を持ちこんだのに対し、プロテスタントの首長が反乱した（1887、1890）。ドイツ統治下のソケースの反乱（1910–11）。
+      source: "https://en.wikipedia.org/wiki/Sokehs_Rebellion"
+    - from: 1935
+      main: reformed
+      minor: shinbutsu
+      note: 南洋庁の時代の日本人の移民（神社・寺）。
+    - from: 1946
+      main: catholic
+      minor: reformed
+      note: 現在はカトリックとプロテスタントがほぼ半数ずつ。
+- id: rel_chuuk
+  name: チューク（トラック）
+  select:
+    pieces: [FSM-Chuuk]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1900
+      main: reformed
+      minor: catholic
+      note: ABCFM の伝道（モートロック諸島 1874–）とスペイン・ドイツのカトリック。チュークは日本海軍の拠点（トラック泊地）になり、1944 年にアメリカ軍の空襲を受けた。
+    - from: 1950
+      main: catholic
+      minor: reformed
+- id: rel_yap
+  name: ヤップ
+  select:
+    pieces: [FSM-Yap]
+  timeline:
+    - from: 1648
+      main: other
+      note: 石貨（ライ）で知られる。周辺の環礁とのサウェイの交易・朝貢の関係。
+    - from: 1940
+      main: catholic
+      minor: other
+      note: スペインのカプチン会（1886–）、ドイツ・日本統治下のスペイン人イエズス会士の伝道。
+    - from: 1960
+      main: catholic
+- id: rel_palau
+  name: パラオ
+  select:
+    iso: [PLW]
+  timeline:
+    - from: 1648
+      main: other
+      note: 村ごとの神々と首長（ルクライ・アイバドル）の信仰。
+    - from: 1930
+      main: catholic
+      minor: other
+      note: スペインのカプチン会（1891–）のカトリックと、ドイツのリーベンツェラー伝道会（1929–）のプロテスタント。1915 年ごろにパラオの伝統に根ざした新宗教モデクゲイが生まれ、日本の統治下で弾圧された。
+      source: "https://en.wikipedia.org/wiki/Modekngei"
+    - from: 1946
+      main: catholic
+      minor: evangelical
+      note: カトリックが約半数、プロテスタント（福音教会・アドベンチスト）が約 4 分の 1、モデクゲイが数％。
+- id: rel_koror
+  name: コロール・アイライ・アンガウル・アイメリーク
+  select:
+    pieces: [PLW-Koror, PLW-Airai, PLW-Angaur, PLW-Aimeliik]
+  timeline:
+    - from: 1648
+      main: other
+    - from: 1930
+      main: shinbutsu
+      minor: catholic
+      note: 南洋庁の本庁と日本人の町。南洋神社（官幣大社、1940）が建てられた。
+      source: "https://ja.wikipedia.org/wiki/南洋神社"
+    - from: 1946
+      main: catholic
+      minor: evangelical
+- id: rel_nauru
+  name: ナウル
+  select:
+    iso: [NRU]
+  timeline:
+    - from: 1648
+      main: other
+      note: 12 の部族と女神エイジバンの信仰。1878–88 年に部族間の内戦があった。
+    - from: 1910
+      main: reformed
+      minor: catholic
+      note: ABCFM のデラポルト（1899–）がナウル語に聖書を訳した。カトリック（聖心会、1902–）も多い。ナウル会衆派教会が最大。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Nauru"

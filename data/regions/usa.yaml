@@ -1470,7 +1470,7 @@
 - id: us_am_samoa
   name: "アメリカ領サモア"
   select:
-    pieces: [USA-American_Samoa]
+    pieces: [USA-American_Samoa, USA-Manu_a_Islands]
   timeline:
     - from: 1648
       owner: null
@@ -1479,6 +1479,22 @@
       owner: "usa"
       label: "アメリカ領サモア"
       cause: "1899年の三国協定でサモア東部がアメリカ領になる（ツトゥイラ島の割譲 1900年）"
+      source: "https://ja.wikipedia.org/wiki/アメリカ領サモア"
+
+# マヌア諸島（O2 が追加）：1904 年に割譲。us_am_samoa より小さいので、1900 年からはこちらが優先される
+- id: us_manua
+  name: "マヌア諸島"
+  select:
+    pieces: [USA-Manu_a_Islands]
+  timeline:
+    - from: 1900
+      owner: null
+      note: "マヌアの王（トゥイ・マヌア）が治め、1904年まで合衆国への割譲に応じなかった"
+      source: "https://en.wikipedia.org/wiki/Manuʻa_Islands"
+    - from: 1904
+      owner: "usa"
+      label: "アメリカ領サモア"
+      cause: "トゥイ・マヌアがマヌア諸島を合衆国に割譲する（7月）"
       source: "https://ja.wikipedia.org/wiki/アメリカ領サモア"
 
 - id: us_ky_1775
@@ -6950,7 +6966,7 @@
 - id: us_hawaii
   name: "ハワイ諸島"
   select:
-    pieces: [USA-Hawaii]
+    pieces: [USA-Hawaii, USA-Kauai_and_Niihau]
   timeline:
     - from: 1648
       owner: null
@@ -6958,6 +6974,34 @@
     - from: 1795
       owner: "hawaii"
       cause: "カメハメハ1世がオアフ島を征服し、ハワイ王国を建てる（カウアイ島は1810年に服属）"
+      source: "https://ja.wikipedia.org/wiki/ハワイ王国"
+    - from: 1898
+      owner: "usa"
+      label: "ハワイ（合衆国が併合）"
+      cause: "アメリカ合衆国がハワイを併合する（7月）"
+      source: "https://ja.wikipedia.org/wiki/ハワイ併合"
+    - from: 1900
+      owner: "usa"
+      label: "ハワイ準州"
+      cause: "ハワイ基本法（組織法）でハワイ準州が置かれる"
+      source: "https://ja.wikipedia.org/wiki/ハワイ準州"
+    - from: 1959
+      owner: "usa"
+
+# カウアイ島・ニイハウ島（O2 が追加）：1810 年までカウアイ王国。us_hawaii より小さいので、1795 年からはこちらが優先される
+- id: us_kauai
+  name: "カウアイ島・ニイハウ島"
+  select:
+    pieces: [USA-Kauai_and_Niihau]
+  timeline:
+    - from: 1795
+      owner: "kauai"
+      cause: "カメハメハ1世がハワイ・マウイ・オアフを統一した後も、カウアイ島はカウムアリイ王のもとで独立を保つ"
+      source: "https://en.wikipedia.org/wiki/Kaumualiʻi"
+    - from: 1810
+      owner: "hawaii"
+      cause: "カウムアリイがカメハメハ1世に服属し、ハワイ諸島が統一される"
+      note: "カウムアリイは1821年までカウアイを治めた。ニイハウ島は1864年にシンクレア家が買い取り、今も私有地"
       source: "https://ja.wikipedia.org/wiki/ハワイ王国"
     - from: 1898
       owner: "usa"
