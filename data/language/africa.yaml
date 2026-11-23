@@ -1322,6 +1322,14 @@
       main: gurage
       minor: oromo
       note: ハラリ語（エチオピアのセム系）。
+    - from: 1900
+      main: gurage
+      minor: amharic
+      note: 1887 年にメネリク2世が征服し、アムハラ人の兵士・役人とオロモ人が町に移り住んだ。
+    - from: 1950
+      main: oromo
+      minor: amharic
+      note: ハラリ人は少数派になった（2007 年の国勢調査で、ハラリ州はオロモ人約 56%・アムハラ人約 22%・ハラリ人約 9%）。
 - id: lang_af_ethiopia_somali
   name: オガデン（ソマリ州）
   select:
@@ -1355,6 +1363,10 @@
       main: luo
       minor: dinka_nuer
       note: アニュワ語（西ナイル系）・ヌエル語。
+    - from: 1990
+      main: dinka_nuer
+      minor: luo
+      note: 19 世紀から東へ広がったヌエル人が、南スーダンの内戦の難民も加わって最大の民族になった（2007 年に約 46%）。
 - id: lang_af_snnpr
   name: エチオピア南部（南部諸民族州）
   select:
@@ -1502,10 +1514,14 @@
     - from: 1648
       main: kikuyu
       minor: nilotic_east
-    - from: 1950
+    - from: 1910
+      main: kikuyu
+      minor: gujarati
+      note: ウガンダ鉄道（1899）の町。インド系（グジャラート語・パンジャーブ語）の商人・職人が多く、1948 年にはアフリカ人約 6.5 万・アジア系約 4.3 万・ヨーロッパ人約 1 万だった。モンバサ・ダルエスサラーム・カンパラ・ザンジバルでも 20 世紀前半はアジア系が1〜3割いた。
+    - from: 1970
       main: kikuyu
       minor: luo
-      note: 全国から人が集まる首都。スワヒリ語・英語が共通語。
+      note: 独立後、アジア系の多くが国外へ去り、全国から人が集まる首都になった。スワヒリ語・英語が共通語。
 - id: lang_af_kenya_meru
   name: メル・エンブ
   select:
@@ -1897,13 +1913,21 @@
       minor: mongo_lingala
       note: コンゴ人（バコンゴ）が最も多く、リンガラ語が共通語。
 - id: lang_af_kwango
-  name: クワンゴ・クウィル
+  name: クワンゴ
   select:
-    adm1: [COD/Kwango, COD/Kwilu]
+    adm1: [COD/Kwango]
   timeline:
     - from: 1648
       main: kongo
-      note: ヤカ語・ペンデ語・ンバラ語など。共通語はキトゥバ語（コンゴ語系）。
+      note: ヤカ語・スク語（キコンゴ系）。共通語はキトゥバ語（コンゴ語系）。
+- id: lang_af_kwilu
+  name: クウィル
+  select:
+    adm1: [COD/Kwilu]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      note: ムバラ・ペンデ・ヤンシ・ムブン・ンボマなど、コンゴ語とは別のバントゥー系の諸語（ペンデ語はカサイの諸語に近い）。共通語はキトゥバ語。
 - id: lang_af_ubangi
   name: ウバンギ（北西部）
   select:
@@ -1993,9 +2017,9 @@
     adm1: [COD/Haut-Katanga, COD/Lualaba]
   timeline:
     - from: 1648
-      main: lunda_chokwe
-      minor: bemba
-      note: ルンダ語・サンガ語・ベンバ語系の諸語。
+      main: bemba
+      minor: lunda_chokwe
+      note: サンガ・ランバ・アウシなどベンバ系の諸語。ルンダ人（カゼンベ王国）はルアプラ川沿い、ルンダ帝国の中心は西のルアラバ州。
     - from: 1930
       main: bemba
       minor: luba
@@ -2732,10 +2756,14 @@
   timeline:
     - from: 1648
       main: zulu
-    - from: 1870
+    - from: 1880
+      main: zulu
+      minor: tamil
+      note: ダーバン（1835）。ナタール植民地（1843–）の港。1860 年からインドの年季契約労働者（タミル語・テルグ語・ヒンディー語など。タミル語が最大）が来て、1950 年代にはインド系が都市圏の約3分の1で、イギリス系の白人より多かった。
+    - from: 1980
       main: zulu
       minor: english
-      note: ダーバン（1835）。ナタール植民地（1843–）の港。イギリス系の白人とインド系の住民が多い。
+      note: インド系の住民の家庭の言葉も英語になり、英語を話す住民（白人・インド系）が2〜3割。
 - id: lang_af_eswatini
   name: エスワティニ（スワジランド）
   select:
