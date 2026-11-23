@@ -268,6 +268,15 @@
       curve: [[1660, 0.2], [1700, 0.5], [1730, 0.8], [1770, 0.8], [1790, 0.5], [1808, 0.0]]
     - where: {iso: [COL, PER, VEN, ARG, URY, MEX]}
       curve: [[1648, 0.3], [1700, 0.3], [1780, 0.4], [1810, 0.2], [1820, 0.0]]
+    # ---- アフリカの奴隷の積出地（2026-11-23、F5 担当） ----
+    - where: {iso: [AGO, COG], adm1: ["COD/Kongo-Central"]}
+      curve: [[1648, 0.9], [1700, 0.9], [1750, 1.0], [1800, 1.0], [1830, 0.8], [1850, 0.4], [1867, 0.0]]
+    - where: {iso: [BEN, TGO], adm1: ["NGA/Lagos", "NGA/Ogun", "NGA/Bayelsa", "NGA/Rivers", "NGA/Cross River", "NGA/Akwa Ibom"]}
+      curve: [[1648, 0.4], [1700, 0.8], [1740, 1.0], [1800, 1.0], [1830, 0.7], [1851, 0.3], [1865, 0.0]]
+    - where: {iso: [GHA, SEN, GMB, GNB, SLE, CPV]}
+      curve: [[1648, 0.5], [1700, 0.7], [1750, 0.9], [1790, 0.8], [1808, 0.3], [1830, 0.1], [1850, 0.0]]
+    - where: {iso: [MOZ, MDG]}
+      curve: [[1740, 0.2], [1780, 0.4], [1810, 0.6], [1830, 0.7], [1850, 0.5], [1870, 0.0]]
   people: [ウィルバーフォース]
   works: []
   events: [ユトレヒト条約, アミアンの和約]
@@ -1286,6 +1295,15 @@
       curve: [[1959, 0.6], [1961, 0.9], [1962, 1.0], [1975, 0.8], [1991, 0.4]]
     - where: {polities: [guatemala, el_salvador, honduras, nicaragua, panama, dominican_republic, chile, argentina, brazil, uruguay, paraguay, bolivia, peru, colombia, venezuela, mexico]}
       curve: [[1947, 0.3], [1954, 0.5], [1964, 0.6], [1973, 0.8], [1983, 0.8], [1990, 0.4], [1991, 0.2]]
+    # ---- アフリカ（2026-11-23、F5 担当）：コンゴ動乱・アンゴラ内戦・アフリカの角 ----
+    - where: {polities: [drc, katanga]}
+      curve: [[1960, 1.0], [1965, 0.8], [1977, 0.6], [1985, 0.5], [1991, 0]]
+    - where: {polities: [angola, mozambique, unita]}
+      curve: [[1961, 0.4], [1975, 1.0], [1988, 1.0], [1991, 0.3]]
+    - where: {polities: [ethiopia, somalia]}
+      curve: [[1953, 0.3], [1974, 0.7], [1977, 1.0], [1988, 0.8], [1991, 0.2]]
+    - where: {polities: [south_africa, namibia]}
+      curve: [[1960, 0.3], [1975, 0.7], [1988, 0.8], [1991, 0.2]]
   people: [トルーマン, スターリン, チャーチル, ケネディ, フルシチョフ, ブレジネフ, レーガン, ゴルバチョフ]
   events: [「鉄のカーテン」演説, トルーマン・ドクトリン, マーシャル・プラン, ベルリン封鎖, 北大西洋条約機構（NATO）の結成, 朝鮮戦争, ワルシャワ条約機構の結成, ベルリンの壁の建設, キューバ危機, ニクソン訪中, 全欧安全保障協力会議（CSCE）とヘルシンキ宣言, ベルリンの壁の崩壊]
   text: 第二次世界大戦後、アメリカを中心とする資本主義（西側）陣営と、ソ連を中心とする社会主義（東側）陣営が、直接の戦争はせずに、軍事同盟・核兵器の開発・経済・宣伝で張り合った状態。ヨーロッパは「鉄のカーテン」で東西に分断され、ドイツとベルリンがその最前線となった。1989年のマルタ会談で終結が宣言された。
@@ -1345,6 +1363,11 @@
     # ---- 南北アメリカ（2026-11-21、A6 担当） ----
     - where: {polities: [jamaica, trinidad_tobago, barbados, guyana, bahamas, grenada, suriname, dominica, saint_lucia, saint_vincent, antigua_barbuda, saint_kitts_nevis, belize]}
       curve: [[1958, 0.4], [1962, 0.9], [1966, 1.0], [1975, 0.9], [1983, 0.6], [1990, 0.2], [2000, 0.0]]
+    # ---- サハラ以南のアフリカ（2026-11-23、F5 担当。詳しくは africa.yaml の「アフリカの独立運動」） ----
+    - where: {polities: [ghana, guinea, senegal, mali, cote_divoire, nigeria, cameroon, drc, tanzania, kenya, uganda, zambia, malawi, somalia, sudan, madagascar]}
+      curve: [[1956, 0.8], [1960, 1.0], [1964, 0.9], [1968, 0.5], [1975, 0.2], [1980, 0]]
+    - where: {polities: [angola, mozambique, guinea_bissau, zimbabwe, namibia]}
+      curve: [[1974, 0.8], [1975, 1.0], [1980, 0.9], [1985, 0.4], [1990, 0.6], [1995, 0]]
   people: [ガンディー, ナセル, エンクルマ, ホー・チ・ミン, ファノン, ド・ゴール]
   works: [『地に呪われたる者』（ファノン）]
   events: [「アフリカの年」と植民地の独立, スエズ戦争（第2次中東戦争）, 南欧の民主化（ポルトガル・ギリシア・スペイン）]
