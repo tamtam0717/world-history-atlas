@@ -97,6 +97,7 @@
   name: スペインとポルトガル
   select:
     iso: [ESP, PRT]
+    pieces: [PRT-RegiAo_AutA3noma_dos_AAores]   # アゾレス諸島（範囲外のピース）
   timeline:
     - from: 1648
       main: catholic
@@ -234,6 +235,19 @@
       note: 東グリーンランド（アンマサリク）への伝道は1894年に始まり、1920年代までに住民のほぼ全員がルター派の洗礼を受けた。
       source: "https://en.wikipedia.org/wiki/Religion_in_Greenland"
 
+- id: rel_west_greenland
+  name: 西グリーンランド
+  select:
+    regions: [west_greenland]
+  timeline:
+    - from: 1648
+      main: other
+      note: イヌイットの伝統的な信仰（アンガコック〈シャーマン〉）。
+    - from: 1780
+      main: lutheran
+      note: ハンス・エーゲデ（1721–）のデンマーク＝ノルウェーのルター派と、モラヴィア兄弟団（1733–1900）の伝道で、18世紀末までに西岸のイヌイットの多くが洗礼を受けた。北西部のチューレのイヌイットへの伝道は1909年から。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Greenland"
+
 # ---- 北アフリカ ----
 - id: rel_maghreb
   name: マグリブ（モロッコ・アルジェリア・チュニジア・リビア）と西サハラ
@@ -275,7 +289,7 @@
     - from: 1880
       main: catholic
       minor: sunni
-      note: フランスの征服（1830）の後、フランス人・スペイン人・イタリア人・マルタ人などのヨーロッパ系の住民が増え、1880年代にはアルジェ市の住民の約3分の2を占めた（ほとんどがカトリック）。クレミュー令（1870）でユダヤ教徒はフランス市民になる。アンナバ（ボーヌ）などの都市でもヨーロッパ系が多いが、ピースが県単位なのでここでは塗らない。（比率は要確認）
+      note: フランスの征服（1830）の後、フランス人・スペイン人・イタリア人・マルタ人などのヨーロッパ系の住民が増え、1880年代にはアルジェ市の住民の約3分の2を占めた（ほとんどがカトリック）。クレミュー令（1870）でユダヤ教徒はフランス市民になる。アンナバ（ボーヌ）・ミティジャ平野などの入植地は rel_algeria_settlers（言語と同じく minor のカトリック）。（比率は要確認）
       source: "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
     - from: 1950
       main: sunni
@@ -285,6 +299,22 @@
       main: sunni
       note: 1962年の独立でヨーロッパ系の住民（カトリック）とユダヤ人の大部分がフランスへ去った。
       source: "https://ja.wikipedia.org/wiki/ピエ・ノワール"
+
+- id: rel_algeria_settlers
+  name: アルジェリアの入植地（ミティジャ平野・西部・アンナバ）
+  select:
+    pieces: [DZA-Blida, DZA-Tipaza, DZA-Sidi_Bel_Abbes, DZA-Mostaganem, DZA-Ain_Temouchent, DZA-Annaba]
+  timeline:
+    - from: 1648
+      main: sunni
+    - from: 1870
+      main: sunni
+      minor: catholic
+      note: フランスの入植地。フランス人・スペイン人・イタリア人・マルタ人の入植者（ほとんどがカトリック）が都市と平野に集まった。言語（lang_mitidja・lang_annaba の french の minor）と同じ範囲・同じ年。
+      source: "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
+    - from: 1962
+      main: sunni
+      note: 1962年の独立でヨーロッパ系の入植者はほとんどフランスへ去った。
 
 - id: rel_egypt
   name: エジプト

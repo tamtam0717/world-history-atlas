@@ -912,6 +912,44 @@
       source: "https://ja.wikipedia.org/wiki/ウンデッド・ニーの虐殺"
     - from: 1920
       main: english
+- id: lang_sd_east
+  name: サウスダコタ東部（ミズーリ川の東）
+  select:
+    pieces: [USA-South_Dakota_East]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: caddoan
+      note: ダコタ・ヤンクトン（スー系）と、ミズーリ川沿いのアリカラ（カドー系）の地。
+    - from: 1780
+      main: siouan
+      note: ヤンクトン・ヤンクトナイ・シセトンなどのスーの人々。
+    - from: 1870
+      main: english
+      minor: siouan
+      note: ヤンクトン条約（1858）とダコタ準州（1861）の後、南東部（ヤンクトン・スーフォールズ）から入植が進んだ。1870 年代末からの「ダコタ・ブーム」でノルウェー系・ドイツ系（ロシアのドイツ人を含む）などの移民が増えた。
+      source: "https://en.wikipedia.org/wiki/Dakota_Territory"
+    - from: 1890
+      main: english
+      note: 先住民はヤンクトン・レイク・トラヴァース・クロウ・クリークなどの保留地に住む。
+- id: lang_sd_west
+  name: サウスダコタ西部（ミズーリ川の西・ブラックヒルズ）
+  select:
+    pieces: [USA-South_Dakota]
+  timeline:
+    - from: 1648
+      main: siouan
+      minor: caddoan
+      note: アリカラ（カドー系）とシャイアンなどの地。ブラックヒルズはのちにラコタの聖地とされる。
+    - from: 1780
+      main: siouan
+      note: 馬を得たラコタ（西部スー）がミズーリ川を渡って広がり、ブラックヒルズを押さえた。
+      source: "https://ja.wikipedia.org/wiki/ラコタ族"
+    - from: 1900
+      main: english
+      minor: siouan
+      note: ブラックヒルズの金鉱（1874–）の町と、大スー保留地の分割（1889）の後のホームステッドの入植（1900 年代に急増）。パインリッジ・ローズバッド・シャイアン・リヴァーなどの保留地のラコタは今も住民の 2〜3 割を占める。
+      source: "https://en.wikipedia.org/wiki/Great_Sioux_Reservation"
 - id: lang_montana_wyoming
   name: モンタナ・ワイオミング（ロッキー山脈側）
   select:
@@ -4315,6 +4353,24 @@
       main: polynesian
       minor: spanish
       note: 1888 年にチリが併合した。1966 年までは島の大部分が羊の牧場として貸し出され、住民は村に閉じこめられた。観光の発達でチリ本土からの移住者が増えた（住民の約半数がラパ・ヌイ）。
+- id: lang_entre_rios
+  name: エントレ・リオス
+  select:
+    pieces: [ARG-Entre_Rios]
+  timeline:
+    - from: 1648
+      main: chaco_patagonia
+      minor: spanish
+      note: チャルア人・ミヌアン人（チャルア語族）とチャナ人の地。対岸のサンタフェの牧場主が牛を放った。
+      source: "https://ja.wikipedia.org/wiki/エントレ・リオス州"
+    - from: 1750
+      main: spanish
+      minor: chaco_patagonia
+      note: バハダ（パラナ）の集落と、1783 年のロカモラの町の建設で、スペイン語のガウチョの地になった（ウルグアイと同じ年で切り替える）。
+    - from: 1830
+      main: spanish
+      note: 19 世紀後半にヴォルガ・ドイツ人（1878–）やユダヤ人の農業植民地（1890 年代のヒルシュ男爵のユダヤ植民協会。「ユダヤ人のガウチョ」）が開かれたが、州の住民の多数はスペイン語を話した。
+      source: "https://en.wikipedia.org/wiki/Entre_R%C3%ADos_Province"
 - id: lang_uruguay
   name: ウルグアイ（バンダ・オリエンタル）
   select:
@@ -4383,3 +4439,43 @@
       main: english
       note: 1833 年にイギリスが占領し、イギリス人の牧羊の植民地になった。1982 年のフォークランド（マルビナス）戦争。
       source: "https://ja.wikipedia.org/wiki/フォークランド紛争"
+
+# ======== グアム・北マリアナ諸島・アメリカ領サモア（オセアニアのうちアメリカ領の3つ。2026-11-23） ========
+- id: lang_guam
+  name: グアム
+  select:
+    pieces: [USA-Guam]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      note: チャモロ人（チャモロ語）。スペイン統治でスペイン語の語彙が多く入った。
+    - from: 1950
+      main: austronesian_other
+      minor: english
+      note: 戦後のアメリカの基地とアメリカ本土・フィリピンなどからの移住で、英語が広く使われる。チャモロ人は住民の約3分の1（最大の民族）。
+      source: "https://ja.wikipedia.org/wiki/グアム"
+- id: lang_nmi
+  name: 北マリアナ諸島
+  select:
+    pieces: [USA-Commonwealth_of_the_Northern_Mariana_Islands]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      note: チャモロ語。19世紀からカロリン諸島の人々（カロリン語）も住む。
+    - from: 1930
+      main: japanese
+      minor: austronesian_other
+      note: 日本の委任統治領で、沖縄・本土からの移民が住民の大多数になった（1930年代末に約4万人。チャモロ人は約4千人）。
+      source: "https://ja.wikipedia.org/wiki/南洋庁"
+    - from: 1946
+      main: austronesian_other
+      minor: english
+      note: 日本人の引き揚げののち、チャモロ人・カロリン人。1978年からアメリカの自治領。
+- id: lang_am_samoa
+  name: アメリカ領サモア
+  select:
+    pieces: [USA-American_Samoa]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: サモア人（サモア語）。

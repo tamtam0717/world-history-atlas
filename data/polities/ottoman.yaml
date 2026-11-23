@@ -1153,9 +1153,15 @@
 
 - id: kazakh
   name: カザフ＝ハン国（小ジュズ）
+  names:
+    - {to: 1717, name: カザフ＝ハン国, short: カザフ}
   short: カザフ（小ジュズ）
   color: "#ddd4ab"
   kind: 遊牧国家
+  rulers:
+    - {name: タウケ・ハン, title: カザフのハン, from: 1680, to: 1715, note: 「七つの法典（ジェティ・ジャルグ）」を定め、3ジュズをまとめた最後の有力なハン。都はトルキスタン。在位の年は要確認。, source: "https://en.wikipedia.org/wiki/Tauke_Khan"}
+    - {name: アブルハイル・ハン, title: 小ジュズのハン, from: 1718, to: 1748, note: 1731年にロシアの臣籍に入った。, source: "https://en.wikipedia.org/wiki/Abu%27l-Khayr_Khan"}
+    - {name: ヌラリ・ハン, title: 小ジュズのハン, from: 1748, to: 1786, source: "https://en.wikipedia.org/wiki/Nurali_Khan"}
   note: カザフは大・中・小の3ジュズ（部族連合）に分かれ、地図の範囲（カザフスタン西部）はおもに小ジュズの遊牧地。1731年に小ジュズのアブルハイル・ハンがロシアの臣籍に入ったが、支配は名目的。
   periods:
     - from: 1648
@@ -1168,6 +1174,53 @@
       to: 1847
       text: ロシアは中ジュズ（1822）・小ジュズ（1824）のハン位を廃止して直接統治に移った。ケネサル・カスモフの反乱（1837–1847）を最後に、カザフ草原はロシアの支配下に入った。
   source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"
+
+- id: kazakh_middle
+  name: カザフ＝ハン国（中ジュズ）
+  short: カザフ（中ジュズ）
+  color: "#d6c38e"
+  kind: 遊牧国家
+  note: カザフ草原の北部・中部（イシム川・ヌラ川・イルティシュ川の流域）の部族連合。タウケ・ハンの死（1715年ごろ）ののち3ジュズの分立がはっきりした。1740年にアブルマンベト・ハンとアブライがロシアの臣籍に入り、アブライは清にも朝貢した（両属）。1822年にロシアがハン位を廃止した。
+  rulers:
+    - {name: アブルマンベト・ハン, title: 中ジュズのハン, from: 1739, to: 1771, note: 在位の年は要確認。, source: "https://en.wikipedia.org/wiki/Middle_Jüz"}
+    - {name: アブライ・ハン, title: 中ジュズのハン（3ジュズの盟主）, from: 1771, to: 1781, note: 1730年代からジュンガルとの戦いで名を上げ、実権を握っていた。, source: "https://en.wikipedia.org/wiki/Ablai_Khan"}
+    - {name: ワリー・ハン, title: 中ジュズのハン, from: 1781, to: 1819, note: 1819年の死ののちロシアはハン位を置かず、1822年にシベリア・キルギス規約で廃止した。, source: "https://en.wikipedia.org/wiki/Middle_Jüz"}
+  periods:
+    - from: 1718
+      to: 1757
+      text: ジュンガルの侵攻（1723年の「大災厄」）で南の遊牧地を追われ、ロシアの要塞線（イルティシュ線）との間に押し込まれた。1730年代からジュンガルに反撃した。
+    - from: 1758
+      to: 1821
+      text: ジュンガルの滅亡ののち、アブライのもとでロシアと清の両方に臣従しながら勢力を保った。
+  source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"
+
+- id: kazakh_great
+  name: カザフ＝ハン国（大ジュズ）
+  short: カザフ（大ジュズ）
+  color: "#e9dcae"
+  kind: 遊牧国家
+  note: カザフ草原の南東部（セミレチエ＝七河地方・シル川中流・タシケント周辺）の部族連合。1723年からジュンガルに服属し、ジュンガルの滅亡（1758年）ののちは清に名目的に朝貢した。19世紀にはコーカンド・ハン国が南部を押さえ、1846年からロシアの臣籍に入った。
+  rulers:
+    - {name: ジョルバルス・ハン, title: 大ジュズのハン（タシケントを本拠）, from: 1720, to: 1740, note: ジュンガルに服属した。在位の年は要確認。, source: "https://en.wikipedia.org/wiki/Senior_Jüz"}
+    - {name: トレ・ビー, title: 大ジュズのビー（長老）・タシケントの支配者, from: 1740, to: 1756, note: 要確認。, source: "https://en.wikipedia.org/wiki/Tole_Bi"}
+  periods:
+    - from: 1723
+      to: 1757
+      text: ジュンガルの侵攻でタシケント・トルキスタンなどを奪われ、ジュンガルに服属した。
+    - from: 1758
+      to: 1853
+      text: ジュンガルの滅亡ののち遊牧地を取り戻したが、19世紀初めからコーカンド・ハン国がシル川流域・セミレチエ南部に勢力を広げた。1846年にロシアの臣籍に入り、1854年のヴェールヌイ（アルマトイ）の要塞でロシアの支配が固まった。
+  source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"
+
+- id: tashkent_state
+  name: タシケント（ユーヌス・ホージャの政権）
+  short: タシケント
+  color: "#d9b59c"
+  kind: 都市国家
+  note: タシケントは18世紀半ばには4つの街区（ダハ）の長が争い、カザフの支配を受けた。1784年ごろユーヌス・ホージャが街区を統一して自立し、周りのカザフやコーカンドと争った。1809年ごろコーカンド・ハン国に併合された（年は要確認）。
+  rulers:
+    - {name: ユーヌス・ホージャ, title: タシケントの支配者（ハーキム）, from: 1784, to: 1801, note: 在位の年は要確認。, source: "https://en.wikipedia.org/wiki/Tashkent"}
+  source: "https://en.wikipedia.org/wiki/Tashkent"
 
 # ---------------------------------------------------------------- カフカース
 - id: kartli_kakheti
@@ -2241,6 +2294,33 @@
     - {name: バドラ・グンバ, title: 大統領（2025年3月の選挙で当選）, from: 2024, source: "https://en.wikipedia.org/wiki/Badra_Gunba"}
   source: "https://ja.wikipedia.org/wiki/アブハジア"
 
+- id: artsakh
+  name: アルツァフ共和国（未承認国家）
+  names:
+    - {to: 2016, name: ナゴルノ・カラバフ共和国（未承認国家）, short: ナゴルノ・カラバフ, kind: 自称国家（どの国も承認していない）}
+    - {from: 2017, name: アルツァフ共和国（未承認国家）, short: アルツァフ, kind: 自称国家（どの国も承認していない）}
+  short: アルツァフ
+  color: "#e6c0a8"
+  kind: 自称国家（どの国も承認していない）
+  note: アゼルバイジャンの中のナゴルノ・カラバフ自治州（アルメニア人が人口の約4分の3）のアルメニア人が、ソ連の解体のなかで1991年9月に独立を宣言した国。アルメニアの支援を受けて1988–1994年の戦争に勝ち、旧自治州と周りのアゼルバイジャンの7地区を押さえたが、アルメニアを含めてどの国も承認せず、国際的にはアゼルバイジャンの領土とされた。2017年の憲法でアルツァフ共和国と改称した。2020年の第2次ナゴルノ・カラバフ戦争で領域の大半を失い、2023年9月のアゼルバイジャン軍の攻撃で降伏し、2024年1月1日に解散した。首都はステパナケルト。
+  rulers:
+    - {name: ロベルト・コチャリャン, title: 国家防衛委員会議長・大統領, from: 1992, to: 1997, note: 1992–1994年は国家防衛委員会議長（最高会議議長はアルトゥル・ムクルチャン、ゲオルギー・ペトロシャン、カレン・ババヤン）。のちにアルメニア大統領（1998–2008）。, source: "https://ja.wikipedia.org/wiki/ロベルト・コチャリャン"}
+    - {name: アルカディ・グカシャン, title: 大統領, from: 1997, to: 2007, source: "https://en.wikipedia.org/wiki/Arkadi_Ghukasyan"}
+    - {name: バコ・サアキャン, title: 大統領, from: 2007, to: 2020, source: "https://en.wikipedia.org/wiki/Bako_Sahakyan"}
+    - {name: アライク・ハルチュニャン, title: 大統領, from: 2020, to: 2023, source: "https://en.wikipedia.org/wiki/Arayik_Harutyunyan"}
+    - {name: サムヴェル・シャフラマニャン, title: 大統領, from: 2023, to: 2023, note: 9月の降伏ののち、共和国の解散を命じる大統領令に署名した。, source: "https://en.wikipedia.org/wiki/Samvel_Shahramanyan"}
+  periods:
+    - from: 1991
+      to: 1994
+      text: アゼルバイジャンとの戦争（第1次ナゴルノ・カラバフ戦争）で、アルメニアの支援を受けて旧自治州のほぼ全域と周りの7地区を押さえた。双方で約3万人が死に、アゼルバイジャン人約60万人・アルメニア人約30万人が難民になった。1994年5月に停戦。
+    - from: 1994
+      to: 2019
+      text: 停戦ラインをはさんでアゼルバイジャン軍とにらみ合い、欧州安全保障協力機構（OSCE）のミンスク・グループの仲介も実を結ばなかった。2016年4月に激しい衝突（4日間戦争）。
+    - from: 2020
+      to: 2023
+      text: 第2次ナゴルノ・カラバフ戦争（2020年9–11月）でシュシャと南部を失い、周りの7地区もアゼルバイジャンに返した。ロシアの平和維持部隊が駐留したが、2022年12月からラチン回廊が封鎖され、2023年9月のアゼルバイジャン軍の攻撃で降伏した。
+  source: "https://ja.wikipedia.org/wiki/アルツァフ共和国"
+
 - id: armenia
   name: アルメニア
   names:
@@ -2346,18 +2426,61 @@
     - {name: ムハンマド・イドリースィー, title: 首長, from: 1909, to: 1923, source: "https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir"}
   source: "https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir"
 
+- id: lahij_sultanate
+  name: ラヘジ・スルタン国（アブダリー家）
+  short: ラヘジ
+  color: "#c5d6a2"
+  kind: スルタン国
+  note: アブダリー家のファドル・イブン・アリーが1728年ごろザイド派のイマームから自立し、アデンも治めた（1735年ごろから）。1839年にアデンをイギリスに奪われ、1880年代にイギリスの保護下に入った（アデン保護領）。年は要確認。
+  source: "https://en.wikipedia.org/wiki/Sultanate_of_Lahej"
+
+- id: kathiri
+  name: カスィーリ・スルタン国
+  short: カスィーリ
+  color: "#d8c3a0"
+  kind: スルタン国
+  note: ハドラマウトのカスィーリ族のスルタン国（セイユーン・タリーム）。1650年代にザイド派のイマームに服属したが、18世紀初めに自立した。19世紀後半にはヤーファー族のクアイティ家が沿岸（ムカッラー・シフル）を奪い、ハドラマウトは2つのスルタン国に分かれた。どちらも1880年代以後イギリスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Kathiri"
+
+- id: mahra
+  name: マハラ・スルタン国（キシュンとソコトラ）
+  short: マハラ
+  color: "#b7ccb4"
+  kind: スルタン国
+  note: アラビア半島南東部のマハラ地方とソコトラ島を治めたスルタン国（アフラール家）。マハラ語・ソコトラ語（南アラビア諸語）の地。1886年にイギリスの保護下に入った（アデン保護領）。
+  source: "https://en.wikipedia.org/wiki/Mahra_Sultanate"
+
 - id: yemen
   name: イエメン共和国
   short: イエメン
   color: "#9fc6bf"
   kind: 共和国
   names:
-    - {to: 1917, name: イエメン（イマーム・ヤフヤーの自治領）, short: イエメン, kind: ザイド派イマームの自治領（オスマン帝国の宗主権下）}
+    - {to: 1871, name: イエメン（ザイド派イマーム国・カースィム朝）, short: イエメン, kind: イマーム国（ザイド派）}
+    - {from: 1872, to: 1917, name: イエメン（イマーム・ヤフヤーの自治領）, short: イエメン, kind: ザイド派イマームの自治領（オスマン帝国の宗主権下）}
     - {from: 1918, to: 1961, name: イエメン王国（ムタワッキル王国）, short: イエメン, kind: 王国（ザイド派のイマーム）}
     - {from: 1962, to: 1989, name: イエメン・アラブ共和国（北イエメン）, short: 北イエメン, kind: 共和国}
     - {from: 1990, name: イエメン共和国, short: イエメン, kind: 共和国}
   note: 北部の高地はシーア派の一派ザイド派のイマームの地。オスマン帝国は1849年に沿岸のティハーマ、1872年にサナアを押さえたが、イマームの抵抗が続き、1911年のダアン条約で高地の自治を認めた。1918年にオスマン軍が撤退して王国となった。1962年の革命で共和国となり、王党派（サウジアラビアが支援）と共和派（エジプトが支援）の内戦が1970年まで続いた。1990年に南イエメンと統合した。2014年からフーシ派（アンサール・アッラー）がサナアを押さえ、2015年からサウジアラビアなどが介入する内戦が続く。
+  periods:
+    - from: 1648
+      to: 1728
+      text: ザイド派のイマーム（カースィム家）がオスマン帝国を追い出し（1635年）、イエメン全土とハドラマウトまでを治めた。モカの港からのコーヒーの輸出が栄えた。
+    - from: 1729
+      to: 1848
+      text: 南部のラヘジ（アデン）や諸部族が自立し、イマームの支配は北部・中部の高地とティハーマに縮んだ。19世紀初めにはワッハーブ派（サウード家）、1830年代にはエジプトのムハンマド・アリーの軍が紅海沿岸に進出した。
+    - from: 1849
+      to: 1871
+      text: オスマン帝国がティハーマを押さえ（1849年）、高地ではイマーム位をめぐる争いが続いた。1872年にオスマン軍がサナアに入った。
   rulers:
+    - {name: ムタワッキル・イスマーイール, title: イマーム（カースィム朝）, from: 1644, to: 1676, note: ハドラマウトまで支配を広げた（1650年代）。, source: "https://en.wikipedia.org/wiki/Al-Mutawakkil_Isma%27il"}
+    - {name: マフディー・アフマド, title: イマーム, from: 1676, to: 1681, source: "https://en.wikipedia.org/wiki/Al-Mahdi_Ahmad"}
+    - {name: マフディー・ムハンマド（サーヒブ・アル＝マワーヒブ）, title: イマーム, from: 1689, to: 1718, note: 1681–1689年はムアイヤド・ムハンマドらが在位。要確認。, source: "https://en.wikipedia.org/wiki/Al-Mahdi_Muhammad"}
+    - {name: マンスール・フサイン, title: イマーム, from: 1727, to: 1748, note: 1718–1727年はムタワッキル・カースィムら。この時期にラヘジのアブダリー家が自立した。要確認。, source: "https://en.wikipedia.org/wiki/Al-Mansur_al-Husayn_II"}
+    - {name: マフディー・アッバース, title: イマーム, from: 1748, to: 1775, source: "https://en.wikipedia.org/wiki/Al-Mahdi_Abbas"}
+    - {name: マンスール・アリー, title: イマーム, from: 1775, to: 1809, source: "https://en.wikipedia.org/wiki/Al-Mansur_Ali_I"}
+    - {name: ムタワッキル・アフマド, title: イマーム, from: 1809, to: 1816, source: "https://en.wikipedia.org/wiki/Al-Mutawakkil_Ahmad"}
+    - {name: マフディー・アブドゥッラー, title: イマーム, from: 1816, to: 1835, note: 1835年以後はイマームが短期間で替わり、国は乱れた。, source: "https://en.wikipedia.org/wiki/Al-Mahdi_Abdallah"}
     - {name: ヤフヤー, title: イマーム, from: 1904, to: 1948, note: 1948年に暗殺された, source: "https://en.wikipedia.org/wiki/Yahya_Muhammad_Hamid_ed-Din"}
     - {name: アフマド, title: イマーム（国王）, from: 1948, to: 1962, source: "https://en.wikipedia.org/wiki/Ahmad_bin_Yahya"}
     - {name: アブドゥッラー・サッラール, title: 大統領, from: 1962, to: 1967, note: 1962年9月の革命の指導者, source: "https://en.wikipedia.org/wiki/Abdullah_al-Sallal"}

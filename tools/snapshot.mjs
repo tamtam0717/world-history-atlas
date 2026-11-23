@@ -62,6 +62,7 @@ for (const y of years) {
   const hash = new URLSearchParams({ y: String(y) });
   if (polity) hash.set("p", polity);
   if (layer && layer !== "political") hash.set("l", layer);
+  if (args.includes("--modern")) hash.set("m", "1");
   // ハッシュだけの変更では再読み込みされないので、一度空ページを挟む
   await page.goto("about:blank");
   // 表示範囲（data/meta.yaml）の外の年も確認できるよう、範囲を広げて開く

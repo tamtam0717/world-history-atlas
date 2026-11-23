@@ -1,0 +1,931 @@
+# F1 西アフリカ（セネガンビア・サヘル：MRT・SEN・GMB・GNB・GIN・SLE・LBR・MLI・BFA・CIV・NER・CPV）の政体（1648–2025）
+# 他の担当が参照しうる ID：futa_toro・futa_jallon・kaarta・segu・massina・toucouleur（トゥクロール帝国）・wassoulou（サモリ帝国）
+#   kenedougou・kong・gyaaman・mossi・gurma・liptako・dendi・zarma・tuareg・agadez・damagaram・gobir・maradi
+#   senegal・gambia・guinea・guinea_bissau・cape_verde・sierra_leone・liberia・cote_divoire・upper_volta（ブルキナファソ）・niger
+# mali（マリ共和国）・mauritania（モーリタニア）・azawad はヨーロッパの担当（data/polities/west.yaml）が定義済み。
+# フランス（france）・イギリス（britain）・ポルトガル（portugal）・オランダ（netherlands）・ヴィシー政府（vichy_france）・モロッコ（morocco）は既存。
+# ボルヌ（bornu）・ソコト・カリフ国（sokoto）・アシャンティ（ashanti）・ハウサ諸王国（hausa_states）は F2 の ID を参照する。
+# 植民地の時期の元首は宗主国の元首を使うので書かない。小さな在地の国家は元首を省略した。
+
+# ================================================================ モーリタニアのムーア人の首長国
+- id: trarza
+  name: トラルザ首長国
+  short: トラルザ
+  color: "#afcfbe"
+  kind: 首長国（ムーア人）
+  periods:
+    - from: 1648
+      to: 1854
+      text: セネガル川下流の北岸（現在のモーリタニア南西部）のムーア人（ハッサーン系のアラブ戦士集団）の首長国。アラビアゴムの交易で、サン＝ルイのフランス商人と結びつき、南岸のワロ王国にもたびたび攻め込んだ。
+    - from: 1855
+      to: 1902
+      text: セネガル総督フェデルブと戦い（1855–58）、セネガル川南岸への進出をあきらめた。1902–03年、フランスのコッポラーニの「平和的征服」で保護下に入った。
+  note: 17世紀なかばの「シャル・ブッバ戦争」（1644–74）で、戦士集団（ハッサーン）が宗教者集団（ザワーヤ）を下し、ムーア人の社会の上下関係ができたとされる。
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Trarza"
+
+- id: brakna
+  name: ブラクナ首長国
+  short: ブラクナ
+  color: "#dae2ab"
+  kind: 首長国（ムーア人）
+  periods:
+    - from: 1648
+      to: 1903
+      text: セネガル川中流の北岸のムーア人の首長国。アラビアゴムの交易でフランスと結び、南岸のフタ・トロとも争った。1903年にフランスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Brakna_Emirate"
+
+- id: tagant
+  name: タガント首長国
+  short: タガント
+  color: "#e2b1ab"
+  kind: 首長国（ムーア人）
+  periods:
+    - from: 1700
+      to: 1905
+      text: モーリタニア中部のタガント高原を中心とするイダウ・アイシュ族の首長国。1905年、フランスのコッポラーニがティジクジャで殺されたのち、フランス軍に占領された。
+  note: 成立の年は18世紀初めとされる（要確認）。
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Tagant"
+
+- id: adrar_emirate
+  name: アドラール首長国
+  short: アドラール
+  color: "#e6d6b7"
+  kind: 首長国（ムーア人）
+  periods:
+    - from: 1745
+      to: 1909
+      text: モーリタニア北部のアドラール高原（都アタール）の首長国。ナツメヤシのオアシスと隊商路を押さえた。1909年、グロー大佐のフランス軍に占領された。
+  note: 成立は18世紀なかばとされる（要確認）。
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Adrar"
+
+# ================================================================ セネガンビアの王国
+- id: waalo
+  name: ワロ王国
+  short: ワロ
+  color: "#c9d9a3"
+  kind: 王国（ウォロフ）
+  rulers:
+    - {name: ンダテ・ヤラ・ンボージュ, title: 女王（リンゲール）, from: 1846, to: 1855, note: フランスの進出に抵抗した。1855年にフェデルブがワロを併合した, source: "https://en.wikipedia.org/wiki/Ndaté_Yalla_Mbodj"}
+  periods:
+    - from: 1648
+      to: 1854
+      text: セネガル川下流の南岸のウォロフ人の王国（王はブラク）。河口のサン＝ルイのフランス人と交易したが、北のトラルザのムーア人にたびたび攻められた。
+    - from: 1855
+      to: 1855
+      text: 1855年、セネガル総督フェデルブがワロを併合し、フランスが内陸に進む足場となった。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Waalo"
+
+- id: cayor
+  name: カヨール王国
+  short: カヨール
+  color: "#ceb083"
+  kind: 王国（ウォロフ）
+  rulers:
+    - {name: ラト・ジョール・ジョップ, title: 王（ダメル）, from: 1862, to: 1886, note: 1864年にフランスに追われ、1871年に復位した。ダカール＝サン＝ルイ鉄道の建設に反対して1882年に廃され、1886年に戦死した, source: "https://en.wikipedia.org/wiki/Lat_Dior"}
+  periods:
+    - from: 1648
+      to: 1854
+      text: ヴェール岬半島からセネガル川の手前までの大西洋岸のウォロフ人の王国（王はダメル）。ジョロフ王国から16世紀に自立した。奴隷貿易と落花生で栄え、しばしばバオルの王を兼ねた。
+    - from: 1855
+      to: 1886
+      text: フランスのフェデルブが沿岸を押さえ、ダメルのラト・ジョールが抵抗した。ダカール＝サン＝ルイ鉄道（1885年開通）の建設をめぐる戦いで、1886年にラト・ジョールが戦死し、カヨールは併合された。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Cayor"
+
+- id: baol
+  name: バオル王国
+  short: バオル
+  color: "#cfd896"
+  kind: 王国（ウォロフ）
+  periods:
+    - from: 1648
+      to: 1894
+      text: カヨールの南東のウォロフ人の王国（王はテイン）。19世紀後半、ムリッド教団の創始者アマドゥ・バンバがトゥーバを開いた。1894年ごろフランスに併合された。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Baol"
+
+- id: jolof
+  name: ジョロフ王国
+  short: ジョロフ
+  color: "#92ce83"
+  kind: 王国（ウォロフ）
+  rulers:
+    - {name: アルブリ・ンジャイ, title: 王（ブルバ・ジョロフ）, from: 1875, to: 1890, note: フランスに抵抗し、1890年に東へ逃れてトゥクロール帝国のアフマドゥを頼った, source: "https://en.wikipedia.org/wiki/Alboury_Ndiaye"}
+  periods:
+    - from: 1648
+      to: 1890
+      text: かつてウォロフ人の諸王国を従えたジョロフ帝国の後身。16世紀にカヨール・ワロ・バオルが自立した後は内陸の小王国となった。1890年、フランスに併合された。
+  source: "https://en.wikipedia.org/wiki/Jolof_Empire"
+
+- id: sine
+  name: シン王国
+  short: シン
+  color: "#d3b17e"
+  kind: 王国（セレール）
+  rulers:
+    - {name: クンバ・ンドッフェン・ファマク・ジューフ, title: 王（マード・ア・シニグ）, from: 1853, to: 1871, note: 1867年のファンダン＝ティウティウヌの戦いでマバ・ジャフ・バを破った, source: "https://en.wikipedia.org/wiki/Kumba_Ndoffene_Famak_Joof"}
+  periods:
+    - from: 1648
+      to: 1890
+      text: セネガル中西部のセレール人の王国。イスラームのジハード（マバ・ジャフ・バ）に抵抗した。1887年にフランスの保護下に入り、のちに併合された。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Sine"
+
+- id: saloum
+  name: サルーム王国
+  short: サルーム
+  color: "#e6c7b7"
+  kind: 王国（セレール）
+  periods:
+    - from: 1648
+      to: 1886
+      text: サルーム川流域からガンビア川北岸にかけての王国（都カオラック）。塩と奴隷の交易で栄えた。1860年代にマバ・ジャフ・バのジハードに攻められ、1887年にフランスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Saloum"
+
+- id: rip
+  name: リップ（マバ・ジャフ・バのイスラーム国家）
+  short: リップ
+  color: "#bfd7b5"
+  kind: イスラーム国家（ジハード）
+  rulers:
+    - {name: マバ・ジャフ・バ, title: アルマミ, from: 1861, to: 1867, note: ガンビア川北岸のバディブとリップでジハードを起こし、サルームを攻めた。1867年にシン王国との戦いで戦死した, source: "https://en.wikipedia.org/wiki/Maba_Diakhou_Bâ"}
+  periods:
+    - from: 1862
+      to: 1886
+      text: ガンビア川北岸とセネガル南部のリップ地方に、ウォロフ・マンディンカのイスラーム改革者マバ・ジャフ・バが建てた国。その死後も一族と弟子が治めたが、1887年にフランスに下った。
+  source: "https://en.wikipedia.org/wiki/Maba_Diakhou_Bâ"
+
+- id: lebou
+  name: レブー共和国（ヴェール岬）
+  short: レブー
+  color: "#bcd6c8"
+  kind: 共和国（漁民の連合）
+  periods:
+    - from: 1795
+      to: 1856
+      text: ヴェール岬半島のレブー人（漁民）が、カヨール王国から自立して作った長老たちの共和国。1857年にフランスがダカールを占め、町を建てた。
+  note: 自立の年は1790年代（要確認）。
+  source: "https://en.wikipedia.org/wiki/Lebou_people"
+
+- id: futa_toro
+  name: フタ・トロ
+  names:
+    - {to: 1775, name: フタ・トロ（デニャンケ朝）, kind: 王国}
+    - {from: 1776, name: フタ・トロのイマーム国, kind: イスラーム国家（イマーム国）}
+  short: フタ・トロ
+  color: "#d8b98e"
+  kind: 王国
+  rulers:
+    - {name: アブドゥル・カーディル・カン, title: アルマミ（イマーム）, from: 1776, to: 1806, note: トロドベ（フルベのイスラーム学者層）の革命でデニャンケ朝を倒した後、選ばれた最初のアルマミ, source: "https://en.wikipedia.org/wiki/Abdul_Kader_Kane"}
+  periods:
+    - from: 1648
+      to: 1775
+      text: セネガル川中流の両岸の、フルベ（トゥクロール）の王国。デニャンケ朝の王（サティギ）が治めたが、18世紀にはモロッコの介入やムーア人の侵入で乱れた。
+    - from: 1776
+      to: 1858
+      text: 1776年、イスラーム学者層（トロドベ）の革命でデニャンケ朝が倒れ、選挙で選ばれるアルマミが治めるイマーム国となった。西アフリカのジハード運動の先駆けとなった。
+    - from: 1859
+      to: 1891
+      text: ウマル・タルのジハードに多くの住民が加わって東へ移った。フランスは下流のトロ地方（1859）を併合し、1891年までに中部も併合した。
+  source: "https://en.wikipedia.org/wiki/Imamate_of_Futa_Toro"
+
+- id: bundu
+  name: ブンドゥ王国
+  short: ブンドゥ
+  color: "#cece83"
+  kind: イスラーム国家（アルマミ）
+  periods:
+    - from: 1699
+      to: 1886
+      text: セネガル川上流のファレメ川流域に、イスラーム学者マリク・シがフルベの国として建てた。セネガル川の交易路を押さえた。1887年、フランスの保護下に入った。
+  note: 成立は1690年代（要確認）。
+  source: "https://en.wikipedia.org/wiki/Bundu_(state)"
+
+- id: gajaaga
+  name: ガジャーガ王国（ガラム）
+  short: ガジャーガ
+  color: "#b0c49c"
+  kind: 王国（ソニンケ）
+  periods:
+    - from: 1648
+      to: 1857
+      text: セネガル川上流（バケル周辺）のソニンケ人の王国。フランス人はガラムと呼び、金・奴隷・アラビアゴムの交易のため、サン・ジョゼフ砦（1700年ごろ）やバケル砦（1820年ごろ）を置いた。
+  source: "https://en.wikipedia.org/wiki/Gajaaga"
+
+- id: kaabu
+  name: カーブ王国（ガブ）
+  short: カーブ
+  color: "#e2bfa0"
+  kind: 王国（マンディンカ）
+  periods:
+    - from: 1648
+      to: 1867
+      text: 現在のギニアビサウ東部（ガブ）からセネガル南部（カザマンス）にかけてのマンディンカ人の王国（都カンサラ）。かつてのマリ帝国の西の州から自立した。奴隷貿易で栄えたが、1867年、フータ・ジャロンのフルベにカンサラを落とされて滅んだ。
+  source: "https://en.wikipedia.org/wiki/Kaabu"
+
+- id: fuladu
+  name: フラドゥ
+  short: フラドゥ
+  color: "#d7c4a4"
+  kind: 王国（フルベ）
+  rulers:
+    - {name: アルファ・モロ, title: 王, from: 1867, to: 1881, source: "https://en.wikipedia.org/wiki/Alfa_Molo"}
+    - {name: ムーサ・モロ, title: 王, from: 1881, to: 1903, note: 1883年にフランスの保護下に入った。1903年にイギリス領ガンビアへ逃れた, source: "https://en.wikipedia.org/wiki/Musa_Molo"}
+  periods:
+    - from: 1867
+      to: 1903
+      text: カーブ王国の滅亡後、フルベのアルファ・モロがカザマンス上流からガンビア川上流にかけて建てた国。子のムーサ・モロはフランスとイギリスの間で立ち回ったが、1903年に追われた。
+  source: "https://en.wikipedia.org/wiki/Fuladu"
+
+- id: niumi
+  name: ニウミ王国
+  short: ニウミ
+  color: "#cfe0b8"
+  kind: 王国（マンディンカ）
+  periods:
+    - from: 1648
+      to: 1893
+      text: ガンビア川河口の北岸のマンディンカ人の王国（バラ）。川の入り口を押さえ、ジェームズ島のヨーロッパ人から通行料を取った。1826年に川沿いの細長い土地（「割譲の1マイル」）をイギリスに譲った。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Niumi"
+
+- id: kombo
+  name: コンボ王国
+  short: コンボ
+  color: "#d1e6b7"
+  kind: 王国（マンディンカ）
+  periods:
+    - from: 1648
+      to: 1893
+      text: ガンビア川河口の南岸のマンディンカ人の王国。1816年にセント・メアリー島（バンジュール）をイギリスに譲り、その後も少しずつ土地を割譲した。19世紀後半、イスラームの改革派（マラブー）と伝統派（ソニンケ）の戦争が続いた。
+  source: "https://en.wikipedia.org/wiki/Kombo"
+
+- id: mandinka_states
+  name: セネガンビアのマンディンカ諸国
+  short: マンディンカ諸国
+  color: "#bde0d8"
+  kind: 小王国の集まり
+  periods:
+    - from: 1648
+      to: 1893
+      text: ガンビア川の両岸には、キアン・ジャラ・バディブ・ニアニ・ウリ・カントラなどマンディンカ人の小王国が並んだ。川の交易（奴隷・象牙・蜜ろう・落花生）で栄えた。19世紀後半にはイスラーム改革派のジハードと内戦が続いた。
+  note: 地図では、ガンビア川流域とカザマンスのマンディンカ人の小王国をまとめてこの政体で描く（範囲は不確実）。
+  source: "https://en.wikipedia.org/wiki/Mandinka_people"
+
+# ================================================================ ギニア・上ニジェールのイスラーム国家
+- id: futa_jallon
+  name: フータ・ジャロンのイマーム国
+  short: フータ・ジャロン
+  color: "#db9595"
+  kind: イスラーム国家（イマーム国）
+  rulers:
+    - {name: カラモコ・アルファ, title: アルマミ, from: 1725, to: 1751, note: ジハードを率いてイマーム国を建てた。没年は1751年ごろ（要確認）, source: "https://en.wikipedia.org/wiki/Karamokho_Alfa"}
+    - {name: イブラヒマ・ソリ, title: アルマミ, from: 1751, to: 1784, note: 軍事指導者として国を固めた。以後、カラモコ・アルファの家（アルファヤ）とイブラヒマ・ソリの家（ソリヤ）が交互にアルマミを出した, source: "https://en.wikipedia.org/wiki/Ibrahim_Sori"}
+    - {name: ボカル・ビロ, title: アルマミ, from: 1895, to: 1896, note: 1896年11月、ポレダカの戦いでフランス軍に敗れて殺された, source: "https://en.wikipedia.org/wiki/Bokar_Biro_Barry"}
+  periods:
+    - from: 1725
+      to: 1850
+      text: ギニア中部のフータ・ジャロン高地で、フルベのイスラーム学者がジハードを起こして建てた国（都ティンボ）。9つの州（ディワル）からなり、ラベ州が最も大きかった。周りの非イスラームの民を襲って奴隷とし、沿岸の奴隷貿易と結びついた。
+    - from: 1851
+      to: 1896
+      text: 二つの家がアルマミを交互に出す仕組みで争いが続いた。フランスと保護条約を結んだ（1881・1888）が、1896年、ポレダカの戦いで敗れて占領された。
+  source: "https://en.wikipedia.org/wiki/Imamate_of_Futa_Jallon"
+
+- id: toucouleur
+  name: トゥクロール帝国
+  short: トゥクロール帝国
+  color: "#dcd8b2"
+  kind: イスラーム国家（ジハード）
+  rulers:
+    - {name: ウマル・タル, title: 指導者（ティジャーニー教団のハリーファ）, from: 1852, to: 1864, note: フタ・トロ出身のイスラーム改革者。1852年にジハードを始め、カールタ・セグー・マシナを征服した。1864年、マシナの反乱の中で死んだ, source: "https://ja.wikipedia.org/wiki/ウマル・タル"}
+    - {name: アフマドゥ（アマドゥ・セク）, title: 指導者（セグー）, from: 1864, to: 1893, note: ウマルの子。1890年にフランスにセグーを奪われ、1893年に東のソコト・カリフ国へ逃れた, source: "https://en.wikipedia.org/wiki/Ahmadu_Tall"}
+  periods:
+    - from: 1849
+      to: 1854
+      text: フタ・トロ出身のウマル・タルが、メッカ巡礼から戻ってディンギラエ（ギニア）を拠点にティジャーニー教団の信徒を集め、1852年にジハードを始めた。
+    - from: 1855
+      to: 1864
+      text: カールタ（1855）・セグー（1861）・マシナ（1862）を征服し、ニジェール川上流域に大きな国を作った。セネガル川流域ではフランスと戦った（メディーヌの包囲、1857）。1864年、マシナの反乱の中でウマルは死んだ。
+    - from: 1865
+      to: 1893
+      text: 子のアフマドゥがセグーを、甥のティジャーニがバンディアガラ（マシナ）を治めたが、一族の争いとバンバラの反乱で弱った。1890年からフランスのアルシナールに攻められ、1893年に滅んだ。
+  source: "https://ja.wikipedia.org/wiki/トゥクロール帝国"
+
+- id: wassoulou
+  name: サモリ帝国（ワスル帝国）
+  short: サモリ帝国
+  color: "#cea583"
+  kind: 帝国（イスラーム国家）
+  rulers:
+    - {name: サモリ・トゥーレ, title: アルマミ（ファアマ）, from: 1878, to: 1898, note: マンディンカ人の商人の出身。1898年9月に捕らえられ、ガボンに流されて1900年に死んだ, source: "https://ja.wikipedia.org/wiki/サモリ・トゥーレ"}
+  periods:
+    - from: 1875
+      to: 1886
+      text: ギニア東部の商人サモリ・トゥーレが鉄砲で武装した常備軍を作り、上ニジェール川流域（カンカン・ワスル）を征服して帝国を建てた（1878年にファアマを称する）。1884年にイスラームの国家としてアルマミを称した。
+    - from: 1887
+      to: 1891
+      text: フランスとの条約（ケニエバ＝クル 1886、ビサンドゥグ 1887）でニジェール川左岸を譲った。シカソのケネドゥグと戦って敗れた（1887–88）。1891年、フランス軍が本拠のビサンドゥグを落とした。
+    - from: 1892
+      to: 1898
+      text: 焦土作戦をとって東へ移り、コートジボワール北部・ガーナ北西部に「第二の帝国」を作った（コン・ブナを破壊）。1898年9月、ゲレムで捕らえられた。西アフリカで最も長くフランスに抵抗した指導者とされる。
+  source: "https://ja.wikipedia.org/wiki/サモリ帝国"
+
+- id: mali_empire
+  name: マリ王国（末期）
+  short: マリ王国
+  color: "#e6c584"
+  kind: 王国（マンディンカ）
+  periods:
+    - from: 1648
+      to: 1669
+      text: 14世紀に栄えたマリ王国（マリ帝国）の末期。1599年にジェンネでの戦いに敗れた後、ニジェール川上流のマンデン（カンガバ・ニアニ）に縮み、17世紀なかばにケイタ家の小さな首長国に分かれた。
+  note: 終わりの年ははっきりしない（17世紀なかば）。地図では1669年までとした。
+  source: "https://ja.wikipedia.org/wiki/マリ帝国"
+
+# ================================================================ ニジェール川中流域
+- id: arma
+  name: トンブクトゥのパシャ領（アルマ）
+  short: アルマ
+  color: "#e2daab"
+  kind: パシャ領（軍人の政権）
+  periods:
+    - from: 1648
+      to: 1736
+      text: 1591年にソンガイ帝国を滅ぼしたモロッコ軍の子孫（アルマ）が、トンブクトゥ・ジェンネ・ガオを中心に治めた政権。1612年からはパシャを自分たちで選ぶようになり、モロッコのスルタンへの従属は名ばかりとなった。
+    - from: 1737
+      to: 1833
+      text: 1737年、トゥアレグにトヤで大敗し、パシャ領はトンブクトゥの町の政権に縮んだ。トゥアレグに貢ぎ物を納めた。19世紀にはマシナに従った。
+  note: モロッコの宗主権は名目的なので、帯（overlord）は付けない。
+  source: "https://en.wikipedia.org/wiki/Pashalik_of_Timbuktu"
+
+- id: segu
+  name: セグー王国（バンバラ王国）
+  short: セグー
+  color: "#c2d37e"
+  kind: 王国（バンバラ）
+  rulers:
+    - {name: ビトン・クリバリ（ママリ・クリバリ）, title: 王, from: 1712, to: 1755, note: 若者の結社（トン）を常備軍に変えて国を建てた, source: "https://en.wikipedia.org/wiki/Bamana_Empire"}
+    - {name: ンゴロ・ジャラ, title: 王, from: 1766, to: 1795, note: クリバリ家の後の混乱を収め、ジャラ朝を開いた。在位年は要確認, source: "https://en.wikipedia.org/wiki/Ngolo_Diarra"}
+    - {name: モンソン・ジャラ, title: 王, from: 1795, to: 1808, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Bamana_Empire"}
+    - {name: ダ・モンソン・ジャラ, title: 王, from: 1808, to: 1827, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Bamana_Empire"}
+  periods:
+    - from: 1712
+      to: 1765
+      text: ニジェール川上流のセグーを都に、バンバラ人のビトン・クリバリが建てた王国。戦争で得た捕虜を兵士や奴隷とし、ジェンネやマシナにも力を及ぼした。
+    - from: 1766
+      to: 1860
+      text: ジャラ朝のもとでトンブクトゥ近くまで勢力を広げた。19世紀前半、イスラームのマシナと争った。
+    - from: 1861
+      to: 1861
+      text: 1861年、ウマル・タルのジハードで征服された。
+  note: 1755–66年はクリバリ家の後継者争いと軍の首長たちの時代。
+  source: "https://ja.wikipedia.org/wiki/バンバラ帝国"
+
+- id: kaarta
+  name: カールタ王国
+  short: カールタ
+  color: "#cdb87e"
+  kind: 王国（バンバラ）
+  periods:
+    - from: 1648
+      to: 1854
+      text: セグーの北西、現在のマリ西部（都ニョロなど）にバンバラ人のマサシ家が建てた王国。セグー王国と争った。1854–55年、ウマル・タルに征服された。
+  note: 成立は17世紀なかば（1650年ごろ）とされる（要確認）。
+  source: "https://en.wikipedia.org/wiki/Kaarta"
+
+- id: massina
+  name: マシナ
+  names:
+    - {to: 1817, name: マシナ（フルベのアルド家）, kind: 首長国}
+    - {from: 1818, name: マシナのイスラーム国家（ディーナ）, kind: イスラーム国家}
+  short: マシナ
+  color: "#d3a87e"
+  kind: 首長国
+  rulers:
+    - {name: セク・アマドゥ（アフマド・ロッボ）, title: 指導者, from: 1818, to: 1845, note: ジハードを起こし、新しい都ハムダライを建てた, source: "https://en.wikipedia.org/wiki/Seku_Amadu"}
+    - {name: アマドゥ・セク（アマドゥ2世）, title: 指導者, from: 1845, to: 1853, source: "https://en.wikipedia.org/wiki/Massina_Empire"}
+    - {name: アマドゥ・アマドゥ（アマドゥ3世）, title: 指導者, from: 1853, to: 1862, note: 1862年にウマル・タルに敗れて殺された, source: "https://en.wikipedia.org/wiki/Massina_Empire"}
+  periods:
+    - from: 1648
+      to: 1817
+      text: ニジェール川内陸三角州のフルベの牧畜民の首長（アルド）が治めた地方。アルマやセグー王国に貢ぎ物を納めた。
+    - from: 1818
+      to: 1862
+      text: 1818年、フルベのイスラーム学者セク・アマドゥがジハードを起こしてイスラーム国家（ディーナ）を建て、都ハムダライを築いた。トンブクトゥも従えた。1862年、ウマル・タルに滅ぼされた。
+  source: "https://en.wikipedia.org/wiki/Massina_Empire"
+
+- id: kenedougou
+  name: ケネドゥグ王国
+  short: ケネドゥグ
+  color: "#e2abae"
+  kind: 王国（セヌフォ・ジュラ）
+  rulers:
+    - {name: ティエバ・トラオレ, title: 王（ファアマ）, from: 1866, to: 1893, note: シカソに大きな城壁を築き、サモリの包囲（1887–88）に耐えた。即位年は要確認, source: "https://en.wikipedia.org/wiki/Tieba_Traoré"}
+    - {name: バベンバ・トラオレ, title: 王（ファアマ）, from: 1893, to: 1898, note: 1898年5月、フランス軍にシカソを落とされ、自害した, source: "https://en.wikipedia.org/wiki/Babemba_Traoré"}
+  periods:
+    - from: 1825
+      to: 1898
+      text: マリ南東部のシカソを都とする、トラオレ家の王国。城壁都市シカソはサモリの長い包囲に耐えた。1898年、フランス軍に落とされた。
+  note: 王国の起こりは18世紀にさかのぼるが、地図では勢力が大きくなった19世紀前半（1825年）から描く。
+  source: "https://en.wikipedia.org/wiki/Kénédougou_Kingdom"
+
+- id: kong
+  name: コン帝国
+  short: コン
+  color: "#b1be93"
+  kind: 帝国（ジュラの交易国家）
+  rulers:
+    - {name: セク・ワタラ, title: 王, from: 1710, to: 1745, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Kong_Empire"}
+  periods:
+    - from: 1710
+      to: 1894
+      text: コートジボワール北部のコンを都とする、ジュラ（ディウラ）商人のワタラ家の国。金とコーラの実の交易路を押さえた。一族のファマガンがボボ＝ディウラソにグウィリコを建てた。1897年、サモリに町を焼かれた。
+  source: "https://en.wikipedia.org/wiki/Kong_Empire"
+
+- id: gyaaman
+  name: ギャーマン王国
+  short: ギャーマン
+  color: "#e7c39b"
+  kind: 王国（アカン）
+  periods:
+    - from: 1690
+      to: 1894
+      text: コートジボワール北東部のボンドゥクを中心とするアブロン人（アカン系）の王国。1740年にアシャンティ王国に敗れて属国となった。1895年にサモリに占領され、1898年にフランス領となった。
+  source: "https://en.wikipedia.org/wiki/Gyaaman"
+
+- id: sanwi
+  name: サンウィ王国
+  short: サンウィ
+  color: "#d5cfa0"
+  kind: 王国（アニ）
+  periods:
+    - from: 1700
+      to: 1842
+      text: コートジボワール南東部のアニ人の王国（都クリンジャボ）。アシニーの港でヨーロッパ人と交易した。1843年にフランスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Sanwi"
+
+# ================================================================ ボルタ川上流（ブルキナファソ）
+- id: mossi
+  name: モシ諸王国
+  short: モシ
+  color: "#d3ca7e"
+  kind: 王国（モシ）
+  rulers:
+    - {name: ワブゴ（ブカリ・クトゥ）, title: ワガドゥグ王（モロ・ナーバ）, from: 1889, to: 1897, note: 1896年9月、フランス軍のワガドゥグ占領で都を追われた。即位年は要確認, source: "https://en.wikipedia.org/wiki/Wobgo"}
+  periods:
+    - from: 1648
+      to: 1895
+      text: ボルタ川上流の台地（現在のブルキナファソ中部）のモシ人の諸王国。最大のワガドゥグ王国（王はモロ・ナーバ）のほか、北のヤテンガ王国（都ウアイグヤ）、南東のテンコドゴなどが並んだ。騎馬の軍で知られ、イスラームの国々の侵入を長く防いだ。
+    - from: 1896
+      to: 1896
+      text: 1895–96年、フランスのヴーレ・シャノワーヌらの軍が王国を占領し、保護下に置いた。モロ・ナーバの位はその後も続いている。
+  note: 地図ではワガドゥグ・ヤテンガ・テンコドゴなどモシの王国をまとめてこの政体で描く。
+  source: "https://ja.wikipedia.org/wiki/モシ王国"
+
+- id: gurma
+  name: グルマ王国
+  short: グルマ
+  color: "#c38d98"
+  kind: 王国（グルマ）
+  periods:
+    - from: 1648
+      to: 1896
+      text: ブルキナファソ東部のファダ・ングルマを都とするグルマ人の王国（モシと同じ起源の伝承を持つ）。1895–97年にフランスの保護下に入った。
+  source: "https://en.wikipedia.org/wiki/Gurma_people"
+
+- id: liptako
+  name: リプタコ首長国
+  short: リプタコ
+  color: "#c4b79b"
+  kind: 首長国（フルベ）
+  periods:
+    - from: 1810
+      to: 1896
+      text: ブルキナファソ北東部のドリを都とするフルベの首長国。ソコト・カリフ国のジハードに呼応して建てられ、その宗主権（グワンドゥ）のもとにあった。1897年、フランスの支配下に入った。
+  source: "https://en.wikipedia.org/wiki/Liptako"
+
+# ================================================================ ニジェール
+- id: dendi
+  name: デンディ（ソンガイの後継国）
+  short: デンディ
+  color: "#d3977e"
+  kind: 王国（ソンガイ）
+  periods:
+    - from: 1648
+      to: 1898
+      text: 1591年にモロッコに敗れたソンガイ帝国のアスキア家が、ニジェール川下流（現在のニジェール南西部）に逃れて建てた国。17世紀に分裂し、テラ・ドゥアルゴル・ガヤなどにソンガイの小さな首長国が並んだ。
+  note: 地図ではソンガイ人の首長国をまとめてこの政体で描く（範囲は不確実）。
+  source: "https://en.wikipedia.org/wiki/Dendi_Kingdom"
+
+- id: zarma
+  name: ザルマの首長国
+  short: ザルマ
+  color: "#d6c7a1"
+  kind: 首長国の集まり
+  periods:
+    - from: 1648
+      to: 1898
+      text: ニジェール川の東の台地（ザルマガンダ・ボボイェ）のザルマ人の首長国。中心の一つドッソの首長（ザルマコイ）は、19世紀にソコト・カリフ国やトゥアレグと戦い、1898年にフランスと結んだ。
+  note: 地図では範囲が不確実な首長国の集まりとして描く。
+  source: "https://en.wikipedia.org/wiki/Zarma_people"
+
+- id: tuareg
+  name: トゥアレグの諸連合
+  short: トゥアレグ
+  color: "#c2dbd6"
+  kind: 遊牧の部族連合
+  periods:
+    - from: 1648
+      to: 1736
+      text: サハラ南部の遊牧民トゥアレグの部族連合（ケル・アダグ、ウッレミンデン、ケル・アイルなど）。隊商交易と牧畜を営み、オアシスや南の農民から貢ぎ物を取った。
+    - from: 1737
+      to: 1899
+      text: 1737年にトンブクトゥのアルマを破り、ニジェール川の湾曲部（トンブクトゥ・ガオ）に力を及ぼした。19世紀はマシナ・トゥクロール帝国と争った。
+    - from: 1900
+      to: 1917
+      text: フランスに征服された。第一次世界大戦中の1916–17年、アイルのカオセン、ウッレミンデンのフィフルンが大反乱を起こしたが鎮圧された。
+  note: 地図では、トゥアレグの部族連合が支配したサハラ南部をまとめてこの政体で描く（範囲は不確実）。
+  source: "https://ja.wikipedia.org/wiki/トゥアレグ"
+
+- id: agadez
+  name: アガデス・スルタン国（アイル）
+  short: アガデス
+  color: "#e6dfb7"
+  kind: スルタン国
+  periods:
+    - from: 1648
+      to: 1905
+      text: アイル山地の南のオアシス都市アガデスのスルタン国。15世紀から続き、スルタンはトゥアレグの部族連合の調停者として、サハラ縦断の隊商路を押さえた。1906年にフランスに占領された。
+  source: "https://en.wikipedia.org/wiki/Sultanate_of_Agadez"
+
+- id: damagaram
+  name: ダマガラム・スルタン国（ザンデール）
+  short: ダマガラム
+  color: "#dcbab2"
+  kind: スルタン国
+  rulers:
+    - {name: タニムン, title: スルタン, from: 1851, to: 1884, note: 在位年は要確認。鉄砲と大砲で武装し、周りの国を従えて国を最も大きくした, source: "https://en.wikipedia.org/wiki/Tanimoun_Dan_Souleymane"}
+    - {name: アフマドゥ（アマドゥ・クラン・ダガ）, title: スルタン, from: 1893, to: 1899, note: 1898年にフランスのカズマジュ大尉を殺させた。1899年にフランス軍と戦って死んだ。名前と在位年は要確認, source: "https://en.wikipedia.org/wiki/Sultanate_of_Damagaram"}
+  periods:
+    - from: 1731
+      to: 1892
+      text: ニジェール南部のザンデールを都とするスルタン国。ボルヌ帝国の属国として生まれ、サハラ縦断交易（トリポリ・カノ）の中継地として栄えた。
+    - from: 1893
+      to: 1899
+      text: 宗主のボルヌがラービフに滅ぼされると自立した。1899年7月にフランス軍に占領され、のちニジェール植民地の最初の首都が置かれた（1926年までザンデール）。
+  source: "https://en.wikipedia.org/wiki/Sultanate_of_Damagaram"
+
+- id: gobir
+  name: ゴビル王国
+  short: ゴビル
+  color: "#d3867e"
+  kind: 王国（ハウサ）
+  periods:
+    - from: 1648
+      to: 1807
+      text: ハウサ諸王国の一つで、北部の強国（都アルカラワ、現在のナイジェリア北西部）。1804年、ウスマン・ダン・フォディオのジハードが起こり、1808年に都を落とされた。
+    - from: 1808
+      to: 1898
+      text: 王家は北へ逃れ、ティビリ（現在のニジェール南部）を拠点にソコト・カリフ国と戦い続けた。1899年にフランスの支配下に入った。
+  note: 地図では、ジハード前（1808年まで）はハウサ諸王国（hausa_states、label「ゴビル」）として描き、この政体はティビリに移った後の王国に使う。
+  source: "https://en.wikipedia.org/wiki/Gobir"
+
+- id: maradi
+  name: カツィナ＝マラディ王国
+  short: マラディ
+  color: "#decfa0"
+  kind: 王国（ハウサ）
+  periods:
+    - from: 1819
+      to: 1898
+      text: ジハードでカツィナを追われたハウサの王家が、北のマラディでフルベの支配に反乱を起こして建てた国（「亡命ハウサ国家」）。ゴビルと結んでソコト・カリフ国と戦い続けた。1899年にフランスの支配下に入った。
+  source: "https://en.wikipedia.org/wiki/Maradi,_Niger"
+
+# ================================================================ リベリア
+- id: maryland_colony
+  name: メリーランド植民地（ケープ・パルマス）
+  names:
+    - {to: 1853, name: アフリカのメリーランド植民地, kind: 植民地（植民協会）}
+    - {from: 1854, name: メリーランド共和国, kind: 共和国}
+  short: メリーランド
+  color: "#c3cfe0"
+  kind: 植民地（植民協会）
+  periods:
+    - from: 1834
+      to: 1856
+      text: アメリカ合衆国メリーランド州の植民協会が、解放された黒人を送ってケープ・パルマスに作った植民地。1854年に独立したが、先住のグレボ人との戦争でリベリアの助けを求め、1857年にリベリアに併合された。
+  source: "https://en.wikipedia.org/wiki/Republic_of_Maryland"
+
+- id: liberia
+  name: リベリア共和国
+  names:
+    - {to: 1846, name: リベリア植民地（アメリカ植民協会）, kind: 植民地（植民協会）}
+  short: リベリア
+  color: "#b3a0de"
+  kind: 共和国
+  home_iso: [LBR]
+  rulers:
+    - {name: ジェフディ・アシュマン, title: 植民協会の代理人, from: 1822, to: 1828, source: "https://en.wikipedia.org/wiki/Jehudi_Ashmun"}
+    - {name: アメリカ植民協会の代理人たち, title: 植民協会の代理人, from: 1828, to: 1838, note: ランドール・メクリンらが短い任期で交代した}
+    - {name: トマス・ブキャナン, title: リベリア・コモンウェルス総督, from: 1839, to: 1841, note: 在任中に死去し、副総督のロバーツが後を継いだ, source: "https://en.wikipedia.org/wiki/Thomas_Buchanan_(governor)"}
+    - {name: ジョゼフ・ジェンキンス・ロバーツ, title: 総督→初代大統領, from: 1841, to: 1856, note: 1841年に植民地の総督、1848年から大統領, source: "https://en.wikipedia.org/wiki/Joseph_Jenkins_Roberts"}
+    - {name: スティーヴン・アレン・ベンソン, title: 大統領, from: 1856, to: 1864, source: "https://en.wikipedia.org/wiki/Stephen_Allen_Benson"}
+    - {name: ダニエル・バシール・ウォーナー, title: 大統領, from: 1864, to: 1868, source: "https://en.wikipedia.org/wiki/Daniel_Bashiel_Warner"}
+    - {name: ジェームズ・スプリッグス・ペイン, title: 大統領, from: 1868, to: 1870, source: "https://en.wikipedia.org/wiki/James_Spriggs_Payne"}
+    - {name: エドワード・ジェームズ・ロイ, title: 大統領, from: 1870, to: 1871, note: 1871年のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Edward_James_Roye"}
+    - {name: ジョゼフ・ジェンキンス・ロバーツ（再任）, title: 大統領, from: 1872, to: 1876, source: "https://en.wikipedia.org/wiki/Joseph_Jenkins_Roberts"}
+    - {name: ジェームズ・スプリッグス・ペイン（再任）, title: 大統領, from: 1876, to: 1878, source: "https://en.wikipedia.org/wiki/James_Spriggs_Payne"}
+    - {name: アンソニー・ウィリアム・ガーディナー, title: 大統領, from: 1878, to: 1883, source: "https://en.wikipedia.org/wiki/Anthony_W._Gardiner"}
+    - {name: ヒラリー・R・W・ジョンソン, title: 大統領, from: 1884, to: 1892, source: "https://en.wikipedia.org/wiki/Hilary_R._W._Johnson"}
+    - {name: ジョゼフ・ジェームズ・チーズマン, title: 大統領, from: 1892, to: 1896, source: "https://en.wikipedia.org/wiki/Joseph_James_Cheeseman"}
+    - {name: ウィリアム・D・コールマン, title: 大統領, from: 1896, to: 1900, source: "https://en.wikipedia.org/wiki/William_D._Coleman"}
+    - {name: ギャレットソン・W・ギブソン, title: 大統領, from: 1900, to: 1904, source: "https://en.wikipedia.org/wiki/Garretson_W._Gibson"}
+    - {name: アーサー・バークレー, title: 大統領, from: 1904, to: 1912, source: "https://en.wikipedia.org/wiki/Arthur_Barclay"}
+    - {name: ダニエル・E・ハワード, title: 大統領, from: 1912, to: 1920, source: "https://en.wikipedia.org/wiki/Daniel_Edward_Howard"}
+    - {name: チャールズ・D・B・キング, title: 大統領, from: 1920, to: 1930, note: 強制労働問題（フェルナンド・ポーへの労働者の送り出し）で国際連盟の調査を受け、辞任した, source: "https://en.wikipedia.org/wiki/Charles_D._B._King"}
+    - {name: エドウィン・バークレー, title: 大統領, from: 1930, to: 1944, source: "https://en.wikipedia.org/wiki/Edwin_Barclay"}
+    - {name: ウィリアム・タブマン, title: 大統領, from: 1944, to: 1971, note: 外国資本を呼び込む「門戸開放政策」をとった, source: "https://en.wikipedia.org/wiki/William_Tubman"}
+    - {name: ウィリアム・R・トルバート, title: 大統領, from: 1971, to: 1980, note: 1980年のクーデタで殺された, source: "https://en.wikipedia.org/wiki/William_R._Tolbert_Jr."}
+    - {name: サミュエル・ドウ, title: 人民救済評議会議長→大統領, from: 1980, to: 1990, note: 先住民出身の初の元首。1990年9月、反政府勢力に殺された, source: "https://en.wikipedia.org/wiki/Samuel_Doe"}
+    - {name: エイモス・ソーヤー, title: 暫定政府大統領, from: 1990, to: 1994, note: 西アフリカ諸国の平和維持軍（ECOMOG）に守られたモンロビアの暫定政府, source: "https://en.wikipedia.org/wiki/Amos_Sawyer"}
+    - {name: ルース・ペリー, title: 国家評議会議長, from: 1996, to: 1997, note: 1994–96年は国家評議会の議長が交代で務めた。ペリーはアフリカで最初の女性の元首とされる, source: "https://en.wikipedia.org/wiki/Ruth_Perry"}
+    - {name: チャールズ・テイラー, title: 大統領, from: 1997, to: 2003, note: 2003年8月に辞任。2012年、シエラレオネ内戦での戦争犯罪で特別法廷に有罪とされた, source: "https://en.wikipedia.org/wiki/Charles_Taylor_(Liberian_politician)"}
+    - {name: ジュデ・ブライアント, title: 暫定政府議長, from: 2003, to: 2006, source: "https://en.wikipedia.org/wiki/Gyude_Bryant"}
+    - {name: エレン・ジョンソン・サーリーフ, title: 大統領, from: 2006, to: 2018, note: アフリカで初めて選挙で選ばれた女性の大統領。2011年ノーベル平和賞, source: "https://en.wikipedia.org/wiki/Ellen_Johnson_Sirleaf"}
+    - {name: ジョージ・ウェア, title: 大統領, from: 2018, to: 2024, note: 元サッカー選手, source: "https://en.wikipedia.org/wiki/George_Weah"}
+    - {name: ジョゼフ・ボアカイ, title: 大統領, from: 2024, source: "https://en.wikipedia.org/wiki/Joseph_Boakai"}
+  periods:
+    - from: 1822
+      to: 1846
+      text: アメリカ植民協会が、アメリカ合衆国の解放された黒人（自由黒人）をアフリカに送って作った植民地（モンロビアは大統領モンローにちなむ）。1839年にほかの植民協会の植民地を合わせてリベリア・コモンウェルスとなり、1847年に共和国として独立した。
+    - from: 1847
+      to: 1943
+      text: 1847年に独立した、アフリカ最初の黒人の共和国。アメリカ系リベリア人（入植者の子孫）が政治と経済を握り、先住の人々との対立が続いた。列強の分割では、イギリス・フランスに国境の土地を削られながらも、エチオピアとともに独立を保った。1926年にアメリカのファイアストン社にゴム園の土地を貸した。
+    - from: 1944
+      to: 1979
+      text: タブマン大統領の「門戸開放政策」で鉄鉱石とゴムの輸出が伸び、便宜置籍船の国としても知られた。トゥルー・ホイッグ党の一党支配が続いた。
+    - from: 1980
+      to: 2003
+      text: 1980年、先住民出身のドウ曹長のクーデタでアメリカ系リベリア人の支配が終わった。1989年末にテイラーの国民愛国戦線（NPFL）が蜂起して内戦となり（第一次 1989–96、第二次 1999–2003）、約25万人が死んだとされる。
+    - from: 2004
+      to: 2025
+      text: 国連の平和維持活動（UNMIL）のもとで復興が進み、2005年の選挙でサーリーフがアフリカ初の女性大統領に選ばれた。2014–15年にはエボラ出血熱の流行に苦しんだ。
+  source: "https://ja.wikipedia.org/wiki/リベリア"
+
+- id: npfl
+  name: リベリア国民愛国戦線（NPFL）の支配地
+  short: NPFL（大リベリア）
+  color: "#d3b9cf"
+  kind: 反政府勢力の支配地域
+  rulers:
+    - {name: チャールズ・テイラー, title: 指導者, from: 1989, to: 1997, note: 首都をグバンガ（ボン郡）に置き、「大リベリア」と呼んだ, source: "https://en.wikipedia.org/wiki/National_Patriotic_Front_of_Liberia"}
+  periods:
+    - from: 1990
+      to: 1996
+      text: 1989年12月にコートジボワールから侵入したテイラーの国民愛国戦線が、首都モンロビア（西アフリカ諸国の平和維持軍が守った）を除くリベリアの大部分を支配した。1997年の選挙でテイラーが大統領となった。
+  source: "https://ja.wikipedia.org/wiki/第一次リベリア内戦"
+
+# ================================================================ 内戦の反政府勢力
+- id: ruf
+  name: 革命統一戦線（RUF）の支配地
+  short: RUF
+  color: "#d8b3b3"
+  kind: 反政府勢力の支配地域
+  rulers:
+    - {name: フォディ・サンコー, title: 指導者, from: 1991, to: 2000, source: "https://en.wikipedia.org/wiki/Foday_Sankoh"}
+  periods:
+    - from: 1991
+      to: 2001
+      text: 1991年、リベリアのテイラーの支援を受けてシエラレオネ東部に侵入した反政府勢力。ダイヤモンドの産地を押さえて戦費とし（「紛争ダイヤモンド」）、住民の手足を切るなどの残虐行為で知られた。2002年1月に内戦の終結が宣言された。
+  source: "https://ja.wikipedia.org/wiki/シエラレオネ内戦"
+
+- id: forces_nouvelles
+  name: 新勢力（コートジボワール北部の反政府勢力）
+  short: 新勢力
+  color: "#c6cfaf"
+  kind: 反政府勢力の支配地域
+  rulers:
+    - {name: ギヨーム・ソロ, title: 指導者, from: 2002, to: 2011, note: 2007年のワガドゥグ合意の後は首相も務めた, source: "https://en.wikipedia.org/wiki/Guillaume_Soro"}
+  periods:
+    - from: 2002
+      to: 2010
+      text: 2002年9月の反乱で、北部（ブアケ以北）を押さえた反政府勢力。北部出身者の国籍（「イボワール人性」）の問題が背景にあった。フランス軍・国連軍が南北の間の「信頼地帯」を守った。2011年の選挙後の危機で、ワタラ大統領の側に立って南部に進み、国が統一された。
+  source: "https://ja.wikipedia.org/wiki/コートジボワール内戦"
+
+# ================================================================ 独立後の国家
+- id: senegal
+  name: セネガル共和国
+  short: セネガル
+  color: "#7ed3be"
+  kind: 共和国
+  home_iso: [SEN]
+  rulers:
+    - {name: レオポール・セダール・サンゴール, title: 大統領, from: 1960, to: 1980, note: 詩人。「ネグリチュード」を唱えた。1980年に自ら退いた, source: "https://ja.wikipedia.org/wiki/レオポール・セダール・サンゴール"}
+    - {name: アブドゥ・ディウフ, title: 大統領, from: 1981, to: 2000, source: "https://en.wikipedia.org/wiki/Abdou_Diouf"}
+    - {name: アブドゥライ・ワッド, title: 大統領, from: 2000, to: 2012, note: 選挙による初めての政権交代, source: "https://en.wikipedia.org/wiki/Abdoulaye_Wade"}
+    - {name: マッキー・サル, title: 大統領, from: 2012, to: 2024, source: "https://en.wikipedia.org/wiki/Macky_Sall"}
+    - {name: バシル・ジョマイ・フェイ, title: 大統領, from: 2024, source: "https://en.wikipedia.org/wiki/Bassirou_Diomaye_Faye"}
+  periods:
+    - from: 1960
+      to: 1980
+      text: 1960年6月にスーダン（マリ）とのマリ連邦として独立し、8月に分かれた。サンゴール大統領のもと、フランスと近い関係を保ち、落花生の輸出に頼った。1962年に首相ママドゥ・ジャとの対立を収め、大統領に権力を集めた。
+    - from: 1981
+      to: 2025
+      text: 複数政党制が定着し、アフリカでクーデタの起きたことのない数少ない国の一つ。1982年から南部のカザマンスで分離独立を求める武装闘争が続いた。1982–89年、ガンビアとセネガンビア国家連合を作った。
+  source: "https://ja.wikipedia.org/wiki/セネガル"
+
+- id: gambia
+  name: ガンビア共和国
+  names:
+    - {to: 1969, name: ガンビア, kind: 立憲君主国（イギリス連邦）}
+  short: ガンビア
+  color: "#c7a9cf"
+  kind: 共和国
+  home_iso: [GMB]
+  rulers:
+    - {name: ダウダ・ジャワラ, title: 首相→大統領（1970年〜）, from: 1965, to: 1994, note: 1994年のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Dawda_Jawara"}
+    - {name: ヤヒヤ・ジャメ, title: 軍事評議会議長→大統領, from: 1994, to: 2017, note: 2016年の選挙に敗れたが退かず、西アフリカ諸国の軍事介入の圧力で国外に出た, source: "https://en.wikipedia.org/wiki/Yahya_Jammeh"}
+    - {name: アダマ・バロウ, title: 大統領, from: 2017, source: "https://en.wikipedia.org/wiki/Adama_Barrow"}
+  periods:
+    - from: 1965
+      to: 1993
+      text: 1965年に独立（1970年に共和国）。セネガルに三方を囲まれ、ガンビア川に沿った細長い国。1981年のクーデタ未遂の後、セネガルと国家連合（セネガンビア、1982–89）を作った。
+    - from: 1994
+      to: 2025
+      text: 1994年のクーデタからジャメの独裁が続いた。2016年の選挙でバロウが勝ち、2017年1月、西アフリカ諸国経済共同体（ECOWAS）の圧力でジャメが国を去った。
+  source: "https://ja.wikipedia.org/wiki/ガンビア"
+
+- id: guinea_bissau
+  name: ギニアビサウ共和国
+  short: ギニアビサウ
+  color: "#e0b2a8"
+  kind: 共和国
+  home_iso: [GNB]
+  rulers:
+    - {name: ルイス・カブラル, title: 国家評議会議長, from: 1973, to: 1980, note: 独立運動の指導者アミルカル・カブラル（1973年1月に暗殺）の弟, source: "https://en.wikipedia.org/wiki/Luís_Cabral"}
+    - {name: ジョアン・ベルナルド・ヴィエイラ, title: 革命評議会議長→大統領, from: 1980, to: 1999, note: 1998–99年の内戦で追われた, source: "https://en.wikipedia.org/wiki/João_Bernardo_Vieira"}
+    - {name: クンバ・ヤラ, title: 大統領, from: 2000, to: 2003, note: 2003年のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Kumba_Ialá"}
+    - {name: ジョアン・ベルナルド・ヴィエイラ（再任）, title: 大統領, from: 2005, to: 2009, note: 2009年に暗殺された, source: "https://en.wikipedia.org/wiki/João_Bernardo_Vieira"}
+    - {name: マラム・バカイ・サニャ, title: 大統領, from: 2009, to: 2012, source: "https://en.wikipedia.org/wiki/Malam_Bacai_Sanhá"}
+    - {name: ジョゼ・マリオ・ヴァズ, title: 大統領, from: 2014, to: 2020, source: "https://en.wikipedia.org/wiki/José_Mário_Vaz"}
+    - {name: ウマロ・シソコ・エンバロ, title: 大統領, from: 2020, to: 2025, note: 2025年11月、大統領選挙の結果発表の前に軍が権力を握った（要確認）, source: "https://en.wikipedia.org/wiki/Umaro_Sissoco_Embaló"}
+  periods:
+    - from: 1973
+      to: 1980
+      text: アミルカル・カブラルのギニア・カーボベルデ独立アフリカ党（PAIGC）が、1963年からポルトガルとのゲリラ戦を戦い、1973年9月に独立を宣言した。1974年のポルトガルのカーネーション革命の後、9月に独立が認められた。
+    - from: 1980
+      to: 2025
+      text: 1980年のクーデタでカーボベルデとの統合の計画が終わった。その後もクーデタと内戦（1998–99）がくり返され、政治が不安定で、麻薬の中継地となる問題も抱える。
+  note: 1999–2000・2003–05・2012–14年の暫定政府の首班は省略した。
+  source: "https://ja.wikipedia.org/wiki/ギニアビサウ"
+
+- id: cape_verde
+  name: カーボベルデ共和国
+  short: カーボベルデ
+  color: "#a8c6d8"
+  kind: 共和国
+  home_iso: [CPV]
+  rulers:
+    - {name: アリスティデス・ペレイラ, title: 大統領, from: 1975, to: 1991, source: "https://en.wikipedia.org/wiki/Aristides_Pereira"}
+    - {name: アントニオ・マスカレニャス・モンテイロ, title: 大統領, from: 1991, to: 2001, note: 複数政党制での初の選挙で選ばれた, source: "https://en.wikipedia.org/wiki/António_Mascarenhas_Monteiro"}
+    - {name: ペドロ・ピレス, title: 大統領, from: 2001, to: 2011, source: "https://en.wikipedia.org/wiki/Pedro_Pires"}
+    - {name: ジョルジェ・カルロス・フォンセカ, title: 大統領, from: 2011, to: 2021, source: "https://en.wikipedia.org/wiki/Jorge_Carlos_Fonseca"}
+    - {name: ジョゼ・マリア・ネヴェス, title: 大統領, from: 2021, source: "https://en.wikipedia.org/wiki/José_Maria_Neves"}
+  periods:
+    - from: 1975
+      to: 2025
+      text: 1975年7月にポルトガルから独立した大西洋の島国。1991年に複数政党制となり、アフリカで最も安定した民主国家の一つとされる。
+  source: "https://ja.wikipedia.org/wiki/カーボベルデ"
+
+- id: guinea
+  name: ギニア共和国
+  short: ギニア
+  color: "#d3d37e"
+  kind: 共和国
+  home_iso: [GIN]
+  rulers:
+    - {name: セク・トゥーレ, title: 大統領, from: 1958, to: 1984, note: サモリ・トゥーレの子孫を称した。社会主義の一党独裁を敷いた, source: "https://ja.wikipedia.org/wiki/アフメド・セク・トゥーレ"}
+    - {name: ランサナ・コンテ, title: 軍事委員会議長→大統領, from: 1984, to: 2008, source: "https://en.wikipedia.org/wiki/Lansana_Conté"}
+    - {name: ムサ・ダディス・カマラ, title: 軍事評議会議長, from: 2008, to: 2009, source: "https://en.wikipedia.org/wiki/Moussa_Dadis_Camara"}
+    - {name: セクバ・コナテ, title: 暫定大統領, from: 2010, to: 2010, source: "https://en.wikipedia.org/wiki/Sékouba_Konaté"}
+    - {name: アルファ・コンデ, title: 大統領, from: 2010, to: 2021, note: 2021年9月のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Alpha_Condé"}
+    - {name: ママディ・ドゥンブヤ, title: 暫定大統領→大統領, from: 2021, source: "https://en.wikipedia.org/wiki/Mamady_Doumbouya"}
+  periods:
+    - from: 1958
+      to: 1984
+      text: 1958年9月のド・ゴールの憲法の国民投票で、フランス領で唯一「否」と答え、10月に即時独立した。フランスが援助を打ち切ったため、ソ連などの東側に近づいた。セク・トゥーレの一党独裁のもと、多くの政治犯が収容所で死んだ。
+    - from: 1984
+      to: 2025
+      text: セク・トゥーレの死後、コンテ大佐がクーデタで権力を握った。ボーキサイトの大産地。2021年に再びクーデタが起きた。
+  source: "https://ja.wikipedia.org/wiki/ギニア"
+
+- id: sierra_leone
+  name: シエラレオネ共和国
+  names:
+    - {to: 1970, name: シエラレオネ, kind: 立憲君主国（イギリス連邦）}
+  short: シエラレオネ
+  color: "#9fcfc4"
+  kind: 共和国
+  home_iso: [SLE]
+  rulers:
+    - {name: ミルトン・マルガイ, title: 首相, from: 1961, to: 1964, source: "https://en.wikipedia.org/wiki/Milton_Margai"}
+    - {name: アルバート・マルガイ, title: 首相, from: 1964, to: 1967, source: "https://en.wikipedia.org/wiki/Albert_Margai"}
+    - {name: シアカ・スティーヴンス, title: 首相→大統領（1971年〜）, from: 1968, to: 1985, note: 1967–68年の軍政の後に首相となり、1978年に一党制を敷いた, source: "https://en.wikipedia.org/wiki/Siaka_Stevens"}
+    - {name: ジョゼフ・モモ, title: 大統領, from: 1985, to: 1992, source: "https://en.wikipedia.org/wiki/Joseph_Saidu_Momoh"}
+    - {name: ヴァレンタイン・ストラッサー, title: 国家暫定統治評議会議長, from: 1992, to: 1996, source: "https://en.wikipedia.org/wiki/Valentine_Strasser"}
+    - {name: アフマド・テジャン・カバー, title: 大統領, from: 1996, to: 2007, note: 1997年5月のクーデタ（軍事革命評議会）で一時ギニアに逃れ、1998年3月に復帰した, source: "https://en.wikipedia.org/wiki/Ahmad_Tejan_Kabbah"}
+    - {name: ジョニー・ポール・コロマ, title: 軍事革命評議会議長, from: 1997, to: 1998, note: 1997年5月のクーデタで権力を握りRUFと組んだ。1998年2月に西アフリカ諸国の平和維持軍（ECOMOG）に追われた, source: "https://en.wikipedia.org/wiki/Johnny_Paul_Koroma"}
+    - {name: アーネスト・バイ・コロマ, title: 大統領, from: 2007, to: 2018, source: "https://en.wikipedia.org/wiki/Ernest_Bai_Koroma"}
+    - {name: ジュリアス・マーダ・ビオ, title: 大統領, from: 2018, note: 1996年にも軍事政権の首班を務めた, source: "https://en.wikipedia.org/wiki/Julius_Maada_Bio"}
+  periods:
+    - from: 1961
+      to: 1990
+      text: 1961年4月に独立（1971年に共和国）。クーデタの後、スティーヴンスの全人民会議（APC）の一党支配が続いた。ダイヤモンドの富は一部の人々に握られた。
+    - from: 1991
+      to: 2001
+      text: 1991年、革命統一戦線（RUF）の侵入で内戦となった。クーデタ（1992・1997）が続き、西アフリカ諸国の平和維持軍（ECOMOG）・国連の平和維持活動（UNAMSIL）・イギリス軍が介入した。2002年1月に終結が宣言された。
+    - from: 2002
+      to: 2025
+      text: 国連と共同の特別法廷が内戦の戦争犯罪を裁いた。2014–15年、エボラ出血熱の流行で大きな被害を受けた。
+  source: "https://ja.wikipedia.org/wiki/シエラレオネ"
+
+- id: cote_divoire
+  name: コートジボワール共和国
+  short: コートジボワール
+  color: "#d3937e"
+  kind: 共和国
+  home_iso: [CIV]
+  rulers:
+    - {name: フェリックス・ウフェ＝ボワニ, title: 大統領, from: 1960, to: 1993, note: アフリカ民主連合（RDA）の指導者。故郷ヤムスクロを首都とし、巨大な大聖堂を建てた, source: "https://ja.wikipedia.org/wiki/フェリックス・ウフェ＝ボワニ"}
+    - {name: アンリ・コナン・ベディエ, title: 大統領, from: 1993, to: 1999, note: 1999年12月のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Henri_Konan_Bédié"}
+    - {name: ロベール・ゲイ, title: 軍事政権の首班, from: 1999, to: 2000, source: "https://en.wikipedia.org/wiki/Robert_Guéï"}
+    - {name: ローラン・バグボ, title: 大統領, from: 2000, to: 2011, note: 2010年の選挙の敗北を認めず、2011年4月に捕らえられた, source: "https://en.wikipedia.org/wiki/Laurent_Gbagbo"}
+    - {name: アラサン・ワタラ, title: 大統領, from: 2011, source: "https://en.wikipedia.org/wiki/Alassane_Ouattara"}
+  periods:
+    - from: 1960
+      to: 1993
+      text: 1960年8月に独立。ウフェ＝ボワニ大統領のもと、フランスとの強い結びつきを保ち、カカオ・コーヒーの輸出で高い成長を続けた（「イボワールの奇跡」）。周りの国から多くの労働者が移り住んだ。
+    - from: 1994
+      to: 2011
+      text: 「イボワール人性」をめぐって北部出身者の排除が進み、1999年にクーデタ、2002年に内戦が起きて国が南北に分かれた。2010年の大統領選挙の後の危機（2010–11）で、国連とフランスの支援を受けたワタラが勝った。
+    - from: 2012
+      to: 2025
+      text: ワタラ大統領のもとで経済は再び高い成長を続けている。
+  note: 首都は1983年にアビジャンからヤムスクロに移されたが、政府の機関の多くはアビジャンにある。
+  source: "https://ja.wikipedia.org/wiki/コートジボワール"
+
+- id: upper_volta
+  name: ブルキナファソ
+  names:
+    - {to: 1983, name: オートボルタ共和国, short: オートボルタ}
+  short: ブルキナファソ
+  color: "#c9b6d9"
+  kind: 共和国
+  home_iso: [BFA]
+  rulers:
+    - {name: モーリス・ヤメオゴ, title: 大統領, from: 1960, to: 1966, source: "https://en.wikipedia.org/wiki/Maurice_Yaméogo"}
+    - {name: サングレ・ラミザナ, title: 大統領, from: 1966, to: 1980, source: "https://en.wikipedia.org/wiki/Sangoulé_Lamizana"}
+    - {name: セイ・ゼルボ, title: 国家進歩復興軍事委員会議長, from: 1980, to: 1982, source: "https://en.wikipedia.org/wiki/Saye_Zerbo"}
+    - {name: ジャン＝バティスト・ウエドラオゴ, title: 人民救済評議会議長, from: 1982, to: 1983, source: "https://en.wikipedia.org/wiki/Jean-Baptiste_Ouédraogo"}
+    - {name: トマ・サンカラ, title: 国家革命評議会議長, from: 1983, to: 1987, note: 1984年に国名を「高潔な人々の国」ブルキナファソと改めた。1987年10月のクーデタで殺された, source: "https://ja.wikipedia.org/wiki/トーマス・サンカラ"}
+    - {name: ブレーズ・コンパオレ, title: 人民戦線議長→大統領, from: 1987, to: 2014, note: 2014年10月の民衆蜂起で国外に逃れた, source: "https://en.wikipedia.org/wiki/Blaise_Compaoré"}
+    - {name: ミシェル・カファンド, title: 暫定大統領, from: 2014, to: 2015, source: "https://en.wikipedia.org/wiki/Michel_Kafando"}
+    - {name: ロック・マルク・クリスチャン・カボレ, title: 大統領, from: 2015, to: 2022, note: 2022年1月のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Roch_Marc_Christian_Kaboré"}
+    - {name: ポール＝アンリ・サンダオゴ・ダミバ, title: 軍事政権の首班, from: 2022, to: 2022, source: "https://en.wikipedia.org/wiki/Paul-Henri_Sandaogo_Damiba"}
+    - {name: イブラヒム・トラオレ, title: 暫定大統領, from: 2022, note: 2022年9月のクーデタで権力を握った, source: "https://en.wikipedia.org/wiki/Ibrahim_Traoré"}
+  periods:
+    - from: 1960
+      to: 1982
+      text: 1960年8月にオートボルタとして独立。内陸の貧しい国で、多くの人がコートジボワールなどへ出稼ぎに行った。クーデタがくり返された。
+    - from: 1983
+      to: 1987
+      text: 1983年、トマ・サンカラ大尉が革命を起こし、1984年に国名をブルキナファソと改めた。汚職の追放、女性の地位の向上、自給の農業を進めたが、1987年のクーデタで殺された。
+    - from: 1988
+      to: 2014
+      text: コンパオレ大統領の長い支配が続いた。2014年、憲法を改めて任期を延ばそうとしたことに民衆が蜂起し、コンパオレは国を去った。
+    - from: 2015
+      to: 2025
+      text: 2015年からイスラーム武装勢力の攻撃が広がり、北部・東部の農村の多くで政府の支配が及ばなくなった。2022年に2度のクーデタが起き、軍事政権はフランス軍を去らせてロシアと結び、マリ・ニジェールとサヘル諸国同盟（2023）を作った。
+  source: "https://ja.wikipedia.org/wiki/ブルキナファソ"
+
+- id: niger
+  name: ニジェール共和国
+  short: ニジェール
+  color: "#bde0d2"
+  kind: 共和国
+  home_iso: [NER]
+  rulers:
+    - {name: ハマニ・ディオリ, title: 大統領, from: 1960, to: 1974, note: 1974年のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Hamani_Diori"}
+    - {name: セイニ・クンチェ, title: 最高軍事評議会議長, from: 1974, to: 1987, source: "https://en.wikipedia.org/wiki/Seyni_Kountché"}
+    - {name: アリ・サイブ, title: 最高軍事評議会議長→大統領, from: 1987, to: 1993, source: "https://en.wikipedia.org/wiki/Ali_Saibou"}
+    - {name: マハマヌ・ウスマヌ, title: 大統領, from: 1993, to: 1996, note: 複数政党制での初の選挙で選ばれた。1996年のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Mahamane_Ousmane"}
+    - {name: イブラヒム・バレ・マイナサラ, title: 大統領, from: 1996, to: 1999, note: 1999年4月に暗殺された, source: "https://en.wikipedia.org/wiki/Ibrahim_Baré_Maïnassara"}
+    - {name: ママドゥ・タンジャ, title: 大統領, from: 1999, to: 2010, note: 2010年2月のクーデタで追われた, source: "https://en.wikipedia.org/wiki/Mamadou_Tandja"}
+    - {name: サル・ジボ, title: 民主主義回復最高評議会議長, from: 2010, to: 2011, source: "https://en.wikipedia.org/wiki/Salou_Djibo"}
+    - {name: マハマドゥ・イスフ, title: 大統領, from: 2011, to: 2021, source: "https://en.wikipedia.org/wiki/Mahamadou_Issoufou"}
+    - {name: モハメド・バズム, title: 大統領, from: 2021, to: 2023, note: 2023年7月のクーデタで拘束された, source: "https://en.wikipedia.org/wiki/Mohamed_Bazoum"}
+    - {name: アブドゥラハマヌ・チアニ, title: 祖国防衛国民評議会議長, from: 2023, source: "https://en.wikipedia.org/wiki/Abdourahamane_Tchiani"}
+  periods:
+    - from: 1960
+      to: 1990
+      text: 1960年8月に独立。国土の大半がサハラ砂漠で、ニジェール川沿いと南部の農業地帯に人々が住む。サヘルの大干ばつ（1968–74）で大きな被害を受けた。1970年代からアイル山地のアルリットでウランを掘り、フランスに輸出した。
+    - from: 1990
+      to: 2025
+      text: 北部のトゥアレグの反乱（1990–95、2007–09）、クーデタのくり返し（1974・1996・1999・2010・2023）を経験した。2015年ごろから西部（ティラベリ）と南東部（ディファ）でイスラーム武装勢力の攻撃が続く。2023年のクーデタの後、フランス軍・アメリカ軍が撤退した。
+  source: "https://ja.wikipedia.org/wiki/ニジェール"

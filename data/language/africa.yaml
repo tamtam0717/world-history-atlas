@@ -1,0 +1,2878 @@
+# 言語（民族）の分布：アフリカ（サハラ以南・インド洋の島々。北アフリカは west.yaml）1648–2025
+# 形式は docs/language-format.md（「アフリカ」の節に語族のまとめ方と色の方針）。
+# - F5 担当（2026-11-21）。宗教（data/religion/africa.yaml）と同じ地域・同じ年で切り替えている。
+# - 「民族」で塗る方針：都市の共通語（スワヒリ語・リンガラ語・ハウサ語・英語・フランス語など）ではなく、住民の多数の民族の言語を main にした。
+# - ピースは現代の州・県なので、17–18 世紀の民族の分布は目安。移動の大きかった所（ムフェカネ、フラニ人・ソマリ人の移動、オロモ人の北上など）は note に書いた。
+
+- id: lang_af_mauritania
+  name: モーリタニア
+  select:
+    iso_all: [MRT]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: berber
+      note: ハッサーニーヤ（アラビア語の方言）。シャル・ブッバ戦争（1644–74）の後、アラブ系の戦士集団が優位になり、ベルベル語（ゼナーガ語）は南西部の一部に残るだけになっていった。
+      source: "https://ja.wikipedia.org/wiki/ハッサーニーヤ語"
+    - from: 1750
+      main: arabic
+      note: ゼナーガ語の話者はごく少数になる。
+- id: lang_af_mauritania_river
+  name: セネガル川北岸（ゴルゴル・ギディマカ）
+  select:
+    adm1: [MRT/Gorgol, MRT/Guidimaka]
+  timeline:
+    - from: 1648
+      main: fula
+      minor: mande
+      note: セネガル川流域の農耕地帯。トゥクロール人（ハルプラール。フラニ語）・ソニンケ人（マンデ系）・ウォロフ人が住む。
+- id: lang_af_senegal
+  name: セネガル（ウォロフ人の地域）
+  select:
+    iso: [SEN]
+  timeline:
+    - from: 1648
+      main: wolof
+      note: ウォロフ語。
+- id: lang_af_senegal_thies
+  name: ティエス・カオラック（ウォロフ人とセレール人）
+  select:
+    adm1: [SEN/Thies, SEN/Kaolack, SEN/Kaffrine]
+  timeline:
+    - from: 1648
+      main: wolof
+      minor: atlantic_other
+      note: ウォロフ人のほか、セレール人（セレール語）が多い。
+- id: lang_af_senegal_futa
+  name: フータ・トロ（セネガル川中流）
+  select:
+    adm1: [SEN/Saint Louis, SEN/Matam]
+  timeline:
+    - from: 1648
+      main: fula
+      minor: wolof
+      note: フラニ語（プラール語）。下流のワーロ王国（ダガナ）はウォロフ語。サン・ルイ（1659 年にフランスが建設）は交易の町。
+- id: lang_af_senegal_saint_louis_city
+  name: サン・ルイ島
+  select:
+    pieces: [SEN-Saint_Louis]
+  timeline:
+    - from: 1648
+      main: wolof
+      note: サン・ルイ（1659–、フランス領西アフリカの首都 1895–1902）の町はウォロフ語が中心。
+- id: lang_af_senegal_serer
+  name: シン・サルーム（セレール人）
+  select:
+    adm1: [SEN/Fatick]
+  timeline:
+    - from: 1648
+      main: atlantic_other
+      minor: wolof
+      note: セレール語（大西洋系）。
+- id: lang_af_senegal_casamance
+  name: 低カザマンス（ジョラ人）
+  select:
+    adm1: [SEN/Ziguinchor]
+  timeline:
+    - from: 1648
+      main: atlantic_other
+      minor: mande
+      note: ジョラ語（大西洋系）。マンディンカ人・ポルトガル系クレオールも住む。
+- id: lang_af_senegal_kaabu
+  name: 中・上カザマンス（カアブ）
+  select:
+    adm1: [SEN/Sedhiou, SEN/Kolda]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: fula
+      note: マンディンカ語。
+    - from: 1870
+      main: fula
+      minor: mande
+      note: フラドゥ（コルダ）はフラニ人が多い。
+- id: lang_af_senegal_bundu
+  name: ブンドゥ・ウーリ（タンバクンダ）
+  select:
+    adm1: [SEN/Tambacounda]
+  timeline:
+    - from: 1648
+      main: fula
+      minor: mande
+      note: フラニ人・ソニンケ人・マンディンカ人。
+- id: lang_af_senegal_kedougou
+  name: ケドゥグ（バサリ人の地域）
+  select:
+    adm1: [SEN/Kedougou]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: fula
+      note: マリンケ人・フラニ人・バサリ人（大西洋系）。
+- id: lang_af_gambia
+  name: ガンビア
+  select:
+    iso: [GMB]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: fula
+      note: マンディンカ語。ウォロフ人・フラニ人・ジョラ人も住む。
+- id: lang_af_gambia_banjul
+  name: バンジュール（バサースト）
+  select:
+    adm1: [GMB/Banjul, GMB/Kanifing]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: wolof
+    - from: 1820
+      main: wolof
+      minor: mande
+      note: 1816 年にイギリスがバサースト（現バンジュール）を建設。ウォロフ語と、解放奴隷の子孫アク人の英語系クレオールが話された。
+- id: lang_af_guinea_bissau
+  name: ギニアビサウ（沿岸部）
+  select:
+    iso: [GNB]
+  timeline:
+    - from: 1648
+      main: atlantic_other
+      minor: creole_portuguese
+      note: バランタ語・パペル語・マンジャク語・ビジャゴ語（大西洋系）。共通語はポルトガル語系のクリオル語。
+- id: lang_af_guinea_bissau_east
+  name: ガブ・バファタ（カアブ）
+  select:
+    adm1: [GNB/Gabu, GNB/Bafatá, GNB/Oio]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: atlantic_other
+      note: マンディンカ語。
+    - from: 1870
+      main: fula
+      minor: mande
+      note: フラニ人が多数になる（オイオはマンディンカ人・バランタ人）。
+- id: lang_af_guinea_bissau_capital
+  name: ビサウ
+  select:
+    adm1: [GNB/Bissau]
+  timeline:
+    - from: 1648
+      main: atlantic_other
+      minor: creole_portuguese
+      note: パペル人の土地。ポルトガルの砦（1687–）を中心にクリオル語が話された。
+- id: lang_af_cape_verde
+  name: カーボベルデ
+  select:
+    iso: [CPV]
+  timeline:
+    - from: 1648
+      main: creole_portuguese
+      note: カーボベルデ・クレオール語（クリオウル）。
+      source: "https://ja.wikipedia.org/wiki/カーボベルデ・クレオール語"
+- id: lang_af_guinea
+  name: ギニア沿岸部（スス人など）
+  select:
+    iso: [GIN]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: atlantic_other
+      note: スス語（マンデ系）。バガ語・ナル語・ランドゥマ語（大西洋系）。
+    - from: 1800
+      main: mande
+      minor: fula
+- id: lang_af_guinea_futa_jallon
+  name: フータ・ジャロン
+  select:
+    adm1: [GIN/Labe, GIN/Mamou]
+  timeline:
+    - from: 1648
+      main: fula
+      minor: mande
+      note: フラニ語（プラール語）。ジャロンケ語（マンデ系）。
+    - from: 1750
+      main: fula
+- id: lang_af_guinea_upper
+  name: 上ギニア（カンカン）
+  select:
+    adm1: [GIN/Kankan]
+  timeline:
+    - from: 1648
+      main: mande
+      note: マリンケ語。
+- id: lang_af_guinea_faranah
+  name: ファラナ
+  select:
+    adm1: [GIN/Faranah]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: atlantic_other
+      note: マリンケ人・コラコ人。南部にキシ人（大西洋系）。
+- id: lang_af_guinea_forest
+  name: 森林ギニア（ンゼレコレ）
+  select:
+    adm1: [GIN/Nzerekore]
+  timeline:
+    - from: 1648
+      main: mande_south
+      minor: atlantic_other
+      note: クペレ語・ロマ語・マノ語（南マンデ系）。キシ語（大西洋系）。
+- id: lang_af_sierra_leone_north
+  name: シエラレオネ北部（テムネ人）
+  select:
+    adm1: [SLE/Northern]
+  timeline:
+    - from: 1648
+      main: atlantic_other
+      minor: mande
+      note: テムネ語・リンバ語（大西洋系）。コランコ語・スス語（マンデ系）。
+- id: lang_af_sierra_leone_south
+  name: シエラレオネ南部・東部（メンデ人）
+  select:
+    adm1: [SLE/Southern, SLE/Eastern]
+  timeline:
+    - from: 1648
+      main: mande_south
+      minor: atlantic_other
+      note: メンデ語（南マンデ系）。東部にキシ語・コノ語。
+- id: lang_af_sierra_leone_freetown
+  name: フリータウン（西部地区）
+  select:
+    adm1: [SLE/Western Area]
+  timeline:
+    - from: 1648
+      main: atlantic_other
+      note: テムネ人・ブロム人。
+    - from: 1800
+      main: creole_english
+      note: クリオ語（英語系クレオール語）。解放奴隷の子孫クリオ人の言葉で、シエラレオネの共通語になった。
+      source: "https://ja.wikipedia.org/wiki/クリオ語"
+    - from: 1970
+      main: atlantic_other
+      minor: creole_english
+      note: テムネ人など内陸からの移住者が多数になった。クリオ語は共通語として使われる。
+- id: lang_af_liberia
+  name: リベリア（内陸）
+  select:
+    iso: [LBR]
+  timeline:
+    - from: 1648
+      main: mande_south
+      minor: kru
+      note: クペレ語・ロマ語・マノ語・ダン語（南マンデ系）。
+- id: lang_af_liberia_southeast
+  name: リベリア南東部（クル人・グレボ人）
+  select:
+    adm1: [LBR/Grand Bassa, LBR/Rivercess, LBR/Sinoe, LBR/Grand Gedeh, LBR/River Gee, LBR/Grand Kru, LBR/Maryland]
+  timeline:
+    - from: 1648
+      main: kru
+      note: バサ語・クル語・グレボ語・クラン語（クル諸語）。
+- id: lang_af_liberia_vai
+  name: リベリア北西部（ヴァイ人）
+  select:
+    adm1: [LBR/Grand Cape Mount, LBR/Bomi, LBR/Gbarpolu]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: atlantic_other
+      note: ヴァイ語（マンデ系）。ゴラ語（大西洋系）。
+- id: lang_af_liberia_monrovia
+  name: モンロビア（モンセラード）
+  select:
+    adm1: [LBR/Montserrado, LBR/Margibi]
+  timeline:
+    - from: 1648
+      main: kru
+      minor: mande_south
+      note: デイ人・バサ人（クル系）・ゴラ人。アメリコ・ライベリアンの英語は少数派の支配層の言葉（住民の数％）。
+- id: lang_af_mali
+  name: マリ南部（バンバラ人の地域）
+  select:
+    iso_all: [MLI]
+  timeline:
+    - from: 1648
+      main: mande
+      note: バンバラ語・マリンケ語（マンデ系）。
+- id: lang_af_mali_north
+  name: マリ北部（ニジェール川湾曲部）
+  select:
+    adm1: [MLI/Tombouctou, MLI/Gao]
+    pieces: [MLI-Tombouctou]
+  timeline:
+    - from: 1648
+      main: songhai
+      minor: berber
+      note: ソンガイ語。トゥアレグ人（タマシェク語）・アラブ系の遊牧民も住む。
+- id: lang_af_mali_tuareg
+  name: アドラル・デ・イフォラス（キダル）とメナカ
+  select:
+    adm1: [MLI/Kidal]
+    pieces: [MLI-Menaka]
+  timeline:
+    - from: 1648
+      main: berber
+      minor: arabic
+      note: トゥアレグ人（タマシェク語）の地域。
+- id: lang_af_mali_macina
+  name: マーシナ（ニジェール川内陸三角州）
+  select:
+    pieces: [MLI-Mopti, MLI-Djenne, MLI-Tenenkou, MLI-Youwarou, MLI-Douentza]
+  timeline:
+    - from: 1648
+      main: fula
+      minor: mande
+      note: フラニ語（フルフルデ語）。ボゾ語・マルカ語（マンデ系）。
+- id: lang_af_mali_dogon
+  name: ドゴン人の地域（バンディアガラ）
+  select:
+    pieces: [MLI-Bandiagara, MLI-Bankass, MLI-Koro]
+  timeline:
+    - from: 1648
+      main: dogon
+      minor: fula
+      note: ドゴン諸語。
+- id: lang_af_mali_kayes_soninke
+  name: ニオロ・イェリマネ（ソニンケ人）
+  select:
+    pieces: [MLI-Nioro, MLI-Yelimane, MLI-Diema]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: fula
+      note: ソニンケ語（マンデ系）。
+- id: lang_af_mali_sikasso
+  name: シカソ・クティアラ（ケネドゥグ）
+  select:
+    pieces: [MLI-Sikasso, MLI-Kadiolo, MLI-Koutiala, MLI-Yorosso]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: mande
+      note: セヌフォ語・ミニアンカ語（グル系）。ジュラ語（マンデ系）。
+- id: lang_af_mali_tominian
+  name: トミニアン・サン（ボボ人）
+  select:
+    pieces: [MLI-Tominian, MLI-San]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: mande
+      note: ブワ語（グル系）。マルカ語・バンバラ語。
+- id: lang_af_burkina
+  name: モシ人の地域（ブルキナファソ中央部）
+  select:
+    iso: [BFA]
+  timeline:
+    - from: 1648
+      main: gur
+      note: モシ語（モレ語。グル系）。
+- id: lang_af_burkina_yatenga
+  name: ヤテンガ（北部）
+  select:
+    adm1: [BFA/Nord]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: fula
+      note: モシ語。フラニ人・ドゴン人も住む。
+- id: lang_af_burkina_sahel
+  name: リプタコ（サヘル地方）
+  select:
+    adm1: [BFA/Sahel]
+  timeline:
+    - from: 1648
+      main: fula
+      minor: berber
+      note: フラニ語。北部にトゥアレグ人（タマシェク語）。
+- id: lang_af_burkina_west
+  name: ボボ・ジュラソと西部
+  select:
+    adm1: [BFA/Hauts-Bassins, BFA/Cascades, BFA/Boucle du Mouhoun]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: mande
+      note: ボボ語・セヌフォ語・ブワ語（グル系）。ジュラ語（マンデ系）が共通語。
+- id: lang_af_burkina_southwest
+  name: ロビ・ダガラ（南西部）
+  select:
+    adm1: [BFA/Sud-Ouest]
+  timeline:
+    - from: 1648
+      main: gur
+      note: ロビ語・ダガラ語（グル系）。
+- id: lang_af_burkina_gourma
+  name: グルマ（東部）
+  select:
+    adm1: [BFA/Est]
+    pieces: [122-Koualou]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: fula
+      note: グルマ語（グル系）。
+- id: lang_af_burkina_centre_ouest
+  name: クドゥグ（中西部、グルンシ）
+  select:
+    adm1: [BFA/Centre-Ouest, BFA/Centre-Sud]
+  timeline:
+    - from: 1648
+      main: gur
+      note: グルンシ諸語・モシ語（グル系）。
+- id: lang_af_niger_zarma
+  name: ザルマ・ソンガイ（ニジェール西部）
+  select:
+    iso: [NER]
+  timeline:
+    - from: 1648
+      main: songhai
+      note: ザルマ語・ソンガイ語・デンディ語。
+- id: lang_af_niger_hausa
+  name: ハウサ人の地域（マラディ・ザンデール・タウア南部）
+  select:
+    adm1: [NER/Maradi]
+    pieces: [NER-Zinder, NER-Mirriah, NER-Magaria, NER-Kantche, NER-Damagaram_Takaya, NER-Dungass, NER-Takeita, NER-Keita, NER-Bouza, NER-Illela, NER-Birni_N_Konni, NER-Madaoua, NER-Malbaza, NER-Tahoua, NER-Tahoua_Ville, NER-Bagaroua, NER-Dogondoutchi, NER-Tibiri]
+  timeline:
+    - from: 1648
+      main: hausa
+      note: ハウサ語。
+- id: lang_af_niger_zinder
+  name: ザンデール（ダマガラム）
+  select:
+    pieces: [NER-Zinder, NER-Mirriah, NER-Damagaram_Takaya, NER-Goure]
+  timeline:
+    - from: 1648
+      main: hausa
+      minor: kanuri
+      note: ハウサ語。ダマガラムの王家はカヌリ系で、東部のマンガ人はカヌリ語。
+- id: lang_af_niger_air
+  name: アイル山地とテネレ（アガデス）
+  select:
+    pieces: [NER-Aderbissinat, NER-Arlit, NER-Iferouane, NER-Ingall, NER-Tchirozerine, NER-Abalak, NER-Tassara, NER-Tchintabaraden, NER-Tillia, NER-Belbedji, NER-Tanout, NER-Abala, NER-Banibangou]
+  timeline:
+    - from: 1648
+      main: berber
+      minor: hausa
+      note: トゥアレグ人（タマシェク語）。アガデスの町はハウサ語も話された。
+- id: lang_af_niger_bilma
+  name: カワール・ビルマとトゥブ人の地域
+  select:
+    pieces: [NER-Bilma, NER-N_Gourti, NER-Tesker]
+  timeline:
+    - from: 1648
+      main: teda
+      minor: kanuri
+      note: トゥブ人（テダ・ダザ語）とカヌリ人（カワールのオアシス）。
+- id: lang_af_niger_diffa
+  name: ディファ（ボルヌの西部）
+  select:
+    pieces: [NER-Diffa, NER-Bosso, NER-Goudoumaria, NER-Maine_Soroa, NER-N_Guigmi]
+  timeline:
+    - from: 1648
+      main: kanuri
+      minor: fula
+      note: カヌリ語。
+- id: lang_af_niger_say
+  name: セイ・テラ（ニジェール川右岸）
+  select:
+    pieces: [NER-Say, NER-Torodi, NER-Tera, NER-Bankilare, NER-Gotheye]
+  timeline:
+    - from: 1648
+      main: songhai
+      minor: fula
+      note: ソンガイ語・ザルマ語。フラニ人・グルマンチェ人も住む。
+- id: lang_af_ivory_coast
+  name: コートジボワール南部（森林地帯）
+  select:
+    iso: [CIV]
+  timeline:
+    - from: 1648
+      main: akan
+      minor: kru
+      note: バウレ語・アニ語などアカン系（中部・東部）。
+- id: lang_af_ivory_coast_west
+  name: コートジボワール西部（クル系）
+  select:
+    adm1: [CIV/Bas-Sassandra, CIV/Goh-Djiboua, CIV/Montagnes, CIV/Sassandra-Marahoue]
+  timeline:
+    - from: 1648
+      main: kru
+      minor: mande_south
+      note: ベテ語・ゲレ語（クル系）、ダン語（ヤクバ。南マンデ系）。
+- id: lang_af_ivory_coast_north
+  name: コートジボワール北部（セヌフォ人・マリンケ人）
+  select:
+    adm1: [CIV/Savanes, CIV/Denguele, CIV/Woroba, CIV/Zanzan]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: mande
+      note: セヌフォ語（グル系）。マリンケ語・ジュラ語（マンデ系）。
+- id: lang_af_ivory_coast_mande_north
+  name: オディエネ・セゲラ（マリンケ人）
+  select:
+    adm1: [CIV/Denguele, CIV/Woroba]
+  timeline:
+    - from: 1648
+      main: mande
+      minor: gur
+      note: マリンケ語。
+- id: lang_af_ivory_coast_abidjan
+  name: アビジャン
+  select:
+    adm1: ["CIV/District Autonome D'Abidjan"]
+  timeline:
+    - from: 1648
+      main: akan
+      note: エブリエ人などラグーンの人々（アカン系に近い）。
+    - from: 1960
+      main: akan
+      minor: mande
+      note: 全国からの移住者の都市。ジュラ語・フランス語が共通語。
+- id: lang_af_ghana
+  name: ガーナ南部（アカン人）
+  select:
+    iso: [GHA]
+  timeline:
+    - from: 1648
+      main: akan
+      note: トウィ語（アシャンティ）・ファンティ語などのアカン語。
+- id: lang_af_ghana_accra
+  name: アクラ（大アクラ州）
+  select:
+    adm1: [GHA/Greater Accra Region]
+  timeline:
+    - from: 1648
+      main: ewe_fon
+      note: ガ語・ダンメ語（ガ・ダンメ語。クワ系）。
+    - from: 1960
+      main: ewe_fon
+      minor: akan
+      note: 首都アクラには全国から人が集まり、トウィ語が広く話される。
+- id: lang_af_ghana_volta
+  name: ヴォルタ州（エウェ人）
+  select:
+    adm1: [GHA/Volta Region]
+  timeline:
+    - from: 1648
+      main: ewe_fon
+      note: エウェ語（グベ諸語）。
+- id: lang_af_ghana_oti
+  name: オティ州（ヴォルタ川東岸の北部）
+  select:
+    adm1: [GHA/Oti Region]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: akan
+      note: コンコンバ語（グル系）・グアン諸語。
+- id: lang_af_ghana_north
+  name: ガーナ北部（ダゴンバ・マンプルシ・ゴンジャ）
+  select:
+    adm1: [GHA/Northern Region, GHA/Savannah Region, GHA/North East Region]
+  timeline:
+    - from: 1648
+      main: gur
+      note: ダグバニ語・マンプルリ語（グル系）。ゴンジャ語（グアン系）。
+- id: lang_af_ghana_upper
+  name: ガーナ北東部・北西部（アッパー州）
+  select:
+    adm1: [GHA/Upper East Region, GHA/Upper West Region]
+  timeline:
+    - from: 1648
+      main: gur
+      note: フラフラ語・ダガーレ語・シサラ語・カセム語（グル系）。
+- id: lang_af_ghana_bono_east
+  name: ボノ東部（ブロン人の北部）
+  select:
+    adm1: [GHA/Bono East Region]
+  timeline:
+    - from: 1648
+      main: akan
+      minor: gur
+      note: ブロン語（アカン系）。北部からの移住者も多い。
+- id: lang_af_togo
+  name: トーゴ南部（エウェ人）
+  select:
+    iso: [TGO]
+  timeline:
+    - from: 1648
+      main: ewe_fon
+      note: エウェ語・ミナ語（グベ諸語）。
+- id: lang_af_togo_north
+  name: トーゴ北部（カブレ・テム・モバ）
+  select:
+    adm1: [TGO/Kara Region, TGO/Savanes Region, TGO/Centrale Region]
+  timeline:
+    - from: 1648
+      main: gur
+      note: カブレ語・テム語・モバ語（グル系）。
+- id: lang_af_benin
+  name: ベナン南部（ダホメ）
+  select:
+    iso: [BEN]
+  timeline:
+    - from: 1648
+      main: ewe_fon
+      note: フォン語・グン語・アジャ語（グベ諸語）。
+- id: lang_af_benin_portonovo
+  name: ポルトノボ（ウェメ・プラトー）
+  select:
+    adm1: [BEN/Oueme, BEN/Plateau]
+  timeline:
+    - from: 1648
+      main: ewe_fon
+      minor: yoruba
+      note: グン語（グベ諸語）。プラトーはヨルバ系（ナゴ人）。
+- id: lang_af_benin_plateau_yoruba
+  name: プラトー県（ナゴ人）
+  select:
+    adm1: [BEN/Plateau, BEN/Collines]
+  timeline:
+    - from: 1648
+      main: yoruba
+      minor: ewe_fon
+      note: ヨルバ語（ナゴ人・シャベ人）。
+- id: lang_af_benin_north
+  name: ベナン北部（バリバ人）
+  select:
+    adm1: [BEN/Borgou, BEN/Alibori, BEN/Donga]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: fula
+      note: バリバ語（グル系）。デンディ語（ソンガイ系）・フラニ語。
+- id: lang_af_benin_atakora
+  name: アタコラ（ソンバ人）
+  select:
+    adm1: [BEN/Atakora]
+  timeline:
+    - from: 1648
+      main: gur
+      note: ディトゥマリ語・ワマ語（グル系）。
+- id: lang_af_nigeria_hausa
+  name: ハウサランド（カノ・カツィナ・ザリア）
+  select:
+    iso: [NGA]
+  timeline:
+    - from: 1648
+      main: hausa
+      minor: fula
+      note: ハウサ語。支配層のフラニ人も多くはハウサ語を話すようになった。
+- id: lang_af_nigeria_borno
+  name: ボルヌ（ボルノ・ヨベ）
+  select:
+    adm1: [NGA/Borno, NGA/Yobe]
+  timeline:
+    - from: 1648
+      main: kanuri
+      minor: chadic_other
+      note: カヌリ語。バデ語・ンギジム語（チャド系）、シュワ・アラブ。
+- id: lang_af_nigeria_south_borno
+  name: ボルノ南部（ビウ・グウォザ・チボク）
+  select:
+    pieces: [NGA-Chibok, NGA-Askira_Uba, NGA-Hawul, NGA-Bayo, NGA-Gwoza, NGA-Shani, NGA-Kwaya_Kusar, NGA-Damboa]
+  timeline:
+    - from: 1648
+      main: chadic_other
+      minor: kanuri
+      note: ブラ語・マルギ語・キバク語（チャド系）。
+- id: lang_af_nigeria_sokoto
+  name: ソコト・ケビ・ザムファラ
+  select:
+    adm1: [NGA/Sokoto, NGA/Kebbi, NGA/Zamfara]
+  timeline:
+    - from: 1648
+      main: hausa
+      minor: fula
+      note: ハウサ語。ソコトの支配層はフラニ人。
+- id: lang_af_nigeria_zuru
+  name: ズル（ケビ南部）
+  select:
+    pieces: [NGA-Zuru, NGA-Sakaba, NGA-Wasagu_Danko, NGA-Fakai]
+  timeline:
+    - from: 1648
+      main: middle_belt
+      minor: hausa
+      note: ダカルカリ語（カインジ系）。
+- id: lang_af_nigeria_adamawa
+  name: アダマワ（ヨラ）
+  select:
+    adm1: [NGA/Adamawa]
+  timeline:
+    - from: 1648
+      main: chadic_other
+      minor: fula
+      note: バタ語・ヒギ語（チャド系）。
+    - from: 1810
+      main: chadic_other
+      minor: fula
+      note: フラニ人（フルフルデ語）がヨラ周辺に住む。
+- id: lang_af_nigeria_yola
+  name: ヨラ周辺（フラニ人の首長国）
+  select:
+    pieces: [NGA-Yola_North, NGA-Yola_South, NGA-Girei, NGA-Fufore, NGA-Mayo_Belwa, NGA-Mubi_North]
+  timeline:
+    - from: 1648
+      main: chadic_other
+    - from: 1810
+      main: fula
+      minor: chadic_other
+      note: アダマワ首長国の都ヨラ（1841–）。
+- id: lang_af_nigeria_gombe_bauchi
+  name: バウチ・ゴンベ
+  select:
+    adm1: [NGA/Bauchi, NGA/Gombe]
+  timeline:
+    - from: 1648
+      main: hausa
+      minor: fula
+      note: ハウサ語。バウチ首長国・ゴンベ首長国（1804 年以後）はフラニ人の首長国。
+- id: lang_af_nigeria_bauchi_south
+  name: バウチ南部・ゴンベ南部（サヤワ・タンガレ）
+  select:
+    pieces: [NGA-Tafawa_Balewa, NGA-Bogoro, NGA-Dass, NGA-Billiri, NGA-Kaltungo, NGA-Shomgom, NGA-Balanga]
+  timeline:
+    - from: 1648
+      main: chadic_other
+      minor: hausa
+      note: ザール語（サヤワ）・タンガレ語（チャド系）。
+- id: lang_af_nigeria_middle_belt
+  name: ミドルベルト（プラトー・ナサラワ・タラバ）
+  select:
+    adm1: [NGA/Plateau, NGA/Nasarawa, NGA/Taraba, NGA/Abuja Federal Capital Territory]
+  timeline:
+    - from: 1648
+      main: middle_belt
+      minor: hausa
+      note: ベロム語・ジュクン語・ムムイェ語・グバギ語など（ナイジェリア中部の諸語）。ハウサ語が共通語。
+- id: lang_af_nigeria_southern_kaduna
+  name: 南カドゥナ
+  select:
+    pieces: [NGA-Jema_A, NGA-Kaura, NGA-Kachia, NGA-Zangon_Kataf, NGA-Kauru, NGA-Chikun, NGA-Kagarko, NGA-Jaba, NGA-Sanga, NGA-Kajuru]
+  timeline:
+    - from: 1648
+      main: middle_belt
+      minor: hausa
+      note: ジュ語・ハム語・アティヤプ語など（ナイジェリア中部の諸語）。
+- id: lang_af_nigeria_niger
+  name: ヌペ（ニジェール州）
+  select:
+    adm1: [NGA/Niger]
+  timeline:
+    - from: 1648
+      main: middle_belt
+      minor: hausa
+      note: ヌペ語・グバギ語（グワリ語）。
+- id: lang_af_nigeria_benue
+  name: ベヌエ（ティヴ人・イドマ人）
+  select:
+    adm1: [NGA/Benue]
+  timeline:
+    - from: 1648
+      main: middle_belt
+      note: ティヴ語・イドマ語（ナイジェリア中部の諸語）。
+- id: lang_af_nigeria_kogi_igala
+  name: コギ東部（イガラ人）
+  select:
+    pieces: [NGA-Idah, NGA-Ankpa, NGA-Dekina, NGA-Ofu, NGA-Olamaboro, NGA-Omala, NGA-Ibaji, NGA-Igalamela_Odolu, NGA-Bassa]
+  timeline:
+    - from: 1648
+      main: middle_belt
+      note: イガラ語。
+- id: lang_af_nigeria_kogi_ebira
+  name: コギ中部（エビラ人・ロコジャ）
+  select:
+    pieces: [NGA-Okene, NGA-Adavi, NGA-Okehi, NGA-Ajaokuta, NGA-Ogori_Magongo, NGA-Lokoja, NGA-Kogi]
+  timeline:
+    - from: 1648
+      main: middle_belt
+      minor: yoruba
+      note: エビラ語。
+- id: lang_af_nigeria_yoruba
+  name: ヨルバランド（オヨ・オシュン・クワラ南部）
+  select:
+    adm1: [NGA/Oyo, NGA/Osun, NGA/Kwara]
+  timeline:
+    - from: 1648
+      main: yoruba
+      note: ヨルバ語。
+- id: lang_af_nigeria_kwara_north
+  name: クワラ北部（バリバ・ヌペ）
+  select:
+    pieces: [NGA-Baruten, NGA-Kaiama, NGA-Edu, NGA-Pategi]
+  timeline:
+    - from: 1648
+      main: gur
+      minor: middle_belt
+      note: バリバ語（グル系）・ヌペ語。
+- id: lang_af_nigeria_yoruba_east
+  name: ヨルバランド東部（オンド・エキティ・コギ西部）
+  select:
+    adm1: [NGA/Ondo, NGA/Ekiti]
+    pieces: [NGA-Kabba_Bunu, NGA-Ijumu, NGA-Yagba_East, NGA-Yagba_West, NGA-Mopa_Muro]
+  timeline:
+    - from: 1648
+      main: yoruba
+      note: ヨルバ語（エキティ・オンド・オクン方言）。
+- id: lang_af_nigeria_ogun
+  name: アベオクタ（オグン）
+  select:
+    adm1: [NGA/Ogun]
+  timeline:
+    - from: 1648
+      main: yoruba
+      note: ヨルバ語（エグバ・イジェブ方言）。
+- id: lang_af_nigeria_lagos
+  name: ラゴス
+  select:
+    adm1: [NGA/Lagos]
+  timeline:
+    - from: 1648
+      main: yoruba
+      note: ヨルバ語。
+    - from: 1970
+      main: yoruba
+      minor: igbo
+      note: 全国から移住者が集まる。
+- id: lang_af_nigeria_badagry
+  name: バダグリ
+  select:
+    pieces: [NGA-Badagry]
+  timeline:
+    - from: 1648
+      main: ewe_fon
+      minor: yoruba
+      note: グン語（エグン人。グベ諸語）。奴隷貿易の港。
+- id: lang_af_nigeria_igbo
+  name: イボランド
+  select:
+    adm1: [NGA/Anambra, NGA/Imo, NGA/Enugu, NGA/Ebonyi, NGA/Abia]
+  timeline:
+    - from: 1648
+      main: igbo
+      note: イボ語。
+- id: lang_af_nigeria_delta_igbo
+  name: デルタ州北部（アニオチャ・イカ）
+  select:
+    pieces: [NGA-Aniocha_North, NGA-Aniocha_South, NGA-Oshimili_North, NGA-Oshimili_South, NGA-Ika_North_East, NGA-Ika_South, NGA-Ndokwa_East, NGA-Ndokwa_West, NGA-Ukwuani]
+  timeline:
+    - from: 1648
+      main: igbo
+      note: イボ語（西イボ）。
+- id: lang_af_nigeria_edo
+  name: ベニン（エド人）
+  select:
+    adm1: [NGA/Edo]
+  timeline:
+    - from: 1648
+      main: edo_ijaw
+      note: エド語（ビニ語）・エサン語・エツァコ語。
+- id: lang_af_nigeria_niger_delta
+  name: ニジェール・デルタ（デルタ西部・バイエルサ・リヴァーズ）
+  select:
+    adm1: [NGA/Bayelsa, NGA/Rivers, NGA/Delta]
+  timeline:
+    - from: 1648
+      main: edo_ijaw
+      note: イジョ語・イツェキリ語・ウルホボ語・イソコ語・オゴニ語・イクウェレ語。
+- id: lang_af_nigeria_cross_river
+  name: カラバル（クロスリヴァー・アクワイボム）
+  select:
+    adm1: [NGA/Cross River, NGA/Akwa Ibom]
+  timeline:
+    - from: 1648
+      main: edo_ijaw
+      note: エフィク語・イビビオ語・アナン語・エジャガム語。
+- id: lang_af_cameroon
+  name: カメルーン南部（ベティ・ファン・ドゥアラ）
+  select:
+    iso: [CMR]
+  timeline:
+    - from: 1648
+      main: cameroon_bantu
+      note: エウォンド語（ベティ・ファン語）・バサ語・ドゥアラ語など（バントゥー系）。
+- id: lang_af_cameroon_east
+  name: カメルーン東部
+  select:
+    adm1: [CMR/East]
+  timeline:
+    - from: 1648
+      main: cameroon_bantu
+      minor: ubangian
+      note: マカ語など（バントゥー系）。北部にグバヤ人（ウバンギ系）。
+- id: lang_af_cameroon_grassfields
+  name: 西部・北西部（グラスフィールド）
+  select:
+    adm1: [CMR/West, CMR/North-West]
+  timeline:
+    - from: 1648
+      main: grassfields
+      note: バミレケ諸語・ンソ語などのグラスフィールド諸語（バントゥー系に近い）。
+- id: lang_af_cameroon_southwest
+  name: 南西州（ブエア・クンバ）
+  select:
+    adm1: [CMR/South-West]
+  timeline:
+    - from: 1648
+      main: cameroon_bantu
+      minor: grassfields
+      note: バクウェリ語・バコシ語など。英語系ピジン（カメルーン・ピジン）が共通語。
+- id: lang_af_cameroon_north
+  name: カメルーン北部（ガルア・アダマワ）
+  select:
+    adm1: [CMR/North, CMR/Adamaoua]
+  timeline:
+    - from: 1648
+      main: ubangian
+      note: ムブム語・グバヤ語・ドゥル語など（ウバンギ・アダマワ系）。
+    - from: 1830
+      main: fula
+      minor: ubangian
+      note: フルフルデ語（フラニ語）が広がり、共通語になった。
+- id: lang_af_cameroon_far_north
+  name: 極北州（マンダラ山地・ロゴヌ川）
+  select:
+    adm1: [CMR/Far North]
+  timeline:
+    - from: 1648
+      main: chadic_other
+      minor: fula
+      note: マファ語・マッサ語・ギジガ語（チャド系）。
+- id: lang_af_cameroon_maroua
+  name: マルア（ディアマレ）・ロゴヌ＝エ＝シャリ
+  select:
+    pieces: [CMR-Diamare, CMR-Logone_Et_Chari, CMR-Mayo_Sava]
+  timeline:
+    - from: 1648
+      main: chadic_other
+      minor: arabic
+      note: コトコ語・マンダラ語（チャド系）、シュワ・アラブ。
+    - from: 1810
+      main: fula
+      minor: chadic_other
+- id: lang_af_chad
+  name: チャド中部（アラブ・ハジェライ）
+  select:
+    iso: [TCD]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: チャド・アラビア語（シュワ・アラブ）。
+- id: lang_af_chad_bet
+  name: ボルク・エネディ・ティベスティ
+  select:
+    adm1: [TCD/Borkou, TCD/Ennedi-Est, TCD/Ennedi-Ouest, TCD/Tibesti, TCD/Bahr el Gazel]
+  timeline:
+    - from: 1648
+      main: teda
+      minor: arabic
+      note: テダ語・ダザ語・ザガワ語（サハラ系）。
+- id: lang_af_chad_kanem
+  name: カネム・チャド湖
+  select:
+    adm1: [TCD/Kanem, TCD/Lac]
+  timeline:
+    - from: 1648
+      main: kanuri
+      minor: teda
+      note: カネンブ語（カヌリ語の一方言）。ダザ人・ブドゥマ人（湖の島）・アラブ人。
+- id: lang_af_chad_wadai
+  name: ワダイ（アベシェ）
+  select:
+    adm1: [TCD/Ouaddaï, TCD/Sila, TCD/Wadi Fira]
+  timeline:
+    - from: 1648
+      main: fur
+      minor: arabic
+      note: マバ語（ワダイの王家）・ダジュ語・マサリト語・タマ語。北部（ワディ・フィラ）はザガワ人。
+- id: lang_af_chad_baguirmi
+  name: バギルミ・シャリ川流域
+  select:
+    adm1: [TCD/Chari-Baguirmi, TCD/Hadjer-Lamis, "TCD/N'Djamena Region"]
+  timeline:
+    - from: 1648
+      main: central_sudanic
+      minor: arabic
+      note: バギルミ語（バルマ語。中央スーダン系）、コトコ語、シュワ・アラブ。
+    - from: 1950
+      main: arabic
+      minor: central_sudanic
+      note: フォール・ラミ（1900 年建設、のちンジャメナ）の住民はアラビア語が共通語。
+- id: lang_af_chad_guera
+  name: ゲラ（ハジェライ）
+  select:
+    adm1: [TCD/Guéra]
+  timeline:
+    - from: 1648
+      main: chadic_other
+      minor: arabic
+      note: ハジェライ諸語（チャド系）。
+- id: lang_af_chad_south
+  name: チャド南部（サラ人）
+  select:
+    adm1: [TCD/Logone Occidental, TCD/Logone Oriental, TCD/Mandoul, TCD/Moyen-Chari, TCD/Tandjilé]
+  timeline:
+    - from: 1648
+      main: central_sudanic
+      note: サラ語（ンガンバイ語など。中央スーダン系）。
+- id: lang_af_chad_mayo_kebbi
+  name: マヨ・ケビ
+  select:
+    adm1: [TCD/Mayo-Kebbi Est, TCD/Mayo-Kebbi Ouest]
+  timeline:
+    - from: 1648
+      main: chadic_other
+      minor: ubangian
+      note: マッサ語・ムスグム語（チャド系）、ムンダン語（アダマワ系）。
+- id: lang_af_chad_salamat
+  name: サラマト・バタ
+  select:
+    adm1: [TCD/Salamat, TCD/Batha]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: central_sudanic
+      note: アラブ系の牧畜民（バッガーラ）。
+- id: lang_af_car
+  name: 中央アフリカ
+  select:
+    iso: [CAF]
+  timeline:
+    - from: 1648
+      main: ubangian
+      note: グバヤ語・バンダ語・ンバカ語など（ウバンギ系）。共通語のサンゴ語。
+- id: lang_af_car_northeast
+  name: 中央アフリカ北東部（ダール・アル・クーティ）
+  select:
+    adm1: [CAF/Vakaga, CAF/Bamingui-Bangoran]
+  timeline:
+    - from: 1648
+      main: central_sudanic
+      minor: arabic
+      note: カラ語・グラ語・ルンガ語（中央スーダン系など）。
+- id: lang_af_eq_guinea
+  name: 赤道ギニア（リオ・ムニ）
+  select:
+    iso: [GNQ]
+  timeline:
+    - from: 1648
+      main: cameroon_bantu
+      note: ファン語（バントゥー系）。
+- id: lang_af_eq_guinea_bioko
+  name: ビオコ島（フェルナンド・ポー）
+  select:
+    adm1: [GNQ/Bioko Norte, GNQ/Bioko Sur]
+  timeline:
+    - from: 1648
+      main: cameroon_bantu
+      note: ブビ語（バントゥー系）。マラボには英語系クレオールのフェルナンディーノ。独立後はファン人が多い。
+- id: lang_af_eq_guinea_annobon
+  name: アンノボン島
+  select:
+    adm1: [GNQ/Annobón]
+  timeline:
+    - from: 1648
+      main: creole_portuguese
+      note: ファ・ダンボ語（ポルトガル語系クレオール）。
+- id: lang_af_sao_tome
+  name: サントメ・プリンシペ
+  select:
+    iso: [STP]
+  timeline:
+    - from: 1648
+      main: creole_portuguese
+      note: フォロ語・プリンシペ語（ポルトガル語系クレオール）。
+      source: "https://ja.wikipedia.org/wiki/サントメ・プリンシペ"
+- id: lang_af_gabon
+  name: ガボン
+  select:
+    iso: [GAB]
+  timeline:
+    - from: 1648
+      main: cameroon_bantu
+      note: ファン語・ミエネ語・プヌ語・ンゼビ語など（バントゥー系）。
+- id: lang_af_sudan
+  name: スーダン中部（ナイル川流域）
+  select:
+    iso: [SDN]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: スーダン・アラビア語（ジャアリーン・シャイギーヤなど）。
+- id: lang_af_sudan_nubia
+  name: ヌビア（北部州）
+  select:
+    adm1: [SDN/Northern]
+  timeline:
+    - from: 1648
+      main: nubian
+      minor: arabic
+      note: ダナグラ人・マハス人のヌビア語。
+    - from: 1964
+      main: nubian
+      minor: arabic
+      note: アスワン・ハイダムの建設でワディ・ハルファの住民はカッサラ州のハシム・エル・ギルバに移住させられた（1964）。
+- id: lang_af_sudan_beja
+  name: 東スーダン（ベジャ人）
+  select:
+    adm1: [SDN/Red Sea, SDN/Kassala]
+  timeline:
+    - from: 1648
+      main: beja
+      minor: arabic
+      note: ベジャ語（ハデンドワ人など。クシ系）。カッサラにはティグレ語を話すベニ・アメル人も。
+- id: lang_af_sudan_blue_nile
+  name: 青ナイル州南部（フンジ山地）
+  select:
+    adm1: [SDN/Blue Nile]
+  timeline:
+    - from: 1648
+      main: nilo_saharan_other
+      minor: arabic
+      note: ベルタ語・ガアム語など。
+- id: lang_af_sudan_nuba
+  name: ヌバ山地（南コルドファン）
+  select:
+    adm1: [SDN/South Kordofan]
+  timeline:
+    - from: 1648
+      main: nilo_saharan_other
+      minor: arabic
+      note: ヌバ山地の諸語（コルドファン諸語〈ニジェール・コンゴ系〉とナイル・サハラ系の言語が混在）。
+- id: lang_af_sudan_kordofan_west
+  name: 西コルドファン・南ダルフール（バッガーラ）
+  select:
+    adm1: [SDN/West Kordofan, SDN/South Darfur, SDN/East Darfur]
+  timeline:
+    - from: 1648
+      main: arabic
+      minor: fur
+      note: バッガーラ（ミセリア・リゼイガートなどアラブ系の牛牧民）。
+- id: lang_af_sudan_darfur
+  name: ダルフール
+  select:
+    adm1: [SDN/Central Darfur, SDN/West Darfur, SDN/North Darfur]
+  timeline:
+    - from: 1648
+      main: fur
+      minor: arabic
+      note: フール語（ジェベル・マッラ）・マサリト語（西部）。北部はザガワ人（サハラ系）とアラブ系の遊牧民。
+- id: lang_af_sudan_north_darfur
+  name: 北ダルフール
+  select:
+    adm1: [SDN/North Darfur]
+  timeline:
+    - from: 1648
+      main: fur
+      minor: teda
+      note: フール人・ザガワ人（サハラ系）・アラブ系の遊牧民。
+- id: lang_af_abyei
+  name: アビエイ
+  select:
+    pieces: [SDN-Abyei_PCA, 111-Abyei]
+  timeline:
+    - from: 1648
+      main: dinka_nuer
+      minor: arabic
+      note: ディンカ語（ンゴク・ディンカ）。
+- id: lang_af_south_sudan
+  name: 南スーダン（ディンカ人の地域）
+  select:
+    iso: [SSD]
+  timeline:
+    - from: 1648
+      main: dinka_nuer
+      note: ディンカ語。
+- id: lang_af_south_sudan_upper_nile
+  name: 上ナイル（シルック人・ヌエル人）
+  select:
+    adm1: [SSD/Upper Nile]
+  timeline:
+    - from: 1648
+      main: dinka_nuer
+      minor: luo
+      note: ヌエル語・ディンカ語。シルック語（西ナイル系）。
+- id: lang_af_south_sudan_wbg
+  name: 西バハル・アル・ガザル（ワウ）
+  select:
+    adm1: [SSD/Western Bahr el Ghazal]
+  timeline:
+    - from: 1648
+      main: ubangian
+      minor: luo
+      note: フェルティト（バランダ人・ンドゴ人などウバンギ系）・ジュル人（ルオ系）。
+- id: lang_af_south_sudan_zande
+  name: 西エクアトリア（ザンデ人）
+  select:
+    adm1: [SSD/Western Equatoria]
+  timeline:
+    - from: 1648
+      main: ubangian
+      note: ザンデ語（ウバンギ系）。
+- id: lang_af_south_sudan_bari
+  name: 中央エクアトリア（ジュバ・バリ人）
+  select:
+    adm1: [SSD/Central Equatoria]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      note: バリ語・カクワ語・クク語・ポジュル語・ムンダリ語（東ナイル系）。
+- id: lang_af_south_sudan_ee
+  name: 東エクアトリア（ロトゥコ・トポサ）
+  select:
+    adm1: [SSD/Eastern Equatoria]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      minor: nilo_saharan_other
+      note: ロトゥコ語・トポサ語（東ナイル系）。ブディにディディンガ人（スルマ系）。
+- id: lang_af_south_sudan_magwi
+  name: マグウィ（アチョリ人）
+  select:
+    pieces: [SSD-Magwi]
+  timeline:
+    - from: 1648
+      main: luo
+      minor: nilotic_east
+      note: アチョリ語（西ナイル系）。
+- id: lang_af_ethiopia_highland
+  name: エチオピア高原（アムハラ）
+  select:
+    iso: [ETH]
+  timeline:
+    - from: 1648
+      main: amharic
+      note: アムハラ語。
+- id: lang_af_tigray
+  name: ティグライ
+  select:
+    adm1: [ETH/Tigray]
+  timeline:
+    - from: 1648
+      main: tigrinya
+      note: ティグリニャ語。アクスム（エチオピア正教会の聖地）がある。
+- id: lang_af_agaw
+  name: アガウ（アウィ・ワグ・ヒムラ）
+  select:
+    pieces: [ETH-Awi_Agew, ETH-Wag_Himra]
+  timeline:
+    - from: 1648
+      main: cushitic_other
+      minor: amharic
+      note: アウンギ語・ハムタンガ語（アガウ諸語。クシ系）。
+- id: lang_af_wollo_south
+  name: 南ウォロ
+  select:
+    pieces: [ETH-South_Wollo, ETH-Oromia]
+  timeline:
+    - from: 1648
+      main: oromo
+      minor: amharic
+      note: オロモ語。
+    - from: 1900
+      main: amharic
+      minor: oromo
+      note: アムハラ語化が進んだ。アムハラ州のオロモ特別区（ケミセ）はオロモ語が多数。
+- id: lang_af_wollo_oromia_special
+  name: アムハラ州のオロモ特別区
+  select:
+    pieces: [ETH-Oromia]
+  timeline:
+    - from: 1648
+      main: oromo
+      minor: amharic
+- id: lang_af_oromia
+  name: オロミア（シェワ・ウォレガ）
+  select:
+    adm1: [ETH/Oromia]
+  timeline:
+    - from: 1648
+      main: oromo
+      note: オロモ語（クシ系）。
+- id: lang_af_addis_ababa
+  name: アディスアベバ
+  select:
+    adm1: [ETH/Addis Ababa]
+  timeline:
+    - from: 1648
+      main: oromo
+    - from: 1890
+      main: amharic
+      minor: oromo
+      note: アディスアベバ（1886 年建設）。
+- id: lang_af_dire_dawa
+  name: ディレダワ・ハラル
+  select:
+    adm1: [ETH/Dire Dawa, ETH/Hareri]
+  timeline:
+    - from: 1648
+      main: oromo
+      minor: somali
+      note: オロモ人・ソマリ人。ハラルの町はハラリ語（エチオピアのセム系）。
+- id: lang_af_harar_city
+  name: ハラル
+  select:
+    adm1: [ETH/Hareri]
+  timeline:
+    - from: 1648
+      main: gurage
+      minor: oromo
+      note: ハラリ語（エチオピアのセム系）。
+    - from: 1900
+      main: gurage
+      minor: amharic
+      note: 1887 年にメネリク2世が征服し、アムハラ人の兵士・役人とオロモ人が町に移り住んだ。
+    - from: 1950
+      main: oromo
+      minor: amharic
+      note: ハラリ人は少数派になった（2007 年の国勢調査で、ハラリ州はオロモ人約 56%・アムハラ人約 22%・ハラリ人約 9%）。
+- id: lang_af_ethiopia_somali
+  name: オガデン（ソマリ州）
+  select:
+    adm1: [ETH/Somali]
+  timeline:
+    - from: 1648
+      main: somali
+      note: ソマリ語。
+- id: lang_af_ethiopia_afar
+  name: アファール
+  select:
+    adm1: [ETH/Afar]
+  timeline:
+    - from: 1648
+      main: afar_saho
+      note: アファール語（クシ系）。
+- id: lang_af_benishangul
+  name: ベニシャングル
+  select:
+    adm1: [ETH/Beneshangul Gumu]
+  timeline:
+    - from: 1648
+      main: nilo_saharan_other
+      note: ベルタ語・グムズ語（ナイル・サハラ系）。
+- id: lang_af_gambela
+  name: ガンベラ
+  select:
+    adm1: [ETH/Gambela]
+  timeline:
+    - from: 1648
+      main: luo
+      minor: dinka_nuer
+      note: アニュワ語（西ナイル系）・ヌエル語。
+    - from: 1990
+      main: dinka_nuer
+      minor: luo
+      note: 19 世紀から東へ広がったヌエル人が、南スーダンの内戦の難民も加わって最大の民族になった（2007 年に約 46%）。
+- id: lang_af_snnpr
+  name: エチオピア南部（南部諸民族州）
+  select:
+    adm1: [ETH/SNNPR]
+  timeline:
+    - from: 1648
+      main: cushitic_other
+      note: シダモ語・ハディヤ語・カンバタ語・ゲデオ語（高地東クシ系）。
+- id: lang_af_snnpr_omotic
+  name: ウォライタ・ガモ・カファ（オモ系の地域）
+  select:
+    pieces: [ETH-Wolayita, ETH-Gamo_Gofa, ETH-Dawro, ETH-Konta, ETH-Basketo, ETH-Keffa, ETH-Sheka, ETH-Yem, ETH-Bench_Maji]
+  timeline:
+    - from: 1648
+      main: omotic
+      note: ウォライタ語・ガモ語・カファ語・ベンチ語など（オモ系）。
+- id: lang_af_gurage
+  name: グラゲ・シルテ
+  select:
+    pieces: [ETH-Gurage, ETH-Selti]
+  timeline:
+    - from: 1648
+      main: gurage
+      note: グラゲ語・シルテ語（エチオピアのセム系）。
+- id: lang_af_alaba
+  name: アラバ
+  select:
+    pieces: [ETH-Alaba]
+  timeline:
+    - from: 1648
+      main: cushitic_other
+      note: アラバ語（高地東クシ系）。
+- id: lang_af_south_omo
+  name: 南オモ
+  select:
+    pieces: [ETH-South_Omo]
+  timeline:
+    - from: 1648
+      main: omotic
+      minor: nilo_saharan_other
+      note: ハマル語・アリ語（オモ系）、ダサネチ語（クシ系）、ムルシ語（スルマ系）。
+- id: lang_af_eritrea_highland
+  name: エリトリア高原（ハマセン・セラエ）
+  select:
+    iso: [ERI]
+  timeline:
+    - from: 1648
+      main: tigrinya
+      note: ティグリニャ語。
+- id: lang_af_eritrea_saho
+  name: アカレ・グザイ東部（サホ人）
+  select:
+    pieces: [ERI-Senafe, ERI-Tsorona, ERI-Adi_Keyh]
+  timeline:
+    - from: 1648
+      main: tigrinya
+      minor: afar_saho
+      note: サホ語（クシ系）。
+- id: lang_af_eritrea_lowland
+  name: エリトリア西部・北部の低地（ティグレ人）
+  select:
+    adm1: [ERI/Anseba Region, ERI/Gash-Barka Region, ERI/Northen Red Sea Region]
+  timeline:
+    - from: 1648
+      main: tigrinya
+      minor: beja
+      note: ティグレ語（地図ではティグリニャ語と同じ色）。ビレン語（アガウ系）・クナマ語・ナラ語（ナイル・サハラ系）・ベジャ語も話される。
+- id: lang_af_eritrea_south_red_sea
+  name: 南紅海（ダナキル）
+  select:
+    adm1: [ERI/Southern Red Sea Region]
+  timeline:
+    - from: 1648
+      main: afar_saho
+      note: アファール語。
+- id: lang_af_djibouti
+  name: ジブチ（イッサ人の地域）
+  select:
+    iso: [DJI]
+  timeline:
+    - from: 1648
+      main: somali
+      minor: afar_saho
+      note: イッサ人（ソマリ系）。
+- id: lang_af_djibouti_afar
+  name: ジブチ北部・西部（アファール人）
+  select:
+    adm1: [DJI/Obock, DJI/Tadjourah, DJI/Dikhil]
+  timeline:
+    - from: 1648
+      main: afar_saho
+      note: アファール語。タジュラ・スルタン国。
+- id: lang_af_somalia
+  name: ソマリア
+  select:
+    iso: [SOM]
+  timeline:
+    - from: 1648
+      main: somali
+      note: ソマリ語。南部の河間地帯はマアイ方言（ディギル・ミリフレ）。ジュバ川・シェベリ川沿いにバントゥー系の農民（ゴシャ）もいる。
+- id: lang_af_jubaland
+  name: ジュバランド（ジュバ川流域）
+  select:
+    adm1: [SOM/Lower Juba, SOM/Middle Juba, SOM/Gedo]
+  timeline:
+    - from: 1648
+      main: oromo
+      minor: somali
+      note: オロモ系の遊牧民（ワルダイ）が住んでいた。
+    - from: 1850
+      main: somali
+      minor: oromo
+      note: 19 世紀にソマリ人（ダロッド系）が南下した。
+    - from: 1900
+      main: somali
+- id: lang_af_kenya_kikuyu
+  name: 中央ケニア（キクユ人）
+  select:
+    adm1: [KEN/Kiambu, "KEN/Murang'a", KEN/Nyeri, KEN/Kirinyaga, KEN/Nyandarua, KEN/Laikipia, KEN/Nakuru, KEN/Nairobi]
+  timeline:
+    - from: 1648
+      main: kikuyu
+      note: キクユ語。
+- id: lang_af_kenya_laikipia
+  name: ライキピア・ナクル（ホワイト・ハイランド）
+  select:
+    adm1: [KEN/Laikipia, KEN/Nakuru]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      note: マサイ人の放牧地。
+    - from: 1910
+      main: nilotic_east
+      minor: kikuyu
+      note: イギリス人の入植地（ホワイト・ハイランド）。マサイ人は 1904・1911 年に南へ移された。
+    - from: 1950
+      main: kikuyu
+      minor: kalenjin
+      note: キクユ人の労働者・入植者が多数になった。
+- id: lang_af_nairobi
+  name: ナイロビ
+  select:
+    adm1: [KEN/Nairobi]
+  timeline:
+    - from: 1648
+      main: kikuyu
+      minor: nilotic_east
+    - from: 1910
+      main: kikuyu
+      minor: gujarati
+      note: ウガンダ鉄道（1899）の町。インド系（グジャラート語・パンジャーブ語）の商人・職人が多く、1948 年にはアフリカ人約 6.5 万・アジア系約 4.3 万・ヨーロッパ人約 1 万だった。モンバサ・ダルエスサラーム・カンパラ・ザンジバルでも 20 世紀前半はアジア系が1〜3割いた。
+    - from: 1970
+      main: kikuyu
+      minor: luo
+      note: 独立後、アジア系の多くが国外へ去り、全国から人が集まる首都になった。スワヒリ語・英語が共通語。
+- id: lang_af_kenya_meru
+  name: メル・エンブ
+  select:
+    adm1: [KEN/Meru, KEN/Tharaka, KEN/Embu]
+  timeline:
+    - from: 1648
+      main: kikuyu
+      note: メル語・エンブ語（キクユ語に近い）。
+- id: lang_af_kenya_kamba
+  name: ウカンバ（カンバ人）
+  select:
+    adm1: [KEN/Machakos, KEN/Makueni, KEN/Kitui]
+  timeline:
+    - from: 1648
+      main: kikuyu
+      note: カンバ語（キクユ語に近い）。
+- id: lang_af_kenya_luo
+  name: ニャンザ（ルオ人）
+  select:
+    adm1: [KEN/Kisumu, KEN/Siaya, KEN/Homa Bay, KEN/Migori]
+  timeline:
+    - from: 1648
+      main: luo
+      note: ルオ語（西ナイル系）。16 世紀ごろ南スーダンから移ってきた。
+- id: lang_af_kenya_gusii
+  name: キシイ（グシイ人）
+  select:
+    adm1: [KEN/Kisii, KEN/Nyamira]
+  timeline:
+    - from: 1648
+      main: lacustrine
+      note: グシイ語（バントゥー系）。
+- id: lang_af_kenya_luhya
+  name: 西ケニア（ルヒヤ人）
+  select:
+    adm1: [KEN/Kakamega, KEN/Vihiga, KEN/Bungoma, KEN/Busia, KEN/Trans Nzoia]
+  timeline:
+    - from: 1648
+      main: lacustrine
+      minor: nilotic_east
+      note: ルヒヤ語（バントゥー系）。ブシアにテソ人（東ナイル系）。
+- id: lang_af_kenya_trans_nzoia
+  name: トランス・ンゾイア
+  select:
+    adm1: [KEN/Trans Nzoia]
+  timeline:
+    - from: 1648
+      main: kalenjin
+    - from: 1960
+      main: lacustrine
+      minor: kalenjin
+      note: ホワイト・ハイランドの農場に、ルヒヤ人などが移り住んだ。
+- id: lang_af_kenya_kalenjin
+  name: カレンジン人の地域（リフト・ヴァレー西部）
+  select:
+    adm1: [KEN/Nandi, KEN/Uasin Gishu, KEN/Kericho, KEN/Bomet, KEN/Baringo, KEN/Elgeyo-Marakwet, KEN/West Pokot]
+  timeline:
+    - from: 1648
+      main: kalenjin
+      note: カレンジン諸語（南ナイル系）。
+- id: lang_af_kenya_maasai
+  name: マサイの地（ナロク・カジアド）
+  select:
+    adm1: [KEN/Narok, KEN/Kajiado]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      note: マサイ語（東ナイル系）。
+    - from: 1980
+      main: nilotic_east
+      minor: kikuyu
+- id: lang_af_kenya_north
+  name: 北ケニア（トゥルカナ・サンブル・マルサビット）
+  select:
+    adm1: [KEN/Turkana, KEN/Samburu, KEN/Marsabit, KEN/Isiolo]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      minor: oromo
+      note: トゥルカナ語・サンブル語（東ナイル系）。マルサビット・イシオロはボラナ人・ガブラ人（オロモ語）・レンディーレ人（クシ系）。
+- id: lang_af_kenya_isiolo
+  name: イシオロ・マルサビット
+  select:
+    adm1: [KEN/Isiolo, KEN/Marsabit]
+  timeline:
+    - from: 1648
+      main: oromo
+      minor: nilotic_east
+      note: ボラナ人・ガブラ人（オロモ語）。
+- id: lang_af_kenya_northeast
+  name: 北東ケニア（ガリッサ・ワジル・マンデラ）
+  select:
+    adm1: [KEN/Garissa, KEN/Wajir, KEN/Mandera]
+  timeline:
+    - from: 1648
+      main: oromo
+      minor: somali
+    - from: 1880
+      main: somali
+      note: ソマリ語。
+- id: lang_af_kenya_tana
+  name: タナ川流域
+  select:
+    adm1: [KEN/Tana River]
+  timeline:
+    - from: 1648
+      main: oromo
+      minor: tz_bantu
+      note: オルマ人（オロモ語）とポコモ人（バントゥー系）。
+- id: lang_af_kenya_coast
+  name: ケニア海岸（ミジケンダ）
+  select:
+    adm1: [KEN/Kilifi, KEN/Kwale, KEN/Taita Taveta]
+  timeline:
+    - from: 1648
+      main: tz_bantu
+      minor: swahili
+      note: ミジケンダ諸語（ギリャマ・ディゴなど）・タイタ語（バントゥー系）。
+- id: lang_af_mombasa
+  name: モンバサ・ラム（スワヒリ海岸）
+  select:
+    adm1: [KEN/Mombasa, KEN/Lamu]
+  timeline:
+    - from: 1648
+      main: swahili
+      minor: tz_bantu
+      note: スワヒリ語（キアム語・キムヴィタ語）。
+- id: lang_af_lamu
+  name: ラム
+  select:
+    adm1: [KEN/Lamu]
+  timeline:
+    - from: 1648
+      main: swahili
+      note: スワヒリ語（キアム語）・バジュニ語。
+- id: lang_af_uganda_west
+  name: ウガンダ西部（ブニョロ・トロ）
+  select:
+    iso: [UGA]
+  timeline:
+    - from: 1648
+      main: lacustrine
+      note: ニョロ語・トロ語・ニャンコレ語・キガ語（大湖地方のバントゥー系）。
+- id: lang_af_buganda
+  name: ブガンダ
+  select:
+    adm1: [UGA/Central Region]
+  timeline:
+    - from: 1648
+      main: ganda
+      note: ルガンダ語。
+- id: lang_af_busoga
+  name: ブソガ
+  select:
+    pieces: [UGA-Bugabula, UGA-Bulamogi, UGA-Budiope, UGA-Bugweri, UGA-Bukooli, UGA-Busiki, UGA-Butembe, UGA-Kigulu, UGA-Luuka, UGA-Kagoma, UGA-Buzaaya, UGA-Bunya]
+  timeline:
+    - from: 1648
+      main: lacustrine
+      note: ソガ語。
+- id: lang_af_bugisu
+  name: ブギス・ブケディ
+  select:
+    pieces: [UGA-Bubulo, UGA-Budadiri, UGA-Bulambuli, UGA-Bungokho, UGA-Manjiya, UGA-Samia_Bugwe, UGA-Bunyole, UGA-Budaka, UGA-Kibuku, UGA-Pallisa]
+  timeline:
+    - from: 1648
+      main: lacustrine
+      minor: nilotic_east
+      note: マサバ語（ギス語）・グウェレ語・ニョレ語・サミア語（バントゥー系）。
+- id: lang_af_sebei
+  name: セベイ
+  select:
+    pieces: [UGA-Kongasis, UGA-Kween, UGA-Tingey]
+  timeline:
+    - from: 1648
+      main: kalenjin
+      note: サバオト語（カレンジン系）。
+- id: lang_af_teso
+  name: テソ
+  select:
+    pieces: [UGA-Amuria, UGA-Bukedea, UGA-Kumi, UGA-Ngora, UGA-Soroti, UGA-Soroti_2, UGA-Serere, UGA-Kasilo, UGA-Usuk, UGA-Butebo, UGA-Tororo]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      note: テソ語（アテソ語。東ナイル系）。
+- id: lang_af_kumam_padhola
+  name: クマム・パドホラ
+  select:
+    pieces: [UGA-Kaberamaido, UGA-Kalaki, UGA-West_Budama]
+  timeline:
+    - from: 1648
+      main: luo
+      minor: nilotic_east
+      note: クマム語・ドパドホラ語（ルオ系）。
+- id: lang_af_acholi_lango
+  name: アチョリ・ランゴ・アルル
+  select:
+    pieces: [UGA-Agago, UGA-Aruu, UGA-Aswa, UGA-Chua, UGA-Kilak, UGA-Lamwo, UGA-Nwoya, UGA-Omoro, UGA-Dokolo, UGA-Erute, UGA-Kole, UGA-Kwania, UGA-Maruzi, UGA-Otuke, UGA-Oyam, UGA-Kioga, UGA-Moroto, UGA-Okoro, UGA-Jonam, UGA-Padyere]
+  timeline:
+    - from: 1648
+      main: luo
+      note: アチョリ語・ランゴ語・アルル語（西ナイル系）。
+- id: lang_af_karamoja
+  name: カラモジャ
+  select:
+    pieces: [UGA-Bokora, UGA-Chekwii, UGA-Dodoth, UGA-Jie, UGA-Labwor, UGA-Matheniko, UGA-Pian, UGA-Pokot]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      note: カラモジョン語（東ナイル系）。
+- id: lang_af_west_nile
+  name: 西ナイル（ルグバラ人）
+  select:
+    pieces: [UGA-Ayivu, UGA-Maracha, UGA-Terego, UGA-Vurra, UGA-Madi_Okollo, UGA-East_Moyo, UGA-West_Moyo]
+  timeline:
+    - from: 1648
+      main: central_sudanic
+      note: ルグバラ語・マディ語（中央スーダン系）。
+- id: lang_af_west_nile_muslim
+  name: アリンガ・コボコ
+  select:
+    pieces: [UGA-Aringa, UGA-Koboko, UGA-Obongi]
+  timeline:
+    - from: 1648
+      main: central_sudanic
+      minor: nilotic_east
+      note: ルグバラ語・マディ語。コボコはカクワ語（東ナイル系）。
+- id: lang_af_bufumbira
+  name: ブフンビラ
+  select:
+    pieces: [UGA-Bufumbira]
+  timeline:
+    - from: 1648
+      main: rwanda_rundi
+      note: ルワンダ語。
+- id: lang_af_rwanda_burundi
+  name: ルワンダ・ブルンジ
+  select:
+    iso: [RWA, BDI]
+  timeline:
+    - from: 1648
+      main: rwanda_rundi
+      note: ルワンダ語・ルンディ語（フツ・トゥチ・トゥワが同じ言葉を話す）。
+- id: lang_af_tanzania
+  name: タンザニア内陸
+  select:
+    iso: [TZA]
+  timeline:
+    - from: 1648
+      main: tz_bantu
+      note: スクマ語・ニャムウェジ語・ヘヘ語・ゴゴ語など（タンザニア内陸のバントゥー系）。共通語はスワヒリ語。
+- id: lang_af_zanzibar
+  name: ザンジバル・ペンバ
+  select:
+    adm1: [TZA/Zanzibar North, "TZA/Zanzibar South & Central", TZA/Zanzibar Urban/West, TZA/North Pemba, TZA/South Pemba]
+  timeline:
+    - from: 1648
+      main: swahili
+      note: スワヒリ語（キウングジャ）。
+    - from: 1830
+      main: swahili
+      minor: arabic
+      note: オマーンのサイイド・サイードが都をザンジバルに移した（1840）。アラブ人の地主と、丁子のプランテーションの奴隷の島になった。
+      source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+    - from: 1964
+      main: swahili
+      note: ザンジバル革命（1964）でスルタン政権とアラブ系の支配層が倒された。
+- id: lang_af_tz_coast
+  name: タンザニア海岸（ダルエスサラーム・プワニ・タンガ）
+  select:
+    adm1: [TZA/Dar es Salaam, TZA/Pwani, TZA/Tanga]
+  timeline:
+    - from: 1648
+      main: tz_bantu
+      minor: swahili
+      note: ザラモ語・ジグア語・シャンバー語・ディゴ語。
+- id: lang_af_tz_south_coast
+  name: タンザニア南部（リンディ・ムトワラ）
+  select:
+    adm1: [TZA/Lindi, TZA/Mtwara]
+  timeline:
+    - from: 1648
+      main: makua
+      minor: swahili
+      note: マコンデ語・マクア語・ムウェラ語・ヤオ語。
+- id: lang_af_tz_kilimanjaro
+  name: キリマンジャロ（チャガ人）
+  select:
+    adm1: [TZA/Kilimanjaro]
+  timeline:
+    - from: 1648
+      main: tz_bantu
+      note: チャガ語・パレ語。
+- id: lang_af_tz_arusha
+  name: アルーシャ・マニャラ（マサイ・イラク）
+  select:
+    adm1: [TZA/Arusha, TZA/Manyara]
+  timeline:
+    - from: 1648
+      main: nilotic_east
+      minor: tz_bantu
+      note: マサイ語（東ナイル系）。メル語（バントゥー系）。
+- id: lang_af_tz_manyara
+  name: マニャラ（イラク人）
+  select:
+    adm1: [TZA/Manyara]
+  timeline:
+    - from: 1648
+      main: cushitic_other
+      minor: nilotic_east
+      note: イラク語（南クシ系）・ダトーガ語（南ナイル系）・マサイ語。
+- id: lang_af_tz_kagera
+  name: カゲラ（ハヤ人）
+  select:
+    adm1: [TZA/Kagera]
+  timeline:
+    - from: 1648
+      main: lacustrine
+      note: ハヤ語（大湖地方のバントゥー系）。
+- id: lang_af_tz_kigoma
+  name: キゴマ（ハ人）
+  select:
+    adm1: [TZA/Kigoma]
+  timeline:
+    - from: 1648
+      main: rwanda_rundi
+      note: ハ語（ルンディ語に近い）。
+- id: lang_af_tz_ruvuma
+  name: ルヴマ（ンゴニ人）
+  select:
+    adm1: [TZA/Ruvuma]
+  timeline:
+    - from: 1648
+      main: tz_bantu
+    - from: 1850
+      main: tz_bantu
+      minor: makua
+      note: 南アフリカから北上したンゴニ人（ムフェカネ）が 1840–50 年代に移り住んだ。ヤオ人も多い。
+- id: lang_af_tz_mara
+  name: マラ
+  select:
+    adm1: [TZA/Mara]
+  timeline:
+    - from: 1648
+      main: tz_bantu
+      minor: luo
+      note: クリア語・ジタ語（バントゥー系）、ルオ語。
+- id: lang_af_congo_rep
+  name: コンゴ共和国南部（ラリ・ヴィリ）
+  select:
+    iso: [COG]
+  timeline:
+    - from: 1648
+      main: kongo
+      note: コンゴ語（ラリ語・ヴィリ語など）。
+- id: lang_af_congo_rep_north
+  name: コンゴ共和国北部（コンゴ盆地）
+  select:
+    adm1: [COG/Cuvette, COG/Cuvette-Ouest, COG/Sangha, COG/Likouala, COG/Plateaux]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      note: ンボシ語・テケ語・リンガラ語など（コンゴ盆地の諸語）。森の狩猟採集民（ピグミー）も住む。
+- id: lang_af_drc
+  name: コンゴ盆地（赤道州など）
+  select:
+    iso: [COD]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      note: モンゴ語・ンゴンベ語・リンガラ語など（コンゴ盆地の諸語）。
+- id: lang_af_kongo_central
+  name: 下コンゴ（コンゴ王国の北部）
+  select:
+    adm1: [COD/Kongo-Central]
+  timeline:
+    - from: 1648
+      main: kongo
+      note: コンゴ語（キコンゴ語）。
+- id: lang_af_kinshasa
+  name: キンシャサ（レオポルドヴィル）
+  select:
+    adm1: [COD/Kinshasa]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      note: テケ語。
+    - from: 1920
+      main: kongo
+      minor: mongo_lingala
+      note: コンゴ人（バコンゴ）が最も多く、リンガラ語が共通語。
+- id: lang_af_kwango
+  name: クワンゴ
+  select:
+    adm1: [COD/Kwango]
+  timeline:
+    - from: 1648
+      main: kongo
+      note: ヤカ語・スク語（キコンゴ系）。共通語はキトゥバ語（コンゴ語系）。
+- id: lang_af_kwilu
+  name: クウィル
+  select:
+    adm1: [COD/Kwilu]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      note: ムバラ・ペンデ・ヤンシ・ムブン・ンボマなど、コンゴ語とは別のバントゥー系の諸語（ペンデ語はカサイの諸語に近い）。共通語はキトゥバ語。
+- id: lang_af_ubangi
+  name: ウバンギ（北西部）
+  select:
+    adm1: [COD/Nord-Ubangi, COD/Sud-Ubangi]
+  timeline:
+    - from: 1648
+      main: ubangian
+      minor: mongo_lingala
+      note: ンバンディ語・ンバカ語（ウバンギ系）。
+- id: lang_af_uele
+  name: ウエレ（ザンデ人・マンベトゥ人）
+  select:
+    adm1: [COD/Lower Uele, COD/Upper Uele]
+  timeline:
+    - from: 1648
+      main: ubangian
+      minor: central_sudanic
+      note: ザンデ語（ウバンギ系）・マンベトゥ語（中央スーダン系）。
+- id: lang_af_ituri
+  name: イトゥリ
+  select:
+    adm1: [COD/Ituri]
+  timeline:
+    - from: 1648
+      main: central_sudanic
+      minor: luo
+      note: レンドゥ語・ルグバラ語（中央スーダン系）、アルル語（ルオ系）、ヘマ人。イトゥリの森にはムブティ（ピグミー）が住む。
+- id: lang_af_kivu
+  name: キヴ
+  select:
+    adm1: [COD/North Kivu, COD/South Kivu]
+  timeline:
+    - from: 1648
+      main: lacustrine
+      minor: rwanda_rundi
+      note: ナンデ語・シ語・ハヴ語（大湖地方のバントゥー系）。マシシ・ルチュルにルワンダ語の住民。共通語はスワヒリ語。
+- id: lang_af_maniema
+  name: マニエマ・キサンガニ
+  select:
+    adm1: [COD/Maniema, COD/Tshopo]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      minor: swahili
+      note: レガ語・クス語・ロケレ語など。共通語はスワヒリ語。
+- id: lang_af_kasai
+  name: カサイ（ルバ人）
+  select:
+    adm1: [COD/Kasai-Oriental, COD/Central Kasai, COD/Lomami]
+  timeline:
+    - from: 1648
+      main: luba
+      note: チルバ語（ルバ・カサイ語）。
+- id: lang_af_kasai_west
+  name: カサイ（クバ・チョクウェ）
+  select:
+    adm1: [COD/Kasai]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      minor: luba
+      note: クバ語・レレ語。
+    - from: 1880
+      main: lunda_chokwe
+      minor: mongo_lingala
+      note: 19 世紀にチョクウェ人が北へ広がった。
+- id: lang_af_sankuru
+  name: サンクル（テテラ人）
+  select:
+    adm1: [COD/Sankuru]
+  timeline:
+    - from: 1648
+      main: mongo_lingala
+      minor: luba
+      note: テテラ語（モンゴ系）。ルムンバはテテラ人。
+- id: lang_af_katanga
+  name: カタンガ（ルバ・ルンダ）
+  select:
+    adm1: [COD/Haut-Katanga, COD/Lualaba, COD/Haut-Lomami, COD/Tanganyika]
+  timeline:
+    - from: 1648
+      main: luba
+      note: キルバ語（ルバ・カタンガ語）・ヘンバ語。
+- id: lang_af_katanga_south
+  name: 銅山地帯（ルブンバシ・コルウェジ）
+  select:
+    adm1: [COD/Haut-Katanga, COD/Lualaba]
+  timeline:
+    - from: 1648
+      main: bemba
+      minor: lunda_chokwe
+      note: サンガ・ランバ・アウシなどベンバ系の諸語。ルンダ人（カゼンベ王国）はルアプラ川沿い、ルンダ帝国の中心は西のルアラバ州。
+    - from: 1930
+      main: bemba
+      minor: luba
+      note: 銅山の町にはスワヒリ語（カタンガ・スワヒリ）が共通語として広がった。
+- id: lang_af_lualaba
+  name: ルアラバ（ルンダ人）
+  select:
+    adm1: [COD/Lualaba]
+  timeline:
+    - from: 1648
+      main: lunda_chokwe
+      minor: luba
+      note: ルンダ語・チョクウェ語。
+- id: lang_af_angola
+  name: アンゴラ東部（ルンダ・チョクウェ）
+  select:
+    iso: [AGO]
+  timeline:
+    - from: 1648
+      main: lunda_chokwe
+      note: チョクウェ語・ルンダ語・ルヴァレ語・ンガンゲラ語。
+- id: lang_af_angola_kongo
+  name: アンゴラ北部（ザイール・ウイジェ）
+  select:
+    adm1: [AGO/Zaire, AGO/Uíge]
+  timeline:
+    - from: 1648
+      main: kongo
+      note: コンゴ語。
+- id: lang_af_cabinda
+  name: カビンダ
+  select:
+    adm1: [AGO/Cabinda]
+  timeline:
+    - from: 1648
+      main: kongo
+      note: ヴィリ語・ウォヨ語（コンゴ語系）。
+- id: lang_af_angola_mbundu
+  name: ンドンゴ（ルアンダ・ベンゴ・クアンザ・ノルテ・マランジェ）
+  select:
+    adm1: [AGO/Luanda, AGO/Bengo, AGO/Cuanza Norte, AGO/Malanje]
+  timeline:
+    - from: 1648
+      main: mbundu
+      note: キンブンドゥ語。
+- id: lang_af_luanda
+  name: ルアンダ
+  select:
+    adm1: [AGO/Luanda]
+  timeline:
+    - from: 1648
+      main: mbundu
+      minor: portuguese
+      note: キンブンドゥ語。ポルトガル人・混血の住民（ポルトガル語）。
+    - from: 1990
+      main: mbundu
+      minor: portuguese
+      note: 内戦期に全国から避難民が集まった。家庭の言葉としてもポルトガル語が広がった。
+- id: lang_af_angola_ovimbundu
+  name: 中央高原（オヴィンブンドゥ人）
+  select:
+    adm1: [AGO/Huambo, AGO/Bié, AGO/Benguela, AGO/Cuanza Sul]
+  timeline:
+    - from: 1648
+      main: umbundu
+      note: ウンブンドゥ語。
+- id: lang_af_angola_southwest
+  name: アンゴラ南西部（ニャネカ・クワニャマ）
+  select:
+    adm1: [AGO/Huíla, AGO/Namibe, AGO/Cunene]
+  timeline:
+    - from: 1648
+      main: herero_ovambo
+      note: ニャネカ語・クヴァレ語・クワニャマ語（オヴァンボ語）。
+- id: lang_af_namibe
+  name: ナミベ（モサメデス）
+  select:
+    adm1: [AGO/Namibe]
+  timeline:
+    - from: 1648
+      main: herero_ovambo
+    - from: 1900
+      main: herero_ovambo
+      minor: portuguese
+      note: 1840 年代からポルトガル人（ブラジル・マデイラからも）が入植した。
+- id: lang_af_cuando_cubango
+  name: クアンド・クバンゴ
+  select:
+    adm1: [AGO/Cuando Cubango]
+  timeline:
+    - from: 1648
+      main: lunda_chokwe
+      minor: khoisan
+      note: ンガンゲラ語。サン人（コイサン諸語）も住む。
+- id: lang_af_zambia
+  name: ザンビア北部（ベンバ人）
+  select:
+    iso: [ZMB]
+  timeline:
+    - from: 1648
+      main: bemba
+      note: ベンバ語。
+- id: lang_af_zambia_east
+  name: ザンビア東部（チェワ・ンゴニ）
+  select:
+    adm1: [ZMB/Eastern, ZMB/Lusaka]
+  timeline:
+    - from: 1648
+      main: chewa
+      note: チェワ語（ニャンジャ語）。19 世紀にンゴニ人が移り住んだ。
+    - from: 1950
+      main: chewa
+      minor: bemba
+- id: lang_af_zambia_south
+  name: ザンビア南部（トンガ人）
+  select:
+    adm1: [ZMB/Southern, ZMB/Central]
+  timeline:
+    - from: 1648
+      main: bemba
+      note: トンガ語・イラ語・レンジェ語（ザンビアの諸語）。
+- id: lang_af_barotseland
+  name: バロツェランド（ロジ人）
+  select:
+    adm1: [ZMB/Western]
+  timeline:
+    - from: 1648
+      main: bemba
+      note: ロジ語（マコロロ人のソト語に由来）・ルヤナ語。
+- id: lang_af_zambia_northwest
+  name: 北西州（ルンダ・ルヴァレ・カオンデ）
+  select:
+    adm1: [ZMB/North-Western]
+  timeline:
+    - from: 1648
+      main: lunda_chokwe
+      minor: bemba
+      note: ルンダ語・ルヴァレ語・カオンデ語。
+- id: lang_af_malawi
+  name: マラウイ中部（チェワ人）
+  select:
+    iso: [MWI]
+  timeline:
+    - from: 1648
+      main: chewa
+      note: チェワ語（ニャンジャ語）。
+- id: lang_af_malawi_north
+  name: マラウイ北部（トゥンブカ人）
+  select:
+    pieces: [MWI-Chitipa, MWI-Karonga, MWI-Rumphi, MWI-Mzimba, MWI-Nkhata_Bay]
+  timeline:
+    - from: 1648
+      main: chewa
+      note: トゥンブカ語・トンガ語（チェワ語に近い）。19 世紀にンゴニ人（ムズィンバ）。
+- id: lang_af_malawi_yao
+  name: マラウイ南部の湖岸（ヤオ人）
+  select:
+    pieces: [MWI-Mangochi, MWI-Machinga, MWI-Balaka]
+  timeline:
+    - from: 1648
+      main: chewa
+    - from: 1860
+      main: makua
+      minor: chewa
+      note: ヤオ人が 19 世紀半ばにモザンビーク北部から移り住んだ。
+- id: lang_af_malawi_shire
+  name: シーレ高地（ブランタイヤ・ゾンバ）
+  select:
+    pieces: [MWI-Blantyre, MWI-Chiradzulu, MWI-Thyolo, MWI-Mulanje, MWI-Phalombe, MWI-Zomba]
+  timeline:
+    - from: 1648
+      main: chewa
+      note: マンガンジャ語（チェワ語）。
+    - from: 1900
+      main: makua
+      minor: chewa
+      note: モザンビークからロムウェ人（マクア系）が移り住み、多数になった。
+- id: lang_af_malawi_lower_shire
+  name: シーレ川下流
+  select:
+    pieces: [MWI-Chikwawa, MWI-Nsanje, MWI-Mwanza, MWI-Neno]
+  timeline:
+    - from: 1648
+      main: chewa
+      minor: shona
+      note: マンガンジャ語（チェワ語）・セナ語。
+- id: lang_af_mozambique_north
+  name: モザンビーク北部（マクア人）
+  select:
+    iso: [MOZ]
+  timeline:
+    - from: 1648
+      main: makua
+      note: マクア語。
+- id: lang_af_cabo_delgado
+  name: カボ・デルガード
+  select:
+    adm1: [MOZ/Cabo Delgado]
+  timeline:
+    - from: 1648
+      main: makua
+      minor: swahili
+      note: マクア語・マコンデ語。沿岸にムワニ語（スワヒリ語系）。
+- id: lang_af_zambezia
+  name: ザンベジア（プラゾ）
+  select:
+    adm1: [MOZ/Zambézia]
+  timeline:
+    - from: 1648
+      main: makua
+      minor: shona
+      note: ロムウェ語・チュワボ語（マクア系）、セナ語。
+- id: lang_af_tete
+  name: テテ
+  select:
+    adm1: [MOZ/Tete]
+  timeline:
+    - from: 1648
+      main: shona
+      minor: chewa
+      note: ニュングウェ語・セナ語（ショナ系に近い）、チェワ語。
+- id: lang_af_sofala_manica
+  name: ソファラ・マニカ
+  select:
+    adm1: [MOZ/Sofala, MOZ/Manica]
+  timeline:
+    - from: 1648
+      main: shona
+      note: ンダウ語・マニカ語・セナ語（ショナ系）。
+- id: lang_af_moz_south
+  name: モザンビーク南部（ガザ・イニャンバネ）
+  select:
+    adm1: [MOZ/Gaza, MOZ/Inhambane]
+  timeline:
+    - from: 1648
+      main: tsonga_venda
+      note: ツォンガ語（シャンガーン語）・ツワ語・チョピ語。1820 年代にングニ系のガザ王国（ソシャンガネ）が成立した。
+- id: lang_af_maputo
+  name: マプト（ロレンソ・マルケス）
+  select:
+    adm1: [MOZ/Maputo]
+  timeline:
+    - from: 1648
+      main: tsonga_venda
+      note: ロンガ語（ツォンガ系）。
+    - from: 1950
+      main: tsonga_venda
+      minor: portuguese
+      note: ロレンソ・マルケス（1898 年から首都）にポルトガル人の入植者が集まった（1975 年の独立でほとんどが去った）。
+    - from: 1976
+      main: tsonga_venda
+- id: lang_af_zimbabwe
+  name: ジンバブエ（ショナ人）
+  select:
+    iso: [ZWE]
+  timeline:
+    - from: 1648
+      main: shona
+      note: ショナ語。
+- id: lang_af_matabeleland
+  name: マタベレランド
+  select:
+    adm1: [ZWE/Matabeleland North, ZWE/Matabeleland South, ZWE/Bulawayo]
+  timeline:
+    - from: 1648
+      main: shona
+      note: カランガ語（ショナ系）。
+    - from: 1840
+      main: zulu
+      minor: shona
+      note: ムジリカジのンデベレ王国（1838–93）。ンデベレ語（ングニ系）。
+- id: lang_af_salisbury_bulawayo
+  name: ハラレ・ブラワヨ
+  select:
+    adm1: [ZWE/Harare, ZWE/Bulawayo]
+  timeline:
+    - from: 1648
+      main: shona
+    - from: 1920
+      main: shona
+      minor: english
+      note: 1890 年にソールズベリー、1894 年にブラワヨが建設された。白人の入植者が人口の2〜3割を占めた。
+    - from: 1980
+      main: shona
+- id: lang_af_bulawayo_lang
+  name: ブラワヨ
+  select:
+    adm1: [ZWE/Bulawayo]
+  timeline:
+    - from: 1648
+      main: shona
+    - from: 1840
+      main: zulu
+      minor: shona
+      note: ローベングラの都グブラワヨ。
+    - from: 1920
+      main: zulu
+      minor: english
+    - from: 1980
+      main: zulu
+      minor: shona
+- id: lang_af_botswana
+  name: ボツワナ（ツワナ人）
+  select:
+    iso: [BWA]
+  timeline:
+    - from: 1648
+      main: tswana
+      note: ツワナ語。
+- id: lang_af_kalahari
+  name: カラハリ（ガンジ・カラハディ）
+  select:
+    adm1: [BWA/Ghanzi District, BWA/Kgalagadi District]
+  timeline:
+    - from: 1648
+      main: khoisan
+      minor: tswana
+      note: サン人（コイサン諸語）。カラハディ人（ツワナ系）。
+- id: lang_af_bwa_north
+  name: ボツワナ北部（ンガミランド・チョベ）
+  select:
+    adm1: [BWA/North-West District, BWA/Chobe District]
+  timeline:
+    - from: 1648
+      main: khoisan
+      minor: herero_ovambo
+      note: サン人、イェイ人・ンブクシュ人。
+    - from: 1800
+      main: tswana
+      minor: khoisan
+      note: タワナ人（ツワナ系）がンガミ湖畔に移った（1795 年ごろ）。
+- id: lang_af_bwa_kalanga
+  name: ボツワナ北東部（カランガ人）
+  select:
+    adm1: [BWA/North-East District]
+  timeline:
+    - from: 1648
+      main: shona
+      minor: tswana
+      note: カランガ語（ショナ系）。
+- id: lang_af_namibia
+  name: ナミビア中部（ヘレロ人・ダマラ人）
+  select:
+    iso: [NAM]
+  timeline:
+    - from: 1648
+      main: herero_ovambo
+      minor: khoisan
+      note: ヘレロ語。ダマラ人はコイコイ語（ナマ・ダマラ語）を話す。
+- id: lang_af_ovamboland
+  name: オヴァンボランド（ナミビア北部）
+  select:
+    adm1: [NAM/Ohangwena, NAM/Omusati, NAM/Oshana, NAM/Oshikoto]
+  timeline:
+    - from: 1648
+      main: herero_ovambo
+      note: オヴァンボ語（ンドンガ語・クワニャマ語）。
+- id: lang_af_kavango
+  name: カヴァンゴ・ザンベジ（カプリビ）
+  select:
+    adm1: [NAM/Kavango, NAM/Caprivi]
+  timeline:
+    - from: 1648
+      main: herero_ovambo
+      minor: khoisan
+      note: カヴァンゴ語（ルクワンガリ語など）。
+- id: lang_af_caprivi
+  name: ザンベジ州（カプリビ回廊）
+  select:
+    adm1: [NAM/Caprivi]
+  timeline:
+    - from: 1648
+      main: bemba
+      note: ロジ語・スビヤ語（ザンビアの諸語と同じ）。
+- id: lang_af_namaland
+  name: ナマランド（ナミビア南部）
+  select:
+    adm1: [NAM/Hardap, NAM/Karas]
+  timeline:
+    - from: 1648
+      main: khoisan
+      note: ナマ語（コイコイ語）。
+    - from: 1870
+      main: khoisan
+      minor: afrikaans
+      note: レホボトのバスター（混血の住民、1870 年移住。アフリカーンス語）。1904 年以後、白人の農場が広がった。
+- id: lang_af_windhoek
+  name: ウィントフック（コーマス）・エロンゴ
+  select:
+    adm1: [NAM/Khomas, NAM/Erongo]
+  timeline:
+    - from: 1648
+      main: khoisan
+      minor: herero_ovambo
+      note: ダマラ人・ナマ人（コイコイ語）、ヘレロ人。
+    - from: 1910
+      main: khoisan
+      minor: german
+      note: ドイツ領南西アフリカ（1884–1915）の首都ウィントフック、港スワコプムント。
+    - from: 1960
+      main: herero_ovambo
+      minor: afrikaans
+      note: 北部からのオヴァンボ人の移住者が多数になった（カトゥトゥラ）。白人はアフリカーンス語が多い。
+- id: lang_af_south_africa
+  name: 南アフリカ（ズールー・ングニ）
+  select:
+    iso: [ZAF]
+  timeline:
+    - from: 1648
+      main: zulu
+      note: ズールー語（ングニ諸語）。1816 年からシャカのズールー王国。
+- id: lang_af_eastern_cape_xhosa
+  name: 東ケープ（コサ人）
+  select:
+    pieces: [ZAF-Amathole, ZAF-Buffalo_City, ZAF-Chris_Hani, ZAF-Joe_Gqabi, ZAF-O_R_Tambo, ZAF-Alfred_Nzo]
+  timeline:
+    - from: 1648
+      main: xhosa
+      note: コサ語（ングニ諸語。テンブ人・ムポンド人を含む）。
+- id: lang_af_joe_gqabi
+  name: ジョー・グカビ（北東ケープ）
+  select:
+    pieces: [ZAF-Joe_Gqabi]
+  timeline:
+    - from: 1648
+      main: xhosa
+      minor: sotho
+      note: コサ語。北部（ステルクスプロイト）にソト語。
+- id: lang_af_eastern_cape_west
+  name: 東ケープ西部（オールバニ・グラーフ・ライネ）
+  select:
+    pieces: [ZAF-Cacadu]
+  timeline:
+    - from: 1648
+      main: khoisan
+      minor: xhosa
+      note: コイコイ人・サン人。
+    - from: 1780
+      main: dutch
+      minor: khoisan
+      note: グラーフ・ライネ（1786）。
+    - from: 1820
+      main: dutch
+      minor: english
+      note: 1820 年のイギリス人入植者（グレアムズタウン）。
+    - from: 1875
+      main: afrikaans
+      minor: english
+      note: ケープ・カラード（混血の住民）と白人。アフリカーンス語。
+    - from: 1990
+      main: afrikaans
+      minor: xhosa
+- id: lang_af_port_elizabeth
+  name: ポート・エリザベス（ネルソン・マンデラ湾）
+  select:
+    pieces: [ZAF-Nelson_Mandela_Bay]
+  timeline:
+    - from: 1648
+      main: khoisan
+    - from: 1820
+      main: english
+      minor: dutch
+      note: ポート・エリザベス（1820）。
+    - from: 1950
+      main: xhosa
+      minor: afrikaans
+      note: コサ人の住民が多数になった（ニュー・ブライトンなど）。
+- id: lang_af_western_cape
+  name: 西ケープ（ケープ植民地の中心）
+  select:
+    adm1: [ZAF/Western Cape]
+  timeline:
+    - from: 1648
+      main: khoisan
+      note: コイコイ語。
+    - from: 1720
+      main: dutch
+      minor: khoisan
+      note: オランダ語（ケープ・オランダ語）。
+    - from: 1875
+      main: afrikaans
+      note: アフリカーンス語（第1次アフリカーンス語運動 1875。1925 年に公用語）。カラードの住民の多くもアフリカーンス語を話す。
+      source: "https://ja.wikipedia.org/wiki/アフリカーンス語"
+- id: lang_af_eden_karoo
+  name: 南ケープ・カルー
+  select:
+    pieces: [ZAF-Eden, ZAF-Central_Karoo]
+  timeline:
+    - from: 1648
+      main: khoisan
+    - from: 1760
+      main: dutch
+      minor: khoisan
+      note: トレックボーアが内陸へ進んだ。
+    - from: 1875
+      main: afrikaans
+- id: lang_af_cape_town
+  name: ケープタウン
+  select:
+    pieces: [ZAF-City_of_Cape_Town]
+  timeline:
+    - from: 1648
+      main: khoisan
+      note: コイコイ人（ゴリンハイクア）。
+    - from: 1660
+      main: dutch
+      minor: khoisan
+    - from: 1820
+      main: dutch
+      minor: english
+      note: 1806 年からイギリス領。英語が行政の言葉になった。
+    - from: 1875
+      main: afrikaans
+      minor: english
+    - from: 1990
+      main: afrikaans
+      minor: xhosa
+      note: コサ人の移住者が増えた（カエリチャなど）。2011 年の家庭の言語はコサ語・アフリカーンス語・英語がほぼ 3 割ずつ。
+- id: lang_af_namaqualand
+  name: ナマクワランド・北ケープ西部
+  select:
+    pieces: [ZAF-Namakwa, ZAF-Pixley_ka_Seme, ZAF-Z_F_Mgcawu]
+  timeline:
+    - from: 1648
+      main: khoisan
+      note: ナマ語・コラナ語・サン諸語。
+    - from: 1820
+      main: khoisan
+      minor: dutch
+    - from: 1880
+      main: afrikaans
+      minor: khoisan
+      note: ナマ人・グリクワ人もアフリカーンス語を話すようになった。
+    - from: 1950
+      main: afrikaans
+- id: lang_af_griqualand_west
+  name: グリクワランド・ウェスト（キンバリー）
+  select:
+    pieces: [ZAF-Frances_Baard]
+  timeline:
+    - from: 1648
+      main: tswana
+      minor: khoisan
+      note: 南ツワナ（トラピン人）。
+    - from: 1880
+      main: tswana
+      minor: english
+      note: セシル・ローズのデ・ビアス社のダイヤモンド鉱山。
+    - from: 1950
+      main: tswana
+      minor: afrikaans
+- id: lang_af_north_west
+  name: ツワナ人の地域（北西州・クルマン）
+  select:
+    adm1: [ZAF/North West]
+    pieces: [ZAF-John_Taolo_Gaetsewe]
+  timeline:
+    - from: 1648
+      main: tswana
+      note: ツワナ語。1820 年代のムフェカネ（ディファカネ）で大きく乱れた。
+- id: lang_af_potchefstroom
+  name: ポチェフストルーム（ドクター・ケネス・カウンダ）
+  select:
+    pieces: [ZAF-Dr_Kenneth_Kaunda]
+  timeline:
+    - from: 1648
+      main: tswana
+    - from: 1840
+      main: tswana
+      minor: afrikaans
+      note: 1838 年、フォールトレッカーがポチェフストルームを建設した（トランスヴァールの最初の首都）。
+- id: lang_af_free_state
+  name: オレンジ自由国の地（フリーステイト）
+  select:
+    adm1: [ZAF/Free State]
+  timeline:
+    - from: 1648
+      main: sotho
+      note: ソト語。
+    - from: 1850
+      main: sotho
+      minor: afrikaans
+      note: オレンジ自由国（1854–1902）。ボーア人が人口の3分の1ほどを占めた。
+- id: lang_af_xhariep
+  name: 南フリーステイト（ハリープ）
+  select:
+    pieces: [ZAF-Xhariep]
+  timeline:
+    - from: 1648
+      main: khoisan
+      minor: sotho
+      note: サン人・コラナ人。
+    - from: 1840
+      main: afrikaans
+      minor: sotho
+    - from: 1950
+      main: sotho
+      minor: afrikaans
+- id: lang_af_lesotho
+  name: レソト（バストランド）
+  select:
+    iso: [LSO]
+  timeline:
+    - from: 1648
+      main: sotho
+      note: ソト語（南ソト語）。
+- id: lang_af_thaba_bosiu_region
+  name: クワクワ（タボ・モフツァニャネ）
+  select:
+    pieces: [ZAF-Thabo_Mofutsanyane]
+  timeline:
+    - from: 1648
+      main: sotho
+- id: lang_af_transvaal_highveld
+  name: ハイフェルト（トランスヴァール南部）
+  select:
+    pieces: [ZAF-Sedibeng, ZAF-Fezile_Dabi, ZAF-Lejweleputswa]
+  timeline:
+    - from: 1648
+      main: sotho
+    - from: 1850
+      main: sotho
+      minor: afrikaans
+- id: lang_af_pretoria
+  name: プレトリア（ツワネ）
+  select:
+    pieces: [ZAF-City_of_Tshwane]
+  timeline:
+    - from: 1648
+      main: tswana
+      note: ンデベレ人（南ンデベレ）・ツワナ人。
+    - from: 1860
+      main: tswana
+      minor: afrikaans
+    - from: 1900
+      main: afrikaans
+      minor: tswana
+      note: 南アフリカ連邦の行政首都（1910–）。白人（アフリカーナー）が多い。
+    - from: 1960
+      main: sotho
+      minor: afrikaans
+      note: 北ソト人（ペディ人）・ツワナ人などの黒人のタウンシップが広がった。
+- id: lang_af_johannesburg
+  name: ヨハネスブルク
+  select:
+    pieces: [ZAF-City_of_Johannesburg]
+  timeline:
+    - from: 1648
+      main: tswana
+    - from: 1890
+      main: english
+      minor: afrikaans
+      note: 金鉱の町。白人の多くはイギリス系。
+    - from: 1950
+      main: zulu
+      minor: english
+      note: "全国から黒人の労働者が集まった。2011 年の家庭の言語はズールー語 23%、英語 20%、ソト語 10%。"
+- id: lang_af_east_west_rand
+  name: イースト・ランド・ウェスト・ランド
+  select:
+    pieces: [ZAF-Ekurhuleni, ZAF-West_Rand]
+  timeline:
+    - from: 1648
+      main: tswana
+    - from: 1900
+      main: afrikaans
+      minor: tswana
+      note: 金鉱の町。
+    - from: 1950
+      main: zulu
+      minor: sotho
+- id: lang_af_limpopo
+  name: リンポポ（ペディ人・ヴェンダ人・ツォンガ人）
+  select:
+    adm1: [ZAF/Limpopo]
+  timeline:
+    - from: 1648
+      main: sotho
+      note: 北ソト語（ペディ語）。
+- id: lang_af_waterberg
+  name: ウォーターバーグ
+  select:
+    pieces: [ZAF-Waterberg]
+  timeline:
+    - from: 1648
+      main: sotho
+      minor: tswana
+    - from: 1880
+      main: sotho
+      minor: afrikaans
+- id: lang_af_venda
+  name: ヴェンダ（ヴェンベ）
+  select:
+    pieces: [ZAF-Vhembe]
+  timeline:
+    - from: 1648
+      main: tsonga_venda
+      note: ヴェンダ語。
+- id: lang_af_tsonga_mopani
+  name: ツォンガ人の地域（モパニ）
+  select:
+    pieces: [ZAF-Mopani]
+  timeline:
+    - from: 1648
+      main: sotho
+      note: ロベドゥ人（北ソト系。雨の女王）。
+    - from: 1840
+      main: tsonga_venda
+      minor: sotho
+      note: ツォンガ人（シャンガーン人）が 19 世紀に移り住んだ。
+- id: lang_af_mpumalanga
+  name: ムプマランガ（スワジ人・ンデベレ人）
+  select:
+    adm1: [ZAF/Mpumalanga]
+  timeline:
+    - from: 1648
+      main: zulu
+      minor: sotho
+      note: スワジ語・南ンデベレ語（ングニ諸語）、北ソト語。
+- id: lang_af_mpumalanga_highveld
+  name: ガート・シバンデ（東トランスヴァール）
+  select:
+    pieces: [ZAF-Gert_Sibande]
+  timeline:
+    - from: 1648
+      main: zulu
+    - from: 1870
+      main: zulu
+      minor: afrikaans
+- id: lang_af_durban
+  name: ダーバン（エテクウィニ）
+  select:
+    pieces: [ZAF-eThekwini]
+  timeline:
+    - from: 1648
+      main: zulu
+    - from: 1880
+      main: zulu
+      minor: tamil
+      note: ダーバン（1835）。ナタール植民地（1843–）の港。1860 年からインドの年季契約労働者（タミル語・テルグ語・ヒンディー語など。タミル語が最大）が来て、1950 年代にはインド系が都市圏の約3分の1で、イギリス系の白人より多かった。
+    - from: 1980
+      main: zulu
+      minor: english
+      note: インド系の住民の家庭の言葉も英語になり、英語を話す住民（白人・インド系）が2〜3割。
+- id: lang_af_eswatini
+  name: エスワティニ（スワジランド）
+  select:
+    iso: [SWZ]
+  timeline:
+    - from: 1648
+      main: zulu
+      note: スワジ語（ングニ諸語）。
+- id: lang_af_madagascar
+  name: マダガスカル沿岸部
+  select:
+    iso: [MDG]
+  timeline:
+    - from: 1648
+      main: malagasy
+      note: マダガスカル語（マラガシ語。オーストロネシア系）。
+- id: lang_af_imerina
+  name: イメリナ（中央高地）
+  select:
+    adm1: [MDG/Analamanga, MDG/Itasy, MDG/Vakinankaratra, MDG/Bongolava]
+  timeline:
+    - from: 1648
+      main: malagasy
+      note: マダガスカル語（メリナ方言、公用語の基礎）。
+- id: lang_af_comoros
+  name: コモロ諸島・マヨット
+  select:
+    iso: [COM, MYT]
+  timeline:
+    - from: 1648
+      main: swahili
+      note: コモロ語（スワヒリ語に近いバントゥー系）。
+- id: lang_af_mayotte
+  name: マヨット
+  select:
+    iso: [MYT]
+  timeline:
+    - from: 1648
+      main: swahili
+      minor: malagasy
+      note: マオレ語（コモロ語）。キブシ語（マダガスカル語系）も話される。
+- id: lang_af_reunion
+  name: レユニオン（ブルボン島）
+  select:
+    iso: [REU]
+  timeline:
+    - from: 1665
+      main: creole_french
+      note: レユニオン・クレオール語。
+- id: lang_af_mauritius
+  name: モーリシャス
+  select:
+    iso: [MUS]
+    exclude: [MUS-Rodrigues, MUS-Agalega, MUS-St_Brandon]
+  timeline:
+    - from: 1648
+      main: dutch
+    - from: 1721
+      main: creole_french
+      note: モーリシャス・クレオール語。
+    - from: 1860
+      main: bihari
+      minor: creole_french
+      note: インド系の住民（ボージプリー語などビハール出身者が多い）が多数。日常の共通語はクレオール語。
+- id: lang_af_port_louis
+  name: ポートルイス
+  select:
+    pieces: [MUS-Port_Louis]
+  timeline:
+    - from: 1648
+      main: dutch
+    - from: 1721
+      main: creole_french
+    - from: 1860
+      main: creole_french
+      minor: bihari
+- id: lang_af_rodrigues
+  name: ロドリゲス島など
+  select:
+    pieces: [MUS-Rodrigues, MUS-Agalega, MUS-St_Brandon]
+  timeline:
+    - from: 1800
+      main: creole_french
+- id: lang_af_seychelles
+  name: セーシェル
+  select:
+    iso: [SYC]
+  timeline:
+    - from: 1770
+      main: creole_french
+      note: セーシェル・クレオール語。
+- id: lang_af_chagos
+  name: チャゴス諸島
+  select:
+    iso: [IOT]
+  timeline:
+    - from: 1783
+      main: creole_french
+- id: lang_af_st_helena
+  name: セントヘレナ
+  select:
+    pieces: [SHN-Saint_Helena]
+  timeline:
+    - from: 1659
+      main: english
+- id: lang_af_ascension_tristan
+  name: アセンション島・トリスタン・ダ・クーニャ
+  select:
+    pieces: [SHN-Ascension, SHN-Tristan_da_Cunha]
+  timeline:
+    - from: 1816
+      main: english

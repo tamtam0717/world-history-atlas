@@ -732,7 +732,7 @@
     - from: 1648
       main: ainu
       minor: japanese
-      note: アイヌの地。南端の和人地（松前藩）だけ和人が住む。シャクシャインの戦い（1669）の後、松前藩の支配が強まる。
+      note: アイヌの地。南西端の和人地（松前藩。別のピース JPN-Hokkaido_Wajinchi で、lang_japan の日本語）だけ和人が住む。シャクシャインの戦い（1669）の後、松前藩の支配が強まる。
       source: "https://ja.wikipedia.org/wiki/シャクシャインの戦い"
     - from: 1869
       main: japanese
@@ -750,13 +750,27 @@
   timeline:
     - from: 1648
       main: ryukyuan
-      note: 琉球語（沖縄語・宮古語・八重山語など。日本語と同じ語族だが、互いに通じない）。王府の公文書には漢文と候文も使われた。奄美群島も琉球語（奄美語）の地域だが、鹿児島県が1つのピースなので地図では表せない。
+      note: 琉球語（沖縄語・宮古語・八重山語など。日本語と同じ語族だが、互いに通じない）。王府の公文書には漢文と候文も使われた。奄美群島も琉球語（奄美語）の地域（lang_amami）。
       source: "https://ja.wikipedia.org/wiki/琉球諸語"
     - from: 1945
       main: japanese
       minor: ryukyuan
       note: 琉球処分（1879）の後、学校で標準語が強制され（方言札）、戦後は日本語が日常の言葉になった。琉球諸語は消滅の危機にある。
       source: "https://ja.wikipedia.org/wiki/方言札"
+- id: lang_amami
+  name: 奄美群島
+  select:
+    pieces: [JPN-Amami_Islands]
+  timeline:
+    - from: 1648
+      main: ryukyuan
+      note: 奄美語・徳之島語・沖永良部語・与論語（琉球諸語の北の一群）。1611年から薩摩藩の直轄地で、役人の言葉は日本語だった。
+      source: "https://ja.wikipedia.org/wiki/奄美語"
+    - from: 1945
+      main: japanese
+      minor: ryukyuan
+      note: 明治以後の学校教育で標準語が広まり、戦後は日本語が日常の言葉になった（沖縄と同じ年で切り替える）。奄美語はユネスコの消滅危機言語。
+      source: "https://ja.wikipedia.org/wiki/奄美語"
 
 # ======== 朝鮮 ========
 - id: lang_korea
@@ -1094,3 +1108,13 @@
       main: russian
       note: ソ連が占領し（1945）、日本人の住民は 1947–49 年に引き揚げた（北方領土問題）。
       source: "https://ja.wikipedia.org/wiki/北方領土問題"
+
+# ======== 帰属が争われている無人の島（尖閣・竹島・西沙・南沙。アジアの空白の補充、2026-11-23） ========
+- id: lang_disputed_islets
+  name: 無人の島々（尖閣諸島・竹島・西沙諸島・南沙諸島）
+  select:
+    pieces: [127-Senkakus, 123-Liancourt_Rocks, 125-Paracel_Is, 128-Spratly_Is]
+  timeline:
+    - from: 1648
+      main: other
+      note: 定住する住民のいない島々（漁民の季節の滞在や、20世紀の守備隊・気象観測所の人員だけ）。尖閣諸島には1900–40年ごろかつお節工場があった。

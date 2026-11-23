@@ -915,6 +915,7 @@
   name: ポルトガル王国
   select:
     iso: [PRT]
+    pieces: [PRT-RegiAo_AutA3noma_dos_AAores]   # アゾレス諸島（範囲外 zone=world のピース）
   timeline:
     - from: 1648
       owner: portugal
@@ -1039,6 +1040,29 @@
       label: グリーンランド
       cause: デンマーク憲法の改正でグリーンランドが植民地からデンマーク本国の一部となる
       note: 1979年に自治政府、2009年に拡大された自治が認められた。
+      source: "https://ja.wikipedia.org/wiki/グリーンランドの歴史"
+
+- id: west_greenland
+  name: 西グリーンランド（範囲外のピース）
+  select:
+    pieces: [GRL-Kujalleq, GRL-Qeqqata, GRL-Qeqertalik, GRL-Avannaata]
+  timeline:
+    - from: 1648
+      owner: null
+      note: イヌイットの地。中世のノルド人（ヴァイキング）の入植地は15世紀に絶えていた。
+      source: "ja.wikipedia: グリーンランドの歴史"
+    - from: 1721
+      owner: denmark
+      certainty: nominal
+      label: グリーンランド
+      cause: ノルウェーの牧師ハンス・エーゲデが伝道と交易のため西岸に渡る（1728年にゴットホーブ〈ヌーク〉を建設）
+      note: 18世紀に西岸の交易所（ホルシュタインスボー〈シシミウト〉・ヤコブスハウン〈イルリサット〉・ユリアネホーブ〈カコルトック〉など）が置かれた。1814年のキール条約でノルウェーがスウェーデンに移った後もデンマーク領に残った。北西部のチューレには1910年に交易所ができた
+      source: "https://ja.wikipedia.org/wiki/ハンス・エーゲデ"
+    - from: 1953
+      owner: denmark
+      label: グリーンランド
+      cause: デンマーク憲法の改正でグリーンランドが植民地からデンマーク本国の一部となる
+      note: 1979年に自治政府、2009年に拡大された自治が認められた。北西部のチューレにはアメリカ軍の空軍基地がある（1951年から）
       source: "https://ja.wikipedia.org/wiki/グリーンランドの歴史"
 
 # ================================================================ モロッコ
@@ -1701,6 +1725,17 @@
       note: スエズ運河の防衛やスーダンの問題はイギリスが保留し、イギリス軍は運河地帯に1956年まで駐留した。
       source: "https://ja.wikipedia.org/wiki/エジプト王国"
 
+- id: bir_tawil
+  name: ビル・タウィール
+  select:
+    pieces: [EGY-Aswan_Governorate_Bir_Tawil]
+  timeline:
+    - from: 1956
+      owner: null
+      cause: スーダンの独立。エジプトは北緯22度線を、スーダンは1902年の行政境界を国境とし、どちらもこの地の領有を主張しない
+      note: 北緯22度線の南、1902年の行政境界でエジプトの管理とされた砂漠（1955年まではエジプト本体と同じ扱い）。東のハライブ・トライアングルを両国が争うため、ビル・タウィールはどの国も領有を主張しない「無主地」となっている。
+      source: "https://ja.wikipedia.org/wiki/ビル・タウィール"
+
 - id: egypt_western_desert
   name: エジプト西部の砂漠（シーワなど）
   select:
@@ -2215,7 +2250,7 @@
       source: "https://ja.wikipedia.org/wiki/タルファヤ"
 
 - id: spanish_sahara
-  name: 西サハラ（リオ・デ・オロ。1904年からサギア・エル・ハムラも）
+  name: 西サハラ（リオ・デ・オロ）
   select:
     iso: [ESH]
   timeline:
@@ -2236,14 +2271,86 @@
     - from: 1939
       owner: spain
       cause: スペイン内戦の終結（反乱軍の勝利）
-      note: 1958年にスペインの海外州（スペイン領サハラ）となった。
       source: "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - from: 1957
+      owner: spain
+      certainty: uncertain
+      cause: イフニ戦争（11月）。モロッコの解放軍が内陸を襲い、スペイン軍は海岸の町に退く
+      source: "https://ja.wikipedia.org/wiki/イフニ戦争"
+    - from: 1958
+      owner: spain
+      cause: スペイン・フランス両軍の掃討作戦（エキュヴィヨン作戦、2月）で解放軍を追い出す
+      note: 1958年にスペインの海外州（スペイン領サハラ）となった。
+      source: "https://ja.wikipedia.org/wiki/イフニ戦争"
     - from: 1976
       owner: morocco
       certainty: uncertain
       label: 西サハラ
       cause: マドリード協定（1975年11月）でスペインが撤退（1976年2月）。北部をモロッコ、南部をモーリタニアが分けた
-      note: 帰属は国際的に定まっていない（国連の非自治地域）。独立を求めるポリサリオ戦線は1976年にサハラ・アラブ民主共和国を宣言し、東部の砂漠の一部を支配する。モーリタニアは1979年に南部（ティリス・アル＝ガルビーヤ）を放棄し、モロッコが併合した。ピースが1つしかないため、全体をモロッコの支配として不確実（斜線）で描く。
+      note: 帰属は国際的に定まっていない（国連の非自治地域）。独立を求めるポリサリオ戦線は1976年にサハラ・アラブ民主共和国を宣言した。モロッコは1980–87年に砂の壁（防御壁）を築き、壁の西の約8割を支配する。壁の東の砂漠（約2割、ポリサリオ戦線の支配地）はどのピースでも面積の過半に届かないので、モロッコの支配として不確実（斜線）で描く。1991年に国連の仲介で停戦した。南部（ティリス・アル＝ガルビーヤ）は spanish_sahara_tiris、北部（サギア・エル・ハムラ）は spanish_sahara_saguia で描く。
+      source: "https://ja.wikipedia.org/wiki/西サハラ問題"
+
+- id: spanish_sahara_saguia
+  name: サギア・エル・ハムラ（西サハラ北部。ラアユーン・スマラ）
+  select:
+    pieces: [ESH-Western_Sahara_Saguia_el_Hamra]
+  timeline:
+    - from: 1884
+      owner: null
+      note: 1884年のスペインの保護領はボハドール岬（北緯26度）より南の海岸で、サギア・エル・ハムラは含まれない。遊牧部族の地で、スマラ（1898年ごろ建設）はマー・アル＝アイナインの宗教・政治の拠点。
+      source: "ja.wikipedia: スペイン領サハラ"
+    - from: 1904
+      owner: spain
+      certainty: nominal
+      cause: フランス＝スペイン協定（10月の秘密協定。1912年の条約で確定）で、サギア・エル・ハムラがスペインの勢力圏とされる
+      source: "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - from: 1934
+      owner: spain
+      cause: スペイン軍が内陸のスマラを占領する（1938年にエル・アイウン〈ラアユーン〉を建設）
+      source: "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - from: 1936
+      owner: nationalist_spain
+      cause: スペイン内戦（7月。フランコ将軍らの反乱はモロッコ駐留軍から始まった）
+      source: "https://ja.wikipedia.org/wiki/スペイン内戦"
+    - from: 1939
+      owner: spain
+      cause: スペイン内戦の終結（反乱軍の勝利）
+      source: "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - from: 1957
+      owner: spain
+      certainty: uncertain
+      cause: イフニ戦争（11月）。モロッコの解放軍がサギア・エル・ハムラの内陸を襲い、スペイン軍はエル・アイウンなど海岸に退く
+      source: "https://ja.wikipedia.org/wiki/イフニ戦争"
+    - from: 1958
+      owner: spain
+      cause: スペイン・フランス両軍の掃討作戦（エキュヴィヨン作戦、2月）で解放軍を追い出す。スペインの海外州になる
+      source: "https://ja.wikipedia.org/wiki/イフニ戦争"
+    - from: 1976
+      owner: morocco
+      certainty: uncertain
+      label: 西サハラ
+      cause: マドリード協定（1975年11月）でスペインが撤退し（1976年2月）、北部の3分の2をモロッコが併合する
+      note: 1975年11月の「緑の行進」の後、12月にモロッコ軍がエル・アイウン（ラアユーン）に入った。ポリサリオ戦線との戦争で、モロッコは1980–82年にラアユーン・スマラ・ブクラ（リン鉱山）を囲む最初の砂の壁を築き、1987年までに壁を南へ延ばした。壁の東（ティファリティ・ビル・ラフルー）はポリサリオ戦線の支配地だが、ピースの過半は壁の西にある
+      source: "https://ja.wikipedia.org/wiki/西サハラ問題"
+
+- id: spanish_sahara_tiris
+  name: ティリス・アル＝ガルビーヤ（西サハラ南部。ダフラ）
+  select:
+    pieces: [ESH-Western_Sahara_Tiris_al_Gharbiyya]
+  timeline:
+    - from: 1976
+      owner: mauritania
+      certainty: uncertain
+      label: ティリス・アル＝ガルビーヤ
+      cause: マドリード協定（1975年11月）でスペインが撤退し（1976年2月）、南部の3分の1（ダフラ〈ビリャ・シスネロス〉を含む）をモーリタニアが併合する（4月の境界協定）
+      note: ポリサリオ戦線の攻撃（1977年には首都ヌアクショットやズエラットの鉄鉱山の鉄道を襲った）でモーリタニアは疲弊した
+      source: "https://ja.wikipedia.org/wiki/ティリス・アル＝ガルビーヤ"
+    - from: 1979
+      owner: morocco
+      certainty: uncertain
+      label: 西サハラ
+      cause: モーリタニアがポリサリオ戦線と和平を結んで南部を放棄し（8月）、モロッコが併合する（ウエド・エッダハブ州）
+      note: 1987年までに砂の壁が南のゲルゲラトまで延びた。壁の東（ミジェク・アグワニト）はポリサリオ戦線の支配地だが、ピースの過半は壁の西にある。モーリタニア国境に近いラグイラ（ヌアディブ半島の南端）はモーリタニア軍が残った
       source: "https://ja.wikipedia.org/wiki/西サハラ問題"
 
 - id: mali_north
@@ -2252,35 +2359,51 @@
     pieces: [MLI-Tombouctou]
   timeline:
     - from: 1894
-      owner: france
-      certainty: nominal
-      cause: フランス軍のトンブクトゥ占領（フランス領スーダン）
-      note: サハラ北部のタウデニ（岩塩の産地）まで達したのは1906年ごろ。
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領スーダン"
+      cause: "フランス軍のトンブクトゥ占領（1893年12月〜1894年）。北の砂漠はまだ勢力圏にとどまる"
+      note: "サハラ北部のタウデニ（岩塩の産地）まで達したのは1906年ごろ。"
       source: "ja.wikipedia: フランス領スーダン"
+    - from: 1899
+      owner: "france"
+      label: "フランス領スーダン"
+      cause: "ニジェール川の湾曲部のトゥアレグがフランスに従い（1898–99年）、トンブクトゥ地区の軍政が北の砂漠に及ぶ"
+      source: "https://en.wikipedia.org/wiki/French_Sudan"
+    - from: 1904
+      owner: "france"
+      label: "上セネガル・ニジェール植民地"
+      cause: "上セネガル・ニジェール植民地の設置"
+      source: "https://en.wikipedia.org/wiki/French_Sudan"
+    - from: 1920
+      owner: "france"
+      label: "フランス領スーダン"
+      cause: "フランス領スーダン植民地の設置（上セネガル・ニジェールを改組）"
+      source: "https://en.wikipedia.org/wiki/French_Sudan"
     - from: 1940
-      owner: vichy_france
-      label: フランス領スーダン
-      cause: フランスの降伏。フランス領西アフリカはヴィシー政府に従う
+      owner: "vichy_france"
+      label: "フランス領スーダン"
+      cause: "フランスの降伏。フランス領西アフリカはヴィシー政府に従う"
       source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
     - from: 1942
-      owner: france
-      label: フランス領スーダン
-      cause: トーチ作戦の後、フランス領西アフリカが連合国側に移る（11月）
+      owner: "france"
+      label: "フランス領スーダン"
+      cause: "トーチ作戦の後、フランス領西アフリカが連合国側に移る（11月）"
       source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
     - from: 1960
-      owner: mali
-      cause: マリの独立（9月。6月にセネガルとのマリ連邦として独立し、8月に分かれた）
+      owner: "mali"
+      cause: "マリの独立（9月。6月にセネガルとのマリ連邦として独立し、8月に分かれた）"
       source: "https://ja.wikipedia.org/wiki/マリ共和国"
     - from: 2012
-      owner: azawad
-      certainty: uncertain
-      cause: マリ北部の紛争（4月にアザワド解放民族運動が独立を宣言し、のちイスラーム武装勢力が北部の都市を支配）
+      owner: "azawad"
+      certainty: "uncertain"
+      cause: "マリ北部の紛争（4月にアザワド解放民族運動が独立を宣言し、のちイスラーム武装勢力が北部の都市を支配）"
       source: "https://en.wikipedia.org/wiki/Mali_War"
     - from: 2013
-      owner: mali
-      certainty: uncertain
-      cause: フランス軍の介入（セルヴァル作戦、1月）でマリ政府軍が北部の都市を取り戻す
-      note: 北部の砂漠ではトゥアレグの武装勢力（キダルなど）とイスラーム武装勢力の活動が続き、政府の支配は弱い。
+      owner: "mali"
+      certainty: "uncertain"
+      cause: "フランス軍の介入（セルヴァル作戦、1月）でマリ政府軍が北部の都市を取り戻す"
+      note: "北部の砂漠ではトゥアレグの武装勢力（キダルなど）とイスラーム武装勢力の活動が続き、政府の支配は弱い。"
       source: "https://en.wikipedia.org/wiki/Mali_War"
 
 # ---------------------------------------------------------------- アルジェリアの征服（1830–1911）
@@ -2830,27 +2953,28 @@
     pieces: [DZA-Tamanghasset_2]
   timeline:
     - from: 1900
-      owner: france
-      label: アルジェリア
-      certainty: nominal
-      cause: フランス軍のイン・サラー占領（1899年12月〜1900年）
-      note: 1902年のティトの戦いでホガールのトゥアレグを破り、1905年までに帰順させた。
+      owner: "france"
+      certainty: "nominal"
+      label: "アルジェリア"
+      cause: "フランス軍のイン・サラー占領（1899年12月〜1900年）"
+      note: "1902年のティトの戦いでホガールのトゥアレグを破り、1905年までに帰順させた。"
       source: "https://en.wikipedia.org/wiki/Battle_of_Tit"
-    - from: 1920
-      owner: france
-      cause: トゥアレグの反乱（1916–17）の鎮圧の後、フランスの軍政が定着
-      source: "https://en.wikipedia.org/wiki/Kaocen_revolt"
+    - from: 1905
+      owner: "france"
+      cause: "ホガールのトゥアレグ（ムーサ・アグ・アマスタン）がフランスに従い（1904–05年）、タマンラセットに拠点が置かれる"
+      note: "1916–17年のトゥアレグの反乱（カオセンの反乱）の時期も、ホガールのアメノカル（首長）はフランス側にとどまった"
+      source: "https://en.wikipedia.org/wiki/Moussa_Ag_Amastan"
     - from: 1940
-      owner: vichy_france
-      cause: フランスの降伏。北アフリカの植民地はヴィシー政府に従う
+      owner: "vichy_france"
+      cause: "フランスの降伏。北アフリカの植民地はヴィシー政府に従う"
       source: "https://en.wikipedia.org/wiki/French_North_Africa"
     - from: 1942
-      owner: france
-      cause: 連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った
+      owner: "france"
+      cause: "連合軍の北アフリカ上陸（トーチ作戦、11月）。現地のフランス軍は連合国側に移った"
       source: "https://ja.wikipedia.org/wiki/トーチ作戦"
     - from: 1962
-      owner: algeria
-      cause: エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）
+      owner: "algeria"
+      cause: "エヴィアン協定（3月）と住民投票を経て、アルジェリアが独立（7月）"
       source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
 
 - id: alg_ajjer

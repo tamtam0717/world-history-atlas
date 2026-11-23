@@ -1232,7 +1232,7 @@
 - id: east_transcaucasia
   name: アゼルバイジャン北部（シルヴァン・カラバフ・ガンジャ）とザンゲズール・シュラゲル
   select:
-    pieces: [AZE-Contiguous_Azerbaijan, ARM-Syunik, ARM-Shirak]
+    pieces: [AZE-Contiguous_Azerbaijan, AZE-Nagorno_Karabakh, ARM-Syunik, ARM-Shirak]
   timeline:
     - from: 1648
       owner: persia
@@ -4155,7 +4155,65 @@
     - {from: 1918, owner: azerbaijan, cause: "アゼルバイジャン民主共和国の独立（5月28日）。9月にオスマン軍とともにバクーを押さえ、11月からイギリス軍が駐留", source: "https://ja.wikipedia.org/wiki/アゼルバイジャン民主共和国"}
     - {from: 1922, owner: soviet_union, label: "アゼルバイジャン共和国\nザカフカース連邦の一部（1936年まで）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
     - {from: 1991, owner: azerbaijan, cause: "アゼルバイジャンが独立（8月30日に宣言、10月18日に独立法）", source: "https://ja.wikipedia.org/wiki/アゼルバイジャン"}
-  note: "ナゴルノ・カラバフ（アルメニア人の多い自治州）はピースが分かれていないため、アゼルバイジャンに含めて描いた。1991–1994年の戦争ののちアルメニア人勢力（アルツァフ共和国）が周辺の地区を含めて押さえたが、2020年の戦争と2023年9月のアゼルバイジャンの攻勢で解体した。"
+  note: "ナゴルノ・カラバフ（旧自治州）は別のピースで、地域 nagorno_karabakh で描く。1994–2020年にアルメニア人勢力が占領した周りの7地区（ケルベジェル・ラチン・アグダムなど）はこのピースの中なので描けない（アゼルバイジャンとして塗る）。"
+
+- id: nagorno_karabakh
+  name: "ナゴルノ・カラバフ（山岳カラバフ）"
+  names:
+    - {from: 1923, to: 1990, name: "ナゴルノ・カラバフ自治州"}
+    - {from: 1991, to: 2023, name: "ナゴルノ・カラバフ（アルツァフ）"}
+  select:
+    pieces: ["AZE-Nagorno_Karabakh"]
+  timeline:
+    - {from: 1917, owner: transcaucasia, certainty: uncertain, cause: "十月革命を認めないグルジア・アルメニア・アゼルバイジャンの政党がザカフカース委員部を作る（11月）", source: "https://en.wikipedia.org/wiki/Transcaucasian_Commissariat"}
+    - from: 1918
+      owner: azerbaijan
+      certainty: uncertain
+      label: "山岳カラバフ（アルメニアと係争）"
+      cause: "アゼルバイジャンとアルメニアが独立し（5月）、山岳カラバフの帰属を争う。現地のアルメニア人の評議会はアゼルバイジャンの支配を拒んだ"
+      note: "1919年にイギリス軍の承認でアゼルバイジャンの総督が置かれた。1920年3月のアルメニア人の蜂起は鎮圧され、シュシャのアルメニア人地区が焼かれた。4月にアゼルバイジャン、12月にアルメニアが赤軍に占領されてソヴィエト化した"
+      source: "https://en.wikipedia.org/wiki/Armenian%E2%80%93Azerbaijani_war_(1918%E2%80%931920)"
+    - {from: 1921, owner: azerbaijan, label: "", cause: "ロシア共産党のカフカース局が、山岳カラバフをアゼルバイジャンに残すと決める（7月）", source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ自治州"}
+    - {from: 1922, owner: soviet_union, label: "アゼルバイジャン共和国\nザカフカース連邦の一部（1936年まで）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
+    - from: 1923
+      owner: soviet_union
+      label: "ナゴルノ・カラバフ自治州\n（アゼルバイジャン共和国）"
+      cause: "アゼルバイジャン共和国の中に山岳カラバフ自治州が置かれる（7月。州都ハンケンディをステパナケルトと改称）"
+      note: "住民の約4分の3がアルメニア人（アルメニア使徒教会）、約4分の1がアゼルバイジャン人。アルメニアとは細い山地（ラチン）で隔てられていた"
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ自治州"
+    - from: 1988
+      owner: soviet_union
+      certainty: uncertain
+      label: "ナゴルノ・カラバフ自治州\n（アゼルバイジャン共和国）"
+      cause: "自治州の議会がアルメニアへの移管を求める（2月）。スムガイトでアルメニア人が殺され、ナゴルノ・カラバフ紛争が始まる"
+      note: "1989年にはモスクワの特別管理委員会が直接治めた。1991年春にはソ連軍とアゼルバイジャンの部隊がアルメニア人の村を追い立てた（リング作戦）"
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+    - from: 1991
+      owner: artsakh
+      certainty: uncertain
+      label: ""
+      cause: "ソ連の解体のなかで、アルメニア人がナゴルノ・カラバフ共和国の独立を宣言する（9月2日。12月に住民投票）。アゼルバイジャンは自治州を廃止した"
+      note: "国際的にはアゼルバイジャン領（アルメニアも承認していない）だが、アルメニアの支援を受けたアルメニア人の事実上の国家だったので、アブハジア・沿ドニエストルと同じく独自の政体を斜線（不確実）で描く。1991年末はシュシャなどがアゼルバイジャン側で、1992年夏にはアゼルバイジャン軍が北部（マルタケルト）を一時奪った"
+      source: "https://ja.wikipedia.org/wiki/アルツァフ共和国"
+    - from: 1994
+      owner: artsakh
+      certainty: uncertain
+      label: ""
+      cause: "ビシュケク議定書で停戦（5月）。アルツァフ側が旧自治州のほぼ全域と周りのアゼルバイジャンの7地区を押さえる"
+      note: "周りの7地区はアゼルバイジャンのピース（AZE-Contiguous_Azerbaijan）の中なので、地図ではアゼルバイジャンとして塗っている"
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+    - from: 2020
+      owner: artsakh
+      certainty: uncertain
+      label: "アルツァフ（ロシアの平和維持部隊）"
+      cause: "第2次ナゴルノ・カラバフ戦争（9–11月）。アゼルバイジャンがシュシャと南部（ハドルト）を奪い、停戦で周りの7地区も取り戻す。ロシアの平和維持部隊が駐留する"
+      note: "アゼルバイジャンが取ったのは旧自治州の南部と中部の一部で、年末もステパナケルトを含む過半はアルツァフ側だったので、ピース全体をアルツァフとして描く"
+      source: "https://ja.wikipedia.org/wiki/2020年ナゴルノ・カラバフ紛争"
+    - from: 2023
+      owner: azerbaijan
+      label: ""
+      cause: "アゼルバイジャン軍の攻撃（9月19–20日）でアルツァフが降伏し、アルメニア人のほぼ全員（約10万人）がアルメニアへ逃れる。アルツァフ共和国は2024年1月1日に解散した"
+      source: "https://ja.wikipedia.org/wiki/2023年ナゴルノ・カラバフ衝突"
 
 - id: khorezm_uz
   name: "ホラズム（ヒヴァ）"
@@ -4469,18 +4527,26 @@
   select:
     pieces: [SAU-Asir_Region]
   timeline:
+    - {from: 1648, owner: null, certainty: uncertain, note: "アスィールの諸部族の地"}
+    - {from: 1803, owner: saudi, certainty: uncertain, cause: "アスィールの諸部族がワッハーブ派に加わり、第一次サウード王国に従う", source: "https://en.wikipedia.org/wiki/Asir_Region"}
+    - {from: 1818, owner: null, certainty: uncertain, cause: "エジプト軍の遠征で第一次サウード王国が滅ぶ。アスィールでは在地のアーイド家が台頭する（1830年代はエジプト軍が一部を占領）", source: "https://en.wikipedia.org/wiki/Asir_Region"}
     - {from: 1871, owner: ottoman, cause: "オスマン軍がアスィールを征服し、イエメン州のもとの県とする", source: "https://en.wikipedia.org/wiki/Asir_Region"}
     - {from: 1919, owner: null, certainty: uncertain, cause: "オスマン軍の撤退ののち、在地のアーイド家がアブハーを押さえる（要確認）", source: "https://en.wikipedia.org/wiki/Asir_Region"}
     - {from: 1920, owner: saudi, overlord: britain, certainty: uncertain, cause: "イブン・サウードの軍がアスィール高地を征服（1922年に反乱を鎮めて確定）", source: "https://en.wikipedia.org/wiki/Asir_Region"}
     - {from: 1922, owner: saudi, overlord: britain, cause: "アスィール高地の反乱を鎮める", source: "https://en.wikipedia.org/wiki/Asir_Region"}
     - {from: 1927, owner: saudi, cause: "ジッダ条約（5月）でイギリスがサウード家の王国の完全な独立を認める", source: "https://en.wikipedia.org/wiki/Treaty_of_Jeddah_(1927)"}
-  note: "アスィールは1830年代にエジプト軍、1840–1871年は在地のアーイド家が治めた（地図では1871年から描く）。"
+  note: "アスィールは1830年代にエジプト軍、1840–1871年は在地のアーイド家が治めた。"
 
 - id: jazan
   name: "ティハーマ・アスィール（ジーザーン・サビヤ）"
   select:
     pieces: [SAU-Jazan_Region]
   timeline:
+    - {from: 1648, owner: yemen, certainty: uncertain, note: "アブー・アリーシュのシャリーフ家が、ザイド派のイマームのもとで治める"}
+    - {from: 1803, owner: saudi, certainty: uncertain, cause: "アブー・アリーシュのシャリーフ、ハムード・アブー・ミスマールがワッハーブ派と結び、イマームから離れる", source: "https://en.wikipedia.org/wiki/Abu_Arish"}
+    - {from: 1818, owner: null, certainty: uncertain, cause: "第一次サウード王国の滅亡。アブー・アリーシュのシャリーフ家が自立する", source: "https://en.wikipedia.org/wiki/Abu_Arish"}
+    - {from: 1833, owner: egypt, cause: "ムハンマド・アリーのエジプト軍がティハーマを占領", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    - {from: 1840, owner: ottoman, certainty: nominal, cause: "エジプト軍が撤退し、シャリーフ・フサインがオスマン帝国の名目のもとで治める", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
     - {from: 1871, owner: ottoman, cause: "オスマン軍がアスィールを征服し、イエメン州のもとの県とする", source: "https://en.wikipedia.org/wiki/Asir_Region"}
     - {from: 1910, owner: idrisid_asir, certainty: uncertain, cause: "ムハンマド・イドリースィーがオスマン帝国に反乱を起こし、サビヤを中心に首長国を作る", source: "https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir"}
     - {from: 1919, owner: idrisid_asir, cause: "オスマン軍の撤退（ムドロス休戦協定ののち）", source: "https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir"}
@@ -4493,7 +4559,7 @@
   select:
     pieces: [SAU-Najran_Region]
   timeline:
-    - {from: 1871, owner: null, certainty: uncertain}
+    - {from: 1648, owner: null, certainty: uncertain}
     - {from: 1934, owner: saudi, cause: "サウジアラビア＝イエメン戦争ののち、ターイフ条約（5月）でサウジアラビア領に", source: "https://en.wikipedia.org/wiki/Treaty_of_Taif"}
   note: "ヤーム族（イスマーイール派）の地。オスマン帝国・イエメンのイマーム・サウード家の間で帰属があいまいだった（1933年にイマームの軍が占領）。"
 
@@ -4502,6 +4568,7 @@
   select:
     pieces: [YEM-Sa_dah_Governorate, YEM-Amran_Governorate, YEM-Hajjah_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, note: "ザイド派のイマーム（カースィム朝）の本拠地", source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1872, owner: ottoman, certainty: uncertain, cause: "オスマン軍がサナアを押さえ、イエメン州とする（ザイド派の北部高地では支配は弱い）", source: "https://en.wikipedia.org/wiki/Yemen_Vilayet"}
     - {from: 1911, owner: yemen, overlord: ottoman, cause: "ダアン条約（10月）でザイド派の高地はイマーム・ヤフヤーの自治に", source: "https://en.wikipedia.org/wiki/Treaty_of_Daan"}
     - {from: 1918, owner: yemen, cause: "オスマン軍の撤退（ムドロス休戦協定ののち、11月）。イマーム・ヤフヤーのイエメン王国（ムタワッキル王国）が独立", source: "https://en.wikipedia.org/wiki/Mutawakkilite_Kingdom_of_Yemen"}
@@ -4515,6 +4582,7 @@
   select:
     pieces: [YEM-San_a, YEM-San_a_Governorate, YEM-Al_Mahwit_Governorate, YEM-Raymah_Governorate, YEM-Dhamar_Governorate, YEM-Ibb_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, note: "イマームの都サナア", source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1872, owner: ottoman, cause: "オスマン軍がサナアを押さえ、イエメン州とする", source: "https://en.wikipedia.org/wiki/Yemen_Vilayet"}
     - {from: 1918, owner: yemen, cause: "オスマン軍の撤退（ムドロス休戦協定ののち、11月）。イマーム・ヤフヤーのイエメン王国（ムタワッキル王国）が独立", source: "https://en.wikipedia.org/wiki/Mutawakkilite_Kingdom_of_Yemen"}
     - {from: 1962, owner: yemen, cause: "イエメン革命（9月）でイマームが倒され、イエメン・アラブ共和国となる", source: "https://ja.wikipedia.org/wiki/北イエメン内戦"}
@@ -4526,6 +4594,7 @@
   select:
     pieces: [YEM-Ta_izz_Governorate, YEM-Al_Bayda_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1872, owner: ottoman, cause: "オスマン軍がサナアを押さえ、イエメン州とする", source: "https://en.wikipedia.org/wiki/Yemen_Vilayet"}
     - {from: 1918, owner: yemen, cause: "オスマン軍の撤退（ムドロス休戦協定ののち、11月）。イマーム・ヤフヤーのイエメン王国（ムタワッキル王国）が独立", source: "https://en.wikipedia.org/wiki/Mutawakkilite_Kingdom_of_Yemen"}
     - {from: 1962, owner: yemen, cause: "イエメン革命（9月）でイマームが倒され、イエメン・アラブ共和国となる", source: "https://ja.wikipedia.org/wiki/北イエメン内戦"}
@@ -4537,6 +4606,9 @@
   select:
     pieces: [YEM-Al_Hudaydah_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, note: "モカ・ホデイダなど紅海沿岸の港。モカはコーヒーの積み出し港として栄えた", source: "https://en.wikipedia.org/wiki/Qasimid_State"}
+    - {from: 1833, owner: egypt, cause: "ムハンマド・アリーのエジプト軍がティハーマを占領（1805–1818年はアブー・アリーシュのシャリーフとワッハーブ派が北部に進出）", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    - {from: 1840, owner: ottoman, certainty: nominal, cause: "エジプト軍が撤退し、アブー・アリーシュのシャリーフ・フサインがオスマン帝国の名目のもとで治める", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
     - {from: 1849, owner: ottoman, cause: "オスマン帝国が紅海沿岸のティハーマを押さえる", source: "https://en.wikipedia.org/wiki/Yemen_Vilayet"}
     - {from: 1918, owner: britain, certainty: occupied, label: "ホデイダ（イギリス軍の占領）", cause: "イギリス軍がホデイダを占領（12月）", source: "https://en.wikipedia.org/wiki/Hodeidah"}
     - {from: 1921, owner: idrisid_asir, cause: "イギリスがホデイダをイドリース家に引き渡す（1月）", source: "https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir"}
@@ -4551,6 +4623,7 @@
   select:
     pieces: [YEM-Ma_rib_Governorate, YEM-Al_Jawf_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, certainty: uncertain, note: "部族の地で、イマームの支配は弱かった"}
     - {from: 1872, owner: ottoman, certainty: nominal}
     - {from: 1918, owner: yemen, certainty: uncertain, cause: "オスマン軍の撤退（ムドロス休戦協定ののち、11月）。イマーム・ヤフヤーのイエメン王国（ムタワッキル王国）が独立", source: "https://en.wikipedia.org/wiki/Mutawakkilite_Kingdom_of_Yemen"}
     - {from: 1962, owner: yemen, certainty: uncertain, cause: "イエメン革命（9月）でイマームが倒され、イエメン・アラブ共和国となる。東部の部族地帯は王党派の拠点で、1970年まで内戦が続く", source: "https://en.wikipedia.org/wiki/North_Yemen_civil_war"}
@@ -4563,6 +4636,8 @@
   select:
     pieces: [YEM-Adan_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
+    - {from: 1735, owner: lahij_sultanate, cause: "ラヘジのアブダリー家がアデンを押さえる（年は要確認）", source: "https://en.wikipedia.org/wiki/Sultanate_of_Lahej"}
     - {from: 1839, owner: britain, label: "アデン（英領インドの一部）", cause: "イギリス（東インド会社）がアデンを占領（1月）", source: "https://ja.wikipedia.org/wiki/アデン"}
     - {from: 1937, owner: britain, label: "アデン（イギリスの植民地）", cause: "英領インドから切り離され、イギリスの直轄植民地となる（4月）", source: "https://en.wikipedia.org/wiki/Colony_of_Aden"}
     - {from: 1963, owner: britain, label: "南アラビア連邦（イギリスの保護下）", cause: "アデンが南アラビア連邦に加わる（1月）", source: "https://en.wikipedia.org/wiki/Federation_of_South_Arabia"}
@@ -4575,6 +4650,8 @@
   select:
     pieces: [YEM-Ad_Dali_Governorate, YEM-Abyan_Governorate, YEM-Shabwah_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, certainty: uncertain, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
+    - {from: 1728, owner: null, certainty: uncertain, cause: "南部の諸部族（ヤーファー・アウラキ・ファドリー・アミーリーなど）の首長国がイマームから自立する（18世紀前半。年は要確認）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
     - {from: 1888, owner: britain, label: "アデン保護領", cause: "南アラビアの首長たちがイギリスと保護条約を結ぶ（ソコトラ・マハラ1886年、ハドラマウトのクアイティ家1888年など）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
     - {from: 1959, owner: britain, label: "南アラビア連邦（イギリスの保護下）", cause: "西部の首長国が南アラブ首長国連邦（1962年から南アラビア連邦）を作る（2月）", source: "https://en.wikipedia.org/wiki/Federation_of_South_Arabia"}
     - {from: 1967, owner: south_yemen, cause: "イギリス軍が撤退し、南イエメン人民共和国が独立（11月30日）", source: "https://en.wikipedia.org/wiki/South_Yemen"}
@@ -4586,6 +4663,8 @@
   select:
     pieces: [YEM-Lahij_Governorate]
   timeline:
+    - {from: 1648, owner: yemen, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
+    - {from: 1728, owner: lahij_sultanate, cause: "アブダリー家のファドル・イブン・アリーがイマームから自立（ラヘジ・スルタン国。年は要確認）", source: "https://en.wikipedia.org/wiki/Sultanate_of_Lahej"}
     - {from: 1888, owner: britain, label: "アデン保護領", cause: "南アラビアの首長たちがイギリスと保護条約を結ぶ（ソコトラ・マハラ1886年、ハドラマウトのクアイティ家1888年など）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
     - {from: 1915, owner: ottoman, certainty: occupied, label: "ラヘジ（オスマン軍の占領）", cause: "オスマン軍がラヘジを占領し、アデンに迫る（7月）", source: "https://en.wikipedia.org/wiki/Lahej_campaign"}
     - {from: 1918, owner: britain, label: "アデン保護領", cause: "オスマン軍の撤退（休戦ののち、12月）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
@@ -4594,20 +4673,38 @@
     - {from: 1990, owner: yemen, cause: "南北イエメンの統合（5月22日）。イエメン共和国", source: "https://ja.wikipedia.org/wiki/イエメン"}
 
 - id: aden_protectorate_east
-  name: "アデン保護領東部（ハドラマウト・マハラ・ソコトラ）"
+  name: "ハドラマウト"
   select:
-    pieces: [YEM-Hadhramaut, YEM-Al_Mahrah_Governorate, YEM-Socotra]
+    pieces: [YEM-Hadhramaut]
   timeline:
+    - {from: 1648, owner: kathiri, source: "https://en.wikipedia.org/wiki/Kathiri"}
+    - {from: 1658, owner: kathiri, overlord: yemen, cause: "カースィム朝のイマーム、ムタワッキル・イスマーイールがハドラマウトを服属させる（1654–1658年）", source: "https://en.wikipedia.org/wiki/Al-Mutawakkil_Isma%27il"}
+    - {from: 1705, owner: kathiri, cause: "ハドラマウトがイマームの支配から離れる（年は要確認）", source: "https://en.wikipedia.org/wiki/Kathiri"}
     - {from: 1888, owner: britain, label: "アデン保護領", cause: "南アラビアの首長たちがイギリスと保護条約を結ぶ（ソコトラ・マハラ1886年、ハドラマウトのクアイティ家1888年など）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
     - {from: 1967, owner: south_yemen, cause: "イギリス軍が撤退し、南イエメン人民共和国が独立（11月30日）", source: "https://en.wikipedia.org/wiki/South_Yemen"}
     - {from: 1990, owner: yemen, cause: "南北イエメンの統合（5月22日）。イエメン共和国", source: "https://ja.wikipedia.org/wiki/イエメン"}
   note: "東部の首長国（クアイティ・カスィーリ・マハラ）は南アラビア連邦に加わらなかった。"
 
+
+- id: yemen_mahra
+  name: "マハラ・ソコトラ"
+  select:
+    pieces: [YEM-Al_Mahrah_Governorate, YEM-Socotra]
+  timeline:
+    - {from: 1648, owner: mahra, note: "マハラ・スルタン国（キシュンとソコトラ）", source: "https://en.wikipedia.org/wiki/Mahra_Sultanate"}
+    - {from: 1886, owner: britain, label: "アデン保護領", cause: "マハラ・スルタン国（ソコトラ）がイギリスと保護条約を結ぶ", source: "https://en.wikipedia.org/wiki/Mahra_Sultanate"}
+    - {from: 1967, owner: south_yemen, cause: "イギリス軍が撤退し、南イエメン人民共和国が独立（11月30日）", source: "https://en.wikipedia.org/wiki/South_Yemen"}
+    - {from: 1990, owner: yemen, cause: "南北イエメンの統合（5月22日）。イエメン共和国", source: "https://ja.wikipedia.org/wiki/イエメン"}
+  note: "マハラは南アラビア連邦に加わらなかった。"
 - id: tashkent
   name: "タシケント"
   select:
     pieces: [UZB-Tashkent, UZB-Tashkent_Region, UZB-Sirdaryo_Region]
   timeline:
+    - {from: 1648, owner: kazakh, note: "タシケントは1598年からカザフ＝ハン国の支配下", source: "https://en.wikipedia.org/wiki/Tashkent"}
+    - {from: 1723, owner: kazakh_great, overlord: dzungar, cause: "ジュンガルの侵攻（「大災厄」）。タシケントの大ジュズのハンがジュンガルに服属する", source: "https://en.wikipedia.org/wiki/Dzungar–Kazakh_wars"}
+    - {from: 1758, owner: kazakh_great, certainty: uncertain, cause: "清がジュンガルを滅ぼす。タシケントは4つの街区の長が争い、大ジュズのカザフの勢力が及ぶ", source: "https://en.wikipedia.org/wiki/Tashkent"}
+    - {from: 1784, owner: tashkent_state, cause: "ユーヌス・ホージャが街区を統一して自立（年は要確認）", source: "https://en.wikipedia.org/wiki/Tashkent"}
     - {from: 1809, owner: kokand, cause: "コーカンド・ハン国がタシケントを併合", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1865, owner: russia, cause: "チェルニャーエフのロシア軍がタシケントを占領（6月）。1867年にトルキスタン総督府の首都", source: "https://ja.wikipedia.org/wiki/トルキスタン総督府"}
     - {from: 1918, owner: russia, label: "トルキスタン自治共和国", cause: "ロシア共和国の中にトルキスタン自治共和国が作られる（4月。首都タシケント）", source: "https://ja.wikipedia.org/wiki/トルキスタン自治ソビエト社会主義共和国"}
@@ -4649,6 +4746,7 @@
   select:
     pieces: [UZB-Fergana_Region, UZB-Andijan_Region, UZB-Namangan_Region]
   timeline:
+    - {from: 1648, owner: bukhara, certainty: uncertain, note: "ブハラ（ジャーン朝）の名目的な支配下。チャダクのホージャ家などが治めた"}
     - {from: 1709, owner: kokand, cause: "ウズベクのミン部のシャー・ルフがコーカンドで自立（コーカンド・ハン国の始まり）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1876, owner: russia, cause: "ロシアがコーカンド・ハン国を併合し、フェルガナ州とする（2月）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1918, owner: russia, certainty: uncertain, label: "トルキスタン自治共和国", cause: "バスマチ運動：フェルガナの農村でソヴィエト政権への武装抵抗が広がる（1918年–1920年代前半）", source: "https://ja.wikipedia.org/wiki/バスマチ運動"}
@@ -4661,6 +4759,7 @@
   select:
     pieces: [KGZ-Osh_Region, KGZ-Jalal_Abad_Region, KGZ-Batken_Region]
   timeline:
+    - {from: 1648, owner: bukhara, certainty: uncertain, note: "ブハラ（ジャーン朝）の名目的な支配下。山地はキルギスの遊牧地"}
     - {from: 1709, owner: kokand, cause: "ウズベクのミン部のシャー・ルフがコーカンドで自立（コーカンド・ハン国の始まり）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1876, owner: russia, cause: "ロシアがコーカンド・ハン国を併合し、フェルガナ州とする（2月）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1918, owner: russia, certainty: uncertain, label: "トルキスタン自治共和国", cause: "バスマチ運動：フェルガナの農村でソヴィエト政権への武装抵抗が広がる（1918年–1920年代前半）", source: "https://ja.wikipedia.org/wiki/バスマチ運動"}
@@ -4676,6 +4775,10 @@
   select:
     pieces: [KGZ-Chuy_Region, KGZ-Issyk_Kul_Region, KGZ-Naryn_Region, KGZ-Talas_Region]
   timeline:
+    - {from: 1648, owner: null, certainty: uncertain, note: "キルギス諸部族の遊牧地（タラスはカザフ）"}
+    - {from: 1685, owner: dzungar, certainty: uncertain, cause: "ガルダンのジュンガルがイシク・クル・チュー川流域に進出し、キルギスを服属させる（年は要確認）", source: "https://en.wikipedia.org/wiki/Dzungar_Khanate"}
+    - {from: 1758, owner: null, certainty: uncertain, cause: "清がジュンガルを滅ぼし、キルギスが遊牧地に戻る（清に名目的に朝貢）", source: "https://en.wikipedia.org/wiki/Dzungar_genocide"}
+    - {from: 1825, owner: kokand, certainty: uncertain, cause: "コーカンド・ハン国がピシュペク・トクマクなどにとりでを築き、チュー川・ナルィン川流域を押さえる（1825–1830年代）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1867, owner: russia, cause: "コーカンド・ハン国のとりで（ピシュペクは1862年）をロシアが奪い、トルキスタン総督府（セミレチエ州・シルダリヤ州）に入る", source: "https://ja.wikipedia.org/wiki/トルキスタン総督府"}
     - {from: 1918, owner: russia, label: "トルキスタン自治共和国", cause: "ロシア共和国の中にトルキスタン自治共和国が作られる（4月。首都タシケント）", source: "https://ja.wikipedia.org/wiki/トルキスタン自治ソビエト社会主義共和国"}
     - {from: 1922, owner: soviet_union, label: "トルキスタン自治共和国（ロシア共和国内）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
@@ -4683,13 +4786,15 @@
     - {from: 1926, owner: soviet_union, label: "キルギス自治共和国（ロシア共和国内）", cause: "キルギス自治共和国に昇格（2月）", source: "https://ja.wikipedia.org/wiki/キルギス・ソビエト社会主義共和国"}
     - {from: 1936, owner: soviet_union, label: "キルギス共和国", cause: "スターリン憲法でキルギス共和国がソ連の構成共和国となる（12月）", source: "https://ja.wikipedia.org/wiki/キルギス・ソビエト社会主義共和国"}
     - {from: 1991, owner: kyrgyzstan, cause: "キルギスが独立（8月31日）", source: "https://ja.wikipedia.org/wiki/キルギス"}
-  note: "1867年より前はコーカンド・ハン国の勢力圏とキルギスの遊牧地（地図では描いていない）。"
+  note: "イシク・クル東部のブグ族のキルギスは1855年にロシアの臣籍に入った（描き分けていない）。"
 
 - id: tj_sughd
   name: "ホジェンド（ソグド）"
   select:
     pieces: [TJK-Sughd_Region]
   timeline:
+    - {from: 1648, owner: bukhara, note: "ホジェンド・ウラ・チュベ（イスタラフシャン）"}
+    - {from: 1805, owner: kokand, certainty: uncertain, cause: "コーカンド・ハン国がホジェンドを押さえる（ウラ・チュベはブハラと奪い合った。年は要確認）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1866, owner: russia, cause: "ロシア軍がホジェンド（5月）・ウラ・チュベ（10月）を奪う", source: "https://ja.wikipedia.org/wiki/ホジャンド"}
     - {from: 1918, owner: russia, label: "トルキスタン自治共和国", cause: "ロシア共和国の中にトルキスタン自治共和国が作られる（4月。首都タシケント）", source: "https://ja.wikipedia.org/wiki/トルキスタン自治ソビエト社会主義共和国"}
     - {from: 1922, owner: soviet_union, label: "トルキスタン自治共和国（ロシア共和国内）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
@@ -4731,6 +4836,8 @@
   select:
     pieces: [TJK-Dushanbe, TJK-Districts_of_Republican_Subordination, TJK-Khatlon_Region]
   timeline:
+    - {from: 1648, owner: bukhara, certainty: uncertain, note: "ヒッサール・クリャーブなどウズベクの諸侯（ベク）の地。カラテギンには在地のシャーがいた"}
+    - {from: 1750, owner: null, certainty: uncertain, cause: "マンギト朝への交代期に、ヒッサール・クリャーブの諸侯がブハラから自立する（年は要確認）", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1868, owner: bukhara, certainty: uncertain, cause: "東部のヒッサール・クリャーブなどの諸侯をブハラ・アミール国が征服しはじめる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1870, owner: russia, cause: "ブハラ・アミール国がヒッサール・クリャーブを征服する（ロシアの保護国のブハラの一部）", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1918, owner: bukhara, cause: "十月革命ののちブハラ・アミール国が事実上独立。コレソフの攻撃（3月）を退け、キズィル・テペの和約でソヴィエト政権に独立を認めさせる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
@@ -4745,6 +4852,8 @@
   select:
     pieces: [TJK-Gorno_Badakhshan_Autonomous_Region]
   timeline:
+    - {from: 1648, owner: null, certainty: uncertain, note: "シュグナーン・ローシャーン・ワハーンなどパミールの山国（ミール）の地。東パミールはキルギスの遊牧地"}
+    - {from: 1883, owner: afghanistan, certainty: uncertain, cause: "アフガニスタンがシュグナーン・ローシャーンを占領する", source: "https://en.wikipedia.org/wiki/Pamir_Mountains"}
     - {from: 1895, owner: russia, label: "", cause: "英露のパミール協定で、パミール西部（シュグナーン・ローシャーン）はロシアの保護国のブハラ、東部はロシアの直轄となる", source: "https://en.wikipedia.org/wiki/Pamir_Mountains"}
     - {from: 1918, owner: russia, certainty: uncertain, cause: "ロシア内戦：パミールの国境守備隊が残る（要確認）", source: "https://en.wikipedia.org/wiki/Gorno-Badakhshan_Autonomous_Region"}
     - {from: 1922, owner: soviet_union, label: "トルキスタン自治共和国（ロシア共和国内）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
@@ -4757,6 +4866,9 @@
   select:
     pieces: [KAZ-Akmola_Region, KAZ-Astana, KAZ-North_Kazakhstan_Region, KAZ-Karaganda_Region, KAZ-Pavlodar_Region, KAZ-East_Kazakhstan_Region]
   timeline:
+    - {from: 1648, owner: kazakh, certainty: uncertain, note: "カザフ中ジュズの遊牧地。イルティシュ川上流はジュンガルの勢力圏"}
+    - {from: 1718, owner: kazakh_middle, certainty: uncertain, cause: "タウケ・ハンの死ののち、カザフの3ジュズが分立する", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
+    - {from: 1740, owner: kazakh_middle, overlord: russia, certainty: uncertain, cause: "中ジュズのアブルマンベト・ハンとアブライがロシアの臣籍に入る（アブライは1757年から清にも朝貢）", source: "https://en.wikipedia.org/wiki/Ablai_Khan"}
     - {from: 1822, owner: russia, certainty: uncertain, cause: "ロシアが中ジュズのハン位を廃止し、オムスク州の管区に組み込む（シベリア・キルギス規約）", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
     - {from: 1847, owner: russia, cause: "ケネサル・カスモフの反乱の終わり（カザフ草原のロシア支配の確立）", source: "https://en.wikipedia.org/wiki/Kenesary_Kasymov"}
     - {from: 1918, owner: white_movement, certainty: uncertain, label: "コルチャーク政府（白軍）", cause: "ロシア内戦：シベリアの白軍（11月からコルチャーク政府）が押さえる。カザフ人の自治政府アラシュ・オルダも白軍と結ぶ", source: "https://ja.wikipedia.org/wiki/アレクサンドル・コルチャーク"}
@@ -4773,6 +4885,10 @@
   select:
     pieces: [KAZ-South_Kazakhstan_Region, KAZ-Jambyl_Region]
   timeline:
+    - {from: 1648, owner: kazakh, note: "ハン国の都トルキスタン（ヤサウィー廟）とシル川中流の町々"}
+    - {from: 1723, owner: kazakh_great, overlord: dzungar, certainty: uncertain, cause: "ジュンガルの侵攻（「大災厄」）でトルキスタン・サイラムが奪われ、大ジュズがジュンガルに服属する", source: "https://en.wikipedia.org/wiki/Dzungar–Kazakh_wars"}
+    - {from: 1758, owner: kazakh_great, certainty: uncertain, cause: "清がジュンガルを滅ぼす", source: "https://en.wikipedia.org/wiki/Dzungar_genocide"}
+    - {from: 1815, owner: kokand, certainty: uncertain, cause: "コーカンド・ハン国がトルキスタン・チムケント・アウリエ・アタを押さえる（1810年代。年は要確認）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1864, owner: russia, cause: "ロシア軍がコーカンド・ハン国からアウリエ・アタ・チムケント・トルキスタンを奪う（6–9月）", source: "https://ja.wikipedia.org/wiki/トルキスタン総督府"}
     - {from: 1918, owner: russia, label: "トルキスタン自治共和国", cause: "ロシア共和国の中にトルキスタン自治共和国が作られる（4月。首都タシケント）", source: "https://ja.wikipedia.org/wiki/トルキスタン自治ソビエト社会主義共和国"}
     - {from: 1922, owner: soviet_union, label: "トルキスタン自治共和国（ロシア共和国内）", cause: "ソヴィエト社会主義共和国連邦の成立（12月）", source: "https://ja.wikipedia.org/wiki/ソビエト連邦の成立"}
@@ -4780,13 +4896,17 @@
     - {from: 1925, owner: soviet_union, label: "カザフ自治共和国（ロシア共和国内）", cause: "キルギス自治共和国がカザフ自治共和国と改称（4月。カザフ人がロシアで「キルギス」と呼ばれていたのを改める）", source: "https://ja.wikipedia.org/wiki/カザフ自治ソビエト社会主義共和国"}
     - {from: 1936, owner: soviet_union, label: "カザフ共和国", cause: "スターリン憲法でカザフ共和国がソ連の構成共和国となる（12月）", source: "https://ja.wikipedia.org/wiki/カザフ・ソビエト社会主義共和国"}
     - {from: 1991, owner: kazakhstan, cause: "ソ連の解体のなかで独立（12月16日）", source: "https://ja.wikipedia.org/wiki/カザフスタン"}
-  note: "1864年より前はコーカンド・ハン国の勢力圏（地図では描いていない）。"
+  note: "大ジュズ・中ジュズの境目にあたる（ピース単位では大ジュズに近似）。"
 
 - id: kz_semirechye
   name: "セミレチエ（アルマトイ）"
   select:
     pieces: [KAZ-Almaty, KAZ-Almaty_Region]
   timeline:
+    - {from: 1648, owner: kazakh, certainty: uncertain, note: "カザフ大ジュズの遊牧地（セミレチエ＝七河地方）"}
+    - {from: 1723, owner: dzungar, certainty: uncertain, cause: "ジュンガルがセミレチエを押さえ、大ジュズを服属させる", source: "https://en.wikipedia.org/wiki/Dzungar–Kazakh_wars"}
+    - {from: 1758, owner: kazakh_great, certainty: uncertain, cause: "清がジュンガルを滅ぼし、大ジュズのカザフが遊牧地に戻る", source: "https://en.wikipedia.org/wiki/Dzungar_genocide"}
+    - {from: 1846, owner: kazakh_great, overlord: russia, certainty: uncertain, cause: "大ジュズのカザフがロシアの臣籍に入る（1847年にカパルのとりで）", source: "https://en.wikipedia.org/wiki/Senior_Jüz"}
     - {from: 1854, owner: russia, cause: "ロシアがヴェールヌイ（のちのアルマトイ）にとりでを築き、大ジュズのカザフがロシアの支配下に入る", source: "https://ja.wikipedia.org/wiki/アルマトイ"}
     - {from: 1918, owner: russia, certainty: uncertain, label: "トルキスタン自治共和国", cause: "ロシア内戦：セミレチエ北部はアンネンコフの白軍が押さえる（1920年3月まで）", source: "https://ja.wikipedia.org/wiki/トルキスタン自治ソビエト社会主義共和国"}
     - {from: 1920, owner: russia, label: "トルキスタン自治共和国", cause: "アンネンコフの白軍が中国へ逃れる（3月）", source: "https://ja.wikipedia.org/wiki/トルキスタン自治ソビエト社会主義共和国"}
@@ -4798,19 +4918,88 @@
   note: "アルマトイは1929–1997年にカザフ共和国・カザフスタンの首都。"
 
 - id: afghanistan_east
-  name: "アフガニスタン東部・北部（カーブル・カンダハール・バルフ）"
+  name: "アフガニスタン東部（カーブル・ガズニー・ジャラーラーバード）"
   select:
     iso_all: [AFG]
-    exclude_regions: [herat, farah_nimruz, hazarajat, nuristan]
+    exclude_regions: [herat, farah_nimruz, hazarajat, nuristan, afg_kandahar, afg_balkh, afg_kunduz, afg_badakhshan, afg_badghis_ghor]
   timeline:
+    - {from: 1648, owner: mughal, note: "ムガル帝国のカーブル州。東部の山地（クナル・ホースト・パクティヤー）のパシュトゥーン諸部族への支配は弱かった", source: "https://ja.wikipedia.org/wiki/ムガル帝国"}
+    - {from: 1738, owner: persia, cause: "ナーディル・シャーがガズニー・カーブルを攻略（6月）。翌年の講和でムガル帝国はインダス川以西を割譲", source: "https://en.wikipedia.org/wiki/Nader_Shah%27s_invasion_of_the_Mughal_Empire"}
+    - {from: 1747, owner: durrani, cause: "ナーディル・シャーの死。アフマド・シャー・ドゥッラーニーがカーブルを押さえる", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: afghanistan, certainty: uncertain, cause: "宰相ファトフ・ハーンの殺害でドゥッラーニー朝が分裂。カーブルはバーラクザイ家の兄弟が争う", source: "https://ja.wikipedia.org/wiki/バーラクザイ朝"}
+    - {from: 1826, owner: afghanistan, cause: "ドースト・モハンマドがカーブルを押さえる（1834年からアミールを称する）", source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
     - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
-  note: "1879年より前（ドゥッラーニー朝・バーラクザイ家の時代）は描いていない。1979–1989年のソ連軍の介入、1996–2001年の北部同盟の支配地域（バダフシャーンなど）は描き分けていない。"
+  note: "第一次アフガン戦争（1839–1842）でイギリスがシュジャー・シャーを復位させた時期は、アフガニスタン（rulers に記載）のまま描く。1979–1989年のソ連軍の介入、1996–2001年の北部同盟の支配地域（バダフシャーンなど）は描き分けていない。"
+
+- id: afg_kandahar
+  name: "カンダハール・ヘルマンド・ザーブル・ウルーズガーン"
+  select:
+    pieces: [AFG-Kandahar, AFG-Helmand, AFG-Zabul, AFG-Uruzgan]
+  timeline:
+    - {from: 1648, owner: mughal, note: "カンダハールはムガル帝国とサファヴィー朝が奪い合った（1638年からムガル領）。1648年12月からサファヴィー朝のアッバース2世が包囲した"}
+    - {from: 1649, owner: persia, cause: "サファヴィー朝のアッバース2世がカンダハールを奪回（2月）。ムガル帝国の奪回の試み（1649・1652・1653年）は失敗", source: "https://en.wikipedia.org/wiki/Mughal%E2%80%93Safavid_war_(1649%E2%80%931653)"}
+    - {from: 1709, owner: hotaki, cause: "ギルザイ族のミール・ワイスがカンダハールでサファヴィー朝の総督を倒して自立（ホータキー朝）", source: "https://ja.wikipedia.org/wiki/ホータキー朝"}
+    - {from: 1738, owner: persia, cause: "ナーディルがカンダハールを攻略（3月）し、ホータキー朝が滅ぶ", source: "https://ja.wikipedia.org/wiki/ホータキー朝"}
+    - {from: 1747, owner: durrani, cause: "アフマド・シャー・ドゥッラーニーがカンダハールで即位（ドゥッラーニー朝の成立）", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: afghanistan, certainty: uncertain, cause: "ドゥッラーニー朝の分裂。カンダハールはバーラクザイ家の兄弟（カンダハールのサルダールたち）が治める", source: "https://ja.wikipedia.org/wiki/バーラクザイ朝"}
+    - {from: 1855, owner: afghanistan, cause: "ドースト・モハンマドがカンダハールを併合", source: "https://ja.wikipedia.org/wiki/ドースト・ムハンマド・ハーン"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+  note: "ウルーズガーン北部はハザーラ人の地で、支配は弱かった。第一次アフガン戦争（1839–1842）・第二次アフガン戦争（1878–1880）のイギリス軍の占領は描いていない。"
+
+- id: afg_balkh
+  name: "バルフ・ジョウズジャーン・ファールヤーブ（アフガン・トルキスタン西部）"
+  select:
+    pieces: [AFG-Balkh, AFG-Jowzjan, AFG-Samangan, AFG-Sar_e_Pol, AFG-Faryab]
+  timeline:
+    - {from: 1648, owner: bukhara, note: "バルフはブハラ（ジャーン朝）の王族が治める副都。ムガル帝国のバルフ遠征（1646–1647）は失敗して撤退した", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    - {from: 1737, owner: persia, cause: "ナーディルの子レザー・コリーがバルフを攻略", source: "https://en.wikipedia.org/wiki/Nader_Shah"}
+    - {from: 1751, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーの軍がバルフを征服。マイマナ・シバルガーン・アンドホイなどウズベクの諸侯は貢納する", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: null, certainty: uncertain, cause: "ドゥッラーニー朝の分裂。ウズベクの諸侯が自立し、ブハラやクンドゥズのムラード・ベクの勢力が及ぶ", source: "https://en.wikipedia.org/wiki/Afghan_Turkestan"}
+    - {from: 1850, owner: afghanistan, certainty: uncertain, cause: "ドースト・モハンマドの軍がバルフを征服（1849–1850年）。マイマナなどの服属は1870年代まで揺れた", source: "https://en.wikipedia.org/wiki/Afghan_Turkestan"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+
+- id: afg_kunduz
+  name: "クンドゥズ・バグラーン・タハール（カタガン）"
+  select:
+    pieces: [AFG-Kunduz, AFG-Baghlan, AFG-Takhar]
+  timeline:
+    - {from: 1648, owner: bukhara, certainty: uncertain, note: "ウズベクのカタガン部の地。ブハラ（ジャーン朝）のバルフの王族の支配下"}
+    - {from: 1737, owner: persia, certainty: uncertain, cause: "ナーディルの子レザー・コリーがバルフを攻略", source: "https://en.wikipedia.org/wiki/Nader_Shah"}
+    - {from: 1751, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーの軍がバルフ・クンドゥズを従える", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: null, certainty: uncertain, cause: "ドゥッラーニー朝の分裂。クンドゥズのムラード・ベク（–1842）が自立し、バダフシャーンまで勢力を広げる", source: "https://en.wikipedia.org/wiki/Kunduz"}
+    - {from: 1859, owner: afghanistan, certainty: uncertain, cause: "ドースト・モハンマドの子らがクンドゥズ（カタガン）を征服", source: "https://en.wikipedia.org/wiki/Kunduz"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+  note: "1880年代からアブドゥッラフマーン・ハーンがパシュトゥーン人を北部に移住させた。"
+
+- id: afg_badakhshan
+  name: "バダフシャーン（ワハーンを含む）"
+  select:
+    pieces: [AFG-Badakhshan]
+  timeline:
+    - {from: 1648, owner: null, certainty: uncertain, note: "バダフシャーンのミール（1650年代からヤール家）が治める山国。ブハラ・ドゥッラーニー朝の宗主権は名目的だった", source: "https://en.wikipedia.org/wiki/Badakhshan"}
+    - {from: 1859, owner: afghanistan, certainty: uncertain, cause: "バダフシャーンのミールがアフガニスタンに服属する（1881年に直接統治）", source: "https://en.wikipedia.org/wiki/Badakhshan"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
+  note: "ワハーン回廊は英露のパミール協定（1895）でアフガニスタン領とされた緩衝地帯。"
+
+- id: afg_badghis_ghor
+  name: "バードギース・ゴール（アイマク人の地）"
+  select:
+    pieces: [AFG-Badghis, AFG-Ghor]
+  timeline:
+    - {from: 1648, owner: persia, certainty: uncertain, note: "アイマク人・ハザーラ人の山地。サファヴィー朝のヘラート州の周り"}
+    - {from: 1717, owner: herat_abdali, certainty: uncertain, cause: "アブダーリー族がヘラートで自立", source: "https://en.wikipedia.org/wiki/Abdali_Afghans"}
+    - {from: 1732, owner: persia, certainty: uncertain, cause: "ナーディルがヘラートを攻略"}
+    - {from: 1750, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーがヘラートを攻略", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
+    - {from: 1818, owner: herat, certainty: uncertain, cause: "ドゥッラーニー朝の分裂（サドーザイ家がヘラートだけを保つ）", source: "https://en.wikipedia.org/wiki/Emirate_of_Herat"}
+    - {from: 1863, owner: afghanistan, certainty: uncertain, cause: "ドースト・モハンマドがヘラートを攻め落とす", source: "https://en.wikipedia.org/wiki/Emirate_of_Herat"}
+    - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
 
 - id: hazarajat
   name: "ハザーラジャート（バーミヤーン・ダイクンディ）"
   select:
     pieces: [AFG-Bamyan, AFG-Daykundi]
   timeline:
+    - {from: 1648, owner: null, certainty: uncertain, note: "ハザーラ人の諸部族の地。ムガル帝国・サファヴィー朝・ドゥッラーニー朝の支配は名目的だった", source: "https://en.wikipedia.org/wiki/Hazarajat"}
     - {from: 1879, owner: afghanistan, certainty: uncertain, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
     - {from: 1893, owner: afghanistan, cause: "アブドゥッラフマーン・ハーンがハザーラ人の地を征服（1891–1893年）", source: "https://en.wikipedia.org/wiki/Hazarajat"}
 
@@ -4819,6 +5008,6 @@
   select:
     pieces: [AFG-Nuristan]
   timeline:
-    - {from: 1879, owner: null, certainty: uncertain}
+    - {from: 1648, owner: null, certainty: uncertain, note: "カーフィル（異教徒）と呼ばれた山地の諸部族の地。どの国の支配も及ばなかった"}
     - {from: 1896, owner: afghanistan, cause: "アブドゥッラフマーン・ハーンがカーフィリスターンを征服し、ヌーリスターン（光の国）と改める（1895–1896年）", source: "https://en.wikipedia.org/wiki/Nuristan_Province"}
 

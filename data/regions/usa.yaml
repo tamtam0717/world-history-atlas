@@ -8367,8 +8367,62 @@
     - from: 1850
       owner: "usa"
 
+- id: us_sd_east
+  name: "サウスダコタ東部（ミズーリ川の東）"
+  select:
+    pieces: [USA-South_Dakota_East]
+  timeline:
+    - from: 1648
+      owner: null
+    - from: 1682
+      owner: "france"
+      certainty: "nominal"
+      label: "ルイジアナ（ヌーヴェル・フランス）"
+      cause: "ラ・サールがミシシッピ川流域をフランス領と宣言する"
+      source: "https://ja.wikipedia.org/wiki/ルイジアナ_(ヌーヴェルフランス)"
+    - from: 1763
+      owner: "spain"
+      certainty: "nominal"
+      label: "ルイジアナ（スペイン領）"
+      cause: "フォンテーヌブロー条約（1762年）でフランスがミシシッピ川以西をスペインに譲る"
+      note: "1800年のサン・イルデフォンソ条約でフランスに返されたが、実際の統治は1803年までスペインが続けた"
+      source: "https://ja.wikipedia.org/wiki/フォンテーヌブロー条約_(1762年)"
+    - from: 1803
+      owner: "usa"
+      certainty: "nominal"
+      label: "ルイジアナ購入地"
+      cause: "ルイジアナ購入（フランスから1500万ドルで買う）"
+      note: "ヤンクトン・ヤンクトナイ（中部スー）とダコタ（東部スー）の人々の地"
+      source: "https://ja.wikipedia.org/wiki/ルイジアナ買収"
+    - from: 1812
+      owner: "usa"
+      certainty: "nominal"
+      label: "ミズーリ準州"
+    - from: 1821
+      owner: "usa"
+      certainty: "nominal"
+      label: "未組織地"
+    - from: 1858
+      owner: "usa"
+      certainty: "nominal"
+      label: "未組織地"
+      cause: "ヤンクトン条約（4月）でヤンクトン・スーがミズーリ川の東の土地の大部分を割譲し、保留地に移る"
+      note: "スーフォールズ（1856–57年）やヤンクトン（1859年）に入植が始まった"
+      source: "https://en.wikipedia.org/wiki/Yankton_Treaty"
+    - from: 1861
+      owner: "usa"
+      label: "ダコタ準州"
+      cause: "ダコタ準州が置かれる（3月。準州都ヤンクトン）"
+      note: "入植は南東部（ヤンクトン・ヴァーミリオン・スーフォールズ）から始まり、北東部（レイク・トラヴァース保留地の周り）は1867年の条約の後、1870年代末からの「ダコタ・ブーム」で開かれた"
+      source: "https://en.wikipedia.org/wiki/Dakota_Territory"
+    - from: 1889
+      owner: "usa"
+      label: ""
+      cause: "サウスダコタが州になる（11月2日）"
+      source: "https://en.wikipedia.org/wiki/South_Dakota"
+
 - id: us_sd
-  name: "サウスダコタ（ブラックヒルズ）"
+  name: "サウスダコタ西部（ミズーリ川の西・ブラックヒルズ）"
   select:
     pieces: [USA-South_Dakota]
   timeline:
@@ -8396,9 +8450,13 @@
       owner: "usa"
       label: "ダコタ準州"
       cause: "スー戦争（1876–77年）の後、合衆国がブラックヒルズを取り上げる"
+      note: "ブラックヒルズ以外のミズーリ川の西は、1889年に大スー保留地が6つの保留地に分けられるまでラコタの保留地だった"
       source: "https://ja.wikipedia.org/wiki/ブラックヒルズ戦争"
     - from: 1889
       owner: "usa"
+      label: ""
+      cause: "サウスダコタが州になる（11月2日）。大スー保留地が分割され、残りの土地が入植に開かれる"
+      source: "https://en.wikipedia.org/wiki/Great_Sioux_Reservation"
 
 - id: us_ny_suffolk
   name: "ロングアイランド東部（サフォーク）"

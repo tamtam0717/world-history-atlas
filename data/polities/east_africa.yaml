@@ -1,0 +1,858 @@
+# F3 東アフリカ・アフリカの角・スーダン（SDN SSD ETH ERI DJI SOM KEN UGA RWA BDI TZA）の政体（1648–2025）
+# 他の担当が参照しうる ID：ethiopia・sudan・south_sudan・eritrea・djibouti・somalia・kenya・uganda・tanzania・rwanda・burundi・
+#   zanzibar・funj・darfur・mahdist・buganda・bunyoro・rwanda_kingdom
+# 植民地の時期は宗主国（britain・italy・france・german_empire・belgium・egypt・ottoman・oman・portugal）の政体を使う。
+# コンゴ自由国（congo_free_state。ラド飛び地 1894–1908）は F4 が定義する。
+# 元首は実権者。年代は「その年を含む」。17–18世紀の在地の王の年代は口承・年代記による推定で、説が分かれる（note に書いた）。
+
+# ===================================================================== エチオピア
+- id: ethiopia
+  name: エチオピア帝国
+  names:
+    - {to: 1768, name: エチオピア帝国（ゴンダール朝）, short: エチオピア, kind: 帝国}
+    - {from: 1769, to: 1854, name: エチオピア（諸侯の時代）, short: エチオピア, kind: 帝国（名目）}
+    - {from: 1855, to: 1973, name: エチオピア帝国, short: エチオピア, kind: 帝国}
+    - {from: 1974, to: 1986, name: エチオピア（社会主義の軍事政権・デルグ）, short: エチオピア, kind: 軍事政権}
+    - {from: 1987, to: 1990, name: エチオピア人民民主共和国, short: エチオピア, kind: 社会主義共和国}
+    - {from: 1991, to: 1994, name: エチオピア暫定政府, short: エチオピア, kind: 暫定政府}
+    - {from: 1995, name: エチオピア連邦民主共和国, short: エチオピア, kind: 連邦共和国}
+  short: エチオピア
+  color: "#e3b06b"
+  kind: 帝国
+  home_iso: [ETH, {iso: ERI, from: 1952, to: 1990}]
+  rulers:
+    - {name: ファシリデス, title: 皇帝, from: 1632, to: 1667, note: ゴンダールを都とし（1636年）、カトリックの宣教師を追放した, source: "https://ja.wikipedia.org/wiki/ファシラダス"}
+    - {name: ヨハネス1世, title: 皇帝, from: 1667, to: 1682, source: "https://en.wikipedia.org/wiki/Yohannes_I"}
+    - {name: イヤス1世（大帝）, title: 皇帝, from: 1682, to: 1706, note: ゴンダール朝の最盛期, source: "https://en.wikipedia.org/wiki/Iyasu_I"}
+    - {name: テクレ・ハイマノト1世, title: 皇帝, from: 1706, to: 1708, source: "https://en.wikipedia.org/wiki/Tekle_Haymanot_I"}
+    - {name: テウォフロス, title: 皇帝, from: 1708, to: 1711, source: "https://en.wikipedia.org/wiki/Tewoflos"}
+    - {name: ヨストス, title: 皇帝, from: 1711, to: 1716, source: "https://en.wikipedia.org/wiki/Yostos"}
+    - {name: ダウィト3世, title: 皇帝, from: 1716, to: 1721, source: "https://en.wikipedia.org/wiki/Dawit_III"}
+    - {name: バカッファ, title: 皇帝, from: 1721, to: 1730, source: "https://en.wikipedia.org/wiki/Bakaffa"}
+    - {name: イヤス2世, title: 皇帝, from: 1730, to: 1755, note: 母后メンテワブが実権を握った, source: "https://en.wikipedia.org/wiki/Iyasu_II"}
+    - {name: イヨアス1世, title: 皇帝, from: 1755, to: 1769, note: 1769年にティグレのラス・ミカエル・セフルに殺され、諸侯の時代が始まった, source: "https://en.wikipedia.org/wiki/Iyoas_I"}
+    - {name: テオドロス2世, title: 皇帝, from: 1855, to: 1868, note: 諸侯を下して帝国を再統一。イギリスの遠征軍（ネーピア）にマグダラで敗れて自決, source: "https://ja.wikipedia.org/wiki/テオドロス2世"}
+    - {name: テクレ・ギョルギス2世, title: 皇帝, from: 1868, to: 1871, source: "https://en.wikipedia.org/wiki/Tekle_Giyorgis_II"}
+    - {name: ヨハネス4世, title: 皇帝, from: 1871, to: 1889, note: ティグレ出身。エジプト軍を破り（1875–76年）、マフディー国家とのガラバトの戦いで戦死, source: "https://ja.wikipedia.org/wiki/ヨハンネス4世"}
+    - {name: メネリク2世, title: 皇帝, from: 1889, to: 1913, note: シェワ王から皇帝に。南へ領土を広げ、アドワの戦い（1896年）でイタリアを破った。都アディスアベバ, source: "https://ja.wikipedia.org/wiki/メネリク2世"}
+    - {name: イヤス5世, title: 皇帝（戴冠せず）, from: 1913, to: 1916, source: "https://en.wikipedia.org/wiki/Lij_Iyasu"}
+    - {name: ゼウディトゥ, title: 女帝, from: 1916, to: 1930, note: 摂政ラス・タファリ（のちのハイレ・セラシエ1世）が実権を握った, source: "https://ja.wikipedia.org/wiki/ザウディトゥ"}
+    - {name: ハイレ・セラシエ1世, title: 皇帝, from: 1930, to: 1974, note: 1936–41年はイギリスに亡命。アフリカ統一機構（OAU）の創設（1963年）を主導。1974年の革命で退位, source: "https://ja.wikipedia.org/wiki/ハイレ・セラシエ1世"}
+    - {name: テフェリ・ベンティ, title: 臨時軍事行政評議会（デルグ）議長, from: 1974, to: 1977, note: 1974年9–11月はアマン・アンドム。実権は副議長メンギスツにあった, source: "https://en.wikipedia.org/wiki/Tafari_Benti"}
+    - {name: メンギスツ・ハイレ・マリアム, title: デルグ議長・大統領, from: 1977, to: 1991, note: 社会主義の独裁政治。「赤色テロ」で多くの人が殺された。1991年にジンバブエへ亡命, source: "https://ja.wikipedia.org/wiki/メンギスツ・ハイレ・マリアム"}
+    - {name: メレス・ゼナウィ, title: 暫定大統領・首相, from: 1991, to: 2012, note: EPRDF（TPLF）の指導者。1995年から首相が実権を持つ, source: "https://ja.wikipedia.org/wiki/メレス・ゼナウィ"}
+    - {name: ハイレマリアム・デサレン, title: 首相, from: 2012, to: 2018, source: "https://ja.wikipedia.org/wiki/ハイレマリアム・デサレン"}
+    - {name: アビー・アハメド, title: 首相, from: 2018, note: エリトリアとの和平で2019年のノーベル平和賞。2020–22年にティグレ戦争, source: "https://ja.wikipedia.org/wiki/アビィ・アハメド"}
+  periods:
+    - from: 1648
+      to: 1768
+      text: ソロモン朝の皇帝がゴンダールに都を置き、城や教会を建てた（ゴンダール朝）。南の低地にはオロモ人が広く住み、皇帝の支配は北部の高原が中心。
+    - from: 1769
+      to: 1854
+      text: 「諸侯の時代」（ゼメネ・メサフィント）。皇帝は名目だけになり、ティグレ・ゴッジャム・シェワやオロモ系のイェジュ家などの諸侯が争った。
+    - from: 1855
+      to: 1889
+      text: テオドロス2世が帝国を再統一したが、イギリスの遠征（1868年）で倒れた。ヨハネス4世はエジプト軍（1875–76年）を破り、マフディー国家・イタリアと戦った。
+    - from: 1889
+      to: 1935
+      text: メネリク2世が南・東・西へ領土を広げ、今のエチオピアの範囲を作った。アドワの戦い（1896年）でイタリアを破り、アフリカで独立を保った（ほかはリベリア）。1923年に国際連盟に加盟。
+    - from: 1936
+      to: 1941
+      text: 第二次エチオピア戦争でイタリアに占領され、イタリア領東アフリカに組み込まれた（国際連盟の制裁は効かなかった）。1941年、イギリス軍と抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還。
+    - from: 1941
+      to: 1974
+      text: ハイレ・セラシエの帝政。1952年にエリトリアと連邦を作り、1962年に併合した。首都アディスアベバにアフリカ統一機構（1963年）が置かれた。
+    - from: 1974
+      to: 1991
+      text: 革命で帝政が倒れ、軍事政権（デルグ）がソ連と結んで社会主義を進めた。オガデン戦争（1977–78年）、大飢饉（1984–85年）、エリトリア・ティグレの反乱が続いた。
+    - from: 1991
+      text: エチオピア人民革命民主戦線（EPRDF）の政権が民族ごとの州による連邦制をとり、1993年にエリトリアの独立を認めた。エリトリアとの国境戦争（1998–2000年）、ティグレ戦争（2020–22年）。
+  source: "https://ja.wikipedia.org/wiki/エチオピアの歴史"
+
+- id: shewa
+  name: シェワ王国
+  short: シェワ
+  color: "#d3867e"
+  kind: 王国
+  home_iso: [ETH]
+  rulers:
+    - {name: サーレ・セラシエ, title: シェワ王（ネグス）, from: 1813, to: 1847, note: アンコベルを都とし、ヨーロッパ諸国と交渉した, source: "https://en.wikipedia.org/wiki/Sahle_Selassie"}
+    - {name: ハイレ・メレコト, title: シェワ王, from: 1847, to: 1855, source: "https://en.wikipedia.org/wiki/Haile_Melekot"}
+    - {name: メネリク, title: シェワ王, from: 1865, to: 1889, note: 1889年にエチオピア皇帝メネリク2世となる, source: "https://ja.wikipedia.org/wiki/メネリク2世"}
+  periods:
+    - from: 1700
+      to: 1855
+      text: メンズのアムハラ人の首長の家系が、諸侯の時代にほぼ独立した王国を作った。
+    - from: 1865
+      to: 1889
+      text: メネリクがシェワ王となり、1878年にヨハネス4世に服属しつつ、南のオロモ人・グラゲ人の地やハラールを征服した（1886年にアディスアベバを築く）。
+  note: 1856–1865年はテオドロス2世に征服され、エチオピア帝国の直轄。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Shewa"
+
+- id: harar
+  name: ハラール・アミール国
+  short: ハラール
+  color: "#9fb7a6"
+  kind: アミール国
+  home_iso: [ETH]
+  rulers:
+    - {name: アブドゥッラーヒ, title: アミール, from: 1885, to: 1887, note: エジプト軍の撤退後に立ち、チェレンコの戦いでメネリクに敗れた, source: "https://en.wikipedia.org/wiki/Abdullahi_of_Harar"}
+  periods:
+    - from: 1648
+      to: 1874
+      text: 城壁に囲まれたイスラームの町ハラールの国。エチオピア高原と紅海・アデン湾の港を結ぶ交易で栄えた。
+  note: 1875–1885年はエジプトの占領。1887年にメネリクに征服された。
+  source: "https://en.wikipedia.org/wiki/Emirate_of_Harar"
+
+- id: aussa
+  name: アウサ・スルタン国
+  short: アウサ
+  color: "#c8a890"
+  kind: スルタン国
+  home_iso: [ETH]
+  periods:
+    - from: 1648
+      to: 1895
+      text: アワシュ川下流のオアシスを中心とするアファル人の国。1734年ごろからムダイト家のスルタン。1896年からエチオピア皇帝の下の自治国となり、1975年まで続いた。
+  source: "https://en.wikipedia.org/wiki/Sultanate_of_Aussa"
+
+- id: kaffa
+  name: カッファ王国
+  short: カッファ
+  color: "#b0c5a0"
+  kind: 王国
+  home_iso: [ETH]
+  rulers:
+    - {name: ガキ・シェロチョ, title: 王, from: 1890, to: 1897, note: メネリク2世の軍に敗れて捕らえられた, source: "https://en.wikipedia.org/wiki/Gaki_Sherocho"}
+  periods:
+    - from: 1648
+      to: 1897
+      text: エチオピア南西部の森林の王国。コーヒーの原産地とされ、象牙・麝香・奴隷の交易で栄えた。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Kaffa"
+
+- id: jimma
+  name: ジンマ王国
+  short: ジンマ
+  color: "#c5b0d8"
+  kind: 王国
+  home_iso: [ETH]
+  rulers:
+    - {name: アッバ・ジファル2世, title: 王, from: 1878, to: 1932, note: 1882年にメネリクに服属して貢納し、自治を保った, source: "https://en.wikipedia.org/wiki/Abba_Jifar_II"}
+  periods:
+    - from: 1790
+      to: 1932
+      text: ギベ川流域のオロモ人のイスラーム王国。コーヒーと交易で栄えた。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Jimma"
+
+- id: wolaita
+  name: ウォライタ王国
+  short: ウォライタ
+  color: "#d4c095"
+  kind: 王国
+  home_iso: [ETH]
+  rulers:
+    - {name: トナ, title: 王（カオ）, from: 1886, to: 1894, note: メネリク2世の軍に敗れて捕らえられた, source: "https://en.wikipedia.org/wiki/Kawo_Tona"}
+  periods:
+    - from: 1648
+      to: 1894
+      text: エチオピア南部の王国。1894年にメネリク2世に征服された。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Welayta"
+
+- id: tplf
+  name: ティグレ人民解放戦線（TPLF）
+  names:
+    - {to: 1990, name: ティグレ人民解放戦線（TPLF）・エチオピア人民革命民主戦線（EPRDF）, short: TPLF・EPRDF}
+    - {from: 2020, name: ティグレ人民解放戦線（TPLF）, short: TPLF}
+  short: TPLF
+  color: "#d39c7e"
+  kind: 武装勢力
+  home_iso: [ETH]
+  rulers:
+    - {name: メレス・ゼナウィ, title: 議長, from: 1989, to: 1991, source: "https://ja.wikipedia.org/wiki/メレス・ゼナウィ"}
+    - {name: デブレツィオン・ゲブレミカエル, title: ティグレ州首相・TPLF 議長, from: 2018, to: 2023, source: "https://en.wikipedia.org/wiki/Debretsion_Gebremichael"}
+  periods:
+    - from: 1989
+      to: 1991
+      text: 1975年に武装闘争を始め、1989年にティグレ全域を押さえた。ほかの勢力とEPRDFを作り、1991年にメンギスツ政権を倒した。
+    - from: 2020
+      to: 2022
+      text: アビー政権と対立し、ティグレ戦争（2020–22年）となった。戦争と飢饉で多くの人が死んだ。2022年11月のプレトリア合意で戦闘が終わった。
+  source: "https://en.wikipedia.org/wiki/Tigray_People%27s_Liberation_Front"
+
+# ===================================================================== スーダン
+- id: funj
+  name: フンジ・スルタン国（センナール王国）
+  short: フンジ
+  color: "#dbb195"
+  kind: スルタン国
+  home_iso: [SDN]
+  rulers:
+    - {name: バーディ2世, title: スルタン, from: 1644, to: 1681, note: 南コルドファンのタカリ王国を従えた, source: "https://en.wikipedia.org/wiki/Badi_II"}
+    - {name: ウンサ2世, title: スルタン, from: 1681, to: 1692, source: "https://en.wikipedia.org/wiki/Unsa_II"}
+    - {name: バーディ3世, title: スルタン, from: 1692, to: 1716, source: "https://en.wikipedia.org/wiki/Badi_III"}
+    - {name: ウンサ3世, title: スルタン, from: 1716, to: 1720, source: "https://en.wikipedia.org/wiki/Unsa_III"}
+    - {name: ヌール, title: スルタン, from: 1720, to: 1724, source: "https://en.wikipedia.org/wiki/Nul_(Funj)"}
+    - {name: バーディ4世, title: スルタン, from: 1724, to: 1762, note: 1744年にエチオピアのイヤス2世の侵攻を退けた。晩年にハマジュの将アブー・リカイリクに退けられた, source: "https://en.wikipedia.org/wiki/Badi_IV"}
+    - {name: バーディ7世, title: スルタン, from: 1805, to: 1821, note: 最後のスルタン。エジプト軍に降った, source: "https://en.wikipedia.org/wiki/Badi_VII"}
+  periods:
+    - from: 1648
+      to: 1761
+      text: 青ナイル・白ナイルの間のセンナールを都とするイスラームの王国。ナイル川沿いの首長たちを従え、紅海と内陸の交易で栄えた。
+    - from: 1762
+      to: 1821
+      text: ハマジュの摂政（アブー・リカイリクの家系）が実権を握り、スルタンは名目だけになった。諸首長が自立し、王国は衰えた。1821年にムハンマド・アリーのエジプト軍に滅ぼされた。
+  note: スルタンの年代は年代記による推定で、資料によって数年ずれる。1762–1805年のスルタンは摂政に立てられた者が多いので省いた。
+  source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+
+- id: darfur
+  name: ダルフール・スルタン国
+  short: ダルフール
+  color: "#dbc2cf"
+  kind: スルタン国
+  home_iso: [SDN]
+  rulers:
+    - {name: アフマド・ブクル, title: スルタン, from: 1682, to: 1722, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
+    - {name: ムハンマド・ダウラ, title: スルタン, from: 1722, to: 1732, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
+    - {name: ウマル・レル, title: スルタン, from: 1732, to: 1739, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
+    - {name: アブー・アル＝カースィム, title: スルタン, from: 1739, to: 1752, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
+    - {name: ムハンマド・タイラブ, title: スルタン, from: 1752, to: 1785, note: コルドファンを征服した, source: "https://en.wikipedia.org/wiki/Muhammad_Tayrab"}
+    - {name: アブド・アッ＝ラフマーン・アッ＝ラシード, title: スルタン, from: 1785, to: 1801, note: 都をエル・ファシールに定めた（1791年）。ナポレオンと書簡を交わした, source: "https://en.wikipedia.org/wiki/Abd_al-Rahman_al-Rashid"}
+    - {name: ムハンマド・アル＝ファドル, title: スルタン, from: 1801, to: 1838, note: 1821年にコルドファンをエジプトに奪われた, source: "https://en.wikipedia.org/wiki/Muhammad_al-Fadl"}
+    - {name: ムハンマド・アル＝フサイン, title: スルタン, from: 1838, to: 1873, source: "https://en.wikipedia.org/wiki/Muhammad_al-Husayn_(Darfur)"}
+    - {name: イブラーヒーム, title: スルタン, from: 1873, to: 1874, note: ズバイルの軍と戦って戦死, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
+    - {name: アリー・ディーナール, title: スルタン, from: 1898, to: 1916, note: マフディー国家の崩壊後にスルタン国を再興。第一次世界大戦中にオスマン帝国に通じ、英・エジプト軍に攻められて戦死, source: "https://en.wikipedia.org/wiki/Ali_Dinar"}
+  periods:
+    - from: 1648
+      to: 1874
+      text: マッラ山地から起こったケイラ朝のイスラームの国。サハラを越えてエジプトに至る「40日の道」の隊商交易（奴隷・象牙）で栄え、1785–1821年にはコルドファンも治めた。
+    - from: 1898
+      to: 1916
+      text: マフディー国家の崩壊後、アリー・ディーナールが再興し、英・エジプトに名目的に従いながら自立を保った。1916年に併合された。
+  note: 17–18世紀のスルタンの年代は推定。1874–1898年はエジプト・マフディー国家の支配。
+  source: "https://ja.wikipedia.org/wiki/ダルフール・スルタン国"
+
+- id: masalit
+  name: マサリート・スルタン国（ダール・マサリート）
+  short: マサリート
+  color: "#dbbda4"
+  kind: スルタン国
+  home_iso: [SDN]
+  rulers:
+    - {name: ムハンマド・バフル・アッ＝ディーン（アンドカ）, title: スルタン, from: 1910, to: 1951, note: 1922年に英・エジプトの統治を受け入れた, source: "https://en.wikipedia.org/wiki/Dar_Masalit"}
+  periods:
+    - from: 1898
+      to: 1921
+      text: スーダン西端のマサリート人の国。ワダイ（フランス領）とダルフールの間で自立を保ち、1910年にフランス軍を破った。1919年の英仏の国境協定ののち、英・エジプトの間接統治を受け入れた。
+  source: "https://en.wikipedia.org/wiki/Dar_Masalit"
+
+- id: mahdist
+  name: マフディー国家
+  short: マフディー国家
+  color: "#c8a588"
+  kind: イスラーム国家
+  home_iso: [SDN]
+  rulers:
+    - {name: ムハンマド・アフマド（マフディー）, title: マフディー（救世主）, from: 1881, to: 1885, note: 1881年に自らをマフディーと宣言してエジプトの支配に反乱。ハルツームを落とした年に病死, source: "https://ja.wikipedia.org/wiki/ムハンマド・アフマド"}
+    - {name: アブドゥッラーヒ（ハリーファ）, title: ハリーファ（後継者）, from: 1885, to: 1898, note: オムドゥルマンの戦いに敗れ、1899年にウンム・ディワイカラートで戦死, source: "https://en.wikipedia.org/wiki/Abdallahi_ibn_Muhammad"}
+  periods:
+    - from: 1883
+      to: 1885
+      text: マフディーの反乱がトルコ・エジプトの重税と支配への不満を集めて広がった。1883年にヒックスの軍を全滅させ、1885年1月にハルツームを落としてゴードンを戦死させた。
+    - from: 1885
+      to: 1898
+      text: ハリーファがオムドゥルマンを都として治めた。エチオピアと戦い（1889年にヨハネス4世を戦死させる）、エジプト侵攻は失敗した。1896年からキッチナーの英・エジプト軍が南下し、1898年のオムドゥルマンの戦いで滅んだ。
+  source: "https://ja.wikipedia.org/wiki/マフディー国家"
+
+- id: sudan
+  name: スーダン共和国
+  names:
+    - {from: 1956, to: 1968, name: スーダン共和国, short: スーダン, kind: 共和国}
+    - {from: 1969, to: 1984, name: スーダン民主共和国, short: スーダン, kind: 軍事政権}
+    - {from: 1985, name: スーダン共和国, short: スーダン, kind: 共和国}
+  short: スーダン
+  color: "#dbc2c8"
+  kind: 共和国
+  home_iso: [SDN, {iso: SSD, to: 2010}]
+  rulers:
+    - {name: イスマーイール・アズハリー, title: 首相, from: 1956, to: 1956, note: 1965–69年は国家元首（主権評議会議長）, source: "https://en.wikipedia.org/wiki/Ismail_al-Azhari"}
+    - {name: アブドゥッラー・ハリール, title: 首相, from: 1956, to: 1958, source: "https://en.wikipedia.org/wiki/Abdallah_Khalil"}
+    - {name: イブラーヒーム・アッブード, title: 最高評議会議長（軍事政権）, from: 1958, to: 1964, note: 1964年の十月革命で退いた, source: "https://en.wikipedia.org/wiki/Ibrahim_Abboud"}
+    - {name: ムハンマド・アフマド・マフジューブ, title: 首相, from: 1965, to: 1966, note: 1964–69年は議会政治で首相がたびたび替わった（サーディク・アル＝マフディーなど）, source: "https://en.wikipedia.org/wiki/Muhammad_Ahmad_Mahjoub"}
+    - {name: ジャアファル・ヌメイリ, title: 革命評議会議長・大統領, from: 1969, to: 1985, note: 1972年に南部と和平。1983年にイスラーム法を導入し、第2次内戦を招いた, source: "https://ja.wikipedia.org/wiki/ガアファル・ニメイリ"}
+    - {name: アブドゥッラフマーン・スワール・アッ＝ザハブ, title: 暫定軍事評議会議長, from: 1985, to: 1986, source: "https://en.wikipedia.org/wiki/Abdel_Rahman_Swar_al-Dahab"}
+    - {name: サーディク・アル＝マフディー, title: 首相, from: 1986, to: 1989, note: マフディーのひ孫, source: "https://en.wikipedia.org/wiki/Sadiq_al-Mahdi"}
+    - {name: オマル・アル＝バシール, title: 救国革命評議会議長・大統領, from: 1989, to: 2019, note: イスラーム主義の軍事政権。ダルフール紛争で国際刑事裁判所に起訴された。2019年の民衆の抗議で退けられた, source: "https://ja.wikipedia.org/wiki/オマル・アル＝バシール"}
+    - {name: アブドゥルファッターハ・ブルハーン, title: 主権評議会議長, from: 2019, note: 2019–21年はハムドゥーク首相の文民と権力を分け合ったが、2021年のクーデタで実権を握った, source: "https://en.wikipedia.org/wiki/Abdel_Fattah_al-Burhan"}
+  periods:
+    - from: 1956
+      to: 1972
+      text: 独立の直前に南部の兵が反乱し、第1次スーダン内戦（1955–72年）となった。政治は軍事政権（アッブード）と議会政治をくり返した。
+    - from: 1972
+      to: 1983
+      text: アディスアベバ合意で南部に自治を認めた。
+    - from: 1983
+      to: 2005
+      text: ヌメイリがイスラーム法を導入して南部の自治を廃止し、ジョン・ガランのスーダン人民解放軍（SPLA）との第2次内戦（1983–2005年）となった。1989年からバシールのイスラーム主義の軍事政権。2003年からダルフール紛争。
+    - from: 2005
+      to: 2019
+      text: 南北包括和平合意（2005年）ののち、2011年に南スーダンが分離独立した。石油収入の多くを失った。
+    - from: 2019
+      text: 民衆の抗議でバシール政権が倒れたが、民政への移行は2021年のクーデタで止まった。2023年4月からスーダン軍と即応支援部隊（RSF）の内戦となり、多くの難民と飢饉が生じた。
+  source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: rsf
+  name: 即応支援部隊（RSF）
+  names:
+    - {from: 2025, name: 即応支援部隊（RSF）・「平和と統一の政府」, short: RSF}
+  short: RSF
+  color: "#b99878"
+  kind: 武装勢力
+  home_iso: [SDN]
+  rulers:
+    - {name: ムハンマド・ハムダーン・ダガロ（ヘメティ）, title: 司令官, from: 2023, note: ダルフール紛争のジャンジャウィード民兵から生まれた部隊の指導者。2025年にニャラで対抗政府を作った, source: "https://en.wikipedia.org/wiki/Mohamed_Hamdan_Dagalo"}
+  periods:
+    - from: 2023
+      text: 2023年4月にスーダン軍と戦い始め、首都ハルツームとダルフールの大部分を押さえた。2025年にハルツームを失ったが、10月にエル・ファシールを落としてダルフール全域を押さえた。住民の虐殺が国際的に非難されている。
+  source: "https://ja.wikipedia.org/wiki/即応支援部隊"
+
+- id: south_sudan
+  name: 南スーダン共和国
+  short: 南スーダン
+  color: "#93bea2"
+  kind: 共和国
+  home_iso: [SSD]
+  rulers:
+    - {name: サルバ・キール, title: 大統領, from: 2011, note: 2005年から南部スーダン自治政府の大統領, source: "https://ja.wikipedia.org/wiki/サルバ・キール・マヤルディ"}
+  periods:
+    - from: 2011
+      text: 2011年に住民投票を経てスーダンから独立（世界で最も新しい国の一つ）。2013年からキール大統領派とマシャール副大統領派の内戦となり、2018年に和平合意。
+  source: "https://ja.wikipedia.org/wiki/南スーダン"
+
+# ===================================================================== エリトリア・ジブチ
+- id: eritrea
+  name: エリトリア国
+  names:
+    - {to: 1990, name: エリトリアの解放勢力（EPLF・ELF）, short: エリトリア解放勢力, kind: 独立運動}
+    - {from: 1991, to: 1992, name: エリトリア暫定政府, short: エリトリア, kind: 暫定政府}
+    - {from: 1993, name: エリトリア国, short: エリトリア, kind: 共和国}
+  short: エリトリア
+  color: "#8fbcd4"
+  kind: 共和国
+  home_iso: [ERI]
+  rulers:
+    - {name: イサイアス・アフウェルキ, title: EPLF 書記長・大統領, from: 1987, note: 1993年の独立から大統領。選挙を行わず一党支配を続ける, source: "https://ja.wikipedia.org/wiki/イサイアス・アフウェルキ"}
+  periods:
+    - from: 1977
+      to: 1991
+      text: エチオピアからの独立戦争（1961–91年）。エリトリア人民解放戦線（EPLF）は北部のナクファを拠点に戦い続け、1991年5月にアスマラに入った。
+    - from: 1993
+      text: 住民投票を経て独立。エチオピアとの国境戦争（1998–2000年）ののち、無期限の兵役と一党支配が続き、多くの難民が出ている。2018年にエチオピアと和平。
+  source: "https://ja.wikipedia.org/wiki/エリトリア"
+
+- id: djibouti
+  name: ジブチ共和国
+  short: ジブチ
+  color: "#a8d7cd"
+  kind: 共和国
+  home_iso: [DJI]
+  rulers:
+    - {name: ハッサン・グレド・アプティドン, title: 大統領, from: 1977, to: 1999, source: "https://en.wikipedia.org/wiki/Hassan_Gouled_Aptidon"}
+    - {name: イスマイル・オマル・ゲレ, title: 大統領, from: 1999, source: "https://ja.wikipedia.org/wiki/イスマイル・オマル・ゲレ"}
+  periods:
+    - from: 1977
+      text: フランスから独立。エチオピアの海の玄関口（ジブチ＝アディスアベバ鉄道）で、フランス・アメリカ・中国・日本などの軍の拠点が置かれる。
+  source: "https://ja.wikipedia.org/wiki/ジブチ"
+
+# ===================================================================== ソマリア
+- id: ajuran
+  name: アジュラーン・スルタン国
+  short: アジュラーン
+  color: "#c0b0a0"
+  kind: スルタン国
+  home_iso: [SOM]
+  periods:
+    - from: 1648
+      to: 1699
+      text: シェベリ川・ジュバ川流域の灌漑とインド洋交易を押さえた国（13世紀–17世紀）。17世紀に衰え、崩れた。
+  source: "https://en.wikipedia.org/wiki/Ajuran_Sultanate"
+
+- id: geledi
+  name: ゲレディ・スルタン国
+  short: ゲレディ
+  color: "#a8c9b8"
+  kind: スルタン国
+  home_iso: [SOM]
+  rulers:
+    - {name: ユースフ・マハムード, title: スルタン, from: 1798, to: 1848, note: シェベリ川下流とベナディール海岸の交易を押さえた, source: "https://en.wikipedia.org/wiki/Yusuf_Mahamud_Ibrahim"}
+    - {name: アフマド・ユースフ, title: スルタン, from: 1848, to: 1878, source: "https://en.wikipedia.org/wiki/Geledi_Sultanate"}
+    - {name: オスマン・アフマド, title: スルタン, from: 1878, to: 1910, source: "https://en.wikipedia.org/wiki/Geledi_Sultanate"}
+  periods:
+    - from: 1700
+      to: 1907
+      text: アフゴイを都とするシェベリ川下流の国。農園（奴隷を使った穀物・綿の栽培）と交易で栄えた。20世紀初めにイタリアに従った。
+  source: "https://en.wikipedia.org/wiki/Geledi_Sultanate"
+
+- id: majeerteen
+  name: マジェールテーン・スルタン国（ミジュルティニア）
+  short: ミジュルティニア
+  color: "#b7a7cf"
+  kind: スルタン国
+  home_iso: [SOM]
+  rulers:
+    - {name: オスマン・マハムード, title: スルタン（ボコル）, from: 1880, to: 1927, note: 1889年にイタリアの保護を受け入れた。デ・ヴェッキの遠征に抵抗して敗れた, source: "https://en.wikipedia.org/wiki/Osman_Mahamuud"}
+  periods:
+    - from: 1750
+      to: 1927
+      text: ソマリア北東端（アフリカの角の先端）の国。乳香の交易と、難破船の救助の見返りの契約でイギリスとも結んだ。
+  note: 成立の年代ははっきりしない（18世紀なかば）。
+  source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+
+- id: hobyo
+  name: ホビオ・スルタン国
+  short: ホビオ
+  color: "#cfb1a7"
+  kind: スルタン国
+  home_iso: [SOM]
+  rulers:
+    - {name: ユースフ・アリー・ケナディード, title: スルタン, from: 1878, to: 1911, source: "https://en.wikipedia.org/wiki/Yusuf_Ali_Kenadid"}
+    - {name: アリー・ユースフ, title: スルタン, from: 1911, to: 1925, source: "https://en.wikipedia.org/wiki/Ali_Yusuf_Kenadid"}
+  periods:
+    - from: 1878
+      to: 1925
+      text: マジェールテーンのスルタンと争った王族ユースフ・アリーが建てた国。1889年にイタリアの保護国となり、1925年に併合された。
+  source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+
+- id: dervish_state
+  name: ダラーウィーシュ国家
+  short: ダラーウィーシュ
+  color: "#ceca83"
+  kind: イスラーム国家（抵抗運動）
+  home_iso: [SOM]
+  rulers:
+    - {name: ムハンマド・アブドゥッラー・ハサン, title: 指導者（サイイド）, from: 1899, to: 1920, note: イギリスは「狂気のムッラー」と呼んだ。1920年に敗れて逃れ、翌年死んだ, source: "https://en.wikipedia.org/wiki/Mohammed_Abdullah_Hassan"}
+  periods:
+    - from: 1899
+      to: 1920
+      text: イスラームの改革を説いたムハンマド・アブドゥッラー・ハサンが、イギリス・イタリア・エチオピアに抵抗した運動。タレーに石の砦を築いた。1920年、イギリスの空爆を含む攻撃で崩れた（アフリカでの空軍の使用の早い例）。
+  source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+
+- id: somalia
+  name: ソマリア
+  names:
+    - {from: 1960, to: 1969, name: ソマリア共和国, short: ソマリア, kind: 共和国}
+    - {from: 1970, to: 1990, name: ソマリア民主共和国, short: ソマリア, kind: 社会主義共和国}
+    - {from: 1991, to: 2011, name: ソマリア（内戦・暫定政府）, short: ソマリア, kind: 暫定政府}
+    - {from: 2012, name: ソマリア連邦共和国, short: ソマリア, kind: 連邦共和国}
+  short: ソマリア
+  color: "#8db6e0"
+  kind: 共和国
+  home_iso: [SOM]
+  rulers:
+    - {name: アデン・アブドゥッラ・オスマン, title: 大統領, from: 1960, to: 1967, source: "https://en.wikipedia.org/wiki/Aden_Abdulle_Osman_Daar"}
+    - {name: アブディラシッド・アリー・シェルマルケ, title: 大統領, from: 1967, to: 1969, note: 暗殺された, source: "https://en.wikipedia.org/wiki/Abdirashid_Ali_Shermarke"}
+    - {name: モハメド・シアド・バーレ, title: 最高革命評議会議長・大統領, from: 1969, to: 1991, note: クーデタで政権を握り「科学的社会主義」を唱えた。オガデン戦争で敗れ、1991年に追われた, source: "https://ja.wikipedia.org/wiki/モハメド・シアド・バーレ"}
+    - {name: アリ・マハディ・モハメド, title: 暫定大統領（一派）, from: 1991, to: 1997, note: アイディード将軍の派と争い、全土を治める政府はなかった, source: "https://en.wikipedia.org/wiki/Ali_Mahdi_Muhammad"}
+    - {name: アブディカシム・サラド・ハッサン, title: 暫定国民政府大統領, from: 2000, to: 2004, source: "https://en.wikipedia.org/wiki/Abdiqasim_Salad_Hassan"}
+    - {name: アブドゥラヒ・ユスフ・アハメド, title: 暫定連邦政府大統領, from: 2004, to: 2008, source: "https://en.wikipedia.org/wiki/Abdullahi_Yusuf_Ahmed"}
+    - {name: シャリフ・シェイク・アハメド, title: 暫定連邦政府大統領, from: 2009, to: 2012, source: "https://en.wikipedia.org/wiki/Sharif_Sheikh_Ahmed"}
+    - {name: ハッサン・シェイク・モハムド, title: 大統領, from: 2012, to: 2017, source: "https://en.wikipedia.org/wiki/Hassan_Sheikh_Mohamud"}
+    - {name: モハメド・アブドゥラヒ・モハメド（ファルマージョ）, title: 大統領, from: 2017, to: 2022, source: "https://en.wikipedia.org/wiki/Mohamed_Abdullahi_Mohamed"}
+    - {name: ハッサン・シェイク・モハムド, title: 大統領, from: 2022, source: "https://en.wikipedia.org/wiki/Hassan_Sheikh_Mohamud"}
+  periods:
+    - from: 1960
+      to: 1969
+      text: 旧イタリア領と旧イギリス領ソマリランドが合わさって独立。エチオピアのオガデン、ケニア北東部、ジブチのソマリ人の地を合わせる「大ソマリア」を唱えた。
+    - from: 1969
+      to: 1991
+      text: バーレの軍事政権。ソ連と結んだが、オガデン戦争（1977–78年）でソ連がエチオピアを支援したためアメリカに近づいた。1980年代から氏族ごとの反乱が広がった。
+    - from: 1991
+      to: 2011
+      text: バーレ政権の崩壊ののち中央政府がない内戦となった。国連とアメリカの介入（1992–95年）は失敗。北部はソマリランド・プントランドが自立。2006年のイスラーム法廷連合とエチオピアの介入ののち、アル・シャバーブが南部を押さえた。沖合では海賊が多発した。
+    - from: 2012
+      text: 連邦政府が発足し、アフリカ連合の部隊とともにアル・シャバーブと戦う。各州（ジュバランド・プントランドなど）の自立性が強い。
+  source: "https://ja.wikipedia.org/wiki/ソマリア"
+
+- id: somaliland
+  name: ソマリランド共和国
+  short: ソマリランド
+  color: "#d3a9cf"
+  kind: 共和国（未承認）
+  home_iso: [SOM]
+  rulers:
+    - {name: アブディラフマン・アハメド・アリー・トゥール, title: 大統領, from: 1991, to: 1993, source: "https://en.wikipedia.org/wiki/Abdirahman_Ahmed_Ali_Tuur"}
+    - {name: ムハンマド・ハージ・イブラーヒーム・エガル, title: 大統領, from: 1993, to: 2002, source: "https://en.wikipedia.org/wiki/Muhammad_Haji_Ibrahim_Egal"}
+    - {name: ダヒル・リヤレ・カヒン, title: 大統領, from: 2002, to: 2010, source: "https://en.wikipedia.org/wiki/Dahir_Riyale_Kahin"}
+    - {name: アハメド・モハメド・シラニョ, title: 大統領, from: 2010, to: 2017, source: "https://en.wikipedia.org/wiki/Ahmed_Mohamed_Mohamoud"}
+    - {name: ムセ・ビヒ・アブディ, title: 大統領, from: 2017, to: 2024, source: "https://en.wikipedia.org/wiki/Muse_Bihi_Abdi"}
+    - {name: アブディラフマン・イロ, title: 大統領, from: 2024, source: "https://en.wikipedia.org/wiki/Abdirahman_Mohamed_Abdullahi"}
+  periods:
+    - from: 1991
+      text: 旧イギリス領ソマリランドの範囲で独立を宣言（1991年5月）。選挙で政権が替わる比較的安定した政治を保つが、国際的には国家として承認されていない。東部のスール・サナーグはプントランド・ソマリア側と争う。
+  source: "https://ja.wikipedia.org/wiki/ソマリランド"
+
+- id: al_shabaab
+  name: アル・シャバーブ
+  short: アル・シャバーブ
+  color: "#b5b5a0"
+  kind: 武装勢力
+  home_iso: [SOM]
+  rulers:
+    - {name: アハメド・アブディ・ゴダネ, title: 指導者, from: 2008, to: 2014, note: アメリカの空爆で死亡, source: "https://en.wikipedia.org/wiki/Ahmed_Abdi_Godane"}
+    - {name: アフマド・ウマル（アブー・ウバイダ）, title: 指導者, from: 2014, source: "https://en.wikipedia.org/wiki/Ahmad_Umar"}
+  periods:
+    - from: 2009
+      text: イスラーム法廷連合の青年組織から生まれた武装勢力（2012年にアル・カーイダに合流）。2009–11年はモガディシュの大部分と南部・中部を押さえた。その後は都市を失ったが、農村部を支配し、隣国ケニア・ウガンダでもテロを起こした。
+  source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+# ===================================================================== スワヒリ海岸・ザンジバル
+- id: pate
+  name: パテ・スルタン国
+  short: パテ
+  color: "#b8d0c0"
+  kind: スルタン国（都市国家）
+  home_iso: [KEN]
+  periods:
+    - from: 1648
+      to: 1823
+      text: ラム諸島のパテ島のナブハーニー家のスワヒリ都市国家。17–18世紀にスワヒリ海岸北部で最も強かったが、1813年のシェラの戦いでラムに敗れ、オマーンに従った。
+  source: "https://en.wikipedia.org/wiki/Pate_Island"
+
+- id: mazrui
+  name: マズルイ家のモンバサ
+  short: モンバサ（マズルイ家）
+  color: "#c8b0c8"
+  kind: 総督家（自立）
+  home_iso: [KEN]
+  periods:
+    - from: 1741
+      to: 1836
+      text: オマーンがモンバサに置いた総督のマズルイ家が、オマーンの王朝交代（ブーサイード朝）に従わず自立した。ペンバ島（–1822年）や周りの海岸も押さえた。1837年にサイイド・サイードに滅ぼされた。
+  source: "https://en.wikipedia.org/wiki/Mazrui"
+
+- id: kilwa
+  name: キルワ・スルタン国
+  short: キルワ
+  color: "#bfd3d8"
+  kind: スルタン国（都市国家）
+  home_iso: [TZA]
+  periods:
+    - from: 1648
+      to: 1784
+      text: かつてソファラの金の交易で栄えたキルワ・キシワニの国（16世紀にポルトガルに攻められて衰えた）。18世紀にはフランスの奴隷商人との取引で一時もち直したが、1785年にオマーンに征服された。
+  source: "https://ja.wikipedia.org/wiki/キルワ・キシワニ"
+
+- id: zanzibar
+  name: ザンジバル・スルタン国
+  names:
+    - {from: 1856, to: 1963, name: ザンジバル・スルタン国, short: ザンジバル, kind: スルタン国}
+    - {from: 1964, to: 1964, name: ザンジバル人民共和国, short: ザンジバル, kind: 人民共和国}
+  short: ザンジバル
+  color: "#c897b5"
+  kind: スルタン国
+  home_iso: [{iso: TZA, to: 1963}]
+  rulers:
+    - {name: マージド・イブン・サイード, title: スルタン, from: 1856, to: 1870, note: ダルエスサラームを築いた（1862年）, source: "https://en.wikipedia.org/wiki/Majid_bin_Said_of_Zanzibar"}
+    - {name: バルガシュ・イブン・サイード, title: スルタン, from: 1870, to: 1888, note: イギリスの圧力で奴隷の輸出を禁じた（1873年）, source: "https://en.wikipedia.org/wiki/Barghash_bin_Said_of_Zanzibar"}
+    - {name: ハリーファ・イブン・サイード, title: スルタン, from: 1888, to: 1890, source: "https://en.wikipedia.org/wiki/Khalifa_bin_Said_of_Zanzibar"}
+    - {name: アリー・イブン・サイード, title: スルタン, from: 1890, to: 1893, note: イギリスの保護国となる, source: "https://en.wikipedia.org/wiki/Ali_bin_Said_of_Zanzibar"}
+    - {name: ハマド・イブン・スワイニ, title: スルタン, from: 1893, to: 1896, source: "https://en.wikipedia.org/wiki/Hamad_bin_Thuwaini"}
+    - {name: ハーリド・イブン・バルガシュ, title: スルタン（イギリスは認めず）, from: 1896, to: 1896, note: イギリス＝ザンジバル戦争（約40分）で追われた, source: "https://en.wikipedia.org/wiki/Khalid_bin_Barghash"}
+    - {name: ハムード・イブン・ムハンマド, title: スルタン, from: 1896, to: 1902, note: 奴隷制を廃止（1897年）, source: "https://en.wikipedia.org/wiki/Hamoud_bin_Mohammed"}
+    - {name: アリー・イブン・ハムード, title: スルタン, from: 1902, to: 1911, source: "https://en.wikipedia.org/wiki/Ali_bin_Hamud"}
+    - {name: ハリーファ・イブン・ハルーブ, title: スルタン, from: 1911, to: 1960, source: "https://en.wikipedia.org/wiki/Khalifa_bin_Harub"}
+    - {name: アブドゥッラー・イブン・ハリーファ, title: スルタン, from: 1960, to: 1963, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Khalifa"}
+    - {name: ジャムシード・イブン・アブドゥッラー, title: スルタン, from: 1963, to: 1964, note: 1964年1月のザンジバル革命で追われた, source: "https://en.wikipedia.org/wiki/Jamshid_bin_Abdullah"}
+    - {name: アベイド・カルメ, title: 大統領（ザンジバル人民共和国）, from: 1964, to: 1964, note: 4月にタンガニーカと連合し、連合共和国の第一副大統領となる, source: "https://en.wikipedia.org/wiki/Abeid_Karume"}
+  periods:
+    - from: 1856
+      to: 1889
+      text: オマーンのサイイド・サイードの死後、ザンジバルと東アフリカ沿岸をあわせた国となった（1861年のカニング裁定でオマーンから分かれる）。丁子（クローブ）の農園と、内陸からの奴隷・象牙の交易で栄えたが、イギリスの圧力で奴隷貿易を禁じた。
+    - from: 1890
+      to: 1963
+      text: 本土の沿岸部をドイツ・イギリスに奪われ（1888–90年）、島はイギリスの保護国となった。1896年のイギリス＝ザンジバル戦争は「史上最も短い戦争」とされる。
+    - from: 1963
+      to: 1964
+      text: 1963年12月に独立したが、翌月の革命でアラブ系のスルタンが追われ、4月にタンガニーカと連合した。
+  source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+
+# ===================================================================== ケニア・ウガンダ・タンザニア（独立後）
+- id: kenya
+  name: ケニア共和国
+  short: ケニア
+  color: "#c0d69a"
+  kind: 共和国
+  home_iso: [KEN]
+  rulers:
+    - {name: ジョモ・ケニヤッタ, title: 首相・大統領, from: 1963, to: 1978, note: 1964年に共和国の大統領, source: "https://ja.wikipedia.org/wiki/ジョモ・ケニヤッタ"}
+    - {name: ダニエル・アラップ・モイ, title: 大統領, from: 1978, to: 2002, note: 1982–91年は一党制, source: "https://ja.wikipedia.org/wiki/ダニエル・アラップ・モイ"}
+    - {name: ムワイ・キバキ, title: 大統領, from: 2002, to: 2013, note: 2007年の選挙後に暴動が起き、多くの人が死んだ, source: "https://ja.wikipedia.org/wiki/ムワイ・キバキ"}
+    - {name: ウフル・ケニヤッタ, title: 大統領, from: 2013, to: 2022, source: "https://ja.wikipedia.org/wiki/ウフル・ケニヤッタ"}
+    - {name: ウィリアム・ルト, title: 大統領, from: 2022, source: "https://ja.wikipedia.org/wiki/ウィリアム・ルト"}
+  periods:
+    - from: 1963
+      to: 1991
+      text: マウマウ戦争（1952–60年）ののち、ケニヤッタのケニア・アフリカ人民族同盟（KANU）の政権で独立。西側寄りの政策で東アフリカの経済の中心となった。モイ政権のもとで一党制。
+    - from: 1991
+      text: 複数政党制に戻る。2010年に新憲法。ソマリアのアル・シャバーブとの戦い（2011年に派兵）とテロ。
+  source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: uganda
+  name: ウガンダ共和国
+  short: ウガンダ
+  color: "#e8cf6f"
+  kind: 共和国
+  home_iso: [UGA]
+  rulers:
+    - {name: ミルトン・オボテ, title: 首相・大統領, from: 1962, to: 1971, note: 1963–66年の大統領はブガンダのカバカ（ムテサ2世）。1966年にカバカを追って実権を握った, source: "https://ja.wikipedia.org/wiki/ミルトン・オボテ"}
+    - {name: イディ・アミン, title: 大統領, from: 1971, to: 1979, note: クーデタで政権を握った独裁者。アジア系住民を追放し、多くの国民が殺された。タンザニアとの戦争に敗れて亡命, source: "https://ja.wikipedia.org/wiki/イディ・アミン"}
+    - {name: ユスフ・ルレ, title: 大統領（暫定）, from: 1979, to: 1979, source: "https://en.wikipedia.org/wiki/Yusuf_Lule"}
+    - {name: ゴドフリー・ビナイサ, title: 大統領（暫定）, from: 1979, to: 1980, note: 1980年5月に軍事委員会（パウロ・ムワンガ）に退けられた, source: "https://en.wikipedia.org/wiki/Godfrey_Binaisa"}
+    - {name: ミルトン・オボテ, title: 大統領, from: 1980, to: 1985, note: 内戦（ブッシュ戦争）で多くの犠牲が出た, source: "https://ja.wikipedia.org/wiki/ミルトン・オボテ"}
+    - {name: ティト・オケロ, title: 軍事評議会議長, from: 1985, to: 1986, source: "https://en.wikipedia.org/wiki/Tito_Okello"}
+    - {name: ヨウェリ・ムセベニ, title: 大統領, from: 1986, note: 国民抵抗軍（NRA）を率いて首都に入った, source: "https://ja.wikipedia.org/wiki/ヨウェリ・ムセベニ"}
+  periods:
+    - from: 1962
+      to: 1971
+      text: ブガンダなどの王国を含む連邦制で独立したが、1966年にオボテが王国を廃止して中央集権にした。
+    - from: 1971
+      to: 1986
+      text: アミンの独裁、タンザニアとの戦争（1978–79年）、オボテの第2次政権と内戦が続いた。
+    - from: 1986
+      text: ムセベニの政権が国を安定させた。北部では神の抵抗軍（LRA）の反乱が続いた（1987–2006年頃）。1993年に伝統的な王国（ブガンダなど）が文化的な地位で復活した。
+  source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: tanzania
+  name: タンザニア連合共和国
+  names:
+    - {from: 1961, to: 1963, name: タンガニーカ, short: タンガニーカ, kind: 共和国}
+    - {from: 1964, name: タンザニア連合共和国, short: タンザニア, kind: 連合共和国}
+  short: タンザニア
+  color: "#8ed2c1"
+  kind: 連合共和国
+  home_iso: [TZA]
+  rulers:
+    - {name: ジュリウス・ニエレレ, title: 首相・大統領, from: 1961, to: 1985, note: 「ウジャマー」（アフリカ型の社会主義）を進め、南部アフリカの解放運動を支えた, source: "https://ja.wikipedia.org/wiki/ジュリウス・ニエレレ"}
+    - {name: アリ・ハッサン・ムウィニ, title: 大統領, from: 1985, to: 1995, source: "https://ja.wikipedia.org/wiki/アリ・ハッサン・ムウィニ"}
+    - {name: ベンジャミン・ムカパ, title: 大統領, from: 1995, to: 2005, source: "https://ja.wikipedia.org/wiki/ベンジャミン・ムカパ"}
+    - {name: ジャカヤ・キクウェテ, title: 大統領, from: 2005, to: 2015, source: "https://ja.wikipedia.org/wiki/ジャカヤ・キクウェテ"}
+    - {name: ジョン・マグフリ, title: 大統領, from: 2015, to: 2021, source: "https://ja.wikipedia.org/wiki/ジョン・マグフリ"}
+    - {name: サミア・スルフ・ハッサン, title: 大統領, from: 2021, note: 初の女性大統領, source: "https://ja.wikipedia.org/wiki/サミア・スルフ・ハッサン"}
+  periods:
+    - from: 1961
+      to: 1985
+      text: ニエレレのタンガニーカ・アフリカ民族同盟（TANU）の政権で独立し、1964年にザンジバルと連合した。一党制のもとウジャマー村の集団農業を進めたが、経済は行き詰まった。1979年、アミンのウガンダを破った。
+    - from: 1985
+      text: 市場経済に移り、1992年に複数政党制。与党（革命党）の政権が続く。
+  source: "https://ja.wikipedia.org/wiki/タンザニア"
+
+# ===================================================================== 大湖地方の王国
+- id: buganda
+  name: ブガンダ王国
+  short: ブガンダ
+  color: "#e7c27a"
+  kind: 王国
+  home_iso: [UGA]
+  rulers:
+    - {name: セマコキロ, title: カバカ（王）, from: 1797, to: 1814, note: 年代は推定, source: "https://en.wikipedia.org/wiki/Ssemakookiro_of_Buganda"}
+    - {name: カマニャ, title: カバカ, from: 1814, to: 1832, source: "https://en.wikipedia.org/wiki/Kamaanya_of_Buganda"}
+    - {name: スナ2世, title: カバカ, from: 1832, to: 1856, note: ザンジバルのアラブ商人が来るようになった, source: "https://en.wikipedia.org/wiki/Suna_II_of_Buganda"}
+    - {name: ムテサ1世, title: カバカ, from: 1856, to: 1884, note: スピーク（1862年）・スタンリー（1875年）を迎え、キリスト教の宣教師を招いた, source: "https://ja.wikipedia.org/wiki/ムテサ1世"}
+    - {name: ムワンガ2世, title: カバカ, from: 1884, to: 1897, note: キリスト教徒を迫害した（ウガンダの殉教者）。1888–89年に一時退けられた。1897年にイギリスに反乱して敗れた, source: "https://en.wikipedia.org/wiki/Mwanga_II_of_Buganda"}
+    - {name: ダウディ・チュワ2世, title: カバカ, from: 1897, to: 1939, note: 幼い王の摂政（アポロ・カグワなど）が1900年のウガンダ協定を結んだ, source: "https://en.wikipedia.org/wiki/Daudi_Cwa_II_of_Buganda"}
+    - {name: ムテサ2世, title: カバカ, from: 1939, to: 1966, note: 1953–55年にイギリスに追放された。独立後のウガンダ大統領（1963–66年）, source: "https://ja.wikipedia.org/wiki/ムテサ2世"}
+  periods:
+    - from: 1648
+      to: 1893
+      text: ヴィクトリア湖北西岸のバナナ栽培の王国。カバカ（王）のもとに首長を任命する中央集権の国で、18世紀からブニョロの地を奪って広がった。19世紀にはアラブ商人・キリスト教の宣教師が来て、宗派の争いが起きた。
+    - from: 1894
+      to: 1961
+      text: イギリスの保護国となり、1900年のウガンダ協定で自治と土地の権利を認められた。ウガンダ保護領の中心として、間接統治の担い手となった。
+  note: 18世紀以前のカバカの年代は口承による推定で説が分かれるので省いた。1966年にオボテ政権に廃止され、1993年に文化的な王国として復活（ムウェンダ・ムテビ2世）。
+  source: "https://ja.wikipedia.org/wiki/ブガンダ王国"
+
+- id: bunyoro
+  name: ブニョロ＝キタラ王国
+  short: ブニョロ
+  color: "#c888bc"
+  kind: 王国
+  home_iso: [UGA]
+  rulers:
+    - {name: カムラシ, title: オムカマ（王）, from: 1852, to: 1869, note: スピーク・グラント、ベーカーを迎えた, source: "https://en.wikipedia.org/wiki/Kamurasi"}
+    - {name: カバレガ, title: オムカマ, from: 1870, to: 1899, note: 王国を立て直し、エジプト（ベーカー）・イギリスに抵抗した。1899年に捕らえられ、セーシェルに流された, source: "https://en.wikipedia.org/wiki/Kabalega"}
+  periods:
+    - from: 1648
+      to: 1893
+      text: 大湖地方の古い王国（ビト朝）。17世紀には大湖地方で最も強かったが、18–19世紀にブガンダに領土を奪われ、トロが分かれた（1830年）。カバレガが王国を立て直した。
+  note: 1894年からイギリス・ブガンダ軍に征服され、1899年からウガンダ保護領の中の王国（イギリスの間接統治）。
+  source: "https://ja.wikipedia.org/wiki/ブニョロ王国"
+
+- id: toro
+  name: トロ王国
+  short: トロ
+  color: "#d6b8e2"
+  kind: 王国
+  home_iso: [UGA]
+  rulers:
+    - {name: カボヨ・オリミ1世, title: オムカマ（王）, from: 1830, to: 1865, note: ブニョロの王子で、独立してトロ王国を建てた, source: "https://en.wikipedia.org/wiki/Kaboyo_Olimi_I_of_Toro"}
+    - {name: カサガマ（キエバンベ3世）, title: オムカマ, from: 1891, to: 1928, note: ルガードに王に立てられた, source: "https://en.wikipedia.org/wiki/Kasagama_of_Toro"}
+  periods:
+    - from: 1830
+      to: 1895
+      text: ブニョロから分かれた王国。1876年にカバレガに再征服されたが、1891年にイギリス東アフリカ会社の支援で再興した。1896年からウガンダ保護領の中の王国。
+  source: "https://ja.wikipedia.org/wiki/トロ王国"
+
+- id: nkore
+  name: ンコレ王国（アンコーレ）
+  short: アンコーレ
+  color: "#b5c98a"
+  kind: 王国
+  home_iso: [UGA]
+  rulers:
+    - {name: ンタレ5世, title: ムガベ（王）, from: 1867, to: 1895, source: "https://en.wikipedia.org/wiki/Ntare_V_of_Nkore"}
+    - {name: カハヤ2世, title: ムガベ, from: 1895, to: 1944, note: 1901年にアンコーレ協定を結んだ, source: "https://en.wikipedia.org/wiki/Kahaya_II_of_Nkore"}
+  periods:
+    - from: 1648
+      to: 1897
+      text: ウガンダ南西部の牛を飼うヒマ人の王が農耕民のイル人を治めた王国。19世紀に周りの小王国を従えて広がった。1898年からイギリスの保護下（1901年アンコーレ協定）。
+  source: "https://en.wikipedia.org/wiki/Ankole"
+
+- id: karagwe
+  name: カラグウェ王国
+  short: カラグウェ
+  color: "#cdb3a0"
+  kind: 王国
+  home_iso: [TZA]
+  rulers:
+    - {name: ルマニカ1世, title: ムガベ（王）, from: 1855, to: 1878, note: スピーク・グラント（1861年）、スタンリー（1876年）を迎えた, source: "https://en.wikipedia.org/wiki/Rumanyika_I_of_Karagwe"}
+  periods:
+    - from: 1648
+      to: 1890
+      text: ヴィクトリア湖の西の王国。ザンジバルの隊商とブガンダを結ぶ交易路の中継地として19世紀に栄えた。1890年からドイツ領東アフリカ。
+  source: "https://en.wikipedia.org/wiki/Karagwe_Kingdom"
+
+- id: rwanda_kingdom
+  name: ルワンダ王国
+  short: ルワンダ
+  color: "#b7dde6"
+  kind: 王国
+  home_iso: [RWA]
+  rulers:
+    - {name: ユヒ4世ガヒンディロ, title: ムワミ（王）, from: 1797, to: 1830, note: 年代は推定, source: "https://en.wikipedia.org/wiki/Yuhi_IV_Gahindiro"}
+    - {name: ムタラ2世ルウォゲラ, title: ムワミ, from: 1830, to: 1853, note: 年代は推定。ギサカを併合した, source: "https://en.wikipedia.org/wiki/Mutara_II_Rwogera"}
+    - {name: キゲリ4世ルワブギリ, title: ムワミ, from: 1853, to: 1895, note: 遠征で王国を最大にし、中央集権を進めた, source: "https://en.wikipedia.org/wiki/Kigeli_IV_Rwabugiri"}
+    - {name: ミバンブウェ4世ルタリンドワ, title: ムワミ, from: 1895, to: 1896, note: ルチュンシュのクーデタで殺された, source: "https://en.wikipedia.org/wiki/Mibambwe_IV_Rutarindwa"}
+    - {name: ユヒ5世ムシンガ, title: ムワミ, from: 1896, to: 1931, note: ドイツの保護を受け入れた。ベルギーに退けられた, source: "https://en.wikipedia.org/wiki/Yuhi_V_Musinga"}
+    - {name: ムタラ3世ルダヒグワ, title: ムワミ, from: 1931, to: 1959, note: カトリックに改宗した, source: "https://en.wikipedia.org/wiki/Mutara_III_Rudahigwa"}
+    - {name: キゲリ5世ンダヒンドゥルワ, title: ムワミ, from: 1959, to: 1961, note: 1961年に王政が廃止され亡命, source: "https://en.wikipedia.org/wiki/Kigeli_V_Ndahindurwa"}
+  periods:
+    - from: 1648
+      to: 1896
+      text: ニギニャ王家のムワミ（王）がツチ人の首長を通じて治めた王国。19世紀のルワブギリのもとで周りの小国を併合した。
+    - from: 1897
+      to: 1961
+      text: ドイツ、のちベルギーの保護・委任統治のもとで王政が続いた。ベルギーはツチ人を優遇し、身分証にツチ・フツの区別を記した（のちの対立の一因）。
+  note: 18世紀以前の王の年代は口承による推定で説が分かれるので省いた。
+  source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+
+- id: rwanda
+  name: ルワンダ共和国
+  short: ルワンダ
+  color: "#afa1ce"
+  kind: 共和国
+  home_iso: [RWA]
+  rulers:
+    - {name: グレゴワール・カイバンダ, title: 大統領, from: 1961, to: 1973, note: フツ人の政党（パルメフツ）の指導者, source: "https://ja.wikipedia.org/wiki/グレゴワール・カイバンダ"}
+    - {name: ジュベナール・ハビャリマナ, title: 大統領, from: 1973, to: 1994, note: 1994年4月に乗っていた飛行機が撃墜されて死亡し、虐殺の引き金となった, source: "https://ja.wikipedia.org/wiki/ジュベナール・ハビャリマナ"}
+    - {name: パスツール・ビジムング, title: 大統領, from: 1994, to: 2000, note: 実権は副大統領カガメにあった, source: "https://en.wikipedia.org/wiki/Pasteur_Bizimungu"}
+    - {name: ポール・カガメ, title: 大統領, from: 2000, note: ルワンダ愛国戦線（RPF）の指導者, source: "https://ja.wikipedia.org/wiki/ポール・カガメ"}
+  periods:
+    - from: 1962
+      to: 1990
+      text: フツ人の政権のもとで独立。多くのツチ人が近隣国に逃れた。
+    - from: 1990
+      to: 1994
+      text: ウガンダから攻め込んだツチ人中心のルワンダ愛国戦線（RPF）との内戦。1994年4–7月、フツ人の過激派がツチ人と穏健派のフツ人を約80万人殺した（ルワンダ虐殺）。RPF が全土を押さえて虐殺を止めた。
+    - from: 1994
+      text: カガメのRPF政権。経済成長を進める一方、コンゴ戦争（1996年–）に介入した。
+  source: "https://ja.wikipedia.org/wiki/ルワンダ"
+
+- id: burundi
+  name: ブルンジ
+  names:
+    - {to: 1965, name: ブルンジ王国, short: ブルンジ, kind: 王国}
+    - {from: 1966, name: ブルンジ共和国, short: ブルンジ, kind: 共和国}
+  short: ブルンジ
+  color: "#e6a6a0"
+  kind: 王国
+  home_iso: [BDI]
+  rulers:
+    - {name: ンタレ4世ルガンバ, title: ムワミ（王）, from: 1796, to: 1850, note: 年代は推定。征服で王国を広げた, source: "https://en.wikipedia.org/wiki/Ntare_IV_of_Burundi"}
+    - {name: ムウェジ4世ギサボ, title: ムワミ, from: 1850, to: 1908, note: ドイツと戦ったのち保護を受け入れた（1903年）, source: "https://en.wikipedia.org/wiki/Mwezi_IV_Gisabo_of_Burundi"}
+    - {name: ムタガ4世ムビキジェ, title: ムワミ, from: 1908, to: 1915, source: "https://en.wikipedia.org/wiki/Mutaga_IV_Mbikije_of_Burundi"}
+    - {name: ムワンブツァ4世, title: ムワミ, from: 1915, to: 1966, source: "https://en.wikipedia.org/wiki/Mwambutsa_IV_Bangiricenge_of_Burundi"}
+    - {name: ンタレ5世, title: ムワミ, from: 1966, to: 1966, note: 11月にミコンベロのクーデタで退けられ、王政が終わった, source: "https://en.wikipedia.org/wiki/Ntare_V_of_Burundi"}
+    - {name: ミシェル・ミコンベロ, title: 大統領, from: 1966, to: 1976, note: ツチ人の軍人の政権。1972年にフツ人の大量虐殺, source: "https://en.wikipedia.org/wiki/Michel_Micombero"}
+    - {name: ジャン＝バティスト・バガザ, title: 大統領, from: 1976, to: 1987, source: "https://en.wikipedia.org/wiki/Jean-Baptiste_Bagaza"}
+    - {name: ピエール・ブヨヤ, title: 大統領, from: 1987, to: 1993, source: "https://en.wikipedia.org/wiki/Pierre_Buyoya"}
+    - {name: メルシオル・ンダダエ, title: 大統領, from: 1993, to: 1993, note: 初のフツ人の大統領。就任4か月で暗殺され、内戦となった, source: "https://en.wikipedia.org/wiki/Melchior_Ndadaye"}
+    - {name: シプリアン・ンタリャミラ, title: 大統領, from: 1994, to: 1994, note: ハビャリマナと同じ飛行機で死亡, source: "https://en.wikipedia.org/wiki/Cyprien_Ntaryamira"}
+    - {name: シルヴェストル・ンティバントゥンガニャ, title: 大統領, from: 1994, to: 1996, source: "https://en.wikipedia.org/wiki/Sylvestre_Ntibantunganya"}
+    - {name: ピエール・ブヨヤ, title: 大統領, from: 1996, to: 2003, source: "https://en.wikipedia.org/wiki/Pierre_Buyoya"}
+    - {name: ドミティアン・ンダイゼイエ, title: 大統領, from: 2003, to: 2005, source: "https://en.wikipedia.org/wiki/Domitien_Ndayizeye"}
+    - {name: ピエール・ンクルンジザ, title: 大統領, from: 2005, to: 2020, source: "https://en.wikipedia.org/wiki/Pierre_Nkurunziza"}
+    - {name: エヴァリスト・ンダイシミエ, title: 大統領, from: 2020, source: "https://en.wikipedia.org/wiki/%C3%89variste_Ndayishimiye"}
+  periods:
+    - from: 1648
+      to: 1902
+      text: ガンワと呼ばれる王族の首長たちを通じてムワミ（王）が治めた王国。19世紀のンタレ4世・ムウェジ4世のもとで今の国の範囲に広がった。
+    - from: 1903
+      to: 1961
+      text: ドイツ、のちベルギーの保護・委任統治（ルアンダ＝ウルンディ）のもとで王政が続いた。
+    - from: 1962
+      text: 王国として独立したが、1966年に共和制となった。ツチ人中心の軍とフツ人の対立から、1972年の虐殺や1993–2005年の内戦が起きた。2005年からフツ人中心の政権。
+  note: 18世紀以前の王の年代ははっきりしない。
+  source: "https://ja.wikipedia.org/wiki/ブルンジ"
+
+# ===================================================================== タンザニア内陸の諸国
+- id: shambaa
+  name: シャンバー王国（ウサンバラ）
+  short: シャンバー
+  color: "#95addb"
+  kind: 王国
+  home_iso: [TZA]
+  rulers:
+    - {name: キムウェリ・イェ・ニュンバイ, title: 王, from: 1815, to: 1862, note: 年代は推定。王国の最盛期, source: "https://en.wikipedia.org/wiki/Kimweri_ye_Nyumbai"}
+  periods:
+    - from: 1730
+      to: 1885
+      text: ウサンバラ山地のキリンディ家の王国。キムウェリの死（1862年）ののち内紛で分裂した。
+  source: "https://en.wikipedia.org/wiki/Shambaa_Kingdom"
+
+- id: hehe
+  name: ヘヘ王国
+  short: ヘヘ
+  color: "#d1b68c"
+  kind: 王国
+  home_iso: [TZA]
+  rulers:
+    - {name: ムニギュンバ, title: 首長, from: 1855, to: 1879, source: "https://en.wikipedia.org/wiki/Munyigumba"}
+    - {name: ムクワワ, title: 首長, from: 1879, to: 1898, note: 1891年にルガロでドイツ軍を破った。1898年に追い詰められて自決, source: "https://ja.wikipedia.org/wiki/ムクワワ"}
+  periods:
+    - from: 1855
+      to: 1898
+      text: タンザニア南部高原のヘヘ人の国。隊商路を押さえ、ドイツの侵略に最も強く抵抗した。
+  source: "https://en.wikipedia.org/wiki/Hehe_people"
+
+- id: mirambo
+  name: ミランボの国（ウランボ）
+  short: ミランボ
+  color: "#c3cf9f"
+  kind: 首長国
+  home_iso: [TZA]
+  rulers:
+    - {name: ミランボ, title: 首長, from: 1871, to: 1884, note: 「アフリカのナポレオン」と呼ばれた, source: "https://en.wikipedia.org/wiki/Mirambo"}
+  periods:
+    - from: 1871
+      to: 1884
+      text: ニャムウェジ人の首長ミランボが、銃を持つ傭兵（ルガルガ）で作った国。ザンジバルから内陸への隊商路を押さえ、タボラのアラブ商人と戦った。
+  source: "https://en.wikipedia.org/wiki/Mirambo"

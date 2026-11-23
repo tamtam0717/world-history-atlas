@@ -1,0 +1,5807 @@
+# F4 中部・南部アフリカとインド洋の島々（CAF・GAB・COG・COD・AGO・ZMB・MWI・MOZ・ZWE・BWA・NAM・ZAF・LSO・SWZ・MDG・COM・MYT・REU・MUS・SYC・SHN・IOT・ATF）の地域と所属の変遷（1648–2025）
+# scratchpad/f4/gen.py で生成した（各ピースはちょうど1つの地域に属する）。手で直してもよい。
+# 方針（docs/agent-brief-africa.md）：
+# - ヨーロッパの砦・港・実際に治めた植民地は宗主国の色＋label。ベルリン会議前後の「主張・勢力圏」だけの内陸は certainty: nominal。実効支配が及んだ年から濃く塗る。
+# - コンゴ王国・ルンダ・ルバ・ズールー・ンデベレ・ガザ・メリナなどアフリカの国家は独自の政体（範囲があいまいなら uncertain）。大きな国家のない所は owner: null（note に住民）。
+# - 間接統治が明確な保護領（バストランド・ベチュアナランド・スワジランド・バロツェランド・テケ王国・コモロのスルタン国・ムタパなど）は宗主国の certainty: indirect＋label。
+# - 南アフリカのホームランド（バントゥースタン）は描かない。ウォルビス・ベイ（1994 年までイギリス→南アフリカ領）・キオンガ三角地帯はピースより小さいので描かない。
+# - 独立後の内戦（アンゴラの UNITA・FNLA、コンゴのカタンガ・南カサイ・RCD・MLC・M23、中央アフリカの旧セレカ、アンジュアンの分離）は年末の主な支配を独自の政体＋uncertain。
+
+- id: cd_kongo_central
+  name: 下コンゴ（コンゴ王国の北部）
+  select:
+    pieces: [COD-Kongo_Central]
+  timeline:
+    - from: 1648
+      owner: "kongo"
+      note: "コンゴ川の南はコンゴ王国の北東部の州（ンプンバ・ンスンディ）。北岸のマヨンベはロアンゴ王国などの地"
+      source: "https://ja.wikipedia.org/wiki/コンゴ王国"
+    - from: 1666
+      owner: "kongo"
+      certainty: "uncertain"
+      cause: "ムブウィラの戦い（1665）で国王が戦死し、王国が内乱で分裂する"
+      source: "https://ja.wikipedia.org/wiki/コンゴ王国"
+    - from: 1709
+      owner: "kongo"
+      cause: "ペドロ4世が王国を再統一する"
+      source: "https://ja.wikipedia.org/wiki/コンゴ王国"
+    - from: 1885
+      owner: "congo_free_state"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（首都ボマ）"
+      note: "スタンリーが1879–84年にコンゴ国際協会のために川沿いに拠点を作り、首長たちと条約を結んだ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_kinshasa
+  name: キンシャサ（レオポルドヴィル）
+  select:
+    pieces: [COD-Kinshasa]
+  timeline:
+    - from: 1648
+      owner: "tio"
+      certainty: "uncertain"
+      note: "スタンリー・プールの南岸はテケ（ティオ）王国の勢力圏で、フンブなどの首長の市場町があった"
+      source: "https://en.wikipedia.org/wiki/Anziku_Kingdom"
+    - from: 1881
+      owner: "congo_free_state"
+      cause: "スタンリーがコンゴ国際協会の拠点レオポルドヴィルを建設する"
+      source: "https://ja.wikipedia.org/wiki/キンシャサ"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_kwango
+  name: クワンゴ（ヤカ王国）
+  select:
+    pieces: [COD-Kwango]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ヤカなどの人々の地。18世紀にルンダ系のヤカ王国ができ、ルンダ王国に貢納した"
+    - from: 1700
+      owner: "lunda"
+      certainty: "uncertain"
+      cause: "ルンダ王国の勢力が西のクワンゴ川に及び、ヤカ王国が貢納国となる"
+      source: "https://en.wikipedia.org/wiki/Yaka_people"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1895
+      owner: "congo_free_state"
+      cause: "コンゴ自由国の軍（公安軍）と駐屯地が置かれ、支配が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_kwilu_maindombe
+  name: クウィル・マイ＝ンドンベ
+  select:
+    pieces: [COD-Kwilu, COD-Mai_Ndombe]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ペンデ・ムバラ・テケ北部などの人々の地。大きな国家はなかった（東のクバ王国・南のルンダ王国の外縁）"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1891
+      owner: "congo_free_state"
+      cause: "コンゴ自由国の軍（公安軍）と駐屯地が置かれ、支配が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "drc"
+      certainty: "uncertain"
+      cause: "クウィルの反乱。ムレレの率いる反乱軍がクウィルの森林部を押さえる（1月〜）"
+      source: "https://en.wikipedia.org/wiki/Kwilu_rebellion"
+    - from: 1966
+      owner: "drc"
+      cause: "政府軍がクウィルの反乱を鎮める（1965年末）"
+      source: "https://en.wikipedia.org/wiki/Kwilu_rebellion"
+
+- id: cd_kuba
+  name: クバ王国（カサイ西部）
+  select:
+    pieces: [COD-Kasai]
+  timeline:
+    - from: 1648
+      owner: "kuba"
+      certainty: "uncertain"
+      note: "17世紀初めにシャーム・ア・ンブルがサンクル川とカサイ川の間にクバ王国を建てたとされる"
+      source: "https://en.wikipedia.org/wiki/Kuba_Kingdom"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1900
+      owner: "congo_free_state"
+      cause: "コンゴ自由国の公安軍がクバの都ンシェンゲを攻め（1899–1900）、ゴムの取り立てが始まる"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_kasai_central
+  name: 中央カサイ（ルルア）
+  select:
+    pieces: [COD-Central_Kasai]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ルルア・ルバ＝カサイの首長の地。大きな国家はなかった（東のルバ王国の外縁）"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1886
+      owner: "congo_free_state"
+      cause: "ルルアブール（カナンガ）に拠点が置かれる（1884）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_sankuru
+  name: サンクル（テテラ）
+  select:
+    pieces: [COD-Sankuru]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "テテラなどの人々の地。19世紀後半にはスワヒリ＝アラブ商人と結んだンゴンゴ・レテタが勢力を広げた"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1894
+      owner: "congo_free_state"
+      cause: "コンゴ・アラブ戦争（1892–94）の後、公安軍が支配する"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_maniema
+  name: マニエマ（ニャングウェ・カソンゴ）
+  select:
+    pieces: [COD-Maniema]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "森林の首長の地。大きな国家はなかった"
+    - from: 1870
+      owner: "tippu_tip"
+      overlord: "zanzibar"
+      certainty: "uncertain"
+      cause: "ザンジバルのスワヒリ＝アラブ商人（ティップ・ティプら）がニャングウェ・カソンゴに拠点を置き、象牙と奴隷を求めて勢力を広げる"
+      source: "https://ja.wikipedia.org/wiki/ティップー・ティプ"
+    - from: 1887
+      owner: "congo_free_state"
+      certainty: "indirect"
+      label: "スタンリー・フォールズ地区（ティップ・ティプ）"
+      cause: "レオポルド2世がティップ・ティプをスタンリー・フォールズ地区の知事に任じる"
+      source: "https://ja.wikipedia.org/wiki/ティップー・ティプ"
+    - from: 1893
+      owner: "congo_free_state"
+      cause: "コンゴ・アラブ戦争で公安軍がニャングウェ・カソンゴを落とす"
+      source: "https://en.wikipedia.org/wiki/Congo_Arab_war"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "stanleyville"
+      certainty: "uncertain"
+      cause: "ルムンバ派のギゼンガがスタンリーヴィルに政府を立て、東部を押さえる（12月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1961
+      owner: "drc"
+      cause: "ギゼンガ派がアドゥラ内閣に合流し、スタンリーヴィル政府が解消する（8月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "drc"
+      certainty: "uncertain"
+      cause: "シンバの反乱。反乱軍がキンドゥ・カソンゴなどマニエマを押さえる（7–8月）"
+      note: "キンドゥは11月に政府軍と傭兵が取り戻したが、年末にも南部などに反乱軍の地域が残った（南キヴのフィジでも抵抗が続いた）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1965
+      owner: "drc"
+      cause: "政府軍と白人傭兵が東部を取り戻す（1965年）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1998
+      owner: "rcd"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争が始まり、ルワンダが支援するコンゴ民主連合（RCD）が東部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができ、反政府勢力が政府に加わる"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+
+- id: cd_tshopo
+  name: チョポ（スタンリーヴィル＝キサンガニ）
+  select:
+    pieces: [COD-Tshopo]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "森林の首長の地。大きな国家はなかった"
+    - from: 1883
+      owner: "tippu_tip"
+      overlord: "zanzibar"
+      certainty: "uncertain"
+      cause: "スワヒリ＝アラブ商人がスタンリー・フォールズ（ボヨマ滝）の一帯に勢力を広げる"
+      source: "https://ja.wikipedia.org/wiki/ティップー・ティプ"
+    - from: 1887
+      owner: "congo_free_state"
+      certainty: "indirect"
+      label: "スタンリー・フォールズ地区（ティップ・ティプ）"
+      cause: "レオポルド2世がティップ・ティプをスタンリー・フォールズ地区の知事に任じる"
+      source: "https://ja.wikipedia.org/wiki/ティップー・ティプ"
+    - from: 1893
+      owner: "congo_free_state"
+      cause: "コンゴ・アラブ戦争で公安軍がスワヒリ＝アラブ商人の勢力を破る"
+      source: "https://en.wikipedia.org/wiki/Congo_Arab_war"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "stanleyville"
+      certainty: "uncertain"
+      cause: "ルムンバ派のギゼンガがスタンリーヴィルに「コンゴ自由共和国」政府を立てる（12月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1961
+      owner: "drc"
+      cause: "ギゼンガ派がアドゥラ内閣に合流し、スタンリーヴィル政府が解消する（8月）"
+      note: "1964年にはシンバの反乱でスタンリーヴィルが再び反乱軍に落ちた（11月にベルギー・アメリカの空挺作戦で奪回）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1998
+      owner: "rcd"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争で、キサンガニがルワンダ・ウガンダ軍と反政府勢力に落ちる（8月）"
+      note: "キサンガニでは1999–2000年にルワンダ軍とウガンダ軍が衝突した"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができる"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+
+- id: cd_kivu
+  name: キヴ
+  select:
+    pieces: [COD-North_Kivu, COD-South_Kivu]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "シ（ブシ）・フンデ・ナンデなどの小王国の地。東のルワンダ・ブルンジ王国との境"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1898
+      owner: "congo_free_state"
+      cause: "コンゴ自由国の軍（公安軍）と駐屯地が置かれ、支配が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1996
+      owner: "afdl"
+      certainty: "uncertain"
+      cause: "第一次コンゴ戦争。ルワンダ・ウガンダが支援するカビラのコンゴ・ザイール解放民主勢力連合（AFDL）がウヴィラ・ブカヴ（10月末）・ゴマ（11月1日）・ブテンボを落とし、南北キヴを押さえる"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
+    - from: 1997
+      owner: "drc"
+      cause: "AFDLがキンシャサに入り、モブツが追放される（5月）"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
+    - from: 1998
+      owner: "rcd"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争が始まり、ルワンダが支援するコンゴ民主連合（RCD）がゴマ・ブカヴを押さえる（8月）"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができる"
+      note: "その後も武装勢力の活動が続いた。2012年にはM23がゴマを一時占領した"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2025
+      owner: "drc"
+      certainty: "uncertain"
+      label: "M23 がゴマ・ブカヴを支配"
+      cause: "ルワンダが支援するM23（コンゴ川同盟）がゴマ（1月）・ブカヴ（2月）を落とし、南北キヴの中部（ルチュル・マシシ・ニーラゴンゴ・カレヘ・カバレなど）を押さえる"
+      note: "ピースが州単位で M23 の範囲だけを分けられないため、コンゴ民主共和国の不確実（uncertain）＋副ラベルで表す。北キヴ北部（ベニ・ブテンボ・ルベロ）や南キヴ南部（ウヴィラ・フィジ・シャブンダ）は政府軍・ワザレンド民兵・ブルンジ軍の側。6月にワシントンでコンゴ・ルワンダの和平合意、ドーハでM23との枠組み合意が結ばれたが、年末も支配が続いた"
+      source: "https://en.wikipedia.org/wiki/M23_campaign_(2022–present)"
+
+- id: cd_ituri_uele
+  name: ウエレ
+  select:
+    pieces: [COD-Upper_Uele, COD-Lower_Uele]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "森林とサバンナの首長の地"
+    - from: 1800
+      owner: "zande"
+      certainty: "uncertain"
+      cause: "ザンデ（アザンデ）の諸王国・マンベトゥ王国がウエレ川流域に広がる"
+      source: "https://en.wikipedia.org/wiki/Zande_people"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "コンゴ自由国の領域とされる（まだ支配は及ばない）"
+      note: "1880年代にはスーダンのマフディー派・アラブ商人の勢力も及んだ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1896
+      owner: "congo_free_state"
+      cause: "公安軍がウエレ川流域を征服し、ナイル川方面に進む"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "stanleyville"
+      certainty: "uncertain"
+      cause: "ルムンバ派のギゼンガがスタンリーヴィルに政府を立て、東部を押さえる（12月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1961
+      owner: "drc"
+      cause: "スタンリーヴィル政府が解消する（8月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "simba"
+      certainty: "uncertain"
+      cause: "シンバの反乱。ルムンバ派の反乱軍がスタンリーヴィルを落として「コンゴ人民共和国」を宣言し（8–9月）、北東部の大半を押さえる"
+      note: "11月のスタンリーヴィル奪回（ドラゴン・ルージュ作戦）の後も、年末にはウエレ・イトゥリに反乱軍の地域が残った"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1965
+      owner: "drc"
+      cause: "政府軍と白人傭兵が北東部を取り戻す（1965年）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1998
+      owner: "mlc"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争で、ウガンダ軍とウガンダが支援する反政府勢力（コンゴ解放運動 MLC・RCD解放運動）が北東部を押さえる"
+      note: "イトゥリではウガンダ軍の占領下でヘマ・レンドゥの民族紛争が激しくなった（1999–2003）"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができ、ウガンダ軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+
+- id: cd_ituri
+  name: イトゥリ（ブニア）
+  select:
+    pieces: [COD-Ituri]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "森林とサバンナの首長の地"
+    - from: 1800
+      owner: "zande"
+      certainty: "uncertain"
+      cause: "ザンデ（アザンデ）の諸王国・マンベトゥ王国がウエレ川流域に広がる"
+      source: "https://en.wikipedia.org/wiki/Zande_people"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "コンゴ自由国の領域とされる（まだ支配は及ばない）"
+      note: "1880年代にはスーダンのマフディー派・アラブ商人の勢力も及んだ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1896
+      owner: "congo_free_state"
+      cause: "公安軍がウエレ川流域を征服し、ナイル川方面に進む"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "stanleyville"
+      certainty: "uncertain"
+      cause: "ルムンバ派のギゼンガがスタンリーヴィルに政府を立て、東部を押さえる（12月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1961
+      owner: "drc"
+      cause: "スタンリーヴィル政府が解消する（8月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "simba"
+      certainty: "uncertain"
+      cause: "シンバの反乱。ルムンバ派の反乱軍がスタンリーヴィルを落として「コンゴ人民共和国」を宣言し（8–9月）、北東部の大半を押さえる"
+      note: "11月のスタンリーヴィル奪回（ドラゴン・ルージュ作戦）の後も、年末にはウエレ・イトゥリに反乱軍の地域が残った"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1965
+      owner: "drc"
+      cause: "政府軍と白人傭兵が北東部を取り戻す（1965年）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1996
+      owner: "afdl"
+      certainty: "uncertain"
+      cause: "第一次コンゴ戦争。ルワンダ・ウガンダが支援するカビラのコンゴ・ザイール解放民主勢力連合（AFDL）が東部を落とす（ブニアは12月24日）"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
+    - from: 1997
+      owner: "drc"
+      cause: "AFDLがキンシャサに入り、モブツが追放される（5月）"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
+    - from: 1998
+      owner: "mlc"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争で、ウガンダ軍とウガンダが支援する反政府勢力（コンゴ解放運動 MLC・RCD解放運動）が北東部を押さえる"
+      note: "イトゥリではウガンダ軍の占領下でヘマ・レンドゥの民族紛争が激しくなった（1999–2003）"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができ、ウガンダ軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+
+- id: cd_equateur_north
+  name: 赤道州北部・ウバンギ
+  select:
+    pieces: [COD-Nord_Ubangi, COD-Sud_Ubangi, COD-Mongala]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ンバカ・ンバンジャ・ンゴンベなどの首長の地"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1891
+      owner: "congo_free_state"
+      cause: "コンゴ自由国の軍（公安軍）と駐屯地が置かれ、支配が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1998
+      owner: "mlc"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争で、ベンバのコンゴ解放運動（MLC）がウガンダの支援で赤道州北部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができ、MLCが政府に加わる"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+
+- id: cd_equateur
+  name: 赤道州（コキヤヴィル＝ムバンダカ）
+  select:
+    pieces: [COD-Equateur, COD-Tshuapa]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "モンゴなどの赤道の熱帯雨林の人々の地。大きな国家はなかった"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1890
+      owner: "congo_free_state"
+      cause: "コキヤヴィル（ムバンダカ）に拠点が置かれ、ゴムの取り立てが始まる"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "drc"
+      cause: "コンゴがベルギーから独立する（6月30日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_luba
+  name: ルバ王国（上ロマミ・ロマミ）
+  select:
+    pieces: [COD-Haut_Lomami, COD-Lomami]
+  timeline:
+    - from: 1648
+      owner: "luba"
+      certainty: "uncertain"
+      note: "ルバ王国はロマミ川とルアラバ川の間のウペンバ盆地を中心とした。19世紀前半のイルンガ・カバレの時代に最も広がった"
+      source: "https://ja.wikipedia.org/wiki/ルバ王国"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1892
+      owner: "congo_free_state"
+      cause: "カタンガ遠征で公安軍が進出し、ルバ王国が分裂する"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "katanga"
+      certainty: "uncertain"
+      cause: "チョンベがカタンガ国の独立を宣言する（7月）"
+      note: "北カタンガではカタンガの分離に反対するルバ人（バルバカット）と中央政府軍が抵抗し、チョンベの支配は及ばなかった所が多い。ロマミ（カビンダ地方）は当時のカサイ州で、カタンガ国の外（下の cd_lomami）"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+    - from: 1963
+      owner: "drc"
+      cause: "国連軍の作戦でカタンガの分離が終わる（1月）"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+
+- id: cd_lomami
+  name: ロマミ（カビンダ地方、当時のカサイ州）
+  select:
+    pieces: [COD-Lomami]
+  timeline:
+    - from: 1960
+      owner: "drc"
+      certainty: "uncertain"
+      cause: "コンゴの独立。ロマミ（カビンダ地方）はカサイ州で、カタンガ国の範囲ではない"
+      note: "南カサイ鉱山国（カロンジ）が東部の一部を主張し、中央政府軍・カタンガ側との戦いの場になった"
+      source: "https://en.wikipedia.org/wiki/South_Kasai"
+    - from: 1963
+      owner: "drc"
+      cause: "カタンガ・南カサイの分離が終わる"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+
+- id: cd_tanganyika
+  name: タンガニーカ湖西岸（北カタンガ）
+  select:
+    pieces: [COD-Tanganyika]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "タブワ人などの小さな首長国の地"
+      source: "https://ja.wikipedia.org/wiki/ルバ王国"
+    - from: 1800
+      owner: "luba"
+      certainty: "uncertain"
+      cause: "ルバ王国が東へ広がり、タンガニーカ湖の西岸に達する（18世紀末〜19世紀初め）"
+      source: "https://en.wikipedia.org/wiki/Luba_Empire"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1892
+      owner: "congo_free_state"
+      cause: "コンゴ自由国の軍（公安軍）と駐屯地が置かれ、支配が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "katanga"
+      certainty: "uncertain"
+      cause: "チョンベがカタンガ国の独立を宣言する（7月）"
+      note: "北カタンガではカタンガの分離に反対するルバ人（バルバカット）が抵抗し、支配ははっきりしなかった"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+    - from: 1963
+      owner: "drc"
+      cause: "国連軍の作戦でカタンガの分離が終わる（1月）"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+    - from: 1998
+      owner: "rcd"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争で、RCDとルワンダ軍がカレミを落とす"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができる"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+
+- id: cd_lualaba
+  name: ルアラバ（ルンダの都ムスンバ）
+  select:
+    pieces: [COD-Lualaba]
+  timeline:
+    - from: 1648
+      owner: "lunda"
+      certainty: "uncertain"
+      note: "東部（コルウェジより東）は1856–91年にムシリのイェケ王国（都ブンケヤ）が治めたが、ピースが分けられないので、ルンダの都ムスンバのある西部に合わせてルンダの色で塗る（イェケ王国は上カタンガ）"
+      source: "https://ja.wikipedia.org/wiki/ルンダ王国"
+    - from: 1891
+      owner: "congo_free_state"
+      cause: "コンゴ自由国のステアーズ遠征隊がムシリを殺し、カタンガを押さえる（12月）"
+      source: "https://en.wikipedia.org/wiki/Stairs_Expedition_to_Katanga"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "katanga"
+      cause: "チョンベがカタンガ国の独立を宣言する（7月）"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+    - from: 1963
+      owner: "drc"
+      cause: "国連軍の作戦でカタンガの分離が終わる（1月）"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+
+- id: cd_haut_katanga
+  name: 上カタンガ（エリザベートヴィル＝ルブンバシ）
+  select:
+    pieces: [COD-Haut_Katanga]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ルンダ系の首長などの地。銅の産地"
+    - from: 1740
+      owner: "kazembe"
+      certainty: "uncertain"
+      cause: "ルンダ王国から出たカゼンベがルアプラ川の流域に王国を建て、カタンガの銅の産地を従える"
+      source: "https://ja.wikipedia.org/wiki/カゼンベ王国"
+    - from: 1856
+      owner: "yeke"
+      cause: "ムシリのイェケ王国（ガランガンゼ）がカタンガ南部を押さえる"
+      source: "https://en.wikipedia.org/wiki/Msiri"
+    - from: 1891
+      owner: "congo_free_state"
+      cause: "コンゴ自由国のステアーズ遠征隊がムシリを殺し、カタンガを押さえる（12月）"
+      source: "https://en.wikipedia.org/wiki/Stairs_Expedition_to_Katanga"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      note: "ユニオン・ミニエールが銅山を開発した"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "katanga"
+      cause: "チョンベがカタンガ国の独立を宣言する（7月）"
+      note: "ベルギーの鉱山会社と傭兵が支えた"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+    - from: 1963
+      owner: "drc"
+      cause: "国連軍の作戦でカタンガの分離が終わる（1月）"
+      source: "https://ja.wikipedia.org/wiki/カタンガ国"
+
+- id: cd_south_kasai
+  name: 南カサイ（バクワンガ＝ムブジマイ）
+  select:
+    pieces: [COD-Kasai_Oriental]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ルバ＝カサイの首長の地。大きな国家はなかった（東のルバ王国の外縁）"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "ベルリン会議の後、レオポルド2世の私有地としてコンゴ自由国が成立する（この地域にはまだ支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1891
+      owner: "congo_free_state"
+      cause: "コンゴ自由国の軍（公安軍）と駐屯地が置かれ、支配が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "コンゴ自由国での残虐な強制労働が国際的に批判され、ベルギー政府が併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "south_kasai"
+      certainty: "uncertain"
+      cause: "カロンジが南カサイ鉱山国の独立を宣言する（8月）"
+      source: "https://en.wikipedia.org/wiki/South_Kasai"
+    - from: 1962
+      owner: "drc"
+      cause: "中央政府軍が南カサイを再統合する（9–10月）"
+      source: "https://en.wikipedia.org/wiki/South_Kasai"
+
+- id: cg_loango
+  name: ロアンゴ海岸
+  select:
+    pieces: [COG-Kouilou, COG-Pointe_Noire, COG-Niari]
+  timeline:
+    - from: 1648
+      owner: "loango"
+      certainty: "uncertain"
+      note: "ロアンゴ王国の海岸部。南のカコンゴ・ンゴヨとともに大西洋奴隷貿易の積み出し地だった"
+      source: "https://ja.wikipedia.org/wiki/ロアンゴ王国"
+    - from: 1883
+      owner: "france"
+      label: "フランス領コンゴ"
+      cause: "フランスがロアンゴ王と条約を結び、ポワント・ノワールを押さえる"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Loango"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（中部コンゴ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "congo_brazzaville"
+      cause: "コンゴ共和国が独立する（8月15日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ共和国"
+
+- id: cg_teke
+  name: テケ（ティオ）王国（プール・プラトー）
+  select:
+    pieces: [COG-Pool, COG-Plateaux, COG-Bouenza, COG-Lekoumou]
+  timeline:
+    - from: 1648
+      owner: "tio"
+      certainty: "uncertain"
+      note: "テケ（ティオ）王国。王はマココと称し、スタンリー・プール（マレボ湖）の北の高原に都を置いた。ブエンザ・レクムはコンゴ系・テケ系の首長の地"
+      source: "https://en.wikipedia.org/wiki/Anziku_Kingdom"
+    - from: 1880
+      owner: "france"
+      certainty: "indirect"
+      label: "テケ王国（フランスの保護下）"
+      cause: "ブラザがマココ王と条約を結び、テケ王国がフランスの保護下に入る"
+      source: "https://ja.wikipedia.org/wiki/ピエール・サヴォルニャン・ド・ブラザ"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（中部コンゴ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "congo_brazzaville"
+      cause: "コンゴ共和国が独立する（8月15日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ共和国"
+
+- id: cg_brazzaville
+  name: ブラザヴィル
+  select:
+    pieces: [COG-Brazzaville]
+  timeline:
+    - from: 1648
+      owner: "tio"
+      certainty: "uncertain"
+      note: "テケ（ティオ）王国の地"
+      source: "https://en.wikipedia.org/wiki/Anziku_Kingdom"
+    - from: 1880
+      owner: "france"
+      label: "フランス領コンゴ"
+      cause: "ブラザがマココ王と条約を結び、ンクナに拠点を置く（のちのブラザヴィル）"
+      source: "https://ja.wikipedia.org/wiki/ブラザヴィル"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（中部コンゴ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立し、ブラザヴィルが首都になる"
+      note: "1940年に自由フランスに加わり、第二次世界大戦中は「自由フランスの首都」となった"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "congo_brazzaville"
+      cause: "コンゴ共和国が独立する（8月15日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ共和国"
+
+- id: cg_north
+  name: コンゴ北部（キュヴェット・リクアラ）
+  select:
+    pieces: [COG-Cuvette, COG-Cuvette_Ouest, COG-Likouala]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ムボシ・マコア・ピグミー系の人々などの熱帯雨林の地。大きな国家はなかった"
+    - from: 1885
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領コンゴ"
+      cause: "ブラザの探検とベルリン会議で、コンゴ川右岸がフランスの勢力圏になる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1900
+      owner: "france"
+      label: "フランス領コンゴ"
+      cause: "利権会社に土地を分け与え、行政の拠点を置く"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（中部コンゴ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "congo_brazzaville"
+      cause: "コンゴ共和国が独立する（8月15日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ共和国"
+
+- id: cg_sangha
+  name: サンガ（ウエソ）
+  select:
+    pieces: [COG-Sangha]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "熱帯雨林の人々の地。大きな国家はなかった"
+    - from: 1885
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領コンゴ"
+      cause: "ブラザの探検とベルリン会議で、コンゴ川右岸がフランスの勢力圏になる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1900
+      owner: "france"
+      label: "フランス領コンゴ"
+      cause: "利権会社に土地を分け与え、行政の拠点を置く"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（中部コンゴ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1911
+      owner: "german_empire"
+      label: "新カメルーン（ドイツ領カメルーン）"
+      cause: "第2次モロッコ事件の後のモロッコ・コンゴ条約で、フランスがドイツに割譲する（11月）"
+      source: "https://ja.wikipedia.org/wiki/新カメルーン"
+    - from: 1914
+      owner: "france"
+      certainty: "occupied"
+      label: "フランス領赤道アフリカ（中部コンゴ）"
+      cause: "第一次世界大戦で、フランス軍が新カメルーンを奪い返す"
+      source: "https://ja.wikipedia.org/wiki/カメルーン戦線"
+    - from: 1916
+      owner: "france"
+      label: "フランス領赤道アフリカ（中部コンゴ）"
+      cause: "カメルーンのドイツ軍が降伏する（2月。ヴェルサイユ条約で正式にフランスに戻る）"
+      source: "https://ja.wikipedia.org/wiki/カメルーン戦線"
+    - from: 1960
+      owner: "congo_brazzaville"
+      cause: "コンゴ共和国が独立する（8月15日）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ共和国"
+
+- id: ga_estuaire
+  name: ガボン河口（リーブルヴィル）
+  select:
+    pieces: [GAB-Estuaire]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ムポングウェの首長（「デニス王」「ルイ王」など）の港。ヨーロッパの商人と交易した"
+    - from: 1843
+      owner: "france"
+      label: "ガボン（フランス領）"
+      cause: "フランスがムポングウェの首長と条約を結び（1839・1841）、オマール砦を築く"
+      note: "1849年に解放奴隷の村リーブルヴィルが作られた"
+      source: "https://ja.wikipedia.org/wiki/リーブルヴィル"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（ガボン）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "gabon"
+      cause: "ガボン共和国が独立する（8月17日）"
+      source: "https://ja.wikipedia.org/wiki/ガボン"
+
+- id: ga_coast
+  name: ガボン南部の海岸（ポール・ジャンティ）
+  select:
+    pieces: [GAB-Ogooue_Maritime]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "オルング人の王国（ロペス岬）などの港。奴隷貿易の積み出し地"
+    - from: 1862
+      owner: "france"
+      label: "ガボン（フランス領）"
+      cause: "フランスがオルングの王と条約を結び、ロペス岬を保護下に置く"
+      source: "https://ja.wikipedia.org/wiki/ガボン"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（ガボン）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "gabon"
+      cause: "ガボン共和国が独立する（8月17日）"
+      source: "https://ja.wikipedia.org/wiki/ガボン"
+
+- id: ga_interior
+  name: ガボン内陸（オゴウェ川流域）
+  select:
+    pieces: [GAB-Moyen_Ogooue, GAB-Ngounie, GAB-Nyanga, GAB-Ogooue_Lolo, GAB-Ogooue_Ivindo, GAB-Haut_Ogooue]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ファン・プヌ・ミエネ・テケなどの熱帯雨林の人々の地。大きな国家はなかった"
+    - from: 1880
+      owner: "france"
+      certainty: "nominal"
+      label: "ガボン（フランス領）"
+      cause: "ブラザがオゴウェ川をさかのぼってフランスヴィルを建てる"
+      source: "https://ja.wikipedia.org/wiki/ピエール・サヴォルニャン・ド・ブラザ"
+    - from: 1899
+      owner: "france"
+      label: "ガボン（フランス領）"
+      cause: "利権会社に土地を分け与え、行政の拠点を置く"
+      note: "ランバレネには1913年にシュヴァイツァーが病院を開いた"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（ガボン）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "gabon"
+      cause: "ガボン共和国が独立する（8月17日）"
+      source: "https://ja.wikipedia.org/wiki/ガボン"
+
+- id: ga_woleu_ntem
+  name: ウォレウ＝ンテム
+  select:
+    pieces: [GAB-Woleu_Ntem]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ファン人などの熱帯雨林の人々の地"
+    - from: 1880
+      owner: "france"
+      certainty: "nominal"
+      label: "ガボン（フランス領）"
+      cause: "ブラザの探検でオゴウェ川の北がフランスの勢力圏になる"
+      source: "https://ja.wikipedia.org/wiki/ピエール・サヴォルニャン・ド・ブラザ"
+    - from: 1899
+      owner: "france"
+      label: "ガボン（フランス領）"
+      cause: "利権会社に土地を分け与え、行政の拠点を置く"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1910
+      owner: "france"
+      label: "フランス領赤道アフリカ（ガボン）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1911
+      owner: "german_empire"
+      label: "新カメルーン（ドイツ領カメルーン）"
+      cause: "第2次モロッコ事件の後のモロッコ・コンゴ条約で、フランスがドイツに割譲する（11月）"
+      source: "https://ja.wikipedia.org/wiki/新カメルーン"
+    - from: 1914
+      owner: "france"
+      certainty: "occupied"
+      label: "フランス領赤道アフリカ（ガボン）"
+      cause: "第一次世界大戦で、フランス軍が新カメルーンを奪い返す"
+      source: "https://ja.wikipedia.org/wiki/カメルーン戦線"
+    - from: 1916
+      owner: "france"
+      label: "フランス領赤道アフリカ（ガボン）"
+      cause: "カメルーンのドイツ軍が降伏する（2月。ヴェルサイユ条約で正式にフランスに戻る）"
+      source: "https://ja.wikipedia.org/wiki/カメルーン戦線"
+    - from: 1960
+      owner: "gabon"
+      cause: "ガボン共和国が独立する（8月17日）"
+      source: "https://ja.wikipedia.org/wiki/ガボン"
+
+- id: cf_dar_kuti
+  name: ダール・アル＝クーティ（ンデレ・ビラオ）
+  select:
+    pieces: [CAF-Bamingui_Bangoran, CAF-Vakaga, CAF-Haute_Kotto]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "グラ・バンダ・ルンガなどの人々の地。北のワダイ・バギルミ・ダルフールの奴隷狩りの対象になった"
+    - from: 1830
+      owner: "dar_al_kuti"
+      overlord: "wadai"
+      certainty: "uncertain"
+      cause: "ワダイに従うイスラームのダール・アル＝クーティ・スルタン国ができる"
+      note: "ワダイの宗主権の下にあった（帯は付けない）。1890年からムハンマド・アッ＝サヌーシーがンデレを都に勢力を広げ、奴隷狩りを行った"
+      source: "https://en.wikipedia.org/wiki/Dar_al_Kuti"
+    - from: 1886
+      owner: "rabih"
+      certainty: "uncertain"
+      cause: "スーダンから来たラービフの軍がダール・アル＝クーティ・ダール・ルンガを拠点に奴隷狩りを行う（1880年代後半）"
+      source: "https://en.wikipedia.org/wiki/Rabih_az-Zubayr"
+    - from: 1891
+      owner: "dar_al_kuti"
+      overlord: "wadai"
+      certainty: "uncertain"
+      cause: "ラービフがスルタンを殺し、ムハンマド・アッ＝サヌーシーを立てる（1890年）。ラービフはバギルミ・ボルヌへ移る"
+      source: "https://en.wikipedia.org/wiki/Muhammad_al-Senoussi"
+    - from: 1897
+      owner: "france"
+      certainty: "indirect"
+      label: "ダール・アル＝クーティ（フランスの保護下）"
+      cause: "サヌーシーがフランスと保護条約を結ぶ"
+      source: "https://en.wikipedia.org/wiki/Dar_al_Kuti"
+    - from: 1911
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領赤道アフリカ）"
+      cause: "フランス軍がサヌーシーを殺し、ダール・アル＝クーティを直接支配する（1月）"
+      source: "https://en.wikipedia.org/wiki/Dar_al_Kuti"
+    - from: 1960
+      owner: "central_african_republic"
+      cause: "中央アフリカ共和国が独立する（8月13日）"
+      source: "https://ja.wikipedia.org/wiki/中央アフリカ共和国"
+    - from: 2014
+      owner: "seleka"
+      certainty: "uncertain"
+      cause: "セレカの政権が崩れた後、旧セレカ系の武装勢力（FPRCなど）が北東部を押さえる"
+      note: "2013年3月にイスラーム教徒の多い北東部の反政府連合セレカが首都を落とし、キリスト教徒の自警団（アンチ・バラカ）との宗派間の衝突が広がった"
+      source: "https://en.wikipedia.org/wiki/Central_African_Republic_Civil_War"
+    - from: 2021
+      owner: "central_african_republic"
+      cause: "ロシアの民間軍事会社ワグネル・ルワンダ軍の支援を受けた政府軍が主な町を奪い返す"
+      note: "地方では武装勢力の活動が続いた"
+      source: "https://en.wikipedia.org/wiki/Central_African_Republic_Civil_War"
+
+- id: cf_zande
+  name: ムボム川流域（ザンデのスルタン国）
+  select:
+    pieces: [CAF-Mbomou, CAF-Haut_Mbomou]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "森林とサバンナの人々の地"
+    - from: 1800
+      owner: "zande"
+      certainty: "uncertain"
+      cause: "ザンデ（アザンデ）の諸王国がムボム川・ウエレ川流域に広がる（バンガスー・ラファイ・ゼミオのスルタン国など）"
+      source: "https://en.wikipedia.org/wiki/Zande_people"
+    - from: 1894
+      owner: "france"
+      certainty: "indirect"
+      label: "ザンデのスルタン国（フランスの保護下）"
+      cause: "フランス・コンゴ自由国協定でムボム川の北がフランス領と決まる"
+      source: "https://ja.wikipedia.org/wiki/ウバンギ・シャリ"
+    - from: 1910
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領赤道アフリカ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立し、直接統治に移る"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "central_african_republic"
+      cause: "中央アフリカ共和国が独立する（8月13日）"
+      source: "https://ja.wikipedia.org/wiki/中央アフリカ共和国"
+
+- id: cf_bangui
+  name: バンギとウバンギ川岸
+  select:
+    pieces: [CAF-Bangui, CAF-Ombella_M_Poko, CAF-Lobaye]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ンバカ・バンダ・ヤコマなどの人々の地。大きな国家はなかった"
+    - from: 1889
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領コンゴ）"
+      cause: "フランスがウバンギ川岸にバンギの拠点を置く"
+      source: "https://ja.wikipedia.org/wiki/バンギ"
+    - from: 1910
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領赤道アフリカ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "central_african_republic"
+      cause: "中央アフリカ共和国が独立する（8月13日）"
+      source: "https://ja.wikipedia.org/wiki/中央アフリカ共和国"
+
+- id: cf_central
+  name: ウバンギ＝シャリ中部・北部
+  select:
+    pieces: [CAF-Basse_Kotto, CAF-Ouaka, CAF-Kemo, CAF-Nana_Grebizi, CAF-Ouham, CAF-Ouham_Pende, CAF-Nana_Mambere]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "バンダ・グバヤ・マンジャ・サラなどの人々の地。大きな国家はなく、19世紀には北のイスラーム国家や商人の奴隷狩りに苦しんだ"
+    - from: 1890
+      owner: "france"
+      certainty: "nominal"
+      label: "ウバンギ＝シャリ（フランス領コンゴ）"
+      cause: "フランスの探検隊がウバンギ川からシャリ川方面に進む"
+      source: "https://ja.wikipedia.org/wiki/ウバンギ・シャリ"
+    - from: 1903
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領コンゴ）"
+      cause: "ウバンギ＝シャリ植民地が置かれ、利権会社の支配と強制労働が広がる"
+      note: "1928–31年に西部のグバヤ人がコンゴ・ワラの反乱を起こした"
+      source: "https://ja.wikipedia.org/wiki/ウバンギ・シャリ"
+    - from: 1910
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領赤道アフリカ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1960
+      owner: "central_african_republic"
+      cause: "中央アフリカ共和国が独立する（8月13日）"
+      source: "https://ja.wikipedia.org/wiki/中央アフリカ共和国"
+
+- id: cf_sangha
+  name: サンガ・ムバエレ・マンベレ＝カデイ
+  select:
+    pieces: [CAF-Sangha_Mbaere, CAF-Mambere_Kadei]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "グバヤ・ムピエモなどの人々の地。大きな国家はなかった"
+    - from: 1890
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領コンゴ"
+      cause: "フランスの探検隊がサンガ川流域に進む"
+      source: "https://ja.wikipedia.org/wiki/ウバンギ・シャリ"
+    - from: 1903
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領コンゴ）"
+      cause: "ウバンギ＝シャリ植民地が置かれ、利権会社の支配が広がる"
+      source: "https://ja.wikipedia.org/wiki/ウバンギ・シャリ"
+    - from: 1910
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領赤道アフリカ）"
+      cause: "フランス領赤道アフリカ（AEF）が成立する"
+      source: "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - from: 1911
+      owner: "german_empire"
+      label: "新カメルーン（ドイツ領カメルーン）"
+      cause: "第2次モロッコ事件の後のモロッコ・コンゴ条約で、フランスがドイツに割譲する（11月）"
+      source: "https://ja.wikipedia.org/wiki/新カメルーン"
+    - from: 1914
+      owner: "france"
+      certainty: "occupied"
+      label: "ウバンギ＝シャリ（フランス領赤道アフリカ）"
+      cause: "第一次世界大戦で、フランス軍が新カメルーンを奪い返す"
+      source: "https://ja.wikipedia.org/wiki/カメルーン戦線"
+    - from: 1916
+      owner: "france"
+      label: "ウバンギ＝シャリ（フランス領赤道アフリカ）"
+      cause: "カメルーンのドイツ軍が降伏する（2月。ヴェルサイユ条約で正式にフランスに戻る）"
+      source: "https://ja.wikipedia.org/wiki/カメルーン戦線"
+    - from: 1960
+      owner: "central_african_republic"
+      cause: "中央アフリカ共和国が独立する（8月13日）"
+      source: "https://ja.wikipedia.org/wiki/中央アフリカ共和国"
+
+- id: ao_luanda
+  name: ルアンダとベンゴ
+  select:
+    pieces: [AGO-Luanda, AGO-Belas, AGO-Cacuaco, AGO-Icolo_e_Bengo, AGO-Dande]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "サルヴァドール・コレイア・デ・サーの艦隊がオランダからルアンダを奪い返す（8月）"
+      note: "ルアンダは1575年に建設されたポルトガルの奴隷貿易の拠点。1641–48年はオランダが占領していた"
+      source: "https://ja.wikipedia.org/wiki/ルアンダ"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_pungo_andongo
+  name: プンゴ・アンドンゴ（ンドンゴ王国）
+  select:
+    pieces: [AGO-Cacuso]
+  timeline:
+    - from: 1648
+      owner: "ndongo"
+      overlord: "portugal"
+      note: "ポルトガルが立てたンドンゴ王アリ・キルアンジ（ンゴラ・アリ）がプンゴ・アンドンゴの岩山を都とした"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Ndongo"
+    - from: 1671
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガルがンゴラ・アリ2世を攻め、プンゴ・アンドンゴを落とす（ンドンゴ王国の滅亡）"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Ndongo"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_kwanza_norte
+  name: クワンザ川北岸のポルトガルの砦
+  select:
+    pieces: [AGO-Cambambe, AGO-Cazengo, AGO-Golungo_Alto, AGO-Ambaca, AGO-Lucala, AGO-Banga, AGO-Samba_Caju, AGO-Ngonguembo]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      note: "マサンガノ・カンバンベ・ムシマ・アンバカの砦（プレシディオ）と、ポルトガルに従う首長（ソバ）の地"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_dembos
+  name: デンボス
+  select:
+    pieces: [AGO-Dembos_Quibaxe, AGO-Bula_Atumba, AGO-Nambuangongo, AGO-Pango_Aluquem, AGO-Quiculongo, AGO-Bolongongo, AGO-Quitexe, AGO-Ambuila]
+  timeline:
+    - from: 1648
+      owner: "kongo"
+      certainty: "uncertain"
+      note: "ンデンブ（デンボス）の首長たちの山地。コンゴ王国とポルトガル領の間にあり、両方に従ったり離れたりした"
+      source: "https://en.wikipedia.org/wiki/Dembos"
+    - from: 1666
+      owner: null
+      cause: "ムブウィラの戦い（1665）の後、コンゴ王国の支配が及ばなくなる"
+      note: "デンボスの首長たちが自立した（一部はポルトガルの臣従者として扱われた）"
+      source: "https://en.wikipedia.org/wiki/Battle_of_Mbwila"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ベルリン会議の後、アンゴラ北部の内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1919
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍がデンボスの首長たちを征服する（1907–19年の遠征）"
+      source: "https://en.wikipedia.org/wiki/Dembos"
+    - from: 1961
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "ポルトガル領アンゴラ"
+      cause: "アンゴラ独立戦争が始まる（3月、アンゴラ人民連合 UPA の蜂起）"
+      note: "ナンブアンゴンゴなどの山地は独立派のゲリラの拠点になった"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ独立戦争"
+    - from: 1962
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍が北部の主な町を奪い返す"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ独立戦争"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_kongo
+  name: コンゴ王国（ムバンザ・コンゴ）
+  select:
+    pieces: [AGO-Mbanza_Congo, AGO-Soyo, AGO-N_Zeto, AGO-Tomboco, AGO-Noqui, AGO-Cuimba, AGO-Bembe, AGO-Bungo, AGO-Damba, AGO-Maquela_do_Zombo, AGO-Mucaba, AGO-Negage, AGO-Puri, AGO-Sanza_Pombo, AGO-Songo, AGO-Uige, AGO-Milunga, AGO-Quimbele, AGO-Buengas, AGO-Cangola]
+  timeline:
+    - from: 1648
+      owner: "kongo"
+      note: "コンゴ王国の中心部。都ムバンザ・コンゴ（サン・サルヴァドール）。15世紀末からポルトガルと交わってキリスト教を受け入れたが、奴隷貿易で国が揺らいだ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ王国"
+    - from: 1666
+      owner: "kongo"
+      certainty: "uncertain"
+      cause: "ムブウィラの戦い（1665）で国王アントニオ1世が戦死し、王位を争う内乱で王国が分裂する（ソヨ伯領も自立）"
+      note: "1678年には都ムバンザ・コンゴが破壊され、廃墟となった"
+      source: "https://en.wikipedia.org/wiki/Kongo_Civil_War"
+    - from: 1709
+      owner: "kongo"
+      cause: "ペドロ4世がサン・サルヴァドールを奪い返して王国を再統一する（キンパ・ヴィタのアントニオ派運動は1706年に鎮圧）"
+      source: "https://en.wikipedia.org/wiki/Kongo_Civil_War"
+    - from: 1857
+      owner: "kongo"
+      overlord: "portugal"
+      cause: "ペドロ5世がポルトガルの支援で即位し、ポルトガル王に臣従を誓う"
+      source: "https://en.wikipedia.org/wiki/Pedro_V_of_Kongo"
+    - from: 1885
+      owner: "portugal"
+      certainty: "indirect"
+      label: "コンゴ王国（ポルトガルの保護下）"
+      cause: "ベルリン会議でコンゴ王国の南部がポルトガルの勢力圏とされる（北部はコンゴ自由国）"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1914
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガルに対する反乱（1913–14）の後、王国の自治が失われる"
+      note: "王の称号は1975年まで名目的に続いた"
+      source: "https://ja.wikipedia.org/wiki/コンゴ王国"
+    - from: 1961
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "ポルトガル領アンゴラ"
+      cause: "アンゴラ独立戦争が始まる（3月、アンゴラ人民連合 UPA の蜂起）"
+      note: "北部のバコンゴ人の多くはのちのアンゴラ民族解放戦線（FNLA）を支持し、隣のコンゴ（ザイール）に難民となった"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ独立戦争"
+    - from: 1962
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍が北部の主な町を奪い返す"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ独立戦争"
+    - from: 1975
+      owner: "fnla"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、ザイールが支援するアンゴラ民族解放戦線（FNLA）が北部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍がFNLAを北部から追う（1–2月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_ambriz
+  name: アンブリス
+  select:
+    pieces: [AGO-Ambriz]
+  timeline:
+    - from: 1648
+      owner: "kongo"
+      certainty: "uncertain"
+      note: "コンゴ王国の南の海岸。19世紀前半には奴隷の密貿易の港として栄えた"
+      source: "https://ja.wikipedia.org/wiki/コンゴ王国"
+    - from: 1855
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガルがアンブリスを占領する"
+      source: "https://en.wikipedia.org/wiki/Ambriz"
+    - from: 1975
+      owner: "fnla"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、FNLAが北部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍がFNLAを北部から追う"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_matamba
+  name: マタンバ
+  select:
+    pieces: [AGO-Calandula, AGO-Kiuaba_N_Zoji, AGO-Cunda_dia_Baze, AGO-Massango, AGO-Marimba, AGO-Cahombo]
+  timeline:
+    - from: 1648
+      owner: "matamba"
+      note: "ンジンガ女王がマタンバを奪って都とし、ンドンゴの王位も主張した。1641–48年はオランダと結んでポルトガルと戦った"
+      source: "https://ja.wikipedia.org/wiki/ンジンガ・ムバンデ"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ベルリン会議の後、アンゴラの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1910
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍がマタンバ（ジンガ）を征服する"
+      note: "要確認：征服の年"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Matamba"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_kasanje
+  name: カサンジェ（マランジェ）
+  select:
+    pieces: [AGO-Malanje, AGO-Cangandala, AGO-Mucari, AGO-Quela, AGO-Cambundi_Catembo, AGO-Luquembo, AGO-Quirima]
+  timeline:
+    - from: 1648
+      owner: "kasanje"
+      certainty: "uncertain"
+      note: "インバンガラ人の王国。クワンゴ川のほとりの市で、内陸（ルンダ）とルアンダの奴隷・象牙の取引を仲立ちした"
+      source: "https://en.wikipedia.org/wiki/Kasanje_Kingdom"
+    - from: 1862
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "カサンジェ戦争（1861–62）の後、ポルトガルがマランジェに拠点を置く"
+      note: "要確認"
+      source: "https://en.wikipedia.org/wiki/Kasanje_Kingdom"
+    - from: 1911
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍がカサンジェを征服する"
+      note: "要確認：征服の年"
+      source: "https://en.wikipedia.org/wiki/Kasanje_Kingdom"
+    - from: 1961
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "バイシャ・デ・カサンジェの綿花農民の反乱（1月）がアンゴラ独立戦争の始まりの一つになる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ独立戦争"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_kwanza_sul
+  name: クワンザ川南岸（キサマ・リボロ・アンボイム）
+  select:
+    pieces: [AGO-Quissama, AGO-Libolo_Calulo, AGO-Quibala, AGO-Mussende, AGO-Ebo, AGO-Conda, AGO-Amboim_Gabela, AGO-Seles_Uku_Seles, AGO-Sumbe_Ngangula, AGO-Porto_Amboim, AGO-Quilenda, AGO-Cassongue, AGO-Cela_Waku_Kungo]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "キサマ・リボロ・アンボイム・セレスなどの首長の地。ポルトガルは何度も遠征したが支配できなかった（ノヴォ・レドンド〈スンベ〉の砦は1769年）"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ベルリン会議の後、アンゴラの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1917
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍がアンボイム・セレスなどを征服する（1917年ごろ）"
+      note: "要確認：征服の年。地域によって差がある"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_benguela
+  name: ベンゲラ
+  select:
+    pieces: [AGO-Benguela, AGO-Baia_Farta, AGO-Lobito, AGO-Caimbambo]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      note: "ベンゲラは1617年に建設されたポルトガルの港。高原のオヴィンブンドゥ諸王国との奴隷貿易の拠点"
+      source: "https://ja.wikipedia.org/wiki/ベンゲラ"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、南アフリカ軍の支援を受けたアンゴラ全面独立民族同盟（UNITA）が中部・南部を押さえる（年末）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍が南部・中部の町を奪う（1–3月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_huambo
+  name: オヴィンブンドゥ高原（バイルンド・ワンボ）
+  select:
+    pieces: [AGO-Caala, AGO-Catchiungo, AGO-Ecunha_Ekunha, AGO-Huambo, AGO-Londuimbale, AGO-Longonjo, AGO-Mungo, AGO-Tchikala_Tcholohanga, AGO-Tchinjenje, AGO-Ukuma, AGO-Balombo, AGO-Bocoio, AGO-Cubal, AGO-Ganda, AGO-Caconda, AGO-Caluquembe, AGO-Chicomba, AGO-Chipindo]
+  timeline:
+    - from: 1648
+      owner: "ovimbundu"
+      certainty: "uncertain"
+      note: "ベンゲラ高原のオヴィンブンドゥ人の王国（バイルンド・ワンボ・ガランゲ・カコンダなど）。17世紀に形づくられ、18–19世紀には内陸との隊商交易で栄えた"
+      source: "https://en.wikipedia.org/wiki/Ovimbundu"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ベルリン会議の後、アンゴラの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1903
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "バイルンド戦争（1902）でポルトガル軍がバイルンド王国を破る"
+      source: "https://en.wikipedia.org/wiki/Bailundo_Revolt_of_1902"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、UNITAがワンボ（ノヴァ・リスボア）を押さえる"
+      note: "UNITAの指導者サヴィンビはオヴィンブンドゥ人"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍がワンボを奪う（2月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1993
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "選挙結果を拒んだUNITAが内戦を再開し、ワンボを落とす（3月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1994
+      owner: "angola"
+      cause: "政府軍がワンボを奪い返し、ルサカ議定書が結ばれる（11月）"
+      source: "https://en.wikipedia.org/wiki/Lusaka_Protocol"
+
+- id: ao_bailundo_andulo
+  name: バイルンド・アンドゥロ
+  select:
+    pieces: [AGO-Bailundo, AGO-Andulo, AGO-N_harea]
+  timeline:
+    - from: 1648
+      owner: "ovimbundu"
+      certainty: "uncertain"
+      note: "オヴィンブンドゥ人の最大の王国バイルンド（ンバイルンドゥ）と、ビエ王国の北部"
+      source: "https://en.wikipedia.org/wiki/Ovimbundu"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ベルリン会議の後、アンゴラの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1903
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "バイルンド戦争（1902）でポルトガル軍がバイルンド王国を破る"
+      source: "https://en.wikipedia.org/wiki/Bailundo_Revolt_of_1902"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、UNITAが中部高原を押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍が中部高原の町を奪う"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1993
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "UNITAが内戦を再開し、中部高原を押さえる"
+      note: "ルサカ議定書（1994）の後も、UNITAはバイルンドとアンドゥロを本拠とした"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1999
+      owner: "angola"
+      cause: "政府軍がバイルンド・アンドゥロを落とす（10月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_bie
+  name: ビエ
+  select:
+    pieces: [AGO-Camacupa, AGO-Catabola, AGO-Chinguar, AGO-Chitembo, AGO-Cuemba, AGO-Cuito, AGO-Cunhinga]
+  timeline:
+    - from: 1648
+      owner: "ovimbundu"
+      certainty: "uncertain"
+      note: "オヴィンブンドゥ人のビエ（ヴィエ）王国。19世紀にはポルトガル人商人シルヴァ・ポルトが住み着いた"
+      source: "https://en.wikipedia.org/wiki/Ovimbundu"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ベルリン会議の後、アンゴラの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1890
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍がビエ王ンドゥンドゥマを破り、ビエを占領する"
+      source: "https://en.wikipedia.org/wiki/Bié_Province"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、UNITAが中部高原を押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍が中部高原の町を奪う"
+      note: "1993–94年にはUNITAがクイトを包囲した"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_huila
+  name: ウイラ高原（ルバンゴ）
+  select:
+    pieces: [AGO-Lubango, AGO-Humpata, AGO-Chibia, AGO-Quilengues, AGO-Gambos_Chiange, AGO-Quipungo, AGO-Matala, AGO-Jamba, AGO-Cuvango, AGO-Chongoroi]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ニャネカ・ウンベなどの牧畜民の首長の地"
+    - from: 1885
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "マデイラ島からの移民がルバンゴ（サ・ダ・バンデイラ）に入植する（1881年にはボーア人がウンパタに来た）"
+      source: "https://ja.wikipedia.org/wiki/ルバンゴ"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、南アフリカ軍とUNITAが南部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "南アフリカ軍が撤退し、MPLA政府軍が南部を押さえる（3月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_namibe
+  name: ナミベ（モサメデス）
+  select:
+    pieces: [AGO-Bibala, AGO-Camucuio, AGO-Namibe, AGO-Tombwa, AGO-Virei]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "クヴァレなどの牧畜民の乾燥地"
+    - from: 1840
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガルがモサメデス（ナミベ）を建設する"
+      source: "https://en.wikipedia.org/wiki/Moçâmedes"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、南アフリカ軍とUNITAが南部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "南アフリカ軍が撤退し、MPLA政府軍が南部を押さえる（3月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_cunene
+  name: クネネ（クワニャマ・ウンベ）
+  select:
+    pieces: [AGO-Cahama, AGO-Cuanhama, AGO-Curoca, AGO-Cuvelai, AGO-Namacunde, AGO-Ombadja]
+  timeline:
+    - from: 1648
+      owner: "ovambo"
+      certainty: "uncertain"
+      note: "オヴァンボ人の王国（クワニャマ・ンドンガなど）とウンベの首長の地"
+      source: "https://en.wikipedia.org/wiki/Ovambo_people"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ベルリン会議の後、アンゴラ南部もポルトガル領とされる（1886年にドイツと国境を協定）"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1915
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍がモングアの戦いでクワニャマ王マンドゥメを破る（王は南西アフリカ側に移り、1917年に南アフリカ軍と戦って死んだ）"
+      source: "https://en.wikipedia.org/wiki/Mandume_ya_Ndemufayo"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、南アフリカ軍が南部に侵攻する"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "南アフリカ軍が撤退する（3月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1981
+      owner: "south_africa"
+      certainty: "occupied"
+      cause: "南アフリカ軍がナミビアの独立運動（SWAPO）の拠点をたたくためクネネ州南部を占領する（プロテア作戦、8月）"
+      source: "https://en.wikipedia.org/wiki/Operation_Protea"
+    - from: 1985
+      owner: "angola"
+      cause: "ルサカ合意（1984）で南アフリカ軍が撤退する（4月）"
+      source: "https://en.wikipedia.org/wiki/Lusaka_Accords"
+
+- id: ao_cuando_cubango
+  name: クアンド・クバンゴ
+  select:
+    pieces: [AGO-Calai, AGO-Cuangar, AGO-Cuchi, AGO-Cuito_Cuanavale, AGO-Dirico, AGO-Mavinga, AGO-Menongue, AGO-Nancova, AGO-Luchazes, AGO-Bundas, AGO-Rivungo]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ンガンゲラ・サンなどの人々の乾燥したサバンナ。東部はロジ（ルヤナ）王国の勢力の外縁"
+    - from: 1891
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガルとイギリスの協定で、アンゴラ南東部がポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - from: 1917
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍の駐屯地が置かれ、支配が及ぶ"
+      note: "要確認：支配が及んだ年。1905年のイタリア国王の裁定でロジ王国（イギリス保護領）との境が決まった"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、UNITAが南東部を押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍が南部の町を奪う（3月）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1980
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "UNITAが南東部のジャンバを本拠に南東部を押さえる"
+      note: "南アフリカ・アメリカが支援した。1987–88年のクイト・クアナヴァレの戦いの後、ニューヨーク協定でキューバ軍と南アフリカ軍の撤退が決まった"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 2000
+      owner: "angola"
+      cause: "政府軍がジャンバなどUNITAの拠点を落とす（1999年12月）"
+      note: "2002年2月にサヴィンビが戦死し、4月に停戦が結ばれて内戦が終わった"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_moxico
+  name: モシコ（ルヴァレ）
+  select:
+    pieces: [AGO-Luena, AGO-Leua, AGO-Camanongue, AGO-Cameia_Lumeje, AGO-Luacano, AGO-Luau, AGO-Alto_Zambeze]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ルヴァレ（ロヴァレ）・チョクウェ・ルチャジなどの人々の地"
+    - from: 1700
+      owner: "lunda"
+      certainty: "uncertain"
+      cause: "ルンダ王国の勢力が広がり、ルヴァレの首長が貢納する"
+      source: "https://ja.wikipedia.org/wiki/ルンダ王国"
+    - from: 1891
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガルとイギリス・コンゴ自由国の協定で、アンゴラ東部がポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - from: 1917
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガル軍の駐屯地が置かれ、支配が及ぶ"
+      note: "要確認：支配が及んだ年"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - from: 1975
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "独立をめぐる内戦で、UNITAがルソ（ルエナ）などを押さえる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1976
+      owner: "angola"
+      cause: "キューバ軍の支援を受けたMPLA政府軍が東部の町を奪う"
+      note: "1966年からUNITAとMPLAが東部でゲリラ戦を始めていた"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_lunda
+  name: ルンダ（ダイヤモンドの産地）
+  select:
+    pieces: [AGO-Cambulo, AGO-Capenda_Camulemba, AGO-Caungula, AGO-Chitato, AGO-Cuango, AGO-Cuilo, AGO-Lubalo, AGO-Lucapa, AGO-Xa_Muteba, AGO-Cacolo, AGO-Dala, AGO-Muconda, AGO-Saurimo]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "チョクウェ・ルンダ系の人々の地"
+    - from: 1680
+      owner: "lunda"
+      certainty: "uncertain"
+      cause: "ルンダ王国が西に広がり、クワンゴ川までの首長が貢納する"
+      note: "19世紀後半にはチョクウェ人が勢力を広げ、1887年にはルンダの都ムスンバを落とした"
+      source: "https://ja.wikipedia.org/wiki/ルンダ王国"
+    - from: 1891
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ポルトガルとコンゴ自由国の協定で、ルンダ西部がポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - from: 1920
+      owner: "portugal"
+      label: "ポルトガル領アンゴラ"
+      cause: "ダイヤモンド会社（ディアマング、1917年設立）の開発とともにポルトガルの支配が及ぶ"
+      note: "要確認：支配が及んだ年"
+      source: "https://en.wikipedia.org/wiki/Diamang"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラがポルトガルから独立する（11月11日）。首都ルアンダのアンゴラ解放人民運動（MPLA）が政府をつくる"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1992
+      owner: "unita"
+      certainty: "uncertain"
+      cause: "選挙結果を拒んだUNITAが内戦を再開し、ダイヤモンド産地を押さえる"
+      note: "UNITAはダイヤモンドの密輸で戦費をまかなった（「紛争ダイヤモンド」）"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+    - from: 1999
+      owner: "angola"
+      cause: "政府軍がダイヤモンド産地を奪う"
+      note: "要確認：年"
+      source: "https://ja.wikipedia.org/wiki/アンゴラ内戦"
+
+- id: ao_cabinda
+  name: カビンダ
+  select:
+    pieces: [AGO-Belize, AGO-Buco_Zau, AGO-Cabinda, AGO-Cacongo_Landana]
+  timeline:
+    - from: 1648
+      owner: "loango"
+      certainty: "uncertain"
+      note: "カコンゴ・ンゴヨの王国。ロアンゴ王国に従ったり自立したりした。大西洋奴隷貿易の積み出し港"
+      source: "https://ja.wikipedia.org/wiki/ロアンゴ王国"
+    - from: 1885
+      owner: "portugal"
+      label: "カビンダ（ポルトガルの保護領）"
+      cause: "シムランブコ条約でカビンダがポルトガルの保護下に入る（2月）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Simulambuco"
+    - from: 1975
+      owner: "angola"
+      cause: "アンゴラが独立する（11月11日）。MPLAがカビンダを押さえる"
+      note: "カビンダ解放戦線（FLEC）がカビンダの分離独立を求めて抵抗を続けた"
+      source: "https://ja.wikipedia.org/wiki/カビンダ州"
+
+- id: zm_barotse
+  name: バロツェランド（ロジ王国）
+  select:
+    pieces: [ZMB-Western]
+  timeline:
+    - from: 1648
+      owner: "lozi"
+      certainty: "uncertain"
+      note: "ザンベジ川上流の氾濫原のロジ（ルヤナ）王国。王はリトゥンガと称した"
+      source: "https://ja.wikipedia.org/wiki/バロツェランド"
+    - from: 1840
+      owner: "kololo"
+      cause: "南から来たソト系のセベトワネがロジ王国を征服し、コロロ王国を建てる"
+      source: "https://en.wikipedia.org/wiki/Makololo"
+    - from: 1864
+      owner: "lozi"
+      cause: "ロジ人がコロロ王国を倒し、王国を再興する"
+      source: "https://en.wikipedia.org/wiki/Makololo"
+    - from: 1891
+      owner: "britain"
+      certainty: "indirect"
+      label: "バロツェランド（イギリス南アフリカ会社の保護下）"
+      cause: "レワニカ王がイギリス南アフリカ会社にロハナー利権を与え（1890）、保護下に入る"
+      source: "https://en.wikipedia.org/wiki/Lochner_Concession"
+    - from: 1911
+      owner: "britain"
+      certainty: "indirect"
+      label: "バロツェランド（北ローデシア）"
+      cause: "北ローデシアの一部になる"
+      source: "https://ja.wikipedia.org/wiki/バロツェランド"
+    - from: 1953
+      owner: "britain"
+      certainty: "indirect"
+      label: "バロツェランド（ローデシア・ニヤサランド連邦）"
+      cause: "ローデシア・ニヤサランド連邦が成立する"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "zambia"
+      cause: "ザンビアが独立する（10月24日）。バロツェランド協定で自治を約束されたが、1969年に廃止された"
+      source: "https://ja.wikipedia.org/wiki/バロツェランド"
+
+- id: zm_south
+  name: ザンビア南部（トンガ・イラ）
+  select:
+    pieces: [ZMB-Southern]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "トンガ・イラなどの人々の地。大きな国家はなく、ロジ王国・コロロ王国に貢納したり攻められたりした"
+    - from: 1891
+      owner: "britain"
+      certainty: "nominal"
+      label: "イギリス南アフリカ会社領"
+      cause: "イギリス南アフリカ会社の勢力圏になる"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1899
+      owner: "britain"
+      label: "北西ローデシア（イギリス南アフリカ会社）"
+      cause: "北西ローデシアが置かれる"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1911
+      owner: "britain"
+      label: "北ローデシア（イギリス南アフリカ会社）"
+      cause: "北東ローデシアと北西ローデシアが合わさり、北ローデシアになる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1924
+      owner: "britain"
+      label: "北ローデシア（イギリス保護領）"
+      cause: "イギリス南アフリカ会社の統治が終わり、イギリス政府の直轄の保護領になる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（北ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦（中央アフリカ連邦）が成立する"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "zambia"
+      cause: "連邦が解体し（1963年末）、ザンビアが独立する（10月24日）"
+      source: "https://ja.wikipedia.org/wiki/ザンビア"
+
+- id: zm_central
+  name: ザンビア中部・カッパーベルト
+  select:
+    pieces: [ZMB-Central, ZMB-Lusaka, ZMB-Copperbelt]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "レンジェ・ランバ・ソリなどの人々の地。大きな国家はなかった"
+    - from: 1891
+      owner: "britain"
+      certainty: "nominal"
+      label: "イギリス南アフリカ会社領"
+      cause: "イギリス南アフリカ会社の勢力圏になる"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1900
+      owner: "britain"
+      label: "北西ローデシア（イギリス南アフリカ会社）"
+      cause: "北西ローデシアの行政が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1911
+      owner: "britain"
+      label: "北ローデシア（イギリス南アフリカ会社）"
+      cause: "北東ローデシアと北西ローデシアが合わさり、北ローデシアになる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1924
+      owner: "britain"
+      label: "北ローデシア（イギリス保護領）"
+      cause: "イギリス南アフリカ会社の統治が終わり、イギリス政府の直轄の保護領になる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（北ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦（中央アフリカ連邦）が成立する"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "zambia"
+      cause: "連邦が解体し（1963年末）、ザンビアが独立する（10月24日）"
+      source: "https://ja.wikipedia.org/wiki/ザンビア"
+
+- id: zm_northwest
+  name: ザンビア北西部（ルンダ・カオンデ）
+  select:
+    pieces: [ZMB-North_Western]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ルンダ系（ンデンブ）・ルヴァレ・カオンデの人々の地"
+    - from: 1700
+      owner: "lunda"
+      certainty: "uncertain"
+      cause: "ルンダ王国から出た首長（カノンゲシャなど）が支配し、ルンダ王国に貢納する"
+      source: "https://ja.wikipedia.org/wiki/ルンダ王国"
+    - from: 1891
+      owner: "britain"
+      certainty: "nominal"
+      label: "イギリス南アフリカ会社領"
+      cause: "イギリス南アフリカ会社の勢力圏になる"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1900
+      owner: "britain"
+      label: "北西ローデシア（イギリス南アフリカ会社）"
+      cause: "北西ローデシアの行政が及ぶ"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1911
+      owner: "britain"
+      label: "北ローデシア（イギリス南アフリカ会社）"
+      cause: "北東ローデシアと北西ローデシアが合わさり、北ローデシアになる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1924
+      owner: "britain"
+      label: "北ローデシア（イギリス保護領）"
+      cause: "イギリス南アフリカ会社の統治が終わり、イギリス政府の直轄の保護領になる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（北ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦（中央アフリカ連邦）が成立する"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "zambia"
+      cause: "連邦が解体し（1963年末）、ザンビアが独立する（10月24日）"
+      source: "https://ja.wikipedia.org/wiki/ザンビア"
+
+- id: zm_luapula
+  name: ルアプラ（カゼンベ王国）
+  select:
+    pieces: [ZMB-Luapula]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ルンダ系の首長の地"
+    - from: 1740
+      owner: "kazembe"
+      cause: "ルンダ王国から出たカゼンベがルアプラ川の流域に王国を建てる"
+      note: "1798年にポルトガルのラセルダ、1831年にガミットが訪れた"
+      source: "https://ja.wikipedia.org/wiki/カゼンベ王国"
+    - from: 1899
+      owner: "britain"
+      label: "北東ローデシア（イギリス南アフリカ会社）"
+      cause: "イギリス南アフリカ会社の軍がカゼンベ王国を破る"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1911
+      owner: "britain"
+      label: "北ローデシア（イギリス南アフリカ会社）"
+      cause: "北東ローデシアと北西ローデシアが合わさり、北ローデシアになる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1924
+      owner: "britain"
+      label: "北ローデシア（イギリス保護領）"
+      cause: "イギリス南アフリカ会社の統治が終わり、イギリス政府の直轄の保護領になる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（北ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦（中央アフリカ連邦）が成立する"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "zambia"
+      cause: "連邦が解体し（1963年末）、ザンビアが独立する（10月24日）"
+      source: "https://ja.wikipedia.org/wiki/ザンビア"
+
+- id: zm_bemba
+  name: ザンビア北部（ベンバ王国）
+  select:
+    pieces: [ZMB-Northern, ZMB-Muchinga]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ベンバなどの人々の地"
+    - from: 1750
+      owner: "bemba"
+      certainty: "uncertain"
+      cause: "ベンバ人の首長チティムクルが勢力を広げ、ベンバ王国が大きくなる"
+      source: "https://en.wikipedia.org/wiki/Bemba_people"
+    - from: 1899
+      owner: "britain"
+      label: "北東ローデシア（イギリス南アフリカ会社）"
+      cause: "ベンバの首長たちがイギリス南アフリカ会社の支配を受け入れる（1898–99）"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1911
+      owner: "britain"
+      label: "北ローデシア（イギリス南アフリカ会社）"
+      cause: "北東ローデシアと北西ローデシアが合わさり、北ローデシアになる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1924
+      owner: "britain"
+      label: "北ローデシア（イギリス保護領）"
+      cause: "イギリス南アフリカ会社の統治が終わり、イギリス政府の直轄の保護領になる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（北ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦（中央アフリカ連邦）が成立する"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "zambia"
+      cause: "連邦が解体し（1963年末）、ザンビアが独立する（10月24日）"
+      source: "https://ja.wikipedia.org/wiki/ザンビア"
+
+- id: zm_east
+  name: ザンビア東部（チェワ・ンゴニ）
+  select:
+    pieces: [ZMB-Eastern]
+  timeline:
+    - from: 1648
+      owner: "maravi"
+      certainty: "uncertain"
+      note: "マラヴィ王国のウンディ王の勢力圏の西部"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1800
+      owner: null
+      cause: "マラヴィ王国が衰え、チェワの首長たちが自立する"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1870
+      owner: "ngoni"
+      certainty: "uncertain"
+      cause: "南から来たンゴニ人のムペゼニの王国ができる"
+      source: "https://en.wikipedia.org/wiki/Mpezeni"
+    - from: 1898
+      owner: "britain"
+      label: "北東ローデシア（イギリス南アフリカ会社）"
+      cause: "イギリス南アフリカ会社の軍がムペゼニのンゴニ王国を破る（1月）"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1911
+      owner: "britain"
+      label: "北ローデシア（イギリス南アフリカ会社）"
+      cause: "北東ローデシアと北西ローデシアが合わさり、北ローデシアになる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1924
+      owner: "britain"
+      label: "北ローデシア（イギリス保護領）"
+      cause: "イギリス南アフリカ会社の統治が終わり、イギリス政府の直轄の保護領になる"
+      source: "https://ja.wikipedia.org/wiki/北ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（北ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦（中央アフリカ連邦）が成立する"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "zambia"
+      cause: "連邦が解体し（1963年末）、ザンビアが独立する（10月24日）"
+      source: "https://ja.wikipedia.org/wiki/ザンビア"
+
+- id: mw_south
+  name: シレ川流域（マラウイ南部）
+  select:
+    pieces: [MWI-Balaka, MWI-Blantyre, MWI-Chikwawa, MWI-Chiradzulu, MWI-Machinga, MWI-Mulanje, MWI-Mwanza, MWI-Neno, MWI-Nsanje, MWI-Phalombe, MWI-Thyolo, MWI-Zomba, MWI-Mangochi]
+  timeline:
+    - from: 1648
+      owner: "maravi"
+      certainty: "uncertain"
+      note: "マラヴィ王国。シレ川下流にはルンドゥ王の勢力があった"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1800
+      owner: null
+      cause: "マラヴィ王国が衰え、マンガンジャの首長たちが自立する"
+      note: "19世紀半ばからヤオ人が移り住み、奴隷交易に加わった。1859年にリヴィングストンがシレ高地とニャサ湖に至った"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1891
+      owner: "britain"
+      label: "英領中央アフリカ保護領"
+      cause: "イギリスが英領中央アフリカ保護領を置く（1876年にスコットランド教会がブランタイアに伝道所を開いていた）"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1907
+      owner: "britain"
+      label: "ニヤサランド保護領"
+      cause: "英領中央アフリカ保護領がニヤサランド保護領と改称される"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（ニヤサランド）"
+      cause: "ローデシア・ニヤサランド連邦が成立する"
+      note: "アフリカ人の多くは連邦に反対し、1959年には非常事態が宣言された"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "malawi"
+      cause: "連邦が解体し（1963年末）、マラウイが独立する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/マラウイ"
+
+- id: mw_central
+  name: マラウイ中部（チェワ）
+  select:
+    pieces: [MWI-Kasungu, MWI-Ntchisi, MWI-Dowa, MWI-Lilongwe, MWI-Mchinji, MWI-Salima, MWI-Nkhotakota]
+  timeline:
+    - from: 1648
+      owner: "maravi"
+      certainty: "uncertain"
+      note: "マラヴィ王国のカロンガ王の勢力圏"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1800
+      owner: null
+      cause: "マラヴィ王国が衰え、チェワの首長たちが自立する"
+      note: "ンコタコタには19世紀半ばにスワヒリ商人ジュンベの奴隷交易の拠点ができた"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1891
+      owner: "britain"
+      certainty: "nominal"
+      label: "英領中央アフリカ保護領"
+      cause: "イギリスが英領中央アフリカ保護領を置く"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1896
+      owner: "britain"
+      label: "英領中央アフリカ保護領"
+      cause: "イギリスの遠征でチェワ・ヤオの首長たちが従う"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1907
+      owner: "britain"
+      label: "ニヤサランド保護領"
+      cause: "英領中央アフリカ保護領がニヤサランド保護領と改称される"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（ニヤサランド）"
+      cause: "ローデシア・ニヤサランド連邦が成立する"
+      note: "アフリカ人の多くは連邦に反対し、1959年には非常事態が宣言された"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "malawi"
+      cause: "連邦が解体し（1963年末）、マラウイが独立する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/マラウイ"
+
+- id: mw_ngoni_south
+  name: デッザ・ンチェウ（マセコ・ンゴニ）
+  select:
+    pieces: [MWI-Dedza, MWI-Ntcheu]
+  timeline:
+    - from: 1648
+      owner: "maravi"
+      certainty: "uncertain"
+      note: "マラヴィ王国のカロンガ王の勢力圏"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1800
+      owner: null
+      cause: "マラヴィ王国が衰え、チェワの首長たちが自立する"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1865
+      owner: "ngoni"
+      certainty: "uncertain"
+      cause: "マセコ・ンゴニ人がこの地に定着する"
+      source: "https://en.wikipedia.org/wiki/Ngoni_people"
+    - from: 1896
+      owner: "britain"
+      label: "英領中央アフリカ保護領"
+      cause: "イギリスの遠征でマセコ・ンゴニの首長が従う"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1907
+      owner: "britain"
+      label: "ニヤサランド保護領"
+      cause: "英領中央アフリカ保護領がニヤサランド保護領と改称される"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（ニヤサランド）"
+      cause: "ローデシア・ニヤサランド連邦が成立する"
+      note: "アフリカ人の多くは連邦に反対し、1959年には非常事態が宣言された"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "malawi"
+      cause: "連邦が解体し（1963年末）、マラウイが独立する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/マラウイ"
+
+- id: mw_mzimba
+  name: ムジンバ（ムベルワのンゴニ王国）
+  select:
+    pieces: [MWI-Mzimba]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "トゥンブカなどの人々の地"
+    - from: 1855
+      owner: "ngoni"
+      certainty: "uncertain"
+      cause: "ズワンゲンダバの子ムベルワのンゴニ王国ができる"
+      source: "https://en.wikipedia.org/wiki/Ngoni_people"
+    - from: 1891
+      owner: "britain"
+      certainty: "nominal"
+      label: "英領中央アフリカ保護領"
+      cause: "イギリスが英領中央アフリカ保護領を置く"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1904
+      owner: "britain"
+      label: "英領中央アフリカ保護領"
+      cause: "ムベルワのンゴニ王国が保護領の行政を受け入れる"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1907
+      owner: "britain"
+      label: "ニヤサランド保護領"
+      cause: "英領中央アフリカ保護領がニヤサランド保護領と改称される"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（ニヤサランド）"
+      cause: "ローデシア・ニヤサランド連邦が成立する"
+      note: "アフリカ人の多くは連邦に反対し、1959年には非常事態が宣言された"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "malawi"
+      cause: "連邦が解体し（1963年末）、マラウイが独立する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/マラウイ"
+
+- id: mw_north
+  name: マラウイ北部（ニャサ湖北岸）
+  select:
+    pieces: [MWI-Chitipa, MWI-Karonga, MWI-Rumphi, MWI-Nkhata_Bay, MWI-Likoma]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ンゴンデ・トゥンブカ・トンガなどの人々の地"
+    - from: 1891
+      owner: "britain"
+      label: "英領中央アフリカ保護領"
+      cause: "イギリスが英領中央アフリカ保護領を置く（カロンガではアフリカ湖水会社とスワヒリ商人ムロジの戦い〈1887–89〉があった）"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1907
+      owner: "britain"
+      label: "ニヤサランド保護領"
+      cause: "英領中央アフリカ保護領がニヤサランド保護領と改称される"
+      source: "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（ニヤサランド）"
+      cause: "ローデシア・ニヤサランド連邦が成立する"
+      note: "アフリカ人の多くは連邦に反対し、1959年には非常事態が宣言された"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "malawi"
+      cause: "連邦が解体し（1963年末）、マラウイが独立する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/マラウイ"
+
+- id: zw_mashonaland
+  name: マショナランド（ムタパ王国の地）
+  select:
+    pieces: [ZWE-Mashonaland_Central, ZWE-Mashonaland_East, ZWE-Mashonaland_West, ZWE-Harare]
+  timeline:
+    - from: 1648
+      owner: "mutapa"
+      overlord: "portugal"
+      note: "ムタパ王国（モノモタパ）。1629年からポルトガルに臣従し、ポルトガル人の市（フェイラ）や鉱山があった"
+      source: "https://ja.wikipedia.org/wiki/モノモタパ王国"
+    - from: 1694
+      owner: "rozwi"
+      cause: "チャンガミレ・ドンボのロズウィ軍がダンバラレなどのポルトガル人の市を破壊し、高原からポルトガル人を追う（1693–95）"
+      note: "ムタパ王国はザンベジ川の谷（現在のモザンビークのテテ州）に退いた"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1835
+      owner: null
+      cause: "北上するンゴニ人（ズワンゲンダバ）の攻撃でロズウィ王国が崩れる"
+      note: "ショナ人の首長たちが自立した。1840年からはンデベレ王国の襲撃と貢納の求めを受けた"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1890
+      owner: "britain"
+      label: "イギリス南アフリカ会社領（マショナランド）"
+      cause: "イギリス南アフリカ会社の「パイオニア・コラム」がソールズベリ砦（ハラレ）を築く（9月）"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1896
+      owner: "britain"
+      label: "ローデシア（イギリス南アフリカ会社）"
+      cause: "ショナ人・ンデベレ人の大反乱（第1次チムレンガ、1896–97）が起こる"
+      note: "1895年に会社の領地はセシル・ローズにちなんで「ローデシア」と名づけられた"
+      source: "https://ja.wikipedia.org/wiki/第一次チムレンガ"
+    - from: 1923
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "白人入植者の住民投票（1922）で南アフリカ連邦に加わらず、自治植民地になる"
+      source: "https://ja.wikipedia.org/wiki/南ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（南ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦が成立する（首都ソールズベリ）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "ローデシア・ニヤサランド連邦が解体する（1963年末）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1965
+      owner: "rhodesia"
+      cause: "スミスの白人政権が一方的に独立を宣言する（11月11日）"
+      note: "国際的には承認されず、国連は経済制裁を決めた。黒人の解放勢力（ZANU・ZAPU）とのローデシア紛争（第2次チムレンガ）が1972年ごろから激しくなった"
+      source: "https://ja.wikipedia.org/wiki/ローデシア"
+    - from: 1979
+      owner: "britain"
+      label: "南ローデシア（イギリスの暫定統治）"
+      cause: "ランカスター・ハウス協定（12月）で、イギリスの総督が一時統治に戻る"
+      source: "https://ja.wikipedia.org/wiki/ランカスター・ハウス協定"
+    - from: 1980
+      owner: "zimbabwe"
+      cause: "選挙でムガベのZANUが勝ち、ジンバブエが独立する（4月18日）"
+      source: "https://ja.wikipedia.org/wiki/ジンバブエ"
+
+- id: zw_matabeleland
+  name: マタベレランド（ンデベレ王国）
+  select:
+    pieces: [ZWE-Matabeleland_North, ZWE-Matabeleland_South, ZWE-Bulawayo, ZWE-Midlands]
+  timeline:
+    - from: 1648
+      owner: "torwa"
+      certainty: "uncertain"
+      note: "トルワ王国（ブトゥア）。カミ遺跡・ダナンゴンベ（ドロドロ）の石造建築が都の跡"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Butua"
+    - from: 1684
+      owner: "rozwi"
+      cause: "チャンガミレ・ドンボがトルワ王国を倒し、ロズウィ王国（チャンガミレ国）を建てる"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1835
+      owner: null
+      cause: "北上するンゴニ人の攻撃でロズウィ王国が崩れる"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1840
+      owner: "ndebele"
+      cause: "ムジリカジのンデベレ人がトランスヴァールから移り、ブラワヨを中心に王国を建てる"
+      source: "https://en.wikipedia.org/wiki/Northern_Ndebele_people"
+    - from: 1893
+      owner: "britain"
+      label: "イギリス南アフリカ会社領（マタベレランド）"
+      cause: "第1次マタベレ戦争でイギリス南アフリカ会社の軍がブラワヨを落とす（ロベングラ王は逃れて死去）"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1896
+      owner: "britain"
+      label: "ローデシア（イギリス南アフリカ会社）"
+      cause: "ンデベレ人・ショナ人の大反乱（第1次チムレンガ）が起こる（1897年までに鎮圧）"
+      source: "https://ja.wikipedia.org/wiki/第一次チムレンガ"
+    - from: 1923
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "白人入植者の住民投票（1922）で南アフリカ連邦に加わらず、自治植民地になる"
+      source: "https://ja.wikipedia.org/wiki/南ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（南ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦が成立する（首都ソールズベリ）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "ローデシア・ニヤサランド連邦が解体する（1963年末）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1965
+      owner: "rhodesia"
+      cause: "スミスの白人政権が一方的に独立を宣言する（11月11日）"
+      note: "国際的には承認されず、国連は経済制裁を決めた。黒人の解放勢力（ZANU・ZAPU）とのローデシア紛争（第2次チムレンガ）が1972年ごろから激しくなった"
+      source: "https://ja.wikipedia.org/wiki/ローデシア"
+    - from: 1979
+      owner: "britain"
+      label: "南ローデシア（イギリスの暫定統治）"
+      cause: "ランカスター・ハウス協定（12月）で、イギリスの総督が一時統治に戻る"
+      source: "https://ja.wikipedia.org/wiki/ランカスター・ハウス協定"
+    - from: 1980
+      owner: "zimbabwe"
+      cause: "選挙でムガベのZANUが勝ち、ジンバブエが独立する（4月18日）"
+      source: "https://ja.wikipedia.org/wiki/ジンバブエ"
+
+- id: zw_masvingo
+  name: マシンゴ（グレート・ジンバブエ）
+  select:
+    pieces: [ZWE-Masvingo]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ショナ人の首長の地。グレート・ジンバブエの石造遺跡は15世紀に放棄されていた"
+    - from: 1684
+      owner: "rozwi"
+      cause: "チャンガミレ・ドンボのロズウィ王国が高原の南部を従える"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1835
+      owner: null
+      cause: "北上するンゴニ人の攻撃でロズウィ王国が崩れる"
+      note: "ショナ人の首長たちが自立した。ンデベレ王国の襲撃を受けた"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1890
+      owner: "britain"
+      label: "イギリス南アフリカ会社領（マショナランド）"
+      cause: "イギリス南アフリカ会社の「パイオニア・コラム」がヴィクトリア砦（マシンゴ）を築く"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1896
+      owner: "britain"
+      label: "ローデシア（イギリス南アフリカ会社）"
+      cause: "1895年に会社の領地が「ローデシア」と名づけられる"
+      source: "https://ja.wikipedia.org/wiki/ローデシア"
+    - from: 1923
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "白人入植者の住民投票（1922）で南アフリカ連邦に加わらず、自治植民地になる"
+      source: "https://ja.wikipedia.org/wiki/南ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（南ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦が成立する（首都ソールズベリ）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "ローデシア・ニヤサランド連邦が解体する（1963年末）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1965
+      owner: "rhodesia"
+      cause: "スミスの白人政権が一方的に独立を宣言する（11月11日）"
+      note: "国際的には承認されず、国連は経済制裁を決めた。黒人の解放勢力（ZANU・ZAPU）とのローデシア紛争（第2次チムレンガ）が1972年ごろから激しくなった"
+      source: "https://ja.wikipedia.org/wiki/ローデシア"
+    - from: 1979
+      owner: "britain"
+      label: "南ローデシア（イギリスの暫定統治）"
+      cause: "ランカスター・ハウス協定（12月）で、イギリスの総督が一時統治に戻る"
+      source: "https://ja.wikipedia.org/wiki/ランカスター・ハウス協定"
+    - from: 1980
+      owner: "zimbabwe"
+      cause: "選挙でムガベのZANUが勝ち、ジンバブエが独立する（4月18日）"
+      source: "https://ja.wikipedia.org/wiki/ジンバブエ"
+
+- id: zw_manicaland
+  name: マニカランド
+  select:
+    pieces: [ZWE-Manicaland]
+  timeline:
+    - from: 1648
+      owner: "manyika"
+      certainty: "uncertain"
+      note: "ショナ系のマニカ（マニイカ）王国。王はムタサと称した。金の産地でポルトガル人が交易した"
+      source: "https://en.wikipedia.org/wiki/Manyika_people"
+    - from: 1891
+      owner: "britain"
+      label: "イギリス南アフリカ会社領（マショナランド）"
+      cause: "英葡条約でマニカ高原の西半分がイギリス南アフリカ会社領と決まる（6月）"
+      source: "https://ja.wikipedia.org/wiki/イギリス南アフリカ会社"
+    - from: 1896
+      owner: "britain"
+      label: "ローデシア（イギリス南アフリカ会社）"
+      cause: "1895年に会社の領地が「ローデシア」と名づけられる"
+      source: "https://ja.wikipedia.org/wiki/ローデシア"
+    - from: 1923
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "白人入植者の住民投票（1922）で南アフリカ連邦に加わらず、自治植民地になる"
+      source: "https://ja.wikipedia.org/wiki/南ローデシア"
+    - from: 1953
+      owner: "britain"
+      label: "ローデシア・ニヤサランド連邦（南ローデシア）"
+      cause: "ローデシア・ニヤサランド連邦が成立する（首都ソールズベリ）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      owner: "britain"
+      label: "南ローデシア（自治植民地）"
+      cause: "ローデシア・ニヤサランド連邦が解体する（1963年末）"
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1965
+      owner: "rhodesia"
+      cause: "スミスの白人政権が一方的に独立を宣言する（11月11日）"
+      note: "国際的には承認されず、国連は経済制裁を決めた。黒人の解放勢力（ZANU・ZAPU）とのローデシア紛争（第2次チムレンガ）が1972年ごろから激しくなった"
+      source: "https://ja.wikipedia.org/wiki/ローデシア"
+    - from: 1979
+      owner: "britain"
+      label: "南ローデシア（イギリスの暫定統治）"
+      cause: "ランカスター・ハウス協定（12月）で、イギリスの総督が一時統治に戻る"
+      source: "https://ja.wikipedia.org/wiki/ランカスター・ハウス協定"
+    - from: 1980
+      owner: "zimbabwe"
+      cause: "選挙でムガベのZANUが勝ち、ジンバブエが独立する（4月18日）"
+      source: "https://ja.wikipedia.org/wiki/ジンバブエ"
+
+- id: mz_ilha
+  name: モザンビーク島
+  select:
+    pieces: [MOZ-Ilha_De_Mocambique, MOZ-Mossuril]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      note: "モザンビーク島はポルトガルの東アフリカの拠点（サン・セバスティアン要塞）。1898年までモザンビークの首都"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク島"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_nampula_coast
+  name: ナンプラ北部海岸（ナカラ）
+  select:
+    pieces: [MOZ-Nacala, MOZ-Nacala_A_Velha, MOZ-Monapo, MOZ-Memba]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "マクア人の首長と、キタンゴニャなどのスワヒリ系の首長の海岸。ポルトガルの臣従者とされることもあった"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ベルリン会議の後、モザンビークの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1906
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がマクア人の首長たちを征服する（1890年代後半–1910年代）"
+      note: "要確認：支配が及んだ年"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領東アフリカ"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_angoche
+  name: アンゴシェ
+  select:
+    pieces: [MOZ-Angoche, MOZ-Larde, MOZ-Moma, MOZ-Mogincual, MOZ-Liupo]
+  timeline:
+    - from: 1648
+      owner: "angoche"
+      certainty: "uncertain"
+      note: "スワヒリ系のアンゴシェ・スルタン国。19世紀には奴隷交易で栄えた"
+      source: "https://en.wikipedia.org/wiki/Angoche_Sultanate"
+    - from: 1910
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がアンゴシェを征服する"
+      source: "https://en.wikipedia.org/wiki/Angoche_Sultanate"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_makua
+  name: マクアの地（ナンプラ内陸）
+  select:
+    pieces: [MOZ-Cidade_De_Nampula, MOZ-Rapale, MOZ-Meconta, MOZ-Mecuburi, MOZ-Muecate, MOZ-Murrupula, MOZ-Mogovolas, MOZ-Ribaue, MOZ-Lalaua, MOZ-Malema, MOZ-Erati, MOZ-Nacaroa]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "マクア人の首長の地。大きな国家はなかった"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ベルリン会議の後、モザンビークの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1910
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がマクア人の首長たちを征服する（1890年代後半–1910年代。ナンプラは1907年に建設）"
+      note: "要確認：支配が及んだ年"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領東アフリカ"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_cabo_coast
+  name: ケリンバ諸島とペンバ
+  select:
+    pieces: [MOZ-Cidade_De_Pemba, MOZ-Metuge, MOZ-Mecufi, MOZ-Quissanga]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      note: "イボ島などケリンバ諸島はポルトガルの拠点"
+      source: "https://en.wikipedia.org/wiki/Quirimbas_Islands"
+    - from: 1894
+      owner: "portugal"
+      label: "ニアサ会社領"
+      cause: "ニアサ会社がカーボ・デルガード・ニアサを統治する（特許は1891年）"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1929
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ニアサ会社の特許が切れ、ポルトガル政府の直接統治になる"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_cabo_delgado
+  name: カーボ・デルガード（マコンデ高原）
+  select:
+    pieces: [MOZ-Macomia, MOZ-Mocimboa_Da_Praia, MOZ-Palma, MOZ-Muidumbe, MOZ-Mueda, MOZ-Nangade, MOZ-Meluco, MOZ-Ancuabe, MOZ-Chiure, MOZ-Montepuez, MOZ-Balama, MOZ-Namuno]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "マコンデ・マクアの人々の地と、スワヒリ系の港町"
+    - from: 1891
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ニアサ会社領"
+      cause: "ニアサ会社に特許が与えられ、ルヴマ川以南がその統治地とされる"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1918
+      owner: "portugal"
+      label: "ニアサ会社領"
+      cause: "ニアサ会社の軍がマコンデ高原などを征服する（1917–20年ごろ）"
+      note: "要確認：支配が及んだ年。キオンガ三角地帯（ルヴマ川河口）は1894–1916年にドイツ領東アフリカに属した（ピースより小さいので描かない）"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1929
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ニアサ会社の特許が切れ、ポルトガル政府の直接統治になる"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1964
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "FRELIMOがカーボ・デルガードで武装闘争を始める（9月、モザンビーク独立戦争）"
+      note: "マコンデ高原にはFRELIMOの「解放区」ができた"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク独立戦争"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）"
+      note: "2017年からイスラーム過激派（アフル・スンナ・ワル・ジャマア、ISの「モザンビーク州」）の武装蜂起が続き、2020–21年にはモシンボア・ダ・プライアの町を占拠した"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_niassa
+  name: ニアサ（ヤオの地）
+  select:
+    pieces: [MOZ-Chimbonila, MOZ-Cidade_De_Lichinga, MOZ-Cuamba, MOZ-Lago, MOZ-Lago_Niassa, MOZ-Majune, MOZ-Mandimba, MOZ-Marrupa, MOZ-Maua, MOZ-Mavago, MOZ-Mecanhelas, MOZ-Mecula, MOZ-Metarica, MOZ-Muembe, MOZ-Ngauma, MOZ-Nipepe, MOZ-Sanga]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ヤオ・マクア・ニャンジャの人々の地。19世紀にはヤオ人の首長（マタカ・マカンジラなど）がスワヒリ商人と結んで奴隷交易を行った"
+    - from: 1891
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ニアサ会社領"
+      cause: "ニアサ会社に特許が与えられ、ルヴマ川以南がその統治地とされる"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1912
+      owner: "portugal"
+      label: "ニアサ会社領"
+      cause: "ニアサ会社の軍がヤオ人の首長マタカを破る"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1929
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ニアサ会社の特許が切れ、ポルトガル政府の直接統治になる"
+      source: "https://en.wikipedia.org/wiki/Niassa_Company"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_prazos
+  name: ザンベジ川下流（ケリマネとプラゾ）
+  select:
+    pieces: [MOZ-Cidade_De_Quelimane, MOZ-Inhassunge, MOZ-Maquival, MOZ-Nicoadala, MOZ-Namacurra, MOZ-Chinde, MOZ-Luabo, MOZ-Mopeia, MOZ-Maganja_Da_Costa, MOZ-Mocubela, MOZ-Pebane, MOZ-Mocuba, MOZ-Morrumbala, MOZ-Derre, MOZ-Marromeu, MOZ-Caia, MOZ-Chemba, MOZ-Mutarara]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      note: "ケリマネ・セナの町と、ポルトガル王室が入植者に貸し与えた大農園（プラゾ）。プラゾの主は私兵（チクンダ）を持つ半ば自立した領主だった"
+      source: "https://en.wikipedia.org/wiki/Prazo"
+    - from: 1853
+      owner: "portugal"
+      certainty: "uncertain"
+      label: "ポルトガル領モザンビーク"
+      cause: "マッサンガノ（ダ・クルス家）・マガンジャ・ダ・コスタなどのプラゾの主が軍閥となり、ポルトガルの支配から離れる"
+      note: "1887–88年の遠征でマッサンガノが落ちた"
+      source: "https://en.wikipedia.org/wiki/Prazo"
+    - from: 1890
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がプラゾの軍閥を征服する（1887–98）"
+      source: "https://en.wikipedia.org/wiki/Prazo"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_zambezia
+  name: ザンベジア内陸（ロムウェ）
+  select:
+    pieces: [MOZ-Alto_Molocue, MOZ-Gile, MOZ-Gurue, MOZ-Ile, MOZ-Lugela, MOZ-Milange, MOZ-Molumbo, MOZ-Namarroi, MOZ-Mulevala]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ロムウェ・マクアの人々の地。大きな国家はなかった"
+    - from: 1885
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ベルリン会議の後、モザンビークの内陸もポルトガル領とされる"
+      source: "https://ja.wikipedia.org/wiki/ベルリン会議_(1884年)"
+    - from: 1900
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ザンベジア会社（1892年設立）などの支配が内陸に及ぶ"
+      note: "要確認：支配が及んだ年"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領東アフリカ"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_tete
+  name: テテ（ザンベジ川中流）
+  select:
+    pieces: [MOZ-Cidade_De_Tete, MOZ-Moatize, MOZ-Doa, MOZ-Marara, MOZ-Chiuta]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      note: "テテはポルトガルの内陸の拠点で、ムタパ王国との交易の基地。周りにはプラゾがあった"
+      source: "https://ja.wikipedia.org/wiki/テテ"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_chidima
+  name: チディマ（後期ムタパ王国）
+  select:
+    pieces: [MOZ-Magoe, MOZ-Cahora_Bassa, MOZ-Changara]
+  timeline:
+    - from: 1648
+      owner: "mutapa"
+      overlord: "portugal"
+      note: "ムタパ王国（モノモタパ）の北の谷。1629年からポルトガルに臣従していた"
+      source: "https://ja.wikipedia.org/wiki/モノモタパ王国"
+    - from: 1694
+      owner: "mutapa"
+      cause: "ロズウィ王国に高原を追われたポルトガル人が去り、ムタパ王国はザンベジ川の谷（チディマ）を本拠とする"
+      source: "https://ja.wikipedia.org/wiki/モノモタパ王国"
+    - from: 1902
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がムタパ・バルエなどザンベジ川流域の在地の国を征服する"
+      note: "最後のムタパ王チオコは1917年の反乱で戦死した"
+      source: "https://ja.wikipedia.org/wiki/モノモタパ王国"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_tete_north
+  name: テテ北部（アンゴニア・マカンガ）
+  select:
+    pieces: [MOZ-Angonia, MOZ-Tsangano, MOZ-Macanga, MOZ-Chifunde, MOZ-Maravia, MOZ-Zumbu]
+  timeline:
+    - from: 1648
+      owner: "maravi"
+      certainty: "uncertain"
+      note: "マラヴィ王国のウンディ王の勢力圏。ズンボには1715年ごろポルトガル人の市ができた"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1800
+      owner: null
+      cause: "マラヴィ王国が衰え、チェワの首長と、プラゾの主（マカンガのペレイラ家など）が割拠する"
+      source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+    - from: 1860
+      owner: "ngoni"
+      certainty: "uncertain"
+      cause: "ンゴニ人が北のテテ高原（アンゴニア）に定着する"
+      source: "https://en.wikipedia.org/wiki/Ngoni_people"
+    - from: 1902
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がアンゴニアを征服する"
+      note: "要確認：征服の年"
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領東アフリカ"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_sofala
+  name: ソファラ海岸（ベイラ）
+  select:
+    pieces: [MOZ-Cidade_Da_Beira, MOZ-Dondo, MOZ-Buzi, MOZ-Machanga, MOZ-Muanza, MOZ-Cheringoma]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      note: "ソファラは1505年にポルトガルが要塞を築いた金の交易の港"
+      source: "https://ja.wikipedia.org/wiki/ソファラ"
+    - from: 1891
+      owner: "portugal"
+      label: "モザンビーク会社領"
+      cause: "モザンビーク会社がマニカ・ソファラを統治する（ベイラは1887年建設）"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1942
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "モザンビーク会社の特許が切れ、ポルトガル政府の直接統治になる"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_teve
+  name: キテヴェ王国（ソファラ内陸）
+  select:
+    pieces: [MOZ-Nhamatanda, MOZ-Gorongosa, MOZ-Maringue, MOZ-Chibabava]
+  timeline:
+    - from: 1648
+      owner: "teve"
+      certainty: "uncertain"
+      note: "ショナ系のキテヴェ（ウテヴェ）王国。ソファラのポルトガル人に通行料を求めた"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Uteve"
+    - from: 1891
+      owner: "portugal"
+      certainty: "nominal"
+      label: "モザンビーク会社領"
+      cause: "モザンビーク会社に特許が与えられ、マニカ・ソファラがその統治地とされる"
+      note: "ゴロンゴザはポルトガル側の軍閥ゴウヴェイア（マヌエル・アントニオ・デ・ソウザ）の本拠だった"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1895
+      owner: "portugal"
+      label: "モザンビーク会社領"
+      cause: "モザンビーク会社の支配が内陸に及ぶ"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1942
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "モザンビーク会社の特許が切れ、ポルトガル政府の直接統治になる"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_manica
+  name: マニカ（モザンビーク側）
+  select:
+    pieces: [MOZ-Manica, MOZ-Cidade_De_Chimoio, MOZ-Gondola, MOZ-Vanduzi, MOZ-Sussundenga, MOZ-Macate]
+  timeline:
+    - from: 1648
+      owner: "manyika"
+      certainty: "uncertain"
+      note: "ショナ系のマニカ（マニイカ）王国。金の産地で、ポルトガル人の市（マシクエセ）があった"
+      source: "https://en.wikipedia.org/wiki/Manyika_people"
+    - from: 1891
+      owner: "portugal"
+      label: "モザンビーク会社領"
+      cause: "英葡条約でマニカ高原の東半分がポルトガル領と決まり、モザンビーク会社が統治する"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1942
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "モザンビーク会社の特許が切れ、ポルトガル政府の直接統治になる"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_mossurize
+  name: モスリゼ・マシャゼ（ガザ王国の北の都）
+  select:
+    pieces: [MOZ-Mossurize, MOZ-Machaze]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ンダウ人（ショナ系）の首長の地。キテヴェ王国の南"
+    - from: 1830
+      owner: "gaza"
+      certainty: "uncertain"
+      cause: "ソシャンガネのガザ王国がサヴェ川流域に広がる"
+      note: "ガザ王国の都はこの地方（ムサペ・モスリゼ）に置かれたこともある。1889年にグングニャナが南のマンジャカゼに移った"
+      source: "https://en.wikipedia.org/wiki/Gaza_Empire"
+    - from: 1895
+      owner: "portugal"
+      label: "モザンビーク会社領"
+      cause: "ポルトガル軍がガザ王国を征服する"
+      source: "https://en.wikipedia.org/wiki/Gaza_Empire"
+    - from: 1942
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "モザンビーク会社の特許が切れ、ポルトガル政府の直接統治になる"
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_barue
+  name: バルエ王国
+  select:
+    pieces: [MOZ-Barue, MOZ-Guro, MOZ-Tambara, MOZ-Macossa]
+  timeline:
+    - from: 1648
+      owner: "barue"
+      certainty: "uncertain"
+      note: "ショナ系のバルエ（ウバルウェ）王国。ムタパ王国から分かれた"
+      source: "https://en.wikipedia.org/wiki/Barue_Kingdom"
+    - from: 1902
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がバルエ王国を征服する"
+      note: "1917年に強制労働と徴兵に反対する大反乱（バルエの反乱）が起こった"
+      source: "https://en.wikipedia.org/wiki/Barue_Kingdom"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_inhambane
+  name: イニャンバネ
+  select:
+    pieces: [MOZ-Cidade_De_Inhambane, MOZ-Maxixe, MOZ-Jangamo, MOZ-Homoine, MOZ-Morrumbene]
+  timeline:
+    - from: 1648
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      note: "イニャンバネはポルトガルの交易の港（象牙・奴隷）"
+      source: "https://en.wikipedia.org/wiki/Inhambane"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_gaza
+  name: ガザ王国（リンポポ・サヴェ川流域）
+  select:
+    pieces: [MOZ-Bilene, MOZ-Chibuto, MOZ-Chicualacuala, MOZ-Chigubo, MOZ-Chokwe, MOZ-Chongoene, MOZ-Cidade_De_Xai_Xai, MOZ-Guija, MOZ-Limpopo, MOZ-Mabalane, MOZ-Mandlakaze, MOZ-Mapai, MOZ-Massangena, MOZ-Massingir, MOZ-Inharrime, MOZ-Zavala, MOZ-Massinga, MOZ-Vilankulo, MOZ-Inhassoro, MOZ-Govuro, MOZ-Panda, MOZ-Funhalouro, MOZ-Mabote]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ツォンガ（トンガ）・ショピの首長の地。大きな国家はなかった"
+    - from: 1830
+      owner: "gaza"
+      cause: "ズールーから逃れたンドワンドウェ系のソシャンガネがガザ王国を建てる（1820年代）"
+      note: "要確認：建国の年"
+      source: "https://en.wikipedia.org/wiki/Gaza_Empire"
+    - from: 1895
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガル軍がガザ王国を征服し、グングニャナ王を捕らえる（12月、シャイミテ）"
+      source: "https://en.wikipedia.org/wiki/Gungunhana"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: mz_lourenco_marques
+  name: ロウレンソ・マルケス（マプト）
+  select:
+    pieces: [MOZ-Cidade_De_Maputo, MOZ-Cidade_Da_Matola, MOZ-Marracuene, MOZ-Boane]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "デラゴア湾。ツォンガ（ロンガ）の首長（ムプフモ・マトラなど）の地で、ポルトガル人などが象牙を買いに来た"
+    - from: 1721
+      owner: "netherlands"
+      label: "デラゴア湾（オランダ東インド会社の砦）"
+      cause: "オランダ東インド会社がデラゴア湾に砦を築く"
+      source: "https://en.wikipedia.org/wiki/Maputo#History"
+    - from: 1731
+      owner: null
+      cause: "オランダ東インド会社が砦を放棄する"
+      source: "https://en.wikipedia.org/wiki/Maputo#History"
+    - from: 1781
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "ポルトガルがデラゴア湾に砦を築く（ロウレンソ・マルケス）"
+      note: "1777–81年にはオーストリア（ボルツ）の商館があった"
+      source: "https://en.wikipedia.org/wiki/Maputo#History"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。ロウレンソ・マルケスはマプトと改名"
+      source: "https://ja.wikipedia.org/wiki/マプト"
+
+- id: mz_maputo_south
+  name: デラゴア湾の後背地（マプト州）
+  select:
+    pieces: [MOZ-Matutuine, MOZ-Namaacha, MOZ-Moamba, MOZ-Manhica, MOZ-Magude]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ツォンガ（ロンガ）の首長の地（南のテンベ〈マプト〉王国など）。北部はガザ王国の勢力が及んだ"
+    - from: 1876
+      owner: "portugal"
+      certainty: "nominal"
+      label: "ポルトガル領モザンビーク"
+      cause: "マクマオン裁定（1875）でデラゴア湾の南岸がポルトガル領と認められる"
+      source: "https://en.wikipedia.org/wiki/Delagoa_Bay#History"
+    - from: 1895
+      owner: "portugal"
+      label: "ポルトガル領モザンビーク"
+      cause: "マラクエネの戦い（2月）などでロンガの首長たちが破れる"
+      source: "https://en.wikipedia.org/wiki/Gaza_Empire"
+    - from: 1975
+      owner: "mozambique"
+      cause: "モザンビークがポルトガルから独立する（6月25日）。モザンビーク解放戦線（FRELIMO）のマシェルが大統領になる"
+      note: "1977年からモザンビーク民族抵抗運動（RENAMO）との内戦が続き、1992年のローマ和平協定で終わった（地図では描かない）"
+      source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: bw_tswana
+  name: ツワナ諸首長国（ボツワナ東部・南部）
+  select:
+    pieces: [BWA-Central_District, BWA-Kgatleng_District, BWA-Kweneng_District, BWA-South_East_District, BWA-Southern_District]
+  timeline:
+    - from: 1648
+      owner: "tswana"
+      certainty: "uncertain"
+      note: "ツワナ人の首長国（ングワト・クウェナ・ングワケツェなど）"
+      source: "https://en.wikipedia.org/wiki/Tswana_people"
+    - from: 1885
+      owner: "britain"
+      certainty: "indirect"
+      label: "ベチュアナランド保護領"
+      cause: "イギリスがベチュアナランド保護領を置く（3月）。ツワナの首長が治める間接統治"
+      source: "https://ja.wikipedia.org/wiki/ベチュアナランド"
+    - from: 1966
+      owner: "botswana"
+      cause: "ボツワナが独立する（9月30日）"
+      source: "https://ja.wikipedia.org/wiki/ボツワナ"
+
+- id: bw_kalahari
+  name: カラハリ（ハンツィ・ハハラディ）
+  select:
+    pieces: [BWA-Kgalagadi_District, BWA-Ghanzi_District]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "カラハリ砂漠のサン人（ブッシュマン）とハハラディ人の地。大きな国家はなかった"
+    - from: 1885
+      owner: "britain"
+      certainty: "indirect"
+      label: "ベチュアナランド保護領"
+      cause: "イギリスがベチュアナランド保護領を置く（3月）。ツワナの首長が治める間接統治"
+      source: "https://ja.wikipedia.org/wiki/ベチュアナランド"
+    - from: 1966
+      owner: "botswana"
+      cause: "ボツワナが独立する（9月30日）"
+      source: "https://ja.wikipedia.org/wiki/ボツワナ"
+
+- id: bw_ngamiland
+  name: ンガミランド（オカヴァンゴ）
+  select:
+    pieces: [BWA-North_West_District]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "イェイ・ンバクシュ・サンなどの人々の地"
+    - from: 1795
+      owner: "tswana"
+      certainty: "uncertain"
+      cause: "ングワトから分かれたタワナ人がンガミ湖のほとりに首長国を建てる"
+      source: "https://en.wikipedia.org/wiki/Batawana"
+    - from: 1890
+      owner: "britain"
+      certainty: "indirect"
+      label: "ベチュアナランド保護領"
+      cause: "ベチュアナランド保護領が北緯22度の北に広げられる"
+      source: "https://ja.wikipedia.org/wiki/ベチュアナランド"
+    - from: 1966
+      owner: "botswana"
+      cause: "ボツワナが独立する（9月30日）"
+      source: "https://ja.wikipedia.org/wiki/ボツワナ"
+
+- id: bw_chobe
+  name: チョベ
+  select:
+    pieces: [BWA-Chobe_District]
+  timeline:
+    - from: 1648
+      owner: "lozi"
+      certainty: "uncertain"
+      note: "ロジ王国の南の外縁"
+      source: "https://ja.wikipedia.org/wiki/バロツェランド"
+    - from: 1840
+      owner: "kololo"
+      cause: "セベトワネのコロロ王国がチョベ川流域を本拠とする"
+      source: "https://en.wikipedia.org/wiki/Makololo"
+    - from: 1864
+      owner: "lozi"
+      certainty: "uncertain"
+      cause: "ロジ人がコロロ王国を倒す"
+      source: "https://en.wikipedia.org/wiki/Makololo"
+    - from: 1890
+      owner: "britain"
+      certainty: "indirect"
+      label: "ベチュアナランド保護領"
+      cause: "ベチュアナランド保護領が北緯22度の北に広げられる"
+      source: "https://ja.wikipedia.org/wiki/ベチュアナランド"
+    - from: 1966
+      owner: "botswana"
+      cause: "ボツワナが独立する（9月30日）"
+      source: "https://ja.wikipedia.org/wiki/ボツワナ"
+
+- id: bw_tati
+  name: タティ（北東部）
+  select:
+    pieces: [BWA-North_East_District]
+  timeline:
+    - from: 1648
+      owner: "torwa"
+      certainty: "uncertain"
+      note: "トルワ王国（ブトゥア）の南西の外縁"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Butua"
+    - from: 1684
+      owner: "rozwi"
+      certainty: "uncertain"
+      cause: "チャンガミレ・ドンボのロズウィ王国が支配する"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1835
+      owner: null
+      cause: "ロズウィ王国が崩れる"
+      source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+    - from: 1840
+      owner: "ndebele"
+      certainty: "uncertain"
+      cause: "ンデベレ王国の勢力圏になる（1860年代にタティで金が見つかった）"
+      source: "https://en.wikipedia.org/wiki/Northern_Ndebele_people"
+    - from: 1890
+      owner: "britain"
+      certainty: "indirect"
+      label: "ベチュアナランド保護領"
+      cause: "ベチュアナランド保護領が北に広げられる（タティ利権地）"
+      source: "https://ja.wikipedia.org/wiki/ベチュアナランド"
+    - from: 1966
+      owner: "botswana"
+      cause: "ボツワナが独立する（9月30日）"
+      source: "https://ja.wikipedia.org/wiki/ボツワナ"
+
+- id: na_nama
+  name: ナマクアランド（ナミビア南部）
+  select:
+    pieces: [NAM-Karas, NAM-Hardap]
+  timeline:
+    - from: 1648
+      owner: "nama"
+      certainty: "uncertain"
+      note: "ナマ人（コイコイ系の牧畜民）の首長の地。19世紀にはケープから来たオーラム（ヴィトボーイ家など）が勢力を持った"
+      source: "https://en.wikipedia.org/wiki/Nama_people"
+    - from: 1884
+      owner: "german_empire"
+      certainty: "nominal"
+      label: "ドイツ領南西アフリカ"
+      cause: "ドイツがリューデリッツの買い取った土地を保護領にする（4月・8月）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ領南西アフリカ"
+    - from: 1894
+      owner: "german_empire"
+      label: "ドイツ領南西アフリカ"
+      cause: "ヴィトボーイがドイツ軍に降伏し、保護条約を結ぶ"
+      note: "1904–08年のナマ人の蜂起ではドイツ軍の作戦で多くのナマ人が死んだ"
+      source: "https://en.wikipedia.org/wiki/Hendrik_Witbooi"
+    - from: 1915
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "ドイツ領南西アフリカ（南アフリカ軍の占領）"
+      cause: "第一次世界大戦で南アフリカ連邦の軍がドイツ領南西アフリカを占領する（7月）"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ戦線"
+    - from: 1920
+      owner: "south_africa"
+      label: "南西アフリカ（委任統治領）"
+      cause: "国際連盟の委任統治領として南アフリカ連邦が統治する"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1966
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "南西アフリカ（南アフリカの統治）"
+      cause: "国連総会が南アフリカの委任統治の終了を決議する（10月）"
+      note: "1971年に国際司法裁判所も南アフリカの統治を違法とした。SWAPO（南西アフリカ人民機構）が1966年から武装闘争を行った。アパルトヘイト政策がしかれた"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1990
+      owner: "namibia"
+      cause: "ナミビアが独立する（3月21日）"
+      note: "ウォルビス・ベイは1994年まで南アフリカ領だった（ピースより小さいので描かない）"
+      source: "https://ja.wikipedia.org/wiki/ナミビア"
+
+- id: na_herero
+  name: ヘレロランド（ナミビア中部）
+  select:
+    pieces: [NAM-Khomas, NAM-Erongo, NAM-Otjozondjupa, NAM-Omaheke]
+  timeline:
+    - from: 1648
+      owner: "herero"
+      certainty: "uncertain"
+      note: "ヘレロ人の牧畜民の首長の地。1840–60年代にはオーラム（ナマ系）のヨンカー・アフリカーナーがヴィントフックを拠点に勢力を持った"
+      source: "https://en.wikipedia.org/wiki/Herero_people"
+    - from: 1885
+      owner: "german_empire"
+      certainty: "nominal"
+      label: "ドイツ領南西アフリカ"
+      cause: "ヘレロの首長マハレロがドイツと保護条約を結ぶ（10月）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ領南西アフリカ"
+    - from: 1890
+      owner: "german_empire"
+      label: "ドイツ領南西アフリカ"
+      cause: "ドイツ軍がヴィントフックに砦を築く"
+      note: "1904年にヘレロ人が蜂起すると、ドイツ軍（トロータ将軍）は彼らを砂漠に追い込んで殲滅した（ヘレロ・ナマの虐殺）。ドイツ政府は2021年にジェノサイドと認めた"
+      source: "https://ja.wikipedia.org/wiki/ヘレロ・ナマクア虐殺"
+    - from: 1915
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "ドイツ領南西アフリカ（南アフリカ軍の占領）"
+      cause: "第一次世界大戦で南アフリカ連邦の軍がドイツ領南西アフリカを占領する（7月）"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ戦線"
+    - from: 1920
+      owner: "south_africa"
+      label: "南西アフリカ（委任統治領）"
+      cause: "国際連盟の委任統治領として南アフリカ連邦が統治する"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1966
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "南西アフリカ（南アフリカの統治）"
+      cause: "国連総会が南アフリカの委任統治の終了を決議する（10月）"
+      note: "1971年に国際司法裁判所も南アフリカの統治を違法とした。SWAPO（南西アフリカ人民機構）が1966年から武装闘争を行った。アパルトヘイト政策がしかれた"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1990
+      owner: "namibia"
+      cause: "ナミビアが独立する（3月21日）"
+      note: "ウォルビス・ベイは1994年まで南アフリカ領だった（ピースより小さいので描かない）"
+      source: "https://ja.wikipedia.org/wiki/ナミビア"
+
+- id: na_kaoko
+  name: カオコランド
+  select:
+    pieces: [NAM-Kunene]
+  timeline:
+    - from: 1648
+      owner: "herero"
+      certainty: "uncertain"
+      note: "ヒンバ・ヘレロの牧畜民の地"
+      source: "https://en.wikipedia.org/wiki/Himba_people"
+    - from: 1885
+      owner: "german_empire"
+      certainty: "nominal"
+      label: "ドイツ領南西アフリカ"
+      cause: "ドイツ領南西アフリカの勢力圏とされる（行政はほとんど及ばなかった）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ領南西アフリカ"
+    - from: 1915
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "ドイツ領南西アフリカ（南アフリカ軍の占領）"
+      cause: "第一次世界大戦で南アフリカ連邦の軍がドイツ領南西アフリカを占領する（7月）"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ戦線"
+    - from: 1920
+      owner: "south_africa"
+      label: "南西アフリカ（委任統治領）"
+      cause: "国際連盟の委任統治領として南アフリカ連邦が統治する"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1966
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "南西アフリカ（南アフリカの統治）"
+      cause: "国連総会が南アフリカの委任統治の終了を決議する（10月）"
+      note: "1971年に国際司法裁判所も南アフリカの統治を違法とした。SWAPO（南西アフリカ人民機構）が1966年から武装闘争を行った。アパルトヘイト政策がしかれた"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1990
+      owner: "namibia"
+      cause: "ナミビアが独立する（3月21日）"
+      note: "ウォルビス・ベイは1994年まで南アフリカ領だった（ピースより小さいので描かない）"
+      source: "https://ja.wikipedia.org/wiki/ナミビア"
+
+- id: na_ovambo
+  name: オヴァンボランド
+  select:
+    pieces: [NAM-Omusati, NAM-Oshana, NAM-Ohangwena, NAM-Oshikoto]
+  timeline:
+    - from: 1648
+      owner: "ovambo"
+      certainty: "uncertain"
+      note: "オヴァンボ人の王国（ンドンガ・クワニャマなど）"
+      source: "https://en.wikipedia.org/wiki/Ovambo_people"
+    - from: 1885
+      owner: "german_empire"
+      certainty: "nominal"
+      label: "ドイツ領南西アフリカ"
+      cause: "ドイツ領南西アフリカの勢力圏とされる（行政はほとんど及ばなかった）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ領南西アフリカ"
+    - from: 1915
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "ドイツ領南西アフリカ（南アフリカ軍の占領）"
+      cause: "第一次世界大戦で南アフリカ連邦の軍がドイツ領南西アフリカを占領する（7月）"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ戦線"
+    - from: 1920
+      owner: "south_africa"
+      label: "南西アフリカ（委任統治領）"
+      cause: "国際連盟の委任統治領として南アフリカ連邦が統治する"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1966
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "南西アフリカ（南アフリカの統治）"
+      cause: "国連総会が南アフリカの委任統治の終了を決議する（10月）"
+      note: "1971年に国際司法裁判所も南アフリカの統治を違法とした。SWAPO（南西アフリカ人民機構）が1966年から武装闘争を行った。アパルトヘイト政策がしかれた"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1990
+      owner: "namibia"
+      cause: "ナミビアが独立する（3月21日）"
+      note: "ウォルビス・ベイは1994年まで南アフリカ領だった（ピースより小さいので描かない）"
+      source: "https://ja.wikipedia.org/wiki/ナミビア"
+
+- id: na_kavango
+  name: カヴァンゴ
+  select:
+    pieces: [NAM-Kavango]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "カヴァンゴ川沿いの首長の地"
+    - from: 1890
+      owner: "german_empire"
+      certainty: "nominal"
+      label: "ドイツ領南西アフリカ"
+      cause: "ドイツ領南西アフリカの勢力圏とされる（行政はほとんど及ばなかった）"
+      source: "https://ja.wikipedia.org/wiki/ドイツ領南西アフリカ"
+    - from: 1915
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "ドイツ領南西アフリカ（南アフリカ軍の占領）"
+      cause: "第一次世界大戦で南アフリカ連邦の軍がドイツ領南西アフリカを占領する（7月）"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ戦線"
+    - from: 1920
+      owner: "south_africa"
+      label: "南西アフリカ（委任統治領）"
+      cause: "国際連盟の委任統治領として南アフリカ連邦が統治する"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1966
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "南西アフリカ（南アフリカの統治）"
+      cause: "国連総会が南アフリカの委任統治の終了を決議する（10月）"
+      note: "1971年に国際司法裁判所も南アフリカの統治を違法とした。SWAPO（南西アフリカ人民機構）が1966年から武装闘争を行った。アパルトヘイト政策がしかれた"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1990
+      owner: "namibia"
+      cause: "ナミビアが独立する（3月21日）"
+      note: "ウォルビス・ベイは1994年まで南アフリカ領だった（ピースより小さいので描かない）"
+      source: "https://ja.wikipedia.org/wiki/ナミビア"
+
+- id: na_caprivi
+  name: カプリヴィ回廊
+  select:
+    pieces: [NAM-Caprivi]
+  timeline:
+    - from: 1648
+      owner: "lozi"
+      certainty: "uncertain"
+      note: "ロジ王国の南の外縁"
+      source: "https://ja.wikipedia.org/wiki/バロツェランド"
+    - from: 1840
+      owner: "kololo"
+      cause: "セベトワネのコロロ王国が支配する"
+      source: "https://en.wikipedia.org/wiki/Makololo"
+    - from: 1864
+      owner: "lozi"
+      certainty: "uncertain"
+      cause: "ロジ人がコロロ王国を倒す"
+      source: "https://en.wikipedia.org/wiki/Makololo"
+    - from: 1890
+      owner: "german_empire"
+      certainty: "nominal"
+      label: "ドイツ領南西アフリカ"
+      cause: "ヘルゴラント＝ザンジバル条約で、ドイツ領南西アフリカがザンベジ川に通じる回廊を得る"
+      source: "https://ja.wikipedia.org/wiki/カプリヴィ回廊"
+    - from: 1909
+      owner: "german_empire"
+      label: "ドイツ領南西アフリカ"
+      cause: "ドイツがシュックマンスブルクに行政の拠点を置く"
+      source: "https://ja.wikipedia.org/wiki/カプリヴィ回廊"
+    - from: 1914
+      owner: "britain"
+      certainty: "occupied"
+      label: "ドイツ領南西アフリカ（イギリス軍の占領）"
+      cause: "第一次世界大戦で北ローデシアの軍がシュックマンスブルクを占領する（9月）"
+      source: "https://ja.wikipedia.org/wiki/カプリヴィ回廊"
+    - from: 1920
+      owner: "south_africa"
+      label: "南西アフリカ（委任統治領）"
+      cause: "国際連盟の委任統治領として南アフリカ連邦が統治する（1929年までベチュアナランド保護領が行政を担当）"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1966
+      owner: "south_africa"
+      certainty: "occupied"
+      label: "南西アフリカ（南アフリカの統治）"
+      cause: "国連総会が南アフリカの委任統治の終了を決議する（10月）"
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - from: 1990
+      owner: "namibia"
+      cause: "ナミビアが独立する（3月21日）"
+      source: "https://ja.wikipedia.org/wiki/ナミビア"
+
+- id: za_cape_town
+  name: ケープタウン
+  select:
+    pieces: [ZAF-City_of_Cape_Town]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コイコイ人（ホッテントット）の牧畜民の地。ヨーロッパの船が寄港して家畜を買った"
+    - from: 1652
+      owner: "netherlands"
+      label: "ケープ植民地（オランダ東インド会社）"
+      cause: "オランダ東インド会社のファン・リーベックがケープに補給基地を築く（4月）"
+      note: "1658年から奴隷が連れて来られた"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1795
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "フランス革命戦争中に、イギリス軍がケープを占領する（ミュイゼンベルクの戦い）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1803
+      owner: "netherlands"
+      label: "ケープ植民地（バタヴィア共和国）"
+      cause: "アミアンの和約でオランダ（バタヴィア共和国）に返される"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1806
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "イギリス軍がブラウベルクの戦いでケープを再び占領する（1月）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1814
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ロンドン協定（1814年8月）でケープがイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_winelands
+  name: ステレンボス・ドラケンステイン
+  select:
+    pieces: [ZAF-Cape_Winelands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コイコイ人の牧畜民の地"
+    - from: 1679
+      owner: "netherlands"
+      label: "ケープ植民地（オランダ東インド会社）"
+      cause: "ステレンボスに入植地が作られる（1688年にはユグノーがドラケンステイン〈フランシュフック〉に入植）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1795
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "フランス革命戦争中に、イギリス軍がケープを占領する（ミュイゼンベルクの戦い）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1803
+      owner: "netherlands"
+      label: "ケープ植民地（バタヴィア共和国）"
+      cause: "アミアンの和約でオランダ（バタヴィア共和国）に返される"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1806
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "イギリス軍がブラウベルクの戦いでケープを再び占領する（1月）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1814
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ロンドン協定（1814年8月）でケープがイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_west_coast
+  name: 西海岸（スワルトラント）
+  select:
+    pieces: [ZAF-West_Coast]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コイコイ人（コホクワなど）の牧畜民の地"
+    - from: 1700
+      owner: "netherlands"
+      label: "ケープ植民地（オランダ東インド会社）"
+      cause: "入植者（ボーア人）の農場が北の西海岸に広がる"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1795
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "フランス革命戦争中に、イギリス軍がケープを占領する（ミュイゼンベルクの戦い）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1803
+      owner: "netherlands"
+      label: "ケープ植民地（バタヴィア共和国）"
+      cause: "アミアンの和約でオランダ（バタヴィア共和国）に返される"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1806
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "イギリス軍がブラウベルクの戦いでケープを再び占領する（1月）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1814
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ロンドン協定（1814年8月）でケープがイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_overberg
+  name: オーヴァーベルフ
+  select:
+    pieces: [ZAF-Overberg]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コイコイ人の牧畜民の地"
+    - from: 1730
+      owner: "netherlands"
+      label: "ケープ植民地（オランダ東インド会社）"
+      cause: "入植者の牧畜農場（トレックブール）が東に広がる（1745年にスウェレンダム地区）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1795
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "フランス革命戦争中に、イギリス軍がケープを占領する（ミュイゼンベルクの戦い）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1803
+      owner: "netherlands"
+      label: "ケープ植民地（バタヴィア共和国）"
+      cause: "アミアンの和約でオランダ（バタヴィア共和国）に返される"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1806
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "イギリス軍がブラウベルクの戦いでケープを再び占領する（1月）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1814
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ロンドン協定（1814年8月）でケープがイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_eden
+  name: 南海岸・リトル・カルー
+  select:
+    pieces: [ZAF-Eden]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コイコイ人の牧畜民の地"
+    - from: 1750
+      owner: "netherlands"
+      label: "ケープ植民地（オランダ東インド会社）"
+      cause: "入植者の牧畜農場（トレックブール）がさらに東に広がる"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1795
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "フランス革命戦争中に、イギリス軍がケープを占領する（ミュイゼンベルクの戦い）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1803
+      owner: "netherlands"
+      label: "ケープ植民地（バタヴィア共和国）"
+      cause: "アミアンの和約でオランダ（バタヴィア共和国）に返される"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1806
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "イギリス軍がブラウベルクの戦いでケープを再び占領する（1月）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1814
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ロンドン協定（1814年8月）でケープがイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_karoo
+  name: グレート・カルー
+  select:
+    pieces: [ZAF-Central_Karoo]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コイコイ人・サン人の乾燥した高原"
+    - from: 1770
+      owner: "netherlands"
+      label: "ケープ植民地（オランダ東インド会社）"
+      cause: "入植者の牧畜農場がカルー高原に広がる"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1795
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "フランス革命戦争中に、イギリス軍がケープを占領する（ミュイゼンベルクの戦い）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1803
+      owner: "netherlands"
+      label: "ケープ植民地（バタヴィア共和国）"
+      cause: "アミアンの和約でオランダ（バタヴィア共和国）に返される"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1806
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "イギリス軍がブラウベルクの戦いでケープを再び占領する（1月）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1814
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ロンドン協定（1814年8月）でケープがイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_eastern_cape_west
+  name: ケープ東部（グラーフ・ライネ・オールバニ）
+  select:
+    pieces: [ZAF-Cacadu, ZAF-Nelson_Mandela_Bay]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コイコイ人と、西に広がるコーサ人の牧畜民の地"
+    - from: 1778
+      owner: "netherlands"
+      label: "ケープ植民地（オランダ東インド会社）"
+      cause: "ケープ総督が東の境をグレート・フィッシュ川とする"
+      note: "この境（ズールフェルト）をめぐって入植者とコーサ人の間でケープ辺境戦争（コーサ戦争）が続いた。1786年にグラーフ・ライネ、1812年にグレアムズタウンが建てられ、1820年にはイギリス人移民がオールバニに入植した"
+      source: "https://ja.wikipedia.org/wiki/コサ戦争"
+    - from: 1795
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "フランス革命戦争中に、イギリス軍がケープを占領する（ミュイゼンベルクの戦い）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1803
+      owner: "netherlands"
+      label: "ケープ植民地（バタヴィア共和国）"
+      cause: "アミアンの和約でオランダ（バタヴィア共和国）に返される"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1806
+      owner: "britain"
+      certainty: "occupied"
+      label: "ケープ植民地（イギリス軍の占領）"
+      cause: "イギリス軍がブラウベルクの戦いでケープを再び占領する（1月）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1814
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ロンドン協定（1814年8月）でケープがイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_ciskei
+  name: シスカイ（イギリス領カフラリア）
+  select:
+    pieces: [ZAF-Amathole, ZAF-Buffalo_City]
+  timeline:
+    - from: 1648
+      owner: "xhosa"
+      certainty: "uncertain"
+      note: "コーサ（ホサ）人の首長国（ラルハベ系・ガレカ系）"
+      source: "https://ja.wikipedia.org/wiki/コサ人"
+    - from: 1847
+      owner: "britain"
+      label: "イギリス領カフラリア"
+      cause: "第7次ケープ辺境戦争の後、カイ川までがイギリス領カフラリアになる"
+      note: "1856–57年にはコーサ人の「牛殺し」で多くの人が飢えて死んだ"
+      source: "https://en.wikipedia.org/wiki/British_Kaffraria"
+    - from: 1866
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "イギリス領カフラリアがケープ植民地に併合される"
+      source: "https://en.wikipedia.org/wiki/British_Kaffraria"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_thembuland
+  name: テンブランド（クイーンズタウン）
+  select:
+    pieces: [ZAF-Chris_Hani]
+  timeline:
+    - from: 1648
+      owner: "xhosa"
+      certainty: "uncertain"
+      note: "テンブ人・コーサ人の首長国"
+      source: "https://ja.wikipedia.org/wiki/コサ人"
+    - from: 1853
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "第8次ケープ辺境戦争の後、テンブの地の西部がケープ植民地に入る（クイーンズタウン）"
+      note: "東部のテンブランドは1885年に併合された"
+      source: "https://ja.wikipedia.org/wiki/コサ戦争"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_aliwal
+  name: 北東ケープ（アリワル・ノース）
+  select:
+    pieces: [ZAF-Joe_Gqabi]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "サン人とソト人の地"
+    - from: 1848
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ケープ植民地の北の境がオレンジ川まで広がる（アリワル・ノース）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_transkei
+  name: トランスカイ（ポンドランド）
+  select:
+    pieces: [ZAF-O_R_Tambo]
+  timeline:
+    - from: 1648
+      owner: "xhosa"
+      certainty: "uncertain"
+      note: "ポンド（ムポンド）人・テンブ人・コーサ人の首長国"
+      source: "https://en.wikipedia.org/wiki/Mpondo_people"
+    - from: 1894
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ポンドランドがケープ植民地に併合される（トランスカイの併合の完了）"
+      note: "アパルトヘイト期にはトランスカイが「独立」したホームランド（1976）とされたが、地図では描かない"
+      source: "https://en.wikipedia.org/wiki/Transkei"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_griqualand_east
+  name: グリクワランド・イースト
+  select:
+    pieces: [ZAF-Alfred_Nzo]
+  timeline:
+    - from: 1648
+      owner: "xhosa"
+      certainty: "uncertain"
+      note: "ポンド人などの首長国。1862年にアダム・コック3世のグリクワ人が移り住んだ"
+      source: "https://en.wikipedia.org/wiki/Griqualand_East"
+    - from: 1879
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "グリクワランド・イーストがケープ植民地に併合される（1874年にイギリスが併合）"
+      source: "https://en.wikipedia.org/wiki/Griqualand_East"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_namaqualand
+  name: ナマクワランド
+  select:
+    pieces: [ZAF-Namakwa]
+  timeline:
+    - from: 1648
+      owner: "nama"
+      certainty: "uncertain"
+      note: "ナマ人の牧畜民の地"
+      source: "https://en.wikipedia.org/wiki/Nama_people"
+    - from: 1847
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ケープ植民地の北の境がオレンジ川まで広がる"
+      note: "1850年代に銅山が開かれた"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_upper_karoo
+  name: 上カルー（コールズバーグ・デ・アール）
+  select:
+    pieces: [ZAF-Pixley_ka_Seme]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "サン人・コラナ人の地"
+    - from: 1825
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ケープ植民地の北の境がオレンジ川まで広がる（コールズバーグ地区）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_gordonia
+  name: ゴードニア・ケンハート（オレンジ川中流）
+  select:
+    pieces: [ZAF-Z_F_Mgcawu]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "コラナ人・ナマ人・サン人の地"
+    - from: 1885
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "ゴードニア（オレンジ川の北）がイギリス領になる（ケープ植民地に併合されたのは1889年）"
+      source: "https://ja.wikipedia.org/wiki/ケープ植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_griqualand_west
+  name: グリクワランド・ウェスト（キンバリー）
+  select:
+    pieces: [ZAF-Frances_Baard]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ツワナ人・コラナ人の地。19世紀初めにグリクワ人（ウォーターボーアら）が勢力を持った"
+    - from: 1871
+      owner: "britain"
+      label: "グリクワランド・ウェスト"
+      cause: "ダイヤモンドの発見（1867）の後、イギリスがグリクワランド・ウェストを併合する（10月）"
+      note: "オレンジ自由国とトランスヴァールも領有を主張した"
+      source: "https://en.wikipedia.org/wiki/Griqualand_West"
+    - from: 1880
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "グリクワランド・ウェストがケープ植民地に併合される"
+      source: "https://en.wikipedia.org/wiki/Griqualand_West"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_bechuanaland
+  name: イギリス領ベチュアナランド（クルマン・フライブルク）
+  select:
+    pieces: [ZAF-John_Taolo_Gaetsewe, ZAF-Dr_Ruth_Segomotsi_Mompati]
+  timeline:
+    - from: 1648
+      owner: "tswana"
+      certainty: "uncertain"
+      note: "ツワナ人（トラピン・ロロンなど）の首長国。クルマンにはロンドン伝道協会の伝道所があり、リヴィングストンもここから旅立った"
+      source: "https://en.wikipedia.org/wiki/Tswana_people"
+    - from: 1885
+      owner: "britain"
+      label: "イギリス領ベチュアナランド"
+      cause: "ボーア人の小共和国（ステラランド・ホーセン）を退け、イギリスがイギリス領ベチュアナランドを置く（9月）"
+      source: "https://en.wikipedia.org/wiki/British_Bechuanaland"
+    - from: 1895
+      owner: "britain"
+      label: "ケープ植民地"
+      cause: "イギリス領ベチュアナランドがケープ植民地に併合される"
+      source: "https://en.wikipedia.org/wiki/British_Bechuanaland"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_highveld
+  name: トランスヴァール中部（ヨハネスブルク・プレトリア）
+  select:
+    pieces: [ZAF-City_of_Johannesburg, ZAF-City_of_Tshwane, ZAF-Ekurhuleni, ZAF-Sedibeng, ZAF-West_Rand, ZAF-Bojanala, ZAF-Dr_Kenneth_Kaunda]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ソト・ツワナ系の首長国の地（ムフェカネの前）"
+    - from: 1827
+      owner: "ndebele"
+      certainty: "uncertain"
+      cause: "ズールーから離れたムジリカジのンデベレ人がマハリースベルフ一帯に入り、周りの首長国を従える"
+      source: "https://en.wikipedia.org/wiki/Northern_Ndebele_people"
+    - from: 1838
+      owner: "transvaal"
+      cause: "ボーア人がンデベレ人を北に追い（1837）、ポチェフストルームなどに入植する（グレート・トレック）"
+      note: "1852年のサンド・リヴァー協定でイギリスが独立を認め、南アフリカ共和国（トランスヴァール共和国）となった。1886年にウィットウォーターズランドで金が見つかり、ヨハネスブルクができた"
+      source: "https://ja.wikipedia.org/wiki/トランスヴァール共和国"
+    - from: 1852
+      owner: "transvaal"
+      cause: "サンド・リヴァー協定でイギリスがヴァール川以北のボーア人の独立を認める（1月）"
+      source: "https://ja.wikipedia.org/wiki/サンド・リヴァー協定"
+    - from: 1877
+      owner: "britain"
+      label: "トランスヴァール（イギリスの併合）"
+      cause: "イギリスがトランスヴァールを併合する（4月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1881
+      owner: "transvaal"
+      cause: "第1次ボーア戦争（マジュバの戦い）の後、プレトリア協定で自治が戻る（8月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "トランスヴァール（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がプレトリアを落とし、併合を宣言する（6月・9月）"
+      note: "ボーア人はゲリラ戦を続け、イギリス軍は焦土作戦と強制収容所で対抗した"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "トランスヴァール植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_marico
+  name: 西トランスヴァール（マリコ・リヒテンブルク・マフィケング）
+  select:
+    pieces: [ZAF-Ngaka_Modiri_Molema]
+  timeline:
+    - from: 1648
+      owner: "tswana"
+      certainty: "uncertain"
+      note: "ツワナ人（フルツェ・ロロンなど）の首長国"
+      source: "https://en.wikipedia.org/wiki/Tswana_people"
+    - from: 1832
+      owner: "ndebele"
+      certainty: "uncertain"
+      cause: "ムジリカジのンデベレ人がモセガ（ゼーラスト付近）に本拠を移す"
+      source: "https://en.wikipedia.org/wiki/Northern_Ndebele_people"
+    - from: 1838
+      owner: "transvaal"
+      certainty: "uncertain"
+      cause: "ボーア人がンデベレ人を北に追い（1837）、西トランスヴァールに入植し始める"
+      note: "マフィケングの一帯は1885年にイギリス領ベチュアナランドに入った（ボーア戦争のマフェキング包囲戦の地）"
+      source: "https://ja.wikipedia.org/wiki/トランスヴァール共和国"
+    - from: 1852
+      owner: "transvaal"
+      cause: "サンド・リヴァー協定でイギリスがヴァール川以北のボーア人の独立を認める（1月）"
+      source: "https://ja.wikipedia.org/wiki/サンド・リヴァー協定"
+    - from: 1877
+      owner: "britain"
+      label: "トランスヴァール（イギリスの併合）"
+      cause: "イギリスがトランスヴァールを併合する（4月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1881
+      owner: "transvaal"
+      cause: "第1次ボーア戦争（マジュバの戦い）の後、プレトリア協定で自治が戻る（8月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "トランスヴァール（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がプレトリアを落とし、併合を宣言する（6月・9月）"
+      note: "ボーア人はゲリラ戦を続け、イギリス軍は焦土作戦と強制収容所で対抗した"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "トランスヴァール植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_lydenburg
+  name: 東トランスヴァール（リーデンブルフ・ローフェルト）
+  select:
+    pieces: [ZAF-Ehlanzeni, ZAF-Gert_Sibande]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ソト系・ングニ系の首長の地"
+    - from: 1820
+      owner: "swaziland"
+      certainty: "uncertain"
+      cause: "スワジ王国が北と西に勢力を広げる"
+      source: "https://ja.wikipedia.org/wiki/エスワティニ"
+    - from: 1849
+      owner: "transvaal"
+      certainty: "uncertain"
+      cause: "ボーア人がオリクスタット・リーデンブルフに入植する（リーデンブルフ共和国、1860年にトランスヴァールに合流）"
+      source: "https://ja.wikipedia.org/wiki/トランスヴァール共和国"
+    - from: 1860
+      owner: "transvaal"
+      cause: "リーデンブルフ共和国が南アフリカ共和国（トランスヴァール）に合流する"
+      note: "ゲルト・シバンデ（エルメロ・ピート・レティーフ）の一帯はスワジ王国との境で、1880年代に境が決まった"
+      source: "https://ja.wikipedia.org/wiki/トランスヴァール共和国"
+    - from: 1877
+      owner: "britain"
+      label: "トランスヴァール（イギリスの併合）"
+      cause: "イギリスがトランスヴァールを併合する（4月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1881
+      owner: "transvaal"
+      cause: "第1次ボーア戦争（マジュバの戦い）の後、プレトリア協定で自治が戻る（8月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "トランスヴァール（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がプレトリアを落とし、併合を宣言する（6月・9月）"
+      note: "ボーア人はゲリラ戦を続け、イギリス軍は焦土作戦と強制収容所で対抗した"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "トランスヴァール植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_ndzundza
+  name: ンズンザ・ンデベレの地（ミデルブルフ）
+  select:
+    pieces: [ZAF-Nkangala]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ンデベレ（ンズンザ）人・ペディ人の首長の地"
+    - from: 1852
+      owner: "transvaal"
+      certainty: "uncertain"
+      cause: "サンド・リヴァー協定でイギリスがヴァール川以北のボーア人の独立を認める"
+      note: "ンズンザ・ンデベレの首長は1883年のマポッホ戦争まで自立を保った"
+      source: "https://ja.wikipedia.org/wiki/サンド・リヴァー協定"
+    - from: 1877
+      owner: "britain"
+      label: "トランスヴァール（イギリスの併合）"
+      cause: "イギリスがトランスヴァールを併合する（4月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1881
+      owner: "transvaal"
+      cause: "第1次ボーア戦争（マジュバの戦い）の後、プレトリア協定で自治が戻る（8月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1883
+      owner: "transvaal"
+      cause: "マポッホ戦争でトランスヴァール軍がンズンザ・ンデベレを破る"
+      source: "https://en.wikipedia.org/wiki/Ndzundza_Ndebele"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "トランスヴァール（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がプレトリアを落とし、併合を宣言する（6月・9月）"
+      note: "ボーア人はゲリラ戦を続け、イギリス軍は焦土作戦と強制収容所で対抗した"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "トランスヴァール植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_pedi
+  name: セクフクネランド（ペディ王国）
+  select:
+    pieces: [ZAF-Sekhukhune]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "北ソト系の首長の地"
+    - from: 1750
+      owner: "pedi"
+      certainty: "uncertain"
+      cause: "マロテン家のペディ王国が北ソト人の首長たちを従える（18世紀後半のトゥラレの時代に最盛期）"
+      source: "https://en.wikipedia.org/wiki/Pedi_people"
+    - from: 1879
+      owner: "britain"
+      label: "トランスヴァール（イギリスの併合）"
+      cause: "イギリス軍とスワジ軍がセクフクネのペディ王国を破る（11月）"
+      source: "https://en.wikipedia.org/wiki/Sekhukhune_Wars"
+    - from: 1881
+      owner: "transvaal"
+      cause: "第1次ボーア戦争の後、プレトリア協定で自治が戻る（8月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "トランスヴァール（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がトランスヴァールの併合を宣言する"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "トランスヴァール植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_northern_tvl
+  name: 北トランスヴァール（ザウトパンスベルフ・ウォーターバーグ）
+  select:
+    pieces: [ZAF-Capricorn, ZAF-Mopani, ZAF-Waterberg]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "北ソト系（ロベドゥなど）・ツォンガ・ツワナ系の首長の地"
+    - from: 1852
+      owner: "transvaal"
+      certainty: "uncertain"
+      cause: "サンド・リヴァー協定でイギリスがヴァール川以北のボーア人の独立を認める（ザウトパンスベルフは1848年に入植）"
+      source: "https://ja.wikipedia.org/wiki/サンド・リヴァー協定"
+    - from: 1870
+      owner: "transvaal"
+      cause: "ボーア人の農場と行政が北に広がる"
+      note: "要確認：支配が及んだ年。ピーテルスブルフ（ポロクワネ）は1886年建設"
+      source: "https://ja.wikipedia.org/wiki/トランスヴァール共和国"
+    - from: 1877
+      owner: "britain"
+      label: "トランスヴァール（イギリスの併合）"
+      cause: "イギリスがトランスヴァールを併合する（4月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1881
+      owner: "transvaal"
+      cause: "第1次ボーア戦争（マジュバの戦い）の後、プレトリア協定で自治が戻る（8月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "トランスヴァール（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がプレトリアを落とし、併合を宣言する（6月・9月）"
+      note: "ボーア人はゲリラ戦を続け、イギリス軍は焦土作戦と強制収容所で対抗した"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "トランスヴァール植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_venda
+  name: ヴェンダ
+  select:
+    pieces: [ZAF-Vhembe]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ヴェンダ人の首長国の地（シンゴ王朝など）"
+    - from: 1852
+      owner: "transvaal"
+      certainty: "nominal"
+      cause: "サンド・リヴァー協定でヴァール川以北がボーア人の地とされる（ヴェンダには支配が及ばない）"
+      source: "https://ja.wikipedia.org/wiki/サンド・リヴァー協定"
+    - from: 1877
+      owner: "britain"
+      certainty: "nominal"
+      label: "トランスヴァール（イギリスの併合）"
+      cause: "イギリスがトランスヴァールを併合する（4月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1881
+      owner: "transvaal"
+      certainty: "nominal"
+      cause: "第1次ボーア戦争（マジュバの戦い）の後、プレトリア協定で自治が戻る（8月）"
+      source: "https://ja.wikipedia.org/wiki/第一次ボーア戦争"
+    - from: 1898
+      owner: "transvaal"
+      cause: "トランスヴァール軍がヴェンダの首長ムフェフを破る"
+      source: "https://en.wikipedia.org/wiki/Venda"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "トランスヴァール（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がプレトリアを落とし、併合を宣言する（6月・9月）"
+      note: "ボーア人はゲリラ戦を続け、イギリス軍は焦土作戦と強制収容所で対抗した"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "トランスヴァール植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_free_state
+  name: オレンジ自由国（ブルームフォンテーン）
+  select:
+    pieces: [ZAF-Mangaung, ZAF-Lejweleputswa, ZAF-Fezile_Dabi, ZAF-Xhariep]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ソト・ツワナ系の首長の地。1820年代のムフェカネ（ディファカネ）で荒れた。南部（フィリップポリス）には1826年からグリクワ人がいた"
+    - from: 1848
+      owner: "britain"
+      label: "オレンジ川主権国"
+      cause: "イギリスがオレンジ川とヴァール川の間を併合する（2月、ボームプラーツの戦い）"
+      note: "1836年からグレート・トレックのボーア人が入植し、ウィンバーグなどに共和国を作っていた"
+      source: "https://en.wikipedia.org/wiki/Orange_River_Sovereignty"
+    - from: 1854
+      owner: "orange_free_state"
+      cause: "ブルームフォンテーン協定でイギリスが撤退し、オレンジ自由国が独立する（2月）"
+      source: "https://ja.wikipedia.org/wiki/オレンジ自由国"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "オレンジ川植民地（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍がブルームフォンテーンを落とし、併合を宣言する（3月・5月）"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "オレンジ川植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_conquered_territory
+  name: 東部自由州（カレドン川流域）
+  select:
+    pieces: [ZAF-Thabo_Mofutsanyane]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ソト系の首長の地"
+    - from: 1824
+      owner: "lesotho"
+      certainty: "uncertain"
+      cause: "モシェシュのバソト王国がカレドン川の流域を押さえる"
+      source: "https://ja.wikipedia.org/wiki/モシェシュ1世"
+    - from: 1848
+      owner: "britain"
+      certainty: "uncertain"
+      label: "オレンジ川主権国"
+      cause: "イギリスがオレンジ川主権国を置き、ウォーデン線（1849）でカレドン川西岸をボーア人の地とする"
+      source: "https://en.wikipedia.org/wiki/Orange_River_Sovereignty"
+    - from: 1854
+      owner: "orange_free_state"
+      certainty: "uncertain"
+      cause: "オレンジ自由国が独立する。カレドン川西岸をめぐってバソトと争う（自由国＝バソト戦争 1858・1865–68）"
+      source: "https://ja.wikipedia.org/wiki/オレンジ自由国"
+    - from: 1866
+      owner: "orange_free_state"
+      cause: "タバ・ボシウ条約でバソトが西岸（「征服地」）を手放す"
+      source: "https://en.wikipedia.org/wiki/Free_State–Basotho_Wars"
+    - from: 1900
+      owner: "britain"
+      certainty: "occupied"
+      label: "オレンジ川植民地（イギリス軍の占領）"
+      cause: "南アフリカ戦争（ボーア戦争）でイギリス軍が併合を宣言する"
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      owner: "britain"
+      label: "オレンジ川植民地"
+      cause: "フェリーニヒング条約でボーア人が降伏する（5月）"
+      source: "https://ja.wikipedia.org/wiki/フェリーニヒング条約"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_natal
+  name: ナタール（ダーバン・ピーターマリッツバーグ）
+  select:
+    pieces: [ZAF-eThekwini, ZAF-Umgungundlovu, ZAF-Ugu, ZAF-iLembe, ZAF-Sisonke, ZAF-Uthukela, ZAF-Umzinyathi, ZAF-Amajuba]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ングニ系の首長国の地（クワベなど）"
+    - from: 1819
+      owner: "zulu"
+      certainty: "uncertain"
+      cause: "シャカのズールー王国がトゥゲラ川の南の首長国を従え、追い散らす"
+      note: "1824年にイギリス人商人がポート・ナタール（ダーバン）に住み着いた。シャカの都クワドゥクザは現在のイレンベにあった"
+      source: "https://ja.wikipedia.org/wiki/ズールー王国"
+    - from: 1839
+      owner: "natalia"
+      cause: "ブラッド・リヴァーの戦い（1838年12月）でズールー軍を破ったボーア人がナタール共和国を建てる（首都ピーターマリッツバーグ）"
+      source: "https://en.wikipedia.org/wiki/Natalia_Republic"
+    - from: 1843
+      owner: "britain"
+      label: "ナタール植民地"
+      cause: "イギリスがナタールを併合する（5月）"
+      note: "1860年からサトウキビ農園の労働者としてインド人が移り住んだ（1893年にガンディーが来た）"
+      source: "https://ja.wikipedia.org/wiki/ナタール植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_zululand
+  name: ズールーランド
+  select:
+    pieces: [ZAF-Zululand, ZAF-Uthungulu]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ングニ系の首長国の地。18世紀末にはムテトワ（ディンギスワヨ）・ンドワンドウェ（ズウィデ）が強大になった"
+    - from: 1816
+      owner: "zulu"
+      cause: "シャカがズールーの首長になり、軍制を改めて周りを征服する（1819年にンドワンドウェを破る）"
+      source: "https://ja.wikipedia.org/wiki/シャカ"
+    - from: 1879
+      owner: "zulu"
+      certainty: "uncertain"
+      cause: "ズールー戦争でイギリス軍がウルンディを落とし（7月）、王国を13の首長領に分ける"
+      note: "1883年にケツワヨが一部で王に戻されたが内戦となり、1884年にはボーア人が西部に新共和国（フライハイト、1888年にトランスヴァールに合流）を作った"
+      source: "https://ja.wikipedia.org/wiki/ズールー戦争"
+    - from: 1887
+      owner: "britain"
+      label: "イギリス領ズールーランド"
+      cause: "イギリスがズールーランドを併合する（5月）"
+      source: "https://ja.wikipedia.org/wiki/ズールー王国"
+    - from: 1897
+      owner: "britain"
+      label: "ナタール植民地"
+      cause: "ズールーランドがナタール植民地に併合される"
+      source: "https://ja.wikipedia.org/wiki/ナタール植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: za_maputaland
+  name: マプタランド（トンガランド）
+  select:
+    pieces: [ZAF-Umkhanyakude]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ツォンガ（トンガ）人のテンベ王国などの地"
+    - from: 1819
+      owner: "zulu"
+      certainty: "uncertain"
+      cause: "ズールー王国に貢納する"
+      source: "https://ja.wikipedia.org/wiki/ズールー王国"
+    - from: 1879
+      owner: null
+      cause: "ズールー戦争でズールー王国が崩れる"
+      note: "トンガ人の首長たちが自立した"
+    - from: 1895
+      owner: "britain"
+      label: "トンガランド（イギリスの保護領）"
+      cause: "イギリスがトンガランドを併合する"
+      source: "https://en.wikipedia.org/wiki/Maputaland"
+    - from: 1897
+      owner: "britain"
+      label: "ナタール植民地"
+      cause: "ナタール植民地に併合される"
+      source: "https://ja.wikipedia.org/wiki/ナタール植民地"
+    - from: 1910
+      owner: "south_africa"
+      cause: "ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさり、南アフリカ連邦（イギリスの自治領）が成立する（5月31日）"
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+
+- id: ls_lesotho
+  name: レソト（バストランド）
+  select:
+    pieces: [LSO-Berea_District, LSO-Butha_Buthe_District, LSO-Leribe_District, LSO-Mafeteng_District, LSO-Maseru_District, LSO-Mohale_s_Hoek_District, LSO-Mokhotlong_District, LSO-Qacha_s_Nek_District, LSO-Quthing_District, LSO-Thaba_Tseka_District]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ソト系の首長国の地"
+    - from: 1824
+      owner: "lesotho"
+      cause: "モシェシュがタバ・ボシウの山に拠り、ムフェカネで散った人々を集めてバソト王国を建てる"
+      source: "https://ja.wikipedia.org/wiki/モシェシュ1世"
+    - from: 1868
+      owner: "britain"
+      certainty: "indirect"
+      label: "バストランド（イギリスの保護領）"
+      cause: "オレンジ自由国との戦争に苦しんだモシェシュの求めで、イギリスがバストランドを保護下に置く（3月）"
+      source: "https://ja.wikipedia.org/wiki/バストランド"
+    - from: 1871
+      owner: "britain"
+      label: "バストランド（ケープ植民地）"
+      cause: "バストランドがケープ植民地に併合される"
+      note: "1880–81年にケープの武装解除の命令に反対する「銃戦争」が起こった"
+      source: "https://ja.wikipedia.org/wiki/バストランド"
+    - from: 1884
+      owner: "britain"
+      certainty: "indirect"
+      label: "バストランド（イギリスの保護領）"
+      cause: "バストランドがケープ植民地から離れ、イギリス政府の直轄の保護領になる（首長が治める間接統治）"
+      source: "https://ja.wikipedia.org/wiki/バストランド"
+    - from: 1966
+      owner: "lesotho"
+      cause: "レソト王国として独立する（10月4日）"
+      source: "https://ja.wikipedia.org/wiki/レソト"
+
+- id: sz_eswatini
+  name: スワジランド（エスワティニ）
+  select:
+    pieces: [SWZ-Hhohho, SWZ-Lubombo, SWZ-Manzini, SWZ-Shiselweni]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ングニ系・ソト系の首長の地"
+    - from: 1750
+      owner: "swaziland"
+      certainty: "uncertain"
+      cause: "ドラミニ家のングワネ3世がポンゴラ川の北に移り、スワジ王国のもとができる"
+      source: "https://ja.wikipedia.org/wiki/エスワティニ"
+    - from: 1820
+      owner: "swaziland"
+      cause: "ソブーザ1世が王国を広げ、ムフェカネの中でズールーに対抗する"
+      source: "https://ja.wikipedia.org/wiki/エスワティニ"
+    - from: 1894
+      owner: "transvaal"
+      certainty: "indirect"
+      label: "スワジランド（南アフリカ共和国の保護下）"
+      cause: "イギリスとトランスヴァールの協定で、スワジランドがトランスヴァールの保護下に入る"
+      source: "https://ja.wikipedia.org/wiki/エスワティニ"
+    - from: 1900
+      owner: "swaziland"
+      cause: "南アフリカ戦争（ボーア戦争）でトランスヴァールの行政が引き揚げる（摂政ラボツィベニが治める）"
+      source: "https://ja.wikipedia.org/wiki/エスワティニ"
+    - from: 1902
+      owner: "britain"
+      certainty: "indirect"
+      label: "スワジランド（イギリスの保護領）"
+      cause: "フェリーニヒング条約の後、イギリスの保護下に入る（1906年に高等弁務官領）"
+      source: "https://ja.wikipedia.org/wiki/エスワティニ"
+    - from: 1968
+      owner: "swaziland"
+      cause: "スワジランド王国として独立する（9月6日）"
+      source: "https://ja.wikipedia.org/wiki/エスワティニ"
+
+- id: mg_imerina
+  name: イメリナ（アンタナナリヴ）
+  select:
+    pieces: [MDG-1er_Arrondissement, MDG-2e_Arrondissement, MDG-3e_Arrondissement, MDG-4e_Arrondissement, MDG-5e_Arrondissement, MDG-6e_Arrondissement, MDG-Ambohidratrimo, MDG-Andramasina, MDG-Anjozorobe, MDG-Ankazobe, MDG-Antananarivo_Atsimondrano, MDG-Antananarivo_Avaradrano, MDG-Manjakandriana]
+  timeline:
+    - from: 1648
+      owner: "merina"
+      note: "中央高地のメリナ王国。17世紀初めのアンドリアンジャカがアンタナナリヴの丘に都を置いた。1710年ごろから4つの王国に分かれ、1787年にアンドリアナンプイニメリナが再統一した"
+      source: "https://ja.wikipedia.org/wiki/メリナ王国"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_highlands_w
+  name: イタシ・ヴァキナンカラチャ・ボンゴラヴァ
+  select:
+    pieces: [MDG-Arivonimamo, MDG-Miarinarivo, MDG-Soavinandriana, MDG-Ambatolampy, MDG-Antanifotsy, MDG-Antsirabe_I, MDG-Antsirabe_II, MDG-Betafo, MDG-Faratsiho, MDG-Mandoto, MDG-Fenoarivobe, MDG-Tsiroanomandidy]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "メリナ系・ベツィレオ系の小王国と、西の草原の牧畜民の地"
+    - from: 1800
+      owner: "merina"
+      cause: "アンドリアナンプイニメリナがイメリナの周りを征服する"
+      source: "https://ja.wikipedia.org/wiki/メリナ王国"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_betsileo
+  name: ベツィレオ（フィアナランツォア）
+  select:
+    pieces: [MDG-Ambalavao, MDG-Ambohimahasoa, MDG-Fianarantsoa_I, MDG-Ikalamavony, MDG-Isandra, MDG-Lalangina, MDG-Vohibato, MDG-Ambatofinandrahana, MDG-Ambositra, MDG-Fandriana, MDG-Manandriana]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ベツィレオ人の小王国（ラランギナ・イサンドラ・アリンドラノなど）の地"
+    - from: 1815
+      owner: "merina"
+      cause: "メリナ王国がベツィレオの王国を従える（アンドリアナンプイニメリナからラダマ1世の時代）"
+      source: "https://ja.wikipedia.org/wiki/メリナ王国"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_east
+  name: 東海岸（トアマシナ・ベツィミサラカ）
+  select:
+    pieces: [MDG-Antanambao_Manampontsy, MDG-Brickaville, MDG-Mahanoro, MDG-Marolambo, MDG-Toamasina_I, MDG-Toamasina_II, MDG-Vatomandry, MDG-Fenerive_Est, MDG-Mananara_Avaratra, MDG-Maroantsetra, MDG-Soanierana_Ivongo, MDG-Vavatenina]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "東海岸の首長の地。17世紀末にはヨーロッパ人の海賊が拠点を置いた"
+    - from: 1712
+      owner: "betsimisaraka"
+      certainty: "uncertain"
+      cause: "海賊と現地人の混血ラツィミラフがベツィミサラカ連合をつくる"
+      source: "https://en.wikipedia.org/wiki/Betsimisaraka_people"
+    - from: 1791
+      owner: null
+      cause: "ベツィミサラカ連合が分裂する"
+      source: "https://en.wikipedia.org/wiki/Betsimisaraka_people"
+    - from: 1817
+      owner: "merina"
+      cause: "ラダマ1世がトアマシナ（タマタヴ）を押さえ、イギリスと条約を結ぶ"
+      source: "https://ja.wikipedia.org/wiki/ラダマ1世"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_sainte_marie
+  name: サント・マリー島
+  select:
+    pieces: [MDG-Sainte_Marie]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "ノシ・ブラハ。17世紀末–18世紀初めにヨーロッパ人の海賊の根拠地となった"
+    - from: 1712
+      owner: "betsimisaraka"
+      certainty: "uncertain"
+      cause: "ベツィミサラカ連合の地となる"
+      source: "https://en.wikipedia.org/wiki/Betsimisaraka_people"
+    - from: 1750
+      owner: "france"
+      label: "サント・マリー島（フランス領）"
+      cause: "ベツィミサラカの王女ベティがフランス東インド会社に島を譲る"
+      source: "https://en.wikipedia.org/wiki/Île_Sainte-Marie"
+    - from: 1754
+      owner: null
+      cause: "島民がフランス人を襲い、フランスが引き揚げる"
+      source: "https://en.wikipedia.org/wiki/Île_Sainte-Marie"
+    - from: 1818
+      owner: "france"
+      label: "サント・マリー島（フランス領）"
+      cause: "フランスが島を再び占める"
+      source: "https://en.wikipedia.org/wiki/Île_Sainte-Marie"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "マダガスカル植民地に組み込まれる"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_alaotra
+  name: アラオチャ・マンゴロ（シハナカ）
+  select:
+    pieces: [MDG-Ambatondrazaka, MDG-Amparafaravola, MDG-Andilamena, MDG-Anosibe_An_ala, MDG-Moramanga]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "シハナカ人・ベザノザノ人の首長の地"
+    - from: 1823
+      owner: "merina"
+      cause: "ラダマ1世がシハナカなど北東部を征服する"
+      source: "https://ja.wikipedia.org/wiki/ラダマ1世"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_north
+  name: 北部（アンタカラナ・サヴァ）
+  select:
+    pieces: [MDG-Ambanja, MDG-Ambilobe, MDG-Andapa, MDG-Antalaha, MDG-Sambava, MDG-Vohemar]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "アンタカラナ人（サカラヴァ系の王国）・北のベツィミサラカの地"
+    - from: 1823
+      owner: "merina"
+      certainty: "uncertain"
+      cause: "ラダマ1世が北部に遠征し、ヴォヘマールなどに砦を置く"
+      source: "https://ja.wikipedia.org/wiki/ラダマ1世"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_nosy_be
+  name: ノシ・ベ
+  select:
+    pieces: [MDG-Nosy_Be]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "サカラヴァ人の地"
+    - from: 1700
+      owner: "boina"
+      certainty: "uncertain"
+      cause: "ボイナ王国（サカラヴァ）の勢力が北に及ぶ"
+      source: "https://en.wikipedia.org/wiki/Boina_Kingdom"
+    - from: 1841
+      owner: "france"
+      label: "ノシ・ベ（フランス領）"
+      cause: "メリナに追われたサカラヴァの女王ツィオメコがフランスに島を譲る"
+      source: "https://en.wikipedia.org/wiki/Nosy_Be"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "マダガスカル植民地に組み込まれる"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_diego
+  name: ディエゴ・スアレス（アンツィラナナ）
+  select:
+    pieces: [MDG-Antsiranana_I, MDG-Antsiranana_II]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "アンタカラナ人の地"
+    - from: 1823
+      owner: "merina"
+      certainty: "uncertain"
+      cause: "ラダマ1世が北部に遠征する"
+      source: "https://ja.wikipedia.org/wiki/ラダマ1世"
+    - from: 1885
+      owner: "france"
+      label: "ディエゴ・スアレス（フランス領）"
+      cause: "第1次フランス・メリナ戦争の講和条約でディエゴ・スアレス湾がフランスに割譲される（12月）"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "マダガスカル植民地に組み込まれる"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_boina
+  name: ボイナ（マハジャンガ）
+  select:
+    pieces: [MDG-Ambato_Boeni, MDG-Mahajanga_I, MDG-Mahajanga_II, MDG-Marovoay, MDG-Mitsinjo, MDG-Soalala, MDG-Kandreho, MDG-Maevatanana, MDG-Tsaratanana, MDG-Analalava, MDG-Antsohihy, MDG-Bealanana, MDG-Befandriana_Nord, MDG-Mampikony, MDG-Mandritsara, MDG-Port_Berge_Boriziny_Vaovao]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "サカラヴァ・ツィミヘティなどの人々の地"
+    - from: 1700
+      owner: "boina"
+      certainty: "uncertain"
+      cause: "メナベから分かれたサカラヴァのアンドリアマンディソアリヴがボイナ王国を建てる（1690年代）"
+      note: "都マハジャンガはアラブ・インド系の商人が集まる港として栄えた"
+      source: "https://en.wikipedia.org/wiki/Boina_Kingdom"
+    - from: 1824
+      owner: "merina"
+      certainty: "uncertain"
+      cause: "ラダマ1世がマハジャンガを落とす"
+      source: "https://ja.wikipedia.org/wiki/ラダマ1世"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_ambongo
+  name: アンボンゴ（メラキ）
+  select:
+    pieces: [MDG-Ambatomainty, MDG-Antsalova, MDG-Besalampy, MDG-Maintirano, MDG-Morafenobe]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "サカラヴァ人の地"
+    - from: 1700
+      owner: "boina"
+      certainty: "uncertain"
+      cause: "ボイナ王国（サカラヴァ）の勢力圏になる"
+      source: "https://en.wikipedia.org/wiki/Boina_Kingdom"
+    - from: 1824
+      owner: null
+      cause: "ボイナ王国がメリナに敗れ、アンボンゴのサカラヴァの首長たちが自立する"
+      source: "https://en.wikipedia.org/wiki/Boina_Kingdom"
+    - from: 1890
+      owner: "france"
+      certainty: "nominal"
+      label: "マダガスカル（フランスの勢力圏）"
+      cause: "イギリスとの協定（1890）でマダガスカルがフランスの勢力圏と認められる"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1896
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合する（8月）"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1900
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "ガリエニ総督の遠征で西部・南部の諸王国・首長が従う（1897–1904）"
+      note: "要確認：支配が及んだ年"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_menabe
+  name: メナベ（モロンダヴァ）
+  select:
+    pieces: [MDG-Belo_Sur_Tsiribihina, MDG-Mahabo, MDG-Manja, MDG-Miandrivazo, MDG-Morondava]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "サカラヴァ人の地"
+    - from: 1660
+      owner: "menabe"
+      certainty: "uncertain"
+      cause: "サカラヴァのマロセラナ王家がメナベ王国を建てる（アンドリアンダヒフォツィ）"
+      source: "https://en.wikipedia.org/wiki/Menabe"
+    - from: 1890
+      owner: "menabe"
+      certainty: "uncertain"
+      cause: "イギリスとの協定でマダガスカルがフランスの勢力圏と認められる"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1896
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合する（8月）"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1900
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランス軍がメナベを征服する"
+      note: "要確認：征服の年"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_south
+  name: 南部（トゥリアラ・アンドロイ・バラ）
+  select:
+    pieces: [MDG-Ampanihy_Ouest, MDG-Ankazoabo, MDG-Benenitra, MDG-Beroroha, MDG-Betioky_Atsimo, MDG-Morombe, MDG-Sakaraha, MDG-Toliary_I, MDG-Toliary_II, MDG-Ambovombe_Androy, MDG-Bekily, MDG-Beloha, MDG-Tsihombe, MDG-Iakora, MDG-Ihosy, MDG-Ivohibe, MDG-Amboasary_Atsimo, MDG-Betroka]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "マシクロ・マハファリ・ヴェズ・アンタンドロイ・バラなどの人々の首長の地"
+    - from: 1890
+      owner: "france"
+      certainty: "nominal"
+      label: "マダガスカル（フランスの勢力圏）"
+      cause: "イギリスとの協定（1890）でマダガスカルがフランスの勢力圏と認められる"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1896
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合する（8月）"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1904
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "ガリエニ総督の遠征で西部・南部の諸王国・首長が従う（1897–1904）"
+      note: "要確認：支配が及んだ年"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_southeast
+  name: 南東部（アンタイモロ・アンタイサカ）
+  select:
+    pieces: [MDG-Ifanadiana, MDG-Ikongo, MDG-Manakara_Atsimo, MDG-Mananjary, MDG-Nosy_Varika, MDG-Befotaka, MDG-Farafangana, MDG-Midongy_Atsimo, MDG-Vangaindrano, MDG-Vohipeno, MDG-Vondrozo]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "アンタイモロ（アラビア文字でマダガスカル語を書いた）・アンタイサカなどの首長の地"
+    - from: 1825
+      owner: "merina"
+      certainty: "uncertain"
+      cause: "ラダマ1世の遠征で南東海岸に砦が置かれる"
+      source: "https://ja.wikipedia.org/wiki/ラダマ1世"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: mg_fort_dauphin
+  name: フォール・ドーファン（タウラナル）
+  select:
+    pieces: [MDG-Taolagnaro]
+  timeline:
+    - from: 1648
+      owner: "france"
+      label: "フォール・ドーファン（フランス東インド会社）"
+      note: "1643年にフランスが南東端に砦を築いた。フラクールが『マダガスカル大島誌』を著した"
+      source: "https://ja.wikipedia.org/wiki/タウラナル"
+    - from: 1674
+      owner: null
+      cause: "住民に襲われてフランス人が砦を放棄する"
+      source: "https://ja.wikipedia.org/wiki/タウラナル"
+    - from: 1825
+      owner: "merina"
+      certainty: "uncertain"
+      cause: "ラダマ1世の遠征でフォール・ドーファンにメリナの砦が置かれる"
+      source: "https://ja.wikipedia.org/wiki/ラダマ1世"
+    - from: 1895
+      owner: "france"
+      certainty: "indirect"
+      label: "マダガスカル（フランスの保護国）"
+      cause: "フランス軍がアンタナナリヴを落とし（9月）、メリナ王国を保護国にする"
+      source: "https://ja.wikipedia.org/wiki/フランス・メリナ戦争"
+    - from: 1896
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "フランスがマダガスカルを併合して植民地とする（8月。1897年にメリナの王制を廃止）"
+      note: "ガリエニ総督がメナランバの反乱（1895–97）を鎮めた"
+      source: "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - from: 1940
+      owner: "vichy_france"
+      label: "フランス領マダガスカル"
+      cause: "フランスの降伏。マダガスカルはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1942
+      owner: "britain"
+      certainty: "occupied"
+      label: "マダガスカル（イギリス軍の占領）"
+      cause: "マダガスカルの戦い：ヴィシー政府側の島をイギリス軍が占領する（5–11月）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1943
+      owner: "france"
+      label: "フランス領マダガスカル"
+      cause: "イギリスが自由フランスに島の統治を引き渡す（1月）"
+      note: "1947年にマダガスカル民主改新運動（MDRM）系の大規模な反乱が起こり、厳しく鎮圧された"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+    - from: 1960
+      owner: "madagascar"
+      cause: "マダガスカル共和国が独立する（6月26日）"
+      source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+- id: km_grande_comore
+  name: ンガジジャ（グランド・コモロ島）
+  select:
+    pieces: [COM-Grande_Comore]
+  timeline:
+    - from: 1648
+      owner: "grande_comore"
+      certainty: "uncertain"
+      note: "ンガジジャ島にはいくつものスルタン国が並び立った。1886年にサイード・アリーが島を統一した"
+      source: "https://en.wikipedia.org/wiki/Ngazidja"
+    - from: 1886
+      owner: "france"
+      certainty: "indirect"
+      label: "ンガジジャ（フランスの保護領）"
+      cause: "フランスがコモロの3島を保護領にする"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1912
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "コモロ諸島がフランスに併合され、マダガスカル植民地の一部になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1946
+      owner: "france"
+      label: "フランス領コモロ（海外領土）"
+      cause: "コモロがマダガスカルから離れ、フランスの海外領土になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1975
+      owner: "comoros"
+      cause: "コモロが独立を宣言する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+
+- id: km_anjouan
+  name: ンズワニ（アンジュアン島）
+  select:
+    pieces: [COM-Anjouan]
+  timeline:
+    - from: 1648
+      owner: "anjouan"
+      note: "アンジュアン・スルタン国。インド洋航路の寄港地で、コモロでいちばん強いスルタン国だった"
+      source: "https://en.wikipedia.org/wiki/Sultanate_of_Anjouan"
+    - from: 1886
+      owner: "france"
+      certainty: "indirect"
+      label: "アンジュアン（フランスの保護領）"
+      cause: "フランスがコモロの3島を保護領にする"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1912
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "コモロ諸島がフランスに併合され、マダガスカル植民地の一部になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1946
+      owner: "france"
+      label: "フランス領コモロ（海外領土）"
+      cause: "コモロがマダガスカルから離れ、フランスの海外領土になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1975
+      owner: "comoros"
+      cause: "コモロが独立を宣言する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1997
+      owner: "anjouan"
+      certainty: "uncertain"
+      cause: "アンジュアン島がコモロからの分離を宣言する（8月）"
+      source: "https://en.wikipedia.org/wiki/Anjouan#History"
+    - from: 2001
+      owner: "comoros"
+      cause: "フォンボニ合意で、新しい連邦（コモロ連合）の下に戻る"
+      source: "https://en.wikipedia.org/wiki/Anjouan#History"
+    - from: 2007
+      owner: "anjouan"
+      certainty: "uncertain"
+      cause: "島の大統領バカールが連邦の命令を拒み、自立する"
+      source: "https://en.wikipedia.org/wiki/2008_invasion_of_Anjouan"
+    - from: 2008
+      owner: "comoros"
+      cause: "コモロ連合とアフリカ連合の軍がアンジュアンに上陸する（3月）"
+      source: "https://en.wikipedia.org/wiki/2008_invasion_of_Anjouan"
+
+- id: km_moheli
+  name: ムワリ（モヘリ島）
+  select:
+    pieces: [COM-Moheli]
+  timeline:
+    - from: 1648
+      owner: "moheli"
+      certainty: "uncertain"
+      note: "モヘリ・スルタン国。アンジュアンに従うこともあった。1830年代からはマダガスカルから来たメリナ系の王族が治めた"
+      source: "https://en.wikipedia.org/wiki/Mohéli"
+    - from: 1886
+      owner: "france"
+      certainty: "indirect"
+      label: "モヘリ（フランスの保護領）"
+      cause: "フランスがコモロの3島を保護領にする"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1912
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "コモロ諸島がフランスに併合され、マダガスカル植民地の一部になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1946
+      owner: "france"
+      label: "フランス領コモロ（海外領土）"
+      cause: "コモロがマダガスカルから離れ、フランスの海外領土になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1975
+      owner: "comoros"
+      cause: "コモロが独立を宣言する（7月6日）"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+
+- id: yt_mayotte
+  name: マヨット島
+  select:
+    pieces: [MYT-Mayotte]
+  timeline:
+    - from: 1648
+      owner: "mayotte_sultanate"
+      certainty: "uncertain"
+      note: "マヨット（マオレ）・スルタン国。アンジュアン・マダガスカルのサカラヴァの争いの地となった"
+      source: "https://en.wikipedia.org/wiki/Mayotte#History"
+    - from: 1841
+      owner: "france"
+      label: "マヨット（フランス領）"
+      cause: "サカラヴァ系のスルタンのアンドリアンツォリがフランスに島を売る（4月。1843年に正式に領有）"
+      source: "https://ja.wikipedia.org/wiki/マヨット"
+    - from: 1912
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "コモロ諸島とともにマダガスカル植民地の一部になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1940
+      owner: "vichy_france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "フランスの降伏。コモロ（マダガスカル植民地の属領）はヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "コモロ（マダガスカル植民地の属領）"
+      cause: "マダガスカルの戦いでイギリス軍がコモロを押さえ（7月にマヨット）、自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/マダガスカルの戦い"
+    - from: 1946
+      owner: "france"
+      label: "フランス領コモロ（海外領土）"
+      cause: "コモロがフランスの海外領土になる"
+      source: "https://ja.wikipedia.org/wiki/コモロ"
+    - from: 1975
+      owner: "france"
+      label: "マヨット（フランス領）"
+      cause: "住民投票（1974・1976）の結果、マヨットだけがフランスに残る"
+      note: "コモロは領有を主張している。2011年にフランスの海外県になった"
+      source: "https://ja.wikipedia.org/wiki/マヨット"
+
+- id: re_reunion
+  name: レユニオン島（ブルボン島）
+  select:
+    pieces: [REU-La_Reunion]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1649
+      owner: "france"
+      certainty: "nominal"
+      label: "ブルボン島（フランス領）"
+      cause: "フランスが島の領有を宣言し、ブルボン島と名づける"
+      source: "https://ja.wikipedia.org/wiki/レユニオン"
+    - from: 1665
+      owner: "france"
+      label: "ブルボン島（フランス東インド会社）"
+      cause: "フランス東インド会社の入植者が住み着く"
+      note: "18世紀にはアフリカ・マダガスカルから連れて来た奴隷を使うコーヒー・サトウキビの農園が広がった"
+      source: "https://ja.wikipedia.org/wiki/レユニオン"
+    - from: 1764
+      owner: "france"
+      label: "ブルボン島（フランスの直轄植民地）"
+      cause: "東インド会社の経営が終わり、国王の直轄植民地になる"
+      source: "https://ja.wikipedia.org/wiki/レユニオン"
+    - from: 1793
+      owner: "france"
+      label: "レユニオン島（フランス領）"
+      cause: "フランス革命で島の名がレユニオンに改められる（1806年ボナパルト島）"
+      source: "https://ja.wikipedia.org/wiki/レユニオン"
+    - from: 1810
+      owner: "britain"
+      certainty: "occupied"
+      label: "レユニオン島（イギリス軍の占領）"
+      cause: "ナポレオン戦争中にイギリス軍が島を占領する（7月）"
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Île_Bonaparte"
+    - from: 1815
+      owner: "france"
+      label: "ブルボン島（フランス領）"
+      cause: "パリ条約（1814）でフランスに返される（1815年4月）"
+      source: "https://ja.wikipedia.org/wiki/レユニオン"
+    - from: 1848
+      owner: "france"
+      label: "レユニオン島（フランス領）"
+      cause: "二月革命で奴隷制が廃止され、島の名がレユニオンに戻る"
+      source: "https://ja.wikipedia.org/wiki/レユニオン"
+    - from: 1940
+      owner: "vichy_france"
+      label: "レユニオン島（フランス領）"
+      cause: "フランスの降伏。レユニオンはヴィシー政府に従う"
+      source: "https://ja.wikipedia.org/wiki/ヴィシー政権"
+    - from: 1942
+      owner: "france"
+      label: "レユニオン島（フランス領）"
+      cause: "自由フランスの駆逐艦レオパールが上陸し（11月）、レユニオンが自由フランス側に移る"
+      source: "https://ja.wikipedia.org/wiki/自由フランス"
+    - from: 1946
+      owner: "france"
+      label: "レユニオン（フランスの海外県）"
+      cause: "フランスの海外県になる"
+      source: "https://ja.wikipedia.org/wiki/レユニオン"
+
+- id: mu_mauritius
+  name: モーリシャス島
+  select:
+    pieces: [MUS-Black_River, MUS-Flacq, MUS-Grand_Port, MUS-Moka, MUS-Pamplemousses, MUS-Plaines_Wilhems, MUS-Port_Louis, MUS-Riviere_du_Rempart, MUS-Savanne]
+  timeline:
+    - from: 1648
+      owner: "netherlands"
+      label: "モーリシャス（オランダ東インド会社）"
+      note: "1598年にオランダ人が上陸し、1638年に入植地を作った（ドードーは17世紀後半に絶滅）"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1658
+      owner: null
+      cause: "オランダが入植地を一度放棄する"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1664
+      owner: "netherlands"
+      label: "モーリシャス（オランダ東インド会社）"
+      cause: "オランダが再び入植する"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1710
+      owner: null
+      cause: "オランダが島を放棄する"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1715
+      owner: "france"
+      certainty: "nominal"
+      label: "フランス島（フランス領）"
+      cause: "フランスが島の領有を宣言し、フランス島と名づける"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1721
+      owner: "france"
+      label: "フランス島（フランス東インド会社）"
+      cause: "フランス東インド会社の入植者が住み着く（1735年からラ・ブルドネ総督がポール・ルイを建設）"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1767
+      owner: "france"
+      label: "フランス島（フランスの直轄植民地）"
+      cause: "東インド会社の経営が終わり、国王の直轄植民地になる"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1810
+      owner: "britain"
+      certainty: "occupied"
+      label: "モーリシャス（イギリス軍の占領）"
+      cause: "ナポレオン戦争中にイギリス軍が島を占領する（12月）"
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Isle_de_France"
+    - from: 1814
+      owner: "britain"
+      label: "モーリシャス（イギリス植民地）"
+      cause: "パリ条約でイギリス領と確定する"
+      note: "1835年の奴隷制廃止の後、インドから大勢の契約労働者が来た"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1968
+      owner: "mauritius"
+      cause: "モーリシャスが独立する（3月12日）"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+
+- id: mu_rodrigues
+  name: ロドリゲス島
+  select:
+    pieces: [MUS-Rodrigues]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島（1691–93年にユグノーのルガらが住んだ）"
+    - from: 1735
+      owner: "france"
+      label: "ロドリゲス島（フランス島の属領）"
+      cause: "フランスが島に拠点を置く（ゾウガメの採集）"
+      note: "要確認：年"
+      source: "https://en.wikipedia.org/wiki/Rodrigues"
+    - from: 1809
+      owner: "britain"
+      certainty: "occupied"
+      label: "ロドリゲス島（イギリス軍の占領）"
+      cause: "ナポレオン戦争中にイギリス軍が島を占領する"
+      source: "https://en.wikipedia.org/wiki/Rodrigues"
+    - from: 1814
+      owner: "britain"
+      label: "モーリシャス（イギリス植民地）"
+      cause: "パリ条約でイギリス領と確定する"
+      source: "https://en.wikipedia.org/wiki/Rodrigues"
+    - from: 1968
+      owner: "mauritius"
+      cause: "モーリシャスが独立する（3月12日）"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+
+- id: mu_outer
+  name: アガレガ諸島・カルガドス・カラホス
+  select:
+    pieces: [MUS-Agalega, MUS-St_Brandon]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1814
+      owner: "britain"
+      label: "モーリシャス（イギリス植民地）"
+      cause: "パリ条約でモーリシャスの属領としてイギリス領と確定する"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+    - from: 1968
+      owner: "mauritius"
+      cause: "モーリシャスが独立する（3月12日）"
+      source: "https://ja.wikipedia.org/wiki/モーリシャス"
+
+- id: sc_seychelles
+  name: セーシェル（マヘ島など）
+  select:
+    pieces: [SYC-Anse_Aux_P, SYC-Anse_Boile, SYC-Anse_Etoil, SYC-Anse_Royal, SYC-Au_Cap, SYC-Baie_Lazar, SYC-Baie_Saint, SYC-Beau_Vallo, SYC-Bel_Air, SYC-Bel_Ombre, SYC-Cascade, SYC-Glacis, SYC-Grand_Anse, SYC-Grand_Anse_2, SYC-La_Digue_a, SYC-La_RiviA_re, SYC-Les_Mamell, SYC-Mont_Buxto, SYC-Mont_Fleur, SYC-Plaisance, SYC-Pointe_La, SYC-Port_Glaud, SYC-Roche_CaA_m, SYC-Saint_Loui, SYC-Takamaka]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1756
+      owner: "france"
+      certainty: "nominal"
+      label: "セーシェル（フランス領）"
+      cause: "フランスが領有を宣言し、財務総監セシェルの名をつける"
+      source: "https://ja.wikipedia.org/wiki/セーシェル"
+    - from: 1770
+      owner: "france"
+      label: "セーシェル（フランス島の属領）"
+      cause: "フランス島（モーリシャス）から入植者が来る"
+      source: "https://ja.wikipedia.org/wiki/セーシェル"
+    - from: 1811
+      owner: "britain"
+      label: "セーシェル（モーリシャスの属領）"
+      cause: "イギリスが島を押さえる（1794年に降伏していたが、フランス人の行政が続いていた）。1814年のパリ条約で確定"
+      source: "https://ja.wikipedia.org/wiki/セーシェル"
+    - from: 1903
+      owner: "britain"
+      label: "セーシェル（イギリス植民地）"
+      cause: "モーリシャスから分かれて直轄植民地になる"
+      source: "https://ja.wikipedia.org/wiki/セーシェル"
+    - from: 1976
+      owner: "seychelles"
+      cause: "セーシェルが独立する（6月29日）"
+      source: "https://ja.wikipedia.org/wiki/セーシェル"
+
+- id: sc_outer
+  name: セーシェルの外諸島（アルダブラなど）
+  select:
+    pieces: [SYC-Outer_Isla]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島（アルダブラ環礁・アミラント諸島・ファーカー諸島など）"
+    - from: 1811
+      owner: "britain"
+      label: "セーシェル（モーリシャスの属領）"
+      cause: "イギリスがセーシェルを押さえる。1814年のパリ条約で確定"
+      source: "https://ja.wikipedia.org/wiki/セーシェル"
+    - from: 1903
+      owner: "britain"
+      label: "セーシェル（イギリス植民地）"
+      cause: "モーリシャスから分かれて直轄植民地になる"
+      source: "https://ja.wikipedia.org/wiki/セーシェル"
+    - from: 1965
+      owner: "britain"
+      label: "イギリス領インド洋地域"
+      cause: "アルダブラ・ファーカー・デロシュの島々がチャゴス諸島とともにイギリス領インド洋地域になる"
+      source: "https://ja.wikipedia.org/wiki/イギリス領インド洋地域"
+    - from: 1976
+      owner: "seychelles"
+      cause: "セーシェルの独立で、3つの島がセーシェルに戻る"
+      source: "https://ja.wikipedia.org/wiki/イギリス領インド洋地域"
+
+- id: io_chagos
+  name: チャゴス諸島
+  select:
+    pieces: [IOT-Chagos_Archipelago]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1783
+      owner: "france"
+      label: "チャゴス諸島（フランス島の属領）"
+      cause: "フランス島（モーリシャス）の商人がディエゴ・ガルシア島にココヤシ農園を開く"
+      source: "https://ja.wikipedia.org/wiki/チャゴス諸島"
+    - from: 1810
+      owner: "britain"
+      label: "チャゴス諸島（モーリシャスの属領）"
+      cause: "イギリスがモーリシャスを占領する（1814年のパリ条約で確定）"
+      source: "https://ja.wikipedia.org/wiki/チャゴス諸島"
+    - from: 1965
+      owner: "britain"
+      label: "イギリス領インド洋地域"
+      cause: "モーリシャスの独立の前に、イギリスがチャゴス諸島を切り離してイギリス領インド洋地域とする"
+      note: "1968–73年に住民（チャゴス人）が島から追い出され、ディエゴ・ガルシア島にアメリカ軍の基地が作られた。2019年に国際司法裁判所が切り離しを違法とする勧告的意見を出し、2025年5月にイギリスとモーリシャスが主権の移譲（基地は99年間の貸与）に合意したが、年末の時点で条約は発効していない"
+      source: "https://ja.wikipedia.org/wiki/イギリス領インド洋地域"
+
+- id: sh_saint_helena
+  name: セントヘレナ島
+  select:
+    pieces: [SHN-Saint_Helena]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島（ポルトガル人・オランダ人の船が寄港した）"
+    - from: 1659
+      owner: "britain"
+      label: "セントヘレナ（イギリス東インド会社）"
+      cause: "イギリス東インド会社が島に入植する"
+      note: "1815–21年にナポレオンが流され、ここで死んだ"
+      source: "https://ja.wikipedia.org/wiki/セントヘレナ"
+    - from: 1834
+      owner: "britain"
+      label: "セントヘレナ（イギリス植民地）"
+      cause: "東インド会社から国王の直轄植民地に移る"
+      source: "https://ja.wikipedia.org/wiki/セントヘレナ"
+
+- id: sh_ascension
+  name: アセンション島
+  select:
+    pieces: [SHN-Ascension]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1815
+      owner: "britain"
+      label: "アセンション島（イギリス領）"
+      cause: "セントヘレナのナポレオンを見張るため、イギリス海軍が守備隊を置く"
+      source: "https://ja.wikipedia.org/wiki/アセンション島"
+
+- id: sh_tristan
+  name: トリスタン・ダ・クーニャ
+  select:
+    pieces: [SHN-Tristan_da_Cunha]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1816
+      owner: "britain"
+      label: "トリスタン・ダ・クーニャ（イギリス領）"
+      cause: "イギリスが守備隊を置き、領有を宣言する"
+      source: "https://ja.wikipedia.org/wiki/トリスタン・ダ・クーニャ"
+
+- id: tf_kerguelen
+  name: ケルゲレン諸島・クローゼー諸島
+  select:
+    pieces: [ATF-Archipel_des_Kerguelen, ATF-Archipel_des_Crozet]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島（ケルゲレン・クローゼーとも1772年にフランスの探検家が見つけた）"
+    - from: 1893
+      owner: "france"
+      label: "ケルゲレン諸島（フランス領）"
+      cause: "フランスが正式に領有を宣言する（1924年にマダガスカル植民地の属領とされる）"
+      source: "https://ja.wikipedia.org/wiki/ケルゲレン諸島"
+    - from: 1955
+      owner: "france"
+      label: "フランス領南方・南極地域"
+      cause: "フランス領南方・南極地域（TAAF）が置かれる"
+      source: "https://ja.wikipedia.org/wiki/フランス領南方・南極地域"
+
+- id: tf_amsterdam
+  name: サン・ポール島・アムステルダム島
+  select:
+    pieces: [ATF-Iles_Saint_Paul_et_Nouvelle_Amsterdam]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1843
+      owner: "france"
+      certainty: "nominal"
+      label: "アムステルダム島（フランス領）"
+      cause: "フランスが領有を宣言する（1892年に再び宣言）"
+      source: "https://ja.wikipedia.org/wiki/アムステルダム島"
+    - from: 1892
+      owner: "france"
+      label: "アムステルダム島（フランス領）"
+      cause: "フランスが改めて領有を宣言する"
+      source: "https://ja.wikipedia.org/wiki/アムステルダム島"
+    - from: 1955
+      owner: "france"
+      label: "フランス領南方・南極地域"
+      cause: "フランス領南方・南極地域（TAAF）が置かれる"
+      source: "https://ja.wikipedia.org/wiki/フランス領南方・南極地域"
+
+- id: tf_eparses
+  name: インド洋の散在諸島（ジュアン・デ・ノヴァ・ユーロパなど）
+  select:
+    pieces: [ATF-Iles_Eparses_de_l_ocean_Indien]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "無人島"
+    - from: 1897
+      owner: "france"
+      label: "散在諸島（マダガスカル植民地の属領）"
+      cause: "フランスがモザンビーク海峡の小島（グロリオーズ諸島は1892年）を領有する"
+      note: "マダガスカルが一部の島の領有を主張している"
+      source: "https://ja.wikipedia.org/wiki/インド洋の無人島諸島"
+    - from: 1960
+      owner: "france"
+      label: "散在諸島（フランス領）"
+      cause: "マダガスカルの独立の直前にフランスの直轄とされる（2007年からTAAFの一部）"
+      source: "https://ja.wikipedia.org/wiki/インド洋の無人島諸島"

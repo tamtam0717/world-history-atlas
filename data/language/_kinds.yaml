@@ -187,3 +187,76 @@
 - {id: creole_french, name: フランス語系クレオール語（ハイチ語・アンティル・クレオール・ギアナ・クレオール・ルイジアナ・クレオール）, family: クレオール語, color: "#c96f86"}
 - {id: papiamento, name: パピアメント語, family: クレオール語, color: "#e2a07f"}
 - {id: polynesian, name: ポリネシア諸語（ハワイ語・ラパヌイ語・マオリ語・サモア語など）, family: オーストロネシア系, color: "#6cc4c4"}
+# ---- 追加（アフリカのデータ作成時） ----
+#   アフロ・アジア系：アラビア語（黄）・ベルベル語（砂色）は既存。エチオピアのセム系＝金〜黄土（アムハラ語・ティグリニャ語・グラゲ語）、
+#     クシ系＝橙〜茶（オロモ語・ソマリ語・アファール語・ベジャ語ほか）、オモ系＝カーキ、チャド系＝珊瑚色（ハウサ語ほか）。
+#   ナイル・サハラ系＝れんが色〜赤茶（カヌリ・ソンガイ・テダ・フール・ヌビア・ナイル系・中央スーダン系）。
+#   ニジェール・コンゴ系は広いので凡例では二つに分けた：「ニジェール・コンゴ系」（西アフリカの大西洋・マンデ・グル・クワ・ヴォルタ＝ニジェール・ウバンギ）＝紫〜赤紫、
+#     「バントゥー系」（グラスフィールドを含む）＝緑〜青緑（地域ごとにまとめた）。凡例の語族名はエチオピアのセム系を「セム系」、クシ・オモ・チャド系を「アフロ・アジア系」にまとめている。
+#   コイサン諸語＝くすんだ薔薇色、マダガスカル語＝オーストロネシア系の青緑、アフリカーンス語＝ゲルマン系の青、ポルトガル語系クレオール＝ポルトガル語の橙を濃くした色。
+#   （2026-11-23 レビュー後：地図で隣り合う言語どうしが CIELAB の色差 ΔE 20 以上になるよう、系統の色相は保って明るさ・彩度を調整した）
+- {id: amharic, name: アムハラ語, family: セム系, color: "#eeb54a"}
+- {id: tigrinya, name: ティグリニャ語・ティグレ語, family: セム系, color: "#a1922f"}
+- {id: gurage, name: グラゲ語・ハラリ語など（その他のエチオピアのセム系）, family: セム系, color: "#f3eca2"}
+- {id: oromo, name: オロモ語, family: アフロ・アジア系, color: "#fc9244"}
+- {id: somali, name: ソマリ語, family: アフロ・アジア系, color: "#b8763a"}
+- {id: afar_saho, name: アファール語・サホ語, family: アフロ・アジア系, color: "#eebd8c"}
+- {id: beja, name: ベジャ語, family: アフロ・アジア系, color: "#c9a27a"}
+- {id: cushitic_other, name: その他のクシ系諸語（シダモ語・ハディヤ語・ゲデオ語・アガウ諸語・イラク語など）, family: アフロ・アジア系, color: "#f3d2ae"}
+- {id: omotic, name: オモ系諸語（ウォライタ語・ガモ語・カファ語など）, family: アフロ・アジア系, color: "#c3b06a"}
+- {id: hausa, name: ハウサ語, family: アフロ・アジア系, color: "#f07e62"}
+- {id: chadic_other, name: その他のチャド系諸語（マファ語・マッサ語・コトコ語・ブラ語・タンガレ語など）, family: アフロ・アジア系, color: "#fcb593"}
+- {id: kanuri, name: カヌリ語（カネンブ語を含む）, family: ナイル・サハラ系, color: "#a85a48"}
+- {id: teda, name: テダ語・ダザ語・ザガワ語（サハラ系）, family: ナイル・サハラ系, color: "#faaf8f"}
+- {id: songhai, name: ソンガイ語・ザルマ語, family: ナイル・サハラ系, color: "#b77b6b"}
+- {id: fur, name: フール語・マサリト語・マバ語など（ダルフール・ワダイの諸語）, family: ナイル・サハラ系, color: "#8f5e52"}
+- {id: nubian, name: ヌビア語, family: ナイル・サハラ系, color: "#cf9a86"}
+- {id: dinka_nuer, name: ディンカ語・ヌエル語, family: ナイル・サハラ系, color: "#7d4a3e"}
+- {id: luo, name: ルオ語・アチョリ語・ランゴ語・アルル語・シルック語（西ナイル系）, family: ナイル・サハラ系, color: "#bd634c"}
+- {id: nilotic_east, name: マサイ語・トゥルカナ語・テソ語・カラモジョン語・バリ語（東ナイル系）, family: ナイル・サハラ系, color: "#fdb289"}
+- {id: kalenjin, name: カレンジン諸語・ダトーガ語（南ナイル系）, family: ナイル・サハラ系, color: "#9e6f5e"}
+- {id: central_sudanic, name: 中央スーダン系諸語（サラ語・バギルミ語・ルグバラ語・マンベトゥ語など）, family: ナイル・サハラ系, color: "#dcbab0"}
+- {id: nilo_saharan_other, name: その他のナイル・サハラ系など（ベルタ語・グムズ語・スルマ系諸語・ヌバ山地の諸語）, family: ナイル・サハラ系, color: "#c49488"}
+- {id: wolof, name: ウォロフ語, family: ニジェール・コンゴ系, color: "#7e6bc4"}
+- {id: fula, name: フラニ語（プラール語・フルフルデ語）, family: ニジェール・コンゴ系, color: "#d9bcff"}
+- {id: atlantic_other, name: その他の大西洋系諸語（セレール語・ジョラ語・バランタ語・テムネ語・キシ語など）, family: ニジェール・コンゴ系, color: "#85abf5"}
+- {id: mande, name: マンデ諸語（バンバラ語・マリンケ語・ジュラ語・ソニンケ語・スス語・ヴァイ語）, family: ニジェール・コンゴ系, color: "#562f85"}
+- {id: mande_south, name: 南マンデ諸語（メンデ語・クペレ語・ロマ語・ダン語など）, family: ニジェール・コンゴ系, color: "#a68bd6"}
+- {id: kru, name: クル諸語（バサ語・クル語・グレボ語・ベテ語など）, family: ニジェール・コンゴ系, color: "#d2bce8"}
+- {id: gur, name: グル諸語（モシ語・ダグバニ語・セヌフォ語・グルマ語・バリバ語など）, family: ニジェール・コンゴ系, color: "#b46cbc"}
+- {id: dogon, name: ドゴン諸語, family: ニジェール・コンゴ系, color: "#86689c"}
+- {id: akan, name: アカン語（トウィ語・ファンティ語・バウレ語など）, family: ニジェール・コンゴ系, color: "#d47fb0"}
+- {id: ewe_fon, name: エウェ語・フォン語（グベ諸語）・ガ語, family: ニジェール・コンゴ系, color: "#ecb3d4"}
+- {id: yoruba, name: ヨルバ語, family: ニジェール・コンゴ系, color: "#c2538f"}
+- {id: igbo, name: イボ語, family: ニジェール・コンゴ系, color: "#c47bb6"}
+- {id: edo_ijaw, name: エド語・イジョ語・ウルホボ語・イビビオ語・エフィク語など（ニジェール・デルタとクロス川）, family: ニジェール・コンゴ系, color: "#e4c6e2"}
+- {id: middle_belt, name: ナイジェリア中部の諸語（ティヴ語・ヌペ語・イガラ語・ベロム語・ジュクン語など）, family: ニジェール・コンゴ系, color: "#8f86c2"}
+- {id: ubangian, name: ウバンギ・アダマワ系諸語（ザンデ語・バンダ語・グバヤ語・サンゴ語・ムブム語など）, family: ニジェール・コンゴ系, color: "#bba1c1"}
+- {id: grassfields, name: グラスフィールド諸語（バミレケ語・ンソ語など）, family: バントゥー系, color: "#b2d79c"}
+- {id: cameroon_bantu, name: カメルーン・ガボンのバントゥー系諸語（ファン語・ベティ語・ドゥアラ語・バサ語・ブビ語・プヌ語など）, family: バントゥー系, color: "#499677"}
+- {id: kongo, name: コンゴ語（キコンゴ語。ヴィリ語・ラリ語・ヤカ語を含む）, family: バントゥー系, color: "#6cbf6a"}
+- {id: mbundu, name: キンブンドゥ語, family: バントゥー系, color: "#a9eaa5"}
+- {id: umbundu, name: ウンブンドゥ語（オヴィンブンドゥ人）, family: バントゥー系, color: "#3f8a4a"}
+- {id: lunda_chokwe, name: チョクウェ語・ルンダ語・ルヴァレ語・ンガンゲラ語, family: バントゥー系, color: "#e8f59e"}
+- {id: luba, name: ルバ語（チルバ語・キルバ語）, family: バントゥー系, color: "#2f7a5c"}
+- {id: mongo_lingala, name: コンゴ盆地の諸語（モンゴ語・テテラ語・リンガラ語・テケ語・ンボシ語など）, family: バントゥー系, color: "#8ccfae"}
+- {id: rwanda_rundi, name: ルワンダ語・ルンディ語（ハ語を含む）, family: バントゥー系, color: "#b7bf36"}
+- {id: ganda, name: ルガンダ語, family: バントゥー系, color: "#3e8a3a"}
+- {id: lacustrine, name: 大湖地方のバントゥー系諸語（ニョロ語・ニャンコレ語・ソガ語・ハヤ語・ルヒヤ語・グシイ語・ナンデ語・シ語など）, family: バントゥー系, color: "#93c96a"}
+- {id: kikuyu, name: キクユ語・カンバ語・メル語（中央ケニアのバントゥー系）, family: バントゥー系, color: "#4fa58a"}
+- {id: tz_bantu, name: タンザニア内陸・ケニア海岸のバントゥー系諸語（スクマ語・ニャムウェジ語・ヘヘ語・チャガ語・ザラモ語・ミジケンダ語など）, family: バントゥー系, color: "#a6d6b8"}
+- {id: swahili, name: スワヒリ語（コモロ語を含む）, family: バントゥー系, color: "#2a9a8e"}
+- {id: makua, name: マクア語・ロムウェ語・ヤオ語・マコンデ語, family: バントゥー系, color: "#72a462"}
+- {id: chewa, name: チェワ語（ニャンジャ語）・トゥンブカ語, family: バントゥー系, color: "#559d80"}
+- {id: bemba, name: ザンビアの諸語（ベンバ語・トンガ語・ロジ語など）, family: バントゥー系, color: "#9ec380"}
+- {id: shona, name: ショナ語（カランガ語・ンダウ語・セナ語を含む）, family: バントゥー系, color: "#5a9a2f"}
+- {id: zulu, name: ズールー語・スワジ語・ンデベレ語（ングニ諸語）, family: バントゥー系, color: "#2e8268"}
+- {id: xhosa, name: コサ語, family: バントゥー系, color: "#7cc4a4"}
+- {id: sotho, name: ソト語（北ソト〈ペディ〉語を含む）, family: バントゥー系, color: "#a4c95e"}
+- {id: tswana, name: ツワナ語, family: バントゥー系, color: "#effabc"}
+- {id: tsonga_venda, name: ツォンガ語・ヴェンダ語・チョピ語, family: バントゥー系, color: "#83bca7"}
+- {id: herero_ovambo, name: オヴァンボ語・ヘレロ語・カヴァンゴ語・ニャネカ語（南西部のバントゥー系）, family: バントゥー系, color: "#bfe4c6"}
+- {id: khoisan, name: コイサン諸語（ナマ語・コイコイ語・サン諸語）, family: コイサン諸語, color: "#c48f9e"}
+- {id: malagasy, name: マダガスカル語（マラガシ語）, family: オーストロネシア系, color: "#4aa8c4"}
+- {id: afrikaans, name: アフリカーンス語, family: ゲルマン系, color: "#93c0f0"}
+- {id: creole_portuguese, name: ポルトガル語系クレオール語（カーボベルデ・クレオール語、ギニアビサウのクリオル語、サントメのフォロ語など）, family: クレオール語, color: "#c98a3e"}

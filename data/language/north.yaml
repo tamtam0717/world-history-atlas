@@ -617,9 +617,9 @@
 
 # ======== グリーンランド ========
 - id: lang_greenland
-  name: グリーンランド東部
+  name: グリーンランド
   select:
-    iso: [GRL]
+    iso_all: [GRL]   # 範囲外（zone=world）の西岸のピースも含める
   timeline:
     - from: 1648
       main: other

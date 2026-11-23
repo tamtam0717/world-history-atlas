@@ -937,7 +937,7 @@
 - id: rel_arabia
   name: アラビア半島北部・東部
   select:
-    iso: [SAU, KWT, QAT, ARE, OMN, BHR]
+    iso_all: [SAU, KWT, QAT, ARE, OMN, BHR]   # 範囲外（zone=world）のピース（アスィール・ジーザーン・カタール南部など）も含める
   timeline:
     - from: 1648
       main: sunni
@@ -1204,14 +1204,33 @@
     - from: 1990
       main: shia
       minor: sunni
-      note: ナゴルノ・カラバフ紛争（1988–94）で、アルメニア人（アルメニア使徒教会）はバクーなどから去った。カラバフの山地のアルメニア人は1994–2023年にアルメニア人勢力の支配下にあったが、2023年のアゼルバイジャンの攻撃の後、ほぼ全員がアルメニアへ去った（ピースが分かれていないので地図には描いていない）。
+      note: ナゴルノ・カラバフ紛争（1988–94）で、アルメニア人（アルメニア使徒教会）はバクーなどから去った。カラバフの山地（旧自治州）は別のピースで rel_karabakh で描く。
       source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+- id: rel_karabakh
+  name: ナゴルノ・カラバフ（山岳カラバフ）
+  select:
+    pieces: [AZE-Nagorno_Karabakh]
+  timeline:
+    - from: 1648
+      main: oriental
+      minor: shia
+      note: アルメニア人のメリク（小領主）たちの山地で、アルメニア使徒教会のガンザサル修道院がある。18世紀半ばからカラバフ・ハン国の都シュシャにムスリム（シーア派）が住んだ。
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ"
+    - from: 1992
+      main: oriental
+      note: 戦争（1988–94）で、シュシャなどのアゼルバイジャン人（約4万人）は追われた（シュシャの陥落は1992年5月）。
+      source: "https://ja.wikipedia.org/wiki/ナゴルノ・カラバフ紛争"
+    - from: 2023
+      main: shia
+      note: 2023年9月のアゼルバイジャン軍の攻撃の後、アルメニア人のほぼ全員（約10万人）がアルメニアへ去った。アゼルバイジャンはシュシャなどへの移住を進めている。
+      source: "https://ja.wikipedia.org/wiki/2023年ナゴルノ・カラバフ衝突"
 
 # ======== 中央アジア・アフガニスタン・パキスタン ========
 - id: rel_central_asia
   name: 中央アジア（カザフ・トルクメン・ホラズム）・アフガニスタン西部・バローチスターン
   select:
-    iso: [KAZ, TKM, UZB, AFG, PAK]
+    iso: [KAZ, UZB, AFG, PAK]
+    iso_all: [TKM]   # トルクメニスタン東部（レバプ・マリ南部）の範囲外のピースも含める
   timeline:
     - from: 1648
       main: sunni
@@ -1390,3 +1409,199 @@
       main: orthodox
       note: 1923年の住民交換でムスリムの住民がトルコへ移され、小アジアからのギリシア人難民が入植した（プトレマイダ）。
       source: "https://en.wikipedia.org/wiki/Population_exchange_between_Greece_and_Turkey"
+
+# ======== 中央アジア東部・アフガニスタン東部・イエメン（アジアの空白の補充、2026-11-23） ========
+- id: rel_afghanistan_sunni
+  name: アフガニスタン（スンナ派の地域）
+  select:
+    pieces: [AFG-Kapisa, AFG-Parwan, AFG-Panjshir, AFG-Logar, AFG-Laghman, AFG-Nangarhar, AFG-Kunar, AFG-Sarkani, AFG-Khost, AFG-Paktia, AFG-Paktika, AFG-Kandahar, AFG-Helmand, AFG-Zabul, AFG-Balkh, AFG-Jowzjan, AFG-Samangan, AFG-Sar_e_Pol, AFG-Faryab, AFG-Kunduz, AFG-Baghlan, AFG-Takhar, AFG-Badghis, AFG-Ghor, AFG-Farah_2, AFG-Nimruz]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スンナ派（ハナフィー派）。パシュトゥーン人・タジク人・ウズベク人・アイマク人。
+- id: rel_afghanistan_mixed
+  name: カーブル・ガズニー・ワルダク・ウルーズガーン
+  select:
+    pieces: [AFG-Kabul, AFG-Ghanzi, AFG-Wardak, AFG-Uruzgan]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: shia
+      note: スンナ派が多数。ハザーラ人（十二イマーム派）と、カーブルのキズィルバーシュ（ナーディル・シャーの時代に来たシーア派のテュルク系）が少数派。
+- id: rel_hazarajat
+  name: ハザーラジャート
+  select:
+    pieces: [AFG-Bamyan, AFG-Daykundi]
+  timeline:
+    - from: 1648
+      main: shia
+      note: ハザーラ人の十二イマーム派。1890年代のアブドゥッラフマーン・ハーンの征服で多くの住民が殺され、土地を奪われた。
+- id: rel_badakhshan
+  name: バダフシャーン（アフガニスタン）
+  select:
+    pieces: [AFG-Badakhshan]
+  timeline:
+    - from: 1648
+      main: sunni
+      minor: shia
+      note: スンナ派が多数。ワハーン・シュグナーンなど山地の住民はイスマーイール派（ニザール派）。
+- id: rel_nuristan
+  name: カーフィリスターン（ヌーリスターン）
+  select:
+    pieces: [AFG-Nuristan]
+  timeline:
+    - from: 1648
+      main: other
+      note: カーフィル（異教徒）と呼ばれた人々の多神教の信仰。
+    - from: 1896
+      main: sunni
+      note: アブドゥッラフマーン・ハーンの征服（1895–96）で住民はイスラームに改宗させられ、「ヌーリスターン（光の国）」と改名された。
+- id: rel_pamir
+  name: パミール（ゴルノ・バダフシャン）
+  select:
+    pieces: [TJK-Gorno_Badakhshan_Autonomous_Region]
+  timeline:
+    - from: 1648
+      main: shia
+      note: パミールの山地の住民はイスマーイール派（ニザール派。アーガー・ハーンを指導者とする）。
+- id: rel_central_asia_east
+  name: 中央アジア東部（マーワラーアンナフル・フェルガナ・シル川中流）
+  select:
+    pieces: [UZB-Andijan_Region, UZB-Bukhara_Region, UZB-Fergana_Region, UZB-Jizzakh_Region, UZB-Namangan_Region, UZB-Navoiy_Region, UZB-Qashqadaryo_Region, UZB-Samarqand_Region, UZB-Sirdaryo_Region, UZB-Surxondaryo_Region, UZB-Tashkent_Region, KGZ-Osh_Region, KGZ-Jalal_Abad_Region, KGZ-Batken_Region, KGZ-Naryn_Region, KGZ-Talas_Region, TJK-Sughd_Region, TJK-Khatlon_Region, TJK-Districts_of_Republican_Subordination, KAZ-South_Kazakhstan_Region, KAZ-Jambyl_Region, KAZ-Almaty_Region]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スンナ派（ハナフィー派）。ブハラ・サマルカンドはイスラームの学問の中心で、ナクシュバンディー教団などのスーフィーの影響が強い。キルギス人・カザフ人の遊牧社会では伝統的な信仰も残る。ブハラにはユダヤ人の共同体があった。
+- id: rel_kz_north
+  name: カザフスタン北部・中部（アクモラ・パヴロダル・カラガンダ・東カザフスタン）
+  select:
+    pieces: [KAZ-Akmola_Region, KAZ-Astana, KAZ-Pavlodar_Region, KAZ-Karaganda_Region, KAZ-East_Kazakhstan_Region]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: カザフ人（中ジュズ）の遊牧地。イルティシュ川沿いにロシアのとりで（セミパラチンスク1718、ウスチ・カメノゴルスク1720など）。
+    - from: 1900
+      main: sunni
+      minor: orthodox
+      note: ステップ地方へのロシア人・ウクライナ人の農民の入植（1890年代〜ストルイピンの移住政策）。
+    - from: 1930
+      main: orthodox
+      minor: sunni
+      note: 集団化と飢饉（1930–33）でカザフ人が激減し、ロシア人・ウクライナ人（のちドイツ人などの強制移住者、1954年からの処女地開拓）が多数になった。
+    - from: 2000
+      main: sunni
+      minor: orthodox
+      note: 独立後、ロシア人・ドイツ人の流出とカザフ人の増加で、カザフ人が多数（または最大）になった。
+- id: rel_kz_north_kazakhstan
+  name: 北カザフスタン州（ペトロパヴロフスク）
+  select:
+    pieces: [KAZ-North_Kazakhstan_Region]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: カザフ人（中ジュズ）の遊牧地。ペトロパヴロフスクは1752年にロシアのとりで。
+    - from: 1900
+      main: sunni
+      minor: orthodox
+      note: ロシア人・ウクライナ人の農民の入植。
+    - from: 1930
+      main: orthodox
+      minor: sunni
+      note: 集団化と飢饉、入植でロシア人が多数になった。2021年の調査でもロシア人が約半数で最大。
+- id: rel_almaty
+  name: アルマトイ（ヴェールヌイ）
+  select:
+    pieces: [KAZ-Almaty]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: カザフ大ジュズの遊牧地。
+    - from: 1860
+      main: orthodox
+      minor: sunni
+      note: 1854年にロシアのとりでヴェールヌイが築かれ、コサック・ロシア人の町となった。
+    - from: 2000
+      main: sunni
+      minor: orthodox
+      note: 独立後にカザフ人が多数になった（2009年の調査で過半数）。
+- id: rel_tashkent_city
+  name: タシケント市
+  select:
+    pieces: [UZB-Tashkent]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: 中央アジア最大の商業都市。
+    - from: 1940
+      main: orthodox
+      minor: sunni
+      note: ロシア領時代の新市街に加え、1930年代の工業化と第二次世界大戦中の疎開・1966年の地震後の再建でロシア人などが多数（または最大）になった。（比率は要確認）
+    - from: 1985
+      main: sunni
+      minor: orthodox
+      note: ウズベク人が再び多数になった（1989年の調査で約44%）。独立後はロシア人の流出が進んだ。
+- id: rel_dushanbe
+  name: ドゥシャンベ
+  select:
+    pieces: [TJK-Dushanbe]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: ヒッサール地方の村（月曜市）。
+    - from: 1930
+      main: orthodox
+      minor: sunni
+      note: 1929年にタジク共和国の首都（スターリナバード）となり、ロシア人などの移住で多数になった。
+    - from: 1992
+      main: sunni
+      minor: orthodox
+      note: 内戦（1992–97）でロシア人の多くが去り、タジク人が多数になった。
+- id: rel_kg_chuy
+  name: チュー州（ピシュペク＝ビシュケク）
+  select:
+    pieces: [KGZ-Chuy_Region]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: キルギス人・カザフ人の遊牧地。
+    - from: 1900
+      main: sunni
+      minor: orthodox
+      note: ロシア人・ウクライナ人の農民の入植（ピシュペク・トクマク）。
+    - from: 1930
+      main: orthodox
+      minor: sunni
+      note: 入植と1916年の反乱後のキルギス人の逃亡・集団化で、ロシア人などが多数になった。
+    - from: 2000
+      main: sunni
+      minor: orthodox
+      note: 独立後、ロシア人の流出でキルギス人が多数になった。
+- id: rel_kg_issyk_kul
+  name: イシク・クル
+  select:
+    pieces: [KGZ-Issyk_Kul_Region]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: キルギス人の遊牧地。伝統的な信仰も残る。
+    - from: 1880
+      main: sunni
+      minor: orthodox
+      note: カラコル（プルジェヴァリスク、1869年）などロシア人の入植地。
+- id: rel_yemen_zaydi
+  name: イエメン北部・中部の高地（ザイド派の地）
+  select:
+    pieces: [YEM-Sa_dah_Governorate, YEM-Amran_Governorate, YEM-Hajjah_Governorate, YEM-San_a, YEM-San_a_Governorate, YEM-Al_Mahwit_Governorate, YEM-Dhamar_Governorate, YEM-Al_Jawf_Governorate, YEM-Ma_rib_Governorate]
+  timeline:
+    - from: 1648
+      main: shia
+      minor: sunni
+      note: シーア派の一派ザイド派の地。ティハーマ寄りや南部はスンナ派（シャーフィイー派）。ユダヤ人の共同体も各地にあった（1949–50年の「魔法のじゅうたん作戦」でほとんどがイスラエルへ移った）。
+- id: rel_yemen_shafii
+  name: イエメン南部・ティハーマ・南アラビア
+  select:
+    pieces: [YEM-Raymah_Governorate, YEM-Ibb_Governorate, YEM-Ta_izz_Governorate, YEM-Al_Bayda_Governorate, YEM-Al_Hudaydah_Governorate, YEM-Adan_Governorate, YEM-Lahij_Governorate, YEM-Ad_Dali_Governorate, YEM-Abyan_Governorate, YEM-Shabwah_Governorate, YEM-Hadhramaut, YEM-Al_Mahrah_Governorate, YEM-Socotra]
+  timeline:
+    - from: 1648
+      main: sunni
+      note: スンナ派（シャーフィイー派）。ハドラマウトはスーフィーのサイイド（預言者の子孫）の家系で知られ、東南アジア・東アフリカへの移住者を多く出した。

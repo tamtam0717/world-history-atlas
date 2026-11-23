@@ -636,7 +636,7 @@
     - from: 1648
       main: other
       minor: shinbutsu
-      note: アイヌの信仰（カムイ、イオマンテ）。南端の和人地（松前藩）には和人の寺社がある。
+      note: アイヌの信仰（カムイ、イオマンテ）。南西端の和人地（松前藩。別のピースで rel_japan の神仏習合）には和人の寺社がある。
       source: "https://ja.wikipedia.org/wiki/アイヌ"
     - from: 1869
       main: shinbutsu
@@ -660,6 +660,21 @@
       minor: shinbutsu
       note: 琉球処分（1879）で沖縄県となり、神社の建立など同化政策が進んだ。祖先崇拝と御嶽の信仰は今も根強い。
       source: "https://ja.wikipedia.org/wiki/琉球処分"
+- id: rel_amami
+  name: 奄美群島
+  select:
+    pieces: [JPN-Amami_Islands]
+  timeline:
+    - from: 1648
+      main: other
+      minor: shinbutsu
+      note: 琉球と同じノロ（神女）の祭祀と祖先崇拝。1611年から薩摩藩の直轄地で、薩摩はノロの祭祀を制限し、代官所の周りに寺社を建てた。
+      source: "https://ja.wikipedia.org/wiki/ノロ"
+    - from: 1879
+      main: other
+      minor: shinbutsu
+      note: 明治政府の同化政策で神社が建てられた。1891年からカトリックの宣教が進み、奄美大島には信徒の多い集落ができた（昭和初期に弾圧を受けた）。祖先崇拝とノロの祭祀は今も残る（沖縄と同じ年で切り替える）。
+      source: "https://ja.wikipedia.org/wiki/奄美群島"
 
 # ======== 朝鮮 ========
 - id: rel_korea
@@ -1031,3 +1046,13 @@
       main: orthodox
       note: ソ連が占領し（1945）、日本人の住民は 1947–49 年に引き揚げた。日本は返還を求めている（北方領土問題）。
       source: "https://ja.wikipedia.org/wiki/北方領土問題"
+
+# ======== 帰属が争われている無人の島（尖閣・竹島・西沙・南沙。アジアの空白の補充、2026-11-23） ========
+- id: rel_disputed_islets
+  name: 無人の島々（尖閣諸島・竹島・西沙諸島・南沙諸島）
+  select:
+    pieces: [127-Senkakus, 123-Liancourt_Rocks, 125-Paracel_Is, 128-Spratly_Is]
+  timeline:
+    - from: 1648
+      main: other
+      note: 定住する住民のいない島々（漁民の季節の滞在や、20世紀の守備隊・気象観測所の人員だけ）。尖閣諸島には1900–40年ごろかつお節工場があった。

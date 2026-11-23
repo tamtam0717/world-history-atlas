@@ -1772,7 +1772,7 @@
 - id: lang_turkmen
   name: トルクメン
   select:
-    iso: [TKM]
+    iso_all: [TKM]   # 範囲外（zone=world）の東部のピースも含める
   timeline:
     - from: 1648
       main: turkmen_kazakh
@@ -1815,3 +1815,219 @@
       source: "https://en.wikipedia.org/wiki/1921_Upper_Silesia_plebiscite"
     - from: 1946
       main: polish
+
+# ======== 中央アジア東部（アジアの空白の補充、2026-11-23） ========
+- id: lang_uzbek_east
+  name: ウズベキスタン東部（フェルガナ・カシュカダリヤ・ナヴォイ）
+  select:
+    pieces: [UZB-Andijan_Region, UZB-Fergana_Region, UZB-Namangan_Region, UZB-Navoiy_Region, UZB-Qashqadaryo_Region]
+  timeline:
+    - from: 1648
+      main: uzbek
+      note: ウズベク人と、定住のテュルク系・ペルシア語系の住民（サルト人）。フェルガナの町や山麓にはタジク人もいる。
+- id: lang_bukhara_samarkand
+  name: ブハラ・サマルカンド・スルハンダリヤ
+  select:
+    pieces: [UZB-Bukhara_Region, UZB-Samarqand_Region, UZB-Surxondaryo_Region]
+  timeline:
+    - from: 1648
+      main: uzbek
+      minor: persian
+      note: 農村・遊牧のウズベク人と、ブハラ・サマルカンドの町のタジク人（ペルシア語）。ブハラの宮廷・学問の言語もペルシア語だった。
+- id: lang_syr_middle
+  name: タシケント州・シルダリヤ・ジザク
+  select:
+    pieces: [UZB-Tashkent_Region, UZB-Sirdaryo_Region, UZB-Jizzakh_Region]
+  timeline:
+    - from: 1648
+      main: uzbek
+      minor: turkmen_kazakh
+      note: ウズベク人とカザフ人。
+- id: lang_tashkent_city
+  name: タシケント市
+  select:
+    pieces: [UZB-Tashkent]
+  timeline:
+    - from: 1648
+      main: uzbek
+      note: ウズベク人（サルト人）の商業都市。
+    - from: 1940
+      main: russian
+      minor: uzbek
+      note: 1930年代の工業化と戦時の疎開でロシア人などが多数（または最大）になった。（比率は要確認）
+    - from: 1985
+      main: uzbek
+      minor: russian
+      note: ウズベク人が再び多数になった（1989年の調査で約44%）。
+- id: lang_kyrgyz
+  name: キルギス（ナルィン・タラス）
+  select:
+    pieces: [KGZ-Naryn_Region, KGZ-Talas_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: キルギス人（キルギス語はカザフ語に近いキプチャク系のテュルク語）の遊牧地。
+- id: lang_kyrgyz_south
+  name: キルギス南部（オシュ・ジャララバード）
+  select:
+    pieces: [KGZ-Osh_Region, KGZ-Jalal_Abad_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      minor: uzbek
+      note: 山地はキルギス人、フェルガナ盆地の縁の町（オシュ・ウズゲン・ジャララバード）はウズベク人。
+- id: lang_batken
+  name: バトケン
+  select:
+    pieces: [KGZ-Batken_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      minor: persian
+      note: キルギス人と、タジク人・ウズベク人の村（飛び地が入り組む）。
+- id: lang_issyk_kul
+  name: イシク・クル
+  select:
+    pieces: [KGZ-Issyk_Kul_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: キルギス人の遊牧地。
+    - from: 1880
+      main: turkmen_kazakh
+      minor: russian
+      note: カラコル（プルジェヴァリスク）などロシア人の入植地。
+- id: lang_chuy
+  name: チュー州（ビシュケク）
+  select:
+    pieces: [KGZ-Chuy_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: キルギス人・カザフ人の遊牧地。
+    - from: 1900
+      main: turkmen_kazakh
+      minor: russian
+      note: ロシア人・ウクライナ人の農民の入植。
+    - from: 1930
+      main: russian
+      minor: turkmen_kazakh
+      note: 入植と1916年の反乱後のキルギス人の逃亡で、ロシア人などが多数になった（首都フルンゼ）。
+    - from: 2000
+      main: turkmen_kazakh
+      minor: russian
+      note: 独立後、ロシア人の流出でキルギス人が多数になった。
+- id: lang_tajik
+  name: タジキスタン（ホジェンド・ハトロン）
+  select:
+    pieces: [TJK-Sughd_Region, TJK-Khatlon_Region]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: uzbek
+      note: タジク人（ペルシア語のタジク方言）とウズベク人（ハトロン南部のロカイ族など）。
+- id: lang_karategin
+  name: カラテギン・ヒッサール（ドゥシャンベ周辺）
+  select:
+    pieces: [TJK-Districts_of_Republican_Subordination]
+  timeline:
+    - from: 1648
+      main: persian
+      note: タジク人の山地。
+- id: lang_pamir
+  name: パミール（ゴルノ・バダフシャン）
+  select:
+    pieces: [TJK-Gorno_Badakhshan_Autonomous_Region]
+  timeline:
+    - from: 1648
+      main: persian
+      note: パミール諸語（シュグニー語・ワヒー語など東イラン系）の住民。ソ連の民族分類ではタジク人とされた（民族でそろえてタジク＝ペルシア語の色）。東パミールはキルギス人。
+- id: lang_dushanbe
+  name: ドゥシャンベ
+  select:
+    pieces: [TJK-Dushanbe]
+  timeline:
+    - from: 1648
+      main: persian
+      note: タジク人の村。
+    - from: 1930
+      main: russian
+      minor: persian
+      note: 1929年にタジク共和国の首都となり、ロシア人などが多数になった。
+    - from: 1992
+      main: persian
+      minor: russian
+      note: 内戦（1992–97）でロシア人の多くが去り、タジク人が多数になった。
+- id: lang_kz_south
+  name: カザフスタン南部（シムケント・タラズ）
+  select:
+    pieces: [KAZ-South_Kazakhstan_Region, KAZ-Jambyl_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      minor: uzbek
+      note: カザフ人（大ジュズ・中ジュズ）と、トルキスタン・サイラム・シムケントの町のウズベク人。
+- id: lang_kz_almaty_region
+  name: アルマトイ州（セミレチエ）
+  select:
+    pieces: [KAZ-Almaty_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: カザフ大ジュズの遊牧地。
+    - from: 1900
+      main: turkmen_kazakh
+      minor: russian
+      note: セミレチエ・コサックとロシア人の農民の入植。1880年代にはイリ地方からウイグル人・ドゥンガン人も移住した。
+- id: lang_almaty
+  name: アルマトイ（ヴェールヌイ）
+  select:
+    pieces: [KAZ-Almaty]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: カザフ大ジュズの遊牧地。
+    - from: 1860
+      main: russian
+      minor: turkmen_kazakh
+      note: 1854年にロシアのとりでヴェールヌイが築かれ、ロシア人の町となった（1929–97年はカザフ共和国・カザフスタンの首都）。
+    - from: 2000
+      main: turkmen_kazakh
+      minor: russian
+      note: 独立後にカザフ人が多数になった（2009年の調査で過半数）。
+- id: lang_kz_north
+  name: カザフスタン北部・中部（アクモラ・パヴロダル・カラガンダ・東カザフスタン）
+  select:
+    pieces: [KAZ-Akmola_Region, KAZ-Astana, KAZ-Pavlodar_Region, KAZ-Karaganda_Region, KAZ-East_Kazakhstan_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: カザフ人（中ジュズ）の遊牧地。
+    - from: 1900
+      main: turkmen_kazakh
+      minor: russian
+      note: ロシア人・ウクライナ人の農民の入植（1890年代〜）。
+    - from: 1930
+      main: russian
+      minor: turkmen_kazakh
+      note: 集団化と飢饉（1930–33）でカザフ人が激減し、ロシア人・ウクライナ人・強制移住のドイツ人など、1954年からの処女地開拓の入植者が多数になった。カラガンダは炭鉱と収容所（カルラグ）の町。
+    - from: 2000
+      main: turkmen_kazakh
+      minor: russian
+      note: 独立後、ロシア人・ドイツ人の流出とカザフ人の増加で、カザフ人が多数（または最大）になった。
+- id: lang_kz_north_kazakhstan
+  name: 北カザフスタン州（ペトロパヴロフスク）
+  select:
+    pieces: [KAZ-North_Kazakhstan_Region]
+  timeline:
+    - from: 1648
+      main: turkmen_kazakh
+      note: カザフ人（中ジュズ）の遊牧地。
+    - from: 1900
+      main: turkmen_kazakh
+      minor: russian
+      note: ロシア人・ウクライナ人の農民の入植。
+    - from: 1930
+      main: russian
+      minor: turkmen_kazakh
+      note: ロシア人が多数になった。2021年の調査でもロシア人が約半数で最大。

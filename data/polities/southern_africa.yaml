@@ -1,0 +1,1315 @@
+# F4 中部・南部アフリカとインド洋の島々の政体（1648–2025）
+# 地域と所属の変遷は data/regions/southern_africa.yaml。
+# 植民地の時期は宗主国（portugal・britain・france・belgium・german_empire・netherlands）の政体を使い、元首は書かない。
+# 在地の国家の王の在位年は、史料によって数年ずれることが多い（とくに 17–18 世紀）。自信のないものは note に「要確認」。
+
+# ================================================================ コンゴ川下流・アンゴラ
+
+- id: kongo
+  name: コンゴ王国
+  short: コンゴ王国
+  color: "#c9a3d6"
+  kind: 王国（キリスト教）
+  rulers:
+    - {name: ガルシア2世, title: コンゴ王, from: 1641, to: 1661, note: オランダと結んでポルトガルに対抗した, source: "https://en.wikipedia.org/wiki/Garcia_II_of_Kongo"}
+    - {name: アントニオ1世, title: コンゴ王, from: 1661, to: 1665, note: ムブウィラの戦いでポルトガル軍に敗れて戦死, source: "https://en.wikipedia.org/wiki/António_I_of_Kongo"}
+    - {name: 王位を争う諸王（内乱期）, title: コンゴ王, from: 1665, to: 1694, note: ムブウィラの戦いの後、キンラザ家・キンパンズ家などが王位を争い、サン・サルヴァドールは1678年に放棄された, source: "https://en.wikipedia.org/wiki/Kongo_Civil_War"}
+    - {name: ペドロ4世, title: コンゴ王, from: 1695, to: 1718, note: 内乱の中で即位を主張し、1709年にサン・サルヴァドールを奪って王国を再統一した, source: "https://en.wikipedia.org/wiki/Pedro_IV_of_Kongo"}
+    - {name: マヌエル2世, title: コンゴ王, from: 1718, to: 1743, note: 要確認, source: "https://en.wikipedia.org/wiki/Manuel_II_of_Kongo"}
+    - {name: 歴代のコンゴ王（ガルシア4世・アルヴァロ11世・アンドレ2世など）, title: コンゴ王, from: 1743, to: 1858, note: 王家の諸家が交代で王位に就いたが、王の力は弱まり地方の首長が自立した, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Kongo"}
+    - {name: ペドロ5世, title: コンゴ王, from: 1859, to: 1891, note: ポルトガルの支援で即位し、ポルトガル王に臣従した, source: "https://en.wikipedia.org/wiki/Pedro_V_of_Kongo"}
+    - {name: アルヴァロ13世, title: コンゴ王, from: 1891, to: 1896, note: 要確認, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Kongo"}
+    - {name: エンリケ3世, title: コンゴ王, from: 1896, to: 1901, note: 要確認, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Kongo"}
+    - {name: ペドロ6世, title: コンゴ王, from: 1901, to: 1910, note: 要確認, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Kongo"}
+    - {name: マヌエル3世, title: コンゴ王, from: 1911, to: 1914, note: 1913–14年の反乱の後に退位させられた。要確認, source: "https://en.wikipedia.org/wiki/List_of_rulers_of_Kongo"}
+  periods:
+    - from: 1648
+      to: 1665
+      text: 都ムバンザ・コンゴ（サン・サルヴァドール）を中心に、コンゴ川の南に広がるキリスト教の王国。ガルシア2世はオランダと結んでポルトガルに対抗したが、1648年にオランダがルアンダを失うと孤立した。
+    - from: 1665
+      to: 1709
+      text: ムブウィラの戦いでポルトガル軍に国王が殺され、王位を争う内乱で王国が分裂した。都は荒れ果て、ソヨなどの地方が自立した。女預言者キンパ・ヴィタ（ドナ・ベアトリス）の運動もこの混乱の中で起こった。
+    - from: 1709
+      to: 1856
+      text: ペドロ4世の再統一の後は、王の力は弱く、地方の有力者がゆるく王を認める形が続いた。王国は大西洋奴隷貿易に多くの奴隷を送り出した。
+    - from: 1857
+      to: 1914
+      text: ペドロ5世がポルトガルの支援で即位して臣従し、ベルリン会議で王国の北部はコンゴ自由国、南部はポルトガル領とされた。1913–14年の反乱の後、王国の自治は失われた。
+  note: 王位は1975年まで名目的に続いた。
+  source: "https://ja.wikipedia.org/wiki/コンゴ王国"
+
+- id: loango
+  name: ロアンゴ王国
+  short: ロアンゴ
+  color: "#bddba4"
+  kind: 王国
+  periods:
+    - from: 1648
+      to: 1883
+      text: コンゴ川の北の海岸の王国。南のカコンゴ・ンゴヨ（カビンダ）とともに、象牙・銅・染料木の交易から、18世紀には大西洋奴隷貿易の大きな積み出し地になった。
+  note: 地図ではカコンゴ・ンゴヨ（現在のカビンダ）もこの色で塗る（ロアンゴに従ったり自立したりした）。
+  source: "https://ja.wikipedia.org/wiki/ロアンゴ王国"
+
+- id: tio
+  name: テケ（ティオ）王国
+  short: テケ王国
+  color: "#d2c29d"
+  kind: 王国
+  rulers:
+    - {name: イロ1世（マココ）, title: テケ王, from: 1880, to: 1892, note: 1880年にブラザと条約を結んでフランスの保護下に入った。要確認, source: "https://en.wikipedia.org/wiki/Anziku_Kingdom"}
+  periods:
+    - from: 1648
+      to: 1879
+      text: スタンリー・プール（マレボ湖）の北の高原の王国。王はマココと称した。コンゴ川の上流と下流をつなぐ交易を仲立ちした。
+  source: "https://en.wikipedia.org/wiki/Anziku_Kingdom"
+
+- id: ndongo
+  name: ンドンゴ王国
+  short: ンドンゴ
+  color: "#d3867e"
+  kind: 王国
+  rulers:
+    - {name: アリ・キルアンジ（ンゴラ・アリ1世）, title: ンドンゴ王, from: 1626, to: 1664, note: ポルトガルがンジンガに対抗して立てた王。要確認, source: "https://en.wikipedia.org/wiki/Kingdom_of_Ndongo"}
+    - {name: ンゴラ・アリ2世, title: ンドンゴ王, from: 1664, to: 1671, note: ポルトガルに背いて攻められ、プンゴ・アンドンゴが落ちた。要確認, source: "https://en.wikipedia.org/wiki/Kingdom_of_Ndongo"}
+  periods:
+    - from: 1648
+      to: 1671
+      text: 王の称号ンゴラが「アンゴラ」の名のもと。ンジンガ女王が東のマタンバに移った後、ポルトガルが立てた王がプンゴ・アンドンゴの岩山を都とした。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Ndongo"
+
+- id: matamba
+  name: マタンバ王国
+  short: マタンバ
+  color: "#e0b4a0"
+  kind: 王国
+  rulers:
+    - {name: ンジンガ, title: ンドンゴ・マタンバの女王, from: 1631, to: 1663, note: ポルトガルと戦い、1656年に和約を結んだ, source: "https://ja.wikipedia.org/wiki/ンジンガ・ムバンデ"}
+    - {name: バルバラ（カンブ）, title: 女王, from: 1663, to: 1666, note: ンジンガの妹, source: "https://en.wikipedia.org/wiki/Kambu_of_Ndongo_and_Matamba"}
+    - {name: ヴェロニカ1世, title: 女王, from: 1681, to: 1721, note: 要確認, source: "https://en.wikipedia.org/wiki/Verónica_I_of_Ndongo_and_Matamba"}
+  periods:
+    - from: 1648
+      to: 1663
+      text: ンジンガ女王はンドンゴを追われてマタンバを奪い、インバンガラの戦士と結んでポルトガルに抵抗した。1641–48年はルアンダを占領したオランダと同盟したが、ポルトガルがルアンダを奪い返すと、1656年に和約を結んだ。
+    - from: 1664
+      to: 1909
+      text: ンジンガの後は女王・王が交代しながら続き、クワンゴ川流域の奴隷交易を仲立ちした。19世紀後半からポルトガルの圧力が強まり、20世紀初めに征服された。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Matamba"
+
+- id: kasanje
+  name: カサンジェ王国
+  short: カサンジェ
+  color: "#d8d7b6"
+  kind: 王国（インバンガラ）
+  periods:
+    - from: 1648
+      to: 1910
+      text: 17世紀前半にインバンガラ人の首長カサンジェがクワンゴ川のほとりに建てた王国。内陸のルンダ王国とルアンダのポルトガル人の間の奴隷・象牙の取引を仲立ちして栄えた。1850年代からポルトガルと争い、20世紀初めに征服された。
+  source: "https://en.wikipedia.org/wiki/Kasanje_Kingdom"
+
+- id: ovimbundu
+  name: オヴィンブンドゥ諸王国
+  short: オヴィンブンドゥ
+  color: "#cece83"
+  kind: 王国群
+  periods:
+    - from: 1648
+      to: 1902
+      text: ベンゲラ高原のオヴィンブンドゥ人の王国（バイルンド・ワンボ・ビエ・ガランゲなど）。18–19世紀には隊商を組んで内陸のルンダ・ロジまで交易し、奴隷・象牙・ゴム・蜜蝋をベンゲラに運んだ。ビエは1890年、バイルンドは1902年にポルトガルに征服された。
+  note: 地図ではいくつかの王国をまとめて1色で塗る。
+  source: "https://en.wikipedia.org/wiki/Ovimbundu"
+
+- id: ovambo
+  name: オヴァンボ諸王国
+  short: オヴァンボ
+  color: "#d2cb8e"
+  kind: 王国群
+  rulers:
+    - {name: マンドゥメ・ヤ・ンデムファヨ, title: クワニャマ王, from: 1911, to: 1917, note: ポルトガル・南アフリカと戦って死んだ, source: "https://en.wikipedia.org/wiki/Mandume_ya_Ndemufayo"}
+  periods:
+    - from: 1648
+      to: 1915
+      text: アンゴラ南部とナミビア北部の氾濫原の農牧民の王国（ンドンガ・クワニャマなど）。1886年にポルトガルとドイツの境界で分けられた。北はポルトガルに1915年、南は南アフリカに1915–17年に征服された。
+  note: 地図ではいくつかの王国をまとめて1色で塗る。
+  source: "https://en.wikipedia.org/wiki/Ovambo_people"
+
+# ================================================================ コンゴ盆地・中部アフリカ
+
+- id: lunda
+  name: ルンダ王国
+  short: ルンダ
+  color: "#d4a96a"
+  kind: 王国
+  rulers:
+    - {name: ナウェジ2世, title: ムワタ・ヤンヴォ（ルンダ王）, from: 1820, to: 1852, note: 要確認, source: "https://en.wikipedia.org/wiki/Kingdom_of_Lunda"}
+    - {name: ムバンバ, title: ムワタ・ヤンヴォ, from: 1857, to: 1873, note: 要確認, source: "https://en.wikipedia.org/wiki/Kingdom_of_Lunda"}
+  periods:
+    - from: 1648
+      to: 1850
+      text: 都ムスンバを中心にした王国。王はムワタ・ヤンヴォ（ムワント・ヤーヴ）と称し、各地の首長から貢ぎ物を受けた。西はクワンゴ川、東はルアプラ川（カゼンベ王国）まで勢力を広げ、奴隷・象牙を大西洋岸とインド洋岸の両方に送った。
+    - from: 1850
+      to: 1890
+      text: 西から勢力を広げたチョクウェ人に攻められ、1887年には都を落とされた。ベルリン会議の後、領域はコンゴ自由国とポルトガル領アンゴラに分けられた（1891年の協定）。
+  note: 範囲は貢納国を含むおおよそのもの（uncertain）。
+  source: "https://ja.wikipedia.org/wiki/ルンダ王国"
+
+- id: luba
+  name: ルバ王国
+  short: ルバ
+  color: "#95b8db"
+  kind: 王国
+  rulers:
+    - {name: イルンガ・カバレ, title: ルバ王（ムロプウェ）, from: 1810, to: 1840, note: 王国を最も広げた。在位年は要確認, source: "https://en.wikipedia.org/wiki/Luba_Empire"}
+  periods:
+    - from: 1648
+      to: 1885
+      text: ロマミ川とルアラバ川の間のウペンバ盆地を中心にした王国。王（ムロプウェ）は聖なる王権を持ち、秘密結社（ムブディエ）が王の記憶を伝えた。19世紀前半に最も広がったが、後半には王位争い、スワヒリ＝アラブ商人やムシリの圧迫で衰えた。
+  source: "https://ja.wikipedia.org/wiki/ルバ王国"
+
+- id: kuba
+  name: クバ王国
+  short: クバ
+  color: "#c9a0a0"
+  kind: 王国
+  periods:
+    - from: 1648
+      to: 1899
+      text: サンクル川とカサイ川の間の王国。17世紀初めのシャーム・ア・ンブルが建てたとされる。ラフィア布の織物や木彫の美術で知られる。1899–1900年にコンゴ自由国の軍に都を攻められた。
+  source: "https://en.wikipedia.org/wiki/Kuba_Kingdom"
+
+- id: kazembe
+  name: カゼンベ王国
+  short: カゼンベ
+  color: "#9fd0c4"
+  kind: 王国
+  periods:
+    - from: 1740
+      to: 1898
+      text: 18世紀前半にルンダ王国から東に出た首長カゼンベがルアプラ川の流域に建てた王国。カタンガの銅と塩を支配し、東アフリカ海岸のスワヒリ商人やモザンビークのポルトガル人と交易した。19世紀後半にムシリに東カタンガを奪われ、1899年にイギリス南アフリカ会社に敗れた。
+  source: "https://ja.wikipedia.org/wiki/カゼンベ王国"
+
+- id: yeke
+  name: イェケ王国（ガランガンゼ）
+  short: イェケ（ムシリ）
+  color: "#d8b0c8"
+  kind: 王国
+  rulers:
+    - {name: ムシリ, title: イェケ王, from: 1856, to: 1891, note: ニャムウェジ人の商人。銃と銅・奴隷・象牙の交易で王国を建てた。コンゴ自由国のステアーズ遠征隊に殺された, source: "https://en.wikipedia.org/wiki/Msiri"}
+  periods:
+    - from: 1856
+      to: 1891
+      text: 東アフリカ（タンザニア）のニャムウェジ人の商人ムシリが、カタンガのブンケヤを都に建てた王国。カタンガの銅を東西の海岸に送った。銅山をねらうレオポルド2世とイギリスのローズが争い、1891年にコンゴ自由国の遠征隊がムシリを殺した。
+  source: "https://en.wikipedia.org/wiki/Yeke_Kingdom"
+
+- id: tippu_tip
+  name: ティップ・ティプの勢力圏（スワヒリ＝アラブ商人）
+  short: ティップ・ティプ
+  color: "#bfa6c9"
+  kind: 商人の勢力圏
+  rulers:
+    - {name: ティップ・ティプ, title: スワヒリ＝アラブ商人の首領, from: 1870, to: 1890, note: 1887–90年はコンゴ自由国のスタンリー・フォールズ地区知事。その後ザンジバルに戻った, source: "https://ja.wikipedia.org/wiki/ティップー・ティプ"}
+  periods:
+    - from: 1870
+      to: 1893
+      text: ザンジバルのスルタンのもとの商人ティップ・ティプらが、タンガニーカ湖の西のマニエマ（ニャングウェ・カソンゴ）やスタンリー・フォールズに拠点を置き、象牙と奴隷を求めて銃で勢力を広げた。コンゴ自由国はいったんティップ・ティプを知事に任じたが、1892–94年のコンゴ・アラブ戦争で彼らの勢力を滅ぼした。
+  note: 地域ははっきりしないので uncertain で塗る。ザンジバルのスルタンの宗主権（名目的）は帯で示す。
+  source: "https://en.wikipedia.org/wiki/Congo_Arab_war"
+
+- id: zande
+  name: ザンデ諸王国
+  short: ザンデ
+  color: "#a0c49c"
+  kind: 王国群（スルタン国）
+  periods:
+    - from: 1800
+      to: 1905
+      text: ウエレ川・ムボム川流域にアヴォンガラ家の王たちが建てたザンデ（アザンデ）人の王国群。19世紀後半には北のスーダンの奴隷商人・マフディー派と争い、また結んだ。ムボム川沿いのバンガスー・ラファイ・ゼミオのスルタン国は1890年代にフランスの保護下に、南のウエレはコンゴ自由国に入った。東のマンベトゥ王国も地図ではこの色で塗る。
+  note: 南スーダンの西エクアトリア（グブドゥエの王国など。1905年にイギリスに征服）も同じ色で塗る。範囲はおおよそ（uncertain）。
+  source: "https://en.wikipedia.org/wiki/Zande_people"
+
+- id: dar_al_kuti
+  name: ダール・アル＝クーティ・スルタン国
+  short: ダール・アル＝クーティ
+  color: "#b9d5d4"
+  kind: スルタン国（イスラーム）
+  rulers:
+    - {name: ムハンマド・アッ＝サヌーシー, title: スルタン, from: 1890, to: 1911, note: ラービフと結び、奴隷狩りで栄えた。1897年にフランスと保護条約を結んだが、1911年にフランス軍に殺された, source: "https://en.wikipedia.org/wiki/Muhammad_al-Senoussi"}
+  periods:
+    - from: 1830
+      to: 1911
+      text: ワダイ（チャド）に従うイスラームのスルタン国。中央アフリカ北東部のンデレを都とし、南のバンダ人などの地で奴隷狩りを行って、奴隷を北のワダイ・エジプト方面に送った。
+  note: ワダイの宗主権は帯で示す。1886–90年はラービフの拠点（地図ではラービフの色）。
+  source: "https://en.wikipedia.org/wiki/Dar_al_Kuti"
+
+# ================================================================ ザンベジ川流域・中南部アフリカの内陸
+
+- id: lozi
+  name: ロジ王国（バロツェ）
+  short: ロジ王国
+  color: "#8fc4d4"
+  kind: 王国
+  rulers:
+    - {name: レワニカ, title: リトゥンガ（ロジ王）, from: 1878, to: 1916, note: 1884–85年に一時王位を追われた。1890年にイギリス南アフリカ会社に利権を与え、保護を受けた, source: "https://en.wikipedia.org/wiki/Lewanika"}
+  periods:
+    - from: 1648
+      to: 1839
+      text: ザンベジ川上流の氾濫原の王国。王（リトゥンガ）は洪水の季節に高台の都へ舟で移る儀式（クオンボカ）を行った。周りのトンガ・イラなどから貢ぎ物を受けた。
+    - from: 1864
+      to: 1890
+      text: コロロ人の支配を倒して王国を再興した。レワニカ王は宣教師を受け入れ、ンデベレやポルトガルに対抗するためにイギリスの保護を求めた。
+  note: 1891 年以後はイギリスの保護下（バロツェランド。britain の indirect）。
+  source: "https://ja.wikipedia.org/wiki/バロツェランド"
+
+- id: kololo
+  name: コロロ王国
+  short: コロロ
+  color: "#cfd37e"
+  kind: 王国
+  rulers:
+    - {name: セベトワネ, title: コロロ王, from: 1840, to: 1851, note: リヴィングストンが1851年に会った, source: "https://en.wikipedia.org/wiki/Sebetwane"}
+    - {name: セケレトゥ, title: コロロ王, from: 1851, to: 1863, note: リヴィングストンのアフリカ横断を助けた, source: "https://en.wikipedia.org/wiki/Makololo"}
+  periods:
+    - from: 1840
+      to: 1863
+      text: ムフェカネの混乱の中で南アフリカの高原から北に移ったソト系のコロロ人が、セベトワネのもとでロジ王国を征服して建てた王国。リヴィングストンの探検の拠点となった。1864年にロジ人の反乱で滅んだ。
+  source: "https://en.wikipedia.org/wiki/Makololo"
+
+- id: bemba
+  name: ベンバ王国
+  short: ベンバ
+  color: "#cea1cc"
+  kind: 王国
+  periods:
+    - from: 1750
+      to: 1898
+      text: ザンビア北部の高原の王国。王はチティムクルと称した。19世紀には東アフリカ海岸のスワヒリ商人と象牙・奴隷を取引して強くなった。1898–99年にイギリス南アフリカ会社の支配を受け入れた。
+  source: "https://en.wikipedia.org/wiki/Bemba_people"
+
+- id: maravi
+  name: マラヴィ王国
+  short: マラヴィ
+  color: "#dea0a9"
+  kind: 王国（連合）
+  periods:
+    - from: 1648
+      to: 1799
+      text: ニャサ湖（マラウイ湖）の南西に広がったチェワ人などの王国。カロンガ王を中心に、ウンディ（西）・ルンドゥ（シレ川下流）などの王が並んだ。象牙・鉄をポルトガル人やスワヒリ商人と取引した。18世紀後半に衰えて分裂した。マラウイの国名のもと。
+  note: 範囲はおおよそ（uncertain）。
+  source: "https://ja.wikipedia.org/wiki/マラヴィ王国"
+
+- id: ngoni
+  name: ンゴニ諸王国
+  short: ンゴニ
+  color: "#b3a07a"
+  kind: 王国群
+  rulers:
+    - {name: ムベルワ1世, title: ンゴニ王（ムジンバ）, from: 1857, to: 1891, note: 要確認, source: "https://en.wikipedia.org/wiki/Ngoni_people"}
+    - {name: ムペゼニ, title: ンゴニ王（ザンビア東部）, from: 1857, to: 1900, note: 1898年にイギリス南アフリカ会社に敗れた。要確認, source: "https://en.wikipedia.org/wiki/Mpezeni"}
+  periods:
+    - from: 1850
+      to: 1904
+      text: ムフェカネの中で南アフリカから北上したズワンゲンダバのンゴニ人が、ザンベジ川を越えて（1835）タンザニア南部・マラウイ・ザンビア東部・モザンビークのテテ高原に建てた軍事国家。ズールー式の軍制で周りのチェワ・トゥンブカなどを従えた。1890年代にイギリス・ポルトガルに征服された。
+  note: いくつかの王国（ムベルワ・マセコ・ムペゼニ、タンザニア南部のソンゲアのンジェル・ムショペなど）をまとめて1色で塗る。
+  source: "https://en.wikipedia.org/wiki/Ngoni_people"
+
+- id: mutapa
+  name: ムタパ王国（モノモタパ）
+  short: ムタパ
+  color: "#d6b56e"
+  kind: 王国
+  rulers:
+    - {name: マヴラ2世, title: ムタパ王（ムウェネ・ムタパ）, from: 1629, to: 1652, note: ポルトガルの支援で即位し、臣従した, source: "https://en.wikipedia.org/wiki/Mavura_II_of_Mutapa"}
+    - {name: チオコ・ダムブカ, title: ムタパ王, from: 1887, to: 1917, note: 最後のムタパ王。1917年の反乱で戦死。在位年は要確認, source: "https://ja.wikipedia.org/wiki/モノモタパ王国"}
+  periods:
+    - from: 1648
+      to: 1693
+      text: ジンバブエ高原の北の王国。金と象牙の交易で知られ、1629年からポルトガルに臣従した。ポルトガル人は高原に市（フェイラ）を開き、金を求めた。
+    - from: 1694
+      to: 1902
+      text: ロズウィ王国に高原を奪われ、ザンベジ川の谷（チディマ、現在のモザンビークのテテ州）を本拠とする小さな王国として続いた。20世紀初めにポルトガルに征服された。
+  source: "https://ja.wikipedia.org/wiki/モノモタパ王国"
+
+- id: torwa
+  name: トルワ王国（ブトゥア）
+  short: トルワ
+  color: "#a6c9b4"
+  kind: 王国
+  periods:
+    - from: 1648
+      to: 1683
+      text: ジンバブエ高原の南西の王国。グレート・ジンバブエの後を継ぎ、カミ・ダナンゴンベ（ドロドロ）に石造の都を築いた。1683年ごろチャンガミレ・ドンボに滅ぼされた。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Butua"
+
+- id: rozwi
+  name: ロズウィ王国（チャンガミレ国）
+  short: ロズウィ
+  color: "#c4ae9c"
+  kind: 王国
+  rulers:
+    - {name: チャンガミレ・ドンボ, title: ロズウィ王（チャンガミレ）, from: 1684, to: 1695, note: ポルトガル軍を破り、高原から追い出した。在位年は要確認, source: "https://en.wikipedia.org/wiki/Changamire_Dombo"}
+  periods:
+    - from: 1684
+      to: 1834
+      text: チャンガミレ・ドンボがトルワ王国を倒して建てた王国。1693–95年にポルトガル人を高原から追い出し、ジンバブエ高原の大部分を従えた。ダナンゴンベを都とした。1830年代に北上するンゴニ人・ンデベレ人の攻撃で崩れた。
+  source: "https://en.wikipedia.org/wiki/Rozvi_Empire"
+
+- id: manyika
+  name: マニカ王国
+  short: マニカ
+  color: "#8dc3b6"
+  kind: 王国
+  periods:
+    - from: 1648
+      to: 1890
+      text: ジンバブエとモザンビークの境の高原のショナ系の王国。王はムタサと称した。金の産地で、ポルトガル人の市（マシクエセ）があった。19世紀にはガザ王国に貢納した。1891年の英葡条約で東西に分けられた。
+  source: "https://en.wikipedia.org/wiki/Manyika_people"
+
+- id: teve
+  name: キテヴェ王国
+  short: キテヴェ
+  color: "#cfb4d8"
+  kind: 王国
+  periods:
+    - from: 1648
+      to: 1890
+      text: ソファラの内陸のショナ系の王国（ウテヴェ）。ソファラのポルトガル人から通行料を取り、内陸との交易を管理した。19世紀にはガザ王国に従った。
+  source: "https://en.wikipedia.org/wiki/Kingdom_of_Uteve"
+
+- id: barue
+  name: バルエ王国
+  short: バルエ
+  color: "#cfd5b9"
+  kind: 王国
+  periods:
+    - from: 1648
+      to: 1901
+      text: ムタパ王国から分かれたショナ系の王国。ザンベジ川の南で長く自立を保ち、1902年にポルトガルに征服された。1917年の大反乱（バルエの反乱）の中心となった。
+  source: "https://en.wikipedia.org/wiki/Barue_Kingdom"
+
+- id: gaza
+  name: ガザ王国
+  short: ガザ
+  color: "#c9906e"
+  kind: 王国
+  rulers:
+    - {name: ソシャンガネ, title: ガザ王, from: 1825, to: 1858, note: 在位の始まりは要確認, source: "https://en.wikipedia.org/wiki/Soshangane"}
+    - {name: マウェワ, title: ガザ王, from: 1858, to: 1861, source: "https://en.wikipedia.org/wiki/Gaza_Empire"}
+    - {name: ムジラ, title: ガザ王, from: 1862, to: 1884, note: ポルトガルの支援で兄から王位を奪った, source: "https://en.wikipedia.org/wiki/Mzila"}
+    - {name: グングニャナ, title: ガザ王, from: 1884, to: 1895, note: 1895年にポルトガル軍に捕らえられ、アゾレス諸島に流された, source: "https://en.wikipedia.org/wiki/Gungunhana"}
+  periods:
+    - from: 1830
+      to: 1895
+      text: ズールーのシャカに敗れたンドワンドウェ系のソシャンガネが、モザンビーク南部に建てた軍事国家。ツォンガ・ショピ・ンダウなどを従え、リンポポ川からザンベジ川の南まで勢力を広げた。イギリス・ポルトガルの間で揺れたが、1895年にポルトガルに征服された。
+  source: "https://en.wikipedia.org/wiki/Gaza_Empire"
+
+- id: angoche
+  name: アンゴシェ・スルタン国
+  short: アンゴシェ
+  color: "#7fb8b0"
+  kind: スルタン国（スワヒリ）
+  periods:
+    - from: 1648
+      to: 1909
+      text: モザンビーク北部の海岸のスワヒリ系の港市国家。内陸のマクア人と結び、19世紀には奴隷交易で栄えた。1910年にポルトガルに征服された。
+  source: "https://en.wikipedia.org/wiki/Angoche_Sultanate"
+
+- id: ndebele
+  name: ンデベレ王国（マタベレ）
+  short: ンデベレ
+  color: "#b79ad0"
+  kind: 王国
+  rulers:
+    - {name: ムジリカジ, title: ンデベレ王, from: 1823, to: 1868, note: シャカに背いて北に移った, source: "https://ja.wikipedia.org/wiki/ムジリカジ"}
+    - {name: ロベングラ, title: ンデベレ王, from: 1870, to: 1894, note: 1888年にラッド利権をローズの側に与え、1893年の戦争で敗れて逃れる途中に死んだ, source: "https://en.wikipedia.org/wiki/Lobengula"}
+  periods:
+    - from: 1827
+      to: 1837
+      text: ズールーのシャカに背いたムジリカジが、ムフェカネの中で北に移り、トランスヴァールの高原にソト・ツワナ系の人々を従えて王国を建てた。1837年にボーア人とグリクワ人に敗れ、北に去った。
+    - from: 1840
+      to: 1893
+      text: ジンバブエ南西部のブラワヨを都に王国を建て、ショナ人の地を襲って貢ぎ物を取った。ロベングラ王はローズのイギリス南アフリカ会社に鉱山の利権を与え（ラッド利権）、1893年の戦争で征服された。
+  source: "https://en.wikipedia.org/wiki/Northern_Ndebele_people"
+
+# ================================================================ 南アフリカ
+
+- id: zulu
+  name: ズールー王国
+  short: ズールー
+  color: "#be93ad"
+  kind: 王国
+  rulers:
+    - {name: シャカ, title: ズールー王, from: 1816, to: 1828, note: 異母弟ディンガネらに暗殺された, source: "https://ja.wikipedia.org/wiki/シャカ"}
+    - {name: ディンガネ, title: ズールー王, from: 1828, to: 1840, note: ブラッド・リヴァーの戦いでボーア人に敗れた, source: "https://ja.wikipedia.org/wiki/ディンガネ"}
+    - {name: ムパンデ, title: ズールー王, from: 1840, to: 1872, source: "https://en.wikipedia.org/wiki/Mpande_kaSenzangakhona"}
+    - {name: ケツワヨ, title: ズールー王, from: 1872, to: 1879, note: ズールー戦争に敗れてケープに捕らわれた。1883–84年に一部の王に戻された, source: "https://ja.wikipedia.org/wiki/セテワヨ"}
+    - {name: ディヌズル, title: ズールー王, from: 1884, to: 1887, note: 1887年のイギリスの併合の後、反乱を起こしてセントヘレナ島に流された, source: "https://en.wikipedia.org/wiki/Dinuzulu_kaCetshwayo"}
+  periods:
+    - from: 1816
+      to: 1838
+      text: シャカが年齢別の連隊と短い槍の戦法で軍を改め、周りの首長国を征服して強大な王国を作った。この戦争と人々の移動の連鎖（ムフェカネ）は南部アフリカ全体を揺るがした。
+    - from: 1838
+      to: 1878
+      text: ディンガネはグレート・トレックのボーア人の指導者レティーフを殺したが、ブラッド・リヴァーの戦いで敗れ、トゥゲラ川の南を失った。ムパンデ・ケツワヨの時代はイギリス領ナタールとトランスヴァールの間で王国を保った。
+    - from: 1879
+      to: 1887
+      text: イギリスの最後通牒を拒んでズールー戦争となり、イサンドルワナの戦いで大勝したが、ウルンディで敗れた。王国は13の首長領に分けられて内戦となり、1887年にイギリスに併合された。
+  note: 王家（ズールー王）は南アフリカの伝統的指導者として現在まで続く。
+  source: "https://ja.wikipedia.org/wiki/ズールー王国"
+
+- id: xhosa
+  name: コーサ（ホサ）諸首長国
+  short: コーサ
+  color: "#b9c48e"
+  kind: 首長国群
+  rulers:
+    - {name: サルヒリ, title: ガレカ系の最高首長, from: 1835, to: 1892, note: 牛殺しの後にカイ川の東に追われた, source: "https://en.wikipedia.org/wiki/Sarhili"}
+  periods:
+    - from: 1648
+      to: 1878
+      text: ケープ東部のコーサ人の首長国（ガレカ系・ラルハベ系）と、東のテンブ・ポンドなどの首長国。1779年から100年近く、東に広がるケープ植民地とケープ辺境戦争（コーサ戦争）を戦った。1856–57年には予言を信じて牛を殺した「牛殺し」で大飢饉となり、土地を失った。
+  note: テンブ・ポンド（ムポンド）などの首長国も地図ではこの色で塗る（範囲はおおよそ、uncertain）。
+  source: "https://ja.wikipedia.org/wiki/コサ人"
+
+- id: pedi
+  name: ペディ王国
+  short: ペディ
+  color: "#c0a6d4"
+  kind: 王国
+  rulers:
+    - {name: セクワティ, title: ペディ王, from: 1828, to: 1861, source: "https://en.wikipedia.org/wiki/Sekwati"}
+    - {name: セクフクネ1世, title: ペディ王, from: 1861, to: 1879, note: トランスヴァール・イギリスと戦い、1879年に捕らえられた, source: "https://en.wikipedia.org/wiki/Sekhukhune"}
+  periods:
+    - from: 1750
+      to: 1878
+      text: トランスヴァール東部のマロテン家の北ソト人の王国。ムフェカネで一時崩れたがセクワティが再建し、セクフクネのもとでボーア人に抵抗した。1879年にイギリス軍とスワジ軍に敗れた。
+  source: "https://en.wikipedia.org/wiki/Pedi_people"
+
+- id: tswana
+  name: ツワナ諸首長国
+  short: ツワナ
+  color: "#e2daab"
+  kind: 首長国群
+  rulers:
+    - {name: カーマ3世, title: ングワトの首長, from: 1875, to: 1923, note: キリスト教徒の首長。1895年にロンドンに赴き、ローズの会社の支配を避けてイギリスの保護を保った, source: "https://en.wikipedia.org/wiki/Khama_III"}
+  periods:
+    - from: 1648
+      to: 1884
+      text: カラハリ砂漠の東の縁に並んだツワナ人の首長国（ングワト・クウェナ・ングワケツェ・カトラ・タワナ・ロロン・トラピンなど）。19世紀にはムフェカネ・ボーア人の進出に苦しみ、宣教師（リヴィングストンなど）を受け入れた。
+  note: 地図ではいくつかの首長国をまとめて1色で塗る（範囲はおおよそ、uncertain）。1885 年以後はベチュアナランド保護領（britain の indirect）・イギリス領ベチュアナランド。
+  source: "https://en.wikipedia.org/wiki/Tswana_people"
+
+- id: lesotho
+  name: レソト王国
+  names:
+    - {to: 1867, name: バソト王国, short: バソト, kind: 王国}
+  short: レソト
+  color: "#7fb3d5"
+  kind: 立憲君主国
+  home_iso: [LSO]
+  rulers:
+    - {name: モシェシュ1世, title: バソト王, from: 1822, to: 1870, note: タバ・ボシウの山を拠点に、ムフェカネで散った人々を集めて王国を作った, source: "https://ja.wikipedia.org/wiki/モシェシュ1世"}
+    - {name: モシェシュ2世, title: レソト王, from: 1966, to: 1990, note: 1970年からジョナサン首相に実権を奪われ、1990年に軍政に廃された, source: "https://en.wikipedia.org/wiki/Moshoeshoe_II_of_Lesotho"}
+    - {name: レツィエ3世, title: レソト王, from: 1990, to: 1995, source: "https://en.wikipedia.org/wiki/Letsie_III"}
+    - {name: モシェシュ2世, title: レソト王, from: 1995, to: 1996, note: 復位したが交通事故で死去, source: "https://en.wikipedia.org/wiki/Moshoeshoe_II_of_Lesotho"}
+    - {name: レツィエ3世, title: レソト王, from: 1996, to: 2025, source: "https://en.wikipedia.org/wiki/Letsie_III"}
+  periods:
+    - from: 1824
+      to: 1867
+      text: モシェシュ1世がドラケンスバーグ山脈の西の高地に王国を作り、ズールー・ンデベレやボーア人の攻撃を外交と山の砦でしのいだ。カレドン川の西の肥えた土地をめぐってオレンジ自由国と戦い（1858・1865–68）、多くを失った。
+    - from: 1966
+      to: 2025
+      text: 南アフリカに囲まれた山の王国として独立。実権は首相にあり、ジョナサン首相の独裁（1970–86）、軍政（1986–93）を経て民政に戻った。1998年の政治危機では南アフリカ・ボツワナ軍が介入した。経済は南アフリカへの出稼ぎと水の輸出に頼る。
+  note: 1868–1966 年はイギリスの保護領バストランド（britain の indirect。1871–84 年はケープ植民地の管轄）。独立後の実権は首相（レアブア・ジョナサン 1966–86 など）。
+  source: "https://ja.wikipedia.org/wiki/レソト"
+
+- id: swaziland
+  name: エスワティニ王国
+  names:
+    - {to: 1967, name: スワジ王国, short: スワジ, kind: 王国}
+    - {from: 1968, to: 2017, name: スワジランド王国, short: スワジランド, kind: 王国}
+  short: エスワティニ
+  color: "#cfb7af"
+  kind: 王国
+  home_iso: [SWZ]
+  rulers:
+    - {name: ソブーザ1世, title: スワジ王, from: 1815, to: 1839, note: 在位年は要確認, source: "https://en.wikipedia.org/wiki/Sobhuza_I"}
+    - {name: ムスワティ2世, title: スワジ王, from: 1840, to: 1868, note: 国名のもとになった王, source: "https://en.wikipedia.org/wiki/Mswati_II"}
+    - {name: ムバンゼニ, title: スワジ王, from: 1875, to: 1889, note: ヨーロッパ人に多くの利権を与えた, source: "https://en.wikipedia.org/wiki/Mbandzeni"}
+    - {name: ブヌ（ングワネ5世）, title: スワジ王, from: 1895, to: 1899, source: "https://en.wikipedia.org/wiki/Ngwane_V"}
+    - {name: ソブーザ2世, title: スワジ王, from: 1899, to: 1982, note: 1921年まで祖母ラボツィベニが摂政。1973年に憲法を停止して絶対王政とした, source: "https://ja.wikipedia.org/wiki/ソブーザ2世"}
+    - {name: ムスワティ3世, title: スワジ王, from: 1986, to: 2025, note: 1982–86年は摂政の時代。2018年に国名をエスワティニに改めた, source: "https://ja.wikipedia.org/wiki/ムスワティ3世"}
+  periods:
+    - from: 1750
+      to: 1893
+      text: ドラミニ家の王のもとで、ムフェカネの時代にズールーに対抗して大きくなった王国。ボーア人・イギリス人に土地や鉱山の利権を与え、多くの土地を失った。
+    - from: 1968
+      to: 2025
+      text: 独立後もソブーザ2世・ムスワティ3世の王が強い権力を持ち、政党の活動は禁じられた。アフリカで最後の絶対君主制とされる。
+  note: 1894–1899 年はトランスヴァールの保護下、1902–1968 年はイギリスの保護領（いずれも indirect）。
+  source: "https://ja.wikipedia.org/wiki/エスワティニ"
+
+- id: natalia
+  name: ナタール共和国
+  short: ナタール共和国
+  color: "#e8b27a"
+  kind: 共和国（ボーア人）
+  periods:
+    - from: 1839
+      to: 1842
+      text: グレート・トレックのボーア人が、ブラッド・リヴァーの戦いでズールー軍を破った後、ピーターマリッツバーグを首都に建てた共和国。港のダーバンをめぐってイギリスと争い、1843年にイギリスに併合された。多くのボーア人は内陸のオレンジ川・ヴァール川の北に去った。
+  note: 元首は置かず、議会（フォルクスラート）が治めた。軍の司令官はアンドリース・プレトリウス。
+  source: "https://en.wikipedia.org/wiki/Natalia_Republic"
+
+- id: transvaal
+  name: 南アフリカ共和国（トランスヴァール）
+  names:
+    - {to: 1851, name: トランスヴァールのボーア人共和国, short: トランスヴァール, kind: 共和国（ボーア人）}
+  short: トランスヴァール
+  color: "#d9a65c"
+  kind: 共和国（ボーア人）
+  rulers:
+    - {name: マルティヌス・ヴェッセル・プレトリウス, title: 大統領, from: 1857, to: 1871, note: 1860–64年はオレンジ自由国の大統領を兼ねて職を離れ、その間トランスヴァールは代行・内戦（スフーマン、ファン・レンスブルフらが争う）となった, source: "https://en.wikipedia.org/wiki/Marthinus_Wessel_Pretorius"}
+    - {name: トーマス・フランソワ・ブルヘルス, title: 大統領, from: 1872, to: 1877, source: "https://en.wikipedia.org/wiki/Thomas_François_Burgers"}
+    - {name: ポール・クリューガー, title: 大統領, from: 1883, to: 1902, note: 1881–83年は3人の執政の一人。ボーア戦争中の1900年にヨーロッパに渡った, source: "https://ja.wikipedia.org/wiki/ポール・クリューガー"}
+  periods:
+    - from: 1838
+      to: 1876
+      text: グレート・トレックのボーア人がヴァール川の北に作った共和国。1852年のサンド・リヴァー協定でイギリスに独立を認められ、南アフリカ共和国と名乗った（首都プレトリア）。白人とアフリカ人の平等を認めない憲法を持った。
+    - from: 1881
+      to: 1899
+      text: イギリスの併合（1877）に反抗した第1次ボーア戦争で自治を取り戻した。1886年にウィットウォーターズランドで金が見つかると、外国人（ユイトランダー）が押し寄せ、クリューガー大統領は彼らの政治参加を制限した。ジェームソン侵入事件（1895）でイギリスとの対立が深まった。
+    - from: 1899
+      to: 1902
+      text: 南アフリカ戦争（ボーア戦争）でイギリスと戦った。首都を落とされた後もゲリラ戦を続けたが、焦土作戦と強制収容所の中で1902年に降伏した。
+  note: 地図では 1838–1851 年のポチェフストルーム・リーデンブルフ・ザウトパンスベルフなどのボーア人の共和国もこの色で塗る。
+  source: "https://ja.wikipedia.org/wiki/トランスヴァール共和国"
+
+- id: orange_free_state
+  name: オレンジ自由国
+  short: オレンジ自由国
+  color: "#c6d37e"
+  kind: 共和国（ボーア人）
+  rulers:
+    - {name: ヨシアス・ホフマン, title: 大統領, from: 1854, to: 1855, source: "https://en.wikipedia.org/wiki/Josias_Philip_Hoffman"}
+    - {name: ヤコブス・ボスホフ, title: 大統領, from: 1855, to: 1859, source: "https://en.wikipedia.org/wiki/Jacobus_Nicolaas_Boshoff"}
+    - {name: マルティヌス・ヴェッセル・プレトリウス, title: 大統領, from: 1860, to: 1863, note: トランスヴァール大統領と兼ねた, source: "https://en.wikipedia.org/wiki/Marthinus_Wessel_Pretorius"}
+    - {name: ヨハネス・ブラント, title: 大統領, from: 1864, to: 1888, source: "https://en.wikipedia.org/wiki/Johannes_Brand"}
+    - {name: フランシス・レイツ, title: 大統領, from: 1889, to: 1895, source: "https://en.wikipedia.org/wiki/Francis_William_Reitz"}
+    - {name: マルティヌス・ステイン, title: 大統領, from: 1896, to: 1902, source: "https://en.wikipedia.org/wiki/Martinus_Theunis_Steyn"}
+  periods:
+    - from: 1854
+      to: 1898
+      text: オレンジ川とヴァール川の間にボーア人が作った共和国（首都ブルームフォンテーン）。1854年のブルームフォンテーン協定でイギリスが手を引いて独立した。バソト王国と土地を争い、キンバリーのダイヤモンド産地はイギリスに取られた。
+    - from: 1899
+      to: 1902
+      text: トランスヴァールと同盟して南アフリカ戦争（ボーア戦争）を戦い、1900年にイギリスに併合を宣言された。
+  source: "https://ja.wikipedia.org/wiki/オレンジ自由国"
+
+- id: south_africa
+  name: 南アフリカ共和国
+  names:
+    - {to: 1960, name: 南アフリカ連邦, short: 南アフリカ連邦, kind: 自治領（イギリス連邦）}
+  short: 南アフリカ
+  color: "#e7a76c"
+  kind: 共和国
+  home_iso: [ZAF]
+  rulers:
+    - {name: ルイス・ボータ, title: 首相, from: 1910, to: 1919, source: "https://ja.wikipedia.org/wiki/ルイス・ボータ"}
+    - {name: ヤン・スマッツ, title: 首相, from: 1919, to: 1924, source: "https://ja.wikipedia.org/wiki/ヤン・スマッツ"}
+    - {name: ヘルツォーク, title: 首相, from: 1924, to: 1939, source: "https://ja.wikipedia.org/wiki/ジェームズ・バリー・ミューニック・ヘルツォーク"}
+    - {name: ヤン・スマッツ, title: 首相, from: 1939, to: 1948, source: "https://ja.wikipedia.org/wiki/ヤン・スマッツ"}
+    - {name: ダニエル・マラン, title: 首相, from: 1948, to: 1954, note: 国民党政権を作り、アパルトヘイトを始めた, source: "https://ja.wikipedia.org/wiki/ダニエル・フランソワ・マラン"}
+    - {name: ストレイダム, title: 首相, from: 1954, to: 1958, source: "https://en.wikipedia.org/wiki/J._G._Strijdom"}
+    - {name: フルヴールト, title: 首相, from: 1958, to: 1966, note: 「アパルトヘイトの設計者」。1966年に暗殺された, source: "https://ja.wikipedia.org/wiki/ヘンドリック・フルウールト"}
+    - {name: フォルスター, title: 首相, from: 1966, to: 1978, source: "https://en.wikipedia.org/wiki/B._J._Vorster"}
+    - {name: ピーター・ウィレム・ボータ, title: 首相・大統領, from: 1978, to: 1989, note: 1984年から執行権を持つ大統領, source: "https://ja.wikipedia.org/wiki/ピーター・ウィレム・ボータ"}
+    - {name: デクラーク, title: 大統領, from: 1989, to: 1994, note: アパルトヘイトの撤廃を進め、マンデラとノーベル平和賞を受けた, source: "https://ja.wikipedia.org/wiki/フレデリック・ウィレム・デクラーク"}
+    - {name: ネルソン・マンデラ, title: 大統領, from: 1994, to: 1999, note: 初の全人種参加の選挙で選ばれた黒人の大統領, source: "https://ja.wikipedia.org/wiki/ネルソン・マンデラ"}
+    - {name: タボ・ムベキ, title: 大統領, from: 1999, to: 2008, source: "https://ja.wikipedia.org/wiki/タボ・ムベキ"}
+    - {name: カレマ・モトランテ, title: 大統領, from: 2008, to: 2009, source: "https://ja.wikipedia.org/wiki/カレマ・モトランテ"}
+    - {name: ジェイコブ・ズマ, title: 大統領, from: 2009, to: 2018, source: "https://ja.wikipedia.org/wiki/ジェイコブ・ズマ"}
+    - {name: シリル・ラマポーザ, title: 大統領, from: 2018, to: 2025, source: "https://ja.wikipedia.org/wiki/シリル・ラマポーザ"}
+  periods:
+    - from: 1910
+      to: 1947
+      text: ボーア戦争の後、ケープ・ナタール・トランスヴァール・オレンジ川の4植民地が合わさったイギリスの自治領。ボーア系（アフリカーナー）のボータ・スマッツが国を率い、両大戦でイギリス側に立った。1913年の原住民土地法でアフリカ人の土地所有を限られた地域に押し込めた。1912年にアフリカ民族会議（ANC）の前身ができた。
+    - from: 1948
+      to: 1989
+      text: アフリカーナーの国民党政権が人種隔離政策（アパルトヘイト）を法律で体系化した。人種の登録、居住地の分離、黒人の「ホームランド」への押し込めを進め、ANCを禁止した。シャープビル事件（1960）・ソウェト蜂起（1976）が起こり、国際的な制裁を受けた。1961年にイギリス連邦を離れて共和国になった。南西アフリカ（ナミビア）を統治し続け、アンゴラ内戦に介入した。
+    - from: 1990
+      to: 1994
+      text: デクラーク大統領がANCを合法化してマンデラを釈放し、1991年にアパルトヘイトの基本法を廃止した。1994年に全人種が参加する初の選挙でマンデラが大統領に選ばれた。
+    - from: 1994
+      to: 2025
+      text: 「虹の国」を掲げ、真実和解委員会で過去の人権侵害を明らかにした。ANCの政権が続いたが、失業・格差・汚職が問題となり、2024年の選挙でANCは過半数を失って連立政権となった。BRICSの一員。
+  note: 元首は 1961 年まではイギリス国王（総督）、共和国の初期は名目的な大統領。ここでは実権を持つ首相（1984 年からは大統領）を載せる。ホームランド（トランスカイなど 4 つが「独立」させられた）は地図では描かない。
+  source: "https://ja.wikipedia.org/wiki/南アフリカ共和国"
+
+# ================================================================ ナミビア・ボツワナ
+
+- id: herero
+  name: ヘレロ
+  short: ヘレロ
+  color: "#c2a68c"
+  kind: 首長国群（牧畜民）
+  rulers:
+    - {name: マハレロ, title: ヘレロの最高首長, from: 1861, to: 1890, note: 1885年にドイツと保護条約を結んだ。在位年は要確認, source: "https://en.wikipedia.org/wiki/Maharero"}
+    - {name: サミュエル・マハレロ, title: ヘレロの最高首長, from: 1890, to: 1904, note: 1904年の蜂起を率い、ベチュアナランドに逃れた, source: "https://en.wikipedia.org/wiki/Samuel_Maharero"}
+  periods:
+    - from: 1648
+      to: 1884
+      text: ナミビア中部の牛を飼う牧畜民。19世紀にはナマ系のオーラム（ヨンカー・アフリカーナー）と争い、宣教師・商人を受け入れた。
+  note: 範囲はおおよそ（uncertain）。1885 年以後はドイツ領南西アフリカ。1904–08 年の蜂起とドイツ軍による虐殺で人口の大半を失った。
+  source: "https://en.wikipedia.org/wiki/Herero_people"
+
+- id: nama
+  name: ナマ
+  short: ナマ
+  color: "#e6ddb7"
+  kind: 首長国群（牧畜民）
+  rulers:
+    - {name: ヨンカー・アフリカーナー, title: オーラムの首長, from: 1835, to: 1861, note: ヴィントフックを拠点にナミビア中部を支配した, source: "https://en.wikipedia.org/wiki/Jonker_Afrikaner"}
+    - {name: ヘンドリック・ヴィトボーイ, title: ヴィトボーイ・ナマの首長, from: 1888, to: 1905, note: ドイツに抵抗し、1904年に再び蜂起して戦死した, source: "https://en.wikipedia.org/wiki/Hendrik_Witbooi"}
+  periods:
+    - from: 1648
+      to: 1884
+      text: ナミビア南部・南アフリカ北西部のコイコイ系の牧畜民。19世紀にはケープから銃と馬を持ったオーラム（混血の人々）の集団が移り住み、ヘレロと争った。
+  note: 範囲はおおよそ（uncertain）。南アフリカ側のナマクワランドは 1847 年にケープ植民地に入った。
+  source: "https://en.wikipedia.org/wiki/Nama_people"
+
+- id: namibia
+  name: ナミビア共和国
+  short: ナミビア
+  color: "#8ec3d0"
+  kind: 共和国
+  home_iso: [NAM]
+  rulers:
+    - {name: サム・ヌジョマ, title: 大統領, from: 1990, to: 2005, note: SWAPOの指導者, source: "https://ja.wikipedia.org/wiki/サム・ヌジョマ"}
+    - {name: ヒフィケプニェ・ポハンバ, title: 大統領, from: 2005, to: 2015, source: "https://ja.wikipedia.org/wiki/ヒフィケプニェ・ポハンバ"}
+    - {name: ハーゲ・ゲインゴブ, title: 大統領, from: 2015, to: 2024, note: 在任中に死去, source: "https://ja.wikipedia.org/wiki/ハーゲ・ゲインゴブ"}
+    - {name: ナンゴロ・ンバンバ, title: 大統領, from: 2024, to: 2025, source: "https://en.wikipedia.org/wiki/Nangolo_Mbumba"}
+    - {name: ネトゥンボ・ナンディ＝ンダイトワ, title: 大統領, from: 2025, to: 2025, note: 初の女性大統領, source: "https://en.wikipedia.org/wiki/Netumbo_Nandi-Ndaitwah"}
+  periods:
+    - from: 1990
+      to: 2025
+      text: 国連の監視のもとでの選挙を経て、南西アフリカ人民機構（SWAPO）の政権で独立した。1994年にウォルビス・ベイが南アフリカから返された。ダイヤモンド・ウランなどの鉱業と観光が経済を支える。
+  source: "https://ja.wikipedia.org/wiki/ナミビア"
+
+- id: botswana
+  name: ボツワナ共和国
+  short: ボツワナ
+  color: "#abb9e2"
+  kind: 共和国
+  home_iso: [BWA]
+  rulers:
+    - {name: セレツェ・カーマ, title: 大統領, from: 1966, to: 1980, note: ングワトの首長家の出身, source: "https://ja.wikipedia.org/wiki/セレツェ・カーマ"}
+    - {name: クェット・マシーレ, title: 大統領, from: 1980, to: 1998, source: "https://ja.wikipedia.org/wiki/クェット・マシーレ"}
+    - {name: フェスタス・モハエ, title: 大統領, from: 1998, to: 2008, source: "https://ja.wikipedia.org/wiki/フェスタス・モハエ"}
+    - {name: イアン・カーマ, title: 大統領, from: 2008, to: 2018, source: "https://ja.wikipedia.org/wiki/イアン・カーマ"}
+    - {name: モクウィツィ・マシシ, title: 大統領, from: 2018, to: 2024, source: "https://ja.wikipedia.org/wiki/モクウィツィ・マシシ"}
+    - {name: ドゥマ・ボコ, title: 大統領, from: 2024, to: 2025, note: 独立以来初めての政権交代, source: "https://en.wikipedia.org/wiki/Duma_Boko"}
+  periods:
+    - from: 1966
+      to: 2025
+      text: ベチュアナランド保護領から独立。独立後に見つかったダイヤモンドで急速に成長し、複数政党制の民主主義を保ったアフリカの模範とされる。2024年の選挙で初めて政権が交代した。
+  source: "https://ja.wikipedia.org/wiki/ボツワナ"
+
+# ================================================================ ローデシア・ジンバブエ・ザンビア・マラウイ
+
+- id: rhodesia
+  name: ローデシア
+  names:
+    - {from: 1979, to: 1979, name: ジンバブエ・ローデシア, short: ジンバブエ・ローデシア, kind: 共和国}
+  short: ローデシア
+  color: "#a9a89a"
+  kind: 共和国（白人少数政権。国際的に承認されず）
+  home_iso: [ZWE]
+  rulers:
+    - {name: イアン・スミス, title: 首相, from: 1965, to: 1979, note: 一方的独立宣言を出した, source: "https://ja.wikipedia.org/wiki/イアン・スミス"}
+    - {name: アベル・ムゾレワ, title: 首相, from: 1979, to: 1979, note: 「内部解決」による黒人の首相, source: "https://en.wikipedia.org/wiki/Abel_Muzorewa"}
+  periods:
+    - from: 1965
+      to: 1979
+      text: 南ローデシアの白人入植者の政権が、多数派の黒人への権力移譲を拒んでイギリスから一方的に独立を宣言した（1970年に共和国）。国連の経済制裁を受け、ZANU（ムガベ）・ZAPU（ンコモ）の解放闘争（第2次チムレンガ）が激しくなった。1979年の「内部解決」も認められず、ランカスター・ハウス協定でイギリスの統治に戻った。
+  source: "https://ja.wikipedia.org/wiki/ローデシア"
+
+- id: zimbabwe
+  name: ジンバブエ共和国
+  short: ジンバブエ
+  color: "#d6b85a"
+  kind: 共和国
+  home_iso: [ZWE]
+  rulers:
+    - {name: ロバート・ムガベ, title: 首相・大統領, from: 1980, to: 2017, note: 1987年まで首相（大統領は名目的なバナナ）、その後は執行権を持つ大統領, source: "https://ja.wikipedia.org/wiki/ロバート・ムガベ"}
+    - {name: エマーソン・ムナンガグワ, title: 大統領, from: 2017, to: 2025, source: "https://ja.wikipedia.org/wiki/エマーソン・ムナンガグワ"}
+  periods:
+    - from: 1980
+      to: 1999
+      text: ムガベのZANU政権で独立。1980年代にはマタベレランドでンデベレ人の反対派を弾圧した（グクラフンディ）。1987年にZAPUと合同してZANU-PFの一党優位体制になった。
+    - from: 2000
+      to: 2025
+      text: 白人農場の強制収用をきっかけに経済が崩れ、2008年には超インフレとなった。2017年に軍の介入でムガベが辞任し、ムナンガグワが後を継いだ。
+  source: "https://ja.wikipedia.org/wiki/ジンバブエ"
+
+- id: zambia
+  name: ザンビア共和国
+  short: ザンビア
+  color: "#c9a0d0"
+  kind: 共和国
+  home_iso: [ZMB]
+  rulers:
+    - {name: ケネス・カウンダ, title: 大統領, from: 1964, to: 1991, note: 1972年から一党制, source: "https://ja.wikipedia.org/wiki/ケネス・カウンダ"}
+    - {name: フレデリック・チルバ, title: 大統領, from: 1991, to: 2002, source: "https://ja.wikipedia.org/wiki/フレデリック・チルバ"}
+    - {name: レヴィ・ムワナワサ, title: 大統領, from: 2002, to: 2008, source: "https://ja.wikipedia.org/wiki/レヴィ・ムワナワサ"}
+    - {name: ルピヤ・バンダ, title: 大統領, from: 2008, to: 2011, source: "https://ja.wikipedia.org/wiki/ルピヤ・バンダ"}
+    - {name: マイケル・サタ, title: 大統領, from: 2011, to: 2014, source: "https://ja.wikipedia.org/wiki/マイケル・サタ"}
+    - {name: エドガー・ルング, title: 大統領, from: 2015, to: 2021, source: "https://ja.wikipedia.org/wiki/エドガー・ルング"}
+    - {name: ハカインデ・ヒチレマ, title: 大統領, from: 2021, to: 2025, source: "https://ja.wikipedia.org/wiki/ハカインデ・ヒチレマ"}
+  periods:
+    - from: 1964
+      to: 2025
+      text: 北ローデシアから独立。銅の輸出に頼る内陸国で、カウンダ大統領のもとで南部アフリカの解放運動を支え、ローデシア・南アフリカを避けるため中国の援助でタンザン鉄道（1975）を作った。1991年に複数政党制に戻った。
+  source: "https://ja.wikipedia.org/wiki/ザンビア"
+
+- id: malawi
+  name: マラウイ共和国
+  short: マラウイ
+  color: "#d48c8c"
+  kind: 共和国
+  home_iso: [MWI]
+  rulers:
+    - {name: ヘイスティングズ・カムズ・バンダ, title: 首相・大統領, from: 1964, to: 1994, note: 1971年から終身大統領, source: "https://ja.wikipedia.org/wiki/ヘイスティングズ・カムズ・バンダ"}
+    - {name: バキリ・ムルジ, title: 大統領, from: 1994, to: 2004, source: "https://ja.wikipedia.org/wiki/バキリ・ムルジ"}
+    - {name: ビング・ワ・ムタリカ, title: 大統領, from: 2004, to: 2012, source: "https://ja.wikipedia.org/wiki/ビング・ワ・ムタリカ"}
+    - {name: ジョイス・バンダ, title: 大統領, from: 2012, to: 2014, source: "https://ja.wikipedia.org/wiki/ジョイス・バンダ"}
+    - {name: ピーター・ムタリカ, title: 大統領, from: 2014, to: 2020, source: "https://ja.wikipedia.org/wiki/ピーター・ムタリカ"}
+    - {name: ラザルス・チャクウェラ, title: 大統領, from: 2020, to: 2025, source: "https://ja.wikipedia.org/wiki/ラザルス・チャクウェラ"}
+    - {name: ピーター・ムタリカ, title: 大統領, from: 2025, to: 2025, note: 9月の選挙で返り咲いた, source: "https://ja.wikipedia.org/wiki/ピーター・ムタリカ"}
+  periods:
+    - from: 1964
+      to: 2025
+      text: ニヤサランドから独立。バンダ大統領は一党制の独裁を敷き、アパルトヘイトの南アフリカと国交を持った。1994年に複数政党制の選挙で政権が代わった。
+  source: "https://ja.wikipedia.org/wiki/マラウイ"
+
+# ================================================================ モザンビーク・アンゴラ
+
+- id: mozambique
+  name: モザンビーク共和国
+  names:
+    - {to: 1989, name: モザンビーク人民共和国, short: モザンビーク, kind: 社会主義共和国}
+  short: モザンビーク
+  color: "#c2d68a"
+  kind: 共和国
+  home_iso: [MOZ]
+  rulers:
+    - {name: サモラ・マシェル, title: 大統領, from: 1975, to: 1986, note: 飛行機事故で死去, source: "https://ja.wikipedia.org/wiki/サモラ・マシェル"}
+    - {name: ジョアキン・シサノ, title: 大統領, from: 1986, to: 2005, source: "https://ja.wikipedia.org/wiki/ジョアキン・シサノ"}
+    - {name: アルマンド・ゲブーザ, title: 大統領, from: 2005, to: 2015, source: "https://ja.wikipedia.org/wiki/アルマンド・ゲブーザ"}
+    - {name: フィリペ・ニュシ, title: 大統領, from: 2015, to: 2025, source: "https://ja.wikipedia.org/wiki/フィリペ・ニュシ"}
+    - {name: ダニエル・チャポ, title: 大統領, from: 2025, to: 2025, source: "https://en.wikipedia.org/wiki/Daniel_Chapo"}
+  periods:
+    - from: 1975
+      to: 1992
+      text: 10年の独立戦争の後、モザンビーク解放戦線（FRELIMO）の社会主義政権で独立した。ローデシア・南アフリカが支援するモザンビーク民族抵抗運動（RENAMO）との内戦で約100万人が死んだ。
+    - from: 1992
+      to: 2025
+      text: ローマ和平協定（1992）で内戦が終わり、複数政党制となった（国連 PKO に日本の自衛隊も参加）。1995年にイギリス連邦に加わった。2017年から北部カーボ・デルガード州でイスラーム過激派の武装蜂起が続く。
+  source: "https://ja.wikipedia.org/wiki/モザンビーク"
+
+- id: angola
+  name: アンゴラ共和国
+  names:
+    - {to: 1991, name: アンゴラ人民共和国, short: アンゴラ, kind: 社会主義共和国}
+  short: アンゴラ
+  color: "#e08a7a"
+  kind: 共和国
+  home_iso: [AGO]
+  rulers:
+    - {name: アゴスティニョ・ネト, title: 大統領, from: 1975, to: 1979, note: MPLAの指導者, source: "https://ja.wikipedia.org/wiki/アゴスティニョ・ネト"}
+    - {name: ジョゼ・エドゥアルド・ドス・サントス, title: 大統領, from: 1979, to: 2017, source: "https://ja.wikipedia.org/wiki/ジョゼ・エドゥアルド・ドス・サントス"}
+    - {name: ジョアン・ロウレンソ, title: 大統領, from: 2017, to: 2025, source: "https://ja.wikipedia.org/wiki/ジョアン・ロウレンソ"}
+  periods:
+    - from: 1975
+      to: 1991
+      text: アンゴラ解放人民運動（MPLA）の社会主義政権で独立したが、アメリカ・南アフリカ・ザイールが支援するUNITA・FNLAとの内戦になった。ソ連とキューバ軍（最大5万人）が政府を支え、冷戦の代理戦争となった。1988年のニューヨーク協定でキューバ軍と南アフリカ軍の撤退が決まった。
+    - from: 1992
+      to: 2002
+      text: ビセッセ合意（1991）の後の選挙の結果をUNITAが拒み、内戦が再開した。2002年にUNITAの指導者サヴィンビが戦死して内戦が終わった。
+    - from: 2002
+      to: 2025
+      text: 石油の輸出で経済が大きく伸びたが、ドス・サントス一族などへの富の集中と汚職が問題となった。
+  source: "https://ja.wikipedia.org/wiki/アンゴラ"
+
+- id: unita
+  name: アンゴラ全面独立民族同盟（UNITA）
+  short: UNITA
+  color: "#9bbf7a"
+  kind: 反政府勢力
+  rulers:
+    - {name: ジョナス・サヴィンビ, title: 議長, from: 1966, to: 2002, note: 2002年2月に政府軍との戦闘で死んだ, source: "https://ja.wikipedia.org/wiki/ジョナス・サヴィンビ"}
+  periods:
+    - from: 1975
+      to: 2002
+      text: オヴィンブンドゥ人を基盤とする独立運動組織。独立後はMPLA政府と内戦を戦い、南アフリカ・アメリカの支援を受けて南東部のジャンバを本拠とした。冷戦後はダイヤモンドの密輸で戦いを続けた。2002年の停戦の後は政党となった。
+  note: 地図では年末に UNITA が押さえていた主な地域を uncertain で塗る（ゲリラ戦の地域は描かない）。
+  source: "https://ja.wikipedia.org/wiki/アンゴラ全面独立民族同盟"
+
+- id: fnla
+  name: アンゴラ民族解放戦線（FNLA）
+  short: FNLA
+  color: "#d9c08a"
+  kind: 反政府勢力
+  rulers:
+    - {name: ホールデン・ロベルト, title: 指導者, from: 1962, to: 1976, source: "https://en.wikipedia.org/wiki/Holden_Roberto"}
+  periods:
+    - from: 1975
+      to: 1975
+      text: バコンゴ人を基盤とする独立運動組織。ザイールのモブツが支援した。独立の時に北部を押さえて首都ルアンダに迫ったが、キューバ軍の支援を受けたMPLAに敗れた（キファンゴンドの戦い）。
+  source: "https://en.wikipedia.org/wiki/National_Front_for_the_Liberation_of_Angola"
+
+# ================================================================ コンゴ（キンシャサ）
+
+- id: congo_free_state
+  name: コンゴ自由国
+  names:
+    - {to: 1884, name: コンゴ国際協会, short: コンゴ国際協会, kind: 協会（レオポルド2世の私的な組織）}
+  short: コンゴ自由国
+  color: "#838ece"
+  kind: 国王の私有地（レオポルド2世）
+  rulers:
+    - {name: レオポルド2世, title: コンゴ自由国の元首, from: 1885, to: 1908, note: ベルギー国王。コンゴを一度も訪れなかった, source: "https://ja.wikipedia.org/wiki/レオポルド2世_(ベルギー王)"}
+  periods:
+    - from: 1885
+      to: 1908
+      text: ベルギー国王レオポルド2世が、スタンリーの探検と首長たちとの条約をもとに、ベルリン会議で各国に認めさせた私有の国家。公安軍がスワヒリ＝アラブ商人やムシリを滅ぼして領域を広げた。ゴム・象牙の取り立てのため強制労働をしいて、割り当てを果たせない住民の手を切り落とすなどの残虐な行為が行われ、人口が大きく減った。イギリスの領事ケースメントの報告（1904）やモレルらの運動で国際的に批判され、1908年にベルギー政府に併合された。
+  source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+
+- id: drc
+  name: コンゴ民主共和国
+  names:
+    - {to: 1963, name: コンゴ共和国（レオポルドヴィル）, short: コンゴ, kind: 共和国}
+    - {from: 1971, to: 1996, name: ザイール共和国, short: ザイール, kind: 共和国（一党制）}
+  short: コンゴ民主共和国
+  color: "#8ab8e0"
+  kind: 共和国
+  home_iso: [COD]
+  rulers:
+    - {name: ジョゼフ・カサヴブ, title: 大統領, from: 1960, to: 1965, note: 首相のルムンバ（1960）と対立した, source: "https://ja.wikipedia.org/wiki/ジョゼフ・カサヴブ"}
+    - {name: モブツ・セセ・セコ, title: 大統領, from: 1965, to: 1997, note: クーデタで権力を握り、長期の独裁を行った, source: "https://ja.wikipedia.org/wiki/モブツ・セセ・セコ"}
+    - {name: ローラン・カビラ, title: 大統領, from: 1997, to: 2001, note: 暗殺された, source: "https://ja.wikipedia.org/wiki/ローラン・カビラ"}
+    - {name: ジョゼフ・カビラ, title: 大統領, from: 2001, to: 2019, source: "https://ja.wikipedia.org/wiki/ジョゼフ・カビラ"}
+    - {name: フェリックス・チセケディ, title: 大統領, from: 2019, to: 2025, source: "https://ja.wikipedia.org/wiki/フェリックス・チセケディ"}
+  periods:
+    - from: 1960
+      to: 1965
+      text: ベルギーからの独立直後に軍の反乱、カタンガ・南カサイの分離が起こり、国連軍が派遣された（コンゴ動乱）。首相ルムンバは解任されてカタンガで殺され、国連事務総長ハマーショルドも調停の途中に事故死した。
+    - from: 1965
+      to: 1997
+      text: クーデタで権力を握ったモブツが一党制の独裁を行い、1971年に国名をザイールとした。冷戦の中でアメリカなど西側の支援を受け、鉱山の富は一族と側近に集まった。
+    - from: 1996
+      to: 2003
+      text: ルワンダ虐殺の後の難民と武装勢力の流入から第一次コンゴ戦争となり、カビラがモブツを倒した。1998年の第二次コンゴ戦争では周りの9か国が介入し（「アフリカの世界大戦」）、数百万人が戦争と飢え・病気で死んだとされる。
+    - from: 2003
+      to: 2025
+      text: 和平合意で暫定政府ができ、2006年に選挙が行われた。東部では武装勢力の活動が続き、2012年と2022年からはルワンダが支援するM23が攻勢をかけ、2025年にはゴマ・ブカヴを落とした。
+  source: "https://ja.wikipedia.org/wiki/コンゴ民主共和国"
+
+- id: katanga
+  name: カタンガ国
+  short: カタンガ
+  color: "#d6a07a"
+  kind: 分離国家（国際的に承認されず）
+  rulers:
+    - {name: モイーズ・チョンベ, title: 大統領, from: 1960, to: 1963, source: "https://ja.wikipedia.org/wiki/モイーズ・チョンベ"}
+  periods:
+    - from: 1960
+      to: 1962
+      text: 独立直後のコンゴから、銅山の豊かなカタンガ州がチョンベのもとで分離独立を宣言した。ベルギーの鉱山会社と傭兵が支えた。国連軍の作戦で1963年1月に分離が終わった。
+  source: "https://ja.wikipedia.org/wiki/カタンガ国"
+
+- id: south_kasai
+  name: 南カサイ鉱山国
+  short: 南カサイ
+  color: "#c8b07a"
+  kind: 分離国家（国際的に承認されず）
+  rulers:
+    - {name: アルベール・カロンジ, title: 大統領・王（ムロプウェ）, from: 1960, to: 1961, note: 1961年に王を名乗った, source: "https://en.wikipedia.org/wiki/Albert_Kalonji"}
+  periods:
+    - from: 1960
+      to: 1961
+      text: ダイヤモンドの産地の南カサイでルバ人のカロンジが分離を宣言した。1962年に中央政府に再統合された。
+  source: "https://en.wikipedia.org/wiki/South_Kasai"
+
+- id: stanleyville
+  name: コンゴ自由共和国（スタンリーヴィル政府）
+  short: スタンリーヴィル政府
+  color: "#c08aa8"
+  kind: 対立政府
+  rulers:
+    - {name: アントワーヌ・ギゼンガ, title: 首相（政府の首班）, from: 1960, to: 1961, source: "https://en.wikipedia.org/wiki/Antoine_Gizenga"}
+  periods:
+    - from: 1960
+      to: 1961
+      text: ルムンバの解任・逮捕の後、ルムンバ派のギゼンガがスタンリーヴィル（キサンガニ）に立てた政府。東部・北東部を押さえ、ソ連などが承認した。1961年8月にアドゥラの中央政府に合流した。
+  source: "https://en.wikipedia.org/wiki/Free_Republic_of_the_Congo"
+
+- id: simba
+  name: コンゴ人民共和国（シンバの反乱）
+  short: シンバ反乱軍
+  color: "#c48aa0"
+  kind: 反政府勢力
+  rulers:
+    - {name: クリストフ・グベニエ, title: 大統領, from: 1964, to: 1964, source: "https://en.wikipedia.org/wiki/Christophe_Gbenye"}
+  periods:
+    - from: 1964
+      to: 1964
+      text: ルムンバ派の反乱軍（シンバ）が東部で蜂起し、1964年8月にスタンリーヴィルを落として「コンゴ人民共和国」を宣言した。11月にベルギー・アメリカの空挺作戦（ドラゴン・ルージュ）でスタンリーヴィルが奪回され、1965年に政府軍と白人傭兵が北東部を取り戻した。
+  note: 地図では1964年末に反乱軍の地域が残ったウエレ・イトゥリをこの色で塗る（uncertain）。
+  source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+
+- id: afdl
+  name: コンゴ・ザイール解放民主勢力連合（AFDL）
+  short: AFDL
+  color: "#9cc07a"
+  kind: 反政府勢力
+  rulers:
+    - {name: ローラン・カビラ, title: 報道官・指導者, from: 1996, to: 1997, source: "https://ja.wikipedia.org/wiki/ローラン・カビラ"}
+  periods:
+    - from: 1996
+      to: 1996
+      text: 第一次コンゴ戦争で、ルワンダ・ウガンダの支援を受けたカビラの反政府勢力。1996年10–12月にウヴィラ・ブカヴ・ゴマ・ブテンボ・ブニアを落として南北キヴとイトゥリを押さえ、1997年5月にキンシャサに入ってモブツを追放した。
+  note: 地図では1996年末の支配地（南北キヴ・イトゥリ）をこの色で塗る（uncertain）。1997年からはコンゴ民主共和国。
+  source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
+
+- id: rcd
+  name: コンゴ民主連合（RCD）
+  short: RCD
+  color: "#a8c87a"
+  kind: 反政府勢力
+  periods:
+    - from: 1998
+      to: 2002
+      text: 第二次コンゴ戦争で、ルワンダ・ウガンダの支援を受けて東部を押さえた反政府勢力。1999年にルワンダ系（RCD-ゴマ）とウガンダ系（RCD-解放運動など）に分裂した。2003年の暫定政府に加わった。
+  note: 地図では RCD の各派の支配地をまとめてこの色で塗る（uncertain）。ルワンダ軍・ウガンダ軍が駐留した。
+  source: "https://en.wikipedia.org/wiki/Rally_for_Congolese_Democracy"
+
+- id: mlc
+  name: コンゴ解放運動（MLC）
+  short: MLC
+  color: "#b8a0d8"
+  kind: 反政府勢力
+  rulers:
+    - {name: ジャン＝ピエール・ベンバ, title: 議長, from: 1998, to: 2003, source: "https://ja.wikipedia.org/wiki/ジャン＝ピエール・ベンバ"}
+  periods:
+    - from: 1998
+      to: 2002
+      text: 第二次コンゴ戦争で、ウガンダの支援を受けて北部の赤道州を押さえた反政府勢力。2003年の暫定政府でベンバは副大統領となった。
+  note: 地図ではウガンダ軍の占領地とイトゥリ・ウエレの勢力もこの色にまとめる（uncertain）。
+  source: "https://en.wikipedia.org/wiki/Movement_for_the_Liberation_of_the_Congo"
+
+- id: m23
+  name: M23（コンゴ川同盟）
+  short: M23
+  color: "#d0907a"
+  kind: 反政府勢力
+  periods:
+    - from: 2025
+      to: 2025
+      text: ツチ系の兵士が中心の反政府勢力「3月23日運動」。2012年にゴマを一時占領した。2022年から再び攻勢をかけ、2025年1–2月にルワンダ軍の支援でゴマ・ブカヴを落とし、南北キヴの中心部を治めた。
+  source: "https://en.wikipedia.org/wiki/March_23_Movement"
+
+# ================================================================ フランス領赤道アフリカの後
+
+- id: congo_brazzaville
+  name: コンゴ共和国
+  names:
+    - {from: 1969, to: 1991, name: コンゴ人民共和国, short: コンゴ, kind: 社会主義共和国}
+  short: コンゴ
+  color: "#c9c8a6"
+  kind: 共和国
+  home_iso: [COG]
+  rulers:
+    - {name: フュルベール・ユールー, title: 大統領, from: 1960, to: 1963, source: "https://en.wikipedia.org/wiki/Fulbert_Youlou"}
+    - {name: アルフォンス・マサンバ＝デバ, title: 大統領, from: 1963, to: 1968, source: "https://en.wikipedia.org/wiki/Alphonse_Massamba-Débat"}
+    - {name: マリアン・ングアビ, title: 大統領, from: 1968, to: 1977, note: 暗殺された, source: "https://en.wikipedia.org/wiki/Marien_Ngouabi"}
+    - {name: ヨアキム・ヨンビ＝オパンゴ, title: 大統領, from: 1977, to: 1979, source: "https://en.wikipedia.org/wiki/Joachim_Yhombi-Opango"}
+    - {name: ドニ・サス＝ンゲソ, title: 大統領, from: 1979, to: 1992, source: "https://ja.wikipedia.org/wiki/ドニ・サス＝ンゲソ"}
+    - {name: パスカル・リスバ, title: 大統領, from: 1992, to: 1997, source: "https://en.wikipedia.org/wiki/Pascal_Lissouba"}
+    - {name: ドニ・サス＝ンゲソ, title: 大統領, from: 1997, to: 2025, note: 1997年の内戦で政権に返り咲いた, source: "https://ja.wikipedia.org/wiki/ドニ・サス＝ンゲソ"}
+  periods:
+    - from: 1960
+      to: 2025
+      text: フランスから独立。1969年からマルクス・レーニン主義を掲げる一党制のコンゴ人民共和国となった。1991年に複数政党制に戻ったが、1993–94年・1997年に内戦が起こり、サス＝ンゲソが政権に戻った。石油が経済の柱。
+  source: "https://ja.wikipedia.org/wiki/コンゴ共和国"
+
+- id: gabon
+  name: ガボン共和国
+  short: ガボン
+  color: "#7fc4a8"
+  kind: 共和国
+  home_iso: [GAB]
+  rulers:
+    - {name: レオン・ムバ, title: 大統領, from: 1960, to: 1967, note: 1964年のクーデタはフランス軍の介入で失敗した, source: "https://en.wikipedia.org/wiki/Léon_M'ba"}
+    - {name: オマール・ボンゴ, title: 大統領, from: 1967, to: 2009, source: "https://ja.wikipedia.org/wiki/オマール・ボンゴ"}
+    - {name: アリ・ボンゴ, title: 大統領, from: 2009, to: 2023, note: クーデタで退けられた, source: "https://ja.wikipedia.org/wiki/アリ・ボンゴ・オンディンバ"}
+    - {name: ブリス・オリギ・ンゲマ, title: 大統領, from: 2023, to: 2025, note: 2025年4月の選挙で大統領に選ばれた, source: "https://en.wikipedia.org/wiki/Brice_Oligui_Nguema"}
+  periods:
+    - from: 1960
+      to: 2025
+      text: フランスから独立。オマール・ボンゴの40年以上の長期政権のもとで、石油・マンガン・木材の輸出で比較的豊かになり、フランスとの深い結びつき（「フランサフリック」）を保った。2023年のクーデタでボンゴ家の支配が終わった。
+  source: "https://ja.wikipedia.org/wiki/ガボン"
+
+- id: central_african_republic
+  name: 中央アフリカ共和国
+  names:
+    - {from: 1976, to: 1979, name: 中央アフリカ帝国, short: 中央アフリカ帝国, kind: 帝国}
+  short: 中央アフリカ
+  color: "#e0c07a"
+  kind: 共和国
+  home_iso: [CAF]
+  rulers:
+    - {name: ダヴィド・ダッコ, title: 大統領, from: 1960, to: 1966, source: "https://en.wikipedia.org/wiki/David_Dacko"}
+    - {name: ジャン＝ベデル・ボカサ, title: 大統領・皇帝, from: 1966, to: 1979, note: 1977年に皇帝として戴冠した。フランス軍の介入で退けられた, source: "https://ja.wikipedia.org/wiki/ジャン＝ベデル・ボカサ"}
+    - {name: ダヴィド・ダッコ, title: 大統領, from: 1979, to: 1981, source: "https://en.wikipedia.org/wiki/David_Dacko"}
+    - {name: アンドレ・コリンバ, title: 大統領, from: 1981, to: 1993, source: "https://en.wikipedia.org/wiki/André_Kolingba"}
+    - {name: アンジュ＝フェリクス・パタセ, title: 大統領, from: 1993, to: 2003, source: "https://en.wikipedia.org/wiki/Ange-Félix_Patassé"}
+    - {name: フランソワ・ボジゼ, title: 大統領, from: 2003, to: 2013, source: "https://ja.wikipedia.org/wiki/フランソワ・ボジゼ"}
+    - {name: ミシェル・ジョトディア, title: 大統領, from: 2013, to: 2014, note: セレカの指導者, source: "https://en.wikipedia.org/wiki/Michel_Djotodia"}
+    - {name: カトリーヌ・サンバ＝パンザ, title: 暫定大統領, from: 2014, to: 2016, source: "https://en.wikipedia.org/wiki/Catherine_Samba-Panza"}
+    - {name: フォスタン＝アルシャンジュ・トゥアデラ, title: 大統領, from: 2016, to: 2025, source: "https://ja.wikipedia.org/wiki/フォスタン＝アルシャンジュ・トゥアデラ"}
+  periods:
+    - from: 1960
+      to: 2012
+      text: ウバンギ＝シャリから独立。ボカサの独裁と「中央アフリカ帝国」（1976–79）の後も、クーデタと反乱がくり返された。
+    - from: 2013
+      to: 2025
+      text: 北東部のイスラーム教徒の多い反政府連合セレカが首都を落とし、キリスト教徒の自警団アンチ・バラカとの宗派間の暴力が広がった。国連PKOが派遣され、2018年からはロシアの民間軍事会社ワグネルが政府を支えた。
+  source: "https://ja.wikipedia.org/wiki/中央アフリカ共和国"
+
+- id: seleka
+  name: 旧セレカ系武装勢力
+  short: 旧セレカ
+  color: "#b8a888"
+  kind: 武装勢力
+  periods:
+    - from: 2014
+      to: 2020
+      text: 2013年に政権を握ったセレカが解散した後、その流れをくむ武装勢力（FPRC・UPCなど）が北東部の町と鉱山を押さえた。2020年末に他の勢力と「変革のための愛国者連合（CPC）」を結んで首都に迫ったが、政府軍とその同盟軍に押し返された。
+  note: 地図では北東部を uncertain で塗る。
+  source: "https://en.wikipedia.org/wiki/Séléka"
+
+# ================================================================ マダガスカル
+
+- id: merina
+  name: メリナ王国
+  short: メリナ
+  color: "#d89aa8"
+  kind: 王国
+  rulers:
+    - {name: アンドリアナンプイニメリナ, title: メリナ王, from: 1787, to: 1810, note: 4つに分かれていたイメリナを統一した, source: "https://ja.wikipedia.org/wiki/アンドリアナンプイニメリナ"}
+    - {name: ラダマ1世, title: メリナ王, from: 1810, to: 1828, note: イギリスと結んで島の大部分を征服し、「マダガスカル王」と認められた, source: "https://ja.wikipedia.org/wiki/ラダマ1世"}
+    - {name: ラナヴァルナ1世, title: メリナ女王, from: 1828, to: 1861, note: キリスト教を禁じ、ヨーロッパ人を退けた, source: "https://ja.wikipedia.org/wiki/ラナヴァルナ1世"}
+    - {name: ラダマ2世, title: メリナ王, from: 1861, to: 1863, note: 暗殺された, source: "https://ja.wikipedia.org/wiki/ラダマ2世"}
+    - {name: ラソヘリナ, title: メリナ女王, from: 1863, to: 1868, source: "https://ja.wikipedia.org/wiki/ラソヘリナ"}
+    - {name: ラナヴァルナ2世, title: メリナ女王, from: 1868, to: 1883, note: キリスト教（プロテスタント）に改宗し、国教とした, source: "https://ja.wikipedia.org/wiki/ラナヴァルナ2世"}
+    - {name: ラナヴァルナ3世, title: メリナ女王, from: 1883, to: 1897, note: フランスに王位を廃されてアルジェに流された, source: "https://ja.wikipedia.org/wiki/ラナヴァルナ3世"}
+  periods:
+    - from: 1648
+      to: 1786
+      text: 中央高地のメリナ人の王国。水田の稲作で栄えた。1710年ごろから4つの王国に分かれて争った。
+    - from: 1787
+      to: 1860
+      text: アンドリアナンプイニメリナがイメリナを統一し、ラダマ1世はイギリスの支援（奴隷輸出の禁止と引きかえの武器・訓練）で島の大部分を征服した。宣教師がマダガスカル語のラテン文字表記と学校を広めた。ラナヴァルナ1世はキリスト教徒を迫害し、ヨーロッパ人を追った。
+    - from: 1861
+      to: 1897
+      text: 1864年から首相ライニライアリヴニが女王と結婚して実権を握り、近代化とキリスト教化を進めた。フランスとの2度の戦争（1883–85・1894–95）に敗れ、1895年に保護国、1896年に植民地とされ、1897年に王制が廃された。
+  note: 範囲は年末の実効支配のおおよそ（征服地の一部は uncertain）。1864–95 年の実権者は首相ライニライアリヴニ。
+  source: "https://ja.wikipedia.org/wiki/メリナ王国"
+
+- id: menabe
+  name: メナベ王国（サカラヴァ）
+  short: メナベ
+  color: "#88c8ac"
+  kind: 王国
+  periods:
+    - from: 1660
+      to: 1899
+      text: 西海岸のサカラヴァ人の王国。17世紀後半にマロセラナ王家のアンドリアンダヒフォツィが建て、牛の牧畜と奴隷・武器の交易で強くなった。18世紀には島の西半分を支配した。19世紀にはメリナに一部を征服されながらも自立を保ち、1890年代末にフランスに征服された。
+  source: "https://en.wikipedia.org/wiki/Menabe"
+
+- id: boina
+  name: ボイナ王国（サカラヴァ）
+  short: ボイナ
+  color: "#c0d0a0"
+  kind: 王国
+  periods:
+    - from: 1700
+      to: 1823
+      text: メナベから分かれたサカラヴァの王家が北西部に建てた王国。港町マハジャンガはアラブ・インド系の商人が集まり、インド洋交易で栄えた。1824年にメリナのラダマ1世に都を落とされた。
+  source: "https://en.wikipedia.org/wiki/Boina_Kingdom"
+
+- id: betsimisaraka
+  name: ベツィミサラカ連合
+  short: ベツィミサラカ
+  color: "#a8c0d8"
+  kind: 首長国の連合
+  rulers:
+    - {name: ラツィミラフ, title: 連合の王, from: 1712, to: 1750, note: イギリス人の海賊の子とされる, source: "https://en.wikipedia.org/wiki/Ratsimilaho"}
+  periods:
+    - from: 1712
+      to: 1790
+      text: 東海岸の首長たちが、海賊と現地人の混血のラツィミラフのもとで結んだ連合。フランス人と奴隷・米を取引した。ラツィミラフの死後に分裂し、1817年からメリナに征服された。
+  source: "https://en.wikipedia.org/wiki/Betsimisaraka_people"
+
+- id: madagascar
+  name: マダガスカル共和国
+  names:
+    - {from: 1975, to: 1992, name: マダガスカル民主共和国, short: マダガスカル, kind: 社会主義共和国}
+  short: マダガスカル
+  color: "#e3b58f"
+  kind: 共和国
+  home_iso: [MDG]
+  rulers:
+    - {name: フィリベール・ツィラナナ, title: 大統領, from: 1960, to: 1972, source: "https://ja.wikipedia.org/wiki/フィリベール・ツィラナナ"}
+    - {name: ガブリエル・ラマナンツォア, title: 国家元首, from: 1972, to: 1975, source: "https://en.wikipedia.org/wiki/Gabriel_Ramanantsoa"}
+    - {name: ディディエ・ラツィラカ, title: 大統領, from: 1975, to: 1993, note: 社会主義の「赤い本」を掲げた, source: "https://ja.wikipedia.org/wiki/ディディエ・ラツィラカ"}
+    - {name: アルベール・ザフィ, title: 大統領, from: 1993, to: 1996, source: "https://en.wikipedia.org/wiki/Albert_Zafy"}
+    - {name: ディディエ・ラツィラカ, title: 大統領, from: 1997, to: 2002, source: "https://ja.wikipedia.org/wiki/ディディエ・ラツィラカ"}
+    - {name: マーク・ラヴァルマナナ, title: 大統領, from: 2002, to: 2009, source: "https://ja.wikipedia.org/wiki/マーク・ラヴァルマナナ"}
+    - {name: アンドリー・ラジョエリナ, title: 暫定政権の大統領, from: 2009, to: 2014, note: 軍の支援で政権を奪った, source: "https://ja.wikipedia.org/wiki/アンドリー・ラジョエリナ"}
+    - {name: ヘリー・ラジャオナリマンピアニナ, title: 大統領, from: 2014, to: 2018, source: "https://en.wikipedia.org/wiki/Hery_Rajaonarimampianina"}
+    - {name: アンドリー・ラジョエリナ, title: 大統領, from: 2019, to: 2025, note: 若者の抗議運動と軍の離反で国外に逃れ、罷免された, source: "https://ja.wikipedia.org/wiki/アンドリー・ラジョエリナ"}
+    - {name: ミカエル・ランドリアニリナ, title: 大統領, from: 2025, to: 2025, note: 10月に軍の部隊を率いて権力を握った, source: "https://en.wikipedia.org/wiki/Michael_Randrianirina"}
+  periods:
+    - from: 1960
+      to: 2025
+      text: フランスから独立。1972年の反仏の運動の後、ラツィラカの社会主義政権となった。1990年代から民主化したが、2002年・2009年・2025年に政変がくり返された。
+  source: "https://ja.wikipedia.org/wiki/マダガスカル"
+
+# ================================================================ コモロ・マスカリン諸島・セーシェル
+
+- id: anjouan
+  name: アンジュアン・スルタン国
+  names:
+    - {from: 1997, name: アンジュアン（分離を宣言した自治政府）, short: アンジュアン, kind: 分離政府}
+  short: アンジュアン
+  color: "#9ac0c8"
+  kind: スルタン国
+  rulers:
+    - {name: フンディ・アブダラ・イブラヒム, title: 分離政府の首班, from: 1997, to: 1999, source: "https://en.wikipedia.org/wiki/Foundi_Abdallah_Ibrahim"}
+    - {name: モハメド・バカール, title: アンジュアン島の大統領, from: 2007, to: 2008, note: 連邦の命令を拒み、コモロ・アフリカ連合軍の上陸で国外に逃れた, source: "https://en.wikipedia.org/wiki/Mohamed_Bacar"}
+  periods:
+    - from: 1648
+      to: 1885
+      text: コモロ諸島のスルタン国。インド洋航路の寄港地として栄え、隣の島々に勢力を及ぼした。マダガスカルの海賊・サカラヴァの襲撃に苦しんだ。
+    - from: 1997
+      to: 2008
+      text: 経済の不満からコモロ連邦共和国からの分離を宣言した（1997）。2001年の合意で緩い連邦（コモロ連合）の自治島になったが、2007–08年に島の大統領が連邦に背いた。
+  source: "https://en.wikipedia.org/wiki/Sultanate_of_Anjouan"
+
+- id: grande_comore
+  name: ンガジジャのスルタン国（グランド・コモロ）
+  short: ンガジジャ
+  color: "#c8a8b8"
+  kind: スルタン国（複数）
+  rulers:
+    - {name: サイード・アリー, title: ンガジジャのスルタン, from: 1886, to: 1910, note: 島を統一してフランスの保護を受け入れた。在位年は要確認, source: "https://en.wikipedia.org/wiki/Said_Ali_bin_Said_Omar"}
+  periods:
+    - from: 1648
+      to: 1885
+      text: コモロ最大の島ンガジジャには、いくつものスワヒリ系のスルタン国が並び立ち、争った。
+  source: "https://en.wikipedia.org/wiki/Ngazidja"
+
+- id: moheli
+  name: モヘリ・スルタン国
+  short: モヘリ
+  color: "#b0c8a0"
+  kind: スルタン国
+  rulers:
+    - {name: ジュンベ・ファティマ, title: 女王, from: 1842, to: 1878, note: メリナ系の王族。フランスと結んだ。在位年は要確認, source: "https://en.wikipedia.org/wiki/Djoumbé_Fatima"}
+  periods:
+    - from: 1648
+      to: 1885
+      text: コモロのいちばん小さな島のスルタン国。アンジュアンに従うこともあった。1830年代にマダガスカルから逃れたメリナ系の王族が王位についた。
+  source: "https://en.wikipedia.org/wiki/Mohéli"
+
+- id: mayotte_sultanate
+  name: マヨット・スルタン国
+  short: マヨット
+  color: "#d0b890"
+  kind: スルタン国
+  rulers:
+    - {name: アンドリアンツォリ, title: スルタン, from: 1832, to: 1843, note: ボイナ王国のサカラヴァの王で、メリナに追われて島に移った。1841年に島をフランスに売った, source: "https://en.wikipedia.org/wiki/Andriantsoli"}
+  periods:
+    - from: 1648
+      to: 1840
+      text: マヨット（マオレ）島のスルタン国。アンジュアン・モヘリ・マダガスカルのサカラヴァの争いの地になった。
+  source: "https://en.wikipedia.org/wiki/Mayotte#History"
+
+- id: comoros
+  name: コモロ連合
+  names:
+    - {to: 1977, name: コモロ国, short: コモロ, kind: 共和国}
+    - {from: 1978, to: 2001, name: コモロ・イスラーム連邦共和国, short: コモロ, kind: 連邦共和国（イスラーム）}
+  short: コモロ
+  color: "#88c4a0"
+  kind: 連邦共和国
+  home_iso: [COM]
+  rulers:
+    - {name: アフメド・アブダラ, title: 大統領, from: 1975, to: 1975, note: 独立宣言の直後にクーデタで退けられた, source: "https://en.wikipedia.org/wiki/Ahmed_Abdallah"}
+    - {name: アリ・ソイリ, title: 大統領, from: 1976, to: 1978, note: 傭兵ボブ・ドナールのクーデタで殺された, source: "https://en.wikipedia.org/wiki/Ali_Soilih"}
+    - {name: アフメド・アブダラ, title: 大統領, from: 1978, to: 1989, note: 暗殺された, source: "https://en.wikipedia.org/wiki/Ahmed_Abdallah"}
+    - {name: サイード・モハメド・ジョハル, title: 大統領, from: 1989, to: 1996, source: "https://en.wikipedia.org/wiki/Said_Mohamed_Djohar"}
+    - {name: モハメド・タキ・アブドゥルカリム, title: 大統領, from: 1996, to: 1998, source: "https://en.wikipedia.org/wiki/Mohamed_Taki_Abdoulkarim"}
+    - {name: アザリ・アスマニ, title: 大統領, from: 1999, to: 2006, note: クーデタで権力を握った, source: "https://ja.wikipedia.org/wiki/アザリ・アスマニ"}
+    - {name: アフメド・アブダラ・サンビ, title: 大統領, from: 2006, to: 2011, source: "https://en.wikipedia.org/wiki/Ahmed_Abdallah_Sambi"}
+    - {name: イキリル・ドイニン, title: 大統領, from: 2011, to: 2016, source: "https://en.wikipedia.org/wiki/Ikililou_Dhoinine"}
+    - {name: アザリ・アスマニ, title: 大統領, from: 2016, to: 2025, source: "https://ja.wikipedia.org/wiki/アザリ・アスマニ"}
+  periods:
+    - from: 1975
+      to: 2025
+      text: フランスからの独立を一方的に宣言した（マヨットは残留）。独立後20回以上のクーデタ・未遂がくり返され、フランス人傭兵ボブ・ドナールが何度も政変に関わった。1997年にアンジュアン・モヘリが分離を宣言し、2001年に各島に大きな自治を認める連合となった。
+  source: "https://ja.wikipedia.org/wiki/コモロ"
+
+- id: mauritius
+  name: モーリシャス共和国
+  names:
+    - {to: 1991, name: モーリシャス, short: モーリシャス, kind: 立憲君主国（イギリス連邦王国）}
+  short: モーリシャス
+  color: "#e0a0b8"
+  kind: 共和国
+  home_iso: [MUS]
+  rulers:
+    - {name: シウサガル・ラングーラム, title: 首相, from: 1968, to: 1982, note: 「建国の父」, source: "https://ja.wikipedia.org/wiki/シウサガル・ラングーラム"}
+    - {name: アネルード・ジュグノート, title: 首相, from: 1982, to: 1995, source: "https://ja.wikipedia.org/wiki/アネルード・ジュグノート"}
+    - {name: ナヴィン・ラングーラム, title: 首相, from: 1995, to: 2000, source: "https://ja.wikipedia.org/wiki/ナヴィン・ラングーラム"}
+    - {name: アネルード・ジュグノート, title: 首相, from: 2000, to: 2003, source: "https://ja.wikipedia.org/wiki/アネルード・ジュグノート"}
+    - {name: ポール・ベランジェ, title: 首相, from: 2003, to: 2005, source: "https://en.wikipedia.org/wiki/Paul_Bérenger"}
+    - {name: ナヴィン・ラングーラム, title: 首相, from: 2005, to: 2014, source: "https://ja.wikipedia.org/wiki/ナヴィン・ラングーラム"}
+    - {name: アネルード・ジュグノート, title: 首相, from: 2014, to: 2017, source: "https://ja.wikipedia.org/wiki/アネルード・ジュグノート"}
+    - {name: プラヴィン・ジュグノート, title: 首相, from: 2017, to: 2024, source: "https://ja.wikipedia.org/wiki/プラヴィン・ジュグノート"}
+    - {name: ナヴィン・ラングーラム, title: 首相, from: 2024, to: 2025, source: "https://ja.wikipedia.org/wiki/ナヴィン・ラングーラム"}
+  periods:
+    - from: 1968
+      to: 2025
+      text: イギリスから独立（1992年に共和国）。インド系が多数を占める多民族の国で、砂糖から繊維・観光・金融へと経済を広げ、アフリカで最も安定した民主国家の一つとなった。チャゴス諸島の返還を求め、2025年にイギリスと主権の移譲に合意した。
+  note: 実権は首相にあるので首相を載せる。
+  source: "https://ja.wikipedia.org/wiki/モーリシャス"
+
+- id: seychelles
+  name: セーシェル共和国
+  short: セーシェル
+  color: "#90c8d8"
+  kind: 共和国
+  home_iso: [SYC]
+  rulers:
+    - {name: ジェームズ・マンチャム, title: 大統領, from: 1976, to: 1977, note: クーデタで退けられた, source: "https://en.wikipedia.org/wiki/James_Mancham"}
+    - {name: フランス＝アルベール・ルネ, title: 大統領, from: 1977, to: 2004, note: 1979年から一党制, source: "https://ja.wikipedia.org/wiki/フランス＝アルベール・ルネ"}
+    - {name: ジェームス・ミシェル, title: 大統領, from: 2004, to: 2016, source: "https://ja.wikipedia.org/wiki/ジェームス・ミシェル"}
+    - {name: ダニー・フォール, title: 大統領, from: 2016, to: 2020, source: "https://en.wikipedia.org/wiki/Danny_Faure"}
+    - {name: ウェーベル・ラムカラワン, title: 大統領, from: 2020, to: 2025, source: "https://en.wikipedia.org/wiki/Wavel_Ramkalawan"}
+    - {name: パトリック・エルミニー, title: 大統領, from: 2025, to: 2025, source: "https://en.wikipedia.org/wiki/Patrick_Herminie"}
+  periods:
+    - from: 1976
+      to: 2025
+      text: イギリスから独立。翌年のクーデタでルネが政権を握り、一党制が1993年まで続いた。観光と漁業が経済の柱。
+  source: "https://ja.wikipedia.org/wiki/セーシェル"

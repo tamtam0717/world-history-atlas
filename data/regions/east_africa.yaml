@@ -1,0 +1,6126 @@
+# F3 東アフリカ・アフリカの角・スーダン（SDN SSD ETH ERI DJI SOM KEN UGA RWA BDI TZA）の地域と所属の変遷（1648–2025）
+# scratchpad/f3/gen.py で生成した（手で直してよい。直したときは生成をやめてこのファイルを正とする）。
+# 主な方針：
+#  - 在地の主な国家（エチオピア・フンジ・ダルフール・マフディー国家・ブガンダ・ブニョロ・ルワンダ・ブルンジ・ザンジバルなど）は独自の色。範囲があいまいなら uncertain。
+#  - エチオピアの「諸侯の時代」（1769–1854）は ethiopia・nominal。メネリクのシェワ王時代の南への拡大は shewa（1878 年から overlord: ethiopia）。
+#  - トルコ・エジプト支配のスーダン（1820/21–1884/85）は egypt＋overlord: ottoman。エジプト本体が 1882 年にイギリスの占領下（occupied）に入った後も、
+#    スーダンはエジプト政府の領土として egypt のまま描く。英・エジプト軍の再征服（1896–98）は britain・occupied、1899 年の共同統治協定から britain＋label。
+#  - 保護領で在地の王がそのまま認められた所（ブガンダ・トロ・アンコーレ・ブニョロ〈1899–〉・ザンジバル・ルワンダ・ブルンジ・ミジュルティニア・ホビオ・アウサ・ジンマ・
+#    ダール・マサリート・ウィトゥ）は宗主国の indirect。直轄・会社の統治や、間接統治がはっきりしない保護領は certainty なし。
+#  - 勢力圏・主張だけで実際の支配が及んでいない内陸は nominal。実効支配が及んだ年（遠征・行政の設置）から濃く塗る（年は大まかな目安。note に書いた）。
+#  - どの国家の支配も及ばない牧畜民・農耕民の地（南スーダン・ケニア内陸・タンザニア内陸・ソマリの遊牧地など）は owner なし。
+#  - 第二次エチオピア戦争後のイタリアの支配（1935/36–1940）は occupied。第一次世界大戦のドイツ領東アフリカの占領（1916–19）は occupied。
+#  - 内戦（スーダン 2023–、ソマリア、エチオピアのティグレ、エリトリア独立戦争）は年末時点の大まかな支配で、反乱・分離勢力は独自の政体＋uncertain。
+#  - ハライブ（1995– エジプト）とワディ・ハルファの突出部（1902– スーダン）は実際の統治で塗る。ビル・タウィールは EGY のピースなので west.yaml の扱いのまま。
+
+- id: sdn_wadi_halfa_salient
+  name: "ワディ・ハルファの突出部（北緯22度線の北）"
+  select:
+    pieces: [SDN-Northern_Wadi_Halfa_Salient]
+  timeline:
+  - from: 1648
+    owner: "ottoman"
+    note: "オスマン帝国のエジプト州の南端（下ヌビア）。エジプト本体と同じ扱い"
+    source: "https://ja.wikipedia.org/wiki/オスマン帝国領エジプト"
+  - from: 1805
+    owner: "egypt"
+    overlord: "ottoman"
+    cause: "ムハンマド・アリーがエジプト総督に就任"
+    source: "https://ja.wikipedia.org/wiki/ムハンマド・アリー朝"
+  - from: 1882
+    owner: "britain"
+    certainty: "occupied"
+    label: "エジプト（イギリスの占領下）"
+    cause: "イギリス軍がエジプトを占領（エジプト本体と同じ）"
+    note: "マフディー国家の時期（1885–1896）も、ワディ・ハルファは英・エジプト軍の南の拠点だった"
+    source: "https://ja.wikipedia.org/wiki/ウラービー革命"
+  - from: 1902
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "エジプトとスーダンの行政境界（1902年）で、北緯22度線の北のこの地もスーダンが治めることになる"
+    source: "https://en.wikipedia.org/wiki/Wadi_Halfa_Salient"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    note: "エジプトは北緯22度線を国境と主張するが、スーダンが治め続けている。大部分は1960年代のアスワン・ハイ・ダム建設でナセル湖（ヌビア湖）に沈んだ"
+    source: "https://en.wikipedia.org/wiki/Wadi_Halfa_Salient"
+
+- id: sdn_halaib
+  name: "ハライブ・トライアングル"
+  select:
+    pieces: [SDN-Red_Sea_Halaib]
+  timeline:
+  - from: 1648
+    owner: "ottoman"
+    note: "ベジャ人の遊牧地。オスマン帝国のエジプト州の紅海沿岸と同じ扱い"
+    source: "https://ja.wikipedia.org/wiki/オスマン帝国領エジプト"
+  - from: 1805
+    owner: "egypt"
+    overlord: "ottoman"
+    cause: "ムハンマド・アリーがエジプト総督に就任"
+    source: "https://ja.wikipedia.org/wiki/ムハンマド・アリー朝"
+  - from: 1882
+    owner: "britain"
+    certainty: "occupied"
+    label: "エジプト（イギリスの占領下）"
+    cause: "イギリス軍がエジプトを占領（エジプト本体と同じ）"
+    source: "https://ja.wikipedia.org/wiki/ウラービー革命"
+  - from: 1902
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "エジプトとスーダンの行政境界（1902年）で、北緯22度線の北のこの地はスーダンが治めることになる（住民のベジャ人がスーダン側と結びつくため）"
+    source: "https://en.wikipedia.org/wiki/Hala%27ib_Triangle"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    note: "1958年にエジプトが領有を主張して軍を送ったが、まもなく引いた"
+    source: "https://en.wikipedia.org/wiki/Hala%27ib_Triangle"
+  - from: 1995
+    owner: "egypt"
+    certainty: "uncertain"
+    label: "ハライブ（エジプトが管理。スーダンも領有を主張）"
+    cause: "ムバーラク暗殺未遂事件（6月）ののち、エジプト軍がハライブの全域を押さえる（2000年にスーダン軍が撤退）"
+    note: "エジプトは北緯22度線、スーダンは1902年の行政境界を国境と主張し、帰属は決着していない。逆に22度線の南のビル・タウィールはどちらも領有を主張しない"
+    source: "https://en.wikipedia.org/wiki/Hala%27ib_Triangle"
+
+- id: sdn_northern
+  name: "北部州（ドンゴラ）"
+  select:
+    pieces: [SDN-Northern]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "uncertain"
+    note: "ドンゴラなどナイル川沿いの首長はフンジ王国に従った（18世紀にはシャイギーヤ連合が自立）。北の第2・第3急流のあたりはオスマン帝国の駐屯地（サイ島）があった"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1820
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ムハンマド・アリーのスーダン遠征。イスマーイール・パシャの軍がドンゴラ・シャイギーヤを下す（11月）"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1885
+    owner: "mahdist"
+    cause: "ハルツーム陥落ののち、エジプト軍がドンゴラから撤退（6月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1896
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "キッチナーのドンゴラ遠征（9月）"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_conquest_of_Sudan"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_river_nile
+  name: "ナイル川州（ベルベル・シェンディ）"
+  select:
+    pieces: [SDN-River_Nile]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "uncertain"
+    note: "ジャアリーイーン人など、フンジ王国に従う首長の地"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ムハンマド・アリーのスーダン遠征（ベルベル・シェンディが降る）"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1884
+    owner: "mahdist"
+    cause: "マフディー軍がベルベルを落とす（5月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1897
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "英・エジプト軍がベルベルを占領（9月）。翌年4月のアトバラの戦い"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_conquest_of_Sudan"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_khartoum
+  name: "ハルツーム"
+  select:
+    pieces: [SDN-Khartoum]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    note: "フンジ王国に従うアブダッラーブ家の首長が治めた（青ナイルと白ナイルの合流点）"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ムハンマド・アリーのスーダン遠征。のちに合流点にハルツームが築かれ、エジプト領スーダンの都となる"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1885
+    owner: "mahdist"
+    cause: "マフディー軍がハルツームを落とし、ゴードンが戦死（1月26日）。マフディー国家は対岸のオムドゥルマンを都とした"
+    source: "https://ja.wikipedia.org/wiki/ハルツーム包囲戦"
+  - from: 1898
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "オムドゥルマンの戦い（9月2日）でキッチナーがマフディー国家の軍を破る"
+    source: "https://ja.wikipedia.org/wiki/オムドゥルマンの戦い"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2023
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "スーダン軍と即応支援部隊（RSF）の内戦が始まる（4月）。RSF が首都の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+  - from: 2025
+    owner: "sudan"
+    cause: "スーダン軍がハルツームを奪い返す（3月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_gezira
+  name: "ジャジーラ（ゲジラ）"
+  note: "1925年からジャジーラ計画（綿花の灌漑農業）"
+  select:
+    pieces: [SDN-Gezira]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ムハンマド・アリーのスーダン遠征"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1884
+    owner: "mahdist"
+    cause: "マフディーの運動がジャジーラに広がる"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "オムドゥルマンの戦い（9月）"
+    source: "https://ja.wikipedia.org/wiki/オムドゥルマンの戦い"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2023
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "RSF がワド・マダニを落とす（12月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+  - from: 2025
+    owner: "sudan"
+    cause: "スーダン軍がワド・マダニを奪い返す（1月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_sennar
+  name: "センナール"
+  select:
+    pieces: [SDN-Sennar]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    note: "フンジ王国（センナール・スルタン国）の都センナール"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "イスマーイール・パシャの軍がセンナールに入り、フンジ王国が滅びる（6月）"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1885
+    owner: "mahdist"
+    cause: "センナールのエジプト軍が降る（8月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "オムドゥルマンの戦いののち、英・エジプト軍が青ナイル流域を押さえる"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_conquest_of_Sudan"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_blue_nile
+  name: "青ナイル州（ファズグリ）"
+  select:
+    pieces: [SDN-Blue_Nile]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "uncertain"
+    note: "フンジ王国の南の辺境（ファズグリ）。金と奴隷の供給地"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ムハンマド・アリーのスーダン遠征（金を求めてファズグリに進む）"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1885
+    owner: "mahdist"
+    cause: "マフディー国家の支配"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "ロセイレスの戦い（12月）"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_conquest_of_Sudan"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_white_nile
+  name: "白ナイル州"
+  select:
+    pieces: [SDN-White_Nile]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "uncertain"
+    note: "フンジ王国の西の辺境。南はシルック王国"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ムハンマド・アリーのスーダン遠征"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1884
+    owner: "mahdist"
+    cause: "マフディー国家の支配"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "オムドゥルマンの戦い（9月）"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_conquest_of_Sudan"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_gedaref
+  name: "ガダーリフ"
+  select:
+    pieces: [SDN-Gedaref]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "uncertain"
+    note: "シュクリーヤ人などフンジ王国に従う遊牧の首長の地"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ムハンマド・アリーのスーダン遠征"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1885
+    owner: "mahdist"
+    cause: "マフディー国家の支配"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "英・エジプト軍がガダーリフを落とす（9月）"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_conquest_of_Sudan"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_kassala
+  name: "カッサラ（タカ）"
+  select:
+    pieces: [SDN-Kassala]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "nominal"
+    note: "ベジャ人（ハデンドワ）の地。フンジ王国の支配は名目的"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1840
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがタカ地方を下し、カッサラの町を築く"
+    source: "https://en.wikipedia.org/wiki/Kassala"
+  - from: 1885
+    owner: "mahdist"
+    cause: "カッサラのエジプト軍が降る（7月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1894
+    owner: "italy"
+    certainty: "occupied"
+    label: "カッサラ（イタリアの占領）"
+    cause: "エリトリアのイタリア軍がマフディー軍を破ってカッサラを占領（7月）"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Kassala_(1894)"
+  - from: 1897
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "イタリアがカッサラをエジプトに返す（12月）"
+    source: "https://en.wikipedia.org/wiki/Kassala"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_red_sea
+  name: "紅海州（スアキン）"
+  select:
+    pieces: [SDN-Red_Sea]
+  timeline:
+  - from: 1648
+    owner: "ottoman"
+    certainty: "nominal"
+    label: "スアキン（オスマン帝国のハベシュ州）"
+    note: "スアキンの港はオスマン帝国のハベシュ州（ジェッダ）に属した。内陸はベジャ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Habesh_Eyalet"
+  - from: 1865
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "オスマン帝国がスアキン・マッサワをエジプトに移す"
+    source: "https://en.wikipedia.org/wiki/Suakin"
+  - from: 1883
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "オスマン・ディグナの率いるベジャ人がマフディー側について蜂起（8月）。スアキンの港は英・エジプト軍が守る"
+    source: "https://en.wikipedia.org/wiki/Osman_Digna"
+  - from: 1891
+    owner: "britain"
+    certainty: "occupied"
+    label: "スーダン（英・エジプト軍の占領）"
+    cause: "英・エジプト軍がトカルを奪う（2月）"
+    source: "https://en.wikipedia.org/wiki/Osman_Digna"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定（1899年1月）。スーダンは名目上イギリスとエジプトの共同統治、実際はイギリスの総督が治める"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+
+- id: sdn_north_kordofan
+  name: "北コルドファン（エル・オベイド）"
+  select:
+    pieces: [SDN-North_Kordofan]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ムサッバアート（ダルフールのケイラ家の分家）の勢力とフンジ王国・ダルフールが争う地"
+    source: "https://en.wikipedia.org/wiki/Kordofan"
+  - from: 1748
+    owner: "funj"
+    certainty: "uncertain"
+    cause: "フンジ王国のハマジュの将アブー・リカイリクがコルドファンを征服"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1785
+    owner: "darfur"
+    cause: "ダルフールのスルタン（ムハンマド・タイラブ）がコルドファンを征服"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプト軍がバーラの戦い（8月）でダルフール軍を破り、コルドファンを得る"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1883
+    owner: "mahdist"
+    cause: "マフディー軍がエル・オベイドを落とす（1月）。11月にはシェイカンの戦いでヒックスの軍を全滅させる"
+    source: "https://ja.wikipedia.org/wiki/マフディー戦争"
+  - from: 1899
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "ウンム・ディワイカラートの戦い（11月）でハリーファが戦死。コルドファンが英・エジプトの支配下に"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Umm_Diwaykarat"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2023
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "内戦。エル・オベイドはスーダン軍が守るが、周辺で RSF と戦う"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_west_kordofan
+  name: "西コルドファン"
+  select:
+    pieces: [SDN-West_Kordofan]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "バッカーラ（牛を飼うアラブ系遊牧民）の地"
+    source: "https://en.wikipedia.org/wiki/Kordofan"
+  - from: 1785
+    owner: "darfur"
+    certainty: "uncertain"
+    cause: "ダルフールがコルドファンを征服"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがコルドファンを得る"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1883
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "バッカーラの遊牧民がマフディーの運動の主力となる"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプトのコルドファン占領"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Umm_Diwaykarat"
+  - from: 1910
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2025
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "RSF がババヌーサ・ヘグリグなどを落とす（12月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_abyei
+  name: "アビエイ"
+  select:
+    pieces: [SDN-Abyei_PCA]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ンゴク・ディンカ人の地"
+    source: "https://en.wikipedia.org/wiki/Abyei"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがコルドファンを得る"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1883
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "マフディー国家"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプトのコルドファン占領"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Umm_Diwaykarat"
+  - from: 1910
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "1905年にバハル・アル＝ガザル州からコルドファン州に移される"
+    source: "https://en.wikipedia.org/wiki/Abyei"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2005
+    owner: "sudan"
+    certainty: "uncertain"
+    label: "アビエイ（特別行政区）"
+    cause: "南北包括和平合意（1月）。帰属は住民投票で決めることになったが、実施されていない"
+    source: "https://en.wikipedia.org/wiki/Abyei"
+  - from: 2011
+    owner: "sudan"
+    certainty: "uncertain"
+    label: "アビエイ（帰属未定。国連部隊が駐留）"
+    cause: "南スーダン独立の直前にスーダン軍が占領（5月）。6月の合意で国連アビエイ暫定治安部隊（UNISFA）が入る"
+    note: "スーダンと南スーダンの双方が領有を主張し、帰属は決まっていない"
+    source: "https://en.wikipedia.org/wiki/Abyei"
+
+- id: sdn_south_kordofan
+  name: "南コルドファン（ヌバ山地）"
+  select:
+    pieces: [SDN-South_Kordofan]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ヌバ山地。タカリ王国などの小国があった"
+    source: "https://en.wikipedia.org/wiki/Nuba_Mountains"
+  - from: 1650
+    owner: "funj"
+    certainty: "nominal"
+    cause: "フンジ王国のバーディ2世がタカリ王国を従える（1650年代）"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがコルドファンを得る"
+    source: "https://en.wikipedia.org/wiki/Turkish_Sudan"
+  - from: 1883
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "マフディー国家（ヌバ山地の人々は抵抗を続けた）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプトのコルドファン占領"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Umm_Diwaykarat"
+  - from: 1920
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "ヌバ山地にイギリスの行政が及ぶ"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 1985
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "第2次スーダン内戦。スーダン人民解放軍（SPLA）がヌバ山地に広がる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    cause: "南北包括和平合意（1月）"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2011
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "南スーダン独立後、スーダン人民解放運動北部（SPLM-N）とスーダン軍の戦闘が続く"
+    source: "https://en.wikipedia.org/wiki/Sudanese_conflict_in_South_Kordofan_and_Blue_Nile"
+
+- id: sdn_central_darfur
+  name: "中央ダルフール（マッラ山地）"
+  select:
+    pieces: [SDN-Central_Darfur]
+  timeline:
+  - from: 1648
+    owner: "darfur"
+    note: "ケイラ朝のダルフール・スルタン国の発祥の地（マッラ山地）"
+    source: "https://ja.wikipedia.org/wiki/ダルフール・スルタン国"
+  - from: 1874
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ズバイルの軍がダルフールのスルタンを破る（10月）"
+    source: "https://en.wikipedia.org/wiki/Zubayr_Rahma_Mansur"
+  - from: 1883
+    owner: "mahdist"
+    cause: "ダルフール総督スラティンがマフディー軍に降る（12月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "darfur"
+    cause: "オムドゥルマンの戦いののち、アリー・ディーナールがダルフールに戻りスルタン国を再興"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1899
+    owner: "darfur"
+    overlord: "britain"
+    cause: "アリー・ディーナールが英・エジプトに名目的に従う（年貢を納める）"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1916
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "第一次世界大戦中、オスマン帝国に通じたアリー・ディーナールを英・エジプト軍が攻め、戦死させる（5–11月）。ダルフールはスーダンに併合"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_Darfur_Expedition"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2003
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ダルフール紛争（2月）。反政府勢力と、政府が支援するジャンジャウィードの民兵が戦い、多くの住民が殺され、難民となる"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2020
+    owner: "sudan"
+    cause: "ジュバ和平合意（10月）"
+    note: "マッラ山地の一部は和平に加わらない勢力（SLA-AW）が押さえ続けた"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2023
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "内戦で RSF がザリンゲイを落とす（10月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_north_darfur
+  name: "北ダルフール（エル・ファシール）"
+  select:
+    pieces: [SDN-North_Darfur]
+  timeline:
+  - from: 1648
+    owner: "darfur"
+    certainty: "uncertain"
+    note: "北部は砂漠でザガワ人などの遊牧地。1791年からエル・ファシールが都"
+    source: "https://ja.wikipedia.org/wiki/ダルフール・スルタン国"
+  - from: 1874
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ズバイルの軍がダルフールを征服（10月）"
+    source: "https://en.wikipedia.org/wiki/Zubayr_Rahma_Mansur"
+  - from: 1883
+    owner: "mahdist"
+    cause: "ダルフール総督スラティンがマフディー軍に降る（12月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "darfur"
+    certainty: "uncertain"
+    cause: "アリー・ディーナールがスルタン国を再興"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1899
+    owner: "darfur"
+    overlord: "britain"
+    certainty: "uncertain"
+    cause: "アリー・ディーナールが英・エジプトに名目的に従う"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1916
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト軍のダルフール遠征。アリー・ディーナールの戦死（11月）"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_Darfur_Expedition"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2003
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ダルフール紛争"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2020
+    owner: "sudan"
+    cause: "ジュバ和平合意（10月）"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2023
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "内戦。RSF がエル・ファシールを包囲"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+  - from: 2025
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "RSF がエル・ファシールを落とす（10月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_south_darfur
+  name: "南ダルフール（ニャラ）"
+  select:
+    pieces: [SDN-South_Darfur]
+  timeline:
+  - from: 1648
+    owner: "darfur"
+    certainty: "uncertain"
+    note: "南部はバッカーラの遊牧民の地で、スルタンの支配はゆるい"
+    source: "https://ja.wikipedia.org/wiki/ダルフール・スルタン国"
+  - from: 1874
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ズバイルの軍がダルフールを征服（10月）"
+    source: "https://en.wikipedia.org/wiki/Zubayr_Rahma_Mansur"
+  - from: 1883
+    owner: "mahdist"
+    cause: "ダルフール総督スラティンがマフディー軍に降る（12月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "darfur"
+    certainty: "uncertain"
+    cause: "アリー・ディーナールがスルタン国を再興"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1899
+    owner: "darfur"
+    overlord: "britain"
+    certainty: "uncertain"
+    cause: "アリー・ディーナールが英・エジプトに名目的に従う"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1916
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト軍のダルフール遠征。アリー・ディーナールの戦死（11月）"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_Darfur_Expedition"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2003
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ダルフール紛争"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2020
+    owner: "sudan"
+    cause: "ジュバ和平合意（10月）"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2023
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "RSF がニャラを落とす（10月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_east_darfur
+  name: "東ダルフール（エド・ダエイン）"
+  select:
+    pieces: [SDN-East_Darfur]
+  timeline:
+  - from: 1648
+    owner: "darfur"
+    certainty: "uncertain"
+    note: "リゼイガート人（バッカーラ）の地で、スルタンの支配はゆるい"
+    source: "https://ja.wikipedia.org/wiki/ダルフール・スルタン国"
+  - from: 1874
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ズバイルの軍がダルフールを征服（10月）"
+    source: "https://en.wikipedia.org/wiki/Zubayr_Rahma_Mansur"
+  - from: 1883
+    owner: "mahdist"
+    cause: "ダルフール総督スラティンがマフディー軍に降る（12月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "darfur"
+    certainty: "uncertain"
+    cause: "アリー・ディーナールがスルタン国を再興"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1899
+    owner: "darfur"
+    overlord: "britain"
+    certainty: "uncertain"
+    cause: "アリー・ディーナールが英・エジプトに名目的に従う"
+    source: "https://en.wikipedia.org/wiki/Ali_Dinar"
+  - from: 1916
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト軍のダルフール遠征。アリー・ディーナールの戦死（11月）"
+    source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_Darfur_Expedition"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2003
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ダルフール紛争"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2020
+    owner: "sudan"
+    cause: "ジュバ和平合意（10月）"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2023
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "RSF がエド・ダエインを押さえる（11月）"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: sdn_west_darfur
+  name: "西ダルフール（ダール・マサリート）"
+  select:
+    pieces: [SDN-West_Darfur]
+  timeline:
+  - from: 1648
+    owner: "darfur"
+    certainty: "uncertain"
+    note: "マサリート人の地。ダルフールとワダイの間で揺れた"
+    source: "https://ja.wikipedia.org/wiki/ダルフール・スルタン国"
+  - from: 1874
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "ズバイルの軍がダルフールを征服"
+    source: "https://en.wikipedia.org/wiki/Zubayr_Rahma_Mansur"
+  - from: 1884
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "マフディー国家（マサリート人は1880年代にスルタン国を作り抵抗した）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "masalit"
+    cause: "マフディー国家の崩壊。マサリート・スルタン国が自立"
+    source: "https://en.wikipedia.org/wiki/Dar_Masalit"
+  - from: 1922
+    owner: "britain"
+    certainty: "indirect"
+    label: "ダール・マサリート（スルタン国。英・エジプトの間接統治）"
+    cause: "英仏の国境協定（1919年）を受けて、スルタンが英・エジプトの統治を受け入れる"
+    source: "https://en.wikipedia.org/wiki/Dar_Masalit"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立"
+    source: "https://ja.wikipedia.org/wiki/スーダン"
+  - from: 2003
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ダルフール紛争"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2020
+    owner: "sudan"
+    cause: "ジュバ和平合意（10月）"
+    source: "https://ja.wikipedia.org/wiki/ダルフール紛争"
+  - from: 2023
+    owner: "rsf"
+    certainty: "uncertain"
+    cause: "RSF がエル・ジェネイナを押さえる（6–11月）。マサリート人の住民が多く殺された"
+    source: "https://ja.wikipedia.org/wiki/スーダン内戦_(2023年-)"
+
+- id: ssd_lado
+  name: "中央エクアトリア（ラド・ジュバ・イェイ）"
+  select:
+    pieces: [SSD-Juba, SSD-Yei, SSD-Morobo, SSD-Kajo_keji, SSD-Lainya]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "バリ人などの地。大きな国家はない"
+    source: "https://en.wikipedia.org/wiki/Equatoria"
+  - from: 1871
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エクアトリア州（エジプト領スーダン）"
+    cause: "サミュエル・ベーカーがゴンドコロでエジプト領エクアトリア州を宣言（1871年）"
+    source: "https://en.wikipedia.org/wiki/Equatoria"
+  - from: 1885
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エクアトリア州（エミン・パシャ）"
+    cause: "マフディー国家に本国から切り離され、エミン・パシャが州を保つ"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ"
+  - from: 1888
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "マフディー軍がレジャフを落とす（10月）。エミンは南へ退き、1889年にスタンリーの救援隊とともに去る"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ救援遠征"
+  - from: 1894
+    owner: "congo_free_state"
+    certainty: "nominal"
+    label: "ラド飛び地（レオポルド2世への租借）"
+    cause: "英・コンゴ自由国協定（5月）で、ナイル川西岸のラド飛び地がレオポルド2世に一代限りで貸される"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1897
+    owner: "congo_free_state"
+    label: "ラド飛び地"
+    cause: "コンゴ自由国軍がレジャフのマフディー軍を破る（2月）"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1908
+    owner: "belgium"
+    label: "ラド飛び地（ベルギー領コンゴ）"
+    cause: "ベルギーがコンゴ自由国を併合（11月）"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1910
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）（ラド地区）"
+    cause: "レオポルド2世の死（1909年12月）を受けて、ラド飛び地がスーダンに戻される（6月）"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立。直前の1955年に南部の兵が反乱し、第1次スーダン内戦（アニャニャ）が始まる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1972
+    owner: "sudan"
+    label: "南部地域（自治）"
+    cause: "アディスアベバ合意（3月）で第1次内戦が終わり、南部に自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1984
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ヌメイリ政権が南部の自治を廃止しイスラーム法（シャリーア）を導入（1983年）。ジョン・ガランのスーダン人民解放軍（SPLA）が戦い、第2次スーダン内戦となる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    certainty: "indirect"
+    label: "南部スーダン自治政府"
+    cause: "南北包括和平合意（1月）。南部に自治政府ができ、6年後に独立の住民投票を行うと決まる"
+    source: "https://ja.wikipedia.org/wiki/南北包括和平合意"
+  - from: 2011
+    owner: "south_sudan"
+    cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
+    source: "https://ja.wikipedia.org/wiki/南スーダン"
+
+- id: ssd_eastern_equatoria
+  name: "東エクアトリア・テレケカ"
+  select:
+    pieces: [SSD-Terekeka, SSD-Magwi, SSD-Torit, SSD-Budi, SSD-Ikotos, SSD-Kapoeta_East, SSD-Kapoeta_North, SSD-Kapoeta_South, SSD-Lafon]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ラトゥカ人・トポサ人などの地。大きな国家はない"
+    source: "https://en.wikipedia.org/wiki/Equatoria"
+  - from: 1871
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エクアトリア州（エジプト領スーダン）"
+    cause: "サミュエル・ベーカーがエクアトリア州を宣言"
+    source: "https://en.wikipedia.org/wiki/Equatoria"
+  - from: 1885
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エクアトリア州（エミン・パシャ）"
+    cause: "マフディー国家に本国から切り離される"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ"
+  - from: 1889
+    owner: null
+    cause: "エミン・パシャが去り、エジプトの拠点がなくなる"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ救援遠征"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定。南東部の一部は1914年までウガンダ保護領が管轄"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1920
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立。直前の1955年に南部の兵が反乱し、第1次スーダン内戦（アニャニャ）が始まる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1972
+    owner: "sudan"
+    label: "南部地域（自治）"
+    cause: "アディスアベバ合意（3月）で第1次内戦が終わり、南部に自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1984
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ヌメイリ政権が南部の自治を廃止しイスラーム法（シャリーア）を導入（1983年）。ジョン・ガランのスーダン人民解放軍（SPLA）が戦い、第2次スーダン内戦となる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    certainty: "indirect"
+    label: "南部スーダン自治政府"
+    cause: "南北包括和平合意（1月）。南部に自治政府ができ、6年後に独立の住民投票を行うと決まる"
+    source: "https://ja.wikipedia.org/wiki/南北包括和平合意"
+  - from: 2011
+    owner: "south_sudan"
+    cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
+    source: "https://ja.wikipedia.org/wiki/南スーダン"
+
+- id: ssd_western_equatoria
+  name: "西エクアトリア（ザンデ）"
+  select:
+    pieces: [SSD-Western_Equatoria]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ザンデ人などの地"
+    source: "https://en.wikipedia.org/wiki/Zande_people"
+  - from: 1800
+    owner: "zande"
+    certainty: "uncertain"
+    cause: "ザンデ（アザンデ）人のアヴォンガラ家の王国群が南西から広がる（18世紀後半〜19世紀）"
+    note: "1870–80年代にはエジプト領スーダンの拠点・奴隷商人も入ったが、王国（グブドゥエなど）は自立を保った"
+    source: "https://en.wikipedia.org/wiki/Zande_people"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1905
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "ザンデの王ガンブラ（イアンビオ）が英・エジプト軍に敗れて死ぬ"
+    source: "https://en.wikipedia.org/wiki/Gbudwe"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立。直前の1955年に南部の兵が反乱し、第1次スーダン内戦（アニャニャ）が始まる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1972
+    owner: "sudan"
+    label: "南部地域（自治）"
+    cause: "アディスアベバ合意（3月）で第1次内戦が終わり、南部に自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1984
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ヌメイリ政権が南部の自治を廃止しイスラーム法（シャリーア）を導入（1983年）。ジョン・ガランのスーダン人民解放軍（SPLA）が戦い、第2次スーダン内戦となる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    certainty: "indirect"
+    label: "南部スーダン自治政府"
+    cause: "南北包括和平合意（1月）。南部に自治政府ができ、6年後に独立の住民投票を行うと決まる"
+    source: "https://ja.wikipedia.org/wiki/南北包括和平合意"
+  - from: 2011
+    owner: "south_sudan"
+    cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
+    source: "https://ja.wikipedia.org/wiki/南スーダン"
+
+- id: ssd_bahr_el_ghazal
+  name: "バハル・アル＝ガザル（ワラップ・湖水・北バハル・アル＝ガザル）"
+  select:
+    pieces: [SSD-Northern_Bahr_el_Ghazal, SSD-Warrap, SSD-Lakes]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ディンカ人の地。大きな国家はない"
+    source: "https://en.wikipedia.org/wiki/Bahr_el_Ghazal_(region)"
+  - from: 1873
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "uncertain"
+    label: "バハル・アル＝ガザル州（エジプト領スーダン）"
+    cause: "奴隷・象牙の商人ズバイルの私的な支配地を、エジプトが州とし、ズバイルを総督に任じる"
+    source: "https://en.wikipedia.org/wiki/Zubayr_Rahma_Mansur"
+  - from: 1884
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "総督ラプトンがマフディー軍に降る（4月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1886
+    owner: null
+    cause: "マフディー軍の主力が北に引き揚げる"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1910
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立。直前の1955年に南部の兵が反乱し、第1次スーダン内戦（アニャニャ）が始まる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1972
+    owner: "sudan"
+    label: "南部地域（自治）"
+    cause: "アディスアベバ合意（3月）で第1次内戦が終わり、南部に自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1984
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ヌメイリ政権が南部の自治を廃止しイスラーム法（シャリーア）を導入（1983年）。ジョン・ガランのスーダン人民解放軍（SPLA）が戦い、第2次スーダン内戦となる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    certainty: "indirect"
+    label: "南部スーダン自治政府"
+    cause: "南北包括和平合意（1月）。南部に自治政府ができ、6年後に独立の住民投票を行うと決まる"
+    source: "https://ja.wikipedia.org/wiki/南北包括和平合意"
+  - from: 2011
+    owner: "south_sudan"
+    cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
+    source: "https://ja.wikipedia.org/wiki/南スーダン"
+
+- id: ssd_western_bahr_el_ghazal
+  name: "西バハル・アル＝ガザル（ワウ）"
+  select:
+    pieces: [SSD-Western_Bahr_el_Ghazal]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "フェルティト（小さな民族の集まり）とザンデ人の地"
+    source: "https://en.wikipedia.org/wiki/Bahr_el_Ghazal_(region)"
+  - from: 1873
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "uncertain"
+    label: "バハル・アル＝ガザル州（エジプト領スーダン）"
+    cause: "ズバイルが総督に任じられる"
+    source: "https://en.wikipedia.org/wiki/Zubayr_Rahma_Mansur"
+  - from: 1884
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "総督ラプトンがマフディー軍に降る（4月）"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1886
+    owner: null
+    cause: "マフディー軍の主力が北に引き揚げる"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1897
+    owner: "france"
+    certainty: "uncertain"
+    label: "バハル・アル＝ガザル（フランスのマルシャン隊）"
+    cause: "コンゴから来たマルシャン隊がワウの近くに砦を築き、ナイル川のファショダへ向かう"
+    source: "https://ja.wikipedia.org/wiki/ファショダ事件"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "ファショダ事件の後の英仏宣言（3月）で、フランスがナイル川流域から手を引く"
+    source: "https://ja.wikipedia.org/wiki/ファショダ事件"
+  - from: 1910
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立。直前の1955年に南部の兵が反乱し、第1次スーダン内戦（アニャニャ）が始まる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1972
+    owner: "sudan"
+    label: "南部地域（自治）"
+    cause: "アディスアベバ合意（3月）で第1次内戦が終わり、南部に自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1984
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ヌメイリ政権が南部の自治を廃止しイスラーム法（シャリーア）を導入（1983年）。ジョン・ガランのスーダン人民解放軍（SPLA）が戦い、第2次スーダン内戦となる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    certainty: "indirect"
+    label: "南部スーダン自治政府"
+    cause: "南北包括和平合意（1月）。南部に自治政府ができ、6年後に独立の住民投票を行うと決まる"
+    source: "https://ja.wikipedia.org/wiki/南北包括和平合意"
+  - from: 2011
+    owner: "south_sudan"
+    cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
+    source: "https://ja.wikipedia.org/wiki/南スーダン"
+
+- id: ssd_upper_nile
+  name: "上ナイル（ファショダ・マラカル）"
+  select:
+    pieces: [SSD-Upper_Nile]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "シルック王国（都ファショダ）とヌエル人・ディンカ人の地"
+    source: "https://en.wikipedia.org/wiki/Shilluk_Kingdom"
+  - from: 1865
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがファショダに駐屯地を置く"
+    source: "https://en.wikipedia.org/wiki/Shilluk_Kingdom"
+  - from: 1884
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "マフディー国家"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1898
+    owner: "britain"
+    certainty: "nominal"
+    label: "スーダン（英・エジプト軍の再征服）"
+    cause: "ファショダ事件。マルシャンのフランス隊とキッチナーの軍が対峙し、フランスが退く（9–12月）"
+    source: "https://ja.wikipedia.org/wiki/ファショダ事件"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1910
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立。直前の1955年に南部の兵が反乱し、第1次スーダン内戦（アニャニャ）が始まる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1972
+    owner: "sudan"
+    label: "南部地域（自治）"
+    cause: "アディスアベバ合意（3月）で第1次内戦が終わり、南部に自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1984
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ヌメイリ政権が南部の自治を廃止しイスラーム法（シャリーア）を導入（1983年）。ジョン・ガランのスーダン人民解放軍（SPLA）が戦い、第2次スーダン内戦となる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    certainty: "indirect"
+    label: "南部スーダン自治政府"
+    cause: "南北包括和平合意（1月）。南部に自治政府ができ、6年後に独立の住民投票を行うと決まる"
+    source: "https://ja.wikipedia.org/wiki/南北包括和平合意"
+  - from: 2011
+    owner: "south_sudan"
+    cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
+    source: "https://ja.wikipedia.org/wiki/南スーダン"
+  - from: 2013
+    owner: "south_sudan"
+    certainty: "uncertain"
+    cause: "南スーダン内戦（12月〜）。キール大統領派とマシャール前副大統領の反政府派（SPLM-IO）が戦い、ボル・ベンティウ・マラカルなど上ナイルの町が何度も奪い合われる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
+  - from: 2019
+    owner: "south_sudan"
+    cause: "再活性化和平合意（2018年9月）ののち停戦が続き、2020年2月に統一暫定政府ができる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
+
+- id: ssd_jonglei_unity
+  name: "ジョングレイ・ユニティ（ヌエル・ディンカ）"
+  select:
+    pieces: [SSD-Jonglei, SSD-Unity]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ヌエル人・ディンカ人の牧畜民の地（大湿原スッド）"
+    source: "https://en.wikipedia.org/wiki/Nuer_people"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "英・エジプト共同統治協定"
+    source: "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+  - from: 1930
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）"
+    cause: "ヌエル人の平定（1927–30年）でイギリスの行政が及ぶ"
+    source: "https://en.wikipedia.org/wiki/Nuer_people"
+  - from: 1956
+    owner: "sudan"
+    cause: "スーダンが独立。直前の1955年に南部の兵が反乱し、第1次スーダン内戦（アニャニャ）が始まる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1972
+    owner: "sudan"
+    label: "南部地域（自治）"
+    cause: "アディスアベバ合意（3月）で第1次内戦が終わり、南部に自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  - from: 1984
+    owner: "sudan"
+    certainty: "uncertain"
+    cause: "ヌメイリ政権が南部の自治を廃止しイスラーム法（シャリーア）を導入（1983年）。ジョン・ガランのスーダン人民解放軍（SPLA）が戦い、第2次スーダン内戦となる"
+    source: "https://ja.wikipedia.org/wiki/第二次スーダン内戦"
+  - from: 2005
+    owner: "sudan"
+    certainty: "indirect"
+    label: "南部スーダン自治政府"
+    cause: "南北包括和平合意（1月）。南部に自治政府ができ、6年後に独立の住民投票を行うと決まる"
+    source: "https://ja.wikipedia.org/wiki/南北包括和平合意"
+  - from: 2011
+    owner: "south_sudan"
+    cause: "住民投票（1月）ののち南スーダンが独立（7月9日）"
+    source: "https://ja.wikipedia.org/wiki/南スーダン"
+  - from: 2013
+    owner: "south_sudan"
+    certainty: "uncertain"
+    cause: "南スーダン内戦（12月〜）。キール大統領派とマシャール前副大統領の反政府派（SPLM-IO）が戦い、ボル・ベンティウ・マラカルなどジョングレイ・ユニティの町が何度も奪い合われる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
+  - from: 2019
+    owner: "south_sudan"
+    cause: "再活性化和平合意（2018年9月）ののち停戦が続き、2020年2月に統一暫定政府ができる"
+    source: "https://ja.wikipedia.org/wiki/南スーダン内戦"
+
+- id: eri_massawa
+  name: "マッサワ・ダフラク諸島"
+  select:
+    pieces: [ERI-Massawa, ERI-Dahlak, ERI-Foro]
+  timeline:
+  - from: 1648
+    owner: "ottoman"
+    label: "マッサワ（オスマン帝国のハベシュ州）"
+    note: "マッサワとダフラク諸島はオスマン帝国のハベシュ州。対岸のアルキコのナーイブ（土着の代官）が治めた"
+    source: "https://en.wikipedia.org/wiki/Habesh_Eyalet"
+  - from: 1846
+    owner: "egypt"
+    overlord: "ottoman"
+    cause: "オスマン帝国がマッサワをムハンマド・アリーに貸す"
+    source: "https://en.wikipedia.org/wiki/Massawa"
+  - from: 1849
+    owner: "ottoman"
+    label: "マッサワ（オスマン帝国のハベシュ州）"
+    cause: "ムハンマド・アリーの死で貸与が終わる"
+    source: "https://en.wikipedia.org/wiki/Massawa"
+  - from: 1865
+    owner: "egypt"
+    overlord: "ottoman"
+    cause: "オスマン帝国がマッサワ・スアキンをエジプトに移す"
+    source: "https://en.wikipedia.org/wiki/Massawa"
+  - from: 1885
+    owner: "italy"
+    label: "マッサワ（イタリア領）"
+    cause: "イギリスの同意のもと、イタリアがマッサワを占領（2月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "イタリアがエリトリア植民地を置く（1月1日）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1990
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "EPLF がマッサワを落とす（2月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_northern_coast
+  name: "マッサワ周辺の低地（シェエブ・ギンダ）"
+  select:
+    pieces: [ERI-Shieb, ERI-Ghinda]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ティグレ語を話す遊牧民の地"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1865
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがマッサワを得て周辺に勢力を広げる"
+    source: "https://en.wikipedia.org/wiki/Massawa"
+  - from: 1885
+    owner: "italy"
+    certainty: "nominal"
+    label: "マッサワ（イタリア領）の周辺"
+    cause: "イタリアのマッサワ占領"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1888
+    owner: "italy"
+    label: "マッサワ（イタリア領）"
+    cause: "イタリア軍がサアティ・ギンダまで進む"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エリトリア植民地"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1977
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "独立戦争。EPLF・ELF がエリトリアの大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1978
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "ソ連の支援を受けたエチオピア軍の反攻"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1990
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "EPLF がマッサワを落とす（2月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_sahel
+  name: "サヘル（ナクファ・カロラ）"
+  select:
+    pieces: [ERI-Nakfa, ERI-Karura, ERI-Adobha]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ハバブなどティグレ語を話す遊牧民の地"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1865
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがマッサワを得て北の部族を従える"
+    source: "https://en.wikipedia.org/wiki/Massawa"
+  - from: 1885
+    owner: "italy"
+    certainty: "nominal"
+    label: "マッサワ（イタリア領）の周辺"
+    cause: "イタリアのマッサワ占領（1887年にハバブを保護下に）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エリトリア植民地"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1977
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "EPLF がナクファを落とし、北部の山地を解放区とする（1991年まで保つ）"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_afabet
+  name: "アファベット"
+  select:
+    pieces: [ERI-Afabet]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ティグレ語を話す遊牧民の地"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1865
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがマッサワを得て北の部族を従える"
+    source: "https://en.wikipedia.org/wiki/Massawa"
+  - from: 1885
+    owner: "italy"
+    certainty: "nominal"
+    label: "マッサワ（イタリア領）の周辺"
+    cause: "イタリアのマッサワ占領"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エリトリア植民地"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1977
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "独立戦争。EPLF・ELF がエリトリアの大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1978
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピア軍の反攻"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1988
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "アファベットの戦い（3月）で EPLF がエチオピア軍を破る"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Afabet"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_anseba_north
+  name: "アンセバ北部（ハベロ・セラ）"
+  select:
+    pieces: [ERI-Habero, ERI-Sela, ERI-Kerkebet, ERI-Asmat, ERI-Halhal]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ティグレ語を話す遊牧民（ベニ・アメルなど）の地"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1865
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがマッサワ・ボゴスに勢力を広げる"
+    source: "https://en.wikipedia.org/wiki/Massawa"
+  - from: 1885
+    owner: "italy"
+    certainty: "nominal"
+    label: "マッサワ（イタリア領）の周辺"
+    cause: "イタリアのマッサワ占領"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1889
+    owner: "italy"
+    label: "イタリア領（ケレン）"
+    cause: "イタリア軍がケレンを占領（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エリトリア植民地"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1977
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "独立戦争。EPLF・ELF がエリトリアの大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1978
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピア軍の反攻"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1988
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "アファベットの戦い（3月）ののち EPLF が北部に広がる"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Afabet"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_keren
+  name: "ケレン（ボゴス）"
+  select:
+    pieces: [ERI-Keren, ERI-Elabered, ERI-Hamelmalo, ERI-Gheleb, ERI-Hagaz, ERI-Adi_Tekeliezan]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ビレン人の地（ボゴス）。エチオピアの影響が及んだ"
+    source: "https://en.wikipedia.org/wiki/Keren"
+  - from: 1872
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがボゴス（ケレン）を占領"
+    source: "https://en.wikipedia.org/wiki/Keren"
+  - from: 1885
+    owner: "ethiopia"
+    cause: "ヒューエット条約（1884年）でボゴスはエチオピアに返され、エジプト軍が撤退。ラス・アルラが治める"
+    source: "https://en.wikipedia.org/wiki/Hewett_Treaty"
+  - from: 1889
+    owner: "italy"
+    label: "イタリア領（ケレン）"
+    cause: "ヨハネス4世の死に乗じてイタリア軍がケレンを占領（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エリトリア植民地"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1977
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "EPLF がケレンを落とす（7月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1978
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピア軍の反攻でケレンを奪い返す（11月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_maekel
+  name: "アスマラ（ハマセン）"
+  select:
+    pieces: [ERI-Serejeka, ERI-Berik, ERI-Galanefhi, ERI-Debubawi_Mibrak, ERI-Debubawi_Mierab, ERI-Semienawi_Mibrak, ERI-Semienawi_Mierab]
+  timeline:
+  - from: 1648
+    owner: "ethiopia"
+    certainty: "uncertain"
+    label: "メドリ・バハリ（バハル・ネガシュの地）"
+    note: "エリトリアの高原（メドリ・バハリ）は、バハル・ネガシュ（海の王）がエチオピア皇帝に従って治めた"
+    source: "https://en.wikipedia.org/wiki/Medri_Bahri"
+  - from: 1769
+    owner: "ethiopia"
+    certainty: "nominal"
+    label: "メドリ・バハリ"
+    cause: "諸侯の時代（ゼメネ・メサフィント）。ハマセンの首長は自立し、ティグレの諸侯と争った"
+    source: "https://en.wikipedia.org/wiki/Zemene_Mesafint"
+  - from: 1855
+    owner: "ethiopia"
+    label: "ハマセン"
+    cause: "テオドロス2世の即位。のちヨハネス4世の将ラス・アルラが治める（1879–89年）"
+    source: "https://ja.wikipedia.org/wiki/テオドロス2世"
+  - from: 1889
+    owner: "italy"
+    label: "イタリア領（アスマラ）"
+    cause: "ヨハネス4世の死に乗じてイタリア軍がアスマラを占領（8月）。ウッチャリ条約（5月）"
+    source: "https://ja.wikipedia.org/wiki/ウッチャリ条約"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エリトリア植民地（1897年に都をマッサワからアスマラに移す）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_debub
+  name: "エリトリア南部高原（メンデフェラ・セナフェ）"
+  select:
+    pieces: [ERI-Dbarwa, ERI-Dekemhare, ERI-Segeneity, ERI-Adi_Keyh, ERI-Senafe, ERI-Tsorona, ERI-Mendefera, ERI-Areza, ERI-Maimine, ERI-Adi_Quala, ERI-Emni_Haili, ERI-May_Aini]
+  timeline:
+  - from: 1648
+    owner: "ethiopia"
+    certainty: "uncertain"
+    label: "メドリ・バハリ（バハル・ネガシュの地）"
+    note: "バハル・ネガシュの都デバルワがあった"
+    source: "https://en.wikipedia.org/wiki/Medri_Bahri"
+  - from: 1769
+    owner: "ethiopia"
+    certainty: "nominal"
+    label: "メドリ・バハリ"
+    cause: "諸侯の時代（ゼメネ・メサフィント）"
+    source: "https://en.wikipedia.org/wiki/Zemene_Mesafint"
+  - from: 1855
+    owner: "ethiopia"
+    cause: "テオドロス2世の即位"
+    source: "https://ja.wikipedia.org/wiki/テオドロス2世"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "イタリア軍がマレブ川まで進む（1900年の条約でマレブ川・ベレサ川・ムナ川を境と決める）"
+    note: "1895年にイタリア軍はティグレに進んだが、アドワの戦い（1896年）で敗れ、マレブ川の線に退いた"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1977
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "EPLF・ELF がデケムハレ・メンデフェラなどを落とす"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1978
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピア軍の反攻"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "EPLF がアスマラに入り事実上独立（1993年に正式に独立）"
+    note: "エチオピアとの国境（バドメなど）をめぐって1998–2000年に戦争となった（エチオピア・エリトリア国境紛争）"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_gash_barka
+  name: "ガシュ・バルカ（西部低地）"
+  select:
+    pieces: [ERI-Barentu, ERI-Tesseney, ERI-Omhajer, ERI-Akurdet, ERI-Haykota, ERI-Forto, ERI-Dige, ERI-Gogne, ERI-Lalay_Gash, ERI-Logo_Anseba, ERI-Mensura, ERI-Mogolo, ERI-Molqi, ERI-Shambuko]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "nominal"
+    note: "ベニ・アメル人・クナマ人などの地。ベニ・アメルはフンジ王国に従った"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1821
+    owner: null
+    cause: "フンジ王国の滅亡"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1840
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エジプト領スーダン（トルコ・エジプト支配）"
+    cause: "エジプトがタカ地方（カッサラ）を下し、バルカに勢力を広げる"
+    source: "https://en.wikipedia.org/wiki/Kassala"
+  - from: 1885
+    owner: "mahdist"
+    certainty: "uncertain"
+    cause: "マフディー国家の勢力がバルカに及ぶ"
+    source: "https://ja.wikipedia.org/wiki/マフディー国家"
+  - from: 1890
+    owner: "italy"
+    certainty: "nominal"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "イタリア軍がアゴルダトを占領"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1894
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "アゴルダトの戦い（1893年12月）とカッサラの占領（1894年7月）"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Agordat_(1893)"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1977
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "独立戦争。西部低地はおもにエリトリア解放戦線（ELF）が押さえる"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1978
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピア軍の反攻"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1990
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "EPLF が西部低地の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_danakil_north
+  name: "ダナキル海岸北部（ラハイタより北）"
+  select:
+    pieces: [ERI-Ghelaelo, ERI-Araeta, ERI-Maekel_Deb_Keih_Bahri]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "アファル人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Afar_people"
+  - from: 1888
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリアの保護領（ダナキル海岸）"
+    cause: "イタリアがアファルの首長たちと保護条約を結ぶ"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1900
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エチオピアとの境界条約（1900–08年）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1990
+    owner: "eritrea"
+    certainty: "uncertain"
+    cause: "EPLF が紅海沿岸の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: eri_assab
+  name: "アッサブ"
+  select:
+    pieces: [ERI-Asseb, ERI-Debub_Deb_Keih_Bahri]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "アファル人の地。南はラハイタのスルタン"
+    source: "https://en.wikipedia.org/wiki/Afar_people"
+  - from: 1869
+    owner: "italy"
+    certainty: "nominal"
+    label: "アッサブ（ルバッティーノ社の土地）"
+    cause: "イタリアのルバッティーノ汽船会社がアッサブの土地を買う（11月）"
+    source: "https://en.wikipedia.org/wiki/Assab"
+  - from: 1882
+    owner: "italy"
+    label: "アッサブ（イタリア領）"
+    cause: "イタリア政府がアッサブを買い取り、最初の植民地とする（1883年にラハイタのスルタンを保護下に）"
+    source: "https://en.wikipedia.org/wiki/Assab"
+  - from: 1890
+    owner: "italy"
+    label: "エリトリア（イタリアの植民地）"
+    cause: "エリトリア植民地"
+    source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（エリトリア）"
+    cause: "エチオピア併合ののち、イタリア領東アフリカとなる"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "エリトリア（イギリスの軍政）"
+    cause: "ケレンの戦い（3月）ののち、イギリス軍がエリトリアを占領"
+    source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  - from: 1952
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "エリトリア（エチオピアと連邦）"
+    cause: "国連決議でエリトリアがエチオピアと連邦を作る（9月）"
+    source: "https://ja.wikipedia.org/wiki/エリトリアの歴史"
+  - from: 1962
+    owner: "ethiopia"
+    label: "エリトリア州"
+    cause: "エチオピアが連邦を解消してエリトリアを併合（11月）。前年からエリトリア解放戦線（ELF）が武装闘争を始めていた"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  - from: 1991
+    owner: "eritrea"
+    cause: "エリトリア人民解放戦線（EPLF）がアスマラに入り（5月）、事実上独立。1993年の住民投票を経て正式に独立"
+    source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: dji_obock_tadjourah
+  name: "オボック・タジュラ"
+  select:
+    pieces: [DJI-Obock, DJI-Tadjourah]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "アファル人のタジュラ・スルタン国・ラハイタ・スルタン国などの小国の地"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Tadjoura"
+  - from: 1862
+    owner: "france"
+    certainty: "nominal"
+    label: "オボック（フランス領）"
+    cause: "フランスがアファルの首長からオボックを買う（3月）"
+    source: "https://en.wikipedia.org/wiki/Obock"
+  - from: 1884
+    owner: "france"
+    label: "オボック（フランス領）"
+    cause: "ラガルドが総督となり実際に治め始める。タジュラのスルタンを保護下に（1884年）"
+    source: "https://en.wikipedia.org/wiki/Obock"
+  - from: 1896
+    owner: "france"
+    label: "フランス領ソマリ海岸"
+    cause: "オボックとジブチを合わせてフランス領ソマリ海岸とする"
+    source: "https://ja.wikipedia.org/wiki/フランス領ソマリ海岸"
+  - from: 1940
+    owner: "vichy_france"
+    label: "フランス領ソマリ海岸"
+    cause: "フランスの降伏。ジブチはヴィシー政府に従う"
+    source: "https://en.wikipedia.org/wiki/French_Somaliland_in_World_War_II"
+  - from: 1942
+    owner: "france"
+    label: "フランス領ソマリ海岸"
+    cause: "イギリス軍の封鎖ののち、自由フランスに加わる（12月）"
+    source: "https://en.wikipedia.org/wiki/French_Somaliland_in_World_War_II"
+  - from: 1967
+    owner: "france"
+    label: "フランス領アファル・イッサ"
+    cause: "住民投票ののち名前を改める"
+    source: "https://en.wikipedia.org/wiki/French_Territory_of_the_Afars_and_the_Issas"
+  - from: 1977
+    owner: "djibouti"
+    cause: "ジブチが独立（6月27日）"
+    source: "https://ja.wikipedia.org/wiki/ジブチ"
+
+- id: dji_djibouti
+  name: "ジブチ市"
+  select:
+    pieces: [DJI-Djibouti]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "イッサ人（ソマリ系）の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Issa_(clan)"
+  - from: 1885
+    owner: "france"
+    certainty: "nominal"
+    label: "オボック（フランス領）"
+    cause: "フランスがイッサ人の首長と保護条約を結ぶ（3月）"
+    source: "https://ja.wikipedia.org/wiki/フランス領ソマリ海岸"
+  - from: 1888
+    owner: "france"
+    label: "オボック（フランス領）"
+    cause: "ジブチの町が築かれ、1892年に都となる"
+    source: "https://ja.wikipedia.org/wiki/ジブチ市"
+  - from: 1896
+    owner: "france"
+    label: "フランス領ソマリ海岸"
+    cause: "オボックとジブチを合わせてフランス領ソマリ海岸とする"
+    source: "https://ja.wikipedia.org/wiki/フランス領ソマリ海岸"
+  - from: 1940
+    owner: "vichy_france"
+    label: "フランス領ソマリ海岸"
+    cause: "フランスの降伏。ジブチはヴィシー政府に従う"
+    source: "https://en.wikipedia.org/wiki/French_Somaliland_in_World_War_II"
+  - from: 1942
+    owner: "france"
+    label: "フランス領ソマリ海岸"
+    cause: "イギリス軍の封鎖ののち、自由フランスに加わる（12月）"
+    source: "https://en.wikipedia.org/wiki/French_Somaliland_in_World_War_II"
+  - from: 1967
+    owner: "france"
+    label: "フランス領アファル・イッサ"
+    cause: "住民投票ののち名前を改める"
+    source: "https://en.wikipedia.org/wiki/French_Territory_of_the_Afars_and_the_Issas"
+  - from: 1977
+    owner: "djibouti"
+    cause: "ジブチが独立（6月27日）"
+    source: "https://ja.wikipedia.org/wiki/ジブチ"
+
+- id: dji_south
+  name: "ジブチ南部・西部（アルタ・アリ・サビエ・ディキル）"
+  select:
+    pieces: [DJI-Arta, DJI-Ali_Sabieh, DJI-Dikhil]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "イッサ人・アファル人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Issa_(clan)"
+  - from: 1885
+    owner: "france"
+    certainty: "nominal"
+    label: "オボック（フランス領）"
+    cause: "フランスがイッサ人の首長と保護条約を結ぶ（3月）"
+    source: "https://ja.wikipedia.org/wiki/フランス領ソマリ海岸"
+  - from: 1896
+    owner: "france"
+    certainty: "nominal"
+    label: "フランス領ソマリ海岸"
+    cause: "フランス領ソマリ海岸"
+    source: "https://ja.wikipedia.org/wiki/フランス領ソマリ海岸"
+  - from: 1897
+    owner: "france"
+    label: "フランス領ソマリ海岸"
+    cause: "エチオピアとの境界条約。ジブチ＝アディスアベバ鉄道の建設が始まる（1917年に全通）"
+    source: "https://ja.wikipedia.org/wiki/フランス領ソマリ海岸"
+  - from: 1940
+    owner: "vichy_france"
+    label: "フランス領ソマリ海岸"
+    cause: "フランスの降伏。ジブチはヴィシー政府に従う"
+    source: "https://en.wikipedia.org/wiki/French_Somaliland_in_World_War_II"
+  - from: 1942
+    owner: "france"
+    label: "フランス領ソマリ海岸"
+    cause: "イギリス軍の封鎖ののち、自由フランスに加わる（12月）"
+    source: "https://en.wikipedia.org/wiki/French_Somaliland_in_World_War_II"
+  - from: 1967
+    owner: "france"
+    label: "フランス領アファル・イッサ"
+    cause: "住民投票ののち名前を改める"
+    source: "https://en.wikipedia.org/wiki/French_Territory_of_the_Afars_and_the_Issas"
+  - from: 1977
+    owner: "djibouti"
+    cause: "ジブチが独立（6月27日）"
+    source: "https://ja.wikipedia.org/wiki/ジブチ"
+
+- id: som_awdal
+  name: "アウダル（ゼイラ）"
+  select:
+    pieces: [SOM-Awdal]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "港町ゼイラはイエメンのモカの総督が支配した。内陸はソマリ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Zeila"
+  - from: 1848
+    owner: "ottoman"
+    certainty: "nominal"
+    label: "ゼイラ（オスマン帝国）"
+    cause: "オスマン帝国のもとでソマリ人の商人アリー・シャルマルケがゼイラの総督となる"
+    source: "https://en.wikipedia.org/wiki/Zeila"
+  - from: 1874
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "ゼイラ（エジプト領）"
+    cause: "オスマン帝国がゼイラをエジプトに移す"
+    source: "https://en.wikipedia.org/wiki/Zeila"
+  - from: 1884
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "エジプト軍の撤退にあわせて、イギリスがソマリの諸氏族と保護条約を結ぶ（1884–86年）。1887年に保護領"
+    source: "https://ja.wikipedia.org/wiki/イギリス領ソマリランド"
+  - from: 1940
+    owner: "italy"
+    certainty: "occupied"
+    label: "イギリス領ソマリランド（イタリアの占領）"
+    cause: "イタリア軍が侵攻し、イギリス軍が退く（8月）"
+    source: "https://en.wikipedia.org/wiki/Italian_conquest_of_British_Somaliland"
+  - from: 1941
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "イギリス軍が奪回（3月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリランドが独立（6月26日）し、7月1日にソマリア（旧イタリア領）と合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somaliland"
+    cause: "ソマリア内戦のなか、ソマリランドが独立を宣言（5月）。国際的には承認されていない"
+    source: "https://ja.wikipedia.org/wiki/ソマリランド"
+
+- id: som_woqooyi_galbeed
+  name: "ウォーコイ・ガルビード（ベルベラ・ハルゲイサ）"
+  select:
+    pieces: [SOM-Woqooyi_Galbeed]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "イサーク氏族の遊牧地。港町ベルベラ"
+    source: "https://en.wikipedia.org/wiki/Berbera"
+  - from: 1875
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "ベルベラ（エジプト領）"
+    cause: "エジプトがベルベラを占領"
+    source: "https://en.wikipedia.org/wiki/Berbera"
+  - from: 1884
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "エジプト軍の撤退にあわせて、イギリスがソマリの諸氏族と保護条約を結ぶ（1887年に保護領）"
+    source: "https://ja.wikipedia.org/wiki/イギリス領ソマリランド"
+  - from: 1940
+    owner: "italy"
+    certainty: "occupied"
+    label: "イギリス領ソマリランド（イタリアの占領）"
+    cause: "イタリア軍が侵攻し、イギリス軍が退く（8月）"
+    source: "https://en.wikipedia.org/wiki/Italian_conquest_of_British_Somaliland"
+  - from: 1941
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "イギリス軍が奪回（3月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリランドが独立（6月26日）し、7月1日にソマリア（旧イタリア領）と合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somaliland"
+    cause: "ソマリア内戦のなか、ソマリランドが独立を宣言（5月）。国際的には承認されていない"
+    source: "https://ja.wikipedia.org/wiki/ソマリランド"
+
+- id: som_togdheer
+  name: "トグディール（ブラオ）"
+  select:
+    pieces: [SOM-Togdheer]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "イサーク氏族の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Isaaq"
+  - from: 1887
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリス領ソマリランド"
+    cause: "イギリスがソマリランドを保護領とする（内陸の支配は弱い）"
+    source: "https://ja.wikipedia.org/wiki/イギリス領ソマリランド"
+  - from: 1921
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "ダラーウィーシュ国家の崩壊ののち内陸を治める"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1940
+    owner: "italy"
+    certainty: "occupied"
+    label: "イギリス領ソマリランド（イタリアの占領）"
+    cause: "イタリア軍が侵攻し、イギリス軍が退く（8月）"
+    source: "https://en.wikipedia.org/wiki/Italian_conquest_of_British_Somaliland"
+  - from: 1941
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "イギリス軍が奪回（3月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリランドが独立（6月26日）し、7月1日にソマリア（旧イタリア領）と合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somaliland"
+    cause: "ソマリア内戦のなか、ソマリランドが独立を宣言（5月）。国際的には承認されていない"
+    source: "https://ja.wikipedia.org/wiki/ソマリランド"
+
+- id: som_sanaag
+  name: "サナーグ（エリガボ）"
+  select:
+    pieces: [SOM-Sanaag]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ワルサンガリ氏族のスルタン国などの地"
+    source: "https://en.wikipedia.org/wiki/Warsangali_Sultanate"
+  - from: 1887
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリス領ソマリランド"
+    cause: "イギリスがソマリランドを保護領とする（内陸の支配は弱い）"
+    source: "https://ja.wikipedia.org/wiki/イギリス領ソマリランド"
+  - from: 1921
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "ダラーウィーシュ国家の崩壊ののち内陸を治める"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1940
+    owner: "italy"
+    certainty: "occupied"
+    label: "イギリス領ソマリランド（イタリアの占領）"
+    cause: "イタリア軍が侵攻し、イギリス軍が退く（8月）"
+    source: "https://en.wikipedia.org/wiki/Italian_conquest_of_British_Somaliland"
+  - from: 1941
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "イギリス軍が奪回（3月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリランドが独立（6月26日）し、7月1日にソマリア（旧イタリア領）と合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somaliland"
+    certainty: "uncertain"
+    cause: "ソマリランドが独立を宣言（5月）"
+    note: "東部はプントランドも領有を主張する"
+    source: "https://ja.wikipedia.org/wiki/ソマリランド"
+
+- id: som_sool
+  name: "スール（ラス・アノード）"
+  select:
+    pieces: [SOM-Sool]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ドゥルバハンテ氏族の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Sool,_Somalia"
+  - from: 1887
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリス領ソマリランド"
+    cause: "イギリスがソマリランドを保護領とする（内陸の支配は弱い）"
+    source: "https://ja.wikipedia.org/wiki/イギリス領ソマリランド"
+  - from: 1900
+    owner: "dervish_state"
+    certainty: "uncertain"
+    cause: "ムハンマド・アブドゥッラー・ハサンがダラーウィーシュの運動を始め、イギリス・エチオピアと戦う（1899年–）"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1904
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリス領ソマリランド"
+    cause: "ジドバリの戦い（1月）でイギリス軍が勝ち、ダラーウィーシュはイタリア領に移る"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1910
+    owner: "dervish_state"
+    certainty: "uncertain"
+    cause: "イギリスが内陸から沿岸へ引き揚げ、ダラーウィーシュがタレーに砦を築く"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1920
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "イギリスの空爆と地上軍でダラーウィーシュ国家が崩れる（1–2月）"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1940
+    owner: "italy"
+    certainty: "occupied"
+    label: "イギリス領ソマリランド（イタリアの占領）"
+    cause: "イタリア軍が侵攻し、イギリス軍が退く（8月）"
+    source: "https://en.wikipedia.org/wiki/Italian_conquest_of_British_Somaliland"
+  - from: 1941
+    owner: "britain"
+    label: "イギリス領ソマリランド"
+    cause: "イギリス軍が奪回（3月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリランドが独立（6月26日）し、7月1日にソマリア（旧イタリア領）と合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somaliland"
+    certainty: "uncertain"
+    cause: "ソマリランドが独立を宣言（5月）"
+    note: "プントランドも領有を主張し、2007年まで両者が争った"
+    source: "https://ja.wikipedia.org/wiki/ソマリランド"
+  - from: 2023
+    owner: "somalia"
+    certainty: "uncertain"
+    label: "SSC-ハートゥモ（ソマリア連邦の州）"
+    cause: "ラス・アノードの戦闘でソマリランド軍が退く（8月）。地元の勢力がソマリア連邦に加わる"
+    source: "https://en.wikipedia.org/wiki/SSC-Khatumo"
+
+- id: som_bari
+  name: "バリ（ミジュルティニア）"
+  select:
+    pieces: [SOM-Bari]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "マジェールテーン氏族の地。乳香の産地"
+    source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+  - from: 1750
+    owner: "majeerteen"
+    certainty: "uncertain"
+    cause: "マジェールテーン・スルタン国（ミジュルティニア）の成立（18世紀なかば）"
+    source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+  - from: 1889
+    owner: "italy"
+    certainty: "indirect"
+    label: "ミジュルティニア・スルタン国（イタリアの保護国）"
+    cause: "スルタンがイタリアの保護を受け入れる（4月）"
+    source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+  - from: 1927
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "デ・ヴェッキ総督の遠征（1925–27年）でスルタン国を併合"
+    source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 1998
+    owner: "somalia"
+    certainty: "uncertain"
+    label: "プントランド（自治州）"
+    cause: "プントランドが自治を宣言（8月）"
+    source: "https://ja.wikipedia.org/wiki/プントランド"
+
+- id: som_nugaal
+  name: "ヌガール"
+  select:
+    pieces: [SOM-Nugaal]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソマリ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+  - from: 1889
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリアの勢力圏"
+    cause: "イタリアがミジュルティニア・ホビオを保護国とする"
+    source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+  - from: 1905
+    owner: "dervish_state"
+    certainty: "uncertain"
+    cause: "イリグ協定（3月）でダラーウィーシュがイタリアの名目的な保護のもとヌガール谷を得る"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1920
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリア領ソマリランド"
+    cause: "ダラーウィーシュ国家の崩壊"
+    source: "https://en.wikipedia.org/wiki/Dervish_movement_(Somali)"
+  - from: 1927
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "デ・ヴェッキ総督の遠征で北東部を併合"
+    source: "https://en.wikipedia.org/wiki/Majeerteen_Sultanate"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 1998
+    owner: "somalia"
+    certainty: "uncertain"
+    label: "プントランド（自治州）"
+    cause: "プントランドが自治を宣言（8月）"
+    source: "https://ja.wikipedia.org/wiki/プントランド"
+
+- id: som_mudug
+  name: "ムドゥグ（ホビオ）"
+  select:
+    pieces: [SOM-Mudug]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソマリ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1878
+    owner: "hobyo"
+    certainty: "uncertain"
+    cause: "ユースフ・アリー・ケナディードがホビオ・スルタン国を建てる"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1889
+    owner: "italy"
+    certainty: "indirect"
+    label: "ホビオ・スルタン国（イタリアの保護国）"
+    cause: "スルタンがイタリアの保護を受け入れる（2月）"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1925
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "デ・ヴェッキ総督の遠征でホビオを併合（10月）"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 1998
+    owner: "somalia"
+    certainty: "uncertain"
+    label: "プントランド（自治州）・ガルムドゥグ"
+    cause: "北部はプントランドに加わる（8月）"
+    source: "https://ja.wikipedia.org/wiki/プントランド"
+
+- id: som_galgaduud
+  name: "ガルグドゥード"
+  select:
+    pieces: [SOM-Galgaduud]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソマリ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1878
+    owner: "hobyo"
+    certainty: "uncertain"
+    cause: "ユースフ・アリー・ケナディードがホビオ・スルタン国を建てる"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1889
+    owner: "italy"
+    certainty: "indirect"
+    label: "ホビオ・スルタン国（イタリアの保護国）"
+    cause: "スルタンがイタリアの保護を受け入れる（2月）"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1925
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "デ・ヴェッキ総督の遠征でホビオを併合（10月）"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Hobyo"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+
+- id: som_banadir
+  name: "ベナディール（モガディシュ）"
+  select:
+    pieces: [SOM-Banadir]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "港町モガディシュ。アジュラーン・スルタン国の衰えののち、町の有力者が治めた"
+    source: "https://ja.wikipedia.org/wiki/モガディシュ"
+  - from: 1840
+    owner: "oman"
+    certainty: "nominal"
+    label: "モガディシュ（オマーンの名目的な宗主権）"
+    cause: "サイイド・サイードがベナディール海岸の港に宗主権を主張"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+  - from: 1856
+    owner: "zanzibar"
+    certainty: "nominal"
+    cause: "サイイド・サイードの死でザンジバルがオマーンから分かれる"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+  - from: 1892
+    owner: "italy"
+    label: "ベナディール（ザンジバルから租借）"
+    cause: "イタリアがザンジバルのスルタンからモガディシュなどを借りる（1905年に買い取る）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1905
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "イタリアがベナディールを買い取り、直轄植民地とする"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "エチオピア軍の撤退（1月）ののち、アル・シャバーブがモガディシュの大部分を押さえる（暫定政府とアフリカ連合軍は一部だけ）"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2011
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "アル・シャバーブがモガディシュから退く（8月）"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: som_lower_shabelle
+  name: "下シェベリ（アフゴイ・メルカ）"
+  select:
+    pieces: [SOM-Lower_Shebelle]
+  timeline:
+  - from: 1648
+    owner: "ajuran"
+    certainty: "uncertain"
+    note: "アジュラーン・スルタン国はシェベリ川の灌漑を押さえたが、17世紀に衰えた"
+    source: "https://en.wikipedia.org/wiki/Ajuran_Sultanate"
+  - from: 1700
+    owner: "geledi"
+    certainty: "uncertain"
+    cause: "アフゴイを都とするゲレディ・スルタン国がシェベリ川下流を治める"
+    source: "https://en.wikipedia.org/wiki/Geledi_Sultanate"
+  - from: 1908
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "イタリアがシェベリ川流域を支配（ゲレディが服属）"
+    source: "https://en.wikipedia.org/wiki/Geledi_Sultanate"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブが南部・中部の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2012
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "アフリカ連合軍と政府軍がアフゴイなどを奪う"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: som_middle_shabelle
+  name: "中シェベリ（ジョウハル）"
+  select:
+    pieces: [SOM-Middle_Shebelle]
+  timeline:
+  - from: 1648
+    owner: "ajuran"
+    certainty: "uncertain"
+    note: "アジュラーン・スルタン国の地（17世紀に衰えた）"
+    source: "https://en.wikipedia.org/wiki/Ajuran_Sultanate"
+  - from: 1700
+    owner: null
+    cause: "アジュラーン・スルタン国の崩壊（17世紀末）。ハウィエ氏族の地"
+    source: "https://en.wikipedia.org/wiki/Ajuran_Sultanate"
+  - from: 1892
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリアの勢力圏"
+    cause: "イタリアがザンジバルのスルタンからベナディール海岸の港を借りる（1892年。1905年に買い取る）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1908
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "イタリアの直轄植民地となり（1905–08年）、シェベリ川流域を支配"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブが南部・中部の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2012
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "アフリカ連合軍・エチオピア軍・政府軍がバイドア（2月）などを奪う"
+    note: "農村の多くはなおアル・シャバーブの影響下にある"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: som_hiiraan
+  name: "ヒーラーン（ベレドウェイン）"
+  select:
+    pieces: [SOM-Hiiraan]
+  timeline:
+  - from: 1648
+    owner: "ajuran"
+    certainty: "uncertain"
+    note: "アジュラーン・スルタン国の地（17世紀に衰えた）"
+    source: "https://en.wikipedia.org/wiki/Ajuran_Sultanate"
+  - from: 1700
+    owner: null
+    cause: "アジュラーン・スルタン国の崩壊（17世紀末）。ハウィエ氏族の地"
+    source: "https://en.wikipedia.org/wiki/Ajuran_Sultanate"
+  - from: 1908
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリア領ソマリランド"
+    cause: "イタリアとエチオピアの境界協定（1908年）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1925
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "デ・ヴェッキ総督のもとで内陸の支配を固める"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブが南部・中部の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2012
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "アフリカ連合軍・エチオピア軍・政府軍がバイドア（2月）などを奪う"
+    note: "農村の多くはなおアル・シャバーブの影響下にある"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: som_bay
+  name: "ベイ（バイドア）"
+  select:
+    pieces: [SOM-Bay]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ラハンウェイン氏族の農牧の地"
+    source: "https://en.wikipedia.org/wiki/Rahanweyn"
+  - from: 1908
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリア領ソマリランド"
+    cause: "イタリアとエチオピアの境界協定（1908年）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1925
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "デ・ヴェッキ総督のもとで内陸の支配を固める"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブが南部・中部の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2012
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "アフリカ連合軍・エチオピア軍・政府軍がバイドア（2月）などを奪う"
+    note: "農村の多くはなおアル・シャバーブの影響下にある"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: som_bakool
+  name: "バコール"
+  select:
+    pieces: [SOM-Bakool]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ラハンウェイン氏族の農牧の地"
+    source: "https://en.wikipedia.org/wiki/Rahanweyn"
+  - from: 1908
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリア領ソマリランド"
+    cause: "イタリアとエチオピアの境界協定（1908年）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1925
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "デ・ヴェッキ総督のもとで内陸の支配を固める"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブが南部・中部の大部分を押さえる"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2012
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "アフリカ連合軍・エチオピア軍・政府軍がバイドア（2月）などを奪う"
+    note: "農村の多くはなおアル・シャバーブの影響下にある"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: som_middle_juba
+  name: "中ジュバ（ジリブ）"
+  select:
+    pieces: [SOM-Middle_Juba]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ジュバ川流域。農耕民と遊牧民の地"
+    source: "https://en.wikipedia.org/wiki/Middle_Juba"
+  - from: 1892
+    owner: "italy"
+    certainty: "nominal"
+    label: "イタリアの勢力圏"
+    cause: "イタリアがザンジバルのスルタンからベナディール海岸の港を借りる（1892年。1905年に買い取る）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1908
+    owner: "italy"
+    label: "イタリア領ソマリランド"
+    cause: "イタリアの直轄植民地となり（1905–08年）、シェベリ川流域を支配"
+    source: "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブが南部を押さえる（ジリブが拠点となり、2025年まで続く）"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: som_lower_juba
+  name: "下ジュバ（キスマヨ）"
+  select:
+    pieces: [SOM-Lower_Juba]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ジュバ川河口。ソマリ人・バントゥー系の農耕民の地"
+    source: "https://en.wikipedia.org/wiki/Kismayo"
+  - from: 1872
+    owner: "zanzibar"
+    certainty: "nominal"
+    label: "キスマヨ（ザンジバル領）"
+    cause: "ザンジバルのスルタンがキスマヨに駐屯地を置く"
+    source: "https://en.wikipedia.org/wiki/Kismayo"
+  - from: 1895
+    owner: "britain"
+    certainty: "nominal"
+    label: "ジュバランド（東アフリカ保護領）"
+    cause: "イギリスの東アフリカ保護領に入る（1891年から帝国イギリス東アフリカ会社が治めた）"
+    source: "https://en.wikipedia.org/wiki/Jubaland"
+  - from: 1910
+    owner: "britain"
+    label: "ジュバランド（東アフリカ保護領）"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1925
+    owner: "italy"
+    label: "オルトレ・ジュバ（イタリア領）"
+    cause: "第一次世界大戦のロンドン秘密条約の約束で、イギリスがジュバランドをイタリアに譲る（1925年6月。翌年イタリア領ソマリランドに合わせる）"
+    source: "https://en.wikipedia.org/wiki/Trans-Juba"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブがキスマヨを押さえる"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2012
+    owner: "somalia"
+    certainty: "uncertain"
+    label: "ジュバランド（自治州）"
+    cause: "ケニア軍とラス・カンボニ民兵がキスマヨを奪う（9月）。2013年にジュバランド州"
+    source: "https://en.wikipedia.org/wiki/Jubaland"
+
+- id: som_gedo
+  name: "ゲド（バルデラ）"
+  select:
+    pieces: [SOM-Gedo]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソマリ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Gedo"
+  - from: 1895
+    owner: "britain"
+    certainty: "nominal"
+    label: "ジュバランド（東アフリカ保護領）"
+    cause: "イギリスの東アフリカ保護領に入る"
+    source: "https://en.wikipedia.org/wiki/Jubaland"
+  - from: 1925
+    owner: "italy"
+    label: "オルトレ・ジュバ（イタリア領）"
+    cause: "第一次世界大戦のロンドン秘密条約の約束で、イギリスがジュバランドをイタリアに譲る（1925年6月。翌年イタリア領ソマリランドに合わせる）"
+    source: "https://en.wikipedia.org/wiki/Trans-Juba"
+  - from: 1936
+    owner: "italy"
+    label: "イタリア領東アフリカ（ソマリア）"
+    cause: "エチオピア併合ののち、エリトリア・ソマリアと合わせてイタリア領東アフリカとなる（6月）"
+    source: "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "ソマリア（イギリスの軍政）"
+    cause: "第二次世界大戦の東アフリカ戦線。イギリス軍が占領（2月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1950
+    owner: "italy"
+    label: "ソマリア信託統治領（イタリアの施政）"
+    cause: "国際連合の信託統治領となり、10年後の独立を約束してイタリアが施政（4月）"
+    source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  - from: 1960
+    owner: "somalia"
+    cause: "ソマリアが独立（7月1日）し、旧イギリス領ソマリランドと合わさる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア"
+  - from: 1991
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "バーレ政権が倒れ（1月）、中央政府のない内戦となる"
+    source: "https://ja.wikipedia.org/wiki/ソマリア内戦"
+  - from: 2009
+    owner: "al_shabaab"
+    certainty: "uncertain"
+    cause: "アル・シャバーブが南部を押さえる"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+  - from: 2012
+    owner: "somalia"
+    certainty: "uncertain"
+    cause: "エチオピア軍・ケニア軍の介入で政府側が町を奪う"
+    source: "https://ja.wikipedia.org/wiki/アル・シャバブ_(ソマリア)"
+
+- id: eth_gondar_gojjam
+  name: "ゴンダール・ゴッジャム・ラスタ"
+  select:
+    pieces: [ETH-North_Gonder, ETH-South_Gonder, ETH-West_Gojam, ETH-East_Gojam, ETH-Awi_Agew, ETH-Wag_Himra, ETH-Western]
+  timeline:
+  - from: 1648
+    owner: "ethiopia"
+    note: "ソロモン朝の皇帝の本拠。ファシリデスが1636年にゴンダールを都とした"
+    source: "https://ja.wikipedia.org/wiki/ゴンダール"
+  - from: 1769
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "皇帝イヨアス1世がティグレのラス・ミカエル・セフルに殺される。諸侯が皇帝を操る「諸侯の時代」（ゼメネ・メサフィント）となる"
+    source: "https://en.wikipedia.org/wiki/Zemene_Mesafint"
+  - from: 1855
+    owner: "ethiopia"
+    cause: "カッサがテオドロス2世として即位し、諸侯の時代を終わらせる（2月）"
+    source: "https://ja.wikipedia.org/wiki/テオドロス2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命。デルグ（臨時軍事行政評議会）が皇帝を退ける（9月）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_tigray
+  name: "ティグレ"
+  select:
+    pieces: [ETH-Central, ETH-Eastern, ETH-North_Western, ETH-Southern]
+  timeline:
+  - from: 1648
+    owner: "ethiopia"
+    note: "ティグレの諸侯（ラス）が皇帝に従って治めた"
+    source: "https://ja.wikipedia.org/wiki/ティグレ州"
+  - from: 1769
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "諸侯の時代（ゼメネ・メサフィント）。ティグレのラス・ミカエル・セフルが皇帝を操った"
+    source: "https://en.wikipedia.org/wiki/Zemene_Mesafint"
+  - from: 1855
+    owner: "ethiopia"
+    cause: "カッサがテオドロス2世として即位し、諸侯の時代を終わらせる（2月）"
+    source: "https://ja.wikipedia.org/wiki/テオドロス2世"
+  - from: 1935
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリアの占領）"
+    cause: "第二次エチオピア戦争。イタリア軍がエリトリアから侵攻し、アドワ・アクスム・メケレを占領（10–11月）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+  - from: 1989
+    owner: "tplf"
+    certainty: "uncertain"
+    cause: "ティグレ人民解放戦線（TPLF）がティグレ全域を押さえる（2月）。同年、ほかの勢力とエチオピア人民革命民主戦線（EPRDF）を作る"
+    source: "https://en.wikipedia.org/wiki/Tigray_People%27s_Liberation_Front"
+  - from: 1991
+    owner: "ethiopia"
+    cause: "EPRDF がアディスアベバに入りメンギスツ政権が倒れる（5月）"
+    source: "https://ja.wikipedia.org/wiki/エチオピア人民革命民主戦線"
+  - from: 2021
+    owner: "tplf"
+    certainty: "uncertain"
+    cause: "ティグレ戦争（2020年11月–）。TPLF の軍が州都メケレを奪い返す（6月）"
+    source: "https://ja.wikipedia.org/wiki/ティグレ紛争"
+  - from: 2022
+    owner: "ethiopia"
+    cause: "プレトリア合意（11月）で戦闘が終わる。2023年にティグレ暫定行政府"
+    source: "https://ja.wikipedia.org/wiki/ティグレ紛争"
+
+- id: eth_wollo
+  name: "ウォロ"
+  select:
+    pieces: [ETH-North_Wollo, ETH-South_Wollo, ETH-Oromia, ETH-Special_Woreda]
+  timeline:
+  - from: 1648
+    owner: "ethiopia"
+    certainty: "uncertain"
+    note: "16世紀からオロモ人が移り住み、皇帝の支配は弱い"
+    source: "https://en.wikipedia.org/wiki/Wollo_Province"
+  - from: 1769
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "諸侯の時代。オロモ系のイェジュ家（ラス・アリなど）が実権を握った"
+    source: "https://en.wikipedia.org/wiki/Zemene_Mesafint"
+  - from: 1855
+    owner: "ethiopia"
+    cause: "カッサがテオドロス2世として即位し、諸侯の時代を終わらせる（2月）"
+    source: "https://ja.wikipedia.org/wiki/テオドロス2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）。前年のウォロの大飢饉が帝政の崩壊を早めた"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_shewa_core
+  name: "北シェワ（アンコベル・メンズ）"
+  select:
+    pieces: [ETH-North_Shewa_R3]
+  timeline:
+  - from: 1648
+    owner: "ethiopia"
+    certainty: "nominal"
+    note: "16世紀のオロモ人の移住で、アムハラ人はメンズなどの山地に残った"
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Shewa"
+  - from: 1700
+    owner: "shewa"
+    certainty: "uncertain"
+    cause: "メンズのネガシ・クレストスの家系がシェワを治め、皇帝から自立していく"
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Shewa"
+  - from: 1856
+    owner: "ethiopia"
+    cause: "テオドロス2世がシェワを征服（1855年11月–1856年）"
+    source: "https://ja.wikipedia.org/wiki/テオドロス2世"
+  - from: 1865
+    owner: "shewa"
+    cause: "メネリクがマグダラから逃れてシェワ王となる（6月）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1878
+    owner: "shewa"
+    overlord: "ethiopia"
+    cause: "メネリクがヨハネス4世に服属（1878年3月）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "ヨハネス4世の戦死ののち、メネリクがエチオピア皇帝メネリク2世となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_shewa_south
+  name: "南シェワ（サララ・アディスアベバ）"
+  select:
+    pieces: [ETH-North_Shewa_R4, ETH-Region_14]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1830
+    owner: "shewa"
+    certainty: "uncertain"
+    cause: "シェワ王サーレ・セラシエがオロモ人の地に勢力を広げる"
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Shewa"
+  - from: 1856
+    owner: "ethiopia"
+    cause: "テオドロス2世がシェワを征服"
+    source: "https://ja.wikipedia.org/wiki/テオドロス2世"
+  - from: 1865
+    owner: "shewa"
+    cause: "メネリクがシェワ王となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1878
+    owner: "shewa"
+    overlord: "ethiopia"
+    cause: "メネリクがヨハネス4世に服属"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "メネリク2世の即位（1886年に都アディスアベバが築かれた）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_shewa_west_east
+  name: "西・南西・東シェワ"
+  select:
+    pieces: [ETH-West_Shewa, ETH-South_West_Shewa, ETH-East_Shewa]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1878
+    owner: "shewa"
+    overlord: "ethiopia"
+    cause: "シェワ王メネリクがオロモ人の地を征服していく（1870年代）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "メネリク2世がエチオピア皇帝となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_gurage
+  name: "グラゲ・シルテ"
+  select:
+    pieces: [ETH-Gurage, ETH-Selti]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "グラゲ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1880
+    owner: "shewa"
+    overlord: "ethiopia"
+    certainty: "uncertain"
+    cause: "メネリクのグラゲ遠征（1875–89年）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "メネリク2世がエチオピア皇帝となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_wellega
+  name: "ウォレガ・ホロ・グドゥル"
+  select:
+    pieces: [ETH-Horo_Guduru, ETH-East_Wellega, ETH-West_Wellega, ETH-Kelem_Wellega]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1882
+    owner: "shewa"
+    overlord: "ethiopia"
+    certainty: "uncertain"
+    cause: "レカ（ネケムテ・カレム）のオロモ人の王たちがメネリクに服属。エンバボの戦いでゴッジャム王を破る"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "メネリク2世がエチオピア皇帝となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_arsi
+  name: "アルシ"
+  select:
+    pieces: [ETH-Arsi, ETH-West_Arsi]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1886
+    owner: "shewa"
+    overlord: "ethiopia"
+    cause: "アルシ・オロモ人の征服（1882–86年）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "メネリク2世がエチオピア皇帝となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_ilubabor
+  name: "イルバボル"
+  select:
+    pieces: [ETH-Ilubabor]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1890
+    owner: "ethiopia"
+    cause: "ラス・テセンマの遠征でエチオピアに組み込まれる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_bale
+  name: "バレ"
+  select:
+    pieces: [ETH-Bale]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1891
+    owner: "ethiopia"
+    cause: "メネリク2世の軍がバレを征服"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_sidamo
+  name: "シダマ・ゲデオ・グジ"
+  select:
+    pieces: [ETH-Sidama, ETH-Gedio, ETH-Guji]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "シダマ人などの地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1893
+    owner: "ethiopia"
+    cause: "シダモの征服（1891–96年）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_hadiya
+  name: "ハディヤ・ケンバタ・アラバ・イェム"
+  select:
+    pieces: [ETH-Hadiya, ETH-KT, ETH-Alaba, ETH-Yem]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ハディヤ人・ケンバタ人・ジャンジェロ（イェム）王国などの地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1890
+    owner: "ethiopia"
+    cause: "メネリクの軍がハディヤ・ケンバタ（1890年代）・ジャンジェロ（イェム、1894年）を従える"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_wolaita
+  name: "ウォライタ"
+  select:
+    pieces: [ETH-Wolayita]
+  timeline:
+  - from: 1648
+    owner: "wolaita"
+    note: "ウォライタ王国"
+  - from: 1894
+    owner: "ethiopia"
+    cause: "メネリク2世の軍がウォライタ王国を征服（12月）"
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Welayta"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_omo
+  name: "ダウロ・コンタ・ガモ・ゴファ"
+  select:
+    pieces: [ETH-Dawro, ETH-Konta, ETH-Gamo_Gofa, ETH-Basketo]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ダウロ・コンタ・ガモなどのオモ系の小王国の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1896
+    owner: "ethiopia"
+    cause: "メネリク2世の軍がダウロ・コンタ・ガモなどの小王国を従える（1890年代）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_kaffa
+  name: "カッファ"
+  select:
+    pieces: [ETH-Keffa, ETH-Sheka]
+  timeline:
+  - from: 1648
+    owner: "kaffa"
+    note: "カッファ王国（コーヒーの名の由来とされる）"
+  - from: 1897
+    owner: "ethiopia"
+    cause: "メネリク2世の軍がカッファ王国を征服し、王ガキ・シェロチョを捕らえる"
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Kaffa"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_jimma
+  name: "ジンマ"
+  select:
+    pieces: [ETH-Jimma]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1790
+    owner: "jimma"
+    cause: "アッバ・ジファル1世の家系がジンマ王国（ギベ川流域のオロモ人の王国）を建てる（1830年ごろ王を称する）"
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Jimma"
+  - from: 1882
+    owner: "jimma"
+    overlord: "ethiopia"
+    cause: "アッバ・ジファル2世がメネリクに服属し、貢納して自治を保つ"
+    source: "https://en.wikipedia.org/wiki/Abba_Jifar_II"
+  - from: 1889
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "ジンマ王国（エチオピアの自治国）"
+    cause: "メネリク2世の即位"
+    source: "https://en.wikipedia.org/wiki/Abba_Jifar_II"
+  - from: 1932
+    owner: "ethiopia"
+    cause: "アッバ・ジファル2世の死後、ハイレ・セラシエが自治を廃止"
+    source: "https://en.wikipedia.org/wiki/Kingdom_of_Jimma"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_southwest
+  name: "ベンチ・マジ・南オモ・セゲン"
+  select:
+    pieces: [ETH-Bench_Maji, ETH-South_Omo, ETH-Segen_Peoples]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "牧畜民の地。大きな国家はない"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1898
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "メネリク2世の軍がトゥルカナ湖（ルドルフ湖）まで進む"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イタリア軍の敗退。戦後エチオピアの行政が及んでいく"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_borena
+  name: "ボラナ・リベン"
+  select:
+    pieces: [ETH-Borena, ETH-Liben]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ボラナ・オロモ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1897
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "メネリク2世の軍がボラナを征服"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イタリア軍の敗退。戦後エチオピアの行政が及ぶ"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_gambela
+  name: "ガンベラ"
+  select:
+    pieces: [ETH-Agnuak, ETH-Nuer, ETH-Majang]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "アニュワク人・ヌエル人の地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1898
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "エチオピアの軍が南西の低地に進む（1902年に英国とスーダン国境を決める）"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イタリア軍の敗退"
+    note: "ガンベラの小さな港は1902–56年、スーダン（イギリス）が借りた"
+    source: "https://en.wikipedia.org/wiki/Gambela,_Ethiopia"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_benishangul
+  name: "ベニシャングル（アソサ・メテケル・カマシ）"
+  select:
+    pieces: [ETH-Asosa, ETH-Metekel, ETH-Kemashi]
+  timeline:
+  - from: 1648
+    owner: "funj"
+    certainty: "nominal"
+    note: "ベニシャングルの首長国はフンジ王国に従った"
+  - from: 1821
+    owner: null
+    cause: "フンジ王国の滅亡。エジプト・マフディー国家が金と奴隷を求めて攻め込む"
+    source: "https://ja.wikipedia.org/wiki/フンジ・スルタン国"
+  - from: 1898
+    owner: "ethiopia"
+    cause: "メネリク2世の軍がベニシャングルの首長国を従える"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_harar_city
+  name: "ハラール"
+  select:
+    pieces: [ETH-Hareri]
+  timeline:
+  - from: 1648
+    owner: "harar"
+    note: "ハラール・アミール国（1647年–）。城壁の町で、イスラーム学問と交易の中心"
+  - from: 1875
+    owner: "egypt"
+    overlord: "ottoman"
+    label: "ハラール（エジプト領）"
+    cause: "エジプト軍がハラールを占領（10月）"
+    source: "https://en.wikipedia.org/wiki/Emirate_of_Harar"
+  - from: 1885
+    owner: "harar"
+    cause: "エジプト軍が撤退し、アミール・アブドゥッラーヒが立つ"
+    source: "https://en.wikipedia.org/wiki/Emirate_of_Harar"
+  - from: 1887
+    owner: "shewa"
+    overlord: "ethiopia"
+    cause: "チェレンコの戦い（1月）でメネリクがハラールを征服"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Chelenqo"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "メネリク2世がエチオピア皇帝となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_harerge
+  name: "ハラルゲ・ディレ・ダワ"
+  select:
+    pieces: [ETH-East_Harerge, ETH-West_Harerge, ETH-Dire_Dawa]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "オロモ人の地。ハラールのアミールの勢力が及んだ"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1875
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "ハラール（エジプト領）"
+    cause: "エジプト軍がハラールを占領"
+    source: "https://en.wikipedia.org/wiki/Emirate_of_Harar"
+  - from: 1885
+    owner: null
+    cause: "エジプト軍の撤退"
+    source: "https://en.wikipedia.org/wiki/Emirate_of_Harar"
+  - from: 1887
+    owner: "shewa"
+    overlord: "ethiopia"
+    certainty: "uncertain"
+    cause: "メネリクがハラールを征服"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Chelenqo"
+  - from: 1889
+    owner: "ethiopia"
+    cause: "メネリク2世がエチオピア皇帝となる"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イギリス軍とエチオピアの抵抗勢力がイタリア軍を破り、ハイレ・セラシエが帰還（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+
+- id: eth_ogaden_north
+  name: "ジジガ・シティ（オガデン北部）"
+  select:
+    pieces: [ETH-Fafan, ETH-Jarar, ETH-Siti]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソマリ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1891
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "メネリク2世がオガデンの領有を宣言し、軍を送る（1897年にイギリスと国境を決める）"
+    source: "https://en.wikipedia.org/wiki/Ogaden"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "オガデン（イギリスの軍政）"
+    cause: "イタリア軍を破ったイギリス軍がオガデンを軍政下に置く"
+    source: "https://en.wikipedia.org/wiki/Ogaden"
+  - from: 1948
+    owner: "ethiopia"
+    cause: "イギリスがオガデンをエチオピアに返す（9月。ハウドは1955年）"
+    source: "https://en.wikipedia.org/wiki/Ogaden"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+  - from: 1977
+    owner: "somalia"
+    certainty: "occupied"
+    label: "オガデン（ソマリア軍の占領）"
+    cause: "オガデン戦争。ソマリア軍が侵攻しオガデンの大部分を占領（7–9月）"
+    source: "https://ja.wikipedia.org/wiki/オガデン戦争"
+  - from: 1978
+    owner: "ethiopia"
+    cause: "ソ連・キューバの支援を受けたエチオピア軍の反攻でソマリア軍が退く（3月）"
+    source: "https://ja.wikipedia.org/wiki/オガデン戦争"
+
+- id: eth_ogaden_south
+  name: "オガデン南部"
+  select:
+    pieces: [ETH-Nogob, ETH-Korahe, ETH-Shabelle, ETH-Doolo, ETH-Afder]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソマリ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Oromo_people"
+  - from: 1891
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "メネリク2世がオガデンの領有を宣言"
+    source: "https://en.wikipedia.org/wiki/Ogaden"
+  - from: 1935
+    owner: "italy"
+    certainty: "occupied"
+    label: "オガデン（イタリアの占領）"
+    cause: "ワルワル事件（1934年12月）ののち、イタリア軍がソマリアから侵攻しゴラハイなどを占領"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争。イタリア軍がアディスアベバに入り（1936年5月）、イタリア領東アフリカに組み込む（戦後無効）"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "britain"
+    certainty: "occupied"
+    label: "オガデン（イギリスの軍政）"
+    cause: "イタリア軍を破ったイギリス軍がオガデンを軍政下に置く"
+    source: "https://en.wikipedia.org/wiki/Ogaden"
+  - from: 1948
+    owner: "ethiopia"
+    cause: "イギリスがオガデンをエチオピアに返す（9月。ハウドは1955年）"
+    source: "https://en.wikipedia.org/wiki/Ogaden"
+  - from: 1974
+    owner: "ethiopia"
+    cause: "エチオピア革命（デルグ）"
+    source: "https://ja.wikipedia.org/wiki/デルグ"
+  - from: 1977
+    owner: "somalia"
+    certainty: "occupied"
+    label: "オガデン（ソマリア軍の占領）"
+    cause: "オガデン戦争。ソマリア軍が侵攻しオガデンの大部分を占領（7–9月）"
+    source: "https://ja.wikipedia.org/wiki/オガデン戦争"
+  - from: 1978
+    owner: "ethiopia"
+    cause: "ソ連・キューバの支援を受けたエチオピア軍の反攻でソマリア軍が退く（3月）"
+    source: "https://ja.wikipedia.org/wiki/オガデン戦争"
+
+- id: eth_aussa
+  name: "アウサ（アファル州南部）"
+  select:
+    pieces: [ETH-Zone_1, ETH-Zone_3, ETH-Zone_4, ETH-Zone_5]
+  timeline:
+  - from: 1648
+    owner: "aussa"
+    certainty: "uncertain"
+    note: "アウサのイマーム国（1577年–）。1734年からムダイト家のスルタン国"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Aussa"
+  - from: 1896
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "アウサ・スルタン国（エチオピアの自治国）"
+    cause: "スルタンがメネリク2世に服属し、自治を保つ"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Aussa"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    certainty: "indirect"
+    label: "アウサ・スルタン国（エチオピアの自治国）"
+    cause: "イタリア軍の敗退"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  - from: 1975
+    owner: "ethiopia"
+    cause: "デルグがアウサ・スルタン国を廃止（スルタンはサウジアラビアに亡命）"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Aussa"
+
+- id: eth_afar_north
+  name: "ダナキル（アファル州北部）"
+  select:
+    pieces: [ETH-Zone_2]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "アファル人の遊牧地（ダナキル砂漠・塩の産地）"
+    source: "https://en.wikipedia.org/wiki/Afar_Region"
+  - from: 1896
+    owner: "ethiopia"
+    certainty: "nominal"
+    cause: "メネリク2世のもとでティグレの諸侯の勢力が及ぶ"
+    source: "https://ja.wikipedia.org/wiki/メネリク2世"
+  - from: 1936
+    owner: "italy"
+    certainty: "occupied"
+    label: "エチオピア（イタリア領東アフリカ）"
+    cause: "第二次エチオピア戦争"
+    source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+  - from: 1941
+    owner: "ethiopia"
+    cause: "イタリア軍の敗退"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+
+- id: ken_mombasa
+  name: "モンバサ"
+  select:
+    pieces: [KEN-Changamwe, KEN-Jomvu, KEN-Kisauni, KEN-Likoni, KEN-Mvita, KEN-Nyali]
+  timeline:
+  - from: 1648
+    owner: "portugal"
+    label: "モンバサ（ポルトガル領）"
+    note: "ポルトガルのジェズス要塞（1593年）。インド洋交易の拠点"
+    source: "https://ja.wikipedia.org/wiki/ジーザス要塞"
+  - from: 1698
+    owner: "oman"
+    label: "モンバサ（オマーン領）"
+    cause: "オマーン軍が2年半の包囲ののちジェズス要塞を落とす（12月）"
+    source: "https://en.wikipedia.org/wiki/Siege_of_Fort_Jesus_(1696%E2%80%931698)"
+  - from: 1728
+    owner: "portugal"
+    label: "モンバサ（ポルトガル領）"
+    cause: "ポルトガルがモンバサを一時取り戻す（3月）"
+    source: "https://en.wikipedia.org/wiki/Fort_Jesus"
+  - from: 1729
+    owner: "oman"
+    label: "モンバサ（オマーン領）"
+    cause: "ポルトガルが再び退く（11月）"
+    source: "https://en.wikipedia.org/wiki/Fort_Jesus"
+  - from: 1741
+    owner: "mazrui"
+    cause: "モンバサの総督マズルイ家が、オマーンの新しいブーサイード朝に従わず自立"
+    source: "https://en.wikipedia.org/wiki/Mazrui"
+  - from: 1837
+    owner: "oman"
+    label: "モンバサ（オマーン領）"
+    cause: "サイイド・サイードがマズルイ家を滅ぼしモンバサを征服"
+    note: "1824–26年にはマズルイ家がイギリスの保護を求め、オーウェン艦長が保護を宣言したが、イギリス政府は認めなかった"
+    source: "https://en.wikipedia.org/wiki/Mazrui"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "サイイド・サイードの死でザンジバルがオマーンから分かれる（1861年のカニング裁定で確定）"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+  - from: 1895
+    owner: "britain"
+    label: "東アフリカ保護領（ザンジバル領の沿岸部）"
+    cause: "イギリスが東アフリカ保護領を置く（7月）。沿岸の帯状の地はザンジバルのスルタンから租借"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア保護領（沿岸部）"
+    cause: "東アフリカ保護領がケニア植民地となる。沿岸部はスルタンの名目的な主権のもとの保護領"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）。沿岸部もスルタンが主権を譲ってケニアに加わる"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_swahili_coast
+  name: "マリンディ・キリフィ・クワレの海岸"
+  select:
+    pieces: [KEN-Malindi, KEN-Kilifi_North, KEN-Kilifi_South, KEN-Magarini, KEN-Msambweni, KEN-Matuga, KEN-Lunga_Lunga]
+  timeline:
+  - from: 1648
+    owner: "portugal"
+    certainty: "nominal"
+    label: "スワヒリ海岸（ポルトガルの勢力圏）"
+    note: "マリンディのスルタンはポルトガルと結び、1593年にモンバサに移った"
+    source: "https://ja.wikipedia.org/wiki/マリンディ"
+  - from: 1698
+    owner: "oman"
+    certainty: "nominal"
+    cause: "オマーンがモンバサを落とす"
+    source: "https://en.wikipedia.org/wiki/Fort_Jesus"
+  - from: 1741
+    owner: "mazrui"
+    certainty: "uncertain"
+    cause: "モンバサのマズルイ家が自立し、周りの海岸に勢力を及ぼす"
+    source: "https://en.wikipedia.org/wiki/Mazrui"
+  - from: 1837
+    owner: "oman"
+    cause: "サイイド・サイードがモンバサを征服"
+    source: "https://en.wikipedia.org/wiki/Mazrui"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "ザンジバルがオマーンから分かれる"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+  - from: 1895
+    owner: "britain"
+    label: "東アフリカ保護領（ザンジバル領の沿岸部）"
+    cause: "イギリスが東アフリカ保護領を置く（7月）。沿岸の帯状の地はザンジバルのスルタンから租借"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア保護領（沿岸部）"
+    cause: "東アフリカ保護領がケニア植民地となる。沿岸部はスルタンの名目的な主権のもとの保護領"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）。沿岸部もスルタンが主権を譲ってケニアに加わる"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_pate
+  name: "パテ島（ラム東部）"
+  select:
+    pieces: [KEN-Lamu_East]
+  timeline:
+  - from: 1648
+    owner: "pate"
+    note: "ナブハーニー家のパテ・スルタン国。17–18世紀にスワヒリ海岸北部で最も強い都市国家"
+    source: "https://en.wikipedia.org/wiki/Pate_Island"
+  - from: 1824
+    owner: "oman"
+    certainty: "uncertain"
+    cause: "オマーンのサイイド・サイードがパテを従える（1810年代–20年代。その後もシウなどが反乱）"
+    source: "https://en.wikipedia.org/wiki/Pate_Island"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "ザンジバルがオマーンから分かれる"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+  - from: 1895
+    owner: "britain"
+    label: "東アフリカ保護領（ザンジバル領の沿岸部）"
+    cause: "イギリスが東アフリカ保護領を置く（7月）。沿岸の帯状の地はザンジバルのスルタンから租借"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア保護領（沿岸部）"
+    cause: "東アフリカ保護領がケニア植民地となる。沿岸部はスルタンの名目的な主権のもとの保護領"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）。沿岸部もスルタンが主権を譲ってケニアに加わる"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_lamu_witu
+  name: "ラム・ウィトゥ（ラム西部）"
+  select:
+    pieces: [KEN-Lamu_West]
+  timeline:
+  - from: 1648
+    owner: "pate"
+    certainty: "uncertain"
+    note: "ラムはパテと並ぶスワヒリの都市国家。たびたびパテに従った"
+    source: "https://ja.wikipedia.org/wiki/ラム島"
+  - from: 1813
+    owner: "oman"
+    cause: "シェラの戦いでラムがパテ・マズルイ家の軍を破り、オマーンの保護を求める"
+    source: "https://en.wikipedia.org/wiki/Battle_of_Shela"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "ザンジバルがオマーンから分かれる"
+    source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+  - from: 1885
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ウィトゥ・スルタン国（ドイツの保護領）"
+    cause: "パテから追われた王家が本土に建てたウィトゥのスルタンが、ドイツの保護を受ける（4月）。ラムの町はザンジバル領のまま"
+    source: "https://en.wikipedia.org/wiki/Wituland"
+  - from: 1890
+    owner: "britain"
+    certainty: "indirect"
+    label: "ウィトゥ（イギリスの保護領）"
+    cause: "ヘルゴラント＝ザンジバル条約（7月）でウィトゥはイギリスの保護領となる"
+    source: "https://en.wikipedia.org/wiki/Wituland"
+  - from: 1895
+    owner: "britain"
+    label: "東アフリカ保護領（ザンジバル領の沿岸部）"
+    cause: "イギリスが東アフリカ保護領を置く（7月）。沿岸の帯状の地はザンジバルのスルタンから租借"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア保護領（沿岸部）"
+    cause: "東アフリカ保護領がケニア植民地となる。沿岸部はスルタンの名目的な主権のもとの保護領"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）。沿岸部もスルタンが主権を譲ってケニアに加わる"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_mijikenda
+  name: "ミジケンダの丘（ガンゼ・カロレニ・ラバイ・キナンゴ）"
+  select:
+    pieces: [KEN-Ganze, KEN-Kaloleni, KEN-Rabai, KEN-Kinango]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ミジケンダ人の村（カヤ）の地。沿岸の町と交易した"
+    source: "https://en.wikipedia.org/wiki/Mijikenda_peoples"
+  - from: 1886
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英独協定（11月）で、ザンジバルの沿岸部より奥の東アフリカを英独の勢力圏に分ける（1888年から帝国イギリス東アフリカ会社）"
+    source: "https://en.wikipedia.org/wiki/Imperial_British_East_Africa_Company"
+  - from: 1895
+    owner: "britain"
+    label: "東アフリカ保護領"
+    cause: "イギリスが東アフリカ保護領を置く（7月）"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア植民地"
+    cause: "東アフリカ保護領がケニア植民地となる（7月）"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_tana
+  name: "タナ川"
+  select:
+    pieces: [KEN-Bura, KEN-Galole, KEN-Garsen]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ポコモ人・オロモ系のオルマ人の地"
+    source: "https://en.wikipedia.org/wiki/Tana_River_County"
+  - from: 1886
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英独協定（11月）で、ザンジバルの沿岸部より奥の東アフリカを英独の勢力圏に分ける（1888年から帝国イギリス東アフリカ会社）"
+    source: "https://en.wikipedia.org/wiki/Imperial_British_East_Africa_Company"
+  - from: 1895
+    owner: "britain"
+    certainty: "nominal"
+    label: "東アフリカ保護領"
+    cause: "イギリスが東アフリカ保護領を置く（7月）"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア植民地"
+    cause: "東アフリカ保護領がケニア植民地となる（7月）"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_central_a
+  name: "ナイロビ・キアンブ・マチャコス・タイタ"
+  select:
+    pieces: [KEN-Nairobi, KEN-Kiambu, KEN-Murang_a, KEN-Machakos, KEN-Makueni, KEN-Taita_Taveta]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "キクユ人・カンバ人・タイタ人などの地。大きな国家はない"
+    source: "https://en.wikipedia.org/wiki/Kikuyu_people"
+  - from: 1886
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英独協定（11月）で、ザンジバルの沿岸部より奥の東アフリカを英独の勢力圏に分ける（1888年から帝国イギリス東アフリカ会社）"
+    source: "https://en.wikipedia.org/wiki/Imperial_British_East_Africa_Company"
+  - from: 1895
+    owner: "britain"
+    label: "東アフリカ保護領"
+    cause: "イギリスが東アフリカ保護領を置く（7月）"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア植民地"
+    cause: "東アフリカ保護領がケニア植民地となる（7月）"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_central_b
+  name: "ケニア山周辺・マサイの地"
+  select:
+    pieces: [KEN-Nyeri, KEN-Kirinyaga, KEN-Embu, KEN-Meru, KEN-Tharaka, KEN-Kitui, KEN-Laikipia, KEN-Nyandarua, KEN-Narok, KEN-Kajiado]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "キクユ人・エンブ人・メル人の地と、マサイ人の放牧地"
+    source: "https://en.wikipedia.org/wiki/Maasai_people"
+  - from: 1886
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英独協定（11月）で、ザンジバルの沿岸部より奥の東アフリカを英独の勢力圏に分ける（1888年から帝国イギリス東アフリカ会社）"
+    source: "https://en.wikipedia.org/wiki/Imperial_British_East_Africa_Company"
+  - from: 1895
+    owner: "britain"
+    certainty: "nominal"
+    label: "東アフリカ保護領"
+    cause: "イギリスが東アフリカ保護領を置く（7月）"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1906
+    owner: "britain"
+    label: "東アフリカ保護領"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア植民地"
+    cause: "東アフリカ保護領がケニア植民地となる（7月）"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_west_a
+  name: "ケニア西部（キスム・カカメガ・キシイ）"
+  select:
+    pieces: [KEN-Kisumu, KEN-Kakamega, KEN-Bungoma, KEN-Busia, KEN-Siaya, KEN-Vihiga, KEN-Homa_Bay, KEN-Migori, KEN-Kisii, KEN-Nyamira]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ルオ人・ルイア人・グシイ人の地。ムミアスのワンガ王国があった"
+    source: "https://en.wikipedia.org/wiki/Wanga_Kingdom"
+  - from: 1886
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英独協定（11月）で、ザンジバルの沿岸部より奥の東アフリカを英独の勢力圏に分ける（1888年から帝国イギリス東アフリカ会社）"
+    source: "https://en.wikipedia.org/wiki/Imperial_British_East_Africa_Company"
+  - from: 1896
+    owner: "britain"
+    label: "ウガンダ保護領（東部州）"
+    cause: "ウガンダ保護領が東へ広がり、ヴィクトリア湖の東岸からナイヴァシャまでを東部州とする"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1902
+    owner: "britain"
+    label: "東アフリカ保護領"
+    cause: "ウガンダ保護領の東部州が東アフリカ保護領に移される（4月）"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア植民地"
+    cause: "東アフリカ保護領がケニア植民地となる"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_west_b
+  name: "リフトバレー西部（ナンディ・ウアシン・ギシュ・ナクル）"
+  select:
+    pieces: [KEN-Nandi, KEN-Uasin_Gishu, KEN-Trans_Nzoia, KEN-Elgeyo_Marakwet, KEN-West_Pokot, KEN-Baringo, KEN-Kericho, KEN-Bomet, KEN-Nakuru]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "カレンジン系の人々・マサイ人の地"
+    source: "https://en.wikipedia.org/wiki/Kalenjin_people"
+  - from: 1886
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英独協定（11月）で、ザンジバルの沿岸部より奥の東アフリカを英独の勢力圏に分ける（1888年から帝国イギリス東アフリカ会社）"
+    source: "https://en.wikipedia.org/wiki/Imperial_British_East_Africa_Company"
+  - from: 1896
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領（東部州）"
+    cause: "ウガンダ保護領が東へ広がる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1902
+    owner: "britain"
+    certainty: "nominal"
+    label: "東アフリカ保護領"
+    cause: "ウガンダ保護領の東部州が東アフリカ保護領に移される"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1906
+    owner: "britain"
+    label: "東アフリカ保護領"
+    cause: "ナンディ人の抵抗（1895–1905年）が終わる。白人の入植地（ホワイト・ハイランド）となる"
+    source: "https://en.wikipedia.org/wiki/Nandi_resistance"
+  - from: 1920
+    owner: "britain"
+    label: "ケニア植民地"
+    cause: "東アフリカ保護領がケニア植民地となる"
+    source: "https://ja.wikipedia.org/wiki/ケニア植民地"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: ken_north
+  name: "ケニア北部（北部辺境地区）"
+  select:
+    pieces: [KEN-Marsabit, KEN-Samburu, KEN-Isiolo, KEN-Wajir, KEN-Mandera, KEN-Garissa]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソマリ人・ボラナ人・トゥルカナ人・サンブル人などの遊牧地"
+    source: "https://en.wikipedia.org/wiki/Northern_Frontier_District"
+  - from: 1891
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英伊議定書（3月）でジュバ川より西がイギリスの勢力圏とされる"
+    source: "https://en.wikipedia.org/wiki/Northern_Frontier_District"
+  - from: 1895
+    owner: "britain"
+    certainty: "nominal"
+    label: "東アフリカ保護領（北部）"
+    cause: "東アフリカ保護領"
+    source: "https://en.wikipedia.org/wiki/East_Africa_Protectorate"
+  - from: 1920
+    owner: "britain"
+    certainty: "nominal"
+    label: "ケニア植民地（北部辺境地区）"
+    cause: "ケニア植民地"
+    source: "https://en.wikipedia.org/wiki/Northern_Frontier_District"
+  - from: 1926
+    owner: "britain"
+    label: "ケニア植民地（北部辺境地区）"
+    cause: "北部辺境地区の行政が整う"
+    source: "https://en.wikipedia.org/wiki/Northern_Frontier_District"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）。ソマリ人の分離運動によるシフタ戦争（1963–67年）"
+    source: "https://en.wikipedia.org/wiki/Shifta_War"
+
+- id: ken_turkana
+  name: "トゥルカナ（トゥルカナ湖の西）"
+  select:
+    pieces: [KEN-Turkana]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "トゥルカナ人の遊牧地"
+    source: "https://en.wikipedia.org/wiki/Turkana_County"
+  - from: 1891
+    owner: "britain"
+    certainty: "nominal"
+    label: "イギリスの勢力圏"
+    cause: "英伊議定書（3月）でジュバ川より西がイギリスの勢力圏とされる"
+    source: "https://en.wikipedia.org/wiki/Northern_Frontier_District"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領（のちのルドルフ州）"
+    cause: "ウガンダ保護領の東部の一部とされる。1902年に東部州の大半が東アフリカ保護領に移ったあともトゥルカナ湖の西はウガンダに残り、ルドルフ州となる"
+    source: "https://en.wikipedia.org/wiki/Rudolf_Province"
+  - from: 1926
+    owner: "britain"
+    label: "ケニア植民地（トゥルカナ）"
+    cause: "ルドルフ州がウガンダからケニア植民地に移される"
+    source: "https://en.wikipedia.org/wiki/Rudolf_Province"
+  - from: 1963
+    owner: "kenya"
+    cause: "ケニアが独立（12月12日）"
+    source: "https://ja.wikipedia.org/wiki/ケニア"
+
+- id: uga_buganda_core
+  name: "ブガンダ中心部（キャドンド・ブシロ・ブレメジ）"
+  select:
+    pieces: [UGA-Kampala, UGA-Kyadondo, UGA-Busiro, UGA-Mawokota, UGA-Busujju, UGA-Butambala, UGA-Mityana, UGA-Mukono_2, UGA-Gomba, UGA-Katikamu, UGA-Nakaseke, UGA-Bamunanika]
+  timeline:
+  - from: 1648
+    owner: "buganda"
+    note: "ヴィクトリア湖北西岸のブガンダ王国の中心"
+    source: "https://ja.wikipedia.org/wiki/ブガンダ王国"
+  - from: 1894
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブガンダ王国（ウガンダ保護領）"
+    cause: "イギリスがブガンダを保護領とする（6月）。1900年のウガンダ協定でカバカと首長たちの自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_singo
+  name: "シンゴ（キボガ・カッサンダ）"
+  select:
+    pieces: [UGA-Kiboga, UGA-Kassanda]
+  timeline:
+  - from: 1648
+    owner: "bunyoro"
+    certainty: "uncertain"
+    note: "ブニョロとブガンダの境"
+    source: "https://ja.wikipedia.org/wiki/ブニョロ王国"
+  - from: 1720
+    owner: "buganda"
+    cause: "カバカ・マワンダがシンゴ・キャッグウェを征服（18世紀前半）"
+    source: "https://ja.wikipedia.org/wiki/ブガンダ王国"
+  - from: 1894
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブガンダ王国（ウガンダ保護領）"
+    cause: "イギリスがブガンダを保護領とする（6月）。1900年のウガンダ協定でカバカと首長たちの自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_kyaggwe
+  name: "キャッグウェ（ムコノ・ブイクウェ）"
+  select:
+    pieces: [UGA-Mukono, UGA-Buikwe, UGA-Nakifuma, UGA-Buvuma]
+  timeline:
+  - from: 1648
+    owner: "buganda"
+    certainty: "uncertain"
+    note: "ブガンダの東の辺境"
+    source: "https://ja.wikipedia.org/wiki/ブガンダ王国"
+  - from: 1720
+    owner: "buganda"
+    cause: "カバカ・マワンダがキャッグウェを征服"
+    source: "https://ja.wikipedia.org/wiki/ブガンダ王国"
+  - from: 1894
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブガンダ王国（ウガンダ保護領）"
+    cause: "イギリスがブガンダを保護領とする（6月）。1900年のウガンダ協定でカバカと首長たちの自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_buddu
+  name: "ブッドゥ・セセ諸島"
+  select:
+    pieces: [UGA-Kalungu, UGA-Bukomansimbi, UGA-Kakuuto, UGA-Kyotera, UGA-Bukuto, UGA-Kyamuswa, UGA-Bujjumba]
+  timeline:
+  - from: 1648
+    owner: "bunyoro"
+    certainty: "uncertain"
+    note: "ブニョロの勢力圏"
+    source: "https://ja.wikipedia.org/wiki/ブニョロ王国"
+  - from: 1780
+    owner: "buganda"
+    cause: "カバカ・ジュンジュがブニョロからブッドゥを奪う（18世紀後半）"
+    source: "https://ja.wikipedia.org/wiki/ブガンダ王国"
+  - from: 1894
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブガンダ王国（ウガンダ保護領）"
+    cause: "イギリスがブガンダを保護領とする（6月）。1900年のウガンダ協定でカバカと首長たちの自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_buwekula
+  name: "ブウェクラ・マウォゴラ"
+  select:
+    pieces: [UGA-Buwekula, UGA-Mawogola, UGA-Kabula, UGA-Lwemiyaga]
+  timeline:
+  - from: 1648
+    owner: "bunyoro"
+    certainty: "uncertain"
+    note: "ブニョロの勢力圏"
+    source: "https://ja.wikipedia.org/wiki/ブニョロ王国"
+  - from: 1850
+    owner: "buganda"
+    certainty: "uncertain"
+    cause: "ブガンダが西へ広がる（19世紀）"
+    source: "https://ja.wikipedia.org/wiki/ブガンダ王国"
+  - from: 1894
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブガンダ王国（ウガンダ保護領）"
+    cause: "イギリスがブガンダを保護領とする（6月）。1900年のウガンダ協定でカバカと首長たちの自治が認められる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_kooki
+  name: "コーキ"
+  select:
+    pieces: [UGA-Kooki]
+  timeline:
+  - from: 1648
+    owner: "bunyoro"
+    certainty: "uncertain"
+    note: "コーキはブニョロから分かれた小王国で、のちブガンダに貢納した"
+    source: "https://en.wikipedia.org/wiki/Kooki"
+  - from: 1896
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブガンダ王国（ウガンダ保護領）"
+    cause: "コーキがブガンダに加わる"
+    source: "https://en.wikipedia.org/wiki/Kooki"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_lost_counties
+  name: "ブルリ・ブゲレレ・「失われた郡」"
+  select:
+    pieces: [UGA-Buruli, UGA-Bbaale, UGA-Ntenjeru, UGA-Buyaga, UGA-Bugangaizi]
+  timeline:
+  - from: 1648
+    owner: "bunyoro"
+    note: "ブニョロ王国の東部・南部"
+    source: "https://ja.wikipedia.org/wiki/ブニョロ王国"
+  - from: 1894
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブガンダ王国（ウガンダ保護領）"
+    cause: "イギリス・ブガンダ軍のブニョロ遠征（1893–94年）。1900年のウガンダ協定でブガンダ領とされる（ブヤガ・ブガンガイジは「失われた郡」）"
+    source: "https://en.wikipedia.org/wiki/Lost_counties_of_Bunyoro"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    note: "1964年の住民投票でブヤガ・ブガンガイジはブニョロに戻った"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_bunyoro
+  name: "ブニョロ（ホイマ・マシンディ）"
+  select:
+    pieces: [UGA-Bugahya, UGA-Buhaguzi, UGA-Bujenje, UGA-Buliisa, UGA-Buruuli, UGA-Kibanda, UGA-Buyanja]
+  timeline:
+  - from: 1648
+    owner: "bunyoro"
+    note: "ブニョロ＝キタラ王国の中心。17世紀には大湖地方で最も強い国"
+    source: "https://ja.wikipedia.org/wiki/ブニョロ王国"
+  - from: 1894
+    owner: "britain"
+    certainty: "uncertain"
+    label: "ブニョロ（イギリス軍の遠征）"
+    cause: "イギリス・ブガンダ軍がブニョロに攻め込む。オムカマ・カバレガは北へ逃れて抵抗を続ける"
+    source: "https://en.wikipedia.org/wiki/Kabalega"
+  - from: 1899
+    owner: "britain"
+    certainty: "indirect"
+    label: "ブニョロ王国（ウガンダ保護領）"
+    cause: "カバレガが捕らえられる（4月）"
+    source: "https://en.wikipedia.org/wiki/Kabalega"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_toro
+  name: "トロ（フォート・ポータル）"
+  select:
+    pieces: [UGA-Burahya, UGA-Bunyangabu, UGA-Bughendra, UGA-Busongora, UGA-Bukonjo, UGA-Ntoroko, UGA-Kibale, UGA-Kyaka, UGA-Mwenge, UGA-Kitagwenda]
+  timeline:
+  - from: 1648
+    owner: "bunyoro"
+    certainty: "uncertain"
+    note: "ブニョロ王国の南部"
+    source: "https://ja.wikipedia.org/wiki/ブニョロ王国"
+  - from: 1830
+    owner: "toro"
+    cause: "ブニョロの王子カボヨが独立してトロ王国を建てる"
+    source: "https://ja.wikipedia.org/wiki/トロ王国"
+  - from: 1876
+    owner: "bunyoro"
+    cause: "ブニョロのカバレガがトロを再び征服"
+    source: "https://en.wikipedia.org/wiki/Kabalega"
+  - from: 1891
+    owner: "toro"
+    cause: "イギリス東アフリカ会社のルガードがカサガマをトロ王に立てる"
+    source: "https://ja.wikipedia.org/wiki/トロ王国"
+  - from: 1896
+    owner: "britain"
+    certainty: "indirect"
+    label: "トロ王国（ウガンダ保護領）"
+    cause: "ウガンダ保護領に入る（1900年のトロ協定）"
+    source: "https://ja.wikipedia.org/wiki/トロ王国"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_ankole_core
+  name: "アンコーレ中心部（ムバララ）"
+  select:
+    pieces: [UGA-Isingiro, UGA-Kashari, UGA-Rwampara, UGA-Nyabushozi, UGA-Kazo, UGA-Bukanga]
+  timeline:
+  - from: 1648
+    owner: "nkore"
+    note: "ンコレ王国（アンコーレ）。牛を飼うヒマ人の王国"
+    source: "https://en.wikipedia.org/wiki/Ankole"
+  - from: 1898
+    owner: "britain"
+    certainty: "indirect"
+    label: "アンコーレ王国（ウガンダ保護領）"
+    cause: "アンコーレ（ンコレ）がイギリスの保護下に入る（1901年のアンコーレ協定）"
+    source: "https://en.wikipedia.org/wiki/Ankole"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_ankole_ext
+  name: "アンコーレ西部・ムポロロ（シーマ・ントゥンガモ）"
+  select:
+    pieces: [UGA-Ibanda, UGA-Sheema, UGA-Ruhinda, UGA-Kajara, UGA-Rushenyi, UGA-Ruhaama]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "17–18世紀にはムポロロ王国などの小国の地"
+    source: "https://en.wikipedia.org/wiki/Mpororo"
+  - from: 1800
+    owner: "nkore"
+    certainty: "uncertain"
+    cause: "ンコレ王国が西へ広がる"
+    source: "https://en.wikipedia.org/wiki/Ankole"
+  - from: 1898
+    owner: "britain"
+    certainty: "indirect"
+    label: "アンコーレ王国（ウガンダ保護領）"
+    cause: "アンコーレ（ンコレ）がイギリスの保護下に入る（1901年のアンコーレ協定）"
+    source: "https://en.wikipedia.org/wiki/Ankole"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_ankole_1901
+  name: "ブウェジュ・イガラ・ブニャルグル"
+  select:
+    pieces: [UGA-Igara, UGA-Buhweju, UGA-Bunyaruguru]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ブウェジュなどの小王国の地"
+    source: "https://en.wikipedia.org/wiki/Ankole"
+  - from: 1901
+    owner: "britain"
+    certainty: "indirect"
+    label: "アンコーレ王国（ウガンダ保護領）"
+    cause: "アンコーレ協定で、ブウェジュ・イガラなどがアンコーレに組み込まれる"
+    source: "https://en.wikipedia.org/wiki/Ankole"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_kigezi
+  name: "キゲジ（カバレ・ルクンギリ）"
+  select:
+    pieces: [UGA-Bujumbura, UGA-Kinkiizi, UGA-Rubabo, UGA-Ndorwa, UGA-Rubanda, UGA-Rukiga]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "キガ人などの山地の村の地。大きな国家はない"
+    source: "https://en.wikipedia.org/wiki/Kigezi_District"
+  - from: 1900
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領"
+    cause: "ウガンダ保護領が南西の境まで主張（ドイツ・コンゴ自由国と境を争う）"
+    source: "https://en.wikipedia.org/wiki/Kigezi_District"
+  - from: 1912
+    owner: "britain"
+    label: "ウガンダ保護領"
+    cause: "キゲジ県が置かれる"
+    source: "https://en.wikipedia.org/wiki/Kigezi_District"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_bufumbira
+  name: "ブフンビラ（キソロ）"
+  select:
+    pieces: [UGA-Bufumbira]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ヴィルンガ火山の麓"
+    source: "https://en.wikipedia.org/wiki/Kisoro_District"
+  - from: 1880
+    owner: "rwanda_kingdom"
+    certainty: "uncertain"
+    cause: "ルワンダ王国が北へ勢力を広げる"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1897
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ルワンダ王国（ドイツ領東アフリカ）"
+    cause: "ルワンダ王がドイツの保護を受け入れる"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1910
+    owner: "britain"
+    label: "ウガンダ保護領"
+    cause: "英独ベルギーの国境協定（5月）でウガンダに移される"
+    source: "https://en.wikipedia.org/wiki/Kisoro_District"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_busoga
+  name: "ブソガ"
+  select:
+    pieces: [UGA-Bugabula, UGA-Bugweri, UGA-Bukooli, UGA-Bulamogi, UGA-Bunya, UGA-Busiki, UGA-Butembe, UGA-Buzaaya, UGA-Budiope, UGA-Kagoma, UGA-Kigulu, UGA-Luuka]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ソガ人の多くの小さな首長国の地"
+    source: "https://en.wikipedia.org/wiki/Busoga"
+  - from: 1800
+    owner: "buganda"
+    certainty: "nominal"
+    cause: "ブソガの首長たちがブガンダに貢納するようになる"
+    source: "https://en.wikipedia.org/wiki/Busoga"
+  - from: 1896
+    owner: "britain"
+    label: "ブソガ（ウガンダ保護領）"
+    cause: "ウガンダ保護領に入る"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_east
+  name: "ウガンダ東部（テソ・ブギス・ブケディ）"
+  select:
+    pieces: [UGA-Samia_Bugwe, UGA-Tororo, UGA-West_Budama, UGA-Bunyole, UGA-Bubulo, UGA-Budadiri, UGA-Budaka, UGA-Bulambuli, UGA-Bungokho, UGA-Butebo, UGA-Kibuku, UGA-Manjiya, UGA-Pallisa, UGA-Kongasis, UGA-Kween, UGA-Tingey, UGA-Bukedea, UGA-Kumi, UGA-Ngora, UGA-Serere, UGA-Soroti, UGA-Soroti_2, UGA-Kasilo, UGA-Kalaki, UGA-Kaberamaido, UGA-Amuria, UGA-Usuk]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "テソ人・ギス人などの地。大きな国家はない"
+    source: "https://en.wikipedia.org/wiki/Teso_people"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領"
+    cause: "ブガンダの将カクングルがイギリスのためにこの地を従えていく（1899–1902年）"
+    source: "https://en.wikipedia.org/wiki/Semei_Kakungulu"
+  - from: 1907
+    owner: "britain"
+    label: "ウガンダ保護領"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_lango
+  name: "ランゴ"
+  select:
+    pieces: [UGA-Dokolo, UGA-Erute, UGA-Kole, UGA-Kwania, UGA-Maruzi, UGA-Oyam, UGA-Moroto, UGA-Otuke, UGA-Kioga]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ランゴ人の地"
+    source: "https://en.wikipedia.org/wiki/Lango_people"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領"
+    cause: "ウガンダ保護領が北に広がる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1912
+    owner: "britain"
+    label: "ウガンダ保護領"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_acholi
+  name: "アチョリ（グル）"
+  select:
+    pieces: [UGA-Aswa, UGA-Kilak, UGA-Chua, UGA-Agago, UGA-Aruu, UGA-Omoro, UGA-Nwoya, UGA-Lamwo, UGA-East_Moyo]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "アチョリ人の首長国（ルウォト）の地"
+    source: "https://en.wikipedia.org/wiki/Acholi_people"
+  - from: 1872
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エクアトリア州（エジプト領スーダン）"
+    cause: "ベーカーがエジプト領エクアトリア州を宣言し、パティコなどに駐屯地を置く"
+    source: "https://en.wikipedia.org/wiki/Equatoria"
+  - from: 1889
+    owner: null
+    cause: "エミン・パシャが去り、エジプトの拠点がなくなる"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ救援遠征"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領"
+    cause: "ウガンダ保護領が北に広がる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1913
+    owner: "britain"
+    label: "ウガンダ保護領"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_alur
+  name: "西ナイル南部（ネビ）"
+  select:
+    pieces: [UGA-Padyere, UGA-Jonam, UGA-Okoro]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "アルル人の首長国の地"
+    source: "https://en.wikipedia.org/wiki/Alur_people"
+  - from: 1879
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エクアトリア州（エジプト領スーダン）"
+    cause: "エミン・パシャがワデライなどに駐屯地を置く"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ"
+  - from: 1889
+    owner: null
+    cause: "エミン・パシャが去る"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ救援遠征"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領"
+    cause: "ウガンダ保護領"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1913
+    owner: "britain"
+    label: "ウガンダ保護領"
+    cause: "イギリスの行政が及ぶ"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_west_nile
+  name: "西ナイル（アルア・コボコ・モヨ）"
+  select:
+    pieces: [UGA-Ayivu, UGA-Maracha, UGA-Koboko, UGA-Terego, UGA-Vurra, UGA-Aringa, UGA-Madi_Okollo, UGA-West_Moyo, UGA-Obongi]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ルグバラ人・マディ人などの地"
+    source: "https://en.wikipedia.org/wiki/West_Nile_sub-region"
+  - from: 1879
+    owner: "egypt"
+    overlord: "ottoman"
+    certainty: "nominal"
+    label: "エクアトリア州（エジプト領スーダン）"
+    cause: "エミン・パシャのエクアトリア州"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ"
+  - from: 1889
+    owner: null
+    cause: "エミン・パシャが去る"
+    source: "https://ja.wikipedia.org/wiki/エミン・パシャ救援遠征"
+  - from: 1894
+    owner: "congo_free_state"
+    certainty: "nominal"
+    label: "ラド飛び地（レオポルド2世への租借）"
+    cause: "英・コンゴ自由国協定でラド飛び地がレオポルド2世に貸される"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1900
+    owner: "congo_free_state"
+    label: "ラド飛び地"
+    cause: "コンゴ自由国が駐屯地を置く"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1908
+    owner: "belgium"
+    label: "ラド飛び地（ベルギー領コンゴ）"
+    cause: "ベルギーがコンゴ自由国を併合"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1910
+    owner: "britain"
+    label: "アングロ＝エジプト・スーダン（英・エジプト共同統治）（ラド地区）"
+    cause: "レオポルド2世の死を受けてスーダンに戻される"
+    source: "https://ja.wikipedia.org/wiki/ラド飛び地"
+  - from: 1914
+    owner: "britain"
+    label: "ウガンダ保護領（西ナイル）"
+    cause: "スーダンとウガンダの境を改め、西ナイルがウガンダに移される"
+    source: "https://en.wikipedia.org/wiki/West_Nile_sub-region"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: uga_karamoja
+  name: "カラモジャ"
+  select:
+    pieces: [UGA-Bokora, UGA-Matheniko, UGA-Dodoth, UGA-Jie, UGA-Pian, UGA-Pokot, UGA-Chekwii, UGA-Labwor]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "カラモジョン人などの牧畜民の地"
+    source: "https://en.wikipedia.org/wiki/Karamoja"
+  - from: 1899
+    owner: "britain"
+    certainty: "nominal"
+    label: "ウガンダ保護領"
+    cause: "ウガンダ保護領が北東に広がる"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+  - from: 1921
+    owner: "britain"
+    label: "ウガンダ保護領"
+    cause: "カラモジャにイギリスの行政が及ぶ"
+    source: "https://en.wikipedia.org/wiki/Karamoja"
+  - from: 1962
+    owner: "uganda"
+    cause: "ウガンダが独立（10月9日）"
+    source: "https://ja.wikipedia.org/wiki/ウガンダ"
+
+- id: rwa_core
+  name: "ルワンダ中心部（ニャンザ・キガリ）"
+  select:
+    pieces: [RWA-Southern_Province, RWA-City_of_Kigali]
+  timeline:
+  - from: 1648
+    owner: "rwanda_kingdom"
+    note: "ニギニャ王家のルワンダ王国の中心（ニャンザ）。年代は口承による推定"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1897
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ルワンダ王国（ドイツ領東アフリカ）"
+    cause: "ムシンガ王がドイツの保護を受け入れる（1897年。1907年にキガリに駐在官）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ルワンダ（ベルギーの占領）"
+    cause: "第一次世界大戦。ベルギー領コンゴ軍がルワンダを占領（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国）"
+    cause: "ヴェルサイユ条約でベルギーの委任統治領となる（1922年に正式）。王（ムワミ）を通じた間接統治"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1946
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国。信託統治）"
+    cause: "国際連合の信託統治領"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1961
+    owner: "belgium"
+    label: "ルワンダ（ベルギーの信託統治下の共和国）"
+    cause: "フツ人の「社会革命」（1959年–）ののち、王政を廃止し共和国を宣言（1月）。9月の住民投票で確定"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ革命"
+  - from: 1962
+    owner: "rwanda"
+    cause: "ルワンダが独立（7月1日）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ"
+
+- id: rwa_east
+  name: "ルワンダ東部（ギサカ）"
+  select:
+    pieces: [RWA-Eastern_Province]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ギサカ王国・ンドルワ王国などの地"
+    source: "https://en.wikipedia.org/wiki/Gisaka"
+  - from: 1852
+    owner: "rwanda_kingdom"
+    cause: "ムタラ2世ルウォゲラがギサカを併合（1850年代）"
+    source: "https://en.wikipedia.org/wiki/Gisaka"
+  - from: 1897
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ルワンダ王国（ドイツ領東アフリカ）"
+    cause: "ムシンガ王がドイツの保護を受け入れる（1897年。1907年にキガリに駐在官）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ルワンダ（ベルギーの占領）"
+    cause: "第一次世界大戦。ベルギー領コンゴ軍がルワンダを占領（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国）"
+    cause: "ヴェルサイユ条約でベルギーの委任統治領となる（1922年に正式）。王（ムワミ）を通じた間接統治"
+    note: "東部のギサカはオーツ＝ミルナー協定（1919年）でいったんイギリス（タンガニーカ）側とされたが、ルワンダ王の訴えを受けた1923年の国際連盟の決定でルアンダ＝ウルンディに戻された。ピースがギサカより広いので、ベルギーのまま塗る"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1946
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国。信託統治）"
+    cause: "国際連合の信託統治領"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1961
+    owner: "belgium"
+    label: "ルワンダ（ベルギーの信託統治下の共和国）"
+    cause: "フツ人の「社会革命」（1959年–）ののち、王政を廃止し共和国を宣言（1月）。9月の住民投票で確定"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ革命"
+  - from: 1962
+    owner: "rwanda"
+    cause: "ルワンダが独立（7月1日）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ"
+
+- id: rwa_west
+  name: "ルワンダ西部（キニャガ・ブゴイ）"
+  select:
+    pieces: [RWA-Western_Province]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "キヴ湖東岸の小国の地"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1870
+    owner: "rwanda_kingdom"
+    cause: "キゲリ4世ルワブギリの遠征でキニャガ・ブゴイを従える"
+    source: "https://en.wikipedia.org/wiki/Kigeli_IV_Rwabugiri"
+  - from: 1897
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ルワンダ王国（ドイツ領東アフリカ）"
+    cause: "ムシンガ王がドイツの保護を受け入れる（1897年。1907年にキガリに駐在官）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ルワンダ（ベルギーの占領）"
+    cause: "第一次世界大戦。ベルギー領コンゴ軍がルワンダを占領（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国）"
+    cause: "ヴェルサイユ条約でベルギーの委任統治領となる（1922年に正式）。王（ムワミ）を通じた間接統治"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1946
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国。信託統治）"
+    cause: "国際連合の信託統治領"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1961
+    owner: "belgium"
+    label: "ルワンダ（ベルギーの信託統治下の共和国）"
+    cause: "フツ人の「社会革命」（1959年–）ののち、王政を廃止し共和国を宣言（1月）。9月の住民投票で確定"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ革命"
+  - from: 1962
+    owner: "rwanda"
+    cause: "ルワンダが独立（7月1日）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ"
+
+- id: rwa_north
+  name: "ルワンダ北部（ルヘンゲリ・ビュンバ）"
+  select:
+    pieces: [RWA-Northern_Province]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "フツ人の小王国（ブシル・ブコニャなど）の地"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1880
+    owner: "rwanda_kingdom"
+    certainty: "uncertain"
+    cause: "ルワブギリのもとでルワンダ王国の勢力が及ぶ（北部の小王国は20世紀初めまで半独立）"
+    source: "https://en.wikipedia.org/wiki/Kigeli_IV_Rwabugiri"
+  - from: 1897
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ルワンダ王国（ドイツ領東アフリカ）"
+    cause: "ムシンガ王がドイツの保護を受け入れる（1897年。1907年にキガリに駐在官）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ王国"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ルワンダ（ベルギーの占領）"
+    cause: "第一次世界大戦。ベルギー領コンゴ軍がルワンダを占領（5月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国）"
+    cause: "ヴェルサイユ条約でベルギーの委任統治領となる（1922年に正式）。王（ムワミ）を通じた間接統治"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1946
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ルワンダ王国。信託統治）"
+    cause: "国際連合の信託統治領"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1961
+    owner: "belgium"
+    label: "ルワンダ（ベルギーの信託統治下の共和国）"
+    cause: "フツ人の「社会革命」（1959年–）ののち、王政を廃止し共和国を宣言（1月）。9月の住民投票で確定"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ革命"
+  - from: 1962
+    owner: "rwanda"
+    cause: "ルワンダが独立（7月1日）"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ"
+  - from: 1991
+    owner: "rwanda"
+    certainty: "uncertain"
+    cause: "ルワンダ内戦（1990年10月–）。ルワンダ愛国戦線（RPF）が北部の一部を押さえる"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ紛争"
+  - from: 1994
+    owner: "rwanda"
+    cause: "ルワンダ虐殺（4–7月）ののち、RPF が全土を押さえて政権を握る"
+    source: "https://ja.wikipedia.org/wiki/ルワンダ虐殺"
+
+- id: bdi_core
+  name: "ブルンジ中心部（ムランヴィヤ・ギテガ）"
+  select:
+    pieces: [BDI-Muramvya, BDI-Mwaro, BDI-Gitega, BDI-Kayanza, BDI-Bururi, BDI-Karuzi, BDI-Ngozi]
+  timeline:
+  - from: 1648
+    owner: "burundi"
+    certainty: "uncertain"
+    note: "ブルンジ王国の中心。初期の王の年代ははっきりしない"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ王国"
+  - from: 1800
+    owner: "burundi"
+    cause: "ンタレ4世ルガンバのもとで王国が広がる"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ王国"
+  - from: 1903
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ブルンジ王国（ドイツ領東アフリカ）"
+    cause: "キガンダ条約（6月）でムウェジ4世がドイツの保護を受け入れる"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ王国"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ブルンジ（ベルギーの占領）"
+    cause: "第一次世界大戦。ベルギー領コンゴ軍が占領（6月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ブルンジ王国）"
+    cause: "ベルギーの委任統治領となる（1922年に正式）。王を通じた間接統治"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1946
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ブルンジ王国。信託統治）"
+    cause: "国際連合の信託統治領"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1962
+    owner: "burundi"
+    cause: "ブルンジが王国として独立（7月1日）"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ"
+
+- id: bdi_periphery
+  name: "ブルンジ周辺部（イモボ低地・北部・東部）"
+  select:
+    pieces: [BDI-Bubanza, BDI-Bujumbura_Mairie, BDI-Bujumbura_Rural, BDI-Cibitoke, BDI-Rumonge, BDI-Makamba, BDI-Rutana, BDI-Ruyigi, BDI-Cankuzo, BDI-Muyinga, BDI-Kirundo]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ブルンジ王国の外の小国・首長の地"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ王国"
+  - from: 1800
+    owner: "burundi"
+    certainty: "uncertain"
+    cause: "ンタレ4世ルガンバの征服"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ王国"
+  - from: 1850
+    owner: "burundi"
+    cause: "ムウェジ4世ギサボの即位。王国の範囲が今の国の範囲にほぼ広がる"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ王国"
+  - from: 1903
+    owner: "german_empire"
+    certainty: "indirect"
+    label: "ブルンジ王国（ドイツ領東アフリカ）"
+    cause: "キガンダ条約（6月）でムウェジ4世がドイツの保護を受け入れる"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ王国"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ブルンジ（ベルギーの占領）"
+    cause: "第一次世界大戦。ベルギー領コンゴ軍が占領（6月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ブルンジ王国）"
+    cause: "ベルギーの委任統治領となる（1922年に正式）。王を通じた間接統治"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1946
+    owner: "belgium"
+    certainty: "indirect"
+    label: "ルアンダ＝ウルンディ（ブルンジ王国。信託統治）"
+    cause: "国際連合の信託統治領"
+    source: "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+  - from: 1962
+    owner: "burundi"
+    cause: "ブルンジが王国として独立（7月1日）"
+    source: "https://ja.wikipedia.org/wiki/ブルンジ"
+
+- id: tza_zanzibar
+  name: "ザンジバル島（ウングジャ）"
+  select:
+    pieces: [TZA-Kaskazini_A, TZA-Kaskazini_B, TZA-Kati, TZA-Kusini, TZA-Magharibi, TZA-Mjini]
+  timeline:
+  - from: 1648
+    owner: "portugal"
+    certainty: "nominal"
+    label: "ザンジバル（ポルトガルの勢力圏）"
+    note: "土着の王（ムウィニ・ムクー）がポルトガルに貢納した"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル"
+  - from: 1698
+    owner: "oman"
+    cause: "オマーンがポルトガルを東アフリカ北部から追う"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル"
+  - from: 1840
+    owner: "oman"
+    label: "ザンジバル（オマーンの都）"
+    cause: "サイイド・サイードが都をマスカットからザンジバルに移す（1832年から住み、1840年に正式）。丁子の栽培と奴隷・象牙の交易で栄える"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "サイイド・サイードの死で、子のマージドがザンジバルのスルタンとなる（1861年のカニング裁定でオマーンから分かれる）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1890
+    owner: "britain"
+    certainty: "indirect"
+    label: "ザンジバル・スルタン国（イギリスの保護国）"
+    cause: "ヘルゴラント＝ザンジバル条約（7月）を受けてイギリスの保護国となる（11月）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1963
+    owner: "zanzibar"
+    cause: "ザンジバルがスルタン国として独立（12月10日）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1964
+    owner: "tanzania"
+    label: "ザンジバル（連合共和国の自治地域）"
+    cause: "ザンジバル革命（1月）でスルタンが追われ、4月にタンガニーカと合わさってタンザニアとなる"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル革命"
+
+- id: tza_pemba
+  name: "ペンバ島"
+  select:
+    pieces: [TZA-Chake_Chake, TZA-Micheweni, TZA-Mkoani, TZA-Wete]
+  timeline:
+  - from: 1648
+    owner: "portugal"
+    certainty: "nominal"
+    label: "ペンバ（ポルトガルの勢力圏）"
+    note: "土着の首長がポルトガルに貢納した"
+    source: "https://en.wikipedia.org/wiki/Pemba_Island"
+  - from: 1698
+    owner: "oman"
+    cause: "オマーンがポルトガルを東アフリカ北部から追う"
+    source: "https://en.wikipedia.org/wiki/Pemba_Island"
+  - from: 1741
+    owner: "mazrui"
+    certainty: "uncertain"
+    cause: "モンバサのマズルイ家が自立し、ペンバを押さえる"
+    source: "https://en.wikipedia.org/wiki/Mazrui"
+  - from: 1822
+    owner: "oman"
+    cause: "サイイド・サイードがマズルイ家からペンバを奪う"
+    source: "https://en.wikipedia.org/wiki/Mazrui"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "ザンジバルがオマーンから分かれる"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1890
+    owner: "britain"
+    certainty: "indirect"
+    label: "ザンジバル・スルタン国（イギリスの保護国）"
+    cause: "イギリスの保護国となる（11月）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1963
+    owner: "zanzibar"
+    cause: "ザンジバルが独立（12月10日）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1964
+    owner: "tanzania"
+    label: "ザンジバル（連合共和国の自治地域）"
+    cause: "ザンジバル革命とタンガニーカとの連合（4月）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル革命"
+
+- id: tza_north_coast
+  name: "タンザニア北部の海岸（タンガ・パンガニ・バガモヨ・ダルエスサラーム）"
+  select:
+    pieces: [TZA-Tanga_Urban, TZA-Pangani, TZA-Mkinga, TZA-Bagamoyo, TZA-Kinondoni, TZA-Ilala, TZA-Temeke, TZA-Mkuranga]
+  timeline:
+  - from: 1648
+    owner: "portugal"
+    certainty: "nominal"
+    label: "スワヒリ海岸（ポルトガルの勢力圏）"
+    note: "スワヒリの町々がポルトガルに貢納した"
+    source: "https://en.wikipedia.org/wiki/Swahili_coast"
+  - from: 1698
+    owner: "oman"
+    certainty: "nominal"
+    cause: "オマーンがポルトガルを追う"
+    source: "https://en.wikipedia.org/wiki/Swahili_coast"
+  - from: 1800
+    owner: "oman"
+    cause: "オマーンの支配が強まる（サイイド・サイードの時代）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "ザンジバルがオマーンから分かれる（1862年にスルタン・マージドがダルエスサラームを築く）"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1889
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ（ザンジバルから租借した沿岸部）"
+    cause: "ドイツ東アフリカ会社が沿岸部を借りる（1888年）。アブシリの反乱をヴィスマンが鎮める"
+    source: "https://en.wikipedia.org/wiki/Abushiri_revolt"
+  - from: 1890
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ヘルゴラント＝ザンジバル条約。ドイツがスルタンから沿岸部を買い取る（1891年にドイツ政府の植民地）"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_kilwa
+  name: "キルワ・リンディ・ムトワラ・マフィア島"
+  select:
+    pieces: [TZA-Kilwa, TZA-Lindi, TZA-Lindi_Urban, TZA-Mtwara, TZA-Mtwara_Urban, TZA-Mafia, TZA-Rufiji]
+  timeline:
+  - from: 1648
+    owner: "kilwa"
+    certainty: "uncertain"
+    note: "かつて金の交易で栄えたキルワ・キシワニのスルタン国（16世紀にポルトガルに攻められ衰えた）"
+    source: "https://ja.wikipedia.org/wiki/キルワ・キシワニ"
+  - from: 1785
+    owner: "oman"
+    cause: "オマーンがキルワを征服"
+    source: "https://ja.wikipedia.org/wiki/キルワ・キシワニ"
+  - from: 1856
+    owner: "zanzibar"
+    cause: "ザンジバルがオマーンから分かれる"
+    source: "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+  - from: 1889
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ（ザンジバルから租借した沿岸部）"
+    cause: "ドイツ東アフリカ会社が沿岸部を借りる（1888年）。アブシリの反乱をヴィスマンが鎮める"
+    source: "https://en.wikipedia.org/wiki/Abushiri_revolt"
+  - from: 1890
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ヘルゴラント＝ザンジバル条約。ドイツがスルタンから沿岸部を買い取る（1891年にドイツ政府の植民地）"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_usambara
+  name: "ウサンバラ（シャンバー王国）"
+  select:
+    pieces: [TZA-Lushoto, TZA-Korogwe, TZA-Korogwe_Township_Authority, TZA-Muheza]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "シャンバー人・ボンデイ人の地"
+    source: "https://en.wikipedia.org/wiki/Shambaa_Kingdom"
+  - from: 1730
+    owner: "shambaa"
+    certainty: "uncertain"
+    cause: "キリンディ家のムベガがシャンバー王国を建てる（18世紀）。キムウェリ・イェ・ニュンバイ（1815ごろ–1862）のとき最も栄えた"
+    source: "https://en.wikipedia.org/wiki/Shambaa_Kingdom"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1891
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_hehe
+  name: "ウヘヘ（イリンガ）"
+  select:
+    pieces: [TZA-Iringa, TZA-Iringa_Urban, TZA-Kilolo, TZA-Mufindi, TZA-Mafinga_Township_Authority]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ヘヘ人の小首長国の地"
+    source: "https://en.wikipedia.org/wiki/Hehe_people"
+  - from: 1855
+    owner: "hehe"
+    certainty: "uncertain"
+    cause: "ムニギュンバがヘヘ人の首長国をまとめる。子のムクワワ（1879–98）はドイツ軍を破った（1891年ルガロの戦い）"
+    source: "https://en.wikipedia.org/wiki/Mkwawa"
+  - from: 1894
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツ軍がヘヘの都カレンガを落とす（10月）。ムクワワはゲリラ戦を続ける"
+    source: "https://en.wikipedia.org/wiki/Mkwawa"
+  - from: 1898
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ムクワワが自決し、ヘヘの抵抗が終わる（7月）"
+    source: "https://en.wikipedia.org/wiki/Mkwawa"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_karagwe
+  name: "カラグウェ"
+  select:
+    pieces: [TZA-Karagwe, TZA-Kyerwa]
+  timeline:
+  - from: 1648
+    owner: "karagwe"
+    certainty: "uncertain"
+    note: "大湖地方のカラグウェ王国。19世紀のルマニカ王はスピーク・グラントの探検隊を迎えた"
+    source: "https://en.wikipedia.org/wiki/Karagwe_Kingdom"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1891
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_mirambo
+  name: "ウランボ・カリウア（ミランボ）"
+  select:
+    pieces: [TZA-Urambo, TZA-Kaliua]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ニャムウェジ人の首長国の地"
+    source: "https://en.wikipedia.org/wiki/Nyamwezi_people"
+  - from: 1871
+    owner: "mirambo"
+    certainty: "uncertain"
+    cause: "ニャムウェジ人のミランボが隊商路を押さえる国を作り、タボラのアラブ商人と戦う"
+    source: "https://en.wikipedia.org/wiki/Mirambo"
+  - from: 1885
+    owner: null
+    cause: "ミランボの死（1884年12月）で国が崩れる"
+    source: "https://en.wikipedia.org/wiki/Mirambo"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1893
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（ベルギーの占領）"
+    cause: "ベルギー領コンゴ軍がタボラなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1917
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "ベルギーがイギリスに占領地を引き渡す"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_northeast_central
+  name: "タンザニア北東部・中部（キリマンジャロ・アルーシャ・ドドマ・モロゴロ）"
+  select:
+    pieces: [TZA-Arusha, TZA-Arusha_Urban, TZA-Meru, TZA-Monduli, TZA-Karatu, TZA-Longido, TZA-Ngorongoro, TZA-Hai, TZA-Moshi, TZA-Moshi_Urban, TZA-Rombo, TZA-Siha, TZA-Mwanga, TZA-Same, TZA-Handeni, TZA-Handeni_Mji, TZA-Kilindi, TZA-Kibaha, TZA-Kibaha_Urban, TZA-Kisarawe, TZA-Morogoro, TZA-Morogoro_Urban, TZA-Mvomero, TZA-Gairo, TZA-Kilosa, TZA-Bahi, TZA-Chamwino, TZA-Chemba, TZA-Dodoma_Urban, TZA-Kondoa, TZA-Kongwa, TZA-Mpwapwa, TZA-Babati, TZA-Babati_UrbanBabati_Urban, TZA-Hanang, TZA-Kiteto, TZA-Mbulu, TZA-Simanjiro, TZA-Ikungi, TZA-Iramba, TZA-Manyoni, TZA-Mkalama, TZA-Singida, TZA-Singida_Urban]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "チャガ人・マサイ人・ゴゴ人などの地。大きな国家はない。19世紀に海岸から内陸への隊商路が通った"
+    source: "https://en.wikipedia.org/wiki/History_of_Tanzania"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1893
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_lake
+  name: "ヴィクトリア湖南岸（ブコバ・ムワンザ・シニャンガ）"
+  select:
+    pieces: [TZA-Bukoba, TZA-Bukoba_Urban, TZA-Missenyi, TZA-Muleba, TZA-Biharamulo, TZA-Ngara, TZA-Ilemela, TZA-Nyamagana, TZA-Kwimba, TZA-Magu, TZA-Misungwi, TZA-Ukerewe, TZA-Bunda, TZA-Butiam, TZA-Musoma, TZA-Musoma_Urban, TZA-Rorya, TZA-Sengerema, TZA-Serengeti, TZA-Tarime, TZA-Kahama, TZA-Kahama_Township_Authority, TZA-Kishapu, TZA-Shinyanga, TZA-Shinyanga_Urban, TZA-Bariadi, TZA-Busega, TZA-Itilima, TZA-Maswa, TZA-Meatu, TZA-Bukombe, TZA-Chato, TZA-Geita, TZA-Mbogwe, TZA-Nyang_hwale]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ハヤ人の小王国・スクマ人の首長国などの地"
+    source: "https://en.wikipedia.org/wiki/Sukuma_people"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1891
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_tabora
+  name: "タボラ（ウニャニェンベ）"
+  select:
+    pieces: [TZA-Igunga, TZA-Nzega, TZA-Sikonge, TZA-Tabora_Urban, TZA-Uyui]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ニャムウェジ人の首長国の地。19世紀にはザンジバルのアラブ商人の隊商の中継地"
+    source: "https://en.wikipedia.org/wiki/Tabora"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1893
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（ベルギーの占領）"
+    cause: "ベルギー領コンゴ軍がタボラなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1917
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "ベルギーがイギリスに占領地を引き渡す"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_west
+  name: "タンザニア西部（キゴマ・ウジジ・ルクワ）"
+  select:
+    pieces: [TZA-Buhigwe, TZA-Kakonko, TZA-Kasulu, TZA-Kasulu_Township_Authority, TZA-Kibondo, TZA-Kigoma, TZA-Kigoma_Urban, TZA-Uvinza, TZA-Mlele, TZA-Mpanda, TZA-Mpanda_Urban, TZA-Kalambo, TZA-Nkasi, TZA-Sumbawanga, TZA-Sumbawanga_Urban]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ハ人などの小王国の地。ウジジはタンガニーカ湖畔の交易地（1871年にスタンリーがリヴィングストンに会った）"
+    source: "https://en.wikipedia.org/wiki/Ujiji"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1898
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "belgium"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（ベルギーの占領）"
+    cause: "ベルギー領コンゴ軍がタボラなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1921
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ベルギーがイギリスに占領地を引き渡す"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_southwest
+  name: "タンザニア南西部（ムベヤ・ンジョンベ・ソンゲア）"
+  select:
+    pieces: [TZA-Chunya, TZA-Ileje, TZA-Kyela, TZA-Mbarali, TZA-Mbeya, TZA-Mbeya_Urban, TZA-Mbozi, TZA-Momba, TZA-Rungwe, TZA-Songwe, TZA-Tunduma, TZA-Ludewa, TZA-Makambako_Township_Authority, TZA-Makete, TZA-Njombe, TZA-Njombe_Urban, TZA-Wanging_ombe, TZA-Mbinga, TZA-Nyasa, TZA-Songea, TZA-Songea_Urban, TZA-Namtumbo]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "ニャキュサ人などの地。19世紀に南から来たンゴニ人がソンゲアに王国を作った"
+    source: "https://en.wikipedia.org/wiki/Ngoni_people"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1898
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_songea
+  name: "ソンゲア（ンゴニ）"
+  select:
+    pieces: [TZA-Songea, TZA-Songea_Urban, TZA-Namtumbo, TZA-Mbinga]
+  timeline:
+  - from: 1648
+    owner: null
+  - from: 1850
+    owner: "ngoni"
+    certainty: "uncertain"
+    cause: "南から来たンゴニ人（マセコ・ンゴニ、のちンジェル・ムショペの2王国）がソンゲアの高原に定着する（1840年代後半〜1850年代）"
+    source: "https://en.wikipedia.org/wiki/Ngoni_people"
+  - from: 1897
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツがソンゲアに駐屯地を置き、ンゴニの首長たちが従う（1897年）。1905–06年のマジ・マジ反乱にはンゴニも加わった"
+    source: "https://en.wikipedia.org/wiki/Maji_Maji_Rebellion"
+  - from: 1916
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "第一次世界大戦の東アフリカ戦線。イギリス帝国軍がダルエスサラームなどを占領（9月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
+- id: tza_south
+  name: "タンザニア南部の内陸（マヘンゲ・リワレ・マサシ）"
+  select:
+    pieces: [TZA-Ulanga, TZA-Kilombero, TZA-Liwale, TZA-Nachingwea, TZA-Ruangwa, TZA-Masasi, TZA-Masasi_Township_Authority, TZA-Nanyumbu, TZA-Newala, TZA-Tandahimba, TZA-Tunduru]
+  timeline:
+  - from: 1648
+    owner: null
+    note: "マコンデ人・ヤオ人などの地"
+    source: "https://en.wikipedia.org/wiki/Makonde_people"
+  - from: 1886
+    owner: "german_empire"
+    certainty: "nominal"
+    label: "ドイツ領東アフリカ（ドイツの勢力圏）"
+    cause: "ドイツ東アフリカ会社の条約（1885年）と英独協定（1886年11月）で、内陸がドイツの勢力圏とされる"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1898
+    owner: "german_empire"
+    label: "ドイツ領東アフリカ"
+    cause: "ドイツの軍・行政が内陸に及ぶ"
+    source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+  - from: 1917
+    owner: "britain"
+    certainty: "occupied"
+    label: "ドイツ領東アフリカ（イギリスの占領）"
+    cause: "レットウ＝フォルベックのドイツ軍がモザンビークへ退く（11月）"
+    source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  - from: 1920
+    owner: "britain"
+    label: "タンガニーカ（イギリスの委任統治領）"
+    cause: "ヴェルサイユ条約（1919）で旧ドイツ領東アフリカの大部分がイギリスの委任統治領となる（1922年に国際連盟が正式に承認）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1946
+    owner: "britain"
+    label: "タンガニーカ（イギリスの信託統治領）"
+    cause: "国際連合の信託統治領となる"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+  - from: 1961
+    owner: "tanzania"
+    cause: "タンガニーカが独立（12月9日）"
+    source: "https://ja.wikipedia.org/wiki/タンガニーカ"
+
