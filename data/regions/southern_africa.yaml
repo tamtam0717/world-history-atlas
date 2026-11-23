@@ -122,6 +122,15 @@
       owner: "drc"
       cause: "コンゴがベルギーから独立する（6月30日）"
       source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "drc"
+      certainty: "uncertain"
+      cause: "クウィルの反乱。ムレレの率いる反乱軍がクウィルの森林部を押さえる（1月〜）"
+      source: "https://en.wikipedia.org/wiki/Kwilu_rebellion"
+    - from: 1966
+      owner: "drc"
+      cause: "政府軍がクウィルの反乱を鎮める（1965年末）"
+      source: "https://en.wikipedia.org/wiki/Kwilu_rebellion"
 
 - id: cd_kuba
   name: クバ王国（カサイ西部）
@@ -244,6 +253,16 @@
       owner: "drc"
       cause: "ギゼンガ派がアドゥラ内閣に合流し、スタンリーヴィル政府が解消する（8月）"
       source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "drc"
+      certainty: "uncertain"
+      cause: "シンバの反乱。反乱軍がキンドゥ・カソンゴなどマニエマを押さえる（7–8月）"
+      note: "キンドゥは11月に政府軍と傭兵が取り戻したが、年末にも南部などに反乱軍の地域が残った（南キヴのフィジでも抵抗が続いた）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1965
+      owner: "drc"
+      cause: "政府軍と白人傭兵が東部を取り戻す（1965年）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
     - from: 1998
       owner: "rcd"
       certainty: "uncertain"
@@ -330,11 +349,19 @@
       owner: "drc"
       cause: "コンゴがベルギーから独立する（6月30日）"
       source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1996
+      owner: "afdl"
+      certainty: "uncertain"
+      cause: "第一次コンゴ戦争。ルワンダ・ウガンダが支援するカビラのコンゴ・ザイール解放民主勢力連合（AFDL）がウヴィラ・ブカヴ（10月末）・ゴマ（11月1日）・ブテンボを落とし、南北キヴを押さえる"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
+    - from: 1997
+      owner: "drc"
+      cause: "AFDLがキンシャサに入り、モブツが追放される（5月）"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
     - from: 1998
       owner: "rcd"
       certainty: "uncertain"
       cause: "第二次コンゴ戦争が始まり、ルワンダが支援するコンゴ民主連合（RCD）がゴマ・ブカヴを押さえる（8月）"
-      note: "1996年の第一次コンゴ戦争でも、ルワンダが支援するカビラのコンゴ・ザイール解放民主勢力連合（AFDL）がここから進撃した"
       source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
     - from: 2003
       owner: "drc"
@@ -349,9 +376,9 @@
       source: "https://en.wikipedia.org/wiki/M23_campaign_(2022–present)"
 
 - id: cd_ituri_uele
-  name: イトゥリ・ウエレ
+  name: ウエレ
   select:
-    pieces: [COD-Ituri, COD-Upper_Uele, COD-Lower_Uele]
+    pieces: [COD-Upper_Uele, COD-Lower_Uele]
   timeline:
     - from: 1648
       owner: null
@@ -385,6 +412,83 @@
       owner: "drc"
       cause: "スタンリーヴィル政府が解消する（8月）"
       source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "simba"
+      certainty: "uncertain"
+      cause: "シンバの反乱。ルムンバ派の反乱軍がスタンリーヴィルを落として「コンゴ人民共和国」を宣言し（8–9月）、北東部の大半を押さえる"
+      note: "11月のスタンリーヴィル奪回（ドラゴン・ルージュ作戦）の後も、年末にはウエレ・イトゥリに反乱軍の地域が残った"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1965
+      owner: "drc"
+      cause: "政府軍と白人傭兵が北東部を取り戻す（1965年）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1998
+      owner: "mlc"
+      certainty: "uncertain"
+      cause: "第二次コンゴ戦争で、ウガンダ軍とウガンダが支援する反政府勢力（コンゴ解放運動 MLC・RCD解放運動）が北東部を押さえる"
+      note: "イトゥリではウガンダ軍の占領下でヘマ・レンドゥの民族紛争が激しくなった（1999–2003）"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+    - from: 2003
+      owner: "drc"
+      cause: "プレトリア包括合意で暫定政府ができ、ウガンダ軍が撤退する"
+      source: "https://ja.wikipedia.org/wiki/第二次コンゴ戦争"
+
+- id: cd_ituri
+  name: イトゥリ（ブニア）
+  select:
+    pieces: [COD-Ituri]
+  timeline:
+    - from: 1648
+      owner: null
+      note: "森林とサバンナの首長の地"
+    - from: 1800
+      owner: "zande"
+      certainty: "uncertain"
+      cause: "ザンデ（アザンデ）の諸王国・マンベトゥ王国がウエレ川流域に広がる"
+      source: "https://en.wikipedia.org/wiki/Zande_people"
+    - from: 1885
+      owner: "congo_free_state"
+      certainty: "nominal"
+      cause: "コンゴ自由国の領域とされる（まだ支配は及ばない）"
+      note: "1880年代にはスーダンのマフディー派・アラブ商人の勢力も及んだ"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1896
+      owner: "congo_free_state"
+      cause: "公安軍がウエレ川流域を征服し、ナイル川方面に進む"
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1908
+      owner: "belgium"
+      label: "ベルギー領コンゴ"
+      cause: "ベルギー政府がコンゴ自由国を併合する"
+      source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - from: 1960
+      owner: "stanleyville"
+      certainty: "uncertain"
+      cause: "ルムンバ派のギゼンガがスタンリーヴィルに政府を立て、東部を押さえる（12月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1961
+      owner: "drc"
+      cause: "スタンリーヴィル政府が解消する（8月）"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+    - from: 1964
+      owner: "simba"
+      certainty: "uncertain"
+      cause: "シンバの反乱。ルムンバ派の反乱軍がスタンリーヴィルを落として「コンゴ人民共和国」を宣言し（8–9月）、北東部の大半を押さえる"
+      note: "11月のスタンリーヴィル奪回（ドラゴン・ルージュ作戦）の後も、年末にはウエレ・イトゥリに反乱軍の地域が残った"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1965
+      owner: "drc"
+      cause: "政府軍と白人傭兵が北東部を取り戻す（1965年）"
+      source: "https://en.wikipedia.org/wiki/Simba_rebellion"
+    - from: 1996
+      owner: "afdl"
+      certainty: "uncertain"
+      cause: "第一次コンゴ戦争。ルワンダ・ウガンダが支援するカビラのコンゴ・ザイール解放民主勢力連合（AFDL）が東部を落とす（ブニアは12月24日）"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
+    - from: 1997
+      owner: "drc"
+      cause: "AFDLがキンシャサに入り、モブツが追放される（5月）"
+      source: "https://ja.wikipedia.org/wiki/第一次コンゴ戦争"
     - from: 1998
       owner: "mlc"
       certainty: "uncertain"
@@ -485,13 +589,30 @@
       source: "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
     - from: 1960
       owner: "katanga"
+      certainty: "uncertain"
       cause: "チョンベがカタンガ国の独立を宣言する（7月）"
-      note: "北カタンガのルバ人の多くはカタンガの分離に反対した（バルバカット）"
+      note: "北カタンガではカタンガの分離に反対するルバ人（バルバカット）と中央政府軍が抵抗し、チョンベの支配は及ばなかった所が多い。ロマミ（カビンダ地方）は当時のカサイ州で、カタンガ国の外（下の cd_lomami）"
       source: "https://ja.wikipedia.org/wiki/カタンガ国"
     - from: 1963
       owner: "drc"
       cause: "国連軍の作戦でカタンガの分離が終わる（1月）"
       source: "https://ja.wikipedia.org/wiki/カタンガ国"
+
+- id: cd_lomami
+  name: ロマミ（カビンダ地方、当時のカサイ州）
+  select:
+    pieces: [COD-Lomami]
+  timeline:
+    - from: 1960
+      owner: "drc"
+      certainty: "uncertain"
+      cause: "コンゴの独立。ロマミ（カビンダ地方）はカサイ州で、カタンガ国の範囲ではない"
+      note: "南カサイ鉱山国（カロンジ）が東部の一部を主張し、中央政府軍・カタンガ側との戦いの場になった"
+      source: "https://en.wikipedia.org/wiki/South_Kasai"
+    - from: 1963
+      owner: "drc"
+      cause: "カタンガ・南カサイの分離が終わる"
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
 
 - id: cd_tanganyika
   name: タンガニーカ湖西岸（北カタンガ）
