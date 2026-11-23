@@ -1,0 +1,2064 @@
+# O2 太平洋の島々（PNG SLB VUT NCL FJI WSM TON KIR TUV NRU MHL FSM PLW PYF WLF COK NIU TKL PCN UMI CLP）の地域と所属の変遷（1648–2025）
+# 方針（docs/agent-brief-oceania.md）：
+# - ヨーロッパ人が来る前・保護領になる前の島々は、トンガ・タヒチ（ポマレ朝）・フィジー王国・サモア王国を除いて owner: null（note に住民）。
+# - 植民地は統治国の色＋label。主張だけで行政の及ばない所（ニューギニアの内陸・高地など）は certainty: nominal。行政の拠点が置かれた年から濃く塗る。
+# - 在地の王が残った保護領（トンガ 1900–70、タヒチ 1842–80、ウォリス・フツナ、クック諸島・ニウエの保護領期）は統治国の certainty: indirect＋label。
+# - 委任統治・信託統治は統治国の色＋label。第一次大戦の占領は開始年から occupied、太平洋戦争の日本の占領地は japan・occupied。
+# - ミクロネシアの自治政府（1979/1981）から独立（1986/1994）までは信託統治のまま usa＋label。
+# - 重なりの決まり（小さい地域が優先）を使い、例外の島（ブタリタリ、日本軍が残ったマーシャルの環礁など）は小さい地域で分岐の年から上書きする。
+
+# ================================================================ ニューギニア東部（パプアニューギニア）
+# 1885 年の英独の境界：*_south_of_1885_line はイギリス（パプア）側、PNG-Hela_Province_north_of_1885_line はドイツ側。
+
+- id: png_papua_coast
+  name: パプア南東部（ポートモレスビー・ミルン湾）
+  select:
+    pieces: [PNG-Central_Province, PNG-National_Capital_District, PNG-Milne_Bay_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: パプアの人々の地。ポートモレスビー周辺のモトゥ人はヒリと呼ばれる交易航海を行った
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニアの歴史"
+    - from: 1884
+      owner: britain
+      label: 英領ニューギニア保護領
+      cause: イギリスがニューギニア南東部を保護領とする（11月、ポートモレスビーで宣言）
+      note: ドイツの進出を恐れたクイーンズランド植民地が1883年に勝手に併合を宣言し、本国が保護領の形で引き取った
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1888
+      owner: britain
+      label: 英領ニューギニア
+      cause: イギリスが保護領を併合し、植民地とする（9月）
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1906
+      owner: australia
+      label: パプア準州
+      cause: パプア法によりオーストラリア連邦に移される（9月）
+      source: "https://ja.wikipedia.org/wiki/パプア準州"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプア・ニューギニア法でパプアとニューギニア信託統治領が一つの行政区にまとめられる（首都ポートモレスビー）
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアがオーストラリアから独立する（9月16日）
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_papua_north
+  name: パプア北東部・湾岸（オロ・ガルフ・モロベ南部）
+  select:
+    pieces: [PNG-Northern_Oro_Province, PNG-Gulf_Province, PNG-Morobe_Province_south_of_1885_line]
+  timeline:
+    - from: 1648
+      owner: null
+      note: パプアの人々の地
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニアの歴史"
+    - from: 1884
+      owner: britain
+      certainty: nominal
+      label: 英領ニューギニア保護領
+      cause: イギリスがニューギニア南東部を保護領とする（11月）
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1888
+      owner: britain
+      label: 英領ニューギニア
+      cause: イギリスが併合し、海岸に行政の拠点を置く
+      note: 1890年代にオロのヨッダ・ギラ川で金が見つかり、採掘者が入った
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1906
+      owner: australia
+      label: パプア準州
+      cause: パプア法によりオーストラリア連邦に移される
+      note: 1942年7月に日本軍がオロのブナ・ゴナに上陸し、ココダ道を越えてポートモレスビーをめざしたが撃退され、1943年1月に海岸の拠点も失った（ピースの一部なので占領は描かない）
+      source: "https://ja.wikipedia.org/wiki/パプア準州"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する（9月16日）
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_papua_west
+  name: パプア西部（フライ川流域）
+  select:
+    pieces: [PNG-Western_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: パプアの人々の地。トレス海峡の島々を通じてオーストラリア北端と交易があった
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニアの歴史"
+    - from: 1884
+      owner: britain
+      certainty: nominal
+      label: 英領ニューギニア保護領
+      cause: イギリスがニューギニア南東部を保護領とする
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1888
+      owner: britain
+      certainty: nominal
+      label: 英領ニューギニア
+      cause: イギリスが併合する（東経141度まで。西はオランダ領）
+      note: 1893年に河口のダルに拠点が置かれたが、フライ川上流の内陸に行政が及んだのは第二次世界大戦の後
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1906
+      owner: australia
+      certainty: nominal
+      label: パプア準州
+      cause: オーストラリア連邦に移される
+      source: "https://ja.wikipedia.org/wiki/パプア準州"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられ、戦後に内陸の巡察と拠点の設置が進む
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_papua_highlands
+  name: 南部高地（タリ・メンディ）
+  select:
+    pieces: [PNG-Southern_Highlands_Province, PNG-Hela_Province, PNG-Enga_Province_south_of_1885_line, PNG-Chimbu_Simbu_Province_south_of_1885_line]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 高地の人々（フリ・メンディなど）の地。サツマイモの栽培で人口が多かったが、1930年代まで外の世界に知られなかった
+      source: "https://ja.wikipedia.org/wiki/ニューギニア高地"
+    - from: 1884
+      owner: britain
+      certainty: nominal
+      label: 英領ニューギニア保護領
+      cause: イギリスがニューギニア南東部を保護領とする（主張のみ）
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1888
+      owner: britain
+      certainty: nominal
+      label: 英領ニューギニア
+      cause: イギリスが併合する（主張のみ）
+      source: "https://ja.wikipedia.org/wiki/英領ニューギニア"
+    - from: 1906
+      owner: australia
+      certainty: nominal
+      label: パプア準州
+      cause: オーストラリア連邦に移される（1935年にハイズとオマリーの巡察隊が初めて南部高地を横断）
+      source: "https://ja.wikipedia.org/wiki/パプア準州"
+    - from: 1949
+      owner: australia
+      certainty: nominal
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1951
+      owner: australia
+      label: パプアニューギニア準州
+      cause: メンディ（1950年）・タリ（1951年）に行政の拠点が置かれ、南部高地に統治が及ぶ
+      note: 拠点の設置年は要確認
+      source: "https://en.wikipedia.org/wiki/Southern_Highlands_Province"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_kaiser_wilhelmsland
+  name: カイザー・ヴィルヘルムスラント（ニューギニア北東部の海岸）
+  select:
+    pieces: [PNG-Madang_Province, PNG-Morobe_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: パプアの人々の地。1871–83年にロシアの学者ミクルーハ＝マクライがアストロラーベ湾（マダン）に住んだ
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニアの歴史"
+    - from: 1884
+      owner: german_empire
+      label: ドイツ領ニューギニア（カイザー・ヴィルヘルムスラント）
+      cause: ドイツがニューギニア北東部とビスマルク諸島を保護領とする（11月）
+      note: 1885–99年はドイツ・ニューギニア会社が統治した（フィンシュハーフェン、のちマダン）
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ドイツ領ニューギニア（オーストラリアの占領）
+      cause: 第一次世界大戦でオーストラリア軍がドイツ領ニューギニアを占領する（9月、ラバウル）
+      source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+    - from: 1920
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: ヴェルサイユ条約で国際連盟の委任統治領としてオーストラリアに委ねられる
+      note: 1920年代にモロベ州のワウ・ブロロで金が見つかり、飛行機で採掘の機材を運んだ
+      source: "https://ja.wikipedia.org/wiki/ニューギニア委任統治領"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ニューギニア（日本の占領）
+      cause: 日本軍がラエ・サラモア（3月）・マダン（12月）を占領する
+      note: 内陸のワウはオーストラリア軍が守った
+      source: "https://ja.wikipedia.org/wiki/ニューギニアの戦い"
+    - from: 1943
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 連合軍がラエ・サラモア・フィンシュハーフェンを奪い返す（9–10月）
+      note: マダンの奪回は1944年4月（ピース全体はモロベ州に合わせた）
+      source: "https://ja.wikipedia.org/wiki/ニューギニアの戦い"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる（12月）
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する（9月16日）
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_madang_1943
+  name: マダン（日本軍の占領が続いた所）
+  select:
+    pieces: [PNG-Madang_Province]
+  timeline:
+    - from: 1943
+      owner: japan
+      certainty: occupied
+      label: ニューギニア（日本の占領）
+      cause: 日本軍がマダン・ボギアを保つ
+      source: "https://ja.wikipedia.org/wiki/ニューギニアの戦い"
+    - from: 1944
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: オーストラリア軍がマダンを奪い返す（4月）
+      source: "https://ja.wikipedia.org/wiki/ニューギニアの戦い"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_sepik
+  name: セピック川流域（ウェワク・アイタペ）
+  select:
+    pieces: [PNG-East_Sepik_Province, PNG-West_Sepik_Sandaun_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: セピック川流域の人々の地（精巧な木彫りの文化で知られる）
+      source: "https://ja.wikipedia.org/wiki/セピック川"
+    - from: 1884
+      owner: german_empire
+      certainty: nominal
+      label: ドイツ領ニューギニア（カイザー・ヴィルヘルムスラント）
+      cause: ドイツがニューギニア北東部を保護領とする
+      note: 海岸のアイタペに拠点が置かれたのは1906年、セピック川の本格的な調査は1912–13年
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ドイツ領ニューギニア（オーストラリアの占領）
+      cause: 第一次世界大戦でオーストラリア軍がドイツ領ニューギニアを占領する
+      source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+    - from: 1920
+      owner: australia
+      certainty: nominal
+      label: ニューギニア委任統治領
+      cause: 国際連盟の委任統治領としてオーストラリアに委ねられる
+      note: 海岸のウェワク・アイタペは統治されたが、内陸の巡察が進んだのは1920–30年代
+      source: "https://ja.wikipedia.org/wiki/ニューギニア委任統治領"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ニューギニア（日本の占領）
+      cause: 日本軍がウェワク・アイタペを占領する（12月）
+      source: "https://ja.wikipedia.org/wiki/ニューギニアの戦い"
+    - from: 1945
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: オーストラリア軍がウェワクを奪い（5月）、日本軍が降伏する（9月）
+      note: アイタペは1944年4月に連合軍が上陸した
+      source: "https://ja.wikipedia.org/wiki/ニューギニアの戦い"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_highlands_east
+  name: ニューギニア中部高地（ゴロカ・マウントハーゲン）
+  select:
+    pieces: [PNG-Eastern_Highlands_Province, PNG-Chimbu_Simbu_Province, PNG-Jiwaka_Province, PNG-Western_Highlands_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 高地の人々の地。数十万の人々が谷ごとに暮らしていたが、1930年代まで外の世界に知られなかった
+      source: "https://ja.wikipedia.org/wiki/ニューギニア高地"
+    - from: 1884
+      owner: german_empire
+      certainty: nominal
+      label: ドイツ領ニューギニア
+      cause: ドイツがニューギニア北東部を保護領とする（主張のみ）
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ドイツ領ニューギニア（オーストラリアの占領）
+      cause: 第一次世界大戦でオーストラリア軍がドイツ領ニューギニアを占領する
+      source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+    - from: 1920
+      owner: australia
+      certainty: nominal
+      label: ニューギニア委任統治領
+      cause: 国際連盟の委任統治領としてオーストラリアに委ねられる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア委任統治領"
+    - from: 1933
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 金を探すリーヒー兄弟と巡察官テイラーがワギ谷に入り（1933年）、ゴロカ・マウントハーゲンに拠点が置かれる
+      note: 1930年のリーヒー兄弟の探検で、高地に大きな人口があることが初めて知られた（ファースト・コンタクト）
+      source: "https://en.wikipedia.org/wiki/Michael_Leahy"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_highlands_west
+  name: エンガ・北部ヘラ（ワバグ）
+  select:
+    pieces: [PNG-Enga_Province, PNG-Hela_Province_north_of_1885_line]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 高地の人々（エンガなど）の地
+      source: "https://ja.wikipedia.org/wiki/ニューギニア高地"
+    - from: 1884
+      owner: german_empire
+      certainty: nominal
+      label: ドイツ領ニューギニア
+      cause: ドイツがニューギニア北東部を保護領とする（主張のみ）
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ドイツ領ニューギニア（オーストラリアの占領）
+      cause: 第一次世界大戦でオーストラリア軍がドイツ領ニューギニアを占領する
+      source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+    - from: 1920
+      owner: australia
+      certainty: nominal
+      label: ニューギニア委任統治領
+      cause: 国際連盟の委任統治領としてオーストラリアに委ねられる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア委任統治領"
+    - from: 1946
+      owner: australia
+      certainty: nominal
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられ、ワバグを拠点にエンガに統治が及ぶ
+      note: ワバグの拠点は1938年に置かれたが、統治が広がったのは戦後（要確認）
+      source: "https://en.wikipedia.org/wiki/Enga_Province"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_bismarck
+  name: ビスマルク諸島（ニューブリテン島・ニューアイルランド島）
+  select:
+    pieces: [PNG-East_New_Britain_Province, PNG-West_New_Britain_Province, PNG-New_Ireland_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: トライ人などメラネシアの人々の地。1870年代からヤシ油（コプラ）の交易者と宣教師が来た
+      source: "https://ja.wikipedia.org/wiki/ビスマルク諸島"
+    - from: 1884
+      owner: german_empire
+      label: ドイツ領ニューギニア（ビスマルク諸島）
+      cause: ドイツがニューギニア北東部とビスマルク諸島を保護領とする（11月）
+      note: 1910年にラバウルが首都になった
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ドイツ領ニューギニア（オーストラリアの占領）
+      cause: オーストラリア軍がラバウルを占領する（9月、ビタパカの戦い）
+      source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+    - from: 1920
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 国際連盟の委任統治領としてオーストラリアに委ねられる（首都ラバウル）
+      source: "https://ja.wikipedia.org/wiki/ニューギニア委任統治領"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ラバウル（日本の占領）
+      cause: 日本軍がラバウルとカビエンを占領する（1月）
+      note: ラバウルは南太平洋の日本軍の最大の拠点になった
+      source: "https://ja.wikipedia.org/wiki/ラバウル"
+    - from: 1945
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 日本の降伏で、ラバウルの日本軍が降伏する（9月）
+      note: ニューブリテン島西部は1943年12月に連合軍が上陸した（ツルブ）
+      source: "https://ja.wikipedia.org/wiki/ラバウル"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_west_new_britain_1944
+  name: ニューブリテン島西部（1944年に連合軍が奪回）
+  select:
+    pieces: [PNG-West_New_Britain_Province]
+  timeline:
+    - from: 1944
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 連合軍がグロスター岬に上陸し（1943年12月）、島の西部を奪い返す
+      source: "https://ja.wikipedia.org/wiki/グロスター岬の戦い"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_manus
+  name: アドミラルティ諸島（マヌス島）
+  select:
+    pieces: [PNG-Manus_Province]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マヌスの人々の地
+      source: "https://ja.wikipedia.org/wiki/マヌス島"
+    - from: 1884
+      owner: german_empire
+      label: ドイツ領ニューギニア（アドミラルティ諸島）
+      cause: ドイツがビスマルク諸島を保護領とする
+      note: ロレンガウに拠点が置かれたのは1911年
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ドイツ領ニューギニア（オーストラリアの占領）
+      cause: 第一次世界大戦でオーストラリア軍がドイツ領ニューギニアを占領する
+      source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+    - from: 1920
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 国際連盟の委任統治領としてオーストラリアに委ねられる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア委任統治領"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: マヌス（日本の占領）
+      cause: 日本軍がロレンガウを占領する（4月）
+      source: "https://ja.wikipedia.org/wiki/アドミラルティ諸島の戦い"
+    - from: 1944
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: アメリカ軍がアドミラルティ諸島を奪い（2–3月）、大きな海軍基地を置く
+      source: "https://ja.wikipedia.org/wiki/アドミラルティ諸島の戦い"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      cause: パプアニューギニアが独立する
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+
+- id: png_bougainville
+  name: ブーゲンヴィル島・ブカ島
+  select:
+    pieces: [PNG-Autonomous_Region_of_Bougainville]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ソロモン諸島北部の人々の地（1768年にフランスのブーガンヴィルが来航）
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル島"
+    - from: 1886
+      owner: german_empire
+      certainty: nominal
+      label: ドイツ領ソロモン諸島
+      cause: 英独の宣言で西太平洋の勢力範囲を分け、ソロモン諸島北部がドイツの保護領となる
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1905
+      owner: german_empire
+      label: ドイツ領ニューギニア（ブーゲンヴィル）
+      cause: キエタに行政の拠点が置かれる
+      note: 拠点の設置年は要確認
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ドイツ領ニューギニア（オーストラリアの占領）
+      cause: オーストラリア軍がキエタを占領する（12月）
+      source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+    - from: 1920
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 国際連盟の委任統治領としてオーストラリアに委ねられる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア委任統治領"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ブーゲンヴィル（日本の占領）
+      cause: 日本軍がブカ島・ブーゲンヴィル島を占領する（3月）
+      note: 1943年4月、山本五十六の乗った機がブーゲンヴィル島上空で撃墜された。1943年11月にアメリカ軍がタロキナに上陸したが、島の大部分は終戦まで日本軍が保った
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル島の戦い"
+    - from: 1945
+      owner: australia
+      label: ニューギニア委任統治領
+      cause: 日本軍が降伏する（9月）
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル島の戦い"
+    - from: 1946
+      owner: australia
+      label: ニューギニア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ニューギニア信託統治領"
+    - from: 1949
+      owner: australia
+      label: パプアニューギニア準州
+      cause: パプアとニューギニアが一つの行政区にまとめられる
+      note: 1972年にパングナ銅山が操業を始めた
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニア準州"
+    - from: 1975
+      owner: papua_new_guinea
+      label: 北ソロモン州
+      cause: パプアニューギニアが独立する（9月16日）
+      note: 独立直前の9月1日に「北ソロモン共和国」として分離独立を宣言したが、1976年に州の自治を認められて取り下げた
+      source: "https://ja.wikipedia.org/wiki/北ソロモン共和国"
+    - from: 1990
+      owner: papua_new_guinea
+      certainty: uncertain
+      label: ブーゲンヴィル（内戦。革命軍が大部分を支配）
+      cause: パプアニューギニア軍が撤退し、ブーゲンヴィル革命軍（BRA）が独立を宣言する（5月）
+      note: 1989年にパングナ銅山が閉鎖され、内戦で多くの住民が死んだ。パプアニューギニアは島を封鎖し、1991年以後ブカ島などを取り戻した
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル内戦"
+    - from: 1998
+      owner: papua_new_guinea
+      label: ブーゲンヴィル（和平プロセス）
+      cause: 停戦協定が結ばれ（4月）、国際監視団が置かれる
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル内戦"
+    - from: 2005
+      owner: papua_new_guinea
+      label: ブーゲンヴィル自治州
+      cause: 2001年の和平協定に基づいてブーゲンヴィル自治政府が発足する（6月）
+      note: 2019年の住民投票で独立賛成が97.7％。パプアニューギニア議会の承認をめぐる協議が続く
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル自治州"
+
+# ================================================================ ソロモン諸島
+
+- id: slb_south
+  name: ソロモン諸島中南部（ガダルカナル島・ツラギ）
+  select:
+    pieces: [SLB-Guadalcanal, SLB-Central, SLB-Capital_Territory_Honiara]
+  timeline:
+    - from: 1648
+      owner: null
+      note: メラネシアの人々の地（1568年にスペインのメンダーニャが来航し、ソロモン諸島と名づけた）
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の歴史"
+    - from: 1893
+      owner: britain
+      certainty: nominal
+      label: 英領ソロモン諸島保護領
+      cause: イギリスがソロモン諸島南部を保護領とする
+      note: 背景に、クイーンズランドやフィジーの農園への労働者の強引な徴募（ブラックバーディング）の取りしまりがあった
+      source: "https://ja.wikipedia.org/wiki/イギリス領ソロモン諸島"
+    - from: 1896
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      cause: 弁務官ウッドフォードがツラギに着任し、統治が始まる
+      source: "https://ja.wikipedia.org/wiki/イギリス領ソロモン諸島"
+    - from: 1978
+      owner: solomon_islands
+      cause: ソロモン諸島がイギリスから独立する（7月7日）
+      note: 1942年5月に日本軍がツラギを、7月にガダルカナル島北岸を占領したが、8月にアメリカ軍が上陸し、1943年2月に日本軍が撤退した（年末の状態では連合軍の支配が主なので占領は描かない）。戦後は首都がツラギからホニアラに移った
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+
+- id: slb_malaita
+  name: マライタ島・マキラ島
+  select:
+    pieces: [SLB-Malaita, SLB-Makira]
+  timeline:
+    - from: 1648
+      owner: null
+      note: メラネシアの人々の地
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の歴史"
+    - from: 1893
+      owner: britain
+      certainty: nominal
+      label: 英領ソロモン諸島保護領
+      cause: イギリスがソロモン諸島南部を保護領とする
+      note: マライタ島からは多くの人がクイーンズランドの砂糖農園に労働者として連れて行かれた
+      source: "https://ja.wikipedia.org/wiki/イギリス領ソロモン諸島"
+    - from: 1909
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      cause: マライタ島のアウキに行政の拠点が置かれる
+      note: 1927年に内陸のクワイオの人々が徴税官ベルを殺し、討伐が行われた
+      source: "https://en.wikipedia.org/wiki/Malaita"
+    - from: 1978
+      owner: solomon_islands
+      cause: ソロモン諸島がイギリスから独立する
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+
+- id: slb_western
+  name: ニュージョージア諸島
+  select:
+    pieces: [SLB-Western]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ニュージョージアの人々の地（首狩りの遠征で知られた）
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の歴史"
+    - from: 1893
+      owner: britain
+      certainty: nominal
+      label: 英領ソロモン諸島保護領
+      cause: イギリスがソロモン諸島南部を保護領とする
+      source: "https://ja.wikipedia.org/wiki/イギリス領ソロモン諸島"
+    - from: 1899
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      cause: ギゾに行政の拠点が置かれる
+      source: "https://en.wikipedia.org/wiki/Gizo,_Solomon_Islands"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ソロモン諸島（日本の占領）
+      cause: 日本軍がニュージョージア島（ムンダ）などを占領する
+      source: "https://ja.wikipedia.org/wiki/ニュージョージア島の戦い"
+    - from: 1943
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      cause: 連合軍がニュージョージア島・ベララベラ島を奪い返す（7–10月）
+      source: "https://ja.wikipedia.org/wiki/ニュージョージア島の戦い"
+    - from: 1978
+      owner: solomon_islands
+      cause: ソロモン諸島がイギリスから独立する
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+
+- id: slb_north
+  name: チョイスル島・サンタイサベル島・ショートランド諸島
+  select:
+    pieces: [SLB-Choiseul, SLB-Isabel, SLB-Shortland_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: メラネシアの人々の地
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の歴史"
+    - from: 1886
+      owner: german_empire
+      certainty: nominal
+      label: ドイツ領ソロモン諸島
+      cause: 英独の宣言でソロモン諸島北部がドイツの勢力範囲・保護領となる
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1899
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      cause: サモアをめぐる英独協定で、ドイツがチョイスル・イサベル・ショートランド・オントンジャワをイギリスに譲る（11月）
+      note: オントンジャワ環礁はマライタ州のピースの中なので分けていない
+      source: "https://ja.wikipedia.org/wiki/三国協定_(1899年)"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ソロモン諸島（日本の占領）
+      cause: 日本軍がショートランド諸島・イサベル島（レカタ湾）などに基地を置く
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の戦い"
+    - from: 1944
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      cause: 日本軍がイサベル島・チョイスル島から撤退する
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の戦い"
+    - from: 1978
+      owner: solomon_islands
+      cause: ソロモン諸島がイギリスから独立する
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+
+- id: slb_shortland_1944
+  name: ショートランド諸島（日本軍が終戦まで残った）
+  select:
+    pieces: [SLB-Shortland_Islands]
+  timeline:
+    - from: 1944
+      owner: japan
+      certainty: occupied
+      label: ショートランド（日本の占領）
+      cause: ブーゲンヴィル島南のショートランド諸島には日本軍が終戦まで残る
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の戦い"
+    - from: 1945
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      cause: 日本軍が降伏する（9月）
+      source: "https://ja.wikipedia.org/wiki/イギリス領ソロモン諸島"
+    - from: 1978
+      owner: solomon_islands
+      cause: ソロモン諸島がイギリスから独立する
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+
+- id: slb_outer
+  name: サンタクルーズ諸島・レンネル島
+  select:
+    pieces: [SLB-Temotu, SLB-Rennell_and_Bellona]
+  timeline:
+    - from: 1648
+      owner: null
+      note: メラネシア・ポリネシアの人々の地（レンネル島・ベロナ島はポリネシア人の島）
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の歴史"
+    - from: 1898
+      owner: britain
+      certainty: nominal
+      label: 英領ソロモン諸島保護領
+      cause: 保護領がサンタクルーズ諸島・レンネル島などに広げられる（1898–99年）
+      source: "https://ja.wikipedia.org/wiki/イギリス領ソロモン諸島"
+    - from: 1946
+      owner: britain
+      label: 英領ソロモン諸島保護領
+      note: 戦後、保護領政府の行政（地区の役所・巡回）が離島にも及んだ時期を目安に濃くする（年は目安・要確認。整合で追加）。それまでは名目的な支配
+      source: "https://ja.wikipedia.org/wiki/イギリス領ソロモン諸島"
+    - from: 1978
+      owner: solomon_islands
+      cause: ソロモン諸島がイギリスから独立する
+      note: 1942年10月のサンタクルーズ諸島沖海戦はこの海域で戦われた
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+
+# ================================================================ ヴァヌアツ・ニューカレドニア
+
+- id: vut_new_hebrides
+  name: ニューヘブリディーズ諸島（ヴァヌアツ）
+  select:
+    iso_all: [VUT]
+  timeline:
+    - from: 1648
+      owner: null
+      note: メラネシアの人々の地（1606年にスペインのキロスが来航、1774年にクックが「ニューヘブリディーズ」と名づけた）。1887年から英仏の合同海軍委員会が置かれたが、統治はなかった
+      source: "https://ja.wikipedia.org/wiki/バヌアツの歴史"
+    - from: 1906
+      owner: new_hebrides
+      cause: 英仏協定でニューヘブリディーズが両国の共同統治領となる（10月）
+      source: "https://ja.wikipedia.org/wiki/ニューヘブリディーズ"
+    - from: 1980
+      owner: vanuatu
+      cause: ヴァヌアツ共和国として独立する（7月30日）
+      source: "https://ja.wikipedia.org/wiki/バヌアツ"
+
+- id: ncl_grande_terre
+  name: ニューカレドニア本島（グランド・テール）
+  select:
+    pieces: [NCL-Province_Sud, NCL-Province_Nord]
+  timeline:
+    - from: 1648
+      owner: null
+      note: カナクの首長国の地（1774年にクックが来航して名づけた）
+      source: "https://ja.wikipedia.org/wiki/ニューカレドニアの歴史"
+    - from: 1853
+      owner: france
+      label: ニューカレドニア
+      cause: フランスがニューカレドニアを併合する（9月）
+      note: 1864–97年は流刑植民地で、パリ・コミューンの参加者（ルイーズ・ミシェルなど）も送られた。1864年にニッケル鉱が見つかった。1878年にカナクの大反乱（アタイの反乱）が起こった
+      source: "https://ja.wikipedia.org/wiki/ニューカレドニア"
+    - from: 1946
+      owner: france
+      label: ニューカレドニア（海外領土）
+      cause: フランスの海外領土となり、カナクにも市民権が認められる（1946年）
+      source: "https://ja.wikipedia.org/wiki/ニューカレドニア"
+    - from: 1999
+      owner: france
+      label: ニューカレドニア（特別共同体）
+      cause: ヌメア協定（1998年）でフランスから広い自治を移す特別な共同体となる
+      note: 独立を問う住民投票（2018・2020・2021年）はいずれも残留が多数だったが、3回目はカナクの独立派が棄権した。2024年に選挙制度の改正をめぐって暴動が起こった
+      source: "https://ja.wikipedia.org/wiki/ヌメア協定"
+
+- id: ncl_loyalty
+  name: ロイヤルティ諸島
+  select:
+    pieces: [NCL-Loyalty_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: カナクの首長国の地
+      source: "https://ja.wikipedia.org/wiki/ロイヤルティ諸島"
+    - from: 1853
+      owner: france
+      certainty: nominal
+      label: ニューカレドニア
+      cause: フランスがニューカレドニアの併合で領有を主張する
+      note: 島々ではイギリスのロンドン伝道協会の宣教師の影響が強かった
+      source: "https://ja.wikipedia.org/wiki/ロイヤルティ諸島"
+    - from: 1864
+      owner: france
+      label: ニューカレドニア
+      cause: フランス軍がリフー島に上陸し、統治を始める
+      source: "https://ja.wikipedia.org/wiki/ロイヤルティ諸島"
+    - from: 1946
+      owner: france
+      label: ニューカレドニア（海外領土）
+      cause: フランスの海外領土となる
+      source: "https://ja.wikipedia.org/wiki/ニューカレドニア"
+    - from: 1999
+      owner: france
+      label: ニューカレドニア（特別共同体）
+      cause: ヌメア協定で特別な共同体となる
+      note: 1988年にウヴェア島で独立派が憲兵を人質にとる事件が起こり、マティニョン合意につながった
+      source: "https://ja.wikipedia.org/wiki/ヌメア協定"
+
+# ================================================================ フィジー
+
+- id: fji_coast
+  name: フィジー（ヴィティレヴ島東部・ヴァヌアレヴ島・ロマイヴィティ・カンダヴ）
+  select:
+    pieces: [FJI-Tailevu, FJI-Rewa, FJI-Ra, FJI-Serua, FJI-Lomaiviti, FJI-Kadavu, FJI-Bua, FJI-Cakaudrove, FJI-Macuata, FJI-Lau]
+  timeline:
+    - from: 1648
+      owner: null
+      note: バウ・レワ・カカウドロヴェなどの首長国が争った。19世紀にはビャクダン・ナマコの交易者が来て、マスケット銃で争いが激しくなった。東のラウ諸島は1850年代からトンガ人のマアフが治めた
+      source: "https://ja.wikipedia.org/wiki/フィジーの歴史"
+    - from: 1871
+      owner: fiji_kingdom
+      cause: バウの大首長ザコンバウがフィジー王国を建てる（6月）
+      source: "https://ja.wikipedia.org/wiki/フィジー王国"
+    - from: 1874
+      owner: britain
+      label: フィジー植民地
+      cause: ザコンバウら首長たちがフィジーをイギリスに割譲する（10月10日）
+      note: 1879年からインドの契約労働者が砂糖農園に連れてこられた
+      source: "https://ja.wikipedia.org/wiki/フィジー植民地"
+    - from: 1970
+      owner: fiji
+      cause: フィジーがイギリスから独立する（10月10日）
+      source: "https://ja.wikipedia.org/wiki/フィジー"
+
+- id: fji_interior
+  name: フィジー（ヴィティレヴ島西部・内陸）
+  select:
+    pieces: [FJI-Ba, FJI-Nadroga_Navosa, FJI-Naitasiri, FJI-Namosi]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ヴィティレヴ島の内陸と西部の首長たちの地
+      source: "https://ja.wikipedia.org/wiki/フィジーの歴史"
+    - from: 1871
+      owner: fiji_kingdom
+      certainty: uncertain
+      cause: ザコンバウがフィジー王国を建てる
+      note: 内陸の山地の人々（カイ・ゾロ）は王国に従わず、1873年に討伐された
+      source: "https://ja.wikipedia.org/wiki/フィジー王国"
+    - from: 1874
+      owner: britain
+      label: フィジー植民地
+      cause: フィジーがイギリスに割譲される（10月10日）
+      note: 1876年の「小戦争」で内陸の抵抗が抑えられた
+      source: "https://ja.wikipedia.org/wiki/フィジー植民地"
+    - from: 1970
+      owner: fiji
+      cause: フィジーがイギリスから独立する
+      source: "https://ja.wikipedia.org/wiki/フィジー"
+
+- id: fji_rotuma
+  name: ロトゥマ島
+  select:
+    pieces: [FJI-Rotuma]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ポリネシア系のロトゥマの人々の島
+      source: "https://ja.wikipedia.org/wiki/ロツマ島"
+    - from: 1881
+      owner: britain
+      label: フィジー植民地（ロトゥマ）
+      cause: 首長たちがロトゥマ島をイギリスに割譲し、フィジー植民地に加えられる
+      source: "https://ja.wikipedia.org/wiki/ロツマ島"
+    - from: 1970
+      owner: fiji
+      cause: フィジーがイギリスから独立する
+      source: "https://ja.wikipedia.org/wiki/フィジー"
+
+# ================================================================ サモア・トンガ・ウォリス＝フツナ
+
+- id: wsm_samoa
+  name: 西サモア（ウポル島・サヴァイイ島）
+  select:
+    iso_all: [WSM]
+  timeline:
+    - from: 1648
+      owner: null
+      note: サモアの首長（マタイ）たちの地。大首長の称号をめぐる争いが続いた（1722年にオランダのロッゲフェーンが来航）
+      source: "https://ja.wikipedia.org/wiki/サモアの歴史"
+    - from: 1873
+      owner: samoa_kingdom
+      certainty: uncertain
+      cause: 首長たちがムリヌウに中央政府を置き、のちマリエトア・ラウペパを王とする
+      note: アピアにはイギリス・アメリカ・ドイツの領事と商館（ドイツのゴデフロイ商会など）が置かれた
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Samoa"
+    - from: 1900
+      owner: german_empire
+      label: ドイツ領サモア
+      cause: 三国協定（1899年12月）で西サモアがドイツ領となる（1900年3月）
+      source: "https://ja.wikipedia.org/wiki/ドイツ領サモア"
+    - from: 1914
+      owner: new_zealand
+      certainty: occupied
+      label: 西サモア（ニュージーランドの占領）
+      cause: 第一次世界大戦でニュージーランド軍がサモアを占領する（8月）
+      source: "https://ja.wikipedia.org/wiki/西サモア信託統治領"
+    - from: 1920
+      owner: new_zealand
+      label: 西サモア委任統治領
+      cause: 国際連盟の委任統治領としてニュージーランドに委ねられる
+      note: 1918年のスペインかぜで人口の約2割が死に、ニュージーランドの統治への反感からマウ運動が起こった（1929年の「黒い土曜日」）
+      source: "https://ja.wikipedia.org/wiki/西サモア信託統治領"
+    - from: 1946
+      owner: new_zealand
+      label: 西サモア信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/西サモア信託統治領"
+    - from: 1962
+      owner: samoa
+      cause: 西サモアが独立する（1月1日）
+      source: "https://ja.wikipedia.org/wiki/サモア"
+
+- id: ton_tonga
+  name: トンガ諸島
+  select:
+    iso_all: [TON]
+  timeline:
+    - from: 1648
+      owner: tonga
+      note: トゥイ・トンガ（聖なる王）とトゥイ・カノクポル（政治の王）の国（1643年にタスマンが来航）
+      source: "https://ja.wikipedia.org/wiki/トンガの歴史"
+    - from: 1799
+      owner: tonga
+      certainty: uncertain
+      cause: トゥイ・カノクポルの暗殺をきっかけに首長たちの内戦が始まる
+      source: "https://ja.wikipedia.org/wiki/トンガの歴史"
+    - from: 1845
+      owner: tonga
+      cause: タウファアハウがジョージ・トゥポウ1世として即位し、諸島を統一する
+      source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ1世"
+    - from: 1900
+      owner: britain
+      certainty: indirect
+      label: トンガ王国（イギリスの保護国）
+      cause: イギリスとの友好条約で保護国となる（5月）
+      note: 王政と内政の自治は続き、外交・防衛をイギリスが握った
+      source: "https://ja.wikipedia.org/wiki/トンガ"
+    - from: 1970
+      owner: tonga
+      cause: 保護国の地位が終わり、完全な独立を回復する（6月4日）
+      source: "https://ja.wikipedia.org/wiki/トンガ"
+
+- id: wlf_uvea
+  name: ウォリス島（ウヴェア）
+  select:
+    pieces: [WLF-Uvea]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ウヴェアの王（ラヴェルア）の国。1837年からフランスのマリスト会の宣教師が布教した
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+    - from: 1887
+      owner: france
+      certainty: indirect
+      label: ウォリス（フランスの保護領）
+      cause: ウヴェアの女王がフランスの保護を受け入れる条約を結ぶ（4月）
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+    - from: 1961
+      owner: france
+      label: ウォリス・フツナ（海外領土）
+      cause: 住民投票（1959年）を経てフランスの海外領土となる
+      note: 3人の伝統的な王は今も残り、慣習に関わる権限を持つ
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+
+- id: wlf_futuna
+  name: フツナ島・アロフィ島
+  select:
+    pieces: [WLF-Alo, WLF-Sigave]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アロとシガヴェの2つの王国
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+    - from: 1888
+      owner: france
+      certainty: indirect
+      label: フツナ（フランスの保護領）
+      cause: フツナの王たちがフランスの保護を受け入れる
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+    - from: 1961
+      owner: france
+      label: ウォリス・フツナ（海外領土）
+      cause: フランスの海外領土となる
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+
+# ================================================================ フランス領ポリネシア
+
+- id: pyf_windward
+  name: タヒチ島・モーレア島（ウィンドワード諸島）
+  select:
+    pieces: [PYF-Windward_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: タヒチの首長たちの地（1767年にウォリス、1768年にブーガンヴィル、1769年にクックが来航）
+      source: "https://ja.wikipedia.org/wiki/タヒチ島"
+    - from: 1788
+      owner: tahiti
+      certainty: uncertain
+      cause: ポマレ1世が勢力を広げ、タヒチ王国が生まれる
+      note: ほかの首長との争いが続いた
+      source: "https://ja.wikipedia.org/wiki/タヒチ王国"
+    - from: 1815
+      owner: tahiti
+      cause: ポマレ2世がフェイ・ピの戦いで対立する首長を破り、タヒチを統一する
+      source: "https://ja.wikipedia.org/wiki/ポマレ2世"
+    - from: 1842
+      owner: france
+      certainty: indirect
+      label: タヒチ王国（フランスの保護国）
+      cause: フランスの提督デュプティ＝トゥアールがタヒチを保護国とする（9月）
+      note: 1844–47年のタヒチ戦争（フランス＝タヒチ戦争）で女王ポマレ4世の側が抵抗したが、保護国を受け入れた
+      source: "https://ja.wikipedia.org/wiki/タヒチ王国"
+    - from: 1880
+      owner: france
+      label: フランス領オセアニア（タヒチ）
+      cause: ポマレ5世が王国をフランスに譲り、植民地となる（6月）
+      note: 1891年から画家ゴーガンが住んだ
+      source: "https://ja.wikipedia.org/wiki/ポマレ5世"
+    - from: 1946
+      owner: france
+      label: フランス領オセアニア（海外領土）
+      cause: フランスの海外領土となる
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - from: 1957
+      owner: france
+      label: フランス領ポリネシア
+      cause: フランス領ポリネシアと改称する
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+
+- id: pyf_leeward
+  name: ソシエテ諸島西部（ライアテア島・フアヒネ島・ボラボラ島）
+  select:
+    pieces: [PYF-Leeward_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ライアテア・フアヒネ・ボラボラなどの首長・王の地。ライアテア島のタプタプアテアはポリネシアの航海の聖地
+      source: "https://ja.wikipedia.org/wiki/ソシエテ諸島"
+    - from: 1880
+      owner: france
+      certainty: nominal
+      label: ソシエテ諸島西部（フランスの仮の保護国）
+      cause: フランスがライアテア島に仮の保護国を宣言する
+      note: 1847年のジャルナック協定で、英仏はこの島々の独立を認めていた
+      source: "https://en.wikipedia.org/wiki/Leeward_Islands_War"
+    - from: 1888
+      owner: france
+      certainty: nominal
+      label: フランス領オセアニア（ソシエテ諸島西部）
+      cause: イギリスの同意を得て、フランスが島々を併合する（ライアテア島では1897年まで抵抗が続く）
+      source: "https://en.wikipedia.org/wiki/Leeward_Islands_War"
+    - from: 1897
+      owner: france
+      label: フランス領オセアニア（ソシエテ諸島西部）
+      cause: ライアテア島の抵抗が鎮圧される
+      source: "https://en.wikipedia.org/wiki/Leeward_Islands_War"
+    - from: 1946
+      owner: france
+      label: フランス領オセアニア（海外領土）
+      cause: フランスの海外領土となる
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - from: 1957
+      owner: france
+      label: フランス領ポリネシア
+      cause: フランス領ポリネシアと改称する
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+
+- id: pyf_marquesas
+  name: マルキーズ諸島
+  select:
+    pieces: [PYF-Marquesas_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マルキーズの首長たちの地（1595年にスペインのメンダーニャが来航）
+      source: "https://ja.wikipedia.org/wiki/マルキーズ諸島"
+    - from: 1842
+      owner: france
+      label: マルキーズ諸島
+      cause: フランスの提督デュプティ＝トゥアールがマルキーズ諸島を併合する（5月）
+      note: 19世紀に持ちこまれた病気で人口が激減した。画家ゴーガンはヒバオア島で死んだ（1903年）
+      source: "https://ja.wikipedia.org/wiki/マルキーズ諸島"
+    - from: 1880
+      owner: france
+      label: フランス領オセアニア（マルキーズ諸島）
+      cause: タヒチの併合で、フランス領オセアニアの植民地にまとめられる
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - from: 1946
+      owner: france
+      label: フランス領オセアニア（海外領土）
+      cause: フランスの海外領土となる
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - from: 1957
+      owner: france
+      label: フランス領ポリネシア
+      cause: フランス領ポリネシアと改称する
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+
+- id: pyf_tuamotu_austral
+  name: トゥアモトゥ諸島・ガンビエ諸島・オーストラル諸島
+  select:
+    pieces: [PYF-Tuamotu_Gambier, PYF-Austral_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 環礁の人々の地。19世紀前半にはポマレ朝がトゥアモトゥ諸島の一部とオーストラル諸島のトゥブアイ島に影響を及ぼした
+      source: "https://ja.wikipedia.org/wiki/トゥアモトゥ諸島"
+    - from: 1842
+      owner: france
+      certainty: indirect
+      label: タヒチ王国（フランスの保護国）
+      cause: タヒチの保護国化で、ポマレ朝に従う島々もフランスの保護下に入る
+      note: ガンビエ諸島（マンガレヴァ）は宣教師の影響の強い独自の王国で、1844年に保護を求め、1881年に併合された
+      source: "https://ja.wikipedia.org/wiki/トゥアモトゥ諸島"
+    - from: 1880
+      owner: france
+      label: フランス領オセアニア
+      cause: タヒチ王国がフランスに譲られ、植民地となる
+      note: オーストラル諸島のルルトゥ島・リマタラ島の併合は1900–01年
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - from: 1946
+      owner: france
+      label: フランス領オセアニア（海外領土）
+      cause: フランスの海外領土となる
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - from: 1957
+      owner: france
+      label: フランス領ポリネシア
+      cause: フランス領ポリネシアと改称する
+      note: 1966–96年、トゥアモトゥ諸島のムルロア環礁・ファンガタウファ環礁でフランスが核実験を行った（1974年までは大気圏内、1975年から地下）
+      source: "https://ja.wikipedia.org/wiki/ムルロア環礁"
+
+# ================================================================ クック諸島・ニウエ・トケラウ・ピトケアン
+
+- id: cok_south
+  name: クック諸島南部（ラロトンガ島）
+  select:
+    pieces: [COK-Southern_Cook_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ラロトンガなどの首長（アリキ）たちの地（1773–77年にクックが来航）
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1888
+      owner: britain
+      certainty: indirect
+      label: クック諸島（イギリスの保護領）
+      cause: イギリスがクック諸島南部を保護領とする（10月）
+      note: アリキたちの連邦政府（1891年）が内政を担った
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1901
+      owner: britain
+      label: クック諸島（ニュージーランド植民地）
+      cause: クック諸島がニュージーランド植民地に併合される（6月）
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1907
+      owner: new_zealand
+      label: クック諸島
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1965
+      owner: cook_islands
+      cause: ニュージーランドとの自由連合のもとで自治を得る（8月）
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+
+- id: cok_north
+  name: クック諸島北部（ペンリン環礁・マニヒキ環礁など）
+  select:
+    pieces: [COK-Northern_Cook_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 環礁の人々の地
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1889
+      owner: britain
+      certainty: indirect
+      label: クック諸島（イギリスの保護領）
+      cause: イギリスが北部の環礁を保護領とする（1888–89年）
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1901
+      owner: britain
+      label: クック諸島（ニュージーランド植民地）
+      cause: クック諸島がニュージーランド植民地に併合される
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1907
+      owner: new_zealand
+      label: クック諸島
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+    - from: 1965
+      owner: cook_islands
+      cause: ニュージーランドとの自由連合のもとで自治を得る
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+
+- id: niu_niue
+  name: ニウエ島
+  select:
+    pieces: [NIU-Niue]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ニウエの人々の島（1774年にクックが来航）。1888年に王（パトゥイキ）を立てた
+      source: "https://ja.wikipedia.org/wiki/ニウエ"
+    - from: 1900
+      owner: britain
+      certainty: indirect
+      label: ニウエ（イギリスの保護領）
+      cause: イギリスがニウエを保護領とする（4月）
+      source: "https://ja.wikipedia.org/wiki/ニウエ"
+    - from: 1901
+      owner: britain
+      label: ニウエ（ニュージーランド植民地）
+      cause: ニウエがクック諸島とともにニュージーランド植民地に併合される（1904年から別の行政）
+      source: "https://ja.wikipedia.org/wiki/ニウエ"
+    - from: 1907
+      owner: new_zealand
+      label: ニウエ
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニウエ"
+    - from: 1974
+      owner: niue
+      cause: ニュージーランドとの自由連合のもとで自治を得る（10月）
+      source: "https://ja.wikipedia.org/wiki/ニウエ"
+
+- id: tkl_tokelau
+  name: トケラウ諸島
+  select:
+    pieces: [TKL-Tokelau]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 3つの環礁の人々の地。1863年にペルーの奴隷狩りの船に多くの住民が連れ去られた
+      source: "https://ja.wikipedia.org/wiki/トケラウ"
+    - from: 1889
+      owner: britain
+      label: トケラウ（イギリスの保護領）
+      cause: イギリスがトケラウを保護領とする（6月）
+      source: "https://ja.wikipedia.org/wiki/トケラウ"
+    - from: 1916
+      owner: britain
+      label: ギルバート・エリス諸島植民地（トケラウ）
+      cause: トケラウがギルバート・エリス諸島植民地に加えられる
+      source: "https://ja.wikipedia.org/wiki/トケラウ"
+    - from: 1926
+      owner: new_zealand
+      label: トケラウ
+      cause: トケラウの行政がニュージーランド（西サモアの行政官）に移される（1948年に正式にニュージーランド領）
+      note: 2006・2007年の住民投票では、自由連合への移行に必要な3分の2の賛成に届かなかった
+      source: "https://ja.wikipedia.org/wiki/トケラウ"
+
+- id: pcn_pitcairn
+  name: ピトケアン諸島
+  select:
+    pieces: [PCN-Pitcairn_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島（かつてポリネシア人が住んでいた）。1790年にバウンティ号の反乱者とタヒチ人が住みついた
+      source: "https://ja.wikipedia.org/wiki/ピトケアン諸島"
+    - from: 1838
+      owner: britain
+      label: ピトケアン諸島
+      cause: イギリスの植民地となる（11月）
+      note: ヘンダーソン島などの3島は1902年に加えられた
+      source: "https://ja.wikipedia.org/wiki/ピトケアン諸島"
+
+# ================================================================ キリバス・ツバル・ナウル
+
+- id: kir_gilbert
+  name: ギルバート諸島
+  select:
+    pieces: [KIR-Abaiang, KIR-Abemama, KIR-Aranuka, KIR-Arorae, KIR-Beru, KIR-Butaritari, KIR-Kuria, KIR-Maiana, KIR-Marakei, KIR-Nikunau, KIR-Nonouti, KIR-Onotoa, KIR-Tabiteuea_North, KIR-Tabiteuea_South, KIR-Tamana, KIR-Betio, KIR-Tarawa_Ieta, KIR-Tarawa_Teinainano]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ミクロネシア系の人々の環礁。島ごとに長老の集会や首長が治めた（アベママ島などでは首長が周りの島を従えた）
+      source: "https://ja.wikipedia.org/wiki/キリバスの歴史"
+    - from: 1892
+      owner: britain
+      label: ギルバート・エリス諸島保護領
+      cause: イギリスがギルバート諸島を保護領とする（5月）
+      source: "https://ja.wikipedia.org/wiki/ギルバート・エリス諸島"
+    - from: 1916
+      owner: britain
+      label: ギルバート・エリス諸島植民地
+      cause: 保護領が植民地とされる（1月）
+      source: "https://ja.wikipedia.org/wiki/ギルバート・エリス諸島"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ギルバート諸島（日本の占領）
+      cause: 日本軍がタラワ・アベママなどを占領する（9月）
+      note: 南部の島々には守備隊は置かれなかった
+      source: "https://ja.wikipedia.org/wiki/タラワの戦い"
+    - from: 1943
+      owner: britain
+      label: ギルバート・エリス諸島植民地
+      cause: アメリカ軍がタラワ・マキン（ブタリタリ）・アベママを奪う（11月、タラワの戦い）
+      source: "https://ja.wikipedia.org/wiki/タラワの戦い"
+    - from: 1976
+      owner: britain
+      label: ギルバート諸島植民地
+      cause: エリス諸島（ツバル）が分かれる（1月）
+      source: "https://ja.wikipedia.org/wiki/ギルバート・エリス諸島"
+    - from: 1979
+      owner: kiribati
+      cause: キリバス共和国として独立する（7月12日）
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: kir_butaritari_1941
+  name: ブタリタリ環礁（マキン）
+  select:
+    pieces: [KIR-Butaritari]
+  timeline:
+    - from: 1941
+      owner: japan
+      certainty: occupied
+      label: マキン（日本の占領）
+      cause: 太平洋戦争の開戦直後に日本軍がマキン（ブタリタリ）を占領する（12月10日）
+      source: "https://ja.wikipedia.org/wiki/マキンの戦い"
+    - from: 1943
+      owner: britain
+      label: ギルバート・エリス諸島植民地
+      cause: アメリカ軍がマキンを奪う（11月）
+      source: "https://ja.wikipedia.org/wiki/マキンの戦い"
+    - from: 1976
+      owner: britain
+      label: ギルバート諸島植民地
+      cause: エリス諸島（ツバル）が分かれる
+      source: "https://ja.wikipedia.org/wiki/ギルバート・エリス諸島"
+    - from: 1979
+      owner: kiribati
+      cause: キリバス共和国として独立する
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: kir_banaba
+  name: バナバ島（オーシャン島）
+  select:
+    pieces: [KIR-Banaba]
+  timeline:
+    - from: 1648
+      owner: null
+      note: バナバの人々の島
+      source: "https://ja.wikipedia.org/wiki/バナバ島"
+    - from: 1900
+      owner: britain
+      label: オーシャン島（イギリス領）
+      cause: リン鉱石が見つかり、イギリスが島を併合する（太平洋諸島会社が採掘）
+      note: 併合の年（1900・1901年）は要確認
+      source: "https://ja.wikipedia.org/wiki/バナバ島"
+    - from: 1916
+      owner: britain
+      label: ギルバート・エリス諸島植民地（オーシャン島）
+      cause: ギルバート・エリス諸島の保護領が植民地とされる（首府は1908年からオーシャン島）
+      source: "https://ja.wikipedia.org/wiki/バナバ島"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: オーシャン島（日本の占領）
+      cause: 日本軍がオーシャン島を占領する（8月）
+      source: "https://ja.wikipedia.org/wiki/バナバ島"
+    - from: 1945
+      owner: britain
+      label: ギルバート・エリス諸島植民地（オーシャン島）
+      cause: 日本軍が降伏する（10月）
+      note: 1945年、採掘で荒れた島の住民の多くはフィジーのランビ島に移された
+      source: "https://ja.wikipedia.org/wiki/バナバ島"
+    - from: 1979
+      owner: kiribati
+      cause: キリバス共和国として独立する
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: kir_phoenix
+  name: フェニックス諸島
+  select:
+    pieces: [KIR-Phoenix_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島（グアノ＝海鳥の糞の堆積が採掘された）
+      source: "https://ja.wikipedia.org/wiki/フェニックス諸島"
+    - from: 1889
+      owner: britain
+      certainty: nominal
+      label: フェニックス諸島（イギリスの主張）
+      cause: イギリスがフェニックス諸島の領有を宣言する
+      note: アメリカもグアノ島法（1856年）にもとづいて一部の島の領有を主張した。年は要確認
+      source: "https://ja.wikipedia.org/wiki/フェニックス諸島"
+    - from: 1937
+      owner: britain
+      label: ギルバート・エリス諸島植民地（フェニックス諸島）
+      cause: フェニックス諸島がギルバート・エリス諸島植民地に加えられ、翌年からギルバート諸島の人々の入植が行われる
+      source: "https://ja.wikipedia.org/wiki/フェニックス諸島"
+    - from: 1979
+      owner: kiribati
+      cause: キリバスの独立。タラワ条約でアメリカが領有の主張を取り下げる
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: kir_kanton
+  name: カントン島（カントン・エンダーベリー）
+  select:
+    pieces: [KIR-Kanton]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+      source: "https://ja.wikipedia.org/wiki/カントン島"
+    - from: 1937
+      owner: britain
+      certainty: uncertain
+      label: カントン島（英米が領有を争う）
+      cause: イギリスがフェニックス諸島を植民地に加え、アメリカも入植者を送って領有を主張する
+      source: "https://ja.wikipedia.org/wiki/カントン島"
+    - from: 1939
+      owner: britain
+      certainty: uncertain
+      label: カントン・エンダーベリー（英米の共同管理）
+      cause: 英米がカントン島・エンダーベリー島を50年間共同で管理することに合意する（4月）
+      note: 太平洋横断の飛行艇の中継地となった
+      source: "https://ja.wikipedia.org/wiki/カントン島"
+    - from: 1979
+      owner: kiribati
+      cause: キリバスの独立。タラワ条約でアメリカが領有の主張を取り下げる
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: kir_line
+  name: ライン諸島北部（クリスマス島・ファニング島・ワシントン島）
+  select:
+    pieces: [KIR-Kiritimati, KIR-Tabuaeran, KIR-Teraina]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島（クリスマス島は1777年にクックが来航して名づけた）
+      source: "https://ja.wikipedia.org/wiki/ライン諸島"
+    - from: 1888
+      owner: britain
+      label: ライン諸島（イギリス領）
+      cause: イギリスがクリスマス島・ファニング島を併合する（ワシントン島は1889年）
+      note: ヤシの農園が作られ、ファニング島には太平洋横断の海底電信の中継所が置かれた（1902年）
+      source: "https://ja.wikipedia.org/wiki/ライン諸島"
+    - from: 1919
+      owner: britain
+      label: ギルバート・エリス諸島植民地（ライン諸島）
+      cause: ギルバート・エリス諸島植民地に加えられる
+      note: 1957–62年、クリスマス島でイギリス・アメリカが核実験を行った
+      source: "https://ja.wikipedia.org/wiki/キリスィマスィ島"
+    - from: 1979
+      owner: kiribati
+      cause: キリバス共和国として独立する
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: kir_southern_line
+  name: ライン諸島南部（モールデン島・カロライン島など）
+  select:
+    pieces: [KIR-Southern_Line_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島（モールデン島には古いポリネシア人の遺跡がある）
+      source: "https://ja.wikipedia.org/wiki/ライン諸島"
+    - from: 1889
+      owner: britain
+      certainty: nominal
+      label: ライン諸島（イギリスの主張）
+      cause: イギリスが島々の領有を宣言し、グアノの採掘を許可する
+      note: 年は島によって異なる（1860–80年代）。要確認。アメリカもグアノ島法で一部の領有を主張した
+      source: "https://ja.wikipedia.org/wiki/ライン諸島"
+    - from: 1972
+      owner: britain
+      label: ギルバート・エリス諸島植民地（ライン諸島）
+      cause: 西太平洋高等弁務官領の廃止で、ギルバート・エリス諸島植民地に加えられる
+      source: "https://ja.wikipedia.org/wiki/ライン諸島"
+    - from: 1979
+      owner: kiribati
+      cause: キリバスの独立。タラワ条約でアメリカが領有の主張を取り下げる
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+
+- id: tuv_ellice
+  name: エリス諸島（ツバル）
+  select:
+    iso_all: [TUV]
+  timeline:
+    - from: 1648
+      owner: null
+      note: ポリネシア系の人々の環礁。1863年にペルーの奴隷狩りの船に多くの住民が連れ去られた
+      source: "https://ja.wikipedia.org/wiki/ツバルの歴史"
+    - from: 1892
+      owner: britain
+      label: ギルバート・エリス諸島保護領
+      cause: イギリスがエリス諸島を保護領とする（10月）
+      source: "https://ja.wikipedia.org/wiki/ギルバート・エリス諸島"
+    - from: 1916
+      owner: britain
+      label: ギルバート・エリス諸島植民地
+      cause: 保護領が植民地とされる
+      note: 太平洋戦争中の1942年にアメリカ軍がフナフティ環礁に飛行場を作った
+      source: "https://ja.wikipedia.org/wiki/ギルバート・エリス諸島"
+    - from: 1976
+      owner: britain
+      label: ツバル植民地
+      cause: 住民投票（1974年）でギルバート諸島から分かれ、ツバル植民地となる（1月）
+      source: "https://ja.wikipedia.org/wiki/ツバル"
+    - from: 1978
+      owner: tuvalu
+      cause: ツバルが独立する（10月1日）
+      source: "https://ja.wikipedia.org/wiki/ツバル"
+
+- id: nru_nauru
+  name: ナウル島
+  select:
+    iso_all: [NRU]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 12の部族の島（1798年にイギリスの捕鯨船が来航し「プレザント島」と呼んだ）。1880年代には部族間の内戦が続いた
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+    - from: 1888
+      owner: german_empire
+      label: ナウル（ドイツ領マーシャル諸島）
+      cause: ドイツがナウルを併合し、マーシャル諸島の保護領に加える（10月）
+      note: 1906年からリン鉱石の採掘が始まった
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+    - from: 1914
+      owner: australia
+      certainty: occupied
+      label: ナウル（オーストラリアの占領）
+      cause: 第一次世界大戦でオーストラリア軍がナウルを占領する（11月）
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+    - from: 1920
+      owner: australia
+      label: ナウル委任統治領
+      cause: イギリス・オーストラリア・ニュージーランドの3国の委任統治領となり、オーストラリアが治める
+      note: リン鉱石は3国の委員会が採掘した
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: ナウル（日本の占領）
+      cause: 日本軍がナウルを占領する（8月）
+      note: 住民の多くがチューク（トラック）島に移された
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+    - from: 1945
+      owner: australia
+      label: ナウル委任統治領
+      cause: 日本軍が降伏する（9月）
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+    - from: 1947
+      owner: australia
+      label: ナウル信託統治領
+      cause: 国際連合の信託統治領となる
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+    - from: 1968
+      owner: nauru
+      cause: ナウルが独立する（1月31日）
+      source: "https://ja.wikipedia.org/wiki/ナウル"
+
+# ================================================================ ミクロネシア（マーシャル・カロリン・パラオ）
+
+- id: mhl_marshall
+  name: マーシャル諸島
+  select:
+    iso_all: [MHL]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マーシャルの人々の環礁。首長（イロージ）が環礁ごとに治め、棒海図で航海した
+      source: "https://ja.wikipedia.org/wiki/マーシャル諸島の歴史"
+    - from: 1885
+      owner: german_empire
+      label: マーシャル諸島（ドイツの保護領）
+      cause: ドイツがマーシャル諸島を保護領とする（10月、ヤルート）
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1914
+      owner: japan
+      certainty: occupied
+      label: 南洋諸島（日本の占領）
+      cause: 第一次世界大戦で日本海軍がドイツ領の南洋諸島を占領する（10月）
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1920
+      owner: japan
+      label: 南洋諸島（日本の委任統治）
+      cause: 国際連盟の委任統治領として日本に委ねられる（1922年に南洋庁）
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1944
+      owner: usa
+      certainty: occupied
+      label: マーシャル諸島（アメリカの占領）
+      cause: アメリカ軍がクェゼリン・マジュロ・エニウェトクを奪う（1–2月）
+      source: "https://ja.wikipedia.org/wiki/クェゼリンの戦い"
+    - from: 1947
+      owner: usa
+      label: 太平洋諸島信託統治領
+      cause: 国際連合の戦略的信託統治領としてアメリカに委ねられる（7月）
+      note: 1946–58年、ビキニ環礁・エニウェトク環礁でアメリカが67回の核実験を行った
+      source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - from: 1979
+      owner: usa
+      label: マーシャル諸島（自治政府。信託統治領）
+      cause: 憲法を定めて自治政府ができる（5月）
+      source: "https://ja.wikipedia.org/wiki/マーシャル諸島"
+    - from: 1986
+      owner: marshall_islands
+      cause: アメリカとの自由連合盟約が発効し、独立する（10月）
+      source: "https://ja.wikipedia.org/wiki/マーシャル諸島"
+
+- id: mhl_bypassed_1944
+  name: マーシャル諸島東部・南部の環礁（ウォッジェ・マロエラップ・ミリ・ヤルート）
+  select:
+    pieces: [MHL-Wotje, MHL-Maloelap, MHL-Mili, MHL-Jaluit]
+  timeline:
+    - from: 1944
+      owner: japan
+      label: 南洋諸島（日本の委任統治）
+      cause: アメリカ軍はこれらの環礁を攻撃しただけで上陸せず、日本軍が終戦まで残る（飛び石作戦）
+      source: "https://ja.wikipedia.org/wiki/ギルバート・マーシャル諸島の戦い"
+    - from: 1945
+      owner: usa
+      certainty: occupied
+      label: マーシャル諸島（アメリカの占領）
+      cause: 日本軍が降伏する（9月）
+      source: "https://ja.wikipedia.org/wiki/ギルバート・マーシャル諸島の戦い"
+    - from: 1947
+      owner: usa
+      label: 太平洋諸島信託統治領
+      cause: 国際連合の戦略的信託統治領としてアメリカに委ねられる
+      source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - from: 1979
+      owner: usa
+      label: マーシャル諸島（自治政府。信託統治領）
+      cause: 憲法を定めて自治政府ができる
+      source: "https://ja.wikipedia.org/wiki/マーシャル諸島"
+    - from: 1986
+      owner: marshall_islands
+      cause: アメリカとの自由連合盟約が発効し、独立する
+      source: "https://ja.wikipedia.org/wiki/マーシャル諸島"
+
+- id: fsm_carolines
+  name: カロリン諸島（ヤップ・ポンペイ）
+  select:
+    pieces: [FSM-Yap, FSM-Pohnpei]
+  timeline:
+    - from: 1648
+      owner: null
+      note: カロリン諸島の人々の地。ポンペイ島には石の都ナン・マドールの遺跡がある。ヤップは周りの島々から貢物を受けた
+      source: "https://ja.wikipedia.org/wiki/カロリン諸島"
+    - from: 1686
+      owner: spain
+      certainty: nominal
+      label: カロリン諸島（スペインの主張）
+      cause: スペインが島々を国王カルロス2世にちなみ「カロリナス」と名づけ、領有を主張する
+      note: 実際の支配は1885年まで及ばなかった
+      source: "https://ja.wikipedia.org/wiki/カロリン諸島"
+    - from: 1885
+      owner: spain
+      label: スペイン領カロリン諸島
+      cause: カロリン諸島をめぐるドイツとの争いで、ローマ教皇レオ13世の調停によりスペインの領有が認められる（12月）
+      note: 1887年にポンペイ島に拠点を置いたが、住民の反乱が起こった
+      source: "https://ja.wikipedia.org/wiki/カロリン諸島"
+    - from: 1899
+      owner: german_empire
+      label: ドイツ領カロリン諸島
+      cause: 米西戦争に敗れたスペインが、ドイツ＝スペイン条約でカロリン・パラオ・マリアナ諸島をドイツに売る（2月）
+      note: 1910–11年、ポンペイ島でソケースの反乱が起こった
+      source: "https://ja.wikipedia.org/wiki/ドイツ・スペイン条約_(1899年)"
+    - from: 1914
+      owner: japan
+      certainty: occupied
+      label: 南洋諸島（日本の占領）
+      cause: 第一次世界大戦で日本海軍がドイツ領の南洋諸島を占領する（10月）
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1920
+      owner: japan
+      label: 南洋諸島（日本の委任統治）
+      cause: 国際連盟の委任統治領として日本に委ねられる（1922年に南洋庁）
+      note: 日本からの移民が増え、1930年代には南洋諸島全体で日本人が島の住民より多くなった
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1945
+      owner: usa
+      certainty: occupied
+      label: カロリン諸島（アメリカの占領）
+      cause: 日本軍が降伏する（9月。島々はアメリカ軍に迂回され、終戦まで日本軍が残った）
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1947
+      owner: usa
+      label: 太平洋諸島信託統治領
+      cause: 国際連合の戦略的信託統治領としてアメリカに委ねられる（7月）
+      source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - from: 1979
+      owner: usa
+      label: ミクロネシア連邦（自治政府。信託統治領）
+      cause: 4州の憲法で自治政府ができる（5月）
+      source: "https://ja.wikipedia.org/wiki/ミクロネシア連邦"
+    - from: 1986
+      owner: micronesia
+      cause: アメリカとの自由連合盟約が発効し、独立する（11月）
+      source: "https://ja.wikipedia.org/wiki/ミクロネシア連邦"
+
+- id: fsm_east
+  name: チューク諸島・コスラエ島
+  select:
+    pieces: [FSM-Chuuk, FSM-Kosrae]
+  timeline:
+    - from: 1648
+      owner: null
+      note: チューク（トラック）・コスラエの人々の地。コスラエ島には王国があった
+      source: "https://ja.wikipedia.org/wiki/カロリン諸島"
+    - from: 1686
+      owner: spain
+      certainty: nominal
+      label: カロリン諸島（スペインの主張）
+      cause: スペインが島々を「カロリナス」と名づけ、領有を主張する
+      source: "https://ja.wikipedia.org/wiki/カロリン諸島"
+    - from: 1885
+      owner: spain
+      certainty: nominal
+      label: スペイン領カロリン諸島
+      cause: ローマ教皇レオ13世の調停でスペインの領有が認められる（拠点はヤップとポンペイだけ）
+      source: "https://ja.wikipedia.org/wiki/カロリン諸島"
+    - from: 1899
+      owner: german_empire
+      label: ドイツ領カロリン諸島
+      cause: ドイツ＝スペイン条約でドイツに売られる（2月）
+      source: "https://ja.wikipedia.org/wiki/ドイツ・スペイン条約_(1899年)"
+    - from: 1914
+      owner: japan
+      certainty: occupied
+      label: 南洋諸島（日本の占領）
+      cause: 第一次世界大戦で日本海軍が占領する（10月）
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1920
+      owner: japan
+      label: 南洋諸島（日本の委任統治）
+      cause: 国際連盟の委任統治領として日本に委ねられる
+      note: チューク（トラック）諸島は日本海軍連合艦隊の泊地となり、1944年2月のアメリカ軍の空襲で大きな被害を受けた
+      source: "https://ja.wikipedia.org/wiki/トラック島空襲"
+    - from: 1945
+      owner: usa
+      certainty: occupied
+      label: カロリン諸島（アメリカの占領）
+      cause: 日本軍が降伏する（9月）
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1947
+      owner: usa
+      label: 太平洋諸島信託統治領
+      cause: 国際連合の戦略的信託統治領としてアメリカに委ねられる
+      source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - from: 1979
+      owner: usa
+      label: ミクロネシア連邦（自治政府。信託統治領）
+      cause: 4州の憲法で自治政府ができる
+      source: "https://ja.wikipedia.org/wiki/ミクロネシア連邦"
+    - from: 1986
+      owner: micronesia
+      cause: アメリカとの自由連合盟約が発効し、独立する
+      source: "https://ja.wikipedia.org/wiki/ミクロネシア連邦"
+
+- id: plw_palau
+  name: パラオ諸島
+  select:
+    iso_all: [PLW]
+  timeline:
+    - from: 1648
+      owner: null
+      note: パラオの首長たちの地（コロールとマルキョクの首長が争った）。1783年にイギリス東インド会社の船が座礁して交流が始まった
+      source: "https://ja.wikipedia.org/wiki/パラオの歴史"
+    - from: 1885
+      owner: spain
+      certainty: nominal
+      label: スペイン領カロリン諸島（パラオ）
+      cause: ローマ教皇レオ13世の調停で、パラオを含むカロリン諸島のスペインの領有が認められる
+      source: "https://ja.wikipedia.org/wiki/パラオの歴史"
+    - from: 1899
+      owner: german_empire
+      label: ドイツ領カロリン諸島（パラオ）
+      cause: ドイツ＝スペイン条約でドイツに売られる
+      note: アンガウル島でリン鉱石の採掘が始まった
+      source: "https://ja.wikipedia.org/wiki/ドイツ・スペイン条約_(1899年)"
+    - from: 1914
+      owner: japan
+      certainty: occupied
+      label: 南洋諸島（日本の占領）
+      cause: 第一次世界大戦で日本海軍が占領する（10月）
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1920
+      owner: japan
+      label: 南洋諸島（日本の委任統治）
+      cause: 国際連盟の委任統治領として日本に委ねられる（1922年、コロールに南洋庁）
+      source: "https://ja.wikipedia.org/wiki/南洋庁"
+    - from: 1945
+      owner: usa
+      certainty: occupied
+      label: パラオ（アメリカの占領）
+      cause: 日本軍が降伏する（9月）
+      source: "https://ja.wikipedia.org/wiki/パラオの歴史"
+    - from: 1947
+      owner: usa
+      label: 太平洋諸島信託統治領
+      cause: 国際連合の戦略的信託統治領としてアメリカに委ねられる
+      source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - from: 1981
+      owner: usa
+      label: パラオ共和国（自治政府。信託統治領）
+      cause: 非核憲法のもとで自治政府ができる（1月）
+      source: "https://ja.wikipedia.org/wiki/パラオ"
+    - from: 1994
+      owner: palau
+      cause: アメリカとの自由連合盟約が発効し、独立する（10月1日）
+      source: "https://ja.wikipedia.org/wiki/パラオ"
+
+- id: plw_peleliu_1944
+  name: ペリリュー島・アンガウル島
+  select:
+    pieces: [PLW-Peleliu, PLW-Angaur]
+  timeline:
+    - from: 1944
+      owner: usa
+      certainty: occupied
+      label: ペリリュー・アンガウル（アメリカの占領）
+      cause: アメリカ軍がペリリュー島・アンガウル島を奪う（9–11月、ペリリューの戦い）
+      source: "https://ja.wikipedia.org/wiki/ペリリューの戦い"
+    - from: 1947
+      owner: usa
+      label: 太平洋諸島信託統治領
+      cause: 国際連合の戦略的信託統治領としてアメリカに委ねられる
+      source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - from: 1981
+      owner: usa
+      label: パラオ共和国（自治政府。信託統治領）
+      cause: 非核憲法のもとで自治政府ができる
+      source: "https://ja.wikipedia.org/wiki/パラオ"
+    - from: 1994
+      owner: palau
+      cause: アメリカとの自由連合盟約が発効し、独立する
+      source: "https://ja.wikipedia.org/wiki/パラオ"
+
+# ================================================================ 合衆国の太平洋の小島（UMI）とクリッパートン島
+
+- id: umi_midway
+  name: ミッドウェー諸島
+  select:
+    pieces: [UMI-Midway_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+      source: "https://ja.wikipedia.org/wiki/ミッドウェー環礁"
+    - from: 1867
+      owner: usa
+      label: ミッドウェー諸島
+      cause: アメリカ合衆国がミッドウェー諸島を領有する（8月）
+      note: 1903年に海底電信の中継所、1935年にパンアメリカン航空の飛行艇の中継地、1940年から海軍基地。1942年6月のミッドウェー海戦の舞台
+      source: "https://ja.wikipedia.org/wiki/ミッドウェー環礁"
+
+- id: umi_wake
+  name: ウェーク島
+  select:
+    pieces: [UMI-Wake_Atoll]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+      source: "https://ja.wikipedia.org/wiki/ウェーク島"
+    - from: 1899
+      owner: usa
+      label: ウェーク島
+      cause: アメリカ合衆国がウェーク島を領有する（1月）
+      source: "https://ja.wikipedia.org/wiki/ウェーク島"
+    - from: 1941
+      owner: japan
+      certainty: occupied
+      label: 大鳥島（日本の占領）
+      cause: 日本軍がウェーク島を攻略する（12月23日、ウェーク島の戦い）
+      source: "https://ja.wikipedia.org/wiki/ウェーク島の戦い"
+    - from: 1945
+      owner: usa
+      label: ウェーク島
+      cause: 日本軍が降伏する（9月）
+      note: マーシャル諸島が領有を主張している
+      source: "https://ja.wikipedia.org/wiki/ウェーク島"
+
+- id: umi_johnston
+  name: ジョンストン島
+  select:
+    pieces: [UMI-Johnston_Atoll]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+      source: "https://ja.wikipedia.org/wiki/ジョンストン島"
+    - from: 1858
+      owner: usa
+      certainty: uncertain
+      label: ジョンストン島（グアノ島）
+      cause: アメリカ合衆国がグアノ島法にもとづいて領有を主張する（ハワイ王国も同じ年に併合を宣言）
+      source: "https://ja.wikipedia.org/wiki/ジョンストン島"
+    - from: 1898
+      owner: usa
+      label: ジョンストン島
+      cause: ハワイの併合で、アメリカの領有がはっきりする
+      note: 1958–62年に核実験（高高度核爆発）の基地、のちに化学兵器の処分施設が置かれた
+      source: "https://ja.wikipedia.org/wiki/ジョンストン島"
+
+- id: umi_palmyra
+  name: パルミラ環礁
+  select:
+    pieces: [UMI-Palmyra_Atoll]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+      source: "https://ja.wikipedia.org/wiki/パルミラ環礁"
+    - from: 1862
+      owner: hawaii
+      label: パルミラ環礁（ハワイ王国）
+      cause: ハワイ王国が併合する（4月）
+      source: "https://ja.wikipedia.org/wiki/パルミラ環礁"
+    - from: 1898
+      owner: usa
+      label: パルミラ環礁（ハワイ）
+      cause: アメリカ合衆国がハワイを併合する
+      note: 1959年のハワイ州の成立で州から外され、アメリカの未編入領土となった
+      source: "https://ja.wikipedia.org/wiki/パルミラ環礁"
+
+- id: umi_guano
+  name: ハウランド島・ベーカー島
+  select:
+    pieces: [UMI-Howland_Island, UMI-Baker_Island]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+      source: "https://ja.wikipedia.org/wiki/ハウランド島"
+    - from: 1857
+      owner: usa
+      label: グアノ島（アメリカ領）
+      cause: アメリカ合衆国がグアノ島法（1856年）にもとづいて領有する
+      note: 1935年に入植者が送られた。1937年にアメリア・イアハートはハウランド島をめざす途中で消息を絶った
+      source: "https://ja.wikipedia.org/wiki/ハウランド島"
+
+- id: umi_jarvis
+  name: ジャーヴィス島
+  select:
+    pieces: [UMI-Jarvis_Island]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+      source: "https://ja.wikipedia.org/wiki/ジャービス島"
+    - from: 1858
+      owner: usa
+      label: グアノ島（アメリカ領）
+      cause: アメリカ合衆国がグアノ島法にもとづいて領有する
+      source: "https://ja.wikipedia.org/wiki/ジャービス島"
+    - from: 1889
+      owner: britain
+      certainty: uncertain
+      label: ジャーヴィス島（イギリスが併合）
+      cause: グアノを掘り尽くしてアメリカが去った後、イギリスが併合する
+      source: "https://ja.wikipedia.org/wiki/ジャービス島"
+    - from: 1935
+      owner: usa
+      label: ジャーヴィス島
+      cause: アメリカがハワイから入植者を送り、翌年に改めて領有を宣言する
+      source: "https://ja.wikipedia.org/wiki/ジャービス島"
+
+- id: clp_clipperton
+  name: クリッパートン島
+  select:
+    pieces: [CLP-Clipperton_Island]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人の環礁
+      source: "https://ja.wikipedia.org/wiki/クリッパートン島"
+    - from: 1858
+      owner: france
+      certainty: nominal
+      label: クリッパートン島
+      cause: フランスが領有を宣言する（11月）
+      source: "https://ja.wikipedia.org/wiki/クリッパートン島"
+    - from: 1897
+      owner: mexico
+      certainty: uncertain
+      label: クリッパートン島（メキシコが占拠）
+      cause: メキシコが兵を送り、領有を主張する
+      note: メキシコの守備隊はメキシコ革命の中で補給を絶たれ、1917年に生き残った女性と子どもが救出された
+      source: "https://ja.wikipedia.org/wiki/クリッパートン島"
+    - from: 1931
+      owner: france
+      label: クリッパートン島
+      cause: イタリア国王の仲裁裁定でフランスの領有が認められる（1月）
+      source: "https://ja.wikipedia.org/wiki/クリッパートン島"

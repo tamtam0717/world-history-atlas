@@ -2,6 +2,19 @@
 
 /** ピースの iso（国コード）→ 日本語の国名 */
 export const MODERN_NAMES: Record<string, string> = {
+  CXR: "クリスマス島",
+  CCK: "ココス（キーリング）諸島",
+  NFK: "ノーフォーク島",
+  HMD: "ハード島・マクドナルド諸島",
+  COK: "クック諸島",
+  NIU: "ニウエ",
+  TKL: "トケラウ",
+  NCL: "ニューカレドニア",
+  PYF: "フランス領ポリネシア",
+  WLF: "ウォリス・フツナ",
+  PCN: "ピトケアン諸島",
+  UMI: "合衆国領有小離島",
+  CLP: "クリッパートン島",
   REU: "レユニオン",
   MYT: "マヨット",
   SHN: "セントヘレナ",
@@ -229,6 +242,19 @@ export const MODERN_NAMES: Record<string, string> = {
 
 /** ピースの iso → 英語の国名（検索用）。別名があれば後ろに並べる */
 export const MODERN_NAMES_EN: Record<string, string[]> = {
+  CXR: ["Christmas Island"],
+  CCK: ["Cocos (Keeling) Islands"],
+  NFK: ["Norfolk Island"],
+  HMD: ["Heard Island and McDonald Islands"],
+  COK: ["Cook Islands"],
+  NIU: ["Niue"],
+  TKL: ["Tokelau"],
+  NCL: ["New Caledonia"],
+  PYF: ["French Polynesia"],
+  WLF: ["Wallis and Futuna"],
+  PCN: ["Pitcairn Islands"],
+  UMI: ["U.S. Minor Outlying Islands"],
+  CLP: ["Clipperton Island"],
   REU: ["Réunion"],
   MYT: ["Mayotte"],
   SHN: ["Saint Helena"],

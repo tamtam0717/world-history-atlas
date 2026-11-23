@@ -1,0 +1,844 @@
+# 言語（民族）の分布：オセアニア（オーストラリア・ニュージーランド・ニューギニア・太平洋の島々）1648–2025（O3 担当、2026-11-23）
+# 形式は docs/language-format.md（「オセアニア」の節）。main = 住民の多数派の民族の言語、minor = 2〜3割以上の少数派。
+# - 先住民の言語は細かく分けず、オーストラリア先住民の諸語（aboriginal_australian）、パプア諸語（papuan。非オーストロネシア系）、
+#   メラネシア諸語（melanesian）、フィジー語（fijian）、ポリネシア諸語（polynesian）、ミクロネシア諸語（micronesian）でまとめる。
+#   パラオ語はチャモロ語（南北アメリカの担当のグアム・北マリアナ）と同じ austronesian_other。
+# - 共通語のトク・ピシン（ニューギニア）・ビスラマ語（ヴァヌアツ）・ピジン（ソロモン）は民族の言語ではないので塗らず、note に書く。
+# - 入植者が住民の多数になった年（オーストラリアの植民地ごと、ニュージーランドの地方ごと）で英語に切り替える。年は人口の推計にもとづく目安。
+# - 宗教（data/religion/oceania.yaml）と同じ地域の分け方で、大きな変化はなるべく同じ年に切り替えている。
+# - 無人島（南極・ハード島・マッコーリー島・ケルマデック諸島・ニュージーランドの亜南極諸島・クリッパートン島・
+#   アメリカ領有小離島・南ライン諸島）は値を入れない。人が住みはじめた島は、その年から（ピトケアン 1790、ノーフォーク 1788、
+#   ココス 1827、クリスマス島 1888、ライン諸島 1890、フェニックス諸島 1938）。
+
+# ======== オーストラリア ========
+- id: lang_nsw
+  name: ニューサウスウェールズ（シドニー・キャンベラを含む）
+  select:
+    adm1: ["AUS/New South Wales", "AUS/Australian Capital Territory"]
+    pieces: [AUS-Other_Territories]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: オーストラリア先住民（アボリジニ）の数百の言語（ダルグ語・ウィラジュリ語など。多くはパマ・ニュンガン語族）。人々は狩猟採集で暮らし、大陸全体の人口は 1788 年に 30 万〜100 万人と推計される。
+      source: "https://ja.wikipedia.org/wiki/オーストラリア・アボリジニ"
+    - from: 1830
+      main: english
+      minor: aboriginal_australian
+      note: 1788 年にフィリップ総督の船団（第一船団）がシドニー湾に流刑植民地を開いた。天然痘（1789）と土地の収奪・暴力で先住民の人口は急減し、1820 年代に流刑囚と自由移民が内陸の牧羊地へ広がった（1830 年の植民者は約 4 万 6 千人）。流刑囚の約 3 割はアイルランド人。
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州"
+    - from: 1850
+      main: english
+      note: 流刑囚の送り込みは 1840 年に終わり、自由移民と 1851 年のゴールドラッシュで人口が急増した。先住民は保護区（リザーブ）に集められ、子どもを家族から引き離す政策（「盗まれた世代」、1910〜70 年ごろ）も行われた。第二次世界大戦後はイタリア・ギリシア・のちにアジア（中国・ベトナム・インドなど）からの移民が増え、シドニーは多文化の都市になった。
+      source: "https://ja.wikipedia.org/wiki/盗まれた世代"
+- id: lang_tasmania
+  name: タスマニア（ヴァン・ディーメンズ・ランド）
+  select:
+    adm1: ["AUS/Tasmania"]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: タスマニア先住民（パラワ）の諸語。1642 年にタスマンが来航した。
+    - from: 1820
+      main: english
+      minor: aboriginal_australian
+      note: 1803 年にイギリスが流刑植民地を開いた（ホバート 1804）。流刑囚と入植者が増え、先住民との「ブラック・ウォー」（1824–31）が起きた。
+      source: "https://ja.wikipedia.org/wiki/タスマニア州"
+    - from: 1832
+      main: english
+      note: 生き残った先住民の多くはフリンダース島へ移され（1833–47）、人口は数百人から数十人に減った。現在は先住民の子孫がタスマニア・アボリジニとして共同体を保っている。
+      source: "https://en.wikipedia.org/wiki/Black_War"
+- id: lang_victoria
+  name: ヴィクトリア（ポート・フィリップ）
+  select:
+    adm1: ["AUS/Victoria"]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: クリン人（ウルンジェリ語など）をはじめとする先住民の諸語。
+    - from: 1840
+      main: english
+      minor: aboriginal_australian
+      note: 1835 年にバットマンらがポート・フィリップ湾にメルボルンを建て、タスマニアとニューサウスウェールズから牧羊業者が押し寄せた（1840 年の植民者は約 1 万人）。
+      source: "https://ja.wikipedia.org/wiki/ヴィクトリア州"
+    - from: 1851
+      main: english
+      note: 1851 年のゴールドラッシュ（バララット・ベンディゴ）で人口は 10 年で 7 倍になった。中国人の金鉱労働者（1850 年代末に約 4 万人、成人男性の約 1 割）は note のみ。
+      source: "https://ja.wikipedia.org/wiki/ゴールドラッシュ"
+- id: lang_south_australia
+  name: 南オーストラリア（アデレードとその周辺。東経135度以東）
+  select:
+    pieces: [AUS-South_Australia]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: カウルナ人・ナリンジェリ人などの先住民の諸語。
+    - from: 1840
+      main: english
+      minor: aboriginal_australian
+      note: 1836 年にウェークフィールドの組織的植民の理論にもとづく自由移民の植民地として建てられた（流刑囚を受け入れなかった）。1838 年からプロイセンの古ルター派の移民がバロッサ渓谷などに住んだ（ドイツ語を話す人は人口の 1 割弱）。
+      source: "https://ja.wikipedia.org/wiki/南オーストラリア州"
+    - from: 1850
+      main: english
+- id: lang_sa_west
+  name: 南オーストラリア西部（東経132〜135度。エア半島西岸・クーバーペディ）
+  select:
+    pieces: [AUS-South_Australia_132_135E]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: ウィルル人・コカタ人・アナング（ピチャンチャチャラ人など）の諸語。
+    - from: 1900
+      main: english
+      minor: aboriginal_australian
+      note: エア半島西岸（セドゥナ・ストリーキーベイ）の小麦・牧羊の入植（1880〜1910 年代）、大陸横断鉄道（1917）、クーバーペディのオパール鉱山（1915–）。北部はアナング・ピチャンチャチャラ・ヤンクニチャチャラ（APY）の土地（1981 年に土地の権利が認められた）。
+- id: lang_sa_far_west
+  name: 南オーストラリア最西部（東経132度以西。ナラボー平原・APY の土地の西部）
+  select:
+    pieces: [AUS-South_Australia_west_of_132E]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: ピチャンチャチャラ語などの西部砂漠の言語。住民の多くはいまも先住民。1950〜60 年代にイギリスの核実験がマラリンガとエミュー・フィールドで行われ、住民は立ち退かされた。
+      source: "https://en.wikipedia.org/wiki/British_nuclear_tests_at_Maralinga"
+- id: lang_western_australia
+  name: 西オーストラリア
+  select:
+    adm1: ["AUS/Western Australia"]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: ヌーンガー人・ワジャリ人・キンバリーの諸民族などの先住民の諸語。オランダの東インド会社の船が西海岸に来航・座礁した（ニューホランド）。
+    - from: 1850
+      main: aboriginal_australian
+      minor: english
+      note: 1829 年にスワン川植民地（パース）が開かれたが、入植者は少なく、労働力不足から 1850–68 年には流刑囚を受け入れた。
+      source: "https://ja.wikipedia.org/wiki/西オーストラリア州"
+    - from: 1895
+      main: english
+      minor: aboriginal_australian
+      note: クールガーディー（1892）・カルグーリー（1893）のゴールドラッシュで、入植者の人口は 10 年で 4 倍（1901 年に約 18 万人）になった。北部のキンバリー・ピルバラには先住民が多い。
+      source: "https://en.wikipedia.org/wiki/Western_Australian_gold_rushes"
+    - from: 1910
+      main: english
+- id: lang_albany
+  name: オールバニ（キング・ジョージ湾）
+  select:
+    pieces: [AUS-Albany]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: ヌーンガー人（ミナン）の土地。
+    - from: 1830
+      main: aboriginal_australian
+      minor: english
+      note: 1826 年にニューサウスウェールズがフランスの進出を防ぐため兵営を置いた（西オーストラリアで最初の入植地）。
+    - from: 1850
+      main: english
+- id: lang_queensland
+  name: クイーンズランド（東経141度以東）
+  select:
+    pieces: [AUS-Queensland]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: 先住民の諸語（ケープヨーク半島には多くの言語があった）。1770 年にクックが東海岸を北上して測量し、ポゼッション島で領有を宣言した。
+    - from: 1860
+      main: aboriginal_australian
+      minor: english
+      note: 1824 年にモートン湾に流刑植民地（のちのブリスベン）が開かれ、1842 年から自由入植が許された。1859 年にニューサウスウェールズから分かれて植民地になった。牧畜地の拡大に先住民は抵抗し、植民地の騎馬警察（ネイティヴ・ポリス）による虐殺が各地で起きた。
+      source: "https://ja.wikipedia.org/wiki/クイーンズランド州"
+    - from: 1875
+      main: english
+      minor: aboriginal_australian
+      note: 入植者は 1870 年に約 11 万 5 千人。サトウキビ農園にはメラネシア（ヴァヌアツ・ソロモン）から労働者（カナカ）が集められ、強制的な徴募（ブラックバーディング）が問題になった（1863–1904。白豪主義のもとで大部分が送還された）。
+      source: "https://ja.wikipedia.org/wiki/ブラックバーディング"
+    - from: 1900
+      main: english
+- id: lang_queensland_west
+  name: クイーンズランド西部（東経141度以西。マウントアイザ）
+  select:
+    pieces: [AUS-Queensland_west_of_141E]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: カルカドゥーン人などの先住民の諸語。
+    - from: 1930
+      main: english
+      minor: aboriginal_australian
+      note: 1880 年代からの牧畜と、マウントアイザの銅・鉛・亜鉛の鉱山（1923–）。
+    - from: 1960
+      main: english
+- id: lang_torres_strait
+  name: トレス海峡諸島
+  select:
+    pieces: [AUS-Torres_Strait_Islands_1872, AUS-Torres_Strait_Islands_1879]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: トレス海峡諸島民（メラネシア系）の言語。西部・中部のカラ・ラガウ・ヤ語はパマ・ニュンガン語族、東部（マレー島など）のメリアム語はパプア諸語（東トランスフライ語族）で、どちらもふつうアボリジニの諸語とは区別されるが、凡例では「オーストラリア先住民の諸語」にまとめる。1606 年にトレスが海峡を通った。クイーンズランドへの編入は 1872 年（南部）と 1879 年（北部の島々）。
+      source: "https://ja.wikipedia.org/wiki/トレス海峡諸島"
+    - from: 1880
+      main: aboriginal_australian
+      minor: japanese
+      note: 木曜島の真珠貝の採取に、日本人（和歌山県などから）・マレー人・フィリピン人の潜水夫が集まった（1890 年代〜1941）。日常語はトレス海峡クレオール（英語系）が広まった。
+      source: "https://en.wikipedia.org/wiki/Thursday_Island"
+    - from: 1942
+      main: aboriginal_australian
+      note: 太平洋戦争で日本人は抑留され、住民の多くも避難した。戦後、多くの島民がクイーンズランド本土へ移った。マボ判決（1992）はマレー島の土地の権利を認め、「無主地（テラ・ヌリウス）」の考え方を否定した。
+      source: "https://ja.wikipedia.org/wiki/マボ判決"
+- id: lang_nt_west
+  name: ノーザンテリトリー西部（東経135度以西。ダーウィン・アリススプリングス）
+  select:
+    pieces: [AUS-Northern_Territory_west_of_135E]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: ララキア人・ティウィ人・アランダ人・ワルピリ人などの先住民の諸語。
+    - from: 1875
+      main: aboriginal_australian
+      minor: chinese
+      note: 1869 年に南オーストラリア植民地がパーマストン（ダーウィン）を建て、陸上電信線（1872）の建設とパインクリークの金鉱に中国人の労働者が集まった（1888 年には非先住民の大多数が中国人）。
+      source: "https://en.wikipedia.org/wiki/Chinese_Australians"
+    - from: 1900
+      main: aboriginal_australian
+      minor: english
+      note: 白豪主義の移民制限法（1901）で中国人は減った。1911 年にオーストラリア連邦の直轄領になった。アリススプリングスは 1929 年に鉄道が届いた。
+    - from: 1970
+      main: english
+      minor: aboriginal_australian
+      note: 第二次世界大戦（日本軍のダーウィン空襲 1942）の後、ダーウィンが成長した。1966 年のグリンジ人のストライキ（ウェーヴ・ヒル）から土地の権利の運動が広がり、1976 年の先住民土地権法で多くの土地が返還された。現在も住民の約 3 割が先住民（全国で最も高い）。
+      source: "https://en.wikipedia.org/wiki/Gurindji_strike"
+- id: lang_nt_east
+  name: ノーザンテリトリー東部（東経135度以東。アーネムランド東部・バークリー台地）
+  select:
+    pieces: [AUS-Northern_Territory]
+  timeline:
+    - from: 1648
+      main: aboriginal_australian
+      note: ヨルング人などの先住民の諸語。17〜19 世紀にはスラウェシのマカッサルの漁民がナマコ（トレパン）を採りに毎年来航した（1907 年に禁止）。
+      source: "https://en.wikipedia.org/wiki/Macassan_contact_with_Australia"
+    - from: 1970
+      main: aboriginal_australian
+      minor: english
+      note: ゴーヴ半島のボーキサイト鉱山とヌランバイの町（1970–）。ヨルング人のイルカラ樹皮請願（1963）は先住民の土地の権利を求めた最初の訴えの一つ。現在も住民の多数は先住民。
+      source: "https://en.wikipedia.org/wiki/Yirrkala_bark_petitions"
+- id: lang_norfolk
+  name: ノーフォーク島
+  select:
+    pieces: [NFK-Norfolk_Island]
+  timeline:
+    - from: 1788
+      main: english
+      note: 1788 年にシドニーから流刑植民地が置かれた（1814 年に放棄、1825–55 年に再び重罪犯の流刑地）。それまでは無人島（かつてポリネシア人が住んだ跡がある）。
+      source: "https://ja.wikipedia.org/wiki/ノーフォーク島"
+    - from: 1856
+      main: creole_english
+      minor: english
+      note: 1856 年にピトケアン島の住民（バウンティ号の反乱者とタヒチ人の子孫）194 人が移住し、英語とタヒチ語の混ざったノーフク語を話した。のちにオーストラリア本土からの移住者が増えた。
+- id: lang_christmas_island
+  name: クリスマス島
+  select:
+    pieces: [CXR-Christmas_Island]
+  timeline:
+    - from: 1888
+      main: chinese
+      minor: malay
+      note: 1888 年にイギリスが併合し、燐鉱石の採掘のため中国人とマレー人の労働者が移り住んだ（それまでは無人島）。海峡植民地（シンガポール）に属し、1958 年にオーストラリアに移管された。現在も住民の多数は中国系。
+      source: "https://ja.wikipedia.org/wiki/クリスマス島_(オーストラリア)"
+- id: lang_cocos
+  name: ココス（キーリング）諸島
+  select:
+    pieces: [CCK-Cocos_Keeling_Islands]
+  timeline:
+    - from: 1827
+      main: malay
+      note: 1826〜27 年にヘアとクルーニーズ＝ロスがヤシ園を開き、マレー人・ジャワ人などの労働者を住まわせた（それまでは無人島）。クルーニーズ＝ロス家の私領のような状態が 1978 年まで続いた。住民の多数はココス・マレー人。1955 年にオーストラリアに移管。
+      source: "https://ja.wikipedia.org/wiki/ココス諸島"
+
+# ======== ニュージーランド ========
+# 入植者（パケハ）が全体で先住民（マオリ）を上回ったのは 1858 年ごろ。南島は早く、北島の内陸（ワイカト・キング・カントリー・
+# ウレウェラ）は遅い。マオリ戦争（ニュージーランド戦争、1845–72）と土地の没収・売却で入植地が広がった。
+- id: lang_north_island
+  name: 北島（オークランド・ウェリントン以外のマオリの地域）
+  select:
+    adm1: ["NZL/Northland Region", "NZL/Waikato Region", "NZL/Bay of Plenty Region", "NZL/Gisborne Region", "NZL/Hawke's Bay Region", "NZL/Taranaki Region", "NZL/Manawatu-Wanganui Region"]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: マオリ（マオリ語）の諸部族（イウィ）。1642 年にタスマンが来航し、1769 年にクックが周航した。
+      source: "https://ja.wikipedia.org/wiki/マオリ"
+    - from: 1880
+      main: english
+      minor: polynesian
+      note: 1840 年のワイタンギ条約でイギリスの植民地になった。入植者の増加と土地の売却・没収（マオリ戦争）で、内陸を除く北島の多くで入植者が多数になった。マオリの人口は 1896 年に約 4 万 2 千人まで減ったのち回復に向かった。
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+- id: lang_northland
+  name: ノースランド（ベイ・オブ・アイランズ）
+  select:
+    adm1: ["NZL/Northland Region"]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ンガプヒなどのマオリの諸部族。ベイ・オブ・アイランズのコロラレカ（ラッセル）は 1820〜30 年代に捕鯨船・交易の港としてにぎわい、1814 年に宣教師が最初に住んだ。
+    - from: 1900
+      main: english
+      minor: polynesian
+      note: 1840 年にワイタンギ条約が結ばれた地。首長ホネ・ヘケの反乱（北部戦争、1845–46）。カウリ樹脂の採取に入植者とダルマチア人が集まった。現在も住民の 3 割以上がマオリ。
+      source: "https://en.wikipedia.org/wiki/Flagstaff_War"
+- id: lang_auckland
+  name: オークランド
+  select:
+    adm1: ["NZL/Auckland Region"]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ンガーティ・ファトゥアなどのマオリの諸部族（タマキ・マカウラウ）。
+    - from: 1845
+      main: english
+      minor: polynesian
+      note: 1840 年にホブソン総督が首都オークランドを建てた（1865 年まで首都）。
+      source: "https://ja.wikipedia.org/wiki/オークランド"
+    - from: 1860
+      main: english
+    - from: 1980
+      main: english
+      minor: polynesian
+      note: 戦後のマオリの都市への移住と、サモア・トンガ・クック諸島・ニウエなど太平洋の島々からの移民で、オークランドは世界で最もポリネシア人の多い都市になった（マオリとパシフィカで住民の約 4 分の 1）。1990 年代からは中国・インド・韓国などアジアからの移民も増えた。
+      source: "https://en.wikipedia.org/wiki/Pasifika_New_Zealanders"
+- id: lang_wellington
+  name: ウェリントン
+  select:
+    adm1: ["NZL/Wellington Region"]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ンガーティ・トア・アティアワなどのマオリの諸部族。
+    - from: 1845
+      main: english
+      note: 1840 年にウェークフィールドのニュージーランド会社が組織的植民で建てた最初の入植地。1865 年に首都がオークランドからウェリントンに移された。
+      source: "https://ja.wikipedia.org/wiki/ウェリントン"
+- id: lang_new_plymouth
+  name: ニュープリマス（タラナキ北部）
+  select:
+    pieces: [NZL-New_Plymouth_District]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: アティアワなどのタラナキのマオリの諸部族。
+    - from: 1860
+      main: english
+      minor: polynesian
+      note: 1841 年にニュージーランド会社の入植地ができた。土地の売買をめぐってタラナキ戦争（1860–61）が起き、マオリ戦争（ニュージーランド戦争）が北島全体に広がった。
+      source: "https://ja.wikipedia.org/wiki/マオリ戦争"
+    - from: 1880
+      main: english
+      note: 1865 年に南タラナキの土地が没収された。パリハカの非暴力の抵抗（テ・フィティ、1879–81）は武力で解散させられた。
+      source: "https://en.wikipedia.org/wiki/Parihaka"
+- id: lang_waikato_basin
+  name: ワイカト（ハミルトン）
+  select:
+    pieces: [NZL-Waikato_Basin]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ワイカトのマオリの諸部族。1858 年に土地の売却に反対する諸部族がポタタウ・テ・フェロフェロを王に立て、マオリ王運動（キーンギタンガ）が起こった。
+      source: "https://ja.wikipedia.org/wiki/マオリ王運動"
+    - from: 1870
+      main: english
+      minor: polynesian
+      note: 1863–64 年のワイカト侵攻で、王運動の中心地の約 48 万ヘクタールが没収され、兵士入植者に分け与えられた。
+      source: "https://en.wikipedia.org/wiki/Invasion_of_the_Waikato"
+    - from: 1900
+      main: english
+- id: lang_rohe_potae
+  name: キング・カントリー（ロヘ・ポタエ）
+  select:
+    pieces: [NZL-Rohe_Potae]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ンガーティ・マニアポトの土地。ワイカト侵攻の後、マオリ王タフィアオが退いた地で、1883 年まで入植者を締め出していた（キング・カントリー）。
+    - from: 1910
+      main: english
+      minor: polynesian
+      note: 北島幹線鉄道の建設（1885–1908）で入植が進んだ。住民の約 4 割がマオリ。
+      source: "https://en.wikipedia.org/wiki/King_Country"
+- id: lang_ruapehu
+  name: 北島中央部（ルアペフ・タウポ南部）
+  select:
+    pieces: [NZL-Ruapehu_District]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ンガーティ・トゥファレトアなどの土地。トンガリロの山々は 1887 年に首長テ・ヘウヘウが国に寄贈し、国立公園になった。
+    - from: 1920
+      main: english
+      minor: polynesian
+- id: lang_urewera
+  name: ウレウェラ・東ベイ・オブ・プレンティ（ファカタネ）
+  select:
+    pieces: [NZL-Whakatane_District]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: トゥホエ・ンガーティ・アワなどの土地。ウレウェラの森は最後までマオリの自治が続いた地域の一つ（1896 年のウレウェラ特別保留地法）。
+      source: "https://en.wikipedia.org/wiki/T%C5%ABhoe"
+    - from: 1950
+      main: english
+      minor: polynesian
+      note: 現在も住民の半数近くがマオリ。2014 年にトゥホエとの和解で、テ・ウレウェラは法人格をもつ土地になった。
+- id: lang_gisborne
+  name: ギズボーン（イースト・ケープ）
+  select:
+    adm1: ["NZL/Gisborne Region"]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ンガーティ・ポロウなどの土地。1769 年にクックがポバティ湾に最初に上陸した。
+    - from: 1910
+      main: english
+      minor: polynesian
+      note: 牧羊地の入植。ンガーティ・ポロウは土地の多くを保ち、現在も住民の約半数がマオリ（全国で最も高い地方）。
+- id: lang_south_island
+  name: 南島
+  select:
+    adm1: ["NZL/Canterbury Region", "NZL/Otago Region", "NZL/Southland Region", "NZL/Nelson Region", "NZL/Tasman Region", "NZL/Marlborough Region", "NZL/West Coast Region"]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ンガーイ・タフなどのマオリ（南島の人口は数千人と少なかった）。西海岸のポウナム（翡翠）の産地。
+    - from: 1850
+      main: english
+      note: ネルソン（1842）、スコットランド自由教会のオタゴ（ダニーデン 1848）、イングランド国教会のカンタベリー（クライストチャーチ 1850）の組織的植民。ンガーイ・タフは 1840〜60 年代に土地の大部分を売却させられた。
+      source: "https://en.wikipedia.org/wiki/Canterbury_Association"
+- id: lang_west_coast_nz
+  name: ウェストコースト（南島西岸）
+  select:
+    adm1: ["NZL/West Coast Region"]
+  timeline:
+    - from: 1648
+      main: polynesian
+    - from: 1865
+      main: english
+      note: 1864–67 年のゴールドラッシュ（ホキティカ）で、オーストラリアやアイルランドから鉱夫が集まった。
+      source: "https://en.wikipedia.org/wiki/West_Coast_Gold_Rush"
+- id: lang_chatham
+  name: チャタム諸島
+  select:
+    pieces: [NZL-Chatham_Islands_Territory]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: モリオリ（ポリネシア系。平和主義の掟をもった）。1835 年に北島から移ってきたマオリ（ンガーティ・ムトゥンガ・ンガーティ・タマ）がモリオリを殺害・隷属させた。
+      source: "https://ja.wikipedia.org/wiki/モリオリ"
+    - from: 1900
+      main: polynesian
+      minor: english
+      note: 牧羊の入植者。現在も住民の多数はマオリとモリオリの子孫。
+
+# ======== ニューギニア（パプアニューギニア） ========
+# 沿岸と島々はオーストロネシア系（メラネシア諸語）、内陸と高地は非オーストロネシア系の言語（パプア諸語）が多い。
+# 約 800 の言語がある。共通語はトク・ピシン（英語系のピジン・クレオール）とヒリ・モツ語、英語。
+- id: lang_png
+  name: ニューギニア本島の内陸と高地（パプア諸語）
+  select:
+    iso: [PNG]
+  timeline:
+    - from: 1648
+      main: papuan
+      note: 非オーストロネシア系の諸言語（トランス・ニューギニア語族など）。高地の谷間（ワギ谷・アサロ谷など）には人口が多かったが、外の世界に知られたのは 1930 年代の金鉱探しの探検（リーヒー兄弟）による。共通語のトク・ピシンは 19 世紀後半の農園労働者のピジンから広まった。
+      source: "https://ja.wikipedia.org/wiki/パプア諸語"
+- id: lang_png_coast_islands
+  name: ビスマルク諸島・ミルン湾・パプア沿岸（メラネシア諸語）
+  select:
+    pieces: [PNG-East_New_Britain_Province, PNG-West_New_Britain_Province, PNG-New_Ireland_Province, PNG-Manus_Province, PNG-Milne_Bay_Province]
+  timeline:
+    - from: 1648
+      main: melanesian
+      note: オーストロネシア系のメラネシア諸語（トーライ人のクアヌア語、ミルン湾のドブ語・キリウィナ語など）。トロブリアンド諸島のクラ交易はマリノフスキの研究で知られる。ニューブリテン島のバイニング人などはパプア系。
+      source: "https://ja.wikipedia.org/wiki/オセアニア諸語"
+- id: lang_port_moresby
+  name: ポートモレスビーと中央州
+  select:
+    pieces: [PNG-Central_Province, PNG-National_Capital_District]
+  timeline:
+    - from: 1648
+      main: melanesian
+      minor: papuan
+      note: 沿岸のモツ人（オーストロネシア系）と内陸のコイアリ人など（パプア系）。モツ人はヒリ交易でパプア湾と土器・サゴを交換した。ポートモレスビーは 1884 年にイギリスの保護領の中心になった。首都には国中から人が集まり、共通語はトク・ピシンと英語。
+      source: "https://ja.wikipedia.org/wiki/ポートモレスビー"
+- id: lang_bougainville
+  name: ブーゲンヴィル
+  select:
+    pieces: [PNG-Autonomous_Region_of_Bougainville]
+  timeline:
+    - from: 1648
+      main: papuan
+      minor: melanesian
+      note: 中部・南部のナシオイ語・ブイン語などは非オーストロネシア系、北部とブカ島はオーストロネシア系。住民はソロモン諸島の人々と近い。
+      source: "https://ja.wikipedia.org/wiki/ブーゲンビル島"
+
+# ======== ソロモン諸島 ========
+- id: lang_solomons
+  name: ソロモン諸島
+  select:
+    iso: [SLB]
+  timeline:
+    - from: 1648
+      main: melanesian
+      note: 約 70 のメラネシア諸語（オーストロネシア系）。中部の一部（ラッセル諸島・ヴェララヴェラ島・レンドヴァ島など）には非オーストロネシア系の言語もある。1568 年にスペインのメンダーニャが来航した。マライタ島北東のオントンジャワ環礁などはポリネシア系。共通語はソロモン・ピジン。1950〜60 年代にイギリスはキリバス人を西部州（ギゾ）などに移住させた。
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+- id: lang_rennell_bellona
+  name: レンネル島・ベローナ島
+  select:
+    pieces: [SLB-Rennell_and_Bellona]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ポリネシア人の住む「ポリネシアン・アウトライアー」（メラネシアの中のポリネシア系の島）。
+      source: "https://en.wikipedia.org/wiki/Polynesian_outlier"
+- id: lang_temotu
+  name: テモツ（サンタクルーズ諸島）
+  select:
+    pieces: [SLB-Temotu]
+  timeline:
+    - from: 1648
+      main: melanesian
+      minor: polynesian
+      note: サンタクルーズ島などのオーストロネシア系の言語と、ティコピア島・アヌタ島などのポリネシア系の言語。1595 年にメンダーニャがサンタクルーズ島に植民を試みて失敗した。
+
+# ======== ヴァヌアツ（ニューヘブリディーズ） ========
+- id: lang_vanuatu
+  name: ヴァヌアツ（ニューヘブリディーズ）
+  select:
+    iso: [VUT]
+  timeline:
+    - from: 1648
+      main: melanesian
+      note: 100 以上のメラネシア諸語（人口あたりの言語の数は世界で最も多い）。1606 年にキロスがエスピリトゥサント島に来航した。南部のフツナ島・アニファ島はポリネシア系。19 世紀には白檀の伐採とクイーンズランド・フィジーの農園への労働者の徴募（ブラックバーディング）で人口が減った。英仏共同統治（1906–80）のもとで英語とフランス語の学校が並び、共通語のビスラマ語（英語系のピジン・クレオール）が広まった。
+      source: "https://ja.wikipedia.org/wiki/バヌアツ"
+
+# ======== ニューカレドニア ========
+- id: lang_new_caledonia
+  name: ニューカレドニア本島（北部州）
+  select:
+    iso: [NCL]
+  timeline:
+    - from: 1648
+      main: melanesian
+      note: カナク（メラネシア人）の約 30 の言語。1774 年にクックが来航した。
+      source: "https://ja.wikipedia.org/wiki/カナック"
+    - from: 1880
+      main: melanesian
+      minor: french
+      note: 1853 年にフランスが領有し、1864–97 年は流刑地（パリ・コミューンの流刑者を含む）。西海岸の牧畜の入植でカナクは保留地に押し込められ、1878 年にアタイの率いる反乱が起きた。
+      source: "https://en.wikipedia.org/wiki/Kanak_revolt_of_1878"
+- id: lang_new_caledonia_south
+  name: ニューカレドニア南部（南部州。ヌーメア）
+  select:
+    pieces: [NCL-Province_Sud]
+  timeline:
+    - from: 1648
+      main: melanesian
+      note: カナクの諸語。
+    - from: 1880
+      main: melanesian
+      minor: french
+      note: ヌーメア（1854 年にポール・ド・フランスとして建設）と流刑地。ニッケル鉱山（1870 年代〜）。
+    - from: 1900
+      main: french
+      minor: melanesian
+      note: フイエ総督の自由移民の募集（1894–1903）で、フランス系の入植者（カルドシュ）が南部の多数になった。ジャワ人・ベトナム人の契約労働者も来た。1960〜70 年代のニッケル・ブームでフランス本国やワリス・フトゥナ（ポリネシア系）からの移住が増えた。カナクの独立運動（1984–88 の騒乱）の後、マティニョン合意（1988）・ヌーメア協定（1998）で自治が拡大し、独立の住民投票が 2018・20・21 年に行われた（いずれも否決）。
+      source: "https://ja.wikipedia.org/wiki/ヌーメア協定"
+- id: lang_loyalty_islands
+  name: ロイヤルティ諸島
+  select:
+    pieces: [NCL-Loyalty_Islands]
+  timeline:
+    - from: 1648
+      main: melanesian
+      note: リフ島（ドレフ語）・マレ島（ネンゴネ語）・ウヴェア島（イアイ語と、ポリネシア系のファガウヴェア語）。現在も住民のほとんどがカナク。
+
+# ======== フィジー ========
+- id: lang_fiji
+  name: フィジー
+  select:
+    iso: [FJI]
+  timeline:
+    - from: 1648
+      main: fijian
+      note: フィジー人（現在の iTaukei）のフィジー語。東部のラウ諸島はトンガとの結びつきが強い。1643 年にタスマンが来航した。
+      source: "https://ja.wikipedia.org/wiki/フィジー"
+- id: lang_fiji_ba
+  name: フィジー西部（バ州。ラウトカ・ナンディ）
+  select:
+    pieces: [FJI-Ba]
+  timeline:
+    - from: 1648
+      main: fijian
+    - from: 1900
+      main: fijian
+      minor: hindustani
+      note: 1874 年にイギリスの植民地になり、ゴードン総督はフィジー人の土地と共同体を保護する一方、サトウキビ農園の労働者としてインドから年季契約の移民（ギルミティヤ）を入れた（1879–1916 年に約 6 万人）。
+      source: "https://en.wikipedia.org/wiki/Indian_indenture_system"
+    - from: 1921
+      main: hindustani
+      minor: fijian
+      note: 年季明けのインド系の住民がサトウキビの小作農として定住し、西部の砂糖地帯で多数になった。言語はフィジー・ヒンディー語（アワディー語・ボージュプリー語をもとにした共通語）。全国でもインド系が 1946〜86 年は多数派だった。1987 年と 2000 年のクーデターの後、多くのインド系が国外へ移ったが、バ州ではいまも半数前後。
+      source: "https://ja.wikipedia.org/wiki/インド系フィジー人"
+- id: lang_fiji_sugar
+  name: フィジーの砂糖地帯（ラ・ナドロガ＝ナヴォサ・ヴァヌアレヴ西部・レワ＝スヴァ周辺）
+  select:
+    pieces: [FJI-Ra, FJI-Nadroga_Navosa, FJI-Bua, FJI-Rewa, FJI-Naitasiri, FJI-Tailevu]
+  timeline:
+    - from: 1648
+      main: fijian
+    - from: 1920
+      main: fijian
+      minor: hindustani
+      note: インド系の農民と、スヴァ（1882 年から首都）・ナウソリの町のインド系の商人。
+- id: lang_fiji_labasa
+  name: マクアタ州（ランバサ）
+  select:
+    pieces: [FJI-Macuata]
+  timeline:
+    - from: 1648
+      main: fijian
+    - from: 1900
+      main: fijian
+      minor: hindustani
+      note: ランバサの製糖工場（1894）。
+    - from: 1940
+      main: hindustani
+      minor: fijian
+      note: ヴァヌアレヴ島北部のサトウキビ地帯ではインド系が多数になった。
+- id: lang_rotuma
+  name: ロトゥマ島
+  select:
+    pieces: [FJI-Rotuma]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ロトゥマ語（ポリネシア諸語と近い中部太平洋の言語。文化もポリネシア系）。1881 年にフィジー植民地に編入された。
+
+# ======== トンガ・サモア・ポリネシア ========
+- id: lang_tonga
+  name: トンガ
+  select:
+    iso: [TON]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: トンガ語。トゥイ・トンガの王統のもとで、かつてはサモア・フィジー東部にも影響を及ぼした。1643 年にタスマン、1773–77 年にクックが来航（「フレンドリー諸島」）。
+      source: "https://ja.wikipedia.org/wiki/トンガ"
+- id: lang_samoa
+  name: サモア（西サモア）
+  select:
+    iso: [WSM]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: サモア語。マタイ（首長）制度と村の自治。
+      source: "https://ja.wikipedia.org/wiki/サモア"
+- id: lang_wallis_futuna
+  name: ワリス・フトゥナ
+  select:
+    iso: [WLF]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ウヴェア語（ワリス島）・フトゥナ語。王国が残ったままフランスの保護領（1887）、1961 年から海外領土。多くの住民がニューカレドニアへ移り住んでいる。
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+- id: lang_tuvalu
+  name: ツバル（エリス諸島）
+  select:
+    iso: [TUV]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ツバル語（ポリネシア系）。1863 年にペルーの奴隷狩りの船（ブラックバーダー）がフナフティ・ヌクラエラエから多くの住民を連れ去った。1892 年にイギリスの保護領、1916 年にギルバート・エリス諸島植民地、1978 年に独立。
+      source: "https://ja.wikipedia.org/wiki/ツバル"
+- id: lang_nui
+  name: ヌイ環礁（ツバル）
+  select:
+    pieces: [TUV-Nui]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: 住民の祖先はギルバート諸島から来たと伝えられ、ギルバート語（キリバス語）の方言を話す。
+- id: lang_tokelau
+  name: トケラウ
+  select:
+    iso: [TKL]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: トケラウ語。1863 年のペルーの奴隷狩りで、成人男性の多くが連れ去られた。1926 年からニュージーランドの統治下。
+      source: "https://ja.wikipedia.org/wiki/トケラウ"
+- id: lang_niue
+  name: ニウエ
+  select:
+    iso: [NIU]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: ニウエ語。1901 年にニュージーランドに編入、1974 年から自由連合の自治国。いまは住民の大部分がニュージーランドに住む。
+      source: "https://ja.wikipedia.org/wiki/ニウエ"
+- id: lang_cook_islands
+  name: クック諸島
+  select:
+    iso: [COK]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: クック諸島マオリ語（ラロトンガ語）・プカプカ語など。1888 年にイギリスの保護領、1901 年にニュージーランドに編入、1965 年から自由連合の自治国。
+      source: "https://ja.wikipedia.org/wiki/クック諸島"
+- id: lang_french_polynesia
+  name: フランス領ポリネシア（ソシエテ諸島・トゥアモトゥ・マルケサス・オーストラル諸島）
+  select:
+    iso: [PYF]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: タヒチ語・パウモトゥ語・マルケサス語・マンガレヴァ語など。1767 年にウォリス、1768 年にブーガンヴィル、1769 年にクックがタヒチに来航した。マルケサス諸島の人口は 19 世紀に病気で約 9 割が失われた。
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+- id: lang_tahiti
+  name: タヒチ（ウィンドワード諸島）
+  select:
+    pieces: [PYF-Windward_Islands]
+  timeline:
+    - from: 1648
+      main: polynesian
+      note: タヒチ語。ポマレ朝の王国（1788–1880）。1842 年にフランスの保護領、1880 年に併合。19 世紀後半には綿花農園の労働者として中国人（客家）が来た（現在も人口の約 1 割）。
+      source: "https://ja.wikipedia.org/wiki/タヒチ王国"
+    - from: 1965
+      main: polynesian
+      minor: french
+      note: 太平洋核実験センター（CEP、1963–96）の建設で、フランス本国から軍人・技術者と公務員が大量に来た。住民の日常語はフランス語に移りつつある。
+      source: "https://en.wikipedia.org/wiki/Centre_d%27Exp%C3%A9rimentation_du_Pacifique"
+- id: lang_pitcairn
+  name: ピトケアン諸島
+  select:
+    iso: [PCN]
+  timeline:
+    - from: 1790
+      main: creole_english
+      note: 1790 年にバウンティ号の反乱者（クリスチャンら 9 人）とタヒチ人の男女がたどり着いた（それまでは無人島。かつてポリネシア人が住んだ跡がある）。英語とタヒチ語の混ざったピトケアン語。住民は 50 人ほど。
+      source: "https://ja.wikipedia.org/wiki/ピトケアン諸島"
+
+# ======== ミクロネシア（キリバス・マーシャル・ミクロネシア連邦・パラオ・ナウル） ========
+- id: lang_kiribati
+  name: ギルバート諸島（キリバス）
+  select:
+    iso: [KIR]
+    exclude: [KIR-Kiritimati, KIR-Tabuaeran, KIR-Teraina, KIR-Southern_Line_Islands, KIR-Phoenix_Islands, KIR-Kanton]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: キリバス語（ギルバート語）。1892 年にイギリスの保護領、1916 年にギルバート・エリス諸島植民地、1979 年に独立。首都タラワの南タラワに人口が集中している。
+      source: "https://ja.wikipedia.org/wiki/キリバス"
+- id: lang_banaba
+  name: バナバ島（オーシャン島）
+  select:
+    pieces: [KIR-Banaba]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: バナバ人（キリバス語の方言）。1900 年から燐鉱石の採掘（1979 年まで）。日本軍の占領（1942–45）の後、住民の多くはフィジーのランビ島へ移された。
+      source: "https://en.wikipedia.org/wiki/Banaba_Island"
+- id: lang_line_islands
+  name: ライン諸島（キリスィマスィ島・タブアエラン・テラインア）
+  select:
+    pieces: [KIR-Kiritimati, KIR-Tabuaeran, KIR-Teraina]
+  timeline:
+    - from: 1890
+      main: micronesian
+      note: 19 世紀後半からのヤシ園で、タヒチ人やギルバート諸島の人々が働いた（それまでは無人島）。タブアエラン（ファニング島）には太平洋横断の海底電信の中継所（1902）。キリスィマスィ（クリスマス島）では 1957–62 年にイギリスとアメリカの水爆実験が行われた。現在の住民はおもにギルバート諸島からの移住者。
+      source: "https://en.wikipedia.org/wiki/Operation_Grapple"
+- id: lang_phoenix_islands
+  name: フェニックス諸島（カントン島など）
+  select:
+    pieces: [KIR-Phoenix_Islands, KIR-Kanton]
+  timeline:
+    - from: 1938
+      main: micronesian
+      note: 1938 年からフェニックス諸島入植計画で、人口の多いギルバート諸島南部から住民が移された（それまでは無人島）。干ばつのため 1963–64 年に住民はソロモン諸島へ再び移され、いまはカントン島に数十人が住むだけ。
+      source: "https://en.wikipedia.org/wiki/Phoenix_Islands_Settlement_Scheme"
+- id: lang_marshall
+  name: マーシャル諸島
+  select:
+    iso: [MHL]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: マーシャル語。1885 年にドイツの保護領、1914 年から日本（1920 年から南洋諸島の委任統治）、1947 年からアメリカの太平洋諸島信託統治領、1986 年に自由連合のもとで独立。ビキニ・エニウェトク環礁では 1946–58 年にアメリカの核実験が行われ（1954 年の第五福竜丸事件）、住民は移住させられた。
+      source: "https://ja.wikipedia.org/wiki/マーシャル諸島"
+- id: lang_fsm
+  name: ミクロネシア連邦（チューク・ヤップ・コスラエ）
+  select:
+    iso: [FSM]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: チューク語・ヤップ語・コスラエ語など。1886 年にスペインが領有を確認し（カロリン諸島をめぐるドイツとの紛争を教皇が仲裁）、1899 年にドイツに売却、1914 年から日本の統治。
+      source: "https://ja.wikipedia.org/wiki/ミクロネシア連邦"
+- id: lang_pohnpei
+  name: ポンペイ（ポナペ）
+  select:
+    pieces: [FSM-Pohnpei]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: ポンペイ語。ナン・マドール遺跡。南端のカピンガマランギ・ヌクオロ環礁はポリネシア系。
+    - from: 1935
+      main: micronesian
+      minor: japanese
+      note: 南洋庁の支庁（コロニア）が置かれ、沖縄・本土からの移民が増えた（1940 年ごろには日本人が住民の半数近くに達したとされる。比率は要確認）。戦後に引き揚げた。
+      source: "https://ja.wikipedia.org/wiki/南洋庁"
+    - from: 1946
+      main: micronesian
+- id: lang_palau
+  name: パラオ
+  select:
+    iso: [PLW]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+      note: パラオ語（オーストロネシア系だが、ミクロネシア諸語とは別の系統）。南西諸島（ソンソロル・ハトホベイ）の住民はミクロネシア系の言語を話す。
+      source: "https://ja.wikipedia.org/wiki/パラオ"
+    - from: 1935
+      main: austronesian_other
+      minor: japanese
+      note: 南洋庁の本庁が置かれ（1922）、日本人の移民が増えた（1930 年代末にパラオ全体で日本人約 1 万 5 千人、パラオ人約 6 千人）。パラオ語には多くの日本語の語彙が入った。
+- id: lang_koror
+  name: コロール・アイライ・アンガウル（南洋庁の本庁と燐鉱）
+  select:
+    pieces: [PLW-Koror, PLW-Airai, PLW-Angaur, PLW-Aimeliik]
+  timeline:
+    - from: 1648
+      main: austronesian_other
+    - from: 1930
+      main: japanese
+      minor: austronesian_other
+      note: 南洋庁の本庁が置かれたコロールは日本人の町になり、アンガウル島の燐鉱石の採掘、アイライ・アイメリークの日本人農業移民の村ができた。
+      source: "https://ja.wikipedia.org/wiki/南洋庁"
+    - from: 1946
+      main: austronesian_other
+      note: 日本人の引き揚げ。1947 年からアメリカの太平洋諸島信託統治領、1994 年に独立。
+- id: lang_palau_southwest
+  name: パラオ南西諸島（ソンソロル・ハトホベイ）
+  select:
+    pieces: [PLW-Sonsorol, PLW-Hatohobei]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: ソンソロル語・トビ語（チューク系のミクロネシア諸語）。
+- id: lang_nauru
+  name: ナウル
+  select:
+    iso: [NRU]
+  timeline:
+    - from: 1648
+      main: micronesian
+      note: ナウル語（ミクロネシア諸語の中でも系統が独特）。1888 年にドイツが併合し、1906 年から燐鉱石の採掘。1920 年からオーストラリア・ニュージーランド・イギリスの委任統治（のち信託統治、実際の統治はオーストラリア）、1968 年に独立。キリバス・ツバル・中国からの労働者が多い時期もあった。
+      source: "https://ja.wikipedia.org/wiki/ナウル"

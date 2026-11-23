@@ -1,0 +1,1280 @@
+# O1 オーストラリア・ニュージーランド（AUS・NZL・NFK・CXR・CCK・HMD・ATA）の地域と所属の変遷（1648–2025）。
+# 方針：植民地の中心（首府のあるピース）は植民地の設置の年から britain（certainty なし）＋label。
+# 主張だけで入植・行政が及んでいない所は britain の nominal（斜線）。
+# 1788 年のニューサウスウェールズの主張は東経135度以東（ケープ・ヨークからタスマニアの南端まで）、1825 年に東経129度まで広げた。
+# 1829 年のスワン川植民地の設置で、東経129度以西（西オーストラリア）もイギリスが主張した。
+# どの国の主張も及ばない所（1788 年より前のオーストラリア、1840 年より前のニュージーランド）は owner なし（アボリジニ・マオリの土地）。
+# 1901 年からオーストラリア連邦（australia）、1907 年からニュージーランド自治領（new_zealand）。
+# ピースの分け方（東経135度・132度・141度、トレス海峡、オールバニ、ワイカト盆地、ロヘ・ポタエなど）は tools/pieces_config.json の _why を参照。
+
+# ================================================================ オーストラリア東部
+- id: au_new_south_wales
+  name: ニューサウスウェールズ
+  select:
+    pieces: [AUS-New_South_Wales]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地。どの国の主張も及んでいない
+    - from: 1770
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ（クックの領有宣言）
+      cause: クックがボタニー湾に上陸し、東海岸をニューサウスウェールズと名づけてイギリスの領有を宣言する
+      source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+    - from: 1788
+      owner: britain
+      label: ニューサウスウェールズ
+      cause: フィリップ総督の第1船団がシドニー湾に着き、流刑植民地ニューサウスウェールズを開く（1月26日）
+      note: 入植地はシドニーの周りだけで、ブルー・マウンテンズ（1813年に横断）の西に広がるのは1810年代以降。植民地の中心なのでピース全体を濃く塗る
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立。ニューサウスウェールズ州となる
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_capital_territory
+  name: 首都特別地域（キャンベラ）
+  select:
+    pieces: [AUS-Australian_Capital_Territory]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニ（ンガンブリなど）の土地
+    - from: 1770
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ（クックの領有宣言）
+      cause: クックが東海岸の領有を宣言する
+      source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+    - from: 1788
+      owner: britain
+      label: ニューサウスウェールズ
+      cause: 流刑植民地ニューサウスウェールズを開く
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+    - from: 1911
+      owner: australia
+      label: 首都特別地域
+      cause: ニューサウスウェールズ州が首都の用地を連邦に移す（連邦首都特別地域。1913年にキャンベラと名づけ、1927年に議会が移る）
+      source: "https://ja.wikipedia.org/wiki/オーストラリア首都特別地域"
+
+- id: au_jervis_bay
+  name: ジャーヴィス湾特別地域
+  select:
+    pieces: [AUS-Other_Territories]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地
+    - from: 1770
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ（クックの領有宣言）
+      cause: クックが東海岸の領有を宣言する
+      source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+    - from: 1788
+      owner: britain
+      label: ニューサウスウェールズ
+      cause: 流刑植民地ニューサウスウェールズを開く
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+    - from: 1915
+      owner: australia
+      cause: 首都の港として、ジャーヴィス湾の土地がニューサウスウェールズ州から連邦に移される
+      source: "https://en.wikipedia.org/wiki/Jervis_Bay_Territory"
+
+- id: au_victoria
+  name: ヴィクトリア
+  select:
+    pieces: [AUS-Victoria]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニ（クリンなど）の土地
+    - from: 1770
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ（クックの領有宣言）
+      cause: クックが東海岸の領有を宣言する（最初に見た陸地はヴィクトリア東部のヒックス岬）
+      source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+    - from: 1788
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズ植民地の主張の範囲に入る（1803–04年のポート・フィリップ湾の入植は失敗）
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1835
+      owner: britain
+      label: ニューサウスウェールズ（ポート・フィリップ地区）
+      cause: タスマニアの入植者バットマンらがヤラ川のほとりにメルボルンを開く（1836年にポート・フィリップ地区が置かれる）
+      source: "https://ja.wikipedia.org/wiki/メルボルン"
+    - from: 1851
+      owner: britain
+      label: ヴィクトリア
+      cause: ヴィクトリア植民地がニューサウスウェールズから分かれる。同じ年に金鉱が見つかり、ゴールドラッシュが始まる
+      source: "https://ja.wikipedia.org/wiki/ビクトリア州"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立。ヴィクトリア州となる（1927年まで首都はメルボルン）
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_tasmania
+  name: タスマニア
+  select:
+    pieces: [AUS-Tasmania]
+  timeline:
+    - from: 1648
+      owner: null
+      note: タスマニアのアボリジニの土地。1642年にタスマンが見つけ、ヴァン・ディーメンズ・ランドと名づけた
+    - from: 1788
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズ植民地の主張の範囲（南端は南緯43度39分のサウス岬）に入る
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1803
+      owner: britain
+      label: ヴァン・ディーメンズ・ランド
+      cause: リスドン・コーヴに入植する（1804年にホバートへ移る）。流刑地として開かれる
+      source: "https://ja.wikipedia.org/wiki/タスマニア州"
+    - from: 1825
+      owner: britain
+      label: ヴァン・ディーメンズ・ランド
+      cause: ヴァン・ディーメンズ・ランドがニューサウスウェールズから分かれ、別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/タスマニア州"
+    - from: 1856
+      owner: britain
+      label: タスマニア
+      cause: 流刑の終わり（1853）を受けて、名前をタスマニアに改め、責任政府（自治）を得る
+      source: "https://ja.wikipedia.org/wiki/タスマニア州"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立。タスマニア州となる
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_macquarie_island
+  name: マッコーリー島
+  select:
+    pieces: [AUS-Macquarie_Island]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島。1810年にアザラシ猟の船が見つけた
+    - from: 1890
+      owner: britain
+      label: タスマニア
+      cause: タスマニア植民地の一部とされる
+      note: 編入の年は要確認（1810年の発見の後、ニューサウスウェールズの管轄とする説もある）
+      source: "https://en.wikipedia.org/wiki/Macquarie_Island"
+    - from: 1901
+      owner: australia
+      label: マッコーリー島
+      cause: オーストラリア連邦の成立（タスマニア州の一部）
+      source: "https://en.wikipedia.org/wiki/Macquarie_Island"
+
+- id: au_queensland
+  name: クイーンズランド
+  select:
+    pieces: [AUS-Queensland]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地。1606年にオランダのヤンスゾーンがヨーク岬半島の西岸に来た
+    - from: 1770
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ（クックの領有宣言）
+      cause: クックがポゼッション島で東海岸全体の領有を宣言する
+      source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+    - from: 1788
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズ植民地の主張の範囲に入る
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1824
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ（モートン湾流刑植民地）
+      cause: モートン湾に流刑植民地を開く（1825年にブリスベンへ移る）。重罪の流刑囚の収容所で、自由な入植は禁じられた
+      source: "https://en.wikipedia.org/wiki/Moreton_Bay_penal_settlement"
+    - from: 1842
+      owner: britain
+      label: ニューサウスウェールズ（モートン湾地区）
+      cause: 流刑植民地を閉じ、自由な入植に開く。ダーリング・ダウンズなどに牧羊業者（スクワッター）が広がる
+      source: "https://en.wikipedia.org/wiki/History_of_Queensland"
+    - from: 1859
+      owner: britain
+      label: クイーンズランド
+      cause: クイーンズランド植民地がニューサウスウェールズから分かれる
+      source: "https://ja.wikipedia.org/wiki/クイーンズランド州"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立。クイーンズランド州となる
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_queensland_gulf
+  name: カーペンタリア湾岸（東経141度以西）
+  select:
+    pieces: [AUS-Queensland_west_of_141E]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地。オランダ人（タスマン、1644）が湾岸を探検したが、主張はしなかった
+    - from: 1788
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズ植民地の主張（東経135度以東）の範囲に入る
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1862
+      owner: britain
+      certainty: nominal
+      label: クイーンズランド
+      cause: 東経141度以西（南緯26度以北）がニューサウスウェールズからクイーンズランドに移される
+      source: "https://en.wikipedia.org/wiki/History_of_Queensland"
+    - from: 1865
+      owner: britain
+      label: クイーンズランド
+      cause: バークタウンが開かれ、湾岸に牧畜業者が広がる
+      source: "https://en.wikipedia.org/wiki/Burketown"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_torres_strait_1872
+  name: トレス海峡諸島（海岸から60マイル以内）
+  select:
+    pieces: [AUS-Torres_Strait_Islands_1872]
+  timeline:
+    - from: 1648
+      owner: null
+      note: トレス海峡諸島民の土地
+    - from: 1872
+      owner: britain
+      label: クイーンズランド
+      cause: 海岸から60マイル以内の島々がクイーンズランドに編入される（真珠貝の採取の取り締まりのため）
+      source: "https://en.wikipedia.org/wiki/Torres_Strait_Islands"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_torres_strait_1879
+  name: トレス海峡諸島（北部）
+  select:
+    pieces: [AUS-Torres_Strait_Islands_1879]
+  timeline:
+    - from: 1648
+      owner: null
+      note: トレス海峡諸島民の土地
+    - from: 1879
+      owner: britain
+      label: クイーンズランド
+      cause: ニューギニアの海岸近くの島々（サイバイ・ボイグなど）もクイーンズランドに編入される
+      source: "https://en.wikipedia.org/wiki/Torres_Strait_Islands"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+# ================================================================ 南オーストラリア・北部準州
+- id: au_south_australia
+  name: 南オーストラリア（東経135度以東）
+  select:
+    pieces: [AUS-South_Australia]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニ（カウルナなど）の土地
+    - from: 1788
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズ植民地の主張（東経135度以東）の範囲に入る
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1836
+      owner: britain
+      label: 南オーストラリア
+      cause: ウェークフィールドの組織的植民の計画にもとづき、流刑囚を受け入れない自由移民の植民地として南オーストラリアを開く。アデレードを建設
+      source: "https://ja.wikipedia.org/wiki/南オーストラリア州"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立。南オーストラリア州となる
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_south_australia_132_135
+  name: 南オーストラリア（東経132〜135度）
+  select:
+    pieces: [AUS-South_Australia_132_135E]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地。オランダ人（ニュイツ、1627）が南岸を航海したが、主張はしなかった
+    - from: 1825
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズの西の境が東経129度に移される
+      source: "https://en.wikipedia.org/wiki/New_South_Wales#Colonial_boundaries"
+    - from: 1836
+      owner: britain
+      certainty: nominal
+      label: 南オーストラリア
+      cause: 南オーストラリア植民地（東経132〜141度）が置かれる
+      source: "https://ja.wikipedia.org/wiki/南オーストラリア州"
+    - from: 1872
+      owner: britain
+      label: 南オーストラリア
+      cause: アデレードとダーウィンを結ぶ大陸縦断電信線が完成し、沿線に中継所と牧畜地が広がる
+      source: "https://en.wikipedia.org/wiki/Australian_Overland_Telegraph_Line"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_south_australia_west
+  name: 南オーストラリア西部（東経129〜132度）
+  select:
+    pieces: [AUS-South_Australia_west_of_132E]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地（ナラボー平原・グレートヴィクトリア砂漠）
+    - from: 1825
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズの西の境が東経129度に移される
+      source: "https://en.wikipedia.org/wiki/New_South_Wales#Colonial_boundaries"
+    - from: 1861
+      owner: britain
+      certainty: nominal
+      label: 南オーストラリア
+      cause: 南オーストラリアの西の境が東経132度から129度に広げられる（西オーストラリアとの境に合わせる）
+      source: "https://en.wikipedia.org/wiki/South_Australia#Colonial_South_Australia"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_northern_territory_east
+  name: 北部準州（東経135度以東）
+  select:
+    pieces: [AUS-Northern_Territory]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地。オランダ人（タスマン、1644）がアーネムランドの海岸を探検した
+    - from: 1788
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: ニューサウスウェールズ植民地の主張（東経135度以東）の範囲に入る
+      source: "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州の歴史"
+    - from: 1863
+      owner: britain
+      certainty: nominal
+      label: 南オーストラリア（北部準州）
+      cause: 南緯26度以北の地が南オーストラリアの管理下に移される（北部準州）
+      source: "https://ja.wikipedia.org/wiki/ノーザンテリトリー"
+    - from: 1872
+      owner: britain
+      label: 南オーストラリア（北部準州）
+      cause: ローパー川の流域などに牧畜地が開かれはじめる（1872年に大陸縦断電信線が完成し、1885年にはボロルーラが作られる）
+      source: "https://en.wikipedia.org/wiki/Australian_Overland_Telegraph_Line"
+    - from: 1901
+      owner: australia
+      label: 北部準州
+      cause: オーストラリア連邦の成立（南オーストラリア州の一部）
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+    - from: 1911
+      owner: australia
+      label: 北部準州
+      cause: 南オーストラリア州から連邦に移され、連邦の直轄の準州となる
+      source: "https://ja.wikipedia.org/wiki/ノーザンテリトリー"
+    - from: 1978
+      owner: australia
+      cause: 北部準州が自治を得る（州に近い自治政府）
+      source: "https://ja.wikipedia.org/wiki/ノーザンテリトリー"
+
+- id: au_northern_territory_west
+  name: 北部準州（東経129〜135度、ダーウィン）
+  select:
+    pieces: [AUS-Northern_Territory_west_of_135E]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地。マカッサルの漁民がナマコを採りに季節ごとに来ていた
+    - from: 1824
+      owner: britain
+      certainty: nominal
+      label: ニューサウスウェールズ
+      cause: メルヴィル島にダンダス砦を築き（1824–29）、1825年にニューサウスウェールズの西の境を東経129度に移す
+      source: "https://en.wikipedia.org/wiki/Fort_Dundas"
+    - from: 1863
+      owner: britain
+      certainty: nominal
+      label: 南オーストラリア（北部準州）
+      cause: 南緯26度以北の地が南オーストラリアの管理下に移される（北部準州）
+      source: "https://ja.wikipedia.org/wiki/ノーザンテリトリー"
+    - from: 1869
+      owner: britain
+      label: 南オーストラリア（北部準州）
+      cause: パーマストン（のちのダーウィン）が開かれる。ポート・エシントン（1838–49）などそれまでの拠点は放棄されていた
+      source: "https://ja.wikipedia.org/wiki/ダーウィン_(ノーザンテリトリー)"
+    - from: 1901
+      owner: australia
+      label: 北部準州
+      cause: オーストラリア連邦の成立（南オーストラリア州の一部）
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+    - from: 1911
+      owner: australia
+      label: 北部準州
+      cause: 南オーストラリア州から連邦に移され、連邦の直轄の準州となる
+      source: "https://ja.wikipedia.org/wiki/ノーザンテリトリー"
+    - from: 1978
+      owner: australia
+      cause: 北部準州が自治を得る（州に近い自治政府）
+      source: "https://ja.wikipedia.org/wiki/ノーザンテリトリー"
+
+# ================================================================ 西オーストラリア
+- id: au_western_australia
+  name: 西オーストラリア
+  select:
+    pieces: [AUS-Western_Australia]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニの土地。オランダ東インド会社の船が西岸に来て（ハルトフ、1616。ヴラミング、1697）ニューホラントと呼んだが、領有はしなかった
+    - from: 1829
+      owner: britain
+      label: スワン川植民地
+      cause: スターリングがスワン川植民地（パース・フリーマントル）を開き、東経129度以西の領有を宣言する
+      note: 入植地は南西部だけ。植民地の中心なのでピース全体を濃く塗る
+      source: "https://ja.wikipedia.org/wiki/西オーストラリア州"
+    - from: 1832
+      owner: britain
+      label: 西オーストラリア
+      cause: スワン川植民地を西オーストラリア植民地と改める
+      source: "https://ja.wikipedia.org/wiki/西オーストラリア州"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立（1900年の住民投票で加盟を決める）。西オーストラリア州となる
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+- id: au_albany
+  name: オールバニ（キング・ジョージ湾）
+  select:
+    pieces: [AUS-Albany]
+  timeline:
+    - from: 1648
+      owner: null
+      note: アボリジニ（ヌンガー）の土地
+    - from: 1826
+      owner: britain
+      label: ニューサウスウェールズ（キング・ジョージ湾）
+      cause: フランスの進出を防ぐため、ニューサウスウェールズの軍がキング・ジョージ湾に駐屯地を置く
+      source: "https://en.wikipedia.org/wiki/Albany,_Western_Australia"
+    - from: 1831
+      owner: britain
+      label: スワン川植民地
+      cause: キング・ジョージ湾がスワン川植民地に移される
+      source: "https://en.wikipedia.org/wiki/Albany,_Western_Australia"
+    - from: 1832
+      owner: britain
+      label: 西オーストラリア
+      cause: スワン川植民地を西オーストラリア植民地と改める
+      source: "https://ja.wikipedia.org/wiki/西オーストラリア州"
+    - from: 1901
+      owner: australia
+      cause: オーストラリア連邦の成立
+      source: "https://ja.wikipedia.org/wiki/オーストラリア連邦"
+
+# ================================================================ インド洋・南大洋の島
+- id: au_norfolk_island
+  name: ノーフォーク島
+  select:
+    pieces: [NFK-Norfolk_Island]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島（かつてポリネシア人が住んでいた跡がある）。1774年にクックが見つけた
+    - from: 1788
+      owner: britain
+      label: ノーフォーク島（ニューサウスウェールズ）
+      cause: 第1船団の一部が入植し、流刑地とする
+      source: "https://ja.wikipedia.org/wiki/ノーフォーク島"
+    - from: 1814
+      owner: britain
+      certainty: nominal
+      label: ノーフォーク島（ニューサウスウェールズ）
+      cause: 入植地を閉じ、島を無人にする
+      source: "https://ja.wikipedia.org/wiki/ノーフォーク島"
+    - from: 1825
+      owner: britain
+      label: ノーフォーク島（ニューサウスウェールズ）
+      cause: 重罪の流刑囚の収容所として再び開く
+      source: "https://ja.wikipedia.org/wiki/ノーフォーク島"
+    - from: 1844
+      owner: britain
+      label: ノーフォーク島（ヴァン・ディーメンズ・ランド）
+      cause: ヴァン・ディーメンズ・ランドの管轄に移される
+      source: "https://ja.wikipedia.org/wiki/ノーフォーク島"
+    - from: 1856
+      owner: britain
+      label: ノーフォーク島
+      cause: 流刑地を閉じ（1855）、ピトケアン島から『バウンティ号』の反乱者の子孫が移り住む。ニューサウスウェールズ総督のもとの別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ノーフォーク島"
+    - from: 1914
+      owner: australia
+      label: ノーフォーク島
+      cause: オーストラリア連邦の領土（外部領土）となる
+      source: "https://ja.wikipedia.org/wiki/ノーフォーク島"
+
+- id: au_christmas_island
+  name: クリスマス島
+  select:
+    pieces: [CXR-Christmas_Island]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島。1643年にイギリス東インド会社の船が名づけた
+    - from: 1888
+      owner: britain
+      label: クリスマス島
+      cause: リン鉱石の採掘のためにイギリスが併合する
+      source: "https://ja.wikipedia.org/wiki/クリスマス島_(オーストラリア)"
+    - from: 1900
+      owner: britain
+      label: 海峡植民地（クリスマス島）
+      cause: 海峡植民地（シンガポール）の管轄に入る
+      source: "https://ja.wikipedia.org/wiki/クリスマス島_(オーストラリア)"
+    - from: 1942
+      owner: japan
+      certainty: occupied
+      label: クリスマス島（日本の占領）
+      cause: 日本軍が島を占領する（3月）
+      source: "https://en.wikipedia.org/wiki/Japanese_occupation_of_Christmas_Island"
+    - from: 1945
+      owner: britain
+      label: シンガポール（クリスマス島）
+      cause: イギリスが島に戻る（1946年からシンガポール植民地の一部）
+      source: "https://ja.wikipedia.org/wiki/クリスマス島_(オーストラリア)"
+    - from: 1958
+      owner: australia
+      label: クリスマス島
+      cause: イギリスがオーストラリアに主権を移す
+      source: "https://ja.wikipedia.org/wiki/クリスマス島_(オーストラリア)"
+
+- id: au_cocos_islands
+  name: ココス（キーリング）諸島
+  select:
+    pieces: [CCK-Cocos_Keeling_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島。1826–27年からヘアとクルーニーズ＝ロスがマレー人の労働者を連れて住み、ココヤシの農園を開いた
+    - from: 1857
+      owner: britain
+      label: ココス諸島
+      cause: イギリスが併合する（1878年からセイロンの管轄）
+      source: "https://ja.wikipedia.org/wiki/ココス諸島"
+    - from: 1886
+      owner: britain
+      certainty: indirect
+      label: ココス諸島（クルーニーズ＝ロス家）
+      cause: ヴィクトリア女王が島をクルーニーズ＝ロス家に永代で与える。一族が「ココスの王」として島を治める
+      source: "https://ja.wikipedia.org/wiki/ココス諸島"
+    - from: 1903
+      owner: britain
+      certainty: indirect
+      label: 海峡植民地（ココス諸島）
+      cause: 海峡植民地（シンガポール）の管轄に入る（クルーニーズ＝ロス家の支配は続く）
+      source: "https://ja.wikipedia.org/wiki/ココス諸島"
+    - from: 1955
+      owner: australia
+      certainty: indirect
+      label: ココス諸島（クルーニーズ＝ロス家）
+      cause: イギリスがオーストラリアに主権を移す
+      note: 第二次世界大戦中はセイロンの軍政下（日本軍は占領していない）
+      source: "https://ja.wikipedia.org/wiki/ココス諸島"
+    - from: 1978
+      owner: australia
+      label: ココス諸島
+      cause: オーストラリア政府がクルーニーズ＝ロス家から島を買い取る（1984年の住民投票でオーストラリアとの統合を選ぶ）
+      source: "https://ja.wikipedia.org/wiki/ココス諸島"
+
+- id: au_heard_mcdonald
+  name: ハード島とマクドナルド諸島
+  select:
+    pieces: [HMD-Heard_Island_and_McDonald_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島。1853年に見つかり、1855年からアザラシ猟の基地が置かれた
+    - from: 1910
+      owner: britain
+      certainty: nominal
+      label: ハード島
+      cause: イギリスが領有を主張する
+      source: "https://ja.wikipedia.org/wiki/ハード島とマクドナルド諸島"
+    - from: 1947
+      owner: australia
+      label: ハード島とマクドナルド諸島
+      cause: イギリスがオーストラリアに移す。オーストラリアの南極観測隊が基地を置く
+      source: "https://ja.wikipedia.org/wiki/ハード島とマクドナルド諸島"
+
+- id: antarctica
+  name: 南極大陸
+  select:
+    pieces: [ATA-Antarctica]
+  timeline:
+    - from: 1648
+      owner: null
+      note: >-
+        無人の大陸。1820年に初めて見られ、アムンセン（1911）とスコット（1912）が南極点に達した。
+        イギリス（1908）・ニュージーランド（ロス海属領、1923）・フランス（1924）・オーストラリア（1933）・ノルウェー（1939）・チリ（1940）・アルゼンチン（1943）が領有を主張したが、
+        南極条約（1959年署名、1961年発効）は領有権の主張を凍結し、平和的な利用と科学調査の自由を定めた。地図ではどの国にも属さない土地として描く
+      source: "https://ja.wikipedia.org/wiki/南極条約"
+
+# ================================================================ ニュージーランド
+# 1840 年のワイタンギ条約（2月）と、ホブソンの主権の宣言（5月。北島は割譲、南島は発見による）から britain。
+# 1841 年までニューサウスウェールズの一部。入植地（オークランド・ウェリントン・ネルソンなど）と周りは濃く、マオリが実際に治めていた所は nominal。
+# マオリ王の運動（kingitanga）は 1858 年からワイカトとロヘ・ポタエ（キング・カントリー）で独自の色。
+- id: nz_northland
+  name: ノースランド
+  select:
+    pieces: [NZL-Northland_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガプヒなど）の土地。1814年からベイ・オブ・アイランズに宣教師、1830年代に捕鯨の港コロラレカ（ラッセル）が栄え、1833年にイギリスの駐在官が置かれた。1835年に北部の首長たちが「ニュージーランド独立宣言」を出した
+    - from: 1840
+      owner: britain
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でマオリの首長たちがイギリス女王に主権を譲り、ホブソンがニュージーランド全土の主権を宣言する
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランドがニューサウスウェールズから分かれ、別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_auckland_wellington
+  name: オークランド・ウェリントン
+  select:
+    pieces: [NZL-Auckland_Region, NZL-Wellington_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーティ・ファトゥアなど）の土地
+    - from: 1840
+      owner: britain
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約。ニュージーランド会社がウェリントン（ポート・ニコルソン）に入植し、ホブソンがオークランドを首府とする
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランドがニューサウスウェールズから分かれ、別の植民地となる（首府オークランド。1865年にウェリントンへ移る）
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_whanganui_manawatu
+  name: ファンガヌイ・マナワトゥ
+  select:
+    pieces: [NZL-Manawatu_Wanganui_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリの土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランド会社がファンガヌイに入植する。ニュージーランドが別の植民地となる
+      source: "https://en.wikipedia.org/wiki/Whanganui"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_hawkes_bay
+  name: ホークスベイ
+  select:
+    pieces: [NZL-Hawke_s_Bay_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーティ・カフングヌ）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1855
+      owner: britain
+      label: ニュージーランド
+      cause: 政府がマオリから土地を買い、牧羊業者が入植する（1858年にホークスベイ州、ネーピア）
+      source: "https://en.wikipedia.org/wiki/Hawke%27s_Bay_Region"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_gisborne
+  name: ギズボーン（ポヴァティ湾・東海岸）
+  select:
+    pieces: [NZL-Gisborne_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーティ・ポロウなど）の土地。1769年にクックが最初にニュージーランドに上陸した所（ポヴァティ湾）
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1865
+      owner: britain
+      label: ニュージーランド
+      cause: 東海岸の戦争（パイ・マリレ運動との戦い）で政府軍と味方のマオリが東海岸を抑え、ポヴァティ湾の土地を没収する
+      source: "https://en.wikipedia.org/wiki/East_Cape_War"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_bay_of_plenty
+  name: ベイ・オブ・プレンティ（タウランガ・ロトルア）
+  select:
+    pieces: [NZL-Bay_of_Plenty_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（テ・アラワ、ンガイ・テ・ランギなど）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1864
+      owner: britain
+      label: ニュージーランド
+      cause: タウランガの戦い（ゲート・パ、テ・ランガ）の後、タウランガの土地を没収する。ロトルアのテ・アラワは政府の側についた
+      source: "https://en.wikipedia.org/wiki/Tauranga_campaign"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_te_urewera
+  name: テ・ウレウェラ（ファカタネ）
+  select:
+    pieces: [NZL-Whakatane_District]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（トゥホエ）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される（トゥホエは条約に署名していない）
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      note: 山深いテ・ウレウェラはトゥホエが自ら治め、テ・コオティ（1869–72）を政府軍が追った時期を除いて、政府の力はほとんど及ばなかった
+      source: "https://en.wikipedia.org/wiki/Te_Urewera"
+    - from: 1896
+      owner: britain
+      certainty: indirect
+      label: ウレウェラ保留地
+      cause: ウレウェラ保留地法でトゥホエの土地の自治が認められる（のちに政府の土地の買い取りで骨抜きにされる）
+      source: "https://en.wikipedia.org/wiki/Urewera_District_Native_Reserve_Act_1896"
+    - from: 1907
+      owner: new_zealand
+      certainty: indirect
+      label: ウレウェラ保留地
+      cause: ニュージーランドが自治領となる
+      note: 1916年に予言者ルア・ケナナが警察に逮捕された
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1922
+      owner: new_zealand
+      cause: ウレウェラ保留地の自治が廃止される（ウレウェラ統合法）
+      source: "https://en.wikipedia.org/wiki/Urewera_District_Native_Reserve_Act_1896"
+
+- id: nz_waikato_basin
+  name: ワイカト盆地
+  select:
+    pieces: [NZL-Waikato_Basin]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（タイヌイ系の諸部族）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1858
+      owner: kingitanga
+      cause: ワイカトの首長ポタタウ・テ・フェロフェロがマオリ王に立てられる（キーンギタンガ）
+      source: "https://en.wikipedia.org/wiki/M%C4%81ori_King_Movement"
+    - from: 1863
+      owner: britain
+      certainty: uncertain
+      label: ニュージーランド（ワイカト戦争の戦場）
+      cause: 政府軍がワイカトに侵攻し、ランギリリの戦いに勝って王の本拠ンガールアワーヒアを占領する（ワイカト戦争）
+      source: "https://en.wikipedia.org/wiki/Invasion_of_the_Waikato"
+    - from: 1864
+      owner: britain
+      label: ニュージーランド
+      cause: オラカウの戦いの後、王の軍はロヘ・ポタエに退き、ワイカトの土地は没収される（ニュージーランド入植法）
+      source: "https://en.wikipedia.org/wiki/Invasion_of_the_Waikato"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_rohe_potae
+  name: ロヘ・ポタエ（キング・カントリー）
+  select:
+    pieces: [NZL-Rohe_Potae, NZL-Ruapehu_District]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーティ・マニアポトなど）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1858
+      owner: kingitanga
+      certainty: uncertain
+      cause: マオリ王の運動（キーンギタンガ）が起こり、ンガーティ・マニアポトも王に従う
+      source: "https://en.wikipedia.org/wiki/M%C4%81ori_King_Movement"
+    - from: 1864
+      owner: kingitanga
+      label: キング・カントリー
+      cause: ワイカト戦争に敗れたタフィアオ王がロヘ・ポタエに退き、ヨーロッパ人を入れない境界（アウカティ）を守る
+      source: "https://en.wikipedia.org/wiki/King_Country"
+    - from: 1885
+      owner: britain
+      label: ニュージーランド
+      cause: 1881年の和解に続き、ンガーティ・マニアポトが北島幹線鉄道の建設と測量を受け入れ、キング・カントリーが開かれる
+      source: "https://en.wikipedia.org/wiki/King_Country"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_waikato_rest
+  name: コロマンデル・ハウラキ・タウポ
+  select:
+    pieces: [NZL-Waikato_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリの土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1867
+      owner: britain
+      label: ニュージーランド
+      cause: テムズ（ハウラキ湾）の金鉱が開かれ、入植者が流れ込む
+      note: 内陸のタウポ湖の周りは、テ・コオティの戦い（1869–72）の後まで政府の力が弱かった
+      source: "https://en.wikipedia.org/wiki/Thames,_New_Zealand"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_new_plymouth
+  name: ニュープリマス
+  select:
+    pieces: [NZL-New_Plymouth_District]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（テ・アティアワなど）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランド会社がニュープリマスに入植する。ニュージーランドが別の植民地となる
+      note: ワイタラの土地の売却をめぐり、1860年に第1次タラナキ戦争が起きた
+      source: "https://en.wikipedia.org/wiki/New_Plymouth"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_taranaki
+  name: 南タラナキ
+  select:
+    pieces: [NZL-Taranaki_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガー・ルアヒネ、ンガーティ・ルアヌイなど）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ワイタンギ条約でイギリスの主権が宣言される
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1869
+      owner: britain
+      label: ニュージーランド
+      cause: 第2次タラナキ戦争（1863–66）での土地の没収に続き、ティトコワルの戦い（1868–69）が終わり、政府が南タラナキを抑える
+      note: 非暴力の抵抗を続けたパリハカの村は1881年に政府軍に占拠された
+      source: "https://en.wikipedia.org/wiki/Titokowaru%27s_War"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+# ---------------------------------------------------------------- 南島
+- id: nz_nelson
+  name: ネルソン
+  select:
+    pieces: [NZL-Nelson_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリの土地。1642年にタスマンがゴールデン湾に来た
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ホブソンが南島の主権を（発見によるものとして）宣言する
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランド会社がネルソンに入植する。ニュージーランドが別の植民地となる
+      source: "https://en.wikipedia.org/wiki/Nelson,_New_Zealand"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_tasman
+  name: タズマン（ゴールデン湾・モトゥエカ）
+  select:
+    pieces: [NZL-Tasman_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリの土地。1642年にタスマンがゴールデン湾に来て、マオリと戦った
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ホブソンが南島の主権を（発見によるものとして）宣言する
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1842
+      owner: britain
+      label: ニュージーランド
+      cause: ネルソンの入植者がモトゥエカ・ワイメアの平野に広がる
+      source: "https://en.wikipedia.org/wiki/Tasman_District"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_marlborough
+  name: マールバラ
+  select:
+    pieces: [NZL-Marlborough_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリの土地。クイーン・シャーロット湾はクックの航海の基地となった
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ホブソンが南島の主権を（発見によるものとして）宣言する
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる（1843年にワイラウで入植者とマオリが衝突する）
+      source: "https://en.wikipedia.org/wiki/Wairau_Affray"
+    - from: 1847
+      owner: britain
+      label: ニュージーランド
+      cause: 政府がワイラウの土地を買い取り、牧羊業者が入植する
+      source: "https://en.wikipedia.org/wiki/Marlborough_Region"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_west_coast
+  name: ウェストコースト
+  select:
+    pieces: [NZL-West_Coast_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーイ・タフ）の土地。ヒスイ（ポウナム）の産地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ホブソンが南島の主権を（発見によるものとして）宣言する
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1864
+      owner: britain
+      label: ニュージーランド
+      cause: ゴールドラッシュでホキティカなどの町ができる
+      source: "https://en.wikipedia.org/wiki/West_Coast_Gold_Rush"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_canterbury
+  name: カンタベリー
+  select:
+    pieces: [NZL-Canterbury_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーイ・タフ）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ホブソンが南島の主権を（発見によるものとして）宣言する。フランスの入植者がアカロアに着いたのはその後だった
+      source: "https://en.wikipedia.org/wiki/French_colonisation_of_New_Zealand"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1850
+      owner: britain
+      label: ニュージーランド
+      cause: カンタベリー協会の入植者がリトルトンに着き、クライストチャーチを建設する
+      source: "https://ja.wikipedia.org/wiki/クライストチャーチ"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_otago
+  name: オタゴ
+  select:
+    pieces: [NZL-Otago_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーイ・タフ）の土地
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ホブソンが南島の主権を（発見によるものとして）宣言する
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1848
+      owner: britain
+      label: ニュージーランド
+      cause: スコットランド自由教会の入植者がダニーデンを建設する（1861年にオタゴのゴールドラッシュ）
+      source: "https://ja.wikipedia.org/wiki/ダニーデン"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_southland
+  name: サウスランド
+  select:
+    pieces: [NZL-Southland_Region]
+  timeline:
+    - from: 1648
+      owner: null
+      note: マオリ（ンガーイ・タフ）の土地。1820–30年代に捕鯨・アザラシ猟の基地があった
+    - from: 1840
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド（ニューサウスウェールズ）
+      cause: ホブソンが南島とスチュアート島の主権を宣言する
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1841
+      owner: britain
+      certainty: nominal
+      label: ニュージーランド
+      cause: ニュージーランドが別の植民地となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - from: 1856
+      owner: britain
+      label: ニュージーランド
+      cause: インヴァーカーギルが建設され、牧羊業者が入植する
+      source: "https://en.wikipedia.org/wiki/Invercargill"
+    - from: 1907
+      owner: new_zealand
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+# ---------------------------------------------------------------- 離島
+- id: nz_chatham_islands
+  name: チャタム諸島
+  select:
+    pieces: [NZL-Chatham_Islands_Territory]
+  timeline:
+    - from: 1648
+      owner: null
+      note: モリオリの土地。1835年に本島のマオリ（タラナキ系）が侵入し、モリオリの多くが殺されたり奴隷にされたりした
+    - from: 1842
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランド植民地の範囲に加えられる
+      source: "https://en.wikipedia.org/wiki/Chatham_Islands"
+    - from: 1907
+      owner: new_zealand
+      label: チャタム諸島
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_kermadec_islands
+  name: ケルマデック諸島
+  select:
+    pieces: [NZL-Kermadec_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島
+    - from: 1887
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランドに併合される
+      source: "https://en.wikipedia.org/wiki/Kermadec_Islands"
+    - from: 1907
+      owner: new_zealand
+      label: ケルマデック諸島
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+
+- id: nz_subantarctic_islands
+  name: ニュージーランドの亜南極諸島
+  select:
+    pieces: [NZL-Subantarctic_Islands]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人島（オークランド諸島・キャンベル島など）。1806年から見つかり、アザラシ猟が行われた。オークランド諸島には1849–52年にエンダービーの捕鯨基地（ハーディ港のエンダービー入植地）があった
+    - from: 1863
+      owner: britain
+      label: ニュージーランド
+      cause: ニュージーランド植民地の範囲が南に広げられ、亜南極の島々が加わる
+      source: "https://en.wikipedia.org/wiki/New_Zealand_Subantarctic_Islands"
+    - from: 1907
+      owner: new_zealand
+      label: 亜南極諸島
+      cause: ニュージーランドが自治領となる
+      source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"

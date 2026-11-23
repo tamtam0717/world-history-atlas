@@ -1044,3 +1044,45 @@
     - from: 2010
       secular: 0.15
       note: 無宗教と答える人が 15〜20%（ジャマイカ 21%、2011 年の国勢調査）
+
+# ---- オセアニア（2026-11-23、O3 担当）：オーストラリア・ニュージーランドの宗教離れ。
+#      国勢調査の「無宗教」はオーストラリア 1971 年 7% → 2021 年 39%、ニュージーランド 1971 年 1% 未満（無回答が多い）→ 2018 年 48%・2023 年 52%。
+#      教会に通わない人も含めた目安。先住民が多数の地域（ノーザンテリトリー東部・南オーストラリア最西部）は oceania.yaml で secular: 0。
+#      太平洋の島々は信仰が強いので入れていない ----
+- id: sec_australia
+  name: オーストラリア
+  select:
+    iso: [AUS]
+  timeline:
+    - from: 1970
+      secular: 0.12
+      note: 1960 年代から教会の出席が減りはじめた。
+    - from: 1990
+      secular: 0.25
+    - from: 2006
+      secular: 0.3
+    - from: 2016
+      secular: 0.4
+      note: 2016 年の国勢調査で「無宗教」が 30% になり、カトリック（22.6%）を上回って最大の回答になった。
+      source: "https://en.wikipedia.org/wiki/Religion_in_Australia"
+    - from: 2021
+      secular: 0.45
+      note: 2021 年の国勢調査で「無宗教」は 38.9%。
+- id: sec_new_zealand
+  name: ニュージーランド
+  select:
+    iso: [NZL]
+  timeline:
+    - from: 1970
+      secular: 0.12
+    - from: 1990
+      secular: 0.25
+    - from: 2006
+      secular: 0.35
+    - from: 2013
+      secular: 0.45
+      note: 2013 年の国勢調査で「無宗教」が 42% になり、キリスト教徒（47%）に迫った。
+    - from: 2018
+      secular: 0.5
+      note: 2018 年の国勢調査で「無宗教」が 48% になり、キリスト教徒（37%）を上回った（2023 年は 52%）。
+      source: "https://en.wikipedia.org/wiki/Religion_in_New_Zealand"

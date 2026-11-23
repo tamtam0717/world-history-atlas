@@ -1,0 +1,602 @@
+# O2 太平洋の島々の出来事（1648–2025）。日付変更線をまたぐので、すべての出来事に at（[経度, 緯度]）を付ける。
+# ハワイ（クックの到達・カメハメハ1世の統一を除く）・グアム・北マリアナ・米領サモアの出来事は data/events/usa.yaml、ミッドウェー海戦は japan_korea.yaml にある。
+
+- year: 1722
+  title: ロッゲフェーンがイースター島・サモアに到達
+  text: オランダ西インド会社のロッゲフェーンが南太平洋を横断し、イースター島（復活祭の日）とサモア諸島をヨーロッパ人として初めて記録した。
+  polities: [netherlands]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ヤーコプ・ロッゲフェーン"
+  at: [-171.8, -13.9]
+
+- year: 1767
+  title: ウォリスのタヒチ到達
+  text: イギリスのウォリスがタヒチ島にヨーロッパ人として初めて来航した。翌1768年にはフランスのブーガンヴィルが訪れ、タヒチを「新しいシテール島」として紹介し、南の楽園のイメージを広めた。
+  polities: [britain, france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/サミュエル・ウォリス"
+  at: [-149.5, -17.6]
+
+- year: 1769
+  title: クックの第1回航海（タヒチで金星の太陽面通過を観測）
+  text: イギリスのクック（エンデヴァー号）がタヒチで金星の太陽面通過を観測した後、ニュージーランドのポヴァティ湾に上陸し、6か月かけて北島・南島の海岸を一周して測量した（タヒチから来たトゥパイアがマオリとの通訳をした）。翌1770年にはオーストラリア東岸に達した。3回の航海（1768–79年）で太平洋の島々の位置がヨーロッパに知られ、のちの探検・入植・布教の道を開いた。
+  polities: [britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+  at: [-149.5, -17.5]
+
+- year: 1774
+  title: クックがニューカレドニア・ニューヘブリディーズを測量
+  text: 第2回航海のクックが、トンガ・ニューヘブリディーズ（現在のヴァヌアツ）を訪れ、ニューカレドニアを名づけた。
+  polities: [britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+  at: [165.5, -20.5]
+
+- year: 1778
+  title: クックがハワイ諸島に到達（第3回航海）
+  text: 北西航路を探す第3回航海のクックが、カウアイ島にヨーロッパ人として初めて上陸し、ハワイ諸島を「サンドウィッチ諸島」と名づけた。
+  polities: [britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+  at: [-159.7, 21.95]
+
+- year: 1779
+  date: "1779-02-14"
+  title: クックがハワイ島で殺される
+  text: 北太平洋の探検からハワイに戻ったクックが、ハワイ島のケアラケクア湾で、盗まれたボートをめぐる争いから島民に殺された。3回の航海で南太平洋から北太平洋までの島々の位置が明らかになった。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ジェームズ・クック"
+  at: [-155.93, 19.48]
+
+- year: 1795
+  title: カメハメハ1世のハワイ統一
+  text: ハワイ島の首長カメハメハ1世が、ヨーロッパの銃と船乗りを使ってマウイ島を従え、オアフ島のヌウアヌ・パリの戦いに勝ってハワイ王国を建てた。1810年にはカウアイ島の王カウムアリイも服属し、ハワイ諸島が統一された。
+  polities: [hawaii, kauai]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/カメハメハ1世"
+  at: [-157.85, 21.31]
+
+- year: 1789
+  date: "1789-04-28"
+  title: バウンティ号の反乱
+  text: パンノキの苗をタヒチから西インド諸島に運ぶイギリス軍艦バウンティ号で、トンガ近海で反乱が起こった。艦長ブライは小舟でティモールまで航海し、反乱者の一部は1790年にピトケアン島に住みついた。
+  polities: [britain, tonga]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/バウンティ号の反乱"
+  at: [-175.0, -19.7]
+
+- year: 1797
+  title: ロンドン伝道協会の宣教師がタヒチへ
+  text: ダフ号でロンドン伝道協会（LMS）の宣教師がタヒチ・トンガ・マルキーズに着いた。19世紀には宣教師が太平洋の島々にキリスト教を広め、文字を伝え、首長たちの政治にも深く関わった。
+  polities: [tahiti, tonga]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ロンドン伝道協会"
+  at: [-149.6, -17.5]
+
+- year: 1815
+  title: ポマレ2世がタヒチを統一
+  text: キリスト教に改宗したポマレ2世がフェイ・ピの戦いで対立する首長を破ってタヒチを統一し、1819年にキリスト教にもとづく法典を定めた。
+  polities: [tahiti]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ポマレ2世"
+  at: [-149.5, -17.7]
+
+- year: 1838
+  title: ピトケアン島がイギリスの植民地に
+  text: バウンティ号の反乱者の子孫が住むピトケアン島がイギリスの植民地となった。女性にも参政権を認めた最初期の例とされる。
+  polities: [britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ピトケアン諸島"
+  at: [-130.1, -25.07]
+
+- year: 1842
+  title: フランスがタヒチを保護国化・マルキーズ諸島を併合
+  text: フランスの提督デュプティ＝トゥアールがマルキーズ諸島を併合し（5月）、タヒチの女王ポマレ4世に保護国化を押しつけた（9月）。女王はイギリスの助けを求めたが、イギリスは動かず、タヒチ戦争（1844–47年）の後、保護国が受け入れられた。
+  polities: [france, tahiti]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/タヒチ王国"
+  at: [-149.6, -17.55]
+
+- year: 1845
+  title: ジョージ・トゥポウ1世がトンガを統一
+  text: メソジストに改宗したタウファアハウが半世紀の内戦を終わらせ、トンガ王国を統一した。1875年には憲法を定め、列強の太平洋分割の中で独立を保った。
+  polities: [tonga]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ1世"
+  at: [-175.2, -21.14]
+
+- year: 1853
+  date: "1853-09-24"
+  title: フランスがニューカレドニアを併合
+  text: フランスがニューカレドニアを併合し、1864年から流刑植民地とした（パリ・コミューンの参加者も送られた）。1864年にはニッケル鉱も見つかり、入植者がカナクの土地を奪った。
+  polities: [france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ニューカレドニア"
+  at: [166.45, -22.27]
+
+- year: 1856
+  title: アメリカのグアノ島法
+  text: 肥料になるグアノ（海鳥の糞の堆積）の島を、アメリカ人が見つけて占有すれば合衆国の領土にできると定めた法律。太平洋の多くの無人島が領有を主張され、のちのイギリスとの領有争いの元になった。
+  polities: [usa]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/グアノ島法"
+  at: [-176.5, 0.5]
+
+- year: 1863
+  title: ブラックバーディング（太平洋の労働者徴募）の広がり
+  text: クイーンズランドやフィジーの砂糖・綿花の農園のために、ヴァヌアツ・ソロモン諸島などの島民が、だまされたり強制されたりして連れて行かれた（1863–1904年ごろ。クイーンズランドだけで約6万人。白豪主義のもとで1906年以降に大半が送り返された）。同じ1863年には、ペルーの奴隷狩りの船がトケラウ・ツバル・イースター島などの住民を連れ去った。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ブラックバーディング"
+  at: [167.5, -16.0]
+
+- year: 1867
+  title: アメリカがミッドウェー諸島を領有
+  text: 合衆国がミッドウェー諸島を領有した。のちに太平洋横断の海底電信・航空路の中継地、海軍基地となった。
+  polities: [usa]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ミッドウェー環礁"
+  at: [-177.37, 28.21]
+
+- year: 1871
+  title: ザコンバウのフィジー王国
+  text: バウの大首長ザコンバウが、白人入植者の支持でフィジー全体を治める立憲王国を作ったが、財政難と対立で行き詰まった。
+  polities: [fiji_kingdom]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/フィジー王国"
+  at: [178.57, -17.99]
+
+- year: 1874
+  date: "1874-10-10"
+  title: フィジーがイギリスに割譲される
+  text: ザコンバウら首長たちがフィジーをイギリスに譲った。初代総督ゴードンは首長を通じた間接統治を行い、1879年からインドの契約労働者を砂糖農園に入れた（現在のインド系住民の起源）。翌1875年には持ちこまれたはしかで人口の約3分の1が死んだ。
+  polities: [britain, fiji_kingdom]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/フィジー植民地"
+  at: [178.44, -18.14]
+
+- year: 1878
+  title: ニューカレドニアのカナクの大反乱
+  text: 入植者の家畜と土地の収奪に反発した首長アタイらカナクが蜂起し、フランス軍に鎮圧された。多くのカナクが殺され、土地を追われて保留地に移された。
+  polities: [france]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Kanak_revolt_of_1878"
+  at: [165.9, -21.6]
+
+- year: 1880
+  title: タヒチがフランスの植民地に
+  text: ポマレ5世がタヒチ王国をフランスに譲り、フランス領オセアニアの植民地となった。
+  polities: [france, tahiti]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ポマレ5世"
+  at: [-149.57, -17.54]
+
+- year: 1884
+  date: "1884-11"
+  title: ニューギニア東部の英独分割
+  text: ドイツがニューギニア北東部とビスマルク諸島を、イギリスが南東部を保護領とした。ニューギニア島は西半分のオランダ領と合わせて3つに分けられた。列強による太平洋の分割の本格的な始まり。
+  polities: [german_empire, britain, netherlands]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+  at: [147.2, -6.5]
+
+- year: 1885
+  title: カロリン諸島をめぐるドイツとスペインの争い
+  text: ドイツがヤップ島に国旗を立てると、領有を主張するスペインと争いになり、ローマ教皇レオ13世の調停でスペインの領有が認められた（ドイツは通商の権利を得た）。同じ年、ドイツはマーシャル諸島を保護領とした。
+  polities: [spain, german_empire]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/カロリン諸島"
+  at: [138.12, 9.52]
+
+- year: 1886
+  title: 英独が西太平洋の勢力範囲を分ける
+  text: イギリスとドイツの宣言で、ソロモン諸島北部・マーシャル諸島などをドイツの、ソロモン諸島南部・ギルバート諸島などをイギリスの勢力範囲とした。
+  polities: [britain, german_empire]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+  at: [157.0, -7.5]
+
+- year: 1889
+  date: "1889-03-16"
+  title: アピアの台風とサモアをめぐるベルリン条約
+  text: サモアの王位争いに介入した英米独の軍艦がアピア港でにらみ合う中、台風で米独の艦が沈んだ。同じ年のベルリン条約で、三国の共同保護のもとサモア王国の独立が認められた。
+  polities: [samoa_kingdom, german_empire, britain, usa]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/1889_Apia_cyclone"
+  at: [-171.76, -13.83]
+
+- year: 1892
+  title: ギルバート・エリス諸島がイギリスの保護領に
+  text: イギリスがギルバート諸島（キリバス）とエリス諸島（ツバル）を保護領とし、1916年に植民地とした。翌1893年にはソロモン諸島南部も保護領とした。
+  polities: [britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ギルバート・エリス諸島"
+  at: [173.0, 1.4]
+
+- year: 1899
+  date: "1899-02-12"
+  title: ドイツ・スペイン条約（ミクロネシアの売却）
+  text: 米西戦争でフィリピン・グアムを失ったスペインが、残るカロリン諸島・パラオ・北マリアナ諸島をドイツに売った。ミクロネシアのほぼ全域が、グアムを除いてドイツ領となった。
+  polities: [spain, german_empire]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ドイツ・スペイン条約_(1899年)"
+  at: [150.0, 7.4]
+
+- year: 1899
+  date: "1899-12-02"
+  title: サモアの分割（三国協定）
+  text: 第2次サモア内戦の後、英米独の三国協定でサモアは西サモア（ドイツ領）と東サモア（アメリカ領）に分けられた。イギリスはその代わりにトンガ・ソロモン諸島北部などでのドイツの権利を得た。
+  polities: [german_empire, usa, britain, samoa_kingdom]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/三国協定_(1899年)"
+  at: [-172.0, -13.8]
+
+- year: 1900
+  title: トンガがイギリスの保護国に
+  text: トンガがイギリスと友好条約を結んで保護国となった。王政と内政は続いたが、外交はイギリスが握った（1970年まで）。
+  polities: [tonga, britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/トンガ"
+  at: [-175.2, -21.13]
+
+- year: 1901
+  title: クック諸島・ニウエがニュージーランドに併合される
+  text: イギリスの保護領だったクック諸島とニウエがニュージーランド植民地に併合された。ニュージーランドが太平洋に領土を持つようになった。
+  polities: [britain, new_zealand]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/クック諸島"
+  at: [-159.78, -21.23]
+
+- year: 1906
+  title: ニューヘブリディーズの英仏共同統治・パプアのオーストラリア移管
+  text: イギリスとフランスが協定でニューヘブリディーズ（ヴァヌアツ）を共同統治領とした。同じ年、英領ニューギニアはオーストラリア連邦に移されてパプア準州となった。
+  polities: [new_hebrides, britain, france, australia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ニューヘブリディーズ"
+  at: [168.32, -17.74]
+
+- year: 1910
+  title: ポンペイ島のソケースの反乱
+  text: ドイツの強制労働に反発したポンペイ島ソケース地区の人々が役人を殺して蜂起し、翌年鎮圧された。
+  polities: [german_empire]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Sokehs_Rebellion"
+  at: [158.16, 6.96]
+
+- year: 1914
+  date: "1914-09"
+  title: オーストラリア・ニュージーランドがドイツ領を占領
+  text: 第一次世界大戦が始まると、ニュージーランド軍がドイツ領サモアを（8月）、オーストラリア軍がラバウルなどドイツ領ニューギニアを（9月）占領した。
+  polities: [australia, new_zealand, german_empire]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/オーストラリア海軍・陸軍遠征軍"
+  at: [152.2, -4.2]
+
+- year: 1914
+  date: "1914-10"
+  title: 日本の南洋諸島占領
+  text: 日英同盟を理由にドイツに宣戦した日本の海軍が、赤道以北のドイツ領ミクロネシア（マーシャル・カロリン・パラオ・北マリアナ諸島）を占領した。
+  polities: [japan, german_empire]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/南洋諸島"
+  at: [151.85, 7.45]
+
+- year: 1920
+  title: 太平洋の委任統治
+  text: ヴェルサイユ条約により、旧ドイツ領は国際連盟の委任統治領となり、赤道以北の南洋諸島は日本に、ニューギニアはオーストラリアに、西サモアはニュージーランドに、ナウルは英・豪・ニュージーランドに委ねられた。日本は1922年にパラオのコロールに南洋庁を置いた。
+  polities: [japan, australia, new_zealand, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/南洋諸島"
+  at: [134.48, 7.34]
+
+- year: 1929
+  date: "1929-12-28"
+  title: サモアの「黒い土曜日」（マウ運動）
+  text: ニュージーランドの統治に反対し自治を求めるマウ運動の平和的なデモに警察が発砲し、指導者タマセセ・レアロフィ3世らが殺された。マウ運動はサモア独立の源流となった。
+  polities: [new_zealand]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/マウ運動"
+  at: [-171.76, -13.83]
+
+- year: 1933
+  title: ニューギニア高地の「ファースト・コンタクト」
+  text: 金を探すリーヒー兄弟らが1930–33年にニューギニア中央高地に入り、外の世界に知られていなかった数十万の人々が暮らす谷を見いだした。
+  polities: [australia]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Michael_Leahy"
+  at: [144.6, -5.85]
+
+- year: 1941
+  date: "1941-12-23"
+  title: 日本軍がウェーク島・ギルバート諸島を攻略
+  text: 太平洋戦争の開戦とともに、日本軍がギルバート諸島のマキン・タラワに上陸し（12月10日）、アメリカのウェーク島を攻略した（12月23日）。
+  polities: [japan, usa, britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ウェーク島の戦い"
+  at: [166.64, 19.29]
+
+- year: 1942
+  date: "1942-01-23"
+  title: 日本軍がラバウルを占領
+  text: 日本軍がニューブリテン島のラバウルを占領し、南太平洋の最大の拠点とした。さらにニューギニア東部・ソロモン諸島に進出し、オーストラリアとアメリカを結ぶ線を断とうとした。
+  polities: [japan, australia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ラバウルの戦い_(1942年)"
+  at: [152.18, -4.2]
+
+- year: 1942
+  date: "1942-05-08"
+  title: 珊瑚海海戦
+  text: ニューギニアのポートモレスビーの攻略をめざした日本の艦隊と米豪の艦隊が戦った、史上初の空母どうしの海戦。日本はポートモレスビーへの海からの上陸をあきらめた。
+  polities: [japan, usa, australia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/珊瑚海海戦"
+  at: [155.5, -15.0]
+
+- year: 1942
+  date: "1942-08-07"
+  title: ガダルカナル島の戦い
+  text: 日本軍が飛行場を作っていたガダルカナル島にアメリカ軍が上陸し、半年にわたる攻防となった。補給を断たれた日本軍は多くの餓死者を出し、1943年2月に撤退した。ミッドウェー海戦とともに太平洋戦争の転換点となった。
+  polities: [japan, usa, britain]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ガダルカナル島の戦い"
+  at: [160.05, -9.43]
+
+- year: 1942
+  date: "1942-07"
+  title: ポートモレスビー作戦（ココダの戦い）
+  text: 日本軍がニューギニア北岸のブナから山脈を越えてポートモレスビーをめざしたが、オーストラリア軍に押し返された。ニューギニアの戦い（1942–45年）では補給の途絶と病気で日本軍に多数の死者が出た。
+  polities: [japan, australia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ポートモレスビー作戦"
+  at: [147.73, -8.88]
+
+- year: 1943
+  date: "1943-04-18"
+  title: 山本五十六の戦死
+  text: 連合艦隊司令長官の山本五十六の乗った機が、ブーゲンヴィル島上空でアメリカ軍機に撃墜された。
+  polities: [japan, usa]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/海軍甲事件"
+  at: [155.3, -6.7]
+
+- year: 1943
+  date: "1943-11-20"
+  title: タラワの戦い
+  text: アメリカ軍がギルバート諸島のタラワ環礁（ベティオ島）・マキンに上陸し、日本の守備隊はほぼ全滅した。アメリカ軍の中部太平洋の島づたいの進攻（飛び石作戦）の始まり。
+  polities: [usa, japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/タラワの戦い"
+  at: [172.93, 1.35]
+
+- year: 1944
+  date: "1944-02"
+  title: クェゼリンの戦いとトラック島空襲
+  text: アメリカ軍がマーシャル諸島のクェゼリン・エニウェトクを奪い、日本海軍の根拠地トラック（チューク）諸島を空襲して大きな損害を与えた。日本の「絶対国防圏」が崩れ始めた。
+  polities: [usa, japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/トラック島空襲"
+  at: [167.73, 8.72]
+
+- year: 1944
+  date: "1944-07-07"
+  title: サイパン島の陥落
+  text: アメリカ軍がマリアナ諸島のサイパン島に上陸し（6月）、マリアナ沖海戦で日本の空母部隊を破った。日本の守備隊は全滅し、多くの民間人も犠牲になった。「絶対国防圏」が破られて東条英機内閣が総辞職し、サイパン・テニアン・グアムの基地から B-29 による日本本土への爆撃が始まった。
+  polities: [usa, japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/サイパンの戦い"
+  at: [145.75, 15.19]
+
+- year: 1944
+  date: "1944-09-15"
+  title: ペリリューの戦い
+  text: アメリカ軍がパラオのペリリュー島に上陸した。日本の守備隊は洞窟の陣地で2か月以上抵抗し、ほぼ全滅した。
+  polities: [usa, japan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ペリリューの戦い"
+  at: [134.25, 7.01]
+
+- year: 1946
+  date: "1946-07"
+  title: ビキニ環礁の核実験
+  text: アメリカがマーシャル諸島のビキニ環礁で戦後最初の核実験（クロスロード作戦）を行った。島民は移住させられ、1958年までにビキニ・エニウェトクで67回の核実験が行われた。
+  polities: [usa]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/クロスロード作戦"
+  at: [165.38, 11.6]
+
+- year: 1947
+  title: 太平洋諸島信託統治領
+  text: 旧日本の委任統治領（マーシャル・カロリン・パラオ・北マリアナ諸島）が、国際連合の戦略的信託統治領としてアメリカに委ねられた。軍事基地を置くことが認められた。
+  polities: [usa]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+  at: [158.2, 6.9]
+
+- year: 1954
+  date: "1954-03-01"
+  title: ビキニ水爆実験と第五福竜丸事件
+  text: アメリカがビキニ環礁で行った水爆実験（ブラボー実験）の放射性降下物（死の灰）を、日本のマグロ漁船第五福竜丸の乗組員とロンゲラップ環礁などの島民が浴びた。日本で原水爆禁止運動が広がり、翌年に第1回原水爆禁止世界大会が開かれた。
+  polities: [usa, japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第五福竜丸"
+  at: [165.27, 11.69]
+
+- year: 1957
+  title: イギリスのクリスマス島での水爆実験
+  text: イギリスがライン諸島のクリスマス島（キリスィマスィ島）付近で水爆実験（グラップル作戦）を行った（1957–58年）。1962年にはアメリカもこの島で核実験を行った。
+  polities: [britain]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Operation_Grapple"
+  at: [-157.4, 1.87]
+
+- year: 1962
+  date: "1962-01-01"
+  title: 西サモアの独立
+  text: ニュージーランドの信託統治領だった西サモアが、太平洋の島々で最初に独立した。続いてナウル（1968年）、フィジー・トンガ（1970年）などが独立し、1970–80年代に多くの島国が生まれた。
+  polities: [samoa, new_zealand]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/サモア"
+  at: [-171.76, -13.83]
+
+- year: 1966
+  title: フランスがムルロア環礁で核実験を始める
+  text: アルジェリアの独立で実験場を失ったフランスが、フランス領ポリネシアのムルロア環礁・ファンガタウファ環礁で核実験を始めた（1996年までに193回）。太平洋の国々やオーストラリア・ニュージーランドで反対運動が強まった。
+  polities: [france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ムルロア環礁"
+  at: [-138.9, -21.83]
+
+- year: 1968
+  date: "1968-01-31"
+  title: ナウルの独立
+  text: リン鉱石の島ナウルが、世界で最も小さい共和国として独立した。
+  polities: [nauru, australia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ナウル"
+  at: [166.93, -0.53]
+
+- year: 1970
+  date: "1970-10-10"
+  title: フィジーの独立
+  text: フィジーがイギリスから独立した（トンガも同じ年の6月に保護国の地位を終えた）。翌1971年、独立した島国とオーストラリア・ニュージーランドで南太平洋フォーラム（のちの太平洋諸島フォーラム）が作られた。
+  polities: [fiji, tonga, britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/フィジー"
+  at: [178.44, -18.14]
+
+- year: 1975
+  date: "1975-09-16"
+  title: パプアニューギニアの独立
+  text: オーストラリアの統治下にあったパプアニューギニアが独立した。独立直前にはブーゲンヴィル島が「北ソロモン共和国」として分離を宣言した。
+  polities: [papua_new_guinea, australia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/パプアニューギニア"
+  at: [147.18, -9.44]
+
+- year: 1978
+  title: ソロモン諸島・ツバルの独立
+  text: ソロモン諸島（7月）とツバル（10月）がイギリスから独立した。翌1979年にはキリバス（ギルバート諸島）が独立した。
+  polities: [solomon_islands, tuvalu, kiribati, britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ソロモン諸島"
+  at: [159.95, -9.43]
+
+- year: 1980
+  date: "1980-07-30"
+  title: ヴァヌアツの独立
+  text: 英仏の共同統治領ニューヘブリディーズがヴァヌアツ共和国として独立した。エスピリトゥサント島の分離運動（ココナッツ戦争）はパプアニューギニア軍の助けで抑えられた。
+  polities: [vanuatu, new_hebrides, britain, france, papua_new_guinea]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/バヌアツ"
+  at: [168.32, -17.74]
+
+- year: 1985
+  date: "1985-08-06"
+  title: ラロトンガ条約（南太平洋非核地帯条約）
+  text: 南太平洋フォーラムの国々がクック諸島のラロトンガで、核兵器の製造・配備・実験を禁じる南太平洋非核地帯条約に調印した。フランスはムルロア環礁などで核実験を続けていた（同じ年のレインボー・ウォーリア号事件はニュージーランドの項）。
+  polities: [cook_islands, australia, new_zealand, fiji, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/南太平洋非核地帯条約"
+  at: [-159.78, -21.21]
+
+- year: 1986
+  date: "1986-10-21"
+  title: マーシャル諸島・ミクロネシア連邦の独立（自由連合盟約）
+  text: アメリカとの自由連合盟約が発効し、マーシャル諸島（10月）とミクロネシア連邦（11月）が独立した。防衛をアメリカに委ね、経済援助を受ける。パラオは非核憲法をめぐる対立で遅れ、1994年に独立した。
+  polities: [marshall_islands, micronesia, palau, usa]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/自由連合盟約"
+  at: [171.38, 7.09]
+
+- year: 1987
+  date: "1987-05-14"
+  title: フィジーのクーデタ
+  text: インド系の支持を受けた政権の発足に反発したランブカ中佐が2度のクーデタを起こし、フィジーは共和政に移ってイギリス連邦の資格を一時失った。フィジー系とインド系の対立は2000年・2006年のクーデタにもつながった。
+  polities: [fiji]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/フィジーのクーデター_(1987年)"
+  at: [178.44, -18.14]
+
+- year: 1988
+  date: "1988-05"
+  title: ウヴェア島事件とマティニョン合意
+  text: ニューカレドニアの独立をめぐってカナクの独立派と残留派の対立が激しくなり（1984–88年）、ウヴェア島の人質事件で多数の死者が出た。マティニョン合意（1988年）とヌメア協定（1998年）で、段階的な自治の拡大と住民投票が決められた。
+  polities: [france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ウベア洞窟人質事件"
+  at: [166.55, -20.6]
+
+- year: 1988
+  date: "1988-11"
+  title: ブーゲンヴィル紛争の始まり
+  text: パングナ銅山の環境破壊と利益の配分に反発した住民が鉱山を襲撃し、1989年に鉱山は閉鎖された。ブーゲンヴィル革命軍（BRA）が独立を求めてパプアニューギニア政府軍と戦う内戦となり、1998年の停戦までに多くの死者が出た。
+  polities: [papua_new_guinea]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ブーゲンビル内戦"
+  at: [155.5, -6.32]
+
+- year: 1995
+  date: "1995-09-05"
+  title: フランスの最後の核実験
+  text: シラク大統領がムルロア環礁での核実験を再開し、太平洋の国々・日本・オーストラリアなどから強い抗議を受けた。翌1996年に実験の終了を宣言し、包括的核実験禁止条約（CTBT）に調印した。
+  polities: [france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ムルロア環礁"
+  at: [-138.9, -21.83]
+
+- year: 2003
+  date: "2003-07"
+  title: ソロモン諸島地域支援ミッション（RAMSI）
+  text: ガダルカナル島とマライタ島の住民の民族紛争（1998–2003年）で政府が機能しなくなったソロモン諸島に、オーストラリア・ニュージーランドなど太平洋の国々が警察・軍を送り、治安を回復した（2017年まで）。
+  polities: [solomon_islands, australia, new_zealand]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Regional_Assistance_Mission_to_Solomon_Islands"
+  at: [159.95, -9.43]
+
+- year: 2006
+  date: "2006-12-05"
+  title: フィジーのバイニマラマのクーデタ
+  text: フィジー軍のバイニマラマ司令官がクーデタで政権を奪った。2014年の選挙まで軍の政権が続き、太平洋諸島フォーラムの資格を一時停止された。
+  polities: [fiji]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/フランク・バイニマラマ"
+  at: [178.44, -18.12]
+
+- year: 2018
+  date: "2018-11-04"
+  title: ニューカレドニアの独立を問う住民投票
+  text: ヌメア協定にもとづく1回目の住民投票で、フランスへの残留が多数となった。2020年の2回目も残留が上回り、2021年の3回目はカナクの独立派が棄権した。2024年には選挙制度の改正をめぐって暴動が起こった。
+  polities: [france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ニューカレドニア"
+  at: [166.45, -22.27]
+
+- year: 2019
+  date: "2019-12"
+  title: ブーゲンヴィルの住民投票
+  text: 和平協定にもとづく住民投票で、ブーゲンヴィルの有権者の97.7％が独立に賛成した。結果はパプアニューギニア議会の承認が必要で、協議が続いている。同じ2019年、ソロモン諸島とキリバスが台湾と断交して中国と国交を結んだ。
+  polities: [papua_new_guinea]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ブーゲンビル自治州"
+  at: [155.57, -6.22]
+
+- year: 2022
+  date: "2022-01-15"
+  title: フンガ・トンガ＝フンガ・ハアパイ火山の大噴火
+  text: トンガの海底火山が大噴火し、津波がトンガの島々を襲った。気圧の波と津波は太平洋をこえて日本や南北アメリカにも届いた。
+  polities: [tonga]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/フンガ・トンガ＝フンガ・ハアパイ"
+  at: [-175.39, -20.55]
+
+- year: 2023
+  date: "2023-11-10"
+  title: ツバルとオーストラリアのファレピリ連合条約
+  text: 海面上昇で国土が失われる危機にあるツバルの国民に、オーストラリアが毎年一定数の移住を認める条約が結ばれた。気候変動が太平洋の島国の存立に関わる問題であることを示した。
+  polities: [tuvalu, australia]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Falepili_Union"
+  at: [179.19, -8.52]

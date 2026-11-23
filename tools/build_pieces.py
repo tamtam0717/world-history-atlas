@@ -299,14 +299,19 @@ def fix_mojibake(s):
 def add_ne_pieces(w, specs, adm1):
     """CGAZ にない地域（海外領土など）を Natural Earth admin-1 から新しいピースとして足す。
     ne_adm0 の区画のうち、bbox に代表点が入るもの（ne_names があればその名前だけ）を使う。
-    dissolve: true なら1つのピース（name）にまとめる。carve: true なら、重なる既存のピースから切り取る
+    dissolve: true なら1つのピース（name）にまとめる。clip: true なら bbox にかかる区画を bbox で切って使う。carve: true なら、重なる既存のピースから切り取る
     （グアンタナモ基地のように CGAZ では隣の区画に含まれているもの）。そうでなければ既存のピースと重ならない部分だけを使う"""
     ne_all = gpd.read_file(SRC / "ne_admin1.geojson", engine="pyogrio")
     new_rows = []
     for spec in specs:
         bb = box(*spec["bbox"])
         ne = ne_all[ne_all.adm0_a3 == spec["ne_adm0"]]
-        ne = ne[ne.geometry.representative_point().within(bb)]
+        if spec.get("clip"):
+            # clip: true なら bbox にかかる区画を bbox で切って使う（1つの区画に散らばった島々の一部だけを取る）
+            ne = ne[ne.intersects(bb)].copy()
+            ne["geometry"] = ne.geometry.make_valid().intersection(bb)
+        else:
+            ne = ne[ne.geometry.representative_point().within(bb)]
         if "ne_names" in spec:
             ne = ne[ne.name.isin(spec["ne_names"])]
         if len(ne) == 0:
@@ -334,6 +339,17 @@ def add_ne_pieces(w, specs, adm1):
 _UNITS_CACHE = {}
 
 
+def _unmojibake(s):
+    """units の照合用：UTF-8 が Latin-1 として読まれた文字化けを直す（fix_mojibake より広く、Å・Ä なども。
+    ピース ID には使わないので、既存の ID は変わらない）"""
+    if not isinstance(s, str) or not any("\u00c0" <= ch <= "\u00ff" for ch in s):
+        return s
+    try:
+        return s.encode("latin1").decode("utf8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return s
+
+
 def load_units(src):
     """split の units に使う区画（既定は CGAZ ADM2。"gb/....geojson" なども可）"""
     if src not in _UNITS_CACHE:
@@ -343,6 +359,7 @@ def load_units(src):
             u = gpd.read_file(SRC / src, engine="pyogrio")[["shapeName", "geometry"]]
             u["shapeGroup"] = ""
         u = u.copy()
+        u["shapeName"] = u.shapeName.map(_unmojibake)  # CGAZ の文字化け（"Å\x8ctorohanga District"）を直して照合する
         u["geometry"] = u.geometry.make_valid()
         u["rp"] = u.geometry.representative_point()
         _UNITS_CACHE[src] = u
@@ -434,6 +451,11 @@ def apply_splits(g, specs):
                     continue
                 r = g.loc[idx].copy()
                 r["shapeName"] = part.get("rename") or f'{g.at[idx, "shapeName"]} {part["suffix"]}'
+                if part.get("iso"):
+                    # 分けた部分を別の国コードにする（オーストラリアの外部領土のクリスマス島など）
+                    r["iso"] = part["iso"]
+                    if "adm1" in r:
+                        r["adm1"] = r["shapeName"]
                 r["geometry"] = MultiPolygon(taken)
                 r["_split"] = True
                 rows.append(r)

@@ -1,0 +1,168 @@
+# O1 オーストラリア・ニュージーランドの政体。
+# 植民地の時期（ニューサウスウェールズ・ヴァン・ディーメンズ・ランド・ニュージーランド植民地など）は britain＋地域の label で描く。
+# 1901 年のオーストラリア連邦、1907 年のニュージーランド自治領から独自の政体（australia・new_zealand）。
+# クック諸島・ニウエ・トケラウ・西サモアなどのニュージーランドの属領、ナウル・ニューギニアのオーストラリアの統治は O2（pacific.yaml）。
+
+- id: australia
+  name: オーストラリア
+  home_iso: [AUS]   # 本国（潮流の spread が既定で光らせる範囲）。ノーフォーク島・クリスマス島・ココス諸島・ニューギニアなどは含めない
+  names:
+    - {to: 1941, name: オーストラリア連邦（自治領）, kind: 自治領（イギリス帝国）}
+  short: オーストラリア
+  color: "#e5c27a"
+  kind: 連邦・立憲君主国
+  note: >-
+    6つの植民地（ニューサウスウェールズ・ヴィクトリア・クイーンズランド・南オーストラリア・西オーストラリア・タスマニア）が1901年1月1日に連邦を作り、自治領となった。
+    1931年のウェストミンスター憲章は1942年に採択（1939年9月にさかのぼって適用）し、1986年のオーストラリア法で本国議会との法的なつながりが切れた。
+    元首はイギリス国王（オーストラリア国王）で、総督が代わりを務める。実際の政治は議会の多数派から選ばれる首相が行うので、ここには首相を挙げる。
+  source: "https://ja.wikipedia.org/wiki/オーストラリアの歴史"
+  rulers:
+    - {name: エドマンド・バートン, title: 首相, from: 1901, to: 1903, note: 保護党。初代首相。連邦結成運動の指導者。移民制限法（白豪主義）を定めた。, source: "https://ja.wikipedia.org/wiki/エドマンド・バートン"}
+    - {name: アルフレッド・ディーキン, title: 首相, from: 1903, to: 1904, note: 保護党。, source: "https://en.wikipedia.org/wiki/Alfred_Deakin"}
+    - {name: クリス・ワトソン, title: 首相, from: 1904, to: 1904, note: 労働党。世界で初めての国レベルの労働党政権。, source: "https://en.wikipedia.org/wiki/Chris_Watson"}
+    - {name: ジョージ・リード, title: 首相, from: 1904, to: 1905, note: 自由貿易党。, source: "https://en.wikipedia.org/wiki/George_Reid"}
+    - {name: アルフレッド・ディーキン（再任）, title: 首相, from: 1905, to: 1908, source: "https://en.wikipedia.org/wiki/Alfred_Deakin"}
+    - {name: アンドルー・フィッシャー, title: 首相, from: 1908, to: 1909, note: 労働党。, source: "https://en.wikipedia.org/wiki/Andrew_Fisher"}
+    - {name: アルフレッド・ディーキン（3度目）, title: 首相, from: 1909, to: 1910, source: "https://en.wikipedia.org/wiki/Alfred_Deakin"}
+    - {name: アンドルー・フィッシャー（再任）, title: 首相, from: 1910, to: 1913, source: "https://en.wikipedia.org/wiki/Andrew_Fisher"}
+    - {name: ジョゼフ・クック, title: 首相, from: 1913, to: 1914, note: 自由党。, source: "https://en.wikipedia.org/wiki/Joseph_Cook"}
+    - {name: アンドルー・フィッシャー（3度目）, title: 首相, from: 1914, to: 1915, note: 第一次世界大戦の開始時の首相。, source: "https://en.wikipedia.org/wiki/Andrew_Fisher"}
+    - {name: ビリー・ヒューズ, title: 首相, from: 1915, to: 1923, note: 労働党→国民党。徴兵制をめぐる国民投票で労働党が分裂した。パリ講和会議で日本の人種差別撤廃提案に反対した。, source: "https://en.wikipedia.org/wiki/Billy_Hughes"}
+    - {name: スタンリー・ブルース, title: 首相, from: 1923, to: 1929, note: 国民党。, source: "https://en.wikipedia.org/wiki/Stanley_Bruce"}
+    - {name: ジェームズ・スカリン, title: 首相, from: 1929, to: 1932, note: 労働党。世界恐慌に直面した。, source: "https://en.wikipedia.org/wiki/James_Scullin"}
+    - {name: ジョゼフ・ライオンズ, title: 首相, from: 1932, to: 1939, note: 統一オーストラリア党。在任中に死去。, source: "https://en.wikipedia.org/wiki/Joseph_Lyons"}
+    - {name: アール・ペイジ, title: 首相, from: 1939, to: 1939, note: 地方党。ライオンズの死後の暫定首相。, source: "https://en.wikipedia.org/wiki/Earle_Page"}
+    - {name: ロバート・メンジーズ, title: 首相, from: 1939, to: 1941, note: 統一オーストラリア党。第二次世界大戦の開戦時の首相。, source: "https://en.wikipedia.org/wiki/Robert_Menzies"}
+    - {name: アーサー・ファデン, title: 首相, from: 1941, to: 1941, note: 地方党。, source: "https://en.wikipedia.org/wiki/Arthur_Fadden"}
+    - {name: ジョン・カーティン, title: 首相, from: 1941, to: 1945, note: 労働党。太平洋戦争を指導し、イギリスよりアメリカとの協力を重んじた。在任中に死去。, source: "https://en.wikipedia.org/wiki/John_Curtin"}
+    - {name: フランク・フォード, title: 首相, from: 1945, to: 1945, note: 労働党。8日間の暫定首相。, source: "https://en.wikipedia.org/wiki/Frank_Forde"}
+    - {name: ベン・チフリー, title: 首相, from: 1945, to: 1949, note: 労働党。戦後の大量移民の受け入れを始めた。, source: "https://en.wikipedia.org/wiki/Ben_Chifley"}
+    - {name: ロバート・メンジーズ（再任）, title: 首相, from: 1949, to: 1966, note: 自由党。在任期間は最長。ANZUS条約を結び、反共の立場でアメリカと結んだ。, source: "https://en.wikipedia.org/wiki/Robert_Menzies"}
+    - {name: ハロルド・ホルト, title: 首相, from: 1966, to: 1967, note: 自由党。ベトナム戦争への派兵を拡大した。海で行方不明になった。, source: "https://en.wikipedia.org/wiki/Harold_Holt"}
+    - {name: ジョン・マキューエン, title: 首相, from: 1967, to: 1968, note: 地方党。暫定首相。, source: "https://en.wikipedia.org/wiki/John_McEwen"}
+    - {name: ジョン・ゴートン, title: 首相, from: 1968, to: 1971, note: 自由党。, source: "https://en.wikipedia.org/wiki/John_Gorton"}
+    - {name: ウィリアム・マクマーン, title: 首相, from: 1971, to: 1972, note: 自由党。, source: "https://en.wikipedia.org/wiki/William_McMahon"}
+    - {name: ゴフ・ホイットラム, title: 首相, from: 1972, to: 1975, note: 労働党。中華人民共和国の承認、白豪主義の撤廃、ベトナムからの撤兵を進めた。総督に解任された（1975年の憲政危機）。, source: "https://ja.wikipedia.org/wiki/ゴフ・ホイットラム"}
+    - {name: マルコム・フレーザー, title: 首相, from: 1975, to: 1983, note: 自由党。インドシナ難民を受け入れ、多文化主義を進めた。, source: "https://en.wikipedia.org/wiki/Malcolm_Fraser"}
+    - {name: ボブ・ホーク, title: 首相, from: 1983, to: 1991, note: 労働党。経済の自由化を進め、APEC（1989）を提唱した。, source: "https://ja.wikipedia.org/wiki/ボブ・ホーク"}
+    - {name: ポール・キーティング, title: 首相, from: 1991, to: 1996, note: 労働党。アジア重視の外交と共和制の提案。, source: "https://en.wikipedia.org/wiki/Paul_Keating"}
+    - {name: ジョン・ハワード, title: 首相, from: 1996, to: 2007, note: 自由党。, source: "https://en.wikipedia.org/wiki/John_Howard"}
+    - {name: ケビン・ラッド, title: 首相, from: 2007, to: 2010, note: 労働党。2008年に「盗まれた世代」に公式に謝罪した。, source: "https://en.wikipedia.org/wiki/Kevin_Rudd"}
+    - {name: ジュリア・ギラード, title: 首相, from: 2010, to: 2013, note: 労働党。初の女性の首相。, source: "https://en.wikipedia.org/wiki/Julia_Gillard"}
+    - {name: ケビン・ラッド（再任）, title: 首相, from: 2013, to: 2013, source: "https://en.wikipedia.org/wiki/Kevin_Rudd"}
+    - {name: トニー・アボット, title: 首相, from: 2013, to: 2015, note: 自由党。, source: "https://en.wikipedia.org/wiki/Tony_Abbott"}
+    - {name: マルコム・ターンブル, title: 首相, from: 2015, to: 2018, note: 自由党。, source: "https://en.wikipedia.org/wiki/Malcolm_Turnbull"}
+    - {name: スコット・モリソン, title: 首相, from: 2018, to: 2022, note: 自由党。AUKUS（2021）を結んだ。, source: "https://en.wikipedia.org/wiki/Scott_Morrison"}
+    - {name: アンソニー・アルバニージー, title: 首相, from: 2022, note: 労働党。, source: "https://en.wikipedia.org/wiki/Anthony_Albanese"}
+  periods:
+    - from: 1901
+      to: 1913
+      text: 6つの植民地が連邦を作り、自治領となった。移民制限法で有色人種の移民を締め出す白豪主義をとる一方、女性参政権（1902）や労働者保護など、当時としては進んだ社会立法を行った。首都はキャンベラに新しく造ることになった（それまではメルボルン）。
+    - from: 1914
+      to: 1918
+      text: イギリスとともに第一次世界大戦を戦い、ニューギニアのドイツ領を占領した。ニュージーランドとのアンザック軍団（ANZAC）はガリポリの戦い（1915）で大きな犠牲を出し、国民意識が高まった。戦後、旧ドイツ領ニューギニアとナウルを委任統治した。
+    - from: 1919
+      to: 1938
+      text: 議会がキャンベラに移った（1927）。羊毛・小麦の輸出に頼る経済は世界恐慌で大きな打撃を受け、オタワ会議（1932）でイギリス帝国の特恵関税に加わった。
+    - from: 1939
+      to: 1945
+      text: 第二次世界大戦に参戦。日本軍がシンガポールを落とし、ダーウィンを空襲する（1942）と、カーティン首相はイギリスよりアメリカとの協力を重んじ、ニューギニアで日本軍と戦った。ウェストミンスター憲章を採択した（1942）。
+    - from: 1946
+      to: 1972
+      text: 「人口を増やすか滅びるか」を合言葉に、ヨーロッパから大量の移民を受け入れた。アメリカ・ニュージーランドとANZUS条約（1951）を結び、朝鮮戦争・ベトナム戦争に派兵した。1967年の国民投票で先住民（アボリジニ）が国勢調査に数えられ、連邦が先住民の法律を作れるようになった。
+    - from: 1973
+      to: 1999
+      text: ホイットラム政権が白豪主義を撤廃し、アジアからの移民も受け入れる多文化主義の国に変わった。イギリスのEC加盟で、経済の重心はアジア・太平洋に移り、APEC（1989）を提唱した。マボ判決（1992）で先住民の土地の権利（先住権原）が認められた。共和制への移行は国民投票で否決された（1999）。
+    - from: 2000
+      to: 2025
+      text: 中国への資源の輸出で長い好景気が続いた。2008年、政府が「盗まれた世代」（先住民の子どもを親から引き離した同化政策）に公式に謝罪した。中国との対立が深まる中、アメリカ・イギリスとAUKUS（2021）を結んだ。先住民の声を議会に届ける機関を憲法に定める案は国民投票で否決された（2023）。
+
+- id: new_zealand
+  name: ニュージーランド
+  home_iso: [NZL]   # 本国。クック諸島・ニウエ・トケラウ・西サモア・ロス海属領は含めない
+  names:
+    - {to: 1946, name: ニュージーランド（自治領）, kind: 自治領（イギリス帝国）}
+  short: ニュージーランド
+  color: "#8fc4ad"
+  kind: 立憲君主国
+  note: >-
+    1840年のワイタンギ条約でイギリスの植民地となり、1852年の憲法法で自治を認められ、1856年から責任政府（議院内閣制）。1907年に自治領となった。
+    ウェストミンスター憲章は1947年に採択した。元首はイギリス国王（ニュージーランド国王）で、総督が代わりを務める。ここには首相を挙げる（自治領の前の首相セドン 1893–1906 は出来事・情勢を参照）。
+  source: "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+  rulers:
+    - {name: ジョゼフ・ウォード, title: 首相, from: 1906, to: 1912, note: 自由党。在任中の1907年に自治領となった。, source: "https://en.wikipedia.org/wiki/Joseph_Ward"}
+    - {name: トマス・マッケンジー, title: 首相, from: 1912, to: 1912, note: 自由党。, source: "https://en.wikipedia.org/wiki/Thomas_Mackenzie"}
+    - {name: ウィリアム・マッシー, title: 首相, from: 1912, to: 1925, note: 改革党。第一次世界大戦を指導した。在任中に死去。, source: "https://en.wikipedia.org/wiki/William_Massey"}
+    - {name: フランシス・ベル, title: 首相, from: 1925, to: 1925, note: 改革党。暫定首相。, source: "https://en.wikipedia.org/wiki/Francis_Bell_(New_Zealand_politician)"}
+    - {name: ゴードン・コーツ, title: 首相, from: 1925, to: 1928, note: 改革党。, source: "https://en.wikipedia.org/wiki/Gordon_Coates"}
+    - {name: ジョゼフ・ウォード（再任）, title: 首相, from: 1928, to: 1930, note: 統一党。, source: "https://en.wikipedia.org/wiki/Joseph_Ward"}
+    - {name: ジョージ・フォーブス, title: 首相, from: 1930, to: 1935, note: 統一党。世界恐慌に直面した。, source: "https://en.wikipedia.org/wiki/George_Forbes"}
+    - {name: マイケル・ジョゼフ・サヴェージ, title: 首相, from: 1935, to: 1940, note: 労働党。社会保障法（1938）で福祉国家の基礎を作った。在任中に死去。, source: "https://en.wikipedia.org/wiki/Michael_Joseph_Savage"}
+    - {name: ピーター・フレーザー, title: 首相, from: 1940, to: 1949, note: 労働党。第二次世界大戦を指導した。, source: "https://en.wikipedia.org/wiki/Peter_Fraser"}
+    - {name: シドニー・ホランド, title: 首相, from: 1949, to: 1957, note: 国民党。, source: "https://en.wikipedia.org/wiki/Sidney_Holland"}
+    - {name: キース・ホリオーク, title: 首相, from: 1957, to: 1957, note: 国民党。, source: "https://en.wikipedia.org/wiki/Keith_Holyoake"}
+    - {name: ウォルター・ナッシュ, title: 首相, from: 1957, to: 1960, note: 労働党。, source: "https://en.wikipedia.org/wiki/Walter_Nash"}
+    - {name: キース・ホリオーク（再任）, title: 首相, from: 1960, to: 1972, note: 国民党。ベトナム戦争に派兵した。, source: "https://en.wikipedia.org/wiki/Keith_Holyoake"}
+    - {name: ジャック・マーシャル, title: 首相, from: 1972, to: 1972, note: 国民党。, source: "https://en.wikipedia.org/wiki/Jack_Marshall"}
+    - {name: ノーマン・カーク, title: 首相, from: 1972, to: 1974, note: 労働党。フランスの核実験に抗議した。在任中に死去。, source: "https://en.wikipedia.org/wiki/Norman_Kirk"}
+    - {name: ビル・ローリング, title: 首相, from: 1974, to: 1975, note: 労働党。, source: "https://en.wikipedia.org/wiki/Bill_Rowling"}
+    - {name: ロバート・マルドゥーン, title: 首相, from: 1975, to: 1984, note: 国民党。, source: "https://en.wikipedia.org/wiki/Robert_Muldoon"}
+    - {name: デーヴィッド・ロンギ, title: 首相, from: 1984, to: 1989, note: 労働党。非核政策をとり、大胆な経済の自由化（ロジャーノミクス）を進めた。, source: "https://ja.wikipedia.org/wiki/デビッド・ロンギ"}
+    - {name: ジェフリー・パーマー, title: 首相, from: 1989, to: 1990, note: 労働党。, source: "https://en.wikipedia.org/wiki/Geoffrey_Palmer_(politician)"}
+    - {name: マイク・ムーア, title: 首相, from: 1990, to: 1990, note: 労働党。, source: "https://en.wikipedia.org/wiki/Mike_Moore_(New_Zealand_politician)"}
+    - {name: ジム・ボルジャー, title: 首相, from: 1990, to: 1997, note: 国民党。, source: "https://en.wikipedia.org/wiki/Jim_Bolger"}
+    - {name: ジェニー・シップリー, title: 首相, from: 1997, to: 1999, note: 国民党。初の女性の首相。, source: "https://en.wikipedia.org/wiki/Jenny_Shipley"}
+    - {name: ヘレン・クラーク, title: 首相, from: 1999, to: 2008, note: 労働党。, source: "https://en.wikipedia.org/wiki/Helen_Clark"}
+    - {name: ジョン・キー, title: 首相, from: 2008, to: 2016, note: 国民党。, source: "https://en.wikipedia.org/wiki/John_Key"}
+    - {name: ビル・イングリッシュ, title: 首相, from: 2016, to: 2017, note: 国民党。, source: "https://en.wikipedia.org/wiki/Bill_English"}
+    - {name: ジャシンダ・アーダーン, title: 首相, from: 2017, to: 2023, note: 労働党。クライストチャーチのモスク銃撃事件・新型コロナウイルスへの対応で知られる。, source: "https://en.wikipedia.org/wiki/Jacinda_Ardern"}
+    - {name: クリス・ヒプキンス, title: 首相, from: 2023, to: 2023, note: 労働党。, source: "https://en.wikipedia.org/wiki/Chris_Hipkins"}
+    - {name: クリストファー・ラクソン, title: 首相, from: 2023, note: 国民党。, source: "https://en.wikipedia.org/wiki/Christopher_Luxon"}
+  periods:
+    - from: 1907
+      to: 1918
+      text: 自治領となった。セドン政権（1893–1906）以来の自由党の改革で、女性参政権（1893、国政では世界初）・老齢年金・労使の強制仲裁などが整い、「社会の実験室」と呼ばれた。第一次世界大戦ではオーストラリアとともにアンザック軍団としてガリポリで戦い、ドイツ領サモアを占領した。
+    - from: 1919
+      to: 1945
+      text: 西サモアを委任統治した。世界恐慌で農産物の輸出が落ち込み、第一次労働党政権（1935–49）が社会保障法（1938）で福祉国家を作った。第二次世界大戦では北アフリカ・イタリアと太平洋で戦った。
+    - from: 1946
+      to: 1972
+      text: ウェストミンスター憲章を採択した（1947）。ANZUS条約（1951）でアメリカと結び、西サモアの独立（1962）を認めた。マオリの都市への移住が進んだ。
+    - from: 1973
+      to: 1999
+      text: イギリスのEC加盟で主な輸出先を失い、アジア・太平洋に目を向けた。ワイタンギ審判所（1975）が作られ、条約違反の土地の返還・補償が進んだ。ロンギ政権が非核政策をとり（1984–87）、アメリカの核艦船の寄港を拒んでANZUSの協力が止まった。レインボー・ウォーリア号事件（1985）でフランスと対立した。
+    - from: 2000
+      to: 2025
+      text: マオリ語・マオリ文化の復興が進み、二文化の国という意識が広まった。クライストチャーチ地震（2011）とモスク銃撃事件（2019）に見舞われた。
+
+- id: kingitanga
+  name: マオリ王の運動（キーンギタンガ）
+  short: マオリ王
+  color: "#a68fc7"
+  kind: マオリの部族連合（王を立てた運動）
+  note: >-
+    土地の売却に反対する北島中部のマオリの諸部族が、1858年にワイカトの首長ポタタウ・テ・フェロフェロを王に立てた。
+    ワイカト戦争（1863–64）で中心地のワイカトを失い、ロヘ・ポタエ（キング・カントリー）に移った。1881年にタフィアオ王が政府と和解し、1885年に北島幹線鉄道の建設を受け入れるまで、この地域はヨーロッパ人を入れなかった。
+    王位は今も続いている（地図では1885年まで）。範囲はおおよそ（王に従った部族は時期によって違う）。
+  source:
+    - "https://ja.wikipedia.org/wiki/マオリ王"
+    - "https://en.wikipedia.org/wiki/M%C4%81ori_King_Movement"
+  rulers:
+    - {name: ポタタウ・テ・フェロフェロ, title: マオリ王, from: 1858, to: 1860, source: "https://en.wikipedia.org/wiki/P%C5%8Dtatau_Te_Wherowhero"}
+    - {name: タフィアオ, title: マオリ王, from: 1860, to: 1894, note: ワイカト戦争の後はキング・カントリーに退いた。1881年に政府と和解した。, source: "https://en.wikipedia.org/wiki/T%C4%81whiao"}
+    - {name: マフタ, title: マオリ王, from: 1894, to: 1912, source: "https://en.wikipedia.org/wiki/Mahuta_T%C4%81whiao"}
+    - {name: テ・ラタ, title: マオリ王, from: 1912, to: 1933, source: "https://en.wikipedia.org/wiki/Te_Rata_Mahuta"}
+    - {name: コロキ, title: マオリ王, from: 1933, to: 1966, source: "https://en.wikipedia.org/wiki/Korok%C4%AB_Mahuta"}
+    - {name: テ・アタイランギカーフ, title: マオリの女王, from: 1966, to: 2006, source: "https://en.wikipedia.org/wiki/Te_Atairangikaahu"}
+    - {name: トゥヘイティア, title: マオリ王, from: 2006, to: 2024, source: "https://en.wikipedia.org/wiki/T%C5%ABheitia_Paki"}
+    - {name: ンガー・ワイ・ホノ・イ・テ・ポー, title: マオリの女王, from: 2024, source: "https://en.wikipedia.org/wiki/Ng%C4%81_wai_hono_i_te_p%C5%8D"}
+  periods:
+    - from: 1858
+      to: 1862
+      text: 土地の売却を止め、マオリの自治（ランガティラタンガ）を守るために王を立てた。ワイカト川流域が中心で、タラナキ戦争（1860–61）ではタラナキの部族を支援した。
+    - from: 1863
+      to: 1864
+      text: 総督グレイの軍がワイカトに侵攻し、ランギリリ・オラカウの戦いで王の軍を破った。ワイカトの土地は没収された。
+    - from: 1865
+      to: 1885
+      text: タフィアオ王はロヘ・ポタエ（キング・カントリー）に退き、ヨーロッパ人を入れない境界（アウカティ）を守った。1881年に政府と和解し、1885年に鉄道の建設を受け入れた。
