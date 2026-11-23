@@ -111,6 +111,9 @@
   - 宿題の結果：ARG-Entre_Rios、USA-South_Dakota_East（ミズーリ川の東・ヤンクトン。元の ID が西）、JPN-Hokkaido_Wajinchi・JPN-Amami_Islands・JPN-Tokara_Islands・JPN-Ogasawara_Islands、関東州は CHN-Dalian の北緯39.45度以南を CHN-Dalian_urban に足した（3,483km²）、AZE-Nagorno_Karabakh（地区で近似、約4,250km²）、北緯38度線：KOR-Gangwon/Gyeonggi_North_of_38th_parallel、PRK-North/South_Hwanghae_South_of_38th_parallel。新しいピースの所属データはまだない（data/ の note の「ピースが分けられない」も未修正）。
   - split の新しい書き方：name "*"（その国の全ピース）、units（CGAZ ADM2 の区画名で切る。units_bbox・units_clip）、rename、merge_into、min_area。範囲内（zone=eu）の split で bbox の外に出たピースも残す。全16,245ピース（pieces.topo.json 7.5MB、gzip 1.76MB）。
   - 残り：src/modern.ts の MODERN_NAMES に REU MYT SHN IOT ATF がない。タンジール国際管理地帯（MAR-Prefecture_of_Tangier_Assilah にアシラが入る。分けると新ピースが iso: [MAR] のフランス保護領に入るので保留）、ウォルビス・ベイ、イレミ三角地帯、ゴレ島（ダカール県で代用）は未分割。
+- アフリカ（2026-11-22〜23）：F1〜F5 の5担当 → 整合（docs/integration-notes-africa.md）→ 独立レビュー（docs/review/af_*.md）→ 修正。指示書は docs/agent-brief-africa.md。描き方は南北アメリカと同じ（実効支配は濃く、主張は斜線、在地国家は独自色、在地の王が残った保護領は indirect）。アジアの空白（中央アジア東部・イエメン・係争地など）も補充済み。
+  - 画面：「現代」の表示の国の色は、最後の年（2025）にその国の大部分を持つ政体の色にそろえる（src/map.ts の modernColors）。snapshot に --modern。
+- 残り：オセアニア（オーストラリア・ニュージーランド・太平洋の島々）。グアム・北マリアナ・米領サモアは A1 が政治を書いた。
 - 次の作業：全世界のデータ。東アジア（中国・日本・朝鮮）→ 南・東南アジア → 南北アメリカ → アフリカ → オセアニア（田村さん了承済み）。
   - ピースの分割が必要な既知の場所：オイペン・マルメディ、ブリガ・テンダ、ザール、ベルリン東西、ニコシア（ナゴルノ・カラバフは 2026-11-22 に分割済み）。
 - 田村さんの決定（2026-11-20）：1815年のプファルツ・ラインヘッセンは暫定統治（斜線）のまま／出来事は約340件すべて残す／Pages 公開はレビュー指摘の修正が終わってから（その時点で手順を案内する）。
