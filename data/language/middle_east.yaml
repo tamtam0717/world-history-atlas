@@ -769,3 +769,100 @@
       minor: arabic
       note: 1948–50年にネゲヴのベドウィンの多くは避難・追放された。ベエルシェバなどにユダヤ人移民が住んだ。残ったベドウィン（アラビア語）は地区の人口の約2割。
       source: "https://en.wikipedia.org/wiki/Negev_Bedouin"
+
+# ======== アフガニスタン東部・北部、イエメン（アジアの空白の補充、2026-11-23） ========
+- id: lang_afg_persian
+  name: アフガニスタンのペルシア語（ダリー語）圏
+  select:
+    pieces: [AFG-Kapisa, AFG-Parwan, AFG-Panjshir, AFG-Baghlan, AFG-Samangan, AFG-Badakhshan, AFG-Ghor]
+  timeline:
+    - from: 1648
+      main: persian
+      note: タジク人（ダリー語＝アフガニスタンのペルシア語）・アイマク人。バダフシャーン東部の山地にはパミール諸語の住民もいる。
+- id: lang_kabul
+  name: カーブル
+  select:
+    pieces: [AFG-Kabul]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: pashto_baluchi
+      note: ペルシア語（ダリー語）の都市。宮廷・行政の言語もペルシア語。パシュトゥーン人・ハザーラ人も多い。
+- id: lang_balkh
+  name: バルフ（マザーリシャリーフ）
+  select:
+    pieces: [AFG-Balkh]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: uzbek
+      note: タジク人とウズベク人。1880年代からパシュトゥーン人も移住した。
+- id: lang_badghis
+  name: バードギース
+  select:
+    pieces: [AFG-Badghis]
+  timeline:
+    - from: 1648
+      main: persian
+      minor: pashto_baluchi
+      note: アイマク人（ペルシア語）。19世紀末からパシュトゥーン人の遊牧民が移住した。
+- id: lang_hazarajat
+  name: ハザーラジャート
+  select:
+    pieces: [AFG-Bamyan, AFG-Daykundi]
+  timeline:
+    - from: 1648
+      main: persian
+      note: ハザーラ人（ペルシア語のハザーラギー方言）。
+- id: lang_afg_pashto
+  name: アフガニスタン東部・南部（パシュトゥーン人の地）
+  select:
+    pieces: [AFG-Laghman, AFG-Nangarhar, AFG-Kunar, AFG-Sarkani, AFG-Khost, AFG-Paktia, AFG-Paktika, AFG-Kandahar, AFG-Helmand, AFG-Zabul]
+  timeline:
+    - from: 1648
+      main: pashto_baluchi
+      note: パシュトゥーン人（ドゥッラーニー族・ギルザイ族など）の部族の地。ヘルマンド南部にはバローチ人もいる。
+- id: lang_afg_pashto_mixed
+  name: ガズニー・ワルダク・ロガール・ウルーズガーン
+  select:
+    pieces: [AFG-Ghanzi, AFG-Wardak, AFG-Logar, AFG-Uruzgan]
+  timeline:
+    - from: 1648
+      main: pashto_baluchi
+      minor: persian
+      note: パシュトゥーン人が多数。西部の山地にハザーラ人、町にタジク人。
+- id: lang_afg_uzbek
+  name: アフガン・トルキスタン（ウズベク人の地）
+  select:
+    pieces: [AFG-Jowzjan, AFG-Faryab, AFG-Sar_e_Pol, AFG-Kunduz, AFG-Takhar]
+  timeline:
+    - from: 1648
+      main: uzbek
+      minor: persian
+      note: ウズベク人（シバルガーン・マイマナ・カタガンの諸侯）とタジク人。ジョウズジャーン・ファールヤーブにはトルクメン人もいる。1880年代からパシュトゥーン人の入植（とくにクンドゥズ）。
+- id: lang_nuristan
+  name: ヌーリスターン
+  select:
+    pieces: [AFG-Nuristan]
+  timeline:
+    - from: 1648
+      main: other
+      minor: pashto_baluchi
+      note: ヌーリスターン諸語（カティ語など。インド・イラン語派の独立した一派）。
+- id: lang_yemen
+  name: イエメン
+  select:
+    pieces: [YEM-Sa_dah_Governorate, YEM-Amran_Governorate, YEM-Hajjah_Governorate, YEM-San_a, YEM-San_a_Governorate, YEM-Al_Mahwit_Governorate, YEM-Dhamar_Governorate, YEM-Al_Jawf_Governorate, YEM-Ma_rib_Governorate, YEM-Raymah_Governorate, YEM-Ibb_Governorate, YEM-Ta_izz_Governorate, YEM-Al_Bayda_Governorate, YEM-Al_Hudaydah_Governorate, YEM-Adan_Governorate, YEM-Lahij_Governorate, YEM-Ad_Dali_Governorate, YEM-Abyan_Governorate, YEM-Shabwah_Governorate, YEM-Hadhramaut]
+  timeline:
+    - from: 1648
+      main: arabic
+      note: アラビア語のイエメン方言・ハドラマウト方言。アデンにはイギリス領時代にインド人・ソマリ人・ユダヤ人も住んだ。
+- id: lang_mahra_socotra
+  name: マハラ・ソコトラ
+  select:
+    pieces: [YEM-Al_Mahrah_Governorate, YEM-Socotra]
+  timeline:
+    - from: 1648
+      main: other
+      minor: arabic
+      note: マハラ語・ソコトラ語（南アラビア諸語。アラビア語とは別のセム系の言語）。

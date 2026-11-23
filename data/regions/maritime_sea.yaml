@@ -7106,3 +7106,73 @@
       owner: philippines
       cause: "フィリピン共和国が独立する（7月4日）"
       source: "https://ja.wikipedia.org/wiki/フィリピン"
+
+# ---------------------------------------------------------------- 南シナ海の島々（CGAZ の係争地ピース）
+- id: paracel
+  name: 西沙諸島（パラセル諸島）
+  select:
+    pieces: [125-Paracel_Is]
+  timeline:
+    - from: 1648
+      owner: null
+      certainty: uncertain
+      note: 海南島の漁民などが使った無人の島々。阮朝（1816年）と清（1909年）が領有を宣言したが、常駐はしなかった
+      source: "https://ja.wikipedia.org/wiki/西沙諸島"
+    - from: 1938
+      owner: france
+      certainty: uncertain
+      label: 西沙諸島（仏領インドシナ）
+      cause: フランスが守備隊を置く（1932年に領有を宣言）
+      source: "https://ja.wikipedia.org/wiki/西沙諸島"
+    - from: 1939
+      owner: japan
+      certainty: occupied
+      cause: 日本軍が占領する
+      source: "https://ja.wikipedia.org/wiki/西沙諸島"
+    - from: 1946
+      owner: roc
+      certainty: uncertain
+      cause: 中華民国が東部の永興島（ウッディー島）に、フランスが西部の島々に兵を置く
+      source: "https://ja.wikipedia.org/wiki/西沙諸島"
+    - from: 1956
+      owner: prc
+      certainty: uncertain
+      cause: 中華人民共和国が東部（アンフィトリテ群島）を、南ベトナムが西部（クレセント群島）を押さえる
+      source: "https://ja.wikipedia.org/wiki/西沙諸島"
+    - from: 1974
+      owner: prc
+      cause: 西沙諸島の戦い（1月）で中国が南ベトナム軍を追い、全域を押さえる
+      source: "https://ja.wikipedia.org/wiki/西沙諸島の戦い"
+  note: ベトナムと台湾が領有を主張している。地図は実効支配で塗る。
+
+- id: spratly
+  name: 南沙諸島（スプラトリー諸島）
+  select:
+    pieces: [128-Spratly_Is]
+  timeline:
+    - from: 1648
+      owner: null
+      note: 無人の島・岩礁・環礁
+      source: "https://ja.wikipedia.org/wiki/南沙諸島"
+    - from: 1933
+      owner: france
+      certainty: uncertain
+      label: 南沙諸島（仏領インドシナ）
+      cause: フランスが9つの島の領有を宣言する（7月）
+      source: "https://ja.wikipedia.org/wiki/南沙諸島"
+    - from: 1939
+      owner: japan
+      certainty: occupied
+      cause: 日本が「新南群島」として台湾（高雄州）に編入する（3月）
+      source: "https://ja.wikipedia.org/wiki/新南群島"
+    - from: 1946
+      owner: roc
+      certainty: uncertain
+      cause: 中華民国が太平島に兵を置く（12月）
+      source: "https://ja.wikipedia.org/wiki/南沙諸島"
+    - from: 1956
+      owner: null
+      certainty: uncertain
+      cause: 台湾（太平島）・南ベトナムなどが島々を押さえはじめ、のちフィリピン（1971–）・マレーシア（1983–）・中国（1988–）も加わる
+      source: "https://ja.wikipedia.org/wiki/南沙諸島"
+  note: 1956年以後は台湾・ベトナム・フィリピン・マレーシア・中国が島や岩礁を分かれて占拠し、ブルネイも一部を主張している。1つのピースでは描き分けられないので所属なしの斜線で示す。2016年の仲裁裁判所の判断は中国の「九段線」の主張を認めなかった。

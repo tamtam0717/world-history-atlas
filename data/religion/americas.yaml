@@ -2888,3 +2888,49 @@
       main: anglican
       note: 1833 年にイギリスが占領し、イギリス人の牧羊の植民地になった。1982 年のフォークランド（マルビナス）戦争。
       source: "https://ja.wikipedia.org/wiki/フォークランド紛争"
+
+# ======== グアム・北マリアナ諸島・アメリカ領サモア（オセアニアのうちアメリカ領の3つ。2026-11-23） ========
+- id: rel_guam
+  name: グアム
+  select:
+    pieces: [USA-Guam]
+  timeline:
+    - from: 1648
+      main: other
+      note: チャモロ人の伝統的な信仰（祖先の霊〈アニティ〉）。
+    - from: 1670
+      main: catholic
+      note: 1668年にイエズス会のサン・ビトレスが伝道所を開き、スペイン・チャモロ戦争（1670年代–1690年代）ののちチャモロ人はカトリックに改宗した。
+      source: "https://ja.wikipedia.org/wiki/グアム"
+- id: rel_nmi
+  name: 北マリアナ諸島
+  select:
+    pieces: [USA-Commonwealth_of_the_Northern_Mariana_Islands]
+  timeline:
+    - from: 1648
+      main: other
+      note: チャモロ人の伝統的な信仰。
+    - from: 1700
+      main: catholic
+      note: スペインは1690年代に北部の島々の住民をグアムに移した。19世紀にカロリン諸島の人々とチャモロ人が戻り、住民はカトリック。
+      source: "https://ja.wikipedia.org/wiki/北マリアナ諸島"
+    - from: 1930
+      main: shinbutsu
+      minor: catholic
+      note: 日本の委任統治領（南洋庁）で、サイパン・テニアンの製糖業に沖縄・本土からの移民が集まり、日本人が住民の大多数になった。
+      source: "https://ja.wikipedia.org/wiki/南洋庁"
+    - from: 1946
+      main: catholic
+      note: 戦後、日本人は引き揚げた。
+- id: rel_am_samoa
+  name: アメリカ領サモア
+  select:
+    pieces: [USA-American_Samoa]
+  timeline:
+    - from: 1648
+      main: other
+      note: サモアの伝統的な信仰。
+    - from: 1840
+      main: reformed
+      note: ロンドン伝道協会（会衆派）の伝道（1830年〜）で改宗が進み、会衆派の教会が多数になった。
+      source: "https://en.wikipedia.org/wiki/Religion_in_American_Samoa"

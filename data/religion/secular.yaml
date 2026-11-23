@@ -220,7 +220,7 @@
 - id: sec_central_asia
   name: 中央アジア（カザフ・ウズベク・トルクメン・キルギス・タジク）
   select:
-    iso: [KAZ, UZB, TKM, KGZ, TJK]
+    iso_all: [KAZ, UZB, TKM, KGZ, TJK]   # 範囲外（zone=world）の東部のピースも含める
   timeline:
     - from: 1925
       secular: 0.1

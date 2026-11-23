@@ -460,7 +460,7 @@
 - id: siachen
   name: "シアチェン氷河"
   select:
-    pieces: [IND-DATA_NOT_AVAILABLE]
+    pieces: [IND-DATA_NOT_AVAILABLE, 121-Siachen_Saltoro]
   timeline:
     - {from: 1648, owner: "ladakh", certainty: "uncertain", note: "人の住まない氷河地帯（ヌブラ谷・バルティスターンの北）"}
     - {from: 1834, owner: "sikh_empire", certainty: "uncertain", cause: "ドーグラー軍がラダックを征服", source: "https://en.wikipedia.org/wiki/Zorawar_Singh_Kahluria"}
@@ -545,7 +545,7 @@
 - id: uk_kumaon
   name: "クマーオーン（アルモーラー・ナイニータール）"
   select:
-    pieces: [IND-Almora, IND-Bageshwar, IND-Pithoragarh, IND-Champawat, IND-Nainital]
+    pieces: [IND-Almora, IND-Bageshwar, IND-Pithoragarh, IND-Champawat, IND-Nainital, 119-Kalapani]   # カーラーパーニーはネパールが領有を主張（スガウリ条約のカーリー川の源流の解釈）
   timeline:
     - {from: 1648, owner: "kumaon"}
     - {from: 1790, owner: "nepal", cause: "ゴルカ（ネパール）の軍がクマーオーン王国を征服し、アルモーラーを取る", source: "https://en.wikipedia.org/wiki/Kumaon_Kingdom"}
@@ -1314,3 +1314,41 @@
     - {from: 1783, owner: "portugal", label: "ダードラー・ナガル・ハヴェーリー（ポルトガル領）", cause: "ペーシュワーとの友好条約（1779年）で、ポルトガルがナガル・ハヴェーリーを得る（1783–85年に引き渡し）", source: "https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli"}
     - {from: 1954, owner: "india", certainty: "uncertain", label: "自由ダードラー・ナガル・ハヴェーリー", cause: "親インドの義勇兵がポルトガルの役人を追い出し（7–8月）、インドの後押しで自治の行政府を作る", source: "https://en.wikipedia.org/wiki/Free_Dadra_and_Nagar_Haveli"}
     - {from: 1961, owner: "india", cause: "インドに正式に併合される（8月）", source: "https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli"}
+
+# ---------------------------------------------------------------- 中印国境の係争地（CGAZ の係争地ピース）
+- id: aksai_chin
+  name: "アクサイチン"
+  select:
+    pieces: [112-Aksai_Chin]
+  timeline:
+    - {from: 1648, owner: "ladakh", certainty: "uncertain", note: "人のほとんど住まない高原。ラダックとチベット・ホータンの間の境ははっきりしなかった"}
+    - {from: 1834, owner: "sikh_empire", certainty: "uncertain", cause: "ドーグラー軍がラダックを征服", source: "https://en.wikipedia.org/wiki/Zorawar_Singh_Kahluria"}
+    - {from: 1846, owner: "britain", certainty: "uncertain", label: "ジャンムー・カシミール藩王国", cause: "アムリトサル条約でジャンムー・カシミール藩王国が成立（イギリスはジョンソン線〈1865〉などでアクサイチンを含めたが、清との境は決まらなかった）", source: "https://ja.wikipedia.org/wiki/アクサイチン"}
+    - {from: 1947, owner: "india", certainty: "uncertain", cause: "藩王国がインドに帰属。インドはアクサイチンを領土とした", source: "https://ja.wikipedia.org/wiki/アクサイチン"}
+    - {from: 1957, owner: "prc", certainty: "uncertain", cause: "中国が新疆とチベットを結ぶ道路（新蔵公路）をアクサイチンに通す（1956–57年。インドは1958年に知る）", source: "https://ja.wikipedia.org/wiki/アクサイチン"}
+    - {from: 1962, owner: "prc", cause: "中印国境紛争（10–11月）。中国が実効支配を固める", source: "https://ja.wikipedia.org/wiki/中印国境紛争"}
+  note: "インドはラダックの一部として領有を主張している。現在の地図は実効支配で塗る。"
+
+- id: demchok
+  name: "デムチョク地区（ラダック南東部の係争地）"
+  select:
+    pieces: [114-Demchok]
+  timeline:
+    - {from: 1648, owner: "ladakh", certainty: "uncertain", note: "ラダックとチベット（ガリ）の境。1684年のティンモスガン条約でラダック・チベットの境とされた地域"}
+    - {from: 1834, owner: "sikh_empire", certainty: "uncertain", cause: "ドーグラー軍がラダックを征服", source: "https://en.wikipedia.org/wiki/Zorawar_Singh_Kahluria"}
+    - {from: 1846, owner: "britain", certainty: "uncertain", label: "ジャンムー・カシミール藩王国", cause: "アムリトサル条約でジャンムー・カシミール藩王国が成立", source: "https://en.wikipedia.org/wiki/Demchok_sector"}
+    - {from: 1947, owner: "india", certainty: "uncertain", cause: "藩王国がインドに帰属", source: "https://en.wikipedia.org/wiki/Demchok_sector"}
+    - {from: 1962, owner: "prc", certainty: "uncertain", cause: "中印国境紛争で中国が押さえる（デムチョク村はインド側に残る）", source: "https://en.wikipedia.org/wiki/Demchok_sector"}
+  note: "インドが領有を主張する。ピースは係争地の範囲で、実際の支配線とは一致しない（近似）。"
+
+- id: middle_sector_disputed
+  name: "中印国境の中部の係争地（ネーラン・バラホーティなど）"
+  select:
+    pieces: [113-CH_IN]
+  timeline:
+    - {from: 1648, owner: "garhwal", certainty: "uncertain", note: "ガルワールとチベット（ツァパラン）の境の高地。住民（ボーティヤ）はチベットにも税を納めた"}
+    - {from: 1804, owner: "nepal", certainty: "uncertain", cause: "ゴルカ（ネパール）の軍がガルワール王国を征服", source: "https://en.wikipedia.org/wiki/Gorkha_conquest_of_Garhwal"}
+    - {from: 1815, owner: "britain", certainty: "uncertain", label: "テフリ・ガルワール藩王国", cause: "ネパール戦争の後、ガルワール西部が王家に返され、テフリ・ガルワール藩王国となる", source: "https://ja.wikipedia.org/wiki/ネパール戦争"}
+    - {from: 1947, owner: "india", certainty: "uncertain", cause: "藩王国がインドへの帰属文書に署名", source: "https://ja.wikipedia.org/wiki/藩王国"}
+    - {from: 1949, owner: "india", cause: "テフリ・ガルワールがウッタル・プラデーシュ州に統合される", source: "https://ja.wikipedia.org/wiki/藩王国"}
+  note: "インドが実効支配し、中国が領有を主張する。"
