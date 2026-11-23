@@ -569,7 +569,7 @@ const FILE_BOX = {
   "events/east_africa.yaml": [21, -12, 52, 23],
   "events/southern_africa.yaml": [8, -36, 60, 6],
   "events/australasia.yaml": [95, -55, 180, -5],
-  "events/pacific.yaml": [125, -30, 230, 25],
+  "events/pacific.yaml": [125, -30, 180, 25],
 };
 // 地域別でないファイル（ヨーロッパの各担当）の出来事で、関係国の領土が画面に映っているかを数える範囲。
 // 植民地（例：英領インド）が映っているだけで本国の出来事が「範囲内」にならないようにする
