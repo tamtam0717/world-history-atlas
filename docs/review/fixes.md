@@ -659,3 +659,30 @@ docs/review/am_north.md への対応。対象は data/regions/usa.yaml・canada.
 ### 確認
 - `npm run data`：警告なし。`--missing 1648,1700,1800,1890,1910,1940,1962,1964,1996,2012,2015,2025`（西・中部アフリカ 25 か国）：ゼロ。
 - snapshot：チャド・ナイジェリア 1910・1940・2015（--zoom 12,9,3.0）、チャド南部 1910（--zoom 18,10,3.5）、コンゴ 1962・1964・1996（--zoom 22,-2,2.6）、西アフリカ 1940・2012・2015（--zoom -2,14,2.8）を目視した。
+
+## アフリカ 分布・都市・潮流
+
+docs/review/af_distributions.md の指摘（A・B はすべて、C は妥当なもの）と、docs/review/af_west_central.md の都市の指摘（C）を反映した。
+
+### 直したもの
+- **[A] キリスト教伝道の spread**（movements/africa.yaml `christian_missions_africa`）：伝道の始まった年ごとに分けた。シエラレオネ・西ケープ・東ケープ 1792–、北西州 1820–、ガーナ東部州・中部州 1828–、ナイジェリアのオグン・クロスリヴァー 1846–、イメリナ 1818–（1835–61 の迫害期は弱く）、レソト 1833–、ウガンダ 1877–。
+- **[A] 西アフリカのジハード**：`iso: [CMR]` を CMR/North・Adamaoua・Far North に絞った。
+- **[A] ルアンダの宗教**（`rel_af_luanda`）：1900 年に minor を外し、1950 年から catholic/evangelical。
+- **[B] 宗教**：ルワンダ・ブルンジ 1930 を other/catholic（1950 から catholic）。南アフリカ（ズールー・ングニ）1940 を other/african_initiated、1970 から african_initiated/evangelical（docs/religion-format.md も）。ザンベジア・テテの 1648 の minor catholic を外し 1925 から。ジュバランド 1648 を other/sunni、1850 から sunni/other。ディレダワをハラルから分けて（新しい地域 `rel_af_dire_dawa_city`）ハラルゲと同じに。モンバサをラムから分け、1960 sunni/evangelical、1990 から evangelical/sunni。ガーナの長老派：東部州を新しい地域 `rel_af_ghana_eastern`（バーゼル伝道会、reformed）、ヴォルタ州を reformed に（中部州・アシャンティはメソジストの evangelical のまま）。アルジェリアの入植地（ミティジャ・西部・アンナバ）に新しい地域 `rel_algeria_settlers`（west.yaml、1870–1961 minor catholic。言語と同じ範囲・年）。
+- **[B] 言語**：ダーバンは 1880 zulu/tamil、1980 から zulu/english（宗教と同じ 1880）。ハラル 1900 gurage/amharic、1950 oromo/amharic。ナイロビ 1910 kikuyu/gujarati、1970 から kikuyu/luo。クウィル州をクワンゴから分けて mongo_lingala（新しい地域 `lang_af_kwilu`）。
+- **[B] 色**：language/_kinds.yaml のアフリカの 24 種の色を、系統の色相（±12°以内）を保って明るさ・彩度で調整し、地図で隣り合う組（ピースの境を共有する組、1650〜2025 年の 12 時点）をすべて CIELAB ΔE 20 以上にした（指摘の bemba/lunda_chokwe 7.0 → 20 以上、lunda_chokwe/mbundu、oromo/somali、mande/wolof、fula/atlantic_other のほか、central_sudanic/teda、afrikaans/english、gur/yoruba など）。ヨーロッパからの既存の組（アラビア語/ベルベル語 12.9、オランダ語/英語 19.7）はそのまま。宗教の african_initiated を #6a72b4 に（reformed と 21.2）。
+- **[B] 都市**：ンバンザ・コンゴの都を 1648–1677・1709–1914 に（note も 1678 放棄・1709 再占拠に）。エチオピアの都にデブレ・タボル（1855–71）・メケレ（1872–88）を追加。オヨ・イレ until 1836、ンガザルガム until 1809、ハムダライ until 1864。都の追加：ティンボ（futa_jallon 1727–1895）・ビサンドゥグ（wassoulou 1878–90）・シカソ（kenedougou 1876–97）・レアルイ（lozi 1878–90）。
+- **[B] 隊商交易**：ソマリアを Banadir・Lower Shebelle・Lower Juba・Middle Juba に絞り、ブガンダ（UGA/Central Region、1844–）を加えた。
+- **都市（af_west_central.md の C）**：ラゴスの都を 1860 年まで、モンロビアの都を 1822 年から。新オヨ（アゴ・オジャ、oyo 1837–92）、ンデレ（dar_al_kuti 1830–96、年は要確認）、ワラ（wadai 1648–1849、until 1850。アベシェの note の「ウァラ」を「ワラ」に）、ビアフラの都エヌグ（1967）・ウムアヒア（1968–69）を追加。
+- **C**：セネガルのイスラーム化を 1870 年に、ナミビア中部のルター派を 1910 年に、エリトリア低地・ガンベラ（1990 から dinka_nuer/luo）・オー・カタンガ（1648 から bemba/lunda_chokwe）、スタンリーヴィルの都を 1961 年まで、大都市（ポートハーコート・グケベラ〈ポート・エリザベス〉・ベイラ・ムブジ・マイ〈南カサイの都 1960–61〉・ポワント・ノワール・エル・オベイド〈マフディーの本拠 1883–84〉）を追加、独立運動の赤道ギニアを 1968 年頂点のグループに。docs の「宗教と同じ年で切り替えた」を「大きな変化はなるべく同じ年に」に直した。
+
+### 直さなかったもの
+- ンドンゴ（`rel_af_angola_mbundu`）1648 の minor catholic：確信度 低のため。
+- モーリシャスの無人期（1658–64・1710–21）：timeline で空白を表せないので、オランダ入植期の値のまま。
+- ダルエスサラームの minor catholic：地域がプワニ・タンガと一つなので見送り。ゴンジャ・アビジャンの言語：note で十分とされたため見送り。ルアンダ・ヌビアの同じ値の項目：note のための項目なので残した。
+- 潮流の抜け（マ・バ、メナランバ、ズールー戦争、ペンテコステ派など）：好みの範囲として見送り。ルバ（カバンゴ）・ブニョロ（マシンディ）の都：都の位置が時期で動くので見送り。
+
+### 確認
+- `npm run data`：警告なし。潮流の spread の新しい地域（CMR 3 州・SOM 4 州・UGA/Central Region など）は movementRegions にピースがある。
+- 隣り合う色の組の ΔE は scratchpad のスクリプト（ピースの境を共有する組を atlas.json から数える）で確認。
+- snapshot（.cache/snapshots/fix_af_dist/）：言語 1850・1950・2025、宗教 1950・2025（--zoom 18,2,1.4）、中部・東アフリカの言語 1900・2025（--zoom 30,-5,2.6）、南部アフリカの宗教 1700・1960（--zoom 26,-22,2.4）を書き出し。目視したのは言語 2025・中部東アフリカの言語 2025・宗教 2025・南部アフリカの宗教 1700（残りは書き出しのみ）。
