@@ -1,6 +1,240 @@
-# ヨーロッパ全体に関わる主な出来事（1648–2025）
+# ヨーロッパ全体に関わる主な出来事（1453–2025）
 # 地域ごとの出来事は events/<担当>.yaml に書く。ここにあるものは重複して書かない。
 
+# ---- 1453–1647（ルネサンス・宗教改革・大航海時代）。地域の出来事は各担当のファイルにある ----
+- year: 1462
+  title: フィレンツェのプラトン・アカデミー
+  text: メディチ家のコジモがフィチーノにプラトンの翻訳を任せ、郊外の別荘に学者が集まる。ビザンツ帝国から逃れた学者がもたらしたギリシア古典の研究が、ルネサンスの人文主義を深めた。
+  polities: [florence]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/プラトン・アカデミー"
+- year: 1492
+  date: "1492-10-12"
+  title: コロンブスのアメリカ到達
+  text: カスティリャのイサベル女王の援助を受けたジェノヴァ出身のコロンブスが、大西洋を西に進んでバハマ諸島のサンサルバドル島に着いた。コロンブスはそこをアジアの一部と信じていた。
+  polities: [castile]
+  importance: 1
+  at: [-74.5, 24.1]
+  source: "https://ja.wikipedia.org/wiki/クリストファー・コロンブス"
+- year: 1494
+  title: イタリア戦争がはじまる
+  text: フランス王シャルル8世がナポリ王国の継承権を主張してイタリアに侵攻。以後1559年まで、フランスとハプスブルク家（スペイン・神聖ローマ帝国）がイタリアの支配をめぐって争い、イタリア諸国はその戦場となった。
+  polities: [france, naples, milan, florence, venice, papal_states]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/イタリア戦争"
+- year: 1498
+  date: "1498-05-20"
+  title: ヴァスコ・ダ・ガマのインド到達
+  text: ポルトガルのヴァスコ・ダ・ガマが喜望峰を回ってインド西岸のカリカットに着き、インド航路を開いた。香辛料の取引がポルトガルの大きな利益となり、アジアとの交易の中心が地中海から大西洋岸に移るきっかけとなった。
+  polities: [portugal]
+  importance: 1
+  at: [75.78, 11.25]
+  source: "https://ja.wikipedia.org/wiki/ヴァスコ・ダ・ガマ"
+- year: 1500
+  title: カブラルのブラジル到達
+  text: インドへ向かうポルトガルのカブラルの艦隊が南大西洋で西に流され、ブラジルに着いた。トルデシリャス条約の境界線の東にあたるため、ポルトガル領とされた。
+  polities: [portugal]
+  importance: 3
+  at: [-39.1, -16.4]
+  source: "https://ja.wikipedia.org/wiki/ペドロ・アルヴァレス・カブラル"
+- year: 1504
+  title: ミケランジェロの『ダヴィデ像』
+  text: フィレンツェ共和国の政庁前に、ミケランジェロの『ダヴィデ像』が置かれた。レオナルド・ダ・ヴィンチ・ラファエロとともに、盛期ルネサンスを代表する作品。
+  polities: [florence]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ダビデ像_(ミケランジェロ)"
+- year: 1506
+  title: サン・ピエトロ大聖堂の改築がはじまる
+  text: 教皇ユリウス2世がブラマンテの設計でサン・ピエトロ大聖堂の改築を始めた。その資金集めのための贖宥状（免罪符）の販売が、のちにルターの批判を招いた。
+  polities: [papal_states]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/サン・ピエトロ大聖堂"
+- year: 1511
+  title: エラスムスの『愚神礼賛』
+  text: 「人文主義者の王」エラスムスが、聖職者や教会の堕落を風刺した『愚神礼賛』を出版した。活版印刷で各地に広まり、宗教改革の土台をつくった（「エラスムスが卵を産み、ルターがかえした」）。
+  polities: []
+  importance: 3
+  at: [4.35, 50.85]
+  source: "https://ja.wikipedia.org/wiki/愚神礼讃"
+- year: 1516
+  title: トマス・モアの『ユートピア』
+  text: イギリスの人文主義者トマス・モアが、理想の社会を描いて囲い込みなどの当時の社会を批判した『ユートピア』を出版した。
+  polities: [britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ユートピア_(トマス・モア)"
+- year: 1519
+  date: "1519-06-28"
+  title: カール5世の皇帝選出
+  text: スペイン王カルロス1世が、フランス王フランソワ1世と争って神聖ローマ皇帝に選ばれた（カール5世）。フッガー家の資金で選帝侯を買収した。スペイン・ネーデルラント・オーストリア・南イタリアを合わせたハプスブルク家の大帝国と、それに囲まれたフランスとの対立が続く。
+  polities: [spain, habsburg, hre, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)"
+- year: 1522
+  date: "1522-09-06"
+  title: マゼラン一行の世界周航
+  text: スペイン王の援助を受けたマゼラン（マガリャンイス）の艦隊が1519年に出航し、南アメリカの南端の海峡を抜けて太平洋を横断した。マゼランはフィリピンで殺されたが、残った1隻が1522年にスペインに戻り、地球が丸いことが実証された。
+  polities: [spain]
+  importance: 1
+  at: [-6.35, 36.78]
+  source: "https://ja.wikipedia.org/wiki/フェルディナンド・マゼラン"
+- year: 1527
+  date: "1527-05-06"
+  title: ローマの劫掠
+  text: カール5世の軍隊（ドイツ人傭兵を含む）が給料の不払いから暴徒化し、ローマを略奪した。教皇クレメンス7世は降伏し、ローマのルネサンスは大きな打撃を受けた。
+  polities: [papal_states, spain, hre, france]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ローマ略奪"
+- year: 1536
+  title: フランスとオスマン帝国の同盟
+  text: ハプスブルク家に対抗するフランソワ1世が、スレイマン1世と結んだ。オスマン帝国はフランス商人に通商上の特権（カピチュレーション。1569年に正式に認可）を与え、両国はカール5世をはさみうちにした。
+  polities: [france, ottoman]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/カピチュレーション"
+- year: 1540
+  title: イエズス会の認可
+  text: イグナティウス・ロヨラとフランシスコ・ザビエルらが1534年に結成したイエズス会を、教皇パウルス3世が修道会として認めた。教育と海外布教で対抗宗教改革の中心となり、ザビエルは1549年に日本に来た。
+  polities: [papal_states]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/イエズス会"
+- year: 1543
+  title: コペルニクスの地動説（『天球回転論』）
+  text: ポーランドの天文学者コペルニクスが、地球が太陽の周りを回るとする地動説を説いた『天球回転論』を出版した。科学革命の出発点とされる。同じ年にヴェサリウスの解剖学書『人体の構造』も出た。
+  polities: [poland]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ニコラウス・コペルニクス"
+- year: 1545
+  title: トリエント公会議（〜1563）
+  text: 教皇パウルス3世がトリエント（トレント）で公会議を開き、教皇の至上権とカトリックの教義を確認し、聖職者の規律の立て直しを決めた。禁書目録の作成や宗教裁判の強化とともに、対抗宗教改革（カトリック改革）の基礎となった。
+  polities: [papal_states, hre]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/トリエント公会議"
+- year: 1545
+  title: 価格革命（アメリカ大陸の銀の流入）
+  text: アンデスのポトシ銀山（1545）やメキシコの銀山の発見で、大量の銀がスペインを通じてヨーロッパに流れ込んだ。物価が数倍に上がり（価格革命）、固定した地代に頼る領主が打撃を受ける一方、商工業者が力をつけた。
+  polities: [spain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/価格革命"
+- year: 1555
+  date: "1555-09-25"
+  title: アウクスブルクの和議
+  text: 神聖ローマ帝国の帝国議会で、諸侯と帝国都市にカトリックかルター派かを選ぶ権利が認められた（「支配者の宗教が、その地の宗教」）。個人の信仰の自由やカルヴァン派は認められなかった。
+  polities: [hre, habsburg, saxony]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/アウクスブルクの和議"
+- year: 1557
+  title: スペイン王室の破産
+  text: フェリペ2世が借金の支払い停止を宣言した。イタリア戦争などの戦費で、アメリカの銀があってもスペイン王室の財政は苦しく、以後たびたび破産を繰り返した。貸し手の南ドイツのフッガー家なども大きな損害を受けた。
+  polities: [spain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/フェリペ2世_(スペイン王)"
+- year: 1559
+  date: "1559-04-03"
+  title: カトー＝カンブレジ条約
+  text: フランスとスペイン（およびイングランド）の講和でイタリア戦争が終わった。フランスはイタリアへの要求を捨て、ミラノ・ナポリ・シチリアなどがスペインの支配下に入った。フランスはカレーを確保した。
+  polities: [france, spain, britain, savoy]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/カトー・カンブレジ条約"
+- year: 1571
+  date: "1571-10-07"
+  title: レパントの海戦
+  text: スペイン・ヴェネツィア・教皇の神聖同盟の艦隊が、ギリシア西岸のレパント沖でオスマン帝国の艦隊を破った。キリスト教国の士気は高まったが、オスマン帝国はすぐに艦隊を立て直し、キプロスを確保した。
+  polities: [ottoman, spain, venice, papal_states]
+  importance: 1
+  at: [21.1, 38.25]
+  source: "https://ja.wikipedia.org/wiki/レパントの海戦"
+- year: 1576
+  title: ボーダンの『国家論』
+  text: ユグノー戦争のさなか、フランスのボーダンが、国家には法をこえる最高の権力（主権）があると説いた。王権神授説とともに絶対王政を支える理論となった。
+  polities: [france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ジャン・ボダン"
+- year: 1580
+  title: モンテーニュの『エセー（随想録）』
+  text: フランスのモンテーニュが、宗教戦争の時代に人間の弱さと寛容を説いた『エセー』を出版した。
+  polities: [france]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/エセー"
+- year: 1582
+  date: "1582-10-15"
+  title: グレゴリオ暦の制定
+  text: 教皇グレゴリウス13世が、ずれが大きくなったユリウス暦を改め、10日を飛ばして新しい暦を定めた。カトリック諸国はすぐに採用したが、プロテスタント諸国や正教会の国々の採用は遅れた。
+  polities: [papal_states]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/グレゴリオ暦"
+- year: 1588
+  date: "1588-08-08"
+  title: アルマダの海戦（スペインの無敵艦隊の敗北）
+  text: フェリペ2世がイングランド侵攻のために送った無敵艦隊（アルマダ）が、グラヴリーヌ沖の海戦と嵐で大きな損害を受けた。エリザベス1世のイングランドは海洋国家として台頭し、スペインの海上支配に陰りが見えた。
+  polities: [spain, britain]
+  importance: 1
+  at: [2.1, 51.0]
+  source: "https://ja.wikipedia.org/wiki/アルマダの海戦"
+- year: 1598
+  date: "1598-04-13"
+  title: ナントの王令
+  text: カトリックに改宗したアンリ4世が、ユグノー（カルヴァン派）にも条件つきで信仰の自由と公職につく権利を認め、ユグノー戦争を終わらせた。同じ年にスペインとヴェルヴァンの和約を結んだ。
+  polities: [france]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ナントの勅令"
+- year: 1600
+  date: "1600-12-31"
+  title: イギリス東インド会社の設立
+  text: エリザベス1世が、喜望峰からマゼラン海峡までの貿易の独占権を持つ東インド会社に特許状を与えた。2年後にオランダも連合東インド会社を作り、アジアの香辛料貿易をめぐって争った。
+  polities: [britain]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/イギリス東インド会社"
+- year: 1600
+  date: "1600-02-17"
+  title: ジョルダーノ・ブルーノの処刑
+  text: 宇宙は無限で、太陽のような星が無数にあると説いたドミニコ会出身の思想家ブルーノが、異端として宗教裁判にかけられ、ローマで火刑に処された。
+  polities: [papal_states]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ジョルダーノ・ブルーノ"
+- year: 1605
+  title: セルバンテスの『ドン・キホーテ』
+  text: スペインのセルバンテスが、騎士道物語を風刺した『ドン・キホーテ』（前編）を出版した。スペイン文学の「黄金世紀」を代表する作品。
+  polities: [spain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ドン・キホーテ"
+- year: 1609
+  title: ケプラーの『新天文学』
+  text: プラハのルドルフ2世の宮廷で、ケプラーがティコ・ブラーエの観測記録をもとに、惑星が楕円軌道を描くことを示した（ケプラーの法則）。
+  polities: [habsburg]
+  importance: 3
+  at: [14.42, 50.09]
+  source: "https://ja.wikipedia.org/wiki/ヨハネス・ケプラー"
+- year: 1620
+  title: ベーコンの『ノヴム・オルガヌム』
+  text: イギリスのフランシス・ベーコンが、観察と実験から一般的な法則を導く帰納法を説き、イギリス経験論の祖となった。
+  polities: [britain]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ノヴム・オルガヌム"
+- year: 1622
+  title: 布教聖省の設立
+  text: 教皇グレゴリウス15世が、世界のカトリックの布教を指導する布教聖省を作った。宗教改革で失った信徒を補うように、アジア・アメリカ・アフリカでの布教が進められた。
+  polities: [papal_states]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/福音宣教省"
+- year: 1625
+  title: グロティウスの『戦争と平和の法』
+  text: 三十年戦争のさなか、オランダのグロティウスが、戦争にも守るべき法があると説き、「国際法の父」と呼ばれた。自然法にもとづく国家間の秩序の考えは、ウェストファリア条約以後の国際関係の土台となった。
+  polities: [netherlands]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/戦争と平和の法"
+- year: 1635
+  date: "1635-05-19"
+  title: フランスがスペインに宣戦（三十年戦争への本格参戦）
+  text: カトリックの国でありながら、リシュリューのフランスはハプスブルク家に対抗してプロテスタント側に立ち、スペインに宣戦した。三十年戦争は宗教戦争から、フランスとハプスブルク家の国際的な覇権争いへと変わった。
+  polities: [france, spain, habsburg, sweden]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/三十年戦争"
+- year: 1637
+  title: デカルトの『方法序説』
+  text: オランダに住んでいたフランスのデカルトが、「われ思う、ゆえにわれあり」を出発点に、理性で確実な知識を求める方法を説いた。大陸合理論の祖となった。
+  polities: [france, netherlands]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/方法序説"
+# ---- 1648– ----
 - year: 1648
   date: "1648-10-24"
   title: ウェストファリア条約

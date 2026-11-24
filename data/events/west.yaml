@@ -1,6 +1,464 @@
-# 担当 A（西欧・北アフリカ）の出来事（1648–1914）
+# 担当 A（西欧・北アフリカ）の出来事（1453–）
 # ヨーロッパ全体に関わるもの（ウェストファリア条約、ピレネー条約、名誉革命など）は europe.yaml にある。
 
+# ---------------------------------------------------------------- 1453–1647
+- year: 1453
+  date: "1453-10-19"
+  title: "カスティヨンの戦いとボルドーの降伏（百年戦争の終わり）"
+  text: "7月のカスティヨンの戦いでイングランド軍が敗れ、10月にボルドーが降伏した。大陸のイングランド領はカレーだけになった。"
+  polities: [france, britain]
+  importance: 1
+  source: "ja.wikipedia: カスティヨンの戦い"
+  at: [-0.0, 44.85]
+- year: 1455
+  date: "1455-05-22"
+  title: "バラ戦争の始まり（セント・オールバンズの戦い）"
+  text: "ランカスター家とヨーク家が王位を争う内乱が1485年まで続き、多くの貴族が倒れた。"
+  polities: [britain]
+  importance: 2
+  source: "ja.wikipedia: 薔薇戦争"
+  at: [-0.34, 51.75]
+- year: 1462
+  title: "カタルーニャ内戦"
+  text: "カタルーニャの議会派がアラゴン王フアン2世に反乱を起こした（1472年まで）。王はフランスの援軍の代償にルシヨン・セルダーニュを抵当に入れた。"
+  polities: [aragon, france]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Catalan_Civil_War"
+- year: 1465
+  title: "公益同盟戦争"
+  text: "ブルゴーニュ公の子シャルルら大諸侯がルイ11世に反乱を起こした。王はコンフラン条約でソンム川の諸都市を返したが、のちに諸侯を一人ずつ屈服させた。"
+  polities: [france, burgundy, brittany]
+  importance: 3
+  source: "ja.wikipedia: 公益同盟"
+- year: 1469
+  date: "1469-10-19"
+  title: "フェルナンドとイサベルの結婚"
+  text: "アラゴン王子フェルナンドとカスティリャ王女イサベルがバリャドリードで結婚した。1479年に両国は同君連合となった（カトリック両王）。"
+  polities: [castile, aragon]
+  importance: 1
+  source: "ja.wikipedia: カトリック両王"
+  at: [-4.72, 41.65]
+- year: 1469
+  title: "オークニー・シェトランド諸島がスコットランドへ"
+  text: "デンマーク・ノルウェー王クリスチャン1世が、娘とジェームズ3世の結婚の持参金の抵当として両諸島を渡した（1468・69年）。"
+  polities: [scotland, denmark]
+  importance: 3
+  source: "ja.wikipedia: オークニー諸島"
+  at: [-3.0, 59.0]
+- year: 1471
+  date: "1471-08"
+  title: "ポルトガルがアシラ・タンジールを攻略"
+  text: "アフォンソ5世がアシラを攻め落とし、タンジールも手に入れた。モロッコの大西洋岸にポルトガルの要塞が並んだ。"
+  polities: [portugal, wattasid]
+  importance: 3
+  source: "ja.wikipedia: アフォンソ5世 (ポルトガル王)"
+  at: [-5.8, 35.77]
+- year: 1477
+  date: "1477-01-05"
+  title: "ナンシーの戦い（シャルル突進公の戦死）"
+  text: "ブルゴーニュ公シャルル突進公がロレーヌ公ルネ2世とスイス兵に敗れて戦死した。ルイ11世はブルゴーニュ公領・ピカルディを接収し、ブルゴーニュ公国は解体した。"
+  polities: [burgundy, lorraine, france]
+  importance: 1
+  source: "ja.wikipedia: ナンシーの戦い"
+  at: [6.18, 48.69]
+- year: 1478
+  title: "スペインの異端審問所の設置"
+  text: "カトリック両王が教皇の許可を得て異端審問所を設けた。改宗したユダヤ人（コンベルソ）が厳しく取り調べられた。"
+  polities: [castile]
+  importance: 2
+  source: "ja.wikipedia: スペイン異端審問"
+- year: 1479
+  title: "アルカソヴァス条約（カスティリャ継承戦争の終わり）"
+  text: "イサベル1世のカスティリャ王位をポルトガルが認め、カナリア諸島はカスティリャ、アフリカ西岸はポルトガルの勢力圏とされた。"
+  polities: [castile, portugal]
+  importance: 3
+  source: "ja.wikipedia: アルカソヴァス条約"
+- year: 1481
+  date: "1481-12"
+  title: "フランスがプロヴァンスを相続"
+  text: "アンジュー家のシャルル・デュ・メーヌの死で、プロヴァンス伯領がルイ11世のものとなった。アンジュー・メーヌも王領となった。"
+  polities: [france, provence]
+  importance: 3
+  source: "ja.wikipedia: プロヴァンス伯"
+  at: [5.45, 43.53]
+- year: 1485
+  date: "1485-08-22"
+  title: "ボズワースの戦い（テューダー朝の成立）"
+  text: "ヘンリ・テューダーがリチャード3世を破って即位し（ヘンリ7世）、ヨーク家のエリザベスと結婚してバラ戦争を終わらせた。"
+  polities: [britain]
+  importance: 1
+  source: "ja.wikipedia: ボズワースの戦い"
+  at: [-1.41, 52.59]
+- year: 1488
+  date: "1488-07-28"
+  title: "サン＝トーバン＝デュ＝コルミエの戦い"
+  text: "ブルターニュ公フランソワ2世がフランス軍に敗れた。1491年に女公アンヌがシャルル8世と結婚し、ブルターニュはフランス王と結びついた。"
+  polities: [brittany, france]
+  importance: 3
+  source: "ja.wikipedia: アンヌ・ド・ブルターニュ"
+  at: [-1.4, 48.29]
+- year: 1492
+  date: "1492-01-02"
+  title: "グラナダ陥落（レコンキスタの完了）"
+  text: "ナスル朝のボアブディルがグラナダをカトリック両王に明け渡し、イベリア半島のイスラーム国家が消えた。"
+  polities: [castile, aragon, granada]
+  importance: 1
+  source: "ja.wikipedia: グラナダ戦争"
+  at: [-3.6, 37.18]
+- year: 1492
+  date: "1492-03-31"
+  title: "ユダヤ教徒追放令"
+  text: "カトリック両王がスペインのユダヤ教徒に改宗か国外退去を命じた。多くのユダヤ人（セファルディム）がオスマン帝国・ポルトガル・北アフリカに移った。"
+  polities: [castile, aragon]
+  importance: 2
+  source: "ja.wikipedia: アルハンブラ勅令"
+- year: 1494
+  date: "1494-06-07"
+  title: "トルデシリャス条約"
+  text: "スペインとポルトガルが、ヴェルデ岬諸島の西370レグアの子午線で、新しく見つかる土地の勢力圏を分けた。"
+  polities: [castile, portugal]
+  importance: 1
+  source: "ja.wikipedia: トルデシリャス条約"
+  at: [-5.0, 41.5]
+- year: 1497
+  date: "1497-09"
+  title: "スペインがメリリャを占領"
+  text: "メディナ・シドニア公の遠征でメリリャを占領した。スペインの北アフリカ進出の始まり。"
+  polities: [castile]
+  importance: 3
+  source: "ja.wikipedia: メリリャ"
+  at: [-2.94, 35.29]
+- year: 1509
+  date: "1509-05"
+  title: "スペインがオランを占領"
+  text: "シスネロス枢機卿の遠征軍がオランを攻め落とした。オランは1708年までスペイン領だった。"
+  polities: [castile, zayyanid]
+  importance: 3
+  source: "ja.wikipedia: オラン"
+  at: [-0.64, 35.7]
+- year: 1512
+  date: "1512-07"
+  title: "ナバラ王国南部の征服"
+  text: "アラゴン王フェルナンド2世がピレネー南側のナバラを征服し、1515年にカスティリャに併合した。アルブレ家はピレネー北側の低ナバラとベアルンを保った。"
+  polities: [navarre, castile]
+  importance: 2
+  source: "ja.wikipedia: ナバラ王国"
+  at: [-1.64, 42.82]
+- year: 1513
+  date: "1513-09-09"
+  title: "フロドゥンの戦い"
+  text: "イングランドに侵入したスコットランド王ジェームズ4世が敗れ、多くの貴族とともに戦死した。"
+  polities: [scotland, britain]
+  importance: 3
+  source: "ja.wikipedia: フロドゥンの戦い"
+  at: [-2.17, 55.62]
+- year: 1516
+  title: "オルチ・レイスのアルジェ支配"
+  text: "トルコ人の海賊バルバロッサ兄弟の兄オルチがアルジェの支配者となった。1519年に弟ハイレッディンがオスマン帝国に臣従し、アルジェは北アフリカのオスマン勢力の拠点となった。"
+  polities: [algiers, ottoman]
+  importance: 2
+  source: "ja.wikipedia: オルチ・レイス"
+  at: [3.06, 36.75]
+- year: 1517
+  date: "1517-01"
+  title: "カイロの陥落（マムルーク朝の滅亡）"
+  text: "オスマン帝国のセリム1世がリダニーヤの戦いでマムルーク軍を破りカイロに入った。エジプトはオスマン帝国の州となった。"
+  polities: [ottoman, mamluk]
+  importance: 1
+  source: "ja.wikipedia: マムルーク朝"
+  at: [31.24, 30.04]
+- year: 1520
+  title: "コムネーロスの反乱"
+  text: "カルロス1世の外国人側近と増税に反発し、カスティリャの諸都市が反乱を起こした。1521年のビリャラールの戦いで鎮圧された。"
+  polities: [spain]
+  importance: 2
+  source: "ja.wikipedia: コムネロスの反乱"
+  at: [-4.73, 41.65]
+- year: 1525
+  title: "サアド朝がマラケシュに入る"
+  text: "スースで台頭したサアド家がマラケシュを本拠とした。1549年にはフェスのワッタース朝も倒してモロッコを統一する。"
+  polities: [morocco, wattasid]
+  importance: 3
+  source: "ja.wikipedia: サアド朝"
+  at: [-7.99, 31.63]
+- year: 1529
+  date: "1529-05"
+  title: "ハイレッディンがアルジェのペニョン要塞を攻略"
+  text: "アルジェの港の前の小島にあったスペインの要塞を落とし、島を陸とつないで港を築いた。"
+  polities: [algiers, spain]
+  importance: 3
+  source: "ja.wikipedia: バルバロス・ハイレッディン"
+  at: [3.07, 36.79]
+- year: 1532
+  date: "1532-08"
+  title: "ブルターニュのフランスへの統合"
+  text: "ヴァンヌの三部会の請願を受けて、フランソワ1世がブルターニュとフランス王国の統合勅令を出した。ブルターニュは独自の三部会と特権を保った。"
+  polities: [france, brittany]
+  importance: 3
+  source: "ja.wikipedia: ブルターニュ公国"
+  at: [-2.76, 47.66]
+- year: 1534
+  title: "首長法（イギリス国教会の成立）"
+  text: "ヘンリ8世が議会に首長法を定めさせ、国王をイングランドの教会の唯一の首長としてローマ教皇から離れた。続いて修道院を解散し、その土地を売った。"
+  polities: [britain]
+  importance: 1
+  source: "ja.wikipedia: 国王至上法"
+  at: [-0.13, 51.5]
+- year: 1534
+  date: "1534-10"
+  title: "檄文事件"
+  text: "カトリックのミサを攻撃するビラがパリなどにはられ、フランソワ1世はプロテスタントへの弾圧を強めた。カルヴァンはこの後フランスを離れた。"
+  polities: [france]
+  importance: 3
+  source: "ja.wikipedia: 檄文事件"
+  at: [2.35, 48.86]
+- year: 1535
+  date: "1535-07"
+  title: "カール5世のチュニス遠征"
+  text: "前年にハイレッディンが奪ったチュニスを、皇帝カール5世の艦隊が攻め落とし、ハフス朝のハサンをスペインの保護下で復位させた。"
+  polities: [spain, hafsid, ottoman]
+  importance: 2
+  source: "ja.wikipedia: チュニス征服 (1535年)"
+  at: [10.18, 36.8]
+- year: 1536
+  title: "フランスのサヴォイア占領"
+  text: "フランソワ1世がサヴォイア公国のサヴォワとピエモンテを占領した（1559年まで）。同じ年、ベルンがヴォーとシャブレ西部を奪った。"
+  polities: [france, savoy, switzerland]
+  importance: 3
+  source: "ja.wikipedia: イタリア戦争"
+  at: [5.92, 45.57]
+- year: 1539
+  date: "1539-08"
+  title: "ヴィレール＝コトレの勅令"
+  text: "フランソワ1世が、裁判や公文書をラテン語ではなくフランス語で書くよう定めた。"
+  polities: [france]
+  importance: 3
+  source: "ja.wikipedia: ヴィレール＝コトレの勅令"
+  at: [3.09, 49.25]
+- year: 1541
+  title: "ヘンリ8世がアイルランド王を称す"
+  text: "アイルランド議会がヘンリ8世をアイルランド王と認めた。諸侯に土地を王に差し出させ、改めて爵位とともに与える「降伏と再授封」政策が進められた。"
+  polities: [ireland, britain]
+  importance: 3
+  source: "ja.wikipedia: アイルランド王国"
+  at: [-6.26, 53.35]
+- year: 1541
+  date: "1541-10"
+  title: "カール5世のアルジェ遠征の失敗"
+  text: "皇帝カール5世の大艦隊が嵐に襲われ、アルジェの攻略に失敗した。"
+  polities: [spain, algiers]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Algiers_expedition_(1541)"
+  at: [3.06, 36.75]
+- year: 1551
+  date: "1551-08"
+  title: "オスマン帝国のトリポリ征服"
+  text: "シナン・パシャとトゥルグト・レイスがトリポリを聖ヨハネ騎士団から奪い、トリポリはオスマン帝国の州となった。"
+  polities: [ottoman, malta, tripoli]
+  importance: 3
+  source: "ja.wikipedia: トリポリ包囲戦 (1551年)"
+  at: [13.19, 32.89]
+- year: 1552
+  title: "アンリ2世がメス・トゥール・ヴェルダンを占領"
+  text: "ドイツのプロテスタント諸侯とシャンボール条約を結んだアンリ2世が三司教領を占領した。カール5世のメス包囲（1552–53）は失敗した。"
+  polities: [france, hre]
+  importance: 2
+  source: "ja.wikipedia: 三司教領"
+  at: [6.18, 49.12]
+- year: 1558
+  date: "1558-01"
+  title: "フランスがカレーを奪回"
+  text: "ギーズ公の軍がカレーを攻め落とし、イングランドは大陸の最後の領土を失った。"
+  polities: [france, britain]
+  importance: 2
+  source: "ja.wikipedia: カレー包囲戦 (1558年)"
+  at: [1.86, 50.95]
+- year: 1559
+  title: "統一法（エリザベスの宗教政策）"
+  text: "エリザベス1世が国王至上法と統一法を定め、イギリス国教会を確立した。"
+  polities: [britain]
+  importance: 2
+  source: "ja.wikipedia: 礼拝統一法"
+  at: [-0.13, 51.5]
+- year: 1560
+  title: "スコットランドの宗教改革"
+  text: "ノックスの指導でスコットランド議会がカトリックのミサを禁じ、長老派の教会が国教となった。"
+  polities: [scotland]
+  importance: 3
+  source: "ja.wikipedia: スコットランドの宗教改革"
+  at: [-3.19, 55.95]
+- year: 1568
+  title: "アルプハラスの反乱"
+  text: "改宗を強いられたグラナダのモリスコ（もとイスラーム教徒）が反乱を起こし、1571年に鎮圧された。モリスコはカスティリャ各地に強制移住させられた。"
+  polities: [spain]
+  importance: 3
+  source: "ja.wikipedia: アルプハラスの反乱"
+  at: [-3.3, 36.95]
+- year: 1574
+  date: "1574-09"
+  title: "オスマン帝国のチュニス征服"
+  text: "オスマン艦隊がラ・グレットとチュニスをスペインから奪い、ハフス朝は滅んだ。チュニスはオスマン帝国の州となった。"
+  polities: [ottoman, spain, hafsid, tunis]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Conquest_of_Tunis_(1574)"
+  at: [10.18, 36.8]
+- year: 1578
+  date: "1578-08-04"
+  title: "アルカセル・キビールの戦い（三王の戦い）"
+  text: "モロッコに遠征したポルトガル王セバスティアンが、サアド朝の軍に敗れて戦死した。ポルトガルの王家が絶え、2年後にスペインに併合されるきっかけとなった。"
+  polities: [portugal, morocco]
+  importance: 2
+  source: "ja.wikipedia: アルカセル・キビールの戦い"
+  at: [-5.9, 35.0]
+- year: 1580
+  title: "スペインのポルトガル併合"
+  text: "ポルトガル王家の断絶後、フェリペ2世がアルカンタラの戦いで王位を争うアントニオを破り、ポルトガル王を兼ねた（1640年まで同君連合）。"
+  polities: [spain, portugal]
+  importance: 1
+  source: "ja.wikipedia: 同君連合 (スペインとポルトガル)"
+  at: [-9.14, 38.71]
+- year: 1583
+  date: "1583-11"
+  title: "デズモンドの乱の終わり"
+  text: "マンスターのデズモンド伯の反乱が鎮圧された。没収した土地にイングランド人が入植した（マンスター植民、1586–）。"
+  polities: [ireland, britain]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Second_Desmond_Rebellion"
+  at: [-9.5, 52.3]
+- year: 1587
+  date: "1587-02-08"
+  title: "メアリ・ステュアートの処刑"
+  text: "イングランドに逃れていた元スコットランド女王メアリが、エリザベス1世の暗殺計画に関わったとして処刑された。"
+  polities: [britain, scotland]
+  importance: 2
+  source: "ja.wikipedia: メアリー (スコットランド女王)"
+  at: [-0.5, 52.5]
+- year: 1589
+  date: "1589-08"
+  title: "アンリ4世の即位（ブルボン朝の成立）"
+  text: "アンリ3世の暗殺でヴァロワ朝が絶え、ナバラ王アンリがフランス王アンリ4世となった。カトリック同盟と争い、1593年にカトリックに改宗、翌年パリに入った。"
+  polities: [france, navarre]
+  importance: 2
+  source: "ja.wikipedia: アンリ4世 (フランス王)"
+  at: [2.35, 48.86]
+- year: 1591
+  date: "1591-03"
+  title: "トンディビの戦い（サアド朝のソンガイ征服）"
+  text: "アフマド・マンスールが送った鉄砲隊がサハラを越え、ソンガイ帝国の軍を破った。トンブクトゥ・ガオはモロッコのパシャの支配下に入った。"
+  polities: [morocco]
+  importance: 2
+  source: "ja.wikipedia: トンディビの戦い"
+  at: [0.0, 16.9]
+- year: 1601
+  date: "1601-01-17"
+  title: "リヨン条約"
+  text: "フランスとサヴォイアの戦争の講和。サヴォイア公はサルッツォ侯国を得る代わりに、ブレス・ビュジェ・ヴァルロメ・ジェクスをフランスに譲った。"
+  polities: [france, savoy]
+  importance: 3
+  source: "ja.wikipedia: リヨン条約 (1601年)"
+  at: [4.83, 45.76]
+- year: 1603
+  date: "1603-03-24"
+  title: "同君連合の成立（ステュアート朝）"
+  text: "エリザベス1世が死去し、スコットランド王ジェームズ6世がイングランド王ジェームズ1世として即位した。"
+  polities: [britain, scotland]
+  importance: 1
+  source: "ja.wikipedia: 同君連合 (イングランドとスコットランド)"
+  at: [-0.13, 51.5]
+- year: 1607
+  date: "1607-09"
+  title: "伯爵たちの逃亡とアルスター植民"
+  text: "九年戦争に敗れたティロン伯・ティアコネル伯が大陸に逃れた。没収されたアルスターの土地にイングランド・スコットランドの新教徒が植民した（1609–）。"
+  polities: [ireland, britain]
+  importance: 2
+  source: "ja.wikipedia: アルスター植民"
+  at: [-7.0, 54.6]
+- year: 1609
+  title: "モリスコの追放"
+  text: "フェリペ3世が、キリスト教に改宗したもとイスラーム教徒（モリスコ）約30万人を国外に追放した（1614年まで）。バレンシアなどの農業が打撃を受けた。"
+  polities: [spain]
+  importance: 2
+  source: "ja.wikipedia: モリスコ追放"
+  at: [-0.38, 39.47]
+- year: 1610
+  date: "1610-05-14"
+  title: "アンリ4世の暗殺"
+  text: "カトリックの狂信者ラヴァイヤックにパリで刺殺された。9歳のルイ13世が即位し、母マリー・ド・メディシスが摂政となった。"
+  polities: [france]
+  importance: 2
+  source: "ja.wikipedia: アンリ4世 (フランス王)"
+  at: [2.35, 48.86]
+- year: 1620
+  date: "1620-10"
+  title: "ベアルン・ナバラのフランス統合"
+  text: "ルイ13世がベアルンに出兵してカトリックを復活させ、ナバラ王国・ベアルンをフランス王国に統合した。ユグノーの反乱（1621–29）のきっかけとなった。"
+  polities: [france, navarre]
+  importance: 3
+  source: "ja.wikipedia: ベアルン"
+  at: [-0.37, 43.3]
+- year: 1627
+  title: "サレの海賊共和国"
+  text: "モリスコの亡命者がサレ（ラバト）に自治の共和国を建て、大西洋で海賊行為を行った。サアド朝の分裂の中でモロッコの各地が自立した。"
+  polities: [morocco]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Republic_of_Salé"
+  at: [-6.83, 34.03]
+- year: 1628
+  date: "1628-10"
+  title: "ラ・ロシェルの陥落"
+  text: "リシュリューが1年以上の包囲の末にユグノーの拠点ラ・ロシェルを落とした。翌年のアレスの王令でユグノーは政治的・軍事的な特権を失った。"
+  polities: [france]
+  importance: 2
+  source: "ja.wikipedia: ラ・ロシェル包囲戦"
+  at: [-1.15, 46.16]
+- year: 1628
+  title: "権利の請願"
+  text: "イングランド議会がチャールズ1世に、議会の同意のない課税や不当な逮捕をしないよう求めた。王は翌年議会を解散し、11年間議会を開かなかった。"
+  polities: [britain]
+  importance: 2
+  source: "ja.wikipedia: 権利の請願"
+  at: [-0.13, 51.5]
+- year: 1639
+  title: "主教戦争"
+  text: "チャールズ1世がスコットランドに国教会式の祈祷書を押しつけたことに反発した国民盟約派が反乱を起こした。戦費のため王は議会を召集せざるをえなくなった（短期議会・長期議会、1640）。"
+  polities: [scotland, britain]
+  importance: 3
+  source: "ja.wikipedia: 主教戦争"
+  at: [-3.19, 55.95]
+- year: 1640
+  date: "1640-12-01"
+  title: "ポルトガルの再独立"
+  text: "リスボンで貴族が反乱を起こし、ブラガンサ公をジョアン4世として王に立てた。スペインは1668年のリスボン条約まで独立を認めなかった。"
+  polities: [portugal, spain]
+  importance: 2
+  source: "ja.wikipedia: ポルトガル王政復古戦争"
+  at: [-9.14, 38.71]
+- year: 1640
+  date: "1640-06"
+  title: "カタルーニャの反乱（収穫人戦争）"
+  text: "フランスとの戦争の兵の宿営に反発した農民がバルセロナで蜂起し、副王を殺した。カタルーニャはフランス王ルイ13世をバルセロナ伯に迎えた（1641）。"
+  polities: [spain, france]
+  importance: 2
+  source: "ja.wikipedia: 収穫人戦争"
+  at: [2.17, 41.39]
+- year: 1641
+  date: "1641-10"
+  title: "アイルランドの反乱"
+  text: "アルスターのカトリック教徒が反乱を起こし、多くの新教徒の入植者が殺された。翌年カトリック同盟（キルケニー連合）が成立し、島の大半を治めた。"
+  polities: [ireland, britain]
+  importance: 2
+  source: "ja.wikipedia: アイルランド同盟戦争"
+  at: [-7.0, 54.6]
+- year: 1642
+  date: "1642-08-22"
+  title: "イングランド内戦（ピューリタン革命）の始まり"
+  text: "チャールズ1世がノッティンガムで挙兵し、国王派と議会派の内戦が始まった。クロムウェルの鉄騎隊を中心とする議会派がネーズビーの戦い（1645）で勝った。"
+  polities: [britain]
+  importance: 1
+  source: "ja.wikipedia: 清教徒革命"
+  at: [-1.15, 52.95]
+
+# ---------------------------------------------------------------- 1648–
 - year: 1648
   title: フロンドの乱はじまる
   text: 宰相マザランの政治に対し、パリ高等法院と大貴族が反乱を起こす（1653年まで）。鎮圧後、王権はかえって強まった。
