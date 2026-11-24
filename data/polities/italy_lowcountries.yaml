@@ -7,7 +7,9 @@
   name: オランダ
   home_iso: [NLD, {iso: BEL, from: 1814, to: 1830}, {iso: DEU, from: 1806, to: 1810}]   # 本国。東インドなどは含めない
   names:
-    - {to: 1794, name: ネーデルラント連邦共和国（オランダ）, kind: 共和国（7州の連邦）}
+    - {from: 1572, to: 1578, name: ネーデルラントの反乱諸州（ホラント・ゼーラント）, short: 反乱諸州, kind: 反乱州（オラニエ公ウィレムが指導）}
+    - {from: 1579, to: 1580, name: ネーデルラントの反乱諸州（ユトレヒト同盟）, short: 反乱諸州, kind: 反乱州の同盟（オラニエ公ウィレムが指導）}
+    - {from: 1581, to: 1794, name: ネーデルラント連邦共和国（オランダ）, kind: 共和国（7州の連邦）}
     - {from: 1795, to: 1805, name: バタヴィア共和国, short: バタヴィア, kind: 共和国（フランスの衛星国）}
     - {from: 1806, to: 1809, name: ホラント王国, short: ホラント, kind: 王国（フランスの衛星国）}
     - {from: 1810, to: 1812, name: オランダ（フランス帝国に併合）, kind: フランス帝国の一部}
@@ -18,6 +20,9 @@
   color: "#ee8a4a"
   kind: 共和国
   rulers:
+    - {name: ウィレム1世（沈黙公）, title: オラニエ公、ホラント・ゼーラント・ユトレヒト州総督（反乱の指導者）, from: 1572, to: 1584, note: 1559年にフェリペ2世から総督に任じられたが、1567年にアルバ公の弾圧を逃れてドイツへ。1572年から反乱を率い、1584年デルフトで暗殺された。, source: 'https://ja.wikipedia.org/wiki/ウィレム1世_(オラニエ公)'}
+    - {name: マウリッツ, title: オラニエ公（1618年から）、ホラント・ゼーラントなどの州総督, from: 1585, to: 1625, note: ウィレム1世の子。軍制改革（オランダ式の軍事革命）で南部・東部の都市を次々に攻略した。政治はホラント州法律顧問オルデンバルネフェルト（1586–1618）が担ったが、休戦期の宗教対立で対立し、1619年に彼を処刑させた。, source: 'https://ja.wikipedia.org/wiki/マウリッツ_(オラニエ公)'}
+    - {name: フレデリック・ヘンドリック, title: オラニエ公、ホラント・ゼーラントなどの州総督, from: 1625, to: 1647, note: マウリッツの異母弟。「都市の攻略者」と呼ばれ、's-ヘルトーヘンボス（1629）・マーストリヒト（1632）・ブレダ（1637）を攻略した。, source: 'https://ja.wikipedia.org/wiki/フレデリック・ヘンドリック_(オラニエ公)'}
     - name: ウィレム2世
       title: 総督（ホラントほか諸州）
       from: 1647
@@ -131,6 +136,10 @@
     - {name: ベアトリクス, title: オランダ女王, from: 1980, to: 2013, source: "https://ja.wikipedia.org/wiki/ベアトリクス_(オランダ女王)"}
     - {name: ウィレム＝アレクサンダー, title: オランダ国王, from: 2013, to: 2025, note: 123年ぶりの男性の国王。, source: "https://ja.wikipedia.org/wiki/ウィレム＝アレクサンダー_(オランダ王)"}
   periods:
+    - {from: 1572, to: 1584, text: スペイン王フェリペ2世の重税とプロテスタント弾圧（アルバ公の「血の評議会」）に対し、オラニエ公ウィレムが反乱を率いる（オランダ独立戦争・八十年戦争）。1579年に北部7州がユトレヒト同盟を結び、1581年に国王の統治権を否認した（独立宣言）。}
+    - {from: 1585, to: 1608, text: アントウェルペンの陥落（1585）で南部はスペインに戻り、多くの商人・職人が北へ逃れた。マウリッツの軍制改革で東部・南部の都市を奪い返し、1602年に連合東インド会社を設立。アムステルダムが世界の商業の中心となる。}
+    - {from: 1609, to: 1621, text: 十二年休戦。事実上の独立を得たが、国内では予定説をめぐる宗教対立（アルミニウス派と反対派）が激化し、ドルトレヒト会議（1618–19）の後、オルデンバルネフェルトが処刑された。}
+    - {from: 1621, to: 1647, text: 休戦が切れて戦争が再開（三十年戦争と結びつく）。フレデリック・ヘンドリックが南部の要塞を攻略した。レンブラントらが活躍する黄金時代で、西インド会社（1621）がブラジルなどに進出した。}
     - from: 1648
       to: 1672
       text: ウェストファリア条約で独立が正式に承認される。アムステルダムを中心に世界の商業・金融の中心として繁栄する一方、イギリスと英蘭戦争を戦う。総督を置かず、ヤン・デ・ウィットが実権を握った（第1次無総督時代）。
@@ -309,6 +318,15 @@
   color: "#b9a3d6"
   kind: 司教領
   rulers:
+    - {name: ヨハン・フォン・ハインスベルク, title: リエージュ司教, from: 1419, to: 1455, source: 'https://en.wikipedia.org/wiki/John_of_Heinsberg_(bishop_of_Liège)'}
+    - {name: ルイ・ド・ブルボン, title: リエージュ司教, from: 1456, to: 1482, note: ブルゴーニュ公フィリップの甥。ブルゴーニュの後押しで司教となり、市民の反乱（リエージュ戦争）を招いた。1482年、ギヨーム・ド・ラ・マルクに殺された。, source: 'https://en.wikipedia.org/wiki/Louis_de_Bourbon_(bishop_of_Liège)'}
+    - {name: ジャン・ド・オルヌ, title: リエージュ司教, from: 1484, to: 1505, source: 'https://en.wikipedia.org/wiki/John_of_Horne'}
+    - {name: エラール・ド・ラ・マルク, title: リエージュ司教, from: 1505, to: 1538, note: 1520年から枢機卿。ハプスブルク家と結び、司教領を中立に保った。, source: 'https://en.wikipedia.org/wiki/Érard_de_La_Marck'}
+    - {name: コルネリウス・ファン・ベルヘン, title: リエージュ司教, from: 1538, to: 1544, source: 'https://en.wikipedia.org/wiki/Cornelius_of_Berghes'}
+    - {name: ゲオルク・フォン・エスターライヒ, title: リエージュ司教, from: 1544, to: 1557, note: 皇帝マクシミリアン1世の庶子。, source: 'https://en.wikipedia.org/wiki/George_of_Austria_(bishop)'}
+    - {name: ロベール・ド・ベルグ, title: リエージュ司教, from: 1557, to: 1564, source: 'https://en.wikipedia.org/wiki/Robert_of_Berghes'}
+    - {name: ヘラルト・ファン・フルースベーク, title: リエージュ司教, from: 1564, to: 1580, source: 'https://en.wikipedia.org/wiki/Gerard_van_Groesbeeck'}
+    - {name: エルンスト・フォン・バイエルン, title: リエージュ司教（ケルン大司教を兼ねる）, from: 1581, to: 1612, note: バイエルン公家の出身。以後1763年までほぼバイエルン家の一族が司教を兼ねた。, source: 'https://en.wikipedia.org/wiki/Ernest_of_Bavaria'}
     - {name: フェルディナント・フォン・バイエルン, title: リエージュ司教（ケルン大司教を兼ねる）, from: 1612, to: 1650}
     - {name: マクシミリアン・ハインリヒ・フォン・バイエルン, title: リエージュ司教（ケルン大司教を兼ねる）, from: 1650, to: 1688, source: "https://en.wikipedia.org/wiki/Maximilian_Henry_of_Bavaria"}
     - {name: ジャン＝ルイ・デルデラン, title: リエージュ司教, from: 1688, to: 1694, source: "https://en.wikipedia.org/wiki/Jean-Louis_d'Elderen"}
@@ -320,6 +338,8 @@
     - {name: セザール＝コンスタンタン・ド・オンスブルック, title: リエージュ司教, from: 1784, to: 1792, source: "https://en.wikipedia.org/wiki/César-Constantin-François_de_Hoensbroeck"}
     - {name: フランソワ＝アントワーヌ・ド・メアン, title: リエージュ司教, from: 1792, to: 1795, source: "https://en.wikipedia.org/wiki/François-Antoine-Marie_de_Méan"}
   periods:
+    - {from: 1453, to: 1477, text: ブルゴーニュ公の勢力に囲まれ、司教ルイ・ド・ブルボンと自治を求める市民が争う（リエージュ戦争）。1468年、シャルル突進公が反乱を鎮圧して町を焼き払った。}
+    - {from: 1478, to: 1647, text: ブルゴーニュ公国の解体で自立を回復し、16世紀には中立を守って石炭・製鉄で栄えた。1581年からバイエルン家の司教がケルン大司教と兼ねた。}
     - from: 1648
       to: 1788
       text: 神聖ローマ帝国（ヴェストファーレン・クライス）の聖界諸侯領。マース（ムーズ）川に沿って南北に細長く伸び、スペイン領（のちオーストリア領）ネーデルラントを東西に分けていた。石炭・製鉄などの工業が早くから発達した。
@@ -357,6 +377,9 @@
       note: 1848年の連邦憲法で置かれた7人の内閣が集団で元首の役を担う。連邦大統領は「同輩中の首席」で、毎年交代するため個人名は省略。
       source: "https://ja.wikipedia.org/wiki/連邦参事会_(スイス)"
   periods:
+    - {from: 1453, to: 1498, text: 8邦（ウーリ・シュヴィーツ・ウンターヴァルデン・ルツェルン・チューリヒ・ベルン・ツーク・グラールス）の盟約者団。1460年にトゥールガウを奪い、ブルゴーニュ戦争（1474–77）でシャルル突進公を破って、スイス傭兵がヨーロッパ最強とされた。1481年にフリブール・ゾロトゥルンが加わる。}
+    - {from: 1499, to: 1515, text: シュヴァーベン戦争（1499）で皇帝マクシミリアン1世を破り、帝国から事実上独立した。バーゼル・シャフハウゼン（1501）・アッペンツェル（1513）が加わって13邦となる。イタリア戦争に介入してティチーノを得たが、1515年のマリニャーノの戦いでフランスに敗れ、以後は大国の争いから距離を置いた。}
+    - {from: 1516, to: 1647, text: ツヴィングリ（チューリヒ）・カルヴァン（ジュネーヴ）の宗教改革で、プロテスタントの都市邦とカトリックの山岳邦に分かれる（カッペル戦争、1529・31）。1536年、ベルンがヴォーを征服。三十年戦争では中立を守り、1648年のウェストファリア条約で帝国からの独立が正式に認められた。}
     - from: 1648
       to: 1797
       text: ウェストファリア条約で神聖ローマ帝国からの独立が正式に認められた。13の邦（州）がゆるやかに結びつく国家連合で、共同支配地（ティチーノ・トゥールガウなど）と、従属地・同盟邦（グラウビュンデン、ヴァレー、ジュネーヴ、ヌーシャテルなど）をもつ。カトリック邦とプロテスタント邦の対立が続いた（フィルメルゲン戦争）。
@@ -401,6 +424,8 @@
   color: "#c9a28f"
   kind: 同盟（スイスの同盟邦）
   periods:
+    - {from: 1453, to: 1511, text: 灰色同盟・神の家同盟・十裁判区同盟が、たがいに結びつきを強める（1471年ごろ三同盟の連合、1524年に憲章）。1497–98年にスイス盟約者団の同盟邦となり、シュヴァーベン戦争（1499）で皇帝軍と戦った。}
+    - {from: 1512, to: 1647, text: 1512年にヴァルテッリーナ・キアヴェンナ・ボルミオを征服。アルプスの峠をめぐってスペインとフランスが争い、1618–39年には「グラウビュンデン紛争」で内戦と外国軍の占領が続いた（イェルク・イェナチュ）。}
     - from: 1648
       to: 1797
       text: 灰色同盟・神の家同盟・十裁判区同盟の三同盟からなる共和国。スイス盟約者団の同盟邦で、南のヴァルテッリーナ・キアヴェンナ・ボルミオを従属地として支配した。
@@ -418,6 +443,7 @@
   color: "#deae96"
   kind: 共和国（スイスの同盟邦）
   periods:
+    - {from: 1453, to: 1647, text: シオン司教と上ヴァレーの7つの「ゼンデン（郡）」の共和国。1475年にサヴォイア領の下ヴァレーを征服して従属地とした（1536年にモンテーまで拡大）。シオン司教マテウス・シナー（枢機卿）は、イタリア戦争で教皇側にスイス傭兵を率いた。}
     - from: 1648
       to: 1797
       text: 上ヴァレーの7つの十分の一区（ゼンデン）からなる共和国で、下ヴァレーを従属地として支配した。スイス盟約者団の同盟邦。
@@ -431,10 +457,14 @@
 
 - id: geneva
   name: ジュネーヴ共和国
+  names:
+    - {to: 1535, name: ジュネーヴ司教領, short: ジュネーヴ, kind: 司教領（帝国都市。サヴォイア公の強い影響下）}
   short: ジュネーヴ
   color: "#e7bfae"
   kind: 共和国（スイスの同盟邦）
   periods:
+    - {from: 1453, to: 1535, text: ジュネーヴ司教が領主の帝国都市で、サヴォイア家が司教の位を一族で占めて支配を強めていた。1526年にフリブール・ベルンと市民同盟を結んで抵抗した。}
+    - {from: 1536, to: 1647, text: 宗教改革を受け入れて司教を追い、共和国となる。1541年からカルヴァンが神権政治的な改革を行い、「プロテスタントのローマ」と呼ばれた。1602年、サヴォイア公の夜襲を撃退した（エスカラード）。}
     - from: 1648
       to: 1797
       text: カルヴァンの宗教改革の中心となったプロテスタントの都市共和国。スイスの同盟邦（ベルン・チューリヒと同盟）で、サヴォイア公に囲まれていた。
@@ -462,6 +492,7 @@
     - {name: フリードリヒ・ヴィルヘルム3世, title: ヌーシャテル公（プロイセン王）, from: 1814, to: 1840, source: "https://ja.wikipedia.org/wiki/フリードリヒ・ヴィルヘルム3世_(プロイセン王)"}
     - {name: フリードリヒ・ヴィルヘルム4世, title: ヌーシャテル公（プロイセン王）, from: 1840, to: 1848, note: 1848年の革命で共和国が宣言され、実際の支配を失った。1857年のパリ条約で権利を正式に放棄した。, source: "https://ja.wikipedia.org/wiki/フリードリヒ・ヴィルヘルム4世_(プロイセン王)"}
   periods:
+    - {from: 1453, to: 1647, text: ヌーシャテル伯領。1504年からフランスのオルレアン＝ロングヴィル家が伯となる。イタリア戦争中の1512–29年には盟約者団が占領した。1530年に宗教改革（ファレル）を受け入れた。}
     - from: 1648
       to: 1706
       text: フランスの貴族ロングヴィル家が治める公国。スイス盟約者団の同盟邦。
@@ -543,6 +574,18 @@
   color: "#d8a6b6"
   kind: 王国
   rulers:
+    - {name: ルドヴィーコ（ルイ）, title: サヴォイア公, from: 1440, to: 1465, source: 'https://en.wikipedia.org/wiki/Louis,_Duke_of_Savoy'}
+    - {name: アメデーオ9世, title: サヴォイア公, from: 1465, to: 1472, note: 病弱で、妃ヨランド（フランス王ルイ11世の妹）が実権を握った。, source: 'https://en.wikipedia.org/wiki/Amadeus_IX,_Duke_of_Savoy'}
+    - {name: フィリベルト1世, title: サヴォイア公, from: 1472, to: 1482, note: 1478年まで母ヨランドが摂政。, source: 'https://en.wikipedia.org/wiki/Philibert_I,_Duke_of_Savoy'}
+    - {name: カルロ1世, title: サヴォイア公, from: 1482, to: 1490, source: 'https://en.wikipedia.org/wiki/Charles_I,_Duke_of_Savoy'}
+    - {name: カルロ2世, title: サヴォイア公, from: 1490, to: 1496, note: 幼少の公。母ビアンカが摂政。, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Savoy'}
+    - {name: フィリッポ2世, title: サヴォイア公, from: 1496, to: 1497, source: 'https://en.wikipedia.org/wiki/Philip_II,_Duke_of_Savoy'}
+    - {name: フィリベルト2世, title: サヴォイア公, from: 1497, to: 1504, note: 妃はマルグリット・ドートリッシュ（のちのネーデルラント総督）。, source: 'https://en.wikipedia.org/wiki/Philibert_II,_Duke_of_Savoy'}
+    - {name: カルロ3世, title: サヴォイア公, from: 1504, to: 1553, note: 1536年にフランス軍に領土の大部分を占領され、ヴァレー・ベルンにも領土を失った。, source: 'https://en.wikipedia.org/wiki/Charles_III,_Duke_of_Savoy'}
+    - {name: エマヌエーレ・フィリベルト, title: サヴォイア公, from: 1553, to: 1580, note: スペイン軍を率いてサン・カンタンの戦い（1557）でフランスに勝ち、カトー＝カンブレジ条約で領土を回復した。1563年に都をシャンベリからトリノに移した。, source: 'https://ja.wikipedia.org/wiki/エマヌエーレ・フィリベルト_(サヴォイア公)'}
+    - {name: カルロ・エマヌエーレ1世, title: サヴォイア公, from: 1580, to: 1630, note: 1588年にサルッツォを占領し、1601年のリヨン条約で確保した。1602年のジュネーヴ奇襲（エスカラード）は失敗。, source: 'https://ja.wikipedia.org/wiki/カルロ・エマヌエーレ1世_(サヴォイア公)'}
+    - {name: ヴィットーリオ・アメデーオ1世, title: サヴォイア公, from: 1630, to: 1637, note: 妃はフランス王ルイ13世の妹クリスティーヌ。, source: 'https://en.wikipedia.org/wiki/Victor_Amadeus_I,_Duke_of_Savoy'}
+    - {name: フランチェスコ・ジャチント, title: サヴォイア公, from: 1637, to: 1638, note: 幼少で死去。母クリスティーヌ（マダマ・レアーレ）が摂政。, source: 'https://en.wikipedia.org/wiki/Francis_Hyacinth,_Duke_of_Savoy'}
     - name: カルロ・エマヌエーレ2世
       title: サヴォイア公
       from: 1638
@@ -596,6 +639,9 @@
       note: 首相カヴールとともにイタリア統一を進めた。1861年からは italy（イタリア王国）の欄を参照。
       source: "https://ja.wikipedia.org/wiki/ヴィットーリオ・エマヌエーレ2世"
   periods:
+    - {from: 1453, to: 1535, text: アルプスの両側（サヴォイア・ピエモンテ・ニース・ヴォー）にまたがる公国。都はシャンベリ。幼少の公や摂政が続き、フランスとスイスの圧力を受けた。1475年に下ヴァレー、ブルゴーニュ戦争でヴォーの一部を失う。}
+    - {from: 1536, to: 1559, text: イタリア戦争でフランス軍がサヴォイア・ピエモンテの大部分を、ベルン・ヴァレーがヴォー・シャブレーを奪い、公国はほぼ失われた。エマヌエーレ・フィリベルトがスペイン軍の将としてフランスに勝ち、カトー＝カンブレジ条約（1559）で領土を回復した。}
+    - {from: 1560, to: 1647, text: 都をトリノに移し（1563）、イタリアの国として中央集権化を進めた。カルロ・エマヌエーレ1世はサルッツォを得た（1601）が、マントヴァ継承戦争（1628–31）では領土の一部をフランスに占領された（ピネローロはフランス領に）。1639–42年には摂政クリスティーヌと公の叔父たちの内戦が起きた。}
     - from: 1648
       to: 1712
       text: アルプスをはさんでサヴォイア・ニースとピエモンテを治める公国。フランスとスペイン（のちオーストリア）の間で同盟相手を変えながら、少しずつ領土を広げた。
@@ -761,6 +807,10 @@
   color: "#9fc7c0"
   kind: 共和国
   rulers:
+    - {name: ピエトロ・ディ・カンポフレゴーゾ, title: ドージェ, from: 1450, to: 1458, note: 1458年にジェノヴァをフランス王シャルル7世に委ねた。, source: 'https://en.wikipedia.org/wiki/Doge_of_Genoa'}
+    - {name: フレゴーゾ家・アドルノ家のドージェと外国の総督, title: ドージェ（フランス・ミラノの支配期は総督）, from: 1458, to: 1528, note: 終身のドージェの時代。両家の争いが続き、フランス王（1458–61、1499–1512、1515–22、1527–28）とミラノ公（1464–78、1487–99）が総督を置いて支配した。, source: 'https://en.wikipedia.org/wiki/List_of_doges_of_the_Republic_of_Genoa'}
+    - {name: アンドレア・ドーリア, title: 提督（共和国の事実上の指導者。ドージェにはならなかった）, from: 1528, to: 1560, note: 1528年に皇帝カール5世と結んで共和国を再建し、ドージェを2年任期とする貴族の寡頭政を作った。1547年のフィエスキの陰謀を退けた。, source: 'https://ja.wikipedia.org/wiki/アンドレア・ドーリア'}
+    - {name: 2年任期のドージェ（1528年から）, title: ドージェ, from: 1528, to: 1647, note: 1528年の改革で、貴族の中から2年ごとにドージェを選んだ（この期間の個々の名前は省略）。, source: 'https://en.wikipedia.org/wiki/List_of_doges_of_the_Republic_of_Genoa'}
     - {name: ジャコモ・デ・フランキ・トーゾ, title: ドージェ, from: 1648, to: 1650}
     - {name: アゴスティーノ・チェントゥリオーネ, title: ドージェ, from: 1650, to: 1652}
     - {name: ジローラモ・デ・フランキ・トーゾ, title: ドージェ, from: 1652, to: 1654}
@@ -839,6 +889,8 @@
     - {name: ジャコモ・マリア・ブリニョーレ, title: ドージェ, from: 1795, to: 1797, source: "https://en.wikipedia.org/wiki/Giacomo_Maria_Brignole"}
     - {name: ジローラモ・セッラ, title: 臨時政府の首班（共和国の復活）, from: 1814, to: 1814, note: 1814年4月、イギリス軍のベンティンク卿のもとで共和国の復活が宣言された。1815年1月にサルデーニャ王国に引き渡された。, source: "https://en.wikipedia.org/wiki/Girolamo_Serra"}
   periods:
+    - {from: 1453, to: 1527, text: 東地中海の植民地（カッファ1475年、キオス島1566年）をオスマン帝国に奪われていく。国内はフレゴーゾ家とアドルノ家の争いが続き、たびたびフランス王・ミラノ公の支配を受けた。サン・ジョルジョ銀行が財政とコルシカ島を握った。}
+    - {from: 1528, to: 1647, text: アンドレア・ドーリアが皇帝側について共和国を再建し、スペインの同盟国となる。ジェノヴァの銀行家はスペイン王に融資して「ジェノヴァ人の世紀」と呼ばれる繁栄を迎えた（スペインの国庫破産で打撃も受けた）。}
     - from: 1648
       to: 1745
       text: 有力な商人貴族の家門が2年任期のドージェ（元首）を選ぶ寡頭制の共和国。スペイン王室への貸付で栄えた金融の力は、17世紀後半から衰えていく。1684年にはフランス艦隊の砲撃を受けた。
@@ -862,6 +914,40 @@
   color: "#dca878"
   kind: 共和国
   rulers:
+    - {name: フランチェスコ・フォスカリ, title: ドージェ, from: 1423, to: 1457, source: 'https://en.wikipedia.org/wiki/Francesco_Foscari'}
+    - {name: パスクワーレ・マリピエロ, title: ドージェ, from: 1457, to: 1462, source: 'https://en.wikipedia.org/wiki/Pasquale_Malipiero'}
+    - {name: クリストフォロ・モーロ, title: ドージェ, from: 1462, to: 1471, source: 'https://en.wikipedia.org/wiki/Cristoforo_Moro'}
+    - {name: ニコロ・トロン, title: ドージェ, from: 1471, to: 1473, source: 'https://en.wikipedia.org/wiki/Nicolò_Tron'}
+    - {name: ニコロ・マルチェッロ, title: ドージェ, from: 1473, to: 1474, source: 'https://en.wikipedia.org/wiki/Nicolò_Marcello'}
+    - {name: ピエトロ・モチェニーゴ, title: ドージェ, from: 1474, to: 1476, source: 'https://en.wikipedia.org/wiki/Pietro_Mocenigo'}
+    - {name: アンドレア・ヴェンドラミン, title: ドージェ, from: 1476, to: 1478, source: 'https://en.wikipedia.org/wiki/Andrea_Vendramin'}
+    - {name: ジョヴァンニ・モチェニーゴ, title: ドージェ, from: 1478, to: 1485, source: 'https://en.wikipedia.org/wiki/Giovanni_Mocenigo'}
+    - {name: マルコ・バルバリーゴ, title: ドージェ, from: 1485, to: 1486, source: 'https://en.wikipedia.org/wiki/Marco_Barbarigo'}
+    - {name: アゴスティーノ・バルバリーゴ, title: ドージェ, from: 1486, to: 1501, source: 'https://en.wikipedia.org/wiki/Agostino_Barbarigo'}
+    - {name: レオナルド・ロレダン, title: ドージェ, from: 1501, to: 1521, note: カンブレー同盟戦争の危機を乗り切った。, source: 'https://en.wikipedia.org/wiki/Leonardo_Loredan'}
+    - {name: アントニオ・グリマーニ, title: ドージェ, from: 1521, to: 1523, source: 'https://en.wikipedia.org/wiki/Antonio_Grimani'}
+    - {name: アンドレア・グリッティ, title: ドージェ, from: 1523, to: 1538, source: 'https://en.wikipedia.org/wiki/Andrea_Gritti'}
+    - {name: ピエトロ・ランド, title: ドージェ, from: 1539, to: 1545, source: 'https://en.wikipedia.org/wiki/Pietro_Lando'}
+    - {name: フランチェスコ・ドナ, title: ドージェ, from: 1545, to: 1553, source: 'https://en.wikipedia.org/wiki/Francesco_Donato'}
+    - {name: マルカントニオ・トレヴィザン, title: ドージェ, from: 1553, to: 1554, source: 'https://en.wikipedia.org/wiki/Marcantonio_Trevisan'}
+    - {name: フランチェスコ・ヴェニエル, title: ドージェ, from: 1554, to: 1556, source: 'https://en.wikipedia.org/wiki/Francesco_Venier'}
+    - {name: ロレンツォ・プリウリ, title: ドージェ, from: 1556, to: 1559, source: 'https://en.wikipedia.org/wiki/Lorenzo_Priuli'}
+    - {name: ジローラモ・プリウリ, title: ドージェ, from: 1559, to: 1567, source: 'https://en.wikipedia.org/wiki/Girolamo_Priuli'}
+    - {name: ピエトロ・ロレダン, title: ドージェ, from: 1567, to: 1570, source: 'https://en.wikipedia.org/wiki/Pietro_Loredan'}
+    - {name: アルヴィーゼ1世・モチェニーゴ, title: ドージェ, from: 1570, to: 1577, note: キプロス戦争とレパントの海戦の時期。, source: 'https://en.wikipedia.org/wiki/Alvise_I_Mocenigo'}
+    - {name: セバスティアーノ・ヴェニエル, title: ドージェ, from: 1577, to: 1578, note: レパントの海戦のヴェネツィア艦隊司令官。, source: 'https://en.wikipedia.org/wiki/Sebastiano_Venier'}
+    - {name: ニコロ・ダ・ポンテ, title: ドージェ, from: 1578, to: 1585, source: 'https://en.wikipedia.org/wiki/Nicolò_da_Ponte'}
+    - {name: パスクワーレ・チコーニャ, title: ドージェ, from: 1585, to: 1595, source: 'https://en.wikipedia.org/wiki/Pasquale_Cicogna'}
+    - {name: マリーノ・グリマーニ, title: ドージェ, from: 1595, to: 1605, source: 'https://en.wikipedia.org/wiki/Marino_Grimani'}
+    - {name: レオナルド・ドナ, title: ドージェ, from: 1606, to: 1612, note: 教皇パウルス5世の聖務停止令（1606–07）に屈しなかった。, source: 'https://en.wikipedia.org/wiki/Leonardo_Donato'}
+    - {name: マルカントニオ・メンモ, title: ドージェ, from: 1612, to: 1615, source: 'https://en.wikipedia.org/wiki/Marcantonio_Memmo'}
+    - {name: ジョヴァンニ・ベンボ, title: ドージェ, from: 1615, to: 1618, source: 'https://en.wikipedia.org/wiki/Giovanni_Bembo'}
+    - {name: ニコロ・ドナ, title: ドージェ, from: 1618, to: 1618, source: 'https://en.wikipedia.org/wiki/Nicolò_Donà'}
+    - {name: アントニオ・プリウリ, title: ドージェ, from: 1618, to: 1623, source: 'https://en.wikipedia.org/wiki/Antonio_Priuli'}
+    - {name: フランチェスコ・コンタリーニ, title: ドージェ, from: 1623, to: 1624, source: 'https://en.wikipedia.org/wiki/Francesco_Contarini'}
+    - {name: ジョヴァンニ1世・コルネル, title: ドージェ, from: 1625, to: 1629, source: 'https://en.wikipedia.org/wiki/Giovanni_I_Cornaro'}
+    - {name: ニコロ・コンタリーニ, title: ドージェ, from: 1630, to: 1631, source: 'https://en.wikipedia.org/wiki/Nicolò_Contarini'}
+    - {name: フランチェスコ・エリッツォ, title: ドージェ, from: 1631, to: 1646, source: 'https://en.wikipedia.org/wiki/Francesco_Erizzo'}
     - {name: フランチェスコ・モリン, title: ドージェ, from: 1646, to: 1655, source: "https://en.wikipedia.org/wiki/Francesco_Molin"}
     - {name: カルロ・コンタリーニ, title: ドージェ, from: 1655, to: 1656, source: "https://en.wikipedia.org/wiki/Carlo_Contarini"}
     - {name: フランチェスコ・コルネル, title: ドージェ, from: 1656, to: 1656}
@@ -885,6 +971,10 @@
     - {name: パオロ・レニエル, title: ドージェ, from: 1779, to: 1789, source: "https://en.wikipedia.org/wiki/Paolo_Renier"}
     - {name: ルドヴィーコ・マニン, title: ドージェ（最後のドージェ）, from: 1789, to: 1797, source: "https://en.wikipedia.org/wiki/Ludovico_Manin"}
   periods:
+    - {from: 1453, to: 1508, text: コンスタンティノープル陥落の後、オスマン帝国と戦い（1463–79年）エーゲ海の拠点を失ったが、キプロス島を得た（1489）。本土ではロンバルディア東部・フリウリ・ポレージネ・ロマーニャまで領土を広げ、イタリア最強の国の一つとなった。}
+    - {from: 1509, to: 1516, text: 教皇・皇帝・フランス・スペインのカンブレー同盟に攻められ、アニャデッロの戦い（1509）で大敗して本土領の大半を失ったが、外交で同盟を分裂させ、1516年までにほぼ回復した。}
+    - {from: 1517, to: 1570, text: 大国の争いから距離を置いて中立を守った。ポルトガルのインド航路で香辛料の独占は崩れたが、レヴァント貿易と毛織物・出版業で栄えた（ティツィアーノ、パラーディオ）。}
+    - {from: 1570, to: 1647, text: キプロス戦争（1570–73）でキプロス島を失った（レパントの海戦の勝利にもかかわらず）。教皇の聖務停止令（1606）、ウスコク戦争（1615–17）を経て、1645年からはオスマン帝国とクレタ島をめぐって戦う（カンディア戦争）。}
     - from: 1648
       to: 1683
       text: 北イタリアの本土領（テッラフェルマ：パドヴァ・ヴェローナ・ベルガモ・ブレシアなど）と、ダルマチア・イオニア諸島などの海外領をもつ貴族共和国。オスマン帝国とクレタ島をめぐって戦い（1645–1669）、島を失った。
@@ -903,13 +993,28 @@
 
 - id: mantua
   name: マントヴァ公国
+  names:
+    - {to: 1529, name: マントヴァ侯国, kind: 侯国}
   short: マントヴァ
   color: "#b6d4b1"
   kind: 公国
   rulers:
+    - {name: ルドヴィーコ3世・ゴンザーガ, title: マントヴァ侯, from: 1444, to: 1478, note: 画家マンテーニャを宮廷に招いた。, source: 'https://en.wikipedia.org/wiki/Ludovico_III_Gonzaga,_Marquis_of_Mantua'}
+    - {name: フェデリーコ1世・ゴンザーガ, title: マントヴァ侯, from: 1478, to: 1484, source: 'https://en.wikipedia.org/wiki/Federico_I_Gonzaga,_Marquis_of_Mantua'}
+    - {name: フランチェスコ2世・ゴンザーガ, title: マントヴァ侯, from: 1484, to: 1519, note: フォルノーヴォの戦い（1495）でイタリア同盟軍を率いた。妃はイザベラ・デステ。, source: 'https://en.wikipedia.org/wiki/Francesco_II_Gonzaga,_Marquess_of_Mantua'}
+    - {name: フェデリーコ2世・ゴンザーガ, title: マントヴァ侯→マントヴァ公（1530）, from: 1519, to: 1540, note: カール5世から公の位（1530）とモンフェッラート（1536）を得た。, source: 'https://en.wikipedia.org/wiki/Federico_II_Gonzaga,_Duke_of_Mantua'}
+    - {name: フランチェスコ3世・ゴンザーガ, title: マントヴァ公, from: 1540, to: 1550, source: 'https://en.wikipedia.org/wiki/Francesco_III_Gonzaga,_Duke_of_Mantua'}
+    - {name: グリエルモ・ゴンザーガ, title: マントヴァ公, from: 1550, to: 1587, note: 1574年にモンフェッラートを公国に格上げ。, source: 'https://en.wikipedia.org/wiki/Guglielmo_Gonzaga,_Duke_of_Mantua'}
+    - {name: ヴィンチェンツォ1世・ゴンザーガ, title: マントヴァ公, from: 1587, to: 1612, note: 宮廷にモンテヴェルディ・ルーベンスを招いた。, source: 'https://en.wikipedia.org/wiki/Vincenzo_I_Gonzaga'}
+    - {name: フランチェスコ4世・ゴンザーガ, title: マントヴァ公, from: 1612, to: 1612, source: 'https://en.wikipedia.org/wiki/Francesco_IV_Gonzaga,_Duke_of_Mantua'}
+    - {name: フェルディナンド・ゴンザーガ, title: マントヴァ公, from: 1612, to: 1626, source: 'https://en.wikipedia.org/wiki/Ferdinando_Gonzaga,_Duke_of_Mantua'}
+    - {name: ヴィンチェンツォ2世・ゴンザーガ, title: マントヴァ公, from: 1626, to: 1627, note: 男子がなく本家が断絶し、マントヴァ継承戦争が起きた。, source: 'https://en.wikipedia.org/wiki/Vincenzo_II_Gonzaga,_Duke_of_Mantua'}
+    - {name: カルロ1世・ゴンザーガ＝ヌヴェール, title: マントヴァ公, from: 1627, to: 1637, note: フランスのヌヴェール公。フランスの支援で相続し、ケラスコ条約（1631）で認められた。, source: 'https://en.wikipedia.org/wiki/Charles_I_Gonzaga,_Duke_of_Mantua'}
     - {name: カルロ2世・ゴンザーガ＝ヌヴェール, title: マントヴァ公・モンフェッラート公, from: 1637, to: 1665, note: 1647年まで母マリアが摂政。, source: "https://en.wikipedia.org/wiki/Charles_II_Gonzaga,_Duke_of_Mantua_and_Montferrat"}
     - {name: フェルディナンド・カルロ・ゴンザーガ, title: マントヴァ公・モンフェッラート公, from: 1665, to: 1708, note: スペイン継承戦争でフランス側についたため、皇帝に領地を没収された。, source: "https://en.wikipedia.org/wiki/Ferdinando_Carlo_Gonzaga"}
   periods:
+    - {from: 1453, to: 1626, text: ゴンザーガ家の宮廷はルネサンスの中心の一つ（マンテーニャ、イザベラ・デステ、ジュリオ・ロマーノのテ離宮）。1530年に公国となり、1536年にモンフェッラートを加えた。}
+    - {from: 1627, to: 1647, text: 本家の断絶でマントヴァ継承戦争（1628–31）が起き、フランスが推すヌヴェール家と、スペイン・皇帝・サヴォイアが争った。1630年に皇帝軍がマントヴァを略奪し、ペストも重なって町は衰えた。}
     - from: 1648
       to: 1708
       text: ゴンザーガ家（ヌヴェール系）のマントヴァ公国。ピエモンテの東のモンフェッラート公国も同じ君主が治めた。1708年、皇帝に没収され、マントヴァはオーストリア領、モンフェッラートはサヴォイア領となった。
@@ -918,10 +1023,19 @@
 
 - id: modena
   name: モデナ公国
+  names:
+    - {to: 1597, name: フェラーラ公国（エステ家。モデナ・レッジョを含む）, short: フェラーラ, kind: 公国}
   short: モデナ
   color: "#aac4e2"
   kind: 公国
   rulers:
+    - {name: ボルソ・デステ, title: モデナ・レッジョ公（1452）、フェラーラ公（1471）, from: 1450, to: 1471, source: 'https://en.wikipedia.org/wiki/Borso_d''Este,_Duke_of_Ferrara'}
+    - {name: エルコレ1世・デステ, title: フェラーラ公, from: 1471, to: 1505, note: フェラーラ戦争（1482–84）でヴェネツィアにポレージネを失った。町を拡張した（エルコレの増築）。, source: 'https://en.wikipedia.org/wiki/Ercole_I_d''Este,_Duke_of_Ferrara'}
+    - {name: アルフォンソ1世・デステ, title: フェラーラ公, from: 1505, to: 1534, note: 妃はルクレツィア・ボルジア。大砲を備えた軍でラヴェンナの戦い（1512）に勝ったが、教皇にモデナ・レッジョを奪われた（のち回復）。, source: 'https://ja.wikipedia.org/wiki/アルフォンソ1世・デステ'}
+    - {name: エルコレ2世・デステ, title: フェラーラ公, from: 1534, to: 1559, note: 妃ルネ・ド・フランスはカルヴァンを保護した。, source: 'https://en.wikipedia.org/wiki/Ercole_II_d''Este,_Duke_of_Ferrara'}
+    - {name: アルフォンソ2世・デステ, title: フェラーラ公, from: 1559, to: 1597, note: 詩人タッソを保護した。嫡子がなく、死後フェラーラは教皇領となった。, source: 'https://en.wikipedia.org/wiki/Alfonso_II_d''Este,_Duke_of_Ferrara'}
+    - {name: チェーザレ・デステ, title: モデナ・レッジョ公, from: 1597, to: 1628, note: アルフォンソ2世のいとこ。フェラーラを教皇に明け渡し、都をモデナに移した。, source: 'https://en.wikipedia.org/wiki/Cesare_d''Este,_Duke_of_Modena'}
+    - {name: アルフォンソ3世・デステ, title: モデナ・レッジョ公, from: 1628, to: 1629, note: 1年で退位して修道士になった。, source: 'https://en.wikipedia.org/wiki/Alfonso_III_d''Este,_Duke_of_Modena'}
     - {name: フランチェスコ1世・デステ, title: モデナ公, from: 1629, to: 1658, source: "https://en.wikipedia.org/wiki/Francesco_I_d'Este,_Duke_of_Modena"}
     - {name: アルフォンソ4世・デステ, title: モデナ公, from: 1658, to: 1662, source: "https://en.wikipedia.org/wiki/Alfonso_IV_d'Este,_Duke_of_Modena"}
     - {name: フランチェスコ2世・デステ, title: モデナ公, from: 1662, to: 1694, source: "https://en.wikipedia.org/wiki/Francesco_II_d'Este,_Duke_of_Modena"}
@@ -931,6 +1045,8 @@
     - {name: フランチェスコ4世, title: モデナ公（ハプスブルク＝エステ家）, from: 1814, to: 1846, note: 1829年に母マリア・ベアトリーチェからマッサ・カッラーラ公国を相続した。, source: "https://en.wikipedia.org/wiki/Francis_IV,_Duke_of_Modena"}
     - {name: フランチェスコ5世, title: モデナ公, from: 1846, to: 1859, note: 1859年6月に亡命し、1860年の住民投票でモデナはサルデーニャ王国に併合された。, source: "https://en.wikipedia.org/wiki/Francis_V,_Duke_of_Modena"}
   periods:
+    - {from: 1453, to: 1597, text: エステ家がフェラーラ（教皇の封土）とモデナ・レッジョ（皇帝の封土）を治める。フェラーラの宮廷はルネサンス文化の中心で、アリオスト・タッソが活躍した。}
+    - {from: 1598, to: 1647, text: 嫡流が絶え、教皇クレメンス8世がフェラーラを接収した。庶流のチェーザレがモデナに移り、モデナ公国となる。}
     - from: 1648
       to: 1795
       text: エステ家のモデナ・レッジョ公国。1598年にフェラーラを教皇に奪われてからモデナを都とした。
@@ -952,6 +1068,11 @@
   color: "#c7b6e3"
   kind: 公国
   rulers:
+    - {name: ピエール・ルイージ・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1545, to: 1547, note: 教皇パウルス3世の息子。1547年、ピアチェンツァで皇帝派の貴族に暗殺された。, source: 'https://ja.wikipedia.org/wiki/ピエール・ルイージ・ファルネーゼ'}
+    - {name: オッターヴィオ・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1547, to: 1586, note: 妃はカール5世の庶子マルゲリータ（のちのネーデルラント総督）。ピアチェンツァは1556年に返還された。, source: 'https://ja.wikipedia.org/wiki/オッターヴィオ・ファルネーゼ'}
+    - {name: アレッサンドロ・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1586, to: 1592, note: スペイン領ネーデルラント総督（1578–92）として南部を再征服した。, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
+    - {name: ラヌッチョ1世・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1592, to: 1622, source: 'https://en.wikipedia.org/wiki/Ranuccio_I_Farnese,_Duke_of_Parma'}
+    - {name: オドアルド1世・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1622, to: 1646, note: カストロ戦争（1641–44）で教皇ウルバヌス8世と争った。, source: 'https://en.wikipedia.org/wiki/Odoardo_Farnese,_Duke_of_Parma'}
     - {name: ラヌッチョ2世・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1646, to: 1694, source: "https://en.wikipedia.org/wiki/Ranuccio_II_Farnese,_Duke_of_Parma"}
     - {name: フランチェスコ・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1694, to: 1727, source: "https://en.wikipedia.org/wiki/Francesco_Farnese,_Duke_of_Parma"}
     - {name: アントニオ・ファルネーゼ, title: パルマ・ピアチェンツァ公, from: 1727, to: 1731, source: "https://en.wikipedia.org/wiki/Antonio_Farnese,_Duke_of_Parma"}
@@ -963,6 +1084,7 @@
     - {name: カルロ3世, title: パルマ公, from: 1849, to: 1854, note: 1854年に暗殺された。, source: "https://en.wikipedia.org/wiki/Charles_III,_Duke_of_Parma"}
     - {name: ロベルト1世, title: パルマ公, from: 1854, to: 1859, note: 幼少のため母ルイーズ・マリー（フランス王家の出身）が摂政。1859年に亡命した。, source: "https://en.wikipedia.org/wiki/Robert_I,_Duke_of_Parma"}
   periods:
+    - {from: 1545, to: 1647, text: 教皇パウルス3世が、教皇領からパルマ・ピアチェンツァを分けて息子に与えた公国。ファルネーゼ家はスペインと結び、アレッサンドロはネーデルラントで活躍した。ローマ近くのカストロ公領をめぐって教皇と戦った（カストロ戦争）。}
     - from: 1648
       to: 1730
       text: ファルネーゼ家のパルマ・ピアチェンツァ公国。
@@ -997,6 +1119,7 @@
     - {name: マリア・ルイーザ, title: ルッカ女公（スペイン・ブルボン家。もとエトルリア王妃）, from: 1815, to: 1824, note: 1817年までオーストリアの暫定統治で、実際の統治は1817年から。, source: "https://en.wikipedia.org/wiki/Maria_Luisa_of_Spain,_Duchess_of_Lucca"}
     - {name: カルロ・ロドヴィーコ, title: ルッカ公, from: 1824, to: 1847, note: 1847年にルッカをトスカーナに譲り、パルマ公カルロ2世となった。, source: "https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Parma"}
   periods:
+    - {from: 1453, to: 1647, text: ピサ・フィレンツェに囲まれながら独立を保った貴族の共和国。絹織物業で栄え、16世紀に建てた城壁が今も残る。}
     - from: 1648
       to: 1798
       text: 絹織物業で栄えた小さな貴族共和国。トスカーナ大公国に囲まれながら独立を保った。
@@ -1019,6 +1142,10 @@
   color: "#c5dc9c"
   kind: 大公国
   rulers:
+    - {name: コジモ1世・デ・メディチ, title: トスカーナ大公, from: 1569, to: 1574, note: 1537年からフィレンツェ公。シエナを併合し、1569年に教皇から大公の称号を得た。, source: 'https://ja.wikipedia.org/wiki/コジモ1世・デ・メディチ'}
+    - {name: フランチェスコ1世・デ・メディチ, title: トスカーナ大公, from: 1574, to: 1587, source: 'https://ja.wikipedia.org/wiki/フランチェスコ1世・デ・メディチ'}
+    - {name: フェルディナンド1世・デ・メディチ, title: トスカーナ大公, from: 1587, to: 1609, note: リヴォルノを自由港とし（1593）、ユダヤ人など外国の商人を招いた。, source: 'https://ja.wikipedia.org/wiki/フェルディナンド1世・デ・メディチ'}
+    - {name: コジモ2世・デ・メディチ, title: トスカーナ大公, from: 1609, to: 1621, note: ガリレオ・ガリレイを宮廷数学者に迎えた。, source: 'https://ja.wikipedia.org/wiki/コジモ2世・デ・メディチ'}
     - {name: フェルディナンド2世・デ・メディチ, title: トスカーナ大公, from: 1621, to: 1670, source: "https://ja.wikipedia.org/wiki/フェルディナンド2世・デ・メディチ"}
     - {name: コジモ3世・デ・メディチ, title: トスカーナ大公, from: 1670, to: 1723, source: "https://ja.wikipedia.org/wiki/コジモ3世・デ・メディチ"}
     - {name: ジャン・ガストーネ・デ・メディチ, title: トスカーナ大公（メディチ家最後の大公）, from: 1723, to: 1737, source: "https://ja.wikipedia.org/wiki/ジャン・ガストーネ・デ・メディチ"}
@@ -1029,6 +1156,7 @@
     - {name: レオポルド2世, title: トスカーナ大公, from: 1824, to: 1859, note: 1849年2月〜7月は革命で国を離れた。1859年4月に再び亡命し、7月に退位した。, source: "https://en.wikipedia.org/wiki/Leopold_II,_Grand_Duke_of_Tuscany"}
     - {name: フェルディナンド4世, title: トスカーナ大公（名目のみ）, from: 1859, to: 1860, note: 父の退位で継いだが、一度も国に戻れなかった。, source: "https://en.wikipedia.org/wiki/Ferdinand_IV,_Grand_Duke_of_Tuscany"}
   periods:
+    - {from: 1569, to: 1647, text: メディチ家の大公国。リヴォルノを自由港として発展させ、ガリレオを保護したが、17世紀には毛織物業が衰えた。}
     - from: 1648
       to: 1736
       text: メディチ家のトスカーナ大公国。首都フィレンツェ。自由港リヴォルノが地中海貿易で栄えたが、国全体としては停滞した。
@@ -1058,6 +1186,34 @@
   color: "#f2e5a0"
   kind: 教皇国家
   rulers:
+    - {name: ニコラウス5世, title: 教皇, from: 1447, to: 1455, note: ヴァチカン図書館を創設した人文主義の教皇。, source: 'https://ja.wikipedia.org/wiki/ニコラウス5世_(ローマ教皇)'}
+    - {name: カリストゥス3世, title: 教皇, from: 1455, to: 1458, note: スペインのボルジア家の出身。, source: 'https://ja.wikipedia.org/wiki/カリストゥス3世_(ローマ教皇)'}
+    - {name: ピウス2世, title: 教皇, from: 1458, to: 1464, note: 人文主義者エネア・シルヴィオ・ピッコローミニ。対オスマン十字軍を呼びかけた。, source: 'https://ja.wikipedia.org/wiki/ピウス2世_(ローマ教皇)'}
+    - {name: パウルス2世, title: 教皇, from: 1464, to: 1471, source: 'https://ja.wikipedia.org/wiki/パウルス2世_(ローマ教皇)'}
+    - {name: シクストゥス4世, title: 教皇, from: 1471, to: 1484, note: システィーナ礼拝堂を建てた。甥たちを重用し、パッツィ家の陰謀（1478）に関わった。, source: 'https://ja.wikipedia.org/wiki/シクストゥス4世_(ローマ教皇)'}
+    - {name: インノケンティウス8世, title: 教皇, from: 1484, to: 1492, source: 'https://ja.wikipedia.org/wiki/インノケンティウス8世_(ローマ教皇)'}
+    - {name: アレクサンデル6世, title: 教皇, from: 1492, to: 1503, note: ロドリーゴ・ボルジア。息子チェーザレにロマーニャを征服させた。トルデシリャス条約（1494）の仲介でも知られる。, source: 'https://ja.wikipedia.org/wiki/アレクサンデル6世_(ローマ教皇)'}
+    - {name: ピウス3世, title: 教皇, from: 1503, to: 1503, source: 'https://ja.wikipedia.org/wiki/ピウス3世_(ローマ教皇)'}
+    - {name: ユリウス2世, title: 教皇, from: 1503, to: 1513, note: 「戦う教皇」。ボローニャ・ロマーニャを取り戻し、カンブレー同盟・神聖同盟を組んだ。サン・ピエトロ大聖堂の再建に着手し、ミケランジェロ・ラファエロを用いた。, source: 'https://ja.wikipedia.org/wiki/ユリウス2世_(ローマ教皇)'}
+    - {name: レオ10世, title: 教皇, from: 1513, to: 1521, note: メディチ家（ロレンツォの子）。贖宥状（免罪符）の販売がルターの宗教改革を招いた。, source: 'https://ja.wikipedia.org/wiki/レオ10世_(ローマ教皇)'}
+    - {name: ハドリアヌス6世, title: 教皇, from: 1522, to: 1523, note: ネーデルラント出身でカール5世の師。, source: 'https://ja.wikipedia.org/wiki/ハドリアヌス6世_(ローマ教皇)'}
+    - {name: クレメンス7世, title: 教皇, from: 1523, to: 1534, note: メディチ家。コニャック同盟を組んで皇帝と争い、ローマ劫掠（1527）を招いた。, source: 'https://ja.wikipedia.org/wiki/クレメンス7世_(ローマ教皇)'}
+    - {name: パウルス3世, title: 教皇, from: 1534, to: 1549, note: ファルネーゼ家。イエズス会を認可（1540）し、トリエント公会議を開いた（1545）。, source: 'https://ja.wikipedia.org/wiki/パウルス3世_(ローマ教皇)'}
+    - {name: ユリウス3世, title: 教皇, from: 1550, to: 1555, source: 'https://ja.wikipedia.org/wiki/ユリウス3世_(ローマ教皇)'}
+    - {name: マルケルス2世, title: 教皇, from: 1555, to: 1555, source: 'https://ja.wikipedia.org/wiki/マルケルス2世_(ローマ教皇)'}
+    - {name: パウルス4世, title: 教皇, from: 1555, to: 1559, note: 禁書目録を定め、ローマにユダヤ人のゲットーを作った。, source: 'https://ja.wikipedia.org/wiki/パウルス4世_(ローマ教皇)'}
+    - {name: ピウス4世, title: 教皇, from: 1559, to: 1565, note: トリエント公会議を閉じた（1563）。, source: 'https://ja.wikipedia.org/wiki/ピウス4世_(ローマ教皇)'}
+    - {name: ピウス5世, title: 教皇, from: 1566, to: 1572, note: 神聖同盟を組んでレパントの海戦（1571）に勝った。エリザベス1世を破門した。, source: 'https://ja.wikipedia.org/wiki/ピウス5世_(ローマ教皇)'}
+    - {name: グレゴリウス13世, title: 教皇, from: 1572, to: 1585, note: グレゴリオ暦を定めた（1582）。, source: 'https://ja.wikipedia.org/wiki/グレゴリウス13世_(ローマ教皇)'}
+    - {name: シクストゥス5世, title: 教皇, from: 1585, to: 1590, note: 教皇領の山賊を討ち、ローマの都市計画を進めた。, source: 'https://ja.wikipedia.org/wiki/シクストゥス5世_(ローマ教皇)'}
+    - {name: ウルバヌス7世, title: 教皇, from: 1590, to: 1590, source: 'https://ja.wikipedia.org/wiki/ウルバヌス7世_(ローマ教皇)'}
+    - {name: グレゴリウス14世, title: 教皇, from: 1590, to: 1591, source: 'https://ja.wikipedia.org/wiki/グレゴリウス14世_(ローマ教皇)'}
+    - {name: インノケンティウス9世, title: 教皇, from: 1591, to: 1591, source: 'https://ja.wikipedia.org/wiki/インノケンティウス9世_(ローマ教皇)'}
+    - {name: クレメンス8世, title: 教皇, from: 1592, to: 1605, note: フェラーラを教皇領に組み込んだ（1598）。ジョルダーノ・ブルーノが処刑された（1600）。, source: 'https://ja.wikipedia.org/wiki/クレメンス8世_(ローマ教皇)'}
+    - {name: レオ11世, title: 教皇, from: 1605, to: 1605, source: 'https://ja.wikipedia.org/wiki/レオ11世_(ローマ教皇)'}
+    - {name: パウルス5世, title: 教皇, from: 1605, to: 1621, note: ヴェネツィアに聖務停止令を出した（1606）。サン・ピエトロ大聖堂を完成させた。, source: 'https://ja.wikipedia.org/wiki/パウルス5世_(ローマ教皇)'}
+    - {name: グレゴリウス15世, title: 教皇, from: 1621, to: 1623, note: 布教聖省を設けた（1622）。, source: 'https://ja.wikipedia.org/wiki/グレゴリウス15世_(ローマ教皇)'}
+    - {name: ウルバヌス8世, title: 教皇, from: 1623, to: 1644, note: バルベリーニ家。ウルビーノを併合（1631）。ガリレオの宗教裁判（1633）。, source: 'https://ja.wikipedia.org/wiki/ウルバヌス8世_(ローマ教皇)'}
     - {name: インノケンティウス10世, title: ローマ教皇, from: 1644, to: 1655, source: "https://en.wikipedia.org/wiki/Pope_Innocent_X"}
     - {name: アレクサンデル7世, title: ローマ教皇, from: 1655, to: 1667, source: "https://en.wikipedia.org/wiki/Pope_Alexander_VII"}
     - {name: クレメンス9世, title: ローマ教皇, from: 1667, to: 1669, source: "https://en.wikipedia.org/wiki/Pope_Clement_IX"}
@@ -1082,6 +1238,10 @@
     - {name: ピウス10世, title: ローマ教皇（教皇領なし）, from: 1903, to: 1914, source: "https://en.wikipedia.org/wiki/Pope_Pius_X"}
     - {name: ベネディクトゥス15世, title: ローマ教皇（教皇領なし）, from: 1914, to: 1922, source: "https://en.wikipedia.org/wiki/Pope_Benedict_XV"}
   periods:
+    - {from: 1453, to: 1502, text: ルネサンスの教皇たちが芸術を保護する一方、一族を重用した（ネポティズム）。ロマーニャ・ボローニャ・ペルージャなどの都市は、教皇代理の諸侯や名家が事実上支配していた。アレクサンデル6世の子チェーザレ・ボルジアがロマーニャを征服した（1499–1503）。}
+    - {from: 1503, to: 1533, text: ユリウス2世が武力でボローニャ・ロマーニャを直接支配に戻し、パルマ・ピアチェンツァ・モデナ・レッジョも得た。レオ10世の贖宥状の販売が宗教改革を招き、1527年には皇帝軍がローマを略奪した（ローマ劫掠）。}
+    - {from: 1534, to: 1600, text: 対抗宗教改革（カトリック改革）の時代。イエズス会の認可（1540）、トリエント公会議（1545–63）、異端審問・禁書目録で、カトリック世界の立て直しを進めた。1598年にフェラーラを併合した。}
+    - {from: 1601, to: 1647, text: バロックのローマ（ベルニーニ）。ウルバヌス8世がウルビーノを併合（1631）したが、カストロ戦争（1641–44）でファルネーゼ家に敗れ、財政は悪化した。}
     - from: 1648
       to: 1795
       text: ローマ教皇が君主として治める国家。ラツィオ・ウンブリア・マルケと、北のボローニャ・フェラーラ・ロマーニャ（「レガツィオーネ」）からなる。ウェストファリア条約に教皇は抗議したが無視され、国際政治での影響力は低下した。
@@ -1120,6 +1280,7 @@
   color: "#f0c1c1"
   kind: 共和国
   periods:
+    - {from: 1453, to: 1647, text: アペニン山中の小さな共和国。1463年に周辺の村を加えて今の領土となった。チェーザレ・ボルジアに一時占領された（1503）が独立を保ち、1631年に教皇から独立を認められた。}
     - from: 1648
       to: 1815
       text: ティターノ山の上の小さな共和国。1739–1740年に教皇特使アルベローニに一時占領されたが独立を回復し、ナポレオンも独立を尊重した。
@@ -1140,12 +1301,22 @@
 - id: naples
   name: ナポリ王国
   names:
+    - {to: 1500, name: ナポリ王国（アラゴン家）, kind: 王国}
     - {from: 1806, to: 1814, name: シチリア王国（ブルボン家）, short: シチリア, kind: 王国（本土を失いシチリア島だけを統治）}
     - {from: 1816, name: 両シチリア王国, short: 両シチリア, kind: 王国}
   short: ナポリ
   color: "#9fc4d0"
   kind: 王国（シチリア王国と同君連合）
   rulers:
+    - {name: アルフォンソ1世（寛大王）, title: ナポリ王（アラゴン王アルフォンソ5世）, from: 1442, to: 1458, note: アラゴン王としてシチリア・サルデーニャも治め、ナポリをアンジュー家から奪った（1442）。死後、ナポリは庶子フェルディナンドへ、アラゴンは弟フアン2世へ分かれた。, source: 'https://ja.wikipedia.org/wiki/アルフォンソ5世_(アラゴン王)'}
+    - {name: フェルディナンド1世（フェッランテ）, title: ナポリ王, from: 1458, to: 1494, note: 貴族の陰謀（1485）を鎮圧した。, source: 'https://en.wikipedia.org/wiki/Ferdinand_I_of_Naples'}
+    - {name: アルフォンソ2世, title: ナポリ王, from: 1494, to: 1495, note: フランス王シャルル8世の侵入を前に退位した。, source: 'https://en.wikipedia.org/wiki/Alfonso_II_of_Naples'}
+    - {name: フェルディナンド2世（フェッランティーノ）, title: ナポリ王, from: 1495, to: 1496, note: 1495年にフランス軍に追われたが、スペイン・ヴェネツィアの支援で同年に回復した。, source: 'https://en.wikipedia.org/wiki/Ferdinand_II_of_Naples'}
+    - {name: フェデリーコ, title: ナポリ王, from: 1496, to: 1501, note: グラナダ条約によるフランス・アラゴンの分割で退位し、フランスに亡命した。, source: 'https://en.wikipedia.org/wiki/Frederick_of_Naples'}
+    - {name: フェルナンド2世（カトリック王）, title: アラゴン王・ナポリ王（フェルディナンド3世）, from: 1504, to: 1516, note: 1501–03年はフランス王ルイ12世と王国を分け合い、1503年に全土を得た。以後ナポリは副王が治める。, source: 'https://ja.wikipedia.org/wiki/フェルナンド2世_(アラゴン王)'}
+    - {name: カルロス1世（皇帝カール5世）, title: スペイン王・ナポリ王, from: 1516, to: 1554, note: 母フアナと共同の王。副王ペドロ・デ・トレド（1532–53）がナポリを治めた。, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {name: フェリペ2世, title: スペイン王・ナポリ王, from: 1554, to: 1598, source: 'https://ja.wikipedia.org/wiki/フェリペ2世_(スペイン王)'}
+    - {name: フェリペ3世, title: スペイン王・ナポリ王, from: 1598, to: 1621, source: 'https://ja.wikipedia.org/wiki/フェリペ3世_(スペイン王)'}
     - {name: フェリペ4世, title: ナポリ王・シチリア王（スペイン王）, from: 1621, to: 1665, source: "https://ja.wikipedia.org/wiki/フェリペ4世_(スペイン王)"}
     - {name: カルロス2世, title: ナポリ王・シチリア王（スペイン王）, from: 1665, to: 1700, source: "https://ja.wikipedia.org/wiki/カルロス2世_(スペイン王)"}
     - {name: フェリペ5世, title: ナポリ王（1707年まで）・シチリア王（1713年まで）（スペイン王）, from: 1700, to: 1713, source: "https://ja.wikipedia.org/wiki/フェリペ5世_(スペイン王)"}
@@ -1166,6 +1337,9 @@
     - {name: フェルディナンド2世, title: 両シチリア王, from: 1830, to: 1859, note: 1848年の革命の鎮圧でメッシーナを砲撃し、「砲弾王（レ・ボンバ）」とあだ名された。, source: "https://en.wikipedia.org/wiki/Ferdinand_II_of_the_Two_Sicilies"}
     - {name: フランチェスコ2世, title: 両シチリア王, from: 1859, to: 1861, note: 1860年にガリバルディにナポリを追われ、ガエータ要塞で抵抗したが1861年2月に降伏した。, source: "https://en.wikipedia.org/wiki/Francis_II_of_the_Two_Sicilies"}
   periods:
+    - {from: 1453, to: 1493, text: アラゴン家の分家が治める王国。オスマン軍がオトラントを占領した（1480–81）。王は1485年の貴族の陰謀を鎮圧した。}
+    - {from: 1494, to: 1503, text: フランス王シャルル8世がナポリの王位を求めて侵入し（1494–95）、イタリア戦争が始まった。1501年にフランスとアラゴンが王国を分割したが争いとなり、ゴンサロ・デ・コルドバのスペイン軍が全土を征服した。}
+    - {from: 1504, to: 1647, text: スペイン王の副王が治める（副王領）。ヨーロッパ有数の大都市ナポリは、スペインの重税に苦しんだ。1647年、マサニエッロの反乱が起きた。}
     - from: 1648
       to: 1706
       text: スペイン王が副王を通じて治める。1647–1648年にはマザニエッロの反乱が起こった。
@@ -1197,10 +1371,33 @@
 
 - id: malta
   name: 聖ヨハネ騎士団（マルタ騎士団）
+  names:
+    - {to: 1529, name: 聖ヨハネ騎士団（ロードス騎士団）, short: ロードス騎士団}
   short: マルタ騎士団
   color: "#e7ae9e"
   kind: 騎士修道会国家
   rulers:
+    - {name: ジャン・ド・ラスティック, title: 聖ヨハネ騎士団総長, from: 1437, to: 1454, note: ロードス島が本拠。, source: 'https://en.wikipedia.org/wiki/Jean_de_Lastic'}
+    - {name: ジャック・ド・ミイ, title: 聖ヨハネ騎士団総長, from: 1454, to: 1461, source: 'https://en.wikipedia.org/wiki/Jacques_de_Milly'}
+    - {name: ピエロ・ライモンド・ザコスタ, title: 聖ヨハネ騎士団総長, from: 1461, to: 1467, source: 'https://en.wikipedia.org/wiki/Piero_Raimondo_Zacosta'}
+    - {name: ジョヴァンニ・バッティスタ・オルシーニ, title: 聖ヨハネ騎士団総長, from: 1467, to: 1476, source: 'https://en.wikipedia.org/wiki/Giovanni_Battista_Orsini'}
+    - {name: ピエール・ドービュッソン, title: 聖ヨハネ騎士団総長, from: 1476, to: 1503, note: 1480年のロードス包囲でメフメト2世の軍を退けた。, source: 'https://en.wikipedia.org/wiki/Pierre_d%27Aubusson'}
+    - {name: エメリー・ダンボワーズ, title: 聖ヨハネ騎士団総長, from: 1503, to: 1512, source: 'https://en.wikipedia.org/wiki/Emery_d%27Amboise'}
+    - {name: ギー・ド・ブランシュフォール, title: 聖ヨハネ騎士団総長, from: 1512, to: 1513, source: 'https://en.wikipedia.org/wiki/Guy_de_Blanchefort'}
+    - {name: ファブリツィオ・デル・カレット, title: 聖ヨハネ騎士団総長, from: 1513, to: 1521, source: 'https://en.wikipedia.org/wiki/Fabrizio_del_Carretto'}
+    - {name: フィリップ・ヴィリエ・ド・リラダン, title: 聖ヨハネ騎士団総長, from: 1521, to: 1534, note: 1522年にロードス島をスレイマン1世に明け渡し、1530年にマルタへ移った。, source: 'https://en.wikipedia.org/wiki/Philippe_Villiers_de_L''Isle-Adam'}
+    - {name: ピエロ・デ・ポンテ, title: 聖ヨハネ騎士団総長, from: 1534, to: 1535, source: 'https://en.wikipedia.org/wiki/Piero_de_Ponte'}
+    - {name: ディディエ・ド・サン＝ジャイユ, title: 聖ヨハネ騎士団総長, from: 1535, to: 1536, source: 'https://en.wikipedia.org/wiki/Didier_de_Saint-Jaille'}
+    - {name: フアン・デ・オメデス, title: 聖ヨハネ騎士団総長, from: 1536, to: 1553, note: 1551年にトリポリをオスマン帝国に奪われた。, source: 'https://en.wikipedia.org/wiki/Juan_de_Homedes_y_Coscón'}
+    - {name: クロード・ド・ラ・サングル, title: 聖ヨハネ騎士団総長, from: 1553, to: 1557, source: 'https://en.wikipedia.org/wiki/Claude_de_la_Sengle'}
+    - {name: ジャン・ド・ヴァレット, title: 聖ヨハネ騎士団総長, from: 1557, to: 1568, note: マルタ包囲戦（1565）でオスマン軍を退けた。新しい首都ヴァレッタは彼の名にちなむ。, source: 'https://ja.wikipedia.org/wiki/ジャン・ド・ヴァレット'}
+    - {name: ピエール・ド・モンテ, title: 聖ヨハネ騎士団総長, from: 1568, to: 1572, source: 'https://en.wikipedia.org/wiki/Pierre_de_Monte'}
+    - {name: ジャン・ド・ラ・カシエール, title: 聖ヨハネ騎士団総長, from: 1572, to: 1581, source: 'https://en.wikipedia.org/wiki/Jean_de_la_Cassière'}
+    - {name: ユーグ・ルーベンクス・ド・ヴェルダル, title: 聖ヨハネ騎士団総長, from: 1581, to: 1595, source: 'https://en.wikipedia.org/wiki/Hugues_Loubenx_de_Verdalle'}
+    - {name: マルティン・ガルセス, title: 聖ヨハネ騎士団総長, from: 1595, to: 1601, source: 'https://en.wikipedia.org/wiki/Martín_Garzez'}
+    - {name: アロフ・ド・ヴィニャクール, title: 聖ヨハネ騎士団総長, from: 1601, to: 1622, note: 水道橋を造り、沿岸に見張り塔を築いた。, source: 'https://en.wikipedia.org/wiki/Alof_de_Wignacourt'}
+    - {name: ルイス・メンデス・デ・ヴァスコンセロス, title: 聖ヨハネ騎士団総長, from: 1622, to: 1623, source: 'https://en.wikipedia.org/wiki/Luís_Mendes_de_Vasconcellos'}
+    - {name: アントワーヌ・ド・ポール, title: 聖ヨハネ騎士団総長, from: 1623, to: 1636, source: 'https://en.wikipedia.org/wiki/Antoine_de_Paule'}
     - {name: ジョヴァンニ・パオロ・ラスカリス, title: 騎士団総長, from: 1636, to: 1657, source: "https://en.wikipedia.org/wiki/Giovanni_Paolo_Lascaris"}
     - {name: マルティン・デ・レディン, title: 騎士団総長, from: 1657, to: 1660, source: "https://en.wikipedia.org/wiki/Martín_de_Redín"}
     - {name: アネ・ド・クレルモン＝ジェサン, title: 騎士団総長, from: 1660, to: 1660, source: "https://en.wikipedia.org/wiki/Annet_de_Clermont-Gessant"}
@@ -1217,6 +1414,9 @@
     - {name: エマニュエル・ド・ロアン＝ポルデュック, title: 騎士団総長, from: 1775, to: 1797, source: "https://en.wikipedia.org/wiki/Emmanuel_de_Rohan-Polduc"}
     - {name: フェルディナント・フォン・ホンペッシュ, title: 騎士団総長, from: 1797, to: 1799, note: 1798年にナポレオンに島を明け渡した。, source: "https://en.wikipedia.org/wiki/Ferdinand_von_Hompesch_zu_Bolheim"}
   periods:
+    - {from: 1453, to: 1522, text: ロードス島と周辺の島々（ドデカネス諸島）を治め、東地中海でオスマン帝国と向き合った（ロードス騎士団）。1480年の包囲は退けたが、1522年にスレイマン1世の包囲で降伏し、島を去った。}
+    - {from: 1530, to: 1565, text: ロードス島を追われた聖ヨハネ騎士団が、カール5世からマルタ島を与えられた（シチリア王の封土。年に1羽の鷹を納める）。1565年、オスマン帝国の大軍の包囲に耐えた（マルタ包囲戦）。}
+    - {from: 1566, to: 1647, text: 要塞都市ヴァレッタを建設し、地中海でイスラーム勢力の船を襲う私掠の拠点となった。}
     - from: 1648
       to: 1797
       text: 1530年に神聖ローマ皇帝カール5世からマルタを与えられた聖ヨハネ騎士団が治める。オスマン帝国や北アフリカの海賊に対するキリスト教世界の前線基地。
@@ -1446,3 +1646,177 @@
   color: "#cfdde3"
   kind: 水域
   note: 干拓地（オランダのハールレマーメール・ゾイデル海の干拓地など）の、干拓される前の年に使う。地図では海と同じ色で塗る。
+
+# ================================================================ 1453–1647 の政体（担当 C）
+
+- id: habsburg_netherlands
+  name: ネーデルラント（ハプスブルク家）
+  names:
+  - {to: 1481, name: ブルゴーニュ領ネーデルラント（マリー・ド・ブルゴーニュ）, kind: 諸邦の同君連合（ブルゴーニュ公家の遺領）}
+  short: ネーデルラント
+  color: "#d9c6f2"
+  kind: 諸邦の同君連合（ハプスブルク家）
+  home_iso: [NLD, BEL, LUX]
+  rulers:
+  - {name: マリー・ド・ブルゴーニュ, title: ブルゴーニュ女公（ネーデルラントの諸邦の君主）, from: 1477, to: 1482, note: シャルル突進公の娘。1477年にハプスブルク家のマクシミリアン（のちの皇帝）と結婚した。落馬事故で死去。, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+  - {name: フィリップ（美公）, title: ブルゴーニュ公（ネーデルラントの諸邦の君主）, from: 1482, to: 1506, note: 1494年まで父マクシミリアンが摂政（フランドル都市の反乱と争った）。1506年にカスティリャ王フェリペ1世となったが、同年に死去。, source: 'https://ja.wikipedia.org/wiki/フィリップ美公'}
+  - {name: カール5世（カルロス1世）, title: ネーデルラントの諸邦の君主（1516年スペイン王、1519年皇帝）, from: 1506, to: 1555, note: ヘント生まれ。叔母マルグリット・ドートリッシュ（1507–15、1519–30）、妹マリア（ハンガリー王妃、1531–55）が総督を務めた。フリースラント・ユトレヒト・フローニンゲン・ヘルレを加え、17州にまとめた。1555年にブリュッセルで退位。, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+  periods:
+  - {from: 1477, to: 1492, text: シャルル突進公の戦死の後、娘マリーがマクシミリアンと結婚し、ネーデルラントはハプスブルク家のものとなった（ブルゴーニュ公領本体はフランスが奪った）。マリーの死後、マクシミリアンはフランドル都市の反乱と争った。}
+  - {from: 1493, to: 1530, text: フィリップ美公とカール（5世）の時代。アントウェルペンが世界の商業・金融の中心として栄え、エラスムスら人文主義者が活躍した。}
+  - {from: 1531, to: 1555, text: カール5世がフリースラント（1524）・ユトレヒト（1528）・フローニンゲン（1536）・ヘルレ（1543）を加え、「17州」をまとめた。1548年のブルグント条約、1549年の国事詔書で一つの領土として相続されることになった。プロテスタントへの弾圧が始まった。}
+  note: ネーデルラントの各州（ブラバント公国・フランドル伯領・ホラント伯領など）は、それぞれ別の称号をもつ同じ君主が治めた。1556年からはスペイン王の領土（spain）として描く。
+  source: ['https://ja.wikipedia.org/wiki/ハプスブルク領ネーデルラント', 'https://ja.wikipedia.org/wiki/ネーデルラント17州']
+
+- id: guelders
+  name: ヘルレ公国（ゲルデルン）
+  short: ヘルレ
+  color: "#7cd0c5"
+  kind: 公国
+  rulers:
+  - {name: アーノルト・ファン・エフモント, title: ヘルレ公, from: 1423, to: 1473, note: 1465–71年は息子アドルフに捕らえられて実権を失った。1473年、公国をシャルル突進公に譲った。, source: 'https://en.wikipedia.org/wiki/Arnold,_Duke_of_Guelders'}
+  - {name: カレル・ファン・エフモント（カレル・ファン・ヘルレ）, title: ヘルレ公, from: 1492, to: 1538, note: フランスの支援でハプスブルク家と戦い続け、フローニンゲン・ドレンテ・フリースラントの一部まで勢力を広げた。, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+  - {name: ヴィルヘルム（富裕公）, title: ヘルレ公（ユーリヒ＝クレーフェ＝ベルク公）, from: 1538, to: 1543, note: フェンロー条約（1543）でヘルレをカール5世に譲った。, source: 'https://en.wikipedia.org/wiki/William,_Duke_of_Jülich-Cleves-Berg'}
+  periods:
+  - {from: 1453, to: 1543, text: ネーデルラントの東部、ライン川・マース川沿いの公国（ナイメーヘン・ルールモント・ズトフェン・アルンヘムの4地区）。ブルゴーニュ家・ハプスブルク家への抵抗の中心となり、エフモント家のカレルはフランスと結んで長く独立を守った。}
+  source: https://ja.wikipedia.org/wiki/ヘルレ公国
+
+- id: utrecht_bishopric
+  name: ユトレヒト司教領
+  short: ユトレヒト
+  color: "#a2cdfd"
+  kind: 司教領
+  rulers:
+  - {name: ルドルフ・ファン・ディープホルト, title: ユトレヒト司教, from: 1433, to: 1455, source: 'https://en.wikipedia.org/wiki/Rudolf_van_Diepholt'}
+  - {name: ダヴィド・ド・ブルゴーニュ, title: ユトレヒト司教, from: 1456, to: 1496, note: ブルゴーニュ公フィリップの庶子。, source: 'https://en.wikipedia.org/wiki/David_of_Burgundy'}
+  - {name: フリードリヒ・フォン・バーデン, title: ユトレヒト司教, from: 1496, to: 1517, source: 'https://en.wikipedia.org/wiki/Frederick_IV_of_Baden'}
+  - {name: フィリップ・ド・ブルゴーニュ, title: ユトレヒト司教, from: 1517, to: 1524, note: フィリップ善良公の庶子。, source: 'https://en.wikipedia.org/wiki/Philip_of_Burgundy_(bishop)'}
+  - {name: ハインリヒ・フォン・デア・プファルツ, title: ユトレヒト司教, from: 1524, to: 1529, note: 1528年、世俗の支配権をカール5世に譲った。, source: 'https://en.wikipedia.org/wiki/Henry_of_the_Palatinate_(bishop)'}
+  periods:
+  - {from: 1453, to: 1527, text: ユトレヒト司教が治める帝国の聖界諸侯領。ネーデルシュティフト（今のユトレヒト州）とオーファーシュティフト（オーファーアイセル・ドレンテ）に分かれる。ブルゴーニュ家が司教の位を一族で占め、ヘルレ公とも争った。}
+  source: https://ja.wikipedia.org/wiki/ユトレヒト司教領
+
+- id: frisia
+  name: フリースラント（「フリースラントの自由」）
+  short: フリースラント
+  color: "#92cdb7"
+  kind: 自由農民の地方共同体
+  periods:
+  - {from: 1453, to: 1497, text: 封建領主を持たず、皇帝だけに従うとされた自由農民の地方（「フリースラントの自由」）。実際は有力者の党派（スヒーリンゲル派とフェトコペル派）が争っていた。}
+  note: 1498年からザクセン公、1515年からハプスブルク家の支配。
+  source: https://en.wikipedia.org/wiki/Frisian_freedom
+
+- id: groningen
+  name: フローニンゲン（市とオメランデン）
+  short: フローニンゲン
+  color: "#f3caa0"
+  kind: 都市国家
+  periods:
+  - {from: 1453, to: 1513, text: 名目上はユトレヒト司教・皇帝に属するが、ハンザ同盟の都市フローニンゲンが周辺の農村（オメランデン）を事実上支配していた。}
+  source: https://en.wikipedia.org/wiki/Groningen_(province)
+
+- id: milan
+  name: ミラノ公国
+  short: ミラノ
+  color: "#52bed7"
+  kind: 公国（スフォルツァ家）
+  rulers:
+  - {name: フランチェスコ・スフォルツァ, title: ミラノ公, from: 1450, to: 1466, note: 傭兵隊長。ヴィスコンティ家の娘婿としてミラノを得た。ローディの和約（1454）でイタリアの勢力均衡を作った。, source: 'https://ja.wikipedia.org/wiki/フランチェスコ・スフォルツァ'}
+  - {name: ガレアッツォ・マリーア・スフォルツァ, title: ミラノ公, from: 1466, to: 1476, note: 1476年に暗殺された。, source: 'https://ja.wikipedia.org/wiki/ガレアッツォ・マリーア・スフォルツァ'}
+  - {name: ジャン・ガレアッツォ・スフォルツァ, title: ミラノ公, from: 1476, to: 1494, note: 幼少で、母ボーナ、ついで叔父ルドヴィーコが実権を握った。, source: 'https://ja.wikipedia.org/wiki/ジャン・ガレアッツォ・スフォルツァ'}
+  - {name: ルドヴィーコ・スフォルツァ（イル・モーロ）, title: ミラノ公, from: 1494, to: 1499, note: 1480年から摂政として実権を握った。レオナルド・ダ・ヴィンチを宮廷に招いた（『最後の晩餐』）。1499年にフランス軍に追われ、1500年に一時復帰したが捕らえられた。, source: 'https://ja.wikipedia.org/wiki/ルドヴィーコ・スフォルツァ'}
+  - {name: マッシミリアーノ・スフォルツァ, title: ミラノ公, from: 1512, to: 1515, note: スイス傭兵に支えられた公。マリニャーノの戦いの後、フランスに公国を譲った。, source: 'https://ja.wikipedia.org/wiki/マッシミリアーノ・スフォルツァ'}
+  - {name: フランチェスコ2世・スフォルツァ, title: ミラノ公, from: 1521, to: 1535, note: 皇帝の支援で公となったが、1526–29年は皇帝軍に追われた。子がなく、死後ミラノはカール5世のものとなった。, source: 'https://ja.wikipedia.org/wiki/フランチェスコ2世・スフォルツァ'}
+  periods:
+  - {from: 1450, to: 1493, text: 傭兵隊長フランチェスコ・スフォルツァが開いた公国。ローディの和約（1454）でヴェネツィア・フィレンツェ・教皇・ナポリと勢力均衡を保ち、絹織物・武具の生産で栄えた。}
+  - {from: 1494, to: 1535, text: ルドヴィーコ・スフォルツァがフランス王シャルル8世をイタリアに招いたことがイタリア戦争のきっかけとなった。以後、フランス（ルイ12世・フランソワ1世）とスイス・皇帝・スペインがミラノを奪い合い、スフォルツァ家は断絶した。}
+  note: 1499–1512年・1515–21年はフランス王、1535年からはスペイン王（カール5世・フェリペ2世）の領土として描く。
+  source: https://ja.wikipedia.org/wiki/ミラノ公国
+
+- id: montferrat
+  name: モンフェッラート侯国
+  short: モンフェッラート
+  color: "#aeb588"
+  kind: 侯国（パレオロゴ家）
+  rulers:
+  - {name: ジョヴァンニ4世, title: モンフェッラート侯, from: 1445, to: 1464, source: 'https://en.wikipedia.org/wiki/John_IV,_Marquess_of_Montferrat'}
+  - {name: グリエルモ8世, title: モンフェッラート侯, from: 1464, to: 1483, source: 'https://en.wikipedia.org/wiki/William_VIII,_Marquess_of_Montferrat'}
+  - {name: ボニファーチョ3世, title: モンフェッラート侯, from: 1483, to: 1494, source: 'https://en.wikipedia.org/wiki/Boniface_III,_Marquess_of_Montferrat'}
+  - {name: グリエルモ9世, title: モンフェッラート侯, from: 1494, to: 1518, source: 'https://en.wikipedia.org/wiki/William_IX,_Marquess_of_Montferrat'}
+  - {name: ボニファーチョ4世, title: モンフェッラート侯, from: 1518, to: 1530, source: 'https://en.wikipedia.org/wiki/Boniface_IV,_Marquess_of_Montferrat'}
+  - {name: ジャン・ジョルジョ, title: モンフェッラート侯, from: 1530, to: 1533, note: パレオロゴ家の最後の侯。, source: 'https://en.wikipedia.org/wiki/John_George,_Marquess_of_Montferrat'}
+  periods:
+  - {from: 1453, to: 1535, text: ビザンツ皇帝家の分家パレオロゴ家が治める、ピエモンテ東部の侯国（都カザーレ）。1536年にマントヴァのゴンザーガ家へ移った。}
+  source: https://ja.wikipedia.org/wiki/モンフェッラート侯国
+
+- id: florence
+  name: フィレンツェ共和国
+  names:
+  - {from: 1532, name: フィレンツェ公国, kind: 公国（メディチ家）}
+  short: フィレンツェ
+  color: "#aad5a0"
+  kind: 共和国（メディチ家が実権）
+  rulers:
+  - {name: コジモ・デ・メディチ（大コジモ）, title: フィレンツェの実質的な支配者（メディチ家）, from: 1434, to: 1464, note: 銀行家。官職に就かずに共和国を動かし、「祖国の父」と呼ばれた。プラトン・アカデミーを支えた。, source: 'https://ja.wikipedia.org/wiki/コジモ・デ・メディチ'}
+  - {name: ピエロ・デ・メディチ（痛風病みのピエロ）, title: フィレンツェの実質的な支配者（メディチ家）, from: 1464, to: 1469, source: 'https://ja.wikipedia.org/wiki/ピエロ・デ・メディチ_(痛風病みのピエロ)'}
+  - {name: ロレンツォ・デ・メディチ（豪華王）, title: フィレンツェの実質的な支配者（メディチ家）, from: 1469, to: 1492, note: パッツィ家の陰謀（1478）を切り抜け、ボッティチェリ・ミケランジェロらを保護した。イタリアの勢力均衡の要。, source: 'https://ja.wikipedia.org/wiki/ロレンツォ・デ・メディチ'}
+  - {name: ピエロ・デ・メディチ（不運なピエロ）, title: フィレンツェの実質的な支配者（メディチ家）, from: 1492, to: 1494, note: シャルル8世に屈して追放された。, source: 'https://ja.wikipedia.org/wiki/ピエロ・デ・メディチ_(不運なピエロ)'}
+  - {name: 共和政（サヴォナローラ、ピエロ・ソデリーニ）, title: 共和国の政府（1502年から終身ゴンファロニエーレのソデリーニ）, from: 1494, to: 1512, note: 1494–98年は修道士サヴォナローラが神権政治を行ったが、教皇と対立して処刑された。マキァヴェッリが書記官として仕えた。, source: 'https://ja.wikipedia.org/wiki/ジロラモ・サヴォナローラ'}
+  - {name: ジュリアーノ・デ・メディチ（ヌムール公）, title: フィレンツェの実質的な支配者（メディチ家）, from: 1512, to: 1513, note: スペイン軍の力でメディチ家が復帰した。, source: 'https://en.wikipedia.org/wiki/Giuliano_di_Lorenzo_de%27_Medici'}
+  - {name: ロレンツォ・デ・メディチ（ウルビーノ公）, title: フィレンツェの実質的な支配者（メディチ家）, from: 1513, to: 1519, note: 叔父の教皇レオ10世が後ろ盾。マキァヴェッリが『君主論』を献じた。, source: 'https://ja.wikipedia.org/wiki/ロレンツォ・デ・メディチ_(ウルビーノ公)'}
+  - {name: ジュリオ・デ・メディチ, title: フィレンツェの実質的な支配者（枢機卿。1523年に教皇クレメンス7世）, from: 1519, to: 1527, note: 1524年からは枢機卿パッセリーニが若いイッポーリト・アレッサンドロを後見して治めた。, source: 'https://ja.wikipedia.org/wiki/クレメンス7世_(ローマ教皇)'}
+  - {name: 共和政（ニッコロ・カッポーニほか）, title: 共和国の政府, from: 1527, to: 1530, note: ローマ劫掠の混乱でメディチ家が追われた。1529–30年に皇帝・教皇の軍に包囲されて降伏した。, source: 'https://en.wikipedia.org/wiki/Siege_of_Florence_(1529–1530)'}
+  - {name: アレッサンドロ・デ・メディチ, title: フィレンツェ公, from: 1531, to: 1537, note: カール5世の娘婿。1532年に世襲の公となったが、1537年にいとこロレンツィーノに暗殺された。, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・デ・メディチ'}
+  - {name: コジモ1世・デ・メディチ, title: フィレンツェ公（1569年からトスカーナ大公）, from: 1537, to: 1568, note: シエナを併合し（1557）、1569年に大公の称号を得た。, source: 'https://ja.wikipedia.org/wiki/コジモ1世・デ・メディチ'}
+  periods:
+  - {from: 1453, to: 1493, text: 形の上では共和国だが、銀行家メディチ家が実権を握った。ルネサンス文化の中心（ブルネレスキ、ボッティチェリ、レオナルド・ダ・ヴィンチ）。ロレンツォがイタリアの勢力均衡を支えた。}
+  - {from: 1494, to: 1530, text: シャルル8世の侵入でメディチ家が追われ、サヴォナローラの神権政治、ソデリーニの共和政（マキァヴェッリが書記官）を経て、1512年にメディチ家が復帰した。メディチ家出身の教皇レオ10世・クレメンス7世の時代。1527年に再び共和国となったが、1530年に皇帝・教皇の軍に降伏した。}
+  - {from: 1531, to: 1568, text: メディチ家の世襲の公国となる。コジモ1世はスペインと結んでシエナを征服し（1555–57）、トスカーナの大半を支配した。}
+  note: 1569年からトスカーナ大公国（tuscany）。
+  source: ['https://ja.wikipedia.org/wiki/フィレンツェ共和国', 'https://ja.wikipedia.org/wiki/メディチ家']
+
+- id: siena
+  name: シエナ共和国
+  short: シエナ
+  color: '#dfb48f'
+  kind: 共和国
+  rulers:
+  - {name: パンドルフォ・ペトルッチ, title: シエナの僭主（共和国の実権者）, from: 1487, to: 1512, source: 'https://en.wikipedia.org/wiki/Pandolfo_Petrucci'}
+  periods:
+  - {from: 1453, to: 1554, text: トスカーナ南部の共和国。党派の争いが続き、1530年からスペイン軍が駐留した。1552年にフランスと結んでスペイン軍を追ったが、シエナ戦争でフィレンツェ・皇帝軍に包囲されて降伏し（1555）、1557年にフィレンツェ公国に併合された。}
+  source: https://ja.wikipedia.org/wiki/シエナ共和国
+
+- id: pisa_republic
+  name: ピサ共和国
+  short: ピサ
+  color: '#a8d0e6'
+  kind: 共和国
+  periods:
+  - {from: 1494, to: 1508, text: 1406年からフィレンツェ領だったが、シャルル8世の侵入に乗じて独立した。フィレンツェとの15年の戦争の末、1509年に降伏した。}
+  source: https://en.wikipedia.org/wiki/Republic_of_Pisa
+
+- id: urbino
+  name: ウルビーノ公国
+  short: ウルビーノ
+  color: '#d9b9e6'
+  kind: 公国（教皇の封土）
+  rulers:
+  - {name: フェデリーコ・ダ・モンテフェルトロ, title: ウルビーノ伯→ウルビーノ公（1474）, from: 1444, to: 1482, note: 傭兵隊長。宮廷を人文主義の中心とした。, source: 'https://ja.wikipedia.org/wiki/フェデリーコ・ダ・モンテフェルトロ'}
+  - {name: グイドバルド・ダ・モンテフェルトロ, title: ウルビーノ公, from: 1482, to: 1508, note: 1502–03年はチェーザレ・ボルジアに追われた。宮廷はカスティリオーネ『宮廷人』の舞台。, source: 'https://en.wikipedia.org/wiki/Guidobaldo_da_Montefeltro'}
+  - {name: フランチェスコ・マリーア1世・デッラ・ローヴェレ, title: ウルビーノ公, from: 1508, to: 1538, note: 教皇ユリウス2世の甥。1516–21年はレオ10世に追われ、ロレンツォ・デ・メディチ（1516–19）が公となった。, source: 'https://en.wikipedia.org/wiki/Francesco_Maria_I_della_Rovere,_Duke_of_Urbino'}
+  - {name: グイドバルド2世・デッラ・ローヴェレ, title: ウルビーノ公, from: 1538, to: 1574, source: 'https://en.wikipedia.org/wiki/Guidobaldo_II_della_Rovere,_Duke_of_Urbino'}
+  - {name: フランチェスコ・マリーア2世・デッラ・ローヴェレ, title: ウルビーノ公, from: 1574, to: 1631, note: 後継ぎの子が先に死に、1625年に公国を教皇に譲る約束をした。, source: 'https://en.wikipedia.org/wiki/Francesco_Maria_II_della_Rovere,_Duke_of_Urbino'}
+  periods:
+  - {from: 1453, to: 1631, text: アペニン山中の公国（ウルビーノ・ペーザロ）。モンテフェルトロ家、ついでデッラ・ローヴェレ家が治め、ラファエロの生まれた町の宮廷はルネサンス文化の中心の一つとなった。1631年に教皇領に戻った。}
+  source: https://ja.wikipedia.org/wiki/ウルビーノ公国
+
+- id: romagna_borgia
+  name: ロマーニャ公国（チェーザレ・ボルジア）
+  short: ロマーニャ公国
+  color: "#eb9c9a"
+  kind: 公国（教皇の封土）
+  rulers:
+  - {name: チェーザレ・ボルジア, title: ロマーニャ公（ヴァランティノワ公）, from: 1500, to: 1503, note: 教皇アレクサンデル6世の子。マキァヴェッリ『君主論』のモデル。父の死で没落し、1507年にスペインで戦死。, source: 'https://ja.wikipedia.org/wiki/チェーザレ・ボルジア'}
+  periods:
+  - {from: 1500, to: 1503, text: チェーザレ・ボルジアがフランス王の支援を受け、教皇代理の諸侯を倒して作った国（イーモラ・フォルリ・リミニ・ペーザロ・ファエンツァ、1502年にウルビーノ・カメリーノ）。1503年の父の死で崩れた。}
+  source: https://ja.wikipedia.org/wiki/チェーザレ・ボルジア

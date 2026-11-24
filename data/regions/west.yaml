@@ -8,7 +8,12 @@
   select:
     iso: [FRA]
   timeline:
+    - from: 1453
+      owner: france
+      note: "百年戦争の終わり（1453年7月のカスティヨンの戦いと10月のボルドー降伏で、カレー以外の大陸のイングランド領がなくなった）。ブルゴーニュ公国・ブルターニュ公国・プロヴァンス伯領などは別の地域で描く。ブルボン公領・アランソン公領・アルマニャック伯領など、フランス王に臣従する諸侯の領地はフランスに含める。"
+      source: "ja.wikipedia: 百年戦争"
     - from: 1648
+      cause: "ウェストファリア条約でメス・トゥール・ヴェルダンの三司教領がフランス領と正式に認められる"
       owner: france
       note: ここで上書きしない地域（三司教領メッス・トゥール・ヴェルダン、上アルザスなどを含む）はフランス領。
       source: "ja.wikipedia: フランス王国"
@@ -27,6 +32,28 @@
   select:
     pieces: [FRA-Altkirch, FRA-Thann, FRA-Mulhouse, FRA-Belfort]
   timeline:
+    - from: 1453
+      owner: habsburg
+      overlord: hre
+      note: "ハプスブルク家の前方オーストリアのズントガウ（フェレット伯領）。ミュルーズは1515年からスイスの同盟都市（ピースが粗いため描かない）。"
+      source: "ja.wikipedia: 前方オーストリア"
+    - from: 1469
+      owner: burgundy
+      overlord: hre
+      cause: "サントメール条約（ジギスムント大公が上アルザスをシャルル突進公に抵当として渡す）"
+      note: "代官ハーゲンバッハが治めた。"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Saint-Omer"
+    - from: 1474
+      owner: habsburg
+      overlord: hre
+      cause: "抵当の解消と代官ハーゲンバッハの処刑（コンスタンツの永久協約）"
+      source: "https://en.wikipedia.org/wiki/Peter_von_Hagenbach"
+    - from: 1639
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "ベルンハルト・フォン・ザクセン＝ヴァイマルの死後、フランスがその軍とアルザスの占領地を引き継ぐ"
+      source: "ja.wikipedia: 三十年戦争"
     - from: 1648
       owner: france
       cause: ウェストファリア条約（ハプスブルク家のアルザス領をフランスに割譲）
@@ -59,6 +86,17 @@
   select:
     pieces: [FRA-Haguenau, FRA-Molsheim, FRA-Saverne, FRA-Selestat, FRA-Colmar]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ストラスブール司教領・デカポリス（十帝国都市）・ハーナウ＝リヒテンベルク伯領・ハプスブルク家の代官領など、多くの帝国諸邦。"
+      source: "ja.wikipedia: デカポリス (アルザス)"
+    - from: 1634
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦いの後、スウェーデン軍が占領していたアルザスの諸都市をフランスが保護下に置く"
+      source: "ja.wikipedia: デカポリス (アルザス)"
     - from: 1648
       owner: france
       overlord: hre
@@ -97,6 +135,10 @@
   select:
     pieces: [FRA-Strasbourg]
   timeline:
+    - from: 1453
+      owner: strasbourg
+      overlord: hre
+      source: "ja.wikipedia: ストラスブール"
     - from: 1648
       owner: strasbourg
       overlord: hre
@@ -130,6 +172,11 @@
   select:
     pieces: [FRA-Montbeliard]
   timeline:
+    - from: 1453
+      owner: wurttemberg
+      overlord: hre
+      note: "1397年からヴュルテンベルク伯（1495年から公）家の領地。"
+      source: "ja.wikipedia: モンベリアール"
     - from: 1648
       owner: wurttemberg
       overlord: hre
@@ -154,6 +201,32 @@
   select:
     pieces: [FRA-Besancon, FRA-Pontarlier, FRA-Dole, FRA-Lons_le_Saunier, FRA-Saint_Claude, FRA-Vesoul, FRA-Lure]
   timeline:
+    - from: 1453
+      owner: burgundy
+      overlord: hre
+      note: "ブルゴーニュ伯領（帝国領）。"
+      source: "ja.wikipedia: フランシュ＝コンテ"
+    - from: 1477
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "シャルル突進公の戦死後、ルイ11世の軍が占領"
+      source: "ja.wikipedia: フランシュ＝コンテ"
+    - from: 1482
+      owner: france
+      overlord: hre
+      cause: "アラスの和約（マクシミリアンの娘マルグリットの持参金としてフランスへ）"
+      source: "ja.wikipedia: アラスの和約 (1482年)"
+    - from: 1493
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "サンリス条約でハプスブルク家（フィリップ美公）に返還"
+      source: "ja.wikipedia: サンリス条約"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
     - from: 1648
       owner: spain
       overlord: hre
@@ -178,6 +251,28 @@
   select:
     pieces: [FRA-Nancy, FRA-Luneville, FRA-Epinal, FRA-Saint_Die_des_Vosges, FRA-Neufchateau, FRA-Sarreguemines, FRA-Forbach, FRA-Commercy, FRA-Val_de_Briey, FRA-Sarrebourg]
   timeline:
+    - from: 1453
+      owner: lorraine
+      overlord: hre
+      note: "ロレーヌ公国。1480年にバール公領をあわせた。サルグミーヌ・フォルバックの一部はナッサウ＝ザールブリュッケン伯領など。"
+      source: "ja.wikipedia: ロレーヌ公国"
+    - from: 1475
+      owner: burgundy
+      overlord: hre
+      certainty: occupied
+      cause: "シャルル突進公がロレーヌを征服（11月）"
+      source: "ja.wikipedia: ブルゴーニュ戦争"
+    - from: 1476
+      owner: lorraine
+      overlord: hre
+      cause: "ルネ2世がナンシーを奪回（10月）"
+      source: "ja.wikipedia: ルネ2世 (ロレーヌ公)"
+    - from: 1633
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "ルイ13世の軍がナンシーを占領（9月）"
+      source: "ja.wikipedia: シャルル4世 (ロレーヌ公)"
     - from: 1648
       owner: france
       overlord: hre
@@ -251,6 +346,21 @@
   select:
     pieces: [FRA-Bar_le_Duc]
   timeline:
+    - from: 1453
+      owner: provence
+      label: "バール公領"
+      note: "バール公はアンジュー家のルネ（プロヴァンス伯・アンジュー公を兼ねる）。西部はフランス王の封土（バロワ・ムーヴァン）。"
+      source: "ja.wikipedia: バール公国"
+    - from: 1480
+      owner: lorraine
+      cause: "ルネ・ダンジューの死で、孫のロレーヌ公ルネ2世がバール公領を相続"
+      note: "ルイ11世は1483年までバールを占領した。"
+      source: "ja.wikipedia: バール公国"
+    - from: 1633
+      owner: france
+      certainty: occupied
+      cause: "フランス軍がロレーヌ・バールを占領"
+      source: "ja.wikipedia: シャルル4世 (ロレーヌ公)"
     - from: 1648
       owner: france
       certainty: occupied
@@ -284,6 +394,22 @@
   select:
     pieces: [FRA-Thionville]
   timeline:
+    - from: 1453
+      owner: burgundy
+      overlord: hre
+      note: "ルクセンブルク公領（1443年からブルゴーニュ公の領地）。"
+      source: "ja.wikipedia: ルクセンブルク公国"
+    - from: 1477
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
+      source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      note: "1643年のロクロワの戦いの後、フランス軍がティオンヴィルを占領した（ピレネー条約で割譲）が、地図では1659年に切り替える。"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
     - from: 1648
       owner: spain
       overlord: hre
@@ -318,6 +444,27 @@
   select:
     pieces: [FRA-Perpignan, FRA-Ceret, FRA-Prades]
   timeline:
+    - from: 1453
+      owner: aragon
+      source: "ja.wikipedia: ルシヨン"
+    - from: 1463
+      owner: france
+      cause: "ルイ11世がアラゴン王フアン2世への援軍の代償としてルシヨン・セルダーニュを抵当に取り、占領（バイヨンヌ条約 1462）"
+      source: "ja.wikipedia: ルシヨン"
+    - from: 1493
+      owner: aragon
+      cause: "バルセロナ条約でシャルル8世がアラゴンに返還（1月）"
+      source: "ja.wikipedia: バルセロナ条約 (1493年)"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+    - from: 1642
+      owner: france
+      certainty: occupied
+      cause: "フランス軍がペルピニャンを攻略（9月）"
+      source: "ja.wikipedia: 収穫人戦争"
     - from: 1648
       owner: france
       certainty: occupied
@@ -347,6 +494,43 @@
   select:
     pieces: [FRA-Arras, FRA-Bethune, FRA-Lens]
   timeline:
+    - from: 1453
+      owner: burgundy
+      note: "アルトワ伯領（フランス王の封土）。フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。1529年のカンブレーの和約で放棄）。"
+      source: "ja.wikipedia: アルトワ"
+    - from: 1477
+      owner: france
+      certainty: occupied
+      cause: "シャルル突進公の戦死後、ルイ11世がアラスを占領"
+      source: "ja.wikipedia: アルトワ"
+    - from: 1482
+      owner: france
+      cause: "アラスの和約（マルグリットの持参金としてフランスへ）"
+      source: "ja.wikipedia: アラスの和約 (1482年)"
+    - from: 1493
+      owner: habsburg_netherlands
+      cause: "サンリス条約でハプスブルク家（フィリップ美公）に返還"
+      source: "ja.wikipedia: サンリス条約"
+    - from: 1529
+      owner: habsburg_netherlands
+      cause: "カンブレーの和約（貴婦人の和約）でフランス王がフランドル・アルトワの宗主権を放棄"
+      source: "ja.wikipedia: カンブレーの和約"
+    - from: 1548
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "アウクスブルク協約（ネーデルラント17州をブルグント・クライスとして帝国に組み入れる）"
+      source: "ja.wikipedia: ブルグント・クライス"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
+    - from: 1640
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "フランス軍がアラスを攻略（8月）"
+      source: "ja.wikipedia: アラス包囲戦 (1640年)"
     - from: 1648
       owner: france
       certainty: occupied
@@ -372,6 +556,35 @@
   select:
     pieces: [FRA-Saint_Omer]
   timeline:
+    - from: 1453
+      owner: burgundy
+      source: "ja.wikipedia: サン＝トメール"
+    - from: 1477
+      owner: habsburg_netherlands
+      cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
+      source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
+    - from: 1482
+      owner: france
+      cause: "アラスの和約（アルトワはマルグリットの持参金としてフランスへ）"
+      source: "ja.wikipedia: アラスの和約 (1482年)"
+    - from: 1489
+      owner: habsburg_netherlands
+      cause: "マクシミリアンの軍がサントメールを奪回"
+      source: "ja.wikipedia: サン＝トメール"
+    - from: 1529
+      owner: habsburg_netherlands
+      cause: "カンブレーの和約（貴婦人の和約）でフランス王がフランドル・アルトワの宗主権を放棄"
+      source: "ja.wikipedia: カンブレーの和約"
+    - from: 1548
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "アウクスブルク協約（ネーデルラント17州をブルグント・クライスとして帝国に組み入れる）"
+      source: "ja.wikipedia: ブルグント・クライス"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
     - from: 1648
       owner: spain
       overlord: hre
@@ -396,6 +609,38 @@
   select:
     pieces: [FRA-Dunkerque]
   timeline:
+    - from: 1453
+      owner: burgundy
+      note: "フランドル伯領（フランス王の封土）。1384年からブルゴーニュ公の領地。フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。1529年のカンブレーの和約で放棄）。"
+      source: "ja.wikipedia: フランドル伯"
+    - from: 1477
+      owner: habsburg_netherlands
+      cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
+      source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
+    - from: 1529
+      owner: habsburg_netherlands
+      cause: "カンブレーの和約（貴婦人の和約）でフランス王がフランドル・アルトワの宗主権を放棄"
+      source: "ja.wikipedia: カンブレーの和約"
+    - from: 1548
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "アウクスブルク協約（ネーデルラント17州をブルグント・クライスとして帝国に組み入れる）"
+      source: "ja.wikipedia: ブルグント・クライス"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
+    - from: 1577
+      owner: netherlands
+      certainty: uncertain
+      cause: "ヘントの和約（1576年）の後、フランドルの諸都市は全国議会の側に立ち、スペイン軍と戦う"
+      source: "ja.wikipedia: ヘントの和約"
+    - from: 1583
+      owner: spain
+      overlord: hre
+      cause: "パルマ公アレッサンドロ・ファルネーゼがダンケルク・ニーウポールトを取り戻す（7月）"
+      source: "ja.wikipedia: アレッサンドロ・ファルネーゼ (パルマ公)"
     - from: 1648
       owner: spain
       overlord: hre
@@ -432,6 +677,28 @@
   select:
     pieces: [FRA-Lille, FRA-Douai]
   timeline:
+    - from: 1453
+      owner: burgundy
+      note: "フランドル伯領（フランス王の封土）。1384年からブルゴーニュ公の領地。フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。1529年のカンブレーの和約で放棄）。"
+      source: "ja.wikipedia: フランドル伯"
+    - from: 1477
+      owner: habsburg_netherlands
+      cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
+      source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
+    - from: 1529
+      owner: habsburg_netherlands
+      cause: "カンブレーの和約（貴婦人の和約）でフランス王がフランドル・アルトワの宗主権を放棄"
+      source: "ja.wikipedia: カンブレーの和約"
+    - from: 1548
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "アウクスブルク協約（ネーデルラント17州をブルグント・クライスとして帝国に組み入れる）"
+      source: "ja.wikipedia: ブルグント・クライス"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
     - from: 1648
       owner: spain
       overlord: hre
@@ -464,6 +731,21 @@
   select:
     pieces: [FRA-Avesnes_sur_Helpe]
   timeline:
+    - from: 1453
+      owner: burgundy
+      overlord: hre
+      note: "エノー伯領（帝国領）。1433年からブルゴーニュ公の領地。"
+      source: "ja.wikipedia: エノー伯"
+    - from: 1477
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
+      source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
     - from: 1648
       owner: spain
       overlord: hre
@@ -497,6 +779,21 @@
   select:
     pieces: [FRA-Cambrai, FRA-Valenciennes]
   timeline:
+    - from: 1453
+      owner: burgundy
+      overlord: hre
+      note: "エノー伯領（帝国領）。1433年からブルゴーニュ公の領地。"
+      source: "ja.wikipedia: エノー伯"
+    - from: 1477
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
+      source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
     - from: 1648
       owner: spain
       overlord: hre
@@ -530,6 +827,10 @@
   select:
     pieces: [FRA-Avignon, FRA-Carpentras]
   timeline:
+    - from: 1453
+      owner: papal_states
+      note: "オランジュ公国（1530年からナッサウ家）はヴネッサン伯領の中の飛び地（描かない）。"
+      source: "ja.wikipedia: ヴネッサン伯領"
     - from: 1648
       owner: papal_states
       note: フランスは教皇との対立の際に一時占領した（1663–64、1688–89、1768–74年）。オランジュ公国（ナッサウ家、1713年ユトレヒト条約でフランス領）はピースが粗いため描かない。
@@ -559,6 +860,21 @@
   select:
     pieces: [FRA-Annecy, FRA-Bonneville, FRA-Saint_Julien_en_Genevois, FRA-Thonon_les_Bains, FRA-Albertville, FRA-Chambery, FRA-Saint_Jean_de_Maurienne]
   timeline:
+    - from: 1453
+      owner: savoy
+      overlord: hre
+      source: "ja.wikipedia: サヴォイア公国"
+    - from: 1536
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "フランソワ1世がサヴォイア公国に侵攻し、サヴォワ・ピエモンテを占領（イタリア戦争）"
+      source: "ja.wikipedia: イタリア戦争"
+    - from: 1559
+      owner: savoy
+      overlord: hre
+      cause: "カトー＝カンブレジ条約でサヴォイア公エマヌエーレ・フィリベルトに返還"
+      source: "ja.wikipedia: カトー＝カンブレジ条約"
     - from: 1648
       owner: savoy
       overlord: hre
@@ -636,6 +952,10 @@
   select:
     pieces: [FRA-Nice]
   timeline:
+    - from: 1453
+      owner: savoy
+      note: "1388年からサヴォイア領。1543年にフランス・オスマン艦隊に包囲された。"
+      source: "ja.wikipedia: ニース伯国"
     - from: 1648
       owner: savoy
       source: "ja.wikipedia: ニース伯国"
@@ -675,6 +995,10 @@
   select:
     pieces: [FRA-Barcelonnette]
   timeline:
+    - from: 1453
+      owner: savoy
+      note: "1388年からサヴォイア領。"
+      source: "ja.wikipedia: バルスロネット"
     - from: 1648
       owner: savoy
       source: "ja.wikipedia: バルスロネット"
@@ -706,6 +1030,19 @@
   select:
     iso: [MCO]
   timeline:
+    - from: 1453
+      owner: monaco
+      note: "グリマルディ家の領主国。"
+      source: "ja.wikipedia: モナコ"
+    - from: 1524
+      owner: spain
+      cause: "ブルゴス条約・トルデシリャス条約でスペイン（カール5世）の保護下に入る"
+      note: "モナコ（グリマルディ家）。スペインの保護下にあるため、保護国の方針によりスペインの色で塗る。1612年にオノレ2世が「公」を称した。"
+      source: "ja.wikipedia: モナコ"
+    - from: 1641
+      owner: france
+      cause: "ペロンヌ条約でフランスの保護下に入り、スペイン兵を追放（11月）"
+      source: "ja.wikipedia: モナコ"
     - from: 1648
       owner: france
       note: モナコ公国（グリマルディ家）。1641年のペロンヌ条約以来フランスの保護下にあるため、保護国の方針によりフランスの色で塗る。
@@ -747,6 +1084,20 @@
   select:
     pieces: [FRA-Ajaccio, FRA-Sartene, FRA-Bastia, FRA-Calvi, FRA-Corte]
   timeline:
+    - from: 1453
+      owner: genoa
+      note: "1453–1562年はジェノヴァのサン・ジョルジョ銀行が統治した。"
+      source: "ja.wikipedia: コルシカ島"
+    - from: 1553
+      owner: france
+      certainty: occupied
+      cause: "フランス・オスマン連合軍のコルシカ侵攻（サンピエロ・コルソが協力）"
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Corsica_(1553)"
+    - from: 1559
+      owner: genoa
+      cause: "カトー＝カンブレジ条約でジェノヴァに返還"
+      note: "サンピエロ・コルソの反乱（1564–69）が続いた。"
+      source: "ja.wikipedia: カトー＝カンブレジ条約"
     - from: 1648
       owner: genoa
       source: "ja.wikipedia: コルシカ島"
@@ -788,6 +1139,10 @@
   select:
     iso: [AND]
   timeline:
+    - from: 1453
+      owner: andorra
+      note: "フォワ伯（1479年からナバラ王、1589年からフランス王）とウルジェル司教が共同の君主。"
+      source: "ja.wikipedia: アンドラ"
     - from: 1648
       owner: andorra
       source: "ja.wikipedia: アンドラ"
@@ -798,6 +1153,15 @@
   select:
     iso: [ESP]
   timeline:
+    - from: 1453
+      owner: castile
+      note: "カスティリャ王国（レオン・ガリシア・アンダルシア・バスク地方などを含む）。アラゴン連合王国・ナバラ・グラナダは別の地域で描く。"
+      source: "ja.wikipedia: カスティーリャ王国"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
     - from: 1648
       owner: spain
       note: メノルカ島は別の地域（menorca）で描く。ジブラルタル（1713年イギリス領）とオリベンサ（1801年までポルトガル領）はピースが粗く描かない。
@@ -808,6 +1172,14 @@
   select:
     pieces: [ESP-Balears_Illes_Menorca]
   timeline:
+    - from: 1453
+      owner: aragon
+      source: "ja.wikipedia: アラゴン連合王国"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
     - from: 1648
       owner: spain
     - from: 1708
@@ -853,6 +1225,29 @@
   select:
     pieces: [ESP-Barcelona, ESP-Girona]
   timeline:
+    - from: 1453
+      owner: aragon
+      source: "ja.wikipedia: カタルーニャ君主国"
+    - from: 1462
+      owner: aragon
+      certainty: uncertain
+      cause: "カタルーニャ内戦（議会派がフアン2世に反乱）"
+      note: "反乱側はカスティリャ王エンリケ4世、ポルトガルのペドロ、アンジュー家のルネを次々に君主に迎えた。"
+      source: "https://en.wikipedia.org/wiki/Catalan_Civil_War"
+    - from: 1472
+      owner: aragon
+      cause: "バルセロナの降伏（10月）で内戦が終わる"
+      source: "https://en.wikipedia.org/wiki/Catalan_Civil_War"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+    - from: 1641
+      owner: france
+      certainty: occupied
+      cause: "収穫人戦争（1640）。カタルーニャがルイ13世をバルセロナ伯に迎え、フランス軍が駐留（1月）"
+      source: "ja.wikipedia: 収穫人戦争"
     - from: 1648
       owner: france
       certainty: occupied
@@ -887,6 +1282,24 @@
   select:
     pieces: [ESP-Lleida, ESP-Tarragona]
   timeline:
+    - from: 1453
+      owner: aragon
+      source: "ja.wikipedia: カタルーニャ君主国"
+    - from: 1462
+      owner: aragon
+      certainty: uncertain
+      cause: "カタルーニャ内戦（議会派がフアン2世に反乱）"
+      note: "反乱側はカスティリャ王エンリケ4世、ポルトガルのペドロ、アンジュー家のルネを次々に君主に迎えた。"
+      source: "https://en.wikipedia.org/wiki/Catalan_Civil_War"
+    - from: 1472
+      owner: aragon
+      cause: "バルセロナの降伏（10月）で内戦が終わる"
+      source: "https://en.wikipedia.org/wiki/Catalan_Civil_War"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
     - from: 1648
       owner: spain
       note: リェイダとタラゴナは反乱中もスペイン王の軍が保持した。
@@ -917,6 +1330,10 @@
     iso: [PRT]
     pieces: [PRT-RegiAo_AutA3noma_dos_AAores]   # アゾレス諸島（範囲外 zone=world のピース）
   timeline:
+    - from: 1453
+      owner: portugal
+      note: "1580–1640年はスペイン王がポルトガル王を兼ねた同君連合（ポルトガルは別の王国のまま。ポルトガルの色で描く）。"
+      source: "ja.wikipedia: ポルトガル王国"
     - from: 1648
       owner: portugal
       note: 1640年に再独立。スペインの承認は1668年のリスボン条約。ナポレオン期のフランス軍の占領（1807–08、1810–11）は一時的なため描かない。
@@ -929,6 +1346,10 @@
     adm1: ["GBR/England", "GBR/Wales"]
     pieces: [GBR-Isles_of_Scilly]
   timeline:
+    - from: 1453
+      owner: britain
+      note: "ウェールズは1536・1543年の連合法でイングランドに統合された。"
+      source: "ja.wikipedia: イングランド王国"
     - from: 1648
       owner: britain
       source: "ja.wikipedia: イングランド王国"
@@ -938,6 +1359,9 @@
   select:
     adm1: ["GBR/Scotland"]
   timeline:
+    - from: 1453
+      owner: scotland
+      source: "ja.wikipedia: スコットランド王国"
     - from: 1648
       owner: scotland
       source: "ja.wikipedia: スコットランド王国"
@@ -960,6 +1384,15 @@
     iso: [IRL]
     adm1: ["GBR/Northern Ireland"]
   timeline:
+    - from: 1453
+      owner: ireland
+      certainty: nominal
+      note: "アルスターなどゲール系の諸侯の地。イングランド王（アイルランド卿）の支配は名目的。"
+      source: "ja.wikipedia: アイルランド卿"
+    - from: 1603
+      owner: ireland
+      cause: "メリフォント条約（3月）で九年戦争が終わり、アルスターもイングランドの支配下に"
+      source: "ja.wikipedia: 九年戦争 (アイルランド)"
     - from: 1648
       owner: ireland
       note: 1642–49年はカトリック同盟（キルケニー連合）が島の大半を支配していた。
@@ -982,6 +1415,19 @@
   select:
     iso: [ISL]
   timeline:
+    - from: 1453
+      owner: norway
+      overlord: kalmar_union
+      note: "ノルウェー王国の属領（1380年からデンマーク王がノルウェー王を兼ねる）。1550年に宗教改革が強制された。"
+      source: "ja.wikipedia: アイスランドの歴史"
+    - from: 1523
+      owner: norway
+      cause: "スウェーデンの離脱でカルマル連合が解体（デンマーク＝ノルウェーの同君連合は続く）"
+      source: "ja.wikipedia: カルマル同盟"
+    - from: 1537
+      owner: denmark
+      cause: "デンマーク王クリスチャン3世がノルウェーをデンマークの一部とする（1536年）"
+      source: "ja.wikipedia: デンマーク＝ノルウェー"
     - from: 1648
       owner: denmark
       source: "ja.wikipedia: アイスランドの歴史"
@@ -1013,6 +1459,10 @@
   select:
     iso: [GRL]
   timeline:
+    - from: 1453
+      owner: null
+      note: "イヌイットの地。"
+      source: "ja.wikipedia: グリーンランドの歴史"
     - from: 1648
       owner: null
       note: デンマーク＝ノルウェーの植民は1721年から西岸で始まった。東岸は19世紀末まで植民されていない。
@@ -1047,6 +1497,10 @@
   select:
     pieces: [GRL-Kujalleq, GRL-Qeqqata, GRL-Qeqertalik, GRL-Avannaata]
   timeline:
+    - from: 1453
+      owner: null
+      note: "イヌイットの地。中世のノルド人（ヴァイキング）の入植地は15世紀前半までに絶えた（最後の記録は1408年）。"
+      source: "ja.wikipedia: グリーンランドの歴史"
     - from: 1648
       owner: null
       note: イヌイットの地。中世のノルド人（ヴァイキング）の入植地は15世紀に絶えていた。
@@ -1071,6 +1525,21 @@
   select:
     iso: [MAR]
   timeline:
+    - from: 1453
+      owner: wattasid
+      note: "フェスを都とするマリーン朝（1465年に滅亡）とワッタース朝の王国。大西洋岸のポルトガルの要塞（アゼンムール 1513–41、マザガン 1514–1769）はピースが県単位で粗いため描かない（1648年以降のマザガンも同じ）。"
+      source: "ja.wikipedia: ワッタース朝"
+    - from: 1549
+      owner: morocco
+      cause: "サアド朝のムハンマド・アッシャイフがフェスを征服（1月）"
+      note: "1554年にワッタース家がオスマン帝国の支援で一時フェスを取り戻した。"
+      source: "ja.wikipedia: サアド朝"
+    - from: 1603
+      owner: morocco
+      certainty: uncertain
+      cause: "アフマド・マンスールの死後、王子たちが争い、サアド朝が分裂"
+      note: "スペインがララシュ（1610–89）とマアムーラ（1614–81）を得たが、ピースが県単位で粗いため描かない。"
+      source: "ja.wikipedia: サアド朝"
     - from: 1648
       owner: morocco
       certainty: uncertain
@@ -1086,6 +1555,14 @@
   select:
     pieces: [MAR-Prefecture_of_Tangier_Assilah]
   timeline:
+    - from: 1453
+      owner: wattasid
+      source: "ja.wikipedia: タンジール"
+    - from: 1471
+      owner: portugal
+      cause: "アフォンソ5世がアシラを攻略し、タンジールも占領（8月）"
+      note: "アシラは1550年にポルトガルが放棄した（1577–89年に再びポルトガル領）。"
+      source: "ja.wikipedia: タンジール"
     - from: 1648
       owner: portugal
       source: "ja.wikipedia: タンジェ"
@@ -1128,6 +1605,15 @@
   select:
     pieces: [MAR-Guelmim_Province, MAR-Province_de_Tan_Tan, MAR-Assa_Zag_Province]
   timeline:
+    - from: 1453
+      owner: null
+      note: "ヌーン川流域の部族地域。"
+      source: "ja.wikipedia: サアド朝"
+    - from: 1511
+      owner: morocco
+      certainty: nominal
+      cause: "サアド家がスースで台頭"
+      source: "ja.wikipedia: サアド朝"
     - from: 1648
       owner: morocco
       certainty: nominal
@@ -1162,6 +1648,10 @@
     iso: [ESH, MRT, MLI]
     pieces: [MAR-Tarfaya_Province, MAR-Province_d_Es_Semara, MAR-Oued_Ed_Dahab_Province]
   timeline:
+    - from: 1453
+      owner: null
+      note: "遊牧部族の地域で、国家の支配は及んでいない。サアド朝はサハラ越えの交易路と岩塩の産地（タガーザ・タウデニ）を求めて南に遠征した（1591年ソンガイ征服）。"
+      source: "ja.wikipedia: サアド朝"
     - from: 1648
       owner: null
       note: 遊牧部族の地域で、国家の支配は及んでいない。
@@ -1198,6 +1688,22 @@
   select:
     iso: [DZA]
   timeline:
+    - from: 1453
+      owner: zayyanid
+      certainty: nominal
+      note: "アルジェなど中部の港町は自治的で、トレムセンのザイヤーン朝やチュニスのハフス朝に名目的に従っていた。"
+      source: "ja.wikipedia: ザイヤーン朝"
+    - from: 1516
+      owner: algiers
+      cause: "オルチ（バルバロッサ兄）がアルジェの支配者となる"
+      note: "スペインは1510年からアルジェの港の前の小島に要塞（ペニョン）を置いた（1529年にハイレッディンが攻略）。"
+      source: "ja.wikipedia: オルチ・レイス"
+    - from: 1519
+      owner: algiers
+      overlord: ottoman
+      cause: "ハイレッディン（バルバロッサ）がオスマン帝国のスルタンに臣従（アルジェ州の成立）"
+      note: "1520–25年はカビリーのクク王国の勢力がアルジェを奪っていた。"
+      source: "ja.wikipedia: バルバロス・ハイレッディン"
     - from: 1648
       owner: algiers
       overlord: ottoman
@@ -1228,6 +1734,18 @@
     pieces: [DZA-Tamanghasset]
   note: ピース ID と名前は誤っているが、位置（経度 -0.68、緯度 35.53）と面積から現在のオラン県にあたる。
   timeline:
+    - from: 1453
+      owner: zayyanid
+      source: "ja.wikipedia: オラン"
+    - from: 1509
+      owner: castile
+      cause: "シスネロス枢機卿の遠征でオランを占領（5月。メルス・エル・ケビールは1505年）"
+      source: "ja.wikipedia: オラン"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
     - from: 1648
       owner: spain
       source: "ja.wikipedia: オラン"
@@ -1272,6 +1790,16 @@
   select:
     pieces: [DZA-Laghouat, DZA-Ghardaia, DZA-El_Oued, DZA-Ouargla, DZA-El_Bayadh]
   timeline:
+    - from: 1453
+      owner: null
+      note: "トゥグルト（ジャッラーブ家）・ワルグラのスルタン国、ムザブのイバード派の町などの自立したオアシス。"
+      source: "ja.wikipedia: トゥグルト"
+    - from: 1552
+      owner: algiers
+      overlord: ottoman
+      certainty: nominal
+      cause: "サーリフ・レイスのトゥグルト・ワルグラ遠征"
+      source: "https://en.wikipedia.org/wiki/Salah_Rais"
     - from: 1648
       owner: algiers
       overlord: ottoman
@@ -1300,6 +1828,10 @@
   select:
     pieces: [DZA-Adrar, DZA-Tamanghasset_2, DZA-Illizi, DZA-Tindouf, DZA-Bechar]
   timeline:
+    - from: 1453
+      owner: null
+      note: "トゥアレグ人などの遊牧民の地。トゥアト・グララのオアシスは1583年にサアド朝のアフマド・マンスールが征服した（描かない）。"
+      source: "ja.wikipedia: サアド朝"
     - from: 1648
       owner: null
       note: トゥアレグなどの遊牧部族の地域。トゥアトのオアシスはモロッコのスルタンに名目的に従うこともあった。
@@ -1328,6 +1860,33 @@
   select:
     iso: [TUN]
   timeline:
+    - from: 1453
+      owner: hafsid
+      source: "ja.wikipedia: ハフス朝"
+    - from: 1534
+      owner: ottoman
+      cause: "ハイレッディンがチュニスを占領（8月）"
+      source: "ja.wikipedia: バルバロス・ハイレッディン"
+    - from: 1535
+      owner: hafsid
+      overlord: spain
+      cause: "カール5世のチュニス遠征（6–7月）。ハフス朝のハサンがスペインの保護下で復位"
+      note: "ラ・グレット（ハルク・エル・ワーディー）の要塞はスペイン軍が保持した（1574年まで）。"
+      source: "ja.wikipedia: チュニス征服 (1535年)"
+    - from: 1569
+      owner: ottoman
+      cause: "アルジェのウルチ・アリーがチュニスを占領"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_Tunis_(1569)"
+    - from: 1573
+      owner: hafsid
+      overlord: spain
+      cause: "ドン・フアン（フアン・デ・アウストリア）がチュニスを奪回（10月）"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_Tunis_(1573)"
+    - from: 1574
+      owner: tunis
+      overlord: ottoman
+      cause: "オスマン帝国がチュニスとラ・グレットを征服（9月）。ハフス朝の滅亡"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_Tunis_(1574)"
     - from: 1648
       owner: tunis
       overlord: ottoman
@@ -1358,6 +1917,16 @@
   select:
     iso: [LBY]
   timeline:
+    - from: 1453
+      owner: hafsid
+      certainty: nominal
+      note: "トリポリタニア。トリポリの町は自治的で、ハフス朝の支配は名目的。"
+      source: "ja.wikipedia: ハフス朝"
+    - from: 1551
+      owner: tripoli
+      overlord: ottoman
+      cause: "オスマン帝国（シナン・パシャとトゥルグト・レイス）がトリポリを征服（8月）"
+      source: "ja.wikipedia: トリポリ包囲戦 (1551年)"
     - from: 1648
       owner: tripoli
       overlord: ottoman
@@ -1406,6 +1975,9 @@
   select:
     pieces: [LBY-Murzuq, LBY-Sabha, LBY-Wadi_al_Hayaa, LBY-Ash_Shati, LBY-Ghat, LBY-Al_Jufrah, LBY-Ghadamis, LBY-Mizdah, LBY-Ajdabiya]
   timeline:
+    - from: 1453
+      owner: null
+      source: "ja.wikipedia: フェザーン"
     - from: 1648
       owner: tripoli
       overlord: ottoman
@@ -1430,6 +2002,16 @@
   select:
     pieces: [LBY-Murzuq, LBY-Sabha, LBY-Wadi_al_Hayaa, LBY-Ash_Shati, LBY-Ghat]
   timeline:
+    - from: 1453
+      owner: null
+      note: "ザウィーラのバヌー・ハッターブ家、1550年ごろからはムルズクのアウラード・ムハンマド家が治めたオアシス。"
+      source: "ja.wikipedia: フェザーン"
+    - from: 1577
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      cause: "トリポリのオスマン軍のフェザーン遠征。アウラード・ムハンマド家が貢納する（年は要確認）"
+      source: "ja.wikipedia: フェザーン"
     - from: 1648
       owner: tripoli
       overlord: ottoman
@@ -1473,6 +2055,16 @@
   select:
     pieces: [LBY-Ghadamis]
   timeline:
+    - from: 1453
+      owner: null
+      note: "サハラ交易のオアシス都市。"
+      source: "ja.wikipedia: ガダーミス"
+    - from: 1551
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      cause: "オスマン帝国のトリポリ征服"
+      source: "ja.wikipedia: トリポリ包囲戦 (1551年)"
     - from: 1648
       owner: tripoli
       overlord: ottoman
@@ -1511,6 +2103,15 @@
   select:
     pieces: [LBY-Mizdah]
   timeline:
+    - from: 1453
+      owner: null
+      source: "ja.wikipedia: トリポリタニア"
+    - from: 1551
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      cause: "オスマン帝国のトリポリ征服"
+      source: "ja.wikipedia: トリポリ包囲戦 (1551年)"
     - from: 1648
       owner: tripoli
       overlord: ottoman
@@ -1549,6 +2150,15 @@
   select:
     pieces: [LBY-Al_Jufrah]
   timeline:
+    - from: 1453
+      owner: null
+      source: "ja.wikipedia: フェザーン"
+    - from: 1577
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      cause: "トリポリのオスマン軍のフェザーン遠征（年は要確認）"
+      source: "ja.wikipedia: フェザーン"
     - from: 1648
       owner: tripoli
       overlord: ottoman
@@ -1592,6 +2202,15 @@
   select:
     pieces: [LBY-Ajdabiya]
   timeline:
+    - from: 1453
+      owner: null
+      source: "ja.wikipedia: キレナイカ"
+    - from: 1638
+      owner: tripoli
+      overlord: ottoman
+      certainty: nominal
+      cause: "トリポリのオスマン軍がキレナイカを支配下に置く（年は要確認）"
+      source: "ja.wikipedia: キレナイカ"
     - from: 1648
       owner: tripoli
       overlord: ottoman
@@ -1649,6 +2268,9 @@
   select:
     pieces: [LBY-Al_Kufrah]
   timeline:
+    - from: 1453
+      owner: null
+      source: "ja.wikipedia: クフラ"
     - from: 1648
       owner: null
       source: "ja.wikipedia: クフラ"
@@ -1691,6 +2313,15 @@
   select:
     iso: [EGY]
   timeline:
+    - from: 1453
+      owner: mamluk
+      note: "マムルーク朝（首都カイロ）。シリア・ヒジャーズも治めた。"
+      source: "ja.wikipedia: マムルーク朝"
+    - from: 1517
+      owner: ottoman
+      cause: "セリム1世がカイロを征服（1月）。マムルーク朝の滅亡"
+      note: "エジプト州（総督はパシャ）。実際にはマムルークのベイたちが力を保った。"
+      source: "ja.wikipedia: マムルーク朝"
     - from: 1648
       owner: ottoman
       note: オスマン帝国の州。実権はしだいにマムルークのベイたちが握った。
@@ -1741,6 +2372,15 @@
   select:
     pieces: [EGY-Matrouh_Governorate]
   timeline:
+    - from: 1453
+      owner: mamluk
+      certainty: nominal
+      source: "ja.wikipedia: マムルーク朝"
+    - from: 1517
+      owner: ottoman
+      certainty: nominal
+      cause: "セリム1世がカイロを征服（1月）。マムルーク朝の滅亡"
+      source: "ja.wikipedia: マムルーク朝"
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -1779,6 +2419,16 @@
   select:
     pieces: [TUN-Tataouine]
   timeline:
+    - from: 1453
+      owner: hafsid
+      certainty: nominal
+      source: "ja.wikipedia: ハフス朝"
+    - from: 1574
+      owner: tunis
+      overlord: ottoman
+      certainty: nominal
+      cause: "オスマン帝国のチュニス征服"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_Tunis_(1574)"
     - from: 1648
       owner: tunis
       overlord: ottoman
@@ -3586,3 +4236,989 @@
       note: ターバーは国際仲裁の後、1989年に返還された。
       source: "https://ja.wikipedia.org/wiki/エジプト・イスラエル平和条約"
 
+
+
+# ================================================================ 1453–1647 に加えた地域（until: 1647。1648 年以降は外側の地域が効く）
+
+- id: calais_pale
+  name: "カレー（イングランド領）"
+  until: 1647
+  select:
+    pieces: [FRA-Calais]
+  timeline:
+    - from: 1453
+      owner: britain
+      label: "カレー"
+      note: "1347年からのイングランド領（カレー周辺の「カレー領」）。ギーヌなどを含む。"
+      source: "ja.wikipedia: カレー"
+    - from: 1558
+      owner: france
+      cause: "ギーズ公がカレーを奪回（1月）"
+      note: "1596–98年にはスペイン軍が一時占領した（ヴェルヴァン条約で返還）。"
+      source: "ja.wikipedia: カレー包囲戦 (1558年)"
+
+- id: boulogne
+  name: "ブーローニュ伯領"
+  until: 1647
+  select:
+    pieces: [FRA-Boulogne_sur_Mer]
+  timeline:
+    - from: 1453
+      owner: burgundy
+      note: "1435年のアラスの和約以来、ブルゴーニュ公の領地。"
+      source: "ja.wikipedia: アラスの和約"
+    - from: 1477
+      owner: france
+      cause: "シャルル突進公がナンシーの戦いで戦死（1月）。ルイ11世がブルゴーニュ公領を接収"
+      source: "ja.wikipedia: ナンシーの戦い"
+    - from: 1544
+      owner: britain
+      certainty: occupied
+      cause: "ヘンリ8世がブーローニュを占領（9月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Boulogne_(1544)"
+    - from: 1550
+      owner: france
+      cause: "ブーローニュ条約でフランスに返還（3月）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Boulogne_(1550)"
+
+- id: somme_towns
+  name: "ソンム川の諸都市（アブヴィル・ペロンヌ・モンディディエ）"
+  until: 1647
+  select:
+    pieces: [FRA-Abbeville, FRA-Peronne, FRA-Montdidier]
+  timeline:
+    - from: 1453
+      owner: burgundy
+      note: "アラスの和約（1435）でブルゴーニュ公に譲られた「ソンム川の諸都市」。"
+      source: "ja.wikipedia: アラスの和約"
+    - from: 1463
+      owner: france
+      cause: "ルイ11世が40万エキュでソンム川の諸都市を買い戻す"
+      source: "ja.wikipedia: ルイ11世 (フランス王)"
+    - from: 1465
+      owner: burgundy
+      cause: "公益同盟戦争の講和（コンフラン条約）でブルゴーニュ側に戻る"
+      source: "ja.wikipedia: 公益同盟"
+    - from: 1477
+      owner: france
+      cause: "シャルル突進公がナンシーの戦いで戦死（1月）。ルイ11世がブルゴーニュ公領を接収"
+      source: "ja.wikipedia: ナンシーの戦い"
+
+- id: amiens_1471
+  name: "アミアン"
+  until: 1647
+  select:
+    pieces: [FRA-Amiens]
+  timeline:
+    - from: 1453
+      owner: burgundy
+      note: "アラスの和約（1435）でブルゴーニュ公に譲られた「ソンム川の諸都市」の一つ。"
+      source: "ja.wikipedia: アラスの和約"
+    - from: 1463
+      owner: france
+      cause: "ルイ11世がソンム川の諸都市を買い戻す"
+      source: "ja.wikipedia: ルイ11世 (フランス王)"
+    - from: 1465
+      owner: burgundy
+      cause: "公益同盟戦争の講和（コンフラン条約）でブルゴーニュ側に戻る"
+      source: "ja.wikipedia: 公益同盟"
+    - from: 1471
+      owner: france
+      cause: "ルイ11世がアミアンとサン＝カンタンを奪う（1月）"
+      source: "ja.wikipedia: ルイ11世 (フランス王)"
+
+- id: saint_quentin_1471
+  name: "サン＝カンタン"
+  until: 1647
+  select:
+    pieces: [FRA-Saint_Quentin]
+  timeline:
+    - from: 1453
+      owner: burgundy
+      note: "アラスの和約（1435）でブルゴーニュ公に譲られた「ソンム川の諸都市」の一つ。"
+      source: "ja.wikipedia: アラスの和約"
+    - from: 1463
+      owner: france
+      cause: "ルイ11世がソンム川の諸都市を買い戻す"
+      source: "ja.wikipedia: ルイ11世 (フランス王)"
+    - from: 1465
+      owner: burgundy
+      cause: "公益同盟戦争の講和（コンフラン条約）でブルゴーニュ側に戻る"
+      source: "ja.wikipedia: 公益同盟"
+    - from: 1471
+      owner: france
+      cause: "ルイ11世がアミアンとサン＝カンタンを奪う（1月）"
+      note: "1557年のサン＝カンタンの戦いの後、1559年までスペイン軍が占領した（短いため描かない）。"
+      source: "ja.wikipedia: ルイ11世 (フランス王)"
+
+- id: burgundy_duchy
+  name: "ブルゴーニュ公領（ディジョン・オーセール）"
+  until: 1647
+  select:
+    pieces: [FRA-Dijon, FRA-Beaune, FRA-Montbard, FRA-Autun, FRA-Chalon_sur_Saone, FRA-Auxerre, FRA-Avallon]
+  timeline:
+    - from: 1453
+      owner: burgundy
+      note: "ヴァロワ家のブルゴーニュ公の本領（首都ディジョン）。オーセール伯領は1435年に得た。"
+      source: "ja.wikipedia: ブルゴーニュ公国"
+    - from: 1477
+      owner: france
+      cause: "シャルル突進公がナンシーの戦いで戦死（1月）。ルイ11世がブルゴーニュ公領を接収"
+      source: "ja.wikipedia: ナンシーの戦い"
+
+- id: maconnais_charolais
+  name: "マコネとシャロレ（ブルゴーニュ公領の南部）"
+  until: 1647
+  select:
+    pieces: [FRA-Macon, FRA-Charolles, FRA-Louhans]
+  timeline:
+    - from: 1453
+      owner: burgundy
+      note: "マコネ伯領は1435年のアラスの和約で得た。"
+      source: "ja.wikipedia: ブルゴーニュ公国"
+    - from: 1477
+      owner: france
+      cause: "シャルル突進公がナンシーの戦いで戦死（1月）。ルイ11世がブルゴーニュ公領を接収"
+      note: "シャロレ伯領は1493年のサンリス条約でハプスブルク家に戻され、フランス王の封土として1684年までハプスブルク家（スペイン王）が持っていた（ピースが粗いため描かない）。"
+      source: "ja.wikipedia: ナンシーの戦い"
+
+- id: brittany_duchy
+  name: "ブルターニュ公国"
+  until: 1647
+  select:
+    pieces: [FRA-Brest, FRA-Chateaulin, FRA-Morlaix, FRA-Quimper, FRA-Dinan, FRA-Guingamp, FRA-Lannion, FRA-Saint_Brieuc, FRA-Fougeres, FRA-Redon, FRA-Rennes, FRA-Saint_Malo, FRA-Lorient, FRA-Pontivy, FRA-Vannes, FRA-Nantes, FRA-Saint_Nazaire, FRA-Chateaubriant]
+  timeline:
+    - from: 1453
+      owner: brittany
+      note: "フランス王に臣従しつつ独立を保った公国。1491年の女公アンヌとシャルル8世の結婚からフランス王との同君連合（それぞれの色で描く）。"
+      source: "ja.wikipedia: ブルターニュ公国"
+    - from: 1532
+      owner: france
+      cause: "ブルターニュとフランスの統合勅令（ヴァンヌの三部会の請願を受けて。8月）"
+      source: "ja.wikipedia: ブルターニュ公国"
+
+- id: provence_west
+  name: "プロヴァンス伯領（マルセイユ・エクス）"
+  until: 1647
+  select:
+    pieces: [FRA-Aix_en_Provence, FRA-Arles, FRA-Istres, FRA-Marseille, FRA-Toulon, FRA-Apt]
+  timeline:
+    - from: 1453
+      owner: provence
+      note: "アンジュー家の伯領（ルネ・ダンジュー）。神聖ローマ帝国のアルル王国に名目上属したが、実際には独立していた。"
+      source: "ja.wikipedia: プロヴァンス伯"
+    - from: 1481
+      owner: france
+      cause: "シャルル・デュ・メーヌの遺言でルイ11世が相続（12月）"
+      note: "1486年にフランス王国に統合された。"
+      source: "ja.wikipedia: プロヴァンス伯"
+
+- id: provence_east
+  name: "プロヴァンス伯領（東部・高地）"
+  until: 1647
+  select:
+    pieces: [FRA-Brignoles, FRA-Draguignan, FRA-Grasse, FRA-Digne_les_Bains, FRA-Forcalquier, FRA-Castellane]
+  timeline:
+    - from: 1453
+      owner: provence
+      note: "アンジュー家の伯領（ルネ・ダンジュー）。ニース伯領は1388年からサヴォイア領。"
+      source: "ja.wikipedia: プロヴァンス伯"
+    - from: 1481
+      owner: france
+      cause: "シャルル・デュ・メーヌの遺言でルイ11世が相続（12月）"
+      note: "1486年にフランス王国に統合された。"
+      source: "ja.wikipedia: プロヴァンス伯"
+
+- id: bearn
+  name: "ベアルン"
+  until: 1647
+  select:
+    pieces: [FRA-Pau, FRA-Oloron_Sainte_Marie]
+  timeline:
+    - from: 1453
+      owner: bearn
+      note: "フォワ伯家が治め、主権を主張した子爵領。オロロン郡の東部のスール（フランス王の封土）を含む。"
+      source: "ja.wikipedia: ベアルン"
+    - from: 1479
+      owner: navarre
+      cause: "フォワ家のフランソワ・フェビュスがナバラ王位を継ぐ（ナバラ王がベアルンを兼ねる）"
+      source: "ja.wikipedia: フランシスコ・フェボ"
+    - from: 1620
+      owner: france
+      cause: "ルイ13世がベアルンに出兵し、ナバラ王国・ベアルンをフランス王国に統合（10月の勅令）"
+      note: "1589年からはナバラ王（アンリ4世・ルイ13世）がフランス王を兼ねる同君連合だった。"
+      source: "ja.wikipedia: ベアルン"
+
+- id: pre1648_sedan
+  name: "スダン公国"
+  until: 1647
+  select:
+    pieces: [FRA-Sedan]
+  timeline:
+    - from: 1453
+      owner: sedan
+      certainty: uncertain
+      note: "ラ・マルク家の独立の領地（のちスダン公国）。公国はスダン郡より小さく、郡の残りはフランス王領なので斜線で示す。"
+      source: "https://en.wikipedia.org/wiki/Principality_of_Sedan"
+    - from: 1642
+      owner: france
+      cause: "ブイヨン公がサン＝マールの陰謀に加わった罪で、スダンをフランス王に明け渡す（9月）"
+      source: "https://en.wikipedia.org/wiki/Principality_of_Sedan"
+
+- id: lower_navarre
+  name: "低ナバラ（ピレネー北側のナバラ）"
+  until: 1647
+  select:
+    pieces: [FRA-Bayonne]
+  timeline:
+    - from: 1453
+      owner: navarre
+      label: "低ナバラ"
+      note: "ピースのバイヨンヌ郡の大半は、ナバラ王国のピレネー北側の部分（低ナバラ）。海沿いのラブールとバイヨンヌの町は1451年からフランス領。"
+      source: "ja.wikipedia: 低ナバラ"
+    - from: 1620
+      owner: france
+      cause: "ルイ13世がナバラ王国・ベアルンをフランス王国に統合（10月の勅令）"
+      source: "ja.wikipedia: 低ナバラ"
+
+- id: metz_1552
+  name: "メス（三司教領）"
+  until: 1647
+  select:
+    pieces: [FRA-Metz]
+  timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "帝国自由都市メスとメス司教領。"
+      source: "ja.wikipedia: 三司教領"
+    - from: 1552
+      owner: france
+      overlord: hre
+      cause: "アンリ2世がメス・トゥール・ヴェルダンを占領（シャンボール条約でプロテスタント諸侯と同盟）"
+      note: "法的には帝国の一部のまま、フランス王が「保護者」として治めた。1552–53年のカール5世のメス包囲は失敗した。"
+      source: "ja.wikipedia: 三司教領"
+
+- id: toul_1552
+  name: "トゥール（三司教領）"
+  until: 1647
+  select:
+    pieces: [FRA-Toul]
+  timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "トゥール司教領と帝国都市トゥール。"
+      source: "ja.wikipedia: 三司教領"
+    - from: 1552
+      owner: france
+      overlord: hre
+      cause: "アンリ2世がメス・トゥール・ヴェルダンを占領"
+      note: "法的には帝国の一部のまま、フランス王が「保護者」として治めた。"
+      source: "ja.wikipedia: 三司教領"
+
+- id: verdun_1552
+  name: "ヴェルダン（三司教領）"
+  until: 1647
+  select:
+    pieces: [FRA-Verdun]
+  timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ヴェルダン司教領と帝国都市ヴェルダン。"
+      source: "ja.wikipedia: 三司教領"
+    - from: 1552
+      owner: france
+      overlord: hre
+      cause: "アンリ2世がメス・トゥール・ヴェルダンを占領"
+      note: "法的には帝国の一部のまま、フランス王が「保護者」として治めた。"
+      source: "ja.wikipedia: 三司教領"
+
+- id: cambrai_bishopric
+  name: "カンブレー司教領"
+  until: 1647
+  select:
+    pieces: [FRA-Cambrai]
+  timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "帝国の司教領。司教はブルゴーニュ公家の出身者が多かった。"
+      source: "ja.wikipedia: カンブレー司教領"
+    - from: 1543
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "カール5世がカンブレーを保護下に置き、城塞を築く"
+      source: "ja.wikipedia: カンブレー司教領"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位。ネーデルラントとフランシュ＝コンテはスペイン王フェリペ2世が継ぐ"
+      source: "ja.wikipedia: カール5世 (神聖ローマ皇帝)"
+    - from: 1581
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "アンジュー公（フランス王の弟）がカンブレーを奪い、バラニーが治める"
+      source: "ja.wikipedia: カンブレー"
+    - from: 1595
+      owner: spain
+      overlord: hre
+      cause: "スペイン軍がカンブレーを奪回"
+      source: "ja.wikipedia: カンブレー"
+
+- id: chablais_bern
+  name: "シャブレ西部とジュヌヴォワ北部（ベルン領の時代）"
+  until: 1647
+  select:
+    pieces: [FRA-Thonon_les_Bains, FRA-Saint_Julien_en_Genevois]
+  timeline:
+    - from: 1453
+      owner: savoy
+      overlord: hre
+      source: "ja.wikipedia: サヴォイア公国"
+    - from: 1536
+      owner: switzerland
+      cause: "ベルンがヴォーとシャブレ西部・ジェクスを征服（東シャブレはヴァレー）"
+      source: "https://en.wikipedia.org/wiki/Bernese_invasion_of_Vaud"
+    - from: 1567
+      owner: savoy
+      overlord: hre
+      cause: "ローザンヌ条約（1564）にもとづきベルンがシャブレ・ジェクスをサヴォイアに返還"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Lausanne_(1564)"
+
+- id: bresse_bugey
+  name: "ブレスとビュジェ（サヴォイア領）"
+  until: 1647
+  select:
+    pieces: [FRA-Bourg_en_Bresse, FRA-Belley, FRA-Nantua]
+  timeline:
+    - from: 1453
+      owner: savoy
+      overlord: hre
+      note: "サヴォイア公国のソーヌ川・ローヌ川の西側の領地。ドンブ（ブルボン家）は含めない。"
+      source: "ja.wikipedia: ブレス"
+    - from: 1536
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "フランソワ1世がサヴォイア公国に侵攻し、サヴォワ・ピエモンテを占領（イタリア戦争）"
+      source: "ja.wikipedia: イタリア戦争"
+    - from: 1559
+      owner: savoy
+      overlord: hre
+      cause: "カトー＝カンブレジ条約でサヴォイア公エマヌエーレ・フィリベルトに返還"
+      source: "ja.wikipedia: カトー＝カンブレジ条約"
+    - from: 1601
+      owner: france
+      cause: "リヨン条約（1月）でサヴォイア公がブレス・ビュジェ・ヴァルロメ・ジェクスをフランスに譲り、サルッツォを得る"
+      source: "ja.wikipedia: リヨン条約 (1601年)"
+
+- id: gex
+  name: "ジェクス"
+  until: 1647
+  select:
+    pieces: [FRA-Gex]
+  timeline:
+    - from: 1453
+      owner: savoy
+      overlord: hre
+      source: "ja.wikipedia: ジェクス"
+    - from: 1536
+      owner: switzerland
+      cause: "ベルンがヴォー・シャブレ西部・ジェクスを征服"
+      source: "https://en.wikipedia.org/wiki/Bernese_invasion_of_Vaud"
+    - from: 1567
+      owner: savoy
+      overlord: hre
+      cause: "ローザンヌ条約（1564）にもとづきベルンがサヴォイアに返還"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Lausanne_(1564)"
+    - from: 1601
+      owner: france
+      cause: "リヨン条約（1月）でサヴォイア公がブレス・ビュジェ・ヴァルロメ・ジェクスをフランスに譲る"
+      source: "ja.wikipedia: リヨン条約 (1601年)"
+
+- id: aragon_kingdom
+  name: "アラゴン王国"
+  until: 1647
+  select:
+    pieces: [ESP-Huesca, ESP-Zaragoza, ESP-Teruel]
+  timeline:
+    - from: 1453
+      owner: aragon
+      source: "ja.wikipedia: アラゴン連合王国"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: valencia_kingdom
+  name: "バレンシア王国"
+  until: 1647
+  select:
+    pieces: [ESP-Castellon, ESP-Valencia, ESP-Alicante]
+  timeline:
+    - from: 1453
+      owner: aragon
+      source: "ja.wikipedia: バレンシア王国"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: mallorca_kingdom
+  name: "マヨルカ島・イビサ島"
+  until: 1647
+  select:
+    pieces: [ESP-Balears_Illes]
+  timeline:
+    - from: 1453
+      owner: aragon
+      source: "ja.wikipedia: マヨルカ王国"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: navarre_south
+  name: "ナバラ（ピレネー南側）"
+  until: 1647
+  select:
+    pieces: [ESP-Navarra]
+  timeline:
+    - from: 1453
+      owner: navarre
+      note: "王フアン2世（アラゴン王子）と王太子カルロス（ビアナ公）の内戦（1451–61）が続いていた。"
+      source: "ja.wikipedia: ナバラ王国"
+    - from: 1512
+      owner: castile
+      cause: "アラゴン王フェルナンド2世の軍がナバラを征服（7月。1515年にカスティリャに編入）"
+      source: "ja.wikipedia: ナバラ王国"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: granada_city
+  name: "グラナダ"
+  until: 1647
+  select:
+    pieces: [ESP-Granada]
+  timeline:
+    - from: 1453
+      owner: granada
+      note: "ナスル朝グラナダ王国の首都（アルハンブラ宮殿）。"
+      source: "ja.wikipedia: グラナダ王国"
+    - from: 1492
+      owner: castile
+      cause: "グラナダの降伏（1月2日）。レコンキスタの完了"
+      note: "1568–71年にはアルプハラスでモリスコ（改宗したイスラーム教徒）の反乱が起きた。"
+      source: "ja.wikipedia: グラナダ戦争"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: malaga_1487
+  name: "マラガ"
+  until: 1647
+  select:
+    pieces: [ESP-Malaga]
+  timeline:
+    - from: 1453
+      owner: granada
+      source: "ja.wikipedia: グラナダ王国"
+    - from: 1487
+      owner: castile
+      cause: "マラガ包囲戦（8月に降伏）"
+      note: "ロンダは1485年に落ちた。"
+      source: "ja.wikipedia: グラナダ戦争"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: almeria_1489
+  name: "アルメリア"
+  until: 1647
+  select:
+    pieces: [ESP-Almeria]
+  timeline:
+    - from: 1453
+      owner: granada
+      source: "ja.wikipedia: グラナダ王国"
+    - from: 1489
+      owner: castile
+      cause: "バサの降伏の後、ザガル（ムハンマド13世）がアルメリア・グアディクスを明け渡す（12月）"
+      source: "ja.wikipedia: グラナダ戦争"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: gran_canaria
+  name: "グラン・カナリア島・ランサローテ島・フエルテベントゥラ島"
+  until: 1647
+  select:
+    pieces: [ESP-Palmas_Las]
+  timeline:
+    - from: 1453
+      owner: castile
+      certainty: nominal
+      note: "ランサローテ島・フエルテベントゥラ島はカスティリャ王に臣従する領主が征服済みだったが、最大のグラン・カナリア島は先住民（カナリオ）の地だった。"
+      source: "ja.wikipedia: カナリア諸島"
+    - from: 1483
+      owner: castile
+      cause: "グラン・カナリア島の征服の完了（1478–83年、カトリック両王の遠征）"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_the_Canary_Islands"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: tenerife_la_palma
+  name: "テネリフェ島・ラ・パルマ島"
+  until: 1647
+  select:
+    pieces: [ESP-Santa_Cruz_de_Tenerife]
+  timeline:
+    - from: 1453
+      owner: castile
+      certainty: nominal
+      note: "ゴメラ島・イエロ島はカスティリャの領主が支配したが、テネリフェ島・ラ・パルマ島は先住民グアンチェの地だった。"
+      source: "ja.wikipedia: カナリア諸島"
+    - from: 1496
+      owner: castile
+      cause: "テネリフェ島の征服の完了（ラ・パルマ島は1493年）"
+      source: "ja.wikipedia: カナリア諸島"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: ceuta_portuguese
+  name: "セウタ"
+  until: 1647
+  select:
+    pieces: [ESP-Ceuta]
+  timeline:
+    - from: 1453
+      owner: portugal
+      label: "セウタ"
+      note: "1415年にポルトガルが攻略した。"
+      source: "ja.wikipedia: セウタ"
+    - from: 1640
+      owner: spain
+      cause: "ポルトガルの再独立に加わらず、スペイン王への忠誠を守る（1668年のリスボン条約で確定）"
+      source: "ja.wikipedia: セウタ"
+
+- id: melilla_1497
+  name: "メリリャ"
+  until: 1647
+  select:
+    pieces: [ESP-Melilla]
+  timeline:
+    - from: 1453
+      owner: wattasid
+      source: "ja.wikipedia: メリリャ"
+    - from: 1497
+      owner: castile
+      cause: "メディナ・シドニア公の遠征で占領（9月）"
+      source: "ja.wikipedia: メリリャ"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
+- id: orkney_shetland
+  name: "オークニー諸島・シェトランド諸島"
+  until: 1647
+  select:
+    pieces: [GBR-Orkney_Islands, GBR-Shetland_Islands]
+  timeline:
+    - from: 1453
+      owner: norway
+      overlord: kalmar_union
+      note: "ノルウェー王国の領土（オークニー伯はスコットランド貴族）。"
+      source: "ja.wikipedia: オークニー諸島"
+    - from: 1469
+      owner: scotland
+      cause: "デンマーク・ノルウェー王クリスチャン1世が、娘マーガレットとジェームズ3世の結婚の持参金の抵当として渡す（オークニー 1468年、シェトランド 1469年）"
+      note: "1472年にスコットランド王領に併合された。"
+      source: "ja.wikipedia: オークニー諸島"
+
+- id: the_pale
+  name: "ペイル（ダブリン・ミース・ラウス・キルデア）"
+  until: 1647
+  select:
+    pieces: [IRL-ARTANE_WHITEHALL_LEA_6, IRL-BALBRIGGAN_LEA_5, IRL-BALLYFERMOT_DRIMNAGH_LEA_5, IRL-BALLYMUN_FINGLAS_LEA_6, IRL-BLACKROCK_LEA_6, IRL-BLANCHARDSTOWN_MULHUDDART_LEA_5, IRL-CABRA_GLASNEVIN_LEA_7, IRL-CASTLEKNOCK_LEA_6, IRL-CLONDALKIN_LEA_7, IRL-CLONTARF_LEA_6, IRL-DONAGHMEDE_LEA_5, IRL-DUNDRUM_LEA_7, IRL-DUN_LAOGHAIRE_LEA_7, IRL-FIRHOUSE_BOHERNABREENA_LEA_5, IRL-GLENCULLEN_SANDYFORD_LEA_7, IRL-HOWTH_MALAHIDE_LEA_7, IRL-KILLINEY_SHANKILL_LEA_7, IRL-KIMMAGE_RATHMINES_LEA_6, IRL-LUCAN_LEA_5, IRL-NORTH_INNER_CITY_LEA_7, IRL-ONGAR_LEA_5, IRL-PALMERSTOWN_FONTHILL_LEA_5, IRL-PEMBROKE_LEA_5, IRL-RATHFARNHAM_TEMPLEOGUE_LEA_7, IRL-RUSH_LUSK_LEA_5, IRL-SOUTH_EAST_INNER_CITY_LEA_5, IRL-SOUTH_WEST_INNER_CITY_LEA_5, IRL-STILLORGAN_LEA_6, IRL-SWORDS_LEA_7, IRL-TALLAGHT_CENTRAL_LEA_6, IRL-TALLAGHT_SOUTH_LEA_5, IRL-ASHBOURNE_LEA_6, IRL-KELLS_LEA_7, IRL-LAYTOWN_BETTYSTOWN_LEA_7, IRL-NAVAN_LEA_7, IRL-RATOATH_LEA_7, IRL-TRIM_LEA_6, IRL-ARDEE_LEA_6, IRL-DROGHEDA_RURAL_LEA_4, IRL-DROGHEDA_URBAN_LEA_6, IRL-DUNDALK_SOUTH_LEA_7, IRL-DUNDALK_CARLINGFORD_LEA_6, IRL-ATHY_LEA_5, IRL-CELBRIDGE_LEA_4, IRL-CLANE_LEA_5, IRL-KILDARE_LEA_5, IRL-LEIXLIP_LEA_3, IRL-MAYNOOTH_LEA_5, IRL-NAAS_LEA_7, IRL-NEWBRIDGE_LEA_6]
+  timeline:
+    - from: 1453
+      owner: ireland
+      note: "イングランド王の支配が実際に及んだダブリン周辺の地域（ペイル）。キルデア伯が総督として実権を握った。"
+      source: "ja.wikipedia: ペイル"
+
+- id: ireland_confed_ulster_wicklow
+  name: "キャヴァン・モナハン・ウィックロー"
+  until: 1647
+  select:
+    pieces: [IRL-BAILIEBOROUGH_COOTEHILL_LEA_6, IRL-BALLYBAY_CLONES_LEA_5, IRL-BALLYJAMESDUFF_LEA_6, IRL-CARRICKMACROSS_CASTLEBLAYNEY_LEA_6, IRL-CAVAN_BELTURBET_LEA_6, IRL-MONAGHAN_LEA_7, IRL-ARKLOW_LEA_6, IRL-BALTINGLASS_LEA_6, IRL-GREYSTONES_LEA_6, IRL-WICKLOW_LEA_6]
+  timeline:
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "東アルスター（アントリム・ダウン）はスコットランド軍、ドニゴール東部・デリーはプロテスタントの軍が保った。地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
+
+- id: ireland_ormond
+  name: "レンスター南部とオーモンド（ウェックスフォード・キルケニー・ティペラリー・ウォーターフォード）"
+  until: 1647
+  select:
+    pieces: [IRL-ENNISCORTHY_LEA_6, IRL-GOREY_LEA_6, IRL-KILMUCKRIDGE_LEA_4, IRL-NEW_ROSS_LEA_6, IRL-ROSSLARE_LEA_5, IRL-WEXFORD_LEA_7, IRL-CARLOW_LEA_7, IRL-TULLOW_LEA_6, IRL-MUINEBEAG_LEA_5, IRL-CALLAN_THOMASTOWN_LEA_6, IRL-CASTLECOMER_LEA_6, IRL-KILKENNY_LEA_7, IRL-PILTOWN_LEA_5, IRL-DUNGARVAN_LEA_6, IRL-LISMORE_LEA_3, IRL-PORTLAW_KILMACTHOMAS_LEA_5, IRL-TRAMORE_WATERFORD_CITY_WEST_LEA_6, IRL-WATERFORD_CITY_EAST_LEA_6, IRL-WATERFORD_CITY_SOUTH_LEA_6, IRL-CAHIR_LEA_4, IRL-CARRICK_ON_SUIR_LEA_5, IRL-CASHEL_TIPPERARY_LEA_7, IRL-CLONMEL_LEA_6, IRL-NENAGH_LEA_5, IRL-NEWPORT_LEA_4, IRL-ROSCREA_TEMPLEMORE_LEA_4, IRL-THURLES_LEA_5]
+  timeline:
+    - from: 1453
+      owner: ireland
+      certainty: nominal
+      note: "オーモンド伯（バトラー家）などアングロ＝ノルマン系の貴族が自立して治め、王の支配は名目的。ウォーターフォードなどの港町は王に忠実だった。"
+      source: "ja.wikipedia: アイルランド卿"
+    - from: 1541
+      owner: ireland
+      cause: "ヘンリ8世がアイルランド王を称し、「降伏と再授封」政策で諸侯を王の臣下とする"
+      source: "ja.wikipedia: アイルランド王国"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
+
+- id: ireland_midlands
+  name: "アイルランド中部（レイシュ・オファリー・ウェストミース・ロングフォード）"
+  until: 1647
+  select:
+    pieces: [IRL-BORRIS_IN_OSSORY_MOUNTMELLICK_LEA_6, IRL-GRAIGUECULLEN_PORTARLINGTON_LEA_6, IRL-PORTLAOISE_LEA_7, IRL-BIRR_LEA_6, IRL-EDENDERRY_LEA_6, IRL-TULLAMORE_LEA_7, IRL-ATHLONE_LEA_5, IRL-KINNEGAD_LEA_5, IRL-MOATE_LEA_4, IRL-MULLINGAR_LEA_6, IRL-BALLYMAHON_LEA_6, IRL-GRANARD_LEA_5, IRL-LONGFORD_LEA_7]
+  timeline:
+    - from: 1453
+      owner: ireland
+      certainty: nominal
+      note: "オモア・オコナーなどゲール系の諸侯の地。"
+      source: "ja.wikipedia: アイルランド卿"
+    - from: 1556
+      owner: ireland
+      cause: "レイシュ・オファリーへの植民（クイーンズ・カウンティ／キングズ・カウンティの設置）"
+      source: "https://en.wikipedia.org/wiki/Plantations_of_Ireland"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
+
+- id: ireland_munster
+  name: "マンスター（コーク・ケリー・リムリック）"
+  until: 1647
+  select:
+    pieces: [IRL-ADARE_RATHKEALE_LEA_6, IRL-CAPPAMORE_KILMALLOCK_LEA_7, IRL-LIMERICK_CITY_EAST_LEA_7, IRL-LIMERICK_CITY_NORTH_LEA_7, IRL-LIMERICK_CITY_WEST_LEA_7, IRL-NEWCASTLE_WEST_LEA_6, IRL-BANDON_KINSALE_LEA_6, IRL-BANTRY_WEST_CORK_LEA_4, IRL-CARRIGALINE_LEA_6, IRL-COBH_LEA_6, IRL-CORK_CITY_NORTH_EAST_LEA_6, IRL-CORK_CITY_NORTH_WEST_LEA_6, IRL-CORK_CITY_SOUTH_CENTRAL_LEA_6, IRL-CORK_CITY_SOUTH_EAST_LEA_6, IRL-CORK_CITY_SOUTH_WEST_LEA_7, IRL-FERMOY_LEA_6, IRL-KANTURK_LEA_4, IRL-MACROOM_LEA_6, IRL-MALLOW_LEA_5, IRL-MIDLETON_LEA_7, IRL-SKIBBEREEN_WEST_CORK_LEA_5, IRL-CASTLEISLAND_LEA_4, IRL-CORCA_DHUIBHNE_LEA_3, IRL-KENMARE_LEA_6, IRL-KILLARNEY_LEA_7, IRL-LISTOWEL_LEA_6, IRL-TRALEE_LEA_7]
+  timeline:
+    - from: 1453
+      owner: ireland
+      certainty: nominal
+      note: "デズモンド伯（フィッツジェラルド家）とゲール系の諸侯の地。"
+      source: "ja.wikipedia: アイルランド卿"
+    - from: 1583
+      owner: ireland
+      cause: "デズモンドの乱の鎮圧（11月、デズモンド伯の戦死）。1586年からマンスター植民"
+      source: "https://en.wikipedia.org/wiki/Second_Desmond_Rebellion"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "コーク・ユーガルなど南部の港町はインチクィン卿（議会派→国王派）が保った。地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
+
+- id: ireland_connacht
+  name: "コナハトとトモンド（クレア）"
+  until: 1647
+  select:
+    pieces: [IRL-ENNIS_LEA_7, IRL-ENNISTIMON_LEA_4, IRL-KILLALOE_LEA_5, IRL-KILRUSH_LEA_5, IRL-SHANNON_LEA_7, IRL-ATHENRY_ORANMORE_LEA_7, IRL-ATHLONE_LEA_6, IRL-BALLINA_LEA_6, IRL-BALLINAMORE_LEA_6, IRL-BALLINASLOE_LEA_6, IRL-BALLYMOTE_TOBERCURRY_LEA_7, IRL-BELMULLET_LEA_3, IRL-BOYLE_LEA_6, IRL-CARRICK_ON_SHANNON_LEA_6, IRL-CASTLEBAR_LEA_7, IRL-CLAREMORRIS_LEA_6, IRL-CONAMARA_NORTH_LEA_4, IRL-CONAMARA_SOUTH_LEA_5, IRL-GALWAY_CITY_CENTRAL_LEA_6, IRL-GALWAY_CITY_EAST_LEA_6, IRL-GALWAY_CITY_WEST_LEA_6, IRL-GORT_KINVARA_LEA_5, IRL-LOUGHREA_LEA_5, IRL-MANORHAMILTON_LEA_6, IRL-ROSCOMMON_LEA_6, IRL-SLIGO_DRUMCLIFF_LEA_5, IRL-SLIGO_STRANDHILL_LEA_6, IRL-SWINFORD_LEA_4, IRL-TUAM_LEA_7, IRL-WESTPORT_LEA_4]
+  timeline:
+    - from: 1453
+      owner: ireland
+      certainty: nominal
+      note: "バーク家（クランリカード）・オブライエン家（トモンド）・オコナー家などの地。"
+      source: "ja.wikipedia: アイルランド卿"
+    - from: 1585
+      owner: ireland
+      cause: "コナハトの和約（コンポジション・オブ・コナハト。諸侯が王に地代を納め、土地を王から与えられる）"
+      source: "https://en.wikipedia.org/wiki/Composition_of_Connacht"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
+
+- id: rif_tetouan
+  name: "テトゥアンとリーフ山地（シャウエン）"
+  until: 1647
+  select:
+    pieces: [MAR-Tetouan_Province, MAR-Prefecture_de_M_diq_Fnideq, MAR-Chefchaouen_Province, MAR-Al_Hoceima_Province, MAR-Province_de_Driouch]
+  timeline:
+    - from: 1453
+      owner: wattasid
+      certainty: nominal
+      note: "シャウエンのラーシド家（1471年に町を建てた）やテトゥアンのマンダリー家（グラナダからの亡命者が1480年代に再建）が半独立していた。"
+      source: "ja.wikipedia: シャウエン"
+    - from: 1549
+      owner: morocco
+      certainty: nominal
+      cause: "サアド朝がフェスを征服"
+      source: "ja.wikipedia: サアド朝"
+    - from: 1561
+      owner: morocco
+      cause: "サアド朝がシャウエンを征服"
+      source: "ja.wikipedia: シャウエン"
+    - from: 1603
+      owner: morocco
+      certainty: uncertain
+      cause: "アフマド・マンスールの死後、王子たちが争い、サアド朝が分裂"
+      source: "ja.wikipedia: サアド朝"
+
+- id: tadla
+  name: "タードラ（ベニ・メラル）"
+  until: 1647
+  select:
+    pieces: [MAR-Province_de_Beni_Mellal, MAR-Province_d_Azilal, MAR-Province_de_Fquih_Ben_Saleh, MAR-Province_de_Khouribga, MAR-Province_de_Khenifra]
+  timeline:
+    - from: 1453
+      owner: wattasid
+      certainty: nominal
+      source: "ja.wikipedia: ワッタース朝"
+    - from: 1536
+      owner: morocco
+      cause: "ワーディー・アルアビードの戦いでサアド朝がワッタース朝を破り、タードラを境に南北を分ける"
+      source: "ja.wikipedia: サアド朝"
+    - from: 1603
+      owner: morocco
+      certainty: uncertain
+      cause: "アフマド・マンスールの死後、王子たちが争い、サアド朝が分裂"
+      source: "ja.wikipedia: サアド朝"
+
+- id: marrakesh_region
+  name: "マラケシュとハウズ・ドゥカーラ"
+  until: 1647
+  select:
+    pieces: [MAR-Prefecture_de_Marrakech, MAR-Al_Haouz_Province, MAR-Chichaoua_Province, MAR-Province_d_El_Kelaat_Es_Sraghna, MAR-Essaouira_Province, MAR-Rhamna_Province, MAR-Province_de_Safi, MAR-Province_de_Youssoufia]
+  timeline:
+    - from: 1453
+      owner: wattasid
+      certainty: nominal
+      note: "マラケシュはヒンタータ族の首長が半独立して治めた。沿岸のサフィ（1508–41）・モガドール（1506–10）はポルトガルの要塞（ピースが粗いため描かない）。"
+      source: "ja.wikipedia: マラケシュ"
+    - from: 1525
+      owner: morocco
+      cause: "サアド朝がマラケシュに入る（1525年）"
+      source: "ja.wikipedia: サアド朝"
+    - from: 1603
+      owner: morocco
+      certainty: uncertain
+      cause: "アフマド・マンスールの死後、王子たちが争い、サアド朝が分裂"
+      source: "ja.wikipedia: サアド朝"
+
+- id: souss_draa
+  name: "スース・ドラア・タフィラルト（サアド家の本拠）"
+  until: 1647
+  select:
+    pieces: [MAR-Agadir_Ida_Outanane_Prefecture, MAR-Chtouka_Ait_Baha_Province, MAR-Inezgane_Ait_Melloul_Prefecture, MAR-Taroudant_Province, MAR-Tata_Province, MAR-Tiznit_Province, MAR-Sidi_Ifni_Province, MAR-Ouarzazate_Province, MAR-Zagora_Province, MAR-Province_de_Tinghir, MAR-Province_d_Errachidia, MAR-Province_de_Midelt]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "ベルベル人の部族とマラブー（聖者）の地域で、フェスのスルタンの支配は及ばなかった。アガディールにはポルトガルの要塞サンタ・クルス（1505–41）があった。"
+      source: "ja.wikipedia: スース"
+    - from: 1511
+      owner: morocco
+      certainty: uncertain
+      cause: "ドラア渓谷のサアド家がスースでポルトガルに対する聖戦の指導者に推される（1510年ごろ）"
+      source: "ja.wikipedia: サアド朝"
+    - from: 1525
+      owner: morocco
+      cause: "サアド朝がマラケシュに入る（1525年）"
+      source: "ja.wikipedia: サアド朝"
+    - from: 1603
+      owner: morocco
+      certainty: uncertain
+      cause: "アフマド・マンスールの死後、王子たちが争い、サアド朝が分裂"
+      source: "ja.wikipedia: サアド朝"
+
+- id: ksar_es_seghir
+  name: "クサル・エッ・セギール（ポルトガルの要塞）"
+  until: 1647
+  select:
+    pieces: [MAR-Fahs_Anjra_Province]
+  timeline:
+    - from: 1453
+      owner: wattasid
+      source: "ja.wikipedia: ワッタース朝"
+    - from: 1458
+      owner: portugal
+      label: "クサル・エッ・セギール"
+      cause: "アフォンソ5世がクサル・エッ・セギールを攻略（10月）"
+      source: "https://en.wikipedia.org/wiki/Ksar_es-Seghir"
+    - from: 1550
+      owner: morocco
+      cause: "ポルトガルがクサル・エッ・セギールとアシラを放棄"
+      source: "https://en.wikipedia.org/wiki/Ksar_es-Seghir"
+    - from: 1603
+      owner: morocco
+      certainty: uncertain
+      cause: "アフマド・マンスールの死後、王子たちが争い、サアド朝が分裂"
+      source: "ja.wikipedia: サアド朝"
+
+- id: tlemcen_kingdom
+  name: "トレムセン王国（アルジェリア西部）"
+  until: 1647
+  select:
+    pieces: [DZA-Tlemcen, DZA-Ain_Temouchent, DZA-Sidi_Bel_Abbes, DZA-Mascara, DZA-Saiida, DZA-Relizane, DZA-Tiaret, DZA-Naama]
+  timeline:
+    - from: 1453
+      owner: zayyanid
+      note: "ザイヤーン朝。16世紀にはスペイン（オラン）とオスマン帝国（アルジェ）の間で揺れ、両方に貢納した。"
+      source: "ja.wikipedia: ザイヤーン朝"
+    - from: 1554
+      owner: algiers
+      overlord: ottoman
+      cause: "サーリフ・レイスがトレムセンを征服（ザイヤーン朝は1556年に絶える）"
+      source: "ja.wikipedia: ザイヤーン朝"
+
+- id: algeria_east_hafsid
+  name: "アルジェリア東部（コンスタンティーヌ・セティフ・アンナバ）"
+  until: 1647
+  select:
+    pieces: [DZA-Jijel, DZA-Satif, DZA-Bordj_Bou_Arreidj, DZA-M_Sila, DZA-Constantine, DZA-Mila, DZA-Skikda, DZA-Annaba, DZA-El_Tarf, DZA-Guelma, DZA-Souk_Ahras, DZA-Oum_el_Bouaghi, DZA-Batna, DZA-Khenchela, DZA-Tebessa, DZA-Biskra]
+  timeline:
+    - from: 1453
+      owner: hafsid
+      note: "ハフス朝の領土（コンスタンティーヌとボーヌ〈アンナバ〉）。セティフ西方の山地はベニ・アッバース（カラア）の王国が自立した。"
+      source: "ja.wikipedia: ハフス朝"
+    - from: 1525
+      owner: algiers
+      overlord: ottoman
+      certainty: uncertain
+      cause: "ハイレッディンの東方進出（ジジェル・コロ・コンスタンティーヌ）。ハフス朝とアルジェの争奪の地となる"
+      note: "時期と範囲は要確認。ボーヌは1535–40年にスペインが占領した。"
+      source: "ja.wikipedia: バルバロス・ハイレッディン"
+    - from: 1567
+      owner: algiers
+      overlord: ottoman
+      cause: "コンスタンティーヌのベイ領の設置"
+      note: "設置の年は要確認。"
+      source: "https://en.wikipedia.org/wiki/Beylik_of_Constantine"
+
+- id: bougie
+  name: "ベジャイア（ブージー）"
+  until: 1647
+  select:
+    pieces: [DZA-Bejaia]
+  timeline:
+    - from: 1453
+      owner: hafsid
+      note: "ハフス朝のベジャイア政権。"
+      source: "ja.wikipedia: ベジャイア"
+    - from: 1510
+      owner: castile
+      label: "ベジャイア"
+      cause: "ペドロ・ナバロの遠征で占領（1月）"
+      source: "ja.wikipedia: ベジャイア"
+    - from: 1516
+      owner: spain
+      label: "ベジャイア"
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+    - from: 1555
+      owner: algiers
+      overlord: ottoman
+      cause: "サーリフ・レイスがベジャイアを奪回（9月）"
+      source: "ja.wikipedia: ベジャイア"
+
+- id: kabylia_kuku
+  name: "大カビリー（クク王国）"
+  until: 1647
+  select:
+    pieces: [DZA-Tizi_Ouzou, DZA-Bouira]
+  timeline:
+    - from: 1453
+      owner: hafsid
+      certainty: nominal
+      note: "カビリー山地のベルベル人の部族。"
+      source: "ja.wikipedia: カビリー"
+    - from: 1515
+      owner: kuku
+      cause: "アフマド・ブン・アルカーディーがククを拠点に王国を建てる（年は要確認）"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Kuku"
+    - from: 1638
+      owner: algiers
+      overlord: ottoman
+      cause: "クク王国の衰退（アルジェに従う）"
+      note: "年は要確認。"
+      source: "https://en.wikipedia.org/wiki/Kingdom_of_Kuku"
+
+- id: tripoli_city
+  name: "トリポリ"
+  until: 1647
+  select:
+    pieces: [LBY-Tajura_wa_an_Nawahi_al_Arba]
+  timeline:
+    - from: 1453
+      owner: hafsid
+      certainty: nominal
+      note: "自治的な港町。"
+      source: "ja.wikipedia: トリポリ"
+    - from: 1510
+      owner: aragon
+      label: "トリポリ"
+      cause: "ペドロ・ナバロがトリポリを占領（7月）。シチリア副王の管轄に"
+      source: "ja.wikipedia: トリポリ"
+    - from: 1516
+      owner: spain
+      label: "トリポリ"
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+    - from: 1530
+      owner: malta
+      label: "トリポリ"
+      cause: "カール5世がマルタ島とトリポリを聖ヨハネ騎士団に与える"
+      source: "ja.wikipedia: 聖ヨハネ騎士団"
+    - from: 1551
+      owner: tripoli
+      overlord: ottoman
+      cause: "オスマン帝国（シナン・パシャとトゥルグト・レイス）がトリポリを征服（8月）"
+      source: "ja.wikipedia: トリポリ包囲戦 (1551年)"
+
+- id: cyrenaica_pre1648
+  name: "キレナイカ（バルカ）"
+  until: 1647
+  select:
+    pieces: [LBY-Benghazi, LBY-Al_Jabal_al_Akhdar, LBY-Al_Marj, LBY-Al_Qubbah, LBY-Al_Butnan, LBY-Ajdabiya]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "ベドウィンの部族地域。マムルーク朝、1517年からはオスマン帝国が名目的な宗主権を主張した。"
+      source: "ja.wikipedia: キレナイカ"
+    - from: 1638
+      owner: tripoli
+      overlord: ottoman
+      cause: "トリポリのオスマン軍がベンガジとキレナイカを支配下に置く（年は要確認）"
+      source: "ja.wikipedia: キレナイカ"

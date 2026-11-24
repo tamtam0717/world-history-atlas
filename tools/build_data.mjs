@@ -215,15 +215,18 @@ const entryAt = (r, year) => {
   for (const e of r.timeline) if (e.from <= year) cur = e;
   return cur;
 };
+// 地域の until（その年まで有効。1648 年より前だけの区分けなど）：until を過ぎたら、その地域は無いものとして外側の地域が効く
+for (const r of timelineRegions) if (r.until != null && typeof r.until !== "number") warn(`地域 ${r.id}: until は年（数値）で書いてください`);
+const polEntryAt = (r, y) => (typeof r.until === "number" && y > r.until ? null : entryAt(r, y));
 const pieceTimelines = regionsOfPiece.map((list) => {
   if (list.length === 0) return [];
-  const years = [...new Set(list.flatMap((r) => r.timeline.map((e) => e.from)))].sort((a, b) => a - b);
+  const years = [...new Set(list.flatMap((r) => [...r.timeline.map((e) => e.from), ...(typeof r.until === "number" ? [r.until + 1] : [])]))].sort((a, b) => a - b);
   const out = [];
   let last = "";
   for (const y of years) {
     let state = null;
     for (const r of list) {
-      const e = entryAt(r, y);
+      const e = polEntryAt(r, y);
       if (e) {
         state = [
           y,
@@ -348,6 +351,8 @@ function buildDistribution(dir, label) {
   for (const r of regs) {
     let prev = -Infinity;
     const secOnly = secularOnly(r);
+    if (r.until != null && (typeof r.until !== "number" || (r.timeline ?? []).some((e) => e.from > r.until)))
+      warn(`${r._file} の ${r.id}: until（この年まで有効）は数値で、timeline のすべての項目の年以上にしてください`);
     for (const e of r.timeline ?? []) {
       const where = `${r._file} の ${r.id}（${e.from}年）`;
       if (typeof e.from !== "number") warn(`${where}: from（開始年）は数値で書いてください`);
@@ -378,13 +383,15 @@ function buildDistribution(dir, label) {
   const pieceTl = ofPiece.map((list, pi) => {
     if (list.length === 0) return [];
     const secList = secOfPiece[pi];
-    const years = [...new Set(secList.flatMap((r) => r.timeline.map((e) => e.from)))].sort((a, b) => a - b);
+    // until（その年まで有効な地域。1648 年より前だけの区分けなど）：until+1 の年にも切り替えを入れる
+    const years = [...new Set(secList.flatMap((r) => [...r.timeline.map((e) => e.from), ...(typeof r.until === "number" ? [r.until + 1] : [])]))].sort((a, b) => a - b);
     const out = [];
     let last = "";
+    const distEntryAt = (r, y) => (typeof r.until === "number" && y > r.until ? null : entryAt(r, y));
     for (const y of years) {
       let state = null;
       for (const r of list) {
-        const e = entryAt(r, y);
+        const e = distEntryAt(r, y);
         if (e) {
           state = [y, kindIdx.get(e.main) ?? -1, e.minor == null ? -1 : (kindIdx.get(e.minor) ?? -1), rIdx.get(r.id)];
           break;
@@ -396,7 +403,7 @@ function buildDistribution(dir, label) {
       // 0 より大きいときだけ 5 番目に入れる
       if (dir === "religion") {
         for (const r of secList) {
-          const e = entryAt(r, y);
+          const e = distEntryAt(r, y);
           if (e && typeof e.secular === "number") {
             if (e.secular > 0) state.push(Math.min(1, e.secular));
             break;

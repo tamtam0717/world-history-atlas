@@ -18,6 +18,9 @@
   select:
     adm1: ["AUT/Niederösterreich", "AUT/Wien", "AUT/Oberösterreich", "AUT/Steiermark", "AUT/Kärnten"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -44,6 +47,11 @@
   select:
     pieces: [AUT-Braunau_am_Inn, AUT-Ried_im_Innkreis, AUT-Scharding]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "bavaria_landshut", overlord: "hre", note: "バイエルン＝ランツフート公領（ブラウナウ・シェルディング・リート）"}
+    - {from: 1504, owner: "bavaria", overlord: "hre", certainty: "uncertain", cause: "ランツフート継承戦争（ゲオルク富裕公の遺言をめぐり、ミュンヘン公とプファルツ家が争う）", source: "https://ja.wikipedia.org/wiki/ランツフート継承戦争"}
+    - {from: 1505, owner: "bavaria", overlord: "hre", cause: "ケルンの裁定（7月）でバイエルン＝ミュンヘン公アルブレヒト4世が相続し、バイエルンが再統一", source: "https://ja.wikipedia.org/wiki/ランツフート継承戦争"}
+    # ---- 1648– ----
     - from: 1648
       owner: bavaria
       overlord: hre
@@ -97,6 +105,11 @@
   select:
     pieces: [AUT-Vocklabruck]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre"}
+    - {from: 1620, owner: "bavaria", overlord: "hre", certainty: "occupied", cause: "フェルディナント2世が戦費の担保として上オーストリアをバイエルン公マクシミリアン1世に質入れ", source: "https://en.wikipedia.org/wiki/Upper_Austria"}
+    - {from: 1628, owner: "habsburg", overlord: "hre", cause: "バイエルンがオーバープファルツと引き換えに上オーストリアを返す", source: "https://en.wikipedia.org/wiki/Upper_Austria"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -136,6 +149,9 @@
   select:
     pieces: [AUT-Villach_Stadt, AUT-Villach_Land, AUT-Spittal_an_der_Drau, AUT-Hermagor]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre", note: "フィラッハはバンベルク司教領（1759年まで）、オルテンブルク伯領（シュピッタール）は1456年までツェリェ伯家。地図では1648年以降と同じくハプスブルク家の領域として描く"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -172,6 +188,9 @@
   select:
     adm1: ["AUT/Tirol", "AUT/Vorarlberg"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre", note: "チロルは1490年までハプスブルク家のチロル系（ジークムント大公）。フォアアールベルクは15–16世紀に少しずつ買い取った（ブレゲンツは1451・1523年）"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -210,6 +229,10 @@
   select:
     pieces: [AUT-Lienz]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "gorizia", overlord: "hre"}
+    - {from: 1500, owner: "habsburg", overlord: "hre", cause: "ゴリツィア伯レオンハルトの死で、マクシミリアン1世が伯領を相続", source: "https://en.wikipedia.org/wiki/County_of_Gorizia"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -248,6 +271,9 @@
   select:
     adm1: ["AUT/Salzburg"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "salzburg", overlord: "hre"}
+    # ---- 1648– ----
     - from: 1648
       owner: salzburg
       overlord: hre
@@ -298,6 +324,10 @@
   select:
     adm1: ["AUT/Burgenland"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "habsburg", label: "王領ハンガリー", cause: "モハーチの戦いでラヨシュ2世が戦死。12月にプレスブルク（ポジョニ）の議会がフェルディナント1世をハンガリー王に選び、西部・北部はハプスブルク家の王領に（東部・中部はサポヤイ・ヤーノシュ）", source: "https://ja.wikipedia.org/wiki/モハーチの戦い_(1526年)"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
     - from: 1867
@@ -322,7 +352,15 @@
     pieces: [CZE-Jihlava, CZE-T_ebi, CZE-ar_nad_Sazavou, CZE-Novy_Ji_in, CZE-Ostrava_City]
     exclude: [CZE-Jesenik]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "bohemia", overlord: "hre", note: "ボヘミア王冠領（ボヘミア・モラヴィア・シュレジエン・ラウジッツ）は神聖ローマ帝国の一部"}
+    - {from: 1469, owner: "hungary", overlord: "hre", certainty: "occupied", cause: "ボヘミア戦争。マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを占領し、5月にオロモウツでカトリック派からボヘミア王に選ばれる", source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"}
+    - {from: 1479, owner: "hungary", overlord: "hre", cause: "オロモウツの和約で、マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを（買い戻しの条件つきで）領有。ボヘミア本土はヴラジスラフ2世", source: "https://en.wikipedia.org/wiki/Peace_of_Olomouc"}
+    - {from: 1490, owner: "bohemia", overlord: "hre", cause: "マーチャーシュ1世の死（4月）で、ボヘミア王ヴラジスラフ2世のもとに戻る（ヴラジスラフはハンガリー王も兼ねる）", source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"}
+    - {from: 1620, owner: "habsburg", label: "モラヴィア辺境伯領", overlord: "hre", cause: "白山の戦い（11月）でボヘミアの反乱が鎮圧され、ハプスブルク家の支配が確立（1627年の改訂領邦条例で世襲王国に）", source: "https://ja.wikipedia.org/wiki/白山の戦い"}
+    # ---- 1648– ----
     - from: 1648
+      cause: "ウェストファリア条約。スウェーデン軍のオロモウツ占領は1650年に終わる"
       owner: habsburg
       overlord: hre
     - from: 1806
@@ -348,6 +386,13 @@
   select:
     pieces: [CZE-Opava, CZE-Bruntal, CZE-Jesenik, CZE-Karvina, CZE-Frydek_Mistek]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "bohemia", overlord: "hre", note: "ボヘミア王冠領（ボヘミア・モラヴィア・シュレジエン・ラウジッツ）は神聖ローマ帝国の一部"}
+    - {from: 1469, owner: "hungary", overlord: "hre", certainty: "occupied", cause: "ボヘミア戦争。マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを占領し、5月にオロモウツでカトリック派からボヘミア王に選ばれる", source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"}
+    - {from: 1479, owner: "hungary", overlord: "hre", cause: "オロモウツの和約で、マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを（買い戻しの条件つきで）領有。ボヘミア本土はヴラジスラフ2世", source: "https://en.wikipedia.org/wiki/Peace_of_Olomouc"}
+    - {from: 1490, owner: "bohemia", overlord: "hre", cause: "マーチャーシュ1世の死（4月）で、ボヘミア王ヴラジスラフ2世のもとに戻る（ヴラジスラフはハンガリー王も兼ねる）", source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"}
+    - {from: 1620, owner: "habsburg", label: "シュレジエン", overlord: "hre", cause: "白山の戦い（11月）でボヘミアの反乱が鎮圧され、ハプスブルク家の支配が確立（1627年の改訂領邦条例で世襲王国に）", source: "https://ja.wikipedia.org/wiki/白山の戦い"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -379,6 +424,10 @@
     iso: [CZE]
     exclude_regions: [moravia, silesia_cz]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "bohemia", overlord: "hre", note: "ボヘミア王冠領（ボヘミア・モラヴィア・シュレジエン・ラウジッツ）は神聖ローマ帝国の一部"}
+    - {from: 1620, owner: "habsburg", label: "ボヘミア王国", overlord: "hre", cause: "白山の戦い（11月）でボヘミアの反乱が鎮圧され、ハプスブルク家の支配が確立（1627年の改訂領邦条例で世襲王国に）", source: "https://ja.wikipedia.org/wiki/白山の戦い"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -408,6 +457,11 @@
   select:
     iso: [SVK]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位。12月にプレスブルクの議会がフェルディナント1世を選ぶが、年末に彼が押さえていたのはプレスブルク周辺と西の国境地帯だけ", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る（上部ハンガリー・西部ハンガリーを押さえる）", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
     - from: 1867
@@ -429,7 +483,15 @@
   select:
     adm1: ["SVK/Region of Ko?ice", "SVK/Region of Pre?ov"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", certainty: "uncertain", cause: "サポヤイ・ヤーノシュがオスマン帝国の後ろ盾で東部を取り戻す。上部ハンガリー東部は両王の争奪の場となった", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落の後、上部ハンガリーはフェルディナント1世の王領ハンガリーに（カッシャに上部ハンガリー総司令部）", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    # ---- 1648– ----
     - from: 1648
+      cause: "ラーコーツィ・ジェルジ1世の死（10月）で、リンツ条約の7県が王領ハンガリーに戻る"
       owner: habsburg
     - from: 1682
       owner: thokoly
@@ -458,6 +520,11 @@
   select:
     pieces: [SVK-District_of_Nova_Zkmky]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位。12月にプレスブルクの議会がフェルディナント1世を選ぶが、年末に彼が押さえていたのはプレスブルク周辺と西の国境地帯だけ", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る（上部ハンガリー・西部ハンガリーを押さえる）", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
     - from: 1664
@@ -485,6 +552,10 @@
   select:
     pieces: [SVK-District_of_Stark_Lubovna]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "poland", source: "https://en.wikipedia.org/wiki/Treaty_of_Lubowla", note: "スピシュの13都市とスタラー・ルボヴニャはジギスムントが1412年にポーランドに質入れ（1772年まで）"}
+    - {from: 1569, owner: "poland_lithuania", cause: "ルブリン合同でポーランド＝リトアニア共和国が成立", source: "https://ja.wikipedia.org/wiki/ルブリン合同"}
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
       cause: 1412年からポーランドに質入れされていたスピシュ（ツィプス）13都市とルボヴニャ城領
@@ -512,6 +583,11 @@
   select:
     iso: [HUN]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位。12月にプレスブルクの議会がフェルディナント1世を選ぶが、年末に彼が押さえていたのはプレスブルク周辺と西の国境地帯だけ", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る（上部ハンガリー・西部ハンガリーを押さえる）", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
     - from: 1867
@@ -535,6 +611,13 @@
     pieces: [HUN-Esztergom, HUN-Nagykanizsa, HUN-Paszto, HUN-Batonyterenye,
              HUN-Mez_kovesd, HUN-Mez_csat, HUN-Tiszaujvaros]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "ottoman", cause: "スレイマン1世がブダを占領（8月）。ブダ州を置き、ハンガリー中部はオスマン帝国の直轄領に", source: "https://ja.wikipedia.org/wiki/ブダ包囲戦_(1541年)"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1686
@@ -565,6 +648,21 @@
   select:
     adm1: ["HUN/Szabolcs-Szatmár-Bereg"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国（母イザベラが摂政。オスマン帝国に貢納）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。1556年まで）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1565, owner: "habsburg", label: "王領ハンガリー", cause: "皇帝軍（シュヴェンディ）がトカイ・サトマールを奪う（1570年のシュパイアー条約で確定）", source: "https://en.wikipedia.org/wiki/Treaty_of_Speyer_(1570)"}
+    - {from: 1605, owner: "transylvania", overlord: "ottoman", cause: "ボチカイ・イシュトヴァーンの反乱。1606年のウィーン和約でサボルチ・サトマールなどを終身で得る", source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"}
+    - {from: 1607, owner: "habsburg", label: "王領ハンガリー", cause: "ボチカイの死（1606年12月）で王領ハンガリーに戻る（ハイドゥー都市の特権は残る）", source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"}
+    - {from: 1621, owner: "transylvania", overlord: "ottoman", cause: "ニコルスブルク条約（12月31日）で、ベトレン・ガーボルが王位を諦める代わりに上部ハンガリー東部の7県を終身で得る", source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"}
+    - {from: 1630, owner: "habsburg", label: "王領ハンガリー", cause: "ベトレン・ガーボルの死（1629年11月）で7県が王領ハンガリーに戻る", source: "https://ja.wikipedia.org/wiki/ベトレン・ガーボル"}
+    - {from: 1645, owner: "transylvania", overlord: "ottoman", cause: "リンツ条約（12月）で、ラーコーツィ・ジェルジ1世が上部ハンガリー東部の7県を終身で得る（三十年戦争でスウェーデン側に立って参戦）", source: "https://en.wikipedia.org/wiki/Peace_of_Linz"}
+    # ---- 1648– ----
     - from: 1648
       owner: transylvania
       overlord: ottoman
@@ -599,6 +697,15 @@
   select:
     adm1: ["HUN/Hajdú-Bihar"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国（母イザベラが摂政。オスマン帝国に貢納）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。1556年まで）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    # ---- 1648– ----
     - from: 1648
       owner: transylvania
       overlord: ottoman
@@ -634,7 +741,18 @@
     adm1: ["HUN/Borsod-Abaúj-Zemplén"]
     exclude: [HUN-Mez_kovesd, HUN-Mez_csat, HUN-Tiszaujvaros]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", certainty: "uncertain", cause: "サポヤイ・ヤーノシュがオスマン帝国の後ろ盾で東部を取り戻す。上部ハンガリー東部は両王の争奪の場となった", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落の後、上部ハンガリーはフェルディナント1世の王領ハンガリーに（カッシャに上部ハンガリー総司令部）", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1621, owner: "transylvania", overlord: "ottoman", cause: "ニコルスブルク条約（12月31日）で、ベトレン・ガーボルが王位を諦める代わりに上部ハンガリー東部の7県を終身で得る", source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"}
+    - {from: 1630, owner: "habsburg", label: "王領ハンガリー", cause: "ベトレン・ガーボルの死（1629年11月）で7県が王領ハンガリーに戻る", source: "https://ja.wikipedia.org/wiki/ベトレン・ガーボル"}
+    - {from: 1645, owner: "transylvania", overlord: "ottoman", cause: "リンツ条約（12月）で、ラーコーツィ・ジェルジ1世が上部ハンガリー東部の7県を終身で得る（三十年戦争でスウェーデン側に立って参戦）", source: "https://en.wikipedia.org/wiki/Peace_of_Linz"}
+    # ---- 1648– ----
     - from: 1648
+      cause: "ラーコーツィ・ジェルジ1世の死（10月）で、リンツ条約の7県が王領ハンガリーに戻る"
       owner: habsburg
     - from: 1682
       owner: thokoly
@@ -665,6 +783,10 @@
              SVN-Odranci, SVN-Puconci, SVN-Rogaoovci, SVN-Kalovci, SVN-Tigina, SVN-Turnicce,
              SVN-Velika_Polana, SVN-Razkrirje]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "habsburg", label: "王領ハンガリー", cause: "モハーチの戦いでラヨシュ2世が戦死。12月にプレスブルク（ポジョニ）の議会がフェルディナント1世をハンガリー王に選び、西部・北部はハプスブルク家の王領に（東部・中部はサポヤイ・ヤーノシュ）", source: "https://ja.wikipedia.org/wiki/モハーチの戦い_(1526年)"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
     - from: 1867
@@ -700,6 +822,9 @@
              SVN-Sentrupert, SVN-Mokronog_Trebelno, SVN-Crnomelj, SVN-Metlika, SVN-Semic, SVN-Litija,
              SVN-Rmartno_pri_Litiji, SVN-Zagorje_ob_Savi, SVN-Radece]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -740,6 +865,10 @@
              SVN-Miren_Kostanjevica, SVN-Nempeter_Vrtojba, SVN-Rence_Vogrsko, SVN-Ajdovtcina,
              SVN-Komen, SVN-Cerkno]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "gorizia", overlord: "hre"}
+    - {from: 1500, owner: "habsburg", overlord: "hre", cause: "ゴリツィア伯レオンハルトの死で、マクシミリアン1世が伯領を相続", source: "https://en.wikipedia.org/wiki/County_of_Gorizia"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -775,6 +904,9 @@
   select:
     pieces: [SVN-Koper_Capodistria, SVN-Izola_Isola, SVN-Piran_Pirano, SVN-Ankaran_Ancarano]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1797
@@ -808,6 +940,9 @@
     iso: [SVN]
     exclude_regions: [prekmurje, carniola, gorizia_si, venetian_istria_si]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -837,6 +972,10 @@
   select:
     iso: [HRV]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "1月1日、ツェティン（ツェティングラード）のクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
     - from: 1867
@@ -859,6 +998,11 @@
   select:
     adm1: ["HRV/Osijek-Baranja", "HRV/Vukovar-Syrmia", "HRV/Brod-Posavina", "HRV/Po?ega-Slavonia", "HRV/Virovitica-Podravina"]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "スラヴォニアの諸侯は初めサポヤイ・ヤーノシュを推したが、やがてフェルディナント1世に従う", source: "https://en.wikipedia.org/wiki/Kingdom_of_Slavonia"}
+    - {from: 1552, owner: "ottoman", cause: "ヴィロヴィティツァ・チャズマなどが陥落（ポジェガ県・ヴィロヴィティツァ県）", source: "https://en.wikipedia.org/wiki/Ottoman_Croatia"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1699
@@ -887,6 +1031,11 @@
              HRV-Grad_Kutina, HRV-Grad_Popova_a, HRV-Grad_Novska, HRV-Op_ina_Lipovljani,
              HRV-Op_ina_Velika_Ludina, HRV-Op_ina_Jasenovac]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "1月1日、ツェティン（ツェティングラード）のクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
+    - {from: 1552, owner: "ottoman", cause: "チャズマ・モスラヴィナ方面が陥落（ダルヴァルは1543年）", source: "https://en.wikipedia.org/wiki/Ottoman_Croatia"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: uncertain
@@ -919,6 +1068,10 @@
              HRV-Op_ina_Mrkopalj, HRV-Op_ina_Ravna_Gora, HRV-Op_ina_Skrad, HRV-Op_ina_Vinodolska_op_ina,
              HRV-Grad_Senj, HRV-Grad_Oto_ac, HRV-Op_ina_Brinje, HRV-Op_ina_Karlobag]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "1月1日、ツェティン（ツェティングラード）のクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
     - from: 1809
@@ -947,6 +1100,10 @@
     pieces: [HRV-Grad_Gospi, HRV-Op_ina_Peru_i, HRV-Op_ina_Lovinac, HRV-Op_ina_Udbina,
              HRV-Op_ina_Plitvi_ka_Jezera, HRV-Op_ina_Donji_Lapac, HRV-Op_ina_Vrhovine, HRV-Op_ina_Gra_ac]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "ottoman", cause: "モハーチの後、ウドビナ（クルバヴァ）とリカの諸城が陥落（1527–1528年）", source: "https://en.wikipedia.org/wiki/Lika"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1699
@@ -980,6 +1137,11 @@
              HRV-Op_ina_Majur, HRV-Op_ina_Sunja, HRV-Op_ina_Hvratska_Dubica, HRV-Op_ina_Topusko,
              HRV-Op_ina_Gvozd]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "1月1日、ツェティン（ツェティングラード）のクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
+    - {from: 1556, owner: "ottoman", cause: "コスタイニツァの陥落（ドゥビツァは1538年）。ウナ川沿いの地はボスニア州の辺境に。グリナ・トプスコ方面は1578–1592年に失った（年は代表）", source: "https://en.wikipedia.org/wiki/Banovina_(region)"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: uncertain
@@ -1012,6 +1174,9 @@
   select:
     pieces: [HRV-Grad_Rijeka]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre", note: "1465年までヴァルゼー家の領地で、その後ハプスブルク家の直轄"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1050,6 +1215,9 @@
              HRV-Grad_Kastav, HRV-Grad_Opatija, HRV-Op_ina_Lovran, HRV-Op_ina_Mo_eni_ka_Draga,
              HRV-Op_ina_Matulji, HRV-Op_ina_Klana, HRV-Op_ina_Vi_kovo]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "habsburg", overlord: "hre", note: "パジン（ミッテルブルク）伯領は1374年からハプスブルク家。カスタヴは1465年までヴァルゼー家"}
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1087,6 +1255,9 @@
     adm1: ["HRV/Istria"]
     exclude_regions: [austrian_istria_hr]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1797
@@ -1134,7 +1305,11 @@
              HRV-Grad_Komi_a, HRV-Op_ina_olta,
              HRV-Grad_Kor_ula, HRV-Op_ina_Blato, HRV-Op_ina_Smokvica, HRV-Op_ina_Vela_Luka, HRV-Op_ina_Lumbarda]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "venice", note: "ザダル・シベニク・トロギル・スプリトと島々は1409–1420年にヴェネツィア領（オミシュは1444年）"}
+    # ---- 1648– ----
     - from: 1648
+      cause: "カンディア戦争中の1648年3月、ヴェネツィア軍がクリスを攻め落とす"
       owner: venice
     - from: 1797
       owner: habsburg
@@ -1179,6 +1354,11 @@
              HRV-Grad_Opuzen, HRV-Grad_Metkovi, HRV-Grad_Plo_e, HRV-Op_ina_Kula_Norinska,
              HRV-Op_ina_Slivno, HRV-Op_ina_Za_ablje, HRV-Op_ina_Pojezerje]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "1月1日、ツェティン（ツェティングラード）のクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
+    - {from: 1537, owner: "ottoman", cause: "シニ（1536）・クリス（1537）が陥落し、ダルマチア内陸はクリス県に", source: "https://en.wikipedia.org/wiki/Sanjak_of_Klis"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1699
@@ -1212,6 +1392,10 @@
              HRV-Op_ina_Runovi_i, HRV-Op_ina_Zmijavci, HRV-Op_ina_Lovre, HRV-Op_ina_Cista_Provo,
              HRV-Op_ina_Zagvozd, HRV-Grad_Vrgorac]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "herzegovina", note: "ヘルツェゴヴィナ（聖サヴァ公領、コサチャ家。名目上はボスニア王国の一部）"}
+    - {from: 1482, owner: "ottoman", cause: "ヘルツェゴヴィナの征服（1482年ノヴィの陥落。イモツキは1493年）", source: "https://en.wikipedia.org/wiki/Sanjak_of_Herzegovina"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1718
@@ -1244,6 +1428,10 @@
              HRV-Op_ina_Ston, HRV-Op_ina_Janjina, HRV-Op_ina_Orebi, HRV-Op_ina_Trpanj,
              HRV-Op_ina_Lastovo, HRV-Op_ina_Mljet]
   timeline:
+    # ---- 1453–1647 ----
+    - {from: 1453, owner: "ragusa", overlord: "hungary", note: "1358年からハンガリー王の保護下。1458年からオスマン帝国にも貢納"}
+    - {from: 1526, owner: "ragusa", overlord: "ottoman", cause: "モハーチの戦いでハンガリーの保護が失われ、オスマン帝国の宗主権だけになる", source: "https://ja.wikipedia.org/wiki/ラグーザ共和国"}
+    # ---- 1648– ----
     - from: 1648
       owner: ragusa
       overlord: ottoman
@@ -1804,3 +1992,422 @@
     - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏（9月）でドイツ軍が占領し、アドリア海沿岸作戦地域とする, source: "https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral"}
     - {from: 1945, owner: yugoslavia, cause: パルチザンの勝利でユーゴスラヴィアが復活（11月にユーゴスラヴィア連邦人民共和国）, source: "https://en.wikipedia.org/wiki/Socialist_Federal_Republic_of_Yugoslavia"}
     - {from: 1991, owner: croatia, cause: 6月25日に独立を宣言（10月8日に発効。1992年1月に欧州共同体が承認）, source: "https://ja.wikipedia.org/wiki/クロアチア紛争"}
+
+# ===================== 1453–1647 の形の地域 =====================
+# 1648年より前だけ形が違う所。小さい地域が優先される決まりのため、1648年以降も所属を書いておく必要がある。
+# 1648年以降の項目は、元の地域（cause の地域）から機械的に写したもの（scratchpad の apply.py）。
+# 1648年以降を直すときは、元の地域と一緒にこちらも直すこと。
+
+- id: lower_austria_1485
+  name: "下オーストリア・ウィーン（1485–1490年のマーチャーシュ1世の占領地）"
+  until: 1647
+  select:
+    adm1: ["AUT/Niederösterreich", "AUT/Wien"]
+  timeline:
+    - {from: 1453, owner: "habsburg", overlord: "hre"}
+    - {from: 1485, owner: "hungary", overlord: "hre", certainty: "occupied", cause: "マーチャーシュ1世がウィーンを占領（6月）し、下オーストリアを支配する（ウィーナー・ノイシュタットは1487年。クレムス・シュタインは最後まで皇帝側だったが、地域が粗いので一括で描く）", source: "https://en.wikipedia.org/wiki/Siege_of_Vienna_(1485)"}
+    - {from: 1490, owner: "habsburg", overlord: "hre", cause: "マーチャーシュ1世の死（4月）の後、マクシミリアン1世がウィーンを回復（8月）。1491年のプレスブルク和約", source: "https://en.wikipedia.org/wiki/Peace_of_Pressburg_(1491)"}
+
+- id: upper_austria_1620
+  name: "上オーストリア（1620–1628年のバイエルンへの質入れ）"
+  until: 1647
+  select:
+    adm1: ["AUT/Oberösterreich"]
+    exclude_regions: [innviertel, hausruck_west]
+  timeline:
+    - {from: 1453, owner: "habsburg", overlord: "hre"}
+    - {from: 1620, owner: "bavaria", overlord: "hre", certainty: "occupied", cause: "フェルディナント2世が戦費の担保として上オーストリアをバイエルン公マクシミリアン1世に質入れ", source: "https://en.wikipedia.org/wiki/Upper_Austria"}
+    - {from: 1628, owner: "habsburg", overlord: "hre", cause: "バイエルンがオーバープファルツと引き換えに上オーストリアを返す", source: "https://en.wikipedia.org/wiki/Upper_Austria"}
+
+- id: kufstein_1505
+  name: "クーフシュタイン・キッツビュール・ラッテンベルク（1505年までバイエルン）"
+  until: 1647
+  select:
+    pieces: [AUT-Kufstein, AUT-Kitzbuhel]
+  timeline:
+    - {from: 1453, owner: "bavaria_landshut", overlord: "hre", note: "バイエルン＝ランツフート公領"}
+    - {from: 1504, owner: "bavaria", overlord: "hre", certainty: "uncertain", cause: "ランツフート継承戦争。10月にマクシミリアン1世がクーフシュタインを攻め落とす", source: "https://en.wikipedia.org/wiki/War_of_the_Succession_of_Landshut"}
+    - {from: 1505, owner: "habsburg", overlord: "hre", cause: "ランツフート継承戦争に介入したマクシミリアン1世が、ケルンの裁定（7月）でクーフシュタイン・キッツビュール・ラッテンベルクを得てチロルに加える", source: "https://en.wikipedia.org/wiki/War_of_the_Succession_of_Landshut"}
+
+- id: burgenland_pledges
+  name: "西ハンガリーの質入れ領（アイゼンシュタット・フォルヒテンシュタイン・ベルンシュタインなど）"
+  until: 1647
+  select:
+    pieces: [AUT-Eisenstadt_Stadt, AUT-Eisenstadt_Umgebung, AUT-Mattersburg, AUT-Oberpullendorf, AUT-Oberwart]
+  timeline:
+    - {from: 1453, owner: "habsburg", overlord: "hre", note: "1445–1447年にハンガリーからハプスブルク家（フリードリヒ3世）に質入れされ、下オーストリアとともに治められた領主領"}
+    - {from: 1482, owner: "hungary", certainty: "uncertain", cause: "マーチャーシュ1世がオーストリアとの戦争で取り戻す（年は要確認）", source: "https://en.wikipedia.org/wiki/Austrian–Hungarian_War_(1477–1488)"}
+    - {from: 1491, owner: "habsburg", overlord: "hre", cause: "プレスブルク和約で、質入れ領はマクシミリアン1世のもとに戻る", source: "https://en.wikipedia.org/wiki/Peace_of_Pressburg_(1491)"}
+    - {from: 1647, owner: "habsburg", label: "王領ハンガリー", cause: "ハンガリー議会（1647年）で質入れ領がハンガリー王国に戻る（フォルヒテンシュタイン・アイゼンシュタットは1622年にエステルハージ家へ）", source: "https://en.wikipedia.org/wiki/Burgenland"}
+
+- id: koszeg_pledge
+  name: "クーセグ（ギュンス。質入れ領）"
+  until: 1647
+  select:
+    pieces: [HUN-K_szeg]
+  timeline:
+    - {from: 1453, owner: "habsburg", overlord: "hre", note: "1445–1447年にハンガリーからハプスブルク家（フリードリヒ3世）に質入れされ、下オーストリアとともに治められた領主領"}
+    - {from: 1482, owner: "hungary", certainty: "uncertain", cause: "マーチャーシュ1世がオーストリアとの戦争で取り戻す（年は要確認）", source: "https://en.wikipedia.org/wiki/Austrian–Hungarian_War_(1477–1488)"}
+    - {from: 1491, owner: "habsburg", overlord: "hre", cause: "プレスブルク和約で、質入れ領はマクシミリアン1世のもとに戻る", source: "https://en.wikipedia.org/wiki/Peace_of_Pressburg_(1491)"}
+    - {from: 1647, owner: "habsburg", label: "王領ハンガリー", cause: "ハンガリー議会（1647年）で質入れ領がハンガリー王国に戻る（フォルヒテンシュタイン・アイゼンシュタットは1622年にエステルハージ家へ）", source: "https://en.wikipedia.org/wiki/Burgenland"}
+
+- id: olomouc_1642
+  name: "オロモウツ（1642–1650年のスウェーデン軍の占領地）"
+  until: 1647
+  select:
+    pieces: [CZE-Olomouc]
+  timeline:
+    - {from: 1453, owner: "bohemia", overlord: "hre", note: "ボヘミア王冠領（ボヘミア・モラヴィア・シュレジエン・ラウジッツ）は神聖ローマ帝国の一部"}
+    - {from: 1469, owner: "hungary", overlord: "hre", certainty: "occupied", cause: "ボヘミア戦争。マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを占領し、5月にオロモウツでカトリック派からボヘミア王に選ばれる", source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"}
+    - {from: 1479, owner: "hungary", overlord: "hre", cause: "オロモウツの和約で、マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを（買い戻しの条件つきで）領有。ボヘミア本土はヴラジスラフ2世", source: "https://en.wikipedia.org/wiki/Peace_of_Olomouc"}
+    - {from: 1490, owner: "bohemia", overlord: "hre", cause: "マーチャーシュ1世の死（4月）で、ボヘミア王ヴラジスラフ2世のもとに戻る（ヴラジスラフはハンガリー王も兼ねる）", source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"}
+    - {from: 1620, owner: "habsburg", label: "モラヴィア辺境伯領", overlord: "hre", cause: "白山の戦い（11月）でボヘミアの反乱が鎮圧され、ハプスブルク家の支配が確立（1627年の改訂領邦条例で世襲王国に）", source: "https://ja.wikipedia.org/wiki/白山の戦い"}
+    - {from: 1642, owner: "sweden", overlord: "hre", certainty: "occupied", cause: "スウェーデン軍（トルステンソン）がオロモウツを占領（ウェストファリア条約の後、1650年に撤退）", source: "https://en.wikipedia.org/wiki/Swedish_occupation_of_Olomouc"}
+
+- id: celje_county
+  name: "ツェリェ伯領（ツィリ）"
+  until: 1647
+  select:
+    pieces: [SVN-Celje, SVN-Valec, SVN-Velenje, SVN-Voatanj, SVN-Vojnik, SVN-Ltore, SVN-Labko, SVN-Lentjur, SVN-Slovenske_Konjice, SVN-Zrece, SVN-Dobrna, SVN-Vitanje, SVN-Polzela, SVN-Prebold, SVN-Braslovce, SVN-Tabor, SVN-Vransko, SVN-Vmartno_ob_Paki, SVN-Dobje]
+  timeline:
+    - {from: 1453, owner: "celje", overlord: "hre"}
+    - {from: 1456, owner: "habsburg", overlord: "hre", cause: "ツェリェ伯ウルリヒ2世がベオグラードで殺され（11月）、断絶した伯家の領地をフリードリヒ3世が継ぐ（1460年のプサルニッツの和約で確定）", source: "https://en.wikipedia.org/wiki/Counts_of_Celje"}
+
+- id: ptuj_salzburg
+  name: "プトゥイ（ペッタウ。1555年までザルツブルク大司教領）"
+  until: 1647
+  select:
+    pieces: [SVN-Ptuj, SVN-Hajdina, SVN-Markovci, SVN-Dornava, SVN-Kidricevo, SVN-Videm, SVN-Destrnik, SVN-Goriunica]
+  timeline:
+    - {from: 1453, owner: "salzburg", overlord: "hre"}
+    - {from: 1555, owner: "habsburg", overlord: "hre", cause: "ザルツブルク大司教がプトゥイをハプスブルク家（シュタイアーマルク公）に引き渡す", source: "https://en.wikipedia.org/wiki/Ptuj"}
+
+- id: tolmin_1509
+  name: "トルミン・コバリード・ボヴェツ（1509年までヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [SVN-Tolmin, SVN-Kobarid, SVN-Bovec]
+  timeline:
+    - {from: 1453, owner: "venice", note: "1420年にアクイレイア総大司教領からヴェネツィア領に"}
+    - {from: 1509, owner: "habsburg", overlord: "hre", cause: "カンブレー同盟戦争でマクシミリアン1世が占領（1521年のヴォルムス条約で確定）", source: "https://en.wikipedia.org/wiki/Tolmin"}
+
+- id: slavonia_east_1526
+  name: "東スラヴォニア・スレム（1526年からオスマン領）"
+  until: 1647
+  select:
+    adm1: ["HRV/Osijek-Baranja", "HRV/Vukovar-Syrmia"]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "ottoman", cause: "モハーチの戦いの後、オスマン軍がスレム（イロク・ヴコヴァル）とオシエクを占領（ヴァルポヴォ・ジャコヴォは1536–1543年）", source: "https://en.wikipedia.org/wiki/Sanjak_of_Syrmia"}
+
+- id: slavonia_central_1537
+  name: "ポジェガ・ブロド（1537年からオスマン領）"
+  until: 1647
+  select:
+    adm1: ["HRV/Brod-Posavina", "HRV/Po?ega-Slavonia"]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "スラヴォニアの諸侯は初めサポヤイ・ヤーノシュを推したが、やがてフェルディナント1世に従う", source: "https://en.wikipedia.org/wiki/Kingdom_of_Slavonia"}
+    - {from: 1537, owner: "ottoman", cause: "ポジェガ陥落（1月）、ゴルヤニの戦い（10月）で皇帝軍が大敗。ポジェガ県が置かれる", source: "https://en.wikipedia.org/wiki/Battle_of_Gorjani"}
+
+- id: knin_1522
+  name: "クニン・スクラディン・ドルニシュ（1522年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HRV-Grad_Knin, HRV-Grad_Drni, HRV-Grad_Skradin, HRV-Op_ina_Biskupija, HRV-Op_ina_Civljane, HRV-Op_ina_Ervenik, HRV-Op_ina_Kijevo, HRV-Op_ina_Kistanje, HRV-Op_ina_Promina, HRV-Op_ina_Ru_i, HRV-Op_ina_Une_i]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1522, owner: "ottoman", cause: "クニンとスクラディンが陥落（5月）", source: "https://en.wikipedia.org/wiki/Knin_Fortress"}
+
+- id: obrovac_1527
+  name: "オブロヴァツ・ベンコヴァツ（1527年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HRV-Grad_Obrovac, HRV-Grad_Benkovac]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "ottoman", cause: "モハーチの後、オブロヴァツ・オストロヴィツァ方面が陥落", source: "https://en.wikipedia.org/wiki/Obrovac"}
+
+- id: zadar_hinterland_1537
+  name: "ザダルの後背地（ゼムニク・ナディン周辺。1537年までヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [HRV-Op_ina_Poli_nik, HRV-Op_ina_Zemunik_Donji, HRV-Op_ina_Galovac, HRV-Op_ina_Jasenice]
+  timeline:
+    - {from: 1453, owner: "venice"}
+    - {from: 1537, owner: "ottoman", cause: "オスマン・ヴェネツィア戦争でナディン・ヴラナが陥落（1537–1538年。1540年の講和で確定）", source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1537–1540)"}
+
+- id: vrana_1537
+  name: "ヴラナ周辺（シュカブルニャ・ポラチャ。1537年までヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [HRV-Op_ina_kabrnja, HRV-Op_ina_Pola_a]
+  timeline:
+    - {from: 1453, owner: "venice"}
+    - {from: 1537, owner: "ottoman", cause: "オスマン・ヴェネツィア戦争でナディン・ヴラナが陥落（1537–1538年。1540年の講和で確定）", source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1537–1540)"}
+
+- id: makarska_neretva
+  name: "マカルスカ沿岸・ネレトヴァ下流（1482年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HRV-Grad_Makarska, HRV-Op_ina_Ba_ka_Voda, HRV-Op_ina_Brela, HRV-Op_ina_Tu_epi, HRV-Op_ina_Podgora, HRV-Op_ina_Gradac, HRV-Grad_Opuzen, HRV-Grad_Metkovi, HRV-Grad_Plo_e, HRV-Op_ina_Kula_Norinska, HRV-Op_ina_Slivno, HRV-Op_ina_Za_ablje, HRV-Op_ina_Pojezerje, HRV-Op_ina_Zadvarje, HRV-Op_ina_estanovac]
+  timeline:
+    - {from: 1453, owner: "herzegovina", note: "ヘルツェゴヴィナ（聖サヴァ公領、コサチャ家。名目上はボスニア王国の一部）"}
+    - {from: 1482, owner: "ottoman", cause: "ヘルツェゴヴィナの征服（1482年ノヴィの陥落。イモツキは1493年）", source: "https://en.wikipedia.org/wiki/Sanjak_of_Herzegovina"}
+
+- id: krk_1480
+  name: "クルク島（1480年までフランコパン家）"
+  until: 1647
+  select:
+    pieces: [HRV-Otok_Krk, HRV-Op_ina_Malinska_Duba_nica, HRV-Op_ina_Omi_alj]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "クロアチアの大貴族フランコパン家の本拠（ヴェネツィアの宗主権の下）"}
+    - {from: 1480, owner: "venice", cause: "ヴェネツィアがフランコパン家からクルク島を取り上げて直轄にする", source: "https://en.wikipedia.org/wiki/Krk"}
+
+- id: klis_1537
+  name: "クリス（1537–1648年のオスマン領）"
+  until: 1647
+  select:
+    pieces: [HRV-Op_ina_Klis]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1527, owner: "habsburg", cause: "1月1日、ツェティン（ツェティングラード）のクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
+    - {from: 1537, owner: "ottoman", cause: "2年余りの包囲の末、クリス要塞が陥落（ペタル・クルジッチの戦死）。クリス県の中心に", source: "https://en.wikipedia.org/wiki/Siege_of_Klis"}
+
+- id: seven_counties_sk
+  name: "アバウーイ・ゼンプレーン（コシツェ・ミハロフツェなど。上部ハンガリー東部の7県のうち）"
+  until: 1647
+  select:
+    pieces: [SVK-District_of_Kolice_I, SVK-District_of_Kolice_II, SVK-District_of_Kolice_III, SVK-District_of_Kolice_IV, SVK-District_of_Kovice_okolie, SVK-District_of_Michalovce, SVK-District_of_Trebi_ov, SVK-District_of_Humennn, SVK-District_of_Snina, SVK-District_of_Medzilaborce, SVK-District_of_Vranov_nad_Toplou, SVK-District_of_Stropkov]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", certainty: "uncertain", cause: "サポヤイ・ヤーノシュがオスマン帝国の後ろ盾で東部を取り戻す。上部ハンガリー東部は両王の争奪の場となった", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落の後、上部ハンガリーはフェルディナント1世の王領ハンガリーに（カッシャに上部ハンガリー総司令部）", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1621, owner: "transylvania", overlord: "ottoman", cause: "ニコルスブルク条約（12月31日）で、ベトレン・ガーボルが王位を諦める代わりに上部ハンガリー東部の7県を終身で得る", source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"}
+    - {from: 1630, owner: "habsburg", label: "王領ハンガリー", cause: "ベトレン・ガーボルの死（1629年11月）で7県が王領ハンガリーに戻る", source: "https://ja.wikipedia.org/wiki/ベトレン・ガーボル"}
+    - {from: 1645, owner: "transylvania", overlord: "ottoman", cause: "リンツ条約（12月）で、ラーコーツィ・ジェルジ1世が上部ハンガリー東部の7県を終身で得る（三十年戦争でスウェーデン側に立って参戦）", source: "https://en.wikipedia.org/wiki/Peace_of_Linz"}
+
+- id: filakovo_1554
+  name: "フィラコヴォ（フュレク）・モドリー・カメニ（1554–1593年のオスマン領）"
+  until: 1647
+  select:
+    pieces: [SVK-District_of_Lucenec, SVK-District_of_Velka_Krta]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位。12月にプレスブルクの議会がフェルディナント1世を選ぶが、年末に彼が押さえていたのはプレスブルク周辺と西の国境地帯だけ", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る（上部ハンガリー・西部ハンガリーを押さえる）", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1554, owner: "ottoman", cause: "フィラコヴォ（フュレク）が陥落し、フュレク県が置かれる", source: "https://en.wikipedia.org/wiki/Fiľakovo_Castle"}
+    - {from: 1593, owner: "habsburg", label: "王領ハンガリー", cause: "長期戦争（十五年戦争）の初めに皇帝軍がフュレク・セーチェーニなどを奪回（11月）", source: "https://en.wikipedia.org/wiki/Long_Turkish_War"}
+
+- id: nograd_1552
+  name: "ノーグラード北部（1552–1593年のオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Balassagyarmat, HUN-Retsag, HUN-Salgotarjan, HUN-Szecseny]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位。12月にプレスブルクの議会がフェルディナント1世を選ぶが、年末に彼が押さえていたのはプレスブルク周辺と西の国境地帯だけ", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る（上部ハンガリー・西部ハンガリーを押さえる）", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1552, owner: "ottoman", cause: "ノーグラード・セーチェーニ・ホッローケー・ドレーギェイなどの諸城が陥落", source: "https://en.wikipedia.org/wiki/Ottoman–Habsburg_wars"}
+    - {from: 1593, owner: "habsburg", label: "王領ハンガリー", cause: "長期戦争（十五年戦争）の初めに皇帝軍がセーチェーニ・ホッローケー・フュレクなどを奪回（11月）", source: "https://en.wikipedia.org/wiki/Long_Turkish_War"}
+
+- id: west_hungary_1526
+  name: "プレスブルク周辺と西の国境地帯（1526年末のフェルディナント1世派）"
+  until: 1526
+  select:
+    pieces: [SVK-District_of_Bratislava_I, SVK-District_of_Bratislava_II, SVK-District_of_Bratislava_III,
+             SVK-District_of_Bratislava_IV, SVK-District_of_Bratislava_V, SVK-District_of_Malacky,
+             SVK-District_of_Pezinok, SVK-District_of_Senec, SVK-District_of_Dunajskn_Streda,
+             SVK-District_of_Galanta, SVK-District_of_Trnava,
+             HUN-Csorna, HUN-Kapuvar, HUN-Mosonmagyarovar, HUN-Pannonhalm, HUN-Sopron, HUN-Tet,
+             HUN-Celldomolk, HUN-Kormend, HUN-Szentgotthard, HUN-Szombathely, HUN-Sarvar, HUN-Vasvar]
+  timeline:
+    - {from: 1526, owner: "habsburg", label: "王領ハンガリー", cause: "12月にプレスブルク（ポジョニ）の議会がフェルディナント1世をハンガリー王に選ぶ。年末に彼が押さえていたのはプレスブルク（ポジョニ）・モション・ショプロン・ヴァシュなど西の国境の諸県だけ（ほかはサポヤイ・ヤーノシュ。1527年の遠征で上部ハンガリーとブダを取る）", source: "https://ja.wikipedia.org/wiki/モハーチの戦い_(1526年)"}
+  note: 1526年の1年だけの地域（それ以外の年は外側の地域の記述が効く）。ブルゲンラント・プレクムリェ・ジェールは各地域で1526年からハプスブルク家。
+
+- id: gyor_1594
+  name: "ジェール（ラープ。1594–1598年のオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Gy_r]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "habsburg", label: "王領ハンガリー", cause: "モハーチの戦いでラヨシュ2世が戦死。12月にプレスブルク（ポジョニ）の議会がフェルディナント1世をハンガリー王に選び、西部・北部はハプスブルク家の王領に（東部・中部はサポヤイ・ヤーノシュ）", source: "https://ja.wikipedia.org/wiki/モハーチの戦い_(1526年)"}
+    - {from: 1594, owner: "ottoman", cause: "長期戦争でオスマン軍がジェール要塞を奪う（9月）", source: "https://en.wikipedia.org/wiki/Siege_of_Győr_(1594)"}
+    - {from: 1598, owner: "habsburg", label: "王領ハンガリー", cause: "皇帝軍（シュヴァルツェンベルク）がジェールを奪回（3月）", source: "https://en.wikipedia.org/wiki/Long_Turkish_War"}
+
+- id: veszprem_1552
+  name: "ヴェスプレーム（1552–1566年・1593–1598年のオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Veszprem]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位。12月にプレスブルクの議会がフェルディナント1世を選ぶが、年末に彼が押さえていたのはプレスブルク周辺と西の国境地帯だけ", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る（上部ハンガリー・西部ハンガリーを押さえる）", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1552, owner: "ottoman", cause: "ヴェスプレーム陥落", source: "https://en.wikipedia.org/wiki/Veszprém"}
+    - {from: 1566, owner: "habsburg", label: "王領ハンガリー", cause: "皇帝軍がヴェスプレームを奪回", source: "https://en.wikipedia.org/wiki/Veszprém"}
+    - {from: 1593, owner: "ottoman", cause: "長期戦争（十五年戦争）の初めにオスマン軍が再び奪う", source: "https://en.wikipedia.org/wiki/Long_Turkish_War"}
+    - {from: 1598, owner: "habsburg", label: "王領ハンガリー", cause: "皇帝軍が奪回", source: "https://en.wikipedia.org/wiki/Long_Turkish_War"}
+
+- id: nagykanizsa_1600
+  name: "ナジカニジャ（1600年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Nagykanizsa]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位。12月にプレスブルクの議会がフェルディナント1世を選ぶが、年末に彼が押さえていたのはプレスブルク周辺と西の国境地帯だけ", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る（上部ハンガリー・西部ハンガリーを押さえる）", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1600, owner: "ottoman", cause: "長期戦争でカニジャ要塞が陥落（10月）し、カニジャ州が置かれる", source: "https://en.wikipedia.org/wiki/Siege_of_Nagykanizsa_(1600)"}
+
+- id: transdanubia_1543
+  name: "ドナウ川以西の中部・南部（セーケシュフェヘールヴァール・ペーチ。1543年からオスマン領）"
+  until: 1647
+  select:
+    adm1: ["HUN/Fejér", "HUN/Tolna", "HUN/Baranya"]
+    exclude: [HUN-Szigetvar, HUN-Mor]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1543, owner: "ottoman", cause: "スレイマン1世の遠征で、ペーチ・シクローシュ・エステルゴム・セーケシュフェヘールヴァールが陥落", source: "https://en.wikipedia.org/wiki/Ottoman–Habsburg_wars"}
+
+- id: esztergom_1543
+  name: "エステルゴム（1543–1595年・1605年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Esztergom]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1543, owner: "ottoman", cause: "スレイマン1世の遠征でエステルゴムが陥落（8月）", source: "https://en.wikipedia.org/wiki/Siege_of_Esztergom_(1543)"}
+    - {from: 1595, owner: "habsburg", label: "王領ハンガリー", cause: "長期戦争（十五年戦争）で皇帝軍がエステルゴムを奪回（9月）", source: "https://en.wikipedia.org/wiki/Siege_of_Esztergom_(1595)"}
+    - {from: 1605, owner: "ottoman", cause: "オスマン軍がエステルゴムを再び奪う（10月。1606年のジトヴァトロク条約で確定）", source: "https://en.wikipedia.org/wiki/Peace_of_Zsitvatorok"}
+
+- id: somogy_1555
+  name: "ショモジ（1555年からオスマン領）"
+  until: 1647
+  select:
+    adm1: ["HUN/Somogy"]
+    exclude: [HUN-Csurgo, HUN-Marcali]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1555, owner: "ottoman", cause: "カポシュヴァール・バボーチャなどが陥落", source: "https://en.wikipedia.org/wiki/Somogy_County"}
+
+- id: somogy_west_1555
+  name: "ショモジ西部（マルツァリ・チュルゴー。1555年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Csurgo, HUN-Marcali]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1555, owner: "ottoman", cause: "カポシュヴァール・バボーチャなどが陥落", source: "https://en.wikipedia.org/wiki/Somogy_County"}
+
+- id: szigetvar_1566
+  name: "シゲトヴァール（1566年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Szigetvar]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1566, owner: "ottoman", cause: "シゲトヴァールの包囲戦（ズリーニ・ミクローシュの戦死。スレイマン1世も陣中で死去）", source: "https://ja.wikipedia.org/wiki/シゲトヴァールの戦い"}
+
+- id: csongrad_1543
+  name: "セゲド・チョングラード（1543年からオスマン領）"
+  until: 1647
+  select:
+    adm1: ["HUN/Csongrád-Csanád"]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国（母イザベラが摂政。オスマン帝国に貢納）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1543, owner: "ottoman", cause: "セゲドが陥落し、オスマン帝国の直轄領に（チャナードは1552年）", source: "https://en.wikipedia.org/wiki/Szeged"}
+
+- id: szolnok_1552
+  name: "ヤース・クン・ソルノク（1552年からオスマン領）"
+  until: 1647
+  select:
+    adm1: ["HUN/Jász-Nagykun-Szolnok"]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国（母イザベラが摂政。オスマン帝国に貢納）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。1556年まで）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1552, owner: "ottoman", cause: "ソルノクが陥落（9月。同じ年にテメシュヴァールも陥落）", source: "https://en.wikipedia.org/wiki/Siege_of_Szolnok"}
+
+- id: hatvan_1552
+  name: "ジェンジェシュ・ヘヴェシュ・パーストー（1552年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Gyongyos, HUN-Heves, HUN-Paszto, HUN-Batonyterenye]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1552, owner: "ottoman", cause: "ハトヴァン（1544）に続き、ノーグラード・ヘヴェシュ方面の諸城が陥落（1552年は代表の年）", source: "https://en.wikipedia.org/wiki/Ottoman–Habsburg_wars"}
+
+- id: hatvan_1544
+  name: "ハトヴァン（1544年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Hatvan]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1544, owner: "ottoman", cause: "ハトヴァン城が陥落し、ハトヴァン県が置かれる", source: "https://en.wikipedia.org/wiki/Ottoman–Habsburg_wars"}
+
+- id: eger_1596
+  name: "エゲル・メゼーケヴェシュド（1596年からオスマン領）"
+  until: 1647
+  select:
+    pieces: [HUN-Eger, HUN-Belapatfalva, HUN-Petervasara, HUN-Fuzesabony, HUN-Mez_kovesd, HUN-Mez_csat, HUN-Tiszaujvaros]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "habsburg", label: "王領ハンガリー", cause: "ブダ陥落後もフェルディナント1世側が保つ", source: "https://en.wikipedia.org/wiki/Royal_Hungary"}
+    - {from: 1596, owner: "ottoman", cause: "メフメト3世の遠征でエゲルが陥落（10月）。メゼーケレステシュの戦いでも皇帝軍が敗れ、エゲル州が置かれる", source: "https://en.wikipedia.org/wiki/Siege_of_Eger_(1596)"}
+
+- id: bekes_1566
+  name: "ジュラ・ベーケーシュ（1566年からオスマン領）"
+  until: 1647
+  select:
+    adm1: ["HUN/Békés"]
+  timeline:
+    - {from: 1453, owner: "hungary", note: "ハンガリー王国（クロアチア・スラヴォニアを含む聖イシュトヴァーンの王冠の諸邦）"}
+    - {from: 1526, owner: "hungary", cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "スレイマン1世がブダを奪ってサポヤイ・ヤーノシュに与える（オスマン帝国の宗主権）。続いて第1次ウィーン包囲", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国（母イザベラが摂政。オスマン帝国に貢納）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。1556年まで）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1566, owner: "ottoman", cause: "ジュラ城が陥落（9月）", source: "https://en.wikipedia.org/wiki/Siege_of_Gyula_(1566)"}

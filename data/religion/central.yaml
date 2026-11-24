@@ -9,6 +9,22 @@
   select:
     iso: [DEU]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "宗教改革の前。帝国の教会は司教領・修道院領として大きな領土を持つ。"
+    - from: 1525
+      main: catholic
+      minor: lutheran
+      note: "ルターの95か条の論題（1517）から、宗教改革が帝国都市や諸侯の領邦に広がる。"
+      source: "https://ja.wikipedia.org/wiki/宗教改革"
+    - from: 1540
+      main: lutheran
+      minor: catholic
+      note: "多くの諸侯・帝国都市がルター派の教会規定を定める。"
+    - from: 1560
+      main: lutheran
+      note: "アウクスブルクの和議（1555）で「支配者の宗教が、その地の宗教」（領邦教会制）が認められる。"
+      source: "https://ja.wikipedia.org/wiki/アウクスブルクの和議"
     - from: 1648
       main: lutheran
       note: 北ドイツ・中部ドイツの大部分（ザクセン、ブランデンブルク、メクレンブルク、ハノーファー、ヴュルテンベルクなど）はルター派。
@@ -28,6 +44,14 @@
   select:
     regions: [anhalt_lands]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1534
+      main: lutheran
+    - from: 1596
+      main: reformed
+      minor: lutheran
+      note: "ヨハン・ゲオルク1世のもとで改革派（カルヴァン派）に移る。"
     - from: 1648
       main: reformed
       note: アンハルト諸侯は1596年以来改革派。ツェルプスト系はルター派に戻った。
@@ -37,6 +61,14 @@
   select:
     regions: [bremen_city]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1525
+      main: lutheran
+    - from: 1581
+      main: reformed
+      minor: lutheran
+      note: "1580年代に改革派の都市となる（大聖堂はルター派のまま）。"
     - from: 1648
       main: reformed
       minor: lutheran
@@ -47,6 +79,16 @@
   select:
     pieces: [DEU-Emden_Kreisfreie_Stadt, DEU-Leer, DEU-Leer_2]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: lutheran
+      minor: catholic
+    - from: 1545
+      main: reformed
+      minor: lutheran
+      note: "エムデンはラスコ（ア・ラスコ）のもとで改革派の中心となり、ネーデルラントからの亡命者の町となる。"
+      source: "https://ja.wikipedia.org/wiki/ヤン・ワスキ"
     - from: 1648
       main: reformed
       minor: lutheran
@@ -57,6 +99,12 @@
   select:
     regions: [bentheim]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1544
+      main: lutheran
+    - from: 1588
+      main: reformed
     - from: 1648
       main: reformed
       note: 伯家が1588年に改革派を導入。
@@ -66,6 +114,14 @@
   select:
     regions: [lippe_lands]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1538
+      main: lutheran
+    - from: 1605
+      main: reformed
+      minor: lutheran
+      note: "ジーモン6世が改革派を導入する（レムゴーはルター派にとどまる）。"
     - from: 1648
       main: reformed
       note: 1605年に改革派へ移行（レムゴー市はルター派）。
@@ -75,6 +131,17 @@
   select:
     regions: [emsland_meppen, oldenburg_munster, munster_east, munster_borken, munster_coesfeld, munster_steinfurt, paderborn_lands, vest_recklinghausen, duchy_westphalia, julich_left, cologne_left, cologne_city_area, eichsfeld]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1540
+      main: catholic
+      minor: lutheran
+      note: "ミュンスターでは再洗礼派が市を支配する（1534–35）。ミュンスター司教領の北部（フェヒタ・クロッペンブルクなど）、ケルン選帝侯領などにもプロテスタントが広がる。"
+      source: "https://ja.wikipedia.org/wiki/ミュンスターの反乱"
+    - from: 1610
+      main: catholic
+      note: "対抗宗教改革。ケルン戦争（1583–88）でプロテスタントに改宗した大司教が追われ、パーダーボルン（1600前後）・ミュンスター北部（1613）なども再カトリック化される。"
+      source: "https://ja.wikipedia.org/wiki/対抗宗教改革"
     - from: 1648
       main: catholic
       note: ミュンスター・パーダーボルン・ケルンなどの司教領とユーリヒ公領はカトリック。アイヒスフェルト（マインツ領）も同じ。
@@ -84,6 +151,16 @@
   select:
     regions: [osnabruck_lands]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1543
+      main: lutheran
+      minor: catholic
+      note: "ボンヌスによる宗教改革。"
+    - from: 1625
+      main: catholic
+      minor: lutheran
+      note: "ヴァルテンベルク司教の対抗宗教改革。"
     - from: 1648
       main: catholic
       minor: lutheran
@@ -94,6 +171,12 @@
   select:
     regions: [hildesheim_lands]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1542
+      main: lutheran
+      minor: catholic
+      note: "ヒルデスハイム市が宗教改革を受け入れる。司教領の大部分（大司教区）はブラウンシュヴァイク家に奪われ（1523–1643）、ルター派となる。"
     - from: 1648
       main: lutheran
       minor: catholic
@@ -104,6 +187,11 @@
   select:
     regions: [kleve_left]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1570
+      main: catholic
+      minor: reformed
     - from: 1648
       main: catholic
       minor: reformed
@@ -114,6 +202,15 @@
   select:
     regions: [kleve_right, moers_krefeld]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1545
+      main: catholic
+      minor: lutheran
+    - from: 1570
+      main: reformed
+      minor: catholic
+      note: "ネーデルラントからの亡命者の影響で、ヴェーゼル・デュースブルクなどに改革派が広がる。"
     - from: 1648
       main: reformed
       minor: catholic
@@ -124,6 +221,12 @@
   select:
     regions: [essen]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1563
+      main: catholic
+      minor: lutheran
+      note: "エッセン市がルター派を受け入れる。"
     - from: 1648
       main: catholic
       minor: lutheran
@@ -134,6 +237,11 @@
   select:
     pieces: [DEU-Dusseldorf_Kreisfreie_Stadt, DEU-Leverkusen_Kreisfreie_Stadt, DEU-Rhein_Sieg_Kreis, DEU-Rheinisch_Bergischer_Kreis, DEU-Mettmann]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1570
+      main: catholic
+      minor: reformed
     - from: 1648
       main: catholic
       minor: reformed
@@ -144,6 +252,14 @@
   select:
     pieces: [DEU-Wuppertal_Kreisfreie_Stadt, DEU-Solingen_Kreisfreie_Stadt, DEU-Remscheid_Kreisfreie_Stadt, DEU-Mulheim_an_der_Ruhr_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: lutheran
+      minor: catholic
+    - from: 1580
+      main: reformed
+      minor: lutheran
     - from: 1648
       main: reformed
       minor: lutheran
@@ -154,6 +270,14 @@
   select:
     pieces: [DEU-Oberbergischer_Kreis]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: lutheran
+      minor: catholic
+    - from: 1600
+      main: lutheran
+      minor: reformed
     - from: 1648
       main: lutheran
       minor: reformed
@@ -163,6 +287,13 @@
   select:
     regions: [siegen]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1536
+      main: lutheran
+    - from: 1578
+      main: reformed
+      note: "ナッサウ＝ディレンブルク伯ヨハン6世が改革派を導入する。"
     - from: 1648
       main: reformed
       note: ナッサウ＝ジーゲン・ヴィトゲンシュタインは改革派。カトリック系の分家（1623–1743）が再カトリック化を試みたが、住民の多数は改革派のまま。
@@ -173,6 +304,12 @@
   select:
     regions: [erfurt]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1525
+      main: lutheran
+      minor: catholic
+      note: "エアフルトはルターが学んだ町。1520年代に市民の多くがルター派となる（マインツ大司教の領地として、カトリックも残る）。"
     - from: 1648
       main: lutheran
       minor: catholic
@@ -184,6 +321,16 @@
   select:
     regions: [hesse_kassel_core]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1526
+      main: lutheran
+      note: "フィリップ（寛大伯）がホンベルク教会会議（1526）で宗教改革を導入。マールブルク大学（1527）。シュマルカルデン同盟の盟主。"
+      source: "https://ja.wikipedia.org/wiki/フィリップ_(ヘッセン方伯)"
+    - from: 1605
+      main: reformed
+      minor: lutheran
+      note: "モーリッツ方伯が改革派を導入する。"
     - from: 1648
       main: reformed
       note: 方伯モーリッツが1605年に改革派を導入（「第二の宗教改革」）。南のヘッセン＝ダルムシュタットはルター派のまま。
@@ -193,6 +340,17 @@
   select:
     regions: [hanau, wetterau, isenburg]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: lutheran
+    - from: 1545
+      main: lutheran
+    - from: 1595
+      main: reformed
+      minor: lutheran
+      note: "ハーナウ＝ミュンツェンベルク（1595）、ゾルムス・イーゼンブルクなどのヴェッテラウの伯たちが改革派に移る。"
     - from: 1648
       main: reformed
       minor: lutheran
@@ -203,6 +361,13 @@
   select:
     regions: [dillenburg]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1536
+      main: lutheran
+    - from: 1578
+      main: reformed
+      note: "ヨハン6世のもとで改革派となり、ヘルボルン大学（1584）が改革派の学問の中心となる。"
     - from: 1648
       main: reformed
       note: ナッサウ＝ディレンブルク（オラニエ家の本家筋）は改革派の拠点。ヘルボルン大学。
@@ -212,6 +377,14 @@
   select:
     regions: [neuwied, altenkirchen]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: lutheran
+      minor: catholic
+    - from: 1590
+      main: reformed
+      minor: catholic
     - from: 1648
       main: reformed
       minor: catholic
@@ -222,6 +395,11 @@
   select:
     pieces: [DEU-Wiesbaden_Kreisfreie_Stadt, DEU-Hochtaunuskreis]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1540
+      main: lutheran
+      minor: catholic
     - from: 1648
       main: lutheran
       minor: catholic
@@ -232,6 +410,11 @@
   select:
     pieces: [DEU-Limburg_Weilburg, DEU-Rheingau_Taunus_Kreis]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -242,6 +425,12 @@
   select:
     regions: [rhein_lahn]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1527
+      main: lutheran
+      minor: catholic
+      note: "ヘッセン領（下カッツェンエルンボーゲン）として宗教改革。"
     - from: 1648
       main: lutheran
       minor: catholic
@@ -252,6 +441,16 @@
   select:
     regions: [main_taunus, westerwald, fulda, bergstrasse, aschaffenburg, miltenberg, trier_core, bitburg, ahrweiler, mainz_left, merzig_st_wendel, saarlouis]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: catholic
+      minor: lutheran
+      note: "聖界諸侯領の町や騎士領にもプロテスタントが広がる（トリーアでは1559年に改革派の説教が禁じられる）。"
+    - from: 1600
+      main: catholic
+      note: "対抗宗教改革。フルダ（1570年代〜）、アイヒスフェルト（1575〜）などでイエズス会による再カトリック化が進む。"
+      source: "https://ja.wikipedia.org/wiki/対抗宗教改革"
     - from: 1648
       main: catholic
       note: マインツ・トリーア両大司教領とフルダ修道院領はカトリック。ベルクシュトラーセはプファルツからマインツに戻され（1650）、再カトリック化された。
@@ -262,6 +461,30 @@
   select:
     regions: [kurpfalz_right, mosbach, kurpfalz_left, alzey, hunsruck_nahe]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1546
+      main: catholic
+      minor: lutheran
+    - from: 1556
+      main: lutheran
+      note: "オットハインリヒ（選帝侯）がルター派を導入する。"
+    - from: 1563
+      main: reformed
+      minor: lutheran
+      note: "フリードリヒ3世がハイデルベルク信仰問答（1563）を定め、改革派（カルヴァン派）の中心となる。"
+      source: "https://ja.wikipedia.org/wiki/ハイデルベルク信仰問答"
+    - from: 1576
+      main: lutheran
+      minor: reformed
+      note: "ルートヴィヒ6世がルター派に戻す。"
+    - from: 1583
+      main: reformed
+      note: "ヨハン・カジミールのもとで再び改革派となる。"
+    - from: 1623
+      main: reformed
+      minor: catholic
+      note: "「冬王」フリードリヒ5世の敗北後、スペイン軍・バイエルン軍が占領し（1622–）、カトリックへの改宗が進められる。"
     - from: 1648
       main: reformed
       note: ハイデルベルク信仰問答（1563）の地で、改革派の中心。ウェストファリア条約で選帝侯カール・ルートヴィヒが復帰し、改革派も回復。
@@ -276,6 +499,14 @@
   select:
     regions: [zweibrucken]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1533
+      main: lutheran
+    - from: 1588
+      main: reformed
+      minor: lutheran
+      note: "ヨハン1世が改革派に移る。"
     - from: 1648
       main: reformed
       minor: lutheran
@@ -286,6 +517,15 @@
   select:
     regions: [worms_city, speyer_city, landau]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1525
+      main: catholic
+      minor: lutheran
+    - from: 1540
+      main: lutheran
+      minor: catholic
+      note: "帝国都市は宗教改革を受け入れるが、司教座（ヴォルムス・シュパイアー）とカトリックの市民も残る。帝国議会（ヴォルムス 1521、シュパイアー 1526・29）の町。"
     - from: 1648
       main: lutheran
       minor: catholic
@@ -297,6 +537,16 @@
   select:
     regions: [bamberg, wurzburg, eichstatt]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: lutheran
+      note: "司教領の町や帝国騎士の領地にルター派が広がる。"
+    - from: 1600
+      main: catholic
+      note: "ヴュルツブルク司教ユリウス・エヒター（1573–1617）やバンベルクの司教が対抗宗教改革を進め、プロテスタントは改宗か退去を迫られる。"
+      source: "https://ja.wikipedia.org/wiki/ユリウス・エヒター・フォン・メスペルブルン"
     - from: 1648
       main: catholic
       note: 司教領はカトリック（ヴュルツブルクのユリウス・エヒターによる対抗宗教改革）。騎士領の村にはルター派が混じる。
@@ -306,6 +556,11 @@
   select:
     regions: [main_tauber]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -317,6 +572,10 @@
   select:
     regions: [bavaria_core, upper_palatinate, neuburg, passau_city, passau_abteiland, berchtesgaden, werdenfels, augsburg_bishopric, unterallgau, burgau]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "バイエルン公はカトリックを守り、アルブレヒト5世（1550–79）とマクシミリアン1世（1597–1651）のもとで対抗宗教改革の拠点となる（インゴルシュタット大学・イエズス会）。"
+      source: "https://ja.wikipedia.org/wiki/対抗宗教改革"
     - from: 1648
       main: catholic
       note: バイエルン公（選帝侯）は対抗宗教改革の中心。オーバープファルツは1620年代に再カトリック化された。
@@ -326,6 +585,11 @@
   select:
     regions: [regensburg_city]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1542
+      main: lutheran
+      minor: catholic
     - from: 1648
       main: lutheran
       minor: catholic
@@ -336,6 +600,16 @@
   select:
     regions: [augsburg_city]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1534
+      main: lutheran
+      minor: catholic
+      note: "市参事会が宗教改革を進める（1530年のアウクスブルク帝国議会でアウクスブルク信仰告白が出された町）。"
+    - from: 1630
+      main: catholic
+      minor: lutheran
+      note: "復旧令（1629）でプロテスタントの牧師が追放される（1632–35年はスウェーデン軍が占領）。"
     - from: 1648
       main: catholic
       minor: lutheran
@@ -347,6 +621,12 @@
     regions: [swabian_imperial_cities_bav]
     pieces: [DEU-Kempten_Allgau_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1525
+      main: lutheran
+      minor: catholic
+      note: "メミンゲンは1525年の農民戦争の「十二か条」が書かれた町。"
     - from: 1648
       main: lutheran
       minor: catholic
@@ -357,6 +637,8 @@
   select:
     pieces: [DEU-Oberallgau]
   timeline:
+    - from: 1453
+      main: catholic
     - from: 1648
       main: catholic
 
@@ -365,6 +647,11 @@
   select:
     regions: [oettingen]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1540
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -375,6 +662,11 @@
   select:
     regions: [lindau]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1528
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -385,6 +677,9 @@
   select:
     regions: [upper_swabia, bodensee, rottweil, hohenzollern_sigmaringen, breisgau, freiburg_city, ortenau, furstenberg, baden_baden]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "前方オーストリア（ハプスブルク家）、修道院領、カトリックの帝国都市の地域。バーデン＝バーデンは1550年代〜70年代にプロテスタントの時期がある。"
     - from: 1648
       main: catholic
       note: 修道院領・前方オーストリア・ホーエンツォレルン・フュルステンベルク・バーデン＝バーデンはカトリック。ビーベラッハは両宗派同権の帝国都市。
@@ -394,6 +689,11 @@
   select:
     regions: [ellwangen]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1540
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -404,6 +704,12 @@
   select:
     regions: [ulm]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1531
+      main: lutheran
+      minor: catholic
+      note: "住民投票で宗教改革を決める（1530）。"
     - from: 1648
       main: lutheran
       minor: catholic
@@ -415,6 +721,19 @@
   select:
     iso: [NLD]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "1530年代に再洗礼派（のちのメノー派）が広がり、カール5世のもとで異端として厳しく弾圧される。"
+    - from: 1566
+      main: catholic
+      minor: reformed
+      note: "聖像破壊運動（1566）。カルヴァン派が広がり、オランダ独立戦争（八十年戦争、1568–）が始まる。"
+      source: "https://ja.wikipedia.org/wiki/八十年戦争"
+    - from: 1600
+      main: reformed
+      minor: catholic
+      note: "北部7州で改革派が公の教会となる（カトリックは公の礼拝を禁じられるが、住民の3分の1ほどが信仰を保つ）。"
+      source: "https://ja.wikipedia.org/wiki/オランダ改革派教会"
     - from: 1648
       main: reformed
       minor: catholic
@@ -435,6 +754,17 @@
   select:
     adm1: ["NLD/Fryslân", "NLD/Groningen", "NLD/Drenthe", "NLD/Zeeland"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1566
+      main: catholic
+      minor: reformed
+    - from: 1594
+      main: reformed
+      minor: catholic
+      note: "フローニンゲンが連邦共和国に加わる（1594）。"
+    - from: 1620
+      main: reformed
     - from: 1648
       main: reformed
       note: 改革派が大多数。
@@ -444,6 +774,9 @@
   select:
     adm1: ["NLD/Noord-Brabant", "NLD/Limburg"]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "スペイン領として残った地域。オランダ軍が1629年にスヘルトーヘンボス、1632年にマーストリヒトを奪うが、住民はカトリックのまま。"
     - from: 1648
       main: catholic
       note: 国家連合直轄領（ヘネラリテイツランデン）として改革派の役人が治めたが、住民の大多数はカトリック。
@@ -453,6 +786,12 @@
   select:
     regions: [zeeland_flanders]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1604
+      main: catholic
+      minor: reformed
+      note: "オランダ軍がスライス（1604）・フルスト（1645）を奪う。"
     - from: 1648
       main: reformed
       minor: catholic
@@ -463,6 +802,16 @@
   select:
     iso: [BEL, LUX]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1566
+      main: catholic
+      minor: reformed
+      note: "カルヴァン派がフランデレン・ブラバントの都市に広がり、ガン（ヘント）・アントウェルペンなどにカルヴァン派の市政が生まれる（1577–85）。"
+    - from: 1585
+      main: catholic
+      note: "アントウェルペンの陥落（1585）。パルマ公の再征服で、プロテスタントの多くが北部へ亡命し、南ネーデルラントは対抗宗教改革の拠点となる。"
+      source: "https://ja.wikipedia.org/wiki/アントウェルペン包囲戦_(1584年-1585年)"
     - from: 1648
       main: catholic
       note: スペイン（1714年からオーストリア）領の南ネーデルラントは対抗宗教改革の拠点で、ほぼすべてカトリック。
@@ -473,6 +822,21 @@
   select:
     iso: [CHE]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1523
+      main: catholic
+      minor: reformed
+      note: "ツヴィングリがチューリヒで宗教改革を始める（1523）。"
+      source: "https://ja.wikipedia.org/wiki/フルドリッヒ・ツヴィングリ"
+    - from: 1528
+      main: reformed
+      minor: catholic
+      note: "ベルン（1528）・バーゼル（1529）が宗教改革を受け入れる。第二次カッペル戦争（1531）でツヴィングリが戦死。"
+    - from: 1536
+      main: reformed
+      note: "ベルンがヴォー地方を征服し（1536）、ジュネーヴでカルヴァンが改革を進める（1541–64）。ジュネーヴは「プロテスタントのローマ」となる。"
+      source: "https://ja.wikipedia.org/wiki/ジャン・カルヴァン"
     - from: 1648
       main: reformed
       note: チューリヒ（ツヴィングリ）・ジュネーヴ（カルヴァン）を中心に、都市邦は改革派。
@@ -483,6 +847,9 @@
     adm1: ["CHE/Luzern", "CHE/Uri", "CHE/Schwyz", "CHE/Obwalden", "CHE/Nidwalden", "CHE/Zug", "CHE/Fribourg", "CHE/Solothurn", "CHE/Ticino", "CHE/Valais", "CHE/Appenzell Innerrhoden", "CHE/Jura"]
     regions: [fricktal, basel_bishopric_imperial]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "中央スイスの5邦（ルツェルン・ウーリ・シュヴィーツ・ウンターヴァルデン・ツーク）はカトリックを守る。"
     - from: 1648
       main: catholic
       note: 中央スイスの原初邦とフリブール・ゾロトゥルンはカトリック。ヴァレー、ティチーノ（共同支配地）、バーゼル司教領北部、フリックタール（オーストリア領）も同じ。
@@ -493,6 +860,15 @@
     adm1: ["CHE/Thurgau", "CHE/Glarus", "CHE/Graubünden"]
     regions: [rel_part_aargau]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1526
+      main: catholic
+      minor: reformed
+    - from: 1531
+      main: reformed
+      minor: catholic
+      note: "第二次カッペル平和（1531）で、共同支配地では村ごとに宗派を選ぶ。"
     - from: 1648
       main: reformed
       minor: catholic
@@ -509,6 +885,12 @@
   select:
     adm1: ["CHE/St. Gallen"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1527
+      main: catholic
+      minor: reformed
+      note: "ザンクト・ガレン市はファディアーンのもとで改革派となる（修道院領はカトリック）。"
     - from: 1648
       main: catholic
       minor: reformed
@@ -519,6 +901,8 @@
   select:
     iso: [LIE]
   timeline:
+    - from: 1453
+      main: catholic
     - from: 1648
       main: catholic
 
@@ -528,6 +912,10 @@
   select:
     iso: [ITA, SMR, VAT, MLT, "115"]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "イタリアはルネサンスの中心。宗教改革は一部の人文主義者・都市に広がるが、ローマの異端審問所（1542）と禁書目録（1559）で抑えられる。ピエモンテ・アルプスの谷にはワルド派が残る。シチリア・サルデーニャ（1492）、ナポリ（1541）からユダヤ教徒が追放され、ローマ・ヴェネツィアなどではゲットーが作られる（1516–）。"
+      source: "https://ja.wikipedia.org/wiki/トリエント公会議"
     - from: 1648
       main: catholic
       note: 全域がカトリック。ピエモンテのアルプスの谷にワルドー派（改革派系）、ヴェネツィア・リヴォルノ・ローマなどにユダヤ教徒のゲットーがある。
@@ -538,6 +926,9 @@
   select:
     iso: [AUT, CZE]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "チロル・ザルツブルク・フォアアールベルクはカトリックが多数のまま（チロルの再洗礼派は1520–30年代に弾圧される）。ボヘミア・モラヴィアは別の地域で示す。"
     - from: 1648
       main: catholic
       note: 白山の戦い（1620）以後の再カトリック化で、プロテスタントは国外に追われるか「隠れプロテスタント」になった。
@@ -555,6 +946,12 @@
   select:
     pieces: [AUT-Sankt_Johann_im_Pongau]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: catholic
+      minor: lutheran
+      note: "山地の鉱山の村などで、ひそかにルター派の信仰が守られる。"
     - from: 1648
       main: catholic
       minor: lutheran
@@ -569,6 +966,11 @@
   select:
     pieces: [AUT-Oberwart]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -580,6 +982,12 @@
     regions: [austrian_silesia]
     pieces: [CZE-Karvina]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1545
+      main: lutheran
+      minor: catholic
+      note: "テッシェン公がルター派を導入する（1610年に公がカトリックに戻る）。"
     - from: 1648
       main: catholic
       minor: lutheran
@@ -592,6 +1000,10 @@
   select:
     iso: [SVN, HRV]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "カルニオラ（クライン）ではトルバルがスロヴェニア語の書物を出し（1550）、貴族や町の市民にルター派が広がるが、1598–1600年の対抗宗教改革で一掃される。"
+      source: "https://ja.wikipedia.org/wiki/プリモシュ・トルバル"
     - from: 1648
       main: catholic
 
@@ -600,6 +1012,11 @@
   select:
     regions: [prekmurje]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -610,6 +1027,13 @@
   select:
     regions: [croatia_south_hr, banija_hr, bilogora_moslavina]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1600
+      main: catholic
+      minor: orthodox
+      note: "オスマン帝国との軍政国境地帯（カルロヴァツ要塞 1579）に、正教徒のヴラフ人（セルビア人）が兵農として移り住む（ヴラフ規約 1630）。"
+      source: "https://ja.wikipedia.org/wiki/軍政国境地帯"
     - from: 1648
       main: catholic
       minor: orthodox
@@ -624,6 +1048,12 @@
   select:
     regions: [slavonia_hr]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1545
+      main: catholic
+      minor: sunni
+      note: "オスマン帝国がスラヴォニアを征服（1536–52）。オシイェク・ポジェガなどの町にムスリムが住み、正教徒も移り住む。"
     - from: 1648
       main: catholic
       minor: sunni
@@ -642,6 +1072,12 @@
   select:
     regions: [lika_hr]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: sunni
+      minor: orthodox
+      note: "オスマン帝国の支配（1527–）。クロアチア人の多くが逃れ、ムスリムと正教徒のヴラフ人が移り住む。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -660,6 +1096,12 @@
   select:
     regions: [dalmatia_new_hr]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: sunni
+      note: "オスマン帝国がクニン（1522）・クリス（1537）を奪う。"
     - from: 1648
       main: catholic
       minor: sunni
@@ -678,6 +1120,12 @@
   select:
     regions: [dalmatia_newest_hr]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1500
+      main: catholic
+      minor: sunni
+      note: "オスマン帝国の支配（1493–）。"
     - from: 1648
       main: catholic
       minor: sunni
@@ -691,6 +1139,22 @@
   select:
     iso: [HUN]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: catholic
+      minor: reformed
+      note: "宗教改革が広がり、ハンガリー人の多くがカルヴァン派、ドイツ人とスロヴァキア人の多くがルター派となる。"
+    - from: 1570
+      main: reformed
+      minor: catholic
+      note: "16世紀後半には住民の大多数（8〜9割とされる）がプロテスタントとなる。ハンガリー人はおもに改革派（カルヴァン派）、西部のドイツ人とスロヴァキア人はルター派。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
+    - from: 1630
+      main: catholic
+      minor: reformed
+      note: "エステルゴム大司教パーズマーニ・ペーテル（1616–37）のもとで、王領ハンガリー西部（ザラなど）の貴族が次々にカトリックに戻り、領民の再カトリック化が進む。"
+      source: "https://ja.wikipedia.org/wiki/パーズマーニ・ペーテル"
     - from: 1648
       main: catholic
       minor: reformed
@@ -704,6 +1168,20 @@
   select:
     adm1: ["HUN/Gy?r-Moson-Sopron", "HUN/Vas"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: catholic
+      minor: lutheran
+    - from: 1580
+      main: lutheran
+      minor: catholic
+      note: "ショプロン（エーデンブルク）などのドイツ人の町と貴族の領地がルター派となる。"
+    - from: 1630
+      main: catholic
+      minor: lutheran
+      note: "大司教パーズマーニ・ペーテル（1616–37）とエステルハージ家などの貴族の改宗で、再カトリック化が進む。"
+      source: "https://ja.wikipedia.org/wiki/パーズマーニ・ペーテル"
     - from: 1648
       main: catholic
       minor: lutheran
@@ -714,26 +1192,110 @@
   select:
     adm1: ["HUN/Veszprém", "HUN/Komárom-Esztergom", "HUN/Somogy", "HUN/Tolna", "HUN/Baranya"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: catholic
+      minor: reformed
+    - from: 1570
+      main: reformed
+      minor: catholic
+      note: "ハンガリー人の多くが改革派（カルヴァン派）になる。パーパ・コマーロムは改革派の中心。西寄りの村にはルター派も多い。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
+    - from: 1630
+      main: catholic
+      minor: reformed
+      note: "王領ハンガリーのヴェスプレーム・コマーロムでは、パーズマーニ・ペーテルのもとで貴族の再カトリック化が進む（オスマン領の南部は下の rel_hungary_ottoman_transdanubia）。"
+      source: "https://ja.wikipedia.org/wiki/パーズマーニ・ペーテル"
     - from: 1648
       main: catholic
       minor: reformed
       note: パーパ・コマーロムや南部のオルマーンシャーグに改革派が多い。18世紀にはドイツ人カトリック（ドナウ・シュヴァーベン人）が入植した。
+
+- id: rel_hungary_ottoman_transdanubia
+  name: オスマン領のドナウ以西（フェイェール・ショモジ・トルナ・バラニャ）
+  select:
+    adm1: ["HUN/Fejér", "HUN/Somogy", "HUN/Tolna", "HUN/Baranya"]
+  until: 1699
+  timeline:
+    - from: 1570
+      main: reformed
+      minor: catholic
+      note: "オスマン帝国の支配下（セーケシュフェヘールヴァール 1543–1688、ペーチ 1543–1686）では対抗宗教改革が及ばず、ハンガリー人の村の多くは改革派のまま。バラニャ南部のオルマーンシャーグは改革派の中心。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: オスマン帝国の支配下。ハンガリー人の村は改革派が多い。セルビア人の正教徒も移り住む。1686–88年の奪回の後、戦乱で減った住民を補うためにドイツ人カトリックが入植し（ドナウ・シュヴァーベン人）、18世紀にはカトリックが多数になる（1700年からは上の地域の値）。
 
 - id: rel_hungary_between_rivers
   name: ドナウ・ティサ川間（ペスト・ケチケメート・クンシャーグ）
   select:
     adm1: ["HUN/Pest", "HUN/Bács-Kiskun", "HUN/Csongrád-Csanád", "HUN/Nógrád"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: reformed
+      minor: catholic
+      note: "オスマン領のドナウ・ティサ川間では、ケチケメート・ナジケーレシュ・ツェグレードなどの農業都市（「カルヴァン派の町」）を中心に、ハンガリー人の大部分が改革派となる。北のノーグラードにはスロヴァキア人のルター派も多い。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
     - from: 1648
+      main: reformed
+      minor: catholic
+      note: ケチケメート・ツェグレード・クンシャーグなどの農業都市は改革派。ノーグラードにはスロヴァキア人のルター派も多い。
+    - from: 1700
       main: catholic
       minor: reformed
-      note: ケチケメート・ツェグレード・クンシャーグなどの農業都市は改革派。ノーグラードにはスロヴァキア人のルター派も多い。
+      note: 1686年のブダ奪回と大トルコ戦争の後、荒れた土地にドイツ人・スロヴァキア人・セルビア人などが入植し、カトリック（とセルビア人の正教）が増えてカトリックが多数になる。ケチケメート・ツェグレード・クンシャーグなどの農業都市は改革派のまま。ノーグラードにはスロヴァキア人のルター派も多い。
+
+- id: rel_bacs_south_hu
+  name: バーチ南部（バヤ・バーチャルマーシュ）
+  select:
+    pieces: [HUN-Baja, HUN-Bacsalmas]
+  until: 1699
+  timeline:
+    - from: 1540
+      main: orthodox
+      minor: catholic
+      note: "オスマン帝国の支配のもとで、正教徒のセルビア人が多く移り住む（言語の lang_bacs_south_hu と同じ範囲）。"
+    - from: 1687
+      main: catholic
+      minor: orthodox
+      note: 大トルコ戦争のさなか（1687年ごろ）、カトリックの南スラヴ人ブニェヴツィがバーチカに移り住む。
+
+- id: rel_buda_pest_ottoman
+  name: ブダとペスト（オスマン帝国のブダ州の州都）
+  select:
+    pieces: [HUN-I_kerulet, HUN-II_kerulet, HUN-III_kerulet, HUN-IV_kerulet, HUN-V_kerulet, HUN-VI_kerulet, HUN-VII_kerulet, HUN-VIII_kerulet, HUN-IX_kerulet, HUN-X_kerulet, HUN-XI_kerulet, HUN-XII_kerulet, HUN-XIII_kerulet, HUN-XIV_kerulet, HUN-XV_kerulet, HUN-XVI_kerulet, HUN-XVII_kerulet, HUN-XVIII_kerulet, HUN-XIX_kerulet, HUN-XX_kerulet, HUN-XXI_kerulet, HUN-XXII_kerulet, HUN-XXIII_kerulet]
+  until: 1699
+  timeline:
+    - from: 1541
+      main: sunni
+      minor: reformed
+      note: "オスマン帝国がブダを占領し（1541）、ブダ州の州都とする。住民の多数はムスリムの兵士・役人・商人で、ハンガリー人（多くは改革派）・ユダヤ教徒・南スラヴ人も住む。言語の lang_budapest と同じ範囲。"
+      source: "https://ja.wikipedia.org/wiki/ブダ包囲戦_(1541年)"
+    - from: 1686
+      main: catholic
+      note: 1686年の奪回でムスリムは去り（殺害・追放）、ドイツ人のカトリック市民が町を再建した。
 
 - id: rel_hungary_east_reformed
   name: ハンガリー東部（ティサ川以東の改革派地域）
   select:
     adm1: ["HUN/Hajdú-Bihar", "HUN/Szabolcs-Szatmár-Bereg", "HUN/Borsod-Abaúj-Zemplén", "HUN/Békés", "HUN/Jász-Nagykun-Szolnok"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: lutheran
+      minor: catholic
+      note: "1550年代にはティサ川以東の大半がプロテスタントとなる（はじめはルター派の教えが広まり、1560年代にカルヴァン派に移る）。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
+    - from: 1565
+      main: reformed
+      minor: catholic
+      note: "デブレツェンが「カルヴァン派のローマ」となる（1567年デブレツェン教会会議でスイス信仰告白を採用）。"
+      source: "https://ja.wikipedia.org/wiki/デブレツェン"
     - from: 1648
       main: reformed
       minor: catholic
@@ -745,6 +1307,12 @@
   select:
     adm1: ["HUN/Heves"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: catholic
+      minor: reformed
+      note: "ギュンジェシュなどの町と村に改革派が広がる。司教座都市エゲル（1596年からオスマン領）の周辺はカトリックが残る。"
     - from: 1648
       main: catholic
 
@@ -754,6 +1322,14 @@
   select:
     iso: [SVK]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: catholic
+      minor: lutheran
+    - from: 1630
+      main: catholic
+      note: "パーズマーニ・ペーテルのもと、トルナヴァ（ナジソンバト）大学（1635）を拠点に再カトリック化が進む。"
     - from: 1648
       main: catholic
       note: 対抗宗教改革の中心（トルナヴァ大学）。
@@ -763,6 +1339,18 @@
   select:
     adm1: ["SVK/Region of ?ilina", "SVK/Region of Tren?ín", "SVK/Region of Banská Bystrica"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1540
+      main: catholic
+      minor: lutheran
+    - from: 1580
+      main: lutheran
+      minor: catholic
+      note: "鉱山都市（バンスカー・シチャヴニツァなど）のドイツ人とスロヴァキア人の多くがルター派となる（チェコ語訳のクラリツェ聖書を使う）。"
+    - from: 1630
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -777,6 +1365,18 @@
   select:
     adm1: ["SVK/Region of Pre?ov", "SVK/Region of Ko?ice"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1540
+      main: catholic
+      minor: lutheran
+    - from: 1580
+      main: lutheran
+      minor: catholic
+      note: "上部ハンガリー東部の5つの自由都市（カッシャなど）がルター派の信仰告白（1549）を出す。"
+    - from: 1630
+      main: catholic
+      minor: lutheran
     - from: 1648
       main: catholic
       minor: lutheran
@@ -816,3 +1416,212 @@
       main: orthodox
       minor: reformed
       note: 戦後、ルーマニア人（正教徒・ギリシア・カトリック）の移住で、ムレシュ県ではルーマニア人が多数になった（2011年でルーマニア人約53%、ハンガリー人約38%）。ハンガリー人は改革派とカトリック。言語（lang_mures）と同じ年。
+
+# ---- 1453–1647 年だけの区分け（until: 1647。1648 年以後は上の地域の記述が効く）----
+
+- id: rel_ref_early_de
+  name: 早くルター派となった領邦・都市（エルネスト系ザクセン・ニュルンベルク・リューネブルク・ハンブルクなど）
+  select:
+    regions: [saxon_duchies_lands, saxony_north_1815, coburg, nuremberg, ansbach, bayreuth, lueneburg_north, lueneburg_south, lubeck_city, hamburg_city, magdeburg_west, schwabisch_hall, east_frisia_lands]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+    - from: 1521
+      main: catholic
+      minor: lutheran
+      note: "ルターの95か条の論題（1517、ヴィッテンベルク）。ヴォルムス帝国議会（1521）の後、ザクセン選帝侯フリードリヒ（賢明公）がルターをかくまい、ヴィッテンベルクから宗教改革が広がる。"
+      source: "https://ja.wikipedia.org/wiki/95か条の論題"
+    - from: 1528
+      main: lutheran
+      minor: catholic
+      note: "ザクセン選帝侯領（1527年に教会巡察）、ニュルンベルク（1525）、ブランデンブルク＝アンスバッハ（1528）、リューネブルク（1527）、マクデブルク（1524）、ハンブルク（1529）、リューベック（1530）などがルター派の教会規定を定める。"
+      source: "https://ja.wikipedia.org/wiki/宗教改革"
+    - from: 1545
+      main: lutheran
+
+- id: rel_ref_mid_de
+  name: 1530年代にルター派となった領邦（アルベルト系ザクセン・ブランデンブルク・ポンメルン・ヴュルテンベルクなど）
+  select:
+    regions: [saxony_core, saxony_thuringia, brandenburg_core, cottbus, lower_lusatia, altmark_halberstadt, jerichow, swedish_pomerania_north, swedish_pomerania_south, wurttemberg_core, wurttemberg_french_zone, schleswig_royal_de, schleswig_gottorp, holstein_royal, holstein_gottorp_lands, calenberg, gottingen_grubenhagen, berlin_city]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+    - from: 1525
+      main: catholic
+      minor: lutheran
+      note: "町の市民や下級の聖職者にルターの教えが広がる。"
+    - from: 1539
+      main: lutheran
+      minor: catholic
+      note: "ヴュルテンベルク（1534）、ポンメルン（1534）、アルベルト系ザクセン（1539）、ブランデンブルク（1539）、シュレースヴィヒ＝ホルシュタイン（1528–42）、カレンベルク（1542）が宗教改革を導入する。"
+    - from: 1555
+      main: lutheran
+      note: "アウクスブルクの和議（1555）。"
+      source: "https://ja.wikipedia.org/wiki/アウクスブルクの和議"
+
+- id: rel_ref_late_de
+  name: 遅れてルター派となった領邦（メクレンブルク・ブラウンシュヴァイク＝ヴォルフェンビュッテルなど）
+  select:
+    regions: [brunswick_lands, mecklenburg_schwerin_lands, mecklenburg_gustrow_lands, mecklenburg_stargard, hoya, diepholz]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: lutheran
+    - from: 1549
+      main: lutheran
+      minor: catholic
+      note: "メクレンブルクのシュテルンベルク議会（1549）でルター派が採用される。ブラウンシュヴァイク＝ヴォルフェンビュッテルは、シュマルカルデン同盟の占領（1542–47）の後カトリックに戻る。"
+    - from: 1568
+      main: lutheran
+      note: "ブラウンシュヴァイク公ユリウスがルター派を導入する（1568）。ヘルムシュテット大学（1576）。"
+
+- id: rel_upper_palatinate_pre
+  name: オーバープファルツ（1453–1647）
+  select:
+    regions: [upper_palatinate]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+    - from: 1544
+      main: catholic
+      minor: lutheran
+    - from: 1556
+      main: lutheran
+      note: "プファルツ選帝侯領としてルター派となる（選帝侯が改革派になってからも、住民の多くはルター派のまま）。"
+    - from: 1628
+      main: catholic
+      minor: lutheran
+      note: "白山の戦い（1620）の後バイエルンが占領し、1628年にバイエルン領となる。マクシミリアン1世が住民にカトリックへの改宗を命じる（1628）。"
+      source: "https://ja.wikipedia.org/wiki/対抗宗教改革"
+
+- id: rel_neuburg_pre
+  name: プファルツ＝ノイブルク（1453–1647）
+  select:
+    regions: [neuburg]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+    - from: 1542
+      main: lutheran
+      note: "オットハインリヒがルター派を導入する。"
+    - from: 1615
+      main: catholic
+      minor: lutheran
+      note: "ヴォルフガング・ヴィルヘルムがカトリックに改宗し（1613）、領内の再カトリック化を進める。"
+
+- id: rel_austria_danube_pre
+  name: オーストリア大公国（エンス川の上・下、1453–1647）
+  select:
+    adm1: ["AUT/Oberösterreich", "AUT/Niederösterreich", "AUT/Wien"]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: lutheran
+      note: "貴族と町の市民にルター派が広がる。"
+    - from: 1570
+      main: lutheran
+      minor: catholic
+      note: "マクシミリアン2世が貴族にアウクスブルク信仰告白による礼拝を認める（1568–71）。上オーストリアを中心に住民の多数がプロテスタントとなる。"
+    - from: 1625
+      main: catholic
+      minor: lutheran
+      note: "白山の戦い（1620）の後、フェルディナント2世が対抗宗教改革を強行する（上オーストリアでは改宗の命令に反対する農民戦争 1626）。"
+      source: "https://ja.wikipedia.org/wiki/対抗宗教改革"
+
+- id: rel_inner_austria_pre
+  name: 内オーストリア（シュタイアーマルク・ケルンテン、1453–1647）
+  select:
+    adm1: ["AUT/Steiermark", "AUT/Kärnten"]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: lutheran
+    - from: 1565
+      main: lutheran
+      minor: catholic
+      note: "貴族と町の多くがルター派となる（ブルック議会の宗教の妥協 1578）。グラーツにケプラーが教えたプロテスタントの学校がある。"
+    - from: 1600
+      main: catholic
+      minor: lutheran
+      note: "フェルディナント大公（のちの皇帝フェルディナント2世）が「宗教改革委員会」で説教師を追放し、住民に改宗を迫る（1598–1600）。"
+      source: "https://ja.wikipedia.org/wiki/対抗宗教改革"
+    - from: 1630
+      main: catholic
+      note: "改宗を拒んだ貴族が国外に移る（1628）。山地にひそかなプロテスタントが残る。"
+
+- id: rel_bohemia_pre
+  name: ボヘミア（フス派の地、1453–1647）
+  select:
+    iso: [CZE]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: hussite
+      minor: catholic
+      note: "フス戦争（1419–36）の後、フス派の穏健派（ウトラキスト＝両形色派）が住民の多数を占める。バーゼル協約（1436）で両形色の聖餐が認められる。カトリックは国境地帯のドイツ人の町などに多い。"
+      source: "https://ja.wikipedia.org/wiki/フス派"
+    - from: 1530
+      main: hussite
+      minor: lutheran
+      note: "ルター派がドイツ人の住民と新しいウトラキストに広がる。兄弟団（ボヘミア兄弟団）も広がる。"
+    - from: 1575
+      main: hussite
+      minor: lutheran
+      note: "ボヘミア信仰告白（1575）でプロテスタント諸派が結束する。ルドルフ2世の勅書（1609）で信仰の自由が認められる。"
+      source: "https://ja.wikipedia.org/wiki/ボヘミア兄弟団"
+    - from: 1627
+      main: catholic
+      minor: hussite
+      note: "ベーメンの反乱（1618）が白山の戦い（1620）で敗れ、プロテスタントの聖職者が追放される（1624）。改訂領邦条例（1627）でカトリック以外が禁じられ、改宗を拒んだ人々（コメニウスなど）は亡命する。"
+      source: "https://ja.wikipedia.org/wiki/白山の戦い"
+
+- id: rel_sudeten_pre
+  name: ボヘミア・モラヴィアの国境地帯（ドイツ人の地域、1453–1647）
+  select:
+    pieces: [CZE-Cheb, CZE-Karlovy_Vary, CZE-Sokolov, CZE-Chomutov, CZE-Usti_nad_Labem, CZE-D_in, CZE-eska_Lipa, CZE-Liberec, CZE-Jablonec_nad_Nisou, CZE-Tachov, CZE-esky_Krumlov, CZE-umperk, CZE-Jesenik, CZE-Bruntal]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+      minor: hussite
+      note: "ドイツ人の住民はカトリックが多い。"
+    - from: 1530
+      main: lutheran
+      minor: catholic
+      note: "ザクセンに近い北部・西部（ヨアヒムスタールなどの鉱山町）のドイツ人がルター派となる。"
+    - from: 1627
+      main: catholic
+      minor: lutheran
+      note: "白山の戦い（1620）の後の再カトリック化（改訂領邦条例 1627）。"
+
+- id: rel_moravia_pre
+  name: モラヴィア（1453–1647）
+  select:
+    adm1: ["CZE/Jihomoravský kraj", "CZE/Olomoucký kraj", "CZE/Zlínský kraj"]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+      minor: hussite
+      note: "オロモウツ司教座のもとでカトリックが強いが、フス派も多い。"
+    - from: 1550
+      main: hussite
+      minor: catholic
+      note: "兄弟団・ウトラキスト・ルター派（ドイツ人）・再洗礼派（フッター派）が広がり、プロテスタント諸派（地図ではフス派の色）が多数となる。"
+    - from: 1627
+      main: catholic
+      minor: hussite
+      note: "白山の戦い（1620）の後の再カトリック化（1628年に貴族へ改宗を命じる）。"

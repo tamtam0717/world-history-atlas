@@ -3,9 +3,16 @@
 
 - id: denmark_dk
   name: デンマーク本土
+  names:
+    - {to: 1647, name: "デンマーク"}
   select:
     iso: [DNK]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "denmark"
+      note: "デンマーク王はノルウェー王を兼ね、カルマル連合の盟主（地図ではデンマーク＝ノルウェーの色）"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
     - from: 1940
@@ -21,9 +28,16 @@
 
 - id: schleswig_dk
   name: 北シュレースヴィヒ
+  names:
+    - {to: 1647, name: "デンマーク"}
   select:
     pieces: [DNK-Aabenraa, DNK-Haderslev, DNK-Snderborg, DNK-Tnder]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "denmark"
+      note: "デンマーク王はノルウェー王を兼ね、カルマル連合の盟主（地図ではデンマーク＝ノルウェーの色）"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
       note: "シュレースヴィヒ公国（帝国外）。1713/1720年まではゴットルプ家の持ち分が散在（地図では省略）"
@@ -76,6 +90,18 @@
   select:
     pieces: [DNK-Bornholm]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "denmark"
+    - from: 1525
+      owner: "lubeck"
+      cause: "伯爵戦争に先立ち、フレデリク1世が支援の代償としてボーンホルム島をリューベックに50年間質入れ"
+      source: "https://en.wikipedia.org/wiki/Bornholm"
+    - from: 1576
+      owner: "denmark"
+      cause: "50年の質入れの期限が切れ、リューベックがボーンホルム島をデンマークに返す"
+      source: "https://en.wikipedia.org/wiki/Bornholm"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
     - from: 1658
@@ -108,6 +134,20 @@
   select:
     iso: [NOR]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "norway"
+      overlord: "kalmar_union"
+      note: "ノルウェー王国（デンマーク王が王を兼ねるカルマル連合の一員。独自の国務院を持つ）"
+    - from: 1523
+      owner: "norway"
+      cause: "スウェーデンの離脱でカルマル連合が解体。ノルウェーはデンマークとの同君連合として残る"
+      source: "https://ja.wikipedia.org/wiki/カルマル同盟"
+    - from: 1537
+      owner: "denmark"
+      cause: "伯爵戦争に勝ったクリスチャン3世がノルウェーの国務院を廃し、デンマーク王国の一部とする（宗教改革も導入）"
+      source: "https://ja.wikipedia.org/wiki/デンマーク＝ノルウェー"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
     - from: 1814
@@ -134,6 +174,21 @@
   select:
     pieces: [NOR-Guovdageaidnu_sme_1, NOR-Kara_johka_sme_1]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "norway"
+      overlord: "kalmar_union"
+      certainty: "uncertain"
+      note: "内陸のサーミ人の地域。ノルウェー・スウェーデン・ロシア（ノヴゴロド）がそれぞれ課税し、国境はなかった"
+    - from: 1523
+      owner: "norway"
+      certainty: "uncertain"
+    - from: 1537
+      owner: "denmark"
+      certainty: "uncertain"
+      cause: "ノルウェーがデンマーク王国の一部となる"
+      source: "https://ja.wikipedia.org/wiki/デンマーク＝ノルウェー"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
       certainty: uncertain
@@ -159,6 +214,8 @@
 
 - id: trondelag
   name: トロンデラーグ（トロンハイム）
+  names:
+    - {to: 1647, name: "ノルウェー"}
   select:
     pieces: [NOR-Afjord_nor, NOR-Agdenes_nor, NOR-Bjugn_nor, NOR-Flatanger_nor, NOR-Fosnes_nor, NOR-Frosta_nor, NOR-Frya_nor,
       NOR-Grong_nor, NOR-Halsa_nor, NOR-Hemne_nor, NOR-Hitra_nor, NOR-Holtalen_nor, NOR-Hylandet_nor, NOR-Indery_nor,
@@ -169,6 +226,20 @@
       NOR-Skaun_nor, NOR-Snaase_sma_1, NOR-Snillfjord_nor, NOR-Steinkjer_nor, NOR-Stjrdal_nor, NOR-Trondheim_nor,
       NOR-Tydal_nor, NOR-Verdal_nor, NOR-Verran_nor, NOR-Vikna_nor, NOR-rland_nor]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "norway"
+      overlord: "kalmar_union"
+      note: "ノルウェー王国（デンマーク王が王を兼ねるカルマル連合の一員。独自の国務院を持つ）"
+    - from: 1523
+      owner: "norway"
+      cause: "スウェーデンの離脱でカルマル連合が解体。ノルウェーはデンマークとの同君連合として残る"
+      source: "https://ja.wikipedia.org/wiki/カルマル同盟"
+    - from: 1537
+      owner: "denmark"
+      cause: "伯爵戦争に勝ったクリスチャン3世がノルウェーの国務院を廃し、デンマーク王国の一部とする（宗教改革も導入）"
+      source: "https://ja.wikipedia.org/wiki/デンマーク＝ノルウェー"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
     - from: 1658
@@ -197,9 +268,43 @@
 - id: sweden
   name: スウェーデン本土
   note: "ゴットランド・イェムトランド・ヘリエダーレンは1645年ブレムセブルー条約でスウェーデン領"
+  names:
+    - {to: 1647, name: "スウェーデン"}
   select:
     iso: [SWE]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "sweden"
+      note: "カール8世（カール・クヌートソン）の王国。カルマル連合からの離脱をめぐり、連合王（デンマーク王）派と争った"
+    - from: 1457
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "カール8世が追われ、デンマーク王クリスチャン1世がスウェーデン王に選ばれる（カルマル連合の復活）"
+      source: "https://ja.wikipedia.org/wiki/クリスチャン1世_(デンマーク王)"
+    - from: 1464
+      owner: "sweden"
+      cause: "クリスチャン1世が追われ、カール8世が復位。以後は摂政ステン・ストゥーレ（大）らが連合王を認めずに国を治める"
+      source: "https://ja.wikipedia.org/wiki/ステン・ストゥーレ_(大)"
+    - from: 1497
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "デンマーク王ハンスがスウェーデン王となる（カルマル連合の復活）"
+      source: "https://ja.wikipedia.org/wiki/ハンス_(デンマーク王)"
+    - from: 1501
+      owner: "sweden"
+      cause: "スウェーデン貴族がハンスに反乱。ステン・ストゥーレ（大）、続いてスヴァンテ・ニルソン、ステン・ストゥーレ（小）が摂政として治める"
+      source: "https://ja.wikipedia.org/wiki/カルマル同盟"
+    - from: 1520
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "クリスチャン2世がスウェーデンを征服して王となり、反対派の貴族を処刑する（ストックホルムの血浴、11月）"
+      source: "https://ja.wikipedia.org/wiki/ストックホルムの血浴"
+    - from: 1521
+      owner: "sweden"
+      cause: "グスタフ・ヴァーサがダーラナで蜂起し、摂政となる（8月）。1523年に国王に選ばれ、スウェーデンはカルマル連合から離脱した"
+      source: "https://ja.wikipedia.org/wiki/グスタフ1世_(スウェーデン王)"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
 
@@ -208,6 +313,14 @@
   select:
     pieces: [SWE-Falkenberg, SWE-Halmstad, SWE-Hylte, SWE-Kungsbacka, SWE-Laholm, SWE-Varberg]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "denmark"
+    - from: 1645
+      owner: "sweden"
+      cause: "ブレムセブルー条約で、ハッランドを30年間の担保としてスウェーデンに引き渡す"
+      source: "https://ja.wikipedia.org/wiki/ブレムセブルー条約"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
       note: "1645年ブレムセブルー条約で30年間の担保としてスウェーデンが占有"
@@ -225,6 +338,11 @@
       SWE-Perstorp, SWE-Ronneby, SWE-Simrishamn, SWE-Sjobo, SWE-Skurup, SWE-Solvesborg, SWE-Staffanstorp, SWE-Svalov,
       SWE-Svedala, SWE-Tomelilla, SWE-Trelleborg, SWE-Vellinge, SWE-Ystad]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "denmark"
+      note: "デンマーク王国の東部（スコーネ地方）。エーレスンド海峡の両岸をデンマークが押さえ、海峡通行税を取った"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
     - from: 1658
@@ -238,6 +356,18 @@
     pieces: [SWE-Kungalv, SWE-Lysekil, SWE-Munkedal, SWE-Ockero, SWE-Orust, SWE-Sotenas, SWE-Stenungsund, SWE-Stromstad,
       SWE-Tanum, SWE-Tjorn, SWE-Uddevalla]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "norway"
+      overlord: "kalmar_union"
+      note: "ノルウェー王国の南端（ボーヒュース城）"
+    - from: 1523
+      owner: "norway"
+    - from: 1537
+      owner: "denmark"
+      cause: "ノルウェーがデンマーク王国の一部となる"
+      source: "https://ja.wikipedia.org/wiki/デンマーク＝ノルウェー"
+    # ---- 1648– ----
     - from: 1648
       owner: denmark
     - from: 1658
@@ -247,9 +377,43 @@
 
 - id: finland
   name: フィンランド
+  names:
+    - {to: 1647, name: "スウェーデン"}
   select:
     iso: [FIN]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "sweden"
+      note: "カール8世（カール・クヌートソン）の王国。カルマル連合からの離脱をめぐり、連合王（デンマーク王）派と争った"
+    - from: 1457
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "カール8世が追われ、デンマーク王クリスチャン1世がスウェーデン王に選ばれる（カルマル連合の復活）"
+      source: "https://ja.wikipedia.org/wiki/クリスチャン1世_(デンマーク王)"
+    - from: 1464
+      owner: "sweden"
+      cause: "クリスチャン1世が追われ、カール8世が復位。以後は摂政ステン・ストゥーレ（大）らが連合王を認めずに国を治める"
+      source: "https://ja.wikipedia.org/wiki/ステン・ストゥーレ_(大)"
+    - from: 1497
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "デンマーク王ハンスがスウェーデン王となる（カルマル連合の復活）"
+      source: "https://ja.wikipedia.org/wiki/ハンス_(デンマーク王)"
+    - from: 1501
+      owner: "sweden"
+      cause: "スウェーデン貴族がハンスに反乱。ステン・ストゥーレ（大）、続いてスヴァンテ・ニルソン、ステン・ストゥーレ（小）が摂政として治める"
+      source: "https://ja.wikipedia.org/wiki/カルマル同盟"
+    - from: 1520
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "クリスチャン2世がスウェーデンを征服して王となり、反対派の貴族を処刑する（ストックホルムの血浴、11月）"
+      source: "https://ja.wikipedia.org/wiki/ストックホルムの血浴"
+    - from: 1521
+      owner: "sweden"
+      cause: "グスタフ・ヴァーサがダーラナで蜂起し、摂政となる（8月）。1523年に国王に選ばれ、スウェーデンはカルマル連合から離脱した"
+      source: "https://ja.wikipedia.org/wiki/グスタフ1世_(スウェーデン王)"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
     - from: 1809
@@ -265,10 +429,44 @@
 - id: old_finland
   name: 旧フィンランド（キュミ川以東）
   note: "1721年ニスタット条約でロシア領となったヴィープリ（ヴィボルグ）地方は現ロシア領で、地域 kexholm_vyborg として別に描く。コウヴォラ地方（キュミ川の両岸）とサヴォンリンナ地方（一部のみ割譲）は、面積の大きい側の判断が難しく要確認"
+  names:
+    - {to: 1647, name: "スウェーデン"}
   select:
     pieces: [FIN-Imatran_seutukunta, FIN-Kotkan_Haminan_seutukunta, FIN-Kouvolan_seutukunta, FIN-Lappeenrannan_seutukunta,
       FIN-Savonlinnan_seutukunta]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "sweden"
+      note: "カール8世（カール・クヌートソン）の王国。カルマル連合からの離脱をめぐり、連合王（デンマーク王）派と争った"
+    - from: 1457
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "カール8世が追われ、デンマーク王クリスチャン1世がスウェーデン王に選ばれる（カルマル連合の復活）"
+      source: "https://ja.wikipedia.org/wiki/クリスチャン1世_(デンマーク王)"
+    - from: 1464
+      owner: "sweden"
+      cause: "クリスチャン1世が追われ、カール8世が復位。以後は摂政ステン・ストゥーレ（大）らが連合王を認めずに国を治める"
+      source: "https://ja.wikipedia.org/wiki/ステン・ストゥーレ_(大)"
+    - from: 1497
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "デンマーク王ハンスがスウェーデン王となる（カルマル連合の復活）"
+      source: "https://ja.wikipedia.org/wiki/ハンス_(デンマーク王)"
+    - from: 1501
+      owner: "sweden"
+      cause: "スウェーデン貴族がハンスに反乱。ステン・ストゥーレ（大）、続いてスヴァンテ・ニルソン、ステン・ストゥーレ（小）が摂政として治める"
+      source: "https://ja.wikipedia.org/wiki/カルマル同盟"
+    - from: 1520
+      owner: "sweden"
+      overlord: "kalmar_union"
+      cause: "クリスチャン2世がスウェーデンを征服して王となり、反対派の貴族を処刑する（ストックホルムの血浴、11月）"
+      source: "https://ja.wikipedia.org/wiki/ストックホルムの血浴"
+    - from: 1521
+      owner: "sweden"
+      cause: "グスタフ・ヴァーサがダーラナで蜂起し、摂政となる（8月）。1523年に国王に選ばれ、スウェーデンはカルマル連合から離脱した"
+      source: "https://ja.wikipedia.org/wiki/グスタフ1世_(スウェーデン王)"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
     - from: 1743
@@ -288,9 +486,33 @@
 - id: estonia
   name: エストニア・北リヴォニア
   note: "1561年以来のスウェーデン領エストニア、1629年以来のスウェーデン領リヴォニア、1645年以来のエーゼル島"
+  names:
+    - {to: 1647, name: "ドルパト司教領"}
   select:
     iso: [EST]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "dorpat_bishopric"
+    - from: 1558
+      owner: "russia"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でイヴァン4世の軍がドルパトを占領（7月）"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1582
+      owner: "poland_lithuania"
+      cause: "ヤム・ザポルスキの和約（1月）で、ロシアがリヴォニアをポーランド＝リトアニアに返す"
+      source: "https://ja.wikipedia.org/wiki/ヤム・ザポルスキの和約"
+    - from: 1625
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "グスタフ2世アドルフがリヴォニアを征服し、ドルパトを占領"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・スウェーデン戦争_(1621年-1625年)"
+    - from: 1629
+      owner: "sweden"
+      cause: "アルトマルクの休戦条約で、ダウガヴァ川以北のリヴォニアがスウェーデン領に"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
     - from: 1710
@@ -335,11 +557,35 @@
 
 - id: livonia_lv
   name: リヴォニア（ヴィゼメ）
+  names:
+    - {to: 1647, name: "リガ大司教領"}
   select:
     pieces: [LVA-Al_ksnes_novads, LVA-C_su_novads, LVA-Gulbenes_novads, LVA-Limba_u_novads, LVA-Madonas_novads, LVA-Ogres_novads,
       LVA-R_ga, LVA-Ropa_u_novads, LVA-Salaspils_novads, LVA-Saulkrastu_novads, LVA-Siguldas_novads, LVA-Smiltenes_novads,
       LVA-Valkas_novads, LVA-Valmieras_novads, LVA-da_u_novads]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "riga_archbishopric"
+      note: "リガ大司教領（リヴォニア騎士団と争った）。リガ市はハンザ都市"
+    - from: 1561
+      owner: "lithuania"
+      cause: "ヴィリニュス合意で、リヴォニアがリトアニア大公に委ねられる（大司教領は1566年に廃止）"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1625
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "グスタフ2世アドルフがリヴォニアを征服"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・スウェーデン戦争_(1621年-1625年)"
+    - from: 1629
+      owner: "sweden"
+      cause: "アルトマルクの休戦条約"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
     - from: 1710
@@ -384,10 +630,25 @@
 
 - id: latgale
   name: ポーランド領リヴォニア（ラトガレ）
+  names:
+    - {to: 1647, name: "ラトガレ（ポーランド領リヴォニア）"}
   select:
     pieces: [LVA-Aug_daugavas_novads, LVA-Balvu_novads, LVA-Daugavpils, LVA-Kr_slavas_novads, LVA-L_v_nu_novads, LVA-Ludzas_novads,
       LVA-Prei_u_novads, LVA-R_zeknes, LVA-R_zeknes_novads, LVA-Varak_nu_novads]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "livonian_order"
+      note: "リヴォニア騎士団領（デューナブルク＝ダウガフピルス城）"
+    - from: 1561
+      owner: "lithuania"
+      cause: "ヴィリニュス合意で、リヴォニアがリトアニア大公に委ねられる"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -434,6 +695,21 @@
       LVA-Olaines_novads, LVA-Saldus_novads, LVA-Talsu_novads, LVA-Tukuma_novads, LVA-Ventspils, LVA-Ventspils_novads,
       LVA-ekavas_novads]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "livonian_order"
+      note: "リヴォニア騎士団領（ゴールディンゲン・ミタウ）"
+    - from: 1561
+      owner: "courland"
+      overlord: "lithuania"
+      cause: "最後の騎士団長ゴットハルト・ケトラーがクールラント＝ゼムガレン公となり、リトアニア大公（ジグムント2世）に臣従"
+      source: "https://ja.wikipedia.org/wiki/クールラント公国"
+    - from: 1569
+      owner: "courland"
+      overlord: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: courland
       overlord: poland_lithuania
@@ -479,10 +755,37 @@
 
 - id: memel
   name: メーメル地方（クライペダ）
+  names:
+    - {to: 1647, name: "メーメル地方"}
   select:
     pieces: [LTU-Klaip_da_City_Municipality, LTU-Klaip_da_District_Municipality, LTU-Neringos_savivaldyb, LTU-Pag_gi_savivaldyb,
       LTU-ilut_District_Municipality]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "teutonic_order"
+      note: "ドイツ騎士団国家（リヴォニアとプロイセンを結ぶ細長い地）"
+    - from: 1466
+      owner: "teutonic_order"
+      overlord: "poland"
+      cause: "第二次トルンの和約で、ドイツ騎士団国家はポーランド王の宗主権を認める"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1525
+      owner: "ducal_prussia"
+      overlord: "poland"
+      cause: "騎士団総長アルブレヒトがルター派に改宗し、ポーランド王に臣従してプロイセン公となる（クラクフ条約）"
+      source: "https://ja.wikipedia.org/wiki/プロイセン公国"
+    - from: 1569
+      owner: "ducal_prussia"
+      overlord: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1618
+      owner: "prussia"
+      overlord: "poland_lithuania"
+      cause: "ブランデンブルク選帝侯ヨハン・ジギスムントがプロイセン公国を相続（ブランデンブルク＝プロイセンの同君連合）"
+      source: "https://ja.wikipedia.org/wiki/ブランデンブルク＝プロイセン"
+    # ---- 1648– ----
     - from: 1648
       owner: prussia
       overlord: poland_lithuania
@@ -532,6 +835,8 @@
 
 - id: lithuania
   name: リトアニア大公国（1795年ロシア領部分）
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [BLR-Ashmyany, BLR-Astravyets, BLR-Baranovichy, BLR-Braslaw, BLR-Brest, BLR-Byaroza, BLR-Byerastavitsa,
       BLR-Drahichyn, BLR-Dzyatlava, BLR-Grodno, BLR-Ivanava, BLR-Ivatsevichy, BLR-Iwye, BLR-Kamenets, BLR-Karelichy,
@@ -550,6 +855,15 @@
       LTU-Zaras_rajono_savivaldyb, LTU-al_inink_rajono_savivaldyb, LTU-iauli_miesto_savivaldyb, LTU-iauli_rajono_savivaldyb,
       LTU-ilal_s_rajono_savivaldyb, LTU-irvint_rajono_savivaldyb, LTU-ven_ioni_rajono_savivaldyb]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1795
@@ -594,11 +908,22 @@
 
 - id: suvalkija
   name: ネマン川以西（スヴァルキヤ）
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [LTU-Alytaus_miesto_savivaldyb, LTU-Alytus_District_Municipality, LTU-Kalvarija_Municipality, LTU-Kazl_R_dos_savivaldyb,
       LTU-Lazdij_rajono_savivaldyb, LTU-Marijampol_Municipality, LTU-Prienai_District_Municipality, LTU-Vilkavi_kis_District_Municipality,
       LTU-aki_rajono_savivaldyb]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1795
@@ -657,9 +982,31 @@
 
 - id: pom_sw
   name: スウェーデン領ポンメルン（オーデル河口）
+  names:
+    - {to: 1647, name: "ポンメルン"}
   select:
     pieces: [POL-Szczecin, POL-powiat_policki, POL-winouj_cie]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "pomerania"
+      overlord: "hre"
+      note: "グライフ家のポンメルン公国（地図ではポンメルン＝ヴォルガスト・シュテッティンなどの分家をまとめる）。コルベルク・ケースリンはカミン司教領"
+    - from: 1627
+      owner: "habsburg"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（皇帝軍の占領）"
+      cause: "フランツブルク協定（11月）で皇帝軍（ヴァレンシュタイン）がポンメルンに駐留"
+      source: "https://de.wikipedia.org/wiki/Franzburger_Kapitulation"
+    - from: 1630
+      owner: "sweden"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（スウェーデン軍の占領）"
+      cause: "三十年戦争に介入したスウェーデン軍がポンメルンを占領（シュテッティン条約、1637年に公家断絶）"
+      source: "https://en.wikipedia.org/wiki/Swedish_Pomerania"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
       overlord: hre
@@ -704,9 +1051,31 @@
 
 - id: goleniow
   name: ゴルノウ（オーデル東岸）
+  names:
+    - {to: 1647, name: "ポンメルン"}
   select:
     pieces: [POL-powiat_goleniowski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "pomerania"
+      overlord: "hre"
+      note: "グライフ家のポンメルン公国（地図ではポンメルン＝ヴォルガスト・シュテッティンなどの分家をまとめる）。コルベルク・ケースリンはカミン司教領"
+    - from: 1627
+      owner: "habsburg"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（皇帝軍の占領）"
+      cause: "フランツブルク協定（11月）で皇帝軍（ヴァレンシュタイン）がポンメルンに駐留"
+      source: "https://de.wikipedia.org/wiki/Franzburger_Kapitulation"
+    - from: 1630
+      owner: "sweden"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（スウェーデン軍の占領）"
+      cause: "三十年戦争に介入したスウェーデン軍がポンメルンを占領（シュテッティン条約、1637年に公家断絶）"
+      source: "https://en.wikipedia.org/wiki/Swedish_Pomerania"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
       overlord: hre
@@ -759,6 +1128,8 @@
 
 - id: pom_br
   name: ヒンターポンメルン・ノイマルク
+  names:
+    - {to: 1647, name: "ポンメルン"}
   select:
     pieces: [POL-Colberg_County, POL-Gorzow_Wielkopolski, POL-Koszalin, POL-S_upsk, POL-powiat_bia_ogardzki, POL-powiat_choszcze_ski,
       POL-powiat_drawski, POL-powiat_gorzowski, POL-powiat_gryfi_ski, POL-powiat_gryficki, POL-powiat_kamie_ski,
@@ -766,7 +1137,28 @@
       POL-powiat_s_awie_ski, POL-powiat_s_ubicki, POL-powiat_s_upski, POL-powiat_stargardzki, POL-powiat_strzelecko_drezdenecki,
       POL-powiat_sul_ci_ski, POL-powiat_szczecinecki, POL-powiat_widwi_ski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "pomerania"
+      overlord: "hre"
+      note: "グライフ家のポンメルン公国（地図ではポンメルン＝ヴォルガスト・シュテッティンなどの分家をまとめる）。コルベルク・ケースリンはカミン司教領"
+    - from: 1627
+      owner: "habsburg"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（皇帝軍の占領）"
+      cause: "フランツブルク協定（11月）で皇帝軍（ヴァレンシュタイン）がポンメルンに駐留"
+      source: "https://de.wikipedia.org/wiki/Franzburger_Kapitulation"
+    - from: 1630
+      owner: "sweden"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（スウェーデン軍の占領）"
+      cause: "三十年戦争に介入したスウェーデン軍がポンメルンを占領（シュテッティン条約、1637年に公家断絶）"
+      source: "https://en.wikipedia.org/wiki/Swedish_Pomerania"
+    # ---- 1648– ----
     - from: 1648
+      cause: "ウェストファリア条約でヒンターポンメルンはブランデンブルクへ（スウェーデン軍の撤退は1653年）"
       owner: prussia
       overlord: hre
       note: "ヒンターポンメルン・ノイマルク（ブランデンブルク）"
@@ -806,6 +1198,29 @@
   select:
     pieces: [POL-powiat_bytowski, POL-powiat_l_borski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "teutonic_order"
+    - from: 1455
+      owner: "pomerania"
+      certainty: "uncertain"
+      cause: "十三年戦争中、ポーランドと結んだポンメルン公エーリヒ2世がラウエンブルク・ビュートウを得る"
+      source: "https://en.wikipedia.org/wiki/Lauenburg_and_Bütow_Land"
+    - from: 1466
+      owner: "pomerania"
+      overlord: "poland"
+      cause: "第二次トルンの和約でポーランド領となり、ポンメルン公の封土（担保）として与えられる（1526年に正式な封土）"
+      source: "https://en.wikipedia.org/wiki/Lauenburg_and_Bütow_Land"
+    - from: 1569
+      owner: "pomerania"
+      overlord: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1637
+      owner: "poland_lithuania"
+      cause: "ポンメルン公家の断絶で、ラウエンブルク・ビュートウがポーランド王に戻る"
+      source: "https://en.wikipedia.org/wiki/Lauenburg_and_Bütow_Land"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
       note: "ラウエンブルク・ビュートウ（ポメルン公家の封土）"
@@ -839,7 +1254,7 @@
 
 - id: royal_prussia
   name: 王領プロイセン（ポメレリア・ヴァルミア）
-  names: [{from: 1914, name: "西プロイセン（ポメレリア・ヴァルミア）"}]
+  names: [{to: 1647, name: "プロイセン（西部）"}, {from: 1914, name: "西プロイセン（ポメレリア・ヴァルミア）"}]
   select:
     pieces: [POL-Elbl_g, POL-Gdynia, POL-Grudzi_dz, POL-Olsztyn, POL-Sopot, POL-powiat_braniewski, POL-powiat_chojnicki,
       POL-powiat_cz_uchowski, POL-powiat_elbl_ski, POL-powiat_gda_ski, POL-powiat_grudzi_dzki, POL-powiat_kartuski,
@@ -847,6 +1262,24 @@
       POL-powiat_olszty_ski, POL-powiat_pucki, POL-powiat_starogardzki, POL-powiat_sztumski, POL-powiat_tczewski,
       POL-powiat_tucholski, POL-powiat_wejherowski, POL-powiat_wiecki]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "teutonic_order"
+      note: "ドイツ騎士団国家（ポメレリア・ヘウムノ地方・マリエンブルク・ヴァルミア）"
+    - from: 1454
+      owner: "poland"
+      certainty: "uncertain"
+      cause: "プロイセン連合（都市と騎士）が騎士団に反乱し、ポーランド王カジミェシュ4世に臣従（3月）。十三年戦争（1454–66）が始まる"
+      source: "https://ja.wikipedia.org/wiki/十三年戦争_(1454年-1466年)"
+    - from: 1466
+      owner: "poland"
+      cause: "第二次トルンの和約（10月）で、ポメレリア・ヘウムノ地方・マリエンブルク・エルビング・ヴァルミアがポーランド王国領（王領プロイセン）に"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（王領プロイセンの自治も縮められた）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
       note: "王領プロイセン"
@@ -885,9 +1318,29 @@
 
 - id: kulm
   name: ヘウムノ地方
+  names:
+    - {to: 1647, name: "プロイセン（西部）"}
   select:
     pieces: [POL-powiat_brodnicki, POL-powiat_che_mi_ski, POL-powiat_toru_ski, POL-powiat_w_brzeski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "teutonic_order"
+      note: "ドイツ騎士団国家（ポメレリア・ヘウムノ地方・マリエンブルク・ヴァルミア）"
+    - from: 1454
+      owner: "poland"
+      certainty: "uncertain"
+      cause: "プロイセン連合（都市と騎士）が騎士団に反乱し、ポーランド王カジミェシュ4世に臣従（3月）。十三年戦争（1454–66）が始まる"
+      source: "https://ja.wikipedia.org/wiki/十三年戦争_(1454年-1466年)"
+    - from: 1466
+      owner: "poland"
+      cause: "第二次トルンの和約（10月）で、ポメレリア・ヘウムノ地方・マリエンブルク・エルビング・ヴァルミアがポーランド王国領（王領プロイセン）に"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（王領プロイセンの自治も縮められた）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
       note: "王領プロイセン（ヘウムノ地方）"
@@ -934,9 +1387,29 @@
 
 - id: danzig
   name: ダンツィヒ（グダンスク）
+  names:
+    - {to: 1647, name: "プロイセン（西部）"}
   select:
     pieces: [POL-Gda_sk]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "teutonic_order"
+      note: "ドイツ騎士団国家（ポメレリア・ヘウムノ地方・マリエンブルク・ヴァルミア）"
+    - from: 1454
+      owner: "poland"
+      certainty: "uncertain"
+      cause: "プロイセン連合（都市と騎士）が騎士団に反乱し、ポーランド王カジミェシュ4世に臣従（3月）。十三年戦争（1454–66）が始まる"
+      source: "https://ja.wikipedia.org/wiki/十三年戦争_(1454年-1466年)"
+    - from: 1466
+      owner: "poland"
+      cause: "第二次トルンの和約（10月）で、ポメレリア・ヘウムノ地方・マリエンブルク・エルビング・ヴァルミアがポーランド王国領（王領プロイセン）に"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（王領プロイセンの自治も縮められた）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
       note: "ダンツィヒ（王領プロイセンの自治都市）"
@@ -983,9 +1456,29 @@
 
 - id: torun
   name: トルン
+  names:
+    - {to: 1647, name: "プロイセン（西部）"}
   select:
     pieces: [POL-Toru]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "teutonic_order"
+      note: "ドイツ騎士団国家（ポメレリア・ヘウムノ地方・マリエンブルク・ヴァルミア）"
+    - from: 1454
+      owner: "poland"
+      certainty: "uncertain"
+      cause: "プロイセン連合（都市と騎士）が騎士団に反乱し、ポーランド王カジミェシュ4世に臣従（3月）。十三年戦争（1454–66）が始まる"
+      source: "https://ja.wikipedia.org/wiki/十三年戦争_(1454年-1466年)"
+    - from: 1466
+      owner: "poland"
+      cause: "第二次トルンの和約（10月）で、ポメレリア・ヘウムノ地方・マリエンブルク・エルビング・ヴァルミアがポーランド王国領（王領プロイセン）に"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（王領プロイセンの自治も縮められた）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
       note: "トルン（王領プロイセンの都市）"
@@ -1032,13 +1525,38 @@
 
 - id: ducal_prussia
   name: プロイセン公国（東プロイセン）
-  names: [{from: 1914, name: "東プロイセン（マズーリ・ヴァルミア）"}]
+  names: [{to: 1647, name: "プロイセン（東部）"}, {from: 1914, name: "東プロイセン（マズーリ・ヴァルミア）"}]
   select:
     pieces: [POL-powiat_bartoszycki, POL-powiat_dzia_dowski, POL-powiat_e_cki, POL-powiat_gi_ycki, POL-powiat_go_dapski,
       POL-powiat_i_awski, POL-powiat_k_trzy_ski, POL-powiat_kwidzy_ski, POL-powiat_mr_gowski, POL-powiat_nidzicki,
       POL-powiat_olecki, POL-powiat_ostrodzki, POL-powiat_piski, POL-powiat_szczycie_ski, POL-powiat_w_gorzewski,
       RUS-Kaliningrad]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "teutonic_order"
+      note: "ドイツ騎士団国家"
+    - from: 1466
+      owner: "teutonic_order"
+      overlord: "poland"
+      cause: "第二次トルンの和約で、残りの騎士団国家はポーランド王の宗主権を認める（首都はケーニヒスベルク）"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1525
+      owner: "ducal_prussia"
+      overlord: "poland"
+      cause: "騎士団総長アルブレヒトがルター派に改宗し、ポーランド王ジグムント1世に臣従してプロイセン公となる（クラクフ条約・プロイセンの臣従礼）"
+      source: "https://ja.wikipedia.org/wiki/プロイセン公国"
+    - from: 1569
+      owner: "ducal_prussia"
+      overlord: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1618
+      owner: "prussia"
+      overlord: "poland_lithuania"
+      cause: "ブランデンブルク選帝侯ヨハン・ジギスムントがプロイセン公国を相続（ブランデンブルク＝プロイセンの同君連合）"
+      source: "https://ja.wikipedia.org/wiki/ブランデンブルク＝プロイセン"
+    # ---- 1648– ----
     - from: 1648
       owner: prussia
       overlord: poland_lithuania
@@ -1068,10 +1586,21 @@
 
 - id: netze
   name: ネッツェ地区
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [POL-Bydgoszcz, POL-powiat_bydgoski, POL-powiat_czarnkowsko_trzcianecki, POL-powiat_inowroc_awski, POL-powiat_nakielski,
       POL-powiat_pilski, POL-powiat_s_pole_ski, POL-powiat_wa_ecki, POL-powiat_z_otowski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -1117,6 +1646,8 @@
 
 - id: sp_posen
   name: 大ポーランド西部（1815年ポズナン大公国）
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [POL-Leszno, POL-Pozna, POL-powiat_chodzieski, POL-powiat_gnie_nie_ski, POL-powiat_gosty_ski, POL-powiat_grodziski,
       POL-powiat_jaroci_ski, POL-powiat_k_pi_ski, POL-powiat_ko_cia_ski, POL-powiat_krotoszy_ski, POL-powiat_leszczy_ski,
@@ -1125,6 +1656,15 @@
       POL-powiat_rawicki, POL-powiat_redzki_2, POL-powiat_remski, POL-powiat_szamotulski, POL-powiat_w_growiecki,
       POL-powiat_wolszty_ski, POL-powiat_wrzesi_ski, POL-powiat_wschowski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1793
@@ -1171,6 +1711,8 @@
 - id: sp_congress
   name: 大ポーランド東部・クヤヴィ・ウッチ・プウォツク
   note: "1793年と1795年の境界（プウォツク・マゾフシェ間）は要確認"
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [POL-Cz_stochowa, POL-Kalisz, POL-Konin, POL-Kutno_County, POL-Lipno_County, POL-P_ock, POL-Piotrkow_Trybunalski,
       POL-Skierniewice, POL-W_oc_awek, POL-od, POL-powiat_aleksandrowski, POL-powiat_aski, POL-powiat_be_chatowski,
@@ -1182,6 +1724,15 @@
       POL-powiat_tomaszowski, POL-powiat_turecki, POL-powiat_uromi_ski, POL-powiat_w_oc_awski, POL-powiat_wielu_ski,
       POL-powiat_wieruszowski, POL-powiat_zdu_skowolski, POL-powiat_zgierski, POL-yrardow_County]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1793
@@ -1231,6 +1782,8 @@
 
 - id: p3_congress
   name: マゾフシェ北部・ポドラシェ北部・新シュレジエン
+  names:
+    - {to: 1647, name: "マゾフシェ公領（ワルシャワ）"}
   select:
     pieces: [POL-D_browa_Gornicza, POL-Grodzisk_Mazowiecki_County, POL-Ostro_ka, POL-Sosnowiec, POL-Suwa_ki, POL-Warszawa,
       POL-om_a, POL-powiat_augustowski, POL-powiat_b_dzi_ski, POL-powiat_ciechanowski, POL-powiat_grajewski,
@@ -1240,6 +1793,20 @@
       POL-powiat_suwalski, POL-powiat_warszawski_zachodni, POL-powiat_wysokomazowiecki, POL-powiat_wyszkowski,
       POL-powiat_zambrowski, POL-powiat_zawiercia_ski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "マゾフシェ公領（ワルシャワ・チェルスク。ピャスト家の公がポーランド王に臣従する封土）"
+    - from: 1526
+      owner: "poland"
+      cause: "マゾフシェ公家が断絶し、ジグムント1世がマゾフシェをポーランド王国に併合（1529年に議会に代表を送る）"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Masovia"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（ワルシャワは1596年にジグムント3世の宮廷が移り、事実上の首都になった）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1795
@@ -1289,10 +1856,21 @@
 
 - id: bialystok
   name: ビャウィストク地区
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [POL-Bia_ystok, POL-powiat_bia_ostocki, POL-powiat_bielski, POL-powiat_hajnowski, POL-powiat_moniecki, POL-powiat_siemiatycki,
       POL-powiat_sokolski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1795
@@ -1342,7 +1920,7 @@
 
 - id: wg_congress
   name: 西ガリツィア（ルブリン・ラドム・キェルツェ）
-  names: [{from: 1815, name: "ルブリン・ラドム・キェルツェ"}]
+  names: [{to: 1647, name: "ポーランド王国"}, {from: 1815, name: "ルブリン・ラドム・キェルツェ"}]
   select:
     pieces: [POL-Bia_a_Podlaska, POL-Che_m, POL-Kielce, POL-Lublin, POL-Radom, POL-Siedlce, POL-Siedlce_County, POL-powiat_bia_obrzeski,
       POL-powiat_bialski, POL-powiat_buski, POL-powiat_che_mski, POL-powiat_czy_ski, POL-powiat_garwoli_ski,
@@ -1355,6 +1933,15 @@
       POL-powiat_starachowicki, POL-powiat_staszowski, POL-powiat_szyd_owiecki, POL-powiat_ukowski, POL-powiat_w_growski,
       POL-powiat_w_odawski, POL-powiat_w_oszczowski, POL-powiat_widnicki_2, POL-powiat_wo_omi_ski, POL-powiat_zwole_ski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1795
@@ -1404,9 +1991,20 @@
 
 - id: krakow
   name: クラクフ
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [POL-Jaworzno, POL-Krakow, POL-powiat_chrzanowski, POL-powiat_krakowski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1795
@@ -1442,10 +2040,21 @@
 
 - id: zamosc
   name: ザモシチ地区
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [POL-Zamo, POL-powiat_bi_gorajski, POL-powiat_hrubieszowski, POL-powiat_janowski, POL-powiat_tomaszowski_2,
       POL-powiat_zamojski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -1501,9 +2110,20 @@
 - id: wieliczka
   name: ヴィエリチカ（ヴィスワ川南岸のクラクフ近郊）
   note: "ポドグジェ（クラクフ市の対岸）は現在のクラクフ市のピースに含まれるため描けない"
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [POL-powiat_wielicki]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -1535,7 +2155,7 @@
 
 - id: galicia_pl
   name: ガリツィア西部（小ポーランド南部）
-  names: [{from: 1919, name: "小ポーランド南部・ポトカルパチェ"}]
+  names: [{to: 1647, name: "ポーランド王国"}, {from: 1919, name: "小ポーランド南部・ポトカルパチェ"}]
   select:
     pieces: [POL-Krosno, POL-Nowy_S_cz, POL-Przemy_l, POL-Rzeszow, POL-Tarnobrzeg, POL-Tarnow, POL-powiat_a_cucki, POL-powiat_bieszczadzki,
       POL-powiat_boche_ski, POL-powiat_brzeski_2, POL-powiat_brzozowski, POL-powiat_d_bicki, POL-powiat_d_browski,
@@ -1547,6 +2167,15 @@
       POL-powiat_tarnowski, POL-powiat_tatrza_ski, POL-powiat_wadowicki, POL-powiat_wielicki, POL-powiat_ywiecki]
   note: "1914年の項目（ロシア軍の占領）が効くのは、ほかの小さい地域に入っていないドゥナイェツ川以東の郡（ジェシュフ・クロスノ・タルノブジェク・サノク・ヤロスワフなど）だけ。タルヌフ・ゴルリツェ・ヤスウォは galicia_dunajec_ww1 で書く。"
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -1586,9 +2215,25 @@
 - id: auschwitz_zator
   name: アウシュヴィッツ（オシフィエンチム）・ザトル公領
   note: "ガリツィアの一部だが、1818年からドイツ連邦に加えられた（かつてボヘミア王冠に属したため）。ピースはオシフィエンチム郡とヴァドヴィツェ郡で近似"
+  names:
+    - {to: 1647, name: "オシフィエンチム（アウシュヴィッツ）公領"}
   select:
     pieces: [POL-powiat_o_wi_cimski, POL-powiat_wadowicki]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "bohemia"
+      overlord: "hre"
+      note: "シロンスクのピャスト家のオシフィエンチム公領（ボヘミア王冠の封土）"
+    - from: 1457
+      owner: "poland"
+      cause: "カジミェシュ4世がオシフィエンチム公領を買い取る（1564年にポーランド王国に完全に併合）"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Oświęcim"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -1622,6 +2267,8 @@
 - id: silesia_pl
   name: シュレジエン（ポーランド部分）
   note: "グラーツ伯領（クウォツコ）を含む。シュヴィーブス（1686–1695 ブランデンブルク）は省略"
+  names:
+    - {to: 1647, name: "シュレジエン"}
   select:
     pieces: [POL-Bytom, POL-Chorzow, POL-Gliwice, POL-Gliwice_County, POL-Jastrz_bie_Zdroj, POL-Jelenia_Gora, POL-Katowice,
       POL-Legnica, POL-Mys_owice, POL-Opole, POL-Piekary_l_skie, POL-Raciborz_County, POL-Ruda_l_ska, POL-Rybnik,
@@ -1637,6 +2284,34 @@
       POL-powiat_wiebodzi_ski, POL-powiat_wo_owski, POL-powiat_wroc_awski, POL-powiat_z_bkowicki, POL-powiat_z_otoryjski,
       POL-powiat_zielonogorski, POL-wi_toch_owice]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "bohemia"
+      overlord: "hre"
+      note: "ボヘミア王冠領のシュレジエン（多くのピャスト家の公国に分かれる）。1526年からボヘミア王はハプスブルク家"
+    - from: 1469
+      owner: "hungary"
+      overlord: "hre"
+      certainty: "occupied"
+      cause: "ボヘミア戦争。マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを占領し、5月にオロモウツでカトリック派からボヘミア王に選ばれる"
+      source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"
+    - from: 1479
+      owner: "hungary"
+      overlord: "hre"
+      cause: "オロモウツの和約で、マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを（買い戻しの条件つきで）領有"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Olomouc"
+    - from: 1490
+      owner: "bohemia"
+      overlord: "hre"
+      cause: "マーチャーシュ1世の死（4月）で、ボヘミア王ヴラジスラフ2世のもとに戻る"
+      source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"
+    - from: 1620
+      label: "シュレジエン"
+      owner: "habsburg"
+      overlord: "hre"
+      cause: "白山の戦いでボヘミアの反乱が鎮圧され、ボヘミア王冠領はハプスブルク家の世襲領に（1627年の改訂領邦条令）"
+      source: "https://ja.wikipedia.org/wiki/白山の戦い"
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1678,9 +2353,39 @@
 
 - id: austrian_silesia
   name: テッシェン（オーストリア領シュレジエン）
+  names:
+    - {to: 1647, name: "シュレジエン"}
   select:
     pieces: [POL-Bielsko_Bia_a, POL-Bielsko_County, POL-powiat_cieszy_ski]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "bohemia"
+      overlord: "hre"
+      note: "ボヘミア王冠領のシュレジエン（多くのピャスト家の公国に分かれる）。1526年からボヘミア王はハプスブルク家"
+    - from: 1469
+      owner: "hungary"
+      overlord: "hre"
+      certainty: "occupied"
+      cause: "ボヘミア戦争。マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを占領し、5月にオロモウツでカトリック派からボヘミア王に選ばれる"
+      source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"
+    - from: 1479
+      owner: "hungary"
+      overlord: "hre"
+      cause: "オロモウツの和約で、マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを（買い戻しの条件つきで）領有"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Olomouc"
+    - from: 1490
+      owner: "bohemia"
+      overlord: "hre"
+      cause: "マーチャーシュ1世の死（4月）で、ボヘミア王ヴラジスラフ2世のもとに戻る"
+      source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"
+    - from: 1620
+      label: "シュレジエン"
+      owner: "habsburg"
+      overlord: "hre"
+      cause: "白山の戦いでボヘミアの反乱が鎮圧され、ボヘミア王冠領はハプスブルク家の世襲領に（1627年の改訂領邦条令）"
+      source: "https://ja.wikipedia.org/wiki/白山の戦い"
+    # ---- 1648– ----
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1719,9 +2424,51 @@
 
 - id: lusatia
   name: ラウジッツ（ポーランド部分）
+  names:
+    - {to: 1647, name: "ラウジッツ"}
   select:
     pieces: [POL-powiat_arski, POL-powiat_luba_ski, POL-powiat_zgorzelecki]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "bohemia"
+      overlord: "hre"
+      note: "ボヘミア王冠領のラウジッツ"
+    - from: 1469
+      owner: "hungary"
+      overlord: "hre"
+      certainty: "occupied"
+      cause: "ボヘミア戦争。マーチャーシュ1世がラウジッツを占領"
+      source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"
+    - from: 1479
+      owner: "hungary"
+      overlord: "hre"
+      cause: "オロモウツの和約"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Olomouc"
+    - from: 1490
+      owner: "bohemia"
+      overlord: "hre"
+      cause: "マーチャーシュ1世の死で、ボヘミア王ヴラジスラフ2世のもとに戻る"
+      source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"
+    - from: 1620
+      owner: "saxony"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ラウジッツ（ザクセンの占領）"
+      cause: "ボヘミアの反乱の鎮圧に加わったザクセン選帝侯ヨハン・ゲオルク1世がラウジッツを占領"
+      source: "https://en.wikipedia.org/wiki/Upper_Lusatia"
+    - from: 1623
+      owner: "saxony"
+      overlord: "hre"
+      certainty: "uncertain"
+      label: "ラウジッツ（ザクセンへの質入れ）"
+      cause: "皇帝が戦費の担保としてラウジッツをザクセン選帝侯に質入れ"
+    - from: 1635
+      owner: "saxony"
+      overlord: "hre"
+      cause: "プラハ条約でラウジッツをザクセン選帝侯の世襲領とする"
+      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1635年)"
+    # ---- 1648– ----
     - from: 1648
       owner: saxony
       overlord: hre
@@ -1765,10 +2512,30 @@
 - id: ingria
   name: イングリア（インゲルマンランド）
   note: "ストルボヴォ条約（1617）でスウェーデン領となったイングリア（イヴァンゴロド・ヤマ・コポリエ・ノーテボリ）。ヴォルホフ川より東（チフヴィン・ラドガ）はロシアに残った。"
+  names:
+    - {to: 1647, name: "イングリア（ヴォーツカヤ・ピャチナ）"}
   select:
     pieces: [RUS-Gatchinsky_District, RUS-Jaama_District, RUS-Kaarosta_District, RUS-Korotka_District, RUS-Sosnovy_Bor,
       RUS-Tusina_District, RUS-Volosovsky_District, RUS-Vsevolozhsky_District, RUS-Saint_Petersburg]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド国の西端（オレシェク・コポーリエ・ヤム）"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを併合"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1611
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "動乱時代、スウェーデン軍がイングリアを占領"
+      source: "https://ja.wikipedia.org/wiki/イングリア戦争"
+    - from: 1617
+      owner: "sweden"
+      cause: "ストルボヴォ条約でイングリアをスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
       note: "イングリア（ストルボヴォ条約 1617 以来のスウェーデン領）"
@@ -1806,9 +2573,29 @@
 - id: ingria_south
   name: イングリア南部（ルガ川流域）
   note: "スウェーデン領イングリアとロシア（ノヴゴロド・グドフ）の境界は、現在の郡（ルガ郡・スランツィ郡）とは合わない。近似（要確認）"
+  names:
+    - {to: 1647, name: "イングリア（ヴォーツカヤ・ピャチナ）"}
   select:
     pieces: [RUS-Laukaa_District, RUS-Slantsevsky_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド国の西端（オレシェク・コポーリエ・ヤム）"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを併合"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1611
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "動乱時代、スウェーデン軍がイングリアを占領"
+      source: "https://ja.wikipedia.org/wiki/イングリア戦争"
+    - from: 1617
+      owner: "sweden"
+      cause: "ストルボヴォ条約でイングリアをスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
       certainty: uncertain
@@ -1844,10 +2631,39 @@
 - id: kexholm_vyborg
   name: ヴィボルグ・ケクスホルム（カレリア地峡とラドガ湖北岸）
   note: "ヴィボルグ県（スウェーデン本来の領土）と、ストルボヴォ条約（1617）で得たケクスホルム県（ラドガ湖の西岸・北岸）。ニスタット条約でロシア領となり、1812年に「旧フィンランド」としてフィンランド大公国に編入された（南の境界はセストラ川）。"
+  names:
+    - {to: 1647, name: "ケクスホルム（カレリア）"}
   select:
     pieces: [RUS-Vyborgsky_District, RUS-Kakisalmi_District, RUS-Lahdenpohja_District, RUS-Sortavala_District,
       RUS-Pitkaranta_District, RUS-Suojarvi_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド領カレリア（コレラ城）"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを併合"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1580
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でスウェーデン軍のポントゥス・デ・ラ・ガルディがケクスホルムを占領"
+      source: "https://en.wikipedia.org/wiki/Korela_Fortress"
+    - from: 1595
+      owner: "russia"
+      cause: "テューシナ条約でケクスホルムをロシアに返す"
+      source: "https://ja.wikipedia.org/wiki/テューシナ条約"
+    - from: 1611
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "動乱時代、スウェーデン軍（ヤコブ・デ・ラ・ガルディ）がケクスホルムを占領（3月）"
+      source: "https://ja.wikipedia.org/wiki/イングリア戦争"
+    - from: 1617
+      owner: "sweden"
+      cause: "ストルボヴォ条約でロシアがケクスホルム郡（カレリア）とイングリアをスウェーデンに割譲し、バルト海から締め出される"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+    # ---- 1648– ----
     - from: 1648
       owner: sweden
     - from: 1710
@@ -1902,6 +2718,24 @@
       RUS-Rudnyansky_District, RUS-Safonovsky_District, RUS-Yartsevsky_District, RUS-Yelninsky_District,
       RUS-Yershichsky_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のスモレンスク地方（1404年にヴィータウタスが併合）"
+    - from: 1514
+      owner: "russia"
+      cause: "ヴァシーリー3世がスモレンスクを攻め落とす（7月。オルシャの戦いで敗れたが、スモレンスクは守った）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Smolensk_(1514)"
+    - from: 1611
+      owner: "poland_lithuania"
+      certainty: "occupied"
+      cause: "20か月の包囲の末、ジグムント3世がスモレンスクを攻め落とす（6月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Smolensk_(1609–1611)"
+    - from: 1618
+      owner: "poland_lithuania"
+      cause: "デウリノの休戦条約でスモレンスクをポーランド＝リトアニアに割譲（スモレンスク戦争後のポリャノフカ条約 1634 で確認）"
+      source: "https://ja.wikipedia.org/wiki/デウリノの和約"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1654
@@ -1937,6 +2771,8 @@
 - id: russia
   name: ロシア本土
   note: "ブリャンスク州西部（スタロドゥーブ連隊の地）は left_bank に入れた。トルプチェフスクは1654年以降ロシア領なので、1648–1653年もロシアとして近似。ヴォルホフ川以東のレニングラード州（チフヴィン・ラドガ）はストルボヴォ条約でロシアに返還された地域"
+  names:
+    - {to: 1647, name: "クルスク・ベルゴロドの草原"}
   select:
     pieces: [RUS-Arkhangelsk_Oblast, RUS-Astrakhan_Oblast, RUS-Bashkortostan, RUS-x_17, RUS-Belgorodsky_District, RUS-Borisovsky_District, RUS-Chernyansky_District, RUS-Grayvoronsky_District, RUS-Gubkinsky_Urban_Okrug, RUS-Ivnyansky_District, RUS-Korochansky_District, RUS-Krasnensky_District, RUS-Krasnogvardeysky_District, RUS-Krasnoyaruzhsky_District, RUS-Novooskolsky_District, RUS-Prokhorovsky_District, RUS-Rakityansky_District, RUS-Shebekinsky_District, RUS-Starooskolsky_Urban_Okrug, RUS-Valuysky_District, RUS-Volokonovsky_District, RUS-Yakovlevsky_District, RUS-x_9, RUS-Brasovsky_District, RUS-Bryansk, RUS-Bryansky_District, RUS-Dubrovsky_District, RUS-Dyatkovsky_District, RUS-Karachevsky_District, RUS-Kletnyansky_District, RUS-Komarichsky_District, RUS-Navlinsky_District, RUS-Rognedinsky_District, RUS-Seltso, RUS-Sevsky_District, RUS-Suzemsky_District, RUS-Trubchevsky_District, RUS-Vygonichsky_District, RUS-Zhiryatinsky_District, RUS-Zhukovsky_District, RUS-Boksitogorsky_District, RUS-Kirishsky_District, RUS-Koskenala_District, RUS-Lotinapelto_District,
       RUS-Olhava_District, RUS-Tihvina_District,
@@ -1950,6 +2786,22 @@
       RUS-Tula_Oblast, RUS-Tver_Oblast, RUS-Udmurtia, RUS-Ulyanovsk_Oblast, RUS-Vladimir_Oblast, RUS-Volgograd_Oblast,
       RUS-Vologda_Oblast, RUS-x_28, RUS-x_40, RUS-Anninsky_District, RUS-Bobrovsky_District, RUS-Borisoglebsky_District, RUS-Buturlinovsky_District, RUS-Ertilsky_District, RUS-Gribanovsky_District, RUS-Kashirsky_District, RUS-Khokholsky_District, RUS-Liskinsky_District, RUS-Nizhnedevitsky_District, RUS-Novousmansky_District, RUS-Ostrogozhsky_District, RUS-Paninsky_District, RUS-Povorinsky_District, RUS-Ramonsky_District, RUS-Repyovsky_District, RUS-Semiluksky_District, RUS-Talovsky_District, RUS-Ternovsky_District, RUS-Verkhnekhavsky_District, RUS-Voronezh, RUS-Yaroslavl_Oblast]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "「荒野」（ディーコエ・ポーレ）の北の端。モンゴルの侵入以後、人がまばらになった森と草原の境"
+    - from: 1503
+      owner: "russia"
+      certainty: "nominal"
+      cause: "セヴェルスキー地方がモスクワ領となり、その東の草原もモスクワの勢力範囲に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+    - from: 1586
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "クルスク（1586）・ヴォロネジ（1585）・オスコル（1593）・ベルゴロド（1596）など南の草原に砦を築き、タタールの襲撃に備える"
+      source: "https://en.wikipedia.org/wiki/Belgorod_Line"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
     - from: 1922
@@ -1975,9 +2827,22 @@
 
 - id: russia_steppe
   name: 南ウラル（オレンブルク）
+  names:
+    - {to: 1647, name: "ウラル東麓（チェリャビンスク・クルガン）"}
   select:
     pieces: [RUS-Chelyabinsk_Oblast, RUS-Kurgan_Oblast, RUS-Orenburg_Oblast]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "sibir"
+      certainty: "uncertain"
+      note: "シビル＝ハン国（チュメニ＝ハン国）とノガイ・オルダの境。バシキール人の遊牧地"
+    - from: 1598
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "シビル＝ハン国のクチュム・ハンが敗れ、ウラル東麓もロシアの勢力範囲に"
+      source: "https://ja.wikipedia.org/wiki/シビル・ハン国"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       certainty: uncertain
@@ -2007,10 +2872,29 @@
 
 - id: don
   name: ドン・コサック軍の地
+  names:
+    - {to: 1647, name: "ドン川下流の草原"}
   select:
     pieces: [RUS-x, RUS-x_2, RUS-x_3, RUS-x_4, RUS-x_5, RUS-x_6, RUS-x_10, RUS-x_13, RUS-x_16, RUS-x_29, RUS-x_30, RUS-x_31, RUS-x_32, RUS-x_36, RUS-x_37, RUS-x_38, RUS-x_42, RUS-x_43, RUS-Aksaysky_District, RUS-Azov, RUS-Azovsky_District, RUS-Bagayevsky_District, RUS-Bataysk, RUS-Belokalitvinsky_District, RUS-Bokovsky_District, RUS-Chertkovsky_District, RUS-Kagalnitsky_District, RUS-Kamensky_District_2, RUS-Konstantinovsky_District, RUS-Krasnosulinsky_District, RUS-Kuybyshevsky_District, RUS-Matveyevo_Kurgansky_District, RUS-Millerovsky_District, RUS-Milyutinsky_District, RUS-Morozovsky_District, RUS-Myasnikovsky_District, RUS-Neklinovsky_District, RUS-Novocherkassk, RUS-Oblivsky_District, RUS-Oktyabrsky_District_2, RUS-Peschanokopsky_District, RUS-Remontnensky_District, RUS-Rodionovo_Nesvetaysky_District, RUS-Rostov_on_Don, RUS-Shakhty_City_District, RUS-Sovetsky_District_2, RUS-Taganrog_City_District, RUS-Tatsinsky_District, RUS-Tsimlyansky_District, RUS-Verkhnedonskoy_District, RUS-Vesyolovsky_District, RUS-Volgodonsk, RUS-Zavetinsky_District, RUS-Zernogradsky_District, UKR-Amvrosiivka, UKR-Antratsyt, UKR-Dovzhansk, UKR-Lutuhyne, UKR-Shakhtarsk, UKR-Sorokyne,
       UKR-Stanytsia_Luhanska]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "golden_horde"
+      certainty: "nominal"
+      note: "大オルダ（ジョチ・ウルスの後継）の遊牧地"
+    - from: 1502
+      owner: null
+      certainty: "uncertain"
+      cause: "大オルダの滅亡。ドン川下流の草原は、ノガイ人・クリミア・タタールの遊牧と襲撃の地に"
+      source: "https://ja.wikipedia.org/wiki/大オルダ"
+    - from: 1570
+      owner: "don_cossacks"
+      overlord: "russia"
+      certainty: "uncertain"
+      cause: "ドン・コサックの集団がドン川沿いに町をつくる（1549年に初めて記録、1570年にイヴァン4世がドン・コサックに書状）"
+      source: "https://ja.wikipedia.org/wiki/ドン・コサック"
+    # ---- 1648– ----
     - from: 1648
       owner: don_cossacks
       overlord: russia
@@ -2053,9 +2937,22 @@
 
 - id: azov
   name: アゾフ（ドン川河口）・タガンログ
+  names:
+    - {to: 1647, name: "アゾフの周り"}
   select:
     pieces: [RUS-Azov, RUS-Azovsky_District, RUS-Taganrog_City_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "golden_horde"
+      certainty: "nominal"
+      note: "大オルダの遊牧地。ドン川河口にヴェネツィア・ジェノヴァの商館ターナ"
+    - from: 1475
+      owner: "ottoman"
+      certainty: "uncertain"
+      cause: "オスマン帝国がクリミア南岸とアゾフ（ターナ）を征服"
+      source: "https://ja.wikipedia.org/wiki/アゾフ"
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       note: "オスマン帝国のアザク（アゾフ）要塞"
@@ -2117,9 +3014,28 @@
 
 - id: slavo_serbia
   name: スラヴャノ・セルビア
+  names:
+    - {to: 1647, name: "ドン川下流の草原"}
   select:
     pieces: [UKR-Perevalsk, UKR-Popasna, UKR-Slovianoserbsk]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "golden_horde"
+      certainty: "nominal"
+      note: "大オルダ（ジョチ・ウルスの後継）の遊牧地"
+    - from: 1502
+      owner: null
+      certainty: "uncertain"
+      cause: "大オルダの滅亡。ドン川下流の草原は、ノガイ人・クリミア・タタールの遊牧と襲撃の地に"
+      source: "https://ja.wikipedia.org/wiki/大オルダ"
+    - from: 1570
+      owner: "don_cossacks"
+      overlord: "russia"
+      certainty: "uncertain"
+      cause: "ドン・コサックの集団がドン川沿いに町をつくる（1549年に初めて記録、1570年にイヴァン4世がドン・コサックに書状）"
+      source: "https://ja.wikipedia.org/wiki/ドン・コサック"
+    # ---- 1648– ----
     - from: 1648
       owner: don_cossacks
       overlord: russia
@@ -2186,9 +3102,23 @@
 - id: kuban
   name: クバン川右岸・北カフカスの草原
   note: "1783年にロシアが併合したのはクバン川の右岸（北岸）まで。左岸（南岸）はチェルケス人の地（circassia）。クバン川の流れをまたぐ郡（ノヴォクバンスク・ウスペンスコエ）は右岸側に含めた"
+  names:
+    - {to: 1647, name: "クバン・スタヴロポリの草原"}
   select:
     pieces: [RUS-x_14, RUS-x_33, RUS-x_41, RUS-Beloglinsky_District, RUS-Bryukhovetsky_District, RUS-Dinskoy_District, RUS-Gulkevichsky_District, RUS-Kalininsky_District, RUS-Kanevskoy_District, RUS-Kavkazsky_District, RUS-Korenovsky_District, RUS-Krasnoarmeysky_District, RUS-Krasnodar_Municipality, RUS-Krylovsky_District, RUS-Kushchovsky_District, RUS-Leningradsky_District, RUS-Novokubansky_District, RUS-Pavlovsky_District, RUS-Primorsko_Akhtarsky_District, RUS-Slavyansky_District, RUS-Starominsky_District, RUS-Tbilissky_District, RUS-Tikhoretsky_District, RUS-Timashyovsky_District, RUS-Uspensky_District, RUS-Ust_Labinsky_District, RUS-Vyselkovsky_District, RUS-Yeysky_District, RUS-Stavropol_Krai]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "golden_horde"
+      certainty: "nominal"
+      note: "大オルダの遊牧地の南の端"
+    - from: 1502
+      owner: "nogai"
+      overlord: "crimea"
+      certainty: "uncertain"
+      cause: "大オルダの滅亡。北カフカスの草原はノガイ人の遊牧地となり、のちに小ノガイ（カズィ・ウルス）がクリミア＝ハン国に従った"
+      source: "https://ja.wikipedia.org/wiki/ノガイ・オルダ"
+    # ---- 1648– ----
     - from: 1648
       owner: nogai
       overlord: crimea
@@ -2235,9 +3165,22 @@
 
 - id: taman
   name: タマン半島（テムリュク）
+  names:
+    - {to: 1647, name: "タマン半島（マトレガ）"}
   select:
     pieces: [RUS-Temryuksky_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "genoa"
+      certainty: "uncertain"
+      note: "ジェノヴァの商館マトレガ（タマン）とコパ。ジェノヴァ人のギゾルフィ家がチェルケス人の諸侯と結んで治めた"
+    - from: 1482
+      owner: "ottoman"
+      certainty: "uncertain"
+      cause: "オスマン帝国がマトレガを征服"
+      source: "https://en.wikipedia.org/wiki/Matrega"
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: uncertain
@@ -2282,9 +3225,17 @@
 
 - id: anapa
   name: アナパ
+  names:
+    - {to: 1647, name: "北カフカス"}
   select:
     pieces: [RUS-Anapa_Urban_Okrug]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "circassia"
+      certainty: "uncertain"
+      note: "チェルケス人の諸部族"
+    # ---- 1648– ----
     - from: 1648
       owner: circassia
       certainty: uncertain
@@ -2330,10 +3281,18 @@
 - id: circassia
   name: チェルケス（クバン川左岸・黒海東岸）
   note: "黒海沿岸のノヴォロシースク（スジュク・カレ）などにはオスマン帝国の要塞もあった"
+  names:
+    - {to: 1647, name: "北カフカス"}
   select:
     pieces: [RUS-x_15, RUS-x_24, RUS-x_27, RUS-Abinsky_District, RUS-Apsheronsky_District, RUS-Belorechensky_District, RUS-Krymsky_District, RUS-Kurganinsky_District, RUS-Labinsky_District, RUS-Mostovsky_District, RUS-Otradnensky_District, RUS-Resort_Town_of_Sochi_municipal_formation, RUS-Seversky_District, RUS-Tuapsinsky_District,
       RUS-x_11, RUS-x_18, RUS-Giaginsky_District, RUS-Koshekhablsky_District, RUS-Krasnogvardeysky_District_2, RUS-Maykopsky_District, RUS-Shovgenovsky_District, RUS-Takhtamukaysky_District, RUS-Teuchezhsky_District, RUS-Karachay_Cherkessia]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "circassia"
+      certainty: "uncertain"
+      note: "チェルケス人の諸部族"
+    # ---- 1648– ----
     - from: 1648
       owner: circassia
       certainty: uncertain
@@ -2427,6 +3386,12 @@
   select:
     pieces: [RUS-Kabardino_Balkaria]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "kabarda"
+      certainty: "uncertain"
+      note: "カバルダの諸公（1557年にテミルゴがイヴァン4世と同盟し、娘マリヤはイヴァン4世の妃となった）"
+    # ---- 1648– ----
     - from: 1648
       owner: kabarda
       certainty: uncertain
@@ -2480,6 +3445,12 @@
   select:
     pieces: [RUS-North_Ossetia_Alania]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "オセット人の諸共同体"
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -2560,6 +3531,12 @@
   select:
     pieces: [RUS-Chechnya, RUS-Ingushetia]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "チェチェン人・イングーシ人の諸共同体（国家なし）"
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -2620,9 +3597,27 @@
 
 - id: dagestan
   name: ダゲスタン（山地）
+  names:
+    - {to: 1647, name: "ダゲスタン"}
   select:
     pieces: [RUS-x_19, RUS-x_20, RUS-x_21, RUS-Agulsky_District, RUS-Akhtynsky_District, RUS-Akhvakhsky_District, RUS-Akushinsky_District, RUS-Babayurtovsky_District, RUS-Botlikhsky_District, RUS-Buynaksky_District, RUS-Charodinsky_District, RUS-Dakhadayevsky_District, RUS-Dokuzparinsky_District, RUS-Gergebilsky_District, RUS-Gumbetovsky_District, RUS-Gunibsky_District, RUS-Kaytagsky_District, RUS-Kazbekovsky_District, RUS-Khasavyurtovsky_District, RUS-Khivsky_District, RUS-Khunzakhsky_District, RUS-Kizilyurtovsky_District, RUS-Kulinsky_District, RUS-Kurakhsky_District, RUS-Laksky_District, RUS-Levashinsky_District, RUS-Novolaksky_District, RUS-Rutulsky_District, RUS-Sergokalinsky_District, RUS-Shamilsky_District, RUS-Suleyman_Stalsky_District, RUS-Tabasaransky_District, RUS-Tlyaratinsky_District, RUS-Tsumadinsky_District, RUS-Tsuntinsky_District, RUS-Untsukulsky_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "タルキのシャムハル国・アヴァール・カイタグなどの諸侯国"
+    - from: 1578
+      owner: "ottoman"
+      certainty: "nominal"
+      cause: "オスマン・サファヴィー戦争（1578–90）でオスマン帝国がシルヴァン・デルベントを征服し、ダゲスタンの諸侯も従う"
+      source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1578–1590)"
+    - from: 1606
+      owner: "persia"
+      certainty: "nominal"
+      cause: "アッバース1世がシルヴァン・デルベントを取り戻し（1606–07）、ダゲスタンの諸侯にサファヴィー朝の宗主権を認めさせる"
+      source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"
+    # ---- 1648– ----
     - from: 1648
       owner: persia
       certainty: nominal
@@ -2668,9 +3663,27 @@
 
 - id: dagestan_coast
   name: ダゲスタン沿岸（タルキ・カイタグ）
+  names:
+    - {to: 1647, name: "ダゲスタン"}
   select:
     pieces: [RUS-Magaramkentsky_District, RUS-Kayakentsky_District, RUS-x_23, RUS-Karabudakhkentsky_District, RUS-x_22, RUS-Makhachkala_Urban_Okrug, RUS-Kumtorkalinsky_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "タルキのシャムハル国・アヴァール・カイタグなどの諸侯国"
+    - from: 1578
+      owner: "ottoman"
+      certainty: "nominal"
+      cause: "オスマン・サファヴィー戦争（1578–90）でオスマン帝国がシルヴァン・デルベントを征服し、ダゲスタンの諸侯も従う"
+      source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1578–1590)"
+    - from: 1606
+      owner: "persia"
+      certainty: "nominal"
+      cause: "アッバース1世がシルヴァン・デルベントを取り戻し（1606–07）、ダゲスタンの諸侯にサファヴィー朝の宗主権を認めさせる"
+      source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"
+    # ---- 1648– ----
     - from: 1648
       owner: persia
       certainty: nominal
@@ -2719,6 +3732,23 @@
   select:
     pieces: [RUS-urban_okrug_of_Derbent, RUS-Derbentsky_District, RUS-Dagestanskiye_Ogni]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "shirvan"
+      note: "シルヴァン・シャー国の北の要塞都市"
+    - from: 1509
+      owner: "persia"
+      cause: "サファヴィー朝のイスマーイール1世がデルベントを奪う（シルヴァンの併合は1538年）"
+      source: "https://en.wikipedia.org/wiki/Derbent"
+    - from: 1578
+      owner: "ottoman"
+      cause: "オスマン・サファヴィー戦争でオスマン帝国がデルベントを征服（1590年のイスタンブール条約で割譲）"
+      source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1578–1590)"
+    - from: 1606
+      owner: "persia"
+      cause: "アッバース1世がデルベントを取り戻す"
+      source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"
+    # ---- 1648– ----
     - from: 1648
       owner: persia
       note: "デルベント・ハン国（ペルシアの属領）"
@@ -2766,9 +3796,22 @@
 
 - id: kizlyar
   name: テレク川下流（テルキ・キズリャル）
+  names:
+    - {to: 1647, name: "テレク川下流"}
   select:
     pieces: [RUS-Kizlyarsky_District, RUS-Tarumovsky_District, RUS-x_12]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ノガイ人・クムイク人の地"
+    - from: 1588
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "テレク川河口にロシアの砦テルキを築く（グレベン・コサックも住む）"
+      source: "https://en.wikipedia.org/wiki/Terki"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       certainty: uncertain
@@ -2806,6 +3849,17 @@
   select:
     pieces: [RUS-Nogaysky_District, RUS-x_7]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "golden_horde"
+      certainty: "nominal"
+      note: "大オルダの遊牧地の南の端"
+    - from: 1502
+      owner: "nogai"
+      certainty: "uncertain"
+      cause: "大オルダの滅亡。ノガイ人の遊牧地に"
+      source: "https://ja.wikipedia.org/wiki/ノガイ・オルダ"
+    # ---- 1648– ----
     - from: 1648
       owner: nogai
       overlord: russia
@@ -2842,9 +3896,27 @@
 
 - id: kalmyk
   name: カルムイク
+  names:
+    - {to: 1647, name: "カルムイクの草原"}
   select:
     pieces: [RUS-Kalmykia]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "golden_horde"
+      certainty: "uncertain"
+      note: "大オルダの遊牧地"
+    - from: 1502
+      owner: "nogai"
+      certainty: "uncertain"
+      cause: "大オルダの滅亡。ノガイ人の遊牧地に"
+      source: "https://ja.wikipedia.org/wiki/大オルダ"
+    - from: 1633
+      owner: "kalmyk"
+      certainty: "uncertain"
+      cause: "ジュンガリアから移ってきたオイラト系のカルムイク人がノガイ人を追い、ヴォルガ下流に入る（1630年代）"
+      source: "https://ja.wikipedia.org/wiki/カルムイク・ハン国"
+    # ---- 1648– ----
     - from: 1648
       owner: kalmyk
       overlord: russia
@@ -2874,6 +3946,8 @@
 
 - id: blr_1772
   name: ベラルーシ東部（1772年ロシア領）
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [BLR-Beshankovichy, BLR-Buda_Kashalyova, BLR-Byalynichy, BLR-Bykhaw, BLR-Chachersk, BLR-Chavusy, BLR-Cherykaw,
       BLR-Dobrush, BLR-Dubrowna, BLR-Gomel, BLR-Haradok, BLR-Horki, BLR-Karma, BLR-Kastsyukovichy, BLR-Khotsimsk,
@@ -2883,6 +3957,15 @@
       RUS-Nevelsky_District, RUS-Sebezhsky_District, RUS-Usvyatsky_District, RUS-Velizhsky_District,
       RUS-Khislavichsky_District, RUS-Shumyachsky_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -2928,6 +4011,8 @@
 - id: lith_1793
   name: ベラルーシ中部・ウクライナ北西部（1793年ロシア領）
   note: "1793年の境界（ドルヤ〜ピンスク〜ズブルチ川）はピースの重心で振り分けた。要確認"
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [BLR-Akciabrski, BLR-Asipovichy, BLR-Babruysk, BLR-Barysaw, BLR-Brahin, BLR-Byerazino, BLR-Chashniki, BLR-Chervyen,
       BLR-Dokshytsy, BLR-Dzyarzhynsk, BLR-Hantsavichy, BLR-Hlusk, BLR-Hlybokaye, BLR-Kalinkavichy, BLR-Kapyl,
@@ -2939,6 +4024,15 @@
       UKR-Korets, UKR-Kostopil, UKR-Krasyliv, UKR-Ostroh, UKR-Polonne, UKR-Rivne, UKR-Rokytne, UKR-Sarny, UKR-Shepetika,
       UKR-Slavuta, UKR-Stara_Syniava, UKR-Starokostiantyniv, UKR-Teofipol, UKR-Zdolbuniv]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1793
@@ -2979,12 +4073,23 @@
 
 - id: volhynia_w
   name: ヴォルィーニ西部（1795年ロシア領）
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [UKR-Demydivka, UKR-Dubno, UKR-Horokhiv, UKR-Ivanychi, UKR-Kamin_Kashyrskyi, UKR-Kivertsi, UKR-Kovel, UKR-Kremenets,
       UKR-Lanivtsi, UKR-Liubeshiv, UKR-Liuboml, UKR-Lokachi, UKR-Lutsk, UKR-Manevychi, UKR-Mlyniv, UKR-Radyvyliv,
       UKR-Ratne, UKR-Rozhyshche, UKR-Shatsk, UKR-Shumsk, UKR-Stara_Vyzhivka, UKR-Turiisk, UKR-Volodymyr, UKR-Volodymyrets,
       UKR-Zarichne]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1795
@@ -3034,11 +4139,78 @@
 
 - id: zakarpattia
   name: ザカルパッチャ（ハンガリー北東部）
+  names:
+    - {to: 1647, name: "ベレグ・ウゴチャ県（ムカチェヴォ）"}
   select:
     pieces: [UKR-Berehove, UKR-Irshava, UKR-Khust, UKR-Mizhhiria, UKR-Mukachevo, UKR-Perechyn, UKR-Rakhiv, UKR-Svaliava,
       UKR-Tiachiv, UKR-Uzhhorod, UKR-Velykyy_Bereznyi, UKR-Volovets, UKR-Vynohradiv]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "hungary"
+      note: "ハンガリー王国の北東部"
+    - from: 1526
+      owner: "hungary"
+      cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位"
+      source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1527
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る"
+      source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
+    - from: 1529
+      owner: "hungary"
+      overlord: "ottoman"
+      cause: "サポヤイ・ヤーノシュがオスマン帝国の後ろ盾で東部を取り戻す"
+      source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1541
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国に"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1551
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定）"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1556
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "イザベラとヤーノシュ・ジグモンドが帰国し、東ハンガリー王国を回復"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1565
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "皇帝軍（シュヴェンディ）がトカイ・サトマールを奪う（1570年のシュパイアー条約で確定）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Speyer_(1570)"
+    - from: 1605
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "ボチカイ・イシュトヴァーンの反乱（1606年のウィーン和約で終身の領有）"
+      source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"
+    - from: 1607
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "ボチカイの死（1606年12月）で王領ハンガリーに戻る"
+      source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"
+    - from: 1621
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "ニコルスブルク条約で、ベトレン・ガーボルが上部ハンガリー東部の7県（ベレグ・ウゴチャを含む）を終身で得る"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"
+    - from: 1630
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "ベトレン・ガーボルの死（1629年11月）で、7県が王領ハンガリーに戻る"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"
+    - from: 1645
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "リンツ条約（12月）で、ラーコーツィ・ジェルジ1世が上部ハンガリー東部の7県を終身で得る"
+      source: "https://en.wikipedia.org/wiki/Peace_of_Linz"
+    # ---- 1648– ----
     - from: 1648
+      cause: "ラーコーツィ・ジェルジ1世の死（10月）で、リンツ条約の7県が王領ハンガリーに戻る"
       owner: habsburg
       note: "ハンガリー王国（帝国外）。ムカチェヴォなど東部は1711年までラーコーツィ家の所領"
     - from: 1682
@@ -3091,9 +4263,37 @@
 
 - id: bukovina
   name: ブコヴィナ
+  names:
+    - {to: 1647, name: "ブコヴィナ・ホティン"}
   select:
     pieces: [UKR-Hlyboka, UKR-Kitsman, UKR-Putyla, UKR-Storozhynets, UKR-Vyzhnytsia, UKR-Zastavna]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "moldavia"
+      note: "モルダヴィア公国の北部（シェペニツ地方・ホティン）。1456年からオスマン帝国に貢納したが、シュテファン大公（1457–1504）はたびたび戦った"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1538
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアは貢納国から、公をスルタンが任命する付庸国となる"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - {from: 1595, owner: "moldavia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ポーランドの宰相ザモイスキがイェレミア・モヴィラを公に立て（8–9月）、モルダヴィアはポーランドの保護下に（オスマン帝国にも貢納を続けた）", source: "https://en.wikipedia.org/wiki/Ieremia_Movilă"}
+    - {from: 1611, owner: "moldavia", overlord: "ottoman", cause: "オスマン帝国がシュテファン・トムシャ2世を立て、モヴィラ家（ポーランドの後ろ盾）が追われる（1612年にポーランドの貴族軍も敗れる）", source: "https://en.wikipedia.org/wiki/Ștefan_Tomșa_II"}
+    # ---- 1648– ----
     - from: 1648
       owner: moldavia
       overlord: ottoman
@@ -3146,9 +4346,37 @@
 
 - id: hertsa
   name: ヘルツァ
+  names:
+    - {to: 1647, name: "ブコヴィナ・ホティン"}
   select:
     pieces: [UKR-Hertsa]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "moldavia"
+      note: "モルダヴィア公国の北部（シェペニツ地方・ホティン）。1456年からオスマン帝国に貢納したが、シュテファン大公（1457–1504）はたびたび戦った"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1538
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアは貢納国から、公をスルタンが任命する付庸国となる"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - {from: 1595, owner: "moldavia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ポーランドの宰相ザモイスキがイェレミア・モヴィラを公に立て（8–9月）、モルダヴィアはポーランドの保護下に（オスマン帝国にも貢納を続けた）", source: "https://en.wikipedia.org/wiki/Ieremia_Movilă"}
+    - {from: 1611, owner: "moldavia", overlord: "ottoman", cause: "オスマン帝国がシュテファン・トムシャ2世を立て、モヴィラ家（ポーランドの後ろ盾）が追われる（1612年にポーランドの貴族軍も敗れる）", source: "https://en.wikipedia.org/wiki/Ștefan_Tomșa_II"}
+    # ---- 1648– ----
     - from: 1648
       owner: moldavia
       overlord: ottoman
@@ -3182,9 +4410,37 @@
 
 - id: hotin
   name: ホティン地方
+  names:
+    - {to: 1647, name: "ブコヴィナ・ホティン"}
   select:
     pieces: [UKR-Kelmentsi, UKR-Khotyn, UKR-Novoselytsia, UKR-Sokyriany]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "moldavia"
+      note: "モルダヴィア公国の北部（シェペニツ地方・ホティン）。1456年からオスマン帝国に貢納したが、シュテファン大公（1457–1504）はたびたび戦った"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1538
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアは貢納国から、公をスルタンが任命する付庸国となる"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - {from: 1595, owner: "moldavia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ポーランドの宰相ザモイスキがイェレミア・モヴィラを公に立て（8–9月）、モルダヴィアはポーランドの保護下に（オスマン帝国にも貢納を続けた）", source: "https://en.wikipedia.org/wiki/Ieremia_Movilă"}
+    - {from: 1611, owner: "moldavia", overlord: "ottoman", cause: "オスマン帝国がシュテファン・トムシャ2世を立て、モヴィラ家（ポーランドの後ろ盾）が追われる（1612年にポーランドの貴族軍も敗れる）", source: "https://en.wikipedia.org/wiki/Ștefan_Tomșa_II"}
+    # ---- 1648– ----
     - from: 1648
       owner: moldavia
       overlord: ottoman
@@ -3222,10 +4478,35 @@
 
 - id: budjak
   name: ブジャク（南ベッサラビア）
+  names:
+    - {to: 1647, name: "ブジャク"}
   select:
     pieces: [UKR-Artsyi, UKR-Bilhorod_Dnistrovskyi, UKR-Bolhrad, UKR-Izmali, UKR-Kiliia, UKR-Reni, UKR-Sarata, UKR-Tarutyne,
       UKR-Tatarbunary]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "moldavia"
+      note: "モルダヴィア公国の南部"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1538
+      owner: "ottoman"
+      cause: "スレイマン1世のモルダヴィア遠征でブジャク（ティギナ＝ベンデルとその南）をオスマン帝国の直轄地とする。ノガイ人が移り住む"
+      source: "https://en.wikipedia.org/wiki/Budjak"
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       note: "ブジャク（アッケルマン・イズマイルなどオスマン帝国の要塞とノガイ人の遊牧地）"
@@ -3303,10 +4584,22 @@
 
 - id: crimea
   name: クリミア半島
+  names:
+    - {to: 1647, name: "クリミア＝ハン国"}
   select:
     pieces: [UKR-Bakhchysarai, UKR-Bilohirsk, UKR-Chornomorske, UKR-Dzhankoy, UKR-Krasnohvardiiske, UKR-Krasnoperekopsk,
       UKR-Nyzhniohirskyi, UKR-Pervomaiske, UKR-Rozdolne, UKR-Saky, UKR-Simferopol, UKR-Sovietsky]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "crimea"
+      note: "ハジ・ギレイが1441年頃にジョチ・ウルスから独立して建てたクリミア＝ハン国"
+    - from: 1478
+      owner: "crimea"
+      overlord: "ottoman"
+      cause: "メングリ・ギレイがオスマン帝国の後ろ盾でハンに復位し、オスマン帝国の宗主権を認める"
+      source: "https://ja.wikipedia.org/wiki/メングリ1世ギレイ"
+    # ---- 1648– ----
     - from: 1648
       owner: crimea
       overlord: ottoman
@@ -3366,9 +4659,20 @@
 
 - id: kefe
   name: クリミア南岸（オスマン帝国直轄地）
+  names:
+    - {to: 1647, name: "ジェノヴァ領ガザリア（カッファ・チェンバロ・ヴォスポロ）"}
   select:
     pieces: [UKR-Balakavaskyi, UKR-Kirovske, UKR-Leninskyi, UKR-Nakhimovskyi]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "genoa"
+      note: "黒海交易の拠点カッファ（フェオドシヤ）・チェンバロ（バラクラヴァ）・ヴォスポロ（ケルチ）などジェノヴァの植民地。1453年からサン・ジョルジョ銀行が経営"
+    - from: 1475
+      owner: "ottoman"
+      cause: "オスマン帝国のゲディク・アフメト・パシャがカッファを落とす（6月）。ジェノヴァの黒海植民地が終わる"
+      source: "https://ja.wikipedia.org/wiki/フェオドシヤ"
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       note: "オスマン帝国の直轄地（カッファ州。南岸の港と要塞）"
@@ -3428,9 +4732,20 @@
 
 - id: kerch
   name: ケルチ
+  names:
+    - {to: 1647, name: "ジェノヴァ領ガザリア（カッファ・チェンバロ・ヴォスポロ）"}
   select:
     pieces: [UKR-Lenine]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "genoa"
+      note: "黒海交易の拠点カッファ（フェオドシヤ）・チェンバロ（バラクラヴァ）・ヴォスポロ（ケルチ）などジェノヴァの植民地。1453年からサン・ジョルジョ銀行が経営"
+    - from: 1475
+      owner: "ottoman"
+      cause: "オスマン帝国のゲディク・アフメト・パシャがカッファを落とす（6月）。ジェノヴァの黒海植民地が終わる"
+      source: "https://ja.wikipedia.org/wiki/フェオドシヤ"
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       note: "ケルチ・イェニカレ（オスマン帝国の直轄地）"
@@ -3491,6 +4806,8 @@
 
 - id: galicia_ua
   name: ガリツィア東部（ルテニア）
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [UKR-Berezhany, UKR-Bohorodchany, UKR-Brody, UKR-Busk, UKR-Dolyna, UKR-Drohobych, UKR-Halych, UKR-Horodenka,
       UKR-Horodok, UKR-Kalush, UKR-Kamianka_Buzka, UKR-Kolomyia, UKR-Kosiv, UKR-Kozova, UKR-Monastyryska, UKR-Mostyska,
@@ -3498,6 +4815,15 @@
       UKR-Rozhniativ, UKR-Sambir, UKR-Skole, UKR-Sniatyn, UKR-Sokal, UKR-Staryi_Sambir, UKR-Stryi, UKR-Tlumach,
       UKR-Turka, UKR-Tysmenytsia, UKR-Verkhovyna, UKR-Yavoriv, UKR-Zboriv, UKR-Zhovkva, UKR-Zhydachiv, UKR-Zolochiv]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -3615,9 +4941,20 @@
 
 - id: tarnopol_rut
   name: タルノポリ地方（北部）
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [UKR-Pidvolochysk, UKR-Ternopil, UKR-Zbarazh]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1772
@@ -3680,10 +5017,21 @@
 
 - id: tarnopol_pod
   name: ポドリア西部（タルノポリ地方南部）
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [UKR-Borschiv, UKR-Chortkiv, UKR-Husiatyn, UKR-Terebovlia]
   note: "1915年末の前線（ストルィパ川〜ドニエストル川）の東側としてロシア軍の占領のままにした。チョルトキウ・ボルシチウの1915年の位置は郡単位では大まかなもの（要確認）。"
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1672
@@ -3754,9 +5102,20 @@
 
 - id: podolia_w
   name: ポドリア西部（ドニエストル沿い）
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [UKR-Buchach, UKR-Zalishchyky]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1672
@@ -3829,10 +5188,21 @@
 
 - id: podolia_e
   name: ポドリア東部（カミャネツ）
+  names:
+    - {to: 1647, name: "ポーランド王国"}
   select:
     pieces: [UKR-Bar, UKR-Chemerivtsi, UKR-Derazhnia, UKR-Dunaivti, UKR-Horodok_2, UKR-Kamianets_Podilskyi, UKR-Khmelnytskyi,
       UKR-Letychiv, UKR-Murovani_Kurylivtsi, UKR-Nova_Ushytsia, UKR-Vinkivtsi, UKR-Volochysk, UKR-Yarmolyntsi]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
     - from: 1672
@@ -3886,12 +5256,23 @@
 
 - id: r_north
   name: キエフ県北部・ポリーシャ
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [UKR-Andrushivka, UKR-Baranivka, UKR-Berdychiv, UKR-Borodianka, UKR-Brusyliv, UKR-Cherniakhiv, UKR-Chudniv,
       UKR-Ivankiv, UKR-Khoroshiv, UKR-Korosten, UKR-Korostyshiv, UKR-Liubar, UKR-Luhyny, UKR-Makariv, UKR-Malyn,
       UKR-Narodychi, UKR-Olevsk, UKR-Ovruch, UKR-Poliske, UKR-Popilnia, UKR-Pulyny, UKR-Radomyshl, UKR-Romaniv,
       UKR-Ruzhyn, UKR-Yemilchyne, UKR-Zhytomyr, UKR-Zviahel]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: poland_lithuania
       certainty: uncertain
@@ -3943,6 +5324,8 @@
 
 - id: r_south
   name: ドニエプル右岸（キエフ県南部・ブラーツラフ県）
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
   select:
     pieces: [UKR-Bershad, UKR-Bila_Tserkva, UKR-Blahovishchenske, UKR-Bohuslav, UKR-Chechelnyk, UKR-Cherkasy, UKR-Chernivtsi,
       UKR-Chyhyryn, UKR-Fastiv, UKR-Haisyn, UKR-Haivoron, UKR-Holovanivsk, UKR-Horodysche, UKR-Illintsi, UKR-Kaharlyk,
@@ -3953,6 +5336,15 @@
       UKR-Tarashcha, UKR-Teplyk, UKR-Tetiiv, UKR-Tomashpil, UKR-Trostianets, UKR-Tulchyn, UKR-Tyvriv, UKR-Uman,
       UKR-Vilshanka, UKR-Vinnytsia, UKR-Volodarka, UKR-Yampil, UKR-Zhashkiv, UKR-Zhmerynka, UKR-Zvenyhorodka]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    # ---- 1648– ----
     - from: 1648
       owner: cossack_hetmanate
       certainty: uncertain
@@ -4038,6 +5430,8 @@
 - id: left_bank
   name: ドニエプル左岸（ヘトマン国家）
   note: "キエフ市とその周辺（1686年以後ロシア領）を含む。ブリャンスク州西部（スタロドゥーブ・ポチェプ・ムグリン・ノヴォズィプコフなど）は、スタロドゥーブ連隊の地として含めた（1648年まではポーランド領チェルニーヒウ県）"
+  names:
+    - {to: 1647, name: "チェルニゴフ・セヴェルスキー地方"}
   select:
     pieces: [UKR-Bakhmach, UKR-Baryshivka, UKR-Bobrovytsia, UKR-Boryspil, UKR-Borzna, UKR-Brovary, UKR-Chernihiv, UKR-Chornobai,
       UKR-Chornukhy, UKR-Chutove, UKR-Drabiv, UKR-Dykanka, UKR-Hadiach, UKR-Hlobyne, UKR-Hlukhiv, UKR-Horodnia,
@@ -4051,6 +5445,24 @@
       UKR-Zinkiv, UKR-Zolotonosha,
       RUS-Starodubsky_District, RUS-Starodub, RUS-Pogarsky_District, RUS-Pochepsky_District, RUS-Unechsky_District, RUS-Mglinsky_District, RUS-Surazhsky_District, RUS-Klintsovsky_District, RUS-x_8, RUS-Klimovsky_District, RUS-Novozybkovsky_District, RUS-Novozybkov, RUS-Zlynkovsky_District, RUS-Gordeyevsky_District, RUS-Krasnogorsky_District]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のチェルニゴフ・ノヴゴロド＝セヴェルスキー地方"
+    - from: 1500
+      owner: "russia"
+      cause: "セヴェルスキー地方の諸公がモスクワに寝返り、モスクワ・リトアニア戦争（1500–03）。1503年の休戦条約でモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+    - from: 1611
+      owner: "poland_lithuania"
+      certainty: "occupied"
+      cause: "動乱時代、ポーランド＝リトアニアがセヴェルスキー地方を占領"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・ロシア戦争_(1605年-1618年)"
+    - from: 1618
+      owner: "poland_lithuania"
+      cause: "デウリノの休戦条約でチェルニゴフ・セヴェルスキー地方をポーランド＝リトアニアに割譲（1635年にチェルニゴフ県）"
+      source: "https://ja.wikipedia.org/wiki/デウリノの和約"
+    # ---- 1648– ----
     - from: 1648
       owner: cossack_hetmanate
       certainty: uncertain
@@ -4109,6 +5521,8 @@
 
 - id: sloboda
   name: スロボダ・ウクライナ
+  names:
+    - {to: 1647, name: "荒野（スロボダ・ウクライナ）"}
   select:
     pieces: [UKR-Bakhmut, UKR-Balakliia, UKR-Barvinkove, UKR-Bilokurakyne, UKR-Bilopillia, UKR-Bilovodsk, UKR-Blyzniuky,
       UKR-Bohodukhiv, UKR-Borova, UKR-Buryn, UKR-Chuhuiv, UKR-Derhachi, UKR-Dvorichna, UKR-Izium, UKR-Kehychivka,
@@ -4119,7 +5533,14 @@
       UKR-Velykyi_Burluk, UKR-Vovchansk, UKR-Zachepylivka, UKR-Zmiiv, UKR-Zolochiv_2,
       RUS-Kantemirovsky_District, RUS-Bogucharsky_District, RUS-Rossoshansky_District, RUS-Petropavlovsky_District, RUS-Verkhnemamonsky_District, RUS-Olkhovatsky_District, RUS-x_35, RUS-x_34, RUS-Pavlovsky_District_2, RUS-Vorobyovsky_District, RUS-Kamensky_District, RUS-Rovensky_District, RUS-Veydelevsky_District, RUS-x_39]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "「荒野」（ディーコエ・ポーレ）。リトアニア・モスクワ・クリミアの境ははっきりせず、クリミア・タタールの襲撃路（ムラフスキー道など）が通る"
+    # ---- 1648– ----
     - from: 1648
+      cause: "ベルゴロド防衛線（1635–58年）の建設で、ロシアの支配と入植が南の「荒野」へ広がる（年は近似）"
       owner: russia
       certainty: uncertain
       note: "「荒野」への入植が進む時期"
@@ -4172,6 +5593,8 @@
 
 - id: sich
   name: ザポロージャ・コサックの地
+  names:
+    - {to: 1647, name: "荒野（ドニエプル左岸の草原）"}
   select:
     pieces: [UKR-Apostolove, UKR-Arbuzynka, UKR-Bashtanka, UKR-Bereznehuvate, UKR-Bobrynets, UKR-Boikivske, UKR-Bratske,
       UKR-Dnipro, UKR-Dobropillia, UKR-Dobrovelychkivka, UKR-Dolynska, UKR-Huliaipole, UKR-Kamianka_Dniprovska,
@@ -4183,7 +5606,14 @@
       UKR-Vasylivka, UKR-Vasylkivka, UKR-Velyka_Novosilka, UKR-Verkhnodniprovsk, UKR-Vilniansk, UKR-Volnovakha,
       UKR-Voznesensk, UKR-Yasynuvata, UKR-Yelanets, UKR-Zaporizhia]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "「荒野」（ディーコエ・ポーレ）。クリミア・タタールとノガイ人の遊牧と襲撃の地"
+    # ---- 1648– ----
     - from: 1648
+      cause: "フメリニツキーの乱（1648年）。ザポロージャ・コサックがポーランドに背き、ドニエプル下流の草原を押さえる"
       owner: zaporozhian_sich
       certainty: uncertain
       note: "「荒野」。境界ははっきりしない"
@@ -4247,11 +5677,25 @@
 
 - id: new_serbia
   name: 新セルビア（エリサヴェトグラード）
+  names:
+    - {to: 1647, name: "荒野（ドニエプル右岸の草原）"}
   select:
     pieces: [UKR-Mala_Vyska, UKR-Novomyrhorod, UKR-Oleksandriia, UKR-Oleksandrivka, UKR-Onufriivka, UKR-Svitlovodsk,
       UKR-Znamianka]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      certainty: "nominal"
+      note: "ヴィータウタス以来、リトアニア大公国が黒海の岸まで支配を主張した草原"
+    - from: 1492
+      owner: null
+      certainty: "uncertain"
+      cause: "クリミア・タタールの襲撃が強まり、リトアニアの南の境はキエフ・ブラーツラフの近くまで下がる。南の草原は「荒野」（ディーコエ・ポーレ）に"
+      source: "https://en.wikipedia.org/wiki/Wild_Fields"
+    # ---- 1648– ----
     - from: 1648
+      cause: "フメリニツキーの乱（1648年）。ザポロージャ・コサックがポーランドに背き、ドニエプル下流の草原を押さえる"
       owner: zaporozhian_sich
       certainty: uncertain
       note: "「荒野」。境界ははっきりしない"
@@ -4315,12 +5759,32 @@
 
 - id: nogai_taurida
   name: タヴリア北部（ノガイ草原）
+  names:
+    - {to: 1647, name: "ドニエプル下流左岸の草原（タヴリア北部）"}
   select:
     pieces: [UKR-Berdiansk, UKR-Bilmak, UKR-Chaplynka, UKR-Chernihivka, UKR-Henichesk, UKR-Holo_Prystan, UKR-Hornostaivka,
       UKR-Ivanivka_2, UKR-Kakhovka, UKR-Kalanchak, UKR-Melitopol, UKR-Mykhailivka, UKR-Novotroitske, UKR-Nyzhni_Sirohozy,
       UKR-Oleshky, UKR-Pryazovske, UKR-Prymorsk, UKR-Skadovsk, UKR-Tokmak, UKR-Velyka_Bilozerka, UKR-Velyka_Lepetkya,
       UKR-Verkhniy_Rohackyk, UKR-Vesele, UKR-Yakymivka]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "crimea"
+      certainty: "uncertain"
+      note: "クリミア＝ハン国の北の遊牧地"
+    - from: 1478
+      owner: "crimea"
+      overlord: "ottoman"
+      certainty: "uncertain"
+      cause: "クリミア＝ハン国がオスマン帝国の宗主権を認める"
+      source: "https://ja.wikipedia.org/wiki/メングリ1世ギレイ"
+    - from: 1630
+      owner: "nogai"
+      overlord: "crimea"
+      certainty: "uncertain"
+      cause: "カルムイク人に追われたノガイ人の集団（ジャンボイルク・イェディチクルなど）が黒海北岸に移り、クリミア＝ハン国に従う（1620–30年代。年は要確認）"
+      source: "https://ja.wikipedia.org/wiki/ノガイ・オルダ"
+    # ---- 1648– ----
     - from: 1648
       owner: nogai
       overlord: crimea
@@ -4374,10 +5838,30 @@
 
 - id: nogai_1774
   name: ドニエプル・南ブグ間の草原
+  names:
+    - {to: 1647, name: "ドニエプル下流左岸の草原（タヴリア北部）"}
   select:
     pieces: [UKR-Beryslav, UKR-Bilozerka, UKR-Novovorontsovka, UKR-Rozivka, UKR-Snihurivka, UKR-Velyka_Oleksandrivka,
       UKR-Vitovka, UKR-Vysokopillia]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "crimea"
+      certainty: "uncertain"
+      note: "クリミア＝ハン国の北の遊牧地"
+    - from: 1478
+      owner: "crimea"
+      overlord: "ottoman"
+      certainty: "uncertain"
+      cause: "クリミア＝ハン国がオスマン帝国の宗主権を認める"
+      source: "https://ja.wikipedia.org/wiki/メングリ1世ギレイ"
+    - from: 1630
+      owner: "nogai"
+      overlord: "crimea"
+      certainty: "uncertain"
+      cause: "カルムイク人に追われたノガイ人の集団（ジャンボイルク・イェディチクルなど）が黒海北岸に移り、クリミア＝ハン国に従う（1620–30年代。年は要確認）"
+      source: "https://ja.wikipedia.org/wiki/ノガイ・オルダ"
+    # ---- 1648– ----
     - from: 1648
       owner: nogai
       overlord: crimea
@@ -4425,11 +5909,30 @@
 
 - id: yedisan
   name: イェディサン（ドニエストル・南ブグ間）
+  names:
+    - {to: 1647, name: "ドニエストル・南ブグ間の草原"}
   select:
     pieces: [UKR-Ananiv, UKR-Balta, UKR-Berezanka, UKR-Berezivka, UKR-Biliaivka, UKR-Domanivka, UKR-Ivanivka, UKR-Kodyma,
       UKR-Kryve_Ozero, UKR-Liubashhivka, UKR-Lyman, UKR-Mykolaiv_2, UKR-Mykolaivka, UKR-Ochakiv, UKR-Okny, UKR-Ovidiopol,
       UKR-Podilsk, UKR-Rozdilna, UKR-Shyriaieve, UKR-Velyks_Mykhailivka, UKR-Veselynove, UKR-Vradiivka, UKR-Zakharivka]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "lithuania"
+      certainty: "nominal"
+      note: "ヴィータウタス以来、リトアニア大公国が黒海の岸（ハジベイ）まで支配を主張したが、実際はタタールの遊牧地"
+    - from: 1492
+      owner: "crimea"
+      overlord: "ottoman"
+      certainty: "uncertain"
+      cause: "クリミア＝ハン国のメングリ・ギレイがドニエプル河口にオチャキウ（ジャン・ケルメン）を築く"
+      source: "https://en.wikipedia.org/wiki/Ochakiv"
+    - from: 1538
+      owner: "ottoman"
+      certainty: "uncertain"
+      cause: "スレイマン1世のモルダヴィア遠征。黒海北西岸はオスマン帝国の直轄地となり、のちにノガイ人（イェディサン）が遊牧する"
+      source: "https://en.wikipedia.org/wiki/Yedisan"
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       note: "イェディサン。オスマン帝国のオチャキウ（オズィ）州で、ノガイ人が遊牧する"
@@ -8759,9 +10262,21 @@
 
 - id: siberia_west
   name: 西シベリア（チュメニ・トムスク・クズネツク）
+  names:
+    - {to: 1647, name: "クズネツク"}
   select:
     adm1: ["RUS/Tyumen Oblast", "RUS/Yamalo-Nenets Autonomous Okrug", "RUS/Tomsk Oblast", "RUS/Kemerovo Oblast"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ショル人・テレウト人の地"
+    - from: 1618
+      owner: "russia"
+      cause: "クズネツクの砦を築く"
+      source: "https://en.wikipedia.org/wiki/Novokuznetsk"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       note: チュメニ（1586）・トボリスク・トムスク（1604）・クズネツク（1618）などの砦で16世紀末から支配
@@ -8787,9 +10302,22 @@
 
 - id: siberia_steppe
   name: 西シベリア南部の草原（オムスク・ノヴォシビルスク）
+  names:
+    - {to: 1647, name: "イルティシ川中流（タラ）"}
   select:
     adm1: ["RUS/Omsk Oblast", "RUS/Novosibirsk Oblast"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: "sibir"
+      certainty: "uncertain"
+      note: "シビル＝ハン国の南東部（バラバ・タタールなど）"
+    - from: 1594
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "タラの砦を築く。1598年にクチュム・ハンがオビ川の戦いで敗れ、シビル＝ハン国は滅んだ"
+      source: "https://ja.wikipedia.org/wiki/シビル・ハン国"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       certainty: uncertain
@@ -8882,9 +10410,21 @@
 
 - id: yenisei
   name: エニセイ川流域（クラスノヤルスク・ハカス）
+  names:
+    - {to: 1647, name: "エニセイ川流域"}
   select:
     adm1: ["RUS/Krasnoyarsk Krai"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "エヴェンキ人・ケト人・ネネツ人などの地。南のミヌシンスク盆地はエニセイ・キルギス"
+    - from: 1619
+      owner: "russia"
+      cause: "エニセイスク（1619）・クラスノヤルスク（1628）の砦を築く"
+      source: "https://en.wikipedia.org/wiki/Yeniseysk"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       note: エニセイスク（1619）・クラスノヤルスク（1628）などの砦。北のタイミル半島などは先住民の土地で支配は名目的
@@ -8967,9 +10507,22 @@
 
 - id: irkutsk
   name: イルクーツク（バイカル湖の西）
+  names:
+    - {to: 1647, name: "アンガラ川流域"}
   select:
     adm1: ["RUS/Irkutsk Oblast"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ブリヤート人・エヴェンキ人の地"
+    - from: 1631
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "ブラーツク（1631）・イリムスク（1630）などの砦を築き、ブリヤート人から毛皮税を取り始める"
+      source: "https://en.wikipedia.org/wiki/Bratsk"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       certainty: uncertain
@@ -9000,9 +10553,17 @@
 
 - id: transbaikalia
   name: ザバイカル（ブリヤート・チタ）
+  names:
+    - {to: 1647, name: "東シベリア"}
   select:
     adm1: ["RUS/Buryatia", "RUS/Zabaykalsky Krai"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ブリヤート人・エヴェンキ人・ニヴフ人・コリャーク人・チュクチ人などの地。ザバイカルの南はモンゴル（ハルハ）の勢力圏"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       certainty: uncertain
@@ -9066,9 +10627,17 @@
 
 - id: khabarovsk
   name: オホーツク海沿岸とアムール川下流（ハバロフスク地方）
+  names:
+    - {to: 1647, name: "東シベリア"}
   select:
     adm1: ["RUS/Khabarovsk Krai"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ブリヤート人・エヴェンキ人・ニヴフ人・コリャーク人・チュクチ人などの地。ザバイカルの南はモンゴル（ハルハ）の勢力圏"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       certainty: uncertain
@@ -9144,9 +10713,22 @@
 
 - id: yakutia
   name: ヤクーツク（レナ川流域）
+  names:
+    - {to: 1647, name: "レナ川流域"}
   select:
     adm1: ["RUS/Sakha Republic"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ヤクート人・エヴェンキ人・ユカギール人の地"
+    - from: 1632
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "ヤクーツクの砦を築く。1639年にはモスクヴィチンがオホーツク海に達した"
+      source: "https://en.wikipedia.org/wiki/Yakutsk"
+    # ---- 1648– ----
     - from: 1648
       owner: russia
       note: ヤクーツク（1632）を拠点にヤクート人から毛皮税を取り立てた。北東部の支配は名目的
@@ -9179,9 +10761,17 @@
 
 - id: northeast_siberia
   name: 北東シベリア（マガダン・カムチャツカ）
+  names:
+    - {to: 1647, name: "東シベリア"}
   select:
     adm1: ["RUS/Magadan Oblast", "RUS/Kamchatka Krai"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ブリヤート人・エヴェンキ人・ニヴフ人・コリャーク人・チュクチ人などの地。ザバイカルの南はモンゴル（ハルハ）の勢力圏"
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -9219,9 +10809,17 @@
 
 - id: chukotka
   name: チュコト半島
+  names:
+    - {to: 1647, name: "東シベリア"}
   select:
     adm1: ["RUS/Chukotka Autonomous Okrug"]
   timeline:
+    # ---- 1453–1647 ----
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ブリヤート人・エヴェンキ人・ニヴフ人・コリャーク人・チュクチ人などの地。ザバイカルの南はモンゴル（ハルハ）の勢力圏"
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -9246,3 +10844,1981 @@
       owner: russia
       cause: ソ連の解体（ロシア連邦）
       source: "https://ja.wikipedia.org/wiki/ソビエト連邦の崩壊"
+
+# ======== 1453–1647 の変遷が周りと違う所（tools なしの生成。until: 1647。1648 年以後は元の地域の変遷が効く） ========
+
+- id: sweden_jamtland
+  name: "スウェーデン本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "イェムトランド・ヘリエダーレン・イドレ＝サーナ"}
+  select:
+    pieces: [SWE-Alvdalen, SWE-Are, SWE-Berg, SWE-Bracke, SWE-Harjedalen, SWE-Krokom, SWE-Ostersund, SWE-Ragunda, SWE-Stromsund]
+  timeline:
+    - from: 1453
+      owner: "norway"
+      overlord: "kalmar_union"
+      note: "ノルウェー王国の地方。イドレとサーナ（エルヴダーレンの北西部）もノルウェー領（地図ではエルヴダーレン全体）"
+    - from: 1523
+      owner: "norway"
+    - from: 1537
+      owner: "denmark"
+      cause: "ノルウェーがデンマーク王国の一部となる"
+      source: "https://ja.wikipedia.org/wiki/デンマーク＝ノルウェー"
+    - from: 1645
+      owner: "sweden"
+      cause: "トルステンソン戦争に敗れたデンマークが、ブレムセブルー条約でイェムトランド・ヘリエダーレンをスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ブレムセブルー条約"
+
+- id: sweden_alvsborg
+  name: "スウェーデン本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "エルヴスボリ（イェーテボリ）"}
+  select:
+    pieces: [SWE-Gothenburg]
+  timeline:
+    - from: 1453
+      owner: "sweden"
+    - from: 1457
+      owner: "sweden"
+      overlord: "kalmar_union"
+    - from: 1464
+      owner: "sweden"
+    - from: 1497
+      owner: "sweden"
+      overlord: "kalmar_union"
+    - from: 1501
+      owner: "sweden"
+    - from: 1520
+      owner: "sweden"
+      overlord: "kalmar_union"
+    - from: 1521
+      owner: "sweden"
+    - from: 1563
+      owner: "denmark"
+      certainty: "occupied"
+      cause: "北方七年戦争でデンマークがスウェーデン唯一の西海岸の港エルヴスボリを占領"
+      source: "https://ja.wikipedia.org/wiki/北方七年戦争"
+    - from: 1571
+      owner: "sweden"
+      cause: "シュテッティン条約（1570）による身代金の支払いでエルヴスボリがスウェーデンに戻る"
+      source: "https://ja.wikipedia.org/wiki/シュテッティン条約_(1570年)"
+    - from: 1612
+      owner: "denmark"
+      certainty: "occupied"
+      cause: "カルマル戦争でデンマークがエルヴスボリを占領。クネレド条約（1613）で身代金と引き換えに返すことになる"
+      source: "https://ja.wikipedia.org/wiki/カルマル戦争"
+    - from: 1619
+      owner: "sweden"
+      cause: "身代金を払い終え、エルヴスボリがスウェーデンに戻る。1621年に近くにイェーテボリを建設"
+      source: "https://ja.wikipedia.org/wiki/カルマル戦争"
+
+- id: sweden_gotland
+  name: "スウェーデン本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ゴットランド島"}
+  select:
+    pieces: [SWE-Gotland]
+  timeline:
+    - from: 1453
+      owner: "denmark"
+      note: "1449年にポンメルンのエーリク（もとの連合王）から取り戻したデンマーク領"
+    - from: 1645
+      owner: "sweden"
+      cause: "ブレムセブルー条約でゴットランド島をスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ブレムセブルー条約"
+
+- id: finland_fin_north
+  name: "フィンランド"
+  until: 1647
+  names:
+    - {to: 1647, name: "カイヌー・北ポホヤンマー"}
+  select:
+    pieces: [FIN-Ita_Lapin_seutukunta, FIN-Kajaanin_seutukunta, FIN-Kehys_Kainuun_seutukunta, FIN-Koillismaan_seutukunta, FIN-Pohjois_Lapin_seutukunta]
+  timeline:
+    - from: 1453
+      owner: "sweden"
+      certainty: "uncertain"
+      note: "ノーテボリ条約（1323）の国境線があいまいな北部。スウェーデン人の入植者とノヴゴロド・モスクワ側のカレリア人が争った"
+    - from: 1457
+      owner: "sweden"
+      overlord: "kalmar_union"
+      certainty: "uncertain"
+    - from: 1464
+      owner: "sweden"
+      certainty: "uncertain"
+    - from: 1497
+      owner: "sweden"
+      overlord: "kalmar_union"
+      certainty: "uncertain"
+    - from: 1501
+      owner: "sweden"
+      certainty: "uncertain"
+    - from: 1520
+      owner: "sweden"
+      overlord: "kalmar_union"
+      certainty: "uncertain"
+    - from: 1521
+      owner: "sweden"
+      certainty: "uncertain"
+    - from: 1595
+      owner: "sweden"
+      cause: "テューシナ条約でスウェーデンとロシアの国境が北極海の近くまで画定"
+      source: "https://ja.wikipedia.org/wiki/テューシナ条約"
+
+- id: finland_kexholm_pre
+  name: "フィンランド"
+  until: 1647
+  names:
+    - {to: 1647, name: "ケクスホルム（カレリア）"}
+  select:
+    pieces: [FIN-Joensuun_seutukunta, FIN-Keski_Karjalan_seutukunta, FIN-Pielisen_Karjalan_seutukunta]
+  timeline:
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド領カレリア（コレラ城）"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを併合"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1580
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でスウェーデン軍のポントゥス・デ・ラ・ガルディがケクスホルムを占領"
+      source: "https://en.wikipedia.org/wiki/Korela_Fortress"
+    - from: 1595
+      owner: "russia"
+      cause: "テューシナ条約でケクスホルムをロシアに返す"
+      source: "https://ja.wikipedia.org/wiki/テューシナ条約"
+    - from: 1611
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "動乱時代、スウェーデン軍（ヤコブ・デ・ラ・ガルディ）がケクスホルムを占領（3月）"
+      source: "https://ja.wikipedia.org/wiki/イングリア戦争"
+    - from: 1617
+      owner: "sweden"
+      cause: "ストルボヴォ条約でロシアがケクスホルム郡（カレリア）とイングリアをスウェーデンに割譲し、バルト海から締め出される"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+
+- id: estonia_north_estonia
+  name: "エストニア・北リヴォニア"
+  until: 1647
+  names:
+    - {to: 1647, name: "エストニア（レヴァル・ハリエン・ヴィールラント・イェルヴェン）"}
+  select:
+    pieces: [EST-Aegviidu_vald, EST-Albu_vald, EST-Ambla_vald, EST-Anija_vald, EST-Harku_vald, EST-Imavere_vald, EST-Jaarva_Jaani, EST-Joelahtme, EST-Juuru_vald, EST-Kaiu_vald, EST-Kareda_vald, EST-Karu_vald, EST-Kehtna_vald, EST-Keila_linn, EST-Keila_vald, EST-Kernu_vald, EST-Kiili_vald, EST-Koeru_vald, EST-Kohila_vald, EST-Koigi_vald, EST-Kose_vald, EST-Kuusalu_vald, EST-Loksa_linn, EST-Maardu, EST-Marjamaa_vald, EST-Nissi_vald, EST-Padise_vald, EST-Paide_linn, EST-Paide_vald, EST-Paldiski_linn, EST-Raasiku_vald, EST-Rae_vald, EST-Raikklla_vald, EST-Rapla_vald, EST-Roosna_Alliku_vald, EST-Saku_vald, EST-Saue_linn, EST-Saue_vald, EST-Tallinna_linn, EST-Turi_vald, EST-Vaatsa, EST-Vasalemma_vald, EST-Vigala_vald, EST-Viimsi_vald]
+  timeline:
+    - from: 1453
+      owner: "livonian_order"
+      note: "1346年にデンマークから買い取ったリヴォニア騎士団領（レヴァルはハンザ都市）"
+    - from: 1561
+      owner: "sweden"
+      cause: "リヴォニア戦争。レヴァルと北エストニアの騎士団がスウェーデン王エリク14世に臣従（6月）"
+      source: "https://ja.wikipedia.org/wiki/スウェーデン領エストニア"
+
+- id: estonia_virumaa
+  name: "エストニア・北リヴォニア"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴィールラント東部・ナルヴァ"}
+  select:
+    pieces: [EST-Alaj, EST-Aseri_vald, EST-Avinurme_vald, EST-Haljala_vald, EST-Iisaku_vald, EST-Illuka_vald, EST-Johvi, EST-Kadrina_vald, EST-Kivi, EST-Kohtla_Jlrve_linn, EST-Kohtla_Nlmme_vald, EST-Kohtla_vald, EST-Kunda_linn, EST-Laekvere_vald, EST-Lohusuu_vald, EST-M, EST-Maidla_vald, EST-Narva_Jvesuu_linn, EST-Narva_linn, EST-Ragavere_vald, EST-Rakke_vald, EST-Rakvere_linn, EST-Rakvere_vald, EST-Sillamae_linn, EST-Someru_vald, EST-Sonda_vald, EST-Tamsalu_vald, EST-Tapa_vald, EST-Toila_vald, EST-Tudulinna_vald, EST-Vaike_Maarja_vald, EST-Vaivara_vald, EST-Vihula_vald, EST-Vinni_vald, EST-Viru_Nigula_vald]
+  timeline:
+    - from: 1453
+      owner: "livonian_order"
+      note: "リヴォニア騎士団領（ナルヴァ・ヴェーゼンベルク）"
+    - from: 1558
+      owner: "russia"
+      certainty: "occupied"
+      cause: "リヴォニア戦争が始まり、イヴァン4世の軍がナルヴァ・ヴェーゼンベルクを占領（5月）"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1581
+      owner: "sweden"
+      cause: "スウェーデン軍（ポントゥス・デ・ラ・ガルディ）がナルヴァを攻め落とす（9月）。テューシナ条約（1595）でスウェーデン領と確定"
+      source: "https://ja.wikipedia.org/wiki/テューシナ条約"
+
+- id: estonia_fellin
+  name: "エストニア・北リヴォニア"
+  until: 1647
+  names:
+    - {to: 1647, name: "フェリン（ヴィリャンディ）・ヴァルガ"}
+  select:
+    pieces: [EST-Abja_vald, EST-Halliste_vald, EST-Helme_vald, EST-Hummuli_vald, EST-Karksi_vald, EST-Karula_vald, EST-Kolga_Jaani_vald, EST-Koo_vald, EST-Kopu_vald, EST-Moisakula, EST-Oru_vald, EST-Otepaa_vald, EST-Palupera_vald, EST-Podrala_vald, EST-Puka_vald, EST-Sangaste_vald, EST-Suure_Jaani_vald, EST-Taheva_vald, EST-Tarvastu_vald, EST-Tolliste_vald, EST-Torva, EST-Valga_linn, EST-Viljandi_linn, EST-Viljandi_vald, EST-Vohma]
+  timeline:
+    - from: 1453
+      owner: "livonian_order"
+      note: "リヴォニア騎士団領（フェリン城は騎士団の大きな拠点）"
+    - from: 1560
+      owner: "russia"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でロシア軍がフェリンを落とし、元騎士団長フュルステンベルクを捕らえる（8月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Fellin"
+    - from: 1582
+      owner: "poland_lithuania"
+      cause: "ヤム・ザポルスキの和約で、ロシアがリヴォニアをポーランド＝リトアニアに返す"
+      source: "https://ja.wikipedia.org/wiki/ヤム・ザポルスキの和約"
+    - from: 1625
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "グスタフ2世アドルフがリヴォニアを征服"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・スウェーデン戦争_(1621年-1625年)"
+    - from: 1629
+      owner: "sweden"
+      cause: "アルトマルクの休戦条約"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+
+- id: estonia_parnu
+  name: "エストニア・北リヴォニア"
+  until: 1647
+  names:
+    - {to: 1647, name: "ペルナウ（パルヌ）"}
+  select:
+    pieces: [EST-Are_vald, EST-Audru_vald, EST-Haademeeste, EST-Halinga_vald, EST-Kihnu_vald, EST-Koonga_vald, EST-Paikuse_vald, EST-Parnu, EST-Saarde_vald, EST-Sauga_vald, EST-Sindi_linn, EST-Surju_vald, EST-Tahkuranna_vald, EST-Tootsi_vald, EST-Tori_vald, EST-Tostamaa_vald, EST-Vandra, EST-Vandra_alev, EST-Varbla_vald]
+  timeline:
+    - from: 1453
+      owner: "livonian_order"
+      note: "リヴォニア騎士団領（ペルナウはハンザ都市）"
+    - from: 1561
+      owner: "lithuania"
+      cause: "ヴィリニュス合意で、リヴォニアがリトアニア大公に委ねられる"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1617
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "スウェーデン軍がペルナウを占領"
+      source: "https://en.wikipedia.org/wiki/Pärnu"
+    - from: 1629
+      owner: "sweden"
+      cause: "アルトマルクの休戦条約"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+
+- id: estonia_osel
+  name: "エストニア・北リヴォニア"
+  until: 1647
+  names:
+    - {to: 1647, name: "エーゼル（サーレマー）"}
+  select:
+    pieces: [EST-K, EST-Kaarma_vald, EST-Kihelkonna_vald, EST-Kuressaare, EST-Laane_Saare, EST-Laimjala_vald, EST-Leisi_vald, EST-Muhu_vald, EST-Mustjala_vald, EST-Orissaare_vald, EST-Pihtla_vald, EST-Poide, EST-Ruhnu_vald, EST-Salme_vald, EST-Torgu_vald, EST-Valjala_vald]
+  timeline:
+    - from: 1453
+      owner: "osel_wiek"
+    - from: 1559
+      owner: "denmark"
+      cause: "エーゼル＝ヴィーク司教がデンマーク王フレデリク2世に司教領を売り、王弟マグヌスが司教となる"
+      source: "https://en.wikipedia.org/wiki/Bishopric_of_Ösel–Wiek"
+    - from: 1645
+      owner: "sweden"
+      cause: "ブレムセブルー条約でエーゼル島をスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ブレムセブルー条約"
+
+- id: estonia_wiek
+  name: "エストニア・北リヴォニア"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴィーク（レーネマー）・ダゴ"}
+  select:
+    pieces: [EST-Emmaste_vald, EST-Haapsalu_linn, EST-Hanila_vald, EST-Hiiu_vald, EST-Kaina, EST-Kullamaa_vald, EST-Laane_Nigula, EST-Lihula_vald, EST-Martna_vald, EST-Noarootsi_vald, EST-Nova_vald, EST-Puhalepa, EST-Ridala_vald, EST-Vormsi_vald]
+  timeline:
+    - from: 1453
+      owner: "osel_wiek"
+    - from: 1560
+      owner: "denmark"
+      cause: "マグヌス（デンマーク王弟）がエーゼル＝ヴィーク司教となる"
+      source: "https://en.wikipedia.org/wiki/Bishopric_of_Ösel–Wiek"
+    - from: 1563
+      owner: "sweden"
+      certainty: "uncertain"
+      cause: "北方七年戦争・リヴォニア戦争の中で、スウェーデンがダゴ島（ヒーウマー）とヴィーク本土の一部を押さえる（年と範囲は要確認）"
+      source: "https://en.wikipedia.org/wiki/Swedish_Estonia"
+    - from: 1581
+      owner: "sweden"
+      cause: "スウェーデン軍がハープサル（ハプサル）などヴィーク全体を押さえる"
+      source: "https://en.wikipedia.org/wiki/Swedish_Estonia"
+
+- id: livonia_lv_vidzeme_order
+  name: "リヴォニア（ヴィゼメ）"
+  until: 1647
+  names:
+    - {to: 1647, name: "リヴォニア（ヴェンデン・ヴォルマル）"}
+  select:
+    pieces: [LVA-C_su_novads, LVA-Siguldas_novads, LVA-Smiltenes_novads, LVA-Valkas_novads, LVA-Valmieras_novads]
+  timeline:
+    - from: 1453
+      owner: "livonian_order"
+      note: "リヴォニア騎士団の本拠（ヴェンデン＝ツェーシス城に騎士団長が住んだ）"
+    - from: 1561
+      owner: "lithuania"
+      cause: "ヴィリニュス合意で、リヴォニアがリトアニア大公に委ねられ、騎士団は解散"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1625
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "グスタフ2世アドルフがリヴォニアを征服（1月のヴァルホフの戦いでポーランド軍を破る）"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・スウェーデン戦争_(1621年-1625年)"
+    - from: 1629
+      owner: "sweden"
+      cause: "アルトマルクの休戦条約"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+
+- id: livonia_lv_marienburg_liv
+  name: "リヴォニア（ヴィゼメ）"
+  until: 1647
+  names:
+    - {to: 1647, name: "マリエンブルク（アルークスネ）"}
+  select:
+    pieces: [LVA-Al_ksnes_novads, LVA-Gulbenes_novads]
+  timeline:
+    - from: 1453
+      owner: "livonian_order"
+      note: "リヴォニア騎士団領の東の境"
+    - from: 1560
+      owner: "russia"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でロシア軍がマリエンブルクを落とす"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1582
+      owner: "poland_lithuania"
+      cause: "ヤム・ザポルスキの和約"
+      source: "https://ja.wikipedia.org/wiki/ヤム・ザポルスキの和約"
+    - from: 1625
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "グスタフ2世アドルフがリヴォニアを征服"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・スウェーデン戦争_(1621年-1625年)"
+    - from: 1629
+      owner: "sweden"
+      cause: "アルトマルクの休戦条約"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+
+- id: livonia_lv_riga_city
+  name: "リヴォニア（ヴィゼメ）"
+  until: 1647
+  names:
+    - {to: 1647, name: "リガ"}
+  select:
+    pieces: [LVA-R_ga]
+  timeline:
+    - from: 1453
+      owner: "riga_archbishopric"
+      note: "ハンザ都市リガ（大司教と騎士団の両方に従い、たびたび争った）"
+    - from: 1561
+      owner: "lithuania"
+      certainty: "uncertain"
+      cause: "ヴィリニュス合意でリヴォニアがリトアニア大公に委ねられる。リガ市は1581年まで自由都市として臣従を拒んだ"
+      source: "https://ja.wikipedia.org/wiki/リガ"
+    - from: 1569
+      owner: "poland_lithuania"
+      certainty: "uncertain"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1581
+      owner: "poland_lithuania"
+      cause: "リガ市がステファン・バートリに臣従（ドロヒチン条約）"
+      source: "https://ja.wikipedia.org/wiki/リガ"
+    - from: 1621
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "グスタフ2世アドルフがリガを攻め落とす（9月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Riga_(1621)"
+    - from: 1629
+      owner: "sweden"
+      cause: "アルトマルクの休戦条約で、リガとダウガヴァ川以北のリヴォニアがスウェーデン領に"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+
+- id: courland_piltene
+  name: "クールラント・ゼムガレ"
+  until: 1647
+  names:
+    - {to: 1647, name: "ピルテン（クールラント司教領）"}
+  select:
+    pieces: [LVA-Ventspils_novads]
+  timeline:
+    - from: 1453
+      owner: "courland_bishopric"
+    - from: 1560
+      owner: "denmark"
+      cause: "クールラント司教領もデンマーク王弟マグヌスの手に"
+      source: "https://en.wikipedia.org/wiki/Bishopric_of_Courland"
+    - from: 1585
+      owner: "poland_lithuania"
+      cause: "クロンボー条約（1585）で、デンマークがピルテン地方の権利をポーランドに売る"
+      source: "https://en.wikipedia.org/wiki/Piltene"
+
+- id: memel_memel_city
+  name: "メーメル地方（クライペダ）"
+  until: 1647
+  names:
+    - {to: 1647, name: "メーメル"}
+  select:
+    pieces: [LTU-Klaip_da_City_Municipality]
+  timeline:
+    - from: 1453
+      owner: "teutonic_order"
+    - from: 1466
+      owner: "teutonic_order"
+      overlord: "poland"
+      cause: "第二次トルンの和約で、ドイツ騎士団国家はポーランド王の宗主権を認める"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1525
+      owner: "ducal_prussia"
+      overlord: "poland"
+      cause: "騎士団総長アルブレヒトがルター派に改宗し、ポーランド王に臣従してプロイセン公となる（クラクフ条約）"
+      source: "https://ja.wikipedia.org/wiki/プロイセン公国"
+    - from: 1569
+      owner: "ducal_prussia"
+      overlord: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1618
+      owner: "prussia"
+      overlord: "poland_lithuania"
+      cause: "ブランデンブルク選帝侯がプロイセン公国を相続"
+      source: "https://ja.wikipedia.org/wiki/ブランデンブルク＝プロイセン"
+    - from: 1629
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "アルトマルクの休戦条約で、スウェーデンがプロイセンの港（メーメル・ピラウ・エルビング・ブラウンスベルク）の関税権を得て占領を続ける"
+      source: "https://ja.wikipedia.org/wiki/アルトマルクの和約"
+    - from: 1635
+      owner: "prussia"
+      overlord: "poland_lithuania"
+      cause: "シュトゥムスドルフの休戦条約でスウェーデンがプロイセンの港から引き揚げる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Stuhmsdorf"
+
+- id: pom_br_neumark_brand
+  name: "ヒンターポンメルン・ノイマルク"
+  until: 1647
+  names:
+    - {to: 1647, name: "ノイマルク"}
+  select:
+    pieces: [POL-Gorzow_Wielkopolski, POL-powiat_choszcze_ski, POL-powiat_drawski, POL-powiat_gorzowski, POL-powiat_gryfi_ski, POL-powiat_my_liborski, POL-powiat_s_ubicki, POL-powiat_strzelecko_drezdenecki, POL-powiat_sul_ci_ski, POL-powiat_widwi_ski]
+  timeline:
+    - from: 1453
+      owner: "teutonic_order"
+      overlord: "hre"
+      note: "ノイマルク（1402年からドイツ騎士団の質地）"
+    - from: 1455
+      owner: "brandenburg"
+      overlord: "hre"
+      cause: "財政難のドイツ騎士団が、ブランデンブルク選帝侯フリードリヒ2世にノイマルクを売り戻す"
+      source: "https://en.wikipedia.org/wiki/Neumark"
+    - from: 1618
+      owner: "prussia"
+      overlord: "hre"
+      cause: "ブランデンブルク選帝侯がプロイセン公国を相続（ブランデンブルク＝プロイセン）"
+      source: "https://ja.wikipedia.org/wiki/ブランデンブルク＝プロイセン"
+
+- id: pom_br_crossen
+  name: "ヒンターポンメルン・ノイマルク"
+  until: 1647
+  names:
+    - {to: 1647, name: "クロッセン"}
+  select:
+    pieces: [POL-powiat_kro_nie_ski]
+  timeline:
+    - from: 1453
+      owner: "bohemia"
+      overlord: "hre"
+      note: "シュレジエンのグローガウ公領の一部"
+    - from: 1469
+      owner: "hungary"
+      overlord: "hre"
+      certainty: "occupied"
+      cause: "ボヘミア戦争。マーチャーシュ1世がシュレジエンを占領"
+      source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"
+    - from: 1482
+      owner: "brandenburg"
+      overlord: "hre"
+      cause: "グローガウ継承戦争の後、クロッセンがブランデンブルクに渡る（担保。1538年に正式な封土）"
+      source: "https://en.wikipedia.org/wiki/Krosno_Odrzańskie"
+    - from: 1618
+      owner: "prussia"
+      overlord: "hre"
+      cause: "ブランデンブルク選帝侯がプロイセン公国を相続（ブランデンブルク＝プロイセン）"
+      source: "https://ja.wikipedia.org/wiki/ブランデンブルク＝プロイセン"
+
+- id: royal_prussia_elbing_braunsberg
+  name: "王領プロイセン（ポメレリア・ヴァルミア）"
+  until: 1647
+  names:
+    - {to: 1647, name: "エルビング・ブラウンスベルク"}
+  select:
+    pieces: [POL-Elbl_g, POL-powiat_braniewski]
+  timeline:
+    - from: 1453
+      owner: "teutonic_order"
+    - from: 1454
+      owner: "poland"
+      certainty: "uncertain"
+      cause: "プロイセン連合が騎士団に反乱し、ポーランド王に臣従。十三年戦争が始まる"
+      source: "https://ja.wikipedia.org/wiki/十三年戦争_(1454年-1466年)"
+    - from: 1466
+      owner: "poland"
+      cause: "第二次トルンの和約で王領プロイセンに"
+      source: "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1626
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "グスタフ2世アドルフがプロイセンに上陸し、エルビング・ブラウンスベルクなどを占領（アルトマルクの休戦条約 1629 で占領を続ける）"
+      source: "https://en.wikipedia.org/wiki/Polish–Swedish_War_(1626–1629)"
+    - from: 1635
+      owner: "poland_lithuania"
+      cause: "シュトゥムスドルフの休戦条約でスウェーデンが引き揚げる"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Stuhmsdorf"
+
+- id: sp_congress_mazovia_rawa
+  name: "大ポーランド東部・クヤヴィ・ウッチ・プウォツク"
+  until: 1647
+  names:
+    - {to: 1647, name: "ラヴァ・ゴスティニン（マゾフシェ公領）"}
+  select:
+    pieces: [POL-Skierniewice, POL-powiat_gostyni_ski, POL-powiat_owicki, POL-powiat_rawski, POL-powiat_skierniewicki, POL-yrardow_County]
+  timeline:
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "マゾフシェ公領（ピャスト家の公がポーランド王に臣従する封土）"
+    - from: 1462
+      owner: "poland"
+      cause: "ラヴァ・ゴスティニンの公が死に、カジミェシュ4世がラヴァ・ゴスティニンをポーランド王国に併合"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Masovia"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: sp_congress_mazovia_plock
+  name: "大ポーランド東部・クヤヴィ・ウッチ・プウォツク"
+  until: 1647
+  names:
+    - {to: 1647, name: "プウォツク（マゾフシェ公領）"}
+  select:
+    pieces: [POL-P_ock, POL-powiat_m_awski, POL-powiat_p_ocki, POL-powiat_sierpecki, POL-powiat_uromi_ski]
+  timeline:
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "マゾフシェ公領（ピャスト家の公がポーランド王に臣従する封土）"
+    - from: 1495
+      owner: "poland"
+      cause: "プウォツク公の死で、ヤン1世オルブラフトがプウォツク・ザフクシェ・ヴィズナをポーランド王国に併合"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Płock"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: sp_congress_mazovia_sochaczew
+  name: "大ポーランド東部・クヤヴィ・ウッチ・プウォツク"
+  until: 1647
+  names:
+    - {to: 1647, name: "ソハチェフ（マゾフシェ公領）"}
+  select:
+    pieces: [POL-powiat_sochaczewski]
+  timeline:
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "マゾフシェ公領（ピャスト家の公がポーランド王に臣従する封土）"
+    - from: 1476
+      owner: "poland"
+      cause: "ソハチェフをポーランド王国に併合"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Masovia"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: p3_congress_poland_crown
+  name: "マゾフシェ北部・ポドラシェ北部・新シュレジエン"
+  until: 1647
+  names:
+    - {to: 1647, name: "ポーランド王国"}
+  select:
+    pieces: [POL-D_browa_Gornicza, POL-Sosnowiec, POL-powiat_b_dzi_ski, POL-powiat_myszkowski, POL-powiat_zawiercia_ski]
+  timeline:
+    - from: 1453
+      owner: "poland"
+      note: "ポーランド王国（ヤギェウォ朝。王はリトアニア大公を兼ねる）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: p3_congress_podlasie_lt
+  name: "マゾフシェ北部・ポドラシェ北部・新シュレジエン"
+  until: 1647
+  names:
+    - {to: 1647, name: "ポドラシェ・ブレスト地方"}
+  select:
+    pieces: [POL-Suwa_ki, POL-powiat_augustowski, POL-powiat_sejne_ski, POL-powiat_suwalski]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のポドラシェ（ドロヒチン）・ブレスト地方とヨトヴィンギア"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同。ポドラシェ県はポーランド王国の側に移る（ブレスト県はリトアニアに残る）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: p3_congress_mazovia_plock
+  name: "マゾフシェ北部・ポドラシェ北部・新シュレジエン"
+  until: 1647
+  names:
+    - {to: 1647, name: "プウォツク（マゾフシェ公領）"}
+  select:
+    pieces: [POL-powiat_p_o_ski]
+  timeline:
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "マゾフシェ公領（ピャスト家の公がポーランド王に臣従する封土）"
+    - from: 1495
+      owner: "poland"
+      cause: "プウォツク公の死で、ヤン1世オルブラフトがプウォツク・ザフクシェ・ヴィズナをポーランド王国に併合"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Płock"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: wg_congress_mazovia_warsaw
+  name: "西ガリツィア（ルブリン・ラドム・キェルツェ）"
+  until: 1647
+  names:
+    - {to: 1647, name: "マゾフシェ公領（ワルシャワ）"}
+  select:
+    pieces: [POL-powiat_bia_obrzeski, POL-powiat_garwoli_ski, POL-powiat_mi_ski, POL-powiat_otwocki, POL-powiat_w_growski, POL-powiat_wo_omi_ski]
+  timeline:
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "マゾフシェ公領（ワルシャワ・チェルスク。ピャスト家の公がポーランド王に臣従する封土）"
+    - from: 1526
+      owner: "poland"
+      cause: "マゾフシェ公家が断絶し、ジグムント1世がマゾフシェをポーランド王国に併合（1529年に議会に代表を送る）"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Masovia"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（ワルシャワは1596年にジグムント3世の宮廷が移り、事実上の首都になった）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: wg_congress_podlasie_lt
+  name: "西ガリツィア（ルブリン・ラドム・キェルツェ）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ポドラシェ・ブレスト地方"}
+  select:
+    pieces: [POL-Bia_a_Podlaska, POL-powiat_bialski, POL-powiat_osicki, POL-powiat_soko_owski, POL-powiat_w_odawski]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のポドラシェ（ドロヒチン）・ブレスト地方とヨトヴィンギア"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同。ポドラシェ県はポーランド王国の側に移る（ブレスト県はリトアニアに残る）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: zamosc_belz
+  name: "ザモシチ地区"
+  until: 1647
+  names:
+    - {to: 1647, name: "ベウツ"}
+  select:
+    pieces: [POL-powiat_hrubieszowski, POL-powiat_tomaszowski_2]
+  timeline:
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "ベウツ公領（マゾフシェ公家がポーランド王から受けた封土）"
+    - from: 1462
+      owner: "poland"
+      cause: "ベウツの公が死に、ベウツ県としてポーランド王国に併合"
+      source: "https://en.wikipedia.org/wiki/Belz_Voivodeship"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: galicia_pl_oswiecim
+  name: "ガリツィア西部（小ポーランド南部）"
+  until: 1647
+  names:
+    - {to: 1647, name: "オシフィエンチム（アウシュヴィッツ）公領"}
+  select:
+    pieces: [POL-powiat_ywiecki]
+  timeline:
+    - from: 1453
+      owner: "bohemia"
+      overlord: "hre"
+      note: "シロンスクのピャスト家のオシフィエンチム公領（ボヘミア王冠の封土）"
+    - from: 1457
+      owner: "poland"
+      cause: "カジミェシュ4世がオシフィエンチム公領を買い取る（1564年にポーランド王国に完全に併合）"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Oświęcim"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: auschwitz_zator_zator
+  name: "アウシュヴィッツ（オシフィエンチム）・ザトル公領"
+  until: 1647
+  names:
+    - {to: 1647, name: "ザトル公領"}
+  select:
+    pieces: [POL-powiat_wadowicki]
+  timeline:
+    - from: 1453
+      owner: "bohemia"
+      overlord: "hre"
+      note: "シロンスクのピャスト家のザトル公領（ボヘミア王冠の封土）"
+    - from: 1494
+      owner: "poland"
+      cause: "ヤン1世オルブラフトがザトル公領を買い取る（1564年にポーランド王国に完全に併合）"
+      source: "https://en.wikipedia.org/wiki/Duchy_of_Zator"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: ingria_ingria_west
+  name: "イングリア（インゲルマンランド）"
+  until: 1647
+  names:
+    - {to: 1647, name: "イングリア西部（イヴァンゴロド・ヤム・コポーリエ）"}
+  select:
+    pieces: [RUS-Jaama_District, RUS-Kaarosta_District, RUS-Sosnovy_Bor, RUS-Volosovsky_District]
+  timeline:
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド国の西端（コポーリエ・ヤム）"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを併合。1492年にナルヴァ対岸にイヴァンゴロドを築く"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1581
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "リヴォニア戦争で、スウェーデン軍がナルヴァ・イヴァンゴロド・ヤム・コポーリエを占領（プリュッサの休戦 1583）"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1590
+      owner: "russia"
+      cause: "ロシア・スウェーデン戦争（1590–95）でヤム・イヴァンゴロド・コポーリエを取り戻す（テューシナ条約 1595 で確定）"
+      source: "https://ja.wikipedia.org/wiki/テューシナ条約"
+    - from: 1611
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "動乱時代、スウェーデン軍がイングリアを占領"
+      source: "https://ja.wikipedia.org/wiki/イングリア戦争"
+    - from: 1617
+      owner: "sweden"
+      cause: "ストルボヴォ条約でイングリアをスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+
+- id: ingria_south_ingria_west
+  name: "イングリア南部（ルガ川流域）"
+  until: 1647
+  names:
+    - {to: 1647, name: "イングリア西部（イヴァンゴロド・ヤム・コポーリエ）"}
+  select:
+    pieces: [RUS-Slantsevsky_District]
+  timeline:
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド国の西端（コポーリエ・ヤム）"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを併合。1492年にナルヴァ対岸にイヴァンゴロドを築く"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1581
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "リヴォニア戦争で、スウェーデン軍がナルヴァ・イヴァンゴロド・ヤム・コポーリエを占領（プリュッサの休戦 1583）"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1590
+      owner: "russia"
+      cause: "ロシア・スウェーデン戦争（1590–95）でヤム・イヴァンゴロド・コポーリエを取り戻す（テューシナ条約 1595 で確定）"
+      source: "https://ja.wikipedia.org/wiki/テューシナ条約"
+    - from: 1611
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "動乱時代、スウェーデン軍がイングリアを占領"
+      source: "https://ja.wikipedia.org/wiki/イングリア戦争"
+    - from: 1617
+      owner: "sweden"
+      cause: "ストルボヴォ条約でイングリアをスウェーデンに割譲"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+
+- id: kexholm_vyborg_vyborg_pre
+  name: "ヴィボルグ・ケクスホルム（カレリア地峡とラドガ湖北岸）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴィボルグ"}
+  select:
+    pieces: [RUS-Vyborgsky_District]
+  timeline:
+    - from: 1453
+      owner: "sweden"
+      note: "ヴィボルグ城（1293年築城）。スウェーデン領フィンランドの東の拠点"
+    - from: 1457
+      owner: "sweden"
+      overlord: "kalmar_union"
+    - from: 1464
+      owner: "sweden"
+    - from: 1497
+      owner: "sweden"
+      overlord: "kalmar_union"
+    - from: 1501
+      owner: "sweden"
+    - from: 1520
+      owner: "sweden"
+      overlord: "kalmar_union"
+    - from: 1521
+      owner: "sweden"
+
+- id: russia_novgorod_land
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ノヴゴロド国"}
+  select:
+    pieces: [RUS-Aanisenranta_District, RUS-Arkhangelsk_Oblast, RUS-Aunus_District, RUS-Bezhanitsky_District, RUS-Boksitogorsky_District, RUS-Dedovichsky_District, RUS-Dnovsky_District, RUS-Kalevala_District, RUS-Kemsky_District, RUS-Kontupohja_District, RUS-Koskenala_District, RUS-Kostamus_City_District, RUS-Loknyansky_District, RUS-Lotinapelto_District, RUS-Louhi_District, RUS-Medvezhyegorsky_District, RUS-Mujejarvi_District, RUS-Murmansk_Oblast, RUS-Petroskoi_District, RUS-Porkhovsky_District, RUS-Praasa_District, RUS-Puutoisten_District, RUS-Segezhsky_District, RUS-Sorokka_District, RUS-Tihvina_District]
+  timeline:
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド国（ヴェーチェ＝民会と大主教が治める商業共和国）。白海・北極海沿岸までの広い北方を毛皮の貢納地とした"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを征服・併合（1月）。民会の鐘はモスクワに運ばれた"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+
+- id: russia_novgorod_occupied
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ノヴゴロド"}
+  select:
+    pieces: [RUS-Batetsky_District, RUS-Borovichsky_District, RUS-Chudovsky_District, RUS-Demyansky_District, RUS-Kholmsky_District, RUS-Khvoyninsky_District, RUS-Kirishsky_District, RUS-Krestetsky_District, RUS-Lyubytinsky_District, RUS-Malovishersky_District, RUS-Maryovsky_District, RUS-Moshenskoy_District, RUS-Novgorodsky_District, RUS-Okulovsky_District, RUS-Olhava_District, RUS-Parfinsky_District, RUS-Pestovsky_District, RUS-Poddorsky_District, RUS-Shimsky_District, RUS-Soletsky_District, RUS-Starorussky_District, RUS-Valdaysky_District, RUS-Veliky_Novgorod, RUS-Volotovsky_District]
+  timeline:
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド国（ヴェーチェ＝民会と大主教が治める商業共和国）"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを征服・併合（1月）。民会の鐘はモスクワに運ばれた"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1611
+      owner: "sweden"
+      certainty: "occupied"
+      cause: "動乱時代、スウェーデン軍がノヴゴロドを占領（7月）。ノヴゴロドの人々はスウェーデン王子カール・フィリップをツァーリに迎えようとした"
+      source: "https://en.wikipedia.org/wiki/Swedish_occupation_of_Novgorod"
+    - from: 1617
+      owner: "russia"
+      cause: "ストルボヴォ条約でノヴゴロド・スターラヤ・ルーサ・ラドガをロシアに返す"
+      source: "https://ja.wikipedia.org/wiki/ストルボヴォ条約"
+
+- id: russia_bryansk
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ブリャンスク"}
+  select:
+    pieces: [RUS-Bryansk, RUS-Bryansky_District, RUS-Dubrovsky_District, RUS-Dyatkovsky_District, RUS-Karachevsky_District, RUS-Kletnyansky_District, RUS-Navlinsky_District, RUS-Rognedinsky_District, RUS-Seltso, RUS-Trubchevsky_District, RUS-Vygonichsky_District, RUS-Zhiryatinsky_District, RUS-Zhukovsky_District, RUS-x_9]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のブリャンスク・セヴェルスキー地方"
+    - from: 1500
+      owner: "russia"
+      cause: "セヴェルスキー地方の諸公がモスクワに寝返り、モスクワ・リトアニア戦争（1500–03）。1503年の休戦条約でモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+
+- id: russia_pskov_land
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "プスコフ国"}
+  select:
+    pieces: [RUS-Gdovsky_District, RUS-Krasnogorodsky_District, RUS-Novorzhevsky_District, RUS-Opochetsky_District, RUS-Ostrovsky_District, RUS-Palkinsky_District, RUS-Pechorsky_District, RUS-Plyussky_District, RUS-Pskov, RUS-Pskovsky_District, RUS-Pushkinogorsky_District, RUS-Pustoshkinsky_District, RUS-Pytalovsky_District, RUS-Strugo_Krasnensky_District]
+  timeline:
+    - from: 1453
+      owner: "pskov"
+      note: "プスコフ国（民会が治める都市国家。モスクワ大公の代官を受け入れ、リヴォニア騎士団と境を接する）"
+    - from: 1510
+      owner: "russia"
+      cause: "ヴァシーリー3世がプスコフを併合し、民会を廃止する"
+      source: "https://ja.wikipedia.org/wiki/プスコフ公国"
+
+- id: russia_putivl
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "プチヴリ・リルスク"}
+  select:
+    pieces: [RUS-Brasovsky_District, RUS-Dmitriyevsky_District, RUS-Glushkovsky_District, RUS-Khomutovsky_District, RUS-Komarichsky_District, RUS-Konyshyovsky_District, RUS-Korenevsky_District, RUS-Lgov, RUS-Lgovsky_District, RUS-Rylsky_District, RUS-Sevsky_District, RUS-Suzemsky_District]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のセヴェルスキー地方（プチヴリ・リルスク）"
+    - from: 1500
+      owner: "russia"
+      cause: "セヴェルスキー地方の諸公がモスクワに寝返り、モスクワ・リトアニア戦争（1500–03）。1503年の休戦条約でモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+
+- id: russia_komi
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "コミ（ペルミ・ヴィチェゴツカヤ）"}
+  select:
+    pieces: [RUS-Komi_Republic]
+  timeline:
+    - from: 1453
+      owner: "russia"
+      certainty: "uncertain"
+      note: "ヴィチェゴダ川流域のコミ人（ペルミ・ヴィチェゴツカヤ）は14世紀末からペルミの主教座を通じてモスクワに従ったが、支配はゆるく、北部・東部はまばらな森林地帯"
+    - from: 1472
+      owner: "russia"
+      cause: "イヴァン3世がカマ川上流の大ペルミを征服し、コミの地がモスクワ大公国に組み込まれる"
+      source: "https://en.wikipedia.org/wiki/Great_Perm"
+
+- id: russia_muscovy
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "モスクワ大公国"}
+  select:
+    pieces: [RUS-Ivanovo_Oblast, RUS-Kostroma_Oblast, RUS-Moscow_Oblast, RUS-Nizhny_Novgorod_Oblast, RUS-Vladimir_Oblast, RUS-Vologda_Oblast]
+  timeline:
+    - from: 1453
+      owner: "russia"
+      note: "モスクワ大公国（ヴァシーリー2世が内乱に勝ち、北東ルーシの諸公国をまとめつつあった）"
+
+- id: russia_vyazma
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴャジマ"}
+  select:
+    pieces: [RUS-Gagarinsky_District, RUS-Novoduginsky_District, RUS-Sychyovsky_District, RUS-Tyomkinsky_District, RUS-Ugransky_District, RUS-Vyazemsky_District]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のヴャジマ公領"
+    - from: 1494
+      owner: "russia"
+      cause: "モスクワ・リトアニア戦争（1487–94）の和約でヴャジマがモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1487–1494)"
+
+- id: russia_kazan_land
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "カザン＝ハン国"}
+  select:
+    pieces: [RUS-Mari_El, RUS-Tatarstan, RUS-Udmurtia, RUS-Ulyanovsk_Oblast]
+  timeline:
+    - from: 1453
+      owner: "kazan"
+    - from: 1552
+      owner: "russia"
+      cause: "イヴァン4世がカザンを攻め落とし（10月）、カザン＝ハン国を併合"
+      source: "https://ja.wikipedia.org/wiki/カザン包囲戦"
+
+- id: russia_velikie_luki
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴェリーキエ・ルーキ"}
+  select:
+    pieces: [RUS-Novosokolnichesky_District, RUS-Velikiye_Luki, RUS-Velikoluksky_District]
+  timeline:
+    - from: 1453
+      owner: "novgorod"
+      note: "ノヴゴロド国とリトアニアの境の町"
+    - from: 1478
+      owner: "russia"
+      cause: "イヴァン3世がノヴゴロドを併合"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1580
+      owner: "poland_lithuania"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でステファン・バートリがヴェリーキエ・ルーキを攻め落とす（9月）"
+      source: "https://ja.wikipedia.org/wiki/ステファン・バートリ"
+    - from: 1582
+      owner: "russia"
+      cause: "ヤム・ザポルスキの和約（1月）でロシアに返す"
+      source: "https://ja.wikipedia.org/wiki/ヤム・ザポルスキの和約"
+
+- id: russia_kaluga_tula
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "カルーガ・トゥーラ"}
+  select:
+    pieces: [RUS-Kaluga_Oblast, RUS-Tula_Oblast]
+  timeline:
+    - from: 1453
+      owner: "russia"
+      note: "モスクワ大公国の南の境。西部・南部（コゼリスク・オドエフ・ベリョーフ）はリトアニア領のオカ川上流の諸公の地で、1494・1503年にモスクワ領となった（地図では州全体をモスクワ領として描く）"
+
+- id: russia_mordva
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "モルドヴァ人の地（ペンザ・モルドヴィア）"}
+  select:
+    pieces: [RUS-Penza_Oblast, RUS-Republic_of_Mordovia]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "モルドヴァ人の森林地帯。西部はモスクワ側のテムニコフ公領、東はカザン＝ハン国の勢力圏"
+    - from: 1552
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "カザン＝ハン国の征服で、ヴォルガ中流はロシアの勢力範囲に"
+      source: "https://ja.wikipedia.org/wiki/カザン・ハン国"
+
+- id: russia_lower_volga
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴォルガ下流（サラトフ・ツァリーツィン）"}
+  select:
+    pieces: [RUS-Saratov_Oblast, RUS-Volgograd_Oblast]
+  timeline:
+    - from: 1453
+      owner: "golden_horde"
+      certainty: "uncertain"
+      note: "大オルダ（ジョチ・ウルスの後継）の遊牧地"
+    - from: 1502
+      owner: "nogai"
+      certainty: "uncertain"
+      cause: "クリミア＝ハン国のメングリ・ギレイが大オルダを滅ぼす。ヴォルガ下流の草原はノガイ・オルダとアストラハン＝ハン国の遊牧地に"
+      source: "https://ja.wikipedia.org/wiki/大オルダ"
+    - from: 1556
+      owner: "russia"
+      certainty: "nominal"
+      cause: "アストラハン＝ハン国の併合で、ヴォルガ川の全流域がロシアの勢力範囲に"
+      source: "https://ja.wikipedia.org/wiki/アストラハン・ハン国"
+    - from: 1589
+      owner: "russia"
+      cause: "ツァリーツィン（1589）・サラトフ（1590）の砦を築く"
+      source: "https://en.wikipedia.org/wiki/Volgograd"
+
+- id: russia_astrakhan_land
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "アストラハン"}
+  select:
+    pieces: [RUS-Astrakhan_Oblast]
+  timeline:
+    - from: 1453
+      owner: "golden_horde"
+      note: "大オルダ（ジョチ・ウルスの後継）の支配するハジ・タルハン（アストラハン）"
+    - from: 1466
+      owner: "astrakhan"
+      cause: "大オルダから分かれてアストラハン＝ハン国が成立（1460年代。年は諸説あり）"
+      source: "https://ja.wikipedia.org/wiki/アストラハン・ハン国"
+    - from: 1556
+      owner: "russia"
+      cause: "イヴァン4世がアストラハン＝ハン国を併合"
+      source: "https://ja.wikipedia.org/wiki/アストラハン・ハン国"
+
+- id: russia_bashkiria
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "バシキリア"}
+  select:
+    pieces: [RUS-Bashkortostan]
+  timeline:
+    - from: 1453
+      owner: "nogai"
+      certainty: "uncertain"
+      note: "バシキール人の地。南・西はノガイ・オルダ、北西はカザン＝ハン国、東はシビル＝ハン国の勢力圏"
+    - from: 1557
+      owner: "russia"
+      certainty: "nominal"
+      cause: "カザン併合の後、バシキール人の多くがツァーリに臣従（1554–57）"
+      source: "https://en.wikipedia.org/wiki/Bashkirs"
+    - from: 1574
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "ウファの砦を築く"
+      source: "https://en.wikipedia.org/wiki/Ufa"
+
+- id: russia_chuvash
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "チュヴァシ（ヴォルガ川の「山の側」）"}
+  select:
+    pieces: [RUS-Chuvashia]
+  timeline:
+    - from: 1453
+      owner: "kazan"
+    - from: 1551
+      owner: "russia"
+      cause: "スヴィヤシスクの築城（1551）で、ヴォルガ右岸（山の側）のチュヴァシ人・マリ人がモスクワに服属"
+      source: "https://en.wikipedia.org/wiki/Sviyazhsk"
+
+- id: russia_yugra
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ユグラ（オビ川下流）"}
+  select:
+    pieces: [RUS-Khanty_Mansiysk_Autonomous_Okrug_Ugra]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ハンティ人・マンシ人（オスチャーク・ヴォグール）の諸公国と、ネネツ人（サモエード）の地。ノヴゴロドが毛皮の貢納を求め、シビル＝ハン国にも従った"
+    - from: 1499
+      owner: "russia"
+      certainty: "nominal"
+      cause: "モスクワの遠征軍がウラルを越えてユグラを攻め、イヴァン3世が「ユグラの公」を称する"
+      source: "https://en.wikipedia.org/wiki/Yugra"
+    - from: 1593
+      owner: "russia"
+      cause: "ベリョーゾフ（1593）・スルグト（1594）・オブドルスク（1595）の砦を築く。1601年にマンガゼヤ"
+      source: "https://en.wikipedia.org/wiki/Surgut"
+
+- id: russia_vyatka_land
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴャトカ"}
+  select:
+    pieces: [RUS-Kirov_Oblast]
+  timeline:
+    - from: 1453
+      owner: "vyatka"
+      note: "ヴャトカの地（ノヴゴロドの人々が開いた自治の地。モスクワとカザンの間で揺れた）"
+    - from: 1489
+      owner: "russia"
+      cause: "イヴァン3世がヴャトカを征服"
+      source: "https://en.wikipedia.org/wiki/Vyatka_Land"
+
+- id: russia_toropets
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "トロペツ"}
+  select:
+    pieces: [RUS-Kunyinsky_District]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のスモレンスク地方（トロペツ）"
+    - from: 1500
+      owner: "russia"
+      cause: "モスクワ・リトアニア戦争（1500–03）。1503年の休戦条約でリトアニア東部の約3分の1がモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+
+- id: russia_ryazan_south
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "リャザン南部（エレツ）"}
+  select:
+    pieces: [RUS-Lipetsk_Oblast]
+  timeline:
+    - from: 1453
+      owner: "ryazan"
+      certainty: "uncertain"
+      note: "リャザン大公国の南の草原の境。タタールの襲撃で人がまばら"
+    - from: 1521
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "リャザンの併合"
+      source: "https://en.wikipedia.org/wiki/Grand_Duchy_of_Ryazan"
+    - from: 1592
+      owner: "russia"
+      cause: "エレツを再建し、南の防衛線を築く"
+      source: "https://en.wikipedia.org/wiki/Yelets"
+
+- id: russia_moscow_city
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "モスクワ"}
+  select:
+    pieces: [RUS-Moscow]
+  timeline:
+    - from: 1453
+      owner: "russia"
+    - from: 1610
+      owner: "poland_lithuania"
+      certainty: "occupied"
+      cause: "動乱時代。クルシノの戦いの後、モスクワの貴族（七人の貴族）がポーランド王子ヴワディスワフをツァーリに選び、ポーランド軍がクレムリンに入る"
+      source: "https://ja.wikipedia.org/wiki/動乱時代"
+    - from: 1612
+      owner: "russia"
+      cause: "ミーニンとポジャルスキーの国民軍がモスクワを解放（11月）"
+      source: "https://ja.wikipedia.org/wiki/クジマ・ミーニン"
+
+- id: russia_nenets_nominal
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ペチョラ・ネネツの地"}
+  select:
+    pieces: [RUS-Nenets_Autonomous_Okrug]
+  timeline:
+    - from: 1453
+      owner: "novgorod"
+      certainty: "nominal"
+      note: "ペチョラ川下流のネネツ人（サモエード）の地。ノヴゴロドが毛皮の貢納を取った"
+    - from: 1478
+      owner: "russia"
+      certainty: "nominal"
+      cause: "イヴァン3世がノヴゴロドを併合"
+      source: "https://ja.wikipedia.org/wiki/ノヴゴロド公国"
+    - from: 1499
+      owner: "russia"
+      cause: "ペチョラ川にプストジョルスクを築く（1499）"
+      source: "https://en.wikipedia.org/wiki/Pustozersk"
+
+- id: russia_oryol
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "オカ川上流（オリョール・ムツェンスク）"}
+  select:
+    pieces: [RUS-Oryol_Oblast]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      certainty: "uncertain"
+      note: "オカ川上流の小公国（ノヴォシリ・オドエフ・ヴォロティンスク）とムツェンスク。リトアニア大公国に属した"
+    - from: 1494
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "モスクワ・リトアニア戦争（1487–94）の和約で、オカ川上流の諸公とヴャジマがモスクワ側に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1487–1494)"
+    - from: 1503
+      owner: "russia"
+      cause: "1503年の休戦条約で確定"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+
+- id: russia_perm
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "大ペルミ"}
+  select:
+    pieces: [RUS-Perm_Krai]
+  timeline:
+    - from: 1453
+      owner: "russia"
+      certainty: "nominal"
+      note: "大ペルミ（コミ・ペルミャク人の公国。モスクワ大公に従う）。カマ川の南はカザン＝ハン国・ノガイの勢力圏"
+    - from: 1472
+      owner: "russia"
+      cause: "イヴァン3世の軍が大ペルミを征服"
+      source: "https://en.wikipedia.org/wiki/Great_Perm"
+
+- id: russia_ryazan_land
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "リャザン大公国"}
+  select:
+    pieces: [RUS-Ryazan_Oblast]
+  timeline:
+    - from: 1453
+      owner: "ryazan"
+      note: "リャザン大公国（1456年からモスクワの強い影響下）"
+    - from: 1521
+      owner: "russia"
+      cause: "ヴァシーリー3世がリャザン大公を捕らえ、リャザンを併合"
+      source: "https://en.wikipedia.org/wiki/Grand_Duchy_of_Ryazan"
+
+- id: russia_samara
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "サマーラ"}
+  select:
+    pieces: [RUS-Samara_Oblast]
+  timeline:
+    - from: 1453
+      owner: "nogai"
+      certainty: "uncertain"
+      note: "ノガイ・オルダの遊牧地（ヴォルガ川左岸）"
+    - from: 1586
+      owner: "russia"
+      cause: "ヴォルガ川の水運を守るためサマーラの砦を築く"
+      source: "https://en.wikipedia.org/wiki/Samara"
+
+- id: russia_pelym
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ペルィム（ウラル中部）"}
+  select:
+    pieces: [RUS-Sverdlovsk_Oblast]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "マンシ人のペルィム公国などの地。シビル＝ハン国に従った"
+    - from: 1593
+      owner: "russia"
+      cause: "ペルィム（1593）・ヴェルホトゥリエ（1598）の砦を築き、ウラル越えの道を開く"
+      source: "https://en.wikipedia.org/wiki/Verkhoturye"
+
+- id: russia_tambov
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "タンボフ"}
+  select:
+    pieces: [RUS-Tambov_Oblast]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "モルドヴァ人・メシチェラの森と草原の境。タタールの遊牧と襲撃の地"
+    - from: 1552
+      owner: "russia"
+      certainty: "nominal"
+      cause: "カザン＝ハン国の征服で、ヴォルガ中流の西の森林地帯はロシアの勢力範囲に"
+      source: "https://ja.wikipedia.org/wiki/カザン・ハン国"
+    - from: 1636
+      owner: "russia"
+      cause: "タンボフの砦を築く（ベルゴロド線の一部）"
+      source: "https://en.wikipedia.org/wiki/Tambov"
+
+- id: russia_tver_land
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "トヴェリ大公国"}
+  select:
+    pieces: [RUS-Tver_Oblast]
+  timeline:
+    - from: 1453
+      owner: "tver"
+    - from: 1485
+      owner: "russia"
+      cause: "イヴァン3世がトヴェリを攻め、併合する"
+      source: "https://ja.wikipedia.org/wiki/トヴェリ大公国"
+
+- id: russia_yaroslavl
+  name: "ロシア本土"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヤロスラヴリ"}
+  select:
+    pieces: [RUS-Yaroslavl_Oblast]
+  timeline:
+    - from: 1453
+      owner: "russia"
+      note: "ヤロスラヴリ公国（1463年に併合）とロストフ公国（1474年に残りを買い取る）はモスクワ大公に従う分領で、地図ではモスクワ大公国として描く"
+
+- id: russia_steppe_south_urals
+  name: "南ウラル（オレンブルク）"
+  until: 1647
+  select:
+    pieces: [RUS-Orenburg_Oblast]
+  timeline:
+    - from: 1453
+      owner: "nogai"
+      certainty: "uncertain"
+      note: "ノガイ・オルダの遊牧地（ヤイク川流域）"
+    - from: 1634
+      owner: null
+      certainty: "uncertain"
+      cause: "カルムイク人に押され、ノガイ・オルダがヤイク川の東から退く"
+      source: "https://ja.wikipedia.org/wiki/ノガイ・オルダ"
+      note: "カルムイク人・バシキール人・カザフ人の遊牧地"
+
+- id: azov_tana
+  name: "アゾフ（ドン川河口）・タガンログ"
+  until: 1647
+  names:
+    - {to: 1647, name: "アゾフ（ターナ）"}
+  select:
+    pieces: [RUS-Azov]
+  timeline:
+    - from: 1453
+      owner: "venice"
+      certainty: "uncertain"
+      note: "ドン川河口のヴェネツィア・ジェノヴァの商館都市ターナ（ジョチ・ウルスの許しのもとで営んだ）"
+    - from: 1475
+      owner: "ottoman"
+      cause: "オスマン帝国がアゾフ（ターナ）を征服し、アザク要塞とする"
+      source: "https://ja.wikipedia.org/wiki/アゾフ"
+    - from: 1637
+      owner: "don_cossacks"
+      certainty: "occupied"
+      cause: "ドン・コサックがアゾフを奪う（6月）。1641年のオスマン軍の包囲にも耐えた（アゾフ籠城）"
+      source: "https://en.wikipedia.org/wiki/Azov_campaigns_(1637–1642)"
+    - from: 1642
+      owner: "ottoman"
+      cause: "ロシアの全国会議が併合を見送り、コサックがアゾフを壊して退く"
+      source: "https://en.wikipedia.org/wiki/Azov_campaigns_(1637–1642)"
+
+- id: blr_1772_polotsk
+  name: "ベラルーシ東部（1772年ロシア領）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ポロツク"}
+  select:
+    pieces: [BLR-Haradok, BLR-Polotsk, BLR-Rasony, BLR-Shumilina, BLR-Verkhnyadzvinsk]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のポロツク地方"
+    - from: 1563
+      owner: "russia"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でイヴァン4世がポロツクを攻め落とす（2月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Polotsk_(1563)"
+    - from: 1579
+      owner: "poland_lithuania"
+      cause: "ステファン・バートリがポロツクを取り戻す（8月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Polotsk_(1579)"
+
+- id: blr_1772_gomel
+  name: "ベラルーシ東部（1772年ロシア領）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ゴメリ"}
+  select:
+    pieces: [BLR-Dobrush, BLR-Gomel, BLR-Vietka]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のゴメリ地方"
+    - from: 1500
+      owner: "russia"
+      cause: "モスクワ・リトアニア戦争（1500–03）でゴメリ・リュベチなどがモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+    - from: 1535
+      owner: "lithuania"
+      cause: "スタロドゥーブ戦争（1534–37）でリトアニアがゴメリを取り戻す"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1534–1537)"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: blr_1772_nevel_sebezh
+  name: "ベラルーシ東部（1772年ロシア領）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ネヴェリ・セベジ"}
+  select:
+    pieces: [RUS-Nevelsky_District, RUS-Sebezhsky_District]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のポロツク地方"
+    - from: 1535
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "スタロドゥーブ戦争中にモスクワがセベジに城を築く。ネヴェリは1562年にモスクワ領に（要確認）"
+      source: "https://en.wikipedia.org/wiki/Sebezh"
+    - from: 1563
+      owner: "russia"
+      cause: "リヴォニア戦争でイヴァン4世がポロツクを攻め落とし、周辺を支配"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1580
+      owner: "poland_lithuania"
+      certainty: "occupied"
+      cause: "ステファン・バートリの遠征でネヴェリ・セベジが落ちる"
+      source: "https://ja.wikipedia.org/wiki/ステファン・バートリ"
+    - from: 1582
+      owner: "russia"
+      cause: "ヤム・ザポルスキの和約でロシアに返す"
+      source: "https://ja.wikipedia.org/wiki/ヤム・ザポルスキの和約"
+    - from: 1611
+      owner: "poland_lithuania"
+      certainty: "occupied"
+      cause: "動乱時代、ポーランド＝リトアニアが国境地帯を占領"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・ロシア戦争_(1605年-1618年)"
+    - from: 1618
+      owner: "poland_lithuania"
+      cause: "デウリノの休戦条約（12月）でスモレンスク・チェルニゴフ・セヴェルスキー地方などをポーランド＝リトアニアに割譲"
+      source: "https://ja.wikipedia.org/wiki/デウリノの和約"
+
+- id: blr_1772_velizh_usvyaty
+  name: "ベラルーシ東部（1772年ロシア領）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ヴェリジ・ウスヴャティ"}
+  select:
+    pieces: [RUS-Usvyatsky_District, RUS-Velizhsky_District]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のヴィテプスク地方"
+    - from: 1563
+      owner: "russia"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でイヴァン4世がポロツク地方を占領（ヴェリジは1536年からモスクワ領ともいう。要確認）"
+      source: "https://ja.wikipedia.org/wiki/リヴォニア戦争"
+    - from: 1580
+      owner: "poland_lithuania"
+      cause: "ステファン・バートリの遠征でヴェリジ・ウスヴャティを取る（ヤム・ザポルスキの和約でポーランド＝リトアニア領）"
+      source: "https://ja.wikipedia.org/wiki/ヤム・ザポルスキの和約"
+
+- id: lith_1793_gomel
+  name: "ベラルーシ中部・ウクライナ北西部（1793年ロシア領）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ゴメリ"}
+  select:
+    pieces: [BLR-Loyew]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のゴメリ地方"
+    - from: 1500
+      owner: "russia"
+      cause: "モスクワ・リトアニア戦争（1500–03）でゴメリ・リュベチなどがモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+    - from: 1535
+      owner: "lithuania"
+      cause: "スタロドゥーブ戦争（1534–37）でリトアニアがゴメリを取り戻す"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1534–1537)"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: lith_1793_polotsk
+  name: "ベラルーシ中部・ウクライナ北西部（1793年ロシア領）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ポロツク"}
+  select:
+    pieces: [BLR-Ushachy]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のポロツク地方"
+    - from: 1563
+      owner: "russia"
+      certainty: "occupied"
+      cause: "リヴォニア戦争でイヴァン4世がポロツクを攻め落とす（2月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Polotsk_(1563)"
+    - from: 1579
+      owner: "poland_lithuania"
+      cause: "ステファン・バートリがポロツクを取り戻す（8月）"
+      source: "https://en.wikipedia.org/wiki/Siege_of_Polotsk_(1579)"
+
+- id: zakarpattia_zak_maramures
+  name: "ザカルパッチャ（ハンガリー北東部）"
+  until: 1647
+  names:
+    - {to: 1647, name: "マーラマロシュ県"}
+  select:
+    pieces: [UKR-Khust, UKR-Mizhhiria, UKR-Rakhiv, UKR-Tiachiv]
+  timeline:
+    - from: 1453
+      owner: "hungary"
+      note: "ハンガリー王国の北東部（マーラマロシュ）"
+    - from: 1526
+      owner: "hungary"
+      cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位"
+      source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1529
+      owner: "hungary"
+      overlord: "ottoman"
+      cause: "スレイマン1世の後ろ盾でサポヤイ・ヤーノシュが東部を治める"
+      source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1541
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国（1570年のシュパイアー条約でトランシルヴァニア公国の「パルティウム」）"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1551
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定）"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1556
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "イザベラとヤーノシュ・ジグモンドが帰国し、東ハンガリー王国を回復"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+
+- id: zakarpattia_zak_ung
+  name: "ザカルパッチャ（ハンガリー北東部）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ウング県（ウジホロド）"}
+  select:
+    pieces: [UKR-Perechyn, UKR-Uzhhorod, UKR-Velykyy_Bereznyi]
+  timeline:
+    - from: 1453
+      owner: "hungary"
+      note: "ハンガリー王国の北東部"
+    - from: 1526
+      owner: "hungary"
+      cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位"
+      source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1527
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る"
+      source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
+    - from: 1529
+      owner: "hungary"
+      overlord: "ottoman"
+      certainty: "uncertain"
+      cause: "サポヤイ・ヤーノシュがオスマン帝国の後ろ盾で東部を取り戻す。上部ハンガリー東部は両王の争奪の場となった"
+      source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1541
+      label: "王領ハンガリー"
+      owner: "habsburg"
+      cause: "ブダ陥落の後、上部ハンガリーはフェルディナント1世の王領ハンガリーに"
+      source: "https://en.wikipedia.org/wiki/Royal_Hungary"
+
+- id: budjak_kilia_akkerman
+  name: "ブジャク（南ベッサラビア）"
+  until: 1647
+  names:
+    - {to: 1647, name: "キリア・アッケルマン"}
+  select:
+    pieces: [UKR-Bilhorod_Dnistrovskyi, UKR-Kiliia]
+  timeline:
+    - from: 1453
+      owner: "moldavia"
+      note: "ドナウ河口のキリアとドニエストル河口のチェタテア・アルバ（アッケルマン）。モルダヴィアの黒海の港"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1484
+      owner: "ottoman"
+      cause: "バヤズィト2世がキリアとアッケルマンを攻め落とす"
+      source: "https://en.wikipedia.org/wiki/Bilhorod-Dnistrovskyi"
+
+- id: kefe_theodoro
+  name: "クリミア南岸（オスマン帝国直轄地）"
+  until: 1647
+  names:
+    - {to: 1647, name: "テオドロ公国（ゴティア）"}
+  select:
+    pieces: [UKR-Leninskyi, UKR-Nakhimovskyi]
+  timeline:
+    - from: 1453
+      owner: "theodoro"
+      note: "マングプを都とするギリシア系正教徒のテオドロ公国（ゴート人の末裔も住む）"
+    - from: 1475
+      owner: "ottoman"
+      cause: "オスマン帝国のゲディク・アフメト・パシャがクリミア南岸を征服し、マングプも落ちる（12月）"
+      source: "https://en.wikipedia.org/wiki/Principality_of_Theodoro"
+
+- id: galicia_ua_belz
+  name: "ガリツィア東部（ルテニア）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ベウツ"}
+  select:
+    pieces: [UKR-Sokal]
+  timeline:
+    - from: 1453
+      owner: "mazovia"
+      overlord: "poland"
+      note: "ベウツ公領（マゾフシェ公家がポーランド王から受けた封土）"
+    - from: 1462
+      owner: "poland"
+      cause: "ベウツの公が死に、ベウツ県としてポーランド王国に併合"
+      source: "https://en.wikipedia.org/wiki/Belz_Voivodeship"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: r_south_right_bank_south
+  name: "ドニエプル右岸（キエフ県南部・ブラーツラフ県）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ブラーツラフ・キエフ南部"}
+  select:
+    pieces: [UKR-Bershad, UKR-Blahovishchenske, UKR-Chechelnyk, UKR-Chernivtsi, UKR-Haisyn, UKR-Haivoron, UKR-Holovanivsk, UKR-Khrystynivka, UKR-Kryzhopil, UKR-Mohyliv_Podilskyi, UKR-Novoarkhanhelsk, UKR-Pishchanka, UKR-Savran, UKR-Sharhorod, UKR-Teplyk, UKR-Tomashpil, UKR-Trostianets, UKR-Tulchyn, UKR-Uman, UKR-Vilshanka, UKR-Yampil]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      certainty: "nominal"
+      note: "リトアニア大公国の南の境。クリミア・タタールの襲撃で人のまばらな地"
+    - from: 1569
+      owner: "poland_lithuania"
+      certainty: "nominal"
+      cause: "ルブリン合同。ブラーツラフ県はポーランド王国領に"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1590
+      owner: "poland_lithuania"
+      certainty: "uncertain"
+      cause: "ポーランドの大貴族の入植が南へ広がる（年は要確認）"
+      source: "https://en.wikipedia.org/wiki/Bratslav_Voivodeship"
+
+- id: left_bank_dnieper_left_steppe_n
+  name: "ドニエプル左岸（ヘトマン国家）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ポルタヴァ（ドニエプル左岸）"}
+  select:
+    pieces: [UKR-Chornukhy, UKR-Chutove, UKR-Dykanka, UKR-Hadiach, UKR-Hlobyne, UKR-Hrebinka, UKR-Karlivka, UKR-Khorol, UKR-Kobeliaky, UKR-Kotelva, UKR-Kozelshchyna, UKR-Kremenchuk, UKR-Lokhvytsia, UKR-Lubny, UKR-Lypova_Dolyna, UKR-Mahdalynivka, UKR-Mashivka, UKR-Myrhorod, UKR-Nedryhailiv, UKR-Novi_Sanzhary, UKR-Orzhytsia, UKR-Poltava, UKR-Pyriatyn, UKR-Reshetylivka, UKR-Romny, UKR-Semenivka_2, UKR-Shyshaky, UKR-Tsarychanka, UKR-Velyka_Bahachka, UKR-Yurivka, UKR-Zinkiv]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      certainty: "nominal"
+      note: "リトアニア大公国のキエフ地方の東の端。人のまばらな森林と草原の境"
+    - from: 1569
+      owner: "poland_lithuania"
+      certainty: "nominal"
+      cause: "ルブリン合同。キエフ県はポーランド王国領に移る"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+    - from: 1590
+      owner: "poland_lithuania"
+      cause: "ヴィシニョヴィエツキ家などのポーランドの大貴族がドニエプル左岸（ザドニプロ）に領地を開き、町や村がつくられる（年は要確認）"
+      source: "https://en.wikipedia.org/wiki/Left-bank_Ukraine"
+
+- id: left_bank_lithuania_gd
+  name: "ドニエプル左岸（ヘトマン国家）"
+  until: 1647
+  names:
+    - {to: 1647, name: "リトアニア大公国"}
+  select:
+    pieces: [UKR-Baryshivka, UKR-Bobrovytsia, UKR-Boryspil, UKR-Brovary, UKR-Chornobai, UKR-Drabiv, UKR-Ichnia, UKR-Kozelets, UKR-Kyiv, UKR-Kyiv_Sviatoshyn, UKR-Nizhyn, UKR-Nosivka, UKR-Obukhiv, UKR-Pereiaslav_Khmelnytskyi, UKR-Pryluky, UKR-Sribne, UKR-Talalaivka, UKR-Varva, UKR-Vasylkiv, UKR-Vyshhorod, UKR-Yahotyn, UKR-Zghurivka, UKR-Zolotonosha]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国（大公はポーランド王を兼ねる同君連合。ヤギェウォ朝）"
+    - from: 1569
+      owner: "poland_lithuania"
+      cause: "ルブリン合同（7月）でポーランド王国とリトアニア大公国が1つの国家（ポーランド＝リトアニア共和国）になる。ポドラシェ・ヴォルィーニ・キエフ・ブラーツラフはポーランド王国の側に移った"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: left_bank_lyubech
+  name: "ドニエプル左岸（ヘトマン国家）"
+  until: 1647
+  names:
+    - {to: 1647, name: "リュベチ"}
+  select:
+    pieces: [UKR-Ripky]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+    - from: 1500
+      owner: "russia"
+      cause: "モスクワ・リトアニア戦争（1500–03）でリュベチなどがモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+    - from: 1611
+      owner: "poland_lithuania"
+      certainty: "occupied"
+      cause: "動乱時代、ポーランド＝リトアニアがセヴェルスキー地方を占領"
+      source: "https://ja.wikipedia.org/wiki/ポーランド・ロシア戦争_(1605年-1618年)"
+    - from: 1618
+      owner: "poland_lithuania"
+      cause: "デウリノの休戦条約"
+      source: "https://ja.wikipedia.org/wiki/デウリノの和約"
+
+- id: sloboda_kursk_steppe
+  name: "スロボダ・ウクライナ"
+  until: 1647
+  names:
+    - {to: 1647, name: "クルスク・ベルゴロドの草原"}
+  select:
+    pieces: [RUS-Bogucharsky_District, RUS-Kamensky_District, RUS-Kantemirovsky_District, RUS-Olkhovatsky_District, RUS-Pavlovsky_District_2, RUS-Petropavlovsky_District, RUS-Rossoshansky_District, RUS-Rovensky_District, RUS-Verkhnemamonsky_District, RUS-Veydelevsky_District, RUS-Vorobyovsky_District, RUS-x_34, RUS-x_35, RUS-x_39]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "「荒野」（ディーコエ・ポーレ）の北の端。モンゴルの侵入以後、人がまばらになった森と草原の境"
+    - from: 1503
+      owner: "russia"
+      certainty: "nominal"
+      cause: "セヴェルスキー地方がモスクワ領となり、その東の草原もモスクワの勢力範囲に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+    - from: 1586
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "クルスク（1586）・ヴォロネジ（1585）・オスコル（1593）・ベルゴロド（1596）など南の草原に砦を築き、タタールの襲撃に備える"
+      source: "https://en.wikipedia.org/wiki/Belgorod_Line"
+
+- id: sloboda_putivl
+  name: "スロボダ・ウクライナ"
+  until: 1647
+  names:
+    - {to: 1647, name: "プチヴリ・リルスク"}
+  select:
+    pieces: [UKR-Bilopillia, UKR-Buryn, UKR-Putyvl]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      note: "リトアニア大公国のセヴェルスキー地方（プチヴリ・リルスク）"
+    - from: 1500
+      owner: "russia"
+      cause: "セヴェルスキー地方の諸公がモスクワに寝返り、モスクワ・リトアニア戦争（1500–03）。1503年の休戦条約でモスクワ領に"
+      source: "https://en.wikipedia.org/wiki/Muscovite–Lithuanian_War_(1500–1503)"
+
+- id: sloboda_chuhuiv
+  name: "スロボダ・ウクライナ"
+  until: 1647
+  names:
+    - {to: 1647, name: "チュフイウ"}
+  select:
+    pieces: [UKR-Chuhuiv]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "「荒野」（ディーコエ・ポーレ）。クリミア・タタールの襲撃路（ムラフスキー道）が通る"
+    - from: 1638
+      owner: "russia"
+      certainty: "uncertain"
+      cause: "ポーランドから逃れたコサックを迎え、ロシアがチュフイウの砦を築く"
+      source: "https://en.wikipedia.org/wiki/Chuhuiv"
+
+- id: sich_wild_fields_w
+  name: "ザポロージャ・コサックの地"
+  until: 1647
+  names:
+    - {to: 1647, name: "荒野（ドニエプル右岸の草原）"}
+  select:
+    pieces: [UKR-Apostolove, UKR-Arbuzynka, UKR-Bashtanka, UKR-Bereznehuvate, UKR-Bobrynets, UKR-Bratske, UKR-Dobrovelychkivka, UKR-Dolynska, UKR-Kazanka, UKR-Kompaniivka, UKR-Kropyvnytskyi, UKR-Kryvyi_Rih, UKR-Nova_Odesa, UKR-Novhorodka, UKR-Novoukrainka, UKR-Novyi_Buh, UKR-Pervomaisk, UKR-Petrove, UKR-Piatykhatky, UKR-Shyroke, UKR-Ustynivka, UKR-Voznesensk, UKR-Yelanets]
+  timeline:
+    - from: 1453
+      owner: "lithuania"
+      certainty: "nominal"
+      note: "ヴィータウタス以来、リトアニア大公国が黒海の岸まで支配を主張した草原"
+    - from: 1492
+      owner: null
+      certainty: "uncertain"
+      cause: "クリミア・タタールの襲撃が強まり、リトアニアの南の境はキエフ・ブラーツラフの近くまで下がる。南の草原は「荒野」（ディーコエ・ポーレ）に"
+      source: "https://en.wikipedia.org/wiki/Wild_Fields"
+
+- id: sich_sich_core
+  name: "ザポロージャ・コサックの地"
+  until: 1647
+  names:
+    - {to: 1647, name: "ザポロージャ・シーチ"}
+  select:
+    pieces: [UKR-Kamianka_Dniprovska, UKR-Nikopol, UKR-Tomakivka, UKR-Zaporizhia]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "「荒野」（ディーコエ・ポーレ）。ドニエプル川の早瀬（ポロギ）の下流"
+    - from: 1556
+      owner: "zaporozhian_sich"
+      overlord: "lithuania"
+      certainty: "uncertain"
+      cause: "ドミトロ・ヴィシネヴェツキーがホルティツャ島に砦を築く（1552–56）。ドニエプルの早瀬の下にザポロージャ・コサックの本営（シーチ）ができる"
+      source: "https://ja.wikipedia.org/wiki/ザポロージャ・シーチ"
+    - from: 1569
+      owner: "zaporozhian_sich"
+      overlord: "poland_lithuania"
+      certainty: "uncertain"
+      cause: "ルブリン合同でウクライナがポーランド王国領に。コサックは名目上ポーランド王に仕え、登録コサックの制度ができた（1572）"
+      source: "https://ja.wikipedia.org/wiki/ルブリン合同"
+
+- id: siberia_west_tomsk
+  name: "西シベリア（チュメニ・トムスク・クズネツク）"
+  until: 1647
+  names:
+    - {to: 1647, name: "トムスク・ナルィム"}
+  select:
+    pieces: [RUS-Tomsk_Oblast]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "セリクプ人・ケト人・タタール人の地"
+    - from: 1596
+      owner: "russia"
+      cause: "ナルィム（1596）・トムスク（1604）の砦を築く"
+      source: "https://en.wikipedia.org/wiki/Tomsk"
+
+- id: siberia_west_sibir_core
+  name: "西シベリア（チュメニ・トムスク・クズネツク）"
+  until: 1647
+  names:
+    - {to: 1647, name: "シビル＝ハン国"}
+  select:
+    pieces: [RUS-Tyumen_Oblast]
+  timeline:
+    - from: 1453
+      owner: "sibir"
+      certainty: "uncertain"
+      note: "チンギ・トゥラ（チュメニ）を中心とするシビル（チュメニ）＝ハン国。シャイバーン家とタイブガ家がハンの位を争った"
+    - from: 1582
+      owner: "russia"
+      certainty: "occupied"
+      cause: "ストロガノフ家に雇われたコサックのイェルマークが、シビル＝ハン国の都イスケルを落とす（10月）"
+      source: "https://ja.wikipedia.org/wiki/イェルマーク"
+    - from: 1585
+      owner: "sibir"
+      certainty: "uncertain"
+      cause: "イェルマークが戦死し、コサックがいったん退く"
+      source: "https://ja.wikipedia.org/wiki/イェルマーク"
+    - from: 1586
+      owner: "russia"
+      cause: "チュメニ（1586）・トボリスク（1587）の砦を築き、シベリア支配の拠点とする"
+      source: "https://en.wikipedia.org/wiki/Tobolsk"
+
+- id: siberia_west_yugra
+  name: "西シベリア（チュメニ・トムスク・クズネツク）"
+  until: 1647
+  names:
+    - {to: 1647, name: "ユグラ（オビ川下流）"}
+  select:
+    pieces: [RUS-Yamalo_Nenets_Autonomous_Okrug]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "ハンティ人・マンシ人（オスチャーク・ヴォグール）の諸公国と、ネネツ人（サモエード）の地。ノヴゴロドが毛皮の貢納を求め、シビル＝ハン国にも従った"
+    - from: 1499
+      owner: "russia"
+      certainty: "nominal"
+      cause: "モスクワの遠征軍がウラルを越えてユグラを攻め、イヴァン3世が「ユグラの公」を称する"
+      source: "https://en.wikipedia.org/wiki/Yugra"
+    - from: 1593
+      owner: "russia"
+      cause: "ベリョーゾフ（1593）・スルグト（1594）・オブドルスク（1595）の砦を築く。1601年にマンガゼヤ"
+      source: "https://en.wikipedia.org/wiki/Surgut"
+
+- id: pre1648_east_siberia_other
+  name: "南シベリア・極東（アルタイ・サヤン・アムール・サハリン）"
+  until: 1647
+  # 別のファイルの地域のピースに 1453–1647 年だけを与える
+  select:
+    pieces: [RUS-Altai_Krai, RUS-Altai_Republic, RUS-Amur_Oblast, RUS-Jewish_Autonomous_Oblast, RUS-Khakassia, RUS-Primorsky_Krai, RUS-Sakhalin_Oblast, RUS-Sakhalin_Oblast_North_Kurils, RUS-Sakhalin_Oblast_South, RUS-Sakhalin_Oblast_South_Kurils, RUS-Tuva]
+  timeline:
+    - from: 1453
+      owner: null
+      certainty: "uncertain"
+      note: "1453–1647年は仮の状態（アジアの段階で見直す）。アルタイ・サヤンはオイラト・テレウト・エニセイ＝キルギス、トゥヴァはモンゴル（アルタン・ハン）、アムール・沿海州は女真などの諸部族（明の奴児干都司は1430年代まで）、サハリン・千島はアイヌ・ニヴフの地"
+

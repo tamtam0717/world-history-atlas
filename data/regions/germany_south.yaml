@@ -8,6 +8,11 @@
     pieces: [DEU-Aichach_Friedberg]
   note: "オーバーバイエルン・ニーダーバイエルンの大部分（ここに含まれる司教領などは別の地域で上書き）。1742–45年のオーストリア軍による占領（オーストリア継承戦争）は描かない。"
   timeline:
+    - from: 1453
+      owner: bavaria
+      overlord: hre
+      note: "バイエルン＝ミュンヘン公国（ミュンヘン・シュトラウビングなど）。ランツフート公国の部分は bavaria_landshut_part で上書き。"
+      source: "https://de.wikipedia.org/wiki/Bayern-München"
     - from: 1648
       owner: bavaria
       overlord: hre
@@ -75,6 +80,23 @@
     adm2: ["DEU/Oberpfalz"]
   note: "ズルツバッハ（プファルツ＝ズルツバッハ）、ロプコヴィッツ家のノイシュタット＝シュテルンシュタインなどの小領はまとめた。"
   timeline:
+    - from: 1453
+      owner: palatinate
+      overlord: hre
+      note: "アンベルクを中心とするプファルツ選帝侯の領地（オーバープファルツ）。ノイマルクトは1499年までプファルツ＝モースバッハ家、ズルツバッハ・ブルクレンゲンフェルトなどは1505年からプファルツ＝ノイブルク家（若プファルツ）の領地。"
+      source: "https://de.wikipedia.org/wiki/Oberpfalz"
+    - from: 1621
+      owner: bavaria
+      overlord: hre
+      certainty: occupied
+      cause: "白山の戦いの後、バイエルン軍が占領"
+      note: "プファルツ選帝侯フリードリヒ5世（冬王）は1621年に帝国追放となった。"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1628
+      owner: bavaria
+      overlord: hre
+      cause: "皇帝フェルディナント2世がオーバープファルツをバイエルンに与える（上オーストリアの質と引き換え）"
+      source: "https://de.wikipedia.org/wiki/Oberpfalz"
     - from: 1648
       owner: bavaria
       overlord: hre
@@ -149,6 +171,23 @@
   select:
     pieces: [DEU-Regensburg_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      label: "レーゲンスブルク"
+      note: "帝国都市レーゲンスブルク。"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Regensburg"
+    - from: 1486
+      owner: bavaria
+      overlord: hre
+      cause: "財政難の帝国都市がバイエルン＝ミュンヘン公アルブレヒト4世に服属"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Regensburg"
+    - from: 1492
+      owner: other_hre
+      overlord: hre
+      label: "レーゲンスブルク"
+      cause: "皇帝フリードリヒ3世とシュヴァーベン同盟の圧力で、バイエルンが返還（帝国都市に戻る）"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Regensburg"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -215,6 +254,27 @@
     pieces: [DEU-Neuburg_Schrobenhausen]
   note: "南部のシュローベンハウゼンはバイエルン領。プファルツ＝ノイブルクの飛び地（ラウインゲン、ブルクレンゲンフェルト、ヒルポルトシュタインなど）はピースが合わないので描かない。"
   timeline:
+    - from: 1453
+      owner: bavaria_landshut
+      overlord: hre
+      note: "ノイブルク（1447年までバイエルン＝インゴルシュタット）。"
+      source: "https://de.wikipedia.org/wiki/Bayern-Landshut"
+    - from: 1505
+      owner: palatinate_neuburg
+      overlord: hre
+      cause: "ランツフート継承戦争の和解（ケルンの裁定）で、プファルツ家の遺児のためにプファルツ＝ノイブルク（若プファルツ）を創設"
+      source: "https://ja.wikipedia.org/wiki/ランツフート継承戦争"
+    - from: 1546
+      owner: habsburg
+      overlord: hre
+      certainty: occupied
+      cause: "シュマルカルデン戦争で皇帝カール5世の軍が占領（オットハインリヒは亡命）"
+      source: "https://de.wikipedia.org/wiki/Pfalz-Neuburg"
+    - from: 1552
+      owner: palatinate_neuburg
+      overlord: hre
+      cause: "諸侯の反乱とパッサウ条約で、オットハインリヒが復帰"
+      source: "https://ja.wikipedia.org/wiki/パッサウ条約"
     - from: 1648
       owner: palatinate_neuburg
       overlord: hre
@@ -280,6 +340,10 @@
   select:
     pieces: [DEU-Passau_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: passau
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Hochstift_Passau"
     - from: 1648
       owner: passau
       overlord: hre
@@ -340,6 +404,10 @@
   select:
     pieces: [DEU-Freyung_Grafenau]
   timeline:
+    - from: 1453
+      owner: passau
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Hochstift_Passau"
     - from: 1648
       owner: passau
       overlord: hre
@@ -406,6 +474,11 @@
     pieces: [DEU-Berchtesgadener_Land]
   note: "ピースには、バイエルン領バート・ライヒェンハルと、ザルツブルク領ルペルティヴィンケル（ラウフェン・フライラッシング。1810年からバイエルン）も含む。面積の大きい修道院侯領の所属で塗る。"
   timeline:
+    - from: 1453
+      owner: berchtesgaden
+      overlord: hre
+      note: "ベルヒテスガーデン修道院領（バート・ライヒェンハルはバイエルン領）。"
+      source: "https://de.wikipedia.org/wiki/Fürstpropstei_Berchtesgaden"
     - from: 1648
       owner: berchtesgaden
       overlord: hre
@@ -473,6 +546,10 @@
   select:
     pieces: [DEU-Garmisch_Partenkirchen]
   timeline:
+    - from: 1453
+      owner: freising
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Werdenfels"
     - from: 1648
       owner: freising
       overlord: hre
@@ -534,6 +611,10 @@
   select:
     pieces: [DEU-Eichstatt]
   timeline:
+    - from: 1453
+      owner: eichstatt
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Hochstift_Eichstätt"
     - from: 1648
       owner: eichstatt
       overlord: hre
@@ -599,6 +680,22 @@
   select:
     pieces: [DEU-Augsburg_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "帝国都市アウクスブルク。フッガー家・ヴェルザー家の本拠。"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Augsburg"
+    - from: 1632
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "グスタフ・アドルフのスウェーデン軍が入城（1632年4月）"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Augsburg"
+    - from: 1635
+      owner: other_hre
+      overlord: hre
+      cause: "皇帝軍・バイエルン軍の包囲で、スウェーデン軍が降伏（1635年3月）"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Augsburg"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -655,6 +752,10 @@
     pieces: [DEU-Augsburg_Landkreis, DEU-Dillingen_a_d_Donau, DEU-Ostallgau]
   note: "ディリンゲンのピースにはプファルツ＝ノイブルク領（ラウインゲン・ヘーヒシュテット）、アウクスブルク郡にはブルガウ辺境伯領・フッガー家領も含む。"
   timeline:
+    - from: 1453
+      owner: augsburg_bishopric
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Hochstift_Augsburg"
     - from: 1648
       owner: augsburg_bishopric
       overlord: hre
@@ -715,6 +816,10 @@
   select:
     pieces: [DEU-Kaufbeuren_Kreisfreie_Stadt, DEU-Memmingen_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Memmingen"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -777,6 +882,11 @@
     pieces: [DEU-Kempten_Allgau_Kreisfreie_Stadt, DEU-Oberallgau]
   note: "帝国都市ケンプテン（市街）と、アウクスブルク司教領のゾントホーフェン・オーバーストドルフも含む。"
   timeline:
+    - from: 1453
+      owner: kempten
+      overlord: hre
+      note: "ケンプテン修道院領（ケンプテンの町は帝国都市）。"
+      source: "https://de.wikipedia.org/wiki/Fürststift_Kempten"
     - from: 1648
       owner: kempten
       overlord: hre
@@ -837,6 +947,11 @@
   select:
     pieces: [DEU-Donau_Ries]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "エッティンゲン伯領。帝国都市ネルトリンゲン・ドナウヴェルト（1607年にバイエルンが占領、1609年に併合）を含む。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Oettingen"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -892,6 +1007,10 @@
   select:
     pieces: [DEU-Unterallgau]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsabtei_Ottobeuren"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -953,6 +1072,11 @@
   select:
     pieces: [DEU-Gunzburg, DEU-Neu_Ulm]
   timeline:
+    - from: 1453
+      owner: habsburg
+      overlord: hre
+      note: "ブルガウ辺境伯領（ハプスブルク家の前方オーストリア）。"
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Burgau"
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1015,6 +1139,11 @@
     pieces: [DEU-Lindau_Bodensee]
   note: "要確認：西アルゴイのオーストリア領と帝国都市リンダウの面積比。"
   timeline:
+    - from: 1453
+      owner: habsburg
+      overlord: hre
+      note: "西アルゴイ（ブレゲンツ伯領の一部、前方オーストリア）。リンダウは帝国都市。"
+      source: "https://de.wikipedia.org/wiki/Vorderösterreich"
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1076,6 +1205,10 @@
   select:
     pieces: [DEU-Nurnberg_Kreisfreie_Stadt, DEU-Nurnberger_Land]
   timeline:
+    - from: 1453
+      owner: nuremberg
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Nürnberg"
     - from: 1648
       owner: nuremberg
       overlord: hre
@@ -1131,6 +1264,10 @@
     pieces: [DEU-Ansbach_Kreisfreie_Stadt, DEU-Ansbach_Landkreis, DEU-Weienburg_Gunzenhausen, DEU-Roth, DEU-Schwabach_Kreisfreie_Stadt, DEU-Furth_Landkreis, DEU-Furth_Kreisfreie_Stadt]
   note: "アンスバッハ郡には帝国都市ローテンブルク・ディンケルスビュール、ヴァイセンブルク郡にはパッペンハイム家領・帝国都市ヴァイセンブルクも含む。フュルトはアンスバッハ・バンベルク・ニュルンベルクの共同支配。"
   timeline:
+    - from: 1453
+      owner: ansbach
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Fürstentum_Ansbach"
     - from: 1648
       owner: ansbach
       overlord: hre
@@ -1191,6 +1328,11 @@
     pieces: [DEU-Bayreuth_Kreisfreie_Stadt, DEU-Bayreuth_Landkreis, DEU-Kulmbach, DEU-Hof_Kreisfreie_Stadt, DEU-Hof_Landkreis, DEU-Wunsiedel_i_Fichtelgebirge, DEU-Erlangen_Kreisfreie_Stadt, DEU-Neustadt_a_d_Aisch_Bad_Windsheim]
   note: "ノイシュタット・アン・デア・アイシュのピースには帝国都市ヴィンツハイムも含む。"
   timeline:
+    - from: 1453
+      owner: bayreuth
+      overlord: hre
+      note: "クルムバッハ（プラッセンブルク）辺境伯領。"
+      source: "https://de.wikipedia.org/wiki/Fürstentum_Bayreuth"
     - from: 1648
       owner: bayreuth
       overlord: hre
@@ -1264,6 +1406,21 @@
     pieces: [DEU-Bamberg_Kreisfreie_Stadt, DEU-Bamberg_Landkreis, DEU-Forchheim, DEU-Kronach, DEU-Lichtenfels, DEU-Erlangen_Hochstadt]
   note: "エアランゲン＝ヘーヒシュタット郡はバンベルク領ヘーヒシュタット・ヘルツォーゲンアウラッハとバイロイト領の混在。"
   timeline:
+    - from: 1453
+      owner: bamberg
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Hochstift_Bamberg"
+    - from: 1633
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "スウェーデン軍の占領。ヴュルツブルクとあわせてザクセン＝ヴァイマル公ベルンハルトの「フランケン公国」とされる"
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Franken_(1633–1634)"
+    - from: 1634
+      owner: bamberg
+      overlord: hre
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍が奪回し、司教が復帰"
+      source: "https://ja.wikipedia.org/wiki/ネルトリンゲンの戦い_(1634年)"
     - from: 1648
       owner: bamberg
       overlord: hre
@@ -1325,6 +1482,22 @@
     pieces: [DEU-Wurzburg_Kreisfreie_Stadt, DEU-Wurzburg_Landkreis, DEU-Kitzingen, DEU-Main_Spessart, DEU-Schweinfurt_Landkreis, DEU-Bad_Kissingen, DEU-Rhon_Grabfeld, DEU-Haberge]
   note: "マイン＝シュペッサルト郡のロール（マインツ領）、バート・キッシンゲン郡のハンメルブルク（フルダ領）なども含む。"
   timeline:
+    - from: 1453
+      owner: wurzburg
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Hochstift_Würzburg"
+    - from: 1631
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "グスタフ・アドルフのスウェーデン軍が占領（1631年10月、マリエンベルク城を攻略）"
+      note: "1633年からザクセン＝ヴァイマル公ベルンハルトの「フランケン公国」。"
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Franken_(1633–1634)"
+    - from: 1634
+      owner: wurzburg
+      overlord: hre
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍が奪回し、司教が復帰"
+      source: "https://ja.wikipedia.org/wiki/ネルトリンゲンの戦い_(1634年)"
     - from: 1648
       owner: wurzburg
       overlord: hre
@@ -1393,6 +1566,10 @@
   select:
     pieces: [DEU-Schweinfurt_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Schweinfurt"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -1462,6 +1639,21 @@
   select:
     pieces: [DEU-Aschaffenburg_Kreisfreie_Stadt, DEU-Aschaffenburg_Landkreis]
   timeline:
+    - from: 1453
+      owner: mainz
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Kurmainz"
+    - from: 1631
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "スウェーデン軍の占領（グスタフ・アドルフのフランケン進出）"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1634
+      owner: mainz
+      overlord: hre
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍が奪回"
+      source: "https://ja.wikipedia.org/wiki/ネルトリンゲンの戦い_(1634年)"
     - from: 1648
       owner: mainz
       overlord: hre
@@ -1527,6 +1719,21 @@
   select:
     pieces: [DEU-Miltenberg]
   timeline:
+    - from: 1453
+      owner: mainz
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Kurmainz"
+    - from: 1631
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "スウェーデン軍の占領（グスタフ・アドルフのフランケン進出）"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1634
+      owner: mainz
+      overlord: hre
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍が奪回"
+      source: "https://ja.wikipedia.org/wiki/ネルトリンゲンの戦い_(1634年)"
     - from: 1648
       owner: mainz
       overlord: hre
@@ -1598,6 +1805,35 @@
     pieces: [DEU-Stuttgart_Stadtkreis, DEU-Ludwigsburg, DEU-Boblingen, DEU-Esslingen, DEU-Goppingen, DEU-Rems_Murr_Kreis, DEU-Reutlingen, DEU-Tubingen_Landkreis, DEU-Calw, DEU-Freudenstadt, DEU-Enzkreis, DEU-Heidenheim, DEU-Heilbronn_Landkreis, DEU-Tuttlingen, DEU-Zollernalbkreis]
   note: "帝国都市エスリンゲン・ロイトリンゲン（1803年ヴュルテンベルク）、ホーエンツォレルン＝ヘヒンゲン侯国（ツォレルンアルプ郡）、前方オーストリア領ホーエンベルク伯領（トゥットリンゲン郡など）、エンツ郡のバーデン領、ハイルブロン郡のドイツ騎士団領なども含む。"
   timeline:
+    - from: 1453
+      owner: wurttemberg
+      overlord: hre
+      note: "1442–82年はシュトゥットガルト系（ここ）とウラハ系（wurttemberg_urach_part）に分かれていた。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Württemberg"
+    - from: 1520
+      owner: habsburg
+      overlord: hre
+      cause: "シュヴァーベン同盟がウルリヒ公を追放し（1519）、国をカール5世に売却"
+      note: "1522年からカール5世の弟フェルディナントが統治（オーストリア領ヴュルテンベルク）。"
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Württemberg"
+    - from: 1534
+      owner: wurttemberg
+      overlord: hre
+      cause: "ラウフェンの戦いでヘッセン方伯フィリップの支援を受けたウルリヒ公が復帰（カーダン条約）"
+      note: "カーダン条約でオーストリアの後封とされた（1599年のプラハ条約で解消）。"
+      source: "https://de.wikipedia.org/wiki/Vertrag_von_Kaaden"
+    - from: 1634
+      owner: habsburg
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦いの後、皇帝軍が占領し、公エーバーハルト3世はシュトラースブルクに亡命"
+      note: "領地の一部は皇帝の側近やイエズス会などに与えられた。"
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Württemberg"
+    - from: 1638
+      owner: wurttemberg
+      overlord: hre
+      cause: "エーバーハルト3世の帰国（プラハの和約への参加を認められる）"
+      source: "https://de.wikipedia.org/wiki/Eberhard_III._(Württemberg)"
     - from: 1648
       owner: wurttemberg
       overlord: hre
@@ -1653,6 +1889,10 @@
   select:
     pieces: [DEU-Heilbronn_Stadtkreis]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Heilbronn"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -1713,6 +1953,11 @@
   select:
     pieces: [DEU-Ostalbkreis]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "エルヴァンゲン修道院（1460年から帝国直属の首席司祭領）。"
+      source: "https://de.wikipedia.org/wiki/Fürstpropstei_Ellwangen"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -1775,6 +2020,10 @@
     pieces: [DEU-Schwabisch_Hall]
   note: "リンプルク・ホーエンローエ領は1806年、クライルスハイム（アンスバッハ→バイエルン）は1810年にヴュルテンベルク領。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Hall"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -1836,6 +2085,10 @@
   select:
     pieces: [DEU-Hohenlohekreis]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Hohenlohe_(Adelsgeschlecht)"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -1892,6 +2145,11 @@
     pieces: [DEU-Main_Tauber_Kreis]
   note: "南部のメルゲントハイム（ドイツ騎士団）は1809年にヴュルテンベルク領。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ヴェルトハイム伯領・ドイツ騎士団領（メルゲントハイム。1525年から騎士団長の居所）など。"
+      source: "https://de.wikipedia.org/wiki/Bad_Mergentheim"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -1948,6 +2206,10 @@
     pieces: [DEU-Ulm_Stadtkreis, DEU-Alb_Donau_Kreis]
   note: "ドナウ川沿いの前方オーストリア領（エーインゲンなど）は1805年にヴュルテンベルク領。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Ulm"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -2013,6 +2275,10 @@
   select:
     pieces: [DEU-Rottweil]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Rottweil"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -2075,6 +2341,10 @@
     pieces: [DEU-Biberach, DEU-Ravensburg]
   note: "1803–1806年は所属が細かく分かれる（修道院領はナッサウ＝オラニエ家・メッテルニヒ家など、帝国都市はバーデン・バイエルンなど）ため、まとめて描かない。ラーフェンスブルクなどは1810年にバイエルンからヴュルテンベルクへ。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Oberschwaben"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -2131,6 +2401,10 @@
     pieces: [DEU-Bodenseekreis]
   note: "東部のテットナング・フリードリヒスハーフェン（ブーフホルン）は1810年からヴュルテンベルク領。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Überlingen"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -2192,6 +2466,16 @@
   select:
     pieces: [DEU-Sigmaringen]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ジグマリンゲン・フェリンゲン伯領（オーストリアの質としてヴェルデンベルク伯が保有）。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Sigmaringen"
+    - from: 1535
+      owner: hohenzollern
+      overlord: hre
+      cause: "ヴェルデンベルク伯の断絶で、カール5世がホーエンツォレルン伯カール1世に与える"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Sigmaringen"
     - from: 1648
       owner: hohenzollern
       overlord: hre
@@ -2258,6 +2542,11 @@
     pieces: [DEU-Breisgau_Hochschwarzwald, DEU-Waldshut, DEU-Konstanz]
   note: "ブライザッハは1648–1697年フランス領（ピースが粗いので描かない）。ネレンブルク（シュトックアッハ）は1805–10年ヴュルテンベルク領。"
   timeline:
+    - from: 1453
+      owner: habsburg
+      overlord: hre
+      note: "前方オーストリア（ブライスガウ、ライン川の森林都市、ヘーガウのネレンブルク方伯領（1465–））。1469–74年はブルゴーニュ公シャルル（突進公）への質入れ。コンスタンツは1548年まで帝国都市。"
+      source: "https://de.wikipedia.org/wiki/Vorderösterreich"
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -2324,6 +2613,21 @@
   select:
     pieces: [DEU-Freiburg_im_Breisgau_Stadtkreis]
   timeline:
+    - from: 1453
+      owner: habsburg
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Freiburg_im_Breisgau"
+    - from: 1638
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "ザクセン＝ヴァイマル公ベルンハルトの軍（フランスの同盟軍。1639年からフランス軍）が占領"
+      source: "https://de.wikipedia.org/wiki/Freiburg_im_Breisgau"
+    - from: 1644
+      owner: habsburg
+      overlord: hre
+      cause: "バイエルン軍（メルシー）が奪回し、フライブルクの戦いでフランス軍を退ける"
+      source: "https://ja.wikipedia.org/wiki/フライブルクの戦い"
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -2394,6 +2698,11 @@
     pieces: [DEU-Lorrach, DEU-Emmendingen]
   note: "エメンディンゲン郡にはオーストリア領ケンツィンゲン・ヴァルトキルヒも含む。"
   timeline:
+    - from: 1453
+      owner: baden
+      overlord: hre
+      note: "ハッハベルク（エメンディンゲン）。"
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Hachberg"
     - from: 1648
       owner: baden
       overlord: hre
@@ -2451,6 +2760,11 @@
     pieces: [DEU-Ortenaukreis]
   note: "オーストリアのオルテナウ代官領は1805年、フュルステンベルク家領は1806年にバーデン領。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "オルテナウ（帝国都市オッフェンブルク・ゲンゲンバッハ、シュトラースブルク司教領など）。帝国代官領オルテナウは1551年からハプスブルク家の質。"
+      source: "https://de.wikipedia.org/wiki/Ortenau"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -2512,6 +2826,10 @@
   select:
     pieces: [DEU-Schwarzwald_Baar_Kreis]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Fürstenberg_(Adelsgeschlecht)"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -2568,7 +2886,19 @@
     pieces: [DEU-Karlsruhe_Stadtkreis, DEU-Karlsruhe_Landkreis, DEU-Pforzheim_Stadtkreis]
   note: "カールスルーエ郡にはシュパイアー司教領（ブルッフザール）、プファルツ領ブレッテン、バーデン＝バーデン領エットリンゲンも含む。"
   timeline:
+    - from: 1453
+      owner: baden
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Baden"
+    - from: 1634
+      owner: baden_baden
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦いの後、皇帝がバーデン＝ドゥルラハの下辺境伯領をバーデン＝バーデンに与える"
+      note: "要確認：期間と範囲（1648年に返還）。"
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Baden-Durlach"
     - from: 1648
+      cause: "ウェストファリア条約でバーデン＝ドゥルラッハ辺境伯が旧領を回復"
       owner: baden
       overlord: hre
       source: "https://ja.wikipedia.org/wiki/バーデン辺境伯領"
@@ -2623,6 +2953,26 @@
   select:
     pieces: [DEU-Baden_Baden_Stadtkreis, DEU-Rastatt]
   timeline:
+    - from: 1453
+      owner: baden
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Baden"
+    - from: 1535
+      owner: baden_baden
+      overlord: hre
+      cause: "バーデン辺境伯領の分割（ベルンハルト3世とエルンスト）"
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Baden-Baden"
+    - from: 1594
+      owner: baden
+      overlord: hre
+      certainty: occupied
+      cause: "バーデン＝ドゥルラハのエルンスト・フリードリヒが占領（オーバーバーデン占領）"
+      source: "https://de.wikipedia.org/wiki/Oberbadische_Okkupation"
+    - from: 1622
+      owner: baden_baden
+      overlord: hre
+      cause: "ヴィンプフェンの戦いの後、皇帝の裁定でバーデン＝バーデン家に返還"
+      source: "https://de.wikipedia.org/wiki/Oberbadische_Okkupation"
     - from: 1648
       owner: baden_baden
       overlord: hre
@@ -2683,6 +3033,28 @@
   select:
     pieces: [DEU-Heidelberg_Stadtkreis, DEU-Mannheim_Stadtkreis, DEU-Rhein_Neckar_Kreis]
   timeline:
+    - from: 1453
+      owner: palatinate
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Kurpfalz"
+    - from: 1622
+      owner: bavaria
+      overlord: hre
+      certainty: occupied
+      cause: "ティリーの率いるカトリック連盟軍がハイデルベルク（9月）・マンハイム（11月）を攻略"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1633
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "スウェーデン軍がハイデルベルクを攻略"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1635
+      owner: bavaria
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍・バイエルン軍が奪回"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
     - from: 1648
       owner: palatinate
       overlord: hre
@@ -2749,7 +3121,31 @@
   select:
     pieces: [DEU-Neckar_Odenwald_Kreis]
   timeline:
+    - from: 1453
+      owner: palatinate
+      overlord: hre
+      note: "1499年までプファルツ＝モースバッハ家の領地。"
+      source: "https://de.wikipedia.org/wiki/Pfalz-Mosbach"
+    - from: 1622
+      owner: bavaria
+      overlord: hre
+      certainty: occupied
+      cause: "ティリーの率いるカトリック連盟軍が右岸プファルツを占領"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1633
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "スウェーデン軍が右岸プファルツを占領"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1635
+      owner: bavaria
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍・バイエルン軍が奪回"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家が下プファルツを回復"
       owner: palatinate
       overlord: hre
       note: "プファルツ領モースバッハと、マインツ領ブーヘン・ヴァルデュルン、帝国騎士領。"
@@ -2814,6 +3210,11 @@
     pieces: [DEU-Kassel_Kreisfreie_Stadt, DEU-Kassel_Landkreis, DEU-Schwalm_Eder_Kreis, DEU-Werra_Meiner_Kreis, DEU-Hersfeld_Rotenburg, DEU-Marburg_Biedenkopf]
   note: "マールブルク＝ビーデンコップ郡のビーデンコップはヘッセン＝ダルムシュタット領、シュヴァルム＝エーダー郡のフリッツラーは1803年までマインツ領。ビーデンコップ周辺（ヒンターラント）は1866年のプロイセンとの講和でヘッセン大公国からプロイセンに割譲されたが、ピースの大部分がマールブルク側なので、1815–1866年もヘッセン選帝侯国の色で描いている。"
   timeline:
+    - from: 1453
+      owner: hesse_kassel
+      overlord: hre
+      note: "ヘッセン方伯領（ニーダーヘッセン）。"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
     - from: 1648
       owner: hesse_kassel
       overlord: hre
@@ -2881,6 +3282,10 @@
     pieces: [DEU-Waldeck_Frankenberg]
   note: "南東部のフランケンベルクはヘッセン＝カッセル領。"
   timeline:
+    - from: 1453
+      owner: waldeck
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Waldeck"
     - from: 1648
       owner: waldeck
       overlord: hre
@@ -2944,6 +3349,21 @@
     pieces: [DEU-Fulda]
   note: "ゲルスフェルト周辺（フルダ郡の東部）は1816年からバイエルン領で、1866年の講和でプロイセンに割譲された。ピースが郡単位のため描いていない。"
   timeline:
+    - from: 1453
+      owner: fulda
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Fürstabtei_Fulda"
+    - from: 1632
+      owner: hesse_kassel
+      overlord: hre
+      certainty: occupied
+      cause: "スウェーデン王グスタフ・アドルフがフルダをヘッセン＝カッセル方伯ヴィルヘルム5世に与える"
+      source: "https://de.wikipedia.org/wiki/Fürstabtei_Fulda"
+    - from: 1634
+      owner: fulda
+      overlord: hre
+      cause: "ネルトリンゲンの戦いの後、修道院長が復帰"
+      source: "https://de.wikipedia.org/wiki/Fürstabtei_Fulda"
     - from: 1648
       owner: fulda
       overlord: hre
@@ -3019,6 +3439,11 @@
   select:
     pieces: [DEU-Main_Kinzig_Kreis]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ハーナウ＝ミュンツェンベルク伯領。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Hanau-Münzenberg"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -3090,6 +3515,10 @@
   select:
     pieces: [DEU-Offenbach_Landkreis, DEU-Offenbach_am_Main_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Isenburg_(Adelsgeschlecht)"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -3151,6 +3580,10 @@
   select:
     pieces: [DEU-Frankfurt_am_Main_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: frankfurt
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Frankfurt"
     - from: 1648
       owner: frankfurt
       overlord: hre
@@ -3212,6 +3645,11 @@
     pieces: [DEU-Wetteraukreis]
   note: "イーゼンブルク＝ビューディンゲンは1806–16年イーゼンブルク侯国の主権下。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "帝国都市フリートベルク、イーゼンブルク＝ビューディンゲン伯領、ゾルムス伯領など。"
+      source: "https://de.wikipedia.org/wiki/Wetterau"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -3273,6 +3711,31 @@
     pieces: [DEU-Gieen_Landkreis, DEU-Vogelsbergkreis]
   note: "ゾルムス家（リヒ・ラウバッハ）、リーデーゼル家（ラウターバッハ）などの領地も含む（1806年陪臣化）。"
   timeline:
+    - from: 1453
+      owner: hesse_kassel
+      overlord: hre
+      note: "ヘッセン方伯領（オーバーヘッセン）。"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
+    - from: 1458
+      owner: hesse_marburg
+      overlord: hre
+      cause: "ルートヴィヒ1世の死後の分割（オーバーヘッセンはハインリヒ3世へ）"
+      source: "https://de.wikipedia.org/wiki/Hessen-Marburg"
+    - from: 1500
+      owner: hesse_kassel
+      overlord: hre
+      cause: "マールブルク系の断絶でヘッセンが再統一"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
+    - from: 1567
+      owner: hesse_marburg
+      overlord: hre
+      cause: "フィリップ寛大伯の遺言による分割（ルートヴィヒ4世のマールブルク系）"
+      source: "https://de.wikipedia.org/wiki/Hessen-Marburg"
+    - from: 1604
+      owner: hesse_darmstadt
+      overlord: hre
+      cause: "マールブルク系の断絶。遺言で南部（ギーセン）はダルムシュタット系へ"
+      source: "https://de.wikipedia.org/wiki/Hessen-Marburg"
     - from: 1648
       owner: hesse_darmstadt
       overlord: hre
@@ -3333,6 +3796,26 @@
   select:
     pieces: [DEU-Darmstadt_Kreisfreie_Stadt, DEU-Darmstadt_Dieburg, DEU-Gro_Gerau]
   timeline:
+    - from: 1453
+      owner: katzenelnbogen
+      overlord: hre
+      note: "上カッツェンエルンボーゲン伯領（ダルムシュタット・リュッセルスハイム）。ディーブルクはマインツ領。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Katzenelnbogen"
+    - from: 1479
+      owner: hesse_marburg
+      overlord: hre
+      cause: "カッツェンエルンボーゲン伯家の断絶で、娘婿のヘッセン＝マールブルク方伯ハインリヒ3世が相続"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Katzenelnbogen"
+    - from: 1500
+      owner: hesse_kassel
+      overlord: hre
+      cause: "マールブルク系の断絶でヘッセンが再統一"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
+    - from: 1567
+      owner: hesse_darmstadt
+      overlord: hre
+      cause: "フィリップ寛大伯の遺言による分割（ゲオルク1世のダルムシュタット系）"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen-Darmstadt"
     - from: 1648
       owner: hesse_darmstadt
       overlord: hre
@@ -3389,7 +3872,23 @@
   select:
     pieces: [DEU-Bergstrae]
   timeline:
+    - from: 1453
+      owner: mainz
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Bergstraße_(Region)"
+    - from: 1461
+      owner: palatinate
+      overlord: hre
+      cause: "マインツ大司教ディーター・フォン・イーゼンブルクがシュタルケンブルク（ベルクシュトラーセ）をプファルツに質入れ"
+      note: "要確認：質入れの年（1461/1463年）。"
+      source: "https://de.wikipedia.org/wiki/Amt_Starkenburg"
+    - from: 1623
+      owner: mainz
+      overlord: hre
+      cause: "プファルツの敗北で、マインツが質を取り戻す"
+      source: "https://de.wikipedia.org/wiki/Amt_Starkenburg"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家が下プファルツを回復"
       owner: palatinate
       overlord: hre
       note: "マインツがプファルツに質入れしていた地域。"
@@ -3456,6 +3955,10 @@
   select:
     pieces: [DEU-Odenwaldkreis]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Erbach"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -3513,6 +4016,11 @@
     pieces: [DEU-Wiesbaden_Kreisfreie_Stadt, DEU-Rheingau_Taunus_Kreis, DEU-Hochtaunuskreis, DEU-Limburg_Weilburg]
   note: "ラインガウ（マインツ領）とリンブルク（トリーア領）は1803年までそれぞれの大司教領、ホーエンタウヌス郡のホンブルクはヘッセン＝ホンブルク方伯領（1806–15年ヘッセン大公国の主権下）、ハダマーはオラニエ＝ナッサウ領。ピースの大部分を占めるナッサウ領で塗る。ヘッセン＝ホンブルクは1866年3月に方伯家が絶えてヘッセン大公国が相続し、同年のうちにプロイセンに割譲された（ピースはナッサウと同じ扱い）。"
   timeline:
+    - from: 1453
+      owner: nassau
+      overlord: hre
+      note: "ナッサウ（ヴァルラム系）諸家の領地。ラインガウはマインツ領、リンブルクはトリーア領。"
+      source: "https://de.wikipedia.org/wiki/Nassau_(Adelsgeschlecht)"
     - from: 1648
       owner: nassau
       overlord: hre
@@ -3574,6 +4082,10 @@
   select:
     pieces: [DEU-Main_Taunus_Kreis]
   timeline:
+    - from: 1453
+      owner: mainz
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Kurmainz"
     - from: 1648
       owner: mainz
       overlord: hre
@@ -3639,6 +4151,11 @@
   select:
     pieces: [DEU-Lahn_Dill_Kreis]
   timeline:
+    - from: 1453
+      owner: nassau_orange
+      overlord: hre
+      note: "ナッサウ＝ディレンブルク伯領（オットー系）。"
+      source: "https://de.wikipedia.org/wiki/Nassau-Dillenburg"
     - from: 1648
       owner: nassau_orange
       overlord: hre
@@ -3700,6 +4217,10 @@
   select:
     pieces: [DEU-Westerwaldkreis]
   timeline:
+    - from: 1453
+      owner: trier
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Kurtrier"
     - from: 1648
       owner: trier
       overlord: hre
@@ -3766,6 +4287,31 @@
   select:
     pieces: [DEU-Rhein_Lahn_Kreis]
   timeline:
+    - from: 1453
+      owner: katzenelnbogen
+      overlord: hre
+      note: "下カッツェンエルンボーゲン伯領（ザンクト・ゴアール、ラインフェルス城）。ディーツはナッサウとの共有。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Katzenelnbogen"
+    - from: 1479
+      owner: hesse_marburg
+      overlord: hre
+      cause: "カッツェンエルンボーゲン伯家の断絶で、ヘッセン＝マールブルク方伯が相続"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Katzenelnbogen"
+    - from: 1500
+      owner: hesse_kassel
+      overlord: hre
+      cause: "マールブルク系の断絶でヘッセンが再統一"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
+    - from: 1567
+      owner: hesse_rheinfels
+      overlord: hre
+      cause: "フィリップ寛大伯の遺言による分割（フィリップ2世のラインフェルス系）"
+      source: "https://de.wikipedia.org/wiki/Hessen-Rheinfels"
+    - from: 1583
+      owner: hesse_kassel
+      overlord: hre
+      cause: "ラインフェルス系の断絶で、大部分がカッセル系へ"
+      source: "https://de.wikipedia.org/wiki/Hessen-Rheinfels"
     - from: 1648
       owner: hesse_kassel
       overlord: hre
@@ -3827,6 +4373,11 @@
   select:
     pieces: [DEU-Altenkirchen_Westerwald]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ザイン伯領。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Sayn"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -3901,6 +4452,11 @@
   select:
     pieces: [DEU-Neuwied]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ヴィート伯領。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Wied"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -3961,6 +4517,11 @@
     pieces: [DEU-Trier_Kreisfreie_Stadt, DEU-Trier_Saarburg, DEU-Bernkastel_Wittlich, DEU-Vulkaneifel, DEU-Cochem_Zell, DEU-Mayen_Koblenz, DEU-Koblenz_Kreisfreie_Stadt]
   note: "ベルンカステル＝ヴィットリヒ郡のトラーベン＝トラーバッハ（後方シュポンハイム伯領）、フルカンアイフェル郡のマンダーシャイト家領なども含む。"
   timeline:
+    - from: 1453
+      owner: trier
+      overlord: hre
+      note: "トリーア大司教領。三十年戦争中はフランス軍（1632–35、1645–）とスペイン軍（1635–45）が駐屯したが、ここでは描かない。"
+      source: "https://de.wikipedia.org/wiki/Kurtrier"
     - from: 1648
       owner: trier
       overlord: hre
@@ -4027,6 +4588,22 @@
     pieces: [DEU-Eifelkreis_Bitburg_Prum]
   note: "ルクセンブルク本体（C 担当）の変遷と年を合わせる必要あり。"
   timeline:
+    - from: 1453
+      owner: burgundy
+      overlord: hre
+      note: "ルクセンブルク公領（1443年からブルゴーニュ公フィリップ善良公が支配）。"
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Luxemburg"
+    - from: 1477
+      owner: habsburg_netherlands
+      overlord: hre
+      cause: "ブルゴーニュ公シャルルの戦死後、娘マリーとマクシミリアンの結婚でハプスブルク家へ"
+      note: "ハプスブルク家のネーデルラント（ルクセンブルク公領）。C 担当の luxembourg と同じ扱い。"
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Luxemburg"
+    - from: 1556
+      owner: spain
+      overlord: hre
+      cause: "カール5世の退位でスペイン王フェリペ2世がネーデルラントを継ぐ"
+      source: "https://de.wikipedia.org/wiki/Spanische_Niederlande"
     - from: 1648
       owner: spain
       overlord: hre
@@ -4103,6 +4680,10 @@
   select:
     pieces: [DEU-Ahrweiler]
   timeline:
+    - from: 1453
+      owner: cologne
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Kurköln"
     - from: 1648
       owner: cologne
       overlord: hre
@@ -4170,7 +4751,33 @@
     pieces: [DEU-Bad_Kreuznach, DEU-Rhein_Hunsruck_Kreis]
   note: "要確認：ジンメルン・クロイツナハ周辺がピース面積の過半か。"
   timeline:
+    - from: 1453
+      owner: palatinate
+      overlord: hre
+      note: "プファルツ＝ジンメルン家の領地と、プファルツ・バーデン共有の前方シュポンハイム伯領（クロイツナハ）。"
+      source: "https://de.wikipedia.org/wiki/Pfalz-Simmern"
+    - from: 1620
+      owner: spain
+      overlord: hre
+      certainty: occupied
+      cause: "スペイン軍（スピノラ）が左岸プファルツを占領"
+      note: "ボヘミア王となったプファルツ選帝侯フリードリヒ5世に対する出兵。"
+      source: "https://ja.wikipedia.org/wiki/プファルツ選帝侯領"
+    - from: 1632
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "グスタフ・アドルフのスウェーデン軍がライン左岸に進出"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1635
+      owner: spain
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍・スペイン軍が奪回"
+      note: "皇帝軍・スペイン軍・ロレーヌ軍などが入り乱れて駐屯した。要確認：占領した軍の内訳"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家（カール・ルートヴィヒ）がライン左岸の領地を回復"
       owner: palatinate
       overlord: hre
       note: "プファルツ＝ジンメルン（1674年プファルツ本家へ）、前方シュポンハイム伯領（プファルツ・バーデン共同）、トリーア領ボッパルト、ヘッセン領ザンクト・ゴアなど。"
@@ -4241,6 +4848,11 @@
     pieces: [DEU-Birkenfeld]
   note: "1817年にオルデンブルク領ビルケンフェルト侯国となる。"
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "後方シュポンハイム伯領（バーデンとプファルツ＝ツヴァイブリュッケンの共有）。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Sponheim"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -4326,6 +4938,11 @@
   select:
     pieces: [DEU-Regionalverband_Saarbrucken, DEU-Neunkirchen]
   timeline:
+    - from: 1453
+      owner: nassau
+      overlord: hre
+      note: "ナッサウ＝ザールブリュッケン伯領。"
+      source: "https://de.wikipedia.org/wiki/Grafschaft_Saarbrücken"
     - from: 1648
       owner: nassau
       overlord: hre
@@ -4418,6 +5035,27 @@
     pieces: [DEU-Saarlouis]
   note: "ロレーヌ公国の変遷は A 担当（west.yaml）の lorraine_duchy と合わせた。"
   timeline:
+    - from: 1453
+      owner: lorraine
+      overlord: hre
+      note: "ロレーヌ公領（ドイツ語圏のヴァルダーファンゲン（ヴォードルヴァンジュ）管区）。"
+      source: "https://de.wikipedia.org/wiki/Herzogtum_Lothringen"
+    - from: 1475
+      owner: burgundy
+      overlord: hre
+      certainty: occupied
+      cause: "シャルル突進公がロレーヌを征服（11月）"
+      source: "ja.wikipedia: ブルゴーニュ戦争"
+    - from: 1476
+      owner: lorraine
+      overlord: hre
+      cause: "ルネ2世がナンシーを奪回（10月）"
+    - from: 1633
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "フランス軍がロレーヌ公国を占領（ナンシー陥落）"
+      source: "https://ja.wikipedia.org/wiki/ロレーヌ公国"
     - from: 1648
       owner: france
       overlord: hre
@@ -4502,6 +5140,11 @@
     pieces: [DEU-Merzig_Wadern, DEU-St_Wendel]
   note: "ザンクト・ヴェンデルは1816年にザクセン＝コーブルクのリヒテンベルク侯国となる。"
   timeline:
+    - from: 1453
+      owner: trier
+      overlord: hre
+      note: "ザンクト・ヴェンデルはトリーア領、メルツィヒはトリーアとロレーヌの共同統治。"
+      source: "https://de.wikipedia.org/wiki/Kurtrier"
     - from: 1648
       owner: trier
       overlord: hre
@@ -4663,6 +5306,10 @@
     pieces: [DEU-Zweibrucken_Kreisfreie_Stadt, DEU-Saarpfalz_Kreis, DEU-Kusel, DEU-Sudwestpfalz]
   note: "ザールプファルツ郡にはフォン・デア・ライエン家領（ブリースカステル）、南西プファルツ郡にはハーナウ＝リヒテンベルク伯領・シュパイアー司教領も含む。1681–97年のスウェーデン王の継承はフランスの占領中のため描かれない。"
   timeline:
+    - from: 1453
+      owner: zweibrucken
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Pfalz-Zweibrücken"
     - from: 1648
       owner: zweibrucken
       overlord: hre
@@ -4746,6 +5393,11 @@
   select:
     pieces: [DEU-Pirmasens_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "ツヴァイブリュッケン＝ビッチュ伯領（1570年からハーナウ＝リヒテンベルク伯領）。"
+      source: "https://de.wikipedia.org/wiki/Hanau-Lichtenberg"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -4819,6 +5471,36 @@
     pieces: [DEU-Kaiserslautern_Kreisfreie_Stadt, DEU-Kaiserslautern_Landkreis, DEU-Neustadt_an_der_Weinstrae_Kreisfreie_Stadt, DEU-Bad_Durkheim, DEU-Donnersbergkreis, DEU-Frankenthal_Pfalz_Kreisfreie_Stadt, DEU-Ludwigshafen_am_Rhein_Kreisfreie_Stadt, DEU-Rhein_Pfalz_Kreis, DEU-Germersheim, DEU-Sudliche_Weinstrae]
   note: "ライニンゲン伯領（バート・デュルクハイム）、ナッサウ＝ヴァイルブルク領キルヒハイムボーランデン、オーストリア領ファルケンシュタイン（ドナースベルク郡）、シュパイアー司教領、ツヴァイブリュッケン領ベルクツァベルンなども含む。"
   timeline:
+    - from: 1453
+      owner: palatinate
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Kurpfalz"
+    - from: 1620
+      owner: spain
+      overlord: hre
+      certainty: occupied
+      cause: "スペイン軍（スピノラ）が左岸プファルツを占領"
+      note: "ボヘミア王となったプファルツ選帝侯フリードリヒ5世に対する出兵。"
+      source: "https://ja.wikipedia.org/wiki/プファルツ選帝侯領"
+    - from: 1632
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "グスタフ・アドルフのスウェーデン軍がライン左岸に進出"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1635
+      owner: spain
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍・スペイン軍が奪回"
+      note: "皇帝軍・スペイン軍・ロレーヌ軍などが入り乱れて駐屯した。要確認：占領した軍の内訳"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1644
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "フライブルクの戦いの後、フランス軍（アンギャン公・テュレンヌ）がライン中流の左岸を占領"
+      source: "https://ja.wikipedia.org/wiki/フライブルクの戦い"
     - from: 1648
       owner: palatinate
       overlord: hre
@@ -4891,7 +5573,32 @@
   select:
     pieces: [DEU-Alzey_Worms]
   timeline:
+    - from: 1453
+      owner: palatinate
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Oberamt_Alzey"
+    - from: 1620
+      owner: spain
+      overlord: hre
+      certainty: occupied
+      cause: "スペイン軍（スピノラ）が左岸プファルツを占領"
+      note: "ボヘミア王となったプファルツ選帝侯フリードリヒ5世に対する出兵。"
+      source: "https://ja.wikipedia.org/wiki/プファルツ選帝侯領"
+    - from: 1632
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "グスタフ・アドルフのスウェーデン軍がライン左岸に進出"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1635
+      owner: spain
+      overlord: hre
+      certainty: occupied
+      cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍・スペイン軍が奪回"
+      note: "皇帝軍・スペイン軍・ロレーヌ軍などが入り乱れて駐屯した。要確認：占領した軍の内訳"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家（カール・ルートヴィヒ）がライン左岸の領地を回復"
       owner: palatinate
       overlord: hre
       source: "https://de.wikipedia.org/wiki/Oberamt_Alzey"
@@ -4962,7 +5669,30 @@
     pieces: [DEU-Mainz_Kreisfreie_Stadt, DEU-Mainz_Bingen]
   note: "マインツ＝ビンゲン郡にはプファルツ領オッペンハイム・インゲルハイムも含む。"
   timeline:
+    - from: 1453
+      owner: mainz
+      overlord: hre
+      note: "マインツ市は1462年まで自由都市。"
+      source: "https://de.wikipedia.org/wiki/Kurmainz"
+    - from: 1631
+      owner: sweden
+      overlord: hre
+      certainty: occupied
+      cause: "グスタフ・アドルフのスウェーデン軍がマインツを占領（1631年12月）し、冬営"
+      source: "https://de.wikipedia.org/wiki/Schwedische_Besetzung_von_Mainz"
+    - from: 1636
+      owner: mainz
+      overlord: hre
+      cause: "皇帝軍が奪回（1636年1月）"
+      source: "https://ja.wikipedia.org/wiki/三十年戦争"
+    - from: 1644
+      owner: france
+      overlord: hre
+      certainty: occupied
+      cause: "フランス軍（アンギャン公）がマインツを占領"
+      source: "https://ja.wikipedia.org/wiki/フライブルクの戦い"
     - from: 1648
+      cause: "ウェストファリア条約の後、フランス軍が撤退してマインツ選帝侯領に戻る"
       owner: mainz
       overlord: hre
       source: "https://ja.wikipedia.org/wiki/マインツ大司教"
@@ -5027,6 +5757,10 @@
   select:
     pieces: [DEU-Worms_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Worms"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -5094,6 +5828,11 @@
   select:
     pieces: [DEU-Speyer_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "帝国都市シュパイアー（1527年から帝国最高法院の所在地）。"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Speyer"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -5161,6 +5900,11 @@
   select:
     pieces: [DEU-Landau_in_der_Pfalz_Kreisfreie_Stadt]
   timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      note: "帝国都市ランダウ（1511年までシュパイアー司教に質入れ）。"
+      source: "https://de.wikipedia.org/wiki/Landau_in_der_Pfalz"
     - from: 1648
       owner: other_hre
       overlord: hre
@@ -5218,6 +5962,21 @@
   select:
     pieces: [DEU-Coburg_Kreisfreie_Stadt, DEU-Coburg_Landkreis]
   timeline:
+    - from: 1453
+      owner: thuringia
+      overlord: hre
+      note: "ヴェッティン家の領地（フランケンのコーブルク管区）。1445年のアルテンブルクの分割でテューリンゲン方伯ヴィルヘルム3世の領地。"
+      source: "https://de.wikipedia.org/wiki/Pflege_Coburg"
+    - from: 1482
+      owner: saxony
+      overlord: hre
+      cause: "テューリンゲン方伯ヴィルヘルム3世の死（領地は甥の選帝侯エルンストと弟アルブレヒトへ）"
+    - from: 1485
+      owner: saxon_duchies
+      overlord: hre
+      cause: "ライプツィヒの分割で、選帝侯の系統のエルネスティン家へ"
+      note: "1547年までエルネスティン家のザクセン選帝侯領。その後はエルネスティン家の諸公国（1572年からザクセン＝コーブルク公国など）。"
+      source: "https://de.wikipedia.org/wiki/Leipziger_Teilung"
     - from: 1648
       owner: saxon_duchies
       overlord: hre
@@ -5338,3 +6097,145 @@
       owner: germany
       cause: "ドイツ統一（東ドイツが西ドイツに加わる）"
       source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
+
+# ---------------------------------------------------------------- 1648年より前だけ親地域と所属が違うピース
+# until の年を過ぎると親地域（parent）の記述が効く（docs/data-format.md「地域の until」）。
+
+- id: bavaria_landshut_part
+  name: "バイエルン＝ランツフート公国の領域（1503年まで）"
+  until: 1647
+  select:
+    pieces: [DEU-Landshut_Kreisfreie_Stadt, DEU-Landshut_Landkreis, DEU-Dingolfing_Landau, DEU-Deggendorf, DEU-Regen, DEU-Rottal_Inn, DEU-Passau_Landkreis, DEU-Ingolstadt_Kreisfreie_Stadt, DEU-Pfaffenhofen_a_d_Ilm, DEU-Aichach_Friedberg, DEU-Altotting, DEU-Muhldorf_a_Inn, DEU-Traunstein, DEU-Rosenheim_Kreisfreie_Stadt, DEU-Rosenheim_Landkreis, DEU-Erding]
+  note: "1392年の分割でできたバイエルン＝ランツフート公国（1447年にインゴルシュタット公国を併合）のおおよその範囲。シュトラウビング周辺（1429年からミュンヘン系）は含めない。要確認：郡単位の近似（エルディング・ケルハイム・デッゲンドルフの帰属）。（1648年より前だけ bavaria_core と所属が違う部分。1648年以降は bavaria_core の記述が効く）"
+  timeline:
+    - from: 1453
+      owner: bavaria_landshut
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Bayern-Landshut"
+    - from: 1504
+      owner: bavaria
+      overlord: hre
+      certainty: uncertain
+      cause: "ランツフート継承戦争（ゲオルク富裕公の遺言をめぐり、ミュンヘン公とプファルツ家が争う）"
+      source: "https://ja.wikipedia.org/wiki/ランツフート継承戦争"
+    - from: 1505
+      owner: bavaria
+      overlord: hre
+      cause: "ケルンの裁定（皇帝マクシミリアン1世）でバイエルン＝ミュンヘン公アルブレヒト4世が相続し、バイエルンが再統一"
+      source: "https://ja.wikipedia.org/wiki/ランツフート継承戦争"
+
+- id: wurttemberg_urach_part
+  name: "ヴュルテンベルク＝ウラハ伯領（1482年まで）"
+  until: 1519
+  select:
+    pieces: [DEU-Reutlingen, DEU-Tubingen_Landkreis, DEU-Zollernalbkreis, DEU-Calw, DEU-Freudenstadt, DEU-Tuttlingen, DEU-Boblingen]
+  note: "1442年のニュルティンゲン条約によるウラハ系の領域（ウラハ・テュービンゲン・バーリンゲン・カルフ・ヘレンベルク・トゥットリンゲンなど）を郡単位で近似した。要確認：ベーブリンゲン郡の帰属。（1648年より前だけ wurttemberg_core と所属が違う部分。1520年以降は wurttemberg_core の記述が効く）"
+  timeline:
+    - from: 1453
+      owner: wurttemberg_urach
+      overlord: hre
+      source: "https://de.wikipedia.org/wiki/Württemberg-Urach"
+    - from: 1482
+      owner: wurttemberg
+      overlord: hre
+      cause: "ミュンジンゲン条約でエーバーハルト髭公のもとに再統一"
+      source: "https://de.wikipedia.org/wiki/Münsinger_Vertrag"
+
+- id: heidenheim_part
+  name: "ハイデンハイム（1504年まで）"
+  until: 1519
+  select:
+    pieces: [DEU-Heidenheim]
+  note: "（1648年より前だけ wurttemberg_core と所属が違う部分。1520年以降は wurttemberg_core の記述が効く）"
+  timeline:
+    - from: 1453
+      owner: bavaria_landshut
+      overlord: hre
+      note: "ヴュルテンベルクが1450年にバイエルン＝ランツフート公に売却したハイデンハイム領。"
+      source: "https://de.wikipedia.org/wiki/Herrschaft_Heidenheim"
+    - from: 1504
+      owner: wurttemberg
+      overlord: hre
+      cause: "ランツフート継承戦争でヴュルテンベルク公ウルリヒが奪い、ケルンの裁定で確保"
+      source: "https://de.wikipedia.org/wiki/Herrschaft_Heidenheim"
+
+- id: nuremberg_land_part
+  name: "ラウフ・ヘルスブルック・アルトドルフ（1504年まで）"
+  until: 1647
+  select:
+    pieces: [DEU-Nurnberger_Land]
+  note: "（1648年より前だけ nuremberg と所属が違う部分。1648年以降は nuremberg の記述が効く）"
+  timeline:
+    - from: 1453
+      owner: bavaria_landshut
+      overlord: hre
+      note: "ペグニッツ川流域のラウフ・ヘルスブルック・アルトドルフ。要確認：1504年以前の領主（バイエルン＝ランツフート公またはプファルツ）。"
+      source: "https://de.wikipedia.org/wiki/Nürnberger_Land"
+    - from: 1504
+      owner: nuremberg
+      overlord: hre
+      cause: "ランツフート継承戦争で帝国都市ニュルンベルクが占領し、ケルンの裁定で確保"
+      source: "https://de.wikipedia.org/wiki/Reichsstadt_Nürnberg"
+
+- id: loerrach_part
+  name: "レッテルン・ザウゼンベルク（1503年まで）"
+  until: 1647
+  select:
+    pieces: [DEU-Lorrach]
+  note: "（1648年より前だけ markgraflerland と所属が違う部分。1648年以降は markgraflerland の記述が効く）"
+  timeline:
+    - from: 1453
+      owner: other_hre
+      overlord: hre
+      label: "ハッハベルク＝ザウゼンベルク"
+      note: "ハッハベルク＝ザウゼンベルク辺境伯領（レッテルン城。バーデン家の分家）。"
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Hachberg-Sausenberg"
+    - from: 1503
+      owner: baden
+      overlord: hre
+      cause: "ハッハベルク＝ザウゼンベルク家の断絶で、バーデン辺境伯クリストフ1世が相続"
+      source: "https://de.wikipedia.org/wiki/Markgrafschaft_Hachberg-Sausenberg"
+
+- id: marburg_part
+  name: "マールブルク（オーバーヘッセン北部）"
+  until: 1647
+  select:
+    pieces: [DEU-Marburg_Biedenkopf]
+  note: "（1648年より前だけ hesse_kassel_core と所属が違う部分。1648年以降は hesse_kassel_core の記述が効く）"
+  timeline:
+    - from: 1453
+      owner: hesse_kassel
+      overlord: hre
+      note: "ヘッセン方伯領（オーバーヘッセン）。"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
+    - from: 1458
+      owner: hesse_marburg
+      overlord: hre
+      cause: "ルートヴィヒ1世の死後の分割（オーバーヘッセンはハインリヒ3世へ）"
+      source: "https://de.wikipedia.org/wiki/Hessen-Marburg"
+    - from: 1500
+      owner: hesse_kassel
+      overlord: hre
+      cause: "マールブルク系の断絶でヘッセンが再統一"
+      source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
+    - from: 1567
+      owner: hesse_marburg
+      overlord: hre
+      cause: "フィリップ寛大伯の遺言による分割（ルートヴィヒ4世のマールブルク系）"
+      source: "https://de.wikipedia.org/wiki/Hessen-Marburg"
+    - from: 1604
+      owner: hesse_kassel
+      overlord: hre
+      cause: "マールブルク系の断絶。北部はカッセル系のモーリッツへ"
+      source: "https://de.wikipedia.org/wiki/Hessen-Marburg"
+    - from: 1623
+      owner: hesse_darmstadt
+      overlord: hre
+      cause: "帝国宮内法院の判決で、マールブルクはダルムシュタット系へ"
+      source: "https://de.wikipedia.org/wiki/Hessenkrieg"
+    - from: 1645
+      owner: hesse_kassel
+      overlord: hre
+      certainty: occupied
+      cause: "ヘッセン戦争でカッセル軍がマールブルクを占領"
+      source: "https://de.wikipedia.org/wiki/Hessenkrieg"

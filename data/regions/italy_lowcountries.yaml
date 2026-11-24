@@ -10,6 +10,10 @@
   select:
     iso: [NLD]
   timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1572, owner: netherlands, cause: 海乞食団がブリーレを占領（1572年4月）。ホラント・ゼーラントの諸都市がオラニエ公ウィレムを総督に迎えて反乱（オランダ独立戦争）, source: 'https://ja.wikipedia.org/wiki/八十年戦争'}
     - from: 1648
       owner: netherlands
       cause: ウェストファリア条約（ミュンスター条約）で独立を承認
@@ -56,6 +60,7 @@
   select:
     pieces: [NLD-Haarlemmermeer]
   timeline:
+    - {from: 1453, owner: water, note: ハールレム湖（1453年ごろは、まだいくつかの湖に分かれていた）}
     - from: 1648
       owner: water
       cause: "干拓前のハールレム湖（ハールレマーメール）"
@@ -79,6 +84,7 @@
   select:
     pieces: [NLD-Zuidplas]
   timeline:
+    - {from: 1453, owner: water, note: 簡略化。湖（ザウトプラス）は16〜17世紀の泥炭採掘でできた}
     - from: 1648
       owner: water
       cause: "泥炭の採掘でできた湖（ザウトプラス）"
@@ -102,6 +108,7 @@
   select:
     pieces: [NLD-Hollands_Kroon]
   timeline:
+    - {from: 1453, owner: water}
     - from: 1648
       owner: water
       cause: "ゾイデル海（干拓前）"
@@ -126,6 +133,7 @@
   select:
     pieces: [NLD-Noordoostpolder]
   timeline:
+    - {from: 1453, owner: water}
     - from: 1648
       owner: water
       cause: "ゾイデル海（1932年の締切大堤防の完成後はアイセル湖）"
@@ -145,6 +153,7 @@
   select:
     pieces: [NLD-Dronten, NLD-Lelystad]
   timeline:
+    - {from: 1453, owner: water}
     - from: 1648
       owner: water
       cause: "ゾイデル海（1932年からアイセル湖）"
@@ -159,6 +168,7 @@
   select:
     pieces: [NLD-Zeewolde, NLD-Almere]
   timeline:
+    - {from: 1453, owner: water}
     - from: 1648
       owner: water
       cause: "ゾイデル海（1932年からアイセル湖）"
@@ -173,6 +183,16 @@
   select:
     pieces: [NLD-Sluis, NLD-Terneuzen, NLD-Hulst]
   timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
+    - {from: 1591, owner: netherlands, cause: マウリッツがフルストを攻略, source: 'https://en.wikipedia.org/wiki/Hulst'}
+    - {from: 1596, owner: spain, overlord: hre, cause: アルブレヒト大公がフルストを奪回, source: 'https://en.wikipedia.org/wiki/Siege_of_Hulst_(1596)'}
+    - {from: 1645, owner: netherlands, cause: フレデリック・ヘンドリックがフルストを攻略（国家連合直轄領に）, source: 'https://en.wikipedia.org/wiki/Siege_of_Hulst_(1645)'}
     - from: 1648
       owner: netherlands
     - from: 1795
@@ -198,6 +218,13 @@
   select:
     adm1: ["NLD/Limburg"]
   timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
     - from: 1648
       owner: spain
       overlord: hre
@@ -262,6 +289,12 @@
   select:
     pieces: [NLD-Maastricht]
   timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, certainty: uncertain, cause: ブラバント公（ブルゴーニュ公）とリエージュ司教の共同統治, source: 'https://ja.wikipedia.org/wiki/マーストリヒト'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, certainty: uncertain, cause: ブルゴーニュ公国の解体でブラバントはハプスブルク家へ（リエージュ司教との共同統治は続く）}
+    - {from: 1556, owner: spain, overlord: hre, certainty: uncertain, cause: カール5世の退位}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約後、全国議会の側に}
+    - {from: 1579, owner: spain, overlord: hre, certainty: uncertain, cause: パルマ公がマーストリヒトを攻略（1579年6月）, source: 'https://en.wikipedia.org/wiki/Siege_of_Maastricht_(1579)'}
+    - {from: 1632, owner: netherlands, certainty: uncertain, cause: フレデリック・ヘンドリックがマーストリヒトを攻略（マース川遠征）, source: 'https://en.wikipedia.org/wiki/Siege_of_Maastricht_(1632)'}
     - from: 1648
       owner: netherlands
       certainty: uncertain
@@ -290,6 +323,9 @@
     pieces: [NLD-Eijsden_Margraten, NLD-Valkenburg_aan_de_Geul, NLD-Meerssen, NLD-Heerlen, NLD-Voerendaal,
       NLD-Beekdaelen, NLD-Brunssum, NLD-Gulpen_Wittem, NLD-Vaals, NLD-Simpelveld, NLD-Beek, NLD-Stein]
   timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: リンブルフ公国・ファルケンブルフなどはブラバント公（ブルゴーニュ公）の領地, source: 'https://en.wikipedia.org/wiki/Lands_of_Overmaas'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: ブルゴーニュ公国の解体でハプスブルク家へ}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位}
     - from: 1648
       owner: spain
       overlord: hre
@@ -335,6 +371,10 @@
   select:
     pieces: [NLD-Sittard_Geleen, NLD-Echt_Susteren]
   timeline:
+    - {from: 1453, owner: julich_berg, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ユーリヒ公国'}
+    - {from: 1521, owner: julich_cleves, overlord: hre, cause: ユーリヒ＝ベルク公国とクレーヴェ公国が同君連合に（ユーリヒ＝クレーヴェ＝ベルク公国）, source: 'https://en.wikipedia.org/wiki/United_Duchies_of_Jülich-Cleves-Berg'}
+    - {from: 1609, owner: palatinate_neuburg, overlord: hre, certainty: uncertain, cause: ユーリヒ＝クレーヴェ公家の断絶（ブランデンブルクとプファルツ＝ノイブルクが遺領を共同で占有。ユーリヒ＝クレーヴェ継承争い）, source: 'https://ja.wikipedia.org/wiki/ユーリヒ＝クレーフェ継承戦争'}
+    - {from: 1614, owner: palatinate_neuburg, overlord: hre, cause: ユーリヒ＝クレーフェ継承戦争。クサンテン条約でユーリヒ・ベルクはプファルツ＝ノイブルク家へ, source: 'https://ja.wikipedia.org/wiki/ユーリヒ＝クレーフェ継承戦争'}
     - from: 1648
       owner: palatinate_neuburg
       overlord: hre
@@ -402,6 +442,13 @@
   select:
     pieces: [NLD-Venlo, NLD-Roerdalen, NLD-Maasgouw]
   timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
     - from: 1648
       owner: spain
       overlord: hre
@@ -449,6 +496,13 @@
   select:
     pieces: [NLD-Horst_aan_de_Maas, NLD-Peel_en_Maas, NLD-Venray, NLD-Bergen_L, NLD-Mook_en_Middelaar]
   timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
     - from: 1648
       owner: spain
       overlord: hre
@@ -518,6 +572,10 @@
   select:
     pieces: [NLD-Gennep]
   timeline:
+    - {from: 1453, owner: julich_cleves, overlord: hre, source: 'https://ja.wikipedia.org/wiki/クレーフェ公国'}
+    - {from: 1609, owner: brandenburg, overlord: hre, certainty: uncertain, cause: ユーリヒ＝クレーヴェ公家の断絶（ブランデンブルクとプファルツ＝ノイブルクが遺領を共同で占有。ユーリヒ＝クレーヴェ継承争い）, source: 'https://ja.wikipedia.org/wiki/ユーリヒ＝クレーフェ継承戦争'}
+    - {from: 1614, owner: brandenburg, overlord: hre, cause: ユーリヒ＝クレーフェ継承戦争。クサンテン条約でクレーヴェ・マルクはブランデンブルク選帝侯へ, source: 'https://ja.wikipedia.org/wiki/ユーリヒ＝クレーフェ継承戦争'}
+    - {from: 1618, owner: prussia, overlord: hre, cause: ブランデンブルク選帝侯がプロイセン公国を相続（ブランデンブルク＝プロイセンの同君連合）}
     - from: 1648
       owner: prussia
       overlord: hre
@@ -599,6 +657,9 @@
   select:
     iso: [BEL]
   timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - from: 1648
       owner: spain
       overlord: hre
@@ -653,6 +714,9 @@
     pieces: [BEL-Liege, BEL-Huy, BEL-Waremme, BEL-Verviers, BEL-Hasselt, BEL-Tongres, BEL-Maaseik,
       BEL-Dinant, BEL-Philippeville, NLD-Leudal]
   timeline:
+    - {from: 1453, owner: liege, overlord: hre, source: 'https://ja.wikipedia.org/wiki/リエージュ司教領'}
+    - {from: 1468, owner: liege, overlord: burgundy, cause: シャルル突進公がリエージュの反乱を鎮圧して町を破壊（1468年）。司教領はブルゴーニュの保護下に, source: 'https://en.wikipedia.org/wiki/Liège_Wars'}
+    - {from: 1477, owner: liege, overlord: hre, cause: ブルゴーニュ公国の解体}
     - from: 1648
       owner: liege
       overlord: hre
@@ -709,6 +773,13 @@
   select:
     pieces: [BEL-Tournai, BEL-Furnes]
   timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
     - from: 1648
       owner: spain
       overlord: hre
@@ -777,6 +848,13 @@
   select:
     pieces: [BEL-Ypres]
   timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
     - from: 1648
       owner: spain
       overlord: hre
@@ -820,6 +898,13 @@
   select:
     pieces: [BEL-Courtrai, BEL-Audenarde, BEL-Ath]
   timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
     - from: 1648
       owner: spain
       overlord: hre
@@ -874,6 +959,9 @@
     iso: [LUX]
     adm2: ["BEL/Luxemburg"]
   timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - from: 1648
       owner: spain
       overlord: hre
@@ -1018,6 +1106,8 @@
   select:
     iso: [CHE]
   timeline:
+    - {from: 1453, owner: switzerland, overlord: hre, source: 'https://ja.wikipedia.org/wiki/旧スイス連邦'}
+    - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
     - from: 1648
       owner: switzerland
       cause: ウェストファリア条約で帝国からの独立を承認
@@ -1032,6 +1122,8 @@
   select:
     adm1: ["CHE/Graubünden"]
   timeline:
+    - {from: 1453, owner: graubunden, overlord: hre, source: 'https://ja.wikipedia.org/wiki/三同盟'}
+    - {from: 1499, owner: graubunden, cause: シュヴァーベン戦争。三同盟はスイス盟約者団と組んで皇帝軍を破り、帝国から事実上独立, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
     - from: 1648
       owner: graubunden
       note: スイス盟約者団の同盟邦。
@@ -1045,6 +1137,8 @@
   select:
     adm1: ["CHE/Valais"]
   timeline:
+    - {from: 1453, owner: valais, overlord: hre, source: 'https://en.wikipedia.org/wiki/Republic_of_the_Seven_Tithes'}
+    - {from: 1499, owner: valais, cause: シュヴァーベン戦争とバーゼルの和約}
     - from: 1648
       owner: valais
       note: スイス盟約者団の同盟邦。下ヴァレー（モンテー・サン＝モーリスなど）は上ヴァレーの従属地。
@@ -1070,6 +1164,8 @@
   select:
     pieces: [CHE-Geneve]
   timeline:
+    - {from: 1453, owner: geneva, overlord: hre, source: 'https://en.wikipedia.org/wiki/Prince-Bishopric_of_Geneva'}
+    - {from: 1536, owner: geneva, cause: 宗教改革で司教を追い、ベルンの軍の支援でサヴォイア公から自立（ジュネーヴ共和国）, source: 'https://ja.wikipedia.org/wiki/ジュネーヴ共和国'}
     - from: 1648
       owner: geneva
       note: スイス盟約者団の同盟邦。
@@ -1089,6 +1185,10 @@
   select:
     adm1: ["CHE/Neuchâtel"]
   timeline:
+    - {from: 1453, owner: neuchatel, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヌーシャテル公国'}
+    - {from: 1499, owner: neuchatel, cause: シュヴァーベン戦争とバーゼルの和約}
+    - {from: 1512, owner: switzerland, certainty: occupied, cause: イタリア戦争で領主オルレアン＝ロングヴィル家がフランス側についたため、盟約者団の12邦が占領（1512–29年）, source: 'https://en.wikipedia.org/wiki/Principality_of_Neuchâtel'}
+    - {from: 1529, owner: neuchatel, cause: 盟約者団がオルレアン＝ロングヴィル家に返還}
     - from: 1648
       owner: neuchatel
       note: スイス盟約者団の同盟邦。1707年からプロイセン王が君主。
@@ -1102,6 +1202,7 @@
   select:
     pieces: [CHE-Porrentruy, CHE-Delemont, CHE-Les_Franches_Montagnes, CHE-Laufen, CHE-Arlesheim]
   timeline:
+    - {from: 1453, owner: basel_bishopric, overlord: hre, source: 'https://ja.wikipedia.org/wiki/バーゼル司教領'}
     - from: 1648
       owner: basel_bishopric
       overlord: hre
@@ -1118,6 +1219,8 @@
   select:
     pieces: [CHE-Moutier, CHE-Courtelary, CHE-La_Neuveville, CHE-Biel]
   timeline:
+    - {from: 1453, owner: basel_bishopric, overlord: hre, source: 'https://ja.wikipedia.org/wiki/バーゼル司教領'}
+    - {from: 1499, owner: basel_bishopric, cause: シュヴァーベン戦争。南部はベルンと同盟し、事実上スイスの側に}
     - from: 1648
       owner: basel_bishopric
       note: 司教領のうちスイス盟約者団と同盟していた南部（エルゲル・ムーティエ＝グランヴァル・ラ・ヌーヴヴィル）。ビールは司教の主権下の自治都市で、スイスの同盟邦。
@@ -1133,6 +1236,7 @@
   select:
     pieces: [CHE-Rheinfelden, CHE-Laufenburg]
   timeline:
+    - {from: 1453, owner: habsburg, overlord: hre, source: 'https://de.wikipedia.org/wiki/Fricktal'}
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1147,6 +1251,7 @@
   select:
     iso: [LIE]
   timeline:
+    - {from: 1453, owner: liechtenstein, overlord: hre, note: ファドゥーツ伯領とシェレンベルク（ブランディス家→1510年ズルツ家→1613年ホーエンエムス家）。リヒテンシュタイン家が買うのは1699・1712年, source: 'https://ja.wikipedia.org/wiki/リヒテンシュタイン'}
     - from: 1648
       owner: liechtenstein
       overlord: hre
@@ -1173,6 +1278,7 @@
   select:
     pieces: [ITA-Torino, ITA-Cuneo, ITA-Asti, ITA-Biella, ITA-Vercelli, ITA-Aosta]
   timeline:
+    - {from: 1453, owner: savoy, source: 'https://ja.wikipedia.org/wiki/サヴォイア公国'}
     - from: 1648
       owner: savoy
     - from: 1798
@@ -1215,6 +1321,8 @@
   select:
     pieces: [ITA-Alessandria]
   timeline:
+    - {from: 1453, owner: montferrat, source: 'https://ja.wikipedia.org/wiki/モンフェッラート侯国'}
+    - {from: 1536, owner: mantua, cause: パレオロゴ家の断絶（1533年）の後、カール5世がモンフェッラートをマントヴァ公フェデリーコ2世に与える, source: 'https://ja.wikipedia.org/wiki/モンフェッラート侯国'}
     - from: 1648
       owner: mantua
       note: >-
@@ -1263,6 +1371,14 @@
     pieces: [ITA-Milano, ITA-Monza_e_della_Brianza, ITA-Lodi, ITA-Como, ITA-Lecco, ITA-Varese, ITA-Cremona,
       ITA-Pavia, ITA-Novara, ITA-Verbano_Cusio_Ossola]
   timeline:
+    - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/ミラノ公国'}
+    - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノを征服し、ルドヴィーコ・スフォルツァを追う（イタリア戦争）, source: 'https://ja.wikipedia.org/wiki/イタリア戦争'}
+    - {from: 1512, owner: milan, cause: スイス傭兵の力でフランス軍が追われ、マッシミリアーノ・スフォルツァがミラノ公に, source: 'https://ja.wikipedia.org/wiki/マッシミリアーノ・スフォルツァ'}
+    - {from: 1515, owner: france, label: ミラノ公国（フランソワ1世）, cause: マリニャーノの戦いでフランソワ1世がスイス軍を破り、ミラノを取る, source: 'https://ja.wikipedia.org/wiki/マリニャーノの戦い'}
+    - {from: 1521, owner: milan, cause: 皇帝・教皇の軍がフランス軍を追い、フランチェスコ2世・スフォルツァがミラノ公に, source: 'https://ja.wikipedia.org/wiki/フランチェスコ2世・スフォルツァ'}
+    - {from: 1526, owner: spain, certainty: occupied, cause: コニャック同盟戦争。皇帝軍がミラノを占領し、フランチェスコ2世は城に追い詰められて降伏, source: 'https://ja.wikipedia.org/wiki/コニャック同盟戦争'}
+    - {from: 1529, owner: milan, cause: カンブレーの和約・ボローニャの和約で、皇帝カール5世がフランチェスコ2世をミラノ公に戻す, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1535, owner: spain, cause: フランチェスコ2世の死でスフォルツァ家が断絶。カール5世が直接支配し、1540年に息子フェリペ（2世）に与えた, source: 'https://ja.wikipedia.org/wiki/ミラノ公国'}
     - from: 1648
       owner: spain
     - from: 1707
@@ -1388,6 +1504,9 @@
   select:
     pieces: [ITA-Mantova]
   timeline:
+    - {from: 1453, owner: mantua, source: 'https://ja.wikipedia.org/wiki/マントヴァ公国'}
+    - {from: 1630, owner: habsburg, certainty: occupied, cause: マントヴァ継承戦争。皇帝軍がマントヴァを攻略・略奪（1630年7月）, source: 'https://ja.wikipedia.org/wiki/マントヴァ継承戦争'}
+    - {from: 1631, owner: mantua, cause: ケラスコ条約で、ヌヴェール公シャルル（カルロ1世）がマントヴァ公として認められる, source: 'https://ja.wikipedia.org/wiki/マントヴァ継承戦争'}
     - from: 1648
       owner: mantua
     - from: 1708
@@ -1428,6 +1547,10 @@
   select:
     pieces: [ITA-Bergamo, ITA-Brescia]
   timeline:
+    - {from: 1453, owner: venice, cause: ベルガモ・ブレシアは1428年からヴェネツィア領, source: 'https://ja.wikipedia.org/wiki/ヴェネツィア共和国'}
+    - {from: 1509, owner: france, certainty: occupied, cause: カンブレー同盟戦争。アニャデッロの戦いでフランス軍が勝ち、ロンバルディアのヴェネツィア領を占領, source: 'https://ja.wikipedia.org/wiki/アニャデッロの戦い'}
+    - {from: 1512, owner: aragon, certainty: occupied, cause: フランス軍の撤退後、ナポリ副王カルドナの率いるスペイン（アラゴン王フェルナンド2世）の軍が占領。ブレシアのフランス守備隊は10月に降伏, note: ベルガモは1512年にいったんヴェネツィアに戻り、スペイン軍の占領は1513年から（pre1648_bergamo）, source: 'https://en.wikipedia.org/wiki/War_of_the_League_of_Cambrai'}
+    - {from: 1516, owner: venice, cause: ノワイヨン条約・ブリュッセル条約で、ヴェネツィアが本土領を回復, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
     - from: 1648
       owner: venice
     - from: 1797
@@ -1461,11 +1584,21 @@
       owner: italy
       cause: "連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）"
 
+- id: pre1648_bergamo
+  name: ベルガモ
+  until: 1515
+  select:
+    pieces: [ITA-Bergamo]
+  timeline:
+    - {from: 1512, owner: venice, cause: フランス軍の撤退で、ベルガモはヴェネツィアに戻る（6月）, source: 'https://en.wikipedia.org/wiki/War_of_the_League_of_Cambrai'}
+    - {from: 1513, owner: aragon, certainty: occupied, cause: ヴェネツィアがフランスと結び直し、カルドナの率いるスペイン軍がベルガモを占領, source: 'https://en.wikipedia.org/wiki/War_of_the_League_of_Cambrai'}
+
 - id: venetia
   name: ヴェネト・フリウリ（ヴェネツィア本土領の東部）
   select:
     pieces: [ITA-Venezia, ITA-Padova, ITA-Treviso, ITA-Vicenza, ITA-Verona, ITA-Belluno, ITA-Udine, ITA-Pordenone]
   timeline:
+    - {from: 1453, owner: venice, source: 'https://ja.wikipedia.org/wiki/ヴェネツィア共和国'}
     - from: 1648
       owner: venice
     - from: 1797
@@ -1562,6 +1695,8 @@
   select:
     pieces: [ITA-Rovigo]
   timeline:
+    - {from: 1453, owner: modena, cause: ポレージネはフェラーラ（エステ家）の領地, source: 'https://it.wikipedia.org/wiki/Polesine'}
+    - {from: 1484, owner: venice, cause: フェラーラ戦争。バニョーロの和約でポレージネはヴェネツィアへ, source: 'https://en.wikipedia.org/wiki/War_of_Ferrara'}
     - from: 1648
       owner: venice
     - from: 1797
@@ -1594,6 +1729,15 @@
   select:
     pieces: [ITA-Sondrio]
   timeline:
+    - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/ヴァルテッリーナ'}
+    - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノ公国を征服}
+    - {from: 1512, owner: graubunden, cause: 三同盟（グラウビュンデン）がヴァルテッリーナ・キアヴェンナ・ボルミオを占領し、従属地とする, source: 'https://ja.wikipedia.org/wiki/ヴァルテッリーナ'}
+    - {from: 1620, owner: spain, certainty: occupied, cause: ヴァルテッリーナの「聖なる虐殺」。カトリック住民がプロテスタントを殺して三同盟から離反し、スペイン軍が占領, source: 'https://en.wikipedia.org/wiki/Valtellina_War'}
+    - {from: 1623, owner: papal_states, certainty: occupied, cause: フランス・スペインの合意で、教皇軍がヴァルテッリーナを預かる}
+    - {from: 1624, owner: france, certainty: occupied, cause: フランス軍（クーヴル侯）が三同盟とともに進軍し、ヴァルテッリーナを占領}
+    - {from: 1626, owner: graubunden, certainty: nominal, cause: モンソン条約。ヴァルテッリーナはカトリックの自治地域となり、三同盟の主権は名目的に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Monzón'}
+    - {from: 1635, owner: france, certainty: occupied, cause: 三十年戦争。ロアン公のフランス軍がヴァルテッリーナを占領, source: 'https://en.wikipedia.org/wiki/Henri,_Duke_of_Rohan'}
+    - {from: 1637, owner: graubunden, cause: 三同盟がフランス軍を追い出し、スペインと結んで従属地を回復（1639年ミラノ協約で確定）, source: 'https://en.wikipedia.org/wiki/Valtellina_War'}
     - from: 1648
       owner: graubunden
       note: グラウビュンデン（三同盟）の従属地（1512年から。1639年のミラノ協約で回復）。
@@ -1635,6 +1779,7 @@
   select:
     pieces: [ITA-Trento]
   timeline:
+    - {from: 1453, owner: trent, overlord: hre, source: 'https://ja.wikipedia.org/wiki/トレント司教領'}
     - from: 1648
       owner: trent
       overlord: hre
@@ -1692,6 +1837,7 @@
   select:
     pieces: [ITA-Bolzano]
   timeline:
+    - {from: 1453, owner: habsburg, overlord: hre, source: 'https://ja.wikipedia.org/wiki/チロル伯領'}
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1745,6 +1891,7 @@
   select:
     pieces: [ITA-Gorizia, ITA-Trieste]
   timeline:
+    - {from: 1453, owner: habsburg, overlord: hre, cause: トリエステは1382年からハプスブルク家の保護下, source: 'https://ja.wikipedia.org/wiki/トリエステ'}
     - from: 1648
       owner: habsburg
       overlord: hre
@@ -1832,6 +1979,18 @@
   select:
     pieces: [ITA-Genova, ITA-Savona, ITA-La_Spezia, ITA-Imperia]
   timeline:
+    - {from: 1453, owner: genoa, source: 'https://ja.wikipedia.org/wiki/ジェノヴァ共和国'}
+    - {from: 1458, owner: france, certainty: indirect, label: ジェノヴァ, cause: 内紛からジェノヴァがフランス王シャルル7世の支配を受け入れる, source: 'https://en.wikipedia.org/wiki/Republic_of_Genoa'}
+    - {from: 1461, owner: genoa, cause: ジェノヴァ人の反乱でフランス軍が追われる}
+    - {from: 1464, owner: milan, certainty: indirect, label: ジェノヴァ, cause: ミラノ公フランチェスコ・スフォルツァがジェノヴァの領主となる}
+    - {from: 1478, owner: genoa, cause: ジェノヴァ人の反乱でミラノの支配が終わる}
+    - {from: 1487, owner: milan, certainty: indirect, label: ジェノヴァ, cause: ジェノヴァが再びミラノ公（ルドヴィーコ・スフォルツァ）の支配を受け入れる}
+    - {from: 1499, owner: france, certainty: indirect, label: ジェノヴァ, cause: ルイ12世のミラノ征服で、ジェノヴァもフランス王の支配下に}
+    - {from: 1512, owner: genoa, cause: フランス軍の撤退。ジャーノ・フレゴーゾがドージェに}
+    - {from: 1515, owner: france, certainty: indirect, label: ジェノヴァ, cause: ドージェのオッタヴィアーノ・フレゴーゾがフランス王の総督となる}
+    - {from: 1522, owner: genoa, cause: 皇帝軍がジェノヴァを攻略・略奪し、アドルノ家がドージェに（皇帝側）}
+    - {from: 1527, owner: france, certainty: indirect, label: ジェノヴァ, cause: アンドレア・ドーリアのフランス艦隊がジェノヴァを占領}
+    - {from: 1528, owner: genoa, cause: アンドレア・ドーリアが皇帝側に寝返り、ジェノヴァを解放して貴族の共和国を再建, source: 'https://ja.wikipedia.org/wiki/アンドレア・ドーリア'}
     - from: 1648
       owner: genoa
       note: オネーリア（インペリア）などはサヴォイア領の飛び地。
@@ -1868,6 +2027,9 @@
   select:
     pieces: [ITA-Modena, ITA-Reggio_nell_Emilia]
   timeline:
+    - {from: 1453, owner: modena, cause: ボルソ・デステが皇帝からモデナ・レッジョ公に（1452年）, source: 'https://ja.wikipedia.org/wiki/モデナ公国'}
+    - {from: 1510, owner: papal_states, cause: 教皇ユリウス2世がモデナを奪う（1511–14年は皇帝の手を経る）, source: 'https://ja.wikipedia.org/wiki/アルフォンソ1世・デステ'}
+    - {from: 1527, owner: modena, cause: ローマ劫掠の混乱の中、アルフォンソ1世・デステがモデナを回復（1530年に皇帝が承認）, source: 'https://ja.wikipedia.org/wiki/アルフォンソ1世・デステ'}
     - from: 1648
       owner: modena
     - from: 1796
@@ -1916,6 +2078,12 @@
   select:
     pieces: [ITA-Parma, ITA-Piacenza]
   timeline:
+    - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/パルマ公国'}
+    - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノ公国を征服}
+    - {from: 1512, owner: papal_states, cause: 教皇ユリウス2世がパルマ・ピアチェンツァを取る}
+    - {from: 1515, owner: france, label: ミラノ公国（フランソワ1世）, cause: マリニャーノの戦いの後、ミラノ公国とともにフランス王へ}
+    - {from: 1521, owner: papal_states, cause: 皇帝・教皇の軍がフランス軍を追い、教皇領に戻る}
+    - {from: 1545, owner: parma, cause: 教皇パウルス3世が息子ピエール・ルイージ・ファルネーゼにパルマ・ピアチェンツァ公国を与える, source: 'https://ja.wikipedia.org/wiki/パルマ公国'}
     - from: 1648
       owner: parma
     - from: 1735
@@ -1961,6 +2129,8 @@
   select:
     pieces: [ITA-Bologna, ITA-Ferrara]
   timeline:
+    - {from: 1453, owner: papal_states, certainty: indirect, label: ボローニャ（ベンティヴォーリオ家）, cause: ボローニャは教皇の主権のもとで、ベンティヴォーリオ家が実権を握る, source: 'https://en.wikipedia.org/wiki/Bentivoglio_family'}
+    - {from: 1506, owner: papal_states, cause: 教皇ユリウス2世がボローニャに入り、ベンティヴォーリオ家を追放, source: 'https://ja.wikipedia.org/wiki/ユリウス2世_(ローマ教皇)'}
     - from: 1648
       owner: papal_states
     - from: 1796
@@ -2014,6 +2184,9 @@
   select:
     pieces: [ITA-Ravenna, ITA-Forli_Cesena, ITA-Rimini]
   timeline:
+    - {from: 1453, owner: papal_states, certainty: indirect, label: ロマーニャ（教皇代理の諸侯）, cause: ロマーニャの諸都市は、教皇代理の称号をもつ諸侯（オルデラッフィ家・マラテスタ家など）が治める, source: 'https://en.wikipedia.org/wiki/Romagna'}
+    - {from: 1500, owner: romagna_borgia, overlord: papal_states, cause: 教皇アレクサンデル6世の子チェーザレ・ボルジアがイーモラ・フォルリ・チェゼーナ・リミニなどを征服, source: 'https://ja.wikipedia.org/wiki/チェーザレ・ボルジア'}
+    - {from: 1503, owner: papal_states, cause: アレクサンデル6世の死でチェーザレの国家が崩れ、教皇の直接支配に, source: 'https://ja.wikipedia.org/wiki/チェーザレ・ボルジア'}
     - from: 1648
       owner: papal_states
     - from: 1797
@@ -2064,6 +2237,7 @@
   select:
     pieces: [ITA-Ancona, ITA-Macerata, ITA-Pesaro_e_Urbino, ITA-Fermo, ITA-Ascoli_Piceno]
   timeline:
+    - {from: 1453, owner: papal_states, source: 'https://ja.wikipedia.org/wiki/教皇領'}
     - from: 1648
       owner: papal_states
     - from: 1798
@@ -2110,6 +2284,7 @@
   select:
     pieces: [ITA-Roma, ITA-Viterbo, ITA-Rieti, ITA-Latina, ITA-Frosinone, ITA-Perugia, ITA-Terni, VAT-Vatican_City]
   timeline:
+    - {from: 1453, owner: papal_states, source: 'https://ja.wikipedia.org/wiki/教皇領'}
     - from: 1648
       owner: papal_states
       note: ラティーナ南部（フォンディ・ガエータ）、フロジノーネ東部（ソーラ・カッシーノ）、リエーティ東部はナポリ王国領。ピースの大半を占めないため描かない。1849年2月〜7月にはマッツィーニらのローマ共和国が成立した（年末には教皇の支配が回復していたため描かない）。
@@ -2192,6 +2367,8 @@
   select:
     pieces: [ITA-Firenze, ITA-Prato, ITA-Pistoia, ITA-Pisa, ITA-Livorno, ITA-Arezzo, ITA-Siena, ITA-Grosseto, ITA-Massa_Carrara]
   timeline:
+    - {from: 1453, owner: florence, source: 'https://ja.wikipedia.org/wiki/フィレンツェ共和国'}
+    - {from: 1569, owner: tuscany, cause: 教皇ピウス5世がコジモ1世にトスカーナ大公の称号を与える, source: 'https://ja.wikipedia.org/wiki/トスカーナ大公国'}
     - from: 1648
       owner: tuscany
       note: >-
@@ -2239,6 +2416,7 @@
   select:
     pieces: [ITA-Lucca]
   timeline:
+    - {from: 1453, owner: lucca, source: 'https://ja.wikipedia.org/wiki/ルッカ共和国'}
     - from: 1648
       owner: lucca
       note: >-
@@ -2314,6 +2492,7 @@
   select:
     iso: [SMR]
   timeline:
+    - {from: 1453, owner: san_marino, source: 'https://ja.wikipedia.org/wiki/サンマリノ'}
     - from: 1648
       owner: san_marino
 
@@ -2324,6 +2503,9 @@
   select:
     adm2: ["ITA/Campania", "ITA/Abruzzo", "ITA/Molise", "ITA/Puglia", "ITA/Basilicata", "ITA/Calabria"]
   timeline:
+    - {from: 1453, owner: naples, source: 'https://ja.wikipedia.org/wiki/ナポリ王国'}
+    - {from: 1501, owner: aragon, cause: グラナダ条約でフランス王ルイ12世とアラゴン王フェルナンド2世がナポリ王国を分割し、ナポリ王フェデリーコが退位, source: 'https://ja.wikipedia.org/wiki/グラナダ条約_(1500年)'}
+    - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - from: 1648
       owner: spain
       note: スペイン王の副王領。ベネヴェント市とポンテコルヴォは教皇領の飛び地（ピースの粒度では表せない）。
@@ -2378,6 +2560,8 @@
   select:
     adm2: ["ITA/Sicilia"]
   timeline:
+    - {from: 1453, owner: aragon, source: 'https://ja.wikipedia.org/wiki/アラゴン連合王国'}
+    - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - from: 1648
       owner: spain
       note: スペイン王の副王領。
@@ -2434,6 +2618,8 @@
   select:
     adm2: ["ITA/Sardegna"]
   timeline:
+    - {from: 1453, owner: aragon, source: 'https://ja.wikipedia.org/wiki/アラゴン連合王国'}
+    - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - from: 1648
       owner: spain
     - from: 1708
@@ -2457,6 +2643,9 @@
   select:
     iso: [MLT]
   timeline:
+    - {from: 1453, owner: aragon, source: 'https://ja.wikipedia.org/wiki/アラゴン連合王国'}
+    - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1530, owner: malta, cause: ロードス島を追われた聖ヨハネ騎士団に、カール5世がマルタ島・ゴゾ島を与える（シチリア王の封土）, source: 'https://ja.wikipedia.org/wiki/マルタ騎士団'}
     - from: 1648
       owner: malta
     - from: 1798
@@ -2474,3 +2663,791 @@
       owner: malta_state
       cause: "イギリスから独立（9月21日。イギリス連邦の王国）"
       source: "https://en.wikipedia.org/wiki/Malta_Independence_Act_1964"
+
+# ================================================================ 1453–1647 の例外（担当 C、1648 年より前）
+# until: 1647（1648 年以降は外側の地域の記述が効く）。
+
+- id: c15_amsterdam
+  name: アムステルダム（1578年まで国王側）
+  until: 1647
+  select:
+    pieces: [NLD-Amsterdam]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1572, owner: spain, overlord: hre, cause: アムステルダムはカトリックの市政府のもとで国王側にとどまる}
+    - {from: 1578, owner: netherlands, cause: 「アムステルダムの変革」でカルヴァン派が市政を握り、反乱側に加わる, source: 'https://en.wikipedia.org/wiki/Alteratie'}
+
+- id: c15_haarlem
+  name: ハールレム（1573–1577年 スペイン軍の占領）
+  until: 1647
+  select:
+    pieces: [NLD-Haarlem]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1572, owner: netherlands, cause: 海乞食団がブリーレを占領（1572年4月）。ホラント・ゼーラントの諸都市がオラニエ公ウィレムを総督に迎えて反乱（オランダ独立戦争）, source: 'https://ja.wikipedia.org/wiki/八十年戦争'}
+    - {from: 1573, owner: spain, overlord: hre, certainty: occupied, cause: ハールレム包囲戦。7か月の包囲の末、スペイン軍に降伏（1573年7月）, source: 'https://ja.wikipedia.org/wiki/ハールレム包囲戦'}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約後、スペイン軍が撤退}
+
+- id: c15_middelburg
+  name: ミデルブルフ（1574年まで国王側）
+  until: 1647
+  select:
+    pieces: [NLD-Middelburg]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1572, owner: spain, overlord: hre, cause: ミデルブルフはスペイン軍の守備のもとで国王側にとどまる}
+    - {from: 1574, owner: netherlands, cause: 包囲の末、ミデルブルフが反乱側に降伏（1574年2月）, source: 'https://en.wikipedia.org/wiki/Siege_of_Middelburg'}
+
+- id: c15_purmer_beemster
+  name: ベームステル・プルメル（17世紀前半まで湖）
+  until: 1647
+  select:
+    pieces: [NLD-Purmerend]
+  timeline:
+    - {from: 1453, owner: water, note: ベームステル湖・プルメル湖（ピースの大部分）}
+    - {from: 1612, owner: netherlands, cause: ベームステル湖の干拓が完成（1612年。プルメル湖は1622年）, source: 'https://en.wikipedia.org/wiki/Beemster'}
+
+- id: c15_utrecht
+  name: ユトレヒト司教領（ネーデルシュティフト）
+  until: 1647
+  select:
+    adm1: [NLD/Utrecht]
+  timeline:
+    - {from: 1453, owner: utrecht_bishopric, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
+    - {from: 1456, owner: utrecht_bishopric, overlord: burgundy, cause: ブルゴーニュ公フィリップの庶子ダヴィドが司教に。司教領はブルゴーニュ家の影響下に, source: 'https://en.wikipedia.org/wiki/David_of_Burgundy'}
+    - {from: 1477, owner: utrecht_bishopric, overlord: hre, cause: ブルゴーニュ公国の解体}
+    - {from: 1528, owner: habsburg_netherlands, overlord: hre, cause: 司教ハインリヒ・フォン・デア・プファルツが世俗の支配権をカール5世に譲る（1528年）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟の中心, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+
+- id: c15_overijssel
+  name: オーファーアイセル（オーファーシュティフト）
+  until: 1647
+  select:
+    adm1: [NLD/Overijssel]
+  timeline:
+    - {from: 1453, owner: utrecht_bishopric, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
+    - {from: 1456, owner: utrecht_bishopric, overlord: burgundy, cause: ブルゴーニュ公フィリップの庶子ダヴィドが司教に。司教領はブルゴーニュ家の影響下に, source: 'https://en.wikipedia.org/wiki/David_of_Burgundy'}
+    - {from: 1477, owner: utrecht_bishopric, overlord: hre, cause: ブルゴーニュ公国の解体}
+    - {from: 1522, owner: guelders, overlord: hre, certainty: uncertain, cause: ユトレヒト司教領の内紛に乗じて、ヘルレ公カレルがズヴォレなどオーファーシュティフトの大部分を押さえる, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1528, owner: habsburg_netherlands, overlord: hre, cause: 司教ハインリヒ・フォン・デア・プファルツが世俗の支配権をカール5世に譲る（1528年）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+
+- id: c15_deventer
+  name: デーフェンテル
+  until: 1647
+  select:
+    pieces: [NLD-Deventer]
+  timeline:
+    - {from: 1587, owner: spain, overlord: hre, cause: イングランド軍の指揮官スタンリーがデーフェンテルをスペインに引き渡す（1月）, source: 'https://en.wikipedia.org/wiki/Deventer'}
+    - {from: 1591, owner: netherlands, cause: マウリッツがデーフェンテルを奪回（6月）, source: 'https://en.wikipedia.org/wiki/Siege_of_Deventer_(1591)'}
+
+- id: c15_twente
+  name: トゥウェンテ（オルデンザール）
+  until: 1647
+  select:
+    pieces: [NLD-Almelo, NLD-Borne, NLD-Dinkelland, NLD-Enschede, NLD-Haaksbergen, NLD-Hengelo_O, NLD-Hof_van_Twente, NLD-Losser, NLD-Oldenzaal, NLD-Tubbergen, NLD-Twenterand, NLD-Wierden]
+  timeline:
+    - {from: 1453, owner: utrecht_bishopric, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
+    - {from: 1456, owner: utrecht_bishopric, overlord: burgundy, cause: ブルゴーニュ公フィリップの庶子ダヴィドが司教に。司教領はブルゴーニュ家の影響下に, source: 'https://en.wikipedia.org/wiki/David_of_Burgundy'}
+    - {from: 1477, owner: utrecht_bishopric, overlord: hre, cause: ブルゴーニュ公国の解体}
+    - {from: 1528, owner: habsburg_netherlands, overlord: hre, cause: 司教ハインリヒ・フォン・デア・プファルツが世俗の支配権をカール5世に譲る（1528年）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+    - {from: 1580, owner: spain, overlord: hre, certainty: uncertain, cause: 総督レンネンベルクがスペイン側に寝返り、オルデンザールなどにスペイン軍が入る, source: 'https://en.wikipedia.org/wiki/George_van_Lalaing,_Count_of_Rennenberg'}
+    - {from: 1597, owner: netherlands, cause: マウリッツの遠征（1597年）でオルデンザール・エンスヘデなどを攻略, source: 'https://ja.wikipedia.org/wiki/マウリッツ_(オラニエ公)'}
+    - {from: 1605, owner: spain, overlord: hre, certainty: uncertain, cause: スピノラの遠征でオルデンザールをスペインが奪回, source: 'https://ja.wikipedia.org/wiki/アンブロジオ・スピノラ'}
+    - {from: 1626, owner: netherlands, cause: エルンスト・カジミールがオルデンザールを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Oldenzaal_(1626)'}
+
+- id: c15_drenthe
+  name: ドレンテ
+  until: 1647
+  select:
+    adm1: [NLD/Drenthe]
+  timeline:
+    - {from: 1453, owner: utrecht_bishopric, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
+    - {from: 1456, owner: utrecht_bishopric, overlord: burgundy, cause: ブルゴーニュ公フィリップの庶子ダヴィドが司教に。司教領はブルゴーニュ家の影響下に, source: 'https://en.wikipedia.org/wiki/David_of_Burgundy'}
+    - {from: 1477, owner: utrecht_bishopric, overlord: hre, cause: ブルゴーニュ公国の解体}
+    - {from: 1522, owner: guelders, overlord: hre, cause: ヘルレ公カレルがドレンテを占領, source: 'https://en.wikipedia.org/wiki/Drenthe'}
+    - {from: 1536, owner: habsburg_netherlands, overlord: hre, cause: グラーフェ条約でヘルレ公がフローニンゲン・ドレンテをカール5世に譲る, source: 'https://en.wikipedia.org/wiki/Treaty_of_Grave'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約後、全国議会の側に立つ}
+    - {from: 1580, owner: spain, overlord: hre, certainty: uncertain, cause: 総督レンネンベルクがスペイン側に寝返る。ドレンテは両軍の戦場に}
+    - {from: 1592, owner: netherlands, cause: マウリッツがクーフォルデンを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Coevorden_(1592)'}
+
+- id: c15_groningen
+  name: フローニンゲン（市とオメランデン）
+  until: 1647
+  select:
+    adm1: [NLD/Groningen]
+  timeline:
+    - {from: 1453, owner: groningen, overlord: hre, source: 'https://en.wikipedia.org/wiki/Groningen_(province)'}
+    - {from: 1514, owner: guelders, overlord: hre, cause: フローニンゲン市がヘルレ公カレルを領主に迎える, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1536, owner: habsburg_netherlands, overlord: hre, cause: グラーフェ条約でヘルレ公がフローニンゲン・ドレンテをカール5世に譲る, source: 'https://en.wikipedia.org/wiki/Treaty_of_Grave'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約後、全国議会の側に立つ}
+    - {from: 1580, owner: spain, overlord: hre, cause: 総督レンネンベルクがスペイン側に寝返り、フローニンゲン市は国王側に, source: 'https://en.wikipedia.org/wiki/George_van_Lalaing,_Count_of_Rennenberg'}
+    - {from: 1594, owner: netherlands, cause: マウリッツがフローニンゲンを攻略。連邦の7番目の州に, source: 'https://en.wikipedia.org/wiki/Siege_of_Groningen_(1594)'}
+
+- id: c15_friesland
+  name: フリースラント
+  until: 1647
+  select:
+    adm1: [NLD/Fryslân]
+  timeline:
+    - {from: 1453, owner: frisia, overlord: hre, source: 'https://en.wikipedia.org/wiki/Frisian_freedom'}
+    - {from: 1498, owner: saxony, overlord: hre, label: フリースラント（ザクセン公の総督領）, cause: マクシミリアン1世がザクセン公アルブレヒトをフリースラントの世襲総督に任命, source: 'https://en.wikipedia.org/wiki/Albert_III,_Duke_of_Saxony'}
+    - {from: 1515, owner: habsburg_netherlands, overlord: hre, certainty: uncertain, cause: ザクセン公ゲオルクがフリースラントをカール（5世）に売る。ヘルレ公カレルの側と争う, source: 'https://en.wikipedia.org/wiki/Lordship_of_Frisia'}
+    - {from: 1524, owner: habsburg_netherlands, overlord: hre, cause: ヘルレ軍を追い出し、カール5世の支配が固まる, source: 'https://en.wikipedia.org/wiki/Lordship_of_Frisia'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる}
+
+- id: c15_guelders
+  name: ヘルレ公国（アルンヘム・ズトフェン地区など）
+  until: 1647
+  select:
+    adm1: [NLD/Gelderland]
+    exclude: [NLD-Nijmegen, NLD-Berg_en_Dal, NLD-Heumen, NLD-Wijchen, NLD-Beuningen, NLD-Druten, NLD-West_Maas_en_Waal, NLD-Overbetuwe, NLD-Lingewaard]
+  timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+
+- id: c15_betuwe
+  name: オーフェルベトゥウェ・リンゲワールト（ヘルレ公国）
+  until: 1647
+  select:
+    pieces: [NLD-Overbetuwe, NLD-Lingewaard]
+  timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+
+- id: c15_nijmegen
+  name: ナイメーヘン地区（1585–1591年 スペイン領）
+  until: 1647
+  select:
+    pieces: [NLD-Nijmegen, NLD-Berg_en_Dal, NLD-Heumen, NLD-Wijchen, NLD-Beuningen, NLD-Druten, NLD-West_Maas_en_Waal]
+  timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+    - {from: 1585, owner: spain, overlord: hre, cause: ナイメーヘン市が国王側に戻る（パルマ公の攻勢）, source: 'https://en.wikipedia.org/wiki/Nijmegen'}
+    - {from: 1591, owner: netherlands, cause: マウリッツがナイメーヘンを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Nijmegen_(1591)'}
+
+- id: c15_achterhoek
+  name: ズトフェン地区（アハテルフーク）
+  until: 1647
+  select:
+    pieces: [NLD-Zutphen, NLD-Lochem, NLD-Berkelland, NLD-Bronckhorst, NLD-Doetinchem, NLD-Montferland, NLD-Oude_IJsselstreek, NLD-Aalten, NLD-Winterswijk]
+  timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+    - {from: 1583, owner: spain, overlord: hre, certainty: uncertain, cause: スペイン軍がズトフェンを奪う（1583年）, source: 'https://en.wikipedia.org/wiki/Siege_of_Zutphen_(1591)'}
+    - {from: 1591, owner: netherlands, cause: マウリッツがズトフェン・デーフェンテルを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Zutphen_(1591)'}
+
+- id: c15_groenlo
+  name: フルンロ（フロル）
+  until: 1647
+  select:
+    pieces: [NLD-Oost_Gelre]
+  timeline:
+    - {from: 1453, owner: guelders, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1473, owner: burgundy, overlord: hre, cause: シャルル突進公がヘルレ公国を手に入れる（1473年）, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1477, owner: guelders, overlord: hre, cause: ブルゴーニュ公国の解体で、ヘルレが自立を回復, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1481, owner: habsburg_netherlands, overlord: hre, cause: マクシミリアンがヘルレを征服, source: 'https://ja.wikipedia.org/wiki/ヘルレ公国'}
+    - {from: 1492, owner: guelders, overlord: hre, cause: カレル・ファン・エフモントが帰国し、フランスの支援でハプスブルク家に対抗, source: 'https://en.wikipedia.org/wiki/Charles_II,_Duke_of_Guelders'}
+    - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+    - {from: 1580, owner: spain, overlord: hre, cause: レンネンベルクの寝返りで、フルンロは国王側に}
+    - {from: 1597, owner: netherlands, cause: マウリッツがフルンロを攻略}
+    - {from: 1606, owner: spain, overlord: hre, cause: スピノラがフルンロを奪回}
+    - {from: 1627, owner: netherlands, cause: フレデリック・ヘンドリックがフルンロを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Groenlo_(1627)'}
+
+- id: c15_brabant_north
+  name: ブラバント北部（ベルヘン・オプ・ゾームなど）
+  until: 1647
+  select:
+    adm1: [NLD/Noord-Brabant]
+    exclude: [NLD-Altena]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟で北部7州が結束し、1581年に国王フェリペ2世の統治権を否認（独立宣言）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+
+- id: c15_meierij
+  name: '''s-ヘルトーヘンボス地区（メイエライ）'
+  until: 1647
+  select:
+    pieces: [NLD-s_Hertogenbosch, NLD-Vught, NLD-Sint_Michielsgestel, NLD-Boxtel, NLD-Oisterwijk, NLD-Tilburg, NLD-Goirle, NLD-Hilvarenbeek, NLD-Oirschot, NLD-Best, NLD-Eindhoven, NLD-Veldhoven, NLD-Waalre, NLD-Valkenswaard, NLD-Bergeijk, NLD-Eersel, NLD-Bladel, NLD-Reusel_De_Mierden, NLD-Heeze_Leende, NLD-Cranendonck, NLD-Someren, NLD-Asten, NLD-Deurne, NLD-Helmond, NLD-Geldrop_Mierlo, NLD-Nuenen_Gerwen_en_Nederwetten, NLD-Son_en_Breugel, NLD-Laarbeek, NLD-Gemert_Bakel, NLD-Boekel, NLD-Meierijstad, NLD-Bernheze, NLD-Oss, NLD-Maashorst, NLD-Waalwijk, NLD-Loon_op_Zand]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟で北部7州が結束し、1581年に国王フェリペ2世の統治権を否認（独立宣言）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+    - {from: 1579, owner: spain, overlord: hre, cause: '''s-ヘルトーヘンボスが国王側に戻る', source: 'https://en.wikipedia.org/wiki/%27s-Hertogenbosch'}
+    - {from: 1629, owner: netherlands, cause: フレデリック・ヘンドリックが's-ヘルトーヘンボスを攻略（国家連合直轄領に）, source: 'https://en.wikipedia.org/wiki/Siege_of_%27s-Hertogenbosch'}
+
+- id: c15_breda
+  name: ブレダ男爵領
+  until: 1647
+  select:
+    pieces: [NLD-Breda, NLD-Alphen_Chaam, NLD-Baarle_Nassau, NLD-Gilze_en_Rijen, NLD-Oosterhout, NLD-Dongen, NLD-Etten_Leur, NLD-Zundert, NLD-Rucphen, NLD-Drimmelen]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟で北部7州が結束し、1581年に国王フェリペ2世の統治権を否認（独立宣言）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+    - {from: 1581, owner: spain, overlord: hre, cause: スペイン軍がブレダを奪う, source: 'https://en.wikipedia.org/wiki/Breda'}
+    - {from: 1590, owner: netherlands, cause: 泥炭船に兵を隠す計略で、マウリッツがブレダを奪回, source: 'https://en.wikipedia.org/wiki/Capture_of_Breda_(1590)'}
+    - {from: 1625, owner: spain, overlord: hre, cause: スピノラが包囲の末ブレダを攻略（ベラスケス『ブレダの開城』）, source: 'https://ja.wikipedia.org/wiki/ブレダの開城'}
+    - {from: 1637, owner: netherlands, cause: フレデリック・ヘンドリックがブレダを奪回, source: 'https://en.wikipedia.org/wiki/Siege_of_Breda_(1637)'}
+
+- id: c15_grave
+  name: フラーフェ・カイク地方
+  until: 1647
+  select:
+    pieces: [NLD-Land_van_Cuijk]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟で北部7州が結束し、1581年に国王フェリペ2世の統治権を否認（独立宣言）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
+    - {from: 1586, owner: spain, overlord: hre, cause: パルマ公がフラーフェを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Grave_(1586)'}
+    - {from: 1602, owner: netherlands, cause: マウリッツがフラーフェを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Grave_(1602)'}
+
+- id: c15_sluis
+  name: スライス（ゼーラント・フランデレン西部）
+  until: 1647
+  select:
+    pieces: [NLD-Sluis]
+  timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
+    - {from: 1604, owner: netherlands, cause: マウリッツがスライスを攻略（オーステンデ陥落と同じ年）, source: 'https://en.wikipedia.org/wiki/Siege_of_Sluis_(1604)'}
+
+- id: c15_terneuzen
+  name: テルネーゼン・アクセル
+  until: 1647
+  select:
+    pieces: [NLD-Terneuzen]
+  timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: netherlands, cause: フランドルの大部分がスペインに戻った後も、テルネーゼンなどは反乱側が確保（アクセルは1586年に攻略。サス・ファン・ヘントは1644年まで国王側）, source: 'https://en.wikipedia.org/wiki/Terneuzen'}
+
+- id: c15_flanders
+  name: フランドル伯領
+  until: 1647
+  select:
+    pieces: [BEL-Bruges, BEL-Dixmude, BEL-Ostende, BEL-Roulers, BEL-Tielt, BEL-Gand, BEL-Eeklo, BEL-Alost, BEL-Termonde, BEL-Saint_Nicolas, BEL-Mouscron]
+  timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
+
+- id: c15_ostend
+  name: オーステンデ（1604年まで反乱側）
+  until: 1647
+  select:
+    pieces: [BEL-Ostende]
+  timeline:
+    - {from: 1453, owner: burgundy, cause: ブルゴーニュ公の支配下。フランドル伯領はフランス王の封土, note: フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。宗主権は1529年のカンブレーの和約で放棄）, source: 'https://ja.wikipedia.org/wiki/フランドル伯'}
+    - {from: 1477, owner: habsburg_netherlands, cause: シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1529, owner: habsburg_netherlands, cause: カンブレーの和約（貴婦人の和約）で、フランス王がフランドル・アルトワの宗主権を放棄, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）で、ネーデルラント17州がブルグント・クライスとして帝国に属する, source: 'https://en.wikipedia.org/wiki/Burgundian_Treaty'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1584, owner: netherlands, cause: フランドルの大部分がスペインに戻った後も、海港オーステンデは反乱側が確保, source: 'https://ja.wikipedia.org/wiki/オーステンデ包囲戦'}
+    - {from: 1604, owner: spain, overlord: hre, cause: 3年に及ぶ包囲の末、スピノラがオーステンデを攻略, source: 'https://ja.wikipedia.org/wiki/オーステンデ包囲戦'}
+
+- id: c15_brabant_south
+  name: ブラバント公国（南部）・メヘレン
+  until: 1647
+  select:
+    pieces: [BEL-Anvers, BEL-Bruxelles_Capitale, BEL-Hal_Vilvorde, BEL-Louvain, BEL-Nivelles, BEL-Malines, BEL-Turnhout]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+    - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ブリュッセル・アントウェルペンは反乱側の中心に, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
+    - {from: 1585, owner: spain, overlord: hre, cause: パルマ公がブリュッセル（3月）・アントウェルペン（8月）を降伏させる, source: 'https://ja.wikipedia.org/wiki/アントウェルペン包囲戦_(1584年-1585年)'}
+
+- id: c15_tournai
+  name: トゥルネー
+  until: 1647
+  select:
+    pieces: [BEL-Tournai]
+  timeline:
+    - {from: 1453, owner: france, label: トゥルネー（フランス王領の飛び地）, source: 'https://en.wikipedia.org/wiki/Tournai'}
+    - {from: 1513, owner: britain, certainty: occupied, cause: イングランド王ヘンリ8世がトゥルネーを攻略・占領, source: 'https://en.wikipedia.org/wiki/Siege_of_Tournai_(1513)'}
+    - {from: 1519, owner: france, label: トゥルネー（フランス王領の飛び地）, cause: ロンドン条約（1518年）でフランスに返還}
+    - {from: 1521, owner: habsburg_netherlands, cause: カール5世の軍がトゥルネーを攻略（1526年マドリード条約で確定）, source: 'https://en.wikipedia.org/wiki/Siege_of_Tournai_(1521)'}
+    - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）でブルグント・クライスに}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位}
+
+- id: c15_ath
+  name: アト（エノー伯領）
+  until: 1647
+  select:
+    pieces: [BEL-Ath]
+  timeline:
+    - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
+    - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
+    - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+
+- id: c15_thurgau
+  name: トゥールガウ・ザルガンス
+  until: 1647
+  select:
+    adm1: [CHE/Thurgau]
+    pieces: [CHE-Sarganserland]
+  timeline:
+    - {from: 1453, owner: habsburg, overlord: hre, source: 'https://ja.wikipedia.org/wiki/トゥールガウ州'}
+    - {from: 1460, owner: switzerland, overlord: hre, cause: 盟約者団がハプスブルク家からトゥールガウを奪い、共同支配地とする, source: 'https://ja.wikipedia.org/wiki/トゥールガウ州'}
+    - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
+
+- id: c15_winterthur
+  name: ヴィンタートゥール
+  until: 1647
+  select:
+    pieces: [CHE-Winterthur]
+  timeline:
+    - {from: 1453, owner: habsburg, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヴィンタートゥール'}
+    - {from: 1467, owner: switzerland, overlord: hre, cause: ハプスブルク家のジークムントがヴィンタートゥールをチューリヒに質入れ, source: 'https://ja.wikipedia.org/wiki/ヴィンタートゥール'}
+    - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
+
+- id: c15_fribourg
+  name: フリブール（フライブルク）
+  until: 1647
+  select:
+    pieces: [CHE-Sense, CHE-La_Sarine, CHE-La_Glane, CHE-La_Veveyse]
+  timeline:
+    - {from: 1453, owner: savoy, certainty: indirect, label: フリブール, cause: フリブールはサヴォイア公の宗主権のもと（1452–77年）, source: 'https://ja.wikipedia.org/wiki/フリブール州'}
+    - {from: 1477, owner: switzerland, overlord: hre, certainty: indirect, label: フリブール（同盟邦）, cause: ブルゴーニュ戦争の後、サヴォイアから離れて帝国自由都市に}
+    - {from: 1481, owner: switzerland, overlord: hre, cause: シュタンスの協定で盟約者団の正式の邦に, source: 'https://en.wikipedia.org/wiki/Stanser_Verkommnis'}
+    - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
+
+- id: c15_solothurn
+  name: ゾロトゥルン
+  until: 1647
+  select:
+    adm1: [CHE/Solothurn]
+  timeline:
+    - {from: 1453, owner: switzerland, overlord: hre, certainty: indirect, label: ゾロトゥルン（同盟邦）, source: 'https://ja.wikipedia.org/wiki/ゾロトゥルン州'}
+    - {from: 1481, owner: switzerland, overlord: hre, cause: シュタンスの協定で盟約者団の正式の邦に, source: 'https://en.wikipedia.org/wiki/Stanser_Verkommnis'}
+    - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
+
+- id: c15_basel
+  name: バーゼル（市とその領地）
+  until: 1647
+  select:
+    adm1: [CHE/Basel-Stadt]
+    pieces: [CHE-Liestal, CHE-Sissach, CHE-Waldenburg]
+  timeline:
+    - {from: 1453, owner: other_hre, overlord: hre, label: バーゼル（帝国自由都市）, source: 'https://ja.wikipedia.org/wiki/バーゼル'}
+    - {from: 1501, owner: switzerland, cause: バーゼルが盟約者団に加盟, source: 'https://ja.wikipedia.org/wiki/バーゼル=シュタット準州'}
+
+- id: c15_schaffhausen
+  name: シャフハウゼン
+  until: 1647
+  select:
+    adm1: [CHE/Schaffhausen]
+  timeline:
+    - {from: 1453, owner: other_hre, overlord: hre, label: シャフハウゼン（帝国自由都市）, source: 'https://ja.wikipedia.org/wiki/シャフハウゼン州'}
+    - {from: 1454, owner: switzerland, overlord: hre, certainty: indirect, label: シャフハウゼン（同盟邦）, cause: シャフハウゼンが盟約者団の6邦と同盟}
+    - {from: 1499, owner: switzerland, certainty: indirect, label: シャフハウゼン（同盟邦）, cause: シュヴァーベン戦争とバーゼルの和約}
+    - {from: 1501, owner: switzerland, cause: シャフハウゼンが盟約者団に加盟}
+
+- id: c15_appenzell
+  name: アッペンツェル
+  until: 1647
+  select:
+    adm1: [CHE/Appenzell Ausserrhoden, CHE/Appenzell Innerrhoden]
+  timeline:
+    - {from: 1453, owner: switzerland, overlord: hre, certainty: indirect, label: アッペンツェル（同盟邦）, source: 'https://ja.wikipedia.org/wiki/アッペンツェル'}
+    - {from: 1499, owner: switzerland, certainty: indirect, label: アッペンツェル（同盟邦）, cause: シュヴァーベン戦争とバーゼルの和約}
+    - {from: 1513, owner: switzerland, cause: アッペンツェルが13番目の邦として加盟（13邦体制の完成）, source: 'https://ja.wikipedia.org/wiki/アッペンツェル'}
+
+- id: c15_st_gallen
+  name: ザンクト・ガレン（修道院領・市）
+  until: 1647
+  select:
+    pieces: [CHE-Sankt_Gallen, CHE-Rorschach, CHE-Wil]
+  timeline:
+    - {from: 1453, owner: switzerland, overlord: hre, certainty: indirect, label: ザンクト・ガレン（同盟邦）, cause: ザンクト・ガレン修道院（1451年）と市（1454年）は盟約者団の同盟邦（正式の邦ではない）, source: 'https://ja.wikipedia.org/wiki/ザンクト・ガレン修道院'}
+    - {from: 1499, owner: switzerland, certainty: indirect, label: ザンクト・ガレン（同盟邦）, cause: シュヴァーベン戦争とバーゼルの和約}
+
+- id: c15_toggenburg
+  name: トッゲンブルク
+  until: 1647
+  select:
+    pieces: [CHE-Toggenburg]
+  timeline:
+    - {from: 1453, owner: other_hre, overlord: hre, label: トッゲンブルク, cause: トッゲンブルク伯家の断絶（1436年）後、ラーロン家の領地。シュヴィーツ・グラールスと同盟, source: 'https://en.wikipedia.org/wiki/Toggenburg'}
+    - {from: 1468, owner: switzerland, overlord: hre, certainty: indirect, label: トッゲンブルク（ザンクト・ガレン修道院領）, cause: ザンクト・ガレン修道院長がトッゲンブルクを買い取る, source: 'https://en.wikipedia.org/wiki/Toggenburg'}
+    - {from: 1499, owner: switzerland, certainty: indirect, label: トッゲンブルク（ザンクト・ガレン修道院領）, cause: シュヴァーベン戦争とバーゼルの和約}
+
+- id: c15_rheintal
+  name: ラインタール
+  until: 1647
+  select:
+    pieces: [CHE-Rheintal]
+  timeline:
+    - {from: 1453, owner: habsburg, overlord: hre, source: 'https://en.wikipedia.org/wiki/Rheintal_(Vogtei)'}
+    - {from: 1460, owner: switzerland, overlord: hre, certainty: indirect, label: ラインタール（アッペンツェル領）, cause: 同盟邦アッペンツェルがラインタールを手に入れる, source: 'https://en.wikipedia.org/wiki/Rheintal_(Vogtei)'}
+    - {from: 1490, owner: switzerland, overlord: hre, cause: ザンクト・ガレン戦争の後、盟約者団の共同支配地になる, source: 'https://en.wikipedia.org/wiki/Rheintal_(Vogtei)'}
+    - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争とバーゼルの和約}
+
+- id: c15_werdenberg
+  name: ヴェルデンベルク
+  until: 1647
+  select:
+    pieces: [CHE-Werdenberg]
+  timeline:
+    - {from: 1453, owner: other_hre, overlord: hre, label: ヴェルデンベルク伯領, source: 'https://en.wikipedia.org/wiki/Werdenberg'}
+    - {from: 1517, owner: switzerland, cause: グラールスがヴェルデンベルクを買い取る, source: 'https://en.wikipedia.org/wiki/Werdenberg'}
+
+- id: c15_vaud
+  name: ヴォー（ヴァート）
+  until: 1647
+  select:
+    pieces: [CHE-Broye_Vully, CHE-Gros_de_Vaud, CHE-Jura_North_Vaudois, CHE-Morges, CHE-Nyon, CHE-La_Broye]
+  timeline:
+    - {from: 1453, owner: savoy, label: ヴォー, source: 'https://ja.wikipedia.org/wiki/ヴォー州'}
+    - {from: 1536, owner: switzerland, cause: ベルンがサヴォイア公からヴォーを征服（エスタヴァイエなどはフリブールへ）。1564年のローザンヌ条約で確定, source: 'https://ja.wikipedia.org/wiki/ヴォー州'}
+
+- id: c15_lausanne
+  name: ローザンヌ司教領
+  until: 1647
+  select:
+    pieces: [CHE-Lausanne, CHE-Ouest_lausannois, CHE-Lavaux_Oron]
+  timeline:
+    - {from: 1453, owner: other_hre, overlord: hre, label: ローザンヌ司教領, source: 'https://en.wikipedia.org/wiki/Roman_Catholic_Diocese_of_Lausanne,_Geneva_and_Fribourg'}
+    - {from: 1536, owner: switzerland, cause: ベルンがヴォーとともにローザンヌを征服し、宗教改革を導入}
+
+- id: c15_gruyere
+  name: グリュイエール伯領・ザーネン
+  until: 1647
+  select:
+    pieces: [CHE-La_Gruyere, CHE-Pays_d_Enhaut, CHE-Saanen]
+  timeline:
+    - {from: 1453, owner: savoy, certainty: indirect, label: グリュイエール伯領, source: 'https://en.wikipedia.org/wiki/County_of_Gruyère'}
+    - {from: 1555, owner: switzerland, cause: グリュイエール伯の破産で、伯領をフリブールとベルンが分ける, source: 'https://en.wikipedia.org/wiki/County_of_Gruyère'}
+
+- id: c15_murten_aigle
+  name: ムルテン（モラ）・エーグル
+  until: 1647
+  select:
+    pieces: [CHE-Lac, CHE-Aigle]
+  timeline:
+    - {from: 1453, owner: savoy, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ戦争'}
+    - {from: 1475, owner: switzerland, overlord: hre, cause: ブルゴーニュ戦争。ベルンがサヴォイア領のムルテン・エーグルなどを奪う, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ戦争'}
+    - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
+
+- id: c15_ticino_north
+  name: ベッリンツォーナ・ブレニオ・リヴィエラ
+  until: 1647
+  select:
+    pieces: [CHE-Bellinzona, CHE-Blenio, CHE-Riviera]
+  timeline:
+    - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/ティチーノ州'}
+    - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノ公国を征服}
+    - {from: 1500, owner: switzerland, cause: ベッリンツォーナがウーリ・シュヴィーツ・ニトヴァルデンに服属（1503年アローナ条約で確定）, source: 'https://ja.wikipedia.org/wiki/ベッリンツォーナ'}
+
+- id: c15_ticino_south
+  name: ルガーノ・ロカルノ・メンドリシオ・マッジャ谷
+  until: 1647
+  select:
+    pieces: [CHE-Locarno, CHE-Lugano, CHE-Mendrisio, CHE-Vallemaggia]
+  timeline:
+    - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/ティチーノ州'}
+    - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノ公国を征服}
+    - {from: 1512, owner: switzerland, cause: 盟約者団がルガーノ・ロカルノなどを占領し、共同支配地とする（1516年の永久平和条約で確定）, source: 'https://ja.wikipedia.org/wiki/ティチーノ州'}
+
+- id: c15_lower_valais
+  name: 下ヴァレー（コンテ・マルティニー・サン＝モーリス）
+  until: 1647
+  select:
+    pieces: [CHE-Conthey, CHE-Martigny, CHE-Entremont, CHE-Saint_Maurice]
+  timeline:
+    - {from: 1453, owner: savoy, source: 'https://en.wikipedia.org/wiki/Lower_Valais'}
+    - {from: 1475, owner: valais, overlord: hre, cause: ブルゴーニュ戦争。上ヴァレーがサヴォイア軍を破り（プランタの戦い）、下ヴァレーを従属地とする, source: 'https://en.wikipedia.org/wiki/Battle_on_the_Planta'}
+    - {from: 1499, owner: valais, cause: シュヴァーベン戦争とバーゼルの和約}
+
+- id: c15_monthey
+  name: モンテー
+  until: 1647
+  select:
+    pieces: [CHE-Monthey]
+  timeline:
+    - {from: 1453, owner: savoy, source: 'https://en.wikipedia.org/wiki/Lower_Valais'}
+    - {from: 1536, owner: valais, cause: ベルンのヴォー征服に合わせ、ヴァレーがサヴォイア領のモンテー（シャブレーの東部）を占領, source: 'https://en.wikipedia.org/wiki/Lower_Valais'}
+
+- id: c15_torino
+  name: トリノ（1536–1562年 フランス軍の占領）
+  until: 1647
+  select:
+    pieces: [ITA-Torino]
+  timeline:
+    - {from: 1453, owner: savoy, source: 'https://ja.wikipedia.org/wiki/サヴォイア公国'}
+    - {from: 1536, owner: france, certainty: occupied, cause: イタリア戦争。フランス王フランソワ1世がサヴォイア・ピエモンテを占領, source: 'https://ja.wikipedia.org/wiki/エマヌエーレ・フィリベルト_(サヴォイア公)'}
+    - {from: 1562, owner: savoy, cause: カトー＝カンブレジ条約（1559年）でサヴォイア公が領土を回復。トリノは1562年に返還, source: 'https://ja.wikipedia.org/wiki/カトー・カンブレジ条約'}
+
+- id: c15_cuneo
+  name: クーネオ・サルッツォ
+  until: 1647
+  select:
+    pieces: [ITA-Cuneo]
+  timeline:
+    - {from: 1453, owner: savoy, certainty: uncertain, note: 県の西部はフランス王に臣従するサルッツォ侯国（独立の小国、1548年にフランスが併合）。県単位のピースでは分けられないので斜線で示す, source: 'https://ja.wikipedia.org/wiki/サヴォイア公国'}
+    - {from: 1536, owner: france, certainty: occupied, cause: イタリア戦争。フランス軍がピエモンテ南部を占領（クーネオの町はサヴォイア側が守り抜く）}
+    - {from: 1559, owner: savoy, certainty: uncertain, cause: カトー＝カンブレジ条約でサヴォイア公が回復。サルッツォ侯国はフランス領（1548–1601年）, source: 'https://ja.wikipedia.org/wiki/カトー・カンブレジ条約'}
+    - {from: 1601, owner: savoy, cause: リヨン条約でサヴォイア公がサルッツォを得る（代わりにブレス・ビュジェをフランスへ）, source: 'https://ja.wikipedia.org/wiki/リヨン条約_(1601年)'}
+
+- id: c15_asti
+  name: アスティ
+  until: 1647
+  select:
+    pieces: [ITA-Asti]
+  timeline:
+    - {from: 1453, owner: france, label: アスティ伯領（オルレアン公家）, source: 'https://en.wikipedia.org/wiki/County_of_Asti'}
+    - {from: 1529, owner: spain, cause: カンブレーの和約でフランスがアスティを放棄し、カール5世へ, source: 'https://en.wikipedia.org/wiki/County_of_Asti'}
+    - {from: 1531, owner: savoy, cause: カール5世がアスティを義妹ベアトリス（サヴォイア公妃）に与える}
+    - {from: 1536, owner: spain, certainty: occupied, cause: イタリア戦争。スペイン・皇帝軍がアスティに駐屯}
+    - {from: 1575, owner: savoy, cause: スペイン軍が撤退し、サヴォイア公に返る}
+
+- id: c15_cremona
+  name: クレモナ（1499–1509年 ヴェネツィア領）
+  until: 1647
+  select:
+    pieces: [ITA-Cremona]
+  timeline:
+    - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/ミラノ公国'}
+    - {from: 1499, owner: venice, cause: ブロワ条約でルイ12世がヴェネツィアにクレモナを与える（ミラノ征服の見返り）, source: 'https://en.wikipedia.org/wiki/Cremona'}
+    - {from: 1509, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: アニャデッロの戦いでフランスがクレモナを取る}
+    - {from: 1512, owner: milan, cause: スイス傭兵の力でフランス軍が追われ、マッシミリアーノ・スフォルツァがミラノ公に, source: 'https://ja.wikipedia.org/wiki/マッシミリアーノ・スフォルツァ'}
+    - {from: 1515, owner: france, label: ミラノ公国（フランソワ1世）, cause: マリニャーノの戦いでフランソワ1世がスイス軍を破り、ミラノを取る, source: 'https://ja.wikipedia.org/wiki/マリニャーノの戦い'}
+    - {from: 1521, owner: milan, cause: 皇帝・教皇の軍がフランス軍を追い、フランチェスコ2世・スフォルツァがミラノ公に, source: 'https://ja.wikipedia.org/wiki/フランチェスコ2世・スフォルツァ'}
+    - {from: 1526, owner: spain, certainty: occupied, cause: コニャック同盟戦争。皇帝軍がミラノを占領し、フランチェスコ2世は城に追い詰められて降伏, source: 'https://ja.wikipedia.org/wiki/コニャック同盟戦争'}
+    - {from: 1529, owner: milan, cause: カンブレーの和約・ボローニャの和約で、皇帝カール5世がフランチェスコ2世をミラノ公に戻す, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
+    - {from: 1535, owner: spain, cause: フランチェスコ2世の死でスフォルツァ家が断絶。カール5世が直接支配し、1540年に息子フェリペ（2世）に与えた, source: 'https://ja.wikipedia.org/wiki/ミラノ公国'}
+
+- id: c15_verona
+  name: ヴェローナ（1509–1516年 皇帝軍の占領）
+  until: 1647
+  select:
+    pieces: [ITA-Verona]
+  timeline:
+    - {from: 1453, owner: venice}
+    - {from: 1509, owner: habsburg, certainty: occupied, cause: カンブレー同盟戦争。皇帝マクシミリアン1世がヴェローナを占領, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
+    - {from: 1517, owner: venice, cause: ブリュッセル条約（1516年12月）で返還（1517年1月引き渡し）, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
+
+- id: c15_pordenone
+  name: ポルデノーネ
+  until: 1647
+  select:
+    pieces: [ITA-Pordenone]
+  timeline:
+    - {from: 1453, owner: habsburg, overlord: hre, label: ポルデノーネ（オーストリア大公の飛び地）, source: 'https://en.wikipedia.org/wiki/Pordenone'}
+    - {from: 1508, owner: venice, cause: ヴェネツィアが皇帝軍との戦いでポルデノーネを奪う, source: 'https://en.wikipedia.org/wiki/Pordenone'}
+
+- id: c15_gorizia
+  name: ゴリツィア伯領
+  until: 1647
+  select:
+    pieces: [ITA-Gorizia]
+  timeline:
+    - {from: 1453, owner: gorizia, overlord: hre, source: 'https://en.wikipedia.org/wiki/County_of_Gorizia'}
+    - {from: 1500, owner: habsburg, overlord: hre, cause: ゴリツィア伯家の断絶で、マクシミリアン1世が相続, source: 'https://en.wikipedia.org/wiki/County_of_Gorizia'}
+
+- id: c15_reggio
+  name: レッジョ
+  until: 1647
+  select:
+    pieces: [ITA-Reggio_nell_Emilia]
+  timeline:
+    - {from: 1453, owner: modena, source: 'https://ja.wikipedia.org/wiki/モデナ公国'}
+    - {from: 1512, owner: papal_states, cause: 教皇ユリウス2世がレッジョを奪う, source: 'https://ja.wikipedia.org/wiki/アルフォンソ1世・デステ'}
+    - {from: 1523, owner: modena, cause: アルフォンソ1世・デステがレッジョを回復, source: 'https://ja.wikipedia.org/wiki/アルフォンソ1世・デステ'}
+
+- id: c15_piacenza
+  name: ピアチェンツァ（1547–1556年 皇帝軍の占領）
+  until: 1647
+  select:
+    pieces: [ITA-Piacenza]
+  timeline:
+    - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/パルマ公国'}
+    - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノ公国を征服}
+    - {from: 1512, owner: papal_states, cause: 教皇ユリウス2世がパルマ・ピアチェンツァを取る}
+    - {from: 1515, owner: france, label: ミラノ公国（フランソワ1世）, cause: マリニャーノの戦いの後、ミラノ公国とともにフランス王へ}
+    - {from: 1521, owner: papal_states, cause: 皇帝・教皇の軍がフランス軍を追い、教皇領に戻る}
+    - {from: 1545, owner: parma, cause: 教皇パウルス3世が息子ピエール・ルイージ・ファルネーゼにパルマ・ピアチェンツァ公国を与える, source: 'https://ja.wikipedia.org/wiki/パルマ公国'}
+    - {from: 1547, owner: spain, certainty: occupied, cause: ピエール・ルイージ・ファルネーゼの暗殺。ミラノ総督フェランテ・ゴンザーガの皇帝軍がピアチェンツァを占領, source: 'https://ja.wikipedia.org/wiki/ピエール・ルイージ・ファルネーゼ'}
+    - {from: 1556, owner: parma, cause: フェリペ2世がピアチェンツァをオッターヴィオ・ファルネーゼに返す（ヘント条約）, source: 'https://ja.wikipedia.org/wiki/オッターヴィオ・ファルネーゼ'}
+
+- id: c15_ferrara
+  name: フェラーラ公国
+  until: 1647
+  select:
+    pieces: [ITA-Ferrara]
+  timeline:
+    - {from: 1453, owner: modena, overlord: papal_states, cause: フェラーラは教皇の封土。エステ家が治める（1471年に公国）, source: 'https://ja.wikipedia.org/wiki/フェラーラ公国'}
+    - {from: 1598, owner: papal_states, cause: エステ家の嫡流断絶。教皇クレメンス8世がフェラーラを接収し、エステ家はモデナへ移る, source: 'https://ja.wikipedia.org/wiki/フェラーラ公国'}
+
+- id: c15_ravenna
+  name: ラヴェンナ（1509年までヴェネツィア領）
+  until: 1647
+  select:
+    pieces: [ITA-Ravenna]
+  timeline:
+    - {from: 1453, owner: venice, cause: ラヴェンナは1441年からヴェネツィア領, source: 'https://en.wikipedia.org/wiki/Ravenna'}
+    - {from: 1509, owner: papal_states, cause: アニャデッロの戦いの後、ヴェネツィアがロマーニャの都市を教皇に返す, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
+
+- id: c15_rimini
+  name: リミニ（マラテスタ家）
+  until: 1647
+  select:
+    pieces: [ITA-Rimini]
+  timeline:
+    - {from: 1453, owner: papal_states, certainty: indirect, label: リミニ（マラテスタ家）, cause: マラテスタ家が教皇代理としてリミニを治める, source: 'https://ja.wikipedia.org/wiki/マラテスタ家'}
+    - {from: 1500, owner: romagna_borgia, overlord: papal_states, cause: チェーザレ・ボルジアがリミニを征服, source: 'https://ja.wikipedia.org/wiki/チェーザレ・ボルジア'}
+    - {from: 1503, owner: venice, cause: チェーザレの没落に乗じて、ヴェネツィアがリミニ・ファエンツァを占領}
+    - {from: 1509, owner: papal_states, cause: アニャデッロの戦いの後、ヴェネツィアがロマーニャの都市を教皇に返す, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
+
+- id: c15_ancona
+  name: アンコーナ
+  until: 1647
+  select:
+    pieces: [ITA-Ancona]
+  timeline:
+    - {from: 1453, owner: papal_states, certainty: indirect, label: アンコーナ共和国, cause: アンコーナは教皇の宗主権のもとで自治の共和国, source: 'https://en.wikipedia.org/wiki/Republic_of_Ancona'}
+    - {from: 1532, owner: papal_states, cause: 教皇クレメンス7世が軍を送って自治を奪い、教皇領に組み込む, source: 'https://en.wikipedia.org/wiki/Republic_of_Ancona'}
+
+- id: c15_urbino
+  name: ウルビーノ公国
+  until: 1647
+  select:
+    pieces: [ITA-Pesaro_e_Urbino]
+  timeline:
+    - {from: 1453, owner: urbino, overlord: papal_states, source: 'https://ja.wikipedia.org/wiki/ウルビーノ公国'}
+    - {from: 1502, owner: romagna_borgia, overlord: papal_states, cause: チェーザレ・ボルジアがウルビーノを奪う, source: 'https://ja.wikipedia.org/wiki/チェーザレ・ボルジア'}
+    - {from: 1503, owner: urbino, overlord: papal_states, cause: アレクサンデル6世の死で、グイドバルド・ダ・モンテフェルトロが帰還}
+    - {from: 1516, owner: papal_states, certainty: indirect, label: ウルビーノ公国（ロレンツォ・デ・メディチ）, cause: 教皇レオ10世がデッラ・ローヴェレ家を追い、甥ロレンツォ・デ・メディチをウルビーノ公とする, source: 'https://ja.wikipedia.org/wiki/ロレンツォ・デ・メディチ_(ウルビーノ公)'}
+    - {from: 1521, owner: urbino, overlord: papal_states, cause: レオ10世の死で、フランチェスコ・マリーア1世・デッラ・ローヴェレが公国を回復}
+    - {from: 1631, owner: papal_states, cause: デッラ・ローヴェレ家の断絶で、ウルビーノ公国は教皇領に戻る（教皇ウルバヌス8世）, source: 'https://ja.wikipedia.org/wiki/ウルビーノ公国'}
+
+- id: c15_perugia
+  name: ペルージャ
+  until: 1647
+  select:
+    pieces: [ITA-Perugia]
+  timeline:
+    - {from: 1453, owner: papal_states, certainty: indirect, label: ペルージャ（バリオーニ家）, cause: ペルージャは教皇の主権のもとで、バリオーニ家が実権を握る, source: 'https://en.wikipedia.org/wiki/Baglioni_family'}
+    - {from: 1540, owner: papal_states, cause: 塩戦争。教皇パウルス3世がペルージャを制圧し、自治を奪う, source: 'https://en.wikipedia.org/wiki/Salt_War_(1540)'}
+
+- id: c15_pisa
+  name: ピサ
+  until: 1647
+  select:
+    pieces: [ITA-Pisa]
+  timeline:
+    - {from: 1453, owner: florence, source: 'https://ja.wikipedia.org/wiki/フィレンツェ共和国'}
+    - {from: 1494, owner: pisa_republic, cause: フランス王シャルル8世の侵入に乗じて、ピサがフィレンツェの支配から独立, source: 'https://en.wikipedia.org/wiki/Pisa'}
+    - {from: 1509, owner: florence, cause: フィレンツェがピサを包囲して再征服（マキァヴェッリが市民軍を組織）, source: 'https://en.wikipedia.org/wiki/Pisa'}
+    - {from: 1569, owner: tuscany, cause: 教皇ピウス5世がコジモ1世にトスカーナ大公の称号を与える, source: 'https://ja.wikipedia.org/wiki/トスカーナ大公国'}
+
+- id: c15_siena
+  name: シエナ共和国
+  until: 1647
+  select:
+    pieces: [ITA-Siena, ITA-Grosseto]
+  timeline:
+    - {from: 1453, owner: siena, source: 'https://ja.wikipedia.org/wiki/シエナ共和国'}
+    - {from: 1555, owner: spain, certainty: occupied, cause: シエナ戦争。皇帝・フィレンツェ軍の包囲でシエナが降伏（1555年4月。共和国の残党はモンタルチーノで1559年まで抵抗）, source: 'https://ja.wikipedia.org/wiki/シエナ共和国'}
+    - {from: 1557, owner: florence, cause: フェリペ2世がシエナをコジモ1世に封土として与える。沿岸の要塞はスペインの直轄（スタート・デイ・プレシディ）, source: 'https://ja.wikipedia.org/wiki/シエナ共和国'}
+    - {from: 1569, owner: tuscany, cause: 教皇ピウス5世がコジモ1世にトスカーナ大公の称号を与える, source: 'https://ja.wikipedia.org/wiki/トスカーナ大公国'}
+
+- id: c15_naples_north
+  name: ナポリ・カンパーニア・アブルッツォ（1501–1503年 フランス領）
+  until: 1647
+  select:
+    adm2: [ITA/Campania, ITA/Abruzzo, ITA/Molise]
+  timeline:
+    - {from: 1453, owner: naples, source: 'https://ja.wikipedia.org/wiki/ナポリ王国'}
+    - {from: 1501, owner: france, label: ナポリ王国（フランス王ルイ12世）, cause: グラナダ条約で、フランス王ルイ12世がナポリ・カンパーニア・アブルッツォを得る, source: 'https://ja.wikipedia.org/wiki/グラナダ条約_(1500年)'}
+    - {from: 1503, owner: aragon, cause: チェリニョーラの戦い・ガリリャーノの戦いでスペインのゴンサロ・デ・コルドバが勝ち、王国全体がアラゴン領に（1504年リヨン条約）, source: 'https://ja.wikipedia.org/wiki/ガリリャーノの戦い'}
+    - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+
+- id: c15_naples_disputed
+  name: カピタナータ・バジリカータ（1501–1503年 仏西の係争地）
+  until: 1647
+  select:
+    pieces: [ITA-Foggia, ITA-Potenza, ITA-Matera]
+  timeline:
+    - {from: 1453, owner: naples, source: 'https://ja.wikipedia.org/wiki/ナポリ王国'}
+    - {from: 1501, owner: aragon, certainty: uncertain, cause: グラナダ条約の分割で帰属があいまいなまま残り、フランスとスペインの戦争の原因になった}
+    - {from: 1503, owner: aragon, cause: チェリニョーラの戦い・ガリリャーノの戦いでスペインが勝つ}
+    - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
+
+- id: c15_otranto
+  name: オトラント（レッチェ）
+  until: 1480
+  select:
+    pieces: [ITA-Lecce]
+  timeline:
+    - {from: 1480, owner: ottoman, certainty: occupied, cause: メフメト2世の軍がオトラントを攻略（8月）。翌1481年9月、メフメト2世の死の後に撤退, source: 'https://en.wikipedia.org/wiki/Ottoman_invasion_of_Otranto'}
+
+- id: c15_brindisi
+  name: ブリンディジ（1496–1509年 ヴェネツィア領）
+  until: 1647
+  select:
+    pieces: [ITA-Brindisi]
+  timeline:
+    - {from: 1453, owner: naples, source: 'https://ja.wikipedia.org/wiki/ナポリ王国'}
+    - {from: 1496, owner: venice, cause: ナポリ王フェルディナンド2世が、フランスと戦う援軍の担保としてプーリアの港をヴェネツィアに渡す, source: 'https://en.wikipedia.org/wiki/Brindisi'}
+    - {from: 1509, owner: aragon, cause: カンブレー同盟戦争の中で、ヴェネツィアがプーリアの港をスペインに返す}
+    - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ}

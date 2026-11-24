@@ -751,3 +751,162 @@ docs/review/af_east_south.md の指摘を反映（2026-11-23）。
 ### 確認
 - `npm run data`：警告なし（政体 784 / 地域 2881 / 出来事 2808）。`--missing`（オセアニアの国コード、1880–2025 の 8 年）：ゼロ。
 - snapshot（scratchpad）：サモア 1880（1890 は書き出しのみ）（--zoom -170,-14,6。ツトゥイラが王国の色＋斜線、マヌアは所属なし）、北島 1910・1925（--zoom 176.5,-38.5,8。1910 年はウレウェラ保留地が薄い色、1925 年は濃い色）。
+
+## 1453–1647 分布・都市・潮流
+
+docs/review/1453_distributions.md の指摘を反映した（2026-11-24）。A・B はすべて反映、C は妥当なものだけ。
+
+### A
+- **ハンガリーの宗教改革**（religion/central.yaml）：
+  - `rel_hungary`（ザラ）：1570 reformed/catholic、1630 catholic/reformed（パーズマーニの再カトリック化）。note の「大多数がプロテスタント」と塗りの矛盾を解消。
+  - `rel_hungary_transdanubia_mixed`（ヴェスプレーム・コマーロム）：1570 reformed/catholic、1630 catholic/reformed。
+  - 新設 `rel_hungary_ottoman_transdanubia`（フェイェール・ショモジ・トルナ・バラニャ、until 1699）：1570–1699 reformed/catholic（オスマン領には対抗宗教改革が及ばない。1700 年から既存の値）。
+  - `rel_hungary_between_rivers`：1560 reformed/catholic、1648 も reformed/catholic、1700 catholic/reformed（再植民）を追加。
+  - 新設 `rel_buda_pest_ottoman`（ブダペストの 23 区、until 1699）：1541 sunni/reformed、1686 catholic（B の指摘もこれで反映）。
+  - `rel_hungary_east_reformed`：1550 を lutheran/catholic に。`rel_heves`：1560 catholic/reformed を追加。西部のルター派（`rel_hungary_west_lutheran`、1580/1630）は変更なし。
+- **メリリャ**：新設 `rel_melilla_pre`（sunni）・`lang_melilla_pre`（berber/arabic、ナドールと同じ）、どちらも until 1496。
+- **セウタ**：新設 `lang_ceuta_portuguese`（until 1647）：1453 portuguese、1640 portuguese/spanish。1648 年からは `lang_spain_base`。
+
+### B
+- イラン（`rel_iran`）：1510 は sunni/shia のまま（note に 1501 年の国教化と緩やかな改宗）、1590 shia/sunni（アッバース1世）、1648 年から既存の shia。`rel_iran_west_azerbaijan` の切り替えを 1510 → 1560 に。
+- アルバニア中部（`rel_albania`）：1600 を catholic/sunni、1630 sunni/orthodox に。`rel_macedonia_muslim` の切り替えを 1600 → 1630 に。`rel_polog`（1620）は変更なし（確信度が低い）。
+- ブダペスト：上の A。
+- バーチ南部：新設 `rel_bacs_south_hu`（バヤ・バーチャルマーシュ、until 1699）：1540 orthodox/catholic、1687 catholic/orthodox（ブニェヴツィの移住）。`rel_subotica`：1550・1648 orthodox/catholic、1690 catholic/orthodox（既存の 1648 の note をここへ）。
+- クリミア山地（`rel_crimea`）：1550・1648 を sunni/orthodox（言語の tatar/greek に合わせる）、1779 sunni（ギリシア人の移住）を追加。
+- 草原の宗教と言語（religion/north_east.yaml）：
+  - 新設 `rel_kirovohrad_west_pre`（キロヴォフラード西部 6 ピース、until 1647）：荒野と同じ 1453 sunni、1600 orthodox/sunni。
+  - 新設 `rel_azov_north_coast`（Manhush・Nikolske、until 1779）：sunni（言語の tatar と同じ）。
+  - 新設 `rel_sal_steppe`（Remontnensky・Zavetinsky）：1453 sunni、1640 other/orthodox（カルムイク人。`rel_kalmyk` と同じく other）、1943 orthodox。
+  - `rel_kizlyar`：1600・1648 を sunni/orthodox、1740 orthodox/sunni（言語の 1740 russian に合わせる）。
+  - `rel_middle_volga_pre`：1600 を other/orthodox（モルドヴィン人の伝統信仰）。
+- スロボダ・ウクライナとドンバス：
+  - `lang_sloboda_ua` の切り替えを 1600 → 1640（チュフイウ 1638）。新設 `rel_sloboda_pre`（until 1647）：1453 sunni、1640 orthodox/sunni。
+  - `lang_donbas`：1600 の項目を削除（1647 まで tatar）、1648 tatar/ukrainian、1690 ukrainian/tatar（イジューム 1681・バフムート 1701）。新設 `rel_donbas_pre`（ドネツィク・ルハンシク州、until 1689）：1453 sunni、1648 sunni/orthodox。
+  - `lang_voronezh_south`：1600 の russian を削除（1647 まで tatar）、1648 tatar/ukrainian、1700 ukrainian/russian。新設 `rel_voronezh_south_pre`（until 1699）：1453 sunni、1648 sunni/orthodox。ベルゴロド南部・クルスク南西部の 1600 russian（城塞の線）はそのまま。
+- テッサロニキ：新設 `rel_thessaloniki`（GRC-Thessaloniki）：1500 jewish/sunni、1923 orthodox/jewish、1943 orthodox。言語の lang_thessaloniki に合わせた。ユダヤ教徒が多数派の数少ない地域として、jewish で塗る例外（religion-format.md の「イスラエルのように多数派になる地域」と同じ扱い）。
+- セヴェンヌ（`rel_france_huguenot_core`）：1560・1648 を reformed/catholic に（1685 年以後は既存のまま catholic/reformed）。
+- 出来事（events/europe.yaml）：1562「ユグノー戦争がはじまる」（3 月 1 日、ヴァシーの虐殺、at ヴァシー）、1572「サンバルテルミの虐殺」（8 月 24 日、at パリ）。
+- 潮流：新しい潮流 `english_reformation`「宗教改革（イギリス国教会）」（movements/religion.yaml）。spread は `{polities: [britain], exclude_regions: [ireland]}`（1534 0.7 → 1553 0.2 → 1559 0.8 → 1570 1.0 → 1648 0.2 → 1662 0.4 → 1689 0）。出来事は west.yaml の首長法・統一法。
+
+### C（反映したもの）
+- ボヘミア・国境地帯・モラヴィアの再カトリック化（`rel_bohemia_pre`・`rel_sudeten_pre`・`rel_moravia_pre`）を 1624 → 1627（改訂領邦条例）に。
+- 新設 `rel_dukagjin_pre`（ドゥカジン、until 1499）：1453 orthodox/catholic（アルバニア人のカトリック）。
+- 都市：バフチサライに names `{to: 1531, name: サラチク（クルク・エル）}` と note、フェスの wattasid の首都を 1453 年から（政体名は 1471 年までマリーン朝）、ビルグ（新規、capital malta 1530–1570、until 1570）、ブリュッセルの note にメヘレンの宮廷（1507–30）。
+- 潮流：`baroque` の people の重複を削除、`baroque_catholicism` の `{polities: [castile, aragon]}` を削除、`iso: [ITA]` を 1648 年以後もゆるやかに下げる（1690 0.6・1730 0.3・1773 0）、`lutheran_reformation`・`calvinism` にトランシルヴァニア（polities: [transylvania]）、`second_serfdom` にハンガリー・スロヴァキア（iso: [HUN, SVK]、1514 年〜）とドージャ・ジェルジの農民反乱。
+- 出来事：マゼラン一行の本文を「地球が球体であることが航海で確かめられた」に、ケプラーの関係国に bohemia を追加。
+
+### 反映しなかったもの
+- マキァヴェリの表記：出来事の題名は events/italy_lowcountries.yaml（別の担当が修正中のファイル）にあるので変えていない。潮流の people は教科書どおり「マキァヴェリ」のまま。
+- ミュールーズ・トランシルヴァニアのユニテリアン・アゼルバイジャン北部・チェルケス・ラズィスタン・ヴィルノ・カウナス・オランダの 1600 年：確信度が低い、またはピースの範囲から現状でよいと判断。ポーランドのカルヴァン派は `rel_poland` の note にすでにある。
+
+### 1648 年以後を変えた所（例外。作業前の atlas_before_1453.json と比べた一覧）
+1647/1648 のつなぎ目に段差ができないよう、17 世紀後半〜18 世紀前半の値も直した。
+- 宗教：
+  - ハンガリー 73 ピース（ドナウ・ティサ川間、オスマン領のドナウ以西）：1648–1699 catholic/reformed → reformed/catholic。
+  - ブダペスト 23 区：1648–1685 catholic/reformed → sunni/reformed、1686–1699 → catholic。
+  - バヤ・バーチャルマーシュ：1648–1686 → orthodox/catholic、1687–1699 → catholic/orthodox。スボティツァ：1648–1689 catholic/orthodox → orthodox/catholic。
+  - セヴェンヌ・ヴィヴァレ 8 ピース：1648–1684 catholic/reformed → reformed/catholic。
+  - テッサロニキ：1648–1922 orthodox/sunni → jewish/sunni、1923–1942 orthodox → orthodox/jewish。
+  - キズリャル周辺 3 ピース：1648–1739 orthodox/sunni → sunni/orthodox。
+  - サリスク草原 2 ピース：1648–1942 orthodox → other/orthodox。
+  - ドンバス 34 ピース：1648–1689 orthodox → sunni/orthodox。アゾフ海北岸 2 ピース：1648–1779 orthodox → sunni。
+  - クリミア山地 3 ピース：1648–1778 sunni → sunni/orthodox。
+  - ヴォロネジ南部 13 ピース：1648–1699 orthodox → sunni/orthodox。
+- 言語：ドンバス 34 ピース：1648–1689 ukrainian/tatar → tatar/ukrainian。ヴォロネジ南部 13 ピース：1648–1699 ukrainian/russian → tatar/ukrainian。
+- 潮流：`baroque_catholicism` の iso ITA が 1648–1773 にも光る。`english_reformation` が 1648–1689 に弱く光る。
+
+### 確認
+- `npm run data`：警告なし。1647→1648 で主な色が変わるピースは、レビュー時に説明のついていたもの（イングリア・テシェン・ゼーラント・ヴォルガ中流など）と、ベルゴロド南部・クルスク南西部（russian → ukrainian、1650 年代の入植）だけ。今回の修正で増えたのは、サマーラ・ペンザの宗教（other → orthodox。言語の volga_finnic → russian と同じ年で、既存の 1648 年の値に合わせた）とセウタの言語（portuguese → spanish）の 2 か所で、どちらも言語・政治の変化と一致している。
+- snapshot（scratchpad）：宗教 1600・1647・1648（--zoom 20,47,3。ハンガリー中部・東部が改革派の紫、1647/1648 で段差なし）、宗教 1600・1647・1648 と言語 1647（--zoom 37,48,2.5。荒野・ドンバスがスンナ派・タタール、スロボダが正教・ウクライナ人で宗教と言語がそろう、クリミア山地に正教の斜線）。
+
+## 1453–1647 西欧・中欧
+
+docs/review/1453_west_central.md（A 1・B 5・C 25・要確認 3）の反映。対象は data/polities・regions・events の west.yaml・germany_north.yaml・germany_south.yaml・italy_lowcountries.yaml。
+
+### A
+- ベルガモ・ブレシア（`venetian_lombardy`）：1512 の owner spain → aragon（occupied、カルドナの軍）。新設 `pre1648_bergamo`（ITA-Bergamo、until 1515）：1512 venice（6 月に回復）→ 1513 aragon[occupied]。これで 1516 年より前に spain が出るピースはない。
+
+### B
+- フランス王の封土：フランドル・アルトワ・ワロン＝フランドル・ダンケルク・サントメール・ゼーラント側フランドルなど（west.yaml・italy_lowcountries.yaml、計 25 項目）の 1453–1528 の `overlord: france` を外し、ブルゴーニュ公領・マコネ・ブルターニュなどとそろえた（宗主権は帯で描かない）。note に「フランス王の封土、1529 年のカンブレーの和約で放棄」と書いた。
+- ザンクト・ガレン周辺：新設 `c15_st_gallen`（ザンクト・ガレン・ロールシャッハ・ヴィル）1453 switzerland/hre[indirect]「ザンクト・ガレン（同盟邦）」→ 1499 帝国の枠なし。`c15_toggenburg` 1453 other_hre/hre → 1468 修道院領（indirect）。`c15_rheintal` 1453 habsburg → 1460 アッペンツェル領（indirect）→ 1490 共同支配地（certain）。`c15_werdenberg` 1453 other_hre/hre → 1517 グラールス領。See-Gaster は変えていない。
+- ザイヤーン朝：君主 10 人（1430–1556、すべて「在位年は要確認」。ムハンマドの代数は書かない）。ワッタース朝のムハンマド・アッシャイフを 1472–1504、アルブルトゥカーリーを 1504–1526 に。
+- 出来事：ヴォルムス帝国議会（1521-04-17、events/germany_south.yaml、importance 1）、ロクロワの戦い（1643-05-19、events/west.yaml）。ユグノー戦争の始まり・サンバルテルミの虐殺は europe.yaml に分布担当が追加済み（確認した）。
+- アイルランドのカトリック同盟：1642 年から label「カトリック同盟の支配地」を `ireland_ormond`・`ireland_midlands`・`ireland_munster`・`ireland_connacht` と新設 `ireland_confed_ulster_wicklow`（キャヴァン・モナハン・ウィックロー、until 1647）に。色はアイルランド王国のまま（1648 年以降とそろえる）。ペイル・東アルスター・ドニゴールには付けない。
+
+### C（反映したもの）
+- デーフェンテル：新設 `c15_deventer`（1587 spain/hre → 1591 netherlands）。
+- オーファーアイセル（`c15_overijssel`）：1522 guelders[uncertain]（ヘルレ公カレル）→ 1528 は既存どおり。
+- サルッツォ（`c15_cuneo`）：1453–1535 を savoy[uncertain] にし（1559–1600 は既存の uncertain）、note に侯国のことを書いた。
+- スダン公国：新しい政体 `sedan`（west.yaml）と地域 `pre1648_sedan`（FRA-Sedan、until 1647）：1453 sedan[uncertain] → 1642 france。
+- 下ラウジッツ（`lower_lusatia`）：1453 brandenburg[uncertain]「下ラウジッツ（ブランデンブルクへの質）」→ 1462 bohemia（グーベンの和約）。
+- メルゼブルク・ナウムブルク（`saxony_thuringia`）：note に保護下の司教領と世俗化（1561・1564）を追記。
+- ヴォルフェンビュッテル（`brunswick_lands`）：1542 hesse_kassel/hre[occupied]（シュマルカルデン同盟）→ 1547 brunswick。
+- オトラント：新設 `c15_otranto`（ITA-Lecce、until 1480）：1480 ottoman[occupied]。
+- グラン・カナリア：新設 `gran_canaria`（ESP-Palmas_Las、until 1647）：1453 castile[nominal] → 1483 castile → 1516 spain。
+- モロッコのポルトガル・スペインの拠点：描かず、`morocco` の 1453・1603 の note に書いた（アゼンムール・マザガン、ララシュ・マアムーラ。サフィ・アガディールは既存の note にある）。
+- アルジェの君主：ハサン・パシャ（1557–61・1562–67）とムハンマド（サーリフ・レイスの子、1567–68）を別の行に。チュニスの 1574–1597：「オスマン帝国が任命するパシャ」（1574–91）「初期のデイたち」（1591–97）の行を足した（個々の名前は省略）。
+- 表記：「マグデブルク」→「マクデブルク」（germany_north の政体・地域・出来事）、「プラハの和議」→「プラハの和約」、netherlands の names を 1572–78「反乱諸州（ホラント・ゼーラント）」と 1579–80「ユトレヒト同盟」に分けた、baden の 1535–64 の略称を「バーデン＝プフォルツハイム」に。プロイセン公の摂政：ansbach の note を「1577 年に後見人、1578 年にポーランド王が承認」に、ducal_prussia の note にも同じ説明。
+- 小さな聖界諸侯・伯領の情勢（1453–1647 の 1 文）：bamberg・fulda・augsburg_bishopric・eichstatt・passau・freising・halberstadt・minden・verden・bremen_archbishopric・mansfeld・henneberg・lippe・waldeck・schaumburg。
+- 色：エルネスト系ザクセン（saxon_duchies）#c3e3b5 → #d6e2a0（黄み寄り）、ブルゴーニュ・ハプスブルク家のネーデルラント #fec6f6 → #d9c6f2（藤色。サヴォイアのくすんだピンクと分ける）、プファルツ＝ノイブルク #b3c3df → #a6d6c8（ブランデンブルクの青と分ける）。
+- 要確認のうち：spain の 1599–1647 の情勢に「大公たち」（1598–1621）、navarre の 1589–1620 の情勢に「同君連合の間もナバラの色で描く」を追記。
+
+### 反映しなかったもの
+- ドイツ騎士団総長「ハインリヒ・レッフレ・フォン・リヒテンベルク」：今の表記がすでに Richtenberg の読み（リヒテンベルク）で、直す所がなかった。
+- リンゲン伯領（1605–33）：DEU-Emsland の一部で、ピースが合わないので省略。
+- シャロレ：既存の note のまま（1648 年以降も france なので地図は変えない）。FRA-Bayonne：region の note にすでにバイヨンヌ市・ラブールのことがある。
+- 首都（hre のインスブルック、saxony 1453–84、brittany のナント、hesse_kassel のカッセル）：data/cities.yaml（別の担当が修正中）にあるので変えていない。分布担当への申し送り。
+- サヴォイア・帝国イタリアを帝国の枠の外にする扱い：1648 年以降と同じ方針なのでそのまま。
+
+### 1648 年以後を変えた所
+- 所属（owner・overlord・certainty）は変えていない（作業前の atlas.json と 1648–2025 をピース単位で比べて差なし）。
+- 表示だけ：saxon_duchies の色（1485–1867 に使う）、「マクデブルク」の表記、lippe・waldeck の情勢に 1453–1647 の項目を前に足した。
+
+### 確認
+- `npm run data`：警告なし。`--missing 1453,1480,1500,1512,1513,1520,1530,1550,1570,1587,1590,1610,1620,1635,1642,1647` で FRA ESP PRT GBR IRL MAR DZA TUN LBY DEU NLD BEL LUX CHE ITA AUT がゼロ。
+- snapshot（scratchpad の WC/snap）：1453 スイス東部（ザンクト・ガレンが薄い色、トッゲンブルク・ヴェルデンベルクが帝国諸邦）、1513 北イタリア（ベルガモ・ブレシアがアラゴンの占領）、1545 ヴォルフェンビュッテル、1590 デーフェンテル（スペイン）、1645 アイルランド（副ラベル「カトリック同盟の支配地」）。
+
+## 1453–1647 東欧・中東
+
+docs/review/1453_east.md（A 1・B 9・C 11・要確認 4）の反映。対象は data/polities・regions・events の habsburg.yaml・ottoman.yaml・north_east.yaml と data/cities.yaml。
+
+### A・B の色（隣り合う相手をすべての年 1453–2025 で調べ、変えた政体は全部の隣国と ΔE 20 以上。既存の 20 未満の組は悪くしていない）
+- **lithuania** #e2cb8c → #feb782（薄い橙）：スウェーデン 2.8 → 20.8、ロシア 17.7 → 23.4、ベラルーシ 17.1 → 37.3。
+- **russia** #cfae8d → #c3a384（わずかに暗く。ΔE 4）：スウェーデン 18.1 → 20.7。スウェーデンは黄色の帯（ハプスブルク・バーデン・ザクセン諸公など）に挟まれて動かせる色がなく、ロシアを少し動かすのがいちばん目立たなかった。ロシアのほかの隣国の ΔE はどれも下がっていない（ペルシア 9.8 → 13.3、ハノーファー 9.0 → 11.5 など、既存の 20 未満の組は少し良くなった）。
+- **norway** #d7a7b4 → #d0a5bc：デンマーク 14.9 → 20.8。なお地図の上でノルウェーとデンマークの陸の境は一度もない（1453–1536 年はボーヒュースレーンとハッランドの間にスウェーデンのイェータ川の出口がある）が、指摘どおり離した。
+- **bukhara** #e2b2a1 → #f8acba（ピンク）：サファヴィー朝 15.2 → 32.4（タシケント 6.1 → 24.5、ソ連 8.8 → 20.9 も解消）。
+- **kakheti** #e3bccb → #f6d9fa（淡い藤色）：カルトリ 8.7 → 20.7。
+- **aq_qoyunlu** #dcdcc8 → #d1ed91（明るい黄緑）：データ未整備の灰色（#e6e2d8・#e2e0dc）・所属なしの草色と 20 以上、オスマン帝国・マムルーク朝 21.2、黒羊朝・ティムール朝・サファヴィー朝とも 20 以上。
+- スウェーデンの色は変えていない（三十年戦争の占領地でバーデン・ハプスブルク家などと 20 未満の組が残るのは従来どおり）。
+
+### B
+- 1526 年末のハンガリー（`upper_hungary`・`hungary_hu`・`nove_zamky`・`filakovo_1554`・`nograd_1552`・`veszprem_1552`・`nagykanizsa_1600`）：1526 hungary（サポヤイ・ヤーノシュ）→ 1527 habsburg（トカイの戦い）。プレスブルク周辺と西の国境の県（ポジョニ・モション・ショプロン・ヴァシュ）は新設 `west_hungary_1526`（`until: 1526`、1526 年の 1 年だけ habsburg）、ブルゲンラント・プレクムリェ・ジェールは 1526 habsburg のまま。
+- ワラキア公：ヴラド3世の3度目（1476）、ミルチャ羊飼い公の在位を3回に分け、ラドゥ・イリエ（1552–53）・パトラシュク善公（1554–57）、アレクサンドル2世ミルチャの note（1574 ヴィンティラ）、ミフネア・トゥルチトゥルを 1577–83・1585–91 に分けてペトル・チェルチェル（1583–85）、ミハイ勇敢公を 1593–1600 に、シミオン・モヴィラを 1600–1602 に、ラドゥ・ミフネアの2度目（1620–23）。
+- モルダヴィア公：ペトル跛行公を3回に分け、ヨアン・ポトコアヴァ（1577）・ヤンク・サスル（1579–82）、アレクサンドル・モヴィラ（1615–16）、シュテファン・トムシャ2世の2度目（1621–23）、ラドゥ・ミフネア（1623–26）、アレクサンドル・ココヌル（1629–30）、モイセ・モヴィラの2度目（1633–34。ミロン・バルノフスキの 1633 年の再任と処刑は note）。これで 1620–1626 年の空白はない。
+- ワラキア・モルダヴィアの宗主（`wallachia_proper`・`oltenia`、`moldavia_ro`・`bukovina_ro`・`bessarabia`・`bukovina`・`hotin`・`hertsa`）：ワラキアは 1595 overlord transylvania（アルバ・ユリア条約）→ 1598 habsburg（ルドルフ2世との条約）→ 1600 poland_lithuania[uncertain]（シミオン・モヴィラ）→ 1602 ottoman（ラドゥ・シェルバン）。モルダヴィアは 1595 poland_lithuania[uncertain]（イェレミア・モヴィラ）→ 1611 ottoman（シュテファン・トムシャ2世）。両国の情勢の文も合わせた。
+- 王領ハンガリーとボヘミアの副ラベル：ハプスブルク家が持つハンガリーの地域の 1526–1647 年の項目（HUN・SVK・ブルゲンラント・プレクムリェ・ザカルパッチャ・パルティウム・バーチカなど 75 項目）に `label: 王領ハンガリー`、1551–55 年のトランシルヴァニア（`transylvania_ro`・`lugoj_caransebes`）に「トランシルヴァニア（フェルディナント1世の支配）」、1620–1647 年の `bohemia` に「ボヘミア王国」、`moravia`・`olomouc_1642` に「モラヴィア辺境伯領」、`silesia_cz`・`silesia_pl`・`austrian_silesia` に「シュレジエン」。クロアチアには付けていない。
+- アデン（`aden`）：1517 ottoman[nominal] → 1517 tahirid（残党のアーミル・ブン・ダーウード）、1538 ottoman。`tahirid` に君主アーミル・ブン・ダーウード（1517–38、要確認）、情勢を 1453–1538 に延ばして「アデンだけが 1538 年まで残った」。
+
+### C（反映したもの）
+- ハトヴァン：新設 `hatvan_1544`（HUN-Hatvan）で 1544 ottoman。`hatvan_1552` からハトヴァンを除いた。
+- ホラーサーン：`khorasan` の bukhara を 1589 年から（マシュハド）。アスタラーバード（`pre_khorasan_pre`）と新設 `pre_south_khorasan`（ビールジャンド）は 1589–97 を bukhara[uncertain]。ヘラートは 1588 のまま。
+- コミ：新設 `russia_komi`（until 1647）で 1453 russia[uncertain] → 1472 certain（大ペルミの征服）。ヤロスラヴリ・ロストフ・エルヴダーレンは既存の note に指摘の内容がすでにあった。
+- ウィーナー・ノイシュタット：`lower_austria_1485` の cause にクレムス・シュタインのことを追記。
+- カルマル戦争の出来事：「カルマル（1611）・エルヴスボリ（1612）を占領した」。
+- カザンのハン：サファー・ギレイを 3 回に分け、ジャーン・アリー（1532–35）、シャー・アリーの 1546 年・1551–52 年を別の行に。アストラハン：1532–46 年に「アク・キョベク、アブドゥッラフマーン、デルヴィシュ・アリーほか（たびたび交代、要確認）」の行。
+- サムツヘ：`samtskhe_adjara` に 1535 imereti（ムルジャヘティの戦い）→ 1545 samtskhe（ソホイスタの戦い）、`samtskhe` の君主の note に同じこと。
+- 要確認のうち：ズファール（`pre_dhofar`）の 1624 oman を uncertain にし、note に「1648 年以降とつなぐための近似」と書いた。
+
+### 反映しなかったもの
+- スピシュの13都市（ピースの分割が必要）、1453 年の「ハンガリー」ラベルとブダの重なり（画面の問題）、オトラント（方針どおり）。
+- 要確認：カッシャの 1541–51 年、サナアの 1517 年以前、ジャブル朝のバーレーン（確信が持てないため）。
+
+### 首都（西欧・中欧のレビューの残り。data/cities.yaml）
+- ドレスデン：saxony を 1453 年から（1464–85 年はエルンストとアルブレヒトの共同の宮廷。note に追記）。ナント：brittany 1453–1531。カッセル：hesse_kassel 1453–1647（1648 年以降の項目はそのまま）。マールブルク（新しい都市）：hesse_marburg 1458–1499・1567–1603。どれもその年に地図の所属がその政体であることを確かめた。
+
+### 1648 年以後を変えた所
+- 所属（owner・overlord・certainty・label）・宗教・言語は変えていない（作業前の atlas.json と 1648–2025 をピース単位で比べて差なし）。
+- 色だけ：**lithuania・russia・norway・bukhara**（1648 年以降の地図にも出る。リトアニアは 1918 年からの独立国、ロシアは全期間、ノルウェーは 1905 年から、ブハラは 1920 年まで）、kakheti（–1761）、aq_qoyunlu（1648 年以降はない）。
+
+### 確認
+- `npm run data`：警告なし。`--missing 1453,1480,1500,1520,1526,1527,1530,1535,1545,1550,1570,1589,1590,1595,1600,1610,1620,1635,1647`（HUN SVK AUT SVN HRV SRB ROU MDA UKR CZE POL IRN YEM OMN GEO RUS SWE NOR DNK LTU TKM UZB AFG）がゼロ。
+- snapshot（scratchpad の fix1453e/snap）：1526・1527・1552・1597・1600・1625 の中欧（1526 年は西の国境だけ王領ハンガリー、1597 年はワラキアにトランシルヴァニアの帯・モルダヴィアにポーランドの帯と斜線）、1561 の北欧（リトアニアの橙とスウェーデンの黄が分かれる）、1503・1530・1590・1600 の中東（白羊朝の黄緑、ブハラのピンク、カヘティの藤色）、1820・2020 のロシア周辺。

@@ -1,7 +1,402 @@
-# 担当 D（ハプスブルク領）の出来事（1648–1815）
+# 担当 D（ハプスブルク領）の出来事（1453–）
 # europe.yaml にあるもの（ウィーン包囲、カルロヴィッツ条約、パッサロヴィッツ条約、オーストリア継承戦争、七年戦争、ポーランド分割、
 # カンポ・フォルミオ条約、プレスブルク条約、オーストリア帝国の成立など）は重複して書かない。
 
+# ---- 1453–1647 ----
+- year: 1453
+  date: "1453-10-28"
+  title: ラディスラウス・ポストゥムスがボヘミア王に戴冠
+  text: オーストリア公・ハンガリー王を兼ねる13歳の王。ボヘミアの実権は摂政イジー・ス・ポジェブラトが握った。
+  polities: [bohemia, hungary, habsburg]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ラディスラウス・ポストゥムス"
+
+- year: 1453
+  title: フリードリヒ3世がオーストリアを大公国と認める
+  text: 皇帝フリードリヒ3世が、ルドルフ4世の偽造した「大特許状（プリヴィレギウム・マイウス）」を正式に認め、ハプスブルク家は大公の称号を名乗るようになった。
+  polities: [habsburg, hre]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Privilegium_Maius"
+
+- year: 1456
+  date: "1456-07-22"
+  title: ベオグラード（ナンドルフェヘールヴァール）の戦い
+  text: フニャディ・ヤーノシュと修道士カピストラーノのヨハネの率いるハンガリー軍と十字軍が、メフメト2世のベオグラード包囲を退けた。ハンガリーの南の守りは以後70年近く保たれた。正午の鐘はこの勝利を記念するといわれる。
+  polities: [hungary, ottoman]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ベオグラード包囲戦_(1456年)"
+  at: [20.46, 44.82]
+
+- year: 1456
+  date: "1456-11-09"
+  title: ツェリェ伯家の断絶
+  text: ツェリェ伯ウルリヒ2世がベオグラードでフニャディ家の者に殺され、伯家が絶えた。広い遺領はハプスブルク家のフリードリヒ3世が継いだ。
+  polities: [celje, habsburg, hungary]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Counts_of_Celje"
+
+- year: 1458
+  title: マーチャーシュ1世がハンガリー王に、イジー・ス・ポジェブラトがボヘミア王に
+  text: ラディスラウス・ポストゥムスの急死（1457）を受け、両国はそれぞれ国内の有力者から王を選んだ。マーチャーシュはフニャディ・ヤーノシュの子。
+  polities: [hungary, bohemia]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/マーチャーシュ1世"
+
+- year: 1462
+  title: ウィーンの市民がフリードリヒ3世を王宮に包囲
+  text: 弟アルブレヒト6世と結んだウィーン市民が皇帝を王宮に閉じ込めた。翌年アルブレヒトが死に、オーストリアは再び皇帝のもとに統合された。
+  polities: [habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Albert_VI,_Archduke_of_Austria"
+
+- year: 1468
+  title: ボヘミア戦争の始まり
+  text: 教皇に破門されたフス派の王イジーに対し、マーチャーシュ1世が十字軍として宣戦。1469年にオロモウツでカトリック派がマーチャーシュをボヘミア王に選んだ。
+  polities: [hungary, bohemia]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"
+
+- year: 1471
+  title: ヴラジスラフ2世がボヘミア王に
+  text: イジー・ス・ポジェブラトの死後、ポーランド王カジミェシュ4世の子ヴラジスラフが選ばれた。ボヘミアはヤゲウォ家の時代に入る。
+  polities: [bohemia, poland]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"
+
+- year: 1479
+  title: オロモウツの和約
+  text: ボヘミア王を2人が名乗ったまま、ボヘミア本土はヴラジスラフ2世、モラヴィア・シュレジエン・ラウジッツはマーチャーシュ1世が治めることになった。
+  polities: [hungary, bohemia]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Peace_of_Olomouc"
+  at: [17.25, 49.59]
+
+- year: 1485
+  date: "1485-06-01"
+  title: マーチャーシュ1世がウィーンを占領
+  text: 皇帝フリードリヒ3世との戦争で、ハンガリー軍がウィーンを落とした。マーチャーシュはウィーンに宮廷を移し、1490年に死ぬまで下オーストリアを支配した。
+  polities: [hungary, habsburg]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Siege_of_Vienna_(1485)"
+  at: [16.37, 48.21]
+
+- year: 1485
+  title: クトナー・ホラの宗教和議
+  text: ボヘミアの議会で、カトリックとフス派（ウトラキスト）が互いの信仰を認め合った。宗派の共存を定めたヨーロッパでも早い例。
+  polities: [bohemia]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Religious_peace_of_Kutná_Hora"
+  at: [15.27, 49.95]
+
+- year: 1490
+  title: マーチャーシュ1世の死とウラースロー2世の即位
+  text: 嫡子のいなかったマーチャーシュの死後、ハンガリーの貴族はボヘミア王ヴラジスラフ2世を王に選んだ。黒軍は解散し、王権は弱まった。マクシミリアン1世はウィーンを取り戻した。
+  polities: [hungary, bohemia, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/マーチャーシュ1世"
+
+- year: 1491
+  date: "1491-11-07"
+  title: プレスブルク（ポジョニ）の和約
+  text: ウラースロー2世とマクシミリアン1世の和約。ウラースローに男子がいなければハンガリー王位はハプスブルク家が継ぐと定め、のちのハプスブルク家のハンガリー支配の根拠となった。
+  polities: [hungary, habsburg]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Peace_of_Pressburg_(1491)"
+  at: [17.11, 48.14]
+
+- year: 1500
+  title: ゴリツィア伯家の断絶
+  text: 最後のゴリツィア伯レオンハルトが死に、ゴリツィア・リエンツなどの伯領をマクシミリアン1世が継いだ。
+  polities: [gorizia, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/County_of_Gorizia"
+
+- year: 1514
+  title: ドージャ・ジェルジの農民反乱
+  text: 対オスマン十字軍に集められた農民が、ドージャ・ジェルジに率いられて領主に反乱した。鎮圧の後、議会は農民の移動の自由を奪う法（永代農奴制）を定めた。
+  polities: [hungary]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ドージャ・ジェルジ"
+
+- year: 1515
+  title: ウィーンの二重結婚の取り決め
+  text: マクシミリアン1世とヤゲウォ家のウラースロー2世・ジグムント1世（ポーランド王）がウィーンで会い、孫フェルディナントとアンナ、ラヨシュ2世とマリアの結婚を決めた。ボヘミア・ハンガリーがハプスブルク家に移る道を開いた。
+  polities: [habsburg, hungary, bohemia, poland]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/First_Congress_of_Vienna"
+  at: [16.37, 48.21]
+
+- year: 1522
+  title: ハプスブルク家の領地の分割（ブリュッセルの取り決め）
+  text: カール5世がオーストリアの世襲領を弟フェルディナント（1世）に譲った。ハプスブルク家は、のちのスペイン系とオーストリア系に分かれていく。
+  polities: [habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
+
+- year: 1526
+  date: "1526-08-29"
+  title: モハーチの戦い
+  text: スレイマン1世の軍にハンガリー軍が大敗し、ラヨシュ2世が逃げる途中で溺死した。ヤゲウォ家が絶え、ボヘミアとハンガリーの王位はハプスブルク家のフェルディナント1世とサポヤイ・ヤーノシュの争いになった。
+  polities: [hungary, ottoman, bohemia, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/モハーチの戦い_(1526年)"
+  at: [18.68, 45.99]
+
+- year: 1526
+  date: "1526-10-23"
+  title: フェルディナント1世がボヘミア王に選ばれる
+  text: ボヘミアの諸身分が、ラヨシュ2世の姉アンナの夫フェルディナント1世を王に選んだ。ハプスブルク家のボヘミア支配（1918年まで）の始まり。
+  polities: [bohemia, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
+
+- year: 1526
+  date: "1526-11-11"
+  title: ハンガリーの二重王選挙
+  text: 11月にサポヤイ・ヤーノシュがセーケシュフェヘールヴァールで戴冠し、12月にはプレスブルクの議会がフェルディナント1世を王に選んだ。翌年1月にはクロアチアの議会（ツェティン）もフェルディナントを選んだ。
+  polities: [hungary, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+
+- year: 1529
+  title: スレイマン1世がブダをサポヤイ・ヤーノシュに与える
+  text: ウィーンに向かう途中、スレイマン1世はブダを奪ってサポヤイに与えた。サポヤイはオスマン帝国の保護を受ける王となった。
+  polities: [ottoman, hungary, habsburg]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+  at: [19.04, 47.5]
+
+- year: 1529
+  date: "1529-09-27"
+  title: 第1次ウィーン包囲
+  text: スレイマン1世が約12万の大軍でウィーンを囲んだが、守備隊の抵抗と悪天候・補給難で約3週間後に撤退した。オスマン帝国の中欧への進出の限界を示した。
+  polities: [ottoman, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"
+  at: [16.37, 48.21]
+
+- year: 1532
+  title: クーセグ（ギュンス）の包囲
+  text: 再びウィーンをめざしたスレイマン1世の軍を、ユリシチ・ミクローシュの小さな守備隊が約1か月食い止め、遠征は失敗に終わった。
+  polities: [ottoman, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Siege_of_Güns"
+  at: [16.54, 47.39]
+
+- year: 1537
+  title: クリス要塞の陥落とゴルヤニの戦い
+  text: ダルマチアの要衝クリスがオスマン軍に落ち、スラヴォニアではゴルヤニの戦いで皇帝軍が大敗した。クロアチアは「かつての王国の残りの残り」と呼ばれるまでに縮んだ。
+  polities: [ottoman, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Siege_of_Klis"
+  at: [16.52, 43.56]
+
+- year: 1538
+  title: ヴァーラド（ナジヴァーラド）の和約
+  text: サポヤイ・ヤーノシュとフェルディナント1世が互いの王位と支配地を認め、サポヤイの死後はフェルディナントがハンガリー全土を継ぐと約束した。翌々年サポヤイに男子が生まれ、約束は守られなかった。
+  polities: [hungary, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Treaty_of_Nagyvárad"
+  at: [21.93, 47.06]
+
+- year: 1541
+  date: "1541-08-29"
+  title: ブダの陥落とハンガリーの三分割
+  text: スレイマン1世がブダを占領してブダ州を置いた。ハンガリーは西部・北部の王領ハンガリー（ハプスブルク家）、中部のオスマン領、東部のヤーノシュ・ジグモンドの東ハンガリー王国（のちのトランシルヴァニア公国）に分かれ、約150年続いた。
+  polities: [ottoman, habsburg, transylvania, hungary]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ブダ包囲戦_(1541年)"
+  at: [19.04, 47.5]
+
+- year: 1547
+  title: アドリアノープル（エディルネ）の休戦
+  text: フェルディナント1世とカール5世がオスマン帝国と5年の休戦を結び、王領ハンガリーの分として毎年3万ドゥカートを貢納することを認めた。
+  polities: [habsburg, ottoman]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Truce_of_Adrianople_(1547)"
+
+- year: 1552
+  title: エゲルの包囲
+  text: テメシュヴァール・ソルノクを落としたオスマン軍が北部の要衝エゲルを囲んだが、ドボー・イシュトヴァーンの守備隊と町の女たちが守り抜いた。ハンガリーの国民的な物語となった。
+  polities: [ottoman, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Siege_of_Eger_(1552)"
+  at: [20.38, 47.9]
+
+- year: 1566
+  date: "1566-09-08"
+  title: シゲトヴァールの戦い
+  text: ズリーニ・ミクローシュが守るシゲトヴァールが1か月余りの包囲の末に陥落し、ズリーニは最後の突撃で戦死した。スレイマン1世もこの陣中で病死した。
+  polities: [ottoman, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/シゲトヴァールの戦い"
+  at: [17.8, 46.05]
+
+- year: 1568
+  title: トルダの議会（宗教の自由）
+  text: 東ハンガリー王国（トランシルヴァニア）の議会が、カトリック・ルター派・カルヴァン派・ユニテリアンの説教の自由を認めた。ヨーロッパで最も早い宗教寛容の法の一つ。
+  polities: [transylvania]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Edict_of_Torda"
+  at: [23.8, 46.57]
+
+- year: 1570
+  title: シュパイアー条約
+  text: ヤーノシュ・ジグモンドがハンガリー王の称号を捨ててマクシミリアン2世を王と認め、トランシルヴァニア公国（パルティウムを含む）の公となった。
+  polities: [transylvania, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Treaty_of_Speyer_(1570)"
+
+- year: 1573
+  title: クロアチア・スロヴェニアの農民反乱
+  text: マティヤ・グベツに率いられたクロアチア北部（ザゴリエ）とスロヴェニアの農民が領主の重い負担に反乱し、ザグレブ近くのストゥビツァで鎮圧された。
+  polities: [habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Croatian–Slovene_Peasant_Revolt"
+  at: [15.95, 45.97]
+
+- year: 1578
+  title: 軍政国境地帯の整備
+  text: オスマン帝国に備え、ブルック・アン・デア・ムーアの会議でクロアチア・スラヴォニアの防衛線（軍政国境地帯）を内オーストリアの諸身分が支える体制が整えられた。翌1579年に要塞都市カルロヴァツが築かれた。
+  polities: [habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Military_Frontier"
+  at: [15.55, 45.49]
+
+- year: 1583
+  title: ルドルフ2世が宮廷をプラハに移す
+  text: 皇帝ルドルフ2世はプラハに住み、ティコ・ブラーエやケプラーなど学者・芸術家を集めた。プラハは帝国の文化の中心となった。
+  polities: [habsburg, bohemia]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ルドルフ2世_(神聖ローマ皇帝)"
+  at: [14.42, 50.09]
+
+- year: 1593
+  date: "1593-06-22"
+  title: シサクの戦いと長期戦争（十五年戦争）の始まり
+  text: シサクでクロアチア軍がボスニア州総督ハサン・パシャの軍を破った。これをきっかけに、オスマン帝国と皇帝の長期戦争（1593–1606）が始まった。
+  polities: [habsburg, ottoman]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Long_Turkish_War"
+  at: [16.37, 45.48]
+
+- year: 1596
+  date: "1596-10-26"
+  title: メゼーケレステシュの戦い
+  text: エゲルを落としたメフメト3世の軍が、皇帝・トランシルヴァニア連合軍を破った。長期戦争で最大の会戦。
+  polities: [ottoman, habsburg, transylvania]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Battle_of_Mezőkeresztes"
+  at: [20.7, 47.83]
+
+- year: 1604
+  title: ボチカイ・イシュトヴァーンの反乱
+  text: 皇帝軍の略奪と新教徒への圧迫に対し、東部の大貴族ボチカイがハイドゥー（傭兵の牧夫）を率いて反乱し、上部ハンガリーとトランシルヴァニアを押さえた。
+  polities: [transylvania, habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"
+
+- year: 1606
+  date: "1606-11-11"
+  title: ジトヴァトロク条約
+  text: 長期戦争を終える条約。オスマン帝国は皇帝を対等の称号で呼ぶことを認め、王領ハンガリーの貢納は一時金に代えられた。同じ年のウィーン和約でボチカイはトランシルヴァニア公として認められた。
+  polities: [habsburg, ottoman, transylvania]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Peace_of_Zsitvatorok"
+  at: [18.1, 47.75]
+
+- year: 1608
+  title: リーベン条約（兄弟争い）
+  text: ルドルフ2世が、弟マティアスにハンガリー・オーストリア・モラヴィアを譲った。1611年にはボヘミア王位も失った。
+  polities: [habsburg, bohemia]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Treaty_of_Lieben"
+  at: [14.48, 50.11]
+
+- year: 1609
+  title: ルドルフ2世の勅許状
+  text: ルドルフ2世がボヘミアの新教徒の諸身分に信仰の自由を認めた。これを破ったことが、のちのボヘミアの反乱の原因となった。
+  polities: [bohemia, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Letter_of_Majesty"
+
+- year: 1618
+  date: "1618-05-23"
+  title: プラハ窓外投擲事件
+  text: 新教徒の貴族が国王代官2人と書記をプラハ城の窓から投げ落とした。ボヘミアの反乱が起こり、三十年戦争が始まった。
+  polities: [bohemia, habsburg]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/プラハ窓外投擲事件"
+  at: [14.4, 50.09]
+
+- year: 1619
+  date: "1619-08-26"
+  title: フリードリヒ5世がボヘミア王に選ばれる
+  text: 反乱したボヘミアの諸身分が、フェルディナント2世を廃してプファルツ選帝侯フリードリヒ5世を王に選んだ。トランシルヴァニア公ベトレン・ガーボルも反乱に加わり、ウィーンに迫った。
+  polities: [bohemia, habsburg, transylvania]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/フリードリヒ5世_(プファルツ選帝侯)"
+
+- year: 1620
+  date: "1620-11-08"
+  title: 白山の戦い
+  text: プラハ郊外で皇帝・カトリック連盟軍がボヘミア軍を破り、フリードリヒ5世（冬王）は亡命した。翌年プラハで反乱の指導者27人が処刑され、新教徒の貴族の領地は没収された。
+  polities: [bohemia, habsburg, bavaria, palatinate]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/白山の戦い"
+  at: [14.32, 50.08]
+
+- year: 1621
+  date: "1621-12-31"
+  title: ニコルスブルク条約
+  text: ベトレン・ガーボルがハンガリー王の称号を捨てる代わりに、上部ハンガリー東部の7県を終身で得た。
+  polities: [transylvania, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"
+  at: [16.64, 48.81]
+
+- year: 1626
+  title: 上オーストリアの農民戦争
+  text: バイエルンの質入れ支配とカトリックの強制に対し、上オーストリアの農民がシュテファン・ファディンガーに率いられて蜂起したが、パッペンハイムの軍に鎮圧された。
+  polities: [bavaria, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Upper_Austrian_Peasants'_War_of_1626"
+  at: [14.02, 48.3]
+
+- year: 1627
+  title: ボヘミアの改訂領邦条例
+  text: フェルディナント2世がボヘミアを選挙王国からハプスブルク家の世襲王国に変え、カトリック以外の信仰を禁じた。約15万人の新教徒が国外に逃れた（コメニウスもその一人）。
+  polities: [habsburg, bohemia]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Renewed_Land_Ordinance"
+
+- year: 1634
+  date: "1634-02-25"
+  title: ヴァレンシュタインの暗殺
+  text: 皇帝軍の総司令官ヴァレンシュタインが、スウェーデンとの密かな交渉を疑われ、ボヘミアのヘプ（エーガー）で皇帝の命を受けた将校たちに殺された。
+  polities: [habsburg]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アルブレヒト・フォン・ヴァレンシュタイン"
+  at: [12.37, 50.08]
+
+- year: 1642
+  title: スウェーデン軍がオロモウツを占領
+  text: トルステンソンのスウェーデン軍がモラヴィアの首都オロモウツを落とし、1650年まで占領した。
+  polities: [sweden, habsburg]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Swedish_occupation_of_Olomouc"
+  at: [17.25, 49.59]
+
+- year: 1645
+  date: "1645-03-06"
+  title: ヤンカウの戦いとスウェーデン軍のウィーン接近
+  text: トルステンソンのスウェーデン軍がボヘミアのヤンカウ（ヤンコフ）で皇帝軍を破り、ウィーンの対岸まで迫った。ラーコーツィ・ジェルジ1世も呼応したが、12月のリンツ条約で皇帝と和解した。
+  polities: [sweden, habsburg, transylvania]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Battle_of_Jankau"
+  at: [14.73, 49.63]
+
+# ---- 1648– ----
 - year: 1648
   date: "1648-10-11"
   title: ラーコーツィ・ジェルジ2世がトランシルヴァニア公に

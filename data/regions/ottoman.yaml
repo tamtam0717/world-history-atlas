@@ -9,6 +9,9 @@
     iso: [BIH, SRB, XKX, MNE, ALB, MKD, GRC, BGR, TUR, CYP, SYR, LBN, ISR, JOR, IRQ]
     pieces: [118-Gaza_Strip, 124-No_Man_s_Land, 126-Sanafir_Tiran_Is, 129-West_Bank]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "ottoman"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
 
@@ -18,6 +21,13 @@
   select:
     adm1: [ROU/ARGES, ROU/BUCURESTI, ROU/BUZAU, ROU/CALARASI, ROU/DAMBOVITA, ROU/GIURGIU, ROU/IALOMITA, ROU/ILFOV, ROU/PRAHOVA, ROU/TELEORMAN]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "wallachia", overlord: "ottoman"}
+    - {from: 1595, owner: "wallachia", overlord: "transylvania", cause: "ミハイ勇敢公がオスマン帝国に背き（1594）、アルバ・ユリア条約（5月）でトランシルヴァニア公ジグモンド・バートリの宗主権を認める。カルガレニの戦い（8月）でオスマン軍を退ける", source: "https://ja.wikipedia.org/wiki/ミハイ勇敢公"}
+    - {from: 1598, owner: "wallachia", overlord: "habsburg", cause: "ミハイ勇敢公が皇帝ルドルフ2世と条約を結び（6月）、皇帝の宗主権を認める", source: "https://en.wikipedia.org/wiki/Michael_the_Brave"}
+    - {from: 1600, owner: "wallachia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ミハイ勇敢公がミラスラウの戦い（9月）に敗れ、ポーランド軍がシミオン・モヴィラを公に立てる（オスマン帝国も認める）", source: "https://en.wikipedia.org/wiki/Simion_Movilă"}
+    - {from: 1602, owner: "wallachia", overlord: "ottoman", cause: "ラドゥ・シェルバンがシミオン・モヴィラを破って公となる。1603年にオスマン帝国も認め、宗主権が戻る", source: "https://en.wikipedia.org/wiki/Radu_Șerban"}
+    # ---- 1648– ----
     - from: 1648
       owner: wallachia
       overlord: ottoman
@@ -40,6 +50,10 @@
   select:
     adm1: [ROU/BRAILA]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "wallachia", overlord: "ottoman"}
+    - {from: 1540, owner: "ottoman", cause: "オスマン帝国がブライラを直轄地（ラヤ）にする", source: "https://en.wikipedia.org/wiki/Brăila"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1829
@@ -67,6 +81,13 @@
   select:
     adm1: [ROU/DOLJ, ROU/GORJ, ROU/MEHEDINTI, ROU/OLT, ROU/VALCEA]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "wallachia", overlord: "ottoman"}
+    - {from: 1595, owner: "wallachia", overlord: "transylvania", cause: "ミハイ勇敢公がオスマン帝国に背き（1594）、アルバ・ユリア条約（5月）でトランシルヴァニア公ジグモンド・バートリの宗主権を認める。カルガレニの戦い（8月）でオスマン軍を退ける", source: "https://ja.wikipedia.org/wiki/ミハイ勇敢公"}
+    - {from: 1598, owner: "wallachia", overlord: "habsburg", cause: "ミハイ勇敢公が皇帝ルドルフ2世と条約を結び（6月）、皇帝の宗主権を認める", source: "https://en.wikipedia.org/wiki/Michael_the_Brave"}
+    - {from: 1600, owner: "wallachia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ミハイ勇敢公がミラスラウの戦い（9月）に敗れ、ポーランド軍がシミオン・モヴィラを公に立てる（オスマン帝国も認める）", source: "https://en.wikipedia.org/wiki/Simion_Movilă"}
+    - {from: 1602, owner: "wallachia", overlord: "ottoman", cause: "ラドゥ・シェルバンがシミオン・モヴィラを破って公となる。1603年にオスマン帝国も認め、宗主権が戻る", source: "https://en.wikipedia.org/wiki/Radu_Șerban"}
+    # ---- 1648– ----
     - from: 1648
       owner: wallachia
       overlord: ottoman
@@ -97,6 +118,14 @@
   select:
     adm1: [ROU/BACAU, ROU/BOTOSANI, ROU/GALATI, ROU/IASI, ROU/NEAMT, ROU/VASLUI, ROU/VRANCEA]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "moldavia", note: "ポーランド王に臣従していた"}
+    - {from: 1456, owner: "moldavia", overlord: "ottoman", cause: "モルダヴィア公がオスマン帝国への貢納を始める", source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"}
+    - {from: 1473, owner: "moldavia", cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475 年ヴァスルイの戦い）", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1489, owner: "moldavia", overlord: "ottoman", cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1595, owner: "moldavia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ポーランドの宰相ザモイスキがイェレミア・モヴィラを公に立て（8–9月）、モルダヴィアはポーランドの保護下に（オスマン帝国にも貢納を続けた）", source: "https://en.wikipedia.org/wiki/Ieremia_Movilă"}
+    - {from: 1611, owner: "moldavia", overlord: "ottoman", cause: "オスマン帝国がシュテファン・トムシャ2世を立て、モヴィラ家（ポーランドの後ろ盾）が追われる（1612年にポーランドの貴族軍も敗れる）", source: "https://en.wikipedia.org/wiki/Ștefan_Tomșa_II"}
+    # ---- 1648– ----
     - from: 1648
       owner: moldavia
       overlord: ottoman
@@ -115,6 +144,14 @@
   select:
     adm1: [ROU/SUCEAVA]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "moldavia", note: "ポーランド王に臣従していた"}
+    - {from: 1456, owner: "moldavia", overlord: "ottoman", cause: "モルダヴィア公がオスマン帝国への貢納を始める", source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"}
+    - {from: 1473, owner: "moldavia", cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475 年ヴァスルイの戦い）", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1489, owner: "moldavia", overlord: "ottoman", cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1595, owner: "moldavia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ポーランドの宰相ザモイスキがイェレミア・モヴィラを公に立て（8–9月）、モルダヴィアはポーランドの保護下に（オスマン帝国にも貢納を続けた）", source: "https://en.wikipedia.org/wiki/Ieremia_Movilă"}
+    - {from: 1611, owner: "moldavia", overlord: "ottoman", cause: "オスマン帝国がシュテファン・トムシャ2世を立て、モヴィラ家（ポーランドの後ろ盾）が追われる（1612年にポーランドの貴族軍も敗れる）", source: "https://en.wikipedia.org/wiki/Ștefan_Tomșa_II"}
+    # ---- 1648– ----
     - from: 1648
       owner: moldavia
       overlord: ottoman
@@ -131,6 +168,9 @@
   select:
     adm1: [ROU/CONSTANTA, ROU/TULCEA]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "ottoman"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1878
@@ -148,6 +188,14 @@
     iso: [MDA]
     exclude: [MDA-Transnistria]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "moldavia", note: "ポーランド王に臣従していた"}
+    - {from: 1456, owner: "moldavia", overlord: "ottoman", cause: "モルダヴィア公がオスマン帝国への貢納を始める", source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"}
+    - {from: 1473, owner: "moldavia", cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475 年ヴァスルイの戦い）", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1489, owner: "moldavia", overlord: "ottoman", cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1595, owner: "moldavia", overlord: "poland_lithuania", certainty: "uncertain", cause: "ポーランドの宰相ザモイスキがイェレミア・モヴィラを公に立て（8–9月）、モルダヴィアはポーランドの保護下に（オスマン帝国にも貢納を続けた）", source: "https://en.wikipedia.org/wiki/Ieremia_Movilă"}
+    - {from: 1611, owner: "moldavia", overlord: "ottoman", cause: "オスマン帝国がシュテファン・トムシャ2世を立て、モヴィラ家（ポーランドの後ろ盾）が追われる（1612年にポーランドの貴族軍も敗れる）", source: "https://en.wikipedia.org/wiki/Ștefan_Tomșa_II"}
+    # ---- 1648– ----
     - from: 1648
       owner: moldavia
       overlord: ottoman
@@ -161,6 +209,13 @@
   select:
     pieces: [MDA-Bender, MDA-Causeni, MDA-Stefan_Voda, MDA-Basarabeasca, MDA-Taraclia, MDA-Gagauzia]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "moldavia", note: "ポーランド王に臣従していた"}
+    - {from: 1456, owner: "moldavia", overlord: "ottoman", cause: "モルダヴィア公がオスマン帝国への貢納を始める", source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"}
+    - {from: 1473, owner: "moldavia", cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475 年ヴァスルイの戦い）", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1489, owner: "moldavia", overlord: "ottoman", cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開", source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"}
+    - {from: 1538, owner: "ottoman", cause: "スレイマン1世のモルダヴィア遠征。ベンデル（ティギナ）とブジャクを直轄地とする", source: "https://en.wikipedia.org/wiki/Bender,_Moldova"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1812
@@ -174,6 +229,10 @@
   select:
     pieces: [MDA-Transnistria]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "lithuania", certainty: "uncertain", label: "リトアニア大公国（ポドリア）"}
+    - {from: 1538, owner: "ottoman", certainty: "uncertain", cause: "スレイマン1世のモルダヴィア遠征。オスマン帝国とクリミア＝ハン国が黒海北岸の草原（イェディサン）を押さえる（担当 F のイェディサンと同じく不確実）", source: "https://en.wikipedia.org/wiki/Yedisan"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1792
@@ -197,6 +256,14 @@
   select:
     adm1: [ROU/ALBA, ROU/BISTRITA-NASAUD, ROU/BRASOV, ROU/CLUJ, ROU/COVASNA, ROU/HARGHITA, ROU/HUNEDOARA, ROU/MURES, ROU/SIBIU, ROU/SALAJ, ROU/MARAMURES]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
+    - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", label: "トランシルヴァニア（フェルディナント1世の支配）", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    # ---- 1648– ----
     - from: 1648
       owner: transylvania
       overlord: ottoman
@@ -221,6 +288,21 @@
   select:
     adm1: [ROU/SATU MARE]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
+    - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1565, owner: "habsburg", label: "王領ハンガリー", cause: "皇帝軍（シュヴェンディ）がトカイ・サトマールを奪う（1570年のシュパイアー条約で確定）", source: "https://en.wikipedia.org/wiki/Treaty_of_Speyer_(1570)"}
+    - {from: 1605, owner: "transylvania", overlord: "ottoman", cause: "ボチカイ・イシュトヴァーンの反乱。1606年のウィーン和約でサボルチ・サトマールなどを終身で得る", source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"}
+    - {from: 1607, owner: "habsburg", label: "王領ハンガリー", cause: "ボチカイの死（1606年12月）で王領ハンガリーに戻る", source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"}
+    - {from: 1621, owner: "transylvania", overlord: "ottoman", cause: "ニコルスブルク条約（12月31日）で、ベトレン・ガーボルが上部ハンガリー東部の7県を終身で得る", source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"}
+    - {from: 1630, owner: "habsburg", label: "王領ハンガリー", cause: "ベトレン・ガーボルの死（1629年11月）で7県が王領ハンガリーに戻る", source: "https://ja.wikipedia.org/wiki/ベトレン・ガーボル"}
+    - {from: 1645, owner: "transylvania", overlord: "ottoman", cause: "リンツ条約（12月）で、ラーコーツィ・ジェルジ1世が上部ハンガリー東部の7県を終身で得る", source: "https://en.wikipedia.org/wiki/Peace_of_Linz"}
+    # ---- 1648– ----
     - from: 1648
       owner: transylvania
       overlord: ottoman
@@ -256,6 +338,15 @@
   select:
     adm1: [ROU/BIHOR]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
+    - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    # ---- 1648– ----
     - from: 1648
       owner: transylvania
       overlord: ottoman
@@ -289,6 +380,13 @@
   select:
     adm1: [ROU/ARAD]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。サポヤイの子ヤーノシュ・ジグモンドの東ハンガリー王国がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1552, owner: "ottoman", certainty: "uncertain", cause: "リッパ（リポヴァ）とアラドが陥落", source: "https://en.wikipedia.org/wiki/Eyalet_of_Temeşvar"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: uncertain
@@ -316,6 +414,13 @@
   select:
     adm1: [ROU/TIMIS]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。サポヤイの子ヤーノシュ・ジグモンドの東ハンガリー王国がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1552, owner: "ottoman", cause: "テメシュヴァール（ティミショアラ）が陥落し、テメシュヴァール州が置かれる", source: "https://en.wikipedia.org/wiki/Siege_of_Temesvár"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1716
@@ -341,6 +446,14 @@
   select:
     adm1: [ROU/CARAS-SEVERIN]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
+    - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", label: "トランシルヴァニア（フェルディナント1世の支配）", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    # ---- 1648– ----
     - from: 1648
       owner: transylvania
       overlord: ottoman
@@ -373,6 +486,12 @@
     adm1: [SRB/North Backa District, SRB/West Backa District, SRB/South Backa District]
     pieces: [SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Kanjiza_Municipality, SRB-Sid_Municipality, SRB-Irig_Municipality, SRB-Indjija_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary"}
+    - {from: 1527, owner: "habsburg", label: "王領ハンガリー", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "ottoman", cause: "ブダの陥落。ハンガリー中部はオスマン帝国の直轄領（ブディン州）に", source: "https://ja.wikipedia.org/wiki/オスマン帝国領ハンガリー"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1687
@@ -396,6 +515,10 @@
   select:
     pieces: [SRB-Sremska_Mitrovica_City, SRB-Ruma_Municipality, SRB-Pecinci_Municipality, SRB-Stara_Pazova_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary"}
+    - {from: 1526, owner: "ottoman", cause: "ペトロヴァラディンなどスレムの要塞が落ち、モハーチの戦いでハンガリー軍が敗れる", source: "https://ja.wikipedia.org/wiki/モハーチの戦い"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1718
@@ -420,6 +543,13 @@
     adm1: [SRB/Central Banat District, SRB/South Banat District, SRB/North Banat District]
     exclude: [SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Kanjiza_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hungary"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
+    - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。サポヤイの子ヤーノシュ・ジグモンドの東ハンガリー王国がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", label: "王領ハンガリー", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1552, owner: "ottoman", cause: "テメシュヴァール（ティミショアラ）が陥落し、テメシュヴァール州が置かれる", source: "https://en.wikipedia.org/wiki/Siege_of_Temesvár"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1716
@@ -448,6 +578,10 @@
   select:
     adm1: [SRB/Belgrade, SRB/Macva District, SRB/Kolubara District, SRB/Sumadija District, SRB/Pomoravlje District, SRB/Podunavlje District, SRB/Branicevo District, SRB/Bor District, SRB/Moravica District]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "serbia_despotate", overlord: "ottoman"}
+    - {from: 1459, owner: "ottoman", cause: "スメデレヴォの陥落でセルビア専制公国が滅ぶ（6月）", source: "https://ja.wikipedia.org/wiki/セルビア公国_(中世)"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1718
@@ -490,6 +624,13 @@
   select:
     pieces: [BIH-Posavina_Canton, BIH-Brcko_District]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "bosnia_kingdom"}
+    - {from: 1463, owner: "ottoman", cause: "メフメト2世がボスニアを征服し、最後の王スチェパン・トマシェヴィチを処刑", source: "https://ja.wikipedia.org/wiki/ボスニア王国"}
+    - {from: 1464, owner: "hungary"}
+    - {from: 1527, owner: "habsburg", cause: "スラヴォニアの諸侯は初めサポヤイ・ヤーノシュを推したが、やがてフェルディナント1世に従う", source: "https://en.wikipedia.org/wiki/Kingdom_of_Slavonia"}
+    - {from: 1536, owner: "ottoman", cause: "オスマン軍がスラヴォニア東部とサヴァ川沿いを攻め落とす", source: "https://en.wikipedia.org/wiki/Ottoman_conquest_of_Bosnia_and_Herzegovina"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1718
@@ -516,6 +657,11 @@
   select:
     pieces: [MNE-Cetinje_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "zeta"}
+    - {from: 1496, owner: "ottoman", cause: "ジュラジ・ツルノイェヴィチが追われ、ゼタはスクタリ県に入る", source: "https://en.wikipedia.org/wiki/Zeta_under_the_Crnojević"}
+    - {from: 1516, owner: "montenegro", overlord: "ottoman", certainty: "uncertain", cause: "ツェティニェの府主教（ヴラディカ）が山地の指導者となる（主教公国の始まりとされる）", source: "https://en.wikipedia.org/wiki/Prince-Bishopric_of_Montenegro"}
+    # ---- 1648– ----
     - from: 1648
       owner: montenegro
       overlord: ottoman
@@ -539,6 +685,10 @@
   select:
     pieces: [MNE-Podgorica_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "zeta"}
+    - {from: 1474, owner: "ottoman", certainty: "nominal", cause: "オスマン軍がポドゴリツァを奪う", source: "https://en.wikipedia.org/wiki/Podgorica"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -566,6 +716,10 @@
   select:
     pieces: [MNE-Danilovgrad_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "zeta"}
+    - {from: 1496, owner: "ottoman", certainty: "nominal", cause: "ゼタの滅亡", source: "https://en.wikipedia.org/wiki/Zeta_under_the_Crnojević"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -587,6 +741,9 @@
   select:
     pieces: [MNE-Kotor_Municipality, MNE-Tivat_Municipality, MNE-Budva_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1797
@@ -622,6 +779,10 @@
   select:
     pieces: [MNE-Herceg_Novi_Municipality]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "herzegovina"}
+    - {from: 1482, owner: "ottoman", cause: "最後の拠点ヘルツェグ・ノヴィが陥落し、ヘルツェゴヴィナ公領が滅ぶ", source: "https://en.wikipedia.org/wiki/Herceg_Novi"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1687
@@ -665,6 +826,10 @@
   select:
     adm1: [GRC/Crete]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "venice", label: "カンディア王国（ヴェネツィア領）"}
+    - {from: 1647, owner: "ottoman", certainty: "occupied", cause: "クレタ戦争：オスマン軍が島の大半を占領し、カンディア（イラクリオン）を囲む", source: "https://ja.wikipedia.org/wiki/クレタ戦争_(1645年-1669年)"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: occupied
@@ -698,6 +863,10 @@
   select:
     pieces: [GRC-Heraklion]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "venice", label: "カンディア王国（ヴェネツィア領）"}
+    - {from: 1647, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1669
@@ -732,6 +901,10 @@
     adm2: [GRC/Peloponnisoy]
     pieces: [GRC-Aigialeia, GRC-Andravida_Kyllini, GRC-Andritsaina_Krestena, GRC-Erymanthos, GRC-Ilida, GRC-Kalavryta, GRC-Olympia, GRC-Patras, GRC-Pineios, GRC-Pyrgos, GRC-West_Achaea, GRC-Troizinia_Methana, GRC-Aegina, GRC-Poros]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "morea", overlord: "ottoman"}
+    - {from: 1460, owner: "ottoman", cause: "メフメト2世がモレアを征服し、専制公領が滅ぶ", source: "https://ja.wikipedia.org/wiki/モレアス専制公領"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1687
@@ -768,6 +941,9 @@
   select:
     pieces: [GRC-Tinos]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1715
@@ -799,6 +975,11 @@
   select:
     pieces: [GRC-Cephalonia, GRC-Ithaca, GRC-Zakynthos, GRC-Kythira]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tocco", overlord: "ottoman"}
+    - {from: 1479, owner: "ottoman", cause: "オスマン軍がレフカダ・ケファロニア・ザキントスを奪い、トッコ家が追われる", source: "https://en.wikipedia.org/wiki/County_palatine_of_Cephalonia_and_Zakynthos"}
+    - {from: 1500, owner: "venice", cause: "ヴェネツィア・スペイン連合軍がケファロニアを攻め落とす（12月）", source: "https://en.wikipedia.org/wiki/Siege_of_St._George%27s_Castle"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1797
@@ -839,6 +1020,9 @@
   select:
     pieces: [GRC-Corfu, GRC-Paxos]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1797
@@ -881,6 +1065,10 @@
   select:
     pieces: [GRC-Lefkada]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tocco", overlord: "ottoman"}
+    - {from: 1479, owner: "ottoman", cause: "オスマン軍がレフカダ・ケファロニア・ザキントスを奪い、トッコ家が追われる", source: "https://en.wikipedia.org/wiki/County_palatine_of_Cephalonia_and_Zakynthos"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1684
@@ -931,6 +1119,9 @@
   select:
     pieces: [GRC-Parga]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1797
@@ -973,6 +1164,9 @@
   select:
     pieces: [GRC-Preveza]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "ottoman"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1684
@@ -1017,6 +1211,10 @@
   select:
     pieces: [GRC-Aktio_Vonitsa]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tocco", overlord: "ottoman"}
+    - {from: 1479, owner: "ottoman", cause: "オスマン軍がレフカダ・ケファロニア・ザキントスを奪い、トッコ家が追われる", source: "https://en.wikipedia.org/wiki/County_palatine_of_Cephalonia_and_Zakynthos"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1684
@@ -1049,6 +1247,9 @@
   select:
     pieces: [115-Dragonja]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "venice"}
+    # ---- 1648– ----
     - from: 1648
       owner: venice
     - from: 1797
@@ -1082,6 +1283,10 @@
   select:
     pieces: [LBN-Mont_Liban, LBN-Keserwan_Jbeil]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "mamluk"}
+    - {from: 1516, owner: "lebanon_emirate", overlord: "ottoman", cause: "オスマン帝国のもとで、シューフ山地のマアン家などドルーズ派の首長が自治を保つ", source: "https://en.wikipedia.org/wiki/Ma%CA%BFn_family"}
+    # ---- 1648– ----
     - from: 1648
       owner: lebanon_emirate
       overlord: ottoman
@@ -1106,6 +1311,14 @@
   select:
     pieces: [ISR-Northern_District, ISR-Haifa]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "mamluk"}
+    - {from: 1516, owner: "ottoman", cause: "マルジュ・ダービクの戦い（8月）ののち、セリム1世がダマスクス・エルサレムを取る", source: "https://ja.wikipedia.org/wiki/マルジュ・ダービクの戦い"}
+    - {from: 1602, owner: "lebanon_emirate", overlord: "ottoman", label: "ファフル・アッディーン2世の領地", cause: "マアン家のファフル・アッディーン2世がサイダ・ベイルートとサファドの県知事を兼ねる", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+    - {from: 1613, owner: "ottoman", cause: "ファフル・アッディーン2世がトスカーナに亡命（1618 年に帰国）", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+    - {from: 1618, owner: "lebanon_emirate", overlord: "ottoman", label: "ファフル・アッディーン2世の領地", cause: "ファフル・アッディーン2世が帰国して領地を取り戻す", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+    - {from: 1633, owner: "ottoman", cause: "オスマン軍がファフル・アッディーン2世を捕らえる（1635 年に処刑）", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1750
@@ -1142,6 +1355,12 @@
   select:
     pieces: [IRQ-Al_Basrah]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain", label: "アラブ部族・ムシャアシャア朝"}
+    - {from: 1508, owner: "persia", certainty: "nominal", cause: "サファヴィー朝に従う", source: "https://en.wikipedia.org/wiki/Basra"}
+    - {from: 1538, owner: "ottoman", certainty: "nominal", cause: "バスラの首長ラシード・ブン・ムガーミスがオスマン帝国に服属", source: "https://en.wikipedia.org/wiki/Basra_Eyalet"}
+    - {from: 1546, owner: "ottoman", cause: "オスマン軍がバスラに入り、バスラ州を置く", source: "https://en.wikipedia.org/wiki/Basra_Eyalet"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1776
@@ -1166,6 +1385,14 @@
   select:
     pieces: [ARM-Aragatsotn, ARM-Ararat, ARM-Armavir, ARM-Gegharkunik, ARM-Kotayk, ARM-Yerevan, ARM-Vayots_Dzor, TUR-I_d_r]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "白羊朝が黒羊朝を滅ぼす", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1502, owner: "persia", cause: "サファヴィー朝がアゼルバイジャン・アルメニアを取る", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1583, owner: "ottoman", certainty: "occupied", cause: "オスマン軍がエレヴァンを取り、城を築く", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1578–1590)"}
+    - {from: 1590, owner: "ottoman", cause: "イスタンブル条約でサファヴィー朝がコーカサスとアゼルバイジャンをオスマン帝国に譲る", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1590)"}
+    - {from: 1604, owner: "persia", cause: "アッバース1世がエレヴァンなどを奪い返す", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1724
@@ -1198,6 +1425,13 @@
   select:
     pieces: [AZE-Nakhchivan_Autonomous_Republic]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "白羊朝が黒羊朝を滅ぼす", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1502, owner: "persia", cause: "サファヴィー朝がアゼルバイジャン・アルメニアを取る", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1590, owner: "ottoman", cause: "イスタンブル条約でサファヴィー朝がコーカサスとアゼルバイジャンをオスマン帝国に譲る", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1590)"}
+    - {from: 1603, owner: "persia", cause: "アッバース1世がナヒチェヴァンを奪い返す", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1724
@@ -1234,6 +1468,13 @@
   select:
     pieces: [AZE-Contiguous_Azerbaijan, AZE-Nagorno_Karabakh, ARM-Syunik, ARM-Shirak]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "白羊朝が黒羊朝を滅ぼす", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1502, owner: "persia", cause: "サファヴィー朝がアゼルバイジャン・アルメニアを取る", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1590, owner: "ottoman", cause: "イスタンブル条約でサファヴィー朝がコーカサスとアゼルバイジャンをオスマン帝国に譲る", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1590)"}
+    - {from: 1604, owner: "persia", cause: "アッバース1世がエレヴァンなどを奪い返す", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1725
@@ -1268,6 +1509,13 @@
   select:
     pieces: [GEO-Shida_Kartli, GEO-Kvemo_Kartli, GEO-Mtskheta_Mtianeti, GEO-Tbilisi, ARM-Lori, ARM-Tavush]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "georgian_kingdoms"}
+    - {from: 1490, owner: "kartli_kakheti", cause: "ジョージア王国がカルトリ・カヘティ・イメレティの三王国とサムツヘに分かれる", source: "https://ja.wikipedia.org/wiki/ジョージアの歴史"}
+    - {from: 1555, owner: "kartli_kakheti", overlord: "persia", cause: "アマスィヤ条約でジョージア東部がサファヴィー朝の勢力圏とされる", source: "https://ja.wikipedia.org/wiki/アマスィヤの和約"}
+    - {from: 1590, owner: "kartli_kakheti", overlord: "ottoman", cause: "イスタンブル条約でサファヴィー朝がジョージア東部をオスマン帝国に譲る（1578 年からトビリシにオスマン軍）", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1590)"}
+    - {from: 1604, owner: "kartli_kakheti", overlord: "persia", cause: "アッバース1世の反撃でオスマン軍が退く", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"}
+    # ---- 1648– ----
     - from: 1648
       owner: kartli_kakheti
       overlord: persia
@@ -1305,6 +1553,11 @@
   select:
     pieces: [GEO-Kakheti]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "georgian_kingdoms"}
+    - {from: 1465, owner: "kakheti", cause: "ゲオルギ8世がカヘティに退いて独立の王国とする", source: "https://en.wikipedia.org/wiki/Kingdom_of_Kakheti"}
+    - {from: 1555, owner: "kakheti", overlord: "persia", certainty: "uncertain", cause: "アマスィヤ条約でサファヴィー朝の勢力圏とされる", source: "https://ja.wikipedia.org/wiki/アマスィヤの和約"}
+    # ---- 1648– ----
     - from: 1648
       owner: kakheti
       overlord: persia
@@ -1350,6 +1603,11 @@
   select:
     pieces: [GEO-Imereti, GEO-Racha_Lechkhumi_and_Kvemo_Svaneti]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "georgian_kingdoms"}
+    - {from: 1463, owner: "imereti", cause: "バグラト2世がイメレティ王を名のる（1490 年に分立が確定）", source: "https://en.wikipedia.org/wiki/Kingdom_of_Imereti"}
+    - {from: 1555, owner: "imereti", overlord: "ottoman", cause: "アマスィヤ条約でジョージア西部がオスマン帝国の勢力圏とされる", source: "https://ja.wikipedia.org/wiki/アマスィヤの和約"}
+    # ---- 1648– ----
     - from: 1648
       owner: imereti
       overlord: ottoman
@@ -1373,6 +1631,11 @@
   select:
     pieces: [GEO-Samegrelo_Zemo_Svaneti]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "georgian_kingdoms", certainty: "nominal"}
+    - {from: 1463, owner: "mingrelia", overlord: "imereti", certainty: "uncertain", cause: "イメレティ王を名目上の主君とする諸侯領として自立", source: "https://en.wikipedia.org/wiki/Principality_of_Mingrelia"}
+    - {from: 1555, owner: "mingrelia", overlord: "ottoman", certainty: "uncertain", cause: "アマスィヤ条約でオスマン帝国の勢力圏とされる", source: "https://ja.wikipedia.org/wiki/アマスィヤの和約"}
+    # ---- 1648– ----
     - from: 1648
       owner: mingrelia
       overlord: ottoman
@@ -1396,6 +1659,11 @@
   select:
     pieces: [GEO-Guria]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "georgian_kingdoms", certainty: "nominal"}
+    - {from: 1463, owner: "guria", overlord: "imereti", certainty: "uncertain", cause: "イメレティ王を名目上の主君とする諸侯領として自立", source: "https://en.wikipedia.org/wiki/Principality_of_Guria"}
+    - {from: 1555, owner: "guria", overlord: "ottoman", certainty: "uncertain", cause: "アマスィヤ条約でオスマン帝国の勢力圏とされる", source: "https://ja.wikipedia.org/wiki/アマスィヤの和約"}
+    # ---- 1648– ----
     - from: 1648
       owner: guria
       overlord: ottoman
@@ -1419,6 +1687,11 @@
   select:
     pieces: [GEO-Abkhazia]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "georgian_kingdoms", certainty: "nominal"}
+    - {from: 1463, owner: "abkhazia", overlord: "imereti", certainty: "uncertain", cause: "イメレティ王を名目上の主君とする諸侯領として自立", source: "https://en.wikipedia.org/wiki/Principality_of_Abkhazia"}
+    - {from: 1555, owner: "abkhazia", overlord: "ottoman", certainty: "uncertain", cause: "アマスィヤ条約でオスマン帝国の勢力圏とされる", source: "https://ja.wikipedia.org/wiki/アマスィヤの和約"}
+    # ---- 1648– ----
     - from: 1648
       owner: abkhazia
       overlord: ottoman
@@ -1444,6 +1717,14 @@
   select:
     pieces: [GEO-Samtskhe_Javakheti, GEO-Adjara]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "georgian_kingdoms"}
+    - {from: 1466, owner: "samtskhe", cause: "アタベグのクヴァルクヴァレ2世がジョージア王から自立", source: "https://en.wikipedia.org/wiki/Principality_of_Samtskhe"}
+    - {from: 1535, owner: "imereti", cause: "イメレティ王バグラト3世がムルジャヘティの戦いでアタベグのクヴァルクヴァレ3世を捕らえ、サムツヘを併合する", source: "https://en.wikipedia.org/wiki/Principality_of_Samtskhe"}
+    - {from: 1545, owner: "samtskhe", cause: "ソホイスタの戦いでオスマン帝国の後ろ盾を得たカイホスロー2世がジャケリ家のアタベグ領を取り戻す", source: "https://en.wikipedia.org/wiki/Battle_of_Sokhoista"}
+    - {from: 1555, owner: "samtskhe", overlord: "ottoman", cause: "アマスィヤ条約でサムツヘ西部がオスマン帝国の勢力圏とされる", source: "https://ja.wikipedia.org/wiki/アマスィヤの和約"}
+    - {from: 1578, owner: "ottoman", cause: "ララ・ムスタファ・パシャの遠征でサムツヘを併合し、チルドゥル州を置く", source: "https://en.wikipedia.org/wiki/Childir_Eyalet"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
     - from: 1878
@@ -1458,6 +1739,11 @@
   select:
     iso: [IRN]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hormuz"}
+    - {from: 1507, owner: "hormuz", overlord: "portugal", cause: "アルブケルケがホルムズを攻める（1515 年に要塞を築いて保護下に置く）", source: "https://ja.wikipedia.org/wiki/ホルムズ王国"}
+    - {from: 1622, owner: "persia", cause: "サファヴィー朝とイギリス東インド会社がホルムズ島のポルトガル要塞を落とす。対岸にバンダレ・アッバースが栄える", source: "https://ja.wikipedia.org/wiki/ホルムズ占領"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
   note: 1747–1751年の内乱期は、細かい勢力の割拠を描かず persia のままとした。
@@ -1467,6 +1753,11 @@
   select:
     pieces: [IRN-Hamadan, IRN-Kermanshah, IRN-Kurdistan, IRN-Lorestan, IRN-Ilam, IRN-West_Azerbaijan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンが黒羊朝を滅ぼす（1467–68）", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1503, owner: "persia", cause: "イスマーイール1世がハマダーンの戦いで白羊朝のムラードを破り、イラン中部・南部を取る", source: "https://ja.wikipedia.org/wiki/イスマーイール1世"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1724
@@ -1488,6 +1779,11 @@
   select:
     pieces: [IRN-East_Azerbaijan, IRN-Ardabil, IRN-Zanjan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンが黒羊朝を滅ぼす（1467–68）", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1501, owner: "persia", cause: "イスマーイール1世がタブリーズに入り、シャーを名のる（サファヴィー朝の成立）", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1725
@@ -1518,6 +1814,11 @@
   select:
     pieces: [IRN-Isfahan, IRN-Fars, IRN-Kerman, IRN-Yazd, IRN-Qom, IRN-Markazi, IRN-Kohgiluyeh_and_Boyer_Ahmad, IRN-Chaharmahal_and_Bakhtiari, IRN-Bushehr, IRN-Tehran, IRN-Alborz]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンが黒羊朝を滅ぼす（1467–68）", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1503, owner: "persia", cause: "イスマーイール1世がハマダーンの戦いで白羊朝のムラードを破り、イラン中部・南部を取る", source: "https://ja.wikipedia.org/wiki/イスマーイール1世"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1722
@@ -1535,6 +1836,11 @@
   select:
     pieces: [IRN-Mazandaran, IRN-Mazandaran_2, IRN-Golestan, IRN-Semnan, IRN-Qazvin]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンが黒羊朝を滅ぼす（1467–68）", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1503, owner: "persia", cause: "イスマーイール1世がハマダーンの戦いで白羊朝のムラードを破り、イラン中部・南部を取る", source: "https://ja.wikipedia.org/wiki/イスマーイール1世"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1780
@@ -1554,6 +1860,11 @@
   select:
     pieces: [IRN-Tehran, IRN-Alborz]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンが黒羊朝を滅ぼす（1467–68）", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1503, owner: "persia", cause: "イスマーイール1世がハマダーンの戦いで白羊朝のムラードを破り、イラン中部・南部を取る", source: "https://ja.wikipedia.org/wiki/イスマーイール1世"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1722
@@ -1576,6 +1887,11 @@
   select:
     pieces: [IRN-Gilan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "kar_kiya", certainty: "uncertain"}
+    - {from: 1504, owner: "kar_kiya", overlord: "persia", certainty: "uncertain", cause: "ギーラーンの在地王朝がサファヴィー朝に従う", source: "https://en.wikipedia.org/wiki/Karkiya_dynasty"}
+    - {from: 1592, owner: "persia", cause: "アッバース1世がギーラーンを併合", source: "https://en.wikipedia.org/wiki/Karkiya_dynasty"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1723
@@ -1604,6 +1920,13 @@
   select:
     pieces: [IRN-Razavi_Khorasan, IRN-North_Khorasan, IRN-South_Khorasan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1507, owner: "bukhara", cause: "ムハンマド・シャイバーニーがヘラートを取り、ティムール朝が滅ぶ", source: "https://ja.wikipedia.org/wiki/ティムール朝"}
+    - {from: 1510, owner: "persia", cause: "メルヴの戦いでイスマーイール1世がシャイバーニーを破る（12月）", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    - {from: 1589, owner: "bukhara", cause: "シャイバーニー朝のアブドゥッラー2世がヘラート（1588）に続いてマシュハドを取り、ホラーサーンを奪う", source: "https://en.wikipedia.org/wiki/Abdullah_Khan_II"}
+    - {from: 1598, owner: "persia", cause: "アッバース1世がホラーサーンを奪い返す", source: "https://ja.wikipedia.org/wiki/アッバース1世"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1750
@@ -1621,6 +1944,10 @@
   select:
     pieces: [IRN-Sistan_and_Baluchestan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid", certainty: "nominal"}
+    - {from: 1510, owner: "persia", certainty: "nominal", cause: "スィースターンの在地の王（マリク）がサファヴィー朝に従う", source: "https://en.wikipedia.org/wiki/Mihrabanids"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
       certainty: nominal
@@ -1645,6 +1972,13 @@
   select:
     adm1: [AFG/Herat]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1507, owner: "bukhara", cause: "ムハンマド・シャイバーニーがヘラートを取り、ティムール朝が滅ぶ", source: "https://ja.wikipedia.org/wiki/ティムール朝"}
+    - {from: 1510, owner: "persia", cause: "メルヴの戦いでイスマーイール1世がシャイバーニーを破る（12月）", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    - {from: 1588, owner: "bukhara", cause: "シャイバーニー朝のアブドゥッラー2世がヘラートを取り、ホラーサーンを奪う（マシュハドは 1589 年）", source: "https://en.wikipedia.org/wiki/Abdullah_Khan_II"}
+    - {from: 1598, owner: "persia", cause: "アッバース1世がホラーサーンを奪い返す", source: "https://ja.wikipedia.org/wiki/アッバース1世"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1717
@@ -1685,6 +2019,10 @@
   select:
     adm1: [AFG/Farah, AFG/Nimruz]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1510, owner: "persia", cause: "サファヴィー朝がホラーサーンを取る", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1715
@@ -1716,6 +2054,9 @@
   select:
     pieces: [PAK-Chagai, PAK-Kech]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -1755,6 +2096,9 @@
   select:
     pieces: [PAK-Gwadar]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -1777,6 +2121,12 @@
     adm1: [UZB/Xorazm Region, TKM/Dasoguz]
     pieces: [UZB-Beruniy, UZB-Turtkul, UZB-Ellikkala, UZB-Amudarya, UZB-Nukus, UZB-Nukus_city, UZB-Khojeyli, UZB-Shumanay, UZB-Kanlikul]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid", certainty: "uncertain"}
+    - {from: 1505, owner: "bukhara", cause: "シャイバーニーがホラズムを取る", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    - {from: 1510, owner: "persia", cause: "メルヴの戦いののち、サファヴィー朝の総督が置かれる", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    - {from: 1511, owner: "khiva", cause: "ウズベクのイルバルス（アラブシャー家）がサファヴィー朝の総督を追い、ヒヴァ・ハン国を開く", source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
+    # ---- 1648– ----
     - from: 1648
       owner: khiva
     - from: 1740
@@ -1798,6 +2148,9 @@
   select:
     pieces: [UZB-Muynak, UZB-Kungrad, UZB-Chimbay, UZB-Kegeyli, UZB-Takhtakupir, UZB-Karauzyak, UZB-Uchkuduk]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -1819,6 +2172,10 @@
   select:
     adm1: [TKM/Lebap]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1500, owner: "bukhara", cause: "ムハンマド・シャイバーニーがサマルカンドを取る（ウズベク人の南下）", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    # ---- 1648– ----
     - from: 1648
       owner: bukhara
     - from: 1740
@@ -1843,6 +2200,11 @@
   select:
     adm1: [TKM/Mary]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1507, owner: "bukhara", cause: "シャイバーニーがホラーサーンを取る", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    - {from: 1510, owner: "persia", certainty: "uncertain", cause: "メルヴの戦い（12月）", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
       certainty: uncertain
@@ -1881,6 +2243,9 @@
   select:
     adm1: [TKM/Ahai, TKM/Balkan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null}
+    # ---- 1648– ----
     - from: 1648
       owner: null
   note: テケ、ヨムートなどトルクメン諸部族の遊牧地。ヒヴァやペルシアが一時的に支配を及ぼした。
@@ -1890,6 +2255,10 @@
   select:
     iso: [KAZ]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "nogai", certainty: "uncertain"}
+    - {from: 1630, owner: "kazakh", certainty: "uncertain", cause: "カルムイクの西進でノガイがヴォルガ川の西へ移り、カザフの小ジュズが広がる", source: "https://en.wikipedia.org/wiki/Nogai_Horde"}
+    # ---- 1648– ----
     - from: 1648
       owner: kazakh
       certainty: uncertain
@@ -1916,6 +2285,9 @@
   select:
     pieces: [SAU-Riyadh_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -1962,6 +2334,9 @@
   select:
     pieces: [SAU-Al_Qassim_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -1995,6 +2370,9 @@
   select:
     pieces: [SAU-Hayel_Region, SAU-Al_Jawf_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - from: 1648
       owner: null
       certainty: uncertain
@@ -2018,6 +2396,9 @@
   select:
     pieces: [SAU-Northern_Borders_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null}
+    # ---- 1648– ----
     - from: 1648
       owner: null
     # ---- 1915–2025 ----
@@ -2030,6 +2411,10 @@
   select:
     pieces: [SAU-Al_Madinah_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "mamluk", certainty: "nominal", label: "メッカのシャリーフ政権"}
+    - {from: 1517, owner: "ottoman", certainty: "nominal", cause: "メッカのシャリーフがセリム1世に従い、聖地の守護者の地位がオスマン帝国に移る", source: "https://ja.wikipedia.org/wiki/メッカのシャリーフ"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -2057,6 +2442,10 @@
   select:
     pieces: [SAU-Tabuk_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "mamluk", certainty: "nominal", label: "メッカのシャリーフ政権"}
+    - {from: 1517, owner: "ottoman", certainty: "nominal", cause: "メッカのシャリーフがセリム1世に従い、聖地の守護者の地位がオスマン帝国に移る", source: "https://ja.wikipedia.org/wiki/メッカのシャリーフ"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -2071,6 +2460,11 @@
   select:
     pieces: [SAU-Eastern_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "jabrid", certainty: "uncertain"}
+    - {from: 1525, owner: null, certainty: "uncertain", cause: "ジャブル朝がポルトガルとの戦いののち衰え、滅ぶ", source: "https://en.wikipedia.org/wiki/Jabrids"}
+    - {from: 1550, owner: "ottoman", certainty: "nominal", cause: "オスマン帝国がハサーを取り、ラフサー州を置く", source: "https://en.wikipedia.org/wiki/Lahsa_Eyalet"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -2120,6 +2514,11 @@
   select:
     iso: [KWT]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "jabrid", certainty: "uncertain"}
+    - {from: 1525, owner: null, certainty: "uncertain", cause: "ジャブル朝がポルトガルとの戦いののち衰え、滅ぶ", source: "https://en.wikipedia.org/wiki/Jabrids"}
+    - {from: 1550, owner: "ottoman", certainty: "nominal", cause: "オスマン帝国がハサーを取り、ラフサー州を置く", source: "https://en.wikipedia.org/wiki/Lahsa_Eyalet"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -2151,6 +2550,12 @@
   select:
     iso: [BHR]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hormuz"}
+    - {from: 1475, owner: "jabrid", cause: "ジャブル朝のアジュワドがバーレーンを取る（年は要確認）", source: "https://en.wikipedia.org/wiki/Jabrids"}
+    - {from: 1521, owner: "hormuz", overlord: "portugal", label: "バーレーン（ポルトガルの保護下のホルムズ王国）", cause: "ポルトガルがジャブル朝のムクリンを破る", source: "https://en.wikipedia.org/wiki/Portuguese_rule_in_Bahrain"}
+    - {from: 1602, owner: "persia", cause: "サファヴィー朝がバーレーンを取る", source: "https://en.wikipedia.org/wiki/Portuguese_rule_in_Bahrain"}
+    # ---- 1648– ----
     - from: 1648
       owner: persia
     - from: 1783
@@ -2170,6 +2575,11 @@
   select:
     iso_all: [QAT]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "jabrid", certainty: "uncertain"}
+    - {from: 1525, owner: null, certainty: "uncertain", cause: "ジャブル朝がポルトガルとの戦いののち衰え、滅ぶ", source: "https://en.wikipedia.org/wiki/Jabrids"}
+    - {from: 1550, owner: "ottoman", certainty: "nominal", cause: "オスマン帝国がハサーを取り、ラフサー州を置く", source: "https://en.wikipedia.org/wiki/Lahsa_Eyalet"}
+    # ---- 1648– ----
     - from: 1648
       owner: ottoman
       certainty: nominal
@@ -2201,6 +2611,11 @@
   select:
     pieces: [ARE-Ras_al_Khaimah, ARE-Sharjah, ARE-Ajman, ARE-Umm_al_Quwain]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hormuz", certainty: "uncertain"}
+    - {from: 1507, owner: "hormuz", overlord: "portugal", certainty: "uncertain", cause: "ホルムズ王がポルトガルに従う", source: "https://en.wikipedia.org/wiki/Julfar"}
+    - {from: 1624, owner: "oman", certainty: "uncertain", cause: "ヤアーリバ朝の勢力が及ぶ", source: "https://en.wikipedia.org/wiki/Julfar"}
+    # ---- 1648– ----
     - from: 1648
       owner: oman
       certainty: uncertain
@@ -2224,6 +2639,9 @@
   select:
     pieces: [ARE-Abu_Dhabi, ARE-Dubai]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null}
+    # ---- 1648– ----
     - from: 1648
       owner: null
     - from: 1820
@@ -2244,6 +2662,11 @@
     iso_all: [OMN]
     pieces: [ARE-Fujairah]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "hormuz"}
+    - {from: 1507, owner: "hormuz", overlord: "portugal", cause: "アフォンソ・デ・アルブケルケの艦隊がオマーン沿岸の町を攻め、ホルムズ王をポルトガルに従わせる", source: "https://en.wikipedia.org/wiki/Afonso_de_Albuquerque"}
+    - {from: 1643, owner: "oman", cause: "ヤアーリバ朝がソハールなどをポルトガルから奪う", source: "https://en.wikipedia.org/wiki/Yaruba_dynasty"}
+    # ---- 1648– ----
     - from: 1648
       owner: oman
   note: ムサンダム半島は1650年ごろまでポルトガルの影響下（要確認）。内陸のイマーム国（1920年のスィーブ条約で自治、1955年まで）、ドファール（1829年ごろからブーサイード朝。1960年代–1975年のドファールの反乱）は描き分けていない。
@@ -4513,6 +4936,10 @@
   select:
     pieces: [SAU-Makkah_Region, SAU-Al_Bahah_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "mamluk", certainty: "nominal", label: "メッカのシャリーフ政権"}
+    - {from: 1517, owner: "ottoman", certainty: "nominal", cause: "メッカのシャリーフがセリム1世に従い、聖地の守護者の地位がオスマン帝国に移る", source: "https://ja.wikipedia.org/wiki/メッカのシャリーフ"}
+    # ---- 1648– ----
     - {from: 1648, owner: ottoman, certainty: nominal}
     - {from: 1806, owner: saudi, cause: "サウード王国がメッカを占領（1803年に一時、1806年に再び）", source: "https://ja.wikipedia.org/wiki/第一次サウード王国"}
     - {from: 1813, owner: egypt, overlord: ottoman, cause: "エジプトのムハンマド・アリーの軍がメッカを奪回（1月）", source: "https://en.wikipedia.org/wiki/Ottoman–Wahhabi_war"}
@@ -4527,6 +4954,9 @@
   select:
     pieces: [SAU-Asir_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: null, certainty: uncertain, note: "アスィールの諸部族の地"}
     - {from: 1803, owner: saudi, certainty: uncertain, cause: "アスィールの諸部族がワッハーブ派に加わり、第一次サウード王国に従う", source: "https://en.wikipedia.org/wiki/Asir_Region"}
     - {from: 1818, owner: null, certainty: uncertain, cause: "エジプト軍の遠征で第一次サウード王国が滅ぶ。アスィールでは在地のアーイド家が台頭する（1830年代はエジプト軍が一部を占領）", source: "https://en.wikipedia.org/wiki/Asir_Region"}
@@ -4542,6 +4972,11 @@
   select:
     pieces: [SAU-Jazan_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    - {from: 1539, owner: "ottoman", certainty: "nominal"}
+    - {from: 1636, owner: "yemen", certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, certainty: uncertain, note: "アブー・アリーシュのシャリーフ家が、ザイド派のイマームのもとで治める"}
     - {from: 1803, owner: saudi, certainty: uncertain, cause: "アブー・アリーシュのシャリーフ、ハムード・アブー・ミスマールがワッハーブ派と結び、イマームから離れる", source: "https://en.wikipedia.org/wiki/Abu_Arish"}
     - {from: 1818, owner: null, certainty: uncertain, cause: "第一次サウード王国の滅亡。アブー・アリーシュのシャリーフ家が自立する", source: "https://en.wikipedia.org/wiki/Abu_Arish"}
@@ -4559,6 +4994,9 @@
   select:
     pieces: [SAU-Najran_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: null, certainty: uncertain}
     - {from: 1934, owner: saudi, cause: "サウジアラビア＝イエメン戦争ののち、ターイフ条約（5月）でサウジアラビア領に", source: "https://en.wikipedia.org/wiki/Treaty_of_Taif"}
   note: "ヤーム族（イスマーイール派）の地。オスマン帝国・イエメンのイマーム・サウード家の間で帰属があいまいだった（1933年にイマームの軍が占領）。"
@@ -4568,6 +5006,11 @@
   select:
     pieces: [YEM-Sa_dah_Governorate, YEM-Amran_Governorate, YEM-Hajjah_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "yemen"}
+    - {from: 1552, owner: "ottoman", cause: "オスマン軍がイエメン北部の高地に進む（サナアは 1547 年）", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    - {from: 1598, owner: "yemen", cause: "カースィム（大カースィム）がザイド派のイマームとして蜂起し、北部の山地を押さえる", source: "https://en.wikipedia.org/wiki/Al-Mansur_al-Qasim"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, note: "ザイド派のイマーム（カースィム朝）の本拠地", source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1872, owner: ottoman, certainty: uncertain, cause: "オスマン軍がサナアを押さえ、イエメン州とする（ザイド派の北部高地では支配は弱い）", source: "https://en.wikipedia.org/wiki/Yemen_Vilayet"}
     - {from: 1911, owner: yemen, overlord: ottoman, cause: "ダアン条約（10月）でザイド派の高地はイマーム・ヤフヤーの自治に", source: "https://en.wikipedia.org/wiki/Treaty_of_Daan"}
@@ -4582,6 +5025,12 @@
   select:
     pieces: [YEM-San_a, YEM-San_a_Governorate, YEM-Al_Mahwit_Governorate, YEM-Raymah_Governorate, YEM-Dhamar_Governorate, YEM-Ibb_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tahirid", certainty: "uncertain"}
+    - {from: 1517, owner: "yemen", certainty: "uncertain", cause: "マムルーク朝の遠征軍が崩れ、ザイド派のイマーム・シャラフッディーンが高地を押さえる", source: "https://en.wikipedia.org/wiki/Tahirid_Sultanate"}
+    - {from: 1547, owner: "ottoman", cause: "オスマン軍がサナアを取る", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    - {from: 1629, owner: "yemen", cause: "カースィム朝がサナアを取る", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, note: "イマームの都サナア", source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1872, owner: ottoman, cause: "オスマン軍がサナアを押さえ、イエメン州とする", source: "https://en.wikipedia.org/wiki/Yemen_Vilayet"}
     - {from: 1918, owner: yemen, cause: "オスマン軍の撤退（ムドロス休戦協定ののち、11月）。イマーム・ヤフヤーのイエメン王国（ムタワッキル王国）が独立", source: "https://en.wikipedia.org/wiki/Mutawakkilite_Kingdom_of_Yemen"}
@@ -4594,6 +5043,12 @@
   select:
     pieces: [YEM-Ta_izz_Governorate, YEM-Al_Bayda_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tahirid"}
+    - {from: 1517, owner: "ottoman", certainty: "nominal", cause: "マムルーク朝の遠征軍（1516 年にザビードを取る）が、マムルーク朝の滅亡ののちオスマン帝国に従う", source: "https://en.wikipedia.org/wiki/Tahirid_Sultanate"}
+    - {from: 1539, owner: "ottoman", cause: "オスマン帝国がアデン（1538）とティハーマを押さえ、イエメン州を置く", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    - {from: 1636, owner: "yemen", cause: "カースィム朝のイマーム・ムアイヤドがオスマン軍をイエメンから追い出す（1635 年にモカ）", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1872, owner: ottoman, cause: "オスマン軍がサナアを押さえ、イエメン州とする", source: "https://en.wikipedia.org/wiki/Yemen_Vilayet"}
     - {from: 1918, owner: yemen, cause: "オスマン軍の撤退（ムドロス休戦協定ののち、11月）。イマーム・ヤフヤーのイエメン王国（ムタワッキル王国）が独立", source: "https://en.wikipedia.org/wiki/Mutawakkilite_Kingdom_of_Yemen"}
@@ -4606,6 +5061,12 @@
   select:
     pieces: [YEM-Al_Hudaydah_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tahirid"}
+    - {from: 1517, owner: "ottoman", certainty: "nominal", cause: "マムルーク朝の遠征軍（1516 年にザビードを取る）が、マムルーク朝の滅亡ののちオスマン帝国に従う", source: "https://en.wikipedia.org/wiki/Tahirid_Sultanate"}
+    - {from: 1539, owner: "ottoman", cause: "オスマン帝国がアデン（1538）とティハーマを押さえ、イエメン州を置く", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    - {from: 1636, owner: "yemen", cause: "カースィム朝のイマーム・ムアイヤドがオスマン軍をイエメンから追い出す（1635 年にモカ）", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, note: "モカ・ホデイダなど紅海沿岸の港。モカはコーヒーの積み出し港として栄えた", source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1833, owner: egypt, cause: "ムハンマド・アリーのエジプト軍がティハーマを占領（1805–1818年はアブー・アリーシュのシャリーフとワッハーブ派が北部に進出）", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
     - {from: 1840, owner: ottoman, certainty: nominal, cause: "エジプト軍が撤退し、アブー・アリーシュのシャリーフ・フサインがオスマン帝国の名目のもとで治める", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
@@ -4623,6 +5084,11 @@
   select:
     pieces: [YEM-Ma_rib_Governorate, YEM-Al_Jawf_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tahirid", certainty: "uncertain"}
+    - {from: 1517, owner: null, certainty: "uncertain"}
+    - {from: 1636, owner: "yemen", certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, certainty: uncertain, note: "部族の地で、イマームの支配は弱かった"}
     - {from: 1872, owner: ottoman, certainty: nominal}
     - {from: 1918, owner: yemen, certainty: uncertain, cause: "オスマン軍の撤退（ムドロス休戦協定ののち、11月）。イマーム・ヤフヤーのイエメン王国（ムタワッキル王国）が独立", source: "https://en.wikipedia.org/wiki/Mutawakkilite_Kingdom_of_Yemen"}
@@ -4636,6 +5102,12 @@
   select:
     pieces: [YEM-Adan_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tahirid"}
+    - {from: 1517, owner: "tahirid", cause: "マムルーク朝の遠征軍がターヒル朝の本拠（ザビード・タイズ）を奪うが、アデンは取れず、ターヒル朝の残党（アーミル・ブン・ダーウード）が保つ", source: "https://en.wikipedia.org/wiki/Tahirid_Sultanate"}
+    - {from: 1538, owner: "ottoman", cause: "ハドゥム・スレイマン・パシャの艦隊がアデンを取り、アーミル・ブン・ダーウードを処刑する", source: "https://en.wikipedia.org/wiki/Ottoman_conquest_of_Aden"}
+    - {from: 1636, owner: "yemen", cause: "カースィム朝のイマーム・ムアイヤドがオスマン軍をイエメンから追い出す（1635 年にモカ）", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1735, owner: lahij_sultanate, cause: "ラヘジのアブダリー家がアデンを押さえる（年は要確認）", source: "https://en.wikipedia.org/wiki/Sultanate_of_Lahej"}
     - {from: 1839, owner: britain, label: "アデン（英領インドの一部）", cause: "イギリス（東インド会社）がアデンを占領（1月）", source: "https://ja.wikipedia.org/wiki/アデン"}
@@ -4650,6 +5122,11 @@
   select:
     pieces: [YEM-Ad_Dali_Governorate, YEM-Abyan_Governorate, YEM-Shabwah_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tahirid", certainty: "uncertain"}
+    - {from: 1517, owner: null, certainty: "uncertain"}
+    - {from: 1636, owner: "yemen", certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, certainty: uncertain, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1728, owner: null, certainty: uncertain, cause: "南部の諸部族（ヤーファー・アウラキ・ファドリー・アミーリーなど）の首長国がイマームから自立する（18世紀前半。年は要確認）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
     - {from: 1888, owner: britain, label: "アデン保護領", cause: "南アラビアの首長たちがイギリスと保護条約を結ぶ（ソコトラ・マハラ1886年、ハドラマウトのクアイティ家1888年など）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
@@ -4663,6 +5140,12 @@
   select:
     pieces: [YEM-Lahij_Governorate]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "tahirid"}
+    - {from: 1517, owner: "ottoman", certainty: "nominal", cause: "マムルーク朝の遠征軍（1516 年にザビードを取る）が、マムルーク朝の滅亡ののちオスマン帝国に従う", source: "https://en.wikipedia.org/wiki/Tahirid_Sultanate"}
+    - {from: 1539, owner: "ottoman", cause: "オスマン帝国がアデン（1538）とティハーマを押さえ、イエメン州を置く", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    - {from: 1636, owner: "yemen", cause: "カースィム朝のイマーム・ムアイヤドがオスマン軍をイエメンから追い出す（1635 年にモカ）", source: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+    # ---- 1648– ----
     - {from: 1648, owner: yemen, source: "https://en.wikipedia.org/wiki/Qasimid_State"}
     - {from: 1728, owner: lahij_sultanate, cause: "アブダリー家のファドル・イブン・アリーがイマームから自立（ラヘジ・スルタン国。年は要確認）", source: "https://en.wikipedia.org/wiki/Sultanate_of_Lahej"}
     - {from: 1888, owner: britain, label: "アデン保護領", cause: "南アラビアの首長たちがイギリスと保護条約を結ぶ（ソコトラ・マハラ1886年、ハドラマウトのクアイティ家1888年など）", source: "https://en.wikipedia.org/wiki/Aden_Protectorate"}
@@ -4677,6 +5160,10 @@
   select:
     pieces: [YEM-Hadhramaut]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    - {from: 1494, owner: "kathiri", cause: "カスィーリー家のバドル・ブー・トゥワイリクの祖父がシバームを取り、ハドラマウトを統一（年は要確認）", source: "https://en.wikipedia.org/wiki/Kathiri"}
+    # ---- 1648– ----
     - {from: 1648, owner: kathiri, source: "https://en.wikipedia.org/wiki/Kathiri"}
     - {from: 1658, owner: kathiri, overlord: yemen, cause: "カースィム朝のイマーム、ムタワッキル・イスマーイールがハドラマウトを服属させる（1654–1658年）", source: "https://en.wikipedia.org/wiki/Al-Mutawakkil_Isma%27il"}
     - {from: 1705, owner: kathiri, cause: "ハドラマウトがイマームの支配から離れる（年は要確認）", source: "https://en.wikipedia.org/wiki/Kathiri"}
@@ -4691,6 +5178,9 @@
   select:
     pieces: [YEM-Al_Mahrah_Governorate, YEM-Socotra]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "mahra"}
+    # ---- 1648– ----
     - {from: 1648, owner: mahra, note: "マハラ・スルタン国（キシュンとソコトラ）", source: "https://en.wikipedia.org/wiki/Mahra_Sultanate"}
     - {from: 1886, owner: britain, label: "アデン保護領", cause: "マハラ・スルタン国（ソコトラ）がイギリスと保護条約を結ぶ", source: "https://en.wikipedia.org/wiki/Mahra_Sultanate"}
     - {from: 1967, owner: south_yemen, cause: "イギリス軍が撤退し、南イエメン人民共和国が独立（11月30日）", source: "https://en.wikipedia.org/wiki/South_Yemen"}
@@ -4701,6 +5191,12 @@
   select:
     pieces: [UZB-Tashkent, UZB-Tashkent_Region, UZB-Sirdaryo_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1485, owner: "moghulistan", cause: "モグーリスタンのユーヌス・ハンがタシュケントを取る", source: "https://en.wikipedia.org/wiki/Yunus_Khan"}
+    - {from: 1503, owner: "bukhara", cause: "シャイバーニーがアクスィの戦いでモグール・ハンを破る", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    - {from: 1598, owner: "kazakh", cause: "アブドゥッラー2世の死後、カザフのタウケル・ハンがタシュケントとトルキスタンを取る", source: "https://en.wikipedia.org/wiki/Tauekel_Khan"}
+    # ---- 1648– ----
     - {from: 1648, owner: kazakh, note: "タシケントは1598年からカザフ＝ハン国の支配下", source: "https://en.wikipedia.org/wiki/Tashkent"}
     - {from: 1723, owner: kazakh_great, overlord: dzungar, cause: "ジュンガルの侵攻（「大災厄」）。タシケントの大ジュズのハンがジュンガルに服属する", source: "https://en.wikipedia.org/wiki/Dzungar–Kazakh_wars"}
     - {from: 1758, owner: kazakh_great, certainty: uncertain, cause: "清がジュンガルを滅ぼす。タシケントは4つの街区の長が争い、大ジュズのカザフの勢力が及ぶ", source: "https://en.wikipedia.org/wiki/Tashkent"}
@@ -4718,6 +5214,10 @@
   select:
     pieces: [UZB-Jizzakh_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1500, owner: "bukhara", cause: "ムハンマド・シャイバーニーがサマルカンドを取る（ウズベク人の南下）", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara}
     - {from: 1740, owner: bukhara, overlord: persia, cause: "ナーディル・シャーがブハラを服属させる"}
     - {from: 1747, owner: bukhara, cause: "ナーディル・シャーの死"}
@@ -4732,6 +5232,10 @@
   select:
     pieces: [UZB-Samarqand_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1500, owner: "bukhara", cause: "ムハンマド・シャイバーニーがサマルカンドを取る（ウズベク人の南下）", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara}
     - {from: 1740, owner: bukhara, overlord: persia, cause: "ナーディル・シャーがブハラを服属させる"}
     - {from: 1747, owner: bukhara, cause: "ナーディル・シャーの死"}
@@ -4746,6 +5250,10 @@
   select:
     pieces: [UZB-Fergana_Region, UZB-Andijan_Region, UZB-Namangan_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1504, owner: "bukhara", certainty: "uncertain", cause: "シャイバーニーがフェルガナを取り、バーブルは南へ逃れる", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara, certainty: uncertain, note: "ブハラ（ジャーン朝）の名目的な支配下。チャダクのホージャ家などが治めた"}
     - {from: 1709, owner: kokand, cause: "ウズベクのミン部のシャー・ルフがコーカンドで自立（コーカンド・ハン国の始まり）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1876, owner: russia, cause: "ロシアがコーカンド・ハン国を併合し、フェルガナ州とする（2月）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
@@ -4759,6 +5267,10 @@
   select:
     pieces: [KGZ-Osh_Region, KGZ-Jalal_Abad_Region, KGZ-Batken_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1504, owner: "bukhara", certainty: "uncertain", cause: "シャイバーニーがフェルガナを取り、バーブルは南へ逃れる", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara, certainty: uncertain, note: "ブハラ（ジャーン朝）の名目的な支配下。山地はキルギスの遊牧地"}
     - {from: 1709, owner: kokand, cause: "ウズベクのミン部のシャー・ルフがコーカンドで自立（コーカンド・ハン国の始まり）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1876, owner: russia, cause: "ロシアがコーカンド・ハン国を併合し、フェルガナ州とする（2月）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
@@ -4775,6 +5287,10 @@
   select:
     pieces: [KGZ-Chuy_Region, KGZ-Issyk_Kul_Region, KGZ-Naryn_Region, KGZ-Talas_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "moghulistan"}
+    - {from: 1570, owner: null, certainty: "uncertain", cause: "モグーリスタンのハンが天山の北を失い、キルギスの諸部族が自立", source: "https://en.wikipedia.org/wiki/Moghulistan"}
+    # ---- 1648– ----
     - {from: 1648, owner: null, certainty: uncertain, note: "キルギス諸部族の遊牧地（タラスはカザフ）"}
     - {from: 1685, owner: dzungar, certainty: uncertain, cause: "ガルダンのジュンガルがイシク・クル・チュー川流域に進出し、キルギスを服属させる（年は要確認）", source: "https://en.wikipedia.org/wiki/Dzungar_Khanate"}
     - {from: 1758, owner: null, certainty: uncertain, cause: "清がジュンガルを滅ぼし、キルギスが遊牧地に戻る（清に名目的に朝貢）", source: "https://en.wikipedia.org/wiki/Dzungar_genocide"}
@@ -4793,6 +5309,10 @@
   select:
     pieces: [TJK-Sughd_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1503, owner: "bukhara", cause: "シャイバーニー朝の支配に入る", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara, note: "ホジェンド・ウラ・チュベ（イスタラフシャン）"}
     - {from: 1805, owner: kokand, certainty: uncertain, cause: "コーカンド・ハン国がホジェンドを押さえる（ウラ・チュベはブハラと奪い合った。年は要確認）", source: "https://ja.wikipedia.org/wiki/コーカンド・ハン国"}
     - {from: 1866, owner: russia, cause: "ロシア軍がホジェンド（5月）・ウラ・チュベ（10月）を奪う", source: "https://ja.wikipedia.org/wiki/ホジャンド"}
@@ -4807,6 +5327,10 @@
   select:
     pieces: [UZB-Bukhara_Region, UZB-Navoiy_Region, UZB-Qashqadaryo_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1500, owner: "bukhara", cause: "ムハンマド・シャイバーニーがサマルカンドを取る（ウズベク人の南下）", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara}
     - {from: 1740, owner: bukhara, overlord: persia, cause: "ナーディル・シャーがブハラを服属させる"}
     - {from: 1747, owner: bukhara, cause: "ナーディル・シャーの死"}
@@ -4822,6 +5346,10 @@
   select:
     pieces: [UZB-Surxondaryo_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1500, owner: "bukhara", cause: "ムハンマド・シャイバーニーがサマルカンドを取る（ウズベク人の南下）", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara}
     - {from: 1740, owner: bukhara, overlord: persia, cause: "ナーディル・シャーがブハラを服属させる"}
     - {from: 1747, owner: bukhara, cause: "ナーディル・シャーの死"}
@@ -4836,6 +5364,10 @@
   select:
     pieces: [TJK-Dushanbe, TJK-Districts_of_Republican_Subordination, TJK-Khatlon_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1505, owner: "bukhara", certainty: "uncertain", cause: "シャイバーニーがヒサールを取る", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara, certainty: uncertain, note: "ヒッサール・クリャーブなどウズベクの諸侯（ベク）の地。カラテギンには在地のシャーがいた"}
     - {from: 1750, owner: null, certainty: uncertain, cause: "マンギト朝への交代期に、ヒッサール・クリャーブの諸侯がブハラから自立する（年は要確認）", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1868, owner: bukhara, certainty: uncertain, cause: "東部のヒッサール・クリャーブなどの諸侯をブハラ・アミール国が征服しはじめる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
@@ -4852,6 +5384,9 @@
   select:
     pieces: [TJK-Gorno_Badakhshan_Autonomous_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: null, certainty: uncertain, note: "シュグナーン・ローシャーン・ワハーンなどパミールの山国（ミール）の地。東パミールはキルギスの遊牧地"}
     - {from: 1883, owner: afghanistan, certainty: uncertain, cause: "アフガニスタンがシュグナーン・ローシャーンを占領する", source: "https://en.wikipedia.org/wiki/Pamir_Mountains"}
     - {from: 1895, owner: russia, label: "", cause: "英露のパミール協定で、パミール西部（シュグナーン・ローシャーン）はロシアの保護国のブハラ、東部はロシアの直轄となる", source: "https://en.wikipedia.org/wiki/Pamir_Mountains"}
@@ -4866,6 +5401,10 @@
   select:
     pieces: [KAZ-Akmola_Region, KAZ-Astana, KAZ-North_Kazakhstan_Region, KAZ-Karaganda_Region, KAZ-Pavlodar_Region, KAZ-East_Kazakhstan_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "abulkhair", certainty: "uncertain"}
+    - {from: 1469, owner: "kazakh", certainty: "uncertain", cause: "アブル＝ハイル＝ハンの死後、ジャーニー・ベクとケレイのカザフが草原に広がる", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
+    # ---- 1648– ----
     - {from: 1648, owner: kazakh, certainty: uncertain, note: "カザフ中ジュズの遊牧地。イルティシュ川上流はジュンガルの勢力圏"}
     - {from: 1718, owner: kazakh_middle, certainty: uncertain, cause: "タウケ・ハンの死ののち、カザフの3ジュズが分立する", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
     - {from: 1740, owner: kazakh_middle, overlord: russia, certainty: uncertain, cause: "中ジュズのアブルマンベト・ハンとアブライがロシアの臣籍に入る（アブライは1757年から清にも朝貢）", source: "https://en.wikipedia.org/wiki/Ablai_Khan"}
@@ -4885,6 +5424,10 @@
   select:
     pieces: [KAZ-South_Kazakhstan_Region, KAZ-Jambyl_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "moghulistan"}
+    - {from: 1465, owner: "kazakh", cause: "ジャーニー・ベクとケレイがアブル＝ハイル＝ハンから離れ、チュー川流域でカザフ＝ハン国を開く", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
+    # ---- 1648– ----
     - {from: 1648, owner: kazakh, note: "ハン国の都トルキスタン（ヤサウィー廟）とシル川中流の町々"}
     - {from: 1723, owner: kazakh_great, overlord: dzungar, certainty: uncertain, cause: "ジュンガルの侵攻（「大災厄」）でトルキスタン・サイラムが奪われ、大ジュズがジュンガルに服属する", source: "https://en.wikipedia.org/wiki/Dzungar–Kazakh_wars"}
     - {from: 1758, owner: kazakh_great, certainty: uncertain, cause: "清がジュンガルを滅ぼす", source: "https://en.wikipedia.org/wiki/Dzungar_genocide"}
@@ -4903,6 +5446,10 @@
   select:
     pieces: [KAZ-Almaty, KAZ-Almaty_Region]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "moghulistan"}
+    - {from: 1515, owner: "kazakh", certainty: "uncertain", cause: "カザフのカースィム・ハンの時代に、セミレチエがカザフの遊牧地となる", source: "https://en.wikipedia.org/wiki/Kasym_Khan"}
+    # ---- 1648– ----
     - {from: 1648, owner: kazakh, certainty: uncertain, note: "カザフ大ジュズの遊牧地（セミレチエ＝七河地方）"}
     - {from: 1723, owner: dzungar, certainty: uncertain, cause: "ジュンガルがセミレチエを押さえ、大ジュズを服属させる", source: "https://en.wikipedia.org/wiki/Dzungar–Kazakh_wars"}
     - {from: 1758, owner: kazakh_great, certainty: uncertain, cause: "清がジュンガルを滅ぼし、大ジュズのカザフが遊牧地に戻る", source: "https://en.wikipedia.org/wiki/Dzungar_genocide"}
@@ -4923,6 +5470,11 @@
     iso_all: [AFG]
     exclude_regions: [herat, farah_nimruz, hazarajat, nuristan, afg_kandahar, afg_balkh, afg_kunduz, afg_badakhshan, afg_badghis_ghor]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1504, owner: "timurid", label: "バーブルのカーブル王国", cause: "ティムールの子孫バーブルがカーブルを取る", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    - {from: 1526, owner: "mughal", cause: "バーブルがパーニーパットの戦いでローディー朝を破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    # ---- 1648– ----
     - {from: 1648, owner: mughal, note: "ムガル帝国のカーブル州。東部の山地（クナル・ホースト・パクティヤー）のパシュトゥーン諸部族への支配は弱かった", source: "https://ja.wikipedia.org/wiki/ムガル帝国"}
     - {from: 1738, owner: persia, cause: "ナーディル・シャーがガズニー・カーブルを攻略（6月）。翌年の講和でムガル帝国はインダス川以西を割譲", source: "https://en.wikipedia.org/wiki/Nader_Shah%27s_invasion_of_the_Mughal_Empire"}
     - {from: 1747, owner: durrani, cause: "ナーディル・シャーの死。アフマド・シャー・ドゥッラーニーがカーブルを押さえる", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
@@ -4936,6 +5488,16 @@
   select:
     pieces: [AFG-Kandahar, AFG-Helmand, AFG-Zabul, AFG-Uruzgan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1507, owner: "arghun", cause: "カンダハールの総督アルグン家が、ティムール朝の滅亡で自立", source: "https://en.wikipedia.org/wiki/Arghun_dynasty"}
+    - {from: 1522, owner: "timurid", label: "バーブルのカーブル王国", cause: "バーブルがカンダハールを取る", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    - {from: 1526, owner: "mughal", cause: "ムガル帝国の成立", source: "https://ja.wikipedia.org/wiki/ムガル帝国"}
+    - {from: 1558, owner: "persia", cause: "タフマースプ1世がカンダハールを取る", source: "https://en.wikipedia.org/wiki/Kandahar"}
+    - {from: 1595, owner: "mughal", cause: "サファヴィー家の総督がアクバルに降る", source: "https://en.wikipedia.org/wiki/Kandahar"}
+    - {from: 1622, owner: "persia", cause: "アッバース1世がカンダハールを取る", source: "https://en.wikipedia.org/wiki/Mughal–Safavid_war_(1622–1623)"}
+    - {from: 1638, owner: "mughal", cause: "サファヴィー朝の総督アリー・マルダーン・ハーンがシャー・ジャハーンに寝返る", source: "https://en.wikipedia.org/wiki/Ali_Mardan_Khan"}
+    # ---- 1648– ----
     - {from: 1648, owner: mughal, note: "カンダハールはムガル帝国とサファヴィー朝が奪い合った（1638年からムガル領）。1648年12月からサファヴィー朝のアッバース2世が包囲した"}
     - {from: 1649, owner: persia, cause: "サファヴィー朝のアッバース2世がカンダハールを奪回（2月）。ムガル帝国の奪回の試み（1649・1652・1653年）は失敗", source: "https://en.wikipedia.org/wiki/Mughal%E2%80%93Safavid_war_(1649%E2%80%931653)"}
     - {from: 1709, owner: hotaki, cause: "ギルザイ族のミール・ワイスがカンダハールでサファヴィー朝の総督を倒して自立（ホータキー朝）", source: "https://ja.wikipedia.org/wiki/ホータキー朝"}
@@ -4951,6 +5513,12 @@
   select:
     pieces: [AFG-Balkh, AFG-Jowzjan, AFG-Samangan, AFG-Sar_e_Pol, AFG-Faryab]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1506, owner: "bukhara", cause: "シャイバーニーがバルフを取る", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    - {from: 1646, owner: "mughal", certainty: "occupied", cause: "シャー・ジャハーンのバルフ遠征。ムガル軍がバルフとバダフシャーンを占領", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    - {from: 1647, owner: "bukhara", cause: "ムガル軍が撤退（10月）", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara, note: "バルフはブハラ（ジャーン朝）の王族が治める副都。ムガル帝国のバルフ遠征（1646–1647）は失敗して撤退した", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
     - {from: 1737, owner: persia, cause: "ナーディルの子レザー・コリーがバルフを攻略", source: "https://en.wikipedia.org/wiki/Nader_Shah"}
     - {from: 1751, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーの軍がバルフを征服。マイマナ・シバルガーン・アンドホイなどウズベクの諸侯は貢納する", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
@@ -4963,6 +5531,12 @@
   select:
     pieces: [AFG-Kunduz, AFG-Baghlan, AFG-Takhar]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid", certainty: "uncertain"}
+    - {from: 1584, owner: "bukhara", certainty: "uncertain", cause: "アブドゥッラー2世がバダフシャーンを取る", source: "https://en.wikipedia.org/wiki/Abdullah_Khan_II"}
+    - {from: 1646, owner: "mughal", certainty: "occupied", cause: "シャー・ジャハーンのバルフ遠征", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    - {from: 1647, owner: "bukhara", certainty: "uncertain", cause: "ムガル軍が撤退", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    # ---- 1648– ----
     - {from: 1648, owner: bukhara, certainty: uncertain, note: "ウズベクのカタガン部の地。ブハラ（ジャーン朝）のバルフの王族の支配下"}
     - {from: 1737, owner: persia, certainty: uncertain, cause: "ナーディルの子レザー・コリーがバルフを攻略", source: "https://en.wikipedia.org/wiki/Nader_Shah"}
     - {from: 1751, owner: durrani, certainty: uncertain, cause: "アフマド・シャー・ドゥッラーニーの軍がバルフ・クンドゥズを従える", source: "https://ja.wikipedia.org/wiki/ドゥッラーニー朝"}
@@ -4976,6 +5550,13 @@
   select:
     pieces: [AFG-Badakhshan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid", certainty: "uncertain"}
+    - {from: 1584, owner: "bukhara", certainty: "uncertain", cause: "アブドゥッラー2世がバダフシャーンを取る", source: "https://en.wikipedia.org/wiki/Abdullah_Khan_II"}
+    - {from: 1599, owner: null, certainty: "uncertain", cause: "アブドゥッラー2世の死後、在地の首長が自立", source: "https://en.wikipedia.org/wiki/Badakhshan"}
+    - {from: 1646, owner: "mughal", certainty: "occupied", cause: "シャー・ジャハーンのバルフ遠征", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    - {from: 1647, owner: null, certainty: "uncertain", cause: "ムガル軍が撤退", source: "https://en.wikipedia.org/wiki/Mughal_invasion_of_Balkh"}
+    # ---- 1648– ----
     - {from: 1648, owner: null, certainty: uncertain, note: "バダフシャーンのミール（1650年代からヤール家）が治める山国。ブハラ・ドゥッラーニー朝の宗主権は名目的だった", source: "https://en.wikipedia.org/wiki/Badakhshan"}
     - {from: 1859, owner: afghanistan, certainty: uncertain, cause: "バダフシャーンのミールがアフガニスタンに服属する（1881年に直接統治）", source: "https://en.wikipedia.org/wiki/Badakhshan"}
     - {from: 1879, owner: afghanistan, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
@@ -4986,6 +5567,11 @@
   select:
     pieces: [AFG-Badghis, AFG-Ghor]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: "timurid"}
+    - {from: 1507, owner: "bukhara", cause: "シャイバーニー朝がヘラートを取る", source: "https://ja.wikipedia.org/wiki/ティムール朝"}
+    - {from: 1510, owner: "persia", certainty: "uncertain", cause: "メルヴの戦い", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    # ---- 1648– ----
     - {from: 1648, owner: persia, certainty: uncertain, note: "アイマク人・ハザーラ人の山地。サファヴィー朝のヘラート州の周り"}
     - {from: 1717, owner: herat_abdali, certainty: uncertain, cause: "アブダーリー族がヘラートで自立", source: "https://en.wikipedia.org/wiki/Abdali_Afghans"}
     - {from: 1732, owner: persia, certainty: uncertain, cause: "ナーディルがヘラートを攻略"}
@@ -4999,6 +5585,9 @@
   select:
     pieces: [AFG-Bamyan, AFG-Daykundi]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: null, certainty: uncertain, note: "ハザーラ人の諸部族の地。ムガル帝国・サファヴィー朝・ドゥッラーニー朝の支配は名目的だった", source: "https://en.wikipedia.org/wiki/Hazarajat"}
     - {from: 1879, owner: afghanistan, certainty: uncertain, cause: "ガンダマク条約でアフガニスタンの外交がイギリスに委ねられる（英露の緩衝国として独自の国の色で描く）", source: "https://ja.wikipedia.org/wiki/ガンダマク条約"}
     - {from: 1893, owner: afghanistan, cause: "アブドゥッラフマーン・ハーンがハザーラ人の地を征服（1891–1893年）", source: "https://en.wikipedia.org/wiki/Hazarajat"}
@@ -5008,6 +5597,816 @@
   select:
     pieces: [AFG-Nuristan]
   timeline:
+    # ---- 1453–1647（担当E・生成） ----
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    # ---- 1648– ----
     - {from: 1648, owner: null, certainty: uncertain, note: "カーフィル（異教徒）と呼ばれた山地の諸部族の地。どの国の支配も及ばなかった"}
     - {from: 1896, owner: afghanistan, cause: "アブドゥッラフマーン・ハーンがカーフィリスターンを征服し、ヌーリスターン（光の国）と改める（1895–1896年）", source: "https://en.wikipedia.org/wiki/Nuristan_Province"}
 
+# ================================================================ 1453–1647 の分割（担当E・生成）
+# 1648 年の地域の中で、1648 年より前の所属が違う部分（until: 1647。1648 年以降は外側の地域が効く）。
+
+- id: pre_mamluk_levant
+  name: "マムルーク朝のシリア・パレスチナ"
+  until: 1647
+  select:
+    pieces: [118-Gaza_Strip, 124-No_Man_s_Land, 126-Sanafir_Tiran_Is, 129-West_Bank, ISR-Central_District, ISR-Jerusalem_District, ISR-Southern_District, ISR-Tel_Aviv, JOR-Ajloun, JOR-Amman, JOR-Aqaba, JOR-Balqa, JOR-Irbid, JOR-Jerash, JOR-Karak, JOR-Ma_an, JOR-Madaba, JOR-Mafraq, JOR-Tafilah, JOR-Zarqa, LBN-Aakkar, LBN-Liban_Nord, SYR-Aleppo, SYR-Ar_Raqqa, SYR-As_Sweida, SYR-Damascus, SYR-Dar_a, SYR-Deir_ez_Zor, SYR-Hama, SYR-Homs, SYR-Idleb, SYR-Lattakia, SYR-Quneitra, SYR-Rural_Damascus, SYR-Tartous]
+  timeline:
+    - {from: 1453, owner: "mamluk"}
+    - {from: 1516, owner: "ottoman", cause: "マルジュ・ダービクの戦い（8月）ののち、セリム1世がダマスクス・エルサレムを取る", source: "https://ja.wikipedia.org/wiki/マルジュ・ダービクの戦い"}
+
+- id: pre_albania_league
+  name: "スカンデルベグのアルバニア"
+  until: 1647
+  select:
+    pieces: [ALB-Bulqize, ALB-Diber, ALB-Kruje, ALB-Kurbin, ALB-Mat, ALB-Mirdite, ALB-Puke, ALB-Tirane]
+  timeline:
+    - {from: 1453, owner: "albania_league"}
+    - {from: 1468, owner: "venice", certainty: "uncertain", cause: "スカンデルベグの死（1月）。クルヤはヴェネツィアの守備隊が守る", source: "https://ja.wikipedia.org/wiki/スカンデルベグ"}
+    - {from: 1478, owner: "ottoman", cause: "クルヤが陥落（6月）", source: "https://en.wikipedia.org/wiki/Siege_of_Krujë_(1478)"}
+  note: "レジャ同盟（1444）の範囲は近似。"
+
+- id: pre_durazzo
+  name: "ドゥラッツォ（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [ALB-Durres]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領アルバニア"}
+    - {from: 1501, owner: "ottoman", cause: "第二次オスマン・ヴェネツィア戦争でドゥラス（ドゥラッツォ）が陥落", source: "https://en.wikipedia.org/wiki/Durrës"}
+
+- id: pre_venetian_scutari
+  name: "スクタリ・アレッシオ（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [ALB-Lezhe, ALB-Malesi_e_Madhe, ALB-Shkoder]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領アルバニア"}
+    - {from: 1479, owner: "ottoman", cause: "スクタリ（シュコドラ）が長い包囲ののち降伏。コンスタンティノープル条約でヴェネツィアが割譲", source: "https://en.wikipedia.org/wiki/Siege_of_Shkodra"}
+
+- id: pre_shirvan
+  name: "シルヴァン（シルヴァン・シャー朝）"
+  until: 1647
+  select:
+    pieces: [AZE-Contiguous_Azerbaijan]
+  timeline:
+    - {from: 1453, owner: "shirvan"}
+    - {from: 1501, owner: "shirvan", overlord: "persia", cause: "イスマーイール1世がシルヴァン・シャーのファッルフ・ヤッサールを破る", source: "https://en.wikipedia.org/wiki/Shirvanshah"}
+    - {from: 1538, owner: "persia", cause: "タフマースプ1世がシルヴァンを併合", source: "https://en.wikipedia.org/wiki/Shirvanshah"}
+    - {from: 1578, owner: "ottoman", certainty: "occupied", cause: "オスマン軍がシルヴァンを占領（オスマン・サファヴィー戦争）", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1578–1590)"}
+    - {from: 1590, owner: "ottoman", cause: "イスタンブル条約", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1590)"}
+    - {from: 1607, owner: "persia", cause: "アッバース1世がシャマヒを取り戻す", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"}
+  note: "ピースはクラ川の南（カラバフ平野・ガンジャ）を含む。面積の大きいシルヴァンに合わせた。"
+
+- id: pre_karabakh
+  name: "カラバフ"
+  until: 1647
+  select:
+    pieces: [AZE-Nagorno_Karabakh]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "白羊朝が黒羊朝を滅ぼす", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1502, owner: "persia", cause: "サファヴィー朝の成立", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1588, owner: "ottoman", certainty: "occupied", cause: "オスマン軍がガンジャを取る", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1578–1590)"}
+    - {from: 1590, owner: "ottoman", cause: "イスタンブル条約", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1590)"}
+    - {from: 1606, owner: "persia", cause: "アッバース1世がガンジャを奪い返す", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"}
+
+- id: pre_herzegovina
+  name: "ヘルツェゴヴィナ（聖サヴァ公領）"
+  until: 1647
+  select:
+    pieces: [BIH-Bosnian_Podrinje_Canton_Gora_de, BIH-Herzegovina_Neretva_Canton, MNE-Nik_i_Municipality, MNE-Pljevlja_Municipality, MNE-Plu_ine_Municipality, MNE-abljak_Municipality, MNE-avnik_Municipality, SRB-Nova_Varos_Municipality, SRB-Priboj_Municipality, SRB-Prijepolje_Municipality]
+  timeline:
+    - {from: 1453, owner: "herzegovina"}
+    - {from: 1466, owner: "ottoman", cause: "オスマン軍がブラガイなどヘルツェゴヴィナの大半を奪う", source: "https://en.wikipedia.org/wiki/Duchy_of_Saint_Sava"}
+  note: "スチェパン・ヴクチッチ・コサチャが「聖サヴァのヘルツェグ（公）」を名のった（ヘルツェゴヴィナの名の起こり）。"
+
+- id: pre_srebrenik
+  name: "スレブレニク・バナト（ハンガリー領）"
+  until: 1647
+  select:
+    pieces: [BIH-Brcko_District]
+  timeline:
+    - {from: 1453, owner: "bosnia_kingdom"}
+    - {from: 1463, owner: "ottoman", cause: "メフメト2世がボスニアを征服し、最後の王スチェパン・トマシェヴィチを処刑", source: "https://ja.wikipedia.org/wiki/ボスニア王国"}
+    - {from: 1464, owner: "hungary", label: "スレブレニク・バナト", cause: "マーチャーシュ1世がスレブレニクを奪う", source: "https://en.wikipedia.org/wiki/Banate_of_Srebrenik"}
+    - {from: 1512, owner: "ottoman", cause: "スレブレニクが陥落", source: "https://en.wikipedia.org/wiki/Banate_of_Srebrenik"}
+
+- id: pre_jajce
+  name: "ヤイツェ・バナト（ハンガリー領）"
+  until: 1647
+  select:
+    pieces: [BIH-Central_Bosnia_Canton]
+  timeline:
+    - {from: 1453, owner: "bosnia_kingdom"}
+    - {from: 1463, owner: "hungary", label: "ヤイツェ・バナト", cause: "マーチャーシュ1世がヤイツェを奪い返し、ハンガリーの辺境領（バナト）とする", source: "https://en.wikipedia.org/wiki/Banate_of_Jajce"}
+    - {from: 1528, owner: "ottoman", cause: "ヤイツェが陥落（1月）", source: "https://en.wikipedia.org/wiki/Banate_of_Jajce"}
+
+- id: pre_bosnia_kingdom
+  name: "ボスニア王国"
+  until: 1647
+  select:
+    pieces: [BIH-Canton_10, BIH-Republika_Srpska, BIH-Zenica_Doboj_Canton]
+  timeline:
+    - {from: 1453, owner: "bosnia_kingdom"}
+    - {from: 1463, owner: "ottoman", cause: "メフメト2世がボスニアを征服し、最後の王スチェパン・トマシェヴィチを処刑", source: "https://ja.wikipedia.org/wiki/ボスニア王国"}
+  note: "東部のヴルフボスナ（サラエヴォ）は 1451 年からオスマン領。王国の境は近似。"
+
+- id: pre_srebrenik_2
+  name: "スレブレニク・バナト（ハンガリー領）"
+  until: 1647
+  select:
+    pieces: [BIH-Tuzla_Canton]
+  timeline:
+    - {from: 1453, owner: "bosnia_kingdom"}
+    - {from: 1463, owner: "ottoman", cause: "メフメト2世がボスニアを征服し、最後の王スチェパン・トマシェヴィチを処刑", source: "https://ja.wikipedia.org/wiki/ボスニア王国"}
+    - {from: 1464, owner: "hungary", label: "スレブレニク・バナト", cause: "マーチャーシュ1世がスレブレニクを奪う", source: "https://en.wikipedia.org/wiki/Banate_of_Srebrenik"}
+    - {from: 1512, owner: "ottoman", cause: "スレブレニクが陥落", source: "https://en.wikipedia.org/wiki/Banate_of_Srebrenik"}
+
+- id: pre_bihac
+  name: "ビハチ（クロアチア＝ハンガリー領）"
+  until: 1647
+  select:
+    pieces: [BIH-Una_Sana_Canton]
+  timeline:
+    - {from: 1453, owner: "hungary", label: "クロアチア"}
+    - {from: 1527, owner: "habsburg", label: "クロアチア", cause: "1月1日、ツェティンのクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
+    - {from: 1592, owner: "ottoman", cause: "ビハチが陥落（6月）。ボスニア州の北西の辺境に", source: "https://en.wikipedia.org/wiki/Siege_of_Bihać_(1592)"}
+  note: "クロアチア王国（ハンガリー王の同君連合）の一部。地図では1526年までハンガリー王国、1527年からハプスブルク家（担当 D のクロアチア側と同じ）の色。"
+
+- id: pre_herzegovina_west
+  name: "ヘルツェゴヴィナ西部"
+  until: 1647
+  select:
+    pieces: [BIH-West_Herzegovina_Canton]
+  timeline:
+    - {from: 1453, owner: "herzegovina"}
+    - {from: 1477, owner: "ottoman", cause: "オスマン軍がリュブシュキなど西部を攻め落とす", source: "https://en.wikipedia.org/wiki/Duchy_of_Saint_Sava"}
+
+- id: pre_famagusta
+  name: "ファマグスタ"
+  until: 1647
+  select:
+    pieces: [CYP-Famagusta]
+  timeline:
+    - {from: 1453, owner: "genoa", label: "ファマグスタ（ジェノヴァ領）"}
+    - {from: 1464, owner: "cyprus_kingdom", overlord: "mamluk", cause: "ジャック2世がジェノヴァからファマグスタを奪い返す", source: "https://en.wikipedia.org/wiki/Famagusta"}
+    - {from: 1489, owner: "venice", cause: "ヴェネツィア領となる", source: "https://ja.wikipedia.org/wiki/キプロス王国"}
+    - {from: 1571, owner: "ottoman", cause: "ファマグスタが長い包囲ののち降伏（8月）", source: "https://ja.wikipedia.org/wiki/ファマグスタ包囲戦"}
+
+- id: pre_cyprus
+  name: "キプロス王国"
+  until: 1647
+  select:
+    pieces: [CYP-Kyrenia, CYP-Larnaca, CYP-Limassol, CYP-Nicosia, CYP-Paphos]
+  timeline:
+    - {from: 1453, owner: "cyprus_kingdom", overlord: "mamluk"}
+    - {from: 1489, owner: "venice", cause: "女王カテリーナ・コルナーロが退位し、ヴェネツィア領となる", source: "https://ja.wikipedia.org/wiki/キプロス王国"}
+    - {from: 1570, owner: "ottoman", cause: "キプロス戦争：オスマン軍がニコシアを攻め落とす（9月）", source: "https://ja.wikipedia.org/wiki/キプロス戦争"}
+
+- id: pre_adjara
+  name: "アジャリア"
+  until: 1647
+  select:
+    pieces: [GEO-Adjara]
+  timeline:
+    - {from: 1453, owner: "georgian_kingdoms", certainty: "nominal"}
+    - {from: 1463, owner: "guria", overlord: "imereti", certainty: "uncertain"}
+    - {from: 1547, owner: "ottoman", cause: "オスマン軍がバトゥミとアジャリアを取る（年は要確認）", source: "https://en.wikipedia.org/wiki/Adjara"}
+
+- id: pre_dodecanese_v
+  name: "パトモス・アモルゴス・アスティパレア（ヴェネツィア系）"
+  until: 1647
+  select:
+    pieces: [GRC-Agathonisi, GRC-Amorgos, GRC-Astypalaia, GRC-Leipsoi, GRC-Mikonos, GRC-Patmos]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア系の領主"}
+    - {from: 1537, owner: "ottoman", cause: "バルバロス・ハイレッディンのエーゲ海遠征", source: "https://en.wikipedia.org/wiki/Hayreddin_Barbarossa"}
+
+- id: pre_lemnos
+  name: "レムノス島"
+  until: 1647
+  select:
+    pieces: [GRC-Agios_Efstratios, GRC-Lemnos]
+  timeline:
+    - {from: 1453, owner: "gattilusi", overlord: "ottoman"}
+    - {from: 1456, owner: "ottoman", cause: "オスマン軍がレムノス島を奪う", source: "https://en.wikipedia.org/wiki/Lemnos"}
+    - {from: 1464, owner: "venice", label: "ヴェネツィア領", cause: "第一次オスマン・ヴェネツィア戦争でヴェネツィアが占領", source: "https://en.wikipedia.org/wiki/Lemnos"}
+    - {from: 1479, owner: "ottoman", cause: "コンスタンティノープル条約でオスマン帝国に戻る", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1479)"}
+
+- id: pre_crete_rethymno
+  name: "レティムノ"
+  until: 1647
+  select:
+    pieces: [GRC-Agios_Vasileios, GRC-Amari, GRC-Mylopotamos, GRC-Rethymno]
+  timeline:
+    - {from: 1453, owner: "venice", label: "カンディア王国（ヴェネツィア領）"}
+    - {from: 1646, owner: "ottoman", certainty: "occupied", cause: "オスマン軍がレティムノを攻め落とす（11月）", source: "https://ja.wikipedia.org/wiki/クレタ戦争_(1645年-1669年)"}
+
+- id: pre_aegina
+  name: "アイギナ島（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Aegina, GRC-Agistri]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領"}
+    - {from: 1537, owner: "ottoman", cause: "バルバロス・ハイレッディンがアイギナ島を攻め落とす", source: "https://en.wikipedia.org/wiki/Aegina"}
+
+- id: pre_morea_north
+  name: "モレア北部（コリントス・アカイア）"
+  until: 1647
+  select:
+    pieces: [GRC-Aigialeia, GRC-Corinth, GRC-Erymanthos, GRC-Kalavryta, GRC-Loutraki_Agioi_Theodoroi, GRC-Nemea, GRC-Patras, GRC-Sikyona, GRC-Velo_Vocha, GRC-West_Achaea, GRC-Xylokastro_Evrostina]
+  timeline:
+    - {from: 1453, owner: "morea", overlord: "ottoman"}
+    - {from: 1458, owner: "ottoman", cause: "メフメト2世の遠征。コリントス・パトラなどモレア北部を併合", source: "https://ja.wikipedia.org/wiki/モレアス専制公領"}
+
+- id: pre_athens
+  name: "アテネ公国"
+  until: 1647
+  select:
+    pieces: [GRC-Acharnes, GRC-Agia_Paraskevi, GRC-Agia_Varvara, GRC-Agioi_Anargyroi_Kamatero, GRC-Agios_Dimitrios, GRC-Aliartos, GRC-Alimos, GRC-Aspropyrgos, GRC-Athens, GRC-Chalandri, GRC-Dafni_Ymittos, GRC-Dionysos, GRC-Egaleo, GRC-Elefsina, GRC-Elliniko_Argyroupoli, GRC-Filadelfeia_Chalkidona, GRC-Filothei_Psychiko, GRC-Fyli, GRC-Galatsi, GRC-Glyfada, GRC-Haidari, GRC-Ilion, GRC-Ilioupoli, GRC-Irakleio, GRC-Kaisariani, GRC-Kallithea, GRC-Keratsini_Drapetsona, GRC-Kifisia, GRC-Korydallos, GRC-Kropia, GRC-Lavreotiki, GRC-Lykovrysi_Pefki, GRC-Mandra_Eidyllia, GRC-Marathon, GRC-Markopoulo_Mesogaias, GRC-Marousi, GRC-Megara, GRC-Metamorfosi, GRC-Moschato_Tavros, GRC-Nea_Ionia, GRC-Nea_Smyrni, GRC-Nikaia_Agios_Ioannis_Rentis, GRC-Oropos, GRC-Paiania, GRC-Palaio_Faliro, GRC-Pallini, GRC-Papagou_Cholargos, GRC-Penteli, GRC-Perama, GRC-Peristeri, GRC-Petroupoli, GRC-Pireas, GRC-Rafina_Pikermi, GRC-Salamina, GRC-Saronikos, GRC-Spata_Artemida, GRC-Tanagra, GRC-Thebes, GRC-Vari_Voula_Vouliagmeni, GRC-Vrilissia, GRC-Vyronas, GRC-Zografou]
+  timeline:
+    - {from: 1453, owner: "athens_duchy", overlord: "ottoman"}
+    - {from: 1456, owner: "ottoman", cause: "オスマン軍がアテネを占領（アクロポリスは 1458 年に降伏）。アッチャイウォーリ家のアテネ公国が終わる", source: "https://ja.wikipedia.org/wiki/アテネ公国"}
+
+- id: pre_sporades
+  name: "北スポラデス諸島・スキロス島（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Alonnisos, GRC-Skiathos, GRC-Skopelos, GRC-Skyros]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領"}
+    - {from: 1538, owner: "ottoman", cause: "バルバロス・ハイレッディンのエーゲ海遠征", source: "https://en.wikipedia.org/wiki/Hayreddin_Barbarossa"}
+
+- id: pre_naxos
+  name: "ナクソス公国（エーゲ海公国）"
+  until: 1647
+  select:
+    pieces: [GRC-Anafi, GRC-Andros, GRC-Antiparos, GRC-Folegandros, GRC-Iiton, GRC-Kea, GRC-Kimolos, GRC-Kithnos, GRC-Milos, GRC-Naxos_and_Lesser_Cyclades, GRC-Paros, GRC-Santorini, GRC-Serifos, GRC-Sifnos, GRC-Sikinos, GRC-Syros]
+  timeline:
+    - {from: 1453, owner: "naxos_duchy", overlord: "venice"}
+    - {from: 1537, owner: "naxos_duchy", overlord: "ottoman", cause: "バルバロス・ハイレッディンの遠征で公国がオスマン帝国に貢納する", source: "https://en.wikipedia.org/wiki/Duchy_of_the_Archipelago"}
+    - {from: 1566, owner: "ottoman", cause: "セリム2世が最後の公ジャコモ4世を廃し、ユダヤ人ヨセフ・ナスィに与える（1579 年に直轄）", source: "https://en.wikipedia.org/wiki/Duchy_of_the_Archipelago"}
+  note: "クリスポ家の公国。キクラデス諸島の一部はヴェネツィア系の家（ゴッツァディーニ家など）が持ち、ケア・キトノスなどは 1617 年まで続いた（まとめて描く）。"
+
+- id: pre_crete_chania
+  name: "ハニア"
+  until: 1647
+  select:
+    pieces: [GRC-Apokoronas, GRC-Chania, GRC-Gavdos, GRC-Kantanos_Selino, GRC-Kissamos, GRC-Platanias, GRC-Sfakia]
+  timeline:
+    - {from: 1453, owner: "venice", label: "カンディア王国（ヴェネツィア領）"}
+    - {from: 1645, owner: "ottoman", certainty: "occupied", cause: "クレタ戦争の始まり：オスマン軍がハニアを攻め落とす（8月）", source: "https://ja.wikipedia.org/wiki/クレタ戦争_(1645年-1669年)"}
+
+- id: pre_argos
+  name: "アルゴス（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Argos_Mykines]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領"}
+    - {from: 1463, owner: "ottoman", cause: "オスマン軍がアルゴスを奪う（第一次オスマン・ヴェネツィア戦争の始まり）", source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1463–1479)"}
+
+- id: pre_negroponte
+  name: "ネグロポンテ（エウボイア島。ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Chalcis, GRC-Dirfys_Messapia, GRC-Eretria, GRC-Istiaia_Aidipsos, GRC-Karystos, GRC-Kymi_Aliveri, GRC-Mantoudi_Limni_Agia_Anna]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ネグロポンテ（ヴェネツィア領）"}
+    - {from: 1470, owner: "ottoman", cause: "メフメト2世がネグロポンテ（ハルキス）を攻め落とす（7月）", source: "https://en.wikipedia.org/wiki/Siege_of_Negroponte_(1470)"}
+
+- id: pre_chios
+  name: "キオス島（ジェノヴァのマオナ）"
+  until: 1647
+  select:
+    pieces: [GRC-Chios, GRC-Oinousses, GRC-Psara]
+  timeline:
+    - {from: 1453, owner: "genoa", overlord: "ottoman", label: "キオス（ジェノヴァのマオナ）"}
+    - {from: 1566, owner: "ottoman", cause: "ピヤーレ・パシャがキオス島を併合（4月）", source: "https://en.wikipedia.org/wiki/Republic_of_Genoa"}
+  note: "ジェノヴァの商人の会社（マオナ・ジュスティニアーニ）が治め、1455 年からオスマン帝国に貢納した。"
+
+- id: pre_ikaria
+  name: "イカリア島"
+  until: 1647
+  select:
+    pieces: [GRC-Fournoi_Korseon, GRC-Ikaria]
+  timeline:
+    - {from: 1453, owner: "genoa", label: "イカリア（ジェノヴァ系の領主）"}
+    - {from: 1521, owner: "ottoman", cause: "住民がオスマン帝国に降る", source: "https://en.wikipedia.org/wiki/Icaria"}
+
+- id: pre_rhodes
+  name: "ロードス島と周辺（聖ヨハネ騎士団）"
+  until: 1647
+  select:
+    pieces: [GRC-Halki, GRC-Kalymnos, GRC-Kos, GRC-Leros, GRC-Nisyros, GRC-Rhodes, GRC-Symi, GRC-Tilos]
+  timeline:
+    - {from: 1453, owner: "malta"}
+    - {from: 1522, owner: "ottoman", cause: "スレイマン1世のロードス包囲。騎士団が降伏して島を去る（12月）", source: "https://ja.wikipedia.org/wiki/ロードス包囲戦_(1522年)"}
+  note: "1480 年の包囲ではメフメト2世の軍を退けた。騎士団は 1530 年にマルタ島へ移る。"
+
+- id: pre_karpathos
+  name: "カルパトス・カソス（ヴェネツィアのコルナーロ家）"
+  until: 1647
+  select:
+    pieces: [GRC-Karpathos, GRC-Kasos]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア系の領主"}
+    - {from: 1538, owner: "ottoman", cause: "バルバロス・ハイレッディンのエーゲ海遠征", source: "https://en.wikipedia.org/wiki/Karpathos"}
+
+- id: pre_venetian_ionian
+  name: "ケルキラ・パクシ・キシラ・パルガ（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Kythira]
+  timeline:
+    - {from: 1453, owner: "venice"}
+
+- id: pre_lesbos
+  name: "レスボス島（ガッティルージ家）"
+  until: 1647
+  select:
+    pieces: [GRC-Lesbos]
+  timeline:
+    - {from: 1453, owner: "gattilusi", overlord: "ottoman"}
+    - {from: 1462, owner: "ottoman", cause: "メフメト2世がレスボス島を攻め落とす（9月）", source: "https://en.wikipedia.org/wiki/Gattilusio"}
+
+- id: pre_monemvasia
+  name: "モネンヴァシア"
+  until: 1647
+  select:
+    pieces: [GRC-Monemvasia]
+  timeline:
+    - {from: 1453, owner: "morea", overlord: "ottoman"}
+    - {from: 1460, owner: "papal_states", cause: "専制公トマスがモネンヴァシアを教皇に託す", source: "https://en.wikipedia.org/wiki/Monemvasia"}
+    - {from: 1464, owner: "venice", label: "ヴェネツィア領", cause: "住民がヴェネツィアの保護を求める", source: "https://en.wikipedia.org/wiki/Monemvasia"}
+    - {from: 1540, owner: "ottoman", cause: "第三次オスマン・ヴェネツィア戦争の講和でオスマン帝国に渡す", source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1537–1540)"}
+
+- id: pre_lepanto
+  name: "レパント（ナフパクトス。ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Nafpaktia]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領"}
+    - {from: 1499, owner: "ottoman", cause: "第二次オスマン・ヴェネツィア戦争でレパントが陥落（8月）", source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1499–1503)"}
+
+- id: pre_nauplia
+  name: "ナフプリオ（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Nafplio]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領"}
+    - {from: 1540, owner: "ottoman", cause: "第三次オスマン・ヴェネツィア戦争の講和で、ヴェネツィアがナフプリオとモネンヴァシアを渡す", source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1537–1540)"}
+
+- id: pre_modon_coron
+  name: "モドン・コロン・ナヴァリノ（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Pylos_Nestoras]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領"}
+    - {from: 1500, owner: "ottoman", cause: "第二次オスマン・ヴェネツィア戦争でモドン（メトニ）・コロン・ナヴァリノが陥落", source: "https://en.wikipedia.org/wiki/Ottoman–Venetian_War_(1499–1503)"}
+
+- id: pre_samos
+  name: "サモス島"
+  until: 1647
+  select:
+    pieces: [GRC-Samos]
+  timeline:
+    - {from: 1453, owner: "genoa", overlord: "ottoman", label: "サモス（ジェノヴァのマオナ）"}
+    - {from: 1475, owner: "ottoman", cause: "住民がキオスに逃れ、島はオスマン領に（ほぼ無人となり、1560 年代から再び植民）", source: "https://en.wikipedia.org/wiki/Samos"}
+
+- id: pre_thasos
+  name: "タソス島・サモトラキ島（ガッティルージ家）"
+  until: 1647
+  select:
+    pieces: [GRC-Samothrakis, GRC-Thassou]
+  timeline:
+    - {from: 1453, owner: "gattilusi", overlord: "ottoman"}
+    - {from: 1456, owner: "ottoman", cause: "オスマン軍がエノスとタソス・サモトラキを奪う", source: "https://en.wikipedia.org/wiki/Gattilusio"}
+
+- id: pre_morea_despotate
+  name: "モレア専制公領"
+  until: 1647
+  select:
+    pieces: [GRC-Spetses, GRC-Ydra]
+  timeline:
+    - {from: 1453, owner: "morea", overlord: "ottoman"}
+    - {from: 1460, owner: "ottoman", cause: "メフメト2世がモレアを征服し、専制公領が滅ぶ", source: "https://ja.wikipedia.org/wiki/モレアス専制公領"}
+  note: "ビザンツ皇帝の弟デメトリオスとトマスが分け持った。1453 年からオスマン帝国に貢納。"
+
+- id: pre_zakynthos
+  name: "ザキントス島（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [GRC-Zakynthos]
+  timeline:
+    - {from: 1453, owner: "tocco", overlord: "ottoman"}
+    - {from: 1479, owner: "ottoman", cause: "オスマン軍がレフカダ・ケファロニア・ザキントスを奪い、トッコ家が追われる", source: "https://en.wikipedia.org/wiki/County_palatine_of_Cephalonia_and_Zakynthos"}
+    - {from: 1485, owner: "venice", cause: "オスマン帝国がザキントス島をヴェネツィアに渡す（貢納と引きかえ）", source: "https://en.wikipedia.org/wiki/Zakynthos"}
+
+- id: pre_south_khorasan
+  name: "南ホラーサーン（ビールジャンド）"
+  until: 1647
+  select:
+    pieces: [IRN-South_Khorasan]
+  timeline:
+    - {from: 1453, owner: "timurid"}
+    - {from: 1507, owner: "bukhara", cause: "ムハンマド・シャイバーニーがヘラートを取り、ティムール朝が滅ぶ", source: "https://ja.wikipedia.org/wiki/ティムール朝"}
+    - {from: 1510, owner: "persia", cause: "メルヴの戦いでイスマーイール1世がシャイバーニーを破る（12月）", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    - {from: 1589, owner: "bukhara", certainty: "uncertain", cause: "シャイバーニー朝のアブドゥッラー2世がヘラート（1588）・マシュハド（1589）を取り、ウズベクの軍がホラーサーン南部まで攻め込む（支配の範囲ははっきりしない）", source: "https://en.wikipedia.org/wiki/Abdullah_Khan_II"}
+    - {from: 1598, owner: "persia", cause: "アッバース1世がホラーサーンを奪い返す", source: "https://ja.wikipedia.org/wiki/アッバース1世"}
+
+- id: pre_khorasan_pre
+  name: "ホラーサーン"
+  until: 1647
+  select:
+    pieces: [IRN-Golestan]
+  timeline:
+    - {from: 1453, owner: "timurid"}
+    - {from: 1507, owner: "bukhara", cause: "ムハンマド・シャイバーニーがヘラートを取り、ティムール朝が滅ぶ", source: "https://ja.wikipedia.org/wiki/ティムール朝"}
+    - {from: 1510, owner: "persia", cause: "メルヴの戦いでイスマーイール1世がシャイバーニーを破る（12月）", source: "https://en.wikipedia.org/wiki/Battle_of_Marv"}
+    - {from: 1589, owner: "bukhara", certainty: "uncertain", cause: "シャイバーニー朝のアブドゥッラー2世がヘラート（1588）・マシュハド（1589）を取り、ウズベクの軍がアスタラーバード方面まで攻め込む（支配の範囲ははっきりしない）", source: "https://en.wikipedia.org/wiki/Abdullah_Khan_II"}
+    - {from: 1598, owner: "persia", cause: "アッバース1世がホラーサーンを奪い返す", source: "https://ja.wikipedia.org/wiki/アッバース1世"}
+
+- id: pre_khuzestan
+  name: "フーゼスターン（ムシャアシャア朝）"
+  until: 1647
+  select:
+    pieces: [IRN-Khuzestan]
+  timeline:
+    - {from: 1453, owner: "mushasha", certainty: "uncertain"}
+    - {from: 1508, owner: "persia", cause: "イスマーイール1世がムシャアシャア朝を従える（以後、サファヴィー朝の下の世襲の総督）", source: "https://en.wikipedia.org/wiki/Musha%27sha%27iyyah"}
+
+- id: pre_mazandaran
+  name: "マーザンダラーン"
+  until: 1647
+  select:
+    pieces: [IRN-Mazandaran, IRN-Mazandaran_2]
+  timeline:
+    - {from: 1453, owner: "marashi", certainty: "uncertain"}
+    - {from: 1504, owner: "marashi", overlord: "persia", certainty: "uncertain", cause: "マーザンダラーンの在地王朝がサファヴィー朝に従う", source: "https://en.wikipedia.org/wiki/Mar'ashi_dynasty"}
+    - {from: 1596, owner: "persia", cause: "アッバース1世がマーザンダラーンを併合", source: "https://en.wikipedia.org/wiki/Mar'ashi_dynasty"}
+
+- id: pre_tabriz_ott
+  name: "タブリーズ（オスマン領 1585–1603）"
+  until: 1647
+  select:
+    pieces: [IRN-East_Azerbaijan, IRN-West_Azerbaijan]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンが黒羊朝を滅ぼす（1467–68）", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1501, owner: "persia", cause: "イスマーイール1世がタブリーズに入り、シャーを名のる（サファヴィー朝の成立）", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1585, owner: "ottoman", certainty: "occupied", cause: "オスマン軍がタブリーズを占領", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1578–1590)"}
+    - {from: 1590, owner: "ottoman", cause: "イスタンブル条約でタブリーズとアゼルバイジャンの大半がオスマン領に", source: "https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1590)"}
+    - {from: 1603, owner: "persia", cause: "アッバース1世がタブリーズを奪い返す（10月）", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1603–1618)"}
+
+- id: pre_shahrizor
+  name: "シャフリゾール（スレイマニヤ）"
+  until: 1647
+  select:
+    pieces: [IRQ-Al_Sulaimaniyah]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu"}
+    - {from: 1508, owner: "persia"}
+    - {from: 1534, owner: "ottoman", cause: "スレイマン1世のバグダード遠征", source: "https://en.wikipedia.org/wiki/Shahrizor_Eyalet"}
+
+- id: pre_iraq
+  name: "イラク（バグダード）"
+  until: 1647
+  select:
+    pieces: [IRQ-Al_Anbar, IRQ-Al_Muthanna, IRQ-Al_Qadisiyah, IRQ-An_Najaf, IRQ-Babil, IRQ-Baghdad, IRQ-Dhi_Qar, IRQ-Diyala, IRQ-Karbala, IRQ-Kirkuk, IRQ-Maysan, IRQ-Salah_al_Din, IRQ-Wasit]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "白羊朝が黒羊朝を滅ぼしてイラクを取る", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1508, owner: "persia", cause: "イスマーイール1世がバグダードを取る", source: "https://ja.wikipedia.org/wiki/イスマーイール1世"}
+    - {from: 1534, owner: "ottoman", cause: "スレイマン1世がバグダードに入城（11月）", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1532–1555)"}
+    - {from: 1624, owner: "persia", cause: "アッバース1世がバグダードを取る（1月）", source: "https://en.wikipedia.org/wiki/Ottoman–Safavid_War_(1623–1639)"}
+    - {from: 1638, owner: "ottoman", cause: "ムラト4世がバグダードを奪い返す（12月）。翌年のカスレ・シーリーン（ズハーブ）条約で国境が定まる", source: "https://ja.wikipedia.org/wiki/ガスレ・シーリーン条約"}
+
+- id: pre_mosul
+  name: "モースル・クルディスターン"
+  until: 1647
+  select:
+    pieces: [IRQ-Dohuk, IRQ-Erbil, IRQ-Ninawa]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "白羊朝が黒羊朝を滅ぼす", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1508, owner: "persia", cause: "サファヴィー朝がイラクを取る", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1517, owner: "ottoman", cause: "チャルディラーンの戦いののち、モースルとクルド人の首長たちがオスマン帝国に従う", source: "https://en.wikipedia.org/wiki/Mosul_Eyalet"}
+
+- id: pre_kz_east_irtysh
+  name: "東カザフスタン（イルティシュ川上流）"
+  until: 1647
+  select:
+    pieces: [KAZ-East_Kazakhstan_Region]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain"}
+    - {from: 1500, owner: "kazakh", certainty: "uncertain"}
+
+- id: pre_abulkhair
+  name: "ウズベク（アブル＝ハイル＝ハン国）の草原"
+  until: 1647
+  select:
+    pieces: [KAZ-Kostanay_Region]
+  timeline:
+    - {from: 1453, owner: "abulkhair", certainty: "uncertain"}
+    - {from: 1469, owner: "kazakh", certainty: "uncertain", cause: "アブル＝ハイル＝ハンの死後、ジャーニー・ベクとケレイのカザフが草原に広がる", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
+
+- id: pre_kyzylorda
+  name: "シル川下流（スグナク）"
+  until: 1647
+  select:
+    pieces: [KAZ-Kyzylorda_Region]
+  timeline:
+    - {from: 1453, owner: "abulkhair"}
+    - {from: 1469, owner: "kazakh", certainty: "uncertain", cause: "カザフがスグナクなどを取る", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
+
+- id: pre_syr_darya
+  name: "シル川下流・トルキスタン"
+  until: 1647
+  select:
+    pieces: [KAZ-South_Kazakhstan_Region]
+  timeline:
+    - {from: 1453, owner: "abulkhair"}
+    - {from: 1469, owner: "kazakh", certainty: "uncertain", cause: "アブル＝ハイル＝ハンの死後、カザフとシャイバーニーがシル川の町々を奪い合う", source: "https://ja.wikipedia.org/wiki/カザフ・ハン国"}
+    - {from: 1500, owner: "bukhara", certainty: "uncertain", cause: "シャイバーニーが南へ移ってシャイバーニー朝を開く", source: "https://ja.wikipedia.org/wiki/シャイバーニー朝"}
+    - {from: 1598, owner: "kazakh", cause: "タウケル・ハンがトルキスタンなどシル川中流の町を取る", source: "https://en.wikipedia.org/wiki/Tauekel_Khan"}
+
+- id: pre_fakhr_beqaa
+  name: "ベカー高原"
+  until: 1647
+  select:
+    pieces: [LBN-Baalbek_Hermel, LBN-Beqaa]
+  timeline:
+    - {from: 1453, owner: "mamluk"}
+    - {from: 1516, owner: "ottoman", cause: "マルジュ・ダービクの戦い（8月）ののち、セリム1世がダマスクス・エルサレムを取る", source: "https://ja.wikipedia.org/wiki/マルジュ・ダービクの戦い"}
+    - {from: 1624, owner: "lebanon_emirate", overlord: "ottoman", label: "ファフル・アッディーン2世の領地", cause: "アンジャルの戦い（1623）でダマスクス総督を破り、ベカー高原を押さえる", source: "https://en.wikipedia.org/wiki/Battle_of_Anjar"}
+    - {from: 1633, owner: "ottoman", cause: "オスマン軍がファフル・アッディーン2世を捕らえる", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+
+- id: pre_fakhr
+  name: "ファフル・アッディーン2世の領地（サイダ・ベイルート・サファド）"
+  until: 1647
+  select:
+    pieces: [LBN-Beyrouth, LBN-Liban_Sud, LBN-Nabatiye]
+  timeline:
+    - {from: 1453, owner: "mamluk"}
+    - {from: 1516, owner: "ottoman", cause: "マルジュ・ダービクの戦い（8月）ののち、セリム1世がダマスクス・エルサレムを取る", source: "https://ja.wikipedia.org/wiki/マルジュ・ダービクの戦い"}
+    - {from: 1602, owner: "lebanon_emirate", overlord: "ottoman", label: "ファフル・アッディーン2世の領地", cause: "マアン家のファフル・アッディーン2世がサイダ・ベイルートとサファドの県知事を兼ねる", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+    - {from: 1613, owner: "ottoman", cause: "ファフル・アッディーン2世がトスカーナに亡命（1618 年に帰国）", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+    - {from: 1618, owner: "lebanon_emirate", overlord: "ottoman", label: "ファフル・アッディーン2世の領地", cause: "ファフル・アッディーン2世が帰国して領地を取り戻す", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+    - {from: 1633, owner: "ottoman", cause: "オスマン軍がファフル・アッディーン2世を捕らえる（1635 年に処刑）", source: "https://en.wikipedia.org/wiki/Fakhr_al-Din_II"}
+
+- id: pre_venetian_bar
+  name: "バール・ウルツィニ（ヴェネツィア領）"
+  until: 1647
+  select:
+    pieces: [MNE-Bar_Municipality, MNE-Ulcinj_Municipality]
+  timeline:
+    - {from: 1453, owner: "venice", label: "ヴェネツィア領アルバニア"}
+    - {from: 1571, owner: "ottoman", cause: "キプロス戦争でオスマン軍がバール（アンティヴァリ）とウルツィニ（ドゥルチーニョ）を奪う", source: "https://en.wikipedia.org/wiki/Ulcinj"}
+
+- id: pre_oman_interior
+  name: "オマーン内陸（ナブハーン朝・イバード派）"
+  until: 1647
+  select:
+    pieces: [OMN-Ad_Dakhiliyah, OMN-Al_Wusta, OMN-Az_Zahirah]
+  timeline:
+    - {from: 1453, owner: "oman", certainty: "uncertain"}
+    - {from: 1624, owner: "oman", cause: "ナースィル・ブン・ムルシドがイマームに選ばれ、ヤアーリバ朝が始まる", source: "https://en.wikipedia.org/wiki/Yaruba_dynasty"}
+
+- id: pre_dhofar
+  name: "ズファール"
+  until: 1647
+  select:
+    pieces: [OMN-Dhofar]
+  timeline:
+    - {from: 1453, owner: "kathiri", certainty: "uncertain"}
+    - {from: 1624, owner: "oman", certainty: "uncertain"}
+  note: "16 世紀にはハドラマウトのカスィーリー家の支配が及んだ（要確認）。1624 年からのオマーン（ヤアーリバ朝）は、1648 年以降のデータ（オマーン領）とつなぐための近似で、ヤアーリバ朝初期の支配がズファールまで及んだかは疑わしい（カスィーリー家の支配が続いたとする記述が多い）。"
+
+- id: pre_muscat_pt
+  name: "マスカット（ポルトガル領）"
+  until: 1650
+  select:
+    pieces: [OMN-Muscat]
+  timeline:
+    - {from: 1453, owner: "hormuz"}
+    - {from: 1507, owner: "portugal", cause: "アルブケルケがマスカットを攻め落とす", source: "https://en.wikipedia.org/wiki/Portuguese_Muscat"}
+    - {from: 1650, owner: "oman", cause: "ヤアーリバ朝のイマーム、スルターン・ブン・サイフがマスカットを攻め落とし、ポルトガル人を追い出す（1月）", source: "https://en.wikipedia.org/wiki/Capture_of_Muscat_(1650)"}
+  note: "ポルトガル軍がマスカットを去ったのは 1650 年1月。1648 年以降の既存データ（oman_north）は 1648 年からオマーンだったが、まとめ役の判断で 1649 年までポルトガル領にした（until 1650。1651 年からは oman_north の記述が効く）。"
+
+- id: pre_serbia_despotate
+  name: "セルビア専制公国"
+  until: 1647
+  select:
+    pieces: [SRB-Aleksandrovac_Municipality, SRB-Arilje_Municipality, SRB-Bajina_Basta_Municipality, SRB-Brus_Municipality, SRB-Cajetina_Municipality, SRB-Cicevac_Municipality, SRB-Kosjeric_Municipality, SRB-Kraljevo_City, SRB-Krusevac_City, SRB-Pozega_Municipality, SRB-Raska_Municipality, SRB-Trstenik_Municipality, SRB-Uzice_City, SRB-Varvarin_Municipality, SRB-Vrnjacka_Banja_Municipality]
+  timeline:
+    - {from: 1453, owner: "serbia_despotate", overlord: "ottoman"}
+    - {from: 1459, owner: "ottoman", cause: "スメデレヴォの陥落でセルビア専制公国が滅ぶ（6月）", source: "https://ja.wikipedia.org/wiki/セルビア公国_(中世)"}
+  note: "1453 年の専制公国（スメデレヴォを都とするブランコヴィチ家の国。オスマン帝国に貢納）の範囲は近似。ベオグラードはハンガリー領。"
+
+- id: pre_belgrade_hungary
+  name: "ベオグラード（ハンガリー領）"
+  until: 1647
+  select:
+    pieces: [SRB-Belgrade]
+  timeline:
+    - {from: 1453, owner: "hungary", label: "ベオグラード（ハンガリーの要塞）"}
+    - {from: 1521, owner: "ottoman", cause: "スレイマン1世がベオグラードを攻め落とす（8月）", source: "https://ja.wikipedia.org/wiki/ベオグラード包囲戦_(1521年)"}
+  note: "1456 年のベオグラード包囲戦ではフニャディ・ヤーノシュがメフメト2世を退けた。"
+
+- id: pre_srem
+  name: "スレム（シルミウム）"
+  until: 1647
+  select:
+    pieces: [SRB-Beocin_Municipality, SRB-Indjija_Municipality, SRB-Irig_Municipality, SRB-Sid_Municipality, SRB-Sremski_Karlovci_Municipality]
+  timeline:
+    - {from: 1453, owner: "hungary"}
+    - {from: 1526, owner: "ottoman", cause: "ペトロヴァラディンなどスレムの要塞が落ち、モハーチの戦いでハンガリー軍が敗れる", source: "https://ja.wikipedia.org/wiki/モハーチの戦い"}
+  note: "スレムは 1521–1526 年に段階的に攻め落とされた。"
+
+- id: pre_serbia_despotate_south
+  name: "セルビア専制公国（南部・コソヴォ）"
+  until: 1647
+  select:
+    pieces: [SRB-Novi_Pazar_City, SRB-Sjenica_Municipality, SRB-Tutin_Municipality, XKX-Municipality_of_Decan, XKX-Municipality_of_Dragash, XKX-Municipality_of_Drenas, XKX-Municipality_of_Ferizaj, XKX-Municipality_of_Fushe_Kosove, XKX-Municipality_of_Gjakova, XKX-Municipality_of_Gjilan, XKX-Municipality_of_Gracanica, XKX-Municipality_of_Han_i_Elezit, XKX-Municipality_of_Istog, XKX-Municipality_of_Junik, XKX-Municipality_of_Kacanik, XKX-Municipality_of_Kamenica, XKX-Municipality_of_Klina, XKX-Municipality_of_Kllokot, XKX-Municipality_of_Leposaviq, XKX-Municipality_of_Lipjan, XKX-Municipality_of_Malisheva, XKX-Municipality_of_Mamusha, XKX-Municipality_of_Mitrovica, XKX-Municipality_of_North_Mitrovica, XKX-Municipality_of_Novoberde, XKX-Municipality_of_Obiliq, XKX-Municipality_of_Partesh, XKX-Municipality_of_Peja, XKX-Municipality_of_Podujeva, XKX-Municipality_of_Pristina, XKX-Municipality_of_Prizren, XKX-Municipality_of_Rahovec, XKX-Municipality_of_Ranillug, XKX-Municipality_of_Shterpce, XKX-Municipality_of_Shtime, XKX-Municipality_of_Skenderaj, XKX-Municipality_of_Suhareka, XKX-Municipality_of_Viti, XKX-Municipality_of_Vushtrri, XKX-Municipality_of_Zubin_Potok, XKX-Municipality_of_Zvecan]
+  timeline:
+    - {from: 1453, owner: "serbia_despotate", overlord: "ottoman", certainty: "uncertain"}
+    - {from: 1455, owner: "ottoman", cause: "メフメト2世がノヴォ・ブルドとプリズレンを攻め落とす", source: "https://en.wikipedia.org/wiki/Novo_Brdo"}
+  note: "コソヴォ（銀山のノヴォ・ブルド）は 1455 年まで専制公国。西部（ペーチ・ジャコヴァ）の在地領主の帰属は不確か。"
+
+- id: pre_sabac
+  name: "シャバツ（ハンガリー領 1476–1521）"
+  until: 1647
+  select:
+    pieces: [SRB-Sabac_City]
+  timeline:
+    - {from: 1453, owner: "serbia_despotate", overlord: "ottoman"}
+    - {from: 1459, owner: "ottoman", cause: "スメデレヴォの陥落でセルビア専制公国が滅ぶ（6月）", source: "https://ja.wikipedia.org/wiki/セルビア公国_(中世)"}
+    - {from: 1476, owner: "hungary", cause: "ハンガリー王マーチャーシュ1世がシャバツの砦を奪う", source: "https://en.wikipedia.org/wiki/Šabac_Fortress"}
+    - {from: 1521, owner: "ottoman", cause: "スレイマン1世のベオグラード遠征でシャバツが陥落", source: "https://en.wikipedia.org/wiki/Šabac_Fortress"}
+
+- id: pre_jazira
+  name: "ジャズィーラ北部（ハサカ）"
+  until: 1647
+  select:
+    pieces: [SYR-Al_Hasakeh]
+  timeline:
+    - {from: 1453, owner: "aq_qoyunlu"}
+    - {from: 1507, owner: "persia", cause: "サファヴィー朝がディヤルバクルを奪い、白羊朝の勢力が消える", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1516, owner: "ottoman", cause: "オスマン帝国がジャズィーラを征服", source: "https://en.wikipedia.org/wiki/Diyarbekir_Eyalet"}
+
+- id: pre_van
+  name: "ヴァン・ハッキャーリ"
+  until: 1647
+  select:
+    pieces: [TUR-A_r, TUR-Hakkari, TUR-Van]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンがジャハーン・シャーを破り（1467）、黒羊朝の領土を奪う", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1503, owner: "persia", cause: "サファヴィー朝が白羊朝の領土を奪う", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1548, owner: "ottoman", cause: "スレイマン1世のイラン遠征でヴァンが最終的にオスマン領となる（1534 年にもいったん占領）", source: "https://en.wikipedia.org/wiki/Van_Eyalet"}
+
+- id: pre_ramadan
+  name: "ラマザン侯国（アダナ）"
+  until: 1647
+  select:
+    pieces: [TUR-Adana, TUR-Osmaniye]
+  timeline:
+    - {from: 1453, owner: "ramadanid", overlord: "mamluk"}
+    - {from: 1517, owner: "ramadanid", overlord: "ottoman", cause: "マムルーク朝の滅亡で、オスマン帝国に従う", source: "https://en.wikipedia.org/wiki/Ramadanids"}
+    - {from: 1608, owner: "ottoman", cause: "ラマザン家の支配が終わり、アダナ州となる", source: "https://en.wikipedia.org/wiki/Ramadanids"}
+
+- id: pre_karaman
+  name: "カラマン侯国"
+  until: 1647
+  select:
+    pieces: [TUR-Aksaray, TUR-Karaman, TUR-Kayseri, TUR-Konya, TUR-Nev_ehir, TUR-Ni_de]
+  timeline:
+    - {from: 1453, owner: "karaman"}
+    - {from: 1468, owner: "ottoman", cause: "メフメト2世がコンヤとカラマンを奪う", source: "https://en.wikipedia.org/wiki/Karamanids"}
+
+- id: pre_samtskhe_tr
+  name: "アルダハン・アルトヴィン（サムツヘ）"
+  until: 1647
+  select:
+    pieces: [TUR-Ardahan, TUR-Artvin]
+  timeline:
+    - {from: 1453, owner: "georgian_kingdoms"}
+    - {from: 1466, owner: "samtskhe", cause: "サムツヘのアタベグ（ジャケリ家）がジョージア王から自立", source: "https://en.wikipedia.org/wiki/Principality_of_Samtskhe"}
+    - {from: 1551, owner: "ottoman", cause: "オスマン帝国がサムツヘ南部（アルトヌジ・アルダハン）を奪う", source: "https://en.wikipedia.org/wiki/Principality_of_Samtskhe"}
+
+- id: pre_aq_core
+  name: "白羊朝の本拠（ディヤルバクル）"
+  until: 1647
+  select:
+    pieces: [TUR-Batman, TUR-Diyarbak_r, TUR-Elaz, TUR-Siirt]
+  timeline:
+    - {from: 1453, owner: "aq_qoyunlu"}
+    - {from: 1507, owner: "persia", cause: "サファヴィー朝がディヤルバクルを奪い、白羊朝の勢力が消える", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1515, owner: "ottoman", cause: "チャルディラーンの戦い（1514）ののち、オスマン帝国がアナトリア東部を征服", source: "https://ja.wikipedia.org/wiki/チャルディラーンの戦い"}
+
+- id: pre_erzincan
+  name: "エルズィンジャン・バイブルト"
+  until: 1647
+  select:
+    pieces: [TUR-Bayburt, TUR-Bingol, TUR-Erzincan, TUR-Tunceli]
+  timeline:
+    - {from: 1453, owner: "aq_qoyunlu"}
+    - {from: 1502, owner: "persia", cause: "イスマーイール1世がエルズィンジャンで挙兵する", source: "https://ja.wikipedia.org/wiki/イスマーイール1世"}
+    - {from: 1515, owner: "ottoman", cause: "チャルディラーンの戦い（1514）ののち、オスマン帝国がアナトリア東部を征服", source: "https://ja.wikipedia.org/wiki/チャルディラーンの戦い"}
+
+- id: pre_qq_east
+  name: "黒羊朝の西部（エルズルム・ヴァン）"
+  until: 1647
+  select:
+    pieces: [TUR-Bitlis, TUR-Erzurum, TUR-Mu]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンがジャハーン・シャーを破り（1467）、黒羊朝の領土を奪う", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1503, owner: "persia", cause: "サファヴィー朝が白羊朝の領土を奪う", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1515, owner: "ottoman", cause: "チャルディラーンの戦い（1514）ののち、オスマン帝国が東アナトリアを征服", source: "https://ja.wikipedia.org/wiki/チャルディラーンの戦い"}
+
+- id: pre_mamluk_anatolia
+  name: "マラティヤ・アンテップ・アンティオキア（マムルーク朝）"
+  until: 1647
+  select:
+    pieces: [TUR-Gaziantep, TUR-Hatay, TUR-Kilis, TUR-Malatya]
+  timeline:
+    - {from: 1453, owner: "mamluk"}
+    - {from: 1516, owner: "ottoman", cause: "マルジュ・ダービクの戦いでマムルーク朝が敗れる（8月）", source: "https://ja.wikipedia.org/wiki/マルジュ・ダービクの戦い"}
+
+- id: pre_trebizond
+  name: "トレビゾンド帝国"
+  until: 1647
+  select:
+    pieces: [TUR-Giresun, TUR-Gumu_hane, TUR-Rize, TUR-Trabzon]
+  timeline:
+    - {from: 1453, owner: "trebizond"}
+    - {from: 1461, owner: "ottoman", cause: "メフメト2世がトレビゾンドを攻め落とす（8月）", source: "https://ja.wikipedia.org/wiki/トレビゾンド帝国"}
+
+- id: pre_dulkadir
+  name: "ドゥルカディル侯国（マラシュ）"
+  until: 1647
+  select:
+    pieces: [TUR-Ad_yaman, TUR-Kahramanmara]
+  timeline:
+    - {from: 1453, owner: "dulkadir", overlord: "mamluk"}
+    - {from: 1515, owner: "dulkadir", overlord: "ottoman", cause: "セリム1世がアラユッデヴレを破り（トゥルナダーの戦い）、アリー・ベイを立てる", source: "https://en.wikipedia.org/wiki/Dulkadirids"}
+    - {from: 1522, owner: "ottoman", cause: "アリー・ベイが殺され、ドゥルカディル州となる", source: "https://en.wikipedia.org/wiki/Dulkadirids"}
+  note: "ドゥルカディル家はマムルーク朝とオスマン帝国の両方に従い、宗主はしばしば替わった。"
+
+- id: pre_kars
+  name: "カルス"
+  until: 1647
+  select:
+    pieces: [TUR-Kars]
+  timeline:
+    - {from: 1453, owner: "qara_qoyunlu"}
+    - {from: 1468, owner: "aq_qoyunlu", cause: "ウズン・ハサンがジャハーン・シャーを破り（1467）、黒羊朝の領土を奪う", source: "https://ja.wikipedia.org/wiki/白羊朝"}
+    - {from: 1503, owner: "persia", cause: "サファヴィー朝が白羊朝の領土を奪う", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1534, owner: "ottoman", certainty: "uncertain", cause: "オスマン軍がカルスを奪う。アマスィヤ条約（1555）では中立の地とされ、城は壊された", source: "https://en.wikipedia.org/wiki/Kars"}
+    - {from: 1579, owner: "ottoman", cause: "オスマン帝国がカルスの城を築き直し、州都とする", source: "https://en.wikipedia.org/wiki/Kars_Eyalet"}
+
+- id: pre_candar
+  name: "ジャンダル侯国（カスタモヌ・スィノプ）"
+  until: 1647
+  select:
+    pieces: [TUR-Kastamonu, TUR-Sinop]
+  timeline:
+    - {from: 1453, owner: "candar", overlord: "ottoman"}
+    - {from: 1461, owner: "ottoman", cause: "メフメト2世がスィノプを併合し、ジャンダル侯国が滅ぶ", source: "https://en.wikipedia.org/wiki/Isfendiyarids"}
+
+- id: pre_karaman_tasili
+  name: "カラマン侯国（タシュエリ山地）"
+  until: 1647
+  select:
+    pieces: [TUR-Mersin]
+  timeline:
+    - {from: 1453, owner: "karaman"}
+    - {from: 1474, owner: "ottoman", cause: "山地にこもったカラマン家の残党が敗れる（最後の抵抗は 1487 年）", source: "https://en.wikipedia.org/wiki/Karamanids"}
+
+- id: pre_aq_mardin
+  name: "マルディン・ウルファ"
+  until: 1647
+  select:
+    pieces: [TUR-Mardin, TUR-anl_urfa, TUR-rnak]
+  timeline:
+    - {from: 1453, owner: "aq_qoyunlu"}
+    - {from: 1507, owner: "persia", cause: "サファヴィー朝がディヤルバクルを奪い、白羊朝の勢力が消える", source: "https://ja.wikipedia.org/wiki/サファヴィー朝"}
+    - {from: 1516, owner: "ottoman", cause: "マルディン・ウルファがオスマン帝国に降る", source: "https://en.wikipedia.org/wiki/Diyarbekir_Eyalet"}
+
+- id: pre_socotra
+  name: "ソコトラ島"
+  until: 1647
+  select:
+    pieces: [YEM-Socotra]
+  timeline:
+    - {from: 1453, owner: "mahra"}
+    - {from: 1507, owner: "portugal", cause: "ポルトガルがソコトラ島を占領", source: "https://en.wikipedia.org/wiki/Socotra"}
+    - {from: 1511, owner: "mahra", cause: "ポルトガルが撤退し、マハラのスルタンが取り戻す", source: "https://en.wikipedia.org/wiki/Socotra"}

@@ -8,6 +8,9 @@
   select:
     iso: [SRB]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "セルビア専制公国（–1459）。オスマン帝国の支配下でも住民の多数は正教徒のまま。ペーチ総主教座が復活する（1557）。"
     - from: 1648
       main: orthodox
       note: セルビア人は正教徒（ペーチ総主教座。1766年に廃止され、コンスタンティノープル総主教座の管轄に）。町にはトルコ人・改宗者のムスリムが住む。
@@ -20,6 +23,14 @@
   select:
     regions: [backa, banat_rs, east_syrmia]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "ハンガリー王国の南部。セルビア人がオスマン帝国を逃れて移り住む。"
+    - from: 1530
+      main: orthodox
+      minor: sunni
+      note: "モハーチの戦い（1526）の後、オスマン帝国が征服（1526–52）。ハンガリー人の多くが北へ逃れ、セルビア人が多数となる。"
     - from: 1648
       main: orthodox
       note: オスマン帝国の支配下で、セルビア人の正教徒が多い。
@@ -34,6 +45,12 @@
   select:
     pieces: [SRB-Kanjiza_Municipality, SRB-Senta_Municipality, SRB-Ada_Municipality, SRB-Coka_Municipality, SRB-Novi_Knezevac_Municipality, SRB-Backa_Topola_Municipality, SRB-Mali_Idjos_Municipality, SRB-Becej_Municipality, SRB-Temerin_Municipality]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+    - from: 1550
+      main: orthodox
+      minor: catholic
     - from: 1648
       main: orthodox
       minor: catholic
@@ -49,10 +66,20 @@
   select:
     pieces: [SRB-Subotica_City]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: orthodox
+      minor: catholic
+      note: "オスマン帝国の支配（1542–）のもとで、ハンガリー人の多くが去り、正教徒のセルビア人が移り住む（カトリックのブニェヴツィ人の移住は17世紀後半が中心）。"
     - from: 1648
+      main: orthodox
+      minor: catholic
+      note: オスマン帝国の支配下。正教徒のセルビア人が多い。
+    - from: 1690
       main: catholic
       minor: orthodox
-      note: ブニェヴツィ人（カトリックの南スラヴ人）の町。18世紀からはハンガリー人（カトリック）も多く、1910年の調査でハンガリー語約58%、ブニェヴツィ語約35%。正教徒のセルビア人は少数。
+      note: 1680年代にブニェヴツィ人（カトリックの南スラヴ人）が移り住み、ブニェヴツィ人の町になる。18世紀からはハンガリー人（カトリック）も多く、1910年の調査でハンガリー語約58%、ブニェヴツィ語約35%。正教徒のセルビア人は少数。
       source: "https://en.wikipedia.org/wiki/Subotica"
 
 - id: rel_sandzak
@@ -60,6 +87,12 @@
   select:
     adm1: ["SRB/Raska District", "SRB/Zlatibor District"]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1530
+      main: orthodox
+      minor: sunni
+      note: "ノヴィ・パザル（1461ごろ建設）などの町でイスラームが広まる。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -70,6 +103,11 @@
   select:
     adm1: ["SRB/Toplica District", "SRB/Jablanica District", "SRB/Pcinja District"]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1530
+      main: orthodox
+      minor: sunni
     - from: 1648
       main: orthodox
       minor: sunni
@@ -83,6 +121,11 @@
   select:
     pieces: [SRB-Prokuplje_Municipality, SRB-Kursumlija_Municipality, SRB-Blace_Municipality, SRB-Zitoradja_Municipality, SRB-Lebane_Municipality, SRB-Medvedja_Municipality, SRB-Bojnik_Municipality]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1530
+      main: orthodox
+      minor: sunni
     - from: 1648
       main: orthodox
       minor: sunni
@@ -100,16 +143,41 @@
   select:
     pieces: [SRB-Presevo_Municipality, SRB-Bujanovac_Municipality]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1550
+      main: orthodox
+      minor: sunni
+    - from: 1600
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
       note: アルバニア人のムスリムが多く、セルビア人の正教徒の村もある。1878年以後もオスマン帝国領（コソヴォ州）に残り、1912年の第1次バルカン戦争でセルビア領になる。
+
+- id: rel_dukagjin_pre
+  name: ドゥカジン高原（ジャコヴァ・プリズレン周辺、1453–1499）
+  select:
+    pieces: [XKX-Municipality_of_Gjakova, XKX-Municipality_of_Decan, XKX-Municipality_of_Junik, XKX-Municipality_of_Rahovec, XKX-Municipality_of_Malisheva, XKX-Municipality_of_Prizren, XKX-Municipality_of_Suhareka, XKX-Municipality_of_Drenas, XKX-Municipality_of_Skenderaj]
+  until: 1499
+  timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+      note: "ペーチ総主教座・デチャニ修道院のある正教の地だが、アルバニア人の多くはカトリック（言語の lang_dukagjin と同じ範囲）。1500年からはコソヴォ全体の値（rel_kosovo）。"
 
 - id: rel_kosovo
   name: コソヴォ
   select:
     iso: [XKX]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1500
+      main: orthodox
+      minor: sunni
+      note: "オスマン帝国の支配（1455–）。プリズレン・ペーチなどの町にムスリムが増える。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -129,6 +197,11 @@
   select:
     pieces: [XKX-Municipality_of_Leposaviq, XKX-Municipality_of_Zubin_Potok, XKX-Municipality_of_Zvecan, XKX-Municipality_of_North_Mitrovica, XKX-Municipality_of_Gracanica, XKX-Municipality_of_Shterpce, XKX-Municipality_of_Partesh, XKX-Municipality_of_Ranillug, XKX-Municipality_of_Kllokot, XKX-Municipality_of_Novoberde]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1500
+      main: orthodox
+      minor: sunni
     - from: 1648
       main: orthodox
       minor: sunni
@@ -140,6 +213,9 @@
   select:
     iso: [MNE]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "ゼータ（モンテネグロ）。ツェティニェの主教座が正教の中心。"
     - from: 1648
       main: orthodox
       note: ツェティニェの主教（ヴラディカ）が政治と宗教の長を兼ねる。ペトロヴィチ＝ニェゴシュ家（1696–）。
@@ -149,6 +225,15 @@
   select:
     pieces: [MNE-Plav_Municipality, MNE-Gusinje_Municipality, MNE-Ro_aje_Municipality, MNE-Petnjica_Municipality, MNE-Ulcinj_Municipality]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+    - from: 1550
+      main: orthodox
+      minor: sunni
+    - from: 1620
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -159,6 +244,17 @@
   select:
     pieces: [MNE-Bar_Municipality]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "ヴェネツィア領アンティヴァリ（バール）。"
+    - from: 1571
+      main: catholic
+      minor: sunni
+      note: "オスマン帝国がバール・ウルツィニを奪う（1571）。"
+    - from: 1620
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -173,6 +269,11 @@
   select:
     pieces: [MNE-Podgorica_Municipality, MNE-Bijelo_Polje_Municipality, MNE-Pljevlja_Municipality]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1530
+      main: orthodox
+      minor: sunni
     - from: 1648
       main: orthodox
       minor: sunni
@@ -183,6 +284,10 @@
   select:
     regions: [venetian_albania]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "ヴェネツィア領アルバニア（1420–）。"
     - from: 1648
       main: catholic
       minor: orthodox
@@ -193,6 +298,14 @@
   select:
     regions: [herceg_novi]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+      note: "ヘルツェグ（ステファン・ヴクチッチ）の町。"
+    - from: 1500
+      main: sunni
+      minor: orthodox
+      note: "オスマン帝国の支配（1482–。1538–39年はスペインが占領）。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -207,6 +320,23 @@
   select:
     iso: [BIH]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "ボスニア王国。「ボスニア教会」の信徒（クルスティアニ）は1459年に王の命令で改宗を迫られ、フランチェスコ会のカトリックが広まる。東部・ヘルツェゴヴィナには正教徒が多い。"
+      source: "https://ja.wikipedia.org/wiki/ボスニア教会"
+    - from: 1500
+      main: catholic
+      minor: sunni
+      note: "オスマン帝国の征服（1463、ヘルツェゴヴィナ 1482）。サラエヴォ（ボスナ・サライ）などでムスリムが増える。"
+    - from: 1560
+      main: sunni
+      minor: catholic
+      note: "住民の改宗が進み、ムスリムが多数となる。"
+    - from: 1600
+      main: sunni
+      minor: orthodox
+      note: "正教徒のヴラフ人の移住で正教徒が増え、カトリックは中部・西部に残る。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -226,6 +356,14 @@
   select:
     pieces: [BIH-Central_Bosnia_Canton, BIH-Zenica_Doboj_Canton, BIH-Herzegovina_Neretva_Canton]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1500
+      main: catholic
+      minor: sunni
+    - from: 1580
+      main: sunni
+      minor: catholic
     - from: 1648
       main: sunni
       minor: catholic
@@ -240,6 +378,11 @@
   select:
     pieces: [BIH-West_Herzegovina_Canton, BIH-Canton_10, BIH-Posavina_Canton]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1500
+      main: catholic
+      minor: sunni
     - from: 1648
       main: catholic
       minor: sunni
@@ -253,6 +396,12 @@
   select:
     pieces: [BIH-Republika_Srpska]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+    - from: 1500
+      main: orthodox
+      minor: sunni
     - from: 1648
       main: orthodox
       minor: sunni
@@ -267,6 +416,23 @@
   select:
     iso: [ALB]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "スカンデルベグ（–1468）のもとでオスマン帝国に抵抗する。北部はカトリック、南部は正教徒。"
+      source: "https://ja.wikipedia.org/wiki/スカンデルベグ"
+    - from: 1530
+      main: catholic
+      minor: sunni
+      note: "オスマン帝国の支配（1479–）。"
+    - from: 1600
+      main: catholic
+      minor: sunni
+      note: "16世紀末から改宗が増えるが、ムスリムはまだ少数派。"
+    - from: 1630
+      main: sunni
+      minor: orthodox
+      note: "17世紀前半からイスラームへの改宗が急速に進み、17世紀半ばにはムスリムが多数になる（時期は要確認）。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -282,6 +448,14 @@
   select:
     adm1: ["ALB/Shkodër", "ALB/Kukës", "ALB/Dibër"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1530
+      main: catholic
+      minor: sunni
+    - from: 1620
+      main: sunni
+      minor: catholic
     - from: 1648
       main: sunni
       minor: catholic
@@ -292,6 +466,11 @@
   select:
     adm1: ["ALB/Lezhë"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1600
+      main: catholic
+      minor: sunni
     - from: 1648
       main: catholic
       minor: sunni
@@ -302,6 +481,11 @@
   select:
     adm1: ["ALB/Gjirokastër", "ALB/Korçë"]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1550
+      main: orthodox
+      minor: sunni
     - from: 1648
       main: orthodox
       minor: sunni
@@ -312,6 +496,10 @@
   select:
     iso: [MKD]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
+      note: "14世紀末からトルコ人（ユリュク）が平野に移り住む。スコピエ（ユスキュプ）はオスマン帝国の町として栄える。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -322,6 +510,12 @@
   select:
     pieces: [MKD-Struga, MKD-Debar, MKD-Zajas, MKD-Oslomej, MKD-Saraj, MKD-Arachinovo, MKD-Studenichani, MKD-Lipkovo, MKD-Chair, MKD-Centar_Zhupa, MKD-Plasnitsa]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
+    - from: 1630
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -333,6 +527,14 @@
   select:
     adm1: ["MKD/Polog"]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1550
+      main: orthodox
+      minor: sunni
+    - from: 1620
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -343,6 +545,9 @@
   select:
     iso: [BGR]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "オスマン帝国の支配下（1396–）。住民の多数は正教徒（コンスタンティノープル総主教座のもと）。"
     - from: 1648
       main: orthodox
       note: ブルガリア人は正教徒（コンスタンティノープル総主教座の管轄。オフリド大主教座の廃止は1767年）。ニコポル周辺などにパウロ派系のカトリックの村もある。
@@ -352,6 +557,10 @@
   select:
     pieces: [BGR-Plovdiv, BGR-Pazardzhik, BGR-Burgas, BGR-Blagoevgrad]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
+      note: "トラキア平原などにはトルコ人の入植者が多い。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -366,6 +575,9 @@
   select:
     pieces: [BGR-Sofia_City, BGR-Vidin, BGR-Stara_Zagora, BGR-Sliven, BGR-Yambol]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
     - from: 1648
       main: orthodox
       minor: sunni
@@ -380,6 +592,13 @@
   select:
     pieces: [BGR-Razgrad, BGR-Targovishte, BGR-Kardzhali, BGR-Smolyan]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
+    - from: 1550
+      main: sunni
+      minor: orthodox
+      note: "デリオルマンにアナトリアからトルコ人（クズルバシュを含む）が移り住み、ロドピ山地ではポマク（ブルガリア語を話すムスリム）への改宗が進む。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -399,6 +618,12 @@
   select:
     pieces: [BGR-Ruse, BGR-Shumen, BGR-Varna, BGR-Silistra, BGR-Dobrich, BGR-Haskovo]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
+    - from: 1530
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -414,6 +639,9 @@
   select:
     iso: [GRC]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "ビザンツ帝国の滅亡（1453）。モレアス専制公領（1460年に征服）、ヴェネツィア領の島々（クレタ・イオニア諸島など。カトリックの支配層）。オスマン帝国のもとで正教会はミッレト（宗教共同体）として自治を認められる。"
     - from: 1648
       main: orthodox
       note: ギリシア人は正教徒（コンスタンティノープル総主教座）。アトス山は正教の修道院の中心。ペロポネソス・中部ギリシアの町にはトルコ人などのムスリム（人口の1割前後）が住む。
@@ -422,11 +650,39 @@
       note: ギリシア独立戦争（1821–29）で、ペロポネソス・中部ギリシア・エーゲ海の島々のムスリムは殺害されるか追放され（トリポリツァの虐殺、1821）、ほとんどいなくなった。1833年にギリシア正教会がコンスタンティノープル総主教座から独立を宣言する（承認は1850年）。
       source: "https://ja.wikipedia.org/wiki/ギリシャ独立戦争"
 
+- id: rel_thessaloniki
+  name: テッサロニキ（サロニカ）
+  select:
+    pieces: [GRC-Thessaloniki]
+  timeline:
+    - from: 1500
+      main: jewish
+      minor: sunni
+      note: "1492年以後スペイン・ポルトガルを追われたユダヤ教徒（セファルディム）が移り住み、住民の半数以上を占める（「バルカンのエルサレム」）。残りはトルコ人などのムスリムと、ギリシア人の正教徒。ユダヤ教徒が多数派の数少ない地域なので、例外として jewish で塗る（言語の lang_thessaloniki と同じ範囲）。"
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Thessaloniki"
+    - from: 1648
+      main: jewish
+      minor: sunni
+      note: 住民の半数前後がユダヤ教徒（セファルディム）。1666年のサバタイ・ツヴィの改宗の後、改宗したユダヤ人（ドンメ）がムスリムの一派として残る。
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Thessaloniki"
+    - from: 1923
+      main: orthodox
+      minor: jewish
+      note: 1917年の大火でユダヤ人地区の多くが焼け、1923年の住民交換でムスリム（ドンメを含む）が去り、小アジアからのギリシア人難民が入る。
+    - from: 1943
+      main: orthodox
+      note: 1943年、ドイツ占領下で市のユダヤ人の大部分がアウシュヴィッツへ送られ、殺害された。
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Thessaloniki"
+
 - id: rel_greece_north
   name: マケドニア・テッサリア・エピルス（ギリシア北部）
   select:
     adm2: ["GRC/Kentrikis Makedonias", "GRC/Dytikis Makedonias", "GRC/Ipeiroy"]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
+      note: "テッサロニキ（サロニカ）には1492年以後スペインを追われたユダヤ教徒（セファルディム）が移り住み、住民の多数を占める。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -456,6 +712,10 @@
   select:
     adm2: ["GRC/Thessalias"]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: sunni
+      note: "14世紀末から平原にトルコ人（コニャル）が入植。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -470,6 +730,9 @@
     adm2: ["GRC/Anatolikis Makedonias kai Thr*"]
     exclude: [GRC-Thassou, GRC-Samothrakis]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -485,6 +748,9 @@
   select:
     regions: [crete, candia]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "ヴェネツィア領カンディア（1211–）。正教徒の住民とカトリックの支配層。クレタ戦争（1645–69）でオスマン帝国が島の大部分を奪う。"
     - from: 1648
       main: orthodox
       note: ヴェネツィア領の時代から住民は正教徒（支配層はカトリック）。オスマン帝国との戦争（1645–69）中。
@@ -501,6 +767,10 @@
   select:
     pieces: [GRC-Syros]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "ナクソス公国（ヴェネツィア人の公国。1566年にオスマン帝国に併合）以来のカトリックの島。"
     - from: 1648
       main: catholic
       minor: orthodox
@@ -511,6 +781,10 @@
   select:
     pieces: [GRC-Tinos]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+      note: "ヴェネツィア領（1715年まで）。"
     - from: 1648
       main: orthodox
       minor: catholic
@@ -522,6 +796,9 @@
   select:
     iso: [ROU]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "ワラキア・モルダヴィアの正教徒。オスマン帝国に貢納する公国。"
     - from: 1648
       main: orthodox
       note: ルーマニア人は正教徒。
@@ -531,6 +808,10 @@
   select:
     regions: [dobruja_ro]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: orthodox
+      note: "オスマン帝国の支配（1420ごろ–）。トルコ人・タタール人が移り住む。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -552,6 +833,9 @@
   select:
     pieces: [ROU-TULCEA]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -569,6 +853,15 @@
   select:
     pieces: [ROU-HUNEDOARA, ROU-SALAJ, ROU-MARAMURES, ROU-CLUJ, ROU-BIHOR, ROU-BISTRITA_NASAUD]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+      note: "ルーマニア人は正教徒。ハンガリー人の貴族・町はカトリック。"
+    - from: 1560
+      main: orthodox
+      minor: reformed
+      note: "ハンガリー人の多くが改革派となる。トランシルヴァニア議会のトルダの勅令（1568）で、カトリック・ルター派・改革派・ユニテリアンが公認される（正教は「容認」の扱い）。"
+      source: "https://ja.wikipedia.org/wiki/トルダの勅令"
     - from: 1648
       main: orthodox
       minor: reformed
@@ -588,6 +881,12 @@
   select:
     pieces: [ROU-ALBA]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+    - from: 1560
+      main: orthodox
+      minor: reformed
     - from: 1648
       main: orthodox
       minor: reformed
@@ -605,6 +904,15 @@
   select:
     pieces: [ROU-SIBIU, ROU-BRASOV]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "ザクセン人（ドイツ人の入植者）の地。"
+    - from: 1545
+      main: lutheran
+      minor: orthodox
+      note: "ホンテルスの教会規定（1543・47）で、ザクセン人がルター派となる。"
+      source: "https://ja.wikipedia.org/wiki/ヨハネス・ホンテルス"
     - from: 1648
       main: lutheran
       minor: orthodox
@@ -623,6 +931,12 @@
   select:
     pieces: [ROU-COVASNA, ROU-MURES]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1565
+      main: reformed
+      minor: catholic
+      note: "ハーロムセーク（コヴァスナ）・マロシュセークの多くが改革派となる（ウドヴァルヘイ・マロシュにはユニテリアンも多い）。"
     - from: 1648
       main: reformed
       minor: catholic
@@ -633,6 +947,12 @@
   select:
     pieces: [ROU-HARGHITA]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1565
+      main: catholic
+      minor: reformed
+      note: "チーク（ハルギタ）のセーケイ人はカトリックを守る（シュムレウの巡礼地）。"
     - from: 1648
       main: catholic
       minor: reformed
@@ -643,6 +963,12 @@
   select:
     pieces: [ROU-SATU_MARE]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+    - from: 1560
+      main: reformed
+      minor: orthodox
     - from: 1648
       main: reformed
       minor: orthodox
@@ -657,6 +983,13 @@
   select:
     regions: [banat_ro, arad]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: orthodox
+      note: "ハンガリー王国のバナト。平野にはハンガリー人、山地にはルーマニア人・セルビア人が住む。"
+    - from: 1552
+      main: orthodox
+      note: "オスマン帝国がテメシュヴァールを奪い（1552）、州とする。ハンガリー人の多くが逃れ、正教徒のルーマニア人・セルビア人が多数となる（町にはムスリムも住む）。"
     - from: 1648
       main: orthodox
       note: ルーマニア人・セルビア人の正教徒が多い。オスマン帝国の町にはムスリムが住む。
@@ -675,6 +1008,9 @@
   select:
     iso: [TUR]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "アナトリアの住民の大多数はスンナ派のムスリム。西部・黒海沿岸にはギリシア人、東部にはアルメニア人のキリスト教徒が住む。中部・東部のトルコ系遊牧民にはクズルバシュ（シーア派系のアレヴィー）が多く、サファヴィー朝を支持して反乱を起こす（1511 シャー・クルの反乱）。"
     - from: 1648
       main: sunni
       note: トルコ人のスンナ派（ハナフィー派）が多数。各地の町にギリシア人（正教）・アルメニア人（アルメニア使徒教会）・ユダヤ教徒の共同体がある。中部・東部にはアレヴィー（クズルバシュ）の村も多い。
@@ -688,6 +1024,10 @@
   select:
     pieces: [TUR-stanbul, TUR-Edirne, TUR-K_rklareli, TUR-Tekirda, TUR-Canakkale]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: orthodox
+      note: "1453年5月29日、メフメト2世がコンスタンティノープルを征服。イスタンブルはオスマン帝国の首都となり、住民の移住で再建される（1477年には住民の6割ほどがムスリム、ほかにギリシア人・アルメニア人・ユダヤ人）。アヤソフィアはモスクとなる。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -702,6 +1042,17 @@
   select:
     pieces: [TUR-Trabzon, TUR-Gumu_hane]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "トレビゾンド帝国（–1461）。"
+    - from: 1461
+      main: orthodox
+      minor: sunni
+      note: "メフメト2世がトレビゾンドを征服（1461）。"
+    - from: 1580
+      main: sunni
+      minor: orthodox
+      note: "トラブゾンの町と周辺でムスリムが多数となる。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -716,6 +1067,10 @@
   select:
     pieces: [TUR-Van, TUR-Bitlis, TUR-Mu, TUR-Erzurum, TUR-Kars, TUR-A_r, TUR-Elaz, TUR-Diyarbak_r, TUR-Sivas, TUR-Kahramanmara, TUR-Adana]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: oriental
+      note: "白羊朝（アク・コユンル）・黒羊朝（カラ・コユンル）の地から、チャルディランの戦い（1514）の後オスマン帝国の支配へ。"
     - from: 1648
       main: sunni
       minor: oriental
@@ -730,6 +1085,9 @@
   select:
     pieces: [TUR-Hakkari, TUR-Mardin, TUR-rnak]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: oriental
     - from: 1648
       main: sunni
       minor: oriental
@@ -744,6 +1102,9 @@
   select:
     pieces: [TUR-Tunceli]
   timeline:
+    - from: 1453
+      main: shia
+      minor: oriental
     - from: 1648
       main: shia
       minor: oriental
@@ -758,6 +1119,15 @@
   select:
     iso: [CYP]
   timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+      note: "リュジニャン家のキプロス王国（1489年からヴェネツィア領）。ギリシア人の正教徒の住民と、カトリック（ラテン）の支配層。"
+    - from: 1571
+      main: orthodox
+      minor: sunni
+      note: "オスマン帝国の征服（1570–71）。アナトリアからトルコ人が移住させられる。"
+      source: "https://ja.wikipedia.org/wiki/キプロス戦争"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -775,6 +1145,9 @@
   select:
     iso: [SYR, ISR, JOR, LBN, "118", "124", "126", "129"]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "マムルーク朝（–1516）からオスマン帝国の支配へ。住民の多数はスンナ派。キリスト教徒・ユダヤ教徒もいる（ガリラヤのサフェドは16世紀にユダヤ教神秘主義の中心となる）。"
     - from: 1648
       main: sunni
       note: アラブ人のスンナ派が多数。各地の町に正教徒・ギリシア・カトリック（メルキト、1724年分離）・シリア正教会・アルメニア人、エルサレム・サフェドなどにユダヤ教徒が住む。
@@ -788,6 +1161,9 @@
   select:
     pieces: [SYR-Lattakia, SYR-Tartous]
   timeline:
+    - from: 1453
+      main: shia
+      minor: sunni
     - from: 1648
       main: shia
       minor: sunni
@@ -798,6 +1174,8 @@
   select:
     pieces: [SYR-As_Sweida]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: 遊牧民と少数の村落。
@@ -815,6 +1193,9 @@
   select:
     pieces: [LBN-Keserwan_Jbeil]
   timeline:
+    - from: 1453
+      main: catholic
+      minor: shia
     - from: 1648
       main: catholic
       minor: shia
@@ -825,6 +1206,9 @@
   select:
     pieces: [LBN-Liban_Nord]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: catholic
     - from: 1648
       main: sunni
       minor: catholic
@@ -836,6 +1220,10 @@
   select:
     pieces: [LBN-Mont_Liban]
   timeline:
+    - from: 1453
+      main: other
+      minor: catholic
+      note: "ドルーズ派（地図では「その他」）のマアン家が山地を治め、ファフル・アッディーン2世（1590–1635）の時代に勢力を広げる。"
     - from: 1648
       main: other
       minor: catholic
@@ -857,6 +1245,8 @@
   select:
     pieces: [LBN-Liban_Sud, LBN-Nabatiye, LBN-Baalbek_Hermel, LBN-Beqaa]
   timeline:
+    - from: 1453
+      main: shia
     - from: 1648
       main: shia
       note: 十二イマーム派（シーア派）の古い中心地で、サファヴィー朝にも多くの学者を送った。ベカー高原のザハレにはギリシア・カトリックが多い。
@@ -866,6 +1256,9 @@
   select:
     pieces: [LBN-Beyrouth, LBN-Aakkar]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -877,6 +1270,9 @@
   select:
     iso: [IRQ]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "白羊朝・サファヴィー朝（1508–34）を経て、スレイマン1世がバグダードを征服（1534）。1623–38年はサファヴィー朝が再び支配する。"
     - from: 1648
       main: sunni
       note: アラブ人・クルド人のスンナ派が多い。北部にはヤズィーディー教徒、ユダヤ教徒の大きな共同体（バグダード）もある。
@@ -886,6 +1282,9 @@
   select:
     pieces: [IRQ-Ninawa, IRQ-Dohuk]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: oriental
     - from: 1648
       main: sunni
       minor: oriental
@@ -900,6 +1299,9 @@
   select:
     pieces: [IRQ-An_Najaf, IRQ-Karbala, IRQ-Babil]
   timeline:
+    - from: 1453
+      main: shia
+      minor: sunni
     - from: 1648
       main: shia
       minor: sunni
@@ -910,6 +1312,9 @@
   select:
     pieces: [IRQ-Baghdad, IRQ-Diyala]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
     - from: 1648
       main: sunni
       minor: shia
@@ -924,6 +1329,9 @@
   select:
     pieces: [IRQ-Wasit, IRQ-Al_Qadisiyah, IRQ-Maysan, IRQ-Dhi_Qar, IRQ-Al_Muthanna, IRQ-Al_Basrah]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
     - from: 1648
       main: sunni
       minor: shia
@@ -939,6 +1347,8 @@
   select:
     iso_all: [SAU, KWT, QAT, ARE, OMN, BHR]   # 範囲外（zone=world）のピース（アスィール・ジーザーン・カタール南部など）も含める
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: アラブ人のスンナ派。
@@ -952,6 +1362,9 @@
   select:
     regions: [al_hasa, bahrain_r]
   timeline:
+    - from: 1453
+      main: shia
+      minor: sunni
     - from: 1648
       main: shia
       minor: sunni
@@ -962,6 +1375,8 @@
   select:
     regions: [oman_north]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: ムサンダム半島のシフーフ族はスンナ派。オマーンの内陸部（範囲外）はイバード派が多数。
@@ -972,6 +1387,20 @@
   select:
     iso: [IRN]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
+      note: "ティムール朝・黒羊朝の支配下。住民の多数はスンナ派で、コム・カーシャーンなどに十二イマーム派（シーア派）がいる。"
+    - from: 1510
+      main: sunni
+      minor: shia
+      note: "イスマーイール1世がサファヴィー朝を建て（1501）、十二イマーム派を国の宗教とする。スンナ派の住民は改宗を強いられ、アラブ地域からシーア派の学者が招かれるが、住民の改宗は16世紀を通じてゆっくり進む。"
+      source: "https://ja.wikipedia.org/wiki/サファヴィー朝"
+    - from: 1590
+      main: shia
+      minor: sunni
+      note: "アッバース1世（1587–1629）の時代に、シーア派が住民の多数派となる（改宗がほぼ完了するのは17世紀後半）。"
+      source: "https://en.wikipedia.org/wiki/Safavid_conversion_of_Iran_to_Shia_Islam"
     - from: 1648
       main: shia
       note: サファヴィー朝（1501–）が十二イマーム派を国教とし、住民の多くが改宗した。イスファハーンの新ジュルファにアルメニア人、ヤズドとケルマーンにゾロアスター教徒が住む。
@@ -982,6 +1411,8 @@
   select:
     pieces: [IRN-Kurdistan]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: クルド人のスンナ派（シャーフィイー派）。
@@ -991,6 +1422,13 @@
   select:
     pieces: [IRN-West_Azerbaijan]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
+    - from: 1560
+      main: shia
+      minor: sunni
+      note: "サファヴィー朝を支えたキジルバシュ（テュルク系遊牧民）のアゼルバイジャンでは改宗が比較的早いが、ウルミヤ湖の西のクルド人はスンナ派のまま。"
     - from: 1648
       main: shia
       minor: sunni
@@ -1001,6 +1439,9 @@
   select:
     pieces: [IRN-Sistan_and_Baluchestan]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
     - from: 1648
       main: sunni
       minor: shia
@@ -1011,6 +1452,12 @@
   select:
     pieces: [IRN-Golestan, IRN-Hormozgan]
   timeline:
+    - from: 1453
+      main: sunni
+    - from: 1600
+      main: shia
+      minor: sunni
+      note: "ホルモズ島は1507–1622年ポルトガル領。"
     - from: 1648
       main: shia
       minor: sunni
@@ -1022,6 +1469,9 @@
   select:
     iso: [GEO]
   timeline:
+    - from: 1453
+      main: orthodox
+      note: "ジョージア王国は1490年ごろカルトリ・カヘティ・イメレティの3王国とサムツヘ公国に分かれる。"
     - from: 1648
       main: orthodox
       note: ジョージア正教会。東部（カルトリ・カヘティ）はサファヴィー朝の宗主権下で、王族の一部は形式的にイスラームに改宗した。
@@ -1031,6 +1481,9 @@
   select:
     pieces: [GEO-Tbilisi]
   timeline:
+    - from: 1453
+      main: oriental
+      minor: orthodox
     - from: 1648
       main: oriental
       minor: orthodox
@@ -1047,6 +1500,12 @@
   select:
     pieces: [GEO-Kvemo_Kartli]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1600
+      main: shia
+      minor: orthodox
+      note: "サファヴィー朝がテュルク系の遊牧民（のちのアゼルバイジャン人）を住まわせる（ボルチャロ）。"
     - from: 1648
       main: shia
       minor: orthodox
@@ -1061,6 +1520,12 @@
   select:
     regions: [samtskhe_adjara]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1580
+      main: orthodox
+      minor: sunni
+      note: "オスマン帝国がサムツヘを征服（1578–）。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -1084,6 +1549,12 @@
   select:
     pieces: [GEO-Samtskhe_Javakheti]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1580
+      main: orthodox
+      minor: sunni
+      note: "オスマン帝国の征服（1578–）でアハルツィヘ州となる。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -1107,6 +1578,12 @@
   select:
     regions: [abkhazia_r]
   timeline:
+    - from: 1453
+      main: orthodox
+    - from: 1580
+      main: orthodox
+      minor: sunni
+      note: "オスマン帝国がスフミなどの沿岸を押さえる（1578–）。"
     - from: 1648
       main: orthodox
       minor: sunni
@@ -1132,6 +1609,19 @@
     regions: [armenia_erivan]
     pieces: [ARM-Shirak]
   timeline:
+    - from: 1453
+      main: oriental
+      minor: sunni
+      note: "アルメニア人の地。黒羊朝・白羊朝のトルコ系遊牧民が住む。"
+    - from: 1510
+      main: oriental
+      minor: shia
+      note: "サファヴィー朝の支配。"
+    - from: 1604
+      main: shia
+      minor: oriental
+      note: "アッバース1世がオスマン帝国との戦争で、アルメニア人を大量にイラン内陸へ強制移住させる（「大追放」1604–05。新ジョルファー）。"
+      source: "https://ja.wikipedia.org/wiki/大追放"
     - from: 1648
       main: shia
       minor: oriental
@@ -1170,6 +1660,16 @@
   select:
     regions: [nakhchivan]
   timeline:
+    - from: 1453
+      main: oriental
+      minor: sunni
+    - from: 1510
+      main: oriental
+      minor: shia
+    - from: 1604
+      main: shia
+      minor: oriental
+      note: "アッバース1世がジョルファー（ジュルファ）などのアルメニア人をイスファハーンへ移す（1604–05）。"
     - from: 1648
       main: shia
       minor: oriental
@@ -1183,6 +1683,9 @@
   select:
     pieces: [ARM-Syunik, ARM-Lori, ARM-Tavush]
   timeline:
+    - from: 1453
+      main: oriental
+      minor: shia
     - from: 1648
       main: oriental
       minor: shia
@@ -1197,6 +1700,14 @@
     regions: [east_transcaucasia]
     exclude: [ARM-Syunik, ARM-Shirak]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
+      note: "シルヴァン・シャー国（スンナ派）。カラバフ・ガンジャは黒羊朝・白羊朝の地。"
+    - from: 1540
+      main: shia
+      minor: sunni
+      note: "サファヴィー朝がシルヴァンを併合（1538）し、十二イマーム派を広める。"
     - from: 1648
       main: shia
       minor: sunni
@@ -1211,6 +1722,10 @@
   select:
     pieces: [AZE-Nagorno_Karabakh]
   timeline:
+    - from: 1453
+      main: oriental
+      minor: shia
+      note: "アルメニア人のメリク（小領主）たちが山地を治める。"
     - from: 1648
       main: oriental
       minor: shia
@@ -1232,6 +1747,8 @@
     iso: [KAZ, UZB, AFG, PAK]
     iso_all: [TKM]   # トルクメニスタン東部（レバプ・マリ南部）の範囲外のピースも含める
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: スンナ派（ハナフィー派）。カザフ人・トルクメン人の遊牧社会では伝統的な信仰も残る。
@@ -1241,6 +1758,13 @@
   select:
     regions: [herat]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "ティムール朝の都（シャー・ルフ、フサイン・バイカラ）。"
+    - from: 1520
+      main: sunni
+      minor: shia
+      note: "サファヴィー朝の支配（1510–）。"
     - from: 1648
       main: sunni
       minor: shia
@@ -1401,6 +1925,9 @@
   select:
     pieces: [GRC-Eordaia]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: orthodox
     - from: 1648
       main: sunni
       minor: orthodox
@@ -1416,6 +1943,8 @@
   select:
     pieces: [AFG-Kapisa, AFG-Parwan, AFG-Panjshir, AFG-Logar, AFG-Laghman, AFG-Nangarhar, AFG-Kunar, AFG-Sarkani, AFG-Khost, AFG-Paktia, AFG-Paktika, AFG-Kandahar, AFG-Helmand, AFG-Zabul, AFG-Balkh, AFG-Jowzjan, AFG-Samangan, AFG-Sar_e_Pol, AFG-Faryab, AFG-Kunduz, AFG-Baghlan, AFG-Takhar, AFG-Badghis, AFG-Ghor, AFG-Farah_2, AFG-Nimruz]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: スンナ派（ハナフィー派）。パシュトゥーン人・タジク人・ウズベク人・アイマク人。
@@ -1424,6 +1953,9 @@
   select:
     pieces: [AFG-Kabul, AFG-Ghanzi, AFG-Wardak, AFG-Uruzgan]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
     - from: 1648
       main: sunni
       minor: shia
@@ -1433,6 +1965,8 @@
   select:
     pieces: [AFG-Bamyan, AFG-Daykundi]
   timeline:
+    - from: 1453
+      main: shia
     - from: 1648
       main: shia
       note: ハザーラ人の十二イマーム派。1890年代のアブドゥッラフマーン・ハーンの征服で多くの住民が殺され、土地を奪われた。
@@ -1441,6 +1975,9 @@
   select:
     pieces: [AFG-Badakhshan]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: shia
     - from: 1648
       main: sunni
       minor: shia
@@ -1450,6 +1987,8 @@
   select:
     pieces: [AFG-Nuristan]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
       note: カーフィル（異教徒）と呼ばれた人々の多神教の信仰。
@@ -1461,6 +2000,8 @@
   select:
     pieces: [TJK-Gorno_Badakhshan_Autonomous_Region]
   timeline:
+    - from: 1453
+      main: shia
     - from: 1648
       main: shia
       note: パミールの山地の住民はイスマーイール派（ニザール派。アーガー・ハーンを指導者とする）。
@@ -1469,6 +2010,9 @@
   select:
     pieces: [UZB-Andijan_Region, UZB-Bukhara_Region, UZB-Fergana_Region, UZB-Jizzakh_Region, UZB-Namangan_Region, UZB-Navoiy_Region, UZB-Qashqadaryo_Region, UZB-Samarqand_Region, UZB-Sirdaryo_Region, UZB-Surxondaryo_Region, UZB-Tashkent_Region, KGZ-Osh_Region, KGZ-Jalal_Abad_Region, KGZ-Batken_Region, KGZ-Naryn_Region, KGZ-Talas_Region, TJK-Sughd_Region, TJK-Khatlon_Region, TJK-Districts_of_Republican_Subordination, KAZ-South_Kazakhstan_Region, KAZ-Jambyl_Region, KAZ-Almaty_Region]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "ティムール朝から、シャイバーン朝（ウズベク、1500–）の支配へ。"
     - from: 1648
       main: sunni
       note: スンナ派（ハナフィー派）。ブハラ・サマルカンドはイスラームの学問の中心で、ナクシュバンディー教団などのスーフィーの影響が強い。キルギス人・カザフ人の遊牧社会では伝統的な信仰も残る。ブハラにはユダヤ人の共同体があった。
@@ -1477,6 +2021,8 @@
   select:
     pieces: [KAZ-Akmola_Region, KAZ-Astana, KAZ-Pavlodar_Region, KAZ-Karaganda_Region, KAZ-East_Kazakhstan_Region]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: カザフ人（中ジュズ）の遊牧地。イルティシュ川沿いにロシアのとりで（セミパラチンスク1718、ウスチ・カメノゴルスク1720など）。
@@ -1497,6 +2043,8 @@
   select:
     pieces: [KAZ-North_Kazakhstan_Region]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: カザフ人（中ジュズ）の遊牧地。ペトロパヴロフスクは1752年にロシアのとりで。
@@ -1513,6 +2061,8 @@
   select:
     pieces: [KAZ-Almaty]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: カザフ大ジュズの遊牧地。
@@ -1529,6 +2079,8 @@
   select:
     pieces: [UZB-Tashkent]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: 中央アジア最大の商業都市。
@@ -1545,6 +2097,8 @@
   select:
     pieces: [TJK-Dushanbe]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: ヒッサール地方の村（月曜市）。
@@ -1561,6 +2115,8 @@
   select:
     pieces: [KGZ-Chuy_Region]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: キルギス人・カザフ人の遊牧地。
@@ -1581,6 +2137,8 @@
   select:
     pieces: [KGZ-Issyk_Kul_Region]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: キルギス人の遊牧地。伝統的な信仰も残る。
@@ -1593,6 +2151,9 @@
   select:
     pieces: [YEM-Sa_dah_Governorate, YEM-Amran_Governorate, YEM-Hajjah_Governorate, YEM-San_a, YEM-San_a_Governorate, YEM-Al_Mahwit_Governorate, YEM-Dhamar_Governorate, YEM-Al_Jawf_Governorate, YEM-Ma_rib_Governorate]
   timeline:
+    - from: 1453
+      main: shia
+      minor: sunni
     - from: 1648
       main: shia
       minor: sunni
@@ -1602,6 +2163,8 @@
   select:
     pieces: [YEM-Raymah_Governorate, YEM-Ibb_Governorate, YEM-Ta_izz_Governorate, YEM-Al_Bayda_Governorate, YEM-Al_Hudaydah_Governorate, YEM-Adan_Governorate, YEM-Lahij_Governorate, YEM-Ad_Dali_Governorate, YEM-Abyan_Governorate, YEM-Shabwah_Governorate, YEM-Hadhramaut, YEM-Al_Mahrah_Governorate, YEM-Socotra]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: スンナ派（シャーフィイー派）。ハドラマウトはスーフィーのサイイド（預言者の子孫）の家系で知られ、東南アジア・東アフリカへの移住者を多く出した。

@@ -15,6 +15,8 @@
   color: "#8fa3bf"
   kind: 王国
   rulers:
+    - {name: ヨハン・ジギスムント, title: ブランデンブルク選帝侯・プロイセン公, from: 1618, to: 1619, note: "1608年からブランデンブルク選帝侯（brandenburg）。1618年にプロイセン公国を相続した", source: "https://ja.wikipedia.org/wiki/ヨハン・ジギスムント_(ブランデンブルク選帝侯)"}
+    - {name: ゲオルク・ヴィルヘルム, title: ブランデンブルク選帝侯・プロイセン公, from: 1619, to: 1640, note: "カトリックの宰相シュヴァルツェンベルクが実権を握った", source: "https://ja.wikipedia.org/wiki/ゲオルク・ヴィルヘルム_(ブランデンブルク選帝侯)"}
     - name: フリードリヒ・ヴィルヘルム（大選帝侯）
       title: ブランデンブルク選帝侯・プロイセン公
       from: 1640
@@ -69,9 +71,12 @@
       to: 1918
       source: "https://ja.wikipedia.org/wiki/ヴィルヘルム2世_(ドイツ皇帝)"
   periods:
+    - from: 1618
+      to: 1647
+      text: 1618年にブランデンブルク選帝侯がプロイセン公国を相続し、ブランデンブルク＝プロイセンが生まれる。三十年戦争では中立を保とうとしたが、スウェーデン軍・皇帝軍に何度も踏み荒らされ、人口が大きく減った。1640年に大選帝侯が即位し、スウェーデンと休戦した（1641年）。
     - from: 1648
       to: 1688
-      text: 大選帝侯のもとで常備軍と官僚制を整え、ばらばらの領地（ブランデンブルク、東プロイセン、ライン下流のクレーヴェ・マルクなど）をまとめる。ウェストファリア条約で東ポンメルン・ミンデン・ハルバーシュタットを得、1680年にマグデブルクも加える。
+      text: 大選帝侯のもとで常備軍と官僚制を整え、ばらばらの領地（ブランデンブルク、東プロイセン、ライン下流のクレーヴェ・マルクなど）をまとめる。ウェストファリア条約で東ポンメルン・ミンデン・ハルバーシュタットを得、1680年にマクデブルクも加える。
     - from: 1689
       to: 1739
       text: 1701年に王国となる。兵隊王フリードリヒ・ヴィルヘルム1世は軍隊を大きく増やし、財政を引き締めた。1720年にスウェーデンからポンメルン南部（シュテッティンを含む）を獲得。
@@ -106,13 +111,24 @@
 - id: saxony
   name: ザクセン王国
   names:
-    - {to: 1805, name: ザクセン選帝侯国, kind: 選帝侯国}
+    - {to: 1484, name: ザクセン選帝侯国, kind: 選帝侯国}
+    - {from: 1485, to: 1546, name: ザクセン公国（アルベルト系）, short: ザクセン公国, kind: 公国}
+    - {from: 1547, to: 1805, name: ザクセン選帝侯国, kind: 選帝侯国}
     - {from: 1871, to: 1917, name: ザクセン王国, kind: 王国（ドイツ帝国の構成国）}
     - {from: 1918, name: ザクセン自由州, kind: 州（ドイツの構成国）}
   short: ザクセン
   color: "#9fcf9a"
   kind: 王国
   rulers:
+    - {name: フリードリヒ2世（温和公）, title: ザクセン選帝侯, from: 1428, to: 1464, note: "1445年に弟ヴィルヘルム3世とテューリンゲンを分け、ザクセン兄弟戦争を戦った。1455年に二人の息子が誘拐された（王子誘拐事件）", source: "https://ja.wikipedia.org/wiki/フリードリヒ2世_(ザクセン選帝侯)"}
+    - {name: エルンスト, title: ザクセン選帝侯, from: 1464, to: 1485, note: "1485年まで弟アルブレヒトと共同で統治。ライプツィヒの分割の後はエルンスト系（saxon_duchies）の選帝侯", source: "https://ja.wikipedia.org/wiki/エルンスト_(ザクセン選帝侯)"}
+    - {name: アルブレヒト（勇敢公）, title: ザクセン公（アルベルト系の祖）, from: 1464, to: 1500, note: "1485年まで兄エルンストと共同で統治", source: "https://ja.wikipedia.org/wiki/アルブレヒト_(ザクセン公)"}
+    - {name: ゲオルク（髭公）, title: ザクセン公, from: 1500, to: 1539, note: "ルターに強く反対し、カトリックを守った", source: "https://ja.wikipedia.org/wiki/ゲオルク_(ザクセン公)"}
+    - {name: ハインリヒ（敬虔公）, title: ザクセン公, from: 1539, to: 1541, note: "1539年に宗教改革を導入した", source: "https://ja.wikipedia.org/wiki/ハインリヒ_(ザクセン公)"}
+    - {name: モーリッツ, title: ザクセン公、1547年からザクセン選帝侯, from: 1541, to: 1553, note: "シュマルカルデン戦争で皇帝側について選帝侯位を得たが、1552年に皇帝に背いた（諸侯戦争）。ジーフェルスハウゼンの戦いで戦死", source: "https://ja.wikipedia.org/wiki/モーリッツ_(ザクセン選帝侯)"}
+    - {name: アウグスト, title: ザクセン選帝侯, from: 1553, to: 1586, note: "「父なるアウグスト」。領邦の行政と財政を整え、ドレスデンの美術収集を始めた", source: "https://ja.wikipedia.org/wiki/アウグスト_(ザクセン選帝侯)"}
+    - {name: クリスティアン1世, title: ザクセン選帝侯, from: 1586, to: 1591, source: "https://ja.wikipedia.org/wiki/クリスティアン1世_(ザクセン選帝侯)"}
+    - {name: クリスティアン2世, title: ザクセン選帝侯, from: 1591, to: 1611, source: "https://ja.wikipedia.org/wiki/クリスティアン2世_(ザクセン選帝侯)"}
     - name: ヨハン・ゲオルク1世
       title: ザクセン選帝侯
       from: 1611
@@ -187,6 +203,18 @@
       to: 1918
       source: "https://en.wikipedia.org/wiki/Frederick_Augustus_III_of_Saxony"
   periods:
+    - from: 1453
+      to: 1484
+      text: ヴェッティン家の選帝侯国。エルツ山地で銀山（シュネーベルク・アンナベルク）が開かれて豊かになる。1482年に叔父ヴィルヘルム3世のテューリンゲンを相続し、兄弟で共同統治した。
+    - from: 1485
+      to: 1546
+      text: 1485年のライプツィヒの分割で、選帝侯位とヴィッテンベルクはエルンスト系、マイセン・ドレスデン・ライプツィヒはアルベルト系（ザクセン公国）に分かれる。ゲオルク髭公はルターに反対したが、1539年にハインリヒ敬虔公が宗教改革を導入した。
+    - from: 1547
+      to: 1585
+      text: モーリッツがシュマルカルデン戦争で皇帝カール5世につき、ヴィッテンベルク降伏で選帝侯位とヴィッテンベルク周辺を得る。1552年には皇帝に背いてパッサウ条約を勝ち取り、アウグスブルクの和議への道を開いた。アウグストが領邦の行政を整えた。
+    - from: 1586
+      to: 1647
+      text: ルター派の中心として皇帝と協調することが多かった。三十年戦争では1620年に皇帝の側でラウジッツを占領し、1631年にスウェーデンと結んだが、1635年のプラハの和約で皇帝と和解してラウジッツを得た。その後スウェーデン軍に何度も侵攻され、1645年に休戦した。
     - from: 1648
       to: 1693
       text: 三十年戦争で荒廃した国土を立て直す。1635年に獲得した上・下ラウジッツを領有。1656年から次男以下の分家（ヴァイセンフェルス、メルゼブルク、ツァイツ）が置かれる。
@@ -223,6 +251,10 @@
   color: "#e6b8a2"
   kind: 選帝侯国
   rulers:
+    - {name: ヴィルヘルム1世（勝利公）, title: カレンベルク侯（1473年からヴォルフェンビュッテル侯を兼ねる）, from: 1432, to: 1482, note: "1463年にゲッティンゲンも得た", source: "https://de.wikipedia.org/wiki/Wilhelm_I._(Braunschweig-Lüneburg)"}
+    - {name: エーリヒ1世, title: カレンベルク＝ゲッティンゲン侯, from: 1495, to: 1540, note: "ヒルデスハイム司教領のフェーデで皇帝側として勝ち、領地を広げた", source: "https://ja.wikipedia.org/wiki/エーリヒ1世_(ブラウンシュヴァイク＝カレンベルク侯)"}
+    - {name: エーリヒ2世, title: カレンベルク＝ゲッティンゲン侯, from: 1540, to: 1584, note: "1584年に子なく死に、領地はヴォルフェンビュッテル公が相続した", source: "https://de.wikipedia.org/wiki/Erich_II._(Braunschweig-Calenberg-Göttingen)"}
+    - {name: ゲオルク, title: カレンベルク侯, from: 1635, to: 1641, note: "リューネブルク家の分家（ハノーファー家の祖）。1636年に本拠をハノーファーに移した", source: "https://de.wikipedia.org/wiki/Georg_(Braunschweig-Calenberg)"}
     - name: クリスティアン・ルートヴィヒ
       title: カレンベルク侯
       from: 1641
@@ -281,6 +313,12 @@
       note: 盲目の王。1866年に国を失い、オーストリアに亡命した。
       source: "https://en.wikipedia.org/wiki/George_V_of_Hanover"
   periods:
+    - from: 1495
+      to: 1583
+      text: 1495年の分割でヴォルフェンビュッテルから分かれたカレンベルク＝ゲッティンゲン侯領（エーリヒ1世・2世）。1584年に断絶し、ヴォルフェンビュッテル公の領地となった（1584–1634）。
+    - from: 1635
+      to: 1647
+      text: ヴォルフェンビュッテル中家の断絶後、1635年の分割でリューネブルク家のゲオルクがカレンベルクを得て、ハノーファーを首都とした（のちのハノーファー選帝侯家）。
     - from: 1648
       to: 1704
       text: ヴェルフ家（ブラウンシュヴァイク＝リューネブルク家）の分家カレンベルク侯領。首都はハノーファー。1692年に9番目の選帝侯位を得る。リューネブルク（ツェレ）の本家とは1705年に統合。
@@ -308,6 +346,17 @@
   color: "#cbd9a6"
   kind: 侯領
   rulers:
+    - {name: フリードリヒ2世（敬虔公）, title: リューネブルク侯, from: 1434, to: 1457, note: "1471–78年に孫の後見として再び統治した", source: "https://de.wikipedia.org/wiki/Friedrich_II._(Braunschweig-Lüneburg)"}
+    - {name: ベルンハルト2世, title: リューネブルク侯, from: 1457, to: 1464, source: "https://de.wikipedia.org/wiki/Bernhard_II._(Braunschweig-Lüneburg)"}
+    - {name: オットー5世, title: リューネブルク侯, from: 1464, to: 1471, source: "https://de.wikipedia.org/wiki/Otto_V._(Braunschweig-Lüneburg)"}
+    - {name: ハインリヒ（中公）, title: リューネブルク侯, from: 1478, to: 1520, note: "ヒルデスハイム司教領のフェーデで勝ったが、皇帝に逆らって追放された", source: "https://de.wikipedia.org/wiki/Heinrich_I._(Braunschweig-Lüneburg)"}
+    - {name: エルンスト1世（告白公）, title: リューネブルク侯, from: 1520, to: 1546, note: "1527年から宗教改革を導入し、アウクスブルク信仰告白に署名した", source: "https://ja.wikipedia.org/wiki/エルンスト1世_(ブラウンシュヴァイク＝リューネブルク公)"}
+    - {name: フランツ・オットー, title: リューネブルク侯, from: 1546, to: 1559, source: "https://de.wikipedia.org/wiki/Franz_Otto_(Braunschweig-Lüneburg)"}
+    - {name: ハインリヒ, title: リューネブルク侯（兄と共同統治。のちダンネンベルク系の祖）, from: 1559, to: 1569, source: "https://de.wikipedia.org/wiki/Heinrich_(Braunschweig-Dannenberg)"}
+    - {name: ヴィルヘルム（若公）, title: リューネブルク侯, from: 1559, to: 1592, source: "https://de.wikipedia.org/wiki/Wilhelm_(Braunschweig-Lüneburg)"}
+    - {name: エルンスト2世, title: リューネブルク侯, from: 1592, to: 1611, source: "https://de.wikipedia.org/wiki/Ernst_II._(Braunschweig-Lüneburg)"}
+    - {name: クリスティアン, title: リューネブルク侯, from: 1611, to: 1633, note: "1617年にグルーベンハーゲンを得た", source: "https://de.wikipedia.org/wiki/Christian_(Braunschweig-Lüneburg)"}
+    - {name: アウグスト（大公）, title: リューネブルク侯, from: 1633, to: 1636, source: "https://de.wikipedia.org/wiki/August_der_Ältere_(Braunschweig-Lüneburg)"}
     - name: フリードリヒ
       title: リューネブルク侯
       from: 1636
@@ -323,6 +372,12 @@
       to: 1705
       source: "https://en.wikipedia.org/wiki/George_William,_Duke_of_Brunswick-Lüneburg"
   periods:
+    - from: 1453
+      to: 1519
+      text: ヴェルフ家（ブラウンシュヴァイク＝リューネブルク家）の中家のリューネブルク侯領。首都はツェレ。塩で栄えたハンザ都市リューネブルクを抱える。
+    - from: 1520
+      to: 1647
+      text: エルンスト告白公が宗教改革を進め、ルター派の領邦となる。1582年にホーヤ伯領の下伯領、1585年にディープホルツ伯領、1617年にグルーベンハーゲン侯領を得て広がった。
     - from: 1648
       to: 1705
       text: ヴェルフ家の本家筋。首都はツェレ。1689年にザクセン＝ラウエンブルクを占有。1705年にゲオルク・ヴィルヘルムが死去し、甥で娘婿でもあるハノーファー選帝侯ゲオルク・ルートヴィヒに統合された。
@@ -337,6 +392,12 @@
   color: "#a8d0d8"
   kind: 公国
   rulers:
+    - {name: ハインリヒ4世（肥満公）, title: メクレンブルク公, from: 1422, to: 1477, note: "1471年にシュタルガルト系の断絶でメクレンブルク全土を合わせた", source: "https://de.wikipedia.org/wiki/Heinrich_IV._(Mecklenburg)"}
+    - {name: マグヌス2世, title: メクレンブルク公, from: 1477, to: 1503, note: "弟バルタザール（1507年まで）と共同統治", source: "https://de.wikipedia.org/wiki/Magnus_II._(Mecklenburg)"}
+    - {name: ハインリヒ5世（平和公）, title: メクレンブルク公, from: 1503, to: 1552, note: "1520年のノイブランデンブルク協定で弟アルブレヒト7世と収入を分けた", source: "https://de.wikipedia.org/wiki/Heinrich_V._(Mecklenburg)"}
+    - {name: アルブレヒト7世（美公）, title: メクレンブルク公（ギュストロー）, from: 1503, to: 1547, source: "https://de.wikipedia.org/wiki/Albrecht_VII._(Mecklenburg)"}
+    - {name: ヨハン・アルブレヒト1世, title: メクレンブルク公, from: 1547, to: 1576, note: "1549年に宗教改革を確定した。弟ウルリヒにギュストローを分けた", source: "https://de.wikipedia.org/wiki/Johann_Albrecht_I._(Mecklenburg)"}
+    - {name: ヨハン7世, title: メクレンブルク（シュヴェリーン）公, from: 1576, to: 1592, source: "https://de.wikipedia.org/wiki/Johann_VII._(Mecklenburg)"}
     - name: アドルフ・フリードリヒ1世
       title: メクレンブルク＝シュヴェリーン公
       from: 1592
@@ -395,6 +456,12 @@
       note: 1901年まで叔父ヨハン・アルブレヒトが摂政。
       source: "https://en.wikipedia.org/wiki/Frederick_Francis_IV,_Grand_Duke_of_Mecklenburg-Schwerin"
   periods:
+    - from: 1453
+      to: 1554
+      text: メクレンブルク公家（オボトリート族の首長の子孫）のもとで、1471年に全土が一つにまとまる。ロストック・ヴィスマールのハンザ都市が大きな自治を持った。1549年に領邦議会がルター派を受け入れた。
+    - from: 1555
+      to: 1647
+      text: 公家の兄弟がシュヴェリーンとギュストローに分かれて統治し、1621年に正式に分割した。三十年戦争ではデンマーク王に味方したため、1628年に皇帝に廃されてヴァレンシュタインに領地を奪われたが、1631年にスウェーデン軍の力で復位した。
     - from: 1648
       to: 1700
       text: 三十年戦争で大きく荒廃。ヴィスマールはスウェーデン領となる。1695年にギュストロー系が断絶し、その継承をめぐってシュトレーリッツ系と争った。
@@ -418,12 +485,21 @@
   color: "#bfe0e3"
   kind: 公国
   rulers:
+    - {name: ウルリヒ, title: メクレンブルク公（ギュストロー）, from: 1555, to: 1603, source: "https://de.wikipedia.org/wiki/Ulrich_(Mecklenburg)"}
+    - {name: カール1世, title: メクレンブルク公（ギュストロー）, from: 1603, to: 1610, source: "https://de.wikipedia.org/wiki/Karl_I._(Mecklenburg)"}
+    - {name: ヨハン・アルブレヒト2世, title: メクレンブルク＝ギュストロー公, from: 1611, to: 1636, note: "1621年の分割でギュストロー公。1628–31年はヴァレンシュタインに追われた", source: "https://de.wikipedia.org/wiki/Johann_Albrecht_II._(Mecklenburg)"}
     - name: グスタフ・アドルフ
       title: メクレンブルク＝ギュストロー公
       from: 1636
       to: 1695
       source: "https://en.wikipedia.org/wiki/Gustav_Adolph,_Duke_of_Mecklenburg-Güstrow"
   periods:
+    - from: 1556
+      to: 1610
+      text: ヨハン・アルブレヒト1世の弟ウルリヒがギュストローに住んでメクレンブルクの東半分を治めた（1610年にこの系統は断絶）。
+    - from: 1621
+      to: 1647
+      text: 1621年の正式な分割でメクレンブルク＝ギュストロー公国が成立。1628–31年はヴァレンシュタインに奪われ、ギュストローが彼の宮廷となった。
     - from: 1648
       to: 1695
       text: メクレンブルクの東半分を治めた分家。1695年に断絶。
@@ -496,6 +572,14 @@
   color: "#e8d690"
   kind: 公国
   rulers:
+    - {name: ハインリヒ（平和公）, title: ヴォルフェンビュッテル侯, from: 1416, to: 1473, source: "https://de.wikipedia.org/wiki/Heinrich_der_Friedfertige"}
+    - {name: ヴィルヘルム1世（勝利公）, title: ヴォルフェンビュッテル侯・カレンベルク侯, from: 1473, to: 1482, source: "https://de.wikipedia.org/wiki/Wilhelm_I._(Braunschweig-Lüneburg)"}
+    - {name: ヴィルヘルム2世, title: ヴォルフェンビュッテル侯・カレンベルク侯, from: 1482, to: 1495, note: "1495年に二人の息子に領地を分けた", source: "https://de.wikipedia.org/wiki/Wilhelm_II._(Braunschweig-Lüneburg)"}
+    - {name: ハインリヒ1世（長老公）, title: ヴォルフェンビュッテル侯, from: 1495, to: 1514, source: "https://de.wikipedia.org/wiki/Heinrich_I._(Braunschweig-Wolfenbüttel)"}
+    - {name: ハインリヒ2世（若公）, title: ヴォルフェンビュッテル侯, from: 1514, to: 1568, note: "北ドイツのカトリック諸侯の筆頭。1542–47年はシュマルカルデン同盟に領地を追われた", source: "https://ja.wikipedia.org/wiki/ハインリヒ2世_(ブラウンシュヴァイク＝ヴォルフェンビュッテル公)"}
+    - {name: ユリウス, title: ヴォルフェンビュッテル侯, from: 1568, to: 1589, note: "宗教改革を導入し、1576年にヘルムシュテット大学を創設。1584年にカレンベルクを相続した", source: "https://de.wikipedia.org/wiki/Julius_(Braunschweig-Wolfenbüttel)"}
+    - {name: ハインリヒ・ユリウス, title: ヴォルフェンビュッテル侯, from: 1589, to: 1613, note: "ハルバーシュタット司教も兼ねた。皇帝ルドルフ2世の重臣", source: "https://de.wikipedia.org/wiki/Heinrich_Julius_(Braunschweig-Wolfenbüttel)"}
+    - {name: フリードリヒ・ウルリヒ, title: ヴォルフェンビュッテル侯, from: 1613, to: 1634, note: "子なく死に、中家が断絶した", source: "https://de.wikipedia.org/wiki/Friedrich_Ulrich_(Braunschweig-Wolfenbüttel)"}
     - name: アウグスト（若公）
       title: ブラウンシュヴァイク＝ヴォルフェンビュッテル公
       from: 1635
@@ -574,6 +658,15 @@
       note: ハノーファー王家の出身。ヴィルヘルム2世の娘ヴィクトリア・ルイーゼと結婚して即位した。
       source: "https://en.wikipedia.org/wiki/Ernest_Augustus,_Duke_of_Brunswick"
   periods:
+    - from: 1453
+      to: 1513
+      text: ヴェルフ家の中家のヴォルフェンビュッテル侯領。1473–95年はカレンベルクと合わさっていた。ブラウンシュヴァイク市は公から自立したハンザ都市だった。
+    - from: 1514
+      to: 1567
+      text: ハインリヒ若公はヒルデスハイム司教領のフェーデ（1519–23）で領地を広げ、カトリックを守ってシュマルカルデン同盟と争った。1542年に同盟軍に国を追われ、1547年に戻った。
+    - from: 1568
+      to: 1634
+      text: ユリウスが宗教改革を導入し、ハルツの鉱山を開発した。1584年にカレンベルク侯領を相続して北ドイツの大きな領邦となったが、三十年戦争で荒廃し、1634年に中家が断絶。翌年、新家のアウグスト若公が継いだ。
     - from: 1648
       to: 1753
       text: ヴェルフ家の一系統。首都ヴォルフェンビュッテルにはアウグスト公の大図書館があった。1671年にブラウンシュヴァイク市を服属させる。
@@ -601,6 +694,10 @@
   color: "#9ec9b8"
   kind: 公国
   rulers:
+    - {name: ゲルハルト（好戦伯）, title: オルデンブルク伯, from: 1440, to: 1483, note: "兄がデンマーク王クリスチャン1世。1482年に追われた", source: "https://de.wikipedia.org/wiki/Gerhard_(Oldenburg)"}
+    - {name: ヨハン5世, title: オルデンブルク伯, from: 1483, to: 1526, note: "1500年まで兄アドルフと共同統治。1514年にブトヤディンゲンのフリースラント人を征服した", source: "https://de.wikipedia.org/wiki/Johann_V._(Oldenburg)"}
+    - {name: アントン1世, title: オルデンブルク伯, from: 1526, to: 1573, note: "宗教改革を導入。1547年にデルメンホルストを奪回した", source: "https://de.wikipedia.org/wiki/Anton_I._(Oldenburg)"}
+    - {name: ヨハン7世, title: オルデンブルク伯, from: 1573, to: 1603, note: "1575年にイェファーを得た", source: "https://de.wikipedia.org/wiki/Johann_VII._(Oldenburg)"}
     - name: アントン・ギュンター
       title: オルデンブルク伯
       from: 1603
@@ -639,6 +736,9 @@
       to: 1918
       source: "https://en.wikipedia.org/wiki/Frederick_Augustus_II,_Grand_Duke_of_Oldenburg"
   periods:
+    - from: 1453
+      to: 1602
+      text: デンマーク王家（オルデンブルク朝）の本家筋にあたる伯領。北海沿岸のフリースラント人の土地（ブトヤディンゲン 1514、イェファー 1575）を合わせて広がり、1547年にミュンスター司教からデルメンホルストを取り戻した。
     - from: 1648
       to: 1667
       text: アントン・ギュンター伯が三十年戦争中も中立を保ち、国土の荒廃を免れた。
@@ -662,6 +762,10 @@
   color: "#cdb9a0"
   kind: 公国
   rulers:
+    - {name: アドルフ, title: シュレースヴィヒ＝ホルシュタイン＝ゴットルプ公, from: 1544, to: 1586, note: "デンマーク王フレデリク1世の子。1559年にディトマルシェンの征服に加わった", source: "https://ja.wikipedia.org/wiki/アドルフ_(ホルシュタイン＝ゴットルプ公)"}
+    - {name: フリードリヒ2世, title: シュレースヴィヒ＝ホルシュタイン＝ゴットルプ公, from: 1586, to: 1587, source: "https://en.wikipedia.org/wiki/Frederick_II,_Duke_of_Holstein-Gottorp"}
+    - {name: フィリップ, title: シュレースヴィヒ＝ホルシュタイン＝ゴットルプ公, from: 1587, to: 1590, source: "https://en.wikipedia.org/wiki/Philip,_Duke_of_Holstein-Gottorp"}
+    - {name: ヨハン・アドルフ, title: シュレースヴィヒ＝ホルシュタイン＝ゴットルプ公, from: 1590, to: 1616, source: "https://en.wikipedia.org/wiki/John_Adolf,_Duke_of_Holstein-Gottorp"}
     - name: フリードリヒ3世
       title: ホルシュタイン＝ゴットルプ公
       from: 1616
@@ -693,6 +797,9 @@
       to: 1773
       source: "https://ja.wikipedia.org/wiki/パーヴェル1世"
   periods:
+    - from: 1544
+      to: 1647
+      text: 1544年、デンマーク王クリスチャン3世が弟たちとシュレースヴィヒ・ホルシュタインを分け、ゴットルプ家の公領が生まれた（領地は王領と入り組んでいた）。首都はゴットルフ城（シュレースヴィヒ）。
     - from: 1648
       to: 1720
       text: シュレースヴィヒとホルシュタインをデンマーク王と分け合って治めた。スウェーデンと結んでデンマークと対立し、1658年にシュレースヴィヒの持ち分の主権を得たが、大北方戦争中の1713年にシュレースヴィヒの持ち分をデンマークに奪われた（1720年確定）。
@@ -708,6 +815,11 @@
   color: "#e0c8d8"
   kind: 公国
   rulers:
+    - {name: ベルンハルト2世, title: ザクセン＝ラウエンブルク公, from: 1436, to: 1463, source: "https://de.wikipedia.org/wiki/Bernhard_II._(Sachsen-Lauenburg)"}
+    - {name: ヨハン4世, title: ザクセン＝ラウエンブルク公, from: 1463, to: 1507, source: "https://de.wikipedia.org/wiki/Johann_IV._(Sachsen-Lauenburg)"}
+    - {name: マグヌス1世, title: ザクセン＝ラウエンブルク公, from: 1507, to: 1543, source: "https://de.wikipedia.org/wiki/Magnus_I._(Sachsen-Lauenburg)"}
+    - {name: フランツ1世, title: ザクセン＝ラウエンブルク公, from: 1543, to: 1581, source: "https://de.wikipedia.org/wiki/Franz_I._(Sachsen-Lauenburg)"}
+    - {name: フランツ2世, title: ザクセン＝ラウエンブルク公, from: 1581, to: 1619, source: "https://de.wikipedia.org/wiki/Franz_II._(Sachsen-Lauenburg)"}
     - name: アウグスト
       title: ザクセン＝ラウエンブルク公
       from: 1619
@@ -729,6 +841,9 @@
       to: 1689
       source: "https://en.wikipedia.org/wiki/Julius_Francis,_Duke_of_Saxe-Lauenburg"
   periods:
+    - from: 1453
+      to: 1647
+      text: アスカーニエン家の小さな公国。エルベ川下流のラウエンブルクと飛び地のハーデルン地方（エルベ河口）を治めた。1531年ごろ宗教改革を導入。
     - from: 1648
       to: 1689
       text: アスカニア家の小公国。1689年に男系が断絶し、ツェレ（リューネブルク）公が占有した（皇帝の承認は1728年）。
@@ -742,6 +857,18 @@
   color: "#a991cc"
   kind: 大司教領（選帝侯）
   rulers:
+    - {name: ディートリヒ2世・フォン・メールス, title: ケルン大司教・選帝侯, from: 1414, to: 1463, note: "ゾースト・フェーデ（1444–49）でゾーストをクレーヴェに奪われた", source: "https://de.wikipedia.org/wiki/Dietrich_II._von_Moers"}
+    - {name: ループレヒト・フォン・デア・プファルツ, title: ケルン大司教・選帝侯, from: 1463, to: 1480, note: "領邦議会と対立し、ブルゴーニュ公シャルルを呼び込んだ（ノイス包囲 1474–75）", source: "https://de.wikipedia.org/wiki/Ruprecht_von_der_Pfalz_(Köln)"}
+    - {name: ヘルマン4世・フォン・ヘッセン, title: ケルン大司教・選帝侯, from: 1480, to: 1508, note: "1473年から管理者", source: "https://de.wikipedia.org/wiki/Hermann_IV._von_Hessen"}
+    - {name: フィリップ2世・フォン・ダウン＝オーバーシュタイン, title: ケルン大司教・選帝侯, from: 1508, to: 1515, source: "https://de.wikipedia.org/wiki/Philipp_II._von_Daun-Oberstein"}
+    - {name: ヘルマン5世・フォン・ヴィート, title: ケルン大司教・選帝侯, from: 1515, to: 1547, note: "宗教改革を導入しようとして教皇に破門され、退位した", source: "https://de.wikipedia.org/wiki/Hermann_V._von_Wied"}
+    - {name: アドルフ3世・フォン・シャウエンブルク, title: ケルン大司教・選帝侯, from: 1547, to: 1556, source: "https://de.wikipedia.org/wiki/Adolf_III._von_Schaumburg"}
+    - {name: アントン・フォン・シャウエンブルク, title: ケルン大司教・選帝侯, from: 1556, to: 1558, source: "https://de.wikipedia.org/wiki/Anton_von_Schaumburg"}
+    - {name: ヨハン・ゲプハルト・フォン・マンスフェルト, title: ケルン大司教・選帝侯, from: 1558, to: 1562, source: "https://de.wikipedia.org/wiki/Johann_Gebhard_von_Mansfeld"}
+    - {name: フリードリヒ4世・フォン・ヴィート, title: ケルン大司教・選帝侯, from: 1562, to: 1567, source: "https://de.wikipedia.org/wiki/Friedrich_IV._von_Wied"}
+    - {name: ザレンティン・フォン・イーゼンブルク, title: ケルン大司教・選帝侯, from: 1567, to: 1577, note: "結婚のため退位した", source: "https://de.wikipedia.org/wiki/Salentin_von_Isenburg"}
+    - {name: ゲプハルト・トルフゼス・フォン・ヴァルトブルク, title: ケルン大司教・選帝侯, from: 1577, to: 1583, note: "カルヴァン派に改宗して結婚し、廃位された（ケルン戦争）", source: "https://ja.wikipedia.org/wiki/ケルン戦争"}
+    - {name: エルンスト・フォン・バイエルン, title: ケルン大司教・選帝侯, from: 1583, to: 1612, note: "バイエルン公の子。リエージュ・ミュンスター・ヒルデスハイムなども兼ねた", source: "https://de.wikipedia.org/wiki/Ernst_von_Bayern"}
     - name: フェルディナント（バイエルン公子）
       title: ケルン大司教・選帝侯
       from: 1612
@@ -779,6 +906,15 @@
       to: 1803
       source: "https://en.wikipedia.org/wiki/Archduke_Anton_Viktor_of_Austria"
   periods:
+    - from: 1453
+      to: 1546
+      text: 選帝侯の大司教領。首都ボン（ケルン市は大司教から自立した帝国都市）。1474–75年にはブルゴーニュ公シャルル（突進公）がノイスを包囲した。ヘルマン・フォン・ヴィートは宗教改革を導入しようとして失敗した。
+    - from: 1547
+      to: 1582
+      text: カトリックにとどまったが、プロテスタントに理解のある大司教が続き、聖界選帝侯の多数がプロテスタントに傾く危険があった。
+    - from: 1583
+      to: 1647
+      text: ケルン戦争（1583–88）で改宗した大司教ゲプハルトを追い、バイエルンのヴィッテルスバッハ家の大司教が続く（1583–1761）。ケルンは北西ドイツの対抗宗教改革の中心となった。
     - from: 1648
       to: 1761
       text: 首都はボン（ケルン市は自由都市で大司教の支配の外）。ライン左岸の本領のほか、ザウアーラントのヴェストファーレン公領とレックリングハウゼンを持つ。1583年から1761年まで、大司教はバイエルンのヴィッテルスバッハ家から出た。
@@ -793,6 +929,18 @@
   color: "#b9a3d6"
   kind: 司教領
   rulers:
+    - {name: ヴァルラム・フォン・メールス, title: ミュンスター司教（エーリヒ・フォン・ホーヤと争う）, from: 1450, to: 1456, note: "ミュンスター司教領のフェーデ（1450–57）", source: "https://de.wikipedia.org/wiki/Münsterische_Stiftsfehde"}
+    - {name: ヨハン2世・フォン・プファルツ＝ジンメルン, title: ミュンスター司教, from: 1457, to: 1466, source: "https://de.wikipedia.org/wiki/Johann_II._von_Pfalz-Simmern"}
+    - {name: ハインリヒ・フォン・シュヴァルツブルク, title: ミュンスター司教（ブレーメン大司教を兼ねる）, from: 1466, to: 1496, note: "1482年にデルメンホルストを奪った", source: "https://de.wikipedia.org/wiki/Heinrich_II._von_Schwarzburg"}
+    - {name: コンラート・フォン・リートベルク, title: ミュンスター司教, from: 1497, to: 1508, source: "https://de.wikipedia.org/wiki/Konrad_von_Rietberg"}
+    - {name: エーリヒ・フォン・ザクセン＝ラウエンブルク, title: ミュンスター司教, from: 1508, to: 1522, source: "https://de.wikipedia.org/wiki/Erich_von_Sachsen-Lauenburg"}
+    - {name: フリードリヒ・フォン・ヴィート, title: ミュンスター司教, from: 1522, to: 1532, source: "https://de.wikipedia.org/wiki/Friedrich_III._von_Wied"}
+    - {name: フランツ・フォン・ヴァルデック, title: ミュンスター司教（オスナブリュック・ミンデンも兼ねる）, from: 1532, to: 1553, note: "1535年に再洗礼派のミュンスターを攻め落とした", source: "https://de.wikipedia.org/wiki/Franz_von_Waldeck"}
+    - {name: ヴィルヘルム・フォン・ケッテラー, title: ミュンスター司教, from: 1553, to: 1557, source: "https://de.wikipedia.org/wiki/Wilhelm_von_Ketteler"}
+    - {name: ベルンハルト・フォン・ラースフェルト, title: ミュンスター司教, from: 1557, to: 1566, source: "https://de.wikipedia.org/wiki/Bernhard_von_Raesfeld"}
+    - {name: ヨハン・フォン・ホーヤ, title: ミュンスター司教（オスナブリュック・パーダーボルンも兼ねる）, from: 1566, to: 1574, source: "https://de.wikipedia.org/wiki/Johann_von_Hoya"}
+    - {name: ヨハン・ヴィルヘルム・フォン・ユーリヒ＝クレーヴェ＝ベルク, title: ミュンスター司教（管理者）, from: 1574, to: 1585, note: "兄の死で俗人に戻り、ユーリヒ＝クレーヴェ＝ベルク公を継いだ", source: "https://de.wikipedia.org/wiki/Johann_Wilhelm_(Jülich-Kleve-Berg)"}
+    - {name: エルンスト・フォン・バイエルン, title: ミュンスター司教（ケルン大司教を兼ねる）, from: 1585, to: 1612, source: "https://de.wikipedia.org/wiki/Ernst_von_Bayern"}
     - name: フェルディナント（バイエルン公子）
       title: ミュンスター司教
       from: 1612
@@ -844,6 +992,15 @@
       to: 1803
       source: "https://en.wikipedia.org/wiki/Archduke_Anton_Viktor_of_Austria"
   periods:
+    - from: 1453
+      to: 1533
+      text: ヴェストファーレン最大の聖界領。司教選挙をめぐる「ミュンスター司教領のフェーデ」（1450–57）の後、北の下司教領（エムスラント・フェヒタ・クロッペンブルク）まで広がる。
+    - from: 1534
+      to: 1535
+      text: ミュンスター市で再洗礼派が権力を握り、ライデンのヤンが「新しいエルサレム」の王を名乗った。司教フランツ・フォン・ヴァルデックが周辺諸侯の助けで1535年に市を攻め落とした。
+    - from: 1536
+      to: 1647
+      text: ヴィッテルスバッハ家の司教（1585年から）のもとで対抗宗教改革が進み、カトリックの領邦となる。1643年からミュンスターで講和会議が開かれた。
     - from: 1648
       to: 1678
       text: ウェストファリア条約の交渉地の一つ（ミュンスター）。ガーレン司教が市の自治を抑え、軍事力で周辺に勢力をのばした。
@@ -858,6 +1015,16 @@
   color: "#d0b8e0"
   kind: 司教領
   rulers:
+    - {name: ディートリヒ・フォン・メールス, title: パーダーボルン司教（ケルン大司教を兼ねる）, from: 1415, to: 1463, source: "https://de.wikipedia.org/wiki/Dietrich_II._von_Moers"}
+    - {name: ジーモン3世・ツア・リッペ, title: パーダーボルン司教, from: 1463, to: 1498, source: "https://de.wikipedia.org/wiki/Simon_III._zur_Lippe"}
+    - {name: ヘルマン・フォン・ヘッセン, title: パーダーボルン司教（ケルン大司教を兼ねる）, from: 1498, to: 1508, source: "https://de.wikipedia.org/wiki/Hermann_IV._von_Hessen"}
+    - {name: エーリヒ・フォン・ブラウンシュヴァイク＝グルーベンハーゲン, title: パーダーボルン司教（オスナブリュック司教を兼ねる）, from: 1508, to: 1532, source: "https://de.wikipedia.org/wiki/Erich_von_Braunschweig-Grubenhagen"}
+    - {name: ヘルマン・フォン・ヴィート, title: パーダーボルン司教（管理者。ケルン大司教）, from: 1532, to: 1547, source: "https://de.wikipedia.org/wiki/Hermann_V._von_Wied"}
+    - {name: レンベルト・フォン・ケルセンブロック, title: パーダーボルン司教, from: 1547, to: 1568, source: "https://de.wikipedia.org/wiki/Rembert_von_Kerssenbrock"}
+    - {name: ヨハン・フォン・ホーヤ, title: パーダーボルン司教, from: 1568, to: 1574, source: "https://de.wikipedia.org/wiki/Johann_von_Hoya"}
+    - {name: ザレンティン・フォン・イーゼンブルク, title: パーダーボルン司教（ケルン大司教）, from: 1574, to: 1577, source: "https://de.wikipedia.org/wiki/Salentin_von_Isenburg"}
+    - {name: ハインリヒ・フォン・ザクセン＝ラウエンブルク, title: パーダーボルン司教（ブレーメン大司教・オスナブリュック司教を兼ねる）, from: 1577, to: 1585, source: "https://de.wikipedia.org/wiki/Heinrich_von_Sachsen-Lauenburg"}
+    - {name: ディートリヒ・フォン・フュルステンベルク, title: パーダーボルン司教, from: 1585, to: 1618, note: "対抗宗教改革を進め、1614年にパーダーボルン大学を創った", source: "https://de.wikipedia.org/wiki/Dietrich_von_Fürstenberg_(Bischof)"}
     - name: フェルディナント（バイエルン公子）
       title: パーダーボルン司教
       from: 1618
@@ -902,6 +1069,12 @@
       from: 1789
       to: 1802
   periods:
+    - from: 1453
+      to: 1584
+      text: 近隣の大司教や諸侯の一族が司教を兼ねることが多かった。16世紀には市民と貴族の多くがルター派に傾いた。
+    - from: 1585
+      to: 1647
+      text: ディートリヒ・フォン・フュルステンベルクがイエズス会を招いて対抗宗教改革を進め、カトリックの領邦に戻した。三十年戦争ではヘッセン＝カッセル軍などに荒らされた。
     - from: 1648
       to: 1802
       text: ヴェストファーレン東部の司教領。1802年にプロイセンが占領し、1803年に正式に併合した。
@@ -913,6 +1086,17 @@
   color: "#c3a8d2"
   kind: 司教領
   rulers:
+    - {name: ベルンハルト・フォン・ブラウンシュヴァイク＝リューネブルク, title: ヒルデスハイム司教, from: 1452, to: 1458, source: "https://de.wikipedia.org/wiki/Bernhard_II._(Hildesheim)"}
+    - {name: エルンスト・フォン・シャウムブルク, title: ヒルデスハイム司教, from: 1458, to: 1471, source: "https://de.wikipedia.org/wiki/Ernst_I._von_Schaumburg"}
+    - {name: ヘニング・フォン・ハウス, title: ヒルデスハイム司教, from: 1471, to: 1481, source: "https://de.wikipedia.org/wiki/Henning_von_Haus"}
+    - {name: ベルトルト・フォン・ランツベルク, title: ヒルデスハイム司教, from: 1481, to: 1502, source: "https://de.wikipedia.org/wiki/Berthold_II._von_Landsberg"}
+    - {name: ヨハン・フォン・ザクセン＝ラウエンブルク, title: ヒルデスハイム司教, from: 1504, to: 1527, note: "ヒルデスハイム司教領のフェーデ（1519–23）に敗れ、領地の大半を失った", source: "https://de.wikipedia.org/wiki/Johann_IV._von_Sachsen-Lauenburg"}
+    - {name: バルタザール・メルクリン, title: ヒルデスハイム司教, from: 1527, to: 1531, source: "https://de.wikipedia.org/wiki/Balthasar_Merklin"}
+    - {name: オットー・フォン・シャウムブルク, title: ヒルデスハイム司教, from: 1531, to: 1537, source: "https://de.wikipedia.org/wiki/Otto_III._von_Schaumburg"}
+    - {name: ヴァレンティン・フォン・テトレーベン, title: ヒルデスハイム司教, from: 1537, to: 1551, source: "https://de.wikipedia.org/wiki/Valentin_von_Tetleben"}
+    - {name: フリードリヒ・フォン・ホルシュタイン, title: ヒルデスハイム司教, from: 1551, to: 1556, source: "https://de.wikipedia.org/wiki/Friedrich_von_Holstein_(Bischof)"}
+    - {name: ブルヒャルト・フォン・オーベルク, title: ヒルデスハイム司教, from: 1557, to: 1573, source: "https://de.wikipedia.org/wiki/Burchard_von_Oberg"}
+    - {name: エルンスト・フォン・バイエルン, title: ヒルデスハイム司教（ケルン大司教を兼ねる）, from: 1573, to: 1612, source: "https://de.wikipedia.org/wiki/Ernst_von_Bayern"}
     - name: フェルディナント（バイエルン公子）
       title: ヒルデスハイム司教
       from: 1612
@@ -947,6 +1131,15 @@
       from: 1789
       to: 1802
   periods:
+    - from: 1453
+      to: 1522
+      text: ハルツ北西の大きな司教領（「大司教領」グローセス・シュティフト）。
+    - from: 1523
+      to: 1642
+      text: ヒルデスハイム司教領のフェーデ（1519–23）に敗れ、クヴェードリンブルク協定で領地の大部分をブラウンシュヴァイク＝ヴォルフェンビュッテル・カレンベルクに奪われ、ヒルデスハイム市の周りの「小司教領」だけが残った。
+    - from: 1643
+      to: 1647
+      text: 三十年戦争中の1643年のゴスラー条約（ブラウンシュヴァイク諸家と皇帝の講和）で、奪われた領地を取り戻した。
     - from: 1648
       to: 1802
       text: ヴェルフ家の諸領に囲まれたカトリックの司教領。1643年に「大司教区戦争」で失っていた領地の大半を回復した。1802年にプロイセンが占領し、1803年に正式に併合した。
@@ -958,6 +1151,16 @@
   color: "#d6bfe6"
   kind: 司教領
   rulers:
+    - {name: コンラート3世・フォン・ディープホルツ, title: オスナブリュック司教, from: 1455, to: 1482, source: "https://de.wikipedia.org/wiki/Konrad_III._von_Diepholz"}
+    - {name: コンラート4世・フォン・リートベルク, title: オスナブリュック司教（ミュンスター司教を兼ねる）, from: 1482, to: 1508, source: "https://de.wikipedia.org/wiki/Konrad_IV._von_Rietberg"}
+    - {name: エーリヒ・フォン・ブラウンシュヴァイク＝グルーベンハーゲン, title: オスナブリュック司教, from: 1508, to: 1532, source: "https://de.wikipedia.org/wiki/Erich_von_Braunschweig-Grubenhagen"}
+    - {name: フランツ・フォン・ヴァルデック, title: オスナブリュック司教, from: 1532, to: 1553, source: "https://de.wikipedia.org/wiki/Franz_von_Waldeck"}
+    - {name: ヨハン・フォン・ホーヤ, title: オスナブリュック司教, from: 1553, to: 1574, source: "https://de.wikipedia.org/wiki/Johann_von_Hoya"}
+    - {name: ハインリヒ・フォン・ザクセン＝ラウエンブルク, title: オスナブリュック司教, from: 1574, to: 1585, source: "https://de.wikipedia.org/wiki/Heinrich_von_Sachsen-Lauenburg"}
+    - {name: ベルンハルト・フォン・ヴァルデック, title: オスナブリュック司教, from: 1585, to: 1591, source: "https://de.wikipedia.org/wiki/Bernhard_von_Waldeck"}
+    - {name: フィリップ・ジギスムント・フォン・ブラウンシュヴァイク＝ヴォルフェンビュッテル, title: オスナブリュック司教（フェルデン司教を兼ねる）, from: 1591, to: 1623, source: "https://de.wikipedia.org/wiki/Philipp_Sigismund_von_Braunschweig-Wolfenbüttel"}
+    - {name: アイテル・フリードリヒ・フォン・ホーエンツォレルン＝ジグマリンゲン, title: オスナブリュック司教, from: 1623, to: 1625, source: "https://de.wikipedia.org/wiki/Eitel_Friedrich_von_Hohenzollern-Sigmaringen"}
+    - {name: グスタフ・グスタフソン・アフ・ヴァーサボリ, title: オスナブリュック侯（スウェーデンが与えた）, from: 1633, to: 1648, note: "グスタフ・アドルフの庶子。スウェーデン軍の占領下で侯を名乗った（1650年まで）", source: "https://en.wikipedia.org/wiki/Gustav_Gustavsson_af_Vasaborg"}
     - name: フランツ・ヴィルヘルム・フォン・ヴァルテンベルク
       title: オスナブリュック司教（カトリック）
       from: 1625
@@ -989,26 +1192,51 @@
       to: 1802
       source: "https://en.wikipedia.org/wiki/Prince_Frederick,_Duke_of_York_and_Albany"
   periods:
+    - from: 1453
+      to: 1624
+      text: 司教の多くは近隣の諸侯家の出身で、16世紀には住民の多くがルター派となった（カトリックとルター派が混在）。
+    - from: 1625
+      to: 1647
+      text: 司教フランツ・ヴィルヘルム・フォン・ヴァルテンベルクが対抗宗教改革を進めたが、1633年にスウェーデン軍が占領した。1643年からオスナブリュックでスウェーデン・プロテスタント諸侯との講和会議が開かれた。
     - from: 1648
       to: 1802
       text: ウェストファリア条約の取り決めで、カトリックの司教とヴェルフ家（プロテスタント）の公子が交互に司教となる珍しい体制がとられた。1803年にハノーファーに併合された。
   source: "https://de.wikipedia.org/wiki/Hochstift_Osnabrück"
 
 - id: magdeburg
-  name: マグデブルク大司教領
-  short: マグデブルク
+  name: マクデブルク大司教領
+  short: マクデブルク
   color: "#c9b3d9"
   kind: 大司教領（プロテスタントの管理者が統治）
   rulers:
+    - {name: フリードリヒ3世・フォン・バイヒリンゲン, title: マクデブルク大司教, from: 1445, to: 1464, source: "https://de.wikipedia.org/wiki/Friedrich_III._von_Beichlingen"}
+    - {name: ヨハン・フォン・プファルツ＝ジンメルン, title: マクデブルク大司教, from: 1464, to: 1475, source: "https://de.wikipedia.org/wiki/Johann_von_Pfalz-Simmern"}
+    - {name: エルンスト・フォン・ザクセン, title: マクデブルク大司教（ハルバーシュタット司教を兼ねる）, from: 1476, to: 1513, note: "選帝侯エルンストの子", source: "https://de.wikipedia.org/wiki/Ernst_von_Sachsen_(Magdeburg)"}
+    - {name: アルブレヒト・フォン・ブランデンブルク, title: マクデブルク大司教（マインツ大司教を兼ねる）, from: 1513, to: 1545, note: "贖宥状の販売を許し、ルターの九十五か条の論題を招いた", source: "https://ja.wikipedia.org/wiki/アルブレヒト・フォン・ブランデンブルク"}
+    - {name: ヨハン・アルブレヒト・フォン・ブランデンブルク＝アンスバッハ, title: マクデブルク大司教, from: 1545, to: 1550, source: "https://de.wikipedia.org/wiki/Johann_Albrecht_von_Brandenburg-Ansbach"}
+    - {name: フリードリヒ4世・フォン・ブランデンブルク, title: マクデブルク大司教, from: 1551, to: 1552, source: "https://de.wikipedia.org/wiki/Friedrich_IV._von_Brandenburg"}
+    - {name: ジギスムント・フォン・ブランデンブルク, title: マクデブルク大司教, from: 1552, to: 1566, note: "ルター派に転じた", source: "https://de.wikipedia.org/wiki/Sigismund_von_Brandenburg"}
+    - {name: ヨアヒム・フリードリヒ・フォン・ブランデンブルク, title: マクデブルク大司教領の管理者（プロテスタント）, from: 1566, to: 1598, source: "https://de.wikipedia.org/wiki/Joachim_Friedrich_(Brandenburg)"}
+    - {name: クリスティアン・ヴィルヘルム・フォン・ブランデンブルク, title: マクデブルク大司教領の管理者, from: 1598, to: 1631, note: "1631年のマクデブルクの破壊で捕らえられた", source: "https://de.wikipedia.org/wiki/Christian_Wilhelm_von_Brandenburg"}
+    - {name: レオポルト・ヴィルヘルム・フォン・エスターライヒ, title: マクデブルク大司教（皇帝の子）, from: 1631, to: 1638, note: "1628年の復旧勅令で任命。1635年のプラハの和約でザクセン公子アウグストに譲った", source: "https://de.wikipedia.org/wiki/Leopold_Wilhelm_von_Österreich"}
     - name: アウグスト（ザクセン公子）
-      title: マグデブルク大司教領管理者
+      title: マクデブルク大司教領管理者
       from: 1638
       to: 1680
       source: "https://en.wikipedia.org/wiki/Augustus,_Duke_of_Saxe-Weissenfels"
   periods:
+    - from: 1453
+      to: 1512
+      text: エルベ川中流の大司教領。首都はハレ（マクデブルク市はハンザ都市として大司教からの自立を強めた）。
+    - from: 1513
+      to: 1630
+      text: アルブレヒト・フォン・ブランデンブルクの贖宥状が宗教改革のきっかけとなった。マクデブルク市はルター派の拠点となり、1550–51年には皇帝の仮信条協定に逆らって包囲に耐えた（「神の官房」）。1566年からはブランデンブルク家のプロテスタントの管理者が治めた。
+    - from: 1631
+      to: 1647
+      text: 1631年5月、ティリーの皇帝軍が市を攻め落とし、市の大半が焼け、住民の多くが殺された（マクデブルクの破壊）。1635年のプラハの和約でザクセン公子アウグストが管理者となった。
     - from: 1648
       to: 1680
-      text: ウェストファリア条約で、管理者アウグストの死後にブランデンブルクが継承することが決まった。1680年にブランデンブルク領（マグデブルク公領）となる。
+      text: ウェストファリア条約で、管理者アウグストの死後にブランデンブルクが継承することが決まった。1680年にブランデンブルク領（マクデブルク公領）となる。
   source: "https://ja.wikipedia.org/wiki/マクデブルク大司教領"
 
 # ---------------------------------------------------------------- 中小の世俗領邦
@@ -1097,6 +1325,11 @@
   color: "#f2c6c6"
   kind: 侯国（複数の系統）
   rulers:
+    - {name: ヴォルフガング, title: アンハルト＝ケーテン侯, from: 1508, to: 1562, note: "アウクスブルク信仰告白に署名し、シュマルカルデン同盟に加わった", source: "https://de.wikipedia.org/wiki/Wolfgang_(Anhalt-Köthen)"}
+    - {name: ヨアヒム・エルンスト, title: アンハルト侯（全アンハルトを統一）, from: 1570, to: 1586, source: "https://de.wikipedia.org/wiki/Joachim_Ernst_(Anhalt)"}
+    - {name: ヨハン・ゲオルク1世, title: アンハルト＝デッサウ侯, from: 1603, to: 1618, source: "https://de.wikipedia.org/wiki/Johann_Georg_I._(Anhalt-Dessau)"}
+    - {name: クリスティアン1世, title: アンハルト＝ベルンブルク侯, from: 1603, to: 1630, note: "プファルツ選帝侯の重臣として新教徒同盟を率い、白山の戦いで敗れた", source: "https://de.wikipedia.org/wiki/Christian_I._(Anhalt-Bernburg)"}
+    - {name: ルートヴィヒ, title: アンハルト＝ケーテン侯, from: 1603, to: 1650, note: "ドイツ語の振興団体「結実協会」を創った", source: "https://de.wikipedia.org/wiki/Ludwig_I._(Anhalt-Köthen)"}
     - {name: レオポルト3世フリードリヒ・フランツ, title: アンハルト＝デッサウ侯（1807年から公）, from: 1751, to: 1817, source: "https://en.wikipedia.org/wiki/Leopold_III,_Duke_of_Anhalt-Dessau"}
     - {name: アレクシウス・フリードリヒ・クリスティアン, title: アンハルト＝ベルンブルク侯（1806年から公）, from: 1796, to: 1834, source: "https://en.wikipedia.org/wiki/Alexius_Frederick_Christian,_Duke_of_Anhalt-Bernburg"}
     - {name: ルートヴィヒ・アウグスト, title: アンハルト＝ケーテン公, from: 1812, to: 1818, note: 幼少のため、デッサウ公レオポルト3世が後見した。, source: "https://en.wikipedia.org/wiki/Anhalt-Köthen"}
@@ -1120,6 +1353,9 @@
       to: 1918
       source: "https://en.wikipedia.org/wiki/Frederick_II,_Duke_of_Anhalt"
   periods:
+    - from: 1453
+      to: 1647
+      text: アスカーニエン家の侯国。いくつもの系統に分かれ、1570年にいったん統一されたのち、1603年にデッサウ・ベルンブルク・ケーテン・ツェルプスト（・プレツカウ）に分割された。16世紀後半からカルヴァン派をとった。
     - from: 1648
       to: 1806
       text: アンハルト＝デッサウ、ベルンブルク、ケーテン、ツェルプストなどの系統に分かれた小国。「老デッサウ人」レオポルト1世はプロイセン軍の育ての親として知られる。ツェルプスト家からはロシアのエカチェリーナ2世が出た（1793年断絶）。デッサウのレオポルト3世は啓蒙的な改革とヴェルリッツ庭園で知られる。
@@ -1138,11 +1374,25 @@
 - id: saxon_duchies
   name: ザクセン諸公国
   names:
+    - {to: 1546, name: ザクセン選帝侯国（エルネスト系）, short: ザクセン選帝侯国, kind: 選帝侯国}
     - {from: 1871, name: ザクセン諸公国, kind: 大公国・公国（ドイツ帝国の構成国）}
   short: ザクセン諸公国
-  color: "#c3e3b5"
+  color: "#d6e2a0"
   kind: 公国（エルネスティン系の諸家）
   rulers:
+    - {name: エルンスト, title: ザクセン選帝侯（エルネスト系の祖）, from: 1485, to: 1486, source: "https://ja.wikipedia.org/wiki/エルンスト_(ザクセン選帝侯)"}
+    - {name: フリードリヒ3世（賢明公）, title: ザクセン選帝侯, from: 1486, to: 1525, note: "1502年にヴィッテンベルク大学を創設。ルターを保護し、1521年にヴァルトブルク城にかくまった", source: "https://ja.wikipedia.org/wiki/フリードリヒ3世_(ザクセン選帝侯)"}
+    - {name: ヨハン（不変公）, title: ザクセン選帝侯, from: 1525, to: 1532, note: "ルター派の領邦教会を作り、シュマルカルデン同盟を結んだ", source: "https://ja.wikipedia.org/wiki/ヨハン_(ザクセン選帝侯)"}
+    - {name: ヨハン・フリードリヒ1世（寛大公）, title: ザクセン選帝侯（1547年に選帝侯位を失う）、のちザクセン公, from: 1532, to: 1554, note: "シュマルカルデン同盟の盟主。ミュールベルクの戦いで捕らえられた", source: "https://ja.wikipedia.org/wiki/ヨハン・フリードリヒ1世_(ザクセン選帝侯)"}
+    - {name: ヨハン・フリードリヒ2世（中公）, title: ザクセン公, from: 1554, to: 1566, note: "グルムバッハ事件で帝国追放となり、1567年から死ぬまで幽閉された", source: "https://en.wikipedia.org/wiki/John_Frederick_II,_Duke_of_Saxony"}
+    - {name: ヨハン・ヴィルヘルム, title: ザクセン＝ヴァイマル公, from: 1567, to: 1573, source: "https://en.wikipedia.org/wiki/John_William,_Duke_of_Saxe-Weimar"}
+    - {name: ヨハン・カジミール, title: ザクセン＝コーブルク公, from: 1572, to: 1633, source: "https://en.wikipedia.org/wiki/John_Casimir,_Duke_of_Saxe-Coburg"}
+    - {name: ヨハン・エルンスト, title: ザクセン＝アイゼナハ公, from: 1572, to: 1638, source: "https://en.wikipedia.org/wiki/John_Ernest,_Duke_of_Saxe-Eisenach"}
+    - {name: フリードリヒ・ヴィルヘルム1世, title: ザクセン＝ヴァイマル公, from: 1573, to: 1602, note: "1586年まで後見のもと", source: "https://en.wikipedia.org/wiki/Frederick_William_I,_Duke_of_Saxe-Weimar"}
+    - {name: ヨハン・フィリップ, title: ザクセン＝アルテンブルク公, from: 1603, to: 1639, source: "https://en.wikipedia.org/wiki/John_Philip,_Duke_of_Saxe-Altenburg"}
+    - {name: ヨハン・エルンスト1世, title: ザクセン＝ヴァイマル公, from: 1605, to: 1620, note: "弟の一人が三十年戦争の将軍ベルンハルト・フォン・ザクセン＝ヴァイマル", source: "https://en.wikipedia.org/wiki/John_Ernest_I,_Duke_of_Saxe-Weimar"}
+    - {name: ヴィルヘルム, title: ザクセン＝ヴァイマル公, from: 1620, to: 1662, source: "https://en.wikipedia.org/wiki/William,_Duke_of_Saxe-Weimar"}
+    - {name: エルンスト1世（敬虔公）, title: ザクセン＝ゴータ公, from: 1640, to: 1675, note: "模範的な領邦統治（学校制度など）で知られる", source: "https://en.wikipedia.org/wiki/Ernest_I,_Duke_of_Saxe-Gotha"}
     - {name: カール・アウグスト, title: ザクセン＝ヴァイマル＝アイゼナハ公（1815年から大公）, from: 1758, to: 1828, note: ゲーテを宰相に招いた。, source: "https://en.wikipedia.org/wiki/Charles_Augustus,_Grand_Duke_of_Saxe-Weimar-Eisenach"}
     - {name: フリードリヒ, title: ザクセン＝ヒルトブルクハウゼン公（1826年からザクセン＝アルテンブルク公）, from: 1780, to: 1834, source: "https://en.wikipedia.org/wiki/Frederick,_Duke_of_Saxe-Altenburg"}
     - {name: ベルンハルト2世, title: ザクセン＝マイニンゲン公, from: 1803, to: 1866, note: 1866年、オーストリア側についたためプロイセンに退位させられた。, source: "https://en.wikipedia.org/wiki/Bernhard_II,_Duke_of_Saxe-Meiningen"}
@@ -1162,6 +1412,12 @@
     - {name: エルンスト2世, title: ザクセン＝アルテンブルク公, from: 1908, to: 1918, source: "https://en.wikipedia.org/wiki/Ernst_II,_Duke_of_Saxe-Altenburg"}
     - {name: ベルンハルト3世, title: ザクセン＝マイニンゲン公, from: 1914, to: 1918, source: "https://en.wikipedia.org/wiki/Bernhard_III,_Duke_of_Saxe-Meiningen"}
   periods:
+    - from: 1485
+      to: 1546
+      text: ライプツィヒの分割で選帝侯位を持つ系統（エルンスト系）。ヴィッテンベルクとテューリンゲンを治め、フリードリヒ賢明公がルターを守って宗教改革の拠点となった。1531年からシュマルカルデン同盟の盟主。
+    - from: 1547
+      to: 1647
+      text: シュマルカルデン戦争に敗れ、ヴィッテンベルク降伏（1547）で選帝侯位とヴィッテンベルク周辺をアルベルト系に奪われる。テューリンゲンの領地は相続のたびに分けられ、ヴァイマル・コーブルク・アイゼナハ・アルテンブルク・ゴータなどの小公国になった。1558年にイェーナ大学を創設。
     - from: 1648
       to: 1805
       text: ルターを保護したザクセン選帝侯の系統（エルネスティン家）が分割相続をくり返してできた、テューリンゲンの小公国群（ヴァイマル、アイゼナハ、ゴータ、アルテンブルク、マイニンゲン、コーブルク、ヒルトブルクハウゼンなど）。ヴァイマルはゲーテ・シラーが活躍した古典主義文学の中心となった。
@@ -1174,7 +1430,7 @@
     - from: 1867
       to: 1914
       text: 1866年の普墺戦争でオーストリア側についたマイニンゲン公は退位させられた。各国は北ドイツ連邦、1871年からドイツ帝国の構成国となった。イエナではツァイスの光学工業が育った。
-  note: 地図では諸公国をまとめて表示している。君主欄は1815年以降の各公国（ヴァイマル、ゴータ＝アルテンブルク、コーブルク、マイニンゲン、ヒルトブルクハウゼン→アルテンブルク）の君主。1815年より前の各家の君主は省略。
+  note: 地図では諸公国をまとめて表示している。君主欄は1815年以降の各公国（ヴァイマル、ゴータ＝アルテンブルク、コーブルク、マイニンゲン、ヒルトブルクハウゼン→アルテンブルク）の君主。1485–1647年は選帝侯と主な公を並べ、1648–1814年の各家の君主は省略。1485–1546年はエルネスト系の選帝侯国（ヴィッテンベルクとテューリンゲン）、1547年からテューリンゲンの諸公国。
   source: "https://ja.wikipedia.org/wiki/ザクセン公国"
 
 - id: reuss
@@ -1244,6 +1500,9 @@
     - {name: アレクサンダー, title: リッペ侯, from: 1895, to: 1905, note: 統治能力がなく摂政が置かれ、摂政の地位をめぐってシャウムブルク＝リッペ家とリッペ＝ビースターフェルト家が争った（リッペ継承争い）。, source: "https://en.wikipedia.org/wiki/Alexander,_Prince_of_Lippe"}
     - {name: レオポルト4世, title: リッペ侯, from: 1905, to: 1918, note: リッペ＝ビースターフェルト家。1904年から摂政。, source: "https://en.wikipedia.org/wiki/Leopold_IV,_Prince_of_Lippe"}
   periods:
+    - from: 1453
+      to: 1647
+      text: ヴェストファーレンの伯領（侯国になるのは1789年）。1538年にルター派の宗教改革を受け入れ、1605年に伯ジーモン6世がカルヴァン派に改めた。
     - from: 1648
       to: 1815
       text: トイトブルクの森のふもと、首都デトモルトの小領邦。1789年に侯国となり、1807年ライン同盟、1815年ドイツ連邦に加わった。
@@ -1283,6 +1542,14 @@
   color: "#d8e3a0"
   kind: 伯領→侯国（1654/1662年）
   rulers:
+    - {name: ウルリヒ1世, title: 東フリースラント伯, from: 1464, to: 1466, note: "首長（ホイプトリング）として1441年ごろから東フリースラントをまとめ、1464年に皇帝から伯に叙された", source: "https://de.wikipedia.org/wiki/Ulrich_I._(Ostfriesland)"}
+    - {name: エンノ1世, title: 東フリースラント伯, from: 1466, to: 1491, note: "母テダが摂政として実権を握った", source: "https://de.wikipedia.org/wiki/Enno_I._(Ostfriesland)"}
+    - {name: エツァルト1世（大伯）, title: 東フリースラント伯, from: 1491, to: 1528, source: "https://de.wikipedia.org/wiki/Edzard_I._(Ostfriesland)"}
+    - {name: エンノ2世, title: 東フリースラント伯, from: 1528, to: 1540, source: "https://de.wikipedia.org/wiki/Enno_II._(Ostfriesland)"}
+    - {name: アンナ・フォン・オルデンブルク, title: 東フリースラント伯妃（摂政）, from: 1540, to: 1561, source: "https://de.wikipedia.org/wiki/Anna_von_Oldenburg_(Ostfriesland)"}
+    - {name: エツァルト2世, title: 東フリースラント伯, from: 1561, to: 1599, note: "1591年まで弟ヨハン2世と共同統治", source: "https://de.wikipedia.org/wiki/Edzard_II._(Ostfriesland)"}
+    - {name: エンノ3世, title: 東フリースラント伯, from: 1599, to: 1625, source: "https://de.wikipedia.org/wiki/Enno_III._(Ostfriesland)"}
+    - {name: ルドルフ・クリスティアン, title: 東フリースラント伯, from: 1625, to: 1628, source: "https://de.wikipedia.org/wiki/Rudolf_Christian_(Ostfriesland)"}
     - name: ウルリヒ2世
       title: 東フリースラント伯
       from: 1628
@@ -1314,6 +1581,12 @@
       to: 1744
       source: "https://en.wikipedia.org/wiki/Charles_Edzard,_Prince_of_East_Frisia"
   periods:
+    - from: 1453
+      to: 1594
+      text: フリースラントの首長家キルクセナが東フリースラントをまとめ、1464年に帝国伯となる。エムデンはオランダ独立戦争の亡命者を受け入れて港町として栄え、カルヴァン派の中心となった。
+    - from: 1595
+      to: 1647
+      text: 1595年のエムデン革命でエムデン市がオランダの後ろ盾で伯から自立し、オランダ軍が駐留した（1611年からレーアオルトにも）。三十年戦争ではマンスフェルト軍やヘッセン軍に占領された。
     - from: 1648
       to: 1744
       text: ツィルクセナ家が治める北海沿岸の侯国。エムデンの町と身分制議会が強く、侯としばしば争った。1744年に侯家が断絶し、継承権を持っていたプロイセンが併合した。
@@ -1330,6 +1603,9 @@
   color: "#d7807a"
   kind: 帝国自由都市（共和国）
   periods:
+    - from: 1453
+      to: 1647
+      text: エルベ河口のハンザ都市。ホルシュタイン伯（のちデンマーク王）が領有を主張したが、1510年に帝国議会に招かれ、1618年に帝国最高法院が帝国都市と認めた。1529年に宗教改革。オランダ人などの亡命者を受け入れて、16世紀末から北ドイツ最大の商業都市となった。
     - from: 1648
       to: 1805
       text: エルベ川河口の商業都市。三十年戦争の被害を免れ、ドイツ最大の港町として栄えた。
@@ -1353,6 +1629,9 @@
   color: "#cf8f6f"
   kind: 帝国自由都市（共和国）
   periods:
+    - from: 1453
+      to: 1647
+      text: ヴェーザー川のハンザ都市。名目上はブレーメン大司教に属したが、事実上自立していた。1646年に皇帝からリンツの特許状を得て、帝国都市と認められた。
     - from: 1648
       to: 1815
       text: ヴェーザー川の商業都市。周囲のスウェーデン領ブレーメン公領と帝国都市の地位をめぐって争った（1666年ハーベンハウゼン条約）。1810年末にフランスに併合され、1813年に解放された。
@@ -1370,6 +1649,9 @@
   color: "#c97a8f"
   kind: 帝国自由都市（共和国）
   periods:
+    - from: 1453
+      to: 1647
+      text: ハンザ同盟の盟主。北海・バルト海の交易を取り仕切ったが、16世紀にはオランダ・イングランドの進出とスウェーデンの台頭で力を失った。1534–36年には市長ヴレンヴェーファーがデンマークの王位争いに介入して敗れた（伯爵戦争）。
     - from: 1648
       to: 1815
       text: かつてのハンザ同盟の盟主。1806年にフランス軍に占領され、1810年末にフランスに併合された。1813年に解放された。
@@ -1384,6 +1666,9 @@
   color: "#b88fb0"
   kind: 帝国自由都市
   periods:
+    - from: 1453
+      to: 1647
+      text: ドイツ最大級の都市。大司教から自立し、1475年に皇帝から帝国自由都市と認められた。カトリックにとどまった。
     - from: 1648
       to: 1794
       text: ライン川沿いの大都市。ケルン大司教の居城はボンにあり、市は大司教から独立した帝国自由都市だった。1794年にフランスに占領された。
@@ -1698,3 +1983,317 @@
   source:
     - "https://en.wikipedia.org/wiki/Berlin_Declaration_(1945)"
     - "https://ja.wikipedia.org/wiki/ベルリン封鎖"
+
+# ================================================================ 1453–1647 の政体（BN）
+
+- id: brandenburg
+  name: ブランデンブルク選帝侯国
+  short: ブランデンブルク
+  color: "#86aed4"
+  kind: 選帝侯国
+  note: ホーエンツォレルン家の選帝侯国（1415年から）。1618年にプロイセン公国を相続して同君連合（ブランデンブルク＝プロイセン）となったので、1618年からは prussia の色で塗る。色はプロイセンと同じ系統にしてある。
+  rulers:
+    - {name: フリードリヒ2世（鉄歯侯）, title: ブランデンブルク選帝侯, from: 1440, to: 1470, note: "ベルリンに城を築いて首都とした。1455年にドイツ騎士団からノイマルクを買い戻した", source: "https://ja.wikipedia.org/wiki/フリードリヒ2世_(ブランデンブルク選帝侯)"}
+    - {name: アルブレヒト・アヒレス, title: ブランデンブルク選帝侯, from: 1470, to: 1486, note: "1473年の家憲（ディスポジティオ・アヒレア）で選帝侯領の分割を禁じた", source: "https://ja.wikipedia.org/wiki/アルブレヒト・アヒレス_(ブランデンブルク選帝侯)"}
+    - {name: ヨハン・ツィツェロ, title: ブランデンブルク選帝侯, from: 1486, to: 1499, source: "https://ja.wikipedia.org/wiki/ヨハン・ツィツェロ"}
+    - {name: ヨアヒム1世, title: ブランデンブルク選帝侯, from: 1499, to: 1535, note: "1506年にフランクフルト（オーダー）大学を創設。宗教改革に反対した。弟アルブレヒトはマインツ・マクデブルク大司教", source: "https://ja.wikipedia.org/wiki/ヨアヒム1世_(ブランデンブルク選帝侯)"}
+    - {name: ヨアヒム2世, title: ブランデンブルク選帝侯, from: 1535, to: 1571, note: "1539年に宗教改革を導入した", source: "https://ja.wikipedia.org/wiki/ヨアヒム2世_(ブランデンブルク選帝侯)"}
+    - {name: ヨハン・ゲオルク, title: ブランデンブルク選帝侯, from: 1571, to: 1598, source: "https://ja.wikipedia.org/wiki/ヨハン・ゲオルク_(ブランデンブルク選帝侯)"}
+    - {name: ヨアヒム・フリードリヒ, title: ブランデンブルク選帝侯, from: 1598, to: 1608, note: "1605年からプロイセン公国の摂政", source: "https://ja.wikipedia.org/wiki/ヨアヒム・フリードリヒ_(ブランデンブルク選帝侯)"}
+    - {name: ヨハン・ジギスムント, title: ブランデンブルク選帝侯, from: 1608, to: 1619, note: "1609年にユーリヒ＝クレーヴェの遺領を主張し、1614年にクレーヴェ・マルク・ラーヴェンスベルクを得た。1613年にカルヴァン派に改宗。1618年にプロイセン公国を相続（以後は prussia）", source: "https://ja.wikipedia.org/wiki/ヨハン・ジギスムント_(ブランデンブルク選帝侯)"}
+  periods:
+    - from: 1453
+      to: 1498
+      text: ホーエンツォレルン家の選帝侯がベルリンを首都とし、貴族や都市（ベルリン・ケルン）を従えて領邦を固める。1455年にノイマルクを取り戻し、1473年の家憲で選帝侯領の分割を禁じた。
+    - from: 1499
+      to: 1570
+      text: ヨアヒム1世は宗教改革に反対したが、ヨアヒム2世が1539年にルター派を受け入れた。1537年のリーグニッツ公との相続契約や、1569年のプロイセン公国の共同封土権で、のちの拡大の足場を築く。
+    - from: 1571
+      to: 1617
+      text: 1609年にユーリヒ＝クレーヴェ公が断絶すると遺領を主張し、1614年のクサンテン条約でライン下流のクレーヴェ・マルク・ラーヴェンスベルクを得た。1613年に選帝侯がカルヴァン派に改宗したが、領民の大半はルター派のまま。
+  source:
+    - "https://ja.wikipedia.org/wiki/ブランデンブルク辺境伯領"
+    - "https://de.wikipedia.org/wiki/Mark_Brandenburg"
+
+- id: teutonic_order
+  name: ドイツ騎士団国家
+  short: ドイツ騎士団
+  color: "#c4c9cf"
+  kind: 騎士団国家
+  note: >-
+    プロイセンのドイツ騎士団領（首都は1457年までマリエンブルク、以後ケーニヒスベルク）。十三年戦争（1454–66）に敗れた第二次トルンの和約（1466）で、
+    西プロイセン（王領プロイセン）をポーランドに割譲し、残りもポーランド王の宗主権下に入った。1525年に騎士団長アルブレヒトがルター派に改宗し、プロイセン公国（ducal_prussia）となった。
+    騎士団はその後もメルゲントハイム（南ドイツ）を本拠に存続した。リヴォニアの騎士団（リヴォニア騎士団）は別の政体（F 担当）。
+  rulers:
+    - {name: ルートヴィヒ・フォン・エルリヒスハウゼン, title: ドイツ騎士団総長, from: 1450, to: 1467, source: "https://en.wikipedia.org/wiki/Ludwig_von_Erlichshausen"}
+    - {name: ハインリヒ・ロイス・フォン・プラウエン, title: ドイツ騎士団総長, from: 1467, to: 1470, note: "1467年から総長代理、1469年に総長", source: "https://en.wikipedia.org/wiki/Heinrich_Reuss_von_Plauen"}
+    - {name: ハインリヒ・レッフレ・フォン・リヒテンベルク, title: ドイツ騎士団総長, from: 1470, to: 1477, source: "https://en.wikipedia.org/wiki/Heinrich_Reffle_von_Richtenberg"}
+    - {name: マルティン・トルフゼス・フォン・ヴェッツハウゼン, title: ドイツ騎士団総長, from: 1477, to: 1489, source: "https://en.wikipedia.org/wiki/Martin_Truchseß_von_Wetzhausen"}
+    - {name: ヨハン・フォン・ティーフェン, title: ドイツ騎士団総長, from: 1489, to: 1497, source: "https://en.wikipedia.org/wiki/Johann_von_Tiefen"}
+    - {name: フリードリヒ・フォン・ザクセン, title: ドイツ騎士団総長, from: 1498, to: 1510, note: "ザクセン公アルブレヒトの子。ポーランド王への臣従を拒んだ", source: "https://en.wikipedia.org/wiki/Frederick_of_Saxony_(Teutonic_Knight)"}
+    - {name: アルブレヒト・フォン・ブランデンブルク＝アンスバッハ, title: ドイツ騎士団総長, from: 1510, to: 1525, note: "1525年に改宗してプロイセン公となった（ducal_prussia）", source: "https://ja.wikipedia.org/wiki/アルブレヒト_(プロイセン公)"}
+  periods:
+    - from: 1453
+      to: 1466
+      text: 騎士団の支配に反発したプロイセン連合（都市と貴族）がポーランド王に助けを求め、十三年戦争となる。1457年に本拠マリエンブルクを失い、1466年の第二次トルンの和約で西半分をポーランドに割譲した。
+    - from: 1467
+      to: 1525
+      text: 東プロイセンだけが残り、首都はケーニヒスベルクに移った。総長はポーランド王への臣従を義務づけられ、たびたびこれを拒んだ（騎士団戦争 1519–21）。1525年、総長アルブレヒトが宗教改革を受け入れ、騎士団国家は世俗のプロイセン公国になった。
+  source:
+    - "https://ja.wikipedia.org/wiki/ドイツ騎士団国"
+    - "https://ja.wikipedia.org/wiki/第二次トルンの和約"
+
+- id: ducal_prussia
+  name: プロイセン公国
+  short: プロイセン公国
+  color: "#a9b6c9"
+  kind: 公国（ポーランド王の封土）
+  note: 1525年のクラクフ条約で、ドイツ騎士団国家がポーランド王を宗主とする世俗の公国になった（最初のルター派の国家）。1618年にブランデンブルク選帝侯が相続し、以後は prussia（ブランデンブルク＝プロイセン）の色で塗る。
+  rulers:
+    - {name: アルブレヒト, title: プロイセン公, from: 1525, to: 1568, note: "元ドイツ騎士団総長。1544年にケーニヒスベルク大学を創設した", source: "https://ja.wikipedia.org/wiki/アルブレヒト_(プロイセン公)"}
+    - {name: アルブレヒト・フリードリヒ, title: プロイセン公, from: 1568, to: 1618, note: "心の病のため、1578年（1577年に後見人、翌年ポーランド王が承認）からアンスバッハ辺境伯ゲオルク・フリードリヒ、1605年からブランデンブルク選帝侯が摂政を務めた", source: "https://ja.wikipedia.org/wiki/アルブレヒト・フリードリヒ_(プロイセン公)"}
+  periods:
+    - from: 1525
+      to: 1568
+      text: 騎士団総長アルブレヒトがルター派に改宗し、ポーランド王ジグムント1世に臣従してプロイセン公となる（クラクフ条約、プロイセンの臣従礼）。1544年にケーニヒスベルク大学を創った。
+    - from: 1569
+      to: 1617
+      text: 2代目の公が統治できなかったため、ホーエンツォレルン家の親族が摂政となる。ブランデンブルク選帝侯家は1569年に共同の封土権を得ており、1618年に公国を相続した。
+  source: "https://ja.wikipedia.org/wiki/プロイセン公国"
+
+- id: pomerania
+  name: ポンメルン公国
+  short: ポンメルン
+  color: "#bcdbaa"
+  kind: 公国
+  note: >-
+    グライフ家（ポンメルン公家）の公国。たびたび分割され、西のポンメルン＝ヴォルガストと東のポンメルン＝シュテッティンに分かれた時期が長い（1478–1531年はボギスラフ10世のもとで統一、1625–37年もボギスラフ14世のもとで統一）。
+    地図ではまとめて1つの公国として描き、君主欄には両系の公を並べた。1529年のグリムニッツ条約でブランデンブルクに公家断絶後の相続権を認めた。
+    1630年からスウェーデン軍が占領し、1637年に公家が断絶した。ウェストファリア条約で西部（フォアポンメルン）はスウェーデン、東部（ヒンターポンメルン）はブランデンブルクに分けられた。
+  rulers:
+    - {name: ヴァルティスラフ9世, title: ポンメルン＝ヴォルガスト公, from: 1415, to: 1457, source: "https://en.wikipedia.org/wiki/Wartislaw_IX,_Duke_of_Pomerania"}
+    - {name: オットー3世, title: ポンメルン＝シュテッティン公, from: 1460, to: 1464, note: "シュテッティン系の最後の公", source: "https://en.wikipedia.org/wiki/Otto_III,_Duke_of_Pomerania"}
+    - {name: エーリヒ2世, title: ポンメルン＝ヴォルガスト公（1464年からシュテッティンも）, from: 1457, to: 1474, source: "https://en.wikipedia.org/wiki/Eric_II,_Duke_of_Pomerania"}
+    - {name: ヴァルティスラフ10世, title: ポンメルン＝ヴォルガスト公, from: 1457, to: 1478, source: "https://en.wikipedia.org/wiki/Wartislaw_X,_Duke_of_Pomerania"}
+    - {name: ボギスラフ10世（大公）, title: ポンメルン公, from: 1474, to: 1523, note: "1478年に全ポンメルンを統一し、行政を整えた", source: "https://en.wikipedia.org/wiki/Bogislaw_X,_Duke_of_Pomerania"}
+    - {name: ゲオルク1世, title: ポンメルン公, from: 1523, to: 1531, source: "https://en.wikipedia.org/wiki/George_I,_Duke_of_Pomerania"}
+    - {name: バルニム9世, title: ポンメルン公（1532年からシュテッティン）, from: 1523, to: 1573, source: "https://en.wikipedia.org/wiki/Barnim_IX,_Duke_of_Pomerania"}
+    - {name: フィリップ1世, title: ポンメルン＝ヴォルガスト公, from: 1531, to: 1560, note: "1534年のトレプトウ領邦議会で宗教改革を導入した", source: "https://en.wikipedia.org/wiki/Philip_I,_Duke_of_Pomerania"}
+    - {name: ヨハン・フリードリヒ, title: ポンメルン＝シュテッティン公, from: 1569, to: 1600, source: "https://en.wikipedia.org/wiki/John_Frederick,_Duke_of_Pomerania"}
+    - {name: エルンスト・ルートヴィヒ, title: ポンメルン＝ヴォルガスト公, from: 1569, to: 1592, source: "https://en.wikipedia.org/wiki/Ernst_Ludwig,_Duke_of_Pomerania"}
+    - {name: フィリップ・ユリウス, title: ポンメルン＝ヴォルガスト公, from: 1592, to: 1625, source: "https://en.wikipedia.org/wiki/Philip_Julius,_Duke_of_Pomerania"}
+    - {name: バルニム10世, title: ポンメルン＝シュテッティン公, from: 1600, to: 1603, source: "https://en.wikipedia.org/wiki/Barnim_X,_Duke_of_Pomerania"}
+    - {name: ボギスラフ13世, title: ポンメルン＝シュテッティン公, from: 1603, to: 1606, source: "https://en.wikipedia.org/wiki/Bogislaw_XIII,_Duke_of_Pomerania"}
+    - {name: フィリップ2世, title: ポンメルン＝シュテッティン公, from: 1606, to: 1618, source: "https://en.wikipedia.org/wiki/Philip_II,_Duke_of_Pomerania"}
+    - {name: フランツ, title: ポンメルン＝シュテッティン公, from: 1618, to: 1620, source: "https://en.wikipedia.org/wiki/Francis,_Duke_of_Pomerania"}
+    - {name: ボギスラフ14世, title: ポンメルン公（1625年から全ポンメルン）, from: 1620, to: 1637, note: "グライフ家最後の公。1630年からスウェーデン軍の占領下", source: "https://en.wikipedia.org/wiki/Bogislaw_XIV,_Duke_of_Pomerania"}
+  periods:
+    - from: 1453
+      to: 1522
+      text: ハンザ都市（シュトラールズント・シュテッティン・グライフスヴァルトなど）が栄える。ボギスラフ10世が1478年に全土を統一し、ブランデンブルクの封建的な宗主権の主張を退けた（1493年ピュリッツ条約）。
+    - from: 1523
+      to: 1624
+      text: 1534年に宗教改革を導入し、1532年・1569年に東西（シュテッティンとヴォルガスト）に分割された。1529年のグリムニッツ条約で、公家が絶えればブランデンブルクが継ぐと決まった。
+    - from: 1625
+      to: 1637
+      text: ボギスラフ14世のもとで再統一されたが、三十年戦争に巻き込まれる。1627年に皇帝軍（ヴァレンシュタイン）に占領され、1630年にスウェーデン王グスタフ・アドルフが上陸してからはスウェーデン軍の支配下に入った。1637年に公家が断絶した。
+  source:
+    - "https://ja.wikipedia.org/wiki/ポメラニア公国"
+    - "https://en.wikipedia.org/wiki/Duchy_of_Pomerania"
+
+- id: thuringia
+  name: テューリンゲン方伯領
+  short: テューリンゲン
+  color: "#b5e0d6"
+  kind: 方伯領（ヴェッティン家）
+  note: 1445年のアルテンブルクの分割で、ザクセン選帝侯フリードリヒ2世の弟ヴィルヘルム3世がテューリンゲンとフランケン地方の領地（コーブルクなど）を得た。兄弟はザクセン兄弟戦争（1446–51）を戦った。1482年にヴィルヘルムが死ぬと、甥のエルンストとアルブレヒト（ザクセン選帝侯家）に戻った。
+  rulers:
+    - {name: ヴィルヘルム3世（勇敢公）, title: テューリンゲン方伯, from: 1445, to: 1482, source: "https://en.wikipedia.org/wiki/William_III,_Landgrave_of_Thuringia"}
+  source: "https://de.wikipedia.org/wiki/Landgrafschaft_Thüringen"
+
+- id: henneberg
+  name: ヘンネベルク伯領
+  short: ヘンネベルク
+  color: "#faae9f"
+  kind: 侯伯領（帝国諸侯）
+  note: テューリンゲン南部（シュロイジンゲン・マイニンゲン・ズール）を治めたヘンネベルク＝シュロイジンゲン家。1583年に断絶し、1554年のカーレ相続契約に従ってヴェッティン家の両系（エルネスト系・アルベルト系）が共同で管理した（1660年に分割）。シュマルカルデンはヘッセンとの共同領で、1583年からヘッセン＝カッセル領。
+  source: "https://de.wikipedia.org/wiki/Henneberg_(Adelsgeschlecht)"
+  periods:
+    - from: 1453
+      to: 1647
+      text: テューリンゲン南部の伯領。1583年に伯家が断絶し、ヴェッティン家（ザクセン両系）が共同で継いだ。
+
+- id: mansfeld
+  name: マンスフェルト伯領
+  short: マンスフェルト
+  color: "#f8babc"
+  kind: 伯領
+  note: ハルツ東麓の伯領。銅の鉱山で栄え、ルターの生地アイスレーベンがある。伯家は多くの系統に分かれて借財を重ね、1570年にザクセン選帝侯とマクデブルク大司教が統治権を差し押さえた（シークエストレーション）。北部はマクデブルク、南部はザクセンの封で、地図では1570年からザクセンとした。
+  source: "https://de.wikipedia.org/wiki/Grafschaft_Mansfeld"
+  periods:
+    - from: 1453
+      to: 1647
+      text: ハルツ山地の東の伯領で、銅山で栄えた。ルターの生地アイスレーベンがある。分家に分かれて財政が傾き、1570年からザクセン選帝侯などの管理（差し押さえ）を受けた。
+
+- id: halberstadt
+  name: ハルバーシュタット司教領
+  short: ハルバーシュタット
+  color: "#89bdf3"
+  kind: 司教領
+  note: >-
+    ハルツ北麓の司教領。16世紀からはブラウンシュヴァイク＝ヴォルフェンビュッテル家などプロテスタントの管理者（行政官）が治め、
+    三十年戦争中の1628年からは皇帝の子レオポルト・ヴィルヘルムが司教となった。ウェストファリア条約でブランデンブルクの世俗の侯国となった。
+    ヴェルニゲローデ伯領・クヴェードリンブルク帝国修道院など、郡内の小さな領邦もまとめて描いている。
+  source: "https://de.wikipedia.org/wiki/Hochstift_Halberstadt"
+  periods:
+    - from: 1453
+      to: 1647
+      text: マクデブルク大司教が兼ねることが多く、16世紀後半からはブラウンシュヴァイク＝ヴォルフェンビュッテル家の公子が管理者となった。管理者クリスティアン（1616–23年）はプロテスタント側の将軍として三十年戦争を戦った。
+
+- id: minden
+  name: ミンデン司教領
+  short: ミンデン
+  color: "#a4ade8"
+  kind: 司教領
+  note: ヴェーザー川沿いの司教領。16世紀半ばからプロテスタントの管理者（ブラウンシュヴァイク家など）が治めた。三十年戦争中の1634年からスウェーデン軍が占領した（地図では表示していない）。ウェストファリア条約でブランデンブルクの世俗の侯国となった。
+  source: "https://de.wikipedia.org/wiki/Hochstift_Minden"
+  periods:
+    - from: 1453
+      to: 1647
+      text: ヴェーザー川沿いの司教領。16世紀に宗教改革が広まり、ブラウンシュヴァイク家などの公子が管理者として治めた。
+
+- id: bremen_archbishopric
+  name: ブレーメン大司教領
+  short: ブレーメン大司教領
+  color: "#b7a3d4"
+  kind: 大司教領
+  note: エルベ川とヴェーザー川の河口の間の大司教領（中心はシュターデ・ブレーマーフェルデ。ブレーメン市自体は大司教から自立した帝国都市）。1567年からはプロテスタントの管理者（ブラウンシュヴァイク家・ホルシュタイン＝ゴットルプ家・デンマーク王子）が治めた。1645年にスウェーデン軍が占領し、ウェストファリア条約でスウェーデン領のブレーメン公国となった。
+  source: "https://de.wikipedia.org/wiki/Erzstift_Bremen"
+  periods:
+    - from: 1453
+      to: 1647
+      text: エルベ川とヴェーザー川の河口の間の大司教領（ブレーメン市は事実上自立）。16世紀後半からはプロテスタントの管理者が治め、1645年にスウェーデン軍に占領された。
+
+- id: verden
+  name: フェルデン司教領
+  short: フェルデン
+  color: "#ffc8e1"
+  kind: 司教領
+  note: アラー川下流の小さな司教領（中心はフェルデン・ローテンブルク）。16世紀後半からプロテスタントの管理者が治め、ブレーメン大司教と同じ人物が兼ねることが多かった。1645年にスウェーデン軍が占領し、ウェストファリア条約でスウェーデン領のフェルデン侯国となった。
+  source: "https://de.wikipedia.org/wiki/Hochstift_Verden"
+  periods:
+    - from: 1453
+      to: 1647
+      text: ブレーメン大司教が兼ねることの多い小さな司教領。1645年にスウェーデン軍に占領された。
+
+- id: grubenhagen
+  name: グルーベンハーゲン侯領
+  short: グルーベンハーゲン
+  color: "#c9d6b9"
+  kind: 侯領（ブラウンシュヴァイク＝リューネブルク家の分家）
+  note: ハルツ西麓のアインベック・オステローデを中心とするヴェルフ家の分家領。1596年に断絶し、ヴォルフェンビュッテル公が占有したが、1617年の帝国宮廷法院の判決でリューネブルク（ツェレ）家のものとなった（1665年にカレンベルクへ）。
+  source: "https://de.wikipedia.org/wiki/Fürstentum_Grubenhagen"
+
+- id: schaumburg
+  name: シャウムブルク伯領
+  short: シャウムブルク
+  color: "#dcadc6"
+  kind: 伯領
+  note: ヴェーザー川沿いのシャウムブルク（ビュッケブルク・リンテルン・シュタットハーゲン）と、ホルシュタインのピンネベルクを治めたシャウエンブルク家（ホルシュタイン＝シャウムブルク）。1640年に断絶し、ピンネベルクはデンマーク王へ、シャウムブルク本領は1647年の取り決め（ウェストファリア条約で確認）でヘッセン＝カッセル・リッペ家（シャウムブルク＝リッペ）・ブラウンシュヴァイク＝リューネブルクに分けられた。
+  source: "https://de.wikipedia.org/wiki/Grafschaft_Schaumburg"
+  periods:
+    - from: 1453
+      to: 1647
+      text: ヴェーザー川沿いの伯領。1640年に伯家が断絶し、1647年にヘッセン＝カッセル、ブラウンシュヴァイク＝リューネブルク、リッペ家（シャウムブルク＝リッペ）の間で分けられた。
+
+- id: dithmarschen
+  name: ディトマルシェン
+  short: ディトマルシェン
+  color: "#c6e0a5"
+  kind: 農民共和国
+  note: 北海沿岸の自由農民の共同体。名目上はブレーメン大司教に属し、1473年に皇帝がホルシュタインに含めたが、農民が自治を守った。1500年のヘミングシュテットの戦いでデンマーク王軍を破ったが、1559年に征服された（「最後のフェーデ」）。
+  source: "https://de.wikipedia.org/wiki/Dithmarschen"
+
+- id: jever
+  name: イェファー領主領
+  short: イェファー
+  color: "#e9d4ba"
+  kind: 領主領（フリースラントの首長）
+  note: フリースラントの首長家が治めた小さな領主領。最後の領主マリア（「イェファーのマリア」、在位1517–75）は東フリースラント伯に対抗して1532年にブルゴーニュ（カール5世）の封を受けた。1575年に遺言でオルデンブルク伯に譲られた。
+  rulers:
+    - {name: マリア, title: イェファーの女領主, from: 1517, to: 1575, source: "https://de.wikipedia.org/wiki/Maria_von_Jever"}
+  source: "https://de.wikipedia.org/wiki/Herrschaft_Jever"
+
+- id: holstein_schauenburg
+  name: ホルシュタイン伯領（シャウエンブルク家）
+  short: ホルシュタイン
+  color: "#d6c2a6"
+  kind: 伯領（シュレースヴィヒ公を兼ねる）
+  note: シャウエンブルク家のホルシュタイン＝レンツブルク伯がシュレースヴィヒ公を兼ねた。1459年にアドルフ8世が子なく死ぬと、翌1460年のリーベ条約で甥のデンマーク王クリスチャン1世が両地の領主に選ばれた（シュレースヴィヒとホルシュタインは「永遠に分かたれず」）。
+  rulers:
+    - {name: アドルフ8世, title: ホルシュタイン伯・シュレースヴィヒ公, from: 1427, to: 1459, source: "https://en.wikipedia.org/wiki/Adolphus_VIII,_Count_of_Holstein-Rendsburg"}
+  source: "https://ja.wikipedia.org/wiki/リーベ条約"
+
+- id: mecklenburg_stargard
+  name: メクレンブルク＝シュタルガルト公国
+  short: シュタルガルト
+  color: "#63c0af"
+  kind: 公国
+  note: メクレンブルク公家の分家（ノイブランデンブルク・シュトレーリッツ周辺）。1471年に断絶してメクレンブルク公領に戻った。1701年成立のメクレンブルク＝シュトレーリッツ（mecklenburg_strelitz）とは別。
+  rulers:
+    - {name: ハインリヒ（シュタルガルト公）, title: メクレンブルク＝シュタルガルト公, from: 1417, to: 1466, source: "https://en.wikipedia.org/wiki/Henry_of_Mecklenburg-Stargard"}
+    - {name: ウルリヒ2世, title: メクレンブルク＝シュタルガルト公, from: 1466, to: 1471, source: "https://en.wikipedia.org/wiki/Ulrich_II,_Duke_of_Mecklenburg-Stargard"}
+  source: "https://de.wikipedia.org/wiki/Mecklenburg-Stargard"
+
+- id: wallenstein_mecklenburg
+  name: メクレンブルク公国（ヴァレンシュタイン）
+  short: ヴァレンシュタイン
+  color: "#e0a382"
+  kind: 公国（皇帝が与えた）
+  note: 皇帝フェルディナント2世は、デンマーク王に味方したメクレンブルク公兄弟を廃し、1628年に皇帝軍総司令官ヴァレンシュタインにメクレンブルクを（まず担保として、1629年に封土として）与えた。1631年、スウェーデン軍の進攻で公兄弟が復位した。ヴァレンシュタインはボヘミアのフリートラント公でもあった。
+  rulers:
+    - {name: アルブレヒト・フォン・ヴァレンシュタイン, title: メクレンブルク公・フリートラント公, from: 1628, to: 1631, note: "1630年に皇帝軍総司令官を罷免された。1634年に暗殺", source: "https://ja.wikipedia.org/wiki/アルブレヒト・フォン・ヴァレンシュタイン"}
+  source: "https://ja.wikipedia.org/wiki/アルブレヒト・フォン・ヴァレンシュタイン"
+
+- id: julich_cleves
+  name: クレーヴェ公国
+  names:
+    - {from: 1521, name: ユーリヒ＝クレーヴェ＝ベルク公国, short: ユーリヒ＝クレーヴェ, kind: 公国（連合公国）}
+  short: クレーヴェ
+  color: "#e89e90"
+  kind: 公国
+  note: >-
+    ライン下流のクレーヴェ公国とマルク伯領（1398年から同君）。1449年のゾースト・フェーデでケルン大司教からゾーストを奪った。
+    1521年、ユーリヒ＝ベルク公の女子相続人マリアと結婚したヨハン3世がクレーヴェ公を継ぎ、ユーリヒ・クレーヴェ・ベルク・マルク・ラーヴェンスベルクの連合公国となった。
+    1609年に断絶すると、ブランデンブルク選帝侯とプファルツ＝ノイブルク公が遺領を争い（ユーリヒ＝クレーヴェ継承争い）、1614年のクサンテン条約で分けられた。
+  rulers:
+    - {name: ヨハン1世, title: クレーヴェ公・マルク伯, from: 1448, to: 1481, source: "https://en.wikipedia.org/wiki/John_I,_Duke_of_Cleves"}
+    - {name: ヨハン2世, title: クレーヴェ公・マルク伯, from: 1481, to: 1521, source: "https://en.wikipedia.org/wiki/John_II,_Duke_of_Cleves"}
+    - {name: ヨハン3世, title: ユーリヒ＝クレーヴェ＝ベルク公, from: 1521, to: 1539, note: "1511年から妻マリアの権利でユーリヒ＝ベルク公。娘アンはイングランド王ヘンリ8世の4番目の妃", source: "https://en.wikipedia.org/wiki/John_III,_Duke_of_Cleves"}
+    - {name: ヴィルヘルム5世（富裕公）, title: ユーリヒ＝クレーヴェ＝ベルク公, from: 1539, to: 1592, note: "1538年にゲルデルン公国を継いだが、1543年のフェンロー条約でカール5世に譲った", source: "https://en.wikipedia.org/wiki/William,_Duke_of_Jülich-Cleves-Berg"}
+    - {name: ヨハン・ヴィルヘルム, title: ユーリヒ＝クレーヴェ＝ベルク公, from: 1592, to: 1609, note: "心の病があり、子なく死んで家が断絶した", source: "https://en.wikipedia.org/wiki/John_William,_Duke_of_Jülich-Cleves-Berg"}
+  periods:
+    - from: 1453
+      to: 1520
+      text: クレーヴェ公がマルク伯を兼ね、ライン下流からルール地方に広がる。1449年にゾーストを得て、ケルン大司教と張り合った。
+    - from: 1521
+      to: 1592
+      text: ユーリヒ・ベルクと合わさり、北西ドイツ最大の世俗領邦（首都デュッセルドルフ）となる。ヴィルヘルム5世はゲルデルンをめぐってカール5世と戦って敗れ（1543年）、エラスムス流の中道の宗教政策をとった。
+    - from: 1593
+      to: 1609
+      text: 公の病で統治が乱れ、1609年に家が断絶。遺領をめぐる争いはスペインとオランダも巻き込む国際問題となった。
+  source:
+    - "https://de.wikipedia.org/wiki/Herzogtum_Kleve"
+    - "https://ja.wikipedia.org/wiki/ユーリヒ＝クレーフェ継承戦争"
+
+- id: julich_berg
+  name: ユーリヒ＝ベルク公国
+  short: ユーリヒ＝ベルク
+  color: "#b3b38e"
+  kind: 公国
+  note: ライン左岸のユーリヒ公国と右岸のベルク公国（首都デュッセルドルフ）、ヴェストファーレンのラーヴェンスベルク伯領を治めた。1511年に最後の公ヴィルヘルム4世が死に、娘マリアの夫ヨハン（クレーヴェ公子）が継いで、1521年にクレーヴェと合わさった（以後は julich_cleves の色）。
+  rulers:
+    - {name: ゲルハルト（2世）, title: ユーリヒ＝ベルク公, from: 1437, to: 1475, source: "https://en.wikipedia.org/wiki/Gerhard_VII,_Duke_of_Jülich-Berg"}
+    - {name: ヴィルヘルム4世, title: ユーリヒ＝ベルク公, from: 1475, to: 1511, source: "https://en.wikipedia.org/wiki/William_IV,_Duke_of_Jülich-Berg"}
+    - {name: ヨハン（3世）, title: ユーリヒ＝ベルク公（妻マリアの権利で）, from: 1511, to: 1521, note: "1521年にクレーヴェ公を継いだ（julich_cleves）", source: "https://en.wikipedia.org/wiki/John_III,_Duke_of_Cleves"}
+  source: "https://de.wikipedia.org/wiki/Herzogtum_Jülich"
