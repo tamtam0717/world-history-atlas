@@ -156,6 +156,17 @@
       minor: orthodox
       note: アルバニア人のムスリムが多く、セルビア人の正教徒の村もある。1878年以後もオスマン帝国領（コソヴォ州）に残り、1912年の第1次バルカン戦争でセルビア領になる。
 
+- id: rel_dukagjin_pre
+  name: ドゥカジン高原（ジャコヴァ・プリズレン周辺、1453–1499）
+  select:
+    pieces: [XKX-Municipality_of_Gjakova, XKX-Municipality_of_Decan, XKX-Municipality_of_Junik, XKX-Municipality_of_Rahovec, XKX-Municipality_of_Malisheva, XKX-Municipality_of_Prizren, XKX-Municipality_of_Suhareka, XKX-Municipality_of_Drenas, XKX-Municipality_of_Skenderaj]
+  until: 1499
+  timeline:
+    - from: 1453
+      main: orthodox
+      minor: catholic
+      note: "ペーチ総主教座・デチャニ修道院のある正教の地だが、アルバニア人の多くはカトリック（言語の lang_dukagjin と同じ範囲）。1500年からはコソヴォ全体の値（rel_kosovo）。"
+
 - id: rel_kosovo
   name: コソヴォ
   select:

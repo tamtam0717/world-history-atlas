@@ -751,3 +751,70 @@ docs/review/af_east_south.md の指摘を反映（2026-11-23）。
 ### 確認
 - `npm run data`：警告なし（政体 784 / 地域 2881 / 出来事 2808）。`--missing`（オセアニアの国コード、1880–2025 の 8 年）：ゼロ。
 - snapshot（scratchpad）：サモア 1880（1890 は書き出しのみ）（--zoom -170,-14,6。ツトゥイラが王国の色＋斜線、マヌアは所属なし）、北島 1910・1925（--zoom 176.5,-38.5,8。1910 年はウレウェラ保留地が薄い色、1925 年は濃い色）。
+
+## 1453–1647 分布・都市・潮流
+
+docs/review/1453_distributions.md の指摘を反映した（2026-11-24）。A・B はすべて反映、C は妥当なものだけ。
+
+### A
+- **ハンガリーの宗教改革**（religion/central.yaml）：
+  - `rel_hungary`（ザラ）：1570 reformed/catholic、1630 catholic/reformed（パーズマーニの再カトリック化）。note の「大多数がプロテスタント」と塗りの矛盾を解消。
+  - `rel_hungary_transdanubia_mixed`（ヴェスプレーム・コマーロム）：1570 reformed/catholic、1630 catholic/reformed。
+  - 新設 `rel_hungary_ottoman_transdanubia`（フェイェール・ショモジ・トルナ・バラニャ、until 1699）：1570–1699 reformed/catholic（オスマン領には対抗宗教改革が及ばない。1700 年から既存の値）。
+  - `rel_hungary_between_rivers`：1560 reformed/catholic、1648 も reformed/catholic、1700 catholic/reformed（再植民）を追加。
+  - 新設 `rel_buda_pest_ottoman`（ブダペストの 23 区、until 1699）：1541 sunni/reformed、1686 catholic（B の指摘もこれで反映）。
+  - `rel_hungary_east_reformed`：1550 を lutheran/catholic に。`rel_heves`：1560 catholic/reformed を追加。西部のルター派（`rel_hungary_west_lutheran`、1580/1630）は変更なし。
+- **メリリャ**：新設 `rel_melilla_pre`（sunni）・`lang_melilla_pre`（berber/arabic、ナドールと同じ）、どちらも until 1496。
+- **セウタ**：新設 `lang_ceuta_portuguese`（until 1647）：1453 portuguese、1640 portuguese/spanish。1648 年からは `lang_spain_base`。
+
+### B
+- イラン（`rel_iran`）：1510 は sunni/shia のまま（note に 1501 年の国教化と緩やかな改宗）、1590 shia/sunni（アッバース1世）、1648 年から既存の shia。`rel_iran_west_azerbaijan` の切り替えを 1510 → 1560 に。
+- アルバニア中部（`rel_albania`）：1600 を catholic/sunni、1630 sunni/orthodox に。`rel_macedonia_muslim` の切り替えを 1600 → 1630 に。`rel_polog`（1620）は変更なし（確信度が低い）。
+- ブダペスト：上の A。
+- バーチ南部：新設 `rel_bacs_south_hu`（バヤ・バーチャルマーシュ、until 1699）：1540 orthodox/catholic、1687 catholic/orthodox（ブニェヴツィの移住）。`rel_subotica`：1550・1648 orthodox/catholic、1690 catholic/orthodox（既存の 1648 の note をここへ）。
+- クリミア山地（`rel_crimea`）：1550・1648 を sunni/orthodox（言語の tatar/greek に合わせる）、1779 sunni（ギリシア人の移住）を追加。
+- 草原の宗教と言語（religion/north_east.yaml）：
+  - 新設 `rel_kirovohrad_west_pre`（キロヴォフラード西部 6 ピース、until 1647）：荒野と同じ 1453 sunni、1600 orthodox/sunni。
+  - 新設 `rel_azov_north_coast`（Manhush・Nikolske、until 1779）：sunni（言語の tatar と同じ）。
+  - 新設 `rel_sal_steppe`（Remontnensky・Zavetinsky）：1453 sunni、1640 other/orthodox（カルムイク人。`rel_kalmyk` と同じく other）、1943 orthodox。
+  - `rel_kizlyar`：1600・1648 を sunni/orthodox、1740 orthodox/sunni（言語の 1740 russian に合わせる）。
+  - `rel_middle_volga_pre`：1600 を other/orthodox（モルドヴィン人の伝統信仰）。
+- スロボダ・ウクライナとドンバス：
+  - `lang_sloboda_ua` の切り替えを 1600 → 1640（チュフイウ 1638）。新設 `rel_sloboda_pre`（until 1647）：1453 sunni、1640 orthodox/sunni。
+  - `lang_donbas`：1600 の項目を削除（1647 まで tatar）、1648 tatar/ukrainian、1690 ukrainian/tatar（イジューム 1681・バフムート 1701）。新設 `rel_donbas_pre`（ドネツィク・ルハンシク州、until 1689）：1453 sunni、1648 sunni/orthodox。
+  - `lang_voronezh_south`：1600 の russian を削除（1647 まで tatar）、1648 tatar/ukrainian、1700 ukrainian/russian。新設 `rel_voronezh_south_pre`（until 1699）：1453 sunni、1648 sunni/orthodox。ベルゴロド南部・クルスク南西部の 1600 russian（城塞の線）はそのまま。
+- テッサロニキ：新設 `rel_thessaloniki`（GRC-Thessaloniki）：1500 jewish/sunni、1923 orthodox/jewish、1943 orthodox。言語の lang_thessaloniki に合わせた。ユダヤ教徒が多数派の数少ない地域として、jewish で塗る例外（religion-format.md の「イスラエルのように多数派になる地域」と同じ扱い）。
+- セヴェンヌ（`rel_france_huguenot_core`）：1560・1648 を reformed/catholic に（1685 年以後は既存のまま catholic/reformed）。
+- 出来事（events/europe.yaml）：1562「ユグノー戦争がはじまる」（3 月 1 日、ヴァシーの虐殺、at ヴァシー）、1572「サンバルテルミの虐殺」（8 月 24 日、at パリ）。
+- 潮流：新しい潮流 `english_reformation`「宗教改革（イギリス国教会）」（movements/religion.yaml）。spread は `{polities: [britain], exclude_regions: [ireland]}`（1534 0.7 → 1553 0.2 → 1559 0.8 → 1570 1.0 → 1648 0.2 → 1662 0.4 → 1689 0）。出来事は west.yaml の首長法・統一法。
+
+### C（反映したもの）
+- ボヘミア・国境地帯・モラヴィアの再カトリック化（`rel_bohemia_pre`・`rel_sudeten_pre`・`rel_moravia_pre`）を 1624 → 1627（改訂領邦条例）に。
+- 新設 `rel_dukagjin_pre`（ドゥカジン、until 1499）：1453 orthodox/catholic（アルバニア人のカトリック）。
+- 都市：バフチサライに names `{to: 1531, name: サラチク（クルク・エル）}` と note、フェスの wattasid の首都を 1453 年から（政体名は 1471 年までマリーン朝）、ビルグ（新規、capital malta 1530–1570、until 1570）、ブリュッセルの note にメヘレンの宮廷（1507–30）。
+- 潮流：`baroque` の people の重複を削除、`baroque_catholicism` の `{polities: [castile, aragon]}` を削除、`iso: [ITA]` を 1648 年以後もゆるやかに下げる（1690 0.6・1730 0.3・1773 0）、`lutheran_reformation`・`calvinism` にトランシルヴァニア（polities: [transylvania]）、`second_serfdom` にハンガリー・スロヴァキア（iso: [HUN, SVK]、1514 年〜）とドージャ・ジェルジの農民反乱。
+- 出来事：マゼラン一行の本文を「地球が球体であることが航海で確かめられた」に、ケプラーの関係国に bohemia を追加。
+
+### 反映しなかったもの
+- マキァヴェリの表記：出来事の題名は events/italy_lowcountries.yaml（別の担当が修正中のファイル）にあるので変えていない。潮流の people は教科書どおり「マキァヴェリ」のまま。
+- ミュールーズ・トランシルヴァニアのユニテリアン・アゼルバイジャン北部・チェルケス・ラズィスタン・ヴィルノ・カウナス・オランダの 1600 年：確信度が低い、またはピースの範囲から現状でよいと判断。ポーランドのカルヴァン派は `rel_poland` の note にすでにある。
+
+### 1648 年以後を変えた所（例外。作業前の atlas_before_1453.json と比べた一覧）
+1647/1648 のつなぎ目に段差ができないよう、17 世紀後半〜18 世紀前半の値も直した。
+- 宗教：
+  - ハンガリー 73 ピース（ドナウ・ティサ川間、オスマン領のドナウ以西）：1648–1699 catholic/reformed → reformed/catholic。
+  - ブダペスト 23 区：1648–1685 catholic/reformed → sunni/reformed、1686–1699 → catholic。
+  - バヤ・バーチャルマーシュ：1648–1686 → orthodox/catholic、1687–1699 → catholic/orthodox。スボティツァ：1648–1689 catholic/orthodox → orthodox/catholic。
+  - セヴェンヌ・ヴィヴァレ 8 ピース：1648–1684 catholic/reformed → reformed/catholic。
+  - テッサロニキ：1648–1922 orthodox/sunni → jewish/sunni、1923–1942 orthodox → orthodox/jewish。
+  - キズリャル周辺 3 ピース：1648–1739 orthodox/sunni → sunni/orthodox。
+  - サリスク草原 2 ピース：1648–1942 orthodox → other/orthodox。
+  - ドンバス 34 ピース：1648–1689 orthodox → sunni/orthodox。アゾフ海北岸 2 ピース：1648–1779 orthodox → sunni。
+  - クリミア山地 3 ピース：1648–1778 sunni → sunni/orthodox。
+  - ヴォロネジ南部 13 ピース：1648–1699 orthodox → sunni/orthodox。
+- 言語：ドンバス 34 ピース：1648–1689 ukrainian/tatar → tatar/ukrainian。ヴォロネジ南部 13 ピース：1648–1699 ukrainian/russian → tatar/ukrainian。
+- 潮流：`baroque_catholicism` の iso ITA が 1648–1773 にも光る。`english_reformation` が 1648–1689 に弱く光る。
+
+### 確認
+- `npm run data`：警告なし。1647→1648 で主な色が変わるピースは、レビュー時に説明のついていたもの（イングリア・テシェン・ゼーラント・ヴォルガ中流など）と、ベルゴロド南部・クルスク南西部（russian → ukrainian、1650 年代の入植）だけ。今回の修正で増えたのは、サマーラ・ペンザの宗教（other → orthodox。言語の volga_finnic → russian と同じ年で、既存の 1648 年の値に合わせた）とセウタの言語（portuguese → spanish）の 2 か所で、どちらも言語・政治の変化と一致している。
+- snapshot（scratchpad）：宗教 1600・1647・1648（--zoom 20,47,3。ハンガリー中部・東部が改革派の紫、1647/1648 で段差なし）、宗教 1600・1647・1648 と言語 1647（--zoom 37,48,2.5。荒野・ドンバスがスンナ派・タタール、スロボダが正教・ウクライナ人で宗教と言語がそろう、クリミア山地に正教の斜線）。

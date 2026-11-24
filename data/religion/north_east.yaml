@@ -534,9 +534,16 @@
       note: "クリミア＝ハン国（1441–）。山地の正教徒の小国テオドロ公国（マングプ）がオスマン帝国に滅ぼされる（1475）。"
     - from: 1550
       main: sunni
+      minor: orthodox
+      note: "クリミア・タタール人はスンナ派。山地と南岸にはギリシア人などの正教徒が多く残る（言語の lang_crimea_mountains の greek と同じ）。"
     - from: 1648
       main: sunni
-      note: クリミア・タタール人はスンナ派（ハナフィー派）。
+      minor: orthodox
+      note: クリミア・タタール人はスンナ派（ハナフィー派）。山地・南岸のギリシア人などの正教徒は、1778年にアゾフ海北岸へ移されるまで相当数いた。
+    - from: 1779
+      main: sunni
+      note: 1778年、エカチェリーナ2世の命で正教徒のギリシア人・アルメニア人がアゾフ海北岸へ移住させられた。
+      source: "https://ja.wikipedia.org/wiki/マリウポリ"
     - from: 1783
       main: sunni
       minor: orthodox
@@ -1074,13 +1081,17 @@
       main: sunni
       note: "ノガイ人・クムク人の地。"
     - from: 1600
-      main: orthodox
-      minor: sunni
-      note: "テレク川にロシアの城塞テルキ（1588）とテレク・コサック（グレベン・コサック）の村が作られる。"
+      main: sunni
+      minor: orthodox
+      note: "テレク川にロシアの城塞テルキ（1588）とテレク・コサック（グレベン・コサック）の村が作られるが、住民の多数はノガイ人・クムク人（言語の lang_kizlyar と同じ）。"
     - from: 1648
+      main: sunni
+      minor: orthodox
+      note: ノガイ人・クムク人の地に、テレク・コサック（古儀式派が多い）の村がある。
+    - from: 1740
       main: orthodox
       minor: sunni
-      note: テレク・コサック（古儀式派が多い）の地。ノガイ人・クムク人も住む。キズリャルにはアルメニア人も多い。
+      note: キズリャル要塞（1735）ができ、テレク・コサックとロシア人の入植地が広がる。キズリャルにはアルメニア人も多い。
     - from: 1990
       main: sunni
       minor: orthodox
@@ -1317,6 +1328,60 @@
 
 # ---- 1453–1647 年だけの区分け（until: 1647。1648 年以後は上の地域の記述が効く）----
 
+- id: rel_sloboda_pre
+  name: スロボダ・ウクライナ（ハルキウ、1453–1647）
+  select:
+    adm1: ["UKR/Kharkiv Oblast"]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "定住民のほとんどいない草原（「荒野」）。クリミア＝タタール人・ノガイ人が遊牧し、北の農村を襲う。"
+    - from: 1640
+      main: orthodox
+      minor: sunni
+      note: "ロシアの南の国境の外に、ドニエプル右岸から逃れたウクライナ人が入植しはじめる（チュフイウ 1638。ハルキウは1650年代）。言語の lang_sloboda_ua と同じ。"
+      source: "https://ja.wikipedia.org/wiki/スロボダ・ウクライナ"
+
+- id: rel_donbas_pre
+  name: ドネツ川流域（ドンバス、1453–1689）
+  select:
+    adm1: ["UKR/Donetsk Oblast", "UKR/Luhansk Oblast"]
+  until: 1689
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "定住民のほとんどいない草原（「荒野」）。ノガイ人・クリミア＝タタール人の遊牧地で、ドン・コサックの村はドン川・ドネツ川下流に限られる。"
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: 北部のドネツ川沿いにスロボダ・ウクライナのコサックの集落（トル〈スロヴヤンシク〉の製塩所 1640年代、イジューム 1681）ができはじめる。南部はノガイ人の遊牧地。1690年からはウクライナ全体の値（rel_ukraine）。（言語の lang_donbas と同じ）
+      source: "https://en.wikipedia.org/wiki/Donbas"
+
+- id: rel_azov_north_coast
+  name: アゾフ海北岸（マリウポリの西、1453–1779）
+  select:
+    pieces: [UKR-Manhush, UKR-Nikolske]
+  until: 1779
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "ノガイ人の遊牧地。1778年にクリミアの正教徒ギリシア人が移されるまで、定住民はほとんどいない（言語の lang_mariupol_greeks と同じ）。1780年からはウクライナ全体の値。"
+
+- id: rel_kirovohrad_west_pre
+  name: キロヴォフラード西部の草原（1453–1647）
+  select:
+    pieces: [UKR-Blahovishchenske, UKR-Haivoron, UKR-Holovanivsk, UKR-Kamianka, UKR-Novoarkhanhelsk, UKR-Vilshanka]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "ドニエプル右岸の南の草原（「荒野」）。タタール人の遊牧地（言語の lang_wild_fields_ua_pre と同じ）。1648年からはドニエプル右岸（rel_right_bank）。"
+    - from: 1600
+      main: orthodox
+      minor: sunni
+      note: "ウクライナ人の入植がブラーツラフ県から南へ進む。"
+
 - id: rel_wild_fields_ua_pre
   name: ドニエプル川中流・下流とドネツ川の草原（「荒野」、1453–1647）
   select:
@@ -1345,6 +1410,41 @@
       main: orthodox
       note: "ロシアが南の国境に城塞の線を作り、ヴォロネジ（1585）・クルスク（1586）・ベルゴロド（1596）・タンボフ（1636）などに兵士と農民を住まわせる（ベルゴロド線 1635–58）。"
       source: "https://ja.wikipedia.org/wiki/ベルゴロド線"
+
+- id: rel_voronezh_south_pre
+  name: ヴォロネジ南部の草原（1453–1699）
+  select:
+    pieces: [RUS-Ostrogozhsky_District, RUS-Rossoshansky_District, RUS-Bogucharsky_District, RUS-Kantemirovsky_District, RUS-Olkhovatsky_District, RUS-Kamensky_District, RUS-Petropavlovsky_District, RUS-Repyovsky_District, RUS-Verkhnemamonsky_District, RUS-x_28, RUS-x_34, RUS-x_35, RUS-x_40]
+  until: 1699
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "ロシアの城塞の線より南の草原。タタール人・ノガイ人の遊牧地。町の建設はオストロゴシスク（1652）、ボグチャル・ロッソシ（18世紀）（言語の lang_voronezh_south と同じ）。"
+    - from: 1648
+      main: sunni
+      minor: orthodox
+      note: ウクライナ人が北部に入植しはじめる（オストロゴシスク 1652）。1700年からはロシア全体の値（rel_russia）。
+
+- id: rel_sal_steppe
+  name: サリスク草原（ドンのカルムイク人）
+  select:
+    pieces: [RUS-Remontnensky_District, RUS-Zavetinsky_District]
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "ノガイ人の遊牧地。"
+    - from: 1640
+      main: other
+      minor: orthodox
+      note: "1630年代にカルムイク人（チベット仏教）がヴォルガ下流に移り、この草原も遊牧地となる（言語の lang_sal_steppe と同じ）。"
+    - from: 1648
+      main: other
+      minor: orthodox
+      note: カルムイク人（チベット仏教）の遊牧地。一部はドン・コサックに属した（ブザヴァ）。
+    - from: 1943
+      main: orthodox
+      note: 1943年12月、カルムイク人の全員がシベリアなどへ強制移住させられた。
+      source: "https://en.wikipedia.org/wiki/Kalmyk_deportations_of_1943"
 
 - id: rel_don_pre
   name: ドン川下流（ドン・コサックの地、1453–1647）
@@ -1386,9 +1486,9 @@
       minor: other
       note: "ノガイ人の遊牧地と、北部の森のモルドヴィン人（伝統的な信仰）の地。"
     - from: 1600
-      main: orthodox
-      minor: other
-      note: "サマーラ（1586）などの城塞ができ、ロシア人の入植が始まる。"
+      main: other
+      minor: orthodox
+      note: "サマーラ（1586）などの城塞ができ、ロシア人の入植が始まる。住民の多くはモルドヴィン人で、18世紀半ばの集団洗礼までは伝統的な信仰が強い（言語の lang_middle_volga と同じ）。"
 
 - id: rel_sverdlovsk_pre
   name: 中部ウラル（1453–1647）
