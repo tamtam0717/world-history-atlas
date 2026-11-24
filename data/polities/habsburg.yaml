@@ -1,9 +1,135 @@
 # 担当 D（ハプスブルク領）が定義する政体
 # ピースの範囲：AUT CZE SVK HUN SVN HRV
 
+- id: bohemia
+  name: ボヘミア王国
+  short: ボヘミア
+  color: "#aebde3"
+  kind: 王国
+  rulers:
+    - name: ラジスラフ・ポホロベク（ラディスラウス・ポストゥムス）
+      title: ボヘミア王（1453年10月戴冠。オーストリア公・ハンガリー王も兼ねる）
+      from: 1453
+      to: 1457
+      note: 摂政（領邦総督）はイジー・ス・ポジェブラト。
+      source: "https://ja.wikipedia.org/wiki/ラディスラウス・ポストゥムス"
+    - name: イジー・ス・ポジェブラト
+      title: ボヘミア王（フス派穏健派＝ウトラキストの貴族から選ばれた王）
+      from: 1458
+      to: 1471
+      source: "https://ja.wikipedia.org/wiki/イジー・ス・ポジェブラト"
+    - name: ヴラジスラフ2世
+      title: ボヘミア王（ポーランド王家ヤゲウォ家。1490年からハンガリー王も兼ねる）
+      from: 1471
+      to: 1516
+      source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"
+    - name: マーチャーシュ1世
+      title: ボヘミア王（対立王。カトリック派が選ぶ）。モラヴィア・シュレジエン・ラウジッツを支配
+      from: 1469
+      to: 1490
+      source: "https://ja.wikipedia.org/wiki/マーチャーシュ1世"
+    - name: ルドヴィーク（ハンガリー王ラヨシュ2世）
+      title: ボヘミア王
+      from: 1516
+      to: 1526
+      source: "https://ja.wikipedia.org/wiki/ラヨシュ2世"
+    - name: フェルディナント1世
+      title: ボヘミア王（ハプスブルク家。神聖ローマ皇帝 1556〜）
+      from: 1526
+      to: 1564
+      source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
+    - name: マクシミリアン2世
+      title: ボヘミア王・神聖ローマ皇帝
+      from: 1564
+      to: 1576
+      source: "https://ja.wikipedia.org/wiki/マクシミリアン2世_(神聖ローマ皇帝)"
+    - name: ルドルフ2世
+      title: ボヘミア王・神聖ローマ皇帝。プラハに宮廷を置く
+      from: 1576
+      to: 1611
+      source: "https://ja.wikipedia.org/wiki/ルドルフ2世_(神聖ローマ皇帝)"
+    - name: マティアス
+      title: ボヘミア王・神聖ローマ皇帝
+      from: 1611
+      to: 1619
+      source: "https://ja.wikipedia.org/wiki/マティアス_(神聖ローマ皇帝)"
+    - name: フェルディナント2世
+      title: ボヘミア王（1617年戴冠。1619年に反乱した諸身分が廃位を宣言）
+      from: 1617
+      to: 1619
+      source: "https://ja.wikipedia.org/wiki/フェルディナント2世_(神聖ローマ皇帝)"
+    - name: フリードリヒ5世（冬王）
+      title: ボヘミア王（プファルツ選帝侯。反乱した諸身分が選ぶ。白山の戦いの後に亡命）
+      from: 1619
+      to: 1620
+      source: "https://ja.wikipedia.org/wiki/フリードリヒ5世_(プファルツ選帝侯)"
+  periods:
+    - from: 1453
+      to: 1471
+      text: フス戦争の後、フス派（穏健派のウトラキスト）の貴族イジー・ス・ポジェブラトが摂政から王となった。教皇に破門され、カトリック派とハンガリー王マーチャーシュ1世との戦争（ボヘミア戦争 1468–1478）になる。
+    - from: 1471
+      to: 1525
+      text: ヤゲウォ家のヴラジスラフ2世の下で、モラヴィア・シュレジエン・ラウジッツは1490年までマーチャーシュ1世が支配した。クトナー・ホラの宗教和議（1485）でカトリックとウトラキストの共存が認められ、王権は弱まり貴族と都市が国を動かした。
+    - from: 1526
+      to: 1617
+      text: モハーチの戦いの後、諸身分がハプスブルク家のフェルディナント1世を王に選ぶ。ルター派・兄弟団などの新教徒が多数を占め、ルドルフ2世は宮廷をプラハに置いて学芸を保護し、1609年の勅許状で信仰の自由を認めた。
+    - from: 1618
+      to: 1620
+      text: プラハ窓外投擲事件（1618）で新教徒の諸身分が反乱を起こし、三十年戦争が始まる。フェルディナント2世を廃してプファルツ選帝侯フリードリヒ5世を王に選んだが、1620年の白山の戦いで敗れた。以後はハプスブルク家の世襲王国（地図ではオーストリアの色）。
+  note: >-
+    ボヘミア王冠領（ボヘミア・モラヴィア・シュレジエン・上下ラウジッツ）の王国。神聖ローマ帝国の選帝侯国の一つ。
+    1526年からはハプスブルク家の王だが、諸身分が王を選ぶ選挙王国だったので、地図では1619年まで独自の色で描き（同君連合）、
+    白山の戦い（1620）の後はハプスブルク家の領域（habsburg）として描く。1469–1490年のモラヴィア・シュレジエン・ラウジッツはハンガリー（マーチャーシュ1世）の色。
+  source:
+    - "https://ja.wikipedia.org/wiki/ボヘミア王国"
+    - "https://ja.wikipedia.org/wiki/ボヘミアの反乱"
+
+- id: gorizia
+  name: ゴリツィア伯領（ゲルツ伯）
+  short: ゴリツィア伯
+  color: "#a9c8b6"
+  kind: 伯領
+  rulers:
+    - name: ヨハン2世
+      title: ゴリツィア伯（兄弟と共同統治）
+      from: 1454
+      to: 1462
+      source: "https://en.wikipedia.org/wiki/County_of_Gorizia"
+    - name: レオンハルト
+      title: ゴリツィア伯。最後の伯で、死後は伯領がハプスブルク家に
+      from: 1454
+      to: 1500
+      source: "https://en.wikipedia.org/wiki/Leonhard,_Count_of_Gorizia"
+  periods:
+    - from: 1453
+      to: 1499
+      text: ゴリツィア（ゲルツ）とプステル谷のリエンツを本拠とする伯家の領地。ツェリェ伯の遺領をめぐってフリードリヒ3世と争って敗れ（1460）、ケルンテンの領地を失った。1500年に断絶し、ハプスブルク家が継いだ。
+  note: 伯領は現在のイタリアのゴリツィア県（担当 C）・スロヴェニアのゴリシュカ・オーストリアの東チロルにまたがる。
+  source: "https://en.wikipedia.org/wiki/County_of_Gorizia"
+
+- id: celje
+  name: ツェリェ伯領（ツィリ伯）
+  short: ツェリェ伯
+  color: "#e0a98f"
+  kind: 伯領
+  rulers:
+    - name: ウルリヒ2世
+      title: ツェリェ（ツィリ）伯・帝国諸侯。1456年にベオグラードでフニャディ家に殺される
+      from: 1454
+      to: 1456
+      note: 父フリードリヒ2世（1454年没）の跡を継いだ。ラディスラウス・ポストゥムスの後見人として権勢をふるった。
+      source: "https://en.wikipedia.org/wiki/Ulrich_II,_Count_of_Celje"
+  periods:
+    - from: 1453
+      to: 1455
+      text: シュタイアーマルク南部（ツェリェ）を本拠に、ケルンテン・クライン・スラヴォニアに広い領地を持った大貴族。1436年に帝国諸侯となった。1456年にウルリヒ2世が殺されて断絶し、領地はハプスブルク家が継いだ。
+  note: スラヴォニア・ザゴリエ（ヴァラジュディン）などハンガリー王冠の下の領地は、地図ではハンガリーの色のまま。
+  source: "https://en.wikipedia.org/wiki/Counts_of_Celje"
+
 - id: habsburg
   name: オーストリア
   names:
+    - {to: 1525, name: オーストリア（ハプスブルク家の世襲領）, kind: 大公国}
     - {to: 1803, name: オーストリア（ハプスブルク君主国）}
     - {from: 1804, to: 1866, name: オーストリア帝国, kind: 帝国}
     - {from: 1867, name: オーストリア＝ハンガリー帝国, short: オーストリア＝ハンガリー, kind: 二重帝国（同君連合）}
@@ -11,6 +137,95 @@
   color: "#ecd27a"
   kind: 君主国
   rulers:
+    - name: ラディスラウス・ポストゥムス
+      title: オーストリア公（下・上オーストリア）・ボヘミア王・ハンガリー王
+      from: 1440
+      to: 1457
+      note: 死後に生まれた（ポストゥムス）ためこの名がある。1452年までフリードリヒ3世が後見。
+      source: "https://ja.wikipedia.org/wiki/ラディスラウス・ポストゥムス"
+    - name: フリードリヒ3世
+      title: 神聖ローマ皇帝（1452〜）・内オーストリア公（シュタイアーマルク・ケルンテン・クライン）。1457年から下オーストリア、1463年から上オーストリアも
+      from: 1440
+      to: 1493
+      note: 1453年にオーストリアを大公国と認めた（大特許状の確認）。標語「AEIOU」。
+      source: "https://ja.wikipedia.org/wiki/フリードリヒ3世_(神聖ローマ皇帝)"
+    - name: アルブレヒト6世
+      title: オーストリア大公（上オーストリア。1462年からウィーンも）。兄フリードリヒ3世と争う
+      from: 1458
+      to: 1463
+      source: "https://en.wikipedia.org/wiki/Albert_VI,_Archduke_of_Austria"
+    - name: ジークムント
+      title: チロル大公（チロル・前方オーストリア）
+      from: 1446
+      to: 1490
+      note: 1490年にチロルをマクシミリアン1世に譲った。
+      source: "https://en.wikipedia.org/wiki/Sigismund,_Archduke_of_Austria"
+    - name: マクシミリアン1世
+      title: オーストリア大公（1490年にチロル、1493年に全世襲領）・神聖ローマ皇帝（1508年から選ばれた皇帝を称す）
+      from: 1490
+      to: 1519
+      source: "https://ja.wikipedia.org/wiki/マクシミリアン1世_(神聖ローマ皇帝)"
+    - name: カール5世
+      title: オーストリア大公・神聖ローマ皇帝（1519–1556）。オーストリアの世襲領は1521–1522年に弟フェルディナントに譲る
+      from: 1519
+      to: 1521
+      source: "https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)"
+    - name: フェルディナント1世
+      title: オーストリア大公（1521〜）・ボヘミア王・ハンガリー王（1526〜）・神聖ローマ皇帝（1556〜）
+      from: 1521
+      to: 1564
+      source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
+    - name: マクシミリアン2世
+      title: 神聖ローマ皇帝・オーストリア大公（下・上オーストリア）・ボヘミア王・ハンガリー王
+      from: 1564
+      to: 1576
+      source: "https://ja.wikipedia.org/wiki/マクシミリアン2世_(神聖ローマ皇帝)"
+    - name: フェルディナント2世（チロル大公）
+      title: チロル・前方オーストリアの大公（1564年の分割による）
+      from: 1564
+      to: 1595
+      source: "https://ja.wikipedia.org/wiki/フェルディナント2世_(オーストリア大公)"
+    - name: カール2世
+      title: 内オーストリア大公（シュタイアーマルク・ケルンテン・クライン・ゴリツィア。1564年の分割による）
+      from: 1564
+      to: 1590
+      source: "https://ja.wikipedia.org/wiki/カール2世_(オーストリア大公)"
+    - name: ルドルフ2世
+      title: 神聖ローマ皇帝・ボヘミア王（〜1611）・ハンガリー王とオーストリア大公（〜1608）
+      from: 1576
+      to: 1612
+      note: 1583年から宮廷をプラハに置いた。1608年のリーベン条約で弟マティアスにハンガリー・オーストリア・モラヴィアを譲る。
+      source: "https://ja.wikipedia.org/wiki/ルドルフ2世_(神聖ローマ皇帝)"
+    - name: マクシミリアン3世
+      title: チロルの統治者（ドイツ騎士団総長）
+      from: 1602
+      to: 1618
+      source: "https://en.wikipedia.org/wiki/Maximilian_III,_Archduke_of_Austria"
+    - name: マティアス
+      title: ハンガリー王・オーストリア大公（1608〜）・ボヘミア王（1611〜）・神聖ローマ皇帝（1612〜）
+      from: 1608
+      to: 1619
+      source: "https://ja.wikipedia.org/wiki/マティアス_(神聖ローマ皇帝)"
+    - name: フェルディナント2世
+      title: 内オーストリア大公（1590〜。1596年から親政）・ボヘミア王（1617〜）・ハンガリー王（1618〜）・神聖ローマ皇帝（1619〜）
+      from: 1590
+      to: 1637
+      source: "https://ja.wikipedia.org/wiki/フェルディナント2世_(神聖ローマ皇帝)"
+    - name: レオポルト5世
+      title: チロルの統治者（1625年からチロル大公）
+      from: 1619
+      to: 1632
+      source: "https://en.wikipedia.org/wiki/Leopold_V,_Archduke_of_Austria"
+    - name: クラウディア・デ・メディチ
+      title: チロルの摂政（レオポルト5世の妃）
+      from: 1632
+      to: 1646
+      source: "https://en.wikipedia.org/wiki/Claudia_de'_Medici"
+    - name: フェルディナント・カール
+      title: チロル大公
+      from: 1646
+      to: 1662
+      source: "https://en.wikipedia.org/wiki/Ferdinand_Charles,_Archduke_of_Austria"
     - name: フェルディナント3世
       title: 神聖ローマ皇帝・オーストリア大公・ハンガリー王・ボヘミア王
       from: 1637
@@ -72,6 +287,21 @@
       to: 1918
       source: "https://ja.wikipedia.org/wiki/カール1世_(オーストリア皇帝)"
   periods:
+    - from: 1453
+      to: 1492
+      text: フリードリヒ3世の下で、ハプスブルク家の世襲領はオーストリア・内オーストリア・チロルに分かれていた。ハンガリー王マーチャーシュ1世との戦いでウィーンを奪われる（1485–1490）。
+    - from: 1493
+      to: 1519
+      text: マクシミリアン1世が世襲領を再統一し、ブルゴーニュ公女マリとの結婚、スペイン王家との婚姻、ヤゲウォ家との二重結婚（1515年のウィーン会議）で、家の大発展の土台をつくった。
+    - from: 1520
+      to: 1563
+      text: フェルディナント1世がオーストリアを継ぎ、モハーチの戦い（1526）の後にボヘミア王・ハンガリー王となる。オスマン帝国のスレイマン1世とハンガリーをめぐって戦い（1529年の第1次ウィーン包囲）、ハンガリーは三分された。1556年に兄カール5世が退位し、ハプスブルク家はスペイン系とオーストリア系に分かれる。
+    - from: 1564
+      to: 1617
+      text: 世襲領はオーストリア（皇帝）・チロル・内オーストリアに分割された。オスマン帝国との長期戦争（1593–1606）、ルドルフ2世と弟マティアスの「兄弟争い」が続き、各地の新教徒の貴族が力を持った。内オーストリアでは対抗宗教改革が進んだ。
+    - from: 1618
+      to: 1647
+      text: ボヘミアの反乱から三十年戦争が始まる。白山の戦い（1620）でボヘミアを屈服させ、カトリック化と中央集権を進めたが、戦争の後半はスウェーデン軍がボヘミア・モラヴィアに侵入し、ウィーンにも迫った（1645）。
     - from: 1648
       to: 1682
       text: 三十年戦争後、ボヘミアとオーストリア諸邦でカトリック化と中央集権が進む。ハンガリーは西部・北部の王領ハンガリー、中部・南部のオスマン領、東のトランシルヴァニア公国に三分されたまま。
@@ -130,9 +360,83 @@
 - id: transylvania
   name: トランシルヴァニア公国
   short: トランシルヴァニア
+  names:
+    - {from: 1541, to: 1570, name: 東ハンガリー王国, short: 東ハンガリー, kind: 王国}
   color: "#e7bf8f"
   kind: 公国
   rulers:
+    - name: ヤーノシュ・ジグモンド（サポヤイ・ヤーノシュ2世）
+      title: 選ばれたハンガリー王（1540–1570）、トランシルヴァニア公（1570–1571）
+      from: 1540
+      to: 1571
+      note: 母イザベラ・ヤギエウォが摂政、実権はジェルジ修道士（マルティヌッツィ）。1551–1556年は国をフェルディナント1世に譲りポーランドへ退いた。
+      source: "https://en.wikipedia.org/wiki/John_Sigismund_Zápolya"
+    - name: バートリ・イシュトヴァーン
+      title: トランシルヴァニア公（1576年からポーランド王ステファン・バートリ）
+      from: 1571
+      to: 1586
+      note: 1576–1581年は兄クリシュトーフ、その後はその子ジグモンドがトランシルヴァニアを治めた。
+      source: "https://ja.wikipedia.org/wiki/ステファン・バートリ"
+    - name: バートリ・クリシュトーフ
+      title: トランシルヴァニアのヴォイヴォダ（兄イシュトヴァーンの代理）
+      from: 1576
+      to: 1581
+      source: "https://en.wikipedia.org/wiki/Christopher_Báthory"
+    - name: バートリ・ジグモンド
+      title: トランシルヴァニア公（1598年と1599年に一時退位し、1602年に最終的に退く）
+      from: 1581
+      to: 1602
+      source: "https://en.wikipedia.org/wiki/Sigismund_Báthory"
+    - name: バートリ・アンドラーシュ
+      title: トランシルヴァニア公
+      from: 1599
+      to: 1599
+      source: "https://en.wikipedia.org/wiki/Andrew_Báthory"
+    - name: ミハイ勇敢公
+      title: ワラキア公。トランシルヴァニア（1599–1600）とモルダヴィア（1600）も支配
+      from: 1599
+      to: 1600
+      source: "https://ja.wikipedia.org/wiki/ミハイ勇敢公"
+    - name: ルドルフ2世（バスタ将軍による軍政）
+      title: 神聖ローマ皇帝の直轄支配
+      from: 1601
+      to: 1603
+      source: "https://en.wikipedia.org/wiki/Giorgio_Basta"
+    - name: セーケイ・モージェシュ
+      title: トランシルヴァニア公（オスマン帝国の支持）
+      from: 1603
+      to: 1603
+      source: "https://en.wikipedia.org/wiki/Moses_Székely"
+    - name: ボチカイ・イシュトヴァーン
+      title: トランシルヴァニア公・ハンガリー公（反乱の指導者）
+      from: 1605
+      to: 1606
+      source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"
+    - name: ラーコーツィ・ジグモンド
+      title: トランシルヴァニア公
+      from: 1607
+      to: 1608
+      source: "https://en.wikipedia.org/wiki/Sigismund_Rákóczi"
+    - name: バートリ・ガーボル
+      title: トランシルヴァニア公
+      from: 1608
+      to: 1613
+      source: "https://en.wikipedia.org/wiki/Gabriel_Báthory"
+    - name: ベトレン・ガーボル
+      title: トランシルヴァニア公（1620年にハンガリー王に選ばれたが戴冠せず）
+      from: 1613
+      to: 1629
+      source: "https://ja.wikipedia.org/wiki/ベトレン・ガーボル"
+    - name: カタリーナ（ブランデンブルク）
+      title: トランシルヴァニア女公（ベトレンの妃）
+      from: 1629
+      to: 1630
+      source: "https://en.wikipedia.org/wiki/Catherine_of_Brandenburg"
+    - name: ベトレン・イシュトヴァーン
+      title: トランシルヴァニア公
+      from: 1630
+      to: 1630
+      source: "https://en.wikipedia.org/wiki/Stephen_Bethlen"
     - name: ラーコーツィ・ジェルジ1世
       title: トランシルヴァニア公
       from: 1630
@@ -174,6 +478,15 @@
       to: 1697
       source: "https://en.wikipedia.org/wiki/Michael_II_Apafi"
   periods:
+    - from: 1541
+      to: 1570
+      text: ブダ陥落の後、サポヤイ・ヤーノシュの幼い子ヤーノシュ・ジグモンドの「東ハンガリー王国」がトランシルヴァニアとティサ川以東を治めた。オスマン帝国に貢納し、ハプスブルク家と争った。1568年のトルダの議会で宗教の自由を定めた。1570年のシュパイアー条約で王号を捨て、トランシルヴァニア公国となる。
+    - from: 1571
+      to: 1604
+      text: バートリ家の公国。バートリ・イシュトヴァーンはポーランド王も兼ねた。長期戦争（1593–1606）ではバートリ・ジグモンドが皇帝側に付き、ワラキアのミハイ勇敢公や皇帝軍（バスタ）の支配で国土が荒れた。
+    - from: 1605
+      to: 1647
+      text: ボチカイの反乱をきっかけに、ベトレン・ガーボル、ラーコーツィ・ジェルジ1世のもとで新教（カルヴァン派）の公国として最盛期を迎える。三十年戦争では新教側に立って皇帝と戦い、上部ハンガリーの7県を一時手に入れた。
     - from: 1648
       to: 1660
       text: オスマン帝国の宗主権の下で、カルヴァン派のラーコーツィ家が治める半独立の公国。ラーコーツィ・ジェルジ2世がスウェーデンと組んでポーランドに遠征して大敗し（1657）、オスマン帝国の懲罰を受けて国土が荒廃した。
@@ -215,6 +528,76 @@
   color: "#c7a9da"
   kind: 大司教領
   rulers:
+    - name: ジークムント1世・フォン・フォルカースドルフ
+      title: ザルツブルク大司教
+      from: 1452
+      to: 1461
+      source: "https://en.wikipedia.org/wiki/Sigismund_I_of_Volkersdorf"
+    - name: ブルクハルト2世・フォン・ヴァイスプリアハ
+      title: ザルツブルク大司教
+      from: 1461
+      to: 1466
+      source: "https://en.wikipedia.org/wiki/Burkhard_II_von_Weißpriach"
+    - name: ベルンハルト・フォン・ロール
+      title: ザルツブルク大司教
+      from: 1466
+      to: 1482
+      source: "https://en.wikipedia.org/wiki/Bernhard_von_Rohr"
+    - name: ヨハン3世・ベッケンシュラーガー
+      title: ザルツブルク大司教
+      from: 1482
+      to: 1489
+      source: "https://en.wikipedia.org/wiki/Johann_Beckenschlager"
+    - name: フリードリヒ5世・フォン・シャウンベルク
+      title: ザルツブルク大司教
+      from: 1489
+      to: 1494
+      source: "https://en.wikipedia.org/wiki/Prince-Archbishopric_of_Salzburg"
+    - name: ジークムント2世・フォン・ホレンエック
+      title: ザルツブルク大司教
+      from: 1494
+      to: 1495
+      source: "https://en.wikipedia.org/wiki/Prince-Archbishopric_of_Salzburg"
+    - name: レオンハルト・フォン・コイチャッハ
+      title: ザルツブルク大司教
+      from: 1495
+      to: 1519
+      source: "https://en.wikipedia.org/wiki/Leonhard_von_Keutschach"
+    - name: マテウス・ラング・フォン・ヴェレンブルク
+      title: ザルツブルク大司教
+      from: 1519
+      to: 1540
+      source: "https://en.wikipedia.org/wiki/Matthäus_Lang_von_Wellenburg"
+    - name: エルンスト（バイエルン公子。管理者）
+      title: ザルツブルク大司教
+      from: 1540
+      to: 1554
+      source: "https://en.wikipedia.org/wiki/Ernest_of_Bavaria_(1500–1560)"
+    - name: ミヒャエル・フォン・クエンブルク
+      title: ザルツブルク大司教
+      from: 1554
+      to: 1560
+      source: "https://en.wikipedia.org/wiki/Prince-Archbishopric_of_Salzburg"
+    - name: ヨハン・ヤーコプ・クーン・フォン・ベラジ
+      title: ザルツブルク大司教
+      from: 1560
+      to: 1586
+      source: "https://en.wikipedia.org/wiki/Johann_Jakob_von_Kuen-Belasy"
+    - name: ゲオルク・フォン・クエンブルク
+      title: ザルツブルク大司教
+      from: 1586
+      to: 1587
+      source: "https://en.wikipedia.org/wiki/Prince-Archbishopric_of_Salzburg"
+    - name: ヴォルフ・ディートリヒ・フォン・ライテナウ
+      title: ザルツブルク大司教
+      from: 1587
+      to: 1612
+      source: "https://en.wikipedia.org/wiki/Wolf_Dietrich_von_Raitenau"
+    - name: マルクス・ジッティクス・フォン・ホーエンエムス
+      title: ザルツブルク大司教
+      from: 1612
+      to: 1619
+      source: "https://en.wikipedia.org/wiki/Markus_Sittikus_von_Hohenems"
     - name: パリス・ロドロン
       title: ザルツブルク大司教
       from: 1619
@@ -268,6 +651,12 @@
       to: 1805
       source: "https://ja.wikipedia.org/wiki/フェルディナンド3世_(トスカーナ大公)"
   periods:
+    - from: 1525
+      to: 1526
+      text: ドイツ農民戦争の波が及び、鉱夫と農民が蜂起して大司教マテウス・ラングをホーエンザルツブルク城に包囲した。
+    - from: 1587
+      to: 1619
+      text: ヴォルフ・ディートリヒとマルクス・ジッティクスの両大司教が、町をローマ風のバロック都市に造り替えた（大聖堂の再建、ヘルブルン宮殿）。三十年戦争では中立を守った。
     - from: 1648
       to: 1730
       text: 塩の取引で栄えた帝国の聖界諸侯領。大司教たちはバロック様式でザルツブルクの町を整えた。
@@ -486,6 +875,8 @@
 - id: hungary
   name: ハンガリー
   names:
+    - {to: 1525, name: ハンガリー王国, kind: 王国}
+    - {from: 1526, to: 1540, name: ハンガリー王国（サポヤイ・ヤーノシュ）, kind: 王国}
     - {from: 1918, to: 1918, name: ハンガリー人民共和国, kind: 共和国}
     - {from: 1919, to: 1919, name: ハンガリー（3–8月はハンガリー・ソヴィエト共和国）, kind: 暫定政府}
     - {from: 1920, to: 1945, name: ハンガリー王国（摂政制）, kind: 王国}
@@ -496,6 +887,33 @@
   color: "#b9d39a"
   kind: 共和国
   rulers:
+    - name: ラースロー5世（ラディスラウス・ポストゥムス）
+      title: ハンガリー王（オーストリア公・ボヘミア王も兼ねる）
+      from: 1444
+      to: 1457
+      note: 1446–1452年はフニャディ・ヤーノシュが摂政（総督）。
+      source: "https://ja.wikipedia.org/wiki/ラディスラウス・ポストゥムス"
+    - name: マーチャーシュ1世（コルヴィヌス）
+      title: ハンガリー王（1469年からボヘミア王を称し、1486年からオーストリア公も称す）
+      from: 1458
+      to: 1490
+      note: フニャディ・ヤーノシュの子。常備軍の「黒軍」を持ち、ルネサンス文化を保護した。
+      source: "https://ja.wikipedia.org/wiki/マーチャーシュ1世"
+    - name: ウラースロー2世
+      title: ハンガリー王（ボヘミア王ヴラジスラフ2世）
+      from: 1490
+      to: 1516
+      source: "https://ja.wikipedia.org/wiki/ヴラジスラフ2世"
+    - name: ラヨシュ2世
+      title: ハンガリー王・ボヘミア王（ルドヴィーク）。モハーチの戦いで戦死
+      from: 1516
+      to: 1526
+      source: "https://ja.wikipedia.org/wiki/ラヨシュ2世"
+    - name: サポヤイ・ヤーノシュ（ヤーノシュ1世）
+      title: ハンガリー王（フェルディナント1世と対立。1529年からオスマン帝国の保護下）
+      from: 1526
+      to: 1540
+      source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
     - {name: カーロイ・ミハーイ, title: 首相（1918年10月〜）、臨時大統領（1919年1–3月）, from: 1918, to: 1919, source: "https://ja.wikipedia.org/wiki/カーロイ・ミハーイ"}
     - {name: クン・ベーラ, title: ハンガリー・ソヴィエト共和国の指導者（外務人民委員。名目上の首班はガルバイ・シャーンドル）, from: 1919, to: 1919, source: "https://ja.wikipedia.org/wiki/クン・ベーラ"}
     - {name: ペイドル・ジュラ, title: 首相（1919年8月の6日間）, from: 1919, to: 1919, source: "https://en.wikipedia.org/wiki/Gyula_Peidl"}
@@ -531,6 +949,18 @@
     - {name: バイナイ・ゴルドン, title: 首相, from: 2009, to: 2010, source: "https://en.wikipedia.org/wiki/Gordon_Bajnai"}
     - {name: オルバーン・ヴィクトル, title: 首相（フィデス。2度目）, from: 2010, source: "https://ja.wikipedia.org/wiki/オルバーン・ヴィクトル"}
   periods:
+    - from: 1453
+      to: 1457
+      text: 幼いラースロー5世の下で、摂政だったフニャディ・ヤーノシュがオスマン帝国と戦い、1456年にベオグラード（ナンドルフェヘールヴァール）の包囲を退けた。
+    - from: 1458
+      to: 1490
+      text: マーチャーシュ1世が王権を強め、常備軍「黒軍」でボヘミア（モラヴィア・シュレジエン・ラウジッツ）とオーストリア（ウィーン）にまで進出した。ブダの宮廷はルネサンス文化の中心となった。
+    - from: 1491
+      to: 1526
+      text: ヤゲウォ家のウラースロー2世・ラヨシュ2世の下で王権が弱まり、貴族が争った。1514年にドージャ・ジェルジの農民反乱が起こる。1521年にベオグラードを失い、1526年のモハーチの戦いで王が戦死した。
+    - from: 1527
+      to: 1540
+      text: サポヤイ・ヤーノシュとフェルディナント1世の二人の王が争った。サポヤイはオスマン帝国の保護を受けてブダを保ち、1538年のヴァーラドの和約で、互いの領地を認め、サポヤイの死後はフェルディナントが全土を継ぐと約束した。
     - from: 1918
       to: 1919
       text: 敗戦と帝国の解体で、カーロイの民主的な共和国が生まれたが、周辺国の軍に国土を占領された。1919年3月、クン・ベーラらがハンガリー・ソヴィエト共和国を立てたが、ルーマニア軍の侵攻で8月に崩れ、ルーマニア軍がブダペストを一時占領した。
