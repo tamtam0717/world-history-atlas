@@ -6079,13 +6079,14 @@
       source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
 
 # ---------------------------------------------------------------- 1648年より前だけ親地域と所属が違うピース
-# 1648年以降の項目は親地域（parent）の写し。親の timeline を変えたら、ここも同じに直すこと。
+# until の年を過ぎると親地域（parent）の記述が効く（docs/data-format.md「地域の until」）。
 
 - id: bavaria_landshut_part
   name: "バイエルン＝ランツフート公国の領域（1503年まで）"
+  until: 1647
   select:
     pieces: [DEU-Landshut_Kreisfreie_Stadt, DEU-Landshut_Landkreis, DEU-Dingolfing_Landau, DEU-Deggendorf, DEU-Regen, DEU-Rottal_Inn, DEU-Passau_Landkreis, DEU-Ingolstadt_Kreisfreie_Stadt, DEU-Pfaffenhofen_a_d_Ilm, DEU-Aichach_Friedberg, DEU-Altotting, DEU-Muhldorf_a_Inn, DEU-Traunstein, DEU-Rosenheim_Kreisfreie_Stadt, DEU-Rosenheim_Landkreis, DEU-Erding]
-  note: "1392年の分割でできたバイエルン＝ランツフート公国（1447年にインゴルシュタット公国を併合）のおおよその範囲。シュトラウビング周辺（1429年からミュンヘン系）は含めない。要確認：郡単位の近似（エルディング・ケルハイム・デッゲンドルフの帰属）。（1648年より前だけ bavaria_core と所属が違う部分。1648年以降は bavaria_core の写し）"
+  note: "1392年の分割でできたバイエルン＝ランツフート公国（1447年にインゴルシュタット公国を併合）のおおよその範囲。シュトラウビング周辺（1429年からミュンヘン系）は含めない。要確認：郡単位の近似（エルディング・ケルハイム・デッゲンドルフの帰属）。（1648年より前だけ bavaria_core と所属が違う部分。1648年以降は bavaria_core の記述が効く）"
   timeline:
     - from: 1453
       owner: bavaria_landshut
@@ -6102,72 +6103,13 @@
       overlord: hre
       cause: "ケルンの裁定（皇帝マクシミリアン1世）でバイエルン＝ミュンヘン公アルブレヒト4世が相続し、バイエルンが再統一"
       source: "https://ja.wikipedia.org/wiki/ランツフート継承戦争"
-    - from: 1648
-      owner: bavaria
-      overlord: hre
-      source: "https://ja.wikipedia.org/wiki/バイエルン選帝侯領"
-    - from: 1704
-      owner: habsburg
-      overlord: hre
-      certainty: occupied
-      cause: "ブレンハイム（ヘーヒシュテット）の戦いの後、イルベスハイム条約でオーストリアの占領下に（1706年選帝侯の帝国追放）"
-      source: "https://ja.wikipedia.org/wiki/スペイン継承戦争"
-    - from: 1714
-      owner: bavaria
-      overlord: hre
-      cause: "ラシュタット条約・バーデン条約で選帝侯が復帰"
-      source: "https://ja.wikipedia.org/wiki/ラシュタット条約"
-    - from: 1806
-      owner: bavaria
-      overlord: rhine_confederation
-      cause: "バイエルン王国の成立（1806年1月）とライン同盟加盟"
-      source: "https://ja.wikipedia.org/wiki/ライン同盟"
-    - from: 1813
-      owner: bavaria
-      cause: "ライン同盟の解体（ライプツィヒの戦いの後）"
-      source: "https://ja.wikipedia.org/wiki/ライプツィヒの戦い"
-    - from: 1815
-      owner: bavaria
-      overlord: german_confederation
-      cause: "ドイツ連邦の発足（ウィーン議定書）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
-    - from: 1866
-      owner: bavaria
-      cause: "普墺戦争の後、プラハ条約でドイツ連邦が解体"
-      note: "南ドイツ諸国はどの連邦にも属さず、プロイセンと秘密の攻守同盟を結んだ。"
-      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
-    - from: 1871
-      owner: german_empire
-      cause: "ドイツ帝国の成立（1871年1月18日、ヴェルサイユ宮殿でプロイセン王ヴィルヘルム1世がドイツ皇帝に即位）"
-      note: "ドイツ帝国の構成国：バイエルン王国。君主と内政は構成国のもとに残った。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
-    - from: 1918
-      owner: germany
-      cause: "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）"
-      note: "ヴァイマル共和国の州：バイエルン自由州。1933年からナチス・ドイツ（1934年に州の自治は廃止）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ革命"
-    - from: 1945
-      owner: usa
-      certainty: occupied
-      label: "ドイツ（アメリカ占領地区）"
-      cause: "ドイツの無条件降伏と連合国による分割占領"
-      note: "バイエルン州。"
-      source: "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"
-    - from: 1949
-      owner: west_germany
-      cause: "ドイツ連邦共和国（西ドイツ）の成立"
-      note: "西ドイツの州：バイエルン州。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦共和国"
-    - from: 1990
-      owner: germany
-      cause: "ドイツ統一（東ドイツが西ドイツに加わる）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
 
 - id: wurttemberg_urach_part
   name: "ヴュルテンベルク＝ウラハ伯領（1482年まで）"
+  until: 1519
   select:
     pieces: [DEU-Reutlingen, DEU-Tubingen_Landkreis, DEU-Zollernalbkreis, DEU-Calw, DEU-Freudenstadt, DEU-Tuttlingen, DEU-Boblingen]
-  note: "1442年のニュルティンゲン条約によるウラハ系の領域（ウラハ・テュービンゲン・バーリンゲン・カルフ・ヘレンベルク・トゥットリンゲンなど）を郡単位で近似した。要確認：ベーブリンゲン郡の帰属。（1648年より前だけ wurttemberg_core と所属が違う部分。1520年以降は wurttemberg_core の写し）"
+  note: "1442年のニュルティンゲン条約によるウラハ系の領域（ウラハ・テュービンゲン・バーリンゲン・カルフ・ヘレンベルク・トゥットリンゲンなど）を郡単位で近似した。要確認：ベーブリンゲン郡の帰属。（1648年より前だけ wurttemberg_core と所属が違う部分。1520年以降は wurttemberg_core の記述が効く）"
   timeline:
     - from: 1453
       owner: wurttemberg_urach
@@ -6178,85 +6120,13 @@
       overlord: hre
       cause: "ミュンジンゲン条約でエーバーハルト髭公のもとに再統一"
       source: "https://de.wikipedia.org/wiki/Münsinger_Vertrag"
-    - from: 1520
-      owner: habsburg
-      overlord: hre
-      cause: "シュヴァーベン同盟がウルリヒ公を追放し（1519）、国をカール5世に売却"
-      note: "1522年からカール5世の弟フェルディナントが統治（オーストリア領ヴュルテンベルク）。"
-      source: "https://de.wikipedia.org/wiki/Herzogtum_Württemberg"
-    - from: 1534
-      owner: wurttemberg
-      overlord: hre
-      cause: "ラウフェンの戦いでヘッセン方伯フィリップの支援を受けたウルリヒ公が復帰（カーダン条約）"
-      note: "カーダン条約でオーストリアの後封とされた（1599年のプラハ条約で解消）。"
-      source: "https://de.wikipedia.org/wiki/Vertrag_von_Kaaden"
-    - from: 1634
-      owner: habsburg
-      overlord: hre
-      certainty: occupied
-      cause: "ネルトリンゲンの戦いの後、皇帝軍が占領し、公エーバーハルト3世はシュトラースブルクに亡命"
-      note: "領地の一部は皇帝の側近やイエズス会などに与えられた。"
-      source: "https://de.wikipedia.org/wiki/Herzogtum_Württemberg"
-    - from: 1638
-      owner: wurttemberg
-      overlord: hre
-      cause: "エーバーハルト3世の帰国（プラハの和議への参加を認められる）"
-      source: "https://de.wikipedia.org/wiki/Eberhard_III._(Württemberg)"
-    - from: 1648
-      owner: wurttemberg
-      overlord: hre
-      source: "https://ja.wikipedia.org/wiki/ヴュルテンベルク公国"
-    - from: 1806
-      owner: wurttemberg
-      overlord: rhine_confederation
-      cause: "ヴュルテンベルク王国の成立（1806年1月）とライン同盟加盟"
-      source: "https://ja.wikipedia.org/wiki/ライン同盟"
-    - from: 1813
-      owner: wurttemberg
-      cause: "ライン同盟の解体（ライプツィヒの戦いの後）"
-      source: "https://ja.wikipedia.org/wiki/ライプツィヒの戦い"
-    - from: 1815
-      owner: wurttemberg
-      overlord: german_confederation
-      cause: "ドイツ連邦の発足（ウィーン議定書）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
-    - from: 1866
-      owner: wurttemberg
-      cause: "普墺戦争の後、プラハ条約でドイツ連邦が解体"
-      note: "南ドイツ諸国はどの連邦にも属さず、プロイセンと秘密の攻守同盟を結んだ。"
-      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
-    - from: 1871
-      owner: german_empire
-      cause: "ドイツ帝国の成立（1871年1月18日、ヴェルサイユ宮殿でプロイセン王ヴィルヘルム1世がドイツ皇帝に即位）"
-      note: "ドイツ帝国の構成国：ヴュルテンベルク王国。君主と内政は構成国のもとに残った。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
-    - from: 1918
-      owner: germany
-      cause: "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）"
-      note: "ヴァイマル共和国の州：ヴュルテンベルク自由人民州。1933年からナチス・ドイツ（1934年に州の自治は廃止）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ革命"
-    - from: 1945
-      owner: usa
-      certainty: occupied
-      label: "ドイツ（アメリカ占領地区）"
-      cause: "ドイツの無条件降伏と連合国による分割占領"
-      note: "ヴュルテンベルク＝バーデン州（1945年9月設置。北ヴュルテンベルクと北バーデン）。占領地区の境界はカールスルーエ–シュトゥットガルト–ウルムのアウトバーンで、それが通る郡はアメリカ地区。カルフ・フロイデンシュタット・ロイトリンゲン・テュービンゲン・ツォレルンアルプ・トゥットリンゲンの各郡はフランス地区（別の地域 wurttemberg_french_zone で上書き）"
-      source: "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"
-    - from: 1949
-      owner: west_germany
-      cause: "ドイツ連邦共和国（西ドイツ）の成立"
-      note: "西ドイツの州：ヴュルテンベルク＝バーデン州（1952年にバーデン＝ヴュルテンベルク州に統合）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦共和国"
-    - from: 1990
-      owner: germany
-      cause: "ドイツ統一（東ドイツが西ドイツに加わる）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
 
 - id: heidenheim_part
   name: "ハイデンハイム（1504年まで）"
+  until: 1519
   select:
     pieces: [DEU-Heidenheim]
-  note: "（1648年より前だけ wurttemberg_core と所属が違う部分。1520年以降は wurttemberg_core の写し）"
+  note: "（1648年より前だけ wurttemberg_core と所属が違う部分。1520年以降は wurttemberg_core の記述が効く）"
   timeline:
     - from: 1453
       owner: bavaria_landshut
@@ -6268,85 +6138,13 @@
       overlord: hre
       cause: "ランツフート継承戦争でヴュルテンベルク公ウルリヒが奪い、ケルンの裁定で確保"
       source: "https://de.wikipedia.org/wiki/Herrschaft_Heidenheim"
-    - from: 1520
-      owner: habsburg
-      overlord: hre
-      cause: "シュヴァーベン同盟がウルリヒ公を追放し（1519）、国をカール5世に売却"
-      note: "1522年からカール5世の弟フェルディナントが統治（オーストリア領ヴュルテンベルク）。"
-      source: "https://de.wikipedia.org/wiki/Herzogtum_Württemberg"
-    - from: 1534
-      owner: wurttemberg
-      overlord: hre
-      cause: "ラウフェンの戦いでヘッセン方伯フィリップの支援を受けたウルリヒ公が復帰（カーダン条約）"
-      note: "カーダン条約でオーストリアの後封とされた（1599年のプラハ条約で解消）。"
-      source: "https://de.wikipedia.org/wiki/Vertrag_von_Kaaden"
-    - from: 1634
-      owner: habsburg
-      overlord: hre
-      certainty: occupied
-      cause: "ネルトリンゲンの戦いの後、皇帝軍が占領し、公エーバーハルト3世はシュトラースブルクに亡命"
-      note: "領地の一部は皇帝の側近やイエズス会などに与えられた。"
-      source: "https://de.wikipedia.org/wiki/Herzogtum_Württemberg"
-    - from: 1638
-      owner: wurttemberg
-      overlord: hre
-      cause: "エーバーハルト3世の帰国（プラハの和議への参加を認められる）"
-      source: "https://de.wikipedia.org/wiki/Eberhard_III._(Württemberg)"
-    - from: 1648
-      owner: wurttemberg
-      overlord: hre
-      source: "https://ja.wikipedia.org/wiki/ヴュルテンベルク公国"
-    - from: 1806
-      owner: wurttemberg
-      overlord: rhine_confederation
-      cause: "ヴュルテンベルク王国の成立（1806年1月）とライン同盟加盟"
-      source: "https://ja.wikipedia.org/wiki/ライン同盟"
-    - from: 1813
-      owner: wurttemberg
-      cause: "ライン同盟の解体（ライプツィヒの戦いの後）"
-      source: "https://ja.wikipedia.org/wiki/ライプツィヒの戦い"
-    - from: 1815
-      owner: wurttemberg
-      overlord: german_confederation
-      cause: "ドイツ連邦の発足（ウィーン議定書）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
-    - from: 1866
-      owner: wurttemberg
-      cause: "普墺戦争の後、プラハ条約でドイツ連邦が解体"
-      note: "南ドイツ諸国はどの連邦にも属さず、プロイセンと秘密の攻守同盟を結んだ。"
-      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
-    - from: 1871
-      owner: german_empire
-      cause: "ドイツ帝国の成立（1871年1月18日、ヴェルサイユ宮殿でプロイセン王ヴィルヘルム1世がドイツ皇帝に即位）"
-      note: "ドイツ帝国の構成国：ヴュルテンベルク王国。君主と内政は構成国のもとに残った。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
-    - from: 1918
-      owner: germany
-      cause: "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）"
-      note: "ヴァイマル共和国の州：ヴュルテンベルク自由人民州。1933年からナチス・ドイツ（1934年に州の自治は廃止）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ革命"
-    - from: 1945
-      owner: usa
-      certainty: occupied
-      label: "ドイツ（アメリカ占領地区）"
-      cause: "ドイツの無条件降伏と連合国による分割占領"
-      note: "ヴュルテンベルク＝バーデン州（1945年9月設置。北ヴュルテンベルクと北バーデン）。占領地区の境界はカールスルーエ–シュトゥットガルト–ウルムのアウトバーンで、それが通る郡はアメリカ地区。カルフ・フロイデンシュタット・ロイトリンゲン・テュービンゲン・ツォレルンアルプ・トゥットリンゲンの各郡はフランス地区（別の地域 wurttemberg_french_zone で上書き）"
-      source: "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"
-    - from: 1949
-      owner: west_germany
-      cause: "ドイツ連邦共和国（西ドイツ）の成立"
-      note: "西ドイツの州：ヴュルテンベルク＝バーデン州（1952年にバーデン＝ヴュルテンベルク州に統合）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦共和国"
-    - from: 1990
-      owner: germany
-      cause: "ドイツ統一（東ドイツが西ドイツに加わる）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
 
 - id: nuremberg_land_part
   name: "ラウフ・ヘルスブルック・アルトドルフ（1504年まで）"
+  until: 1647
   select:
     pieces: [DEU-Nurnberger_Land]
-  note: "（1648年より前だけ nuremberg と所属が違う部分。1648年以降は nuremberg の写し）"
+  note: "（1648年より前だけ nuremberg と所属が違う部分。1648年以降は nuremberg の記述が効く）"
   timeline:
     - from: 1453
       owner: bavaria_landshut
@@ -6358,60 +6156,13 @@
       overlord: hre
       cause: "ランツフート継承戦争で帝国都市ニュルンベルクが占領し、ケルンの裁定で確保"
       source: "https://de.wikipedia.org/wiki/Reichsstadt_Nürnberg"
-    - from: 1648
-      owner: nuremberg
-      overlord: hre
-      source: "https://de.wikipedia.org/wiki/Reichsstadt_Nürnberg"
-    - from: 1806
-      owner: bavaria
-      overlord: rhine_confederation
-      cause: "ライン同盟規約でバイエルンへ編入（1806年9月）"
-      source: "https://ja.wikipedia.org/wiki/ライン同盟"
-    - from: 1813
-      owner: bavaria
-      cause: "ライン同盟の解体（ライプツィヒの戦いの後）"
-    - from: 1815
-      owner: bavaria
-      overlord: german_confederation
-      cause: "ドイツ連邦の発足（ウィーン議定書）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
-    - from: 1866
-      owner: bavaria
-      cause: "普墺戦争の後、プラハ条約でドイツ連邦が解体"
-      note: "南ドイツ諸国はどの連邦にも属さず、プロイセンと秘密の攻守同盟を結んだ。"
-      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
-    - from: 1871
-      owner: german_empire
-      cause: "ドイツ帝国の成立（1871年1月18日、ヴェルサイユ宮殿でプロイセン王ヴィルヘルム1世がドイツ皇帝に即位）"
-      note: "ドイツ帝国の構成国：バイエルン王国。君主と内政は構成国のもとに残った。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
-    - from: 1918
-      owner: germany
-      cause: "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）"
-      note: "ヴァイマル共和国の州：バイエルン自由州。1933年からナチス・ドイツ（1934年に州の自治は廃止）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ革命"
-    - from: 1945
-      owner: usa
-      certainty: occupied
-      label: "ドイツ（アメリカ占領地区）"
-      cause: "ドイツの無条件降伏と連合国による分割占領"
-      note: "バイエルン州。"
-      source: "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"
-    - from: 1949
-      owner: west_germany
-      cause: "ドイツ連邦共和国（西ドイツ）の成立"
-      note: "西ドイツの州：バイエルン州。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦共和国"
-    - from: 1990
-      owner: germany
-      cause: "ドイツ統一（東ドイツが西ドイツに加わる）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
 
 - id: loerrach_part
   name: "レッテルン・ザウゼンベルク（1503年まで）"
+  until: 1647
   select:
     pieces: [DEU-Lorrach]
-  note: "（1648年より前だけ markgraflerland と所属が違う部分。1648年以降は markgraflerland の写し）"
+  note: "（1648年より前だけ markgraflerland と所属が違う部分。1648年以降は markgraflerland の記述が効く）"
   timeline:
     - from: 1453
       owner: other_hre
@@ -6424,62 +6175,13 @@
       overlord: hre
       cause: "ハッハベルク＝ザウゼンベルク家の断絶で、バーデン辺境伯クリストフ1世が相続"
       source: "https://de.wikipedia.org/wiki/Markgrafschaft_Hachberg-Sausenberg"
-    - from: 1648
-      owner: baden
-      overlord: hre
-      note: "バーデン＝ドゥルラハ領のレッテルン・ザウゼンベルク・ハッハベルク。"
-      source: "https://de.wikipedia.org/wiki/Markgräflerland"
-    - from: 1806
-      owner: baden
-      overlord: rhine_confederation
-      cause: "ライン同盟の結成・神聖ローマ帝国の解体"
-      source: "https://ja.wikipedia.org/wiki/ライン同盟"
-    - from: 1813
-      owner: baden
-      cause: "ライン同盟の解体（ライプツィヒの戦いの後）"
-      source: "https://ja.wikipedia.org/wiki/ライプツィヒの戦い"
-    - from: 1815
-      owner: baden
-      overlord: german_confederation
-      cause: "ドイツ連邦の発足（ウィーン議定書）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
-    - from: 1866
-      owner: baden
-      cause: "普墺戦争の後、プラハ条約でドイツ連邦が解体"
-      note: "南ドイツ諸国はどの連邦にも属さず、プロイセンと秘密の攻守同盟を結んだ。"
-      source: "https://ja.wikipedia.org/wiki/プラハ条約_(1866年)"
-    - from: 1871
-      owner: german_empire
-      cause: "ドイツ帝国の成立（1871年1月18日、ヴェルサイユ宮殿でプロイセン王ヴィルヘルム1世がドイツ皇帝に即位）"
-      note: "ドイツ帝国の構成国：バーデン大公国。君主と内政は構成国のもとに残った。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
-    - from: 1918
-      owner: germany
-      cause: "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）"
-      note: "ヴァイマル共和国の州：バーデン共和国。1933年からナチス・ドイツ（1934年に州の自治は廃止）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ革命"
-    - from: 1945
-      owner: france
-      certainty: occupied
-      label: "ドイツ（フランス占領地区）"
-      cause: "ドイツの無条件降伏と連合国による分割占領"
-      note: "バーデン州（南バーデン。1945年12月設置）。"
-      source: "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"
-    - from: 1949
-      owner: west_germany
-      cause: "ドイツ連邦共和国（西ドイツ）の成立"
-      note: "西ドイツの州：バーデン州（1952年にバーデン＝ヴュルテンベルク州に統合）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦共和国"
-    - from: 1990
-      owner: germany
-      cause: "ドイツ統一（東ドイツが西ドイツに加わる）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
 
 - id: marburg_part
   name: "マールブルク（オーバーヘッセン北部）"
+  until: 1647
   select:
     pieces: [DEU-Marburg_Biedenkopf]
-  note: "（1648年より前だけ hesse_kassel_core と所属が違う部分。1648年以降は hesse_kassel_core の写し）"
+  note: "（1648年より前だけ hesse_kassel_core と所属が違う部分。1648年以降は hesse_kassel_core の記述が効く）"
   timeline:
     - from: 1453
       owner: hesse_kassel
@@ -6517,63 +6219,3 @@
       certainty: occupied
       cause: "ヘッセン戦争でカッセル軍がマールブルクを占領"
       source: "https://de.wikipedia.org/wiki/Hessenkrieg"
-    - from: 1648
-      owner: hesse_kassel
-      overlord: hre
-      cause: "ウェストファリア条約でヘルスフェルトを獲得、ヘッセン戦争の講和でマールブルク北部を確保"
-      source: "https://ja.wikipedia.org/wiki/ヘッセン＝カッセル方伯領"
-    - from: 1806
-      owner: france
-      certainty: occupied
-      cause: "フランス軍の占領（選帝侯は亡命）"
-      source: "https://ja.wikipedia.org/wiki/ヘッセン選帝侯国"
-    - from: 1807
-      owner: westphalia_kingdom
-      overlord: rhine_confederation
-      cause: "ヴェストファーレン王国（ジェローム・ボナパルト）に編入"
-      source: "https://ja.wikipedia.org/wiki/ヴェストファーレン王国"
-    - from: 1813
-      owner: hesse_kassel
-      cause: "ヴェストファーレン王国の崩壊、選帝侯の復帰"
-      source: "https://ja.wikipedia.org/wiki/ヘッセン選帝侯国"
-    - from: 1815
-      owner: hesse_kassel
-      overlord: german_confederation
-      cause: "ドイツ連邦の発足（ウィーン議定書）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦"
-    - from: 1866
-      owner: prussia
-      cause: "普墺戦争でオーストリア側についたヘッセン選帝侯国がプロイセンに併合される"
-      note: "1868年からプロイセンのヘッセン＝ナッサウ州。"
-      source: "https://ja.wikipedia.org/wiki/ヘッセン＝ナッサウ州"
-    - from: 1867
-      owner: prussia
-      overlord: north_german_confederation
-      cause: "北ドイツ連邦の発足"
-      source: "https://ja.wikipedia.org/wiki/北ドイツ連邦"
-    - from: 1871
-      owner: german_empire
-      cause: "ドイツ帝国の成立（1871年1月18日、ヴェルサイユ宮殿でプロイセン王ヴィルヘルム1世がドイツ皇帝に即位）"
-      note: "ドイツ帝国の構成国：プロイセン王国（ヘッセン＝ナッサウ州）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ帝国"
-    - from: 1918
-      owner: germany
-      cause: "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）"
-      note: "ヴァイマル共和国の州：プロイセン自由州のヘッセン＝ナッサウ州。1933年からナチス・ドイツ（1934年に州の自治は廃止）。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ革命"
-    - from: 1945
-      owner: usa
-      certainty: occupied
-      label: "ドイツ（アメリカ占領地区）"
-      cause: "ドイツの無条件降伏と連合国による分割占領"
-      note: "大ヘッセン州（1945年9月設置。1946年12月からヘッセン州）。"
-      source: "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"
-    - from: 1949
-      owner: west_germany
-      cause: "ドイツ連邦共和国（西ドイツ）の成立"
-      note: "西ドイツの州：ヘッセン州。"
-      source: "https://ja.wikipedia.org/wiki/ドイツ連邦共和国"
-    - from: 1990
-      owner: germany
-      cause: "ドイツ統一（東ドイツが西ドイツに加わる）"
-      source: "https://ja.wikipedia.org/wiki/ドイツ再統一"
