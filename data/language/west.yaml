@@ -289,6 +289,34 @@
 
 
 # ======== イベリア半島 ========
+- id: lang_melilla_pre
+  name: メリリャ（1497年のスペインの占領より前）
+  select:
+    pieces: [ESP-Melilla]
+  until: 1496
+  timeline:
+    - from: 1453
+      main: berber
+      minor: arabic
+      note: "リーフ地方のムスリムの港町（周辺のナドールと同じベルベル語〈リーフ語〉の地域）。1497年にカスティリャに占領され、1497年からはスペイン本土と同じ（lang_spain_base）。"
+      source: "https://ja.wikipedia.org/wiki/メリリャ"
+
+- id: lang_ceuta_portuguese
+  name: ポルトガル領のセウタ（1415–1640）
+  select:
+    pieces: [ESP-Ceuta]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: portuguese
+      note: "1415年にポルトガルが攻略し、ポルトガル人の守備兵と住民の町となる。"
+      source: "https://ja.wikipedia.org/wiki/セウタ"
+    - from: 1640
+      main: portuguese
+      minor: spanish
+      note: "ポルトガルの再独立（1640）に加わらずスペイン王側にとどまり（1668年のリスボン条約で確定）、しだいにスペイン語の町になる。1648年からはスペイン本土と同じ（lang_spain_base）。"
+      source: "https://ja.wikipedia.org/wiki/セウタ"
+
 - id: lang_spain_base
   name: スペイン（下地：カスティーリャ語の地域）
   select:

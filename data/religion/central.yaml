@@ -1144,7 +1144,17 @@
     - from: 1560
       main: catholic
       minor: reformed
-      note: "宗教改革が広がり、ハンガリー人の多くがカルヴァン派、ドイツ人とスロヴァキア人の多くがルター派となる（16世紀末には住民の大多数がプロテスタント）。"
+      note: "宗教改革が広がり、ハンガリー人の多くがカルヴァン派、ドイツ人とスロヴァキア人の多くがルター派となる。"
+    - from: 1570
+      main: reformed
+      minor: catholic
+      note: "16世紀後半には住民の大多数（8〜9割とされる）がプロテスタントとなる。ハンガリー人はおもに改革派（カルヴァン派）、西部のドイツ人とスロヴァキア人はルター派。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
+    - from: 1630
+      main: catholic
+      minor: reformed
+      note: "エステルゴム大司教パーズマーニ・ペーテル（1616–37）のもとで、王領ハンガリー西部（ザラなど）の貴族が次々にカトリックに戻り、領民の再カトリック化が進む。"
+      source: "https://ja.wikipedia.org/wiki/パーズマーニ・ペーテル"
     - from: 1648
       main: catholic
       minor: reformed
@@ -1187,10 +1197,36 @@
     - from: 1560
       main: catholic
       minor: reformed
+    - from: 1570
+      main: reformed
+      minor: catholic
+      note: "ハンガリー人の多くが改革派（カルヴァン派）になる。パーパ・コマーロムは改革派の中心。西寄りの村にはルター派も多い。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
+    - from: 1630
+      main: catholic
+      minor: reformed
+      note: "王領ハンガリーのヴェスプレーム・コマーロムでは、パーズマーニ・ペーテルのもとで貴族の再カトリック化が進む（オスマン領の南部は下の rel_hungary_ottoman_transdanubia）。"
+      source: "https://ja.wikipedia.org/wiki/パーズマーニ・ペーテル"
     - from: 1648
       main: catholic
       minor: reformed
       note: パーパ・コマーロムや南部のオルマーンシャーグに改革派が多い。18世紀にはドイツ人カトリック（ドナウ・シュヴァーベン人）が入植した。
+
+- id: rel_hungary_ottoman_transdanubia
+  name: オスマン領のドナウ以西（フェイェール・ショモジ・トルナ・バラニャ）
+  select:
+    adm1: ["HUN/Fejér", "HUN/Somogy", "HUN/Tolna", "HUN/Baranya"]
+  until: 1699
+  timeline:
+    - from: 1570
+      main: reformed
+      minor: catholic
+      note: "オスマン帝国の支配下（セーケシュフェヘールヴァール 1543–1688、ペーチ 1543–1686）では対抗宗教改革が及ばず、ハンガリー人の村の多くは改革派のまま。バラニャ南部のオルマーンシャーグは改革派の中心。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
+    - from: 1648
+      main: reformed
+      minor: catholic
+      note: オスマン帝国の支配下。ハンガリー人の村は改革派が多い。セルビア人の正教徒も移り住む。1686–88年の奪回の後、戦乱で減った住民を補うためにドイツ人カトリックが入植し（ドナウ・シュヴァーベン人）、18世紀にはカトリックが多数になる（1700年からは上の地域の値）。
 
 - id: rel_hungary_between_rivers
   name: ドナウ・ティサ川間（ペスト・ケチケメート・クンシャーグ）
@@ -1200,12 +1236,48 @@
     - from: 1453
       main: catholic
     - from: 1560
-      main: catholic
-      minor: reformed
+      main: reformed
+      minor: catholic
+      note: "オスマン領のドナウ・ティサ川間では、ケチケメート・ナジケーレシュ・ツェグレードなどの農業都市（「カルヴァン派の町」）を中心に、ハンガリー人の大部分が改革派となる。北のノーグラードにはスロヴァキア人のルター派も多い。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
     - from: 1648
+      main: reformed
+      minor: catholic
+      note: ケチケメート・ツェグレード・クンシャーグなどの農業都市は改革派。ノーグラードにはスロヴァキア人のルター派も多い。
+    - from: 1700
       main: catholic
       minor: reformed
-      note: ケチケメート・ツェグレード・クンシャーグなどの農業都市は改革派。ノーグラードにはスロヴァキア人のルター派も多い。
+      note: 1686年のブダ奪回と大トルコ戦争の後、荒れた土地にドイツ人・スロヴァキア人・セルビア人などが入植し、カトリック（とセルビア人の正教）が増えてカトリックが多数になる。ケチケメート・ツェグレード・クンシャーグなどの農業都市は改革派のまま。ノーグラードにはスロヴァキア人のルター派も多い。
+
+- id: rel_bacs_south_hu
+  name: バーチ南部（バヤ・バーチャルマーシュ）
+  select:
+    pieces: [HUN-Baja, HUN-Bacsalmas]
+  until: 1699
+  timeline:
+    - from: 1540
+      main: orthodox
+      minor: catholic
+      note: "オスマン帝国の支配のもとで、正教徒のセルビア人が多く移り住む（言語の lang_bacs_south_hu と同じ範囲）。"
+    - from: 1687
+      main: catholic
+      minor: orthodox
+      note: 大トルコ戦争のさなか（1687年ごろ）、カトリックの南スラヴ人ブニェヴツィがバーチカに移り住む。
+
+- id: rel_buda_pest_ottoman
+  name: ブダとペスト（オスマン帝国のブダ州の州都）
+  select:
+    pieces: [HUN-I_kerulet, HUN-II_kerulet, HUN-III_kerulet, HUN-IV_kerulet, HUN-V_kerulet, HUN-VI_kerulet, HUN-VII_kerulet, HUN-VIII_kerulet, HUN-IX_kerulet, HUN-X_kerulet, HUN-XI_kerulet, HUN-XII_kerulet, HUN-XIII_kerulet, HUN-XIV_kerulet, HUN-XV_kerulet, HUN-XVI_kerulet, HUN-XVII_kerulet, HUN-XVIII_kerulet, HUN-XIX_kerulet, HUN-XX_kerulet, HUN-XXI_kerulet, HUN-XXII_kerulet, HUN-XXIII_kerulet]
+  until: 1699
+  timeline:
+    - from: 1541
+      main: sunni
+      minor: reformed
+      note: "オスマン帝国がブダを占領し（1541）、ブダ州の州都とする。住民の多数はムスリムの兵士・役人・商人で、ハンガリー人（多くは改革派）・ユダヤ教徒・南スラヴ人も住む。言語の lang_budapest と同じ範囲。"
+      source: "https://ja.wikipedia.org/wiki/ブダ包囲戦_(1541年)"
+    - from: 1686
+      main: catholic
+      note: 1686年の奪回でムスリムは去り（殺害・追放）、ドイツ人のカトリック市民が町を再建した。
 
 - id: rel_hungary_east_reformed
   name: ハンガリー東部（ティサ川以東の改革派地域）
@@ -1215,8 +1287,10 @@
     - from: 1453
       main: catholic
     - from: 1550
-      main: catholic
-      minor: lutheran
+      main: lutheran
+      minor: catholic
+      note: "1550年代にはティサ川以東の大半がプロテスタントとなる（はじめはルター派の教えが広まり、1560年代にカルヴァン派に移る）。"
+      source: "https://en.wikipedia.org/wiki/Reformation_in_Hungary"
     - from: 1565
       main: reformed
       minor: catholic
@@ -1235,6 +1309,10 @@
   timeline:
     - from: 1453
       main: catholic
+    - from: 1560
+      main: catholic
+      minor: reformed
+      note: "ギュンジェシュなどの町と村に改革派が広がる。司教座都市エゲル（1596年からオスマン領）の周辺はカトリックが残る。"
     - from: 1648
       main: catholic
 

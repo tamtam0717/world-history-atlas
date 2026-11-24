@@ -69,12 +69,17 @@
     - from: 1453
       main: catholic
     - from: 1550
-      main: catholic
-      minor: orthodox
+      main: orthodox
+      minor: catholic
+      note: "オスマン帝国の支配（1542–）のもとで、ハンガリー人の多くが去り、正教徒のセルビア人が移り住む（カトリックのブニェヴツィ人の移住は17世紀後半が中心）。"
     - from: 1648
+      main: orthodox
+      minor: catholic
+      note: オスマン帝国の支配下。正教徒のセルビア人が多い。
+    - from: 1690
       main: catholic
       minor: orthodox
-      note: ブニェヴツィ人（カトリックの南スラヴ人）の町。18世紀からはハンガリー人（カトリック）も多く、1910年の調査でハンガリー語約58%、ブニェヴツィ語約35%。正教徒のセルビア人は少数。
+      note: 1680年代にブニェヴツィ人（カトリックの南スラヴ人）が移り住み、ブニェヴツィ人の町になる。18世紀からはハンガリー人（カトリック）も多く、1910年の調査でハンガリー語約58%、ブニェヴツィ語約35%。正教徒のセルビア人は少数。
       source: "https://en.wikipedia.org/wiki/Subotica"
 
 - id: rel_sandzak
@@ -410,9 +415,13 @@
       minor: sunni
       note: "オスマン帝国の支配（1479–）。"
     - from: 1600
+      main: catholic
+      minor: sunni
+      note: "16世紀末から改宗が増えるが、ムスリムはまだ少数派。"
+    - from: 1630
       main: sunni
       minor: orthodox
-      note: "16世紀末から17世紀にイスラームへの改宗が進む。"
+      note: "17世紀前半からイスラームへの改宗が急速に進み、17世紀半ばにはムスリムが多数になる（時期は要確認）。"
     - from: 1648
       main: sunni
       minor: orthodox
@@ -493,7 +502,7 @@
     - from: 1453
       main: orthodox
       minor: sunni
-    - from: 1600
+    - from: 1630
       main: sunni
       minor: orthodox
     - from: 1648
@@ -629,6 +638,30 @@
       main: orthodox
       note: ギリシア独立戦争（1821–29）で、ペロポネソス・中部ギリシア・エーゲ海の島々のムスリムは殺害されるか追放され（トリポリツァの虐殺、1821）、ほとんどいなくなった。1833年にギリシア正教会がコンスタンティノープル総主教座から独立を宣言する（承認は1850年）。
       source: "https://ja.wikipedia.org/wiki/ギリシャ独立戦争"
+
+- id: rel_thessaloniki
+  name: テッサロニキ（サロニカ）
+  select:
+    pieces: [GRC-Thessaloniki]
+  timeline:
+    - from: 1500
+      main: jewish
+      minor: sunni
+      note: "1492年以後スペイン・ポルトガルを追われたユダヤ教徒（セファルディム）が移り住み、住民の半数以上を占める（「バルカンのエルサレム」）。残りはトルコ人などのムスリムと、ギリシア人の正教徒。ユダヤ教徒が多数派の数少ない地域なので、例外として jewish で塗る（言語の lang_thessaloniki と同じ範囲）。"
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Thessaloniki"
+    - from: 1648
+      main: jewish
+      minor: sunni
+      note: 住民の半数前後がユダヤ教徒（セファルディム）。1666年のサバタイ・ツヴィの改宗の後、改宗したユダヤ人（ドンメ）がムスリムの一派として残る。
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Thessaloniki"
+    - from: 1923
+      main: orthodox
+      minor: jewish
+      note: 1917年の大火でユダヤ人地区の多くが焼け、1923年の住民交換でムスリム（ドンメを含む）が去り、小アジアからのギリシア人難民が入る。
+    - from: 1943
+      main: orthodox
+      note: 1943年、ドイツ占領下で市のユダヤ人の大部分がアウシュヴィッツへ送られ、殺害された。
+      source: "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Thessaloniki"
 
 - id: rel_greece_north
   name: マケドニア・テッサリア・エピルス（ギリシア北部）
@@ -1348,13 +1381,15 @@
       minor: shia
       note: "ティムール朝・黒羊朝の支配下。住民の多数はスンナ派で、コム・カーシャーンなどに十二イマーム派（シーア派）がいる。"
     - from: 1510
+      main: sunni
+      minor: shia
+      note: "イスマーイール1世がサファヴィー朝を建て（1501）、十二イマーム派を国の宗教とする。スンナ派の住民は改宗を強いられ、アラブ地域からシーア派の学者が招かれるが、住民の改宗は16世紀を通じてゆっくり進む。"
+      source: "https://ja.wikipedia.org/wiki/サファヴィー朝"
+    - from: 1590
       main: shia
       minor: sunni
-      note: "イスマーイール1世がサファヴィー朝を建て（1501）、十二イマーム派を国の宗教とする。スンナ派の住民は改宗を強いられ、アラブ地域からシーア派の学者が招かれる。"
-      source: "https://ja.wikipedia.org/wiki/サファヴィー朝"
-    - from: 1600
-      main: shia
-      note: "アッバース1世（1587–1629）の時代までに、イランの住民の大多数がシーア派となる。"
+      note: "アッバース1世（1587–1629）の時代に、シーア派が住民の多数派となる（改宗がほぼ完了するのは17世紀後半）。"
+      source: "https://en.wikipedia.org/wiki/Safavid_conversion_of_Iran_to_Shia_Islam"
     - from: 1648
       main: shia
       note: サファヴィー朝（1501–）が十二イマーム派を国教とし、住民の多くが改宗した。イスファハーンの新ジュルファにアルメニア人、ヤズドとケルマーンにゾロアスター教徒が住む。
@@ -1379,9 +1414,10 @@
     - from: 1453
       main: sunni
       minor: shia
-    - from: 1510
+    - from: 1560
       main: shia
       minor: sunni
+      note: "サファヴィー朝を支えたキジルバシュ（テュルク系遊牧民）のアゼルバイジャンでは改宗が比較的早いが、ウルミヤ湖の西のクルド人はスンナ派のまま。"
     - from: 1648
       main: shia
       minor: sunni

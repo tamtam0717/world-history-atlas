@@ -134,6 +134,17 @@
       note: ヴュルテンベルク家の伯領で、ルター派。1793年にフランスに併合された後もルター派が多い。
 
 # ---- イベリア半島・イタリア以外の南欧の小国 ----
+- id: rel_melilla_pre
+  name: メリリャ（1497年のスペインの占領より前）
+  select:
+    pieces: [ESP-Melilla]
+  until: 1496
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "ワッタース朝の支配圏にあるムスリムの港町（リーフ地方）。1497年にメディナ・シドニア公の遠征でカスティリャに占領され、1497年からはスペイン本土と同じ（rel_iberia）。"
+      source: "https://ja.wikipedia.org/wiki/メリリャ"
+
 - id: rel_iberia
   name: スペインとポルトガル
   select:
