@@ -1370,11 +1370,21 @@
 
 - id: malta
   name: 聖ヨハネ騎士団（マルタ騎士団）
+  names:
+    - {to: 1529, name: 聖ヨハネ騎士団（ロードス騎士団）, short: ロードス騎士団}
   short: マルタ騎士団
   color: "#e7ae9e"
   kind: 騎士修道会国家
   rulers:
-    - {name: フィリップ・ヴィリエ・ド・リラダン, title: 聖ヨハネ騎士団総長, from: 1530, to: 1534, note: 1522年にロードス島をスレイマン1世に明け渡し、1530年にマルタへ移った。, source: 'https://en.wikipedia.org/wiki/Philippe_Villiers_de_L''Isle-Adam'}
+    - {name: ジャン・ド・ラスティック, title: 聖ヨハネ騎士団総長, from: 1437, to: 1454, note: ロードス島が本拠。, source: 'https://en.wikipedia.org/wiki/Jean_de_Lastic'}
+    - {name: ジャック・ド・ミイ, title: 聖ヨハネ騎士団総長, from: 1454, to: 1461, source: 'https://en.wikipedia.org/wiki/Jacques_de_Milly'}
+    - {name: ピエロ・ライモンド・ザコスタ, title: 聖ヨハネ騎士団総長, from: 1461, to: 1467, source: 'https://en.wikipedia.org/wiki/Piero_Raimondo_Zacosta'}
+    - {name: ジョヴァンニ・バッティスタ・オルシーニ, title: 聖ヨハネ騎士団総長, from: 1467, to: 1476, source: 'https://en.wikipedia.org/wiki/Giovanni_Battista_Orsini'}
+    - {name: ピエール・ドービュッソン, title: 聖ヨハネ騎士団総長, from: 1476, to: 1503, note: 1480年のロードス包囲でメフメト2世の軍を退けた。, source: 'https://en.wikipedia.org/wiki/Pierre_d%27Aubusson'}
+    - {name: エメリー・ダンボワーズ, title: 聖ヨハネ騎士団総長, from: 1503, to: 1512, source: 'https://en.wikipedia.org/wiki/Emery_d%27Amboise'}
+    - {name: ギー・ド・ブランシュフォール, title: 聖ヨハネ騎士団総長, from: 1512, to: 1513, source: 'https://en.wikipedia.org/wiki/Guy_de_Blanchefort'}
+    - {name: ファブリツィオ・デル・カレット, title: 聖ヨハネ騎士団総長, from: 1513, to: 1521, source: 'https://en.wikipedia.org/wiki/Fabrizio_del_Carretto'}
+    - {name: フィリップ・ヴィリエ・ド・リラダン, title: 聖ヨハネ騎士団総長, from: 1521, to: 1534, note: 1522年にロードス島をスレイマン1世に明け渡し、1530年にマルタへ移った。, source: 'https://en.wikipedia.org/wiki/Philippe_Villiers_de_L''Isle-Adam'}
     - {name: ピエロ・デ・ポンテ, title: 聖ヨハネ騎士団総長, from: 1534, to: 1535, source: 'https://en.wikipedia.org/wiki/Piero_de_Ponte'}
     - {name: ディディエ・ド・サン＝ジャイユ, title: 聖ヨハネ騎士団総長, from: 1535, to: 1536, source: 'https://en.wikipedia.org/wiki/Didier_de_Saint-Jaille'}
     - {name: フアン・デ・オメデス, title: 聖ヨハネ騎士団総長, from: 1536, to: 1553, note: 1551年にトリポリをオスマン帝国に奪われた。, source: 'https://en.wikipedia.org/wiki/Juan_de_Homedes_y_Coscón'}
@@ -1403,6 +1413,7 @@
     - {name: エマニュエル・ド・ロアン＝ポルデュック, title: 騎士団総長, from: 1775, to: 1797, source: "https://en.wikipedia.org/wiki/Emmanuel_de_Rohan-Polduc"}
     - {name: フェルディナント・フォン・ホンペッシュ, title: 騎士団総長, from: 1797, to: 1799, note: 1798年にナポレオンに島を明け渡した。, source: "https://en.wikipedia.org/wiki/Ferdinand_von_Hompesch_zu_Bolheim"}
   periods:
+    - {from: 1453, to: 1522, text: ロードス島と周辺の島々（ドデカネス諸島）を治め、東地中海でオスマン帝国と向き合った（ロードス騎士団）。1480年の包囲は退けたが、1522年にスレイマン1世の包囲で降伏し、島を去った。}
     - {from: 1530, to: 1565, text: ロードス島を追われた聖ヨハネ騎士団が、カール5世からマルタ島を与えられた（シチリア王の封土。年に1羽の鷹を納める）。1565年、オスマン帝国の大軍の包囲に耐えた（マルタ包囲戦）。}
     - {from: 1566, to: 1647, text: 要塞都市ヴァレッタを建設し、地中海でイスラーム勢力の船を襲う私掠の拠点となった。}
     - from: 1648
@@ -1642,7 +1653,7 @@
   names:
   - {to: 1481, name: ブルゴーニュ領ネーデルラント（マリー・ド・ブルゴーニュ）, kind: 諸邦の同君連合（ブルゴーニュ公家の遺領）}
   short: ネーデルラント
-  color: '#e2a0a8'
+  color: "#fec6f6"
   kind: 諸邦の同君連合（ハプスブルク家）
   home_iso: [NLD, BEL, LUX]
   rulers:
@@ -1659,7 +1670,7 @@
 - id: guelders
   name: ヘルレ公国（ゲルデルン）
   short: ヘルレ
-  color: '#a8d4a0'
+  color: "#7cd0c5"
   kind: 公国
   rulers:
   - {name: アーノルト・ファン・エフモント, title: ヘルレ公, from: 1423, to: 1473, note: 1465–71年は息子アドルフに捕らえられて実権を失った。1473年、公国をシャルル突進公に譲った。, source: 'https://en.wikipedia.org/wiki/Arnold,_Duke_of_Guelders'}
@@ -1672,7 +1683,7 @@
 - id: utrecht_bishopric
   name: ユトレヒト司教領
   short: ユトレヒト
-  color: '#d4c4e8'
+  color: "#a2cdfd"
   kind: 司教領
   rulers:
   - {name: ルドルフ・ファン・ディープホルト, title: ユトレヒト司教, from: 1433, to: 1455, source: 'https://en.wikipedia.org/wiki/Rudolf_van_Diepholt'}
@@ -1687,7 +1698,7 @@
 - id: frisia
   name: フリースラント（「フリースラントの自由」）
   short: フリースラント
-  color: '#b8dcd8'
+  color: "#92cdb7"
   kind: 自由農民の地方共同体
   periods:
   - {from: 1453, to: 1497, text: 封建領主を持たず、皇帝だけに従うとされた自由農民の地方（「フリースラントの自由」）。実際は有力者の党派（スヒーリンゲル派とフェトコペル派）が争っていた。}
@@ -1697,7 +1708,7 @@
 - id: groningen
   name: フローニンゲン（市とオメランデン）
   short: フローニンゲン
-  color: '#e6d49a'
+  color: "#f3caa0"
   kind: 都市国家
   periods:
   - {from: 1453, to: 1513, text: 名目上はユトレヒト司教・皇帝に属するが、ハンザ同盟の都市フローニンゲンが周辺の農村（オメランデン）を事実上支配していた。}
@@ -1706,7 +1717,7 @@
 - id: milan
   name: ミラノ公国
   short: ミラノ
-  color: '#b4a0dc'
+  color: "#52bed7"
   kind: 公国（スフォルツァ家）
   rulers:
   - {name: フランチェスコ・スフォルツァ, title: ミラノ公, from: 1450, to: 1466, note: 傭兵隊長。ヴィスコンティ家の娘婿としてミラノを得た。ローディの和約（1454）でイタリアの勢力均衡を作った。, source: 'https://ja.wikipedia.org/wiki/フランチェスコ・スフォルツァ'}
@@ -1724,7 +1735,7 @@
 - id: montferrat
   name: モンフェッラート侯国
   short: モンフェッラート
-  color: '#c9c48d'
+  color: "#aeb588"
   kind: 侯国（パレオロゴ家）
   rulers:
   - {name: ジョヴァンニ4世, title: モンフェッラート侯, from: 1445, to: 1464, source: 'https://en.wikipedia.org/wiki/John_IV,_Marquess_of_Montferrat'}
@@ -1742,7 +1753,7 @@
   names:
   - {from: 1532, name: フィレンツェ公国, kind: 公国（メディチ家）}
   short: フィレンツェ
-  color: '#c5dc9c'
+  color: "#aad5a0"
   kind: 共和国（メディチ家が実権）
   rulers:
   - {name: コジモ・デ・メディチ（大コジモ）, title: フィレンツェの実質的な支配者（メディチ家）, from: 1434, to: 1464, note: 銀行家。官職に就かずに共和国を動かし、「祖国の父」と呼ばれた。プラトン・アカデミーを支えた。, source: 'https://ja.wikipedia.org/wiki/コジモ・デ・メディチ'}
@@ -1801,7 +1812,7 @@
 - id: romagna_borgia
   name: ロマーニャ公国（チェーザレ・ボルジア）
   short: ロマーニャ公国
-  color: '#e39a9a'
+  color: "#eb9c9a"
   kind: 公国（教皇の封土）
   rulers:
   - {name: チェーザレ・ボルジア, title: ロマーニャ公（ヴァランティノワ公）, from: 1500, to: 1503, note: 教皇アレクサンデル6世の子。マキァヴェッリ『君主論』のモデル。父の死で没落し、1507年にスペインで戦死。, source: 'https://ja.wikipedia.org/wiki/チェーザレ・ボルジア'}

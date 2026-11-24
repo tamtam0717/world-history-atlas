@@ -217,7 +217,7 @@
   timeline:
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "lithuania", certainty: "uncertain", label: "リトアニア大公国（ポドリア）"}
-    - {from: 1538, owner: "ottoman", cause: "オスマン帝国とクリミア＝ハン国が黒海北岸の草原（イェディサン）を押さえる", source: "https://en.wikipedia.org/wiki/Yedisan"}
+    - {from: 1538, owner: "ottoman", certainty: "uncertain", cause: "スレイマン1世のモルダヴィア遠征。オスマン帝国とクリミア＝ハン国が黒海北岸の草原（イェディサン）を押さえる（担当 F のイェディサンと同じく不確実）", source: "https://en.wikipedia.org/wiki/Yedisan"}
     # ---- 1648– ----
     - from: 1648
       owner: ottoman
@@ -245,7 +245,10 @@
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
     - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
     # ---- 1648– ----
     - from: 1648
       owner: transylvania
@@ -274,7 +277,17 @@
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
     - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1565, owner: "habsburg", cause: "皇帝軍（シュヴェンディ）がトカイ・サトマールを奪う（1570年のシュパイアー条約で確定）", source: "https://en.wikipedia.org/wiki/Treaty_of_Speyer_(1570)"}
+    - {from: 1605, owner: "transylvania", overlord: "ottoman", cause: "ボチカイ・イシュトヴァーンの反乱。1606年のウィーン和約でサボルチ・サトマールなどを終身で得る", source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"}
+    - {from: 1607, owner: "habsburg", cause: "ボチカイの死（1606年12月）で王領ハンガリーに戻る", source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"}
+    - {from: 1621, owner: "transylvania", overlord: "ottoman", cause: "ニコルスブルク条約（12月31日）で、ベトレン・ガーボルが上部ハンガリー東部の7県を終身で得る", source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"}
+    - {from: 1630, owner: "habsburg", cause: "ベトレン・ガーボルの死（1629年11月）で7県が王領ハンガリーに戻る", source: "https://ja.wikipedia.org/wiki/ベトレン・ガーボル"}
+    - {from: 1645, owner: "transylvania", overlord: "ottoman", cause: "リンツ条約（12月）で、ラーコーツィ・ジェルジ1世が上部ハンガリー東部の7県を終身で得る", source: "https://en.wikipedia.org/wiki/Peace_of_Linz"}
     # ---- 1648– ----
     - from: 1648
       owner: transylvania
@@ -314,7 +327,11 @@
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
     - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1527, owner: "habsburg", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
     # ---- 1648– ----
     - from: 1648
       owner: transylvania
@@ -351,7 +368,9 @@
   timeline:
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。サポヤイの子ヤーノシュ・ジグモンドの東ハンガリー王国がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
     - {from: 1552, owner: "ottoman", certainty: "uncertain", cause: "リッパ（リポヴァ）とアラドが陥落", source: "https://en.wikipedia.org/wiki/Eyalet_of_Temeşvar"}
     # ---- 1648– ----
     - from: 1648
@@ -383,7 +402,9 @@
   timeline:
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。サポヤイの子ヤーノシュ・ジグモンドの東ハンガリー王国がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
     - {from: 1552, owner: "ottoman", cause: "テメシュヴァール（ティミショアラ）が陥落し、テメシュヴァール州が置かれる", source: "https://en.wikipedia.org/wiki/Siege_of_Temesvár"}
     # ---- 1648– ----
     - from: 1648
@@ -414,7 +435,10 @@
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary", label: "トランシルヴァニア（ハンガリー王国）"}
     - {from: 1526, owner: "hungary", label: "", cause: "モハーチの戦いののち、トランシルヴァニア公サポヤイ・ヤーノシュがハンガリー王に選ばれる", source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。ヤーノシュ・ジグモンドの東ハンガリー王国（のちトランシルヴァニア公国）がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
+    - {from: 1556, owner: "transylvania", overlord: "ottoman", cause: "イザベラとヤーノシュ・ジグモンドがオスマン帝国の後ろ盾で帰国し、東ハンガリー王国を回復", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
     # ---- 1648– ----
     - from: 1648
       owner: transylvania
@@ -450,6 +474,8 @@
   timeline:
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary"}
+    - {from: 1527, owner: "habsburg", cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る", source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "ottoman", cause: "ブダの陥落。ハンガリー中部はオスマン帝国の直轄領（ブディン州）に", source: "https://ja.wikipedia.org/wiki/オスマン帝国領ハンガリー"}
     # ---- 1648– ----
     - from: 1648
@@ -505,7 +531,9 @@
   timeline:
     # ---- 1453–1647（担当E・生成） ----
     - {from: 1453, owner: "hungary"}
+    - {from: 1529, owner: "hungary", overlord: "ottoman", cause: "サポヤイ・ヤーノシュがスレイマン1世の宗主権を受け入れ、ブダを与えられる（第1次ウィーン包囲）", source: "https://ja.wikipedia.org/wiki/第一次ウィーン包囲"}
     - {from: 1541, owner: "transylvania", overlord: "ottoman", cause: "ブダの陥落。サポヤイの子ヤーノシュ・ジグモンドの東ハンガリー王国がオスマン帝国に従う", source: "https://ja.wikipedia.org/wiki/トランシルヴァニア公国"}
+    - {from: 1551, owner: "habsburg", cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定。カスタルドの皇帝軍が駐留）", source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"}
     - {from: 1552, owner: "ottoman", cause: "テメシュヴァール（ティミショアラ）が陥落し、テメシュヴァール州が置かれる", source: "https://en.wikipedia.org/wiki/Siege_of_Temesvár"}
     # ---- 1648– ----
     - from: 1648
@@ -586,6 +614,7 @@
     - {from: 1453, owner: "bosnia_kingdom"}
     - {from: 1463, owner: "ottoman", cause: "メフメト2世がボスニアを征服し、最後の王スチェパン・トマシェヴィチを処刑", source: "https://ja.wikipedia.org/wiki/ボスニア王国"}
     - {from: 1464, owner: "hungary"}
+    - {from: 1527, owner: "habsburg", cause: "スラヴォニアの諸侯は初めサポヤイ・ヤーノシュを推したが、やがてフェルディナント1世に従う", source: "https://en.wikipedia.org/wiki/Kingdom_of_Slavonia"}
     - {from: 1536, owner: "ottoman", cause: "オスマン軍がスラヴォニア東部とサヴァ川沿いを攻め落とす", source: "https://en.wikipedia.org/wiki/Ottoman_conquest_of_Bosnia_and_Herzegovina"}
     # ---- 1648– ----
     - from: 1648
@@ -5685,8 +5714,9 @@
     pieces: [BIH-Una_Sana_Canton]
   timeline:
     - {from: 1453, owner: "hungary", label: "クロアチア"}
+    - {from: 1527, owner: "habsburg", label: "クロアチア", cause: "1月1日、ツェティンのクロアチア議会がフェルディナント1世を王に選ぶ", source: "https://en.wikipedia.org/wiki/1527_election_in_Cetin"}
     - {from: 1592, owner: "ottoman", cause: "ビハチが陥落（6月）。ボスニア州の北西の辺境に", source: "https://en.wikipedia.org/wiki/Siege_of_Bihać_(1592)"}
-  note: "クロアチア王国（ハンガリー王の同君連合）の一部。地図ではハンガリー王国の色。"
+  note: "クロアチア王国（ハンガリー王の同君連合）の一部。地図では1526年までハンガリー王国、1527年からハプスブルク家（担当 D のクロアチア側と同じ）の色。"
 
 - id: pre_herzegovina_west
   name: "ヘルツェゴヴィナ西部"
@@ -5856,7 +5886,7 @@
   select:
     pieces: [GRC-Halki, GRC-Kalymnos, GRC-Kos, GRC-Leros, GRC-Nisyros, GRC-Rhodes, GRC-Symi, GRC-Tilos]
   timeline:
-    - {from: 1453, owner: "malta", label: "ロードス騎士団（聖ヨハネ騎士団）"}
+    - {from: 1453, owner: "malta"}
     - {from: 1522, owner: "ottoman", cause: "スレイマン1世のロードス包囲。騎士団が降伏して島を去る（12月）", source: "https://ja.wikipedia.org/wiki/ロードス包囲戦_(1522年)"}
   note: "1480 年の包囲ではメフメト2世の軍を退けた。騎士団は 1530 年にマルタ島へ移る。"
 
@@ -6133,13 +6163,14 @@
 
 - id: pre_muscat_pt
   name: "マスカット（ポルトガル領）"
-  until: 1647
+  until: 1650
   select:
     pieces: [OMN-Muscat]
   timeline:
     - {from: 1453, owner: "hormuz"}
     - {from: 1507, owner: "portugal", cause: "アルブケルケがマスカットを攻め落とす", source: "https://en.wikipedia.org/wiki/Portuguese_Muscat"}
-  note: "ポルトガル軍がマスカットを去ったのは 1650 年（1648–1649 年の地図はオマーンの色）。"
+    - {from: 1650, owner: "oman", cause: "ヤアーリバ朝のイマーム、スルターン・ブン・サイフがマスカットを攻め落とし、ポルトガル人を追い出す（1月）", source: "https://en.wikipedia.org/wiki/Capture_of_Muscat_(1650)"}
+  note: "ポルトガル軍がマスカットを去ったのは 1650 年1月。1648 年以降の既存データ（oman_north）は 1648 年からオマーンだったが、まとめ役の判断で 1649 年までポルトガル領にした（until 1650。1651 年からは oman_north の記述が効く）。"
 
 - id: pre_serbia_despotate
   name: "セルビア専制公国"

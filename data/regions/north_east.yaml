@@ -992,10 +992,18 @@
       owner: "pomerania"
       overlord: "hre"
       note: "グライフ家のポンメルン公国（地図ではポンメルン＝ヴォルガスト・シュテッティンなどの分家をまとめる）。コルベルク・ケースリンはカミン司教領"
+    - from: 1627
+      owner: "habsburg"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（皇帝軍の占領）"
+      cause: "フランツブルク協定（11月）で皇帝軍（ヴァレンシュタイン）がポンメルンに駐留"
+      source: "https://de.wikipedia.org/wiki/Franzburger_Kapitulation"
     - from: 1630
       owner: "sweden"
       overlord: "hre"
       certainty: "occupied"
+      label: "ポンメルン（スウェーデン軍の占領）"
       cause: "三十年戦争に介入したスウェーデン軍がポンメルンを占領（シュテッティン条約、1637年に公家断絶）"
       source: "https://en.wikipedia.org/wiki/Swedish_Pomerania"
     # ---- 1648– ----
@@ -1053,10 +1061,18 @@
       owner: "pomerania"
       overlord: "hre"
       note: "グライフ家のポンメルン公国（地図ではポンメルン＝ヴォルガスト・シュテッティンなどの分家をまとめる）。コルベルク・ケースリンはカミン司教領"
+    - from: 1627
+      owner: "habsburg"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（皇帝軍の占領）"
+      cause: "フランツブルク協定（11月）で皇帝軍（ヴァレンシュタイン）がポンメルンに駐留"
+      source: "https://de.wikipedia.org/wiki/Franzburger_Kapitulation"
     - from: 1630
       owner: "sweden"
       overlord: "hre"
       certainty: "occupied"
+      label: "ポンメルン（スウェーデン軍の占領）"
       cause: "三十年戦争に介入したスウェーデン軍がポンメルンを占領（シュテッティン条約、1637年に公家断絶）"
       source: "https://en.wikipedia.org/wiki/Swedish_Pomerania"
     # ---- 1648– ----
@@ -1126,14 +1142,23 @@
       owner: "pomerania"
       overlord: "hre"
       note: "グライフ家のポンメルン公国（地図ではポンメルン＝ヴォルガスト・シュテッティンなどの分家をまとめる）。コルベルク・ケースリンはカミン司教領"
+    - from: 1627
+      owner: "habsburg"
+      overlord: "hre"
+      certainty: "occupied"
+      label: "ポンメルン（皇帝軍の占領）"
+      cause: "フランツブルク協定（11月）で皇帝軍（ヴァレンシュタイン）がポンメルンに駐留"
+      source: "https://de.wikipedia.org/wiki/Franzburger_Kapitulation"
     - from: 1630
       owner: "sweden"
       overlord: "hre"
       certainty: "occupied"
+      label: "ポンメルン（スウェーデン軍の占領）"
       cause: "三十年戦争に介入したスウェーデン軍がポンメルンを占領（シュテッティン条約、1637年に公家断絶）"
       source: "https://en.wikipedia.org/wiki/Swedish_Pomerania"
     # ---- 1648– ----
     - from: 1648
+      cause: "ウェストファリア条約でヒンターポンメルンはブランデンブルクへ（スウェーデン軍の撤退は1653年）"
       owner: prussia
       overlord: hre
       note: "ヒンターポンメルン・ノイマルク（ブランデンブルク）"
@@ -2427,8 +2452,15 @@
       owner: "saxony"
       overlord: "hre"
       certainty: "occupied"
-      cause: "ボヘミアの反乱の鎮圧に加わったザクセン選帝侯ヨハン・ゲオルク1世がラウジッツを占領し、1623年に戦費の担保として受け取る"
+      label: "ラウジッツ（ザクセンの占領）"
+      cause: "ボヘミアの反乱の鎮圧に加わったザクセン選帝侯ヨハン・ゲオルク1世がラウジッツを占領"
       source: "https://en.wikipedia.org/wiki/Upper_Lusatia"
+    - from: 1623
+      owner: "saxony"
+      overlord: "hre"
+      certainty: "uncertain"
+      label: "ラウジッツ（ザクセンへの質入れ）"
+      cause: "皇帝が戦費の担保としてラウジッツをザクセン選帝侯に質入れ"
     - from: 1635
       owner: "saxony"
       overlord: "hre"
@@ -4119,24 +4151,50 @@
       owner: "hungary"
       cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位"
       source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1527
+      owner: "habsburg"
+      cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る"
+      source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
     - from: 1529
       owner: "hungary"
       overlord: "ottoman"
-      certainty: "uncertain"
       cause: "サポヤイ・ヤーノシュがオスマン帝国の後ろ盾で東部を取り戻す"
       source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
     - from: 1541
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国に"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1551
       owner: "habsburg"
-      cause: "ブダ陥落の後、上部ハンガリーはフェルディナント1世の王領ハンガリーに"
-      source: "https://en.wikipedia.org/wiki/Royal_Hungary"
+      cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定）"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1556
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "イザベラとヤーノシュ・ジグモンドが帰国し、東ハンガリー王国を回復"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1565
+      owner: "habsburg"
+      cause: "皇帝軍（シュヴェンディ）がトカイ・サトマールを奪う（1570年のシュパイアー条約で確定）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Speyer_(1570)"
+    - from: 1605
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "ボチカイ・イシュトヴァーンの反乱（1606年のウィーン和約で終身の領有）"
+      source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"
+    - from: 1607
+      owner: "habsburg"
+      cause: "ボチカイの死（1606年12月）で王領ハンガリーに戻る"
+      source: "https://ja.wikipedia.org/wiki/ボチカイ・イシュトヴァーン"
     - from: 1621
       owner: "transylvania"
       overlord: "ottoman"
       cause: "ニコルスブルク条約で、ベトレン・ガーボルが上部ハンガリー東部の7県（ベレグ・ウゴチャを含む）を終身で得る"
       source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"
-    - from: 1629
+    - from: 1630
       owner: "habsburg"
-      cause: "ベトレン・ガーボルの死で、7県が王領ハンガリーに戻る"
+      cause: "ベトレン・ガーボルの死（1629年11月）で、7県が王領ハンガリーに戻る"
       source: "https://en.wikipedia.org/wiki/Peace_of_Nikolsburg"
     - from: 1645
       owner: "transylvania"
@@ -4145,6 +4203,7 @@
       source: "https://en.wikipedia.org/wiki/Peace_of_Linz"
     # ---- 1648– ----
     - from: 1648
+      cause: "ラーコーツィ・ジェルジ1世の死（10月）で、リンツ条約の7県が王領ハンガリーに戻る"
       owner: habsburg
       note: "ハンガリー王国（帝国外）。ムカチェヴォなど東部は1711年までラーコーツィ家の所領"
     - from: 1682
@@ -4206,10 +4265,24 @@
     - from: 1453
       owner: "moldavia"
       note: "モルダヴィア公国の北部（シェペニツ地方・ホティン）。1456年からオスマン帝国に貢納したが、シュテファン大公（1457–1504）はたびたび戦った"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
     - from: 1538
       owner: "moldavia"
       overlord: "ottoman"
-      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアはオスマン帝国の付庸国となる"
+      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアは貢納国から、公をスルタンが任命する付庸国となる"
       source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
     # ---- 1648– ----
     - from: 1648
@@ -4273,10 +4346,24 @@
     - from: 1453
       owner: "moldavia"
       note: "モルダヴィア公国の北部（シェペニツ地方・ホティン）。1456年からオスマン帝国に貢納したが、シュテファン大公（1457–1504）はたびたび戦った"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
     - from: 1538
       owner: "moldavia"
       overlord: "ottoman"
-      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアはオスマン帝国の付庸国となる"
+      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアは貢納国から、公をスルタンが任命する付庸国となる"
       source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
     # ---- 1648– ----
     - from: 1648
@@ -4321,10 +4408,24 @@
     - from: 1453
       owner: "moldavia"
       note: "モルダヴィア公国の北部（シェペニツ地方・ホティン）。1456年からオスマン帝国に貢納したが、シュテファン大公（1457–1504）はたびたび戦った"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
     - from: 1538
       owner: "moldavia"
       overlord: "ottoman"
-      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアはオスマン帝国の付庸国となる"
+      cause: "スレイマン1世のモルダヴィア遠征。モルダヴィアは貢納国から、公をスルタンが任命する付庸国となる"
       source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
     # ---- 1648– ----
     - from: 1648
@@ -4374,6 +4475,20 @@
     - from: 1453
       owner: "moldavia"
       note: "モルダヴィア公国の南部"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
+    - from: 1489
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "キリアとアッケルマンを失ったのち、シュテファン大公が貢納を再開"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
     - from: 1538
       owner: "ottoman"
       cause: "スレイマン1世のモルダヴィア遠征でブジャク（ティギナ＝ベンデルとその南）をオスマン帝国の直轄地とする。ノガイ人が移り住む"
@@ -5412,6 +5527,7 @@
       note: "「荒野」（ディーコエ・ポーレ）。リトアニア・モスクワ・クリミアの境ははっきりせず、クリミア・タタールの襲撃路（ムラフスキー道など）が通る"
     # ---- 1648– ----
     - from: 1648
+      cause: "ベルゴロド防衛線（1635–58年）の建設で、ロシアの支配と入植が南の「荒野」へ広がる（年は近似）"
       owner: russia
       certainty: uncertain
       note: "「荒野」への入植が進む時期"
@@ -5484,6 +5600,7 @@
       note: "「荒野」（ディーコエ・ポーレ）。クリミア・タタールとノガイ人の遊牧と襲撃の地"
     # ---- 1648– ----
     - from: 1648
+      cause: "フメリニツキーの乱（1648年）。ザポロージャ・コサックがポーランドに背き、ドニエプル下流の草原を押さえる"
       owner: zaporozhian_sich
       certainty: uncertain
       note: "「荒野」。境界ははっきりしない"
@@ -5565,6 +5682,7 @@
       source: "https://en.wikipedia.org/wiki/Wild_Fields"
     # ---- 1648– ----
     - from: 1648
+      cause: "フメリニツキーの乱（1648年）。ザポロージャ・コサックがポーランドに背き、ドニエプル下流の草原を押さえる"
       owner: zaporozhian_sich
       certainty: uncertain
       note: "「荒野」。境界ははっきりしない"
@@ -12306,6 +12424,15 @@
       overlord: "ottoman"
       cause: "ブダ陥落後、ティサ川以東は幼いヤーノシュ・ジグモンドの東ハンガリー王国（1570年のシュパイアー条約でトランシルヴァニア公国の「パルティウム」）"
       source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1551
+      owner: "habsburg"
+      cause: "イザベラがトランシルヴァニアと東部をフェルディナント1世に譲る（ジュラフェヘールヴァール協定）"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
+    - from: 1556
+      owner: "transylvania"
+      overlord: "ottoman"
+      cause: "イザベラとヤーノシュ・ジグモンドが帰国し、東ハンガリー王国を回復"
+      source: "https://en.wikipedia.org/wiki/Eastern_Hungarian_Kingdom"
 
 - id: zakarpattia_zak_ung
   name: "ザカルパッチャ（ハンガリー北東部）"
@@ -12322,6 +12449,10 @@
       owner: "hungary"
       cause: "モハーチの戦いの後、11月にサポヤイ・ヤーノシュ（ヤーノシュ1世）が王に即位"
       source: "https://ja.wikipedia.org/wiki/サポヤイ・ヤーノシュ"
+    - from: 1527
+      owner: "habsburg"
+      cause: "フェルディナント1世がブダを占領し、トカイの戦いでサポヤイ・ヤーノシュを破る"
+      source: "https://ja.wikipedia.org/wiki/フェルディナント1世_(神聖ローマ皇帝)"
     - from: 1529
       owner: "hungary"
       overlord: "ottoman"
@@ -12344,6 +12475,15 @@
     - from: 1453
       owner: "moldavia"
       note: "ドナウ河口のキリアとドニエストル河口のチェタテア・アルバ（アッケルマン）。モルダヴィアの黒海の港"
+    - from: 1456
+      owner: "moldavia"
+      overlord: "ottoman"
+      cause: "モルダヴィア公がオスマン帝国への貢納を始める"
+      source: "https://ja.wikipedia.org/wiki/モルダヴィア公国"
+    - from: 1473
+      owner: "moldavia"
+      cause: "シュテファン大公が貢納を止め、オスマン帝国と戦う（1475年ヴァスルイの戦い）"
+      source: "https://ja.wikipedia.org/wiki/シュテファン3世_(モルダヴィア公)"
     - from: 1484
       owner: "ottoman"
       cause: "バヤズィト2世がキリアとアッケルマンを攻め落とす"

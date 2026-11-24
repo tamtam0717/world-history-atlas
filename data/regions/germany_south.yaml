@@ -2898,6 +2898,7 @@
       note: "要確認：期間と範囲（1648年に返還）。"
       source: "https://de.wikipedia.org/wiki/Markgrafschaft_Baden-Durlach"
     - from: 1648
+      cause: "ウェストファリア条約でバーデン＝ドゥルラッハ辺境伯が旧領を回復"
       owner: baden
       overlord: hre
       source: "https://ja.wikipedia.org/wiki/バーデン辺境伯領"
@@ -3144,6 +3145,7 @@
       cause: "ネルトリンゲンの戦い（1634年9月）の後、皇帝軍・バイエルン軍が奪回"
       source: "https://ja.wikipedia.org/wiki/三十年戦争"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家が下プファルツを回復"
       owner: palatinate
       overlord: hre
       note: "プファルツ領モースバッハと、マインツ領ブーヘン・ヴァルデュルン、帝国騎士領。"
@@ -3886,6 +3888,7 @@
       cause: "プファルツの敗北で、マインツが質を取り戻す"
       source: "https://de.wikipedia.org/wiki/Amt_Starkenburg"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家が下プファルツを回復"
       owner: palatinate
       overlord: hre
       note: "マインツがプファルツに質入れしていた地域。"
@@ -4774,6 +4777,7 @@
       note: "皇帝軍・スペイン軍・ロレーヌ軍などが入り乱れて駐屯した。要確認：占領した軍の内訳"
       source: "https://ja.wikipedia.org/wiki/三十年戦争"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家（カール・ルートヴィヒ）がライン左岸の領地を回復"
       owner: palatinate
       overlord: hre
       note: "プファルツ＝ジンメルン（1674年プファルツ本家へ）、前方シュポンハイム伯領（プファルツ・バーデン共同）、トリーア領ボッパルト、ヘッセン領ザンクト・ゴアなど。"
@@ -5036,6 +5040,16 @@
       overlord: hre
       note: "ロレーヌ公領（ドイツ語圏のヴァルダーファンゲン（ヴォードルヴァンジュ）管区）。"
       source: "https://de.wikipedia.org/wiki/Herzogtum_Lothringen"
+    - from: 1475
+      owner: burgundy
+      overlord: hre
+      certainty: occupied
+      cause: "シャルル突進公がロレーヌを征服（11月）"
+      source: "ja.wikipedia: ブルゴーニュ戦争"
+    - from: 1476
+      owner: lorraine
+      overlord: hre
+      cause: "ルネ2世がナンシーを奪回（10月）"
     - from: 1633
       owner: france
       overlord: hre
@@ -5584,6 +5598,7 @@
       note: "皇帝軍・スペイン軍・ロレーヌ軍などが入り乱れて駐屯した。要確認：占領した軍の内訳"
       source: "https://ja.wikipedia.org/wiki/三十年戦争"
     - from: 1648
+      cause: "ウェストファリア条約でプファルツ選帝侯家（カール・ルートヴィヒ）がライン左岸の領地を回復"
       owner: palatinate
       overlord: hre
       source: "https://de.wikipedia.org/wiki/Oberamt_Alzey"
@@ -5677,6 +5692,7 @@
       cause: "フランス軍（アンギャン公）がマインツを占領"
       source: "https://ja.wikipedia.org/wiki/フライブルクの戦い"
     - from: 1648
+      cause: "ウェストファリア条約の後、フランス軍が撤退してマインツ選帝侯領に戻る"
       owner: mainz
       overlord: hre
       source: "https://ja.wikipedia.org/wiki/マインツ大司教"
@@ -5947,10 +5963,14 @@
     pieces: [DEU-Coburg_Kreisfreie_Stadt, DEU-Coburg_Landkreis]
   timeline:
     - from: 1453
+      owner: thuringia
+      overlord: hre
+      note: "ヴェッティン家の領地（フランケンのコーブルク管区）。1445年のアルテンブルクの分割でテューリンゲン方伯ヴィルヘルム3世の領地。"
+      source: "https://de.wikipedia.org/wiki/Pflege_Coburg"
+    - from: 1482
       owner: saxony
       overlord: hre
-      note: "ヴェッティン家（ザクセン選帝侯）の領地（フランケンのコーブルク管区）。"
-      source: "https://de.wikipedia.org/wiki/Pflege_Coburg"
+      cause: "テューリンゲン方伯ヴィルヘルム3世の死（領地は甥の選帝侯エルンストと弟アルブレヒトへ）"
     - from: 1485
       owner: saxon_duchies
       overlord: hre
