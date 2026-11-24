@@ -818,3 +818,49 @@ docs/review/1453_distributions.md の指摘を反映した（2026-11-24）。A�
 ### 確認
 - `npm run data`：警告なし。1647→1648 で主な色が変わるピースは、レビュー時に説明のついていたもの（イングリア・テシェン・ゼーラント・ヴォルガ中流など）と、ベルゴロド南部・クルスク南西部（russian → ukrainian、1650 年代の入植）だけ。今回の修正で増えたのは、サマーラ・ペンザの宗教（other → orthodox。言語の volga_finnic → russian と同じ年で、既存の 1648 年の値に合わせた）とセウタの言語（portuguese → spanish）の 2 か所で、どちらも言語・政治の変化と一致している。
 - snapshot（scratchpad）：宗教 1600・1647・1648（--zoom 20,47,3。ハンガリー中部・東部が改革派の紫、1647/1648 で段差なし）、宗教 1600・1647・1648 と言語 1647（--zoom 37,48,2.5。荒野・ドンバスがスンナ派・タタール、スロボダが正教・ウクライナ人で宗教と言語がそろう、クリミア山地に正教の斜線）。
+
+## 1453–1647 西欧・中欧
+
+docs/review/1453_west_central.md（A 1・B 5・C 25・要確認 3）の反映。対象は data/polities・regions・events の west.yaml・germany_north.yaml・germany_south.yaml・italy_lowcountries.yaml。
+
+### A
+- ベルガモ・ブレシア（`venetian_lombardy`）：1512 の owner spain → aragon（occupied、カルドナの軍）。新設 `pre1648_bergamo`（ITA-Bergamo、until 1515）：1512 venice（6 月に回復）→ 1513 aragon[occupied]。これで 1516 年より前に spain が出るピースはない。
+
+### B
+- フランス王の封土：フランドル・アルトワ・ワロン＝フランドル・ダンケルク・サントメール・ゼーラント側フランドルなど（west.yaml・italy_lowcountries.yaml、計 25 項目）の 1453–1528 の `overlord: france` を外し、ブルゴーニュ公領・マコネ・ブルターニュなどとそろえた（宗主権は帯で描かない）。note に「フランス王の封土、1529 年のカンブレーの和約で放棄」と書いた。
+- ザンクト・ガレン周辺：新設 `c15_st_gallen`（ザンクト・ガレン・ロールシャッハ・ヴィル）1453 switzerland/hre[indirect]「ザンクト・ガレン（同盟邦）」→ 1499 帝国の枠なし。`c15_toggenburg` 1453 other_hre/hre → 1468 修道院領（indirect）。`c15_rheintal` 1453 habsburg → 1460 アッペンツェル領（indirect）→ 1490 共同支配地（certain）。`c15_werdenberg` 1453 other_hre/hre → 1517 グラールス領。See-Gaster は変えていない。
+- ザイヤーン朝：君主 10 人（1430–1556、すべて「在位年は要確認」。ムハンマドの代数は書かない）。ワッタース朝のムハンマド・アッシャイフを 1472–1504、アルブルトゥカーリーを 1504–1526 に。
+- 出来事：ヴォルムス帝国議会（1521-04-17、events/germany_south.yaml、importance 1）、ロクロワの戦い（1643-05-19、events/west.yaml）。ユグノー戦争の始まり・サンバルテルミの虐殺は europe.yaml に分布担当が追加済み（確認した）。
+- アイルランドのカトリック同盟：1642 年から label「カトリック同盟の支配地」を `ireland_ormond`・`ireland_midlands`・`ireland_munster`・`ireland_connacht` と新設 `ireland_confed_ulster_wicklow`（キャヴァン・モナハン・ウィックロー、until 1647）に。色はアイルランド王国のまま（1648 年以降とそろえる）。ペイル・東アルスター・ドニゴールには付けない。
+
+### C（反映したもの）
+- デーフェンテル：新設 `c15_deventer`（1587 spain/hre → 1591 netherlands）。
+- オーファーアイセル（`c15_overijssel`）：1522 guelders[uncertain]（ヘルレ公カレル）→ 1528 は既存どおり。
+- サルッツォ（`c15_cuneo`）：1453–1535 を savoy[uncertain] にし（1559–1600 は既存の uncertain）、note に侯国のことを書いた。
+- スダン公国：新しい政体 `sedan`（west.yaml）と地域 `pre1648_sedan`（FRA-Sedan、until 1647）：1453 sedan[uncertain] → 1642 france。
+- 下ラウジッツ（`lower_lusatia`）：1453 brandenburg[uncertain]「下ラウジッツ（ブランデンブルクへの質）」→ 1462 bohemia（グーベンの和約）。
+- メルゼブルク・ナウムブルク（`saxony_thuringia`）：note に保護下の司教領と世俗化（1561・1564）を追記。
+- ヴォルフェンビュッテル（`brunswick_lands`）：1542 hesse_kassel/hre[occupied]（シュマルカルデン同盟）→ 1547 brunswick。
+- オトラント：新設 `c15_otranto`（ITA-Lecce、until 1480）：1480 ottoman[occupied]。
+- グラン・カナリア：新設 `gran_canaria`（ESP-Palmas_Las、until 1647）：1453 castile[nominal] → 1483 castile → 1516 spain。
+- モロッコのポルトガル・スペインの拠点：描かず、`morocco` の 1453・1603 の note に書いた（アゼンムール・マザガン、ララシュ・マアムーラ。サフィ・アガディールは既存の note にある）。
+- アルジェの君主：ハサン・パシャ（1557–61・1562–67）とムハンマド（サーリフ・レイスの子、1567–68）を別の行に。チュニスの 1574–1597：「オスマン帝国が任命するパシャ」（1574–91）「初期のデイたち」（1591–97）の行を足した（個々の名前は省略）。
+- 表記：「マグデブルク」→「マクデブルク」（germany_north の政体・地域・出来事）、「プラハの和議」→「プラハの和約」、netherlands の names を 1572–78「反乱諸州（ホラント・ゼーラント）」と 1579–80「ユトレヒト同盟」に分けた、baden の 1535–64 の略称を「バーデン＝プフォルツハイム」に。プロイセン公の摂政：ansbach の note を「1577 年に後見人、1578 年にポーランド王が承認」に、ducal_prussia の note にも同じ説明。
+- 小さな聖界諸侯・伯領の情勢（1453–1647 の 1 文）：bamberg・fulda・augsburg_bishopric・eichstatt・passau・freising・halberstadt・minden・verden・bremen_archbishopric・mansfeld・henneberg・lippe・waldeck・schaumburg。
+- 色：エルネスト系ザクセン（saxon_duchies）#c3e3b5 → #d6e2a0（黄み寄り）、ブルゴーニュ・ハプスブルク家のネーデルラント #fec6f6 → #d9c6f2（藤色。サヴォイアのくすんだピンクと分ける）、プファルツ＝ノイブルク #b3c3df → #a6d6c8（ブランデンブルクの青と分ける）。
+- 要確認のうち：spain の 1599–1647 の情勢に「大公たち」（1598–1621）、navarre の 1589–1620 の情勢に「同君連合の間もナバラの色で描く」を追記。
+
+### 反映しなかったもの
+- ドイツ騎士団総長「ハインリヒ・レッフレ・フォン・リヒテンベルク」：今の表記がすでに Richtenberg の読み（リヒテンベルク）で、直す所がなかった。
+- リンゲン伯領（1605–33）：DEU-Emsland の一部で、ピースが合わないので省略。
+- シャロレ：既存の note のまま（1648 年以降も france なので地図は変えない）。FRA-Bayonne：region の note にすでにバイヨンヌ市・ラブールのことがある。
+- 首都（hre のインスブルック、saxony 1453–84、brittany のナント、hesse_kassel のカッセル）：data/cities.yaml（別の担当が修正中）にあるので変えていない。分布担当への申し送り。
+- サヴォイア・帝国イタリアを帝国の枠の外にする扱い：1648 年以降と同じ方針なのでそのまま。
+
+### 1648 年以後を変えた所
+- 所属（owner・overlord・certainty）は変えていない（作業前の atlas.json と 1648–2025 をピース単位で比べて差なし）。
+- 表示だけ：saxon_duchies の色（1485–1867 に使う）、「マクデブルク」の表記、lippe・waldeck の情勢に 1453–1647 の項目を前に足した。
+
+### 確認
+- `npm run data`：警告なし。`--missing 1453,1480,1500,1512,1513,1520,1530,1550,1570,1587,1590,1610,1620,1635,1642,1647` で FRA ESP PRT GBR IRL MAR DZA TUN LBY DEU NLD BEL LUX CHE ITA AUT がゼロ。
+- snapshot（scratchpad の WC/snap）：1453 スイス東部（ザンクト・ガレンが薄い色、トッゲンブルク・ヴェルデンベルクが帝国諸邦）、1513 北イタリア（ベルガモ・ブレシアがアラゴンの占領）、1545 ヴォルフェンビュッテル、1590 デーフェンテル（スペイン）、1645 アイルランド（副ラベル「カトリック同盟の支配地」）。
