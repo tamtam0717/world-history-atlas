@@ -132,45 +132,23 @@
 
 - id: pinneberg_pre1648
   name: ピンネベルク
+  until: 1647
   select:
     pieces: ["DEU-Pinneberg", "DEU-Pinneberg_2"]
   timeline:
     - {"from": 1453, "owner": "schaumburg", "overlord": "hre", "note": "ピンネベルク伯領（シャウムブルク伯家のホルシュタイン領）"}
     - {"from": 1640, "owner": "denmark", "overlord": "hre", "cause": "シャウムブルク伯家の断絶（ピンネベルクはデンマーク王領に）", "source": "https://de.wikipedia.org/wiki/Herrschaft_Pinneberg"}
-    - {"from": 1648, "owner": "denmark", "overlord": "hre"}
-    - {"from": 1806, "owner": "denmark", "cause": "神聖ローマ帝国の解体（デンマークがホルシュタインを編入）"}
-    - {"from": 1815, "owner": "denmark", "overlord": "german_confederation", "cause": "ドイツ連邦の成立（ホルシュタインは連邦に加盟）"}
-    - {"from": 1864, "owner": "prussia", "overlord": "german_confederation", "certainty": "uncertain", "cause": "デンマーク戦争・ウィーン条約（デンマークがホルシュタインなどをプロイセンとオーストリアに譲る。両国の共同統治）", "source": "https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1864)"}
-    - {"from": 1865, "owner": "habsburg", "overlord": "german_confederation", "certainty": "uncertain", "cause": "ガスタイン協定（主権は共同のまま、ホルシュタインはオーストリアが管理）", "source": "https://ja.wikipedia.org/wiki/ガスタイン協定"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争・プラハ条約（オーストリアが権利を放棄し、プロイセンが併合。併合の布告は1867年1月）", "source": "https://ja.wikipedia.org/wiki/シュレースヴィヒ＝ホルシュタイン問題"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立（シュレースヴィヒ＝ホルシュタイン州）", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "britain", "certainty": "occupied", "label": "ドイツ（イギリス占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "west_germany", "cause": "ドイツ連邦共和国（西ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/西ドイツ"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ holstein_royal と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は holstein_royal の写しなので、holstein_royal を直すときはこちらも直すこと。
+  note: 1648年より前だけ holstein_royal と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは holstein_royal の記述が効く）。
 
 - id: dithmarschen_pre1648
   name: ディトマルシェン
+  until: 1647
   select:
     pieces: ["DEU-Dithmarschen", "DEU-Dithmarschen_2"]
   timeline:
     - {"from": 1453, "owner": "dithmarschen", "overlord": "hre", "note": "自由農民の共同体（農民共和国）。名目上はブレーメン大司教に属した"}
     - {"from": 1559, "owner": "denmark", "overlord": "hre", "cause": "「最後のフェーデ」でデンマーク王フレゼリク2世とホルシュタイン公たちがディトマルシェンを征服", "source": "https://de.wikipedia.org/wiki/Letzte_Fehde", "note": "1581年から北ディトマルシェンはゴットルプ家領、南ディトマルシェンは王領（地図ではまとめて王領）"}
-    - {"from": 1648, "owner": "denmark", "overlord": "hre"}
-    - {"from": 1806, "owner": "denmark", "cause": "神聖ローマ帝国の解体（デンマークがホルシュタインを編入）"}
-    - {"from": 1815, "owner": "denmark", "overlord": "german_confederation", "cause": "ドイツ連邦の成立（ホルシュタインは連邦に加盟）"}
-    - {"from": 1864, "owner": "prussia", "overlord": "german_confederation", "certainty": "uncertain", "cause": "デンマーク戦争・ウィーン条約（デンマークがホルシュタインなどをプロイセンとオーストリアに譲る。両国の共同統治）", "source": "https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1864)"}
-    - {"from": 1865, "owner": "habsburg", "overlord": "german_confederation", "certainty": "uncertain", "cause": "ガスタイン協定（主権は共同のまま、ホルシュタインはオーストリアが管理）", "source": "https://ja.wikipedia.org/wiki/ガスタイン協定"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争・プラハ条約（オーストリアが権利を放棄し、プロイセンが併合。併合の布告は1867年1月）", "source": "https://ja.wikipedia.org/wiki/シュレースヴィヒ＝ホルシュタイン問題"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立（シュレースヴィヒ＝ホルシュタイン州）", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "britain", "certainty": "occupied", "label": "ドイツ（イギリス占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "west_germany", "cause": "ドイツ連邦共和国（西ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/西ドイツ"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ holstein_royal と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は holstein_royal の写しなので、holstein_royal を直すときはこちらも直すこと。
+  note: 1648年より前だけ holstein_royal と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは holstein_royal の記述が効く）。
 
 - id: holstein_gottorp_lands
   name: ホルシュタイン（ゴットルプ家領）
@@ -557,24 +535,14 @@
 
 - id: elbe_elster_pre1648
   name: クールクライス東部（ヘルツベルク・リーベンヴェルダ）
+  until: 1647
   select:
     pieces: ["DEU-Elbe_Elster"]
   timeline:
     - {"from": 1453, "owner": "saxony", "overlord": "hre"}
     - {"from": 1485, "owner": "saxon_duchies", "overlord": "hre", "cause": "ライプツィヒの分割（選帝侯エルンストと弟アルブレヒトがヴェッティン家の領地を分ける）", "source": "https://ja.wikipedia.org/wiki/ライプツィヒの分割"}
     - {"from": 1547, "owner": "saxony", "overlord": "hre", "cause": "シュマルカルデン戦争・ヴィッテンベルク降伏（選帝侯位とヴィッテンベルク周辺がアルベルト系のモーリッツへ）", "source": "https://ja.wikipedia.org/wiki/シュマルカルデン戦争"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre", "source": "https://ja.wikipedia.org/wiki/ラウジッツ"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "prussia", "overlord": "german_confederation", "cause": "ウィーン会議（ザクセンの北半分をプロイセンへ）", "source": "https://ja.wikipedia.org/wiki/ウィーン議定書"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ lower_lusatia と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は lower_lusatia の写しなので、lower_lusatia を直すときはこちらも直すこと。
+  note: 1648年より前だけ lower_lusatia と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは lower_lusatia の記述が効く）。
 
 # ================================================================ ザクセン
 
@@ -603,6 +571,7 @@
 
 - id: bautzen_pre1648
   name: 上ラウジッツ（バウツェン）
+  until: 1647
   select:
     pieces: ["DEU-Bautzen"]
   timeline:
@@ -613,42 +582,22 @@
     - {"from": 1620, "owner": "saxony", "overlord": "hre", "certainty": "occupied", "label": "ラウジッツ（ザクセンの占領）", "cause": "ザクセン選帝侯が皇帝の委任でラウジッツを占領", "source": "https://de.wikipedia.org/wiki/Lausitz"}
     - {"from": 1623, "owner": "saxony", "overlord": "hre", "certainty": "uncertain", "label": "ラウジッツ（ザクセンへの質入れ）", "cause": "皇帝が戦費の担保としてラウジッツをザクセン選帝侯に質入れ"}
     - {"from": 1635, "owner": "saxony", "overlord": "hre", "cause": "プラハの和約（上下ラウジッツをボヘミア王の封としてザクセン選帝侯へ）", "source": "https://ja.wikipedia.org/wiki/プラハ条約_(1635年)"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "saxony", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "saxony", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "saxony", "overlord": "north_german_confederation", "cause": "北ドイツ連邦に加盟", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（ザクセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxony_core と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxony_core の写しなので、saxony_core を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxony_core と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxony_core の記述が効く）。
 
 - id: zwickau_pre1648
   name: ツヴィッカウ
+  until: 1647
   select:
     pieces: ["DEU-Zwickau"]
   timeline:
     - {"from": 1453, "owner": "saxony", "overlord": "hre"}
     - {"from": 1485, "owner": "saxon_duchies", "overlord": "hre", "cause": "ライプツィヒの分割（選帝侯エルンストと弟アルブレヒトがヴェッティン家の領地を分ける）", "source": "https://ja.wikipedia.org/wiki/ライプツィヒの分割"}
     - {"from": 1547, "owner": "saxony", "overlord": "hre", "cause": "シュマルカルデン戦争・ヴィッテンベルク降伏（選帝侯位とヴィッテンベルク周辺がアルベルト系のモーリッツへ）", "source": "https://ja.wikipedia.org/wiki/シュマルカルデン戦争"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "saxony", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "saxony", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "saxony", "overlord": "north_german_confederation", "cause": "北ドイツ連邦に加盟", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（ザクセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxony_core と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxony_core の写しなので、saxony_core を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxony_core と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxony_core の記述が効く）。
 
 - id: vogtland_pre1648
   name: フォークトラント（プラウエン）
+  until: 1647
   select:
     pieces: ["DEU-Vogtlandkreis"]
   timeline:
@@ -656,18 +605,7 @@
     - {"from": 1485, "owner": "saxon_duchies", "overlord": "hre", "cause": "ライプツィヒの分割（選帝侯エルンストと弟アルブレヒトがヴェッティン家の領地を分ける）", "source": "https://ja.wikipedia.org/wiki/ライプツィヒの分割"}
     - {"from": 1547, "owner": "other_hre", "overlord": "hre", "label": "プラウエン城伯領", "cause": "シュマルカルデン戦争の後、マイセン城伯ハインリヒ4世（プラウエン家）がボヘミア王の封として得る", "source": "https://de.wikipedia.org/wiki/Vogtland"}
     - {"from": 1559, "owner": "saxony", "overlord": "hre", "cause": "ザクセン選帝侯アウグストが質に取る（1569年に買い取る）"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "saxony", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "saxony", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "saxony", "overlord": "north_german_confederation", "cause": "北ドイツ連邦に加盟", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（ザクセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxony_core と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxony_core の写しなので、saxony_core を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxony_core と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxony_core の記述が効く）。
 
 - id: saxony_north_1815
   name: ザクセン北部（トルガウ・ヴィッテンベルク・上ラウジッツ北部）
@@ -699,6 +637,7 @@
 
 - id: gorlitz_pre1648
   name: 上ラウジッツ（ゲルリッツ・ツィッタウ）
+  until: 1647
   select:
     pieces: ["DEU-Gorlitz"]
   timeline:
@@ -709,18 +648,7 @@
     - {"from": 1620, "owner": "saxony", "overlord": "hre", "certainty": "occupied", "label": "ラウジッツ（ザクセンの占領）", "cause": "ザクセン選帝侯が皇帝の委任でラウジッツを占領", "source": "https://de.wikipedia.org/wiki/Lausitz"}
     - {"from": 1623, "owner": "saxony", "overlord": "hre", "certainty": "uncertain", "label": "ラウジッツ（ザクセンへの質入れ）", "cause": "皇帝が戦費の担保としてラウジッツをザクセン選帝侯に質入れ"}
     - {"from": 1635, "owner": "saxony", "overlord": "hre", "cause": "プラハの和約（上下ラウジッツをボヘミア王の封としてザクセン選帝侯へ）", "source": "https://ja.wikipedia.org/wiki/プラハ条約_(1635年)"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "prussia", "overlord": "german_confederation", "cause": "ウィーン会議（ザクセンの北半分をプロイセンへ）", "source": "https://ja.wikipedia.org/wiki/ウィーン議定書"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxony_north_1815 と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxony_north_1815 の写しなので、saxony_north_1815 を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxony_north_1815 と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxony_north_1815 の記述が効く）。
 
 - id: saxony_thuringia
   name: ザクセン領テューリンゲン（メルゼブルク・ヴァイセンフェルス・ザンガーハウゼンなど）
@@ -748,63 +676,33 @@
 
 - id: north_thuringia_pre1648
   name: 北テューリンゲン（ランゲンザルツァ・ヴァイセンゼー）
+  until: 1647
   select:
     pieces: ["DEU-Sommerda", "DEU-Unstrut_Hainich_Kreis"]
   timeline:
     - {"from": 1453, "owner": "thuringia", "overlord": "hre", "note": "帝国都市ミュールハウゼンを含む"}
     - {"from": 1482, "owner": "saxony", "overlord": "hre", "cause": "テューリンゲン方伯ヴィルヘルム3世の死（領地は甥の選帝侯エルンストと弟アルブレヒトへ）"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "prussia", "overlord": "german_confederation", "cause": "ウィーン会議（ザクセンの北半分をプロイセンへ）"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxony_thuringia と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxony_thuringia の写しなので、saxony_thuringia を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxony_thuringia と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxony_thuringia の記述が効く）。
 
 - id: mansfeld_pre1648
   name: マンスフェルト伯領
+  until: 1647
   select:
     pieces: ["DEU-Mansfeld_Sudharz"]
   timeline:
     - {"from": 1453, "owner": "mansfeld", "overlord": "hre", "note": "郡の西部（ザンガーハウゼン）はザクセン領、南部はシュトルベルク伯領"}
     - {"from": 1570, "owner": "saxony", "overlord": "hre", "cause": "伯家の借財のため、ザクセン選帝侯とマクデブルク大司教が統治権を差し押さえる", "source": "https://de.wikipedia.org/wiki/Grafschaft_Mansfeld"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "prussia", "overlord": "german_confederation", "cause": "ウィーン会議（ザクセンの北半分をプロイセンへ）"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxony_thuringia と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxony_thuringia の写しなので、saxony_thuringia を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxony_thuringia と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxony_thuringia の記述が効く）。
 
 - id: suhl_pre1648
   name: ヘンネベルク（ズール・シュロイジンゲン）
+  until: 1647
   select:
     pieces: ["DEU-Suhl_Kreisfreie_Stadt"]
   timeline:
     - {"from": 1453, "owner": "henneberg", "overlord": "hre"}
     - {"from": 1583, "owner": "saxony", "overlord": "hre", "cause": "ヘンネベルク伯家の断絶（ヴェッティン家の両系が共同で管理。1660年に分割）", "source": "https://de.wikipedia.org/wiki/Grafschaft_Henneberg"}
-    - {"from": 1648, "owner": "saxony", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxony", "overlord": "rhine_confederation", "cause": "ポーゼン条約（ザクセン王国の成立とライン同盟加盟）"}
-    - {"from": 1813, "owner": "saxony", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "prussia", "overlord": "german_confederation", "cause": "ウィーン会議（ザクセンの北半分をプロイセンへ）"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxony_thuringia と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxony_thuringia の写しなので、saxony_thuringia を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxony_thuringia と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxony_thuringia の記述が効く）。
 
 # ================================================================ テューリンゲン
 
@@ -834,26 +732,17 @@
 
 - id: meiningen_pre1648
   name: ヘンネベルク（マイニンゲン・シュマルカルデン）
+  until: 1647
   select:
     pieces: ["DEU-Schmalkalden_Meiningen"]
   timeline:
     - {"from": 1453, "owner": "henneberg", "overlord": "hre", "note": "マイニンゲンは1542年までヴュルツブルク司教領、シュマルカルデンはヘッセンとの共同領（1583年からヘッセン＝カッセル領）"}
     - {"from": 1583, "owner": "saxon_duchies", "overlord": "hre", "cause": "ヘンネベルク伯家の断絶（ヴェッティン家の両系が共同で管理。1660年に分割）", "source": "https://de.wikipedia.org/wiki/Grafschaft_Henneberg"}
-    - {"from": 1648, "owner": "saxon_duchies", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxon_duchies", "overlord": "rhine_confederation", "cause": "ライン同盟に加盟（1806年12月）"}
-    - {"from": 1813, "owner": "saxon_duchies", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "saxon_duchies", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "saxon_duchies", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "saxon_duchies", "overlord": "north_german_confederation", "cause": "北ドイツ連邦に加盟", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（ザクセン諸公国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxon_duchies_lands と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxon_duchies_lands の写しなので、saxon_duchies_lands を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxon_duchies_lands と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxon_duchies_lands の記述が効く）。
 
 - id: altenburg_pre1648
   name: アルテンブルク
+  until: 1647
   select:
     pieces: ["DEU-Altenburger_Land"]
   timeline:
@@ -861,18 +750,7 @@
     - {"from": 1485, "owner": "saxon_duchies", "overlord": "hre", "cause": "ライプツィヒの分割（選帝侯エルンストと弟アルブレヒトがヴェッティン家の領地を分ける）", "source": "https://ja.wikipedia.org/wiki/ライプツィヒの分割"}
     - {"from": 1547, "owner": "saxony", "overlord": "hre", "cause": "シュマルカルデン戦争・ヴィッテンベルク降伏（選帝侯位とヴィッテンベルク周辺がアルベルト系のモーリッツへ）", "source": "https://ja.wikipedia.org/wiki/シュマルカルデン戦争"}
     - {"from": 1554, "owner": "saxon_duchies", "overlord": "hre", "cause": "ナウムブルク条約（アルテンブルクなどがエルネスト系に戻される）", "source": "https://de.wikipedia.org/wiki/Naumburger_Vertrag_(1554)", "note": "要確認"}
-    - {"from": 1648, "owner": "saxon_duchies", "overlord": "hre"}
-    - {"from": 1806, "owner": "saxon_duchies", "overlord": "rhine_confederation", "cause": "ライン同盟に加盟（1806年12月）"}
-    - {"from": 1813, "owner": "saxon_duchies", "cause": "ライン同盟の解体"}
-    - {"from": 1815, "owner": "saxon_duchies", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "saxon_duchies", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "saxon_duchies", "overlord": "north_german_confederation", "cause": "北ドイツ連邦に加盟", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（ザクセン諸公国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ saxon_duchies_lands と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は saxon_duchies_lands の写しなので、saxon_duchies_lands を直すときはこちらも直すこと。
+  note: 1648年より前だけ saxon_duchies_lands と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは saxon_duchies_lands の記述が効く）。
 
 - id: reuss_lands
   name: ロイス
@@ -1017,23 +895,12 @@
 
 - id: halberstadt_pre1648
   name: ハルバーシュタット司教領
+  until: 1647
   select:
     pieces: ["DEU-Harz"]
   timeline:
     - {"from": 1453, "owner": "halberstadt", "overlord": "hre", "note": "ハルバーシュタット司教領（ヴェルニゲローデ伯領・クヴェードリンブルク帝国修道院・ブランケンブルクなどを含めて描く）"}
-    - {"from": 1648, "owner": "prussia", "overlord": "hre", "cause": "ウェストファリア条約（ハルバーシュタット司教領をブランデンブルクへ）"}
-    - {"from": 1806, "owner": "prussia", "cause": "神聖ローマ帝国の解体"}
-    - {"from": 1807, "owner": "westphalia_kingdom", "overlord": "rhine_confederation", "cause": "ティルジット条約（エルベ川以西をヴェストファーレン王国へ）"}
-    - {"from": 1813, "owner": "prussia", "cause": "ヴェストファーレン王国の崩壊"}
-    - {"from": 1815, "owner": "prussia", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "soviet_union", "certainty": "occupied", "label": "ドイツ（ソ連占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "east_germany", "cause": "ドイツ民主共和国（東ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/ドイツ民主共和国"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ altmark_halberstadt と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は altmark_halberstadt の写しなので、altmark_halberstadt を直すときはこちらも直すこと。
+  note: 1648年より前だけ altmark_halberstadt と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは altmark_halberstadt の記述が効く）。
 
 - id: magdeburg_west
   name: マグデブルク（エルベ川以西）・ハレ
@@ -1139,7 +1006,7 @@
     - {"from": 1495, "owner": "hanover", "overlord": "hre", "cause": "ヴィルヘルム2世が息子たちに領地を分ける（エーリヒ1世がカレンベルク＝ゲッティンゲン侯に）"}
     - {"from": 1584, "owner": "brunswick", "overlord": "hre", "cause": "エーリヒ2世の死でカレンベルク系が断絶（ヴォルフェンビュッテル公ユリウスが相続）"}
     - {"from": 1635, "owner": "hanover", "overlord": "hre", "cause": "ヴォルフェンビュッテル中家の断絶（1634）による再分割（カレンベルク・ゲッティンゲンはリューネブルク家のゲオルクへ）"}
-    - {from: 1648, owner: hanover, overlord: hre}
+    - {from: 1648, owner: hanover, overlord: hre, note: "グルーベンハーゲン（ノルトハイム郡）は実際には1665年までリューネブルク（ツェレ）家の領地（簡略化）"}
     - {from: 1803, owner: france, overlord: hre, certainty: occupied, cause: フランスがハノーファーを占領（アルトレンブルク協定）}
     - {from: 1806, owner: france, certainty: occupied, cause: 神聖ローマ帝国の解体}
     - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ヴェストファーレン王国の成立}
@@ -1162,26 +1029,14 @@
 
 - id: grubenhagen_pre1648
   name: グルーベンハーゲン（ノルトハイム・アインベック・オステローデ）
+  until: 1647
   select:
     pieces: ["DEU-Northeim"]
   timeline:
     - {"from": 1453, "owner": "grubenhagen", "overlord": "hre"}
     - {"from": 1596, "owner": "brunswick", "overlord": "hre", "cause": "グルーベンハーゲン系の断絶（ヴォルフェンビュッテル公ハインリヒ・ユリウスが占有）"}
     - {"from": 1617, "owner": "celle", "overlord": "hre", "cause": "帝国宮廷法院の判決でリューネブルク（ツェレ）家のものとなる", "source": "https://de.wikipedia.org/wiki/Fürstentum_Grubenhagen", "note": "1648年からの記述はハノーファー（カレンベルク）にまとめているが、実際の移管は1665年"}
-    - {"from": 1648, "owner": "hanover", "overlord": "hre"}
-    - {"from": 1803, "owner": "france", "overlord": "hre", "certainty": "occupied", "cause": "フランスがハノーファーを占領（アルトレンブルク協定）"}
-    - {"from": 1806, "owner": "france", "certainty": "occupied", "cause": "神聖ローマ帝国の解体"}
-    - {"from": 1807, "owner": "westphalia_kingdom", "overlord": "rhine_confederation", "cause": "ヴェストファーレン王国の成立"}
-    - {"from": 1813, "owner": "hanover", "cause": "ヴェストファーレン王国の崩壊"}
-    - {"from": 1815, "owner": "hanover", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争でオーストリア側についたハノーファー王国をプロイセンが併合（ハノーファー州）", "source": "https://ja.wikipedia.org/wiki/ハノーファー王国"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "britain", "certainty": "occupied", "label": "ドイツ（イギリス占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "west_germany", "cause": "ドイツ連邦共和国（西ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/西ドイツ"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ gottingen_grubenhagen と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は gottingen_grubenhagen の写しなので、gottingen_grubenhagen を直すときはこちらも直すこと。
+  note: 1648年より前だけ gottingen_grubenhagen と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは gottingen_grubenhagen の記述が効く）。
 
 - id: hoya
   name: ホーヤ（ニーンブルク）
@@ -1332,27 +1187,13 @@
 
 - id: verden_pre1648
   name: フェルデン司教領
+  until: 1647
   select:
     pieces: ["DEU-Verden", "DEU-Rotenburg_Wumme"]
   timeline:
     - {"from": 1453, "owner": "verden", "overlord": "hre", "note": "ローテンブルク郡の北部（ブレーマーフェルデ・ツェーフェン）はブレーメン大司教領だが、郡全体をフェルデン司教領とした"}
     - {"from": 1645, "owner": "sweden", "overlord": "hre", "certainty": "occupied", "label": "フェルデン（スウェーデン軍の占領）", "cause": "トルステンソン戦争でスウェーデン軍がフェルデン司教領を占領"}
-    - {"from": 1648, "owner": "sweden", "overlord": "hre", "cause": "ウェストファリア条約（ブレーメン大司教領・フェルデン司教領をスウェーデンへ）", "source": "https://de.wikipedia.org/wiki/Herzogtümer_Bremen_und_Verden"}
-    - {"from": 1712, "owner": "denmark", "overlord": "hre", "certainty": "occupied", "cause": "大北方戦争でデンマークが占領"}
-    - {"from": 1715, "owner": "hanover", "overlord": "hre", "cause": "デンマークがハノーファーに売却（1719年ストックホルム条約でスウェーデンが割譲を承認）", "source": "https://ja.wikipedia.org/wiki/ストックホルム条約_(1719年)"}
-    - {"from": 1803, "owner": "france", "overlord": "hre", "certainty": "occupied", "cause": "フランスがハノーファーを占領"}
-    - {"from": 1806, "owner": "france", "certainty": "occupied", "cause": "神聖ローマ帝国の解体"}
-    - {"from": 1810, "owner": "france", "cause": "フランスが北西ドイツを併合"}
-    - {"from": 1813, "owner": "hanover", "cause": "フランス軍の撤退"}
-    - {"from": 1815, "owner": "hanover", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争でオーストリア側についたハノーファー王国をプロイセンが併合（ハノーファー州）", "source": "https://ja.wikipedia.org/wiki/ハノーファー王国"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "britain", "certainty": "occupied", "label": "ドイツ（イギリス占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "west_germany", "cause": "ドイツ連邦共和国（西ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/西ドイツ"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ bremen_verden と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は bremen_verden の写しなので、bremen_verden を直すときはこちらも直すこと。
+  note: 1648年より前だけ bremen_verden と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは bremen_verden の記述が効く）。
 
 - id: bremen_city
   name: ブレーメン
@@ -1426,26 +1267,14 @@
 
 - id: salzgitter_pre1648
   name: ザルツギッター（ヒルデスハイム大司教領の南部）
+  until: 1647
   select:
     pieces: ["DEU-Salzgitter_Kreisfreie_Stadt"]
   timeline:
     - {"from": 1453, "owner": "hildesheim", "overlord": "hre"}
     - {"from": 1523, "owner": "brunswick", "overlord": "hre", "cause": "ヒルデスハイム司教領のフェーデ・クヴェードリンブルク協定（司教領の大部分がブラウンシュヴァイク＝ヴォルフェンビュッテルとカレンベルクへ）", "source": "https://de.wikipedia.org/wiki/Hildesheimer_Stiftsfehde"}
     - {"from": 1643, "owner": "hildesheim", "overlord": "hre", "cause": "ゴスラー条約（ヒルデスハイム司教が失った領地を取り戻す）", "source": "https://de.wikipedia.org/wiki/Hochstift_Hildesheim"}
-    - {"from": 1648, "owner": "hildesheim", "overlord": "hre"}
-    - {"from": 1803, "owner": "prussia", "overlord": "hre", "cause": "帝国代表者会議主要決議（1802年に占領）"}
-    - {"from": 1806, "owner": "prussia", "cause": "神聖ローマ帝国の解体"}
-    - {"from": 1807, "owner": "westphalia_kingdom", "overlord": "rhine_confederation", "cause": "ティルジット条約（ヴェストファーレン王国へ）"}
-    - {"from": 1813, "owner": "hanover", "cause": "ヴェストファーレン王国の崩壊（ライヒェンバッハ条約でプロイセンはハノーファーへの譲渡を約束）", "note": "要確認：1813–1815年の実際の管理者（ハノーファーの接収時期）。"}
-    - {"from": 1815, "owner": "hanover", "overlord": "german_confederation", "cause": "ウィーン会議（ヒルデスハイムをハノーファーへ）"}
-    - {"from": 1866, "owner": "prussia", "cause": "普墺戦争でオーストリア側についたハノーファー王国をプロイセンが併合（ハノーファー州）", "source": "https://ja.wikipedia.org/wiki/ハノーファー王国"}
-    - {"from": 1867, "owner": "prussia", "overlord": "north_german_confederation", "cause": "北ドイツ連邦の成立", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（プロイセン王国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "britain", "certainty": "occupied", "label": "ドイツ（イギリス占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "west_germany", "cause": "ドイツ連邦共和国（西ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/西ドイツ"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ hildesheim_lands と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は hildesheim_lands の写しなので、hildesheim_lands を直すときはこちらも直すこと。
+  note: 1648年より前だけ hildesheim_lands と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは hildesheim_lands の記述が効く）。
 
 - id: schaumburg
   name: シャウムブルク
@@ -1582,28 +1411,14 @@
 
 - id: delmenhorst_pre1648
   name: デルメンホルスト
+  until: 1647
   select:
     pieces: ["DEU-Delmenhorst_Kreisfreie_Stadt"]
   timeline:
     - {"from": 1453, "owner": "oldenburg", "overlord": "hre"}
     - {"from": 1482, "owner": "munster", "overlord": "hre", "cause": "ミュンスター司教がデルメンホルストを攻め取る", "source": "https://de.wikipedia.org/wiki/Grafschaft_Delmenhorst"}
     - {"from": 1547, "owner": "oldenburg", "overlord": "hre", "cause": "オルデンブルク伯アントン1世がデルメンホルストを奪回"}
-    - {"from": 1648, "owner": "oldenburg", "overlord": "hre"}
-    - {"from": 1667, "owner": "denmark", "overlord": "hre", "cause": "アントン・ギュンター伯の死去（デンマーク王が継承）", "source": "https://de.wikipedia.org/wiki/Grafschaft_Oldenburg"}
-    - {"from": 1773, "owner": "oldenburg", "overlord": "hre", "cause": "ツァールスコエ・セロー条約（ゴットルプ家の若い系統へ。1774年公国）", "source": "https://ja.wikipedia.org/wiki/オルデンブルク公国"}
-    - {"from": 1806, "owner": "oldenburg", "cause": "神聖ローマ帝国の解体"}
-    - {"from": 1808, "owner": "oldenburg", "overlord": "rhine_confederation", "cause": "ライン同盟に加盟"}
-    - {"from": 1810, "owner": "france", "cause": "フランスが北西ドイツを併合"}
-    - {"from": 1813, "owner": "oldenburg", "cause": "フランス軍の撤退"}
-    - {"from": 1815, "owner": "oldenburg", "overlord": "german_confederation", "cause": "ドイツ連邦の成立"}
-    - {"from": 1866, "owner": "oldenburg", "cause": "普墺戦争の結果ドイツ連邦が解体"}
-    - {"from": 1867, "owner": "oldenburg", "overlord": "north_german_confederation", "cause": "北ドイツ連邦に加盟", "source": "https://ja.wikipedia.org/wiki/北ドイツ連邦"}
-    - {"from": 1871, "owner": "german_empire", "cause": "ドイツ帝国の成立（オルデンブルク大公国は帝国の構成国として存続）", "source": "https://ja.wikipedia.org/wiki/ドイツ帝国"}
-    - {"from": 1918, "owner": "germany", "cause": "ドイツ革命で帝政が倒れ共和国となる（ヴァイマル共和国）", "source": "https://ja.wikipedia.org/wiki/ドイツ革命"}
-    - {"from": 1945, "owner": "britain", "certainty": "occupied", "label": "ドイツ（イギリス占領地区）", "cause": "ドイツの無条件降伏と連合国による分割占領", "source": "https://ja.wikipedia.org/wiki/連合軍軍政期_(ドイツ)"}
-    - {"from": 1949, "owner": "west_germany", "cause": "ドイツ連邦共和国（西ドイツ）の成立", "source": "https://ja.wikipedia.org/wiki/西ドイツ"}
-    - {"from": 1990, "owner": "germany", "cause": "ドイツ統一（東ドイツが西ドイツに加わる）", "source": "https://ja.wikipedia.org/wiki/ドイツ再統一"}
-  note: 1648年より前だけ oldenburg_lands と所属が違うピースを分けた上書き用の地域（小さい地域が優先される決まりを使う）。1648年以降の記述は oldenburg_lands の写しなので、oldenburg_lands を直すときはこちらも直すこと。
+  note: 1648年より前だけ oldenburg_lands と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは oldenburg_lands の記述が効く）。
 
 - id: jever
   name: ヤーファー

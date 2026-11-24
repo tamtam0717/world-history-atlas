@@ -2652,10 +2652,11 @@
       source: "https://en.wikipedia.org/wiki/Malta_Independence_Act_1964"
 
 # ================================================================ 1453–1647 の例外（担当 C、1648 年より前）
-# 1648 年以降の項目は、元の地域の所属をそのまま写したもの（小さい地域が優先される決まりのため）。
+# until: 1647（1648 年以降は外側の地域の記述が効く）。
 
 - id: c15_amsterdam
   name: アムステルダム（1578年まで国王側）
+  until: 1647
   select:
     pieces: [NLD-Amsterdam]
   timeline:
@@ -2664,14 +2665,10 @@
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - {from: 1572, owner: spain, overlord: hre, cause: アムステルダムはカトリックの市政府のもとで国王側にとどまる}
     - {from: 1578, owner: netherlands, cause: 「アムステルダムの変革」でカルヴァン派が市政を握り、反乱側に加わる, source: 'https://en.wikipedia.org/wiki/Alteratie'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_haarlem
   name: ハールレム（1573–1577年 スペイン軍の占領）
+  until: 1647
   select:
     pieces: [NLD-Haarlem]
   timeline:
@@ -2681,14 +2678,10 @@
     - {from: 1572, owner: netherlands, cause: 海乞食団がブリーレを占領（1572年4月）。ホラント・ゼーラントの諸都市がオラニエ公ウィレムを総督に迎えて反乱（オランダ独立戦争）, source: 'https://ja.wikipedia.org/wiki/八十年戦争'}
     - {from: 1573, owner: spain, overlord: hre, certainty: occupied, cause: ハールレム包囲戦。7か月の包囲の末、スペイン軍に降伏（1573年7月）, source: 'https://ja.wikipedia.org/wiki/ハールレム包囲戦'}
     - {from: 1577, owner: netherlands, cause: ヘントの和約後、スペイン軍が撤退}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_middelburg
   name: ミデルブルフ（1574年まで国王側）
+  until: 1647
   select:
     pieces: [NLD-Middelburg]
   timeline:
@@ -2697,27 +2690,19 @@
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - {from: 1572, owner: spain, overlord: hre, cause: ミデルブルフはスペイン軍の守備のもとで国王側にとどまる}
     - {from: 1574, owner: netherlands, cause: 包囲の末、ミデルブルフが反乱側に降伏（1574年2月）, source: 'https://en.wikipedia.org/wiki/Siege_of_Middelburg'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_purmer_beemster
   name: ベームステル・プルメル（17世紀前半まで湖）
+  until: 1647
   select:
     pieces: [NLD-Purmerend]
   timeline:
     - {from: 1453, owner: water, note: ベームステル湖・プルメル湖（ピースの大部分）}
     - {from: 1612, owner: netherlands, cause: ベームステル湖の干拓が完成（1612年。プルメル湖は1622年）, source: 'https://en.wikipedia.org/wiki/Beemster'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_utrecht
   name: ユトレヒト司教領（ネーデルシュティフト）
+  until: 1647
   select:
     adm1: [NLD/Utrecht]
   timeline:
@@ -2727,14 +2712,10 @@
     - {from: 1528, owner: habsburg_netherlands, overlord: hre, cause: 司教ハインリヒ・フォン・デア・プファルツが世俗の支配権をカール5世に譲る（1528年）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟の中心, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_overijssel
   name: オーファーアイセル（オーファーシュティフト）
+  until: 1647
   select:
     adm1: [NLD/Overijssel]
   timeline:
@@ -2744,14 +2725,10 @@
     - {from: 1528, owner: habsburg_netherlands, overlord: hre, cause: 司教ハインリヒ・フォン・デア・プファルツが世俗の支配権をカール5世に譲る（1528年）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト司教領'}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_twente
   name: トゥウェンテ（オルデンザール）
+  until: 1647
   select:
     pieces: [NLD-Almelo, NLD-Borne, NLD-Dinkelland, NLD-Enschede, NLD-Haaksbergen, NLD-Hengelo_O, NLD-Hof_van_Twente, NLD-Losser, NLD-Oldenzaal, NLD-Tubbergen, NLD-Twenterand, NLD-Wierden]
   timeline:
@@ -2765,14 +2742,10 @@
     - {from: 1597, owner: netherlands, cause: マウリッツの遠征（1597年）でオルデンザール・エンスヘデなどを攻略, source: 'https://ja.wikipedia.org/wiki/マウリッツ_(オラニエ公)'}
     - {from: 1605, owner: spain, overlord: hre, certainty: uncertain, cause: スピノラの遠征でオルデンザールをスペインが奪回, source: 'https://ja.wikipedia.org/wiki/アンブロジオ・スピノラ'}
     - {from: 1626, owner: netherlands, cause: エルンスト・カジミールがオルデンザールを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Oldenzaal_(1626)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_drenthe
   name: ドレンテ
+  until: 1647
   select:
     adm1: [NLD/Drenthe]
   timeline:
@@ -2785,14 +2758,10 @@
     - {from: 1577, owner: netherlands, cause: ヘントの和約後、全国議会の側に立つ}
     - {from: 1580, owner: spain, overlord: hre, certainty: uncertain, cause: 総督レンネンベルクがスペイン側に寝返る。ドレンテは両軍の戦場に}
     - {from: 1592, owner: netherlands, cause: マウリッツがクーフォルデンを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Coevorden_(1592)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_groningen
   name: フローニンゲン（市とオメランデン）
+  until: 1647
   select:
     adm1: [NLD/Groningen]
   timeline:
@@ -2803,14 +2772,10 @@
     - {from: 1577, owner: netherlands, cause: ヘントの和約後、全国議会の側に立つ}
     - {from: 1580, owner: spain, overlord: hre, cause: 総督レンネンベルクがスペイン側に寝返り、フローニンゲン市は国王側に, source: 'https://en.wikipedia.org/wiki/George_van_Lalaing,_Count_of_Rennenberg'}
     - {from: 1594, owner: netherlands, cause: マウリッツがフローニンゲンを攻略。連邦の7番目の州に, source: 'https://en.wikipedia.org/wiki/Siege_of_Groningen_(1594)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_friesland
   name: フリースラント
+  until: 1647
   select:
     adm1: [NLD/Fryslân]
   timeline:
@@ -2820,14 +2785,10 @@
     - {from: 1524, owner: habsburg_netherlands, overlord: hre, cause: ヘルレ軍を追い出し、カール5世の支配が固まる, source: 'https://en.wikipedia.org/wiki/Lordship_of_Frisia'}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位}
     - {from: 1577, owner: netherlands, cause: ヘントの和約後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_guelders
   name: ヘルレ公国（アルンヘム・ズトフェン地区など）
+  until: 1647
   select:
     adm1: [NLD/Gelderland]
     exclude: [NLD-Nijmegen, NLD-Berg_en_Dal, NLD-Heumen, NLD-Wijchen, NLD-Beuningen, NLD-Druten, NLD-West_Maas_en_Waal, NLD-Overbetuwe, NLD-Lingewaard]
@@ -2840,14 +2801,10 @@
     - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_betuwe
   name: オーフェルベトゥウェ・リンゲワールト（ヘルレ公国）
+  until: 1647
   select:
     pieces: [NLD-Overbetuwe, NLD-Lingewaard]
   timeline:
@@ -2859,14 +2816,10 @@
     - {from: 1543, owner: habsburg_netherlands, overlord: hre, cause: フェンロー条約。ヘルレ公国（ズトフェン伯領を含む）がカール5世の領土に, source: 'https://en.wikipedia.org/wiki/Treaty_of_Venlo'}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に}
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_nijmegen
   name: ナイメーヘン地区（1585–1591年 スペイン領）
+  until: 1647
   select:
     pieces: [NLD-Nijmegen, NLD-Berg_en_Dal, NLD-Heumen, NLD-Wijchen, NLD-Beuningen, NLD-Druten, NLD-West_Maas_en_Waal]
   timeline:
@@ -2880,14 +2833,10 @@
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
     - {from: 1585, owner: spain, overlord: hre, cause: ナイメーヘン市が国王側に戻る（パルマ公の攻勢）, source: 'https://en.wikipedia.org/wiki/Nijmegen'}
     - {from: 1591, owner: netherlands, cause: マウリッツがナイメーヘンを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Nijmegen_(1591)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_achterhoek
   name: ズトフェン地区（アハテルフーク）
+  until: 1647
   select:
     pieces: [NLD-Zutphen, NLD-Lochem, NLD-Berkelland, NLD-Bronckhorst, NLD-Doetinchem, NLD-Montferland, NLD-Oude_IJsselstreek, NLD-Aalten, NLD-Winterswijk]
   timeline:
@@ -2901,14 +2850,10 @@
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟に加わる, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
     - {from: 1583, owner: spain, overlord: hre, certainty: uncertain, cause: スペイン軍がズトフェンを奪う（1583年）, source: 'https://en.wikipedia.org/wiki/Siege_of_Zutphen_(1591)'}
     - {from: 1591, owner: netherlands, cause: マウリッツがズトフェン・デーフェンテルを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Zutphen_(1591)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_groenlo
   name: フルンロ（フロル）
+  until: 1647
   select:
     pieces: [NLD-Oost_Gelre]
   timeline:
@@ -2924,14 +2869,10 @@
     - {from: 1597, owner: netherlands, cause: マウリッツがフルンロを攻略}
     - {from: 1606, owner: spain, overlord: hre, cause: スピノラがフルンロを奪回}
     - {from: 1627, owner: netherlands, cause: フレデリック・ヘンドリックがフルンロを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Groenlo_(1627)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1945, owner: netherlands, cause: 連合軍による解放とドイツ軍の降伏（1945年5月）}
 
 - id: c15_brabant_north
   name: ブラバント北部（ベルヘン・オプ・ゾームなど）
+  until: 1647
   select:
     adm1: [NLD/Noord-Brabant]
     exclude: [NLD-Altena]
@@ -2940,14 +2881,10 @@
     - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟で北部7州が結束し、1581年に国王フェリペ2世の統治権を否認（独立宣言）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_meierij
   name: '''s-ヘルトーヘンボス地区（メイエライ）'
+  until: 1647
   select:
     pieces: [NLD-s_Hertogenbosch, NLD-Vught, NLD-Sint_Michielsgestel, NLD-Boxtel, NLD-Oisterwijk, NLD-Tilburg, NLD-Goirle, NLD-Hilvarenbeek, NLD-Oirschot, NLD-Best, NLD-Eindhoven, NLD-Veldhoven, NLD-Waalre, NLD-Valkenswaard, NLD-Bergeijk, NLD-Eersel, NLD-Bladel, NLD-Reusel_De_Mierden, NLD-Heeze_Leende, NLD-Cranendonck, NLD-Someren, NLD-Asten, NLD-Deurne, NLD-Helmond, NLD-Geldrop_Mierlo, NLD-Nuenen_Gerwen_en_Nederwetten, NLD-Son_en_Breugel, NLD-Laarbeek, NLD-Gemert_Bakel, NLD-Boekel, NLD-Meierijstad, NLD-Bernheze, NLD-Oss, NLD-Maashorst, NLD-Waalwijk, NLD-Loon_op_Zand]
   timeline:
@@ -2957,14 +2894,10 @@
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟で北部7州が結束し、1581年に国王フェリペ2世の統治権を否認（独立宣言）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
     - {from: 1579, owner: spain, overlord: hre, cause: '''s-ヘルトーヘンボスが国王側に戻る', source: 'https://en.wikipedia.org/wiki/%27s-Hertogenbosch'}
     - {from: 1629, owner: netherlands, cause: フレデリック・ヘンドリックが's-ヘルトーヘンボスを攻略（国家連合直轄領に）, source: 'https://en.wikipedia.org/wiki/Siege_of_%27s-Hertogenbosch'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_breda
   name: ブレダ男爵領
+  until: 1647
   select:
     pieces: [NLD-Breda, NLD-Alphen_Chaam, NLD-Baarle_Nassau, NLD-Gilze_en_Rijen, NLD-Oosterhout, NLD-Dongen, NLD-Etten_Leur, NLD-Zundert, NLD-Rucphen, NLD-Drimmelen]
   timeline:
@@ -2976,14 +2909,10 @@
     - {from: 1590, owner: netherlands, cause: 泥炭船に兵を隠す計略で、マウリッツがブレダを奪回, source: 'https://en.wikipedia.org/wiki/Capture_of_Breda_(1590)'}
     - {from: 1625, owner: spain, overlord: hre, cause: スピノラが包囲の末ブレダを攻略（ベラスケス『ブレダの開城』）, source: 'https://ja.wikipedia.org/wiki/ブレダの開城'}
     - {from: 1637, owner: netherlands, cause: フレデリック・ヘンドリックがブレダを奪回, source: 'https://en.wikipedia.org/wiki/Siege_of_Breda_(1637)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_grave
   name: フラーフェ・カイク地方
+  until: 1647
   select:
     pieces: [NLD-Land_van_Cuijk]
   timeline:
@@ -2993,14 +2922,10 @@
     - {from: 1577, owner: netherlands, cause: ヘントの和約（1576年）後、全国議会の側に立つ。1579年のユトレヒト同盟で北部7州が結束し、1581年に国王フェリペ2世の統治権を否認（独立宣言）, source: 'https://ja.wikipedia.org/wiki/ユトレヒト同盟'}
     - {from: 1586, owner: spain, overlord: hre, cause: パルマ公がフラーフェを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Grave_(1586)'}
     - {from: 1602, owner: netherlands, cause: マウリッツがフラーフェを攻略, source: 'https://en.wikipedia.org/wiki/Siege_of_Grave_(1602)'}
-    - {from: 1648, owner: netherlands, cause: ウェストファリア条約（ミュンスター条約）で独立を承認, source: 'https://ja.wikipedia.org/wiki/ミュンスター条約_(1648年)'}
-    - {from: 1810, owner: france, cause: ホラント王国のフランス帝国への併合, source: 'https://ja.wikipedia.org/wiki/ホラント王国'}
-    - {from: 1813, owner: netherlands, cause: フランス支配からの解放・ウィレム1世の帰国, source: 'https://ja.wikipedia.org/wiki/ネーデルラント連合王国'}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_sluis
   name: スライス（ゼーラント・フランデレン西部）
+  until: 1647
   select:
     pieces: [NLD-Sluis]
   timeline:
@@ -3012,14 +2937,10 @@
     - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
     - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
     - {from: 1604, owner: netherlands, cause: マウリッツがスライスを攻略（オーステンデ陥落と同じ年）, source: 'https://en.wikipedia.org/wiki/Siege_of_Sluis_(1604)'}
-    - {from: 1648, owner: netherlands}
-    - {from: 1795, owner: france, cause: ハーグ条約（バタヴィア共和国がフランスに割譲）, source: 'https://en.wikipedia.org/wiki/Treaty_of_The_Hague_(1795)'}
-    - {from: 1814, owner: netherlands, cause: パリ条約（第1次）}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_terneuzen
   name: テルネーゼン・アクセル
+  until: 1647
   select:
     pieces: [NLD-Terneuzen]
   timeline:
@@ -3030,14 +2951,10 @@
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
     - {from: 1584, owner: netherlands, cause: フランドルの大部分がスペインに戻った後も、テルネーゼンなどは反乱側が確保（アクセルは1586年に攻略。サス・ファン・ヘントは1644年まで国王側）, source: 'https://en.wikipedia.org/wiki/Terneuzen'}
-    - {from: 1648, owner: netherlands}
-    - {from: 1795, owner: france, cause: ハーグ条約（バタヴィア共和国がフランスに割譲）, source: 'https://en.wikipedia.org/wiki/Treaty_of_The_Hague_(1795)'}
-    - {from: 1814, owner: netherlands, cause: パリ条約（第1次）}
-    - {from: 1940, owner: germany, certainty: occupied, label: オランダ（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月。ロッテルダム爆撃の後に降伏）。女王と政府はロンドンに亡命し、ドイツの国家弁務官が統治した, source: 'https://en.wikipedia.org/wiki/German_occupation_of_the_Netherlands'}
-    - {from: 1944, owner: netherlands, cause: 連合軍による解放（1944年9〜11月。南部）}
 
 - id: c15_flanders
   name: フランドル伯領
+  until: 1647
   select:
     pieces: [BEL-Bruges, BEL-Dixmude, BEL-Ostende, BEL-Roulers, BEL-Tielt, BEL-Gand, BEL-Eeklo, BEL-Alost, BEL-Termonde, BEL-Saint_Nicolas, BEL-Mouscron]
   timeline:
@@ -3048,19 +2965,10 @@
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
     - {from: 1584, owner: spain, overlord: hre, cause: パルマ公アレッサンドロ・ファルネーゼの再征服（ブルッヘ・ヘントが降伏）, source: 'https://ja.wikipedia.org/wiki/アレッサンドロ・ファルネーゼ_(パルマ公)'}
-    - {from: 1648, owner: spain, overlord: hre, note: ブルグント・クライスとして帝国に属する。}
-    - {from: 1714, owner: habsburg, overlord: hre, cause: ユトレヒト条約（1713）・ラシュタット条約（1714）でオーストリア領に, source: 'https://ja.wikipedia.org/wiki/ラシュタット条約'}
-    - {from: 1795, owner: france, cause: フランスへの併合（1797年カンポ・フォルミオ条約でオーストリアが承認）, source: 'https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約'}
-    - {from: 1814, owner: netherlands, certainty: uncertain, cause: パリ条約（第1次）・ロンドン八か条議定書（オランダとの合同を決定）, note: 1814年には連合国の暫定統治下にあり（8月からオラニエ公が総督）、合同はウィーン会議で確定した。, source: 'https://en.wikipedia.org/wiki/Eight_Articles_of_London'}
-    - {from: 1815, owner: netherlands, cause: ウィーン議定書（ネーデルラント連合王国の成立）, source: 'https://ja.wikipedia.org/wiki/ウィーン議定書'}
-    - {from: 1830, owner: belgium, cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）, note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。, source: 'https://ja.wikipedia.org/wiki/ベルギー独立革命'}
-    - {from: 1914, owner: german_empire, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I'}
-    - {from: 1918, owner: belgium, cause: 第一次世界大戦の休戦（11月）でドイツ軍が撤退}
-    - {from: 1940, owner: germany, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II'}
-    - {from: 1944, owner: belgium, cause: 連合軍による解放（9月）, note: 12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。}
 
 - id: c15_ostend
   name: オーステンデ（1604年まで反乱側）
+  until: 1647
   select:
     pieces: [BEL-Ostende]
   timeline:
@@ -3072,19 +2980,10 @@
     - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ヘント・ブルッヘなどはカルヴァン派の都市共和国に（1577–84年）, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
     - {from: 1584, owner: netherlands, cause: フランドルの大部分がスペインに戻った後も、海港オーステンデは反乱側が確保, source: 'https://ja.wikipedia.org/wiki/オーステンデ包囲戦'}
     - {from: 1604, owner: spain, overlord: hre, cause: 3年に及ぶ包囲の末、スピノラがオーステンデを攻略, source: 'https://ja.wikipedia.org/wiki/オーステンデ包囲戦'}
-    - {from: 1648, owner: spain, overlord: hre, note: ブルグント・クライスとして帝国に属する。}
-    - {from: 1714, owner: habsburg, overlord: hre, cause: ユトレヒト条約（1713）・ラシュタット条約（1714）でオーストリア領に, source: 'https://ja.wikipedia.org/wiki/ラシュタット条約'}
-    - {from: 1795, owner: france, cause: フランスへの併合（1797年カンポ・フォルミオ条約でオーストリアが承認）, source: 'https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約'}
-    - {from: 1814, owner: netherlands, certainty: uncertain, cause: パリ条約（第1次）・ロンドン八か条議定書（オランダとの合同を決定）, note: 1814年には連合国の暫定統治下にあり（8月からオラニエ公が総督）、合同はウィーン会議で確定した。, source: 'https://en.wikipedia.org/wiki/Eight_Articles_of_London'}
-    - {from: 1815, owner: netherlands, cause: ウィーン議定書（ネーデルラント連合王国の成立）, source: 'https://ja.wikipedia.org/wiki/ウィーン議定書'}
-    - {from: 1830, owner: belgium, cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）, note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。, source: 'https://ja.wikipedia.org/wiki/ベルギー独立革命'}
-    - {from: 1914, owner: german_empire, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I'}
-    - {from: 1918, owner: belgium, cause: 第一次世界大戦の休戦（11月）でドイツ軍が撤退}
-    - {from: 1940, owner: germany, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II'}
-    - {from: 1944, owner: belgium, cause: 連合軍による解放（9月）, note: 12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。}
 
 - id: c15_brabant_south
   name: ブラバント公国（南部）・メヘレン
+  until: 1647
   select:
     pieces: [BEL-Anvers, BEL-Bruxelles_Capitale, BEL-Hal_Vilvorde, BEL-Louvain, BEL-Nivelles, BEL-Malines, BEL-Turnhout]
   timeline:
@@ -3093,19 +2992,10 @@
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
     - {from: 1577, owner: netherlands, certainty: uncertain, cause: ヘントの和約（1576年）で全国議会がスペイン軍と戦う。ブリュッセル・アントウェルペンは反乱側の中心に, source: 'https://ja.wikipedia.org/wiki/ヘントの和約'}
     - {from: 1585, owner: spain, overlord: hre, cause: パルマ公がブリュッセル（3月）・アントウェルペン（8月）を降伏させる, source: 'https://ja.wikipedia.org/wiki/アントウェルペン包囲戦_(1584年-1585年)'}
-    - {from: 1648, owner: spain, overlord: hre, note: ブルグント・クライスとして帝国に属する。}
-    - {from: 1714, owner: habsburg, overlord: hre, cause: ユトレヒト条約（1713）・ラシュタット条約（1714）でオーストリア領に, source: 'https://ja.wikipedia.org/wiki/ラシュタット条約'}
-    - {from: 1795, owner: france, cause: フランスへの併合（1797年カンポ・フォルミオ条約でオーストリアが承認）, source: 'https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約'}
-    - {from: 1814, owner: netherlands, certainty: uncertain, cause: パリ条約（第1次）・ロンドン八か条議定書（オランダとの合同を決定）, note: 1814年には連合国の暫定統治下にあり（8月からオラニエ公が総督）、合同はウィーン会議で確定した。, source: 'https://en.wikipedia.org/wiki/Eight_Articles_of_London'}
-    - {from: 1815, owner: netherlands, cause: ウィーン議定書（ネーデルラント連合王国の成立）, source: 'https://ja.wikipedia.org/wiki/ウィーン議定書'}
-    - {from: 1830, owner: belgium, cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）, note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。, source: 'https://ja.wikipedia.org/wiki/ベルギー独立革命'}
-    - {from: 1914, owner: german_empire, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I'}
-    - {from: 1918, owner: belgium, cause: 第一次世界大戦の休戦（11月）でドイツ軍が撤退}
-    - {from: 1940, owner: germany, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II'}
-    - {from: 1944, owner: belgium, cause: 連合軍による解放（9月）, note: 12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。}
 
 - id: c15_tournai
   name: トゥルネー
+  until: 1647
   select:
     pieces: [BEL-Tournai]
   timeline:
@@ -3115,39 +3005,20 @@
     - {from: 1521, owner: habsburg_netherlands, cause: カール5世の軍がトゥルネーを攻略（1526年マドリード条約で確定）, source: 'https://en.wikipedia.org/wiki/Siege_of_Tournai_(1521)'}
     - {from: 1548, owner: habsburg_netherlands, overlord: hre, cause: アウクスブルクの協定（ブルグント条約）でブルグント・クライスに}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位}
-    - {from: 1648, owner: spain, overlord: hre}
-    - {from: 1668, owner: france, cause: アーヘンの和約（南ネーデルラント継承戦争）, source: 'https://ja.wikipedia.org/wiki/アーヘンの和約_(1668年)'}
-    - {from: 1714, owner: habsburg, overlord: hre, cause: ユトレヒト条約でフランスが返還（1715年の防壁条約でオーストリアへ引き渡し）, source: 'https://en.wikipedia.org/wiki/Barrier_Treaty'}
-    - {from: 1795, owner: france, cause: フランスへの併合}
-    - {from: 1814, owner: netherlands, cause: パリ条約（第1次）・ロンドン八か条議定書}
-    - {from: 1830, owner: belgium, cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）, note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。, source: 'https://ja.wikipedia.org/wiki/ベルギー独立革命'}
-    - {from: 1914, owner: german_empire, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I'}
-    - {from: 1918, owner: belgium, cause: 第一次世界大戦の休戦（11月）でドイツ軍が撤退}
-    - {from: 1940, owner: germany, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II'}
-    - {from: 1944, owner: belgium, cause: 連合軍による解放（9月）, note: 12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。}
 
 - id: c15_ath
   name: アト（エノー伯領）
+  until: 1647
   select:
     pieces: [BEL-Ath]
   timeline:
     - {from: 1453, owner: burgundy, overlord: hre, cause: ブルゴーニュ公フィリップ（善良公）の支配下（ブルゴーニュ領ネーデルラント）, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ領ネーデルラント'}
     - {from: 1477, owner: habsburg_netherlands, overlord: hre, cause: シャルル突進公の戦死（ナンシーの戦い）。娘マリーがハプスブルク家のマクシミリアンと結婚し、ネーデルラントはハプスブルク家へ, source: 'https://ja.wikipedia.org/wiki/マリー・ド・ブルゴーニュ'}
     - {from: 1556, owner: spain, overlord: hre, cause: カール5世の退位（1555–56年）。ネーデルラントはスペイン王フェリペ2世の領土に, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
-    - {from: 1648, owner: spain, overlord: hre}
-    - {from: 1668, owner: france, cause: アーヘンの和約（南ネーデルラント継承戦争）, source: 'https://ja.wikipedia.org/wiki/アーヘンの和約_(1668年)'}
-    - {from: 1678, owner: spain, overlord: hre, cause: ナイメーヘンの和約でスペインに返還, source: 'https://ja.wikipedia.org/wiki/ナイメーヘンの和約'}
-    - {from: 1714, owner: habsburg, overlord: hre, cause: ユトレヒト条約（1713）・ラシュタット条約（1714）でオーストリア領に}
-    - {from: 1795, owner: france, cause: フランスへの併合}
-    - {from: 1814, owner: netherlands, cause: パリ条約（第1次）・ロンドン八か条議定書}
-    - {from: 1830, owner: belgium, cause: ベルギー独立革命（8月にブリュッセルで蜂起、10月に独立宣言、12月にロンドン会議が独立を承認）, note: オランダが独立を承認したのは1839年のロンドン条約。アントウェルペンの城塞は1832年12月までオランダ軍が守った。, source: 'https://ja.wikipedia.org/wiki/ベルギー独立革命'}
-    - {from: 1914, owner: german_empire, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第一次世界大戦でドイツ軍が中立を破って侵入し、占領（ドイツの総督府による軍政。1918年11月の休戦まで）, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_I'}
-    - {from: 1918, owner: belgium, cause: 第一次世界大戦の休戦（11月）でドイツ軍が撤退}
-    - {from: 1940, owner: germany, certainty: occupied, label: ベルギー（ドイツの占領）, cause: 第二次世界大戦でドイツ軍が侵入（5月）。国王レオポルド3世が降伏し、ドイツの軍政下に置かれた, source: 'https://en.wikipedia.org/wiki/German_occupation_of_Belgium_during_World_War_II'}
-    - {from: 1944, owner: belgium, cause: 連合軍による解放（9月）, note: 12月のドイツ軍の反撃（アルデンヌ攻勢、バルジの戦い）で東部の一部が一時奪われたが、短期間のため描かない。}
 
 - id: c15_thurgau
   name: トゥールガウ・ザルガンス
+  until: 1647
   select:
     adm1: [CHE/Thurgau]
     pieces: [CHE-Sarganserland]
@@ -3155,20 +3026,20 @@
     - {from: 1453, owner: habsburg, overlord: hre, source: 'https://ja.wikipedia.org/wiki/トゥールガウ州'}
     - {from: 1460, owner: switzerland, overlord: hre, cause: 盟約者団がハプスブルク家からトゥールガウを奪い、共同支配地とする, source: 'https://ja.wikipedia.org/wiki/トゥールガウ州'}
     - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_winterthur
   name: ヴィンタートゥール
+  until: 1647
   select:
     pieces: [CHE-Winterthur]
   timeline:
     - {from: 1453, owner: habsburg, overlord: hre, source: 'https://ja.wikipedia.org/wiki/ヴィンタートゥール'}
     - {from: 1467, owner: switzerland, overlord: hre, cause: ハプスブルク家のジークムントがヴィンタートゥールをチューリヒに質入れ, source: 'https://ja.wikipedia.org/wiki/ヴィンタートゥール'}
     - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_fribourg
   name: フリブール（フライブルク）
+  until: 1647
   select:
     pieces: [CHE-Sense, CHE-La_Sarine, CHE-La_Glane, CHE-La_Veveyse]
   timeline:
@@ -3176,30 +3047,30 @@
     - {from: 1477, owner: switzerland, overlord: hre, certainty: indirect, label: フリブール（同盟邦）, cause: ブルゴーニュ戦争の後、サヴォイアから離れて帝国自由都市に}
     - {from: 1481, owner: switzerland, overlord: hre, cause: シュタンスの協定で盟約者団の正式の邦に, source: 'https://en.wikipedia.org/wiki/Stanser_Verkommnis'}
     - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_solothurn
   name: ゾロトゥルン
+  until: 1647
   select:
     adm1: [CHE/Solothurn]
   timeline:
     - {from: 1453, owner: switzerland, overlord: hre, certainty: indirect, label: ゾロトゥルン（同盟邦）, source: 'https://ja.wikipedia.org/wiki/ゾロトゥルン州'}
     - {from: 1481, owner: switzerland, overlord: hre, cause: シュタンスの協定で盟約者団の正式の邦に, source: 'https://en.wikipedia.org/wiki/Stanser_Verkommnis'}
     - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_basel
   name: バーゼル（市とその領地）
+  until: 1647
   select:
     adm1: [CHE/Basel-Stadt]
     pieces: [CHE-Liestal, CHE-Sissach, CHE-Waldenburg]
   timeline:
     - {from: 1453, owner: other_hre, overlord: hre, label: バーゼル（帝国自由都市）, source: 'https://ja.wikipedia.org/wiki/バーゼル'}
     - {from: 1501, owner: switzerland, cause: バーゼルが盟約者団に加盟, source: 'https://ja.wikipedia.org/wiki/バーゼル=シュタット準州'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_schaffhausen
   name: シャフハウゼン
+  until: 1647
   select:
     adm1: [CHE/Schaffhausen]
   timeline:
@@ -3207,124 +3078,106 @@
     - {from: 1454, owner: switzerland, overlord: hre, certainty: indirect, label: シャフハウゼン（同盟邦）, cause: シャフハウゼンが盟約者団の6邦と同盟}
     - {from: 1499, owner: switzerland, certainty: indirect, label: シャフハウゼン（同盟邦）, cause: シュヴァーベン戦争とバーゼルの和約}
     - {from: 1501, owner: switzerland, cause: シャフハウゼンが盟約者団に加盟}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_appenzell
   name: アッペンツェル
+  until: 1647
   select:
     adm1: [CHE/Appenzell Ausserrhoden, CHE/Appenzell Innerrhoden]
   timeline:
     - {from: 1453, owner: switzerland, overlord: hre, certainty: indirect, label: アッペンツェル（同盟邦）, source: 'https://ja.wikipedia.org/wiki/アッペンツェル'}
     - {from: 1499, owner: switzerland, certainty: indirect, label: アッペンツェル（同盟邦）, cause: シュヴァーベン戦争とバーゼルの和約}
     - {from: 1513, owner: switzerland, cause: アッペンツェルが13番目の邦として加盟（13邦体制の完成）, source: 'https://ja.wikipedia.org/wiki/アッペンツェル'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_vaud
   name: ヴォー（ヴァート）
+  until: 1647
   select:
     pieces: [CHE-Broye_Vully, CHE-Gros_de_Vaud, CHE-Jura_North_Vaudois, CHE-Morges, CHE-Nyon, CHE-La_Broye]
   timeline:
     - {from: 1453, owner: savoy, label: ヴォー, source: 'https://ja.wikipedia.org/wiki/ヴォー州'}
     - {from: 1536, owner: switzerland, cause: ベルンがサヴォイア公からヴォーを征服（エスタヴァイエなどはフリブールへ）。1564年のローザンヌ条約で確定, source: 'https://ja.wikipedia.org/wiki/ヴォー州'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_lausanne
   name: ローザンヌ司教領
+  until: 1647
   select:
     pieces: [CHE-Lausanne, CHE-Ouest_lausannois, CHE-Lavaux_Oron]
   timeline:
     - {from: 1453, owner: other_hre, overlord: hre, label: ローザンヌ司教領, source: 'https://en.wikipedia.org/wiki/Roman_Catholic_Diocese_of_Lausanne,_Geneva_and_Fribourg'}
     - {from: 1536, owner: switzerland, cause: ベルンがヴォーとともにローザンヌを征服し、宗教改革を導入}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_gruyere
   name: グリュイエール伯領・ザーネン
+  until: 1647
   select:
     pieces: [CHE-La_Gruyere, CHE-Pays_d_Enhaut, CHE-Saanen]
   timeline:
     - {from: 1453, owner: savoy, certainty: indirect, label: グリュイエール伯領, source: 'https://en.wikipedia.org/wiki/County_of_Gruyère'}
     - {from: 1555, owner: switzerland, cause: グリュイエール伯の破産で、伯領をフリブールとベルンが分ける, source: 'https://en.wikipedia.org/wiki/County_of_Gruyère'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_murten_aigle
   name: ムルテン（モラ）・エーグル
+  until: 1647
   select:
     pieces: [CHE-Lac, CHE-Aigle]
   timeline:
     - {from: 1453, owner: savoy, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ戦争'}
     - {from: 1475, owner: switzerland, overlord: hre, cause: ブルゴーニュ戦争。ベルンがサヴォイア領のムルテン・エーグルなどを奪う, source: 'https://ja.wikipedia.org/wiki/ブルゴーニュ戦争'}
     - {from: 1499, owner: switzerland, cause: シュヴァーベン戦争（スイス戦争）とバーゼルの和約。盟約者団は帝国から事実上独立（正式には1648年）, source: 'https://ja.wikipedia.org/wiki/シュヴァーベン戦争'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_ticino_north
   name: ベッリンツォーナ・ブレニオ・リヴィエラ
+  until: 1647
   select:
     pieces: [CHE-Bellinzona, CHE-Blenio, CHE-Riviera]
   timeline:
     - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/ティチーノ州'}
     - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノ公国を征服}
     - {from: 1500, owner: switzerland, cause: ベッリンツォーナがウーリ・シュヴィーツ・ニトヴァルデンに服属（1503年アローナ条約で確定）, source: 'https://ja.wikipedia.org/wiki/ベッリンツォーナ'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_ticino_south
   name: ルガーノ・ロカルノ・メンドリシオ・マッジャ谷
+  until: 1647
   select:
     pieces: [CHE-Locarno, CHE-Lugano, CHE-Mendrisio, CHE-Vallemaggia]
   timeline:
     - {from: 1453, owner: milan, source: 'https://ja.wikipedia.org/wiki/ティチーノ州'}
     - {from: 1499, owner: france, label: ミラノ公国（フランス王ルイ12世）, cause: フランス王ルイ12世がミラノ公国を征服}
     - {from: 1512, owner: switzerland, cause: 盟約者団がルガーノ・ロカルノなどを占領し、共同支配地とする（1516年の永久平和条約で確定）, source: 'https://ja.wikipedia.org/wiki/ティチーノ州'}
-    - {from: 1648, owner: switzerland, cause: ウェストファリア条約で帝国からの独立を承認, source: 'https://ja.wikipedia.org/wiki/ヴェストファーレン条約'}
 
 - id: c15_lower_valais
   name: 下ヴァレー（コンテ・マルティニー・サン＝モーリス）
+  until: 1647
   select:
     pieces: [CHE-Conthey, CHE-Martigny, CHE-Entremont, CHE-Saint_Maurice]
   timeline:
     - {from: 1453, owner: savoy, source: 'https://en.wikipedia.org/wiki/Lower_Valais'}
     - {from: 1475, owner: valais, overlord: hre, cause: ブルゴーニュ戦争。上ヴァレーがサヴォイア軍を破り（プランタの戦い）、下ヴァレーを従属地とする, source: 'https://en.wikipedia.org/wiki/Battle_on_the_Planta'}
     - {from: 1499, owner: valais, cause: シュヴァーベン戦争とバーゼルの和約}
-    - {from: 1648, owner: valais, note: スイス盟約者団の同盟邦。下ヴァレー（モンテー・サン＝モーリスなど）は上ヴァレーの従属地。}
-    - {from: 1798, owner: switzerland, cause: ヘルヴェティア共和国への編入}
-    - {from: 1802, owner: valais, cause: ロダニア共和国として分離・独立（フランスの保護下）, source: 'https://en.wikipedia.org/wiki/Rhodanic_Republic'}
-    - {from: 1810, owner: france, cause: フランスへの併合（シンプロン県）}
-    - {from: 1814, owner: valais, cause: フランス軍の撤退と独立の回復}
-    - {from: 1815, owner: switzerland, cause: ウィーン会議・スイスへの加盟}
 
 - id: c15_monthey
   name: モンテー
+  until: 1647
   select:
     pieces: [CHE-Monthey]
   timeline:
     - {from: 1453, owner: savoy, source: 'https://en.wikipedia.org/wiki/Lower_Valais'}
     - {from: 1536, owner: valais, cause: ベルンのヴォー征服に合わせ、ヴァレーがサヴォイア領のモンテー（シャブレーの東部）を占領, source: 'https://en.wikipedia.org/wiki/Lower_Valais'}
-    - {from: 1648, owner: valais, note: スイス盟約者団の同盟邦。下ヴァレー（モンテー・サン＝モーリスなど）は上ヴァレーの従属地。}
-    - {from: 1798, owner: switzerland, cause: ヘルヴェティア共和国への編入}
-    - {from: 1802, owner: valais, cause: ロダニア共和国として分離・独立（フランスの保護下）, source: 'https://en.wikipedia.org/wiki/Rhodanic_Republic'}
-    - {from: 1810, owner: france, cause: フランスへの併合（シンプロン県）}
-    - {from: 1814, owner: valais, cause: フランス軍の撤退と独立の回復}
-    - {from: 1815, owner: switzerland, cause: ウィーン会議・スイスへの加盟}
 
 - id: c15_torino
   name: トリノ（1536–1562年 フランス軍の占領）
+  until: 1647
   select:
     pieces: [ITA-Torino]
   timeline:
     - {from: 1453, owner: savoy, source: 'https://ja.wikipedia.org/wiki/サヴォイア公国'}
     - {from: 1536, owner: france, certainty: occupied, cause: イタリア戦争。フランス王フランソワ1世がサヴォイア・ピエモンテを占領, source: 'https://ja.wikipedia.org/wiki/エマヌエーレ・フィリベルト_(サヴォイア公)'}
     - {from: 1562, owner: savoy, cause: カトー＝カンブレジ条約（1559年）でサヴォイア公が領土を回復。トリノは1562年に返還, source: 'https://ja.wikipedia.org/wiki/カトー・カンブレジ条約'}
-    - {from: 1648, owner: savoy}
-    - {from: 1798, owner: france, certainty: occupied, cause: 国王カルロ・エマヌエーレ4世がピエモンテを放棄してサルデーニャ島へ（12月）}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）, note: スヴォーロフのロシア軍とオーストリア軍が占領した。サルデーニャ王は復帰できなかった。, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: france, certainty: occupied, cause: マレンゴの戦い（6月）でフランスが再占領}
-    - {from: 1802, owner: france, cause: フランスへの併合, source: 'https://en.wikipedia.org/wiki/Piedmont#History'}
-    - {from: 1814, owner: savoy, cause: パリ条約（第1次）でサルデーニャ王に返還}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_cuneo
   name: クーネオ・サルッツォ
+  until: 1647
   select:
     pieces: [ITA-Cuneo]
   timeline:
@@ -3332,18 +3185,10 @@
     - {from: 1536, owner: france, certainty: occupied, cause: イタリア戦争。フランス軍がピエモンテ南部を占領（クーネオの町はサヴォイア側が守り抜く）}
     - {from: 1559, owner: savoy, certainty: uncertain, cause: カトー＝カンブレジ条約でサヴォイア公が回復。サルッツォ侯国はフランス領（1548–1601年）, source: 'https://ja.wikipedia.org/wiki/カトー・カンブレジ条約'}
     - {from: 1601, owner: savoy, cause: リヨン条約でサヴォイア公がサルッツォを得る（代わりにブレス・ビュジェをフランスへ）, source: 'https://ja.wikipedia.org/wiki/リヨン条約_(1601年)'}
-    - {from: 1648, owner: savoy}
-    - {from: 1798, owner: france, certainty: occupied, cause: 国王カルロ・エマヌエーレ4世がピエモンテを放棄してサルデーニャ島へ（12月）}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）, note: スヴォーロフのロシア軍とオーストリア軍が占領した。サルデーニャ王は復帰できなかった。, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: france, certainty: occupied, cause: マレンゴの戦い（6月）でフランスが再占領}
-    - {from: 1802, owner: france, cause: フランスへの併合, source: 'https://en.wikipedia.org/wiki/Piedmont#History'}
-    - {from: 1814, owner: savoy, cause: パリ条約（第1次）でサルデーニャ王に返還}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_asti
   name: アスティ
+  until: 1647
   select:
     pieces: [ITA-Asti]
   timeline:
@@ -3352,18 +3197,10 @@
     - {from: 1531, owner: savoy, cause: カール5世がアスティを義妹ベアトリス（サヴォイア公妃）に与える}
     - {from: 1536, owner: spain, certainty: occupied, cause: イタリア戦争。スペイン・皇帝軍がアスティに駐屯}
     - {from: 1575, owner: savoy, cause: スペイン軍が撤退し、サヴォイア公に返る}
-    - {from: 1648, owner: savoy}
-    - {from: 1798, owner: france, certainty: occupied, cause: 国王カルロ・エマヌエーレ4世がピエモンテを放棄してサルデーニャ島へ（12月）}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟）, note: スヴォーロフのロシア軍とオーストリア軍が占領した。サルデーニャ王は復帰できなかった。, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: france, certainty: occupied, cause: マレンゴの戦い（6月）でフランスが再占領}
-    - {from: 1802, owner: france, cause: フランスへの併合, source: 'https://en.wikipedia.org/wiki/Piedmont#History'}
-    - {from: 1814, owner: savoy, cause: パリ条約（第1次）でサルデーニャ王に返還}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_cremona
   name: クレモナ（1499–1509年 ヴェネツィア領）
+  until: 1647
   select:
     pieces: [ITA-Cremona]
   timeline:
@@ -3376,87 +3213,48 @@
     - {from: 1526, owner: spain, certainty: occupied, cause: コニャック同盟戦争。皇帝軍がミラノを占領し、フランチェスコ2世は城に追い詰められて降伏, source: 'https://ja.wikipedia.org/wiki/コニャック同盟戦争'}
     - {from: 1529, owner: milan, cause: カンブレーの和約・ボローニャの和約で、皇帝カール5世がフランチェスコ2世をミラノ公に戻す, source: 'https://ja.wikipedia.org/wiki/カンブレーの和約'}
     - {from: 1535, owner: spain, cause: フランチェスコ2世の死でスフォルツァ家が断絶。カール5世が直接支配し、1540年に息子フェリペ（2世）に与えた, source: 'https://ja.wikipedia.org/wiki/ミラノ公国'}
-    - {from: 1648, owner: spain}
-    - {from: 1707, owner: habsburg, certainty: occupied, cause: トリノの戦い（1706）後、ミラノ協定でフランス軍が撤退し、オーストリアが支配, source: 'https://en.wikipedia.org/wiki/Duchy_of_Milan'}
-    - {from: 1714, owner: habsburg, cause: ラシュタット条約, source: 'https://ja.wikipedia.org/wiki/ラシュタット条約'}
-    - {from: 1796, owner: cisalpine, cause: ナポレオンのイタリア遠征（ロディの戦い）とトランスパダーナ共和国の成立, source: 'https://ja.wikipedia.org/wiki/チザルピーナ共和国'}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: cisalpine, cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活}
-    - {from: 1814, owner: habsburg, cause: イタリア王国の崩壊とオーストリアの復帰（1815年からロンバルド＝ヴェネト王国）, source: 'https://ja.wikipedia.org/wiki/ロンバルド＝ヴェネト王国'}
-    - {from: 1859, owner: savoy, cause: イタリア統一戦争（マジェンタ・ソルフェリーノの戦い）。ヴィラフランカの休戦とチューリヒ条約で、ロンバルディアがフランス経由でサルデーニャ王国に, source: 'https://ja.wikipedia.org/wiki/イタリア統一戦争'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_verona
   name: ヴェローナ（1509–1516年 皇帝軍の占領）
+  until: 1647
   select:
     pieces: [ITA-Verona]
   timeline:
     - {from: 1453, owner: venice}
     - {from: 1509, owner: habsburg, certainty: occupied, cause: カンブレー同盟戦争。皇帝マクシミリアン1世がヴェローナを占領, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
     - {from: 1517, owner: venice, cause: ブリュッセル条約（1516年12月）で返還（1517年1月引き渡し）, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
-    - {from: 1648, owner: venice}
-    - {from: 1797, owner: habsburg, cause: カンポ・フォルミオ条約（アディジェ川以東とヴェネツィア市がオーストリア領に）, source: 'https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約'}
-    - {from: 1805, owner: cisalpine, cause: プレスブルク条約でイタリア王国に割譲, source: 'https://ja.wikipedia.org/wiki/プレスブルクの和約'}
-    - {from: 1814, owner: habsburg, cause: イタリア王国の崩壊とオーストリアの復帰（1815年からロンバルド＝ヴェネト王国）}
-    - {from: 1866, owner: italy, cause: 普墺戦争（第3次イタリア独立戦争）。ウィーン条約でオーストリアがヴェネトとマントヴァをフランス経由でイタリアに譲り、住民投票で併合, source: 'https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_pordenone
   name: ポルデノーネ
+  until: 1647
   select:
     pieces: [ITA-Pordenone]
   timeline:
     - {from: 1453, owner: habsburg, overlord: hre, label: ポルデノーネ（オーストリア大公の飛び地）, source: 'https://en.wikipedia.org/wiki/Pordenone'}
     - {from: 1508, owner: venice, cause: ヴェネツィアが皇帝軍との戦いでポルデノーネを奪う, source: 'https://en.wikipedia.org/wiki/Pordenone'}
-    - {from: 1648, owner: venice}
-    - {from: 1797, owner: habsburg, cause: カンポ・フォルミオ条約（アディジェ川以東とヴェネツィア市がオーストリア領に）, source: 'https://ja.wikipedia.org/wiki/カンポ・フォルミオ条約'}
-    - {from: 1805, owner: cisalpine, cause: プレスブルク条約でイタリア王国に割譲, source: 'https://ja.wikipedia.org/wiki/プレスブルクの和約'}
-    - {from: 1814, owner: habsburg, cause: イタリア王国の崩壊とオーストリアの復帰（1815年からロンバルド＝ヴェネト王国）}
-    - {from: 1866, owner: italy, cause: 普墺戦争（第3次イタリア独立戦争）。ウィーン条約でオーストリアがヴェネトとマントヴァをフランス経由でイタリアに譲り、住民投票で併合, source: 'https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)'}
-    - {from: 1917, owner: habsburg, certainty: occupied, label: フリウリ・ヴェネト東部（オーストリア＝ドイツ軍の占領）, cause: カポレットの戦い（10–11月）でイタリア軍がピアーヴェ川まで退き、フリウリがオーストリア＝ドイツ軍に占領される, source: 'https://ja.wikipedia.org/wiki/カポレットの戦い'}
-    - {from: 1918, owner: italy, cause: ヴィットリオ・ヴェネトの戦い（10–11月）でイタリア軍が奪回, source: 'https://ja.wikipedia.org/wiki/ヴィットリオ・ヴェネトの戦い'}
-    - {from: 1943, owner: germany, certainty: occupied, label: アドリア海沿岸作戦地域（ドイツの占領）, cause: イタリアの降伏後、ドイツが「アドリア海沿岸作戦地域」として直接統治, source: 'https://en.wikipedia.org/wiki/Operational_Zone_of_the_Adriatic_Littoral'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_gorizia
   name: ゴリツィア伯領
+  until: 1647
   select:
     pieces: [ITA-Gorizia]
   timeline:
     - {from: 1453, owner: gorizia, overlord: hre, source: 'https://en.wikipedia.org/wiki/County_of_Gorizia'}
     - {from: 1500, owner: habsburg, overlord: hre, cause: ゴリツィア伯家の断絶で、マクシミリアン1世が相続, source: 'https://en.wikipedia.org/wiki/County_of_Gorizia'}
-    - {from: 1648, owner: habsburg, overlord: hre, note: オーストリア・クライスに属する。トリエステは1719年から自由港。}
-    - {from: 1806, owner: habsburg, cause: 神聖ローマ帝国の解体}
-    - {from: 1809, owner: illyria, overlord: france, cause: シェーンブルン条約でフランスに割譲（イリリア州）, source: 'https://ja.wikipedia.org/wiki/イリュリア州'}
-    - {from: 1814, owner: habsburg, cause: パリ条約（第1次）でオーストリアに返還（1813年からオーストリア軍が占領）}
-    - {from: 1815, owner: habsburg, overlord: german_confederation, cause: ドイツ連邦の成立}
-    - {from: 1866, owner: habsburg, cause: 普墺戦争の敗北とプラハ条約でドイツ連邦が解体（トレンティーノ・南チロル・トリエステなどはオーストリア領に残る）, source: 'https://ja.wikipedia.org/wiki/プラハ条約_(1866年)'}
 
 - id: c15_reggio
   name: レッジョ
+  until: 1647
   select:
     pieces: [ITA-Reggio_nell_Emilia]
   timeline:
     - {from: 1453, owner: modena, source: 'https://ja.wikipedia.org/wiki/モデナ公国'}
     - {from: 1512, owner: papal_states, cause: 教皇ユリウス2世がレッジョを奪う, source: 'https://ja.wikipedia.org/wiki/アルフォンソ1世・デステ'}
     - {from: 1523, owner: modena, cause: アルフォンソ1世・デステがレッジョを回復, source: 'https://ja.wikipedia.org/wiki/アルフォンソ1世・デステ'}
-    - {from: 1648, owner: modena}
-    - {from: 1796, owner: cispadane, cause: ナポレオン軍の占領とチスパダーナ共和国の成立（12月）, source: 'https://ja.wikipedia.org/wiki/チスパダーナ共和国'}
-    - {from: 1797, owner: cisalpine, cause: チザルピーナ共和国への合流}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: cisalpine, cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活}
-    - {from: 1814, owner: modena, cause: フランチェスコ4世の復帰}
-    - {from: 1859, owner: savoy, certainty: uncertain, cause: イタリア統一戦争で公が亡命（6月）。ファリーニの臨時政府（独裁官）が治め、サルデーニャ王国への合併を求めた, source: 'https://ja.wikipedia.org/wiki/イタリア統一戦争'}
-    - {from: 1860, owner: savoy, cause: 住民投票（3月）でサルデーニャ王国に併合（フランスにはサヴォイア・ニースを譲った）, source: 'https://en.wikipedia.org/wiki/United_Provinces_of_Central_Italy'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_piacenza
   name: ピアチェンツァ（1547–1556年 皇帝軍の占領）
+  until: 1647
   select:
     pieces: [ITA-Piacenza]
   timeline:
@@ -3468,58 +3266,28 @@
     - {from: 1545, owner: parma, cause: 教皇パウルス3世が息子ピエール・ルイージ・ファルネーゼにパルマ・ピアチェンツァ公国を与える, source: 'https://ja.wikipedia.org/wiki/パルマ公国'}
     - {from: 1547, owner: spain, certainty: occupied, cause: ピエール・ルイージ・ファルネーゼの暗殺。ミラノ総督フェランテ・ゴンザーガの皇帝軍がピアチェンツァを占領, source: 'https://ja.wikipedia.org/wiki/ピエール・ルイージ・ファルネーゼ'}
     - {from: 1556, owner: parma, cause: フェリペ2世がピアチェンツァをオッターヴィオ・ファルネーゼに返す（ヘント条約）, source: 'https://ja.wikipedia.org/wiki/オッターヴィオ・ファルネーゼ'}
-    - {from: 1648, owner: parma}
-    - {from: 1735, owner: habsburg, cause: ポーランド継承戦争の講和（ウィーン予備条約。1738年ウィーン条約で確定）, source: 'https://ja.wikipedia.org/wiki/ウィーン条約_(1738年)'}
-    - {from: 1748, owner: parma, cause: アーヘンの和約でブルボン家のフィリッポに, source: 'https://ja.wikipedia.org/wiki/アーヘンの和約_(1748年)'}
-    - {from: 1802, owner: france, cause: フェルディナンド公の死とフランスの接収（1801年アランフエス条約。1808年に正式に併合）}
-    - {from: 1814, owner: parma, cause: フォンテーヌブロー条約（1814）でマリー・ルイーズに（1815年ウィーン議定書で確認）}
-    - {from: 1859, owner: savoy, certainty: uncertain, cause: イタリア統一戦争で摂政ルイーズ・マリーが亡命（6月）。臨時政府がサルデーニャ王国への合併を求めた（12月からモデナとともにエミリア政府）, source: 'https://ja.wikipedia.org/wiki/イタリア統一戦争'}
-    - {from: 1860, owner: savoy, cause: 住民投票（3月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/United_Provinces_of_Central_Italy'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃とパルチザンの蜂起で解放（1945年4月）}
 
 - id: c15_ferrara
   name: フェラーラ公国
+  until: 1647
   select:
     pieces: [ITA-Ferrara]
   timeline:
     - {from: 1453, owner: modena, overlord: papal_states, cause: フェラーラは教皇の封土。エステ家が治める（1471年に公国）, source: 'https://ja.wikipedia.org/wiki/フェラーラ公国'}
     - {from: 1598, owner: papal_states, cause: エステ家の嫡流断絶。教皇クレメンス8世がフェラーラを接収し、エステ家はモデナへ移る, source: 'https://ja.wikipedia.org/wiki/フェラーラ公国'}
-    - {from: 1648, owner: papal_states}
-    - {from: 1796, owner: cispadane, cause: ナポレオン軍の占領とチスパダーナ共和国の成立（1797年トレンティーノ条約で教皇が割譲）}
-    - {from: 1797, owner: cisalpine, cause: チザルピーナ共和国への合流}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: cisalpine, cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活, note: フェラーラ要塞は1801年1月のトレヴィーゾ休戦までオーストリア軍が保持した。}
-    - {from: 1814, owner: habsburg, certainty: occupied, cause: イタリア王国の崩壊。オーストリアの暫定統治}
-    - {from: 1815, owner: papal_states, cause: ウィーン議定書で教皇に返還, source: 'https://ja.wikipedia.org/wiki/ウィーン議定書'}
-    - {from: 1859, owner: savoy, certainty: uncertain, cause: イタリア統一戦争でオーストリア軍が撤退（6月）。教皇の支配が倒れ、臨時政府がサルデーニャ王国への合併を求めた, source: 'https://ja.wikipedia.org/wiki/イタリア統一戦争'}
-    - {from: 1860, owner: savoy, cause: 住民投票（3月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/United_Provinces_of_Central_Italy'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1945, owner: italy, cause: 連合軍の総攻撃で解放（1945年4月）, note: ボローニャのピースの南部（アペニン山脈）は1944年秋に連合軍が占領していたが、ピースの大部分に合わせて1945年とした。}
 
 - id: c15_ravenna
   name: ラヴェンナ（1509年までヴェネツィア領）
+  until: 1647
   select:
     pieces: [ITA-Ravenna]
   timeline:
     - {from: 1453, owner: venice, cause: ラヴェンナは1441年からヴェネツィア領, source: 'https://en.wikipedia.org/wiki/Ravenna'}
     - {from: 1509, owner: papal_states, cause: アニャデッロの戦いの後、ヴェネツィアがロマーニャの都市を教皇に返す, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
-    - {from: 1648, owner: papal_states}
-    - {from: 1797, owner: cisalpine, cause: トレンティーノ条約で教皇が割譲し、チザルピーナ共和国に編入, source: 'https://en.wikipedia.org/wiki/Treaty_of_Tolentino'}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: cisalpine, cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活}
-    - {from: 1814, owner: habsburg, certainty: occupied, cause: イタリア王国の崩壊。オーストリアの暫定統治}
-    - {from: 1815, owner: papal_states, cause: ウィーン議定書で教皇に返還}
-    - {from: 1859, owner: savoy, certainty: uncertain, cause: イタリア統一戦争でオーストリア軍が撤退（6月）。教皇の支配が倒れ、臨時政府がサルデーニャ王国への合併を求めた, source: 'https://ja.wikipedia.org/wiki/イタリア統一戦争'}
-    - {from: 1860, owner: savoy, cause: 住民投票（3月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/United_Provinces_of_Central_Italy'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1944, owner: italy, cause: 連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる, note: 1944年末の前線（ゴシック線を破った後のセニオ川の線）はラヴェンナのピースの西部を通り、ルーゴなどはドイツ軍側に残った（1945年4月に解放）。, source: 'https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)'}
 
 - id: c15_rimini
   name: リミニ（マラテスタ家）
+  until: 1647
   select:
     pieces: [ITA-Rimini]
   timeline:
@@ -3527,39 +3295,19 @@
     - {from: 1500, owner: romagna_borgia, overlord: papal_states, cause: チェーザレ・ボルジアがリミニを征服, source: 'https://ja.wikipedia.org/wiki/チェーザレ・ボルジア'}
     - {from: 1503, owner: venice, cause: チェーザレの没落に乗じて、ヴェネツィアがリミニ・ファエンツァを占領}
     - {from: 1509, owner: papal_states, cause: アニャデッロの戦いの後、ヴェネツィアがロマーニャの都市を教皇に返す, source: 'https://ja.wikipedia.org/wiki/カンブレー同盟戦争'}
-    - {from: 1648, owner: papal_states}
-    - {from: 1797, owner: cisalpine, cause: トレンティーノ条約で教皇が割譲し、チザルピーナ共和国に編入, source: 'https://en.wikipedia.org/wiki/Treaty_of_Tolentino'}
-    - {from: 1799, owner: habsburg, certainty: occupied, cause: オーストリア・ロシア軍の北イタリア占領（第2回対仏大同盟。チザルピーナ共和国の崩壊）, source: 'https://en.wikipedia.org/wiki/Italian_and_Swiss_expedition_of_1799'}
-    - {from: 1800, owner: cisalpine, cause: マレンゴの戦い（6月）後、チザルピーナ共和国が復活}
-    - {from: 1814, owner: habsburg, certainty: occupied, cause: イタリア王国の崩壊。オーストリアの暫定統治}
-    - {from: 1815, owner: papal_states, cause: ウィーン議定書で教皇に返還}
-    - {from: 1859, owner: savoy, certainty: uncertain, cause: イタリア統一戦争でオーストリア軍が撤退（6月）。教皇の支配が倒れ、臨時政府がサルデーニャ王国への合併を求めた, source: 'https://ja.wikipedia.org/wiki/イタリア統一戦争'}
-    - {from: 1860, owner: savoy, cause: 住民投票（3月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/United_Provinces_of_Central_Italy'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1944, owner: italy, cause: 連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる, note: 1944年末の前線（ゴシック線を破った後のセニオ川の線）はラヴェンナのピースの西部を通り、ルーゴなどはドイツ軍側に残った（1945年4月に解放）。, source: 'https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)'}
 
 - id: c15_ancona
   name: アンコーナ
+  until: 1647
   select:
     pieces: [ITA-Ancona]
   timeline:
     - {from: 1453, owner: papal_states, certainty: indirect, label: アンコーナ共和国, cause: アンコーナは教皇の宗主権のもとで自治の共和国, source: 'https://en.wikipedia.org/wiki/Republic_of_Ancona'}
     - {from: 1532, owner: papal_states, cause: 教皇クレメンス7世が軍を送って自治を奪い、教皇領に組み込む, source: 'https://en.wikipedia.org/wiki/Republic_of_Ancona'}
-    - {from: 1648, owner: papal_states}
-    - {from: 1798, owner: roman_republic, cause: ローマ共和国の成立（アンコーナ共和国を合併）, source: 'https://en.wikipedia.org/wiki/Roman_Republic_(1798–1799)'}
-    - {from: 1799, owner: papal_states, certainty: uncertain, cause: ローマ共和国の崩壊（オーストリア軍・ナポリ軍の占領。教皇は空位）}
-    - {from: 1800, owner: papal_states, cause: ピウス7世の選出と教皇領の復活}
-    - {from: 1808, owner: cisalpine, cause: イタリア王国への併合}
-    - {from: 1814, owner: naples_bonaparte, certainty: occupied, cause: ナポリ王ミュラの軍が占領}
-    - {from: 1815, owner: papal_states, cause: ウィーン議定書で教皇に返還}
-    - {from: 1860, owner: savoy, cause: サルデーニャ軍が教皇領に侵入し、カステルフィダルドの戦い（9月）で教皇軍を破る。住民投票（11月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/Battle_of_Castelfidardo'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1944, owner: italy, cause: 連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる, source: 'https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)'}
 
 - id: c15_urbino
   name: ウルビーノ公国
+  until: 1647
   select:
     pieces: [ITA-Pesaro_e_Urbino]
   timeline:
@@ -3569,38 +3317,19 @@
     - {from: 1516, owner: papal_states, certainty: indirect, label: ウルビーノ公国（ロレンツォ・デ・メディチ）, cause: 教皇レオ10世がデッラ・ローヴェレ家を追い、甥ロレンツォ・デ・メディチをウルビーノ公とする, source: 'https://ja.wikipedia.org/wiki/ロレンツォ・デ・メディチ_(ウルビーノ公)'}
     - {from: 1521, owner: urbino, overlord: papal_states, cause: レオ10世の死で、フランチェスコ・マリーア1世・デッラ・ローヴェレが公国を回復}
     - {from: 1631, owner: papal_states, cause: デッラ・ローヴェレ家の断絶で、ウルビーノ公国は教皇領に戻る（教皇ウルバヌス8世）, source: 'https://ja.wikipedia.org/wiki/ウルビーノ公国'}
-    - {from: 1648, owner: papal_states}
-    - {from: 1798, owner: roman_republic, cause: ローマ共和国の成立（アンコーナ共和国を合併）, source: 'https://en.wikipedia.org/wiki/Roman_Republic_(1798–1799)'}
-    - {from: 1799, owner: papal_states, certainty: uncertain, cause: ローマ共和国の崩壊（オーストリア軍・ナポリ軍の占領。教皇は空位）}
-    - {from: 1800, owner: papal_states, cause: ピウス7世の選出と教皇領の復活}
-    - {from: 1808, owner: cisalpine, cause: イタリア王国への併合}
-    - {from: 1814, owner: naples_bonaparte, certainty: occupied, cause: ナポリ王ミュラの軍が占領}
-    - {from: 1815, owner: papal_states, cause: ウィーン議定書で教皇に返還}
-    - {from: 1860, owner: savoy, cause: サルデーニャ軍が教皇領に侵入し、カステルフィダルドの戦い（9月）で教皇軍を破る。住民投票（11月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/Battle_of_Castelfidardo'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1944, owner: italy, cause: 連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる, source: 'https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)'}
 
 - id: c15_perugia
   name: ペルージャ
+  until: 1647
   select:
     pieces: [ITA-Perugia]
   timeline:
     - {from: 1453, owner: papal_states, certainty: indirect, label: ペルージャ（バリオーニ家）, cause: ペルージャは教皇の主権のもとで、バリオーニ家が実権を握る, source: 'https://en.wikipedia.org/wiki/Baglioni_family'}
     - {from: 1540, owner: papal_states, cause: 塩戦争。教皇パウルス3世がペルージャを制圧し、自治を奪う, source: 'https://en.wikipedia.org/wiki/Salt_War_(1540)'}
-    - {from: 1648, owner: papal_states, note: ラティーナ南部（フォンディ・ガエータ）、フロジノーネ東部（ソーラ・カッシーノ）、リエーティ東部はナポリ王国領。ピースの大半を占めないため描かない。1849年2月〜7月にはマッツィーニらのローマ共和国が成立した（年末には教皇の支配が回復していたため描かない）。}
-    - {from: 1798, owner: roman_republic, cause: フランス軍のローマ占領とローマ共和国の成立（2月）, source: 'https://en.wikipedia.org/wiki/Roman_Republic_(1798–1799)'}
-    - {from: 1799, owner: papal_states, certainty: uncertain, cause: ローマ共和国の崩壊（ナポリ軍の占領。教皇は空位）}
-    - {from: 1800, owner: papal_states, cause: ピウス7世のローマ帰還}
-    - {from: 1809, owner: france, cause: フランス帝国への併合（ティーブル県・トラジメーヌ県）, source: 'https://ja.wikipedia.org/wiki/教皇領'}
-    - {from: 1814, owner: papal_states, cause: ピウス7世のローマ帰還}
-    - {from: 1860, owner: savoy, cause: サルデーニャ軍が教皇領に侵入（9月、ペルージャを占領）。住民投票（11月）でサルデーニャ王国に併合（リエーティ周辺のサビーナもウンブリアの一部として）, source: 'https://en.wikipedia.org/wiki/Umbria#History'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1944, owner: italy, cause: 連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる, source: 'https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)'}
 
 - id: c15_pisa
   name: ピサ
+  until: 1647
   select:
     pieces: [ITA-Pisa]
   timeline:
@@ -3608,18 +3337,10 @@
     - {from: 1494, owner: pisa_republic, cause: フランス王シャルル8世の侵入に乗じて、ピサがフィレンツェの支配から独立, source: 'https://en.wikipedia.org/wiki/Pisa'}
     - {from: 1509, owner: florence, cause: フィレンツェがピサを包囲して再征服（マキァヴェッリが市民軍を組織）, source: 'https://en.wikipedia.org/wiki/Pisa'}
     - {from: 1569, owner: tuscany, cause: 教皇ピウス5世がコジモ1世にトスカーナ大公の称号を与える, source: 'https://ja.wikipedia.org/wiki/トスカーナ大公国'}
-    - {from: 1648, owner: tuscany, note: グロッセートの沿岸の要塞群（スタート・デイ・プレシディ：スペイン領→1707オーストリア→1735ナポリ）、 リヴォルノのピースのうちピオンビーノ公国とエルバ島の一部は省略。 マッサ・カッラーラのピースは、大部分がルニジャーナ（ポントレーモリ・フィヴィッツァーノなどのトスカーナ領と、マラスピーナ家の小さな帝国封土）で、 南西の海沿いのマッサ＝カッラーラ公国（チーボ＝マラスピーナ家。1790年からエステ家のマリア・ベアトリーチェ。1797年チザルピーナ、1806年エリザ・ボナパルト領、1814年マリア・ベアトリーチェ復帰）はピースの一部（約2割）なので、面積の大きいトスカーナ領で代表させる。}
-    - {from: 1801, owner: etruria, cause: リュネヴィル条約・アランフエス条約でエトルリア王国に, source: 'https://ja.wikipedia.org/wiki/エトルリア王国'}
-    - {from: 1807, owner: france, cause: フォンテーヌブロー条約（1807）でエトルリア王国が廃止され、フランスに併合（1808年に県を設置）}
-    - {from: 1814, owner: tuscany, cause: フェルディナンド3世の復位}
-    - {from: 1859, owner: savoy, certainty: uncertain, cause: フィレンツェの市民の蜂起で大公レオポルド2世が亡命（4月）。リカーゾリの臨時政府がサルデーニャ王国への合併を求めた, source: 'https://ja.wikipedia.org/wiki/トスカーナ大公国'}
-    - {from: 1860, owner: savoy, cause: 住民投票（3月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/United_Provinces_of_Central_Italy'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1944, owner: italy, cause: 連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる, note: マッサ・カッラーラは massa_lunigiana の記述を使う。, source: 'https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)'}
 
 - id: c15_siena
   name: シエナ共和国
+  until: 1647
   select:
     pieces: [ITA-Siena, ITA-Grosseto]
   timeline:
@@ -3627,18 +3348,10 @@
     - {from: 1555, owner: spain, certainty: occupied, cause: シエナ戦争。皇帝・フィレンツェ軍の包囲でシエナが降伏（1555年4月。共和国の残党はモンタルチーノで1559年まで抵抗）, source: 'https://ja.wikipedia.org/wiki/シエナ共和国'}
     - {from: 1557, owner: florence, cause: フェリペ2世がシエナをコジモ1世に封土として与える。沿岸の要塞はスペインの直轄（スタート・デイ・プレシディ）, source: 'https://ja.wikipedia.org/wiki/シエナ共和国'}
     - {from: 1569, owner: tuscany, cause: 教皇ピウス5世がコジモ1世にトスカーナ大公の称号を与える, source: 'https://ja.wikipedia.org/wiki/トスカーナ大公国'}
-    - {from: 1648, owner: tuscany, note: グロッセートの沿岸の要塞群（スタート・デイ・プレシディ：スペイン領→1707オーストリア→1735ナポリ）、 リヴォルノのピースのうちピオンビーノ公国とエルバ島の一部は省略。 マッサ・カッラーラのピースは、大部分がルニジャーナ（ポントレーモリ・フィヴィッツァーノなどのトスカーナ領と、マラスピーナ家の小さな帝国封土）で、 南西の海沿いのマッサ＝カッラーラ公国（チーボ＝マラスピーナ家。1790年からエステ家のマリア・ベアトリーチェ。1797年チザルピーナ、1806年エリザ・ボナパルト領、1814年マリア・ベアトリーチェ復帰）はピースの一部（約2割）なので、面積の大きいトスカーナ領で代表させる。}
-    - {from: 1801, owner: etruria, cause: リュネヴィル条約・アランフエス条約でエトルリア王国に, source: 'https://ja.wikipedia.org/wiki/エトルリア王国'}
-    - {from: 1807, owner: france, cause: フォンテーヌブロー条約（1807）でエトルリア王国が廃止され、フランスに併合（1808年に県を設置）}
-    - {from: 1814, owner: tuscany, cause: フェルディナンド3世の復位}
-    - {from: 1859, owner: savoy, certainty: uncertain, cause: フィレンツェの市民の蜂起で大公レオポルド2世が亡命（4月）。リカーゾリの臨時政府がサルデーニャ王国への合併を求めた, source: 'https://ja.wikipedia.org/wiki/トスカーナ大公国'}
-    - {from: 1860, owner: savoy, cause: 住民投票（3月）でサルデーニャ王国に併合, source: 'https://en.wikipedia.org/wiki/United_Provinces_of_Central_Italy'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
-    - {from: 1943, owner: italian_social_republic, overlord: germany, cause: イタリアの降伏（9月）の後、ドイツ軍が北・中部を占領し、救出されたムッソリーニがイタリア社会共和国（サロ政権）を樹立, source: 'https://ja.wikipedia.org/wiki/イタリア社会共和国'}
-    - {from: 1944, owner: italy, cause: 連合軍の北上で解放（1944年。6月にローマ）、イタリア王国の統治にもどる, note: マッサ・カッラーラは massa_lunigiana の記述を使う。, source: 'https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)'}
 
 - id: c15_naples_north
   name: ナポリ・カンパーニア・アブルッツォ（1501–1503年 フランス領）
+  until: 1647
   select:
     adm2: [ITA/Campania, ITA/Abruzzo, ITA/Molise]
   timeline:
@@ -3646,17 +3359,10 @@
     - {from: 1501, owner: france, label: ナポリ王国（フランス王ルイ12世）, cause: グラナダ条約で、フランス王ルイ12世がナポリ・カンパーニア・アブルッツォを得る, source: 'https://ja.wikipedia.org/wiki/グラナダ条約_(1500年)'}
     - {from: 1503, owner: aragon, cause: チェリニョーラの戦い・ガリリャーノの戦いでスペインのゴンサロ・デ・コルドバが勝ち、王国全体がアラゴン領に（1504年リヨン条約）, source: 'https://ja.wikipedia.org/wiki/ガリリャーノの戦い'}
     - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
-    - {from: 1648, owner: spain, note: スペイン王の副王領。ベネヴェント市とポンテコルヴォは教皇領の飛び地（ピースの粒度では表せない）。}
-    - {from: 1707, owner: habsburg, certainty: occupied, cause: スペイン継承戦争でオーストリア軍が占領}
-    - {from: 1714, owner: habsburg, cause: ラシュタット条約, source: 'https://ja.wikipedia.org/wiki/ラシュタット条約'}
-    - {from: 1735, owner: naples, cause: ポーランド継承戦争でスペイン王子カルロが征服（1734年）し、ウィーン予備条約で承認（1738年ウィーン条約で確定）, source: 'https://ja.wikipedia.org/wiki/ナポリ王国'}
-    - {from: 1806, owner: naples_bonaparte, cause: フランス軍の侵入とジョゼフ・ボナパルトの即位, source: 'https://en.wikipedia.org/wiki/Kingdom_of_Naples_(Napoleonic)'}
-    - {from: 1815, owner: naples, cause: ミュラの敗北（トレンティーノの戦い）とフェルディナンド4世の復位}
-    - {from: 1860, owner: savoy, cause: ガリバルディの千人隊がナポリに入城（9月）し、ヴォルトゥルノの戦いで王国軍を破る。住民投票（10月21日）でサルデーニャ王国に併合, note: 国王フランチェスコ2世はガエータ要塞で翌1861年2月まで抵抗した。, source: 'https://ja.wikipedia.org/wiki/千人隊'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
 
 - id: c15_naples_disputed
   name: カピタナータ・バジリカータ（1501–1503年 仏西の係争地）
+  until: 1647
   select:
     pieces: [ITA-Foggia, ITA-Potenza, ITA-Matera]
   timeline:
@@ -3664,17 +3370,10 @@
     - {from: 1501, owner: aragon, certainty: uncertain, cause: グラナダ条約の分割で帰属があいまいなまま残り、フランスとスペインの戦争の原因になった}
     - {from: 1503, owner: aragon, cause: チェリニョーラの戦い・ガリリャーノの戦いでスペインが勝つ}
     - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ, source: 'https://ja.wikipedia.org/wiki/カール5世_(神聖ローマ皇帝)'}
-    - {from: 1648, owner: spain, note: スペイン王の副王領。ベネヴェント市とポンテコルヴォは教皇領の飛び地（ピースの粒度では表せない）。}
-    - {from: 1707, owner: habsburg, certainty: occupied, cause: スペイン継承戦争でオーストリア軍が占領}
-    - {from: 1714, owner: habsburg, cause: ラシュタット条約, source: 'https://ja.wikipedia.org/wiki/ラシュタット条約'}
-    - {from: 1735, owner: naples, cause: ポーランド継承戦争でスペイン王子カルロが征服（1734年）し、ウィーン予備条約で承認（1738年ウィーン条約で確定）, source: 'https://ja.wikipedia.org/wiki/ナポリ王国'}
-    - {from: 1806, owner: naples_bonaparte, cause: フランス軍の侵入とジョゼフ・ボナパルトの即位, source: 'https://en.wikipedia.org/wiki/Kingdom_of_Naples_(Napoleonic)'}
-    - {from: 1815, owner: naples, cause: ミュラの敗北（トレンティーノの戦い）とフェルディナンド4世の復位}
-    - {from: 1860, owner: savoy, cause: ガリバルディの千人隊がナポリに入城（9月）し、ヴォルトゥルノの戦いで王国軍を破る。住民投票（10月21日）でサルデーニャ王国に併合, note: 国王フランチェスコ2世はガエータ要塞で翌1861年2月まで抵抗した。, source: 'https://ja.wikipedia.org/wiki/千人隊'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
 
 - id: c15_brindisi
   name: ブリンディジ（1496–1509年 ヴェネツィア領）
+  until: 1647
   select:
     pieces: [ITA-Brindisi]
   timeline:
@@ -3682,11 +3381,3 @@
     - {from: 1496, owner: venice, cause: ナポリ王フェルディナンド2世が、フランスと戦う援軍の担保としてプーリアの港をヴェネツィアに渡す, source: 'https://en.wikipedia.org/wiki/Brindisi'}
     - {from: 1509, owner: aragon, cause: カンブレー同盟戦争の中で、ヴェネツィアがプーリアの港をスペインに返す}
     - {from: 1516, owner: spain, cause: フェルナンド2世の死。孫のカルロス1世（のちの皇帝カール5世）がスペインとともに継ぐ}
-    - {from: 1648, owner: spain, note: スペイン王の副王領。ベネヴェント市とポンテコルヴォは教皇領の飛び地（ピースの粒度では表せない）。}
-    - {from: 1707, owner: habsburg, certainty: occupied, cause: スペイン継承戦争でオーストリア軍が占領}
-    - {from: 1714, owner: habsburg, cause: ラシュタット条約, source: 'https://ja.wikipedia.org/wiki/ラシュタット条約'}
-    - {from: 1735, owner: naples, cause: ポーランド継承戦争でスペイン王子カルロが征服（1734年）し、ウィーン予備条約で承認（1738年ウィーン条約で確定）, source: 'https://ja.wikipedia.org/wiki/ナポリ王国'}
-    - {from: 1806, owner: naples_bonaparte, cause: フランス軍の侵入とジョゼフ・ボナパルトの即位, source: 'https://en.wikipedia.org/wiki/Kingdom_of_Naples_(Napoleonic)'}
-    - {from: 1815, owner: naples, cause: ミュラの敗北（トレンティーノの戦い）とフェルディナンド4世の復位}
-    - {from: 1860, owner: savoy, cause: ガリバルディの千人隊がナポリに入城（9月）し、ヴォルトゥルノの戦いで王国軍を破る。住民投票（10月21日）でサルデーニャ王国に併合, note: 国王フランチェスコ2世はガエータ要塞で翌1861年2月まで抵抗した。, source: 'https://ja.wikipedia.org/wiki/千人隊'}
-    - {from: 1861, owner: italy, cause: イタリア王国の成立（3月17日、サルデーニャ王ヴィットーリオ・エマヌエーレ2世がイタリア国王に）, source: 'https://ja.wikipedia.org/wiki/イタリア王国'}
