@@ -503,7 +503,8 @@
   select:
     pieces: [DEU-Dahme_Spreewald, DEU-Elbe_Elster, DEU-Oberspreewald_Lausitz, DEU-Spree_Neie]
   timeline:
-    - {"from": 1453, "owner": "bohemia", "overlord": "hre", "note": "下ラウジッツ（ボヘミア王冠領）"}
+    - {"from": 1453, "owner": "brandenburg", "overlord": "hre", "certainty": "uncertain", "label": "下ラウジッツ（ブランデンブルクへの質）", "note": "下ラウジッツ（ボヘミア王冠領）。1448年からブランデンブルク選帝侯の質", "source": "https://de.wikipedia.org/wiki/Niederlausitz"}
+    - {"from": 1462, "owner": "bohemia", "overlord": "hre", "cause": "グーベンの和約（ブランデンブルクが下ラウジッツをボヘミア王イジーに返す。コトブス・パイツはブランデンブルクに残る）", "source": "https://de.wikipedia.org/wiki/Frieden_von_Guben"}
     - {"from": 1469, "owner": "hungary", "overlord": "hre", "certainty": "occupied", "cause": "ボヘミア戦争（ハンガリー王マーチャーシュ1世がラウジッツを占領し、カトリック派からボヘミア王に選ばれる）", "source": "https://en.wikipedia.org/wiki/Bohemian–Hungarian_War_(1468–1478)"}
     - {"from": 1479, "owner": "hungary", "overlord": "hre", "cause": "オロモウツの和約（マーチャーシュ1世がモラヴィア・シュレジエン・ラウジッツを領有）", "source": "https://en.wikipedia.org/wiki/Peace_of_Olomouc"}
     - {"from": 1490, "owner": "bohemia", "overlord": "hre", "cause": "マーチャーシュ1世の死（ラウジッツはボヘミア王ヴラジスラフ2世に戻る）", "note": "1526年からボヘミア王はハプスブルク家。1619–20年はボヘミアの反乱に加わった"}
@@ -655,7 +656,7 @@
   select:
     pieces: [DEU-Burgenlandkreis, DEU-Saalekreis, DEU-Mansfeld_Sudharz, DEU-Sommerda, DEU-Unstrut_Hainich_Kreis, DEU-Suhl_Kreisfreie_Stadt]
   timeline:
-    - {"from": 1453, "owner": "saxony", "overlord": "hre", "note": "メルゼブルク司教領・ナウムブルク司教領はザクセンの保護下の聖界領（16世紀にザクセンが管理者となった）"}
+    - {"from": 1453, "owner": "saxony", "overlord": "hre", "note": "メルゼブルク司教領・ナウムブルク司教領はザクセンの保護下の聖界領（帝国直属の司教領だが、ザクセン選帝侯の保護を受けた）。宗教改革後、ザクセンの公子が管理者となって世俗化した（メルゼブルク1561年、ナウムブルク1564年）。ピースが粗いのでザクセンに含める"}
     - {from: 1648, owner: saxony, overlord: hre}
     - {from: 1806, owner: saxony, overlord: rhine_confederation, cause: ポーゼン条約（ザクセン王国の成立とライン同盟加盟）}
     - {from: 1813, owner: saxony, cause: ライン同盟の解体}
@@ -670,7 +671,7 @@
   note: >-
     1656–1746年ごろはザクセン＝ヴァイセンフェルス、メルゼブルク、ツァイツの分家公領（選帝侯の宗主権の下）があったが、ザクセンにまとめた。
     ウンストルト＝ハイニッヒ郡の帝国都市ミュールハウゼン（1802/03年プロイセン、1807年ヴェストファーレン王国）は郡単位では表せない。
-    マンスフェルト伯領は1780年にザクセンとプロイセン（マグデブルク）の間で分けられた。ウンストルート＝ハイニッヒ郡の帝国自由都市ミュールハウゼン
+    マンスフェルト伯領は1780年にザクセンとプロイセン（マクデブルク）の間で分けられた。ウンストルート＝ハイニッヒ郡の帝国自由都市ミュールハウゼン
     （1802/03年プロイセン、1807年ヴェストファーレン王国）は郡単位で表せない。ズール（ヘンネベルクのザクセン領）は1815年にプロイセンへ。
     1871年からドイツ帝国の構成国プロイセン王国の領土。地図ではドイツ帝国の色で塗る。
 
@@ -904,7 +905,7 @@
   note: 1648年より前だけ altmark_halberstadt と所属が違うピースを分けた上書き用の地域（until 1647。1648年からは altmark_halberstadt の記述が効く）。
 
 - id: magdeburg_west
-  name: マグデブルク（エルベ川以西）・ハレ
+  name: マクデブルク（エルベ川以西）・ハレ
   select:
     pieces: [DEU-Magdeburg_Kreisfreie_Stadt, DEU-Borde, DEU-Salzlandkreis, DEU-Halle_Saale_Kreisfreie_Stadt]
   timeline:
@@ -913,7 +914,7 @@
     - from: 1680
       owner: prussia
       overlord: hre
-      cause: 管理者アウグストの死去（ウェストファリア条約の取り決めにより、マグデブルク公領としてブランデンブルクへ）
+      cause: 管理者アウグストの死去（ウェストファリア条約の取り決めにより、マクデブルク公領としてブランデンブルクへ）
       source: "https://ja.wikipedia.org/wiki/マクデブルク大司教領"
     - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
     - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（エルベ川以西をヴェストファーレン王国へ）}
@@ -929,13 +930,13 @@
   note: ザルツラント郡のベルンブルク周辺はアンハルト＝ベルンブルク、アッシャースレーベンはハルバーシュタット領だが、郡の大半に合わせた。1871年からドイツ帝国の構成国プロイセン王国の領土。地図ではドイツ帝国の色で塗る。
 
 - id: jerichow
-  name: イェリホー（マグデブルクのエルベ川以東）
+  name: イェリホー（マクデブルクのエルベ川以東）
   select:
     pieces: [DEU-Jerichower_Land]
   timeline:
     - {"from": 1453, "owner": "magdeburg", "overlord": "hre"}
     - {from: 1648, owner: magdeburg, overlord: hre}
-    - {from: 1680, owner: prussia, overlord: hre, cause: 管理者アウグストの死去（マグデブルク公領としてブランデンブルクへ）}
+    - {from: 1680, owner: prussia, overlord: hre, cause: 管理者アウグストの死去（マクデブルク公領としてブランデンブルクへ）}
     - {from: 1806, owner: prussia, cause: 神聖ローマ帝国の解体}
     - {from: 1815, owner: prussia, overlord: german_confederation, cause: ドイツ連邦の成立}
     - {from: 1866, owner: prussia, cause: 普墺戦争の結果ドイツ連邦が解体}
@@ -1221,7 +1222,9 @@
   select:
     pieces: [DEU-Braunschweig_Kreisfreie_Stadt, DEU-Wolfenbuttel, DEU-Helmstedt, DEU-Wolfsburg_Kreisfreie_Stadt, DEU-Goslar, DEU-Holzminden]
   timeline:
-    - {"from": 1453, "owner": "brunswick", "overlord": "hre", "note": "ブラウンシュヴァイク市はハンザ都市として公から事実上自立していた（1671年に服属）。1542–47年はシュマルカルデン同盟軍が占領した（表示していない）"}
+    - {"from": 1453, "owner": "brunswick", "overlord": "hre", "note": "ブラウンシュヴァイク市はハンザ都市として公から事実上自立していた（1671年に服属）"}
+    - {"from": 1542, "owner": "hesse_kassel", "overlord": "hre", "certainty": "occupied", "label": "ヴォルフェンビュッテル（シュマルカルデン同盟の占領）", "cause": "シュマルカルデン同盟（ザクセン選帝侯・ヘッセン方伯）の軍がカトリック派のハインリヒ2世（若公）を追い、公国を占領", "source": "https://en.wikipedia.org/wiki/Henry_V,_Duke_of_Brunswick-L%C3%BCneburg"}
+    - {"from": 1547, "owner": "brunswick", "overlord": "hre", "cause": "シュマルカルデン戦争で同盟が敗れ、ハインリヒ2世が公国に戻る"}
     - {from: 1648, owner: brunswick, overlord: hre}
     - {from: 1806, owner: france, certainty: occupied, cause: フランス軍の占領（10月。公はイエナ・アウエルシュタットの戦いで致命傷を負い死去）}
     - {from: 1807, owner: westphalia_kingdom, overlord: rhine_confederation, cause: ティルジット条約（ヴェストファーレン王国へ）}

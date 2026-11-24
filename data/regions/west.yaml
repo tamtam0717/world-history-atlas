@@ -496,8 +496,7 @@
   timeline:
     - from: 1453
       owner: burgundy
-      overlord: france
-      note: "アルトワ伯領（フランス王の封土）。"
+      note: "アルトワ伯領（フランス王の封土）。フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。1529年のカンブレーの和約で放棄）。"
       source: "ja.wikipedia: アルトワ"
     - from: 1477
       owner: france
@@ -510,7 +509,6 @@
       source: "ja.wikipedia: アラスの和約 (1482年)"
     - from: 1493
       owner: habsburg_netherlands
-      overlord: france
       cause: "サンリス条約でハプスブルク家（フィリップ美公）に返還"
       source: "ja.wikipedia: サンリス条約"
     - from: 1529
@@ -560,11 +558,9 @@
   timeline:
     - from: 1453
       owner: burgundy
-      overlord: france
       source: "ja.wikipedia: サン＝トメール"
     - from: 1477
       owner: habsburg_netherlands
-      overlord: france
       cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
       source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
     - from: 1482
@@ -573,7 +569,6 @@
       source: "ja.wikipedia: アラスの和約 (1482年)"
     - from: 1489
       owner: habsburg_netherlands
-      overlord: france
       cause: "マクシミリアンの軍がサントメールを奪回"
       source: "ja.wikipedia: サン＝トメール"
     - from: 1529
@@ -616,12 +611,10 @@
   timeline:
     - from: 1453
       owner: burgundy
-      overlord: france
-      note: "フランドル伯領（フランス王の封土）。1384年からブルゴーニュ公の領地。"
+      note: "フランドル伯領（フランス王の封土）。1384年からブルゴーニュ公の領地。フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。1529年のカンブレーの和約で放棄）。"
       source: "ja.wikipedia: フランドル伯"
     - from: 1477
       owner: habsburg_netherlands
-      overlord: france
       cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
       source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
     - from: 1529
@@ -686,12 +679,10 @@
   timeline:
     - from: 1453
       owner: burgundy
-      overlord: france
-      note: "フランドル伯領（フランス王の封土）。1384年からブルゴーニュ公の領地。"
+      note: "フランドル伯領（フランス王の封土）。1384年からブルゴーニュ公の領地。フランス王の宗主権は帯で描かない（ブルゴーニュ公領・ブルターニュなどほかの封土とそろえる。1529年のカンブレーの和約で放棄）。"
       source: "ja.wikipedia: フランドル伯"
     - from: 1477
       owner: habsburg_netherlands
-      overlord: france
       cause: "シャルル突進公の戦死。娘マリーがハプスブルク家のマクシミリアンと結婚（8月）し、ネーデルラントはハプスブルク家に"
       source: "ja.wikipedia: マリー・ド・ブルゴーニュ"
     - from: 1529
@@ -1536,7 +1527,7 @@
   timeline:
     - from: 1453
       owner: wattasid
-      note: "フェスを都とするマリーン朝（1465年に滅亡）とワッタース朝の王国。"
+      note: "フェスを都とするマリーン朝（1465年に滅亡）とワッタース朝の王国。大西洋岸のポルトガルの要塞（アゼンムール 1513–41、マザガン 1514–1769）はピースが県単位で粗いため描かない（1648年以降のマザガンも同じ）。"
       source: "ja.wikipedia: ワッタース朝"
     - from: 1549
       owner: morocco
@@ -1547,6 +1538,7 @@
       owner: morocco
       certainty: uncertain
       cause: "アフマド・マンスールの死後、王子たちが争い、サアド朝が分裂"
+      note: "スペインがララシュ（1610–89）とマアムーラ（1614–81）を得たが、ピースが県単位で粗いため描かない。"
       source: "ja.wikipedia: サアド朝"
     - from: 1648
       owner: morocco
@@ -4457,6 +4449,22 @@
       note: "1589年からはナバラ王（アンリ4世・ルイ13世）がフランス王を兼ねる同君連合だった。"
       source: "ja.wikipedia: ベアルン"
 
+- id: pre1648_sedan
+  name: "スダン公国"
+  until: 1647
+  select:
+    pieces: [FRA-Sedan]
+  timeline:
+    - from: 1453
+      owner: sedan
+      certainty: uncertain
+      note: "ラ・マルク家の独立の領地（のちスダン公国）。公国はスダン郡より小さく、郡の残りはフランス王領なので斜線で示す。"
+      source: "https://en.wikipedia.org/wiki/Principality_of_Sedan"
+    - from: 1642
+      owner: france
+      cause: "ブイヨン公がサン＝マールの陰謀に加わった罪で、スダンをフランス王に明け渡す（9月）"
+      source: "https://en.wikipedia.org/wiki/Principality_of_Sedan"
+
 - id: lower_navarre
   name: "低ナバラ（ピレネー北側のナバラ）"
   until: 1647
@@ -4756,6 +4764,26 @@
       note: "1479年からのカスティリャとアラゴンの同君連合（カトリック両王）を、1516年からはスペイン（spain）として描く。"
       source: "ja.wikipedia: カルロス1世 (スペイン王)"
 
+- id: gran_canaria
+  name: "グラン・カナリア島・ランサローテ島・フエルテベントゥラ島"
+  until: 1647
+  select:
+    pieces: [ESP-Palmas_Las]
+  timeline:
+    - from: 1453
+      owner: castile
+      certainty: nominal
+      note: "ランサローテ島・フエルテベントゥラ島はカスティリャ王に臣従する領主が征服済みだったが、最大のグラン・カナリア島は先住民（カナリオ）の地だった。"
+      source: "ja.wikipedia: カナリア諸島"
+    - from: 1483
+      owner: castile
+      cause: "グラン・カナリア島の征服の完了（1478–83年、カトリック両王の遠征）"
+      source: "https://en.wikipedia.org/wiki/Conquest_of_the_Canary_Islands"
+    - from: 1516
+      owner: spain
+      cause: "カルロス1世（のちの皇帝カール5世）がカスティリャとアラゴンの王位をあわせて継ぐ（スペイン王国の成立）"
+      source: "ja.wikipedia: カルロス1世 (スペイン王)"
+
 - id: tenerife_la_palma
   name: "テネリフェ島・ラ・パルマ島"
   until: 1647
@@ -4840,6 +4868,19 @@
       note: "イングランド王の支配が実際に及んだダブリン周辺の地域（ペイル）。キルデア伯が総督として実権を握った。"
       source: "ja.wikipedia: ペイル"
 
+- id: ireland_confed_ulster_wicklow
+  name: "キャヴァン・モナハン・ウィックロー"
+  until: 1647
+  select:
+    pieces: [IRL-BAILIEBOROUGH_COOTEHILL_LEA_6, IRL-BALLYBAY_CLONES_LEA_5, IRL-BALLYJAMESDUFF_LEA_6, IRL-CARRICKMACROSS_CASTLEBLAYNEY_LEA_6, IRL-CAVAN_BELTURBET_LEA_6, IRL-MONAGHAN_LEA_7, IRL-ARKLOW_LEA_6, IRL-BALTINGLASS_LEA_6, IRL-GREYSTONES_LEA_6, IRL-WICKLOW_LEA_6]
+  timeline:
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "東アルスター（アントリム・ダウン）はスコットランド軍、ドニゴール東部・デリーはプロテスタントの軍が保った。地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
+
 - id: ireland_ormond
   name: "レンスター南部とオーモンド（ウェックスフォード・キルケニー・ティペラリー・ウォーターフォード）"
   until: 1647
@@ -4855,6 +4896,12 @@
       owner: ireland
       cause: "ヘンリ8世がアイルランド王を称し、「降伏と再授封」政策で諸侯を王の臣下とする"
       source: "ja.wikipedia: アイルランド王国"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
 
 - id: ireland_midlands
   name: "アイルランド中部（レイシュ・オファリー・ウェストミース・ロングフォード）"
@@ -4871,6 +4918,12 @@
       owner: ireland
       cause: "レイシュ・オファリーへの植民（クイーンズ・カウンティ／キングズ・カウンティの設置）"
       source: "https://en.wikipedia.org/wiki/Plantations_of_Ireland"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
 
 - id: ireland_munster
   name: "マンスター（コーク・ケリー・リムリック）"
@@ -4887,6 +4940,12 @@
       owner: ireland
       cause: "デズモンドの乱の鎮圧（11月、デズモンド伯の戦死）。1586年からマンスター植民"
       source: "https://en.wikipedia.org/wiki/Second_Desmond_Rebellion"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "コーク・ユーガルなど南部の港町はインチクィン卿（議会派→国王派）が保った。地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
 
 - id: ireland_connacht
   name: "コナハトとトモンド（クレア）"
@@ -4903,6 +4962,12 @@
       owner: ireland
       cause: "コナハトの和約（コンポジション・オブ・コナハト。諸侯が王に地代を納め、土地を王から与えられる）"
       source: "https://en.wikipedia.org/wiki/Composition_of_Connacht"
+    - from: 1642
+      owner: ireland
+      label: カトリック同盟の支配地
+      cause: "1641年の反乱の後、カトリックの諸侯がキルケニーにカトリック同盟（キルケニー連合）を作り、島の大半を治める（1642–49年）"
+      note: "地図の色はアイルランド王国のまま（1648年以降のデータとそろえるため副ラベルだけで示す）。"
+      source: "ja.wikipedia: アイルランド同盟戦争"
 
 - id: rif_tetouan
   name: "テトゥアンとリーフ山地（シャウエン）"
