@@ -11,6 +11,8 @@
     regions: [france_kingdom, savoy_duchy, nice_county, avignon_comtat, corsica, monaco]
     iso: [FRA]
   timeline:
+    - from: 1453
+      main: french
     - from: 1648
       main: french
       note: 北フランスの民衆はピカルディ語・ノルマン語・ガロ語などのオイル諸語を話し、パリの標準フランス語とは差があった。リヨン・サヴォワ・フランシュ＝コンテ南部はフランコ・プロヴァンサル語（ここではフランス語に含める）。
@@ -26,6 +28,14 @@
     adm1: ["FRA/Occitanie"]
     exclude: [FRA-Perpignan, FRA-Ceret, FRA-Prades]
   timeline:
+    - from: 1453
+      main: occitan
+      note: "南フランスの民衆と町の言葉。"
+    - from: 1539
+      main: occitan
+      minor: french
+      note: "ヴィレール＝コトレの勅令（1539）で、公文書がフランス語で書かれるようになる。町の上層からフランス語が広まる。"
+      source: "https://ja.wikipedia.org/wiki/ヴィレル＝コトレ勅令"
     - from: 1648
       main: occitan
       minor: french
@@ -44,6 +54,9 @@
   select:
     pieces: [FRA-Nice]
   timeline:
+    - from: 1453
+      main: occitan
+      minor: italian
     - from: 1648
       main: occitan
       minor: italian
@@ -60,6 +73,9 @@
   select:
     pieces: [FRA-Bayonne]
   timeline:
+    - from: 1453
+      main: basque
+      minor: occitan
     - from: 1648
       main: basque
       minor: occitan
@@ -74,6 +90,9 @@
   select:
     pieces: [FRA-Oloron_Sainte_Marie]
   timeline:
+    - from: 1453
+      main: occitan
+      minor: basque
     - from: 1648
       main: occitan
       minor: basque
@@ -89,6 +108,8 @@
   select:
     pieces: [FRA-Perpignan, FRA-Ceret, FRA-Prades]
   timeline:
+    - from: 1453
+      main: catalan
     - from: 1648
       main: catalan
       note: ピレネー条約（1659）でフランス領になるが、民衆はカタルーニャ語を話し続けた。
@@ -105,6 +126,8 @@
   select:
     pieces: [FRA-Brest, FRA-Chateaulin, FRA-Quimper, FRA-Morlaix, FRA-Lannion, FRA-Guingamp, FRA-Lorient, FRA-Pontivy, FRA-Vannes]
   timeline:
+    - from: 1453
+      main: breton
     - from: 1648
       main: breton
       note: サン＝ブリユーからヴァンヌ東方を結ぶ線より西の農村は、ほぼブルトン語だけを話した。東の「高ブルターニュ」はガロ語（オイル諸語）。
@@ -126,6 +149,9 @@
   select:
     pieces: [FRA-Saint_Brieuc]
   timeline:
+    - from: 1453
+      main: breton
+      minor: french
     - from: 1648
       main: breton
       minor: french
@@ -141,6 +167,8 @@
   select:
     pieces: [FRA-Dunkerque]
   timeline:
+    - from: 1453
+      main: dutch
     - from: 1648
       main: dutch
       note: ダンケルク・アズブルック周辺の農村はフラマン語（西フラマン方言）。1662年にダンケルクがフランス領、1678年のナイメーヘン条約で周辺もフランス領になる。
@@ -157,6 +185,8 @@
   select:
     pieces: [FRA-Altkirch, FRA-Colmar, FRA-Mulhouse, FRA-Thann, FRA-Selestat, FRA-Molsheim, FRA-Haguenau, FRA-Saverne]
   timeline:
+    - from: 1453
+      main: german
     - from: 1648
       main: german
       note: アルザス語（アレマン方言）。ウェストファリア条約（1648）とストラスブール併合（1681）でフランス領になるが、民衆の言葉はドイツ語のまま。ヴォージュ山中の一部（ヴァル・ドルベなど）はロマンス系。
@@ -176,6 +206,8 @@
   select:
     pieces: [FRA-Strasbourg]
   timeline:
+    - from: 1453
+      main: german
     - from: 1648
       main: german
     - from: 1800
@@ -191,6 +223,9 @@
   select:
     pieces: [FRA-Forbach, FRA-Sarreguemines, FRA-Thionville, FRA-Sarrebourg]
   timeline:
+    - from: 1453
+      main: german
+      minor: french
     - from: 1648
       main: german
       minor: french
@@ -205,6 +240,9 @@
   select:
     pieces: [FRA-Metz]
   timeline:
+    - from: 1453
+      main: french
+      minor: german
     - from: 1648
       main: french
       minor: german
@@ -218,6 +256,8 @@
   select:
     regions: [corsica]
   timeline:
+    - from: 1453
+      main: italian
     - from: 1648
       main: italian
       note: コルシカ語（トスカーナ方言に近いイタリア系の言葉）。ジェノヴァ領の時代は書き言葉もイタリア語。ヴェルサイユ条約（1768）でフランス領。19世紀後半からフランス語が公用語として広がるが、民衆はコルシカ語を話し続けた。
@@ -232,6 +272,9 @@
   select:
     regions: [monaco]
   timeline:
+    - from: 1453
+      main: italian
+      minor: occitan
     - from: 1648
       main: italian
       minor: occitan
@@ -251,6 +294,8 @@
   select:
     iso: [ESP]
   timeline:
+    - from: 1453
+      main: spanish
     - from: 1648
       main: spanish
       note: アストゥリアス語・アラゴン語の山地の方言はここではカスティーリャ語（スペイン語）に含める。
@@ -264,6 +309,8 @@
   select:
     adm1: ["ESP/Cataluña/Catalunya"]
   timeline:
+    - from: 1453
+      main: catalan
     - from: 1648
       main: catalan
       note: 新国家基本令（1716）でカタルーニャの諸制度が廃止され、行政・法廷の言葉がカスティーリャ語になるが、民衆はカタルーニャ語を話し続けた。19世紀にはカタルーニャ語の文芸復興（ラナシェンサ）。
@@ -279,6 +326,14 @@
   select:
     adm1: ["ESP/Comunitat Valenciana"]
   timeline:
+    - from: 1453
+      main: catalan
+      minor: arabic
+      note: "農村のムデハル（のちのモリスコ）がアラビア語（アルガラビーア）を話す。"
+    - from: 1610
+      main: catalan
+      minor: spanish
+      note: "モリスコの追放（1609）。カスティリャ語の入植者が空いた村に入る。"
     - from: 1648
       main: catalan
       minor: spanish
@@ -294,6 +349,8 @@
   select:
     adm1: ["ESP/Illes Balears"]
   timeline:
+    - from: 1453
+      main: catalan
     - from: 1648
       main: catalan
       note: マジョルカ語・メノルカ語（カタルーニャ語）。メノルカ島は1708–1802年の大部分がイギリス領だったが、言葉は変わらない。
@@ -307,6 +364,8 @@
   select:
     regions: [andorra]
   timeline:
+    - from: 1453
+      main: catalan
     - from: 1648
       main: catalan
 
@@ -315,6 +374,9 @@
   select:
     pieces: [ESP-Gipuzkoa, ESP-Bizkaia]
   timeline:
+    - from: 1453
+      main: basque
+      minor: spanish
     - from: 1648
       main: basque
       minor: spanish
@@ -330,6 +392,9 @@
   select:
     pieces: [ESP-Alava, ESP-Navarra]
   timeline:
+    - from: 1453
+      main: spanish
+      minor: basque
     - from: 1648
       main: spanish
       minor: basque
@@ -343,6 +408,8 @@
   select:
     adm1: ["ESP/Galicia"]
   timeline:
+    - from: 1453
+      main: galician
     - from: 1648
       main: galician
       note: ガリシア語（ポルトガル語と同じ系統の言葉）。都市の上層と行政はカスティーリャ語。
@@ -358,6 +425,8 @@
     iso: [PRT]
     pieces: [PRT-RegiAo_AutA3noma_dos_AAores]   # アゾレス諸島（範囲外のピース）
   timeline:
+    - from: 1453
+      main: portuguese
     - from: 1648
       main: portuguese
       note: 北東端のミランダ・ド・ドウロではミランダ語（アストゥリアス・レオン語系）が話される。
@@ -369,6 +438,8 @@
     adm1: ["GBR/England"]
     pieces: [GBR-Isles_of_Scilly]
   timeline:
+    - from: 1453
+      main: english
     - from: 1648
       main: english
 
@@ -377,6 +448,15 @@
   select:
     pieces: [GBR-Cornwall]
   timeline:
+    - from: 1453
+      main: cornish
+      minor: english
+      note: "コーンウォール語は西部（トゥルーロ以西）を中心に話される。"
+    - from: 1550
+      main: english
+      minor: cornish
+      note: "英語の祈祷書の強制に反対する祈祷書反乱（1549）の後、英語化が進む。"
+      source: "https://ja.wikipedia.org/wiki/コーンウォール語"
     - from: 1648
       main: english
       minor: cornish
@@ -391,6 +471,9 @@
   select:
     adm1: ["GBR/Wales"]
   timeline:
+    - from: 1453
+      main: welsh
+      minor: english
     - from: 1648
       main: welsh
       minor: english
@@ -417,6 +500,9 @@
   select:
     pieces: [GBR-Pembrokeshire]
   timeline:
+    - from: 1453
+      main: welsh
+      minor: english
     - from: 1648
       main: welsh
       minor: english
@@ -430,6 +516,9 @@
   select:
     pieces: [GBR-Monmouthshire]
   timeline:
+    - from: 1453
+      main: welsh
+      minor: english
     - from: 1648
       main: welsh
       minor: english
@@ -445,6 +534,8 @@
   select:
     pieces: [GBR-Cardiff, GBR-Newport, GBR-Vale_of_Glamorgan, GBR-Torfaen, GBR-Blaenau_Gwent, GBR-Caerphilly, GBR-Merthyr_Tydfil, GBR-Rhondda_Cynon_Taf, GBR-Bridgend]
   timeline:
+    - from: 1453
+      main: welsh
     - from: 1648
       main: welsh
     - from: 1850
@@ -463,6 +554,9 @@
   select:
     pieces: [GBR-Flintshire, GBR-Wrexham, GBR-Powys]
   timeline:
+    - from: 1453
+      main: welsh
+      minor: english
     - from: 1648
       main: welsh
       minor: english
@@ -478,6 +572,8 @@
   select:
     adm1: ["GBR/Scotland"]
   timeline:
+    - from: 1453
+      main: scots
     - from: 1648
       main: scots
       note: 低地地方の民衆はスコットランド語（英語と近縁のゲルマン系の言葉）。書き言葉と教養層の言葉は17世紀から英語に近づいていく。
@@ -487,6 +583,13 @@
   select:
     pieces: [GBR-Dumfries_and_Galloway, GBR-South_Ayrshire]
   timeline:
+    - from: 1453
+      main: gaelic
+      minor: scots
+      note: "ギャロウェーのゲール語は16世紀まで残る。"
+    - from: 1550
+      main: scots
+      minor: gaelic
     - from: 1648
       main: scots
       minor: gaelic
@@ -499,6 +602,9 @@
   select:
     pieces: [GBR-Highland]
   timeline:
+    - from: 1453
+      main: gaelic
+      minor: scots
     - from: 1648
       main: gaelic
       minor: scots
@@ -520,6 +626,8 @@
   select:
     pieces: [GBR-Na_h_Eileanan_Siar]
   timeline:
+    - from: 1453
+      main: gaelic
     - from: 1648
       main: gaelic
     - from: 2000
@@ -533,6 +641,8 @@
   select:
     pieces: [GBR-Argyll_and_Bute]
   timeline:
+    - from: 1453
+      main: gaelic
     - from: 1648
       main: gaelic
     - from: 1850
@@ -550,6 +660,9 @@
   select:
     pieces: [GBR-Perth_and_Kinross, GBR-Stirling]
   timeline:
+    - from: 1453
+      main: scots
+      minor: gaelic
     - from: 1648
       main: scots
       minor: gaelic
@@ -563,6 +676,8 @@
   select:
     pieces: [GBR-Orkney_Islands, GBR-Shetland_Islands]
   timeline:
+    - from: 1453
+      main: scots
     - from: 1648
       main: scots
       note: ノルン語（古ノルド語の流れをくむ言葉）がシェトランドなどで18世紀まで残った。
@@ -575,6 +690,14 @@
     regions: [ireland]
     iso: [IRL]
   timeline:
+    - from: 1453
+      main: irish
+      note: "「ゲール語の復興」。イングランド王の支配はダブリン周辺のペイルに限られ、アングロ＝ノルマン系の領主（フィッツジェラルド家など）もゲール語化している。"
+    - from: 1610
+      main: irish
+      minor: english
+      note: "テューダー朝の征服（九年戦争 1594–1603）と植民（マンスター 1586、アルスター 1609）で、イングランド人の地主・入植者が増える。"
+      source: "https://ja.wikipedia.org/wiki/アルスター植民"
     - from: 1648
       main: irish
       minor: english
@@ -594,6 +717,9 @@
     adm1: ["IRL/Leinster"]
     exclude: [IRL-ATHLONE_LEA_5, IRL-BALLYMAHON_LEA_6, IRL-GRANARD_LEA_5, IRL-LONGFORD_LEA_7, IRL-MOATE_LEA_4, IRL-MULLINGAR_LEA_6, IRL-KINNEGAD_LEA_5, IRL-BIRR_LEA_6, IRL-EDENDERRY_LEA_6, IRL-TULLAMORE_LEA_7, IRL-BORRIS_IN_OSSORY_MOUNTMELLICK_LEA_6, IRL-GRAIGUECULLEN_PORTARLINGTON_LEA_6, IRL-PORTLAOISE_LEA_7, IRL-CALLAN_THOMASTOWN_LEA_6, IRL-CASTLECOMER_LEA_6, IRL-KILKENNY_LEA_7, IRL-PILTOWN_LEA_5, IRL-CARLOW_LEA_7, IRL-MUINEBEAG_LEA_5, IRL-TULLOW_LEA_6]
   timeline:
+    - from: 1453
+      main: irish
+      minor: english
     - from: 1648
       main: irish
       minor: english
@@ -611,6 +737,9 @@
   select:
     pieces: [IRL-ARTANE_WHITEHALL_LEA_6, IRL-BALLYFERMOT_DRIMNAGH_LEA_5, IRL-BALLYMUN_FINGLAS_LEA_6, IRL-CABRA_GLASNEVIN_LEA_7, IRL-CLONTARF_LEA_6, IRL-DONAGHMEDE_LEA_5, IRL-KIMMAGE_RATHMINES_LEA_6, IRL-NORTH_INNER_CITY_LEA_7, IRL-PEMBROKE_LEA_5, IRL-SOUTH_EAST_INNER_CITY_LEA_5, IRL-SOUTH_WEST_INNER_CITY_LEA_5, IRL-BLACKROCK_LEA_6, IRL-DUN_LAOGHAIRE_LEA_7, IRL-DUNDRUM_LEA_7, IRL-STILLORGAN_LEA_6, IRL-KILLINEY_SHANKILL_LEA_7, IRL-GLENCULLEN_SANDYFORD_LEA_7, IRL-RATHFARNHAM_TEMPLEOGUE_LEA_7, IRL-TALLAGHT_CENTRAL_LEA_6, IRL-TALLAGHT_SOUTH_LEA_5, IRL-FIRHOUSE_BOHERNABREENA_LEA_5, IRL-CLONDALKIN_LEA_7, IRL-PALMERSTOWN_FONTHILL_LEA_5, IRL-LUCAN_LEA_5, IRL-CASTLEKNOCK_LEA_6, IRL-BLANCHARDSTOWN_MULHUDDART_LEA_5, IRL-ONGAR_LEA_5, IRL-HOWTH_MALAHIDE_LEA_7, IRL-SWORDS_LEA_7]
   timeline:
+    - from: 1453
+      main: english
+      minor: irish
     - from: 1648
       main: english
       minor: irish
@@ -623,6 +752,12 @@
   select:
     pieces: [IRL-ATHLONE_LEA_5, IRL-BALLYMAHON_LEA_6, IRL-GRANARD_LEA_5, IRL-LONGFORD_LEA_7, IRL-MOATE_LEA_4, IRL-MULLINGAR_LEA_6, IRL-KINNEGAD_LEA_5, IRL-BIRR_LEA_6, IRL-EDENDERRY_LEA_6, IRL-TULLAMORE_LEA_7, IRL-BORRIS_IN_OSSORY_MOUNTMELLICK_LEA_6, IRL-GRAIGUECULLEN_PORTARLINGTON_LEA_6, IRL-PORTLAOISE_LEA_7, IRL-CALLAN_THOMASTOWN_LEA_6, IRL-CASTLECOMER_LEA_6, IRL-KILKENNY_LEA_7, IRL-PILTOWN_LEA_5, IRL-CARLOW_LEA_7, IRL-MUINEBEAG_LEA_5, IRL-TULLOW_LEA_6, IRL-BAILIEBOROUGH_COOTEHILL_LEA_6, IRL-BALLYJAMESDUFF_LEA_6, IRL-CAVAN_BELTURBET_LEA_6, IRL-BALLYBAY_CLONES_LEA_5, IRL-CARRICKMACROSS_CASTLEBLAYNEY_LEA_6, IRL-MONAGHAN_LEA_7]
   timeline:
+    - from: 1453
+      main: irish
+    - from: 1560
+      main: irish
+      minor: english
+      note: "リーシュ・オファリーの植民（1556）。"
     - from: 1648
       main: irish
       minor: english
@@ -640,6 +775,8 @@
     adm1: ["IRL/Connacht"]
     pieces: [IRL-BANTRY_WEST_CORK_LEA_4, IRL-SKIBBEREEN_WEST_CORK_LEA_5, IRL-MACROOM_LEA_6, IRL-KANTURK_LEA_4, IRL-CASTLEISLAND_LEA_4, IRL-KILLARNEY_LEA_7, IRL-LISTOWEL_LEA_6, IRL-TRALEE_LEA_7, IRL-ENNISTIMON_LEA_4, IRL-KILRUSH_LEA_5, IRL-ENNIS_LEA_7, IRL-NEWCASTLE_WEST_LEA_6, IRL-DUNGARVAN_LEA_6, IRL-DONEGAL_LEA_6, IRL-LETTERKENNY_LEA_7, IRL-LIFFORD_STRANORLAR_LEA_6, IRL-BUNCRANA_LEA_5, IRL-CARNDONAGH_LEA_4]
   timeline:
+    - from: 1453
+      main: irish
     - from: 1648
       main: irish
     - from: 1800
@@ -660,6 +797,8 @@
   select:
     pieces: [IRL-CONAMARA_NORTH_LEA_4, IRL-CONAMARA_SOUTH_LEA_5, IRL-BELMULLET_LEA_3, IRL-WESTPORT_LEA_4, IRL-CORCA_DHUIBHNE_LEA_3, IRL-KENMARE_LEA_6, IRL-GLENTIES_LEA_6, IRL-MILFORD_LEA_3]
   timeline:
+    - from: 1453
+      main: irish
     - from: 1648
       main: irish
     - from: 1850
@@ -680,6 +819,12 @@
     adm1: ["IRL/Munster"]
     exclude: [IRL-BANTRY_WEST_CORK_LEA_4, IRL-SKIBBEREEN_WEST_CORK_LEA_5, IRL-MACROOM_LEA_6, IRL-KANTURK_LEA_4, IRL-CASTLEISLAND_LEA_4, IRL-KILLARNEY_LEA_7, IRL-LISTOWEL_LEA_6, IRL-TRALEE_LEA_7, IRL-ENNISTIMON_LEA_4, IRL-KILRUSH_LEA_5, IRL-ENNIS_LEA_7, IRL-NEWCASTLE_WEST_LEA_6, IRL-DUNGARVAN_LEA_6, IRL-CORCA_DHUIBHNE_LEA_3, IRL-KENMARE_LEA_6]
   timeline:
+    - from: 1453
+      main: irish
+    - from: 1590
+      main: irish
+      minor: english
+      note: "マンスター植民（1586–）。"
     - from: 1648
       main: irish
       minor: english
@@ -696,6 +841,17 @@
   select:
     pieces: [GBR-Antrim_and_Newtownabbey, GBR-Ards_and_North_Down, GBR-Mid_and_East_Antrim, GBR-Causeway_Coast_and_Glens, GBR-Lisburn_and_Castlereagh]
   timeline:
+    - from: 1453
+      main: irish
+      note: "アントリムのグレンズには、スコットランドのマクドナルド家（ゲール語）が渡ってくる。"
+    - from: 1606
+      main: irish
+      minor: scots
+      note: "ハミルトンとモンゴメリーの植民（1606）で、ダウン北部・アントリムにスコットランド人が移り住む。"
+    - from: 1630
+      main: scots
+      minor: irish
+      note: "アルスター植民（1609–）でスコットランド人の入植が進む。"
     - from: 1648
       main: scots
       minor: irish
@@ -714,6 +870,12 @@
   select:
     pieces: [GBR-Belfast]
   timeline:
+    - from: 1453
+      main: irish
+    - from: 1613
+      main: scots
+      minor: english
+      note: "チチェスターがベルファストの町を作る（1613）。"
     - from: 1648
       main: scots
       minor: english
@@ -729,6 +891,12 @@
   select:
     pieces: [GBR-Armagh_City_Banbridge_and_Craigavon, GBR-Mid_Ulster, GBR-Derry_City_and_Strabane, GBR-Fermanagh_and_Omagh, GBR-Newry_Mourne_and_Down]
   timeline:
+    - from: 1453
+      main: irish
+    - from: 1610
+      main: irish
+      minor: english
+      note: "アルスター植民（1609–）。ロンドンの商人組合がデリー（ロンドンデリー）を再建する（1613）。"
     - from: 1648
       main: irish
       minor: english
@@ -747,6 +915,8 @@
     regions: [iceland]
     iso: [ISL]
   timeline:
+    - from: 1453
+      main: icelandic
     - from: 1648
       main: icelandic
 
@@ -757,6 +927,8 @@
     regions: [malta_region]
     iso: [MLT]
   timeline:
+    - from: 1453
+      main: maltese
     - from: 1648
       main: maltese
       note: 民衆はマルタ語（アラビア語系でラテン文字を使う）。聖ヨハネ騎士団の時代、行政と教養層はイタリア語。1800年からイギリス統治（1814年のパリ条約で正式に領有）。行政語はイタリア語から英語へ移っていく（言語問題）。
@@ -767,6 +939,8 @@
   select:
     iso: [MAR, DZA, TUN, LBY, ESH, MRT, MLI]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
       note: アラビア語のマグリブ方言（西サハラ・モーリタニアはハッサーニーヤ方言）。ベルベル語の地域は下で上書き。
@@ -776,6 +950,9 @@
   select:
     adm1: ["MAR/Fez-Meknes", "MAR/Oriental", "MAR/Marrakech-Safi", "MAR/Tangier-Tetouan-Al Hoceima", "MAR/Rabat-Salé-Kenitra"]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: berber
     - from: 1648
       main: arabic
       minor: berber
@@ -788,6 +965,9 @@
     pieces: [MAR-Al_Hoceima_Province, MAR-Province_de_Driouch, MAR-Province_de_Nador, MAR-Province_de_Khemisset, MAR-Province_d_El_Hajeb, MAR-Province_d_Ifrane, MAR-Province_de_Boulemane, MAR-Province_de_Sefrou, MAR-Al_Haouz_Province, MAR-Chichaoua_Province, MAR-Province_de_Figuig, MAR-Guelmim_Province, MAR-Sidi_Ifni_Province]
     exclude: [MAR-Province_de_Fquih_Ben_Saleh, MAR-Province_de_Khouribga]
   timeline:
+    - from: 1453
+      main: berber
+      minor: arabic
     - from: 1648
       main: berber
       minor: arabic
@@ -799,6 +979,8 @@
     adm1: ["MAR/Casablanca-Settat"]
     pieces: [MAR-Province_de_Fquih_Ben_Saleh, MAR-Province_de_Khouribga]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
       note: 中世にアラブ系の遊牧部族が入ったため、早くからアラビア語化した平野。
@@ -815,6 +997,8 @@
   select:
     pieces: [DZA-Tizi_Ouzou, DZA-Bejaia]
   timeline:
+    - from: 1453
+      main: berber
     - from: 1648
       main: berber
       note: カビール語（ベルベル語）の山地。1857年までフランスの征服に抵抗した。
@@ -824,6 +1008,9 @@
   select:
     pieces: [DZA-Bouira, DZA-Bordj_Bou_Arreidj, DZA-Satif, DZA-Boumerdes, DZA-Jijel, DZA-Oum_el_Bouaghi, DZA-Tebessa, DZA-Biskra, DZA-Chlef, DZA-Ouargla, DZA-Bechar]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: berber
     - from: 1648
       main: arabic
       minor: berber
@@ -834,6 +1021,9 @@
   select:
     pieces: [DZA-Batna, DZA-Khenchela]
   timeline:
+    - from: 1453
+      main: berber
+      minor: arabic
     - from: 1648
       main: berber
       minor: arabic
@@ -844,6 +1034,9 @@
   select:
     pieces: [DZA-Ghardaia]
   timeline:
+    - from: 1453
+      main: berber
+      minor: arabic
     - from: 1648
       main: berber
       minor: arabic
@@ -854,6 +1047,9 @@
   select:
     pieces: [DZA-Tamanghasset, DZA-Tamanghasset_2, DZA-Illizi, LBY-Ghat]
   timeline:
+    - from: 1453
+      main: berber
+      minor: arabic
     - from: 1648
       main: berber
       minor: arabic
@@ -864,6 +1060,10 @@
   select:
     pieces: [MLI-Tombouctou]
   timeline:
+    - from: 1453
+      main: berber
+      minor: arabic
+      note: "トンブクトゥはソンガイ帝国のもとで栄える（1591年にモロッコ軍が征服）。"
     - from: 1648
       main: berber
       minor: arabic
@@ -874,6 +1074,12 @@
   select:
     pieces: [DZA-Annaba]
   timeline:
+    - from: 1453
+      main: arabic
+    - from: 1530
+      main: arabic
+      minor: turkish
+      note: "オスマン帝国のアルジェ州（1529–）。"
     - from: 1648
       main: arabic
       minor: turkish
@@ -893,6 +1099,13 @@
   select:
     pieces: [DZA-Alger]
   timeline:
+    - from: 1453
+      main: arabic
+    - from: 1520
+      main: arabic
+      minor: turkish
+      note: "バルバロス兄弟がアルジェを拠点とし（1516–）、オスマン帝国に従う。トルコ人の兵士（イェニチェリ）と、アンダルスから逃れたムスリムが住む。"
+      source: "https://ja.wikipedia.org/wiki/バルバロス・ハイレッディン"
     - from: 1648
       main: arabic
       minor: turkish
@@ -922,6 +1135,12 @@
   select:
     regions: [oran]
   timeline:
+    - from: 1453
+      main: arabic
+    - from: 1509
+      main: arabic
+      minor: spanish
+      note: "スペインがオランを占領し（1509）、要塞とする。"
     - from: 1648
       main: arabic
       minor: spanish
@@ -951,6 +1170,8 @@
   select:
     pieces: [DZA-Blida, DZA-Tipaza, DZA-Sidi_Bel_Abbes, DZA-Mostaganem, DZA-Ain_Temouchent]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
     - from: 1870
@@ -966,6 +1187,8 @@
   select:
     pieces: [TUN-Tunis]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
     - from: 1880
@@ -982,6 +1205,9 @@
   select:
     pieces: [TUN-Medenine, TUN-Tataouine]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: berber
     - from: 1648
       main: arabic
       minor: berber
@@ -992,6 +1218,9 @@
   select:
     pieces: [LBY-Mizdah, LBY-An_Nuqat_al_Khams, LBY-Ghadamis]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: berber
     - from: 1648
       main: arabic
       minor: berber
@@ -1002,6 +1231,8 @@
   select:
     regions: [tripoli_regency]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
       note: 伊土戦争（1911–12）でイタリアが占領。
@@ -1011,6 +1242,9 @@
   select:
     pieces: [LBY-Murzuq, LBY-Al_Kufrah]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: teda
     - from: 1648
       main: arabic
       minor: teda
@@ -1022,6 +1256,8 @@
     regions: [egypt]
     iso: [EGY]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
       note: エジプト方言のアラビア語。コプト語は17世紀までに日常語としてはほぼ消え、コプト教会の典礼語として残る。支配層のマムルークとオスマン官僚はトルコ語。
@@ -1031,6 +1267,8 @@
   select:
     pieces: [EGY-Alexandria_Governorate]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
     - from: 1860
@@ -1047,6 +1285,9 @@
   select:
     pieces: [EGY-Aswan_Governorate]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: nubian
     - from: 1648
       main: arabic
       minor: nubian
@@ -1057,6 +1298,9 @@
   select:
     pieces: [EGY-Matrouh_Governorate]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: berber
     - from: 1648
       main: arabic
       minor: berber
@@ -1086,3 +1330,24 @@
       minor: welsh
       note: 海岸の保養地にイングランドからの移住者が多く、2011年の調査でウェールズ語話者は約25%。内陸の村ではウェールズ語が多数。
       source: "https://en.wikipedia.org/wiki/Welsh_language"
+
+# ---- 1453–1647 年だけの区分け（until: 1647。1648 年以後は上の地域の記述が効く）----
+
+- id: lang_granada_pre
+  name: グラナダ王国（1453–1647）
+  select:
+    pieces: [ESP-Granada, ESP-Malaga, ESP-Almeria]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: arabic
+      note: "ナスル朝グラナダ王国。アラビア語（アンダルス方言）の地。"
+    - from: 1492
+      main: arabic
+      minor: spanish
+      note: "グラナダ陥落（1492）。カスティリャからの入植者が町に増える。モリスコはアラビア語と衣服・習慣を禁じられ（1567）、アルプハラスの反乱が起こる。"
+      source: "https://ja.wikipedia.org/wiki/グラナダ陥落"
+    - from: 1571
+      main: spanish
+      note: "反乱の鎮圧後、モリスコはカスティリャ各地へ移され、カスティリャ語の入植者が村に入る。"
+      source: "https://ja.wikipedia.org/wiki/アルプハラスの反乱"

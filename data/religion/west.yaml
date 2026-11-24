@@ -7,6 +7,9 @@
   select:
     iso: [FRA, MCO, AND]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "百年戦争の終わり（1453）。住民はほぼすべてカトリック。1516年のボローニャの政教協約で、国王が司教の任命権を得る（ガリカニスム）。1530年代からカルヴァン派（ユグノー）が広がるが、全国では人口の1割に届かない（多い地方は別の地域で示す）。"
     - from: 1648
       main: catholic
       note: カトリックが圧倒的多数。プロテスタント（ユグノー）は全人口の5％ほどで、南部・西部に集中する。
@@ -21,6 +24,13 @@
     adm2: ["FRA/Gard", "FRA/Ardèche"]
     pieces: [FRA-Florac_Trois_Rivieres, FRA-Die]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1555
+      main: catholic
+      minor: reformed
+      note: "1550年代にカルヴァン派（ユグノー）の教会が各地に組織される（1559年パリで全国教会会議）。セヴェンヌ・ニーム・ヴィヴァレでは改革派が住民の多くを占める。ユグノー戦争（1562–98）を経て、ナントの王令（1598）で信仰が公認される。"
+      source: "https://ja.wikipedia.org/wiki/ユグノー戦争"
     - from: 1648
       main: catholic
       minor: reformed
@@ -40,6 +50,13 @@
   select:
     pieces: [FRA-Niort, FRA-La_Rochelle, FRA-Saint_Jean_d_Angely, FRA-Castres, FRA-Montauban, FRA-Pau, FRA-Pamiers, FRA-Nyons]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: catholic
+      minor: reformed
+      note: "ラ・ロシェル・ポワトゥー・サントンジュ、ベアルン（ジャンヌ・ダルブレが1571年に改革派を国教とする）、モントーバン・カストルなどにユグノーが多い。ナントの王令（1598）で安全保障地を認められるが、ラ・ロシェルは1628年に陥落。"
+      source: "https://ja.wikipedia.org/wiki/ナントの勅令"
     - from: 1648
       main: catholic
       minor: reformed
@@ -54,6 +71,13 @@
   select:
     pieces: [FRA-Strasbourg]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1529
+      main: lutheran
+      minor: catholic
+      note: "帝国都市ストラスブールは1520年代に宗教改革を受け入れ（1529年ミサ廃止。ブツァー）、のちにルター派となる。"
+      source: "https://ja.wikipedia.org/wiki/マルティン・ブツァー"
     - from: 1648
       main: lutheran
       minor: catholic
@@ -68,6 +92,12 @@
   select:
     pieces: [FRA-Haguenau, FRA-Saverne, FRA-Colmar]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1545
+      main: catholic
+      minor: lutheran
+      note: "ハーナウ＝リヒテンベルク伯領（1545）、コルマール（1575）などがルター派となる。"
     - from: 1648
       main: catholic
       minor: lutheran
@@ -78,6 +108,12 @@
   select:
     pieces: [FRA-Mulhouse]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1529
+      main: catholic
+      minor: reformed
+      note: "ミュールーズはスイスと同盟し、ツヴィングリ派（改革派）の宗教改革を受け入れる。"
     - from: 1648
       main: catholic
       minor: reformed
@@ -88,6 +124,11 @@
   select:
     pieces: [FRA-Montbeliard]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1538
+      main: lutheran
+      note: "ヴュルテンベルク公の伯領で、ルター派の宗教改革（ファレルの説教は1524年）。"
     - from: 1648
       main: lutheran
       note: ヴュルテンベルク家の伯領で、ルター派。1793年にフランスに併合された後もルター派が多い。
@@ -99,6 +140,10 @@
     iso: [ESP, PRT]
     pieces: [PRT-RegiAo_AutA3noma_dos_AAores]   # アゾレス諸島（範囲外のピース）
   timeline:
+    - from: 1453
+      main: catholic
+      note: "レコンキスタの最後の段階。カトリック両王は1478年に異端審問所を置き、1492年にユダヤ教徒を追放（ポルトガルも1496–97年に追放・強制改宗）。改宗したユダヤ人（コンベルソ）は異端審問の対象となる。ムスリムの多い地方（グラナダ・バレンシア・アラゴン）は別の地域で示す。"
+      source: "https://ja.wikipedia.org/wiki/アルハンブラ勅令"
     - from: 1648
       main: catholic
       note: モリスコの追放（1609–14）以後、住民はほぼすべてカトリック。異端審問が続く。
@@ -112,6 +157,26 @@
   select:
     regions: [england_wales]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "ばら戦争（1455–85）のころ。ウィクリフ派（ロラード派）は少数で地下に残る。"
+    - from: 1534
+      main: anglican
+      minor: catholic
+      note: "首長法（1534）でヘンリ8世がイングランド教会の首長となり、ローマ教皇から離れる。修道院の解散（1536–40）。教義と民衆の信仰はなお伝統的。"
+      source: "https://ja.wikipedia.org/wiki/国王至上法"
+    - from: 1553
+      main: catholic
+      minor: anglican
+      note: "メアリ1世がカトリックを復活させ、プロテスタントを弾圧する。"
+    - from: 1559
+      main: anglican
+      minor: catholic
+      note: "エリザベス1世の統一法（1559）で国教会が確立する。北部などにカトリックが残る。"
+      source: "https://ja.wikipedia.org/wiki/礼拝統一法"
+    - from: 1600
+      main: anglican
+      note: "国教会が住民の多数に定着する。カトリック（国教忌避者）は少数となり、ピューリタンが国教会の内部で改革を求める。"
     - from: 1648
       main: anglican
       note: ピューリタン革命期（1649–60）は国教会の主教制が廃止され、長老派・独立派が力を持つ。
@@ -132,6 +197,21 @@
   select:
     adm1: ["GBR/Wales"]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1534
+      main: anglican
+      minor: catholic
+      note: "ウェールズは合同法（1536・43）でイングランドに統合され、国教会の体制に入る。"
+    - from: 1553
+      main: catholic
+      minor: anglican
+    - from: 1559
+      main: anglican
+      minor: catholic
+    - from: 1600
+      main: anglican
+      note: "1588年にウェールズ語訳の聖書が出て、国教会の信仰が民衆に広まる。"
     - from: 1648
       main: anglican
       note: 国教会の教区が置かれているが、ピューリタン革命期には独立派・バプテストの集会も生まれる。
@@ -146,6 +226,13 @@
   select:
     regions: [scotland]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1560
+      main: reformed
+      minor: catholic
+      note: "ノックスの指導で宗教改革議会（1560）が教皇の権威を否定し、カルヴァン派（長老派）のスコットランド教会が成立する。ハイランドの一部にはカトリックが残る。"
+      source: "https://ja.wikipedia.org/wiki/スコットランド宗教改革"
     - from: 1648
       main: reformed
       note: 長老派（改革派）のスコットランド教会が多数。ハイランドの一部と西部の島々にカトリック、北東部に主教制派（監督派）が残る。
@@ -161,6 +248,10 @@
   select:
     regions: [ireland]
   timeline:
+    - from: 1453
+      main: catholic
+      note: "ヘンリ8世はアイルランドでも首長法（1536）を定め、国教会（アイルランド教会）を置くが、住民はカトリックのまま。プロテスタントはダブリンなどのイングランド人の役人と、アルスター植民（1609–）の入植者に限られる。"
+      source: "https://ja.wikipedia.org/wiki/アイルランドの宗教改革"
     - from: 1648
       main: catholic
       note: 住民の大多数はカトリック。支配層はアイルランド国教会（イギリス国教会系）。クロムウェルの征服（1649–53）後、土地の多くがプロテスタントに移る。18世紀には刑罰法でカトリックの権利が制限される。
@@ -174,6 +265,13 @@
   select:
     pieces: [GBR-Antrim_and_Newtownabbey, GBR-Ards_and_North_Down, GBR-Belfast, GBR-Lisburn_and_Castlereagh, GBR-Mid_and_East_Antrim, GBR-Causeway_Coast_and_Glens]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1610
+      main: catholic
+      minor: reformed
+      note: "アントリム・ダウンにスコットランドからの入植者（長老派）が移り住む（ハミルトンとモンゴメリーの植民 1606–、アルスター植民 1609–）。"
+      source: "https://ja.wikipedia.org/wiki/アルスター植民"
     - from: 1648
       main: catholic
       minor: reformed
@@ -188,6 +286,13 @@
   select:
     pieces: [GBR-Derry_City_and_Strabane, GBR-Mid_Ulster, GBR-Fermanagh_and_Omagh, GBR-Armagh_City_Banbridge_and_Craigavon, GBR-Newry_Mourne_and_Down]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1610
+      main: catholic
+      minor: anglican
+      note: "アルスター植民（1609–）で、没収された土地にイングランド人（国教会）とスコットランド人の入植者が入る。"
+      source: "https://ja.wikipedia.org/wiki/アルスター植民"
     - from: 1648
       main: catholic
       minor: anglican
@@ -198,6 +303,12 @@
   select:
     pieces: [IRL-NORTH_INNER_CITY_LEA_7, IRL-SOUTH_EAST_INNER_CITY_LEA_5, IRL-PEMBROKE_LEA_5, IRL-CABRA_GLASNEVIN_LEA_7, IRL-KIMMAGE_RATHMINES_LEA_6]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1600
+      main: catholic
+      minor: anglican
+      note: "イングランドの統治の中心で、国教会の役人・入植者が増える（トリニティ・カレッジ 1592）。"
     - from: 1648
       main: catholic
       minor: anglican
@@ -219,6 +330,11 @@
   select:
     regions: [iceland]
   timeline:
+    - from: 1453
+      main: catholic
+    - from: 1550
+      main: lutheran
+      note: "デンマーク王による宗教改革。最後のカトリックの司教ヨーン・アラソンが1550年に処刑される。"
     - from: 1648
       main: lutheran
 
@@ -227,6 +343,9 @@
   select:
     regions: [east_greenland]
   timeline:
+    - from: 1453
+      main: other
+      note: "ノルド人（ヴァイキングの子孫）の集落は15世紀に消え、イヌイットの地となる。"
     - from: 1648
       main: other
       note: イヌイットの伝統的な信仰。西岸では1721年からハンス・エーゲデのルター派の伝道が始まる。
@@ -240,6 +359,9 @@
   select:
     regions: [west_greenland]
   timeline:
+    - from: 1453
+      main: other
+      note: "ノルド人の集落は15世紀前半までに消え、イヌイットの地となる。"
     - from: 1648
       main: other
       note: イヌイットの伝統的な信仰（アンガコック〈シャーマン〉）。
@@ -254,6 +376,9 @@
   select:
     iso: [MAR, DZA, TUN, LBY, ESH, MRT, MLI]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "スンナ派（マーリク派）。1492年以後、イベリア半島を追われたムスリム（アンダルス人）とユダヤ教徒が移り住む。スペイン・ポルトガルの沿岸の拠点（セウタ・メリリャ・オラン・タンジールなど）はキリスト教徒の守備隊の町。"
     - from: 1648
       main: sunni
       note: スンナ派（マーリク派）。各地にユダヤ教徒の共同体がある。ムザブ（アルジェリア）とジェルバ島（チュニジア）にはイバード派が住む。
@@ -263,6 +388,9 @@
   select:
     regions: [oran]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "1509–1708年はスペインの要塞（守備隊と少数の住民）。"
     - from: 1648
       main: sunni
       note: スペインの要塞都市（1708–32年はアルジェ領）。後背地の住民はムスリム。
@@ -283,6 +411,8 @@
   select:
     pieces: [DZA-Alger]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
       note: アルジェ（オスマン帝国の摂政領の首都）。ユダヤ教徒の共同体があり、キリスト教徒の捕虜も多い。
@@ -305,6 +435,8 @@
   select:
     pieces: [DZA-Blida, DZA-Tipaza, DZA-Sidi_Bel_Abbes, DZA-Mostaganem, DZA-Ain_Temouchent, DZA-Annaba]
   timeline:
+    - from: 1453
+      main: sunni
     - from: 1648
       main: sunni
     - from: 1870
@@ -321,6 +453,9 @@
   select:
     iso: [EGY]
   timeline:
+    - from: 1453
+      main: sunni
+      note: "スンナ派が多数で、コプト教会のキリスト教徒が1割ほど。"
     - from: 1648
       main: sunni
       note: スンナ派が多数。コプト教会（東方諸教会）の信徒が人口の1割前後いる。
@@ -363,3 +498,53 @@
       minor: sunni
       note: 2021年の調査でキリスト教徒約25%、ムスリム約24%、ヒンドゥー教徒約18%（ヒンドゥー教は地図の種類にない）。
       source: "https://en.wikipedia.org/wiki/Leicester"
+
+# ---- 1453–1647 年だけの区分け（until: 1647。1648 年以後は上の地域の記述が効く）----
+
+- id: rel_granada_pre
+  name: グラナダ王国（1453–1647）
+  select:
+    pieces: [ESP-Granada, ESP-Malaga, ESP-Almeria]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: sunni
+      note: "ナスル朝グラナダ王国。イベリア半島に残った最後のイスラーム国家。"
+    - from: 1492
+      main: sunni
+      minor: catholic
+      note: "カトリック両王がグラナダを征服（1492）。降伏協定でムスリムの信仰は認められたが、1499–1502年に強制改宗が行われる。改宗したムスリム（モリスコ）の多くはひそかにイスラームの信仰を保つ。カスティリャからの入植者が増える。"
+      source: "https://ja.wikipedia.org/wiki/グラナダ陥落"
+    - from: 1571
+      main: catholic
+      note: "アルプハラスの反乱（1568–71）の後、グラナダのモリスコはカスティリャ各地へ強制移住させられる。1609–14年にスペイン全土からモリスコが追放される。"
+      source: "https://ja.wikipedia.org/wiki/モリスコ"
+
+- id: rel_valencia_morisco_pre
+  name: バレンシア王国（モリスコの多い地域、1453–1647）
+  select:
+    pieces: [ESP-Valencia, ESP-Alicante, ESP-Castellon]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+      minor: sunni
+      note: "アラゴン連合王国のバレンシア。農村の住民の3分の1ほどがムデハル（キリスト教国のもとのムスリム）で、貴族の領地で働く。1525年に強制改宗され、モリスコとなる。"
+    - from: 1610
+      main: catholic
+      note: "モリスコの追放（1609）。住民の約3分の1が北アフリカへ追われ、農村が荒廃する。"
+      source: "https://ja.wikipedia.org/wiki/モリスコ追放"
+
+- id: rel_aragon_morisco_pre
+  name: アラゴン（エブロ川流域のモリスコの村、1453–1647）
+  select:
+    pieces: [ESP-Zaragoza]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: catholic
+      minor: sunni
+      note: "エブロ川流域の村にムデハルが多い（アラゴン王国の住民の約2割）。1526年に強制改宗され、モリスコとなる。"
+    - from: 1610
+      main: catholic
+      note: "モリスコの追放（1610）。"

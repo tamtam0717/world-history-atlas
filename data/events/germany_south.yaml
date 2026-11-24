@@ -1,6 +1,475 @@
-# 南ドイツ（BS 担当：ヘッセン・ラインラント＝プファルツ・ザールラント・バーデン＝ヴュルテンベルク・バイエルン）の出来事（1648–2025）
+# 南ドイツ（BS 担当：ヘッセン・ラインラント＝プファルツ・ザールラント・バーデン＝ヴュルテンベルク・バイエルン）の出来事（1453–2025）
 # europe.yaml にある全体の出来事（ウェストファリア条約、帝国代表者会議主要決議、ライン同盟など）は重複して書かない。
 
+# ---------------------------------------------------------------- 1453–1647
+- year: 1455
+  title: グーテンベルクの『42行聖書』
+  text: マインツのグーテンベルクが金属活字による活版印刷で聖書を刷り上げた。1462年のマインツ占領で職人が各地に散り、印刷術はヨーロッパに急速に広まった。
+  polities: [mainz]
+  importance: 1
+  at: [8.27, 50.0]
+  source: "https://ja.wikipedia.org/wiki/グーテンベルク聖書"
+
+- year: 1462
+  date: "1462-06-30"
+  title: ゼッケンハイムの戦い
+  text: プファルツ選帝侯フリードリヒ1世（勝利公）が、バーデン辺境伯・ヴュルテンベルク伯・メッス司教の連合軍を破って3人を捕虜にし、身代金と領地を得た。
+  polities: [palatinate, baden, wurttemberg]
+  importance: 3
+  at: [8.57, 49.46]
+  source: "https://de.wikipedia.org/wiki/Schlacht_bei_Seckenheim"
+
+- year: 1462
+  date: "1462-07-19"
+  title: ギーンゲンの戦い
+  text: バイエルン＝ランツフート公ルートヴィヒ9世が、ブランデンブルク辺境伯アルブレヒト・アキレスの軍を破った。帝国の南部で諸侯が二派に分かれて戦った「諸侯戦争」の決戦。
+  polities: [bavaria_landshut, ansbach]
+  importance: 3
+  at: [10.24, 48.62]
+  source: "https://de.wikipedia.org/wiki/Schlacht_bei_Giengen"
+
+- year: 1462
+  date: "1462-10-28"
+  title: マインツ司教区のフェーデとマインツ市の陥落
+  text: 大司教の座をめぐるディーター・フォン・イーゼンブルクとアドルフ・フォン・ナッサウの争いで、アドルフの軍がマインツ市を攻め落とした。市は自由都市の特権を失い、大司教の領地となった。
+  polities: [mainz, palatinate]
+  importance: 3
+  at: [8.27, 50.0]
+  source: "https://de.wikipedia.org/wiki/Mainzer_Stiftsfehde"
+
+- year: 1472
+  title: インゴルシュタット大学の創設
+  text: バイエルン＝ランツフート公ルートヴィヒ9世が創設。16世紀にはエック（ルターの論敵）やイエズス会が活動し、対抗宗教改革の拠点となった（のちミュンヘン大学）。
+  polities: [bavaria_landshut]
+  importance: 3
+  at: [11.43, 48.77]
+  source: "https://de.wikipedia.org/wiki/Universität_Ingolstadt"
+
+- year: 1475
+  date: "1475-11-14"
+  title: ランツフートの結婚式
+  text: バイエルン＝ランツフート公の子ゲオルクとポーランド王女ヤドヴィガの結婚式。皇帝フリードリヒ3世も列席し、1万人の客をもてなした空前の祝宴として知られる。
+  polities: [bavaria_landshut, poland]
+  importance: 3
+  at: [12.15, 48.54]
+  source: "https://de.wikipedia.org/wiki/Landshuter_Hochzeit_1475"
+
+- year: 1476
+  title: ニクラスハウゼンの太鼓たたき
+  text: タウバー川沿いのニクラスハウゼン村（ヴュルツブルク司教区）で、羊飼いハンス・ベーハイムが聖母のお告げとして、税や十分の一税の廃止と身分の平等を説き、数万人の巡礼者を集めた。司教に捕らえられ火刑となった。農民戦争の先駆けの一つ。
+  polities: [wurzburg]
+  importance: 3
+  at: [9.66, 49.68]
+  source: "https://de.wikipedia.org/wiki/Hans_Böhm"
+
+- year: 1477
+  title: テュービンゲン大学の創設
+  text: ヴュルテンベルク＝ウラハ伯エーバーハルト（髭公）が創設した。同じ年、マインツ大学も開かれた。
+  polities: [wurttemberg_urach, mainz]
+  importance: 3
+  at: [9.06, 48.52]
+  source: "https://de.wikipedia.org/wiki/Eberhard_Karls_Universität_Tübingen"
+
+- year: 1479
+  title: カッツェンエルンボーゲン伯家の断絶
+  text: ライン通行税で富んだ伯家が絶え、娘婿のヘッセン＝マールブルク方伯が伯領を相続した。ヘッセンはライン川・マイン川に進出し、ダルムシュタットがヘッセン領となった。
+  polities: [katzenelnbogen, hesse_marburg]
+  importance: 3
+  at: [7.72, 50.15]
+  source: "https://de.wikipedia.org/wiki/Grafschaft_Katzenelnbogen"
+
+- year: 1482
+  date: "1482-12-14"
+  title: ミュンジンゲン条約（ヴュルテンベルクの再統一）
+  text: 1442年から二つに分かれていたヴュルテンベルク伯領が、ウラハ系のエーバーハルト髭公のもとで再統一され、以後は分割しないことが定められた。
+  polities: [wurttemberg, wurttemberg_urach]
+  importance: 3
+  at: [9.49, 48.41]
+  source: "https://de.wikipedia.org/wiki/Münsinger_Vertrag"
+
+- year: 1486
+  title: レーゲンスブルクがバイエルンに服属
+  text: 財政難に陥った帝国都市レーゲンスブルクが、バイエルン＝ミュンヘン公アルブレヒト4世に服属した。皇帝フリードリヒ3世は反発してシュヴァーベン同盟とともに圧力をかけ、1492年に帝国都市に戻された。
+  polities: [bavaria, hre]
+  importance: 3
+  at: [12.1, 49.02]
+  source: "https://de.wikipedia.org/wiki/Reichsstadt_Regensburg"
+
+- year: 1488
+  date: "1488-02-14"
+  title: シュヴァーベン同盟の結成
+  text: 皇帝フリードリヒ3世の呼びかけで、シュヴァーベンの帝国都市・騎士・諸侯が結んだ同盟。バイエルンの拡張を抑え、のちヴュルテンベルク公ウルリヒの追放（1519）や農民戦争の鎮圧（1525）を行った。1534年に解散。
+  polities: [other_hre, wurttemberg, hre]
+  importance: 2
+  at: [9.51, 48.84]
+  source: "https://de.wikipedia.org/wiki/Schwäbischer_Bund"
+
+- year: 1492
+  title: ベハイムの地球儀
+  text: ニュルンベルクの商人マルティン・ベハイムが、現存する最古の地球儀を作った。コロンブスの航海の直前で、アメリカ大陸はまだ描かれていない。
+  polities: [nuremberg]
+  importance: 3
+  at: [11.08, 49.45]
+  source: "https://ja.wikipedia.org/wiki/マルティン・ベハイム"
+
+- year: 1495
+  date: "1495-08-07"
+  title: ヴォルムス帝国議会と永久ラント平和令
+  text: マクシミリアン1世のもとでの帝国改造。私闘（フェーデ）を永久に禁じるラント平和令と、帝国最高法院（帝室裁判所、フランクフルト→1527年からシュパイアー）・一般帝国税が定められた。同じ議会でヴュルテンベルクが公国に昇格した。
+  polities: [hre, mainz, wurttemberg]
+  importance: 2
+  at: [8.36, 49.63]
+  source: "https://ja.wikipedia.org/wiki/永久ラント平和令"
+
+- year: 1502
+  title: ブントシューの陰謀（ウンターグロンバッハ）
+  text: シュパイアー司教領の農民ヨス・フリッツが、農民の靴（ブントシュー）の旗のもとで領主制の廃止を目指す一揆を企てたが、事前に発覚した。1513年（レーエン）・1517年（オーバーライン）にも計画された。
+  polities: [other_hre]
+  importance: 3
+  at: [8.55, 49.12]
+  source: "https://de.wikipedia.org/wiki/Bundschuh-Bewegung"
+
+- year: 1504
+  title: ランツフート継承戦争
+  text: 男子のないバイエルン＝ランツフート公ゲオルクが娘婿のプファルツのループレヒトに領地を遺したため、ミュンヘンのアルブレヒト4世が反対して戦争となった。皇帝マクシミリアン1世がミュンヘン側について勝ち、翌年のケルンの裁定でバイエルンは再統一され、ノイブルク（若プファルツ）がプファルツ家の遺児に与えられた。
+  polities: [bavaria, bavaria_landshut, palatinate, palatinate_neuburg, nuremberg, wurttemberg]
+  importance: 2
+  at: [12.15, 48.54]
+  source: "https://ja.wikipedia.org/wiki/ランツフート継承戦争"
+
+- year: 1506
+  title: バイエルンの長子相続令
+  text: 再統一したバイエルン公アルブレヒト4世が、領国を分割せず長子が継ぐことを定めた。以後バイエルンは分割されなかった。
+  polities: [bavaria]
+  importance: 3
+  at: [11.58, 48.14]
+  source: "https://de.wikipedia.org/wiki/Primogeniturgesetz_(Bayern)"
+
+- year: 1514
+  title: 「貧しいコンラート」の反乱とテュービンゲン条約
+  text: ヴュルテンベルク公ウルリヒの重税に農民が蜂起した。公は鎮圧の一方で、テュービンゲン条約で等族（領邦議会）に課税承認権を認め、これはヴュルテンベルクの「憲法」として長く続いた。
+  polities: [wurttemberg]
+  importance: 3
+  at: [9.06, 48.52]
+  source: "https://de.wikipedia.org/wiki/Armer_Konrad"
+
+- year: 1516
+  date: "1516-04-23"
+  title: バイエルンのビール純粋令
+  text: バイエルン公ヴィルヘルム4世と弟ルートヴィヒ10世がインゴルシュタットで、ビールは大麦・ホップ・水だけで造ると定めた。
+  polities: [bavaria]
+  importance: 3
+  at: [11.43, 48.77]
+  source: "https://ja.wikipedia.org/wiki/ビール純粋令"
+
+- year: 1516
+  title: フッゲライの創設
+  text: アウクスブルクの大富豪ヤーコプ・フッガーが、貧しい市民のための集合住宅フッゲライを建てた（現存する世界最古の社会住宅）。フッガー家はハプスブルク家に融資し、カール5世の皇帝選挙（1519）の資金も出した。
+  polities: [other_hre, habsburg]
+  importance: 3
+  at: [10.9, 48.37]
+  source: "https://ja.wikipedia.org/wiki/フッゲライ"
+
+- year: 1519
+  title: ヴュルテンベルク公ウルリヒの追放
+  text: 帝国都市ロイトリンゲンを奪ったウルリヒ公をシュヴァーベン同盟が追放した。翌1520年、同盟は国をカール5世に売り、ヴュルテンベルクは1534年までオーストリアの支配下に置かれた。
+  polities: [wurttemberg, habsburg, other_hre]
+  importance: 3
+  at: [9.18, 48.78]
+  source: "https://de.wikipedia.org/wiki/Ulrich_(Württemberg)"
+
+- year: 1522
+  title: 騎士戦争（ジッキンゲンのトリーア攻撃）
+  text: 帝国騎士フランツ・フォン・ジッキンゲンが、フッテンとともに宗教改革と騎士身分の復権を唱えてトリーア大司教領を攻めたが失敗した。翌年、プファルツ・ヘッセン・トリーアの軍にランシュトゥール城を落とされて死んだ。
+  polities: [trier, palatinate, hesse_kassel]
+  importance: 2
+  at: [6.64, 49.75]
+  source: "https://ja.wikipedia.org/wiki/騎士戦争"
+
+- year: 1525
+  date: "1525-03"
+  title: メミンゲンの十二か条
+  text: シュヴァーベンの農民団がメミンゲンに集まり、農奴制の廃止、牧師の選任権、十分の一税の改革などを聖書にもとづいて求める「十二か条」をまとめた。印刷されてドイツ農民戦争の綱領となった。
+  polities: [other_hre]
+  importance: 2
+  at: [10.18, 47.99]
+  source: "https://ja.wikipedia.org/wiki/十二箇条"
+
+- year: 1525
+  date: "1525-04-16"
+  title: ヴァインスベルクの惨劇
+  text: 農民軍がヴァインスベルクを攻め落とし、領主のヘルフェンシュタイン伯らを殺した。これが諸侯側の厳しい弾圧のきっかけとなり、ルターも農民を激しく非難した。
+  polities: [wurttemberg, habsburg]
+  importance: 3
+  at: [9.29, 49.15]
+  source: "https://de.wikipedia.org/wiki/Weinsberger_Bluttat"
+
+- year: 1525
+  date: "1525-05-12"
+  title: ベーブリンゲンの戦い
+  text: シュヴァーベン同盟軍（トルフゼス・ゲオルク・フォン・ヴァルトブルク）がヴュルテンベルクの農民軍を破った。6月にはフランケンの農民軍もケーニヒスホーフェンで敗れ、ヴュルツブルクのマリエンベルク城の包囲も解かれた。
+  polities: [wurttemberg, wurzburg, other_hre]
+  importance: 3
+  at: [9.01, 48.68]
+  source: "https://de.wikipedia.org/wiki/Schlacht_bei_Böblingen"
+
+- year: 1526
+  title: ヘッセンの宗教改革（ホンベルク教会会議）
+  text: ヘッセン方伯フィリップ寛大伯がホンベルクの教会会議で宗教改革を導入し、修道院を廃止した。翌1527年にはその財産でマールブルク大学（最初のプロテスタント大学）を創設した。
+  polities: [hesse_kassel]
+  importance: 3
+  at: [9.4, 51.03]
+  source: "https://de.wikipedia.org/wiki/Homberger_Synode"
+
+- year: 1529
+  date: "1529-04-19"
+  title: シュパイアー帝国議会の「抗議」
+  text: カール5世の弟フェルディナントがルター派への寛容を取り消すと、ザクセン選帝侯・ヘッセン方伯・アンスバッハ辺境伯や帝国都市が抗議書（プロテスタツィオ）を出した。「プロテスタント」の名の由来。
+  polities: [hre, hesse_kassel, ansbach, other_hre]
+  importance: 2
+  at: [8.44, 49.32]
+  source: "https://ja.wikipedia.org/wiki/シュパイアー帝国議会"
+
+- year: 1529
+  date: "1529-10"
+  title: マールブルク会談
+  text: ヘッセン方伯フィリップの仲介でルターとツヴィングリが会談したが、聖餐（最後の晩餐のパンとぶどう酒）の解釈で一致できず、プロテスタントは二つに分かれた。
+  polities: [hesse_kassel]
+  importance: 3
+  at: [8.77, 50.81]
+  source: "https://ja.wikipedia.org/wiki/マールブルク会談"
+
+- year: 1530
+  date: "1530-06-25"
+  title: アウクスブルク信仰告白
+  text: アウクスブルク帝国議会で、メランヒトンがまとめたルター派の信仰告白をプロテスタント諸侯が皇帝カール5世に提出した。皇帝が受け入れなかったため、翌年シュマルカルデン同盟が結ばれた。
+  polities: [hre, hesse_kassel, ansbach]
+  importance: 2
+  at: [10.9, 48.37]
+  source: "https://ja.wikipedia.org/wiki/アウクスブルク信仰告白"
+
+- year: 1534
+  date: "1534-05-13"
+  title: ラウフェンの戦いとウルリヒ公の復帰
+  text: ヘッセン方伯フィリップがフランスの資金で兵を集め、ラウフェンでオーストリア軍を破ってウルリヒ公をヴュルテンベルクに復帰させた。カーダン条約でオーストリアの後封とされ、ウルリヒはルター派を導入した。
+  polities: [wurttemberg, hesse_kassel, habsburg]
+  importance: 3
+  at: [9.15, 49.07]
+  source: "https://de.wikipedia.org/wiki/Schlacht_bei_Lauffen_(1534)"
+
+- year: 1535
+  title: バーデン辺境伯領の分割
+  text: バーデンがバーデン＝バーデン（カトリック）とバーデン＝プフォルツハイム（のちドゥルラハ、プロテスタント）に分かれ、1771年まで再統一されなかった。
+  polities: [baden, baden_baden]
+  importance: 3
+  at: [8.24, 48.76]
+  source: "https://de.wikipedia.org/wiki/Markgrafschaft_Baden-Baden"
+
+- year: 1546
+  title: シュマルカルデン戦争（ドナウ方面の戦い）
+  text: カール5世がシュマルカルデン同盟と開戦した。ドナウ川沿いのインゴルシュタット付近で両軍が対陣した後、皇帝は南ドイツの帝国都市とヴュルテンベルク・プファルツ＝ノイブルクを降伏させた。
+  polities: [hre, wurttemberg, palatinate_neuburg, hesse_kassel, other_hre]
+  importance: 2
+  at: [11.43, 48.77]
+  source: "https://ja.wikipedia.org/wiki/シュマルカルデン戦争"
+
+- year: 1548
+  title: アウクスブルク仮信条協定とコンスタンツの併合
+  text: カール5世はアウクスブルク帝国議会で、プロテスタントに暫定の妥協案（仮信条協定）を押しつけた。これを拒んだ帝国都市コンスタンツは帝国追放となり、オーストリア領に併合された。
+  polities: [hre, habsburg, other_hre]
+  importance: 3
+  at: [9.17, 47.66]
+  source: "https://de.wikipedia.org/wiki/Augsburger_Interim"
+
+- year: 1552
+  date: "1552-08"
+  title: 諸侯の反乱とパッサウ条約
+  text: ザクセン選帝侯モーリッツらがフランス王アンリ2世と結んで皇帝に反乱を起こし（諸侯戦争）、カール5世はインスブルックから逃れた。パッサウ条約でヘッセン方伯フィリップが釈放され、アウクスブルクの和議への道が開かれた。
+  polities: [hre, hesse_kassel, palatinate_neuburg]
+  importance: 2
+  at: [13.46, 48.57]
+  source: "https://ja.wikipedia.org/wiki/パッサウ条約"
+
+- year: 1553
+  date: "1553-07-09"
+  title: 第二次辺境伯戦争
+  text: クルムバッハ辺境伯アルブレヒト・アルキビアデスがフランケンの司教領とニュルンベルクを荒らした（1552–54）。ザクセン選帝侯モーリッツがジーファースハウゼンで破ったが自らも戦死した。アルブレヒトは帝国追放となり、クルムバッハは荒廃した。
+  polities: [bayreuth, bamberg, wurzburg, nuremberg]
+  importance: 3
+  at: [11.45, 50.1]
+  source: "https://de.wikipedia.org/wiki/Zweiter_Markgrafenkrieg"
+
+- year: 1562
+  title: フランクフルトでの皇帝の戴冠
+  text: マクシミリアン2世がフランクフルトでローマ王として戴冠した。以後、皇帝の選挙と戴冠はともにフランクフルトで行われた。
+  polities: [frankfurt, hre]
+  importance: 3
+  at: [8.68, 50.11]
+  source: "https://de.wikipedia.org/wiki/Kaiserdom_St._Bartholomäus"
+
+- year: 1563
+  title: ハイデルベルク信仰問答
+  text: カルヴァン派に改宗したプファルツ選帝侯フリードリヒ3世のもとで作られた信仰問答。改革派（カルヴァン派）の代表的な教理書としてオランダなどにも広まった。
+  polities: [palatinate]
+  importance: 2
+  at: [8.69, 49.41]
+  source: "https://ja.wikipedia.org/wiki/ハイデルベルク信仰問答"
+
+- year: 1567
+  date: "1567-03-31"
+  title: ヘッセン方伯領の分割
+  text: フィリップ寛大伯の死後、遺言で領国がヘッセン＝カッセル・マールブルク・ラインフェルス・ダルムシュタットの4家に分けられた。マールブルク・ラインフェルスはまもなく断絶し、カッセルとダルムシュタットの2家が残った。
+  polities: [hesse_kassel, hesse_darmstadt, hesse_marburg, hesse_rheinfels]
+  importance: 3
+  at: [9.49, 51.31]
+  source: "https://de.wikipedia.org/wiki/Landgrafschaft_Hessen"
+
+- year: 1567
+  title: グルムバッハ騒動の終わり
+  text: ヴュルツブルク司教を暗殺させた帝国騎士グルムバッハが、エルネスティン家のザクセン公ヨハン・フリードリヒ2世にかくまわれた。帝国追放の執行でゴータが落とされ、グルムバッハは処刑、公は終身幽閉となった。
+  polities: [wurzburg, saxon_duchies]
+  importance: 3
+  at: [9.93, 49.79]
+  source: "https://de.wikipedia.org/wiki/Grumbachsche_Händel"
+
+- year: 1582
+  title: ヴュルツブルク大学の再興
+  text: ユリウス・エヒター司教が対抗宗教改革の拠点として大学を創設した（ユリウス大学）。1576年には施療院（ユリウス施療院）も創っている。領内のプロテスタントは追放された。
+  polities: [wurzburg]
+  importance: 3
+  at: [9.93, 49.79]
+  source: "https://de.wikipedia.org/wiki/Julius_Echter_von_Mespelbrunn"
+
+- year: 1607
+  title: ドナウヴェルト事件
+  text: プロテスタントの帝国都市ドナウヴェルトでカトリックの行列が妨げられたことを口実に、バイエルン公マクシミリアンが帝国追放を執行して市を占領し、1609年に併合した。プロテスタント諸侯の危機感が高まった。
+  polities: [bavaria, other_hre]
+  importance: 2
+  at: [10.78, 48.72]
+  source: "https://de.wikipedia.org/wiki/Donauwörther_Krise"
+
+- year: 1608
+  date: "1608-05-14"
+  title: プロテスタント同盟（ウニオン）の結成
+  text: アンスバッハ辺境伯領のアウハウゼン修道院で、プファルツ選帝侯フリードリヒ4世を盟主にプロテスタント諸侯・都市が同盟を結んだ。翌1609年、バイエルン公マクシミリアンを中心にカトリック連盟（リーガ）が結成された。
+  polities: [palatinate, ansbach, wurttemberg, baden, bavaria]
+  importance: 1
+  at: [10.62, 48.98]
+  source: "https://ja.wikipedia.org/wiki/プロテスタント同盟"
+
+- year: 1614
+  title: フェットミルヒの反乱
+  text: フランクフルトで菓子職人フェットミルヒに率いられた手工業者が市参事会に反乱を起こし、ユダヤ人街（ゲットー）を襲ってユダヤ人を追放した。皇帝の命で鎮圧され、ユダヤ人は1616年に戻された。
+  polities: [frankfurt]
+  importance: 3
+  at: [8.68, 50.11]
+  source: "https://de.wikipedia.org/wiki/Fettmilch-Aufstand"
+
+- year: 1620
+  title: スペイン軍の左岸プファルツ占領
+  text: ボヘミア王となったプファルツ選帝侯フリードリヒ5世に対し、スペイン領ネーデルラントからスピノラの軍がライン左岸のプファルツを占領した。三十年戦争が西ドイツに広がった。
+  polities: [spain, palatinate]
+  importance: 3
+  at: [8.36, 49.75]
+  source: "https://ja.wikipedia.org/wiki/三十年戦争"
+
+- year: 1622
+  date: "1622-05-06"
+  title: ヴィンプフェンの戦い
+  text: ティリーの率いるカトリック連盟軍とスペイン軍が、バーデン＝ドゥルラハ辺境伯ゲオルク・フリードリヒを破った。6月のヘーヒストの戦いでも勝ち、9月にハイデルベルクを落とした。
+  polities: [bavaria, baden, palatinate, spain]
+  importance: 3
+  at: [9.16, 49.23]
+  source: "https://de.wikipedia.org/wiki/Schlacht_bei_Wimpfen"
+
+- year: 1623
+  title: バイエルンの選帝侯位とパラティーナ文庫
+  text: レーゲンスブルクの諸侯会議で、プファルツ選帝侯の位がバイエルン公マクシミリアン1世に移された。ハイデルベルクの宮廷図書館（パラティーナ文庫）は、戦利品としてローマ教皇に贈られた。
+  polities: [bavaria, palatinate, hre]
+  importance: 2
+  at: [12.1, 49.02]
+  source: "https://ja.wikipedia.org/wiki/パラティーナ文庫"
+
+- year: 1626
+  title: フランケンの魔女裁判
+  text: 1626–31年、ヴュルツブルク司教エーレンベルクとバンベルク司教ドルンハイムのもとで大規模な魔女裁判が行われ、両司教領で合わせて千人以上が処刑された。
+  polities: [wurzburg, bamberg]
+  importance: 3
+  at: [10.4, 49.9]
+  source: "https://de.wikipedia.org/wiki/Hexenprozesse_in_Würzburg"
+
+- year: 1631
+  date: "1631-12"
+  title: スウェーデン王グスタフ・アドルフのマインツ入城
+  text: ブライテンフェルトの戦いに勝ったスウェーデン軍がフランケンを抜けてライン川に進み、マインツで冬営した。グスタフ・アドルフはここからドイツ全体の支配を構想した。
+  polities: [sweden, mainz, wurzburg]
+  importance: 2
+  at: [8.27, 50.0]
+  source: "https://de.wikipedia.org/wiki/Schwedische_Besetzung_von_Mainz"
+
+- year: 1632
+  date: "1632-04-15"
+  title: レヒ川の戦い（ライン・アム・レヒ）
+  text: グスタフ・アドルフがレヒ川を渡ってティリーの連盟軍を破り、ティリーは重傷で死んだ。スウェーデン軍はアウクスブルク・ミュンヘンに入った。
+  polities: [sweden, bavaria]
+  importance: 3
+  at: [10.84, 48.68]
+  source: "https://de.wikipedia.org/wiki/Schlacht_bei_Rain_am_Lech"
+
+- year: 1632
+  date: "1632-09-03"
+  title: アルテ・フェステの戦い
+  text: ニュルンベルクを守って陣を張ったグスタフ・アドルフが、近くのツィルンドルフに布陣したヴァレンシュタインの陣地を攻めたが落とせず、両軍はザクセンへ移った（11月のリュッツェンの戦い）。
+  polities: [sweden, nuremberg, habsburg]
+  importance: 3
+  at: [10.96, 49.45]
+  source: "https://de.wikipedia.org/wiki/Schlacht_an_der_Alten_Veste"
+
+- year: 1634
+  date: "1634-09-06"
+  title: ネルトリンゲンの戦い
+  text: 皇帝軍とスペイン軍がスウェーデン・プロテスタント軍に大勝し、スウェーデンは南ドイツから退いた。ヴュルテンベルクなどは皇帝軍に占領され、翌年のプラハの和議を経てフランスの直接参戦を招いた。
+  polities: [sweden, habsburg, spain, wurttemberg, bavaria]
+  importance: 1
+  at: [10.49, 48.85]
+  source: "https://ja.wikipedia.org/wiki/ネルトリンゲンの戦い_(1634年)"
+
+- year: 1638
+  date: "1638-12-17"
+  title: ブライザッハの攻略
+  text: フランスと結んだザクセン＝ヴァイマル公ベルンハルトが、ライン川の要塞ブライザッハを長い包囲の末に落とした。翌年ベルンハルトが死ぬと、その軍と占領地はフランスのものとなった（1648年にブライザッハはフランス領）。
+  polities: [france, habsburg]
+  importance: 3
+  at: [7.58, 48.03]
+  source: "https://de.wikipedia.org/wiki/Belagerung_von_Breisach"
+
+- year: 1644
+  date: "1644-08-03"
+  title: フライブルクの戦い
+  text: バイエルン軍（メルシー）とフランス軍（アンギャン公・テュレンヌ）がフライブルク郊外で数日にわたり戦った。決着はつかなかったが、フランス軍はその後フィリップスブルクやマインツなどライン中流を占領した。
+  polities: [bavaria, france, habsburg, mainz]
+  importance: 3
+  at: [7.85, 47.99]
+  source: "https://ja.wikipedia.org/wiki/フライブルクの戦い"
+
+- year: 1645
+  date: "1645-08-03"
+  title: アラーハイムの戦い（第二次ネルトリンゲンの戦い）
+  text: フランス軍（アンギャン公・テュレンヌ）がバイエルン軍を破り、バイエルンの将軍メルシーが戦死した。同じ年5月にはメルゲントハイムでバイエルン軍がテュレンヌを破っていた。
+  polities: [france, bavaria]
+  importance: 3
+  at: [10.53, 48.87]
+  source: "https://de.wikipedia.org/wiki/Schlacht_bei_Alerheim"
+
+- year: 1645
+  title: ヘッセン戦争の激化
+  text: 1604年から続くマールブルクの相続争いが、スウェーデン・フランスと結んだヘッセン＝カッセル（方伯妃アマーリエ・エリーザベト）と皇帝側のダルムシュタットの戦争に発展した。カッセル軍がマールブルクを奪い、1648年の和約で北部はカッセル、ギーセンなど南部はダルムシュタットに分けられた。
+  polities: [hesse_kassel, hesse_darmstadt]
+  importance: 3
+  at: [8.77, 50.81]
+  source: "https://de.wikipedia.org/wiki/Hessenkrieg"
+
+# ---------------------------------------------------------------- 1648–2025
 - year: 1648
   title: プファルツ選帝侯の復位とバイエルンの選帝侯位確定
   text: ウェストファリア条約で、三十年戦争中に奪われたバイエルンの選帝侯位とオーバープファルツの領有が認められる一方、プファルツ選帝侯カール・ルートヴィヒには第8の選帝侯位が新設され、ライン沿いの下プファルツが返還された。
