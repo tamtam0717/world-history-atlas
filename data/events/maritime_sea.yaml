@@ -3,6 +3,351 @@
 # オランダがインドネシアの独立を承認（1949）は italy_lowcountries.yaml、米西戦争は west.yaml、太平洋戦争の開戦・日本の降伏は europe.yaml、
 # アジア通貨危機は japan_korea.yaml。
 
+
+# ===== 1453–1647（Z7） =====
+# 他のファイルにあるもの（重複させない）：マゼラン一行の世界周航（1522）は europe.yaml、ザビエルは india_south.yaml・japan_korea.yaml、
+# 朱印船貿易は japan_korea.yaml、オランダ東インド会社の設立（1602）は italy_lowcountries.yaml。
+
+- year: 1457
+  title: スールーにスルタンが立つ
+  text: アラビア出身のイスラームの指導者シャリーフ・ハーシムがスールー諸島のホロでスルタンを名乗ったとされる。フィリピン南部のイスラーム化が進んだ。
+  polities: [sulu]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/スールー王国"
+- year: 1459
+  title: マラッカ王国の最盛期（マンスール・シャーとトゥン・ペラク）
+  text: マンスール・シャーが即位し、宰相（ブンダハラ）トゥン・ペラクのもとでパハン・カンパル・シアク・インドラギリなどを従えた。マラッカはインド洋と南シナ海を結ぶ中継貿易の中心となり、イスラームを東南アジアの島々に広める拠点となった。
+  polities: [malacca]
+  importance: 2
+  at: [102.25, 2.19]
+  source: "https://ja.wikipedia.org/wiki/マラッカ王国"
+- year: 1478
+  title: マジャパヒトの衰退とデマクの台頭
+  text: ジャワの伝承では、この年（サカ暦1400年）にマジャパヒトの都トロウランが落ちた。王国は内陸のダハ（クディリ）に移って続いたが、北海岸ではラデン・パタがデマクにイスラームの王国を開き、ワリ・ソンゴ（九聖人）の布教と港市の商人の力で勢力を広げた。
+  polities: [majapahit, demak]
+  importance: 2
+  source: "https://en.wikipedia.org/wiki/Demak_Sultanate"
+- year: 1479
+  title: チルボンがスンダ王国から自立
+  text: ワリ・ソンゴの一人スナン・グヌン・ジャティがジャワ西部の港チルボンをイスラームの王国とし、スンダ王国への貢納をやめた（自立の年は1482年とも）。
+  polities: [cirebon, sunda]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/チルボン王国"
+- year: 1485
+  title: ブルネイのボルキア王が即位
+  text: 「歌う船長」と呼ばれたボルキア王のもとで、ブルネイはボルネオ北岸の全体からスールー・マニラにまで勢力を広げ、黄金時代を迎えた。
+  polities: [brunei]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Bolkiah"
+- year: 1496
+  title: アチェ王国の成立
+  text: スマトラ北端のラムリの地にアチェ王国（アチェ・ダルサラーム）が成立したとされる。16世紀にはポルトガル領マラッカを避けるムスリム商人を集め、胡椒の輸出で栄えた。
+  polities: [aceh, lamuri]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/アチェ王国"
+- year: 1509
+  title: ポルトガルの船隊がマラッカに来航
+  text: セケイラの率いるポルトガルの船隊がマラッカに来たが、マラッカ側の攻撃を受けて捕虜を残して退いた。これが2年後のマラッカ攻撃の口実となった。
+  polities: [portugal, malacca]
+  importance: 3
+  at: [102.25, 2.19]
+  source: "https://en.wikipedia.org/wiki/Diogo_Lopes_de_Sequeira"
+- year: 1511
+  date: "1511-08-24"
+  title: ポルトガルがマラッカを占領
+  text: インド総督アルブケルケがマラッカを攻め落とした。ポルトガルは香辛料貿易の要の海峡をおさえ、ここから香料諸島（モルッカ諸島）や中国に進んだ。マラッカ王マフムード・シャーは南へ逃れ、その王家はジョホールとペラに続いた。ムスリム商人はアチェ・ブルネイ・バンテンなどに移った。
+  polities: [portugal, malacca]
+  importance: 1
+  at: [102.25, 2.19]
+  source: "https://ja.wikipedia.org/wiki/マラッカ占領"
+- year: 1512
+  title: ポルトガル人が香料諸島（モルッカ諸島）に着く
+  text: マラッカから東へ向かったポルトガル人（アブレウ、セラン）がバンダ諸島に着き、セランはテルナテの王に迎えられた。丁子・ナツメグを産地で買えるようになった。
+  polities: [portugal, ternate]
+  importance: 2
+  at: [127.35, 0.8]
+  source: "https://en.wikipedia.org/wiki/Francisco_Serr%C3%A3o"
+- year: 1513
+  title: デマクのパティ・ウヌスがマラッカを攻める
+  text: ジャワの港市ジュパラ・デマクの大船団がポルトガル領マラッカを攻めたが、大敗した（1521年にも失敗した）。
+  polities: [demak, portugal]
+  importance: 3
+  at: [102.25, 2.19]
+  source: "https://en.wikipedia.org/wiki/Pati_Unus"
+- year: 1521
+  date: "1521-04-27"
+  title: マゼランがマクタン島の戦いで戦死
+  text: 太平洋を横断したマゼランの艦隊がセブに着き、首長フマボンをキリスト教に改宗させたが、マゼランは隣のマクタン島の首長ラプラプとの戦いで殺された。残った船はモルッカ諸島のティドレで丁子を積んだ。
+  polities: [spain, tidore]
+  importance: 2
+  at: [123.98, 10.31]
+  source: "https://ja.wikipedia.org/wiki/マクタン島の戦い"
+- year: 1522
+  title: スンダ王国とポルトガルの条約
+  text: イスラーム勢力の拡大を恐れたスンダ王国は、港スンダ・クラパに砦を築くことをポルトガルに認めた（記念の石柱パドラオンが残る）。しかし砦が築かれる前に、港はデマク側に奪われた。
+  polities: [sunda, portugal]
+  importance: 3
+  at: [106.81, -6.12]
+  source: "https://en.wikipedia.org/wiki/Luso-Sundanese_padr%C3%A3o"
+- year: 1522
+  title: ポルトガルがテルナテに砦を築く
+  text: ポルトガルはテルナテ王と結んで島に砦を築き、丁子の取引を独占しようとした。やがて王位にも干渉し、テルナテの人々の反感を買った。
+  polities: [portugal, ternate]
+  importance: 3
+  at: [127.38, 0.79]
+  source: "https://ja.wikipedia.org/wiki/テルナテ王国"
+- year: 1524
+  title: アチェがパサイを征服
+  text: アチェのアリ・ムガヤト・シャーが、東南アジアで最も早いイスラーム国家の一つサムドラ・パサイを征服した（1521年にはピディルを征服）。スマトラ北部の胡椒の港はアチェのもとにまとめられた。
+  polities: [aceh, pasai]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/サムドラ・パサイ王国"
+- year: 1526
+  title: バンジャル王国の成立
+  text: ボルネオ南部で、デマクの援助を受けた王子スリアンシャーがヒンドゥー教のヌガラ・ダハを倒し、イスラームのバンジャル王国を開いた。
+  polities: [banjar, negara_daha, demak]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Banjar_Sultanate"
+- year: 1527
+  title: ファタヒラがスンダ・クラパを奪う（ジャヤカルタ）
+  text: デマク・チルボンの将ファタヒラがスンダ王国の港スンダ・クラパを奪い、ポルトガルの船を退けた。町は「勝利の町」ジャヤカルタと改められ、今のジャカルタの起こりとされる。同じころハサヌディンがバンテンにイスラームの王国を開いた。
+  polities: [demak, banten, sunda, portugal]
+  importance: 2
+  at: [106.81, -6.12]
+  source: "https://en.wikipedia.org/wiki/Fatahillah"
+- year: 1527
+  title: マジャパヒト王国の滅亡
+  text: デマクのトレンゴノがマジャパヒトの都ダハ（クディリ）を落とし、ジャワのヒンドゥー教の王国は終わった。ヒンドゥー教の信仰と文化はバリ島とジャワ東端のブランバンガンに残った。
+  polities: [majapahit, demak]
+  importance: 2
+  at: [112.01, -7.82]
+  source: "https://ja.wikipedia.org/wiki/マジャパヒト王国"
+- year: 1528
+  title: ジョホール王国の成立
+  text: マラッカ最後の王マフムード・シャーが亡命先のカンパルで死に、子のアラーウッディーン・リアーヤト・シャー2世がジョホール川の上流に都を置いてジョホール王国を開いた。兄のムザッファル・シャーはペラ王国を開いた。
+  polities: [johor, perak]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ジョホール王国"
+- year: 1529
+  date: "1529-04-22"
+  title: サラゴサ条約
+  text: スペインとポルトガルが香料諸島（モルッカ諸島）をめぐる争いを終えた。モルッカ諸島の東に境界線を引き、スペインは代金を受け取ってモルッカ諸島への権利をポルトガルに譲った（フィリピンは線の西だが、のちスペインが領有した）。
+  polities: [spain, portugal]
+  importance: 2
+  at: [127.4, 0.8]
+  source: "https://ja.wikipedia.org/wiki/サラゴサ条約"
+- year: 1549
+  title: パジャン王国の成立
+  text: デマクのトレンゴノの死（1546）後の王位争いで、ジパンのアルヤ・プナンサンがスナン・プラウォトを殺したが、トレンゴノの娘婿ジャカ・ティンキルが彼を討ち、都を内陸のパジャンに移した（即位の年は1568年とも）。
+  polities: [pajang, demak]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Pajang_Sultanate"
+- year: 1565
+  title: レガスピがセブに上陸・太平洋の帰り道の発見
+  text: メキシコから来たレガスピの艦隊がセブを占領し、フィリピンで最初のスペインの町を建てた。同じ年、ウルダネタが北太平洋の偏西風に乗ってメキシコに戻る航路を見つけ、のちのガレオン貿易の道が開かれた。
+  polities: [spain]
+  importance: 2
+  at: [123.9, 10.3]
+  source: "https://ja.wikipedia.org/wiki/ミゲル・ロペス・デ・レガスピ"
+- year: 1566
+  title: ポルトガルがソロル島に砦を築く
+  text: ドミニコ会の修道士がフローレス島の東のソロル島に砦を築き、白檀を産するティモールへの布教と交易の拠点とした。
+  polities: [portugal]
+  importance: 3
+  at: [123.15, -8.47]
+  source: "https://en.wikipedia.org/wiki/Solor"
+- year: 1568
+  title: アチェがオスマン帝国と結んでマラッカを攻める
+  text: アチェのアル＝カッハール王はオスマン帝国に使節を送り、大砲と砲手を得てポルトガル領マラッカを囲んだが、落とせなかった。インド洋のムスリム商人の交易網とポルトガルの争いの一幕。
+  polities: [aceh, portugal, ottoman]
+  importance: 3
+  at: [102.25, 2.19]
+  source: "https://en.wikipedia.org/wiki/Ottoman_expedition_to_Aceh"
+- year: 1571
+  date: "1571-06-24"
+  title: スペインがマニラを建設
+  text: レガスピがマニラを占領し、スペイン領フィリピンの首都とした。マニラはメキシコのアカプルコとを結ぶガレオン貿易の拠点となり、メキシコの銀で中国の絹・陶磁器が買われた。銀は明の経済を動かし、マニラには福建の華人（サングレー）が集まった。
+  polities: [spain]
+  importance: 1
+  at: [120.97, 14.59]
+  source: "https://ja.wikipedia.org/wiki/ガレオン貿易"
+- year: 1574
+  title: 林鳳（リマホン）のマニラ攻撃
+  text: 明の海賊林鳳の大船団がマニラを襲ったが、スペイン軍に退けられた。林鳳はルソン北西岸のパンガシナンに拠ったが、翌年追われた。
+  polities: [spain]
+  importance: 3
+  at: [120.97, 14.59]
+  source: "https://en.wikipedia.org/wiki/Limahong"
+- year: 1575
+  title: テルナテがポルトガル人を追い出す
+  text: 1570年にスルタン・ハイルンがポルトガルの砦の司令官に殺されると、子のバーブッラーは砦を5年間囲んで、ポルトガル人を追い出した。テルナテはスラウェシからミンダナオ南部にまで勢力を広げた。ポルトガル人はアンボン・ティドレに移った。
+  polities: [ternate, portugal]
+  importance: 2
+  at: [127.38, 0.79]
+  source: "https://en.wikipedia.org/wiki/Babullah_of_Ternate"
+- year: 1578
+  title: カスティーリャ戦争（スペインのブルネイ攻撃）
+  text: フィリピン総督サンデが、ブルネイの王位争いに介入して都を一時占領したが、病気が広がって撤退した。ブルネイのフィリピンへの影響力はこれで弱まった。
+  polities: [spain, brunei]
+  importance: 3
+  at: [114.94, 4.89]
+  source: "https://en.wikipedia.org/wiki/Castilian_War"
+- year: 1579
+  title: スンダ王国の滅亡
+  text: バンテンのマウラナ・ユスフが、スンダ王国の都パクアン・パジャジャラン（今のボゴール）を落とした。ジャワ西部のヒンドゥー教の王国は終わり、王の権威の象徴の石の玉座はバンテンに運ばれた。
+  polities: [banten, sunda]
+  importance: 3
+  at: [106.8, -6.6]
+  source: "https://en.wikipedia.org/wiki/Sunda_Kingdom"
+- year: 1587
+  title: マタラム王国の成立
+  text: パジャンの家臣セノパティが主家を破り、中部ジャワ南部のマタラム（今のヨグヤカルタ近くのコタグデ）でイスラームの王国を開いた。内陸の米作地帯を基盤に、ジャワの統一を進めた（自立の年は1586年とも）。
+  polities: [mataram, pajang]
+  importance: 2
+  at: [110.4, -7.83]
+  source: "https://ja.wikipedia.org/wiki/マタラム・スルタン国"
+- year: 1596
+  title: オランダの船隊がバンテンに着く
+  text: ハウトマンの率いるオランダの最初の船隊が喜望峰を回ってジャワのバンテンに着き、胡椒を積んで帰った。これを機にオランダの商社が次々と船を送り、1602年のオランダ東インド会社の設立につながった。
+  polities: [netherlands, banten]
+  importance: 2
+  at: [106.15, -6.03]
+  source: "https://en.wikipedia.org/wiki/First_Dutch_Expedition_to_Indonesia"
+- year: 1602
+  title: イギリス東インド会社がバンテンに商館を置く
+  text: ランカスターの率いるイギリス東インド会社の最初の船隊がアチェを経てバンテンに着き、アジアで最初の商館を置いた。
+  polities: [britain, banten, aceh]
+  importance: 3
+  at: [106.15, -6.03]
+  source: "https://ja.wikipedia.org/wiki/イギリス東インド会社"
+- year: 1603
+  title: マニラの華人の反乱と虐殺
+  text: マニラの華人（サングレー）がスペインの圧迫に反乱を起こし、スペイン側と日本人・フィリピン人の兵に鎮圧されて約2万人が殺された。1639年にも同じような反乱と虐殺が起こった。
+  polities: [spain]
+  importance: 3
+  at: [120.97, 14.59]
+  source: "https://en.wikipedia.org/wiki/1603_Manila_massacre"
+- year: 1605
+  title: オランダがアンボンを奪う
+  text: オランダ東インド会社の艦隊がアンボン島のポルトガルの砦を奪った。アンボンはオランダの香料独占の最初の拠点となった。
+  polities: [netherlands, portugal]
+  importance: 2
+  at: [128.18, -3.69]
+  source: "https://ja.wikipedia.org/wiki/アンボン島"
+- year: 1605
+  title: ゴワがイスラームを受け入れる
+  text: スラウェシ南部のゴワ・タッロの王がイスラームを受け入れた。ゴワは「イスラーム化の戦い」でボネ・ワジョ・ソッペンなどブギス人の諸国を征服し（1608–11年）、東インドネシアの強国となった。
+  polities: [gowa, bone, wajo]
+  importance: 3
+  at: [119.43, -5.13]
+  source: "https://ja.wikipedia.org/wiki/ゴワ王国"
+- year: 1606
+  title: スペインがテルナテを攻め取る
+  text: マニラから来たスペインの艦隊がテルナテの砦を占め、スルタンをマニラに連れ去った。テルナテはオランダと結び、オランダは翌年テルナテに砦を築いた。モルッカ諸島はスペインとオランダの争いの場となった（スペインは1663年に撤退）。
+  polities: [spain, ternate, tidore, netherlands]
+  importance: 3
+  at: [127.38, 0.79]
+  source: "https://en.wikipedia.org/wiki/Spanish_expedition_to_Ternate_(1606)"
+- year: 1607
+  title: アチェのイスカンダル・ムダが即位
+  text: アチェの最盛期を築いた王。マレー半島の錫・胡椒の産地を次々と攻め取り（パハン1617、クダ1619、ペラ1620）、スマトラの両岸を支配した。
+  polities: [aceh]
+  importance: 2
+  at: [95.32, 5.55]
+  source: "https://ja.wikipedia.org/wiki/イスカンダル・ムダ"
+- year: 1612
+  title: 『スジャラ・ムラユ（マレー年代記）』の編纂
+  text: ジョホールの宮廷で、マラッカ王家の由来と歴史を記した『スジャラ・ムラユ』がまとめられた。マレー語の古典文学の代表作。
+  polities: [johor]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/スジャラ・ムラユ"
+- year: 1613
+  title: マタラムのスルタン＝アグンが即位
+  text: マタラム王国の最盛期を築いた王。北海岸の港市・東ジャワ・マドゥラ・プリアンガンを征服し、ジャワの大部分を統一した。
+  polities: [mataram]
+  importance: 2
+  at: [110.4, -7.83]
+  source: "https://ja.wikipedia.org/wiki/スルタン・アグン"
+- year: 1617
+  title: アチェがパハンを征服
+  text: アチェのイスカンダル・ムダがマレー半島東岸のパハンを攻め、王族と住民を連れ去った。パハンの王子はのちアチェの王（イスカンダル・サーニー）となった。
+  polities: [aceh, pahang]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Pahang_Sultanate"
+- year: 1619
+  date: "1619-05-30"
+  title: クーンがバタヴィアを建設
+  text: オランダ東インド会社の総督クーンが、バンテンの属領ジャヤカルタを攻め落とし、バタヴィアと改めた。バタヴィアはオランダのアジア貿易の本拠となり、香辛料・胡椒の独占と、のちのジャワ支配の足場となった。
+  polities: [netherlands, banten]
+  importance: 1
+  at: [106.81, -6.13]
+  source: "https://ja.wikipedia.org/wiki/バタヴィア"
+- year: 1621
+  title: オランダのバンダ諸島征服
+  text: クーンがナツメグの産地バンダ諸島を征服した。イギリス人との取引をやめない住民の多くを殺し、追い出して、奴隷を使う農園に変えた。ナツメグとメースはオランダが独占した。
+  polities: [netherlands]
+  importance: 2
+  at: [129.9, -4.53]
+  source: "https://en.wikipedia.org/wiki/Dutch_conquest_of_the_Banda_Islands"
+- year: 1623
+  date: "1623-02"
+  title: アンボイナ事件
+  text: アンボン島のオランダ東インド会社が、イギリス商館の商館員と日本人の傭兵らを、砦を奪う陰謀の疑いで捕らえて処刑した。イギリスは香料諸島から手を引き、インドの経営に力を注ぐようになった。
+  polities: [netherlands, britain]
+  importance: 1
+  at: [128.18, -3.69]
+  source: "https://ja.wikipedia.org/wiki/アンボイナ事件"
+- year: 1625
+  title: マタラムがスラバヤを征服
+  text: スルタン＝アグンが、東ジャワの港市連合の盟主スラバヤを5年の包囲の末に降した（前年にはマドゥラを征服）。ジャワ北海岸の港市の自立は終わり、内陸の農業国家マタラムがジャワの大部分を治めた。
+  polities: [mataram, surabaya, madura]
+  importance: 3
+  at: [112.74, -7.25]
+  source: "https://en.wikipedia.org/wiki/Duchy_of_Surabaya"
+- year: 1628
+  title: マタラムのバタヴィア攻撃
+  text: スルタン＝アグンは1628年と1629年の二度、大軍でバタヴィアを囲んだが、オランダ側が食料の倉庫を焼いたこともあって敗れた。以後マタラムは海から退き、オランダは海の交易を握った。
+  polities: [mataram, netherlands]
+  importance: 2
+  at: [106.81, -6.13]
+  source: "https://en.wikipedia.org/wiki/Siege_of_Batavia"
+- year: 1629
+  title: アチェのマラッカ攻撃が大敗に終わる
+  text: イスカンダル・ムダの大艦隊がポルトガル領マラッカを囲んだが、ポルトガルとジョホール・パタニの連合軍に壊滅させられた。アチェの膨張はここで止まった。
+  polities: [aceh, portugal, johor]
+  importance: 3
+  at: [102.25, 2.19]
+  source: "https://en.wikipedia.org/wiki/Battle_of_Duyon_River"
+- year: 1635
+  title: スペインがサンボアンガに砦を築く
+  text: スールー・マギンダナオの「モロ」の海の遠征に備え、スペインはミンダナオ島西端のサンボアンガにピラール砦を築いた。
+  polities: [spain, sulu, maguindanao]
+  importance: 3
+  at: [122.08, 6.9]
+  source: "https://en.wikipedia.org/wiki/Fort_Pilar"
+- year: 1637
+  title: コルクエラ総督のミンダナオ・スールー遠征
+  text: フィリピン総督コルクエラがマギンダナオの都ラミタンを攻め（1637）、翌年スールーの都ホロを落とした。スルタン・クダラットは内陸に退いて抵抗を続け、スペインはミンダナオ南部を支配できなかった。
+  polities: [spain, maguindanao, sulu]
+  importance: 3
+  at: [124.2, 7.2]
+  source: "https://en.wikipedia.org/wiki/Muhammad_Kudarat"
+- year: 1641
+  date: "1641-01-14"
+  title: オランダがマラッカを占領
+  text: オランダ東インド会社がジョホールと組み、半年あまりの包囲の末にポルトガル領マラッカを落とした。130年続いたポルトガルのマラッカ支配は終わり、海峡の交易はバタヴィアを本拠とするオランダの手に移った。
+  polities: [netherlands, portugal, johor]
+  importance: 1
+  at: [102.25, 2.19]
+  source: "https://en.wikipedia.org/wiki/Siege_of_Malacca_(1641)"
+- year: 1641
+  title: ポルトガル人とトパスがティモールに進出
+  text: ドミニコ会の布教と、ララントゥカのトパス（ポルトガル人と在地の人々の混血の集団）の遠征で、白檀の島ティモールの王たちがポルトガルに従った。今の東ティモールにつながるポルトガルのティモール支配の始まり。
+  polities: [portugal]
+  importance: 3
+  at: [124.5, -9.3]
+  source: "https://en.wikipedia.org/wiki/Portuguese_Timor"
+
 - year: 1651
   title: バンテンでアゲン・ティルタヤサが即位
   text: 胡椒貿易で栄えるバンテン王国の最盛期。イギリス・デンマークなどの商人を受け入れ、バタヴィアのオランダ東インド会社（VOC）と競った。

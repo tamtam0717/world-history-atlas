@@ -1,4 +1,324 @@
-# G3 日本・朝鮮の出来事（1648–2025）。europe.yaml にあるもの（日英同盟・日露戦争の開戦・日独伊三国同盟・太平洋戦争の開戦・日本の降伏）は書かない。
+# G3・Z3 日本・朝鮮の出来事（1453–2025）。europe.yaml にあるもの（日英同盟・日露戦争の開戦・日独伊三国同盟・太平洋戦争の開戦・日本の降伏）は書かない。
+
+# ---- 1453–1647：室町・戦国・織豊・江戸初期、朝鮮王朝前期、琉球王国 ----
+- year: 1453
+  title: 癸酉靖難
+  text: 朝鮮の首陽大君が幼い端宗を補佐する重臣を殺して実権を握り、1455年に王位を奪った（世祖）。
+  polities: [joseon]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/癸酉靖難"
+- year: 1454
+  title: 享徳の乱
+  text: 鎌倉公方足利成氏が関東管領上杉憲忠を殺し、関東は古河公方と上杉氏の約30年にわたる戦乱に入った。関東では応仁の乱より早く戦国時代が始まった。
+  polities: [japan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/享徳の乱"
+  at: [139.7, 36.2]
+- year: 1457
+  title: コシャマインの戦い
+  text: 渡島半島のアイヌが首長コシャマインのもとで蜂起し、和人の館（道南十二館）の多くを落とした。武田信広（のちの蠣崎氏の祖）がこれを破った。
+  polities: [japan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/コシャマインの戦い"
+  at: [140.4, 41.6]
+- year: 1458
+  title: 万国津梁の鐘
+  text: 琉球の尚泰久王が首里城正殿に鐘を掛けた。銘文に、琉球は船を「万国の津梁（かけ橋）」として中継貿易で栄えると刻まれた。
+  polities: [ryukyu]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/万国津梁の鐘"
+  at: [127.72, 26.22]
+- year: 1467
+  title: 応仁の乱
+  text: 将軍足利義政の後継ぎ争いと管領家の家督争いから、細川勝元の東軍と山名持豊（宗全）の西軍が京都で11年にわたって戦った（–1477）。京都は焼け、幕府の権威は失われ、戦国時代が始まった。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/応仁の乱"
+  at: [135.76, 35.02]
+- year: 1469
+  title: 朝鮮の『経国大典』
+  text: 世祖のもとで編纂が始まった法典が成宗のもとで完成し、1485年に施行された。朝鮮王朝の統治の基本となった。
+  polities: [joseon]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/経国大典"
+- year: 1470
+  title: 琉球で第二尚氏の王朝が始まる
+  text: 尚徳王の死後、重臣の金丸が推されて即位し（尚円王）、第一尚氏に代わった。
+  polities: [ryukyu]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/第二尚氏"
+- year: 1477
+  title: 琉球の尚真王の即位
+  text: 尚真王（在位1477–1526）は按司を首里に集めて中央集権を進め、八重山・久米島を従えた。琉球王国の最盛期とされる。
+  polities: [ryukyu]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/尚真王"
+- year: 1485
+  title: 山城の国一揆
+  text: 南山城の国人と農民が畠山氏の両軍を国外に退け、8年間自治を行った。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/山城国一揆"
+  at: [135.8, 34.85]
+- year: 1488
+  title: 加賀の一向一揆
+  text: 一向宗（浄土真宗）の門徒が守護の富樫政親を滅ぼし、以後およそ100年、加賀は「百姓の持ちたる国」となった。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/加賀一向一揆"
+  at: [136.6, 36.5]
+- year: 1489
+  title: 銀閣（慈照寺）の造営
+  text: 足利義政が京都の東山に山荘を営み、観音殿（銀閣）を建てた。書院造・水墨画・茶の湯などの東山文化が栄えた。
+  polities: [japan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/慈照寺"
+  at: [135.8, 35.03]
+- year: 1493
+  title: 明応の政変
+  text: 管領細川政元が将軍足利義材を廃した。将軍が家臣に廃されたこの事件を、戦国時代の始まりとみる説もある。北条早雲（伊勢宗瑞）が伊豆に攻め入ったのもこのころ。
+  polities: [japan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/明応の政変"
+- year: 1500
+  title: オヤケアカハチの乱
+  text: 八重山の首長オヤケアカハチが琉球王府に背いたが、尚真王の軍に鎮圧された。八重山への王府の支配が確立した。
+  polities: [ryukyu]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/オヤケアカハチ"
+  at: [124.16, 24.34]
+- year: 1510
+  title: 三浦の乱
+  text: 朝鮮が日本人の居留を認めていた三浦（薺浦・釜山浦・塩浦）で、日本人が対馬の援兵とともに暴動を起こした。鎮圧の後、朝鮮と日本の通交は大きく制限された。
+  polities: [joseon, japan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/三浦の乱"
+  at: [128.7, 35.15]
+- year: 1523
+  title: 寧波の乱
+  text: 勘合貿易の主導権を争う大内氏と細川氏の使節が明の寧波で衝突した。のち大内氏が勘合貿易を独占したが、1551年の大内氏の滅亡で勘合貿易は絶えた。
+  polities: [japan, ming]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/寧波の乱"
+  at: [121.55, 29.87]
+- year: 1526
+  title: 石見銀山の開発
+  text: 博多の商人神屋寿禎が石見銀山を開発し、1533年に灰吹法で銀の大量生産が始まった。日本の銀は明やポルトガルとの貿易で大量に輸出され、世界の銀の流れを変えた。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/石見銀山"
+  at: [132.44, 35.11]
+- year: 1543
+  title: 鉄砲伝来
+  text: 種子島に漂着した中国船に乗っていたポルトガル人が鉄砲を伝えた。鉄砲はまもなく堺・国友などで大量につくられ、戦い方を変えた。
+  polities: [japan, portugal]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/鉄砲伝来"
+  at: [130.98, 30.6]
+- year: 1549
+  title: ザビエルが鹿児島に来る
+  text: イエズス会のフランシスコ＝ザビエルが鹿児島に上陸し、日本に初めてキリスト教を伝えた。のち九州の大名の中にキリシタン大名が現れた。
+  polities: [japan, portugal]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/フランシスコ・ザビエル"
+  at: [130.56, 31.6]
+- year: 1555
+  title: 乙卯倭変
+  text: 倭寇が全羅道の南岸を大規模に襲った。このころ明の沿岸でも中国人が中心の後期倭寇（嘉靖の大倭寇）が猛威をふるった。
+  polities: [joseon]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/乙卯倭変"
+  at: [126.6, 34.5]
+- year: 1560
+  title: 桶狭間の戦い
+  text: 尾張の織田信長が、大軍で攻め込んだ駿河の今川義元を討った。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/桶狭間の戦い"
+  at: [136.97, 35.06]
+- year: 1568
+  title: 織田信長の入京
+  text: 織田信長が足利義昭を奉じて京都に入り、義昭を15代将軍とした。統一事業の始まり。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/織田信長"
+  at: [135.76, 35.02]
+- year: 1570
+  title: 長崎の開港
+  text: キリシタン大名の大村純忠が長崎をポルトガル船の港として開き、1580年にはイエズス会に寄進した。ポルトガル人はマカオと長崎を結ぶ南蛮貿易で、中国の生糸と日本の銀を交換した。
+  polities: [japan, portugal]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/南蛮貿易"
+  at: [129.87, 32.75]
+- year: 1573
+  title: 室町幕府の滅亡
+  text: 織田信長が将軍足利義昭を京都から追放し、室町幕府は事実上滅んだ。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/室町幕府"
+  at: [135.76, 35.02]
+- year: 1575
+  title: 長篠の戦い
+  text: 織田信長・徳川家康の連合軍が、大量の鉄砲を使って武田勝頼の騎馬隊を破った。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/長篠の戦い"
+  at: [137.55, 34.93]
+- year: 1576
+  title: 安土城の築城
+  text: 織田信長が近江に安土城を築き始め、城下町で楽市・楽座を行った。
+  polities: [japan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/安土城"
+  at: [136.14, 35.16]
+- year: 1582
+  title: 本能寺の変と天正遣欧使節
+  text: 織田信長が京都の本能寺で家臣の明智光秀に討たれた。羽柴（豊臣）秀吉は山崎の戦いで光秀を破り、信長の後継者となった。同じ年、九州のキリシタン大名が4人の少年をローマ教皇のもとに送った（天正遣欧使節）。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/本能寺の変"
+  at: [135.76, 35.0]
+- year: 1587
+  title: バテレン追放令
+  text: 九州を平定した豊臣秀吉が、宣教師の国外退去を命じた。ただし南蛮貿易は続けたので、禁教は徹底しなかった。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/バテレン追放令"
+  at: [130.4, 33.6]
+- year: 1588
+  title: 刀狩令
+  text: 豊臣秀吉が農民から刀・鉄砲などの武器を取り上げた。太閤検地とともに兵農分離を進めた。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/刀狩"
+- year: 1590
+  title: 豊臣秀吉の全国統一
+  text: 豊臣秀吉が小田原の北条氏を滅ぼし、奥州の伊達政宗らも従えて全国を統一した。徳川家康は関東に移された。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/小田原征伐"
+  at: [139.15, 35.25]
+- year: 1592
+  title: 壬辰倭乱（文禄の役）
+  text: 明の征服をめざす豊臣秀吉の軍約16万が釜山に上陸し、漢城・平壌を落とした。李舜臣の朝鮮水軍が亀甲船などで日本の水軍を破り、各地で義兵が起こり、明の援軍が来た。
+  polities: [japan, joseon, ming]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/文禄・慶長の役"
+  at: [129.04, 35.1]
+- year: 1593
+  title: 明軍の平壌奪回と講和交渉
+  text: 明の李如松の軍が平壌を奪い返し（1月）、日本軍は漢城を捨てて慶尚道の南岸に退いた。日明の講和交渉が始まったが、1596年に決裂した。
+  polities: [japan, joseon, ming]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/平壌包囲戦_(1593年)"
+  at: [125.75, 39.03]
+- year: 1597
+  title: 丁酉倭乱（慶長の役）
+  text: 講和交渉が決裂し、豊臣秀吉が再び朝鮮に出兵した。日本軍は全羅道・忠清道に進んだが、明・朝鮮軍に阻まれて南岸の倭城に戻った。李舜臣は鳴梁海戦で日本の水軍を破った。
+  polities: [japan, joseon, ming]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/文禄・慶長の役"
+  at: [127.4, 35.2]
+- year: 1598
+  title: 秀吉の死と日本軍の撤退
+  text: 豊臣秀吉が死に（8月）、日本軍は朝鮮から撤退した。撤退する日本軍との露梁海戦で李舜臣が戦死した。朝鮮は大きな被害を受け、日本には陶工などが連れて来られた。
+  polities: [japan, joseon, ming]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/露梁海戦"
+  at: [127.85, 34.94]
+- year: 1600
+  title: 関ヶ原の戦い
+  text: 徳川家康の東軍が石田三成らの西軍を破り、全国の支配権を握った。同じ年、オランダ船リーフデ号が豊後に漂着した（ウィリアム＝アダムズ）。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/関ヶ原の戦い"
+  at: [136.47, 35.37]
+- year: 1603
+  title: 江戸幕府の成立
+  text: 徳川家康が征夷大将軍に任じられ、江戸に幕府を開いた。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/江戸幕府"
+  at: [139.75, 35.68]
+- year: 1604
+  title: 朱印船貿易
+  text: 江戸幕府が海外に渡る商船に朱印状を与える制度を整えた。東南アジア各地（アユタヤ・ホイアン・マニラなど）に日本町ができた。同じ年、松前氏にアイヌとの交易の独占を認めた。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/朱印船貿易"
+- year: 1607
+  title: 日朝の国交回復（最初の通信使）
+  text: 朝鮮の使節（回答兼刷還使）が江戸を訪れ、日本との国交が回復した。1609年には対馬の宗氏と己酉約条を結び、釜山に倭館を置いて貿易を再開した。
+  polities: [joseon, japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/朝鮮通信使"
+  at: [129.04, 35.1]
+- year: 1609
+  title: 薩摩藩の琉球侵攻
+  text: 薩摩藩の島津氏が幕府の許しを得て琉球に攻め入り、首里城を落として国王尚寧を連れ去った。琉球は明に朝貢しながら薩摩の支配を受ける「両属」の国となり、奄美群島は薩摩の直轄となった。同じ年、オランダが平戸に商館を開いた。
+  polities: [japan, ryukyu]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/琉球侵攻"
+  at: [127.72, 26.22]
+- year: 1613
+  title: 全国に禁教令
+  text: 江戸幕府がキリスト教の禁止を全国に広げ（1612年に直轄地、1613年に全国）、宣教師を追放した。同じ年、伊達政宗が支倉常長をスペイン・ローマに送った（慶長遣欧使節）。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/禁教令"
+- year: 1615
+  title: 大坂夏の陣と武家諸法度
+  text: 徳川家康が大坂城を攻め落として豊臣氏を滅ぼした（大坂の陣、1614–15）。同じ年、一国一城令・武家諸法度・禁中並公家諸法度を定め、大名と朝廷を統制した。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/大坂の陣"
+  at: [135.53, 34.69]
+- year: 1623
+  title: 仁祖反正
+  text: 朝鮮で西人派がクーデターを起こして光海君を廃し、仁祖を立てた。新しい政権は明に従い後金を敵視する政策をとった。
+  polities: [joseon]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/仁祖反正"
+- year: 1627
+  title: 丁卯胡乱
+  text: 後金が朝鮮に侵攻し、朝鮮は後金と「兄弟の盟」を結んだ。明の冊封はなお続いた。
+  polities: [joseon, later_jin]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/丁卯胡乱"
+- year: 1635
+  title: 参勤交代の制度化と日本人の海外渡航の禁止
+  text: 3代将軍徳川家光が武家諸法度を改めて参勤交代を制度とした。同じ年、日本人の海外渡航と帰国を全面的に禁じた。
+  polities: [japan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/参勤交代"
+- year: 1637
+  title: 丙子胡乱（朝鮮の清への降伏）
+  text: 清のホンタイジが朝鮮に侵攻し（1636年12月）、南漢山城にこもった仁祖は1637年1月に三田渡で降伏した。朝鮮は明との関係を断って清の冊封を受け、王子を人質に出した。
+  polities: [joseon, qing]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/丙子の乱"
+  at: [127.1, 37.5]
+- year: 1637
+  title: 島原・天草一揆（島原の乱）
+  text: 重い年貢とキリシタンの弾圧に苦しむ島原・天草の農民が天草四郎（益田時貞）を中心に原城に立てこもったが、1638年に幕府の大軍に鎮圧された。
+  polities: [japan]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/島原の乱"
+  at: [130.25, 32.63]
+- year: 1639
+  title: ポルトガル船の来航禁止（「鎖国」）
+  text: 江戸幕府がポルトガル船の来航を禁じた。1641年にはオランダ商館を平戸から長崎の出島に移し、対外関係を長崎・対馬・薩摩・松前の「四つの口」に限る体制ができた。
+  polities: [japan, portugal]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/鎖国"
+  at: [129.87, 32.74]
+- year: 1644
+  title: 明の滅亡と琉球の冊封の途絶
+  text: 明が滅び、琉球は冊封を受けられなくなった。琉球は南明の諸政権にも使者を送り、1663年に清から冊封を受けた。
+  polities: [ryukyu]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/琉球王国"
+  at: [127.72, 26.22]
 
 # ---- 江戸時代・朝鮮王朝後期 ----
 - year: 1655

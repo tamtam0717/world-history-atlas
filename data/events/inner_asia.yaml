@@ -1,6 +1,250 @@
 # G2 内陸アジア（モンゴル・内モンゴル・新疆・チベット・青海・アムール・沿海州）の出来事（1648–2025）。
 # 清・ロシアの国境条約（ネルチンスク・キャフタ・アイグン・北京・イリ）はここに置く（G1 と重複しないように申し送り）。
 
+# ---- 1453–1647（Z2）。エセンのハン即位（1453）・ハミ併合（1513）・庚戌の変・隆慶和議・エジェイの降伏（1635）は china.yaml（Z1）にある ----
+- year: 1454
+  title: エセンが殺される
+  text: ハンを名のったオイラトのエセンが、部下のアラク・テムルに殺された。オイラトの覇権は崩れ、東モンゴル（タタール）の有力者が争う時代になった。
+  polities: [dzungar, northern_yuan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/エセン"
+- year: 1465
+  title: ドゥグラト部のアブー・バクルがカシュガルで自立
+  text: モグーリスタン・ハン国の有力者ドゥグラト部のミールザー・アブー・バクルが、ヤルカンド・カシュガル・ホータンをハンから切り離して治めた（年はおおよそ）。
+  polities: [dughlat, moghulistan]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Mirza_Abu_Bakr_Dughlat"
+  at: [76.0, 39.5]
+- year: 1470
+  title: モンゴルがオルドスに入る（套寇）
+  text: 東モンゴルのベグ・アルスラン・モーリハイらが黄河の湾曲部の内側（オルドス、河套）に住みつき、ここを足場に明の陝西・山西の辺境を襲った。明は延綏の長城を築いて備えた（1474）。
+  polities: [northern_yuan, ming]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/オルドス"
+  at: [108.5, 39.4]
+- year: 1473
+  title: トルファンがハミを攻め取る
+  text: トルファンのスルターン・アリーが明の羈縻のハミ（哈密衛）を攻め、ハミの王家の者を連れ去った。ハミは1482年に明の助けで王家に戻ったが、その後もトルファンとの間で奪い合われた。
+  polities: [moghulistan, ming]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Kara_Del"
+  at: [93.5, 42.8]
+- year: 1479
+  title: ダヤン＝ハンの即位
+  text: マンドゥールン・ハンの死後、妃のマンドゥハイ（満都海）がチンギス・カンの子孫の幼いバト・モンケを立ててハーンとし（ダヤン＝ハン）、自ら軍を率いてオイラトを退けた。
+  polities: [northern_yuan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ダヤン・ハーン"
+- year: 1498
+  title: リンプン派がラサを押さえる
+  text: ツァンのリンプン派がウーに攻め込んでラサ一帯を支配し、ゲルク派の僧をラサの大祈願祭（モンラム）から締め出した。1517年にパクモドゥ派が取り戻した。
+  polities: [rinpungpa, phagmodrupa]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Rinpungpa"
+  at: [91.1, 29.65]
+- year: 1510
+  title: ダヤン＝ハンのモンゴル再統一
+  text: ダヤン＝ハンが右翼（オルドス・トゥメト・ヨンシエブ）の反乱をダラン・テリグンの戦いで破り、東モンゴルを再統一した（年はおおよそ）。諸子を6つのトゥメン（万戸）に分け、のちの内外モンゴルの諸侯の祖となった。
+  polities: [northern_yuan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ダヤン・ハーン"
+- year: 1510
+  title: モンゴルの右翼の諸侯が青海に逃れる
+  text: ダヤン＝ハンに敗れた右翼のイブラーヒーム（亦不剌）らが青海に逃れて住みつき、明の西の羈縻衛所（関西七衛）は崩れていった。
+  polities: [northern_yuan, ming]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Qinghai"
+  at: [100.2, 36.9]
+- year: 1514
+  title: ヤルカンド・ハン国の成立
+  text: モグーリスタンのハン家のスルターン・サイードが、カシュガルのアブー・バクルを追い、ヤルカンドを都にハン国を開いた。タリム盆地西部のオアシス都市は、1680年ごろまでチャガタイ家のハンが治めた。
+  polities: [yarkent, dughlat]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ヤルカンド・ハン国"
+  at: [77.25, 38.4]
+- year: 1532
+  title: ヤルカンド・ハン国のチベット西部遠征
+  text: スルターン・サイード・ハンとドゥグラト部のミールザー・ハイダルがラダック・チベット西部に遠征した。サイードは帰路に死に（1533）、ハイダルはのちカシミールを治めて歴史書『ラシード史』を書いた。
+  polities: [yarkent]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Mirza_Muhammad_Haidar_Dughlat"
+  at: [79.5, 33.5]
+- year: 1542
+  title: アルタン＝ハンが右翼の盟主となる
+  text: ダヤン＝ハンの孫アルタン＝ハンがトゥメト部を率いてモンゴル右翼の盟主となった（1540年代）。オイラトや青海に遠征し、明に交易（馬市）を求めて毎年のように長城を越えた。
+  polities: [tumed, northern_yuan]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/アルタン・ハーン"
+  at: [111.7, 40.8]
+- year: 1547
+  title: チャハルの東遷
+  text: モンゴルのハーンのダライスン・ハンが、アルタン＝ハンの圧迫を避けてチャハル部を率いて東の遼河上流へ移った。ハーン家の権威はさらに弱まり、明の遼東・薊州の辺境が襲われるようになった。
+  polities: [northern_yuan, tumed]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Darayisung_Gödeng_Khan"
+  at: [119.5, 43.5]
+- year: 1559
+  title: アルタン＝ハンの青海遠征
+  text: アルタン＝ハンが青海に遠征し、一族を青海に住まわせた。モンゴルとチベットの結びつきが強まるきっかけとなった。
+  polities: [tumed]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/アルタン・ハーン"
+  at: [100.2, 36.9]
+- year: 1565
+  title: ツァン王（ツァンパ）の自立
+  text: リンプン家の家臣シンシャクパ・ツェテン・ドルジェが主家を倒し、シガツェでツァン王を名のった。カルマ派を保護してゲルク派と争った。
+  polities: [tsangpa, rinpungpa]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Tsangpa"
+  at: [88.88, 29.27]
+- year: 1572
+  title: フフホト（帰化城）の建設
+  text: アルタン＝ハンが陰山山脈の南に城を築き始めた（フフホト＝「青い城」。明は1575年に帰化城の名を与えた）。長城の外に逃れた漢人の農民も住み、モンゴルとの交易の町となった。
+  polities: [tumed]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/フフホト市"
+  at: [111.65, 40.82]
+- year: 1578
+  title: アルタン＝ハンが「ダライ・ラマ」の称号を贈る
+  text: アルタン＝ハンは青海のチャプチャルでチベットのゲルク派の高僧ソナム・ギャツォに会い、「ダライ・ラマ」の称号を贈った（ソナム・ギャツォは3世とされ、前の2人が1世・2世とされた）。モンゴルにチベット仏教が広まるきっかけとなった。
+  polities: [tumed, phagmodrupa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ダライ・ラマ3世"
+  at: [100.6, 36.3]
+- year: 1585
+  title: エルデネ・ゾー寺の建立
+  text: ハルハのアブタイ・ハンが、モンゴル帝国の都カラコルムの跡にモンゴル最初のチベット仏教の大寺院エルデネ・ゾーを建てた。翌1586年にはフフホトでダライ・ラマ3世に会った。
+  polities: [khalkha]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/エルデニ・ゾー"
+  at: [102.84, 47.2]
+- year: 1588
+  title: ダライ・ラマ3世の死と4世の選定
+  text: ダライ・ラマ3世がモンゴルへの布教の旅の途中で死んだ。生まれ変わりとして、アルタン＝ハンの曾孫のモンゴル人ヨンテン・ギャツォが4世に選ばれ（1589年生まれ）、モンゴルとゲルク派の結びつきはさらに深まった。
+  polities: [tumed]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/ダライ・ラマ4世"
+- year: 1603
+  title: ベント・デ・ゴイスのヤルカンド訪問
+  text: インドのムガル帝国から「キタイ（中国）」を探しに出たポルトガル人のイエズス会士ベント・デ・ゴイスがヤルカンドに着き、天山南路を通って甘粛の粛州にたどり着いた（1605）。キタイと中国が同じ国だと確かめられた。
+  polities: [yarkent]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Bento_de_Góis"
+  at: [77.25, 38.4]
+- year: 1604
+  title: リンダン＝ハンの即位
+  text: 北元のハーンの家（チャハル）のリンダン＝ハンが即位した。ハーンの権威を取り戻そうとしたが、強引なやり方で内モンゴルの諸部の離反を招いた。
+  polities: [northern_yuan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/リンダン・ハーン"
+  at: [119.5, 43.5]
+- year: 1618
+  title: ツァン王がウーを征服
+  text: ツァン王カルマ・プンツォク・ナムギャルがウーに攻め込んでラサを押さえ、チベットの大部分をまとめた。ゲルク派はモンゴルに助けを求めた。
+  polities: [tsangpa, phagmodrupa]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Karma_Phuntsok_Namgyal"
+  at: [91.1, 29.65]
+- year: 1623
+  title: ショロイ・ウバシがオイラトに敗れる
+  text: ハルハ北西部のホトゴイト部のショロイ・ウバシ（アルタン・ハン）が、長く争ったオイラトとの戦いで殺された（年は要確認）。オイラトの諸部はこのころ西のジュンガル盆地・イルティシ川・ヴォルガ川へ移っていった。
+  polities: [khalkha, dzungar]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Altan_Khan_of_the_Khalkha"
+  at: [92.0, 50.0]
+- year: 1624
+  title: アンドラーデがグゲに来る
+  text: ポルトガル人のイエズス会士アントニオ・デ・アンドラーデがインドからヒマラヤを越えてグゲ王国の都ツァパランに着き、教会を建てた。チベットに入った最初のヨーロッパ人宣教師だった。
+  polities: [guge]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/António_de_Andrade"
+  at: [79.7, 31.5]
+- year: 1624
+  title: ホルチンが後金と同盟
+  text: 内モンゴル東部のホルチン部がリンダン＝ハンに対抗して後金のヌルハチと同盟した。翌年リンダンに攻められると後金が援軍を送り、ホルチンは清の皇室と婚姻を重ねる最も近い同盟者となった。
+  polities: [northern_yuan, later_jin]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Khorchin_Mongols"
+  at: [122.0, 44.5]
+- year: 1628
+  title: リンダン＝ハンの西進
+  text: ハラチン・アオハンなど内モンゴル東部の諸部が後金に付いたため、リンダン＝ハンは西へ移り、トゥメトを破ってフフホトを奪った（1627–1628）。
+  polities: [northern_yuan, tumed, later_jin]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/リンダン・ハーン"
+  at: [111.65, 40.82]
+- year: 1630
+  title: ラダックがグゲ王国を滅ぼす
+  text: ラダックのセンゲ・ナムギャルがグゲに攻め込み、王を捕らえて王国を滅ぼし、西チベット（ガリ）を併合した（年はおおよそ）。ツァパランのイエズス会の伝道所も閉ざされた。ガリは1679–84年のチベット・ラダック・ムガル戦争までラダックの支配下にあった。
+  polities: [ladakh, guge]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/グゲ王国"
+  at: [79.7, 31.5]
+- year: 1630
+  title: トルグート部のヴォルガ移住
+  text: オイラトのトルグート部がホー・ウルロクに率いられて西へ移り、ヴォルガ川下流に住みついた（カルムイク）。1771年にその一部がイリへ戻った。
+  polities: [dzungar]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/カルムイク"
+  at: [46.0, 47.0]
+- year: 1632
+  title: ホンタイジのフフホト遠征
+  text: 後金のホンタイジが内モンゴルの諸部を率いてチャハルに遠征し、フフホトに入った。リンダン＝ハンは戦わずに西の青海へ逃れ、1634年に甘粛のシラ・タラで病死した。
+  polities: [later_jin, northern_yuan, tumed]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/リンダン・ハーン"
+  at: [111.65, 40.82]
+- year: 1634
+  title: リンダン＝ハンの死
+  text: 青海へ向かう途中、リンダン＝ハンが甘粛のシラ・タラで天然痘で死んだ。北元のハーンの権威はこれで失われた。
+  polities: [northern_yuan]
+  importance: 3
+  source: "https://ja.wikipedia.org/wiki/リンダン・ハーン"
+  at: [102.6, 37.9]
+- year: 1635
+  title: ジュンガルのエルデニ・バートルが即位
+  text: ハラ・フラの子エルデニ・バートルがジュンガル部を継ぎ（1634）、イリを本拠にオイラトをまとめる遊牧国家を築いていった（ジュンガルの成立）。
+  polities: [dzungar]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ジュンガル"
+  at: [81.3, 43.9]
+- year: 1637
+  title: グシ・ハンが青海を征服
+  text: ゲルク派の求めを受けたオイラトのホシュート部のグシ・ハンが青海に入り、カルマ派を保護していたハルハのチョクト・ホンタイジを破った（ウラーン・ホシューの戦い）。青海はホシュートの本拠となった。
+  polities: [khoshut, khalkha]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/グシ・ハン"
+  at: [100.2, 36.9]
+- year: 1640
+  title: モンゴル・オイラト法典の制定
+  text: ジュンガルのエルデニ・バートルの呼びかけで、ハルハとオイラトの諸侯がタルバガタイに集まり、モンゴル・オイラト法典を定めた。ゲルク派の保護と、諸侯どうしの争いをやめることを約束した。
+  polities: [dzungar, khalkha]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Mongol-Oirat_Code"
+  at: [83.0, 46.7]
+- year: 1640
+  title: グシ・ハンがベリ王を倒す
+  text: グシ・ハンがカム（東チベット）でゲルク派を迫害していたボン教徒のベリ王ドニョ・ドルジェを倒し、カムを従えた。
+  polities: [khoshut]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Donyo_Dorje_(Beri)"
+  at: [98.6, 31.6]
+- year: 1642
+  title: ガンデンポタンの成立（ダライ・ラマ政権）
+  text: グシ・ハンがツァンのシガツェを落としてツァン王を倒し、チベットの統治権をダライ・ラマ5世に献じた。ダライ・ラマを頂点とする政教一致の政権（ガンデンポタン）が成立し、グシ・ハンはチベット王として軍事を握った。
+  polities: [tibet, khoshut, tsangpa]
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/ガンデンポタン"
+  at: [91.1, 29.65]
+- year: 1645
+  title: ポタラ宮の建設が始まる
+  text: ダライ・ラマ5世がラサのマルポリの丘にポタラ宮の建設を始めた（白宮は1648年に完成）。ダライ・ラマ政権の政治と宗教の中心となった。
+  polities: [tibet]
+  importance: 2
+  source: "https://ja.wikipedia.org/wiki/ポタラ宮"
+  at: [91.12, 29.66]
+
+# ---- 1648– ----
 - year: 1652
   title: ダライ・ラマ5世が北京を訪れる
   text: ダライ・ラマ5世が順治帝に招かれて北京を訪れた（1652–1653）。清はチベット仏教の最高位の僧を厚くもてなし、モンゴル人の信仰を通じた支配に役立てた。
@@ -31,6 +275,13 @@
   polities: [tibet]
   importance: 3
   source: "https://ja.wikipedia.org/wiki/サンギェ・ギャツォ"
+- year: 1684
+  title: ティンモスガン条約（ガリがチベット領に）
+  text: チベット・ラダック・ムガル戦争（1679–84）の後、ダライ・ラマ政権とラダック王国が条約を結び、1630年ごろからラダックが治めていた西チベットのガリをチベット領とし、ラダックはチベットに定期的に使節を送ることになった。
+  polities: [tibet, ladakh]
+  importance: 3
+  source: "https://en.wikipedia.org/wiki/Treaty_of_Tingmosgang"
+  at: [80.1, 32.5]
 - year: 1685
   title: 清がアルバジン砦を攻める
   text: 康熙帝はアムール川流域に進出したロシアのアルバジン砦を攻め（1685・1686）、ロシアに国境の交渉を迫った。

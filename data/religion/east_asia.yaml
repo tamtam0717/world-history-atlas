@@ -9,6 +9,14 @@
   select:
     iso: [CHN]
   timeline:
+    - from: 1453
+      main: chinese_folk
+      note: 明の時代。朱子学が科挙の正統の学問で、民衆は祖先祭祀・仏教・道教と民間の神々を合わせて信仰した。16 世紀には王守仁（王陽明）の陽明学が広まり、儒・仏・道の三教を一つとみる考え（三教合一）が流行した。
+      source: "https://ja.wikipedia.org/wiki/陽明学"
+    - from: 1583
+      main: chinese_folk
+      note: イエズス会のマテオ＝リッチが肇慶に入り（1583）、1601 年に北京に住むことを許された。徐光啓らの士大夫が入信したが、信者は明末でも数万人ほどで少数。回族（中国語を話すムスリム）は各地の都市や西北・雲南に住む。
+      source: "https://ja.wikipedia.org/wiki/マテオ・リッチ"
     - from: 1648
       main: chinese_folk
       note: 漢人の信仰は、祖先祭祀（儒教）・仏教・道教と、関帝・媽祖などの民間の神々の信仰が混ざり合ったもの。科挙で朱子学が正統の学問とされた。イエズス会の宣教（マテオ＝リッチ以来）でカトリックの信者もいたが、少数。
@@ -33,6 +41,10 @@
     adm1: ["CHN/Tibet Autonomous Region"]
     pieces: [CHN-Yushu, CHN-Guoluo, CHN-Huangnan, CHN-Hainanzhou, CHN-Haibei, CHN-Ganzi, CHN-Aba, CHN-Gannan, CHN-Diqing]
   timeline:
+    - from: 1453
+      main: tibetan_buddhism
+      note: ツォンカパ（1357–1419）が開いたゲルク派が広がり、カギュ派・サキャ派と競った。1578 年、ゲルク派のソナム・ギャツォがアルタン＝ハンから「ダライ・ラマ」の称号を受けた。1642 年、グシ・ハン（ホシュート部）がダライ・ラマ5世にチベットの政権を与えた。
+      source: "https://ja.wikipedia.org/wiki/ゲルク派"
     - from: 1648
       main: tibetan_buddhism
       note: ダライ・ラマ5世（1642 年にグシ・ハンの支援でチベットの政権を握る）の下でゲルク派が優勢。ラサのポタラ宮は 1645 年に建設が始まる。アムド（青海）・カム（四川西部）も同じチベット仏教圏。
@@ -71,6 +83,8 @@
   select:
     pieces: [CHN-Haixi, CHN-Geermu]
   timeline:
+    - from: 1453
+      main: tibetan_buddhism
     - from: 1648
       main: tibetan_buddhism
       note: ホシュート部などのモンゴル人とチベット人の牧地
@@ -83,6 +97,9 @@
   select:
     pieces: [CHN-Xining, CHN-Haidong]
   timeline:
+    - from: 1453
+      main: chinese_folk
+      minor: sunni
     - from: 1648
       main: chinese_folk
       minor: sunni
@@ -93,6 +110,9 @@
   select:
     pieces: [CHN-Linxia]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: chinese_folk
     - from: 1648
       main: sunni
       minor: chinese_folk
@@ -103,6 +123,9 @@
   select:
     adm1: ["CHN/Ningxia Ningxia Hui Autonomous Region"]
   timeline:
+    - from: 1453
+      main: chinese_folk
+      minor: sunni
     - from: 1648
       main: chinese_folk
       minor: sunni
@@ -115,6 +138,10 @@
   select:
     pieces: [CHN-Kashi, CHN-Hetian, CHN-Akesu, CHN-Kezileisu, CHN-Tulufan, CHN-Hami, CHN-Bayinguoleng]
   timeline:
+    - from: 1453
+      main: sunni
+      note: モグーリスタン（東チャガタイ＝ハン国）のトゥグルク＝ティムール（14 世紀）の改宗以後、タリム盆地のオアシスのテュルク系住民はムスリムになった。16 世紀にはヤルカンド＝ハン国（1514–）の下でナクシュバンディー教団のホージャ家が力をもった。
+      source: "https://ja.wikipedia.org/wiki/ヤルカンド・ハン国"
     - from: 1648
       main: sunni
       note: オアシス都市のテュルク系ムスリム（のちのウイグル人）。カシュガル・ホージャ家（ナクシュバンディー教団）が宗教と政治の権威をもった。
@@ -135,6 +162,15 @@
   select:
     pieces: [CHN-Hami]
   timeline:
+    - from: 1453
+      main: mahayana
+      minor: sunni
+      note: ハミ（哈密）は明の羈縻の衛（哈密衛）で、王家と住民の多くはまだウイグル人の仏教徒で、ムスリムも混じった。
+      source: "https://ja.wikipedia.org/wiki/哈密衛"
+    - from: 1515
+      main: sunni
+      note: トゥルファンのハン（モグール）がハミを支配し（1513 年ごろ）、住民のイスラーム化が進んだ。
+      source: "https://ja.wikipedia.org/wiki/トルファン"
     - from: 1648
       main: sunni
       note: ハミ王家（ウイグル人の王侯）が清に早くから服属した。
@@ -142,6 +178,20 @@
       main: chinese_folk
       minor: sunni
       note: 鉄道（蘭新線）の開通と移住で、漢人が多数になる。
+- id: rel_turfan_pre
+  name: トゥルファン（1453–1647）
+  select:
+    pieces: [CHN-Tulufan]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: sunni
+      minor: mahayana
+      note: トゥルファンのウイグル人は 15 世紀にイスラームに改宗した。1414 年に明の使節陳誠が仏寺の多さを記したが、15 世紀半ばにはモグールのハンのもとでムスリムが多数になり、仏教徒は残った。
+      source: "https://ja.wikipedia.org/wiki/トルファン"
+    - from: 1500
+      main: sunni
+      note: トゥルファン＝ハン国（モグーリスタンの東部）のもとでイスラーム化が終わる。
 - id: rel_bayingol
   name: バインゴリン（コルラ・カラシャール）
   select:
@@ -163,6 +213,15 @@
   select:
     pieces: [CHN-Yili, CHN-Tacheng, CHN-Aletai, CHN-Boertala]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラト（エセン＝ハーンが 1449 年の土木の変で正統帝を捕らえた）の遊牧地。シャーマニズムが中心で、仏教は元の時代の名残程度。
+      source: "https://ja.wikipedia.org/wiki/オイラト"
+    - from: 1616
+      main: tibetan_buddhism
+      note: オイラトの諸侯が 1615 年ごろからゲルク派に帰依し、ザヤ・パンディタ（1599–1662）がオイラトに仏教を広めた。
+      source: "https://ja.wikipedia.org/wiki/ザヤ・パンディタ"
     - from: 1648
       main: tibetan_buddhism
       note: オイラト（ジュンガル部など）の遊牧地。オイラトはチベット仏教（ゲルク派）を信仰した。
@@ -175,6 +234,18 @@
   select:
     pieces: [CHN-Yili]
   timeline:
+    - from: 1453
+      main: sunni
+      minor: other
+      note: モグーリスタンの遊牧民（チャガタイ＝ハン国の末裔。テュルク化したモンゴル人）の地。イスラームは名目的な所も多かった。
+      source: "https://ja.wikipedia.org/wiki/モグーリスタン"
+    - from: 1580
+      main: other
+      minor: sunni
+      note: オイラトがイリ地方に進出し、モグールの遊牧民は南（タリム盆地）や西（カザフ）へ移った。
+    - from: 1616
+      main: tibetan_buddhism
+      note: オイラトの諸侯がゲルク派に帰依する。
     - from: 1648
       main: tibetan_buddhism
       note: ジュンガル（オイラト）の本拠地
@@ -190,6 +261,12 @@
   select:
     pieces: [CHN-Tacheng]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラトの遊牧地（シャーマニズムが中心）。
+    - from: 1616
+      main: tibetan_buddhism
     - from: 1648
       main: tibetan_buddhism
       note: オイラト（ジュンガル部・ドルベト部）の遊牧地
@@ -211,6 +288,12 @@
   select:
     pieces: [CHN-Aletai]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラトの遊牧地（シャーマニズムが中心）。
+    - from: 1616
+      main: tibetan_buddhism
     - from: 1648
       main: tibetan_buddhism
       note: オイラトとアルタイ・ウリャンハイ（モンゴル系の仏教徒）の牧地。1919 年まではホブド（モンゴル）の管轄だった。
@@ -231,6 +314,12 @@
   select:
     pieces: [CHN-Boertala]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラトの遊牧地（シャーマニズムが中心）。
+    - from: 1616
+      main: tibetan_buddhism
     - from: 1648
       main: tibetan_buddhism
       note: オイラトの遊牧地
@@ -248,6 +337,12 @@
   select:
     pieces: [CHN-Wulumuqi, CHN-Changji]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラトとモグールの遊牧地の境。
+    - from: 1616
+      main: tibetan_buddhism
     - from: 1648
       main: tibetan_buddhism
       note: オイラトの遊牧地
@@ -261,6 +356,11 @@
   select:
     pieces: [CHN-Shihezi, CHN-Kelamayi]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+    - from: 1616
+      main: tibetan_buddhism
     - from: 1648
       main: tibetan_buddhism
     - from: 1760
@@ -276,6 +376,18 @@
   select:
     adm1: ["CHN/Inner Mongolia Autonomous Region"]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: 北元の時代のモンゴル人。シャーマニズムが中心。
+    - from: 1580
+      main: tibetan_buddhism
+      minor: other
+      note: アルタン＝ハン（トゥメト部）がダライ・ラマ3世に帰依し（1578）、フフホト（帰化城、1572 年に建設）に大召寺（1579）を建てた。オルドス・チャハルなどにも仏教が広まった。
+      source: "https://ja.wikipedia.org/wiki/大召寺"
+    - from: 1620
+      main: tibetan_buddhism
+      note: チャハルのリンダン＝ハーン（1604–34）も仏教を保護し、モンゴル語の大蔵経を作らせた。
     - from: 1648
       main: tibetan_buddhism
       note: 16 世紀末のアルタン・ハーン以来、モンゴル人はチベット仏教（ゲルク派）を信仰した。フフホト（帰化城）には多くの寺院がある。
@@ -332,6 +444,19 @@
       main: chinese_folk
       minor: tibetan_buddhism
       note: 中華人民共和国の成立後、農場・林業・鉱山の開発で漢人が多数になる。
+- id: rel_im_east_pre
+  name: 内モンゴル東部（通遼・興安・フルンボイル、1453–1647）
+  select:
+    pieces: [CHN-Tongliao, CHN-Xingan, CHN-Hulunbeier]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: ホルチン部などのモンゴル人と、ダウール人・エヴェンキ人の地。シャーマニズムが中心。
+    - from: 1630
+      main: tibetan_buddhism
+      note: ホルチン部は後金（清）と早くから同盟し（1624）、チベット仏教を受け入れた（白城・松原と同じ年）。北のダウール人・エヴェンキ人はシャーマニズムのまま。
 - id: rel_im_steppe
   name: 内モンゴル中部・西部の草原（シリンゴル・アラシャン）
   select:
@@ -359,6 +484,14 @@
   select:
     pieces: [CHN-Chengde, CHN-Chaoyang, CHN-Fuxin]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: 明に服属したウリャンハイ三衛（朶顔衛など）のモンゴル人の牧地。シャーマニズムが中心。
+      source: "https://ja.wikipedia.org/wiki/ウリャンハイ"
+    - from: 1620
+      main: tibetan_buddhism
+      note: 南モンゴルにチベット仏教が広まる（アルタン＝ハン以後）。
     - from: 1648
       main: tibetan_buddhism
       note: ハラチン部・トゥメト部などのモンゴル人の牧地。承徳の避暑山荘（1703–）の周りには、チベット仏教の寺院（外八廟）が建てられた。
@@ -373,6 +506,8 @@
   select:
     pieces: [CHN-Changchun, CHN-Jilin, CHN-Siping, CHN-Liaoyuan, CHN-Tonghua, CHN-Baishan]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
       note: 満洲人・ツングース系の人々（シャーマニズム）。清は柳条辺牆で満洲を囲い、漢人の移住を制限した（封禁政策）。
@@ -386,6 +521,13 @@
   select:
     pieces: [CHN-Baicheng, CHN-Songyuan]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: ホルチン部などのモンゴル人の牧地。シャーマニズムが中心。
+    - from: 1630
+      main: tibetan_buddhism
+      note: ホルチン部は後金（清）と早くから同盟し（1624）、チベット仏教を受け入れた。
     - from: 1648
       main: tibetan_buddhism
       note: ホルチン部・ゴルロス部のモンゴル人の牧地
@@ -400,6 +542,8 @@
   select:
     pieces: [CHN-Yanbian]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
       note: 清の封禁地で、人口はわずか
@@ -417,6 +561,8 @@
   select:
     adm1: ["CHN/Heilongjiang Province"]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
       note: ダウール人・エヴェンキ人（ソロン）・ナナイ人（ホジェン）など、シャーマニズムを信仰する人々の地。1650 年代にロシアのコサックがアムール川に進出した。
@@ -428,6 +574,8 @@
   select:
     pieces: [CHN-Haerbin]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
     - from: 1900
@@ -443,6 +591,8 @@
   select:
     pieces: [CHN-Daxinganling, CHN-Heihe]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
       note: オロチョン人・エヴェンキ人の狩猟地
@@ -455,6 +605,8 @@
   select:
     pieces: [CHN-Xishuangbanna]
   timeline:
+    - from: 1453
+      main: theravada
     - from: 1648
       main: theravada
       note: タイ・ルー人の王国（シプソンパンナー）。上座部仏教を信仰し、清の土司として間接統治された。ハニ人なども住む。
@@ -468,6 +620,8 @@
   select:
     pieces: [CHN-Dehong]
   timeline:
+    - from: 1453
+      main: theravada
     - from: 1648
       main: theravada
       note: タイ・ヌア人の土司（ムンマオなど）の地。上座部仏教。山地のジンポー人（カチン人）はアニミズム、のちキリスト教。
@@ -480,6 +634,9 @@
   select:
     pieces: [CHN-Panzhihua]
   timeline:
+    - from: 1453
+      main: chinese_folk
+      minor: other
     - from: 1648
       main: chinese_folk
       minor: other
@@ -492,6 +649,9 @@
   select:
     pieces: [CHN-Liangshan, CHN-Nujiang]
   timeline:
+    - from: 1453
+      main: other
+      minor: chinese_folk
     - from: 1648
       main: other
       minor: chinese_folk
@@ -502,6 +662,9 @@
   select:
     pieces: [CHN-Qiandongnan]
   timeline:
+    - from: 1453
+      main: other
+      minor: chinese_folk
     - from: 1648
       main: other
       minor: chinese_folk
@@ -514,6 +677,9 @@
   select:
     iso: [TWN]
   timeline:
+    - from: 1453
+      main: other
+      note: 台湾原住民（オーストロネシア系）の祖先祭祀・アニミズム。北部ではスペインがサン・サルバドル城（基隆、1626–42）を拠点に布教した。
     - from: 1648
       main: other
       note: 台湾原住民（オーストロネシア系）のアニミズム・祖霊信仰。オランダ（1624–62）は台南周辺のシラヤ族に改革派の布教をし、ローマ字で聖書を訳した。
@@ -523,6 +689,8 @@
   select:
     pieces: [TWN-Penghu, TWN-Kinmen, TWN-Matsu_Islands]
   timeline:
+    - from: 1453
+      main: chinese_folk
     - from: 1648
       main: chinese_folk
       note: 福建の漢人の島。媽祖の信仰が厚い。
@@ -531,6 +699,14 @@
   select:
     pieces: [TWN-Tainan, TWN-Kaohsiung]
   timeline:
+    - from: 1453
+      main: other
+      note: シラヤ族などの台湾原住民（オーストロネシア系）の祖先祭祀・アニミズム。
+    - from: 1630
+      main: other
+      minor: chinese_folk
+      note: オランダ東インド会社がタイオワン（安平）にゼーランディア城を築き（1624）、福建からの漢人の移住者を呼び寄せた。オランダの宣教師（改革派）がシラヤ族の村に布教し、数千人が洗礼を受けた。
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代の台湾"
     - from: 1648
       main: other
       minor: chinese_folk
@@ -616,6 +792,14 @@
   select:
     iso: [JPN]
   timeline:
+    - from: 1453
+      main: shinbutsu
+      note: 室町・戦国時代。神仏習合のもとで、浄土真宗（本願寺の蓮如が北陸・近畿に広める）・日蓮宗・禅宗が民衆や武士に広まった。一向一揆（加賀は 1488–1580 年に門徒が支配）や法華一揆が起こり、織田信長は延暦寺を焼き（1571）、石山本願寺と戦った（1570–80）。
+      source: "https://ja.wikipedia.org/wiki/一向一揆"
+    - from: 1549
+      main: shinbutsu
+      note: ザビエルが鹿児島に来てキリスト教を伝えた（1549）。キリシタンは九州・畿内に広がり、17 世紀初めに約 30 万人（人口の約 2％）。江戸幕府は禁教令（1612・1614）を出し、寺請制度で住民をどこかの寺の檀家にした。
+      source: "https://ja.wikipedia.org/wiki/日本のキリスト教史"
     - from: 1648
       main: shinbutsu
       note: 神仏習合。江戸幕府はキリスト教を禁じ（島原・天草一揆の後、1639 年にポルトガル船の来航を禁止）、寺請制度ですべての人を寺の檀家にした。長崎の浦上・五島などに潜伏キリシタンが残った。
@@ -628,11 +812,31 @@
       main: shinbutsu
       note: GHQ の神道指令（1945）で国家神道が廃止され、日本国憲法で政教分離が定められた。戦後は創価学会などの新宗教が広がる。信仰を持つと答える人は少ないが、初詣・墓参り・葬式などの行事は広く続く（世俗化は secular.yaml）。
       source: "https://ja.wikipedia.org/wiki/神道指令"
+- id: rel_nagasaki_pre
+  name: 長崎・大村・有馬（キリシタンの地、1453–1647）
+  select:
+    pieces: [JPN-Nagasaki_Prefecture]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: shinbutsu
+    - from: 1570
+      main: shinbutsu
+      minor: catholic
+      note: ザビエルの来日（1549）の後、大村純忠（1563 年に洗礼）・有馬晴信らのキリシタン大名の領地で住民の多くがキリスト教徒になった。長崎は 1571 年に開港し、1580 年にイエズス会に寄進された。天正遣欧使節（1582–90）。日本全体のキリシタンは 17 世紀初めに 30 万人ほど（人口の約 2％）。
+      source: "https://ja.wikipedia.org/wiki/キリシタン"
+    - from: 1638
+      main: shinbutsu
+      note: 豊臣秀吉のバテレン追放令（1587）、江戸幕府の禁教令（1612・1614）、二十六聖人の殉教（1597）・元和の大殉教（1622）を経て、島原・天草一揆（1637–38）の後は寺請制度と絵踏で信者は表から消え、一部は潜伏キリシタンとして信仰を守った。
+      source: "https://ja.wikipedia.org/wiki/島原の乱"
 - id: rel_hokkaido
   name: 蝦夷地・北海道
   select:
     pieces: [JPN-Hokkaido]
   timeline:
+    - from: 1453
+      main: other
+      minor: shinbutsu
     - from: 1648
       main: other
       minor: shinbutsu
@@ -651,6 +855,8 @@
   select:
     pieces: [JPN-Okinawa_Prefecture]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
       note: 琉球の信仰は、御嶽（うたき）の祭りと、聞得大君を頂点とするノロ（神女）の祭祀、祖先崇拝が中心。仏教は王府・士族の間に広まった程度。中国風の清明祭や風水も取り入れた。
@@ -665,6 +871,9 @@
   select:
     pieces: [JPN-Amami_Islands]
   timeline:
+    - from: 1453
+      main: other
+      minor: shinbutsu
     - from: 1648
       main: other
       minor: shinbutsu
@@ -682,6 +891,20 @@
   select:
     iso: [KOR, PRK]
   timeline:
+    - from: 1453
+      main: mahayana
+      minor: confucian
+      note: 朝鮮王朝は朱子学を国の教えとし、太宗・世宗が仏教の宗派と寺院を整理した。しかし民衆や王室の女性の間では仏教と巫俗（シャーマニズム）がなお中心だった。
+      source: "https://ja.wikipedia.org/wiki/崇儒排仏"
+    - from: 1550
+      main: confucian
+      minor: mahayana
+      note: 士林派の両班が郷約・書院を通じて朱子学の礼（祖先祭祀・家礼）を地方に広め、李滉（退渓）・李珥（栗谷）が朝鮮の朱子学を大成した。燕山君（1504）・中宗のときに僧の試験が止められ、仏教は山の寺に退いた。
+      source: "https://ja.wikipedia.org/wiki/李滉"
+    - from: 1610
+      main: confucian
+      note: 壬辰・丁酉倭乱（1592–98）では僧兵（西山大師休静・四溟堂惟政）も戦ったが、戦後は朱子学の礼が民衆にも広まった。
+      source: "https://ja.wikipedia.org/wiki/文禄・慶長の役"
     - from: 1648
       main: confucian
       note: 朝鮮王朝は朱子学（儒教）を国教とし、仏教を抑えた（崇儒抑仏）。両班は祖先祭祀（茶礼・祭祀）を重んじ、民衆の間では巫俗（ムーダン、シャーマニズム）と仏教も信じられた。
@@ -746,6 +969,20 @@
   select:
     iso: [MNG]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: 元の宮廷はチベット仏教（サキャ派）を保護したが、北元の時代のモンゴル高原では仏教はおとろえ、天（テンゲル）やオンゴド（祖霊）をまつるシャーマニズムが中心になった。
+      source: "https://ja.wikipedia.org/wiki/モンゴルの宗教"
+    - from: 1586
+      main: tibetan_buddhism
+      minor: other
+      note: アルタン＝ハンがソナム・ギャツォ（ダライ・ラマ3世）と青海で会見し（1578）、モンゴルにチベット仏教（ゲルク派）が再び広まった。ハルハのアバタイ＝ハンはエルデニ・ゾー寺を建てた（1586）。ダライ・ラマ4世（1589–1617）はアルタン＝ハンの曾孫。
+      source: "https://ja.wikipedia.org/wiki/アルタン・ハーン"
+    - from: 1630
+      main: tibetan_buddhism
+      note: 1639 年、ハルハの諸侯はザナバザル（ジェブツンダンパ1世）を宗教の長に推した。
+      source: "https://ja.wikipedia.org/wiki/ザナバザル"
     - from: 1648
       main: tibetan_buddhism
       note: ハルハ・モンゴルの活仏ジェブツンダンバ・ホトクト1世（ザナバザル）が仏教を広めた。シャーマニズムも残る。
@@ -757,11 +994,30 @@
     - from: 1990
       main: tibetan_buddhism
       note: 民主化の後、ガンダン寺などで仏教の復興が進む。
+- id: rel_oirat_west_pre
+  name: モンゴル西部（ホブド・オブス、1453–1647）
+  select:
+    pieces: [MNG-Khovd, MNG-Uvs]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラトの遊牧地（シャーマニズムが中心）。
+    - from: 1616
+      main: tibetan_buddhism
+      note: オイラトの諸侯がそろってゲルク派に帰依した（1616 年ごろ。ジュンガリアと同じ年）。
 - id: rel_bayan_olgii
   name: バヤン・ウルギー（モンゴル西端）
   select:
     pieces: [MNG-Bayan_Olgii]
   timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラト・ウリャンハイの遊牧地（シャーマニズムが中心）。
+    - from: 1616
+      main: tibetan_buddhism
     - from: 1648
       main: tibetan_buddhism
       note: オイラト・ウリャンハイの牧地
@@ -1105,6 +1361,8 @@
   select:
     pieces: [127-Senkakus, 123-Liancourt_Rocks, 125-Paracel_Is, 128-Spratly_Is]
   timeline:
+    - from: 1453
+      main: other
     - from: 1648
       main: other
       note: 定住する住民のいない島々（漁民の季節の滞在や、20世紀の守備隊・気象観測所の人員だけ）。尖閣諸島には1900–40年ごろかつお節工場があった。

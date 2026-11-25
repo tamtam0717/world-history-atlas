@@ -11,6 +11,10 @@
   name: バクティ運動（ヒンドゥー教の信愛の運動）
   kind: religion
   curve:
+    - [1453, 0.6]
+    - [1500, 0.8]
+    - [1550, 0.9]
+    - [1600, 0.8]
     - [1648, 0.6]
     - [1700, 0.5]
     - [1750, 0.45]
@@ -23,15 +27,15 @@
     - where:
         regions: &maharashtra [bombay_island, salsette, bassein, desh_west, satara, konkan_south, kolhapur_land, sangli, solapur, marathwada, osmanabad, khandesh, ahmadnagar, berar, nagpur_land, chanda]
       center: true
-      curve: [[1648, 1.0], [1700, 0.7], [1800, 0.5], [1900, 0.4], [2025, 0.3]]
+      curve: [[1453, 0.6], [1550, 0.8], [1600, 0.9], [1648, 1.0], [1700, 0.7], [1800, 0.5], [1900, 0.4], [2025, 0.3]]
     - where:
         regions: &hindustan [delhi, up_saharanpur, up_meerut, up_agra, up_lower_doab, up_rohilkhand, up_rampur, up_awadh, up_gorakhpur, up_allahabad, up_benares, up_bundelkhand, up_jhansi, bihar, purnea]
-      curve: [[1648, 0.6], [1700, 0.5], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
+      curve: [[1453, 0.6], [1500, 0.9], [1580, 1.0], [1620, 0.8], [1648, 0.6], [1700, 0.5], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
     - where:
         regions: &bengal [wb_central, wb_north, kolkata, twenty_four_parganas, burdwan_midnapore, east_bengal]
-      curve: [[1648, 0.6], [1700, 0.5], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
+      curve: [[1453, 0.3], [1500, 0.8], [1530, 1.0], [1600, 0.7], [1648, 0.6], [1700, 0.5], [1800, 0.4], [1900, 0.3], [2025, 0.2]]
     - where: {regions: [upper_assam, tinsukia, middle_assam, darrang, kamrup, manipur_valley]}
-      curve: [[1648, 0.6], [1720, 0.8], [1800, 0.5], [1900, 0.3], [2025, 0.2]]
+      curve: [[1470, 0.2], [1500, 0.6], [1568, 0.7], [1648, 0.6], [1720, 0.8], [1800, 0.5], [1900, 0.3], [2025, 0.2]]
   people: [トゥカーラーム, トゥルシーダース, チャイタニヤ, カビール, ミーラーバーイー, シャンカラデーヴァ]
   works: [『ラームチャリトマーナス』（トゥルシーダース）, 『ギーター・ゴーヴィンダ』]
   events: []
@@ -42,6 +46,10 @@
   name: シク教の展開
   kind: religion
   curve:
+    - [1500, 0.05]
+    - [1520, 0.2]
+    - [1581, 0.3]
+    - [1606, 0.4]
     - [1648, 0.4]
     - [1675, 0.5]
     - [1699, 0.8]
@@ -59,7 +67,7 @@
     - where:
         regions: &punjab [pk_lahore, pk_bar, pk_potohar, pk_attock, pk_multan, pk_thal, pk_dgkhan, pb_majha, pb_doaba, pb_kapurthala, pb_cis_sutlej, pb_phulkian]
       center: true
-      curve: [[1648, 0.4], [1699, 0.8], [1765, 0.9], [1799, 1.0], [1839, 1.0], [1849, 0.6], [1920, 0.8], [1946, 0.8], [1947, 0]]
+      curve: [[1500, 0.05], [1520, 0.2], [1581, 0.3], [1606, 0.4], [1648, 0.4], [1699, 0.8], [1765, 0.9], [1799, 1.0], [1839, 1.0], [1849, 0.6], [1920, 0.8], [1946, 0.8], [1947, 0]]
     - where: {regions: [pb_majha, pb_doaba, pb_kapurthala, pb_cis_sutlej, pb_phulkian]}
       center: true
       curve: [[1947, 0.8], [1966, 0.9], [1984, 1.0], [1995, 0.7], [2025, 0.6]]
@@ -550,3 +558,100 @@
   events: [東南アジア諸国連合（ASEAN）の結成, ベトナムのASEAN加盟とアメリカとの国交, 東ティモールのASEAN加盟]
   text: 1967 年にインドネシア・マレーシア・フィリピン・シンガポール・タイの5か国がバンコク宣言で結成した地域協力の機構。当初はベトナム戦争下の反共産主義の性格が強かったが、冷戦の終わりの後、ブルネイ（1984）・ベトナム（1995）・ラオス・ミャンマー（1997）・カンボジア（1999）が加わって10か国となり、ASEAN 自由貿易地域（AFTA、1992–）、ASEAN 共同体（2015）へ進んだ。内政不干渉の原則と全会一致の「ASEAN 方式」をとる。
   source: "https://ja.wikipedia.org/wiki/東南アジア諸国連合"
+
+# ---- 1453–1647（2026-11-25、Z8 担当）----
+- id: mughal_culture
+  name: インド＝イスラーム文化（ムガル絵画・タージ＝マハル）
+  kind: art
+  curve:
+    - [1453, 0.2]
+    - [1526, 0.3]
+    - [1560, 0.6]
+    - [1580, 0.9]
+    - [1632, 1.0]
+    - [1658, 0.9]
+    - [1707, 0.5]
+    - [1750, 0.3]
+    - [1800, 0.1]
+    - [1857, 0.0]
+  spread:
+    - where: {polities: [mughal]}
+      center: true
+      curve: [[1526, 0.3], [1560, 0.6], [1580, 0.9], [1632, 1.0], [1658, 0.9], [1707, 0.5], [1750, 0.3], [1800, 0.1], [1857, 0.0]]
+    - where: {polities: [bijapur, golconda]}
+      curve: [[1530, 0.4], [1591, 0.7], [1656, 0.8], [1687, 0.0]]
+  people: [アクバル, アブル・ファズル, ミール・サイイド・アリー, アブドゥッサマド, バサーワン, シャー・ジャハーン, ダーラー・シコー]
+  works: [タージ＝マハル（1632–53）, フマーユーン廟, ファテープル・シークリー, 『アクバル・ナーマ』, 『バーブル・ナーマ』, ゴール・グンバズ（ビジャープル）]
+  text: ムガル帝国の宮廷で、ペルシアの文化とインドの伝統が融合した。フマーユーンがイランから連れてきたミール・サイイド・アリー・アブドゥッサマド（ビフザードに代表されるイランの細密画の流れをくむ画家）のもとで、インドの画家たちが工房で写本の挿絵を描き（ムガル絵画）、ペルシア語が公用語となり、北インドの言葉と混ざってウルドゥー語が生まれた。シャー・ジャハーンが亡き妃のために造ったタージ＝マハルは、インド＝イスラーム建築の代表である。デカンのビジャープル・ゴールコンダでも独自の建築・絵画が栄えた。
+  source: "https://ja.wikipedia.org/wiki/インド・イスラーム文化"
+
+- id: sea_islamization
+  name: 東南アジアのイスラーム化
+  kind: religion
+  curve:
+    - [1453, 0.5]
+    - [1500, 0.8]
+    - [1550, 0.9]
+    - [1600, 1.0]
+    - [1640, 0.8]
+    - [1700, 0.5]
+    - [1750, 0.3]
+    - [1800, 0.0]
+  spread:
+    - where: {polities: [malacca]}
+      center: true
+      curve: [[1453, 0.9], [1500, 1.0], [1510, 1.0], [1511, 0.0]]
+    - where: {polities: [aceh]}
+      center: true
+      curve: [[1496, 0.5], [1550, 0.8], [1607, 1.0], [1640, 0.9], [1700, 0.5], [1750, 0.3], [1800, 0.0]]
+    - where: {polities: [demak, pajang]}
+      center: true
+      curve: [[1475, 0.7], [1527, 1.0], [1568, 0.8], [1587, 0.0]]
+    - where: {polities: [mataram, banten, cirebon]}
+      curve: [[1527, 0.6], [1587, 0.7], [1630, 0.9], [1680, 0.5], [1750, 0.3], [1800, 0.0]]
+    - where: {polities: [ternate, tidore, bacan]}
+      curve: [[1460, 0.3], [1486, 0.8], [1575, 1.0], [1640, 0.7], [1700, 0.4], [1800, 0.0]]
+    - where: {polities: [gowa, bone, wajo, buton]}
+      curve: [[1540, 0.2], [1605, 1.0], [1640, 0.8], [1700, 0.4], [1800, 0.0]]
+    - where: {polities: [brunei, sulu, maguindanao, johor, pahang, patani, banjar, palembang, jambi]}
+      curve: [[1453, 0.4], [1500, 0.7], [1600, 0.8], [1650, 0.6], [1700, 0.4], [1800, 0.0]]
+  people: [ワリ・ソンゴ（九聖人）, スナン・カリジャガ, スナン・グヌン・ジャティ, イスカンダル・ムダ, ハムザ・ファンスリ, スルタン・アグン]
+  works: [デマクの大モスク, 『スジャラ・ムラユ（マレー年代記）』]
+  text: 13 世紀末のサムドラ・パサイに始まり、15 世紀にマラッカ王国がイスラームを国の宗教として交易の中心になると、ムスリム商人とスーフィー（神秘主義者）の布教で、海峡の港市からジャワ北岸（デマク）・マルク（テルナテ）・ボルネオ・ミンダナオへ広がった。ポルトガルのマラッカ占領（1511）の後は、アチェ・バンテン・マタラム・ゴワ（マカッサル）などのイスラームの王国が交易と布教を担った。在来の信仰やヒンドゥー教の伝統と混ざり合った所も多い。
+  source: "https://ja.wikipedia.org/wiki/東南アジアのイスラーム"
+
+- id: age_of_commerce_asia
+  name: アジアの海の交易の時代（ポルトガルの「海の帝国」・朱印船）
+  kind: system
+  curve:
+    - [1453, 0.5]
+    - [1500, 0.7]
+    - [1511, 0.9]
+    - [1570, 1.0]
+    - [1610, 1.0]
+    - [1640, 0.7]
+    - [1680, 0.3]
+    - [1700, 0.0]
+  spread:
+    - where: {polities: [malacca]}
+      center: true
+      curve: [[1453, 0.9], [1500, 1.0], [1511, 0.0]]
+    - where: {adm1: ["IND/Goa", "MYS/Malacca", "CHN/Macau Special Administrative Region"]}
+      center: true
+      curve: [[1510, 0.6], [1530, 1.0], [1580, 1.0], [1620, 0.8], [1641, 0.5], [1680, 0.2], [1700, 0.0]]
+    - where: {polities: [ryukyu]}
+      curve: [[1453, 0.9], [1500, 0.9], [1550, 0.6], [1570, 0.3], [1609, 0.2], [1640, 0.0]]
+    - where: {polities: [siam, aceh, banten, gowa, ternate, brunei, hanthawaddy, arakan, johor]}
+      curve: [[1453, 0.4], [1500, 0.6], [1550, 0.8], [1600, 1.0], [1640, 0.8], [1680, 0.4], [1700, 0.0]]
+    - where: {iso: [PHL]}
+      curve: [[1571, 0.6], [1600, 1.0], [1640, 0.8], [1700, 0.4]]
+    - where: {iso: [JPN]}
+      curve: [[1543, 0.3], [1570, 0.6], [1604, 0.9], [1635, 0.4], [1641, 0.1], [1660, 0.0]]
+    - where:
+        polities: [ming]
+        exclude_regions: [chamdo, golog_yushu, kokonor, hami, juu_uda, hinggan_jirim, pre1648_primorye, mmr_kokang, cn15_heilongjiang_daqing, cn15_heilongjiang_hegang, cn15_heilongjiang_jixi, cn15_jilin_baicheng, cn15_jilin_baishan, cn15_jilin_changchun, cn15_jilin_liaoyuan, cn15_jilin_siping, cn15_jilin_yanbian, cn15_liaoning_benxi, cn15_liaoning_chaoyang, cn15_gansu_gannan, cn15_gansu_jiuquan, cn15_sichuan_aba, cn15_sichuan_ganzi, cn15_sichuan_liangshan, cn15_yunnan_dehong, cn15_yunnan_honghe, cn15_guizhou_bijie, cn15_guizhou_zunyi, cn15_hubei_enshi, cn15_hunan_xiangxi, cn15_guangxi_baise, cn15_taiwan_penghu]   # 明の羈縻・名目・間接統治の地（movements/east_asia.yaml の &ming_jimi と同じ一覧）
+      curve: [[1453, 0.1], [1550, 0.3], [1567, 0.5], [1600, 0.6], [1644, 0.4]]
+  people: [トメ・ピレス, アルブケルケ, レガスピ, 山田長政, 角倉了以, 鄭芝竜, 王直]
+  works: [『東方諸国記』, ガレオン貿易（マニラ–アカプルコ）]
+  text: 15〜17 世紀の東南アジア・東アジアの海は、香辛料・胡椒・絹・陶磁器・銀を運ぶ交易で栄えた。マラッカ・琉球・アユタヤなどの港市が中継し、ポルトガルはゴア（1510）・マラッカ（1511）・マカオ（1557）を結ぶ拠点の網（「海の帝国」）を築いた。スペインはマニラ（1571）とアメリカ大陸の銀を結び、明は海禁をゆるめ（1567）、日本の銀も流れ込んだ。倭寇・南蛮貿易・朱印船貿易と日本町もこの時代である。17 世紀にはオランダがバタヴィア（1619）を拠点に香辛料を独占し、日本の「鎖国」（1639）・明清交代で時代は終わりに向かった。
+  source: "https://ja.wikipedia.org/wiki/大航海時代"

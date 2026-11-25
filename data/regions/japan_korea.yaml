@@ -10,6 +10,21 @@
     iso_all: [JPN]
     exclude: [JPN-Hokkaido, JPN-Okinawa_Prefecture]
   timeline:
+    - from: 1453
+      owner: japan
+      note: 室町幕府（足利将軍家）のもと、守護大名が各国を治めた。将軍は8代足利義政。関東では鎌倉公方（古河公方）と関東管領上杉氏が争う享徳の乱（1454–82）が始まった
+      source: "https://ja.wikipedia.org/wiki/室町幕府"
+    - from: 1467
+      owner: japan
+      certainty: uncertain
+      cause: 応仁の乱（1467–77）で京都が戦場となり、室町幕府の権威が失われる
+      note: 戦国時代。各地で戦国大名が自立して領国を治め（分国法）、将軍の支配は畿内のごく一部にしか及ばなくなった。国はひとつの「日本」として描き、統一の崩れた時代を斜線で示す
+      source: "https://ja.wikipedia.org/wiki/戦国時代_(日本)"
+    - from: 1590
+      owner: japan
+      cause: 豊臣秀吉が小田原の北条氏を滅ぼし、奥州仕置で東北の大名も従えて全国を統一する
+      note: 太閤検地・刀狩（1588）で兵農分離を進めた。1600年の関ヶ原の戦いの後、1603年に徳川家康が征夷大将軍となり江戸幕府を開いた。1615年の大坂夏の陣で豊臣氏は滅んだ
+      source: "https://ja.wikipedia.org/wiki/豊臣政権"
     - from: 1648
       owner: japan
       note: 江戸幕府の直轄地（天領）と約260の藩からなる幕藩体制。対馬藩（長崎県）は朝鮮との外交・貿易を、薩摩藩（鹿児島県）は琉球を、松前藩は蝦夷地との交易を担った
@@ -35,6 +50,18 @@
   select:
     pieces: [JPN-Hokkaido]
   timeline:
+    - from: 1453
+      owner: null
+      certainty: uncertain
+      note: アイヌの人々の土地（蝦夷地）。和人は渡島半島の南端の館（道南十二館）にとどまった
+      source: "https://ja.wikipedia.org/wiki/蝦夷地"
+    - from: 1593
+      owner: japan
+      certainty: nominal
+      label: 蝦夷地
+      cause: 豊臣秀吉が蠣崎慶広に朱印状を与え、蝦夷地に出入りする船から税を取る権利を認める
+      note: 1599年に蠣崎氏は松前氏と改め、1604年に徳川家康の黒印状でアイヌとの交易の独占を認められた（松前藩）。内陸の大部分はアイヌの人々の土地で、名目的な支配（白い斜線）として描く
+      source: "https://ja.wikipedia.org/wiki/松前藩"
     - from: 1648
       owner: japan
       certainty: nominal
@@ -90,6 +117,22 @@
   select:
     pieces: [JPN-Okinawa_Prefecture]
   timeline:
+    - from: 1453
+      owner: ryukyu
+      overlord: ming
+      note: 1429年に中山の尚巴志が北山・中山・南山の三山を統一して琉球王国をつくった（第一尚氏）。明の冊封を受けて朝貢し、首里を都に、日本・中国・東南アジアを結ぶ中継貿易で栄えた。宮古・八重山（先島諸島）はピースが分けられないので沖縄本島と同じに塗る（八重山は1500年のオヤケアカハチの乱の鎮圧で王府の支配が確立した）
+      source: "https://ja.wikipedia.org/wiki/琉球王国"
+    - from: 1609
+      owner: ryukyu
+      overlord: ming
+      cause: 薩摩藩（島津氏）が琉球に侵攻して首里城を落とし、国王尚寧を鹿児島・江戸に連れて行く
+      note: 王国は存続したが薩摩藩の支配を受け、奄美群島を割き取られた（1611）。明への朝貢は続けられ、薩摩はその利益を得た（日中両属）。宗主権の帯は明だけで示す
+      source: "https://ja.wikipedia.org/wiki/琉球侵攻"
+    - from: 1644
+      owner: ryukyu
+      cause: 明が滅び（李自成の北京占領・清の入関）、明の冊封関係が途絶える
+      note: 琉球は南明の諸政権にも使者を送ったが、清との冊封関係は1663年まで結ばれなかった
+      source: "https://ja.wikipedia.org/wiki/琉球王国"
     - from: 1648
       owner: ryukyu
       note: 1609年から薩摩藩の支配も受ける（両属）。明清交代期で、中国との冊封関係は清との間でまだ結ばれていない（1654年に明の印を返し、1663年に清の冊封使が来る）
@@ -144,6 +187,30 @@
   select:
     pieces: [JPN-Hokkaido_Wajinchi]
   timeline:
+    - from: 1453
+      owner: japan
+      certainty: uncertain
+      label: 道南の館（安東氏）
+      note: 渡島半島の南端に和人の豪族が館（道南十二館）を築き、津軽から移った安東（安藤）氏が代官を置いて治めた。1457年のコシャマインの戦いで館の多くが落とされ、以後もアイヌとの戦いが繰り返された。ピースは渡島・檜山の南部の市町村で近似した
+      source: "https://ja.wikipedia.org/wiki/道南十二館"
+    - from: 1551
+      owner: japan
+      certainty: uncertain
+      label: 和人地（蠣崎氏）
+      cause: 蠣崎季広がアイヌの首長と和睦し（夷狄の商舶往還の法度）、和人地の範囲が定まる
+      note: 年は1550年とも。蠣崎氏はなお檜山の安東氏の代官だった
+      source: "https://ja.wikipedia.org/wiki/蠣崎季広"
+    - from: 1590
+      owner: japan
+      label: 和人地（蠣崎氏）
+      cause: 豊臣秀吉の全国統一。蠣崎慶広は秀吉に直接仕え、安東氏から独立する（1593年の朱印状）
+      note: 1599年に松前氏と改めた
+      source: "https://ja.wikipedia.org/wiki/蠣崎慶広"
+    - from: 1604
+      owner: japan
+      label: 和人地（松前藩）
+      cause: 徳川家康の黒印状で、松前氏がアイヌとの交易の独占を認められる
+      source: "https://ja.wikipedia.org/wiki/松前藩"
     - from: 1648
       owner: japan
       label: 和人地（松前藩）
@@ -210,6 +277,29 @@
   select:
     pieces: [JPN-Amami_Islands]
   timeline:
+    - from: 1453
+      owner: ryukyu
+      overlord: ming
+      certainty: uncertain
+      note: 琉球王国の勢力が奄美大島に及びはじめていた（1447年ごろから朝貢）。島々の按司（豪族）の抵抗が続いた
+      source: "https://ja.wikipedia.org/wiki/奄美群島"
+    - from: 1466
+      owner: ryukyu
+      overlord: ming
+      cause: 琉球の尚徳王が喜界島を征服する
+      note: 奄美大島ではその後も反乱があり、1537年・1571年にも琉球軍が送られた
+      source: "https://ja.wikipedia.org/wiki/尚徳王"
+    - from: 1609
+      owner: japan
+      certainty: occupied
+      label: 奄美（薩摩軍の占領）
+      cause: 薩摩藩の琉球侵攻で、奄美の島々が占領される
+      source: "https://ja.wikipedia.org/wiki/琉球侵攻"
+    - from: 1611
+      owner: japan
+      label: 奄美（薩摩藩の直轄）
+      cause: 薩摩藩が奄美群島を琉球から割き取り、直轄地とする
+      source: "https://ja.wikipedia.org/wiki/奄美群島"
     - from: 1648
       owner: japan
       label: 奄美（薩摩藩の直轄）
@@ -250,7 +340,7 @@
   select:
     pieces: [JPN-Ogasawara_Islands]
   timeline:
-    - from: 1648
+    - from: 1453
       owner: null
       note: 無人島（「ぶにんじま」）。1675年に江戸幕府の調査船が渡ったが、住む人はいなかった。1830年にハワイから欧米人とハワイ人が移り住み、1827年にイギリス、1853年にアメリカのペリーが領有を唱えた
       source: "https://ja.wikipedia.org/wiki/小笠原諸島"
@@ -285,7 +375,7 @@
   select:
     pieces: [RUS-Sakhalin_Oblast]
   timeline:
-    - from: 1648
+    - from: 1453
       owner: null
       certainty: uncertain
       note: ニヴフ人・ウイルタ人・アイヌ人などの土地
@@ -336,7 +426,7 @@
   select:
     pieces: [RUS-Sakhalin_Oblast_South]
   timeline:
-    - from: 1648
+    - from: 1453
       owner: null
       certainty: uncertain
       note: アイヌ人・ニヴフ人・ウイルタ人などの土地
@@ -393,7 +483,7 @@
   select:
     pieces: [RUS-Sakhalin_Oblast_North_Kurils]
   timeline:
-    - from: 1648
+    - from: 1453
       owner: null
       certainty: uncertain
       note: 千島アイヌの土地
@@ -434,7 +524,7 @@
   select:
     pieces: [RUS-Sakhalin_Oblast_South_Kurils]
   timeline:
-    - from: 1648
+    - from: 1453
       owner: null
       certainty: uncertain
       note: アイヌの人々の土地
@@ -484,6 +574,17 @@
   select:
     iso_all: [KOR, PRK]
   timeline:
+    - from: 1453
+      owner: joseon
+      overlord: ming
+      note: 1392年に李成桂が建てた朝鮮王朝。明の冊封を受けて朝貢した。首都は漢城（ソウル）。15世紀前半の世宗の時代に北方の女真を退けて鴨緑江・豆満江までを領土とし（四郡六鎮。ただし鴨緑江上流の四郡は女真の侵入で守りきれず、1455–1459年に廃された〈廃四郡〉。地図では朝鮮のままにしている）、訓民正音（ハングル）を定めた
+      source: "https://ja.wikipedia.org/wiki/李氏朝鮮"
+    - from: 1637
+      owner: joseon
+      overlord: qing
+      cause: 丙子胡乱（1636年12月–1637年2月）で清のホンタイジに降伏し（三田渡の盟約）、明との関係を断って清の冊封を受ける
+      note: 清の侵入は陰暦の崇徳元年12月で、西暦では1637年1月にあたるので、1637年から清の帯とする。1627年の丁卯胡乱では後金と「兄弟の盟」を結んだが、明の冊封は続いた
+      source: "https://ja.wikipedia.org/wiki/丙子の乱"
     - from: 1648
       owner: joseon
       overlord: qing
@@ -505,6 +606,61 @@
       cause: 韓国併合条約（8月）。朝鮮総督府が置かれる
       note: 初代総督は寺内正毅。1910年代の武断政治、三・一独立運動（1919）後の「文化政治」、1930年代後半からの皇民化政策（創氏改名・神社参拝の強制など）と戦時の動員が行われた
       source: "https://ja.wikipedia.org/wiki/韓国併合"
+
+# ---- 壬辰・丁酉倭乱（文禄・慶長の役、1592–98）。1648 年より前だけの地域（until） ----
+# 年末の状態：1592年末は日本軍が漢城・平壌・咸鏡道など半島の大部分を占領（全羅道・平安道北部は朝鮮側）。
+# 1593年に明軍が平壌を奪回し、日本軍は慶尚道南岸の倭城（釜山・蔚山など）に退く。1597年の再侵攻（丁酉倭乱）でも年末には南岸の倭城に戻った。
+# 戦後の項目（朝鮮に戻る年）は、国境の変化の理由を出すために書き、その年で地域を終える（until）。
+# 慶尚南道（KOR-South_Gyeongsang）は南岸の倭城（熊川・巨済・泗川・固城など）が日本軍の手にあったが、面積の大半は朝鮮側なので朝鮮として描く。
+
+- id: imjin_1592
+  name: 朝鮮の中部・北部（壬辰倭乱で日本軍が占領）
+  until: 1593
+  select:
+    pieces: [KOR-Seoul, KOR-Incheon, KOR-Gyeonggi, KOR-Gyeonggi_North_of_38th_parallel, KOR-Gangwon, KOR-Gangwon_North_of_38th_parallel,
+      KOR-North_Chungcheong, KOR-Daejeon, KOR-Sejong, KOR-North_Gyeongsang, KOR-Daegu, KOR-South_Gyeongsang,
+      PRK-Kangwon, PRK-North_Hwanghae, PRK-North_Hwanghae_South_of_38th_parallel, PRK-South_Hwanghae, PRK-South_Hwanghae_South_of_38th_parallel,
+      PRK-Pyongyang, PRK-Nampo, PRK-South_Pyongan, PRK-South_Hamgyong]
+  timeline:
+    - from: 1453
+      owner: joseon
+      overlord: ming
+      note: 戦乱の前の状態（朝鮮半島全体の korea と同じ）。国境の変化を右パネルに出すために書く
+    - from: 1592
+      owner: japan
+      certainty: occupied
+      label: 日本軍の占領（壬辰倭乱）
+      cause: 豊臣秀吉の命で日本軍が釜山に上陸し（4月、西暦5月）、漢城（5月）・平壌（6月）を落とし、加藤清正は咸鏡道まで進む
+      note: 国王宣祖は鴨緑江の義州まで逃れた。全羅道は李舜臣の水軍と義兵に守られて占領されなかった。占領地でも各地の義兵が抵抗した。咸鏡道の北部（咸鏡北道のピース、鏡城・吉州より北）は加藤清正の軍が会寧まで進んだが、1592年の秋から冬に鄭文孚らの義兵が取り戻したので、年末の状態として朝鮮のままにしている。忠清南道は錦山などで戦いがあったが朝鮮側として描いた
+      source: "https://ja.wikipedia.org/wiki/文禄・慶長の役"
+    - from: 1593
+      owner: joseon
+      overlord: ming
+      cause: 明の援軍（李如松）が平壌を奪い返し（1月）、日本軍は漢城を捨てて慶尚道の南岸に退く（4–5月）。日明の講和交渉が始まる
+      source: "https://ja.wikipedia.org/wiki/平壌包囲戦_(1593年)"
+
+- id: imjin_wajo
+  name: 慶尚道南岸の倭城（釜山・蔚山）
+  until: 1598
+  select:
+    pieces: [KOR-Busan, KOR-Ulsan]
+  timeline:
+    - from: 1453
+      owner: joseon
+      overlord: ming
+      note: 戦乱の前の状態（朝鮮半島全体の korea と同じ）。国境の変化を右パネルに出すために書く
+    - from: 1592
+      owner: japan
+      certainty: occupied
+      label: 日本軍の占領（壬辰・丁酉倭乱）
+      cause: 日本軍が釜山に上陸する（4月13日、西暦5月23日）
+      note: 1593年からは釜山・西生浦（蔚山）・機張・熊川・巨済などの南岸に倭城を築いて講和交渉の間も居座った。1597年の再侵攻（丁酉倭乱）の後、年末には蔚山城を築き、翌年初めに明・朝鮮軍に包囲された（蔚山城の戦い）。1597年末の倭城は釜山・蔚山だけでなく、西の泗川（慶尚南道）・順天（全羅南道）まで南岸に連なっていたが、ピースが粗いので地図では釜山・蔚山だけを塗る
+      source: "https://ja.wikipedia.org/wiki/倭城"
+    - from: 1598
+      owner: joseon
+      overlord: ming
+      cause: 豊臣秀吉が死に（8月）、日本軍が朝鮮から撤退する（11–12月。露梁海戦で李舜臣が戦死）
+      source: "https://ja.wikipedia.org/wiki/露梁海戦"
 
 - id: korea_north
   name: 朝鮮北部（北緯38度線以北）
@@ -631,7 +787,7 @@
   select:
     pieces: [127-Senkakus]
   timeline:
-    - from: 1648
+    - from: 1453
       owner: null
       note: 無人島。琉球と中国の間の航路の目印として知られていた
     - from: 1895
@@ -660,7 +816,7 @@
   select:
     pieces: [123-Liancourt_Rocks]
   timeline:
-    - from: 1648
+    - from: 1453
       owner: null
       note: 無人の岩礁。日本では松島（のち竹島）、朝鮮では于山島などと呼ばれた（比定には説が分かれる）
     - from: 1905

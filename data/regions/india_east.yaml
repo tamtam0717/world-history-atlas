@@ -881,3 +881,455 @@
   - *id012
   - *id013
   - *id014
+
+# ================================================================ 1453–1647（担当Z4・生成：scratchpad/Z4/gen_z4.py。until: 1647。1648 年以降は上の地域が効く）
+
+- id: pre_bihar_south
+  name: "ビハール南部・西部（パトナ・ガヤー・ローフタース）"
+  until: 1647
+  select:
+    pieces: [IND-Patna, IND-Nalanda, IND-Gaya, IND-Jehanabad, IND-Arwal, IND-Aurangabad_2, IND-Nawada, IND-Rohtas, IND-Kaimur_Bhabua, IND-Bhojpur, IND-Buxar, IND-Saran, IND-Siwan, IND-Gopalganj, IND-Vaishali, IND-Sheikhpura]
+  timeline:
+    - {from: 1453, owner: "jaunpur", certainty: "uncertain", note: "ジャウンプル・スルタン朝とベンガルの間の地。在地の首長（ウッジャイニー家など）が強かった"}
+    - {from: 1495, owner: "delhi_sultanate", cause: "シカンダル・ローディーがフサイン・シャー・シャルキーを破り（ベナレス近く）、ビハールを取る。ベンガルと境を定める（1495）", source: "https://en.wikipedia.org/wiki/Sikandar_Lodi"}
+    - {from: 1526, owner: "sur", cause: "ローディー朝の滅亡の後、ビハールのアフガン貴族ローハーニー家が自立（バハール・ハーンがスルターン・ムハンマドを名のる）。のちシェール・ハーンが実権を握る", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1557, owner: "bengal_sultanate", cause: "アーディル・シャー・スールがベンガルのバハードゥル・シャーに敗れて死ぬ（スーラジガルの戦い）。ビハールはベンガルの勢力下に（1565年ごろからカッラーニー朝）", source: "https://en.wikipedia.org/wiki/Karrani_dynasty"}
+    - {from: 1574, owner: "mughal", cause: "アクバルがパトナ・ハージープルを攻め落とす（8月）", source: "https://en.wikipedia.org/wiki/Daud_Khan_Karrani"}
+  note: "1526–1538年はスール朝の前身（ローハーニー家とシェール・ハーンのビハール）として、スール朝の色で描く。"
+
+- id: pre_bihar_tirhut
+  name: "ティルフト・チャンパーラン（ミティラー）"
+  until: 1647
+  select:
+    pieces: [IND-Darbhanga, IND-Madhubani, IND-Muzaffarpur, IND-Sitamarhi, IND-Sheohar, IND-Samastipur, IND-Purba_Champaran, IND-Pashchim_Champaran, IND-Begusarai]
+  timeline:
+    - {from: 1453, owner: "tirhut", note: "オイニワール朝のティルフト（ミティラー）王国。ジャウンプル・ベンガルに貢納した。詩人ヴィディヤーパティが活躍した"}
+    - {from: 1526, owner: "bengal_sultanate", cause: "ベンガルのナスラト・シャーがティルフトを攻め、オイニワール朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Oiniwar_dynasty"}
+    - {from: 1538, owner: "sur", cause: "シェール・ハーンがベンガルの都ガウルを取り、フサイン・シャーヒー朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1557, owner: "bengal_sultanate", cause: "アーディル・シャー・スールがベンガルのバハードゥル・シャーに敗れて死ぬ（スーラジガルの戦い）。ビハールはベンガルの勢力下に（1565年ごろからカッラーニー朝）", source: "https://en.wikipedia.org/wiki/Karrani_dynasty"}
+    - {from: 1574, owner: "mughal", cause: "アクバルがパトナ・ハージープルを攻め落とす（8月）", source: "https://en.wikipedia.org/wiki/Daud_Khan_Karrani"}
+  note: "ムガル帝国のもとでは、ダルバンガ家（ラージ・ダルバンガ、1557年ごろ〜）がティルフトの徴税を任された。ナスラト・シャーの征服の年は要確認。"
+
+- id: pre_bihar_east
+  name: "ビハール東部・プルニア（ムンゲール・バーガルプル）"
+  until: 1647
+  select:
+    pieces: [IND-Munger, IND-Lakhisarai, IND-Jamui, IND-Bhagalpur, IND-Banka, IND-Khagaria, IND-Saharsa, IND-Supaul, IND-Madhepura, IND-Araria, IND-Katihar, IND-Kishanganj, IND-Purnia]
+  timeline:
+    - {from: 1453, owner: "bengal_sultanate", note: "ベンガル・スルタン朝の西の端。ムンゲールが境の要地"}
+    - {from: 1538, owner: "sur", cause: "シェール・ハーンがベンガルの都ガウルを取り、フサイン・シャーヒー朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1554, owner: "bengal_sultanate", cause: "イスラーム・シャーの死（1553年11月）でスール朝が分裂し、ベンガルの長官ムハンマド・ハーン・スールが独立する", source: "https://en.wikipedia.org/wiki/Muhammad_Shahi_dynasty"}
+    - {from: 1576, owner: "mughal", cause: "ラージマハルの戦い（7月）でダーウード・ハーン・カッラーニーが敗死し、ベンガルがムガル帝国の手に", source: "https://en.wikipedia.org/wiki/Battle_of_Rajmahal"}
+
+- id: pre_bengal_west
+  name: "ベンガル西部・中部（ガウル・ムルシダーバード・フーグリ）"
+  until: 1647
+  select:
+    pieces: [IND-Bankura, IND-Birbhum, IND-Haora, IND-Hugli, IND-Murshidabad, IND-Nadia, IND-Dakshin_Dinajpur, IND-Maldah, IND-Uttar_Dinajpur, IND-Kolkata, IND-North_Twenty_Four_Parganas, IND-South_Twenty_Four_Parganas, IND-Deoghar, IND-Dumka, IND-Godda, IND-Jamtara, IND-Pakur, IND-Sahibganj, IND-Barddhaman, IND-Paschim_Barddhaman, BGD-Rajshahi, BGD-Nawabganj, BGD-Natore, BGD-Naogaon, BGD-Joypurhat, BGD-Bogra, BGD-Dinajpur, BGD-Thakurgaon, BGD-Panchagarh, BGD-Gaibandha, BGD-Pabna, BGD-Sirajganj, BGD-Kushtia, BGD-Meherpur, BGD-Chuadanga, BGD-Jhenaidah, BGD-Magura, BGD-Rajbari]
+  timeline:
+    - {from: 1453, owner: "bengal_sultanate", note: "ベンガル・スルタン朝の中心（都ガウル。パーンドゥアーから1450年ごろ戻った）"}
+    - {from: 1538, owner: "sur", cause: "シェール・ハーンがベンガルの都ガウルを取り、フサイン・シャーヒー朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1554, owner: "bengal_sultanate", cause: "イスラーム・シャーの死（1553年11月）でスール朝が分裂し、ベンガルの長官ムハンマド・ハーン・スールが独立する", source: "https://en.wikipedia.org/wiki/Muhammad_Shahi_dynasty"}
+    - {from: 1576, owner: "mughal", cause: "ラージマハルの戦い（7月）でダーウード・ハーン・カッラーニーが敗死し、ベンガルがムガル帝国の手に", source: "https://en.wikipedia.org/wiki/Battle_of_Rajmahal"}
+  note: "1538年にフマーユーンがガウルを数か月占領したが、短期間なので描かない。フーグリにはポルトガル人の居留地があった（1579–1632）。ビシュヌプルのマッラ家（バンクラ）は貢納する在地の王。"
+
+- id: pre_bengal_east
+  name: "ベンガル東部（ダッカ・ソナルガオン・マイメンシン・ジェッソール・バーケルガンジ）"
+  until: 1647
+  select:
+    pieces: [BGD-Bagerhat, BGD-Barguna, BGD-Barisal, BGD-Bhola, BGD-Brahamanbaria, BGD-Chandpur, BGD-Dhaka, BGD-Faridpur, BGD-Feni, BGD-Gazipur, BGD-Gopalganj, BGD-Jamalpur, BGD-Jessore, BGD-Jhalokati, BGD-Khulna, BGD-Kishoreganj, BGD-Lakshmipur, BGD-Madaripur, BGD-Manikganj, BGD-Munshiganj, BGD-Mymensingh, BGD-Narail, BGD-Narayanganj, BGD-Narsingdi, BGD-Netrakona, BGD-Noakhali, BGD-Patuakhali, BGD-Pirojpur, BGD-Satkhira, BGD-Shariatpur, BGD-Sherpur, BGD-Tangail]
+  timeline:
+    - {from: 1453, owner: "bengal_sultanate", note: "ベンガル・スルタン朝の東部（ソナルガオンなど）"}
+    - {from: 1538, owner: "sur", cause: "シェール・ハーンがベンガルの都ガウルを取り、フサイン・シャーヒー朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1554, owner: "bengal_sultanate", cause: "イスラーム・シャーの死（1553年11月）でスール朝が分裂し、ベンガルの長官ムハンマド・ハーン・スールが独立する", source: "https://en.wikipedia.org/wiki/Muhammad_Shahi_dynasty"}
+    - {from: 1576, owner: "bhati", certainty: "uncertain", cause: "ムガル帝国がベンガルを取ると、東部の低地（バーティ）ではイーサー・ハーンらブイヤン（土豪）たちが抵抗を続ける", source: "https://en.wikipedia.org/wiki/Baro-Bhuyans"}
+    - {from: 1611, owner: "mughal", cause: "ベンガル長官イスラーム・ハーンがブイヤン（ムーサー・ハーン）を降し、ダッカ（ジャハーンギールナガル）を州都とする", source: "https://en.wikipedia.org/wiki/Islam_Khan_I"}
+  note: "ブイヤンの中心はイーサー・ハーン・ムーサー・ハーン（ソナルガオン・バーティ）。ジェッソールのプラタパーディティヤ、バクラ（バリサル）・ブルア（ノアカリ）の首長も1611年ごろまでに降った。"
+
+- id: pre_sylhet
+  name: "シレット"
+  until: 1647
+  select:
+    pieces: [BGD-Habiganj, BGD-Maulvibazar, BGD-Sunamganj, BGD-Sylhet, IND-Karimganj]
+  timeline:
+    - {from: 1453, owner: "bengal_sultanate", note: "ベンガル・スルタン朝の北東の端"}
+    - {from: 1538, owner: "sur", cause: "シェール・ハーンがベンガルの都ガウルを取り、フサイン・シャーヒー朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1554, owner: "bengal_sultanate", cause: "イスラーム・シャーの死（1553年11月）でスール朝が分裂し、ベンガルの長官ムハンマド・ハーン・スールが独立する", source: "https://en.wikipedia.org/wiki/Muhammad_Shahi_dynasty"}
+    - {from: 1576, owner: "bhati", certainty: "uncertain", label: "シレット（アフガンの首長）", cause: "ベンガルのカッラーニー朝の滅亡の後、アフガンの首長たち（のちホージャー・ウスマーン）がシレットで抵抗する", source: "https://en.wikipedia.org/wiki/Khwaja_Usman"}
+    - {from: 1612, owner: "mughal", cause: "ムガル軍がホージャー・ウスマーンを破り、シレットを取る", source: "https://en.wikipedia.org/wiki/Khwaja_Usman"}
+
+- id: pre_chittagong
+  name: "チッタゴン"
+  until: 1647
+  select:
+    pieces: [BGD-Chittagong, BGD-Cox_s_Bazar]
+  timeline:
+    - {from: 1453, owner: "bengal_sultanate", certainty: "uncertain", note: "ベンガル・アラカン・トリプラが奪い合った港"}
+    - {from: 1459, owner: "arakan", certainty: "uncertain", cause: "アラカン（ミャウー朝）の王バ・ソー・ピューがチッタゴンを取る", source: "https://en.wikipedia.org/wiki/Ba_Saw_Phyu"}
+    - {from: 1512, owner: "bengal_sultanate", cause: "ベンガルのフサイン・シャーがチッタゴンを取り戻す（トリプラ・アラカンとの争い）", source: "https://en.wikipedia.org/wiki/Alauddin_Husain_Shah"}
+    - {from: 1538, owner: "arakan", certainty: "uncertain", cause: "フサイン・シャーヒー朝の滅亡の混乱の中、アラカンがチッタゴンを取る（ポルトガル人も居留）", source: "https://en.wikipedia.org/wiki/Chittagong"}
+    - {from: 1580, owner: "arakan", cause: "アラカンの王ミン・パラウンのもとでチッタゴンの支配が固まる", source: "https://en.wikipedia.org/wiki/Min_Phalaung"}
+  note: "15–16世紀のチッタゴンの帰属は資料によって大きく違う（トリプラが1513–15年・1550年代に取ったともいう。要確認）。"
+
+- id: pre_cht
+  name: "チッタゴン丘陵"
+  until: 1647
+  select:
+    pieces: [BGD-Bandarban, BGD-Khagrachhari, BGD-Rangamati]
+  timeline:
+    - {from: 1453, owner: "arakan", certainty: "nominal", note: "チャクマ人・マルマ人などの山地。首長は平野の支配者に綿などを納めた"}
+
+- id: pre_comilla
+  name: "コミッラ"
+  until: 1647
+  select:
+    pieces: [BGD-Comilla]
+  timeline:
+    - {from: 1453, owner: "tripura", note: "トリプラ王国の平野部。ダーニヤ・マーニキヤ（1490–1515）はベンガルとチッタゴンを争った"}
+  note: "1618年にムガル軍がトリプラの都ウダイプルを攻め、トリプラは一時貢納した（描かない）。"
+
+- id: pre_orissa_coast
+  name: "オリッサの海岸平野（カタック・プリー）"
+  until: 1647
+  select:
+    pieces: [IND-Baleshwar, IND-Bhadrak, IND-Cuttack, IND-Jagatsinghapur, IND-Jajapur, IND-Kendrapara, IND-Khordha, IND-Puri]
+  timeline:
+    - {from: 1453, owner: "gajapati", note: "ガジャパティ朝（スーリヤヴァンシャ朝）のオリッサ王国（都カタック）。プリーのジャガンナート寺院の守り手"}
+    - {from: 1568, owner: "bengal_sultanate", cause: "ベンガルのスライマーン・カッラーニーの軍（カーラーパーハール）がオリッサに攻め込み、ガジャパティの王ムクンダ・デーヴァが敗死する", source: "https://en.wikipedia.org/wiki/Mukunda_Deva"}
+    - {from: 1576, owner: "mughal", certainty: "uncertain", cause: "ラージマハルの戦いでベンガルのカッラーニー朝が滅ぶ。オリッサはアフガンの首長たち（クトゥル・ハーン・ローハーニーら）がなお抵抗した", source: "https://en.wikipedia.org/wiki/Battle_of_Tukaroi"}
+    - {from: 1592, owner: "mughal", cause: "ムガル帝国の将軍マーン・シングがオリッサのアフガン勢力を破り、オリッサを併合する", source: "https://en.wikipedia.org/wiki/Man_Singh_I"}
+
+- id: pre_midnapore
+  name: "ミドナプル"
+  until: 1647
+  select:
+    pieces: [IND-Jhargram, IND-Paschim_Medinipur, IND-Purba_Medinipur]
+  timeline:
+    - {from: 1453, owner: "gajapati", certainty: "uncertain", note: "オリッサとベンガルの境の地"}
+    - {from: 1568, owner: "bengal_sultanate", cause: "ベンガルのスライマーン・カッラーニーの軍（カーラーパーハール）がオリッサに攻め込み、ガジャパティの王ムクンダ・デーヴァが敗死する", source: "https://en.wikipedia.org/wiki/Mukunda_Deva"}
+    - {from: 1576, owner: "mughal", certainty: "uncertain", cause: "トゥカロイの戦い（1575）・ラージマハルの戦い（1576）でベンガル・オリッサのアフガン勢力が敗れる", source: "https://en.wikipedia.org/wiki/Battle_of_Tukaroi"}
+    - {from: 1592, owner: "mughal", cause: "ムガル帝国の将軍マーン・シングがオリッサのアフガン勢力を破り、オリッサを併合する", source: "https://en.wikipedia.org/wiki/Man_Singh_I"}
+
+- id: pre_ganjam
+  name: "ガンジャーム"
+  until: 1647
+  select:
+    pieces: [IND-Gajapati, IND-Ganjam]
+  timeline:
+    - {from: 1453, owner: "gajapati", note: "ガジャパティ朝のオリッサ王国の南部"}
+    - {from: 1568, owner: "garhjat", certainty: "uncertain", cause: "ガジャパティ朝の滅亡。パルラケームンディなどの在地の王が残る", source: "https://en.wikipedia.org/wiki/Mukunda_Deva"}
+    - {from: 1571, owner: "golconda", certainty: "uncertain", cause: "ゴールコンダ（クトゥブ・シャーヒー朝）のイブラーヒームがオリッサ南部（チカコール地方）に勢力を広げる", source: "https://en.wikipedia.org/wiki/Ibrahim_Quli_Qutb_Shah"}
+    - {from: 1600, owner: "golconda", note: "チカコール（シュリーカークラム）と同じく、このころにはゴールコンダ王国の支配が固まった（南カリンガに合わせた）"}
+  note: "ゴールコンダの進出の年は要確認（1571年ごろ）。golconda は india_south.yaml（Z5）の政体。"
+
+- id: pre_garhjat
+  name: "オリッサ山地の諸王国（ガルジャート）"
+  until: 1647
+  select:
+    pieces: [IND-Anugul, IND-Baudh, IND-Dhenkanal, IND-Kendujhar, IND-Nayagarh, IND-Balangir, IND-Debagarh, IND-Kalahandi, IND-Nuapada, IND-Subarnapur, IND-Bargarh, IND-Jharsuguda, IND-Sambalpur, IND-Kandhamal, IND-Mayurbhanj, IND-Koraput, IND-Malkangiri, IND-Nabarangapur, IND-Rayagada]
+  timeline:
+    - {from: 1453, owner: "garhjat", overlord: "gajapati", note: "ガジャパティの王に従う山地の小王国（マユールバンジ・ケーンジャル・ダーンケーナール・ナンダプル〈ジェーポール〉など）"}
+    - {from: 1568, owner: "garhjat", cause: "ガジャパティ朝の滅亡で、山地の王たちが自立する。西部ではチャウハーン家のパトナ・サンバルプルの王国が大きくなる", source: "https://en.wikipedia.org/wiki/Garhjat_States"}
+
+- id: pre_kandhamal
+  name: "カンダマール"
+  until: 1647
+  select:
+    pieces: [IND-Kandhamal]
+  timeline:
+    - {from: 1453, owner: "garhjat", certainty: "uncertain", note: "コンド人の山地。バウドの王に名目的に従った"}
+
+- id: pre_chota_nagpur
+  name: "チョーター・ナーグプル（ランチー・パラームー・シングブーム・スルグジャ）"
+  until: 1647
+  select:
+    pieces: [IND-Chatra, IND-Garhwa, IND-Giridih, IND-Gumla, IND-Hazaribagh, IND-Khunti, IND-Kodarma, IND-Latehar, IND-Lohardaga, IND-Palamu, IND-Ramgarh, IND-Ranchi, IND-Simdega, IND-Saraikela_Kharsawan, IND-Sundargarh, IND-Balrampur_2, IND-Jashpur, IND-Koriya, IND-Surajpur, IND-Surguja]
+  timeline:
+    - {from: 1453, owner: "chota_nagpur", note: "ナーグヴァンシー家（ランチー）、チェーロ家（パラームー）などの首長の地"}
+    - {from: 1585, owner: "chota_nagpur", overlord: "mughal", cause: "アクバルの軍がチョーター・ナーグプル（コークラ）に入り、ナーグヴァンシー家のマドゥ・シングが貢納を約す", source: "https://en.wikipedia.org/wiki/Nagvanshis_of_Chotanagpur"}
+  note: "1648年以降の既存データは宗主権の帯なし（ムガル帝国への従属は名目的）。1616年にジャハーンギールの軍がドゥルジャン・サールを捕らえた。"
+
+- id: pre_singhbhum
+  name: "シングブーム"
+  until: 1647
+  select:
+    pieces: [IND-Pashchimi_Singhbhum, IND-Purbi_Singhbhum]
+  timeline:
+    - {from: 1453, owner: "chota_nagpur", certainty: "uncertain", note: "ポラハートの王とホー人の地"}
+
+- id: pre_manbhum
+  name: "マーンブーム（ダンバード・プルリア）"
+  until: 1647
+  select:
+    pieces: [IND-Bokaro, IND-Dhanbad, IND-Puruliya]
+  timeline:
+    - {from: 1453, owner: "chota_nagpur", certainty: "uncertain", note: "パンチェートなどの在地の首長の地"}
+    - {from: 1576, owner: "mughal", certainty: "nominal", cause: "ラージマハルの戦い（7月）でダーウード・ハーン・カッラーニーが敗死し、ベンガルがムガル帝国の手に", source: "https://en.wikipedia.org/wiki/Battle_of_Rajmahal"}
+
+- id: pre_chhattisgarh
+  name: "チャッティースガル（ラタンプル・ライプル）"
+  until: 1647
+  select:
+    pieces: [IND-Balod, IND-Baloda_Bazar, IND-Bemetra, IND-Bilaspur_2, IND-Dhamtari, IND-Durg, IND-Gariaband, IND-Gaurella_Pendra_Marwahi, IND-Janjgir_Champa, IND-Korba, IND-Mahasamund, IND-Mungeli, IND-Raipur, IND-Kabeerdham, IND-Raigarh_2, IND-Rajnandgaon]
+  timeline:
+    - {from: 1453, owner: "ratanpur", note: "ハイハヤ（カラチュリ）朝のラタンプル王国と、その分家のライプル王国。チャッティースガル（36の城）の名はこの時代から"}
+
+- id: pre_bastar
+  name: "バスタール"
+  until: 1647
+  select:
+    pieces: [IND-Bastar, IND-Bijapur_2, IND-Dakshin_Bastar_Dantewada, IND-Kondagaon, IND-Narayanpur, IND-Sukma, IND-Uttar_Bastar_Kanker]
+  timeline:
+    - {from: 1453, owner: "bastar", note: "カーカティーヤ朝の子孫を名のる王家の森の王国"}
+
+- id: pre_ahom_core
+  name: "アッサム上部（シヴァサーガル・ジョールハート）"
+  until: 1647
+  select:
+    pieces: [IND-Charaideo, IND-Sivasagar, IND-Jorhat, IND-Majuli]
+  timeline:
+    - {from: 1453, owner: "ahom", note: "タイ系のアホーム人の王国の中心（都チャライデオ、1540年代からガルガオン）"}
+
+- id: pre_chutia
+  name: "サディヤ（チュティア王国）"
+  until: 1647
+  select:
+    pieces: [IND-Tinsukia, IND-Namsai, IND-Dibrugarh, IND-Dhemaji, IND-Lakhimpur]
+  timeline:
+    - {from: 1453, owner: "chutia", note: "チュティア王国（都サディヤ）。ブラマプトラ川上流の北岸を治めた"}
+    - {from: 1523, owner: "ahom", cause: "アホーム王スフンムンがチュティア王国を滅ぼし、サディヤを併合する", source: "https://en.wikipedia.org/wiki/Chutia_Kingdom"}
+
+- id: pre_golaghat
+  name: "ゴーラーガート・ディマプル・カルビ丘陵"
+  until: 1647
+  select:
+    pieces: [IND-Dimapur, IND-Karbi_Anglong_East, IND-Karbi_Anglong_West, IND-Golaghat, IND-Hojai]
+  timeline:
+    - {from: 1453, owner: "kachari", note: "ディマサ人のカチャーリー王国（都ディマプル）。ダンシリ川の流域を治めた"}
+    - {from: 1536, owner: "ahom", certainty: "uncertain", cause: "アホームがカチャーリーの都ディマプルを攻め落とし、カチャーリー王国は山地のマイボンへ移る", source: "https://en.wikipedia.org/wiki/Dimasa_Kingdom"}
+
+- id: pre_golaghat_ahom
+  name: "ゴーラーガート"
+  until: 1647
+  select:
+    pieces: [IND-Golaghat]
+  timeline:
+    - {from: 1536, owner: "ahom", cause: "アホームがカチャーリーの都ディマプルを攻め落とし、カチャーリー王国は山地のマイボンへ移る", source: "https://en.wikipedia.org/wiki/Dimasa_Kingdom"}
+
+- id: pre_middle_assam
+  name: "アッサム中部（ナガオン・ソニトプル）"
+  until: 1647
+  select:
+    pieces: [IND-Nagaon, IND-Morigaon, IND-Sonitpur, IND-Biswanath]
+  timeline:
+    - {from: 1453, owner: "assam_bhuyans", certainty: "uncertain", note: "ブイヤン（バロ・ブイヤン）と呼ばれる在地の領主たちの地。カマタとアホームの間にあった"}
+    - {from: 1527, owner: "ahom", cause: "アホーム王スフンムンがブイヤンたちの地を併合する（1520年代）", source: "https://en.wikipedia.org/wiki/Suhungmung"}
+
+- id: pre_hojai
+  name: "ホージャイ"
+  until: 1647
+  select:
+    pieces: [IND-Hojai]
+  timeline:
+    - {from: 1453, owner: "kachari", note: "カチャーリー王国の地"}
+    - {from: 1536, owner: "ahom", cause: "アホームがカチャーリーの都ディマプルを攻め落とし、カチャーリー王国は山地のマイボンへ移る", source: "https://en.wikipedia.org/wiki/Dimasa_Kingdom"}
+
+- id: pre_darrang
+  name: "ダラング・アッサム北部のドゥアール"
+  until: 1647
+  select:
+    pieces: [IND-Darrang, IND-Baksa, IND-Udalguri]
+  timeline:
+    - {from: 1453, owner: "assam_bhuyans", certainty: "uncertain", note: "ブイヤンたちの地"}
+    - {from: 1515, owner: "koch_bihar", cause: "ヴィシュヴァ・シンハがブイヤンたちを従え、コーチ王国を開く", source: "https://en.wikipedia.org/wiki/Biswa_Singha"}
+    - {from: 1581, owner: "koch_hajo", cause: "ナラ・ナーラーヤンの甥ラグデーヴが自立し、コーチ王国がコーチ・ビハール（西）とコーチ・ハジョ（東）に分かれる", source: "https://en.wikipedia.org/wiki/Koch_Hajo"}
+    - {from: 1613, owner: "mughal", certainty: "uncertain", cause: "ムガル帝国がコーチ・ハジョのパリークシト・ナーラーヤンを降し、カームループを併合する", source: "https://en.wikipedia.org/wiki/Koch_Hajo"}
+    - {from: 1617, owner: "ahom", cause: "アホーム王プラターパ・シンハがパリークシトの弟バリー・ナーラーヤンをダラングの王に立て、従わせる", source: "https://en.wikipedia.org/wiki/Darrang_Raj"}
+  note: "ドゥアールは1648年以降の既存データではブータン（不確実）。ブータンの進出は17世紀後半からと考えられ、1647/48年に段差がある（要確認）。"
+
+- id: pre_kamrup
+  name: "カームループ・ゴアルパラ"
+  until: 1647
+  select:
+    pieces: [IND-Barpeta, IND-Kamrup, IND-Kamrup_Metropolitan, IND-Nalbari, IND-Bongaigaon, IND-Dhubri, IND-Goalpara, IND-South_Salmara_Mankachar, IND-Chirang, IND-Kokrajhar]
+  timeline:
+    - {from: 1453, owner: "kamata", note: "ケン朝のカマタ王国（都カマタプル）。ブラマプトラ川流域の西部を治めた"}
+    - {from: 1498, owner: "bengal_sultanate", cause: "ベンガルのフサイン・シャーがカマタ王国を滅ぼす", source: "https://en.wikipedia.org/wiki/Kamata_Kingdom"}
+    - {from: 1505, owner: "assam_bhuyans", certainty: "uncertain", cause: "ベンガルの駐留軍がブイヤンたちに追われる", source: "https://en.wikipedia.org/wiki/Baro-Bhuyan"}
+    - {from: 1515, owner: "koch_bihar", cause: "ヴィシュヴァ・シンハがブイヤンたちを従え、コーチ王国を開く", source: "https://en.wikipedia.org/wiki/Biswa_Singha"}
+    - {from: 1581, owner: "koch_hajo", cause: "ナラ・ナーラーヤンの甥ラグデーヴが自立し、コーチ王国がコーチ・ビハール（西）とコーチ・ハジョ（東）に分かれる", source: "https://en.wikipedia.org/wiki/Koch_Hajo"}
+    - {from: 1613, owner: "mughal", cause: "ムガル帝国がコーチ・ハジョのパリークシト・ナーラーヤンを降し、カームループを併合する", source: "https://en.wikipedia.org/wiki/Koch_Hajo"}
+  note: "1615–1639年にアホームとムガル帝国が戦い、1639年のアスラール・アリーの協定でバルナディ川を境とした。コークラージャール・チラング（ドゥアール）は1648年以降の既存データではブータン（1647/48年に段差。要確認）。"
+
+- id: pre_koch
+  name: "コーチ・ビハール・ランプル・ドゥアール"
+  until: 1647
+  select:
+    pieces: [IND-Koch_Bihar, BGD-Kurigram, BGD-Lalmonirhat, BGD-Nilphamari, BGD-Rangpur, IND-Alipurduar, IND-Jalpaiguri]
+  timeline:
+    - {from: 1453, owner: "kamata", note: "ケン朝のカマタ王国"}
+    - {from: 1498, owner: "bengal_sultanate", cause: "ベンガルのフサイン・シャーがカマタ王国を滅ぼす", source: "https://en.wikipedia.org/wiki/Kamata_Kingdom"}
+    - {from: 1505, owner: "assam_bhuyans", certainty: "uncertain", cause: "ベンガルの駐留軍がブイヤンたちに追われる", source: "https://en.wikipedia.org/wiki/Baro-Bhuyan"}
+    - {from: 1515, owner: "koch_bihar", cause: "ヴィシュヴァ・シンハがブイヤンたちを従え、コーチ王国を開く", source: "https://en.wikipedia.org/wiki/Biswa_Singha"}
+  note: "ベンガル・ドゥアール（アリプルドゥアール・ジャルパイグリ）は1648年以降の既存データではブータン。17世紀前半はコーチ・ビハールの地として描いたので1647/48年に段差がある（要確認）。"
+
+- id: pre_kachari
+  name: "北カチャール丘陵・カチャール"
+  until: 1647
+  select:
+    pieces: [IND-Dima_Hasao, IND-Cachar, IND-Hailakandi]
+  timeline:
+    - {from: 1453, owner: "kachari", note: "カチャーリー王国。1536年からはマイボンが都"}
+
+- id: pre_cachar
+  name: "カチャールの平野"
+  until: 1647
+  select:
+    pieces: [IND-Cachar, IND-Hailakandi]
+  timeline:
+    - {from: 1453, owner: "kachari", certainty: "uncertain", note: "バラク川の平野。カチャーリー・トリプラ・コーチ（1562年にチラ・ラーイが征服）の間で帰属があいまい"}
+
+- id: pre_hills_same
+  name: "メーガーラヤ・ナガ・ミゾ・アルナーチャルの山地"
+  until: 1647
+  select:
+    pieces: [IND-East_Garo_Hills, IND-North_Garo_Hills, IND-South_Garo_Hills, IND-South_West_Garo_Hills, IND-West_Garo_Hills, IND-Aizawl, IND-Champhai, IND-Hnahthial, IND-Khawzawl, IND-Kolasib, IND-Lawngtlai, IND-Lunglei, IND-Mamit, IND-Saiha, IND-Saitual, IND-Serchhip, IND-Kiphire, IND-Longleng, IND-Mon, IND-Tuensang, IND-Mokokchung, IND-Zunheboto, IND-Kohima, IND-Peren, IND-Phek, IND-Wokha, IND-Anjaw, IND-Changlang, IND-Dibang_Valley, IND-East_Kameng, IND-East_Siang, IND-Kamle, IND-Kra_Daadi, IND-Kurung_Kumey, IND-Leparada, IND-Lohit, IND-Longding, IND-Lower_Dibang_Valley, IND-Lower_Siang, IND-Lower_Subansiri, IND-Pakke_Kessang, IND-Papum_Pare, IND-Shi_Yomi, IND-Siang, IND-Tirap, IND-Upper_Siang, IND-Upper_Subansiri, IND-West_Siang]
+  timeline:
+    - {from: 1453, owner: null, note: "ガロ人・ミゾ人・ナガ人・アディ人などの村々。どの国にも属さなかった"}
+
+- id: pre_jaintia
+  name: "ジャインティア"
+  until: 1647
+  select:
+    pieces: [IND-East_Jaintia_Hills, IND-West_Jaintia_Hills]
+  timeline:
+    - {from: 1453, owner: "jaintia"}
+
+- id: pre_khasi
+  name: "カシ丘陵"
+  until: 1647
+  select:
+    pieces: [IND-East_Khasi_Hills, IND-Ribhoi, IND-South_West_Khasi_Hills, IND-West_Khasi_Hills]
+  timeline:
+    - {from: 1453, owner: "khasi"}
+
+- id: pre_manipur
+  name: "マニプル盆地"
+  until: 1647
+  select:
+    pieces: [IND-Bishnupur, IND-Imphal_East, IND-Imphal_West, IND-Kakching, IND-Thoubal]
+  timeline:
+    - {from: 1453, owner: "manipur", note: "メイテイ人の王国。キャンバ王（1467–1508）がシャン人の国ポンと結んでカボー谷を取った"}
+
+- id: pre_manipur_hills
+  name: "マニプルの山地"
+  until: 1647
+  select:
+    pieces: [IND-Chandel, IND-Churachandpur, IND-Jiribam, IND-Kamjong, IND-Kangpokpi, IND-Noney, IND-Pherzawl, IND-Senapati, IND-Tamenglong, IND-Tengnoupal, IND-Ukhrul]
+  timeline:
+    - {from: 1453, owner: "manipur", certainty: "uncertain", note: "ナガ人・クキ人の山地"}
+
+- id: pre_tripura
+  name: "トリプラ"
+  until: 1647
+  select:
+    pieces: [IND-Dhalai, IND-Gomati, IND-Khowai, IND-North_Tripura, IND-Sipahijula, IND-South_Tripura, IND-Unokoti, IND-West_Tripura]
+  timeline:
+    - {from: 1453, owner: "tripura", note: "マーニキヤ朝のトリプラ王国（都ウダイプル）"}
+
+- id: pre_tawang
+  name: "タワン・西カーメン"
+  until: 1647
+  select:
+    pieces: [IND-Tawang, IND-West_Kameng]
+  timeline:
+    - {from: 1453, owner: "phagmodrupa", certainty: "uncertain", note: "モンパ人の地。チベット南部（ツォナの領主など）に税を納めた"}
+    - {from: 1618, owner: "tsangpa", certainty: "uncertain", cause: "ツァン王カルマ・プンツォク・ナムギャルがウーを征服する", source: "https://en.wikipedia.org/wiki/Karma_Phuntsok_Namgyal"}
+    - {from: 1642, owner: "tibet", certainty: "uncertain", cause: "ダライ・ラマ5世のガンデンポタン（チベット政府）が成立する", source: "https://ja.wikipedia.org/wiki/ガンデンポタン"}
+  note: "チベットの政権は inner_asia.yaml（Z2）の tibet_central にそろえた（1642年以降のホシュートの帯は、1648年以降の既存データに合わせて付けない）。"
+
+- id: pre_nepal_valley
+  name: "カトマンズ盆地と東の山地"
+  until: 1647
+  select:
+    pieces: [NPL-Kathmandu, NPL-Lalitpur, NPL-Bhaktapur, NPL-Dolakha, NPL-Kavrepalanchok, NPL-Ramechhap, NPL-Sindhupalchok, NPL-Dhading, NPL-Nuwakot, NPL-Rasuwa]
+  timeline:
+    - {from: 1453, owner: "malla", note: "マッラ朝のヤクシャ・マッラの王国。1482年の死後、バクタプル・カトマンズ（1484）・パタンの3王国に分かれた"}
+
+- id: pre_gorkha
+  name: "ゴルカ"
+  until: 1647
+  select:
+    pieces: [NPL-Gorkha]
+  timeline:
+    - {from: 1453, owner: "nepal_chaubise", note: "チャウビセ諸国（ラムジュンなど）の地"}
+    - {from: 1559, owner: "nepal", cause: "ラムジュンの王家のドラヴィヤ・シャハがゴルカを取り、ゴルカ王国を開く", source: "https://en.wikipedia.org/wiki/Drabya_Shah"}
+
+- id: pre_chaubise
+  name: "チャウビセ諸国（ガンダキ川流域）"
+  until: 1647
+  select:
+    pieces: [NPL-Arghakhanchi, NPL-Baglung, NPL-Gulmi, NPL-Kaski, NPL-Lamjung, NPL-Manang, NPL-Myagdi, NPL-Parbat, NPL-Pyuthan, NPL-Syangja, NPL-Tanahu, NPL-Kapilbastu, NPL-Nawalparasi, NPL-Nawalpur, NPL-Palpa]
+  timeline:
+    - {from: 1453, owner: "nepal_chaubise", note: "ラムジュン・カスキ・タナフン・パルパなどの小王国。パルパのセーン朝のムクンダ・セーン（16世紀前半）は東のタライまで勢力を広げた"}
+
+- id: pre_baise
+  name: "バイセ諸国（カルナリ川流域）"
+  until: 1647
+  select:
+    pieces: [NPL-Achham, NPL-Baitadi, NPL-Bajhang, NPL-Bajura, NPL-Dadeldhura, NPL-Darchula, NPL-Doti, NPL-Dang, NPL-Dolpa, NPL-Humla, NPL-Jajarkot, NPL-Jumla, NPL-Kalikot, NPL-Mugu, NPL-Mustang, NPL-Rolpa, NPL-Rukum_E, NPL-Rukum_W, NPL-Salyan, NPL-Surkhet]
+  timeline:
+    - {from: 1453, owner: "nepal_baise", note: "カサ・マッラ王国（14世紀末に崩壊）の後に生まれたジュムラ・ドティなどの小王国"}
+
+- id: pre_naya_muluk
+  name: "西ネパールのタライ"
+  until: 1647
+  select:
+    pieces: [NPL-Banke, NPL-Bardiya, NPL-Kailali, NPL-Kanchanpur]
+  timeline:
+    - {from: 1453, owner: "nepal_baise", certainty: "uncertain", note: "森の多いタライの平野"}
+
+- id: pre_nepal_sen
+  name: "マクワンプル・東タライ"
+  until: 1647
+  select:
+    pieces: [NPL-Bara, NPL-Chitawan, NPL-Makawanpur, NPL-Parsa, NPL-Rautahat, NPL-Sarlahi, NPL-Sindhuli, NPL-Dhanusha, NPL-Mahottari, NPL-Saptari, NPL-Siraha, NPL-Udayapur, NPL-Jhapa, NPL-Morang, NPL-Sunsari]
+  timeline:
+    - {from: 1453, owner: "nepal_sen", certainty: "uncertain", note: "ミティラー（ティルフト）の北の森の平野と山すそ。16世紀にパルパのセーン朝が広がり、マクワンプル・チャウダンディ・ヴィジャイプルの分家が生まれた"}
+  note: "セーン朝の分家が成立する前（15世紀）の様子ははっきりしないので不確実（斜線）とした。"
+
+- id: pre_kirat
+  name: "キラート（ネパール東部の山地）"
+  until: 1647
+  select:
+    pieces: [NPL-Bhojpur, NPL-Dhankuta, NPL-Ilam, NPL-Khotang, NPL-Okhaldhunga, NPL-Panchthar, NPL-Sankhuwasabha, NPL-Solukhumbu, NPL-Taplejung, NPL-Terhathum]
+  timeline:
+    - {from: 1453, owner: "nepal_kirat", certainty: "uncertain"}
+
+- id: pre_sikkim
+  name: "シッキム・ダージリン・カリンポン"
+  until: 1647
+  select:
+    pieces: [IND-East_District, IND-North_District, IND-South_District, IND-West_District, IND-Darjiling, IND-Kalimpong]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain", note: "レプチャ人・リンブー人の首長の地。13世紀からチベット系のブティア人が移り住んだ"}
+    - {from: 1642, owner: "sikkim", cause: "プンツォ・ナムギャルがユクソムでチョギャル（法王）として即位し、シッキム王国が始まる", source: "https://en.wikipedia.org/wiki/Phuntsog_Namgyal"}
+
+- id: pre_bhutan_west
+  name: "ブータン西部"
+  until: 1647
+  select:
+    pieces: [116-Dramana_Shakatoe, BTN-Bumthang, BTN-Chukha, BTN-Dagana, BTN-Gasa, BTN-Haa, BTN-Paro, BTN-Punakha, BTN-Samtse, BTN-Sarpang, BTN-Thimpu, BTN-Trongsa, BTN-Tsirang, BTN-Wangdue_Phodrang, BTN-Zhemgang]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain", note: "チベット仏教の諸派（ドゥク派・ラプ派など）の寺院と在地の領主が分立していた"}
+    - {from: 1616, owner: "bhutan", certainty: "uncertain", cause: "ドゥク派の高僧シャブドゥン・ガワン・ナムゲルがチベットから逃れてブータンに入る", source: "https://en.wikipedia.org/wiki/Ngawang_Namgyal"}
+    - {from: 1634, owner: "bhutan", cause: "5人のラマの戦いでシャブドゥンがチベット（ツァンパ政権）の軍と在地の対抗勢力を破り、西部を統一する", source: "https://en.wikipedia.org/wiki/Battle_of_Five_Lamas"}
+
+- id: pre_bhutan_east
+  name: "ブータン東部"
+  until: 1647
+  select:
+    pieces: [BTN-Lhuntse, BTN-Mongar, BTN-Pemagatshel, BTN-Samdrup_Jongkhar, BTN-Trashigang, BTN-Trashiyangtse]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain", note: "在地の領主（チョジェ家など）の地。ドゥク派の支配は1650年代から"}
+  note: "1648年以降の既存データはブータン（不確実）。"

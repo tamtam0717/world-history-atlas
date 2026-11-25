@@ -925,3 +925,676 @@
     - {from: 1648, owner: "maldives"}
     - {from: 1887, owner: "britain", certainty: "indirect", label: "モルディブ（イギリスの保護国）", cause: "スルタンとイギリス領セイロン総督の協定で、イギリスの保護国となる", source: "https://en.wikipedia.org/wiki/Maldives"}
     - {from: 1965, owner: "maldives", cause: "モルディブがイギリスから独立する（7月26日）", note: "南端のガン島のイギリス空軍基地は1976年まで残った", source: "https://ja.wikipedia.org/wiki/モルディブ"}
+
+# ================================================================ 1453–1647（担当 Z5）
+# 1648 年の地域とは別に、1648 年より前だけの地域を until: 1647 で作る（1648 年以降の地域には 1648 年より前の項目を書かない）。
+
+# ---------------------------------------------------------------- 北コンカン（グジャラートからポルトガルへ）
+- id: pre_bombay_bassein
+  name: "ボンベイ・サルセット・バセイン"
+  until: 1647
+  select:
+    pieces: [IND-Mumbai, IND-Mumbai_Suburban]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", note: "ターナー・マーヒムなど北コンカンの海岸はグジャラート王国の領土"}
+    - {from: 1534, owner: "portugal", cause: "バセイン条約（12月）でグジャラート王バハードゥル・シャーがバセインとボンベイ・サルセットの島々をポルトガルに譲る", source: "https://en.wikipedia.org/wiki/Treaty_of_Bassein_(1534)"}
+
+- id: pre_palghar
+  name: "バセイン・北コンカン"
+  until: 1647
+  select:
+    pieces: [IND-Palghar]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", certainty: "uncertain", note: "海岸はグジャラート王国。内陸はコーリー人の首長の地"}
+    - {from: 1534, owner: "portugal", certainty: "uncertain", cause: "バセイン条約（12月）でバセインがポルトガル領となり、北部州（プロヴィンシア・ド・ノルテ）の中心となる", note: "内陸はコーリー人のジャウハル王国など", source: "https://en.wikipedia.org/wiki/Treaty_of_Bassein_(1534)"}
+
+# ---------------------------------------------------------------- デカン北西部（アフマドナガル王国）
+- id: pre_konkan_north
+  name: "北コンカン・西デカン（プネー・ライガド・ターネー）"
+  until: 1647
+  select:
+    pieces: [IND-Pune, IND-Raigarh, IND-Thane]
+  timeline:
+    - {from: 1453, owner: "bahmani", note: "ターネー地方の海岸はグジャラート王国と争った"}
+    - {from: 1490, owner: "ahmadnagar_sultanate", cause: "バフマニー朝の長官アフマド・ニザーム・シャーが自立する（アフマドナガル王国）", note: "チャウルの港はアフマドナガル王国の外港（ポルトガルの要塞もあった）", source: "https://en.wikipedia.org/wiki/Ahmadnagar_Sultanate"}
+    - {from: 1636, owner: "bijapur", cause: "ムガル帝国とビジャープル王国の条約（5月）でアフマドナガル王国が分けられ、プネー・コンカンなど南西部がビジャープル領となる", source: "https://en.wikipedia.org/wiki/Ahmadnagar_Sultanate"}
+
+- id: pre_ahmadnagar
+  name: "アフマドナガル"
+  until: 1647
+  select:
+    pieces: [IND-Ahmadnagar]
+  timeline:
+    - {from: 1453, owner: "bahmani"}
+    - {from: 1490, owner: "ahmadnagar_sultanate", cause: "アフマド・ニザーム・シャーが自立し、アフマドナガルの町を建てる（1494）", source: "https://en.wikipedia.org/wiki/Ahmad_Nizam_Shah_I"}
+    - {from: 1600, owner: "mughal", cause: "アクバルの軍がアフマドナガルの城を落とす（8月）", source: "https://en.wikipedia.org/wiki/Siege_of_Ahmednagar"}
+    - {from: 1610, owner: "ahmadnagar_sultanate", cause: "宰相マリク・アンバルがアフマドナガルを取り戻す", note: "年は要確認", source: "https://ja.wikipedia.org/wiki/マリク・アンバル"}
+    - {from: 1617, owner: "mughal", cause: "王子フッラム（のちのシャー・ジャハーン）のデカン遠征。マリク・アンバルがアフマドナガルの城とバーラーガート地方を返す", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Malik_Ambar"}
+
+- id: pre_marathwada
+  name: "ダウラターバード・マラートワーダー"
+  until: 1647
+  select:
+    pieces: [IND-Aurangabad, IND-Jalna, IND-Bid, IND-Parbhani, IND-Hingoli, IND-Nanded, IND-Latur]
+  timeline:
+    - {from: 1453, owner: "bahmani"}
+    - {from: 1490, owner: "ahmadnagar_sultanate", cause: "アフマド・ニザーム・シャーが自立する（ダウラターバードの要塞は1499年に取る）", source: "https://en.wikipedia.org/wiki/Ahmadnagar_Sultanate"}
+    - {from: 1617, owner: "ahmadnagar_sultanate", certainty: "uncertain", cause: "マリク・アンバルがバーラーガート地方をムガル帝国に返す。その後もムガル軍とアフマドナガル軍が争った", note: "マリク・アンバルは1610年にハドキー（のちのアウランガーバード）を都とした", source: "https://en.wikipedia.org/wiki/Malik_Ambar"}
+    - {from: 1633, owner: "mughal", certainty: "uncertain", cause: "ムガル軍がダウラターバードの要塞を落とし（6月）、スルタンを捕らえる。シャーハージーが幼い王を立てて抵抗を続けた", source: "https://en.wikipedia.org/wiki/Daulatabad_Fort"}
+    - {from: 1636, owner: "mughal", cause: "ムガル帝国とビジャープル王国の条約でアフマドナガル王国が分けられ、北部がムガル帝国のデカン州となる", source: "https://en.wikipedia.org/wiki/Ahmadnagar_Sultanate"}
+
+- id: pre_nashik
+  name: "ナーシク"
+  until: 1647
+  select:
+    pieces: [IND-Nashik]
+  timeline:
+    - {from: 1453, owner: "bahmani", certainty: "uncertain", note: "北部のバーグラーナはラージプートの小王国"}
+    - {from: 1490, owner: "ahmadnagar_sultanate", certainty: "uncertain", cause: "アフマド・ニザーム・シャーが自立する", source: "https://en.wikipedia.org/wiki/Ahmadnagar_Sultanate"}
+    - {from: 1636, owner: "mughal", cause: "アフマドナガル王国の分割でムガル帝国のデカン州となる", source: "https://en.wikipedia.org/wiki/Ahmadnagar_Sultanate"}
+
+# ---------------------------------------------------------------- ハーンデーシュ（境の北側のブルハーンプルは Z4）
+- id: pre_khandesh
+  name: "ハーンデーシュ"
+  until: 1647
+  select:
+    pieces: [IND-Jalgaon, IND-Dhule, IND-Nandurbar]
+  timeline:
+    - {from: 1453, owner: "khandesh", note: "都ブルハーンプル（現マディヤ・プラデーシュ州）はタープティー川の上流"}
+    - {from: 1600, owner: "mughal", cause: "アクバルがブルハーンプルを取り（4月）、アシールガルの要塞を囲む（1601年1月に降伏）。ムガル帝国のハーンデーシュ州となる", source: "https://en.wikipedia.org/wiki/Siege_of_Asirgarh"}
+
+# ---------------------------------------------------------------- ベラール
+- id: pre_berar
+  name: "ベラール"
+  until: 1647
+  select:
+    pieces: [IND-Amravati, IND-Akola, IND-Buldana, IND-Washim, IND-Yavatmal]
+  timeline:
+    - {from: 1453, owner: "bahmani", note: "バフマニー朝のベラール州（都エリチプル）"}
+    - {from: 1490, owner: "berar_sultanate", cause: "長官ファトフッラー・イマード・ウル・ムルクが自立する（ベラール王国）", source: "https://en.wikipedia.org/wiki/Berar_Sultanate"}
+    - {from: 1574, owner: "ahmadnagar_sultanate", cause: "アフマドナガル王国がベラール王国を併合する", source: "https://en.wikipedia.org/wiki/Berar_Sultanate"}
+    - {from: 1596, owner: "mughal", cause: "チャーンド・ビービーがムガル軍と和を結び、ベラールを割譲する（ムガル帝国のベラール州）", source: "https://en.wikipedia.org/wiki/Chand_Bibi"}
+
+# ---------------------------------------------------------------- ゴンド人の地（1648 年と同じ）
+- id: pre_gond_nagpur
+  name: "ナーグプル（デーオガル）"
+  until: 1647
+  select:
+    pieces: [IND-Nagpur, IND-Wardha, IND-Bhandara, IND-Gondiya]
+  timeline:
+    - {from: 1453, owner: "gondwana", certainty: "uncertain", label: "ゴンド諸王国", note: "ゴンド人の首長の地。16世紀末にデーオガルの王国がまとまった。北のケールラのゴンド王国はバフマニー朝・マールワーに貢納した"}
+    - {from: 1590, owner: "gondwana", label: "デーオガル", note: "ゴンド人の王国デーオガル（年は要確認）。ムガル帝国に貢納した"}
+
+- id: pre_gond_chanda
+  name: "チャンダ"
+  until: 1647
+  select:
+    pieces: [IND-Chandrapur, IND-Gadchiroli]
+  timeline:
+    - {from: 1453, owner: "gondwana", label: "チャンダ", note: "ゴンド人の王国チャンダ（都はシルプル、のちバッラールプル・チャンダ）"}
+
+# ---------------------------------------------------------------- 西デカン（ビジャープル王国）
+- id: pre_satara_kolhapur
+  name: "サーターラー・コールハープル・サーングリー"
+  until: 1647
+  select:
+    pieces: [IND-Satara, IND-Kolhapur, IND-Sangli]
+  timeline:
+    - {from: 1453, owner: "bahmani"}
+    - {from: 1490, owner: "bijapur", cause: "バフマニー朝の長官ユースフ・アーディル・ハーンが自立する（ビジャープル王国）", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+
+- id: pre_solapur
+  name: "ショーラープル・ナルドゥルグ"
+  until: 1647
+  select:
+    pieces: [IND-Solapur, IND-Osmanabad]
+  timeline:
+    - {from: 1453, owner: "bahmani"}
+    - {from: 1490, owner: "bijapur", certainty: "uncertain", cause: "ビジャープル王国の自立", note: "ショーラープルの城はアフマドナガル王国とビジャープル王国が奪い合った", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+    - {from: 1558, owner: "bijapur", cause: "アリー・アーディル・シャー1世がナルドゥルグの要塞を築き直す", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Naldurg_Fort"}
+
+- id: pre_konkan_south
+  name: "南コンカン（ダーボール）"
+  until: 1647
+  select:
+    pieces: [IND-Ratnagiri, IND-Sindhudurg]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", certainty: "nominal", note: "サンガメーシュワル・ケールナー（ヴィシャールガド）などの首長の地。ヴィジャヤナガル王国に従った"}
+    - {from: 1470, owner: "bahmani", cause: "宰相マフムード・ガーワーンがコンカンの首長を下し、ケールナーの城を落とす（1469–71年）", source: "https://en.wikipedia.org/wiki/Mahmud_Gawan"}
+    - {from: 1490, owner: "bijapur", cause: "ビジャープル王国の自立。ダーボールが王国の港となる", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+
+- id: pre_goa
+  name: "ゴア"
+  until: 1647
+  select:
+    pieces: [IND-North_Goa, IND-South_Goa]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "西海岸の馬の輸入港"}
+    - {from: 1472, owner: "bahmani", cause: "マフムード・ガーワーンがゴアを攻め落とす", source: "https://en.wikipedia.org/wiki/Mahmud_Gawan"}
+    - {from: 1490, owner: "bijapur", cause: "ビジャープル王国の自立", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+    - {from: 1510, owner: "portugal", label: "ゴア（ポルトガル領インド）", cause: "アルブケルケがゴアを攻め落とす（11月）。1530年からポルトガル領インドの首都", note: "16世紀は旧征服地（ティスワーディー・バルデーズ・サルセッテ）だけ。1543年にバルデーズ・サルセッテを得た。地図では全体を塗る", source: "https://ja.wikipedia.org/wiki/ポルトガル領インド"}
+
+- id: pre_bijapur_core
+  name: "ビジャープル・バーガルコート・ベルガウム"
+  until: 1647
+  select:
+    pieces: [IND-Bijapur, IND-Bagalkot]
+  timeline:
+    - {from: 1453, owner: "bahmani"}
+    - {from: 1490, owner: "bijapur", cause: "ユースフ・アーディル・ハーンが自立し、ビジャープルを都とする", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+
+- id: pre_belgaum
+  name: "ベルガウム"
+  until: 1647
+  select:
+    pieces: [IND-Belgaum]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1473, owner: "bahmani", cause: "マフムード・ガーワーンがベルガウムの城を落とす", source: "https://en.wikipedia.org/wiki/Mahmud_Gawan"}
+    - {from: 1490, owner: "bijapur", cause: "ビジャープル王国の自立", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+
+- id: pre_gulbarga
+  name: "グルバルガ"
+  until: 1647
+  select:
+    pieces: [IND-Gulbarga]
+  timeline:
+    - {from: 1453, owner: "bahmani", note: "バフマニー朝の最初の都（1429年にビーダルに移った）"}
+    - {from: 1490, owner: "bijapur", certainty: "uncertain", cause: "ビジャープル王国の自立", note: "ビーダルのバリード家と争った", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+    - {from: 1530, owner: "bijapur"}
+
+- id: pre_bidar
+  name: "ビーダル"
+  until: 1647
+  select:
+    pieces: [IND-Bidar]
+  timeline:
+    - {from: 1453, owner: "bahmani", note: "バフマニー朝の都（1429–）"}
+    - {from: 1527, owner: "bidar_sultanate", cause: "最後のスルタンがビーダルを逃れ、宰相バリード家が王となる（ビーダル王国）", source: "https://en.wikipedia.org/wiki/Bidar_Sultanate"}
+    - {from: 1619, owner: "bijapur", cause: "ビジャープル王国がビーダル王国を併合する", source: "https://en.wikipedia.org/wiki/Bidar_Sultanate"}
+
+- id: pre_raichur
+  name: "ライチュール地方（ドアーブ）"
+  until: 1647
+  select:
+    pieces: [IND-Yadgir, IND-Raichur, IND-Koppal]
+  timeline:
+    - {from: 1453, owner: "bahmani", note: "クリシュナ川とトゥンガバドラー川の間の地。ヴィジャヤナガル王国とバフマニー朝が何度も争った"}
+    - {from: 1490, owner: "bijapur", cause: "ビジャープル王国の自立", source: "https://ja.wikipedia.org/wiki/アーディル・シャーヒー朝"}
+    - {from: 1520, owner: "vijayanagara", cause: "クリシュナデーヴァラーヤがライチュールの戦い（5月）でビジャープル軍を破り、ライチュールの城を取る", source: "https://en.wikipedia.org/wiki/Battle_of_Raichur"}
+    - {from: 1530, owner: "bijapur", cause: "クリシュナデーヴァラーヤの死後、イスマーイール・アーディル・シャーがライチュール・ムドガルを取り戻す", source: "https://en.wikipedia.org/wiki/Ismail_Adil_Shah"}
+
+- id: pre_dharwad
+  name: "ダールワール"
+  until: 1647
+  select:
+    pieces: [IND-Dharwad, IND-Gadag, IND-Haveri]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1573, owner: "bijapur", cause: "ターリコータの戦いの後、ビジャープル王国がダールワールの城を落とす", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Dharwad"}
+
+# ---------------------------------------------------------------- テランガーナ・アーンドラ
+- id: pre_telangana
+  name: "テランガーナ（ゴールコンダ）"
+  until: 1647
+  select:
+    adm1: ["IND/Telangana"]
+  timeline:
+    - {from: 1453, owner: "bahmani", note: "バフマニー朝のテランガーナ州。ワランガルは1425年ごろバフマニー朝のものになった"}
+    - {from: 1518, owner: "golconda", cause: "テランガーナの長官スルターン・クリー（クトゥブ・ウル・ムルク）がゴールコンダで自立する（ゴールコンダ王国）", note: "自立の年は1512年・1518年の説がある", source: "https://ja.wikipedia.org/wiki/クトゥブ・シャーヒー朝"}
+
+- id: pre_kalinga_south
+  name: "南カリンガ（シュリーカークラム・ヴィシャーカパトナム）"
+  until: 1647
+  select:
+    pieces: [IND-Srikakulam, IND-Vizianagaram, IND-Visakhapatnam]
+  timeline:
+    - {from: 1453, owner: "gajapati", note: "オリッサのガジャパティ朝の南の領土"}
+    - {from: 1568, owner: "garhjat", certainty: "uncertain", cause: "ガジャパティ朝の滅亡。在地の王が残る（ガンジャームと同じ）", source: "https://en.wikipedia.org/wiki/Mukunda_Deva"}
+    - {from: 1571, owner: "golconda", certainty: "uncertain", cause: "ガジャパティ朝の滅亡（1568）の後、ゴールコンダ王国のイブラーヒーム・クトゥブ・シャーが北の海岸に進む", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Ibrahim_Quli_Qutb_Shah"}
+    - {from: 1600, owner: "golconda", note: "チカコール（シュリーカークラム）はゴールコンダ王国の北の拠点"}
+
+- id: pre_godavari
+  name: "ゴーダーヴァリー川の三角州（ラージャムンドリー）"
+  until: 1647
+  select:
+    pieces: [IND-East_Godavari, IND-West_Godavari, IND-Yanam]
+  timeline:
+    - {from: 1453, owner: "gajapati", certainty: "uncertain", note: "ラージャムンドリーのレッディ王国がガジャパティ朝のカピレーンドラに従えられた（1450年ごろ）"}
+    - {from: 1460, owner: "gajapati"}
+    - {from: 1471, owner: "bahmani", cause: "マフムード・ガーワーンがラージャムンドリー・コンダパッリを取る", source: "https://en.wikipedia.org/wiki/Mahmud_Gawan"}
+    - {from: 1490, owner: "gajapati", certainty: "uncertain", cause: "ガジャパティ王プルショーッタマがゴーダーヴァリー川の地方を取り戻す", note: "年は要確認。1515–19年にはクリシュナデーヴァラーヤが一時占領したが、和約でガジャパティ朝に返した", source: "https://en.wikipedia.org/wiki/Purushottama_Deva"}
+    - {from: 1571, owner: "golconda", cause: "ゴールコンダ王国がラージャムンドリーを取る", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Ibrahim_Quli_Qutb_Shah"}
+
+- id: pre_krishna_delta
+  name: "クリシュナ川の三角州（コンダパッリ・マチリーパトナム）"
+  until: 1647
+  select:
+    pieces: [IND-Krishna]
+  timeline:
+    - {from: 1453, owner: "gajapati", certainty: "uncertain"}
+    - {from: 1471, owner: "bahmani", cause: "マフムード・ガーワーンがコンダパッリを取る", source: "https://en.wikipedia.org/wiki/Mahmud_Gawan"}
+    - {from: 1490, owner: "gajapati", certainty: "uncertain", note: "年は要確認"}
+    - {from: 1530, owner: "golconda", certainty: "uncertain", cause: "ゴールコンダ王国のスルターン・クリーがコンダパッリ・クリシュナ川下流に進む", note: "年は要確認", source: "https://ja.wikipedia.org/wiki/クトゥブ・シャーヒー朝"}
+    - {from: 1571, owner: "golconda"}
+
+- id: pre_guntur
+  name: "グントゥール（コンダヴィードゥ）"
+  until: 1647
+  select:
+    pieces: [IND-Guntur]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", certainty: "uncertain", note: "コンダヴィードゥのレッディ王国は1424年にヴィジャヤナガル王国に滅ぼされた"}
+    - {from: 1454, owner: "gajapati", cause: "ガジャパティ王カピレーンドラがコンダヴィードゥを取る", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Kapilendra_Deva"}
+    - {from: 1515, owner: "vijayanagara", cause: "クリシュナデーヴァラーヤのカリンガ遠征でコンダヴィードゥが落ちる", source: "https://en.wikipedia.org/wiki/Krishnadevaraya"}
+    - {from: 1579, owner: "golconda", cause: "ゴールコンダ王国がコンダヴィードゥを奪う", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Kondaveedu_Fort"}
+
+- id: pre_nellore
+  name: "ネッルール・プラカーシャム（ウダヤギリ）"
+  until: 1647
+  select:
+    pieces: [IND-Sri_Potti_Sriramulu_Nellore, IND-Prakasam]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1463, owner: "gajapati", certainty: "uncertain", cause: "ガジャパティ朝の軍が南に進み、ウダヤギリを取る", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Kapilendra_Deva"}
+    - {from: 1514, owner: "vijayanagara", cause: "クリシュナデーヴァラーヤがウダヤギリの城を落とす", source: "https://en.wikipedia.org/wiki/Krishnadevaraya"}
+    - {from: 1580, owner: "golconda", certainty: "uncertain", cause: "ゴールコンダ王国が南に進み、ヴィジャヤナガル王国の北東部を奪う", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Ibrahim_Quli_Qutb_Shah"}
+    - {from: 1600, owner: "golconda"}
+
+# ---------------------------------------------------------------- ラーヤラシーマ（ヴィジャヤナガルの後の都）
+- id: pre_chittoor
+  name: "チャンドラギリ（チットゥール）"
+  until: 1647
+  select:
+    pieces: [IND-Chittoor]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "チャンドラギリは1590年代からヴィジャヤナガル王国の都の一つ"}
+    - {from: 1646, owner: "golconda", cause: "ゴールコンダ王国の将ミール・ジュムラがチャンドラギリを落とし、シュリーランガ3世が逃れる", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Chandragiri_Fort"}
+
+- id: pre_rayalaseema
+  name: "ペヌコンダ（アナンタプル）"
+  until: 1647
+  select:
+    pieces: [IND-Anantapur]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "ペヌコンダは1565年の後のヴィジャヤナガル王国の都（1592年ごろまで）"}
+    - {from: 1646, owner: "bijapur", certainty: "uncertain", cause: "ヴィジャヤナガル王国の滅亡（シュリーランガ3世がヴェールールを追われる）。ビジャープル王国とゴールコンダ王国が旧領を分け合う", note: "ペヌコンダの城がビジャープル王国に落ちた年は要確認（1640年代後半〜1650年代）。1648年以降の既存データ（ビジャープル、不確実）につながるようにした", source: "https://en.wikipedia.org/wiki/Sriranga_III"}
+
+- id: pre_gandikota
+  name: "ガンディコータ（カダパ）"
+  until: 1647
+  select:
+    pieces: [IND-Kadapa_YSR]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "ガンディコータの城はヴィジャヤナガル王国のペンマサーニ家のナーヤカが守った"}
+    - {from: 1646, owner: "golconda", certainty: "uncertain", cause: "ヴィジャヤナガル王国の滅亡（シュリーランガ3世がヴェールールを追われる）。ゴールコンダ王国が東のカルナータカに進む", note: "ガンディコータの城はミール・ジュムラが1650年に落とした。1648年以降の既存データ（ゴールコンダ、不確実）につながるようにした", source: "https://en.wikipedia.org/wiki/Siege_of_Gandikota"}
+
+- id: pre_kurnool
+  name: "クルヌール・アドーニ"
+  until: 1647
+  select:
+    pieces: [IND-Kurnool]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1568, owner: "bijapur", certainty: "uncertain", cause: "ビジャープル王国がアドーニの城を落とす", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Adoni"}
+    - {from: 1620, owner: "bijapur", note: "クルヌールの城はこのころビジャープル王国のものになった（要確認）"}
+
+- id: pre_bellary
+  name: "ベラリー（ハンピ）"
+  until: 1647
+  select:
+    pieces: [IND-Bellary]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "王国の都ヴィジャヤナガル（ハンピ）"}
+    - {from: 1565, owner: "bijapur", certainty: "uncertain", cause: "ターリコータの戦い（1月）でヴィジャヤナガル軍が大敗し、都が破壊される", note: "その後は地方の領主（パーレーガール）がビジャープル王国に貢納した", source: "https://ja.wikipedia.org/wiki/ターリコータの戦い"}
+
+# ---------------------------------------------------------------- カルナータカ南部・西海岸
+- id: pre_sonda
+  name: "北カナラ（スンダ）"
+  until: 1647
+  select:
+    pieces: [IND-Uttara_Kannada]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "ホンナーヴァル・バトカルの港。ゲールソッパの女王などの領主がいた"}
+    - {from: 1565, owner: "sonda", overlord: "bijapur", cause: "ヴィジャヤナガル王国の衰退で、スンダ（ソーデ）の領主がビジャープル王国に従う", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Sonda_dynasty"}
+
+- id: pre_malnad
+  name: "マルナード（ケラディ・イッケリ）"
+  until: 1647
+  select:
+    pieces: [IND-Shimoga, IND-Chikmagalur]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "1499年からケラディのナーヤカが王国の長官として治めた"}
+    - {from: 1565, owner: "keladi", cause: "ターリコータの戦いの後、ケラディのナーヤカが事実上自立する", source: "https://en.wikipedia.org/wiki/Keladi_Nayaka"}
+
+- id: pre_canara
+  name: "南カナラ（マンガロール）"
+  until: 1647
+  select:
+    pieces: [IND-Udupi, IND-Dakshina_Kannada]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "バールクール・マンガロールの長官が治めた。トゥル人の小領主が多い"}
+    - {from: 1565, owner: "keladi", certainty: "uncertain", cause: "ヴィジャヤナガル王国の衰退。トゥル人の小領主（ウッラールの女王アッバッカなど）がポルトガルと争った", note: "マンガロール・バールクールなどにはポルトガルの砦があった", source: "https://en.wikipedia.org/wiki/Abbakka_Chowta"}
+    - {from: 1600, owner: "keladi", cause: "ケラディのヴェンカタッパ・ナーヤカがカナラ海岸の小領主を従える", source: "https://en.wikipedia.org/wiki/Keladi_Nayaka"}
+
+- id: pre_mysore
+  name: "マイソール・シュリーランガパトナ"
+  until: 1647
+  select:
+    pieces: [IND-Mysore, IND-Mandya, IND-Chamarajanagar, IND-Hassan, IND-Ramanagara]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "マイソールのウォデヤル家は小領主。シュリーランガパトナに王国の長官がいた"}
+    - {from: 1610, owner: "mysore", cause: "ラージャ・ウォデヤルが王国の長官からシュリーランガパトナを奪い、都とする", source: "https://en.wikipedia.org/wiki/Raja_Wodeyar_I"}
+
+- id: pre_bangalore
+  name: "バンガロール"
+  until: 1647
+  select:
+    pieces: [IND-Bangalore, IND-Bangalore_Rural]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "1537年にイェラハンカの領主ケンペ・ゴウダがバンガロールの町を建てた"}
+    - {from: 1638, owner: "bijapur", cause: "ビジャープル王国の将ランドゥッラー・ハーンとシャーハージーがバンガロールを奪う", source: "https://en.wikipedia.org/wiki/Shahaji"}
+
+- id: pre_sira
+  name: "シラ・コーラール"
+  until: 1647
+  select:
+    pieces: [IND-Tumkur, IND-Kolar, IND-Chikkaballapura]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1565, owner: "vijayanagara", certainty: "uncertain", note: "ナーヤカ・パーレーガールの地"}
+    - {from: 1638, owner: "bijapur", cause: "ビジャープル王国の南進でシラ・コーラールなどが奪われる（1638–39年）", source: "https://en.wikipedia.org/wiki/Shahaji"}
+
+- id: pre_chitradurga
+  name: "チトラドゥルガ"
+  until: 1647
+  select:
+    pieces: [IND-Chitradurga, IND-Davanagere]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1565, owner: "chitradurga", certainty: "uncertain", cause: "ターリコータの戦いの後、パーレーガールが自立する", note: "チトラドゥルガのナーヤカ家は1588年ごろからの有力な領主", source: "https://en.wikipedia.org/wiki/Nayakas_of_Chitradurga"}
+    - {from: 1588, owner: "chitradurga"}
+
+- id: pre_kodagu
+  name: "コダグ（クールグ）"
+  until: 1647
+  select:
+    pieces: [IND-Kodagu]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", certainty: "uncertain", note: "山地のチャンガールヴァ家などの首長の地"}
+    - {from: 1600, owner: "coorg", cause: "ハレーリ家がコダグの王となる", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Kodagu_Kingdom"}
+
+# ---------------------------------------------------------------- タミル北部
+- id: pre_madras
+  name: "マドラス"
+  until: 1647
+  select:
+    pieces: [IND-Chennai]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "マイラープール（サントメ）にはポルトガル人の町があった（1523–）"}
+    - {from: 1640, owner: "britain", label: "マドラス（イギリス東インド会社）", cause: "イギリス東インド会社がチャンドラギリの王から土地を得て（1639年8月）、セント・ジョージ要塞を築く", source: "https://ja.wikipedia.org/wiki/チェンナイ"}
+
+- id: pre_chingleput
+  name: "チングルプット・カーンチープラム"
+  until: 1647
+  select:
+    pieces: [IND-Thiruvallur, IND-Kancheepuram, IND-Chengalputtu]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "北のプリカットに1610年からオランダの要塞"}
+    - {from: 1646, owner: "golconda", cause: "ゴールコンダ王国の将ミール・ジュムラがヴィジャヤナガルの残りの地を奪う", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Mir_Jumla_II"}
+
+- id: pre_vellore
+  name: "ヴェールール"
+  until: 1647
+  select:
+    pieces: [IND-Vellore, IND-Ranipet]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "17世紀初めからアーラヴィードゥ朝の都"}
+    - {from: 1647, owner: "bijapur", cause: "ビジャープル王国の軍がヴェールールを落とす", source: "https://en.wikipedia.org/wiki/Vellore_Fort"}
+
+- id: pre_gingee
+  name: "ジンジー（ジンジー・ナーヤカ朝）"
+  until: 1647
+  select:
+    pieces: [IND-Viluppuram, IND-Kallakurichi, IND-Tiruvannamalai, IND-Cuddalore, IND-Puducherry]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1565, owner: "gingee", overlord: "vijayanagara", cause: "ターリコータの戦いの後、ジンジーのナーヤカが自立を強める（ヴィジャヤナガル王に名目上従う）", source: "https://en.wikipedia.org/wiki/Gingee_Nayaks"}
+    - {from: 1646, owner: "gingee", cause: "ヴィジャヤナガル王国の滅亡", note: "1649年にビジャープル王国にジンジーの城を落とされた"}
+
+- id: pre_baramahal
+  name: "バーラーマハル（クリシュナギリ・ダルマプリ）"
+  until: 1647
+  select:
+    pieces: [IND-Krishnagiri, IND-Dharmapuri, IND-Tirupathur]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1640, owner: "bijapur", certainty: "uncertain", cause: "ビジャープル王国の南進", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Shahaji"}
+
+# ---------------------------------------------------------------- タミル南部（マドゥライ・タンジャーヴール）
+- id: pre_madurai
+  name: "マドゥライ・ナーヤカ朝の地"
+  until: 1647
+  select:
+    pieces: [IND-Madurai, IND-Theni, IND-Dindigul, IND-Tiruchirappalli, IND-Ariyalur, IND-Perambalur, IND-Tirunelveli, IND-Tenkasi, IND-Thoothukkudi, IND-Virudhunagar, IND-Coimbatore, IND-Tiruppur, IND-Erode, IND-The_Nilgiris, IND-Karur]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "1529年からヴィシュヴァナータ・ナーヤカがマドゥライの長官となった。南端のテンカーシにはパーンディヤ家の末裔が残った"}
+    - {from: 1565, owner: "madurai", overlord: "vijayanagara", cause: "ターリコータの戦いの後、マドゥライのナーヤカが事実上自立する（ヴィジャヤナガル王に名目上従う）", source: "https://en.wikipedia.org/wiki/Madurai_Nayak_dynasty"}
+    - {from: 1638, owner: "madurai", cause: "ティルマライ・ナーヤカがヴィジャヤナガル王に貢納をやめ、ビジャープル・ゴールコンダと結んで王に背く", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Thirumalai_Nayak"}
+
+- id: pre_salem
+  name: "セーラム"
+  until: 1647
+  select:
+    pieces: [IND-Salem, IND-Namakkal]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1565, owner: "madurai", certainty: "uncertain", overlord: "vijayanagara", cause: "マドゥライのナーヤカのもとの地方領主が治める", source: "https://en.wikipedia.org/wiki/Madurai_Nayak_dynasty"}
+    - {from: 1638, owner: "madurai", certainty: "uncertain"}
+
+- id: pre_ramnad
+  name: "ラームナード・プドゥッコーッタイ"
+  until: 1647
+  select:
+    pieces: [IND-Ramanathapuram, IND-Sivaganga, IND-Pudukkottai]
+  timeline:
+    - {from: 1453, owner: "vijayanagara"}
+    - {from: 1565, owner: "madurai", overlord: "vijayanagara", cause: "マドゥライのナーヤカの自立", source: "https://en.wikipedia.org/wiki/Madurai_Nayak_dynasty"}
+    - {from: 1605, owner: "ramnad", overlord: "madurai", cause: "マドゥライのナーヤカがサダイッカ・テーヴァルをセードゥパティ（ラーメーシュワラムへの道の守り）に任じる", source: "https://en.wikipedia.org/wiki/Ramnad_Sethupathis"}
+
+- id: pre_thanjavur
+  name: "タンジャーヴール（カーヴェーリ三角州）"
+  until: 1647
+  select:
+    pieces: [IND-Thanjavur, IND-Thiruvarur, IND-Nagapattinam, IND-Mayiladuthurai, IND-Karaikal]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "1532年からセーヴァッパ・ナーヤカがタンジャーヴールの長官となった"}
+    - {from: 1565, owner: "thanjavur", overlord: "vijayanagara", cause: "ターリコータの戦いの後、タンジャーヴールのナーヤカが事実上自立する（ヴィジャヤナガル王への忠誠は続けた）", note: "ナーガパッティナムにはポルトガル人の町、トランケバルには1620年からデンマークの要塞があった", source: "https://en.wikipedia.org/wiki/Thanjavur_Nayak_kingdom"}
+    - {from: 1646, owner: "thanjavur", cause: "ヴィジャヤナガル王国の滅亡"}
+
+# ---------------------------------------------------------------- ケーララ（1648 年と同じ在地の王国）
+- id: pre_venad
+  name: "ヴェーナード（トリヴァンドラム）"
+  until: 1647
+  select:
+    pieces: [IND-Thiruvananthapuram, IND-Kanniyakumari]
+  timeline:
+    - {from: 1453, owner: "travancore", note: "ヴェーナード王国。1530年代にヴィジャヤナガル王国のアチュタ・ラーヤの遠征を受けて貢納した"}
+
+- id: pre_kerala_central
+  name: "ケーララ中部の小王国（キロン・カーヤンクラム）"
+  until: 1647
+  select:
+    pieces: [IND-Kollam, IND-Alappuzha, IND-Pathanamthitta, IND-Kottayam, IND-Idukki]
+  timeline:
+    - {from: 1453, owner: "kerala_chiefs", note: "キロン（デーシンガナード）にはポルトガルの砦（1519–）があった"}
+
+- id: pre_cochin
+  name: "コーチン"
+  until: 1647
+  select:
+    pieces: [IND-Ernakulam, IND-Thrissur]
+  timeline:
+    - {from: 1453, owner: "cochin", note: "カリカットのザモリンに従っていた"}
+    - {from: 1503, owner: "cochin", cause: "ポルトガルがコーチンに要塞（マヌエル砦）を築く。コーチン王はポルトガルと結んでザモリンに対抗した", note: "コーチン王はポルトガルの保護を受けた（1663年からオランダ）", source: "https://en.wikipedia.org/wiki/Portuguese_Cochin"}
+
+- id: pre_calicut
+  name: "カリカット（ザモリン）"
+  until: 1647
+  select:
+    pieces: [IND-Kozhikode, IND-Malappuram, IND-Palakkad]
+  timeline:
+    - {from: 1453, owner: "calicut", note: "香辛料貿易で栄えた港町。アラブ商人の拠点で、1498年にヴァスコ・ダ・ガマが来た"}
+
+- id: pre_kolathunadu
+  name: "北マラバール（コーラッティリ）"
+  until: 1647
+  select:
+    pieces: [IND-Kannur, IND-Wayanad, IND-Kasaragod, IND-Mahe]
+  timeline:
+    - {from: 1453, owner: "kolathunadu", note: "カンナノールに1505年からポルトガルの砦（聖アンジェロ砦）"}
+
+- id: pre_lakshadweep
+  name: "ラクシャドウィープ"
+  until: 1647
+  select:
+    pieces: [IND-Lakshadweep]
+  timeline:
+    - {from: 1453, owner: "kolathunadu", certainty: "uncertain"}
+    - {from: 1545, owner: "arakkal", cause: "島々がコーラッティリからカンナノールのアラッカル家に渡る", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Arakkal_kingdom"}
+
+- id: pre_andaman_nicobar
+  name: "アンダマン・ニコバル諸島"
+  until: 1647
+  select:
+    pieces: [IND-South_Andaman, IND-North_Middle_Andaman, IND-Nicobars]
+  timeline:
+    - {from: 1453, owner: null, note: "先住の人々の島々"}
+
+# ---------------------------------------------------------------- スリランカ
+- id: pre_lk_colombo
+  name: "コロンボ（コーッテ）"
+  until: 1647
+  select:
+    pieces: [LKA-Colombo_District]
+  timeline:
+    - {from: 1453, owner: "kotte", note: "都コーッテ（スリー・ジャヤワルダナプラ・コーッテ）"}
+    - {from: 1551, owner: "kotte", overlord: "portugal", cause: "ダルマパーラがポルトガルの後ろ盾で王となる", note: "コロンボのポルトガル要塞は1554年に再び築かれた。1565年に王はコーッテを捨ててコロンボに移った", source: "https://en.wikipedia.org/wiki/Dharmapala_of_Kotte"}
+    - {from: 1597, owner: "portugal", label: "ポルトガル領セイロン", cause: "ダルマパーラの死（5月）。遺言でコーッテ王国がポルトガル王のものとなる（マルワーナ協定）", source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"}
+
+- id: pre_lk_west
+  name: "ガンパハ・カルタラ"
+  until: 1647
+  select:
+    pieces: [LKA-Gampaha_District, LKA-Kalutara_District]
+  timeline:
+    - {from: 1453, owner: "kotte"}
+    - {from: 1565, owner: "sitawaka", certainty: "uncertain", cause: "シーターワカ王マーヤーダンネとその子ラージャシンハがコーッテの地を奪う。コーッテ王はコロンボの要塞に移る", source: "https://en.wikipedia.org/wiki/Kingdom_of_Sitawaka"}
+    - {from: 1594, owner: "kotte", overlord: "portugal", cause: "ラージャシンハ1世の死（1593）でシーターワカ王国が崩れ、ポルトガル軍が低地を取る", source: "https://en.wikipedia.org/wiki/Kingdom_of_Sitawaka"}
+    - {from: 1597, owner: "portugal", label: "ポルトガル領セイロン", cause: "ダルマパーラの死。遺言でコーッテ王国がポルトガル王のものとなる", source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"}
+
+- id: pre_lk_sabaragamuwa
+  name: "シーターワカ・サバラガムワ（ケーガッラ・ラトナプラ）"
+  until: 1647
+  select:
+    pieces: [LKA-Kegalle_District, LKA-Ratnapura_District]
+  timeline:
+    - {from: 1453, owner: "kotte"}
+    - {from: 1521, owner: "sitawaka", cause: "コーッテ王ヴィジャヤバーフ6世が3人の王子に殺され（ヴィジャヤバー・コッラヤ）、マーヤーダンネがシーターワカで王となる", source: "https://en.wikipedia.org/wiki/Vijayabā_Kollaya"}
+    - {from: 1594, owner: "portugal", certainty: "uncertain", cause: "シーターワカ王国が崩れ、ポルトガルが内陸のサバラガムワ・四コーラレに進む", source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"}
+    - {from: 1638, owner: "kandy", certainty: "uncertain", cause: "ガンノルワの戦い（3月）でキャンディ軍がポルトガル軍を破る。境の地はキャンディ王の支配に戻った", source: "https://en.wikipedia.org/wiki/Battle_of_Gannoruwa"}
+
+- id: pre_lk_seven_korales
+  name: "七コーラレ・プッタラム"
+  until: 1647
+  select:
+    pieces: [LKA-Kurunegala_District, LKA-Puttalam_District]
+  timeline:
+    - {from: 1453, owner: "kotte"}
+    - {from: 1565, owner: "sitawaka", certainty: "uncertain", cause: "シーターワカ王国がコーッテの地を奪う", source: "https://en.wikipedia.org/wiki/Kingdom_of_Sitawaka"}
+    - {from: 1594, owner: "portugal", certainty: "uncertain", cause: "シーターワカ王国が崩れ、ポルトガルが七コーラレに進む", source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"}
+    - {from: 1638, owner: "kandy", cause: "ガンノルワの戦いでポルトガル軍が敗れ、キャンディ王の支配に戻る", source: "https://en.wikipedia.org/wiki/Battle_of_Gannoruwa"}
+
+- id: pre_lk_south
+  name: "ゴール・マータラ"
+  until: 1647
+  select:
+    pieces: [LKA-Galle_District, LKA-Matara_District]
+  timeline:
+    - {from: 1453, owner: "kotte"}
+    - {from: 1565, owner: "sitawaka", certainty: "uncertain", cause: "シーターワカ王国がコーッテの地を奪う", source: "https://en.wikipedia.org/wiki/Kingdom_of_Sitawaka"}
+    - {from: 1594, owner: "kotte", overlord: "portugal", cause: "シーターワカ王国が崩れ、ポルトガル軍が南部を取る", note: "ゴールには1587年からポルトガルの砦があった", source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"}
+    - {from: 1597, owner: "portugal", label: "ポルトガル領セイロン", cause: "ダルマパーラの死。遺言でコーッテ王国がポルトガル王のものとなる", source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"}
+    - {from: 1640, owner: "netherlands", cause: "オランダ東インド会社がキャンディ王と結んでゴールを攻め落とす（3月）", source: "https://en.wikipedia.org/wiki/Dutch_Ceylon"}
+
+- id: pre_lk_hambantota
+  name: "ハンバントタ（ルフナ）"
+  until: 1647
+  select:
+    pieces: [LKA-Hambantota_District]
+  timeline:
+    - {from: 1453, owner: "kotte"}
+    - {from: 1565, owner: "sitawaka", certainty: "uncertain", cause: "シーターワカ王国がコーッテの地を奪う", source: "https://en.wikipedia.org/wiki/Kingdom_of_Sitawaka"}
+    - {from: 1594, owner: "portugal", certainty: "uncertain", cause: "シーターワカ王国が崩れる。南部のマータラ地方はポルトガルの支配下に入った", source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"}
+    - {from: 1638, owner: "kandy", cause: "ガンノルワの戦いの後、キャンディ王の支配に戻る", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Battle_of_Gannoruwa"}
+
+- id: pre_lk_kandy
+  name: "キャンディ（山地）・ウヴァ"
+  until: 1647
+  select:
+    pieces: [LKA-Kandy_District, LKA-Matale_District, LKA-Nuwara_Eliya_District, LKA-Badulla_District, LKA-Monaragala_District, LKA-Ampara_District]
+  timeline:
+    - {from: 1453, owner: "kotte", note: "山地（ウダ・ラタ）はコーッテ王に従った"}
+    - {from: 1469, owner: "kandy", cause: "セーナサンマタ・ヴィクラマバーフが山地で自立し、のちセンカダガラ（キャンディ）を都とする", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Kingdom_of_Kandy"}
+    - {from: 1582, owner: "sitawaka", cause: "シーターワカ王ラージャシンハ1世がキャンディを併合する", source: "https://en.wikipedia.org/wiki/Rajasinghe_I"}
+    - {from: 1591, owner: "kandy", cause: "コナップ・バンダーラ（ヴィマラダルマスーリヤ1世）がキャンディの王となる", source: "https://en.wikipedia.org/wiki/Vimaladharmasuriya_I"}
+
+- id: pre_lk_rajarata
+  name: "ラジャラタ（アヌラーダプラ・ポロンナルワ）"
+  until: 1647
+  select:
+    pieces: [LKA-Anuradhapura_District, LKA-Polonnaruwa_District]
+  timeline:
+    - {from: 1453, owner: "kotte", certainty: "nominal", note: "古都の地。ヴァンニの首長たちが治めた"}
+    - {from: 1469, owner: "kandy", certainty: "uncertain", cause: "キャンディ王国の自立", source: "https://en.wikipedia.org/wiki/Kingdom_of_Kandy"}
+
+- id: pre_lk_east
+  name: "トリンコマリー・バッティカロア"
+  until: 1647
+  select:
+    pieces: [LKA-Trincomalee_District, LKA-Batticaloa_District]
+  timeline:
+    - {from: 1453, owner: "kotte", certainty: "nominal", note: "ヴァンニヤールの首長たちの地"}
+    - {from: 1469, owner: "kandy", certainty: "uncertain", cause: "キャンディ王国の自立", note: "ポルトガルが1624年にトリンコマリー、1628年にバッティカロアに砦を築いたが、オランダが1638–39年に奪った", source: "https://en.wikipedia.org/wiki/Kingdom_of_Kandy"}
+
+- id: pre_lk_jaffna
+  name: "ジャフナ・マンナール"
+  until: 1647
+  select:
+    pieces: [LKA-Jaffna_District, LKA-Kilinochchi_District, LKA-Mannar_District]
+  timeline:
+    - {from: 1453, owner: "kotte", note: "1450年ごろコーッテ王国のサプマル王子がジャフナ王国を従え、ジャフナを治めた"}
+    - {from: 1467, owner: "jaffna", cause: "パラークラマバーフ6世の死の後、アーリヤチャクラヴァルティ家がジャフナ王国を取り戻す", source: "https://en.wikipedia.org/wiki/Jaffna_Kingdom"}
+    - {from: 1591, owner: "jaffna", overlord: "portugal", cause: "ポルトガルの遠征で王が殺され、エティリマナ・チンカムが立てられてポルトガルに貢納する", note: "マンナール島は1560年からポルトガルの要塞", source: "https://en.wikipedia.org/wiki/Ethirimana_Cinkam"}
+    - {from: 1619, owner: "portugal", label: "ポルトガル領セイロン", cause: "ポルトガルがサンキリ2世を捕らえ、ジャフナ王国を併合する", source: "https://en.wikipedia.org/wiki/Cankili_II"}
+
+- id: pre_lk_wanni
+  name: "ヴァンニ"
+  until: 1647
+  select:
+    pieces: [LKA-Mullaitivu_District, LKA-Vavuniya_District]
+  timeline:
+    - {from: 1453, owner: "kotte", certainty: "nominal", note: "ヴァンニヤールと呼ばれる首長たちの地"}
+    - {from: 1467, owner: "jaffna", certainty: "nominal", cause: "ジャフナ王国の復活", source: "https://en.wikipedia.org/wiki/Jaffna_Kingdom"}
+    - {from: 1619, owner: "kandy", certainty: "nominal", cause: "ジャフナ王国の滅亡。ヴァンニの首長たちはキャンディ王に名目上従った", source: "https://en.wikipedia.org/wiki/Vanni_chieftaincies"}
+
+# ---------------------------------------------------------------- モルディブ
+- id: pre_maldives
+  name: "モルディブ"
+  until: 1647
+  select:
+    iso_all: [MDV]
+  timeline:
+    - {from: 1453, owner: "maldives"}
+    - {from: 1558, owner: "portugal", certainty: "occupied", cause: "ポルトガルがマーレを占領し、スルタンのアリー6世が戦死する", source: "https://en.wikipedia.org/wiki/Muhammad_Thakurufaanu_Al_Auzam"}
+    - {from: 1573, owner: "maldives", cause: "ムハンマド・タクルファーヌがポルトガル人をマーレから追い、スルタンとなる", source: "https://en.wikipedia.org/wiki/Muhammad_Thakurufaanu_Al_Auzam"}
