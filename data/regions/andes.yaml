@@ -2755,3 +2755,662 @@
       label: "フランス海外県（ギアナ）"
       cause: "フランスの海外県となる"
       source: "https://ja.wikipedia.org/wiki/フランス領ギアナ"
+
+
+# ============================================================
+# W3 1453–1647（南米北部・アンデス）
+# 1648 年より前だけの地域（until: 1647）。1648 年以降は上の地域が効く。どのピースもここの1つの地域だけに入る。
+# scratchpad/w3/gen.py で生成した（手で直してもよい）。
+
+- id: pre_per_cusco
+  name: "クスコ（インカの都）"
+  until: 1647
+  select:
+    pieces: [PER-Cusco]
+  timeline:
+    - {from: 1453, owner: "inca", note: "インカ帝国の都クスコ。パチャクティ（1438–71）が国家を作り直し、征服を始めた。インカの年代はおもにロウの年代による（諸説あり）", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "11月、ピサロがクスコに入る。インカ帝国は滅び、スペインはマンコ・インカを傀儡の皇帝に立てる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1536, owner: "spain", certainty: "uncertain", label: "マンコ・インカの反乱", cause: "5月、マンコ・インカが反乱を起こし、クスコを包囲する（翌年4月まで）", source: "https://ja.wikipedia.org/wiki/マンコ・インカ・ユパンキ"}
+    - {from: 1537, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "マンコはビルカバンバに退く（新インカ国、〜1572）。アルマグロがクスコを奪い、ピサロ派と争う", note: "ビルカバンバの新インカ国はクスコ県北西部（今のラ・コンベンシオン郡）の山地にあったが、ピースが分けられないので塗っていない", source: "https://ja.wikipedia.org/wiki/ビルカバンバ"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_inca_core
+  name: "アプリマク・アヤクーチョ・ワンカベリカ"
+  until: 1647
+  select:
+    pieces: [PER-Apurimac, PER-Ayacucho, PER-Huancavelica]
+  timeline:
+    - {from: 1453, owner: "inca", note: "チャンカ人を破った（1438ごろ）のちのインカの中心部", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1536, owner: "neo_inca", certainty: "uncertain", cause: "マンコ・インカの反乱軍が山地を押さえ、リマにも迫る", source: "https://ja.wikipedia.org/wiki/マンコ・インカ・ユパンキ"}
+    - {from: 1537, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "反乱が退けられ、マンコはビルカバンバに退く", source: "https://ja.wikipedia.org/wiki/ビルカバンバ"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_puno
+  name: "プーノ（コリャオ）"
+  until: 1647
+  select:
+    pieces: [PER-Puno]
+  timeline:
+    - {from: 1453, owner: "inca", certainty: "uncertain", note: "ティティカカ湖のまわりのアイマラ系の王国（コリャ・ルパカ）。パチャクティが従えたが反乱が続いた", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1460, owner: "inca", cause: "ティティカカ湖畔のコリャ・ルパカがインカに服する", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_central
+  name: "ペルー中部山地"
+  until: 1647
+  select:
+    pieces: [PER-Junin, PER-Pasco, PER-Huanuco, PER-Ancash]
+  timeline:
+    - {from: 1453, owner: null, note: "ワンカなどの首長国が分立していた"}
+    - {from: 1460, owner: "inca", cause: "パチャクティの軍が中部山地（ワンカ・ワイラスなど）を征服する", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_south
+  name: "アレキパ・モケグア・タクナ"
+  until: 1647
+  select:
+    pieces: [PER-Arequipa, PER-Moquegua, PER-Candarave, PER-Jorge_Basadre, PER-Tacna_Province, PER-Tarata]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1460, owner: "inca", cause: "インカが南部の山地と海岸に広がる", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", certainty: "uncertain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1540, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "アレキパ建設（8月）", source: "https://ja.wikipedia.org/wiki/アレキパ"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_coast
+  name: "リマ・イカ（中部海岸）"
+  until: 1647
+  select:
+    pieces: [PER-Lima, PER-Municipalidad_Metropolitana_de_Lima, PER-El_Callao, PER-Ica]
+  timeline:
+    - {from: 1453, owner: null, note: "イチマ（パチャカマックの神殿）・チンチャなどの首長国"}
+    - {from: 1470, owner: "inca", cause: "トゥパック・ユパンキが中部海岸のイチマ・チンチャを従える", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領", cause: "インディアス新法でペルー副王領が置かれる（11月。都はリマ）", source: "https://ja.wikipedia.org/wiki/ペルー副王領"}
+
+- id: pre_per_chimu_n
+  name: "トゥンベス・ピウラ"
+  until: 1647
+  select:
+    pieces: [PER-Tumbes, PER-Piura]
+  timeline:
+    - {from: 1453, owner: "chimu", source: "https://ja.wikipedia.org/wiki/チムー王国"}
+    - {from: 1470, owner: "inca", cause: "インカがチムー王国を征服する", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1532, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "ピサロがトゥンベスに上陸し、サン・ミゲル・デ・ピウラを建設する", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_chimu_s
+  name: "ランバイェケ・ラ・リベルタ（チムーの中心）"
+  until: 1647
+  select:
+    pieces: [PER-Lambayeque, PER-La_Libertad]
+  timeline:
+    - {from: 1453, owner: "chimu", note: "チムー王国の都チャン・チャン（今のトルヒーリョ）", source: "https://ja.wikipedia.org/wiki/チャン・チャン"}
+    - {from: 1470, owner: "inca", cause: "トゥパック・ユパンキがチャン・チャンを落とし、チムー王国を征服する（1470ごろ）", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_cajamarca
+  name: "カハマルカ"
+  until: 1647
+  select:
+    pieces: [PER-Cajamarca]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1463, owner: "inca", cause: "トゥパック・ユパンキがカハマルカを征服する", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1532, owner: "spain", certainty: "uncertain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "11月16日、ピサロがカハマルカでアタワルパを捕らえる", source: "https://ja.wikipedia.org/wiki/カハマルカの戦い"}
+    - {from: 1533, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_chachapoyas
+  name: "チャチャポヤス"
+  until: 1647
+  select:
+    pieces: [PER-Amazonas]
+  timeline:
+    - {from: 1453, owner: null, note: "チャチャポヤ人（「雲の戦士」）"}
+    - {from: 1475, owner: "inca", cause: "インカがチャチャポヤを征服する", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", certainty: "nominal", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1538, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "チャチャポヤス建設", source: "https://ja.wikipedia.org/wiki/チャチャポヤス"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_san_martin
+  name: "サン・マルティン（モヨバンバ）"
+  until: 1647
+  select:
+    pieces: [PER-San_Martin]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1540, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "モヨバンバ建設", source: "https://en.wikipedia.org/wiki/Moyobamba"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_per_loreto
+  name: "マイナス（ロレト）"
+  until: 1647
+  select:
+    pieces: [PER-Datem_del_Maranon, PER-Loreto_Province, PER-Maynas, PER-Putumayo, PER-Alto_Amazonas, PER-Requena, PER-Ucayali_Province, PER-Mariscal_Ramon_Castilla]
+  timeline:
+    - {from: 1453, owner: null, note: "アマゾン低地の先住民の地"}
+    - {from: 1619, owner: "spain", certainty: "nominal", label: "マイナス（キト）", cause: "ボルハが建設され、マイナス総督領が置かれる", source: "https://en.wikipedia.org/wiki/Borja,_Peru"}
+
+- id: pre_per_selva
+  name: "ウカヤリ・マドレ・デ・ディオス"
+  until: 1647
+  select:
+    pieces: [PER-Ucayali, PER-Madre_de_Dios]
+  timeline:
+    - {from: 1453, owner: null, note: "アマゾン低地の先住民の地。1647年までスペインの町はなかった"}
+
+- id: pre_ecu_south
+  name: "クエンカ・ロハ（カニャリ）"
+  until: 1647
+  select:
+    pieces: [ECU-Loja, ECU-Azuay, ECU-Canar]
+  timeline:
+    - {from: 1453, owner: null, note: "カニャリ・パルタの首長国"}
+    - {from: 1463, owner: "inca", cause: "トゥパック・ユパンキがカニャリを征服し、トメバンバ（今のクエンカ）を築く", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "inca", certainty: "uncertain", cause: "アタワルパの処刑（7月）ののち、将軍ルミニャウイがキトで抵抗を続ける", source: "https://ja.wikipedia.org/wiki/ルミニャウイ"}
+    - {from: 1534, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "ベナルカサルがルミニャウイを破り、12月にサン・フランシスコ・デ・キトを建設する", source: "https://ja.wikipedia.org/wiki/キト"}
+    - {from: 1542, owner: "spain", label: "キト（ペルー副王領）"}
+    - {from: 1557, owner: "spain", label: "クエンカ（ペルー副王領）", cause: "クエンカ建設", source: "https://ja.wikipedia.org/wiki/クエンカ_(エクアドル)"}
+
+- id: pre_ecu_central
+  name: "エクアドル中部山地"
+  until: 1647
+  select:
+    pieces: [ECU-Chimborazo, ECU-Bolivar, ECU-Tungurahua, ECU-Cotopaxi]
+  timeline:
+    - {from: 1453, owner: null, note: "プルワなどの首長国"}
+    - {from: 1475, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "inca", certainty: "uncertain", cause: "アタワルパの処刑（7月）ののち、将軍ルミニャウイがキトで抵抗を続ける", source: "https://ja.wikipedia.org/wiki/ルミニャウイ"}
+    - {from: 1534, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "ベナルカサルがルミニャウイを破り、12月にサン・フランシスコ・デ・キトを建設する", source: "https://ja.wikipedia.org/wiki/キト"}
+    - {from: 1542, owner: "spain", label: "キト（ペルー副王領）"}
+
+- id: pre_ecu_quito
+  name: "キト"
+  until: 1647
+  select:
+    pieces: [ECU-Pichincha]
+  timeline:
+    - {from: 1453, owner: null, note: "キトゥの首長国"}
+    - {from: 1490, owner: "inca", cause: "インカがキトを征服する。のちにワイナ・カパックが北の拠点とした", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "inca", certainty: "uncertain", cause: "アタワルパの処刑（7月）ののち、将軍ルミニャウイがキトで抵抗を続ける", source: "https://ja.wikipedia.org/wiki/ルミニャウイ"}
+    - {from: 1534, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "ベナルカサルがルミニャウイを破り、12月にサン・フランシスコ・デ・キトを建設する", source: "https://ja.wikipedia.org/wiki/キト"}
+    - {from: 1542, owner: "spain", label: "キト（ペルー副王領）"}
+
+- id: pre_ecu_north
+  name: "イバラ・カルチ（カランキ）"
+  until: 1647
+  select:
+    pieces: [ECU-Imbabura, ECU-Carchi]
+  timeline:
+    - {from: 1453, owner: null, note: "カランキの首長国"}
+    - {from: 1500, owner: "inca", cause: "ワイナ・カパックが長い戦いの末にカランキを征服する（ヤワルコチャの戦い）", note: "年代は諸説ある（1490年代〜1510年代）", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "inca", certainty: "uncertain", cause: "アタワルパの処刑（7月）ののち、将軍ルミニャウイがキトで抵抗を続ける", source: "https://ja.wikipedia.org/wiki/ルミニャウイ"}
+    - {from: 1534, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "ベナルカサルがルミニャウイを破り、12月にサン・フランシスコ・デ・キトを建設する", source: "https://ja.wikipedia.org/wiki/キト"}
+    - {from: 1542, owner: "spain", label: "キト（ペルー副王領）"}
+
+- id: pre_ecu_tsachila
+  name: "サント・ドミンゴ"
+  until: 1647
+  select:
+    pieces: [ECU-Santo_Domingo_de_los_Tsachilas]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1534, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）"}
+    - {from: 1542, owner: "spain", label: "キト（ペルー副王領）"}
+
+- id: pre_ecu_esmeraldas
+  name: "エスメラルダス"
+  until: 1647
+  select:
+    pieces: [ECU-Esmeraldas]
+  timeline:
+    - {from: 1453, owner: null, note: "1553年ごろから、難破した奴隷船のアフリカ人（サンボ）がアロンソ・デ・イリェスカスのもとで先住民と結び、自立した"}
+    - {from: 1599, owner: "spain", label: "キト（ペルー副王領）", cause: "エスメラルダスのサンボの首長たちがスペインに服する", source: "https://en.wikipedia.org/wiki/Alonso_de_Illescas"}
+
+- id: pre_ecu_manabi
+  name: "マナビ"
+  until: 1647
+  select:
+    pieces: [ECU-Manabi]
+  timeline:
+    - {from: 1453, owner: null, note: "マンテーニョの首長国"}
+    - {from: 1535, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "ポルトビエホ建設", source: "https://en.wikipedia.org/wiki/Portoviejo"}
+    - {from: 1542, owner: "spain", label: "グアヤキル（ペルー副王領）"}
+
+- id: pre_ecu_guayas
+  name: "グアヤキル"
+  until: 1647
+  select:
+    pieces: [ECU-Guayas, ECU-Santa_Elena, ECU-Los_Rios]
+  timeline:
+    - {from: 1453, owner: null, note: "ワンカビルカの首長国。プナ島の首長国"}
+    - {from: 1535, owner: "spain", certainty: "uncertain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "グアヤキルが建設される（先住民の反抗で移転をくり返す）", source: "https://ja.wikipedia.org/wiki/グアヤキル"}
+    - {from: 1542, owner: "spain", certainty: "uncertain", label: "グアヤキル（ペルー副王領）"}
+    - {from: 1547, owner: "spain", label: "グアヤキル（ペルー副王領）", cause: "グアヤキルが今の場所に定まる", source: "https://ja.wikipedia.org/wiki/グアヤキル"}
+
+- id: pre_ecu_el_oro
+  name: "エル・オロ"
+  until: 1647
+  select:
+    pieces: [ECU-El_Oro]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1470, owner: "inca", cause: "インカがトゥンベス地方を従える", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "inca", certainty: "uncertain", cause: "アタワルパの処刑（7月）ののち、将軍ルミニャウイがキトで抵抗を続ける", source: "https://ja.wikipedia.org/wiki/ルミニャウイ"}
+    - {from: 1534, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）"}
+    - {from: 1542, owner: "spain", label: "グアヤキル（ペルー副王領）"}
+
+- id: pre_ecu_oriente
+  name: "エクアドル東部（オリエンテ）"
+  until: 1647
+  select:
+    pieces: [ECU-Sucumbios, ECU-Napo, ECU-Orellana, ECU-Pastaza, ECU-Morona_Santiago, ECU-Zamora_Chinchipe]
+  timeline:
+    - {from: 1453, owner: null, note: "アマゾン低地の先住民（シュアールなど）の地"}
+    - {from: 1549, owner: "spain", certainty: "nominal", label: "キト（ペルー副王領）", cause: "サモラ（1549）・バエサ（1559）・マカス（1575）など東麓に町が建てられる", source: "https://en.wikipedia.org/wiki/Quijos"}
+
+- id: pre_ecu_galapagos
+  name: "ガラパゴス諸島"
+  until: 1647
+  select:
+    pieces: [ECU-Galapagos]
+  timeline:
+    - {from: 1453, owner: null, note: "無人島。1535年にパナマ司教ベルランガが漂着して発見した"}
+
+- id: pre_col_muisca_zipa
+  name: "ボゴタ（ムイスカのジパ）"
+  until: 1647
+  select:
+    pieces: [COL-Bogota_Capital_District, COL-Cundinamarca]
+  timeline:
+    - {from: 1453, owner: "muisca", note: "ムイスカの南の首長国（ジパ、都はバカタ）", source: "https://ja.wikipedia.org/wiki/ムイスカ"}
+    - {from: 1537, owner: "spain", certainty: "uncertain", label: "ヌエバ・グラナダ", cause: "ヒメネス・デ・ケサーダがムイスカの地に入り、ジパとサケを破る", source: "https://ja.wikipedia.org/wiki/ゴンサロ・ヒメネス・デ・ケサーダ"}
+    - {from: 1538, owner: "spain", label: "ヌエバ・グラナダ", cause: "8月、サンタフェ・デ・ボゴタを建設する", source: "https://ja.wikipedia.org/wiki/ボゴタ"}
+    - {from: 1542, owner: "spain", label: "ヌエバ・グラナダ（ペルー副王領）"}
+
+- id: pre_col_muisca_zaque
+  name: "トゥンハ（ムイスカのサケ）"
+  until: 1647
+  select:
+    pieces: [COL-Boyaca]
+  timeline:
+    - {from: 1453, owner: "muisca", note: "ムイスカの北の首長国（サケ、都はフンサ＝今のトゥンハ）", source: "https://ja.wikipedia.org/wiki/ムイスカ"}
+    - {from: 1537, owner: "spain", certainty: "uncertain", label: "ヌエバ・グラナダ", cause: "8月、ヒメネス・デ・ケサーダがフンサ（トゥンハ）を奪う", source: "https://ja.wikipedia.org/wiki/ゴンサロ・ヒメネス・デ・ケサーダ"}
+    - {from: 1538, owner: "spain", label: "ヌエバ・グラナダ"}
+    - {from: 1542, owner: "spain", label: "ヌエバ・グラナダ（ペルー副王領）"}
+
+- id: pre_col_pijao
+  name: "トリマ・ウイラ（ピハオ）"
+  until: 1647
+  select:
+    pieces: [COL-Tolima, COL-Huila]
+  timeline:
+    - {from: 1453, owner: null, note: "ピハオ人などの地"}
+    - {from: 1550, owner: "spain", certainty: "uncertain", label: "ヌエバ・グラナダ（ペルー副王領）", cause: "イバゲ建設。ピハオ人の抵抗が続く", source: "https://en.wikipedia.org/wiki/Pijao_people"}
+    - {from: 1608, owner: "spain", label: "ヌエバ・グラナダ（ペルー副王領）", cause: "ピハオ戦争が終わる（1607–12）", source: "https://en.wikipedia.org/wiki/Pijao_people"}
+
+- id: pre_col_santander
+  name: "サンタンデール"
+  until: 1647
+  select:
+    pieces: [COL-Santander]
+  timeline:
+    - {from: 1453, owner: null, note: "グアネ人の地"}
+    - {from: 1539, owner: "spain", label: "ヌエバ・グラナダ", cause: "ベレス建設"}
+    - {from: 1542, owner: "spain", label: "ヌエバ・グラナダ（ペルー副王領）"}
+
+- id: pre_col_norte_santander
+  name: "ノルテ・デ・サンタンデール"
+  until: 1647
+  select:
+    pieces: [COL-Norte_de_Santander]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1549, owner: "spain", label: "ヌエバ・グラナダ（ペルー副王領）", cause: "パンプローナ建設", source: "https://en.wikipedia.org/wiki/Pamplona,_Colombia"}
+
+- id: pre_col_antioquia
+  name: "アンティオキア・カルダス"
+  until: 1647
+  select:
+    pieces: [COL-Antioquia, COL-Caldas, COL-Risaralda, COL-Quindio]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1540, owner: "spain", label: "ポパヤン（ベナルカサルの総督領）", cause: "アンセルマ（1539）・カルタゴ（1540）・サンタ・フェ・デ・アンティオキア（1541）が建てられる", source: "https://en.wikipedia.org/wiki/Jorge_Robledo_(conquistador)"}
+    - {from: 1542, owner: "spain", label: "ヌエバ・グラナダ（ペルー副王領）"}
+
+- id: pre_col_choco
+  name: "チョコ（ダリエン）"
+  until: 1647
+  select:
+    pieces: [COL-Choco]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1510, owner: "castile", certainty: "uncertain", label: "カスティーリャ・デル・オロ（ダリエン）", cause: "ウラバ湾の西にサンタ・マリア・ラ・アンティグア・デル・ダリエンが建てられる（大陸で最初のスペイン人の町）", source: "https://en.wikipedia.org/wiki/Santa_María_la_Antigua_del_Darién"}
+    - {from: 1516, owner: "spain", certainty: "uncertain", label: "カスティーリャ・デル・オロ（ダリエン）"}
+    - {from: 1524, owner: null, cause: "サンタ・マリアが放棄され、中心がパナマに移る", source: "https://en.wikipedia.org/wiki/Santa_María_la_Antigua_del_Darién"}
+    - {from: 1540, owner: "spain", certainty: "nominal", label: "ポパヤン（ベナルカサルの総督領）", note: "太平洋岸の密林。征服は17世紀後半"}
+    - {from: 1542, owner: "spain", certainty: "nominal", label: "ポパヤン（ペルー副王領）"}
+
+- id: pre_col_popayan
+  name: "ポパヤン・カリ"
+  until: 1647
+  select:
+    pieces: [COL-Valle_del_Cauca, COL-Cauca]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1536, owner: "spain", label: "ポパヤン（ベナルカサルの総督領）", cause: "ベナルカサルがカリ（1536）・ポパヤン（1537）を建設する", source: "https://ja.wikipedia.org/wiki/セバスティアン・デ・ベラルカサル"}
+    - {from: 1542, owner: "spain", label: "ポパヤン（ペルー副王領）"}
+
+- id: pre_col_pasto
+  name: "パスト"
+  until: 1647
+  select:
+    pieces: [COL-Narino]
+  timeline:
+    - {from: 1453, owner: null, note: "パストの首長国。インカ帝国の北の境（アンカスマヨ川）に接した"}
+    - {from: 1539, owner: "spain", label: "ポパヤン（ベナルカサルの総督領）", cause: "パストが今の場所に建てられる"}
+    - {from: 1542, owner: "spain", label: "パスト（ペルー副王領）"}
+
+- id: pre_col_cartagena
+  name: "カルタヘナ"
+  until: 1647
+  select:
+    pieces: [COL-Bolivar, COL-Atlantico]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1533, owner: "spain", label: "カルタヘナ", cause: "6月、ペドロ・デ・エレディアがカルタヘナを建設する", source: "https://ja.wikipedia.org/wiki/カルタヘナ_(コロンビア)"}
+    - {from: 1542, owner: "spain", label: "カルタヘナ（ペルー副王領）"}
+
+- id: pre_col_sinu
+  name: "シヌー（スクレ・コルドバ）"
+  until: 1647
+  select:
+    pieces: [COL-Sucre, COL-Cordoba]
+  timeline:
+    - {from: 1453, owner: null, note: "セヌー（シヌー）の首長国"}
+    - {from: 1535, owner: "spain", label: "カルタヘナ", cause: "トルー建設。エレディアがシヌーの墓を荒らして金を奪う"}
+    - {from: 1542, owner: "spain", label: "カルタヘナ（ペルー副王領）"}
+
+- id: pre_col_santa_marta
+  name: "サンタ・マルタ"
+  until: 1647
+  select:
+    pieces: [COL-Magdalena]
+  timeline:
+    - {from: 1453, owner: null, note: "タイロナの首長国"}
+    - {from: 1525, owner: "spain", label: "サンタ・マルタ", cause: "ロドリゴ・デ・バスティダスがサンタ・マルタを建設する（コロンビアで最古のスペイン人の町）", source: "https://ja.wikipedia.org/wiki/サンタ・マルタ"}
+    - {from: 1542, owner: "spain", label: "サンタ・マルタ（ペルー副王領）"}
+
+- id: pre_col_guajira
+  name: "グアヒラ・セサル"
+  until: 1647
+  select:
+    pieces: [COL-Cesar, COL-La_Guajira]
+  timeline:
+    - {from: 1453, owner: null, note: "ワユーなどの地"}
+    - {from: 1545, owner: "spain", label: "サンタ・マルタ（ペルー副王領）", cause: "リオアチャ（1545）・バリェドゥパル（1550）が建てられる"}
+
+- id: pre_col_llanos
+  name: "東部平原（リャノス）"
+  until: 1647
+  select:
+    pieces: [COL-Casanare, COL-Arauca, COL-Meta]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1555, owner: "spain", certainty: "nominal", label: "ヌエバ・グラナダ（ペルー副王領）", cause: "サン・フアン・デ・ロス・リャノス建設"}
+    - {from: 1588, owner: "spain", label: "平原（リャノス）（ペルー副王領）", cause: "サンティアゴ・デ・ラス・アタラヤス建設"}
+
+- id: pre_col_amazon
+  name: "カケタ・プトゥマヨ"
+  until: 1647
+  select:
+    pieces: [COL-Caqueta, COL-Putumayo]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1563, owner: "spain", certainty: "nominal", label: "ポパヤン（ペルー副王領）", cause: "モコア建設"}
+
+- id: pre_col_east
+  name: "コロンビア東部・アマゾン"
+  until: 1647
+  select:
+    pieces: [COL-Vichada, COL-Guainia, COL-Vaupes, COL-Guaviare, COL-Amazonas]
+  timeline:
+    - {from: 1453, owner: null, note: "オリノコ・アマゾン低地の先住民の地。1647年までスペインの町はなかった"}
+
+- id: pre_col_providencia
+  name: "プロビデンシア島"
+  until: 1647
+  select:
+    pieces: [COL-Archipielago_de_San_Andres_Providencia_y_Santa_Catalina]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1630, owner: "britain", label: "プロヴィデンス島植民地", cause: "イングランドのピューリタンのプロヴィデンス島会社が入植する", source: "https://en.wikipedia.org/wiki/Providence_Island_colony"}
+    - {from: 1641, owner: "spain", certainty: "nominal", label: "", cause: "5月、スペイン軍がプロヴィデンス島を占領する", source: "https://en.wikipedia.org/wiki/Providence_Island_colony"}
+
+- id: pre_ven_margarita
+  name: "マルガリータ・クバグア"
+  until: 1647
+  select:
+    pieces: [VEN-Nueva_Esparta]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1516, owner: "spain", label: "クバグア（真珠海岸）", cause: "クバグア島の真珠採取が本格化し、ヌエバ・カディスの町ができる", source: "https://en.wikipedia.org/wiki/Nueva_Cádiz"}
+    - {from: 1525, owner: "spain", label: "マルガリータ州", cause: "マルガリータ島の入植が始まる"}
+
+- id: pre_ven_cumana
+  name: "クマナ"
+  until: 1647
+  select:
+    pieces: [VEN-Sucre]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1523, owner: "spain", label: "クマナ", cause: "クマナに砦が築かれる", source: "https://ja.wikipedia.org/wiki/クマナ"}
+    - {from: 1568, owner: "spain", label: "ヌエバ・アンダルシア州（クマナ）", cause: "ヌエバ・アンダルシア州が置かれる"}
+
+- id: pre_ven_east
+  name: "アンソアテギ・モナガス"
+  until: 1647
+  select:
+    pieces: [VEN-Anzoategui, VEN-Monagas]
+  timeline:
+    - {from: 1453, owner: null, note: "クマナゴトなどカリブ系の人々の地"}
+    - {from: 1568, owner: "spain", certainty: "nominal", label: "ヌエバ・アンダルシア州（クマナ）"}
+
+- id: pre_ven_coro
+  name: "コロ"
+  until: 1647
+  select:
+    pieces: [VEN-Falcon]
+  timeline:
+    - {from: 1453, owner: null, note: "カケティオの首長国"}
+    - {from: 1527, owner: "spain", label: "ベネズエラ州", cause: "フアン・デ・アンピエスがコロを建設する", source: "https://ja.wikipedia.org/wiki/コロ"}
+    - {from: 1528, owner: "spain", label: "ベネズエラ州（ヴェルザー家）", cause: "カール5世がアウクスブルクのヴェルザー家にベネズエラの開発を任せる", source: "https://ja.wikipedia.org/wiki/クライン＝ヴェネディヒ"}
+    - {from: 1546, owner: "spain", label: "ベネズエラ州", cause: "ヴェルザー家の総督が殺され、権利が停止される（1556年に正式に取り消し）", source: "https://ja.wikipedia.org/wiki/クライン＝ヴェネディヒ"}
+
+- id: pre_ven_lara
+  name: "ララ・ヤラクイ・カラボボ"
+  until: 1647
+  select:
+    pieces: [VEN-Lara, VEN-Yaracuy, VEN-Carabobo]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1545, owner: "spain", label: "ベネズエラ州（ヴェルザー家）", cause: "エル・トクヨ建設（バルキシメト 1552、バレンシア 1555）"}
+    - {from: 1546, owner: "spain", label: "ベネズエラ州"}
+
+- id: pre_ven_caracas
+  name: "カラカス"
+  until: 1647
+  select:
+    pieces: [VEN-Distrito_Capital, VEN-La_Guaira, VEN-Miranda, VEN-Aragua]
+  timeline:
+    - {from: 1453, owner: null, note: "カラカス・テケなどの首長（グアイカイプロ）"}
+    - {from: 1567, owner: "spain", label: "ベネズエラ州", cause: "ディエゴ・デ・ロサダがサンティアゴ・デ・レオン・デ・カラカスを建設する", source: "https://ja.wikipedia.org/wiki/カラカス"}
+
+- id: pre_ven_andes
+  name: "メリダ・トルヒーリョ・タチラ"
+  until: 1647
+  select:
+    pieces: [VEN-Merida, VEN-Trujillo, VEN-Tachira]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1558, owner: "spain", label: "メリダ（ヌエバ・グラナダ）", cause: "トルヒーリョ（1557）・メリダ（1558）・サン・クリストバル（1561）が建てられる", source: "https://en.wikipedia.org/wiki/Mérida,_Mérida"}
+
+- id: pre_ven_maracaibo
+  name: "マラカイボ"
+  until: 1647
+  select:
+    pieces: [VEN-Zulia]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1529, owner: "spain", certainty: "nominal", label: "ベネズエラ州（ヴェルザー家）", cause: "アンブロシウス・エーインガーがマラカイボに拠点を置く"}
+    - {from: 1546, owner: "spain", certainty: "nominal", label: "ベネズエラ州"}
+    - {from: 1574, owner: "spain", label: "ベネズエラ州", cause: "マラカイボが再建される", source: "https://ja.wikipedia.org/wiki/マラカイボ"}
+
+- id: pre_ven_barinas
+  name: "バリナス・ポルトゥゲサ"
+  until: 1647
+  select:
+    pieces: [VEN-Barinas, VEN-Portuguesa]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1577, owner: "spain", label: "メリダ（ヌエバ・グラナダ）", cause: "バリナス建設（グアナレ 1591）"}
+
+- id: pre_ven_apure
+  name: "アプレ"
+  until: 1647
+  select:
+    pieces: [VEN-Apure]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1577, owner: "spain", certainty: "nominal", label: "メリダ（ヌエバ・グラナダ）"}
+
+- id: pre_ven_llanos
+  name: "コヘデス・グアリコ（中部平原）"
+  until: 1647
+  select:
+    pieces: [VEN-Cojedes, VEN-Guarico]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1567, owner: "spain", certainty: "nominal", label: "ベネズエラ州", note: "カラカスの南の平原。町ができるのは17世紀後半から"}
+
+- id: pre_ven_guayana
+  name: "ギアナ（オリノコ川流域）"
+  until: 1647
+  select:
+    pieces: [VEN-Bolivar, VEN-Delta_Amacuro, VEN-Amazonas]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1595, owner: "spain", certainty: "nominal", label: "ギアナ州", cause: "サント・トメ・デ・グアヤナが建てられる（1595。ローリーの遠征）", source: "https://en.wikipedia.org/wiki/Santo_Tomé_de_Guayana"}
+
+- id: pre_ven_islands
+  name: "ベネズエラ沖の島々"
+  until: 1647
+  select:
+    pieces: [VEN-Dependencias_Federales]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1527, owner: "spain", certainty: "nominal", label: ""}
+
+- id: pre_guy_essequibo
+  name: "エセキボ"
+  until: 1647
+  select:
+    pieces: [GUY-Essequibo_Islands_West_Demerara]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1616, owner: "netherlands", label: "エセキボ（オランダ）", cause: "オランダ人がエセキボ川のキク・オーヴァー・アル島に交易所を置く", source: "https://en.wikipedia.org/wiki/Essequibo_(colony)"}
+    - {from: 1621, owner: "netherlands", label: "エセキボ（オランダ西インド会社）", cause: "オランダ西インド会社の設立"}
+
+- id: pre_guy_berbice
+  name: "ベルビセ"
+  until: 1647
+  select:
+    pieces: [GUY-East_Berbice_Corentyne, GUY-Mahaica_Berbice]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1627, owner: "netherlands", label: "ベルビセ（オランダ）", cause: "ファン・ペーレ家の入植地がベルビセ川に開かれる", source: "https://en.wikipedia.org/wiki/Berbice"}
+
+- id: pre_guy_rest
+  name: "ガイアナの奥地と海岸"
+  until: 1647
+  select:
+    pieces: [GUY-Demerara_Mahaica, GUY-Pomeroon_Supenaam, GUY-Upper_Demerara_Berbice, GUY-Potaro_Siparuni, GUY-Barina_Waini, GUY-Cuyuni_Mazaruni, GUY-Upper_Takutu_Upper_Essequibo]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1616, owner: "netherlands", certainty: "nominal", label: "エセキボ（オランダ）"}
+    - {from: 1621, owner: "netherlands", certainty: "nominal", label: "エセキボ（オランダ西インド会社）"}
+
+- id: pre_sur
+  name: "スリナム"
+  until: 1647
+  select:
+    pieces: [SUR-Paramaribo, SUR-Wanica, SUR-Commewijne, SUR-Para, SUR-Saramacca, SUR-Nickerie, SUR-Coronie, SUR-Marowijne, SUR-Brokopondo, SUR-Sipaliwini]
+  timeline:
+    - {from: 1453, owner: null, note: "オランダ・イングランドの交易所の試み（1610年代）は続かなかった"}
+
+- id: pre_guf
+  name: "ギアナ（カイエンヌ）"
+  until: 1647
+  select:
+    pieces: [GUF-Guyane]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1643, owner: "france", certainty: "nominal", label: "ギアナ（フランスの入植の試み）", cause: "ポンセ・ド・ブレティニーがカイエンヌに入植する（1645年に先住民に滅ぼされる）", source: "https://en.wikipedia.org/wiki/French_colonization_of_the_Americas"}
+
+- id: pre_bol_altiplano
+  name: "ラパス・オルロ（アルティプラノ）"
+  until: 1647
+  select:
+    pieces: [BOL-La_Paz, BOL-Oruro]
+  timeline:
+    - {from: 1453, owner: null, note: "コリャ・ルパカ・パカヘスなどアイマラ系の王国"}
+    - {from: 1460, owner: "inca", cause: "パチャクティがティティカカ湖の南のアイマラの王国を従える", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", certainty: "nominal", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の崩壊。名目上はマンコ・インカを通じてスペインに従う"}
+    - {from: 1538, owner: "spain", label: "チャルカス（ヌエバ・カスティーリャ）", cause: "ピサロ兄弟がコリャオ・チャルカスを征服し、ラ・プラタ（今のスクレ）を建てる", source: "https://ja.wikipedia.org/wiki/スクレ"}
+    - {from: 1542, owner: "spain", label: "チャルカス（ペルー副王領）"}
+
+- id: pre_bol_charcas
+  name: "チャルカス（スクレ・ポトシ・コチャバンバ）"
+  until: 1647
+  select:
+    pieces: [BOL-Chuquisaca, BOL-Potosi, BOL-Cochabamba]
+  timeline:
+    - {from: 1453, owner: null, note: "チャルカ・カラカラなどの首長国"}
+    - {from: 1475, owner: "inca", cause: "トゥパック・ユパンキがチャルカスを征服する", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", certainty: "nominal", label: "ヌエバ・カスティーリャ（ピサロの総督領）"}
+    - {from: 1538, owner: "spain", label: "チャルカス（ヌエバ・カスティーリャ）", cause: "ピサロ兄弟がコリャオ・チャルカスを征服し、ラ・プラタ（今のスクレ）を建てる", source: "https://ja.wikipedia.org/wiki/スクレ"}
+    - {from: 1542, owner: "spain", label: "チャルカス（ペルー副王領）"}
+
+- id: pre_bol_tarija
+  name: "タリハ"
+  until: 1647
+  select:
+    pieces: [BOL-Tarija]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1480, owner: "inca", certainty: "uncertain", cause: "インカの南東の辺境（チリグアノの侵入に備えた砦）", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカの支配が崩れる"}
+    - {from: 1574, owner: "spain", label: "チャルカス（ペルー副王領）", cause: "タリハ建設", source: "https://ja.wikipedia.org/wiki/タリハ"}
+
+- id: pre_bol_east
+  name: "サンタ・クルス・ベニ"
+  until: 1647
+  select:
+    pieces: [BOL-Santa_Cruz, BOL-Beni]
+  timeline:
+    - {from: 1453, owner: null, note: "チリグアノ（グアラニー系）・モホスなどの地"}
+    - {from: 1561, owner: "spain", certainty: "nominal", label: "チャルカス（ペルー副王領）", cause: "ニュフロ・デ・チャベスがサンタ・クルス・デ・ラ・シエラを建設する", source: "https://ja.wikipedia.org/wiki/サンタ・クルス・デ・ラ・シエラ"}
+
+- id: pre_bol_pando
+  name: "パンド"
+  until: 1647
+  select:
+    pieces: [BOL-Pando]
+  timeline:
+    - {from: 1453, owner: null, note: "アマゾン低地の先住民の地"}
+

@@ -8696,3 +8696,953 @@
     - from: 1912
       owner: "usa"
 
+
+# ================================================================ 1453–1647（W1 が追記。until: 1647 の地域で、1648 年以降には効かない）
+# 既存の地域（1648 年の形）を regions: で取り込んでまとめた。小さい地域が優先される決まりで、入植地を上書きしている。
+# 方針：入植地・砦・伝道所の周辺は宗主国の色、植民地（州）が置かれてからの主張の範囲は nominal（植民地の置かれる前の探検・領有宣言だけの所は描かない）。
+# イロコイ連邦・ポウハタン・チェロキー・クリーク・チョクトー・チカソーは独自の色（範囲・成立年があいまいなので uncertain）。そのほかは所属なし。
+
+- id: pre1648_usa_all
+  name: "北アメリカの先住民の地（1648年以前）"
+  until: 1647
+  select:
+    iso_all: [USA]
+    exclude: [USA-Puerto_Rico, USA-United_States_Virgin_Islands, USA-Alaska]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "どの国家の支配も及んでいない先住民の地。ミシシッピ文化の首長国（カホキアなど）は15世紀までに衰え、南東部には小さな首長国が残っていた。16世紀にはヨーロッパ人の持ち込んだ疫病で多くの人々が亡くなった。大平原・西部は狩猟・採集や農耕の諸部族の地"
+      source: "https://ja.wikipedia.org/wiki/ミシシッピ文化"
+
+- id: pre1648_hawaii
+  name: "ハワイ諸島（1648年以前）"
+  until: 1647
+  select:
+    pieces: [USA-Hawaii, USA-Kauai_and_Niihau]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "島ごと（または島の一部ごと）に首長（アリイ）が治め、統一した国家はなかった。ハワイ島では16世紀にウミ・ア・リロアが島を一つにまとめたと伝えられる。ピースが島ごとに分かれていないので所属なしにした"
+      source: "https://ja.wikipedia.org/wiki/ハワイの歴史"
+
+- id: pre1648_samoa
+  name: "アメリカ領サモア（1648年以前）"
+  until: 1647
+  select:
+    pieces: [USA-American_Samoa, USA-Manu_a_Islands]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "サモアの首長（マタイ）たちの地。マヌア諸島は王（トゥイ・マヌア）が治めた"
+      source: "https://en.wikipedia.org/wiki/History_of_American_Samoa"
+
+- id: pre1648_marianas
+  name: "グアム・北マリアナ諸島（1648年以前）"
+  until: 1647
+  select:
+    regions: [us_guam, us_nmi]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "チャモロの人々の地"
+    - from: 1565
+      owner: spain
+      certainty: nominal
+      label: "ラドロネス諸島（スペイン領東インド）"
+      cause: "レガスピがグアムに上陸し、スペインの領有を宣言する（1月）"
+      note: "1521年にマゼランが来航した。スペインはマニラとアカプルコを結ぶガレオン船の寄港地としたが、入植と伝道は1668年から"
+      source: "https://ja.wikipedia.org/wiki/グアムの歴史"
+
+# ---------------------------------------------------------------- 先住民の勢力
+- id: pre1648_iroquois_core
+  name: "イロコイ連邦の5部族の地"
+  until: 1647
+  select:
+    regions: [us_iroquoia_center, us_iroquoia_west, us_mohawk]
+  timeline:
+    - from: 1453
+      owner: iroquois
+      certainty: uncertain
+      note: "モホーク・オナイダ・オノンダガ・カユーガ・セネカの5部族が「大いなる平和の法」で結んだ連合。成立の年は伝承によって12世紀から16世紀後半まで説が分かれるので、1600年より前は uncertain にした"
+      source: "https://ja.wikipedia.org/wiki/イロコイ連邦"
+    - from: 1600
+      owner: iroquois
+      note: "17世紀にはオランダ（フォート・オラニエ）との毛皮交易で銃を手に入れ、ヒューロン・フランスと争った"
+      source: "https://ja.wikipedia.org/wiki/イロコイ連邦"
+
+- id: pre1648_iroquois_south
+  name: "サスケハナ川・デラウェア川の上流（イロコイの狩猟地）"
+  until: 1647
+  select:
+    regions: [us_ny_1768]
+  timeline:
+    - from: 1600
+      owner: iroquois
+      certainty: uncertain
+      note: "オノンダガ・オナイダ・モホークの狩猟地。南のサスケハノックとの境はあいまい"
+      source: "https://ja.wikipedia.org/wiki/イロコイ連邦"
+
+- id: pre1648_niagara
+  name: "ナイアガラ（ウェンロの地）"
+  until: 1647
+  select:
+    regions: [us_niagara]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "イロコイ語系のウェンロ族・ニュートラル連合の地"
+    - from: 1639
+      owner: iroquois
+      certainty: uncertain
+      cause: "セネカに攻められたウェンロ族が西のヒューロン・ニュートラルのもとへ逃れる（1638年）"
+      source: "https://en.wikipedia.org/wiki/Wenrohronon"
+
+- id: pre1648_powhatan
+  name: "ヴァージニアのタイドウォーター（ポウハタンの地）"
+  until: 1647
+  select:
+    regions: [us_va_tide, us_va_tide_2, us_va_tide_3, us_va_tide_4]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "アルゴンキン語系の諸部族の地"
+    - from: 1570
+      owner: powhatan
+      certainty: uncertain
+      cause: "ワフンセナカウ（ポウハタン）が父から6部族を受け継ぎ、まわりの部族を従えはじめる（1570年代ごろ）"
+      note: "広がった年ははっきりしない。1607年には約30の部族を従えていた"
+      source: "https://ja.wikipedia.org/wiki/ポウハタン連合"
+    - from: 1600
+      owner: powhatan
+      note: "ジェームズ川・ヨーク川・ラッパハノック川の流域の約30の部族が、ポウハタンに貢ぎ物を納めた。ポトマック川沿いや東海岸（アコマック）の部族は従属がゆるかった"
+      source: "https://ja.wikipedia.org/wiki/ポウハタン連合"
+    - from: 1646
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "第3次ポウハタン戦争（1644–46年）でオペチャンカノーが捕らえられ、ポウハタンは条約でヴァージニア植民地に従う"
+      source: "https://en.wikipedia.org/wiki/Anglo-Powhatan_Wars"
+
+- id: pre1648_cherokee
+  name: "南部アパラチア山地（チェロキーの地）"
+  until: 1647
+  select:
+    regions: [us_al_cherokee, us_al_cherokee_2, us_ga_cherokee, us_ga_hall, us_ga_ne, us_nc_cherokee, us_nc_mtn_1819, us_sc_cherokee, us_tn_cherokee, us_tn_hiwassee, us_al_madison, us_nc_mtn_1791, us_tn_knox, us_tn_knox_2, us_tn_plateau, us_tn_watauga, us_tn_watauga_2]
+  timeline:
+    - from: 1453
+      owner: cherokee
+      certainty: uncertain
+      note: "チェロキーの祖先の町々。1540年にデ・ソト、1567年にフアン・パルドの遠征隊が通った。範囲はあいまいなので uncertain にした"
+      source: "https://ja.wikipedia.org/wiki/チェロキー族"
+
+- id: pre1648_creek
+  name: "ジョージア・アラバマの内陸（マスコギーの首長国）"
+  until: 1647
+  select:
+    regions: [us_al_central, us_al_creek, us_ga_flint, us_ga_ocmulgee, us_ga_oconee, us_ga_west, us_ga_augusta, us_ga_ceded, us_ga_se_inland, us_ga_south]
+  timeline:
+    - from: 1453
+      owner: creek
+      certainty: uncertain
+      note: "ミシシッピ文化の首長国（クーサ・タリシ・オクムルギーなど）の地。1540年にデ・ソトの遠征隊がクーサの首長国を通った。首長国は16世紀後半に疫病などで衰え、その町々が17世紀にクリーク連合にまとまっていった"
+      source: ["https://ja.wikipedia.org/wiki/クリーク族", "https://en.wikipedia.org/wiki/Coosa_chiefdom"]
+
+- id: pre1648_choctaw
+  name: "ミシシッピ中部・アラバマ西部（チョクトーの祖先の地）"
+  until: 1647
+  select:
+    regions: [us_al_choctaw_w, us_ms_choctaw, us_ms_doak, us_al_black_warrior, us_al_tombigbee, us_ms_dexter]
+  timeline:
+    - from: 1453
+      owner: choctaw
+      certainty: uncertain
+      note: "ミシシッピ文化のマウンドヴィルの首長国やタスカルーサの首長国の流れをくむ人々の地。1540年にデ・ソトの遠征隊がマビラでタスカルーサの軍と戦った。チョクトーとしてまとまったのは17世紀"
+      source: ["https://ja.wikipedia.org/wiki/チョクトー族", "https://en.wikipedia.org/wiki/Battle_of_Mabila"]
+
+- id: pre1648_chickasaw
+  name: "ミシシッピ北部・テネシー西部（チカソーの地）"
+  until: 1647
+  select:
+    regions: [us_ms_chickasaw, us_ms_chickasaw_2, us_al_nw, us_ky_jackson, us_ky_jackson_2, us_tn_west]
+  timeline:
+    - from: 1453
+      owner: chickasaw
+      certainty: uncertain
+      note: "1540–41年にデ・ソトの遠征隊が「チカサ」で冬を越し、チカソーの攻撃を受けた。範囲はあいまいなので uncertain にした"
+      source: "https://ja.wikipedia.org/wiki/チカソー族"
+
+# ---------------------------------------------------------------- スペイン領フロリダ（ラ・フロリダ）
+- id: pre1648_la_florida
+  name: "ラ・フロリダ（スペインの主張の範囲）"
+  until: 1647
+  select:
+    regions: [us_fl_central, us_fl_keys, us_fl_panhandle, us_fl_pensacola, us_fl_south, us_mobile, us_ms_coast, us_sc_charleston, us_sc_low, us_sc_low_2, us_sc_mid, us_sc_up, us_fl_staug, us_fl_staug_2, us_fl_staug_3, us_fl_apalachee, us_ga_south_coast, us_ga_savannah, us_ga_savannah_2, us_fl_timucua]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "ティムクア・アパラチー・カルーサ・グアレなどの首長国の地。1513年のポンセ・デ・レオン、1528年のナルバエス、1539–43年のデ・ソトの遠征、1559–61年のルナのペンサコーラ植民はどれも根づかなかった"
+      source: "https://ja.wikipedia.org/wiki/ラ・フロリダ"
+    - from: 1565
+      owner: spain
+      certainty: nominal
+      label: "ラ・フロリダ"
+      cause: "メネンデス・デ・アビレスがセントオーガスティンを築き、ラ・フロリダ総督領を置く"
+      note: "スペインは北アメリカ南東部をラ・フロリダとして主張したが、実際に治めたのはセントオーガスティンと伝道所の周りだけだった"
+      source: "https://ja.wikipedia.org/wiki/ラ・フロリダ"
+
+- id: pre1648_st_augustine
+  name: "セントオーガスティン"
+  until: 1647
+  select:
+    regions: [us_fl_staug_2, us_fl_staug_3]
+  timeline:
+    - from: 1565
+      owner: spain
+      label: "ラ・フロリダ"
+      cause: "メネンデス・デ・アビレスがセントオーガスティンを築き、フランスのフォート・カロリーヌを攻め落とす（9月）"
+      note: "1586年にドレークが町を焼いた。北のサン・フアン・デル・プエルト（1587年）などにティムクアの伝道所が置かれた"
+      source: "https://ja.wikipedia.org/wiki/セントオーガスティン"
+
+- id: pre1648_fort_caroline
+  name: "フォート・カロリーヌ（セント・ジョンズ川の河口）"
+  until: 1564
+  select:
+    regions: [us_fl_staug_3]
+  timeline:
+    - from: 1564
+      owner: france
+      label: "フォート・カロリーヌ（ユグノーの植民地）"
+      cause: "ロードニエールの率いるフランスのユグノーがフォート・カロリーヌを築く（6月）"
+      note: "翌1565年9月、スペインのメネンデスに攻め落とされ、ユグノーの多くが殺された"
+      source: "https://ja.wikipedia.org/wiki/フォート・カロリーヌ"
+
+- id: pre1648_fl_staug_inland
+  name: "セント・ジョンズ川の中流（ティムクア東部の伝道所）"
+  until: 1647
+  select:
+    regions: [us_fl_staug]
+  timeline:
+    - from: 1587
+      owner: spain
+      label: "ラ・フロリダ（ティムクア）"
+      cause: "フランシスコ会がセント・ジョンズ川沿いのティムクアの村々に伝道所を置きはじめる"
+      source: "https://en.wikipedia.org/wiki/Spanish_missions_in_Florida"
+
+- id: pre1648_mocama
+  name: "ジョージア南部の海岸（モカマ）"
+  until: 1647
+  select:
+    regions: [us_ga_south_coast]
+  timeline:
+    - from: 1587
+      owner: spain
+      label: "ラ・フロリダ（グアレ・モカマ）"
+      cause: "カンバーランド島にサン・ペドロ・デ・モカマの伝道所が置かれる"
+      source: "https://en.wikipedia.org/wiki/San_Pedro_de_Mocama"
+
+- id: pre1648_guale
+  name: "ジョージアの海岸（グアレ）"
+  until: 1647
+  select:
+    regions: [us_ga_savannah, us_ga_savannah_2]
+  timeline:
+    - from: 1595
+      owner: spain
+      label: "ラ・フロリダ（グアレ）"
+      cause: "フランシスコ会がグアレの村々に伝道所を置く"
+      source: "https://en.wikipedia.org/wiki/Spanish_missions_in_Georgia"
+    - from: 1597
+      owner: spain
+      certainty: nominal
+      label: "ラ・フロリダ（グアレ）"
+      cause: "グアレの反乱で伝道所が焼かれ、修道士が殺される"
+      source: "https://en.wikipedia.org/wiki/Guale_uprising"
+    - from: 1605
+      owner: spain
+      label: "ラ・フロリダ（グアレ）"
+      cause: "反乱が鎮められ、伝道所が建て直される"
+      source: "https://en.wikipedia.org/wiki/Spanish_missions_in_Georgia"
+
+- id: pre1648_timucua
+  name: "フロリダ北部の内陸（ティムクア）"
+  until: 1647
+  select:
+    regions: [us_fl_timucua]
+  timeline:
+    - from: 1606
+      owner: spain
+      label: "ラ・フロリダ（ティムクア）"
+      cause: "ポタノ・ウティナなど内陸のティムクアの村々に伝道所が置かれはじめる"
+      note: "伝道所が広がった年は地域によって1606–30年代と幅がある"
+      source: "https://en.wikipedia.org/wiki/Spanish_missions_in_Florida"
+
+- id: pre1648_apalachee
+  name: "アパラチー（タラハシー周辺）"
+  until: 1647
+  select:
+    regions: [us_fl_apalachee]
+  timeline:
+    - from: 1633
+      owner: spain
+      label: "ラ・フロリダ（アパラチー）"
+      cause: "フランシスコ会がアパラチーの村々に伝道所を置く"
+      note: "アパラチーはデ・ソトの遠征隊が冬を越した（1539–40年）有力な首長国だった"
+      source: "https://en.wikipedia.org/wiki/Apalachee_Province"
+
+- id: pre1648_santa_elena
+  name: "サンタ・エレナ（ポート・ロイヤル湾）"
+  until: 1647
+  select:
+    regions: [us_sc_low_2]
+  timeline:
+    - from: 1562
+      owner: france
+      label: "シャルルフォール（ユグノーの植民地）"
+      cause: "リボーの率いるフランスのユグノーがパリス島にシャルルフォールを築く"
+      note: "残された兵は翌1563年に砦を捨てて帰国した"
+      source: "https://en.wikipedia.org/wiki/Charlesfort-Santa_Elena_Site"
+    - from: 1563
+      owner: null
+      cause: "シャルルフォールが捨てられる"
+    - from: 1565
+      owner: spain
+      certainty: nominal
+      label: "ラ・フロリダ"
+    - from: 1566
+      owner: spain
+      label: "サンタ・エレナ（ラ・フロリダの首府）"
+      cause: "メネンデスがパリス島にサンタ・エレナの町を築き、ラ・フロリダの首府とする"
+      source: "https://en.wikipedia.org/wiki/Santa_Elena,_Spanish_Florida"
+    - from: 1587
+      owner: spain
+      certainty: nominal
+      label: "ラ・フロリダ"
+      cause: "ドレークの襲撃（1586年）の後、サンタ・エレナを捨ててセントオーガスティンに集まる"
+      source: "https://en.wikipedia.org/wiki/Santa_Elena,_Spanish_Florida"
+
+# ---------------------------------------------------------------- ヴァージニア・メリーランド・カロライナ
+- id: pre1648_virginia_claim
+  name: "ヴァージニア植民地の主張の範囲"
+  until: 1647
+  select:
+    regions: [us_va_1710, us_va_1735, us_va_1765, us_va_1775, us_wv_east, us_nc_albemarle, us_nc_albemarle_2, us_nc_albemarle_3, us_nc_coast, us_nc_coast_2, us_nc_foothills, us_nc_piedmont, us_md, us_dc]
+  timeline:
+    - from: 1607
+      owner: britain
+      certainty: nominal
+      label: "ヴァージニア植民地"
+      cause: "ヴァージニア会社がジェームズタウンを築く。特許状（1606・1609年）は北緯34度から40度あたりまでを与えた"
+      note: "モナカン・タスカローラ・サスケハノックなど先住民の地"
+      source: "https://ja.wikipedia.org/wiki/バージニア植民地"
+
+- id: pre1648_roanoke
+  name: "ロアノーク島"
+  until: 1589
+  select:
+    regions: [us_nc_albemarle_3]
+  timeline:
+    - from: 1585
+      owner: britain
+      label: "ロアノーク植民地"
+      cause: "ローリーが送ったグレンヴィル・レーンの一行がロアノーク島に砦を築く"
+      source: "https://ja.wikipedia.org/wiki/ロアノーク植民地"
+    - from: 1586
+      owner: null
+      cause: "レーンの一行がドレークの船で引き上げる（6月）"
+    - from: 1587
+      owner: britain
+      certainty: uncertain
+      label: "ロアノーク植民地（失われた植民地）"
+      cause: "ジョン・ホワイトの率いる約120人の入植者が来る。ホワイトの孫ヴァージニア・デアが生まれる"
+      note: "補給はスペイン無敵艦隊との戦いで遅れ、1590年にホワイトが戻ったときには入植者は消えていた（「失われた植民地」）"
+      source: "https://ja.wikipedia.org/wiki/ロアノーク植民地"
+
+- id: pre1648_maryland
+  name: "メリーランド植民地"
+  until: 1647
+  select:
+    regions: [us_md, us_dc]
+  timeline:
+    - from: 1634
+      owner: britain
+      label: "メリーランド植民地"
+      cause: "ボルティモア卿（カルヴァート家）の領主植民地として、セントメアリーズ・シティに最初の入植者が来る"
+      note: "カトリック教徒の避難所とされた。ケント島をめぐってヴァージニアのクレイボーンと争った"
+      source: "https://ja.wikipedia.org/wiki/メリーランド植民地"
+
+- id: pre1648_jamestown
+  name: "ジェームズタウン"
+  until: 1647
+  select:
+    pieces: [USA-James_City_VA, USA-Williamsburg_VA]
+  timeline:
+    - from: 1607
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "ヴァージニア会社の一行がジェームズタウンを築く（5月）"
+      note: "1609–10年の冬の「飢餓の時」で入植者の多くが死んだ。1619年に最初の植民地議会が開かれた"
+      source: "https://ja.wikipedia.org/wiki/ジェームズタウン_(バージニア州)"
+
+- id: pre1648_va_kecoughtan
+  name: "ジェームズ川の河口（エリザベス・シティ）"
+  until: 1647
+  select:
+    pieces: [USA-Hampton_VA, USA-Newport_News_VA, USA-Poquoson_VA]
+  timeline:
+    - from: 1610
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "イギリス人がケコータンの村を奪い、ヘンリー砦・チャールズ砦を置く（7月）"
+      source: "https://en.wikipedia.org/wiki/Hampton,_Virginia"
+
+- id: pre1648_va_henricus
+  name: "ヘンリカス（ジェームズ川の上流）"
+  until: 1647
+  select:
+    pieces: [USA-Henrico_VA, USA-Richmond_VA]
+  timeline:
+    - from: 1611
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "デール総督がジェームズ川の上流にヘンリカスの町を築く"
+      note: "1622年のポウハタンの攻撃で町は捨てられたが、周りの入植地は続いた"
+      source: "https://en.wikipedia.org/wiki/Henricus"
+
+- id: pre1648_va_bermuda_hundred
+  name: "チャールズ・シティ（アポマトックス川の河口）"
+  until: 1647
+  select:
+    pieces: [USA-Charles_City_VA, USA-Hopewell_VA, USA-Prince_George_VA, USA-Colonial_Heights_VA]
+  timeline:
+    - from: 1613
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "バーミューダ・ハンドレッド・チャールズ・シティの入植地が開かれる"
+      source: "https://en.wikipedia.org/wiki/Bermuda_Hundred,_Virginia"
+
+- id: pre1648_va_1620
+  name: "ヴァージニア東海岸・ジェームズ川南岸"
+  until: 1647
+  select:
+    pieces: [USA-Accomack_VA, USA-Northampton_VA, USA-Isle_of_Wight_VA, USA-Surry_VA]
+  timeline:
+    - from: 1620
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "タバコ栽培の広がりとともに、東海岸（アコマック）やジェームズ川の南岸（ウォロスクォイアック）に入植地が開かれる"
+      note: "入植の年は場所によって1614–22年ごろと幅がある"
+      source: "https://en.wikipedia.org/wiki/Accomack_County,_Virginia"
+
+- id: pre1648_va_1630
+  name: "ヨーク川の南岸（チスキアック）"
+  until: 1647
+  select:
+    pieces: [USA-York_VA]
+  timeline:
+    - from: 1630
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "ヨーク川の南岸のチスキアックに入植地が開かれる（1634年にチャールズ・リヴァー郡）"
+      source: "https://en.wikipedia.org/wiki/York_County,_Virginia"
+
+- id: pre1648_va_norfolk
+  name: "エリザベス川・ナンスモンド川（ロワー・ノーフォーク）"
+  until: 1647
+  select:
+    pieces: [USA-Norfolk_VA, USA-Portsmouth_VA, USA-Chesapeake_VA, USA-Virginia_Beach_VA, USA-Suffolk_VA]
+  timeline:
+    - from: 1636
+      owner: britain
+      label: "ヴァージニア植民地"
+      cause: "エリザベス川の流域にニュー・ノーフォーク郡が置かれる"
+      source: "https://en.wikipedia.org/wiki/Lower_Norfolk_County,_Virginia"
+
+# ---------------------------------------------------------------- ニューイングランド
+- id: pre1648_new_england_claim
+  name: "ニューイングランド（イングランドの主張の範囲）"
+  until: 1647
+  select:
+    regions: [us_mass_bay, us_plymouth, us_ct, us_new_haven, us_litchfield, us_berkshire, us_ri, us_nh, us_vt, us_me_sw, us_me_mid, us_me_west, us_ma_islands]
+  timeline:
+    - from: 1620
+      owner: britain
+      certainty: nominal
+      label: "ニューイングランド"
+      cause: "ジェームズ1世がニューイングランド評議会に北緯40度から48度までの土地の特許状を与える。メイフラワー号がプリマスに着く"
+      note: "ワンパノアグ・ナラガンセット・ピークォット・マサチューセット・アベナキなど先住民の地。1616–19年の疫病で沿岸の先住民の多くが亡くなっていた"
+      source: "https://en.wikipedia.org/wiki/Plymouth_Council_for_New_England"
+
+- id: pre1648_maine
+  name: "メイン（ケネベック川・ペノブスコット湾の西）"
+  until: 1647
+  select:
+    regions: [us_me_mid, us_me_west]
+  timeline:
+    - from: 1622
+      owner: britain
+      certainty: nominal
+      label: "メイン（係争地）"
+      cause: "ゴージズとメイソンがメルリマック川とケネベック川の間の土地（メイン）の特許を受ける"
+      note: "1628年にプリマス植民地がケネベック川に交易所（クシュノック）を置いた。フランス領アカディアとの境は定まらなかった"
+      source: "https://en.wikipedia.org/wiki/Province_of_Maine"
+
+- id: pre1648_popham
+  name: "ポパム植民地（ケネベック川の河口）"
+  until: 1607
+  select:
+    pieces: [USA-Sagadahoc_ME]
+  timeline:
+    - from: 1607
+      owner: britain
+      label: "ポパム植民地"
+      cause: "ヴァージニア会社（プリマス会社）がケネベック川の河口に砦を築く（8月）"
+      note: "厳しい冬と指導者の死で、翌1608年に捨てられた"
+      source: "https://en.wikipedia.org/wiki/Popham_Colony"
+
+- id: pre1648_me_york
+  name: "メイン南西部（ピスカタクア川）"
+  until: 1647
+  select:
+    pieces: [USA-York_ME]
+  timeline:
+    - from: 1623
+      owner: britain
+      label: "メイン（ゴージズの領地）"
+      cause: "ピスカタクア川の河口に漁業・交易の入植地が開かれる"
+      source: "https://en.wikipedia.org/wiki/Province_of_Maine"
+
+- id: pre1648_me_casco
+  name: "カスコ湾"
+  until: 1647
+  select:
+    pieces: [USA-Cumberland_ME]
+  timeline:
+    - from: 1630
+      owner: britain
+      label: "メイン（ゴージズの領地）"
+      cause: "リッチモンド島・ケープ・エリザベスに漁業・交易の入植地が開かれる"
+      source: "https://en.wikipedia.org/wiki/Province_of_Maine"
+
+- id: pre1648_nh
+  name: "ニューハンプシャー"
+  until: 1647
+  select:
+    regions: [us_nh]
+  timeline:
+    - from: 1623
+      owner: britain
+      label: "ニューハンプシャー"
+      cause: "ピスカタクア川の河口（パナウェイ・ドーヴァー）に入植地が開かれる"
+      source: "https://ja.wikipedia.org/wiki/ニューハンプシャー植民地"
+    - from: 1641
+      owner: britain
+      label: "ニューハンプシャー（マサチューセッツ湾植民地の管轄）"
+      cause: "ニューハンプシャーの町々がマサチューセッツ湾植民地の管轄に入る"
+      source: "https://ja.wikipedia.org/wiki/ニューハンプシャー植民地"
+
+- id: pre1648_plymouth_town
+  name: "プリマス"
+  until: 1647
+  select:
+    pieces: [USA-Plymouth_MA]
+  timeline:
+    - from: 1620
+      owner: britain
+      label: "プリマス植民地"
+      cause: "メイフラワー号のピルグリム・ファーザーズがプリマスに上陸する（12月）"
+      note: "上陸の前にメイフラワー誓約を結んだ。1621年にワンパノアグのマサソイトと同盟を結んだ"
+      source: "https://ja.wikipedia.org/wiki/プリマス植民地"
+
+- id: pre1648_plymouth_rest
+  name: "プリマス植民地（ケープコッド・トーントン）"
+  until: 1647
+  select:
+    pieces: [USA-Barnstable_MA, USA-Bristol_MA]
+  timeline:
+    - from: 1620
+      owner: britain
+      certainty: nominal
+      label: "プリマス植民地"
+      note: "ワンパノアグの地"
+    - from: 1637
+      owner: britain
+      label: "プリマス植民地"
+      cause: "サンドイッチ（1637年）・バーンスタブル・トーントン（1639年）など新しい町が開かれる"
+      source: "https://ja.wikipedia.org/wiki/プリマス植民地"
+
+- id: pre1648_salem
+  name: "セイラム（エセックス）"
+  until: 1647
+  select:
+    pieces: [USA-Essex_MA]
+  timeline:
+    - from: 1628
+      owner: britain
+      label: "セイラム（ニューイングランド会社）"
+      cause: "エンディコットの一行がナウムキーグ（セイラム）に入植する"
+      source: "https://ja.wikipedia.org/wiki/マサチューセッツ湾植民地"
+    - from: 1629
+      owner: britain
+      label: "マサチューセッツ湾植民地"
+      cause: "マサチューセッツ湾会社が国王の特許状を受ける"
+      source: "https://ja.wikipedia.org/wiki/マサチューセッツ湾植民地"
+
+- id: pre1648_boston
+  name: "ボストン周辺"
+  until: 1647
+  select:
+    pieces: [USA-Suffolk_MA, USA-Middlesex_MA, USA-Norfolk_MA]
+  timeline:
+    - from: 1630
+      owner: britain
+      label: "マサチューセッツ湾植民地"
+      cause: "ウィンスロップの率いるピューリタンの船団が来て、ボストンを築く（大移住のはじまり）"
+      source: "https://ja.wikipedia.org/wiki/マサチューセッツ湾植民地"
+
+- id: pre1648_mass_inland
+  name: "マサチューセッツ西部・中部"
+  until: 1647
+  select:
+    pieces: [USA-Franklin_MA, USA-Hampshire_MA, USA-Worcester_MA, USA-Hampden_MA]
+    regions: [us_berkshire]
+  timeline:
+    - from: 1630
+      owner: britain
+      certainty: nominal
+      label: "マサチューセッツ湾植民地"
+      note: "ニプマック・ポカムタックなど先住民の地。ノーサンプトン（1654年）・ウースター（1673年ごろ）など内陸の町は1648年より後"
+      source: "https://ja.wikipedia.org/wiki/マサチューセッツ湾植民地"
+
+- id: pre1648_springfield
+  name: "スプリングフィールド（コネティカット川中流）"
+  until: 1647
+  select:
+    pieces: [USA-Hampden_MA]
+  timeline:
+    - from: 1636
+      owner: britain
+      label: "マサチューセッツ湾植民地"
+      cause: "ピンチョンがコネティカット川沿いにスプリングフィールド（アガワム）を開く"
+      source: "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+
+- id: pre1648_ma_islands
+  name: "マーサズ・ヴィニヤード・ナンタケット"
+  until: 1647
+  select:
+    regions: [us_ma_islands]
+  timeline:
+    - from: 1642
+      owner: britain
+      label: "マーサズ・ヴィニヤード（メイヒュー家の領地）"
+      cause: "トマス・メイヒューの子がマーサズ・ヴィニヤードにエドガータウンを開く"
+      note: "ナンタケット島への入植は1659年から"
+      source: "https://en.wikipedia.org/wiki/Thomas_Mayhew"
+
+- id: pre1648_ri
+  name: "ロードアイランド"
+  until: 1647
+  select:
+    regions: [us_ri]
+  timeline:
+    - from: 1636
+      owner: britain
+      label: "ロードアイランド植民地"
+      cause: "マサチューセッツを追われたロジャー・ウィリアムズがプロヴィデンスを開く"
+      note: "信教の自由を認めた。1638年にアン・ハッチンソンらがポーツマスを開き、1644年に本国の特許を得た"
+      source: "https://ja.wikipedia.org/wiki/ロードアイランド植民地"
+
+- id: pre1648_ct_claim
+  name: "コネティカット植民地の主張の範囲"
+  until: 1647
+  select:
+    pieces: [USA-Tolland_CT, USA-Windham_CT]
+    regions: [us_litchfield]
+  timeline:
+    - from: 1636
+      owner: britain
+      certainty: nominal
+      label: "コネティカット植民地"
+      note: "ニプマック・モヒガンなど先住民の地"
+      source: "https://ja.wikipedia.org/wiki/コネチカット植民地"
+
+- id: pre1648_ct_river
+  name: "コネティカット川の下流（ハートフォード・セイブルック）"
+  until: 1647
+  select:
+    pieces: [USA-Hartford_CT, USA-Middlesex_CT]
+  timeline:
+    - from: 1635
+      owner: britain
+      label: "コネティカット植民地"
+      cause: "マサチューセッツから移った人々がウィンザー・ウェザーズフィールド・ハートフォードを開き、河口にセイブルック砦が築かれる"
+      note: "1633年にオランダもハートフォードに交易所（ホープ砦）を置いた。1636年にフッカー牧師の一行がハートフォードに移った"
+      source: "https://ja.wikipedia.org/wiki/コネチカット植民地"
+
+- id: pre1648_ct_pequot
+  name: "ピークォットの地（ニューロンドン）"
+  until: 1647
+  select:
+    pieces: [USA-New_London_CT]
+  timeline:
+    - from: 1637
+      owner: britain
+      label: "コネティカット植民地"
+      note: "ピークォット族の地だった"
+      cause: "ピークォット戦争でピークォット族が滅ぼされ、その地がコネティカットのものになる"
+      source: "https://ja.wikipedia.org/wiki/ピクォート戦争"
+
+- id: pre1648_ct_fairfield
+  name: "コネティカット南西部（フェアフィールド）"
+  until: 1647
+  select:
+    pieces: [USA-Fairfield_CT]
+  timeline:
+    - from: 1639
+      owner: britain
+      label: "コネティカット植民地"
+      cause: "フェアフィールド・ストラトフォードの町が開かれる"
+      source: "https://en.wikipedia.org/wiki/Fairfield,_Connecticut"
+
+- id: pre1648_new_haven
+  name: "ニューヘイヴン植民地"
+  until: 1647
+  select:
+    regions: [us_new_haven]
+  timeline:
+    - from: 1638
+      owner: britain
+      label: "ニューヘイヴン植民地"
+      cause: "ダヴェンポート牧師らピューリタンがクィニピアック（ニューヘイヴン）を開く"
+      source: "https://ja.wikipedia.org/wiki/ニューヘイブン植民地"
+
+# ---------------------------------------------------------------- アカディア（メイン東部）
+- id: pre1648_me_acadia
+  name: "メイン東部（アカディアの西）"
+  until: 1647
+  select:
+    regions: [us_me_east, us_me_east_2, us_me_penobscot, us_me_aroostook]
+  timeline:
+    - from: 1604
+      owner: france
+      certainty: nominal
+      label: "アカディア"
+      cause: "ド・モンとシャンプランがサント・クロワ島で冬を越す。フランス王が北緯40度から46度までをアカディアとして与える"
+      note: "ペノブスコット・パサマクォディなどワバナキの人々の地"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+
+- id: pre1648_me_pentagoet
+  name: "ペンタグエ（ペノブスコット湾・パサマクォディ湾）"
+  until: 1647
+  select:
+    regions: [us_me_east, us_me_east_2]
+  timeline:
+    - from: 1635
+      owner: france
+      label: "アカディア"
+      cause: "アカディアのドルネー（ダルネー）がプリマス植民地のペンタグエ（今のカスティーン）の交易所を奪い、砦を置く"
+      source: "https://en.wikipedia.org/wiki/Fort_Pentagouet"
+
+- id: pre1648_pentagoet_plymouth
+  name: "ペンタグエ（プリマス植民地の交易所）"
+  until: 1634
+  select:
+    regions: [us_me_east_2]
+  timeline:
+    - from: 1630
+      owner: britain
+      label: "ペノブスコットの交易所（プリマス植民地）"
+      cause: "プリマス植民地がペノブスコット湾のペンタグエに毛皮の交易所を置く"
+      source: "https://en.wikipedia.org/wiki/Fort_Pentagouet"
+
+# ---------------------------------------------------------------- ニューネーデルラント・ニュースウェーデン
+- id: pre1648_new_netherland_claim
+  name: "ニューネーデルラント（ハドソン川流域）"
+  until: 1647
+  select:
+    regions: [us_hudson, us_nyc, us_nj_bergen, us_nj_east, us_nj_east1720, us_nj_east_2, us_ny_upper_hudson, us_ny_suffolk]
+  timeline:
+    - from: 1614
+      owner: netherlands
+      certainty: nominal
+      label: "ニューネーデルラント"
+      cause: "ハドソンの探検（1609年）の後、ニューネーデルラント会社が毛皮交易の独占権を得て、キャッスル島にナッサウ砦を置く"
+      note: "マヒカン・モホーク・レナペ（デラウェア）の人々の地"
+      source: "https://ja.wikipedia.org/wiki/ニューネーデルラント"
+
+- id: pre1648_new_netherland_core
+  name: "フォート・オラニエとニューアムステルダム"
+  until: 1647
+  select:
+    regions: [us_hudson, us_nyc]
+  timeline:
+    - from: 1624
+      owner: netherlands
+      label: "ニューネーデルラント"
+      cause: "西インド会社がワロン人の入植者を送り、フォート・オラニエ（オールバニ）とノーテン島に入植地を置く。翌1625年にニューアムステルダムを築く"
+      note: "1626年にミヌイットがマンハッタン島を先住民から買い取った。1629年から大地主制（パトルーン制）が始まった（レンセラーウィック）"
+      source: "https://ja.wikipedia.org/wiki/ニューアムステルダム"
+
+- id: pre1648_pavonia
+  name: "パヴォニア（ハドソン川西岸）"
+  until: 1647
+  select:
+    regions: [us_nj_bergen]
+  timeline:
+    - from: 1630
+      owner: netherlands
+      label: "ニューネーデルラント（パヴォニア）"
+      cause: "パトルーンのパウがハドソン川の西岸にパヴォニアを開く"
+      note: "キーフト戦争（1643–45年）で一時荒れた"
+      source: "https://en.wikipedia.org/wiki/Pavonia,_New_Netherland"
+
+- id: pre1648_li_east
+  name: "ロングアイランド東部"
+  until: 1647
+  select:
+    regions: [us_ny_suffolk]
+  timeline:
+    - from: 1640
+      owner: britain
+      label: "ニューヘイヴン・コネティカットの町"
+      cause: "ニューイングランドの人々がサウサンプトン・サウソールドを開く"
+      source: "https://en.wikipedia.org/wiki/Southampton,_New_York"
+
+- id: pre1648_delaware_valley
+  name: "デラウェア川の流域（サウス川）"
+  until: 1647
+  select:
+    regions: [us_nj_west1680, us_nj_west1720, us_nj_swedish1680, us_de, us_pa_phila, us_pa_phila_2]
+  timeline:
+    - from: 1624
+      owner: netherlands
+      certainty: nominal
+      label: "ニューネーデルラント"
+      cause: "西インド会社がデラウェア川（サウス川）に入植者を送り、ナッサウ砦（1626年）を置く"
+      note: "レナペ（デラウェア）の地。1631年のツヴァーネンダール（ルイス）の入植地は翌年先住民に滅ぼされた"
+      source: "https://en.wikipedia.org/wiki/Fort_Nassau_(South_River)"
+
+- id: pre1648_new_sweden_christina
+  name: "ニュースウェーデン（クリスティーナ砦）"
+  until: 1647
+  select:
+    regions: [us_de]
+  timeline:
+    - from: 1638
+      owner: sweden
+      label: "ニュースウェーデン"
+      cause: "ミヌイットの率いるスウェーデン南部会社の一行がクリスティーナ砦（今のウィルミントン）を築く"
+      source: "https://ja.wikipedia.org/wiki/ニュースウェーデン"
+
+- id: pre1648_new_sweden_1643
+  name: "ニュースウェーデン（ティニカム島・エルフスボリ砦）"
+  until: 1647
+  select:
+    regions: [us_pa_phila, us_pa_phila_2, us_nj_swedish1680]
+  timeline:
+    - from: 1643
+      owner: sweden
+      label: "ニュースウェーデン"
+      cause: "プリンツ総督がティニカム島のニュー・ヨーテボリに本拠を移し、対岸にエルフスボリ砦を築く"
+      source: "https://ja.wikipedia.org/wiki/ニュースウェーデン"
+
+- id: pre1648_pa_claim
+  name: "サスケハナ川の流域（ペンシルヴェニア）"
+  until: 1647
+  select:
+    regions: [us_pa_1682, us_pa_1720, us_pa_1740, us_pa_1755, us_pa_1769]
+  timeline:
+    - from: 1620
+      owner: britain
+      certainty: nominal
+      cause: "ニューイングランド評議会の特許状（北緯40度から48度）"
+      note: "サスケハノック族などの地。イングランドの特許状が主張の根拠だが、実際の支配はなかった"
+      source: "https://en.wikipedia.org/wiki/Susquehannock"
+
+# ---------------------------------------------------------------- ヌーヴェル・フランス（ニューヨーク北部）
+- id: pre1648_ny_new_france
+  name: "シャンプレーン湖・セントローレンス川の南岸"
+  until: 1647
+  select:
+    regions: [us_ny_champlain, us_ny_north]
+  timeline:
+    - from: 1609
+      owner: france
+      certainty: nominal
+      label: "ヌーヴェル・フランス"
+      cause: "シャンプランがヒューロン・アルゴンキンとともにシャンプレーン湖でモホークと戦う"
+      note: "イロコイ（モホーク）とフランスの勢力が争う地"
+      source: "https://ja.wikipedia.org/wiki/サミュエル・ド・シャンプラン"
+
+# ---------------------------------------------------------------- スペイン領の北の辺境（ヌエボ・メヒコ・カリフォルニア・テハス）
+- id: pre1648_new_mexico_core
+  name: "リオ・グランデ川上流のプエブロ（ヌエボ・メヒコ）"
+  until: 1647
+  select:
+    regions: [us_nm_core]
+  timeline:
+    - from: 1598
+      owner: spain
+      label: "ヌエボ・メヒコ（ヌエバ・エスパーニャ副王領）"
+      cause: "オニャーテがプエブロの地を征服し、サン・フアン（サン・ガブリエル）に本拠を置く"
+      note: "1540–42年のコロナドの遠征はシボラ（ズニ）・キビラを探したが根づかなかった。1599年にアコマのプエブロを攻め滅ぼした"
+      source: "https://ja.wikipedia.org/wiki/フアン・デ・オニャーテ"
+    - from: 1610
+      owner: spain
+      label: "ヌエボ・メヒコ（ヌエバ・エスパーニャ副王領）"
+      cause: "サンタフェが首府になる"
+      source: "https://ja.wikipedia.org/wiki/サンタフェ_(ニューメキシコ州)"
+
+- id: pre1648_new_mexico_claim
+  name: "ヌエボ・メヒコの主張の範囲"
+  until: 1647
+  select:
+    regions: [us_nm_gadsden, us_nm_gila, us_nm_llano, us_nm_mescalero, us_nm_navajo, us_tx_elpaso]
+  timeline:
+    - from: 1598
+      owner: spain
+      certainty: nominal
+      label: "ヌエボ・メヒコ（ヌエバ・エスパーニャ副王領）"
+      cause: "オニャーテがリオ・グランデ川のほとり（エル・パソの近く）で、ヌエボ・メヒコの領有を宣言する（ラ・トマ）"
+      note: "アパッチ・ナバホなどの地"
+      source: "https://ja.wikipedia.org/wiki/フアン・デ・オニャーテ"
+
+- id: pre1648_north_frontier
+  name: "ヌエバ・エスパーニャの北の辺境（アリゾナ・ユタ・コロラドなど）"
+  until: 1647
+  select:
+    regions: [us_az_apache, us_az_gila, us_az_north, us_az_yuma, us_az_tucson, us_co_sanluis, us_co_se, us_co_west, us_ks_sw, us_nv, us_nv_east_1862, us_nv_east_1866, us_nv_south, us_ok_greer, us_ok_panhandle, us_ut, us_wy_sw]
+  timeline:
+    - from: 1598
+      owner: spain
+      certainty: nominal
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "ヌエボ・メヒコの征服とともに、スペインが北の内陸の領有を主張する"
+      note: "スペインが北の辺境として領有を主張したが、先住民の地だった。オニャーテはキビラ（カンザス、1601年）やコロラド川（1604–05年）に遠征した"
+      source: "https://ja.wikipedia.org/wiki/フアン・デ・オニャーテ"
+
+- id: pre1648_texas
+  name: "テキサス"
+  until: 1647
+  select:
+    regions: [us_la_neutral, us_tx_austin, us_tx_austin_galveston, us_tx_bexar, us_tx_comanche_c, us_tx_comanche_llano, us_tx_comanche_pan, us_tx_comanche_sw, us_tx_crosstimbers, us_tx_east, us_tx_nueces, us_tx_nueces_rio, us_tx_nueces_rio_2, us_tx_transpecos]
+  timeline:
+    - from: 1598
+      owner: spain
+      certainty: nominal
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "ヌエボ・メヒコの征服とともに、スペインが北の内陸の領有を主張する"
+      note: "カドー（ハシナイ）・ジュマノ・コアウイルテカなどの地。カベサ・デ・バカ（1528–36年）とデ・ソト隊（1542年）が通ったが、スペインの入植と伝道所は1680年代以降"
+      source: "https://ja.wikipedia.org/wiki/スペイン領テキサス"
+
+- id: pre1648_california
+  name: "カリフォルニア"
+  until: 1647
+  select:
+    regions: [us_ca_bay, us_ca_desert, us_ca_north, us_ca_north_bay, us_ca_sonoma, us_ca_south_1769, us_ca_south_1771, us_ca_south_1771r, us_ca_valley]
+  timeline:
+    - from: 1602
+      owner: spain
+      certainty: nominal
+      label: "カリフォルニア（ヌエバ・エスパーニャ副王領）"
+      cause: "ビスカイノがサンディエゴ湾・モンテレー湾を探検し、マニラ・ガレオンの寄港地として報告する"
+      note: "1542年にカブリーヨがサンディエゴ湾に来てスペインの領有を宣言し、1579年にはイングランドのドレークが北部に上陸して「ノヴァ・アルビオン」と名づけた。入植は1769年から"
+      source: "https://en.wikipedia.org/wiki/Sebasti%C3%A1n_Vizca%C3%ADno"
