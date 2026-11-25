@@ -2863,6 +2863,14 @@
   timeline:
     - {from: 1453, owner: null, note: "テウェルチェ・ペウエンチェ・セルクナムなどの地"}
 
+- id: pre_ar_neuquen
+  name: "ネウケン"
+  until: 1647
+  select:
+    pieces: [ARG-Neuquen]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain", note: "アンデスの東側のペウエンチェ人などの地。チリ側のマプーチェと同じ人々で、1648年以降のデータ（ar_neuquen）と同じ描き方"}
+
 - id: pre_falklands
   name: "フォークランド諸島"
   until: 1647
@@ -3117,8 +3125,7 @@
   select:
     pieces: [BRA-Parana]
   timeline:
-    - {from: 1453, owner: null}
-    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1453, owner: null, note: "グアラニーなどの地。トルデシリャス線（西経48度半ばあたり）は州の東の端を通り、大部分はスペイン側。サン・ヴィセンテのカピタニアも海岸の線まで。1541年にカベサ・デ・バカがここを横切ってアスンシオンへ向かった"}
     - {from: 1557, owner: "spain", certainty: "uncertain", label: "グアイラ（ペルー副王領）", cause: "シウダー・レアル・デル・グアイラ（1557）・ビリャリカ（1570）が建てられ、のちにイエズス会の伝道村ができる"}
     - {from: 1632, owner: "portugal", certainty: "uncertain", label: "ポルトガル領ブラジル", cause: "バンデイランテスの攻撃（1628–31）で、グアイラのスペインの町と伝道村が放棄される", source: "https://en.wikipedia.org/wiki/Bandeirantes"}
 

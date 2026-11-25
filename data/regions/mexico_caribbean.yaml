@@ -123,8 +123,15 @@
       source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Yucatán"
     - from: 1540
       owner: "spain"
+      certainty: "uncertain"
       label: "ヌエバ・エスパーニャ副王領"
       cause: "モンテホ（子）がカンペチェを建てる"
+      source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Yucatán"
+    - from: 1547
+      owner: "spain"
+      label: "ヌエバ・エスパーニャ副王領"
+      cause: "マヤ人の大反乱（1546–47）が鎮圧され、ユカタン北部の征服が終わる"
+      note: "南部の密林（カラクムルあたり）には17世紀末までスペインの支配が及ばなかったが、ピース（州）を分けられないので州全体を確かとする"
       source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Yucatán"
     - from: 1648
       owner: "spain"
@@ -2058,6 +2065,40 @@
       owner: "panama"
       cause: "ハル＝アルファロ条約の批准で、アメリカの干渉の権利がなくなる"
       source: "https://en.wikipedia.org/wiki/Hull–Alfaro_Treaty"
+
+- id: pre_pan_west
+  name: パナマ西部（ベラグアス・チリキ）
+  until: 1647
+  note: "パナマ市（1519）・ナタ（1522）の後も、ベラグアスの征服は1550〜90年代（サンタ・フェ 1558ごろ）、チリキはレメディオス（1589）・アランへ（1591）の建設で1600年前後まで続いた（レビュー指摘による）"
+  select:
+    pieces: [PAN-Provincia_de_Veraguas, PAN-Provincia_de_Chiriqui]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "ングベ人（グアイミ人）・ベラグアスの首長国"
+      source: "https://en.wikipedia.org/wiki/Castilla_de_Oro"
+    - from: 1519
+      owner: "spain"
+      certainty: "nominal"
+      label: "カスティーリャ・デル・オロ（ベラグアス）"
+      cause: "ペドラリアス・ダビラがパナマ市を建てる（8月）"
+      source: "https://en.wikipedia.org/wiki/Castilla_de_Oro"
+    - from: 1543
+      owner: "spain"
+      certainty: "nominal"
+      label: "ペルー副王領（パナマ）"
+      cause: "ペルー副王領が置かれ（1542年）、パナマはその下に入る"
+    - from: 1558
+      owner: "spain"
+      certainty: "uncertain"
+      label: "ペルー副王領（パナマ）"
+      cause: "フランシスコ・バスケスのベラグアス征服（サンタ・フェの建設）"
+      source: "https://en.wikipedia.org/wiki/Veraguas_Province"
+    - from: 1600
+      owner: "spain"
+      label: "ペルー副王領（パナマ）"
+      cause: "チリキ（レメディオス 1589・アランへ 1591）まで町が置かれ、征服が終わる"
+      source: "https://en.wikipedia.org/wiki/Chiriqu%C3%AD_Province"
 
 - id: panama_frontier
   name: パナマの辺境（ダリエン・ボカス・デル・トロ）
@@ -4918,6 +4959,30 @@
       label: "グアテマラ総督領"
       cause: "アウディエンシア・デ・ロス・コンフィネス（のちのグアテマラ総督領）が置かれる"
       source: "https://en.wikipedia.org/wiki/Captaincy_General_of_Guatemala"
+
+- id: pre1648_solola
+  name: ソロラ（アティトラン湖）
+  until: 1647
+  note: "アティトラン湖の北岸はカクチケル、南岸はツトゥヒルの王国。ピースを分けられないので、1470年からはカクチケル（uncertain）とした"
+  select:
+    pieces: [GTM-Solola]
+  timeline:
+    - from: 1453
+      owner: "kiche"
+      source: "https://en.wikipedia.org/wiki/Kʼicheʼ_kingdom_of_Qʼumarkaj"
+    - from: 1470
+      owner: "kaqchikel"
+      certainty: "uncertain"
+      cause: "カクチケル人がキチェ王国から離れる。湖の南岸はツトゥヒル人の王国"
+      source: "https://en.wikipedia.org/wiki/Tz%CA%BCutujil_people"
+    - from: 1524
+      owner: "spain"
+      label: "グアテマラ"
+      cause: "アルバラードがツトゥヒル人を破る"
+      source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Guatemala"
+    - from: 1543
+      owner: "spain"
+      label: "グアテマラ総督領"
 
 - id: pre1648_verapaz
   name: ベラパス（テスルトラン）
