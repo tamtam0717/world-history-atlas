@@ -2604,6 +2604,12 @@
   select:
     iso: [HTI]
   timeline:
+    - from: 1605
+      main: none
+      note: スペインが島の北部・西部の住民を東へ強制移住させ（オソリオの「荒廃」、1605–06）、西部はほぼ無人になった
+    - from: 1640
+      main: catholic
+      note: トルトゥーガ島と西部の海岸にフランス人のバッカニアが住みついた（1630 年代〜）
     - from: 1648
       main: catholic
       note: 西部はトルトゥーガ島のフランス人の海賊（バッカニア）の拠点。1697 年のライスワイク条約でフランス領サン＝ドマングになった。アフリカから連れてこられた人々の信仰がカトリックと結びついてヴードゥーが生まれ、ハイチ革命（1791–1804）を支える力になった（地図ではカトリックの色）。
@@ -2655,7 +2661,7 @@
       note: 小アンティル諸島のカリナゴ（島のカリブ）、バハマのルカヤ人
     - from: 1630
       main: anglican
-      note: セントキッツ（1624）・バルバドス（1627）・ネイヴィス（1628）・アンティグア（1632）のイングランド人の植民
+      note: セントキッツ（1624）・ネイヴィス（1628）のイングランド人の植民（バルバドス 1627・アンティグア 1632 は別の区分け。アンギラ・バーブーダ・英領ヴァージン諸島は 1648 年より後）
     - from: 1648
       main: anglican
       note: イギリスの植民地（バルバドス 1627、セントキッツ 1624、アンティグア 1632、モントセラト 1632 など）。はじめはイギリス人の小農・年季奉公人が多かった。
@@ -2667,6 +2673,39 @@
       main: anglican
       minor: evangelical
       note: モラヴィア派（アンティグア 1756–）・メソジスト（アンティグア 1760 年代–）の伝道が奴隷の間に広がり、奴隷の多くがキリスト教徒になった。奴隷制の廃止（1834–38）。
+- id: rel_leewards_unsettled_pre
+  name: アンギラ・バーブーダ・レドンダ・英領ヴァージン諸島（入植の前）
+  until: 1647
+  select:
+    pieces: [AIA-Anguilla, ATG-Barbuda, ATG-Redonda, VGB-British_Virgin_Islands]
+  timeline:
+    - from: 1453
+      main: other
+      note: カリナゴ（島のカリブ）・タイノの信仰。16 世紀にはほぼ無人の島も多い。イギリス人の入植はアンギラ 1650 年、バーブーダ 1660 年代、トルトラ島 1672 年（1640 年代のトルトラ島にはオランダ人の小さな拠点があった）
+- id: rel_antigua_pre
+  name: アンティグア（入植の前後）
+  until: 1647
+  select:
+    pieces: [ATG-Saint_George, ATG-Saint_John, ATG-Saint_Mary, ATG-Saint_Paul, ATG-Saint_Peter, ATG-Saint_Philip]
+  timeline:
+    - from: 1453
+      main: other
+      note: カリナゴの信仰
+    - from: 1632
+      main: anglican
+      note: イングランド人のアンティグア植民（1632）
+- id: rel_barbados_pre
+  name: バルバドス（入植の前後）
+  until: 1647
+  select:
+    iso: [BRB]
+  timeline:
+    - from: 1453
+      main: other
+      note: アラワク系の住民の信仰（16 世紀にはほぼ無人になった）
+    - from: 1627
+      main: anglican
+      note: イングランド人のバルバドス植民（1627）
 - id: rel_montserrat_irish
   name: モントセラト
   select:
@@ -2698,6 +2737,9 @@
     - from: 1453
       main: other
       note: ルカヤ人の信仰。1520 年ごろまでにルカヤ人はイスパニョーラ島へ奴隷として連れ去られ、島々は 1648 年のエリューセラ植民までほぼ無人
+    - from: 1520
+      main: none
+      note: ルカヤ人がイスパニョーラ島などへ奴隷として連れ去られ、島々はほぼ無人になった（1648 年のエルーセラ植民まで）
     - from: 1648
       main: reformed
       note: バミューダのピューリタン（エルーセラ・アドヴェンチャラーズ）がエルーセラ島に入植した（1648）。先住民のルカヤン人は 16 世紀にスペイン人に連れ去られて絶えていた。
@@ -2728,6 +2770,9 @@
     - from: 1453
       main: other
       note: ルカヤ人の信仰。16 世紀初めにほぼ無人になった
+    - from: 1520
+      main: none
+      note: ルカヤ人が連れ去られ、ほぼ無人になった
     - from: 1648
       main: anglican
     - from: 1850
@@ -2750,6 +2795,15 @@
     - from: 1648
       main: catholic
       note: フランスの植民地（マルティニーク・グアドループ 1635）。砂糖のプランテーションの奴隷制（黒人法典 1685）。サン・バルテルミーは 1784–1878 年にスウェーデン領だったが、住民はカトリック。
+- id: rel_stbarth_stmartin_pre
+  name: サン・バルテルミー・サン・マルタン（入植の前）
+  until: 1647
+  select:
+    pieces: [BLM-Saint_Barthelemy, MAF-St_Martin]
+  timeline:
+    - from: 1453
+      main: other
+      note: カリナゴの信仰。サン・マルタン島は 1633–48 年はスペインの守備隊だけで、フランス人・オランダ人の入植はコンコルディア条約（1648）から。サン・バルテルミーのフランス人の入植も 1648 年
 - id: rel_windward_french
   name: ドミニカ・セントルシア・グレナダ（フランス系の島）
   select:
@@ -2892,7 +2946,7 @@
       main: other
     - from: 1636
       main: reformed
-      note: オランダ人のシント・ユースタティウス（1636）・サバ（1640）・シント・マールテン
+      note: オランダ人のシント・ユースタティウス（1636）。サバ（1640）・シント・マールテン（1648）は別の区分け
     - from: 1648
       main: reformed
       note: オランダ西インド会社の島（シント・ユースタティウスは 18 世紀の中継貿易で栄えた「黄金の岩」）。イギリス系・アフリカ系の住民が多い。
@@ -2904,6 +2958,26 @@
       main: evangelical
       minor: catholic
       note: メソジストの伝道（シント・ユースタティウスの黒人の説教師「ブラック・ハリー」1780 年代など）で、アフリカ系の住民の多くがキリスト教徒になった。
+- id: rel_sxm_pre
+  name: シント・マールテン（入植の前）
+  until: 1647
+  select:
+    pieces: [SXM-Sint_Maarten]
+  timeline:
+    - from: 1453
+      main: other
+      note: カリナゴの信仰。オランダ人の塩田（1631）は 1633 年にスペインに奪われ、1648 年まで守備隊だけ
+- id: rel_saba_pre
+  name: サバ（入植の前後）
+  until: 1647
+  select:
+    pieces: [BES-Saba]
+  timeline:
+    - from: 1453
+      main: other
+    - from: 1640
+      main: reformed
+      note: シント・ユースタティウスからのオランダ人の入植（1640）
 
 # ================================================================
 # 南米

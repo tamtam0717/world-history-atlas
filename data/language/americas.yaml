@@ -3499,6 +3499,9 @@
       minor: spanish
     - from: 1520
       main: spanish
+    - from: 1605
+      main: none
+      note: スペインが島の北部・西部の住民を東へ強制移住させ（オソリオの「荒廃」、1605–06）、西部はほぼ無人になった
     - from: 1640
       main: french
       note: 島の西部は 1605 年の強制移住でほぼ無人になり、トルトゥーガ島のフランス人のバッカニア（1630 年代〜）が住みついた
@@ -3551,6 +3554,9 @@
     - from: 1453
       main: arawak
       note: ルカヤ語。1520 年ごろからほぼ無人
+    - from: 1520
+      main: none
+      note: ルカヤ人がイスパニョーラ島などへ奴隷として連れ去られ、島々はほぼ無人になった（1648 年のエルーセラ植民まで）
     - from: 1648
       main: english
       note: エルーセラ・アドヴェンチャラーズ（1648）。ナッソーは 18 世紀初めに海賊の拠点になった（黒ひげなど）。
@@ -3598,6 +3604,27 @@
       note: 砂糖のプランテーションでアフリカ系の奴隷が住民の大多数になった。
     - from: 1850
       main: creole_english
+- id: lang_leewards_unsettled_pre
+  name: アンギラ・バーブーダ・レドンダ・英領ヴァージン諸島（入植の前）
+  until: 1647
+  select:
+    pieces: [AIA-Anguilla, ATG-Barbuda, ATG-Redonda, VGB-British_Virgin_Islands]
+  timeline:
+    - from: 1453
+      main: carib
+      note: カリナゴ語など。イギリス人の入植はアンギラ 1650 年、バーブーダ 1660 年代、トルトラ島 1672 年
+- id: lang_antigua_montserrat_pre
+  name: アンティグア・モントセラト（入植の前後）
+  until: 1647
+  select:
+    pieces: [ATG-Saint_George, ATG-Saint_John, ATG-Saint_Mary, ATG-Saint_Paul, ATG-Saint_Peter, ATG-Saint_Philip, MSR-Montserrat]
+  timeline:
+    - from: 1453
+      main: carib
+      note: カリナゴ語
+    - from: 1632
+      main: english
+      note: イングランド人・アイルランド人のアンティグア・モントセラト植民（1632）
 - id: lang_cayman_tca
   name: ケイマン諸島・タークス・カイコス諸島
   select:
@@ -3615,6 +3642,12 @@
   select:
     iso: [TCA]
   timeline:
+    - from: 1453
+      main: arawak
+      note: ルカヤ語（タイノ語の方言）
+    - from: 1520
+      main: none
+      note: ルカヤ人が連れ去られ、ほぼ無人になった
     - from: 1680
       main: english
     - from: 1800
@@ -3840,6 +3873,17 @@
     - from: 1780
       main: creole_english
       minor: english
+- id: lang_saba_pre
+  name: サバ（入植の前後）
+  until: 1647
+  select:
+    pieces: [BES-Saba]
+  timeline:
+    - from: 1453
+      main: carib
+    - from: 1640
+      main: english
+      note: シント・ユースタティウスからの入植（1640）。入植者にはイギリス系・アイルランド系が多かった
 - id: lang_saba
   name: サバ島
   select:
@@ -4306,7 +4350,7 @@
     - from: 1453
       main: quechua
       minor: sa_other
-      note: 海岸のケチュア語とムチック語など
+      note: 中部・南部の海岸のケチュア語（海岸のケチュア I 群・チンチャ）。北部の海岸はチムー王国のムチック語・キンナム語など
     - from: 1540
       main: quechua
       minor: spanish
@@ -4325,6 +4369,29 @@
       main: spanish
       minor: quechua
       note: 高地からの移住で、リマの周りにバリアーダ（スラム、「若い町」）が広がった（リマの人口は 1940 年の 60 万人から 1981 年に 450 万人）。
+- id: lang_peru_north_coast_pre
+  name: ペルー北部の海岸（チムーの地）
+  until: 1647
+  select:
+    adm1: ["PER/Tumbes", "PER/Piura", "PER/La Libertad"]
+  timeline:
+    - from: 1453
+      main: sa_other
+      note: チムー王国（都チャン・チャン）の地で、キンナム語（トルヒーヨ周辺）・ムチック語（モチカ語）・タリャン語（ピウラ・トゥンベス）などが話された。ケチュア語の地ではない
+    - from: 1470
+      main: sa_other
+      minor: quechua
+      note: インカのチムー征服（1470 年ごろ）。役人・ミティマエ（移住民）のケチュア語
+    - from: 1540
+      main: sa_other
+      minor: spanish
+      note: トルヒーヨ（1534）・ピウラ（サン・ミゲル、1532）
+    - from: 1600
+      main: spanish
+      minor: sa_other
+      note: 海岸の先住民は疫病で激減し、スペイン人・アフリカ人・メスティーソが増えた
+    - from: 1620
+      main: spanish
 - id: lang_lima_late
   name: リマ以外の海岸
   select:
@@ -5290,7 +5357,7 @@
   timeline:
     - from: 1453
       main: mapuche
-      note: ピクンチェ（マプーチェ語）。北部はインカの支配下
+      note: ピクンチェ（マプーチェ語）。北のノルテ・チコ（コピアポ〜チョアパ）はディアギタ人の地
     - from: 1541
       main: mapuche
       minor: spanish
@@ -5304,6 +5371,26 @@
       note: チリ総督領（ペルー副王領）の中心部。北のピクンチェ人（マプーチェ語を話す）はスペイン人の農園（エンコミエンダ）に組み込まれ、メスティーソ化した。
     - from: 1750
       main: spanish
+- id: lang_chile_norte_chico_pre
+  name: チリのノルテ・チコ（コピアポ〜チョアパの谷）
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Chanaral, CHL-Provincia_de_Copiapo, CHL-Provincia_de_Huasco, CHL-Provincia_de_Elqui, CHL-Provincia_de_Limari, CHL-Provincia_de_Choapa]
+  timeline:
+    - from: 1453
+      main: sa_other
+      note: チリのディアギタ人（カカン語系とされる）とコピアポの人々の谷。マプーチェ語（ピクンチェ）が話されたのはアコンカグア川より南
+    - from: 1480
+      main: sa_other
+      minor: quechua
+      note: インカの支配（トゥパック・インカ・ユパンキの遠征、1470–80 年代）
+    - from: 1550
+      main: sa_other
+      minor: spanish
+      note: ラ・セレナの建設（1544、1549 再建）
+    - from: 1600
+      main: spanish
+      minor: sa_other
 - id: lang_chile_north
   name: チリ北部（アタカマ砂漠とアンデス）
   select:
