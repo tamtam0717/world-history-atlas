@@ -6534,9 +6534,14 @@
       source: "https://ja.wikipedia.org/wiki/女真"
     - from: 1589
       owner: later_jin
+      certainty: uncertain
       cause: ヌルハチが建州女真を統一する（1588年ごろ）。1587年にフェアラ城を築く
-      note: 撫順の町は明の辺境の城（1618年まで）。ピースの大半（新賓・清原）は建州女真の地
+      note: ピースの大半（新賓・桓仁・清原）は建州女真の地（フェアラ・ヘトゥアラもここ）だが、西端の撫順の町（撫順所）と本渓の清河堡は1618年まで明の辺境の城だったので、1617年までは不確実として描く
       source: "https://ja.wikipedia.org/wiki/ヌルハチ"
+    - from: 1618
+      owner: later_jin
+      cause: ヌルハチが「七大恨」を掲げて明に挑み、撫順・清河を落とす
+      source: "https://ja.wikipedia.org/wiki/七大恨"
     - from: 1636
       owner: qing
       cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
@@ -6833,8 +6838,8 @@
     - from: 1528
       owner: ming
       certainty: nominal
-      cause: トゥルファンにハミを奪われ（1513）、明は嘉峪関の外の関西七衛を放棄する
-      note: 粛州（酒泉）は明が守ったが、ピースの大半を占める嘉峪関の外（敦煌など）はモンゴル・トゥルファンの勢力の地となった
+      cause: トルファンにハミを奪われ（1513）、明は嘉峪関の外の関西七衛を放棄する
+      note: 粛州（酒泉）は明が守ったが、ピースの大半を占める嘉峪関の外（敦煌など）はモンゴル・トルファンの勢力の地となった
       source: "https://ja.wikipedia.org/wiki/嘉峪関"
     - from: 1644
       owner: shun
@@ -7542,6 +7547,27 @@
       cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
       source: "https://ja.wikipedia.org/wiki/南明"
 
+- id: cn15_guangxi_wuzhou
+  name: 梧州（広西）
+  until: 1647
+  select:
+    pieces: [CHN-Wuzhou]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: qing
+      certainty: uncertain
+      cause: 広東を取った李成棟の清軍が、西江をさかのぼって梧州など広西東部に入る
+      note: 翌1648年に李成棟が清から南明に寝返り、梧州も南明に戻る。広西のほかの地は永暦帝（桂林）の側に残った
+      source: "https://ja.wikipedia.org/wiki/李成棟"
+
 - id: cn15_guangxi_baise
   name: 百色・崇左・河池（広西）
   until: 1647
@@ -7741,7 +7767,7 @@
     - from: 1644
       owner: southern_ming
       certainty: nominal
-      cause: 明の滅亡
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
       note: 明清交代期は鄭芝竜の海上勢力の下にあった
       source: "https://ja.wikipedia.org/wiki/澎湖諸島"
     - from: 1646
