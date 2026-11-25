@@ -4220,6 +4220,18 @@
     - from: 1648
       main: spanish
       note: グアヤキル（1538）の港と造船所。エスメラルダスはアフリカ系のマルーン（サンボ）の地で、スペインの支配は名目的だった。
+- id: lang_esmeraldas_pre
+  name: エスメラルダス
+  until: 1647
+  select:
+    pieces: [ECU-Esmeraldas]
+  timeline:
+    - from: 1453
+      main: sa_other
+    - from: 1600
+      main: sa_other
+      minor: spanish
+      note: アフリカ系のマルーン（サンボ）と先住民の自治の地で、スペインの支配は名目的だった
 - id: lang_ecuador_oriente
   name: エクアドルのアマゾン（オリエンテ）
   select:
@@ -4838,6 +4850,38 @@
     - from: 1750
       main: portuguese
       note: アフリカ系の住民も言葉はポルトガル語（ヨルバ語は祭儀の言葉として残った）。
+- id: lang_brazil_rio_pre
+  name: リオデジャネイロ（1565 年の征服まで）
+  until: 1647
+  select:
+    pieces: [BRA-Rio_de_Jeneiro]
+  timeline:
+    - from: 1453
+      main: tupi_guarani
+      note: トゥピナンバ（タモイオ）のトゥピ語
+    - from: 1570
+      main: tupi_guarani
+      minor: portuguese
+      note: リオデジャネイロの建設（1565）
+    - from: 1620
+      main: portuguese
+      minor: tupi_guarani
+- id: lang_brazil_paraiba_sergipe_pre
+  name: パライバ・セルジッペ・リオグランデ・ド・ノルテ（16 世紀末の征服まで）
+  until: 1647
+  select:
+    pieces: [BRA-Paraiba, BRA-Sergipe, BRA-Rio_Granda_do_Norte]
+  timeline:
+    - from: 1453
+      main: tupi_guarani
+      note: ポティグアラ人・トゥピナンバのトゥピ語
+    - from: 1590
+      main: tupi_guarani
+      minor: portuguese
+      note: パライバ（1585）・セルジッペ（1590）・リオグランデ・ド・ノルテ（1598–99）の征服
+    - from: 1630
+      main: portuguese
+      minor: tupi_guarani
 - id: lang_sao_paulo
   name: サンパウロ（パウリスタの地）
   select:

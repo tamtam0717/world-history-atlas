@@ -378,8 +378,9 @@
       minor: catholic
       note: ボルティモア卿のメリーランド植民地（セントメアリーズ・シティ 1634）。カトリックの避難所として建てられたが、入植者の多くはプロテスタントだった
     - from: 1645
-      main: anglican
-      minor: catholic
+      main: other
+      minor: anglican
+      note: プロテスタントの入植者が増えた（イングルの反乱 1645）。ただし入植者は数百〜千人ほどで、住民の多数はまだピスカタウェイ・ナンティコークなどの先住民
     - from: 1648
       main: anglican
       minor: catholic
@@ -3750,6 +3751,58 @@
       note: 砂糖の植民地。アフリカ人奴隷（洗礼を受けた）と伝道村（アルデイア）の先住民
     - from: 1610
       main: catholic
+- id: rel_brazil_rio_pre
+  name: リオデジャネイロ（1565 年の征服まで）
+  until: 1647
+  select:
+    pieces: [BRA-Rio_de_Jeneiro]
+  timeline:
+    - from: 1453
+      main: other
+      note: トゥピナンバ（タモイオ）の信仰。フランス人の「南極フランス」（1555–67）
+    - from: 1570
+      main: other
+      minor: catholic
+      note: リオデジャネイロの建設（1565）とタモイオ連合の制圧（1567）
+    - from: 1590
+      main: catholic
+      minor: other
+    - from: 1620
+      main: catholic
+- id: rel_brazil_paraiba_sergipe_pre
+  name: パライバ・セルジッペ（16 世紀末の征服まで）
+  until: 1647
+  select:
+    pieces: [BRA-Paraiba, BRA-Sergipe]
+  timeline:
+    - from: 1453
+      main: other
+      note: ポティグアラ人（パライバ）・トゥピナンバ（セルジッペ）の信仰。ポルトガルの支配は名目的だった
+    - from: 1590
+      main: other
+      minor: catholic
+      note: パライバの征服（1585、フィリペイア）・セルジッペの征服（1590）
+    - from: 1610
+      main: catholic
+      minor: other
+    - from: 1630
+      main: catholic
+- id: rel_brazil_rn_pre
+  name: リオグランデ・ド・ノルテ（1599 年の征服まで）
+  until: 1647
+  select:
+    pieces: [BRA-Rio_Granda_do_Norte]
+  timeline:
+    - from: 1453
+      main: other
+      note: ポティグアラ人の信仰。16 世紀末までポルトガルから独立していた
+    - from: 1600
+      main: other
+      minor: catholic
+      note: レイス・マゴス砦とナタール（1598–99）
+    - from: 1630
+      main: catholic
+      minor: other
 
 - id: rel_andes_pre
   name: アンデス・カリブ海沿岸の植民地（ペルー・ボリビア・エクアドル・コロンビア・ベネズエラ、1453–1647）
@@ -3772,6 +3825,40 @@
     - from: 1610
       main: catholic
       note: 偶像崇拝根絶運動（1609–）。アンデスの祭祀はカトリックと重なって続いた
+- id: rel_choco_pre
+  name: チョコ（征服の前）
+  until: 1647
+  select:
+    pieces: [COL-Choco]
+  timeline:
+    - from: 1453
+      main: other
+      note: エンベラ人・ワウナン人などの信仰。スペインの支配は名目的で、伝道と征服は 17 世紀後半から
+- id: rel_cumana_pre
+  name: クマナ（スクレ）
+  until: 1647
+  select:
+    pieces: [VEN-Sucre]
+  timeline:
+    - from: 1453
+      main: other
+      note: クマナゴト人・チャイマ人（カリブ系）の信仰
+    - from: 1580
+      main: other
+      minor: catholic
+      note: クマナ（1521 年の伝道所、1569 年に再建）のスペイン人の町。内陸のフランシスコ会・カプチン会の伝道村は 1650 年代から
+- id: rel_esmeraldas_pre
+  name: エスメラルダス
+  until: 1647
+  select:
+    pieces: [ECU-Esmeraldas]
+  timeline:
+    - from: 1453
+      main: other
+    - from: 1600
+      main: other
+      minor: catholic
+      note: 難破した奴隷船（1553）から逃れたアフリカ人と先住民のサンボ（マルーン）の自治の地。首長フランシスコ・デ・アロベらの洗礼（1599、「エスメラルダスの黒人の首長たち」の肖像画）
 
 - id: rel_chile_pre
   name: チリ（1453–1647）
