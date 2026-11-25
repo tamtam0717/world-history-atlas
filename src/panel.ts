@@ -23,6 +23,9 @@ export class Panel {
   range: [number, number] = [1648, 1815];
   /** 地図に映っているかを調べる関数を返す（main.ts が地図とつなぐ。地図の準備前は null） */
   viewProbe: () => ViewProbe | null = () => null;
+  /** 選んでいる国（その国に関係する出来事・国境の変化を一覧のいちばん上に出す） */
+  private selected: string | null = null;
+  private year = 0;
 
   constructor(
     private polityEl: HTMLElement,
@@ -118,7 +121,7 @@ export class Panel {
    * 同じ変化（前後の所属・上位の枠・理由が同じ）をまとめた一覧。
    * 2件以上は「代表の地域ほか N 地域：本文」の1行にし、押すと全地域を展開する
    */
-  private groupedChanges(kind: "political" | DistKey, items: { name: string; region: number; key: string; body: string }[]): string {
+  private groupedChanges(kind: "political" | DistKey, items: { name: string; region: number; key: string; body: string; ps?: string[] }[]): string {
     const groups = new Map<string, typeof items>();
     for (const it of items) {
       if (!groups.has(it.key)) groups.set(it.key, []);
@@ -129,7 +132,8 @@ export class Panel {
     for (const g of groups.values()) {
       const ids = g.map((x) => x.region).join(",");
       const pts = kind === "political" ? ptsAttr(g.map((x) => this.idx.atlas.regions[x.region]?.c).filter((c): c is [number, number] => !!c)) : "";
-      const sortAttr = kind === "political" ? ` data-k="${k++}" data-imp="0"${pts}` : "";
+      const ps = [...new Set(g.flatMap((x) => x.ps ?? []))];
+      const sortAttr = kind === "political" ? ` data-k="${k++}" data-imp="0"${pts}${ps.length ? ` data-ps="${esc(ps.join(","))}"` : ""}` : "";
       if (g.length === 1) {
         html += `<li class="change" data-rkind="${kind}" data-regions="${ids}"${sortAttr}><b>${esc(g[0].name)}</b>：${g[0].body}</li>`;
         continue;
@@ -160,7 +164,8 @@ export class Panel {
     const img = imp <= 2 ? imageSlot(wikiRefs(e.source), imp === 1 ? "event-wide" : "event", e.title) : "";
     // 領土による判定（関係国が画面の中にまとまった領土を持つか）に使う政体と範囲。場所が書いてある出来事は点だけで判定する
     const terr = !e.fixed && e.polities?.length ? ` data-pol="${esc(e.polities.join(","))}"${e.bx != null ? ` data-bx="${e.bx}"` : ""}` : "";
-    const sortAttr = k == null ? "" : ` data-k="${k}" data-imp="${imp}"${ptsAttr(e.pts)}${terr}`;
+    const psAttr = e.polities?.length ? ` data-ps="${esc(e.polities.join(","))}"` : "";
+    const sortAttr = k == null ? "" : ` data-k="${k}" data-imp="${imp}"${ptsAttr(e.pts)}${terr}${psAttr}`;
     return `<li class="event imp${imp}"${sortAttr}>${img}
       <div class="ev-title">${date}${esc(e.title)}</div>
       ${e.text ? `<div class="ev-text">${escY(e.text)}</div>` : ""}
@@ -188,7 +193,9 @@ export class Panel {
     }`;
   }
 
-  renderYear(year: number, opts: { dist?: DistKey | null; movement?: string | null } = {}) {
+  renderYear(year: number, opts: { dist?: DistKey | null; movement?: string | null; polity?: string | null } = {}) {
+    this.selected = opts.polity ?? null;
+    this.year = year;
     const events = this.idx.eventsIn(year).sort((a, b) => (a.importance ?? 2) - (b.importance ?? 2));
     const changes = this.idx.borderChangesIn(year);
     const dk = opts.dist ?? null;
@@ -211,7 +218,12 @@ export class Panel {
       const regs = this.idx.atlas.regions;
       html += `<h3>国境の変化</h3><ul class="changes" data-sort>${this.groupedChanges(
         "political",
-        changes.map((c) => ({ name: this.idx.regionName(c.region, year), region: regs.indexOf(c.region), ...this.changeBody(c, year) })),
+        changes.map((c) => ({
+          name: this.idx.regionName(c.region, year),
+          region: regs.indexOf(c.region),
+          ps: [c.prev.owner, c.cur.owner, c.prev.overlord, c.cur.overlord].filter((x): x is string => !!x),
+          ...this.changeBody(c, year),
+        })),
       )}</ul>`;
     }
     if (!events.length && !changes.length && !relChanges.length) {
@@ -236,6 +248,7 @@ export class Panel {
    */
   arrangeByView(keepScroll = true) {
     const probe = this.viewProbe();
+    const sel = this.selected;
     const scroller = keepScroll ? scrollParent(this.eventsEl) : null;
     const top0 = scroller?.scrollTop ?? 0;
     let shift = 0;
@@ -258,31 +271,54 @@ export class Panel {
           const box = bx != null ? this.idx.atlas.eventBoxes?.[Number(bx)] : null;
           if (probe.holds(pol.split(","), box)) inView = true;
         }
-        return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist };
+        const rel = !!sel && (li.getAttribute("data-ps") ?? "").split(",").includes(sel);
+        return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist, rel };
       });
+      // 並び：選んでいる国に関係するもの → 地図に映っているもの → 外のもの
+      const tier = (x: { rel: boolean; inView: boolean }) => (x.rel ? 0 : x.inView ? 1 : 2);
       const order = [...items].sort((a, b) => {
-        if (a.inView !== b.inView) return a.inView ? -1 : 1;
+        if (tier(a) !== tier(b)) return tier(a) - tier(b);
         if (a.imp !== b.imp) return a.imp - b.imp;
         if (!a.inView && Math.abs(a.dist - b.dist) > 1) return a.dist - b.dist;
         return a.k - b.k;
       });
-      const nIn = order.filter((x) => x.inView).length;
+      const nRel = order.filter((x) => x.rel).length;
+      const nIn = order.filter((x) => tier(x) <= 1).length;
       const head = ul.querySelector<HTMLLIElement>(":scope > li.out-head");
-      const key = order.map((x) => x.k).join(",") + "|" + nIn;
+      const relHead = ul.querySelector<HTMLLIElement>(":scope > li.rel-head");
+      const key = order.map((x) => x.k).join(",") + "|" + nRel + "|" + nIn + "|" + (sel ?? "");
       if (ul.dataset.order === key) continue;
       ul.dataset.order = key;
       // 一覧より下を読んでいるときは、一覧の高さの変化だけスクロールを補正する
       const below = scroller ? ul.getBoundingClientRect().bottom <= scroller.getBoundingClientRect().top : false;
       const h0 = ul.offsetHeight;
       head?.remove();
+      relHead?.remove();
       order.forEach((x, i) => {
-        if (i === nIn && nIn < order.length) {
+        if (i === 0 && nRel > 0 && sel) {
+          const h = relHead ?? document.createElement("li");
+          h.className = "rel-head";
+          const p = this.idx.polityById.get(sel);
+          h.style.setProperty("--rel", p?.color ?? "var(--accent)");
+          h.textContent = `${p ? this.idx.polityName(p, this.year) : ""}に関係`;
+          ul.appendChild(h);
+        }
+        if (i === nRel && nRel > 0 && nRel < order.length) {
+          const h = document.createElement("li");
+          h.className = "out-head rel-end";
+          h.textContent = nRel < nIn ? "地図の範囲" : "地図の範囲の外";
+          ul.appendChild(h);
+        }
+        if (i === nIn && nIn < order.length && !(i === nRel && nRel > 0)) {
           const h = head ?? document.createElement("li");
           h.className = "out-head";
           h.textContent = "地図の範囲の外";
           ul.appendChild(h);
         }
-        x.li.classList.toggle("outside", !x.inView);
+        x.li.classList.toggle("outside", tier(x) === 2);
+        x.li.classList.toggle("related", x.rel);
+        if (x.rel) x.li.style.setProperty("--rel", this.idx.polityById.get(sel!)?.color ?? "");
+        else x.li.style.removeProperty("--rel");
         ul.appendChild(x.li);
       });
       if (below) shift += ul.offsetHeight - h0;
