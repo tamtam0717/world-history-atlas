@@ -3,6 +3,396 @@
 # フランスのメキシコ出兵（1861）と米西戦争（1898）は west.yaml。
 # アメリカ＝メキシコ戦争の開戦・グアダルーペ・イダルゴ条約・テキサス独立・ガズデン購入はアメリカ合衆国側の出来事として A1 に任せた（ここではメキシコ市の占領だけ）。
 
+# ----- 1453–1647（W2）。コロンブスの到達（1492）は europe.yaml、トルデシリャス条約（1494）は west.yaml -----
+- year: 1454
+  title: アステカの大飢饉
+  text: 数年続いた霜と干ばつでメキシコ盆地が飢饉に見舞われた。アステカでは、神々に供える捕虜を得るためのトラスカラなどとの「花の戦争」が、このころ制度化されたと伝えられる。
+  polities: [aztec, tlaxcala]
+  importance: 3
+  at: [-99.13, 19.43]
+  source: "https://en.wikipedia.org/wiki/Flower_war"
+- year: 1458
+  title: アステカがコイシュトラワカを征服
+  text: モクテスマ1世がオアハカ北部のミシュテカ人の王国コイシュトラワカを破り、南への進出が始まった。
+  polities: [aztec, mixtec_zapotec]
+  importance: 3
+  at: [-97.32, 17.71]
+  source: "https://en.wikipedia.org/wiki/Coixtlahuaca"
+- year: 1470
+  title: カクチケル人がイシムチェに都を置く
+  text: グアテマラ高地のキチェ王国から、王キカブの晩年にカクチケル人が離れ、イシムチェを都に独立の王国を作った。両国はスペイン人の到来まで争った。
+  polities: [kaqchikel, kiche]
+  importance: 3
+  at: [-90.99, 14.74]
+  source: "https://en.wikipedia.org/wiki/Iximche"
+- year: 1473
+  title: テノチティトランがトラテロルコを併合
+  text: アシャヤカトルが、同じ湖の島にあった姉妹都市トラテロルコを攻め取った。トラテロルコの大市場はアステカの交易の中心だった。
+  polities: [aztec]
+  importance: 3
+  at: [-99.14, 19.45]
+  source: "https://en.wikipedia.org/wiki/Tlatelolco_(altepetl)"
+- year: 1479
+  title: アステカがタラスコ王国に大敗
+  text: アシャヤカトルの率いるアステカの大軍が、ミチョアカンのタラスコ王国に攻め込んで大敗した。以後、両国の境には要塞が並び、アステカは西に広がれなかった。
+  polities: [aztec, tarascan]
+  importance: 2
+  at: [-100.6, 19.5]
+  source: "https://en.wikipedia.org/wiki/Tarascan_state"
+- year: 1487
+  title: テンプロ・マヨール（大神殿）の再奉献
+  text: アウィツォトルがテノチティトランの大神殿の拡張を終え、多数の捕虜を犠牲に捧げたと伝えられる（数は誇張とされる）。
+  polities: [aztec]
+  importance: 3
+  at: [-99.13, 19.43]
+  source: "https://ja.wikipedia.org/wiki/テンプロ・マヨール"
+- year: 1492
+  date: "1492-12-25"
+  title: ラ・ナビダ砦
+  text: コロンブスの旗艦サンタ・マリア号がイスパニョーラ島北岸で座礁し、その木材で砦を築いて39人を残した。翌年の第2回航海で戻ると、砦は焼かれ全員が死んでいた。
+  polities: [castile, taino]
+  importance: 3
+  at: [-72.1, 19.75]
+  source: "https://en.wikipedia.org/wiki/La_Navidad"
+- year: 1493
+  title: コロンブスの第2回航海とイサベラの建設
+  text: 17隻・約1200人の大船団で小アンティル諸島を経てイスパニョーラ島に至り、ヨーロッパ人の最初の町イサベラを建てた（1494年1月）。牛・馬・サトウキビなどが持ち込まれた。
+  polities: [castile, taino]
+  importance: 2
+  at: [-71.08, 19.89]
+  source: "https://en.wikipedia.org/wiki/La_Isabela"
+- year: 1495
+  date: "1495-03"
+  title: ラ・ベガ・レアルの戦い
+  text: コロンブスの率いるスペイン軍が、騎兵と猟犬でタイノ人の首長連合を破った。島の住民に金の貢納が課され、払えない者は罰せられた。
+  polities: [castile, taino]
+  importance: 3
+  at: [-70.53, 19.22]
+  source: "https://en.wikipedia.org/wiki/Battle_of_Vega_Real"
+- year: 1496
+  title: サント・ドミンゴの建設
+  text: コロンブスの弟バルトロメが島の南岸にサント・ドミンゴを建てた。アメリカ大陸で今も続くヨーロッパ人の最古の町で、のちアウディエンシア（1511年）が置かれ、カリブ海の植民の中心となった。
+  polities: [castile]
+  importance: 2
+  at: [-69.89, 18.47]
+  source: "https://ja.wikipedia.org/wiki/サント・ドミンゴ"
+- year: 1497
+  title: ギエンゴラの攻防
+  text: アステカのアウィツォトルがテワンテペク地峡に軍を送り、サポテカ王コシホエサのギエンゴラの山城を攻めた。長い包囲の後に和が結ばれ、コシホエサはアウィツォトルの娘を妃に迎えた（年はおよそ）。
+  polities: [aztec, mixtec_zapotec]
+  importance: 3
+  at: [-95.32, 16.39]
+  source: "https://en.wikipedia.org/wiki/Guiengola"
+- year: 1502
+  title: モクテスマ2世の即位
+  text: アウィツォトルの死で甥のモクテスマ2世がアステカの王になり、貴族の特権を強めて支配を引き締めた。
+  polities: [aztec]
+  importance: 2
+  at: [-99.13, 19.43]
+  source: "https://ja.wikipedia.org/wiki/モクテスマ2世"
+- year: 1502
+  title: コロンブスの第4回航海
+  text: コロンブスがホンジュラスからパナマまで中米のカリブ海岸を探検した。ホンジュラス沖のグアナハ島ではマヤ人の大きな交易カヌーに出会った。
+  polities: [castile]
+  importance: 3
+  at: [-83.0, 12.0]
+  source: "https://en.wikipedia.org/wiki/Fourth_voyage_of_Christopher_Columbus"
+- year: 1503
+  title: シャラグアの虐殺
+  text: イスパニョーラ総督オバンドが、島の西部の首長国シャラグアの首長たちを集めて焼き殺し、女首長アナカオナを処刑した。翌年の東部イゲイの征服で、島はスペインの支配下に入った。
+  polities: [castile, taino]
+  importance: 3
+  at: [-72.53, 18.51]
+  source: "https://en.wikipedia.org/wiki/Anacaona"
+- year: 1503
+  title: エンコミエンダ制の始まり
+  text: 王室が、スペイン人植民者に先住民の保護とキリスト教化を任せる代わりに、労働と貢納を取り立てる権利を与えた（エンコミエンダ制）。苛酷な労働と疫病でタイノ人の人口は激減した。
+  polities: [castile, taino]
+  importance: 1
+  at: [-69.89, 18.47]
+  source: "https://ja.wikipedia.org/wiki/エンコミエンダ"
+- year: 1508
+  title: プエルトリコの征服
+  text: フアン・ポンセ・デ・レオンがプエルトリコ島にカパラを建てた。1511年のタイノ人の反乱が鎮圧され、島はスペイン領となった。
+  polities: [castile, taino]
+  importance: 3
+  at: [-66.1, 18.4]
+  source: "https://en.wikipedia.org/wiki/History_of_Puerto_Rico"
+- year: 1511
+  title: モンテシーノスの説教
+  text: サント・ドミンゴでドミニコ会士モンテシーノスが、先住民を酷使する植民者を激しく非難した。これがブルゴス法（1512年）につながり、のちのラス・カサスの活動のさきがけとなった。
+  polities: [castile]
+  importance: 3
+  at: [-69.89, 18.47]
+  source: "https://en.wikipedia.org/wiki/Antonio_de_Montesinos"
+- year: 1511
+  title: キューバの征服が始まる
+  text: ディエゴ・ベラスケスが東端のバラコアに上陸し、1514年までに島を征服した。イスパニョーラから逃れて抵抗した首長アトゥエイは、1512年に火あぶりにされた。
+  polities: [castile, taino]
+  importance: 2
+  at: [-74.5, 20.35]
+  source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Cuba"
+- year: 1513
+  date: "1513-09-25"
+  title: バルボアが太平洋を見る
+  text: バスコ・ヌーニェス・デ・バルボアがパナマ地峡を横断し、ヨーロッパ人として初めてアメリカ大陸の西側の大洋（「南の海」、太平洋）を見た。
+  polities: [castile]
+  importance: 2
+  at: [-78.3, 8.6]
+  source: "https://ja.wikipedia.org/wiki/バスコ・ヌーニェス・デ・バルボア"
+- year: 1517
+  title: スペイン人がユカタンのマヤに出会う
+  text: キューバから出たエルナンデス・デ・コルドバの遠征隊がユカタン半島に着き、石造りの町に住むマヤ人と戦った。翌年のグリハルバの遠征はアステカの使者と接触し、金の豊かな国の噂を持ち帰った。
+  polities: [spain, maya_yucatan]
+  importance: 3
+  at: [-90.5, 19.8]
+  source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Yucatán"
+- year: 1519
+  date: "1519-11-08"
+  title: コルテスがテノチティトランに入る
+  text: 4月にベラクルスに上陸したコルテスは、トラスカラと同盟を結んで内陸に進み、11月にモクテスマ2世に迎えられて都に入った。まもなくモクテスマを人質にとった。
+  polities: [spain, aztec, tlaxcala]
+  importance: 1
+  at: [-99.13, 19.43]
+  source: "https://ja.wikipedia.org/wiki/エルナン・コルテス"
+- year: 1519
+  date: "1519-08-15"
+  title: パナマ市の建設
+  text: ペドラリアス・ダビラが太平洋岸にパナマ市を建てた。のちにピサロらのペルー遠征の出発地となり、ペルーの銀をスペインに運ぶ中継地として栄えた。
+  polities: [spain]
+  importance: 3
+  at: [-79.43, 9.0]
+  source: "https://ja.wikipedia.org/wiki/パナマ市"
+- year: 1520
+  date: "1520-06-30"
+  title: 悲しき夜（ノチェ・トリステ）
+  text: 大神殿での虐殺をきっかけにアステカの人々が蜂起し、モクテスマ2世は死に、スペイン軍は多くの死者を出して都から逃れた。その後、スペイン人が持ち込んだ天然痘がメキシコ中央部に広がった。
+  polities: [spain, aztec, tlaxcala]
+  importance: 2
+  at: [-99.17, 19.45]
+  source: "https://en.wikipedia.org/wiki/La_Noche_Triste"
+- year: 1521
+  date: "1521-08-13"
+  title: テノチティトランの陥落（アステカ王国の滅亡）
+  text: コルテスがトラスカラなど先住民の大軍と湖に浮かべた小型帆船で都を包囲し、3か月の戦いの末に陥落させた。廃墟の上にメキシコ市が建てられ、ヌエバ・エスパーニャの都となった。
+  polities: [spain, aztec, tlaxcala]
+  importance: 1
+  at: [-99.13, 19.43]
+  source: "https://ja.wikipedia.org/wiki/テノチティトラン包囲戦"
+- year: 1522
+  title: タラスコ王国がスペインに服属
+  text: アステカの滅亡を見たタラスコ王タンガシュアン2世が、戦わずにスペインに服属した。1530年に王はヌーニョ・デ・グスマンに処刑された。
+  polities: [tarascan, spain]
+  importance: 3
+  at: [-101.63, 19.62]
+  source: "https://en.wikipedia.org/wiki/Tarascan_state"
+- year: 1524
+  title: アルバラードのグアテマラ征服
+  text: コルテスの部下ペドロ・デ・アルバラードがグアテマラ高地に攻め込み、キチェ王国を破って都クマルカフを焼いた。カクチケル人と結んだが、のちに彼らの反乱を招いた（1524–30）。
+  polities: [spain, kiche, kaqchikel]
+  importance: 2
+  at: [-91.52, 14.84]
+  source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Guatemala"
+- year: 1524
+  title: グラナダとレオンの建設
+  text: フランシスコ・エルナンデス・デ・コルドバがニカラグア湖畔にグラナダ、マナグア湖畔にレオンを建てた。ニカラグアの先住民は多くがパナマやペルーに奴隷として売られた。
+  polities: [spain]
+  importance: 3
+  at: [-85.95, 11.93]
+  source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Nicaragua"
+- year: 1525
+  title: クアウテモックの処刑
+  text: ホンジュラスに向かう遠征の途中で、コルテスはアステカ最後の王クアウテモックを反乱の疑いで処刑した。遠征隊はペテンのイツァ王国の都も通った。
+  polities: [spain, aztec, itza]
+  importance: 3
+  at: [-91.5, 18.0]
+  source: "https://ja.wikipedia.org/wiki/クアウテモック"
+- year: 1528
+  title: シウダ・レアルの建設（チアパス）
+  text: ディエゴ・デ・マサリエゴスがチアパス高地にシウダ・レアル（今のサン・クリストバル・デ・ラス・カサス）を建てた。のちにラス・カサスが司教として赴任した（1545年）。
+  polities: [spain]
+  importance: 3
+  at: [-92.64, 16.74]
+  source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Chiapas"
+- year: 1531
+  title: グアダルーペの聖母
+  text: メキシコ市北郊のテペヤクの丘で、先住民フアン・ディエゴに褐色の聖母が現れたと伝えられる。グアダルーペの聖母は、先住民と混血の人々のカトリック信仰の中心となった。
+  polities: [spain]
+  importance: 3
+  at: [-99.12, 19.48]
+  source: "https://ja.wikipedia.org/wiki/グアダルーペの聖母"
+- year: 1535
+  title: ヌエバ・エスパーニャ副王領の設置
+  text: アントニオ・デ・メンドーサが初代副王としてメキシコ市に着任した。副王領はメキシコ・中米・カリブ海・のちにフィリピンまでを治めた。
+  polities: [spain]
+  importance: 2
+  at: [-99.13, 19.43]
+  source: "https://ja.wikipedia.org/wiki/ヌエバ・エスパーニャ"
+- year: 1537
+  title: ラス・カサスのベラパス布教
+  text: ドミニコ会士ラス・カサスらが、グアテマラの「戦いの地」テスルトランで武力によらない布教を試み、のちこの地はベラパス（真の平和）と呼ばれた。
+  polities: [spain]
+  importance: 3
+  at: [-90.37, 15.47]
+  source: "https://ja.wikipedia.org/wiki/バルトロメ・デ・ラス・カサス"
+- year: 1542
+  title: ラス・カサス『インディアスの破壊についての簡潔な報告』
+  text: ラス・カサスがカルロス1世に、征服者による先住民の虐殺と酷使を告発する報告を書いた（刊行は1552年）。同じ年のインディアス新法のきっかけの一つとなった。
+  polities: [spain]
+  importance: 2
+  at: [-72.0, 19.0]
+  source: "https://ja.wikipedia.org/wiki/インディアスの破壊についての簡潔な報告"
+- year: 1550
+  title: バリャドリード論争
+  text: スペインのバリャドリードで、先住民の征服と改宗の正しさをめぐり、ラス・カサス（先住民の擁護）とセプルベダ（先天的奴隷人説による征服の正当化）が論争した（1550–51）。
+  polities: [spain]
+  importance: 2
+  at: [-4.72, 41.65]
+  source: "https://ja.wikipedia.org/wiki/バリャドリッド論争"
+- year: 1539
+  title: アメリカ大陸で最初の印刷所
+  text: メキシコ市に印刷所が開かれ、教理書などが印刷された。1551年には王立メキシコ大学の設立が認められた。
+  polities: [spain]
+  importance: 3
+  at: [-99.13, 19.43]
+  source: "https://en.wikipedia.org/wiki/Juan_Pablos"
+- year: 1540
+  title: ミシュトン戦争
+  text: ヌエバ・ガリシア（ハリスコ）のカシュカン人などが、ミシュトンの山を拠点にスペインに反乱した。副王メンドーサが自ら出陣し、1542年に鎮圧した。
+  polities: [spain]
+  importance: 3
+  at: [-103.1, 21.3]
+  source: "https://en.wikipedia.org/wiki/Mixtón_War"
+- year: 1542
+  date: "1542-01-06"
+  title: メリダの建設（ユカタン征服）
+  text: フランシスコ・デ・モンテホ（子）がマヤの町ティホの跡にメリダを建てた。1546–47年のマヤ人の大反乱を鎮圧して、ユカタン北部の征服が終わった。
+  polities: [spain, maya_yucatan]
+  importance: 2
+  at: [-89.62, 20.97]
+  source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Yucatán"
+- year: 1545
+  title: ココリツトリの大流行
+  text: メキシコ高原で出血をともなう疫病（ココリツトリ）が流行し、先住民の人口の多くが失われた（1576年にも再び流行）。16世紀のメキシコ中央部の先住民人口は、征服前の1割ほどにまで減ったとされる。
+  polities: [spain]
+  importance: 2
+  at: [-99.13, 19.43]
+  source: "https://en.wikipedia.org/wiki/Cocoliztli_epidemics"
+- year: 1546
+  title: サカテカスの銀山の発見
+  text: 北方のチチメカの地で豊かな銀山が見つかり、メキシコ市と結ぶ「銀の道（カミノ・レアル）」が開かれた。銀山を守るためのチチメカ戦争（1550–90）が続いた。
+  polities: [spain]
+  importance: 2
+  at: [-102.57, 22.77]
+  source: "https://en.wikipedia.org/wiki/Zacatecas_City"
+- year: 1550
+  title: チチメカ戦争が始まる
+  text: 銀の道を襲う北方の遊動民（チチメカ）とスペインの戦いが始まった。スペインは要塞（プレシディオ）を築いたが勝てず、1590年代に食料・衣服を贈って和を結ぶ「平和の買い取り」で終わらせた。
+  polities: [spain]
+  importance: 3
+  at: [-101.5, 21.5]
+  source: "https://en.wikipedia.org/wiki/Chichimeca_War"
+- year: 1565
+  title: マニラ・ガレオン貿易の始まり
+  text: ウルダネータがフィリピンからアカプルコへ戻る航路を見つけ、メキシコの銀とアジアの絹・陶磁器を交換するガレオン貿易が始まった（1571年のマニラ建設から本格化）。
+  polities: [spain]
+  importance: 2
+  at: [-99.89, 16.85]
+  source: "https://ja.wikipedia.org/wiki/ガレオン貿易"
+- year: 1568
+  title: サン・フアン・デ・ウルアの戦い
+  text: 奴隷貿易のためにカリブ海に来たイングランドのホーキンズとドレークの船団が、ベラクルス沖でスペイン艦隊に襲われて大敗した。のちのドレークの私掠のきっかけとなった。
+  polities: [britain, spain]
+  importance: 3
+  at: [-96.13, 19.21]
+  source: "https://en.wikipedia.org/wiki/Battle_of_San_Juan_de_Ulúa_(1568)"
+- year: 1572
+  title: ドレークのノンブレ・デ・ディオス襲撃
+  text: ドレークがパナマ地峡のノンブレ・デ・ディオスを襲い、翌年には逃亡奴隷（シマロン）の助けを借りて銀を運ぶラバの列を奪った。
+  polities: [britain, spain]
+  importance: 3
+  at: [-79.47, 9.58]
+  source: "https://ja.wikipedia.org/wiki/フランシス・ドレーク"
+- year: 1592
+  title: スペインのトリニダード植民
+  text: アントニオ・デ・ベリオがトリニダード島にサン・ホセ・デ・オルーニャを建てた。黄金郷（エル・ドラード）を探す拠点で、1595年にはイングランドのローリーに焼かれた。
+  polities: [spain]
+  importance: 3
+  at: [-61.4, 10.63]
+  source: "https://en.wikipedia.org/wiki/History_of_Trinidad_and_Tobago"
+- year: 1605
+  title: オソリオの破壊
+  text: 外国人との密貿易を断つため、イスパニョーラ総督オソリオが島の北部・西部の町を壊し、住民をサント・ドミンゴ周辺に移した（1605–06）。無人になった西部には、のちにフランスの海賊（バッカニア）が住みついた。
+  polities: [spain]
+  importance: 3
+  at: [-72.3, 19.6]
+  source: "https://en.wikipedia.org/wiki/Devastations_of_Osorio"
+- year: 1609
+  title: ヤンガの反乱
+  text: ベラクルスの山地で、逃亡奴隷（シマロン）の指導者ヤンガがスペインの討伐軍と戦い、1618年に自由な村（サン・ロレンソ・デ・ロス・ネグロス、今のヤンガ）を認めさせた。
+  polities: [spain]
+  importance: 3
+  at: [-96.8, 18.83]
+  source: "https://en.wikipedia.org/wiki/Gaspar_Yanga"
+- year: 1623
+  title: イングランドのセントクリストファー植民
+  text: トマス・ウォーナーがセントクリストファー島に入植した。イングランド最初のカリブ海植民地で、1625年に来たフランス人と島を分け、ここから周りの島々への植民が広がった。
+  polities: [britain, france, kalinago]
+  importance: 2
+  at: [-62.75, 17.3]
+  source: "https://en.wikipedia.org/wiki/Colony_of_Saint_Christopher"
+- year: 1626
+  title: ブラッディ・ポイントの虐殺
+  text: セントクリストファー島のイングランド人とフランス人が、襲撃を計画したとしてカリブ人を夜襲し、多数を殺した。
+  polities: [britain, france, kalinago]
+  importance: 3
+  at: [-62.78, 17.33]
+  source: "https://en.wikipedia.org/wiki/Kalinago_genocide"
+- year: 1627
+  title: イングランドのバルバドス植民
+  text: 無人のバルバドス島にイングランド人が入植した。初めはタバコ・綿花を作ったが、1640年代に砂糖へ転じて急速に豊かになった。
+  polities: [britain]
+  importance: 3
+  at: [-59.64, 13.19]
+  source: "https://en.wikipedia.org/wiki/History_of_Barbados"
+- year: 1628
+  date: "1628-09-08"
+  title: ピート・ハインがスペインの銀船隊を奪う
+  text: オランダ西インド会社の艦隊を率いるピート・ハインが、キューバのマタンサス湾でメキシコからの銀船隊をまるごと捕らえた。巨額の銀はオランダの対スペイン戦争の資金となった。
+  polities: [netherlands, spain]
+  importance: 2
+  at: [-81.55, 23.05]
+  source: "https://en.wikipedia.org/wiki/Battle_in_the_Bay_of_Matanzas"
+- year: 1629
+  title: メキシコ市の大洪水
+  text: 湖の上に建つメキシコ市が大雨で水につかり、5年近く水が引かなかった。盆地の水を外に流す排水路の工事が進められた。
+  polities: [spain]
+  importance: 3
+  at: [-99.13, 19.43]
+  source: "https://en.wikipedia.org/wiki/1629_Mexico_City_flood"
+- year: 1634
+  title: オランダのキュラソー占領
+  text: オランダ西インド会社がスペインからキュラソー島を奪い、塩と奴隷貿易の拠点とした。1636年にはアルバ・ボネール、シント・ユースタティウスにも進出した。
+  polities: [netherlands, spain]
+  importance: 3
+  at: [-68.93, 12.11]
+  source: "https://en.wikipedia.org/wiki/History_of_Curaçao"
+- year: 1635
+  title: フランスのグアドループ・マルティニーク植民
+  text: リシュリューのもとで作られたフランス島嶼会社が、グアドループ島とマルティニーク島に入植した。カリブ人との戦いが続いた。
+  polities: [france, kalinago]
+  importance: 3
+  at: [-61.4, 15.6]
+  source: "https://en.wikipedia.org/wiki/History_of_Martinique"
+- year: 1640
+  title: バルバドスの砂糖革命
+  text: オランダ領ブラジルから伝わったサトウキビのプランテーションがバルバドスに広がった。白人の年季奉公人に代わってアフリカから連れてこられた奴隷が働き手となり、カリブ海の奴隷制砂糖経済の原型となった。
+  polities: [britain]
+  importance: 2
+  at: [-59.55, 13.15]
+  source: "https://ja.wikipedia.org/wiki/砂糖革命"
+
+# ----- 1648– -----
 - year: 1648
   date: "1648-03-23"
   title: コンコルディア条約（サン・マルタン島の分割）

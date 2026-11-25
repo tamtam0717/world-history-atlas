@@ -1,4 +1,5 @@
-# 言語（民族）の分布：アフリカ（サハラ以南・インド洋の島々。北アフリカは west.yaml）1648–2025
+# 言語（民族）の分布：アフリカ（サハラ以南・インド洋の島々。北アフリカは west.yaml）1453–2025
+# 1453–1647 は 2026-11-25 に W7 が追加（各地域の timeline の先頭の項目と、末尾の until: 1647 の地域）。1648 年以後の値は変えていない。
 # 形式は docs/language-format.md（「アフリカ」の節に語族のまとめ方と色の方針）。
 # - F5 担当（2026-11-21）。宗教（data/religion/africa.yaml）と同じ地域・同じ年で切り替えている。
 # - 「民族」で塗る方針：都市の共通語（スワヒリ語・リンガラ語・ハウサ語・英語・フランス語など）ではなく、住民の多数の民族の言語を main にした。
@@ -37,6 +38,8 @@
   select:
     iso: [SEN]
   timeline:
+    - from: 1453
+      main: wolof
     - from: 1648
       main: wolof
       note: ウォロフ語。
@@ -45,6 +48,9 @@
   select:
     adm1: [SEN/Thies, SEN/Kaolack, SEN/Kaffrine]
   timeline:
+    - from: 1453
+      main: wolof
+      minor: atlantic_other
     - from: 1648
       main: wolof
       minor: atlantic_other
@@ -54,6 +60,9 @@
   select:
     adm1: [SEN/Saint Louis, SEN/Matam]
   timeline:
+    - from: 1453
+      main: fula
+      minor: wolof
     - from: 1648
       main: fula
       minor: wolof
@@ -63,6 +72,8 @@
   select:
     pieces: [SEN-Saint_Louis]
   timeline:
+    - from: 1453
+      main: wolof
     - from: 1648
       main: wolof
       note: サン・ルイ（1659–、フランス領西アフリカの首都 1895–1902）の町はウォロフ語が中心。
@@ -71,6 +82,9 @@
   select:
     adm1: [SEN/Fatick]
   timeline:
+    - from: 1453
+      main: atlantic_other
+      minor: wolof
     - from: 1648
       main: atlantic_other
       minor: wolof
@@ -80,6 +94,9 @@
   select:
     adm1: [SEN/Ziguinchor]
   timeline:
+    - from: 1453
+      main: atlantic_other
+      minor: mande
     - from: 1648
       main: atlantic_other
       minor: mande
@@ -89,6 +106,9 @@
   select:
     adm1: [SEN/Sedhiou, SEN/Kolda]
   timeline:
+    - from: 1453
+      main: mande
+      minor: fula
     - from: 1648
       main: mande
       minor: fula
@@ -102,6 +122,9 @@
   select:
     adm1: [SEN/Tambacounda]
   timeline:
+    - from: 1453
+      main: fula
+      minor: mande
     - from: 1648
       main: fula
       minor: mande
@@ -111,6 +134,9 @@
   select:
     adm1: [SEN/Kedougou]
   timeline:
+    - from: 1453
+      main: mande
+      minor: fula
     - from: 1648
       main: mande
       minor: fula
@@ -120,6 +146,9 @@
   select:
     iso: [GMB]
   timeline:
+    - from: 1453
+      main: mande
+      minor: fula
     - from: 1648
       main: mande
       minor: fula
@@ -129,6 +158,9 @@
   select:
     adm1: [GMB/Banjul, GMB/Kanifing]
   timeline:
+    - from: 1453
+      main: mande
+      minor: wolof
     - from: 1648
       main: mande
       minor: wolof
@@ -141,6 +173,12 @@
   select:
     iso: [GNB]
   timeline:
+    - from: 1453
+      main: atlantic_other
+    - from: 1590
+      main: atlantic_other
+      minor: creole_portuguese
+      note: カシェウ（1588）などランサード（ポルトガル系の商人）の町
     - from: 1648
       main: atlantic_other
       minor: creole_portuguese
@@ -150,6 +188,9 @@
   select:
     adm1: [GNB/Gabu, GNB/Bafatá, GNB/Oio]
   timeline:
+    - from: 1453
+      main: mande
+      minor: atlantic_other
     - from: 1648
       main: mande
       minor: atlantic_other
@@ -163,6 +204,11 @@
   select:
     adm1: [GNB/Bissau]
   timeline:
+    - from: 1453
+      main: atlantic_other
+    - from: 1590
+      main: atlantic_other
+      minor: creole_portuguese
     - from: 1648
       main: atlantic_other
       minor: creole_portuguese
@@ -172,6 +218,9 @@
   select:
     iso: [CPV]
   timeline:
+    - from: 1462
+      main: creole_portuguese
+      note: 無人島へのポルトガル人の植民（1462）と西アフリカから連れてこられた奴隷。カーボベルデ・クレオール語が生まれた
     - from: 1648
       main: creole_portuguese
       note: カーボベルデ・クレオール語（クリオウル）。
@@ -181,6 +230,9 @@
   select:
     iso: [GIN]
   timeline:
+    - from: 1453
+      main: mande
+      minor: atlantic_other
     - from: 1648
       main: mande
       minor: atlantic_other
@@ -193,6 +245,9 @@
   select:
     adm1: [GIN/Labe, GIN/Mamou]
   timeline:
+    - from: 1453
+      main: fula
+      minor: mande
     - from: 1648
       main: fula
       minor: mande
@@ -204,6 +259,8 @@
   select:
     adm1: [GIN/Kankan]
   timeline:
+    - from: 1453
+      main: mande
     - from: 1648
       main: mande
       note: マリンケ語。
@@ -212,6 +269,9 @@
   select:
     adm1: [GIN/Faranah]
   timeline:
+    - from: 1453
+      main: mande
+      minor: atlantic_other
     - from: 1648
       main: mande
       minor: atlantic_other
@@ -221,6 +281,9 @@
   select:
     adm1: [GIN/Nzerekore]
   timeline:
+    - from: 1453
+      main: mande_south
+      minor: atlantic_other
     - from: 1648
       main: mande_south
       minor: atlantic_other
@@ -230,6 +293,9 @@
   select:
     adm1: [SLE/Northern]
   timeline:
+    - from: 1453
+      main: atlantic_other
+      minor: mande
     - from: 1648
       main: atlantic_other
       minor: mande
@@ -239,6 +305,9 @@
   select:
     adm1: [SLE/Southern, SLE/Eastern]
   timeline:
+    - from: 1453
+      main: mande_south
+      minor: atlantic_other
     - from: 1648
       main: mande_south
       minor: atlantic_other
@@ -248,6 +317,8 @@
   select:
     adm1: [SLE/Western Area]
   timeline:
+    - from: 1453
+      main: atlantic_other
     - from: 1648
       main: atlantic_other
       note: テムネ人・ブロム人。
@@ -264,6 +335,9 @@
   select:
     iso: [LBR]
   timeline:
+    - from: 1453
+      main: mande_south
+      minor: kru
     - from: 1648
       main: mande_south
       minor: kru
@@ -273,6 +347,8 @@
   select:
     adm1: [LBR/Grand Bassa, LBR/Rivercess, LBR/Sinoe, LBR/Grand Gedeh, LBR/River Gee, LBR/Grand Kru, LBR/Maryland]
   timeline:
+    - from: 1453
+      main: kru
     - from: 1648
       main: kru
       note: バサ語・クル語・グレボ語・クラン語（クル諸語）。
@@ -281,6 +357,9 @@
   select:
     adm1: [LBR/Grand Cape Mount, LBR/Bomi, LBR/Gbarpolu]
   timeline:
+    - from: 1453
+      main: mande
+      minor: atlantic_other
     - from: 1648
       main: mande
       minor: atlantic_other
@@ -290,6 +369,9 @@
   select:
     adm1: [LBR/Montserrado, LBR/Margibi]
   timeline:
+    - from: 1453
+      main: kru
+      minor: mande_south
     - from: 1648
       main: kru
       minor: mande_south
@@ -395,6 +477,8 @@
   select:
     iso: [BFA]
   timeline:
+    - from: 1453
+      main: gur
     - from: 1648
       main: gur
       note: モシ語（モレ語。グル系）。
@@ -403,6 +487,9 @@
   select:
     adm1: [BFA/Nord]
   timeline:
+    - from: 1453
+      main: gur
+      minor: fula
     - from: 1648
       main: gur
       minor: fula
@@ -412,6 +499,9 @@
   select:
     adm1: [BFA/Sahel]
   timeline:
+    - from: 1453
+      main: fula
+      minor: berber
     - from: 1648
       main: fula
       minor: berber
@@ -421,6 +511,9 @@
   select:
     adm1: [BFA/Hauts-Bassins, BFA/Cascades, BFA/Boucle du Mouhoun]
   timeline:
+    - from: 1453
+      main: gur
+      minor: mande
     - from: 1648
       main: gur
       minor: mande
@@ -430,6 +523,8 @@
   select:
     adm1: [BFA/Sud-Ouest]
   timeline:
+    - from: 1453
+      main: gur
     - from: 1648
       main: gur
       note: ロビ語・ダガラ語（グル系）。
@@ -439,6 +534,9 @@
     adm1: [BFA/Est]
     pieces: [122-Koualou]
   timeline:
+    - from: 1453
+      main: gur
+      minor: fula
     - from: 1648
       main: gur
       minor: fula
@@ -448,6 +546,8 @@
   select:
     adm1: [BFA/Centre-Ouest, BFA/Centre-Sud]
   timeline:
+    - from: 1453
+      main: gur
     - from: 1648
       main: gur
       note: グルンシ諸語・モシ語（グル系）。
@@ -456,6 +556,8 @@
   select:
     iso: [NER]
   timeline:
+    - from: 1453
+      main: songhai
     - from: 1648
       main: songhai
       note: ザルマ語・ソンガイ語・デンディ語。
@@ -465,6 +567,8 @@
     adm1: [NER/Maradi]
     pieces: [NER-Zinder, NER-Mirriah, NER-Magaria, NER-Kantche, NER-Damagaram_Takaya, NER-Dungass, NER-Takeita, NER-Keita, NER-Bouza, NER-Illela, NER-Birni_N_Konni, NER-Madaoua, NER-Malbaza, NER-Tahoua, NER-Tahoua_Ville, NER-Bagaroua, NER-Dogondoutchi, NER-Tibiri]
   timeline:
+    - from: 1453
+      main: hausa
     - from: 1648
       main: hausa
       note: ハウサ語。
@@ -473,6 +577,9 @@
   select:
     pieces: [NER-Zinder, NER-Mirriah, NER-Damagaram_Takaya, NER-Goure]
   timeline:
+    - from: 1453
+      main: hausa
+      minor: kanuri
     - from: 1648
       main: hausa
       minor: kanuri
@@ -482,6 +589,9 @@
   select:
     pieces: [NER-Aderbissinat, NER-Arlit, NER-Iferouane, NER-Ingall, NER-Tchirozerine, NER-Abalak, NER-Tassara, NER-Tchintabaraden, NER-Tillia, NER-Belbedji, NER-Tanout, NER-Abala, NER-Banibangou]
   timeline:
+    - from: 1453
+      main: berber
+      minor: hausa
     - from: 1648
       main: berber
       minor: hausa
@@ -491,6 +601,9 @@
   select:
     pieces: [NER-Bilma, NER-N_Gourti, NER-Tesker]
   timeline:
+    - from: 1453
+      main: teda
+      minor: kanuri
     - from: 1648
       main: teda
       minor: kanuri
@@ -500,6 +613,9 @@
   select:
     pieces: [NER-Diffa, NER-Bosso, NER-Goudoumaria, NER-Maine_Soroa, NER-N_Guigmi]
   timeline:
+    - from: 1453
+      main: kanuri
+      minor: fula
     - from: 1648
       main: kanuri
       minor: fula
@@ -509,6 +625,9 @@
   select:
     pieces: [NER-Say, NER-Torodi, NER-Tera, NER-Bankilare, NER-Gotheye]
   timeline:
+    - from: 1453
+      main: songhai
+      minor: fula
     - from: 1648
       main: songhai
       minor: fula
@@ -518,6 +637,9 @@
   select:
     iso: [CIV]
   timeline:
+    - from: 1453
+      main: akan
+      minor: kru
     - from: 1648
       main: akan
       minor: kru
@@ -527,6 +649,9 @@
   select:
     adm1: [CIV/Bas-Sassandra, CIV/Goh-Djiboua, CIV/Montagnes, CIV/Sassandra-Marahoue]
   timeline:
+    - from: 1453
+      main: kru
+      minor: mande_south
     - from: 1648
       main: kru
       minor: mande_south
@@ -536,6 +661,9 @@
   select:
     adm1: [CIV/Savanes, CIV/Denguele, CIV/Woroba, CIV/Zanzan]
   timeline:
+    - from: 1453
+      main: gur
+      minor: mande
     - from: 1648
       main: gur
       minor: mande
@@ -545,6 +673,9 @@
   select:
     adm1: [CIV/Denguele, CIV/Woroba]
   timeline:
+    - from: 1453
+      main: mande
+      minor: gur
     - from: 1648
       main: mande
       minor: gur
@@ -554,6 +685,8 @@
   select:
     adm1: ["CIV/District Autonome D'Abidjan"]
   timeline:
+    - from: 1453
+      main: akan
     - from: 1648
       main: akan
       note: エブリエ人などラグーンの人々（アカン系に近い）。
@@ -566,6 +699,8 @@
   select:
     iso: [GHA]
   timeline:
+    - from: 1453
+      main: akan
     - from: 1648
       main: akan
       note: トウィ語（アシャンティ）・ファンティ語などのアカン語。
@@ -574,6 +709,8 @@
   select:
     adm1: [GHA/Greater Accra Region]
   timeline:
+    - from: 1453
+      main: ewe_fon
     - from: 1648
       main: ewe_fon
       note: ガ語・ダンメ語（ガ・ダンメ語。クワ系）。
@@ -586,6 +723,8 @@
   select:
     adm1: [GHA/Volta Region]
   timeline:
+    - from: 1453
+      main: ewe_fon
     - from: 1648
       main: ewe_fon
       note: エウェ語（グベ諸語）。
@@ -594,6 +733,9 @@
   select:
     adm1: [GHA/Oti Region]
   timeline:
+    - from: 1453
+      main: gur
+      minor: akan
     - from: 1648
       main: gur
       minor: akan
@@ -603,6 +745,8 @@
   select:
     adm1: [GHA/Northern Region, GHA/Savannah Region, GHA/North East Region]
   timeline:
+    - from: 1453
+      main: gur
     - from: 1648
       main: gur
       note: ダグバニ語・マンプルリ語（グル系）。ゴンジャ語（グアン系）。
@@ -611,6 +755,8 @@
   select:
     adm1: [GHA/Upper East Region, GHA/Upper West Region]
   timeline:
+    - from: 1453
+      main: gur
     - from: 1648
       main: gur
       note: フラフラ語・ダガーレ語・シサラ語・カセム語（グル系）。
@@ -619,6 +765,9 @@
   select:
     adm1: [GHA/Bono East Region]
   timeline:
+    - from: 1453
+      main: akan
+      minor: gur
     - from: 1648
       main: akan
       minor: gur
@@ -628,6 +777,8 @@
   select:
     iso: [TGO]
   timeline:
+    - from: 1453
+      main: ewe_fon
     - from: 1648
       main: ewe_fon
       note: エウェ語・ミナ語（グベ諸語）。
@@ -636,6 +787,8 @@
   select:
     adm1: [TGO/Kara Region, TGO/Savanes Region, TGO/Centrale Region]
   timeline:
+    - from: 1453
+      main: gur
     - from: 1648
       main: gur
       note: カブレ語・テム語・モバ語（グル系）。
@@ -644,6 +797,8 @@
   select:
     iso: [BEN]
   timeline:
+    - from: 1453
+      main: ewe_fon
     - from: 1648
       main: ewe_fon
       note: フォン語・グン語・アジャ語（グベ諸語）。
@@ -652,6 +807,9 @@
   select:
     adm1: [BEN/Oueme, BEN/Plateau]
   timeline:
+    - from: 1453
+      main: ewe_fon
+      minor: yoruba
     - from: 1648
       main: ewe_fon
       minor: yoruba
@@ -661,6 +819,9 @@
   select:
     adm1: [BEN/Plateau, BEN/Collines]
   timeline:
+    - from: 1453
+      main: yoruba
+      minor: ewe_fon
     - from: 1648
       main: yoruba
       minor: ewe_fon
@@ -670,6 +831,9 @@
   select:
     adm1: [BEN/Borgou, BEN/Alibori, BEN/Donga]
   timeline:
+    - from: 1453
+      main: gur
+      minor: fula
     - from: 1648
       main: gur
       minor: fula
@@ -679,6 +843,8 @@
   select:
     adm1: [BEN/Atakora]
   timeline:
+    - from: 1453
+      main: gur
     - from: 1648
       main: gur
       note: ディトゥマリ語・ワマ語（グル系）。
@@ -687,6 +853,9 @@
   select:
     iso: [NGA]
   timeline:
+    - from: 1453
+      main: hausa
+      minor: fula
     - from: 1648
       main: hausa
       minor: fula
@@ -696,6 +865,9 @@
   select:
     adm1: [NGA/Borno, NGA/Yobe]
   timeline:
+    - from: 1453
+      main: kanuri
+      minor: chadic_other
     - from: 1648
       main: kanuri
       minor: chadic_other
@@ -705,6 +877,9 @@
   select:
     pieces: [NGA-Chibok, NGA-Askira_Uba, NGA-Hawul, NGA-Bayo, NGA-Gwoza, NGA-Shani, NGA-Kwaya_Kusar, NGA-Damboa]
   timeline:
+    - from: 1453
+      main: chadic_other
+      minor: kanuri
     - from: 1648
       main: chadic_other
       minor: kanuri
@@ -714,6 +889,9 @@
   select:
     adm1: [NGA/Sokoto, NGA/Kebbi, NGA/Zamfara]
   timeline:
+    - from: 1453
+      main: hausa
+      minor: fula
     - from: 1648
       main: hausa
       minor: fula
@@ -723,6 +901,9 @@
   select:
     pieces: [NGA-Zuru, NGA-Sakaba, NGA-Wasagu_Danko, NGA-Fakai]
   timeline:
+    - from: 1453
+      main: middle_belt
+      minor: hausa
     - from: 1648
       main: middle_belt
       minor: hausa
@@ -732,6 +913,9 @@
   select:
     adm1: [NGA/Adamawa]
   timeline:
+    - from: 1453
+      main: chadic_other
+      minor: fula
     - from: 1648
       main: chadic_other
       minor: fula
@@ -745,6 +929,8 @@
   select:
     pieces: [NGA-Yola_North, NGA-Yola_South, NGA-Girei, NGA-Fufore, NGA-Mayo_Belwa, NGA-Mubi_North]
   timeline:
+    - from: 1453
+      main: chadic_other
     - from: 1648
       main: chadic_other
     - from: 1810
@@ -756,6 +942,9 @@
   select:
     adm1: [NGA/Bauchi, NGA/Gombe]
   timeline:
+    - from: 1453
+      main: hausa
+      minor: fula
     - from: 1648
       main: hausa
       minor: fula
@@ -765,6 +954,9 @@
   select:
     pieces: [NGA-Tafawa_Balewa, NGA-Bogoro, NGA-Dass, NGA-Billiri, NGA-Kaltungo, NGA-Shomgom, NGA-Balanga]
   timeline:
+    - from: 1453
+      main: chadic_other
+      minor: hausa
     - from: 1648
       main: chadic_other
       minor: hausa
@@ -774,6 +966,9 @@
   select:
     adm1: [NGA/Plateau, NGA/Nasarawa, NGA/Taraba, NGA/Abuja Federal Capital Territory]
   timeline:
+    - from: 1453
+      main: middle_belt
+      minor: hausa
     - from: 1648
       main: middle_belt
       minor: hausa
@@ -783,6 +978,9 @@
   select:
     pieces: [NGA-Jema_A, NGA-Kaura, NGA-Kachia, NGA-Zangon_Kataf, NGA-Kauru, NGA-Chikun, NGA-Kagarko, NGA-Jaba, NGA-Sanga, NGA-Kajuru]
   timeline:
+    - from: 1453
+      main: middle_belt
+      minor: hausa
     - from: 1648
       main: middle_belt
       minor: hausa
@@ -792,6 +990,9 @@
   select:
     adm1: [NGA/Niger]
   timeline:
+    - from: 1453
+      main: middle_belt
+      minor: hausa
     - from: 1648
       main: middle_belt
       minor: hausa
@@ -801,6 +1002,8 @@
   select:
     adm1: [NGA/Benue]
   timeline:
+    - from: 1453
+      main: middle_belt
     - from: 1648
       main: middle_belt
       note: ティヴ語・イドマ語（ナイジェリア中部の諸語）。
@@ -809,6 +1012,8 @@
   select:
     pieces: [NGA-Idah, NGA-Ankpa, NGA-Dekina, NGA-Ofu, NGA-Olamaboro, NGA-Omala, NGA-Ibaji, NGA-Igalamela_Odolu, NGA-Bassa]
   timeline:
+    - from: 1453
+      main: middle_belt
     - from: 1648
       main: middle_belt
       note: イガラ語。
@@ -817,6 +1022,9 @@
   select:
     pieces: [NGA-Okene, NGA-Adavi, NGA-Okehi, NGA-Ajaokuta, NGA-Ogori_Magongo, NGA-Lokoja, NGA-Kogi]
   timeline:
+    - from: 1453
+      main: middle_belt
+      minor: yoruba
     - from: 1648
       main: middle_belt
       minor: yoruba
@@ -826,6 +1034,8 @@
   select:
     adm1: [NGA/Oyo, NGA/Osun, NGA/Kwara]
   timeline:
+    - from: 1453
+      main: yoruba
     - from: 1648
       main: yoruba
       note: ヨルバ語。
@@ -834,6 +1044,9 @@
   select:
     pieces: [NGA-Baruten, NGA-Kaiama, NGA-Edu, NGA-Pategi]
   timeline:
+    - from: 1453
+      main: gur
+      minor: middle_belt
     - from: 1648
       main: gur
       minor: middle_belt
@@ -844,6 +1057,8 @@
     adm1: [NGA/Ondo, NGA/Ekiti]
     pieces: [NGA-Kabba_Bunu, NGA-Ijumu, NGA-Yagba_East, NGA-Yagba_West, NGA-Mopa_Muro]
   timeline:
+    - from: 1453
+      main: yoruba
     - from: 1648
       main: yoruba
       note: ヨルバ語（エキティ・オンド・オクン方言）。
@@ -852,6 +1067,8 @@
   select:
     adm1: [NGA/Ogun]
   timeline:
+    - from: 1453
+      main: yoruba
     - from: 1648
       main: yoruba
       note: ヨルバ語（エグバ・イジェブ方言）。
@@ -860,6 +1077,8 @@
   select:
     adm1: [NGA/Lagos]
   timeline:
+    - from: 1453
+      main: yoruba
     - from: 1648
       main: yoruba
       note: ヨルバ語。
@@ -872,6 +1091,9 @@
   select:
     pieces: [NGA-Badagry]
   timeline:
+    - from: 1453
+      main: ewe_fon
+      minor: yoruba
     - from: 1648
       main: ewe_fon
       minor: yoruba
@@ -881,6 +1103,8 @@
   select:
     adm1: [NGA/Anambra, NGA/Imo, NGA/Enugu, NGA/Ebonyi, NGA/Abia]
   timeline:
+    - from: 1453
+      main: igbo
     - from: 1648
       main: igbo
       note: イボ語。
@@ -889,6 +1113,8 @@
   select:
     pieces: [NGA-Aniocha_North, NGA-Aniocha_South, NGA-Oshimili_North, NGA-Oshimili_South, NGA-Ika_North_East, NGA-Ika_South, NGA-Ndokwa_East, NGA-Ndokwa_West, NGA-Ukwuani]
   timeline:
+    - from: 1453
+      main: igbo
     - from: 1648
       main: igbo
       note: イボ語（西イボ）。
@@ -897,6 +1123,8 @@
   select:
     adm1: [NGA/Edo]
   timeline:
+    - from: 1453
+      main: edo_ijaw
     - from: 1648
       main: edo_ijaw
       note: エド語（ビニ語）・エサン語・エツァコ語。
@@ -905,6 +1133,8 @@
   select:
     adm1: [NGA/Bayelsa, NGA/Rivers, NGA/Delta]
   timeline:
+    - from: 1453
+      main: edo_ijaw
     - from: 1648
       main: edo_ijaw
       note: イジョ語・イツェキリ語・ウルホボ語・イソコ語・オゴニ語・イクウェレ語。
@@ -913,6 +1143,8 @@
   select:
     adm1: [NGA/Cross River, NGA/Akwa Ibom]
   timeline:
+    - from: 1453
+      main: edo_ijaw
     - from: 1648
       main: edo_ijaw
       note: エフィク語・イビビオ語・アナン語・エジャガム語。
@@ -921,6 +1153,8 @@
   select:
     iso: [CMR]
   timeline:
+    - from: 1453
+      main: cameroon_bantu
     - from: 1648
       main: cameroon_bantu
       note: エウォンド語（ベティ・ファン語）・バサ語・ドゥアラ語など（バントゥー系）。
@@ -929,6 +1163,9 @@
   select:
     adm1: [CMR/East]
   timeline:
+    - from: 1453
+      main: cameroon_bantu
+      minor: ubangian
     - from: 1648
       main: cameroon_bantu
       minor: ubangian
@@ -938,6 +1175,8 @@
   select:
     adm1: [CMR/West, CMR/North-West]
   timeline:
+    - from: 1453
+      main: grassfields
     - from: 1648
       main: grassfields
       note: バミレケ諸語・ンソ語などのグラスフィールド諸語（バントゥー系に近い）。
@@ -946,6 +1185,9 @@
   select:
     adm1: [CMR/South-West]
   timeline:
+    - from: 1453
+      main: cameroon_bantu
+      minor: grassfields
     - from: 1648
       main: cameroon_bantu
       minor: grassfields
@@ -955,6 +1197,8 @@
   select:
     adm1: [CMR/North, CMR/Adamaoua]
   timeline:
+    - from: 1453
+      main: ubangian
     - from: 1648
       main: ubangian
       note: ムブム語・グバヤ語・ドゥル語など（ウバンギ・アダマワ系）。
@@ -967,6 +1211,9 @@
   select:
     adm1: [CMR/Far North]
   timeline:
+    - from: 1453
+      main: chadic_other
+      minor: fula
     - from: 1648
       main: chadic_other
       minor: fula
@@ -976,6 +1223,9 @@
   select:
     pieces: [CMR-Diamare, CMR-Logone_Et_Chari, CMR-Mayo_Sava]
   timeline:
+    - from: 1453
+      main: chadic_other
+      minor: arabic
     - from: 1648
       main: chadic_other
       minor: arabic
@@ -988,6 +1238,8 @@
   select:
     iso: [TCD]
   timeline:
+    - from: 1453
+      main: arabic
     - from: 1648
       main: arabic
       note: チャド・アラビア語（シュワ・アラブ）。
@@ -996,6 +1248,9 @@
   select:
     adm1: [TCD/Borkou, TCD/Ennedi-Est, TCD/Ennedi-Ouest, TCD/Tibesti, TCD/Bahr el Gazel]
   timeline:
+    - from: 1453
+      main: teda
+      minor: arabic
     - from: 1648
       main: teda
       minor: arabic
@@ -1005,6 +1260,9 @@
   select:
     adm1: [TCD/Kanem, TCD/Lac]
   timeline:
+    - from: 1453
+      main: kanuri
+      minor: teda
     - from: 1648
       main: kanuri
       minor: teda
@@ -1014,6 +1272,9 @@
   select:
     adm1: [TCD/Ouaddaï, TCD/Sila, TCD/Wadi Fira]
   timeline:
+    - from: 1453
+      main: fur
+      minor: arabic
     - from: 1648
       main: fur
       minor: arabic
@@ -1023,6 +1284,9 @@
   select:
     adm1: [TCD/Chari-Baguirmi, TCD/Hadjer-Lamis, "TCD/N'Djamena Region"]
   timeline:
+    - from: 1453
+      main: central_sudanic
+      minor: arabic
     - from: 1648
       main: central_sudanic
       minor: arabic
@@ -1036,6 +1300,9 @@
   select:
     adm1: [TCD/Guéra]
   timeline:
+    - from: 1453
+      main: chadic_other
+      minor: arabic
     - from: 1648
       main: chadic_other
       minor: arabic
@@ -1045,6 +1312,8 @@
   select:
     adm1: [TCD/Logone Occidental, TCD/Logone Oriental, TCD/Mandoul, TCD/Moyen-Chari, TCD/Tandjilé]
   timeline:
+    - from: 1453
+      main: central_sudanic
     - from: 1648
       main: central_sudanic
       note: サラ語（ンガンバイ語など。中央スーダン系）。
@@ -1053,6 +1322,9 @@
   select:
     adm1: [TCD/Mayo-Kebbi Est, TCD/Mayo-Kebbi Ouest]
   timeline:
+    - from: 1453
+      main: chadic_other
+      minor: ubangian
     - from: 1648
       main: chadic_other
       minor: ubangian
@@ -1062,6 +1334,9 @@
   select:
     adm1: [TCD/Salamat, TCD/Batha]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: central_sudanic
     - from: 1648
       main: arabic
       minor: central_sudanic
@@ -1071,6 +1346,8 @@
   select:
     iso: [CAF]
   timeline:
+    - from: 1453
+      main: ubangian
     - from: 1648
       main: ubangian
       note: グバヤ語・バンダ語・ンバカ語など（ウバンギ系）。共通語のサンゴ語。
@@ -1079,6 +1356,9 @@
   select:
     adm1: [CAF/Vakaga, CAF/Bamingui-Bangoran]
   timeline:
+    - from: 1453
+      main: central_sudanic
+      minor: arabic
     - from: 1648
       main: central_sudanic
       minor: arabic
@@ -1088,6 +1368,8 @@
   select:
     iso: [GNQ]
   timeline:
+    - from: 1453
+      main: cameroon_bantu
     - from: 1648
       main: cameroon_bantu
       note: ファン語（バントゥー系）。
@@ -1096,6 +1378,8 @@
   select:
     adm1: [GNQ/Bioko Norte, GNQ/Bioko Sur]
   timeline:
+    - from: 1453
+      main: cameroon_bantu
     - from: 1648
       main: cameroon_bantu
       note: ブビ語（バントゥー系）。マラボには英語系クレオールのフェルナンディーノ。独立後はファン人が多い。
@@ -1104,6 +1388,8 @@
   select:
     adm1: [GNQ/Annobón]
   timeline:
+    - from: 1503
+      main: creole_portuguese
     - from: 1648
       main: creole_portuguese
       note: ファ・ダンボ語（ポルトガル語系クレオール）。
@@ -1112,15 +1398,32 @@
   select:
     iso: [STP]
   timeline:
+    - from: 1493
+      main: creole_portuguese
+      note: 無人島への植民（1493）
     - from: 1648
       main: creole_portuguese
       note: フォロ語・プリンシペ語（ポルトガル語系クレオール）。
       source: "https://ja.wikipedia.org/wiki/サントメ・プリンシペ"
+- id: lang_af_principe_pre
+  name: プリンシペ島（入植の前後）
+  until: 1647
+  select:
+    pieces: [STP-Principe_Province]
+  timeline:
+    - from: 1453
+      main: none
+      note: 無人島
+    - from: 1500
+      main: creole_portuguese
+      note: ポルトガル人の入植（1500 年ごろ）
 - id: lang_af_gabon
   name: ガボン
   select:
     iso: [GAB]
   timeline:
+    - from: 1453
+      main: cameroon_bantu
     - from: 1648
       main: cameroon_bantu
       note: ファン語・ミエネ語・プヌ語・ンゼビ語など（バントゥー系）。
@@ -1129,6 +1432,13 @@
   select:
     iso: [SDN]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: nubian
+      note: アラブ遊牧民の移住が進んでいたが、アルワ王国の故地にはヌビア系の住民が残っていた
+    - from: 1550
+      main: arabic
+      note: フンジ（センナール王国、1504–）とアブダッラーブの下でアラブ化が進んだ
     - from: 1648
       main: arabic
       note: スーダン・アラビア語（ジャアリーン・シャイギーヤなど）。
@@ -1137,6 +1447,9 @@
   select:
     adm1: [SDN/Northern]
   timeline:
+    - from: 1453
+      main: nubian
+      minor: arabic
     - from: 1648
       main: nubian
       minor: arabic
@@ -1150,6 +1463,9 @@
   select:
     adm1: [SDN/Red Sea, SDN/Kassala]
   timeline:
+    - from: 1453
+      main: beja
+      minor: arabic
     - from: 1648
       main: beja
       minor: arabic
@@ -1159,6 +1475,9 @@
   select:
     adm1: [SDN/Blue Nile]
   timeline:
+    - from: 1453
+      main: nilo_saharan_other
+      minor: arabic
     - from: 1648
       main: nilo_saharan_other
       minor: arabic
@@ -1168,6 +1487,9 @@
   select:
     adm1: [SDN/South Kordofan]
   timeline:
+    - from: 1453
+      main: nilo_saharan_other
+      minor: arabic
     - from: 1648
       main: nilo_saharan_other
       minor: arabic
@@ -1177,6 +1499,9 @@
   select:
     adm1: [SDN/West Kordofan, SDN/South Darfur, SDN/East Darfur]
   timeline:
+    - from: 1453
+      main: arabic
+      minor: fur
     - from: 1648
       main: arabic
       minor: fur
@@ -1186,6 +1511,9 @@
   select:
     adm1: [SDN/Central Darfur, SDN/West Darfur, SDN/North Darfur]
   timeline:
+    - from: 1453
+      main: fur
+      minor: arabic
     - from: 1648
       main: fur
       minor: arabic
@@ -1195,6 +1523,9 @@
   select:
     adm1: [SDN/North Darfur]
   timeline:
+    - from: 1453
+      main: fur
+      minor: teda
     - from: 1648
       main: fur
       minor: teda
@@ -1204,6 +1535,9 @@
   select:
     pieces: [SDN-Abyei_PCA, 111-Abyei]
   timeline:
+    - from: 1453
+      main: dinka_nuer
+      minor: arabic
     - from: 1648
       main: dinka_nuer
       minor: arabic
@@ -1213,6 +1547,8 @@
   select:
     iso: [SSD]
   timeline:
+    - from: 1453
+      main: dinka_nuer
     - from: 1648
       main: dinka_nuer
       note: ディンカ語。
@@ -1221,6 +1557,9 @@
   select:
     adm1: [SSD/Upper Nile]
   timeline:
+    - from: 1453
+      main: dinka_nuer
+      minor: luo
     - from: 1648
       main: dinka_nuer
       minor: luo
@@ -1230,6 +1569,9 @@
   select:
     adm1: [SSD/Western Bahr el Ghazal]
   timeline:
+    - from: 1453
+      main: ubangian
+      minor: luo
     - from: 1648
       main: ubangian
       minor: luo
@@ -1239,6 +1581,8 @@
   select:
     adm1: [SSD/Western Equatoria]
   timeline:
+    - from: 1453
+      main: ubangian
     - from: 1648
       main: ubangian
       note: ザンデ語（ウバンギ系）。
@@ -1247,6 +1591,8 @@
   select:
     adm1: [SSD/Central Equatoria]
   timeline:
+    - from: 1453
+      main: nilotic_east
     - from: 1648
       main: nilotic_east
       note: バリ語・カクワ語・クク語・ポジュル語・ムンダリ語（東ナイル系）。
@@ -1255,6 +1601,9 @@
   select:
     adm1: [SSD/Eastern Equatoria]
   timeline:
+    - from: 1453
+      main: nilotic_east
+      minor: nilo_saharan_other
     - from: 1648
       main: nilotic_east
       minor: nilo_saharan_other
@@ -1264,6 +1613,9 @@
   select:
     pieces: [SSD-Magwi]
   timeline:
+    - from: 1453
+      main: luo
+      minor: nilotic_east
     - from: 1648
       main: luo
       minor: nilotic_east
@@ -1273,6 +1625,8 @@
   select:
     iso: [ETH]
   timeline:
+    - from: 1453
+      main: amharic
     - from: 1648
       main: amharic
       note: アムハラ語。
@@ -1281,6 +1635,8 @@
   select:
     adm1: [ETH/Tigray]
   timeline:
+    - from: 1453
+      main: tigrinya
     - from: 1648
       main: tigrinya
       note: ティグリニャ語。アクスム（エチオピア正教会の聖地）がある。
@@ -1289,6 +1645,9 @@
   select:
     pieces: [ETH-Awi_Agew, ETH-Wag_Himra]
   timeline:
+    - from: 1453
+      main: cushitic_other
+      minor: amharic
     - from: 1648
       main: cushitic_other
       minor: amharic
@@ -1298,6 +1657,15 @@
   select:
     pieces: [ETH-South_Wollo, ETH-Oromia]
   timeline:
+    - from: 1453
+      main: amharic
+    - from: 1580
+      main: amharic
+      minor: oromo
+    - from: 1600
+      main: oromo
+      minor: amharic
+      note: オロモの移動
     - from: 1648
       main: oromo
       minor: amharic
@@ -1311,6 +1679,14 @@
   select:
     pieces: [ETH-Oromia]
   timeline:
+    - from: 1453
+      main: amharic
+    - from: 1580
+      main: amharic
+      minor: oromo
+    - from: 1600
+      main: oromo
+      minor: amharic
     - from: 1648
       main: oromo
       minor: amharic
@@ -1319,6 +1695,8 @@
   select:
     adm1: [ETH/Oromia]
   timeline:
+    - from: 1453
+      main: oromo
     - from: 1648
       main: oromo
       note: オロモ語（クシ系）。
@@ -1327,6 +1705,15 @@
   select:
     adm1: [ETH/Addis Ababa]
   timeline:
+    - from: 1453
+      main: amharic
+      note: シェワ（ソロモン朝の中心）
+    - from: 1570
+      main: oromo
+      minor: amharic
+      note: オロモの移動（16 世紀後半）
+    - from: 1600
+      main: oromo
     - from: 1648
       main: oromo
     - from: 1890
@@ -1338,6 +1725,13 @@
   select:
     adm1: [ETH/Dire Dawa, ETH/Hareri]
   timeline:
+    - from: 1453
+      main: gurage
+      minor: somali
+      note: ハルラ人（アダル）
+    - from: 1580
+      main: oromo
+      minor: somali
     - from: 1648
       main: oromo
       minor: somali
@@ -1347,6 +1741,13 @@
   select:
     adm1: [ETH/Hareri]
   timeline:
+    - from: 1453
+      main: gurage
+      note: ハラリ語
+    - from: 1580
+      main: gurage
+      minor: oromo
+      note: ヌール・イブン・ムジャーヒドの城壁（1550 年代）の外にオロモが住みついた
     - from: 1648
       main: gurage
       minor: oromo
@@ -1364,6 +1765,8 @@
   select:
     adm1: [ETH/Somali]
   timeline:
+    - from: 1453
+      main: somali
     - from: 1648
       main: somali
       note: ソマリ語。
@@ -1372,6 +1775,8 @@
   select:
     adm1: [ETH/Afar]
   timeline:
+    - from: 1453
+      main: afar_saho
     - from: 1648
       main: afar_saho
       note: アファール語（クシ系）。
@@ -1380,6 +1785,8 @@
   select:
     adm1: [ETH/Beneshangul Gumu]
   timeline:
+    - from: 1453
+      main: nilo_saharan_other
     - from: 1648
       main: nilo_saharan_other
       note: ベルタ語・グムズ語（ナイル・サハラ系）。
@@ -1388,6 +1795,9 @@
   select:
     adm1: [ETH/Gambela]
   timeline:
+    - from: 1453
+      main: luo
+      minor: dinka_nuer
     - from: 1648
       main: luo
       minor: dinka_nuer
@@ -1401,6 +1811,8 @@
   select:
     adm1: [ETH/SNNPR]
   timeline:
+    - from: 1453
+      main: cushitic_other
     - from: 1648
       main: cushitic_other
       note: シダモ語・ハディヤ語・カンバタ語・ゲデオ語（高地東クシ系）。
@@ -1409,6 +1821,8 @@
   select:
     pieces: [ETH-Wolayita, ETH-Gamo_Gofa, ETH-Dawro, ETH-Konta, ETH-Basketo, ETH-Keffa, ETH-Sheka, ETH-Yem, ETH-Bench_Maji]
   timeline:
+    - from: 1453
+      main: omotic
     - from: 1648
       main: omotic
       note: ウォライタ語・ガモ語・カファ語・ベンチ語など（オモ系）。
@@ -1417,6 +1831,8 @@
   select:
     pieces: [ETH-Gurage, ETH-Selti]
   timeline:
+    - from: 1453
+      main: gurage
     - from: 1648
       main: gurage
       note: グラゲ語・シルテ語（エチオピアのセム系）。
@@ -1425,6 +1841,8 @@
   select:
     pieces: [ETH-Alaba]
   timeline:
+    - from: 1453
+      main: cushitic_other
     - from: 1648
       main: cushitic_other
       note: アラバ語（高地東クシ系）。
@@ -1433,6 +1851,9 @@
   select:
     pieces: [ETH-South_Omo]
   timeline:
+    - from: 1453
+      main: omotic
+      minor: nilo_saharan_other
     - from: 1648
       main: omotic
       minor: nilo_saharan_other
@@ -1442,6 +1863,8 @@
   select:
     iso: [ERI]
   timeline:
+    - from: 1453
+      main: tigrinya
     - from: 1648
       main: tigrinya
       note: ティグリニャ語。
@@ -1450,6 +1873,9 @@
   select:
     pieces: [ERI-Senafe, ERI-Tsorona, ERI-Adi_Keyh]
   timeline:
+    - from: 1453
+      main: tigrinya
+      minor: afar_saho
     - from: 1648
       main: tigrinya
       minor: afar_saho
@@ -1459,6 +1885,9 @@
   select:
     adm1: [ERI/Anseba Region, ERI/Gash-Barka Region, ERI/Northen Red Sea Region]
   timeline:
+    - from: 1453
+      main: tigrinya
+      minor: beja
     - from: 1648
       main: tigrinya
       minor: beja
@@ -1468,6 +1897,8 @@
   select:
     adm1: [ERI/Southern Red Sea Region]
   timeline:
+    - from: 1453
+      main: afar_saho
     - from: 1648
       main: afar_saho
       note: アファール語。
@@ -1476,6 +1907,9 @@
   select:
     iso: [DJI]
   timeline:
+    - from: 1453
+      main: somali
+      minor: afar_saho
     - from: 1648
       main: somali
       minor: afar_saho
@@ -1485,6 +1919,8 @@
   select:
     adm1: [DJI/Obock, DJI/Tadjourah, DJI/Dikhil]
   timeline:
+    - from: 1453
+      main: afar_saho
     - from: 1648
       main: afar_saho
       note: アファール語。タジュラ・スルタン国。
@@ -1493,6 +1929,8 @@
   select:
     iso: [SOM]
   timeline:
+    - from: 1453
+      main: somali
     - from: 1648
       main: somali
       note: ソマリ語。南部の河間地帯はマアイ方言（ディギル・ミリフレ）。ジュバ川・シェベリ川沿いにバントゥー系の農民（ゴシャ）もいる。
@@ -1501,6 +1939,12 @@
   select:
     adm1: [SOM/Lower Juba, SOM/Middle Juba, SOM/Gedo]
   timeline:
+    - from: 1453
+      main: somali
+    - from: 1570
+      main: oromo
+      minor: somali
+      note: オロモ（ボラナ）の南東への移動
     - from: 1648
       main: oromo
       minor: somali
@@ -1516,6 +1960,8 @@
   select:
     adm1: [KEN/Kiambu, "KEN/Murang'a", KEN/Nyeri, KEN/Kirinyaga, KEN/Nyandarua, KEN/Laikipia, KEN/Nakuru, KEN/Nairobi]
   timeline:
+    - from: 1453
+      main: kikuyu
     - from: 1648
       main: kikuyu
       note: キクユ語。
@@ -1524,6 +1970,8 @@
   select:
     adm1: [KEN/Laikipia, KEN/Nakuru]
   timeline:
+    - from: 1453
+      main: nilotic_east
     - from: 1648
       main: nilotic_east
       note: マサイ人の放牧地。
@@ -1540,6 +1988,9 @@
   select:
     adm1: [KEN/Nairobi]
   timeline:
+    - from: 1453
+      main: kikuyu
+      minor: nilotic_east
     - from: 1648
       main: kikuyu
       minor: nilotic_east
@@ -1556,6 +2007,8 @@
   select:
     adm1: [KEN/Meru, KEN/Tharaka, KEN/Embu]
   timeline:
+    - from: 1453
+      main: kikuyu
     - from: 1648
       main: kikuyu
       note: メル語・エンブ語（キクユ語に近い）。
@@ -1564,6 +2017,8 @@
   select:
     adm1: [KEN/Machakos, KEN/Makueni, KEN/Kitui]
   timeline:
+    - from: 1453
+      main: kikuyu
     - from: 1648
       main: kikuyu
       note: カンバ語（キクユ語に近い）。
@@ -1572,6 +2027,8 @@
   select:
     adm1: [KEN/Kisumu, KEN/Siaya, KEN/Homa Bay, KEN/Migori]
   timeline:
+    - from: 1453
+      main: luo
     - from: 1648
       main: luo
       note: ルオ語（西ナイル系）。16 世紀ごろ南スーダンから移ってきた。
@@ -1580,6 +2037,8 @@
   select:
     adm1: [KEN/Kisii, KEN/Nyamira]
   timeline:
+    - from: 1453
+      main: lacustrine
     - from: 1648
       main: lacustrine
       note: グシイ語（バントゥー系）。
@@ -1588,6 +2047,9 @@
   select:
     adm1: [KEN/Kakamega, KEN/Vihiga, KEN/Bungoma, KEN/Busia, KEN/Trans Nzoia]
   timeline:
+    - from: 1453
+      main: lacustrine
+      minor: nilotic_east
     - from: 1648
       main: lacustrine
       minor: nilotic_east
@@ -1597,6 +2059,8 @@
   select:
     adm1: [KEN/Trans Nzoia]
   timeline:
+    - from: 1453
+      main: kalenjin
     - from: 1648
       main: kalenjin
     - from: 1960
@@ -1608,6 +2072,8 @@
   select:
     adm1: [KEN/Nandi, KEN/Uasin Gishu, KEN/Kericho, KEN/Bomet, KEN/Baringo, KEN/Elgeyo-Marakwet, KEN/West Pokot]
   timeline:
+    - from: 1453
+      main: kalenjin
     - from: 1648
       main: kalenjin
       note: カレンジン諸語（南ナイル系）。
@@ -1616,6 +2082,8 @@
   select:
     adm1: [KEN/Narok, KEN/Kajiado]
   timeline:
+    - from: 1453
+      main: nilotic_east
     - from: 1648
       main: nilotic_east
       note: マサイ語（東ナイル系）。
@@ -1627,6 +2095,9 @@
   select:
     adm1: [KEN/Turkana, KEN/Samburu, KEN/Marsabit, KEN/Isiolo]
   timeline:
+    - from: 1453
+      main: nilotic_east
+      minor: oromo
     - from: 1648
       main: nilotic_east
       minor: oromo
@@ -1636,6 +2107,9 @@
   select:
     adm1: [KEN/Isiolo, KEN/Marsabit]
   timeline:
+    - from: 1453
+      main: oromo
+      minor: nilotic_east
     - from: 1648
       main: oromo
       minor: nilotic_east
@@ -1645,6 +2119,9 @@
   select:
     adm1: [KEN/Garissa, KEN/Wajir, KEN/Mandera]
   timeline:
+    - from: 1453
+      main: oromo
+      minor: somali
     - from: 1648
       main: oromo
       minor: somali
@@ -1656,6 +2133,13 @@
   select:
     adm1: [KEN/Tana River]
   timeline:
+    - from: 1453
+      main: tz_bantu
+      note: ポコモなど
+    - from: 1580
+      main: oromo
+      minor: tz_bantu
+      note: オロモの南への移動
     - from: 1648
       main: oromo
       minor: tz_bantu
@@ -1665,6 +2149,9 @@
   select:
     adm1: [KEN/Kilifi, KEN/Kwale, KEN/Taita Taveta]
   timeline:
+    - from: 1453
+      main: tz_bantu
+      minor: swahili
     - from: 1648
       main: tz_bantu
       minor: swahili
@@ -1674,6 +2161,9 @@
   select:
     adm1: [KEN/Mombasa, KEN/Lamu]
   timeline:
+    - from: 1453
+      main: swahili
+      minor: tz_bantu
     - from: 1648
       main: swahili
       minor: tz_bantu
@@ -1683,6 +2173,8 @@
   select:
     adm1: [KEN/Lamu]
   timeline:
+    - from: 1453
+      main: swahili
     - from: 1648
       main: swahili
       note: スワヒリ語（キアム語）・バジュニ語。
@@ -1691,6 +2183,8 @@
   select:
     iso: [UGA]
   timeline:
+    - from: 1453
+      main: lacustrine
     - from: 1648
       main: lacustrine
       note: ニョロ語・トロ語・ニャンコレ語・キガ語（大湖地方のバントゥー系）。
@@ -1699,6 +2193,8 @@
   select:
     adm1: [UGA/Central Region]
   timeline:
+    - from: 1453
+      main: ganda
     - from: 1648
       main: ganda
       note: ルガンダ語。
@@ -1707,6 +2203,8 @@
   select:
     pieces: [UGA-Bugabula, UGA-Bulamogi, UGA-Budiope, UGA-Bugweri, UGA-Bukooli, UGA-Busiki, UGA-Butembe, UGA-Kigulu, UGA-Luuka, UGA-Kagoma, UGA-Buzaaya, UGA-Bunya]
   timeline:
+    - from: 1453
+      main: lacustrine
     - from: 1648
       main: lacustrine
       note: ソガ語。
@@ -1715,6 +2213,9 @@
   select:
     pieces: [UGA-Bubulo, UGA-Budadiri, UGA-Bulambuli, UGA-Bungokho, UGA-Manjiya, UGA-Samia_Bugwe, UGA-Bunyole, UGA-Budaka, UGA-Kibuku, UGA-Pallisa]
   timeline:
+    - from: 1453
+      main: lacustrine
+      minor: nilotic_east
     - from: 1648
       main: lacustrine
       minor: nilotic_east
@@ -1724,6 +2225,8 @@
   select:
     pieces: [UGA-Kongasis, UGA-Kween, UGA-Tingey]
   timeline:
+    - from: 1453
+      main: kalenjin
     - from: 1648
       main: kalenjin
       note: サバオト語（カレンジン系）。
@@ -1732,6 +2235,8 @@
   select:
     pieces: [UGA-Amuria, UGA-Bukedea, UGA-Kumi, UGA-Ngora, UGA-Soroti, UGA-Soroti_2, UGA-Serere, UGA-Kasilo, UGA-Usuk, UGA-Butebo, UGA-Tororo]
   timeline:
+    - from: 1453
+      main: nilotic_east
     - from: 1648
       main: nilotic_east
       note: テソ語（アテソ語。東ナイル系）。
@@ -1740,6 +2245,9 @@
   select:
     pieces: [UGA-Kaberamaido, UGA-Kalaki, UGA-West_Budama]
   timeline:
+    - from: 1453
+      main: luo
+      minor: nilotic_east
     - from: 1648
       main: luo
       minor: nilotic_east
@@ -1749,6 +2257,8 @@
   select:
     pieces: [UGA-Agago, UGA-Aruu, UGA-Aswa, UGA-Chua, UGA-Kilak, UGA-Lamwo, UGA-Nwoya, UGA-Omoro, UGA-Dokolo, UGA-Erute, UGA-Kole, UGA-Kwania, UGA-Maruzi, UGA-Otuke, UGA-Oyam, UGA-Kioga, UGA-Moroto, UGA-Okoro, UGA-Jonam, UGA-Padyere]
   timeline:
+    - from: 1453
+      main: luo
     - from: 1648
       main: luo
       note: アチョリ語・ランゴ語・アルル語（西ナイル系）。
@@ -1757,6 +2267,8 @@
   select:
     pieces: [UGA-Bokora, UGA-Chekwii, UGA-Dodoth, UGA-Jie, UGA-Labwor, UGA-Matheniko, UGA-Pian, UGA-Pokot]
   timeline:
+    - from: 1453
+      main: nilotic_east
     - from: 1648
       main: nilotic_east
       note: カラモジョン語（東ナイル系）。
@@ -1765,6 +2277,8 @@
   select:
     pieces: [UGA-Ayivu, UGA-Maracha, UGA-Terego, UGA-Vurra, UGA-Madi_Okollo, UGA-East_Moyo, UGA-West_Moyo]
   timeline:
+    - from: 1453
+      main: central_sudanic
     - from: 1648
       main: central_sudanic
       note: ルグバラ語・マディ語（中央スーダン系）。
@@ -1773,6 +2287,9 @@
   select:
     pieces: [UGA-Aringa, UGA-Koboko, UGA-Obongi]
   timeline:
+    - from: 1453
+      main: central_sudanic
+      minor: nilotic_east
     - from: 1648
       main: central_sudanic
       minor: nilotic_east
@@ -1782,6 +2299,8 @@
   select:
     pieces: [UGA-Bufumbira]
   timeline:
+    - from: 1453
+      main: rwanda_rundi
     - from: 1648
       main: rwanda_rundi
       note: ルワンダ語。
@@ -1790,6 +2309,8 @@
   select:
     iso: [RWA, BDI]
   timeline:
+    - from: 1453
+      main: rwanda_rundi
     - from: 1648
       main: rwanda_rundi
       note: ルワンダ語・ルンディ語（フツ・トゥチ・トゥワが同じ言葉を話す）。
@@ -1798,6 +2319,8 @@
   select:
     iso: [TZA]
   timeline:
+    - from: 1453
+      main: tz_bantu
     - from: 1648
       main: tz_bantu
       note: スクマ語・ニャムウェジ語・ヘヘ語・ゴゴ語など（タンザニア内陸のバントゥー系）。共通語はスワヒリ語。
@@ -1806,6 +2329,8 @@
   select:
     adm1: [TZA/Zanzibar North, "TZA/Zanzibar South & Central", TZA/Zanzibar Urban/West, TZA/North Pemba, TZA/South Pemba]
   timeline:
+    - from: 1453
+      main: swahili
     - from: 1648
       main: swahili
       note: スワヒリ語（キウングジャ）。
@@ -1822,6 +2347,9 @@
   select:
     adm1: [TZA/Dar es Salaam, TZA/Pwani, TZA/Tanga]
   timeline:
+    - from: 1453
+      main: tz_bantu
+      minor: swahili
     - from: 1648
       main: tz_bantu
       minor: swahili
@@ -1831,6 +2359,9 @@
   select:
     adm1: [TZA/Lindi, TZA/Mtwara]
   timeline:
+    - from: 1453
+      main: makua
+      minor: swahili
     - from: 1648
       main: makua
       minor: swahili
@@ -1840,6 +2371,8 @@
   select:
     adm1: [TZA/Kilimanjaro]
   timeline:
+    - from: 1453
+      main: tz_bantu
     - from: 1648
       main: tz_bantu
       note: チャガ語・パレ語。
@@ -1848,6 +2381,9 @@
   select:
     adm1: [TZA/Arusha, TZA/Manyara]
   timeline:
+    - from: 1453
+      main: nilotic_east
+      minor: tz_bantu
     - from: 1648
       main: nilotic_east
       minor: tz_bantu
@@ -1857,6 +2393,9 @@
   select:
     adm1: [TZA/Manyara]
   timeline:
+    - from: 1453
+      main: cushitic_other
+      minor: nilotic_east
     - from: 1648
       main: cushitic_other
       minor: nilotic_east
@@ -1866,6 +2405,8 @@
   select:
     adm1: [TZA/Kagera]
   timeline:
+    - from: 1453
+      main: lacustrine
     - from: 1648
       main: lacustrine
       note: ハヤ語（大湖地方のバントゥー系）。
@@ -1874,6 +2415,8 @@
   select:
     adm1: [TZA/Kigoma]
   timeline:
+    - from: 1453
+      main: rwanda_rundi
     - from: 1648
       main: rwanda_rundi
       note: ハ語（ルンディ語に近い）。
@@ -1882,6 +2425,8 @@
   select:
     adm1: [TZA/Ruvuma]
   timeline:
+    - from: 1453
+      main: tz_bantu
     - from: 1648
       main: tz_bantu
     - from: 1850
@@ -1893,6 +2438,9 @@
   select:
     adm1: [TZA/Mara]
   timeline:
+    - from: 1453
+      main: tz_bantu
+      minor: luo
     - from: 1648
       main: tz_bantu
       minor: luo
@@ -1902,6 +2450,8 @@
   select:
     iso: [COG]
   timeline:
+    - from: 1453
+      main: kongo
     - from: 1648
       main: kongo
       note: コンゴ語（ラリ語・ヴィリ語など）。
@@ -1910,6 +2460,8 @@
   select:
     adm1: [COG/Cuvette, COG/Cuvette-Ouest, COG/Sangha, COG/Likouala, COG/Plateaux]
   timeline:
+    - from: 1453
+      main: mongo_lingala
     - from: 1648
       main: mongo_lingala
       note: ンボシ語・テケ語・リンガラ語など（コンゴ盆地の諸語）。森の狩猟採集民（ピグミー）も住む。
@@ -1918,6 +2470,8 @@
   select:
     iso: [COD]
   timeline:
+    - from: 1453
+      main: mongo_lingala
     - from: 1648
       main: mongo_lingala
       note: モンゴ語・ンゴンベ語・リンガラ語など（コンゴ盆地の諸語）。
@@ -1926,6 +2480,8 @@
   select:
     adm1: [COD/Kongo-Central]
   timeline:
+    - from: 1453
+      main: kongo
     - from: 1648
       main: kongo
       note: コンゴ語（キコンゴ語）。
@@ -1934,6 +2490,8 @@
   select:
     adm1: [COD/Kinshasa]
   timeline:
+    - from: 1453
+      main: mongo_lingala
     - from: 1648
       main: mongo_lingala
       note: テケ語。
@@ -1946,6 +2504,8 @@
   select:
     adm1: [COD/Kwango]
   timeline:
+    - from: 1453
+      main: kongo
     - from: 1648
       main: kongo
       note: ヤカ語・スク語（キコンゴ系）。共通語はキトゥバ語（コンゴ語系）。
@@ -1954,6 +2514,8 @@
   select:
     adm1: [COD/Kwilu]
   timeline:
+    - from: 1453
+      main: mongo_lingala
     - from: 1648
       main: mongo_lingala
       note: ムバラ・ペンデ・ヤンシ・ムブン・ンボマなど、コンゴ語とは別のバントゥー系の諸語（ペンデ語はカサイの諸語に近い）。共通語はキトゥバ語。
@@ -1962,6 +2524,9 @@
   select:
     adm1: [COD/Nord-Ubangi, COD/Sud-Ubangi]
   timeline:
+    - from: 1453
+      main: ubangian
+      minor: mongo_lingala
     - from: 1648
       main: ubangian
       minor: mongo_lingala
@@ -1971,6 +2536,9 @@
   select:
     adm1: [COD/Lower Uele, COD/Upper Uele]
   timeline:
+    - from: 1453
+      main: ubangian
+      minor: central_sudanic
     - from: 1648
       main: ubangian
       minor: central_sudanic
@@ -1980,6 +2548,9 @@
   select:
     adm1: [COD/Ituri]
   timeline:
+    - from: 1453
+      main: central_sudanic
+      minor: luo
     - from: 1648
       main: central_sudanic
       minor: luo
@@ -1989,6 +2560,9 @@
   select:
     adm1: [COD/North Kivu, COD/South Kivu]
   timeline:
+    - from: 1453
+      main: lacustrine
+      minor: rwanda_rundi
     - from: 1648
       main: lacustrine
       minor: rwanda_rundi
@@ -1998,15 +2572,20 @@
   select:
     adm1: [COD/Maniema, COD/Tshopo]
   timeline:
-    - from: 1648
+    - from: 1453
+      main: mongo_lingala
+      note: レガ語・クス語・ロケレ語など。
+    - from: 1870
       main: mongo_lingala
       minor: swahili
-      note: レガ語・クス語・ロケレ語など。共通語はスワヒリ語。
+      note: レガ語・クス語・ロケレ語など。共通語はスワヒリ語（1860–70 年代にザンジバルの商人ティップ・ティプらが進出してから。整合で 1648 年から 1870 年に直した）。
 - id: lang_af_kasai
   name: カサイ（ルバ人）
   select:
     adm1: [COD/Kasai-Oriental, COD/Central Kasai, COD/Lomami]
   timeline:
+    - from: 1453
+      main: luba
     - from: 1648
       main: luba
       note: チルバ語（ルバ・カサイ語）。
@@ -2015,6 +2594,9 @@
   select:
     adm1: [COD/Kasai]
   timeline:
+    - from: 1453
+      main: mongo_lingala
+      minor: luba
     - from: 1648
       main: mongo_lingala
       minor: luba
@@ -2028,6 +2610,9 @@
   select:
     adm1: [COD/Sankuru]
   timeline:
+    - from: 1453
+      main: mongo_lingala
+      minor: luba
     - from: 1648
       main: mongo_lingala
       minor: luba
@@ -2037,6 +2622,8 @@
   select:
     adm1: [COD/Haut-Katanga, COD/Lualaba, COD/Haut-Lomami, COD/Tanganyika]
   timeline:
+    - from: 1453
+      main: luba
     - from: 1648
       main: luba
       note: キルバ語（ルバ・カタンガ語）・ヘンバ語。
@@ -2045,6 +2632,9 @@
   select:
     adm1: [COD/Haut-Katanga, COD/Lualaba]
   timeline:
+    - from: 1453
+      main: bemba
+      minor: lunda_chokwe
     - from: 1648
       main: bemba
       minor: lunda_chokwe
@@ -2058,6 +2648,9 @@
   select:
     adm1: [COD/Lualaba]
   timeline:
+    - from: 1453
+      main: lunda_chokwe
+      minor: luba
     - from: 1648
       main: lunda_chokwe
       minor: luba
@@ -2067,6 +2660,8 @@
   select:
     iso: [AGO]
   timeline:
+    - from: 1453
+      main: lunda_chokwe
     - from: 1648
       main: lunda_chokwe
       note: チョクウェ語・ルンダ語・ルヴァレ語・ンガンゲラ語。
@@ -2075,6 +2670,8 @@
   select:
     adm1: [AGO/Zaire, AGO/Uíge]
   timeline:
+    - from: 1453
+      main: kongo
     - from: 1648
       main: kongo
       note: コンゴ語。
@@ -2083,6 +2680,8 @@
   select:
     adm1: [AGO/Cabinda]
   timeline:
+    - from: 1453
+      main: kongo
     - from: 1648
       main: kongo
       note: ヴィリ語・ウォヨ語（コンゴ語系）。
@@ -2091,6 +2690,8 @@
   select:
     adm1: [AGO/Luanda, AGO/Bengo, AGO/Cuanza Norte, AGO/Malanje]
   timeline:
+    - from: 1453
+      main: mbundu
     - from: 1648
       main: mbundu
       note: キンブンドゥ語。
@@ -2099,6 +2700,12 @@
   select:
     adm1: [AGO/Luanda]
   timeline:
+    - from: 1453
+      main: mbundu
+    - from: 1576
+      main: mbundu
+      minor: portuguese
+      note: ルアンダの建設（1576）
     - from: 1648
       main: mbundu
       minor: portuguese
@@ -2112,6 +2719,8 @@
   select:
     adm1: [AGO/Huambo, AGO/Bié, AGO/Benguela, AGO/Cuanza Sul]
   timeline:
+    - from: 1453
+      main: umbundu
     - from: 1648
       main: umbundu
       note: ウンブンドゥ語。
@@ -2120,6 +2729,8 @@
   select:
     adm1: [AGO/Huíla, AGO/Namibe, AGO/Cunene]
   timeline:
+    - from: 1453
+      main: herero_ovambo
     - from: 1648
       main: herero_ovambo
       note: ニャネカ語・クヴァレ語・クワニャマ語（オヴァンボ語）。
@@ -2128,6 +2739,8 @@
   select:
     adm1: [AGO/Namibe]
   timeline:
+    - from: 1453
+      main: herero_ovambo
     - from: 1648
       main: herero_ovambo
     - from: 1900
@@ -2139,6 +2752,9 @@
   select:
     adm1: [AGO/Cuando Cubango]
   timeline:
+    - from: 1453
+      main: lunda_chokwe
+      minor: khoisan
     - from: 1648
       main: lunda_chokwe
       minor: khoisan
@@ -2148,6 +2764,8 @@
   select:
     iso: [ZMB]
   timeline:
+    - from: 1453
+      main: bemba
     - from: 1648
       main: bemba
       note: ベンバ語。
@@ -2156,6 +2774,8 @@
   select:
     adm1: [ZMB/Eastern, ZMB/Lusaka]
   timeline:
+    - from: 1453
+      main: chewa
     - from: 1648
       main: chewa
       note: チェワ語（ニャンジャ語）。19 世紀にンゴニ人が移り住んだ。
@@ -2167,6 +2787,8 @@
   select:
     adm1: [ZMB/Southern, ZMB/Central]
   timeline:
+    - from: 1453
+      main: bemba
     - from: 1648
       main: bemba
       note: トンガ語・イラ語・レンジェ語（ザンビアの諸語）。
@@ -2175,6 +2797,8 @@
   select:
     adm1: [ZMB/Western]
   timeline:
+    - from: 1453
+      main: bemba
     - from: 1648
       main: bemba
       note: ロジ語（マコロロ人のソト語に由来）・ルヤナ語。
@@ -2183,6 +2807,9 @@
   select:
     adm1: [ZMB/North-Western]
   timeline:
+    - from: 1453
+      main: lunda_chokwe
+      minor: bemba
     - from: 1648
       main: lunda_chokwe
       minor: bemba
@@ -2192,6 +2819,8 @@
   select:
     iso: [MWI]
   timeline:
+    - from: 1453
+      main: chewa
     - from: 1648
       main: chewa
       note: チェワ語（ニャンジャ語）。
@@ -2200,6 +2829,8 @@
   select:
     pieces: [MWI-Chitipa, MWI-Karonga, MWI-Rumphi, MWI-Mzimba, MWI-Nkhata_Bay]
   timeline:
+    - from: 1453
+      main: chewa
     - from: 1648
       main: chewa
       note: トゥンブカ語・トンガ語（チェワ語に近い）。19 世紀にンゴニ人（ムズィンバ）。
@@ -2208,6 +2839,8 @@
   select:
     pieces: [MWI-Mangochi, MWI-Machinga, MWI-Balaka]
   timeline:
+    - from: 1453
+      main: chewa
     - from: 1648
       main: chewa
     - from: 1860
@@ -2219,6 +2852,8 @@
   select:
     pieces: [MWI-Blantyre, MWI-Chiradzulu, MWI-Thyolo, MWI-Mulanje, MWI-Phalombe, MWI-Zomba]
   timeline:
+    - from: 1453
+      main: chewa
     - from: 1648
       main: chewa
       note: マンガンジャ語（チェワ語）。
@@ -2231,6 +2866,9 @@
   select:
     pieces: [MWI-Chikwawa, MWI-Nsanje, MWI-Mwanza, MWI-Neno]
   timeline:
+    - from: 1453
+      main: chewa
+      minor: shona
     - from: 1648
       main: chewa
       minor: shona
@@ -2240,6 +2878,8 @@
   select:
     iso: [MOZ]
   timeline:
+    - from: 1453
+      main: makua
     - from: 1648
       main: makua
       note: マクア語。
@@ -2248,6 +2888,9 @@
   select:
     adm1: [MOZ/Cabo Delgado]
   timeline:
+    - from: 1453
+      main: makua
+      minor: swahili
     - from: 1648
       main: makua
       minor: swahili
@@ -2257,6 +2900,9 @@
   select:
     adm1: [MOZ/Zambézia]
   timeline:
+    - from: 1453
+      main: makua
+      minor: shona
     - from: 1648
       main: makua
       minor: shona
@@ -2266,6 +2912,9 @@
   select:
     adm1: [MOZ/Tete]
   timeline:
+    - from: 1453
+      main: shona
+      minor: chewa
     - from: 1648
       main: shona
       minor: chewa
@@ -2275,6 +2924,8 @@
   select:
     adm1: [MOZ/Sofala, MOZ/Manica]
   timeline:
+    - from: 1453
+      main: shona
     - from: 1648
       main: shona
       note: ンダウ語・マニカ語・セナ語（ショナ系）。
@@ -2283,6 +2934,8 @@
   select:
     adm1: [MOZ/Gaza, MOZ/Inhambane]
   timeline:
+    - from: 1453
+      main: tsonga_venda
     - from: 1648
       main: tsonga_venda
       note: ツォンガ語（シャンガーン語）・ツワ語・チョピ語。1820 年代にングニ系のガザ王国（ソシャンガネ）が成立した。
@@ -2291,6 +2944,8 @@
   select:
     adm1: [MOZ/Maputo]
   timeline:
+    - from: 1453
+      main: tsonga_venda
     - from: 1648
       main: tsonga_venda
       note: ロンガ語（ツォンガ系）。
@@ -2305,6 +2960,8 @@
   select:
     iso: [ZWE]
   timeline:
+    - from: 1453
+      main: shona
     - from: 1648
       main: shona
       note: ショナ語。
@@ -2313,6 +2970,8 @@
   select:
     adm1: [ZWE/Matabeleland North, ZWE/Matabeleland South, ZWE/Bulawayo]
   timeline:
+    - from: 1453
+      main: shona
     - from: 1648
       main: shona
       note: カランガ語（ショナ系）。
@@ -2325,6 +2984,8 @@
   select:
     adm1: [ZWE/Harare, ZWE/Bulawayo]
   timeline:
+    - from: 1453
+      main: shona
     - from: 1648
       main: shona
     - from: 1920
@@ -2338,6 +2999,8 @@
   select:
     adm1: [ZWE/Bulawayo]
   timeline:
+    - from: 1453
+      main: shona
     - from: 1648
       main: shona
     - from: 1840
@@ -2355,6 +3018,8 @@
   select:
     iso: [BWA]
   timeline:
+    - from: 1453
+      main: tswana
     - from: 1648
       main: tswana
       note: ツワナ語。
@@ -2363,6 +3028,9 @@
   select:
     adm1: [BWA/Ghanzi District, BWA/Kgalagadi District]
   timeline:
+    - from: 1453
+      main: khoisan
+      minor: tswana
     - from: 1648
       main: khoisan
       minor: tswana
@@ -2372,6 +3040,9 @@
   select:
     adm1: [BWA/North-West District, BWA/Chobe District]
   timeline:
+    - from: 1453
+      main: khoisan
+      minor: herero_ovambo
     - from: 1648
       main: khoisan
       minor: herero_ovambo
@@ -2385,6 +3056,9 @@
   select:
     adm1: [BWA/North-East District]
   timeline:
+    - from: 1453
+      main: shona
+      minor: tswana
     - from: 1648
       main: shona
       minor: tswana
@@ -2394,6 +3068,9 @@
   select:
     iso: [NAM]
   timeline:
+    - from: 1453
+      main: herero_ovambo
+      minor: khoisan
     - from: 1648
       main: herero_ovambo
       minor: khoisan
@@ -2403,6 +3080,8 @@
   select:
     adm1: [NAM/Ohangwena, NAM/Omusati, NAM/Oshana, NAM/Oshikoto]
   timeline:
+    - from: 1453
+      main: herero_ovambo
     - from: 1648
       main: herero_ovambo
       note: オヴァンボ語（ンドンガ語・クワニャマ語）。
@@ -2411,6 +3090,9 @@
   select:
     adm1: [NAM/Kavango, NAM/Caprivi]
   timeline:
+    - from: 1453
+      main: herero_ovambo
+      minor: khoisan
     - from: 1648
       main: herero_ovambo
       minor: khoisan
@@ -2420,6 +3102,8 @@
   select:
     adm1: [NAM/Caprivi]
   timeline:
+    - from: 1453
+      main: bemba
     - from: 1648
       main: bemba
       note: ロジ語・スビヤ語（ザンビアの諸語と同じ）。
@@ -2428,6 +3112,8 @@
   select:
     adm1: [NAM/Hardap, NAM/Karas]
   timeline:
+    - from: 1453
+      main: khoisan
     - from: 1648
       main: khoisan
       note: ナマ語（コイコイ語）。
@@ -2440,6 +3126,9 @@
   select:
     adm1: [NAM/Khomas, NAM/Erongo]
   timeline:
+    - from: 1453
+      main: khoisan
+      minor: herero_ovambo
     - from: 1648
       main: khoisan
       minor: herero_ovambo
@@ -2457,6 +3146,8 @@
   select:
     iso: [ZAF]
   timeline:
+    - from: 1453
+      main: zulu
     - from: 1648
       main: zulu
       note: ズールー語（ングニ諸語）。1816 年からシャカのズールー王国。
@@ -2465,6 +3156,8 @@
   select:
     pieces: [ZAF-Amathole, ZAF-Buffalo_City, ZAF-Chris_Hani, ZAF-Joe_Gqabi, ZAF-O_R_Tambo, ZAF-Alfred_Nzo]
   timeline:
+    - from: 1453
+      main: xhosa
     - from: 1648
       main: xhosa
       note: コサ語（ングニ諸語。テンブ人・ムポンド人を含む）。
@@ -2473,6 +3166,9 @@
   select:
     pieces: [ZAF-Joe_Gqabi]
   timeline:
+    - from: 1453
+      main: xhosa
+      minor: sotho
     - from: 1648
       main: xhosa
       minor: sotho
@@ -2482,6 +3178,9 @@
   select:
     pieces: [ZAF-Cacadu]
   timeline:
+    - from: 1453
+      main: khoisan
+      minor: xhosa
     - from: 1648
       main: khoisan
       minor: xhosa
@@ -2506,6 +3205,8 @@
   select:
     pieces: [ZAF-Nelson_Mandela_Bay]
   timeline:
+    - from: 1453
+      main: khoisan
     - from: 1648
       main: khoisan
     - from: 1820
@@ -2521,6 +3222,8 @@
   select:
     adm1: [ZAF/Western Cape]
   timeline:
+    - from: 1453
+      main: khoisan
     - from: 1648
       main: khoisan
       note: コイコイ語。
@@ -2537,6 +3240,8 @@
   select:
     pieces: [ZAF-Eden, ZAF-Central_Karoo]
   timeline:
+    - from: 1453
+      main: khoisan
     - from: 1648
       main: khoisan
     - from: 1760
@@ -2550,6 +3255,8 @@
   select:
     pieces: [ZAF-City_of_Cape_Town]
   timeline:
+    - from: 1453
+      main: khoisan
     - from: 1648
       main: khoisan
       note: コイコイ人（ゴリンハイクア）。
@@ -2572,6 +3279,8 @@
   select:
     pieces: [ZAF-Namakwa, ZAF-Pixley_ka_Seme, ZAF-Z_F_Mgcawu]
   timeline:
+    - from: 1453
+      main: khoisan
     - from: 1648
       main: khoisan
       note: ナマ語・コラナ語・サン諸語。
@@ -2589,6 +3298,9 @@
   select:
     pieces: [ZAF-Frances_Baard]
   timeline:
+    - from: 1453
+      main: tswana
+      minor: khoisan
     - from: 1648
       main: tswana
       minor: khoisan
@@ -2606,6 +3318,8 @@
     adm1: [ZAF/North West]
     pieces: [ZAF-John_Taolo_Gaetsewe]
   timeline:
+    - from: 1453
+      main: tswana
     - from: 1648
       main: tswana
       note: ツワナ語。1820 年代のムフェカネ（ディファカネ）で大きく乱れた。
@@ -2614,6 +3328,8 @@
   select:
     pieces: [ZAF-Dr_Kenneth_Kaunda]
   timeline:
+    - from: 1453
+      main: tswana
     - from: 1648
       main: tswana
     - from: 1840
@@ -2625,6 +3341,8 @@
   select:
     adm1: [ZAF/Free State]
   timeline:
+    - from: 1453
+      main: sotho
     - from: 1648
       main: sotho
       note: ソト語。
@@ -2637,6 +3355,9 @@
   select:
     pieces: [ZAF-Xhariep]
   timeline:
+    - from: 1453
+      main: khoisan
+      minor: sotho
     - from: 1648
       main: khoisan
       minor: sotho
@@ -2652,6 +3373,8 @@
   select:
     iso: [LSO]
   timeline:
+    - from: 1453
+      main: sotho
     - from: 1648
       main: sotho
       note: ソト語（南ソト語）。
@@ -2660,6 +3383,8 @@
   select:
     pieces: [ZAF-Thabo_Mofutsanyane]
   timeline:
+    - from: 1453
+      main: sotho
     - from: 1648
       main: sotho
 - id: lang_af_transvaal_highveld
@@ -2667,6 +3392,8 @@
   select:
     pieces: [ZAF-Sedibeng, ZAF-Fezile_Dabi, ZAF-Lejweleputswa]
   timeline:
+    - from: 1453
+      main: sotho
     - from: 1648
       main: sotho
     - from: 1850
@@ -2677,6 +3404,8 @@
   select:
     pieces: [ZAF-City_of_Tshwane]
   timeline:
+    - from: 1453
+      main: tswana
     - from: 1648
       main: tswana
       note: ンデベレ人（南ンデベレ）・ツワナ人。
@@ -2696,6 +3425,8 @@
   select:
     pieces: [ZAF-City_of_Johannesburg]
   timeline:
+    - from: 1453
+      main: tswana
     - from: 1648
       main: tswana
     - from: 1890
@@ -2711,6 +3442,8 @@
   select:
     pieces: [ZAF-Ekurhuleni, ZAF-West_Rand]
   timeline:
+    - from: 1453
+      main: tswana
     - from: 1648
       main: tswana
     - from: 1900
@@ -2725,6 +3458,8 @@
   select:
     adm1: [ZAF/Limpopo]
   timeline:
+    - from: 1453
+      main: sotho
     - from: 1648
       main: sotho
       note: 北ソト語（ペディ語）。
@@ -2733,6 +3468,9 @@
   select:
     pieces: [ZAF-Waterberg]
   timeline:
+    - from: 1453
+      main: sotho
+      minor: tswana
     - from: 1648
       main: sotho
       minor: tswana
@@ -2744,6 +3482,8 @@
   select:
     pieces: [ZAF-Vhembe]
   timeline:
+    - from: 1453
+      main: tsonga_venda
     - from: 1648
       main: tsonga_venda
       note: ヴェンダ語。
@@ -2752,6 +3492,8 @@
   select:
     pieces: [ZAF-Mopani]
   timeline:
+    - from: 1453
+      main: sotho
     - from: 1648
       main: sotho
       note: ロベドゥ人（北ソト系。雨の女王）。
@@ -2764,6 +3506,9 @@
   select:
     adm1: [ZAF/Mpumalanga]
   timeline:
+    - from: 1453
+      main: zulu
+      minor: sotho
     - from: 1648
       main: zulu
       minor: sotho
@@ -2773,6 +3518,8 @@
   select:
     pieces: [ZAF-Gert_Sibande]
   timeline:
+    - from: 1453
+      main: zulu
     - from: 1648
       main: zulu
     - from: 1870
@@ -2783,6 +3530,8 @@
   select:
     pieces: [ZAF-eThekwini]
   timeline:
+    - from: 1453
+      main: zulu
     - from: 1648
       main: zulu
     - from: 1880
@@ -2798,6 +3547,8 @@
   select:
     iso: [SWZ]
   timeline:
+    - from: 1453
+      main: zulu
     - from: 1648
       main: zulu
       note: スワジ語（ングニ諸語）。
@@ -2806,6 +3557,8 @@
   select:
     iso: [MDG]
   timeline:
+    - from: 1453
+      main: malagasy
     - from: 1648
       main: malagasy
       note: マダガスカル語（マラガシ語。オーストロネシア系）。
@@ -2814,6 +3567,8 @@
   select:
     adm1: [MDG/Analamanga, MDG/Itasy, MDG/Vakinankaratra, MDG/Bongolava]
   timeline:
+    - from: 1453
+      main: malagasy
     - from: 1648
       main: malagasy
       note: マダガスカル語（メリナ方言、公用語の基礎）。
@@ -2822,6 +3577,8 @@
   select:
     iso: [COM, MYT]
   timeline:
+    - from: 1453
+      main: swahili
     - from: 1648
       main: swahili
       note: コモロ語（スワヒリ語に近いバントゥー系）。
@@ -2830,6 +3587,9 @@
   select:
     iso: [MYT]
   timeline:
+    - from: 1453
+      main: swahili
+      minor: malagasy
     - from: 1648
       main: swahili
       minor: malagasy
@@ -2848,6 +3608,9 @@
     iso: [MUS]
     exclude: [MUS-Rodrigues, MUS-Agalega, MUS-St_Brandon]
   timeline:
+    - from: 1638
+      main: dutch
+      note: 無人島。オランダの小さな植民地（1638–58）
     - from: 1648
       main: dutch
     - from: 1721
@@ -2862,6 +3625,8 @@
   select:
     pieces: [MUS-Port_Louis]
   timeline:
+    - from: 1638
+      main: dutch
     - from: 1648
       main: dutch
     - from: 1721
@@ -2905,3 +3670,71 @@
   timeline:
     - from: 1816
       main: english
+
+# ---- 1453–1647 年だけの区分け（until: 1647。1648 年以後は上の地域の記述が効く）----
+
+- id: lang_af_shewa_pre
+  name: シェワ（1453–1647）
+  select:
+    pieces: [ETH-North_Shewa_R4, ETH-South_West_Shewa, ETH-West_Shewa, ETH-East_Shewa]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: amharic
+      note: ソロモン朝の中心（デブレ・リバノス修道院など）
+    - from: 1570
+      main: oromo
+      minor: amharic
+      note: オロモの移動（ガダ制の8年ごとの遠征、16 世紀後半）
+    - from: 1600
+      main: oromo
+
+- id: lang_af_bale_pre
+  name: バリ・アルシ（1453–1647）
+  select:
+    pieces: [ETH-Arsi, ETH-Bale, ETH-West_Arsi]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: cushitic_other
+      note: バリ・スルタン国（シダマ系の言語）
+    - from: 1560
+      main: oromo
+      minor: cushitic_other
+      note: オロモの移動（1530–60 年代）
+    - from: 1600
+      main: oromo
+
+- id: lang_af_harerge_pre
+  name: ハラルの高原（1453–1647）
+  select:
+    pieces: [ETH-East_Harerge, ETH-West_Harerge]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: gurage
+      minor: somali
+      note: アダル・スルタン国のハルラ人
+    - from: 1580
+      main: oromo
+      minor: gurage
+      note: オロモの移動でアダルの農村が失われた
+    - from: 1620
+      main: oromo
+
+- id: lang_af_wellega_pre
+  name: ウォレガ・イルバボル・ジンマ（1453–1647）
+  select:
+    pieces: [ETH-East_Wellega, ETH-West_Wellega, ETH-Kelem_Wellega, ETH-Horo_Guduru, ETH-Ilubabor, ETH-Jimma]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: omotic
+      note: エナリア（ナリア）王国などオモ系の人々
+    - from: 1600
+      main: omotic
+      minor: oromo
+      note: マチャ・オロモの西への移動
+    - from: 1630
+      main: oromo
+      minor: omotic

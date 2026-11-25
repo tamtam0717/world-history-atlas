@@ -9,7 +9,8 @@
 - id: ethiopia
   name: エチオピア帝国
   names:
-    - {to: 1768, name: エチオピア帝国（ゴンダール朝）, short: エチオピア, kind: 帝国}
+    - {to: 1631, name: エチオピア帝国（ソロモン朝）, short: エチオピア, kind: 帝国}
+    - {from: 1632, to: 1768, name: エチオピア帝国（ゴンダール朝）, short: エチオピア, kind: 帝国}
     - {from: 1769, to: 1854, name: エチオピア（諸侯の時代）, short: エチオピア, kind: 帝国（名目）}
     - {from: 1855, to: 1973, name: エチオピア帝国, short: エチオピア, kind: 帝国}
     - {from: 1974, to: 1986, name: エチオピア（社会主義の軍事政権・デルグ）, short: エチオピア, kind: 軍事政権}
@@ -21,6 +22,19 @@
   kind: 帝国
   home_iso: [ETH, {iso: ERI, from: 1952, to: 1990}]
   rulers:
+    - {name: "ザラ・ヤコブ", title: "皇帝", from: 1434, to: 1468, note: "教会を改革し、デブレ・ベルハンに宮廷を置いた。1445年にアダルを破った", source: "https://en.wikipedia.org/wiki/Zara_Yaqob"}
+    - {name: "バエダ・マリアム1世", title: "皇帝", from: 1468, to: 1478, source: "https://en.wikipedia.org/wiki/Baeda_Maryam_I"}
+    - {name: "エスケンデル", title: "皇帝", from: 1478, to: 1494, source: "https://en.wikipedia.org/wiki/Eskender"}
+    - {name: "アムダ・セヨン2世", title: "皇帝", from: 1494, to: 1494, source: "https://en.wikipedia.org/wiki/Amda_Seyon_II"}
+    - {name: "ナオド", title: "皇帝", from: 1494, to: 1508, source: "https://en.wikipedia.org/wiki/Na%27od"}
+    - {name: "レブナ・デンゲル（ダウィト2世）", title: "皇帝", from: 1508, to: 1540, note: "1529年にシンブラ・クレの戦いでアダルに敗れ、山の砦を転々としながらポルトガルに助けを求めた", source: "https://en.wikipedia.org/wiki/Dawit_II"}
+    - {name: "ゲラウデウォス", title: "皇帝", from: 1540, to: 1559, note: "ポルトガル軍の助けでアフマド・グランを破った（1543年）。アダルとの戦いで戦死", source: "https://en.wikipedia.org/wiki/Gelawdewos"}
+    - {name: "メナス", title: "皇帝", from: 1559, to: 1563, source: "https://en.wikipedia.org/wiki/Menas_of_Ethiopia"}
+    - {name: "サルサ・デンゲル", title: "皇帝", from: 1563, to: 1597, note: "オスマン帝国のハベシュ州の軍を破り（1578年）、オロモ人・ベタ・イスラエルと戦った", source: "https://en.wikipedia.org/wiki/Sarsa_Dengel"}
+    - {name: "ヤコブ", title: "皇帝", from: 1597, to: 1603, source: "https://en.wikipedia.org/wiki/Yaqob_of_Ethiopia"}
+    - {name: "ザ・デンゲル", title: "皇帝", from: 1603, to: 1604, source: "https://en.wikipedia.org/wiki/Za_Dengel"}
+    - {name: "ヤコブ（復位）", title: "皇帝", from: 1604, to: 1606, source: "https://en.wikipedia.org/wiki/Yaqob_of_Ethiopia"}
+    - {name: "スセニョス1世", title: "皇帝", from: 1606, to: 1632, note: "1622年にカトリックに改宗したが、反乱が続き、1632年に退位した", source: "https://en.wikipedia.org/wiki/Susenyos_I"}
     - {name: ファシリデス, title: 皇帝, from: 1632, to: 1667, note: ゴンダールを都とし（1636年）、カトリックの宣教師を追放した, source: "https://ja.wikipedia.org/wiki/ファシラダス"}
     - {name: ヨハネス1世, title: 皇帝, from: 1667, to: 1682, source: "https://en.wikipedia.org/wiki/Yohannes_I"}
     - {name: イヤス1世（大帝）, title: 皇帝, from: 1682, to: 1706, note: ゴンダール朝の最盛期, source: "https://en.wikipedia.org/wiki/Iyasu_I"}
@@ -44,6 +58,10 @@
     - {name: ハイレマリアム・デサレン, title: 首相, from: 2012, to: 2018, source: "https://ja.wikipedia.org/wiki/ハイレマリアム・デサレン"}
     - {name: アビー・アハメド, title: 首相, from: 2018, note: エリトリアとの和平で2019年のノーベル平和賞。2020–22年にティグレ戦争, source: "https://ja.wikipedia.org/wiki/アビィ・アハメド"}
   periods:
+    - {from: 1453, to: 1528, text: "ソロモン朝のキリスト教の帝国。ザラ・ヤコブのもとでシェワ・アムハラを中心に南のムスリム諸国（ダワロ・バリ・ハディヤ）を従えた。皇帝は天幕の宮廷で国内を移った。"}
+    - {from: 1529, to: 1543, text: "アダルのイマーム、アフマド・グランの侵攻（ジハード）。1529年のシンブラ・クレの戦いに敗れ、高原の大部分が征服された。ポルトガル軍の助けを得て、1543年のワイナ・ダガの戦いでグランを倒した。"}
+    - {from: 1544, to: 1631, text: "南からオロモ人が移り住み、シェワ・ダワロ・バリなど南の州を失った。オスマン帝国が紅海沿岸（マッサワ）を取った。スセニョスはカトリックに改宗したが、内乱を招いた。"}
+    - {from: 1632, to: 1647, text: "ファシリデスがカトリックの宣教師を追い、1636年にゴンダールに都を定めた。"}
     - from: 1648
       to: 1768
       text: ソロモン朝の皇帝がゴンダールに都を置き、城や教会を建てた（ゴンダール朝）。南の低地にはオロモ人が広く住み、皇帝の支配は北部の高原が中心。
@@ -96,6 +114,7 @@
   kind: アミール国
   home_iso: [ETH]
   rulers:
+    - {name: "アリー・イブン・ダーウード", title: "アミール", from: 1647, to: 1662, note: "ハラール・アミール国を建てた", source: "https://en.wikipedia.org/wiki/Emirate_of_Harar"}
     - {name: アブドゥッラーヒ, title: アミール, from: 1885, to: 1887, note: エジプト軍の撤退後に立ち、チェレンコの戦いでメネリクに敗れた, source: "https://en.wikipedia.org/wiki/Abdullahi_of_Harar"}
   periods:
     - from: 1648
@@ -111,6 +130,7 @@
   kind: スルタン国
   home_iso: [ETH]
   periods:
+    - {from: 1577, to: 1647, text: "アダルのイマーム、ムハンマド・ジャーサがオロモ人の圧力を避けて都をハラールからアウサに移した（アウサ・イマーム国）。1647年にハラールが分かれた。"}
     - from: 1648
       to: 1895
       text: アワシュ川下流のオアシスを中心とするアファル人の国。1734年ごろからムダイト家のスルタン。1896年からエチオピア皇帝の下の自治国となり、1975年まで続いた。
@@ -187,6 +207,18 @@
   kind: スルタン国
   home_iso: [SDN]
   rulers:
+    - {name: "アマーラ・ドゥンカス", title: "スルタン", from: 1504, to: 1533, note: "センナールを都にフンジ・スルタン国を建てた", source: "https://en.wikipedia.org/wiki/Amara_Dunqas"}
+    - {name: "ナーイル", title: "スルタン", from: 1533, to: 1550, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "アブドゥルカーディル1世", title: "スルタン", from: 1550, to: 1557, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "アブー・サキーキーン", title: "スルタン", from: 1557, to: 1568, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "ダキーン", title: "スルタン", from: 1568, to: 1585, note: "法と行政を整えたとされる", source: "https://en.wikipedia.org/wiki/Dakin"}
+    - {name: "ダウラ", title: "スルタン", from: 1585, to: 1587, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "タイイブ", title: "スルタン", from: 1587, to: 1591, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "ウンサ1世", title: "スルタン", from: 1591, to: 1603, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "アブドゥルカーディル2世", title: "スルタン", from: 1603, to: 1606, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "アドラーン1世", title: "スルタン", from: 1606, to: 1611, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "バーディ1世", title: "スルタン", from: 1611, to: 1616, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
+    - {name: "ラバート1世", title: "スルタン", from: 1616, to: 1644, source: "https://en.wikipedia.org/wiki/Funj_Sultanate"}
     - {name: バーディ2世, title: スルタン, from: 1644, to: 1681, note: 南コルドファンのタカリ王国を従えた, source: "https://en.wikipedia.org/wiki/Badi_II"}
     - {name: ウンサ2世, title: スルタン, from: 1681, to: 1692, source: "https://en.wikipedia.org/wiki/Unsa_II"}
     - {name: バーディ3世, title: スルタン, from: 1692, to: 1716, source: "https://en.wikipedia.org/wiki/Badi_III"}
@@ -195,6 +227,7 @@
     - {name: バーディ4世, title: スルタン, from: 1724, to: 1762, note: 1744年にエチオピアのイヤス2世の侵攻を退けた。晩年にハマジュの将アブー・リカイリクに退けられた, source: "https://en.wikipedia.org/wiki/Badi_IV"}
     - {name: バーディ7世, title: スルタン, from: 1805, to: 1821, note: 最後のスルタン。エジプト軍に降った, source: "https://en.wikipedia.org/wiki/Badi_VII"}
   periods:
+    - {from: 1504, to: 1647, text: "アマーラ・ドゥンカスが建てたイスラームの国。北部のアブダッラーブ家（ナイル川沿いのアラブ系の首長）を従え、青ナイルと白ナイルの間のセンナールを都とした。北でオスマン帝国と接した。"}
     - from: 1648
       to: 1761
       text: 青ナイル・白ナイルの間のセンナールを都とするイスラームの王国。ナイル川沿いの首長たちを従え、紅海と内陸の交易で栄えた。
@@ -211,6 +244,7 @@
   kind: スルタン国
   home_iso: [SDN]
   rulers:
+    - {name: "スライマーン・ソロンドゥング", title: "スルタン", from: 1640, to: 1660, note: "ケイラ朝の祖。在位年は推定（説が分かれる）", source: "https://en.wikipedia.org/wiki/Sulayman_Solongdungu"}
     - {name: アフマド・ブクル, title: スルタン, from: 1682, to: 1722, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
     - {name: ムハンマド・ダウラ, title: スルタン, from: 1722, to: 1732, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
     - {name: ウマル・レル, title: スルタン, from: 1732, to: 1739, source: "https://en.wikipedia.org/wiki/Sultanate_of_Darfur"}
@@ -371,6 +405,7 @@
   kind: スルタン国
   home_iso: [SOM]
   periods:
+    - {from: 1453, to: 1647, text: "シェベリ川の灌漑農業とモガディシュ・メルカ・バラワの港を結んだ国。ポルトガル・オスマン帝国の艦隊とも渡り合った。"}
     - from: 1648
       to: 1699
       text: シェベリ川・ジュバ川流域の灌漑とインド洋交易を押さえた国（13世紀–17世紀）。17世紀に衰え、崩れた。
@@ -534,8 +569,11 @@
   short: キルワ
   color: "#bfd3d8"
   kind: スルタン国（都市国家）
+  rulers:
+    - {name: "歴代のスルタン（マフダリー家）", title: "スルタン", from: 1453, to: 1647, note: "15世紀は王位をめぐる争いが続いた。1505年にポルトガルがスルタンのイブラーヒームを追い、ムハンマド・アンコニを立てた", source: "https://en.wikipedia.org/wiki/Kilwa_Sultanate"}
   home_iso: [TZA]
   periods:
+    - {from: 1453, to: 1647, text: "ソファラの金の交易で栄えたスワヒリ海岸南部の中心の国。1505年にポルトガルのアルメイダに攻められて衰え、1587年にはジンバ人の襲撃を受けた。"}
     - from: 1648
       to: 1784
       text: かつてソファラの金の交易で栄えたキルワ・キシワニの国（16世紀にポルトガルに攻められて衰えた）。18世紀にはフランスの奴隷商人との取引で一時もち直したが、1785年にオマーンに征服された。
@@ -661,6 +699,7 @@
     - {name: ダウディ・チュワ2世, title: カバカ, from: 1897, to: 1939, note: 幼い王の摂政（アポロ・カグワなど）が1900年のウガンダ協定を結んだ, source: "https://en.wikipedia.org/wiki/Daudi_Cwa_II_of_Buganda"}
     - {name: ムテサ2世, title: カバカ, from: 1939, to: 1966, note: 1953–55年にイギリスに追放された。独立後のウガンダ大統領（1963–66年）, source: "https://ja.wikipedia.org/wiki/ムテサ2世"}
   periods:
+    - {from: 1453, to: 1647, text: "ヴィクトリア湖北岸の小さな王国。北西の強国ブニョロに押されていたが、17世紀から少しずつ広がった。"}
     - from: 1648
       to: 1893
       text: ヴィクトリア湖北西岸のバナナ栽培の王国。カバカ（王）のもとに首長を任命する中央集権の国で、18世紀からブニョロの地を奪って広がった。19世紀にはアラブ商人・キリスト教の宣教師が来て、宗派の争いが起きた。
@@ -680,6 +719,7 @@
     - {name: カムラシ, title: オムカマ（王）, from: 1852, to: 1869, note: スピーク・グラント、ベーカーを迎えた, source: "https://en.wikipedia.org/wiki/Kamurasi"}
     - {name: カバレガ, title: オムカマ, from: 1870, to: 1899, note: 王国を立て直し、エジプト（ベーカー）・イギリスに抵抗した。1899年に捕らえられ、セーシェルに流された, source: "https://en.wikipedia.org/wiki/Kabalega"}
   periods:
+    - {from: 1453, to: 1647, text: "伝説のチュウェジのキタラ王国の後、16世紀初めごろルオ系のビト朝が開いたとされる。大湖地方で最も強い国として周りの王国を襲った。"}
     - from: 1648
       to: 1893
       text: 大湖地方の古い王国（ビト朝）。17世紀には大湖地方で最も強かったが、18–19世紀にブガンダに領土を奪われ、トロが分かれた（1830年）。カバレガが王国を立て直した。
@@ -745,6 +785,9 @@
     - {name: ムタラ3世ルダヒグワ, title: ムワミ, from: 1931, to: 1959, note: カトリックに改宗した, source: "https://en.wikipedia.org/wiki/Mutara_III_Rudahigwa"}
     - {name: キゲリ5世ンダヒンドゥルワ, title: ムワミ, from: 1959, to: 1961, note: 1961年に王政が廃止され亡命, source: "https://en.wikipedia.org/wiki/Kigeli_V_Ndahindurwa"}
   periods:
+    - from: 1600
+      to: 1647
+      text: キガリの周りでニギニャ王家の小さな王国がまとまった（17世紀。年代は口承による推定）。
     - from: 1648
       to: 1896
       text: ニギニャ王家のムワミ（王）がツチ人の首長を通じて治めた王国。19世紀のルワブギリのもとで周りの小国を併合した。
@@ -856,3 +899,68 @@
       to: 1884
       text: ニャムウェジ人の首長ミランボが、銃を持つ傭兵（ルガルガ）で作った国。ザンジバルから内陸への隊商路を押さえ、タボラのアラブ商人と戦った。
   source: "https://en.wikipedia.org/wiki/Mirambo"
+
+# ===== 1453–1647 の政体（W5）
+- id: adal
+  name: アダル・スルタン国
+  short: アダル
+  color: "#aad5a0"
+  kind: スルタン国
+  home_iso: [ETH, SOM, DJI]
+  rulers:
+    - {name: ムハンマド・イブン・バドライ, title: スルタン, from: 1445, to: 1471, note: 在位年は推定, source: "https://en.wikipedia.org/wiki/Adal_Sultanate"}
+    - {name: シャムスッディーン, title: スルタン, from: 1472, to: 1487, note: 在位年は推定。要確認, source: "https://en.wikipedia.org/wiki/Adal_Sultanate"}
+    - {name: ムハンマド・イブン・アズハルッディーン, title: スルタン, from: 1488, to: 1518, note: 在位年は推定, source: "https://en.wikipedia.org/wiki/Adal_Sultanate"}
+    - {name: アブー・バクル, title: スルタン, from: 1518, to: 1526, note: 都をダッカルからハラールに移した（1520年）。アフマド・グランに倒された, source: "https://en.wikipedia.org/wiki/Abu_Bakr_ibn_Muhammad"}
+    - {name: アフマド・イブン・イブラーヒーム（アフマド・グラン）, title: イマーム（実権者）, from: 1527, to: 1543, note: スルタン（ウマル・ディーン）を立てて実権を握り、エチオピアに攻め入った。ワイナ・ダガの戦いで戦死, source: "https://ja.wikipedia.org/wiki/アフマド・グラン"}
+    - {name: ヌール・イブン・ムジャーヒド, title: アミール, from: 1551, to: 1567, note: グランの未亡人と結婚して戦いを続け、エチオピア皇帝ゲラウデウォスを討った（1559年）。ハラールの城壁を築いた, source: "https://en.wikipedia.org/wiki/Nur_ibn_Mujahid"}
+    - {name: ムハンマド・ジャーサ, title: イマーム, from: 1576, to: 1583, note: 都をアウサに移した（1577年）。要確認, source: "https://en.wikipedia.org/wiki/Imamate_of_Aussa"}
+  periods:
+    - {from: 1453, to: 1526, text: "ハラールの近くのダッカルを都とし、港ゼイラを通じてアデン湾の交易を握ったムスリムの国。エチオピア帝国とたびたび戦った。"}
+    - {from: 1527, to: 1543, text: "イマームのアフマド・グランがソマリ人・アファル人の兵を率いてエチオピアに攻め入り（ジハード）、高原の大部分を征服した。オスマン帝国から鉄砲隊の助けを得た。1543年にグランが戦死して退いた。"}
+    - {from: 1544, to: 1577, text: "アミールのヌールがエチオピアとの戦いを続けたが、オロモ人の移動に押され、1577年に都をアウサに移した（アウサ・イマーム国）。"}
+  source: "https://ja.wikipedia.org/wiki/アダル・スルタン国"
+
+- id: alwa
+  name: アルワ王国
+  short: アルワ
+  color: "#c9b6d9"
+  kind: 王国（キリスト教）
+  home_iso: [SDN]
+  periods:
+    - {from: 1453, to: 1504, text: "青ナイルと白ナイルの合流点の近くのソバを都とするヌビアのキリスト教の王国。15世紀にはアラブ遊牧民に押されて衰え、1504年ごろフンジとアブダッラーブ家に滅ぼされた。"}
+  note: 王の名と年代はほとんど伝わらない。
+  source: "https://en.wikipedia.org/wiki/Alodia"
+
+- id: tunjur
+  name: トゥンジュル王国
+  short: トゥンジュル
+  color: "#e1d99c"
+  kind: 王国
+  home_iso: [SDN]
+  periods:
+    - {from: 1453, to: 1639, text: "ダルフールのマッラ山地とその北を治めた王国。17世紀にケイラ朝（ダルフール・スルタン国）に代わられ、西のワダイに移った。"}
+  note: 王の名と年代ははっきりしない。
+  source: "https://en.wikipedia.org/wiki/Tunjur_people"
+
+- id: mombasa
+  name: モンバサ・スルタン国
+  short: モンバサ
+  color: "#d6b0a0"
+  kind: スルタン国（都市国家）
+  home_iso: [KEN]
+  periods:
+    - {from: 1453, to: 1592, text: "スワヒリ海岸北部の最大の港町。ポルトガルと結んだマリンディと争い、1505年・1528年・1589年にポルトガルの艦隊に焼かれた。1593年にポルトガルがジェズス要塞を築いて支配した。"}
+  note: スルタンの名と年代ははっきりしない。
+  source: "https://ja.wikipedia.org/wiki/モンバサ"
+
+- id: malindi
+  name: マリンディ・スルタン国
+  short: マリンディ
+  color: "#a9c8de"
+  kind: スルタン国（都市国家）
+  home_iso: [KEN]
+  periods:
+    - {from: 1453, to: 1592, text: "スワヒリの港町。1498年にヴァスコ・ダ・ガマを迎えてインドへの水先案内人を世話し、以後ポルトガルの味方となった。1593年にスルタンがモンバサに移された。"}
+  note: スルタンの名と年代ははっきりしない。
+  source: "https://ja.wikipedia.org/wiki/マリンディ"

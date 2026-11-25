@@ -2403,3 +2403,755 @@
       owner: "paraguay"
       cause: "チャコ戦争の停戦（6月。1938年の講和条約でチャコの大部分がパラグアイ領と決まる）"
       source: "https://ja.wikipedia.org/wiki/チャコ戦争"
+
+
+# ============================================================
+# W3 1453–1647（ブラジル・南米南部）
+# 1648 年より前だけの地域（until: 1647）。1648 年以降は上の地域が効く。どのピースもここの1つの地域だけに入る。
+# scratchpad/w3/gen.py で生成した（手で直してもよい）。
+
+- id: pre_cl_arica
+  name: "アリカ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Arica, CHL-Provincia_de_Parinacota]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1460, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", certainty: "uncertain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "インカ帝国の征服（ピサロ）"}
+    - {from: 1541, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "アリカの港ができる"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_cl_tarapaca
+  name: "タラパカ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Iquique, CHL-Provincia_del_Tamarugal]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1475, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "spain", certainty: "uncertain", label: "ヌエバ・カスティーリャ（ピサロの総督領）"}
+    - {from: 1540, owner: "spain", label: "ヌエバ・カスティーリャ（ピサロの総督領）", cause: "タラパカがエンコミエンダとして与えられる"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_cl_atacama
+  name: "アタカマ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_El_Loa, CHL-Provincia_de_Tocopilla, CHL-Provincia_de_Antofagasta]
+  timeline:
+    - {from: 1453, owner: null, note: "アタカメーニョの地（サン・ペドロ・デ・アタカマ）"}
+    - {from: 1475, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1557, owner: "spain", label: "チャルカス（ペルー副王領）", cause: "アタカマの先住民がスペインに服する"}
+
+- id: pre_cl_atacama_desert
+  name: "アタカマ砂漠の南部"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Antofagasta_South_of_24S]
+  timeline:
+    - {from: 1453, owner: null, note: "人の住まない砂漠"}
+
+- id: pre_cl_copiapo
+  name: "コピアポ・ワスコ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Chanaral, CHL-Provincia_de_Copiapo, CHL-Provincia_de_Huasco]
+  timeline:
+    - {from: 1453, owner: null, note: "ディアギタの地"}
+    - {from: 1480, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1549, owner: "spain", label: "チリ総督領", cause: "ラ・セレナが再建され、北部が落ち着く"}
+
+- id: pre_cl_coquimbo
+  name: "コキンボ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Elqui, CHL-Provincia_de_Limari, CHL-Provincia_de_Choapa]
+  timeline:
+    - {from: 1453, owner: null, note: "ディアギタの地"}
+    - {from: 1485, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1544, owner: "spain", certainty: "uncertain", label: "チリ総督領", cause: "ラ・セレナ建設（1549年に先住民に焼かれ、同年再建）", source: "https://ja.wikipedia.org/wiki/ラ・セレナ"}
+    - {from: 1549, owner: "spain", label: "チリ総督領"}
+
+- id: pre_cl_central
+  name: "チリ中部（サンティアゴ・バルパライソ）"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Petorca, CHL-Provincia_de_Los_Andes, CHL-Provincia_de_San_Felipe_de_Aconcagua, CHL-Provincia_de_Quillota, CHL-Provincia_de_Marga_Marga, CHL-Provincia_de_Valparaiso, CHL-Provincia_de_Santiago, CHL-Provincia_de_Chacabuco, CHL-Provincia_de_Cordillera, CHL-Provincia_de_Maipo, CHL-Provincia_de_Talagante, CHL-Provincia_de_Melipilla, CHL-Provincia_de_San_Antonio]
+  timeline:
+    - {from: 1453, owner: null, note: "ピクンチェ（北のマプーチェ）の地"}
+    - {from: 1485, owner: "inca", cause: "トゥパック・ユパンキの遠征でチリ中部がインカに入る", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、チリのインカの支配が崩れる（アルマグロの遠征 1535–37）"}
+    - {from: 1541, owner: "spain", label: "チリ総督領", cause: "2月、ペドロ・デ・バルディビアがサンティアゴを建設する", source: "https://ja.wikipedia.org/wiki/ペドロ・デ・バルディビア"}
+
+- id: pre_cl_promaucae
+  name: "チリ中南部（マイポ川〜マウレ川）"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Cachapoal, CHL-Provincia_de_Colchagua, CHL-Provincia_de_Cardenal_Caro, CHL-Provincia_de_Curico, CHL-Provincia_de_Talca]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain", note: "ピクンチェ（プロマウカエ）の地"}
+    - {from: 1485, owner: "inca", certainty: "uncertain", note: "インカの南の境（マイポ川かマウレ川か、説が分かれる）", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: "mapuche", certainty: "uncertain", cause: "インカの支配が崩れる"}
+    - {from: 1541, owner: "spain", certainty: "uncertain", label: "チリ総督領"}
+    - {from: 1546, owner: "spain", label: "チリ総督領", cause: "バルディビアの南方遠征。マウレ川までエンコミエンダが分けられる"}
+
+- id: pre_cl_maule
+  name: "リナレス・カウケネス"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Linares, CHL-Provincia_de_Cauquenes]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain"}
+    - {from: 1546, owner: "spain", certainty: "uncertain", label: "チリ総督領"}
+    - {from: 1550, owner: "spain", label: "チリ総督領"}
+
+- id: pre_cl_nuble
+  name: "ニュブレ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Diguillin, CHL-Provincia_de_Punilla, CHL-Provincia_de_Itata]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain"}
+    - {from: 1550, owner: "spain", certainty: "uncertain", label: "チリ総督領"}
+    - {from: 1580, owner: "spain", label: "チリ総督領", cause: "チヤン建設"}
+
+- id: pre_cl_concepcion
+  name: "コンセプシオン"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Concepcion]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain"}
+    - {from: 1550, owner: "spain", label: "チリ総督領", cause: "バルディビアがコンセプシオンを建設する"}
+    - {from: 1554, owner: "mapuche", certainty: "uncertain", cause: "ラウタロの攻撃でコンセプシオンが放棄される（1555年にも）", source: "https://ja.wikipedia.org/wiki/ラウタロ"}
+    - {from: 1557, owner: "spain", label: "チリ総督領", cause: "ガルシア・ウルタード・デ・メンドーサの遠征。コンセプシオンが再建される（1558）"}
+
+- id: pre_cl_biobio
+  name: "ビオビオ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Bio_Bio]
+  timeline:
+    - {from: 1453, owner: "mapuche"}
+    - {from: 1557, owner: "spain", certainty: "uncertain", label: "チリ総督領"}
+    - {from: 1599, owner: "mapuche", certainty: "uncertain", cause: "クララバの戦いのあとのマプーチェの大反乱"}
+    - {from: 1604, owner: "spain", label: "チリ総督領", cause: "アロンソ・デ・リベラがビオビオ川の線に砦を連ね、常備軍を置く（ラ・フロンテラ）", source: "https://en.wikipedia.org/wiki/Alonso_de_Ribera"}
+
+- id: pre_cl_arauco
+  name: "アラウコ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Arauco]
+  timeline:
+    - {from: 1453, owner: "mapuche"}
+    - {from: 1552, owner: "spain", certainty: "uncertain", label: "チリ総督領", cause: "アラウコ・トゥカペルに砦が築かれる"}
+    - {from: 1553, owner: "mapuche", cause: "12月、トゥカペルの戦いでラウタロの率いるマプーチェがバルディビアを討つ", source: "https://ja.wikipedia.org/wiki/トゥカペルの戦い"}
+    - {from: 1557, owner: "spain", certainty: "uncertain", label: "チリ総督領", cause: "ガルシア・ウルタード・デ・メンドーサの遠征。ラウタロは戦死（1557）、カウポリカンも処刑される（1558）"}
+
+- id: pre_cl_araucania
+  name: "アラウカニア（アンゴル・インペリアル・ビリャリカ）"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Malleco, CHL-Provincia_de_Cautin]
+  timeline:
+    - {from: 1453, owner: "mapuche", note: "マプーチェの中心地。首長（ロンコ）が率いる共同体に分かれ、インカにも従わなかった"}
+    - {from: 1551, owner: "spain", certainty: "uncertain", label: "チリ総督領", cause: "バルディビアがラ・インペリアル（1551）・ビリャリカ（1552）・アンゴル（1553）を建てる。アラウコ戦争が続く"}
+    - {from: 1599, owner: "mapuche", cause: "クララバの戦い（1598年12月）のあとのマプーチェの大反乱で、ビオビオ川の南のスペインの7都市が失われる（〜1604）", source: "https://ja.wikipedia.org/wiki/クララバの戦い"}
+
+- id: pre_cl_valdivia
+  name: "バルディビア"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Valdivia]
+  timeline:
+    - {from: 1453, owner: "mapuche", note: "ウイリチェ（南のマプーチェ）の地"}
+    - {from: 1552, owner: "spain", label: "チリ総督領", cause: "バルディビア建設"}
+    - {from: 1599, owner: "mapuche", cause: "11月、バルディビアが攻め落とされる"}
+    - {from: 1645, owner: "spain", certainty: "uncertain", label: "チリ総督領", cause: "ペルー副王がバルディビアを再建し要塞を築く（1643年のオランダの占領を受けて）", source: "https://en.wikipedia.org/wiki/Valdivian_Fort_System"}
+
+- id: pre_cl_osorno
+  name: "オソルノ・ランコ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Osorno, CHL-Provincia_de_Ranco]
+  timeline:
+    - {from: 1453, owner: "mapuche", note: "ウイリチェの地"}
+    - {from: 1558, owner: "spain", label: "チリ総督領", cause: "オソルノ建設"}
+    - {from: 1600, owner: "spain", certainty: "uncertain", label: "チリ総督領", cause: "大反乱でオソルノが包囲される"}
+    - {from: 1604, owner: "mapuche", cause: "オソルノが放棄される"}
+
+- id: pre_cl_llanquihue
+  name: "ジャンキウエ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Llanquihue]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain"}
+    - {from: 1558, owner: "spain", certainty: "uncertain", label: "チリ総督領", note: "オソルノの南の沿岸。1602–03年にカレルマプ・カルブコの砦"}
+
+- id: pre_cl_chiloe
+  name: "チロエ"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Chiloe]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain", note: "ベリチェ（ウイリチェ）の地"}
+    - {from: 1567, owner: "spain", label: "チリ総督領", cause: "カストロ建設", source: "https://en.wikipedia.org/wiki/Castro,_Chile"}
+
+- id: pre_cl_patagonia
+  name: "チリ南部（パタゴニア・マガリャネス）"
+  until: 1647
+  select:
+    pieces: [CHL-Provincia_de_Palena, CHL-Provincia_de_Aysen, CHL-Provincia_de_Coyhaique, CHL-Provincia_de_General_Carrera, CHL-Provincia_de_Capitan_Prat, CHL-Provincia_de_Magallanes, CHL-Provincia_de_Ultima_Esperanza, CHL-Provincia_de_Tierra_del_Fuego, CHL-Provincia_de_la_Antartica_Chilena]
+  timeline:
+    - {from: 1453, owner: null, note: "チョノ・カウェスカル・ヤーガンなど海の狩猟民の地。マゼラン海峡のスペイン植民（1584–87）はすぐに滅びた"}
+
+- id: pre_cl_easter
+  name: "イースター島（ラパ・ヌイ）"
+  until: 1647
+  select:
+    pieces: [CHL-Easter_Island_Province]
+  timeline:
+    - {from: 1453, owner: null, note: "ラパ・ヌイの首長たちの島（モアイ）。ヨーロッパ人の到達は1722年"}
+
+- id: pre_ar_humahuaca
+  name: "フフイ（ウマワカ）"
+  until: 1647
+  select:
+    pieces: [ARG-Humahuaca, ARG-Tilcara, ARG-Tumbaya, ARG-Cochinoca, ARG-Rinconada, ARG-Santa_Catalina, ARG-Yavi, ARG-Dr_Manuel_Belgrano, ARG-Palpala, ARG-El_Carmen, ARG-San_Antonio, ARG-Valle_Grande, ARG-Iruya, ARG-Santa_Victoria]
+  timeline:
+    - {from: 1453, owner: null, note: "オマグアカなどの地"}
+    - {from: 1480, owner: "inca", cause: "トゥパック・ユパンキの遠征でアルゼンチン北西部がインカに入る", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1593, owner: "spain", label: "ペルー副王領", cause: "サン・サルバドール・デ・フフイ建設", source: "https://en.wikipedia.org/wiki/San_Salvador_de_Jujuy"}
+
+- id: pre_ar_jujuy_low
+  name: "フフイ東部（ユンガス）"
+  until: 1647
+  select:
+    pieces: [ARG-San_Pedro, ARG-Ledesma, ARG-Santa_Barbara]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1593, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_ar_puna
+  name: "プーナ・デ・アタカマ"
+  until: 1647
+  select:
+    pieces: [ARG-Susques, ARG-Los_Andes, ARG-Antofagasta_de_la_Sierra]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1480, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1557, owner: "spain", label: "チャルカス（ペルー副王領）", cause: "アタカマの先住民がスペインに服する"}
+
+- id: pre_ar_calchaqui
+  name: "カルチャキ谷"
+  until: 1647
+  select:
+    pieces: [ARG-La_Poma, ARG-Cachi, ARG-Molinos, ARG-San_Carlos, ARG-Cafayate, ARG-Santa_Maria, ARG-Tafi_del_Valle]
+  timeline:
+    - {from: 1453, owner: null, note: "ディアギタ（カルチャキ）の地"}
+    - {from: 1480, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1560, owner: "spain", certainty: "uncertain", label: "ペルー副王領", cause: "カルチャキ谷の先住民の抵抗が続く（カルチャキ戦争、1560–1667。フアン・カルチャキの反乱）", source: "https://en.wikipedia.org/wiki/Calchaquí_Wars"}
+
+- id: pre_ar_lerma
+  name: "サルタ（レルマ谷）"
+  until: 1647
+  select:
+    pieces: [ARG-Capital_Salta, ARG-Cerrillos, ARG-Rosario_de_Lerma, ARG-Chicoana, ARG-La_Caldera, ARG-La_Vina, ARG-Guachipas]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1480, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1582, owner: "spain", label: "ペルー副王領", cause: "エルナンド・デ・レルマがサルタを建設する", source: "https://en.wikipedia.org/wiki/Salta"}
+
+- id: pre_ar_esteco
+  name: "サルタ東部（エステコ）"
+  until: 1647
+  select:
+    pieces: [ARG-General_Guemes, ARG-Metan, ARG-Rosario_de_la_Frontera, ARG-La_Candelaria, ARG-Anta]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1567, owner: "spain", label: "ペルー副王領", cause: "タラベラ（エステコ）建設"}
+
+- id: pre_ar_catamarca_w
+  name: "カタマルカ西部（ベレン・ティノガスタ）"
+  until: 1647
+  select:
+    pieces: [ARG-Belen, ARG-Tinogasta, ARG-Andalgala, ARG-Poman]
+  timeline:
+    - {from: 1453, owner: null, note: "ディアギタの地"}
+    - {from: 1480, owner: "inca", note: "インカの行政の中心エル・シンカル（ベレン）", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1558, owner: "spain", certainty: "uncertain", label: "ペルー副王領", cause: "ロンドレス建設（カルチャキの反乱で放棄と再建をくり返す）", source: "https://en.wikipedia.org/wiki/Calchaquí_Wars"}
+
+- id: pre_ar_catamarca
+  name: "カタマルカ谷"
+  until: 1647
+  select:
+    pieces: [ARG-Capital_Catamarca, ARG-Fray_Mamerto_Esquiu, ARG-Valle_Viejo, ARG-Paclin, ARG-Ambato, ARG-Capayan]
+  timeline:
+    - {from: 1453, owner: null, note: "ディアギタの地"}
+    - {from: 1480, owner: "inca", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1591, owner: "spain", label: "ペルー副王領", cause: "ラ・リオハの建設で、カタマルカ谷にもエンコミエンダが広がる"}
+
+- id: pre_ar_catamarca_e
+  name: "カタマルカ東部"
+  until: 1647
+  select:
+    pieces: [ARG-El_Alto, ARG-Ancasti, ARG-La_Paz, ARG-Santa_Rosa, ARG-Juan_B_Alberdi]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1565, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_ar_tucuman
+  name: "トゥクマン"
+  until: 1647
+  select:
+    pieces: [ARG-Tucuman]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1480, owner: "inca", certainty: "uncertain", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1565, owner: "spain", label: "ペルー副王領", cause: "サン・ミゲル・デ・トゥクマン建設", source: "https://en.wikipedia.org/wiki/San_Miguel_de_Tucumán"}
+
+- id: pre_ar_santiago_estero
+  name: "サンティアゴ・デル・エステロ"
+  until: 1647
+  select:
+    pieces: [ARG-Santiago_del_Estero]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1553, owner: "spain", label: "ペルー副王領", cause: "サンティアゴ・デル・エステロ建設（今のアルゼンチンで最古の町）", source: "https://en.wikipedia.org/wiki/Santiago_del_Estero"}
+
+- id: pre_ar_cordoba
+  name: "コルドバ"
+  until: 1647
+  select:
+    pieces: [ARG-Cordoba]
+  timeline:
+    - {from: 1453, owner: null, note: "コメチンゴン・サナビロンの地"}
+    - {from: 1573, owner: "spain", label: "ペルー副王領", cause: "カブレラがコルドバを建設する", source: "https://ja.wikipedia.org/wiki/コルドバ_(アルゼンチン)"}
+
+- id: pre_ar_rioja
+  name: "ラ・リオハ"
+  until: 1647
+  select:
+    pieces: [ARG-La_Roja]
+  timeline:
+    - {from: 1453, owner: null, note: "ディアギタの地"}
+    - {from: 1480, owner: "inca", certainty: "uncertain", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1591, owner: "spain", label: "ペルー副王領", cause: "ラ・リオハ建設"}
+
+- id: pre_ar_san_juan
+  name: "サン・フアン"
+  until: 1647
+  select:
+    pieces: [ARG-San_Juan]
+  timeline:
+    - {from: 1453, owner: null, note: "ワルペの地"}
+    - {from: 1480, owner: "inca", certainty: "uncertain", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1562, owner: "spain", label: "チリ総督領", cause: "サン・フアン・デ・ラ・フロンテラ建設"}
+
+- id: pre_ar_mendoza
+  name: "メンドーサ"
+  until: 1647
+  select:
+    pieces: [ARG-Mendoza]
+  timeline:
+    - {from: 1453, owner: null, note: "ワルペの地"}
+    - {from: 1480, owner: "inca", certainty: "uncertain", note: "インカの道はウスパリャタまで", source: "https://ja.wikipedia.org/wiki/インカ帝国"}
+    - {from: 1533, owner: null, cause: "インカ帝国の崩壊で、南の辺境のインカの支配が崩れる", source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"}
+    - {from: 1561, owner: "spain", label: "チリ総督領", cause: "チリから来たカスティーリョがメンドーサを建設する", source: "https://ja.wikipedia.org/wiki/メンドーサ"}
+
+- id: pre_ar_san_luis
+  name: "サン・ルイス"
+  until: 1647
+  select:
+    pieces: [ARG-San_Luis]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1594, owner: "spain", label: "チリ総督領", cause: "サン・ルイス建設"}
+
+- id: pre_ar_chaco
+  name: "チャコ"
+  until: 1647
+  select:
+    pieces: [ARG-Chaco, ARG-Rivadavia, ARG-General_Jose_de_San_Martin]
+  timeline:
+    - {from: 1453, owner: null, note: "グラン・チャコの先住民（トバ・ウィチなど）の地"}
+    - {from: 1585, owner: "spain", certainty: "nominal", label: "ペルー副王領", cause: "コンセプシオン・デル・ベルメホ建設（1632年に放棄）", source: "https://en.wikipedia.org/wiki/Concepción_del_Bermejo"}
+
+- id: pre_ar_chaco_n
+  name: "フォルモサ・オラン"
+  until: 1647
+  select:
+    pieces: [ARG-Formosa, ARG-Oran]
+  timeline:
+    - {from: 1453, owner: null, note: "グラン・チャコの先住民の地"}
+
+- id: pre_ar_santa_fe
+  name: "サンタ・フェ"
+  until: 1647
+  select:
+    pieces: [ARG-Santa_Fe]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1573, owner: "spain", label: "ペルー副王領", cause: "フアン・デ・ガライがサンタ・フェを建設する", source: "https://en.wikipedia.org/wiki/Santa_Fe,_Argentina"}
+
+- id: pre_ar_entre_rios
+  name: "エントレ・リオス"
+  until: 1647
+  select:
+    pieces: [ARG-Entre_Rios]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1573, owner: "spain", certainty: "nominal", label: "ペルー副王領"}
+
+- id: pre_ar_corrientes
+  name: "コリエンテス"
+  until: 1647
+  select:
+    pieces: [ARG-Corrientes]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1588, owner: "spain", label: "ペルー副王領", cause: "コリエンテス建設"}
+
+- id: pre_ar_misiones
+  name: "ミシオネス"
+  until: 1647
+  select:
+    pieces: [ARG-Misiones]
+  timeline:
+    - {from: 1453, owner: null, note: "グアラニーの地"}
+    - {from: 1620, owner: "spain", label: "イエズス会の伝道村（グアラニー）", cause: "イエズス会がパラナ川・ウルグアイ川の間に伝道村（レドゥクシオン）を開く"}
+
+- id: pre_ar_ba_city
+  name: "ブエノスアイレス"
+  until: 1647
+  select:
+    pieces: [ARG-Ciudad_Autonoma_de_Buenos_Aires]
+  timeline:
+    - {from: 1453, owner: null, note: "ケランディの地"}
+    - {from: 1536, owner: "spain", label: "リオ・デ・ラ・プラタ", cause: "2月、ペドロ・デ・メンドーサがブエノスアイレスを建設する", source: "https://ja.wikipedia.org/wiki/ブエノスアイレス"}
+    - {from: 1541, owner: null, cause: "ブエノスアイレスが放棄され、住民はアスンシオンに移る"}
+    - {from: 1580, owner: "spain", label: "ペルー副王領", cause: "6月、フアン・デ・ガライがブエノスアイレスを再建する", source: "https://ja.wikipedia.org/wiki/ブエノスアイレス"}
+
+- id: pre_ar_ba
+  name: "ブエノスアイレス州"
+  until: 1647
+  select:
+    pieces: [ARG-Buenos_Aires]
+  timeline:
+    - {from: 1453, owner: null, note: "ケランディ・テウェルチェなどの地"}
+    - {from: 1580, owner: "spain", certainty: "nominal", label: "ペルー副王領"}
+
+- id: pre_ar_pampa
+  name: "パンパ・パタゴニア"
+  until: 1647
+  select:
+    pieces: [ARG-La_Pampa, ARG-Rio_Negro, ARG-Neuquen, ARG-Chubut, ARG-Santa_Cruz, ARG-Tierra_del_Fuego]
+  timeline:
+    - {from: 1453, owner: null, note: "テウェルチェ・ペウエンチェ・セルクナムなどの地"}
+
+- id: pre_ar_neuquen
+  name: "ネウケン"
+  until: 1647
+  select:
+    pieces: [ARG-Neuquen]
+  timeline:
+    - {from: 1453, owner: "mapuche", certainty: "uncertain", note: "アンデスの東側のペウエンチェ人などの地。チリ側のマプーチェと同じ人々で、1648年以降のデータ（ar_neuquen）と同じ描き方"}
+
+- id: pre_falklands
+  name: "フォークランド諸島"
+  until: 1647
+  select:
+    pieces: [117-Falkland_Islands_UK]
+  timeline:
+    - {from: 1453, owner: null, note: "無人島"}
+
+- id: pre_south_georgia
+  name: "サウスジョージア島"
+  until: 1647
+  select:
+    pieces: [SGS-South_Georgia_and_the_South_Sandwich_Islands]
+  timeline:
+    - {from: 1453, owner: null, note: "無人島"}
+
+- id: pre_py_core
+  name: "アスンシオン"
+  until: 1647
+  select:
+    pieces: [PRY-ASUNCION, PRY-CENTRAL, PRY-CORDILLERA, PRY-PARAGUARI, PRY-GUAIRA, PRY-CAAZAPA]
+  timeline:
+    - {from: 1453, owner: null, note: "グアラニーの地"}
+    - {from: 1537, owner: "spain", label: "リオ・デ・ラ・プラタ（アスンシオン）", cause: "8月、アスンシオン建設。グアラニーと結んでラ・プラタ地方の中心となる", source: "https://ja.wikipedia.org/wiki/アスンシオン"}
+    - {from: 1542, owner: "spain", label: "ペルー副王領"}
+
+- id: pre_py_misiones
+  name: "パラグアイの伝道村"
+  until: 1647
+  select:
+    pieces: [PRY-MISIONES, PRY-ITAPUA]
+  timeline:
+    - {from: 1453, owner: null, note: "グアラニーの地"}
+    - {from: 1537, owner: "spain", certainty: "nominal", label: "リオ・デ・ラ・プラタ（アスンシオン）"}
+    - {from: 1542, owner: "spain", certainty: "nominal", label: "ペルー副王領"}
+    - {from: 1609, owner: "spain", label: "イエズス会の伝道村（グアラニー）", cause: "イエズス会がサン・イグナシオ・グアスなどの伝道村を開く", source: "https://ja.wikipedia.org/wiki/イエズス会伝道所"}
+
+- id: pre_py_rest
+  name: "パラグアイ北部・南部"
+  until: 1647
+  select:
+    pieces: [PRY-NEEMBUCU, PRY-SAN_PEDRO, PRY-CAAGUAZU, PRY-CONCEPCION, PRY-Villa_Hayes, PRY-Benjamin_Aceval, PRY-Jose_Falcon, PRY-Nanawa]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1537, owner: "spain", certainty: "nominal", label: "リオ・デ・ラ・プラタ（アスンシオン）"}
+    - {from: 1542, owner: "spain", certainty: "nominal", label: "ペルー副王領"}
+
+- id: pre_py_guaira
+  name: "パラグアイ東部（グアイラ）"
+  until: 1647
+  select:
+    pieces: [PRY-ALTO_PARANA, PRY-CANINDEYU, PRY-AMAMBAY]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1557, owner: "spain", certainty: "nominal", label: "グアイラ（ペルー副王領）", cause: "シウダー・レアル・デル・グアイラ建設"}
+    - {from: 1632, owner: "spain", certainty: "nominal", label: "ペルー副王領"}
+
+- id: pre_py_chaco
+  name: "パラグアイのチャコ"
+  until: 1647
+  select:
+    pieces: [PRY-Bahia_Negra, PRY-Carmelo_Peralta, PRY-Puerto_Casado, PRY-Puerto_Pinasco, PRY-Fuerte_Olimpo, PRY-Tte_1Ro_Manuel_Irala_Fernandez, PRY-Tte_Esteban_Martinez, PRY-General_Jose_Maria_Bruguez, PRY-Filadelfia, PRY-Loma_Plata, PRY-Mariscal_Estigarribia]
+  timeline:
+    - {from: 1453, owner: null, note: "グラン・チャコの先住民（グアイクルなど）の地"}
+
+- id: pre_uruguay
+  name: "バンダ・オリエンタル（ウルグアイ）"
+  until: 1647
+  select:
+    pieces: [URY-Artigas, URY-Canelones, URY-Cerro_Largo, URY-Colonia, URY-Durazno, URY-Flores, URY-Florida, URY-Lavalleja, URY-Maldonado, URY-Montevideo, URY-Paysandu, URY-Rivera, URY-Rocha, URY-Rio_Negro, URY-Salto, URY-San_Jose, URY-Soriano, URY-Tacuarembo, URY-Treinta_y_Tres, 120-Isla_Brasilera]
+  timeline:
+    - {from: 1453, owner: null, note: "チャルーアなどの地"}
+    - {from: 1617, owner: "spain", certainty: "nominal", label: "ペルー副王領", cause: "ブエノスアイレスを都とするリオ・デ・ラ・プラタ州がパラグアイから分かれ、ウルグアイ川の東岸もその管轄となる（ソリアノの伝道村 1624）"}
+
+- id: pre_br_bahia
+  name: "バイーア"
+  until: 1647
+  select:
+    pieces: [BRA-Bahia]
+  timeline:
+    - {from: 1453, owner: null, note: "トゥピナンバなどの地"}
+    - {from: 1500, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル", cause: "4月、カブラルがポルト・セグーロに着き、ポルトガル領と宣言する", source: "https://ja.wikipedia.org/wiki/ペドロ・アルヴァレス・カブラル"}
+    - {from: 1534, owner: "portugal", label: "ポルトガル領ブラジル", cause: "ジョアン3世が沿岸を世襲カピタニアに分けて授ける（1534–36）。バイーア・イリェウス・ポルト・セグーロに入植", source: "https://ja.wikipedia.org/wiki/カピタニア制"}
+    - {from: 1549, owner: "portugal", label: "ポルトガル領ブラジル", cause: "トメ・デ・ソウザが初代総督となり、サルヴァドールを建設する（ブラジル総督府）", source: "https://ja.wikipedia.org/wiki/サルヴァドール"}
+    - {from: 1624, owner: "portugal", certainty: "uncertain", label: "オランダがサルヴァドールを占領", cause: "5月、オランダ西インド会社がサルヴァドールを占領する（1625年4月に奪回）", source: "https://en.wikipedia.org/wiki/Capture_of_Bahia"}
+    - {from: 1625, owner: "portugal", label: "ポルトガル領ブラジル", cause: "スペイン・ポルトガルの艦隊がサルヴァドールを奪い返す"}
+
+- id: pre_br_pernambuco
+  name: "ペルナンブコ"
+  until: 1647
+  select:
+    pieces: [BRA-Pernambuco]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1516, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル", cause: "ポルトガルがイガラスーに商館（フェイトリア）を置く"}
+    - {from: 1535, owner: "portugal", label: "ポルトガル領ブラジル", cause: "ドゥアルテ・コエーリョがオリンダを建設する（ペルナンブコのカピタニア。砂糖の生産の中心となる）", source: "https://en.wikipedia.org/wiki/Captaincy_of_Pernambuco"}
+    - {from: 1630, owner: "netherlands", certainty: "uncertain", label: "オランダ領ブラジル（西インド会社）", cause: "2月、オランダ西インド会社がオリンダとレシフェを占領する", source: "https://ja.wikipedia.org/wiki/オランダ領ブラジル"}
+    - {from: 1635, owner: "netherlands", label: "オランダ領ブラジル（西インド会社）", cause: "ボン・ジェズスの陣地が落ち、ポルトガル側の抵抗が終わる"}
+    - {from: 1645, owner: "portugal", certainty: "uncertain", label: "ポルトガル領ブラジル", cause: "6月、ペルナンブコの反乱（ポルトガル系住民の蜂起）。オランダはレシフェに追い込まれる", source: "https://en.wikipedia.org/wiki/Pernambucan_Insurrection"}
+
+- id: pre_br_paraiba
+  name: "パライバ"
+  until: 1647
+  select:
+    pieces: [BRA-Paraiba]
+  timeline:
+    - {from: 1453, owner: null, note: "ポチグアラの地"}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1585, owner: "portugal", label: "ポルトガル領ブラジル", cause: "フィリペイア（今のジョアン・ペソア）建設"}
+    - {from: 1634, owner: "netherlands", label: "オランダ領ブラジル（西インド会社）", cause: "12月、オランダがパライバを占領する"}
+    - {from: 1645, owner: "netherlands", certainty: "uncertain", label: "オランダ領ブラジル（西インド会社）", cause: "ペルナンブコの反乱"}
+
+- id: pre_br_rn
+  name: "リオ・グランデ・ド・ノルテ"
+  until: 1647
+  select:
+    pieces: [BRA-Rio_Granda_do_Norte]
+  timeline:
+    - {from: 1453, owner: null, note: "ポチグアラの地"}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1598, owner: "portugal", label: "ポルトガル領ブラジル", cause: "レイス・マゴス要塞（1598）とナタール（1599）が建てられる"}
+    - {from: 1633, owner: "netherlands", label: "オランダ領ブラジル（西インド会社）", cause: "12月、オランダがレイス・マゴス要塞を占領する"}
+    - {from: 1645, owner: "netherlands", certainty: "uncertain", label: "オランダ領ブラジル（西インド会社）", cause: "ペルナンブコの反乱"}
+
+- id: pre_br_alagoas
+  name: "アラゴアス"
+  until: 1647
+  select:
+    pieces: [BRA-Alagoas]
+  timeline:
+    - {from: 1453, owner: null, note: "カエテの地"}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1565, owner: "portugal", label: "ポルトガル領ブラジル", cause: "ペネド建設（サン・フランシスコ川の河口）"}
+    - {from: 1635, owner: "netherlands", certainty: "uncertain", label: "オランダ領ブラジル（西インド会社）", cause: "オランダがポルト・カルヴォを奪う"}
+    - {from: 1637, owner: "netherlands", label: "オランダ領ブラジル（西インド会社）", cause: "ナッサウ＝ジーゲン伯ヨハン・マウリッツがサン・フランシスコ川まで征服する"}
+    - {from: 1645, owner: "portugal", label: "ポルトガル領ブラジル", cause: "ペルナンブコの反乱で取り戻される"}
+
+- id: pre_br_sergipe
+  name: "セルジッペ"
+  until: 1647
+  select:
+    pieces: [BRA-Sergipe]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1590, owner: "portugal", label: "ポルトガル領ブラジル", cause: "サン・クリストヴァン建設（セルジッペの征服）"}
+    - {from: 1637, owner: "netherlands", label: "オランダ領ブラジル（西インド会社）", cause: "ヨハン・マウリッツの軍がセルジッペを占領する"}
+    - {from: 1645, owner: "portugal", label: "ポルトガル領ブラジル", cause: "ペルナンブコの反乱で取り戻される"}
+
+- id: pre_br_espirito_santo
+  name: "エスピリト・サント"
+  until: 1647
+  select:
+    pieces: [BRA-Espirito_Santo]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1535, owner: "portugal", label: "ポルトガル領ブラジル", cause: "ヴァスコ・フェルナンデス・コウティーニョがヴィラ・ヴェーリャを建設する"}
+
+- id: pre_br_rio
+  name: "リオデジャネイロ"
+  until: 1647
+  select:
+    pieces: [BRA-Rio_de_Jeneiro]
+  timeline:
+    - {from: 1453, owner: null, note: "タモイオ（トゥピナンバ）の地"}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1555, owner: "france", certainty: "uncertain", label: "南極フランス", cause: "11月、ヴィルガニョンがグアナバラ湾に入植する（コリニー砦）", source: "https://ja.wikipedia.org/wiki/南極フランス"}
+    - {from: 1565, owner: "portugal", certainty: "uncertain", label: "ポルトガル領ブラジル", cause: "3月、エスタシオ・デ・サがリオデジャネイロを建設する", source: "https://ja.wikipedia.org/wiki/リオデジャネイロ"}
+    - {from: 1567, owner: "portugal", label: "ポルトガル領ブラジル", cause: "メン・デ・サがフランス人とタモイオを破り、グアナバラ湾を押さえる"}
+
+- id: pre_br_sao_paulo
+  name: "サン・ヴィセンテ（サンパウロ）"
+  until: 1647
+  select:
+    pieces: [BRA-Sao_Paulo]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1532, owner: "portugal", label: "ポルトガル領ブラジル", cause: "1月、マルティン・アフォンソ・デ・ソウザがサン・ヴィセンテを建設する（ブラジルで最初のポルトガル人の町）", source: "https://en.wikipedia.org/wiki/São_Vicente,_São_Paulo"}
+
+- id: pre_br_interior
+  name: "ミナス・ジェライス・ピアウイ"
+  until: 1647
+  select:
+    pieces: [BRA-Minas_Gerais, BRA-Piaui]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル", note: "世襲カピタニアは海岸からトルデシリャスの線までの帯として授けられた"}
+
+- id: pre_br_ceara
+  name: "セアラ"
+  until: 1647
+  select:
+    pieces: [BRA-Ceara]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1637, owner: "netherlands", certainty: "uncertain", label: "オランダ領ブラジル（西インド会社）", cause: "オランダがセアラの砦を奪う"}
+    - {from: 1644, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル", cause: "先住民の蜂起でオランダの守備隊が滅ぼされる"}
+
+- id: pre_br_maranhao
+  name: "マラニョン"
+  until: 1647
+  select:
+    pieces: [BRA-Maranhao]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+    - {from: 1612, owner: "france", certainty: "uncertain", label: "赤道フランス", cause: "ラ・ラヴァルディエールがサン・ルイスを建設する（9月）", source: "https://en.wikipedia.org/wiki/Equinoctial_France"}
+    - {from: 1615, owner: "portugal", label: "ポルトガル領ブラジル", cause: "11月、ポルトガルがサン・ルイスを奪う（1621年にマラニョン州がブラジルから分かれる）"}
+    - {from: 1641, owner: "netherlands", certainty: "occupied", label: "オランダ領ブラジル（西インド会社）", cause: "11月、オランダがサン・ルイスを占領する"}
+    - {from: 1644, owner: "portugal", label: "ポルトガル領ブラジル", cause: "2月、オランダが撤退する"}
+
+- id: pre_br_para
+  name: "パラー"
+  until: 1647
+  select:
+    pieces: [BRA-Para]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1616, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル", cause: "1月、ベレン（プレゼピオ砦）建設", source: "https://ja.wikipedia.org/wiki/ベレン"}
+
+- id: pre_br_amapa
+  name: "アマパ"
+  until: 1647
+  select:
+    pieces: [BRA-Amapa]
+  timeline:
+    - {from: 1453, owner: null, note: "イギリス・オランダの交易所（1620年代）があったが、ポルトガルが追い払った"}
+    - {from: 1637, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル", cause: "カボ・ノルテのカピタニアが授けられる"}
+
+- id: pre_br_amazonas
+  name: "アマゾナス"
+  until: 1647
+  select:
+    pieces: [BRA-Amazonas]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1639, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル", cause: "ペドロ・テイシェイラのアマゾン遡航（1637–39）で上流までポルトガル領と宣言する", source: "https://en.wikipedia.org/wiki/Pedro_Teixeira"}
+
+- id: pre_br_santa_catarina
+  name: "サンタ・カタリナ"
+  until: 1647
+  select:
+    pieces: [BRA-Santa_Catarina]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1534, owner: "portugal", certainty: "nominal", label: "ポルトガル領ブラジル"}
+
+- id: pre_br_parana
+  name: "パラナ（グアイラ）"
+  until: 1647
+  select:
+    pieces: [BRA-Parana]
+  timeline:
+    - {from: 1453, owner: null, note: "グアラニーなどの地。トルデシリャス線（西経48度半ばあたり）は州の東の端を通り、大部分はスペイン側。サン・ヴィセンテのカピタニアも海岸の線まで。1541年にカベサ・デ・バカがここを横切ってアスンシオンへ向かった"}
+    - {from: 1557, owner: "spain", certainty: "uncertain", label: "グアイラ（ペルー副王領）", cause: "シウダー・レアル・デル・グアイラ（1557）・ビリャリカ（1570）が建てられ、のちにイエズス会の伝道村ができる"}
+    - {from: 1632, owner: "portugal", certainty: "uncertain", label: "ポルトガル領ブラジル", cause: "バンデイランテスの攻撃（1628–31）で、グアイラのスペインの町と伝道村が放棄される", source: "https://en.wikipedia.org/wiki/Bandeirantes"}
+
+- id: pre_br_rgs
+  name: "リオ・グランデ・ド・スル（タペ）"
+  until: 1647
+  select:
+    pieces: [BRA-Rio_Grande_do_Sul, BRA-Rio_Grande_do_Sul_Missoes]
+  timeline:
+    - {from: 1453, owner: null, note: "グアラニー・チャルーアなどの地"}
+    - {from: 1626, owner: "spain", certainty: "nominal", label: "ペルー副王領", cause: "イエズス会がタペ（今のリオ・グランデ・ド・スル）に伝道村を開く（1630年代末にバンデイランテスに追われる）"}
+
+- id: pre_br_itatin
+  name: "マト・グロッソ・ド・スル（イタティン）"
+  until: 1647
+  select:
+    pieces: [BRA-Mato_Grosso_do_Sul]
+  timeline:
+    - {from: 1453, owner: null}
+    - {from: 1593, owner: "spain", certainty: "nominal", label: "ペルー副王領", cause: "サンティアゴ・デ・ヘレス建設（1632年にバンデイランテスに追われる）"}
+
+- id: pre_br_unclaimed
+  name: "ブラジル内陸・アマゾン西部"
+  until: 1647
+  select:
+    pieces: [BRA-Goias, BRA-Distrito_Federal, BRA-Tocantins, BRA-Mato_Grosso, BRA-Rondonia, BRA-Acre, BRA-Alto_Alegre, BRA-Amajari, BRA-Boa_Vista, BRA-Canta, BRA-Caracarai, BRA-Caroebe, BRA-Iracema, BRA-Mucajai, BRA-Pacaraima, BRA-Rorainopolis, BRA-Sao_Joao_da_Baliza, BRA-Sao_Luiz, BRA-Bonfim, BRA-Normandia, BRA-Uiramuta]
+  timeline:
+    - {from: 1453, owner: null, note: "先住民の地。バンデイランテスの奥地探検が始まっていた"}
+

@@ -2142,3 +2142,241 @@
       label: ""
       cause: "アラスカが49番目の州となる（1月3日）"
       source: "https://ja.wikipedia.org/wiki/アラスカ州"
+
+# ================================================================ 1453–1647（W1 が追記。until: 1647 の地域で、1648 年以降には効かない）
+# 既存の地域（1648 年の形）を regions: で取り込んでまとめた。小さい地域が優先される決まりで、入植地を上書きしている。
+# 方針：入植地・砦の周辺はフランス・イングランド（スコットランド）の色、植民地が置かれてからの主張の範囲は nominal、
+# 探検・領有宣言だけの所（カボット 1497、カルティエ 1534、フロビッシャー 1576、ハドソン湾 1610–12 など）は描かない。ヒューロン連合は独自の色。
+
+- id: pre1648_canada_all
+  name: "カナダ・アラスカの先住民の地（1648年以前）"
+  until: 1647
+  select:
+    iso_all: [CAN, SPM, BMU]
+    pieces: [USA-Alaska]
+  timeline:
+    - from: 1453
+      owner: null
+      note: "どの国家の支配も及んでいない先住民（イヌイット・クリー・デネ・アルゴンキン語系・イロコイ語系・北西海岸の諸民族など）の地。ニューファンドランドやラブラドルの沿岸には、16世紀からヨーロッパ各地の漁民・バスクの捕鯨民が季節ごとに来た"
+      source: "https://ja.wikipedia.org/wiki/カナダの歴史"
+
+- id: pre1648_huronia
+  name: "ヒューロニア（ジョージア湾の南）"
+  until: 1647
+  select:
+    regions: [on_huronia]
+  timeline:
+    - from: 1453
+      owner: huron
+      certainty: uncertain
+      note: "イロコイ語系のヒューロン（ウェンダット）の4部族が15–16世紀に連合した（最後のタオンタエンラトが加わったのは1610年ごろ）。1615年にシャンプランが訪れ、フランスとの毛皮交易の仲立ちとなった。1634年からイエズス会が布教した（サント・マリー伝道所、1639年）"
+      source: "https://ja.wikipedia.org/wiki/ヒューロン族"
+
+- id: pre1648_newfoundland
+  name: "ニューファンドランド島"
+  until: 1647
+  select:
+    regions: [newfoundland_island]
+  timeline:
+    - from: 1583
+      owner: britain
+      certainty: nominal
+      label: "ニューファンドランド"
+      cause: "ハンフリー・ギルバートがセント・ジョンズでニューファンドランドのイングランドの領有を宣言する"
+      note: "ベオスック族の地。1497年にカボットが来航した。沿岸の漁場はイングランド・フランス・ポルトガル・バスクの漁民が季節ごとに使った"
+      source: "https://en.wikipedia.org/wiki/Humphrey_Gilbert"
+    - from: 1610
+      owner: britain
+      certainty: uncertain
+      label: "ニューファンドランド"
+      cause: "ロンドン・ブリストル会社がカッパーズ・コーヴ（クーピッツ）に入植地を開く"
+      note: "1621年にはカルヴァート（のちのボルティモア卿）がフェリーランドに入植地を開いた。入植地はアヴァロン半島の東岸に限られた"
+      source: "https://en.wikipedia.org/wiki/Cuper%27s_Cove"
+
+- id: pre1648_saint_pierre
+  name: "サンピエール島・ミクロン島"
+  until: 1647
+  select:
+    regions: [saint_pierre_miquelon]
+  timeline:
+    - from: 1536
+      owner: france
+      certainty: nominal
+      label: "サンピエール島・ミクロン島"
+      cause: "カルティエが島に立ち寄り、フランス王の領有を宣言する"
+      note: "フランス（バスク・ブルターニュ・ノルマンディー）の漁民が季節ごとに使った"
+      source: "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon"
+
+- id: pre1648_bermuda
+  name: "バミューダ"
+  until: 1647
+  select:
+    regions: [bermuda]
+  timeline:
+    - from: 1612
+      owner: britain
+      label: "バミューダ"
+      cause: "ヴァージニア会社が入植者を送り、セント・ジョージズの町を開く"
+      note: "1505年ごろスペインのベルムデスが見つけた無人島。1609年にヴァージニアへ向かうシー・ヴェンチャー号が難破した"
+      source: "https://ja.wikipedia.org/wiki/バミューダ諸島"
+
+# ---------------------------------------------------------------- アカディア
+- id: pre1648_acadia
+  name: "アカディア（ノヴァスコシア・ニューブランズウィック・プリンスエドワード島）"
+  until: 1647
+  select:
+    regions: [ns_annapolis, cape_breton, new_brunswick, ns_halifax, ns_north, ns_south, pei]
+  timeline:
+    - from: 1604
+      owner: france
+      certainty: nominal
+      label: "アカディア"
+      cause: "フランス王がド・モンに北緯40度から46度までの土地（アカディア）の毛皮交易の独占を与える。ド・モンとシャンプランがサント・クロワ島で冬を越す"
+      note: "ミクマク・マリシート（ウォラストキイク）の地。1621年にイングランド王（スコットランド王）ジェームズ1世がこの地を「ノヴァスコシア」としてアレグザンダーに与え、主張が重なった"
+      source: "https://ja.wikipedia.org/wiki/アカディア"
+
+- id: pre1648_port_royal
+  name: "ポール・ロワイヤル"
+  until: 1647
+  select:
+    regions: [ns_annapolis]
+  timeline:
+    - from: 1605
+      owner: france
+      label: "アカディア"
+      cause: "ド・モンとシャンプランがポール・ロワイヤルに入植地を移す"
+      source: "https://ja.wikipedia.org/wiki/ポートロイヤル_(アカディア)"
+    - from: 1613
+      owner: france
+      certainty: uncertain
+      label: "アカディア"
+      cause: "ヴァージニアのアーガルがポール・ロワイヤルを焼き払う"
+      note: "ビアンクールら少数のフランス人が残り、毛皮交易を続けた"
+      source: "https://en.wikipedia.org/wiki/Samuel_Argall"
+    - from: 1629
+      owner: scotland
+      label: "ノヴァスコシア（スコットランドの植民地）"
+      cause: "アレグザンダーの子の率いるスコットランド人がポール・ロワイヤルにチャールズ砦を築く"
+      source: "https://en.wikipedia.org/wiki/Scottish_colonization_of_the_Americas"
+    - from: 1632
+      owner: france
+      label: "アカディア"
+      cause: "サン＝ジェルマン＝アン＝レー条約でアカディアがフランスに返され、スコットランド人が引き上げる"
+      note: "1630年代からラジイ、ついでドルネー（ダルネー）がアカディアを治め、ラ・トゥールと争った（アカディアの内戦、1640–45年）"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Saint-Germain-en-Laye_(1632)"
+
+# ---------------------------------------------------------------- ヌーヴェル・フランス（カナダ）
+- id: pre1648_tadoussac
+  name: "タドゥサック（サグネ川の河口）"
+  until: 1647
+  select:
+    regions: [qc_saguenay]
+  timeline:
+    - from: 1600
+      owner: france
+      certainty: nominal
+      label: "ヌーヴェル・フランス"
+      cause: "ショーヴァンがタドゥサックに毛皮の交易所を置く"
+      note: "イヌー（モンタニェ）の地。交易所はフランス人と先住民の毛皮交易の中心だった"
+      source: "https://en.wikipedia.org/wiki/Tadoussac"
+
+- id: pre1648_st_lawrence
+  name: "セントローレンス川の流域（ヌーヴェル・フランスの主張の範囲）"
+  until: 1647
+  select:
+    regions: [qc_montreal_trois_rivieres, qc_seigneuries, qc_bas_saint_laurent, qc_cote_nord, qc_gaspesie, qc_estrie, qc_magdalen, qc_labrador_coast]
+  timeline:
+    - from: 1608
+      owner: france
+      certainty: nominal
+      label: "ヌーヴェル・フランス"
+      cause: "シャンプランがケベックを築く"
+      note: "イヌー・アルゴンキン・ミクマク・アベナキの地。セントローレンス川の流域にいたイロコイ語系の人々（スタダコナ・オシュラガ）は16世紀末までに姿を消していた"
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+
+- id: pre1648_ottawa_river
+  name: "オタワ川の流域"
+  until: 1647
+  select:
+    regions: [qc_outaouais_laurentides, qc_abitibi]
+  timeline:
+    - from: 1613
+      owner: france
+      certainty: nominal
+      label: "ヌーヴェル・フランス"
+      cause: "シャンプランがオタワ川をさかのぼり、アルゴンキンと同盟する"
+      note: "アルゴンキンの地。オタワ川はヒューロニアへの毛皮交易の道だった"
+      source: "https://ja.wikipedia.org/wiki/サミュエル・ド・シャンプラン"
+
+- id: pre1648_ontario
+  name: "オンタリオ南部・北部（ヌーヴェル・フランスの主張の範囲）"
+  until: 1647
+  select:
+    regions: [on_backcountry, on_east, on_niagara, on_north, on_south, on_south_windsor]
+  timeline:
+    - from: 1615
+      owner: france
+      certainty: nominal
+      label: "ヌーヴェル・フランス"
+      cause: "シャンプランとレコレ会の修道士がヒューロニアを訪れる"
+      note: "ペトゥン（ティオノンタティ）・ニュートラル（アティワンダロン）・アルゴンキン・オジブワの地。フランスはヒューロンなどの同盟者を通じて交易した"
+      source: "https://ja.wikipedia.org/wiki/サミュエル・ド・シャンプラン"
+
+- id: pre1648_quebec
+  name: "ケベック"
+  until: 1647
+  select:
+    regions: [qc_quebec_city]
+  timeline:
+    - from: 1541
+      owner: france
+      label: "シャルルブール・ロワイヤル"
+      cause: "カルティエ（第3回の航海）とロベルヴァルがカップ・ルージュにシャルルブール・ロワイヤルの入植地を築く"
+      note: "厳しい冬と壊血病、先住民との対立で、1543年に捨てられた"
+      source: "https://ja.wikipedia.org/wiki/ジャック・カルティエ"
+    - from: 1543
+      owner: null
+      cause: "ロベルヴァルの一行がシャルルブール・ロワイヤルを捨てて帰国する"
+      note: "セントローレンス・イロコイの村スタダコナがあった"
+    - from: 1608
+      owner: france
+      label: "ヌーヴェル・フランス"
+      cause: "シャンプランがケベックを築く（7月）"
+      note: "1627年にリシュリューが百人出資会社（ヌーヴェル・フランス会社）を作った"
+      source: "https://ja.wikipedia.org/wiki/ケベック・シティー"
+    - from: 1629
+      owner: britain
+      certainty: occupied
+      label: "ケベック（イングランドの占領）"
+      cause: "英仏戦争中にカーク兄弟がケベックを降伏させる（7月）"
+      source: "https://en.wikipedia.org/wiki/Surrender_of_Quebec"
+    - from: 1632
+      owner: france
+      label: "ヌーヴェル・フランス"
+      cause: "サン＝ジェルマン＝アン＝レー条約でケベックがフランスに返される"
+      source: "https://en.wikipedia.org/wiki/Treaty_of_Saint-Germain-en-Laye_(1632)"
+
+- id: pre1648_trois_rivieres
+  name: "トロワリヴィエール"
+  until: 1647
+  select:
+    pieces: [CAN-Mauricie]
+  timeline:
+    - from: 1634
+      owner: france
+      label: "ヌーヴェル・フランス"
+      cause: "ラヴィオレットがサン＝モーリス川の河口にトロワリヴィエールの交易所を築く"
+      source: "https://ja.wikipedia.org/wiki/トロワリヴィエール"
+
+- id: pre1648_montreal
+  name: "モントリオール"
+  until: 1647
+  select:
+    pieces: [CAN-Montreal]
+  timeline:
+    - from: 1642
+      owner: france
+      label: "ヌーヴェル・フランス"
+      cause: "メゾヌーヴとジャンヌ・マンスがヴィル・マリー（モントリオール）を築く（5月）"
+      note: "1535年にカルティエがセントローレンス・イロコイの村オシュラガを訪れた所"
+      source: "https://ja.wikipedia.org/wiki/モントリオール"

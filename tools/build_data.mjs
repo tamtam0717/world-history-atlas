@@ -369,6 +369,10 @@ function buildDistribution(dir, label) {
       if (e.main == null) {
         if (!secOnly) warn(`${where}: main（多数派）がありません（世俗化だけの地域なら、すべての項目を secular だけにしてください）`);
       }
+      else if (e.main === "none") {
+        // main: none（値なし。無人になった時期など）：その年から、この地域のピースを塗らない
+        if (e.minor != null) warn(`${where}: main: none（値なし）の項目に minor は書けません`);
+      }
       else if (!kindIdx.has(e.main)) warn(`${where}: main "${e.main}" は ${dir}/_kinds.yaml にない${label}です`);
       if (e.minor != null && !kindIdx.has(e.minor)) warn(`${where}: minor "${e.minor}" は ${dir}/_kinds.yaml にない${label}です`);
       if (e.minor != null && e.minor === e.main) warn(`${where}: minor が main と同じです`);
@@ -401,7 +405,8 @@ function buildDistribution(dir, label) {
       for (const r of list) {
         const e = distEntryAt(r, y);
         if (e) {
-          state = [y, kindIdx.get(e.main) ?? -1, e.minor == null ? -1 : (kindIdx.get(e.minor) ?? -1), rIdx.get(r.id)];
+          // main: none（値なし）は、データのないピースと同じ [年, -1, -1, -1]（ガラパゴスの 1832 年より前などと同じ表示）
+          state = e.main === "none" ? [y, -1, -1, -1] : [y, kindIdx.get(e.main) ?? -1, e.minor == null ? -1 : (kindIdx.get(e.minor) ?? -1), rIdx.get(r.id)];
           break;
         }
       }
@@ -409,7 +414,7 @@ function buildDistribution(dir, label) {
       // 世俗化の割合（宗教のみ）：main とは別に、その年の記述に secular を書いている「いちばん小さい地域」から取る。
       // 小さい地域の記述に secular がなければ、外側の大きい地域の値が効く（secular: 0 と書けば打ち消せる）。
       // 0 より大きいときだけ 5 番目に入れる
-      if (dir === "religion") {
+      if (dir === "religion" && state[1] >= 0) {
         for (const r of secList) {
           const e = distEntryAt(r, y);
           if (e && typeof e.secular === "number") {
@@ -429,7 +434,8 @@ function buildDistribution(dir, label) {
     tlRegions,
     out: {
       kinds: kinds.map((k) => (k.family ? { id: k.id, name: k.name, family: k.family, color: k.color } : { id: k.id, name: k.name, color: k.color })),
-      regions: tlRegions.map((r) => ({ id: r.id, name: r.name, timeline: r.timeline })),
+      // main: none（値なし）は画面では main なし（null）として渡す
+      regions: tlRegions.map((r) => ({ id: r.id, name: r.name, timeline: r.timeline.map((e) => (e.main === "none" ? { ...e, main: null } : e)) })),
       pieceTimelines: pieceTl,
     },
   };

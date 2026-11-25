@@ -21,12 +21,14 @@
 - id: tonga
   name: トンガ王国
   names:
-    - {to: 1844, name: トンガ（トゥイ・トンガとトゥイ・カノクポルの国）, short: トンガ, kind: 首長国（聖なる王と世俗の王）}
+    - {to: 1609, name: トンガ（トゥイ・トンガの国）, short: トンガ, kind: 首長国（聖なる王と世俗の王）}
+    - {from: 1610, to: 1844, name: トンガ（トゥイ・トンガとトゥイ・カノクポルの国）, short: トンガ, kind: 首長国（聖なる王と世俗の王）}
   short: トンガ
   color: "#e6b8d6"
   kind: 王国（立憲君主政）
   home_iso: [TON]
   rulers:
+    - {name: 歴代のトゥイ・トンガ（聖なる王）とトゥイ・ハアタカラウア（政治の王）, title: トンガの王, from: 1453, to: 1647, note: 系譜は口承で伝わり、在位の年はわからない。17世紀初めにトゥイ・カノクポルの家系が立ち、のちに実権を握った, source: "https://en.wikipedia.org/wiki/Tuʻi_Tonga"}
     - {name: ジョージ・トゥポウ1世（タウファアハウ）, title: トンガ王, from: 1845, to: 1893, note: 内戦を終わらせて諸島を統一し、1875年に憲法を定めた, source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ1世"}
     - {name: ジョージ・トゥポウ2世, title: トンガ王, from: 1893, to: 1918, note: 1900年にイギリスと友好条約を結び保護国となった, source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ2世"}
     - {name: サローテ・トゥポウ3世, title: トンガ女王, from: 1918, to: 1965, source: "https://ja.wikipedia.org/wiki/サローテ・トゥポウ3世"}
@@ -34,6 +36,9 @@
     - {name: ジョージ・トゥポウ5世, title: トンガ王, from: 2006, to: 2012, note: 2010年の選挙改革で国王の権限を縮めた, source: "https://ja.wikipedia.org/wiki/ジョージ・トゥポウ5世"}
     - {name: トゥポウ6世, title: トンガ王, from: 2012, source: "https://ja.wikipedia.org/wiki/トゥポウ6世"}
   periods:
+    - from: 1453
+      to: 1647
+      text: 神聖な王トゥイ・トンガのもとで、15世紀後半から政治の実務をトゥイ・ハアタカラウアが、17世紀初めからはトゥイ・カノクポルが担う二重の王権の国。1616年にオランダのル・メールとスホーテンが北のニウアトプタプ島に、1643年にタスマンがトンガタプ島に来航した。
     - from: 1648
       to: 1798
       text: 神聖な王トゥイ・トンガと、実際の政治を行うトゥイ・カノクポルが並び立つ首長国。かつてはサモアやフィジーの一部にも影響を及ぼした。1773–77年にクックが訪れ「フレンドリー諸島」と呼んだ。
