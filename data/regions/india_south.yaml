@@ -1150,6 +1150,7 @@
     pieces: [IND-Srikakulam, IND-Vizianagaram, IND-Visakhapatnam]
   timeline:
     - {from: 1453, owner: "gajapati", note: "オリッサのガジャパティ朝の南の領土"}
+    - {from: 1568, owner: "garhjat", certainty: "uncertain", cause: "ガジャパティ朝の滅亡。在地の王が残る（ガンジャームと同じ）", source: "https://en.wikipedia.org/wiki/Mukunda_Deva"}
     - {from: 1571, owner: "golconda", certainty: "uncertain", cause: "ガジャパティ朝の滅亡（1568）の後、ゴールコンダ王国のイブラーヒーム・クトゥブ・シャーが北の海岸に進む", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Ibrahim_Quli_Qutb_Shah"}
     - {from: 1600, owner: "golconda", note: "チカコール（シュリーカークラム）はゴールコンダ王国の北の拠点"}
 
@@ -1211,12 +1212,22 @@
     - {from: 1646, owner: "golconda", cause: "ゴールコンダ王国の将ミール・ジュムラがチャンドラギリを落とし、シュリーランガ3世が逃れる", note: "年は要確認", source: "https://en.wikipedia.org/wiki/Chandragiri_Fort"}
 
 - id: pre_rayalaseema
-  name: "ペヌコンダ・ガンディコータ（アナンタプル・カダパ）"
+  name: "ペヌコンダ（アナンタプル）"
   until: 1647
   select:
-    pieces: [IND-Anantapur, IND-Kadapa_YSR]
+    pieces: [IND-Anantapur]
   timeline:
     - {from: 1453, owner: "vijayanagara", note: "ペヌコンダは1565年の後のヴィジャヤナガル王国の都（1592年ごろまで）"}
+    - {from: 1646, owner: "bijapur", certainty: "uncertain", cause: "ヴィジャヤナガル王国の滅亡（シュリーランガ3世がヴェールールを追われる）。ビジャープル王国とゴールコンダ王国が旧領を分け合う", note: "ペヌコンダの城がビジャープル王国に落ちた年は要確認（1640年代後半〜1650年代）。1648年以降の既存データ（ビジャープル、不確実）につながるようにした", source: "https://en.wikipedia.org/wiki/Sriranga_III"}
+
+- id: pre_gandikota
+  name: "ガンディコータ（カダパ）"
+  until: 1647
+  select:
+    pieces: [IND-Kadapa_YSR]
+  timeline:
+    - {from: 1453, owner: "vijayanagara", note: "ガンディコータの城はヴィジャヤナガル王国のペンマサーニ家のナーヤカが守った"}
+    - {from: 1646, owner: "golconda", certainty: "uncertain", cause: "ヴィジャヤナガル王国の滅亡（シュリーランガ3世がヴェールールを追われる）。ゴールコンダ王国が東のカルナータカに進む", note: "ガンディコータの城はミール・ジュムラが1650年に落とした。1648年以降の既存データ（ゴールコンダ、不確実）につながるようにした", source: "https://en.wikipedia.org/wiki/Siege_of_Gandikota"}
 
 - id: pre_kurnool
   name: "クルヌール・アドーニ"
