@@ -4,6 +4,16 @@ export interface Sourced {
   source?: string | string[];
 }
 
+/** データに手で書く画像（Wikimedia Commons のファイル名と説明）。ギャラリーの先頭に出す */
+export interface DataImage {
+  file: string;
+  caption?: string;
+}
+
+export interface Illustrated {
+  images?: DataImage[];
+}
+
 export interface Named {
   from?: number;
   to?: number;
@@ -22,7 +32,7 @@ export interface Ruler extends Sourced {
   note?: string;
 }
 
-export interface Period extends Sourced {
+export interface Period extends Sourced, Illustrated {
   from: number;
   to?: number;
   text: string;
@@ -65,7 +75,7 @@ export interface Region {
   c?: [number, number];
 }
 
-export interface HistEvent extends Sourced {
+export interface HistEvent extends Sourced, Illustrated {
   year: number;
   date?: string;
   title: string;
@@ -95,7 +105,7 @@ export interface Milestone {
   title: string;
 }
 
-export interface City {
+export interface City extends Illustrated {
   id: string;
   name: string;
   modern?: string;
@@ -178,7 +188,7 @@ export interface MovementSpread {
   curve: CurvePoint[];
 }
 
-export interface Movement extends Sourced {
+export interface Movement extends Sourced, Illustrated {
   id: string;
   name: string;
   kind: MovementKind;

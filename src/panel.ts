@@ -3,7 +3,7 @@
 
 import { AtlasIndex, curveAt, curveMax, sourcesOf, type BorderChange, type CurvePoint, type DistKey, type HistEvent, type Movement, type Polity, type ReligionEntry, type Ruler } from "./data";
 import { MOVEMENT_COLORS, secularColor, secularText, type BlankInfo, type ReligionPick, type ViewProbe } from "./map";
-import { hydrateImages, imageSlot, refKey, wikiRefs, type WikiRef } from "./images";
+import { gallerySlot, hydrateImages, imageSlot, refKey, wikiRefs, type WikiRef } from "./images";
 
 const esc = (s: unknown) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
@@ -161,7 +161,10 @@ export class Panel {
     const date = e.date && String(e.date).length > 4 ? `<span class="date"><a href="#" class="ylink" data-year="${e.year}">${esc(formatDate(String(e.date)))}</a></span>` : "";
     const ps = (e.polities ?? []).map((p) => this.link(p, year)).join(" ");
     const imp = e.importance ?? 2;
-    const img = imp <= 2 ? imageSlot(wikiRefs(e.source), imp === 1 ? "event-wide" : "event", e.title) : "";
+    // 絵・写真：重要度 1 は大きな代表画像＋サムネイルの帯、2 はサムネイルの帯、3 は 1 枚だけ小さく
+    const gal = gallerySlot(wikiRefs(e.source), e.images, imp <= 1 ? "g1" : imp === 2 ? "g2" : "g3", e.title);
+    const img = imp >= 3 ? gal : "";
+    const galBelow = imp >= 3 ? "" : gal;
     // 領土による判定（関係国が画面の中にまとまった領土を持つか）に使う政体と範囲。場所が書いてある出来事は点だけで判定する
     const terr = !e.fixed && e.polities?.length ? ` data-pol="${esc(e.polities.join(","))}"${e.bx != null ? ` data-bx="${e.bx}"` : ""}` : "";
     const psAttr = e.polities?.length ? ` data-ps="${esc(e.polities.join(","))}"` : "";
@@ -169,6 +172,7 @@ export class Panel {
     return `<li class="event imp${imp}"${sortAttr}>${img}
       <div class="ev-title">${date}${esc(e.title)}</div>
       ${e.text ? `<div class="ev-text">${escY(e.text)}</div>` : ""}
+      ${galBelow}
       ${ps ? `<div class="ev-polities">${ps}</div>` : ""}
       ${srcList(e)}
     </li>`;
@@ -387,9 +391,9 @@ export class Panel {
       .filter((s) => s.center)
       .flatMap((s) => [...s.polities.map((id) => this.idx.polityById.get(id)?.name ?? id), ...s.regions.map((r) => this.idx.atlas.regions.find((x) => x.id === r)?.name ?? r)]);
     return `<div class="mv-detail">
-      ${imageSlot(wikiRefs(m.source), "event-wide", m.name)}
       <div class="mv-meta">${esc(MOVEMENT_KIND_LABEL[m.kind] ?? "")}${centers.length ? ` ・ 発信地：${centers.map(esc).join("・")}` : ""}</div>
       ${m.text ? `<p class="mv-text">${escY(m.text)}</p>` : ""}
+      ${gallerySlot(wikiRefs(m.source), m.images, "g1", m.name)}
       ${m.people?.length ? `<div class="mv-sub"><b>人物</b>${m.people.map((x) => `<span>${esc(x)}</span>`).join("")}</div>` : ""}
       ${m.works?.length ? `<div class="mv-sub"><b>作品</b>${m.works.map((x) => `<span>${esc(x)}</span>`).join("")}</div>` : ""}
       ${evs ? `<div class="mv-sub mv-events"><b>関連する出来事</b><ul>${evs}</ul></div>` : ""}
@@ -516,7 +520,7 @@ export class Panel {
       : `<p class="empty">データ未登録</p>`;
     body += `<h3>情勢</h3>`;
     body += periods.length
-      ? periods.map((x) => `<p class="period"><span class="years">${yearRange(x.from, x.to)}</span>${escY(x.text)}${srcList(x)}</p>`).join("")
+      ? periods.map((x) => `<p class="period"><span class="years">${yearRange(x.from, x.to)}</span>${escY(x.text)}${srcList(x)}</p>${gallerySlot([], x.images, "gp", x.text.slice(0, 40))}`).join("")
       : `<p class="empty">データ未登録</p>`;
     if (p.note) body += `<p class="note">${escY(p.note)}</p>`;
     body += srcList(p);

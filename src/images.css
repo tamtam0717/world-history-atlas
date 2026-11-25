@@ -78,35 +78,139 @@
   box-sizing: border-box;
 }
 
-/* ---- 出来事の絵 ---- */
+/* ---- ギャラリー（出来事・潮流・情勢の絵・写真）：資料集のように、文章の下に説明文つきで並べる ---- */
 .events li.event {
   display: flow-root;
 }
-/* 重要度 1：幅いっぱい、高さを抑える */
-.wimg-event-wide.ok {
-  width: 100%;
-  height: 150px;
-  border-radius: 8px;
-  margin: 2px 0 6px;
+.wgal {
+  margin: 6px 0 4px;
 }
-.wimg-event-wide.ok img {
+.wgal .wimg.ok {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+  text-align: left;
+}
+.wgal .wg-img {
+  display: block;
+  overflow: hidden;
+  background: #ece6da;
+  border: 1px solid var(--line, #ddd5c6);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.wgal .wimg.ok:hover .wg-img {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+.wgal .wg-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wgal .wg-cap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top: 3px;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--muted, #7a7266);
+}
+/* 大きな代表画像 */
+.wgal .wg-hero {
+  width: 100%;
+}
+.wgal .wg-hero .wg-img {
+  height: 168px;
+  border-radius: 8px;
+}
+.wgal .wg-hero .wg-img img {
   object-position: 50% 30%;
 }
-/* 重要度 2：右側に小さく */
-.wimg-event.ok {
-  float: right;
-  width: 84px;
-  height: 64px;
+.wgal .wg-hero .wg-cap {
+  font-size: 11px;
+  -webkit-line-clamp: 2;
+}
+/* 横に流せるサムネイルの帯 */
+.wg-strip {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.wgal-g2 .wg-strip,
+.wgal-gp .wg-strip {
+  margin-top: 0;
+}
+.wg-strip .wg-th {
+  flex: 0 0 auto;
+  width: 108px;
+  scroll-snap-align: start;
+}
+.wg-strip .wg-th .wg-img {
+  height: 74px;
   border-radius: 6px;
+}
+.wgal-g2 .wg-th {
+  width: 86px;
+}
+.wgal-g2 .wg-th .wg-img {
+  height: 60px;
+}
+.wgal-gp {
+  margin: 2px 0 8px;
+}
+.wgal-gp .wg-th {
+  width: 92px;
+}
+.wgal-gp .wg-th .wg-img {
+  height: 62px;
+}
+/* 重要度 3：1 枚だけ右に小さく */
+.wgal-g3 {
+  float: right;
   margin: 3px 0 4px 10px;
 }
-@media (max-width: 799px) {
-  .wimg-event-wide.ok {
-    height: 132px;
+.wgal-g3 .wg-one .wg-img {
+  width: 68px;
+  height: 52px;
+  border-radius: 6px;
+}
+/* 読み込めたら滑らかに出す */
+.wgal.fade-in {
+  animation: wgal-in 0.3s ease;
+}
+@keyframes wgal-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
   }
-  .wimg-event.ok {
-    width: 76px;
-    height: 58px;
+}
+@media (max-width: 799px) {
+  .wgal .wg-hero .wg-img {
+    height: 150px;
+  }
+  .wg-strip .wg-th {
+    width: 100px;
+  }
+  .wg-strip .wg-th .wg-img {
+    height: 68px;
+  }
+  .wgal-g2 .wg-th {
+    width: 80px;
+  }
+  .wgal-g2 .wg-th .wg-img {
+    height: 56px;
   }
 }
 
@@ -132,6 +236,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 0;
+}
+.wlightbox .wl-stage {
+  display: flex;
+  justify-content: center;
   min-height: 0;
 }
 .wlightbox img {
@@ -177,4 +286,65 @@
 }
 html.wlightbox-open {
   overflow: hidden;
+}
+.wlightbox .wl-sep {
+  margin: 0 0.3em;
+}
+.wlightbox .wl-title {
+  max-width: min(92vw, 820px);
+}
+/* ギャラリーの前後へ */
+.wlightbox .wl-nav,
+.wlightbox .wl-count {
+  display: none;
+}
+.wlightbox.multi .wl-nav {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 64px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 34px;
+  line-height: 60px;
+  cursor: pointer;
+}
+.wlightbox.multi .wl-nav:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+.wlightbox .wl-prev {
+  left: 10px;
+}
+.wlightbox .wl-next {
+  right: 10px;
+}
+.wlightbox.multi .wl-count {
+  display: block;
+  position: absolute;
+  top: calc(16px + env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d9cdb8;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 799px) {
+  /* スマホはスワイプで移るので、矢印は小さく端に */
+  .wlightbox.multi .wl-nav {
+    width: 32px;
+    height: 48px;
+    font-size: 26px;
+    line-height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .wlightbox .wl-prev {
+    left: 2px;
+  }
+  .wlightbox .wl-next {
+    right: 2px;
+  }
 }

@@ -62,7 +62,7 @@ export function setupSheet(panel: HTMLElement, handle: HTMLElement) {
   // ボタン・スライダー・入力欄・リンクの上から始めたタッチは、その部品の操作に任せる
   const INTERACTIVE = "button, input, select, textarea, a, label.year-box, [data-no-drag]";
 
-  type Drag = { startY: number; startH: number; lastY: number; lastT: number; v: number; active: boolean; fromBody: boolean };
+  type Drag = { startX: number; startY: number; startH: number; lastY: number; lastT: number; v: number; active: boolean; fromBody: boolean };
   let drag: Drag | null = null;
 
   const onStart = (e: TouchEvent) => {
@@ -73,7 +73,7 @@ export function setupSheet(panel: HTMLElement, handle: HTMLElement) {
     if (!inHeader && !inBody) return;
     if (inHeader && t.closest(INTERACTIVE) && !handle.contains(t)) return;
     const y = e.touches[0].clientY;
-    drag = { startY: y, startH: panel.offsetHeight, lastY: y, lastT: performance.now(), v: 0, active: false, fromBody: inBody };
+    drag = { startX: e.touches[0].clientX, startY: y, startH: panel.offsetHeight, lastY: y, lastT: performance.now(), v: 0, active: false, fromBody: inBody };
   };
 
   const onMove = (e: TouchEvent) => {
@@ -81,6 +81,13 @@ export function setupSheet(panel: HTMLElement, handle: HTMLElement) {
     const y = e.touches[0].clientY;
     const dy = drag.startY - y; // 上へなぞると正
     if (!drag.active) {
+      const dx = e.touches[0].clientX - drag.startX;
+      if (Math.abs(dy) < 6 && Math.abs(dx) < 6) return;
+      // 横になぞったとき（画像の帯の横スクロールなど）はシートを動かさない
+      if (Math.abs(dx) > Math.abs(dy)) {
+        drag = null;
+        return;
+      }
       if (Math.abs(dy) < 6) return;
       if (drag.fromBody) {
         // 本文：上端で下へなぞったときと、full でないときに上へなぞったときだけシートを動かす
