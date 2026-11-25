@@ -4,7 +4,7 @@
 //  1. 領土の大きな変化：その政体が owner か overlord であるピースの面積が、ある年に大きく増えた・減った
 //     （増えた分・減った分のどちらかが「前年の面積の SHARE 以上」か「BIG_KM2 以上」。どちらでも MIN_KM2 未満は無視）。
 //     初めて地図に現れた年・消えた年も含める。
-//  2. その政体が関わる出来事（重要度を問わない）。
+//  2. その政体が関わる重要度1の出来事と、その政体が主役（polities の先頭）の重要度2の出来事。
 //  3. 国名・種別（names の切り替え）が変わった年。
 
 import { geoArea } from "d3-geo";
@@ -223,10 +223,9 @@ export class PolityMilestones {
     const addEvents = (imp: number) => {
       for (const e of evs) if ((e.importance ?? 3) === imp) slot(e.year).events.push(e);
     };
-    // その国が関わる出来事のあった年はすべて節目にする（重要度を問わない。ラベルは重要度の高いものから選ぶ）
+    // 重要度1の出来事はすべて、重要度2はその国が主役（polities の先頭）のものだけ。重要度3は節目にしない
     addEvents(1);
-    addEvents(2);
-    addEvents(3);
+    for (const e of evs) if ((e.importance ?? 3) === 2 && e.polities?.[0] === polityId) slot(e.year).events.push(e);
 
     // 年ごとに1つにまとめる。ラベルは 領土 → 出来事 → 国名 の順で選ぶ（出来事は関わる国の少ないものを優先）
     const out: PolityMilestone[] = [];
