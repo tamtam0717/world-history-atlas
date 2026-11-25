@@ -6209,3 +6209,1561 @@
       owner: roc
       cause: 日本の降伏。中華民国が台湾を接収する（10月25日）
       source: "https://ja.wikipedia.org/wiki/台湾光復"
+
+# ==================== 1453–1647（Z1 中国。生成：scratchpad/Z1/gen1453.py） ====================
+# 1648 年より前だけの地域（until: 1647）。1648 年以降は上の地域が効く。どのピースもここの1つの地域だけに入る。
+# 明清交代（1644–1647）は年末時点の主な勢力圏を地級市の単位で近似して描く（過半を占める側）。
+
+- id: cn15_heilongjiang_hegang
+  name: 鶴崗・ジャムス・双鴨山・伊春（黒竜江）
+  until: 1647
+  select:
+    pieces: [CHN-Hegang, CHN-Jiamusi, CHN-Shuangyashan, CHN-Yichun_Heilongjiang]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1635
+      owner: later_jin
+      certainty: nominal
+      cause: ホンタイジがフルハ部（黒竜江下流の女真）に兵を出して従える（1634–1635）
+      source: "https://ja.wikipedia.org/wiki/ホンタイジ"
+    - from: 1636
+      owner: qing
+      certainty: nominal
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_heilongjiang_daqing
+  name: 大慶・ハルビン・綏化（黒竜江）
+  until: 1647
+  select:
+    pieces: [CHN-Daqing, CHN-Haerbin, CHN-Suihua]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1560
+      owner: hulun
+      certainty: uncertain
+      cause: ウラ部の勢力が松花江の下流に及ぶ
+      source: "https://en.wikipedia.org/wiki/Ula_(tribe)"
+    - from: 1613
+      owner: later_jin
+      certainty: uncertain
+      cause: ヌルハチがウラを滅ぼす
+      source: "https://en.wikipedia.org/wiki/Ula_(tribe)"
+    - from: 1636
+      owner: qing
+      certainty: uncertain
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_heilongjiang_daxinganling
+  name: 大興安嶺・黒河・チチハル（黒竜江）
+  until: 1647
+  select:
+    pieces: [CHN-Daxinganling, CHN-Heihe, CHN-Qiqihaer]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 嫩江・黒竜江の上流。ダウール人・エヴェンキ人（ソロン）などの狩猟・農耕の民が住む
+      source: "https://ja.wikipedia.org/wiki/ダウール族"
+    - from: 1640
+      owner: qing
+      certainty: nominal
+      cause: 清がソロン部のボンボゴルを討ち、黒竜江上流・嫩江のダウール・エヴェンキを従える
+      source: "https://en.wikipedia.org/wiki/Bombogor"
+
+- id: cn15_heilongjiang_jixi
+  name: 鶏西・牡丹江・七台河（黒竜江）
+  until: 1647
+  select:
+    pieces: [CHN-Jixi, CHN-Mudanjiang, CHN-Qitaihe]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1611
+      owner: later_jin
+      certainty: uncertain
+      cause: ヌルハチがワルカ部・フルハ部（東海女真）に兵を出し、牡丹江・綏芬河の流域を従える
+      source: "https://ja.wikipedia.org/wiki/ヌルハチ"
+    - from: 1636
+      owner: qing
+      certainty: uncertain
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_jilin_baicheng
+  name: 白城・松原（吉林）
+  until: 1647
+  select:
+    pieces: [CHN-Baicheng, CHN-Songyuan]
+  timeline:
+    - from: 1453
+      owner: dzungar
+      certainty: uncertain
+      note: ホルチン部などの東モンゴルの牧地（嫩江の流域）。1453年末はオイラトのエセンがハンを名のり、東モンゴルを従えていた
+      source: "https://ja.wikipedia.org/wiki/エセン・ハン"
+    - from: 1455
+      owner: northern_yuan
+      cause: エセンが殺され（1454）、オイラトの覇権が崩れる
+      note: ホルチン部などの東モンゴルの牧地（嫩江の流域）
+      source: "https://ja.wikipedia.org/wiki/ホルチン"
+    - from: 1624
+      owner: northern_yuan
+      overlord: later_jin
+      cause: ホルチン部がヌルハチと同盟を結ぶ
+      source: "https://ja.wikipedia.org/wiki/ホルチン"
+    - from: 1635
+      owner: later_jin
+      certainty: indirect
+      cause: チャハルのエジェイが降り、内モンゴルの諸部が後金に従う
+      source: "https://ja.wikipedia.org/wiki/リンダン・ハーン"
+    - from: 1636
+      owner: qing
+      certainty: indirect
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_jilin_baishan
+  name: 白山・通化（吉林）
+  until: 1647
+  select:
+    pieces: [CHN-Baishan, CHN-Tonghua]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1591
+      owner: later_jin
+      cause: ヌルハチが長白山部（鴨緑江部など）を従える
+      source: "https://ja.wikipedia.org/wiki/ヌルハチ"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_jilin_changchun
+  name: 長春・吉林市（吉林）
+  until: 1647
+  select:
+    pieces: [CHN-Changchun, CHN-Jilin]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1560
+      owner: hulun
+      cause: 海西女真がハダ・イェヘ・ウラ・ホイファの4部（フルン四部）にまとまる
+      note: 年はおおよそ（ハダのワン＜王台＞の台頭は1550–60年代）
+      source: "https://en.wikipedia.org/wiki/Hulun_alliance"
+    - from: 1613
+      owner: later_jin
+      cause: ヌルハチがウラを滅ぼす
+      source: "https://en.wikipedia.org/wiki/Ula_(tribe)"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_jilin_liaoyuan
+  name: 遼源（吉林）
+  until: 1647
+  select:
+    pieces: [CHN-Liaoyuan]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1560
+      owner: hulun
+      cause: 海西女真がハダ・イェヘ・ウラ・ホイファの4部（フルン四部）にまとまる
+      note: 年はおおよそ（ハダのワン＜王台＞の台頭は1550–60年代）
+      source: "https://en.wikipedia.org/wiki/Hulun_alliance"
+    - from: 1607
+      owner: later_jin
+      cause: ヌルハチがホイファを滅ぼす
+      source: "https://en.wikipedia.org/wiki/Hoifa"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_jilin_siping
+  name: 四平（吉林）
+  until: 1647
+  select:
+    pieces: [CHN-Siping]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1560
+      owner: hulun
+      cause: 海西女真がハダ・イェヘ・ウラ・ホイファの4部（フルン四部）にまとまる
+      note: 年はおおよそ（ハダのワン＜王台＞の台頭は1550–60年代）
+      source: "https://en.wikipedia.org/wiki/Hulun_alliance"
+    - from: 1619
+      owner: later_jin
+      cause: サルフの戦いの後、ヌルハチがイェヘを滅ぼす
+      source: "https://ja.wikipedia.org/wiki/サルフの戦い"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_jilin_yanbian
+  name: 延辺（吉林）
+  until: 1647
+  select:
+    pieces: [CHN-Yanbian]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1607
+      owner: later_jin
+      certainty: uncertain
+      cause: ヌルハチがワルカ部（東海女真）の蜚悠城を従え、図們江の流域に進む
+      source: "https://ja.wikipedia.org/wiki/ヌルハチ"
+    - from: 1636
+      owner: qing
+      certainty: uncertain
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_liaoning_huludao
+  name: 遼寧（葫蘆島）・北京・天津など
+  until: 1647
+  select:
+    pieces: [CHN-Anyang, CHN-Baoding, CHN-Beijing, CHN-Binzhou, CHN-Cangzhou, CHN-Changzhi, CHN-Datong, CHN-Dezhou, CHN-Dongying, CHN-Handan, CHN-Hebi, CHN-Hengshui, CHN-Heze, CHN-Huludao, CHN-Jiaozuo, CHN-Jinan, CHN-Jincheng, CHN-Jining, CHN-Jinzhong, CHN-Laiwu, CHN-Langfang, CHN-Liaocheng, CHN-Linfen, CHN-Linyi, CHN-Luliang, CHN-Puyang, CHN-Qingdao, CHN-Qingdao_urban, CHN-Qinhuangdao, CHN-Rizhao, CHN-Shijiazhuang, CHN-Shuozhou, CHN-Taian, CHN-Taiyuan, CHN-Tangshan, CHN-Tianjin, CHN-Weifang, CHN-Weihai, CHN-Weihai_urban, CHN-Xingtai, CHN-Xinxiang, CHN-Xinzhou, CHN-Yangquan, CHN-Yantai, CHN-Yuncheng, CHN-Zaozhuang, CHN-Zhangjiakou, CHN-Zibo]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: qing
+      cause: 呉三桂が山海関を開き、清軍が李自成を破って北京に入る（6月）。10月に順治帝が北京で即位する
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_liaoning_anshan
+  name: 鞍山・大連（金州・普蘭店）・丹東（安東）・遼陽など（遼寧）
+  until: 1647
+  select:
+    pieces: [CHN-Anshan, CHN-Dalian, CHN-Dandong, CHN-Liaoyang, CHN-Shenyang, CHN-Yingkou]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1621
+      owner: later_jin
+      cause: 後金が瀋陽・遼陽を落とし、遼河の東の遼東を手に入れる（3月）
+      note: 1625年に瀋陽に都を移した（盛京）
+      source: "https://ja.wikipedia.org/wiki/後金"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_liaoning_chaoyang
+  name: 遼寧（朝陽・阜新）・河北（承徳）
+  until: 1647
+  select:
+    pieces: [CHN-Chaoyang, CHN-Chengde, CHN-Fuxin]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 長城の外のウリャンハイ（兀良哈三衛・朵顔三衛）のモンゴルの牧地。明の羈縻衛所だが、モンゴルの勢力に従うことが多かった
+      source: "https://en.wikipedia.org/wiki/Three_Guards"
+    - from: 1547
+      owner: northern_yuan
+      cause: チャハル部のダライスン＝ハンが東へ移り、遼西・長城の外のウリャンハイを従える
+      note: ウリャンハイ三衛はハラチン部・チャハル部など東モンゴルに組み込まれた
+      source: "https://en.wikipedia.org/wiki/Three_Guards"
+    - from: 1628
+      owner: later_jin
+      certainty: indirect
+      cause: ハラチン部などがチャハルのリンダン＝ハンに背き、後金に従う
+      source: "https://ja.wikipedia.org/wiki/ホンタイジ"
+    - from: 1636
+      owner: qing
+      certainty: indirect
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_liaoning_benxi
+  name: 本渓・撫順（遼寧）
+  until: 1647
+  select:
+    pieces: [CHN-Benxi, CHN-Fushun]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 女真の地。明は建州衛・海西衛などの羈縻衛所を置いて首長に官職と交易の許可（勅書）を与えたが、実際には女真の諸部が自立していた
+      source: "https://ja.wikipedia.org/wiki/女真"
+    - from: 1589
+      owner: later_jin
+      cause: ヌルハチが建州女真を統一する（1588年ごろ）。1587年にフェアラ城を築く
+      note: 撫順の町は明の辺境の城（1618年まで）。ピースの大半（新賓・清原）は建州女真の地
+      source: "https://ja.wikipedia.org/wiki/ヌルハチ"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_liaoning_dalian_urban
+  name: 旅順・大連（遼寧）
+  until: 1647
+  select:
+    pieces: [CHN-Dalian_urban]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1633
+      owner: later_jin
+      cause: 後金が旅順を落とす（明の毛文龍の残党の拠点）
+      source: "https://ja.wikipedia.org/wiki/旅順"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_liaoning_jinzhou
+  name: 錦州（遼寧）
+  until: 1647
+  select:
+    pieces: [CHN-Jinzhou]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1622
+      owner: later_jin
+      certainty: uncertain
+      cause: 後金が広寧（北鎮）を落とす（1月）
+      source: "https://ja.wikipedia.org/wiki/後金"
+    - from: 1624
+      owner: ming
+      certainty: uncertain
+      cause: 孫承宗・袁崇煥が寧遠から錦州・大凌河まで城塞の線を築き直す
+      note: 錦州・義州は明、広寧（北鎮）は後金で、ピースの中に前線がある
+      source: "https://ja.wikipedia.org/wiki/袁崇煥"
+    - from: 1642
+      owner: qing
+      cause: 松山・錦州の戦い。洪承疇が降り、清が錦州を取る
+      source: "https://ja.wikipedia.org/wiki/洪承疇"
+
+- id: cn15_liaoning_panjin
+  name: 盤錦（遼寧）
+  until: 1647
+  select:
+    pieces: [CHN-Panjin]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1622
+      owner: later_jin
+      cause: 後金が広寧を落とし、明は遼河の西からも山海関へ退く
+      source: "https://ja.wikipedia.org/wiki/後金"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_liaoning_tieling
+  name: 鉄嶺（遼寧）
+  until: 1647
+  select:
+    pieces: [CHN-Tieling]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1619
+      owner: later_jin
+      cause: サルフの戦い（4月）の後、後金が開原・鉄嶺を落とす
+      source: "https://ja.wikipedia.org/wiki/サルフの戦い"
+    - from: 1636
+      owner: qing
+      cause: ホンタイジが皇帝を名のり、国号を清と改める（5月）
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_henan_kaifeng
+  name: 開封・平頂山・許昌・鄭州（河南）
+  until: 1647
+  select:
+    pieces: [CHN-Kaifeng, CHN-Pingdingshan, CHN-Xuchang, CHN-Zhengzhou]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1642
+      owner: shun
+      certainty: uncertain
+      cause: 李自成が河南の大半を押さえる（洛陽 1641、開封 1642）
+      note: 開封は1642年の包囲中に黄河の堤が切られて水没した。明の城がまだ残る
+      source: "https://ja.wikipedia.org/wiki/李自成の乱"
+    - from: 1643
+      owner: shun
+      cause: 李自成が河南を押さえ、襄陽を襄京として新順王を名のる
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1644
+      owner: qing
+      certainty: uncertain
+      cause: 大順の官が追われ、河南の北部・中部が清に降る
+      note: 年末の河南は清・南明・大順の争奪の地
+      source: "https://ja.wikipedia.org/wiki/清"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_henan_luohe
+  name: 漯河・商丘・周口・駐馬店（河南）
+  until: 1647
+  select:
+    pieces: [CHN-Luohe, CHN-Shangqiu, CHN-Zhoukou, CHN-Zhumadian]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1642
+      owner: shun
+      certainty: uncertain
+      cause: 李自成が河南の大半を押さえる（洛陽 1641、開封 1642）
+      note: 開封は1642年の包囲中に黄河の堤が切られて水没した。明の城がまだ残る
+      source: "https://ja.wikipedia.org/wiki/李自成の乱"
+    - from: 1643
+      owner: shun
+      cause: 李自成が河南を押さえ、襄陽を襄京として新順王を名のる
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1644
+      owner: southern_ming
+      certainty: uncertain
+      cause: 南明の弘光政権が淮河の線に軍（江北四鎮）を置き、河南東部・湖北に及ぶ
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_henan_luoyang
+  name: 洛陽・南陽・三門峡（河南）
+  until: 1647
+  select:
+    pieces: [CHN-Luoyang, CHN-Nanyang, CHN-Sanmenxia]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1642
+      owner: shun
+      certainty: uncertain
+      cause: 李自成が河南の大半を押さえる（洛陽 1641、開封 1642）
+      note: 開封は1642年の包囲中に黄河の堤が切られて水没した。明の城がまだ残る
+      source: "https://ja.wikipedia.org/wiki/李自成の乱"
+    - from: 1643
+      owner: shun
+      cause: 李自成が河南を押さえ、襄陽を襄京として新順王を名のる
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_henan_xinyang
+  name: 信陽（河南）
+  until: 1647
+  select:
+    pieces: [CHN-Xinyang]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1643
+      owner: shun
+      cause: 李自成が河南を押さえ、襄陽を襄京として新順王を名のる
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1644
+      owner: southern_ming
+      certainty: uncertain
+      cause: 南明の弘光政権が淮河の線に軍（江北四鎮）を置き、河南東部・湖北に及ぶ
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_shaanxi_baoji
+  name: 宝鶏・商洛・銅川・渭南など（陝西）
+  until: 1647
+  select:
+    pieces: [CHN-Baoji, CHN-Shangzhou, CHN-Tongchuan, CHN-Weinan, CHN-Xian, CHN-Xianyang, CHN-Yanan, CHN-Yulin_Shaanxi]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1643
+      owner: shun
+      cause: 李自成が潼関で孫伝庭を破り、西安を落とす（11月）
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_shaanxi_ankang
+  name: 安康・漢中（陝西）
+  until: 1647
+  select:
+    pieces: [CHN-Ankang, CHN-Hanzhong]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1643
+      owner: shun
+      certainty: uncertain
+      cause: 李自成が陝西に入る
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1644
+      owner: shun
+      cause: 李自成は北京を追われて西安に退く。甘粛・寧夏は年初に大順に降った
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_gansu_dingxi
+  name: 甘粛（定西・嘉峪関・金昌など）・寧夏
+  until: 1647
+  select:
+    pieces: [CHN-Dingxi, CHN-Guyuan, CHN-Jiayuguan, CHN-Jinchang, CHN-Lanzhou, CHN-Linxia, CHN-Longnan, CHN-Pingliang, CHN-Qingyang, CHN-Shizuishan, CHN-Tianshui, CHN-Wuwei, CHN-Wuzhong, CHN-Yinchuan, CHN-Zhangye]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: shun
+      cause: 李自成は北京を追われて西安に退く。甘粛・寧夏は年初に大順に降った
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_gansu_gannan
+  name: 甘南（甘粛）
+  until: 1647
+  select:
+    pieces: [CHN-Gannan]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: アムド・ギャロンのチベット人の地。明は土司・寺院の首長に官職を与えて治めた（洮州衛・松潘衛など）
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: shun
+      certainty: nominal
+      cause: 大順が甘粛を押さえる
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: qing
+      certainty: indirect
+      cause: 清が甘粛を押さえる
+      source: "https://ja.wikipedia.org/wiki/清"
+
+- id: cn15_gansu_jiuquan
+  name: 酒泉（甘粛）
+  until: 1647
+  select:
+    pieces: [CHN-Jiuquan]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 粛州（酒泉）は明の衛所。嘉峪関の外の沙州・赤斤などはモンゴル人の羈縻衛所（関西七衛）で、ハミとともに西方への守りとした
+      source: "https://en.wikipedia.org/wiki/Seven_Garrisons_of_Western_Gansu"
+    - from: 1528
+      owner: ming
+      certainty: nominal
+      cause: トゥルファンにハミを奪われ（1513）、明は嘉峪関の外の関西七衛を放棄する
+      note: 粛州（酒泉）は明が守ったが、ピースの大半を占める嘉峪関の外（敦煌など）はモンゴル・トゥルファンの勢力の地となった
+      source: "https://ja.wikipedia.org/wiki/嘉峪関"
+    - from: 1644
+      owner: shun
+      certainty: nominal
+      cause: 大順が甘粛を押さえる
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: qing
+      cause: 清軍が潼関を破って西安を落とし（1–2月）、李自成は湖北へ逃れて殺される。陝西・甘粛・河南が清に帰する
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_jiangsu_changzhou
+  name: 江蘇省・上海・安徽省など
+  until: 1647
+  select:
+    pieces: [CHN-Anqing, CHN-Bengbu, CHN-Changzhou, CHN-Chaohu, CHN-Chizhou, CHN-Chuzhou, CHN-Fuyang, CHN-Hangzhou, CHN-Hefei, CHN-Huaibei, CHN-Huainan, CHN-Huaiyin, CHN-Huangshan, CHN-Huzhou, CHN-Jiaxing, CHN-Lianyungang, CHN-Luan, CHN-Maanshan, CHN-Nanjing, CHN-Nantong, CHN-Shanghai, CHN-Suzhou_Anhui, CHN-Suzhou_Jiangsu, CHN-Taizhou_Jiangsu, CHN-Tongling, CHN-Wuhu, CHN-Wuxi, CHN-Xuancheng, CHN-Xuzhou, CHN-Yancheng, CHN-Yangzhou, CHN-Zhenjiang]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1645
+      owner: qing
+      cause: 清軍（ドド）が揚州を落とし（5月、史可法が戦死）、南京を開城させて弘光帝を捕らえる（6月）。7月に杭州を落とす
+      source: "https://ja.wikipedia.org/wiki/弘光帝"
+
+- id: cn15_zhejiang_jinhua
+  name: 金華・麗水・寧波・衢州など（浙江）
+  until: 1647
+  select:
+    pieces: [CHN-Jinhua, CHN-Lishui, CHN-Ningbo, CHN-Quzhou, CHN-Shaoxing, CHN-Taizhou_Zhejiang, CHN-Wenzhou, CHN-Yuhuan]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1646
+      owner: qing
+      cause: 清軍が銭塘江を渡って紹興を落とし（7月）、魯王は海上に逃れる
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_zhejiang_zhoushan
+  name: 舟山（浙江）
+  until: 1647
+  select:
+    pieces: [CHN-Zhoushan]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1646
+      owner: southern_ming
+      certainty: uncertain
+      cause: 魯王の水軍が舟山の黄斌卿のもとに拠る
+      source: "https://ja.wikipedia.org/wiki/舟山群島"
+
+- id: cn15_jiangxi_jingdezhen
+  name: 景徳鎮・九江・南昌・萍郷など（江西）
+  until: 1647
+  select:
+    pieces: [CHN-Jingdezhen, CHN-Jiujiang, CHN-Nanchang, CHN-Pingxiang, CHN-Shangrao, CHN-Xinyu, CHN-Yichun_Jiangxi, CHN-Yingtan]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1645
+      owner: qing
+      cause: 清軍が南昌を落とす（6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_jiangxi_fuzhou_jiangxi
+  name: 撫州・贛州・吉安（江西）
+  until: 1647
+  select:
+    pieces: [CHN-Fuzhou_Jiangxi, CHN-Ganzhou, CHN-Jian]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1646
+      owner: qing
+      cause: 清軍が贛州を落とす（10月）。江西が清に帰する
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_hubei_ezhou
+  name: 鄂州・黄岡・黄石・武漢など（湖北）
+  until: 1647
+  select:
+    pieces: [CHN-Ezhou, CHN-Huanggang, CHN-Huangshi, CHN-Wuhan, CHN-Xianning, CHN-Xiaogan]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1645
+      owner: qing
+      cause: 清軍（アジゲ）が李自成を追って武昌に入る
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_hubei_jingmen
+  name: 荊門・襄陽（湖北）
+  until: 1647
+  select:
+    pieces: [CHN-Jingmen, CHN-Xiangfan]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1643
+      owner: shun
+      cause: 李自成が襄陽・承天・荊州を落とす（1–3月）
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: qing
+      cause: 清軍（アジゲ）が李自成を追って武昌に入る
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_hubei_jingzhou
+  name: 荊州・天門（湖北）
+  until: 1647
+  select:
+    pieces: [CHN-Jingzhou, CHN-Tianmen]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1643
+      owner: shun
+      cause: 李自成が襄陽・承天・荊州を落とす（1–3月）
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1644
+      owner: southern_ming
+      certainty: uncertain
+      cause: 南明の弘光政権が淮河の線に軍（江北四鎮）を置き、河南東部・湖北に及ぶ
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1645
+      owner: qing
+      cause: 清軍（アジゲ）が李自成を追って武昌に入る
+      source: "https://ja.wikipedia.org/wiki/李自成"
+
+- id: cn15_hubei_shennongjia
+  name: 神農架・十堰（湖北）
+  until: 1647
+  select:
+    pieces: [CHN-Shennongjia, CHN-Shiyan]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1643
+      owner: shun
+      cause: 李自成が襄陽・承天・荊州を落とす（1–3月）
+      source: "https://ja.wikipedia.org/wiki/李自成"
+    - from: 1645
+      owner: southern_ming
+      certainty: uncertain
+      cause: 李自成の残党（李過・郝揺旗ら）が南明の何騰蛟に合流する
+      note: 大順の残党は湖北西部・湖南北部で南明に従って清に抵抗した（のちの忠貞営・夔東十三家）
+      source: "https://ja.wikipedia.org/wiki/何騰蛟"
+
+- id: cn15_hubei_enshi
+  name: 恩施（湖北）
+  until: 1647
+  select:
+    pieces: [CHN-Enshi]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 土司の地。明は現地の首長を土官（宣慰使・土知府など）に任じて世襲させ、間接に治めた
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: qing
+      certainty: uncertain
+      cause: 清軍が荊州から長江をさかのぼって進む
+      note: 容美土司など鄂西の土司の地。大順の残党（夔東十三家）が出入りした
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_hubei_yichang
+  name: 宜昌（湖北）
+  until: 1647
+  select:
+    pieces: [CHN-Yichang]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1645
+      owner: southern_ming
+      certainty: uncertain
+      cause: 李自成の残党（李過・郝揺旗ら）が南明の何騰蛟に合流する
+      note: 大順の残党は湖北西部・湖南北部で南明に従って清に抵抗した（のちの忠貞営・夔東十三家）
+      source: "https://ja.wikipedia.org/wiki/何騰蛟"
+    - from: 1647
+      owner: qing
+      certainty: uncertain
+      cause: 清軍が荊州から長江をさかのぼって進む
+      note: 容美土司など鄂西の土司の地。大順の残党（夔東十三家）が出入りした
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_hunan_changde
+  name: 常徳・長沙・衡陽・婁底など（湖南）
+  until: 1647
+  select:
+    pieces: [CHN-Changde, CHN-Changsha, CHN-Hengyang, CHN-Loudi, CHN-Xiangtan, CHN-Yiyang, CHN-Yueyang, CHN-Zhuzhou]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1643
+      owner: daxi
+      certainty: uncertain
+      cause: 張献忠が武昌を落として大西王を名のり（6月）、湖南に進んで長沙・衡州を落とす（8–10月）
+      note: 翌1644年初めに四川へ去った
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+    - from: 1644
+      owner: southern_ming
+      cause: 張献忠が湖南を去り、明の何騰蛟が湖南を取り戻す
+      source: "https://ja.wikipedia.org/wiki/何騰蛟"
+    - from: 1647
+      owner: qing
+      certainty: uncertain
+      cause: 清軍（孔有徳）が長沙・衡州を落とし（4–5月）、湖南の大半に進む
+      note: 1648年に何騰蛟・大順の残党が反攻した
+      source: "https://ja.wikipedia.org/wiki/孔有徳"
+
+- id: cn15_hunan_chenzhou
+  name: 郴州・邵陽・永州（湖南）
+  until: 1647
+  select:
+    pieces: [CHN-Chenzhou, CHN-Shaoyang, CHN-Yongzhou]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: qing
+      certainty: uncertain
+      cause: 清軍（孔有徳）が長沙・衡州を落とし（4–5月）、湖南の大半に進む
+      note: 1648年に何騰蛟・大順の残党が反攻した
+      source: "https://ja.wikipedia.org/wiki/孔有徳"
+
+- id: cn15_hunan_huaihua
+  name: 懐化・張家界（湖南）
+  until: 1647
+  select:
+    pieces: [CHN-Huaihua, CHN-Zhangjiajie]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 南明軍が湖南西部の山地に退く
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_hunan_xiangxi
+  name: 湘西（湖南）
+  until: 1647
+  select:
+    pieces: [CHN-Xiangxi]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 土司の地。明は現地の首長を土官（宣慰使・土知府など）に任じて世襲させ、間接に治めた
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 南明軍が湖南西部の山地に退く
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_sichuan_chengdu
+  name: 成都・達州・徳陽・広安など（四川）
+  until: 1647
+  select:
+    pieces: [CHN-Chengdu, CHN-Dazhou, CHN-Deyang, CHN-Guangan, CHN-Leshan, CHN-Meishan, CHN-Mianyang, CHN-Nanchong, CHN-Neijiang, CHN-Suining, CHN-Yaan, CHN-Zigong, CHN-Ziyang]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: daxi
+      cause: 張献忠が重慶（6月）・成都（8月）を落とし、成都で大西の皇帝となる
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+    - from: 1647
+      owner: qing
+      certainty: uncertain
+      cause: ホーゲの清軍が西充で張献忠を討ち取る（1月）。大西の残党は貴州・雲南へ去る
+      note: 四川は戦乱と飢饉で荒れ果て、清軍は1648年に退いた
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+
+- id: cn15_sichuan_luzhou
+  name: 四川（瀘州・宜賓）・重慶
+  until: 1647
+  select:
+    pieces: [CHN-Chongqing, CHN-Luzhou, CHN-Yibin]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: daxi
+      cause: 張献忠が重慶（6月）・成都（8月）を落とし、成都で大西の皇帝となる
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+    - from: 1645
+      owner: southern_ming
+      certainty: uncertain
+      cause: 明の曽英・王祥らが四川の東部・南部で大西に抵抗する
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+
+- id: cn15_sichuan_bazhong
+  name: 巴中・広元（四川）
+  until: 1647
+  select:
+    pieces: [CHN-Bazhong, CHN-Guangyuan]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: daxi
+      cause: 張献忠が重慶（6月）・成都（8月）を落とし、成都で大西の皇帝となる
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+    - from: 1646
+      owner: qing
+      certainty: uncertain
+      cause: 清の粛親王ホーゲの軍が漢中から四川に入る（11月）
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+
+- id: cn15_sichuan_ganzi
+  name: 四川（カンゼ（甘孜））・雲南（デチェン（迪慶））
+  until: 1647
+  select:
+    pieces: [CHN-Diqing, CHN-Ganzi]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: カム（東チベット）。明は朵甘衛（朵甘思宣慰司）を置いて土侯に官職を与えたが、実際には地元の首長・寺院が治めた
+      source: "https://ja.wikipedia.org/wiki/カム_(チベット)"
+    - from: 1642
+      owner: tibet
+      overlord: khoshut
+      certainty: uncertain
+      cause: ホシュートのグシ＝ハンがカムのベリ王を滅ぼし（1640–1641）、ダライ＝ラマ5世の政権（ガンデン・ポタン）を立てる
+      note: カム（東チベット）。デルゲなどの土侯が割拠し、ホシュート・ダライ＝ラマ政権の勢力が及んだ
+      source: "https://ja.wikipedia.org/wiki/グシ・ハン"
+
+- id: cn15_sichuan_aba
+  name: アバ（四川）
+  until: 1647
+  select:
+    pieces: [CHN-Aba]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: アムド・ギャロンのチベット人の地。明は土司・寺院の首長に官職を与えて治めた（洮州衛・松潘衛など）
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西が滅び、四川西部の土司の地も明の諸将・土豪の争奪の地となる
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+
+- id: cn15_sichuan_liangshan
+  name: 涼山（四川）
+  until: 1647
+  select:
+    pieces: [CHN-Liangshan]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 土司の地。明は現地の首長を土官（宣慰使・土知府など）に任じて世襲させ、間接に治めた
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西が滅び、四川西部の土司の地も明の諸将・土豪の争奪の地となる
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+
+- id: cn15_sichuan_panzhihua
+  name: 攀枝花（四川）
+  until: 1647
+  select:
+    pieces: [CHN-Panzhihua]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: daxi
+      cause: 張献忠が重慶（6月）・成都（8月）を落とし、成都で大西の皇帝となる
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西が滅び、明の諸将・土豪が四川南部・東部に割拠する
+      source: "https://ja.wikipedia.org/wiki/張献忠"
+
+- id: cn15_guizhou_bijie
+  name: 畢節・六盤水・黔東南・黔南など（貴州）
+  until: 1647
+  select:
+    pieces: [CHN-Bijie, CHN-Liupanshui, CHN-Qiandongnan, CHN-Qiannan, CHN-Qianxinan]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 土司の地。明は現地の首長を土官（宣慰使・土知府など）に任じて世襲させ、間接に治めた
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西の残党が貴州を経て雲南に入る。貴州は南明の官が治める
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_guizhou_anshun
+  name: 安順・貴陽・銅仁（貴州）
+  until: 1647
+  select:
+    pieces: [CHN-Anshun, CHN-Guiyang, CHN-Tongren]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西の残党が貴州を経て雲南に入る。貴州は南明の官が治める
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_guizhou_zunyi
+  name: 遵義（貴州）
+  until: 1647
+  select:
+    pieces: [CHN-Zunyi]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 土司の地。明は現地の首長を土官（宣慰使・土知府など）に任じて世襲させ、間接に治めた
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1600
+      owner: ming
+      cause: 播州の役。播州の楊応龍の反乱を鎮め、土司を廃して遵義府を置く（改土帰流）
+      source: "https://ja.wikipedia.org/wiki/播州の役"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西の残党が貴州を経て雲南に入る。貴州は南明の官が治める
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_yunnan_baoshan
+  name: 保山・楚雄・大理・昆明など（雲南）
+  until: 1647
+  select:
+    pieces: [CHN-Baoshan, CHN-Chuxiong, CHN-Dali, CHN-Kunming, CHN-Qujing, CHN-Yuxi]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西の残党の孫可望・李定国が雲南に入り、沙定洲の乱を鎮めて昆明を押さえる（4月）
+      note: 孫可望らは明の黔国公沐天波を助けるという名目で雲南に入り、1651年に永暦帝を奉じた
+      source: "https://ja.wikipedia.org/wiki/孫可望"
+
+- id: cn15_yunnan_honghe
+  name: 紅河・麗江・怒江・文山など（雲南）
+  until: 1647
+  select:
+    pieces: [CHN-Honghe, CHN-Lijiang, CHN-Nujiang, CHN-Wenshan, CHN-Zhaotong]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 土司の地。明は現地の首長を土官（宣慰使・土知府など）に任じて世襲させ、間接に治めた
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西の残党が雲南に入る
+      note: 土司の地
+      source: "https://ja.wikipedia.org/wiki/孫可望"
+
+- id: cn15_yunnan_dehong
+  name: 徳宏・臨滄・思茅・シプソンパンナー（雲南）
+  until: 1647
+  select:
+    pieces: [CHN-Dehong, CHN-Lincang, CHN-Simao, CHN-Xishuangbanna]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 雲南の辺境のタイ系の土司（麓川・車里・孟定など）。明が宣慰司を置いたが、16世紀後半からはビルマのタウングー朝にも従った
+      source: "https://en.wikipedia.org/wiki/Native_chieftain_system"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      certainty: uncertain
+      cause: 大西の残党が雲南に入る
+      note: 土司の地
+      source: "https://ja.wikipedia.org/wiki/孫可望"
+
+- id: cn15_fujian_fuzhou_fujian
+  name: 福州・龍岩・南平・寧徳など（福建）
+  until: 1647
+  select:
+    pieces: [CHN-Fuzhou_Fujian, CHN-Longyan, CHN-Nanping, CHN-Ningde, CHN-Putian, CHN-Quanzhou, CHN-Sanming, CHN-Zhangzhou]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1646
+      owner: qing
+      cause: 鄭芝竜が清に降り、清軍が福州を落とす（10月）。隆武帝は汀州で捕らえられる
+      source: "https://ja.wikipedia.org/wiki/隆武帝"
+
+- id: cn15_fujian_xiamen
+  name: 廈門（福建）
+  until: 1647
+  select:
+    pieces: [CHN-Xiamen]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1646
+      owner: tungning
+      overlord: southern_ming
+      cause: 鄭芝竜の子の鄭成功（国姓爺）が父と別れ、金門・廈門の一族の兵とともに清への抵抗を始める
+      note: 鄭成功は1646年末に挙兵し、廈門の一族の兵を1650年に併せた
+      source: "https://ja.wikipedia.org/wiki/鄭成功"
+
+- id: cn15_guangdong_chaozhou
+  name: 広東省・香港
+  until: 1647
+  select:
+    pieces: [CHN-Chaozhou, CHN-Dongguan, CHN-Foshan, CHN-Guangzhou, CHN-Heyuan, CHN-Hong_Kong_Special_Administrative_Region, CHN-Hong_Kong_Special_Administrative_Region_Hong_Kong_Island, CHN-Hong_Kong_Special_Administrative_Region_Kowloon, CHN-Huizhou, CHN-Jiangmen, CHN-Jieyang, CHN-Maoming, CHN-Meizhou, CHN-Qingyuan, CHN-Shantou, CHN-Shanwei, CHN-Shaoguan, CHN-Shenzhen, CHN-Yangjiang, CHN-Yunfu, CHN-Zhanjiang, CHN-Zhanjiang_urban, CHN-Zhaoqing, CHN-Zhongshan, CHN-Zhuhai]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: qing
+      cause: 清軍（李成棟）が広州を落とし（1月）、紹武帝が自害する。続いて肇慶を落とし、永暦帝は広西の桂林へ逃れる
+      source: "https://ja.wikipedia.org/wiki/紹武帝"
+
+- id: cn15_macau
+  name: マカオ
+  until: 1647
+  select:
+    pieces: [CHN-Macau_Special_Administrative_Region]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1557
+      owner: portugal
+      certainty: uncertain
+      label: マカオ（ポルトガルの居留地）
+      cause: ポルトガル人がマカオに居留を許される
+      note: 明の地方官が居留を認め、ポルトガル人は地租を払った。主権は明にある
+      source: "https://ja.wikipedia.org/wiki/マカオの歴史"
+
+- id: cn15_guangxi_beihai
+  name: 北海・防城港・貴港・桂林など（広西）
+  until: 1647
+  select:
+    pieces: [CHN-Beihai, CHN-Fangchenggang, CHN-Guigang, CHN-Guilin, CHN-Hezhou, CHN-Laibin, CHN-Liuzhou, CHN-Nanning, CHN-Qinzhou, CHN-Wuzhou, CHN-Yulin_Guangxi]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_guangxi_baise
+  name: 百色・崇左・河池（広西）
+  until: 1647
+  select:
+    pieces: [CHN-Baise, CHN-Chongzuo, CHN-Hechi]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: indirect
+      note: 土司の地。明は現地の首長を土官（宣慰使・土知府など）に任じて世襲させ、間接に治めた
+      source: "https://ja.wikipedia.org/wiki/土司"
+    - from: 1644
+      owner: southern_ming
+      certainty: indirect
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: southern_ming
+      cause: 永暦帝が桂林に移る。瞿式耜が桂林を守り抜く
+      source: "https://ja.wikipedia.org/wiki/永暦帝"
+
+- id: cn15_hainan
+  name: 海南省
+  until: 1647
+  select:
+    pieces: [CHN-Haikou, CHN-Sanya]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 明（景泰帝）。土木の変（1449）の後、北京を守り抜いた。両京十三布政使司と遼東都司などの軍管区で治める
+      source: "https://ja.wikipedia.org/wiki/明"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1647
+      owner: qing
+      certainty: uncertain
+      cause: 清軍が海南島に入る
+      note: 要確認。1648年に李成棟が南明に寝返ると南明に戻った
+      source: "https://ja.wikipedia.org/wiki/南明"
+
+- id: cn15_taiwan_hsinchu
+  name: 台湾（新竹市・新竹・花蓮など）
+  until: 1647
+  select:
+    pieces: [TWN-Hsinchu, TWN-Hsinchu_County, TWN-Hualien_County, TWN-Miaoli_County, TWN-Nantou_County, TWN-Taichung, TWN-Taitung_County, TWN-Taoyuan, TWN-Yilan_County]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 台湾の先住民（原住民族）の地域。国家の支配は及んでいない
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+
+- id: cn15_taiwan_changhua_county
+  name: 台湾（彰化・嘉義市・嘉義など）
+  until: 1647
+  select:
+    pieces: [TWN-Changhua_County, TWN-Chiayi, TWN-Chiayi_County, TWN-Pingtung_County, TWN-Yunlin_County]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 台湾の先住民（原住民族）の地域。国家の支配は及んでいない
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+    - from: 1636
+      owner: netherlands
+      certainty: nominal
+      label: 台湾（オランダ東インド会社）
+      cause: オランダが南西部の平野の先住民の村々を服属させる
+      note: 平野部の先住民の村々を服属させ、漢人の移民に開墾させた
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+
+- id: cn15_taiwan_kaohsiung
+  name: 台湾（高雄）
+  until: 1647
+  select:
+    pieces: [TWN-Kaohsiung]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 台湾の先住民（原住民族）の地域。国家の支配は及んでいない
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+    - from: 1636
+      owner: netherlands
+      label: 台湾（オランダ東インド会社）
+      cause: オランダが南西部の平野の先住民の村々（麻豆社など）を服属させる（1635–1636）
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+
+- id: cn15_taiwan_keelung
+  name: 台湾（基隆）
+  until: 1647
+  select:
+    pieces: [TWN-Keelung]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 台湾の先住民（原住民族）の地域。国家の支配は及んでいない
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+    - from: 1626
+      owner: spain
+      label: 台湾北部（スペイン）
+      cause: フィリピンのスペイン人が基隆（鶏籠）にサン・サルバドル城を築く
+      source: "https://ja.wikipedia.org/wiki/スペイン統治時代_(台湾)"
+    - from: 1642
+      owner: netherlands
+      label: 台湾（オランダ東インド会社）
+      cause: オランダが基隆のスペイン人を追う（8月）
+      source: "https://ja.wikipedia.org/wiki/スペイン統治時代_(台湾)"
+
+- id: cn15_taiwan_kinmen
+  name: 台湾（金門）
+  until: 1647
+  select:
+    pieces: [TWN-Kinmen]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 福建の沖の島々（金門千戸所など）
+      source: "https://ja.wikipedia.org/wiki/金門県"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1646
+      owner: tungning
+      overlord: southern_ming
+      cause: 鄭芝竜の子の鄭成功（国姓爺）が父と別れ、金門・廈門の一族の兵とともに清への抵抗を始める
+      note: 鄭成功は1646年末に挙兵し、廈門の一族の兵を1650年に併せた
+      source: "https://ja.wikipedia.org/wiki/鄭成功"
+
+- id: cn15_taiwan_matsu_islands
+  name: 台湾（馬祖）
+  until: 1647
+  select:
+    pieces: [TWN-Matsu_Islands]
+  timeline:
+    - from: 1453
+      owner: ming
+      note: 福建の沖の島々（金門千戸所など）
+      source: "https://ja.wikipedia.org/wiki/金門県"
+    - from: 1644
+      owner: southern_ming
+      cause: 李自成が北京を落とし、崇禎帝が自害して明が滅びる（4月）。南京で福王が即位する（弘光帝、6月）
+      source: "https://ja.wikipedia.org/wiki/南明"
+    - from: 1646
+      owner: qing
+      cause: 鄭芝竜が清に降り、清軍が福州を落とす（10月）。隆武帝は汀州で捕らえられる
+      source: "https://ja.wikipedia.org/wiki/隆武帝"
+
+- id: cn15_taiwan_new_taipei
+  name: 台湾（新北（淡水））
+  until: 1647
+  select:
+    pieces: [TWN-New_Taipei]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 台湾の先住民（原住民族）の地域。国家の支配は及んでいない
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+    - from: 1628
+      owner: spain
+      certainty: nominal
+      label: 台湾北部（スペイン）
+      cause: スペインが淡水にサント・ドミンゴ城を築く
+      source: "https://ja.wikipedia.org/wiki/スペイン統治時代_(台湾)"
+    - from: 1642
+      owner: netherlands
+      certainty: nominal
+      label: 台湾（オランダ東インド会社）
+      cause: オランダが基隆のスペイン人を追い、台湾北部に及ぶ
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+
+- id: cn15_taiwan_penghu
+  name: 台湾（澎湖）
+  until: 1647
+  select:
+    pieces: [TWN-Penghu]
+  timeline:
+    - from: 1453
+      owner: ming
+      certainty: nominal
+      note: 元の時代から澎湖巡検司が置かれたが、明の海禁で1388年に廃され、住民は大陸に移された
+      source: "https://ja.wikipedia.org/wiki/澎湖諸島"
+    - from: 1597
+      owner: ming
+      cause: 倭寇・日本に備えて澎湖に遊兵（駐屯軍）を置く
+      source: "https://ja.wikipedia.org/wiki/澎湖諸島"
+    - from: 1622
+      owner: netherlands
+      certainty: occupied
+      label: 澎湖（オランダの占領）
+      cause: オランダ東インド会社が澎湖を占領し、城を築く
+      source: "https://ja.wikipedia.org/wiki/澎湖諸島"
+    - from: 1624
+      owner: ming
+      cause: 明軍に囲まれたオランダが澎湖を退き、台湾に移る
+      source: "https://ja.wikipedia.org/wiki/澎湖諸島"
+    - from: 1644
+      owner: southern_ming
+      certainty: nominal
+      cause: 明の滅亡
+      note: 明清交代期は鄭芝竜の海上勢力の下にあった
+      source: "https://ja.wikipedia.org/wiki/澎湖諸島"
+    - from: 1646
+      owner: tungning
+      overlord: southern_ming
+      certainty: nominal
+      cause: 鄭成功が金門・廈門で挙兵し、澎湖も鄭氏の海上勢力の下に入る
+      source: "https://ja.wikipedia.org/wiki/鄭成功"
+
+- id: cn15_taiwan_tainan
+  name: 台湾（台南）
+  until: 1647
+  select:
+    pieces: [TWN-Tainan]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 台湾の先住民（原住民族）の地域。国家の支配は及んでいない
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+    - from: 1624
+      owner: netherlands
+      label: 台湾（オランダ東インド会社）
+      cause: オランダ東インド会社が台南のタイオワンに商館と城（のちのゼーランディア城）を築く
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+
+- id: cn15_taiwan_taipei
+  name: 台湾（台北）
+  until: 1647
+  select:
+    pieces: [TWN-Taipei]
+  timeline:
+    - from: 1453
+      owner: null
+      note: 台湾の先住民（原住民族）の地域。国家の支配は及んでいない
+      source: "https://ja.wikipedia.org/wiki/台湾原住民"
+    - from: 1642
+      owner: netherlands
+      certainty: nominal
+      label: 台湾（オランダ東インド会社）
+      cause: オランダが基隆のスペイン人を追い、台湾北部に及ぶ
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
