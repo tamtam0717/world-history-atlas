@@ -1631,7 +1631,30 @@ body[data-layer="language"] .legend {
   display: none;
 }
 
-/* ---- 出来事・国境の変化：地図に映っている地域のものを先に、外のものは薄く ---- */
+/* ---- 出来事・国境の変化：選んだ国に関係するもの → 地図に映っているもの → 外のもの（薄く） ---- */
+.panel-body li.rel-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.panel-body li.rel-head::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--rel);
+  box-shadow: 0 0 6px var(--rel);
+}
+.panel-body li.related {
+  border-left: 3px solid var(--rel, var(--accent));
+  padding-left: 8px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--rel, transparent) 14%, transparent), transparent 70%);
+}
 .panel-body li.out-head {
   display: flex;
   align-items: center;

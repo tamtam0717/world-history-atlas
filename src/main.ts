@@ -148,7 +148,7 @@ async function main() {
     map.setReligionSelected(dist && state.relPick ? state.relPick.region : -1);
     map.setMovement(idx.movement(state.movement) ?? null);
     map.flashRegions("political", null);
-    panel.renderYear(state.year, { dist, movement: state.movement });
+    panel.renderYear(state.year, { dist, movement: state.movement, polity: dist ? null : state.polity });
     if (dist) panel.renderReligion(state.relPick, state.year, dist);
     else if (!state.polity && state.blank != null) panel.renderBlank(map.blankInfo(state.blank), state.year);
     else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null, state.polity ? map.indirectOf(state.polity) : null);
