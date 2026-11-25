@@ -83,6 +83,14 @@ for (const p of polities) {
   if (!p.id || !p.name) throw new Error(`${p._file}: 政体には id と name が必要です`);
   if (polityIds.has(p.id)) throw new Error(`政体 ID の重複: ${p.id}`);
   polityIds.set(p.id, polityIds.size);
+  // 君主（rulers）と情勢（periods）の取り違え：君主の項目が periods の下に入ると、パネルに君主が出ない
+  (p.periods ?? []).forEach((x, i) => {
+    if (x?.text == null) warn(`${p._file} の ${p.id}: periods[${i}]（${x?.from ?? "?"}–）に text がありません`);
+    if (x?.name != null) warn(`${p._file} の ${p.id}: periods[${i}] に name "${x.name}" があります（君主なら rulers の下へ）`);
+  });
+  (p.rulers ?? []).forEach((x, i) => {
+    if (x?.name == null) warn(`${p._file} の ${p.id}: rulers[${i}]（${x?.from ?? "?"}–）に name がありません（情勢なら periods の下へ）`);
+  });
 }
 const checkPolity = (id, where) => {
   if (id == null) return;
