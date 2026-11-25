@@ -1352,3 +1352,700 @@
     - {from: 1947, owner: "india", certainty: "uncertain", cause: "藩王国がインドへの帰属文書に署名", source: "https://ja.wikipedia.org/wiki/藩王国"}
     - {from: 1949, owner: "india", cause: "テフリ・ガルワールがウッタル・プラデーシュ州に統合される", source: "https://ja.wikipedia.org/wiki/藩王国"}
   note: "インドが実効支配し、中国が領有を主張する。"
+
+# ================================================================ 1453–1647（担当Z4・生成：scratchpad/Z4/gen_z4.py。until: 1647。1648 年以降は上の地域が効く）
+
+- id: pre_pb_lahore
+  name: "ラホール・パンジャーブ中部（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Gujranwala, PAK-Hafizabad, PAK-Kasur, PAK-Lahore, PAK-Narowal, PAK-Sheikhpura, PAK-Sialkot, PAK-Sargodha, PAK-Khushab, PAK-Mandi_Bahauddin, PAK-Gujrat, PAK-Okara, PAK-Sahiwal, PAK-Pakpattan, PAK-Faisalabad]
+  timeline:
+    - {from: 1453, owner: "delhi_sultanate", note: "ローディー家はもともとラホール・シルヒンドの長官。ラホールはダウラト・ハーン・ローディーらが治めた"}
+    - {from: 1526, owner: "mughal", cause: "第1次パーニーパットの戦い（4月）でバーブルがイブラーヒーム・ローディーを破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1555, owner: "mughal", cause: "フマーユーンがペルシアの援助で戻り、ラホール（2月）・デリー（7月）を取り戻す", source: "https://ja.wikipedia.org/wiki/フマーユーン"}
+
+- id: pre_pk_gakhar
+  name: "ポトハール（ガッカル族の地）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Rawalpindi, PAK-Islamabad_Capital_Territory, PAK-Chakwal, PAK-Jhelum, PAK-Attock]
+  timeline:
+    - {from: 1453, owner: "gakhars", note: "ポトハール高原のガッカル族の首長の地。デリー・スルタン朝・カシミールの支配は及ばなかった"}
+    - {from: 1526, owner: "gakhars", overlord: "mughal", cause: "ガッカル族の首長がバーブルに従う", source: "https://en.wikipedia.org/wiki/Gakhars"}
+    - {from: 1541, owner: "sur", certainty: "uncertain", cause: "シェール・シャーがガッカル族を抑えるためにロータス城を築く（ガッカル族はフマーユーンに味方して抵抗）", source: "https://en.wikipedia.org/wiki/Rohtas_Fort"}
+    - {from: 1555, owner: "gakhars", overlord: "mughal", cause: "フマーユーンの帰還。ガッカル族の首長アーダム・ハーンがムガル帝国に従う", source: "https://en.wikipedia.org/wiki/Gakhars"}
+    - {from: 1563, owner: "mughal", cause: "アクバルがアーダム・ハーンを廃し、ガッカル族の地をムガル帝国の直轄（ラホール州）とする（ガッカル族の首長は地方の領主として残る）", source: "https://en.wikipedia.org/wiki/Gakhars"}
+  note: "アトックのインダス川の渡し場の城は1581年にアクバルが築いた。"
+
+- id: pre_pk_multan
+  name: "ムルターン・ウッチ（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Khanewal, PAK-Lodhran, PAK-Multan, PAK-Muzaffargarh, PAK-Vihari, PAK-Bahawalnagar, PAK-Bahawalpur, PAK-Rahim_Yar_Khan, PAK-Jhang, PAK-Toba_Tek_Singh]
+  timeline:
+    - {from: 1453, owner: "langah", note: "ランガー朝（ムルターン・スルタン朝）。1445年ごろデリーから自立した"}
+    - {from: 1528, owner: "arghun", cause: "シンドのシャー・フサイン・アルグンがムルターンを攻め落とし、ランガー朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Langah_Sultanate"}
+    - {from: 1530, owner: "mughal", cause: "バーブルの子カームラーンがパンジャーブ・ムルターンを領地とする", source: "https://en.wikipedia.org/wiki/Kamran_Mirza"}
+    - {from: 1541, owner: "sur", cause: "シェール・シャーの将軍ハイバト・ハーンがムルターンを取る", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1555, owner: "mughal", cause: "フマーユーンがペルシアの援助で戻り、ラホール（2月）・デリー（7月）を取り戻す", source: "https://ja.wikipedia.org/wiki/フマーユーン"}
+  note: "ランガー朝の滅亡・アルグン朝の支配の年は資料によって1526–1528年と揺れる（要確認）。"
+
+- id: pre_pk_derajat
+  name: "デーラージャート・タル（バローチの首長の地）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Dera_Ghazi_Khan, PAK-Rajanpur, PAK-Bhakkar, PAK-Layyah, PAK-Mianwali, PAK-Dera_Ismail_Khan, PAK-Tank]
+  timeline:
+    - {from: 1453, owner: "langah", certainty: "uncertain", note: "インダス川の両岸に移り住んだバローチ人の首長（ドーダーイー家のイスマーイール・ハーン、ガーズィー・ハーンら）がランガー朝に仕えて治めた（デーラー・イスマーイール・ハーン、デーラー・ガーズィー・ハーンの町を建てる）"}
+    - {from: 1528, owner: "arghun", certainty: "uncertain", cause: "シンドのシャー・フサイン・アルグンがムルターンを攻め落とし、ランガー朝が滅ぶ", source: "https://en.wikipedia.org/wiki/Langah_Sultanate"}
+    - {from: 1530, owner: "mughal", certainty: "uncertain", cause: "バーブルの子カームラーンがパンジャーブ・ムルターンを領地とする", source: "https://en.wikipedia.org/wiki/Kamran_Mirza"}
+    - {from: 1541, owner: "sur", certainty: "uncertain", cause: "シェール・シャーの将軍ハイバト・ハーンがムルターンを取る", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1555, owner: "mughal", certainty: "uncertain", cause: "フマーユーンがペルシアの援助で戻り、ラホール（2月）・デリー（7月）を取り戻す", source: "https://ja.wikipedia.org/wiki/フマーユーン"}
+    - {from: 1580, owner: "mughal", cause: "アクバルの州制度（ムルターン州）のもとでバローチの首長たちが帝国の領主となる", source: "https://en.wikipedia.org/wiki/Multan_Subah"}
+
+- id: pre_pk_peshawar
+  name: "ペシャーワル盆地・コハート・バンヌー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Charsadda, PAK-Hangu, PAK-Kohat, PAK-Mardan, PAK-Nowshera, PAK-Peshawar, PAK-Swabi, PAK-Bannu, PAK-Lakki_Marwat, PAK-Karak]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain", note: "ディラザーク族・ユースフザイ族などパシュトゥーン人の部族の地。1480–1520年代にユースフザイ族がカーブル方面から移り住んだ"}
+    - {from: 1526, owner: "mughal", certainty: "uncertain", cause: "ムガル帝国の成立。カーブルとインドを結ぶハイバル峠の道の一部となるが、部族の支配は弱い", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    - {from: 1585, owner: "mughal", cause: "アクバルが北西辺境に遠征し（1586年にユースフザイ族と戦いビールバルが戦死）、ペシャーワル盆地を押さえる", source: "https://en.wikipedia.org/wiki/Yusufzai"}
+  note: "1540–1554年もカーブルのカームラーン・フマーユーンの勢力下としてムガル帝国のまま描く。"
+
+- id: pre_pk_tribal
+  name: "スワート・ディール・部族地域・コーヒスターン（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Buner, PAK-Lower_Dir, PAK-Malakand, PAK-Shangla, PAK-Swat, PAK-Upper_Dir, PAK-Bajaur, PAK-Khyber, PAK-Kurram, PAK-Mohmand, PAK-North_Waziristan, PAK-Orakzai, PAK-South_Waziristan, PAK-Kohistan]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain", note: "パシュトゥーン人の部族（ユースフザイ・アフリーディー・ワズィールなど）とコーヒスターンの山地の民の地。15世紀末まではスワートのスルタン（ジャハーンギーリー家）がいたが、ユースフザイ族に追われた"}
+
+- id: pre_pk_hazara
+  name: "ハザーラ・アーザード・カシミール（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Abbottabad, PAK-Battagram, PAK-Haripur, PAK-Mansehra, PAK-Azad_Kashmir]
+  timeline:
+    - {from: 1453, owner: "kashmir_sultanate", certainty: "uncertain", note: "パクリー（ハザーラ）のトルコ系の首長や、チッバール（ミールプル・ビンバル）の山岳の首長の地。カシミール・スルタン朝に従った"}
+    - {from: 1586, owner: "mughal", cause: "アクバルの軍がシュリーナガルに入り、カシミールを併合する（10月。チャク朝のヤークーブは1589年まで抵抗）", source: "https://en.wikipedia.org/wiki/Mughal_conquest_of_Kashmir"}
+
+- id: pre_pk_north
+  name: "チトラル・ギルギット・フンザ（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Chitral, PAK-Astore, PAK-Diamer, PAK-Gilgit, PAK-Ghizer, PAK-Hunza, PAK-Nagar]
+  timeline:
+    - {from: 1453, owner: "dardistan", note: "谷ごとの小王国。チトラルは16世紀までライース家が治め、16世紀末からカトゥール家（メヘタル）。ギルギットはトラハン家"}
+
+- id: pre_pk_baltistan
+  name: "バルティスターン（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Ghanche, PAK-Kharmang, PAK-Shigar, PAK-Skardu]
+  timeline:
+    - {from: 1453, owner: "baltistan", note: "スカルドゥのマクポン家などの小王国。アリー・シェール・ハーン・アンチャン（1580–1624ごろ）がバルティスターンを統一し、ラダックも攻めた"}
+    - {from: 1637, owner: "baltistan", overlord: "mughal", cause: "シャー・ジャハーンの軍がスカルドゥに入り、バルティスターンがムガル帝国に貢納する", source: "https://en.wikipedia.org/wiki/Maqpon_dynasty"}
+  note: "1648年以降の既存データは宗主権の帯なし（note で貢納を記す）。"
+
+- id: pre_pk_upper_sindh
+  name: "上シンド（バッカル・シカールプル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Dadu, PAK-Ghotki, PAK-Jacobabad, PAK-Kashmore, PAK-Naushehro_Feroze, PAK-Qambar_Shahdadkot, PAK-Shikarpur, PAK-Sukkur, PAK-Khairpur]
+  timeline:
+    - {from: 1453, owner: "samma", note: "サンマ朝（都タッター）の北部。バッカルの城がインダス川の要地"}
+    - {from: 1520, owner: "arghun", cause: "カンダハールを追われたシャー・ベグ・アルグンがシンドに入り、サンマ朝の都タッターを取る", source: "https://en.wikipedia.org/wiki/Arghun_dynasty"}
+    - {from: 1556, owner: "arghun", label: "バッカル（スルターン・マフムード）", cause: "シャー・フサイン・アルグンの死。バッカルの長官スルターン・マフムードが自立する（ムガル帝国に名目的に従う）", source: "https://en.wikipedia.org/wiki/Arghun_dynasty"}
+    - {from: 1574, owner: "mughal", cause: "アクバルの軍がバッカルを取る（スルターン・マフムードの死後）", source: "https://en.wikipedia.org/wiki/Bukkur"}
+
+- id: pre_pk_lower_sindh
+  name: "下シンド（タッター）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Badin, PAK-Hyderabad, PAK-Jamshoro, PAK-Matiari, PAK-Mirpurkhas, PAK-Nawabshah, PAK-Sanghar, PAK-Tando_Allahyar, PAK-Tando_Muhammad_Khan, PAK-Thatta, PAK-Karachi]
+  timeline:
+    - {from: 1453, owner: "samma", note: "サンマ朝の都タッター。インダス川の河口の港の町"}
+    - {from: 1520, owner: "arghun", cause: "カンダハールを追われたシャー・ベグ・アルグンがシンドに入り、サンマ朝の都タッターを取る", source: "https://en.wikipedia.org/wiki/Arghun_dynasty"}
+    - {from: 1555, owner: "tarkhan", cause: "シャー・フサイン・アルグンの晩年、ミールザー・イーサー・ハーン・タルハーンがタッターで自立する（タルハーン朝）", source: "https://en.wikipedia.org/wiki/Tarkhan_dynasty"}
+    - {from: 1591, owner: "mughal", cause: "ハーネ・ハーナーンの遠征で、タルハーン朝のミールザー・ジャーニー・ベグがムガル帝国に降る", source: "https://en.wikipedia.org/wiki/Tarkhan_dynasty"}
+  note: "タルハーン家のミールザー・ジャーニー・ベグとその子ガーズィー・ベグは降伏の後もムガル帝国の長官としてタッターを治めた（–1612）。"
+
+- id: pre_pk_thar
+  name: "タール砂漠（ウメルコート）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Tharparkar, PAK-Umerkot]
+  timeline:
+    - {from: 1453, owner: "rajput_states", certainty: "uncertain", label: "ウメルコート（ソーダー家）", note: "ラージプートのソーダー家のラーナーの地。1542年、シェール・シャーに追われたフマーユーンをかくまい、ここでアクバルが生まれた"}
+    - {from: 1591, owner: "mughal", cause: "ハーネ・ハーナーンの遠征で、タルハーン朝のミールザー・ジャーニー・ベグがムガル帝国に降る", source: "https://en.wikipedia.org/wiki/Tarkhan_dynasty"}
+
+- id: pre_pk_quetta
+  name: "クエッタ・ピシーン（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Quetta, PAK-Pishin, PAK-Qilla_Abdullah]
+  timeline:
+    - {from: 1453, owner: "timurid", certainty: "uncertain", note: "カンダハールの支配者に従うアフガン・バローチの部族の地"}
+    - {from: 1507, owner: "arghun", certainty: "uncertain", cause: "カンダハールの総督アルグン家が、ティムール朝の滅亡で自立", source: "https://en.wikipedia.org/wiki/Arghun_dynasty"}
+    - {from: 1522, owner: "timurid", certainty: "uncertain", label: "バーブルのカーブル王国", cause: "バーブルがカンダハールを取る", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    - {from: 1526, owner: "mughal", certainty: "uncertain", cause: "ムガル帝国の成立", source: "https://ja.wikipedia.org/wiki/ムガル帝国"}
+    - {from: 1558, owner: "persia", certainty: "uncertain", cause: "タフマースプ1世がカンダハールを取る", source: "https://en.wikipedia.org/wiki/Kandahar"}
+    - {from: 1595, owner: "mughal", certainty: "uncertain", cause: "サファヴィー家の総督がアクバルに降る", source: "https://en.wikipedia.org/wiki/Kandahar"}
+    - {from: 1622, owner: "persia", certainty: "uncertain", cause: "アッバース1世がカンダハールを取る", source: "https://en.wikipedia.org/wiki/Mughal–Safavid_war_(1622–1623)"}
+    - {from: 1638, owner: "mughal", certainty: "uncertain", cause: "サファヴィー朝の総督アリー・マルダーン・ハーンがシャー・ジャハーンに寝返る", source: "https://en.wikipedia.org/wiki/Ali_Mardan_Khan"}
+  note: "カンダハールの帰属（ottoman.yaml の afg_kandahar）にそろえた。"
+
+- id: pre_pk_sibi
+  name: "スィーウィー・カッチー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Sibi, PAK-Ziarat, PAK-Jafarabad, PAK-Jhal_Magsi, PAK-Kachhi, PAK-Nasirabad]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain", note: "バローチ人の部族の地。15世紀末にリンド族とラシャーリー族が争った"}
+    - {from: 1520, owner: "arghun", certainty: "nominal", cause: "アルグン家がシンドに移り、スィーウィー・カッチーの部族に名目的な支配を及ぼす", source: "https://en.wikipedia.org/wiki/Arghun_dynasty"}
+    - {from: 1556, owner: null, certainty: "uncertain", cause: "アルグン朝の終わり", source: "https://en.wikipedia.org/wiki/Arghun_dynasty"}
+    - {from: 1595, owner: "mughal", certainty: "nominal", cause: "アクバルの軍がスィーウィーの城を取る", source: "https://en.wikipedia.org/wiki/Sibi"}
+
+- id: pre_pk_baloch
+  name: "カラート・ゾーブ・マッリー・ブグティー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [PAK-Awaran, PAK-Kalat, PAK-Kharan, PAK-Khuzdar, PAK-Lasbela, PAK-Mastung, PAK-Panjgur, PAK-Dera_Bugti, PAK-Kohlu, PAK-Nushki, PAK-Barkhan, PAK-Loralai, PAK-Musakhel, PAK-Qilla_Saifullah, PAK-Zhob]
+  timeline:
+    - {from: 1453, owner: null, certainty: "uncertain", note: "バローチ人・ブラーフーイー人・パシュトゥーン人の部族の地。カラートのブラーフーイー族の首長（ミールワーリー家）はカンダハールの支配者に従った"}
+
+- id: pre_kashmir
+  name: "カシミール盆地（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Anantnag, IND-Badgam, IND-Bandipore, IND-Baramula, IND-Ganderbal, IND-Kulgam, IND-Kupwara, IND-Pulwama, IND-Shupiyan, IND-Srinagar]
+  timeline:
+    - {from: 1453, owner: "kashmir_sultanate", note: "シャー・ミール朝のザイヌル・アービディーン（ブドシャー）の治世。ペルシアの工芸（ショール織り・紙・漆）が伝えられた"}
+    - {from: 1541, owner: "kashmir_sultanate", label: "ミールザー・ハイダル（ドゥグラト）の統治", cause: "フマーユーンに仕えたミールザー・ハイダル・ドゥグラトがカシミールに入り、フマーユーンの名で治める（–1551）", source: "https://en.wikipedia.org/wiki/Mirza_Muhammad_Haidar_Dughlat"}
+    - {from: 1551, owner: "kashmir_sultanate", cause: "ミールザー・ハイダルが殺され、カシミールの貴族（チャク家など）が実権を握る（1561年にチャク朝）", source: "https://en.wikipedia.org/wiki/Chak_dynasty"}
+    - {from: 1586, owner: "mughal", cause: "アクバルの軍がシュリーナガルに入り、カシミールを併合する（10月。チャク朝のヤークーブは1589年まで抵抗）", source: "https://en.wikipedia.org/wiki/Mughal_conquest_of_Kashmir"}
+
+- id: pre_jammu
+  name: "ジャンムー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Doda, IND-Jammu, IND-Kathua, IND-Kishtwar, IND-Punch, IND-Rajouri, IND-Ramban, IND-Reasi, IND-Samba, IND-Udhampur]
+  timeline:
+    - {from: 1453, owner: "pahari_states", note: "ジャンムー・キシュトワール・ラージャウリーなどの山岳の王国。キシュトワールはカシミールと結び、ラージャウリーはムスリムの王家"}
+
+- id: pre_ladakh
+  name: "ラダック（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Kargil, IND-Leh_Ladakh, 121-Siachen_Saltoro, IND-DATA_NOT_AVAILABLE, 112-Aksai_Chin, 114-Demchok]
+  timeline:
+    - {from: 1453, owner: "ladakh", note: "チベット仏教の王国。15世紀後半からナムギャル朝（バガン王）。センゲ・ナムギャル（1616–1642）の時代にグゲ王国を併合し（1630）、ヘミス僧院を建てた"}
+  note: "アクサイチン・デムチョク・シアチェンなどの高地は境があいまい（1648年以降の既存データと同じく不確実）。ピースごとの certainty は下の地域で上書き。"
+
+- id: pre_ladakh_border
+  name: "ラダックの辺境の高地（1453–1647）"
+  until: 1647
+  select:
+    pieces: [121-Siachen_Saltoro, IND-DATA_NOT_AVAILABLE, 112-Aksai_Chin, 114-Demchok]
+  timeline:
+    - {from: 1453, owner: "ladakh", certainty: "uncertain", note: "人のほとんど住まない高地。ラダックとチベット・ホータンの間の境ははっきりしなかった"}
+
+- id: pre_hp_hills
+  name: "西ヒマラヤの山岳諸国（チャンバ・クッルー・シムラー）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Chamba, IND-Mandi, IND-Kullu, IND-Lahul_Spiti, IND-Bilaspur, IND-Kinnaur, IND-Shimla, IND-Sirmaur, IND-Solan]
+  timeline:
+    - {from: 1453, owner: "pahari_states", note: "チャンバ・マンディー・スケート・クッルー・ビラースプル・シルモール・ブシャハルなどの山岳の王国。16世紀末からムガル帝国に貢納した"}
+
+- id: pre_hp_kangra
+  name: "カーングラ（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Hamirpur, IND-Kangra, IND-Una]
+  timeline:
+    - {from: 1453, owner: "pahari_states", label: "カーングラ（カトーチ家）", note: "カトーチ家の王国。カーングラ城は西ヒマラヤで最も堅い城とされた"}
+    - {from: 1620, owner: "mughal", cause: "ジャハーンギールの軍がカーングラ城を攻め落とす（11月）", source: "https://en.wikipedia.org/wiki/Kangra_Fort"}
+
+- id: pre_pb_east
+  name: "パンジャーブ東部・ハリヤーナー・デリー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Chandigarh, IND-Fazilka, IND-Firozpur, IND-Ludhiana, IND-Moga, IND-Muktsar, IND-Rupnagar, IND-Sahibzada_Ajit_Singh_Nagar, IND-Hoshiarpur, IND-Jalandhar, IND-Shahid_Bhagat_Singh_Nagar, IND-Kapurthala, IND-Amritsar, IND-Gurdaspur, IND-Pathankot, IND-Tarn_Taran, IND-Barnala, IND-Bathinda, IND-Faridkot, IND-Fatehgarh_Sahib, IND-Jind, IND-Mansa, IND-Patiala, IND-Sangrur, IND-Bhiwani, IND-Fatehabad, IND-Hisar, IND-Sirsa, IND-Mahendragarh, IND-Ambala, IND-Kaithal, IND-Kurukshetra, IND-Panchkula, IND-Yamunanagar, IND-Karnal, IND-Panipat, IND-Sonipat, IND-Faridabad, IND-Gurgaon, IND-Jhajjar, IND-Mewat, IND-Palwal, IND-Rewari, IND-Rohtak, IND-East, IND-New_Delhi, IND-North, IND-North_East, IND-North_West, IND-Shahdara, IND-South, IND-South_East, IND-South_West, IND-West, IND-Central]
+  timeline:
+    - {from: 1453, owner: "delhi_sultanate"}
+    - {from: 1526, owner: "mughal", cause: "第1次パーニーパットの戦い（4月）でバーブルがイブラーヒーム・ローディーを破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1555, owner: "mughal", cause: "フマーユーンがペルシアの援助で戻り、ラホール（2月）・デリー（7月）を取り戻す", source: "https://ja.wikipedia.org/wiki/フマーユーン"}
+  note: "1556年10月にスール朝のヘームーがデリーを一時奪ったが、11月の第2次パーニーパットの戦いでムガル帝国が取り戻した（年末の状態で描く）。"
+
+- id: pre_up_west
+  name: "ドアーブ上流・アーグラ・ロヒルカンド（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Hardwar, IND-Muzaffarnagar, IND-Saharanpur, IND-Samli, IND-Baghpat, IND-Bulandshahr, IND-Gautam_Buddha_Nagar, IND-Ghaziabad, IND-Hapur, IND-Meerut, IND-Agra, IND-Aligarh, IND-Etah, IND-Firozabad, IND-Kanshiram_Nagar, IND-Mahamaya_Nagar, IND-Mathura, IND-Bareilly, IND-Bijnor, IND-Budaun, IND-Jyotiba_Phule_Nagar, IND-Moradabad, IND-Pilibhit, IND-Sambhal, IND-Shahjahanpur, IND-Udham_Singh_Nagar, IND-Rampur]
+  timeline:
+    - {from: 1453, owner: "delhi_sultanate"}
+    - {from: 1526, owner: "mughal", cause: "第1次パーニーパットの戦い（4月）でバーブルがイブラーヒーム・ローディーを破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1555, owner: "mughal", cause: "フマーユーンがペルシアの援助で戻り、ラホール（2月）・デリー（7月）を取り戻す", source: "https://ja.wikipedia.org/wiki/フマーユーン"}
+  note: "アーグラは1504年ごろシカンダル・ローディーが都とし、ムガル帝国の都（アクバルのファテープル・シークリー 1571–85、ラホール 1585–98 を除く）となった。ロヒルカンド（カテーヘル）のラージプートは半ば自立していた。"
+
+- id: pre_up_lower_doab
+  name: "ドアーブ下流（エーターワー・カーンプル・カナウジ）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Auraiya, IND-Etawah, IND-Mainpuri]
+  timeline:
+    - {from: 1453, owner: "delhi_sultanate", certainty: "uncertain", note: "エーターワーのチャウハーン家などの地。デリーとジャウンプルの争いの場"}
+    - {from: 1479, owner: "delhi_sultanate", cause: "バフロール・ローディーがジャウンプル・スルタン朝を滅ぼし、フサイン・シャー・シャルキーはビハールへ逃れる", source: "https://en.wikipedia.org/wiki/Jaunpur_Sultanate"}
+    - {from: 1526, owner: "mughal", cause: "第1次パーニーパットの戦い（4月）でバーブルがイブラーヒーム・ローディーを破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1556, owner: "mughal", cause: "第2次パーニーパットの戦い（11月）でアクバルの軍がヘームーを破り、ムガル帝国が北インドを取り戻す", source: "https://ja.wikipedia.org/wiki/第二次パーニーパットの戦い"}
+
+- id: pre_up_kannauj
+  name: "カナウジ・カーンプル（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Kannauj, IND-Farrukhabad, IND-Kanpur_Nagar, IND-Kanpur_Dehat]
+  timeline:
+    - {from: 1453, owner: "jaunpur"}
+    - {from: 1479, owner: "delhi_sultanate", cause: "バフロール・ローディーがジャウンプル・スルタン朝を滅ぼし、フサイン・シャー・シャルキーはビハールへ逃れる", source: "https://en.wikipedia.org/wiki/Jaunpur_Sultanate"}
+    - {from: 1526, owner: "mughal", cause: "第1次パーニーパットの戦い（4月）でバーブルがイブラーヒーム・ローディーを破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1556, owner: "mughal", cause: "第2次パーニーパットの戦い（11月）でアクバルの軍がヘームーを破り、ムガル帝国が北インドを取り戻す", source: "https://ja.wikipedia.org/wiki/第二次パーニーパットの戦い"}
+
+- id: pre_up_awadh
+  name: "アワド（ラクナウ）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Ambedkar_Nagar, IND-Amethi, IND-Bahraich, IND-Balrampur, IND-Bara_Banki, IND-Faizabad, IND-Gonda, IND-Hardoi, IND-Kheri, IND-Lucknow, IND-Pratapgarh_2, IND-Rae_Bareli, IND-Shrawasti, IND-Sitapur, IND-Sultanpur, IND-Unnao]
+  timeline:
+    - {from: 1453, owner: "jaunpur"}
+    - {from: 1479, owner: "delhi_sultanate", cause: "バフロール・ローディーがジャウンプル・スルタン朝を滅ぼし、フサイン・シャー・シャルキーはビハールへ逃れる", source: "https://en.wikipedia.org/wiki/Jaunpur_Sultanate"}
+    - {from: 1526, owner: "mughal", certainty: "uncertain", cause: "パーニーパットの戦いの後、東部のアフガン貴族がバーブルに抵抗する", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    - {from: 1527, owner: "mughal", cause: "フマーユーンがジャウンプル・アワドを従える", source: "https://ja.wikipedia.org/wiki/フマーユーン"}
+    - {from: 1539, owner: "sur", cause: "チャウサーの戦い（6月）でシェール・ハーンがフマーユーンを破り、シャーを名のる（スール朝）", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1557, owner: "mughal", cause: "アクバルの将軍たちがアワド（ラクナウ）を取る", source: "https://ja.wikipedia.org/wiki/アクバル"}
+  note: "ムガル帝国による取り戻しの年は要確認（1557–59年）。"
+
+- id: pre_up_east
+  name: "ジャウンプル・ベナレス・アラーハーバード・ゴーラクプル（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Ballia, IND-Chandauli, IND-Ghazipur, IND-Jaunpur, IND-Sant_Ravidas_Nagar_Bhadohi, IND-Varanasi, IND-Allahabad, IND-Fatehpur, IND-Kaushambi, IND-Azamgarh, IND-Basti, IND-Deoria, IND-Gorakhpur, IND-Kushinagar, IND-Mahrajganj, IND-Mau, IND-Sant_Kabir_Nagar, IND-Siddharthnagar]
+  timeline:
+    - {from: 1453, owner: "jaunpur"}
+    - {from: 1479, owner: "delhi_sultanate", cause: "バフロール・ローディーがジャウンプル・スルタン朝を滅ぼし、フサイン・シャー・シャルキーはビハールへ逃れる", source: "https://en.wikipedia.org/wiki/Jaunpur_Sultanate"}
+    - {from: 1526, owner: "mughal", certainty: "uncertain", cause: "パーニーパットの戦いの後、東部のアフガン貴族（ナースィル・ハーン・ローハーニーら）がバーブルに抵抗する", source: "https://ja.wikipedia.org/wiki/バーブル"}
+    - {from: 1527, owner: "mughal", cause: "フマーユーンがジャウンプル・ガーズィープルを取る", source: "https://ja.wikipedia.org/wiki/フマーユーン"}
+    - {from: 1539, owner: "sur", cause: "チャウサーの戦い（6月）でシェール・ハーンがフマーユーンを破り、シャーを名のる（スール朝）", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1559, owner: "mughal", cause: "アクバルの将軍ハーン・ザマーン（アリー・クリー・ハーン）がジャウンプルを取る", source: "https://ja.wikipedia.org/wiki/アクバル"}
+  note: "ゴーラクプルの北部は在地のラージプートの首長が治め、支配はゆるかった。"
+
+- id: pre_up_chunar
+  name: "チュナール・ミルザープル（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Mirzapur, IND-Sonbhadra]
+  timeline:
+    - {from: 1453, owner: "jaunpur"}
+    - {from: 1479, owner: "delhi_sultanate", cause: "バフロール・ローディーがジャウンプル・スルタン朝を滅ぼし、フサイン・シャー・シャルキーはビハールへ逃れる", source: "https://en.wikipedia.org/wiki/Jaunpur_Sultanate"}
+    - {from: 1526, owner: "sur", certainty: "uncertain", cause: "ローディー朝の滅亡の後、ビハールのアフガン貴族ローハーニー家が自立（バハール・ハーンがスルターン・ムハンマドを名のる）。のちシェール・ハーンが実権を握る", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1561, owner: "mughal", cause: "アクバルの軍がスール朝の残党からチュナール城を取る", source: "https://en.wikipedia.org/wiki/Chunar_Fort"}
+  note: "チュナール城は1530年ごろからシェール・ハーンの拠点。1532年にフマーユーンが囲んだが、シェール・ハーンが形だけ従って保った。"
+
+- id: pre_uk_garhwal
+  name: "ガルワール（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Chamoli, IND-Dehradun, IND-Garhwal, IND-Rudraprayag, IND-Tehri_Garhwal, IND-Uttarkashi, 113-CH_IN]
+  timeline:
+    - {from: 1453, owner: "garhwal", note: "パンワール家の王国。アジャイ・パール（15世紀末–16世紀はじめ）が52の城の首長を従えて統一し、都をシュリーナガルに移した"}
+
+- id: pre_uk_garhwal_border
+  name: "ガルワールとチベットの境の高地（1453–1647）"
+  until: 1647
+  select:
+    pieces: [113-CH_IN]
+  timeline:
+    - {from: 1453, owner: "garhwal", certainty: "uncertain"}
+
+- id: pre_uk_kumaon
+  name: "クマーオーン（1453–1647）"
+  until: 1647
+  select:
+    pieces: [119-Kalapani, IND-Almora, IND-Bageshwar, IND-Champawat, IND-Nainital, IND-Pithoragarh]
+  timeline:
+    - {from: 1453, owner: "kumaon", note: "チャンド朝の王国。ルドラ・チャンド（1565–97）がアルモーラーを都とし、タライの平野にも広がった"}
+
+- id: pre_rj_mewar
+  name: "メーワール（ウダイプル・ラージサマンド）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Rajsamand, IND-Udaipur]
+  timeline:
+    - {from: 1453, owner: "rajput_mewar", note: "シソーディア家のラーナー・クンバの王国。チットールに戦勝の塔を建てた"}
+    - {from: 1615, owner: "mughal", certainty: "indirect", label: "メーワール（ウダイプル）", cause: "ラーナー・アマル・シングがジャハーンギールと和を結び、ムガル帝国に臣従する（皇子フッラムの遠征）", source: "https://en.wikipedia.org/wiki/Amar_Singh_I"}
+
+- id: pre_rj_chittor
+  name: "チットールガル・ビールワーラー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Chittaurgarh, IND-Bhilwara]
+  timeline:
+    - {from: 1453, owner: "rajput_mewar", note: "メーワールの都チットールガル"}
+    - {from: 1568, owner: "mughal", cause: "アクバルがチットールガルを攻め落とす（2月）。ラーナー・ウダイ・シングは山地のウダイプルに移る", source: "https://en.wikipedia.org/wiki/Siege_of_Chittorgarh_(1567–1568)"}
+    - {from: 1615, owner: "mughal", certainty: "indirect", label: "メーワール（ウダイプル）", cause: "メーワールとムガル帝国の和約で、チットールがラーナーに返される（城壁は直さない約束）", source: "https://en.wikipedia.org/wiki/Amar_Singh_I"}
+  note: "1535年のグジャラートのバハードゥル・シャーによるチットール攻略は短期間なので描かない。"
+
+- id: pre_rj_marwar
+  name: "マールワール（ジョードプル・パーリー・バールメール）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Jodhpur, IND-Pali, IND-Barmer]
+  timeline:
+    - {from: 1453, owner: "rajput_marwar", note: "ラートール家のラーオ・ジョーダーの国（都マンドール、1459年からジョードプル）"}
+    - {from: 1544, owner: "sur", certainty: "occupied", cause: "ギリー・スメールの戦い（1月）でシェール・シャーがマールデーオを破り、ジョードプルを取る", source: "https://en.wikipedia.org/wiki/Battle_of_Sammel"}
+    - {from: 1545, owner: "rajput_marwar", cause: "シェール・シャーの死の後、マールデーオがジョードプルを取り戻す", source: "https://en.wikipedia.org/wiki/Maldeo_Rathore"}
+    - {from: 1564, owner: "mughal", cause: "アクバルの軍がジョードプルを取る。チャンドラセーンは山地で抵抗を続ける（–1581）", source: "https://en.wikipedia.org/wiki/Chandrasen_Rathore"}
+    - {from: 1583, owner: "mughal", certainty: "indirect", label: "マールワール（ジョードプル）", cause: "アクバルがウダイ・シング（モーター・ラージャ）にジョードプルを与え、マールワールが臣従する王国となる", source: "https://en.wikipedia.org/wiki/Udai_Singh_of_Marwar"}
+
+- id: pre_rj_nagaur
+  name: "ナーガウル（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Nagaur]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", certainty: "uncertain", label: "ナーガウル（ハーンザーダ家）", note: "ムスリムのハーンザーダ家が治め、グジャラート・スルタン朝に従った。メーワールのクンバにたびたび攻められた"}
+    - {from: 1536, owner: "rajput_marwar", cause: "マールワールのマールデーオがナーガウルを取る", source: "https://en.wikipedia.org/wiki/Maldeo_Rathore"}
+    - {from: 1544, owner: "sur", cause: "シェール・シャーがマールワールを破る（ギリー・スメールの戦い）", source: "https://en.wikipedia.org/wiki/Battle_of_Sammel"}
+    - {from: 1556, owner: "mughal", cause: "アクバルの軍がナーガウルを取る（1570年にアクバルがナーガウルでラージプートの王たちと会う）", source: "https://en.wikipedia.org/wiki/Nagaur"}
+    - {from: 1583, owner: "mughal", certainty: "indirect", label: "マールワール（ジョードプル）", cause: "マールワールが臣従する王国となる", source: "https://en.wikipedia.org/wiki/Udai_Singh_of_Marwar"}
+  note: "ナーガウルは17世紀にはジョードプルの分家（アマル・シング・ラートール）の領地。ムガル帝国による取得の年は要確認。"
+
+- id: pre_rj_jalor
+  name: "ジャーロール（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Jalor]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", certainty: "uncertain", label: "ジャーロール（ビハーリー・パターン家）", note: "アフガン系のビハーリー家のジャーロールの王国。グジャラート・スルタン朝に従った"}
+    - {from: 1573, owner: "mughal", cause: "アクバルのグジャラート征服の後、ジャーロールがムガル帝国に従う", source: "https://en.wikipedia.org/wiki/Jalore"}
+    - {from: 1617, owner: "mughal", certainty: "indirect", label: "マールワール（ジョードプル）", cause: "ジャーロールがジョードプルの王に与えられる", source: "https://en.wikipedia.org/wiki/Jalore"}
+  note: "ジャーロールがマールワールに与えられた年は要確認。"
+
+- id: pre_rj_amber
+  name: "アンベール（ジャイプル・ダウサ・トーンク）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Jaipur, IND-Dausa, IND-Tonk]
+  timeline:
+    - {from: 1453, owner: "rajput_amber", note: "カッチワーハー家の王国（都アンベール）"}
+    - {from: 1562, owner: "mughal", certainty: "indirect", label: "アンベール（ジャイプル）", cause: "アンベールのバールマル（ビハーリー・マル）が娘をアクバルに嫁がせて臣従する。カッチワーハー家はムガル帝国の重臣となる", source: "https://en.wikipedia.org/wiki/Bharmal"}
+
+- id: pre_rj_shekhawati
+  name: "シェーカーワーティー（ジュンジュヌー・シーカル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Jhunjhunun, IND-Sikar]
+  timeline:
+    - {from: 1453, owner: "rajput_states", certainty: "uncertain", label: "シェーカーワーティー", note: "カーイムハーニー家（ジュンジュヌー・ファテープルのムスリムの首長）とシェーカーワト家（カッチワーハーの分家）の地"}
+    - {from: 1562, owner: "mughal", certainty: "indirect", label: "アンベール（ジャイプル）", cause: "アンベールがムガル帝国に臣従する", source: "https://en.wikipedia.org/wiki/Bharmal"}
+
+- id: pre_rj_ranthambore
+  name: "ランタンボール（サワーイー・マードープル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Sawai_Madhopur]
+  timeline:
+    - {from: 1453, owner: "malwa_sultanate", certainty: "uncertain", note: "ランタンボール城はマールワー・メーワール・グジャラートが奪い合った"}
+    - {from: 1517, owner: "rajput_mewar", cause: "メーワールのラーナー・サーンガーがランタンボールを押さえる", source: "https://en.wikipedia.org/wiki/Rana_Sanga"}
+    - {from: 1532, owner: "gujarat_sultanate", cause: "グジャラートのバハードゥル・シャーがランタンボールを取る", source: "https://en.wikipedia.org/wiki/Ranthambore_Fort"}
+    - {from: 1543, owner: "sur", cause: "シェール・シャーがランタンボールを取る", source: "https://en.wikipedia.org/wiki/Ranthambore_Fort"}
+    - {from: 1555, owner: "rajput_states", label: "ブーンディー（ハーラー家）", cause: "ブーンディーのスルジャン・ハーラーがランタンボールを押さえる", source: "https://en.wikipedia.org/wiki/Ranthambore_Fort"}
+    - {from: 1569, owner: "mughal", certainty: "indirect", label: "アンベール（ジャイプル）", cause: "アクバルがランタンボールを囲み、スルジャン・ハーラーが降る（3月）", source: "https://en.wikipedia.org/wiki/Siege_of_Ranthambore_(1568)"}
+  note: "15–16世紀の帰属は複雑でおおまか（要確認）。1648年以降の既存データ（アンベールの間接統治）につなげた。"
+
+- id: pre_rj_bikaner
+  name: "ビーカーネール・チュール（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Bikaner, IND-Churu]
+  timeline:
+    - {from: 1453, owner: "rajput_states", certainty: "uncertain", label: "ジャーングラデーシュ", note: "ジャート人の部族とバーティー家のラージプートの地（ジャーングラデーシュ）"}
+    - {from: 1465, owner: "rajput_bikaner", cause: "ラーオ・ジョーダーの子ビーカーがこの地を征服し、王国を開く（1488年にビーカーネールの町）", source: "https://en.wikipedia.org/wiki/Rao_Bika"}
+    - {from: 1542, owner: "rajput_marwar", certainty: "occupied", cause: "マールワールのマールデーオがビーカーネールを攻め、王ジャイト・シングが戦死する", source: "https://en.wikipedia.org/wiki/Rao_Jaitsi"}
+    - {from: 1544, owner: "rajput_bikaner", cause: "シェール・シャーの助けでカルヤーン・マルがビーカーネールを取り戻す", source: "https://en.wikipedia.org/wiki/Rao_Kalyan_Mal"}
+    - {from: 1570, owner: "mughal", certainty: "indirect", label: "ビーカーネール", cause: "ナーガウルでカルヤーン・マルがアクバルに臣従する", source: "https://en.wikipedia.org/wiki/Rao_Kalyan_Mal"}
+
+- id: pre_rj_bhatner
+  name: "バトネール（ハヌマーンガル・ガンガーナガル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Hanumangarh, IND-Ganganagar]
+  timeline:
+    - {from: 1453, owner: "rajput_states", certainty: "uncertain", label: "バトネール", note: "バトネール城（ハヌマーンガル）はデリーとムルターンを結ぶ道の要地。バーティー家・ジョーイヤ家などが争った"}
+    - {from: 1527, owner: "rajput_bikaner", cause: "ビーカーネールのルーンカラン・ジャイト・シングがバトネールを取る", source: "https://en.wikipedia.org/wiki/Hanumangarh"}
+    - {from: 1570, owner: "mughal", certainty: "indirect", label: "ビーカーネール", cause: "ビーカーネールがムガル帝国に臣従する", source: "https://en.wikipedia.org/wiki/Rao_Kalyan_Mal"}
+  note: "バトネールの帰属は要確認（1534年にカームラーンが一時取った）。"
+
+- id: pre_rj_jaisalmer
+  name: "ジャイサルメール（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Jaisalmer]
+  timeline:
+    - {from: 1453, owner: "rajput_states", label: "ジャイサルメール", note: "バーティー家の砂漠の王国。インド西部とシンド・ペルシアを結ぶ隊商路の要地"}
+    - {from: 1570, owner: "mughal", certainty: "indirect", label: "ジャイサルメール", cause: "ラーワル・ハル・ラーイがアクバルに臣従する", source: "https://en.wikipedia.org/wiki/Jaisalmer_State"}
+
+- id: pre_rj_bundi
+  name: "ブーンディー・コーター（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Bundi, IND-Kota]
+  timeline:
+    - {from: 1453, owner: "rajput_states", label: "ブーンディー（ハーラー家）", note: "ハーラー家のブーンディー王国。メーワールに従うことが多かった"}
+    - {from: 1569, owner: "mughal", certainty: "indirect", label: "コーター・ブーンディー", cause: "ランタンボールの降伏とともにスルジャン・ハーラーがアクバルに臣従する", source: "https://en.wikipedia.org/wiki/Bundi_State"}
+  note: "コーターは1631年にブーンディーから分かれた。"
+
+- id: pre_rj_gagron
+  name: "ガーグローン・バーラーン（ジャーラーワール）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Jhalawar, IND-Baran]
+  timeline:
+    - {from: 1453, owner: "malwa_sultanate", note: "ガーグローン城は1444年にマールワーのマフムード・ハルジーが取った"}
+    - {from: 1519, owner: "rajput_mewar", cause: "ラーナー・サーンガーがマールワーのマフムード2世を破り（ガーグローンの戦い）、この地を取る", source: "https://en.wikipedia.org/wiki/Rana_Sanga"}
+    - {from: 1532, owner: "gujarat_sultanate", cause: "グジャラートのバハードゥル・シャーがマーンドゥを攻め落とし、マールワーを併合する", source: "https://en.wikipedia.org/wiki/Bahadur_Shah_of_Gujarat"}
+    - {from: 1537, owner: "malwa_sultanate", cause: "フマーユーンのグジャラート遠征（1535–36）の混乱の中、マッル・ハーンがマーンドゥでカーディル・シャーを名のる", source: "https://en.wikipedia.org/wiki/Malwa_Sultanate"}
+    - {from: 1542, owner: "sur", cause: "シェール・シャーがマールワーを征服し、シュジャーアト・ハーンを長官とする", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1555, owner: "malwa_sultanate", cause: "スール朝の分裂の中、シュジャーアト・ハーンの子バーズ・バハードゥルがマールワーで自立する", source: "https://en.wikipedia.org/wiki/Baz_Bahadur"}
+    - {from: 1561, owner: "mughal", cause: "アクバルの将軍アドハム・ハーンがバーズ・バハードゥルを破る（サーラングプルの戦い）", source: "https://en.wikipedia.org/wiki/Baz_Bahadur"}
+    - {from: 1569, owner: "mughal", certainty: "indirect", label: "コーター・ブーンディー", cause: "ハーラー家がムガル帝国に臣従し、この地を治める", source: "https://en.wikipedia.org/wiki/Bundi_State"}
+
+- id: pre_rj_vagad
+  name: "ワーガド・シローヒー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Banswara, IND-Dungarpur, IND-Pratapgarh, IND-Sirohi]
+  timeline:
+    - {from: 1453, owner: "rajput_states", label: "ワーガド・シローヒー", note: "グヒラ家の分家（ドゥンガルプル・バーンスワーラー・プラタープガル）とデーオラー家（シローヒー）の山地の王国。メーワール・グジャラートに従った"}
+    - {from: 1577, owner: "mughal", certainty: "indirect", label: "ワーガドの諸王国", cause: "ドゥンガルプル・バーンスワーラーの王がアクバルに臣従する", source: "https://en.wikipedia.org/wiki/Dungarpur_State"}
+
+- id: pre_rj_ajmer
+  name: "アジメール（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Ajmer]
+  timeline:
+    - {from: 1453, owner: "rajput_mewar", note: "スーフィーの聖者チシュティーの廟の町。メーワール・マールワー・マールワールが奪い合った"}
+    - {from: 1455, owner: "malwa_sultanate", cause: "マールワーのマフムード・ハルジーがアジメールを取る", source: "https://en.wikipedia.org/wiki/Ajmer"}
+    - {from: 1505, owner: "rajput_mewar", cause: "メーワールがアジメールを取る", source: "https://en.wikipedia.org/wiki/Ajmer"}
+    - {from: 1535, owner: "rajput_marwar", cause: "マールワールのマールデーオがアジメールを取る", source: "https://en.wikipedia.org/wiki/Maldeo_Rathore"}
+    - {from: 1544, owner: "sur", cause: "シェール・シャーがマールワールを破る（ギリー・スメールの戦い）", source: "https://en.wikipedia.org/wiki/Battle_of_Sammel"}
+    - {from: 1558, owner: "mughal", cause: "アクバルの軍がアジメールを取る（アクバルはたびたびチシュティー廟を参った）", source: "https://en.wikipedia.org/wiki/Ajmer"}
+  note: "1455–1535年の帰属は要確認。"
+
+- id: pre_rj_mewat
+  name: "メーワート（アルワル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Alwar]
+  timeline:
+    - {from: 1453, owner: "delhi_sultanate", certainty: "uncertain", label: "メーワート（ハーンザーダ家）", note: "ハーンザーダ家のメーワートの首長がデリーに半ば自立していた。ハサン・ハーン・メーワーティーはハーヌアの戦い（1527）でラーナー・サーンガーとともにバーブルと戦った"}
+    - {from: 1527, owner: "mughal", cause: "ハーヌアの戦い（3月）の後、バーブルがアルワルを取る", source: "https://en.wikipedia.org/wiki/Hasan_Khan_Mewati"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1556, owner: "mughal", cause: "第2次パーニーパットの戦い（11月）でアクバルの軍がヘームーを破り、ムガル帝国が北インドを取り戻す", source: "https://ja.wikipedia.org/wiki/第二次パーニーパットの戦い"}
+  note: "1648年以降の既存データは「アンベール（ジャイプル）・メーワート」の間接統治。"
+
+- id: pre_rj_bayana
+  name: "バヤーナー・ドールプル・カラウリー（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Bharatpur, IND-Dhaulpur, IND-Karauli]
+  timeline:
+    - {from: 1453, owner: "delhi_sultanate", certainty: "uncertain", note: "バヤーナーのアウハディー家の首長などが半ば自立。カラウリーはジャードーン家のラージプート"}
+    - {from: 1504, owner: "delhi_sultanate", cause: "シカンダル・ローディーがドールプル・バヤーナーを従え、近くにアーグラの都を開く", source: "https://en.wikipedia.org/wiki/Sikandar_Lodi"}
+    - {from: 1526, owner: "mughal", cause: "第1次パーニーパットの戦い（4月）でバーブルがイブラーヒーム・ローディーを破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1556, owner: "mughal", cause: "第2次パーニーパットの戦い（11月）でアクバルの軍がヘームーを破り、ムガル帝国が北インドを取り戻す", source: "https://ja.wikipedia.org/wiki/第二次パーニーパットの戦い"}
+
+- id: pre_gj_mainland
+  name: "グジャラート本土（アフマダーバード・バローダ・ケーダー）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Ahmadabad, IND-Gandhinagar, IND-Amreli, IND-Mahesana, IND-Navsari, IND-Patan, IND-Vadodara, IND-Anand, IND-Kheda]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", note: "ムザッファル朝のグジャラート・スルタン朝（都アフマダーバード）。インド洋交易で栄えた"}
+    - {from: 1572, owner: "mughal", cause: "アクバルがグジャラートを征服（アフマダーバード 11月、スーラト 1573年2月）", source: "https://ja.wikipedia.org/wiki/アクバル"}
+
+- id: pre_gj_surat
+  name: "スーラト・バルーチ・ヴァルサード（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Surat, IND-Tapi, IND-Bharuch, IND-Valsad]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", note: "スーラト・バルーチ（ブローチ）はグジャラートの港。ポルトガルの船がたびたび襲った"}
+    - {from: 1573, owner: "mughal", cause: "アクバルがスーラトを攻め落とす（2月）", source: "https://ja.wikipedia.org/wiki/アクバル"}
+
+- id: pre_gj_champaner
+  name: "チャーンパーネール（パンチ・マハール）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Dohad, IND-Panch_Mahals]
+  timeline:
+    - {from: 1453, owner: "rajput_states", label: "チャーンパーネール（キーチー家）", note: "チャウハーン家（キーチー）のチャーンパーネール王国"}
+    - {from: 1484, owner: "gujarat_sultanate", cause: "マフムード・ベーガダーがチャーンパーネールを攻め落とし、都とする（–1536）", source: "https://en.wikipedia.org/wiki/Champaner"}
+    - {from: 1572, owner: "mughal", cause: "アクバルがグジャラートを征服（アフマダーバード 11月、スーラト 1573年2月）", source: "https://ja.wikipedia.org/wiki/アクバル"}
+
+- id: pre_gj_east
+  name: "グジャラート東部の諸王国（イダル・パーランプル・ラージピープラー）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Aravali, IND-Banas_Kantha, IND-Chhota_Udaipur, IND-Mahisagar, IND-Narmada, IND-Sabar_Kantha, IND-The_Dangs, IND-Dadra_Nagar_Haveli]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", certainty: "indirect", label: "グジャラート東部の諸王国", note: "イダル・パーランプル・ラージピープラーなどの在地の王国がグジャラート・スルタン朝に貢納した"}
+    - {from: 1573, owner: "mughal", certainty: "indirect", label: "グジャラート東部の諸王国", cause: "アクバルがグジャラートを征服（アフマダーバード 11月、スーラト 1573年2月）", source: "https://ja.wikipedia.org/wiki/アクバル"}
+
+- id: pre_gj_kathiawar
+  name: "カーティヤーワール（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Batod, IND-Bhavnagar, IND-Devbhumi_Dwarka, IND-Gir_Somnath, IND-Jamnagar, IND-Junagadh, IND-Morbi, IND-Porbandar, IND-Rajkot, IND-Surendranagar]
+  timeline:
+    - {from: 1453, owner: "gujarat_states", note: "ジュナーガドのチューダーサマー家などの王国"}
+    - {from: 1472, owner: "gujarat_sultanate", certainty: "indirect", label: "カーティヤーワールの諸王国", cause: "マフムード・ベーガダーがジュナーガド（ギルナール）を攻め落とし、カーティヤーワールの王たちを従える", source: "https://en.wikipedia.org/wiki/Mahmud_Begada"}
+    - {from: 1573, owner: "gujarat_states", certainty: "uncertain", cause: "グジャラート・スルタン朝の滅亡。最後のスルタン、ムザッファル3世がカーティヤーワールで抵抗する", source: "https://en.wikipedia.org/wiki/Muzaffar_Shah_III"}
+    - {from: 1591, owner: "mughal", certainty: "indirect", label: "カーティヤーワールの諸王国", cause: "ブーチャル・モーリーの戦いでムガル軍がナワーナガルの軍を破り、ジュナーガドを取る（1591–92）", source: "https://en.wikipedia.org/wiki/Battle_of_Bhuchar_Mori"}
+
+- id: pre_gj_kutch
+  name: "カッチ（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Kachchh]
+  timeline:
+    - {from: 1453, owner: "cutch", note: "ジャーデージャー家などの王国。ラーオ・ケーンガールジー1世（1548–85）が統一し、ブジを都とした"}
+
+- id: pre_diu
+  name: "ディーウ（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Diu]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate", note: "グジャラートの港。1509年にポルトガル艦隊がマムルーク朝・グジャラートの艦隊を沖で破った（ディーウ沖の海戦）"}
+    - {from: 1535, owner: "portugal", label: "ディーウ（ポルトガル領）", cause: "フマーユーンに攻められたバハードゥル・シャーがポルトガルに城を建てることを許す（1537年にバハードゥル・シャーはポルトガル人に殺される）", source: "https://en.wikipedia.org/wiki/Portuguese_Diu"}
+
+- id: pre_daman
+  name: "ダマン（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Daman]
+  timeline:
+    - {from: 1453, owner: "gujarat_sultanate"}
+    - {from: 1559, owner: "portugal", label: "ダマン（ポルトガル領）", cause: "ポルトガルがダマンを取る", source: "https://en.wikipedia.org/wiki/Daman,_Daman_and_Diu"}
+
+- id: pre_mp_malwa
+  name: "マールワー（ウッジャイン・インドール・マーンドゥ・ボーパール）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Alirajpur, IND-Barwani, IND-Dewas, IND-Dhar, IND-Indore, IND-Jhabua, IND-Khargone_West_Nimar, IND-Ratlam, IND-Agar, IND-Mandsaur, IND-Neemuch, IND-Shajapur, IND-Ujjain, IND-Vidisha, IND-Bhopal, IND-Raisen, IND-Rajgarh, IND-Sehore, IND-Harda, IND-Hoshangabad, IND-Sheopur]
+  timeline:
+    - {from: 1453, owner: "malwa_sultanate", note: "ハルジー朝のマールワー・スルタン朝（都マーンドゥ）"}
+    - {from: 1531, owner: "gujarat_sultanate", cause: "グジャラートのバハードゥル・シャーがマーンドゥを攻め落とし、マールワーを併合する", source: "https://en.wikipedia.org/wiki/Bahadur_Shah_of_Gujarat"}
+    - {from: 1537, owner: "malwa_sultanate", cause: "フマーユーンのグジャラート遠征（1535–36）の混乱の中、マッル・ハーンがマーンドゥでカーディル・シャーを名のる", source: "https://en.wikipedia.org/wiki/Malwa_Sultanate"}
+    - {from: 1542, owner: "sur", cause: "シェール・シャーがマールワーを征服し、シュジャーアト・ハーンを長官とする", source: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+    - {from: 1555, owner: "malwa_sultanate", cause: "スール朝の分裂の中、シュジャーアト・ハーンの子バーズ・バハードゥルがマールワーで自立する", source: "https://en.wikipedia.org/wiki/Baz_Bahadur"}
+    - {from: 1561, owner: "mughal", cause: "アクバルの将軍アドハム・ハーンがバーズ・バハードゥルを破る（サーラングプルの戦い）", source: "https://en.wikipedia.org/wiki/Baz_Bahadur"}
+
+- id: pre_mp_chanderi
+  name: "チャンデーリー（グナ・アショークナガル・ラリトプル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Guna, IND-Ashoknagar, IND-Lalitpur]
+  timeline:
+    - {from: 1453, owner: "malwa_sultanate", note: "マールワー・スルタン朝の北の要地チャンデーリー"}
+    - {from: 1517, owner: "rajput_mewar", label: "チャンデーリー（メーディニー・ラーイ）", cause: "マールワーの宰相だったメーディニー・ラーイがラーナー・サーンガーの助けでチャンデーリーを治める", source: "https://en.wikipedia.org/wiki/Medini_Rai"}
+    - {from: 1528, owner: "mughal", cause: "バーブルがチャンデーリーを攻め落とす（1月）", source: "https://en.wikipedia.org/wiki/Battle_of_Chanderi"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1561, owner: "mughal", cause: "アクバルの将軍アドハム・ハーンがバーズ・バハードゥルを破る（サーラングプルの戦い）", source: "https://en.wikipedia.org/wiki/Baz_Bahadur"}
+
+- id: pre_mp_gwalior
+  name: "グワーリヤル（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Gwalior, IND-Bhind, IND-Morena, IND-Shivpuri]
+  timeline:
+    - {from: 1453, owner: "gwalior_tomar", note: "トーマル家のグワーリヤル王国"}
+    - {from: 1518, owner: "delhi_sultanate", cause: "イブラーヒーム・ローディーがグワーリヤル城を攻め落とす", source: "https://en.wikipedia.org/wiki/Tomaras_of_Gwalior"}
+    - {from: 1526, owner: "mughal", cause: "第1次パーニーパットの戦い（4月）でバーブルがイブラーヒーム・ローディーを破り、ムガル帝国を開く", source: "https://ja.wikipedia.org/wiki/パーニーパットの戦い_(1526年)"}
+    - {from: 1540, owner: "sur", cause: "カナウジの戦い（5月）でシェール・ハーンがフマーユーンを破る。フマーユーンはシンド・ペルシアへ逃れ、スール朝が北インドを治める", source: "https://ja.wikipedia.org/wiki/シェール・シャー"}
+    - {from: 1558, owner: "mughal", cause: "スール朝の長官がグワーリヤル城をアクバルに明け渡す", source: "https://en.wikipedia.org/wiki/Gwalior_Fort"}
+
+- id: pre_mp_bundelkhand
+  name: "ブンデールカンド（オールチャー・ダティアー・パンナー・ジャーンスィー）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Chhatarpur, IND-Datia, IND-Niwari, IND-Panna, IND-Tikamgarh, IND-Jhansi, IND-Jalaun]
+  timeline:
+    - {from: 1453, owner: "bundela", certainty: "uncertain", note: "ブンデーラ家などラージプートの首長の地（ガルクンダール）。ルドラ・プラタープが1531年にオールチャーを都とした"}
+    - {from: 1577, owner: "mughal", certainty: "indirect", label: "ブンデールカンドの諸王国", cause: "オールチャーのマドゥカル・シャーがアクバルに降る", source: "https://en.wikipedia.org/wiki/Orchha_State"}
+    - {from: 1635, owner: "mughal", cause: "オールチャーのジュジャール・シングの反乱をシャー・ジャハーンが鎮め、オールチャーを直轄とする", source: "https://en.wikipedia.org/wiki/Jhujhar_Singh"}
+    - {from: 1641, owner: "mughal", certainty: "indirect", label: "ブンデールカンドの諸王国", cause: "シャー・ジャハーンがパハール・シングをオールチャーの王とする", source: "https://en.wikipedia.org/wiki/Orchha_State"}
+  note: "ジャラウン（カールピー）はデリー・ジャウンプル・マールワーが争った（ここではブンデーラ家の地にまとめた。要確認）。"
+
+- id: pre_up_kalinjar
+  name: "カーリンジャル（バーンダー・マホーバー）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Banda, IND-Chitrakoot, IND-Hamirpur_2, IND-Mahoba]
+  timeline:
+    - {from: 1453, owner: "rajput_states", certainty: "uncertain", label: "カーリンジャル", note: "カーリンジャル城を中心とするラージプートの首長の地"}
+    - {from: 1545, owner: "sur", cause: "シェール・シャーがカーリンジャル城を攻め落とす（攻撃中の火薬の爆発で死去、5月）", source: "https://en.wikipedia.org/wiki/Kalinjar_Fort"}
+    - {from: 1556, owner: "rewa", cause: "スール朝の分裂の中、レーワーのラームチャンドラ（バゲール家）がカーリンジャルを取る", source: "https://en.wikipedia.org/wiki/Kalinjar_Fort"}
+    - {from: 1569, owner: "mughal", cause: "ラームチャンドラがカーリンジャル城をアクバルに明け渡す", source: "https://en.wikipedia.org/wiki/Kalinjar_Fort"}
+  note: "1648年以降の既存データはブンデールカンドの間接統治。"
+
+- id: pre_mp_baghelkhand
+  name: "バゲールカンド（レーワー）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Anuppur, IND-Rewa, IND-Satna, IND-Shahdol, IND-Sidhi, IND-Singrauli, IND-Umaria]
+  timeline:
+    - {from: 1453, owner: "rewa", note: "バゲール家の王国（都バーンダヴガル）"}
+    - {from: 1563, owner: "mughal", certainty: "indirect", label: "レーワーなどの諸王国", cause: "ラームチャンドラがアクバルに臣従する（宮廷の楽人ターンセーンをアクバルに送る）", source: "https://en.wikipedia.org/wiki/Rewa_State"}
+
+- id: pre_mp_garha
+  name: "ガルハ＝マンドラー（ジャバルプル・サーガル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Dindori, IND-Jabalpur, IND-Katni, IND-Mandla, IND-Narsimhapur, IND-Damoh, IND-Sagar]
+  timeline:
+    - {from: 1453, owner: "gondwana", certainty: "uncertain", note: "ゴンド人の首長の地。15世紀末からガルハ＝マンドラーの王国が大きくなり、サングラーム・シャー（1500年ごろ–1541）は52の城を従えた"}
+    - {from: 1500, owner: "gondwana", cause: "サングラーム・シャーがガルハ＝マンドラー王国を広げる", source: "https://en.wikipedia.org/wiki/Garha_Kingdom"}
+    - {from: 1564, owner: "mughal", certainty: "indirect", label: "ゴンド諸王国", cause: "アクバルの将軍アーサフ・ハーンがガルハを攻め、ラーニー・ドゥルガーワティーが戦死する。王国はムガル帝国に臣従する", source: "https://en.wikipedia.org/wiki/Rani_Durgavati"}
+  note: "サーガル・ダモーは15世紀にはマールワー・スルタン朝の勢力下にあった（要確認）。"
+
+- id: pre_mp_deogarh
+  name: "デーオガル・ケールラ（チンドワーラー・セオニー・バーラーガート・ベートゥール）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Balaghat, IND-Chhindwara, IND-Seoni, IND-Betul]
+  timeline:
+    - {from: 1453, owner: "gondwana", note: "ケールラ・デーオガルのゴンド人の王国。ケールラはマールワーとバフマニー朝が奪い合った"}
+    - {from: 1595, owner: "mughal", certainty: "indirect", label: "ゴンド諸王国", cause: "デーオガルの王がアクバルに貢納する（『アーイーニ・アクバリー』）", source: "https://en.wikipedia.org/wiki/Deogarh_kingdom"}
+  note: "ムガル帝国に従った年は要確認。"
+
+- id: pre_mp_nimar
+  name: "ハーンデーシュ北部（ブルハーンプル）（1453–1647）"
+  until: 1647
+  select:
+    pieces: [IND-Burhanpur, IND-Khandwa_East_Nimar]
+  timeline:
+    - {from: 1453, owner: "khandesh", note: "ファールーキー朝のハーンデーシュ王国（都ブルハーンプル、要塞アスィールガル）"}
+    - {from: 1600, owner: "mughal", cause: "アクバルがブルハーンプルを取り、アスィールガルを囲む（1601年1月に陥落）", source: "https://en.wikipedia.org/wiki/Siege_of_Asirgarh"}
+  note: "ハーンデーシュの本体（ジャルガーオンなど）は india_south.yaml（Z5）。"

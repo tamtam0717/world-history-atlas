@@ -6309,24 +6309,26 @@
   timeline:
     - from: 1453
       owner: dzungar
-      certainty: uncertain
-      note: ホルチン部などの東モンゴルの牧地（嫩江の流域）。1453年末はオイラトのエセンがハンを名のり、東モンゴルを従えていた
+      note: 1453年末はオイラトのエセンがハンを名のり、長城の外のモンゴル（ウリャンハイなど）を従えていた
       source: "https://ja.wikipedia.org/wiki/エセン・ハン"
-    - from: 1455
+    - from: 1454
+      owner: ming
+      certainty: nominal
+      label: 兀良哈三衛（福余衛）
+      cause: エセンが殺され、オイラトの覇権が崩れる
+      note: 嫩江の流域。明の羈縻衛所の福余衛のモンゴル（のちのホルチン部の地）
+      source: "https://en.wikipedia.org/wiki/Three_Guards"
+    - from: 1547
       owner: northern_yuan
-      cause: エセンが殺され（1454）、オイラトの覇権が崩れる
-      note: ホルチン部などの東モンゴルの牧地（嫩江の流域）
+      certainty: uncertain
+      label: ホルチン
+      cause: ホルチン部（ハサルの子孫）が嫩江の流域に勢力を張り、ウリャンハイの福余衛を併せる
       source: "https://ja.wikipedia.org/wiki/ホルチン"
-    - from: 1624
-      owner: northern_yuan
-      overlord: later_jin
-      cause: ホルチン部がヌルハチと同盟を結ぶ
-      source: "https://ja.wikipedia.org/wiki/ホルチン"
-    - from: 1635
+    - from: 1626
       owner: later_jin
       certainty: indirect
-      cause: チャハルのエジェイが降り、内モンゴルの諸部が後金に従う
-      source: "https://ja.wikipedia.org/wiki/リンダン・ハーン"
+      cause: ホルチン部がヌルハチと同盟を結び（1624）、チャハルに対して後金に付く
+      source: "https://ja.wikipedia.org/wiki/ホルチン"
     - from: 1636
       owner: qing
       certainty: indirect
@@ -6492,12 +6494,19 @@
     pieces: [CHN-Chaoyang, CHN-Chengde, CHN-Fuxin]
   timeline:
     - from: 1453
+      owner: dzungar
+      note: 1453年末はオイラトのエセンがハンを名のり、長城の外のモンゴル（ウリャンハイなど）を従えていた
+      source: "https://ja.wikipedia.org/wiki/エセン・ハン"
+    - from: 1454
       owner: ming
       certainty: nominal
-      note: 長城の外のウリャンハイ（兀良哈三衛・朵顔三衛）のモンゴルの牧地。明の羈縻衛所だが、モンゴルの勢力に従うことが多かった
+      label: 兀良哈三衛（朶顔衛）
+      cause: エセンが殺され、オイラトの覇権が崩れる
+      note: 長城の外のウリャンハイ（兀良哈三衛・朶顔三衛）のモンゴルの牧地。明の羈縻衛所だが、モンゴルの勢力に従うことが多かった
       source: "https://en.wikipedia.org/wiki/Three_Guards"
     - from: 1547
       owner: northern_yuan
+      label: ""
       cause: チャハル部のダライスン＝ハンが東へ移り、遼西・長城の外のウリャンハイを従える
       note: ウリャンハイ三衛はハラチン部・チャハル部など東モンゴルに組み込まれた
       source: "https://en.wikipedia.org/wiki/Three_Guards"
@@ -7226,8 +7235,15 @@
     - from: 1453
       owner: ming
       certainty: nominal
+      label: カム（明の羈縻）
       note: カム（東チベット）。明は朵甘衛（朵甘思宣慰司）を置いて土侯に官職を与えたが、実際には地元の首長・寺院が治めた
       source: "https://ja.wikipedia.org/wiki/カム_(チベット)"
+    - from: 1640
+      owner: khoshut
+      certainty: uncertain
+      label: ""
+      cause: ホシュートのグシ＝ハンがカムに進み、ボン教を保護したベリ王ドニョ・ドルジェを倒す
+      source: "https://ja.wikipedia.org/wiki/グシ・ハン"
     - from: 1642
       owner: tibet
       overlord: khoshut
