@@ -1693,7 +1693,7 @@
     - from: 1453
       main: sunni
       minor: other
-      note: スールー王国（15 世紀半ばにスルタン国）・マギンダナオ（16 世紀初めにシャリーフ・カブンスワンがイスラームを伝える）。ラナオのマラナオ人のイスラーム化は 16〜17 世紀。
+      note: スールー王国（15 世紀半ばにスルタン国）。マギンダナオ・ラナオは 1647 年まで別の地域（rel_maguindanao_pre・rel_lanao_sur_pre）で塗る。
       source: "https://ja.wikipedia.org/wiki/スールー王国"
     - from: 1520
       main: sunni
@@ -1705,6 +1705,37 @@
       main: sunni
       note: 1970 年代からモロ民族解放戦線（MNLF）、モロ・イスラーム解放戦線（MILF）の武装闘争。2019 年にバンサモロ自治地域が発足した。
       source: "https://ja.wikipedia.org/wiki/バンサモロ"
+- id: rel_maguindanao_pre
+  name: マギンダナオ（1453–1647）
+  select:
+    pieces: [PHL-Maguindanao, PHL-Cotabato_City]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: other
+      minor: sunni
+      note: プランギ川（ミンダナオ川）流域。在来の信仰に、スールー・ブルネイとの交易を通じてムスリムが加わり始めていた。
+    - from: 1520
+      main: sunni
+      minor: other
+      note: 16 世紀初めにジョホール出身のシャリーフ・カブンスワンがイスラームを伝え、マギンダナオ王国が成立した。
+      source: "https://ja.wikipedia.org/wiki/マギンダナオ王国"
+- id: rel_lanao_sur_pre
+  name: 南ラナオ（1453–1647）
+  select:
+    pieces: [PHL-Lanao_del_Sur]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: other
+      note: ラナオ湖周辺のマラナオ人。在来の信仰。
+    - from: 1520
+      main: other
+      minor: sunni
+      note: マギンダナオ王国の成立とともに、マラナオ人のイスラーム化が始まった。
+    - from: 1610
+      main: sunni
+      note: マラナオ人のイスラーム化は 16〜17 世紀に進み、17 世紀初めには多数がムスリムになっていた（目安の年）。
 - id: rel_isabela_basilan
   name: イサベラ（バシラン）
   select:
@@ -1723,8 +1754,9 @@
     pieces: [PHL-Zamboanga_del_Norte, PHL-Zamboanga_del_Sur, PHL-Zamboanga_Sibugay]
   timeline:
     - from: 1453
-      main: sunni
-      minor: other
+      main: other
+      minor: sunni
+      note: 住民の多数は内陸・半島のスバヌン人で、在来の信仰。海岸にはスールー・マギンダナオのムスリム（サマ人・タウスグ人）が住んだ。
     - from: 1648
       main: sunni
       minor: other
@@ -1780,7 +1812,15 @@
     pieces: [PHL-Lanao_del_Norte]
   timeline:
     - from: 1453
+      main: other
+      note: マラナオ人の在来の信仰。
+    - from: 1520
+      main: other
+      minor: sunni
+      note: マギンダナオ王国の成立とともに、マラナオ人のイスラーム化が始まった。
+    - from: 1610
       main: sunni
+      note: マラナオ人のイスラーム化は 16〜17 世紀に進んだ（目安の年）。
     - from: 1648
       main: sunni
       note: マラナオ人のムスリム。
@@ -1794,8 +1834,13 @@
     pieces: [PHL-Cotabato, PHL-South_Cotabato, PHL-Sarangani]
   timeline:
     - from: 1453
+      main: other
+      minor: sunni
+      note: 在来の信仰。海岸にはスールー・ブルネイとの交易でムスリムが来ていた。
+    - from: 1520
       main: sunni
       minor: other
+      note: シャリーフ・カブンスワンによるイスラームの伝来と、マギンダナオ王国の成立。山地は在来の信仰のまま。
     - from: 1648
       main: sunni
       minor: other
