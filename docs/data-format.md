@@ -179,6 +179,34 @@ indirect の使い道：
 書いてあればそれだけを代表点にし、領土による判定もしない（その場所が映っているときだけ「範囲内」）。
 経度 -180〜180・緯度 -90〜90 の数値で、`at` と `lon`・`lat` の両方は書かない（`npm run data` が警告する）。
 
+## 画像（images。任意）
+
+画面の画像は、閲覧時に Wikipedia から取ってくる（リポジトリには入れない）。
+
+- **自動**：`source` に Wikipedia の記事があれば、その記事の中の画像（REST API の `page/media-list`）から、絵画・写真・地図などを説明文つきで並べる。
+  国旗・紋章・ロゴ・アイコン・署名・小さな SVG・Wikimedia Commons にない画像は出さない。肖像は後ろに回す。
+  日本語版の記事の画像が少ないときは、`source` の次の記事（英語版など）や、言語間リンクでたどった英語版の記事からも足す。
+  - 出来事：重要度 1 は大きな代表画像＋サムネイルの帯（最大 6 枚）、2 はサムネイルの帯（最大 4 枚）、3 は 1 枚だけ小さく。
+  - 潮流：大きな代表画像＋サムネイルの帯（最大 6 枚）。
+  - 君主の肖像・国の国旗（紋章）は従来どおり記事の代表画像（`page/summary`）。
+- **手で書く**：出来事・潮流（data/movements）・情勢（政体の `periods`）・都市（cities.yaml）に `images` を書くと、ギャラリーの先頭に出す。
+  情勢は手で書いた画像だけを出す（情勢の `source` から自動では取らない）。都市の画像は、今は画面に出る場所がない（書き方だけ用意）。
+
+```yaml
+- year: 1789
+  title: バスティーユ襲撃
+  importance: 1
+  source: "https://ja.wikipedia.org/wiki/バスティーユ襲撃"
+  images:
+    - file: "Anonymous - Prise de la Bastille.jpg"   # Wikimedia Commons のファイル名（"File:" はなくてよい）
+      caption: バスティーユ襲撃（作者不詳、1789年）     # 説明（任意）。サムネイルの下とライトボックスに出る
+    - "Storming of the Bastille.jpg"                  # 説明なしなら文字列だけでもよい
+```
+
+- `file` は Commons のファイル名（`https://commons.wikimedia.org/wiki/File:…` の URL を貼ってもよい。`npm run data` が名前にそろえる）。
+  画面では `https://commons.wikimedia.org/wiki/Special:FilePath/{file}?width=N` でサムネイルを取る。
+- 自動で取った画像と同じファイルは二度出さない。
+
 ## 出典
 
 - 条約名、Wikipedia の記事（URL か「ja.wikipedia: 記事名」）、書籍名などを `source` に書く。

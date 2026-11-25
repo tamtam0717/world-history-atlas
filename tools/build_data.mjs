@@ -26,6 +26,32 @@ const langMissingYears = argVal("--language-missing")?.split(",").map(Number) ??
 const warnings = [];
 const warn = (msg) => warnings.push(msg);
 
+// 手で書く画像（images: [{ file, caption }]。docs/data-format.md の「画像」）。
+// file は Wikimedia Commons のファイル名。"File:"・"ファイル:" の接頭辞と "_" はそろえる。文字列だけでも書ける（caption なし）
+const normImages = (obj, where) => {
+  if (obj?.images == null) return;
+  const arr = Array.isArray(obj.images) ? obj.images : [obj.images];
+  const out = [];
+  arr.forEach((x, i) => {
+    const raw = typeof x === "string" ? { file: x } : x;
+    let file = typeof raw?.file === "string" ? raw.file : "";
+    file = file.replace(/^https?:\/\/commons\.wikimedia\.org\/wiki\//i, "").replace(/^(file|image|ファイル|画像)\s*:/i, "").replace(/_/g, " ").trim();
+    try {
+      if (/%[0-9A-F]{2}/i.test(file)) file = decodeURIComponent(file);
+    } catch {
+      /* そのまま */
+    }
+    if (!file || !/\.[a-z0-9]{3,4}$/i.test(file)) {
+      warn(`${where}: images[${i}] の file はファイル名（例 "Anonymous - Prise de la Bastille.jpg"）で書いてください`);
+      return;
+    }
+    if (raw.caption != null && typeof raw.caption !== "string") warn(`${where}: images[${i}] の caption は文字列で書いてください`);
+    out.push(raw.caption ? { file, caption: String(raw.caption) } : { file });
+  });
+  if (out.length) obj.images = out;
+  else delete obj.images;
+};
+
 function loadDir(dir) {
   const full = path.join(DATA, dir);
   if (!fs.existsSync(full)) return [];
@@ -88,6 +114,7 @@ for (const p of polities) {
     if (x?.text == null) warn(`${p._file} の ${p.id}: periods[${i}]（${x?.from ?? "?"}–）に text がありません`);
     if (x?.name != null) warn(`${p._file} の ${p.id}: periods[${i}] に name "${x.name}" があります（君主なら rulers の下へ）`);
   });
+  (p.periods ?? []).forEach((x, i) => normImages(x, `${p._file} の ${p.id}: periods[${i}]`));
   (p.rulers ?? []).forEach((x, i) => {
     if (x?.name == null) warn(`${p._file} の ${p.id}: rulers[${i}]（${x?.from ?? "?"}–）に name がありません（情勢なら periods の下へ）`);
   });
@@ -260,6 +287,7 @@ for (const e of events) {
   const where = `${e._file} の「${e.title}」`;
   if (typeof e.year !== "number") warn(`${where}: year が数値ではありません`);
   for (const p of e.polities ?? []) checkPolity(p, where);
+  normImages(e, where);
   // 任意の場所：lon・lat、または at: [経度, 緯度]。書かれていれば代表点として最優先する
   if (e.at != null || e.lon != null || e.lat != null) {
     if (e.at != null && (e.lon != null || e.lat != null)) warn(`${where}: 場所は at か lon・lat のどちらか一方で書いてください`);
@@ -474,6 +502,7 @@ const movements = [];
 const pseudoRegions = new Map();
 for (const m of movementsRaw) {
   const where = `${m._file} の ${m.id ?? "(id なし)"}`;
+  normImages(m, where);
   if (!m.id || !m.name) {
     warn(`${where}: 潮流には id と name が必要です`);
     continue;
@@ -558,6 +587,7 @@ const cities = readYaml("cities.yaml");
     seen.add(c.id);
     if (typeof c.lon !== "number" || typeof c.lat !== "number") warn(`cities.yaml: ${c.id} の座標がありません`);
     for (const k of c.capital ?? []) checkPolity(k.polity, `cities.yaml の ${c.id}`);
+    normImages(c, `cities.yaml の ${c.id}`);
   }
 }
 const modernCitiesFile = path.join(DATA, "generated", "cities_modern.json");
