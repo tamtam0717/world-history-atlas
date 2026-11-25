@@ -76,17 +76,13 @@ async function main() {
 
   const map = new AtlasMap($("#map"), topo, idx, {
     onSelect: (id) => selectPolity(id, false),
-    onBlank: (piece) => {
-      selectPolity(null, false, piece);
-      sheet.reveal();
-    },
+    onBlank: (piece) => selectPolity(null, false, piece),
     onReligion: (pick) => {
       state.relPick = pick;
       markPush();
       nextForce = true;
       updateUi();
       if (pick) {
-        sheet.reveal();
         // スマホでは凡例が地図を広く覆うので、場所を選んだら畳む
         if (matchMedia("(max-width: 799px)").matches) {
           $("#rel-legend").classList.add("collapsed");
@@ -117,6 +113,55 @@ async function main() {
     (kind, regions) => map.flashRegions(kind, regions),
   );
   panel.range = [minYear, maxYear];
+
+  // ---- 国の情報カード（地図の左下に浮かぶ。スマホでは下シートの上） ----
+  // PC：凡例（宗教・言語の表示では #rel-legend）のすぐ上に置き、左上のボタン類の下までに収める。
+  // 凡例が高くて場所が足りないときは、凡例の右に並べる。スマホの位置・高さは CSS（--sheet-h）で決める。
+  const card = $("#polity");
+  const mapEl = $("#map");
+  const zoomButtons = $(".zoom-buttons");
+  const visibleRect = (el: Element) => {
+    const r = el.getBoundingClientRect();
+    return r.width > 0 && r.height > 0 ? r : null;
+  };
+  function layoutCard() {
+    if (mobile.matches) {
+      card.style.removeProperty("left");
+      card.style.removeProperty("bottom");
+      card.style.removeProperty("max-height");
+      return;
+    }
+    if (card.hidden) return;
+    const m = mapEl.getBoundingClientRect();
+    const anchor = visibleRect($("#rel-legend")) ?? visibleRect($(".legend"));
+    const top = (visibleRect(zoomButtons)?.bottom ?? m.top + 48) - m.top + 10;
+    let left = 12;
+    let bottom = anchor ? m.bottom - anchor.top + 8 : 12;
+    let avail = m.height - bottom - top;
+    // 凡例が高い（言語の凡例を開いたときなど）：凡例の右に並べる
+    if (anchor && avail < 240 && anchor.height > 80) {
+      left = anchor.right - m.left + 10;
+      bottom = 10;
+      avail = m.height - bottom - 48;
+    }
+    card.style.left = `${left}px`;
+    card.style.bottom = `${bottom}px`;
+    card.style.maxHeight = `${Math.round(Math.max(120, Math.min(m.height * 0.55, avail)))}px`;
+  }
+  panel.onCardChange = layoutCard;
+  const ro = new ResizeObserver(() => layoutCard());
+  for (const el of [mapEl, $(".legend"), $("#rel-legend"), zoomButtons]) ro.observe(el);
+  mobile.addEventListener("change", layoutCard);
+  /** 国へ寄せるとき、カードに隠れる部分（地図の左端・下端からのピクセル）。カードの幅と高さの、地図を狭めない方を使う */
+  function cardAvoid(): { left: number; bottom: number } {
+    const r = visibleRect(card);
+    if (!r) return { left: 0, bottom: 0 };
+    const m = mapEl.getBoundingClientRect();
+    if (mobile.matches) return { left: 0, bottom: Math.max(0, m.bottom - r.top - map.bottomInset) };
+    const left = r.right - m.left;
+    const bottom = m.bottom - r.top;
+    return left / m.width < bottom / m.height ? { left, bottom: 0 } : { left: 0, bottom };
+  }
   // 出来事・国境の変化は、地図に映っている地域のものから先に並べる（地図を動かし終えたら並べ直す）
   panel.viewProbe = () => {
     if (!mobile.matches) return map.viewProbe();
@@ -214,10 +259,8 @@ async function main() {
     state.polity = id;
     if (nextNav === "replace") markPush();
     update();
-    if (id) {
-      sheet.reveal();
-      if (focus) map.focus(id);
-    }
+    // 国の情報は地図の上のカードに出るので、シート（スマホ）は引き上げない
+    if (id && focus) map.focus(id, cardAvoid());
   }
 
   /** 潮流を選ぶ（null で解除）。勢いのない年にいるときは、最盛期の年へ移動する */
@@ -584,7 +627,7 @@ async function main() {
       }
     },
     focusSelected: () => {
-      if (state.polity) map.focus(state.polity);
+      if (state.polity) map.focus(state.polity, cardAvoid());
     },
     copyUrl: () => {
       const url = location.href;

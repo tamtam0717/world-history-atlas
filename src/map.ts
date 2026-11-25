@@ -1849,14 +1849,33 @@ export class AtlasMap {
     return { id: this.idx.atlas.polities[best].id, partial: n < total };
   }
 
-  /** 選んだ政体が画面に入るように寄せる（すでに十分な大きさで収まっていれば動かさない） */
-  focus(id: string) {
+  /**
+   * 選んだ政体が画面に入るように寄せる（すでに十分な大きさで収まっていれば動かさない）。
+   * avoid：地図の上に浮かぶカードなどで隠れる幅（左端から）・高さ（下端から、bottomInset より上の分）。その部分を避けて寄せる
+   */
+  focus(id: string, avoid: { left: number; bottom: number } = { left: 0, bottom: 0 }) {
     if (!this.loaded) return;
     const geo = this.polityGeo(id);
     if (!geo) return;
     const b = bbox(geo);
     const view = this.map.getBounds();
-    const inView = view.contains([b[0], b[1]]) && view.contains([b[2], b[3]]);
+    let inView = view.contains([b[0], b[1]]) && view.contains([b[2], b[3]]);
+    if (inView && (avoid.left || avoid.bottom)) {
+      // カードに隠れていないか（範囲の四隅が、カードを除いた見える部分に入っているか）
+      const c = this.map.getContainer();
+      const maxY = c.clientHeight - this.bottomInset - avoid.bottom;
+      inView = (
+        [
+          [b[0], b[1]],
+          [b[2], b[3]],
+          [b[0], b[3]],
+          [b[2], b[1]],
+        ] as [number, number][]
+      ).every((p) => {
+        const q = this.map.project(p);
+        return q.x >= avoid.left && q.x <= c.clientWidth && q.y >= 0 && q.y <= maxY;
+      });
+    }
     const viewW = view.getEast() - view.getWest();
     if (inView && b[2] - b[0] > viewW * 0.08) return;
     this.map.fitBounds(
@@ -1864,7 +1883,7 @@ export class AtlasMap {
         [b[0], b[1]],
         [b[2], b[3]],
       ],
-      { padding: 60, maxZoom: 6.5, duration: 700 },
+      { padding: { top: 60, right: 60, bottom: 60 + avoid.bottom, left: 60 + avoid.left }, maxZoom: 6.5, duration: 700 },
     );
   }
 

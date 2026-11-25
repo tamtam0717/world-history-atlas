@@ -18,15 +18,28 @@ export function setupSheet(panel: HTMLElement, handle: HTMLElement) {
     return { peek, half: Math.round(vh * 0.5), full: Math.round(vh * 0.88) };
   };
 
+  /** シートの高さを CSS 変数 --sheet-h に書く（地図の上の国のカードがシートの上に乗るように） */
+  const root = document.documentElement;
+  const setH = (px: number | null, animate: boolean) => {
+    if (px == null) {
+      panel.style.height = "";
+      root.style.removeProperty("--sheet-h");
+      return;
+    }
+    panel.style.height = `${px}px`;
+    root.style.setProperty("--sheet-h", `${px}px`);
+    root.classList.toggle("sheet-dragging", !animate);
+  };
+
   const apply = (s: Snap, animate = true) => {
     snap = s;
     panel.dataset.snap = s;
     if (!mq.matches) {
-      panel.style.height = "";
+      setH(null, false);
       return;
     }
     panel.style.transition = animate ? "height .25s ease" : "none";
-    panel.style.height = `${heights()[s]}px`;
+    setH(heights()[s], animate);
   };
 
   const snapTo = (cur: number, velocity: number) => {
@@ -89,7 +102,7 @@ export function setupSheet(panel: HTMLElement, handle: HTMLElement) {
     drag.lastY = y;
     drag.lastT = now;
     const h = heights();
-    panel.style.height = `${Math.max(h.peek, Math.min(h.full, drag.startH + dy))}px`;
+    setH(Math.max(h.peek, Math.min(h.full, drag.startH + dy)), false);
   };
 
   const onEnd = () => {
@@ -122,7 +135,7 @@ export function setupSheet(panel: HTMLElement, handle: HTMLElement) {
   window.addEventListener("mousemove", (e) => {
     if (!mouse) return;
     const h = heights();
-    panel.style.height = `${Math.max(h.peek, Math.min(h.full, mouse.startH + mouse.startY - e.clientY))}px`;
+    setH(Math.max(h.peek, Math.min(h.full, mouse.startH + mouse.startY - e.clientY)), false);
   });
   window.addEventListener("mouseup", (e) => {
     if (!mouse) return;

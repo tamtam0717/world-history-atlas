@@ -1,4 +1,5 @@
-// 右パネル（スマホでは下からのシート）の中身：その年の出来事・国境の変化・選んだ国の情報
+// 右パネル（スマホでは下からのシート）の中身：その年の出来事・国境の変化・分布の変化・潮流。
+// 選んだ国（所属なしの土地・宗教／言語の地域）の情報は、地図の上に浮かぶカード（#polity）に出す
 
 import { AtlasIndex, curveAt, curveMax, sourcesOf, type BorderChange, type CurvePoint, type DistKey, type HistEvent, type Movement, type Polity, type ReligionEntry, type Ruler } from "./data";
 import { MOVEMENT_COLORS, secularColor, secularText, type BlankInfo, type ReligionPick, type ViewProbe } from "./map";
@@ -93,6 +94,15 @@ export class Panel {
         if ((e.target as Element).closest("[data-close]")) this.onPolity(null);
       });
     }
+    // スマホ：カードの見出し・要約を押すと、折りたたみ／展開を切り替える（リンク・ボタンの上は除く）
+    polityEl.addEventListener("click", (e) => {
+      const t = e.target as Element;
+      if (!matchMedia("(max-width: 799px)").matches) return;
+      if (t.closest("a, button, [data-year], [data-polity]") || !t.closest("[data-card-toggle]")) return;
+      polityEl.classList.toggle("expanded");
+      polityEl.querySelector<HTMLElement>(".card-body")?.scrollTo(0, 0);
+      this.onCardChange();
+    });
   }
 
   private link(id: string | null | undefined, year: number) {
@@ -145,16 +155,6 @@ export class Panel {
       }</span>地域：${g[0].body}</summary><div class="grp-list">${sorted.map((x) => esc(x.name)).join("、")}</div></details></li>`;
     }
     return html;
-  }
-
-  private changeLine(c: BorderChange, year: number) {
-    const note = c.cur.cause ? `<span class="cause">${escY(c.cur.cause)}</span>` : "";
-    const ov =
-      c.prev.owner === c.cur.owner && c.prev.overlord !== c.cur.overlord
-        ? `（上位：${this.link(c.prev.overlord, year)} → ${this.link(c.cur.overlord, year)}）`
-        : "";
-    const owners = c.prev.owner === c.cur.owner ? this.link(c.cur.owner, year) : `${this.link(c.prev.owner, year - 1)} → ${this.link(c.cur.owner, year)}`;
-    return `<li class="change"><b>${esc(this.idx.regionName(c.region, year))}</b>：${owners}${ov} ${note}${srcList(c.cur)}</li>`;
   }
 
   private eventLine(e: HistEvent, year: number, k?: number) {
@@ -400,33 +400,32 @@ export class Panel {
   /** 宗教・言語の表示でクリックした地域の説明（pick が null なら閉じる） */
   renderReligion(pick: ReligionPick | null, year: number, key: DistKey = "religion") {
     if (!pick) {
-      this.polityEl.hidden = true;
-      this.polityEl.innerHTML = "";
+      this.closeCard();
       return;
     }
-    this.polityEl.hidden = false;
     const label = DIST_LABEL[key];
     const r = pick.region >= 0 ? this.idx.dist(key)?.regions[pick.region] : undefined;
     const cur = r ? this.idx.distEntry(key, pick.region, year) : null;
     const fam = key === "language" ? this.idx.distKind(key, cur?.main)?.family : undefined;
     // 世俗化の割合は、外側の大きい地域に書かれていることもあるのでピースの値から引く
     const secular = key !== "religion" ? 0 : pick.piece != null ? (this.idx.distState(key, pick.piece, year)?.[4] ?? 0) : (cur?.secular ?? 0);
-    let html = `<div class="card-head">
-        <span class="swatch big" style="background:${esc(secularColor(this.idx.distKind(key, cur?.main)?.color ?? "#e2e0dc", secular))}"></span>
+    const head = `<span class="swatch big" style="background:${esc(secularColor(this.idx.distKind(key, cur?.main)?.color ?? "#e2e0dc", secular))}"></span>
         <div><h2>${esc(r?.name ?? pick.place)}</h2>
-        <div class="meta">${key === "language" ? "言語（民族）" : "宗教"}の分布${r ? ` ・ ${esc(pick.place)}付近` : ""}${fam ? ` ・ ${esc(fam)}` : ""}</div></div>
-        <button class="close" data-close aria-label="閉じる">×</button>
-      </div>`;
+        <div class="meta">${key === "language" ? "言語（民族）" : "宗教"}の分布${r ? ` ・ ${esc(pick.place)}付近` : ""}${fam ? ` ・ ${esc(fam)}` : ""}</div></div>`;
+    let body = "";
+    let peek = "";
     if (!r || !cur) {
-      html += `<p class="empty">${year}年の${label}データはまだありません（作成中）。</p>`;
+      body += `<p class="empty">${year}年の${label}データはまだありません（作成中）。</p>`;
+      peek = `<span class="muted">${year}年の${label}データはまだありません</span>`;
     } else {
-      html += `<h3>${year}年</h3>
+      peek = `<span class="pk-label">多数派</span>${this.relKind(cur.main, key)}${cur.minor ? `<span class="rel-minor">＋${this.relKind(cur.minor, key)}</span>` : ""}`;
+      body += `<h3>${year}年</h3>
         <dl class="rel-now"><dt>多数派</dt><dd>${this.relKind(cur.main, key)}</dd>${
           cur.minor ? `<dt>少数派</dt><dd>${this.relKind(cur.minor, key)}</dd>` : ""
         }${secular ? this.secularRow(secular, this.idx.distKind(key, cur.main)?.color ?? "#c8c4bb") : ""}</dl>`;
-      if (cur.note) html += `<p class="period">${escY(cur.note)}</p>`;
+      if (cur.note) body += `<p class="period">${escY(cur.note)}</p>`;
       if (r.timeline.length > 1) {
-        html += `<h3>変遷</h3><ul class="rel-timeline">${r.timeline
+        body += `<h3>変遷</h3><ul class="rel-timeline">${r.timeline
           .map(
             (e) =>
               `<li class="${e === cur ? "now" : ""}"><span class="years">${yl(e.from)}–</span>${this.relSummary(e, key)}${
@@ -436,42 +435,37 @@ export class Panel {
           .join("")}</ul>`;
       }
     }
-    this.polityEl.innerHTML = html;
+    this.openCard(`d:${key}:${pick.region}:${pick.region < 0 ? pick.place : ""}`, head, peek, body);
   }
 
   /** 国のない土地（所属なし・データ未整備・準備中）をクリックしたときの説明（info が null なら閉じる） */
   renderBlank(info: BlankInfo | null, year: number) {
     if (!info) {
-      this.polityEl.hidden = true;
-      this.polityEl.innerHTML = "";
+      this.closeCard();
       return;
     }
-    this.polityEl.hidden = false;
-    const head = {
+    const h = {
       unowned: { cls: "unowned", title: "所属なし", meta: "どの国にも属さない土地" },
       nodata: { cls: "nodata", title: "データ未整備", meta: `${year}年の所属はまだ調べていません` },
       pending: { cls: "pending", title: info.modern, meta: "現代の国境（この地域の歴史の地図は準備中）" },
     }[info.kind];
-    let html = `<div class="card-head">
-        <span class="swatch big blank-${head.cls}"></span>
-        <div><h2>${esc(head.title)}</h2>
-        <div class="meta">${esc(head.meta)}</div></div>
-        <button class="close" data-close aria-label="閉じる">×</button>
-      </div>`;
+    const head = `<span class="swatch big blank-${h.cls}"></span>
+        <div><h2>${esc(h.title)}</h2>
+        <div class="meta">${esc(h.meta)}</div></div>`;
     const place = info.region ? `${esc(info.region)}（${esc(info.place)}付近）` : `${esc(info.place)}（${esc(info.modern)}）`;
-    html += `<p class="period"><span class="years">場所</span>${place}</p>`;
+    let body = `<p class="period"><span class="years">場所</span>${place}</p>`;
     if (info.kind === "unowned") {
-      html += `<p class="period">先住民の暮らす地や無人の地など、${year}年の時点でどの国の支配も及んでいなかった土地として描いています（データ未整備ではありません）。</p>`;
-      if (info.note) html += `<p class="period">${escY(info.note)}</p>`;
-      if (info.cause) html += `<p class="period"><span class="cause">${escY(info.cause)}</span></p>`;
+      body += `<p class="period">先住民の暮らす地や無人の地など、${year}年の時点でどの国の支配も及んでいなかった土地として描いています（データ未整備ではありません）。</p>`;
+      if (info.note) body += `<p class="period">${escY(info.note)}</p>`;
+      if (info.cause) body += `<p class="period"><span class="cause">${escY(info.cause)}</span></p>`;
     }
-    if (info.since != null && info.kind === "unowned") html += `<p class="period"><span class="years">${yl(info.since)}–</span>この状態</p>`;
+    if (info.since != null && info.kind === "unowned") body += `<p class="period"><span class="years">${yl(info.since)}–</span>この状態</p>`;
     if (info.next) {
-      html += `<p class="period"><span class="years"><a href="#" class="ylink" data-year="${info.next.year}">${info.next.year}年</a></span>${
+      body += `<p class="period"><span class="years"><a href="#" class="ylink" data-year="${info.next.year}">${info.next.year}年</a></span>${
         info.kind === "nodata" && info.since == null ? "からデータがあります：" : "から："
       }${info.next.owner ? this.link(info.next.owner, info.next.year) : "所属なし"}</p>`;
     }
-    this.polityEl.innerHTML = html;
+    this.openCard(`b:${info.kind}:${info.region ?? ""}:${info.place}`, head, `<span class="pk-label">場所</span>${place}`, body);
   }
 
   renderPolity(
@@ -482,18 +476,14 @@ export class Panel {
   ) {
     const p = id ? this.idx.polityById.get(id) : undefined;
     if (!p) {
-      this.polityEl.hidden = true;
-      this.polityEl.innerHTML = "";
+      this.closeCard();
       return;
     }
-    this.polityEl.hidden = false;
     const rulers = this.idx.rulersAt(p, year);
     const periods = this.idx.periodsAt(p, year);
-    const events = this.idx.eventsIn(year).filter((e) => e.polities?.includes(p.id));
-    const changes = this.idx.borderChangesIn(year).filter((c) => c.prev.owner === p.id || c.cur.owner === p.id);
+    // その年の出来事・国境の変化はカードには出さない（右パネルの一覧で、この国に関係するものが先頭に並ぶ）
 
-    let html = `<div class="card-head">
-        <span class="swatch big" style="background:${esc(p.color ?? "#ccc")}"></span>
+    const head = `<span class="swatch big" style="background:${esc(p.color ?? "#ccc")}"></span>
         <div><h2>${esc(this.idx.polityName(p, year))}</h2>
         <div class="meta">${[
           this.idx.kindAt(p, year),
@@ -506,11 +496,15 @@ export class Panel {
             ? `<div class="meta indirect" title="地図では、その国の色を薄くして塗っている地域">間接統治：${indirect.names.slice(0, 5).map(esc).join("・") || "一部の地域"}${indirect.names.length > 5 ? " など" : ""}</div>`
             : ""
         }</div>
-        ${imageSlot(wikiRefs(p.source), "emblem", this.idx.polityName(p, year))}
-        <button class="close" data-close aria-label="閉じる">×</button>
-      </div>`;
-    html += `<h3>君主</h3>`;
-    html += rulers.length
+        ${imageSlot(wikiRefs(p.source), "emblem", this.idx.polityName(p, year))}`;
+    // 折りたたんだとき（スマホ）の1〜2行：今の君主1人と、情勢の書き出し
+    const r0 = rulers[0];
+    const peek = [
+      r0 ? `<div class="pk-line"><span class="pk-label">君主</span><b>${esc(r0.name)}</b>${r0.title ? `<span class="title">${esc(r0.title)}</span>` : ""}${rulers.length > 1 ? `<span class="pk-more">ほか${rulers.length - 1}人</span>` : ""}</div>` : "",
+      periods[0] ? `<div class="pk-line pk-period">${esc(periods[0].text)}</div>` : "",
+    ].join("");
+    let body = `<h3>君主</h3>`;
+    body += rulers.length
       ? `<ul class="rulers">${rulers
           .map(
             (r) =>
@@ -520,20 +514,55 @@ export class Panel {
           )
           .join("")}</ul>`
       : `<p class="empty">データ未登録</p>`;
-    html += `<h3>情勢</h3>`;
-    html += periods.length
+    body += `<h3>情勢</h3>`;
+    body += periods.length
       ? periods.map((x) => `<p class="period"><span class="years">${yearRange(x.from, x.to)}</span>${escY(x.text)}${srcList(x)}</p>`).join("")
       : `<p class="empty">データ未登録</p>`;
-    if (events.length || changes.length) {
-      html += `<h3>${year}年の出来事</h3><ul class="events">${events.map((e) => this.eventLine(e, year)).join("")}${changes
-        .map((c) => this.changeLine(c, year))
-        .join("")}</ul>`;
-    }
-    if (p.note) html += `<p class="note">${escY(p.note)}</p>`;
-    html += srcList(p);
-    this.polityEl.innerHTML = html;
-    hydrateImages(this.polityEl);
+    if (p.note) body += `<p class="note">${escY(p.note)}</p>`;
+    body += srcList(p);
+    this.openCard(`p:${p.id}`, head, peek || `<span class="muted">データ未登録</span>`, body);
   }
+
+  // ---- 地図の上に浮かぶ情報カード（国・所属なしの土地・宗教／言語の地域） ----
+  /** いまカードに出している対象（変わったら、スマホでは折りたたみに戻す） */
+  private cardKey = "";
+
+  /**
+   * カードを開く（中身を差し替える）。
+   * head：見出し（色の見本・名前・種類）。peek：スマホで折りたたんだときだけ出す1〜2行の要約。body：本文（カードの中でスクロール）
+   */
+  private openCard(key: string, head: string, peek: string, body: string) {
+    const el = this.polityEl;
+    if (key !== this.cardKey) {
+      el.classList.remove("expanded");
+      this.cardKey = key;
+    }
+    const scroller = el.querySelector<HTMLElement>(".card-body");
+    const top = el.hidden ? 0 : (scroller?.scrollTop ?? 0);
+    el.hidden = false;
+    el.innerHTML = `<div class="card-head" data-card-toggle>${head}
+        <span class="card-caret" aria-hidden="true"></span>
+        <button class="close" data-close aria-label="閉じる">×</button>
+      </div>
+      <div class="card-peek" data-card-toggle>${peek}</div>
+      <div class="card-body">${body}</div>`;
+    // 同じ対象で年を変えたときは、読んでいた位置を保つ
+    const sc = el.querySelector<HTMLElement>(".card-body");
+    if (sc && top) sc.scrollTop = top;
+    hydrateImages(el);
+    this.onCardChange();
+  }
+
+  private closeCard() {
+    this.polityEl.hidden = true;
+    this.polityEl.innerHTML = "";
+    this.polityEl.classList.remove("expanded");
+    this.cardKey = "";
+    this.onCardChange();
+  }
+
+  /** カードの表示・中身・大きさが変わったとき（main.ts が地図の上の配置を合わせる） */
+  onCardChange: () => void = () => {};
 }
 
 // ---- 君主の肖像：どの記事の画像を使うか ----
