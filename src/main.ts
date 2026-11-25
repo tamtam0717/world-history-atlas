@@ -289,7 +289,7 @@ async function main() {
   const step = (d: number) => () => setYear(state.year + d, "step");
   $("#prev").addEventListener("click", step(-1));
   $("#next").addEventListener("click", step(1));
-  // «» は前後の「節目」へジャンプ。国を選んでいる間は、その国の節目（関係する出来事・領土の大きな変化・国名の変化）へ
+  // «» は前後の「節目」へジャンプ。国を選んでいる間は、その国の節目（重要な出来事・領土の大きな変化・国名の変化）へ
   const milestones = atlas.milestones ?? [];
   const polityMs = new PolityMilestones(topo, idx, [minYear, maxYear]);
   type Ms = { year: number; title: string; detail?: string[]; terr?: string };
