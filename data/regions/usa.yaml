@@ -1474,7 +1474,7 @@
   timeline:
     - from: 1453
       owner: null
-      note: "サモアの首長たちの地"
+      note: "サモアの首長（マタイ）たちの地"
     - from: 1873
       owner: "samoa_kingdom"
       certainty: "uncertain"
@@ -6985,7 +6985,8 @@
   timeline:
     - from: 1453
       owner: null
-      note: "島ごとに首長（アリイ）が治めた（ハワイ島は16世紀初めにウミ・ア・リロアが統一したと伝わる）"
+      note: "島ごと（または島の一部ごと）に首長（アリイ）が治め、統一した国家はなかった（ハワイ島は16世紀初めにウミ・ア・リロアが統一したと伝わる）。1795年までピースが島ごとに分かれていないので所属なしにした"
+      source: "https://ja.wikipedia.org/wiki/ハワイの歴史"
     - from: 1795
       owner: "hawaii"
       cause: "カメハメハ1世がオアフ島を征服し、ハワイ王国を建てる（カウアイ島は1810年に服属）"
@@ -8713,45 +8714,6 @@
       owner: null
       note: "どの国家の支配も及んでいない先住民の地。ミシシッピ文化の首長国（カホキアなど）は15世紀までに衰え、南東部には小さな首長国が残っていた。16世紀にはヨーロッパ人の持ち込んだ疫病で多くの人々が亡くなった。大平原・西部は狩猟・採集や農耕の諸部族の地"
       source: "https://ja.wikipedia.org/wiki/ミシシッピ文化"
-
-- id: pre1648_hawaii
-  name: "ハワイ諸島（1648年以前）"
-  until: 1647
-  select:
-    pieces: [USA-Hawaii, USA-Kauai_and_Niihau]
-  timeline:
-    - from: 1453
-      owner: null
-      note: "島ごと（または島の一部ごと）に首長（アリイ）が治め、統一した国家はなかった。ハワイ島では16世紀にウミ・ア・リロアが島を一つにまとめたと伝えられる。ピースが島ごとに分かれていないので所属なしにした"
-      source: "https://ja.wikipedia.org/wiki/ハワイの歴史"
-
-- id: pre1648_samoa
-  name: "アメリカ領サモア（1648年以前）"
-  until: 1647
-  select:
-    pieces: [USA-American_Samoa, USA-Manu_a_Islands]
-  timeline:
-    - from: 1453
-      owner: null
-      note: "サモアの首長（マタイ）たちの地。マヌア諸島は王（トゥイ・マヌア）が治めた"
-      source: "https://en.wikipedia.org/wiki/History_of_American_Samoa"
-
-- id: pre1648_marianas
-  name: "グアム・北マリアナ諸島（1648年以前）"
-  until: 1647
-  select:
-    regions: [us_guam, us_nmi]
-  timeline:
-    - from: 1453
-      owner: null
-      note: "チャモロの人々の地"
-    - from: 1565
-      owner: spain
-      certainty: nominal
-      label: "ラドロネス諸島（スペイン領東インド）"
-      cause: "レガスピがグアムに上陸し、スペインの領有を宣言する（1月）"
-      note: "1521年にマゼランが来航した。スペインはマニラとアカプルコを結ぶガレオン船の寄港地としたが、入植と伝道は1668年から"
-      source: "https://ja.wikipedia.org/wiki/グアムの歴史"
 
 # ---------------------------------------------------------------- 先住民の勢力
 - id: pre1648_iroquois_core

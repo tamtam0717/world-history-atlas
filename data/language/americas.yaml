@@ -3857,6 +3857,7 @@
   name: 南米のスペイン語の地域（既定値）
   select:
     iso: [COL, VEN, ECU, PER, BOL, CHL, ARG, URY, PRY]
+    exclude: [ECU-Galapagos]   # 1832 年まで無人（整合で除いた。lang_galapagos が 1832 年から）
   timeline:
     - from: 1648
       main: spanish

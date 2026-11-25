@@ -2648,7 +2648,7 @@
 - id: rel_british_caribbean
   name: イギリス領の西インド諸島（バルバドス・リーワード諸島・バハマなど）
   select:
-    iso: [BRB, ATG, KNA, AIA, MSR, VGB, BHS, TCA, CYM]
+    iso: [BRB, ATG, KNA, AIA, MSR, VGB, BHS, TCA]   # ケイマン諸島は rel_cayman（1680 年まで無人で値なし。整合で除いた）
   timeline:
     - from: 1453
       main: other
@@ -2713,12 +2713,9 @@
   select:
     iso: [CYM]
   timeline:
-    - from: 1453
-      main: other
-      note: ケイマン諸島は 17 世紀後半まで無人（ほかの島と同じ値を入れている）
-    - from: 1648
+    - from: 1680
       main: anglican
-      note: ジャマイカからの入植（1730 年代から定住）。
+      note: ケイマン諸島は 17 世紀後半まで無人で、それまでは値を入れない（整合で 1648 年から 1680 年に直し、言語の lang_cayman_tca とそろえた）。ジャマイカからの入植（1730 年代から定住）。
     - from: 1850
       main: reformed
       minor: evangelical
@@ -2915,6 +2912,7 @@
   name: 南米（スペイン・ポルトガルの植民地の中心部）
   select:
     iso: [COL, VEN, ECU, PER, BOL, CHL, ARG, URY, PRY, BRA]
+    exclude: [ECU-Galapagos]   # 1832 年まで無人（整合で除いた。rel_ecuador_galapagos が 1832 年から）
   timeline:
     - from: 1648
       main: catholic
@@ -3243,6 +3241,15 @@
     - from: 1670
       main: catholic
       note: カイエンヌ（1664 年にフランスが確保）。1852–1953 年は流刑地（悪魔島）。
+- id: rel_brazil_df_early
+  name: ブラジリア（連邦直轄区、植民の前）
+  until: 1719
+  select:
+    pieces: [BRA-Distrito_Federal]
+  timeline:
+    - from: 1453
+      main: other
+      note: ゴイアスと同じ内陸の先住民の地（整合で足した。1648–1719 年も rel_brazil の catholic ではなく、ゴイアス・言語の lang_brazil_interior とそろえた）。1720 年からは rel_brazil の値
 - id: rel_brazil_interior
   name: ブラジルの内陸（植民の遅い地域）
   select:
