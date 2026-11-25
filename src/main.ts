@@ -289,7 +289,7 @@ async function main() {
   const step = (d: number) => () => setYear(state.year + d, "step");
   $("#prev").addEventListener("click", step(-1));
   $("#next").addEventListener("click", step(1));
-  // «» は前後の「節目」へジャンプ。国を選んでいる間は、その国の節目（領土の大きな変化・重要な出来事・国名の変化）へ
+  // «» は前後の「節目」へジャンプ。国を選んでいる間は、その国の節目（関係する出来事・領土の大きな変化・国名の変化）へ
   const milestones = atlas.milestones ?? [];
   const polityMs = new PolityMilestones(topo, idx, [minYear, maxYear]);
   type Ms = { year: number; title: string; detail?: string[]; terr?: string };
@@ -724,6 +724,8 @@ async function main() {
   panel.arrangeByView(false); // 地図の準備ができたので、映っている地域の出来事を先にする
   // 国の情報の「上位の政体」「間接統治」は地図の所属から求めるので、最初の描画が終わってから出し直す
   if (state.polity && !isDist(state.layer)) panel.renderPolity(state.polity, state.year, map.overlordOf(state.polity), map.indirectOf(state.polity));
+  // URL で国を指定して開いたときも、その国へ寄る（カードに隠れない位置に）
+  if (state.polity) map.focus(state.polity, cardAvoid());
   void map.loadWater(base);
 }
 
