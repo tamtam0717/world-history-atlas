@@ -476,7 +476,9 @@
   source: "https://ja.wikipedia.org/wiki/改革開放"
 
 # ---- 1453–1647（2026-11-25、Z8 担当）----
-# 明の領域は polities: [ming]（home_iso がないので、羈縻の地を含むその年の明の全領域）。日本は adm1、モンゴル・チベットは iso・adm1 で書く。
+# 明の領域は polities: [ming]（home_iso がないので、その年の明の全領域）。日本は adm1、モンゴル・チベットは iso・adm1 で書く。
+# 明の羈縻・名目・間接統治（土司）の地（certainty が nominal・indirect のピースの地域。女真・兀良哈・青海・ハミ・チベット東部・西南の土司など）は
+# exclude_regions で除く（レビュー 1453_asia_distributions の B。一覧は最初の yangming に &ming_jimi で書き、ほかは *ming_jimi で参照）。
 
 - id: yangming
   name: 陽明学
@@ -491,7 +493,9 @@
     - [1720, 0.1]
     - [1750, 0.0]
   spread:
-    - where: {polities: [ming]}
+    - where:
+        polities: [ming]
+        exclude_regions: &ming_jimi [chamdo, golog_yushu, kokonor, hami, juu_uda, hinggan_jirim, pre1648_primorye, mmr_kokang, cn15_heilongjiang_daqing, cn15_heilongjiang_hegang, cn15_heilongjiang_jixi, cn15_jilin_baicheng, cn15_jilin_baishan, cn15_jilin_changchun, cn15_jilin_liaoyuan, cn15_jilin_siping, cn15_jilin_yanbian, cn15_liaoning_benxi, cn15_liaoning_chaoyang, cn15_gansu_gannan, cn15_gansu_jiuquan, cn15_sichuan_aba, cn15_sichuan_ganzi, cn15_sichuan_liangshan, cn15_yunnan_dehong, cn15_yunnan_honghe, cn15_guizhou_bijie, cn15_guizhou_zunyi, cn15_hubei_enshi, cn15_hunan_xiangxi, cn15_guangxi_baise, cn15_taiwan_penghu]
       center: true
       curve: [[1500, 0.2], [1520, 0.6], [1560, 1.0], [1600, 0.8], [1644, 0.4]]
     - where: {polities: [qing]}
@@ -515,7 +519,7 @@
     - [1660, 0.4]
     - [1700, 0.0]
   spread:
-    - where: {polities: [ming]}
+    - where: {polities: [ming], exclude_regions: *ming_jimi}
       center: true
       curve: [[1453, 0.3], [1500, 0.5], [1550, 0.8], [1600, 1.0], [1644, 0.8]]
     - where: {polities: [southern_ming]}
@@ -595,7 +599,7 @@
       curve: [[1549, 0.1], [1570, 0.3], [1600, 0.4], [1614, 0.2], [1638, 0.0]]
     - where: {adm1: ["CHN/Macau Special Administrative Region"]}
       curve: [[1557, 0.5], [1580, 0.9], [1640, 0.7], [1700, 0.4], [1724, 0.0]]
-    - where: {polities: [ming]}
+    - where: {polities: [ming], exclude_regions: *ming_jimi}
       curve: [[1583, 0.05], [1601, 0.2], [1640, 0.2], [1644, 0.1]]
     - where: {iso: [PHL]}
       curve: [[1565, 0.4], [1571, 0.8], [1600, 1.0], [1650, 0.7], [1700, 0.4], [1724, 0.0]]

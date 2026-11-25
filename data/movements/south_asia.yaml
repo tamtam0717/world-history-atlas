@@ -580,9 +580,9 @@
       curve: [[1526, 0.3], [1560, 0.6], [1580, 0.9], [1632, 1.0], [1658, 0.9], [1707, 0.5], [1750, 0.3], [1800, 0.1], [1857, 0.0]]
     - where: {polities: [bijapur, golconda]}
       curve: [[1530, 0.4], [1591, 0.7], [1656, 0.8], [1687, 0.0]]
-  people: [アクバル, アブル・ファズル, ビハーザード, バサーワン, シャー・ジャハーン, ダーラー・シコー]
+  people: [アクバル, アブル・ファズル, ミール・サイイド・アリー, アブドゥッサマド, バサーワン, シャー・ジャハーン, ダーラー・シコー]
   works: [タージ＝マハル（1632–53）, フマーユーン廟, ファテープル・シークリー, 『アクバル・ナーマ』, 『バーブル・ナーマ』, ゴール・グンバズ（ビジャープル）]
-  text: ムガル帝国の宮廷で、ペルシアの文化とインドの伝統が融合した。イランの細密画の画家とインドの画家が工房で写本の挿絵を描き（ムガル絵画）、ペルシア語が公用語となり、北インドの言葉と混ざってウルドゥー語が生まれた。シャー・ジャハーンが亡き妃のために造ったタージ＝マハルは、インド＝イスラーム建築の代表である。デカンのビジャープル・ゴールコンダでも独自の建築・絵画が栄えた。
+  text: ムガル帝国の宮廷で、ペルシアの文化とインドの伝統が融合した。フマーユーンがイランから連れてきたミール・サイイド・アリー・アブドゥッサマド（ビフザードに代表されるイランの細密画の流れをくむ画家）のもとで、インドの画家たちが工房で写本の挿絵を描き（ムガル絵画）、ペルシア語が公用語となり、北インドの言葉と混ざってウルドゥー語が生まれた。シャー・ジャハーンが亡き妃のために造ったタージ＝マハルは、インド＝イスラーム建築の代表である。デカンのビジャープル・ゴールコンダでも独自の建築・絵画が栄えた。
   source: "https://ja.wikipedia.org/wiki/インド・イスラーム文化"
 
 - id: sea_islamization
@@ -600,7 +600,7 @@
   spread:
     - where: {polities: [malacca]}
       center: true
-      curve: [[1453, 1.0], [1511, 0.0]]
+      curve: [[1453, 0.9], [1500, 1.0], [1510, 1.0], [1511, 0.0]]
     - where: {polities: [aceh]}
       center: true
       curve: [[1496, 0.5], [1550, 0.8], [1607, 1.0], [1640, 0.9], [1700, 0.5], [1750, 0.3], [1800, 0.0]]
@@ -647,7 +647,9 @@
       curve: [[1571, 0.6], [1600, 1.0], [1640, 0.8], [1700, 0.4]]
     - where: {iso: [JPN]}
       curve: [[1543, 0.3], [1570, 0.6], [1604, 0.9], [1635, 0.4], [1641, 0.1], [1660, 0.0]]
-    - where: {polities: [ming]}
+    - where:
+        polities: [ming]
+        exclude_regions: [chamdo, golog_yushu, kokonor, hami, juu_uda, hinggan_jirim, pre1648_primorye, mmr_kokang, cn15_heilongjiang_daqing, cn15_heilongjiang_hegang, cn15_heilongjiang_jixi, cn15_jilin_baicheng, cn15_jilin_baishan, cn15_jilin_changchun, cn15_jilin_liaoyuan, cn15_jilin_siping, cn15_jilin_yanbian, cn15_liaoning_benxi, cn15_liaoning_chaoyang, cn15_gansu_gannan, cn15_gansu_jiuquan, cn15_sichuan_aba, cn15_sichuan_ganzi, cn15_sichuan_liangshan, cn15_yunnan_dehong, cn15_yunnan_honghe, cn15_guizhou_bijie, cn15_guizhou_zunyi, cn15_hubei_enshi, cn15_hunan_xiangxi, cn15_guangxi_baise, cn15_taiwan_penghu]   # 明の羈縻・名目・間接統治の地（movements/east_asia.yaml の &ming_jimi と同じ一覧）
       curve: [[1453, 0.1], [1550, 0.3], [1567, 0.5], [1600, 0.6], [1644, 0.4]]
   people: [トメ・ピレス, アルブケルケ, レガスピ, 山田長政, 角倉了以, 鄭芝竜, 王直]
   works: [『東方諸国記』, ガレオン貿易（マニラ–アカプルコ）]

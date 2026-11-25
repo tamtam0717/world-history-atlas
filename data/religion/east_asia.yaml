@@ -444,6 +444,19 @@
       main: chinese_folk
       minor: tibetan_buddhism
       note: 中華人民共和国の成立後、農場・林業・鉱山の開発で漢人が多数になる。
+- id: rel_im_east_pre
+  name: 内モンゴル東部（通遼・興安・フルンボイル、1453–1647）
+  select:
+    pieces: [CHN-Tongliao, CHN-Xingan, CHN-Hulunbeier]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: ホルチン部などのモンゴル人と、ダウール人・エヴェンキ人の地。シャーマニズムが中心。
+    - from: 1630
+      main: tibetan_buddhism
+      note: ホルチン部は後金（清）と早くから同盟し（1624）、チベット仏教を受け入れた（白城・松原と同じ年）。北のダウール人・エヴェンキ人はシャーマニズムのまま。
 - id: rel_im_steppe
   name: 内モンゴル中部・西部の草原（シリンゴル・アラシャン）
   select:
@@ -981,6 +994,19 @@
     - from: 1990
       main: tibetan_buddhism
       note: 民主化の後、ガンダン寺などで仏教の復興が進む。
+- id: rel_oirat_west_pre
+  name: モンゴル西部（ホブド・オブス、1453–1647）
+  select:
+    pieces: [MNG-Khovd, MNG-Uvs]
+  until: 1647
+  timeline:
+    - from: 1453
+      main: other
+      minor: tibetan_buddhism
+      note: オイラトの遊牧地（シャーマニズムが中心）。
+    - from: 1616
+      main: tibetan_buddhism
+      note: オイラトの諸侯がそろってゲルク派に帰依した（1616 年ごろ。ジュンガリアと同じ年）。
 - id: rel_bayan_olgii
   name: バヤン・ウルギー（モンゴル西端）
   select:
