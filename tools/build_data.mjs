@@ -281,12 +281,79 @@ const pieceTimelines = regionsOfPiece.map((list) => {
   return out;
 });
 
+// ---- 植民地（data/colonies。docs/data-format.md の「植民地」） ----
+// 宗主国（parent）の色で塗る土地のうち、どの副ラベル（label）・地域・国のピースをひとつの植民地とみなすかと、その説明。
+// 画面では、副ラベルの出ている所を押すと植民地を選んだ状態になる（データのない植民地も、副ラベル単位で選べる）
+const colonyRaw = loadDir("colonies");
+const colonies = [];
+const colonyIds = new Set();
+{
+  // 実際に使われている (owner, 副ラベルの1行目) の組（match の書き間違いの検出用）
+  const usedLabels = new Map(); // owner → Set(label)
+  for (const r of regions)
+    for (const e of r.timeline ?? []) {
+      if (!e.label || !e.owner) continue;
+      if (!usedLabels.has(e.owner)) usedLabels.set(e.owner, new Set());
+      const set = usedLabels.get(e.owner);
+      set.add(e.label);
+      set.add(e.label.split("\n")[0]);
+    }
+  const MATCH_KEYS = ["labels", "contains", "exclude_labels", "exclude_certainty", "regions", "iso"];
+  for (const c of colonyRaw) {
+    const where = `${c._file} の ${c.id ?? "(id なし)"}`;
+    if (!c.id || !c.name || !c.parent) {
+      warn(`${where}: 植民地には id・name・parent が必要です`);
+      continue;
+    }
+    if (colonyIds.has(c.id) || polityIds.has(c.id)) {
+      warn(`${where}: ID "${c.id}" が重複しています（植民地どうし、または政体の ID と）`);
+      continue;
+    }
+    colonyIds.add(c.id);
+    checkPolity(c.parent, where);
+    for (const p of c.polities ?? []) checkPolity(p, `${where} の polities`);
+    const m = c.match ?? {};
+    for (const k of Object.keys(m)) if (!MATCH_KEYS.includes(k)) warn(`${where}: match の "${k}" は使えません（${MATCH_KEYS.join(" / ")}）`);
+    if (!m.labels?.length && !m.contains?.length && !m.regions?.length && !m.iso?.length)
+      warn(`${where}: match に labels・contains・regions・iso のどれかを書いてください`);
+    const used = usedLabels.get(c.parent) ?? new Set();
+    for (const l of [...(m.labels ?? []), ...(m.exclude_labels ?? [])])
+      if (!used.has(l)) warn(`${where}: 副ラベル「${l}」は owner: ${c.parent} の地域に見つかりません`);
+    for (const l of m.contains ?? []) if (![...used].some((x) => x.includes(l))) warn(`${where}: 「${l}」を含む副ラベルは owner: ${c.parent} の地域に見つかりません`);
+    for (const x of m.exclude_certainty ?? []) if (!CERTAINTY.includes(x)) warn(`${where}: exclude_certainty の "${x}" は ${CERTAINTY.join(" / ")} のいずれか`);
+    if (c.from != null && typeof c.from !== "number") warn(`${where}: from は年（数値）で書いてください`);
+    if (c.to != null && typeof c.to !== "number") warn(`${where}: to は年（数値）で書いてください`);
+    const set = new Set();
+    for (const rid of m.regions ?? []) for (const i of resolveRegion(rid, where)) set.add(i);
+    for (const iso of m.iso ?? []) {
+      const l = byIsoAll.get(iso);
+      if (!l) warn(`${where}: ピースのない国コード "${iso}"`);
+      for (const i of l ?? []) set.add(i);
+    }
+    (c.periods ?? []).forEach((x, i) => {
+      if (x?.text == null) warn(`${where}: periods[${i}]（${x?.from ?? "?"}–）に text がありません`);
+      if (x?.name != null) warn(`${where}: periods[${i}] に name "${x.name}" があります（総督なら governors の下へ）`);
+      normImages(x, `${where}: periods[${i}]`);
+    });
+    (c.governors ?? []).forEach((x, i) => {
+      if (x?.name == null) warn(`${where}: governors[${i}]（${x?.from ?? "?"}–）に name がありません`);
+      if (typeof x?.from !== "number") warn(`${where}: governors[${i}] の from は年（数値）で書いてください`);
+    });
+    normImages(c, where);
+    const { _file, match, ...rest } = c;
+    const outMatch = {};
+    for (const k of ["labels", "contains", "exclude_labels", "exclude_certainty"]) if (m[k]?.length) outMatch[k] = m[k];
+    colonies.push({ ...rest, match: outMatch, ...(set.size ? { pieces: [...set].sort((a, b) => a - b) } : {}) });
+  }
+}
+
 // ---- 出来事 ----
 const events = loadDir("events");
 for (const e of events) {
   const where = `${e._file} の「${e.title}」`;
   if (typeof e.year !== "number") warn(`${where}: year が数値ではありません`);
-  for (const p of e.polities ?? []) checkPolity(p, where);
+  // 関係する政体には、植民地の ID（data/colonies）も書ける（その植民地を選んだときに、植民地の出来事として先頭に出る）
+  for (const p of e.polities ?? []) if (!colonyIds.has(p)) checkPolity(p, where);
   normImages(e, where);
   // 任意の場所：lon・lat、または at: [経度, 緯度]。書かれていれば代表点として最優先する
   if (e.at != null || e.lon != null || e.lat != null) {
@@ -759,6 +826,85 @@ const regionCenter = new Map(); // 地域 ID → [経度, 緯度]（国境の変
   }
   if (none) console.log(`出来事の場所：${none} 件は場所を決められませんでした（パネルでは常に「地図の範囲内」として扱う）`);
 }
+
+// ---- 出来事の代表点が入っているピース（pp）。植民地を選んだとき「その植民地の出来事」を判定するのに使う ----
+// ピースの形は public/data/pieces.topo.json（tools/build_pieces.sh が作る。並びは pieces.tsv と同じ）。経緯度の平面で内外を判定する
+{
+  const topoFile = path.join(ROOT, "public", "data", "pieces.topo.json");
+  if (fs.existsSync(topoFile)) {
+    const topo = JSON.parse(fs.readFileSync(topoFile, "utf8"));
+    const geoms = topo.objects.pieces.geometries;
+    const [sx, sy] = topo.transform?.scale ?? [1, 1];
+    const [tx, ty] = topo.transform?.translate ?? [0, 0];
+    // 弧を経緯度の点列に（量子化を解く）
+    const arcs = topo.arcs.map((arc) => {
+      let x = 0, y = 0;
+      return arc.map((p) => (topo.transform ? ((x += p[0]), (y += p[1]), [x * sx + tx, y * sy + ty]) : p));
+    });
+    const ringOf = (ids) => {
+      const pts = [];
+      for (const id of ids) {
+        const a = id < 0 ? arcs[~id].slice().reverse() : arcs[id];
+        for (let k = pts.length ? 1 : 0; k < a.length; k++) pts.push(a[k]);
+      }
+      return pts;
+    };
+    const idPos = new Map(geoms.map((g, i) => [g.properties?.id, i]));
+    const polysOf = new Map(); // ピースの topo 番号 → [[外周, 穴...], ...]
+    const boxOf = new Map();
+    const getPolys = (gi) => {
+      if (polysOf.has(gi)) return polysOf.get(gi);
+      const g = geoms[gi];
+      const list = g.type === "Polygon" ? [g.arcs] : g.type === "MultiPolygon" ? g.arcs : [];
+      const polys = list.map((rings) => rings.map(ringOf));
+      let b = [Infinity, Infinity, -Infinity, -Infinity];
+      for (const poly of polys) for (const [x, y] of poly[0] ?? []) b = [Math.min(b[0], x), Math.min(b[1], y), Math.max(b[2], x), Math.max(b[3], y)];
+      polysOf.set(gi, polys);
+      boxOf.set(gi, b);
+      return polys;
+    };
+    const inRing = (x, y, ring) => {
+      let c = false;
+      for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+        const [xi, yi] = ring[i];
+        const [xj, yj] = ring[j];
+        if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) c = !c;
+      }
+      return c;
+    };
+    // 中心点の近い順に調べる（ほとんどの点は近くのピースに入る）
+    const pLon = pieces.map((p) => Number(p.lon));
+    const pLat = pieces.map((p) => Number(p.lat));
+    const topoOf = pieces.map((p) => idPos.get(p.id) ?? -1);
+    const pieceAt = (lon, lat) => {
+      const order = [];
+      for (let i = 0; i < pieces.length; i++) {
+        const d = Math.abs(pLon[i] - lon) + Math.abs(pLat[i] - lat);
+        if (d < 25) order.push([d, i]);
+      }
+      order.sort((a, b) => a[0] - b[0]);
+      for (const [, i] of order) {
+        const gi = topoOf[i];
+        if (gi < 0) continue;
+        const polys = getPolys(gi);
+        const b = boxOf.get(gi);
+        if (lon < b[0] || lon > b[2] || lat < b[1] || lat > b[3]) continue;
+        for (const poly of polys) if (poly[0] && inRing(lon, lat, poly[0]) && !poly.slice(1).some((h) => inRing(lon, lat, h))) return i;
+      }
+      return -1;
+    };
+    const memo = new Map();
+    for (const e of events) {
+      if (!e.pts?.length) continue;
+      e.pp = e.pts.map(([lon, lat]) => {
+        const k = `${lon},${lat}`;
+        if (!memo.has(k)) memo.set(k, pieceAt(lon, lat));
+        return memo.get(k);
+      });
+      if (e.pp.every((x) => x < 0)) delete e.pp;
+    }
+  }
+}
 const atlas = {
   generated: new Date().toISOString(),
   range: meta.range,
@@ -777,6 +923,7 @@ const atlas = {
   language,
   movements,
   movementRegions,
+  colonies,
   // 潮流で使う政体の本国（植民地・占領地を光らせないため）
   movementHome: Object.fromEntries(
     [...new Set(movements.flatMap((m) => m.spread.filter((s) => !s.colonies).flatMap((s) => s.polities)))]
@@ -797,7 +944,7 @@ console.log(
 console.log(
   `言語：地域 ${lang.allRegions.length}（変遷あり ${lang.tlRegions.length}） / ピース ${language.pieceTimelines.filter((t) => t.length > 0).length}/${pieces.length} にデータあり`,
 );
-console.log(`潮流：${movements.length}`);
+console.log(`潮流：${movements.length} / 植民地：${colonies.length}`);
 for (const w of warnings) console.warn("警告: " + w);
 if (missingYears) {
   for (const y of missingYears) {
