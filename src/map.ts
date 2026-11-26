@@ -11,6 +11,7 @@ import type { GeometryCollection, MultiPolygon, Polygon, Topology } from "topojs
 import type { Feature, FeatureCollection, Geometry, MultiPolygon as GeoMultiPolygon } from "geojson";
 import { AtlasIndex, cityCapitalOf, cityName, cityPop, curveAt, fallbackColor, type DistKey, type Movement, type ReligionEntry, type TimelineEntry } from "./data";
 import { assignColors, MODERN_NAMES, modernName } from "./modern";
+import { Colonies, labelName, type ColonyRef } from "./colonies";
 
 type PieceProps = { id: string; name: string; iso: string; adm1?: string; adm2?: string };
 type PieceGeom = (Polygon<PieceProps> | MultiPolygon<PieceProps>) & { id?: string };
@@ -131,8 +132,29 @@ export interface ViewProbe {
   holds(polities: string[], box?: readonly number[] | null): boolean;
 }
 
+/** 植民地の説明（カード用。地図のその年の所属から求める） */
+export interface ColonyInfo {
+  ref: ColonyRef;
+  /** その年の地図にあるか（ピースが1つ以上） */
+  exists: boolean;
+  /** 植民地に入っている副ラベル（広い順） */
+  labels: string[];
+  /** いちばん広い地域の記述（cause・note）と地域名 */
+  region?: string;
+  cause?: string;
+  note?: string;
+  /** ピースの確からしさのうち多いもの（occupied・indirect なら「占領地」「保護国」の判定に使う） */
+  certainty: string;
+  /** 自動の副ラベルの2行目（「○○の保護下」など） */
+  autoNote?: string;
+  /** 面積（km²） */
+  area: number;
+}
+
 export interface MapCallbacks {
   onSelect(polityId: string | null): void;
+  /** 植民地（副ラベルの出ている所）のクリック */
+  onColony?(ref: ColonyRef): void;
   onPiece?(piece: PieceProps | null): void;
   /** どの国にも属さない土地・データ未整備の土地のクリック（ピースの番号。説明は blankInfo で引く） */
   onBlank?(piece: number): void;
@@ -157,6 +179,15 @@ export class AtlasMap {
   private tooltip: HTMLDivElement;
   private year = 0;
   private selected: string | null = null;
+  /** 選んでいる植民地（このときの selected は本国） */
+  private selColony: ColonyRef | null = null;
+  /** 植民地のデータと判定 */
+  readonly colonies: Colonies;
+  /** その年のピースごとの副ラベルの区画（units の番号。なければ -1） */
+  private subOf: Int32Array;
+  private units: SubUnit[] = [];
+  /** その年のピースごとのデータの植民地（colonies.list の番号。なければ -1） */
+  private colOf: Int32Array;
   private modernOn = false;
   private layer: MapLayer = "political";
   /** 宗教表示：ピースごとの main / minor / 地域 */
@@ -190,6 +221,9 @@ export class AtlasMap {
     this.pending = noTl(idx.atlas.pieceTimelines);
     this.distPending = { religion: noTl(idx.dist("religion")?.pieceTimelines), language: noTl(idx.dist("language")?.pieceTimelines) };
     this.ownerOf = new Int32Array(n).fill(-2);
+    this.colonies = new Colonies(idx);
+    this.subOf = new Int32Array(n).fill(-1);
+    this.colOf = new Int32Array(n).fill(-1);
     this.ovOf = new Int32Array(n);
     this.colorOf = new Array(n).fill(undefined);
     this.certOf = new Int32Array(n);
@@ -244,7 +278,10 @@ export class AtlasMap {
         return;
       }
       const o = i >= 0 ? this.ownerOf[i] : -1;
-      if (o >= 0 || i < 0 || this.modernOn || !this.cb.onBlank) this.cb.onSelect(o >= 0 ? this.idx.atlas.polities[o].id : null);
+      // 植民地（副ラベルの出ている所・植民地データに当てはまる所）は、本国とは別に「植民地」を選ぶ
+      const col = o >= 0 && !this.modernOn ? this.colonyRefAt(i) : null;
+      if (col && this.cb.onColony) this.cb.onColony(col);
+      else if (o >= 0 || i < 0 || this.modernOn || !this.cb.onBlank) this.cb.onSelect(o >= 0 ? this.idx.atlas.polities[o].id : null);
       else this.cb.onBlank(i); // 所属なし・データ未整備の土地：その説明を出す
     });
     this.map.on("mousemove", (e) => this.hover(e.point, e.originalEvent));
@@ -303,7 +340,7 @@ export class AtlasMap {
       };
     });
     map.addSource("pieces", { type: "geojson", data: fc });
-    for (const id of ["borders", "overlords", "suz", "subunits", "sublabels", "hatch", "labels", "highlight", "cities", "rel-hatch", "rel-borders", "rivers", "lakes", "mv", "flash"]) {
+    for (const id of ["borders", "overlords", "suz", "subunits", "sublabels", "hatch", "labels", "highlight", "highlight-parent", "cities", "rel-hatch", "rel-borders", "rivers", "lakes", "mv", "flash"]) {
       map.addSource(id, { type: "geojson", data: EMPTY });
     }
     // 川の名前用：細かく曲がる線のままだと線に沿った文字が置けないので、強めに単純化した別のソースを使う
@@ -505,6 +542,19 @@ export class AtlasMap {
         "line-color": ["get", "edge"],
         "line-opacity": 0.9,
         "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.8, 6, 1.6],
+      },
+    });
+    // 植民地を選んでいるときの、本国の残りの領土（細い破線）
+    map.addLayer({
+      id: "highlight-parent",
+      type: "line",
+      source: "highlight-parent",
+      layout: { "line-join": "round" },
+      paint: {
+        "line-color": "#1d1a16",
+        "line-opacity": 0.55,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.8, 6, 1.4],
+        "line-dasharray": [2, 2],
       },
     });
     map.addLayer({
@@ -825,10 +875,24 @@ export class AtlasMap {
 
     // 保護国・植民地の区画（副ラベルを出すまとまり）
     const subs = this.subUnits(year);
-    const subOf = new Int32Array(this.geoms.length).fill(-1);
+    const subOf = this.subOf;
+    subOf.fill(-1);
     subs.forEach((u, k) => {
       for (const i of u.pieces) subOf[i] = k;
     });
+    this.units = subs;
+    // データのある植民地（data/colonies）
+    this.colOf.fill(-1);
+    if (this.colonies.list.length) {
+      const colIdx = new Map(this.colonies.list.map((c, k) => [c, k]));
+      for (let i = 0; i < this.geoms.length; i++) {
+        const o = this.ownerOf[i];
+        const a = this.atlasIdx[i];
+        if (o < 0 || a < 0 || !this.colonies.hasParent(o)) continue;
+        const c = this.colonies.dataAtState(a, idx.pieceState(a, year), year);
+        if (c) this.colOf[i] = colIdx.get(c)!;
+      }
+    }
 
     // 所属と確からしさの同じピースのまとまり（保護国などの区画は分けておき、国名ラベルを置かない）。
     // 間接統治（indirect）は斜線を描かないので、持ち主の直轄地と同じまとまりにする（国名ラベル・外形が1つの国になる）
@@ -1680,7 +1744,7 @@ export class AtlasMap {
     // 線・ラベル：宗教表示でも、重ねる国境は現代／その時代を切り替えられる
     set(["modern-borders", "modern-cities-dot"], on);
     set(["modern-labels", "modern-cities-label"], on && lb);
-    set(["borders", "pending-coast", "cities-dot", "highlight"], !on || rel);
+    set(["borders", "pending-coast", "cities-dot", "highlight", "highlight-parent"], !on || rel);
     set(["frames", "suz-band", "suzerain", "subunit-borders"], !on && !rel);
     set(["pending-borders"], !on);
     set(["pending-labels"], !on && lb);
@@ -1722,9 +1786,104 @@ export class AtlasMap {
   }
 
   // ---- 選択・移動 ----
-  setSelected(id: string | null) {
+  setSelected(id: string | null, colony: ColonyRef | null = null) {
     this.selected = id;
+    this.selColony = id && colony && colony.parent === id ? colony : null;
     this.renderHighlight();
+  }
+
+  /** 地図のピースが属する植民地（データの植民地 → 副ラベルの区画）。どちらでもなければ null */
+  private colonyRefAt(i: number): ColonyRef | null {
+    const o = this.ownerOf[i];
+    if (o < 0) return null;
+    const parent = this.idx.atlas.polities[o].id;
+    const c = this.colOf[i];
+    if (c >= 0) return { parent, key: this.colonies.list[c].id };
+    const u = this.subOf[i];
+    if (u >= 0) return { parent, key: "~" + this.units[u].name };
+    return null;
+  }
+
+  /** その年に植民地に入っている地図のピース（地図のピース番号） */
+  colonyPieces(ref: ColonyRef): number[] {
+    const out: number[] = [];
+    const pi = this.idx.polityIndex.get(ref.parent);
+    if (pi === undefined) return out;
+    if (!ref.key.startsWith("~")) {
+      const k = this.colonies.list.findIndex((c) => c.id === ref.key);
+      if (k < 0) return out;
+      for (let i = 0; i < this.geoms.length; i++) if (this.colOf[i] === k) out.push(i);
+      return out;
+    }
+    const name = ref.key.slice(1);
+    for (let i = 0; i < this.geoms.length; i++) {
+      if (this.ownerOf[i] !== pi || this.colOf[i] >= 0) continue;
+      const u = this.subOf[i];
+      if (u >= 0 && this.units[u].name === name) out.push(i);
+    }
+    return out;
+  }
+
+  /** 植民地に入っている atlas のピース番号の集合（パネルで出来事・国境の変化を植民地のものと判定する） */
+  colonyAtlasPieces(ref: ColonyRef): Set<number> {
+    return new Set(this.colonyPieces(ref).map((i) => this.atlasIdx[i]).filter((a) => a >= 0));
+  }
+
+  /**
+   * 前の年に植民地だったピース（地図のピース番号）が、今の年にどの植民地に入っているか（いちばん多いもの）。
+   * 名前が変わった・宗主国が替わった植民地を、同じ土地として続けて選ぶのに使う。半分以上がどれかの植民地に入っていなければ null
+   */
+  colonySuccessor(prev: number[]): ColonyRef | null {
+    if (!prev.length) return null;
+    const count = new Map<string, { ref: ColonyRef; n: number }>();
+    for (const i of prev) {
+      const r = this.colonyRefAt(i);
+      if (!r) continue;
+      const k = `${r.parent}|${r.key}`;
+      const c = count.get(k);
+      if (c) c.n++;
+      else count.set(k, { ref: r, n: 1 });
+    }
+    let best: { ref: ColonyRef; n: number } | null = null;
+    for (const c of count.values()) if (!best || c.n > best.n) best = c;
+    return best && best.n * 2 >= prev.length ? best.ref : null;
+  }
+
+  /** 植民地の、その年の説明（副ラベル・いちばん広い地域の記述・確からしさ） */
+  colonyInfo(ref: ColonyRef): ColonyInfo {
+    const ps = this.colonyPieces(ref);
+    const info: ColonyInfo = { ref, exists: ps.length > 0, labels: [], certainty: "certain", area: 0 };
+    if (!ps.length) return info;
+    const labelArea = new Map<string, number>();
+    const regionArea = new Map<number, number>();
+    const certArea = new Map<number, number>();
+    for (const i of ps) {
+      const a = this.atlasIdx[i];
+      const m = this.pieceMetrics(i);
+      const area = m ? m[4] : 1;
+      info.area += area;
+      certArea.set(this.certOf[i], (certArea.get(this.certOf[i]) ?? 0) + area);
+      const s = a >= 0 ? this.idx.pieceState(a, this.year) : null;
+      if (!s) continue;
+      regionArea.set(s[4], (regionArea.get(s[4]) ?? 0) + area);
+      const e = this.colonies.entryOf(s[4], this.year);
+      const u = this.subOf[i];
+      const l = labelName(e?.label) || (u >= 0 ? this.units[u].name : "");
+      if (l) labelArea.set(l, (labelArea.get(l) ?? 0) + area);
+      if (u >= 0 && this.units[u].note && !info.autoNote && e?.label === undefined) info.autoNote = this.units[u].note;
+    }
+    info.labels = [...labelArea].sort((a, b) => b[1] - a[1]).map((x) => x[0]);
+    const top = (m: Map<number, number>) => [...m].sort((a, b) => b[1] - a[1])[0]?.[0];
+    info.certainty = this.idx.atlas.certainty[top(certArea) ?? 0] ?? "certain";
+    const r = top(regionArea);
+    if (r !== undefined) {
+      const reg = this.idx.atlas.regions[r];
+      const e = this.colonies.entryOf(r, this.year);
+      info.region = reg ? this.idx.regionName(reg, this.year) : undefined;
+      if (e?.cause) info.cause = e.cause;
+      if (e?.note) info.note = e.note;
+    }
+    return info;
   }
 
   private polityGeo(id: string): GeoMultiPolygon | null {
@@ -1742,7 +1901,18 @@ export class AtlasMap {
       const ps: number[] = [];
       if (r >= 0) for (let j = 0; j < this.geoms.length; j++) if (this.relRegion[j] === r) ps.push(j);
       geo = ps.length ? this.merged(`${this.layer}sel${r}`, ps).geo : null;
+    } else if (this.selColony) {
+      // 植民地：植民地の範囲を太い線で、本国の残りの領土を細い破線で（「本国の色の下にある、別の土地」）
+      const ps = this.colonyPieces(this.selColony);
+      geo = ps.length ? this.merged(`col${this.selColony.parent}|${this.selColony.key}|${hashInts(Int32Array.from(ps))}`, ps).geo : null;
+      const pi = this.idx.polityIndex.get(this.selColony.parent);
+      const inCol = new Set(ps);
+      const rest: number[] = [];
+      for (let j = 0; j < this.geoms.length; j++) if (this.ownerOf[j] === pi && !inCol.has(j)) rest.push(j);
+      const pg = rest.length ? this.merged(`colrest${pi}|${hashInts(Int32Array.from(rest))}`, rest).geo : null;
+      this.setData("highlight-parent", pg ? { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: pg }] } : EMPTY);
     } else geo = this.selected ? this.polityGeo(this.selected) : null;
+    if (!this.selColony || isDist(this.layer)) this.setData("highlight-parent", EMPTY);
     this.setData("highlight", geo ? { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: geo }] } : EMPTY);
   }
 
@@ -1853,9 +2023,10 @@ export class AtlasMap {
    * 選んだ政体が画面に入るように寄せる（すでに十分な大きさで収まっていれば動かさない）。
    * avoid：地図の上に浮かぶカードなどで隠れる幅（左端から）・高さ（下端から、bottomInset より上の分）。その部分を避けて寄せる
    */
-  focus(id: string, avoid: { left: number; bottom: number } = { left: 0, bottom: 0 }) {
+  focus(id: string, avoid: { left: number; bottom: number } = { left: 0, bottom: 0 }, colony: ColonyRef | null = null) {
     if (!this.loaded) return;
-    const geo = this.polityGeo(id);
+    const cps = colony ? this.colonyPieces(colony) : [];
+    const geo = cps.length ? this.merged(`col${colony!.parent}|${colony!.key}|${hashInts(Int32Array.from(cps))}`, cps).geo : this.polityGeo(id);
     if (!geo) return;
     const b = bbox(geo);
     const view = this.map.getBounds();
@@ -2024,6 +2195,9 @@ export class AtlasMap {
       else if (this.modernOn) text = modernName(this.geoms[i].properties!.iso);
       else if (this.ownerOf[i] >= 0) {
         text = this.idx.polityName(this.idx.atlas.polities[this.ownerOf[i]], this.year);
+        // 植民地：植民地の名前を先に（押すと植民地を選ぶ）
+        const col = this.colonyRefAt(i);
+        if (col) text = `${this.colonies.nameOf(col, this.year)}\n本国：${text}`;
         if (this.isIndirect(i)) {
           const r = this.regionOf(i);
           text += `\n${r ? `${r}：` : ""}間接統治`;

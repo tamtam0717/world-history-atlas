@@ -1851,3 +1851,91 @@ body[data-layer="language"] .legend {
     display: none;
   }
 }
+
+/* ---- 植民地（副ラベルの単位）を選んだとき ---- */
+/* カード：上端に本国の色の帯。見本は本国の色を破線で縁どった「本国の色の下にある、別の土地」 */
+.polity-card.colony {
+  border-top: 5px solid var(--pc);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--pc) 16%, transparent), transparent 64px),
+    rgba(255, 255, 255, 0.95);
+}
+.colony-swatch {
+  background: var(--pc);
+  border: 2px dashed rgba(45, 35, 25, 0.65);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.55);
+}
+.polity-card .col-parent {
+  margin-top: 1px;
+}
+.polity-card .col-parent .plink {
+  font-weight: 600;
+  color: var(--ink);
+}
+.col-span {
+  white-space: nowrap;
+}
+.col-home {
+  font-size: 13px;
+  margin: 8px 0 0;
+  color: #4a4238;
+}
+.col-home .title {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.col-home .years,
+.col-later .years {
+  margin-right: 8px;
+}
+.col-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+}
+.col-labels span {
+  font-size: 12px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  border: 1px dashed color-mix(in srgb, var(--pc, #999) 70%, #5a4a3a);
+  background: color-mix(in srgb, var(--pc, #eee) 22%, #fff);
+}
+.col-labels span.muted {
+  border-style: solid;
+  background: none;
+  color: var(--muted);
+}
+.col-later {
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+.col-later .plink {
+  margin-right: 6px;
+}
+.col-back {
+  font-size: 12.5px;
+  margin: 12px 0 0;
+  padding-top: 8px;
+  border-top: 1px dotted var(--line);
+}
+.card-peek .pk-gov {
+  margin-left: 10px;
+}
+/* 右パネル：植民地に関係するもの（見出しの印は破線の四角、行の左の帯も破線） */
+.panel-body li.rel-head.colony::before {
+  border-radius: 2px;
+  border: 1.5px dashed rgba(45, 35, 25, 0.7);
+  box-shadow: none;
+}
+.panel-body li.related-colony {
+  border-left-style: dashed;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--rel, transparent) 24%, transparent), transparent 75%);
+}
+/* 節目：植民地の節目のときは、印を破線の四角に */
+.ms-colony .milestone .ms-dot {
+  border-radius: 2px;
+  outline: 1.5px dashed rgba(45, 35, 25, 0.7);
+  outline-offset: 0;
+}

@@ -88,6 +88,44 @@ export interface HistEvent extends Sourced, Illustrated {
   fixed?: boolean;
   /** 関係国の領土で判定するときに数える範囲（atlas.eventBoxes の番号） */
   bx?: number;
+  /** 代表点 pts のそれぞれが入っているピース（atlas のピース番号。海などで見つからなければ -1）。植民地の出来事の判定に使う */
+  pp?: number[];
+}
+
+// ---- 植民地（data/colonies。docs/data-format.md の「植民地」） ----
+
+/** どの副ラベル（label）のピースをその植民地とみなすか。owner が parent のピースだけ */
+export interface ColonyMatch {
+  /** 副ラベル（1行目）がこれと同じ */
+  labels?: string[];
+  /** 副ラベルにこの文字列を含む */
+  contains?: string[];
+  /** 除く副ラベル（1行目が同じもの） */
+  exclude_labels?: string[];
+  /** 除く確からしさ（例：indirect で藩王国を除く） */
+  exclude_certainty?: string[];
+}
+
+export interface Colony extends Sourced, Illustrated {
+  id: string;
+  name: string;
+  names?: Named[];
+  /** 本国（宗主国）の政体 ID */
+  parent: string;
+  /** 種類（植民地・副王領・保護領など。省略時は「〇〇領」） */
+  kind?: string;
+  from?: number;
+  to?: number;
+  match: ColonyMatch;
+  /** match の regions・iso を build_data.mjs がピース番号（atlas のピース番号、昇順）にしたもの */
+  pieces?: number[];
+  /** 総督・副王など */
+  governors?: Ruler[];
+  /** 植民地と本国の背景・状況を踏まえた情勢 */
+  periods?: Period[];
+  /** この植民地の出来事として扱う政体 ID（独立後の国など） */
+  polities?: string[];
+  note?: string;
 }
 
 /** [開始年, 所属政体 index, 上位政体 index, 確からしさ index, 地域 index] */
@@ -224,6 +262,8 @@ export interface Atlas {
   movementRegions?: Record<string, number[]>;
   /** 潮流で使う政体の本国：政体 ID → [開始年|null, 終了年|null（両端を含む）, ピース index の一覧][] */
   movementHome?: Record<string, [number | null, number | null, number[]][]>;
+  /** 植民地（古い atlas.json にはない） */
+  colonies?: Colony[];
 }
 
 export class AtlasIndex {

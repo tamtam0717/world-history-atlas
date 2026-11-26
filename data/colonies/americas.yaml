@@ -1,0 +1,189 @@
+# 南北アメリカの植民地（docs/data-format.md の「植民地」）
+# match の副ラベルは、地域の timeline の label（owner が parent のもの）の1行目
+
+- id: portuguese_brazil
+  name: ポルトガル領ブラジル
+  names:
+    - { to: 1814, name: ポルトガル領ブラジル }
+    - { from: 1815, name: ブラジル王国（ポルトガル・ブラジル連合王国）, kind: 連合王国の構成国（王室はリオデジャネイロ） }
+  parent: portugal
+  kind: 植民地（1549年から総督領、のち副王領）
+  match:
+    contains: [ポルトガル領ブラジル]
+    labels: [ブラジル王国, オランダがサルヴァドールを占領]
+  from: 1500
+  to: 1822
+  polities: [brazil]
+  governors:
+    - { name: トメ・デ・ソウザ, title: 初代総督, from: 1549, to: 1553, note: サルヴァドールに総督府を置く, source: "https://en.wikipedia.org/wiki/Tomé_de_Sousa" }
+    - { name: ドゥアルテ・ダ・コスタ, title: 総督, from: 1553, to: 1557, source: "https://en.wikipedia.org/wiki/Duarte_da_Costa" }
+    - { name: メン・デ・サ, title: 総督, from: 1557, to: 1572, note: フランスの入植地を追い出し、リオデジャネイロを建設, source: "https://en.wikipedia.org/wiki/Mem_de_Sá" }
+    - { name: ヴァスコ・フェルナンデス・セザール・デ・メネゼス, title: 副王, from: 1720, to: 1735, source: "https://en.wikipedia.org/wiki/Colonial_Brazil" }
+    - { name: クーニャ伯, title: 副王, from: 1763, to: 1767, note: 首府をリオデジャネイロに移してから最初の副王, source: "https://en.wikipedia.org/wiki/Colonial_Brazil" }
+    - { name: ラヴラディオ侯, title: 副王, from: 1769, to: 1779, source: "https://en.wikipedia.org/wiki/Colonial_Brazil" }
+    - { name: アルコス伯, title: 最後の副王, from: 1806, to: 1808, source: "https://en.wikipedia.org/wiki/Colonial_Brazil" }
+    - { name: ジョアン（のちのジョアン6世）, title: 摂政・国王（リオデジャネイロの宮廷）, from: 1808, to: 1821, note: ナポレオンの侵攻を逃れて王室ごとブラジルへ, source: "https://ja.wikipedia.org/wiki/ジョアン6世_(ポルトガル王)" }
+    - { name: ペドロ（のちのペドロ1世）, title: 摂政, from: 1821, to: 1822, note: 1822年に独立を宣言し、ブラジル皇帝に, source: "https://ja.wikipedia.org/wiki/ペドロ1世_(ブラジル皇帝)" }
+  periods:
+    - from: 1500
+      to: 1548
+      text: 1500年、インドへ向かうカブラルの艦隊が漂着し、トルデシリャス条約（1494年）の境界線の東側としてポルトガル領を宣言した。本国はアジアの香辛料貿易を重視しており、初めは染料になるブラジルボクを積み出す程度だった。1530年代、海岸を区切って貴族に分け与えるカピタニア制で入植を始める。
+      source: "https://ja.wikipedia.org/wiki/ブラジルの歴史"
+    - from: 1549
+      to: 1579
+      text: 1549年、サルヴァドールに総督府を置き、イエズス会が先住民への布教を始める。北東部（ペルナンブーコ・バイーア）でサトウキビのプランテーションが広がり、労働力は先住民からアフリカの黒人奴隷へ移った。砂糖はリスボンを経てヨーロッパに売られた。
+      source: "https://en.wikipedia.org/wiki/Colonial_Brazil"
+    - from: 1580
+      to: 1654
+      text: 1580年から1640年まで、スペイン王がポルトガル王を兼ねた（同君連合）。スペインと独立戦争を戦うオランダは砂糖の産地を狙い、1630年にペルナンブーコを占領した（オランダ領ブラジル）。1640年に本国が独立を回復した後、現地の入植者の反乱で1654年にオランダを追い出す。
+      source: "https://en.wikipedia.org/wiki/Dutch_Brazil"
+    - from: 1655
+      to: 1749
+      text: カリブ海のイギリス領・フランス領の砂糖に押されて北東部が伸び悩むなか、1690年代にミナス・ジェライスで金が見つかり、ゴールドラッシュが起きる。ブラジルの金は、メシュエン条約（1703年）で結びつきを強めた本国を通って、多くがイギリスへ流れた。奥地の開拓者（バンデイランテス）が境界線の西へ領域を広げ、1750年のマドリード条約でスペインに認めさせる。
+      source: "https://en.wikipedia.org/wiki/Brazilian_Gold_Rush"
+    - from: 1750
+      to: 1807
+      text: 本国の宰相ポンバル侯（1750–77）が、会社をつくって貿易を統制し、イエズス会を追放した（1759年）。1763年、金の積み出し港に近いリオデジャネイロに首府を移す。1789年、アメリカ独立に刺激されたミナスの独立の陰謀（チラデンテス）が摘発された。
+      source: "https://ja.wikipedia.org/wiki/ポンバル侯爵"
+    - from: 1808
+      to: 1822
+      text: ナポレオン軍の侵攻（1807年）を逃れて王室がリオデジャネイロに移り、ブラジルが帝国の中心になった。港はイギリスなどに開かれ、1815年にはポルトガルと対等の王国に。1821年に国王ジョアン6世が帰国し、本国の議会が植民地への逆戻りを求めると、残った王子ペドロが1822年に独立を宣言した（ブラジル帝国）。
+      source: "https://ja.wikipedia.org/wiki/ブラジル独立"
+  source:
+    - "https://ja.wikipedia.org/wiki/ブラジルの歴史"
+    - "https://en.wikipedia.org/wiki/Colonial_Brazil"
+
+- id: new_spain
+  name: ヌエバ・エスパーニャ副王領
+  names:
+    - { to: 1534, name: ヌエバ・エスパーニャ, kind: 征服地（コルテスの総督領） }
+  parent: spain
+  kind: 副王領（首府メキシコ市）
+  match:
+    contains: [ヌエバ・エスパーニャ]
+    labels: [ヌエボ・メヒコ（エル・パソ・デル・ノルテ）]
+  from: 1521
+  to: 1821
+  polities: [mexico, aztec]
+  governors:
+    - { name: エルナン・コルテス, title: 総督・総司令官, from: 1522, to: 1524, note: アステカ王国を征服, source: "https://ja.wikipedia.org/wiki/エルナン・コルテス" }
+    - { name: アントニオ・デ・メンドーサ, title: 初代副王, from: 1535, to: 1550, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: ルイス・デ・ベラスコ, title: 副王, from: 1550, to: 1564, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: アントニオ・マリア・デ・ブカレリ, title: 副王, from: 1771, to: 1779, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: ベルナルド・デ・ガルベス, title: 副王, from: 1785, to: 1786, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: レビジャヒヘド伯（2代）, title: 副王, from: 1789, to: 1794, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: ホセ・デ・イトゥリガライ, title: 副王, from: 1803, to: 1808, note: 本国の混乱のなか、自治を求めるクリオーリョに近づいたとして本国生まれの人々に解任される, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: フランシスコ・ハビエル・ベネガス, title: 副王, from: 1810, to: 1813, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: フェリクス・マリア・カジェハ, title: 副王, from: 1813, to: 1816, note: イダルゴ・モレーロスの反乱を鎮圧した軍人, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: フアン・ルイス・デ・アポダカ, title: 副王, from: 1816, to: 1821, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+    - { name: フアン・オドノフー, title: 最後の上級政務長官, from: 1821, to: 1821, note: コルドバ条約でメキシコの独立を認める, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Spain" }
+  periods:
+    - from: 1521
+      to: 1534
+      text: 1521年、コルテスがアステカ王国の首都テノチティトランを征服し、その上にメキシコ市を建てた。征服者には、先住民の労働と貢納を任せるエンコミエンダが与えられた。本国はカルロス1世（神聖ローマ皇帝カール5世）の時代で、アメリカの富がハプスブルク家の戦争を支えていく。
+      source: "https://ja.wikipedia.org/wiki/アステカ帝国の征服"
+    - from: 1535
+      to: 1599
+      text: 1535年に副王領を置く。サカテカス（1546年）・グアナフアトなどの銀山が開かれ、ラテンアメリカの銀がヨーロッパの物価を押し上げた（価格革命）。先住民は天然痘などの疫病と酷使で激減した。1565年からはアカプルコとマニラを結ぶガレオン貿易でメキシコ銀がアジアへ渡り、明の銀を使う経済とも結びついた。
+      source: "https://ja.wikipedia.org/wiki/ガレオン貿易"
+    - from: 1600
+      to: 1700
+      text: 本国スペインが17世紀に衰えていくなか、副王領では大農園（アシエンダ）が広がり、植民地生まれの白人（クリオーリョ）が力をつけた。北へは布教村（ミシオン）と砦で広がり、ヌエボ・メヒコ（1598年〜）ではプエブロの反乱（1680年）でいったん追い出される。
+      source: "https://en.wikipedia.org/wiki/New_Spain"
+    - from: 1701
+      to: 1807
+      text: スペイン継承戦争で本国の王家がブルボン朝に替わり、カルロス3世のもとで本国の統制と課税を強める改革（ブルボン改革）が進む。巡察使ガルベスの改革、インテンデンシア制（1786年）。北のカリフォルニアにも布教村を建てた（1769年〜）。要職は本国生まれの人（ペニンスラール）に与えられ、クリオーリョの不満がたまった。
+      source: "https://en.wikipedia.org/wiki/Bourbon_Reforms"
+    - from: 1808
+      to: 1821
+      text: ナポレオンの本国侵攻（1808年）で王権が揺らぐと、1810年にイダルゴ神父が「ドロレスの叫び」で先住民・メスティーソとともに蜂起し、モレーロスが受け継いだが鎮圧された。1820年に本国で自由主義の革命（スペイン立憲革命）が起きると、それを嫌った保守派のイトゥルビデが独立派と結び、1821年にメキシコが独立した。
+      source: "https://ja.wikipedia.org/wiki/メキシコ独立戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/ヌエバ・エスパーニャ"
+    - "https://en.wikipedia.org/wiki/New_Spain"
+
+- id: peru_viceroyalty
+  name: ペルー副王領
+  names:
+    - { to: 1541, name: ヌエバ・カスティーリャ（ピサロの総督領）, kind: 征服地（総督領） }
+  parent: spain
+  kind: 副王領（首府リマ）
+  match:
+    contains: [ペルー副王領]
+    labels: [ヌエバ・カスティーリャ（ピサロの総督領）, チャルカス（ヌエバ・カスティーリャ）, マンコ・インカの反乱, トゥパク・アマルの反乱, クスコの反乱]
+  from: 1532
+  to: 1824
+  polities: [peru, inca]
+  governors:
+    - { name: フランシスコ・ピサロ, title: ヌエバ・カスティーリャ総督, from: 1532, to: 1541, note: インカ帝国を征服。1541年、対立するアルマグロ派に殺される, source: "https://ja.wikipedia.org/wiki/フランシスコ・ピサロ" }
+    - { name: ブラスコ・ヌニェス・ベラ, title: 初代副王, from: 1544, to: 1546, note: インディアス新法を強行しようとして征服者の反乱にあい、戦死, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_Peru" }
+    - { name: フランシスコ・デ・トレド, title: 副王, from: 1569, to: 1581, note: ミタ制とレドゥクシオンを整え、最後のインカ皇帝トゥパク・アマルを処刑（1572年）, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_Peru" }
+    - { name: マヌエル・デ・アマト, title: 副王, from: 1761, to: 1776, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_Peru" }
+    - { name: アグスティン・デ・ハウレギ, title: 副王, from: 1780, to: 1784, note: トゥパク・アマル2世の反乱のときの副王, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_Peru" }
+    - { name: ホセ・フェルナンド・デ・アバスカル, title: 副王, from: 1806, to: 1816, note: 南アメリカの王党派の中心として各地の独立運動を抑えた, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_Peru" }
+    - { name: ホアキン・デ・ラ・ペスエラ, title: 副王, from: 1816, to: 1821, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_Peru" }
+    - { name: ホセ・デ・ラ・セルナ, title: 最後の副王, from: 1821, to: 1824, note: アヤクーチョの戦いで捕らえられる, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_Peru" }
+  periods:
+    - from: 1532
+      to: 1541
+      text: ピサロが少人数の兵でインカ皇帝アタワルパを捕らえて処刑し（1533年）、首都クスコを占領した。1535年に海岸にリマを建設。マンコ・インカの反乱（1536年）や、征服者どうしの内戦（ピサロ派とアルマグロ派）が続いた。
+      source: "https://ja.wikipedia.org/wiki/インカ帝国の征服"
+    - from: 1542
+      to: 1568
+      text: 本国は先住民の保護とエンコミエンダの世襲の制限を定めたインディアス新法（1542年）を出し、副王領を置いた。征服者たちは反発して反乱を起こし、初代副王は戦死した。1545年にポトシ（いまのボリビア）で巨大な銀山が見つかる。
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru"
+    - from: 1569
+      to: 1716
+      text: 副王トレドが、先住民を村に集めるレドゥクシオンと、交代で鉱山などに働かせるミタ制を整え、水銀アマルガム法でポトシの銀の産出が激増した。銀はリマから船団でパナマを経てセビリャへ運ばれ、本国の戦費とヨーロッパの価格革命を支えた。副王領は、南アメリカのスペイン領のほとんどを治めた。
+      source: "https://ja.wikipedia.org/wiki/ポトシ"
+    - from: 1717
+      to: 1779
+      text: 本国のブルボン朝は広すぎる副王領を分け、北にヌエバ・グラナダ副王領（1717年、再設置1739年）、南東にリオ・デ・ラ・プラタ副王領（1776年）を置いた。ポトシのあるチャルカス（いまのボリビア）もラ・プラタ側に移り、ペルー副王領は小さくなった。
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru"
+    - from: 1780
+      to: 1807
+      text: ブルボン改革の課税強化に反発し、1780年、インカ皇帝の子孫を名乗るトゥパク・アマル2世が先住民の大反乱を起こした。反乱は翌年鎮圧されたが、クリオーリョは先住民の反乱を恐れ、独立には慎重になった。
+      source: "https://ja.wikipedia.org/wiki/トゥパク・アマル2世"
+    - from: 1808
+      to: 1824
+      text: 本国がナポレオンに占領されると、南アメリカ各地に自治の評議会ができたが、リマは副王アバスカルのもとで王党派の拠点であり続けた。アルゼンチン・チリを解放したサン・マルティンが1821年にリマに入って独立を宣言し、1824年、ボリバルの部下スクレがアヤクーチョの戦いで副王軍を破った。
+      source: "https://ja.wikipedia.org/wiki/アヤクーチョの戦い"
+  source:
+    - "https://ja.wikipedia.org/wiki/ペルー副王領"
+    - "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru"
+
+- id: colony_of_virginia
+  name: ヴァージニア植民地
+  parent: britain
+  kind: 植民地（1624年から王領植民地）
+  match:
+    labels: [ヴァージニア植民地]
+  from: 1607
+  to: 1775
+  polities: [usa, powhatan]
+  governors:
+    - { name: ジョン・スミス, title: 参事会議長, from: 1608, to: 1609, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Virginia" }
+    - { name: ウィリアム・バークリー, title: 総督, from: 1642, to: 1652, note: ピューリタン革命では王党派, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Virginia" }
+    - { name: ウィリアム・バークリー, title: 総督（復帰）, from: 1660, to: 1677, note: ベーコンの反乱（1676年）, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Virginia" }
+    - { name: アレクサンダー・スポッツウッド, title: 副総督, from: 1710, to: 1722, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Virginia" }
+    - { name: ロバート・ディンウィディー, title: 副総督, from: 1751, to: 1758, note: オハイオ川流域へ若いワシントンを送り、フレンチ＝インディアン戦争のきっかけに, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Virginia" }
+    - { name: ダンモア伯, title: 最後の王領総督, from: 1771, to: 1775, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Virginia" }
+  periods:
+    - from: 1607
+      to: 1623
+      text: 1607年、ロンドンのヴァージニア会社がジェームズタウンを建てた。イギリスで初めて長く続いた植民地で、飢えと病気に苦しみながら、ポウハタン族と交易し、争った。1610年代にタバコの栽培が成功して本国への輸出品になり、1619年には最初の植民地議会が開かれ、同じ年にアフリカ人が初めて連れてこられた。
+      source: "https://en.wikipedia.org/wiki/Colony_of_Virginia"
+    - from: 1624
+      to: 1688
+      text: 1624年に会社の特許が取り消され、国王が総督を任命する王領植民地になった。本国のピューリタン革命では王党派が多く、本国は航海法（1651年〜）で植民地の貿易をイギリス船・本国経由に限った。1676年、先住民への対応や総督の政治に不満な入植者がベーコンの反乱を起こした。
+      source: "https://en.wikipedia.org/wiki/Colony_of_Virginia"
+    - from: 1689
+      to: 1763
+      text: タバコのプランテーションの働き手は、年季奉公人から黒人奴隷へ移り、大農園主が植民地議会を握った。首府はウィリアムズバーグ（1699年〜）。西のオハイオ川流域をめぐってフランスと争い、フレンチ＝インディアン戦争（1754–63年）でイギリスが勝った。
+      source: "https://ja.wikipedia.org/wiki/フレンチ・インディアン戦争"
+    - from: 1764
+      to: 1775
+      text: 戦争で財政が苦しくなった本国は植民地への課税を強め（印紙法、1765年）、ヴァージニア議会ではパトリック・ヘンリーが反対を訴えた（「代表なくして課税なし」）。1774年の大陸会議にワシントンらを送り、1775年に独立戦争が始まると総督ダンモアは逃れた。1776年、ジェファソンが独立宣言を起草する。
+      source: "https://ja.wikipedia.org/wiki/アメリカ独立革命"
+  source:
+    - "https://en.wikipedia.org/wiki/Colony_of_Virginia"
