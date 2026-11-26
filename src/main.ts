@@ -3,7 +3,8 @@ import type { Topology } from "topojson-specification";
 import { AtlasIndex, curveAt, fallbackColor, type Atlas, type DistKey } from "./data";
 import { AtlasMap, isDist, secularColor, stripeColor, type MapLayer, type ReligionPick } from "./map";
 import { MovementBand } from "./movements";
-import { Panel } from "./panel";
+import { Panel, type ColonyCard, type PanelColony } from "./panel";
+import { sameColony, type ColonyRef } from "./colonies";
 import { PolityMilestones } from "./polity-milestones";
 import { Search } from "./search";
 import { setupSheet } from "./sheet";
@@ -33,13 +34,25 @@ async function main() {
     movement: null as string | null,
     /** 国のない土地（所属なし・データ未整備）をクリックしたときのピース（地図のピース番号。URL には出さない） */
     blank: null as number | null,
+    /** 選んでいる植民地（副ラベルの単位。このとき polity は本国）。URL の c= */
+    colony: null as ColonyRef | null,
   };
+  /** 地図の最初の描画が終わったか（植民地の判定は地図の所属を使うので、それまでは植民地のカードを出さない） */
+  let mapReady = false;
   const LAYER_IDS: MapLayer[] = ["political", "religion", "language"];
   const parseLayer = (v: string | null): MapLayer => (LAYER_IDS.includes(v as MapLayer) ? (v as MapLayer) : "political");
   const hash = new URLSearchParams(location.hash.slice(1));
   const hy = Number(hash.get("y"));
   if (Number.isFinite(hy) && hy >= minYear && hy <= maxYear) state.year = hy;
   if (hash.get("p") && idx.polityById.has(hash.get("p")!)) state.polity = hash.get("p");
+  /** URL・履歴の植民地のキーを確かめる（データの ID か "~副ラベル"） */
+  const parseColony = (p: string | null | undefined, c: string | null | undefined): ColonyRef | null => {
+    if (!p || !c || !idx.polityById.has(p)) return null;
+    if (c.startsWith("~")) return c.length > 1 ? { parent: p, key: c } : null;
+    const d = (atlas.colonies ?? []).find((x) => x.id === c);
+    return d ? { parent: d.parent, key: c } : null;
+  };
+  state.colony = parseColony(state.polity, hash.get("c"));
   state.layer = parseLayer(hash.get("l"));
   if (hash.get("mv") && idx.movement(hash.get("mv"))) state.movement = hash.get("mv");
 
@@ -55,6 +68,7 @@ async function main() {
     m: boolean;
     rp: ReligionPick | null;
     mv?: string | null;
+    c?: ColonyRef | null;
     view?: { lon: number; lat: number; zoom: number };
   }
   const STEP_MS = 1200;
@@ -76,6 +90,7 @@ async function main() {
 
   const map = new AtlasMap($("#map"), topo, idx, {
     onSelect: (id) => selectPolity(id, false),
+    onColony: (ref) => selectColony(ref),
     onBlank: (piece) => selectPolity(null, false, piece),
     onReligion: (pick) => {
       state.relPick = pick;
@@ -181,7 +196,102 @@ async function main() {
 
   function update() {
     map.render(state.year);
+    reconcileColony();
     updateUi();
+  }
+
+  // ---- 植民地の選択 ----
+  /** 前に描いた年に、選んでいる植民地だったピース（地図のピース番号）。名前が変わった植民地を同じ土地として続けて選ぶのに使う */
+  let colonyPieces: number[] = [];
+  let colonyName = "";
+  /**
+   * 年を変えたあとの植民地の選択：同じ植民地が続いていればそのまま。なくなっていれば、前の年の植民地のピースの半分以上が入っている
+   * 植民地（名前が変わった・宗主国が替わった同じ土地）へ移る。それもなければ本国の選択に戻す（独立・併合など）。
+   * 解除ではなく本国に戻すのは、« » の節目や右パネルの並びの文脈（どの国の話か）を残すため
+   */
+  function reconcileColony() {
+    if (!state.colony || !mapReady) return;
+    let ps = map.colonyPieces(state.colony);
+    if (!ps.length) {
+      const next = map.colonySuccessor(colonyPieces);
+      if (next) {
+        state.colony = next;
+        state.polity = next.parent;
+        ps = map.colonyPieces(next);
+      } else {
+        if (colonyName) toast(`${colonyName}は${state.year}年の地図にありません（本国の選択に戻りました）`);
+        state.colony = null;
+      }
+    }
+    colonyPieces = ps;
+    if (state.colony) colonyName = map.colonies.nameOf(state.colony, state.year);
+  }
+  function selectColony(ref: ColonyRef, focus = false) {
+    if (sameColony(ref, state.colony)) return;
+    state.blank = null;
+    state.polity = ref.parent;
+    state.colony = ref;
+    colonyPieces = map.colonyPieces(ref);
+    colonyName = map.colonies.nameOf(ref, state.year);
+    markPush();
+    update();
+    if (focus) map.focus(ref.parent, cardAvoid(), ref);
+  }
+  /** 右パネルの並べ替えに使う植民地の情報 */
+  function panelColony(): PanelColony | null {
+    const ref = state.colony;
+    if (!ref || !mapReady) return null;
+    const pieces = map.colonyAtlasPieces(ref);
+    const regions = new Set<number>();
+    const y = state.year;
+    for (const a of pieces) {
+      const s = idx.pieceState(a, y);
+      if (s) regions.add(s[4]);
+    }
+    // 前の年に植民地だったピース（失った土地の変化も植民地の変化として先に出す）
+    for (let a = 0; a < atlas.pieceTimelines.length; a++) {
+      if (pieces.has(a) || !map.colonies.belongs(a, y - 1, ref)) continue;
+      const s = idx.pieceState(a, y);
+      if (s) regions.add(s[4]);
+    }
+    return { name: map.colonies.nameOf(ref, y), parent: ref.parent, pieces, regions, polities: map.colonies.eventPolities(ref) };
+  }
+  /** 植民地のカードの中身 */
+  function colonyCard(ref: ColonyRef): ColonyCard {
+    const y = state.year;
+    const info = map.colonyInfo(ref);
+    const data = map.colonies.byId.get(ref.key);
+    const parent = idx.polityById.get(ref.parent)!;
+    const ps = idx.shortName(parent, y);
+    const text = `${info.labels.join(" ")} ${info.cause ?? ""} ${info.note ?? ""}`;
+    // 種類：データの kind。なければ確からしさと副ラベル・記述の語から（占領地・保護国・委任統治領・租借地）、それもなければ「〇〇領」
+    const kind =
+      (data && map.colonies.kindOf(data, y)) ??
+      (info.certainty === "occupied"
+        ? `${ps}の占領地`
+        : /委任統治/.test(text)
+          ? `${ps}の委任統治領`
+          : /租借/.test(text)
+            ? `${ps}の租借地`
+            : info.certainty === "indirect" || /保護/.test(text)
+              ? `${ps}の保護下${info.certainty === "indirect" ? "（間接統治）" : ""}`
+              : (info.autoNote ?? `${ps}領`));
+    return {
+      parent: ref.parent,
+      key: ref.key,
+      name: map.colonies.nameOf(ref, y),
+      kind,
+      exists: info.exists,
+      labels: info.labels,
+      region: info.region,
+      cause: info.cause,
+      note: info.note,
+      certainty: info.certainty,
+      area: info.area,
+      data,
+      governors: data ? map.colonies.governorsAt(data, y) : [],
+      periods: data ? map.colonies.periodsAt(data, y) : [],
+    };
   }
 
   /** 地図以外（パネル・凡例・URL）を今の状態に合わせる */
@@ -189,13 +299,14 @@ async function main() {
     yearInput.value = String(state.year);
     slider.value = String(state.year);
     const dist = isDist(state.layer) ? state.layer : null;
-    map.setSelected(state.polity);
+    map.setSelected(state.polity, state.colony);
     map.setReligionSelected(dist && state.relPick ? state.relPick.region : -1);
     map.setMovement(idx.movement(state.movement) ?? null);
     map.flashRegions("political", null);
-    panel.renderYear(state.year, { dist, movement: state.movement, polity: dist ? null : state.polity });
+    panel.renderYear(state.year, { dist, movement: state.movement, polity: dist ? null : state.polity, colony: dist ? null : panelColony() });
     if (dist) panel.renderReligion(state.relPick, state.year, dist);
     else if (!state.polity && state.blank != null) panel.renderBlank(map.blankInfo(state.blank), state.year);
+    else if (state.colony && mapReady) panel.renderColony(colonyCard(state.colony), state.year);
     else panel.renderPolity(state.polity, state.year, state.polity ? map.overlordOf(state.polity) : null, state.polity ? map.indirectOf(state.polity) : null);
     band.render(state.year, state.movement);
     renderLegend();
@@ -208,13 +319,14 @@ async function main() {
   function currentHash() {
     const h = new URLSearchParams({ y: String(state.year) });
     if (state.polity) h.set("p", state.polity);
+    if (state.polity && state.colony) h.set("c", state.colony.key);
     if (state.layer !== "political") h.set("l", state.layer);
     if (state.movement) h.set("mv", state.movement);
     if (modernBase) h.set("m", "1");
     return `#${h}`;
   }
   function histState(): HistState {
-    return { y: state.year, p: state.polity, l: state.layer, m: modernBase, rp: state.relPick, mv: state.movement, view: map.getView() };
+    return { y: state.year, p: state.polity, l: state.layer, m: modernBase, rp: state.relPick, mv: state.movement, c: state.colony, view: map.getView() };
   }
   /** 今の状態を履歴に書く（nextNav に従って積む／置き換える） */
   function writeHistory(nav: Nav = nextNav, force = nextForce) {
@@ -257,6 +369,7 @@ async function main() {
     }
     if (id && state.layer !== "political") setLayer("political", false);
     state.polity = id;
+    state.colony = null;
     if (nextNav === "replace") markPush();
     update();
     // 国の情報は地図の上のカードに出るので、シート（スマホ）は引き上げない
@@ -297,7 +410,12 @@ async function main() {
   const terrMark = (m: Ms) =>
     m.terr ? `<i class="ms-terr ms-${m.terr}">${{ gain: "▲", loss: "▼", appear: "◆", vanish: "◇" }[m.terr] ?? ""}</i>` : "";
   /** 今使う節目の一覧と、国の節目なら国の ID */
-  const currentMs = (): { list: Ms[]; polity: string | null } => {
+  const currentMs = (): { list: Ms[]; polity: string | null; colony?: string } => {
+    // 植民地を選んでいる間は、植民地の節目（範囲の大きな変化・植民地に関係する重要な出来事・名前の変化）
+    if (state.colony && mapReady) {
+      const list = polityMs.getColony(state.colony, map.colonies);
+      if (list.length) return { list, polity: state.colony.parent, colony: map.colonies.nameOf(state.colony, state.year) };
+    }
     if (state.polity) {
       const list = polityMs.get(state.polity);
       if (list.length) return { list, polity: state.polity };
@@ -317,7 +435,7 @@ async function main() {
   const msLabel = $("#milestone");
   const esc = (t: string) => t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
   function updateMilestones() {
-    const { list, polity } = currentMs();
+    const { list, polity, colony } = currentMs();
     const p = prevMs();
     const n = nextMs();
     const here = list.find((m) => m.year === state.year);
@@ -325,20 +443,21 @@ async function main() {
     const controls = msLabel.closest<HTMLElement>(".controls") ?? msLabel.parentElement!;
     // 国の節目のときは、国の色の印（ラベルの丸・« » の縁取り）と国名の札で、全体の節目と見分けられるようにする
     controls.classList.toggle("ms-polity", !!pol);
+    controls.classList.toggle("ms-colony", !!colony);
     if (pol) controls.style.setProperty("--ms-color", pol.color ?? fallbackColor(pol.id));
     else controls.style.removeProperty("--ms-color");
     const tip = (m: Ms) => esc([`${m.year} ${m.title}`, ...(m.detail ?? [])].join("\n"));
     const center = here
       ? `<span class="ms-here" title="${tip(here)}">${pol ? '<i class="ms-dot"></i>' : ""}${terrMark(here)}${esc(here.title)}</span>`
       : pol
-        ? `<span class="ms-who" title="${esc(idx.shortName(pol, state.year))}を選んでいる間は、« » でこの国の節目へ移ります"><i class="ms-dot"></i>${esc(idx.shortName(pol, state.year))}<span class="ms-who-long">の節目</span></span>`
+        ? `<span class="ms-who" title="${esc(colony ?? idx.shortName(pol, state.year))}を選んでいる間は、« » でこの${colony ? "植民地" : "国"}の節目へ移ります"><i class="ms-dot"></i>${esc(colony ?? idx.shortName(pol, state.year))}<span class="ms-who-long">の節目</span></span>`
         : "";
     msLabel.innerHTML = [
       p ? `<span class="ms-prev" title="${tip(p)}">« ${p.year} ${terrMark(p)}${esc(p.title)}</span>` : "<span></span>",
       center,
       n ? `<span class="ms-next" title="${tip(n)}">${n.year} ${terrMark(n)}${esc(n.title)} »</span>` : "<span></span>",
     ].join("");
-    const name = pol ? idx.shortName(pol, state.year) : "";
+    const name = colony ?? (pol ? idx.shortName(pol, state.year) : "");
     const pb = $<HTMLButtonElement>("#prev10");
     const nb = $<HTMLButtonElement>("#next10");
     pb.disabled = !p;
@@ -627,7 +746,7 @@ async function main() {
       }
     },
     focusSelected: () => {
-      if (state.polity) map.focus(state.polity, cardAvoid());
+      if (state.polity) map.focus(state.polity, cardAvoid(), state.colony);
     },
     copyUrl: () => {
       const url = location.href;
@@ -670,6 +789,8 @@ async function main() {
     try {
       if (Number.isFinite(s.y) && s.y >= minYear && s.y <= maxYear) state.year = s.y;
       state.polity = s.p && idx.polityById.has(s.p) ? s.p : null;
+      state.colony = state.polity && s.c ? parseColony(state.polity, s.c.key) : null;
+      if (state.colony) colonyPieces = [];
       state.blank = null;
       if (s.l !== state.layer) setLayer(s.l, false);
       state.relPick = isDist(s.l) ? (s.rp ?? null) : null;
@@ -694,6 +815,7 @@ async function main() {
       m: h.get("m") === "1",
       rp: null,
       mv: h.get("mv"),
+      c: h.get("p") && h.get("c") ? { parent: h.get("p")!, key: h.get("c")! } : null,
     };
   };
   window.addEventListener("popstate", (e) => {
@@ -720,12 +842,20 @@ async function main() {
   (window as unknown as { __atlas: unknown }).__atlas = map;
   (window as unknown as { __polityMs: unknown }).__polityMs = polityMs; // 確認用（国の節目の一覧）
   await map.ready;
+  mapReady = true;
   document.body.classList.add("ready");
+  // 植民地は地図の所属から求めるので、最初の描画が終わってから選び直す（URL で植民地を指定して開いたとき）
+  if (state.colony) {
+    colonyPieces = map.colonyPieces(state.colony);
+    if (!colonyPieces.length) state.colony = null;
+    else colonyName = map.colonies.nameOf(state.colony, state.year);
+    updateUi();
+  }
   panel.arrangeByView(false); // 地図の準備ができたので、映っている地域の出来事を先にする
   // 国の情報の「上位の政体」「間接統治」は地図の所属から求めるので、最初の描画が終わってから出し直す
-  if (state.polity && !isDist(state.layer)) panel.renderPolity(state.polity, state.year, map.overlordOf(state.polity), map.indirectOf(state.polity));
+  if (state.polity && !state.colony && !isDist(state.layer)) panel.renderPolity(state.polity, state.year, map.overlordOf(state.polity), map.indirectOf(state.polity));
   // URL で国を指定して開いたときも、その国へ寄る（カードに隠れない位置に）
-  if (state.polity) map.focus(state.polity, cardAvoid());
+  if (state.polity) map.focus(state.polity, cardAvoid(), state.colony);
   void map.loadWater(base);
 }
 

@@ -2197,7 +2197,7 @@ export class AtlasMap {
         text = this.idx.polityName(this.idx.atlas.polities[this.ownerOf[i]], this.year);
         // 植民地：植民地の名前を先に（押すと植民地を選ぶ）
         const col = this.colonyRefAt(i);
-        if (col) text = `${this.colonies.nameOf(col, this.year)}\n${text}の${col.key.startsWith("~") ? "支配下" : "植民地など"}`;
+        if (col) text = `${this.colonies.nameOf(col, this.year)}\n本国：${text}`;
         if (this.isIndirect(i)) {
           const r = this.regionOf(i);
           text += `\n${r ? `${r}：` : ""}間接統治`;

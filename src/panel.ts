@@ -1,7 +1,7 @@
 // 右パネル（スマホでは下からのシート）の中身：その年の出来事・国境の変化・分布の変化・潮流。
 // 選んだ国（所属なしの土地・宗教／言語の地域）の情報は、地図の上に浮かぶカード（#polity）に出す
 
-import { AtlasIndex, curveAt, curveMax, sourcesOf, type BorderChange, type CurvePoint, type DistKey, type HistEvent, type Movement, type Polity, type ReligionEntry, type Ruler } from "./data";
+import { AtlasIndex, curveAt, curveMax, sourcesOf, type BorderChange, type Colony, type Period, type CurvePoint, type DistKey, type HistEvent, type Movement, type Polity, type ReligionEntry, type Ruler } from "./data";
 import { MOVEMENT_COLORS, secularColor, secularText, type BlankInfo, type ReligionPick, type ViewProbe } from "./map";
 import { gallerySlot, hydrateImages, imageSlot, refKey, wikiRefs, type WikiRef } from "./images";
 
@@ -17,6 +17,39 @@ const linkYears = (html: string) =>
 const escY = (s: unknown) => linkYears(esc(s));
 
 const DIST_LABEL: Record<DistKey, string> = { religion: "宗教", language: "言語" };
+
+/** 右パネルで、選んでいる植民地のものを先に並べるための情報（main.ts が地図から求める） */
+export interface PanelColony {
+  name: string;
+  /** 本国（宗主国）の政体 ID */
+  parent: string;
+  /** その年に植民地に入っている atlas のピース番号 */
+  pieces: Set<number>;
+  /** 植民地のピースに効いている地域（今年と前年。国境の変化の行の判定） */
+  regions: Set<number>;
+  /** 植民地の出来事として扱う政体 ID（植民地の ID・データの polities） */
+  polities: string[];
+}
+
+/** 植民地のカードに出す内容（main.ts が地図の colonyInfo と植民地データから組み立てる） */
+export interface ColonyCard {
+  parent: string;
+  key: string;
+  name: string;
+  /** 種類（植民地・副王領・保護国・占領地など） */
+  kind: string;
+  /** その年の地図にあるか */
+  exists: boolean;
+  labels: string[];
+  region?: string;
+  cause?: string;
+  note?: string;
+  certainty: string;
+  area: number;
+  data?: Colony;
+  governors: Ruler[];
+  periods: Period[];
+}
 export const MOVEMENT_KIND_LABEL: Record<string, string> = { thought: "思想・学問", art: "芸術", religion: "宗教運動", system: "経済・政治" };
 
 export class Panel {
@@ -26,6 +59,8 @@ export class Panel {
   viewProbe: () => ViewProbe | null = () => null;
   /** 選んでいる国（その国に関係する出来事・国境の変化を一覧のいちばん上に出す） */
   private selected: string | null = null;
+  /** 選んでいる植民地（このときの selected は本国。植民地 → 本国 → 地図の範囲 → 外 の順に並べる） */
+  private colony: PanelColony | null = null;
   private year = 0;
 
   constructor(
@@ -132,6 +167,7 @@ export class Panel {
    * 2件以上は「代表の地域ほか N 地域：本文」の1行にし、押すと全地域を展開する
    */
   private groupedChanges(kind: "political" | DistKey, items: { name: string; region: number; key: string; body: string; ps?: string[] }[]): string {
+    const colRegions = kind === "political" ? this.colony?.regions : undefined;
     const groups = new Map<string, typeof items>();
     for (const it of items) {
       if (!groups.has(it.key)) groups.set(it.key, []);
@@ -143,7 +179,8 @@ export class Panel {
       const ids = g.map((x) => x.region).join(",");
       const pts = kind === "political" ? ptsAttr(g.map((x) => this.idx.atlas.regions[x.region]?.c).filter((c): c is [number, number] => !!c)) : "";
       const ps = [...new Set(g.flatMap((x) => x.ps ?? []))];
-      const sortAttr = kind === "political" ? ` data-k="${k++}" data-imp="0"${pts}${ps.length ? ` data-ps="${esc(ps.join(","))}"` : ""}` : "";
+      const col = colRegions && g.some((x) => colRegions.has(x.region)) ? ` data-col="1"` : "";
+      const sortAttr = kind === "political" ? ` data-k="${k++}" data-imp="0"${pts}${ps.length ? ` data-ps="${esc(ps.join(","))}"` : ""}${col}` : "";
       if (g.length === 1) {
         html += `<li class="change" data-rkind="${kind}" data-regions="${ids}"${sortAttr}><b>${esc(g[0].name)}</b>：${g[0].body}</li>`;
         continue;
@@ -168,7 +205,9 @@ export class Panel {
     // 領土による判定（関係国が画面の中にまとまった領土を持つか）に使う政体と範囲。場所が書いてある出来事は点だけで判定する
     const terr = !e.fixed && e.polities?.length ? ` data-pol="${esc(e.polities.join(","))}"${e.bx != null ? ` data-bx="${e.bx}"` : ""}` : "";
     const psAttr = e.polities?.length ? ` data-ps="${esc(e.polities.join(","))}"` : "";
-    const sortAttr = k == null ? "" : ` data-k="${k}" data-imp="${imp}"${ptsAttr(e.pts)}${terr}${psAttr}`;
+    // 代表点の入っているピース（植民地の出来事の判定）
+    const ppAttr = e.pp?.length ? ` data-pp="${e.pp.join(",")}"` : "";
+    const sortAttr = k == null ? "" : ` data-k="${k}" data-imp="${imp}"${ptsAttr(e.pts)}${terr}${psAttr}${ppAttr}`;
     return `<li class="event imp${imp}"${sortAttr}>${img}
       <div class="ev-title">${date}${esc(e.title)}</div>
       ${e.text ? `<div class="ev-text">${escY(e.text)}</div>` : ""}
@@ -197,8 +236,9 @@ export class Panel {
     }`;
   }
 
-  renderYear(year: number, opts: { dist?: DistKey | null; movement?: string | null; polity?: string | null } = {}) {
+  renderYear(year: number, opts: { dist?: DistKey | null; movement?: string | null; polity?: string | null; colony?: PanelColony | null } = {}) {
     this.selected = opts.polity ?? null;
+    this.colony = this.selected && opts.colony?.parent === this.selected ? opts.colony : null;
     this.year = year;
     const events = this.idx.eventsIn(year).sort((a, b) => (a.importance ?? 2) - (b.importance ?? 2));
     const changes = this.idx.borderChangesIn(year);
@@ -253,6 +293,7 @@ export class Panel {
   arrangeByView(keepScroll = true) {
     const probe = this.viewProbe();
     const sel = this.selected;
+    const col = this.colony;
     const scroller = keepScroll ? scrollParent(this.eventsEl) : null;
     const top0 = scroller?.scrollTop ?? 0;
     let shift = 0;
@@ -275,56 +316,68 @@ export class Panel {
           const box = bx != null ? this.idx.atlas.eventBoxes?.[Number(bx)] : null;
           if (probe.holds(pol.split(","), box)) inView = true;
         }
-        const rel = !!sel && (li.getAttribute("data-ps") ?? "").split(",").includes(sel);
-        return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist, rel };
+        const ps = (li.getAttribute("data-ps") ?? "").split(",");
+        const rel = !!sel && ps.includes(sel);
+        // 植民地に関係：関係国に植民地（の後の国）がある、代表点が植民地の中、国境の変化なら植民地のピースの地域
+        const colRel =
+          !!col &&
+          (li.hasAttribute("data-col") ||
+            ps.some((p) => col.polities.includes(p)) ||
+            (li.getAttribute("data-pp") ?? "").split(",").some((p) => p !== "" && col.pieces.has(Number(p))));
+        return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist, rel, colRel };
       });
-      // 並び：選んでいる国に関係するもの → 地図に映っているもの → 外のもの
-      const tier = (x: { rel: boolean; inView: boolean }) => (x.rel ? 0 : x.inView ? 1 : 2);
+      // 並び：（植民地を選んでいれば）その植民地に関係するもの → 選んでいる国（本国）に関係するもの → 地図に映っているもの → 外のもの
+      const tier = (x: { rel: boolean; colRel: boolean; inView: boolean }) => (x.colRel ? 0 : x.rel ? 1 : x.inView ? 2 : 3);
       const order = [...items].sort((a, b) => {
         if (tier(a) !== tier(b)) return tier(a) - tier(b);
         if (a.imp !== b.imp) return a.imp - b.imp;
         if (!a.inView && Math.abs(a.dist - b.dist) > 1) return a.dist - b.dist;
         return a.k - b.k;
       });
-      const nRel = order.filter((x) => x.rel).length;
-      const nIn = order.filter((x) => tier(x) <= 1).length;
-      const head = ul.querySelector<HTMLLIElement>(":scope > li.out-head");
-      const relHead = ul.querySelector<HTMLLIElement>(":scope > li.rel-head");
-      const key = order.map((x) => x.k).join(",") + "|" + nRel + "|" + nIn + "|" + (sel ?? "");
+      const counts = [0, 0, 0, 0];
+      for (const x of order) counts[tier(x)]++;
+      const key = order.map((x) => `${x.k}:${tier(x)}`).join(",") + "|" + (sel ?? "") + "|" + (col?.name ?? "");
       if (ul.dataset.order === key) continue;
       ul.dataset.order = key;
       // 一覧より下を読んでいるときは、一覧の高さの変化だけスクロールを補正する
       const below = scroller ? ul.getBoundingClientRect().bottom <= scroller.getBoundingClientRect().top : false;
       const h0 = ul.offsetHeight;
-      head?.remove();
-      relHead?.remove();
-      order.forEach((x, i) => {
-        if (i === 0 && nRel > 0 && sel) {
-          const h = relHead ?? document.createElement("li");
-          h.className = "rel-head";
-          const p = this.idx.polityById.get(sel);
-          h.style.setProperty("--rel", p?.color ?? "var(--accent)");
-          h.textContent = `${p ? this.idx.polityName(p, this.year) : ""}に関係`;
-          ul.appendChild(h);
-        }
-        if (i === nRel && nRel > 0 && nRel < order.length) {
+      for (const h of ul.querySelectorAll(":scope > li.out-head, :scope > li.rel-head")) h.remove();
+      const selP = sel ? this.idx.polityById.get(sel) : undefined;
+      const selColor = selP?.color ?? "var(--accent)";
+      const relAny = counts[0] + counts[1] > 0;
+      let prevTier = -1;
+      for (const x of order) {
+        const t = tier(x);
+        if (t !== prevTier) {
           const h = document.createElement("li");
-          h.className = "out-head rel-end";
-          h.textContent = nRel < nIn ? "地図の範囲" : "地図の範囲の外";
-          ul.appendChild(h);
+          if (t === 0) {
+            h.className = "rel-head colony";
+            h.style.setProperty("--rel", selColor);
+            h.textContent = `${col!.name}に関係`;
+          } else if (t === 1) {
+            h.className = "rel-head";
+            h.style.setProperty("--rel", selColor);
+            // 植民地を選んでいるときは短い名前で「〇〇（本国）」
+            h.textContent = selP ? `${col ? `${this.idx.shortName(selP, this.year)}（本国）` : this.idx.polityName(selP, this.year)}に関係` : "";
+          } else if (t === 2) {
+            h.className = "out-head rel-end";
+            h.textContent = "地図の範囲";
+          } else {
+            h.className = prevTier >= 0 && prevTier <= 1 ? "out-head rel-end" : "out-head";
+            h.textContent = "地図の範囲の外";
+          }
+          // 関係するものがないときは「地図の範囲」の見出しを出さない（いつもの並び）
+          if (!(t === 2 && !relAny)) ul.appendChild(h);
+          prevTier = t;
         }
-        if (i === nIn && nIn < order.length && !(i === nRel && nRel > 0)) {
-          const h = head ?? document.createElement("li");
-          h.className = "out-head";
-          h.textContent = "地図の範囲の外";
-          ul.appendChild(h);
-        }
-        x.li.classList.toggle("outside", tier(x) === 2);
-        x.li.classList.toggle("related", x.rel);
-        if (x.rel) x.li.style.setProperty("--rel", this.idx.polityById.get(sel!)?.color ?? "");
+        x.li.classList.toggle("outside", t === 3);
+        x.li.classList.toggle("related", t <= 1);
+        x.li.classList.toggle("related-colony", t === 0);
+        if (t <= 1) x.li.style.setProperty("--rel", selColor);
         else x.li.style.removeProperty("--rel");
         ul.appendChild(x.li);
-      });
+      }
       if (below) shift += ul.offsetHeight - h0;
     }
     if (scroller) scroller.scrollTop = top0 + shift;
@@ -527,6 +580,69 @@ export class Panel {
     this.openCard(`p:${p.id}`, head, peek || `<span class="muted">データ未登録</span>`, body);
   }
 
+  /**
+   * 植民地（副ラベルの単位）のカード。本国とは別の土地として：本国の色の帯（カードの上端）・破線で縁どった本国の色の見本・
+   * 「本国：〇〇」のリンク（押すと本国の選択へ）。統治者・情勢・構成（副ラベル）・その土地の記述（cause・note）を出す
+   */
+  renderColony(c: ColonyCard, year: number) {
+    const parent = this.idx.polityById.get(c.parent);
+    if (!parent) {
+      this.closeCard();
+      return;
+    }
+    const color = parent.color ?? "#ccc";
+    const d = c.data;
+    const span = d && (d.from != null || d.to != null) ? `<span class="col-span">${d.from != null ? yl(d.from) : ""}–${d.to != null ? yl(d.to) : ""}</span>` : "";
+    const head = `<span class="swatch big colony-swatch" style="--pc:${esc(color)}" aria-hidden="true"></span>
+        <div><h2>${esc(c.name)}</h2>
+        <div class="meta">${esc(c.kind)}${span ? ` ・ ${span}` : ""}</div>
+        <div class="meta col-parent">本国：<a href="#" class="plink" data-polity="${esc(c.parent)}" title="${esc(this.idx.polityName(parent, year))}"><span class="swatch" style="background:${esc(color)}"></span>${esc(this.idx.shortName(parent, year))}</a></div></div>
+        ${d ? imageSlot(wikiRefs(d.source), "emblem", c.name) : ""}`;
+    const g0 = c.governors[0];
+    const peek = [
+      // 本国は見出しにあるので、要約は統治者と情勢の書き出し
+      g0 ? `<div class="pk-line"><span class="pk-label">統治者</span><b>${esc(g0.name)}</b>${g0.title ? `<span class="title">${esc(g0.title)}</span>` : ""}</div>` : "",
+      c.periods[0] ? `<div class="pk-line pk-period">${esc(c.periods[0].text)}</div>` : c.cause || c.note ? `<div class="pk-line pk-period">${esc(c.cause ?? c.note)}</div>` : "",
+    ].join("");
+    let body = "";
+    if (!c.exists) body += `<p class="empty">${year}年の地図には、この植民地はありません。</p>`;
+    if (c.governors.length) {
+      body += `<h3>統治者</h3><ul class="rulers">${c.governors
+        .map(
+          (r) =>
+            `<li class="ruler">${d ? imageSlot(portraitRefs(governorsAsPolity(d), r), "portrait", baseName(r.name)) : ""}<div class="r-body"><b>${esc(r.name)}</b>${
+              r.title ? `<span class="title">${esc(r.title)}</span>` : ""
+            }<span class="years">${yearRange(r.from, r.to)}</span>${r.note ? `<div class="note">${escY(r.note)}</div>` : ""}</div></li>`,
+        )
+        .join("")}</ul>`;
+    }
+    // 本国の今の君主（植民地を治める側の顔ぶれ）
+    const pr = this.idx.rulersAt(parent, year)[0];
+    if (pr) body += `<p class="col-home"><span class="years">本国の君主</span><b>${esc(pr.name)}</b>${pr.title ? `<span class="title">${esc(pr.title)}</span>` : ""}</p>`;
+    if (c.periods.length) {
+      body += `<h3>情勢</h3>${c.periods
+        .map((x) => `<p class="period"><span class="years">${yearRange(x.from, x.to)}</span>${escY(x.text)}</p>${gallerySlot([], x.images, "gp", x.text.slice(0, 40))}`)
+        .join("")}`;
+    }
+    // その土地の記述（地域の timeline の cause・note）。データのない植民地では、これが主な説明になる
+    // （データの情勢があるときは出さない。いちばん広い地域の記述は、複数の副ラベルをまとめた植民地の説明にならないため）
+    if ((c.cause || c.note) && !c.periods.length) {
+      body += `<h3>情勢</h3>`;
+      if (c.region) body += `<p class="period"><span class="years">地域</span>${esc(c.region)}</p>`;
+      if (c.cause) body += `<p class="period"><span class="cause">${escY(c.cause)}</span></p>`;
+      if (c.note) body += `<p class="period">${escY(c.note)}</p>`;
+    }
+    if (c.labels.length > 1) body += `<h3>構成</h3><p class="col-labels">${c.labels.slice(0, 14).map((l) => `<span>${esc(l)}</span>`).join("")}${c.labels.length > 14 ? `<span class="muted">ほか${c.labels.length - 14}</span>` : ""}</p>`;
+    const later = (d?.polities ?? []).filter((x) => this.idx.polityById.has(x));
+    if (later.length) body += `<p class="col-later"><span class="years">関係する国</span>${later.map((x) => this.link(x, year)).join(" ")}</p>`;
+    if (d?.note) body += `<p class="note">${escY(d.note)}</p>`;
+    if (!body) body = `<p class="empty">この植民地の解説はまだありません（${esc(this.idx.polityName(parent, year))}の色で塗っている土地です）。</p>`;
+    body += `<p class="col-back"><a href="#" class="plink" data-polity="${esc(c.parent)}"><span class="swatch" style="background:${esc(color)}"></span>本国（${esc(this.idx.shortName(parent, year))}）の情報へ</a></p>`;
+    this.openCard(`c:${c.parent}|${c.key}`, head, peek || `<span class="muted">${esc(c.kind)}</span>`, body);
+    this.polityEl.classList.add("colony");
+    this.polityEl.style.setProperty("--pc", color);
+  }
+
   // ---- 地図の上に浮かぶ情報カード（国・所属なしの土地・宗教／言語の地域） ----
   /** いまカードに出している対象（変わったら、スマホでは折りたたみに戻す） */
   private cardKey = "";
@@ -537,6 +653,8 @@ export class Panel {
    */
   private openCard(key: string, head: string, peek: string, body: string) {
     const el = this.polityEl;
+    el.classList.remove("colony");
+    el.style.removeProperty("--pc");
     if (key !== this.cardKey) {
       el.classList.remove("expanded");
       this.cardKey = key;
@@ -558,6 +676,7 @@ export class Panel {
   }
 
   private closeCard() {
+    this.polityEl.classList.remove("colony");
     this.polityEl.hidden = true;
     this.polityEl.innerHTML = "";
     this.polityEl.classList.remove("expanded");
@@ -574,6 +693,14 @@ export class Panel {
 /** 「アウグスト2世（復位）」→「アウグスト2世」 */
 function baseName(name: string) {
   return name.replace(/\s*[（(][^）)]*[）)]\s*/g, "").trim();
+}
+
+/** 植民地の総督を、肖像の記事選び（君主と同じ決まり）に使うための形 */
+const govPolities = new WeakMap<Colony, Polity>();
+function governorsAsPolity(c: Colony): Polity {
+  let p = govPolities.get(c);
+  if (!p) govPolities.set(c, (p = { id: c.id, name: c.name, rulers: c.governors, source: c.source }));
+  return p;
 }
 
 /** 政体ごとの「肖像に使わない記事」：複数の別人が出典にしている記事（一覧・王朝の記事）、政体そのものの記事 */
