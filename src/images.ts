@@ -390,9 +390,10 @@ function fromMediaItem(it: MediaListItem, r: WikiRef): GalleryItem | null {
   let orig: string | undefined;
   let file = "";
   for (const s of it.srcset) {
-    const url = s.src.startsWith("//") ? "https:" + s.src : s.src;
-    if (!/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\//.test(url)) return null; // Commons にない（各言語版だけの、自由利用でない画像など）は使わない
-    const m = url.match(/^(https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/)thumb\/([0-9a-f]\/[0-9a-f]{2}\/([^/]+))\/((?:[a-z0-9]+-)*?)(\d+)px-([^/]+)$/i);
+    // 実際の応答は //thumb.wikimedia.org/wikipedia/commons/thumb/…/500px-名前.jpg?utm_source=… の形（2026-11 に確認）。upload.wikimedia.org のこともある
+    const url = (s.src.startsWith("//") ? "https:" + s.src : s.src).replace(/[?#].*$/, "");
+    if (!/^https:\/\/(?:upload|thumb)\.wikimedia\.org\/wikipedia\/commons\//.test(url)) return null; // Commons にない（各言語版だけの、自由利用でない画像など）は使わない
+    const m = url.match(/^(https:\/\/(?:upload|thumb)\.wikimedia\.org\/wikipedia\/commons\/)thumb\/([0-9a-f]\/[0-9a-f]{2}\/([^/]+))\/((?:[a-z0-9]+-)*?)(\d+)px-([^/]+)$/i);
     if (m) {
       const w = +m[5];
       tmpl = `${m[1]}thumb/${m[2]}/${m[4]}{W}px-${m[6]}`;
@@ -400,7 +401,7 @@ function fromMediaItem(it: MediaListItem, r: WikiRef): GalleryItem | null {
       if (!s.scale || s.scale === "1x") w1 = w;
       file = m[3];
     } else {
-      const o = url.match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/[0-9a-f]\/[0-9a-f]{2}\/([^/]+)$/i);
+      const o = url.match(/^https:\/\/(?:upload|thumb)\.wikimedia\.org\/wikipedia\/commons\/[0-9a-f]\/[0-9a-f]{2}\/([^/]+)$/i);
       if (o) {
         orig = url;
         file = o[1];
