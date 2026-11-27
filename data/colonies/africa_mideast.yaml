@@ -1,0 +1,2447 @@
+# アフリカ・中東の植民地・保護国・委任統治領・占領地（docs/data-format.md の「植民地」。担当 C3）
+# match の副ラベルは、地域の timeline の label（owner が parent のもの）の1行目。
+# 副ラベルのない土地（アルジェリア 1940 年以降・モロッコ・エジプト・湾岸など）は iso・regions で拾う（owner が parent のピースだけが当てはまる）。
+# このファイルは asia_africa.yaml より先に読まれる（ファイル名の順）ので、そちらの植民地と同じピース・年が重ならないようにしている。
+
+# ---------------------------------------------------------------- 北アフリカ
+
+- id: french_algeria
+  name: フランス領アルジェリア
+  parent: france
+  kind: 植民地（1848年から本国の県）
+  match:
+    iso: [DZA]
+  from: 1830
+  to: 1961
+  polities: [algeria, algiers]
+  governors:
+    - { name: トマ・ロベール・ビュジョー, title: 総督, from: 1840, to: 1847, note: 焦土戦術でアブド・アルカーディルの抵抗を抑える, source: "https://en.wikipedia.org/wiki/Thomas_Robert_Bugeaud" }
+    - { name: パトリス・ド・マクマオン, title: 総督, from: 1864, to: 1870, note: のちの第三共和政の大統領, source: "https://en.wikipedia.org/wiki/List_of_French_governors_of_Algeria" }
+    - { name: シャルル・ジョナール, title: 総督, from: 1903, to: 1911, source: "https://en.wikipedia.org/wiki/List_of_French_governors_of_Algeria" }
+    - { name: ジャック・スーステル, title: 総督, from: 1955, to: 1956, source: "https://en.wikipedia.org/wiki/List_of_French_governors_of_Algeria" }
+    - { name: ロベール・ラコスト, title: 駐在相, from: 1956, to: 1958, note: アルジェの戦いで軍に警察権を与える, source: "https://en.wikipedia.org/wiki/List_of_French_governors_of_Algeria" }
+  periods:
+    - from: 1830
+      to: 1847
+      text: 復古王政のシャルル10世は、国内の不満をそらすため、1830年にアルジェを攻め落とした（オスマン帝国のもとのアルジェ太守を倒す）。七月王政も占領を続け、内陸ではアブド・アルカーディルが部族をまとめて15年にわたり抵抗した。総督ビュジョーの焦土戦術で抵抗は抑えられ、1847年にアブド・アルカーディルは降伏した。
+      source: "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
+    - from: 1848
+      to: 1870
+      text: 二月革命後の1848年、北部はアルジェ・オラン・コンスタンティーヌの3県として本国に組み込まれた。没収した土地にフランス・スペイン・イタリアなどからの入植者（コロン）が入り、ブドウ畑や小麦の農園を開いた。ナポレオン3世は「アラブ王国」を唱えて先住民の土地を守ろうとしたが、入植者は反発した。
+      source: "https://en.wikipedia.org/wiki/French_Algeria"
+    - from: 1871
+      to: 1918
+      text: 普仏戦争の敗北の年（1871年）、カビリーで大反乱が起き、鎮圧後さらに土地が奪われた。第三共和政のもとで入植者が政治を握り、ユダヤ教徒には市民権が与えられた（クレミュー法）一方、ムスリムは「原住民法」で差別された。20世紀初めに南のサハラへ領域を広げた。第一次世界大戦では多くのアルジェリア人が兵士・労働者として本国へ送られた。
+      source: "https://en.wikipedia.org/wiki/French_Algeria"
+    - from: 1919
+      to: 1953
+      text: 本国へ出稼ぎに出た労働者の中からメッサーリー・ハーッジの独立運動が生まれ、ウラマー（イスラーム学者）の改革運動も広がった。第二次世界大戦では、1940年からヴィシー政府のもとに置かれ、1942年に連合軍が上陸した。1945年5月8日、ヨーロッパの戦勝の日にセティフで起きた暴動は激しく弾圧され、多くの死者が出た。
+      source: "https://en.wikipedia.org/wiki/Sétif_and_Guelma_massacre"
+    - from: 1954
+      to: 1961
+      text: 1954年11月、民族解放戦線（FLN）が武装蜂起し、アルジェリア戦争が始まった。フランスは50万人近い兵を送り、拷問も行われた。1958年、入植者と軍がアルジェで反乱を起こすと、本国では第四共和政が倒れてド・ゴールが復帰した（第五共和政）。ド・ゴールは民族自決を認める方へ転じ、1962年のエヴィアン協定と住民投票で独立が決まった。約100万人の入植者（ピエ・ノワール）が本国へ引き揚げた。
+      source: "https://ja.wikipedia.org/wiki/アルジェリア戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領アルジェリア"
+    - "https://en.wikipedia.org/wiki/French_Algeria"
+
+- id: french_tunisia
+  name: チュニジア（フランスの保護国）
+  parent: france
+  kind: 保護国（ベイの政府を残し、フランスの総駐在官が実権を握る）
+  match:
+    iso: [TUN]
+  from: 1881
+  to: 1955
+  polities: [tunisia, tunis]
+  governors:
+    - { name: ムハンマド・サーディク, title: ベイ（君主）, from: 1859, to: 1882, note: バルドー条約で保護国化を認める, source: "https://en.wikipedia.org/wiki/Muhammad_III_as-Sadiq" }
+    - { name: ポール・カンボン, title: 総駐在官, from: 1882, to: 1886, note: マルサ協定（1883年）で保護国の統治の形を作る, source: "https://en.wikipedia.org/wiki/Paul_Cambon" }
+    - { name: ムハンマド・アミーン, title: 最後のベイ, from: 1943, to: 1957, source: "https://en.wikipedia.org/wiki/Muhammad_VIII_al-Amin" }
+  periods:
+    - from: 1881
+      to: 1913
+      text: チュニスのベイ政権は、近代化の改革で借金がふくらみ、1869年から英・仏・伊の国際財務委員会の管理を受けていた。ベルリン会議（1878年）でイギリスとドイツの了解を得たフランスは、1881年、アルジェリアとの国境の部族の侵入を理由に出兵し、バルドー条約で保護国とした。チュニジアに多くの移民を送っていたイタリアは反発し、翌年ドイツ・オーストリアと三国同盟を結んだ。
+      source: "https://ja.wikipedia.org/wiki/チュニジアの歴史"
+    - from: 1914
+      to: 1939
+      text: ベイの政府は形だけ残り、フランス人の官吏と入植者が政治と良い土地を握った。1920年に立憲を求めるドゥストゥール党ができ、1934年にはブルギバらが新ドゥストゥール党を作って独立運動の中心になった。
+      source: "https://en.wikipedia.org/wiki/French_protectorate_of_Tunisia"
+    - from: 1940
+      to: 1945
+      text: 本国の降伏後はヴィシー政府に従った。1942年11月、連合軍の北アフリカ上陸に対し、ドイツ・イタリア軍がチュニジアに入り、最後の拠点となった（チュニジアの戦い）。1943年5月に枢軸軍が降伏した。
+      source: "https://en.wikipedia.org/wiki/Tunisian_campaign"
+    - from: 1946
+      to: 1955
+      text: 戦後、新ドゥストゥール党と労働組合が独立を求め、1952年からはゲリラ闘争も起きた。インドシナで敗れたフランスのマンデス＝フランス内閣は1954年に内政自治を認め、1956年3月に独立した。翌年、ブルギバがベイを退けて共和国の大統領になった。
+      source: "https://ja.wikipedia.org/wiki/ハビーブ・ブルギーバ"
+  source:
+    - "https://ja.wikipedia.org/wiki/チュニジアの歴史"
+    - "https://en.wikipedia.org/wiki/French_protectorate_of_Tunisia"
+
+- id: french_morocco
+  name: フランス保護領モロッコ
+  names:
+    - { to: 1911, name: モロッコ（フランス軍の占領地）, kind: 占領地（ウジダ・カサブランカ周辺） }
+  parent: france
+  kind: 保護国（スルタンの政府を残し、フランスの総駐在官が実権を握る）
+  match:
+    iso: [MAR]
+  from: 1907
+  to: 1955
+  polities: [morocco, rif_republic]
+  governors:
+    - { name: ユベール・リヨテ, title: 総駐在官, from: 1912, to: 1925, note: スルタンの権威を立てる間接統治と都市計画で知られる, source: "https://ja.wikipedia.org/wiki/ユベール・リヨテ" }
+    - { name: アルフォンス・ジュアン, title: 総駐在官, from: 1947, to: 1951, source: "https://en.wikipedia.org/wiki/Alphonse_Juin" }
+    - { name: ムハンマド5世, title: スルタン, from: 1927, to: 1955, note: 1953–55年はフランスに退位させられ、マダガスカルに流される, source: "https://ja.wikipedia.org/wiki/ムハンマド5世_(モロッコ王)" }
+  periods:
+    - from: 1907
+      to: 1911
+      text: 英仏協商（1904年）でエジプトとモロッコの勢力圏を認め合ったフランスに対し、ドイツは皇帝ヴィルヘルム2世のタンジール訪問で異を唱えた（第1次モロッコ事件、1905年）。アルヘシラス会議（1906年）でドイツは孤立し、フランスは1907年にウジダとカサブランカを占領した。1911年、フランスのフェズ出兵にドイツが軍艦をアガディールに送った（第2次モロッコ事件）。
+      source: "https://ja.wikipedia.org/wiki/モロッコ事件"
+    - from: 1912
+      to: 1925
+      text: ドイツにコンゴの一部を譲って了解をとり、1912年のフェズ条約でモロッコを保護国とした（北部はスペインの保護領、タンジールは国際管理）。総駐在官リヨテはスルタンの権威を立てつつ、新しい都ラバトや港カサブランカを整えた。山地の部族の平定は1934年まで続き、北部ではアブド・アルカリームのリーフ共和国（1921–26年）が独仏の連合軍に敗れた。
+      source: "https://en.wikipedia.org/wiki/French_protectorate_in_Morocco"
+    - from: 1926
+      to: 1945
+      text: 入植者が平野の農地を広げ、燐鉱石の採掘も進んだ。1930年、ベルベル人をイスラーム法でなく慣習法で裁く「ベルベル勅令」がアラブ人とベルベル人を分ける政策とみられ、民族運動が広がった。1943年のカサブランカ会談のときスルタンはアメリカのローズヴェルトと会い、1944年に独立党（イスティクラール）が独立を求めた。
+      source: "https://en.wikipedia.org/wiki/French_protectorate_in_Morocco"
+    - from: 1946
+      to: 1955
+      text: スルタンのムハンマド5世が独立運動に近づくと、フランスは1953年に彼を退位させてマダガスカルへ流した。かえって反仏の暴動とテロが広がり、アルジェリア戦争も始まったフランスは1955年にスルタンを復位させ、1956年3月に保護国は終わって独立した（翌年から国王）。
+      source: "https://ja.wikipedia.org/wiki/ムハンマド5世_(モロッコ王)"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス保護領モロッコ"
+    - "https://en.wikipedia.org/wiki/French_protectorate_in_Morocco"
+
+- id: spanish_morocco
+  name: スペイン保護領モロッコ
+  names:
+    - { to: 1911, name: メリリャ・ララシュ周辺（スペイン軍の占領） }
+  parent: spain
+  kind: 保護領（北部。テトゥアンにスルタンの代理ハリーファとスペインの高等弁務官）
+  match:
+    regions: [morocco_spanish_rif, morocco_spanish_zone, larache, melilla_hinterland]
+    labels: [タンジール（スペインの占領）]
+  from: 1909
+  to: 1955
+  polities: [morocco, rif_republic, nationalist_spain]
+  governors:
+    - { name: ダマソ・ベレンゲール, title: 高等弁務官, from: 1919, to: 1922, note: アンワールの敗戦の責任を問われる, source: "https://en.wikipedia.org/wiki/Dámaso_Berenguer" }
+    - { name: ムーレイ・ハサン・ビン・マフディー, title: ハリーファ（スルタンの代理）, from: 1925, to: 1956, source: "https://en.wikipedia.org/wiki/Spanish_protectorate_in_Morocco" }
+  periods:
+    - from: 1909
+      to: 1920
+      text: 米西戦争（1898年）で海外領土の多くを失ったスペインは、古くからの拠点メリリャ・セウタの背後に勢力を広げた。1909年のメリリャ周辺の戦いでは、本国で予備兵の動員に反対するバルセロナの暴動（悲劇の一週間）が起きた。1912年、フランスとの条約でモロッコ北部の保護領を得た。
+      source: "https://en.wikipedia.org/wiki/Spanish_protectorate_in_Morocco"
+    - from: 1921
+      to: 1926
+      text: 1921年、リーフ地方の指導者アブド・アルカリームがアンワールでスペイン軍を大敗させ、リーフ共和国を立てた。この敗戦は本国の政治を揺るがし、1923年のプリモ・デ・リベラの軍事独裁につながった。1925年のアルホセイマ上陸作戦とフランス軍の協力で、1926年にリーフ共和国は倒れた。
+      source: "https://ja.wikipedia.org/wiki/第3次リーフ戦争"
+    - from: 1927
+      to: 1955
+      text: 保護領の軍（アフリカ軍）はスペイン軍の精鋭となり、1936年にはここからフランコが反乱を起こした（スペイン内戦）。内戦中はフランコ派が治め、多くのモロッコ兵が本国の戦場に送られた。第二次世界大戦中の1940–45年にはタンジールも占領した。フランス領が独立した1956年、スペインも北部の保護領を返した。
+      source: "https://en.wikipedia.org/wiki/Spanish_protectorate_in_Morocco"
+  source:
+    - "https://ja.wikipedia.org/wiki/スペイン保護領モロッコ"
+    - "https://en.wikipedia.org/wiki/Spanish_protectorate_in_Morocco"
+
+- id: spanish_sahara
+  name: スペイン領サハラ
+  names:
+    - { from: 1946, to: 1957, name: スペイン領西アフリカ（サハラ・イフニ・タルファヤ）, kind: 植民地（総督はイフニのシディ・イフニ） }
+  parent: spain
+  kind: 植民地（リオ・デ・オロとサギア・エル・ハムラ）
+  match:
+    iso: [ESH]
+    regions: [tarfaya_strip, sidi_ifni]
+  from: 1884
+  to: 1975
+  polities: [morocco, mauritania]
+  periods:
+    - from: 1884
+      to: 1933
+      text: アフリカ分割のなか、1884年にスペインは大西洋岸のリオ・デ・オロ（ビリャ・シスネロス、いまのダフラ）を保護領とした。フランスとの条約（1900・1904・1912年）で内陸の境界が決まったが、遊牧民の住む内陸にはほとんど手が及ばず、海岸の数か所の拠点だけだった。
+      source: "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - from: 1934
+      to: 1957
+      text: 1934年に内陸のスマラなどを占め、イフニ（1934年）も実際に統治し始めた。1946年、サハラ・イフニ・タルファヤ地帯をスペイン領西アフリカとしてまとめた。独立したモロッコは1957年にイフニとサハラを攻め（イフニ戦争）、1958年にスペインはタルファヤ地帯を返した。
+      source: "https://en.wikipedia.org/wiki/Ifni_War"
+    - from: 1958
+      to: 1975
+      text: 1958年にサハラは本国の県（海外州）となった。1960年代にブー・クラーで燐鉱石の採掘が始まると重要性が増し、1973年には独立を求めるポリサリオ戦線が武装闘争を始めた。イフニは1969年にモロッコへ返された。1975年、フランコの死の直前に、モロッコの「緑の行進」を受けてマドリード協定でモロッコとモーリタニアに引き渡したが、住民の自決は決まらず、いまも係争地として残る。
+      source: "https://ja.wikipedia.org/wiki/西サハラ問題"
+  source:
+    - "https://ja.wikipedia.org/wiki/スペイン領サハラ"
+    - "https://en.wikipedia.org/wiki/Spanish_Sahara"
+
+- id: italian_libya
+  name: イタリア領リビア
+  names:
+    - { to: 1933, name: イタリア領トリポリタニア・キレナイカ, kind: 植民地（トリポリタニアとキレナイカの2つの植民地） }
+  parent: italy
+  kind: 植民地（1934年に1つにまとめる）
+  match:
+    iso: [LBY]
+  from: 1911
+  to: 1942
+  polities: [libya, senussi, tripolitania_republic]
+  governors:
+    - { name: ピエトロ・バドリオ, title: 総督, from: 1929, to: 1933, source: "https://en.wikipedia.org/wiki/Pietro_Badoglio" }
+    - { name: ロドルフォ・グラツィアーニ, title: キレナイカ副総督, from: 1930, to: 1934, note: 遊牧民を収容所に入れ、ウマル・ムフタールを処刑, source: "https://en.wikipedia.org/wiki/Rodolfo_Graziani" }
+    - { name: イタロ・バルボ, title: 総督, from: 1934, to: 1940, note: ファシスト党の幹部。農民の大量入植を進める, source: "https://en.wikipedia.org/wiki/Italo_Balbo" }
+  periods:
+    - from: 1911
+      to: 1922
+      text: アドワの戦い（1896年）でエチオピアに敗れたイタリアは、地中海の対岸のオスマン帝国領を狙い、1911年にイタリア＝トルコ戦争を起こした。1912年のローザンヌ条約でトリポリタニアとキレナイカを得たが、内陸ではサヌーシー教団などの抵抗が続き、第一次世界大戦中には海岸の数都市しか保てなかった。
+      source: "https://ja.wikipedia.org/wiki/伊土戦争"
+    - from: 1923
+      to: 1932
+      text: ムッソリーニのファシスト政権は「再征服」を始め、総督バドリオと副総督グラツィアーニはキレナイカの遊牧民を強制収容所に移して抵抗を断ち切った。サヌーシー教団の指導者ウマル・ムフタールは1931年に捕らえられて処刑され、翌年に抵抗は終わった。
+      source: "https://ja.wikipedia.org/wiki/ウマル・ムフタール"
+    - from: 1933
+      to: 1942
+      text: 1934年に「リビア」として1つにまとめ、総督バルボはイタリアの農民を大量に入植させ、海岸道路を造った。1939年に海岸部はイタリア本国に組み込まれた。第二次世界大戦では、北アフリカ戦線の戦場となり、ドイツのロンメルの軍とイギリス軍がキレナイカを奪い合った。1942年のエル・アラメインの戦いの後、1943年までにイギリス・自由フランス軍に占領された。
+      source: "https://en.wikipedia.org/wiki/Italian_Libya"
+  note: 1943–51年はイギリス（トリポリタニア・キレナイカ）とフランス（フェザーン）の軍政。1951年に連合王国として独立した。
+  source:
+    - "https://ja.wikipedia.org/wiki/イタリア領リビア"
+    - "https://en.wikipedia.org/wiki/Italian_Libya"
+
+# ---------------------------------------------------------------- 北東アフリカ（エジプト・スーダン・アフリカの角）
+
+- id: british_egypt
+  name: エジプト（イギリスの占領・保護国）
+  names:
+    - { to: 1913, name: エジプト（イギリスの占領下）, kind: 占領地（名目上はオスマン帝国の宗主権のもとのヘディーヴ政府） }
+    - { from: 1914, name: エジプト・スルタン国（イギリスの保護国）, kind: 保護国 }
+  parent: britain
+  kind: 占領地・保護国
+  match:
+    iso: [EGY]
+    labels: [エジプト（イギリスの占領下）]
+  from: 1882
+  to: 1921
+  polities: [egypt, mahdist]
+  governors:
+    - { name: クローマー卿（イヴリン・ベアリング）, title: 総領事, from: 1883, to: 1907, note: 財政を立て直し、事実上エジプトを治める, source: "https://en.wikipedia.org/wiki/Evelyn_Baring,_1st_Earl_of_Cromer" }
+    - { name: ハーバート・キッチナー, title: 総領事, from: 1911, to: 1914, source: "https://ja.wikipedia.org/wiki/ハーバート・キッチナー" }
+    - { name: エドマンド・アレンビー, title: 高等弁務官, from: 1919, to: 1925, note: 1922年に保護国の終わりを宣言, source: "https://en.wikipedia.org/wiki/Edmund_Allenby,_1st_Viscount_Allenby" }
+    - { name: アッバース2世, title: ヘディーヴ, from: 1892, to: 1914, note: 大戦の開始で廃位, source: "https://en.wikipedia.org/wiki/Abbas_II_of_Egypt" }
+    - { name: フサイン・カーミル, title: スルタン, from: 1914, to: 1917, source: "https://en.wikipedia.org/wiki/Hussein_Kamel_of_Egypt" }
+  periods:
+    - from: 1882
+      to: 1906
+      text: スエズ運河の建設などで借金を重ねたエジプトは、1875年に運河の株をイギリスに売り、英仏の財政管理を受けた。外国の支配に反対するウラービー運動が起きると、イギリスは1882年に単独で出兵してエジプトを占領した。名目上はオスマン帝国の宗主権とヘディーヴの政府が残ったが、総領事クローマーが実権を握り、綿花の輸出と財政の立て直しを進めた。
+      source: "https://ja.wikipedia.org/wiki/ウラービー革命"
+    - from: 1907
+      to: 1913
+      text: 1906年、イギリス将校の鳩撃ちから起きたディンシャワイ事件で村人が処刑され、ムスタファー・カーミルらの民族運動が強まった。英仏協商（1904年）でフランスはイギリスのエジプト支配を認めていた。
+      source: "https://en.wikipedia.org/wiki/History_of_Egypt_under_the_British"
+    - from: 1914
+      to: 1921
+      text: 第一次世界大戦でオスマン帝国が敵になると、イギリスはヘディーヴを退け、1914年にエジプトをオスマン帝国から切り離して保護国とした。スエズ運河を守る基地となり、住民は労働や物資を徴発された。戦後、ワフド党のサアド・ザグルールが独立を求めて流刑にされると1919年革命が起き、イギリスは1922年に保護国をやめて独立を認めた（ただしスエズ運河・スーダン・防衛などは留保）。
+      source: "https://ja.wikipedia.org/wiki/エジプト革命_(1919年)"
+  source:
+    - "https://ja.wikipedia.org/wiki/エジプト・スルタン国"
+    - "https://en.wikipedia.org/wiki/History_of_Egypt_under_the_British"
+
+- id: egyptian_sudan
+  name: エジプト領スーダン
+  parent: egypt
+  kind: エジプト（ムハンマド・アリー朝）の征服地（トルコ・エジプト支配）
+  match:
+    contains: [エジプト領スーダン]
+    labels: [エクアトリア州（エミン・パシャ）, ゼイラ（エジプト領）, ハラール（エジプト領）, ベルベラ（エジプト領）]
+  from: 1820
+  to: 1888
+  polities: [sudan, south_sudan, mahdist, funj, darfur]
+  governors:
+    - { name: サミュエル・ベーカー, title: エクアトリア州の長官, from: 1869, to: 1873, source: "https://en.wikipedia.org/wiki/Samuel_Baker" }
+    - { name: チャールズ・ゴードン, title: スーダン総督, from: 1877, to: 1880, note: 1884年に再び送られ、翌年ハルツームでマフディー軍に殺される, source: "https://ja.wikipedia.org/wiki/チャールズ・ゴードン" }
+    - { name: エミン・パシャ, title: エクアトリア州の長官, from: 1878, to: 1889, note: マフディー国家に囲まれて南部で孤立, source: "https://en.wikipedia.org/wiki/Emin_Pasha" }
+  periods:
+    - from: 1820
+      to: 1862
+      text: エジプトのムハンマド・アリーは、金と奴隷（兵士にする）を求めて1820年にスーダンへ軍を送り、フンジ王国を滅ぼした。1820年代にハルツームが総督の町として建てられ、重い税と奴隷狩りが住民を苦しめた。
+      source: "https://ja.wikipedia.org/wiki/トルコ・エジプト領スーダン"
+    - from: 1863
+      to: 1880
+      text: ヘディーヴのイスマーイールは、ナイル川の上流と紅海沿岸に支配を広げ、1874年にダルフールを征服した。奴隷貿易の取り締まりを求めるイギリスの圧力で、ベーカーやゴードンらヨーロッパ人を州の長官や総督に雇った。
+      source: "https://en.wikipedia.org/wiki/Turco-Egyptian_Sudan"
+    - from: 1881
+      to: 1888
+      text: 1881年、ムハンマド・アフマドが救世主（マフディー）を名のって蜂起し、重税と外国人の支配に不満をもつ人々が加わった（マフディー運動）。本国エジプトはイギリスに占領されており、1885年にハルツームが落ちてゴードンが戦死した。南のエクアトリア州ではエミン・パシャが孤立したまま残り、1889年に救出された。
+      source: "https://ja.wikipedia.org/wiki/マフディー戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/トルコ・エジプト領スーダン"
+    - "https://en.wikipedia.org/wiki/Turco-Egyptian_Sudan"
+
+- id: anglo_egyptian_sudan
+  name: アングロ＝エジプト・スーダン
+  names:
+    - { to: 1898, name: スーダン（英・エジプト軍の再征服）, kind: 占領地 }
+  parent: britain
+  kind: 英・エジプト共同統治（実際はイギリスの総督が治める）
+  match:
+    contains: [アングロ＝エジプト・スーダン]
+    labels: [スーダン（英・エジプト軍の占領）, スーダン（英・エジプト軍の再征服）, ダール・マサリート（スルタン国。英・エジプトの間接統治）]
+  from: 1891
+  to: 1955
+  polities: [sudan, south_sudan, mahdist, darfur]
+  governors:
+    - { name: ハーバート・キッチナー, title: 総督, from: 1899, to: 1899, note: オムドゥルマンの戦いでマフディー国家を倒す, source: "https://ja.wikipedia.org/wiki/ハーバート・キッチナー" }
+    - { name: レジナルド・ウィンゲート, title: 総督, from: 1899, to: 1916, source: "https://en.wikipedia.org/wiki/Reginald_Wingate" }
+    - { name: リー・スタック, title: 総督, from: 1917, to: 1924, note: カイロで暗殺され、エジプト軍はスーダンから追い出される, source: "https://en.wikipedia.org/wiki/Lee_Stack" }
+  periods:
+    - from: 1891
+      to: 1898
+      text: アフリカ分割でナイル川の上流を狙うフランスやイタリアに先んじるため、イギリスはエジプト軍を率いてスーダンの再征服に乗り出した。1898年、キッチナーの軍は機関銃でマフディー国家の軍をオムドゥルマンで破り、続いて南のファショダでフランスのマルシャン隊と向き合った（ファショダ事件。フランスが退く）。
+      source: "https://ja.wikipedia.org/wiki/ファショダ事件"
+    - from: 1899
+      to: 1923
+      text: 1899年の協定で、イギリスとエジプトの共同統治とされたが、総督はイギリス人で実権もイギリスにあった。北部のアラブ・イスラーム地域と南部のキリスト教・伝統宗教の地域は別々に治められた（南部政策）。1916年にダルフールのスルタン国も併合した。
+      source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_Sudan"
+    - from: 1924
+      to: 1945
+      text: 1924年、総督スタックがカイロで暗殺されると、イギリスはエジプトの軍と役人をスーダンから追い出した。ゲジラ地方で灌漑による綿花の栽培が大規模に始まり（1925年のセンナール・ダム）、スーダン経済の柱になった。第二次世界大戦では、隣のイタリア領東アフリカとの戦場になった。
+      source: "https://en.wikipedia.org/wiki/Anglo-Egyptian_Sudan"
+    - from: 1946
+      to: 1955
+      text: 戦後、エジプトはスーダンとの統合を、スーダンの政党は独立を求めた。1952年のエジプト革命の後、1953年の英・エジプト協定で自治と自決が決まり、1956年1月に独立した。独立の直前の1955年、北部中心の政府に反発する南部で反乱が起き、長い内戦の始まりとなった（2011年に南スーダンが分離）。
+      source: "https://ja.wikipedia.org/wiki/第一次スーダン内戦"
+  source:
+    - "https://ja.wikipedia.org/wiki/アングロ・エジプト・スーダン"
+    - "https://en.wikipedia.org/wiki/Anglo-Egyptian_Sudan"
+
+- id: italian_eritrea
+  name: イタリア領エリトリア
+  names:
+    - { to: 1889, name: アッサブ・マッサワ（イタリア領）, kind: 紅海沿岸の拠点 }
+  parent: italy
+  kind: 植民地（1890年から。首府は初めマッサワ、1897年からアスマラ）
+  match:
+    labels: [アッサブ（ルバッティーノ社の土地）, アッサブ（イタリア領）, マッサワ（イタリア領）の周辺, マッサワ（イタリア領）, イタリアの保護領（ダナキル海岸）, イタリア領（ケレン）, イタリア領（アスマラ）, エリトリア（イタリアの植民地）, カッサラ（イタリアの占領）]
+  from: 1869
+  to: 1935
+  polities: [eritrea, ethiopia]
+  governors:
+    - { name: オレステ・バラティエリ, title: 総督, from: 1892, to: 1896, note: アドワの戦いで敗れる, source: "https://en.wikipedia.org/wiki/Oreste_Baratieri" }
+    - { name: フェルディナンド・マルティーニ, title: 総督（初の文官）, from: 1897, to: 1907, note: 首府をアスマラに移す, source: "https://en.wikipedia.org/wiki/Ferdinando_Martini" }
+  periods:
+    - from: 1869
+      to: 1889
+      text: スエズ運河が開いた1869年、イタリアの船会社ルバッティーノ社が紅海の港アッサブを買い取り、1882年にイタリア政府のものとなった。統一の遅れたイタリアも植民地を求め、1885年にマッサワを占領して高原へ進もうとしたが、1887年のドガリでエチオピア軍に敗れた。1889年、エチオピアのメネリク2世とウッチャリ条約を結んで高原の一部を得た。
+      source: "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+    - from: 1890
+      to: 1896
+      text: 1890年、紅海沿岸と高原をまとめてエリトリア植民地とした（名は紅海のラテン語名から）。イタリアはウッチャリ条約を盾にエチオピアを保護国と主張したが、メネリク2世はこれを退け、1896年、アドワの戦いでイタリア軍を大敗させた。エチオピアの独立は守られ、エリトリアだけがイタリアに残った。
+      source: "https://ja.wikipedia.org/wiki/アドワの戦い"
+    - from: 1897
+      to: 1935
+      text: 首府をアスマラに移し、マッサワとの鉄道やロープウェイを造った。多くのエリトリア人がイタリア植民地軍の兵士（アスカリ）となり、リビアの戦争にも送られた。1930年代にはエチオピア侵攻の基地としてイタリア人の移住と工事が増えた。
+      source: "https://en.wikipedia.org/wiki/Italian_Eritrea"
+  source:
+    - "https://ja.wikipedia.org/wiki/イタリア領エリトリア"
+    - "https://en.wikipedia.org/wiki/Italian_Eritrea"
+
+- id: italian_east_africa
+  name: イタリア領東アフリカ
+  names:
+    - { to: 1935, name: エチオピア（イタリア軍の占領地）, kind: 戦争中の占領地 }
+  parent: italy
+  kind: 植民地（エチオピア・エリトリア・ソマリアをまとめる。副王はアディスアベバ）
+  match:
+    contains: [イタリア領東アフリカ]
+    labels: [オガデン（イタリアの占領）, エチオピア（イタリアの占領）, イギリス領ソマリランド（イタリアの占領）]
+  from: 1935
+  to: 1941
+  polities: [ethiopia, eritrea, somalia]
+  governors:
+    - { name: ピエトロ・バドリオ, title: 副王, from: 1936, to: 1936, source: "https://en.wikipedia.org/wiki/Italian_East_Africa" }
+    - { name: ロドルフォ・グラツィアーニ, title: 副王, from: 1936, to: 1937, note: 暗殺未遂の報復でアディスアベバで大虐殺, source: "https://en.wikipedia.org/wiki/Rodolfo_Graziani" }
+    - { name: アオスタ公アメデーオ, title: 副王, from: 1937, to: 1941, note: アンバ・アラギでイギリス軍に降伏, source: "https://en.wikipedia.org/wiki/Prince_Amedeo,_Duke_of_Aosta" }
+  periods:
+    - from: 1935
+      to: 1936
+      text: 世界恐慌の後、ムッソリーニは国威を高めるため、1935年10月にエチオピアへ侵攻した（エチオピア戦争）。国際連盟はイタリアに経済制裁を決めたが石油は含まれず、効果は薄かった。イタリア軍は毒ガスも使い、1936年5月にアディスアベバを占領した。皇帝ハイレ・セラシエはイギリスへ亡命し、国際連盟で訴えた。
+      source: "https://ja.wikipedia.org/wiki/第二次エチオピア戦争"
+    - from: 1937
+      to: 1941
+      text: エチオピア・エリトリア・ソマリアをまとめてイタリア領東アフリカとし、国王がエチオピア皇帝を兼ねた。各地で抵抗のゲリラ（アルベニョーチ）が続き、1937年の副王暗殺未遂の後には大量の報復殺害が行われた。第二次世界大戦では1940年にイギリス領ソマリランドを占領したが、1941年にイギリス・英連邦軍とエチオピアの抵抗勢力に敗れ、ハイレ・セラシエがアディスアベバに戻った。
+      source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_II)"
+  source:
+    - "https://ja.wikipedia.org/wiki/イタリア領東アフリカ"
+    - "https://en.wikipedia.org/wiki/Italian_East_Africa"
+
+- id: italian_somaliland
+  name: イタリア領ソマリランド
+  names:
+    - { to: 1904, name: ベナディール海岸（イタリアの保護領）, kind: 保護領・租借地 }
+    - { from: 1950, name: ソマリア信託統治領（イタリアの施政）, kind: 国際連合の信託統治領 }
+  parent: italy
+  kind: 植民地（首府モガディシュ）
+  match:
+    labels: [ミジュルティニア・スルタン国（イタリアの保護国）, ホビオ・スルタン国（イタリアの保護国）, イタリアの勢力圏, ベナディール（ザンジバルから租借）, イタリア領ソマリランド, オルトレ・ジュバ（イタリア領）, ソマリア信託統治領（イタリアの施政）]
+  from: 1889
+  to: 1959
+  polities: [somalia]
+  governors:
+    - { name: チェーザレ・マリア・デ・ヴェッキ, title: 総督, from: 1923, to: 1928, note: ファシスト党の幹部。北部のスルタン国を武力で併合, source: "https://en.wikipedia.org/wiki/Cesare_Maria_De_Vecchi" }
+  periods:
+    - from: 1889
+      to: 1904
+      text: 1889年、イタリアはソマリア北東部のミジュルティニアとホビオのスルタン国を保護下に置き、1892年にはザンジバルのスルタンから南のベナディール海岸の港（モガディシュなど）を借りた。初めは特許会社に統治をまかせた。
+      source: "https://en.wikipedia.org/wiki/Italian_Somaliland"
+    - from: 1905
+      to: 1935
+      text: 1905年に国の直轄の植民地とし、1908年にモガディシュを首府とした。ジュバ川流域でバナナや綿花の農園を開いた。第一次世界大戦でイギリス側についた見返りとして、1925年にケニアからジュバ川の西（オルトレ・ジュバ）を得た。ファシスト政権のデ・ヴェッキ総督は北部のスルタン国を武力で直接の支配に組み込んだ。
+      source: "https://en.wikipedia.org/wiki/Italian_Somaliland"
+    - from: 1950
+      to: 1959
+      text: 1936年からイタリア領東アフリカの一部となり、1941年にイギリスに占領された。戦後、国際連合の決定で、10年後の独立を条件に、旧宗主国イタリアの施政する信託統治領となった。1960年7月1日、北のイギリス領ソマリランドと合わさってソマリア共和国として独立した。
+      source: "https://en.wikipedia.org/wiki/Trust_Territory_of_Somaliland"
+  source:
+    - "https://ja.wikipedia.org/wiki/イタリア領ソマリランド"
+    - "https://en.wikipedia.org/wiki/Italian_Somaliland"
+
+- id: british_somaliland
+  name: イギリス領ソマリランド
+  parent: britain
+  kind: 保護領（初めは英領インドの管轄）
+  match:
+    labels: [イギリス領ソマリランド]
+  from: 1884
+  to: 1959
+  polities: [somalia]
+  periods:
+    - from: 1884
+      to: 1919
+      text: 紅海の出口をおさえ、インドへの航路の要地アデンに肉を送るため、イギリスは1884年からソマリ人の諸部族と保護条約を結び、ベルベラなどの港を手に入れた（エジプト軍の撤退の後）。1899年から、宗教指導者ムハンマド・アブドゥッラー・ハサン（イギリス人は「狂気のムッラー」と呼んだ）が内陸で抵抗を続け、1920年に飛行機を使った攻撃で倒された。
+      source: "https://en.wikipedia.org/wiki/British_Somaliland"
+    - from: 1920
+      to: 1949
+      text: 遊牧の地でほとんど開発されず、統治は最小限だった。1940年8月にイタリア軍に占領されたが、翌年イギリスが取り戻し、イタリア領ソマリアやエチオピアのオガデンもイギリス軍政のもとに置かれた。
+      source: "https://en.wikipedia.org/wiki/Italian_conquest_of_British_Somaliland"
+    - from: 1950
+      to: 1959
+      text: 1954年、イギリスは放牧地のハウド地方をエチオピアに引き渡し、ソマリ人の反発を招いた。1960年6月26日に独立し、5日後に南のソマリア信託統治領と合わさってソマリア共和国となった。1991年の内戦の後、この地域は「ソマリランド共和国」として独立を宣言している。
+      source: "https://en.wikipedia.org/wiki/State_of_Somaliland"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領ソマリランド"
+    - "https://en.wikipedia.org/wiki/British_Somaliland"
+
+- id: french_somaliland
+  name: フランス領ソマリ海岸
+  names:
+    - { to: 1895, name: オボック（フランス領）, kind: 紅海の出口の石炭補給地 }
+    - { from: 1967, name: フランス領アファル・イッサ, kind: 海外領土 }
+  parent: france
+  kind: 植民地（1946年から海外領土。首府ジブチ）
+  match:
+    labels: [オボック（フランス領）, フランス領ソマリ海岸, フランス領アファル・イッサ]
+  from: 1862
+  to: 1976
+  polities: [djibouti]
+  governors:
+    - { name: レオンス・ラガルド, title: 総督, from: 1884, to: 1899, note: ジブチの町を開き、エチオピアのメネリク2世と結ぶ, source: "https://en.wikipedia.org/wiki/Léonce_Lagarde" }
+  periods:
+    - from: 1862
+      to: 1895
+      text: スエズ運河の開通を前に、フランスは1862年に紅海の出口のオボックを買い取った。イギリスのアデンに対抗して、インドシナやマダガスカルへ向かう船の石炭の補給地とし、1888年に対岸にジブチの町を建てた。
+      source: "https://en.wikipedia.org/wiki/French_Somaliland"
+    - from: 1896
+      to: 1966
+      text: 1896年にフランス領ソマリ海岸とし、1917年にはジブチとエチオピアの都アディスアベバを結ぶ鉄道が全通して、内陸の国エチオピアの貿易の出口となった。住民は遊牧民のアファル人とソマリ系のイッサ人で、両者の対立をフランスは統治に利用した。1958年と1967年の住民投票ではフランスにとどまることが選ばれた（不正も指摘された）。
+      source: "https://en.wikipedia.org/wiki/French_Somaliland"
+    - from: 1967
+      to: 1976
+      text: 1967年にフランス領アファル・イッサと改めた。周りのアフリカ諸国と国際連合の圧力が強まり、1977年の住民投票でジブチ共和国として独立した。独立の後もフランス軍の基地が残る。
+      source: "https://en.wikipedia.org/wiki/French_Territory_of_the_Afars_and_the_Issas"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領ソマリ海岸"
+    - "https://en.wikipedia.org/wiki/French_Somaliland"
+
+# ---------------------------------------------------------------- 東アフリカ
+
+- id: british_kenya
+  name: ケニア植民地
+  names:
+    - { to: 1894, name: イギリス東アフリカ会社領, kind: 特許会社の勢力圏 }
+    - { from: 1895, to: 1919, name: 東アフリカ保護領, kind: 保護領 }
+  parent: britain
+  kind: 直轄植民地（内陸）と保護領（ザンジバルのスルタン領だった沿岸の帯）
+  match:
+    contains: [東アフリカ保護領, ケニア]
+    labels: [イギリスの勢力圏, ウィトゥ（イギリスの保護領）]
+  from: 1886
+  to: 1962
+  polities: [kenya]
+  governors:
+    - { name: チャールズ・エリオット, title: 弁務官, from: 1900, to: 1904, note: 高原を白人の入植地にする方針を立てる, source: "https://en.wikipedia.org/wiki/Charles_Eliot_(diplomat)" }
+    - { name: エドワード・グリッグ, title: 総督, from: 1925, to: 1931, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Kenya" }
+    - { name: エヴリン・ベアリング, title: 総督, from: 1952, to: 1959, note: 非常事態を宣言してマウマウ団を弾圧, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Kenya" }
+    - { name: マルコム・マクドナルド, title: 最後の総督, from: 1963, to: 1963, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Kenya" }
+  periods:
+    - from: 1886
+      to: 1894
+      text: 1886年の英独協定で、東アフリカの内陸は北がイギリス、南がドイツの勢力圏に分けられた。イギリス東アフリカ会社が特許を得て進出したが、経営は行き詰まった。
+      source: "https://en.wikipedia.org/wiki/Imperial_British_East_Africa_Company"
+    - from: 1895
+      to: 1919
+      text: 1895年、政府が会社から引き継いで東アフリカ保護領とした。ナイル川の源のウガンダへ向けてモンバサからウガンダ鉄道を建設し（1901年にヴィクトリア湖に達する）、工事にはインドから多くの労働者が連れてこられた。涼しい中央高原は「ホワイト・ハイランド」として白人の入植者に与えられ、キクユ人などは土地を失った。
+      source: "https://ja.wikipedia.org/wiki/ウガンダ鉄道"
+    - from: 1920
+      to: 1951
+      text: 1920年に内陸は直轄のケニア植民地、ザンジバルのスルタン領だった海岸の帯はケニア保護領となった。アフリカ人には人頭税と身分証明の携帯が課され、白人農園のコーヒー・茶の労働力にされた。キクユ人の協会の書記ジョモ・ケニヤッタはロンドンで土地の返還を訴えた。
+      source: "https://en.wikipedia.org/wiki/Kenya_Colony"
+    - from: 1952
+      to: 1962
+      text: 土地を奪われたキクユ人を中心に、秘密結社マウマウ（ケニア土地自由軍）が白人の入植者や協力者を襲った。総督は1952年に非常事態を宣言し、ケニヤッタを逮捕し、多くの人々を収容所に入れた。反乱を抑えた後、イギリスは多数派のアフリカ人による政治へ切り替え、1963年12月にケニヤッタを首相として独立した。
+      source: "https://ja.wikipedia.org/wiki/マウマウ団の乱"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領東アフリカ"
+    - "https://en.wikipedia.org/wiki/Kenya_Colony"
+
+- id: british_uganda
+  name: ウガンダ保護領
+  parent: britain
+  kind: 保護領（ブガンダなどの王国を残す間接統治）
+  match:
+    contains: [ウガンダ保護領]
+    labels: [ブニョロ（イギリス軍の遠征）]
+  from: 1894
+  to: 1961
+  polities: [uganda, buganda]
+  governors:
+    - { name: ハリー・ジョンストン, title: 特別弁務官, from: 1899, to: 1901, note: ブガンダと協定を結び、首長に土地を分ける, source: "https://en.wikipedia.org/wiki/Harry_Johnston" }
+    - { name: アンドルー・コーエン, title: 総督, from: 1952, to: 1957, note: ブガンダの王（カバカ）ムテサ2世を国外に追放, source: "https://en.wikipedia.org/wiki/Andrew_Cohen_(diplomat)" }
+  periods:
+    - from: 1894
+      to: 1899
+      text: ヴィクトリア湖の北のブガンダ王国では、キリスト教（プロテスタントとカトリック）とイスラームの宣教が入り、改宗した首長たちが争った。イギリス東アフリカ会社のルガードがプロテスタント派を助けて介入し、1894年にイギリスが保護領とした。抵抗したブニョロ王国はブガンダと組んだイギリス軍に攻められた。
+      source: "https://en.wikipedia.org/wiki/Uganda_Protectorate"
+    - from: 1900
+      to: 1945
+      text: 1900年のブガンダ協定で、王（カバカ）と首長の地位と土地を認める代わりに、イギリスの保護を受け入れさせた。ブガンダの首長たちはほかの地方の統治にも使われた。ケニアと違って白人の入植は少なく、アフリカ人の農民が綿花やコーヒーを作って輸出した。
+      source: "https://en.wikipedia.org/wiki/Buganda_Agreement_(1900)"
+    - from: 1946
+      to: 1961
+      text: 独立へ向かう中で、ブガンダ王国は自分たちの特別な地位を守ろうとし、統一国家をめざすイギリスと対立した。1953年に総督コーエンは王ムテサ2世を国外に追放したが、反発を受けて1955年に帰国を認めた。1962年10月、ブガンダなどの王国に自治を認める連邦制で独立した（首相オボテ）。
+      source: "https://en.wikipedia.org/wiki/Uganda_Protectorate"
+  source:
+    - "https://ja.wikipedia.org/wiki/ウガンダ保護領"
+    - "https://en.wikipedia.org/wiki/Uganda_Protectorate"
+
+- id: british_zanzibar
+  name: ザンジバル保護国
+  parent: britain
+  kind: 保護国（スルタンの政府を残す）
+  match:
+    labels: [ザンジバル・スルタン国（イギリスの保護国）]
+  from: 1890
+  to: 1962
+  polities: [zanzibar, tanzania]
+  governors:
+    - { name: アリー・ビン・サイード, title: スルタン, from: 1890, to: 1893, note: 保護国化を受け入れる, source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar" }
+    - { name: ハーリド・ビン・バルガシュ, title: スルタン（自称）, from: 1896, to: 1896, note: イギリスの認めない即位で英・ザンジバル戦争に, source: "https://ja.wikipedia.org/wiki/イギリス・ザンジバル戦争" }
+    - { name: ハムード・ビン・ムハンマド, title: スルタン, from: 1896, to: 1902, note: 1897年に奴隷制を廃止, source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar" }
+  periods:
+    - from: 1890
+      to: 1913
+      text: ザンジバルはオマーンのスルタンの都として奴隷と丁子（クローブ）の貿易で栄え、本土の海岸の帯も治めていた。1890年のヘルゴランド＝ザンジバル条約で、ドイツはイギリスのザンジバル保護国化を認めた（代わりに北海のヘルゴランド島を得る）。1896年、イギリスの認めないスルタンの即位に対して艦隊が宮殿を砲撃し、40分ほどで降伏させた（英・ザンジバル戦争）。翌年、奴隷制が廃止された。
+      source: "https://ja.wikipedia.org/wiki/ヘルゴランド＝ザンジバル条約"
+    - from: 1914
+      to: 1962
+      text: 1913年から英領インドの外務ではなく植民地省の管轄となり、イギリスの駐在官が政治を握った。社会の上層にアラブ人の地主、商業にインド人、下層に本土から来たアフリカ人という分断があり、独立前の選挙ではアラブ人中心の政党とアフリカ人中心のアフロ・シラジ党が争った。
+      source: "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+  note: 1963年12月にスルタン国として独立したが、翌月のザンジバル革命でスルタンが倒れ、1964年に本土のタンガニーカと合わさってタンザニアとなった。
+  source:
+    - "https://ja.wikipedia.org/wiki/ザンジバル・スルタン国"
+    - "https://en.wikipedia.org/wiki/Sultanate_of_Zanzibar"
+
+- id: german_east_africa
+  name: ドイツ領東アフリカ
+  names:
+    - { to: 1890, name: ドイツ東アフリカ会社領, kind: 特許会社の勢力圏 }
+  parent: german_empire
+  kind: 植民地（首府ダルエスサラーム。ルワンダ・ブルンジの王国を含む）
+  match:
+    contains: [ドイツ領東アフリカ]
+    labels: [ウィトゥ・スルタン国（ドイツの保護領）]
+  from: 1885
+  to: 1916
+  polities: [tanzania, rwanda_kingdom, burundi]
+  governors:
+    - { name: カール・ペータース, title: ドイツ東アフリカ会社の創立者, from: 1885, to: 1888, note: 首長たちと保護条約を結んで回る, source: "https://ja.wikipedia.org/wiki/カール・ペータース" }
+    - { name: ヘルマン・フォン・ヴィスマン, title: 総督, from: 1895, to: 1896, note: 1888–89年のアブシリの反乱を鎮める, source: "https://en.wikipedia.org/wiki/Hermann_von_Wissmann" }
+    - { name: グスタフ・アドルフ・フォン・ゲッツェン, title: 総督, from: 1901, to: 1906, note: マジ・マジ反乱を鎮圧, source: "https://en.wikipedia.org/wiki/Gustav_Adolf_von_Götzen" }
+    - { name: ハインリヒ・シュネー, title: 最後の総督, from: 1912, to: 1918, source: "https://en.wikipedia.org/wiki/Heinrich_Schnee" }
+  periods:
+    - from: 1885
+      to: 1890
+      text: ビスマルクが植民地の獲得に乗り出した1884–85年、カール・ペータースが内陸の首長たちと条約を結び、ドイツ東アフリカ会社の保護領となった。1888年、ザンジバルのスルタンから借りた海岸部の支配をめぐってアブシリの反乱が起き、ドイツ政府が軍を送った。
+      source: "https://en.wikipedia.org/wiki/German_East_Africa_Company"
+    - from: 1891
+      to: 1904
+      text: 1891年に政府の直轄植民地とし、海岸の帯もザンジバルから買い取った。内陸では、ヘヘ人の首長ムクワワが1898年に倒れるまで抵抗した。綿花・サイザル麻・コーヒーの栽培が進められ、税を払うための強制的な栽培が住民を苦しめた。
+      source: "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+    - from: 1905
+      to: 1913
+      text: 1905年、綿花の強制栽培に反発して南部でマジ・マジ反乱が起きた。「魔法の水（マジ）で弾丸が水に変わる」と信じた多くの民族が加わったが、ドイツ軍の焦土作戦と飢饉で数十万人が死んだ。この後、本国では植民地政策が見直され、鉄道（中央線）の建設が進んだ。
+      source: "https://ja.wikipedia.org/wiki/マジ・マジ反乱"
+    - from: 1914
+      to: 1916
+      text: 第一次世界大戦では、レットウ＝フォルベック将軍がアフリカ人兵士（アスカリ）を率いてゲリラ戦を続け、イギリス・ベルギー・ポルトガル軍を引きつけた（降伏は1918年11月の休戦の後）。1916年に大部分がイギリス軍、ルワンダ・ブルンジがベルギー軍に占領され、戦後はタンガニーカ（イギリス）とルアンダ＝ウルンディ（ベルギー）の委任統治領に分けられた。
+      source: "https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)"
+  source:
+    - "https://ja.wikipedia.org/wiki/ドイツ領東アフリカ"
+    - "https://en.wikipedia.org/wiki/German_East_Africa"
+
+- id: british_tanganyika
+  name: タンガニーカ
+  names:
+    - { to: 1919, name: ドイツ領東アフリカ（イギリスの占領地）, kind: 占領地 }
+    - { from: 1946, name: タンガニーカ（イギリスの信託統治領）, kind: 国際連合の信託統治領 }
+  parent: britain
+  kind: 国際連盟の委任統治領（B式）
+  match:
+    labels: [ドイツ領東アフリカ（イギリスの占領）]
+    contains: [タンガニーカ]
+  from: 1916
+  to: 1960
+  polities: [tanzania]
+  governors:
+    - { name: ホレス・バイアット, title: 行政官・総督, from: 1916, to: 1924, source: "https://en.wikipedia.org/wiki/Horace_Byatt" }
+    - { name: ドナルド・キャメロン, title: 総督, from: 1925, to: 1931, note: ナイジェリアにならい首長を通じた間接統治を始める, source: "https://en.wikipedia.org/wiki/Donald_Charles_Cameron" }
+    - { name: リチャード・ターンブル, title: 最後の総督, from: 1958, to: 1961, source: "https://en.wikipedia.org/wiki/Richard_Turnbull_(colonial_administrator)" }
+  periods:
+    - from: 1916
+      to: 1924
+      text: 第一次世界大戦でイギリス軍がドイツ領東アフリカの大部分を占領し、ヴェルサイユ条約でイギリスの委任統治領タンガニーカとなった（西部のルワンダ・ブルンジはベルギー、南端のキオンガはポルトガル）。国際連盟に毎年報告する義務があり、ケニアのような白人の大量入植は進まなかった。
+      source: "https://en.wikipedia.org/wiki/Tanganyika_Territory"
+    - from: 1925
+      to: 1945
+      text: 総督キャメロンは、地元の首長や長老を「原住民当局」として税の取り立てや裁判をまかせる間接統治をとった。首長のいない社会では、イギリスが首長を作り出すこともあった。輸出の柱はサイザル麻とコーヒーだった。
+      source: "https://en.wikipedia.org/wiki/Tanganyika_Territory"
+    - from: 1946
+      to: 1960
+      text: 戦後は国際連合の信託統治領となり、独立へ向けた監督を受けた。1947年からの落花生の大規模栽培計画は、土地の調査不足で大失敗した。教師出身のジュリウス・ニエレレがタンガニーカ・アフリカ民族同盟（TANU）を作り、選挙に勝って1961年12月に平和のうちに独立した。1964年にザンジバルと合わさってタンザニアとなった。
+      source: "https://ja.wikipedia.org/wiki/ジュリウス・ニエレレ"
+  source:
+    - "https://ja.wikipedia.org/wiki/タンガニーカ"
+    - "https://en.wikipedia.org/wiki/Tanganyika_Territory"
+
+- id: ruanda_urundi
+  name: ルアンダ＝ウルンディ
+  names:
+    - { to: 1919, name: ルワンダ・ブルンジ（ベルギー軍の占領地）, kind: 占領地 }
+    - { from: 1946, name: ルアンダ＝ウルンディ（ベルギーの信託統治領）, kind: 国際連合の信託統治領 }
+  parent: belgium
+  kind: 国際連盟の委任統治領（ルワンダとブルンジの王国を残す。1925年からベルギー領コンゴと行政を合わせる）
+  match:
+    contains: [ルアンダ＝ウルンディ]
+    labels: [ブルンジ（ベルギーの占領）, ルワンダ（ベルギーの占領）, ドイツ領東アフリカ（ベルギーの占領）, ルワンダ（ベルギーの信託統治下の共和国）]
+  from: 1916
+  to: 1961
+  polities: [rwanda_kingdom, rwanda, burundi]
+  governors:
+    - { name: ユヒ・ムシンガ, title: ルワンダの王（ムワミ）, from: 1896, to: 1931, note: キリスト教に改宗せず、ベルギーに廃位される, source: "https://en.wikipedia.org/wiki/Yuhi_V_of_Rwanda" }
+    - { name: ムタラ3世ルダヒグワ, title: ルワンダの王（ムワミ）, from: 1931, to: 1959, source: "https://en.wikipedia.org/wiki/Mutara_III_Rudahigwa" }
+  periods:
+    - from: 1916
+      to: 1924
+      text: 第一次世界大戦でベルギー領コンゴの軍がドイツ領東アフリカの西部を占領し、1916年にルワンダとブルンジの王国を押さえた。戦後、ベルギーの委任統治領ルアンダ＝ウルンディとなった（東部のタボラ周辺はイギリスに返す）。
+      source: "https://en.wikipedia.org/wiki/Ruanda-Urundi"
+    - from: 1925
+      to: 1958
+      text: ベルギーはドイツと同じく王と首長を通じて間接に治め、少数派の牧畜民ツチを支配層として優遇し、農耕民フツを下に置いた。1933年ごろから住民に民族を記した身分証明書を持たせ、もともと流動的だった区別を固定した。カトリック教会の布教が進み、コーヒーの強制栽培も行われた。
+      source: "https://en.wikipedia.org/wiki/Ruanda-Urundi"
+    - from: 1959
+      to: 1961
+      text: 独立が近づくと、ベルギーはフツの側に支持を移した。1959年、ルワンダでフツがツチを襲う「社会革命」が起き、多くのツチが隣国へ逃れた。1961年にルワンダは王政を廃して共和国となり、1962年7月、ルワンダ（共和国）とブルンジ（王国）が別々に独立した。この対立は1994年のルワンダ虐殺の遠い原因となった。
+      source: "https://ja.wikipedia.org/wiki/ルワンダの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/ルアンダ＝ウルンディ"
+    - "https://en.wikipedia.org/wiki/Ruanda-Urundi"
+
+- id: portuguese_swahili_coast
+  name: ポルトガル領東アフリカ沿岸（スワヒリ海岸）
+  parent: portugal
+  kind: 交易の拠点と勢力圏（インド副王の管轄）
+  match:
+    labels: [ザンジバル（ポルトガルの勢力圏）, スワヒリ海岸（ポルトガルの勢力圏）, ペンバ（ポルトガルの勢力圏）, モンバサ（ポルトガル領）]
+  from: 1503
+  to: 1728
+  polities: [kilwa, oman, zanzibar]
+  periods:
+    - from: 1503
+      to: 1592
+      text: ヴァスコ・ダ・ガマのインド航路の開拓（1498年）の後、ポルトガルはインド洋の貿易を独占しようと、スワヒリ海岸の港町を武力で従えた。1505年にキルワとモンバサを攻め、スルタンたちに貢納を課した。ムスリム商人の金・象牙の交易網は打撃を受けた。
+      source: "https://en.wikipedia.org/wiki/Portuguese_presence_in_East_Africa"
+    - from: 1593
+      to: 1697
+      text: 1593年、モンバサにジーザス要塞を築いて海岸支配の中心とした。1580年からの同君連合のもとで本国の力が落ち、17世紀にはペルシア湾のホルムズ（1622年）やオマーンのマスカット（1650年）を失った。オマーンの艦隊が南下して海岸の港を攻めた。
+      source: "https://ja.wikipedia.org/wiki/フォート・ジーザス"
+    - from: 1698
+      to: 1728
+      text: 1696–98年、オマーン軍がジーザス要塞を2年半囲んで落とし、ルヴマ川より北の海岸はオマーンの勢力下に入った。1728年にポルトガルは一時モンバサを取り戻したが、翌年再び追い出され、東アフリカのポルトガル領はモザンビークだけになった。
+      source: "https://en.wikipedia.org/wiki/Siege_of_Fort_Jesus"
+  source:
+    - "https://en.wikipedia.org/wiki/Portuguese_presence_in_East_Africa"
+
+# ---------------------------------------------------------------- 南部アフリカ
+
+- id: natal_colony
+  name: ナタール植民地
+  parent: britain
+  kind: 植民地（1893年から責任政府による自治）
+  match:
+    labels: [ナタール植民地, イギリス領ズールーランド, トンガランド（イギリスの保護領）]
+  from: 1843
+  to: 1909
+  polities: [natalia, zulu, south_africa]
+  governors:
+    - { name: シオフィラス・シェプストン, title: 先住民問題担当官, from: 1845, to: 1875, note: アフリカ人を保留地に分けて首長を通じて治める, source: "https://en.wikipedia.org/wiki/Theophilus_Shepstone" }
+  periods:
+    - from: 1843
+      to: 1878
+      text: ケープ植民地のイギリスの支配を嫌って内陸へ移ったブール人（グレート・トレック）は、ズールー王国を破って1839年にナタリア共和国を作った。イギリスは海への出口をブール人に渡さないため、1843年にここを併合した。ブール人の多くはさらに内陸へ去り、イギリス人の入植者が港町ダーバンを中心に住みついた。
+      source: "https://ja.wikipedia.org/wiki/ナタール植民地"
+    - from: 1879
+      to: 1897
+      text: 1879年、イギリスはズールー王国と戦い（ズールー戦争）、イサンドルワナで大敗したものの、ウルンディで勝って王国を解体した。ズールーランドは1887年にイギリス領となり、1897年にナタールに合わされた。海岸のサトウキビ農園の労働者として、インドから年季契約の移民が大勢連れてこられた。
+      source: "https://ja.wikipedia.org/wiki/ズールー戦争"
+    - from: 1898
+      to: 1909
+      text: 1893年から白人による責任政府が置かれた。若い弁護士ガンディーはダーバンでインド人への差別と闘い、非暴力の抵抗（サティヤーグラハ）を始めた。1906年、人頭税に反対するズールー人のバンバタの反乱が鎮圧された。1910年、ケープ・トランスヴァール・オレンジ川とともに南アフリカ連邦の州となった。
+      source: "https://en.wikipedia.org/wiki/Colony_of_Natal"
+  source:
+    - "https://ja.wikipedia.org/wiki/ナタール植民地"
+    - "https://en.wikipedia.org/wiki/Colony_of_Natal"
+
+- id: british_transvaal_orange
+  name: トランスヴァール・オレンジ川植民地
+  names:
+    - { to: 1880, name: トランスヴァール（イギリスの併合）, kind: 併合地 }
+    - { from: 1900, to: 1901, name: トランスヴァール・オレンジ川（イギリス軍の占領地）, kind: 南アフリカ戦争中の占領地 }
+  parent: britain
+  kind: 直轄植民地（ブール人の共和国を征服した後）
+  match:
+    labels: [トランスヴァール（イギリスの併合）, トランスヴァール（イギリス軍の占領）, オレンジ川植民地（イギリス軍の占領）, トランスヴァール植民地, オレンジ川植民地, オレンジ川主権国]
+  from: 1848
+  to: 1909
+  polities: [transvaal, orange_free_state, south_africa]
+  governors:
+    - { name: アルフレッド・ミルナー, title: 総督・高等弁務官, from: 1902, to: 1905, note: 戦後の復興と英語化を進める, source: "https://en.wikipedia.org/wiki/Alfred_Milner,_1st_Viscount_Milner" }
+  periods:
+    - from: 1848
+      to: 1880
+      text: ブール人はオレンジ川の北にオレンジ自由国、ヴァール川の北にトランスヴァール（南アフリカ共和国）を作った。イギリスは1848–54年にオレンジ川の地を併合（オレンジ川主権国）してから手放し、1877年には財政に行き詰まったトランスヴァールを併合したが、1880–81年の反乱（第1次ブール戦争）で再び独立を認めた。
+      source: "https://en.wikipedia.org/wiki/First_Boer_War"
+    - from: 1881
+      to: 1901
+      text: 1886年、トランスヴァールのヨハネスブルグで世界最大の金鉱が見つかると、イギリス人などの外国人労働者（ウイトランダー）が押し寄せた。ケープ植民地首相セシル・ローズらはトランスヴァールの乗っ取りを狙い、1899年に南アフリカ戦争（ブール戦争）が始まった。イギリスは45万人の兵を送り、ゲリラ戦に焦土作戦と強制収容所で応じ、収容所では多くの女性や子ども、アフリカ人が死んだ。
+      source: "https://ja.wikipedia.org/wiki/第二次ボーア戦争"
+    - from: 1902
+      to: 1909
+      text: 1902年のフェリーニヒング条約で2つの共和国はイギリスの植民地となった。高等弁務官ミルナーは鉱山の復興のため中国人労働者を入れた。1906–07年に自治が認められ、1910年、ケープ・ナタールとともに白人が支配する南アフリカ連邦となった。アフリカ人の参政権は、ほとんど認められなかった。
+      source: "https://ja.wikipedia.org/wiki/南アフリカ連邦"
+  source:
+    - "https://en.wikipedia.org/wiki/Transvaal_Colony"
+    - "https://en.wikipedia.org/wiki/Orange_River_Colony"
+
+- id: southern_rhodesia
+  name: 南ローデシア
+  names:
+    - { to: 1922, name: ローデシア（イギリス南アフリカ会社領）, kind: 特許会社の統治領 }
+  parent: britain
+  kind: 自治植民地（1923年から。白人の入植者が政府を持つ）
+  match:
+    labels: [イギリス南アフリカ会社領（マショナランド）, イギリス南アフリカ会社領（マタベレランド）, ローデシア（イギリス南アフリカ会社）, 南ローデシア（自治植民地）, ローデシア・ニヤサランド連邦（南ローデシア）, 南ローデシア（イギリスの暫定統治）]
+  from: 1890
+  to: 1979
+  polities: [rhodesia, zimbabwe, ndebele]
+  governors:
+    - { name: リアンダー・スター・ジェームソン, title: 行政官, from: 1891, to: 1894, note: 1895年にトランスヴァールへの侵入事件を起こす, source: "https://en.wikipedia.org/wiki/Leander_Starr_Jameson" }
+    - { name: ゴドフリー・ハギンズ, title: 首相, from: 1933, to: 1953, note: のちローデシア・ニヤサランド連邦の首相, source: "https://en.wikipedia.org/wiki/Godfrey_Huggins" }
+    - { name: イアン・スミス, title: 首相, from: 1964, to: 1965, note: 1965年に一方的に独立を宣言, source: "https://ja.wikipedia.org/wiki/イアン・スミス" }
+    - { name: ソームズ卿, title: 総督, from: 1979, to: 1980, note: 独立の前の選挙を管理, source: "https://en.wikipedia.org/wiki/Christopher_Soames" }
+  periods:
+    - from: 1890
+      to: 1922
+      text: ケープ植民地のセシル・ローズは、ケープからカイロまでをイギリスの支配でつなぐ夢をもち、1889年に特許を得たイギリス南アフリカ会社の「開拓隊」を1890年にマショナランドへ送った。1893年にンデベレ王国を征服し、1896–97年のンデベレ人・ショナ人の大反乱（第1次チムレンガ）も鎮圧した。土地はローズの名をとってローデシアと呼ばれた。
+      source: "https://ja.wikipedia.org/wiki/セシル・ローズ"
+    - from: 1923
+      to: 1952
+      text: 1922年の白人住民の投票で南アフリカ連邦に入らないことを選び、1923年に会社の統治を終えて自治植民地となった。1930年の土地配分法で良い土地の半分を少数の白人のものとし、アフリカ人は「原住民保留地」に押し込まれた。
+      source: "https://en.wikipedia.org/wiki/Southern_Rhodesia"
+    - from: 1953
+      to: 1963
+      text: 1953年、北ローデシア・ニヤサランドと合わさってローデシア・ニヤサランド連邦となった。銅と農業の経済を結ぶ狙いだったが、白人支配の連邦に北の2つのアフリカ人が強く反対し、1963年に解体された。
+      source: "https://ja.wikipedia.org/wiki/ローデシア・ニヤサランド連邦"
+    - from: 1964
+      to: 1979
+      text: 北の2か国が独立した後も、イギリスは多数派支配を独立の条件とした。白人のスミス政権は1965年に一方的に独立を宣言し（ローデシア）、国際連合の経済制裁とアフリカ人の解放闘争（第2次チムレンガ）を受けた。1979年のランカスター・ハウス協定でいったんイギリスの総督のもとに戻り、1980年の選挙を経てジンバブエとして独立した（首相ムガベ）。
+      source: "https://ja.wikipedia.org/wiki/ローデシア紛争"
+  note: 1965–79年のローデシア（一方的な独立）は政体 rhodesia。
+  source:
+    - "https://ja.wikipedia.org/wiki/南ローデシア"
+    - "https://en.wikipedia.org/wiki/Southern_Rhodesia"
+
+- id: northern_rhodesia
+  name: 北ローデシア
+  names:
+    - { to: 1923, name: 北ローデシア（イギリス南アフリカ会社領）, kind: 特許会社の統治領 }
+  parent: britain
+  kind: 保護領（1924年から植民地省の直轄。西部のバロツェランドは王国を残す）
+  match:
+    labels: [イギリス南アフリカ会社領, バロツェランド（イギリス南アフリカ会社の保護下）, 北東ローデシア（イギリス南アフリカ会社）, 北西ローデシア（イギリス南アフリカ会社）, 北ローデシア（イギリス南アフリカ会社）, バロツェランド（北ローデシア）, 北ローデシア（イギリス保護領）, ローデシア・ニヤサランド連邦（北ローデシア）, バロツェランド（ローデシア・ニヤサランド連邦）]
+  from: 1891
+  to: 1963
+  polities: [zambia, lozi]
+  governors:
+    - { name: ヒューバート・ウィンスロップ・ヤング, title: 総督, from: 1934, to: 1938, note: 首府をルサカに移す（1935年）, source: "https://en.wikipedia.org/wiki/Hubert_Winthrop_Young" }
+  periods:
+    - from: 1891
+      to: 1923
+      text: イギリス南アフリカ会社は、ザンベジ川の北にも条約で勢力を広げ、ロジ人のバロツェ王国（王レワニカ）を保護下に置いた。北東・北西ローデシアに分けて治め、1911年に北ローデシアとしてまとめた。住民には小屋税が課され、南の鉱山や農園への出稼ぎが広がった。
+      source: "https://en.wikipedia.org/wiki/North-Western_Rhodesia"
+    - from: 1924
+      to: 1952
+      text: 1924年に会社から植民地省の保護領に移った。1920年代末から北部のカッパーベルト（銅の帯）で大規模な銅山が開かれ、世界有数の銅の産地となった。鉱山のアフリカ人労働者は1935年・1940年にストライキを起こした。
+      source: "https://en.wikipedia.org/wiki/Northern_Rhodesia"
+    - from: 1953
+      to: 1963
+      text: 白人の多い南ローデシアと組まされたローデシア・ニヤサランド連邦に、ケネス・カウンダらの統一民族独立党（UNIP）は強く反対した。連邦の解体の後、1964年10月にザンビアとして独立した。
+      source: "https://ja.wikipedia.org/wiki/ケネス・カウンダ"
+  source:
+    - "https://ja.wikipedia.org/wiki/北ローデシア"
+    - "https://en.wikipedia.org/wiki/Northern_Rhodesia"
+
+- id: nyasaland
+  name: ニヤサランド保護領
+  names:
+    - { to: 1906, name: 英領中央アフリカ保護領 }
+  parent: britain
+  kind: 保護領
+  match:
+    labels: [英領中央アフリカ保護領, ニヤサランド保護領, ローデシア・ニヤサランド連邦（ニヤサランド）]
+  from: 1891
+  to: 1963
+  polities: [malawi]
+  governors:
+    - { name: ハリー・ジョンストン, title: 弁務官, from: 1891, to: 1896, note: 奴隷商人と戦い、保護領の基礎を作る, source: "https://en.wikipedia.org/wiki/Harry_Johnston" }
+  periods:
+    - from: 1891
+      to: 1914
+      text: リヴィングストンの探検の後、スコットランドの長老派の宣教団がニアサ湖（マラウイ湖）のほとりに伝道所を開いた。ポルトガルが内陸をつなごうとした（「バラ色地図」）のに対し、イギリスは1890年の最後通牒でこれを退け、1891年に保護領とした。
+      source: "https://en.wikipedia.org/wiki/British_Central_Africa_Protectorate"
+    - from: 1915
+      to: 1952
+      text: 1915年、宣教学校で学んだジョン・チレンブウェが、白人の農園の苛酷な扱いと大戦への徴兵に抗議して蜂起し、鎮圧された。資源が少なく、多くの男性が南ローデシアや南アフリカの鉱山へ出稼ぎに出た。
+      source: "https://en.wikipedia.org/wiki/Chilembwe_uprising"
+    - from: 1953
+      to: 1963
+      text: ローデシア・ニヤサランド連邦への編入に反対する運動が起き、1958年に帰国したヘイスティングズ・バンダが指導者となった。1959年に非常事態が宣言されたが、イギリスは連邦の解体を認め、1964年7月にマラウイとして独立した。
+      source: "https://en.wikipedia.org/wiki/Nyasaland"
+  source:
+    - "https://ja.wikipedia.org/wiki/ニヤサランド"
+    - "https://en.wikipedia.org/wiki/Nyasaland"
+
+- id: bechuanaland
+  name: ベチュアナランド保護領
+  parent: britain
+  kind: 保護領（ツワナ人の首長を残す間接統治。役所は国外のマフィケング）
+  match:
+    labels: [ベチュアナランド保護領, イギリス領ベチュアナランド]
+  from: 1885
+  to: 1965
+  polities: [botswana, tswana]
+  governors:
+    - { name: カーマ3世, title: ングワト人の首長, from: 1875, to: 1923, note: 1895年にロンドンへ行き、会社の支配を防ぐ, source: "https://en.wikipedia.org/wiki/Khama_III" }
+  periods:
+    - from: 1885
+      to: 1909
+      text: 西のドイツ領南西アフリカと東のトランスヴァールがつながるのを防ぎ、北のローデシアへの道（「宣教師の道」）を確保するため、イギリスは1885年にツワナ人の土地を保護領とした（南部はイギリス領ベチュアナランドとして1895年にケープ植民地へ）。1895年、ングワトの首長カーマ3世らはロンドンへ行き、イギリス南アフリカ会社への引き渡しを防いだ。
+      source: "https://en.wikipedia.org/wiki/Bechuanaland_Protectorate"
+    - from: 1910
+      to: 1965
+      text: 南アフリカ連邦への編入が予定されたが、首長たちの反対で実現しなかった。乾いた土地で開発はほとんどされず、男性は南アフリカの鉱山へ出稼ぎに出た。1948年、ングワトの首長の後継ぎセレツェ・カーマが白人のイギリス人女性と結婚すると、アパルトヘイトの南アフリカに配慮したイギリスは彼を国外に追放した。のちに帰国したセレツェ・カーマが1966年にボツワナの初代大統領となった。
+      source: "https://ja.wikipedia.org/wiki/セレツェ・カーマ"
+  source:
+    - "https://ja.wikipedia.org/wiki/ベチュアナランド"
+    - "https://en.wikipedia.org/wiki/Bechuanaland_Protectorate"
+
+- id: basutoland
+  name: バストランド
+  parent: britain
+  kind: 保護領（ソト人の王を残す。1884年から高等弁務官の直轄）
+  match:
+    labels: [バストランド（イギリスの保護領）]
+  from: 1868
+  to: 1965
+  polities: [lesotho]
+  governors:
+    - { name: モショエショエ1世, title: ソト人の王, from: 1822, to: 1870, note: ブール人に土地を奪われ、イギリスの保護を求める, source: "https://en.wikipedia.org/wiki/Moshoeshoe_I" }
+  periods:
+    - from: 1868
+      to: 1883
+      text: ソト人の王モショエショエ1世は、山地にたてこもってズールーの膨張やオレンジ自由国のブール人と戦った。西部の肥えた土地を奪われた後、1868年にイギリスの保護を求めた。1871年にケープ植民地に合わされたが、銃の取り上げに反発した「銃の戦争」（1880–81年）を経て、1884年にイギリス本国の直轄に戻った。
+      source: "https://en.wikipedia.org/wiki/Basutoland"
+    - from: 1884
+      to: 1965
+      text: 四方を南アフリカに囲まれ、男性の多くが南アフリカの金鉱へ出稼ぎに出た。南アフリカは編入を求めたが、住民の反対で実現しなかった。1966年、レソト王国として独立した。
+      source: "https://en.wikipedia.org/wiki/Basutoland"
+  note: 1871–83年のケープ植民地の時期は cape_colony（asia_africa.yaml）。
+  source:
+    - "https://ja.wikipedia.org/wiki/バストランド"
+    - "https://en.wikipedia.org/wiki/Basutoland"
+
+- id: swaziland_protectorate
+  name: スワジランド（イギリスの保護領）
+  parent: britain
+  kind: 保護領（スワジ人の王を残す）
+  match:
+    labels: [スワジランド（イギリスの保護領）]
+  from: 1902
+  to: 1967
+  polities: [swaziland]
+  governors:
+    - { name: ソブーザ2世, title: スワジの王, from: 1899, to: 1982, note: 1921年に親政。独立後も王として続く, source: "https://ja.wikipedia.org/wiki/ソブーザ2世" }
+  periods:
+    - from: 1902
+      to: 1967
+      text: 1894年からトランスヴァール（南アフリカ共和国）の保護下にあったが、南アフリカ戦争の後の1903年にイギリスの保護領となった。1907年の土地分割で土地の3分の1以上がヨーロッパ人に与えられ、王ソブーザ2世は買い戻しを進めた。1968年に王国として独立した。
+      source: "https://en.wikipedia.org/wiki/Swaziland_(protectorate)"
+  source:
+    - "https://en.wikipedia.org/wiki/History_of_Eswatini"
+
+- id: german_south_west_africa
+  name: ドイツ領南西アフリカ
+  parent: german_empire
+  kind: 植民地（首府ヴィントフック）
+  match:
+    labels: [ドイツ領南西アフリカ]
+  from: 1884
+  to: 1914
+  polities: [namibia]
+  governors:
+    - { name: ハインリヒ・ゲーリング, title: 帝国弁務官, from: 1885, to: 1890, note: ナチスの幹部ヘルマン・ゲーリングの父, source: "https://en.wikipedia.org/wiki/Heinrich_Ernst_Göring" }
+    - { name: テオドール・ロイトヴァイン, title: 総督, from: 1898, to: 1905, note: 首長の対立を利用して治める, source: "https://en.wikipedia.org/wiki/Theodor_Leutwein" }
+    - { name: ロタール・フォン・トロータ, title: 軍司令官・総督, from: 1904, to: 1905, note: ヘレロ人の殲滅を命じる, source: "https://en.wikipedia.org/wiki/Lothar_von_Trotha" }
+  periods:
+    - from: 1884
+      to: 1903
+      text: 1883年、ブレーメンの商人リューデリッツが海岸の土地を買い、翌1884年にビスマルクがドイツの保護領とした（ドイツ最初の植民地。ウォルビス湾はイギリス領）。乾いた高原は牧畜に向き、ドイツ人の入植者が牧畜民ヘレロ人やナマ人の土地と牛を手に入れていった。
+      source: "https://ja.wikipedia.org/wiki/ドイツ領南西アフリカ"
+    - from: 1904
+      to: 1907
+      text: 1904年、土地と牛を奪われたヘレロ人が蜂起し、ナマ人も続いた。トロータ将軍はヘレロ人を砂漠へ追いやり、殲滅を命じる布告を出した。生き残った人々も収容所で多くが死に、ヘレロ人の約8割、ナマ人の約半数が死んだとされる（20世紀最初のジェノサイド。2021年にドイツ政府が認めた）。
+      source: "https://ja.wikipedia.org/wiki/ヘレロ・ナマクア虐殺"
+    - from: 1908
+      to: 1914
+      text: 1908年に南部の砂漠でダイヤモンドが見つかり、植民地の財政を支えた。生き残った住民は土地と家畜を持つことを禁じられ、入植者の労働者にされた。1915年、第一次世界大戦で南アフリカ連邦軍に占領された。
+      source: "https://en.wikipedia.org/wiki/German_South_West_Africa"
+  source:
+    - "https://ja.wikipedia.org/wiki/ドイツ領南西アフリカ"
+    - "https://en.wikipedia.org/wiki/German_South_West_Africa"
+
+- id: south_west_africa
+  name: 南西アフリカ
+  names:
+    - { to: 1919, name: ドイツ領南西アフリカ（南アフリカ軍の占領地）, kind: 占領地 }
+    - { from: 1966, name: 南西アフリカ（南アフリカの不法な統治）, kind: 国際連合が委任統治の終わりを決めた後の統治 }
+  parent: south_africa
+  kind: 国際連盟の委任統治領（C式。南アフリカの一部のように治められる）
+  match:
+    labels: [ドイツ領南西アフリカ（南アフリカ軍の占領）, 南西アフリカ（委任統治領）, 南西アフリカ（南アフリカの統治）]
+  from: 1915
+  to: 1989
+  polities: [namibia]
+  periods:
+    - from: 1915
+      to: 1945
+      text: 第一次世界大戦で南アフリカ連邦軍がドイツ領を占領し、1920年に国際連盟から南アフリカの委任統治領とされた。南アフリカは白人の入植を進め、アフリカ人を保留地に置いて鉱山や農場の契約労働者とした。
+      source: "https://en.wikipedia.org/wiki/South_West_Africa"
+    - from: 1946
+      to: 1965
+      text: 戦後、南アフリカは国際連合の信託統治に移すことを拒み、併合を求めた。1948年からはアパルトヘイト（人種隔離政策）を南西アフリカにも広げた。1960年に南西アフリカ人民機構（SWAPO）ができ、1966年に武装闘争を始めた。
+      source: "https://ja.wikipedia.org/wiki/南西アフリカ人民機構"
+    - from: 1966
+      to: 1989
+      text: 1966年、国際連合総会は南アフリカの委任統治の終わりを決め、1971年には国際司法裁判所も南アフリカの統治を違法とした。南アフリカはSWAPOと、その基地のあるアンゴラで戦った（キューバ軍もアンゴラを助けた）。冷戦の終わりのなかで1988年に南アフリカ・アンゴラ・キューバが合意し、国連の監視下の選挙を経て1990年3月にナミビアとして独立した。
+      source: "https://ja.wikipedia.org/wiki/ナミビア独立戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/南西アフリカ"
+    - "https://en.wikipedia.org/wiki/South_West_Africa"
+
+- id: portuguese_angola
+  name: ポルトガル領アンゴラ
+  names:
+    - { from: 1951, name: アンゴラ（ポルトガルの海外州）, kind: 海外州（本国の一部とされる） }
+  parent: portugal
+  kind: 植民地（首府ルアンダ）
+  match:
+    contains: [ポルトガル領アンゴラ]
+    labels: [カビンダ（ポルトガルの保護領）, コンゴ王国（ポルトガルの保護下）]
+  from: 1576
+  to: 1974
+  polities: [angola, ndongo, kongo, matamba]
+  governors:
+    - { name: パウロ・ディアス・デ・ノヴァイス, title: 初代総督, from: 1575, to: 1589, note: ルアンダを建設, source: "https://en.wikipedia.org/wiki/Paulo_Dias_de_Novais" }
+    - { name: サルヴァドール・コレイア・デ・サ, title: 総督, from: 1648, to: 1651, note: ブラジルから艦隊を率いてオランダからルアンダを取り戻す, source: "https://en.wikipedia.org/wiki/Salvador_Correia_de_Sá" }
+  periods:
+    - from: 1576
+      to: 1647
+      text: 1576年、ポルトガルはルアンダを建設し、ンドンゴ王国の征服を始めた。アンゴラはブラジルの砂糖農園へ送る奴隷の最大の供給地となった。ンドンゴ・マタンバの女王ンジンガは、外交と戦いで長く抵抗した。1641年にはオランダがルアンダを占領した。
+      source: "https://ja.wikipedia.org/wiki/ンジンガ・ムバンデ"
+    - from: 1648
+      to: 1835
+      text: 1648年、ブラジルから来た艦隊がオランダを追い出し、アンゴラはブラジルと強く結びついた（奴隷はブラジルへ、ブラジルの酒や布がアンゴラへ）。1665年のムブウィラの戦いでコンゴ王国を破った。支配は海岸と川沿いの砦に限られ、内陸の王国やアフリカ人の商人を通じて奴隷を買った。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Angola"
+    - from: 1836
+      to: 1950
+      text: 1836年に奴隷貿易が禁止されたが、実際には続き、その後も強制労働（契約労働）がココアの島サントメなどへの送り出しに使われた。アフリカ分割では内陸の境界が決まり（1891年の英葡条約など）、ポルトガルは20世紀初めまでに内陸の諸王国を武力で従えた。サラザールの独裁（新国家体制）のもとで本国からの移民が増え、コーヒーの栽培が広がった。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Angola"
+    - from: 1951
+      to: 1974
+      text: 1951年、国際的な批判をかわすため「植民地」を「海外州」と改めた。1961年、独立戦争が始まり、アンゴラ解放人民運動（MPLA）・アンゴラ民族解放戦線（FNLA）・アンゴラ全面独立民族同盟（UNITA）が別々に戦った。1974年、本国でカーネーション革命が起きて独裁が倒れ、1975年11月に独立したが、3派の内戦となり、米ソ・キューバ・南アフリカも介入した。
+      source: "https://ja.wikipedia.org/wiki/アンゴラ独立戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領アンゴラ"
+    - "https://en.wikipedia.org/wiki/Portuguese_Angola"
+
+- id: portuguese_mozambique
+  name: ポルトガル領モザンビーク
+  names:
+    - { to: 1629, name: ポルトガル領東アフリカ（ソファラ・モザンビーク島）, kind: 交易の拠点（インド副王の管轄） }
+    - { from: 1951, name: モザンビーク（ポルトガルの海外州）, kind: 海外州（本国の一部とされる） }
+  parent: portugal
+  kind: 植民地（1752年までインド副王の管轄。首府は初めモザンビーク島、1898年からロウレンソ・マルケス）
+  match:
+    contains: [ポルトガル領モザンビーク]
+    labels: [ソファラ（ポルトガル領）, モザンビーク島（ポルトガル領）, イニャンバネ（ポルトガル領）, ケリンバ諸島（ポルトガル領）, ニアサ会社領, モザンビーク会社領]
+  from: 1505
+  to: 1974
+  polities: [mozambique, mutapa, gaza]
+  governors:
+    - { name: アントニオ・エネス, title: 王室弁務官, from: 1895, to: 1895, note: ガザ王国を征服, source: "https://en.wikipedia.org/wiki/António_Enes" }
+  periods:
+    - from: 1505
+      to: 1751
+      text: ポルトガルは、内陸のジンバブエ高原の金を求めて1505年にソファラ、1507年にモザンビーク島に拠点を置き、インドへの航路の中継地とした。ザンベジ川をさかのぼってムタパ王国に影響を及ぼし、川沿いには、ポルトガル人やその子孫が大領主となる「プラゾ」（王室の貸した領地）ができた。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Mozambique"
+    - from: 1752
+      to: 1890
+      text: 1752年にインドから切り離して独立の植民地とした。19世紀には奴隷貿易の拠点となり、ブラジルやフランス領のインド洋の島々へ送られた。南部ではングニ系のガザ王国が力を持った。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Mozambique"
+    - from: 1891
+      to: 1950
+      text: 1891年の英葡条約で境界が決まった。ポルトガルは資金がなく、北部と中部の広い土地をニアサ会社・モザンビーク会社などの特許会社に統治させた。1895年にガザ王国を征服し、南部の港ロウレンソ・マルケス（いまのマプト）を首府とした。南部の男性は南アフリカの金鉱へ労働者として送られ、その見返りをポルトガル政府が受け取った。
+      source: "https://en.wikipedia.org/wiki/Mozambique_Company"
+    - from: 1951
+      to: 1974
+      text: 1951年に海外州とされた。1962年にエドゥアルド・モンドラーネがモザンビーク解放戦線（FRELIMO）を作り、1964年から北部でゲリラ戦を始めた。1974年に本国でカーネーション革命が起き、1975年6月に独立した（大統領マシェル）。その後、ローデシアと南アフリカの支援する反政府勢力（RENAMO）との内戦が続いた。
+      source: "https://ja.wikipedia.org/wiki/モザンビーク独立戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領モザンビーク"
+    - "https://en.wikipedia.org/wiki/Portuguese_Mozambique"
+
+# ---------------------------------------------------------------- 西アフリカ
+
+- id: french_senegal
+  name: フランス領セネガル
+  names:
+    - { to: 1816, name: セネガル（サン＝ルイとゴレ島の商館）, kind: 商館（奴隷・ゴム貿易の拠点） }
+  parent: france
+  kind: 植民地（首府サン＝ルイ）
+  match:
+    labels: [サン＝ルイ（フランスの商館）, ゴレ島（フランス）, セネガル（フランス）, セネガル植民地, セネガル植民地（上河地方）]
+  from: 1659
+  to: 1894
+  polities: [senegal, toucouleur, wassoulou]
+  governors:
+    - { name: ルイ・フェデルブ, title: 総督, from: 1854, to: 1865, note: 内陸へ支配を広げ、ダカールを開き、セネガル歩兵を作る（1861–63年は不在）, source: "https://en.wikipedia.org/wiki/Louis_Faidherbe" }
+  periods:
+    - from: 1659
+      to: 1816
+      text: 1659年、フランスはセネガル川の河口にサン＝ルイの商館を開き、1677年にはオランダからゴレ島を奪った。奴隷・アラビアゴム・金を扱う交易の拠点だった。七年戦争やナポレオン戦争の間はイギリスに占領され、1817年に返された。
+      source: "https://en.wikipedia.org/wiki/Saint-Louis,_Senegal"
+    - from: 1817
+      to: 1879
+      text: 奴隷貿易が禁止された後、落花生が主な輸出品となった。総督フェデルブはセネガル川をさかのぼって内陸へ支配を広げ、トゥクロール帝国のウマルと戦い、アフリカ人兵士の部隊（セネガル歩兵）を作った。サン＝ルイ・ゴレなどの住民には、1848年からフランスの市民の権利が認められた。
+      source: "https://ja.wikipedia.org/wiki/ルイ・フェデルブ"
+    - from: 1880
+      to: 1894
+      text: アフリカ分割が始まると、フランスはセネガルから東のニジェール川へ軍を進め（上河地方）、ギニア・コートジボワールにも植民地を置いた。内陸ではサモリ・トゥーレのワスル帝国が抵抗した。1895年、これらはフランス領西アフリカにまとめられた。
+      source: "https://ja.wikipedia.org/wiki/フランス領西アフリカ"
+  source:
+    - "https://ja.wikipedia.org/wiki/セネガルの歴史"
+    - "https://en.wikipedia.org/wiki/French_West_Africa"
+
+- id: gold_coast
+  name: ゴールドコースト（黄金海岸）
+  names:
+    - { to: 1873, name: ゴールドコースト（イギリスの砦と保護地域）, kind: 砦と海岸の保護地域 }
+  parent: britain
+  kind: 直轄植民地（海岸）・アシャンティ植民地・北部準州
+  match:
+    contains: [ゴールドコースト]
+    labels: [イギリスの砦（ケープコースト城）, イギリスの砦（ジェームズ砦）, アシャンティ（イギリスの保護領）]
+  from: 1664
+  to: 1956
+  polities: [ghana, ashanti, fante]
+  governors:
+    - { name: ジョージ・マクリーン, title: 評議会議長, from: 1830, to: 1844, note: 海岸のファンティ人の首長と協定を結ぶ, source: "https://en.wikipedia.org/wiki/George_Maclean_(governor)" }
+    - { name: ゴードン・グギスバーグ, title: 総督, from: 1919, to: 1927, note: タコラディ港やアチモタ学校を作る, source: "https://en.wikipedia.org/wiki/Gordon_Guggisberg" }
+    - { name: チャールズ・アーデン＝クラーク, title: 最後の総督, from: 1949, to: 1957, source: "https://en.wikipedia.org/wiki/Charles_Arden-Clarke" }
+    - { name: クワメ・エンクルマ, title: 首相（政府首班）, from: 1952, to: 1957, note: 独立後のガーナの首相・大統領, source: "https://ja.wikipedia.org/wiki/クワメ・エンクルマ" }
+  periods:
+    - from: 1664
+      to: 1820
+      text: 金が採れたので「黄金海岸」と呼ばれた海岸には、ポルトガル・オランダ・イギリス・デンマークなどの砦が並んだ。イギリスの王立アフリカ会社はケープコースト城を拠点に、内陸のアシャンティ王国などから奴隷を買い、大西洋の三角貿易でアメリカへ送った。1807年にイギリスは奴隷貿易を禁止した。
+      source: "https://ja.wikipedia.org/wiki/三角貿易"
+    - from: 1821
+      to: 1873
+      text: 1821年にイギリス政府が砦を引き継いだ。内陸のアシャンティ王国と海岸のファンティ人の争いに介入し、海岸の首長たちと保護の協定を結んだ（1844年の「ボンド」）。1850年にデンマーク、1872年にオランダの砦を買い取って海岸を独占した。
+      source: "https://en.wikipedia.org/wiki/Gold_Coast_(British_colony)"
+    - from: 1874
+      to: 1918
+      text: 1874年、アシャンティの都クマシを攻め落とし、海岸部を直轄植民地とした。1896年にアシャンティ王を流刑にし、1900年の「黄金の床几の戦い」（ヤア・アサンテワーの反乱）を鎮圧して、1901年にアシャンティと北部を併合した。アフリカ人の農民がカカオを広め、20世紀初めには世界一のカカオの産地となった。
+      source: "https://ja.wikipedia.org/wiki/アシャンティ王国"
+    - from: 1919
+      to: 1956
+      text: 総督グギスバーグは港・鉄道・学校を整えた。第二次世界大戦の後、物価高と帰還兵の不満から1948年に暴動が起き、エンクルマの会議人民党が「即時の自治」を掲げて選挙に勝った。1957年3月、ブリティッシュ・トーゴランドを合わせて、サハラ以南のアフリカで最初にガーナとして独立した。
+      source: "https://ja.wikipedia.org/wiki/クワメ・エンクルマ"
+  source:
+    - "https://ja.wikipedia.org/wiki/ゴールド・コースト_(イギリス植民地)"
+    - "https://en.wikipedia.org/wiki/Gold_Coast_(British_colony)"
+
+- id: dutch_gold_coast
+  name: オランダ領黄金海岸
+  parent: netherlands
+  kind: 西インド会社の砦（エルミナ城が本部）
+  match:
+    labels: [エルミナ（オランダ）, アクシム・シャマ（オランダの砦）, オランダ領黄金海岸, オランダ領黄金海岸（エルミナ城）, オランダの砦（クレーヴクール）, オランダ領黄金海岸（ブトレ）]
+  from: 1637
+  to: 1871
+  polities: [ashanti, fante]
+  periods:
+    - from: 1637
+      to: 1791
+      text: スペイン・ポルトガルと戦うオランダは、1637年にポルトガルのエルミナ城（サン・ジョルジェ・ダ・ミナ）を奪い、西インド会社の本部とした。金と奴隷の交易で栄え、ブラジルやカリブ海のオランダ領へ奴隷を送った。内陸のアシャンティ王国とは交易の相手として結んだ。
+      source: "https://en.wikipedia.org/wiki/Dutch_Gold_Coast"
+    - from: 1792
+      to: 1871
+      text: 西インド会社の解散（1791年）後は国の直轄となった。奴隷貿易の禁止（オランダは1814年）の後は重要性が下がり、東インドの植民地軍の兵士をここで集めた。1872年、砦をすべてイギリスに売り渡し、これが翌年のイギリスとアシャンティの戦争のきっかけとなった。
+      source: "https://en.wikipedia.org/wiki/Anglo-Dutch_Gold_Coast_Treaty_(1871)"
+  source:
+    - "https://ja.wikipedia.org/wiki/オランダ領ゴールドコースト"
+    - "https://en.wikipedia.org/wiki/Dutch_Gold_Coast"
+
+- id: british_nigeria
+  name: イギリス領ナイジェリア
+  names:
+    - { to: 1899, name: ラゴス・油河（ニジェール海岸）保護領と王立ニジェール会社領, kind: 植民地・保護領・特許会社領 }
+    - { from: 1900, to: 1913, name: 北ナイジェリア保護領と南ナイジェリア, kind: 保護領・植民地 }
+  parent: britain
+  kind: 植民地・保護領（1914年に南北を統合。北部は首長国を通じた間接統治）
+  match:
+    contains: [ナイジェリア, ラゴス, 王立ニジェール会社領]
+    labels: [油河保護領, ニジェール海岸保護領]
+  from: 1861
+  to: 1959
+  polities: [nigeria, sokoto, oyo, benin_kingdom, bornu]
+  governors:
+    - { name: ジョージ・トーブマン・ゴールディー, title: 王立ニジェール会社の経営者, from: 1886, to: 1899, source: "https://en.wikipedia.org/wiki/George_Goldie" }
+    - { name: フレデリック・ルガード, title: 北ナイジェリア高等弁務官・ナイジェリア総督, from: 1900, to: 1919, note: 間接統治の考え方をまとめる（1906–12年は香港総督）, source: "https://ja.wikipedia.org/wiki/フレデリック・ルガード" }
+    - { name: ヒュー・クリフォード, title: 総督, from: 1919, to: 1925, source: "https://en.wikipedia.org/wiki/Hugh_Clifford" }
+    - { name: ジェームズ・ロバートソン, title: 最後の総督, from: 1955, to: 1960, source: "https://en.wikipedia.org/wiki/James_Wilson_Robertson" }
+  periods:
+    - from: 1861
+      to: 1899
+      text: 奴隷貿易の取り締まりを名目に、イギリスは1861年にラゴスを併合した。ニジェール・デルタでは、奴隷に代わるパーム油（機械の潤滑油・石けんの原料）の交易が栄え、1885年に油河保護領とした。ニジェール川の流域はゴールディーの王立ニジェール会社が特許を得て治め、フランスやドイツの進出を防いだ。
+      source: "https://en.wikipedia.org/wiki/Royal_Niger_Company"
+    - from: 1900
+      to: 1913
+      text: 1900年に会社の領地を政府が引き継ぎ、北ナイジェリア保護領と南ナイジェリアに分けた。ルガードは1903年にソコト・カリフ国を征服したが、少ない人員で広い土地を治めるため、首長（エミール）を残して税と裁判をまかせる間接統治をとった。
+      source: "https://en.wikipedia.org/wiki/Northern_Nigeria_Protectorate"
+    - from: 1914
+      to: 1944
+      text: 1914年、ルガードが南北を合わせてナイジェリア植民地・保護領とした。北部のイスラームの首長国とキリスト教の宣教の広がる南部は別々に治められ、のちの地域対立の元になった。1929年、東部の女性たちが課税に抗議して「女性の戦争」を起こした。輸出はパーム油・落花生・カカオだった。
+      source: "https://en.wikipedia.org/wiki/Colony_and_Protectorate_of_Nigeria"
+    - from: 1945
+      to: 1959
+      text: 戦後、アジキウェ（東部）・アウォロウォ（西部）・アフマドゥ・ベロ（北部）らが率いる地域ごとの政党が生まれ、1954年に北部・西部・東部の3州からなる連邦となった。1960年10月に独立したが、地域・民族の対立は1967年のビアフラ戦争につながった。
+      source: "https://ja.wikipedia.org/wiki/ビアフラ戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領ナイジェリア"
+    - "https://en.wikipedia.org/wiki/Colony_and_Protectorate_of_Nigeria"
+
+- id: sierra_leone_colony
+  name: シエラレオネ
+  names:
+    - { to: 1807, name: フリータウン（シエラレオネ会社）, kind: 解放奴隷の入植地（会社の経営） }
+  parent: britain
+  kind: 直轄植民地（フリータウン周辺）と保護領（内陸、1896年から）
+  match:
+    contains: [シエラレオネ]
+    labels: [フリータウン（シエラレオネ会社）]
+  from: 1792
+  to: 1960
+  polities: [sierra_leone]
+  governors:
+    - { name: ザカリー・マコーリー, title: 総督（シエラレオネ会社）, from: 1794, to: 1799, note: 奴隷制反対の運動家, source: "https://en.wikipedia.org/wiki/Zachary_Macaulay" }
+  periods:
+    - from: 1792
+      to: 1807
+      text: イギリスの奴隷制反対の運動家たちは、解放された黒人をアフリカに帰す入植地を計画した。1792年、アメリカ独立戦争でイギリス側について自由を得た黒人（ノヴァスコシアに移っていた人々）が入植し、フリータウンを建てた。のちジャマイカの逃亡奴隷（マルーン）も来た。
+      source: "https://ja.wikipedia.org/wiki/フリータウン"
+    - from: 1808
+      to: 1895
+      text: 1807年の奴隷貿易の禁止の翌年、直轄植民地とし、イギリス海軍の西アフリカ艦隊の基地となった。奴隷船から解放された人々が各地から集められ、英語の教育を受けた「クリオ」の社会ができた。1827年のフォーラ・ベイ大学は西アフリカの教育の中心となった。
+      source: "https://en.wikipedia.org/wiki/Sierra_Leone_Colony_and_Protectorate"
+    - from: 1896
+      to: 1960
+      text: 1896年に内陸を保護領とし、小屋税に反対する1898年の反乱を鎮めた。海岸のクリオと内陸の民族の間には隔たりがあった。1930年代からダイヤモンドの採掘が始まった。1961年4月に独立した。
+      source: "https://en.wikipedia.org/wiki/Hut_Tax_War_of_1898"
+  source:
+    - "https://ja.wikipedia.org/wiki/シエラレオネの歴史"
+    - "https://en.wikipedia.org/wiki/Sierra_Leone_Colony_and_Protectorate"
+
+- id: british_gambia
+  name: イギリス領ガンビア
+  parent: britain
+  kind: 直轄植民地（バサースト）と保護領（ガンビア川の両岸）
+  match:
+    contains: [ガンビア]
+  from: 1816
+  to: 1964
+  polities: [gambia]
+  periods:
+    - from: 1816
+      to: 1888
+      text: 1816年、イギリスは奴隷貿易の取り締まりのため、ガンビア川の河口の島にバサースト（いまのバンジュール）を建てた。19世紀の大半はシエラレオネの総督が兼ねて治めた。落花生の輸出が広がった。
+      source: "https://en.wikipedia.org/wiki/Colony_and_Protectorate_of_the_Gambia"
+    - from: 1889
+      to: 1964
+      text: 1889年の英仏協定で、川の両岸の細長い帯がイギリス領と決まり、周りをフランス領セネガルに囲まれた。1894年に内陸を保護領とした。1965年2月に独立した（1982–89年にはセネガルとセネガンビア国家連合を作った）。
+      source: "https://en.wikipedia.org/wiki/Colony_and_Protectorate_of_the_Gambia"
+  source:
+    - "https://ja.wikipedia.org/wiki/ガンビアの歴史"
+    - "https://en.wikipedia.org/wiki/Colony_and_Protectorate_of_the_Gambia"
+
+- id: portuguese_guinea
+  name: ポルトガル領ギニア
+  names:
+    - { to: 1878, name: カシェウ・ビサウ（ポルトガルの商館）, kind: 商館（カーボベルデ植民地の管轄） }
+    - { from: 1951, name: ポルトガル領ギニア（海外州）, kind: 海外州 }
+  parent: portugal
+  kind: 植民地（1879年にカーボベルデから分離）
+  match:
+    labels: [カシェウ（ポルトガル領）, ビサウ（ポルトガル領）, ポルトガル領ギニア, ジガンショール（ポルトガル領）]
+  from: 1588
+  to: 1973
+  polities: [guinea_bissau]
+  governors:
+    - { name: アントニオ・デ・スピノラ, title: 総督, from: 1968, to: 1973, note: 独立戦争を戦い、のちカーネーション革命の後に本国の大統領, source: "https://en.wikipedia.org/wiki/António_de_Spínola" }
+  periods:
+    - from: 1588
+      to: 1878
+      text: 16世紀からカーボベルデの商人が川沿いに出入りし、1588年にカシェウ、1687年にビサウの商館が置かれて奴隷貿易の拠点となった。支配は商館の周りだけで、カーボベルデの総督の管轄だった。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Guinea"
+    - from: 1879
+      to: 1950
+      text: 1879年に独立の植民地とし、1886年の協定でフランスと境界を決めた（南のジガンショールはフランスへ）。内陸の平定は1936年ごろまでかかった。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Guinea"
+    - from: 1951
+      to: 1973
+      text: アミルカル・カブラルのギニア・カーボベルデ独立アフリカ党（PAIGC）が、1963年から武装闘争を始め、国土の多くを解放区とした。カブラルは1973年1月に暗殺されたが、同年9月に独立を宣言し、1974年のカーネーション革命の後にポルトガルが認めた。この戦争は本国の軍人たちが独裁に背を向けるきっかけとなった。
+      source: "https://ja.wikipedia.org/wiki/アミルカル・カブラル"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領ギニア"
+    - "https://en.wikipedia.org/wiki/Portuguese_Guinea"
+
+- id: german_togo
+  name: ドイツ領トーゴ
+  parent: german_empire
+  kind: 保護領（首府ロメ）
+  match:
+    labels: [ドイツ領トーゴ]
+  from: 1884
+  to: 1913
+  polities: [togo]
+  governors:
+    - { name: グスタフ・ナハティガル, title: 帝国弁務官, from: 1884, to: 1884, note: トーゴとカメルーンで保護条約を結ぶ, source: "https://en.wikipedia.org/wiki/Gustav_Nachtigal" }
+  periods:
+    - from: 1884
+      to: 1913
+      text: 1884年、探検家ナハティガルが海岸の首長と保護条約を結んだ。ドイツは鉄道や道路を整え、「模範植民地」と呼んで、ココヤシ・カカオ・綿花の栽培を進めたが、住民には強制労働と重い税が課された。1914年8月、第一次世界大戦の始まりとともにイギリス・フランス軍に占領され、戦後は東をフランス、西をイギリスが委任統治した。
+      source: "https://en.wikipedia.org/wiki/Togoland"
+  source:
+    - "https://ja.wikipedia.org/wiki/トーゴランド"
+    - "https://en.wikipedia.org/wiki/Togoland"
+
+- id: french_togo
+  name: フランス領トーゴ
+  names:
+    - { to: 1919, name: トーゴ（フランス軍の占領地）, kind: 占領地 }
+    - { from: 1946, to: 1955, name: フランス信託統治領トーゴ, kind: 国際連合の信託統治領 }
+    - { from: 1956, name: トーゴ自治共和国, kind: 自治共和国（フランスの信託統治） }
+  parent: france
+  kind: 国際連盟の委任統治領（B式）
+  match:
+    labels: [トーゴ（フランス軍の占領）, フランス委任統治領トーゴ, フランス信託統治領トーゴ, トーゴ自治共和国（フランスの信託統治）]
+  from: 1914
+  to: 1959
+  polities: [togo]
+  periods:
+    - from: 1914
+      to: 1945
+      text: 第一次世界大戦でドイツ領トーゴを占領した英仏は、東の3分の2（首府ロメを含む）をフランス、西をイギリスに分けた。1922年にフランスの委任統治領となり、隣のダホメと合わせて治められることもあった。海岸に住むエウェ人は英仏の境界で分けられた。
+      source: "https://en.wikipedia.org/wiki/French_Togoland"
+    - from: 1946
+      to: 1959
+      text: 戦後は国際連合の信託統治領となり、エウェ人の統一を求める請願が国連に出された。1956年に自治共和国となり、1958年の国連監視下の選挙でシルヴァヌス・オリンピオの党が勝って、1960年4月に独立した。
+      source: "https://en.wikipedia.org/wiki/French_Togoland"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領トーゴランド"
+    - "https://en.wikipedia.org/wiki/French_Togoland"
+
+- id: british_togoland
+  name: イギリス領トーゴランド
+  names:
+    - { to: 1919, name: トーゴランド（イギリス軍の占領地）, kind: 占領地 }
+    - { from: 1946, name: イギリス信託統治領トーゴランド, kind: 国際連合の信託統治領 }
+  parent: britain
+  kind: 国際連盟の委任統治領（B式。ゴールドコーストと合わせて治める）
+  match:
+    labels: [トーゴランド（イギリス軍の占領）, トーゴ（イギリス軍の占領）, イギリス委任統治領トーゴランド, イギリス信託統治領トーゴランド]
+  from: 1914
+  to: 1956
+  polities: [ghana, togo]
+  periods:
+    - from: 1914
+      to: 1945
+      text: 第一次世界大戦でイギリス・フランス軍がドイツ領トーゴを占領し、西の3分の1がイギリスの委任統治領となった。独立の役所は置かず、隣のゴールドコーストの一部として治めた。
+      source: "https://en.wikipedia.org/wiki/British_Togoland"
+    - from: 1946
+      to: 1956
+      text: 戦後は国際連合の信託統治領となった。1956年、国連の監視下の住民投票で、ゴールドコーストとの統合が多数となり（南部のエウェ人の地域では反対が多かった）、1957年にガーナの一部として独立した。
+      source: "https://en.wikipedia.org/wiki/1956_British_Togoland_status_plebiscite"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領トーゴランド"
+    - "https://en.wikipedia.org/wiki/British_Togoland"
+
+- id: german_kamerun
+  name: ドイツ領カメルーン
+  parent: german_empire
+  kind: 保護領（首府は初めドゥアラ、1901年からブエア、1909年からヤウンデ）
+  match:
+    contains: [ドイツ領カメルーン]
+    labels: [新カメルーン（ドイツ領）, バムン王国（ドイツの保護下）]
+  from: 1884
+  to: 1915
+  polities: [cameroon]
+  governors:
+    - { name: グスタフ・ナハティガル, title: 帝国弁務官, from: 1884, to: 1884, note: ドゥアラの首長と保護条約を結ぶ, source: "https://en.wikipedia.org/wiki/Gustav_Nachtigal" }
+    - { name: イェスコ・フォン・プットカマー, title: 総督, from: 1895, to: 1907, note: 内陸の征服とプランテーションの拡大, source: "https://en.wikipedia.org/wiki/Jesko_von_Puttkamer" }
+  periods:
+    - from: 1884
+      to: 1910
+      text: 1884年、ナハティガルがドゥアラの首長たちと保護条約を結び、イギリスに先んじてドイツの保護領とした。カメルーン山の麓にはカカオやゴム、油ヤシの大農園が開かれ、内陸の住民が強制的に働かされた。ドイツ軍は北のイスラームの首長国（アダマワ）まで征服を進め、首長を通じて治めた。
+      source: "https://ja.wikipedia.org/wiki/ドイツ領カメルーン"
+    - from: 1911
+      to: 1915
+      text: 第2次モロッコ事件（1911年）の取り引きで、フランスにモロッコの支配を認める代わりに、フランス領赤道アフリカの一部（新カメルーン）を得て、コンゴ川とウバンギ川に届いた。第一次世界大戦ではイギリス・フランス・ベルギー軍に攻められ、1916年2月までに占領された。戦後は東の大部分がフランス、西の2つの細長い地域がイギリスの委任統治領となった。
+      source: "https://en.wikipedia.org/wiki/Kamerun"
+  source:
+    - "https://ja.wikipedia.org/wiki/ドイツ領カメルーン"
+    - "https://en.wikipedia.org/wiki/Kamerun"
+
+- id: french_cameroun
+  name: フランス領カメルーン
+  names:
+    - { to: 1918, name: カメルーン（フランス軍の占領地）, kind: 占領地 }
+    - { from: 1946, to: 1956, name: フランス信託統治領カメルーン, kind: 国際連合の信託統治領 }
+    - { from: 1957, name: カメルーン国（自治国）, kind: 自治国（フランスの信託統治） }
+  parent: france
+  kind: 国際連盟の委任統治領（B式。首府ヤウンデ）
+  match:
+    labels: [カメルーン（フランス軍の占領）, 新カメルーン（フランス軍の占領）, フランス委任統治領カメルーン, フランス信託統治領カメルーン, カメルーン（自治国・フランスの信託統治）]
+  from: 1914
+  to: 1959
+  polities: [cameroon]
+  periods:
+    - from: 1914
+      to: 1945
+      text: 第一次世界大戦でドイツ領を占領し、東の大部分がフランスの委任統治領となった（新カメルーンはフランス領赤道アフリカへ戻す）。ドイツの農園を引き継ぎ、鉄道の建設には強制労働が使われた。1940年、総督ルクレールのもとで自由フランスに加わった。
+      source: "https://en.wikipedia.org/wiki/French_Cameroon"
+    - from: 1946
+      to: 1959
+      text: 国際連合の信託統治領となった。即時独立と英領との再統一を求めるカメルーン人民同盟（UPC）は1955年に禁止され、ルベン・ウム・ニョベの指導で武装闘争に入った。フランス軍による激しい鎮圧のなかで、フランスに近いアフマドゥ・アヒジョの政府が1960年1月に独立した。
+      source: "https://en.wikipedia.org/wiki/Cameroonian_independence_war"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領カメルーン"
+    - "https://en.wikipedia.org/wiki/French_Cameroon"
+
+- id: british_cameroons
+  name: イギリス領カメルーン
+  names:
+    - { to: 1918, name: カメルーン（イギリス軍の占領地）, kind: 占領地 }
+    - { from: 1946, name: イギリス信託統治領カメルーン, kind: 国際連合の信託統治領 }
+  parent: britain
+  kind: 国際連盟の委任統治領（B式。北部・南部に分かれ、ナイジェリアと合わせて治める）
+  match:
+    labels: [カメルーン（連合軍の占領）, カメルーン（イギリス軍の占領）]
+    contains: [イギリス委任統治領カメルーン, イギリス信託統治領カメルーン]
+  from: 1914
+  to: 1960
+  polities: [cameroon, nigeria]
+  periods:
+    - from: 1914
+      to: 1945
+      text: ドイツ領カメルーンの西のナイジェリアとの境に沿う2つの細長い地域が、イギリスの委任統治領となった。独立の役所は置かず、北部はナイジェリア北部州、南部はナイジェリア東部州の一部として治めた。
+      source: "https://en.wikipedia.org/wiki/British_Cameroons"
+    - from: 1946
+      to: 1960
+      text: 戦後は国際連合の信託統治領。1961年2月の住民投票で、イスラーム教徒の多い北部はナイジェリアへの編入を、南部はカメルーン共和国との統合を選んだ（英語圏の南西部・北西部として、いまの英語圏問題につながる）。
+      source: "https://en.wikipedia.org/wiki/1961_British_Cameroons_referendum"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領カメルーン"
+    - "https://en.wikipedia.org/wiki/British_Cameroons"
+
+# ---------------------------------------------------------------- 中部アフリカ
+
+- id: french_equatorial_africa
+  name: フランス領赤道アフリカ
+  names:
+    - { to: 1879, name: ガボン（フランスの拠点）, kind: 海岸の拠点 }
+    - { from: 1880, to: 1909, name: フランス領コンゴ, kind: 植民地（ガボン・中部コンゴ・ウバンギ＝シャリ・チャド） }
+  parent: france
+  kind: 植民地連邦（総督府はブラザヴィル）
+  match:
+    contains: [フランス領赤道アフリカ, フランス領コンゴ]
+    labels: [ガボン（フランス領）, テケ王国（フランスの保護下）, ザンデのスルタン国（フランスの保護下）, ダール・アル＝クーティ（フランスの保護下）, バギルミ・スルタン国（フランスの保護国）, チャド軍事領（フランス）, ワダイ（フランス軍の占領）, チャド共和国（フランス共同体の自治国）]
+  from: 1843
+  to: 1959
+  polities: [gabon, congo_brazzaville, central_african_republic, chad, wadai, bagirmi]
+  governors:
+    - { name: ピエール・サヴォルニャン・ド・ブラザ, title: 弁務官, from: 1886, to: 1897, note: テケ王国の王マココと条約を結ぶ探検家, source: "https://ja.wikipedia.org/wiki/ピエール・サヴォルニャン・ド・ブラザ" }
+    - { name: フェリックス・エブエ, title: 総督, from: 1940, to: 1944, note: 南米ギアナ出身の黒人。いち早く自由フランスに加わる, source: "https://en.wikipedia.org/wiki/Félix_Éboué" }
+  periods:
+    - from: 1843
+      to: 1897
+      text: 1843年にガボンの海岸に拠点を置き、1849年に解放奴隷の村リーブルヴィルを建てた。1880年、探検家ブラザがコンゴ川の北岸でテケ王国の王と条約を結び、ベルギー王レオポルド2世のスタンリーと競った。ブラザヴィルはその名にちなむ。
+      source: "https://ja.wikipedia.org/wiki/ピエール・サヴォルニャン・ド・ブラザ"
+    - from: 1898
+      to: 1918
+      text: 本国は経営の費用を出さず、1899年から土地の大部分を40ほどの特許会社に貸し与えた。会社はゴムや象牙の取り立てのために住民に強制労働をさせ、隣のコンゴ自由国と同じような虐待が起きた。1900年、チャド湖の近くのクセリの戦いでラービフの国を倒し、北のチャドを征服した。1910年、4つの植民地をまとめて赤道アフリカとした。
+      source: "https://en.wikipedia.org/wiki/French_Equatorial_Africa"
+    - from: 1919
+      to: 1939
+      text: ブラザヴィルと海岸のポワントノワールを結ぶコンゴ＝大洋鉄道（1921–34年）の工事では、各地から集められた労働者が2万人近く死んだ。作家アンドレ・ジッドの『コンゴ紀行』（1927年）は、特許会社の虐待を本国に伝えた。
+      source: "https://en.wikipedia.org/wiki/Congo–Ocean_Railway"
+    - from: 1940
+      to: 1959
+      text: 1940年、チャドの総督エブエがいち早く自由フランスに加わり、赤道アフリカはド・ゴールの拠点となった（ルクレールの部隊はチャドからリビアへ攻めた）。1944年のブラザヴィル会議は植民地の改革を約束した。1946年から海外領土となり、1958年に4つの自治共和国に分かれて、1960年8月にそれぞれ独立した。
+      source: "https://ja.wikipedia.org/wiki/ブラザヴィル会議"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領赤道アフリカ"
+    - "https://en.wikipedia.org/wiki/French_Equatorial_Africa"
+
+- id: belgian_congo
+  name: ベルギー領コンゴ
+  parent: belgium
+  kind: 植民地（首府は初めボマ、1923年からレオポルドヴィル）
+  match:
+    labels: [ベルギー領コンゴ, ラド飛び地（ベルギー領コンゴ）]
+  from: 1908
+  to: 1959
+  polities: [drc, congo_free_state]
+  governors:
+    - { name: ピエール・リクマンス, title: 総督, from: 1934, to: 1946, note: 第二次世界大戦で植民地を連合国の側に置く, source: "https://en.wikipedia.org/wiki/Pierre_Ryckmans" }
+    - { name: レオン・ペティヨン, title: 総督, from: 1952, to: 1958, source: "https://en.wikipedia.org/wiki/Léon_Pétillon" }
+    - { name: ヘンドリク・コルネリス, title: 最後の総督, from: 1958, to: 1960, source: "https://en.wikipedia.org/wiki/Hendrik_Cornelis" }
+  periods:
+    - from: 1908
+      to: 1919
+      text: ベルギー王レオポルド2世の私領だったコンゴ自由国では、ゴムの取り立てのために手首を切るなどの虐待が行われ、イギリスのモレルや外交官ケースメントの報告で国際的な非難を浴びた。1908年、ベルギー議会がこれを引き取り、国の植民地とした。
+      source: "https://ja.wikipedia.org/wiki/コンゴ自由国"
+    - from: 1920
+      to: 1945
+      text: 国家・カトリック教会・大企業が三位一体で治める植民地となった。南部のカタンガでは銅、カサイではダイヤモンドの採掘が進み、ユニオン・ミニエールなどの企業が富を得た。アフリカ人には初等教育はある程度与えられたが、高等教育や政治への参加は閉ざされた。第二次世界大戦では、カタンガのウランがアメリカの原子爆弾に使われた。
+      source: "https://en.wikipedia.org/wiki/Belgian_Congo"
+    - from: 1946
+      to: 1959
+      text: 1950年代に独立運動が起こり、1959年1月にレオポルドヴィルで暴動が起きると、ベルギーは急いで独立を認めた。1960年6月にパトリス・ルムンバを首相として独立したが、直後に軍の反乱とカタンガの分離独立が起き、コンゴ動乱となった。
+      source: "https://ja.wikipedia.org/wiki/コンゴ動乱"
+  note: 1885–1907年のコンゴ自由国はレオポルド2世の私領で、地図では独自の政体（congo_free_state）。
+  source:
+    - "https://ja.wikipedia.org/wiki/ベルギー領コンゴ"
+    - "https://en.wikipedia.org/wiki/Belgian_Congo"
+
+- id: spanish_guinea
+  name: スペイン領ギニア
+  names:
+    - { to: 1842, name: フェルナンド・ポー島・アンノボン島・リオ・ムニ（スペインの名目的な領有）, kind: 名目的な領有 }
+    - { from: 1959, name: スペインの赤道州（フェルナンド・ポー・リオ・ムニ）, kind: 海外州 }
+  parent: spain
+  kind: 植民地（首府サンタ・イサベル）
+  match:
+    labels: [アンノボン島, フェルナンド・ポー島, リオ・ムニ, リオ・ムニ（コリスコ島など）]
+    contains: [スペイン領ギニア, スペインの海外州]
+  from: 1778
+  to: 1967
+  polities: [equatorial_guinea]
+  periods:
+    - from: 1778
+      to: 1899
+      text: 1778年のエル・パルド条約で、ポルトガルはギニア湾のフェルナンド・ポー島（いまのビオコ島）とアンノボン島をスペインに譲った（代わりに南米の土地を得た）。スペインは奴隷の供給地にしようとしたが、黄熱病などで入植は失敗し、1827–43年にはイギリス海軍が奴隷貿易の取り締まりの基地として島を使った。
+      source: "https://en.wikipedia.org/wiki/Spanish_Guinea"
+    - from: 1900
+      to: 1958
+      text: 1900年のパリ条約で、フランスと大陸部のリオ・ムニの境界を決めた。島ではカカオの大農園が開かれ、ナイジェリアやリベリアから契約労働者が連れてこられた（リベリアからの労働者の扱いは1930年に国際連盟で問題にされた）。大陸部の本格的な統治は1920年代からだった。
+      source: "https://en.wikipedia.org/wiki/Spanish_Guinea"
+    - from: 1959
+      to: 1967
+      text: 1959年にスペイン本国の2つの州とされ、1964年に自治が認められた。国際連合の圧力のもとで、1968年10月に赤道ギニア共和国として独立した。初代大統領マシアス・ンゲマは独裁を敷いた。
+      source: "https://ja.wikipedia.org/wiki/赤道ギニアの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/スペイン領ギニア"
+    - "https://en.wikipedia.org/wiki/Spanish_Guinea"
+
+# ---------------------------------------------------------------- インド洋の島々
+
+- id: french_madagascar
+  name: フランス領マダガスカル
+  names:
+    - { to: 1840, name: フォール・ドーファン・サント・マリー島（フランス）, kind: 島の拠点 }
+    - { from: 1841, to: 1894, name: マダガスカル沿岸の拠点（フランス）, kind: 島の拠点と勢力圏 }
+    - { from: 1895, to: 1895, name: マダガスカル（フランスの保護国）, kind: 保護国（メリナ王国） }
+  parent: france
+  kind: 植民地（1896年から。首府アンタナナリボ。1912–45年はコモロも属領）
+  match:
+    labels: [フォール・ドーファン（フランス東インド会社）, サント・マリー島（フランス領）, ノシ・ベ（フランス領）, ディエゴ・スアレス（フランス領）, マダガスカル（フランスの勢力圏）, マダガスカル（フランスの保護国）, フランス領マダガスカル, コモロ（マダガスカル植民地の属領）]
+  from: 1643
+  to: 1959
+  polities: [madagascar, merina]
+  governors:
+    - { name: ラナヴァルナ3世, title: メリナ王国の女王, from: 1883, to: 1897, note: フランスに廃位され、アルジェリアへ流される, source: "https://ja.wikipedia.org/wiki/ラナヴァルナ3世" }
+    - { name: ジョゼフ・ガリエニ, title: 総督, from: 1896, to: 1905, note: 王国を廃し、「油のしみ」の平定策をとる, source: "https://ja.wikipedia.org/wiki/ジョゼフ・ガリエニ" }
+  periods:
+    - from: 1643
+      to: 1840
+      text: 1643年、フランス東インド会社は島の南東端にフォール・ドーファンの砦を築いたが、住民との争いで1674年に引き揚げた。その後はインド洋の航路の補給地として、1750年に東岸のサント・マリー島を手に入れた程度で、隣のブルボン島（レユニオン）とフランス島（モーリシャス）が中心だった。
+      source: "https://en.wikipedia.org/wiki/Fort-Dauphin"
+    - from: 1841
+      to: 1894
+      text: 島の中央高地のメリナ王国は、19世紀に島の大部分を治め、イギリスの宣教師の助けで近代化を進めていた。フランスは周りの小島（ノシ・ベなど）に拠点を置き、2度の戦争（1883–85年・1894–95年）で王国に迫った。1890年の英仏協定で、イギリスはザンジバルと引きかえにフランスのマダガスカルでの立場を認めた。
+      source: "https://en.wikipedia.org/wiki/Franco-Hova_Wars"
+    - from: 1895
+      to: 1939
+      text: 1895年に都を占領して保護国とし、翌1896年に植民地として併合した。総督ガリエニは1897年に女王ラナヴァルナ3世を廃位して王国を滅ぼし、「メナランバ（赤いショール）」の抵抗を鎮めた。住民には人頭税と労役が課され、コーヒーやバニラが輸出された。
+      source: "https://en.wikipedia.org/wiki/Colony_of_Madagascar_and_Dependencies"
+    - from: 1940
+      to: 1946
+      text: 1940年からヴィシー政府に従い、ナチス・ドイツはユダヤ人を移す「マダガスカル計画」を考えた。日本の潜水艦の基地になるのを恐れたイギリスが1942年に島を占領し、自由フランスに渡した。
+      source: "https://en.wikipedia.org/wiki/Battle_of_Madagascar"
+    - from: 1947
+      to: 1959
+      text: 1947年3月、独立を求めるマダガスカル蜂起が起き、フランス軍の鎮圧で数万人（10万人ともいわれる）が死んだ。その後、フランス共同体の自治共和国をへて、1960年6月にマダガスカル共和国として独立した。
+      source: "https://ja.wikipedia.org/wiki/マダガスカル蜂起"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領マダガスカル"
+    - "https://en.wikipedia.org/wiki/Colony_of_Madagascar_and_Dependencies"
+
+- id: isle_de_france
+  name: フランス島（フランス領モーリシャス）
+  names:
+    - { to: 1766, name: フランス島（フランス東インド会社）, kind: 会社の植民地 }
+  parent: france
+  kind: 植民地（首府ポール・ルイ。セーシェル・ロドリゲス島も属領）
+  match:
+    labels: [フランス島（フランス領）, フランス島（フランス東インド会社）, フランス島（フランスの直轄植民地）, ロドリゲス島（フランス島の属領）, セーシェル（フランス領）, セーシェル（フランス島の属領）, チャゴス諸島（フランス島の属領）]
+  from: 1715
+  to: 1810
+  polities: [mauritius, seychelles]
+  governors:
+    - { name: ベルトラン＝フランソワ・マエ・ド・ラ・ブルドネ, title: 総督, from: 1735, to: 1746, note: ポール・ルイを建設、インドでイギリスのマドラスを攻める, source: "https://en.wikipedia.org/wiki/Bertrand-François_Mahé_de_La_Bourdonnais" }
+  periods:
+    - from: 1715
+      to: 1766
+      text: オランダが去った無人のモーリシャス島を、1715年にフランスが手に入れ「フランス島」と名づけた。フランス東インド会社の総督ラ・ブルドネはポール・ルイの港を築き、インド洋でイギリスと戦う艦隊の基地とした。アフリカやマダガスカルから連れてこられた奴隷がサトウキビ農園で働いた。
+      source: "https://en.wikipedia.org/wiki/Isle_de_France_(Mauritius)"
+    - from: 1767
+      to: 1810
+      text: 1767年に会社から国王の直轄に移った。フランス革命の奴隷解放（1794年）を入植者は受け入れなかった。ナポレオン戦争中は、私掠船（国の許しを得た海賊船）がイギリスのインド貿易の船を襲う拠点となり、1810年にイギリス軍が島を占領した。
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Isle_de_France"
+  source:
+    - "https://en.wikipedia.org/wiki/Isle_de_France_(Mauritius)"
+
+- id: british_mauritius
+  name: イギリス領モーリシャス
+  names:
+    - { to: 1813, name: モーリシャス（イギリス軍の占領地）, kind: 占領地 }
+  parent: britain
+  kind: 直轄植民地（セーシェルは1903年まで、チャゴス諸島は1965年まで属領）
+  match:
+    labels: [モーリシャス（イギリス軍の占領）, モーリシャス（イギリス植民地）, ロドリゲス島（イギリス軍の占領）, セーシェル（モーリシャスの属領）, チャゴス諸島（モーリシャスの属領）]
+  from: 1809
+  to: 1967
+  polities: [mauritius, seychelles]
+  governors:
+    - { name: ロバート・ファーカー, title: 総督, from: 1810, to: 1823, source: "https://en.wikipedia.org/wiki/Robert_Townsend_Farquhar" }
+  periods:
+    - from: 1809
+      to: 1834
+      text: 1810年にイギリスがフランス島を占領し、1814年のパリ条約でモーリシャスとして正式に得た（隣のレユニオンはフランスへ返す）。フランス語やフランスの法、フランス人の農園主はそのまま残された。
+      source: "https://en.wikipedia.org/wiki/British_Mauritius"
+    - from: 1835
+      to: 1967
+      text: 1835年の奴隷制の廃止の後、サトウキビ農園の労働力として、インドから年季契約の移民（クーリー）が大量に連れてこられ、20世紀にはインド系が人口の多数となった。1965年、独立を前にイギリスはチャゴス諸島を切り離してイギリス領インド洋地域とし（ディエゴ・ガルシア島はアメリカ軍の基地に）、1968年3月にモーリシャスは独立した。
+      source: "https://ja.wikipedia.org/wiki/モーリシャスの歴史"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Mauritius"
+
+# ---------------------------------------------------------------- 中東（委任統治領・保護国・占領地）
+
+- id: french_mandate_syria
+  name: フランス委任統治領シリア
+  names:
+    - { to: 1919, name: シリア沿岸・キリキア（フランス軍の占領地）, kind: 占領地（連合軍の占領地行政） }
+  parent: france
+  kind: 国際連盟の委任統治領（A式。ダマスカス・アレッポ・アラウィー派・ドゥルーズ派の国などに分けて治める）
+  match:
+    contains: [シリア（フランスの委任統治領, フランス委任統治領シリア]
+    labels: [シリア沿岸（フランスの占領）, キリキア（フランスの占領）, アレクサンドレッタ（フランスの占領）]
+  from: 1918
+  to: 1945
+  polities: [syria, arab_syria, ottoman]
+  governors:
+    - { name: アンリ・グロー, title: 高等弁務官, from: 1919, to: 1923, note: ファイサルの王国を倒し、大レバノンを作る, source: "https://en.wikipedia.org/wiki/Henri_Gouraud" }
+    - { name: モーリス・サライユ, title: 高等弁務官, from: 1924, to: 1925, note: シリア大反乱を招き、更迭される, source: "https://en.wikipedia.org/wiki/Maurice_Sarrail" }
+  periods:
+    - from: 1918
+      to: 1920
+      text: 第一次世界大戦中、イギリスはアラブ人に独立を約束し（フサイン＝マクマホン協定）、一方で英仏はオスマン帝国のアラブ地域を分け合う秘密協定を結んでいた（サイクス＝ピコ協定）。戦後、フランス軍は沿岸とキリキアを占領した。ダマスカスではファイサルが1920年3月にシリア・アラブ王国の王となったが、4月のサン・レモ会議でシリアはフランスの委任統治と決まり、7月のマイサルーンの戦いでフランス軍に倒された。
+      source: "https://ja.wikipedia.org/wiki/サイクス・ピコ協定"
+    - from: 1921
+      to: 1935
+      text: フランスはシリアをダマスカス・アレッポ・アラウィー派の国・ドゥルーズ派の山地などに分け、宗派や地域の違いを使って治めた。キリキアは1921年のアンカラ条約でトルコに返した。1925–27年、ドゥルーズ派から始まったシリア大反乱が広がり、フランスはダマスカスを砲撃して鎮めた。
+      source: "https://en.wikipedia.org/wiki/Great_Syrian_Revolt"
+    - from: 1936
+      to: 1945
+      text: 1936年、民族主義者との間で独立条約が結ばれたが、本国の議会は承認しなかった。1939年、トルコを味方につけるため、アレクサンドレッタ（ハタイ）をトルコに譲った。1941年、ヴィシー政府の支配下にあったシリアをイギリス・自由フランス軍が占領し、独立を約束した。戦後の1946年4月、フランス軍が撤退して独立した。
+      source: "https://en.wikipedia.org/wiki/Mandate_for_Syria_and_the_Lebanon"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス委任統治領シリア"
+    - "https://en.wikipedia.org/wiki/Mandate_for_Syria_and_the_Lebanon"
+
+- id: french_mandate_lebanon
+  name: 大レバノン（フランスの委任統治領）
+  names:
+    - { to: 1919, name: レバノン（フランス軍の占領地）, kind: 占領地 }
+    - { from: 1926, name: レバノン共和国（フランスの委任統治領）, kind: 委任統治下の共和国 }
+  parent: france
+  kind: 国際連盟の委任統治領（A式。首府ベイルート）
+  match:
+    labels: [レバノン（フランスの占領）, 大レバノン（フランスの委任統治領）]
+  from: 1918
+  to: 1942
+  polities: [lebanon, lebanon_mutasarrifate]
+  governors:
+    - { name: アンリ・グロー, title: 高等弁務官, from: 1919, to: 1923, note: 1920年9月に大レバノンを宣言, source: "https://en.wikipedia.org/wiki/Henri_Gouraud" }
+  periods:
+    - from: 1918
+      to: 1925
+      text: オスマン帝国のもとで自治を持っていたレバノン山地（マロン派キリスト教徒とドゥルーズ派の地）に、フランスはベイルート・トリポリ・南部・ベカー高原などを加え、1920年に「大レバノン」を作った。古くからフランスと結んできたマロン派を守る狙いだったが、加えた地域はムスリムが多く、シリアとの統合を望む人々もいた。
+      source: "https://en.wikipedia.org/wiki/State_of_Greater_Lebanon"
+    - from: 1926
+      to: 1942
+      text: 1926年に憲法を定めてレバノン共和国となり、宗派ごとに議席や官職を割り当てるしくみが作られた。1941年にイギリス・自由フランス軍がヴィシー政府の軍を破り、独立を約束した。1943年、キリスト教徒とムスリムの指導者が「国民協約」（大統領はマロン派、首相はスンナ派など）を結んで独立し、フランス軍は1946年に撤退した。
+      source: "https://ja.wikipedia.org/wiki/国民協約"
+  source:
+    - "https://ja.wikipedia.org/wiki/大レバノン"
+    - "https://en.wikipedia.org/wiki/State_of_Greater_Lebanon"
+
+- id: british_mandate_palestine
+  name: イギリス委任統治領パレスチナ
+  names:
+    - { to: 1919, name: パレスチナ（イギリス軍の占領地）, kind: 占領地（連合軍の占領地行政） }
+  parent: britain
+  kind: 国際連盟の委任統治領（A式。首府エルサレム）
+  match:
+    contains: [パレスチナ]
+  from: 1917
+  to: 1947
+  polities: [israel, palestine, jordan]
+  governors:
+    - { name: エドマンド・アレンビー, title: 遠征軍司令官, from: 1917, to: 1919, note: 1917年12月にエルサレムに入る, source: "https://en.wikipedia.org/wiki/Edmund_Allenby,_1st_Viscount_Allenby" }
+    - { name: ハーバート・サミュエル, title: 初代高等弁務官, from: 1920, to: 1925, note: ユダヤ系の政治家, source: "https://en.wikipedia.org/wiki/Herbert_Samuel,_1st_Viscount_Samuel" }
+    - { name: アラン・カニンガム, title: 最後の高等弁務官, from: 1945, to: 1948, source: "https://en.wikipedia.org/wiki/Alan_Cunningham" }
+  periods:
+    - from: 1917
+      to: 1928
+      text: 第一次世界大戦中、イギリスはアラブ人に独立を約束する一方（フサイン＝マクマホン協定）、ユダヤ人の「民族的郷土」の建設を支持するバルフォア宣言（1917年）を出した。1917年にイギリス軍がオスマン帝国からエルサレムを奪い、1920年に委任統治が始まった。ヨーロッパの迫害を逃れたユダヤ人の移民（シオニズム）が土地を買って入植し、アラブ人との衝突が起き始めた。
+      source: "https://ja.wikipedia.org/wiki/バルフォア宣言"
+    - from: 1929
+      to: 1938
+      text: 1929年の嘆きの壁事件で衝突が広がった。ナチス・ドイツの迫害でユダヤ人の移民が急増すると、1936–39年、アラブ人がイギリスの支配とユダヤ人移民に反対して大反乱を起こした。1937年、イギリスのピール委員会が初めて分割案を示した。
+      source: "https://en.wikipedia.org/wiki/1936–1939_Arab_revolt_in_Palestine"
+    - from: 1939
+      to: 1947
+      text: アラブ諸国の支持をつなぎとめるため、イギリスは1939年の白書でユダヤ人の移民を制限した。ホロコーストの後、ユダヤ人の武装組織はイギリスに対するテロに転じた（1946年のキング・デイヴィッド・ホテル爆破）。手に負えなくなったイギリスは問題を国際連合に任せ、1947年11月の総会でパレスチナ分割決議が採択された。1948年5月14日、イギリスの撤退と同時にイスラエルが独立を宣言し、第1次中東戦争となった。
+      source: "https://ja.wikipedia.org/wiki/パレスチナ分割決議"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス委任統治領パレスチナ"
+    - "https://en.wikipedia.org/wiki/Mandatory_Palestine"
+
+- id: transjordan_mandate
+  name: トランスヨルダン首長国
+  parent: britain
+  kind: 国際連盟の委任統治領（パレスチナ委任統治の一部だが、ユダヤ人の郷土の条項からはずされた）
+  match:
+    contains: [トランスヨルダン]
+  from: 1920
+  to: 1945
+  polities: [jordan, hejaz]
+  governors:
+    - { name: アブドゥッラー1世, title: 首長（アミール）, from: 1921, to: 1946, note: メッカのフサインの子。1946年に国王, source: "https://ja.wikipedia.org/wiki/アブドゥッラー1世" }
+    - { name: ジョン・バゴット・グラブ, title: アラブ軍団の司令官, from: 1939, to: 1956, source: "https://en.wikipedia.org/wiki/John_Bagot_Glubb" }
+  periods:
+    - from: 1920
+      to: 1928
+      text: 1921年、メッカのシャリーフ・フサインの子アブドゥッラーが、シリアのフランスと戦おうとしてアンマンに来た。イギリスの植民地相チャーチルはカイロ会議で、彼をヨルダン川の東の首長として認めた（兄ファイサルはイラクの王）。ユダヤ人の入植はこの地では認められなかった。
+      source: "https://en.wikipedia.org/wiki/Emirate_of_Transjordan"
+    - from: 1929
+      to: 1945
+      text: 財政も軍もイギリスに頼り、イギリス人将校の率いるアラブ軍団が遊牧民をおさえた。1946年5月に王国として独立し（1949年からヨルダン・ハシミテ王国）、1948年の第1次中東戦争ではヨルダン川西岸と東エルサレムを占めた。
+      source: "https://ja.wikipedia.org/wiki/ヨルダンの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/トランスヨルダン王国"
+    - "https://en.wikipedia.org/wiki/Emirate_of_Transjordan"
+
+- id: british_mandate_iraq
+  name: イギリス委任統治領メソポタミア（イラク）
+  names:
+    - { to: 1919, name: メソポタミア（イギリス軍の占領地）, kind: 占領地 }
+    - { from: 1921, name: イラク王国（イギリスの委任統治）, kind: 委任統治下の王国 }
+  parent: britain
+  kind: 国際連盟の委任統治領（A式。首府バグダード）
+  match:
+    labels: [バスラ（イギリスの占領）, メソポタミア（イギリスの占領）, イラク（イギリスの委任統治領）]
+  from: 1914
+  to: 1931
+  polities: [iraq, ottoman]
+  governors:
+    - { name: パーシー・コックス, title: 高等弁務官, from: 1920, to: 1923, note: ファイサルを王に立てる, source: "https://en.wikipedia.org/wiki/Percy_Cox" }
+    - { name: ファイサル1世, title: 国王, from: 1921, to: 1933, note: メッカのフサインの子。シリアの王位を追われた後に即位, source: "https://ja.wikipedia.org/wiki/ファイサル1世_(イラク王)" }
+  periods:
+    - from: 1914
+      to: 1920
+      text: 第一次世界大戦が始まると、イギリスはインドへの道とペルシアの油田を守るため、インド軍をバスラに上陸させた。1916年にクートでオスマン軍に降伏する敗戦もあったが、1917年にバグダード、1918年にモースルを占めた。1920年、委任統治に反対してシーア派とスンナ派の部族がともに大反乱を起こし、イギリスは空軍も使って鎮めた。
+      source: "https://en.wikipedia.org/wiki/Iraqi_revolt_of_1920"
+    - from: 1921
+      to: 1931
+      text: 統治の費用をおさえるため、イギリスは1921年にファイサルを王に立て、イギリス人の顧問と空軍の基地を通じて間接に治めた。北部のモースル（クルド人の地域と油田）は、トルコとの争いの末に1926年にイラクに属すると決まった。1927年にキルクークで大油田が見つかり、イラク石油会社が開発した。
+      source: "https://en.wikipedia.org/wiki/Mandatory_Iraq"
+  note: 1932年10月に独立し、国際連盟に加盟した（委任統治領で初めて）。イギリスの軍事基地は残った。
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス委任統治領メソポタミア"
+    - "https://en.wikipedia.org/wiki/Mandatory_Iraq"
+
+- id: british_kuwait
+  name: クウェート（イギリスの保護下）
+  parent: britain
+  kind: 保護国（首長のサバーハ家を残し、外交と防衛をイギリスが握る）
+  match:
+    iso: [KWT]
+  from: 1899
+  to: 1960
+  polities: [kuwait]
+  governors:
+    - { name: ムバーラク・サバーハ, title: 首長, from: 1896, to: 1915, note: 1899年の協定でイギリスの保護を受ける, source: "https://en.wikipedia.org/wiki/Mubarak_Al-Sabah" }
+    - { name: アブドゥッラー・サーリム, title: 首長, from: 1950, to: 1965, note: 1961年に独立, source: "https://en.wikipedia.org/wiki/Abdullah_Al-Salim_Al-Sabah" }
+  periods:
+    - from: 1899
+      to: 1937
+      text: ドイツのバグダード鉄道がペルシア湾に達することを恐れたイギリスは、1899年、首長ムバーラクと秘密の協定を結び、外交をイギリスに任せさせた。名目上のオスマン帝国の宗主権は第一次世界大戦で終わった。真珠の採取と交易が主な産業だった。
+      source: "https://en.wikipedia.org/wiki/Anglo-Kuwaiti_Agreement_of_1899"
+    - from: 1938
+      to: 1960
+      text: 1938年に大油田が見つかり、戦後に輸出が始まると、クウェートは世界有数の産油国となって豊かになった。1961年6月に保護協定を終えて独立した。イラクは領有を主張したが、イギリス軍の派遣で退いた（1990年のイラクのクウェート侵攻につながる）。
+      source: "https://ja.wikipedia.org/wiki/クウェートの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/クウェートの歴史"
+    - "https://en.wikipedia.org/wiki/Sheikhdom_of_Kuwait"
+
+- id: british_bahrain
+  name: バーレーン（イギリスの保護下）
+  parent: britain
+  kind: 保護国（首長のハリーファ家を残す。ペルシア湾のイギリス駐在官が置かれる）
+  match:
+    iso: [BHR]
+  from: 1880
+  to: 1970
+  polities: [bahrain]
+  governors:
+    - { name: イーサー・ビン・アリー, title: 首長, from: 1869, to: 1932, source: "https://en.wikipedia.org/wiki/Isa_ibn_Ali_Al_Khalifa" }
+    - { name: チャールズ・ベルグレイヴ, title: 首長の顧問, from: 1926, to: 1957, note: 行政の近代化を進める, source: "https://en.wikipedia.org/wiki/Charles_Belgrave" }
+  periods:
+    - from: 1880
+      to: 1931
+      text: 海賊行為の取り締まりを名目にペルシア湾の首長たちと休戦協定を結んできたイギリスは、1880年と1892年の協定でバーレーンの外交を握った。イランも領有を主張した。真珠の採取と中継貿易が主な産業だった。
+      source: "https://en.wikipedia.org/wiki/History_of_Bahrain_(1783–1971)"
+    - from: 1932
+      to: 1970
+      text: 1932年、アラビア半島の東側で最初に石油の生産が始まった。1946年にペルシア湾のイギリス駐在官がブーシェフルからバーレーンに移り、湾岸のイギリスの拠点となった。1968年にイギリスがスエズ以東からの撤退を決め、1971年8月に独立した。
+      source: "https://en.wikipedia.org/wiki/History_of_Bahrain_(1783–1971)"
+  source:
+    - "https://ja.wikipedia.org/wiki/バーレーンの歴史"
+    - "https://en.wikipedia.org/wiki/History_of_Bahrain_(1783–1971)"
+
+- id: british_qatar
+  name: カタル（イギリスの保護下）
+  parent: britain
+  kind: 保護国（首長のサーニー家を残す）
+  match:
+    labels: [カタル（イギリスの保護下）]
+  from: 1916
+  to: 1970
+  polities: [qatar]
+  governors:
+    - { name: アブドゥッラー・ビン・ジャースィム, title: 首長, from: 1913, to: 1949, note: 1916年にイギリスと保護条約, source: "https://en.wikipedia.org/wiki/Abdullah_bin_Jassim_Al_Thani" }
+  periods:
+    - from: 1916
+      to: 1970
+      text: 第一次世界大戦でオスマン帝国の守備隊が去った後、1916年に首長がイギリスと条約を結び、保護下に入った。1930年代に日本の養殖真珠に押されて真珠の産業が衰えたが、1939年に石油が見つかり、戦後に輸出が始まった。1971年9月に独立した。
+      source: "https://en.wikipedia.org/wiki/Anglo-Qatari_Treaty_of_1916"
+  source:
+    - "https://ja.wikipedia.org/wiki/カタールの歴史"
+
+- id: british_trucial_states
+  name: 休戦海岸（トルーシャル・ステーツ）
+  parent: britain
+  kind: 保護国（アブダビ・ドバイなど7つの首長国）
+  match:
+    iso: [ARE]
+    labels: [フジャイラ（イギリスの保護下）]
+  from: 1892
+  to: 1970
+  polities: [trucial_states, uae]
+  governors:
+    - { name: ザーイド・ビン・スルターン, title: アブダビの首長, from: 1966, to: 2004, note: アラブ首長国連邦の初代大統領, source: "https://ja.wikipedia.org/wiki/ザーイド・ビン・スルターン・アール・ナヒヤーン" }
+  periods:
+    - from: 1892
+      to: 1949
+      text: イギリスは、インドへの航路を襲う「海賊海岸」の首長たちと1820年・1853年に休戦協定を結び（休戦海岸の名はここから）、1892年の排他協定で外交を握った。真珠の採取と漁業の小さな首長国の集まりだった。
+      source: "https://en.wikipedia.org/wiki/Trucial_States"
+    - from: 1950
+      to: 1970
+      text: 1952年に首長たちの評議会ができ、フジャイラが7つ目の首長国として認められた。1958年にアブダビで海底油田が見つかり、1960年代に開発が進んだ。イギリスが1968年にスエズ以東からの撤退を決めると、首長たちは連邦の形を話し合い、1971年12月にアラブ首長国連邦が成立した（ラアス・アル＝ハイマは翌年に加わる）。
+      source: "https://ja.wikipedia.org/wiki/アラブ首長国連邦の歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/休戦海岸"
+    - "https://en.wikipedia.org/wiki/Trucial_States"
+
+- id: british_cyprus
+  name: イギリス領キプロス
+  names:
+    - { to: 1913, name: キプロス（イギリスの施政）, kind: オスマン帝国から借りた施政地 }
+    - { from: 1914, to: 1924, name: キプロス（イギリスの併合地）, kind: 併合地 }
+  parent: britain
+  kind: 直轄植民地（1925年から）
+  match:
+    iso: [CYP]
+  from: 1878
+  to: 1959
+  polities: [cyprus, ottoman]
+  governors:
+    - { name: ガーネット・ウルズリー, title: 初代高等弁務官, from: 1878, to: 1879, source: "https://en.wikipedia.org/wiki/Garnet_Wolseley,_1st_Viscount_Wolseley" }
+    - { name: ヒュー・フット, title: 最後の総督, from: 1957, to: 1960, source: "https://en.wikipedia.org/wiki/Hugh_Foot,_Baron_Caradon" }
+  periods:
+    - from: 1878
+      to: 1924
+      text: ロシア＝トルコ戦争の後のベルリン会議（1878年）の前に、イギリスはロシアからオスマン帝国を守る約束と引きかえに、キプロスの施政権を得た（名目上はオスマン帝国の領土）。スエズ運河とエジプトへの道を守る基地になった。1914年、オスマン帝国が敵になると併合し、1925年に直轄植民地とした。
+      source: "https://en.wikipedia.org/wiki/Cyprus_Convention"
+    - from: 1925
+      to: 1959
+      text: 人口の8割を占めるギリシア系の住民は、ギリシアとの統合（エノシス）を求め、1931年に暴動を起こした。戦後、正教会の大主教マカリオスが運動を率い、1955年からはグリヴァスのEOKAが武装闘争を始めた。トルコ系住民はトルコとの分割を求めた。1959年のロンドン・チューリッヒ協定で、統合も分割もしない独立が決まり、1960年8月にキプロス共和国が独立した（イギリスの軍事基地は残る）。
+      source: "https://ja.wikipedia.org/wiki/キプロスの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領キプロス"
+    - "https://en.wikipedia.org/wiki/British_Cyprus"
+
+- id: israeli_occupied_territories
+  name: イスラエルの占領地
+  parent: israel
+  kind: 占領地（第3次中東戦争から。国際連合は撤退を求める）
+  match:
+    labels: [ガザ地区（イスラエルの占領）, ラトルン（イスラエルの占領）, ティラン島・サナーフィール島（イスラエルの占領）, ヨルダン川西岸（イスラエルの占領）, シナイ半島（イスラエルの占領）, ゴラン高原（イスラエルの占領）, 南レバノン（イスラエルの占領）, ヨルダン川西岸（イスラエルの占領。都市部はパレスチナ自治区）]
+  from: 1967
+  to: 2025
+  polities: [palestine, egypt, syria, jordan, lebanon]
+  periods:
+    - from: 1967
+      to: 1981
+      text: 1967年の第3次中東戦争（六日戦争）で、イスラエルはエジプトからガザ地区とシナイ半島、ヨルダンからヨルダン川西岸と東エルサレム、シリアからゴラン高原を占領した。国際連合安全保障理事会の決議242は占領地からの撤退を求めた。イスラエルは占領地にユダヤ人の入植地を作り始め、東エルサレムを併合した（1980年の基本法）。1973年の第4次中東戦争の後、1978年のキャンプ・デーヴィッド合意でエジプトと和平し、シナイ半島は1982年に返された。
+      source: "https://ja.wikipedia.org/wiki/第三次中東戦争"
+    - from: 1982
+      to: 1993
+      text: 1981年にゴラン高原を併合した（国際的には認められない）。1982年にはパレスチナ解放機構（PLO）を追ってレバノンに侵攻し、南レバノンを占領した。1987年、ガザと西岸でパレスチナ人の民衆の蜂起（インティファーダ）が起きた。
+      source: "https://ja.wikipedia.org/wiki/インティファーダ"
+    - from: 1994
+      to: 2025
+      text: 1993年のオスロ合意でパレスチナ暫定自治が始まり、ガザと西岸の都市がパレスチナ自治政府に移された。しかし和平交渉は行き詰まり、2000年の第2次インティファーダの後、イスラエルは西岸に分離壁を造った。2005年にガザから撤退したが、ハマースが支配したガザを封鎖した。西岸では入植地の拡大が続き、2023年10月のハマースの攻撃の後、イスラエル軍がガザで大規模な戦争を行った。
+      source: "https://ja.wikipedia.org/wiki/オスロ合意"
+  source:
+    - "https://ja.wikipedia.org/wiki/イスラエル占領地"
+    - "https://en.wikipedia.org/wiki/Israeli-occupied_territories"
+
+# ---------------------------------------------------------------- 小さな植民地・島・初期の拠点
+
+- id: portuguese_morocco
+  name: ポルトガル領モロッコ（北アフリカの城塞都市）
+  parent: portugal
+  kind: 海岸の城塞都市（セウタ・タンジール・アシラ・マザガンなど）
+  match:
+    iso: [MAR]
+    labels: [クサル・エッ・セギール]
+  from: 1458
+  to: 1769
+  polities: [morocco]
+  periods:
+    - from: 1458
+      to: 1540
+      text: 1415年のセウタ攻略に始まるポルトガルの海外進出は、イスラーム教徒との戦い（レコンキスタの延長）と、サハラの金の交易路を押さえることをめざした。15世紀後半にクサル・エッ・セギール（1458年）・アシラとタンジール（1471年）を占め、16世紀初めには大西洋岸のサフィやアガディールにも拠点を置いた。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Morocco"
+    - from: 1541
+      to: 1769
+      text: サアド朝の反撃で1541年にアガディールを失い、多くの拠点を引き払った。1578年、国王セバスティアンがモロッコに遠征してアルカサル・キビールの戦いで戦死し、王位継承の混乱から1580年にスペイン王がポルトガル王を兼ねる同君連合となった。タンジールは1661年にイギリス王チャールズ2世に嫁ぐ王女の持参金として譲られ、最後に残ったマザガン（いまのアル・ジャディーダ）も1769年に引き揚げた。
+      source: "https://ja.wikipedia.org/wiki/アルカセル・キビールの戦い"
+  source:
+    - "https://en.wikipedia.org/wiki/Portuguese_Morocco"
+
+- id: english_tangier
+  name: イギリス領タンジール
+  parent: britain
+  kind: 王の領地（ポルトガル王女の持参金）
+  match:
+    iso: [MAR]
+  from: 1661
+  to: 1683
+  polities: [morocco]
+  periods:
+    - from: 1661
+      to: 1683
+      text: 1661年、イギリス王チャールズ2世がポルトガル王女キャサリンと結婚したとき、持参金としてインドのボンベイとともにタンジールを得た。地中海の入り口の海軍の基地にしようと防波堤を築いたが、モロッコのアラウィー朝の攻撃が続き、守備の費用がかさんだ。議会が費用を出さず、1684年に防波堤を壊して引き揚げた。
+      source: "https://en.wikipedia.org/wiki/English_Tangier"
+  source:
+    - "https://en.wikipedia.org/wiki/English_Tangier"
+
+- id: spanish_presidios_maghreb
+  name: スペイン領のマグリブの城塞（オラン・ベジャイア・トリポリ）
+  parent: spain
+  kind: 海岸の城塞都市（プレシディオ）
+  match:
+    iso: [DZA]
+    labels: [ベジャイア, トリポリ]
+  from: 1516
+  to: 1791
+  polities: [algiers, ottoman]
+  periods:
+    - from: 1516
+      to: 1554
+      text: レコンキスタを終えたスペインは、北アフリカのイスラーム勢力と海賊の拠点を押さえるため、1509–10年にオラン・ベジャイア・トリポリを攻め取った。しかしオスマン帝国と結んだバルバリア海賊のバルバロス兄弟がアルジェを拠点に勢力を広げ、トリポリは1530年に聖ヨハネ騎士団に預けられ、ベジャイアは1555年に奪われた。
+      source: "https://en.wikipedia.org/wiki/Spanish_Oran"
+    - from: 1555
+      to: 1791
+      text: オランとメルス・エル・ケビールだけが残り、スペインの罪人や兵士が守る城塞となった。1708年にアルジェの太守に奪われたが、1732年に取り戻した。1790年の大地震で町が壊れた後、1792年にアルジェの太守に引き渡した。
+      source: "https://en.wikipedia.org/wiki/Spanish_Oran"
+  note: 1509–15年のオラン・ベジャイア・トリポリはカスティーリャ・アラゴンの政体（castile・aragon）。
+  source:
+    - "https://en.wikipedia.org/wiki/Spanish_Oran"
+
+- id: french_egypt
+  name: フランス軍のエジプト占領
+  parent: france
+  kind: 占領地（ナポレオンのエジプト遠征）
+  match:
+    iso: [EGY]
+  from: 1798
+  to: 1801
+  polities: [egypt, ottoman, mamluk]
+  governors:
+    - { name: ナポレオン・ボナパルト, title: 遠征軍司令官, from: 1798, to: 1799, note: 本国の政変を知って帰国, source: "https://ja.wikipedia.org/wiki/エジプト・シリア戦役" }
+    - { name: ジャン＝バティスト・クレベール, title: 遠征軍司令官, from: 1799, to: 1800, note: カイロで暗殺される, source: "https://en.wikipedia.org/wiki/Jean-Baptiste_Kléber" }
+  periods:
+    - from: 1798
+      to: 1801
+      text: 総裁政府は、イギリスとインドの連絡を断つため、1798年にナポレオンをエジプトへ送った。ナポレオンはピラミッドの戦いでマムルークを破りカイロに入ったが、アブキール湾の海戦でネルソンのイギリス艦隊に艦隊を失い、孤立した。同行した学者たちはロゼッタ・ストーンを見つけ、エジプト学の始まりとなった。1801年、イギリス・オスマン軍に降伏して撤退した。この混乱の中から、ムハンマド・アリーが力を伸ばした。
+      source: "https://ja.wikipedia.org/wiki/エジプト・シリア戦役"
+  source:
+    - "https://ja.wikipedia.org/wiki/エジプト・シリア戦役"
+
+- id: egyptian_syria
+  name: エジプト領シリア
+  parent: egypt
+  kind: ムハンマド・アリー朝の征服地
+  match:
+    iso: [SYR, LBN, ISR, JOR, TUR, "118", "124", "129"]
+  from: 1831
+  to: 1840
+  polities: [ottoman]
+  governors:
+    - { name: イブラーヒーム・パシャ, title: 総督（ムハンマド・アリーの子）, from: 1832, to: 1840, source: "https://en.wikipedia.org/wiki/Ibrahim_Pasha_of_Egypt" }
+  periods:
+    - from: 1831
+      to: 1840
+      text: ギリシア独立戦争でオスマン帝国を助けた見返りが少ないとして、エジプトのムハンマド・アリーは1831年に子のイブラーヒームにシリアを攻めさせた（第1次エジプト＝トルコ戦争）。キュタヒヤ条約（1833年）でシリアを得て、徴兵と専売制で近代化を進めたが、住民の反乱も起きた。第2次エジプト＝トルコ戦争（1839–40年）では、エジプトの強大化を嫌うイギリス・オーストリア・ロシアなどが介入し、ロンドン条約（1840年）でシリアを手放し、エジプトの世襲の総督の地位だけを認められた。
+      source: "https://ja.wikipedia.org/wiki/エジプト＝トルコ戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/エジプト＝トルコ戦争"
+
+- id: french_reunion
+  name: ブルボン島（レユニオン）
+  names:
+    - { from: 1665, to: 1763, name: ブルボン島（フランス東インド会社）, kind: 会社の植民地 }
+    - { from: 1793, name: レユニオン島（フランス領） }
+  parent: france
+  kind: 植民地
+  match:
+    labels: [ブルボン島（フランス領）, ブルボン島（フランス東インド会社）, ブルボン島（フランスの直轄植民地）, レユニオン島（フランス領）]
+  from: 1649
+  to: 1945
+  polities: []
+  periods:
+    - from: 1649
+      to: 1792
+      text: 無人島だったこの島をフランスが1649年に領有し、ブルボン島と名づけた。1665年からフランス東インド会社が入植を進め、18世紀にコーヒー、のちにサトウキビの農園が開かれた。働き手はマダガスカルや東アフリカから連れてこられた奴隷だった。
+      source: "https://ja.wikipedia.org/wiki/レユニオンの歴史"
+    - from: 1793
+      to: 1945
+      text: フランス革命で「レユニオン（集まり）島」と改名された（第二帝政のころは再びブルボン島など）。1810–15年はイギリスに占領された。1848年の第二共和政の奴隷制の廃止の後は、インドからの年季契約の労働者が増えた。1946年に本国の海外県となった。
+      source: "https://ja.wikipedia.org/wiki/レユニオンの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/レユニオンの歴史"
+
+- id: french_comoros
+  name: フランス領コモロ
+  names:
+    - { to: 1885, name: マヨット（フランス領） }
+    - { from: 1946, name: フランス領コモロ（海外領土）, kind: 海外領土（1961年から内政自治） }
+  parent: france
+  kind: 植民地・保護領（アンジュアン・ンガジジャ・モヘリのスルタン国を保護下に）
+  match:
+    labels: [マヨット（フランス領）, アンジュアン（フランスの保護領）, ンガジジャ（フランスの保護領）, モヘリ（フランスの保護領）, フランス領コモロ（海外領土）]
+  from: 1841
+  to: 1974
+  polities: []
+  periods:
+    - from: 1841
+      to: 1911
+      text: 1841年、フランスはマヨット島を手に入れ、インド洋の海軍の拠点とした。1886年、ほかの3つの島（アンジュアン・ンガジジャ・モヘリ）のスルタン国を保護下に置いた。島々ではサトウキビや香料（イランイラン）の農園が開かれた。
+      source: "https://en.wikipedia.org/wiki/French_Comoros"
+    - from: 1912
+      to: 1974
+      text: 1912年に植民地としてマダガスカルの属領となった（その時期は french_madagascar）。1946年に海外領土として切り離された。1974年の住民投票で3つの島は独立を選んだが、マヨットはフランスに残ることを選び、1975年の独立の後もフランス領のままとなった（2011年に海外県）。
+      source: "https://en.wikipedia.org/wiki/French_Comoros"
+  source:
+    - "https://en.wikipedia.org/wiki/French_Comoros"
+
+- id: british_seychelles
+  name: イギリス領セーシェル
+  parent: britain
+  kind: 直轄植民地（1903年にモーリシャスから分離）
+  match:
+    labels: [セーシェル（イギリス植民地）]
+  from: 1903
+  to: 1975
+  polities: [seychelles]
+  periods:
+    - from: 1903
+      to: 1975
+      text: フランス領だったセーシェルは、1814年にイギリス領となり、モーリシャスの属領として治められた（それまでは british_mauritius）。1903年に独立の直轄植民地となった。住民はフランス系の農園主とアフリカ系の人々で、ココヤシの産物（コプラ）やバニラを輸出した。1971年に国際空港が開いて観光が始まり、1976年に独立した。
+      source: "https://en.wikipedia.org/wiki/Crown_Colony_of_the_Seychelles"
+  source:
+    - "https://en.wikipedia.org/wiki/Crown_Colony_of_the_Seychelles"
+
+- id: british_saint_helena
+  name: セントヘレナ
+  names:
+    - { to: 1833, name: セントヘレナ（イギリス東インド会社）, kind: 会社の補給地 }
+  parent: britain
+  kind: 植民地（アセンション島・トリスタン・ダ・クーニャを含む）
+  match:
+    labels: [セントヘレナ（イギリス東インド会社）, セントヘレナ（イギリス植民地）, アセンション島（イギリス領）, トリスタン・ダ・クーニャ（イギリス領）]
+  from: 1659
+  to: 2025
+  polities: []
+  periods:
+    - from: 1659
+      to: 1833
+      text: 南大西洋の孤島セントヘレナは、1659年からイギリス東インド会社がアジアへの航路の補給地とした。1815年、ワーテルローの戦いに敗れたナポレオンがここに流され、1821年に死んだ。その監視のため、アセンション島とトリスタン・ダ・クーニャにも守備隊が置かれた。
+      source: "https://ja.wikipedia.org/wiki/セントヘレナ"
+    - from: 1834
+      to: 2025
+      text: 1834年に会社からイギリス政府の植民地に移った。スエズ運河の開通（1869年）で寄港する船が減り、衰えた。南アフリカ戦争ではブール人の捕虜の収容所が置かれた。いまも「セントヘレナ・アセンションおよびトリスタンダクーニャ」としてイギリスの海外領土である。
+      source: "https://en.wikipedia.org/wiki/Saint_Helena"
+  source:
+    - "https://ja.wikipedia.org/wiki/セントヘレナ"
+
+- id: portuguese_cape_verde
+  name: ポルトガル領カーボベルデ
+  names:
+    - { from: 1951, name: カーボベルデ（ポルトガルの海外州）, kind: 海外州 }
+  parent: portugal
+  kind: 植民地（首府は初めリベイラ・グランデ、のちプライア）
+  match:
+    labels: [カーボベルデ（ポルトガル領）, カーボベルデ（ポルトガルの海外州）]
+  from: 1462
+  to: 1974
+  polities: []
+  periods:
+    - from: 1462
+      to: 1850
+      text: 1460年ごろポルトガルの航海者が見つけた無人の島々で、1462年からサンティアゴ島に入植が始まった。西アフリカの海岸から連れてきた奴隷をアメリカへ送る大西洋奴隷貿易の中継地となり、ポルトガル人とアフリカ人の混血の社会（クレオール）ができた。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Cape_Verde"
+    - from: 1851
+      to: 1974
+      text: 奴隷貿易の終わりの後は、大西洋を渡る蒸気船の石炭補給地（サン・ヴィセンテ島のミンデロ）となった。雨が少なく、たびたび飢饉が起き、多くの人がアメリカやサントメの農園へ移った。ギニアのPAIGCがカーボベルデの独立もめざし、カーネーション革命の後の1975年7月に独立した。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Cape_Verde"
+  source:
+    - "https://en.wikipedia.org/wiki/Portuguese_Cape_Verde"
+
+- id: portuguese_sao_tome
+  name: ポルトガル領サントメ・プリンシペ
+  names:
+    - { from: 1951, name: サントメ・プリンシペ（ポルトガルの海外州）, kind: 海外州 }
+  parent: portugal
+  kind: 植民地
+  match:
+    labels: [サントメ島（ポルトガル領）, サントメ・プリンシペ（ポルトガル領）, ポルトガル領サントメ・プリンシペ, ポルトガルの海外州（サントメ・プリンシペ）]
+  from: 1493
+  to: 1974
+  polities: []
+  periods:
+    - from: 1493
+      to: 1640
+      text: ギニア湾の無人島に、1493年からポルトガル人が入植した。16世紀、アフリカ大陸から連れてきた奴隷を使うサトウキビのプランテーションが世界で初めて大規模に営まれ、のちのブラジルやカリブ海の砂糖農園の手本となった。奴隷の反乱（1595年のアマドールの反乱）も起きた。
+      source: "https://en.wikipedia.org/wiki/Portuguese_São_Tomé_and_Príncipe"
+    - from: 1641
+      to: 1974
+      text: 砂糖の産地がブラジルへ移ると、奴隷貿易の中継地となった。19世紀にコーヒーとカカオが持ちこまれ、20世紀初めには世界有数のカカオの産地となったが、アンゴラなどからの「契約労働者」は事実上の奴隷として扱われ、イギリスのチョコレート会社の不買につながった。1953年、労働者の虐殺事件（バテパの虐殺）が起きた。1975年7月に独立した。
+      source: "https://en.wikipedia.org/wiki/Batepá_massacre"
+  source:
+    - "https://en.wikipedia.org/wiki/Portuguese_São_Tomé_and_Príncipe"
+
+- id: portuguese_mina
+  name: サン・ジョルジェ・ダ・ミナ（ポルトガル領黄金海岸）
+  parent: portugal
+  kind: 交易の城塞（金の取り引き）
+  match:
+    labels: [エルミナ（サン・ジョルジェ・ダ・ミナ城）, アクシム・シャマ（ポルトガルの砦）]
+  from: 1482
+  to: 1641
+  polities: [fante]
+  periods:
+    - from: 1482
+      to: 1641
+      text: 1482年、ポルトガル王ジョアン2世はギニア湾の黄金海岸にサン・ジョルジェ・ダ・ミナ城（エルミナ城）を築いた。内陸から運ばれる金を、布や銅器・奴隷と交換し、ポルトガル王室の大きな収入となった。1580年からのスペインとの同君連合の時代に、スペインと戦うオランダに狙われ、1637年にエルミナ城、1642年までにアクシムなどを奪われた。
+      source: "https://ja.wikipedia.org/wiki/エルミナ城"
+  source:
+    - "https://ja.wikipedia.org/wiki/エルミナ城"
+
+- id: danish_gold_coast
+  name: デンマーク領黄金海岸
+  parent: denmark
+  kind: 砦（クリスチャンスボー城が本部）
+  match:
+    contains: [デンマーク領黄金海岸]
+  from: 1661
+  to: 1849
+  polities: [ghana]
+  periods:
+    - from: 1661
+      to: 1849
+      text: デンマークは1661年ごろから黄金海岸の東部（いまのアクラ）にクリスチャンスボー城を拠点として、奴隷をカリブ海のデンマーク領西インド諸島（セント・トマス島など）へ送った。1792年、デンマークはヨーロッパで最初に奴隷貿易の禁止を決めた（1803年から実施）。その後、砦の維持が重荷となり、1850年にイギリスに売り渡した。クリスチャンスボー城はのちガーナの政府庁舎となった。
+      source: "https://en.wikipedia.org/wiki/Danish_Gold_Coast"
+  source:
+    - "https://en.wikipedia.org/wiki/Danish_Gold_Coast"
+
+# ---------------------------------------------------------------- 第二次世界大戦の後の軍政・その他の占領
+
+- id: british_military_libya
+  name: イギリス軍政下のリビア（トリポリタニア・キレナイカ）
+  parent: britain
+  kind: 占領地（軍政）
+  match:
+    labels: [トリポリタニア, キレナイカ]
+  from: 1941
+  to: 1950
+  polities: [libya, senussi]
+  periods:
+    - from: 1941
+      to: 1950
+      text: 北アフリカ戦線でイタリア・ドイツ軍を追い出したイギリスは、トリポリタニアとキレナイカに軍政を敷いた（南のフェザーンはフランスの軍政）。戦後、旧イタリア植民地の扱いで連合国の意見が合わず、国際連合の決議で独立が決まった。1951年12月、サヌーシー教団の長イドリースを王とするリビア連合王国が独立した。
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Libya)"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Military_Administration_(Libya)"
+
+- id: french_fezzan
+  name: フランス軍政下のフェザーン
+  parent: france
+  kind: 占領地（軍政）
+  match:
+    labels: [クフラ（自由フランス軍の占領）, フェザーン, フェザーン＝ガダーミス]
+  from: 1941
+  to: 1950
+  polities: [libya]
+  periods:
+    - from: 1941
+      to: 1950
+      text: チャドから北へ攻めたルクレールの自由フランス軍は、1941年にクフラのオアシスを、1943年にリビア南部のフェザーンを占領した。戦後もフランスはチャドとアルジェリアに接するフェザーンを手放したがらなかったが、国際連合の決議に従い、1951年にリビアの一部として独立させた。
+      source: "https://en.wikipedia.org/wiki/French_administration_of_Fezzan"
+  source:
+    - "https://en.wikipedia.org/wiki/French_administration_of_Fezzan"
+
+- id: british_military_eritrea
+  name: イギリス軍政下のエリトリア
+  parent: britain
+  kind: 占領地（軍政）
+  match:
+    labels: [エリトリア（イギリスの軍政）]
+  from: 1941
+  to: 1951
+  polities: [eritrea, ethiopia]
+  periods:
+    - from: 1941
+      to: 1951
+      text: 1941年のケレンの戦いでイタリア軍を破ったイギリスは、エリトリアを軍政のもとに置いた。戦後、エチオピアとの統合を求める人々と独立を求める人々が争い、1950年の国際連合の決議で、1952年にエチオピアとの連邦となった。
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Military_Administration_(Eritrea)"
+
+- id: british_military_somalia
+  name: イギリス軍政下のソマリア
+  parent: britain
+  kind: 占領地（軍政。旧イタリア領ソマリアとエチオピアのオガデン）
+  match:
+    labels: [ソマリア（イギリスの軍政）, オガデン（イギリスの軍政）]
+  from: 1941
+  to: 1949
+  polities: [somalia, ethiopia]
+  periods:
+    - from: 1941
+      to: 1949
+      text: 1941年にイタリア領ソマリアを占領したイギリスは、エチオピアのオガデンもあわせて軍政のもとに置いた。外相ベヴィンはソマリ人の住む土地を1つにまとめる案を出したが、ほかの国の反対で実現しなかった。オガデンは1948年にエチオピアへ返され（のちの紛争の元）、旧イタリア領は1950年にイタリアの信託統治領となった。
+      source: "https://en.wikipedia.org/wiki/British_Military_Administration_(Somalia)"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Military_Administration_(Somalia)"
+
+- id: british_occupied_iran
+  name: イギリス軍の占領下のイラン南西部
+  parent: britain
+  kind: 占領地（英ソのイラン進駐）
+  match:
+    labels: [イラン南西部（イギリスの占領）]
+  from: 1941
+  to: 1945
+  polities: [persia]
+  periods:
+    - from: 1941
+      to: 1945
+      text: 独ソ戦が始まると、イギリスとソ連はソ連へ物資を送る道（ペルシア回廊）と油田を確保するため、1941年8月にイランに進駐した。ドイツに近いとみられたレザー・シャーは退位させられ、子のモハンマド・レザーが即位した。イギリスは南部の油田地帯を押さえた。戦後の1946年までに撤退した。
+      source: "https://ja.wikipedia.org/wiki/イラン進駐"
+  source:
+    - "https://ja.wikipedia.org/wiki/イラン進駐"
+
+- id: soviet_occupied_iran
+  name: ソ連軍の占領下のイラン北部
+  parent: soviet_union
+  kind: 占領地（英ソのイラン進駐）
+  match:
+    labels: [イラン北部（ソ連の占領）]
+  from: 1941
+  to: 1945
+  polities: [persia]
+  periods:
+    - from: 1941
+      to: 1945
+      text: 1941年8月、ソ連はイギリスとともにイランに進駐し、北部を占領した。戦後も軍をとどめ、1945–46年にアゼルバイジャン人民政府とクルド人のマハーバード共和国を支援した。国際連合の安全保障理事会で取り上げられた最初の紛争の1つとなり、1946年にソ連軍が撤退すると、両政府はイラン軍に倒された。
+      source: "https://en.wikipedia.org/wiki/Iran_crisis_of_1946"
+  source:
+    - "https://ja.wikipedia.org/wiki/イラン進駐"
+
+- id: greek_smyrna
+  name: ギリシア軍の占領下の小アジア（スミルナ地区）
+  parent: greece
+  kind: 占領地（セーヴル条約で施政を認められる）
+  match:
+    labels: [スミルナ地区（ギリシアの占領）, 小アジア西部（ギリシアの占領）, イズミト（ギリシアの占領）]
+  from: 1919
+  to: 1921
+  polities: [turkey, ottoman]
+  periods:
+    - from: 1919
+      to: 1921
+      text: 第一次世界大戦に敗れたオスマン帝国に対し、ギリシアは首相ヴェニゼロスの「大ギリシア主義」のもと、ギリシア人の多いスミルナ（いまのイズミル）に1919年5月に上陸した。1920年のセーヴル条約でスミルナ地区の施政が認められ、ギリシア軍はアナトリアの奥へ進んだ。しかしムスタファ・ケマルのアンカラ政府の軍がサカリヤ川の戦い（1921年）で押し返し、1922年にスミルナを奪い返した。ローザンヌ条約（1923年）でギリシアとトルコの住民交換が行われた。
+      source: "https://ja.wikipedia.org/wiki/希土戦争_(1919年-1922年)"
+  source:
+    - "https://ja.wikipedia.org/wiki/希土戦争_(1919年-1922年)"
+
+- id: ethiopian_eritrea
+  name: エリトリア（エチオピアとの連邦・エチオピアの州）
+  names:
+    - { from: 1962, name: エリトリア州（エチオピア）, kind: 併合された州 }
+  parent: ethiopia
+  kind: 連邦の自治領（1952年から）
+  match:
+    labels: [エリトリア（エチオピアと連邦）, エリトリア州]
+  from: 1952
+  to: 1990
+  polities: [eritrea]
+  periods:
+    - from: 1952
+      to: 1961
+      text: 国際連合の決議で、1952年にエリトリアは自治権を持ってエチオピアと連邦を組んだ。しかし皇帝ハイレ・セラシエは自治を少しずつ奪い、エリトリアの言語や政党を抑えた。1961年、エリトリア解放戦線（ELF）が武装闘争を始めた。
+      source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+    - from: 1962
+      to: 1990
+      text: 1962年、エチオピアはエリトリアの議会に連邦の解消を決めさせて併合し、州とした。1974年の革命で皇帝が倒れ、ソ連の支援を受けたメンギスツの軍事政権も戦いを続けたが、エリトリア人民解放戦線（EPLF）が勢いを増した。1991年にメンギスツ政権が倒れると、EPLFがアスマラを解放し、1993年の住民投票を経て独立した。
+      source: "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/エリトリア独立戦争"
+
+- id: jordanian_west_bank
+  name: ヨルダン領ヨルダン川西岸
+  parent: jordan
+  kind: 第1次中東戦争で占めた後、1950年に併合（ほとんどの国は認めない）
+  match:
+    labels: [ヨルダン川西岸]
+  from: 1948
+  to: 1966
+  polities: [palestine, israel]
+  periods:
+    - from: 1948
+      to: 1966
+      text: 1948年の第1次中東戦争で、ヨルダンのアラブ軍団はヨルダン川西岸と東エルサレム（旧市街）を占め、1950年に併合した。住民にはヨルダンの国籍が与えられ、イスラエル側から逃れたパレスチナ難民の多くもここに住んだ。1967年の第3次中東戦争でイスラエルに占領された（1988年にヨルダンは領有の主張を取り下げた）。
+      source: "https://en.wikipedia.org/wiki/Jordanian_annexation_of_the_West_Bank"
+  source:
+    - "https://en.wikipedia.org/wiki/Jordanian_annexation_of_the_West_Bank"
+
+- id: egyptian_gaza
+  name: エジプト管理下のガザ地区
+  parent: egypt
+  kind: 第1次中東戦争で占めた地域（併合はせず管理）
+  match:
+    labels: [ガザ地区（エジプトの管理）]
+  from: 1948
+  to: 1966
+  polities: [palestine, israel]
+  periods:
+    - from: 1948
+      to: 1966
+      text: 1948年の第1次中東戦争の休戦線で、エジプト軍の守った海岸の細長い土地がガザ地区となった。人口の大半はイスラエル側から逃れてきたパレスチナ難民で、エジプトは併合せずに軍の管理のもとに置いた（全パレスチナ政府の名目もあった）。1956年のスエズ戦争で一時イスラエルに占領され、1967年の第3次中東戦争で再び占領された。
+      source: "https://en.wikipedia.org/wiki/Occupation_of_the_Gaza_Strip_by_Egypt"
+  source:
+    - "https://en.wikipedia.org/wiki/Occupation_of_the_Gaza_Strip_by_Egypt"
+
+- id: moroccan_western_sahara
+  name: モロッコの支配下の西サハラ
+  parent: morocco
+  kind: 実効支配（国際的には帰属未定の非自治地域）
+  match:
+    labels: [西サハラ]
+  from: 1976
+  to: 2025
+  polities: [mauritania]
+  periods:
+    - from: 1976
+      to: 1991
+      text: 1975年のマドリード協定で、スペインは西サハラをモロッコとモーリタニアに引き渡した。独立を求めるポリサリオ戦線は1976年にサハラ・アラブ民主共和国の樹立を宣言し、アルジェリアの支援を受けて戦った。モーリタニアは1979年に撤退し、その分もモロッコが占めた。モロッコは砂の壁（防御壁）を築いて大西洋岸の大部分を押さえた。
+      source: "https://ja.wikipedia.org/wiki/西サハラ問題"
+    - from: 1992
+      to: 2025
+      text: 1991年に国際連合の仲介で停戦し、住民投票を行うことになったが、投票者の資格をめぐって実現していない。モロッコは自治案を示し、2020年にアメリカがモロッコの主権を認めた。同じ年、ポリサリオ戦線は停戦の終わりを宣言した。
+      source: "https://en.wikipedia.org/wiki/Western_Sahara_conflict"
+  source:
+    - "https://ja.wikipedia.org/wiki/西サハラ問題"
+
+- id: turkish_north_cyprus
+  name: トルコ軍の占領下の北キプロス
+  parent: turkey
+  kind: 占領地（1983年に北キプロス・トルコ共和国を宣言。トルコだけが承認）
+  match:
+    labels: [北キプロス（トルコ軍の占領）]
+  from: 1974
+  to: 2025
+  polities: [cyprus]
+  periods:
+    - from: 1974
+      to: 2025
+      text: 独立後のキプロスでは、ギリシア系とトルコ系の住民の対立が続き、1964年から国連の平和維持軍が置かれた。1974年、ギリシアの軍事政権の後押しでギリシアとの統合をめざすクーデタが起きると、トルコ軍が北部に上陸して島の約3分の1を占領した。住民は南北に分かれて移り、1983年に北部は北キプロス・トルコ共和国を宣言した。2004年の国連の統一案はギリシア系住民の投票で否決され、南のキプロス共和国だけがヨーロッパ連合に加わった。
+      source: "https://ja.wikipedia.org/wiki/キプロス紛争"
+  source:
+    - "https://ja.wikipedia.org/wiki/キプロス紛争"
+
+- id: iraqi_kuwait
+  name: イラク軍の占領下のクウェート
+  parent: iraq
+  kind: 占領地（イラクは「第19州」として併合を宣言）
+  match:
+    labels: [クウェート（イラクの占領）]
+  from: 1990
+  to: 1990
+  polities: [kuwait]
+  periods:
+    - from: 1990
+      to: 1990
+      text: イラン＝イラク戦争で借金を抱えたイラクのサダム・フセインは、石油の値段と油田をめぐってクウェートと対立し、1990年8月に侵攻して併合を宣言した。国際連合の安全保障理事会は経済制裁と武力行使を認め、1991年1月、アメリカを中心とする多国籍軍が攻撃して（湾岸戦争）、2月にクウェートを解放した。退くイラク軍は油田に火をつけた。
+      source: "https://ja.wikipedia.org/wiki/湾岸戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/湾岸戦争"
+
+- id: french_dahomey
+  name: フランス領ダホメ
+  names:
+    - { to: 1891, name: ポルトノボ・コトヌー（フランスの保護領と拠点）, kind: 保護領・拠点 }
+    - { from: 1892, to: 1893, name: ダホメ（フランス軍の占領地）, kind: 戦争中の占領地 }
+  parent: france
+  kind: 植民地（首府ポルトノボ。1904年にフランス領西アフリカへ）
+  match:
+    labels: [ポルトノボ王国（フランスの保護国）, コトヌー（フランスの拠点）, グラン・ポポ・アグエ（フランスの保護領）, ダホメ（フランス軍の占領）, ダホメ王国（フランスの保護国。アゴリ・アグボ王）, フランス領ダホメ]
+  from: 1863
+  to: 1903
+  polities: [dahomey, benin]
+  periods:
+    - from: 1863
+      to: 1891
+      text: 奴隷海岸と呼ばれた海岸では、内陸のダホメ王国が奴隷貿易で栄え、のちパーム油を輸出した。フランスはダホメと対立する海岸の小王国ポルトノボを1863年に保護下に置き、コトヌーにも拠点を得た。
+      source: "https://en.wikipedia.org/wiki/French_Dahomey"
+    - from: 1892
+      to: 1903
+      text: 1890年からダホメ王ベハンジンと戦い（女性の兵士の部隊でも知られる）、1892年にドッズ将軍の軍が都アボメーを攻めて1894年に王国を降伏させた。王を流刑にした後、従順な王を立てて保護国としたが、1900年に王位を廃した。1904年にフランス領西アフリカの一部となった（その時期は french_west_africa）。
+      source: "https://en.wikipedia.org/wiki/Second_Franco-Dahomean_War"
+  source:
+    - "https://en.wikipedia.org/wiki/French_Dahomey"
+
+- id: british_indian_ocean_territory
+  name: イギリス領インド洋地域
+  parent: britain
+  kind: 海外領土（チャゴス諸島。1976年まではセーシェルの島々の一部も）
+  match:
+    labels: [イギリス領インド洋地域]
+  from: 1965
+  to: 2025
+  polities: [mauritius, seychelles]
+  periods:
+    - from: 1965
+      to: 2025
+      text: モーリシャスとセーシェルの独立を前に、1965年、イギリスはチャゴス諸島などを切り離してイギリス領インド洋地域とした。1966年の協定でディエゴ・ガルシア島をアメリカに軍事基地として貸し、1968–73年に島の住民（チャゴス人）を全員モーリシャスやセーシェルへ強制的に移した。モーリシャスは返還を求め、2019年に国際司法裁判所が切り離しは違法とする勧告的意見を出した。2025年、イギリスは基地を残すことを条件に主権をモーリシャスへ移す条約に署名した。
+      source: "https://en.wikipedia.org/wiki/British_Indian_Ocean_Territory"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Indian_Ocean_Territory"

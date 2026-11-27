@@ -1,0 +1,17 @@
+# イタリア史：統一（1861）までは諸国が分かれていて、自動の判定（舞台の 3 割以上）ではナポリ王国やスペインしか当事者にならないので、主な国を書く。
+- id: italy
+  name: イタリア史
+  stage: { iso: [ITA, VAT, SMR] }
+  mode: add
+  members:
+    - { polity: venice, from: 1453, to: 1797 }        # ヴェネツィア共和国
+    - { polity: milan, from: 1453, to: 1535 }         # ミラノ公国
+    - { polity: florence, from: 1453, to: 1568 }      # フィレンツェ共和国・公国
+    - { polity: tuscany, from: 1569, to: 1859 }       # トスカーナ大公国
+    - { polity: papal_states, from: 1453, to: 1870 }  # 教皇領
+    - { polity: naples, from: 1453, to: 1860 }        # ナポリ王国 → 両シチリア王国
+    - { polity: genoa, from: 1453, to: 1797 }         # ジェノヴァ共和国
+    - { polity: savoy, from: 1453, to: 1860 }         # サヴォイア公国 → サルデーニャ王国
+    - { polity: cisalpine, from: 1797, to: 1814 }     # チザルピーナ共和国 → イタリア王国（ナポレオン）
+    - { polity: italy, from: 1861 }                   # イタリア王国 → イタリア共和国
+    - { polity: italian_social_republic, from: 1943, to: 1945 }

@@ -128,6 +128,27 @@ export interface Colony extends Sourced, Illustrated {
   note?: string;
 }
 
+// ---- 「〇〇史」（data/histories。docs/data-format.md の「〇〇史」） ----
+
+export interface HistoryMember {
+  polity?: string;
+  colony?: string;
+  from?: number;
+  to?: number;
+}
+
+export interface History {
+  id: string;
+  name: string;
+  stage: { iso?: string[] };
+  /** 舞台のピース（atlas のピース番号、昇順。build_data.mjs が stage の iso・regions から求める） */
+  pieces: number[];
+  members: HistoryMember[];
+  /** add：自動で決めた当事者に足す。replace：当事者を members だけにする */
+  mode: "add" | "replace";
+  note?: string;
+}
+
 /** [開始年, 所属政体 index, 上位政体 index, 確からしさ index, 地域 index] */
 export type PieceState = [number, number, number, number, number];
 
@@ -264,6 +285,14 @@ export interface Atlas {
   movementHome?: Record<string, [number | null, number | null, number[]][]>;
   /** 植民地（古い atlas.json にはない） */
   colonies?: Colony[];
+  /** 手で書いた「〇〇史」（data/histories。古い atlas.json にはない） */
+  histories?: History[];
+  /** 「〇〇史」の舞台：政体 ID → 本国の国コード（home_iso の先頭） */
+  polityStage?: Record<string, string>;
+  /** 首都の国コード：政体 ID → [開始年|null, 終了年|null（両端を含む）, 国コード][]（cities.yaml の capital から） */
+  polityCapitalIso?: Record<string, [number | null, number | null, string][]>;
+  /** 本国（home_iso）の国コード：政体 ID → [開始年|null, 終了年|null（両端を含む）, 国コード[]][] */
+  polityHomeIso?: Record<string, [number | null, number | null, string[]][]>;
 }
 
 export class AtlasIndex {

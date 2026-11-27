@@ -1,0 +1,1870 @@
+# アジア・オセアニアの植民地・保護国・租借地・占領地（担当 C2。docs/agent-brief-colonies.md）
+# 書き方は docs/data-format.md の「植民地」。同じピースに複数が当てはまるときはファイルの順で先のもの
+# （asia_africa.yaml の british_india・dutch_east_indies・french_indochina が先に効く）。
+
+# ================================================================ イギリス：南アジア・アラビア
+
+- id: british_ceylon
+  name: イギリス領セイロン
+  names:
+    - { to: 1801, name: セイロン沿岸部（イギリス軍の占領）, kind: 占領地（東インド会社のマドラス管区が管理） }
+    - { from: 1802, name: イギリス領セイロン, kind: 直轄植民地 }
+  parent: britain
+  # 1795–1801 はオランダから奪った沿岸部（副ラベルなし）。1802 年から「セイロン（イギリス領）」
+  match:
+    labels: [セイロン（イギリス領）]
+    regions: [lk_west, lk_south, lk_east, lk_jaffna_mannar, lk_wanni, lk_coast_1766]
+  from: 1795
+  to: 1947
+  polities: [sri_lanka, kandy]
+  governors:
+    - { name: フレデリック・ノース, title: 初代総督, from: 1798, to: 1805, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Ceylon" }
+    - { name: ロバート・ブラウンリッグ, title: 総督, from: 1812, to: 1820, note: 1815年にキャンディ王国を併合, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Ceylon" }
+    - { name: ヘンリー・モンク＝メイソン・ムーア, title: 最後の総督, from: 1944, to: 1948, note: 独立後は総督（ガヴァナー・ジェネラル）, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Ceylon" }
+  periods:
+    - from: 1795
+      to: 1814
+      text: 本国の革命戦争で、オランダはフランスの支配下（バタヴィア共和国）に入った。イギリスはフランスにインド航路の要所を握られないよう、1795–96年にオランダ領セイロンの沿岸部を占領し、アミアンの和約（1802年）で正式に獲得して直轄植民地にした。内陸には仏教徒のシンハラ人のキャンディ王国が残った。
+      source: "https://ja.wikipedia.org/wiki/イギリス領セイロン"
+    - from: 1815
+      to: 1869
+      text: 1815年、王に反発するキャンディの貴族と結んでキャンディ王国を滅ぼし、島の全体を支配した（1818年の反乱は鎮圧）。1830年代の改革で行政と司法が一本化され、英語教育が広まった。高地ではコーヒーの栽培が始まり、南インドからタミル人の労働者が連れてこられた。
+      source: "https://en.wikipedia.org/wiki/British_Ceylon"
+    - from: 1870
+      to: 1930
+      text: 1870年代からさび病でコーヒーが壊滅すると、高地は紅茶の大農園（プランテーション）に変わり、ゴムとココヤシも加わって、セイロンはイギリス資本の輸出作物の島になった。英語教育を受けた現地のエリートが育ち、仏教の復興運動とともにセイロン国民会議（1919年）が自治を求めた。
+      source: "https://ja.wikipedia.org/wiki/イギリス領セイロン"
+    - from: 1931
+      to: 1947
+      text: 1931年のドナモア憲法でアジアの植民地として初めて男女の普通選挙が行われ、国家評議会が生まれた。第二次世界大戦ではトリンコマリーとコロンボがイギリス東洋艦隊の基地となり、日本軍の空襲（1942年）を受けた。戦後のインド独立に続き、1948年2月にイギリス連邦の自治領セイロンとして独立した。
+      source: "https://ja.wikipedia.org/wiki/スリランカの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領セイロン"
+    - "https://en.wikipedia.org/wiki/British_Ceylon"
+
+- id: british_maldives
+  name: モルディブ（イギリスの保護国）
+  parent: britain
+  kind: 保護国（スルタンが統治。セイロン総督が管轄）
+  match:
+    labels: [モルディブ（イギリスの保護国）]
+  from: 1887
+  to: 1965
+  polities: [maldives]
+  periods:
+    - from: 1887
+      to: 1931
+      text: 17世紀からオランダ領セイロンに貢ぎ物を送っていたモルディブのスルタンは、1887年にイギリスのセイロン総督と協定を結び、外交と防衛をイギリスに任せる保護国になった。内政はスルタンと有力な家が握り、イギリスは駐在官を置かなかった。
+      source: "https://en.wikipedia.org/wiki/Maldives#British_protectorate"
+    - from: 1932
+      to: 1965
+      text: 1932年に最初の憲法ができ、スルタンは選挙で選ばれるようになった。第二次世界大戦ではアッドゥ環礁のガン島にイギリスの基地が置かれ、戦後も空軍基地として使われた。1953年の一時的な共和制ののちスルタン制に戻り、1965年7月に完全に独立した（1968年に共和国）。
+      source: "https://ja.wikipedia.org/wiki/モルディブの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/モルディブの歴史"
+    - "https://en.wikipedia.org/wiki/Maldives"
+
+- id: british_burma
+  name: イギリス領ビルマ
+  names:
+    - { to: 1936, name: イギリス領インドのビルマ州, kind: 英領インドの州 }
+    - { from: 1937, name: イギリス領ビルマ, kind: 直轄植民地（インドから分離） }
+  parent: britain
+  # 1824–1936 の「英領インド（ビルマ州）」などは asia_africa.yaml の british_india（contains: 英領インド）が先に当たる。
+  # シャン諸州など辺境の丘陵地帯（藩侯・首長が治める地域）もビルマの一部として含める（カレンニー諸州は名目上独立なので除く）
+  match:
+    labels: [英領ビルマ, 英領インド（ビルマ州）, 英領インド（ペグー州）, アラカン（英領インド）, テナセリム（英領インド）, アラカン（イギリス軍の占領）, テナセリム（イギリス軍の占領）, 上ビルマ（イギリス軍の占領）, シャン諸州, ワ州, ケントゥン, チン丘陵, カチン丘陵]
+  from: 1824
+  to: 1947
+  polities: [burma]
+  governors:
+    - { name: アーチボルド・コクラン, title: 総督, from: 1936, to: 1941, note: インドから分かれた最初の総督, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Burma" }
+    - { name: レジナルド・ドーマン＝スミス, title: 総督, from: 1941, to: 1946, note: 日本軍の侵攻でインドのシムラに逃れた, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Burma" }
+  periods:
+    - from: 1824
+      to: 1851
+      text: ビルマのコンバウン朝はアッサムからベンガルへ勢力を伸ばし、イギリス東インド会社とぶつかった。第1次ビルマ戦争（1824–26年）に敗れ、ヤンダボ条約でアラカンとテナセリムを割譲した。両地方は英領インドの一部としてベンガル総督の下に置かれた。
+      source: "https://ja.wikipedia.org/wiki/英緬戦争"
+    - from: 1852
+      to: 1885
+      text: 第2次ビルマ戦争（1852年）でイギリスは下ビルマ（ペグー）を奪い、1862年にアラカン・テナセリムと合わせて英領インドのビルマ州とした。ラングーンは米の輸出港として栄え、イラワディ川のデルタが開墾された。上ビルマに残ったミンドン王は近代化を進めた。
+      source: "https://en.wikipedia.org/wiki/British_rule_in_Burma"
+    - from: 1885
+      to: 1919
+      text: フランスがインドシナから上ビルマに近づくと、イギリスは第3次ビルマ戦争（1885年）でマンダレーを占領してティーボー王をインドへ流し、コンバウン朝を滅ぼした（1886年、ビルマ全土を英領インドに併合）。平野は直接統治、シャン・カチン・チンなどの丘陵地帯は首長を通じた間接統治とし、インド人の官吏・金貸し・労働者が多く移り住んだ。
+      source: "https://ja.wikipedia.org/wiki/コンバウン王朝"
+    - from: 1920
+      to: 1941
+      text: 仏教青年会から始まった民族運動は、学生のストライキ（1920年）やサヤー・サンの農民反乱（1930–32年）に広がった。1935年のビルマ統治法により、1937年にビルマはインドから切り離されて直轄植民地となり、議会と首相が置かれた。アウン・サンらのタキン党（われらビルマ人連盟）は完全独立を求めた。
+      source: "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+    - from: 1942
+      to: 1947
+      text: 1942年、アウン・サンのビルマ独立義勇軍とともに日本軍が侵攻し、イギリスはインドへ退いた（1943年に日本の後押しでバー・モウのビルマ国）。アウン・サンは1945年3月に日本に反旗をひるがえした（抗日蜂起）。戦後、反ファシスト人民自由連盟がイギリスと交渉し、アウン・サンは1947年7月に暗殺されたが、1948年1月にビルマ連邦として独立し、イギリス連邦には加わらなかった。
+      source: "https://ja.wikipedia.org/wiki/アウンサン"
+  note: カレンニー諸州（名目上はイギリスの保護下の独立国）は含めない。
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領ビルマ"
+    - "https://en.wikipedia.org/wiki/British_rule_in_Burma"
+
+- id: aden_colony
+  name: アデン
+  names:
+    - { to: 1936, name: アデン（英領インドの一部）, kind: 英領インドのボンベイ管区に属する入植地 }
+    - { from: 1937, name: アデン植民地, kind: 直轄植民地 }
+  parent: britain
+  # 1839–1936 の「アデン（英領インドの一部）」は british_india の contains（英領インド）が先に当たる
+  match:
+    labels: [アデン（英領インドの一部）, アデン（イギリスの植民地）]
+  from: 1839
+  to: 1967
+  polities: [south_yemen]
+  governors:
+    - { name: スタッフォード・ヘインズ, title: 政務官（ポリティカル・エージェント）, from: 1839, to: 1854, note: アデンを攻め取った東インド会社の海軍士官, source: "https://en.wikipedia.org/wiki/Stafford_Bettesworth_Haines" }
+  periods:
+    - from: 1839
+      to: 1868
+      text: インドとスエズを結ぶ汽船の石炭補給地を求めたイギリス東インド会社は、1839年にラヘジュのスルタンからアデンを奪い、ボンベイ管区の下に置いた。紅海の入口を押さえる港は、ムハンマド・アリーのエジプトの勢力が南アラビアに伸びるのを抑える意味もあった。
+      source: "https://ja.wikipedia.org/wiki/アデン"
+    - from: 1869
+      to: 1936
+      text: 1869年にスエズ運河が開くと、アデンはヨーロッパとインド・極東を結ぶ航路の中継港として大きく育った。後背地の首長たちとは保護条約を結んでアデン保護領とし、北のイエメンを支配するオスマン帝国と20世紀の初めに境界を定めた。
+      source: "https://en.wikipedia.org/wiki/Aden_Settlement"
+    - from: 1937
+      to: 1967
+      text: 1937年に英領インドから切り離されて直轄植民地となった。戦後は石油精製所と軍の基地で人口が増え、労働組合とアラブ民族主義が強まった。イギリスは1963年にアデンを南アラビア連邦に入れたが、民族解放戦線（NLF）などの武装闘争が続き、1967年11月にイギリス軍が撤退して南イエメン人民共和国が独立した。
+      source: "https://ja.wikipedia.org/wiki/アデン非常事態"
+  source:
+    - "https://ja.wikipedia.org/wiki/アデン"
+    - "https://en.wikipedia.org/wiki/Colony_of_Aden"
+
+- id: aden_protectorate
+  name: アデン保護領
+  names:
+    - { from: 1959, name: 南アラビア連邦, kind: イギリスの保護下の連邦（首長国の連合） }
+  parent: britain
+  kind: 保護領（首長・スルタンとの保護条約）
+  match:
+    labels: [アデン保護領, 南アラビア連邦（イギリスの保護下）]
+  from: 1886
+  to: 1967
+  polities: [south_yemen]
+  periods:
+    - from: 1886
+      to: 1936
+      text: アデンの港を守るため、イギリスは後背地のラヘジュ・ファドリ・アウラキなどの首長・スルタンと次々に保護条約を結び、外交を握る代わりに内政は任せた。北のイエメンを治めるオスマン帝国とは20世紀の初めに境界を定めた（第一次世界大戦ではオスマン軍がラヘジュまで攻め込んだ）。
+      source: "https://en.wikipedia.org/wiki/Aden_Protectorate"
+    - from: 1937
+      to: 1958
+      text: アデンが直轄植民地になると、保護領は西部（アデン寄り）と東部（ハドラマウト）に分けて治められた。イギリスは首長たちとの「助言条約」で支配を強め、空軍による威圧で部族の反乱を抑えた。北イエメンのイマームは南の全体を自分の領土だと主張した。
+      source: "https://en.wikipedia.org/wiki/Aden_Protectorate"
+    - from: 1959
+      to: 1967
+      text: 1959年、西部の首長国が南アラビア連邦（はじめは南アラビア首長国連邦）を作り、1963年にアデンも加わった。しかしナセルのアラブ民族主義に影響された民族解放戦線（NLF）などが武装闘争を始め（アデン非常事態）、1967年に首長たちの政府は崩れて、イギリスの撤退とともに南イエメン人民共和国が成立した。
+      source: "https://ja.wikipedia.org/wiki/南アラビア連邦"
+  source:
+    - "https://en.wikipedia.org/wiki/Aden_Protectorate"
+    - "https://ja.wikipedia.org/wiki/南アラビア連邦"
+
+# ================================================================ イギリス：東南アジア・中国
+
+- id: straits_settlements
+  name: 海峡植民地
+  names:
+    - { to: 1825, name: ペナン・シンガポール（イギリス東インド会社）, kind: 東インド会社の商館・居留地 }
+    - { from: 1826, to: 1866, name: 海峡植民地, kind: 東インド会社の植民地（英領インドに属する） }
+    - { from: 1867, name: 海峡植民地, kind: 直轄植民地（首府シンガポール） }
+  parent: britain
+  match:
+    labels: [ペナン（イギリス東インド会社）, シンガポール（イギリス東インド会社）, 海峡植民地, 海峡植民地（ディンディング）, 海峡植民地（クリスマス島）, 海峡植民地（ココス諸島）]
+  from: 1786
+  to: 1941
+  polities: [singapore, johor, kedah]
+  governors:
+    - { name: フランシス・ライト, title: ペナンの創設者・監督官, from: 1786, to: 1794, note: クダのスルタンからペナン島を借りる, source: "https://ja.wikipedia.org/wiki/フランシス・ライト" }
+    - { name: スタンフォード・ラッフルズ, title: ベンクーレン副総督（シンガポールを開く）, from: 1819, to: 1823, note: 1819年にジョホール王家の内紛につけこんでシンガポールに商館を置く, source: "https://ja.wikipedia.org/wiki/トーマス・ラッフルズ" }
+    - { name: ロバート・フラートン, title: 初代知事, from: 1826, to: 1830, source: "https://en.wikipedia.org/wiki/Governor_of_the_Straits_Settlements" }
+    - { name: ハリー・オード, title: 直轄植民地の初代総督, from: 1867, to: 1873, source: "https://en.wikipedia.org/wiki/Governor_of_the_Straits_Settlements" }
+    - { name: アンドルー・クラーク, title: 総督, from: 1873, to: 1875, note: パンコール条約（1874年）でペラに駐在官を置く, source: "https://en.wikipedia.org/wiki/Governor_of_the_Straits_Settlements" }
+    - { name: シェントン・トーマス, title: 最後の総督, from: 1934, to: 1946, note: 1942年のシンガポール陥落で日本軍の捕虜になる, source: "https://en.wikipedia.org/wiki/Governor_of_the_Straits_Settlements" }
+  periods:
+    - from: 1786
+      to: 1823
+      text: インドと中国を結ぶ航路の中継地と、ベンガル湾東側の海軍基地を求めたイギリス東インド会社は、1786年にフランシス・ライトがクダのスルタンからペナン島を得た。ナポレオン戦争中はオランダ領のマラッカも占領した。1819年、ラッフルズがジョホール王家の内紛につけこんでシンガポールに商館を置き、関税のない自由港とした。
+      source: "https://ja.wikipedia.org/wiki/海峡植民地"
+    - from: 1824
+      to: 1866
+      text: 1824年の英蘭協約でマラッカ海峡を境に勢力圏を分け、イギリスはマラッカを得てスマトラのベンクーレンを手放した。1826年、ペナン・マラッカ・シンガポールが海峡植民地としてまとめられた（1832年から首府はシンガポール）。自由貿易港シンガポールにはアヘン・茶・綿布を扱う中国人やインド人の商人が集まり、中国人の移民が人口の多数を占めるようになった。
+      source: "https://en.wikipedia.org/wiki/Straits_Settlements"
+    - from: 1867
+      to: 1918
+      text: 1867年に英領インドの管轄から外れ、本国の植民地省が治める直轄植民地になった。スエズ運河の開通（1869年）と汽船の時代でシンガポールの重要性は増し、マレー半島のスズとゴムの積み出し港として栄えた。総督はマレー諸国の高等弁務官を兼ね、ここを拠点にイギリスの支配は半島全体へ広がった。
+      source: "https://ja.wikipedia.org/wiki/海峡植民地"
+    - from: 1919
+      to: 1941
+      text: 第一次世界大戦後、日本の海軍力に備えて、イギリスはシンガポールに大きな海軍基地を築いた（1938年完成）。中国人社会では辛亥革命や日中戦争をきっかけに中国の民族主義が高まり、抗日の募金運動が行われた。1941年12月、日本軍がマレー半島に上陸し、1942年2月にシンガポールは陥落した。
+      source: "https://ja.wikipedia.org/wiki/シンガポールの戦い"
+  source:
+    - "https://ja.wikipedia.org/wiki/海峡植民地"
+    - "https://en.wikipedia.org/wiki/Straits_Settlements"
+
+- id: british_malaya
+  name: イギリス領マラヤ（マレー諸国）
+  names:
+    - { to: 1894, name: マレー諸国（イギリスの保護下）, kind: 保護国（イギリスの駐在官がスルタンに助言） }
+    - { from: 1895, to: 1944, name: イギリス領マラヤ（マレー連合州・非連合州）, kind: 保護国の連合（高等弁務官が統括） }
+    - { from: 1945, to: 1945, name: マラヤ（イギリスの軍政）, kind: 軍政 }
+    - { from: 1946, to: 1947, name: マラヤ連合, kind: 直轄植民地（スルタンの主権を取り上げる） }
+    - { from: 1948, name: マラヤ連邦, kind: 保護国の連邦（イギリスの高等弁務官） }
+  parent: britain
+  match:
+    contains: [マレー連合州]
+    labels: [ペラ, スランゴール, パハン, クダ, クランタン, プルリス, トレンガヌ, ジョホール, マラヤ（イギリスの軍政）, マラヤ連合, マラヤ連邦（イギリスの保護下）]
+  from: 1874
+  to: 1957
+  polities: [malaysia, perak, selangor, pahang, negeri_sembilan, johor, kedah, kelantan, terengganu, perlis]
+  governors:
+    - { name: フランク・スウェッテナム, title: マレー連合州の初代総駐在官, from: 1896, to: 1901, source: "https://en.wikipedia.org/wiki/Frank_Swettenham" }
+    - { name: ヘンリー・ガーニー, title: マラヤ連邦の高等弁務官, from: 1948, to: 1951, note: 共産党のゲリラに殺される, source: "https://en.wikipedia.org/wiki/Henry_Gurney" }
+    - { name: ジェラルド・テンプラー, title: 高等弁務官, from: 1952, to: 1954, note: 新村（ニュー・ヴィレッジ）政策で共産ゲリラを孤立させた, source: "https://en.wikipedia.org/wiki/Gerald_Templer" }
+  periods:
+    - from: 1874
+      to: 1894
+      text: マレー半島西部のスズ鉱山をめぐって、中国人の秘密結社とマレー人の首長たちの争いが続いた。海峡植民地の商人の求めで、イギリスは1874年のパンコール条約でペラに駐在官（レジデント）を置き、宗教と慣習以外の政治はその「助言」に従わせた。駐在官の殺害（1875年）をきっかけにペラ戦争が起き、スランゴール・ヌグリスンビラン・パハンにも同じしくみが広がった。
+      source: "https://ja.wikipedia.org/wiki/パンコール条約"
+    - from: 1895
+      to: 1918
+      text: 1895年、ペラ・スランゴール・ヌグリスンビラン・パハンがマレー連合州になり、クアラルンプールに総駐在官が置かれた。1909年のバンコク条約でシャムからクダ・クランタン・トレンガヌ・プルリスを譲られ、ジョホールも1914年に顧問官を受け入れた（マレー非連合州）。スズ鉱山には中国人、ゴム農園には南インドのタミル人が働き手として移り住み、のちの複合社会の形ができた。
+      source: "https://ja.wikipedia.org/wiki/イギリス領マラヤ"
+    - from: 1919
+      to: 1941
+      text: マラヤは自動車のタイヤに使うゴムと缶詰のスズで世界一の産地になり、本国にドルを稼ぐ植民地になったが、世界恐慌で大きな打撃を受けた。マレー人の間では教育を受けた人々の民族運動が、中国人の間では国民党と共産党の運動が育った（マラヤ共産党、1930年）。1941年12月、日本軍がコタバルに上陸した。
+      source: "https://en.wikipedia.org/wiki/British_Malaya"
+    - from: 1945
+      to: 1947
+      text: 日本の占領が終わると、イギリスは軍政を敷き、1946年に海峡植民地のペナン・マラッカとマレー9州をまとめてマラヤ連合とし、スルタンの主権を取り上げて中国人・インド人にも市民権を広げようとした。マレー人は統一マレー国民組織（UMNO）を作って激しく反対し、計画は2年で取りやめになった。
+      source: "https://ja.wikipedia.org/wiki/マラヤ連合"
+    - from: 1948
+      to: 1957
+      text: 1948年、スルタンの地位とマレー人の特権を認めたマラヤ連邦が作られた。同じ年にマラヤ共産党が武装闘争を始め、イギリスは非常事態を宣言してゲリラと戦った（マラヤ危機）。UMNO・マラヤ華人協会・インド人会議の連盟党（ラーマン）が選挙に勝ち、1957年8月31日にイギリス連邦の中で独立した。
+      source: "https://ja.wikipedia.org/wiki/マラヤ連邦"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領マラヤ"
+    - "https://en.wikipedia.org/wiki/British_Malaya"
+
+- id: singapore_colony
+  name: シンガポール（直轄植民地）
+  names:
+    - { to: 1945, name: シンガポール（イギリスの軍政）, kind: 軍政 }
+    - { from: 1959, name: シンガポール自治州, kind: 自治州（防衛・外交はイギリス） }
+  parent: britain
+  kind: 直轄植民地（海峡植民地から分離）
+  match:
+    labels: [シンガポール（イギリスの軍政）, シンガポール（直轄植民地）, シンガポール自治州, シンガポール（クリスマス島）]
+  from: 1945
+  to: 1962
+  polities: [singapore]
+  governors:
+    - { name: リー・クアンユー, title: 自治州首相, from: 1959, to: 1963, note: 人民行動党。1965年の独立後も首相, source: "https://ja.wikipedia.org/wiki/リー・クアンユー" }
+  periods:
+    - from: 1945
+      to: 1954
+      text: 日本軍の占領（昭南島）が終わり、イギリスは1946年に海峡植民地を解体して、中国人が多いシンガポールをマラヤ連合から切り離し、別の直轄植民地にした。マレー半島の共産ゲリラとの戦いが続くなか、軍港と中継貿易の拠点としての役割は変わらなかった。
+      source: "https://en.wikipedia.org/wiki/Crown_Colony_of_Singapore"
+    - from: 1955
+      to: 1962
+      text: 1955年の選挙で議会政治が始まり、1959年には内政の自治が認められて、リー・クアンユーの人民行動党が政権を取った。共産主義の広がりを恐れたリーはマラヤとの合併で独立を目指し、1963年9月、北ボルネオ・サラワクとともにマレーシアに加わった（1965年に分離して独立）。
+      source: "https://ja.wikipedia.org/wiki/シンガポールの歴史"
+  source:
+    - "https://en.wikipedia.org/wiki/Crown_Colony_of_Singapore"
+    - "https://ja.wikipedia.org/wiki/シンガポールの歴史"
+
+- id: british_north_borneo
+  name: イギリス領北ボルネオ
+  names:
+    - { to: 1944, name: 北ボルネオ（北ボルネオ会社）, kind: 特許会社の領土（イギリスの保護領） }
+    - { from: 1945, to: 1945, name: 北ボルネオ（イギリスの軍政）, kind: 軍政 }
+    - { from: 1946, name: 北ボルネオ（直轄植民地）, kind: 直轄植民地 }
+  parent: britain
+  match:
+    labels: [北ボルネオ（北ボルネオ会社）, 北ボルネオ（イギリスの軍政）, 北ボルネオ（直轄植民地）]
+  from: 1878
+  to: 1962
+  polities: [malaysia, brunei, sulu]
+  periods:
+    - from: 1878
+      to: 1940
+      text: 1878年、ブルネイとスールーのスルタンから土地を借りたイギリスの商人たちが、1881年に特許状を得てイギリス北ボルネオ会社を作った。会社は1888年にイギリスの保護領となった土地で、タバコ・ゴムの農園と木材の輸出を進め、中国人の移民を呼び込んだ。マット・サレーの反乱（1894–1900年）など住民の抵抗もあった。
+      source: "https://en.wikipedia.org/wiki/North_Borneo"
+    - from: 1941
+      to: 1962
+      text: 1942–45年は日本軍が占領し、戦場になった首府サンダカンなどは荒れはてた。会社には復興の力がなく、1946年にイギリスの直轄植民地となった（首府はジェッセルトン、今のコタキナバル）。1963年、サバ州としてマレーシアに加わった（フィリピンは旧スールー王国の権利をもとに領有を主張）。
+      source: "https://ja.wikipedia.org/wiki/北ボルネオ"
+  source:
+    - "https://ja.wikipedia.org/wiki/北ボルネオ"
+    - "https://en.wikipedia.org/wiki/North_Borneo"
+
+- id: british_sarawak
+  name: サラワク（イギリスの保護国・直轄植民地）
+  names:
+    - { to: 1944, name: サラワク王国（ブルック家）, kind: 保護国（白人王ブルック家） }
+    - { from: 1945, to: 1945, name: サラワク（イギリスの軍政）, kind: 軍政 }
+    - { from: 1946, name: サラワク（直轄植民地）, kind: 直轄植民地 }
+  parent: britain
+  match:
+    labels: [サラワク王国（ブルック家）, サラワク（イギリスの軍政）, サラワク（直轄植民地）]
+  from: 1888
+  to: 1962
+  polities: [sarawak, malaysia, brunei]
+  governors:
+    - { name: チャールズ・ブルック, title: 第2代ラジャ（白人王）, from: 1868, to: 1917, source: "https://en.wikipedia.org/wiki/Charles_Brooke,_Rajah_of_Sarawak" }
+    - { name: チャールズ・ヴァイナー・ブルック, title: 第3代ラジャ（最後の白人王）, from: 1917, to: 1946, note: 1946年にイギリス国王に統治権を譲る, source: "https://en.wikipedia.org/wiki/Charles_Vyner_Brooke" }
+  periods:
+    - from: 1888
+      to: 1940
+      text: 1841年にブルネイのスルタンからサラワクを与えられたイギリス人ジェームズ・ブルックの家系が「白人王（ラジャ）」として治め、ブルネイから土地を少しずつ買い取って領土を広げた。1888年にイギリスの保護国となり、外交はイギリスに任せた。ブルック家はイバン人などの住民の慣習を残しながら、首狩りを禁じ、胡椒・ゴム・石油（1910年、ミリ）の開発を進めた。
+      source: "https://ja.wikipedia.org/wiki/サラワク王国"
+    - from: 1941
+      to: 1962
+      text: 1941年に成文憲法が作られたが、すぐに日本軍が占領した（1941–45年）。戦後、第3代ラジャのヴァイナー・ブルックは1946年に統治権をイギリス国王に譲り、サラワクは直轄植民地になった。これに反対する運動の中で総督が暗殺された（1949年）。1963年、マレーシアに加わった。
+      source: "https://en.wikipedia.org/wiki/Crown_Colony_of_Sarawak"
+  source:
+    - "https://ja.wikipedia.org/wiki/サラワク王国"
+    - "https://en.wikipedia.org/wiki/Raj_of_Sarawak"
+
+- id: british_brunei
+  name: ブルネイ（イギリスの保護国）
+  parent: britain
+  kind: 保護国（1906年からイギリスの駐在官）
+  match:
+    labels: [ブルネイ王国]
+  from: 1888
+  to: 1983
+  polities: [brunei]
+  periods:
+    - from: 1888
+      to: 1928
+      text: かつてボルネオ北部一帯を治めたブルネイ王国は、サラワクのブルック家と北ボルネオ会社に領土を削られ、1888年にイギリスの保護国になった。1890年にはリンバンもサラワクに奪われて領土が二つに分かれた。滅亡を避けるため、1906年にイギリスの駐在官を受け入れ、宗教以外の政治はその助言に従った。
+      source: "https://ja.wikipedia.org/wiki/ブルネイの歴史"
+    - from: 1929
+      to: 1962
+      text: 1929年にセリアで油田が見つかり、石油の収入でブルネイは豊かになった。1941–45年は日本軍が占領した。1959年の憲法で内政の自治を取りもどし、駐在官は廃止されて高等弁務官が置かれた。
+      source: "https://en.wikipedia.org/wiki/History_of_Brunei"
+    - from: 1963
+      to: 1983
+      text: 1962年、マレーシアへの参加に反対するブルネイ人民党が反乱を起こし、イギリス軍が鎮圧した（ブルネイ反乱）。スルタンは石油の収入を手放したくないこともあってマレーシアに加わらず、保護国のまま残った。1984年1月1日に完全に独立した。
+      source: "https://ja.wikipedia.org/wiki/ブルネイの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/ブルネイの歴史"
+    - "https://en.wikipedia.org/wiki/History_of_Brunei"
+
+- id: british_bencoolen
+  name: ベンクーレン（イギリス東インド会社）
+  parent: britain
+  kind: 東インド会社の商館・要塞（胡椒の産地）
+  match:
+    labels: [ベンクーレン（イギリス東インド会社）, タパヌリ（イギリス東インド会社）]
+  from: 1685
+  to: 1824
+  periods:
+    - from: 1685
+      to: 1810
+      text: アンボイナ事件（1623年）ののち、オランダにバンテンを追われたイギリス東インド会社は、1685年にスマトラ西岸のベンクーレン（ブンクル）に商館を置き、胡椒を集めた。要塞（フォート・マールバラ）はあったが、湿地で病気が多く、利益の少ない拠点だった。
+      source: "https://en.wikipedia.org/wiki/Bencoolen"
+    - from: 1811
+      to: 1824
+      text: 1818年にラッフルズが副総督として赴任し、奴隷制の廃止などの改革を行い、ここからシンガポールの建設（1819年）を進めた。1824年の英蘭協約で、イギリスはベンクーレンをオランダに渡し、代わりにマラッカを得て、マラッカ海峡を境に勢力圏を分けた。
+      source: "https://ja.wikipedia.org/wiki/英蘭協約_(1824年)"
+  source:
+    - "https://en.wikipedia.org/wiki/Bencoolen"
+    - "https://ja.wikipedia.org/wiki/ブンクル"
+
+- id: british_java
+  name: イギリス占領下のジャワ・東インド
+  parent: britain
+  kind: 占領地（ナポレオン戦争中。英領インドの副総督が統治）
+  # ジャワ占領（1811–16）とモルッカ諸島などの占領（1796–1816）。この時期の britain の副ラベルだけ
+  match:
+    labels: [ジャワ（イギリスの占領）, スラカルタ・ヨグヤカルタ領, ヨグヤカルタ王国, スラカルタ王国, マンクヌガラン侯国, マドゥラ（スムヌプ）, マドゥラ（チャクラニングラト家）, バンカ（イギリス領）, モルッカ諸島（イギリスの占領）, テルナテ王国, ティドレ王国, バチャン王国, パダン（イギリスの占領）]
+  from: 1795
+  to: 1818
+  polities: [mataram, ternate, tidore]
+  governors:
+    - { name: スタンフォード・ラッフルズ, title: ジャワ副総督, from: 1811, to: 1816, source: "https://ja.wikipedia.org/wiki/トーマス・ラッフルズ" }
+  periods:
+    - from: 1795
+      to: 1810
+      text: 本国オランダがフランスの支配下（バタヴィア共和国）に入ると、オランダの総督（亡命していたオラニエ公）はイギリスに植民地を預けるよう命じ（キュー書簡）、イギリスはスマトラ西岸のパダンやモルッカ諸島のアンボン・テルナテなど香料諸島の拠点を占領した。
+      source: "https://en.wikipedia.org/wiki/Kew_Letters"
+    - from: 1811
+      to: 1818
+      text: 1811年、英領インドの軍がジャワに上陸してフランス・オランダ軍を降伏させ、ラッフルズが副総督になった。ラッフルズはジャワの王侯から土地の権利を取り上げ、農民から地税を直接取る制度を試み、ボロブドゥールの調査も行った。ナポレオン戦争が終わると、1814年の英蘭条約に従って1816年にオランダへ返した。
+      source: "https://ja.wikipedia.org/wiki/トーマス・ラッフルズ"
+  source:
+    - "https://en.wikipedia.org/wiki/British_occupation_of_Java"
+    - "https://ja.wikipedia.org/wiki/トーマス・ラッフルズ"
+
+- id: british_hong_kong
+  name: イギリス領香港
+  parent: britain
+  kind: 直轄植民地（香港島・九龍は割譲、新界は99年の租借）
+  match:
+    labels: [香港（イギリス領）]
+  from: 1841
+  to: 1997
+  polities: [prc]
+  governors:
+    - { name: ヘンリー・ポッティンジャー, title: 初代総督, from: 1843, to: 1844, note: 南京条約を結んだ全権, source: "https://en.wikipedia.org/wiki/Governor_of_Hong_Kong" }
+    - { name: ジョン・ボウリング, title: 総督, from: 1854, to: 1859, note: アロー号事件のときの総督, source: "https://en.wikipedia.org/wiki/Governor_of_Hong_Kong" }
+    - { name: ヘンリー・ブレイク, title: 総督, from: 1898, to: 1903, note: 新界の租借, source: "https://en.wikipedia.org/wiki/Governor_of_Hong_Kong" }
+    - { name: マーク・ヤング, title: 総督, from: 1941, to: 1947, note: 1941年12月に日本軍に降伏, source: "https://en.wikipedia.org/wiki/Governor_of_Hong_Kong" }
+    - { name: マレー・マクレホース, title: 総督, from: 1971, to: 1982, note: 汚職取締りと公共住宅の整備, source: "https://en.wikipedia.org/wiki/Governor_of_Hong_Kong" }
+    - { name: クリス・パッテン, title: 最後の総督, from: 1992, to: 1997, source: "https://en.wikipedia.org/wiki/Governor_of_Hong_Kong" }
+  periods:
+    - from: 1841
+      to: 1859
+      text: アヘン戦争中の1841年にイギリス軍が香港島を占領し、1842年の南京条約で清から割譲させた。中国貿易の拠点として自由港とされ、アヘンを扱うジャーディン・マセソン商会などのイギリス商社が本拠を置いた。太平天国の乱を逃れた中国人が流れこみ、人口が増えた。
+      source: "https://ja.wikipedia.org/wiki/南京条約"
+    - from: 1860
+      to: 1897
+      text: アロー戦争（第2次アヘン戦争）の北京条約（1860年）で、対岸の九龍半島の南端も割譲された。香港上海銀行（1865年）が作られ、香港は中国とイギリス帝国を結ぶ金融と中継貿易の町になった。中国人の移民が東南アジアやアメリカへ渡る出口でもあった。
+      source: "https://ja.wikipedia.org/wiki/北京条約"
+    - from: 1898
+      to: 1940
+      text: 日清戦争後の列強の中国分割の中で、イギリスは1898年に九龍の北の新界を99年間租借した（期限は1997年）。辛亥革命では孫文ら革命派の拠点の一つになり、1925–26年には反英の省港ストライキで経済が止まった。
+      source: "https://ja.wikipedia.org/wiki/新界"
+    - from: 1941
+      to: 1966
+      text: 1941年12月に日本軍が占領し、1945年まで軍政を敷いた（香港占領地総督部）。戦後イギリスが戻り、中華人民共和国の成立（1949年）で大陸から大量の難民と資本が移ってきた。朝鮮戦争の禁輸で中継貿易が細ると、繊維などの軽工業で輸出を伸ばした。
+      source: "https://ja.wikipedia.org/wiki/日本占領時期の香港"
+    - from: 1967
+      to: 1997
+      text: 文化大革命の影響で1967年に左派の暴動が起きたのち、政庁は汚職の取締りや公共住宅などの改革を進め、香港はアジアNIEsの一つとして金融の中心地に育った。1984年の中英共同声明で、新界の租借期限の1997年に香港全体を中国へ返すことが決まり、「一国二制度」で50年間は資本主義の制度を保つと約束された。1997年7月1日に返還された。
+      source: "https://ja.wikipedia.org/wiki/香港返還"
+  source:
+    - "https://ja.wikipedia.org/wiki/イギリス領香港"
+    - "https://en.wikipedia.org/wiki/British_Hong_Kong"
+
+- id: weihaiwei
+  name: 威海衛（イギリスの租借地）
+  parent: britain
+  kind: 租借地
+  match:
+    labels: [威海衛（イギリスの租借地）]
+  from: 1898
+  to: 1930
+  polities: [qing, roc]
+  governors:
+    - { name: レジナルド・ジョンストン, title: 最後の弁務官, from: 1927, to: 1930, note: 溥儀の家庭教師だった人, source: "https://ja.wikipedia.org/wiki/レジナルド・ジョンストン" }
+  periods:
+    - from: 1898
+      to: 1914
+      text: 日清戦争で北洋艦隊が滅びた軍港威海衛は、清の賠償金の支払いまで日本が占領していた。ドイツの膠州湾、ロシアの旅順・大連の租借に対抗して、イギリスは1898年に威海衛を「ロシアが旅順を持つ間」の約束で租借し、海軍の夏の基地とした。
+      source: "https://ja.wikipedia.org/wiki/威海衛"
+    - from: 1915
+      to: 1930
+      text: 港としては香港ほど栄えず、本国にとって重要性は小さかった。ワシントン会議（1921–22年）で返還が約束され、交渉が長引いたのち、1930年10月に中華民国へ返された（海軍は1940年まで一部の施設を借りた）。
+      source: "https://en.wikipedia.org/wiki/Weihaiwei_under_British_rule"
+  source:
+    - "https://ja.wikipedia.org/wiki/威海衛"
+    - "https://en.wikipedia.org/wiki/Weihaiwei_under_British_rule"
+
+# ================================================================ イギリス：オーストラリア・ニュージーランド・太平洋
+
+- id: new_south_wales
+  name: ニューサウスウェールズ植民地
+  parent: britain
+  kind: 植民地（はじめは流刑植民地）
+  # 1859 年までのモートン湾（のちのクイーンズランド）、1850 年までのポート・フィリップ（のちのヴィクトリア）を含む
+  match:
+    contains: [ニューサウスウェールズ]
+    labels: [ノーフォーク島（ニューサウスウェールズ）]
+    exclude_labels: [ニュージーランド（ニューサウスウェールズ）]   # 1840 年のニュージーランドは new_zealand_colony
+  from: 1770
+  to: 1900
+  polities: [australia]
+  governors:
+    - { name: アーサー・フィリップ, title: 初代総督, from: 1788, to: 1792, note: 第1船団で流刑囚を連れてシドニー湾に上陸, source: "https://ja.wikipedia.org/wiki/アーサー・フィリップ" }
+    - { name: ウィリアム・ブライ, title: 総督, from: 1806, to: 1808, note: ラム酒の反乱で軍に追われる, source: "https://en.wikipedia.org/wiki/List_of_governors_of_New_South_Wales" }
+    - { name: ラクラン・マコーリー, title: 総督, from: 1810, to: 1821, note: 刑期を終えた人の社会復帰と町づくり, source: "https://en.wikipedia.org/wiki/Lachlan_Macquarie" }
+  periods:
+    - from: 1770
+      to: 1787
+      text: 1770年、クックがオーストラリア東岸を探検し、イギリス国王の領土と宣言してニューサウスウェールズと名づけた。アメリカ独立戦争で北アメリカに流刑囚を送れなくなったイギリスは、新しい流刑地としてこの土地を選んだ。
+      source: "https://ja.wikipedia.org/wiki/オーストラリアの歴史"
+    - from: 1788
+      to: 1820
+      text: 1788年1月26日、フィリップの第1船団がシドニー湾に着き、流刑植民地を開いた。先住民アボリジニーの土地は「無主の地」とされ、天然痘の流行と土地の奪い合いで先住民の社会は打撃を受けた。軍の将校たちはラム酒の取引で力をふるい、総督ブライを追い出した（1808年）。マコーリー総督の時代にブルー・マウンテンズを越える道が開かれた。
+      source: "https://en.wikipedia.org/wiki/History_of_New_South_Wales"
+    - from: 1821
+      to: 1850
+      text: 内陸の草原で牧羊が広がり、羊毛はイギリスの毛織物工業の原料として最大の輸出品になった。自由移民が増え、1840年に本土への流刑は廃止された。北のモートン湾、南のポート・フィリップ、ニュージーランドも一時はこの植民地の一部だった。
+      source: "https://en.wikipedia.org/wiki/History_of_New_South_Wales"
+    - from: 1851
+      to: 1900
+      text: 1851年、バサーストの近くで金が見つかってゴールドラッシュが起き、移民が殺到した。1855年に責任政府（自治）が認められた。中国人の金鉱労働者への反感から移民を制限する動きが強まり、これがのちの白豪主義につながる。1901年、他の植民地とともにオーストラリア連邦の州になった。
+      source: "https://ja.wikipedia.org/wiki/ゴールドラッシュ"
+  source:
+    - "https://ja.wikipedia.org/wiki/ニューサウスウェールズ州"
+    - "https://en.wikipedia.org/wiki/History_of_New_South_Wales"
+
+- id: van_diemens_land
+  name: ヴァン・ディーメンズ・ランド（タスマニア）
+  names:
+    - { from: 1856, name: タスマニア植民地 }
+  parent: britain
+  kind: 植民地（流刑植民地）
+  match:
+    labels: [ヴァン・ディーメンズ・ランド, タスマニア, ノーフォーク島（ヴァン・ディーメンズ・ランド）]
+  from: 1803
+  to: 1900
+  polities: [australia]
+  governors:
+    - { name: ジョージ・アーサー, title: 副総督, from: 1824, to: 1836, note: 先住民との「ブラック・ウォー」, source: "https://en.wikipedia.org/wiki/George_Arthur" }
+    - { name: ジョン・フランクリン, title: 副総督, from: 1837, to: 1843, note: のちに北極探検で遭難, source: "https://en.wikipedia.org/wiki/John_Franklin" }
+  periods:
+    - from: 1803
+      to: 1824
+      text: フランスの探検隊に先を越されないよう、1803年にニューサウスウェールズから流刑囚と兵士が送られて植民が始まり、ホバートが築かれた。逃亡した流刑囚がブッシュレンジャー（山賊）となって荒らしまわった。
+      source: "https://ja.wikipedia.org/wiki/タスマニアの歴史"
+    - from: 1825
+      to: 1852
+      text: 1825年にニューサウスウェールズから分かれた。牧羊地を広げる入植者と先住民の争い（ブラック・ウォー、1820年代–1832年）で、先住民はほとんど滅ぼされ、生き残った人々はフリンダーズ島に移された。ポート・アーサーの監獄など、帝国の流刑囚の多くがここに送られた。
+      source: "https://en.wikipedia.org/wiki/Black_War"
+    - from: 1853
+      to: 1900
+      text: 住民の反対運動で1853年に流刑囚の受け入れが終わり、流刑地の暗い印象をぬぐうため、1856年にタスマニアと名を改めて責任政府を持つ植民地になった。1901年、オーストラリア連邦の州になった。
+      source: "https://en.wikipedia.org/wiki/History_of_Tasmania"
+  source:
+    - "https://ja.wikipedia.org/wiki/タスマニアの歴史"
+    - "https://en.wikipedia.org/wiki/History_of_Tasmania"
+
+- id: western_australia
+  name: 西オーストラリア植民地
+  names:
+    - { to: 1831, name: スワン川植民地 }
+  parent: britain
+  kind: 植民地
+  match:
+    labels: [スワン川植民地, 西オーストラリア]
+  from: 1829
+  to: 1900
+  polities: [australia]
+  governors:
+    - { name: ジェームズ・スターリング, title: 初代総督, from: 1829, to: 1839, source: "https://en.wikipedia.org/wiki/James_Stirling_(Royal_Navy_officer)" }
+  periods:
+    - from: 1829
+      to: 1849
+      text: 1829年、スワン川の河口にパースとフリマントルが築かれ、流刑囚を使わない自由移民の植民地として始まった。しかし土地はやせて働き手が足りず、植民地はなかなか育たなかった。
+      source: "https://en.wikipedia.org/wiki/Swan_River_Colony"
+    - from: 1850
+      to: 1889
+      text: 働き手を得るため、ほかの植民地とは逆に1850年から流刑囚を受け入れた（1868年まで）。羊毛と真珠貝、白檀が主な産物だった。
+      source: "https://ja.wikipedia.org/wiki/西オーストラリア州"
+    - from: 1890
+      to: 1900
+      text: 1890年に責任政府が認められ、1890年代にクールガーディーとカルグーリーで金が見つかって人口が急に増えた。連邦への参加にはためらったが、金鉱の移民の後押しもあって1901年にオーストラリア連邦の州になった。
+      source: "https://en.wikipedia.org/wiki/History_of_Western_Australia"
+  source:
+    - "https://ja.wikipedia.org/wiki/西オーストラリア州"
+    - "https://en.wikipedia.org/wiki/History_of_Western_Australia"
+
+- id: south_australia
+  name: 南オーストラリア植民地
+  parent: britain
+  kind: 植民地（1863年から北部準州も管轄）
+  match:
+    labels: [南オーストラリア, 南オーストラリア（北部準州）]
+  from: 1836
+  to: 1900
+  polities: [australia]
+  governors:
+    - { name: ジョン・ヒンドマーシュ, title: 初代総督, from: 1836, to: 1838, source: "https://en.wikipedia.org/wiki/List_of_governors_of_South_Australia" }
+    - { name: ジョージ・グレイ, title: 総督, from: 1841, to: 1845, note: のちニュージーランド総督, source: "https://en.wikipedia.org/wiki/List_of_governors_of_South_Australia" }
+  periods:
+    - from: 1836
+      to: 1862
+      text: ウェイクフィールドの「組織的植民」の考えにもとづき、土地を売った代金で自由移民を呼ぶ植民地として1836年に始まった（流刑囚は受け入れない）。アデレードを首府とし、宗教の自由を求めるドイツ人のルター派の移民も入った。銅山の発見（1840年代）で経済が立ち直り、1856年に責任政府が認められた。
+      source: "https://ja.wikipedia.org/wiki/南オーストラリア州"
+    - from: 1863
+      to: 1900
+      text: 1863年に北部準州（ノーザンテリトリー）の管轄を得て、大陸を南北に結ぶ陸上電信線（1872年、ダーウィンで海底電線につながる）を引いた。1894年にはオーストラリアで初めて、世界でも早く女性の参政権を認めた。1901年、オーストラリア連邦の州になった（北部準州は1911年に連邦へ）。
+      source: "https://en.wikipedia.org/wiki/History_of_South_Australia"
+  source:
+    - "https://ja.wikipedia.org/wiki/南オーストラリア州"
+    - "https://en.wikipedia.org/wiki/History_of_South_Australia"
+
+- id: victoria_colony
+  name: ヴィクトリア植民地
+  parent: britain
+  kind: 植民地
+  match:
+    labels: [ヴィクトリア]
+  from: 1851
+  to: 1900
+  polities: [australia]
+  governors:
+    - { name: チャールズ・ラ・トローブ, title: 初代副総督, from: 1851, to: 1854, note: 1839年からポート・フィリップ地区の監督官, source: "https://en.wikipedia.org/wiki/Charles_La_Trobe" }
+  periods:
+    - from: 1851
+      to: 1860
+      text: ニューサウスウェールズのポート・フィリップ地区（メルボルン）が1851年に分かれて植民地になった。同じ年にバララットとベンディゴで金が見つかり、世界中から移民が押し寄せた。採掘の許可料に反発した鉱夫の反乱（ユーリカ砦の反乱、1854年）は、男子の普通選挙と秘密投票（1856年）の実現につながった。
+      source: "https://ja.wikipedia.org/wiki/ユーリカ砦の反乱"
+    - from: 1861
+      to: 1900
+      text: 金で富んだメルボルンはオーストラリア最大の都市になり（「すばらしいメルボルン」）、保護関税で工業を育てた。1890年代の不況で銀行がつぶれたが、植民地どうしの関税をなくす連邦運動の中心となり、1901年の連邦成立後しばらくメルボルンが首都の役割を果たした。
+      source: "https://en.wikipedia.org/wiki/History_of_Victoria"
+  source:
+    - "https://ja.wikipedia.org/wiki/ビクトリア州"
+    - "https://en.wikipedia.org/wiki/History_of_Victoria"
+
+- id: queensland_colony
+  name: クイーンズランド植民地
+  parent: britain
+  kind: 植民地
+  match:
+    labels: [クイーンズランド]
+  from: 1859
+  to: 1900
+  polities: [australia]
+  governors:
+    - { name: ジョージ・ボーエン, title: 初代総督, from: 1859, to: 1868, source: "https://en.wikipedia.org/wiki/George_Bowen" }
+  periods:
+    - from: 1859
+      to: 1884
+      text: ニューサウスウェールズのモートン湾地区（ブリズベン）が1859年に分かれて植民地になった。北の熱帯の海岸にはサトウキビの農園が開かれ、メラネシアの島々から「カナカ」と呼ばれた労働者が、だましたりさらったりする「ブラックバーディング」で連れてこられた。
+      source: "https://ja.wikipedia.org/wiki/クイーンズランド州"
+    - from: 1885
+      to: 1900
+      text: ドイツのニューギニア進出に危機感を持ち、1883年にはニューギニア東部の併合を勝手に宣言した（本国は認めず、翌年に英領ニューギニア保護領）。金鉱と牧畜で発展し、1891年の牧羊労働者のストライキは労働党の誕生につながった。1901年、オーストラリア連邦の州になり、連邦は太平洋諸島の労働者を送り返した。
+      source: "https://en.wikipedia.org/wiki/History_of_Queensland"
+  source:
+    - "https://ja.wikipedia.org/wiki/クイーンズランド州"
+    - "https://en.wikipedia.org/wiki/History_of_Queensland"
+
+- id: new_zealand_colony
+  name: ニュージーランド植民地
+  names:
+    - { to: 1840, name: ニュージーランド（ニューサウスウェールズの一部） }
+    - { from: 1841, name: ニュージーランド植民地 }
+  parent: britain
+  kind: 植民地（1856年から責任政府）
+  match:
+    labels: [ニュージーランド（ニューサウスウェールズ）, ニュージーランド, ニュージーランド（ワイカト戦争の戦場）, ウレウェラ保留地]
+  from: 1840
+  to: 1906
+  polities: [new_zealand, kingitanga]
+  governors:
+    - { name: ウィリアム・ホブソン, title: 初代総督, from: 1840, to: 1842, note: ワイタンギ条約を結ぶ, source: "https://ja.wikipedia.org/wiki/ウィリアム・ホブソン" }
+    - { name: ロバート・フィッツロイ, title: 総督, from: 1843, to: 1845, source: "https://en.wikipedia.org/wiki/Governor-General_of_New_Zealand" }
+    - { name: ジョージ・グレイ, title: 総督, from: 1845, to: 1853, source: "https://en.wikipedia.org/wiki/George_Grey" }
+    - { name: ジョージ・グレイ, title: 総督（2度目）, from: 1861, to: 1868, note: ワイカト戦争, source: "https://en.wikipedia.org/wiki/George_Grey" }
+  periods:
+    - from: 1840
+      to: 1859
+      text: 捕鯨やアザラシ猟の基地、宣教師の布教地だったニュージーランドに、ウェイクフィールドのニュージーランド会社が移民を送り出すと、イギリスは1840年にマオリの首長たちとワイタンギ条約を結んで主権を得た（はじめはニューサウスウェールズの一部、1841年に独立の植民地）。条約は英語版とマオリ語版で意味が違い、土地の売買をめぐる争いのもとになった。
+      source: "https://ja.wikipedia.org/wiki/ワイタンギ条約"
+    - from: 1860
+      to: 1872
+      text: 土地を売らないマオリ王（キンギタンガ）の運動が広がり、植民地政府と本国の軍隊はタラナキとワイカトでマオリの諸部族と戦った（ニュージーランド戦争、1845–72年）。敗れた部族の土地は没収され、オークランド・カンタベリーなどへの入植と牧羊が進んだ。オタゴではゴールドラッシュが起きた（1861年）。
+      source: "https://ja.wikipedia.org/wiki/ニュージーランド戦争"
+    - from: 1873
+      to: 1906
+      text: 冷凍船（1882年）で羊肉とバターをイギリスへ輸出できるようになり、「イギリスの農場」として栄えた。自由党内閣のもとで、1893年に世界で初めて国政で女性の参政権を認め、老齢年金や労働争議の調停などの社会政策を進めた。1901年のオーストラリア連邦には加わらず、1907年に自治領ニュージーランドになった。
+      source: "https://en.wikipedia.org/wiki/History_of_New_Zealand"
+  source:
+    - "https://ja.wikipedia.org/wiki/ニュージーランドの歴史"
+    - "https://en.wikipedia.org/wiki/Colony_of_New_Zealand"
+
+- id: british_fiji
+  name: イギリス領フィジー
+  parent: britain
+  kind: 直轄植民地
+  match:
+    labels: [フィジー植民地, フィジー植民地（ロトゥマ）]
+  from: 1874
+  to: 1970
+  polities: [fiji, fiji_kingdom]
+  governors:
+    - { name: アーサー・ゴードン, title: 初代総督, from: 1875, to: 1880, note: 首長を通じた間接統治と、インド人の契約労働者の導入, source: "https://en.wikipedia.org/wiki/Arthur_Hamilton-Gordon,_1st_Baron_Stanmore" }
+  periods:
+    - from: 1874
+      to: 1919
+      text: 綿花ブームで白人の入植者が増え、カコバウのフィジー王国は借金と混乱に苦しんだ。1874年、首長たちはフィジーをイギリスに譲った。総督ゴードンはフィジー人の土地の売買を禁じ、首長会議を通じて治める一方、サトウキビの農園の働き手として、インドから年季契約の労働者を連れてきた（1879–1916年）。
+      source: "https://ja.wikipedia.org/wiki/フィジーの歴史"
+    - from: 1920
+      to: 1970
+      text: 契約の期限が切れたインド系の人々は農地を借りて残り、やがて人口でフィジー系を上回った。土地を持つフィジー系と、商業・サトウキビ栽培を担うインド系の対立が、のちの政治の火種になった。第二次世界大戦では連合軍の基地となった。1970年10月10日、イギリス連邦の中で独立した。
+      source: "https://en.wikipedia.org/wiki/Colony_of_Fiji"
+  source:
+    - "https://ja.wikipedia.org/wiki/フィジーの歴史"
+    - "https://en.wikipedia.org/wiki/Colony_of_Fiji"
+
+- id: british_new_guinea
+  name: イギリス領ニューギニア
+  names:
+    - { to: 1887, name: 英領ニューギニア保護領, kind: 保護領 }
+    - { from: 1888, name: イギリス領ニューギニア, kind: 直轄植民地（クイーンズランドなどが費用を負担） }
+  parent: britain
+  match:
+    labels: [英領ニューギニア保護領, 英領ニューギニア]
+  from: 1884
+  to: 1905
+  polities: [papua_new_guinea]
+  governors:
+    - { name: ウィリアム・マグレガー, title: 行政官・副総督, from: 1888, to: 1898, source: "https://en.wikipedia.org/wiki/William_MacGregor" }
+  periods:
+    - from: 1884
+      to: 1905
+      text: ドイツがニューギニア北東部に進出すると、オーストラリアの植民地の求めでイギリスは1884年に南東部を保護領とし、1888年に併合した。費用はクイーンズランドなどの植民地が負担した。探検と金の採掘が進んだが、支配は海岸と川沿いにとどまった。1906年、連邦成立後のオーストラリアに引き渡され、パプア準州となった。
+      source: "https://en.wikipedia.org/wiki/British_New_Guinea"
+  source:
+    - "https://en.wikipedia.org/wiki/British_New_Guinea"
+    - "https://ja.wikipedia.org/wiki/パプアニューギニアの歴史"
+
+- id: british_solomon_islands
+  name: イギリス領ソロモン諸島
+  parent: britain
+  kind: 保護領
+  match:
+    labels: [英領ソロモン諸島保護領]
+  from: 1893
+  to: 1977
+  polities: [solomon_islands]
+  governors:
+    - { name: チャールズ・ウッドフォード, title: 初代駐在弁務官, from: 1896, to: 1915, source: "https://en.wikipedia.org/wiki/Charles_Morris_Woodford" }
+  periods:
+    - from: 1893
+      to: 1941
+      text: 労働者狩り（ブラックバーディング）の取締りとドイツへの対抗のため、イギリスは1893年にソロモン諸島南部を保護領とし、1900年にドイツからサンタ・イサベルなど北部の島々を譲られた（サモア分割の取引）。ココヤシの農園が開かれ、宣教師の布教が進んだ。
+      source: "https://en.wikipedia.org/wiki/British_Solomon_Islands"
+    - from: 1942
+      to: 1977
+      text: 1942年に日本軍がガダルカナル島に上陸し、アメリカ軍との激しい戦い（ガダルカナル島の戦い）の舞台になった。戦後、マーシナ・ルール運動などの自治を求める動きが起き、首府はガダルカナルのホニアラに移った。1978年7月に独立した。
+      source: "https://ja.wikipedia.org/wiki/ソロモン諸島の歴史"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Solomon_Islands"
+    - "https://ja.wikipedia.org/wiki/ソロモン諸島の歴史"
+
+- id: gilbert_ellice_islands
+  name: ギルバート・エリス諸島
+  names:
+    - { to: 1915, name: ギルバート・エリス諸島保護領, kind: 保護領 }
+    - { from: 1916, to: 1975, name: ギルバート・エリス諸島植民地, kind: 直轄植民地 }
+    - { from: 1976, name: ギルバート諸島植民地, kind: 直轄植民地 }
+  parent: britain
+  match:
+    contains: [ギルバート・エリス諸島]
+    labels: [オーシャン島（イギリス領）, ギルバート諸島植民地, ツバル植民地]
+  from: 1892
+  to: 1978
+  polities: [kiribati, tuvalu]
+  governors:
+    - { name: アーサー・グリンブル, title: 駐在弁務官, from: 1926, to: 1933, source: "https://en.wikipedia.org/wiki/Arthur_Grimble" }
+  periods:
+    - from: 1892
+      to: 1941
+      text: ドイツとの勢力圏の取り決めに従い、イギリスは1892年にギルバート諸島とエリス諸島を保護領とし、1916年に植民地にした。オーシャン島（バナバ）ではリン鉱石（肥料の原料）の採掘が進み、オーストラリア・ニュージーランドの農業を支えたが、島は掘り崩され、のちにバナバ人はフィジーのランビ島へ移された。
+      source: "https://en.wikipedia.org/wiki/Gilbert_and_Ellice_Islands"
+    - from: 1942
+      to: 1978
+      text: 1941–43年は日本軍がギルバート諸島を占領し、タラワではアメリカ軍との激戦になった（1943年11月）。戦後、ポリネシア系のエリス諸島の住民はミクロネシア系のギルバート諸島との分離を選び、1975–76年にツバルとして分かれた（1978年に独立）。ギルバート諸島は1979年7月にキリバスとして独立した。
+      source: "https://ja.wikipedia.org/wiki/キリバスの歴史"
+  source:
+    - "https://en.wikipedia.org/wiki/Gilbert_and_Ellice_Islands"
+    - "https://ja.wikipedia.org/wiki/キリバスの歴史"
+
+- id: british_tonga
+  name: トンガ（イギリスの保護国）
+  parent: britain
+  kind: 保護国（トンガ王家が統治）
+  match:
+    labels: [トンガ王国（イギリスの保護国）]
+  from: 1900
+  to: 1969
+  polities: [tonga]
+  periods:
+    - from: 1900
+      to: 1969
+      text: 19世紀にジョージ・トゥポウ1世が島々を統一し、憲法（1875年）を作って近代国家を築いたトンガは、ドイツ・イギリス・アメリカの争いの中で1900年にイギリスの保護国になり、外交をイギリスに任せた。オセアニアで植民地にならずに王国を保った唯一の国で、サローテ女王（在位1918–65年）のもとで内政の自治を守った。1970年6月に保護関係を終えて完全に独立した。
+      source: "https://ja.wikipedia.org/wiki/トンガの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/トンガの歴史"
+    - "https://en.wikipedia.org/wiki/History_of_Tonga"
+
+# ================================================================ オーストラリア・ニュージーランドの統治領
+
+- id: territory_of_papua
+  name: パプア準州
+  names:
+    - { from: 1949, name: パプアニューギニア準州, kind: オーストラリアの準州（パプアと信託統治領ニューギニアを合わせて治める） }
+  parent: australia
+  kind: オーストラリアの準州
+  # 1949 年からの合同統治はニューギニア側も含む
+  match:
+    labels: [パプア準州, パプアニューギニア準州]
+  from: 1906
+  to: 1975
+  polities: [papua_new_guinea]
+  governors:
+    - { name: ヒューバート・マレー, title: 副総督, from: 1908, to: 1940, note: 30年余り治め、住民の保護を唱えた, source: "https://en.wikipedia.org/wiki/Hubert_Murray" }
+  periods:
+    - from: 1906
+      to: 1941
+      text: 1906年、イギリスはイギリス領ニューギニアを成立まもないオーストラリア連邦に引き渡し、パプア準州とした。副総督マレーは白人の土地取得を制限し、住民の慣習を残す「保護」の政策をとったが、開発はほとんど進まなかった。
+      source: "https://en.wikipedia.org/wiki/Territory_of_Papua"
+    - from: 1942
+      to: 1960
+      text: 1942年、日本軍はポートモレスビーをめざし、ニューギニアのココダ街道でオーストラリア軍と激戦になった。戦後、パプアと国際連合の信託統治領ニューギニアはまとめて治められるようになった（1949年）。高地では1930年代に初めて外部の人が入り、戦後にコーヒー栽培が広がった。
+      source: "https://ja.wikipedia.org/wiki/ココダ・トラック作戦"
+    - from: 1961
+      to: 1975
+      text: 国連の脱植民地化の圧力を受けて、1964年に議会が開かれ、パングーの党（ソマレ）が自治を進めた。ブーゲンヴィル島の銅山をめぐる対立も起きた。1973年に自治、1975年9月16日にパプアニューギニアとして独立した。
+      source: "https://ja.wikipedia.org/wiki/パプアニューギニアの歴史"
+  source:
+    - "https://en.wikipedia.org/wiki/Territory_of_Papua"
+    - "https://en.wikipedia.org/wiki/Territory_of_Papua_and_New_Guinea"
+
+- id: territory_of_new_guinea
+  name: ニューギニア委任統治領
+  names:
+    - { to: 1919, name: ドイツ領ニューギニア（オーストラリアの占領）, kind: 軍事占領 }
+    - { from: 1920, to: 1945, name: ニューギニア委任統治領, kind: 国際連盟の委任統治領（C式） }
+    - { from: 1946, name: ニューギニア信託統治領, kind: 国際連合の信託統治領 }
+  parent: australia
+  match:
+    labels: [ドイツ領ニューギニア（オーストラリアの占領）, ニューギニア委任統治領, ニューギニア信託統治領]
+  from: 1914
+  to: 1948
+  polities: [papua_new_guinea]
+  periods:
+    - from: 1914
+      to: 1919
+      text: 第一次世界大戦が始まると、オーストラリア軍は1914年9月にドイツ領ニューギニアのラバウルを攻め取り、ドイツ人の農園はそのまま残して軍政を敷いた。赤道より北のドイツ領の島々は日本が占領した。
+      source: "https://en.wikipedia.org/wiki/Australian_Naval_and_Military_Expeditionary_Force"
+    - from: 1920
+      to: 1941
+      text: ヴェルサイユ条約で、旧ドイツ領はオーストラリアの委任統治領（C式。自国の領土と同じように治められる）になった。ドイツ人の農園は取り上げられてオーストラリア人の退役軍人に払い下げられ、ワウ・ブロロの金鉱（1926年〜）では飛行機で機械を運んだ。
+      source: "https://en.wikipedia.org/wiki/Territory_of_New_Guinea"
+    - from: 1942
+      to: 1948
+      text: 1942年1月に日本軍がラバウルを占領し、南太平洋の一大拠点とした。連合軍は北岸の拠点を一つずつ取りもどした（ラバウルは1945年の降伏まで日本軍が守った）。戦後は国際連合の信託統治領となり、1949年からパプアと合わせて治められた。
+      source: "https://ja.wikipedia.org/wiki/ラバウル"
+  source:
+    - "https://en.wikipedia.org/wiki/Territory_of_New_Guinea"
+    - "https://ja.wikipedia.org/wiki/パプアニューギニアの歴史"
+
+- id: nauru_mandate
+  name: ナウル委任統治領
+  names:
+    - { to: 1919, name: ナウル（オーストラリアの占領）, kind: 軍事占領 }
+    - { from: 1947, name: ナウル信託統治領, kind: 国際連合の信託統治領 }
+  parent: australia
+  kind: 国際連盟の委任統治領（イギリス・オーストラリア・ニュージーランドの共同、オーストラリアが統治）
+  match:
+    labels: [ナウル（オーストラリアの占領）, ナウル委任統治領, ナウル信託統治領]
+  from: 1914
+  to: 1967
+  polities: [nauru]
+  periods:
+    - from: 1914
+      to: 1941
+      text: ドイツ領だったナウルは1914年にオーストラリア軍が占領し、1920年からイギリス・オーストラリア・ニュージーランドの共同の委任統治領になった。3国のイギリス・リン鉱委員会が島を覆うリン鉱石を掘り、自国の農業の肥料として安く運び出した。
+      source: "https://ja.wikipedia.org/wiki/ナウルの歴史"
+    - from: 1942
+      to: 1967
+      text: 1942–45年は日本軍が占領し、住民の多くはトラック諸島へ移されて命を落とした。戦後は信託統治領となり、採掘で島の大部分が掘りつくされることを恐れた住民は、移住の案を断って独立を求めた。1968年1月31日に独立し、リン鉱石の採掘権も取りもどした。
+      source: "https://en.wikipedia.org/wiki/History_of_Nauru"
+  source:
+    - "https://ja.wikipedia.org/wiki/ナウルの歴史"
+    - "https://en.wikipedia.org/wiki/History_of_Nauru"
+
+- id: western_samoa_mandate
+  name: 西サモア委任統治領
+  names:
+    - { to: 1919, name: 西サモア（ニュージーランドの占領）, kind: 軍事占領 }
+    - { from: 1946, name: 西サモア信託統治領, kind: 国際連合の信託統治領 }
+  parent: new_zealand
+  kind: 国際連盟の委任統治領（C式）
+  match:
+    labels: [西サモア（ニュージーランドの占領）, 西サモア委任統治領, 西サモア信託統治領]
+  from: 1914
+  to: 1961
+  polities: [samoa]
+  periods:
+    - from: 1914
+      to: 1925
+      text: 第一次世界大戦が始まると、ニュージーランド軍は1914年8月にドイツ領サモアを無血で占領し、戦後に委任統治領とした。1918年、ニュージーランドからの船が持ちこんだスペインかぜで人口の約2割が死に、統治への恨みが残った。
+      source: "https://en.wikipedia.org/wiki/Western_Samoa_Trust_Territory"
+    - from: 1926
+      to: 1945
+      text: 「マウ」（意見）と呼ばれる非暴力の抵抗運動が広がり、税の不払いや不買運動で自治を求めた。1929年12月の「黒い土曜日」には警官隊の発砲で指導者のタマセセ・レアロフィ3世らが殺された。
+      source: "https://ja.wikipedia.org/wiki/マウ運動"
+    - from: 1946
+      to: 1961
+      text: 戦後は国際連合の信託統治領となり、ニュージーランドは自治を段階的に認めた。1961年の国連監視下の住民投票を経て、1962年1月1日に西サモアとして独立した（太平洋の島々で最初の独立国。1997年にサモアと改称）。
+      source: "https://ja.wikipedia.org/wiki/サモアの歴史"
+  source:
+    - "https://en.wikipedia.org/wiki/Western_Samoa_Trust_Territory"
+    - "https://ja.wikipedia.org/wiki/サモアの歴史"
+
+# ================================================================ ポルトガル
+
+- id: portuguese_india
+  name: ポルトガル領インド
+  parent: portugal
+  kind: 副王領（首府ゴア）
+  # ゴア・ダマン・ディーウ、1739 年までのバセイン（ヴァサイ）・サルセット、1665 年までのボンベイ。1648 年以降のゴアは副ラベルなし
+  match:
+    labels: [ゴア（ポルトガル領インド）, ディーウ（ポルトガル領）, ダマン（ポルトガル領）, ダードラー・ナガル・ハヴェーリー（ポルトガル領）]
+    regions: [goa, bassein, salsette, bombay_island, pre_bombay_bassein, pre_palghar]
+  from: 1505
+  to: 1961
+  polities: [india]
+  governors:
+    - { name: フランシスコ・デ・アルメイダ, title: 初代副王, from: 1505, to: 1509, note: ディーウ沖の海戦でマムルーク朝などの艦隊を破る, source: "https://ja.wikipedia.org/wiki/フランシスコ・デ・アルメイダ" }
+    - { name: アフォンソ・デ・アルブケルケ, title: 総督, from: 1509, to: 1515, note: ゴア（1510年）・マラッカ（1511年）・ホルムズ（1515年）を攻め取る, source: "https://ja.wikipedia.org/wiki/アフォンソ・デ・アルブケルケ" }
+    - { name: マヌエル・アントニオ・ヴァサロ・エ・シルヴァ, title: 最後の総督, from: 1958, to: 1961, note: インド軍に降伏, source: "https://en.wikipedia.org/wiki/List_of_governors_of_Portuguese_India" }
+  periods:
+    - from: 1505
+      to: 1579
+      text: ヴァスコ・ダ・ガマのインド航路の開拓（1498年）ののち、ポルトガルはアルメイダを副王として送り、ディーウ沖の海戦（1509年）でマムルーク朝とグジャラートの艦隊を破った。アルブケルケが1510年にゴアを攻め取って首府とし、要塞と通行証（カルタス）の制度でインド洋の香辛料貿易を支配しようとした。1542年にはザビエルがゴアに来て、アジアの布教の拠点になった。
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領インド"
+    - from: 1580
+      to: 1660
+      text: 本国がスペインと同君連合になる（1580–1640年）と、スペインの敵のオランダとイギリスがアジアに進出し、ポルトガルの拠点を次々に奪った（ホルムズ1622年、マラッカ1641年、セイロン1658年）。ゴアは宗教裁判所が置かれたカトリックの町として栄えたが、貿易の中心ではなくなっていった。
+      source: "https://en.wikipedia.org/wiki/Portuguese_India"
+    - from: 1661
+      to: 1814
+      text: 1661年、王女カタリナがイギリスのチャールズ2世に嫁ぐ持参金として、ボンベイがイギリスに渡った。1739年にはマラーター王国にバセインとサルセットを奪われ、ポルトガル領インドはゴア・ダマン・ディーウに縮んだ。18世紀後半にゴアは周りの「新征服地」を加えて広がった。
+      source: "https://en.wikipedia.org/wiki/Portuguese_India"
+    - from: 1815
+      to: 1946
+      text: 周りをすべてイギリス領インドに囲まれ、ゴアは小さな植民地として残った。ゴアの人々はボンベイやアフリカのポルトガル領へ働きに出た。本国でサラザールの独裁（新国家体制）が始まると、自由を求める運動は弾圧された。
+      source: "https://ja.wikipedia.org/wiki/ゴア州"
+    - from: 1947
+      to: 1961
+      text: 1947年に独立したインドは返還を求めたが、サラザール政権は「海外州」だとして拒んだ。1954年に内陸のダードラーとナガル・ハヴェーリーが住民の蜂起でポルトガルから離れ、1961年12月、インド軍がゴア・ダマン・ディーウに進攻して、450年続いたポルトガルの支配は終わった。
+      source: "https://ja.wikipedia.org/wiki/インドのゴア併合"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領インド"
+    - "https://en.wikipedia.org/wiki/Portuguese_India"
+
+- id: portuguese_ceylon
+  name: ポルトガル領セイロン
+  parent: portugal
+  kind: ポルトガル領インドの属領
+  match:
+    labels: [ポルトガル領セイロン]
+    regions: [lk_west, lk_jaffna_mannar, pre_lk_hambantota, pre_lk_sabaragamuwa, pre_lk_seven_korales]
+  from: 1597
+  to: 1658
+  polities: [kandy, sri_lanka]
+  periods:
+    - from: 1597
+      to: 1637
+      text: 16世紀からコッテ王国を保護してシナモンの貿易を握っていたポルトガルは、1597年に最後のコッテ王の遺言で西部の沿岸の王位を受け継ぎ、1619年には北のジャフナ王国も併合した。内陸のキャンディ王国は山地にたてこもって抵抗し、カトリックの布教と仏教寺院の破壊は住民の反発を招いた。
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領セイロン"
+    - from: 1638
+      to: 1658
+      text: キャンディ王ラージャシンハ2世はオランダと結び（1638年）、オランダ東インド会社はバッティカロア・トリンコマリー（1638–39年）、ゴール（1640年）、コロンボ（1656年）、ジャフナ（1658年）を次々に攻め落とした。ポルトガルはセイロンを失い、シナモンの貿易はオランダの手に移った。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Ceylon"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領セイロン"
+    - "https://en.wikipedia.org/wiki/Portuguese_Ceylon"
+
+- id: portuguese_malacca
+  name: ポルトガル領マラッカ
+  parent: portugal
+  kind: 要塞都市（ポルトガル領インドの一部）
+  match:
+    labels: [ポルトガル領マラッカ]
+  from: 1511
+  to: 1641
+  polities: [malacca, johor, aceh]
+  governors:
+    - { name: アフォンソ・デ・アルブケルケ, title: 征服者（インド総督）, from: 1511, to: 1511, source: "https://ja.wikipedia.org/wiki/アフォンソ・デ・アルブケルケ" }
+  periods:
+    - from: 1511
+      to: 1599
+      text: 東南アジアの香辛料と中国の品が集まる港市マラッカを、1511年にアルブケルケが攻め落とした。マラッカ王家はジョホールに逃れて抵抗し、ムスリムの商人はアチェなど他の港へ移った。ポルトガルはここからモルッカ諸島・マカオ・日本へ船を送り、ザビエルもここを通って日本へ向かった（1549年）。
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領マラッカ"
+    - from: 1600
+      to: 1641
+      text: アチェとジョホールの攻撃に加え、本国がスペインと同君連合の時代に進出してきたオランダがマラッカ海峡で船を襲った。1641年、ジョホールと結んだオランダ東インド会社が5か月余りの包囲の末にマラッカを奪った。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Malacca"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領マラッカ"
+    - "https://en.wikipedia.org/wiki/Portuguese_Malacca"
+
+- id: portuguese_macau
+  name: ポルトガル領マカオ
+  names:
+    - { to: 1848, name: マカオ（ポルトガルの居留地）, kind: 居留地（明・清に地代を払う） }
+    - { from: 1849, name: ポルトガル領マカオ, kind: 植民地（1887年の条約で清が認める） }
+  parent: portugal
+  match:
+    contains: [マカオ（ポルトガル]
+  from: 1557
+  to: 1999
+  polities: [ming, qing, prc]
+  governors:
+    - { name: ジョアン・マリア・フェレイラ・ド・アマラル, title: 総督, from: 1846, to: 1849, note: 清の役所を追い出し、地代の支払いをやめる。1849年に暗殺, source: "https://en.wikipedia.org/wiki/João_Maria_Ferreira_do_Amaral" }
+    - { name: ヴァスコ・ロシャ・ヴィエイラ, title: 最後の総督, from: 1991, to: 1999, source: "https://en.wikipedia.org/wiki/List_of_governors_of_Macau" }
+  periods:
+    - from: 1557
+      to: 1639
+      text: 明の海禁のもとで、倭寇の取締りに協力したポルトガル人は1557年ごろマカオに住むことを許された（毎年地代を払う）。マカオは広州の絹・生糸と日本の銀をつなぐ南蛮貿易の中継地として栄え、イエズス会の東アジア布教の拠点になった（聖パウロ天主堂）。
+      source: "https://ja.wikipedia.org/wiki/マカオの歴史"
+    - from: 1640
+      to: 1840
+      text: 江戸幕府がポルトガル船の来航を禁じ（1639年）、マラッカもオランダに奪われて、マカオは大きな市場を失った。18世紀からは広州で貿易するヨーロッパ各国の商人が、取引の季節以外に住む町になった。
+      source: "https://en.wikipedia.org/wiki/History_of_Macau"
+    - from: 1841
+      to: 1948
+      text: アヘン戦争後、香港がイギリス領になると、ポルトガルもマカオの主権を主張し、総督アマラルは1849年に清の役人を追い出して地代の支払いをやめた。1887年の中葡和好通商条約で清はポルトガルの統治を認めた。賭博と苦力（クーリー）貿易で知られた。第二次世界大戦では中立国の領土として日本の占領を免れた。
+      source: "https://ja.wikipedia.org/wiki/マカオの歴史"
+    - from: 1949
+      to: 1999
+      text: 1966年、文化大革命の影響を受けた暴動（一二・三事件）で、ポルトガルの統治は事実上中国の影響下に入った。本国のカーネーション革命（1974年）後、ポルトガルは返還を申し出、1987年の中葡共同声明で1999年12月20日に中国へ返された（一国二制度）。
+      source: "https://ja.wikipedia.org/wiki/マカオ返還"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領マカオ"
+    - "https://en.wikipedia.org/wiki/Portuguese_Macau"
+
+- id: portuguese_timor
+  name: ポルトガル領ティモール
+  names:
+    - { to: 1858, name: ソロール・ティモール（ポルトガル領）, kind: ドミニコ会と混血の「トパス」が治める拠点 }
+  parent: portugal
+  # 1859 年のリスボン条約まではフローレス東部・ティモール西部も（副ラベル「ポルトガル領」の地域）。アンボン（1576–1605）は入れない
+  match:
+    labels: [ポルトガル領ティモール]
+    regions: [flores_east, kupang, oecusse, timor_east_main, timor_east_rest, timor_west_north, timor_west_south]
+  from: 1556
+  to: 1975
+  polities: [east_timor]
+  governors:
+    - { name: ジョゼ・セレスティーノ・ダ・シルヴァ, title: 総督, from: 1894, to: 1908, note: 王たちとの戦争で内陸を征服, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Portuguese_Timor" }
+    - { name: マリオ・レモス・ピレス, title: 最後の総督, from: 1974, to: 1975, source: "https://en.wikipedia.org/wiki/List_of_colonial_governors_of_Portuguese_Timor" }
+  periods:
+    - from: 1556
+      to: 1701
+      text: 白檀を求めるポルトガル人とドミニコ会の宣教師が、16世紀半ばにソロール島に砦を築き、フローレス島東部とティモールの王たちに布教した。実際に力を持ったのは、ポルトガル人と現地の人の混血の「トパス（黒いポルトガル人）」だった。オランダは1653年にクパンを奪い、ティモール西部へ勢力を伸ばした。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Timor"
+    - from: 1702
+      to: 1858
+      text: 1702年に初めて総督が置かれたが、トパスとの争いで1769年に首府をリファウからディリに移した。支配は海岸の拠点と、ポルトガルに従う王たちとの結びつきにとどまった。島の分け方はオランダとの間で長くはっきりしなかった。
+      source: "https://ja.wikipedia.org/wiki/ポルトガル領ティモール"
+    - from: 1859
+      to: 1941
+      text: 1859年のリスボン条約でオランダにフローレス島東部などを譲り、ティモール島を東西に分けた（飛び地のオエクシは東側に）。総督セレスティーノ・ダ・シルヴァは王たちを武力で従わせ、コーヒー栽培と人頭税を押しつけた。1912年のマヌファヒの反乱は鎮圧された。
+      source: "https://en.wikipedia.org/wiki/Portuguese_Timor"
+    - from: 1942
+      to: 1975
+      text: 中立国の領土だったが、1941年12月にオランダ・オーストラリア軍が、続いて1942年に日本軍が上陸し、戦場となって多くの住民が死んだ。戦後ポルトガルの支配が戻った。本国のカーネーション革命（1974年）で脱植民地化が始まると内戦になり、1975年11月にフレティリンが独立を宣言したが、12月にインドネシアが侵攻して併合した（2002年に東ティモールとして独立）。
+      source: "https://ja.wikipedia.org/wiki/東ティモールの歴史"
+  source:
+    - "https://ja.wikipedia.org/wiki/ポルトガル領ティモール"
+    - "https://en.wikipedia.org/wiki/Portuguese_Timor"
+
+# ================================================================ オランダ
+
+- id: dutch_ceylon
+  name: オランダ領セイロン
+  parent: netherlands
+  kind: オランダ東インド会社の領土（総督はコロンボ）
+  match:
+    regions: [pre_lk_south, lk_south, lk_west, lk_east, lk_jaffna_mannar, lk_wanni, lk_coast_1766]
+  from: 1640
+  to: 1796
+  polities: [kandy, sri_lanka]
+  periods:
+    - from: 1640
+      to: 1688
+      text: キャンディ王と結んだオランダ東インド会社は、1640年のゴールを手始めに、コロンボ（1656年）・ジャフナ（1658年）とポルトガルの拠点を奪った。しかし会社は約束の土地をキャンディ王に返さず、沿岸部を自分の領土にしてシナモンの貿易を独占した。
+      source: "https://ja.wikipedia.org/wiki/オランダ領セイロン"
+    - from: 1689
+      to: 1765
+      text: 会社は沿岸部をオランダ法（ローマ＝オランダ法）で治め、シナモンの皮をはぐ仕事をシンハラ人のカーストに割り当てた。オランダ人とその子孫（バーガー）の社会がコロンボやゴールに育ち、カトリックにかわってプロテスタントが広められた。
+      source: "https://en.wikipedia.org/wiki/Dutch_Ceylon"
+    - from: 1766
+      to: 1796
+      text: キャンディとの戦争（1760–66年）に勝った会社は、1766年の条約で島の海岸線をすべて手に入れ、キャンディを海から切り離した。しかし本国がフランス革命軍に占領されると、1795–96年にイギリス軍が沿岸部を占領した（1802年のアミアンの和約で正式にイギリス領）。
+      source: "https://en.wikipedia.org/wiki/Dutch_Ceylon"
+  source:
+    - "https://ja.wikipedia.org/wiki/オランダ領セイロン"
+    - "https://en.wikipedia.org/wiki/Dutch_Ceylon"
+
+- id: dutch_formosa
+  name: オランダ領台湾
+  parent: netherlands
+  kind: オランダ東インド会社の領土（拠点はゼーランディア城）
+  match:
+    labels: [台湾（オランダ東インド会社）, 澎湖（オランダの占領）]
+  from: 1622
+  to: 1661
+  polities: [tungning, ming, qing]
+  governors:
+    - { name: フレデリック・コイエット, title: 最後の長官, from: 1656, to: 1662, note: 鄭成功に降伏, source: "https://en.wikipedia.org/wiki/Frederick_Coyett" }
+  periods:
+    - from: 1622
+      to: 1641
+      text: 中国との貿易の拠点を求めたオランダ東インド会社は1622年に澎湖を占領したが、明に追われて1624年に台湾南部の大員（今の台南）に移り、ゼーランディア城を築いた。北部にはスペインが進出した（1626年）。会社は中国の生糸を日本へ運ぶ中継貿易で利益を上げた。
+      source: "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+    - from: 1642
+      to: 1661
+      text: 1642年にスペインを北部から追い出し、台湾の西部の平野を治めた。会社は大陸から漢人の農民を呼び寄せてサトウキビと米を作らせ、先住民の村に布教した。重い税への不満から郭懐一の乱（1652年）が起きた。1661年、明の復興をめざす鄭成功が大軍で攻め寄せ、翌1662年に会社は降伏して台湾を去った。
+      source: "https://ja.wikipedia.org/wiki/鄭成功"
+  source:
+    - "https://ja.wikipedia.org/wiki/オランダ統治時代_(台湾)"
+    - "https://en.wikipedia.org/wiki/Dutch_Formosa"
+
+- id: dutch_new_guinea
+  name: オランダ領ニューギニア
+  parent: netherlands
+  kind: 植民地（インドネシアの独立後もオランダが保持）
+  # 1949 年までは dutch_east_indies（iso: IDN）が先に当たる
+  match:
+    labels: [オランダ領ニューギニア]
+  from: 1950
+  to: 1962
+  polities: [indonesia, untea]
+  periods:
+    - from: 1950
+      to: 1962
+      text: 1949年のハーグ協定でオランダはインドネシアに主権を移したが、西ニューギニアだけは住民がインドネシア人とは違うとして手元に残した。インドネシアのスカルノ政権は返還を強く求め、オランダの資産を国有化し、1961年末に軍事行動を始めた。冷戦の中でインドネシアを共産側に追いやることを恐れたアメリカの仲介で、1962年のニューヨーク協定により国際連合の暫定統治（UNTEA）を経て、1963年にインドネシアに渡された。
+      source: "https://ja.wikipedia.org/wiki/オランダ領ニューギニア"
+  source:
+    - "https://ja.wikipedia.org/wiki/オランダ領ニューギニア"
+    - "https://en.wikipedia.org/wiki/Netherlands_New_Guinea"
+
+# ================================================================ フランス
+
+- id: french_india
+  name: フランス領インド
+  parent: france
+  kind: 植民地（ポンディシェリ・カーリカール・マーヘ・ヤナム・シャンデルナゴル）
+  # 副ラベルはない（地域で引く）。シャンデルナゴルはピースがない。1753–58 の北サルカールも含める
+  match:
+    labels: [北サルカール（フランス）]
+    regions: [pondicherry, karaikal, mahe, yanam, circars, guntur, madras]
+  from: 1674
+  to: 1954
+  polities: [india]
+  governors:
+    - { name: フランソワ・マルタン, title: ポンディシェリの創設者・総督, from: 1674, to: 1706, source: "https://en.wikipedia.org/wiki/François_Martin_(colonial_administrator)" }
+    - { name: ジョゼフ・フランソワ・デュプレクス, title: 総督, from: 1742, to: 1754, note: カーナティック戦争でインド南部に勢力を広げる, source: "https://ja.wikipedia.org/wiki/ジョゼフ・フランソワ・デュプレクス" }
+  periods:
+    - from: 1674
+      to: 1741
+      text: コルベールが立て直したフランス東インド会社（1664年）は、1674年にポンディシェリを手に入れ、ここを拠点に綿布を買いつけた。ベンガルのシャンデルナゴル、マラバール海岸のマーヘ、カーリカール・ヤナムにも商館を置いた。
+      source: "https://ja.wikipedia.org/wiki/フランス領インド"
+    - from: 1742
+      to: 1763
+      text: 総督デュプレクスは、インドの王侯の跡継ぎ争いに介入し、インド人の兵士（シパーヒー）を使ってイギリスと争った（カーナティック戦争）。オーストリア継承戦争中の1746年にはマドラスを占領し、北サルカールの徴税権も得た。しかし本国はデュプレクスを呼び戻し、七年戦争でイギリスに敗れて、パリ条約（1763年）でインドでの軍備を禁じられた。
+      source: "https://ja.wikipedia.org/wiki/カーナティック戦争"
+    - from: 1764
+      to: 1815
+      text: 商館は返されたが、イギリスとの戦争のたびに占領された（アメリカ独立戦争・フランス革命戦争・ナポレオン戦争）。フランスはマイソールのティプー・スルタンやマラーターを助けてイギリスに対抗しようとしたが、果たせなかった。
+      source: "https://en.wikipedia.org/wiki/French_India"
+    - from: 1816
+      to: 1954
+      text: ウィーン会議後に5つの商館が戻り、フランス領インドは小さな飛び地として続いた。1947年にインドが独立すると返還の運動が起き、シャンデルナゴルは住民投票を経て1950年代初めにインドへ移り、ポンディシェリなど4つも1954年11月に事実上インドに引き渡された（条約の批准は1962年）。
+      source: "https://ja.wikipedia.org/wiki/フランス領インド"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領インド"
+    - "https://en.wikipedia.org/wiki/French_India"
+
+- id: french_polynesia
+  name: フランス領ポリネシア
+  names:
+    - { to: 1879, name: タヒチ（フランスの保護国）, kind: 保護国（タヒチ王国） }
+    - { from: 1880, to: 1956, name: フランス領オセアニア, kind: 植民地（1946年から海外領土） }
+    - { from: 1957, name: フランス領ポリネシア, kind: 海外領土（2003年から海外準県） }
+  parent: france
+  match:
+    contains: [フランス領オセアニア]
+    labels: [タヒチ王国（フランスの保護国）, マルキーズ諸島, ソシエテ諸島西部（フランスの仮の保護国）, フランス領ポリネシア]
+  from: 1842
+  to: 2025
+  polities: [tahiti]
+  periods:
+    - from: 1842
+      to: 1879
+      text: タヒチではイギリスのプロテスタント宣教師が力を持っていたが、フランスはカトリック宣教師の追放を口実に、1842年にタヒチ女王ポマレ4世に保護国化を認めさせ、同じ年にマルキーズ諸島を併合した。住民の抵抗（フランス＝タヒチ戦争、1844–47年）は抑えられた。
+      source: "https://ja.wikipedia.org/wiki/タヒチ"
+    - from: 1880
+      to: 1945
+      text: 1880年、最後の王ポマレ5世がタヒチをフランスに譲り、周りの島々とともにフランス領オセアニアとなった。画家ゴーガンはタヒチ（1891年〜）とマルキーズ諸島で晩年を過ごした。第二次世界大戦では自由フランス側についた。
+      source: "https://en.wikipedia.org/wiki/French_Polynesia"
+    - from: 1946
+      to: 1995
+      text: 戦後は海外領土となり、住民はフランスの市民権を得た（1957年にフランス領ポリネシア）。アルジェリアの独立でサハラの実験場を失ったフランスは、1966年からムルロア環礁などで核実験を行った（1974年まで大気圏内）。基地の建設で経済は本国からの資金に頼るようになり、独立派の運動も育った。
+      source: "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - from: 1996
+      to: 2025
+      text: 1995年のシラク政権の核実験再開は国際的な抗議を受け、1996年に核実験は終わった。自治の拡大が進み、2004年に「海外国」の地位を得た。独立派と自治派の政権交代が続き、2013年には国際連合の非自治地域の一覧に戻された。
+      source: "https://en.wikipedia.org/wiki/French_Polynesia"
+  source:
+    - "https://ja.wikipedia.org/wiki/フランス領ポリネシア"
+    - "https://en.wikipedia.org/wiki/French_Polynesia"
+
+- id: new_caledonia
+  name: ニューカレドニア
+  parent: france
+  kind: 植民地（1946年から海外領土、1999年から特別共同体）
+  match:
+    contains: [ニューカレドニア]
+  from: 1853
+  to: 2025
+  polities: []
+  periods:
+    - from: 1853
+      to: 1877
+      text: 1853年、ナポレオン3世の第二帝政のフランスがニューカレドニアを併合した。1864年から流刑植民地となり、パリ＝コミューンの参加者（ルイーズ・ミシェルら）も送られた。1864年にはニッケル鉱が見つかった。
+      source: "https://ja.wikipedia.org/wiki/ニューカレドニア"
+    - from: 1878
+      to: 1945
+      text: 先住民カナックの土地は入植者の牧場に奪われ、1878年のアタイの反乱は鎮圧された。カナックは保留地に押しこめられ、「原住民法（アンディジェナ）」で強制労働と移動の制限を受けた。ニッケルの採掘には日本人やジャワ人・ベトナム人の契約労働者も働いた。第二次世界大戦ではアメリカ軍の太平洋の基地になった。
+      source: "https://en.wikipedia.org/wiki/New_Caledonia"
+    - from: 1946
+      to: 1998
+      text: 戦後、原住民法は廃止されてカナックも市民権を得たが、ニッケル・ブームで本国などからの移民が増え、カナックは少数派になった。1980年代にカナック社会主義民族解放戦線（FLNKS）の独立運動と入植者側の衝突が激しくなり（ウヴェア洞窟の人質事件、1988年）、マティニョン合意（1988年）で和解の道が開かれた。
+      source: "https://ja.wikipedia.org/wiki/ニューカレドニア"
+    - from: 1999
+      to: 2025
+      text: ヌメア協定（1998年）で、フランスの中の特別共同体として大きな自治が認められ、独立を問う住民投票が2018・2020・2021年に行われて、いずれも残留が多数だった（2021年は独立派がボイコット）。2024年には選挙人名簿の改正をめぐって暴動が起きた。
+      source: "https://en.wikipedia.org/wiki/New_Caledonia"
+  source:
+    - "https://ja.wikipedia.org/wiki/ニューカレドニア"
+    - "https://en.wikipedia.org/wiki/New_Caledonia"
+
+- id: wallis_futuna
+  name: ウォリス・フツナ
+  names:
+    - { to: 1960, name: ウォリス・フツナ（フランスの保護領）, kind: 保護領（島の王たちが統治） }
+    - { from: 1961, name: ウォリス・フツナ, kind: 海外領土（2003年から海外準県） }
+  parent: france
+  match:
+    labels: [ウォリス（フランスの保護領）, フツナ（フランスの保護領）, ウォリス・フツナ（海外領土）]
+  from: 1887
+  to: 2025
+  polities: []
+  periods:
+    - from: 1887
+      to: 1960
+      text: 19世紀半ばからフランスのカトリック宣教師（マリスト会）が島々をキリスト教化し、イギリスやドイツの進出を防ぐため、1887–88年にウォリス（ウベア）とフツナの王たちがフランスの保護を受け入れた。統治は伝統的な王と教会が担い、フランスの駐在官は少数だった。第二次世界大戦ではアメリカ軍の基地が置かれた。
+      source: "https://en.wikipedia.org/wiki/Wallis_and_Futuna"
+    - from: 1961
+      to: 2025
+      text: 1959年の住民投票で海外領土になることを選び、1961年に正式にフランスの海外領土となった（2003年から海外準県）。3人の伝統的な王が今も慣習の上の権威を持ち、多くの住民がニューカレドニアへ働きに出ている。
+      source: "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+  source:
+    - "https://ja.wikipedia.org/wiki/ウォリス・フツナ"
+    - "https://en.wikipedia.org/wiki/Wallis_and_Futuna"
+
+# ================================================================ ドイツ
+
+- id: kiautschou
+  name: 膠州湾租借地（ドイツ）
+  parent: german_empire
+  kind: 租借地（海軍省が統治。首府青島）
+  match:
+    labels: [膠州湾（ドイツの占領）, 膠州湾（ドイツの租借地）]
+  from: 1897
+  to: 1914
+  polities: [qing, roc]
+  periods:
+    - from: 1897
+      to: 1913
+      text: ヴィルヘルム2世の「世界政策」のもと、ドイツは山東省でドイツ人宣教師が殺された事件を口実に、1897年11月に膠州湾を占領し、1898年に99年間租借した。山東省の鉄道と鉱山の権利も得て山東を勢力圏とし、これをきっかけにロシア・イギリス・フランスの租借が続いた（中国分割）。青島には東洋艦隊の基地と、ドイツ風の町並み・ビール工場が作られた。
+      source: "https://ja.wikipedia.org/wiki/膠州湾租借地"
+    - from: 1914
+      to: 1914
+      text: 第一次世界大戦が始まると、日英同盟を理由に参戦した日本が、イギリス軍とともに1914年11月に青島を攻め落とした（青島の戦い）。日本は翌年の二十一か条の要求で、ドイツの山東の権益を受け継ぐことを中国に認めさせ、五・四運動の原因になった。
+      source: "https://ja.wikipedia.org/wiki/青島の戦い"
+  source:
+    - "https://ja.wikipedia.org/wiki/膠州湾租借地"
+    - "https://en.wikipedia.org/wiki/Kiautschou_Bay_Leased_Territory"
+
+- id: german_new_guinea
+  name: ドイツ領ニューギニア
+  parent: german_empire
+  kind: 保護領（1899年までニューギニア会社が統治）
+  # カイザー・ヴィルヘルムスラント・ビスマルク諸島・ドイツ領ソロモン諸島・北マリアナ諸島。カロリン・マーシャル・ナウルは german_micronesia
+  match:
+    contains: [ドイツ領ニューギニア]
+    labels: [ドイツ領ソロモン諸島]
+  from: 1884
+  to: 1914
+  polities: [papua_new_guinea]
+  governors:
+    - { name: アルベルト・ハール, title: 総督, from: 1902, to: 1914, source: "https://en.wikipedia.org/wiki/Albert_Hahl" }
+  periods:
+    - from: 1884
+      to: 1898
+      text: ビスマルクは植民地の獲得に慎重だったが、商人の求めに応じて1884年にニューギニア北東部（カイザー・ヴィルヘルムスラント）とビスマルク諸島を保護領とし、特許を得たニューギニア会社に治めさせた。熱帯の病気と住民の抵抗で会社の経営は失敗した。
+      source: "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - from: 1899
+      to: 1914
+      text: 1899年から帝国政府が直接治め、同じ年にスペインから北マリアナ諸島・カロリン諸島を買い取った（米西戦争の後）。ラバウルを首府に、ココヤシの農園でコプラを作り、住民を労働者として集めた。第一次世界大戦が始まると、1914年9月にオーストラリア軍が占領した。
+      source: "https://en.wikipedia.org/wiki/German_New_Guinea"
+  source:
+    - "https://ja.wikipedia.org/wiki/ドイツ領ニューギニア"
+    - "https://en.wikipedia.org/wiki/German_New_Guinea"
+
+- id: german_micronesia
+  name: ドイツ領ミクロネシア（カロリン・マーシャル諸島）
+  parent: german_empire
+  kind: 保護領（ドイツ領ニューギニアの管轄）
+  match:
+    contains: [ドイツ領カロリン諸島]
+    labels: [マーシャル諸島（ドイツの保護領）, ナウル（ドイツ領マーシャル諸島）]
+  from: 1885
+  to: 1914
+  polities: [marshall_islands, micronesia, palau, nauru]
+  periods:
+    - from: 1885
+      to: 1898
+      text: 1885年、ドイツはマーシャル諸島を保護領とし、ヤルート会社にコプラの貿易と統治を任せた。同じ年にカロリン諸島にも軍艦を送ったが、領有を主張するスペインと争いになり、ローマ教皇レオ13世の仲裁でカロリン諸島はスペイン領と認められた。ナウルは1888年にマーシャル諸島の保護領に組み込まれた。
+      source: "https://en.wikipedia.org/wiki/Caroline_Islands"
+    - from: 1899
+      to: 1914
+      text: 米西戦争に敗れたスペインから、1899年にカロリン諸島（パラオを含む）とマリアナ諸島を買い取った。ナウルとオーシャン島ではリン鉱石の採掘が始まった（1906年〜）。ポンペイ島では強制労働に反発したソケースの反乱（1910–11年）が起きた。1914年10月、日本海軍が赤道以北の島々を占領した。
+      source: "https://ja.wikipedia.org/wiki/ドイツ・スペイン条約_(1899年)"
+  source:
+    - "https://en.wikipedia.org/wiki/Caroline_Islands"
+    - "https://en.wikipedia.org/wiki/German_New_Guinea"
+
+- id: german_samoa
+  name: ドイツ領サモア
+  parent: german_empire
+  kind: 保護領（総督が統治）
+  match:
+    labels: [ドイツ領サモア]
+  from: 1900
+  to: 1914
+  polities: [samoa_kingdom, samoa]
+  governors:
+    - { name: ヴィルヘルム・ゾルフ, title: 初代総督, from: 1900, to: 1911, note: のち植民地大臣, source: "https://en.wikipedia.org/wiki/Wilhelm_Solf" }
+  periods:
+    - from: 1900
+      to: 1914
+      text: サモアでは王位争いにドイツ・イギリス・アメリカが介入して内戦が続いた。1899年の条約で西経171度を境に、西のウポル島・サバイイ島をドイツ、東のトゥトゥイラ島などをアメリカが取り、イギリスはソロモン諸島北部などを得て手を引いた。総督ゾルフは首長たちを通じて治め、ココヤシ農園の働き手として中国人を連れてきた。マウ・ア・ピーレの抵抗運動の指導者は流刑にされた（1909年）。1914年8月にニュージーランド軍が占領した。
+      source: "https://ja.wikipedia.org/wiki/ドイツ領サモア"
+  source:
+    - "https://ja.wikipedia.org/wiki/ドイツ領サモア"
+    - "https://en.wikipedia.org/wiki/German_Samoa"
+
+# ================================================================ 日本
+
+- id: japanese_taiwan
+  name: 日本統治下の台湾
+  parent: japan
+  kind: 植民地（台湾総督府）
+  match:
+    labels: [台湾（日本の植民地）]
+  from: 1895
+  to: 1945
+  polities: [qing, roc]
+  governors:
+    - { name: 樺山資紀, title: 初代台湾総督, from: 1895, to: 1896, source: "https://ja.wikipedia.org/wiki/台湾総督" }
+    - { name: 乃木希典, title: 台湾総督, from: 1896, to: 1898, source: "https://ja.wikipedia.org/wiki/台湾総督" }
+    - { name: 児玉源太郎, title: 台湾総督, from: 1898, to: 1906, note: 民政長官の後藤新平と植民地経営の基礎を作る, source: "https://ja.wikipedia.org/wiki/児玉源太郎" }
+    - { name: 佐久間左馬太, title: 台湾総督, from: 1906, to: 1915, note: 山地の先住民の制圧（理蕃事業）, source: "https://ja.wikipedia.org/wiki/台湾総督" }
+    - { name: 田健治郎, title: 台湾総督, from: 1919, to: 1923, note: 最初の文官総督, source: "https://ja.wikipedia.org/wiki/田健治郎" }
+    - { name: 長谷川清, title: 台湾総督, from: 1940, to: 1944, source: "https://ja.wikipedia.org/wiki/台湾総督" }
+    - { name: 安藤利吉, title: 最後の台湾総督, from: 1944, to: 1945, source: "https://ja.wikipedia.org/wiki/台湾総督" }
+  periods:
+    - from: 1895
+      to: 1918
+      text: 日清戦争の下関条約（1895年）で、日本は清から台湾と澎湖諸島を得た。住民は台湾民主国を作って抵抗し、日本は軍隊で鎮圧した（その後も抗日ゲリラが続く）。台湾総督府が置かれ、総督の児玉源太郎と民政長官の後藤新平は、土地の調査・鉄道・港・衛生を整え、アヘンを専売にし、砂糖と樟脳の産業を育てた。
+      source: "https://ja.wikipedia.org/wiki/日本統治時代_(台湾)"
+    - from: 1919
+      to: 1936
+      text: 第一次世界大戦後の民族自決の風潮の中で文官の総督が置かれ、「内地延長主義」がとられた。嘉南大圳などの灌漑で米と砂糖の生産が伸び、台湾は日本への食料の供給地になった。台湾議会設置請願運動が自治を求め、山地では先住民の霧社事件（1930年）が起きた。
+      source: "https://ja.wikipedia.org/wiki/霧社事件"
+    - from: 1937
+      to: 1945
+      text: 日中戦争が始まると、日本語の常用や改姓名を求める皇民化政策が強められ、台湾は南方へ進出する基地になった（工業化も進む）。台湾人の志願兵・徴兵も行われた。1945年の日本の降伏で、台湾は中華民国に引き渡された。
+      source: "https://ja.wikipedia.org/wiki/皇民化政策"
+  source:
+    - "https://ja.wikipedia.org/wiki/日本統治時代_(台湾)"
+    - "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+
+- id: japanese_korea
+  name: 日本統治下の朝鮮
+  names:
+    - { to: 1909, name: 大韓帝国（日本の保護国）, kind: 保護国（韓国統監府） }
+    - { from: 1910, name: 朝鮮（日本の植民地）, kind: 植民地（朝鮮総督府） }
+  parent: japan
+  match:
+    labels: [大韓帝国（日本の保護国）, 朝鮮（日本の植民地）]
+  from: 1905
+  to: 1945
+  polities: [joseon, south_korea, north_korea]
+  governors:
+    - { name: 伊藤博文, title: 初代韓国統監, from: 1906, to: 1909, note: 1909年にハルビンで安重根に暗殺される, source: "https://ja.wikipedia.org/wiki/韓国統監府" }
+    - { name: 曾禰荒助, title: 韓国統監, from: 1909, to: 1910, source: "https://ja.wikipedia.org/wiki/韓国統監府" }
+    - { name: 寺内正毅, title: 統監、初代朝鮮総督, from: 1910, to: 1916, note: 武断政治, source: "https://ja.wikipedia.org/wiki/朝鮮総督府" }
+    - { name: 長谷川好道, title: 朝鮮総督, from: 1916, to: 1919, note: 三・一独立運動, source: "https://ja.wikipedia.org/wiki/朝鮮総督府" }
+    - { name: 斎藤実, title: 朝鮮総督, from: 1919, to: 1927, note: 「文化政治」, source: "https://ja.wikipedia.org/wiki/斎藤実" }
+    - { name: 宇垣一成, title: 朝鮮総督, from: 1931, to: 1936, source: "https://ja.wikipedia.org/wiki/朝鮮総督府" }
+    - { name: 南次郎, title: 朝鮮総督, from: 1936, to: 1942, note: 皇民化政策・創氏改名, source: "https://ja.wikipedia.org/wiki/南次郎" }
+    - { name: 小磯国昭, title: 朝鮮総督, from: 1942, to: 1944, source: "https://ja.wikipedia.org/wiki/朝鮮総督府" }
+    - { name: 阿部信行, title: 最後の朝鮮総督, from: 1944, to: 1945, source: "https://ja.wikipedia.org/wiki/朝鮮総督府" }
+  periods:
+    - from: 1905
+      to: 1910
+      text: 日露戦争で朝鮮での優越権をロシアに認めさせた日本は、1905年の第2次日韓協約で大韓帝国の外交権を奪って保護国とし、漢城（ソウル）に統監府を置いた（初代統監は伊藤博文）。ハーグ密使事件（1907年）で皇帝高宗を退位させ、軍隊を解散させると、各地で義兵闘争が起きた。1909年に伊藤が安重根に暗殺され、1910年の韓国併合条約で日本は韓国を併合した。
+      source: "https://ja.wikipedia.org/wiki/韓国併合"
+    - from: 1910
+      to: 1918
+      text: 朝鮮総督府が置かれ、陸海軍の大将が総督となって、憲兵警察による武断政治を行った。土地調査事業で所有者のはっきりしない土地が総督府のものとされ、土地を失った農民の一部は満洲や日本へ移った。
+      source: "https://ja.wikipedia.org/wiki/朝鮮総督府"
+    - from: 1919
+      to: 1936
+      text: 1919年3月1日、ウィルソンの民族自決に励まされて、ソウルで独立宣言が読み上げられ、独立万歳を叫ぶ運動が全土に広がった（三・一独立運動）。日本は武力で鎮圧したのち、憲兵警察を普通警察に改めるなどの「文化政治」に転じた。上海では大韓民国臨時政府が作られた。産米増殖計画で米が日本へ運ばれた。
+      source: "https://ja.wikipedia.org/wiki/三・一運動"
+    - from: 1937
+      to: 1945
+      text: 日中戦争が始まると、朝鮮は大陸への兵站基地として工業化が進められ（北部の重化学工業）、神社参拝・日本語の常用・創氏改名（1940年）などの皇民化政策が強められた。戦争の末期には多くの朝鮮人が日本や各地の鉱山・工場に動員され、徴兵も行われた。1945年8月15日の日本の降伏で植民地支配は終わり、北緯38度線の北をソ連軍、南をアメリカ軍が占領した。
+      source: "https://ja.wikipedia.org/wiki/皇民化政策"
+  source:
+    - "https://ja.wikipedia.org/wiki/日本統治時代の朝鮮"
+    - "https://en.wikipedia.org/wiki/Korea_under_Japanese_rule"
+
+- id: russian_kwantung
+  name: 関東州（ロシアの租借地）
+  parent: russia
+  kind: 租借地（旅順・大連）
+  match:
+    labels: [関東州（ロシアの租借地）]
+  from: 1898
+  to: 1904
+  polities: [qing]
+  governors:
+    - { name: エヴゲーニー・アレクセーエフ, title: 関東州長官（1903年から極東総督）, from: 1899, to: 1904, source: "https://en.wikipedia.org/wiki/Yevgeni_Alekseyev" }
+  periods:
+    - from: 1898
+      to: 1904
+      text: 日清戦争後の三国干渉で日本に遼東半島を返させたロシアは、1898年に自ら旅順・大連を25年間租借し、東清鉄道の南満洲支線で結んだ。旅順は太平洋艦隊の要塞港、大連（ダーリニー）は商港として築かれた。義和団事件（1900年）を機にロシア軍は満洲全体を占領し、朝鮮をめぐって日本と対立した。日露戦争で旅順は1905年1月に陥落し、ポーツマス条約で租借権は日本に移った。
+      source: "https://ja.wikipedia.org/wiki/関東州"
+  source:
+    - "https://ja.wikipedia.org/wiki/関東州"
+    - "https://en.wikipedia.org/wiki/Kwantung_Leased_Territory"
+
+- id: japanese_kwantung
+  name: 関東州（日本の租借地）
+  parent: japan
+  kind: 租借地（関東都督府→関東庁。首府旅順、のち大連）
+  match:
+    labels: [関東州（日本の租借地）]
+  from: 1905
+  to: 1945
+  polities: [qing, roc, manchukuo]
+  governors:
+    - { name: 大島義昌, title: 初代関東都督, from: 1906, to: 1912, source: "https://ja.wikipedia.org/wiki/関東都督府" }
+  periods:
+    - from: 1905
+      to: 1918
+      text: 日露戦争のポーツマス条約（1905年）で、日本はロシアから旅順・大連の租借権と長春以南の鉄道を受け継ぎ、1906年に関東都督府と南満洲鉄道株式会社（満鉄）を作った。大連は満洲の大豆の積み出し港として栄えた。二十一か条の要求（1915年）で租借の期限を99年に延ばさせた。
+      source: "https://ja.wikipedia.org/wiki/関東州"
+    - from: 1919
+      to: 1931
+      text: 1919年、都督府は民政の関東庁と軍の関東軍に分かれた。中国では国権回収運動が高まり、張学良は満鉄に並行する鉄道を作って対抗した。関東軍は張作霖を爆殺し（1928年）、1931年9月に柳条湖事件を起こして満洲事変を始めた。
+      source: "https://ja.wikipedia.org/wiki/関東軍"
+    - from: 1932
+      to: 1945
+      text: 満洲国の建国（1932年）後も関東州は日本の租借地として残り、満洲国の玄関口になった。1945年8月、ソ連軍が満洲に攻めこみ、旅順・大連を占領した（1955年まで旅順にソ連軍が駐留）。
+      source: "https://en.wikipedia.org/wiki/Kwantung_Leased_Territory"
+  source:
+    - "https://ja.wikipedia.org/wiki/関東州"
+    - "https://en.wikipedia.org/wiki/Kwantung_Leased_Territory"
+
+- id: japanese_tsingtao
+  name: 青島（日本の占領地）
+  parent: japan
+  kind: 占領地（青島守備軍。旧ドイツの膠州湾租借地）
+  match:
+    labels: [膠州湾（日本の占領）]
+  from: 1914
+  to: 1922
+  polities: [roc]
+  periods:
+    - from: 1914
+      to: 1922
+      text: 第一次世界大戦で日本はドイツの膠州湾租借地を攻め取り（1914年11月）、二十一か条の要求（1915年）で山東のドイツ権益の継承を中国に認めさせた。パリ講和会議（1919年）がこれを認めると、北京の学生の抗議から反日・反帝国主義の五・四運動が広がり、中国はヴェルサイユ条約に調印しなかった。ワシントン会議の場で結ばれた山東懸案解決条約（1922年）で、日本は膠州湾を中国に返した。
+      source: "https://ja.wikipedia.org/wiki/山東問題"
+  source:
+    - "https://ja.wikipedia.org/wiki/山東問題"
+    - "https://ja.wikipedia.org/wiki/青島の戦い"
+
+- id: karafuto
+  name: 樺太（南樺太）
+  parent: japan
+  kind: 植民地（樺太庁。1943年から内地に編入）
+  match:
+    labels: [樺太]
+  from: 1905
+  to: 1945
+  polities: [soviet_union]
+  periods:
+    - from: 1905
+      to: 1942
+      text: 江戸時代から日本人とロシア人が入りまじっていた樺太は、樺太・千島交換条約（1875年）でロシア領になったが、日露戦争のポーツマス条約（1905年）で北緯50度以南が日本に譲られた。1907年に樺太庁（首府は豊原）が置かれ、ニシン漁・林業・製紙業・石炭の開発が進み、日本人の移住で人口が増えた。先住民のアイヌ・ニヴフ・ウイルタは生活の場を狭められた。
+      source: "https://ja.wikipedia.org/wiki/樺太庁"
+    - from: 1943
+      to: 1945
+      text: 1943年に樺太は植民地（外地）から内地に編入された。1945年8月、日ソ中立条約を破って参戦したソ連軍が南樺太に攻めこみ、多くの住民が死んだり北海道へ逃れたりした。残った日本人も1949年までに引き揚げ、朝鮮人の一部は帰れずに残った。
+      source: "https://ja.wikipedia.org/wiki/樺太の戦い_(1945年)"
+  source:
+    - "https://ja.wikipedia.org/wiki/樺太庁"
+    - "https://en.wikipedia.org/wiki/Karafuto_Prefecture"
+
+- id: south_seas_mandate
+  name: 南洋諸島（日本の委任統治領）
+  names:
+    - { to: 1919, name: 南洋諸島（日本の占領）, kind: 海軍の軍政 }
+  parent: japan
+  kind: 国際連盟の委任統治領（C式。南洋庁）
+  match:
+    labels: [南洋諸島（日本の占領）, 南洋諸島（日本の委任統治）]
+  from: 1914
+  to: 1945
+  polities: [palau, micronesia, marshall_islands]
+  periods:
+    - from: 1914
+      to: 1921
+      text: 第一次世界大戦に参戦した日本は、1914年10月、赤道より北のドイツ領ミクロネシア（マリアナ・カロリン・マーシャル諸島）を海軍で占領した。ヴェルサイユ条約で日本の委任統治領と認められた（C式。軍事基地は置かない約束）。
+      source: "https://ja.wikipedia.org/wiki/南洋諸島"
+    - from: 1922
+      to: 1940
+      text: 1922年にパラオのコロールに南洋庁が置かれた。南洋興発がサイパン・テニアンでサトウキビの農園と製糖業を開き、沖縄などから多くの日本人が移り住んで、島の人口では日本人が住民（チャモロ人・カロリン人）を上回った。日本は国際連盟を脱退（1933年）したのちも統治を続け、海軍の拠点を築いていった。
+      source: "https://ja.wikipedia.org/wiki/南洋庁"
+    - from: 1941
+      to: 1945
+      text: 太平洋戦争では、トラック諸島（チューク）が連合艦隊の基地になった。1944年、アメリカ軍がマーシャル諸島・サイパン・テニアン・パラオ（ペリリュー）を攻め取り、多くの民間人も犠牲になった。テニアンからは原爆を積んだB-29が飛び立った。戦後はアメリカの信託統治領になった。
+      source: "https://ja.wikipedia.org/wiki/サイパンの戦い"
+  source:
+    - "https://ja.wikipedia.org/wiki/南洋諸島"
+    - "https://en.wikipedia.org/wiki/South_Seas_Mandate"
+
+- id: japanese_occupied_china
+  name: 日本の占領地（中国）
+  parent: japan
+  kind: 日本軍の占領地（傀儡政権を含む）
+  # 満洲国・汪兆銘政権など、独自の色で描く傀儡政権は含まない（日本の色で描いた占領地だけ）
+  match:
+    contains: [日本の占領地]
+    labels: [海南島（日本軍の占領）, 広州湾（日本の占領）]
+  from: 1937
+  to: 1945
+  polities: [roc, wang_jingwei, mengjiang, manchukuo]
+  periods:
+    - from: 1937
+      to: 1939
+      text: 1937年7月の盧溝橋事件で日中戦争が始まり、日本軍は北京・天津、上海を占領し、12月には首都南京を攻め落とした（南京事件）。北京には中華民国臨時政府、南京には維新政府という日本の傀儡政権が作られた。国民政府は重慶に移って抵抗を続け、第2次国共合作で共産党も抗日戦を戦った。
+      source: "https://ja.wikipedia.org/wiki/日中戦争"
+    - from: 1940
+      to: 1945
+      text: 1940年に汪兆銘の南京国民政府が作られたが、日本軍の支配は都市と鉄道沿いの「点と線」にとどまり、農村では共産党の八路軍がゲリラ戦を広げた。日本は援蔣ルートを断つために南方へ進出し、1944年には大陸打通作戦で華中から華南へ占領地を広げた。1945年8月の降伏で占領は終わった。
+      source: "https://ja.wikipedia.org/wiki/日中戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/日中戦争"
+    - "https://en.wikipedia.org/wiki/Second_Sino-Japanese_War"
+
+- id: japanese_southern_occupation
+  name: 日本の南方占領地
+  parent: japan
+  kind: 日本軍の軍政地域（「大東亜共栄圏」）
+  # 東南アジア・太平洋・インド洋の占領地を1つにまとめる（地域ごとの陸海軍の軍政は副ラベルで区別）
+  match:
+    labels: [マラヤ（日本の占領）, 昭南島（日本の占領）, 北ボルネオ（日本の占領）, スマトラ（日本の占領）, ジャワ（日本の占領）, ボルネオ（日本の占領）, セレベス（日本の占領）, 小スンダ列島（日本の占領）, バリ（日本の占領）, リアウ（日本の占領）, モルッカ（日本の占領）, ニューギニア（日本の占領）, フィリピン（日本の占領）, ビルマ（日本軍の占領）, ポルトガル領ティモール（日本の占領）, ラバウル（日本の占領）, ブーゲンヴィル（日本の占領）, マヌス（日本の占領）, ソロモン諸島（日本の占領）, ショートランド（日本の占領）, ナウル（日本の占領）, ギルバート諸島（日本の占領）, オーシャン島（日本の占領）, マキン（日本の占領）, グアム（日本の占領・「大宮島」）, 大鳥島（日本の占領）, クリスマス島（日本の占領）, 香港（日本の占領）]
+    regions: [north_andaman, south_andaman, nicobar]
+  from: 1941
+  to: 1945
+  polities: [philippine_second_republic, burma_state, indonesia]
+  periods:
+    - from: 1941
+      to: 1942
+      text: 石油などの資源を求め、アメリカ・イギリス・オランダの経済封鎖（ABCD包囲陣）に追いつめられた日本は、1941年12月8日、マレー半島への上陸と真珠湾攻撃で太平洋戦争を始めた。香港・マニラ・シンガポール（1942年2月）・ジャワ・ビルマを次々に攻め取り、半年ほどで東南アジアと西太平洋の大部分を占領した。
+      source: "https://ja.wikipedia.org/wiki/太平洋戦争"
+    - from: 1943
+      to: 1945
+      text: 日本は「大東亜共栄圏」を唱え、軍政のもとで石油・ゴム・スズを集め、住民を労働者（ロームシャ）や兵補として動員した。シンガポールなどでは中国系住民の虐殺も起きた。1943年にはビルマ（バー・モウ）とフィリピン（ラウレル）を形の上で独立させ、大東亜会議を開いた。現地の民族主義者の一部は日本に協力したが、やがて抗日運動に転じた。戦局が悪化すると、アメリカ軍がフィリピンを取りもどし（1944–45年）、1945年8月の降伏で占領は終わった。
+      source: "https://ja.wikipedia.org/wiki/大東亜共栄圏"
+  source:
+    - "https://ja.wikipedia.org/wiki/南方作戦"
+    - "https://ja.wikipedia.org/wiki/大東亜共栄圏"
+
+# ================================================================ ロシア：中央アジア（直轄のトルキスタンを先に。ピースの重なりがあるため）
+
+- id: russian_turkestan
+  name: ロシア領トルキスタン
+  parent: russia
+  kind: 総督府（トルキスタン総督府・ザカスピ州）
+  # ブハラ・ヒヴァの保護国を除く、ロシアが直接治めた中央アジア南部。カザフ草原北部（ステップ総督府など）は含めない
+  match:
+    regions: [tashkent, samarkand, jizzakh, fergana_uz, fergana_kg, kg_north, kz_south, kz_semirechye, kyzylorda, amu_right_bank, aral_delta, ahal, balkan_tkm, merv]
+  from: 1865
+  to: 1917
+  polities: [kokand, uzbekistan, turkmenistan, kyrgyzstan, kazakhstan, tajikistan]
+  governors:
+    - { name: コンスタンチン・カウフマン, title: 初代トルキスタン総督, from: 1867, to: 1882, note: ブハラ・ヒヴァを保護国にし、コーカンドを滅ぼす, source: "https://en.wikipedia.org/wiki/Konstantin_Petrovich_von_Kaufmann" }
+  periods:
+    - from: 1865
+      to: 1880
+      text: クリミア戦争に敗れて南下の道をふさがれたロシアは、中央アジアへ進んだ。1865年にコーカンド・ハン国からタシケントを奪い、1867年にトルキスタン総督府を置いた。総督カウフマンはブハラ（1868年）とヒヴァ（1873年）を保護国にし、1876年にはコーカンド・ハン国を滅ぼしてフェルガナ州とした。
+      source: "https://ja.wikipedia.org/wiki/ロシア領トルキスタン"
+    - from: 1881
+      to: 1904
+      text: トルクメン人の要塞ギョクテペを攻め落とし（1881年）、メルヴを併合して（1884年）ザカスピ州を置いた。アフガニスタンに迫るロシアにイギリスは警戒を強め（グレート・ゲーム）、パンジェ事件（1885年）ののち両国は国境を定めた。ザカスピ鉄道がサマルカンド・タシケントへ延び、フェルガナ盆地はロシアの綿工業のための綿花の産地に変わった。
+      source: "https://ja.wikipedia.org/wiki/グレート・ゲーム"
+    - from: 1905
+      to: 1917
+      text: ロシア人農民の入植で遊牧民の牧草地が奪われ、ムスリムの知識人の間では教育の近代化をめざすジャディード運動が起きた。第一次世界大戦中の1916年、それまで免除されていた住民を後方の労働に動員する命令に反発して大反乱が起き、鎮圧で多くのキルギス人・カザフ人が中国へ逃れた。1917年のロシア革命で総督府は崩れた。
+      source: "https://en.wikipedia.org/wiki/Russian_Turkestan"
+  source:
+    - "https://ja.wikipedia.org/wiki/ロシア領トルキスタン"
+    - "https://en.wikipedia.org/wiki/Russian_Turkestan"
+
+- id: bukhara_protectorate
+  name: ブハラ・アミール国（ロシアの保護国）
+  parent: russia
+  kind: 保護国（アミールが統治）
+  match:
+    regions: [bukhara_core, surxondaryo, tj_bukhara, lebap]
+  from: 1868
+  to: 1917
+  polities: [bukhara]
+  periods:
+    - from: 1868
+      to: 1885
+      text: 1868年、ロシア軍はブハラ軍を破ってサマルカンドを奪い、ブハラ・アミール国を保護国にした（サマルカンドはロシアの直轄）。アミールのムザッファルは外交をロシアに任せ、内政は続けた。ブハラはロシアの後押しで東のヒッサール・クリャーブ（今のタジキスタン）を征服した。
+      source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"
+    - from: 1886
+      to: 1917
+      text: ザカスピ鉄道が通り、ロシア人の町（新ブハラ、カガン）ができて、ブハラの綿花はロシア市場に結びつけられた。アミールの古い支配とイスラームの保守的な指導層に対し、青年ブハラ人などのジャディード（改革派）が改革を求めた。最後のアミールのアーリム・ハーンは1917年の革命後も権力を保ったが、1920年に赤軍にブハラを追われ、のちにアフガニスタンへ逃れた。
+      source: "https://en.wikipedia.org/wiki/Emirate_of_Bukhara"
+  source:
+    - "https://ja.wikipedia.org/wiki/ブハラ・ハン国"
+    - "https://en.wikipedia.org/wiki/Emirate_of_Bukhara"
+
+- id: khiva_protectorate
+  name: ヒヴァ・ハン国（ロシアの保護国）
+  parent: russia
+  kind: 保護国（ハンが統治）
+  # アム川右岸（amu_right_bank）・アラル海の南（aral_delta）は 1873 年にロシアの直轄となったので russian_turkestan が先に当たる
+  match:
+    regions: [khorezm]
+  from: 1873
+  to: 1917
+  polities: [khiva]
+  periods:
+    - from: 1873
+      to: 1917
+      text: 1873年、カウフマンの率いるロシア軍がヒヴァを攻め落とし、ガンデミアン条約でヒヴァ・ハン国を保護国にした。アム川右岸はロシアに割譲させ、ハンは賠償金を払い、奴隷の売買を禁じられた。ハンのムハンマド・ラヒーム2世（在位1864–1910年）のもとで綿花の輸出が増えた。革命後の1918年からはトルクメンのジュナイド・ハンが実権を握り、1920年に赤軍に倒されてホラズム人民ソヴィエト共和国となった。
+      source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"
+  source:
+    - "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"
+    - "https://en.wikipedia.org/wiki/Khanate_of_Khiva"
+
+# ================================================================ アメリカ合衆国
+
+- id: american_philippines
+  name: アメリカ領フィリピン
+  names:
+    - { to: 1898, name: マニラ（アメリカの占領）, kind: 軍事占領 }
+    - { from: 1899, to: 1934, name: アメリカ領フィリピン, kind: 植民地（島嶼行政府） }
+    - { from: 1935, name: フィリピン・コモンウェルス, kind: 独立準備政府（独立準備期間10年） }
+  parent: usa
+  match:
+    labels: [マニラ（アメリカの占領）, アメリカ領フィリピン, スールー王国, フィリピン・コモンウェルス]
+  from: 1898
+  to: 1946
+  polities: [philippines, sulu]
+  governors:
+    - { name: ウィリアム・タフト, title: 初代民政長官, from: 1901, to: 1904, note: のち大統領, source: "https://ja.wikipedia.org/wiki/ウィリアム・タフト" }
+    - { name: レナード・ウッド, title: 総督, from: 1921, to: 1927, source: "https://en.wikipedia.org/wiki/Governor-General_of_the_Philippines" }
+    - { name: フランク・マーフィー, title: 最後の総督・初代高等弁務官, from: 1933, to: 1936, source: "https://en.wikipedia.org/wiki/Governor-General_of_the_Philippines" }
+    - { name: マヌエル・ケソン, title: コモンウェルス大統領, from: 1935, to: 1944, note: 1942年からアメリカで亡命政府, source: "https://ja.wikipedia.org/wiki/マニュエル・ケソン" }
+  periods:
+    - from: 1898
+      to: 1901
+      text: 米西戦争（1898年）で、アメリカのデューイ艦隊はマニラ湾でスペイン艦隊を破った。スペインと戦っていたアギナルドはフィリピン共和国（マロロス共和国）の独立を宣言したが、パリ条約でアメリカはスペインからフィリピンを買い取り、1899年からフィリピン＝アメリカ戦争で独立軍を鎮圧した（アギナルドは1901年に捕らえられる）。
+      source: "https://ja.wikipedia.org/wiki/米比戦争"
+    - from: 1902
+      to: 1915
+      text: アメリカは「善意の同化」を掲げ、タフトの民政のもとで英語の学校教育を広め、1907年にフィリピン議会を開いた。地主のエリート層を取りこんで統治し、アメリカとの自由貿易で砂糖・ココナッツなどの輸出に頼る経済になった。南部のムスリム（モロ）の抵抗は武力で抑えた。
+      source: "https://en.wikipedia.org/wiki/Insular_Government_of_the_Philippine_Islands"
+    - from: 1916
+      to: 1934
+      text: ジョーンズ法（1916年）で将来の独立が約束され、フィリピン人の上院ができて自治が進んだ。世界恐慌の中、アメリカの農業団体は安いフィリピンの砂糖の流入を嫌い、独立を認める動きを後押しした。1934年のタイディングズ＝マクダフィー法で、10年後の独立が決まった。
+      source: "https://ja.wikipedia.org/wiki/タイディングス・マクダフィー法"
+    - from: 1935
+      to: 1946
+      text: 1935年、ケソンを大統領とするフィリピン・コモンウェルス（独立準備政府）が発足した。1941年12月に日本軍が侵攻してマニラを占領し、ケソンはアメリカで亡命政府を作った。1944–45年にマッカーサーの軍が取りもどし（マニラの市街戦）、予定どおり1946年7月4日にフィリピン共和国として独立した。
+      source: "https://ja.wikipedia.org/wiki/フィリピン・コモンウェルス"
+  source:
+    - "https://ja.wikipedia.org/wiki/アメリカ合衆国統治下のフィリピン"
+    - "https://en.wikipedia.org/wiki/History_of_the_Philippines_(1898–1946)"
+
+- id: hawaii_territory
+  name: ハワイ準州
+  names:
+    - { to: 1899, name: ハワイ（合衆国が併合）, kind: 併合された領土 }
+  parent: usa
+  kind: 準州（1959年に州）
+  match:
+    labels: [ハワイ（合衆国が併合）, ハワイ準州]
+  from: 1898
+  to: 1958
+  polities: [hawaii]
+  governors:
+    - { name: サンフォード・ドール, title: 初代知事, from: 1900, to: 1903, note: ハワイ共和国の大統領, source: "https://ja.wikipedia.org/wiki/サンフォード・ドール" }
+  periods:
+    - from: 1898
+      to: 1940
+      text: アメリカ系の砂糖農園主たちは1893年に女王リリウオカラニを倒してハワイ王国を滅ぼし、共和国を作った。米西戦争の中の1898年、アメリカはハワイを併合し、1900年に準州とした。サトウキビとパイナップルの農園には日本・中国・フィリピンなどからの移民が働き、日系人は人口の4割近くを占めた。真珠湾は海軍の基地になった。
+      source: "https://ja.wikipedia.org/wiki/ハワイ併合"
+    - from: 1941
+      to: 1958
+      text: 1941年12月7日（現地時間）、日本海軍が真珠湾を攻撃し、太平洋戦争が始まった。ハワイには戒厳令が敷かれ、日系人の一部は収容されたが、日系二世の部隊はヨーロッパで戦って名を上げた。戦後、労働組合と日系人の政治参加が進み、1959年に50番目の州になった。
+      source: "https://ja.wikipedia.org/wiki/真珠湾攻撃"
+  source:
+    - "https://ja.wikipedia.org/wiki/ハワイ準州"
+    - "https://en.wikipedia.org/wiki/Territory_of_Hawaii"
+
+- id: guam_territory
+  name: グアム（アメリカ領）
+  parent: usa
+  kind: 未編入領土（海軍が統治、1950年から民政）
+  match:
+    labels: [グアム]
+  from: 1898
+  to: 2025
+  polities: []
+  periods:
+    - from: 1898
+      to: 1940
+      text: 米西戦争で、アメリカはマリアナ諸島のうちグアムだけを得て、太平洋の航路の補給基地とした（北のマリアナ諸島はスペインがドイツに売った）。海軍の総督が治め、先住民チャモロ人は市民権を持たなかった。
+      source: "https://ja.wikipedia.org/wiki/グアムの歴史"
+    - from: 1941
+      to: 2025
+      text: 1941年12月に日本軍が占領して「大宮島」と呼び、1944年7–8月にアメリカ軍が取りもどした。戦後は大きな空軍・海軍の基地の島になり、1950年のグアム基本法で住民にアメリカの市民権が与えられた（大統領選挙の投票権はない）。
+      source: "https://en.wikipedia.org/wiki/History_of_Guam"
+  source:
+    - "https://ja.wikipedia.org/wiki/グアムの歴史"
+    - "https://en.wikipedia.org/wiki/History_of_Guam"
+
+- id: american_samoa
+  name: アメリカ領サモア
+  parent: usa
+  kind: 未編入領土（1951年まで海軍が統治）
+  match:
+    labels: [アメリカ領サモア]
+  from: 1900
+  to: 2025
+  polities: [samoa_kingdom]
+  periods:
+    - from: 1900
+      to: 2025
+      text: サモア諸島をめぐるドイツ・イギリス・アメリカの争いは1899年の条約で決着し、アメリカは東部のトゥトゥイラ島などを得て、パゴパゴの良港を海軍の石炭補給基地にした（首長たちは1900年に島を譲る文書に署名）。1920年代には自治を求めるマウ運動も起きた。1951年に海軍から内務省の統治に移り、1977年から知事を選挙で選んでいる。住民はアメリカの市民権ではなく「国民」の地位を持つ。
+      source: "https://ja.wikipedia.org/wiki/アメリカ領サモア"
+  source:
+    - "https://ja.wikipedia.org/wiki/アメリカ領サモア"
+    - "https://en.wikipedia.org/wiki/American_Samoa"
+
+- id: trust_territory_pacific
+  name: 太平洋諸島信託統治領
+  names:
+    - { to: 1946, name: ミクロネシア（アメリカ軍の占領）, kind: 軍事占領 }
+  parent: usa
+  kind: 国際連合の信託統治領（戦略地区）
+  match:
+    labels: [マーシャル諸島（アメリカの占領）, ペリリュー・アンガウル（アメリカの占領）, カロリン諸島（アメリカの占領）, パラオ（アメリカの占領）, マリアナ諸島（アメリカ軍の占領）, 太平洋諸島信託統治領, ミクロネシア連邦（自治政府。信託統治領）, マーシャル諸島（自治政府。信託統治領）, パラオ共和国（自治政府。信託統治領）]
+  from: 1944
+  to: 1993
+  polities: [micronesia, marshall_islands, palau]
+  periods:
+    - from: 1944
+      to: 1962
+      text: 1944年、アメリカ軍は日本の委任統治領だったマーシャル諸島・マリアナ諸島・パラオを攻め取った。戦後、1947年に国際連合の信託統治領となり、アメリカが「戦略地区」として治めた。マーシャル諸島のビキニ環礁とエニウェトク環礁では核実験が行われ（1946–58年）、1954年の水爆実験では日本の漁船第五福竜丸も被曝した。
+      source: "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - from: 1963
+      to: 1993
+      text: 1960年代から教育と援助が増え、ミクロネシア議会（1965年）で自治が進んだ。島々は一つにまとまらず、北マリアナ諸島はアメリカの自治領（コモンウェルス）を選び、ミクロネシア連邦・マーシャル諸島（1979年）・パラオ（1981年）はそれぞれ自治政府を作って、アメリカと自由連合盟約を結んで独立した（1986年、パラオは1994年）。
+      source: "https://en.wikipedia.org/wiki/Trust_Territory_of_the_Pacific_Islands"
+  source:
+    - "https://ja.wikipedia.org/wiki/太平洋諸島信託統治領"
+    - "https://en.wikipedia.org/wiki/Trust_Territory_of_the_Pacific_Islands"
+
+- id: us_ryukyu
+  name: アメリカ統治下の沖縄（琉球）
+  names:
+    - { to: 1951, name: 沖縄（アメリカの軍政）, kind: 軍政 }
+    - { from: 1952, name: 沖縄（アメリカの施政権下）, kind: 施政権下（琉球政府・琉球列島米国民政府） }
+  parent: usa
+  # 1953 年に返還された奄美群島・トカラ列島も含める（小笠原諸島は含めない）
+  match:
+    labels: [沖縄（アメリカの軍政）, 沖縄（アメリカの施政権下）, 奄美群島（アメリカの軍政）, 奄美群島（アメリカの施政権下）, トカラ列島（アメリカの軍政）]
+  from: 1945
+  to: 1972
+  polities: [japan, ryukyu]
+  governors:
+    - { name: ポール・キャラウェイ, title: 高等弁務官, from: 1961, to: 1964, note: 「沖縄の自治は神話」と述べた, source: "https://ja.wikipedia.org/wiki/ポール・W・キャラウェイ" }
+  periods:
+    - from: 1945
+      to: 1951
+      text: 1945年4–6月の沖縄戦で、県民の4人に1人が亡くなったといわれる。アメリカ軍は沖縄を占領して軍政を敷き、住民の土地を取り上げて基地を作った。日本本土とは切り離され、通貨もB円（軍票）が使われた。
+      source: "https://ja.wikipedia.org/wiki/沖縄戦"
+    - from: 1952
+      to: 1964
+      text: サンフランシスコ平和条約（1952年発効）で、沖縄・奄美などはアメリカの施政権の下に残された（奄美は1953年に返還）。琉球政府が置かれたが、最終的な権限は琉球列島米国民政府の高等弁務官にあった。「銃剣とブルドーザー」による土地の強制収用に反対する島ぐるみ闘争（1956年）が起きた。
+      source: "https://ja.wikipedia.org/wiki/アメリカ合衆国による沖縄統治"
+    - from: 1965
+      to: 1972
+      text: ベトナム戦争で沖縄の基地は出撃と補給の拠点となり、B-52が飛び立った。祖国復帰運動が高まり、1968年には主席の公選で屋良朝苗が選ばれた。佐藤栄作首相とニクソン大統領の合意で、1972年5月15日に沖縄は日本に復帰したが、アメリカ軍の基地の多くは残った。
+      source: "https://ja.wikipedia.org/wiki/沖縄返還"
+  source:
+    - "https://ja.wikipedia.org/wiki/アメリカ合衆国による沖縄統治"
+    - "https://en.wikipedia.org/wiki/United_States_Civil_Administration_of_the_Ryukyu_Islands"
+
+- id: usamgik
+  name: 在朝鮮アメリカ陸軍司令部軍政庁（南朝鮮）
+  parent: usa
+  kind: 軍政（北緯38度線以南）
+  match:
+    labels: [朝鮮南部（アメリカ軍の占領）]
+  from: 1945
+  to: 1948
+  polities: [south_korea]
+  governors:
+    - { name: ジョン・ホッジ, title: 在朝鮮アメリカ陸軍司令官, from: 1945, to: 1948, source: "https://en.wikipedia.org/wiki/John_R._Hodge" }
+  periods:
+    - from: 1945
+      to: 1948
+      text: 日本の降伏で、朝鮮は北緯38度線を境に北をソ連軍、南をアメリカ軍が占領した。アメリカは軍政庁を置き、朝鮮人の作った朝鮮人民共和国を認めなかった。モスクワ三国外相会議（1945年12月）の信託統治案をめぐって左右の勢力が激しく対立し、米ソ共同委員会も決裂した。1948年5月、国際連合の監視のもと南だけで選挙が行われ、8月に李承晩を大統領とする大韓民国が成立した（済州島四・三事件などの混乱が続いた）。
+      source: "https://ja.wikipedia.org/wiki/在朝鮮アメリカ陸軍司令部軍政庁"
+  source:
+    - "https://ja.wikipedia.org/wiki/在朝鮮アメリカ陸軍司令部軍政庁"
+    - "https://en.wikipedia.org/wiki/United_States_Army_Military_Government_in_Korea"
+
+- id: soviet_korea
+  name: ソ連軍政下の北朝鮮
+  parent: soviet_union
+  kind: 軍事占領（北緯38度線以北。ソ連民政局）
+  match:
+    labels: [朝鮮北部（ソ連軍の占領）]
+  from: 1945
+  to: 1948
+  polities: [north_korea]
+  periods:
+    - from: 1945
+      to: 1948
+      text: 1945年8月、対日参戦したソ連軍が朝鮮北部に入り、北緯38度線以北を占領した。ソ連は各地の人民委員会を通じて治め、1946年に金日成を委員長とする北朝鮮臨時人民委員会を作らせて、土地改革（地主の土地の無償没収）と重要産業の国有化を進めた。1948年9月、朝鮮民主主義人民共和国が成立し、ソ連軍は年末に撤退した。
+      source: "https://ja.wikipedia.org/wiki/ソビエト民政庁"
+  source:
+    - "https://ja.wikipedia.org/wiki/ソビエト民政庁"
+    - "https://en.wikipedia.org/wiki/Soviet_Civil_Administration"

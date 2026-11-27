@@ -1939,3 +1939,93 @@ body[data-layer="language"] .legend {
   outline: 1.5px dashed rgba(45, 35, 25, 0.7);
   outline-offset: 0;
 }
+
+/* ---- 「〇〇史」（国・植民地を選んでいる間の舞台。history.ts） ---- */
+/* 札：当事者の色の丸と「中国史」。節目の年は札の右に節目の題名 */
+.milestone .ms-with-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+.milestone .ms-tag {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 7px 0 5px;
+  border-radius: 9px;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--ink);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--ms-color) 30%, #fff), color-mix(in srgb, var(--ms-color) 55%, #fff));
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--ms-color) 70%, #000) inset,
+    0 1px 2px rgba(0, 0, 0, 0.15);
+  overflow: visible;
+}
+.milestone .ms-tag b {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.milestone .ms-tag .ms-dot {
+  margin-right: 4px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.35) inset,
+    0 0 4px var(--ms-color);
+}
+.milestone .ms-with-tag > span:not(.ms-tag) {
+  flex: 0 1 auto;
+}
+.milestone .ms-who.ms-with-tag .ms-who-long {
+  font-weight: 400;
+  color: var(--muted);
+}
+/* 帯：その年に舞台を最も広く持つ当事者の色を年の順に。刻みは節目、白い印は今の年 */
+.hist-strip {
+  position: relative;
+  height: 7px;
+  margin: 0 8px 5px;
+  cursor: pointer;
+}
+.hist-strip[hidden] {
+  display: none;
+}
+.hist-strip .hs-bar {
+  position: absolute;
+  inset: 1px 0;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18) inset;
+  opacity: 0.9;
+}
+.hist-strip .hs-tick {
+  position: absolute;
+  top: 3px;
+  bottom: 0;
+  width: 1px;
+  background: rgba(40, 30, 20, 0.28);
+  pointer-events: none;
+}
+.hist-strip .hs-now {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: var(--now);
+  width: 3px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(40, 30, 20, 0.7);
+  pointer-events: none;
+}
+/* 右パネル：「〇〇史」に関係するもの（見出しの印は輪、行の左の帯は点線で薄め） */
+.panel-body li.rel-head.hist::before {
+  background: transparent;
+  border: 2.5px solid var(--rel);
+  width: 7px;
+  height: 7px;
+  box-shadow: 0 0 4px var(--rel);
+}
+.panel-body li.related-hist {
+  border-left: 3px dotted var(--rel, var(--accent));
+  background: linear-gradient(90deg, color-mix(in srgb, var(--rel, transparent) 8%, transparent), transparent 60%);
+}

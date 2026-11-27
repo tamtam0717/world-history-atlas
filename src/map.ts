@@ -1798,7 +1798,8 @@ export class AtlasMap {
     if (o < 0) return null;
     const parent = this.idx.atlas.polities[o].id;
     const c = this.colOf[i];
-    if (c >= 0) return { parent, key: this.colonies.list[c].id };
+    // データの植民地は、データの本国で（ヴィシー政府の時期の仏領西アフリカも、フランスの同じ植民地として選ぶ。colonies.ts の PARENT_ALIASES）
+    if (c >= 0) return { parent: this.colonies.list[c].parent, key: this.colonies.list[c].id };
     const u = this.subOf[i];
     if (u >= 0) return { parent, key: "~" + this.units[u].name };
     return null;

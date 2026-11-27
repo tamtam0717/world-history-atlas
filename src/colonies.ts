@@ -20,6 +20,12 @@ export const sameColony = (a: ColonyRef | null | undefined, b: ColonyRef | null 
 /** 副ラベルの1行目（改行の後ろは2行目の補足） */
 export const labelName = (label: string | undefined | null) => (label ? label.split("\n")[0] : "");
 
+/**
+ * 本国の政体の「別の姿」：この政体が owner の年も、本国（値）の植民地データに当てはめる。
+ * ヴィシー政府（1940–44）・フランコ側（1936–39）の時期の植民地を、同じ植民地（仏領西アフリカ・スペイン領モロッコなど）として選び続けるため
+ */
+export const PARENT_ALIASES: Record<string, string> = { vichy_france: "france", nationalist_spain: "spain" };
+
 export class Colonies {
   readonly list: Colony[];
   readonly byId = new Map<string, Colony>();
@@ -27,6 +33,8 @@ export class Colonies {
   private byParent = new Map<number, Colony[]>();
   /** 植民地 → match の regions・iso のピース番号 */
   private pieceSets = new Map<Colony, Set<number>>();
+  /** 別の姿の政体番号 → 本国の政体番号（PARENT_ALIASES） */
+  private alias = new Map<number, number>();
 
   constructor(private idx: AtlasIndex) {
     this.list = idx.atlas.colonies ?? [];
@@ -38,6 +46,19 @@ export class Colonies {
       this.byParent.get(pi)!.push(c);
       if (c.pieces?.length) this.pieceSets.set(c, new Set(c.pieces));
     }
+    for (const [a, p] of Object.entries(PARENT_ALIASES)) {
+      const ai = idx.polityIndex.get(a);
+      const pi = idx.polityIndex.get(p);
+      if (ai === undefined || pi === undefined) continue;
+      this.alias.set(ai, pi);
+      const list = this.byParent.get(pi);
+      if (list) this.byParent.set(ai, list);
+    }
+  }
+
+  /** owner（政体番号）が本国 parent（政体番号）か、その別の姿か */
+  ownedBy(owner: number, parent: number) {
+    return owner === parent || this.alias.get(owner) === parent;
   }
 
   /** その本国の植民地データがあるか（なければ判定を省ける） */
@@ -89,10 +110,14 @@ export class Colonies {
    */
   belongs(piece: number, year: number, ref: ColonyRef): boolean {
     const s = this.idx.pieceState(piece, year);
-    if (!s || s[1] < 0 || this.idx.atlas.polities[s[1]].id !== ref.parent) return false;
+    if (!s || s[1] < 0) return false;
     const e = this.entryOf(s[4], year);
+    if (!ref.key.startsWith("~")) {
+      const pi = this.idx.polityIndex.get(ref.parent);
+      return pi !== undefined && this.ownedBy(s[1], pi) && this.dataAtState(piece, s, year, e)?.id === ref.key;
+    }
+    if (this.idx.atlas.polities[s[1]].id !== ref.parent) return false;
     const d = this.dataAtState(piece, s, year, e);
-    if (!ref.key.startsWith("~")) return d?.id === ref.key;
     return !d && labelName(e?.label) === ref.key.slice(1);
   }
 
@@ -110,7 +135,7 @@ export class Colonies {
     const out: { from: number; to: number; region: number }[] = [];
     for (let k = 0; k < tl.length; k++) {
       const s = tl[k];
-      if (s[1] !== pi) continue;
+      if (data ? !this.ownedBy(s[1], pi) : s[1] !== pi) continue;
       const from = Math.max(y0, s[0]);
       const to = Math.min(y1 + 1, k + 1 < tl.length ? tl[k + 1][0] : y1 + 1);
       if (from >= to) continue;

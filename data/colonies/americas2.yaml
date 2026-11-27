@@ -1,0 +1,1414 @@
+# 南北アメリカの植民地（その2。C1 担当。docs/agent-brief-colonies.md）
+# match の副ラベルは、地域の timeline の label（owner が parent のもの）の1行目。
+# americas.yaml（ブラジル・ヌエバ＝エスパーニャ・ペルー・ヴァージニア）が先に読まれるので、
+# 「（ペルー副王領）」「（ヌエバ・エスパーニャ副王領）」の付く副ラベルはそちらに入る。
+
+# ---------------- スペイン ----------------
+
+- id: nueva_granada
+  name: ヌエバ・グラナダ副王領
+  names:
+    - { to: 1541, name: ヌエバ・グラナダ（征服地）, kind: 征服地（総督領） }
+  parent: spain
+  kind: 副王領（首府サンタフェ・デ・ボゴタ）
+  # 1542–1716 と 1723–38 は地図の副ラベルが「（ペルー副王領）」で、ペルー副王領（americas.yaml）に入る
+  match:
+    contains: [ヌエバ・グラナダ副王領]
+    labels: [ヌエバ・グラナダ, カルタヘナ, サンタ・マルタ, ポパヤン（ベナルカサルの総督領）, ヌエバ・グラナダ（諸都市の評議会）, カルタヘナ（評議会）, キト（評議会）]
+  from: 1525
+  to: 1821
+  polities: [colombia, ecuador, new_granada_united, gran_colombia, muisca]
+  governors:
+    - { name: ゴンサロ・ヒメネス・デ・ケサーダ, title: 征服者, from: 1536, to: 1539, note: ムイスカの地を征服し、サンタフェ・デ・ボゴタを建設（1538年）, source: "https://en.wikipedia.org/wiki/Gonzalo_Jiménez_de_Quesada" }
+    - { name: ホルヘ・デ・ビジャロンガ, title: 初代副王, from: 1719, to: 1724, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Granada" }
+    - { name: セバスティアン・デ・エスラバ, title: 副王, from: 1740, to: 1749, note: イギリスのヴァーノン提督のカルタヘナ攻撃（1741年）を退ける, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Granada" }
+    - { name: ペドロ・メシア・デ・ラ・セルダ, title: 副王, from: 1761, to: 1772, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Granada" }
+    - { name: マヌエル・アントニオ・フロレス, title: 副王, from: 1776, to: 1782, note: コムネロスの反乱（1781年）のときの副王, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Granada" }
+    - { name: アントニオ・カバジェロ・イ・ゴンゴラ, title: 副王（ボゴタ大司教）, from: 1782, to: 1789, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Granada" }
+    - { name: アントニオ・アマル・イ・ボルボン, title: 副王, from: 1803, to: 1810, note: 1810年7月20日、ボゴタの評議会に退けられる, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Granada" }
+    - { name: フアン・デ・サマノ, title: 副王, from: 1818, to: 1819, note: ボヤカの戦いの後、ボゴタから逃れる, source: "https://en.wikipedia.org/wiki/List_of_viceroys_of_New_Granada" }
+  periods:
+    - from: 1525
+      to: 1541
+      text: カリブ海岸にサンタ・マルタ（1525年）とカルタヘナ（1533年）が建てられ、ここから内陸へ征服が進んだ。1536年に出発したケサーダはマグダレナ川をさかのぼってムイスカの地を征服し、1538年にサンタフェ・デ・ボゴタを建てた。南からはペルーを征服したピサロの部下ベナルカサルがポパヤンに入った。
+      source: "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - from: 1542
+      to: 1716
+      text: 1549年にサンタフェ・デ・ボゴタに聴訴院（アウディエンシア）が置かれたが、全体はペルー副王の下に属した（地図ではこの時期はペルー副王領として選ばれる）。アンデスの金と、カリブ海の港カルタヘナが要で、カルタヘナはアフリカの黒人奴隷の大きな陸揚げ港であり、イギリス・フランスの海賊にたびたび襲われた。
+      source: "https://en.wikipedia.org/wiki/New_Kingdom_of_Granada"
+    - from: 1717
+      to: 1738
+      text: スペイン継承戦争で本国の王家がブルボン朝に替わると、本国は広すぎるペルー副王領を分け、1717年にボゴタを首府とするヌエバ・グラナダ副王領を置いた。密貿易を抑えカリブ海の守りを固めるのがねらいだったが、財政が続かず1723年にいったん廃止された。
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_New_Granada"
+    - from: 1739
+      to: 1780
+      text: 1739年に副王領が再び置かれ、いまのコロンビア・エクアドル・パナマ・ベネズエラ（1777年に総監領として分かれる）を治めた。同じ年にイギリスとのジェンキンスの耳の戦争が始まり、1741年にはヴァーノン提督の大艦隊がカルタヘナを攻めたが、副王エスラバが守り抜いた。
+      source: "https://en.wikipedia.org/wiki/Battle_of_Cartagena_de_Indias"
+    - from: 1781
+      to: 1809
+      text: ブルボン改革の増税と専売に反発し、1781年にソコロでコムネロスの反乱が起き、数万人がボゴタに迫った。副王側はいったん要求を認めて反乱を解いた。啓蒙思想も入り、植物学者ムティスの探検や、人権宣言を訳したナリーニョの逮捕（1794年）があった。クリオーリョは本国生まれの役人の独占に不満を強めた。
+      source: "https://en.wikipedia.org/wiki/Revolt_of_the_Comuneros_(New_Granada)"
+    - from: 1810
+      to: 1821
+      text: ナポレオンの本国侵攻で王権が揺らぐと、1810年にカルタヘナ・ボゴタなどの都市が評議会をつくって副王を退けた。しかし中央集権派と連邦派が争う「愚かな祖国」の時期に、1815–16年、本国から来たモリーリョの遠征軍が再征服した。1819年、ボリバルがボヤカの戦いで勝ってボゴタに入り、大コロンビアが生まれた。
+      source: "https://ja.wikipedia.org/wiki/コロンビア独立戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/ヌエバ・グラナダ副王領"
+    - "https://en.wikipedia.org/wiki/Viceroyalty_of_New_Granada"
+
+- id: venezuela_captaincy
+  name: ベネズエラ総監領
+  names:
+    - { to: 1776, name: ベネズエラ州など（ベネズエラの諸州）, kind: 州（総督領）。サント・ドミンゴやボゴタの聴訴院の下 }
+  parent: spain
+  kind: 総監領（首府カラカス。1777年に諸州をまとめる）
+  match:
+    labels: [ベネズエラ州, ベネズエラ州（ヴェルザー家）, ベネズエラ総監領, ベネズエラ（カラカスの評議会）, マルガリータ州, ヌエバ・アンダルシア州（クマナ）, マラカイボ州（ヌエバ・グラナダ）, ギアナ州, メリダ（ヌエバ・グラナダ）, クマナ, クバグア（真珠海岸）]
+  from: 1516
+  to: 1821
+  polities: [venezuela, gran_colombia]
+  governors:
+    - { name: アンブロジウス・エーインガー, title: ヴェルザー家の総督, from: 1529, to: 1533, source: "https://en.wikipedia.org/wiki/Klein-Venedig" }
+    - { name: ルイス・デ・ウンサガ, title: 初代総監, from: 1777, to: 1782, source: "https://en.wikipedia.org/wiki/Captaincy_General_of_Venezuela" }
+    - { name: ビセンテ・エンパラン, title: 総監, from: 1809, to: 1810, note: 1810年4月19日、カラカスの評議会に退けられる, source: "https://en.wikipedia.org/wiki/Vicente_Emparan" }
+    - { name: ドミンゴ・デ・モンテベルデ, title: 総監（王党派の司令官）, from: 1812, to: 1813, note: 第一共和国を倒し、ミランダを捕らえる, source: "https://en.wikipedia.org/wiki/Domingo_de_Monteverde" }
+    - { name: パブロ・モリーリョ, title: 遠征軍の司令官, from: 1815, to: 1820, source: "https://en.wikipedia.org/wiki/Pablo_Morillo" }
+  periods:
+    - from: 1516
+      to: 1545
+      text: 1500年代初め、マルガリータ島沖のクバグア島で真珠が採られ、先住民が潜水させられた。1528年、借金の返済にあてるため、国王カルロス1世（カール5世）はアウクスブルクの大商人ヴェルザー家にベネズエラの植民を任せた。ヴェルザー家の総督は黄金郷（エル・ドラド）を求めて奥地を荒らし、1546年に権利を取り上げられた。
+      source: "https://en.wikipedia.org/wiki/Klein-Venedig"
+    - from: 1546
+      to: 1727
+      text: 1567年にカラカスが建てられ、海岸のベネズエラ州のほか、マルガリータ・クマナ（ヌエバ・アンダルシア）・マラカイボ・ギアナの州がばらばらに、サント・ドミンゴやボゴタの聴訴院の下に置かれた。金銀は乏しく、黒人奴隷を使うカカオの農園が育ったが、カカオの多くはオランダ領キュラソーとの密貿易で流れた。
+      source: "https://en.wikipedia.org/wiki/Province_of_Venezuela"
+    - from: 1728
+      to: 1776
+      text: 1728年、本国はバスク人のギプスコア会社（カラカス会社）にカカオの貿易を独占させ、密貿易を締めつけた。会社への反発から、1749年にフアン・フランシスコ・デ・レオンの反乱が起きた。カカオの輸出は伸び、それを握る大農園主（マントゥアーノ）がカラカスの有力者になった。
+      source: "https://en.wikipedia.org/wiki/Guipuzcoan_Company_of_Caracas"
+    - from: 1777
+      to: 1809
+      text: ブルボン改革のなかで、1777年にベネズエラの諸州が一つの総監領にまとめられ、1786年にはカラカスに聴訴院ができて、いまのベネズエラの枠組みが生まれた。1797年のグアルとエスパーニャの陰謀、1806年のミランダの上陸作戦と、独立をめざす動きが始まる。
+      source: "https://en.wikipedia.org/wiki/Captaincy_General_of_Venezuela"
+    - from: 1810
+      to: 1821
+      text: 1810年4月19日、カラカスの評議会が総監を退け、1811年7月5日に独立を宣言した（第一共和国）。地震（1812年）と王党派の反撃で共和国は倒れ、ボリバルの第二共和国もボベスの率いるリャノの騎兵に敗れた。1815年に本国からモリーリョの軍が来たが、ボリバルはオリノコ川流域から盛り返し、1821年のカラボボの戦いで勝敗を決めた。
+      source: "https://ja.wikipedia.org/wiki/ベネズエラ独立戦争"
+  source:
+    - "https://en.wikipedia.org/wiki/Captaincy_General_of_Venezuela"
+
+- id: rio_de_la_plata
+  name: リオ・デ・ラ・プラタ副王領
+  names:
+    - { to: 1541, name: リオ・デ・ラ・プラタ（メンドーサの総督領）, kind: 征服地（総督領） }
+  parent: spain
+  kind: 副王領（首府ブエノスアイレス）
+  # 1542–1775 は副ラベルが「ペルー副王領」で、ペルー副王領（americas.yaml）に入る
+  match:
+    contains: [ラ・プラタ副王領]
+    labels: [リオ・デ・ラ・プラタ, リオ・デ・ラ・プラタ（アスンシオン）, モンテビデオ（スペイン王党派）]
+  from: 1536
+  to: 1824
+  polities: [united_provinces_rio_plata, argentina, uruguay, paraguay, bolivia, liga_federal]
+  governors:
+    - { name: ペドロ・デ・メンドーサ, title: 先遣総督（アデランタード）, from: 1536, to: 1537, note: 最初のブエノスアイレスを建てる, source: "https://en.wikipedia.org/wiki/Pedro_de_Mendoza" }
+    - { name: ペドロ・デ・セバリョス, title: 初代副王, from: 1776, to: 1778, note: ポルトガルからコロニア・ド・サクラメントを奪う, source: "https://en.wikipedia.org/wiki/Pedro_de_Cevallos" }
+    - { name: フアン・ホセ・デ・ベルティス, title: 副王, from: 1778, to: 1784, source: "https://en.wikipedia.org/wiki/Juan_José_de_Vértiz_y_Salcedo" }
+    - { name: ラファエル・デ・ソブレモンテ, title: 副王, from: 1804, to: 1807, note: イギリス軍の侵攻（1806年）でブエノスアイレスから逃れ、市民の評判を落とす, source: "https://en.wikipedia.org/wiki/Rafael_de_Sobremonte" }
+    - { name: サンティアゴ・デ・リニエルス, title: 副王, from: 1807, to: 1809, note: イギリス軍を撃退した民兵の指揮官, source: "https://en.wikipedia.org/wiki/Santiago_de_Liniers" }
+    - { name: バルタサル・イダルゴ・デ・シスネロス, title: 副王, from: 1809, to: 1810, note: 五月革命で退けられる, source: "https://en.wikipedia.org/wiki/Baltasar_Hidalgo_de_Cisneros" }
+    - { name: フランシスコ・ハビエル・デ・エリオ, title: 副王（モンテビデオ）, from: 1811, to: 1811, source: "https://en.wikipedia.org/wiki/Francisco_Javier_de_Elío" }
+  periods:
+    - from: 1536
+      to: 1541
+      text: 1536年、メンドーサが銀の山（ラ・プラタ）への道を求めてラ・プラタ川に最初のブエノスアイレスを建てたが、先住民の攻撃と飢えで捨てられた。一行は川をさかのぼり、グアラニーの地にアスンシオン（1537年）を建てて拠点とした。
+      source: "https://en.wikipedia.org/wiki/Governorate_of_the_Río_de_la_Plata"
+    - from: 1542
+      to: 1775
+      text: ラ・プラタ地方はペルー副王領に属した（地図ではこの時期はペルー副王領として選ばれる）。銀はリマとパナマを経て運ぶ決まりで、ブエノスアイレス（1580年に再建）の港は表向き閉じられ、ポトシの銀はポルトガル人やイギリス人との密貿易で流れ出た。ポルトガルは対岸にコロニア・ド・サクラメント（1680年）を築いて争った。
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru"
+    - from: 1776
+      to: 1805
+      text: ブルボン朝の本国はポルトガル・イギリスの進出に備え、1776年にブエノスアイレスを首府とする副王領を置き、ポトシのあるチャルカス（アルト・ペルー）もこちらに移した。1778年の自由貿易規則で港が開かれ、ブエノスアイレスは銀と牛の皮の積み出しで大きくなった。
+      source: "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - from: 1806
+      to: 1810
+      text: 1806・07年、ナポレオン戦争中のイギリスがブエノスアイレスを攻めた（ラ・プラタ侵攻）。副王は逃げたが、リニエルスの率いる市民の民兵が追い返し、クリオーリョは自分たちの力に自信をもった。本国がナポレオンに占領されると、1810年の五月革命で副王を退け、評議会（プリメラ・フンタ）が政権を握った。
+      source: "https://ja.wikipedia.org/wiki/五月革命_(アルゼンチン)"
+    - from: 1811
+      to: 1824
+      text: 副王の称号はモンテビデオに移ったが、王党派のモンテビデオは1814年に落ちた。パラグアイは1811年に独立し、アルト・ペルー（チャルカス）はペルー副王領の軍が押さえ続けた。1816年、トゥクマンの会議が独立を宣言し（ラ・プラタ連合州）、アルト・ペルーは1825年にボリビアとして独立する。
+      source: "https://en.wikipedia.org/wiki/Viceroyalty_of_the_Río_de_la_Plata"
+  source:
+    - "https://ja.wikipedia.org/wiki/リオ・デ・ラ・プラタ副王領"
+    - "https://en.wikipedia.org/wiki/Viceroyalty_of_the_Río_de_la_Plata"
+
+- id: chile_captaincy
+  name: チリ総督領
+  parent: spain
+  kind: 総督領（総監領。ペルー副王の下）
+  match:
+    labels: [チリ総督領, チロエ（スペイン王党派）]
+  from: 1541
+  to: 1826
+  polities: [chile, mapuche]
+  governors:
+    - { name: ペドロ・デ・バルディビア, title: 初代総督, from: 1541, to: 1553, note: サンティアゴを建てる。トゥカペルの戦いでマプチェに敗れて殺される, source: "https://ja.wikipedia.org/wiki/ペドロ・デ・バルディビア" }
+    - { name: ガルシア・ウルタド・デ・メンドーサ, title: 総督, from: 1557, to: 1561, source: "https://en.wikipedia.org/wiki/García_Hurtado_de_Mendoza,_5th_Marquis_of_Cañete" }
+    - { name: アンブロシオ・オイギンス, title: 総督, from: 1788, to: 1796, note: のちペルー副王。独立の指導者ベルナルド・オイギンスの父, source: "https://en.wikipedia.org/wiki/Ambrosio_O'Higgins,_1st_Marquis_of_Osorno" }
+    - { name: フランシスコ・カシミロ・マルコ・デル・ポント, title: 最後の総督, from: 1815, to: 1817, note: チャカブコの戦いで捕らえられる, source: "https://en.wikipedia.org/wiki/Francisco_Casimiro_Marcó_del_Pont" }
+  periods:
+    - from: 1541
+      to: 1598
+      text: ペルーを征服したピサロの部下バルディビアが南へ進み、1541年にサンティアゴを建てた。南の森と川の地に住むマプチェ（アラウコ族）は激しく抵抗し、1553年にバルディビアを討ち取った。この戦いはエルシーリャの叙事詩『ラ・アラウカーナ』に歌われた。
+      source: "https://ja.wikipedia.org/wiki/アラウコ戦争"
+    - from: 1599
+      to: 1700
+      text: 1598年のクラララバの戦いの後、マプチェは南部の7つの町を壊し、ビオビオ川が事実上の境になった。総督領はペルー副王からの補助金（シトゥアド）で常備軍を養い、川の北で小麦や牛を育ててリマに送った。1641年のキリンの会談で、スペインはマプチェの自立を事実上認めた。
+      source: "https://en.wikipedia.org/wiki/Arauco_War"
+    - from: 1701
+      to: 1809
+      text: ブルボン朝の本国のもとで、銀・銅の採掘と農業が広がり、大農園主のクリオーリョが社会を握った。1778年の自由貿易規則で港が開かれ、総督オイギンス（1788–96）は道や町を整えた。
+      source: "https://en.wikipedia.org/wiki/Captaincy_General_of_Chile"
+    - from: 1810
+      to: 1826
+      text: 1810年9月18日、サンティアゴの評議会が政権を握ったが（パトリア・ビエハ）、1814年のランカグアの戦いでペルー副王の軍に敗れた（再征服）。1817年、サン・マルティンとオイギンスがアンデスを越えてチャカブコで勝ち、1818年に独立を宣言した。南のチロエ島には王党派が1826年まで残った。
+      source: "https://ja.wikipedia.org/wiki/チリ独立戦争"
+  source:
+    - "https://en.wikipedia.org/wiki/Captaincy_General_of_Chile"
+
+- id: guatemala_captaincy
+  name: グアテマラ総督領
+  parent: spain
+  kind: 総督領（総監領。ヌエバ・エスパーニャ副王の下）
+  match:
+    labels: [グアテマラ総督領, グアテマラ, ニカラグア, ホンジュラス, サン・サルバドル, チアパス, ソコヌスコ]
+  from: 1524
+  to: 1821
+  polities: [guatemala, central_america, el_salvador, honduras, nicaragua, costa_rica, miskito]
+  governors:
+    - { name: ペドロ・デ・アルバラード, title: 総督, from: 1524, to: 1541, note: コルテスの部下。キチェ・カクチケルなどのマヤ諸国を征服, source: "https://ja.wikipedia.org/wiki/ペドロ・デ・アルバラード" }
+    - { name: ホセ・デ・ブスタマンテ・イ・ゲラ, title: 総監, from: 1811, to: 1818, note: 中米の独立の動きを抑える, source: "https://en.wikipedia.org/wiki/José_de_Bustamante_y_Guerra" }
+    - { name: ガビノ・ガインサ, title: 最後の総監, from: 1821, to: 1821, note: 1821年9月15日の独立宣言に加わる, source: "https://en.wikipedia.org/wiki/Gabino_Gaínza" }
+  periods:
+    - from: 1524
+      to: 1542
+      text: 1524年、メキシコから南下したアルバラードがキチェ・カクチケルなどのマヤ諸国を征服した。パナマから北上した別の征服者たちはニカラグアやホンジュラスを征服し、取り合った。先住民は奴隷としてペルーなどへ売られ、人口が激減した。
+      source: "https://en.wikipedia.org/wiki/Spanish_conquest_of_Guatemala"
+    - from: 1543
+      to: 1699
+      text: インディアス新法（1542年）で中米を治める聴訴院が置かれ、のちサンティアゴ・デ・グアテマラ（いまのアンティグア）に移った。ヌエバ・エスパーニャ副王の下にあるが、実際には総監が独自に治めた。ラス・カサスがベラパスで武力によらない布教を試みた。藍（インディゴ）とカカオが主な産物で、カリブ海岸はイギリスとミスキートに脅かされた。
+      source: "https://ja.wikipedia.org/wiki/グアテマラ総督領"
+    - from: 1700
+      to: 1807
+      text: ブルボン朝の本国は、カリブ海岸のイギリス人（ベリーズの伐採者・ミスキート海岸）と争った。1773年の地震でサンティアゴが壊れ、首府はいまのグアテマラ市に移った。1786年にインテンデンシア制が入り、エルサルバドルの藍の生産者は、グアテマラ市の商人の独占に不満を強めた。
+      source: "https://en.wikipedia.org/wiki/Captaincy_General_of_Guatemala"
+    - from: 1808
+      to: 1821
+      text: 本国がナポレオンに占領されると、1811年のサンサルバドルの反乱などが起きたが、総監ブスタマンテが抑えた。メキシコでイトゥルビデが独立すると、1821年9月15日、グアテマラ市の会議が独立を宣言した。中米はいったんメキシコ帝国に併合され（1822年）、1823年に中央アメリカ連邦として離れる。
+      source: "https://ja.wikipedia.org/wiki/中央アメリカ連邦"
+  source:
+    - "https://ja.wikipedia.org/wiki/グアテマラ総督領"
+    - "https://en.wikipedia.org/wiki/Captaincy_General_of_Guatemala"
+
+- id: spanish_cuba
+  name: スペイン領キューバ
+  parent: spain
+  kind: 植民地（総監領）
+  match:
+    labels: [キューバ]
+  from: 1516
+  to: 1898
+  polities: [cuba, taino]
+  governors:
+    - { name: ディエゴ・ベラスケス, title: 総督, from: 1511, to: 1524, note: キューバを征服し、ハバナなどの町を建てる。コルテスのメキシコ遠征を送り出した, source: "https://en.wikipedia.org/wiki/Diego_Velázquez_de_Cuéllar" }
+    - { name: ミゲル・タコン, title: 総監, from: 1834, to: 1838, source: "https://en.wikipedia.org/wiki/Miguel_Tacón_y_Rosique" }
+    - { name: アルセニオ・マルティネス・カンポス, title: 総監, from: 1876, to: 1879, note: サンホン協定（1878年）で十年戦争を終わらせる, source: "https://en.wikipedia.org/wiki/Arsenio_Martínez_Campos" }
+    - { name: バレリアーノ・ウェイレル, title: 総監, from: 1896, to: 1897, note: 農民を強制収容所に集める集住政策で多くの死者を出す, source: "https://en.wikipedia.org/wiki/Valeriano_Weyler" }
+    - { name: ラモン・ブランコ, title: 最後の総監, from: 1897, to: 1898, source: "https://en.wikipedia.org/wiki/Ramón_Blanco_y_Erenas" }
+  periods:
+    - from: 1516
+      to: 1599
+      text: 1511年からベラスケスが征服し、タイノの首長アトゥエイは火あぶりにされた。先住民はエンコミエンダの酷使と疫病でほとんど死に絶えた。キューバはメキシコ征服の出発点となり、その後はハバナの港が、アメリカの銀を積んでセビリャへ帰る船団の集まる所になった。
+      source: "https://ja.wikipedia.org/wiki/キューバの歴史"
+    - from: 1600
+      to: 1761
+      text: ハバナはモロ要塞などで固められ、スペイン帝国の大西洋航路の要になった。島の経済はタバコ・牛と船団への補給が中心で、たばこの専売（1717年）に農民が反発した。カリブ海では、イギリス・フランス・オランダの植民地と海賊がスペインの独占を崩していった。
+      source: "https://en.wikipedia.org/wiki/Captaincy_General_of_Cuba"
+    - from: 1762
+      to: 1837
+      text: 七年戦争でイギリスがハバナを占領し（1762–63年）、港を開いて奴隷を大量に持ち込んだ。返還後、本国は守りを固めて貿易をゆるめた。1791年からのハイチ革命でサン＝ドマングの砂糖が止まると、キューバが代わりに世界一の砂糖の産地になり、黒人奴隷の輸入が急増した。大陸の植民地が独立しても、奴隷の反乱を恐れるクリオーリョは本国に残った（「いつも忠実な島」）。
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Havana"
+    - from: 1838
+      to: 1878
+      text: 砂糖の農園に鉄道（1837年、スペイン本国より早い）と蒸気の製糖機が入った。本国は島を特別法で治め、議会に代表を送らせなかった。アメリカ合衆国の南部には島を買おう・奪おうという動きもあった。1868年、セスペデスが奴隷を解放して独立を叫び（十年戦争）、1878年のサンホン協定で終わった。
+      source: "https://ja.wikipedia.org/wiki/十年戦争_(キューバ)"
+    - from: 1879
+      to: 1898
+      text: 1886年に奴隷制が廃止され、砂糖の輸出先はアメリカ合衆国が中心になった。1895年、ホセ・マルティが独立戦争を起こして戦死し、総監ウェイレルの集住政策で多くの住民が死んだ。1898年、ハバナでアメリカの戦艦メイン号が爆沈して米西戦争になり、パリ条約でスペインはキューバを手放した。
+      source: "https://ja.wikipedia.org/wiki/キューバ独立戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/キューバの歴史"
+    - "https://en.wikipedia.org/wiki/Captaincy_General_of_Cuba"
+
+- id: spanish_santo_domingo
+  name: サント・ドミンゴ（スペイン領イスパニョーラ島）
+  parent: spain
+  kind: 植民地（総監領。首府サント・ドミンゴ）
+  match:
+    labels: [サント・ドミンゴ, イスパニョーラ島西部]
+  from: 1516
+  to: 1865
+  polities: [dominican_republic, haiti, taino]
+  governors:
+    - { name: ニコラス・デ・オバンド, title: 総督, from: 1502, to: 1509, note: タイノの首長たちを殺し、エンコミエンダを広める, source: "https://en.wikipedia.org/wiki/Nicolás_de_Ovando" }
+    - { name: ディエゴ・コロン, title: 総督（インディアス提督）, from: 1509, to: 1523, note: コロンブスの子, source: "https://en.wikipedia.org/wiki/Diego_Columbus" }
+    - { name: フアン・サンチェス・ラミレス, title: 総督, from: 1809, to: 1811, note: フランス軍を追い出し、スペインに戻す（再征服）, source: "https://en.wikipedia.org/wiki/Juan_Sánchez_Ramírez" }
+    - { name: ペドロ・サンタナ, title: 総監, from: 1861, to: 1862, note: ドミニカ共和国の大統領から、スペインへの再併合を求めて総監に, source: "https://en.wikipedia.org/wiki/Pedro_Santana" }
+  periods:
+    - from: 1516
+      to: 1605
+      text: コロンブスの来航（1492年）からカスティーリャが治めた最初の植民地で、サント・ドミンゴには新大陸で最初の聴訴院（1511年）と大学が置かれた。タイノは酷使と疫病で激減し、ラス・カサスがその惨状を告発した。サトウキビの農園のためアフリカから奴隷が運ばれたが、メキシコ・ペルーの征服後は人が去り、島は寂れた。
+      source: "https://ja.wikipedia.org/wiki/サント・ドミンゴ総監領"
+    - from: 1606
+      to: 1794
+      text: 密貿易を断つため、1605–06年に総督が島の北西部の住民を首府の近くへ移した（オソリオの過疎化）。空いた西部には牛を狩るフランス人のバッカニア（海賊）が住みつき、1697年のライスワイク条約で西部はフランス領サン＝ドマングになった。東部は牛を育てる貧しい植民地のまま、西の砂糖植民地に牛を売った。
+      source: "https://en.wikipedia.org/wiki/Devastaciones_de_Osorio"
+    - from: 1795
+      to: 1821
+      text: 1795年のバーゼルの和約で、スペインは島の東部もフランスに渡した。1809年に地元の人々がフランス軍を追い出してスペインに戻ったが（再征服）、本国は顧みず（「愚かなスペイン」の時代）、1821年に独立を宣言し、翌年ハイチに併合された。
+      source: "https://en.wikipedia.org/wiki/España_Boba"
+    - from: 1861
+      to: 1865
+      text: 1844年にハイチから独立したドミニカ共和国は、ハイチの再侵攻を恐れ、大統領サンタナが1861年にスペインへの再併合を求めた。アメリカ合衆国は南北戦争中でモンロー主義を守れなかった。しかし本国の役人と軍の横暴に反発して復古戦争が起き、スペインは1865年に撤退した。
+      source: "https://en.wikipedia.org/wiki/Dominican_Restoration_War"
+  source:
+    - "https://ja.wikipedia.org/wiki/サント・ドミンゴ総監領"
+    - "https://en.wikipedia.org/wiki/Captaincy_General_of_Santo_Domingo"
+
+- id: spanish_puerto_rico
+  name: スペイン領プエルトリコ
+  parent: spain
+  kind: 植民地（総監領）
+  match:
+    labels: [プエルトリコ]
+  from: 1516
+  to: 1898
+  polities: [taino]
+  governors:
+    - { name: フアン・ポンセ・デ・レオン, title: 総督, from: 1509, to: 1511, note: 島を征服し、のちフロリダに到達, source: "https://ja.wikipedia.org/wiki/フアン・ポンセ・デ・レオン" }
+  periods:
+    - from: 1516
+      to: 1764
+      text: 1508年からポンセ・デ・レオンが征服し、タイノは1511年に反乱を起こしたが敗れ、疫病と酷使で激減した。サン・フアンの港はカリブ海の入り口を守る要塞（エル・モロ）で固められ、イギリス（ドレーク 1595年）やオランダ（1625年）の攻撃を退けた。島はメキシコの銀からの補助金（シトゥアド）に頼る軍事拠点だった。
+      source: "https://ja.wikipedia.org/wiki/プエルトリコの歴史"
+    - from: 1765
+      to: 1867
+      text: 1765年の巡察の後、本国は貿易をゆるめ、コーヒーや砂糖の農園が広がった。大陸の植民地が独立すると、1815年の勅令（恩恵の勅令）で外国のカトリック教徒の移住を認め、王党派の亡命者も流れ込んで人口が増えた。キューバとともに、スペインに残った「いつも忠実な」植民地だった。
+      source: "https://en.wikipedia.org/wiki/Real_Cédula_de_Gracias_of_1815"
+    - from: 1868
+      to: 1898
+      text: 1868年、独立を求めるラレスの叫びが起きたがすぐ鎮圧された。1873年に奴隷制が廃止される。1897年、本国は自治を認める憲章を与えたが、翌1898年の米西戦争でアメリカ軍が上陸し、パリ条約でアメリカ合衆国の領土になった。
+      source: "https://en.wikipedia.org/wiki/Grito_de_Lares"
+  source:
+    - "https://ja.wikipedia.org/wiki/プエルトリコの歴史"
+
+- id: spanish_philippines
+  name: スペイン領フィリピン
+  parent: spain
+  kind: 植民地（総督領。1821年まではヌエバ・エスパーニャ副王の下）
+  # スールー・マギンダナオの保護下の王国（indirect）は含めない
+  match:
+    labels: [スペイン領フィリピン]
+    exclude_certainty: [indirect]
+  from: 1565
+  to: 1898
+  polities: [philippines]
+  governors:
+    - { name: ミゲル・ロペス・デ・レガスピ, title: 初代総督, from: 1565, to: 1572, note: セブに上陸し、1571年にマニラを建てる, source: "https://ja.wikipedia.org/wiki/ミゲル・ロペス・デ・レガスピ" }
+    - { name: セバスティアン・ウルタド・デ・コルクエラ, title: 総督, from: 1635, to: 1644, note: ミンダナオ・スールーのイスラーム勢力を攻める, source: "https://en.wikipedia.org/wiki/Sebastián_Hurtado_de_Corcuera" }
+    - { name: シモン・デ・アンダ, title: 総督, from: 1770, to: 1776, note: イギリスのマニラ占領（1762–64年）のとき、地方で抵抗を続けた, source: "https://en.wikipedia.org/wiki/Simón_de_Anda_y_Salazar" }
+    - { name: ホセ・バスコ・イ・バルガス, title: 総督, from: 1778, to: 1787, note: タバコの専売を始める, source: "https://en.wikipedia.org/wiki/José_Basco_y_Vargas" }
+    - { name: ナルシソ・クラベリア, title: 総督, from: 1844, to: 1849, note: フィリピン人にスペイン式の姓を付けさせる, source: "https://en.wikipedia.org/wiki/Narciso_Clavería_y_Zaldúa" }
+    - { name: カミロ・デ・ポラビエハ, title: 総督, from: 1896, to: 1897, note: ホセ・リサールを処刑, source: "https://en.wikipedia.org/wiki/Camilo_García_de_Polavieja" }
+    - { name: フェルナンド・プリモ・デ・リベラ, title: 総督, from: 1897, to: 1898, note: アギナルドとビアク・ナ・バトの協定を結ぶ, source: "https://en.wikipedia.org/wiki/Fernando_Primo_de_Rivera" }
+  periods:
+    - from: 1565
+      to: 1600
+      text: 1565年、メキシコから来たレガスピがセブに上陸し、1571年にマニラを建てた。島々の名は皇太子フェリペ（フェリペ2世）にちなむ。マニラとアカプルコを結ぶガレオン貿易で、メキシコの銀と中国の絹・陶磁器が交換され、マニラには福建の商人（サングレー）が集まった。
+      source: "https://ja.wikipedia.org/wiki/スペイン領東インド"
+    - from: 1601
+      to: 1761
+      text: 植民地の統治は修道会に頼り、修道士が村々でカトリックを広めた（フィリピンはアジアで数少ないキリスト教国になる）。南のミンダナオ・スールーのイスラーム教徒（モロ）とは長く戦い続けた。華人は反乱と虐殺（1603年・1639年）を繰り返し経験した。オランダ艦隊の攻撃（1646年など）も退けた。
+      source: "https://en.wikipedia.org/wiki/Spanish_East_Indies"
+    - from: 1762
+      to: 1814
+      text: 七年戦争でイギリスがマニラを占領した（1762–64年）。シモン・デ・アンダが地方で抵抗を続け、各地で反乱も起きた。返還後、本国はタバコの専売（1782年）や王立フィリピン会社（1785年）で植民地を稼げるものにしようとした。1815年、最後のガレオン船がアカプルコから帰り、ガレオン貿易は終わった。
+      source: "https://en.wikipedia.org/wiki/British_occupation_of_Manila"
+    - from: 1815
+      to: 1871
+      text: メキシコの独立（1821年）で、フィリピンは本国が直接治めるようになった。1834年にマニラが外国の船に開かれ、サトウキビ・マニラ麻・タバコの輸出が伸びて、地主の混血（メスティーソ）の中から教育を受けた人々（イルストラード）が育った。1869年のスエズ運河の開通で、本国との行き来も速くなった。
+      source: "https://en.wikipedia.org/wiki/Philippines_under_Spanish_rule"
+    - from: 1872
+      to: 1898
+      text: 1872年のカビテの反乱の後、フィリピン人の神父3人が処刑され、改革を求める運動（プロパガンダ運動）が始まった。ホセ・リサールは小説『ノリ・メ・タンヘレ』で修道士の支配を描いた。1892年、ボニファシオが秘密結社カティプナンをつくり、1896年に独立の戦い（フィリピン革命）を始めた。リサールは処刑され、1898年の米西戦争でアメリカに渡された。
+      source: "https://ja.wikipedia.org/wiki/フィリピン革命"
+  source:
+    - "https://ja.wikipedia.org/wiki/スペイン領東インド"
+    - "https://en.wikipedia.org/wiki/Spanish_East_Indies"
+
+- id: spanish_florida
+  name: スペイン領フロリダ
+  names:
+    - { to: 1763, name: ラ・フロリダ }
+    - { from: 1783, name: 東フロリダ・西フロリダ（スペイン領） }
+  parent: spain
+  kind: 植民地（総督領。キューバ総監の下）
+  match:
+    contains: [ラ・フロリダ]
+    labels: [東フロリダ（スペイン領）, 西フロリダ（スペイン領）, 西フロリダ（スペイン軍の占領）, ナチェズ（アメリカ領と決まり、引き渡し待ち）]
+  from: 1565
+  to: 1821
+  polities: [seminole, creek, usa]
+  governors:
+    - { name: ペドロ・メネンデス・デ・アビレス, title: 先遣総督（アデランタード）, from: 1565, to: 1574, note: セント・オーガスティンを建て、フランスのユグノーのフォート・カロリーヌを滅ぼす, source: "https://ja.wikipedia.org/wiki/ペドロ・メネンデス・デ・アビレス" }
+    - { name: ビセンテ・マヌエル・デ・セスペデス, title: 東フロリダ総督, from: 1784, to: 1790, source: "https://en.wikipedia.org/wiki/Vicente_Manuel_de_Céspedes" }
+    - { name: ホセ・コッピンジャー, title: 最後の東フロリダ総督, from: 1816, to: 1821, source: "https://en.wikipedia.org/wiki/José_María_Coppinger" }
+  periods:
+    - from: 1565
+      to: 1680
+      text: 1565年、本国はメキシコの銀を運ぶ船団の航路（フロリダ海峡）を守るため、セント・オーガスティンを建て、近くにあったフランスのユグノーの植民地を滅ぼした。北のサンタ・エレナ（いまのサウスカロライナ）が最初の首府だったが1587年に捨てられた。フランシスコ会の布教村が、ティムクア・グアレ・アパラチーの村々に広がった。
+      source: "https://en.wikipedia.org/wiki/Spanish_Florida"
+    - from: 1681
+      to: 1763
+      text: 北にイギリスのカロライナ植民地（1670年）ができると、イギリス人と組んだ先住民が奴隷狩りで布教村を襲い、1704年ごろまでに布教村はほとんど壊された。スペインは逃げてきた奴隷に自由を約束し、黒人の町モーセ砦（1738年）をつくった。七年戦争で負けたスペインは、1763年のパリ条約でフロリダをイギリスに渡した（キューバのハバナを返してもらう代わり）。
+      source: "https://en.wikipedia.org/wiki/Fort_Mose_Historic_State_Park"
+    - from: 1779
+      to: 1782
+      text: 1763–83年はイギリス領（東フロリダ・西フロリダ）。アメリカ独立戦争にスペインがフランスの側で加わると（1779年）、ルイジアナ総督ガルベスがバトンルージュ・モービル（1780年）・ペンサコーラ（1781年）を落とし、西フロリダを占領した。
+      source: "https://en.wikipedia.org/wiki/Siege_of_Pensacola"
+    - from: 1783
+      to: 1821
+      text: 1783年のパリ条約でフロリダはスペインに戻ったが、アメリカ合衆国の入植者が押し寄せた。西フロリダの一部は1810年の反乱の後、合衆国に併合された。逃亡奴隷をかくまうセミノールを攻めて、ジャクソン将軍が1818年に侵攻し（第一次セミノール戦争）、守りきれないと見たスペインは1819年のアダムズ＝オニス条約でフロリダを売り渡した（1821年に引き渡し）。
+      source: "https://ja.wikipedia.org/wiki/アダムズ＝オニス条約"
+  source:
+    - "https://en.wikipedia.org/wiki/Spanish_Florida"
+
+- id: spanish_louisiana
+  name: スペイン領ルイジアナ
+  parent: spain
+  kind: 植民地（総督領。キューバ総監の下）
+  match:
+    labels: [ルイジアナ（スペイン領）]
+  from: 1763
+  to: 1802
+  polities: [usa]
+  governors:
+    - { name: アントニオ・デ・ウジョア, title: 初代総督, from: 1766, to: 1768, note: フランス系住民の反乱で追い出される, source: "https://en.wikipedia.org/wiki/Antonio_de_Ulloa" }
+    - { name: アレハンドロ・オライリー, title: 総督, from: 1769, to: 1770, note: 反乱の指導者を処刑し、スペインの統治を固める, source: "https://en.wikipedia.org/wiki/Alejandro_O'Reilly" }
+    - { name: ベルナルド・デ・ガルベス, title: 総督, from: 1777, to: 1785, note: アメリカ独立戦争で西フロリダのイギリス領を攻め落とす, source: "https://ja.wikipedia.org/wiki/ベルナルド・デ・ガルベス" }
+    - { name: フランシスコ・ルイス・エクトル・デ・カロンデレ, title: 総督, from: 1791, to: 1797, source: "https://en.wikipedia.org/wiki/Francisco_Luis_Héctor_de_Carondelet" }
+    - { name: フアン・マヌエル・デ・サルセド, title: 最後の総督, from: 1801, to: 1803, source: "https://en.wikipedia.org/wiki/Juan_Manuel_de_Salcedo" }
+  periods:
+    - from: 1763
+      to: 1776
+      text: 七年戦争の終わりに、フランスはミシシッピ川の西のルイジアナを、同盟国スペインに秘密に譲った（フォンテーヌブロー条約、1762年）。イギリスに渡す代わりに、メキシコへの緩衝地帯として持たせたのである。1768年、フランス系の住民（クレオール）が初代総督ウジョアを追い出し、翌年オライリーが軍を率いて反乱を鎮めた。
+      source: "https://en.wikipedia.org/wiki/Louisiana_(New_Spain)"
+    - from: 1777
+      to: 1795
+      text: アメリカ独立戦争では、総督ガルベスがニューオーリンズからアメリカの独立派に武器を送り、スペインが参戦すると西フロリダのイギリス領を落とした。独立後は、ミシシッピ川を下ってニューオーリンズで荷を積み替える合衆国の西部の農民との関係が問題になった。カナダを追われたアカディア人（ケイジャン）も移り住んだ。
+      source: "https://ja.wikipedia.org/wiki/ベルナルド・デ・ガルベス"
+    - from: 1796
+      to: 1802
+      text: 1795年のピンクニー条約で、スペインは合衆国にミシシッピ川の航行とニューオーリンズの利用を認めた。1800年、ナポレオンに迫られたスペインは、サン・イルデフォンソの秘密条約でルイジアナをフランスに返した。引き渡しは1803年で、フランスは同じ年にルイジアナを合衆国に売った（ルイジアナ購入）。
+      source: "https://ja.wikipedia.org/wiki/ルイジアナ買収"
+  source:
+    - "https://en.wikipedia.org/wiki/Louisiana_(New_Spain)"
+
+# ---------------- イギリス ----------------
+
+- id: massachusetts_bay
+  name: マサチューセッツ湾植民地
+  names:
+    - { to: 1628, name: プリマス植民地（ニューイングランド）, kind: 植民地（入植者の自治） }
+    - { from: 1692, name: マサチューセッツ湾直轄植民地, kind: 王領植民地（国王の任命する総督） }
+  parent: britain
+  kind: 植民地（会社の特許状による自治）
+  # プリマス植民地（1620–91）は1691年まで別の植民地だが、ここにまとめる
+  match:
+    labels: [ニューイングランド, プリマス植民地, マサチューセッツ湾植民地, マサチューセッツ湾植民地（メイン）, マサチューセッツ植民地, マサチューセッツ植民地（メイン地区）, マサチューセッツ植民地（フランスとの係争地）, セイラム（ニューイングランド会社）, ペノブスコットの交易所（プリマス植民地）]
+  from: 1620
+  to: 1775
+  polities: [usa]
+  governors:
+    - { name: ウィリアム・ブラッドフォード, title: プリマス植民地の総督, from: 1621, to: 1656, note: 何度も選ばれた（途中に別の総督の年がある）, source: "https://en.wikipedia.org/wiki/William_Bradford_(governor)" }
+    - { name: ジョン・ウィンスロップ, title: マサチューセッツ湾植民地の総督, from: 1630, to: 1649, note: 「丘の上の町」を説いたピューリタンの指導者。何度も選ばれた, source: "https://en.wikipedia.org/wiki/John_Winthrop" }
+    - { name: エドマンド・アンドロス, title: ニューイングランド王領の総督, from: 1686, to: 1689, note: 名誉革命の報せでボストン市民に捕らえられる, source: "https://en.wikipedia.org/wiki/Edmund_Andros" }
+    - { name: ウィリアム・フィップス, title: 初代の王領総督, from: 1692, to: 1694, note: セイラムの魔女裁判のときの総督, source: "https://en.wikipedia.org/wiki/William_Phips" }
+    - { name: トマス・ハッチンソン, title: 総督, from: 1771, to: 1774, note: ボストン茶会事件のときの総督, source: "https://en.wikipedia.org/wiki/Thomas_Hutchinson_(governor)" }
+    - { name: トマス・ゲイジ, title: 最後の王領総督, from: 1774, to: 1775, note: 北アメリカのイギリス軍司令官を兼ねる, source: "https://en.wikipedia.org/wiki/Thomas_Gage" }
+  periods:
+    - from: 1620
+      to: 1629
+      text: 1620年、本国の国教会から離れた分離派のピューリタン（ピルグリム・ファーザーズ）が、メイフラワー号でプリマスに着き、船の中で自分たちで政治を行う誓約（メイフラワー誓約）を結んだ。最初の冬に半数が死んだが、先住民ワンパノアグの助けで生き延びた。
+      source: "https://ja.wikipedia.org/wiki/ピルグリム・ファーザーズ"
+    - from: 1630
+      to: 1659
+      text: チャールズ1世の専制とピューリタンへの圧迫を逃れて、1630年からウィンスロップらのピューリタンが大挙して移住し、ボストンを建てた（大移住）。会社の特許状を植民地に持ってきて、教会員の男子が総督を選ぶ自治を行い、ハーヴァード大学（1636年）を建てた。異端とされたロジャー・ウィリアムズはロードアイランドへ追われた。本国のピューリタン革命では議会派の側だった。
+      source: "https://en.wikipedia.org/wiki/Massachusetts_Bay_Colony"
+    - from: 1660
+      to: 1691
+      text: 王政復古の本国は航海法で植民地の貿易を縛り、マサチューセッツはそれを無視した。1675–76年、ワンパノアグのメタコメット（フィリップ王）との戦争で、先住民も入植者も多くが死んだ。1684年に特許状が取り消され、ジェームズ2世はニューイングランド王領を置いてアンドロスに治めさせたが、名誉革命の報せで市民がアンドロスを捕らえた。
+      source: "https://en.wikipedia.org/wiki/King_Philip's_War"
+    - from: 1692
+      to: 1763
+      text: 1691年の新しい特許状で、プリマスとメインを合わせた王領植民地になり、総督は国王が任命し、議会の議員の資格は教会員でなく財産で決まるようになった。1692年にセイラムの魔女裁判。ボストンは漁業・造船と、ラム酒・奴隷・糖蜜の三角貿易で栄えた。英仏の植民地戦争ではフランスのルイブール要塞を落とした（1745年）。
+      source: "https://en.wikipedia.org/wiki/Province_of_Massachusetts_Bay"
+    - from: 1764
+      to: 1775
+      text: 七年戦争後、本国は砂糖法・印紙法（1765年）・タウンゼンド諸法で課税を強め、ボストンは反対運動の中心になった。ボストン虐殺事件（1770年）、ボストン茶会事件（1773年）に対して、本国は港を閉じ自治を取り上げる「耐えがたき諸法」で応じた。1775年4月、レキシントン・コンコードの戦いで独立戦争が始まった。
+      source: "https://ja.wikipedia.org/wiki/ボストン茶会事件"
+  source:
+    - "https://en.wikipedia.org/wiki/Massachusetts_Bay_Colony"
+    - "https://en.wikipedia.org/wiki/Province_of_Massachusetts_Bay"
+
+- id: province_of_new_york
+  name: ニューヨーク植民地
+  parent: britain
+  kind: 植民地（1664–85年はヨーク公の領地、のち王領植民地）
+  match:
+    labels: [ニューヨーク植民地, ヨーク公領, ヨーク公領（デラウェア）, ニューヨーク植民地（ナイアガラ砦）, ニューヨーク植民地（係争地）, ニューヨーク（イギリス軍の占領）]
+  from: 1664
+  to: 1783
+  polities: [usa, iroquois]
+  governors:
+    - { name: リチャード・ニコルズ, title: 初代総督, from: 1664, to: 1668, note: オランダからニューアムステルダムを奪う, source: "https://en.wikipedia.org/wiki/Richard_Nicolls" }
+    - { name: エドマンド・アンドロス, title: 総督, from: 1674, to: 1681, source: "https://en.wikipedia.org/wiki/Edmund_Andros" }
+    - { name: ジェイコブ・ライスラー, title: 総督代行（反乱）, from: 1689, to: 1691, note: 名誉革命に乗じて実権を握り、のち処刑される, source: "https://en.wikipedia.org/wiki/Leisler's_Rebellion" }
+    - { name: ウィリアム・トライオン, title: 最後の文官総督, from: 1771, to: 1780, source: "https://en.wikipedia.org/wiki/William_Tryon" }
+  periods:
+    - from: 1664
+      to: 1688
+      text: 1664年、国王チャールズ2世は弟のヨーク公（のちのジェームズ2世）にオランダ領ニューネーデルラントを与え、艦隊がニューアムステルダムを無血で奪ってニューヨークと名づけた（第二次英蘭戦争）。1673年にオランダがいったん奪い返したが、翌年のウェストミンスター条約で戻った。オランダ系の住民と商人はそのまま残った。
+      source: "https://en.wikipedia.org/wiki/Province_of_New_York"
+    - from: 1689
+      to: 1753
+      text: 名誉革命の報せを受けて、ライスラーの反乱が起きた（1689–91年）。ニューヨーク港は毛皮・小麦粉の輸出と私掠船・密貿易で栄え、イロコイ連邦との同盟（「盟約の鎖」）がフランス領カナダに対する北の守りになった。1735年、ゼンガー事件で出版の自由が争われた。
+      source: "https://en.wikipedia.org/wiki/Leisler's_Rebellion"
+    - from: 1754
+      to: 1775
+      text: 1754年のオールバニ会議で、フランクリンが植民地の連合を提案したが実らなかった。フレンチ＝インディアン戦争ではニューヨークが北の戦場になり、ナイアガラ砦を奪った（1759年）。戦後、印紙法会議（1765年）がニューヨークで開かれ、課税への反対で植民地がまとまった。
+      source: "https://ja.wikipedia.org/wiki/オールバニ会議"
+    - from: 1776
+      to: 1783
+      text: 1776年、イギリス軍がワシントン軍を破ってニューヨーク市を占領し、独立戦争の間ずっとイギリス軍の本拠と王党派（ロイヤリスト）の避難所になった。北のサラトガの戦い（1777年）でイギリス軍が降伏したのが、フランス参戦のきっかけになった。1783年のパリ条約の後、イギリス軍は撤退し、多くの王党派がカナダへ移った。
+      source: "https://en.wikipedia.org/wiki/New_York_and_New_Jersey_campaign"
+  source:
+    - "https://en.wikipedia.org/wiki/Province_of_New_York"
+
+- id: province_of_pennsylvania
+  name: ペンシルヴェニア植民地
+  parent: britain
+  kind: 領主植民地（ペン家）
+  match:
+    labels: [ペンシルヴェニア植民地, ペンシルヴェニア植民地（下流3郡）, フィラデルフィア（イギリス軍の占領）]
+  from: 1681
+  to: 1777
+  polities: [usa]
+  governors:
+    - { name: ウィリアム・ペン, title: 領主, from: 1681, to: 1718, note: クエーカー教徒。国王が父への借りを返すために土地を与えた, source: "https://ja.wikipedia.org/wiki/ウィリアム・ペン" }
+    - { name: ジョン・ペン, title: 副総督（ペン家の孫）, from: 1773, to: 1776, note: 1763–71年にも副総督, source: "https://en.wikipedia.org/wiki/John_Penn_(governor)" }
+  periods:
+    - from: 1681
+      to: 1720
+      text: 1681年、チャールズ2世がクエーカー教徒のウィリアム・ペンに広い土地を与えた。ペンは信教の自由を約束する「聖なる実験」を掲げてフィラデルフィア（兄弟愛の町）を建て、先住民レナペと条約を結んで土地を買った。本国で迫害されたクエーカーのほか、ドイツ・オランダの宗派の人々も移り住んだ。
+      source: "https://en.wikipedia.org/wiki/Province_of_Pennsylvania"
+    - from: 1721
+      to: 1763
+      text: 小麦や小麦粉を西インド諸島へ輸出して豊かになり、フィラデルフィアは北アメリカの植民地で最大の都市の一つになった。ドイツ系（ペンシルヴェニア・ダッチ）やスコットランド系アイルランド人が奥地を開いた。フランクリンが図書館・大学・新聞を興した。一方、オハイオ川の分かれ目（いまのピッツバーグ）をめぐりフランスと争い、フレンチ＝インディアン戦争の始まりの地になった。
+      source: "https://ja.wikipedia.org/wiki/ベンジャミン・フランクリン"
+    - from: 1764
+      to: 1777
+      text: 本国の課税に反対する運動が広がり、1774年の第1回大陸会議、1775年の第2回大陸会議がフィラデルフィアで開かれ、1776年7月4日、独立宣言がここで採択された。1777年から翌年まで、イギリス軍がフィラデルフィアを占領した。
+      source: "https://ja.wikipedia.org/wiki/アメリカ独立宣言"
+  source:
+    - "https://en.wikipedia.org/wiki/Province_of_Pennsylvania"
+
+- id: province_of_carolina
+  name: サウスカロライナ植民地
+  names:
+    - { to: 1711, name: カロライナ植民地, kind: 領主植民地（8人の領主） }
+  parent: britain
+  kind: 植民地（1729年から王領植民地）
+  match:
+    labels: [カロライナ植民地, サウスカロライナ植民地, チャールストン（イギリス軍の占領）]
+  from: 1663
+  to: 1781
+  polities: [usa, cherokee, creek]
+  governors:
+    - { name: ジェームズ・グレン, title: 総督, from: 1743, to: 1756, source: "https://en.wikipedia.org/wiki/James_Glen" }
+  periods:
+    - from: 1663
+      to: 1711
+      text: 1663年、チャールズ2世が、王政復古に功のあった8人の貴族（領主）にカロライナ（国王の名にちなむ）を与えた。1670年、バルバドスの砂糖農園主の子弟が多く移ってチャールストンを建て、カリブ海式の奴隷制を持ち込んだ。先住民との鹿皮の交易と、先住民を捕らえて売る奴隷貿易で栄え、南のスペイン領フロリダの布教村を荒らした。
+      source: "https://en.wikipedia.org/wiki/Province_of_Carolina"
+    - from: 1712
+      to: 1762
+      text: 北と南が分かれた。ヤマシー戦争（1715–17年）で領主の守りが頼りにならないとわかり、入植者が領主を拒んで、1729年に王領植民地になった。米と藍の大農園で黒人奴隷が人口の多数を占めるようになり、1739年にはストノの奴隷反乱が起きた。チャールストンは南部で最も豊かな港町だった。
+      source: "https://en.wikipedia.org/wiki/Province_of_South_Carolina"
+    - from: 1763
+      to: 1781
+      text: 本国の課税に反対し、1776年に独立派が政府をつくった。独立戦争の後半、イギリス軍は南部の王党派を頼りに南へ戦場を移し、1780年にチャールストンを落としたが、奥地のゲリラ戦に苦しみ、1781年にヨークタウンで降伏した。
+      source: "https://en.wikipedia.org/wiki/Siege_of_Charleston"
+  source:
+    - "https://en.wikipedia.org/wiki/Province_of_Carolina"
+    - "https://en.wikipedia.org/wiki/Province_of_South_Carolina"
+
+- id: province_of_north_carolina
+  name: ノースカロライナ植民地
+  names:
+    - { to: 1711, name: ノースカロライナ（カロライナ植民地の北部）, kind: 領主植民地の一部（副総督） }
+  parent: britain
+  kind: 植民地（1729年から王領植民地）
+  match:
+    labels: [ノースカロライナ植民地]
+  from: 1663
+  to: 1775
+  polities: [usa, cherokee]
+  governors:
+    - { name: ウィリアム・トライオン, title: 総督, from: 1765, to: 1771, note: 奥地の農民の反乱（レギュレーター運動）をアラマンスの戦いで鎮める, source: "https://en.wikipedia.org/wiki/William_Tryon" }
+    - { name: ジョサイア・マーティン, title: 最後の王領総督, from: 1771, to: 1775, source: "https://en.wikipedia.org/wiki/Josiah_Martin" }
+  periods:
+    - from: 1663
+      to: 1728
+      text: カロライナの北部（アルベマール湾の周り）は、ヴァージニアから移った小農が多く、良い港がなかった。1711–15年のタスカローラ戦争で入植者と先住民が争い、敗れたタスカローラの多くは北へ逃れてイロコイ連邦に加わった。1712年に南と別の総督を持つ植民地になった。
+      source: "https://en.wikipedia.org/wiki/Province_of_North_Carolina"
+    - from: 1729
+      to: 1763
+      text: 1729年、国王が領主から買い取り、王領植民地になった。海岸ではタールなどの船の資材（海軍用品）やタバコを産し、奥地にはスコットランド系アイルランド人やドイツ系の人々が移り住んだ。
+      source: "https://en.wikipedia.org/wiki/Province_of_North_Carolina"
+    - from: 1764
+      to: 1775
+      text: 奥地の農民は、海岸の役人や議会の不正と重税に反発して「レギュレーター」を名のって立ち上がり、1771年のアラマンスの戦いで総督トライオンに鎮められた。本国の課税への反対はここでも強く、1775年に総督マーティンは逃れた。
+      source: "https://en.wikipedia.org/wiki/Regulator_Movement"
+  source:
+    - "https://en.wikipedia.org/wiki/Province_of_North_Carolina"
+
+- id: province_of_georgia
+  name: ジョージア植民地
+  parent: britain
+  kind: 植民地（1732–52年は信託委員会の管理、のち王領植民地）
+  match:
+    labels: [ジョージア植民地, ジョージア植民地（スペインとの係争地）, サヴァンナ（イギリス軍の占領）]
+  from: 1733
+  to: 1781
+  polities: [usa, creek]
+  governors:
+    - { name: ジェームズ・オグルソープ, title: 創設者（信託委員）, from: 1733, to: 1743, source: "https://en.wikipedia.org/wiki/James_Oglethorpe" }
+    - { name: ジェームズ・ライト, title: 王領総督, from: 1760, to: 1782, note: 1776–79年は追われていた, source: "https://en.wikipedia.org/wiki/Sir_James_Wright,_1st_Baronet" }
+  periods:
+    - from: 1733
+      to: 1751
+      text: 13植民地で最後にできた植民地。国王ジョージ2世の名にちなむ。オグルソープが、債務者など本国の貧しい人々の再出発の場として、またスペイン領フロリダへの守りとしてサヴァンナを建てた。初めは奴隷制とラム酒を禁じた。ジェンキンスの耳の戦争ではフロリダを攻め、ブラディ・マーシュの戦い（1742年）でスペイン軍を退けた。
+      source: "https://en.wikipedia.org/wiki/Province_of_Georgia"
+    - from: 1752
+      to: 1775
+      text: 信託委員会が特許状を返して王領植民地になり、奴隷制も認められて、米の大農園が広がった。1763年にスペインがフロリダを手放すと南の脅威がなくなり、クリークの土地を奪いながら奥地へ広がった。
+      source: "https://en.wikipedia.org/wiki/Province_of_Georgia"
+    - from: 1776
+      to: 1781
+      text: 独立戦争では独立派が政府をつくったが、1778年にイギリス軍がサヴァンナを奪い返し、総督ライトが戻った。王領の統治が一時的に復活した唯一の植民地だった。1782年にイギリス軍は撤退した。
+      source: "https://en.wikipedia.org/wiki/Capture_of_Savannah"
+  source:
+    - "https://en.wikipedia.org/wiki/Province_of_Georgia"
+
+- id: british_canada
+  name: イギリス領カナダ
+  names:
+    - { to: 1762, name: カナダ（イギリスの軍政）, kind: 占領地（軍政） }
+    - { from: 1763, to: 1790, name: ケベック植民地 }
+    - { from: 1791, to: 1840, name: アッパー・カナダとローワー・カナダ, kind: 植民地（2つの植民地に分割） }
+    - { from: 1841, name: カナダ連合植民地 }
+  parent: britain
+  kind: 植民地（総督の下に植民地議会）
+  match:
+    labels: [ケベック（イギリスの占領）, カナダ（イギリスの軍政）, ケベック植民地, ローワー・カナダ, アッパー・カナダ, カナダ連合植民地]
+  from: 1759
+  to: 1866
+  polities: [canada, huron, iroquois]
+  governors:
+    - { name: ジェームズ・マリー, title: 総督, from: 1760, to: 1768, note: 1764年まで軍政, source: "https://en.wikipedia.org/wiki/James_Murray_(British_Army_officer,_born_1721)" }
+    - { name: ガイ・カールトン, title: 総督, from: 1768, to: 1778, note: ケベック法（1774年）。アメリカ大陸軍の侵攻を退ける, source: "https://en.wikipedia.org/wiki/Guy_Carleton,_1st_Baron_Dorchester" }
+    - { name: ジョン・グレイヴズ・シムコー, title: アッパー・カナダ副総督, from: 1791, to: 1796, source: "https://en.wikipedia.org/wiki/John_Graves_Simcoe" }
+    - { name: ダラム伯, title: 総督・高等弁務官, from: 1838, to: 1838, note: 反乱の後に調査し、責任政府と2つのカナダの統合を勧める（ダラム報告）, source: "https://en.wikipedia.org/wiki/John_Lambton,_1st_Earl_of_Durham" }
+    - { name: シデナム男爵, title: 連合植民地の初代総督, from: 1839, to: 1841, source: "https://en.wikipedia.org/wiki/Charles_Poulett_Thomson,_1st_Baron_Sydenham" }
+    - { name: エルギン伯, title: 総督, from: 1847, to: 1854, note: 責任政府を認め、アメリカと互恵条約（1854年）を結ぶ, source: "https://en.wikipedia.org/wiki/James_Bruce,_8th_Earl_of_Elgin" }
+  periods:
+    - from: 1759
+      to: 1773
+      text: 七年戦争（フレンチ＝インディアン戦争）で、イギリス軍は1759年にケベック（アブラハム平原の戦い）、1760年にモントリオールを落とし、1763年のパリ条約でフランスはカナダを手放した。イギリスは約7万人のフランス系カトリック住民を抱えることになり、国王宣言（1763年）でケベック植民地を置き、西の土地を先住民の保留地とした。
+      source: "https://en.wikipedia.org/wiki/Province_of_Quebec_(1763–1791)"
+    - from: 1774
+      to: 1790
+      text: 1774年のケベック法で、カトリックの信仰とフランス式の民法を認めて住民をつなぎとめ、植民地の範囲をオハイオ川まで広げた。南の13植民地はこれを「耐えがたき諸法」の一つとして怒った。独立戦争では大陸軍がケベックに攻め込んだが敗れ、戦後は数万人の王党派（ロイヤリスト）が北へ逃れてきた。
+      source: "https://ja.wikipedia.org/wiki/ケベック法"
+    - from: 1791
+      to: 1837
+      text: 1791年の立憲法で、英語を話す王党派の多い西のアッパー・カナダ（いまのオンタリオ）と、フランス系の東のローワー・カナダ（いまのケベック）に分け、それぞれに議会を置いた。1812年からの米英戦争では、アメリカ軍の侵攻をイギリス軍・民兵・先住民（テカムセ）で退けた。
+      source: "https://ja.wikipedia.org/wiki/1791年立憲法"
+    - from: 1838
+      to: 1848
+      text: 総督と少数の有力者が政治を握ることに不満がたまり、1837–38年、パピノー（ローワー）とマッケンジー（アッパー）の反乱が起きた。鎮圧の後、ダラム伯は報告で、責任政府と、フランス系を英語の社会に同化させるための統合を勧めた。1841年に2つが合わさってカナダ連合植民地になり、1848年に議会の多数派が内閣をつくる責任政府が認められた。
+      source: "https://en.wikipedia.org/wiki/Durham_Report"
+    - from: 1849
+      to: 1866
+      text: 本国が自由貿易に移ると、カナダはアメリカとの互恵条約（1854年）で市場を求め、鉄道を敷いた。英語系とフランス系の対立で政治が行き詰まり、アメリカの南北戦争後の脅威もあって、1864年のシャーロットタウン会議・ケベック会議で植民地の連邦が話し合われた。1867年、英領北アメリカ法でカナダ連邦（自治領）が生まれた。
+      source: "https://ja.wikipedia.org/wiki/カナダ連邦結成"
+  source:
+    - "https://en.wikipedia.org/wiki/Province_of_Quebec_(1763–1791)"
+    - "https://en.wikipedia.org/wiki/Province_of_Canada"
+
+- id: ruperts_land
+  name: ルパートランド（ハドソン湾会社領）
+  parent: britain
+  kind: 特許会社の領地（ハドソン湾会社）
+  match:
+    labels: [ルパートランド（ハドソン湾会社）, 北西部の毛皮交易地, レッド・リヴァー植民地（ハドソン湾会社）]
+  from: 1670
+  to: 1869
+  polities: [canada]
+  governors:
+    - { name: ルパート王子, title: ハドソン湾会社の初代総裁, from: 1670, to: 1682, note: チャールズ2世のいとこ。土地の名の由来, source: "https://en.wikipedia.org/wiki/Prince_Rupert_of_the_Rhine" }
+    - { name: ジョージ・シンプソン, title: ルパートランドの総督（会社の現地の長）, from: 1821, to: 1860, source: "https://en.wikipedia.org/wiki/George_Simpson_(HBC_administrator)" }
+  periods:
+    - from: 1670
+      to: 1712
+      text: 1670年、チャールズ2世は、ハドソン湾に流れ込む川の流域すべての土地と交易の独占を、ハドソン湾会社に与えた。会社は湾の岸に砦をつくり、クリーなどの先住民がビーバーの毛皮を運んでくるのを待った。ヌーヴェル・フランスはこれを攻め、湾の砦を奪い合った（1686–1713年）。
+      source: "https://ja.wikipedia.org/wiki/ハドソン湾会社"
+    - from: 1713
+      to: 1820
+      text: 1713年のユトレヒト条約で、フランスは湾を正式にイギリスに認めた。1763年にフランスがカナダから去ると、モントリオールのスコットランド系商人が北西会社をつくって西へ進み、会社と激しく争った。1812年、セルカーク伯が会社の土地にスコットランド人のレッド・リヴァー植民地を開き、北西会社とメティ（先住民とヨーロッパ人の混血の人々）と衝突した。
+      source: "https://en.wikipedia.org/wiki/Red_River_Colony"
+    - from: 1821
+      to: 1869
+      text: 1821年、ハドソン湾会社は北西会社を吸収し、北アメリカの北半分の毛皮交易を独占した。毛皮の流行が終わり、入植の時代になると、1869年に会社は領地をカナダ自治領に売り渡した。それを知らされなかったレッド・リヴァーのメティは、リエルのもとで抵抗した（レッド・リヴァーの反乱）。
+      source: "https://en.wikipedia.org/wiki/Rupert's_Land"
+  source:
+    - "https://en.wikipedia.org/wiki/Rupert's_Land"
+
+- id: british_jamaica
+  name: イギリス領ジャマイカ
+  names:
+    - { from: 1958, name: ジャマイカ（西インド連邦）, kind: 西インド連邦の構成州 }
+  parent: britain
+  kind: 植民地（1866年から直轄植民地）
+  match:
+    labels: [ジャマイカ, 西インド連邦（ジャマイカ）]
+  from: 1655
+  to: 1961
+  polities: [jamaica]
+  governors:
+    - { name: ヘンリー・モーガン, title: 副総督, from: 1674, to: 1683, note: もとはスペイン領を荒らした私掠船（海賊）の首領, source: "https://ja.wikipedia.org/wiki/ヘンリー・モーガン" }
+    - { name: エドワード・ジョン・エア, title: 総督, from: 1864, to: 1866, note: モラント・ベイの反乱を苛烈に鎮圧し、本国で非難される, source: "https://en.wikipedia.org/wiki/Edward_John_Eyre" }
+    - { name: ヒュー・フット, title: 総督, from: 1951, to: 1957, source: "https://en.wikipedia.org/wiki/Hugh_Foot,_Baron_Caradon" }
+  periods:
+    - from: 1655
+      to: 1691
+      text: クロムウェルがスペインのカリブ海の植民地を奪おうとした「西方計画」で、1655年にイギリス軍がスペイン領ジャマイカを奪った。スペイン人が逃がした奴隷はマルーンとして山地にこもった。ポート・ロイヤルは海賊（バッカニア）の根城として栄えたが、1692年の大地震で海に沈んだ。
+      source: "https://en.wikipedia.org/wiki/Invasion_of_Jamaica"
+    - from: 1692
+      to: 1807
+      text: 砂糖のプランテーションが島を覆い、18世紀にはイギリスで最も稼ぐ植民地になった。アフリカから連れてこられた奴隷が人口の9割を占め、マルーン戦争（1730年代・1795年）や、タッキーの反乱（1760年）が起きた。不在地主の農園主たちは本国の議会で「西インド派」として力をもった。
+      source: "https://en.wikipedia.org/wiki/Colony_of_Jamaica"
+    - from: 1808
+      to: 1865
+      text: 1807年に本国が奴隷貿易を禁じ、1831年の大きな奴隷反乱（バプテスト戦争）の後、1833年の奴隷制廃止法で奴隷が解放された（徒弟制を経て1838年に完全解放）。本国が砂糖の関税の特恵をやめると（1846年）、砂糖の経済は衰えた。
+      source: "https://ja.wikipedia.org/wiki/奴隷制度廃止法"
+    - from: 1866
+      to: 1937
+      text: 1865年、土地と選挙権を奪われた黒人の不満からモラント・ベイの反乱が起き、総督エアが数百人を処刑した。本国は植民地議会を廃し、総督が治める直轄植民地にした。バナナの輸出が砂糖に代わり、多くの人がパナマ運河の工事やアメリカへ出稼ぎに出た。ガーヴィーがアフリカ回帰運動を起こした。
+      source: "https://en.wikipedia.org/wiki/Morant_Bay_rebellion"
+    - from: 1938
+      to: 1961
+      text: 世界恐慌の中、1938年に労働者の暴動とストライキが起き、バスタマンテとマンリーが労働組合と政党をつくった。1944年に普通選挙が認められ、自治が進んだ。1958年、イギリス領の島々をまとめた西インド連邦に加わったが、1961年の住民投票で抜けることを決め、1962年に独立した。
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+  source:
+    - "https://en.wikipedia.org/wiki/Colony_of_Jamaica"
+
+- id: british_barbados
+  name: イギリス領バルバドス
+  names:
+    - { from: 1958, to: 1961, name: バルバドス（西インド連邦）, kind: 西インド連邦の構成州 }
+  parent: britain
+  kind: 植民地（植民地議会のある古い植民地）
+  match:
+    labels: [バルバドス, 西インド連邦（バルバドス）]
+  from: 1627
+  to: 1966
+  polities: [barbados]
+  governors:
+    - { name: フランシス・ウィロビー, title: 総督, from: 1650, to: 1652, note: 王党派の総督。1663–66年にも総督, source: "https://en.wikipedia.org/wiki/Francis_Willoughby,_5th_Baron_Willoughby_of_Parham" }
+  periods:
+    - from: 1627
+      to: 1659
+      text: 1627年に無人の島に入植が始まり、初めはタバコと綿を作った。1640年代、オランダ領ブラジルから技術を学んでサトウキビを作り始めると、島は小さな土地に大農園が並ぶ「砂糖革命」の舞台になり、働き手は白人の年季奉公人からアフリカの奴隷へ替わった。本国のピューリタン革命では王党派が島を握り、1652年に議会派の艦隊に降った。
+      source: "https://en.wikipedia.org/wiki/Sugar_Revolution"
+    - from: 1660
+      to: 1833
+      text: 17世紀後半、バルバドスはイギリスの植民地で最も豊かになり、奴隷を使うその農園のしくみ（奴隷法典、1661年）はジャマイカやカロライナに広まった。土地が足りなくなった農園主たちは他の島や大陸へ移っていった。1816年、奴隷のブッサの反乱が起きた。
+      source: "https://en.wikipedia.org/wiki/History_of_Barbados"
+    - from: 1834
+      to: 1957
+      text: 1834年に奴隷制が廃止されたが、土地の空いていない島では解放された人々も農園で働き続けるしかなかった。古い植民地議会は白人の農園主が握り続けた。1937年の暴動をきっかけに、グラントリー・アダムズらが労働組合と政党をつくり、1951年に普通選挙が認められた。
+      source: "https://en.wikipedia.org/wiki/History_of_Barbados"
+    - from: 1958
+      to: 1966
+      text: 1958年に西インド連邦に加わり、アダムズがその首相になったが、ジャマイカ・トリニダードが抜けて連邦は1962年に解散した。バルバドスは1966年に独立した。
+      source: "https://ja.wikipedia.org/wiki/西インド連邦"
+  source:
+    - "https://en.wikipedia.org/wiki/History_of_Barbados"
+
+- id: british_guiana
+  name: イギリス領ギアナ
+  names:
+    - { to: 1813, name: ギアナ（イギリスの占領）, kind: 占領地（オランダ領の植民地） }
+    - { from: 1814, to: 1830, name: デメララ＝エセキボとベルビセ }
+  parent: britain
+  kind: 植民地（直轄植民地）
+  match:
+    labels: [ギアナ（イギリスの占領）, デメララ＝エセキボ, ベルビセ, 英領ギアナ, 英領ギアナ（ベネズエラとの係争地）, 英領ギアナ（ブラジルとの係争地）]
+  from: 1781
+  to: 1966
+  polities: [guyana]
+  periods:
+    - from: 1781
+      to: 1830
+      text: オランダ西インド会社の砂糖植民地エセキボ・デメララ・ベルビセは、イギリスとフランスの戦争のたびに占領された（1781年、1796年、1803年）。ナポレオン戦争の後、1814年の英蘭条約でイギリスのものになった。1823年、デメララの奴隷が大きな反乱を起こし、本国の奴隷制廃止の運動を勢いづけた。
+      source: "https://en.wikipedia.org/wiki/Demerara_rebellion_of_1823"
+    - from: 1831
+      to: 1899
+      text: 1831年に3つを合わせて英領ギアナとした。1834年の奴隷制廃止の後、解放された人々は農園を離れて村をつくり、農園主は代わりにインドから年季契約の労働者を大量に連れてきた（1838–1917年）。こうしてアフリカ系とインド系が並ぶ社会ができた。西の国境はベネズエラと争い、1899年の仲裁でほぼイギリスの主張どおりに決まった。
+      source: "https://en.wikipedia.org/wiki/British_Guiana"
+    - from: 1900
+      to: 1966
+      text: 砂糖とボーキサイトの輸出が経済を支えた。1953年、インド系のジェーガンの人民進歩党が選挙で勝つと、本国は冷戦の中で共産主義を恐れて憲法を停止し、軍を送った。アフリカ系のバーナムが党を割って対立が深まり、1966年にガイアナとして独立した。
+      source: "https://ja.wikipedia.org/wiki/ガイアナの歴史"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Guiana"
+
+- id: british_honduras
+  name: イギリス領ホンジュラス
+  names:
+    - { to: 1861, name: ベリーズ（イギリス人の伐採地）, kind: 入植地（スペインの主権の下での伐採権） }
+    - { from: 1973, name: ベリーズ（イギリスの自治植民地） }
+  parent: britain
+  kind: 植民地（直轄植民地）
+  match:
+    labels: [ベリーズ（イギリス人の伐採地）, 英領ホンジュラス, ベリーズ（イギリスの自治植民地）]
+  from: 1665
+  to: 1981
+  polities: [belize, guatemala]
+  periods:
+    - from: 1665
+      to: 1797
+      text: 17世紀、イギリス人の海賊や伐採者（ベイメン）がユカタン半島の南のマヤの地の海岸に住みつき、染料をとるログウッドの木を切り出した。スペインは主権を主張してたびたび追い出したが、1763年・1783年・1786年の条約で、スペインの主権の下での伐採を認めた。働き手は黒人奴隷だった。
+      source: "https://en.wikipedia.org/wiki/History_of_Belize"
+    - from: 1798
+      to: 1861
+      text: 1798年、セント・ジョージズ・キーの戦いでスペインの攻撃を退け、事実上イギリスのものになった。伐採の中心はマホガニーに移った。中米が独立すると、グアテマラは旧スペインの権利を受け継いだとして領有を主張した。1859年の条約で国境を定めたが、グアテマラはのちにこれを無効と主張する。
+      source: "https://en.wikipedia.org/wiki/Battle_of_St._George's_Caye"
+    - from: 1862
+      to: 1972
+      text: 1862年に正式に植民地（英領ホンジュラス）になり、1871年に直轄植民地になった。木材の輸出が衰えると貧しい植民地のままで、1950年代にプライスの人民統一党が独立を求める運動を起こした。
+      source: "https://en.wikipedia.org/wiki/British_Honduras"
+    - from: 1973
+      to: 1981
+      text: 1973年に名をベリーズに改めた。グアテマラが侵攻を口にしたため独立が遅れたが、国連の支持を得て1981年に独立し、イギリス軍がしばらく駐留した。
+      source: "https://ja.wikipedia.org/wiki/ベリーズ"
+  source:
+    - "https://en.wikipedia.org/wiki/British_Honduras"
+
+# ---------------- フランス ----------------
+# ルイジアナを先に書く（副ラベル「ルイジアナ（ヌーヴェル・フランス）」をヌーヴェル・フランスでなくルイジアナに入れるため）
+
+- id: french_louisiana
+  name: ルイジアナ（フランス領）
+  parent: france
+  kind: 植民地（ヌーヴェル・フランスの一部。1717–31年はミシシッピ会社の経営）
+  match:
+    contains: [ルイジアナ（]
+    labels: [ペンサコーラ（フランスの占領）]
+  from: 1682
+  to: 1762
+  polities: [choctaw, chickasaw, usa]
+  governors:
+    - { name: ピエール・ル・モワーヌ・ディベルヴィル, title: 創設者, from: 1699, to: 1702, note: ビロクシに最初の砦を建てる, source: "https://en.wikipedia.org/wiki/Pierre_Le_Moyne_d'Iberville" }
+    - { name: ジャン＝バティスト・ル・モワーヌ・ド・ビエンヴィル, title: 総督, from: 1718, to: 1725, note: ニューオーリンズを建てる（1701–13年・1733–43年にも総督）, source: "https://en.wikipedia.org/wiki/Jean-Baptiste_Le_Moyne_de_Bienville" }
+    - { name: ルイ・ビヨアール・ド・ケルレレック, title: 総督, from: 1753, to: 1763, source: "https://en.wikipedia.org/wiki/Louis_Billouart,_Chevalier_de_Kerlérec" }
+  periods:
+    - from: 1682
+      to: 1716
+      text: 1682年、ラ・サールがミシシッピ川を河口まで下り、流域全体を国王ルイ14世の名にちなんでルイジアナと名づけた。1699年、ディベルヴィルがメキシコ湾岸のビロクシに砦を建て、のちモービルを拠点にした。カナダから五大湖・ミシシッピ川を通ってメキシコ湾に至る線で、イギリスの植民地を海岸に閉じ込めるねらいだった。
+      source: "https://ja.wikipedia.org/wiki/ルイジアナ_(ヌーベルフランス)"
+    - from: 1717
+      to: 1731
+      text: 摂政時代の本国で、財政家ジョン・ローのミシシッピ会社が開発を任され、1718年にニューオーリンズが建てられた。会社の株は熱狂的に買われたが、1720年に暴落した（ミシシッピ・バブル）。アフリカから奴隷が運ばれ、黒人法典（1724年）が定められた。1729年、ナチェズ族が蜂起して砦の入植者を殺し、フランスはナチェズを滅ぼした。
+      source: "https://en.wikipedia.org/wiki/Mississippi_Company"
+    - from: 1732
+      to: 1762
+      text: 国王の植民地に戻ったが、入植者は少なく、本国にとって負担の多い植民地だった。チカソー族とは戦い、チョクトー族とは同盟した。七年戦争に負けると、1762年のフォンテーヌブロー条約でミシシッピ川の西とニューオーリンズをスペインに、1763年のパリ条約で川の東をイギリスに渡した。
+      source: "https://en.wikipedia.org/wiki/Louisiana_(New_France)"
+  source:
+    - "https://ja.wikipedia.org/wiki/ルイジアナ_(ヌーベルフランス)"
+    - "https://en.wikipedia.org/wiki/Louisiana_(New_France)"
+
+- id: nouvelle_france
+  name: ヌーヴェル・フランス（カナダ・アカディア）
+  parent: france
+  kind: 植民地（1663年から国王の直轄植民地。総督と地方長官）
+  match:
+    contains: [ヌーヴェル・フランス, アカディア]
+    labels: [シャルルブール・ロワイヤル, イル・ロワイヤル, イル・サン・ジャン, ハドソン湾地方（フランスが占領）]
+  from: 1541
+  to: 1762
+  polities: [canada, huron, iroquois]
+  governors:
+    - { name: サミュエル・ド・シャンプラン, title: 創設者（総督代理）, from: 1608, to: 1635, note: ケベックを建てる。「ヌーヴェル・フランスの父」, source: "https://ja.wikipedia.org/wiki/サミュエル・ド・シャンプラン" }
+    - { name: ジャン・タロン, title: 地方長官, from: 1665, to: 1672, note: 国王の娘たち（フィーユ・デュ・ロワ）を送って人口を増やす, source: "https://en.wikipedia.org/wiki/Jean_Talon" }
+    - { name: フロントナック伯, title: 総督, from: 1672, to: 1682, note: 1689–98年にも総督。イギリス植民地とイロコイと戦う, source: "https://en.wikipedia.org/wiki/Louis_de_Buade_de_Frontenac" }
+    - { name: フィリップ・ド・リゴー・ド・ヴォードルイユ, title: 総督, from: 1703, to: 1725, source: "https://en.wikipedia.org/wiki/Philippe_de_Rigaud_de_Vaudreuil" }
+    - { name: ピエール・ド・リゴー・ド・ヴォードルイユ＝カヴァニャル, title: 最後の総督, from: 1755, to: 1760, note: モントリオールで降伏, source: "https://en.wikipedia.org/wiki/Pierre_de_Rigaud,_Marquis_de_Vaudreuil-Cavagnial" }
+  periods:
+    - from: 1541
+      to: 1607
+      text: 1534年からジャック・カルティエがセントローレンス川を探検し、1541年にケベックの近くに入植を試みたが（シャルルブール・ロワイヤル）、寒さと先住民との争いで翌年捨てた。本国はイタリア戦争とユグノー戦争で植民地どころではなく、漁民と毛皮の商人が夏に来るだけだった。1604–05年、アカディア（いまのノヴァスコシア）にポール・ロワイヤルが建てられた。
+      source: "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - from: 1608
+      to: 1662
+      text: 1608年、シャンプランがケベックを建て、ヒューロン族などと同盟して毛皮の交易を始めた。同盟のためにイロコイ連邦と敵対し、イロコイは1649年にヒューロンを滅ぼした。宰相リシュリューのつくった百人会社が経営したが、入植者は少なく、イエズス会の宣教師が布教に入った。モントリオールは1642年に建てられた。
+      source: "https://en.wikipedia.org/wiki/New_France"
+    - from: 1663
+      to: 1712
+      text: 1663年、ルイ14世と財務総監コルベールは会社から取り上げて国王の植民地とし、軍を送ってイロコイを抑えた。地方長官タロンは移民と産業を勧め、領主制（セニョリー）の農村が広がった。毛皮商人と宣教師は五大湖からミシシッピ川へ進んだ。英仏の植民地戦争（ウィリアム王戦争・アン女王戦争）が続き、1713年のユトレヒト条約でアカディアとハドソン湾・ニューファンドランドをイギリスに渡した。
+      source: "https://ja.wikipedia.org/wiki/ユトレヒト条約"
+    - from: 1713
+      to: 1753
+      text: フランスはケープブレトン島（イル・ロワイヤル）にルイブール要塞を築いて、セントローレンス川の入り口を守った。人口は約6万人で、150万人を超えるイギリスの13植民地との差は開くばかりだった。オハイオ川の流域に砦を並べ、カナダとルイジアナをつなごうとした。
+      source: "https://en.wikipedia.org/wiki/Fortress_of_Louisbourg"
+    - from: 1754
+      to: 1762
+      text: オハイオ川の分かれ目（デュケーヌ砦）をめぐる衝突からフレンチ＝インディアン戦争が始まった。イギリスはアカディア人を追放し（1755年）、ピットの戦争指導のもとで大軍を送って、ルイブール（1758年）、ケベック（1759年）、モントリオール（1760年）を落とした。1763年のパリ条約でカナダはイギリスのものになった。
+      source: "https://ja.wikipedia.org/wiki/フレンチ・インディアン戦争"
+  source:
+    - "https://ja.wikipedia.org/wiki/ヌーベルフランス"
+    - "https://en.wikipedia.org/wiki/New_France"
+
+- id: saint_domingue
+  name: サン＝ドマング（フランス領）
+  names:
+    - { to: 1664, name: トルトゥーガ島（海賊の拠点）, kind: 海賊・入植者の拠点 }
+    - { from: 1804, name: サント・ドミンゴ（フランス領）, kind: 占領地（イスパニョーラ島の東部） }
+  parent: france
+  kind: 植民地（総督と地方長官）
+  match:
+    labels: [トルトゥーガ島（海賊の拠点）, サン・ドマング, サン・ドマング（トゥサン・ルヴェルチュールの統治）, サント・ドミンゴ]
+  from: 1640
+  to: 1808
+  polities: [haiti, haiti_north, dominican_republic]
+  governors:
+    - { name: ベルトラン・ドジェロン, title: トルトゥーガとサン＝ドマングの総督, from: 1665, to: 1675, note: 海賊たちを入植者に変えていった, source: "https://en.wikipedia.org/wiki/Bertrand_d'Ogeron_de_La_Bouëre" }
+    - { name: トゥサン・ルヴェルチュール, title: 総司令官・総督（1801年から終身）, from: 1797, to: 1802, note: 1796年に副総督、1797年に総司令官となり実権を握る。1801年の憲法で終身の総督に, source: "https://ja.wikipedia.org/wiki/トゥーサン・ルーヴェルチュール" }
+    - { name: シャルル・ルクレール, title: 遠征軍の司令官, from: 1802, to: 1802, note: ナポレオンの義弟。黄熱病で死ぬ, source: "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+    - { name: ロシャンボー子爵, title: 遠征軍の司令官, from: 1802, to: 1803, note: ヴェルティエールの戦いに敗れて降伏, source: "https://en.wikipedia.org/wiki/Donatien-Marie-Joseph_de_Vimeur,_vicomte_de_Rochambeau" }
+  periods:
+    - from: 1640
+      to: 1696
+      text: スペインが住民を移して空いたイスパニョーラ島の西部に、野生の牛を狩るフランス人のバッカニア（海賊）が住みつき、北のトルトゥーガ島を根城にスペイン船を襲った。1665年に西インド会社の総督が置かれ、海賊たちはタバコや藍を作る入植者になっていった。1697年のライスワイク条約で、スペインは島の西3分の1をフランスに認めた。
+      source: "https://en.wikipedia.org/wiki/Tortuga_(Haiti)"
+    - from: 1697
+      to: 1788
+      text: 砂糖とコーヒーのプランテーションが広がり、18世紀後半には世界の砂糖の約4割・コーヒーの半分を産する、世界で最も富んだ植民地になった（「アンティル諸島の真珠」）。50万人の奴隷は白人の10倍以上で、過酷な労働で死ぬ数を補うためにアフリカから運ばれ続けた。自由な有色人（ムラート）も多く、財産を持つ者もいたが差別された。
+      source: "https://en.wikipedia.org/wiki/Saint-Domingue"
+    - from: 1789
+      to: 1801
+      text: フランス革命が人権宣言を出すと、有色人が平等を求め、1791年8月、北部の奴隷が一斉に蜂起した（ハイチ革命）。1793年、本国の委員ソントナが奴隷を解放し、国民公会は1794年に奴隷制を廃止した。元奴隷のトゥサン・ルヴェルチュールは、攻め込んだイギリス軍・スペイン軍を退け、植民地の実権を握った。
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1802
+      to: 1803
+      text: 1801年、トゥサンは島全体を治める憲法をつくり、終身の総督になった。ナポレオンは奴隷制を戻そうと義弟ルクレールの大軍を送り、トゥサンを捕らえてフランスで獄死させたが、遠征軍は黄熱病と黒人の抵抗で崩れた。1803年に降伏し、1804年1月、デサリーヌがハイチの独立を宣言した。ナポレオンはこの失敗もあってルイジアナを売った。
+      source: "https://ja.wikipedia.org/wiki/ハイチ革命"
+    - from: 1804
+      to: 1808
+      text: 島の東部（もとスペイン領のサント・ドミンゴ。1795年にフランス領）にはフランス軍が残った。1808年、本国のスペイン侵攻に反発した住民が蜂起し、翌年フランス軍は退いた。
+      source: "https://en.wikipedia.org/wiki/Battle_of_Palo_Hincado"
+  source:
+    - "https://ja.wikipedia.org/wiki/サン＝ドマング"
+    - "https://en.wikipedia.org/wiki/Saint-Domingue"
+
+- id: french_guiana
+  name: フランス領ギアナ
+  names:
+    - { to: 1657, name: ギアナ（フランスの入植の試み）, kind: 入植地 }
+  parent: france
+  kind: 植民地（1946年から海外県）
+  match:
+    labels: [ギアナ（フランスの入植の試み）, フランス領ギアナ]
+  from: 1643
+  to: 1945
+  governors:
+    - { name: ヴィクトール・ユーグ, title: 総督代理（政府代表）, from: 1800, to: 1809, note: 奴隷制を元に戻す。ポルトガル・イギリス軍に降伏, source: "https://en.wikipedia.org/wiki/Victor_Hugues" }
+  periods:
+    - from: 1643
+      to: 1762
+      text: 1643年からフランス人がカイエンヌに入植を試み、オランダとも取り合ったが、1664年からフランスのものになった。湿った熱帯の土地で病気が多く、入植者は増えず、黒人奴隷を使う砂糖・藍・ロクー（染料）の小さな農園の植民地だった。
+      source: "https://en.wikipedia.org/wiki/History_of_French_Guiana"
+    - from: 1763
+      to: 1851
+      text: カナダを失ったフランスは、1763–65年にギアナに1万人以上を送る入植計画（クールー遠征）を行ったが、ほとんどが熱病で死んだ。フランス革命では政敵の流刑地にされた。ナポレオン戦争中の1809–17年はポルトガル（ブラジル）軍に占領された。1848年に奴隷制が廃止された。
+      source: "https://en.wikipedia.org/wiki/Kourou_expedition"
+    - from: 1852
+      to: 1945
+      text: ナポレオン3世は1852年からギアナに流刑地を置き、悪魔島などに囚人を送った（ドレフュスも流された）。内陸では金が見つかり（1855年）、ブラジルとの国境は1900年の仲裁で決まった。流刑地は1938年に新しい囚人を受け入れなくなり、1946年、ギアナは本国の海外県になった。
+      source: "https://ja.wikipedia.org/wiki/悪魔島"
+  source:
+    - "https://en.wikipedia.org/wiki/History_of_French_Guiana"
+
+# ---------------- オランダ ----------------
+
+- id: dutch_brazil
+  name: オランダ領ブラジル
+  parent: netherlands
+  kind: 植民地（西インド会社の経営）
+  match:
+    contains: [オランダ領ブラジル]
+  from: 1630
+  to: 1654
+  polities: [brazil]
+  governors:
+    - { name: ヨハン・マウリッツ（ナッサウ＝ジーゲン伯）, title: 総督, from: 1637, to: 1644, note: レシフェの町を整え、学者や画家を連れてくる, source: "https://en.wikipedia.org/wiki/John_Maurice,_Prince_of_Nassau-Siegen" }
+  periods:
+    - from: 1630
+      to: 1636
+      text: スペインと独立戦争（八十年戦争）を戦うオランダは、スペイン王が王を兼ねていたポルトガルの植民地を狙い、1621年に西インド会社をつくった。1630年、会社はブラジルの砂糖の中心ペルナンブーコを攻めてオリンダとレシフェを奪った。
+      source: "https://en.wikipedia.org/wiki/Dutch_Brazil"
+    - from: 1637
+      to: 1644
+      text: 総督ヨハン・マウリッツのもとで、レシフェ（マウリッツスタット）が整えられ、ポルトガル人の農園主とも折り合い、ユダヤ教徒にも信仰の自由を認めた。砂糖農園の働き手を得るため、アフリカのポルトガルの拠点（エルミナ・ルアンダ）も奪って奴隷貿易を始めた。
+      source: "https://en.wikipedia.org/wiki/John_Maurice,_Prince_of_Nassau-Siegen"
+    - from: 1645
+      to: 1654
+      text: 1640年にポルトガルがスペインから独立を回復すると、1645年、借金に苦しむポルトガル人の農園主が反乱を起こし、グアララペスの戦い（1648・49年）でオランダ軍を破った。本国は第一次英蘭戦争（1652年）で手が回らず、1654年にレシフェが落ちた。追われたユダヤ教徒の一部はニューアムステルダムへ、砂糖の技術はカリブ海の島々へ広がった。
+      source: "https://en.wikipedia.org/wiki/Battles_of_Guararapes"
+  source:
+    - "https://en.wikipedia.org/wiki/Dutch_Brazil"
+
+- id: new_netherland
+  name: ニューネーデルラント
+  parent: netherlands
+  kind: 植民地（西インド会社の経営）
+  match:
+    contains: [ニューネーデルラント]
+  from: 1614
+  to: 1674
+  polities: [iroquois]
+  governors:
+    - { name: ペーター・ミヌイット, title: 長官, from: 1626, to: 1631, note: 先住民からマンハッタン島を買う。のちニュースウェーデンを開く, source: "https://ja.wikipedia.org/wiki/ピーター・ミヌイット" }
+    - { name: ウィレム・キーフト, title: 長官, from: 1638, to: 1647, note: 先住民との戦争（キーフト戦争）を起こす, source: "https://en.wikipedia.org/wiki/Willem_Kieft" }
+    - { name: ペーター・ストイフェサント, title: 長官, from: 1647, to: 1664, note: ニュースウェーデンを奪い、イギリスに降伏, source: "https://ja.wikipedia.org/wiki/ピーター・ストイフェサント" }
+  periods:
+    - from: 1614
+      to: 1637
+      text: 1609年、オランダ東インド会社に雇われたハドソンがハドソン川をさかのぼった。オランダ人は毛皮の交易所を建て、1621年からは西インド会社の植民地になった。1626年、ミヌイットがマンハッタン島を先住民から買ってニューアムステルダムを建てた。
+      source: "https://en.wikipedia.org/wiki/New_Netherland"
+    - from: 1638
+      to: 1663
+      text: 本国と同じく宗教にも商売にも寛容で、さまざまな国の人が集まった（ユダヤ教徒も1654年に来た）。長官キーフトの先住民との戦争の後、ストイフェサントが立て直し、1655年にスウェーデンのニュースウェーデンを奪った。しかし人口は少なく、隣のイギリス植民地に押された。
+      source: "https://ja.wikipedia.org/wiki/ニューネーデルラント"
+    - from: 1664
+      to: 1674
+      text: 1664年、イギリスの艦隊が来てニューアムステルダムは戦わずに降り、ニューヨークと改名された（第二次英蘭戦争）。1667年のブレダの和約で、オランダはスリナムを得る代わりにニューネーデルラントを手放した。第三次英蘭戦争でいったん奪い返したが（1673年）、翌年のウェストミンスター条約で最終的に返した。
+      source: "https://ja.wikipedia.org/wiki/ブレダの和約"
+  source:
+    - "https://en.wikipedia.org/wiki/New_Netherland"
+
+- id: dutch_suriname
+  name: オランダ領スリナム
+  names:
+    - { from: 1954, name: スリナム（オランダ王国の構成国）, kind: 王国の構成国（自治） }
+  parent: netherlands
+  kind: 植民地（1683–1795年はスリナム協会の経営）
+  match:
+    labels: [オランダ領スリナム, オランダ領スリナム（マルーンの地）, スリナム（オランダ王国の構成国）]
+  from: 1667
+  to: 1974
+  polities: [suriname]
+  governors:
+    - { name: コルネリス・ファン・アールセン・ファン・ソメルスデイク, title: 総督, from: 1683, to: 1688, note: 兵士の反乱で殺される, source: "https://en.wikipedia.org/wiki/Cornelis_van_Aerssen_van_Sommelsdijck" }
+  periods:
+    - from: 1667
+      to: 1759
+      text: イギリスの砂糖植民地だったスリナムを、第二次英蘭戦争中にゼーラント州の艦隊が奪い、1667年のブレダの和約でニューネーデルラントと引き換えにオランダのものになった。砂糖・コーヒーの農園で黒人奴隷が働かされ、その扱いは特に過酷だった。森へ逃げた奴隷はマルーンとして自分たちの村をつくり、農園を襲った。
+      source: "https://en.wikipedia.org/wiki/Surinam_(Dutch_colony)"
+    - from: 1760
+      to: 1862
+      text: 植民地政府はマルーンを討ちきれず、1760年代にンジュカ・サラマカなどのマルーンと条約を結んで自治を認めた。フランス革命戦争・ナポレオン戦争の間はイギリスに占領され（1799–1802年・1804–16年）、戦後に返された。
+      source: "https://en.wikipedia.org/wiki/Maroons#Suriname"
+    - from: 1863
+      to: 1953
+      text: 1863年、イギリスやフランスより遅れて奴隷制が廃止された（10年間の国の監督つき）。農園の働き手として、英領インドから、のち蘭領東インドのジャワから年季契約の労働者が来て、多民族の社会ができた。20世紀にはボーキサイトの採掘が始まった。
+      source: "https://en.wikipedia.org/wiki/History_of_Suriname"
+    - from: 1954
+      to: 1974
+      text: インドネシアの独立の後、1954年の王国憲章で、スリナムはオランダ本国・アンティルと対等な王国の構成国になり、自治を得た。1975年に独立したが、その前後に多くの住民がオランダ本国へ移った。
+      source: "https://ja.wikipedia.org/wiki/スリナム"
+  source:
+    - "https://en.wikipedia.org/wiki/Surinam_(Dutch_colony)"
+
+# ---------------- ロシア・デンマーク・スウェーデン ----------------
+
+- id: russian_america
+  name: ロシア領アメリカ
+  parent: russia
+  kind: 植民地（1799年から露米会社の経営）
+  match:
+    labels: [ロシア領アメリカ, ロシア領アメリカ（露米会社）, フォート・ロス（ロシア領アメリカ）]
+  from: 1784
+  to: 1866
+  polities: [usa]
+  governors:
+    - { name: アレクサンドル・バラノフ, title: 露米会社の支配人（初代）, from: 1790, to: 1818, note: シトカ（ノヴォアルハンゲリスク）を拠点にする, source: "https://en.wikipedia.org/wiki/Alexander_Andreyevich_Baranov" }
+    - { name: フェルディナント・フォン・ヴランゲリ, title: 支配人, from: 1830, to: 1835, source: "https://en.wikipedia.org/wiki/Ferdinand_von_Wrangel" }
+  periods:
+    - from: 1784
+      to: 1798
+      text: 1741年、ロシア政府に仕えるベーリングの探検でアラスカが見つかり、シベリアの毛皮商人がラッコの毛皮を求めてアリューシャン列島に来た。アレウトの人々は毛皮の狩りを強いられた。1784年、商人シェリホフがコディアク島に最初の常設の拠点を置いた。
+      source: "https://en.wikipedia.org/wiki/Russian_America"
+    - from: 1799
+      to: 1840
+      text: 1799年、皇帝パーヴェル1世が露米会社に独占を認めた。支配人バラノフはトリンギットと戦ってシトカを拠点にし（1804年）、食料を得るためカリフォルニアにフォート・ロス（1812年）を建てた。1824–25年の条約で、アメリカ・イギリスとの境を北緯54度40分と決めた。
+      source: "https://ja.wikipedia.org/wiki/露米会社"
+    - from: 1841
+      to: 1866
+      text: ラッコはとり尽くされ、1841年にフォート・ロスも売った。クリミア戦争（1853–56年）でイギリスに奪われる心配が生まれ、遠すぎて守れない植民地を、ロシアは1867年にアメリカ合衆国へ720万ドルで売った（アラスカ購入）。
+      source: "https://ja.wikipedia.org/wiki/アラスカ購入"
+  source:
+    - "https://en.wikipedia.org/wiki/Russian_America"
+
+- id: danish_west_indies
+  name: デンマーク領西インド諸島
+  parent: denmark
+  kind: 植民地（1755年まで西インド・ギニア会社の経営）
+  match:
+    labels: [デンマーク領西インド諸島]
+  from: 1733
+  to: 1916
+  polities: [usa]
+  governors:
+    - { name: ペーター・フォン・ショルテン, title: 総督, from: 1827, to: 1848, note: 1848年の奴隷の蜂起を受けて、独断で奴隷の解放を宣言, source: "https://en.wikipedia.org/wiki/Peter_von_Scholten" }
+  periods:
+    - from: 1733
+      to: 1847
+      text: デンマークの西インド・ギニア会社は、セント・トーマス島（1672年〜）・セント・ジョン島に続き、1733年にフランスからセント・クロイ島を買った。セント・クロイ島の砂糖農園で黒人奴隷が働き、セント・トーマス島のシャーロット・アマリーは中立国の自由港として栄えた。1792年、デンマークは奴隷貿易を禁じた最初のヨーロッパの国になった（1803年から実施）。
+      source: "https://en.wikipedia.org/wiki/Danish_West_Indies"
+    - from: 1848
+      to: 1916
+      text: 1848年、セント・クロイ島の奴隷が蜂起し、総督ショルテンが奴隷の解放を宣言した。砂糖の経済は衰え、デンマークは島を売ろうとした。第一次世界大戦中、ドイツの潜水艦の基地になることを恐れたアメリカ合衆国が、1917年に2500万ドルで買い取った（アメリカ領ヴァージン諸島）。
+      source: "https://en.wikipedia.org/wiki/Treaty_of_the_Danish_West_Indies"
+  source:
+    - "https://en.wikipedia.org/wiki/Danish_West_Indies"
+
+- id: danish_greenland
+  name: デンマーク領グリーンランド
+  parent: denmark
+  kind: 植民地（王立グリーンランド交易会社が交易を独占）
+  match:
+    labels: [グリーンランド]
+  from: 1721
+  to: 1952
+  periods:
+    - from: 1721
+      to: 1813
+      text: 中世のノルウェー人の入植地は15世紀に消えていた。1721年、ノルウェー人の牧師ハンス・エーゲデが、かつての入植者の子孫を探して布教に行った。1728年にゴットホーブ（いまのヌーク）が建てられた。デンマーク＝ノルウェー王国はイヌイットとの交易を独占し、アザラシの油などを得た。
+      source: "https://ja.wikipedia.org/wiki/ハンス・エーゲデ"
+    - from: 1814
+      to: 1939
+      text: 1814年のキール条約でノルウェーはスウェーデンに渡されたが、グリーンランドはデンマークに残った。島は外国人の立ち入りを制限した閉ざされた植民地だった。1931年、ノルウェーが東グリーンランドの一部を占領したが、1933年に常設国際司法裁判所がデンマークの主権を認めた。
+      source: "https://en.wikipedia.org/wiki/Legal_Status_of_Eastern_Greenland"
+    - from: 1940
+      to: 1952
+      text: 1940年に本国がドイツに占領されると、グリーンランドはアメリカ合衆国の保護を受け、アメリカ軍の基地が置かれた（戦後のチューレ基地）。1953年のデンマークの憲法改正で植民地の地位をやめ、本国の一部になった（1979年に自治政府）。
+      source: "https://en.wikipedia.org/wiki/History_of_Greenland"
+  source:
+    - "https://en.wikipedia.org/wiki/History_of_Greenland"
+
+- id: new_sweden
+  name: ニュースウェーデン
+  parent: sweden
+  kind: 植民地（ニュースウェーデン会社）
+  match:
+    labels: [ニュースウェーデン]
+  from: 1638
+  to: 1654
+  governors:
+    - { name: ペーター・ミヌイット, title: 最初の遠征の指揮官, from: 1638, to: 1638, note: もとニューネーデルラントの長官, source: "https://ja.wikipedia.org/wiki/ピーター・ミヌイット" }
+    - { name: ヨハン・プリンツ, title: 総督, from: 1643, to: 1653, source: "https://en.wikipedia.org/wiki/Johan_Björnsson_Printz" }
+    - { name: ヨハン・リーシング, title: 最後の総督, from: 1654, to: 1655, source: "https://en.wikipedia.org/wiki/Johan_Risingh" }
+  periods:
+    - from: 1638
+      to: 1654
+      text: 三十年戦争で大国になったスウェーデンは、1638年にデラウェア川にクリスティナ砦（女王の名にちなむ）を建て、毛皮やタバコの交易を始めた。スウェーデン人とフィンランド人の入植者は丸太小屋の作り方を持ち込んだ。しかし本国からの支援は乏しく、1655年、ニューネーデルラントのストイフェサントに降伏した。
+      source: "https://ja.wikipedia.org/wiki/ニュースウェーデン"
+  source:
+    - "https://ja.wikipedia.org/wiki/ニュースウェーデン"
+
+# ---------------- 追加（イギリス・オランダ・フランスのその他の主な植民地） ----------------
+
+- id: colony_of_connecticut
+  name: コネティカット植民地
+  parent: britain
+  kind: 自治植民地（1662年の特許状で総督も住民が選ぶ）
+  match:
+    labels: [コネティカット植民地, ニューヘイヴン植民地, ニューヘイヴン・コネティカットの町]
+  from: 1635
+  to: 1775
+  polities: [usa]
+  governors:
+    - { name: ジョン・ウィンスロップ（子）, title: 総督, from: 1659, to: 1676, note: 国王から自治の特許状（1662年）を得る。1657年にも総督, source: "https://en.wikipedia.org/wiki/John_Winthrop_the_Younger" }
+  periods:
+    - from: 1635
+      to: 1661
+      text: 1630年代、マサチューセッツ湾植民地からトマス・フッカーらのピューリタンがコネティカット川の流域に移り、ハートフォードなどの町を建てた。1637年のピクォート戦争で先住民ピクォートを滅ぼした。1639年の「基本法」は、住民が自分たちで定めた最初の成文の統治の決まりの一つとされる。南の海岸にはより厳格なニューヘイヴン植民地（1638年）ができた。
+      source: "https://en.wikipedia.org/wiki/Connecticut_Colony"
+    - from: 1662
+      to: 1775
+      text: 1662年、王政復古のチャールズ2世から特許状を得て、ニューヘイヴンを合わせた。総督も議会も住民が選ぶ自治植民地で、ジェームズ2世のニューイングランド王領（1687–89年）のときも、特許状を木のうろに隠して守ったと伝えられる（チャーター・オーク）。独立戦争ではそのまま州になった。
+      source: "https://en.wikipedia.org/wiki/Connecticut_Colony"
+  source:
+    - "https://en.wikipedia.org/wiki/Connecticut_Colony"
+
+- id: province_of_new_jersey
+  name: ニュージャージー植民地
+  names:
+    - { from: 1674, to: 1701, name: 東ジャージー・西ジャージー, kind: 領主植民地（2つに分かれる） }
+  parent: britain
+  kind: 植民地（1702年から王領植民地）
+  match:
+    labels: [ニュージャージー, ニュージャージー植民地, 東ジャージー, 西ジャージー]
+  from: 1664
+  to: 1775
+  polities: [usa]
+  governors:
+    - { name: ウィリアム・フランクリン, title: 最後の王領総督, from: 1763, to: 1776, note: ベンジャミン・フランクリンの子。王党派として父と決裂, source: "https://en.wikipedia.org/wiki/William_Franklin" }
+  periods:
+    - from: 1664
+      to: 1701
+      text: ニューネーデルラントを奪った1664年、ヨーク公はハドソン川とデラウェア川の間の土地を2人の家臣に与えた（ジャージー島にちなむ名）。1674年に東ジャージーと西ジャージーに分かれ、西ジャージーはクエーカー教徒が買って入植した。
+      source: "https://en.wikipedia.org/wiki/Province_of_New_Jersey"
+    - from: 1702
+      to: 1775
+      text: 1702年、領主たちが統治権を国王に返し、2つが合わさって王領植民地になった（1738年まではニューヨークの総督が兼ねた）。小麦の農業が栄え、プリンストン大学（1746年）ができた。独立戦争ではトレントン・プリンストン（1776–77年）など多くの戦いの舞台になった。
+      source: "https://en.wikipedia.org/wiki/Province_of_New_Jersey"
+  source:
+    - "https://en.wikipedia.org/wiki/Province_of_New_Jersey"
+
+- id: british_floridas
+  name: 東フロリダ・西フロリダ（イギリス領）
+  parent: britain
+  kind: 植民地（王領植民地2つ）
+  match:
+    labels: [東フロリダ, 西フロリダ]
+  from: 1763
+  to: 1783
+  polities: [seminole, creek, choctaw]
+  governors:
+    - { name: ジョージ・ジョンストン, title: 西フロリダ総督, from: 1763, to: 1767, source: "https://en.wikipedia.org/wiki/George_Johnstone_(Royal_Navy_officer)" }
+    - { name: ジェームズ・グラント, title: 東フロリダ総督, from: 1764, to: 1771, source: "https://en.wikipedia.org/wiki/James_Grant_(British_Army_officer,_born_1720)" }
+  periods:
+    - from: 1763
+      to: 1775
+      text: 七年戦争の後、1763年のパリ条約で、イギリスはスペインからフロリダを、フランスからミシシッピ川の東のルイジアナの一部を得て、首府セント・オーガスティンの東フロリダと、ペンサコーラの西フロリダの2つの植民地を置いた。スペイン系の住民はほとんどキューバへ去った。
+      source: "https://en.wikipedia.org/wiki/British_West_Florida"
+    - from: 1776
+      to: 1783
+      text: 独立戦争に加わらなかった植民地で、王党派の避難先になった。しかしスペインが参戦すると、ルイジアナ総督ガルベスが西フロリダを攻め落とし（ペンサコーラ 1781年）、1783年のパリ条約で両フロリダはスペインに返された。
+      source: "https://en.wikipedia.org/wiki/Siege_of_Pensacola"
+  source:
+    - "https://en.wikipedia.org/wiki/British_West_Florida"
+    - "https://en.wikipedia.org/wiki/East_Florida"
+
+- id: british_nova_scotia
+  name: ノヴァスコシア植民地
+  names:
+    - { to: 1712, name: アカディア（イギリスの占領）, kind: 占領地 }
+  parent: britain
+  kind: 植民地（王領植民地）
+  match:
+    labels: [アカディア（イングランドの占領）, アカディア（イギリスの占領）, ノヴァスコシア, ケープブレトン植民地, イル・ロワイヤル（イギリスの占領）]
+  from: 1654
+  to: 1866
+  polities: [canada]
+  governors:
+    - { name: エドワード・コーンウォリス, title: 総督, from: 1749, to: 1752, note: ハリファックスを建てる, source: "https://en.wikipedia.org/wiki/Edward_Cornwallis" }
+    - { name: チャールズ・ローレンス, title: 総督（1753年から副総督）, from: 1754, to: 1760, note: アカディア人の追放を命じる, source: "https://en.wikipedia.org/wiki/Charles_Lawrence_(British_Army_officer)" }
+  periods:
+    - from: 1654
+      to: 1712
+      text: フランスのアカディアは、英仏の争いのたびにイギリスに占領された（1654–70年、1690年、1710年）。1710年にポール・ロワイヤルが落ちてアナポリス・ロイヤルと改められ、1713年のユトレヒト条約でイギリスのものになった。
+      source: "https://en.wikipedia.org/wiki/Acadia"
+    - from: 1713
+      to: 1763
+      text: フランス系のカトリックのアカディア人は、イギリス国王への無条件の忠誠を拒み「中立」を守った。フランスがルイブール要塞を築いたのに対抗し、イギリスは1749年にハリファックスを建てた。フレンチ＝インディアン戦争が始まると、1755年から約1万人のアカディア人を追放し（大追放）、一部はルイジアナに移ってケイジャンになった。
+      source: "https://ja.wikipedia.org/wiki/アカディア人の追放"
+    - from: 1764
+      to: 1866
+      text: アメリカ独立戦争の後、数万人の王党派が移り住み、1784年にニューブランズウィックとケープブレトン（1820年に再び合わさる）が分かれた。1848年、イギリスの植民地で最初に責任政府が認められた。1867年、カナダ連邦の4つの州の一つになった。
+      source: "https://en.wikipedia.org/wiki/Nova_Scotia"
+  source:
+    - "https://en.wikipedia.org/wiki/History_of_Nova_Scotia"
+
+- id: british_newfoundland
+  name: ニューファンドランド植民地
+  names:
+    - { from: 1934, name: ニューファンドランド（統治委員会）, kind: 本国の任命する委員会の統治 }
+  parent: britain
+  kind: 植民地（1907年から自治領）
+  match:
+    labels: [ニューファンドランド, ニューファンドランド（統治委員会）, ラブラドル（ニューファンドランド）, ラブラドル（ニューファンドランド統治委員会）]
+  from: 1583
+  to: 1948
+  polities: [canada]
+  periods:
+    - from: 1583
+      to: 1712
+      text: 1497年のジョン・カボットの航海以来、グランドバンクスのタラ漁にヨーロッパ各国の漁船が来た。1583年、ハンフリー・ギルバートがセント・ジョンズでエリザベス1世の領有を宣言した。夏だけの漁場で、定住は本国の漁業商人に嫌われ、南のプラセンティアにはフランスの拠点があった。
+      source: "https://en.wikipedia.org/wiki/Newfoundland_Colony"
+    - from: 1713
+      to: 1854
+      text: 1713年のユトレヒト条約で全島がイギリスのものになったが、フランスは島の海岸で漁をする権利（フレンチ・ショア）を残した。干しダラは南ヨーロッパやカリブ海の奴隷の食料として売られた。1824年に正式な植民地になり、1832年に議会が開かれた。
+      source: "https://en.wikipedia.org/wiki/Newfoundland_Colony"
+    - from: 1855
+      to: 1933
+      text: 1855年に責任政府を得たが、1867年のカナダ連邦には加わらなかった。1907年に自治領になり（地図ではニューファンドランドの色）、第一次世界大戦ではボーモン＝アメルの戦い（1916年）で連隊が壊滅した。
+      source: "https://en.wikipedia.org/wiki/Dominion_of_Newfoundland"
+    - from: 1934
+      to: 1948
+      text: 世界恐慌で財政が破綻し、1934年に自治をやめて本国が任命する統治委員会の統治を受けた。第二次世界大戦ではアメリカ・カナダの基地が置かれた。1948年の住民投票でカナダとの合併が選ばれ、1949年にカナダの10番目の州になった。
+      source: "https://en.wikipedia.org/wiki/Newfoundland_Commission_of_Government"
+  source:
+    - "https://en.wikipedia.org/wiki/Newfoundland_Colony"
+
+- id: british_trinidad
+  name: イギリス領トリニダード
+  names:
+    - { to: 1801, name: トリニダード（イギリスの占領）, kind: 占領地 }
+    - { from: 1889, to: 1957, name: トリニダード・トバゴ }
+    - { from: 1958, name: トリニダード・トバゴ（西インド連邦）, kind: 西インド連邦の構成州 }
+  parent: britain
+  kind: 直轄植民地（植民地議会のない王領植民地）
+  match:
+    labels: [トリニダード（イギリスの占領）, トリニダード, トリニダード・トバゴ, 西インド連邦（トリニダード・トバゴ）]
+  from: 1797
+  to: 1961
+  polities: [trinidad_tobago]
+  governors:
+    - { name: トマス・ピクトン, title: 総督, from: 1797, to: 1803, note: 苛酷な統治で本国の裁判にかけられる, source: "https://en.wikipedia.org/wiki/Thomas_Picton" }
+  periods:
+    - from: 1797
+      to: 1837
+      text: スペイン領のトリニダードは、1783年の植民令でフランス系のカトリックの入植者を招いて砂糖の農園を広げていた。1797年、フランス革命戦争中にイギリスが奪い、1802年のアミアンの和約で正式に得た。本国は植民地議会を置かず、総督が直接治める新しい型の植民地とした。
+      source: "https://en.wikipedia.org/wiki/Trinidad_and_Tobago#History"
+    - from: 1838
+      to: 1937
+      text: 奴隷の解放（1834–38年）の後、農園の働き手として英領インドから年季契約の労働者が来て（1845–1917年）、アフリカ系とインド系がほぼ半々の社会になった。1889年にトバゴを合わせた。ピッチ湖のアスファルトに続いて、20世紀初めに石油の生産が始まった。
+      source: "https://en.wikipedia.org/wiki/Indo-Trinidadian_and_Tobagonian"
+    - from: 1938
+      to: 1961
+      text: 1937年の油田労働者のストライキが労働運動を起こし、1946年に普通選挙が入った。1956年、エリック・ウィリアムズ（『資本主義と奴隷制』の著者）の人民国民運動が政権を握り、西インド連邦（首都はポートオブスペイン）に加わったが、ジャマイカの脱退で連邦が崩れ、1962年に独立した。
+      source: "https://ja.wikipedia.org/wiki/エリック・ウィリアムズ"
+  source:
+    - "https://en.wikipedia.org/wiki/Crown_Colony_of_Trinidad_and_Tobago"
+
+- id: dutch_essequibo
+  name: エセキボ・ベルビセ（オランダ領ギアナ）
+  parent: netherlands
+  kind: 植民地（西インド会社の経営。ベルビセはベルビセ協会）
+  match:
+    labels: [エセキボ（オランダ）, エセキボ（オランダ西インド会社）, ベルビセ（オランダ）, デメララ（オランダ西インド会社）, ベルビセ奴隷反乱]
+  from: 1616
+  to: 1813
+  polities: [guyana]
+  governors:
+    - { name: ラウレンス・ストルム・ファン・スフラーフェサンデ, title: エセキボの長官, from: 1743, to: 1772, note: デメララ川の流域を開き、イギリス人の農園主も招く, source: "https://en.wikipedia.org/wiki/Laurens_Storm_van_%27s_Gravesande" }
+  periods:
+    - from: 1616
+      to: 1745
+      text: オランダ人は1616年ごろエセキボ川に交易所（のちキク・オヴェル・アル砦）を、1627年にベルビセ川に入植地を建て、先住民と染料や木材を交易した。やがて黒人奴隷を使う砂糖の農園が開かれた。
+      source: "https://en.wikipedia.org/wiki/Essequibo_(colony)"
+    - from: 1746
+      to: 1780
+      text: 1746年、エセキボの長官がデメララ川の流域を開き、イギリス領の島々の農園主も移ってきて、綿・コーヒー・砂糖が伸びた。1763年、ベルビセで奴隷のコフィの大反乱が起き、植民地のほとんどを1年近く奴隷が握った（2月23日はいまのガイアナの共和国記念日）。
+      source: "https://en.wikipedia.org/wiki/Berbice_slave_uprising"
+    - from: 1781
+      to: 1813
+      text: アメリカ独立戦争とフランス革命戦争・ナポレオン戦争のたびにイギリス・フランスに占領され（1781–84年、1796–1802年、1803年〜）、その間に農園主の多くはイギリス人になった。1814年の英蘭条約で正式にイギリスに渡り、のち英領ギアナになった。
+      source: "https://en.wikipedia.org/wiki/Demerara"
+  source:
+    - "https://en.wikipedia.org/wiki/Essequibo_(colony)"
+    - "https://en.wikipedia.org/wiki/Berbice"
+
+- id: dutch_antilles
+  name: オランダ領アンティル
+  names:
+    - { to: 1953, name: キュラソーとその属領（オランダ領西インド）, kind: 植民地（1791年まで西インド会社） }
+  parent: netherlands
+  kind: 王国の構成国（自治）
+  match:
+    labels: [キュラソー, アルバ, ボネール, シント・ユースタティウス, シント・マールテン, オランダ領アンティル]
+  from: 1634
+  to: 2009
+  governors:
+    - { name: ペーター・ストイフェサント, title: キュラソーの長官, from: 1642, to: 1644, note: のちニューネーデルラントの長官, source: "https://ja.wikipedia.org/wiki/ピーター・ストイフェサント" }
+  periods:
+    - from: 1634
+      to: 1790
+      text: 1634年、スペインと戦う西インド会社がキュラソーを奪い、アルバ・ボネールも得た。乾いた島で農業には向かず、キュラソーはカリブ海の奴隷貿易と、スペイン領との密貿易の中継地として栄えた。シント・ユースタティウスは中立の自由港で、1776年、アメリカの独立派の船に初めて礼砲で答えたとされ（「最初の礼砲」）、1781年にイギリスのロドニー提督に略奪された。
+      source: "https://en.wikipedia.org/wiki/Curaçao_and_Dependencies"
+    - from: 1791
+      to: 1915
+      text: 1791年に西インド会社が解散して国の植民地になった。ナポレオン戦争中はイギリスに占領された（1800–03年、1807–16年）。1795年にキュラソーでトゥーラの奴隷反乱が起き、奴隷制は1863年に廃止された。
+      source: "https://en.wikipedia.org/wiki/Tula_(rebel_leader)"
+    - from: 1916
+      to: 2009
+      text: ベネズエラの石油を精製する工場がキュラソー（シェル、1918年）とアルバに建てられ、島は豊かになった。1954年の王国憲章で、6つの島はオランダ領アンティルとして本国と対等な構成国になった。アルバは1986年に抜けて単独の構成国になり、2010年にアンティルは解体された（キュラソー・シント・マールテンは構成国、残りは本国の特別自治体）。
+      source: "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+  source:
+    - "https://ja.wikipedia.org/wiki/オランダ領アンティル"
+
+- id: french_antilles
+  name: フランス領アンティル（マルティニーク・グアドループ）
+  parent: france
+  kind: 植民地（1946年から海外県）
+  # マルティニークとグアドループは別々の植民地だが、ここでは1つにまとめる
+  match:
+    labels: [マルティニーク, グアドループ, サン・マルタン（グアドループの属領）, サン・バルテルミー（グアドループの属領）]
+  from: 1635
+  to: 1945
+  governors:
+    - { name: ピエール・ブラン・デスナンビュック, title: 創設者, from: 1635, to: 1636, note: セント・クリストファー島からマルティニークに入植, source: "https://en.wikipedia.org/wiki/Pierre_Belain_d'Esnambuc" }
+    - { name: ヴィクトール・ユーグ, title: 国民公会の委員（グアドループ）, from: 1794, to: 1798, note: 奴隷制廃止の法令を持ち込み、イギリス軍を追い出す, source: "https://en.wikipedia.org/wiki/Victor_Hugues" }
+  periods:
+    - from: 1635
+      to: 1762
+      text: 1635年、フランスの諸島会社がマルティニークとグアドループに入植し、先住民カリブ（カリナゴ）を追い払った。コルベールの重商主義のもとで砂糖のプランテーションが広がり、黒人奴隷の扱いを定める黒人法典（1685年）が出された。島の砂糖はボルドー・ナントの港を通じて本国を富ませた。
+      source: "https://en.wikipedia.org/wiki/Code_Noir"
+    - from: 1763
+      to: 1815
+      text: 七年戦争に負けたフランスは、1763年のパリ条約でカナダを手放しても、砂糖の島グアドループ・マルティニークは取り戻した。フランス革命で1794年に奴隷制が廃止されたが、ナポレオンは1802年に復活させ、グアドループではデルグレスが抵抗して自決した。マルティニークはイギリスの占領で廃止を免れた。
+      source: "https://en.wikipedia.org/wiki/Louis_Delgrès"
+    - from: 1816
+      to: 1945
+      text: 1848年、二月革命の臨時政府でシュルシェールが奴隷制を最終的に廃止した。そのあとインドから年季契約の労働者が来た。1902年、マルティニークのプレー山の噴火でサン・ピエールの町が全滅した。第二次世界大戦ではヴィシー政府についた総督が島を治めた。1946年、エメ・セゼールらの求めで本国の海外県になった。
+      source: "https://ja.wikipedia.org/wiki/マルティニーク"
+  source:
+    - "https://en.wikipedia.org/wiki/History_of_Martinique"
+    - "https://en.wikipedia.org/wiki/History_of_Guadeloupe"
