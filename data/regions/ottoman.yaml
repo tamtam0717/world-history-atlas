@@ -2139,6 +2139,8 @@
       cause: ナーディル・シャーの死
     - from: 1873
       owner: russia
+      certainty: indirect
+      label: "ヒヴァ・ハン国"
       cause: ロシア軍がヒヴァを攻略し、ガンデミアン条約でヒヴァ・ハン国がロシアの保護国となる
       source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"
     - {from: 1918, owner: khiva, certainty: uncertain, cause: "十月革命ののちロシア軍が引き揚げ（1918年初め）、ヒヴァ・ハン国が事実上独立。実権はトルクメンのジュナイド・ハンが握る", source: "https://ja.wikipedia.org/wiki/ヒヴァ・ハン国"}
@@ -2187,6 +2189,8 @@
       cause: ナーディル・シャーの死
     - from: 1868
       owner: russia
+      certainty: indirect
+      label: "ブハラ・アミール国"
       cause: ロシア軍がサマルカンドを奪い、ブハラ・アミール国がロシアの保護国となる
       source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"
     - {from: 1918, owner: bukhara, cause: "十月革命ののちブハラ・アミール国が事実上独立。コレソフの攻撃（3月）を退け、キズィル・テペの和約でソヴィエト政権に独立を認めさせる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
@@ -5334,7 +5338,7 @@
     - {from: 1648, owner: bukhara}
     - {from: 1740, owner: bukhara, overlord: persia, cause: "ナーディル・シャーがブハラを服属させる"}
     - {from: 1747, owner: bukhara, cause: "ナーディル・シャーの死"}
-    - {from: 1868, owner: russia, cause: "ロシア軍がサマルカンドを奪い、ブハラ・アミール国がロシアの保護国となる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {from: 1868, owner: russia, certainty: indirect, label: "ブハラ・アミール国", cause: "ロシア軍がサマルカンドを奪い、ブハラ・アミール国がロシアの保護国となる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1918, owner: bukhara, cause: "十月革命ののちブハラ・アミール国が事実上独立。コレソフの攻撃（3月）を退け、キズィル・テペの和約でソヴィエト政権に独立を認めさせる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1920, owner: bukhara, cause: "赤軍がブハラを攻め落とし（9月）、ブハラ人民ソヴィエト共和国を作る", source: "https://ja.wikipedia.org/wiki/ブハラ人民ソビエト共和国"}
     - {from: 1924, owner: soviet_union, label: "ウズベク共和国", cause: "民族・共和国境界画定（10月）", source: "https://ja.wikipedia.org/wiki/中央アジアの民族・共和国境界画定"}
@@ -5353,7 +5357,7 @@
     - {from: 1648, owner: bukhara}
     - {from: 1740, owner: bukhara, overlord: persia, cause: "ナーディル・シャーがブハラを服属させる"}
     - {from: 1747, owner: bukhara, cause: "ナーディル・シャーの死"}
-    - {from: 1868, owner: russia, cause: "ロシア軍がサマルカンドを奪い、ブハラ・アミール国がロシアの保護国となる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {from: 1868, owner: russia, certainty: indirect, label: "ブハラ・アミール国", cause: "ロシア軍がサマルカンドを奪い、ブハラ・アミール国がロシアの保護国となる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1918, owner: bukhara, cause: "十月革命ののちブハラ・アミール国が事実上独立。コレソフの攻撃（3月）を退け、キズィル・テペの和約でソヴィエト政権に独立を認めさせる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1920, owner: bukhara, certainty: uncertain, cause: "赤軍がブハラを攻め落とし（9月）、ブハラ人民ソヴィエト共和国を作る。アミールは東ブハラに逃れ（1921年2月に赤軍がドゥシャンベを占領）、バスマチの抵抗が1920年代半ばまで続く", source: "https://ja.wikipedia.org/wiki/ブハラ人民ソビエト共和国"}
     - {from: 1924, owner: soviet_union, label: "ウズベク共和国", cause: "民族・共和国境界画定（10月）", source: "https://ja.wikipedia.org/wiki/中央アジアの民族・共和国境界画定"}
@@ -5371,7 +5375,7 @@
     - {from: 1648, owner: bukhara, certainty: uncertain, note: "ヒッサール・クリャーブなどウズベクの諸侯（ベク）の地。カラテギンには在地のシャーがいた"}
     - {from: 1750, owner: null, certainty: uncertain, cause: "マンギト朝への交代期に、ヒッサール・クリャーブの諸侯がブハラから自立する（年は要確認）", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1868, owner: bukhara, certainty: uncertain, cause: "東部のヒッサール・クリャーブなどの諸侯をブハラ・アミール国が征服しはじめる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
-    - {from: 1870, owner: russia, cause: "ブハラ・アミール国がヒッサール・クリャーブを征服する（ロシアの保護国のブハラの一部）", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
+    - {from: 1870, owner: russia, certainty: indirect, label: "ブハラ・アミール国", cause: "ブハラ・アミール国がヒッサール・クリャーブを征服する（ロシアの保護国のブハラの一部）", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1918, owner: bukhara, cause: "十月革命ののちブハラ・アミール国が事実上独立。コレソフの攻撃（3月）を退け、キズィル・テペの和約でソヴィエト政権に独立を認めさせる", source: "https://ja.wikipedia.org/wiki/ブハラ・ハン国"}
     - {from: 1920, owner: bukhara, certainty: uncertain, cause: "赤軍がブハラを攻め落とし（9月）、ブハラ人民ソヴィエト共和国を作る。アミールは東ブハラに逃れ（1921年2月に赤軍がドゥシャンベを占領）、バスマチの抵抗が1920年代半ばまで続く", source: "https://ja.wikipedia.org/wiki/ブハラ人民ソビエト共和国"}
     - {from: 1924, owner: soviet_union, label: "タジク自治共和国（ウズベク共和国内）", cause: "民族・共和国境界画定（10月）", source: "https://ja.wikipedia.org/wiki/中央アジアの民族・共和国境界画定"}

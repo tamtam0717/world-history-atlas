@@ -11,7 +11,8 @@
   match:
     iso: [IND, PAK, BGD]
     contains: [英領インド]
-    labels: [アラカン（イギリス軍の占領）, テナセリム（イギリス軍の占領）, 上ビルマ（イギリス軍の占領）]
+    # ビルマ（1824–1936 は英領インドの州）とアデンは asia_oceania.yaml の british_burma・aden_colony で別に選ぶ
+    exclude_labels: [英領インド（ビルマ州）, 英領インド（ペグー州）, アラカン（英領インド）, テナセリム（英領インド）, アデン（英領インドの一部）]
     exclude_certainty: [indirect]
   from: 1757
   to: 1947

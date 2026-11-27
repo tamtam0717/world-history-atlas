@@ -62,8 +62,11 @@ function polygonAreaKm2(rings: number[][][]) {
 
 /** 地域名の括弧書きや「〜領」を落として短くする */
 function shortRegion(name: string) {
-  return name
-    .replace(/（.*?）|\(.*?\)/g, "")
+  // 入れ子の括弧も落とす（内側から）
+  let t = name;
+  for (let k = 0; k < 4 && /[（(]/.test(t); k++) t = t.replace(/（[^（）]*）|\([^()]*\)/g, "");
+  return t
+    .replace(/[（(][^）)]*$/, "")
     .replace(/^[ァ-ヶー・＝]+領(?=.)/, "")
     .trim();
 }
@@ -273,7 +276,7 @@ export class PolityMilestones {
       const r0 = regions[0] && atlas.regions[regions[0][0]] ? shortRegion(atlas.regions[regions[0][0]].name) : "";
       // 2位以下の地域が合わせて2割以上あれば「など」
       const more = regions.length > 1 && (sum - regions[0][1]) / sum > 0.2;
-      const place = r0 ? `${r0}${more ? "など" : ""}` : "";
+      const place = r0 ? `${r0}${more && !r0.endsWith("など") ? "など" : ""}` : "";
       const title = verb === "gain" ? (place ? `${place}を獲得` : "領土を拡大") : place ? `${place}を失う` : "領土を失う";
       const who = others
         .slice(0, 3)
