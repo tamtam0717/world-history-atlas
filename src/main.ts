@@ -58,6 +58,8 @@ async function main() {
     return d ? { parent: d.parent, key: c } : null;
   };
   state.colony = parseColony(state.polity, hash.get("c"));
+  // データの植民地は、データの本国を選ぶ（p=vichy_france&c=french_west_africa → フランス。colonies.ts の PARENT_ALIASES）
+  if (state.colony) state.polity = state.colony.parent;
   const stageKey0 = hash.get("h");
   state.layer = parseLayer(hash.get("l"));
   if (hash.get("mv") && idx.movement(hash.get("mv"))) state.movement = hash.get("mv");
@@ -957,6 +959,7 @@ async function main() {
       if (Number.isFinite(s.y) && s.y >= minYear && s.y <= maxYear) state.year = s.y;
       state.polity = s.p && idx.polityById.has(s.p) ? s.p : null;
       state.colony = state.polity && s.c ? parseColony(state.polity, s.c.key) : null;
+      if (state.colony) state.polity = state.colony.parent;
       if (state.colony) colonyPieces = [];
       state.stage = state.polity ? histories.stageByKey(s.h) : null;
       state.anchor = state.polity ? (s.a ?? currentUnit()) : null;

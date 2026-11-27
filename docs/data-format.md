@@ -218,6 +218,7 @@ indirect の使い道：
 - 副ラベルの文字列は地域によって揺れているので、`npm run data` は match の `labels`・`contains`・`exclude_labels` が
   owner: parent の地域の label に見つからなければ警告する。実際の (owner, label) の組は public/data/atlas.json の regions から一覧できる。
 - 同じピースに複数の植民地が当てはまるときは、ファイルの中の順で先のものが優先。
+- owner がヴィシー政府（vichy_france）・フランコ側（nationalist_spain）の年も、parent: france・spain の植民地データに当てはめる（同じ植民地として選び続ける。src/colonies.ts の PARENT_ALIASES）。
 - 年を変えても、同じ植民地が続いていれば選択を保つ。植民地が「〇〇史」（下）の当事者でなくなったら、その年の舞台の当事者へ移る（ポルトガル領ブラジル → ブラジル帝国）。
   当事者が見つからないときは、前の年の植民地のピースの半分以上が入っている植民地
   （名前が変わった・宗主国が替わった同じ土地。例：オランダのケープ植民地 → イギリスのケープ植民地）へ移り、それもなければ本国の選択に戻る。

@@ -174,7 +174,8 @@ export class PolityMilestones {
       (e) =>
         e.year >= y0 &&
         e.year <= y1 &&
-        ((e.polities ?? []).some((p) => ids.has(p)) || inside(e)) &&
+        // 「〇〇史」では、代表点が植民地の中でも本国が関わらない出来事は除く（隣のスペイン領の重心がブラジルの中に落ちる出来事など）
+        ((e.polities ?? []).some((p) => ids.has(p)) || (inside(e) && (!stage || (e.polities ?? []).includes(ref.parent)))) &&
         (!stage || (eventInStage(e, stage) ?? (ids.has(e.polities?.[0] ?? "") || inside(e, 0)))),
     );
     return this.build({

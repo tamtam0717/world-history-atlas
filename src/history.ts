@@ -6,7 +6,8 @@
 //   手で書いた「〇〇史」（data/histories）があればそれを使う（当事者に選んだ政体があり舞台が本国と重なるもの → 舞台の国が同じもの）。
 // - 当事者：年ごとに、舞台の面積の CORE 以上を持つ単位（植民地・副ラベルのまとまりがあればその単位、なければ owner の政体）。
 //   一度当事者になった単位は、KEEP 以上を持つ間は当事者のまま（しきい値の前後で出入りしないように）。
-//   手で書いた members は舞台に土地がある間、選んだもの（anchor）は KEEP 以上を持つ間（小さな国はいちばん広い時の半分以上の間）は当事者。
+//   手で書いた members は舞台に土地がある間、選んだもの（anchor）は KEEP 以上を持つ間（小さな国はいちばん広い時の半分以上の間。
+//   ほかに当事者のいない年は土地がある間）は当事者。
 // - 節目：当事者それぞれの節目（polity-milestones.ts。舞台の中の領土の変化・舞台の中の出来事だけ）を、当事者だった年の分だけ合わせる。
 // 計算は舞台と anchor ごとに一度だけ（全年 1453–2025）。
 
@@ -306,7 +307,7 @@ export class Histories {
           const d = colonies.dataAtState(i, s, y, e);
           const label = labelName(e?.label);
           const unit: Unit = d
-            ? { kind: "colony", ref: { parent: ownerId, key: d.id } }
+            ? { kind: "colony", ref: { parent: d.parent, key: d.id } }
             : label && !this.isHome(ownerId, iso, y)
               ? { kind: "colony", ref: { parent: ownerId, key: "~" + label } }
               : { kind: "polity", id: ownerId };
@@ -366,11 +367,15 @@ export class Histories {
       for (let y = Math.max(0, (m.from ?? y0) - y0); y <= Math.min(n - 1, (m.to ?? y1) - y0); y++) if (t.area[y] > 0) t.member[y] = 1;
     }
     // 選んだもの：舞台の KEEP 以上を持つ間（いちばん広かった時でも KEEP の 2 倍に届かない小さな国は、その半分以上の間）
+    // ほかに当事者のいない年（ポルトガル領ブラジルの始まりなど）は、土地がある間は当事者
     if (anchor && total > 0) {
+      const ak = unitKey(anchor);
+      const others = new Uint8Array(n);
+      for (const [k, t] of tracks) if (k !== ak) for (let y = 0; y < n; y++) if (t.member[y]) others[y] = 1;
       const t = track(anchor);
       const max = t.area.reduce((m, v) => Math.max(m, v), 0);
       const th = Math.min(total * KEEP, max * 0.5);
-      for (let y = 0; y < n; y++) if (t.area[y] > 0 && t.area[y] >= th) t.member[y] = 1;
+      for (let y = 0; y < n; y++) if (t.area[y] > 0 && (t.area[y] >= th || !others[y])) t.member[y] = 1;
     }
     for (const [k, t] of tracks) if (!t.member.some((x) => x)) tracks.delete(k);
     return new StageInfo(stage, anchor, tracks, total, y0, this);
