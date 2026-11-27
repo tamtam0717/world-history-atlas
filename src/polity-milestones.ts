@@ -7,6 +7,10 @@
 //     初めて地図に現れた年・消えた年も含める。
 //  2. その政体が関わる重要度1の出来事と、その政体が主役（polities の先頭）の重要度2の出来事。
 //  3. 国名・種別（names の切り替え）が変わった年。
+//
+// 「〇〇史」（history.ts）の当事者として使うときは、舞台（StageMask）を渡す。領土の増減は舞台の中のピースだけで数え
+// （現れた／消えた年は全体で判定）、出来事は代表点（pp）のどれかが舞台の中にあるもの（代表点がなければ主役のもの）だけにする。
+// 例：イギリス史（舞台 GBR）では、英領インドの獲得やプラッシーの戦い（代表点はインド）で止まらない。
 
 import { geoArea } from "d3-geo";
 import { feature } from "topojson-client";
@@ -24,6 +28,19 @@ export interface PolityMilestone {
   kind: "gain" | "loss" | "appear" | "vanish" | "event" | "name";
   /** 領土の大きな変化があった年なら、その向き（ラベルが出来事の題名のときも付ける） */
   terr?: "gain" | "loss" | "appear" | "vanish";
+}
+
+/** 「〇〇史」の舞台：key はキャッシュ用、mask は atlas のピース番号ごとに舞台の中なら 1 */
+export interface StageMask {
+  key: string;
+  mask: Uint8Array;
+}
+
+/** 出来事の代表点（pp）のどれかが舞台の中か。代表点がない（海の上など）ときは null */
+export function eventInStage(e: HistEvent, st: StageMask): boolean | null {
+  const pp = (e.pp ?? []).filter((p) => p >= 0);
+  if (!pp.length) return null;
+  return pp.some((p) => st.mask[p] === 1);
 }
 
 /** 前年の面積に対するこの割合以上の増減を「大きな変化」とする */
@@ -68,7 +85,7 @@ export class PolityMilestones {
   ) {}
 
   /** ピースごとの面積（km²）。最初に使うときに一度だけ計算する */
-  private pieceAreas(): Float64Array {
+  pieceAreas(): Float64Array {
     if (this.areas) return this.areas;
     const fc = feature(this.topo, this.topo.objects.pieces as GeometryCollection) as unknown as GeoJSON.FeatureCollection;
     const out = new Float64Array(fc.features.length);
@@ -83,36 +100,40 @@ export class PolityMilestones {
     return out;
   }
 
-  /** その政体の節目（年の昇順）。計算結果はキャッシュする */
-  get(polityId: string): PolityMilestone[] {
-    let ms = this.cache.get(polityId);
-    if (!ms) {
-      ms = this.compute(polityId);
-      this.cache.set(polityId, ms);
-    }
-    return ms;
-  }
-
-  /** 植民地の節目。計算結果はキャッシュする */
-  getColony(ref: ColonyRef, colonies: Colonies): PolityMilestone[] {
-    const key = `c:${ref.parent}|${ref.key}`;
+  /** その政体の節目（年の昇順）。stage を渡すと舞台の中のものだけ。計算結果はキャッシュする */
+  get(polityId: string, stage?: StageMask): PolityMilestone[] {
+    const key = `${polityId}@${stage?.key ?? ""}`;
     let ms = this.cache.get(key);
     if (!ms) {
-      ms = this.computeColony(ref, colonies);
+      ms = this.compute(polityId, stage);
       this.cache.set(key, ms);
     }
     return ms;
   }
 
-  private compute(polityId: string): PolityMilestone[] {
+  /** 植民地の節目。stage を渡すと舞台の中のものだけ。計算結果はキャッシュする */
+  getColony(ref: ColonyRef, colonies: Colonies, stage?: StageMask): PolityMilestone[] {
+    const key = `c:${ref.parent}|${ref.key}@${stage?.key ?? ""}`;
+    let ms = this.cache.get(key);
+    if (!ms) {
+      ms = this.computeColony(ref, colonies, stage);
+      this.cache.set(key, ms);
+    }
+    return ms;
+  }
+
+  private compute(polityId: string, stage?: StageMask): PolityMilestone[] {
     const { idx } = this;
     const pi = idx.polityIndex.get(polityId);
     const polity = idx.polityById.get(polityId);
     if (pi === undefined || !polity) return [];
     const [y0, y1] = this.range;
     const mine = (st: readonly number[] | undefined) => !!st && (st[1] === pi || st[2] === pi);
-    const evs = idx.atlas.events.filter((e) => e.year >= y0 && e.year <= y1 && (e.polities ?? []).includes(polityId));
+    const evs = idx.atlas.events.filter(
+      (e) => e.year >= y0 && e.year <= y1 && (e.polities ?? []).includes(polityId) && (!stage || (eventInStage(e, stage) ?? e.polities?.[0] === polityId)),
+    );
     return this.build({
+      stage,
       self: pi,
       segs: (tl) => {
         const out: Seg[] = [];
@@ -136,7 +157,7 @@ export class PolityMilestones {
     });
   }
 
-  private computeColony(ref: ColonyRef, colonies: Colonies): PolityMilestone[] {
+  private computeColony(ref: ColonyRef, colonies: Colonies, stage?: StageMask): PolityMilestone[] {
     const { idx } = this;
     const pi = idx.polityIndex.get(ref.parent);
     if (pi === undefined) return [];
@@ -147,9 +168,14 @@ export class PolityMilestones {
     const inside = (e: HistEvent, k?: number) =>
       (e.pp ?? []).some((p, j) => (k == null || j === k) && p >= 0 && colonies.belongs(p, e.year, ref));
     const evs = idx.atlas.events.filter(
-      (e) => e.year >= y0 && e.year <= y1 && ((e.polities ?? []).some((p) => ids.has(p)) || inside(e)),
+      (e) =>
+        e.year >= y0 &&
+        e.year <= y1 &&
+        ((e.polities ?? []).some((p) => ids.has(p)) || inside(e)) &&
+        (!stage || (eventInStage(e, stage) ?? (ids.has(e.polities?.[0] ?? "") || inside(e, 0)))),
     );
     return this.build({
+      stage,
       self: pi,
       segs: (_tl, i) => colonies.segments(i, ref, y0, y1),
       title: (y) => colonies.nameOf(ref, y),
@@ -165,6 +191,7 @@ export class PolityMilestones {
    * self：相手国の一覧から除く政体の番号
    */
   private build(subj: {
+    stage?: StageMask;
     self: number;
     segs: (tl: number[][], piece: number) => Seg[];
     title: (y: number) => string;
@@ -184,6 +211,9 @@ export class PolityMilestones {
     const gain = new Float64Array(n);
     const loss = new Float64Array(n);
     const total = new Float64Array(n + 1);
+    // 舞台の中だけの面積（舞台がなければ total と同じ）。増減の大きさはこちらで数え、現れた／消えた年は total で判定する
+    const mask = subj.stage?.mask;
+    const totalIn = mask ? new Float64Array(n + 1) : total;
     type Part = { region: number; other: number; area: number };
     const gainParts = new Map<number, Part[]>();
     const lossParts = new Map<number, Part[]>();
@@ -204,9 +234,15 @@ export class PolityMilestones {
     atlas.pieceTimelines.forEach((tl, i) => {
       const a = areas[i] ?? 0;
       if (!a) return;
+      const inStage = !mask || mask[i] === 1;
       for (const sg of subj.segs(tl as number[][], i)) {
         total[sg.from - y0] += a;
         total[sg.to - y0] -= a;
+        if (!inStage) continue;
+        if (mask) {
+          totalIn[sg.from - y0] += a;
+          totalIn[sg.to - y0] -= a;
+        }
         // 境目の年（範囲の最初の年は「変化」としない）
         if (sg.from > y0) {
           const prev = stateAt(tl as number[][], sg.from - 1);
@@ -221,6 +257,7 @@ export class PolityMilestones {
       }
     });
     for (let y = 1; y <= n; y++) total[y] += total[y - 1];
+    if (mask) for (let y = 1; y <= n; y++) totalIn[y] += totalIn[y - 1];
 
     /** 変化の中心の地域と相手国（面積の大きい順） */
     const describe = (parts: Part[], y: number, verb: "gain" | "loss") => {
@@ -258,14 +295,13 @@ export class PolityMilestones {
       const g = gain[y];
       const l = loss[y];
       if (!g && !l) continue;
-      const before = total[y - 1];
-      const after = total[y];
+      const before = totalIn[y - 1];
       const year = y0 + y;
-      if (before === 0 && after > 0) {
+      if (total[y - 1] === 0 && total[y] > 0) {
         slot(year).terr = { year, title: `${subj.title(year)}が地図に現れる`, detail: [], kind: "appear" };
         continue;
       }
-      if (before > 0 && after === 0) {
+      if (total[y - 1] > 0 && total[y] === 0) {
         slot(year).terr = { year, title: `${subj.title(year - 1)}が地図から消える`, detail: [], kind: "vanish" };
         continue;
       }

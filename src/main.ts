@@ -3,9 +3,10 @@ import type { Topology } from "topojson-specification";
 import { AtlasIndex, curveAt, fallbackColor, type Atlas, type DistKey } from "./data";
 import { AtlasMap, isDist, secularColor, stripeColor, type MapLayer, type ReligionPick } from "./map";
 import { MovementBand } from "./movements";
-import { Panel, type ColonyCard, type PanelColony } from "./panel";
+import { Panel, type ColonyCard, type PanelColony, type PanelHistory } from "./panel";
 import { sameColony, type ColonyRef } from "./colonies";
 import { PolityMilestones } from "./polity-milestones";
+import { Histories, sameUnit, type Stage, type StageInfo, type Unit } from "./history";
 import { Search } from "./search";
 import { setupSheet } from "./sheet";
 import { setupShortcuts, toast } from "./shortcuts";
@@ -36,6 +37,10 @@ async function main() {
     blank: null as number | null,
     /** 選んでいる植民地（副ラベルの単位。このとき polity は本国）。URL の c= */
     colony: null as ColonyRef | null,
+    /** 「〇〇史」の舞台（国・植民地を地図で選んだときに決まり、年を動かして選択が移っても保つ）。URL の h= */
+    stage: null as Stage | null,
+    /** 舞台を決めたときに選んだもの（その舞台に土地がある間は当事者として数える） */
+    anchor: null as Unit | null,
   };
   /** 地図の最初の描画が終わったか（植民地の判定は地図の所属を使うので、それまでは植民地のカードを出さない） */
   let mapReady = false;
@@ -53,6 +58,7 @@ async function main() {
     return d ? { parent: d.parent, key: c } : null;
   };
   state.colony = parseColony(state.polity, hash.get("c"));
+  const stageKey0 = hash.get("h");
   state.layer = parseLayer(hash.get("l"));
   if (hash.get("mv") && idx.movement(hash.get("mv"))) state.movement = hash.get("mv");
 
@@ -69,6 +75,9 @@ async function main() {
     rp: ReligionPick | null;
     mv?: string | null;
     c?: ColonyRef | null;
+    /** 「〇〇史」の舞台の key と、舞台を決めたときに選んだもの */
+    h?: string | null;
+    a?: Unit | null;
     view?: { lon: number; lat: number; zoom: number };
   }
   const STEP_MS = 1200;
@@ -194,10 +203,58 @@ async function main() {
   // スライダーの下の潮流の帯（年表）
   const band = new MovementBand($("#mv-band"), idx, [minYear, maxYear], (id) => selectMovement(id), () => sheet.refresh());
 
+  /** 前に描いた年（年を動かしたときだけ「〇〇史」の当事者の引き継ぎを調べる） */
+  let shownYear = state.year;
   function update() {
     map.render(state.year);
-    reconcileColony();
+    const prev = shownYear;
+    shownYear = state.year;
+    if (prev !== state.year && !reconcileStage(prev)) reconcileColony();
+    else if (state.colony) colonyPieces = map.colonyPieces(state.colony);
     updateUi();
+  }
+
+  // ---- 「〇〇史」：舞台（現代の国の範囲）と当事者 ----
+  // 国・植民地を地図で選ぶと舞台が決まり、« » はその舞台の当事者すべての節目へ。年を動かして選んでいたものが当事者でなくなったら
+  // （滅亡・独立・舞台の大部分を失った）、その年に舞台を最も広く持つ当事者へ選択を移す（清 → 中華民国）。舞台は選び直すまで保つ
+  const currentUnit = (): Unit | null =>
+    state.colony ? { kind: "colony", ref: state.colony } : state.polity ? { kind: "polity", id: state.polity } : null;
+  const stageInfo = (): StageInfo | null => (state.stage && state.polity ? histories.info(state.stage, state.anchor) : null);
+  /** 選んだもの（国・植民地）から舞台を決め直す */
+  function setStageFor(u: Unit | null) {
+    state.anchor = u;
+    state.stage = !u
+      ? null
+      : u.kind === "polity"
+        ? histories.stageForPolity(u.id, state.year)
+        : histories.stageForColony(mapReady ? map.colonyAtlasPieces(u.ref) : []);
+  }
+  /** 年を動かした後：選んでいたものが当事者でなくなっていれば、舞台を最も広く持つ当事者へ移す。移したら true */
+  function reconcileStage(prevYear: number): boolean {
+    const inf = stageInfo();
+    const cur = currentUnit();
+    if (!inf || !cur || !mapReady) return false;
+    // 前の年にも当事者でなかったもの（舞台の外の国をリンクで選んだときなど）は移さない
+    if (inf.isMember(cur, state.year) || !inf.isMember(cur, prevYear)) return false;
+    const next = inf.leaderAt(state.year, cur);
+    if (!next || sameUnit(next, cur)) return false;
+    const before = histories.unitName(cur, prevYear);
+    if (next.kind === "polity") {
+      state.polity = next.id;
+      state.colony = null;
+    } else {
+      state.polity = next.ref.parent;
+      state.colony = next.ref;
+      colonyPieces = map.colonyPieces(next.ref);
+      colonyName = map.colonies.nameOf(next.ref, state.year);
+      if (!colonyPieces.length) {
+        // 地図の上で植民地として選べない（副ラベルが出ていない）ときは本国を選ぶ
+        state.colony = null;
+      }
+    }
+    const after = histories.unitName(currentUnit()!, state.year);
+    if (before !== after) toast(`${before} → ${after}（${state.stage!.name}）`);
+    return true;
   }
 
   // ---- 植民地の選択 ----
@@ -233,6 +290,7 @@ async function main() {
     state.colony = ref;
     colonyPieces = map.colonyPieces(ref);
     colonyName = map.colonies.nameOf(ref, state.year);
+    setStageFor({ kind: "colony", ref });
     markPush();
     update();
     if (focus) map.focus(ref.parent, cardAvoid(), ref);
@@ -303,7 +361,13 @@ async function main() {
     map.setReligionSelected(dist && state.relPick ? state.relPick.region : -1);
     map.setMovement(idx.movement(state.movement) ?? null);
     map.flashRegions("political", null);
-    panel.renderYear(state.year, { dist, movement: state.movement, polity: dist ? null : state.polity, colony: dist ? null : panelColony() });
+    panel.renderYear(state.year, {
+      dist,
+      movement: state.movement,
+      polity: dist ? null : state.polity,
+      colony: dist ? null : panelColony(),
+      history: dist ? null : panelHistory(),
+    });
     if (dist) panel.renderReligion(state.relPick, state.year, dist);
     else if (!state.polity && state.blank != null) panel.renderBlank(map.blankInfo(state.blank), state.year);
     else if (state.colony && mapReady) panel.renderColony(colonyCard(state.colony), state.year);
@@ -320,13 +384,25 @@ async function main() {
     const h = new URLSearchParams({ y: String(state.year) });
     if (state.polity) h.set("p", state.polity);
     if (state.polity && state.colony) h.set("c", state.colony.key);
+    if (state.polity && state.stage) h.set("h", state.stage.key);
     if (state.layer !== "political") h.set("l", state.layer);
     if (state.movement) h.set("mv", state.movement);
     if (modernBase) h.set("m", "1");
     return `#${h}`;
   }
   function histState(): HistState {
-    return { y: state.year, p: state.polity, l: state.layer, m: modernBase, rp: state.relPick, mv: state.movement, c: state.colony, view: map.getView() };
+    return {
+      y: state.year,
+      p: state.polity,
+      l: state.layer,
+      m: modernBase,
+      rp: state.relPick,
+      mv: state.movement,
+      c: state.colony,
+      h: state.stage?.key ?? null,
+      a: state.anchor,
+      view: map.getView(),
+    };
   }
   /** 今の状態を履歴に書く（nextNav に従って積む／置き換える） */
   function writeHistory(nav: Nav = nextNav, force = nextForce) {
@@ -370,6 +446,7 @@ async function main() {
     if (id && state.layer !== "political") setLayer("political", false);
     state.polity = id;
     state.colony = null;
+    setStageFor(id ? { kind: "polity", id } : null);
     if (nextNav === "replace") markPush();
     update();
     // 国の情報は地図の上のカードに出るので、シート（スマホ）は引き上げない
@@ -405,12 +482,20 @@ async function main() {
   // «» は前後の「節目」へジャンプ。国を選んでいる間は、その国の節目（重要な出来事・領土の大きな変化・国名の変化）へ
   const milestones = atlas.milestones ?? [];
   const polityMs = new PolityMilestones(topo, idx, [minYear, maxYear]);
+  const histories = new Histories(topo, idx, map.colonies, polityMs, [minYear, maxYear]);
   type Ms = { year: number; title: string; detail?: string[]; terr?: string };
   /** 領土の増減の印（▲ 拡大・▼ 縮小。現れた／消えた年は ◆／◇） */
   const terrMark = (m: Ms) =>
     m.terr ? `<i class="ms-terr ms-${m.terr}">${{ gain: "▲", loss: "▼", appear: "◆", vanish: "◇" }[m.terr] ?? ""}</i>` : "";
   /** 今使う節目の一覧と、国の節目なら国の ID */
-  const currentMs = (): { list: Ms[]; polity: string | null; colony?: string } => {
+  const currentMs = (): { list: Ms[]; polity: string | null; colony?: string; hist?: StageInfo } => {
+    // 「〇〇史」：舞台の当事者すべての節目
+    const inf = stageInfo();
+    if (inf) {
+      const list = inf.milestones();
+      if (list.length)
+        return { list, polity: state.polity, colony: state.colony && mapReady ? map.colonies.nameOf(state.colony, state.year) : undefined, hist: inf };
+    }
     // 植民地を選んでいる間は、植民地の節目（範囲の大きな変化・植民地に関係する重要な出来事・名前の変化）
     if (state.colony && mapReady) {
       const list = polityMs.getColony(state.colony, map.colonies);
@@ -434,8 +519,10 @@ async function main() {
   });
   const msLabel = $("#milestone");
   const esc = (t: string) => t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+  const histStrip = $("#hist-strip");
+  let stripKey = "";
   function updateMilestones() {
-    const { list, polity, colony } = currentMs();
+    const { list, polity, colony, hist } = currentMs();
     const p = prevMs();
     const n = nextMs();
     const here = list.find((m) => m.year === state.year);
@@ -444,20 +531,34 @@ async function main() {
     // 国の節目のときは、国の色の印（ラベルの丸・« » の縁取り）と国名の札で、全体の節目と見分けられるようにする
     controls.classList.toggle("ms-polity", !!pol);
     controls.classList.toggle("ms-colony", !!colony);
+    controls.classList.toggle("ms-hist", !!hist);
     if (pol) controls.style.setProperty("--ms-color", pol.color ?? fallbackColor(pol.id));
     else controls.style.removeProperty("--ms-color");
     const tip = (m: Ms) => esc([`${m.year} ${m.title}`, ...(m.detail ?? [])].join("\n"));
-    const center = here
-      ? `<span class="ms-here" title="${tip(here)}">${pol ? '<i class="ms-dot"></i>' : ""}${terrMark(here)}${esc(here.title)}</span>`
-      : pol
-        ? `<span class="ms-who" title="${esc(colony ?? idx.shortName(pol, state.year))}を選んでいる間は、« » でこの${colony ? "植民地" : "国"}の節目へ移ります"><i class="ms-dot"></i>${esc(colony ?? idx.shortName(pol, state.year))}<span class="ms-who-long">の節目</span></span>`
-        : "";
+    const selName = colony ?? (pol ? idx.shortName(pol, state.year) : "");
+    let center: string;
+    if (hist) {
+      // 「〇〇史」の札：当事者の色を時代順に並べた帯（今の当事者が光る）と名前。節目の年は札の右に節目の題名
+      const ms = hist.membersAt(state.year);
+      const others = ms.filter((m) => !sameUnit(m.unit, currentUnit())).slice(0, 3).map((m) => histories.unitName(m.unit, state.year));
+      const title = `${hist.stage.name}：${selName}${others.length ? `（ほかの当事者：${others.join("・")}）` : ""}を選んでいる間は、« » で${hist.stage.name}の節目へ移ります。年を動かして${selName}が当事者でなくなると、選択はその年の当事者へ移ります`;
+      const tag = `<span class="ms-tag" title="${esc(title)}"><i class="ms-dot"></i><b>${esc(hist.stage.name)}</b></span>`;
+      center = here
+        ? `<span class="ms-here ms-with-tag" title="${tip(here)}">${tag}${terrMark(here)}${esc(here.title)}</span>`
+        : `<span class="ms-who ms-with-tag">${tag}<span class="ms-who-long">${esc(selName)}</span></span>`;
+    } else
+      center = here
+        ? `<span class="ms-here" title="${tip(here)}">${pol ? '<i class="ms-dot"></i>' : ""}${terrMark(here)}${esc(here.title)}</span>`
+        : pol
+          ? `<span class="ms-who" title="${esc(selName)}を選んでいる間は、« » でこの${colony ? "植民地" : "国"}の節目へ移ります"><i class="ms-dot"></i>${esc(selName)}<span class="ms-who-long">の節目</span></span>`
+          : "";
     msLabel.innerHTML = [
       p ? `<span class="ms-prev" title="${tip(p)}">« ${p.year} ${terrMark(p)}${esc(p.title)}</span>` : "<span></span>",
       center,
       n ? `<span class="ms-next" title="${tip(n)}">${n.year} ${terrMark(n)}${esc(n.title)} »</span>` : "<span></span>",
     ].join("");
-    const name = colony ?? (pol ? idx.shortName(pol, state.year) : "");
+    renderHistStrip(hist ?? null, list);
+    const name = hist ? hist.stage.name : selName;
     const pb = $<HTMLButtonElement>("#prev10");
     const nb = $<HTMLButtonElement>("#next10");
     pb.disabled = !p;
@@ -466,6 +567,72 @@ async function main() {
     nb.setAttribute("aria-label", pol ? `${name}の次の節目へ` : "次の節目へ");
     pb.title = p ? `${p.year} ${p.title}` : "";
     nb.title = n ? `${n.year} ${n.title}` : "";
+  }
+  /**
+   * スライダーの下の「〇〇史」の帯：その年に舞台を最も広く持つ当事者の色を年の順に並べ（清・中華民国・中華人民共和国の時代が色で分かる）、
+   * 節目の年に細い刻み、今の年に印。押すとその年へ（いちばん近い節目に吸い付く）
+   */
+  function renderHistStrip(hist: StageInfo | null, list: Ms[]) {
+    histStrip.hidden = !hist;
+    if (!hist) {
+      stripKey = "";
+      return;
+    }
+    const span = Math.max(1, maxYear - minYear);
+    const pct = (y: number) => (((y - minYear) / span) * 100).toFixed(2);
+    histStrip.style.setProperty("--now", `${pct(state.year)}%`);
+    const key = `${hist.stage.key}|${state.anchor ? JSON.stringify(state.anchor) : ""}`;
+    if (key === stripKey) return;
+    stripKey = key;
+    const stops: string[] = [];
+    let cur = "";
+    let from = minYear;
+    const flush = (to: number) => {
+      if (cur) stops.push(`${cur} ${pct(from)}% ${pct(to)}%`);
+      else stops.push(`transparent ${pct(from)}% ${pct(to)}%`);
+    };
+    for (let y = minYear; y <= maxYear + 1; y++) {
+      const u = y <= maxYear ? hist.leaderAt(y) : null;
+      const c = y > maxYear ? "#end" : u ? (histories.unitColor(u) ?? fallbackColor(u.kind === "polity" ? u.id : u.ref.parent)) : "";
+      if (c !== cur || y > maxYear) {
+        if (y > minYear) flush(y);
+        cur = c;
+        from = y;
+      }
+    }
+    const ticks = list.map((m) => `<i class="hs-tick" style="left:${pct(m.year)}%"></i>`).join("");
+    histStrip.innerHTML = `<div class="hs-bar" style="background:linear-gradient(90deg, ${stops.join(", ")})"></div>${ticks}<i class="hs-now"></i>`;
+    histStrip.title = `${hist.stage.name}：色はその年に舞台を最も広く持つ国、刻みは節目`;
+  }
+  histStrip.addEventListener("click", (e) => {
+    const r = histStrip.getBoundingClientRect();
+    const y = Math.round(minYear + ((e.clientX - r.left) / r.width) * (maxYear - minYear));
+    const list = currentMs().list;
+    // 近い節目（帯の上で 1.5% 以内）があればそこへ
+    const near = list.reduce<Ms | null>((b, m) => (!b || Math.abs(m.year - y) < Math.abs(b.year - y) ? m : b), null);
+    setYear(near && Math.abs(near.year - y) <= (maxYear - minYear) * 0.015 ? near.year : y);
+  });
+
+  /** 右パネルの並べ替えに使う「〇〇史」の情報 */
+  function panelHistory(): PanelHistory | null {
+    const inf = stageInfo();
+    if (!inf) return null;
+    const y = state.year;
+    const regions = new Set<number>();
+    for (const i of inf.stage.pieces) {
+      const a = idx.pieceState(i, y);
+      const b = idx.pieceState(i, y - 1);
+      if (a) regions.add(a[4]);
+      if (b) regions.add(b[4]);
+    }
+    const leader = inf.leaderAt(y);
+    return {
+      name: inf.stage.name,
+      color: (leader && histories.unitColor(leader)) ?? undefined,
+      polities: inf.memberPolities(y),
+      mask: inf.stage.mask,
+      regions,
+    };
   }
   yearInput.addEventListener("change", () => setYear(Number(yearInput.value)));
   yearInput.addEventListener("keydown", (e) => {
@@ -791,6 +958,10 @@ async function main() {
       state.polity = s.p && idx.polityById.has(s.p) ? s.p : null;
       state.colony = state.polity && s.c ? parseColony(state.polity, s.c.key) : null;
       if (state.colony) colonyPieces = [];
+      state.stage = state.polity ? histories.stageByKey(s.h) : null;
+      state.anchor = state.polity ? (s.a ?? currentUnit()) : null;
+      if (state.polity && !state.stage) setStageFor(currentUnit());
+      shownYear = state.year; // 戻る／進むでは、当事者の引き継ぎをしない（その時の選択をそのまま戻す）
       state.blank = null;
       if (s.l !== state.layer) setLayer(s.l, false);
       state.relPick = isDist(s.l) ? (s.rp ?? null) : null;
@@ -816,6 +987,7 @@ async function main() {
       rp: null,
       mv: h.get("mv"),
       c: h.get("p") && h.get("c") ? { parent: h.get("p")!, key: h.get("c")! } : null,
+      h: h.get("h"),
     };
   };
   window.addEventListener("popstate", (e) => {
@@ -838,9 +1010,20 @@ async function main() {
     state.layer = "political";
     setLayer(l, false);
   } else syncLayerButtons();
+  // URL の h= の舞台（なければ選んでいる国から決める。植民地は地図の準備ができてから）
+  if (state.polity) {
+    state.anchor = currentUnit();
+    state.stage = histories.stageByKey(stageKey0) ?? (state.colony ? null : histories.stageForPolity(state.polity, state.year));
+  }
   update();
   (window as unknown as { __atlas: unknown }).__atlas = map;
   (window as unknown as { __polityMs: unknown }).__polityMs = polityMs; // 確認用（国の節目の一覧）
+  // 確認用：「〇〇史」の今の舞台・当事者・節目
+  (window as unknown as { __history: unknown }).__history = {
+    histories,
+    info: () => stageInfo(),
+    state: () => ({ year: state.year, polity: state.polity, colony: state.colony, stage: state.stage?.key ?? null, name: state.stage?.name ?? null }),
+  };
   await map.ready;
   mapReady = true;
   document.body.classList.add("ready");
@@ -849,6 +1032,8 @@ async function main() {
     colonyPieces = map.colonyPieces(state.colony);
     if (!colonyPieces.length) state.colony = null;
     else colonyName = map.colonies.nameOf(state.colony, state.year);
+    if (!state.stage) setStageFor(currentUnit());
+    else state.anchor = currentUnit();
     updateUi();
   }
   panel.arrangeByView(false); // 地図の準備ができたので、映っている地域の出来事を先にする

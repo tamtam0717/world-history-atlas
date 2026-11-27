@@ -347,6 +347,65 @@ const colonyIds = new Set();
   }
 }
 
+// ---- 「〇〇史」（data/histories。docs/data-format.md の「〇〇史」） ----
+// 国・植民地を選んでいる間の « » は「舞台」（現代の国の範囲）の当事者すべての節目を合わせる。舞台と当事者は画面が自動で決めるが、
+// うまくいかない地域（神聖ローマ帝国の領邦が分かれていたドイツなど）は、ここで舞台・当事者を手で書いて補う
+const historyRaw = loadDir("histories");
+const histories = [];
+{
+  const ids = new Set();
+  for (const h of historyRaw) {
+    const where = `${h._file} の ${h.id ?? "(id なし)"}`;
+    if (!h.id || !h.name) {
+      warn(`${where}: 〇〇史には id と name が必要です`);
+      continue;
+    }
+    if (ids.has(h.id) || /^[A-Z0-9]{3}$/.test(h.id)) {
+      warn(`${where}: ID "${h.id}" が重複しているか、国コードと同じ形です（小文字の英字で書いてください）`);
+      continue;
+    }
+    ids.add(h.id);
+    const st = h.stage ?? {};
+    for (const k of Object.keys(st)) if (!["iso", "regions"].includes(k)) warn(`${where}: stage の "${k}" は使えません（iso / regions）`);
+    const set = new Set();
+    for (const iso of st.iso ?? []) {
+      const l = byIsoAll.get(iso);
+      if (!l) warn(`${where}: ピースのない国コード "${iso}"`);
+      for (const i of l ?? []) set.add(i);
+    }
+    for (const rid of st.regions ?? []) for (const i of resolveRegion(rid, where)) set.add(i);
+    if (!set.size) {
+      warn(`${where}: 舞台（stage の iso・regions）にピースがありません`);
+      continue;
+    }
+    const mode = h.mode ?? "add";
+    if (!["add", "replace"].includes(mode)) warn(`${where}: mode は add か replace`);
+    const members = [];
+    for (const [i, m] of (h.members ?? []).entries()) {
+      if (!m || (m.polity == null) === (m.colony == null)) {
+        warn(`${where}: members[${i}] は { polity: ID, from, to } か { colony: ID, from, to } で書いてください`);
+        continue;
+      }
+      if (m.polity != null) checkPolity(m.polity, `${where} の members`);
+      if (m.colony != null && !colonyIds.has(m.colony)) warn(`${where} の members: 未定義の植民地 "${m.colony}"`);
+      if ((m.from != null && typeof m.from !== "number") || (m.to != null && typeof m.to !== "number"))
+        warn(`${where}: members[${i}] の from・to は年（数値）で書いてください`);
+      if (m.from != null && m.to != null && m.from > m.to) warn(`${where}: members[${i}] の from が to より後です`);
+      members.push(Object.fromEntries(Object.entries({ polity: m.polity, colony: m.colony, from: m.from, to: m.to }).filter(([, v]) => v != null)));
+    }
+    if (mode === "replace" && !members.length) warn(`${where}: mode: replace なのに members がありません`);
+    histories.push({
+      id: h.id,
+      name: h.name,
+      stage: { ...(st.iso?.length ? { iso: st.iso } : {}) },
+      pieces: [...set].sort((a, b) => a - b),
+      members,
+      mode,
+      ...(h.note ? { note: h.note } : {}),
+    });
+  }
+}
+
 // ---- 出来事 ----
 const events = loadDir("events");
 for (const e of events) {
@@ -827,6 +886,8 @@ const regionCenter = new Map(); // 地域 ID → [経度, 緯度]（国境の変
   if (none) console.log(`出来事の場所：${none} 件は場所を決められませんでした（パネルでは常に「地図の範囲内」として扱う）`);
 }
 
+/** 政体 ID → 首都の現代の国コード [開始年|null, 終了年|null, 国コード][] */
+const capitalIso = new Map();
 // ---- 出来事の代表点が入っているピース（pp）。植民地を選んだとき「その植民地の出来事」を判定するのに使う ----
 // ピースの形は public/data/pieces.topo.json（tools/build_pieces.sh が作る。並びは pieces.tsv と同じ）。経緯度の平面で内外を判定する
 {
@@ -903,6 +964,17 @@ const regionCenter = new Map(); // 地域 ID → [経度, 緯度]（国境の変
       });
       if (e.pp.every((x) => x < 0)) delete e.pp;
     }
+    // 首都の現代の国（「〇〇史」の舞台を home_iso のない政体で決める）：政体 ID → [開始年|null, 終了年|null, 国コード][]
+    for (const c of cities) {
+      if (typeof c.lon !== "number" || typeof c.lat !== "number" || !c.capital?.length) continue;
+      const i = pieceAt(c.lon, c.lat);
+      if (i < 0) continue;
+      for (const k of c.capital) {
+        if (!capitalIso.has(k.polity)) capitalIso.set(k.polity, []);
+        capitalIso.get(k.polity).push([k.from ?? null, k.to ?? null, pieces[i].iso]);
+      }
+    }
+    for (const l of capitalIso.values()) l.sort((a, b) => (a[0] ?? -Infinity) - (b[0] ?? -Infinity));
   }
 }
 const atlas = {
@@ -924,6 +996,34 @@ const atlas = {
   movements,
   movementRegions,
   colonies,
+  histories,
+  // 「〇〇史」の舞台：政体 ID → 本国の国コード（home_iso の先頭）
+  polityStage: Object.fromEntries(
+    polities
+      .map((p) => {
+        const h = Array.isArray(p.home_iso) ? p.home_iso[0] : null;
+        return [p.id, typeof h === "string" ? h : h?.iso];
+      })
+      .filter(([, iso]) => iso && byIsoAll.has(iso)),
+  ),
+  // 首都の国コード（home_iso のない政体の舞台）
+  polityCapitalIso: Object.fromEntries(capitalIso),
+  // 本国（home_iso）の国コード：政体 ID → [開始年|null, 終了年|null, 国コード[]][]。副ラベルのある土地を植民地として数えるかの判定
+  polityHomeIso: Object.fromEntries(
+    polities
+      .filter((p) => Array.isArray(p.home_iso))
+      .map((p) => {
+        const g = new Map();
+        for (const h of p.home_iso) {
+          const e = typeof h === "string" ? { iso: h } : h;
+          if (!e?.iso) continue;
+          const k = `${e.from ?? ""}|${e.to ?? ""}`;
+          if (!g.has(k)) g.set(k, [e.from ?? null, e.to ?? null, []]);
+          g.get(k)[2].push(e.iso);
+        }
+        return [p.id, [...g.values()]];
+      }),
+  ),
   // 潮流で使う政体の本国（植民地・占領地を光らせないため）
   movementHome: Object.fromEntries(
     [...new Set(movements.flatMap((m) => m.spread.filter((s) => !s.colonies).flatMap((s) => s.polities)))]
@@ -944,7 +1044,7 @@ console.log(
 console.log(
   `言語：地域 ${lang.allRegions.length}（変遷あり ${lang.tlRegions.length}） / ピース ${language.pieceTimelines.filter((t) => t.length > 0).length}/${pieces.length} にデータあり`,
 );
-console.log(`潮流：${movements.length} / 植民地：${colonies.length}`);
+console.log(`潮流：${movements.length} / 植民地：${colonies.length} / 〇〇史：${histories.length}`);
 for (const w of warnings) console.warn("警告: " + w);
 if (missingYears) {
   for (const y of missingYears) {

@@ -31,6 +31,20 @@ export interface PanelColony {
   polities: string[];
 }
 
+/** 右パネルで、「〇〇史」（舞台のほかの当事者）に関係するものを先に並べるための情報（main.ts が history.ts から求める） */
+export interface PanelHistory {
+  /** 「中国史」など */
+  name: string;
+  /** その年に舞台を最も広く持つ当事者の色 */
+  color?: string;
+  /** その年の当事者の政体 ID（植民地は、植民地の出来事として扱う政体） */
+  polities: string[];
+  /** 舞台のピース（atlas のピース番号ごとに 1） */
+  mask: Uint8Array;
+  /** 舞台のピースに効いている地域（今年と前年。国境の変化の行の判定） */
+  regions: Set<number>;
+}
+
 /** 植民地のカードに出す内容（main.ts が地図の colonyInfo と植民地データから組み立てる） */
 export interface ColonyCard {
   parent: string;
@@ -61,6 +75,8 @@ export class Panel {
   private selected: string | null = null;
   /** 選んでいる植民地（このときの selected は本国。植民地 → 本国 → 地図の範囲 → 外 の順に並べる） */
   private colony: PanelColony | null = null;
+  /** 「〇〇史」（選んでいるもの → 〇〇史 → 本国 → 地図の範囲 → 外 の順に並べる） */
+  private history: PanelHistory | null = null;
   private year = 0;
 
   constructor(
@@ -168,6 +184,7 @@ export class Panel {
    */
   private groupedChanges(kind: "political" | DistKey, items: { name: string; region: number; key: string; body: string; ps?: string[] }[]): string {
     const colRegions = kind === "political" ? this.colony?.regions : undefined;
+    const histRegions = kind === "political" ? this.history?.regions : undefined;
     const groups = new Map<string, typeof items>();
     for (const it of items) {
       if (!groups.has(it.key)) groups.set(it.key, []);
@@ -180,7 +197,8 @@ export class Panel {
       const pts = kind === "political" ? ptsAttr(g.map((x) => this.idx.atlas.regions[x.region]?.c).filter((c): c is [number, number] => !!c)) : "";
       const ps = [...new Set(g.flatMap((x) => x.ps ?? []))];
       const col = colRegions && g.some((x) => colRegions.has(x.region)) ? ` data-col="1"` : "";
-      const sortAttr = kind === "political" ? ` data-k="${k++}" data-imp="0"${pts}${ps.length ? ` data-ps="${esc(ps.join(","))}"` : ""}${col}` : "";
+      const hist = histRegions && g.some((x) => histRegions.has(x.region)) ? ` data-hist="1"` : "";
+      const sortAttr = kind === "political" ? ` data-k="${k++}" data-imp="0"${pts}${ps.length ? ` data-ps="${esc(ps.join(","))}"` : ""}${col}${hist}` : "";
       if (g.length === 1) {
         html += `<li class="change" data-rkind="${kind}" data-regions="${ids}"${sortAttr}><b>${esc(g[0].name)}</b>：${g[0].body}</li>`;
         continue;
@@ -236,9 +254,13 @@ export class Panel {
     }`;
   }
 
-  renderYear(year: number, opts: { dist?: DistKey | null; movement?: string | null; polity?: string | null; colony?: PanelColony | null } = {}) {
+  renderYear(
+    year: number,
+    opts: { dist?: DistKey | null; movement?: string | null; polity?: string | null; colony?: PanelColony | null; history?: PanelHistory | null } = {},
+  ) {
     this.selected = opts.polity ?? null;
     this.colony = this.selected && opts.colony?.parent === this.selected ? opts.colony : null;
+    this.history = this.selected ? (opts.history ?? null) : null;
     this.year = year;
     const events = this.idx.eventsIn(year).sort((a, b) => (a.importance ?? 2) - (b.importance ?? 2));
     const changes = this.idx.borderChangesIn(year);
@@ -294,6 +316,7 @@ export class Panel {
     const probe = this.viewProbe();
     const sel = this.selected;
     const col = this.colony;
+    const hist = this.history;
     const scroller = keepScroll ? scrollParent(this.eventsEl) : null;
     const top0 = scroller?.scrollTop ?? 0;
     let shift = 0;
@@ -324,19 +347,27 @@ export class Panel {
           (li.hasAttribute("data-col") ||
             ps.some((p) => col.polities.includes(p)) ||
             (li.getAttribute("data-pp") ?? "").split(",").some((p) => p !== "" && col.pieces.has(Number(p))));
-        return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist, rel, colRel };
+        // 「〇〇史」に関係：関係国にその年の当事者がある、代表点が舞台の中、国境の変化なら舞台のピースの地域
+        const histRel =
+          !!hist &&
+          (li.hasAttribute("data-hist") ||
+            ps.some((p) => hist.polities.includes(p)) ||
+            (li.getAttribute("data-pp") ?? "").split(",").some((p) => p !== "" && hist.mask[Number(p)] === 1));
+        return { li, k: Number(li.getAttribute("data-k")), imp: Number(li.getAttribute("data-imp")) || 0, inView, dist, rel, colRel, histRel };
       });
-      // 並び：（植民地を選んでいれば）その植民地に関係するもの → 選んでいる国（本国）に関係するもの → 地図に映っているもの → 外のもの
-      const tier = (x: { rel: boolean; colRel: boolean; inView: boolean }) => (x.colRel ? 0 : x.rel ? 1 : x.inView ? 2 : 3);
+      // 並び：選んでいるもの（植民地を選んでいればその植民地、なければ国）に関係するもの →「〇〇史」に関係するもの →
+      // （植民地のときは）本国に関係するもの → 地図に映っているもの → 外のもの
+      type It = { rel: boolean; colRel: boolean; histRel: boolean; inView: boolean };
+      const tier = (x: It) => (col ? (x.colRel ? 0 : x.histRel ? 1 : x.rel ? 2 : x.inView ? 3 : 4) : x.rel ? 0 : x.histRel ? 1 : x.inView ? 3 : 4);
       const order = [...items].sort((a, b) => {
         if (tier(a) !== tier(b)) return tier(a) - tier(b);
         if (a.imp !== b.imp) return a.imp - b.imp;
         if (!a.inView && Math.abs(a.dist - b.dist) > 1) return a.dist - b.dist;
         return a.k - b.k;
       });
-      const counts = [0, 0, 0, 0];
+      const counts = [0, 0, 0, 0, 0];
       for (const x of order) counts[tier(x)]++;
-      const key = order.map((x) => `${x.k}:${tier(x)}`).join(",") + "|" + (sel ?? "") + "|" + (col?.name ?? "");
+      const key = order.map((x) => `${x.k}:${tier(x)}`).join(",") + "|" + (sel ?? "") + "|" + (col?.name ?? "") + "|" + (hist?.name ?? "");
       if (ul.dataset.order === key) continue;
       ul.dataset.order = key;
       // 一覧より下を読んでいるときは、一覧の高さの変化だけスクロールを補正する
@@ -345,36 +376,43 @@ export class Panel {
       for (const h of ul.querySelectorAll(":scope > li.out-head, :scope > li.rel-head")) h.remove();
       const selP = sel ? this.idx.polityById.get(sel) : undefined;
       const selColor = selP?.color ?? "var(--accent)";
-      const relAny = counts[0] + counts[1] > 0;
+      const relAny = counts[0] + counts[1] + counts[2] > 0;
+      const histColor = hist?.color ?? selColor;
       let prevTier = -1;
       for (const x of order) {
         const t = tier(x);
         if (t !== prevTier) {
           const h = document.createElement("li");
           if (t === 0) {
-            h.className = "rel-head colony";
+            h.className = col ? "rel-head colony" : "rel-head";
             h.style.setProperty("--rel", selColor);
-            h.textContent = `${col!.name}に関係`;
+            h.textContent = col ? `${col.name}に関係` : selP ? `${this.idx.polityName(selP, this.year)}に関係` : "";
           } else if (t === 1) {
+            h.className = "rel-head hist";
+            h.style.setProperty("--rel", histColor);
+            h.textContent = `${hist!.name}に関係`;
+          } else if (t === 2) {
             h.className = "rel-head";
             h.style.setProperty("--rel", selColor);
             // 植民地を選んでいるときは短い名前で「〇〇（本国）」
-            h.textContent = selP ? `${col ? `${this.idx.shortName(selP, this.year)}（本国）` : this.idx.polityName(selP, this.year)}に関係` : "";
-          } else if (t === 2) {
+            h.textContent = selP ? `${this.idx.shortName(selP, this.year)}（本国）に関係` : "";
+          } else if (t === 3) {
             h.className = "out-head rel-end";
             h.textContent = "地図の範囲";
           } else {
-            h.className = prevTier >= 0 && prevTier <= 1 ? "out-head rel-end" : "out-head";
+            h.className = prevTier >= 0 && prevTier <= 2 ? "out-head rel-end" : "out-head";
             h.textContent = "地図の範囲の外";
           }
           // 関係するものがないときは「地図の範囲」の見出しを出さない（いつもの並び）
-          if (!(t === 2 && !relAny)) ul.appendChild(h);
+          if (!(t === 3 && !relAny)) ul.appendChild(h);
           prevTier = t;
         }
-        x.li.classList.toggle("outside", t === 3);
-        x.li.classList.toggle("related", t <= 1);
-        x.li.classList.toggle("related-colony", t === 0);
-        if (t <= 1) x.li.style.setProperty("--rel", selColor);
+        x.li.classList.toggle("outside", t === 4);
+        x.li.classList.toggle("related", t <= 2);
+        x.li.classList.toggle("related-colony", t === 0 && !!col);
+        x.li.classList.toggle("related-hist", t === 1);
+        if (t === 1) x.li.style.setProperty("--rel", histColor);
+        else if (t <= 2) x.li.style.setProperty("--rel", selColor);
         else x.li.style.removeProperty("--rel");
         ul.appendChild(x.li);
       }

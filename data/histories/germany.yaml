@@ -1,0 +1,19 @@
+# ドイツ史：神聖ローマ帝国の時代は領邦が分かれていて、どの領邦も現代のドイツの 3 割に届かないので、帝国と主な領邦を当事者として書く。
+# 自動の判定（舞台の 3 割以上を持つもの。1820 年ごろのプロイセン、1945–49 年の占領地区など）にも足す（mode: add）。
+- id: germany
+  name: ドイツ史
+  stage: { iso: [DEU] }
+  mode: add
+  members:
+    - { polity: hre, from: 1453, to: 1806 }           # 神聖ローマ帝国（外枠＝上位の政体として数える）
+    - { polity: brandenburg, from: 1453, to: 1617 }   # ブランデンブルク選帝侯国
+    - { polity: prussia, from: 1618, to: 1871 }       # ブランデンブルク＝プロイセン → プロイセン王国
+    - { polity: saxony, from: 1453, to: 1806 }        # ザクセン選帝侯国
+    - { polity: bavaria, from: 1500, to: 1806 }       # バイエルン公国・選帝侯国
+    - { polity: rhine_confederation, from: 1806, to: 1813 }
+    - { polity: german_confederation, from: 1815, to: 1866 }
+    - { polity: north_german_confederation, from: 1867, to: 1870 }
+    - { polity: german_empire, from: 1871, to: 1918 }
+    - { polity: germany, from: 1918 }                 # ヴァイマル共和国・ナチス・ドイツ・統一後のドイツ
+    - { polity: west_germany, from: 1949, to: 1990 }
+    - { polity: east_germany, from: 1949, to: 1990 }

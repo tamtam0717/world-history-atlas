@@ -1,0 +1,14 @@
+# ポーランド史：分割（1772–95）から再独立（1918）までは、ワルシャワ公国・ポーランド立憲王国のような小さな国や、
+# 分割した国の土地として続くので、ポーランド人の国を当事者として書く（分割した国は自動の判定で入る）。
+- id: poland
+  name: ポーランド史
+  stage: { iso: [POL] }
+  mode: add
+  members:
+    - { polity: poland, from: 1453, to: 1568 }        # ポーランド王国（ヤギェウォ朝）
+    - { polity: mazovia, from: 1453, to: 1526 }       # マゾフシェ公国
+    - { polity: poland_lithuania, from: 1569, to: 1795 }
+    - { polity: warsaw, from: 1807, to: 1815 }        # ワルシャワ公国
+    - { polity: congress_poland, from: 1815, to: 1867 }
+    - { polity: krakow, from: 1815, to: 1846 }        # クラクフ共和国
+    - { polity: poland, from: 1918 }                  # 第二共和国 → 人民共和国 → 第三共和国
